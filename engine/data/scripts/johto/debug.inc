@@ -133,8 +133,8 @@ J_Debug_FlagsNotSetOverworldConfigMessage::
 	goto J_Debug_MessageEnd
 
 J_Debug_FlagsNotSetOverworldConfigMessage_Text:
-	.string "Featur{SE_M_REVERSAL}unavailable!\n"
-	.string "Pleas{SE_M_REVERSAL}defin{SE_M_REVERSAL}{SE_M_CHARGE}usabl{SE_M_REVERSAL}fla{SE_M_SANDSTORM}in:\l"
+	.string "Feature unavailable!\n"
+	.string "Please define a usable flag in:\l"
 	.string "'include/config/overworld.h'!$"
 
 J_Debug_FlagsNotSetBattleConfigMessage::
@@ -142,8 +142,8 @@ J_Debug_FlagsNotSetBattleConfigMessage::
 	goto J_Debug_MessageEnd
 
 J_Debug_FlagsNotSetBattleConfigMessage_Text:
-	.string "Featur{SE_M_REVERSAL}unavailable!\n"
-	.string "Pleas{SE_M_REVERSAL}defin{SE_M_REVERSAL}{SE_M_CHARGE}usabl{SE_M_REVERSAL}fla{SE_M_SANDSTORM}in:\l"
+	.string "Feature unavailable!\n"
+	.string "Please define a usable flag in:\l"
 	.string "'include/config/battle.h'!$"
 
 J_Debug_VarsNotSetBattleConfigMessage::
@@ -151,8 +151,8 @@ J_Debug_VarsNotSetBattleConfigMessage::
 	goto J_Debug_MessageEnd
 
 J_Debug_VarsNotSetBattleConfigMessage_Text:
-	.string "Featur{SE_M_REVERSAL}unavailable!\n"
-	.string "Pleas{SE_M_REVERSAL}defin{SE_M_REVERSAL}{SE_M_CHARGE}usabl{SE_M_REVERSAL}va{SE_M_SAND_TOMB}in:\l"
+	.string "Feature unavailable!\n"
+	.string "Please define a usable var in:\l"
 	.string "'include/config/battle.h'!$"
 
 J_Debug_BoxFilledMessage::
@@ -160,7 +160,7 @@ J_Debug_BoxFilledMessage::
 	goto J_Debug_MessageEnd
 
 J_Debug_BoxFilledMessage_Text:
-	.string "Storag{SE_M_REVERSAL}boxe{SE_M_GRASSWHISTLE}filled!$"
+	.string "Storage boxes filled!$"
 
 J_Debug_EventScript_CheckEVs::
 	lockall
@@ -179,10 +179,10 @@ J_Debug_EventScript_CheckEVs_End::
 	end
 
 J_Debug_EventScript_Text_OffensiveEVs:
-	.string "AT{SE_M_SNORE}EVs{SE_M_HEAT_WAVE}{STR_VAR_1}{SE_M_SUPERSONIC}SPAT{SE_M_SNORE}EVs{SE_M_HEAT_WAVE}{STR_VAR_2}{SE_M_SUPERSONIC}SPEE{SE_M_FAINT_ATTACK}EVs{SE_M_HEAT_WAVE}{STR_VAR_3}$"
+	.string "ATK EVs: {STR_VAR_1}, SPATK EVs: {STR_VAR_2}, SPEED EVs: {STR_VAR_3}$"
 
 J_Debug_EventScript_Text_DefensiveEVs:
-	.string "H{SE_M_PETAL_DANCE}EVs{SE_M_HEAT_WAVE}{STR_VAR_1}{SE_M_SUPERSONIC}DE{SE_M_LEER}EVs{SE_M_HEAT_WAVE}{STR_VAR_2}{SE_M_SUPERSONIC}SPDE{SE_M_LEER}EVs{SE_M_HEAT_WAVE}{STR_VAR_3}$"
+	.string "HP EVs: {STR_VAR_1}, DEF EVs: {STR_VAR_2}, SPDEF EVs: {STR_VAR_3}$"
 
 J_Debug_EventScript_CheckIVs::
 	lockall
@@ -201,10 +201,10 @@ J_Debug_EventScript_CheckIVs_End::
 	end
 
 J_Debug_EventScript_Text_OffensiveIVs:
-	.string "AT{SE_M_SNORE}IVs{SE_M_HEAT_WAVE}{STR_VAR_1}{SE_M_SUPERSONIC}SPAT{SE_M_SNORE}IVs{SE_M_HEAT_WAVE}{STR_VAR_2}{SE_M_SUPERSONIC}SPEE{SE_M_FAINT_ATTACK}IVs{SE_M_HEAT_WAVE}{STR_VAR_3}$"
+	.string "ATK IVs: {STR_VAR_1}, SPATK IVs: {STR_VAR_2}, SPEED IVs: {STR_VAR_3}$"
 
 J_Debug_EventScript_Text_DefensiveIVs:
-	.string "H{SE_M_PETAL_DANCE}IVs{SE_M_HEAT_WAVE}{STR_VAR_1}{SE_M_SUPERSONIC}DE{SE_M_LEER}IVs{SE_M_HEAT_WAVE}{STR_VAR_2}{SE_M_SUPERSONIC}SPDE{SE_M_LEER}IVs{SE_M_HEAT_WAVE}{STR_VAR_3}$"
+	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 J_Debug_EventScript_Script_1::
 	goto UnionCave_B2F_EventScript_Lapras
@@ -281,13 +281,13 @@ J_Debug_EventScript_LanceMultiWin::
 	end
 
 J_Debug_Text_ArianaDefeat:
-	.string "Yo{SE_M_DIVE}haven'{SE_M_SPIT_UP}see{SE_M_ATTRACT}th{SE_M_REVERSAL}las{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}me!$"
+	.string "You haven't seen the last of me!$"
 
 J_Debug_Text_Grunt23Defeat:
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}accep{SE_M_SPIT_UP}this!$"
+	.string "I won't accept this!$"
 
 J_Debug_Text_LanceMultiVictory:
-	.string "Lanc{SE_M_REVERSAL}mult{SE_M_TRI_ATTACK2}battl{SE_M_REVERSAL}complete!$"
+	.string "Lance multi battle complete!$"
 
 J_Debug_EventScript_Silver_Multi::
 	special SavePlayerParty
@@ -331,13 +331,13 @@ J_Debug_EventScript_SilverMultiWin::
 	end
 
 J_Debug_Text_SilverMultiVictory:
-	.string "Silve{SE_M_SAND_TOMB}mult{SE_M_TRI_ATTACK2}battl{SE_M_REVERSAL}complete!$"
+	.string "Silver multi battle complete!$"
 
 J_Debug_Text_Lance3Defeat:
-	.string "Yo{SE_M_DIVE}haven'{SE_M_SPIT_UP}see{SE_M_ATTRACT}th{SE_M_REVERSAL}las{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}me!$"
+	.string "You haven't seen the last of me!$"
 
 J_Debug_Text_Clair3Defeat:
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}accep{SE_M_SPIT_UP}this!$"
+	.string "I won't accept this!$"
 
 J_Debug_CheckSaveBlock::
 	callnative CheckSaveBlock1Size
@@ -352,20 +352,20 @@ J_Debug_CheckSaveBlock::
 	end
 
 J_Debug_SaveBlock1Size::
-	.string "SaveBlock{SE_M_HEADBUTT}size{SE_M_HEAT_WAVE}{STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Fre{SE_M_REVERSAL}space{SE_M_HEAT_WAVE}{STR_VAR_3}b.$"
+	.string "SaveBlock1 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "Free space: {STR_VAR_3}b.$"
 
 J_Debug_SaveBlock2Size::
-	.string "SaveBlock{SE_M_SURF}size{SE_M_HEAT_WAVE}{STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Fre{SE_M_REVERSAL}space{SE_M_HEAT_WAVE}{STR_VAR_3}b.$"
+	.string "SaveBlock2 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "Free space: {STR_VAR_3}b.$"
 
 J_Debug_SaveBlock3Size::
-	.string "SaveBlock{SE_M_HYDRO_PUMP}size{SE_M_HEAT_WAVE}{STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Fre{SE_M_REVERSAL}space{SE_M_HEAT_WAVE}{STR_VAR_3}b.$"
+	.string "SaveBlock3 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "Free space: {STR_VAR_3}b.$"
 
 J_Debug_PokemonStorageSize::
-	.string "{PKMN}Storag{SE_M_REVERSAL}size{SE_M_HEAT_WAVE}{STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Fre{SE_M_REVERSAL}space{SE_M_HEAT_WAVE}{STR_VAR_3}b.$"
+	.string "ウエStorage size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "Free space: {STR_VAR_3}b.$"
 
 J_Debug_CheckROMSpace::
 	callnative CheckROMSize
@@ -374,8 +374,8 @@ J_Debug_CheckROMSpace::
 	end
 
 J_Debug_ROMSize::
-	.string "RO{SE_M_GIGA_DRAIN}size{SE_M_HEAT_WAVE}{STR_VAR_1}MB/32MB.\n"
-	.string "Fre{SE_M_REVERSAL}space{SE_M_HEAT_WAVE}{STR_VAR_2}MB.$"
+	.string "ROM size: {STR_VAR_1}MB/32MB.\n"
+	.string "Free space: {STR_VAR_2}MB.$"
 
 J_Debug_HatchAnEgg::
 	lockall
@@ -404,10 +404,10 @@ J_DebugScript_HatchAnEgg_CantForceHatch::
 	end
 
 J_DebugScript_Text_EmptyParty::
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}n{SE_M_ATTRACT2}Pokémo{SE_M_ATTRACT}no{SE_M_SAND_TOMB}Eggs.$"
+	.string "You have no Pokémon nor Eggs.$"
 
 J_DebugScript_HatchAnEgg_Text_NotAnEgg::
-	.string "That'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}{SE_M_CHARGE}Pokémo{SE_M_ATTRACT}Egg.$"
+	.string "That's not a Pokémon Egg.$"
 
 J_DebugScript_ZeroDaycareMons::
 	msgbox J_DebugText_DaycareNoPokemon, MSGBOX_DEFAULT
@@ -425,13 +425,13 @@ J_DebugScript_DaycareMonsNotCompatible::
 	end
 
 J_DebugText_DaycareNoPokemon:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}n{SE_M_ATTRACT2}Pokémo{SE_M_ATTRACT}a{SE_M_SPIT_UP}Daycare.$"
+	.string "You have no Pokémon at Daycare.$"
 
 J_DebugText_DaycareOnePokemon:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}onl{SE_M_YAWN}on{SE_M_REVERSAL}Pokémo{SE_M_ATTRACT}a{SE_M_SPIT_UP}Daycare.$"
+	.string "You have only one Pokémon at Daycare.$"
 
 J_DebugText_DaycarePokemonNotCompatible:
-	.string "You{SE_M_SAND_TOMB}Pokémo{SE_M_ATTRACT}a{SE_M_SPIT_UP}Daycar{SE_M_REVERSAL}can't\nhav{SE_M_REVERSAL}babie{SE_M_GRASSWHISTLE}together!$"
+	.string "Your Pokémon at Daycare can't\nhave babies together!$"
 
 J_Debug_ShowExpansionVersion::
 	callnative BufferExpansionVersion
@@ -440,7 +440,7 @@ J_Debug_ShowExpansionVersion::
 	end
 
 J_Debug_ExpansionVersion:
-	.string "pokeemerald-expansio{SE_M_ATTRACT}{STR_VAR_1}$"
+	.string "pokeemerald-expansion {STR_VAR_1}$"
 
 J_Debug_Follower_NPC_Not_Enabled::
 	msgbox J_Debug_Enable_To_Use_Follower_NPCs, MSGBOX_DEFAULT
@@ -448,7 +448,7 @@ J_Debug_Follower_NPC_Not_Enabled::
 	end
 
 J_Debug_Enable_To_Use_Follower_NPCs:
-	.string "Featur{SE_M_REVERSAL}unavailable.\nSe{SE_M_SPIT_UP}FNPC-ENABLE-NPC-FOLLOWER{SE_M_SKETCH}to\lTRU{SE_M_SWORDS_DANCE}i{SE_M_ATTRACT}'include/config/follower-npc.h'.$"
+	.string "Feature unavailable.\nSet FNPC-ENABLE-NPC-FOLLOWERS to\lTRUE in 'include/config/follower-npc.h'.$"
 
 J_Debug_Follower_NPC_Event_Script::
 	lock
@@ -458,7 +458,7 @@ J_Debug_Follower_NPC_Event_Script::
 	end
 
 J_Debug_Follower_NPC_Test_Message:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}Followe{SE_M_SAND_TOMB}NP{SE_M_PSYBEAM}test.$"
+	.string "This is a Follower NPC test.$"
 
 J_Debug_EventScript_Steven_Multi::
 	call MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
@@ -480,8 +480,8 @@ J_Debug_BerryPestsDisabled::
 	end
 
 J_DebugText_BerryPestsDisabled:
-	.string "OW-BERRY-PEST{SE_M_SKETCH}i{SE_M_GRASSWHISTLE}disabled.\n"
-	.string "Unabl{SE_M_REVERSAL}t{SE_M_ATTRACT2}forc{SE_M_REVERSAL}pest{SE_M_GRASSWHISTLE}ont{SE_M_ATTRACT2}berr{SE_M_YAWN}trees.$"
+	.string "OW-BERRY-PESTS is disabled.\n"
+	.string "Unable to force pests onto berry trees.$"
 
 J_Debug_BerryWeedsDisabled::
 	msgbox J_DebugText_BerryWeedsDisabled, MSGBOX_DEFAULT
@@ -489,8 +489,8 @@ J_Debug_BerryWeedsDisabled::
 	end
 
 J_DebugText_BerryWeedsDisabled:
-	.string "OW-BERRY-WEED{SE_M_SKETCH}i{SE_M_GRASSWHISTLE}disabled.\n"
-	.string "Unabl{SE_M_REVERSAL}t{SE_M_ATTRACT2}forc{SE_M_REVERSAL}weed{SE_M_GRASSWHISTLE}ont{SE_M_ATTRACT2}berr{SE_M_YAWN}trees.$"
+	.string "OW-BERRY-WEEDS is disabled.\n"
+	.string "Unable to force weeds onto berry trees.$"
 
 J_Debug_EventScript_InflictStatus1::
 	lockall
@@ -806,109 +806,109 @@ J_Debug_EventScript_EWRAMCounters::
 	end
 
 J_Debug_EventScript_EWRAMCounters_Text::
-	.string "Followe{SE_M_SAND_TOMB}Steps{SE_M_HEAT_WAVE}{STR_VAR_1}.\n"
-	.string "Fishin{SE_M_SANDSTORM}Chain{SE_M_HEAT_WAVE}{STR_VAR_2}.$"
+	.string "Follower Steps: {STR_VAR_1}.\n"
+	.string "Fishing Chain: {STR_VAR_2}.$"
 
 J_Debug_EventScript_FontTest_Text_1::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "Ange{SE_M_BATON_PASS}Adep{SE_M_SPIT_UP}Blin{SE_M_WATERFALL}Bodic{SE_M_REVERSAL}Clique\n"
-	.string "Coas{SE_M_SPIT_UP}Dunc{SE_M_REVERSAL}Docil{SE_M_REVERSAL}Enac{SE_M_SPIT_UP}Eosin\l"
-	.string "Furlon{SE_M_SANDSTORM}Foca{SE_M_BATON_PASS}Gnom{SE_M_REVERSAL}Gondol{SE_M_CHARGE}Human\l"
-	.string "Hois{SE_M_SPIT_UP}Inle{SE_M_SPIT_UP}Iodin{SE_M_REVERSAL}Justi{SE_M_ATTRACT}Jocose\l"
-	.string "Knol{SE_M_BATON_PASS}Koal{SE_M_CHARGE}Linde{SE_M_ATTRACT}Load{SE_M_GRASSWHISTLE}Milliner\l"
-	.string "Moda{SE_M_BATON_PASS}Numbe{SE_M_SAND_TOMB}Nodul{SE_M_REVERSAL}Onse{SE_M_SPIT_UP}Oddball\l"
-	.string "Pneum{SE_M_ATTRACT2}Ponch{SE_M_ATTRACT2}Quant{SE_M_CHARGE}Qoph{SE_M_GRASSWHISTLE}Rhone\l"
-	.string "Roma{SE_M_ATTRACT}Snou{SE_M_SPIT_UP}Sodiu{SE_M_MILK_DRINK}Tundr{SE_M_CHARGE}Tocsin\l"
-	.string "Uncl{SE_M_REVERSAL}Udde{SE_M_SAND_TOMB}Vulca{SE_M_ATTRACT}Voca{SE_M_BATON_PASS}Whale\l"
-	.string "Woma{SE_M_ATTRACT}Xma{SE_M_GRASSWHISTLE}Xeno{SE_M_ATTRACT}Yunna{SE_M_ATTRACT}Young\l"
-	.string "Zlot{SE_M_YAWN}Zodiac.$"
+	.string "Angel Adept Blind Bodice Clique\n"
+	.string "Coast Dunce Docile Enact Eosin\l"
+	.string "Furlong Focal Gnome Gondola Human\l"
+	.string "Hoist Inlet Iodine Justin Jocose\l"
+	.string "Knoll Koala Linden Loads Milliner\l"
+	.string "Modal Number Nodule Onset Oddball\l"
+	.string "Pneumo Poncho Quanta Qophs Rhone\l"
+	.string "Roman Snout Sodium Tundra Tocsin\l"
+	.string "Uncle Udder Vulcan Vocal Whale\l"
+	.string "Woman Xmas Xenon Yunnan Young\l"
+	.string "Zloty Zodiac.$"
 
 J_Debug_EventScript_FontTest_Text_2::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "Ange{SE_M_BATON_PASS}ange{SE_M_BATON_PASS}adep{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}nuanc{SE_M_REVERSAL}loads\n"
-	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}aren{SE_M_CHARGE}coco{SE_M_CHARGE}an{SE_M_WATERFALL}quaalude{SE_M_PERISH_SONG}Blind\l"
-	.string "blin{SE_M_WATERFALL}bodic{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}submi{SE_M_SPIT_UP}obo{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}the\l"
-	.string "clu{SE_M_STRENGTH}sno{SE_M_STRENGTH}an{SE_M_WATERFALL}abbot{SE_M_PERISH_SONG}Cliqu{SE_M_REVERSAL}clique\l"
-	.string "coas{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}pouc{SE_M_TRI_ATTACK}loc{SE_M_ATTRACT2}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}franc\l"
-	.string "asso{SE_M_HYPER_BEAM}an{SE_M_WATERFALL}accede{SE_M_PERISH_SONG}Dunc{SE_M_REVERSAL}dunc{SE_M_REVERSAL}docile\l"
-	.string "fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}loudnes{SE_M_GRASSWHISTLE}mastodo{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}the\l"
-	.string "lou{SE_M_WATERFALL}statehoo{SE_M_WATERFALL}an{SE_M_WATERFALL}huddle.$"
+	.string "Angel angel adept for the nuance loads\n"
+	.string "of the arena cocoa and quaalude. Blind\l"
+	.string "blind bodice for the submit oboe of the\l"
+	.string "club snob and abbot. Clique clique\l"
+	.string "coast for the pouch loco of the franc\l"
+	.string "assoc and accede. Dunce dunce docile\l"
+	.string "for the loudness mastodon of the\l"
+	.string "loud statehood and huddle.$"
 
 J_Debug_EventScript_FontTest_Text_3::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "Enac{SE_M_SPIT_UP}enac{SE_M_SPIT_UP}eosi{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}quenc{SE_M_TRI_ATTACK}coed\n"
-	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}piqu{SE_M_REVERSAL}cano{SE_M_REVERSAL}an{SE_M_WATERFALL}bleep{SE_M_PERISH_SONG}Furlong\l"
-	.string "furlon{SE_M_SANDSTORM}foca{SE_M_BATON_PASS}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}genuflect\l"
-	.string "profoun{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}moti{SE_M_ACID_ARMOR}aloo{SE_M_ACID_ARMOR}an{SE_M_WATERFALL}offers.\l"
-	.string "Gnom{SE_M_REVERSAL}gnom{SE_M_REVERSAL}gondol{SE_M_CHARGE}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}impugn\l"
-	.string "logo{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}unplu{SE_M_SANDSTORM}analo{SE_M_SANDSTORM}an{SE_M_WATERFALL}smuggle.\l"
-	.string "Huma{SE_M_ATTRACT}huma{SE_M_ATTRACT}hois{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}buddhist\l"
-	.string "alcoho{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}riyad{SE_M_TRI_ATTACK}calip{SE_M_TRI_ATTACK}and\l"
+	.string "Enact enact eosin for the quench coed\n"
+	.string "of the pique canoe and bleep. Furlong\l"
+	.string "furlong focal for the genuflect\l"
+	.string "profound of the motif aloof and offers.\l"
+	.string "Gnome gnome gondola for the impugn\l"
+	.string "logos of the unplug analog and smuggle.\l"
+	.string "Human human hoist for the buddhist\l"
+	.string "alcohol of the riyadh caliph and\l"
 	.string "bathhouse.$"
 
 J_Debug_EventScript_FontTest_Text_4::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "Inle{SE_M_SPIT_UP}inle{SE_M_SPIT_UP}iodin{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}quince\n"
-	.string "champio{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}ennu{SE_M_TRI_ATTACK2}scamp{SE_M_TRI_ATTACK2}an{SE_M_WATERFALL}shiite.\l"
-	.string "Justi{SE_M_ATTRACT}justi{SE_M_ATTRACT}jocos{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}djibouti\l"
-	.string "sojour{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}oran{SE_M_ENCORE}ra{SE_M_ENCORE}an{SE_M_WATERFALL}hajjis.\l"
-	.string "Knol{SE_M_BATON_PASS}knol{SE_M_BATON_PASS}koal{SE_M_CHARGE}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}banknote\l"
-	.string "lookou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}dybbu{SE_M_ENCORE2}outloo{SE_M_ENCORE2}and\l"
-	.string "trekked{SE_M_PERISH_SONG}Linde{SE_M_ATTRACT}linde{SE_M_ATTRACT}load{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}the\l"
-	.string "uln{SE_M_CHARGE}monolo{SE_M_SANDSTORM}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}consu{SE_M_BATON_PASS}mentho{SE_M_BATON_PASS}and\l"
+	.string "Inlet inlet iodine for the quince\n"
+	.string "champion of the ennui scampi and shiite.\l"
+	.string "Justin justin jocose for the djibouti\l"
+	.string "sojourn of the oranj raj and hajjis.\l"
+	.string "Knoll knoll koala for the banknote\l"
+	.string "lookout of the dybbuk outlook and\l"
+	.string "trekked. Linden linden loads for the\l"
+	.string "ulna monolog of the consul menthol and\l"
 	.string "shallot.$"
 
 J_Debug_EventScript_FontTest_Text_5::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "Milline{SE_M_SAND_TOMB}milline{SE_M_SAND_TOMB}moda{SE_M_BATON_PASS}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}alumna\n"
-	.string "solomo{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}albu{SE_M_MILK_DRINK}custo{SE_M_MILK_DRINK}an{SE_M_WATERFALL}summon.\l"
-	.string "Numbe{SE_M_SAND_TOMB}numbe{SE_M_SAND_TOMB}nodul{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}unmade\l"
-	.string "economi{SE_M_HYPER_BEAM}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}shotgu{SE_M_ATTRACT}biso{SE_M_ATTRACT}and\l"
-	.string "tunnel{SE_M_PERISH_SONG}Onse{SE_M_SPIT_UP}onse{SE_M_SPIT_UP}oddbal{SE_M_BATON_PASS}fo{SE_M_SAND_TOMB}the\l"
-	.string "abando{SE_M_ATTRACT}podiu{SE_M_MILK_DRINK}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}antiqu{SE_M_ATTRACT2}tempo\l"
-	.string "an{SE_M_WATERFALL}moonlit{SE_M_PERISH_SONG}Pneum{SE_M_ATTRACT2}pneum{SE_M_ATTRACT2}ponch{SE_M_ATTRACT2}for\l"
-	.string "th{SE_M_REVERSAL}dauphi{SE_M_ATTRACT}opossu{SE_M_MILK_DRINK}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}holdup\l"
-	.string "bisho{SE_M_MORNING_SUN}an{SE_M_WATERFALL}supplies.$"
+	.string "Milliner milliner modal for the alumna\n"
+	.string "solomon of the album custom and summon.\l"
+	.string "Number number nodule for the unmade\l"
+	.string "economic of the shotgun bison and\l"
+	.string "tunnel. Onset onset oddball for the\l"
+	.string "abandon podium of the antiquo tempo\l"
+	.string "and moonlit. Pneumo pneumo poncho for\l"
+	.string "the dauphin opossum of the holdup\l"
+	.string "bishop and supplies.$"
 
 J_Debug_EventScript_FontTest_Text_6::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "Quant{SE_M_CHARGE}quant{SE_M_CHARGE}qoph{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}inquest\n"
-	.string "sheqe{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}cin{SE_M_FLATTER}co{SE_M_FLATTER}an{SE_M_WATERFALL}suqqu{SE_M_PERISH_SONG}Rhone\l"
-	.string "rhon{SE_M_REVERSAL}roma{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}burn{SE_M_SPIT_UP}porou{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}the\l"
-	.string "lemu{SE_M_SAND_TOMB}clamo{SE_M_SAND_TOMB}an{SE_M_WATERFALL}carrot{SE_M_PERISH_SONG}Snou{SE_M_SPIT_UP}snout\l"
-	.string "sodiu{SE_M_MILK_DRINK}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}ensnar{SE_M_REVERSAL}boso{SE_M_MILK_DRINK}o{SE_M_ACID_ARMOR}the\l"
-	.string "genu{SE_M_GRASSWHISTLE}patho{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}missing{SE_M_PERISH_SONG}Tundra\l"
-	.string "tundr{SE_M_CHARGE}tocsi{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}nutme{SE_M_SANDSTORM}isotope\l"
-	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}peasan{SE_M_SPIT_UP}ingo{SE_M_SPIT_UP}an{SE_M_WATERFALL}ottoman.$"
+	.string "Quanta quanta qophs for the inquest\n"
+	.string "sheqel of the cinq coq and suqqu. Rhone\l"
+	.string "rhone roman for the burnt porous of the\l"
+	.string "lemur clamor and carrot. Snout snout\l"
+	.string "sodium for the ensnare bosom of the\l"
+	.string "genus pathos and missing. Tundra\l"
+	.string "tundra tocsin for the nutmeg isotope\l"
+	.string "of the peasant ingot and ottoman.$"
 
 J_Debug_EventScript_FontTest_Text_7::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "Uncl{SE_M_REVERSAL}uncl{SE_M_REVERSAL}udde{SE_M_SAND_TOMB}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}dune{SE_M_GRASSWHISTLE}cloud\n"
-	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}hind{SE_M_DIVE}tho{SE_M_DIVE}an{SE_M_WATERFALL}continuum{SE_M_PERISH_SONG}Vulcan\l"
-	.string "vulca{SE_M_ATTRACT}voca{SE_M_BATON_PASS}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}alluvia{SE_M_BATON_PASS}ovoi{SE_M_WATERFALL}of\l"
-	.string "th{SE_M_REVERSAL}yugosla{SE_M_EARTHQUAKE}chekho{SE_M_EARTHQUAKE}an{SE_M_WATERFALL}revved{SE_M_PERISH_SONG}Whale\l"
-	.string "whal{SE_M_REVERSAL}woma{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}meanwhil{SE_M_REVERSAL}blowout\l"
-	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}forepa{SE_M_TWISTER}meado{SE_M_TWISTER}an{SE_M_WATERFALL}glowworm.\l"
-	.string "Xma{SE_M_GRASSWHISTLE}xma{SE_M_GRASSWHISTLE}xeno{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}bauxite\l"
-	.string "doxolog{SE_M_YAWN}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}tableau{SE_M_SWEET_SCENT}equino{SE_M_SWEET_SCENT}and\l"
+	.string "Uncle uncle udder for the dunes cloud\n"
+	.string "of the hindu thou and continuum. Vulcan\l"
+	.string "vulcan vocal for the alluvial ovoid of\l"
+	.string "the yugoslav chekhov and revved. Whale\l"
+	.string "whale woman for the meanwhile blowout\l"
+	.string "of the forepaw meadow and glowworm.\l"
+	.string "Xmas xmas xenon for the bauxite\l"
+	.string "doxology of the tableaux equinox and\l"
 	.string "exxon.$"
 
 J_Debug_EventScript_FontTest_Text_8::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "Yunna{SE_M_ATTRACT}yunna{SE_M_ATTRACT}youn{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}dynamo\n"
-	.string "coyot{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}obloqu{SE_M_YAWN}emplo{SE_M_YAWN}and\l"
-	.string "sayyid{SE_M_PERISH_SONG}Zlot{SE_M_YAWN}zlot{SE_M_YAWN}zodia{SE_M_HYPER_BEAM}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}gizmo\l"
-	.string "ozon{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}fran{SE_M_SKY_UPPERCUT}laisse{SE_M_SKY_UPPERCUT}an{SE_M_WATERFALL}buzzing.$"
+	.string "Yunnan yunnan young for the dynamo\n"
+	.string "coyote of the obloquy employ and\l"
+	.string "sayyid. Zloty zloty zodiac for the gizmo\l"
+	.string "ozone of the franz laissez and buzzing.$"
 
 J_Debug_EventScript_FontTest_Text_9::
 	.string "{FONT_SMALL_NARROWER}"
-	.string "4{SE_M_SURF}{SE_M_BELLY_DRUM}13{SE_M_POISON_POWDER}{SE_BERRY_BLENDER}5796.\n"
-	.string "M{SE_M_SAND_TOMB}Jock{SE_M_SUPERSONIC}T{SE_M_BARRIER}qui{SE_M_SKY_UPPERCUT}PhD{SE_M_HEAT_WAVE}bag{SE_M_GRASSWHISTLE}20{SE_EXP_MAX}fewer\l"
-	.string "lyn{SE_M_SWEET_SCENT}a{SE_M_SPIT_UP}{SE_M_CHARGE}café{SE_CARD}voilà{SE_M_SUPERSONIC}they'r{SE_M_REVERSAL}“worth”\l"
-	.string "♂1/♀{SE_M_HEADBUTT}{SE_BERRY_BLENDER}¥1{SE_M_PERISH_SONG}That'{SE_M_GRASSWHISTLE}1{SE_M_BITE}{SE_WARP_OUT}{SE_M_BIND}{SE_M_PAY_DAY}{SE_M_POISON_POWDER}{SE_BERRY_BLENDER}11\l"
-	.string "Nintend{SE_M_ATTRACT2}GB{SE_M_BONEMERANG}ca{SE_M_ATTRACT}connec{SE_M_SPIT_UP}t{SE_M_ATTRACT2}{SE_M_CHARGE}Nintendo\l"
-	.string "GameCub{SE_M_REVERSAL}console{SE_M_DRAGON_RAGE}H{SE_M_REVERSAL}claimed-thoug{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}don't\l"
-	.string "believ{SE_M_REVERSAL}him-t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}don{SE_M_REVERSAL}s{SE_M_ATTRACT2}i{SE_M_ATTRACT}a{SE_M_ATTRACT}eyes-shut\l"
+	.string "42 × 138 = 5796.\n"
+	.string "Mr Jock, TV quiz PhD: bags 20% fewer\l"
+	.string "lynx at a café; voilà, they're “worth”\l"
+	.string "♂1/♀1 = ¥1. That's 10 + 9 - 8 = 11\l"
+	.string "Nintendo GBA can connect to a Nintendo\l"
+	.string "GameCube console! He claimed-though I don't\l"
+	.string "believe him-to have done so in an eyes-shut\l"
 	.string "state…?$"
 
 J_Debug_PrintFontTest::
@@ -949,12 +949,12 @@ J_Debug_EventScript_FakeRTCNotEnabled::
 	return
 
 J_Debug_EventScript_FakeRTCNotEnabled_Text_0:
-	.string "Yo{SE_M_DIVE}currentl{SE_M_YAWN}d{SE_M_ATTRACT2}no{SE_M_SPIT_UP}hav{SE_M_REVERSAL}Fak{SE_M_REVERSAL}RTC\nenabled{SE_M_PERISH_SONG}Pleas{SE_M_REVERSAL}enabl{SE_M_REVERSAL}i{SE_M_SPIT_UP}i{SE_M_ATTRACT}include/\lconfig/overworld.h$"
+	.string "You currently do not have Fake RTC\nenabled. Please enable it in include/\lconfig/overworld.h$"
 
 J_Debug_EventScript_TellTheTime_Text_0:
-	.string "Tim{SE_M_REVERSAL}an{SE_M_WATERFALL}date:\n"
-	.string "{STR_VAR_1}{SE_M_SUPERSONIC}{STR_VAR_2}:{STR_VAR_3}$"
+	.string "Time and date:\n"
+	.string "{STR_VAR_1}, {STR_VAR_2}:{STR_VAR_3}$"
 
 J_DebugEventScript_PrintWeekday_Text_0:
-	.string "Tim{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}day{SE_M_HEAT_WAVE}{STR_VAR_1}$"
+	.string "Time of day: {STR_VAR_1}$"
 

@@ -49,16 +49,16 @@ J_EventScript_CancelCut::
 	end
 
 J_Text_WantToCut:
-	.string "Thi{SE_M_GRASSWHISTLE}tre{SE_M_REVERSAL}look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}i{SE_M_SPIT_UP}ca{SE_M_ATTRACT}be\n"
-	.string "CU{SE_M_SWIFT}down!\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}CU{SE_M_SWIFT}it?$"
+	.string "This tree looks like it can be\n"
+	.string "CUT down!\p"
+	.string "Would you like to CUT it?$"
 
 J_Text_MonUsedFieldMove:
-	.string "{STR_VAR_1} use{SE_M_WATERFALL}{STR_VAR_2}!$"
+	.string "{STR_VAR_1} used {STR_VAR_2}!$"
 
 J_Text_CantCut:
-	.string "Thi{SE_M_GRASSWHISTLE}tre{SE_M_REVERSAL}look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}i{SE_M_SPIT_UP}ca{SE_M_ATTRACT}be\n"
-	.string "CU{SE_M_SWIFT}down!$"
+	.string "This tree looks like it can be\n"
+	.string "CUT down!$"
 
 J_EventScript_UseRockSmash::
 	lockall
@@ -152,7 +152,7 @@ J_EventScript_EndHeadbutt::
 	end
 
 J_Text_MonUsedHeadbutt::
-	.string "{STR_VAR_1} use{SE_M_WATERFALL}HEADBUTT!$"
+	.string "{STR_VAR_1} used HEADBUTT!$"
 
 J_EventScript_FollowerFieldMove:
 	getdirectiontoface VAR_0x8005, OBJ_EVENT_ID_FOLLOWER, OBJ_EVENT_ID_PLAYER
@@ -307,20 +307,20 @@ J_EventScript_CancelSmash::
 	end
 
 J_Text_WantToSmash:
-	.string "Thi{SE_M_GRASSWHISTLE}roc{SE_M_ENCORE2}appear{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}breakable.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}ROC{SE_M_SNORE}SMASH?$"
+	.string "This rock appears to be breakable.\n"
+	.string "Would you like to use ROCK SMASH?$"
 
 J_Text_CantSmash:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}rugge{SE_M_WATERFALL}rock{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_CHARGE}POKéMON\n"
-	.string "ma{SE_M_YAWN}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}smas{SE_M_TRI_ATTACK}it.$"
+	.string "It's a rugged rock, but a POKéMON\n"
+	.string "may be able to smash it.$"
 
 J_Text_WantToHeadbutt:
-	.string "Thi{SE_M_GRASSWHISTLE}tre{SE_M_REVERSAL}ma{SE_M_YAWN}hous{SE_M_REVERSAL}POKéMON.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}HEADBUTT?$"
+	.string "This tree may house POKéMON.\n"
+	.string "Would you like to use HEADBUTT?$"
 
 J_Text_CantHeadbutt:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}smal{SE_M_BATON_PASS}tree{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_CHARGE}wild\n"
-	.string "POKéMO{SE_M_PSYBEAM2}ma{SE_M_YAWN}b{SE_M_REVERSAL}livin{SE_M_SANDSTORM}within.$"
+	.string "It's a small tree, but a wild\n"
+	.string "POKéMON may be living within.$"
 
 J_EventScript_StrengthBoulder::
 	lockall
@@ -372,20 +372,20 @@ J_EventScript_CancelStrength::
 	end
 
 J_Text_WantToStrength:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bi{SE_M_SANDSTORM}boulder{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_CHARGE}POKéMON\n"
-	.string "ma{SE_M_YAWN}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}pus{SE_M_TRI_ATTACK}i{SE_M_SPIT_UP}aside.\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}STRENGTH?$"
+	.string "It's a big boulder, but a POKéMON\n"
+	.string "may be able to push it aside.\p"
+	.string "Would you like to use STRENGTH?$"
 
 J_Text_MonUsedStrength:
-	.string "{STR_VAR_1} use{SE_M_WATERFALL}STRENGTH!$"
+	.string "{STR_VAR_1} used STRENGTH!$"
 
 J_Text_CantStrength:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bi{SE_M_SANDSTORM}boulder{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_CHARGE}POKéMON\n"
-	.string "ma{SE_M_YAWN}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}pus{SE_M_TRI_ATTACK}i{SE_M_SPIT_UP}aside.$"
+	.string "It's a big boulder, but a POKéMON\n"
+	.string "may be able to push it aside.$"
 
 J_Text_StrengthActivated:
-	.string "STRENGT{SE_M_SWAGGER2}mad{SE_M_REVERSAL}i{SE_M_SPIT_UP}possibl{SE_M_REVERSAL}t{SE_M_ATTRACT2}move\n"
-	.string "boulder{SE_M_GRASSWHISTLE}around.$"
+	.string "STRENGTH made it possible to move\n"
+	.string "boulders around.$"
 
 J_EventScript_UseWaterfall::
 	lockall
@@ -414,15 +414,15 @@ J_EventScript_EndWaterfall::
 	end
 
 J_Text_CantWaterfall:
-	.string "{SE_M_BONEMERANG}wal{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}wate{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}crashin{SE_M_SANDSTORM}dow{SE_M_ATTRACT}with\n"
-	.string "{SE_M_CHARGE}might{SE_M_YAWN}roar.$"
+	.string "A wall of water is crashing down with\n"
+	.string "a mighty roar.$"
 
 J_Text_WantToWaterfall:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}larg{SE_M_REVERSAL}waterfall.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}WATERFALL?$"
+	.string "It's a large waterfall.\n"
+	.string "Would you like to use WATERFALL?$"
 
 J_Text_MonUsedWaterfall:
-	.string "{STR_VAR_1} use{SE_M_WATERFALL}WATERFALL.$"
+	.string "{STR_VAR_1} used WATERFALL.$"
 
 J_EventScript_UseDive::
 	lockall
@@ -539,34 +539,34 @@ J_Movement_WhirlpoolWest:
 	step_end
 
 J_Text_CantWhirlpool:
-	.string "Th{SE_M_REVERSAL}wate{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}swirlin{SE_M_SANDSTORM}an{SE_M_WATERFALL}spinning\n"
-	.string "aroun{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}might{SE_M_YAWN}roar.$"
+	.string "The water is swirling and spinning\n"
+	.string "around with a mighty roar.$"
 
 J_Text_CantDive:
-	.string "Th{SE_M_REVERSAL}se{SE_M_CHARGE}i{SE_M_GRASSWHISTLE}dee{SE_M_MORNING_SUN}here{SE_M_PERISH_SONG}{SE_M_BONEMERANG}POKéMON\n"
-	.string "ma{SE_M_YAWN}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}underwater.$"
+	.string "The sea is deep here. A POKéMON\n"
+	.string "may be able to go underwater.$"
 
 J_Text_WantToDive:
-	.string "Th{SE_M_REVERSAL}se{SE_M_CHARGE}i{SE_M_GRASSWHISTLE}dee{SE_M_MORNING_SUN}here.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}DIVE?$"
+	.string "The sea is deep here.\n"
+	.string "Would you like to use DIVE?$"
 
 J_Text_MonUsedDive:
-	.string "{STR_VAR_1} use{SE_M_WATERFALL}WHIRLPOOL.$"
+	.string "{STR_VAR_1} used WHIRLPOOL.$"
 
 J_Text_CantSurface:
-	.string "Ligh{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}filterin{SE_M_SANDSTORM}dow{SE_M_ATTRACT}fro{SE_M_MILK_DRINK}above.\n"
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}ma{SE_M_YAWN}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}surface.$"
+	.string "Light is filtering down from above.\n"
+	.string "A POKéMON may be able to surface.$"
 
 J_Text_WantToSurface:
-	.string "Ligh{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}filterin{SE_M_SANDSTORM}dow{SE_M_ATTRACT}fro{SE_M_MILK_DRINK}above.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}DIVE?$"
+	.string "Light is filtering down from above.\n"
+	.string "Would you like to use DIVE?$"
 
 J_EventScript_FailSweetScent::
 	msgbox J_Text_FailSweetScent, MSGBOX_SIGN
 	end
 
 J_Text_FailSweetScent:
-	.string "Look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}there'{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}here…$"
+	.string "Looks like there's nothing here…$"
 
 J_EventScript_DigCommon:
 	isfollowerfieldmoveuser VAR_0x8004
@@ -635,15 +635,15 @@ J_EventScript_EndRockClimb::
 	end
 
 J_Text_WantToRockClimb:
-	.string "Th{SE_M_REVERSAL}clif{SE_M_ACID_ARMOR}i{SE_M_GRASSWHISTLE}steep.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}Roc{SE_M_ENCORE2}Climb?$"
+	.string "The cliff is steep.\n"
+	.string "Would you like to use Rock Climb?$"
 
 J_Text_MonUsedRockClimb:
-	.string "{STR_VAR_1} use{SE_M_WATERFALL}Roc{SE_M_ENCORE2}Climb!$"
+	.string "{STR_VAR_1} used Rock Climb!$"
 
 J_Text_CantRockClimb:
-	.string "Th{SE_M_REVERSAL}clif{SE_M_ACID_ARMOR}i{SE_M_GRASSWHISTLE}steep.\n"
-	.string "{SE_M_BONEMERANG}Pokémo{SE_M_ATTRACT}ma{SE_M_YAWN}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}clim{SE_M_STRENGTH}it.$"
+	.string "The cliff is steep.\n"
+	.string "A Pokémon may be able to climb it.$"
 
 J_SetTimeEncounters::
 	callnative SetTimeBasedEncounters

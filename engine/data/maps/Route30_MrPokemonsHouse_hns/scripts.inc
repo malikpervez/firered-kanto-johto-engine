@@ -140,98 +140,98 @@ MrPokemonHouse_Movement_MrPokemon_Leave:
 	step_end
 
 MrPokemonHouse_Text_Intro1:
-	.string "Welcome{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "PROF.EL{SE_M_GIGA_DRAIN}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}KANTO's\n"
-	.string "CHAMPIO{SE_M_PSYBEAM2}wa{SE_M_GRASSWHISTLE}coming.\p"
-	.string "H{SE_M_REVERSAL}als{SE_M_ATTRACT2}sai{SE_M_WATERFALL}yo{SE_M_DIVE}wer{SE_M_REVERSAL}helping\n"
-	.string "wit{SE_M_TRI_ATTACK}hi{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}research.$"
+	.string "Welcome, {PLAYER}!\p"
+	.string "PROF.ELM told me KANTO's\n"
+	.string "CHAMPION was coming.\p"
+	.string "He also said you were helping\n"
+	.string "with his POKéMON research.$"
 
 MrPokemonHouse_Text_Intro2:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}PROF.ELM\n"
-	.string "t{SE_M_ATTRACT2}examine.$"
+	.string "This is what I want PROF.ELM\n"
+	.string "to examine.$"
 
 MrPokemonHouse_Text_GotEgg:
-	.string "{PLAYER} receive{SE_M_WATERFALL}MYSTER{SE_M_MOONLIGHT}EGG.$"
+	.string "{PLAYER} received MYSTERY EGG.$"
 
 MrPokemonHouse_Text_Intro3:
-	.string "{SE_M_HEAL_BELL}kno{SE_M_TWISTER}{SE_M_CHARGE}coupl{SE_M_REVERSAL}wh{SE_M_ATTRACT2}ru{SE_M_ATTRACT}a\n"
-	.string "POKéMO{SE_M_PSYBEAM2}DAY-CAR{SE_M_SWORDS_DANCE}service.\p"
-	.string "The{SE_M_YAWN}gav{SE_M_REVERSAL}m{SE_M_REVERSAL}tha{SE_M_SPIT_UP}EGG.\p"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}intrigued{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}sent\n"
-	.string "mai{SE_M_BATON_PASS}t{SE_M_ATTRACT2}PROF.ELM.\p"
-	.string "Fo{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}evolution,\n"
-	.string "PROF.EL{SE_M_GIGA_DRAIN}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}authority.$"
+	.string "I know a couple who run a\n"
+	.string "POKéMON DAY-CARE service.\p"
+	.string "They gave me that EGG.\p"
+	.string "I was intrigued, so I sent\n"
+	.string "mail to PROF.ELM.\p"
+	.string "For POKéMON evolution,\n"
+	.string "PROF.ELM is the authority.$"
 
 MrPokemonHouse_Text_Intro4:
-	.string "Eve{SE_M_ATTRACT}PROF.OA{SE_M_SNORE}her{SE_M_REVERSAL}recognizes\n"
+	.string "Even PROF.OAK here recognizes\n"
 	.string "that.$"
 
 MrPokemonHouse_Text_Intro5:
-	.string "I{SE_M_ACID_ARMOR}m{SE_M_YAWN}assumptio{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}correct,\n"
-	.string "PROF.EL{SE_M_GIGA_DRAIN}wil{SE_M_BATON_PASS}kno{SE_M_TWISTER}it.$"
+	.string "If my assumption is correct,\n"
+	.string "PROF.ELM will know it.$"
 
 MrPokemonHouse_Text_Heal:
-	.string "Yo{SE_M_DIVE}ar{SE_M_REVERSAL}returnin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}PROF.ELM?\p"
-	.string "Here{SE_M_PERISH_SONG}You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}shoul{SE_M_WATERFALL}have\n"
-	.string "som{SE_M_REVERSAL}rest.$"
+	.string "You are returning to PROF.ELM?\p"
+	.string "Here. Your POKéMON should have\n"
+	.string "some rest.$"
 
 MrPokemonHouse_Text_DependingOnYou:
-	.string "I'{SE_M_MILK_DRINK}dependin{SE_M_SANDSTORM}o{SE_M_ATTRACT}you!$"
+	.string "I'm depending on you!$"
 
 MrPokemonHouse_Text_AlwaysNewDiscoveries:
-	.string "Lif{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}delightful!\n"
-	.string "Always{SE_M_SUPERSONIC}ne{SE_M_TWISTER}discoverie{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}made.$"
+	.string "Life is delightful!\n"
+	.string "Always, new discoveries to be made.$"
 
 MrPokemonHouse_Text_OakIntro::
-	.string "OAK{SE_M_HEAT_WAVE}{PLAYER}{SE_M_DRAGON_RAGE}Goo{SE_M_WATERFALL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}you.\n"
-	.string "Ho{SE_M_TWISTER}wa{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}tri{SE_M_MORNING_SUN}fro{SE_M_MILK_DRINK}KANTO?\p"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}visitin{SE_M_SANDSTORM}m{SE_M_YAWN}ol{SE_M_WATERFALL}friend\n"
-	.string "MR.POKéMO{SE_M_PSYBEAM2}whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}tha{SE_M_SPIT_UP}you\l"
-	.string "wer{SE_M_REVERSAL}helpin{SE_M_SANDSTORM}PROF.ELM.\p"
-	.string "You{SE_M_SAND_TOMB}experienc{SE_M_REVERSAL}an{SE_M_WATERFALL}car{SE_M_REVERSAL}for\n"
-	.string "POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}serv{SE_M_REVERSAL}hi{SE_M_MILK_DRINK}well.\p"
-	.string "Kee{SE_M_MORNING_SUN}recordin{SE_M_SANDSTORM}th{SE_M_REVERSAL}discoveries\n"
-	.string "yo{SE_M_DIVE}mak{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéDEX!$"
+	.string "OAK: {PLAYER}! Good to see you.\n"
+	.string "How was the trip from KANTO?\p"
+	.string "I was visiting my old friend\n"
+	.string "MR.POKéMON when I heard that you\l"
+	.string "were helping PROF.ELM.\p"
+	.string "Your experience and care for\n"
+	.string "POKéMON will serve him well.\p"
+	.string "Keep recording the discoveries\n"
+	.string "you make in your POKéDEX!$"
 
 MrPokemonHouse_Text_OakParting:
-	.string "G{SE_M_ATTRACT2}mee{SE_M_SPIT_UP}man{SE_M_YAWN}kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}and\n"
-	.string "complet{SE_M_REVERSAL}tha{SE_M_SPIT_UP}POKéDEX!\p"
-	.string "Bu{SE_M_SPIT_UP}I'v{SE_M_REVERSAL}staye{SE_M_WATERFALL}to{SE_M_ATTRACT2}long.\p"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}GOLDENROD\n"
-	.string "fo{SE_M_SAND_TOMB}m{SE_M_YAWN}usua{SE_M_BATON_PASS}radi{SE_M_ATTRACT2}show.\p"
-	.string "{PLAYER}{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}countin{SE_M_SANDSTORM}o{SE_M_ATTRACT}you!$"
+	.string "Go meet many kinds of POKéMON and\n"
+	.string "complete that POKéDEX!\p"
+	.string "But I've stayed too long.\p"
+	.string "I have to get to GOLDENROD\n"
+	.string "for my usual radio show.\p"
+	.string "{PLAYER}, I'm counting on you!$"
 
 MrPokemonHouse_Text_GimmeTheScale:
-	.string "Hm{SE_M_SING}Tha{SE_M_SPIT_UP}SCALE{SE_M_DRAGON_RAGE}What'{SE_M_GRASSWHISTLE}that?\n"
-	.string "{SE_M_BONEMERANG}re{SE_M_WATERFALL}GYARADOS?\p"
-	.string "That'{SE_M_GRASSWHISTLE}rare{SE_M_DRAGON_RAGE}I{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}it…\p"
-	.string "{PLAYER}{SE_M_SUPERSONIC}woul{SE_M_WATERFALL}yo{SE_M_DIVE}car{SE_M_REVERSAL}to\n"
-	.string "trad{SE_M_REVERSAL}it?\p"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}offe{SE_M_SAND_TOMB}thi{SE_M_GRASSWHISTLE}EXP.SHARE\n"
-	.string "tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}fro{SE_M_MILK_DRINK}PROF.OAK.$"
+	.string "Hm? That SCALE! What's that?\n"
+	.string "A red GYARADOS?\p"
+	.string "That's rare! I, I want it…\p"
+	.string "{PLAYER}, would you care to\n"
+	.string "trade it?\p"
+	.string "I can offer this EXP.SHARE\n"
+	.string "that I got from PROF.OAK.$"
 
 MrPokemonHouse_Text_Disappointed:
-	.string "That'{SE_M_GRASSWHISTLE}disappointing.\n"
-	.string "Tha{SE_M_SPIT_UP}happen{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}ver{SE_M_YAWN}rare.$"
+	.string "That's disappointing.\n"
+	.string "That happens to be very rare.$"
 
 MrPokemonHouse_Text_ExpShare:
-	.string "{SE_M_HEAL_BELL}als{SE_M_ATTRACT2}hav{SE_M_REVERSAL}{SE_M_CHARGE}specia{SE_M_BATON_PASS}item\n"
-	.string "fo{SE_M_SAND_TOMB}you.$"
+	.string "I also have a special item\n"
+	.string "for you.$"
 
 MrPokemonHouse_Text_ForeignMagazines:
-	.string "It'{SE_M_GRASSWHISTLE}packe{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}foreign\n"
+	.string "It's packed with foreign\n"
 	.string "magazines.\p"
-	.string "Can'{SE_M_SPIT_UP}eve{SE_M_ATTRACT}rea{SE_M_WATERFALL}thei{SE_M_SAND_TOMB}titles…$"
+	.string "Can't even read their titles…$"
 
 MrPokemonHouse_Text_BrokenComputer:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bi{SE_M_SANDSTORM}computer.\n"
-	.string "Hmm{SE_M_PERISH_SONG}It'{SE_M_GRASSWHISTLE}broken.$"
+	.string "It's a big computer.\n"
+	.string "Hmm. It's broken.$"
 
 MrPokemonHouse_Text_StrangeCoins:
-	.string "{SE_M_BONEMERANG}whol{SE_M_REVERSAL}pil{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}strang{SE_M_REVERSAL}coins!\p"
-	.string "Mayb{SE_M_REVERSAL}they'r{SE_M_REVERSAL}fro{SE_M_MILK_DRINK}another\n"
+	.string "A whole pile of strange coins!\p"
+	.string "Maybe they're from another\n"
 	.string "country…$"
 
 MrPokemonHouse_Text_GotExpShare:
-	.string "{PLAYER} receive{SE_M_WATERFALL}EXP{SE_M_PERISH_SONG}SHARE!$"
+	.string "{PLAYER} received EXP. SHARE!$"
 

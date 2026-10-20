@@ -42,41 +42,41 @@ NewSinjoh_HotSprings_EventScript_MualaniAfter::
 	end
 
 NewSinjoh_HotSprings_Text_MualaniBefore:
-	.string "A{SE_M_MILK_DRINK}{SE_M_HEAL_BELL}{SE_M_CHARGE}loca{SE_M_BATON_PASS}o{SE_M_SAND_TOMB}{SE_M_CHARGE}visitor?\n"
-	.string "Wha{SE_M_SPIT_UP}{SE_M_CHARGE}rud{SE_M_REVERSAL}question!\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}mus{SE_M_SPIT_UP}know{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}{SE_M_CHARGE}local.\p"
-	.string "M{SE_M_YAWN}famil{SE_M_YAWN}wa{SE_M_GRASSWHISTLE}amon{SE_M_SANDSTORM}th{SE_M_REVERSAL}firs{SE_M_SPIT_UP}to\n"
-	.string "enjo{SE_M_YAWN}thes{SE_M_REVERSAL}springs.\p"
-	.string "See{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}eve{SE_M_ATTRACT}hav{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}SPLAS{SE_M_SWAGGER2}PLATE\n"
-	.string "t{SE_M_ATTRACT2}prov{SE_M_REVERSAL}it.$"
+	.string "Am I a local or a visitor?\n"
+	.string "What a rude question!\p"
+	.string "If you must know, I'm a local.\p"
+	.string "My family was among the first to\n"
+	.string "enjoy these springs.\p"
+	.string "See, I even have this SPLASH PLATE\n"
+	.string "to prove it.$"
 
 NewSinjoh_HotSprings_Text_MualaniBeforeBattle:
 	.string "Wait...\p"
-	.string "Yo{SE_M_DIVE}nee{SE_M_WATERFALL}th{SE_M_REVERSAL}SPLAS{SE_M_SWAGGER2}PLATE\n"
-	.string "t{SE_M_ATTRACT2}tam{SE_M_REVERSAL}th{SE_M_REVERSAL}legendar{SE_M_YAWN}POKéMON?\p"
-	.string "I{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}thin{SE_M_ENCORE2}you\n"
-	.string "ar{SE_M_REVERSAL}worthy{SE_M_SUPERSONIC}the{SE_M_ATTRACT}s{SE_M_ATTRACT2}d{SE_M_ATTRACT2}I.\p"
-	.string "Bu{SE_M_SPIT_UP}you'l{SE_M_BATON_PASS}stil{SE_M_BATON_PASS}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}earn\n"
+	.string "You need the SPLASH PLATE\n"
+	.string "to tame the legendary POKéMON?\p"
+	.string "If the KIMONO GIRLS think you\n"
+	.string "are worthy, then so do I.\p"
+	.string "But you'll still need to earn\n"
 	.string "it.$"
 
 NewSinjoh_HotSprings_Text_MualaniDefeat:
-	.string "Wel{SE_M_BATON_PASS}earned.$"
+	.string "Well earned.$"
 
 NewSinjoh_HotSprings_Text_MualaniAfter:
-	.string "I{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}har{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}le{SE_M_SPIT_UP}that\n"
-	.string "plat{SE_M_REVERSAL}go.\p"
-	.string "Bu{SE_M_SPIT_UP}whe{SE_M_ATTRACT}th{SE_M_REVERSAL}situatio{SE_M_ATTRACT}changes,\n"
-	.string "i{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}importan{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}u{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}change\l"
+	.string "It is hard for me to let that\n"
+	.string "plate go.\p"
+	.string "But when the situation changes,\n"
+	.string "it is important for us to change\l"
 	.string "too.\p"
-	.string "Th{SE_M_REVERSAL}plat{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}yours.$"
+	.string "The plate is yours.$"
 
 NewSinjoh_HotSprings_EventScript_Sign1::
 	msgbox NewSinjoh_HotSprings_Text_Sign1, MSGBOX_SIGN
 	end
 
 NewSinjoh_HotSprings_Text_Sign1:
-	.string "NE{SE_M_DETECT}SINJOH\n"
-	.string "HO{SE_M_SWIFT}SPRINGS$"
+	.string "NEW SINJOH\n"
+	.string "HOT SPRINGS$"
 
 NewSinjoh_HotSprings_EventScript_Sign2::
 	msgbox NewSinjoh_HotSprings_Text_Sign2, MSGBOX_SIGN
@@ -84,32 +84,32 @@ NewSinjoh_HotSprings_EventScript_Sign2::
 
 NewSinjoh_HotSprings_Text_Sign2:
 	.string "DANGER\n"
-	.string "WIL{SE_M_FAINT_ATTACK}HIBERNATIO{SE_M_PSYBEAM2}DEN$"
+	.string "WILD HIBERNATION DEN$"
 
 NewSinjoh_HotSprings_EventScript_SkierF::
 	msgbox NewSinjoh_HotSprings_Text_SkierF, MSGBOX_NPC
 	end
 
 NewSinjoh_HotSprings_Text_SkierF:
-	.string "{SE_M_HEAL_BELL}hat{SE_M_REVERSAL}th{SE_M_REVERSAL}cold!\p"
-	.string "I'{SE_M_MILK_DRINK}jus{SE_M_SPIT_UP}her{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}ho{SE_M_SPIT_UP}springs!$"
+	.string "I hate the cold!\p"
+	.string "I'm just here for the hot springs!$"
 
 NewSinjoh_HotSprings_EventScript_SkierM::
 	msgbox NewSinjoh_HotSprings_Text_SkierM, MSGBOX_NPC
 	end
 
 NewSinjoh_HotSprings_Text_SkierM:
-	.string "{SE_M_HEAL_BELL}cam{SE_M_REVERSAL}her{SE_M_REVERSAL}t{SE_M_ATTRACT2}snowboard\n"
-	.string "bu{SE_M_SPIT_UP}al{SE_M_BATON_PASS}m{SE_M_YAWN}girlfrien{SE_M_WATERFALL}want{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}do\l"
-	.string "i{SE_M_GRASSWHISTLE}si{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}spring{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}day!$"
+	.string "I came here to snowboard\n"
+	.string "but all my girlfriend wants to do\l"
+	.string "is sit in the springs all day!$"
 
 NewSinjoh_HotSprings_EventScript_OldLady::
 	msgbox NewSinjoh_HotSprings_Text_OldLady, MSGBOX_NPC
 	end
 
 NewSinjoh_HotSprings_Text_OldLady:
-	.string "Ignor{SE_M_REVERSAL}m{SE_M_YAWN}husband.\p"
-	.string "Le{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}worrie{SE_M_GRASSWHISTLE}mel{SE_M_SPIT_UP}away.$"
+	.string "Ignore my husband.\p"
+	.string "Let your worries melt away.$"
 
 NewSinjoh_HotSprings_EventScript_CreepyMan::
 	msgbox NewSinjoh_HotSprings_Text_CreepyMan, MSGBOX_NPC
@@ -117,9 +117,9 @@ NewSinjoh_HotSprings_EventScript_CreepyMan::
 
 NewSinjoh_HotSprings_Text_CreepyMan:
 	.string "Ouughh...\p"
-	.string "Thi{SE_M_GRASSWHISTLE}wate{SE_M_SAND_TOMB}feel{SE_M_GRASSWHISTLE}magica{SE_M_BATON_PASS}o{SE_M_ATTRACT}m{SE_M_YAWN}back.\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}bac{SE_M_ENCORE2}pai{SE_M_ATTRACT}too,\n"
-	.string "yo{SE_M_DIVE}shoul{SE_M_WATERFALL}sta{SE_M_YAWN}her{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me...$"
+	.string "This water feels magical on my back.\p"
+	.string "If you have back pain too,\n"
+	.string "you should stay here with me...$"
 
 NewSinjoh_HotSprings_EventScript_PLATutor::
 	lock
@@ -242,69 +242,69 @@ NewSinjoh_HotSprings_EventScript_PLATutorDecline::
 	end
 
 NewSinjoh_HotSprings_Text_PLATutorIntro:
-	.string "Th{SE_M_REVERSAL}ancien{SE_M_SPIT_UP}powe{SE_M_SAND_TOMB}flows\n"
-	.string "throug{SE_M_TRI_ATTACK}thes{SE_M_REVERSAL}springs.\p"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}teac{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}POKeMO{SE_M_PSYBEAM2}moves\n"
-	.string "fro{SE_M_MILK_DRINK}{SE_M_CHARGE}forgotte{SE_M_ATTRACT}age.\p"
+	.string "The ancient power flows\n"
+	.string "through these springs.\p"
+	.string "I can teach your POKeMON moves\n"
+	.string "from a forgotten age.\p"
 	.string "Interested?$"
 
 NewSinjoh_HotSprings_Text_PLATutorChoose:
-	.string "Whic{SE_M_TRI_ATTACK}mov{SE_M_REVERSAL}woul{SE_M_WATERFALL}yo{SE_M_DIVE}like?$"
+	.string "Which move would you like?$"
 
 NewSinjoh_HotSprings_Text_PLATutorConfirm:
-	.string "You'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}lear{SE_M_ATTRACT}{STR_VAR_1}?$"
+	.string "You'd like to learn {STR_VAR_1}?$"
 
 NewSinjoh_HotSprings_Text_PLATutorWhichMon:
-	.string "Whic{SE_M_TRI_ATTACK}POKeMO{SE_M_PSYBEAM2}shoul{SE_M_WATERFALL}lear{SE_M_ATTRACT}it?$"
+	.string "Which POKeMON should learn it?$"
 
 NewSinjoh_HotSprings_Text_PLATutorDone:
-	.string "Done{SE_M_DRAGON_RAGE}You{SE_M_SAND_TOMB}POKeMO{SE_M_PSYBEAM2}ha{SE_M_GRASSWHISTLE}mastered\n"
-	.string "th{SE_M_REVERSAL}ancien{SE_M_SPIT_UP}technique.$"
+	.string "Done! Your POKeMON has mastered\n"
+	.string "the ancient technique.$"
 
 NewSinjoh_HotSprings_Text_PLATutorComeBack:
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}anytime.$"
+	.string "Come back anytime.$"
 
 NewSinjoh_HotSprings_Text_PLAMove_VictoryDance:
-	.string "VICTOR{SE_M_MOONLIGHT}DANCE$"
+	.string "VICTORY DANCE$"
 
 NewSinjoh_HotSprings_Text_PLAMove_MountainGale:
-	.string "MOUNTAI{SE_M_PSYBEAM2}GALE$"
+	.string "MOUNTAIN GALE$"
 
 NewSinjoh_HotSprings_Text_PLAMove_BitterMalice:
-	.string "BITTE{SE_M_MINIMIZE}MALICE$"
+	.string "BITTER MALICE$"
 
 NewSinjoh_HotSprings_Text_PLAMove_SpringtideStorm:
-	.string "SPRINGTID{SE_M_SWORDS_DANCE}STORM$"
+	.string "SPRINGTIDE STORM$"
 
 NewSinjoh_HotSprings_Text_PLAMove_LunarBlessing:
-	.string "LUNA{SE_M_MINIMIZE}BLESSING$"
+	.string "LUNAR BLESSING$"
 
 NewSinjoh_HotSprings_Text_PLAMove_BleakwindStorm:
-	.string "BLEAKWIN{SE_M_FAINT_ATTACK}STORM$"
+	.string "BLEAKWIND STORM$"
 
 NewSinjoh_HotSprings_Text_PLAMove_WildboltStorm:
-	.string "WILDBOL{SE_M_SWIFT}STORM$"
+	.string "WILDBOLT STORM$"
 
 NewSinjoh_HotSprings_Text_PLAMove_SandsearStorm:
-	.string "SANDSEA{SE_M_MINIMIZE}STORM$"
+	.string "SANDSEAR STORM$"
 
 NewSinjoh_HotSprings_Text_PLAMove_Shelter:
 	.string "SHELTER$"
 
 NewSinjoh_HotSprings_Text_PLAMove_EsperWing:
-	.string "ESPE{SE_M_MINIMIZE}WING$"
+	.string "ESPER WING$"
 
 NewSinjoh_HotSprings_Text_PLAMove_TakeHeart:
-	.string "TAK{SE_M_SWORDS_DANCE}HEART$"
+	.string "TAKE HEART$"
 
 NewSinjoh_HotSprings_Text_PLAMove_MysticalPower:
-	.string "MYSTICA{SE_M_BRICK_BREAK}POWER$"
+	.string "MYSTICAL POWER$"
 
 NewSinjoh_HotSprings_Text_PLAMove_WaveCrash:
-	.string "WAV{SE_M_SWORDS_DANCE}CRASH$"
+	.string "WAVE CRASH$"
 
 NewSinjoh_HotSprings_Text_PLAMove_PowerShift:
-	.string "POWE{SE_M_MINIMIZE}SHIFT$"
+	.string "POWER SHIFT$"
 
 NewSinjoh_HotSprings_Text_PLAMove_Cancel:
 	.string "CANCEL$"

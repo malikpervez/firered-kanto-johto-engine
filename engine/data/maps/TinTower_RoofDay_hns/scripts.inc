@@ -294,19 +294,19 @@ TinTower_RoofDay_EventScript_KuniAfter::
 	end
 
 TinTower_RoofDay_Text_Kimono_AfterNotCaught:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}no{SE_M_SPIT_UP}onl{SE_M_YAWN}mad{SE_M_REVERSAL}HO-OH\n"
-	.string "appear{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}als{SE_M_ATTRACT2}defeated\l"
+	.string "You have not only made HO-OH\n"
+	.string "appear, but you have also defeated\l"
 	.string "it...\p"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}mor{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}u{SE_M_GRASSWHISTLE}to\n"
-	.string "say{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}yoursel{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}your\l"
+	.string "There is nothing more for us to\n"
+	.string "say. Take care of yourself in your\l"
 	.string "journey...$"
 
 TinTower_RoofDay_Text_Kimono_AfterCaught:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}no{SE_M_SPIT_UP}onl{SE_M_YAWN}mad{SE_M_REVERSAL}HO-OH\n"
-	.string "appear{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}als{SE_M_ATTRACT2}caught\l"
+	.string "You have not only made HO-OH\n"
+	.string "appear, but you have also caught\l"
 	.string "it...\p"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}mor{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}u{SE_M_GRASSWHISTLE}to\n"
-	.string "say{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}yoursel{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}your\l"
+	.string "There is nothing more for us to\n"
+	.string "say. Take care of yourself in your\l"
 	.string "journey...$"
 
 TinTower_RoofDay_Movement_CameraPanUp:
@@ -560,44 +560,44 @@ TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right2:
 	step_end
 
 TinTower_RoofDay_Text_Zuki_Before::
-	.string "ZUKI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+	.string "ZUKI: Go, face HO-OH. $"
 
 TinTower_RoofDay_Text_Naoko_Before::
-	.string "NAOKO{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+	.string "NAOKO: Go, face HO-OH. $"
 
 TinTower_RoofDay_Text_Miki_Before::
-	.string "MIKI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+	.string "MIKI: Go, face HO-OH. $"
 
 TinTower_RoofDay_Text_Sayo_Before::
-	.string "SAYO{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+	.string "SAYO: Go, face HO-OH. $"
 
 TinTower_RoofDay_Text_Kuni_Before::
-	.string "KUNI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+	.string "KUNI: Go, face HO-OH. $"
 
 TinTower_RoofDay_Text_Kimono_Opening::
-	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_HEAT_WAVE}That'{SE_M_GRASSWHISTLE}right.\n"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}wher{SE_M_REVERSAL}w{SE_M_REVERSAL}welcom{SE_M_REVERSAL}HO-OH.\p"
-	.string "Whe{SE_M_ATTRACT}th{SE_M_REVERSAL}danc{SE_M_REVERSAL}w{SE_M_REVERSAL}practice{SE_M_WATERFALL}many\n"
-	.string "day{SE_M_GRASSWHISTLE}become{SE_M_GRASSWHISTLE}on{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}soun{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}the\p"
-	.string "CLEA{SE_M_MINIMIZE}BEL{SE_M_BRICK_BREAK}w{SE_M_REVERSAL}entruste{SE_M_WATERFALL}t{SE_M_ATTRACT2}you{SE_M_SUPERSONIC}then\n"
-	.string "HO-O{SE_M_SWAGGER2}shal{SE_M_BATON_PASS}com{SE_M_REVERSAL}dow{SE_M_ATTRACT}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}great\l"
-	.string "arc{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}sk{SE_M_YAWN}onc{SE_M_REVERSAL}again{SE_M_PERISH_SONG}$"
+	.string "KIMONO GIRL: That's right.\n"
+	.string "This is where we welcome HO-OH.\p"
+	.string "When the dance we practiced many\n"
+	.string "days becomes one with the sound of the\p"
+	.string "CLEAR BELL we entrusted to you, then\n"
+	.string "HO-OH shall come down from the great\l"
+	.string "arch of the sky once again. $"
 
 TinTower_RoofDay_Text_Kimono_Closing1::
-	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}indee{SE_M_WATERFALL}HO-OH...\n"
-	.string "Th{SE_M_REVERSAL}guardia{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}sk{SE_M_YAWN}from\p"
-	.string "ancien{SE_M_SPIT_UP}times..{SE_M_PERISH_SONG}\p"
-	.string "S{SE_M_ATTRACT2}man{SE_M_YAWN}hav{SE_M_REVERSAL}trie{SE_M_WATERFALL}agai{SE_M_ATTRACT}an{SE_M_WATERFALL}again,\n"
-	.string "onl{SE_M_YAWN}t{SE_M_ATTRACT2}fail...\p"
-	.string "{PLAYER}{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}hear{SE_M_SPIT_UP}i{SE_M_ATTRACT}complete\n"
-	.string "harmon{SE_M_YAWN}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}CLEA{SE_M_MINIMIZE}BEL{SE_M_BRICK_BREAK}ha{SE_M_GRASSWHISTLE}finally\p"
-	.string "allowe{SE_M_WATERFALL}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}appear...\n"
-	.string "{PLAYER}{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}yo{SE_M_DIVE}see?\p"
-	.string "HO-OH..{SE_M_PERISH_SONG}I{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}waitin{SE_M_SANDSTORM}for\n"
-	.string "someon{SE_M_REVERSAL}lik{SE_M_REVERSAL}yo{SE_M_DIVE}al{SE_M_BATON_PASS}thi{SE_M_GRASSWHISTLE}time.\p"
-	.string "Wouldn'{SE_M_SPIT_UP}yo{SE_M_DIVE}agree{SE_M_SING}$"
+	.string "That is indeed HO-OH...\n"
+	.string "The guardian of the sky from\p"
+	.string "ancient times... \p"
+	.string "So many have tried again and again,\n"
+	.string "only to fail...\p"
+	.string "{PLAYER}, your heart in complete\n"
+	.string "harmony with the CLEAR BELL has finally\p"
+	.string "allowed it to appear...\n"
+	.string "{PLAYER}, don't you see?\p"
+	.string "HO-OH... It must have been waiting for\n"
+	.string "someone like you all this time.\p"
+	.string "Wouldn't you agree? $"
 
 TinTower_RoofDay_Text_Kimono_After::
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}don{SE_M_REVERSAL}{SE_M_CHARGE}grea{SE_M_SPIT_UP}job.\n"
-	.string "Sa{SE_M_YAWN}hell{SE_M_ATTRACT2}t{SE_M_ATTRACT2}PROF.EL{SE_M_GIGA_DRAIN}fo{SE_M_SAND_TOMB}us.$"
+	.string "You have done a great job.\n"
+	.string "Say hello to PROF.ELM for us.$"
 

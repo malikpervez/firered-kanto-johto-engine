@@ -13,8 +13,8 @@ SinjohRuins_Temple_OpenDoor::
 	return
 
 SinjohRuins_Temple_Text_Mon:
-	.string "Som{SE_M_REVERSAL}kin{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}ancien{SE_M_SPIT_UP}sensor.\n"
-	.string "Wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}lookin{SE_M_SANDSTORM}for?$"
+	.string "Some kind of ancient sensor.\n"
+	.string "What is it looking for?$"
 
 SinjohRuins_Temple_EventScript_RegiceScanner::
 	lock
@@ -104,11 +104,11 @@ SinjohRuins_Temple_EventScript_ScannerAlreadyDone::
 	end
 
 SinjohRuins_Temple_Text_ScannerAlreadyDone:
-	.string "Thi{SE_M_GRASSWHISTLE}senso{SE_M_SAND_TOMB}ha{SE_M_GRASSWHISTLE}alread{SE_M_YAWN}bee{SE_M_ATTRACT}activated.$"
+	.string "This sensor has already been activated.$"
 
 SinjohRuins_Temple_Text_Responds:
-	.string "Th{SE_M_REVERSAL}templ{SE_M_REVERSAL}respond{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}actions.$"
+	.string "The temple responds to your actions.$"
 
 SinjohRuins_Temple_Text_Door:
-	.string "Th{SE_M_REVERSAL}wa{SE_M_YAWN}i{SE_M_GRASSWHISTLE}open.$"
+	.string "The way is open.$"
 

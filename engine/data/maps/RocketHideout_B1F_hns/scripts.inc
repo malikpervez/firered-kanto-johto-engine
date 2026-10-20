@@ -251,19 +251,19 @@ RocketHideout_B1F_Movement_GruntWalkLeft:
 
 RocketHideout_B1F_Text_CameraGrunt1Seen:
 	.string "Hey!\n"
-	.string "Intrude{SE_M_SAND_TOMB}alert!$"
+	.string "Intruder alert!$"
 
 RocketHideout_B1F_Text_CameraGrunt1Beaten:
-	.string "Dang{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}failed…$"
+	.string "Dang… I failed…$"
 
 RocketHideout_B1F_Text_CameraGrunt2Seen:
-	.string "It'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}turn{SE_M_DRAGON_RAGE}There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}escape!$"
+	.string "It's my turn! There's no escape!$"
 
 RocketHideout_B1F_Text_CameraGrunt2Beaten:
-	.string "Surveillanc{SE_M_REVERSAL}cam{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}i{SE_M_ATTRACT}the\n"
-	.string "POKéMO{SE_M_PSYBEAM2}statues.\p"
-	.string "We'l{SE_M_BATON_PASS}kee{SE_M_MORNING_SUN}appearin{SE_M_SANDSTORM}unti{SE_M_BATON_PASS}you\n"
-	.string "tri{SE_M_MORNING_SUN}{SE_M_CHARGE}secre{SE_M_SPIT_UP}switch.$"
+	.string "Surveillance cams are in the\n"
+	.string "POKéMON statues.\p"
+	.string "We'll keep appearing until you\n"
+	.string "trip a secret switch.$"
 
 RocketHideout_B1F_EventScript_TrainerJed::
 	trainerbattle_single TRAINER_JOHTO_JED_HNS, RocketHideout_B1F_Text_ScientistJedSeen, RocketHideout_B1F_Text_ScientistJedBeaten
@@ -271,32 +271,32 @@ RocketHideout_B1F_EventScript_TrainerJed::
 	end
 
 RocketHideout_B1F_Text_ScientistJedSeen:
-	.string "Thi{SE_M_GRASSWHISTLE}wa{SE_M_GRASSWHISTLE}onc{SE_M_REVERSAL}{SE_M_CHARGE}ninj{SE_M_CHARGE}hideout.\p"
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}trap{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}confound\n"
-	.string "intruder{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}you.$"
+	.string "This was once a ninja hideout.\p"
+	.string "There are traps to confound\n"
+	.string "intruders like you.$"
 
 RocketHideout_B1F_Text_ScientistJedBeaten:
-	.string "{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}it…$"
+	.string "I get it…$"
 
 RocketHideout_B1F_Text_ScientistJedAfter:
-	.string "Al{SE_M_BATON_PASS}right{SE_M_PERISH_SONG}I'l{SE_M_BATON_PASS}divulg{SE_M_REVERSAL}{SE_M_CHARGE}secret\n"
-	.string "abou{SE_M_SPIT_UP}ou{SE_M_SAND_TOMB}hideout.\p"
-	.string "Tha{SE_M_SPIT_UP}thin{SE_M_SANDSTORM}o{SE_M_ATTRACT}th{SE_M_REVERSAL}floo{SE_M_SAND_TOMB}u{SE_M_MORNING_SUN}ahead\n"
-	.string "i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}war{SE_M_MORNING_SUN}panel.\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ste{SE_M_MORNING_SUN}o{SE_M_ATTRACT}it{SE_M_SUPERSONIC}you'l{SE_M_BATON_PASS}be\n"
-	.string "warpe{SE_M_WATERFALL}bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}entrance.$"
+	.string "All right. I'll divulge a secret\n"
+	.string "about our hideout.\p"
+	.string "That thing on the floor up ahead\n"
+	.string "is a warp panel.\p"
+	.string "If you step on it, you'll be\n"
+	.string "warped back to the entrance.$"
 
 RocketHideout_B1F_Text_GruntM16Seen:
-	.string "Heheh{SE_M_PERISH_SONG}Feelin{SE_M_SANDSTORM}lucky{SE_M_SUPERSONIC}punk?$"
+	.string "Heheh. Feeling lucky, punk?$"
 
 RocketHideout_B1F_Text_GruntM16Beaten:
 	.string "Kaboom!$"
 
 RocketHideout_B1F_Text_GruntM16After:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}eve{SE_M_ATTRACT}kno{SE_M_TWISTER}wher{SE_M_REVERSAL}th{SE_M_REVERSAL}traps\n"
-	.string "ar{SE_M_REVERSAL}planted.\p"
-	.string "You'l{SE_M_BATON_PASS}jus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}collec{SE_M_SPIT_UP}your\n"
-	.string "courag{SE_M_REVERSAL}an{SE_M_WATERFALL}walk.$"
+	.string "I don't even know where the traps\n"
+	.string "are planted.\p"
+	.string "You'll just have to collect your\n"
+	.string "courage and walk.$"
 
 RocketHideout_B1F_EventScript_Rocket16::
 	trainerbattle_single TRAINER_JOHTO_GRUNT_13_HNS, RocketHideout_B1F_Text_GruntM16Seen, RocketHideout_B1F_Text_GruntM16Beaten
@@ -320,7 +320,7 @@ RocketHideout_B1F_EventScript_Persian::
 	end
 
 RocketHideout_B1F_Text_SecurityCameraStatue:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}PERSIA{SE_M_PSYBEAM2}statue…$"
+	.string "It's a PERSIAN statue…$"
 
 RocketHideout_B1F_EventScript_DummyPanel::
 	msgbox RocketHideout_B1F_Text_NothingThere, MSGBOX_SIGN
@@ -363,11 +363,11 @@ RocketHideout_B1F_EventScript_TurnOffSwitch::
 	end
 
 RocketHideout_B1F_Text_NothingThere:
-	.string "{SE_M_BONEMERANG}strang{SE_M_REVERSAL}panel..{SE_M_PERISH_SONG}Nothin{SE_M_SANDSTORM}here.$"
+	.string "A strange panel... Nothing here.$"
 
 RocketHideout_B1F_Text_SecretSwitch:
-	.string "{SE_M_BONEMERANG}secre{SE_M_SPIT_UP}switch{SE_M_DRAGON_RAGE}Bette{SE_M_SAND_TOMB}pres{SE_M_GRASSWHISTLE}it.$"
+	.string "A secret switch! Better press it.$"
 
 RocketHideout_B1F_Text_SwitchOff:
-	.string "Th{SE_M_REVERSAL}switc{SE_M_TRI_ATTACK}i{SE_M_GRASSWHISTLE}turne{SE_M_WATERFALL}off.$"
+	.string "The switch is turned off.$"
 

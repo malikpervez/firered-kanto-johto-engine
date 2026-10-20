@@ -15,5 +15,5 @@ MtSilver_Outside_EventScript_Sign::
 	end
 
 MtSilver_Outside_Text_Sign:
-	.string "MT{SE_M_PERISH_SONG}SILVER$"
+	.string "MT. SILVER$"
 

@@ -146,44 +146,44 @@ Route39_Barn_EventScript_TwinsAfter::
 	end
 
 Route39_Text_BarnTwinMoomooIsSick:
-	.string "MOOMO{SE_M_SOLAR_BEAM}i{SE_M_GRASSWHISTLE}sick…\p"
-	.string "Sh{SE_M_REVERSAL}need{SE_M_GRASSWHISTLE}lot{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}ORA{SE_M_PSYBEAM2}BERRIES.$"
+	.string "MOOMOO is sick…\p"
+	.string "She needs lots of ORAN BERRIES.$"
 
 Route39_Text_BarnTwinFeedingMoomoo:
-	.string "MOOMO{SE_M_SOLAR_BEAM}i{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}better!\n"
-	.string "Than{SE_M_ENCORE2}you!$"
+	.string "MOOMOO is all better!\n"
+	.string "Thank you!$"
 
 Route39_Text_MoomooWeakMoo:
-	.string "MILTANK{SE_M_HEAT_WAVE}…Moo…$"
+	.string "MILTANK: …Moo…$"
 
 Route39_Text_BarnCryIsWeak:
-	.string "It{SE_M_GRASSWHISTLE}cr{SE_M_YAWN}i{SE_M_GRASSWHISTLE}weak…\n"
-	.string "Giv{SE_M_REVERSAL}a{SE_M_ATTRACT}ORA{SE_M_PSYBEAM2}BERR{SE_M_MOONLIGHT}t{SE_M_ATTRACT2}MILTANK?$"
+	.string "Its cry is weak…\n"
+	.string "Give an ORAN BERRY to MILTANK?$"
 
 Route39_Text_MoomooHappyMoo:
-	.string "MILTANK{SE_M_HEAT_WAVE}Mooo!$"
+	.string "MILTANK: Mooo!$"
 
 Route39_Text_BarnGaveBerry:
-	.string "{PLAYER} gav{SE_M_REVERSAL}a{SE_M_ATTRACT}ORA{SE_M_PSYBEAM2}BERR{SE_M_MOONLIGHT}to\n"
+	.string "{PLAYER} gave an ORAN BERRY to\n"
 	.string "MILTANK.$"
 
 Route39_Text_BarnLittleHealthier:
-	.string "MILTAN{SE_M_SNORE}becam{SE_M_REVERSAL}{SE_M_CHARGE}little\n"
+	.string "MILTANK became a little\n"
 	.string "healthier!$"
 
 Route39_Text_BarnQuiteHealthy:
-	.string "MILTAN{SE_M_SNORE}becam{SE_M_REVERSAL}quite\n"
+	.string "MILTANK became quite\n"
 	.string "healthy!$"
 
 Route39_Text_BarnTotallyHealthy:
-	.string "MILTAN{SE_M_SNORE}becam{SE_M_REVERSAL}totally\n"
+	.string "MILTANK became totally\n"
 	.string "healthy!$"
 
 Route39_Text_BarnNoBerries:
-	.string "{PLAYER} ha{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}ORA{SE_M_PSYBEAM2}BERRIES…$"
+	.string "{PLAYER} has no ORAN BERRIES…$"
 
 Route39_Text_BarnRefusedBerry:
-	.string "{PLAYER} wouldn'{SE_M_SPIT_UP}giv{SE_M_REVERSAL}an\n"
-	.string "ORA{SE_M_PSYBEAM2}BERRY.\p"
-	.string "MILTAN{SE_M_SNORE}look{SE_M_GRASSWHISTLE}sad.$"
+	.string "{PLAYER} wouldn't give an\n"
+	.string "ORAN BERRY.\p"
+	.string "MILTANK looks sad.$"
 

@@ -174,15 +174,15 @@ Snowswept_Cavern_Eventscript_Machamp_AfterBoulder::
 	end
 
 Snowswept_Cavern_Text_DroppedItem:
-	.string "Th{SE_M_REVERSAL}MACHAM{SE_M_PETAL_DANCE}droppe{SE_M_WATERFALL}a{SE_M_ATTRACT}item...$"
+	.string "The MACHAMP dropped an item...$"
 
 Snowswept_Text_Machamp_Cry:
 	.string "Mahh!!$"
 
 Snowswept_Text_Machamp_Plate:
-	.string "Th{SE_M_REVERSAL}MACHAM{SE_M_PETAL_DANCE}seem{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}holding\n"
-	.string "{SE_M_CHARGE}PLAT{SE_M_SWORDS_DANCE}i{SE_M_ATTRACT}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}it{SE_M_GRASSWHISTLE}hands.\p"
-	.string "Battl{SE_M_REVERSAL}it?$"
+	.string "The MACHAMP seems to be holding\n"
+	.string "a PLATE in one of its hands.\p"
+	.string "Battle it?$"
 
 Snowswept_Machamp_Movement:
 	jump_in_place_down

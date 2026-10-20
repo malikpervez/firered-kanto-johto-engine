@@ -342,111 +342,111 @@ AzaleaTown_Movement_KurtLeave:
 	step_end
 
 AzaleaTown_Text_RivalBefore:
-	.string "…Tel{SE_M_BATON_PASS}m{SE_M_REVERSAL}something.\p"
-	.string "I{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}tru{SE_M_REVERSAL}tha{SE_M_SPIT_UP}TEA{SE_M_GIGA_DRAIN}ROCKET\n"
-	.string "ha{SE_M_GRASSWHISTLE}returned?\p"
-	.string "What{SE_M_SING}Yo{SE_M_DIVE}bea{SE_M_SPIT_UP}them{SE_M_SING}Hah{SE_M_DRAGON_RAGE}Quit\n"
+	.string "…Tell me something.\p"
+	.string "Is it true that TEAM ROCKET\n"
+	.string "has returned?\p"
+	.string "What? You beat them? Hah! Quit\n"
 	.string "lying.\p"
-	.string "You'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}joking?\n"
-	.string "The{SE_M_ATTRACT}let'{SE_M_GRASSWHISTLE}se{SE_M_REVERSAL}ho{SE_M_TWISTER}goo{SE_M_WATERFALL}yo{SE_M_DIVE}are.$"
+	.string "You're not joking?\n"
+	.string "Then let's see how good you are.$"
 
 AzaleaTown_Text_RivalWin:
-	.string "…Humph{SE_M_DRAGON_RAGE}Useles{SE_M_GRASSWHISTLE}POKéMON!\p"
-	.string "Listen{SE_M_SUPERSONIC}you{SE_M_PERISH_SONG}Yo{SE_M_DIVE}onl{SE_M_YAWN}wo{SE_M_ATTRACT}because\n"
-	.string "m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}wer{SE_M_REVERSAL}weak.$"
+	.string "…Humph! Useless POKéMON!\p"
+	.string "Listen, you. You only won because\n"
+	.string "my POKéMON were weak.$"
 
 AzaleaTown_Text_RivalAfter:
-	.string "{SE_M_HEAL_BELL}hat{SE_M_REVERSAL}th{SE_M_REVERSAL}weak.\p"
-	.string "POKéMON{SE_M_SUPERSONIC}trainers{SE_M_PERISH_SONG}I{SE_M_SPIT_UP}doesn't\n"
-	.string "matte{SE_M_SAND_TOMB}wh{SE_M_ATTRACT2}o{SE_M_SAND_TOMB}what.\p"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}stron{SE_M_SANDSTORM}an{SE_M_WATERFALL}wipe\n"
-	.string "ou{SE_M_SPIT_UP}th{SE_M_REVERSAL}weak.\p"
-	.string "Tha{SE_M_SPIT_UP}goe{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}TEA{SE_M_GIGA_DRAIN}ROCKE{SE_M_SWIFT}too.\p"
-	.string "The{SE_M_YAWN}ac{SE_M_SPIT_UP}bi{SE_M_SANDSTORM}an{SE_M_WATERFALL}toug{SE_M_TRI_ATTACK}i{SE_M_ATTRACT}{SE_M_CHARGE}group.\p"
-	.string "Bu{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}the{SE_M_MILK_DRINK}alone{SE_M_SUPERSONIC}an{SE_M_WATERFALL}they'r{SE_M_REVERSAL}weak.\n"
-	.string "{SE_M_HEAL_BELL}hat{SE_M_REVERSAL}the{SE_M_MILK_DRINK}all.\p"
-	.string "Yo{SE_M_DIVE}sta{SE_M_YAWN}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}way{SE_M_PERISH_SONG}{SE_M_BONEMERANG}weakling\n"
-	.string "lik{SE_M_REVERSAL}yo{SE_M_DIVE}i{SE_M_GRASSWHISTLE}onl{SE_M_YAWN}{SE_M_CHARGE}distraction.$"
+	.string "I hate the weak.\p"
+	.string "POKéMON, trainers. It doesn't\n"
+	.string "matter who or what.\p"
+	.string "I'm going to be strong and wipe\n"
+	.string "out the weak.\p"
+	.string "That goes for TEAM ROCKET too.\p"
+	.string "They act big and tough in a group.\p"
+	.string "But get them alone, and they're weak.\n"
+	.string "I hate them all.\p"
+	.string "You stay out of my way. A weakling\n"
+	.string "like you is only a distraction.$"
 
 AzaleaTown_Text_RivalLoss:
-	.string "…Humph{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}kne{SE_M_TWISTER}yo{SE_M_DIVE}wer{SE_M_REVERSAL}lying.$"
+	.string "…Humph! I knew you were lying.$"
 
 AzaleaTown_Text_Rocket1:
-	.string "It'{SE_M_GRASSWHISTLE}unsaf{SE_M_REVERSAL}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}i{SE_M_ATTRACT}there,\n"
-	.string "s{SE_M_ATTRACT2}I'{SE_M_MILK_DRINK}standin{SE_M_SANDSTORM}guard.\p"
-	.string "Aren'{SE_M_SPIT_UP}{SE_M_HEAL_BELL}{SE_M_CHARGE}goo{SE_M_WATERFALL}Samaritan?$"
+	.string "It's unsafe to go in there,\n"
+	.string "so I'm standing guard.\p"
+	.string "Aren't I a good Samaritan?$"
 
 AzaleaTown_Text_Rocket2:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}abou{SE_M_SPIT_UP}SLOWPOKETAIL?\n"
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}it'{SE_M_GRASSWHISTLE}tasty!\p"
-	.string "Aren'{SE_M_SPIT_UP}yo{SE_M_DIVE}gla{SE_M_WATERFALL}{SE_M_HEAL_BELL}tol{SE_M_WATERFALL}yo{SE_M_DIVE}that?$"
+	.string "Do you know about SLOWPOKETAIL?\n"
+	.string "I heard it's tasty!\p"
+	.string "Aren't you glad I told you that?$"
 
 AzaleaTown_Text_GrampsBefore:
-	.string "Th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}hav{SE_M_REVERSAL}disappeared\n"
-	.string "fro{SE_M_MILK_DRINK}town…\p"
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}thei{SE_M_SAND_TOMB}TAIL{SE_M_SKETCH}ar{SE_M_REVERSAL}being\n"
-	.string "sol{SE_M_WATERFALL}somewhere.$"
+	.string "The SLOWPOKE have disappeared\n"
+	.string "from town…\p"
+	.string "I heard their TAILS are being\n"
+	.string "sold somewhere.$"
 
 AzaleaTown_Text_GrampsAfter:
-	.string "Th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}hav{SE_M_REVERSAL}returned.\p"
-	.string "Knowin{SE_M_SANDSTORM}them{SE_M_SUPERSONIC}the{SE_M_YAWN}could'v{SE_M_REVERSAL}just\n"
-	.string "bee{SE_M_ATTRACT}goofin{SE_M_SANDSTORM}of{SE_M_ACID_ARMOR}somewhere.$"
+	.string "The SLOWPOKE have returned.\p"
+	.string "Knowing them, they could've just\n"
+	.string "been goofing off somewhere.$"
 
 AzaleaTown_Text_Teacher:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}com{SE_M_REVERSAL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}KUR{SE_M_SWIFT}t{SE_M_ATTRACT2}make\n"
-	.string "som{SE_M_REVERSAL}BALLS?\p"
-	.string "{SE_M_BONEMERANG}lo{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}peopl{SE_M_REVERSAL}d{SE_M_ATTRACT2}jus{SE_M_SPIT_UP}that.$"
+	.string "Did you come to get KURT to make\n"
+	.string "some BALLS?\p"
+	.string "A lot of people do just that.$"
 
 AzaleaTown_Text_Youngster:
-	.string "Cu{SE_M_SPIT_UP}throug{SE_M_TRI_ATTACK}AZALE{SE_M_BONEMERANG}an{SE_M_WATERFALL}you'l{SE_M_BATON_PASS}be\n"
-	.string "i{SE_M_ATTRACT}ILE{SE_M_LOCK_ON}FOREST.\p"
-	.string "Bu{SE_M_SPIT_UP}thes{SE_M_REVERSAL}skinn{SE_M_YAWN}tree{SE_M_GRASSWHISTLE}mak{SE_M_REVERSAL}it\n"
-	.string "impossibl{SE_M_REVERSAL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}through.\p"
-	.string "Th{SE_M_REVERSAL}CHARCOA{SE_M_BRICK_BREAK}MAN'{SE_M_GRASSWHISTLE}POKéMON\n"
-	.string "ca{SE_M_ATTRACT}CU{SE_M_SWIFT}dow{SE_M_ATTRACT}trees.$"
+	.string "Cut through AZALEA and you'll be\n"
+	.string "in ILEX FOREST.\p"
+	.string "But these skinny trees make it\n"
+	.string "impossible to get through.\p"
+	.string "The CHARCOAL MAN's POKéMON\n"
+	.string "can CUT down trees.$"
 
 AzaleaTown_Text_Slowpoke1:
 	.string "SLOWPOKE:..........\p"
 	.string "...............YAWN?$"
 
 AzaleaTown_Text_Kurt1:
-	.string "ILE{SE_M_LOCK_ON}FORES{SE_M_SWIFT}i{SE_M_GRASSWHISTLE}restless!\p"
-	.string "Wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}on?$"
+	.string "ILEX FOREST is restless!\p"
+	.string "What is going on?$"
 
 AzaleaTown_Text_Kurt2:
-	.string "{PLAYER}{SE_M_SUPERSONIC}here'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}G{SE_M_SKETCH}BAL{SE_M_BRICK_BREAK}back!$"
+	.string "{PLAYER}, here's your GS BALL back!$"
 
 AzaleaTown_Text_Kurt3:
-	.string "Coul{SE_M_WATERFALL}yo{SE_M_DIVE}g{SE_M_ATTRACT2}se{SE_M_REVERSAL}wh{SE_M_YAWN}ILE{SE_M_LOCK_ON}FOREST\n"
-	.string "i{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}restless?$"
+	.string "Could you go see why ILEX FOREST\n"
+	.string "is so restless?$"
 
 AzaleaTown_Text_Sign:
-	.string "AZALE{SE_M_BONEMERANG}TOWN\n"
-	.string "Wher{SE_M_REVERSAL}Peopl{SE_M_REVERSAL}an{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}Liv{SE_M_REVERSAL}in\l"
-	.string "Happ{SE_M_YAWN}Harmony.$"
+	.string "AZALEA TOWN\n"
+	.string "Where People and POKéMON Live in\l"
+	.string "Happy Harmony.$"
 
 AzaleaTown_Text_KurtsHouseSign:
-	.string "KURT'{SE_M_SKETCH}HOUSE$"
+	.string "KURT'S HOUSE$"
 
 AzaleaTown_Text_GymSign:
-	.string "AZALE{SE_M_BONEMERANG}TOWN\n"
-	.string "POKéMO{SE_M_PSYBEAM2}GYM\p"
-	.string "LEADER{SE_M_HEAT_WAVE}BUGSY\p"
-	.string "Th{SE_M_REVERSAL}Walkin{SE_M_SANDSTORM}Bu{SE_M_SANDSTORM}POKéMON\n"
+	.string "AZALEA TOWN\n"
+	.string "POKéMON GYM\p"
+	.string "LEADER: BUGSY\p"
+	.string "The Walking Bug POKéMON\n"
 	.string "Encyclopedia$"
 
 AzaleaTown_Text_SlowpokeWellSign:
-	.string "SLOWPOK{SE_M_SWORDS_DANCE}WELL\p"
-	.string "Als{SE_M_ATTRACT2}know{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}RAINMAKE{SE_M_MINIMIZE}WELL.\p"
-	.string "Local{SE_M_GRASSWHISTLE}believ{SE_M_REVERSAL}tha{SE_M_SPIT_UP}{SE_M_CHARGE}SLOWPOKE's\n"
-	.string "yaw{SE_M_ATTRACT}summon{SE_M_GRASSWHISTLE}rain.\p"
-	.string "Record{SE_M_GRASSWHISTLE}sho{SE_M_TWISTER}tha{SE_M_SPIT_UP}{SE_M_CHARGE}SLOWPOKE's\n"
-	.string "yaw{SE_M_ATTRACT}ende{SE_M_WATERFALL}{SE_M_CHARGE}drough{SE_M_SPIT_UP}40{SE_M_BITE}year{SE_M_GRASSWHISTLE}ago.$"
+	.string "SLOWPOKE WELL\p"
+	.string "Also known as the RAINMAKER WELL.\p"
+	.string "Locals believe that a SLOWPOKE's\n"
+	.string "yawn summons rain.\p"
+	.string "Records show that a SLOWPOKE's\n"
+	.string "yawn ended a drought 400 years ago.$"
 
 AzaleaTown_Text_CharcoalKilnSign:
-	.string "CHARCOA{SE_M_BRICK_BREAK}KILN$"
+	.string "CHARCOAL KILN$"
 
 AzaleaTown_Text_IlexForestSign:
-	.string "ILE{SE_M_LOCK_ON}FOREST\p"
-	.string "Ente{SE_M_SAND_TOMB}throug{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}gate.$"
+	.string "ILEX FOREST\p"
+	.string "Enter through the gate.$"
 

@@ -63,14 +63,14 @@ J_ApricornTree_EventScript_CancelPickingApricorn::
 	end
 
 J_ApricornTree_Text_Intro:
-	.string "It'{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}Apricor{SE_M_ATTRACT}Tree!$"
+	.string "It's an Apricorn Tree!$"
 
 J_ApricornTree_Text_Empty:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}n{SE_M_ATTRACT2}Apricorns…$"
+	.string "There are no Apricorns…$"
 
 J_ApricornTree_Text_WantToPick:
-	.string "…It'{SE_M_GRASSWHISTLE}{STR_VAR_2} {STR_VAR_1}!\n"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}pic{SE_M_ENCORE2}the\l"
+	.string "…It's {STR_VAR_2} {STR_VAR_1}!\n"
+	.string "Do you want to pick the\l"
 	.string "{STR_VAR_1}?$"
 
 J_ApricornTree_Text_PickedTheApricorn:
@@ -78,16 +78,16 @@ J_ApricornTree_Text_PickedTheApricorn:
 	.string "{STR_VAR_2} {STR_VAR_1}.$"
 
 J_ApricornTree_Text_PutAwayApricorn:
-	.string "{PLAYER} pu{SE_M_SPIT_UP}awa{SE_M_YAWN}the\n"
+	.string "{PLAYER} put away the\n"
 	.string "{STR_VAR_1} in\l"
-	.string "th{SE_M_REVERSAL}BAG'{SE_M_GRASSWHISTLE}{STR_VAR_3} POCKET.$"
+	.string "the BAG's {STR_VAR_3} POCKET.$"
 
 J_ApricornTree_Text_PocketFull:
-	.string "Th{SE_M_REVERSAL}BAG'{SE_M_GRASSWHISTLE}{STR_VAR_3} POCKE{SE_M_SWIFT}i{SE_M_GRASSWHISTLE}full.\p"
-	.string "{PLAYER} gav{SE_M_REVERSAL}u{SE_M_MORNING_SUN}o{SE_M_ATTRACT}the\n"
+	.string "The BAG's {STR_VAR_3} POCKET is full.\p"
+	.string "{PLAYER} gave up on the\n"
 	.string "{STR_VAR_1}…$"
 
 J_ApricornTree_Text_ApricornLeftUnpicked:
-	.string "{PLAYER} gav{SE_M_REVERSAL}u{SE_M_MORNING_SUN}o{SE_M_ATTRACT}the\n"
+	.string "{PLAYER} gave up on the\n"
 	.string "{STR_VAR_1}…$"
 

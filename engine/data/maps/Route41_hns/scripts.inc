@@ -18,16 +18,16 @@ Route41_EventScript_Charlie::
 	end
 
 Route41_Text_SwimmermCharlieSeen:
-	.string "Th{SE_M_REVERSAL}water'{SE_M_GRASSWHISTLE}war{SE_M_MILK_DRINK}here.\n"
-	.string "I'{SE_M_MILK_DRINK}loos{SE_M_REVERSAL}an{SE_M_WATERFALL}limber.\p"
-	.string "Sure{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}tak{SE_M_REVERSAL}yo{SE_M_DIVE}on!$"
+	.string "The water's warm here.\n"
+	.string "I'm loose and limber.\p"
+	.string "Sure, I'll take you on!$"
 
 Route41_Text_SwimmermCharlieBeaten:
-	.string "Yikes{SE_M_DRAGON_RAGE}I'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}prun{SE_M_REVERSAL}skin!$"
+	.string "Yikes! I've got prune skin!$"
 
 Route41_Text_SwimmermCharlieAfter:
-	.string "Isn'{SE_M_SPIT_UP}i{SE_M_SPIT_UP}relaxin{SE_M_SANDSTORM}jus{SE_M_SPIT_UP}floating\n"
-	.string "lik{SE_M_REVERSAL}this?$"
+	.string "Isn't it relaxing just floating\n"
+	.string "like this?$"
 
 Route41_EventScript_George::
 	trainerbattle_single TRAINER_JOHTO_GEORGE_HNS, Route41_Text_SwimmermGeorgeSeen, Route41_Text_SwimmermGeorgeBeaten
@@ -35,17 +35,17 @@ Route41_EventScript_George::
 	end
 
 Route41_Text_SwimmermGeorgeSeen:
-	.string "I'{SE_M_MILK_DRINK}{SE_M_CHARGE}bi{SE_M_SPIT_UP}tired.\n"
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}win{SE_M_SUPERSONIC}len{SE_M_WATERFALL}m{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMON.$"
+	.string "I'm a bit tired.\n"
+	.string "If I win, lend me your POKéMON.$"
 
 Route41_Text_SwimmermGeorgeBeaten:
-	.string "Pant{SE_M_SUPERSONIC}pant…$"
+	.string "Pant, pant…$"
 
 Route41_Text_SwimmermGeorgeAfter:
-	.string "It'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}fa{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}CIANWOOD.\p"
-	.string "Bu{SE_M_SPIT_UP}it'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}eas{SE_M_YAWN}retur{SE_M_ATTRACT}trip\n"
-	.string "t{SE_M_ATTRACT2}OLIVIN{SE_M_SWORDS_DANCE}either.\p"
-	.string "Wha{SE_M_SPIT_UP}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}do?$"
+	.string "It's so far to CIANWOOD.\p"
+	.string "But it's no easy return trip\n"
+	.string "to OLIVINE either.\p"
+	.string "What should I do?$"
 
 Route41_EventScript_Berke::
 	trainerbattle_single TRAINER_JOHTO_BERKE_HNS, Route41_Text_SwimmermBerkeSeen, Route41_Text_SwimmermBerkeBeaten
@@ -53,20 +53,20 @@ Route41_EventScript_Berke::
 	end
 
 Route41_Text_SwimmermBerkeSeen:
-	.string "Se{SE_M_REVERSAL}thos{SE_M_REVERSAL}island{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}are\n"
-	.string "blocke{SE_M_WATERFALL}b{SE_M_YAWN}whirlpools?\p"
-	.string "Ther{SE_M_REVERSAL}jus{SE_M_SPIT_UP}ha{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}{SE_M_CHARGE}secret!$"
+	.string "See those islands that are\n"
+	.string "blocked by whirlpools?\p"
+	.string "There just has to be a secret!$"
 
 Route41_Text_SwimmermBerkeBeaten:
-	.string "What'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}secre{SE_M_SPIT_UP}t{SE_M_ATTRACT2}your\n"
+	.string "What's the secret to your\n"
 	.string "strength?$"
 
 Route41_Text_SwimmermBerkeAfter:
-	.string "I{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}dar{SE_M_ENCORE2}an{SE_M_WATERFALL}storm{SE_M_YAWN}night…\p"
-	.string "{SE_M_HEAL_BELL}sa{SE_M_TWISTER}thi{SE_M_GRASSWHISTLE}gian{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}flying\n"
-	.string "fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}islands.\p"
-	.string "I{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}scatterin{SE_M_SANDSTORM}feathers\n"
-	.string "fro{SE_M_MILK_DRINK}it{SE_M_GRASSWHISTLE}silve{SE_M_SAND_TOMB}wings.$"
+	.string "It was a dark and stormy night…\p"
+	.string "I saw this giant POKéMON flying\n"
+	.string "from the islands.\p"
+	.string "It was scattering feathers\n"
+	.string "from its silver wings.$"
 
 Route41_EventScript_Kirk::
 	trainerbattle_single TRAINER_JOHTO_KIRK_HNS, Route41_Text_SwimmermKirkSeen, Route41_Text_SwimmermKirkBeaten
@@ -74,16 +74,16 @@ Route41_EventScript_Kirk::
 	end
 
 Route41_Text_SwimmermKirkSeen:
-	.string "Th{SE_M_REVERSAL}wave{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}wil{SE_M_WATERFALL}here.\p"
-	.string "The{SE_M_YAWN}tir{SE_M_REVERSAL}yo{SE_M_DIVE}ou{SE_M_SPIT_UP}while\n"
-	.string "yo{SE_M_DIVE}swim.$"
+	.string "The waves are wild here.\p"
+	.string "They tire you out while\n"
+	.string "you swim.$"
 
 Route41_Text_SwimmermKirkBeaten:
-	.string "I'{SE_M_MILK_DRINK}beat!$"
+	.string "I'm beat!$"
 
 Route41_Text_SwimmermKirkAfter:
-	.string "Th{SE_M_REVERSAL}current{SE_M_GRASSWHISTLE}kee{SE_M_MORNING_SUN}m{SE_M_REVERSAL}from\n"
-	.string "reachin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}island.$"
+	.string "The currents keep me from\n"
+	.string "reaching that island.$"
 
 Route41_EventScript_Mathew::
 	trainerbattle_single TRAINER_JOHTO_MATHEW_HNS, Route41_Text_SwimmermMathewSeen, Route41_Text_SwimmermMathewBeaten
@@ -91,15 +91,15 @@ Route41_EventScript_Mathew::
 	end
 
 Route41_Text_SwimmermMathewSeen:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}seekin{SE_M_SANDSTORM}th{SE_M_REVERSAL}secrets\n"
-	.string "o{SE_M_ACID_ARMOR}WHIR{SE_M_BRICK_BREAK}ISLANDS?$"
+	.string "Are you seeking the secrets\n"
+	.string "of WHIRL ISLANDS?$"
 
 Route41_Text_SwimmermMathewBeaten:
-	.string "Ooh{SE_M_SUPERSONIC}you'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}grea{SE_M_SPIT_UP}endurance!$"
+	.string "Ooh, you've got great endurance!$"
 
 Route41_Text_SwimmermMathewAfter:
-	.string "{SE_M_BONEMERANG}secre{SE_M_SPIT_UP}abou{SE_M_SPIT_UP}WHIR{SE_M_BRICK_BREAK}ISLANDS…\p"
-	.string "It'{SE_M_GRASSWHISTLE}pitch-blac{SE_M_ENCORE2}inside!$"
+	.string "A secret about WHIRL ISLANDS…\p"
+	.string "It's pitch-black inside!$"
 
 Route41_EventScript_Kaylee::
 	trainerbattle_single TRAINER_JOHTO_KAYLEE_HNS, Route41_Text_SwimmerfKayleeSeen, Route41_Text_SwimmerfKayleeBeaten
@@ -107,16 +107,16 @@ Route41_EventScript_Kaylee::
 	end
 
 Route41_Text_SwimmerfKayleeSeen:
-	.string "I'{SE_M_MILK_DRINK}o{SE_M_ATTRACT}m{SE_M_YAWN}wa{SE_M_YAWN}t{SE_M_ATTRACT2}WHIR{SE_M_BRICK_BREAK}ISLANDS.\p"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}explorin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}friends.$"
+	.string "I'm on my way to WHIRL ISLANDS.\p"
+	.string "I'm going exploring with friends.$"
 
 Route41_Text_SwimmerfKayleeBeaten:
-	.string "I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}ho{SE_M_TWISTER}yo{SE_M_DIVE}d{SE_M_ATTRACT2}it?$"
+	.string "Is that how you do it?$"
 
 Route41_Text_SwimmerfKayleeAfter:
-	.string "There'{SE_M_GRASSWHISTLE}suppose{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}{SE_M_CHARGE}big\n"
-	.string "POKéMO{SE_M_PSYBEAM2}dee{SE_M_MORNING_SUN}beneat{SE_M_TRI_ATTACK}WHIR{SE_M_BRICK_BREAK}ISLANDS.\p"
-	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}wha{SE_M_SPIT_UP}i{SE_M_SPIT_UP}coul{SE_M_WATERFALL}be?$"
+	.string "There's supposed to be a big\n"
+	.string "POKéMON deep beneath WHIRL ISLANDS.\p"
+	.string "I wonder what it could be?$"
 
 Route41_EventScript_Susie::
 	trainerbattle_single TRAINER_JOHTO_SUSIE_HNS, Route41_Text_SwimmerfSusieSeen, Route41_Text_SwimmerfSusieBeaten
@@ -124,15 +124,15 @@ Route41_EventScript_Susie::
 	end
 
 Route41_Text_SwimmerfSusieSeen:
-	.string "Yo{SE_M_DIVE}loo{SE_M_ENCORE2}s{SE_M_ATTRACT2}elegant,\n"
-	.string "ridin{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}POKéMON.$"
+	.string "You look so elegant,\n"
+	.string "riding your POKéMON.$"
 
 Route41_Text_SwimmerfSusieBeaten:
-	.string "I'{SE_M_MILK_DRINK}crushed…$"
+	.string "I'm crushed…$"
 
 Route41_Text_SwimmerfSusieAfter:
-	.string "Wasn'{SE_M_SPIT_UP}ther{SE_M_REVERSAL}{SE_M_CHARGE}hi{SE_M_SPIT_UP}son{SE_M_SANDSTORM}about\n"
-	.string "{SE_M_CHARGE}bo{SE_M_YAWN}ridin{SE_M_SANDSTORM}{SE_M_CHARGE}LAPRAS?$"
+	.string "Wasn't there a hit song about\n"
+	.string "a boy riding a LAPRAS?$"
 
 Route41_EventScript_Denise::
 	trainerbattle_single TRAINER_JOHTO_DENISE_HNS, Route41_Text_SwimmerfDeniseSeen, Route41_Text_SwimmerfDeniseBeaten
@@ -140,16 +140,16 @@ Route41_EventScript_Denise::
 	end
 
 Route41_Text_SwimmerfDeniseSeen:
-	.string "Th{SE_M_REVERSAL}weathe{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}beautiful,\n"
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}{SE_M_CHARGE}daze!$"
+	.string "The weather is so beautiful,\n"
+	.string "I'm in a daze!$"
 
 Route41_Text_SwimmerfDeniseBeaten:
 	.string "Ohhh!$"
 
 Route41_Text_SwimmerfDeniseAfter:
-	.string "{SE_M_BONEMERANG}sunbur{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}wors{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}skin.\p"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}us{SE_M_REVERSAL}{SE_M_CHARGE}sunblock.\p"
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}pollut{SE_M_REVERSAL}th{SE_M_REVERSAL}water.$"
+	.string "A sunburn is the worst for skin.\p"
+	.string "But I don't use a sunblock.\p"
+	.string "I won't pollute the water.$"
 
 Route41_EventScript_Kara::
 	trainerbattle_single TRAINER_JOHTO_KARA_HNS, Route41_Text_SwimmerfKaraSeen, Route41_Text_SwimmerfKaraBeaten
@@ -157,17 +157,17 @@ Route41_EventScript_Kara::
 	end
 
 Route41_Text_SwimmerfKaraSeen:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}rest,\n"
-	.string "jus{SE_M_SPIT_UP}trea{SE_M_WATERFALL}water.\p"
-	.string "You'l{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}win{SE_M_WATERFALL}back,\n"
-	.string "s{SE_M_ATTRACT2}yo{SE_M_DIVE}ca{SE_M_ATTRACT}kee{SE_M_MORNING_SUN}o{SE_M_ATTRACT}goin{SE_M_SANDSTORM}strong.$"
+	.string "If you need to rest,\n"
+	.string "just tread water.\p"
+	.string "You'll get your wind back,\n"
+	.string "so you can keep on going strong.$"
 
 Route41_Text_SwimmerfKaraBeaten:
-	.string "Oh{SE_M_DRAGON_RAGE}Yo{SE_M_DIVE}hav{SE_M_REVERSAL}mor{SE_M_REVERSAL}energ{SE_M_YAWN}tha{SE_M_ATTRACT}{SE_M_HEAL_BELL}do.$"
+	.string "Oh! You have more energy than I do.$"
 
 Route41_Text_SwimmerfKaraAfter:
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}roar{SE_M_GRASSWHISTLE}fro{SE_M_MILK_DRINK}dee{SE_M_MORNING_SUN}inside\n"
-	.string "th{SE_M_REVERSAL}ISLANDS.$"
+	.string "I heard roars from deep inside\n"
+	.string "the ISLANDS.$"
 
 Route41_EventScript_Wendy::
 	trainerbattle_single TRAINER_JOHTO_WENDY_HNS, Route41_Text_SwimmerfWendySeen, Route41_Text_SwimmerfWendyBeaten
@@ -175,16 +175,16 @@ Route41_EventScript_Wendy::
 	end
 
 Route41_Text_SwimmerfWendySeen:
-	.string "A{SE_M_SPIT_UP}night{SE_M_SUPERSONIC}STARY{SE_M_REFLECT}gathe{SE_M_SAND_TOMB}near\n"
-	.string "th{SE_M_REVERSAL}water'{SE_M_GRASSWHISTLE}surface.$"
+	.string "At night, STARYU gather near\n"
+	.string "the water's surface.$"
 
 Route41_Text_SwimmerfWendyBeaten:
-	.string "Oh{SE_M_SUPERSONIC}dear…$"
+	.string "Oh, dear…$"
 
 Route41_Text_SwimmerfWendyAfter:
-	.string "Th{SE_M_REVERSAL}cluster{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}STARY{SE_M_REFLECT}ligh{SE_M_SPIT_UP}up\n"
-	.string "a{SE_M_SPIT_UP}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}time.\p"
-	.string "It'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}beautiful{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}scary.$"
+	.string "The clusters of STARYU light up\n"
+	.string "at the same time.\p"
+	.string "It's so beautiful, it's scary.$"
 
 Route41_EventScript_Tentacruel1::
 	lock
@@ -291,12 +291,12 @@ Route41_EventScript_TentacruelAttack4::
 	end
 
 Route41_Text_Tentacruel:
-	.string "TENTACRUEL{SE_M_HEAT_WAVE}Cruooo...$"
+	.string "TENTACRUEL: Cruooo...$"
 
 Route41_Text_TentacruelAttack:
-	.string "TENTACRUEL{SE_M_HEAT_WAVE}CRUOOOOOO!$"
+	.string "TENTACRUEL: CRUOOOOOO!$"
 
 Route41_Text_TentacruelHeal:
-	.string "Th{SE_M_REVERSAL}TENTACRUE{SE_M_BRICK_BREAK}use{SE_M_WATERFALL}RECOVER!\n"
-	.string "I{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}full{SE_M_YAWN}healed!$"
+	.string "The TENTACRUEL used RECOVER!\n"
+	.string "It is fully healed!$"
 

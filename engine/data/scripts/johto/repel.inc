@@ -135,17 +135,17 @@ J_EventScript_UseSpray::
 	return
 
 J_Text_SprayWoreOff::
-	.string "{STR_VAR_1}'{SE_M_GRASSWHISTLE}effec{SE_M_SPIT_UP}wor{SE_M_REVERSAL}off…$"
+	.string "{STR_VAR_1}'s effect wore off…$"
 
 J_Text_SprayWoreOffAskUseAnother::
-	.string "{STR_VAR_1}'{SE_M_GRASSWHISTLE}effec{SE_M_SPIT_UP}wor{SE_M_REVERSAL}off!\n"
-	.string "Us{SE_M_REVERSAL}another?$"
+	.string "{STR_VAR_1}'s effect wore off!\n"
+	.string "Use another?$"
 
 J_Text_SprayWoreOffAskUseX::
-	.string "{STR_VAR_1}'{SE_M_GRASSWHISTLE}effec{SE_M_SPIT_UP}wor{SE_M_REVERSAL}off…\n"
-	.string "Us{SE_M_REVERSAL}{SE_M_CHARGE}{STR_VAR_2}?$"
+	.string "{STR_VAR_1}'s effect wore off…\n"
+	.string "Use a {STR_VAR_2}?$"
 
 J_Text_SprayWoreOffUseX::
-	.string "{PLAYER} use{SE_M_WATERFALL}the\n"
+	.string "{PLAYER} used the\n"
 	.string "{STR_VAR_2}.$"
 

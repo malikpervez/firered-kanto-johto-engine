@@ -39,38 +39,38 @@ SSAqua_RoomNW_EventScript_Corey::
 	end
 
 SSAqua_RoomNW_Text_SailorStanlySeen:
-	.string "Yeah{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}{SE_M_CHARGE}sailor{SE_M_SUPERSONIC}al{SE_M_BATON_PASS}right.\p"
-	.string "{SE_M_HEAL_BELL}wasn'{SE_M_SPIT_UP}goofin{SE_M_SANDSTORM}off!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}cabi{SE_M_ATTRACT}wa{SE_M_GRASSWHISTLE}vacant{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}I\n"
-	.string "jus{SE_M_SPIT_UP}too{SE_M_ENCORE2}{SE_M_CHARGE}quic{SE_M_ENCORE2}nap!\p"
-	.string "Ah{SE_M_SUPERSONIC}forge{SE_M_SPIT_UP}it{SE_M_DRAGON_RAGE}Let'{SE_M_GRASSWHISTLE}battle!$"
+	.string "Yeah, I'm a sailor, all right.\p"
+	.string "I wasn't goofing off!\p"
+	.string "This cabin was vacant, so I\n"
+	.string "just took a quick nap!\p"
+	.string "Ah, forget it! Let's battle!$"
 
 SSAqua_RoomNW_Text_SailorStanlyBeaten:
-	.string "Sorry{SE_M_DRAGON_RAGE}It'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}m{SE_M_YAWN}fault!$"
+	.string "Sorry! It's all my fault!$"
 
 SSAqua_RoomNW_Text_SailorStanlyAfterBattle:
-	.string "Bein{SE_M_SANDSTORM}{SE_M_CHARGE}sailor{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}do\n"
-	.string "physica{SE_M_BATON_PASS}labor{SE_M_PERISH_SONG}It'{SE_M_GRASSWHISTLE}exhausting!$"
+	.string "Being a sailor, I have to do\n"
+	.string "physical labor. It's exhausting!$"
 
 SSAqua_RoomNW_Text_GentlemanEdwardSeen:
-	.string "Oh{SE_M_SUPERSONIC}no{SE_M_PERISH_SONG}I'v{SE_M_REVERSAL}los{SE_M_SPIT_UP}something\n"
-	.string "that'{SE_M_GRASSWHISTLE}ver{SE_M_YAWN}important.$"
+	.string "Oh, no. I've lost something\n"
+	.string "that's very important.$"
 
 SSAqua_RoomNW_Text_GentlemanEdwardBeaten:
-	.string "I{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}fin{SE_M_WATERFALL}it…$"
+	.string "I… I can't find it…$"
 
 SSAqua_RoomNW_Text_GentlemanEdwardAfterBattle:
-	.string "{SE_M_HEAL_BELL}giv{SE_M_REVERSAL}up{SE_M_PERISH_SONG}Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}to\n"
+	.string "I give up. You don't have to\n"
 	.string "look.\p"
-	.string "Jus{SE_M_SPIT_UP}forge{SE_M_SPIT_UP}abou{SE_M_SPIT_UP}it!$"
+	.string "Just forget about it!$"
 
 SSAqua_RoomNW_Text_BurglarCoreySeen:
-	.string "Yeehaw{SE_M_DRAGON_RAGE}Lucky!$"
+	.string "Yeehaw! Lucky!$"
 
 SSAqua_RoomNW_Text_BurglarCoreyBeaten:
-	.string "Ho{SE_M_TWISTER}unlucky{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}lost!$"
+	.string "How unlucky! I lost!$"
 
 SSAqua_RoomNW_Text_BurglarCoreyAfterBattle:
-	.string "{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}{SE_M_CHARGE}prett{SE_M_YAWN}coi{SE_M_ATTRACT}here.\p"
-	.string "Someon{SE_M_REVERSAL}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}los{SE_M_SPIT_UP}it…$"
+	.string "I found a pretty coin here.\p"
+	.string "Someone must have lost it…$"
 

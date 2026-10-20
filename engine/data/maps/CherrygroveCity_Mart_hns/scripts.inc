@@ -53,18 +53,18 @@ Cherrygrove_Pokemart_Pokemart:
 	end
 
 Cherrygrove_Pokemart_Text_CooltrainerM:
-	.string "They'r{SE_M_REVERSAL}fres{SE_M_TRI_ATTACK}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}POK{SE_U}BALLS!\p"
-	.string "Whe{SE_M_ATTRACT}wil{SE_M_BATON_PASS}the{SE_M_YAWN}ge{SE_M_SPIT_UP}mor{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}them?$"
+	.string "They're fresh out of POKé BALLS!\p"
+	.string "When will they get more of them?$"
 
 Cherrygrove_Pokemart_Text_CooltrainerM_PokeBallsInStock:
-	.string "POK{SE_U}BALL{SE_M_SKETCH}ar{SE_M_REVERSAL}i{SE_M_ATTRACT}stock!\n"
-	.string "No{SE_M_TWISTER}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}catc{SE_M_TRI_ATTACK}POKéMON!$"
+	.string "POKé BALLS are in stock!\n"
+	.string "Now I can catch POKéMON!$"
 
 Cherrygrove_Pokemart_Text_Youngster:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}walkin{SE_M_SANDSTORM}i{SE_M_ATTRACT}th{SE_M_REVERSAL}grass{SE_M_SUPERSONIC}a\n"
-	.string "bu{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}poisone{SE_M_WATERFALL}m{SE_M_YAWN}POKéMON!\p"
-	.string "{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}kep{SE_M_SPIT_UP}going{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}the{SE_M_ATTRACT}my\n"
-	.string "POKéMO{SE_M_PSYBEAM2}fainted.\p"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}kee{SE_M_MORNING_SUN}a{SE_M_ATTRACT}ANTIDOTE\n"
-	.string "wit{SE_M_TRI_ATTACK}you.$"
+	.string "When I was walking in the grass, a\n"
+	.string "bug POKéMON poisoned my POKéMON!\p"
+	.string "I just kept going, but then my\n"
+	.string "POKéMON fainted.\p"
+	.string "You should keep an ANTIDOTE\n"
+	.string "with you.$"
 

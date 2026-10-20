@@ -654,152 +654,152 @@ AzaleaTown_Gym_EventScript_Statue2::
 	end
 
 AzaleaTown_Gym_Text_GymStatue:
-	.string "AZALE{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}GYM$"
+	.string "AZALEA POKéMON GYM$"
 
 AzaleaTown_Gym_Text_GymStatueCertified:
-	.string "AZALE{SE_M_BONEMERANG}TOW{SE_M_PSYBEAM2}POKéMO{SE_M_PSYBEAM2}GYM\p"
-	.string "BUGSY'{SE_M_SKETCH}CERTIFIE{SE_M_FAINT_ATTACK}TRAINERS:\n"
+	.string "AZALEA TOWN POKéMON GYM\p"
+	.string "BUGSY'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 AzaleaTown_Gym_Text_BugsyIntro:
-	.string "I'{SE_M_MILK_DRINK}BUGSY!\p"
-	.string "{SE_M_HEAL_BELL}neve{SE_M_SAND_TOMB}los{SE_M_REVERSAL}whe{SE_M_ATTRACT}i{SE_M_SPIT_UP}comes\n"
-	.string "t{SE_M_ATTRACT2}bu{SE_M_SANDSTORM}POKéMON.\p"
-	.string "M{SE_M_YAWN}researc{SE_M_TRI_ATTACK}i{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}m{SE_M_REVERSAL}the\n"
-	.string "authorit{SE_M_YAWN}o{SE_M_ATTRACT}bu{SE_M_SANDSTORM}POKéMON!\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}demonstrat{SE_M_REVERSAL}al{SE_M_BATON_PASS}I've\n"
-	.string "learne{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}m{SE_M_YAWN}studies.$"
+	.string "I'm BUGSY!\p"
+	.string "I never lose when it comes\n"
+	.string "to bug POKéMON.\p"
+	.string "My research is going to make me the\n"
+	.string "authority on bug POKéMON!\p"
+	.string "Let me demonstrate all I've\n"
+	.string "learned from my studies.$"
 
 AzaleaTown_Gym_Text_BugsyBeaten:
-	.string "Whoa{SE_M_SUPERSONIC}amazing{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}an\n"
-	.string "exper{SE_M_SPIT_UP}o{SE_M_ATTRACT}POKéMON!\p"
-	.string "M{SE_M_YAWN}researc{SE_M_TRI_ATTACK}isn'{SE_M_SPIT_UP}complete\n"
+	.string "Whoa, amazing! You're an\n"
+	.string "expert on POKéMON!\p"
+	.string "My research isn't complete\n"
 	.string "yet.\p"
-	.string "OK{SE_M_SUPERSONIC}yo{SE_M_DIVE}win{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}this\n"
+	.string "OK, you win. Take this\n"
 	.string "BADGE.$"
 
 AzaleaTown_Gym_Text_ReceivedHiveBadge:
-	.string "{PLAYER} receive{SE_M_WATERFALL}HIVEBADGE.$"
+	.string "{PLAYER} received HIVEBADGE.$"
 
 AzaleaTown_Gym_Text_HiveBadgeSpeech:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}th{SE_M_REVERSAL}benefits\n"
-	.string "o{SE_M_ACID_ARMOR}HIVEBADGE?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}it{SE_M_SUPERSONIC}POKéMO{SE_M_PSYBEAM2}up\n"
-	.string "t{SE_M_ATTRACT2}L3{SE_M_BITE}wil{SE_M_BATON_PASS}obe{SE_M_YAWN}you,\l"
-	.string "eve{SE_M_ATTRACT}trade{SE_M_WATERFALL}ones.\p"
-	.string "POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}kno{SE_M_TWISTER}CU{SE_M_SWIFT}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}able\n"
-	.string "t{SE_M_ATTRACT2}us{SE_M_REVERSAL}i{SE_M_SPIT_UP}outsid{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}battl{SE_M_REVERSAL}too.\p"
-	.string "Here{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}als{SE_M_ATTRACT2}wan{SE_M_SPIT_UP}yo{SE_M_DIVE}to\n"
-	.string "hav{SE_M_REVERSAL}this.$"
+	.string "Do you know the benefits\n"
+	.string "of HIVEBADGE?\p"
+	.string "If you have it, POKéMON up\n"
+	.string "to L30 will obey you,\l"
+	.string "even traded ones.\p"
+	.string "POKéMON that know CUT will be able\n"
+	.string "to use it outside of battle too.\p"
+	.string "Here, I also want you to\n"
+	.string "have this.$"
 
 AzaleaTown_Gym_Text_FuryCutterSpeech:
-	.string "TM8{SE_M_BIND}contain{SE_M_GRASSWHISTLE}U-TURN.\p"
-	.string "U-TUR{SE_M_PSYBEAM2}let{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}d{SE_M_ATTRACT2}damag{SE_M_REVERSAL}and\n"
-	.string "switc{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}th{SE_M_REVERSAL}same\l"
+	.string "TM89 contains U-TURN.\p"
+	.string "U-TURN lets you do damage and\n"
+	.string "switch your POKéMON in the same\l"
 	.string "turn!\p"
-	.string "Isn'{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}great?\n"
-	.string "{SE_M_HEAL_BELL}discovere{SE_M_WATERFALL}it!$"
+	.string "Isn't that great?\n"
+	.string "I discovered it!$"
 
 AzaleaTown_Gym_Text_BugsyAdvice:
-	.string "Bu{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}deep{SE_M_PERISH_SONG}Ther{SE_M_REVERSAL}are\n"
-	.string "man{SE_M_YAWN}mysterie{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}explored.\p"
-	.string "Stud{SE_M_YAWN}you{SE_M_SAND_TOMB}favorite{SE_M_GRASSWHISTLE}thoroughly.$"
+	.string "Bug POKéMON are deep. There are\n"
+	.string "many mysteries to be explored.\p"
+	.string "Study your favorites thoroughly.$"
 
 AzaleaTown_Gym_Text_BugsyRematch:
-	.string "Wow{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}th{SE_M_REVERSAL}JOHT{SE_M_SOLAR_BEAM}CHAMPIO{SE_M_PSYBEAM2}now!\p"
-	.string "You{SE_M_SAND_TOMB}skill{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}trul{SE_M_YAWN}impressive!\p"
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}bus{SE_M_YAWN}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}research.\p"
-	.string "I'{SE_M_MILK_DRINK}read{SE_M_YAWN}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}yo{SE_M_DIVE}m{SE_M_YAWN}new\n"
+	.string "Wow, you're the JOHTO CHAMPION now!\p"
+	.string "Your skills are truly impressive!\p"
+	.string "I've been busy with my research.\p"
+	.string "I'm ready to show you my new\n"
 	.string "findings.\p"
-	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}{SE_M_CHARGE}rematc{SE_M_TRI_ATTACK}wit{SE_M_TRI_ATTACK}me?$"
+	.string "Want to have a rematch with me?$"
 
 AzaleaTown_Gym_Text_BugsyRematchDefeat:
-	.string "Wow{SE_M_SUPERSONIC}yo{SE_M_DIVE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}a{SE_M_ATTRACT}exper{SE_M_SPIT_UP}trainer.\n"
-	.string "M{SE_M_YAWN}researc{SE_M_TRI_ATTACK}mus{SE_M_SPIT_UP}no{SE_M_SPIT_UP}b{SE_M_REVERSAL}complete...$"
+	.string "Wow, you must be an expert trainer.\n"
+	.string "My research must not be complete...$"
 
 AzaleaTown_Gym_Text_BugCatcherBennySeen:
-	.string "Bu{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}evolv{SE_M_REVERSAL}young{SE_M_PERISH_SONG}S{SE_M_ATTRACT2}they\n"
-	.string "ge{SE_M_SPIT_UP}stronge{SE_M_SAND_TOMB}tha{SE_M_SPIT_UP}muc{SE_M_TRI_ATTACK}faster.$"
+	.string "Bug POKéMON evolve young. So they\n"
+	.string "get stronger that much faster.$"
 
 AzaleaTown_Gym_Text_BugCatcherBennyBeaten:
-	.string "Jus{SE_M_SPIT_UP}evolvin{SE_M_SANDSTORM}isn'{SE_M_SPIT_UP}enough!$"
+	.string "Just evolving isn't enough!$"
 
 AzaleaTown_Gym_Text_BugCatcherBennyAfter:
-	.string "POKéMO{SE_M_PSYBEAM2}becom{SE_M_REVERSAL}stronger\n"
-	.string "i{SE_M_ACID_ARMOR}the{SE_M_YAWN}evolve{SE_M_PERISH_SONG}Really!$"
+	.string "POKéMON become stronger\n"
+	.string "if they evolve. Really!$"
 
 AzaleaTown_Gym_Text_BugCatcherAlSeen:
-	.string "Bu{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}coo{SE_M_BATON_PASS}an{SE_M_WATERFALL}tough!\n"
-	.string "I'l{SE_M_BATON_PASS}prov{SE_M_REVERSAL}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}you!$"
+	.string "Bug POKéMON are cool and tough!\n"
+	.string "I'll prove it to you!$"
 
 AzaleaTown_Gym_Text_BugCatcherAlBeaten:
-	.string "Yo{SE_M_DIVE}prove{SE_M_WATERFALL}ho{SE_M_TWISTER}toug{SE_M_TRI_ATTACK}yo{SE_M_DIVE}are…$"
+	.string "You proved how tough you are…$"
 
 AzaleaTown_Gym_Text_BugCatcherAlAfter:
-	.string "They'r{SE_M_REVERSAL}s{SE_M_ATTRACT2}cool{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}mos{SE_M_SPIT_UP}girls\n"
-	.string "don'{SE_M_SPIT_UP}lik{SE_M_REVERSAL}bu{SE_M_SANDSTORM}POKéMON.\p"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}why…$"
+	.string "They're so cool, but most girls\n"
+	.string "don't like bug POKéMON.\p"
+	.string "I don't know why…$"
 
 AzaleaTown_Gym_Text_BugCatcherJoshSeen:
-	.string "Yo{SE_M_DIVE}save{SE_M_WATERFALL}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}SLOWPOKE?\n"
-	.string "Whew{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}mighty!\p"
-	.string "Bu{SE_M_SPIT_UP}m{SE_M_YAWN}grown-u{SE_M_MORNING_SUN}POKéMO{SE_M_PSYBEAM2}are\n"
-	.string "prett{SE_M_YAWN}toug{SE_M_TRI_ATTACK}too!$"
+	.string "You saved all the SLOWPOKE?\n"
+	.string "Whew, you're mighty!\p"
+	.string "But my grown-up POKéMON are\n"
+	.string "pretty tough too!$"
 
 AzaleaTown_Gym_Text_BugCatcherJoshBeaten:
 	.string "Urrgggh!$"
 
 AzaleaTown_Gym_Text_BugCatcherJoshAfter:
-	.string "{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}teac{SE_M_TRI_ATTACK}them\n"
-	.string "bette{SE_M_SAND_TOMB}moves…$"
+	.string "I guess I should teach them\n"
+	.string "better moves…$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay1Seen:
-	.string "AMY{SE_M_HEAT_WAVE}Hi{SE_M_DRAGON_RAGE}Ar{SE_M_REVERSAL}yo{SE_M_DIVE}challenging\n"
-	.string "th{SE_M_REVERSAL}LEADER{SE_M_SING}N{SE_M_ATTRACT2}way!$"
+	.string "AMY: Hi! Are you challenging\n"
+	.string "the LEADER? No way!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay1Beaten:
-	.string "AM{SE_M_MOONLIGHT}{SE_WARP_IN}MAY{SE_M_HEAT_WAVE}Oh{SE_M_SUPERSONIC}double\n"
+	.string "AMY & MAY: Oh, double\n"
 	.string "goodness!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay1After:
-	.string "AMY{SE_M_HEAT_WAVE}You'r{SE_M_REVERSAL}reall{SE_M_YAWN}strong!\p"
-	.string "Bu{SE_M_SPIT_UP}BUGSY'{SE_M_GRASSWHISTLE}eve{SE_M_ATTRACT}stronger!\n"
-	.string "Hi{SE_M_GRASSWHISTLE}SCYTHER'{SE_M_GRASSWHISTLE}CU{SE_M_SWIFT}almost\l"
-	.string "alway{SE_M_GRASSWHISTLE}make{SE_M_GRASSWHISTLE}critica{SE_M_BATON_PASS}hits!$"
+	.string "AMY: You're really strong!\p"
+	.string "But BUGSY's even stronger!\n"
+	.string "His SCYTHER's CUT almost\l"
+	.string "always makes critical hits!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Seen:
-	.string "MAY{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}the\n"
-	.string "LEADER{SE_M_SING}Goo{SE_M_WATERFALL}luck!\p"
-	.string "BUGS{SE_M_MOONLIGHT}i{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}strong!\n"
-	.string "Hi{SE_M_GRASSWHISTLE}SCYTHER'{SE_M_GRASSWHISTLE}CU{SE_M_SWIFT}always\l"
-	.string "seem{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}crit!$"
+	.string "MAY: You want to see the\n"
+	.string "LEADER? Good luck!\p"
+	.string "BUGSY is so strong!\n"
+	.string "His SCYTHER's CUT always\l"
+	.string "seems to crit!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Beaten:
-	.string "AM{SE_M_MOONLIGHT}{SE_WARP_IN}MAY{SE_M_HEAT_WAVE}Oh{SE_M_SUPERSONIC}double\n"
+	.string "AMY & MAY: Oh, double\n"
 	.string "goodness!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2After:
-	.string "MAY{SE_M_HEAT_WAVE}Ou{SE_M_SAND_TOMB}bu{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}lost!\n"
-	.string "Oh{SE_M_SUPERSONIC}wha{SE_M_SPIT_UP}{SE_M_CHARGE}shame.\p"
-	.string "BUGSY'{SE_M_GRASSWHISTLE}won'{SE_M_SPIT_UP}los{SE_M_REVERSAL}though!\p"
-	.string "Hi{SE_M_GRASSWHISTLE}PINEC{SE_M_SOLAR_BEAM}make{SE_M_GRASSWHISTLE}shor{SE_M_SPIT_UP}work\n"
-	.string "o{SE_M_ACID_ARMOR}ROCK-typ{SE_M_REVERSAL}POKéMON!$"
+	.string "MAY: Our bug POKéMON lost!\n"
+	.string "Oh, what a shame.\p"
+	.string "BUGSY's won't lose though!\p"
+	.string "His PINECO makes short work\n"
+	.string "of ROCK-type POKéMON!$"
 
 AzaleaTown_Gym_Text_GymGuide:
-	.string "Yo{SE_M_SUPERSONIC}challenger!\p"
-	.string "BUGSY'{SE_M_GRASSWHISTLE}young{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}hi{SE_M_GRASSWHISTLE}knowledge\n"
-	.string "o{SE_M_ACID_ARMOR}bu{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}real.\p"
-	.string "It'{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}tough\n"
-	.string "withou{SE_M_SPIT_UP}m{SE_M_YAWN}advice.\p"
-	.string "Let'{SE_M_GRASSWHISTLE}see{SE_M_DIZZY_PUNCH}BUGSY'{SE_M_GRASSWHISTLE}bagwor{SE_M_MILK_DRINK}POKéMON\n"
-	.string "know{SE_M_GRASSWHISTLE}{SE_M_CHARGE}mov{SE_M_REVERSAL}tha{SE_M_SPIT_UP}cover{SE_M_GRASSWHISTLE}its\l"
-	.string "ROCK-typ{SE_M_REVERSAL}weakness.\p"
-	.string "Oh{SE_M_SUPERSONIC}an{SE_M_WATERFALL}don'{SE_M_SPIT_UP}forge{SE_M_SPIT_UP}abou{SE_M_SPIT_UP}those\n"
-	.string "nast{SE_M_YAWN}critica{SE_M_BATON_PASS}hits{SE_M_DRAGON_RAGE}Goo{SE_M_WATERFALL}luck!$"
+	.string "Yo, challenger!\p"
+	.string "BUGSY's young, but his knowledge\n"
+	.string "of bug POKéMON is for real.\p"
+	.string "It's going to be tough\n"
+	.string "without my advice.\p"
+	.string "Let's see… BUGSY's bagworm POKéMON\n"
+	.string "knows a move that covers its\l"
+	.string "ROCK-type weakness.\p"
+	.string "Oh, and don't forget about those\n"
+	.string "nasty critical hits! Good luck!$"
 
 AzaleaTown_Gym_Text_GymGuideWin:
-	.string "Wel{SE_M_BATON_PASS}done{SE_M_DRAGON_RAGE}Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}great\n"
-	.string "clas{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}talente{SE_M_WATERFALL}youn{SE_M_SANDSTORM}trainers.\p"
-	.string "Wit{SE_M_TRI_ATTACK}peopl{SE_M_REVERSAL}lik{SE_M_REVERSAL}you{SE_M_SUPERSONIC}the\n"
-	.string "futur{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}bright!$"
+	.string "Well done! That was a great\n"
+	.string "clash of talented young trainers.\p"
+	.string "With people like you, the\n"
+	.string "future of POKéMON is bright!$"
 

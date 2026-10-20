@@ -178,141 +178,141 @@ Route27_Text_FisherHey:
 	.string "Hey!$"
 
 Route27_Text_FisherMessage:
-	.string "Headin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}JOHT{SE_M_SOLAR_BEAM}fro{SE_M_MILK_DRINK}KANTO?\pSUR{SE_M_LEER}wes{SE_M_SPIT_UP}acros{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}wate{SE_M_SAND_TOMB}to\nreac{SE_M_TRI_ATTACK}NE{SE_M_DETECT}BAR{SE_M_SNORE}TOWN.\pTh{SE_M_REVERSAL}easter{SE_M_ATTRACT}rout{SE_M_REVERSAL}lead{SE_M_GRASSWHISTLE}through\nTOHJ{SE_M_SOLAR_BEAM}FALL{SE_M_SKETCH}towar{SE_M_WATERFALL}th{SE_M_REVERSAL}LEAGUE.$"
+	.string "Heading to JOHTO from KANTO?\pSURF west across this water to\nreach NEW BARK TOWN.\pThe eastern route leads through\nTOHJO FALLS toward the LEAGUE.$"
 
 Route27_Text_CooltrainermBlakeSeen:
-	.string "Yo{SE_M_DIVE}loo{SE_M_ENCORE2}prett{SE_M_YAWN}strong.\n"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}battl{SE_M_REVERSAL}you!$"
+	.string "You look pretty strong.\n"
+	.string "Let me battle you!$"
 
 Route27_Text_CooltrainermBlakeBeaten:
 	.string "Yow!$"
 
 Route27_Text_CooltrainermBlakeAfter:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}prevai{SE_M_BATON_PASS}o{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}hars{SE_M_TRI_ATTACK}trek,\n"
-	.string "th{SE_M_REVERSAL}trut{SE_M_TRI_ATTACK}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}revealed!\p"
-	.string "Heh{SE_M_SUPERSONIC}sorry{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}wante{SE_M_WATERFALL}t{SE_M_ATTRACT2}say\n"
-	.string "somethin{SE_M_SANDSTORM}cool.$"
+	.string "If you prevail on this harsh trek,\n"
+	.string "the truth will be revealed!\p"
+	.string "Heh, sorry, I just wanted to say\n"
+	.string "something cool.$"
 
 Route27_Text_CooltrainermBrianSeen:
-	.string "Hm{SE_M_SING}You'r{SE_M_REVERSAL}good{SE_M_SUPERSONIC}aren'{SE_M_SPIT_UP}you?$"
+	.string "Hm? You're good, aren't you?$"
 
 Route27_Text_CooltrainermBrianBeaten:
-	.string "Jus{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}thought!$"
+	.string "Just as I thought!$"
 
 Route27_Text_CooltrainermBrianAfter:
-	.string "{SE_M_BONEMERANG}goo{SE_M_WATERFALL}traine{SE_M_SAND_TOMB}ca{SE_M_ATTRACT}recogniz{SE_M_REVERSAL}other\n"
-	.string "goo{SE_M_WATERFALL}trainers.$"
+	.string "A good trainer can recognize other\n"
+	.string "good trainers.$"
 
 Route27_Text_CooltrainerfReenaSeen:
-	.string "Yo{SE_M_DIVE}shouldn'{SE_M_SPIT_UP}underestimat{SE_M_REVERSAL}the\n"
-	.string "wil{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}thes{SE_M_REVERSAL}parts.$"
+	.string "You shouldn't underestimate the\n"
+	.string "wild POKéMON in these parts.$"
 
 Route27_Text_CooltrainerfReenaBeaten:
-	.string "Oh{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}muc{SE_M_TRI_ATTACK}to{SE_M_ATTRACT2}strong!$"
+	.string "Oh! You're much too strong!$"
 
 Route27_Text_CooltrainerfReenaAfter:
-	.string "You'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}{SE_M_CHARGE}kid{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}you'r{SE_M_REVERSAL}not\n"
-	.string "t{SE_M_ATTRACT2}b{SE_M_REVERSAL}underestimate{SE_M_WATERFALL}either.$"
+	.string "You're just a kid, but you're not\n"
+	.string "to be underestimated either.$"
 
 Route27_Text_ReenaRegister:
-	.string "You'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}{SE_M_CHARGE}kid{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}you'r{SE_M_REVERSAL}not\n"
-	.string "t{SE_M_ATTRACT2}b{SE_M_REVERSAL}underestimate{SE_M_WATERFALL}either.$"
+	.string "You're just a kid, but you're not\n"
+	.string "to be underestimated either.$"
 
 Route27_Text_ReenaRematchIntro:
-	.string "Yo{SE_M_DIVE}shouldn'{SE_M_SPIT_UP}underestimat{SE_M_REVERSAL}the\n"
-	.string "wil{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}thes{SE_M_REVERSAL}parts.$"
+	.string "You shouldn't underestimate the\n"
+	.string "wild POKéMON in these parts.$"
 
 Route27_Text_ReenaRematchDefeat:
-	.string "Oh{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}muc{SE_M_TRI_ATTACK}to{SE_M_ATTRACT2}strong!$"
+	.string "Oh! You're much too strong!$"
 
 Route27_Text_ReenaPostRematch:
-	.string "You'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}{SE_M_CHARGE}kid{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}you'r{SE_M_REVERSAL}not\n"
-	.string "t{SE_M_ATTRACT2}b{SE_M_REVERSAL}underestimate{SE_M_WATERFALL}either.$"
+	.string "You're just a kid, but you're not\n"
+	.string "to be underestimated either.$"
 
 Route27_Text_CooltrainerfMeganSeen:
-	.string "It'{SE_M_GRASSWHISTLE}rar{SE_M_REVERSAL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}anyon{SE_M_REVERSAL}com{SE_M_REVERSAL}here.\p"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}trainin{SE_M_SANDSTORM}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}own?$"
+	.string "It's rare to see anyone come here.\p"
+	.string "Are you training on your own?$"
 
 Route27_Text_CooltrainerfMeganBeaten:
-	.string "Oh{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}reall{SE_M_YAWN}strong!$"
+	.string "Oh! You're really strong!$"
 
 Route27_Text_CooltrainerfMeganAfter:
-	.string "I'{SE_M_MILK_DRINK}checkin{SE_M_SANDSTORM}ou{SE_M_SPIT_UP}pre{SE_M_PAY_DAY}an{SE_M_WATERFALL}post-\n"
-	.string "evolutio{SE_M_ATTRACT}POKéMON.\p"
-	.string "Evolutio{SE_M_ATTRACT}reall{SE_M_YAWN}doe{SE_M_GRASSWHISTLE}make\n"
-	.string "POKéMO{SE_M_PSYBEAM2}stronger.\p"
-	.string "Bu{SE_M_SPIT_UP}evolve{SE_M_WATERFALL}form{SE_M_GRASSWHISTLE}als{SE_M_ATTRACT2}learn\n"
-	.string "move{SE_M_GRASSWHISTLE}late{SE_M_SAND_TOMB}on.$"
+	.string "I'm checking out pre- and post-\n"
+	.string "evolution POKéMON.\p"
+	.string "Evolution really does make\n"
+	.string "POKéMON stronger.\p"
+	.string "But evolved forms also learn\n"
+	.string "moves later on.$"
 
 Route27_Text_PsychicGilbertSeen:
-	.string "Don'{SE_M_SPIT_UP}sa{SE_M_YAWN}{SE_M_CHARGE}thing!\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}gues{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}you'r{SE_M_REVERSAL}thinking.\p"
+	.string "Don't say a thing!\p"
+	.string "Let me guess what you're thinking.\p"
 	.string "Mmmmmmm…\p"
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}it{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}o{SE_M_ATTRACT}th{SE_M_REVERSAL}POKéMON\n"
-	.string "LEAGU{SE_M_SWORDS_DANCE}challenge!$"
+	.string "I got it! You're on the POKéMON\n"
+	.string "LEAGUE challenge!$"
 
 Route27_Text_PsychicGilbertBeaten:
-	.string "You'r{SE_M_REVERSAL}to{SE_M_ATTRACT2}much!$"
+	.string "You're too much!$"
 
 Route27_Text_PsychicGilbertAfter:
-	.string "Wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}skills{SE_M_SUPERSONIC}you'l{SE_M_BATON_PASS}d{SE_M_ATTRACT2}wel{SE_M_BATON_PASS}at\n"
-	.string "th{SE_M_REVERSAL}LEAGUE.\p"
-	.string "That'{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}m{SE_M_YAWN}premonitio{SE_M_ATTRACT}says.$"
+	.string "With your skills, you'll do well at\n"
+	.string "the LEAGUE.\p"
+	.string "That's what my premonition says.$"
 
 Route27_Text_BirdKeeperJoseSeen:
-	.string "Tweet{SE_M_DRAGON_RAGE}Tweet{SE_M_DRAGON_RAGE}Tetweet!$"
+	.string "Tweet! Tweet! Tetweet!$"
 
 Route27_Text_BirdKeeperJoseBeaten:
 	.string "Tweet!$"
 
 Route27_Text_BirdKeeperJoseAfter:
-	.string "BIR{SE_M_FAINT_ATTACK}KEEPER{SE_M_SKETCH}lik{SE_M_REVERSAL}m{SE_M_REVERSAL}mimi{SE_M_HYPER_BEAM}bird\n"
-	.string "whistle{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}comman{SE_M_WATERFALL}POKéMON.$"
+	.string "BIRD KEEPERS like me mimic bird\n"
+	.string "whistles to command POKéMON.$"
 
 Route27_Text_JoseRegister:
-	.string "BIR{SE_M_FAINT_ATTACK}KEEPER{SE_M_SKETCH}lik{SE_M_REVERSAL}m{SE_M_REVERSAL}mimi{SE_M_HYPER_BEAM}bird\n"
-	.string "whistle{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}comman{SE_M_WATERFALL}POKéMON.$"
+	.string "BIRD KEEPERS like me mimic bird\n"
+	.string "whistles to command POKéMON.$"
 
 Route27_Text_JoseRematchIntro:
-	.string "Tweet{SE_M_DRAGON_RAGE}Tweet{SE_M_DRAGON_RAGE}Tetweet!$"
+	.string "Tweet! Tweet! Tetweet!$"
 
 Route27_Text_JoseRematchDefeat:
 	.string "Tweet!$"
 
 Route27_Text_JosePostRematch:
-	.string "BIR{SE_M_FAINT_ATTACK}KEEPER{SE_M_SKETCH}lik{SE_M_REVERSAL}m{SE_M_REVERSAL}mimi{SE_M_HYPER_BEAM}bird\n"
-	.string "whistle{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}comman{SE_M_WATERFALL}POKéMON.$"
+	.string "BIRD KEEPERS like me mimic bird\n"
+	.string "whistles to command POKéMON.$"
 
 Route27_Text_JoseHasItem:
-	.string "Hey{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}something\n"
-	.string "shin{SE_M_YAWN}whil{SE_M_REVERSAL}bird-watching!\p"
-	.string "Here{SE_M_SUPERSONIC}yo{SE_M_DIVE}ca{SE_M_ATTRACT}hav{SE_M_REVERSAL}it!$"
+	.string "Hey! I found something\n"
+	.string "shiny while bird-watching!\p"
+	.string "Here, you can have it!$"
 
 Route27_Text_JoseGaveItem:
-	.string "{SE_M_HEAL_BELL}fin{SE_M_WATERFALL}al{SE_M_BATON_PASS}sort{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}things\n"
-	.string "ou{SE_M_SPIT_UP}her{SE_M_REVERSAL}o{SE_M_ATTRACT}ROUT{SE_M_SWORDS_DANCE}27.\p"
-	.string "I'l{SE_M_BATON_PASS}le{SE_M_SPIT_UP}yo{SE_M_DIVE}kno{SE_M_TWISTER}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}find\n"
-	.string "anythin{SE_M_SANDSTORM}else!$"
+	.string "I find all sorts of things\n"
+	.string "out here on ROUTE 27.\p"
+	.string "I'll let you know if I find\n"
+	.string "anything else!$"
 
 Route27_Text_JoseNoRoom:
-	.string "Hmm{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}BA{SE_M_SWAGGER}i{SE_M_GRASSWHISTLE}full.\p"
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}whe{SE_M_ATTRACT}yo{SE_M_DIVE}hav{SE_M_REVERSAL}room.$"
+	.string "Hmm, your BAG is full.\p"
+	.string "Come back when you have room.$"
 
 TohjoFalls_Text_Sign:
-	.string "TOHJ{SE_M_SOLAR_BEAM}FALLS\p"
-	.string "TH{SE_M_SWORDS_DANCE}LIN{SE_M_SNORE}BETWEE{SE_M_PSYBEAM2}KANT{SE_M_SOLAR_BEAM}AN{SE_M_FAINT_ATTACK}JOHTO$"
+	.string "TOHJO FALLS\p"
+	.string "THE LINK BETWEEN KANTO AND JOHTO$"
 
 Route27_Text_FisherScottSeen:
-	.string "I'{SE_M_MILK_DRINK}feelin{SE_M_SANDSTORM}grea{SE_M_SPIT_UP}today!\p"
-	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}lik{SE_M_REVERSAL}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}boo{SE_M_SPIT_UP}eve{SE_M_ATTRACT}the\n"
-	.string "LEAGU{SE_M_SWORDS_DANCE}CHAMP!$"
+	.string "I'm feeling great today!\p"
+	.string "I feel like I could boot even the\n"
+	.string "LEAGUE CHAMP!$"
 
 Route27_Text_FisherScottBeaten:
-	.string "No{SE_M_DRAGON_RAGE}No{SE_M_SPIT_UP}i{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}battle!$"
+	.string "No! Not in this battle!$"
 
 Route27_Text_FisherScottAfter:
-	.string "Jus{SE_M_SPIT_UP}lik{SE_M_REVERSAL}i{SE_M_ATTRACT}fishing{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}over\n"
-	.string "i{SE_M_ATTRACT}POKéMO{SE_M_PSYBEAM2}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}giv{SE_M_REVERSAL}up.$"
+	.string "Just like in fishing, it's all over\n"
+	.string "in POKéMON if you give up.$"
 
 Route27_EventScript_DeferLateArrival::
 	end

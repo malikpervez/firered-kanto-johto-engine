@@ -38,45 +38,45 @@ Route33_EventScript_Lass::
 	end
 
 Route33_Text_HikerAnthony2Seen:
-	.string "{SE_M_HEAL_BELL}cam{SE_M_REVERSAL}throug{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}tunnel,\n"
-	.string "bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}stil{SE_M_BATON_PASS}hav{SE_M_REVERSAL}plenty\l"
-	.string "o{SE_M_ACID_ARMOR}energ{SE_M_YAWN}left.$"
+	.string "I came through the tunnel,\n"
+	.string "but I still have plenty\l"
+	.string "of energy left.$"
 
 Route33_Text_HikerAnthony2Beaten:
-	.string "Whoa{SE_M_DRAGON_RAGE}You'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}mor{SE_M_REVERSAL}zip\n"
-	.string "tha{SE_M_ATTRACT}me!$"
+	.string "Whoa! You've got more zip\n"
+	.string "than me!$"
 
 Route33_Text_HikerAnthony2After:
-	.string "W{SE_M_REVERSAL}HIKER{SE_M_SKETCH}ar{SE_M_REVERSAL}a{SE_M_SPIT_UP}ou{SE_M_SAND_TOMB}best\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}mountains.$"
+	.string "We HIKERS are at our best\n"
+	.string "in the mountains.$"
 
 Route33_Text_AnthonyRegister:
-	.string "W{SE_M_REVERSAL}HIKER{SE_M_SKETCH}ar{SE_M_REVERSAL}a{SE_M_SPIT_UP}ou{SE_M_SAND_TOMB}best\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}mountains.$"
+	.string "We HIKERS are at our best\n"
+	.string "in the mountains.$"
 
 Route33_Text_AnthonyRematchIntro:
-	.string "{SE_M_HEAL_BELL}cam{SE_M_REVERSAL}throug{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}tunnel,\n"
-	.string "bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}stil{SE_M_BATON_PASS}hav{SE_M_REVERSAL}plenty\l"
-	.string "o{SE_M_ACID_ARMOR}energ{SE_M_YAWN}left.$"
+	.string "I came through the tunnel,\n"
+	.string "but I still have plenty\l"
+	.string "of energy left.$"
 
 Route33_Text_AnthonyRematchDefeat:
-	.string "Whoa{SE_M_DRAGON_RAGE}You'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}mor{SE_M_REVERSAL}zip\n"
-	.string "tha{SE_M_ATTRACT}me!$"
+	.string "Whoa! You've got more zip\n"
+	.string "than me!$"
 
 Route33_Text_AnthonyPostRematch:
-	.string "W{SE_M_REVERSAL}HIKER{SE_M_SKETCH}ar{SE_M_REVERSAL}a{SE_M_SPIT_UP}ou{SE_M_SAND_TOMB}best\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}mountains.$"
+	.string "We HIKERS are at our best\n"
+	.string "in the mountains.$"
 
 Route33_Text_HikerAnthonyDunsparce:
-	.string "Hey{SE_M_SUPERSONIC}di{SE_M_WATERFALL}yo{SE_M_DIVE}ge{SE_M_SPIT_UP}{SE_M_CHARGE}DUNSPARCE?\p"
-	.string "{SE_M_HEAL_BELL}caugh{SE_M_SPIT_UP}on{SE_M_REVERSAL}too.\p"
-	.string "Tak{SE_M_REVERSAL}{SE_M_CHARGE}loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}i{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}light.\n"
-	.string "It'{SE_M_GRASSWHISTLE}go{SE_M_SPIT_UP}{SE_M_CHARGE}funn{SE_M_YAWN}face!$"
+	.string "Hey, did you get a DUNSPARCE?\p"
+	.string "I caught one too.\p"
+	.string "Take a look at it in the light.\n"
+	.string "It's got a funny face!$"
 
 Route33_Text_Lass:
-	.string "Pant{SE_M_SUPERSONIC}pant…\p"
-	.string "Tha{SE_M_SPIT_UP}cav{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}bigge{SE_M_SAND_TOMB}than\n"
-	.string "I'{SE_M_WATERFALL}expected.\p"
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}to{SE_M_ATTRACT2}tire{SE_M_WATERFALL}exploring\n"
-	.string "fo{SE_M_SAND_TOMB}MARILL{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}cam{SE_M_REVERSAL}outside.$"
+	.string "Pant, pant…\p"
+	.string "That cave was bigger than\n"
+	.string "I'd expected.\p"
+	.string "I got too tired exploring\n"
+	.string "for MARILL, so I came outside.$"
 

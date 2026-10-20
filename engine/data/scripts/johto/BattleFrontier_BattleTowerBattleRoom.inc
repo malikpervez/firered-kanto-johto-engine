@@ -1,26 +1,26 @@
 @ Johto (data/maps/BattleFrontier_BattleTowerBattleRoom/scripts.inc), as built into the FireRed game.
 
 J_BattleFrontier_BattleTowerLobby_Text_BattleRecordedOnPass::
-	.string "{PLAYER}'{SE_M_GRASSWHISTLE}battl{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}recorded\n"
-	.string "o{SE_M_ATTRACT}th{SE_M_REVERSAL}FRONTIE{SE_M_MINIMIZE}PASS.$"
+	.string "{PLAYER}'s battle was recorded\n"
+	.string "on the FRONTIER PASS.$"
 
 J_BattleFrontier_BattleTowerBattleRoom_Text_RestoreMonsToFullHealth::
-	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}restor{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}to\n"
-	.string "ful{SE_M_BATON_PASS}health.$"
+	.string "We will restore your POKéMON to\n"
+	.string "full health.$"
 
 J_BattleFrontier_BattleTowerBattleRoom_Text_RecordYourBattle::
-	.string "Recor{SE_M_WATERFALL}you{SE_M_SAND_TOMB}battl{SE_M_REVERSAL}o{SE_M_ATTRACT}your\n"
-	.string "FRONTIE{SE_M_MINIMIZE}PASS?$"
+	.string "Record your battle on your\n"
+	.string "FRONTIER PASS?$"
 
 J_BattleFrontier_BattleTowerBattleRoom_Text_SaveAndQuitGame::
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}sav{SE_M_REVERSAL}and\n"
-	.string "qui{SE_M_SPIT_UP}th{SE_M_REVERSAL}game?$"
+	.string "Would you like to save and\n"
+	.string "quit the game?$"
 
 J_BattleFrontier_BattleTowerBattleRoom_Text_CancelYourChallenge::
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}cance{SE_M_BATON_PASS}you{SE_M_SAND_TOMB}BATTLE\n"
-	.string "ROO{SE_M_GIGA_DRAIN}challenge?$"
+	.string "Would you like to cancel your BATTLE\n"
+	.string "ROOM challenge?$"
 
 J_BattleFrontier_BattleTowerBattleRoom_Text_SavingPleaseWait::
-	.string "Savin{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}battl{SE_M_REVERSAL}data.\n"
-	.string "Pleas{SE_M_REVERSAL}wait.$"
+	.string "Saving your battle data.\n"
+	.string "Please wait.$"
 

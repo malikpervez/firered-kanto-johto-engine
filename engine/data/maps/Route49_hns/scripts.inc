@@ -39,29 +39,29 @@ Route49_EventScript_SkylarAfter::
 	end
 
 Route49_Text_SkylarDefeat:
-	.string "OKAY{SE_M_SUPERSONIC}yo{SE_M_DIVE}ca{SE_M_ATTRACT}hav{SE_M_REVERSAL}th{SE_M_REVERSAL}PLATE.$"
+	.string "OKAY, you can have the PLATE.$"
 
 Route49_Text_SkylarAfter:
-	.string "A{SE_M_GRASSWHISTLE}coo{SE_M_BATON_PASS}a{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}PLAT{SE_M_SWORDS_DANCE}is,\n"
-	.string "yo{SE_M_DIVE}earne{SE_M_WATERFALL}i{SE_M_SPIT_UP}fai{SE_M_SAND_TOMB}an{SE_M_WATERFALL}square.\p"
-	.string "I'l{SE_M_BATON_PASS}jus{SE_M_SPIT_UP}bu{SE_M_YAWN}somethin{SE_M_SANDSTORM}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}gift\n"
-	.string "sho{SE_M_MORNING_SUN}instead.$"
+	.string "As cool as that PLATE is,\n"
+	.string "you earned it fair and square.\p"
+	.string "I'll just buy something at the gift\n"
+	.string "shop instead.$"
 
 Route49_Text_SkylarBeforeBattle:
 	.string "What?\p"
-	.string "Yo{SE_M_DIVE}wan{SE_M_SPIT_UP}th{SE_M_REVERSAL}PLATE?\n"
-	.string "It'{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}artifac{SE_M_SPIT_UP}imbue{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}an\l"
-	.string "ancien{SE_M_SPIT_UP}powe{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}connection\l"
-	.string "t{SE_M_ATTRACT2}th{SE_M_REVERSAL}legendar{SE_M_YAWN}POKéMON?!\p"
-	.string "Wel{SE_M_BATON_PASS}no{SE_M_TWISTER}I'{SE_M_MILK_DRINK}definitel{SE_M_YAWN}keepin{SE_M_SANDSTORM}it.\p"
+	.string "You want the PLATE?\n"
+	.string "It's an artifact imbued with an\l"
+	.string "ancient power with a connection\l"
+	.string "to the legendary POKéMON?!\p"
+	.string "Well now I'm definitely keeping it.\p"
 	.string "Fine.\p"
-	.string "You'l{SE_M_BATON_PASS}jus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}m{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}it.$"
+	.string "You'll just have to battle me for it.$"
 
 Route49_Text_SkylarBefore:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}hittin{SE_M_SANDSTORM}th{SE_M_REVERSAL}slopes{SE_M_SUPERSONIC}my\n"
-	.string "ski{SE_M_GRASSWHISTLE}snagge{SE_M_WATERFALL}o{SE_M_ATTRACT}something.\p"
-	.string "I{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}strang{SE_M_REVERSAL}SKY-blu{SE_M_REVERSAL}PLATE.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}I'l{SE_M_BATON_PASS}hol{SE_M_WATERFALL}ont{SE_M_ATTRACT2}i{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}a\n"
+	.string "When I was hitting the slopes, my\n"
+	.string "skis snagged on something.\p"
+	.string "It was this strange SKY-blue PLATE.\p"
+	.string "I think I'll hold onto it as a\n"
 	.string "souvenir!$"
 
 Route49_EventScript_SkierM::
@@ -69,9 +69,9 @@ Route49_EventScript_SkierM::
 	end
 
 Route49_Text_SkierM::
-	.string "Hey{SE_M_SUPERSONIC}watc{SE_M_TRI_ATTACK}ou{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}m{SE_M_YAWN}board!\p"
-	.string "What{SE_M_SING}Yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battle?\n"
-	.string "N{SE_M_ATTRACT2}way{SE_M_SUPERSONIC}thes{SE_M_REVERSAL}slope{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}to{SE_M_ATTRACT2}wicked!$"
+	.string "Hey, watch out for my board!\p"
+	.string "What? You want to battle?\n"
+	.string "No way, these slopes are too wicked!$"
 
 Route49_EventScripts_KimonoGirl::
 	delay 10
@@ -120,13 +120,13 @@ Route49_KimonoGitl_Movement2:
 
 Route49_Text_KimonoGirl:
 	.string "You....\p"
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{PLAYER}{SE_M_SUPERSONIC}correct?\n"
-	.string "I'v{SE_M_REVERSAL}hear{SE_M_WATERFALL}al{SE_M_BATON_PASS}abou{SE_M_SPIT_UP}yo{SE_M_DIVE}and\l"
-	.string "you{SE_M_SAND_TOMB}deed{SE_M_GRASSWHISTLE}fro{SE_M_MILK_DRINK}m{SE_M_YAWN}cousins\l"
-	.string "i{SE_M_ATTRACT}ECRUTEA{SE_M_SNORE}CITY.\p"
-	.string "M{SE_M_YAWN}sister{SE_M_GRASSWHISTLE}wis{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}mee{SE_M_SPIT_UP}wit{SE_M_TRI_ATTACK}you.\l"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}fin{SE_M_WATERFALL}th{SE_M_REVERSAL}time{SE_M_SUPERSONIC}please\n"
-	.string "see{SE_M_ENCORE2}u{SE_M_GRASSWHISTLE}ou{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}tow{SE_M_ATTRACT}u{SE_M_MORNING_SUN}ahead.$"
+	.string "You must be {PLAYER}, correct?\n"
+	.string "I've heard all about you and\l"
+	.string "your deeds from my cousins\l"
+	.string "in ECRUTEAK CITY.\p"
+	.string "My sisters wish to meet with you.\l"
+	.string "If you find the time, please\l"
+	.string "seek us out in the town up ahead.$"
 
 Route49_EventScript_Item_StarDust::
 	finditem ITEM_STARDUST
@@ -141,8 +141,8 @@ Route49_EventScript_Sign::
 	end
 
 Route49_Text_Sign:
-	.string "Th{SE_M_REVERSAL}sig{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}faded.\n"
-	.string "ROUT{SE_M_SWORDS_DANCE}49$"
+	.string "The sign is faded.\n"
+	.string "ROUTE 49$"
 
 Route49_EventScript_ActivateOverqwil::
 	lock

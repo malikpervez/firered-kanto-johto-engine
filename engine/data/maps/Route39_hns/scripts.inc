@@ -142,41 +142,41 @@ Route39_EventScript_BaobaIntro::
 	end
 
 Route39_Text_ChooseLegend::
-	.string "BAOBA{SE_M_HEAT_WAVE}GOO{SE_M_FAINT_ATTACK}HEAVENS{SE_M_DRAGON_RAGE}Di{SE_M_WATERFALL}that\n"
-	.string "shado{SE_M_TWISTER}belon{SE_M_SANDSTORM}t{SE_M_ATTRACT2}{SE_M_CHARGE}POKéMON?\p"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}ge{SE_M_SPIT_UP}{SE_M_CHARGE}goo{SE_M_WATERFALL}loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}it?\n"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}tel{SE_M_BATON_PASS}wha{SE_M_SPIT_UP}colo{SE_M_SAND_TOMB}i{SE_M_SPIT_UP}was...$"
+	.string "BAOBA: GOOD HEAVENS! Did that\n"
+	.string "shadow belong to a POKéMON?\p"
+	.string "Did you get a good look at it?\n"
+	.string "I can't tell what color it was...$"
 
 Route39_Text_BaobaIntro::
-	.string "Ho{SE_M_TWISTER}strange...\p"
+	.string "How strange...\p"
 	.string "...Ohh!\n"
-	.string "Wha{SE_M_SPIT_UP}yo{SE_M_DIVE}ar{SE_M_REVERSAL}holdin{SE_M_SANDSTORM}is...\l"
-	.string "wha{SE_M_SPIT_UP}the{SE_M_YAWN}call..{SE_M_PERISH_SONG}{SE_M_CHARGE}POKéDEX!\p"
-	.string "Haven'{SE_M_SPIT_UP}see{SE_M_ATTRACT}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}thos{SE_M_REVERSAL}i{SE_M_ATTRACT}ages.\p"
-	.string "M{SE_M_YAWN}nam{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}BAOBA!\n"
-	.string "{SE_M_HEAL_BELL}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}ru{SE_M_ATTRACT}{SE_M_CHARGE}SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}in\l"
-	.string "FUCHSI{SE_M_BONEMERANG}CITY{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}i{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}becoming\l"
-	.string "ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}dat{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}ne{SE_M_TWISTER}entertainment\l"
-	.string "option{SE_M_GRASSWHISTLE}comin{SE_M_SANDSTORM}out.\p"
-	.string "{SE_M_HEAL_BELL}decide{SE_M_WATERFALL}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}oversea{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}learn\n"
-	.string "th{SE_M_REVERSAL}newes{SE_M_SPIT_UP}technolog{SE_M_YAWN}an{SE_M_WATERFALL}ope{SE_M_ATTRACT}a\l"
-	.string "state-of-the-ar{SE_M_SPIT_UP}SAFAR{SE_M_HEAL_BELL}ZONE\l"
-	.string "i{SE_M_ATTRACT}CIANWOOD.\p"
-	.string "I{SE_M_SPIT_UP}ma{SE_M_YAWN}b{SE_M_REVERSAL}mor{SE_M_REVERSAL}tha{SE_M_ATTRACT}{SE_M_CHARGE}coincidence\n"
-	.string "tha{SE_M_SPIT_UP}w{SE_M_REVERSAL}ar{SE_M_REVERSAL}chatting.\p"
-	.string "Wh{SE_M_YAWN}don'{SE_M_SPIT_UP}w{SE_M_REVERSAL}registe{SE_M_SAND_TOMB}eac{SE_M_TRI_ATTACK}other's\n"
-	.string "number{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}th{SE_M_REVERSAL}POKéGEAR?\p"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}giv{SE_M_REVERSAL}yo{SE_M_DIVE}{SE_M_CHARGE}cal{SE_M_BATON_PASS}onc{SE_M_REVERSAL}the\n"
-	.string "SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}ope{SE_M_ATTRACT}befor{SE_M_REVERSAL}{SE_M_HEAL_BELL}call\l"
-	.string "anyon{SE_M_REVERSAL}else!$"
+	.string "What you are holding is...\l"
+	.string "what they call... a POKéDEX!\p"
+	.string "Haven't seen one of those in ages.\p"
+	.string "My name is BAOBA!\n"
+	.string "I used to run a SAFARI ZONE in\l"
+	.string "FUCHSIA CITY, but it was becoming\l"
+	.string "out of date with new entertainment\l"
+	.string "options coming out.\p"
+	.string "I decided to go overseas to learn\n"
+	.string "the newest technology and open a\l"
+	.string "state-of-the-art SAFARI ZONE\l"
+	.string "in CIANWOOD.\p"
+	.string "It may be more than a coincidence\n"
+	.string "that we are chatting.\p"
+	.string "Why don't we register each other's\n"
+	.string "numbers in the POKéGEAR?\p"
+	.string "I can give you a call once the\n"
+	.string "SAFARI ZONE is open before I call\l"
+	.string "anyone else!$"
 
 Route39_Text_Registered:
-	.string "{PLAYER} registere{SE_M_WATERFALL}BAOBA\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}POKéGEAR!$"
+	.string "{PLAYER} registered BAOBA\n"
+	.string "in the POKéGEAR!$"
 
 Route39_Text_WillCall:
-	.string "BAOBA{SE_M_HEAT_WAVE}I'l{SE_M_BATON_PASS}le{SE_M_SPIT_UP}yo{SE_M_DIVE}know\n"
-	.string "o{SE_M_ATTRACT}th{SE_M_REVERSAL}POKéGEA{SE_M_MINIMIZE}soon!$"
+	.string "BAOBA: I'll let you know\n"
+	.string "on the POKéGEAR soon!$"
 
 Route39_Movement_BaobaLeave:
 	walk_left
@@ -226,7 +226,7 @@ Route39_EventScript_Woman::
 	end
 
 Route39_Text_Woman:
-	.string "Tha{SE_M_SPIT_UP}shadow..{SE_M_PERISH_SONG}Mayb{SE_M_REVERSAL}i{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}giant\n"
+	.string "That shadow... Maybe it was a giant\n"
 	.string "PIDGEY?$"
 
 Route39_EventScript_Miltank::
@@ -240,7 +240,7 @@ Route39_EventScript_Miltank::
 	end
 
 Route39_Text_Miltank:
-	.string "MILTANK{SE_M_HEAT_WAVE}Mooo!$"
+	.string "MILTANK: Mooo!$"
 
 Route39_EventScript_Eugene::
 	trainerbattle_single TRAINER_JOHTO_EUGENE_HNS, Route39_Text_SailorEugeneSeen, Route39_Text_SailorEugeneBeaten
@@ -248,17 +248,17 @@ Route39_EventScript_Eugene::
 	end
 
 Route39_Text_SailorEugeneSeen:
-	.string "{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}go{SE_M_SPIT_UP}bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}OLIVINE.\p"
-	.string "S{SE_M_ATTRACT2}ho{SE_M_TWISTER}abou{SE_M_SPIT_UP}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}battle?$"
+	.string "I just got back to OLIVINE.\p"
+	.string "So how about a POKéMON battle?$"
 
 Route39_Text_SailorEugeneBeaten:
 	.string "Awaaargh!$"
 
 Route39_Text_SailorEugeneAfter:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}wer{SE_M_REVERSAL}caugh{SE_M_SPIT_UP}and\n"
-	.string "raise{SE_M_WATERFALL}overseas.\p"
-	.string "They'r{SE_M_REVERSAL}m{SE_M_YAWN}companion{SE_M_GRASSWHISTLE}on\n"
-	.string "thos{SE_M_REVERSAL}lon{SE_M_SANDSTORM}voyages.$"
+	.string "My POKéMON were caught and\n"
+	.string "raised overseas.\p"
+	.string "They're my companions on\n"
+	.string "those long voyages.$"
 
 Route39_EventScript_Derek::
 	trainerbattle_single TRAINER_JOHTO_DEREK_HNS, Route39_Text_PokefanMDerekSeen, Route39_Text_PokefanMDerekBeaten, Route39_EventScript_RegisterDerek
@@ -294,18 +294,18 @@ Route39_EventScript_DerekNoRoom::
 	end
 
 Route39_Text_PokefanMDerekSeen:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}goo{SE_M_WATERFALL}tim{SE_M_REVERSAL}t{SE_M_ATTRACT2}brag\n"
-	.string "abou{SE_M_SPIT_UP}m{SE_M_YAWN}PIKACHU!$"
+	.string "This is a good time to brag\n"
+	.string "about my PIKACHU!$"
 
 Route39_Text_PokefanMDerekBeaten:
-	.string "{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}n{SE_M_ATTRACT2}tim{SE_M_REVERSAL}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}off\n"
+	.string "I had no time to show off\n"
 	.string "PIKACHU…$"
 
 Route39_Text_PokefanMDerekAfter:
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}listenin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}your\n"
+	.string "I'm not listening to your\n"
 	.string "bragging!\p"
-	.string "W{SE_M_REVERSAL}POK{SE_U}FAN{SE_M_SKETCH}hav{SE_M_REVERSAL}{SE_M_CHARGE}policy\n"
-	.string "o{SE_M_ACID_ARMOR}no{SE_M_SPIT_UP}listenin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}bragging!$"
+	.string "We POKé FANS have a policy\n"
+	.string "of not listening to bragging!$"
 
 Route39_EventScript_Ruth::
 	trainerbattle_single TRAINER_JOHTO_RUTH_HNS, Route39_Text_PokefanFRuthSeen, Route39_Text_PokefanFRuthBeaten
@@ -313,17 +313,17 @@ Route39_EventScript_Ruth::
 	end
 
 Route39_Text_PokefanFRuthSeen:
-	.string "Suc{SE_M_TRI_ATTACK}darlin{SE_M_SANDSTORM}POKéMON.\p"
-	.string "Let'{SE_M_GRASSWHISTLE}sho{SE_M_TWISTER}ou{SE_M_SAND_TOMB}POKéMON\n"
-	.string "togethe{SE_M_SAND_TOMB}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}time.$"
+	.string "Such darling POKéMON.\p"
+	.string "Let's show our POKéMON\n"
+	.string "together at the same time.$"
 
 Route39_Text_PokefanFRuthBeaten:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}min{SE_M_WATERFALL}losing.$"
+	.string "I don't mind losing.$"
 
 Route39_Text_PokefanFRuthAfter:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}abou{SE_M_SPIT_UP}baby\n"
+	.string "Do you know about baby\n"
 	.string "POKéMON?\p"
-	.string "{SE_M_HEAL_BELL}be{SE_M_SPIT_UP}they'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}adorable!$"
+	.string "I bet they're just adorable!$"
 
 Route39_EventScript_Norman::
 	trainerbattle_single TRAINER_JOHTO_NORMAN_HNS, Route39_Text_PsychicNormanSeen, Route39_Text_PsychicNormanBeaten
@@ -331,18 +331,18 @@ Route39_EventScript_Norman::
 	end
 
 Route39_Text_PsychicNormanSeen:
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}se{SE_M_REVERSAL}wha{SE_M_SPIT_UP}your\n"
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}capabl{SE_M_REVERSAL}of.$"
+	.string "Let me see what your\n"
+	.string "POKéMON are capable of.$"
 
 Route39_Text_PsychicNormanBeaten:
-	.string "Ooh{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}have\n"
+	.string "Ooh, your POKéMON have\n"
 	.string "potential.$"
 
 Route39_Text_PsychicNormanAfter:
-	.string "Yo{SE_M_DIVE}kno{SE_M_TWISTER}ho{SE_M_TWISTER}POKéMO{SE_M_PSYBEAM2}have\n"
-	.string "differen{SE_M_SPIT_UP}abilities?\p"
-	.string "Peopl{SE_M_REVERSAL}ar{SE_M_REVERSAL}lik{SE_M_REVERSAL}tha{SE_M_SPIT_UP}too.\n"
-	.string "Everyon{SE_M_REVERSAL}ha{SE_M_GRASSWHISTLE}different\l"
+	.string "You know how POKéMON have\n"
+	.string "different abilities?\p"
+	.string "People are like that too.\n"
+	.string "Everyone has different\l"
 	.string "potential.$"
 
 Route39_EventScript_Jamie::
@@ -351,22 +351,22 @@ Route39_EventScript_Jamie::
 	end
 
 Route39_Text_PokefanFJaimeSeen:
-	.string "Yo{SE_M_DIVE}cam{SE_M_REVERSAL}a{SE_M_SPIT_UP}jus{SE_M_SPIT_UP}th{SE_M_REVERSAL}right\n"
+	.string "You came at just the right\n"
 	.string "time.\p"
-	.string "Let'{SE_M_GRASSWHISTLE}battle.$"
+	.string "Let's battle.$"
 
 Route39_Text_PokefanFJaimeBeaten:
-	.string "Oh{SE_M_SUPERSONIC}ho{SE_M_TWISTER}disappointing…$"
+	.string "Oh, how disappointing…$"
 
 Route39_Text_PokefanFJaimeAfter:
-	.string "{SE_M_HEAL_BELL}me{SE_M_SPIT_UP}UMBREO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}nigh{SE_M_SPIT_UP}right\n"
-	.string "her{SE_M_REVERSAL}o{SE_M_ATTRACT}ROUT{SE_M_SWORDS_DANCE}39.\p"
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}sur{SE_M_REVERSAL}why{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}it\n"
-	.string "seem{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}lik{SE_M_REVERSAL}i{SE_M_SPIT_UP}whe{SE_M_ATTRACT}I\l"
-	.string "trai{SE_M_ATTRACT}here.\p"
-	.string "I{SE_M_SPIT_UP}seem{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}becom{SE_M_REVERSAL}friendlier\n"
-	.string "b{SE_M_YAWN}trainin{SE_M_SANDSTORM}her{SE_M_REVERSAL}than\l"
-	.string "anywher{SE_M_REVERSAL}else.$"
+	.string "I met UMBREON at night right\n"
+	.string "here on ROUTE 39.\p"
+	.string "I'm not sure why, but it\n"
+	.string "seems to like it when I\l"
+	.string "train here.\p"
+	.string "It seems to become friendlier\n"
+	.string "by training here than\l"
+	.string "anywhere else.$"
 
 Route39_EventScript_Sign1::
 	lock
@@ -376,8 +376,8 @@ Route39_EventScript_Sign1::
 	end
 
 Route39_Text_Sign:
-	.string "ROUT{SE_M_SWORDS_DANCE}39\p"
-	.string "OLIVIN{SE_M_SWORDS_DANCE}CIT{SE_M_MOONLIGHT}{SE_M_PAY_DAY}ECRUTEA{SE_M_SNORE}CITY$"
+	.string "ROUTE 39\p"
+	.string "OLIVINE CITY - ECRUTEAK CITY$"
 
 Route39_EventScript_Sign2::
 	lock
@@ -387,8 +387,8 @@ Route39_EventScript_Sign2::
 	end
 
 Route39_Text_MoomooFarmSign:
-	.string "MOOMO{SE_M_SOLAR_BEAM}FARM\p"
-	.string "Enjo{SE_M_YAWN}Ou{SE_M_SAND_TOMB}Fres{SE_M_TRI_ATTACK}an{SE_M_WATERFALL}Tast{SE_M_YAWN}Milk$"
+	.string "MOOMOO FARM\p"
+	.string "Enjoy Our Fresh and Tasty Milk$"
 
 Route39_EventScript_Sign3::
 	lock
@@ -398,30 +398,30 @@ Route39_EventScript_Sign3::
 	end
 
 Route39_Text_TrainerTips:
-	.string "TRAINE{SE_M_MINIMIZE}TIPS\p"
-	.string "Us{SE_M_REVERSAL}HEADBUT{SE_M_SWIFT}o{SE_M_ATTRACT}tree{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}shake\n"
-	.string "POKéMO{SE_M_PSYBEAM2}out.\p"
-	.string "Differen{SE_M_SPIT_UP}kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}POKéMON\n"
-	.string "dro{SE_M_MORNING_SUN}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}trees.\p"
-	.string "Us{SE_M_REVERSAL}HEADBUT{SE_M_SWIFT}o{SE_M_ATTRACT}an{SE_M_YAWN}tree\n"
-	.string "yo{SE_M_DIVE}see!$"
+	.string "TRAINER TIPS\p"
+	.string "Use HEADBUTT on trees to shake\n"
+	.string "POKéMON out.\p"
+	.string "Different kinds of POKéMON\n"
+	.string "drop out of trees.\p"
+	.string "Use HEADBUTT on any tree\n"
+	.string "you see!$"
 
 Route39_Text_DerekRegister:
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}listenin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}your\n"
+	.string "I'm not listening to your\n"
 	.string "bragging!\p"
-	.string "W{SE_M_REVERSAL}POK{SE_U}FAN{SE_M_SKETCH}hav{SE_M_REVERSAL}{SE_M_CHARGE}policy\n"
-	.string "o{SE_M_ACID_ARMOR}no{SE_M_SPIT_UP}listenin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}bragging!$"
+	.string "We POKé FANS have a policy\n"
+	.string "of not listening to bragging!$"
 
 Route39_Text_DerekHasItem:
-	.string "Hey{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}showin{SE_M_SANDSTORM}of{SE_M_ACID_ARMOR}my\n"
-	.string "PIKACH{SE_M_REFLECT}an{SE_M_WATERFALL}foun{SE_M_WATERFALL}something.\p"
-	.string "Here{SE_M_SUPERSONIC}yo{SE_M_DIVE}ca{SE_M_ATTRACT}hav{SE_M_REVERSAL}it!$"
+	.string "Hey! I was showing off my\n"
+	.string "PIKACHU and found something.\p"
+	.string "Here, you can have it!$"
 
 Route39_Text_DerekGaveItem:
-	.string "PIKACH{SE_M_REFLECT}i{SE_M_GRASSWHISTLE}it!\n"
-	.string "Don'{SE_M_SPIT_UP}yo{SE_M_DIVE}agree?$"
+	.string "PIKACHU is it!\n"
+	.string "Don't you agree?$"
 
 Route39_Text_DerekNoRoom:
-	.string "Hmm{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}BA{SE_M_SWAGGER}i{SE_M_GRASSWHISTLE}full.\p"
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}whe{SE_M_ATTRACT}yo{SE_M_DIVE}hav{SE_M_REVERSAL}room.$"
+	.string "Hmm, your BAG is full.\p"
+	.string "Come back when you have room.$"
 

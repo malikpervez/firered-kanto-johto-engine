@@ -125,27 +125,27 @@ EcruteakCity_Text_Silver1:
 	.string "THUD!!$"
 
 EcruteakCity_Text_Silver2:
-	.string "{RIVAL}{SE_M_HEAT_WAVE}How...{SE_M_SING}Ho{SE_M_TWISTER}i{SE_M_GRASSWHISTLE}this\n"
-	.string "possible{SE_M_SING}Ho{SE_M_TWISTER}ca{SE_M_ATTRACT}{SE_M_HEAL_BELL}los{SE_M_REVERSAL}t{SE_M_ATTRACT2}mere\l"
-	.string "KIMON{SE_M_SOLAR_BEAM}GIRLS...?$"
+	.string "{RIVAL}: How...? How is this\n"
+	.string "possible? How can I lose to mere\l"
+	.string "KIMONO GIRLS...?$"
 
 EcruteakCity_Text_Silver3:
-	.string "{RIVAL}{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}wer{SE_M_REVERSAL}watchin{SE_M_SANDSTORM}me,\n"
+	.string "{RIVAL}: You were watching me,\n"
 	.string "{PLAYER}...\p"
-	.string "Yeah{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}right!\p"
-	.string "{SE_M_HEAL_BELL}neve{SE_M_SAND_TOMB}though{SE_M_SPIT_UP}defeatin{SE_M_SANDSTORM}five\n"
-	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}s{SE_M_ATTRACT2}hard...\p"
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}beate{SE_M_ATTRACT}t{SE_M_ATTRACT2}{SE_M_CHARGE}pulp...\p"
+	.string "Yeah, that's right!\p"
+	.string "I never thought defeating five\n"
+	.string "KIMONO GIRLS would be so hard...\p"
+	.string "I got beaten to a pulp...\p"
 	.string "...\p"
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}com{SE_M_REVERSAL}her{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}the\n"
-	.string "sam{SE_M_REVERSAL}reason{SE_M_SUPERSONIC}right?\p"
-	.string "Don'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}cock{SE_M_YAWN}jus{SE_M_SPIT_UP}becaus{SE_M_REVERSAL}you\n"
-	.string "defeate{SE_M_WATERFALL}TEA{SE_M_GIGA_DRAIN}ROCKET!\p"
-	.string "Thes{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}ar{SE_M_REVERSAL}insanely\n"
+	.string "You must have come here for the\n"
+	.string "same reason, right?\p"
+	.string "Don't get cocky just because you\n"
+	.string "defeated TEAM ROCKET!\p"
+	.string "These KIMONO GIRLS are insanely\n"
 	.string "strong.\p"
-	.string "Se{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ca{SE_M_ATTRACT}defea{SE_M_SPIT_UP}them.\p"
-	.string "Bu{SE_M_SPIT_UP}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}back{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}don't\n"
-	.string "wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}yo{SE_M_DIVE}win.$"
+	.string "See if you can defeat them.\p"
+	.string "But I'm not going back, I don't\n"
+	.string "want to see you win.$"
 
 EcruteakCity_EventScript_Gramps::
 	lock
@@ -285,104 +285,104 @@ EcruteakCity_EventScript_Item_RareCandy::
 	end
 
 EcruteakCity_Text_Eevee:
-	.string "EEVEE{SE_M_HEAT_WAVE}Veee!$"
+	.string "EEVEE: Veee!$"
 
 EcruteakCity_Text_Vulpix:
-	.string "VULPIX{SE_M_HEAT_WAVE}Vulll{SE_M_BATON_PASS}Pix!$"
+	.string "VULPIX: Vullll Pix!$"
 
 EcruteakCity_Text_UnusedMissingDaughter:
-	.string "Oh{SE_M_SUPERSONIC}no{SE_M_PERISH_SONG}Oh{SE_M_SUPERSONIC}no…\p"
-	.string "M{SE_M_YAWN}daughte{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}missing.\p"
-	.string "No{SE_M_DIZZY_PUNCH}Sh{SE_M_REVERSAL}couldn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}gon{SE_M_REVERSAL}t{SE_M_ATTRACT2}the\n"
-	.string "BURNE{SE_M_FAINT_ATTACK}TOWER.\p"
-	.string "{SE_M_HEAL_BELL}tol{SE_M_WATERFALL}he{SE_M_SAND_TOMB}no{SE_M_SPIT_UP}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}nea{SE_M_SAND_TOMB}it…\p"
-	.string "Peopl{SE_M_REVERSAL}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}disappea{SE_M_SAND_TOMB}there…\p"
-	.string "Oh{SE_M_SUPERSONIC}wha{SE_M_SPIT_UP}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}do…?$"
+	.string "Oh, no. Oh, no…\p"
+	.string "My daughter is missing.\p"
+	.string "No… She couldn't have gone to the\n"
+	.string "BURNED TOWER.\p"
+	.string "I told her not to go near it…\p"
+	.string "People seem to disappear there…\p"
+	.string "Oh, what should I do…?$"
 
 EcruteakCity_Text_Gramps1:
-	.string "ECRUTEA{SE_M_SNORE}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}towers:\n"
-	.string "on{SE_M_REVERSAL}eac{SE_M_TRI_ATTACK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}eas{SE_M_SPIT_UP}an{SE_M_WATERFALL}west.$"
+	.string "ECRUTEAK used to have two towers:\n"
+	.string "one each in the east and west.$"
 
 EcruteakCity_Text_Gramps2:
-	.string "Ah{SE_M_SUPERSONIC}child{SE_M_PERISH_SONG}Hav{SE_M_REVERSAL}yo{SE_M_DIVE}learne{SE_M_WATERFALL}to\n"
-	.string "danc{SE_M_REVERSAL}lik{SE_M_REVERSAL}th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRLS?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}g{SE_M_ATTRACT2}t{SE_M_ATTRACT2}thei{SE_M_SAND_TOMB}DANC{SE_M_SWORDS_DANCE}THEATER,\n"
-	.string "a{SE_M_ATTRACT}od{SE_M_WATERFALL}ol{SE_M_WATERFALL}ma{SE_M_ATTRACT}wil{SE_M_BATON_PASS}giv{SE_M_REVERSAL}you\l"
-	.string "somethin{SE_M_SANDSTORM}nice{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hear.$"
+	.string "Ah, child. Have you learned to\n"
+	.string "dance like the KIMONO GIRLS?\p"
+	.string "If you go to their DANCE THEATER,\n"
+	.string "an odd old man will give you\l"
+	.string "something nice, I hear.$"
 
 EcruteakCity_Text_Lass1:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}practic{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}DANCE\n"
-	.string "THEATER{SE_M_PERISH_SONG}Car{SE_M_REVERSAL}t{SE_M_ATTRACT2}joi{SE_M_ATTRACT}me?$"
+	.string "I'm going to practice at the DANCE\n"
+	.string "THEATER. Care to join me?$"
 
 EcruteakCity_Text_Lass2:
-	.string "Th{SE_M_REVERSAL}towe{SE_M_SAND_TOMB}tha{SE_M_SPIT_UP}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}here…\p"
-	.string "M{SE_M_YAWN}grandm{SE_M_CHARGE}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}i{SE_M_SPIT_UP}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}be\n"
-	.string "muc{SE_M_TRI_ATTACK}taller.\p"
-	.string "{SE_M_HEAL_BELL}hea{SE_M_SAND_TOMB}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}ghost{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}i{SE_M_SPIT_UP}now.$"
+	.string "The tower that used to be here…\p"
+	.string "My grandma told me it used to be\n"
+	.string "much taller.\p"
+	.string "I hear there are ghosts in it now.$"
 
 EcruteakCity_Text_Lass2_ReleasedBeasts:
-	.string "Thre{SE_M_REVERSAL}bi{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}ra{SE_M_ATTRACT}of{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}different\n"
-	.string "directions{SE_M_PERISH_SONG}Wha{SE_M_SPIT_UP}wer{SE_M_REVERSAL}they?$"
+	.string "Three big POKéMON ran off in different\n"
+	.string "directions. What were they?$"
 
 EcruteakCity_Text_Fisher:
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}{SE_M_CHARGE}rumo{SE_M_SAND_TOMB}abou{SE_M_SPIT_UP}OLIVINE\n"
+	.string "I heard a rumor about OLIVINE\n"
 	.string "LIGHTHOUSE.\p"
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}serve{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}the\n"
-	.string "beaco{SE_M_ATTRACT}fel{SE_M_BATON_PASS}ill{SE_M_PERISH_SONG}Sound{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}they\l"
-	.string "ar{SE_M_REVERSAL}i{SE_M_ATTRACT}trouble.$"
+	.string "The POKéMON that serves as the\n"
+	.string "beacon fell ill. Sounds like they\l"
+	.string "are in trouble.$"
 
 EcruteakCity_Text_Fisher_JasmineReturned:
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}OLIVIN{SE_M_SWORDS_DANCE}LIGHTHOUSE\n"
-	.string "ha{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}cured.\p"
-	.string "Boat{SE_M_GRASSWHISTLE}ca{SE_M_ATTRACT}safel{SE_M_YAWN}sai{SE_M_BATON_PASS}ou{SE_M_SPIT_UP}t{SE_M_ATTRACT2}se{SE_M_CHARGE}at\n"
-	.string "nigh{SE_M_SPIT_UP}again.$"
+	.string "The POKéMON at OLIVINE LIGHTHOUSE\n"
+	.string "has been cured.\p"
+	.string "Boats can safely sail out to sea at\n"
+	.string "night again.$"
 
 EcruteakCity_Text_Youngster:
-	.string "{SE_M_HEAL_BELL}hea{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}rampagin{SE_M_SANDSTORM}a{SE_M_SPIT_UP}the\n"
-	.string "LAK{SE_M_SWORDS_DANCE}O{SE_M_LEER}RAGE{SE_M_PERISH_SONG}I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}that.$"
+	.string "I hear POKéMON are rampaging at the\n"
+	.string "LAKE OF RAGE. I'd like to see that.$"
 
 EcruteakCity_Text_Gramps3:
-	.string "I{SE_M_ATTRACT}th{SE_M_REVERSAL}distan{SE_M_SPIT_UP}past…\p"
-	.string "Thi{SE_M_GRASSWHISTLE}towe{SE_M_SAND_TOMB}burne{SE_M_WATERFALL}i{SE_M_ATTRACT}{SE_M_CHARGE}fire{SE_M_PERISH_SONG}Three\n"
-	.string "nameles{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}perishe{SE_M_WATERFALL}i{SE_M_ATTRACT}it.\p"
-	.string "{SE_M_BONEMERANG}rainbow-colore{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}descended\n"
-	.string "fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}sk{SE_M_YAWN}an{SE_M_WATERFALL}resurrecte{SE_M_WATERFALL}them…\p"
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}legen{SE_M_WATERFALL}tha{SE_M_SPIT_UP}ha{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}passed\n"
-	.string "dow{SE_M_ATTRACT}b{SE_M_YAWN}ECRUTEA{SE_M_SNORE}GY{SE_M_GIGA_DRAIN}LEADERS.\p"
+	.string "In the distant past…\p"
+	.string "This tower burned in a fire. Three\n"
+	.string "nameless POKéMON perished in it.\p"
+	.string "A rainbow-colored POKéMON descended\n"
+	.string "from the sky and resurrected them…\p"
+	.string "It's a legend that has been passed\n"
+	.string "down by ECRUTEAK GYM LEADERS.\p"
 	.string "Me?\p"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}traine{SE_M_SAND_TOMB}wa{SE_M_YAWN}bac{SE_M_ENCORE2}when.\n"
+	.string "I was a trainer way back when.\n"
 	.string "Hohoho!$"
 
 EcruteakCity_Text_SageGym:
-	.string "Gy{SE_M_MILK_DRINK}Leade{SE_M_SAND_TOMB}MORT{SE_M_MOONLIGHT}i{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}her{SE_M_REVERSAL}right\n"
-	.string "now{SE_M_PERISH_SONG}Yo{SE_M_DIVE}ma{SE_M_YAWN}fin{SE_M_WATERFALL}hi{SE_M_MILK_DRINK}a{SE_M_SPIT_UP}the\l"
-	.string "BURNE{SE_M_FAINT_ATTACK}TOWER.$"
+	.string "Gym Leader MORTY is not here right\n"
+	.string "now. You may find him at the\l"
+	.string "BURNED TOWER.$"
 
 EcruteakCity_Text_Sign:
-	.string "ECRUTEA{SE_M_SNORE}CITY\n"
-	.string "{SE_M_BONEMERANG}Historica{SE_M_BATON_PASS}City\p"
-	.string "Wher{SE_M_REVERSAL}th{SE_M_REVERSAL}Pas{SE_M_SPIT_UP}Meet{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}Present$"
+	.string "ECRUTEAK CITY\n"
+	.string "A Historical City\p"
+	.string "Where the Past Meets the Present$"
 
 EcruteakCity_Text_TinTowerSign:
-	.string "TI{SE_M_PSYBEAM2}TOWER\p"
-	.string "{SE_M_BONEMERANG}legendar{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}sai{SE_M_WATERFALL}to\n"
-	.string "roos{SE_M_SPIT_UP}here.$"
+	.string "TIN TOWER\p"
+	.string "A legendary POKéMON is said to\n"
+	.string "roost here.$"
 
 EcruteakCity_Text_OfficeSign:
-	.string "Barrie{SE_M_SAND_TOMB}Statio{SE_M_ATTRACT}t{SE_M_ATTRACT2}TI{SE_M_PSYBEAM2}TOWER\p"
-	.string "N{SE_M_ATTRACT2}Trespassin{SE_M_SANDSTORM}b{SE_M_YAWN}th{SE_M_REVERSAL}Unworthy.$"
+	.string "Barrier Station to TIN TOWER\p"
+	.string "No Trespassing by the Unworthy.$"
 
 EcruteakCity_Text_GymSign:
-	.string "ECRUTEA{SE_M_SNORE}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM\n"
-	.string "LEADER{SE_M_HEAT_WAVE}MORTY\p"
-	.string "Th{SE_M_REVERSAL}Mysti{SE_M_HYPER_BEAM}See{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}Future$"
+	.string "ECRUTEAK CITY POKéMON GYM\n"
+	.string "LEADER: MORTY\p"
+	.string "The Mystic Seer of the Future$"
 
 EcruteakCity_Text_DanceTheaterSign:
-	.string "ECRUTEA{SE_M_SNORE}DANC{SE_M_SWORDS_DANCE}THEATER$"
+	.string "ECRUTEAK DANCE THEATER$"
 
 EcruteakCity_Text_BurnedTowerSign:
-	.string "BURNE{SE_M_FAINT_ATTACK}TOWER\p"
-	.string "I{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}destroye{SE_M_WATERFALL}b{SE_M_YAWN}{SE_M_CHARGE}mysterious\n"
+	.string "BURNED TOWER\p"
+	.string "It was destroyed by a mysterious\n"
 	.string "fire.\p"
-	.string "Pleas{SE_M_REVERSAL}sta{SE_M_YAWN}away{SE_M_SUPERSONIC}a{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}unsafe.$"
+	.string "Please stay away, as it is unsafe.$"
 

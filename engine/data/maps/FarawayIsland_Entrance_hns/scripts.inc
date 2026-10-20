@@ -47,10 +47,10 @@ FarawayIsland_Entrance_hns_EventScript_Sign::
 	end
 
 FarawayIsland_Entrance_hns_Text_Sign:
-	.string "Th{SE_M_REVERSAL}writin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}fadin{SE_M_SANDSTORM}a{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}it\n"
-	.string "wa{SE_M_GRASSWHISTLE}writte{SE_M_ATTRACT}{SE_M_CHARGE}lon{SE_M_SANDSTORM}tim{SE_M_REVERSAL}ago..\p"
-	.string "..ber{SE_M_SUPERSONIC}6t{SE_M_TRI_ATTACK}da{SE_M_YAWN}I{SE_M_ACID_ARMOR}an{SE_M_YAWN}human..\n"
-	.string "set{SE_M_GRASSWHISTLE}foo{SE_M_SPIT_UP}here.{SE_M_PERISH_SONG}again..e{SE_M_SPIT_UP}it\l"
-	.string "b{SE_M_REVERSAL}{SE_M_CHARGE}kindhearte{SE_M_WATERFALL}pers.{SE_M_PERISH_SONG}..ith\l"
-	.string "tha{SE_M_SPIT_UP}hope{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}depar..$"
+	.string "The writing is fading as if it\n"
+	.string "was written a long time ago..\p"
+	.string "..ber, 6th day If any human..\n"
+	.string "sets foot here.. again..et it\l"
+	.string "be a kindhearted pers.. ..ith\l"
+	.string "that hope, I depar..$"
 

@@ -9,7 +9,7 @@ J_Debug_FlagsAndVarNotSetBattleConfigMessage::
 	end
 
 J_Debug_FlagsAndVarNotSetBattleConfigMessage_Text:
-	.string "Featur{SE_M_REVERSAL}unavailable{SE_M_DRAGON_RAGE}Pleas{SE_M_REVERSAL}defin{SE_M_REVERSAL}a\n"
-	.string "usabl{SE_M_REVERSAL}fla{SE_M_SANDSTORM}an{SE_M_WATERFALL}{SE_M_CHARGE}usabl{SE_M_REVERSAL}va{SE_M_SAND_TOMB}in:\l"
+	.string "Feature unavailable! Please define a\n"
+	.string "usable flag and a usable var in:\l"
 	.string "'include/config/battle.h'!$"
 

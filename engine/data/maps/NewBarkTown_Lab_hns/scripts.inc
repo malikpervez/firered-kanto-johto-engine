@@ -96,9 +96,9 @@ NewBarkTown_Lab_EventScript_ElmAideIsWaiting::
 
 NewBarkTown_Lab_Text_ElmAideIsWaiting:
 	.string "{PLAYER}!\p"
-	.string "Wha{SE_M_SPIT_UP}ar{SE_M_REVERSAL}yo{SE_M_DIVE}doin{SE_M_SANDSTORM}here?\p"
-	.string "M{SE_M_YAWN}aid{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}stil{SE_M_BATON_PASS}waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you\n"
-	.string "I{SE_M_ATTRACT}VIOLE{SE_M_SWIFT}CITY!$"
+	.string "What are you doing here?\p"
+	.string "My aide is still waiting for you\n"
+	.string "In VIOLET CITY!$"
 
 NewBarkTown_Lab_EventScript_ElmIntro::
 	call RB_ElmBird
@@ -538,319 +538,319 @@ NewBarkTown_Lab_Movement_ElmStepForward:
 	step_end
 
 NewBarkTown_Lab_Text_ShouldntTouch:
-	.string "Probabl{SE_M_YAWN}shouldn'{SE_M_SPIT_UP}touch!$"
+	.string "Probably shouldn't touch!$"
 
 NewBarkTown_Lab_Text_ElmIntro::
-	.string "ELM{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{PLAYER}!\p"
-	.string "PROF.OA{SE_M_SNORE}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}abou{SE_M_SPIT_UP}your\n"
-	.string "victor{SE_M_YAWN}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}KANT{SE_M_SOLAR_BEAM}LEAGUE.\p"
-	.string "Welcom{SE_M_REVERSAL}t{SE_M_ATTRACT2}JOHTO{SE_M_DRAGON_RAGE}You{SE_M_SAND_TOMB}experience\n"
-	.string "coul{SE_M_WATERFALL}hel{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}research.\p"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}somethin{SE_M_SANDSTORM}I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}your\n"
-	.string "hel{SE_M_MORNING_SUN}investigating{SE_M_PERISH_SONG}Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}help?$"
+	.string "ELM: You must be {PLAYER}!\p"
+	.string "PROF.OAK told me about your\n"
+	.string "victory at the KANTO LEAGUE.\p"
+	.string "Welcome to JOHTO! Your experience\n"
+	.string "could help with my research.\p"
+	.string "There is something I'd like your\n"
+	.string "help investigating. Will you help?$"
 
 NewBarkTown_Lab_Text_ElmAccepted:
-	.string "Thanks{SE_M_SUPERSONIC}{PLAYER}!\n"
-	.string "You'r{SE_M_REVERSAL}{SE_M_CHARGE}grea{SE_M_SPIT_UP}help!$"
+	.string "Thanks, {PLAYER}!\n"
+	.string "You're a great help!$"
 
 NewBarkTown_Lab_Text_ElmRefused:
-	.string "But{SE_M_DIZZY_PUNCH}Please{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}your\n"
+	.string "But… Please, I need your\n"
 	.string "help!$"
 
 NewBarkTown_Lab_Text_ElmResearchAmbitions:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}announc{SE_M_REVERSAL}m{SE_M_YAWN}findings,\n"
-	.string "I'{SE_M_MILK_DRINK}sur{SE_M_REVERSAL}we'l{SE_M_BATON_PASS}delv{SE_M_REVERSAL}deeper\p"
-	.string "int{SE_M_ATTRACT2}th{SE_M_REVERSAL}man{SE_M_YAWN}mysterie{SE_M_GRASSWHISTLE}of\n"
+	.string "When I announce my findings,\n"
+	.string "I'm sure we'll delve deeper\p"
+	.string "into the many mysteries of\n"
 	.string "POKéMON.\p"
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}coun{SE_M_SPIT_UP}o{SE_M_ATTRACT}it!$"
+	.string "You can count on it!$"
 
 NewBarkTown_Lab_Text_ElmGotAnEmail:
-	.string "Oh{SE_M_SUPERSONIC}hey{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}a{SE_M_ATTRACT}e-mail!\p"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "Hm{SE_M_DIZZY_PUNCH}Uh-huh…\p"
+	.string "Oh, hey! I got an e-mail!\p"
+	.string "… … … … … … … …\n"
+	.string "Hm… Uh-huh…\p"
 	.string "Okay…$"
 
 NewBarkTown_Lab_Text_ElmMissionFromMrPokemon:
-	.string "Hey{SE_M_SUPERSONIC}listen.\p"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}a{SE_M_ATTRACT}acquaintanc{SE_M_REVERSAL}called\n"
-	.string "MR{SE_M_PERISH_SONG}POKéMON.\p"
-	.string "H{SE_M_REVERSAL}keep{SE_M_GRASSWHISTLE}findin{SE_M_SANDSTORM}weir{SE_M_WATERFALL}thing{SE_M_GRASSWHISTLE}and\n"
-	.string "ravin{SE_M_SANDSTORM}abou{SE_M_SPIT_UP}hi{SE_M_GRASSWHISTLE}discoveries.\p"
-	.string "Anyway{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}go{SE_M_SPIT_UP}a{SE_M_ATTRACT}e-mail\n"
-	.string "fro{SE_M_MILK_DRINK}hi{SE_M_MILK_DRINK}sayin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}this\l"
-	.string "tim{SE_M_REVERSAL}it'{SE_M_GRASSWHISTLE}real.\p"
-	.string "I{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}intriguing{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}we're\n"
-	.string "bus{SE_M_YAWN}wit{SE_M_TRI_ATTACK}ou{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}research...\p"
+	.string "Hey, listen.\p"
+	.string "I have an acquaintance called\n"
+	.string "MR. POKéMON.\p"
+	.string "He keeps finding weird things and\n"
+	.string "raving about his discoveries.\p"
+	.string "Anyway, I just got an e-mail\n"
+	.string "from him saying that this\l"
+	.string "time it's real.\p"
+	.string "It is intriguing, but we're\n"
+	.string "busy with our POKéMON research...\p"
 	.string "Wait!\n"
-	.string "{SE_M_HEAL_BELL}know!\p"
-	.string "{PLAYER}{SE_M_SUPERSONIC}ca{SE_M_ATTRACT}yo{SE_M_DIVE}g{SE_M_ATTRACT2}i{SE_M_ATTRACT}our\n"
+	.string "I know!\p"
+	.string "{PLAYER}, can you go in our\n"
 	.string "place?$"
 
 NewBarkTown_Lab_Text_ElmChooseAPokemon::
-	.string "You{SE_M_SAND_TOMB}ow{SE_M_ATTRACT}POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}brough{SE_M_SPIT_UP}you\n"
-	.string "al{SE_M_BATON_PASS}th{SE_M_REVERSAL}wa{SE_M_YAWN}fro{SE_M_MILK_DRINK}KANTO.\p"
-	.string "Pleas{SE_M_REVERSAL}tak{SE_M_REVERSAL}the{SE_M_MILK_DRINK}wit{SE_M_TRI_ATTACK}yo{SE_M_DIVE}o{SE_M_ATTRACT}this\n"
-	.string "errand{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}kno{SE_M_TWISTER}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}trus{SE_M_SPIT_UP}you!\p"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}arrange{SE_M_WATERFALL}{SE_M_CHARGE}POKéGEA{SE_M_MINIMIZE}s{SE_M_ATTRACT2}we\n"
-	.string "ca{SE_M_ATTRACT}kee{SE_M_MORNING_SUN}i{SE_M_ATTRACT}touc{SE_M_TRI_ATTACK}alon{SE_M_SANDSTORM}th{SE_M_REVERSAL}way.$"
+	.string "Your own POKéMON have brought you\n"
+	.string "all the way from KANTO.\p"
+	.string "Please take them with you on this\n"
+	.string "errand. I know I can trust you!\p"
+	.string "I have arranged a POKéGEAR so we\n"
+	.string "can keep in touch along the way.$"
 
 NewBarkTown_Lab_Text_ElmWhereGoing:
-	.string "ELM{SE_M_HEAT_WAVE}Wait{SE_M_DRAGON_RAGE}Wher{SE_M_REVERSAL}ar{SE_M_REVERSAL}you\n"
+	.string "ELM: Wait! Where are you\n"
 	.string "going?$"
 
 NewBarkTown_Lab_Text_ElmDirections1:
-	.string "MR{SE_M_PERISH_SONG}POKéMO{SE_M_PSYBEAM2}live{SE_M_GRASSWHISTLE}{SE_M_CHARGE}littl{SE_M_REVERSAL}bit\n"
-	.string "beyon{SE_M_WATERFALL}CHERRYGROVE{SE_M_SUPERSONIC}th{SE_M_REVERSAL}next\l"
-	.string "cit{SE_M_YAWN}over.\p"
-	.string "It'{SE_M_GRASSWHISTLE}almos{SE_M_SPIT_UP}{SE_M_CHARGE}direc{SE_M_SPIT_UP}route\n"
-	.string "there{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}mis{SE_M_GRASSWHISTLE}it.\p"
-	.string "Bu{SE_M_SPIT_UP}jus{SE_M_SPIT_UP}i{SE_M_ATTRACT}case{SE_M_SUPERSONIC}yo{SE_M_DIVE}hav{SE_M_REVERSAL}my\n"
-	.string "phon{SE_M_REVERSAL}number{SE_M_PERISH_SONG}Cal{SE_M_BATON_PASS}m{SE_M_REVERSAL}if\l"
-	.string "anythin{SE_M_SANDSTORM}come{SE_M_GRASSWHISTLE}up!$"
+	.string "MR. POKéMON lives a little bit\n"
+	.string "beyond CHERRYGROVE, the next\l"
+	.string "city over.\p"
+	.string "It's almost a direct route\n"
+	.string "there, so you can't miss it.\p"
+	.string "But just in case, you have my\n"
+	.string "phone number. Call me if\l"
+	.string "anything comes up!$"
 
 NewBarkTown_Lab_Text_ElmDirections1_Register:
-	.string "MR{SE_M_PERISH_SONG}POKéMO{SE_M_PSYBEAM2}live{SE_M_GRASSWHISTLE}{SE_M_CHARGE}littl{SE_M_REVERSAL}bit\n"
-	.string "beyon{SE_M_WATERFALL}CHERRYGROVE{SE_M_SUPERSONIC}th{SE_M_REVERSAL}next\l"
-	.string "cit{SE_M_YAWN}over.\p"
-	.string "It'{SE_M_GRASSWHISTLE}almos{SE_M_SPIT_UP}{SE_M_CHARGE}direc{SE_M_SPIT_UP}route\n"
-	.string "there{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}mis{SE_M_GRASSWHISTLE}it.\p"
-	.string "Bu{SE_M_SPIT_UP}jus{SE_M_SPIT_UP}i{SE_M_ATTRACT}case{SE_M_SUPERSONIC}here'{SE_M_GRASSWHISTLE}my\n"
-	.string "phon{SE_M_REVERSAL}number{SE_M_PERISH_SONG}Cal{SE_M_BATON_PASS}m{SE_M_REVERSAL}if\l"
-	.string "anythin{SE_M_SANDSTORM}come{SE_M_GRASSWHISTLE}up!$"
+	.string "MR. POKéMON lives a little bit\n"
+	.string "beyond CHERRYGROVE, the next\l"
+	.string "city over.\p"
+	.string "It's almost a direct route\n"
+	.string "there, so you can't miss it.\p"
+	.string "But just in case, here's my\n"
+	.string "phone number. Call me if\l"
+	.string "anything comes up!$"
 
 NewBarkTown_Lab_Text_RegisteredElm:
-	.string "Registere{SE_M_WATERFALL}PROF.ELM\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}POKéGEAR.$"
+	.string "Registered PROF.ELM\n"
+	.string "in the POKéGEAR.$"
 
 NewBarkTown_Lab_Text_ElmLetYourMonBattle:
-	.string "JOHTO'{SE_M_GRASSWHISTLE}wil{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}ma{SE_M_YAWN}be\n"
-	.string "differen{SE_M_SPIT_UP}fro{SE_M_MILK_DRINK}thos{SE_M_REVERSAL}i{SE_M_ATTRACT}KANTO.$"
+	.string "JOHTO's wild POKéMON may be\n"
+	.string "different from those in KANTO.$"
 
 NewBarkTown_Lab_Text_ElmDirections2::
-	.string "You{SE_M_SAND_TOMB}tea{SE_M_MILK_DRINK}i{SE_M_GRASSWHISTLE}welcom{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}the\n"
-	.string "healin{SE_M_SANDSTORM}machin{SE_M_REVERSAL}t{SE_M_ATTRACT2}m{SE_M_YAWN}right.\p"
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}CENTER{SE_M_SKETCH}i{SE_M_ATTRACT}the\n"
-	.string "town{SE_M_GRASSWHISTLE}alon{SE_M_SANDSTORM}th{SE_M_REVERSAL}way{SE_M_SUPERSONIC}too.\p"
-	.string "I'{SE_M_MILK_DRINK}countin{SE_M_SANDSTORM}o{SE_M_ATTRACT}you!$"
+	.string "Your team is welcome to use the\n"
+	.string "healing machine to my right.\p"
+	.string "There are POKéMON CENTERS in the\n"
+	.string "towns along the way, too.\p"
+	.string "I'm counting on you!$"
 
 NewBarkTown_Lab_Text_GotElmsNumber:
-	.string "{PLAYER} go{SE_M_SPIT_UP}ELM'{SE_M_GRASSWHISTLE}phone\n"
+	.string "{PLAYER} got ELM's phone\n"
 	.string "number.$"
 
 NewBarkTown_Lab_Text_ElmDescribesMrPokemon:
-	.string "MR{SE_M_PERISH_SONG}POKéMO{SE_M_PSYBEAM2}goe{SE_M_GRASSWHISTLE}everywher{SE_M_REVERSAL}and\n"
-	.string "find{SE_M_GRASSWHISTLE}rarities.\p"
-	.string "To{SE_M_ATTRACT2}ba{SE_M_WATERFALL}they'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}rar{SE_M_REVERSAL}and\n"
-	.string "no{SE_M_SPIT_UP}ver{SE_M_YAWN}useful…$"
+	.string "MR. POKéMON goes everywhere and\n"
+	.string "finds rarities.\p"
+	.string "Too bad they're just rare and\n"
+	.string "not very useful…$"
 
 NewBarkTown_Lab_Text_ElmPokeBall:
-	.string "I{SE_M_SPIT_UP}contain{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}caught\n"
-	.string "b{SE_M_YAWN}PROF.ELM.$"
+	.string "It contains a POKéMON caught\n"
+	.string "by PROF.ELM.$"
 
 NewBarkTown_Lab_Text_ElmAfterTheft1:
-	.string "ELM{SE_M_HEAT_WAVE}{PLAYER}{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}terrible…\p"
-	.string "Oh{SE_M_SUPERSONIC}yes{SE_M_SUPERSONIC}wha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}MR{SE_M_PERISH_SONG}POKéMON's\n"
-	.string "bi{SE_M_SANDSTORM}discovery?$"
+	.string "ELM: {PLAYER}, this is terrible…\p"
+	.string "Oh, yes, what was MR. POKéMON's\n"
+	.string "big discovery?$"
 
 NewBarkTown_Lab_Text_ElmAfterTheft2:
-	.string "{PLAYER} hande{SE_M_WATERFALL}th{SE_M_REVERSAL}MYSTER{SE_M_MOONLIGHT}EGG\n"
-	.string "t{SE_M_ATTRACT2}PROF.ELM.$"
+	.string "{PLAYER} handed the MYSTERY EGG\n"
+	.string "to PROF.ELM.$"
 
 NewBarkTown_Lab_Text_ElmAfterTheft3:
-	.string "ELM{SE_M_HEAT_WAVE}This?$"
+	.string "ELM: This?$"
 
 NewBarkTown_Lab_Text_ElmAfterTheft4::
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}EGG{SE_M_DRAGON_RAGE}Thi{SE_M_GRASSWHISTLE}wil{SE_M_BATON_PASS}help\n"
-	.string "wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}research.\p"
-	.string "Yo{SE_M_DIVE}me{SE_M_SPIT_UP}PROF.OA{SE_M_SNORE}a{SE_M_SPIT_UP}MR.POKéMON's?\n"
-	.string "I'{SE_M_MILK_DRINK}gla{SE_M_WATERFALL}h{SE_M_REVERSAL}coul{SE_M_WATERFALL}se{SE_M_REVERSAL}yo{SE_M_DIVE}again.\p"
-	.string "H{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}righ{SE_M_SPIT_UP}t{SE_M_ATTRACT2}recommen{SE_M_WATERFALL}you.\n"
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}bringin{SE_M_SANDSTORM}thi{SE_M_GRASSWHISTLE}back.\p"
-	.string "I{SE_M_ACID_ARMOR}you'{SE_M_WATERFALL}lik{SE_M_REVERSAL}anothe{SE_M_SAND_TOMB}challenge,\n"
-	.string "JOHT{SE_M_SOLAR_BEAM}ha{SE_M_GRASSWHISTLE}it{SE_M_GRASSWHISTLE}ow{SE_M_ATTRACT}POKéMO{SE_M_PSYBEAM2}GYMS.\p"
-	.string "Th{SE_M_REVERSAL}closes{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}VIOLE{SE_M_SWIFT}CITY.\p"
-	.string "Befor{SE_M_REVERSAL}yo{SE_M_DIVE}leave{SE_M_SUPERSONIC}visi{SE_M_SPIT_UP}th{SE_M_REVERSAL}woman\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}gues{SE_M_SPIT_UP}house{SE_M_PERISH_SONG}Sh{SE_M_REVERSAL}ca{SE_M_ATTRACT}help\l"
-	.string "yo{SE_M_DIVE}kee{SE_M_MORNING_SUN}i{SE_M_ATTRACT}touc{SE_M_TRI_ATTACK}whil{SE_M_REVERSAL}traveling.$"
+	.string "A POKéMON EGG! This will help\n"
+	.string "with my research.\p"
+	.string "You met PROF.OAK at MR.POKéMON's?\n"
+	.string "I'm glad he could see you again.\p"
+	.string "He was right to recommend you.\n"
+	.string "Thank you for bringing this back.\p"
+	.string "If you'd like another challenge,\n"
+	.string "JOHTO has its own POKéMON GYMS.\p"
+	.string "The closest is in VIOLET CITY.\p"
+	.string "Before you leave, visit the woman\n"
+	.string "in the guest house. She can help\l"
+	.string "you keep in touch while traveling.$"
 
 NewBarkTown_Lab_Text_ElmStudyingEgg:
-	.string "ELM{SE_M_HEAT_WAVE}Don'{SE_M_SPIT_UP}giv{SE_M_REVERSAL}up!\n"
-	.string "I'l{SE_M_BATON_PASS}cal{SE_M_BATON_PASS}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}lear{SE_M_ATTRACT}anything\l"
-	.string "abou{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}EGG!$"
+	.string "ELM: Don't give up!\n"
+	.string "I'll call if I learn anything\l"
+	.string "about that EGG!$"
 
 NewBarkTown_Lab_Text_ElmAideHasEgg:
-	.string "ELM{SE_M_HEAT_WAVE}{PLAYER}{SE_M_SING}Didn'{SE_M_SPIT_UP}yo{SE_M_DIVE}meet\n"
-	.string "m{SE_M_YAWN}assistant?\p"
-	.string "H{SE_M_REVERSAL}shoul{SE_M_WATERFALL}hav{SE_M_REVERSAL}me{SE_M_SPIT_UP}yo{SE_M_DIVE}with\n"
-	.string "th{SE_M_REVERSAL}EG{SE_M_SWAGGER}a{SE_M_SPIT_UP}VIOLE{SE_M_SWIFT}CITY's\p"
-	.string "POKéMO{SE_M_PSYBEAM2}CENTER.\p"
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}jus{SE_M_SPIT_UP}misse{SE_M_WATERFALL}him.\n"
-	.string "Tr{SE_M_YAWN}t{SE_M_ATTRACT2}catc{SE_M_TRI_ATTACK}hi{SE_M_MILK_DRINK}there.$"
+	.string "ELM: {PLAYER}? Didn't you meet\n"
+	.string "my assistant?\p"
+	.string "He should have met you with\n"
+	.string "the EGG at VIOLET CITY's\p"
+	.string "POKéMON CENTER.\p"
+	.string "You must have just missed him.\n"
+	.string "Try to catch him there.$"
 
 NewBarkTown_Lab_Text_ElmWaitingEggHatch:
-	.string "ELM{SE_M_HEAT_WAVE}Hey{SE_M_SUPERSONIC}ha{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}EG{SE_M_SWAGGER}changed\n"
+	.string "ELM: Hey, has that EGG changed\n"
 	.string "any?$"
 
 NewBarkTown_Lab_Text_ElmThoughtEggHatched:
-	.string "{PLAYER}{SE_M_SING}{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}th{SE_M_REVERSAL}EGG\n"
+	.string "{PLAYER}? I thought the EGG\n"
 	.string "hatched.\p"
-	.string "Wher{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}POKéMON?$"
+	.string "Where is the POKéMON?$"
 
 NewBarkTown_Lab_Text_ShowTogepi1:
-	.string "ELM{SE_M_HEAT_WAVE}{PLAYER}{SE_M_SUPERSONIC}yo{SE_M_DIVE}loo{SE_M_ENCORE2}great!$"
+	.string "ELM: {PLAYER}, you look great!$"
 
 NewBarkTown_Lab_Text_ShowTogepi2:
-	.string "What{SE_M_SING}Tha{SE_M_SPIT_UP}POKéMON!?!$"
+	.string "What? That POKéMON!?!$"
 
 NewBarkTown_Lab_Text_ShowTogepi3:
-	.string "Th{SE_M_REVERSAL}EG{SE_M_SWAGGER}hatche{SE_M_WATERFALL}int{SE_M_ATTRACT2}TOGEPI!\p"
-	.string "Watchin{SE_M_SANDSTORM}i{SE_M_SPIT_UP}gro{SE_M_TWISTER}wil{SE_M_BATON_PASS}hel{SE_M_MORNING_SUN}my\n"
-	.string "researc{SE_M_TRI_ATTACK}int{SE_M_ATTRACT2}POKéMO{SE_M_PSYBEAM2}EGGS.\p"
-	.string "There'{SE_M_GRASSWHISTLE}stil{SE_M_BATON_PASS}s{SE_M_ATTRACT2}muc{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}learn\n"
-	.string "abou{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}species!$"
+	.string "The EGG hatched into TOGEPI!\p"
+	.string "Watching it grow will help my\n"
+	.string "research into POKéMON EGGS.\p"
+	.string "There's still so much to learn\n"
+	.string "about this species!$"
 
 NewBarkTown_Lab_Text_ElmGiveEverstone1:
-	.string "Thanks{SE_M_SUPERSONIC}{PLAYER}{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}helping\n"
-	.string "unrave{SE_M_BATON_PASS}POKéMO{SE_M_PSYBEAM2}mysterie{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}us!\p"
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}a\n"
-	.string "toke{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}ou{SE_M_SAND_TOMB}appreciation.$"
+	.string "Thanks, {PLAYER}! You're helping\n"
+	.string "unravel POKéMON mysteries for us!\p"
+	.string "I want you to have this as a\n"
+	.string "token of our appreciation.$"
 
 NewBarkTown_Lab_Text_ElmGiveEverstone2:
-	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}kno{SE_M_TWISTER}thi{SE_M_GRASSWHISTLE}fro{SE_M_MILK_DRINK}KANTO:\n"
-	.string "{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}holdin{SE_M_SANDSTORM}a{SE_M_ATTRACT}EVERSTONE\l"
-	.string "won'{SE_M_SPIT_UP}evolve.\p"
-	.string "I{SE_M_SPIT_UP}ca{SE_M_ATTRACT}hel{SE_M_MORNING_SUN}whil{SE_M_REVERSAL}w{SE_M_REVERSAL}stud{SE_M_YAWN}how\n"
-	.string "POKéMO{SE_M_PSYBEAM2}grow.$"
+	.string "You may know this from KANTO:\n"
+	.string "a POKéMON holding an EVERSTONE\l"
+	.string "won't evolve.\p"
+	.string "It can help while we study how\n"
+	.string "POKéMON grow.$"
 
 NewBarkTown_Lab_Text_ElmCallYou:
-	.string "ELM{SE_M_HEAT_WAVE}{PLAYER}{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}cal{SE_M_BATON_PASS}yo{SE_M_DIVE}if\n"
-	.string "anythin{SE_M_SANDSTORM}come{SE_M_GRASSWHISTLE}up.$"
+	.string "ELM: {PLAYER}, I'll call you if\n"
+	.string "anything comes up.$"
 
 NewBarkTown_Lab_Text_AideAfterTheft:
-	.string "…sigh{SE_M_DIZZY_PUNCH}Tha{SE_M_SPIT_UP}stole{SE_M_ATTRACT}POKéMON.\p"
-	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}ho{SE_M_TWISTER}it'{SE_M_GRASSWHISTLE}doing.\p"
-	.string "The{SE_M_YAWN}sa{SE_M_YAWN}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}raise{SE_M_WATERFALL}b{SE_M_YAWN}a\n"
-	.string "ba{SE_M_WATERFALL}perso{SE_M_ATTRACT}turn{SE_M_GRASSWHISTLE}ba{SE_M_WATERFALL}itself.$"
+	.string "…sigh… That stolen POKéMON.\p"
+	.string "I wonder how it's doing.\p"
+	.string "They say a POKéMON raised by a\n"
+	.string "bad person turns bad itself.$"
 
 NewBarkTown_Lab_Text_ElmGiveMasterBall1:
-	.string "ELM{SE_M_HEAT_WAVE}Hi{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Thank{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}you{SE_M_SUPERSONIC}m{SE_M_YAWN}researc{SE_M_TRI_ATTACK}is\n"
-	.string "goin{SE_M_SANDSTORM}great!\p"
-	.string "Tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}toke{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}my\n"
+	.string "ELM: Hi, {PLAYER}!\p"
+	.string "Thanks to you, my research is\n"
+	.string "going great!\p"
+	.string "Take this as a token of my\n"
 	.string "appreciation.$"
 
 NewBarkTown_Lab_Text_ElmGiveMasterBall2:
-	.string "Th{SE_M_REVERSAL}MASTE{SE_M_MINIMIZE}BAL{SE_M_BRICK_BREAK}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}best!\p"
-	.string "It'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}ultimat{SE_M_REVERSAL}BALL{SE_M_DRAGON_RAGE}It'll\n"
-	.string "catc{SE_M_TRI_ATTACK}an{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}withou{SE_M_SPIT_UP}fail.\p"
-	.string "It'{SE_M_GRASSWHISTLE}give{SE_M_ATTRACT}onl{SE_M_YAWN}t{SE_M_ATTRACT2}recognized\n"
-	.string "POKéMO{SE_M_PSYBEAM2}researchers.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}yo{SE_M_DIVE}ca{SE_M_ATTRACT}mak{SE_M_REVERSAL}muc{SE_M_TRI_ATTACK}better\n"
-	.string "us{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}i{SE_M_SPIT_UP}tha{SE_M_ATTRACT}{SE_M_HEAL_BELL}can{SE_M_SUPERSONIC}{PLAYER}!$"
+	.string "The MASTER BALL is the best!\p"
+	.string "It's the ultimate BALL! It'll\n"
+	.string "catch any POKéMON without fail.\p"
+	.string "It's given only to recognized\n"
+	.string "POKéMON researchers.\p"
+	.string "I think you can make much better\n"
+	.string "use of it than I can, {PLAYER}!$"
 
 NewBarkTown_Lab_Text_KimonoGirls:
-	.string "B{SE_M_YAWN}th{SE_M_REVERSAL}way...\n"
-	.string "{SE_M_BONEMERANG}grou{SE_M_MORNING_SUN}o{SE_M_ACID_ARMOR}beautifu{SE_M_BATON_PASS}KIMONO\l"
-	.string "GIRL{SE_M_SKETCH}wer{SE_M_REVERSAL}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you.\p"
-	.string "The{SE_M_YAWN}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}the{SE_M_YAWN}are\n"
-	.string "waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}yo{SE_M_DIVE}a{SE_M_SPIT_UP}the\l"
-	.string "ECRUTEA{SE_M_SNORE}DANC{SE_M_SWORDS_DANCE}THEATER.\p"
-	.string "{SE_M_HEAL_BELL}kno{SE_M_TWISTER}you'v{SE_M_REVERSAL}gon{SE_M_REVERSAL}throug{SE_M_TRI_ATTACK}many\n"
-	.string "thing{SE_M_GRASSWHISTLE}sinc{SE_M_REVERSAL}tha{SE_M_SPIT_UP}EG{SE_M_SWAGGER}go{SE_M_SPIT_UP}you\l"
-	.string "involve{SE_M_WATERFALL}i{SE_M_ATTRACT}al{SE_M_BATON_PASS}this...\p"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}you'l{SE_M_BATON_PASS}carr{SE_M_YAWN}throug{SE_M_TRI_ATTACK}it.$"
+	.string "By the way...\n"
+	.string "A group of beautiful KIMONO\l"
+	.string "GIRLS were looking for you.\p"
+	.string "They told me they are\n"
+	.string "waiting for you at the\l"
+	.string "ECRUTEAK DANCE THEATER.\p"
+	.string "I know you've gone through many\n"
+	.string "things since that EGG got you\l"
+	.string "involved in all this...\p"
+	.string "I hope you'll carry through it.$"
 
 NewBarkTown_Lab_Text_KimonoWaiting:
-	.string "PROF.ELM{SE_M_HEAT_WAVE}Th{SE_M_REVERSAL}KIMONO\n"
-	.string "GIRL{SE_M_SKETCH}ar{SE_M_REVERSAL}waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}yo{SE_M_DIVE}at\l"
-	.string "th{SE_M_REVERSAL}ECRUTEA{SE_M_SNORE}DANC{SE_M_SWORDS_DANCE}THEATER.$"
+	.string "PROF.ELM: The KIMONO\n"
+	.string "GIRLS are waiting for you at\l"
+	.string "the ECRUTEAK DANCE THEATER.$"
 
 NewBarkTown_Lab_Text_League:
-	.string "PROF.ELM{SE_M_HEAT_WAVE}Wel{SE_M_BATON_PASS}done{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Yo{SE_M_DIVE}cam{SE_M_REVERSAL}her{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}KANTO's\n"
-	.string "CHAMPIO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}helpe{SE_M_WATERFALL}u{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}much.\p"
-	.string "No{SE_M_TWISTER}JOHTO'{SE_M_GRASSWHISTLE}LEAGU{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}waiting.\n"
-	.string "Tak{SE_M_REVERSAL}you{SE_M_SAND_TOMB}tea{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}INDIG{SE_M_SOLAR_BEAM}PLATEAU!\p"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}ho{SE_M_TWISTER}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}there?\n"
-	.string "Follo{SE_M_TWISTER}ROUT{SE_M_SWORDS_DANCE}2{SE_M_MIST}t{SE_M_ATTRACT2}ROUT{SE_M_SWORDS_DANCE}26.\p"
-	.string "Onc{SE_M_REVERSAL}there{SE_M_SUPERSONIC}g{SE_M_ATTRACT2}straigh{SE_M_SPIT_UP}north!$"
+	.string "PROF.ELM: Well done, {PLAYER}!\p"
+	.string "You came here as KANTO's\n"
+	.string "CHAMPION and helped us so much.\p"
+	.string "Now JOHTO's LEAGUE is waiting.\n"
+	.string "Take your team to INDIGO PLATEAU!\p"
+	.string "Do you know how to get there?\n"
+	.string "Follow ROUTE 27 to ROUTE 26.\p"
+	.string "Once there, go straight north!$"
 
 NewBarkTown_Lab_Text_ElmGiveTicket1::
-	.string "ELM{SE_M_HEAT_WAVE}{PLAYER}{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}something\n"
-	.string "fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}travels.\p"
-	.string "It'{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}S.S.TICKE{SE_M_SWIFT}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}ship\n"
-	.string "a{SE_M_SPIT_UP}OLIVIN{SE_M_SWORDS_DANCE}CITY.$"
+	.string "ELM: {PLAYER}! I have something\n"
+	.string "for your travels.\p"
+	.string "It's an S.S.TICKET for the ship\n"
+	.string "at OLIVINE CITY.$"
 
 NewBarkTown_Lab_Text_ElmGiveTicket2:
-	.string "Th{SE_M_REVERSAL}shi{SE_M_MORNING_SUN}depart{SE_M_GRASSWHISTLE}fro{SE_M_MILK_DRINK}OLIVINE\n"
+	.string "The ship departs from OLIVINE\n"
 	.string "CITY.\p"
-	.string "Bu{SE_M_SPIT_UP}yo{SE_M_DIVE}kne{SE_M_TWISTER}tha{SE_M_SPIT_UP}already,\n"
+	.string "But you knew that already,\n"
 	.string "{PLAYER}.\p"
-	.string "Afte{SE_M_SAND_TOMB}all{SE_M_SUPERSONIC}you'v{SE_M_REVERSAL}travele{SE_M_WATERFALL}all\n"
-	.string "ove{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}POKéMON.\p"
-	.string "Giv{SE_M_REVERSAL}m{SE_M_YAWN}regard{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}PROF.OA{SE_M_SNORE}in\n"
+	.string "After all, you've traveled all\n"
+	.string "over with your POKéMON.\p"
+	.string "Give my regards to PROF.OAK in\n"
 	.string "KANTO!$"
 
 NewBarkTown_Lab_Text_LabMonEgg:
-	.string "It'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}EG{SE_M_SWAGGER}being\n"
-	.string "studie{SE_M_WATERFALL}b{SE_M_YAWN}PROF.ELM.$"
+	.string "It's the POKéMON EGG being\n"
+	.string "studied by PROF.ELM.$"
 
 NewBarkTown_Lab_Text_AideGivePotion:
-	.string "{PLAYER}{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}have\n"
-	.string "thi{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}errand.$"
+	.string "{PLAYER}, I want you to have\n"
+	.string "this for your errand.$"
 
 NewBarkTown_Lab_Text_AideAlwaysBusy:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}onl{SE_M_YAWN}thre{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}us{SE_M_SUPERSONIC}so\n"
-	.string "we'r{SE_M_REVERSAL}alway{SE_M_GRASSWHISTLE}busy.$"
+	.string "There are only three of us, so\n"
+	.string "we're always busy.$"
 
 NewBarkTown_Lab_Text_AideSave:
-	.string "Travelin{SE_M_SANDSTORM}fa{SE_M_SAND_TOMB}fro{SE_M_MILK_DRINK}KANTO?\n"
-	.string "Remembe{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}sav{SE_M_REVERSAL}you{SE_M_SAND_TOMB}progress.$"
+	.string "Traveling far from KANTO?\n"
+	.string "Remember to save your progress.$"
 
 NewBarkTown_Lab_Text_AideTheftTestimony:
-	.string "Ther{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}lou{SE_M_WATERFALL}noise\n"
+	.string "There was a loud noise\n"
 	.string "outside…\p"
-	.string "Whe{SE_M_ATTRACT}w{SE_M_REVERSAL}wen{SE_M_SPIT_UP}t{SE_M_ATTRACT2}look,\n"
-	.string "someon{SE_M_REVERSAL}stol{SE_M_REVERSAL}{SE_M_CHARGE}POKéMON.\p"
-	.string "It'{SE_M_GRASSWHISTLE}unbelievabl{SE_M_REVERSAL}tha{SE_M_SPIT_UP}anyone\n"
-	.string "woul{SE_M_WATERFALL}d{SE_M_ATTRACT2}that!\p"
-	.string "…sigh{SE_M_DIZZY_PUNCH}Tha{SE_M_SPIT_UP}stole{SE_M_ATTRACT}POKéMON.\p"
-	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}ho{SE_M_TWISTER}it'{SE_M_GRASSWHISTLE}doing.\p"
-	.string "The{SE_M_YAWN}sa{SE_M_YAWN}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}raise{SE_M_WATERFALL}b{SE_M_YAWN}a\n"
-	.string "ba{SE_M_WATERFALL}perso{SE_M_ATTRACT}turn{SE_M_GRASSWHISTLE}ba{SE_M_WATERFALL}itself.$"
+	.string "When we went to look,\n"
+	.string "someone stole a POKéMON.\p"
+	.string "It's unbelievable that anyone\n"
+	.string "would do that!\p"
+	.string "…sigh… That stolen POKéMON.\p"
+	.string "I wonder how it's doing.\p"
+	.string "They say a POKéMON raised by a\n"
+	.string "bad person turns bad itself.$"
 
 NewBarkTown_Lab_Text_AideGiveBalls:
-	.string "Fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}JOHT{SE_M_SOLAR_BEAM}fieldwork,\n"
-	.string "{PLAYER}{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}thes{SE_M_REVERSAL}POK{SE_U}BALLS!$"
+	.string "For your JOHTO fieldwork,\n"
+	.string "{PLAYER}. Take these POKé BALLS!$"
 
 NewBarkTown_Lab_Text_AideExplainBalls:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}her{SE_M_REVERSAL}that\n"
-	.string "yo{SE_M_DIVE}won'{SE_M_SPIT_UP}fin{SE_M_WATERFALL}bac{SE_M_ENCORE2}i{SE_M_ATTRACT}KANTO.\p"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}thes{SE_M_REVERSAL}hel{SE_M_MORNING_SUN}yo{SE_M_DIVE}ad{SE_M_WATERFALL}more\n"
-	.string "entrie{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}POKéDEX!$"
+	.string "There are POKéMON here that\n"
+	.string "you won't find back in KANTO.\p"
+	.string "I hope these help you add more\n"
+	.string "entries to your POKéDEX!$"
 
 NewBarkTown_Lab_Text_Officer1:
-	.string "PROF.EL{SE_M_GIGA_DRAIN}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}yo{SE_M_DIVE}came\n"
-	.string "fro{SE_M_MILK_DRINK}KANTO.\p"
-	.string "{SE_M_BONEMERANG}red-haire{SE_M_WATERFALL}bo{SE_M_YAWN}stol{SE_M_REVERSAL}one\n"
-	.string "o{SE_M_ACID_ARMOR}hi{SE_M_GRASSWHISTLE}lab'{SE_M_GRASSWHISTLE}POKéMON.\p"
-	.string "Yo{SE_M_DIVE}battle{SE_M_WATERFALL}tha{SE_M_SPIT_UP}bo{SE_M_YAWN}near\n"
+	.string "PROF.ELM told me you came\n"
+	.string "from KANTO.\p"
+	.string "A red-haired boy stole one\n"
+	.string "of his lab's POKéMON.\p"
+	.string "You battled that boy near\n"
 	.string "CHERRYGROVE?\p"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}fin{SE_M_WATERFALL}ou{SE_M_SPIT_UP}hi{SE_M_GRASSWHISTLE}name?$"
+	.string "Did you find out his name?$"
 
 NewBarkTown_Lab_Text_Officer2_1:
-	.string "OK{SE_M_DRAGON_RAGE}S{SE_M_ATTRACT2}{RIVAL} wa{SE_M_GRASSWHISTLE}hi{SE_M_GRASSWHISTLE}name?$"
+	.string "OK! So {RIVAL} was his name?$"
 
 NewBarkTown_Lab_Text_Officer2:
-	.string "Thank{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}helpin{SE_M_SANDSTORM}my\n"
+	.string "Thanks for helping my\n"
 	.string "investigation!$"
 
 NewBarkTown_Lab_Text_OfficerNo:
-	.string "Surel{SE_M_YAWN}yo{SE_M_DIVE}go{SE_M_SPIT_UP}hi{SE_M_GRASSWHISTLE}name?!$"
+	.string "Surely you got his name?!$"
 
 NewBarkTown_Lab_Text_Elm_CallMe:
-	.string "Ah{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "How'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}POKéDE{SE_M_LOCK_ON}comin{SE_M_SANDSTORM}along?\n"
-	.string "I'{SE_M_MILK_DRINK}bus{SE_M_YAWN}now{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}cal{SE_M_BATON_PASS}m{SE_M_REVERSAL}sometime\l"
-	.string "an{SE_M_WATERFALL}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}chec{SE_M_ENCORE2}you{SE_M_SAND_TOMB}progress!$"
+	.string "Ah, {PLAYER}!\p"
+	.string "How's your POKéDEX coming along?\n"
+	.string "I'm busy now, but call me sometime\l"
+	.string "and I can check your progress!$"
 

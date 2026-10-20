@@ -36,24 +36,24 @@ IndigoPlateau_EventScript_ShigyNinja::
 	end
 
 IndigoPlateau_Text_ShigyNinja:
-	.string "Congrat{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}makin{SE_M_SANDSTORM}i{SE_M_SPIT_UP}here!\p"
-	.string "I'v{SE_M_REVERSAL}see{SE_M_ATTRACT}ton{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}trainer{SE_M_GRASSWHISTLE}come\n"
-	.string "throug{SE_M_TRI_ATTACK}her{SE_M_REVERSAL}ove{SE_M_SAND_TOMB}th{SE_M_REVERSAL}years{SE_M_SUPERSONIC}and\l"
-	.string "al{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}the{SE_M_MILK_DRINK}ar{SE_M_REVERSAL}wonderfull{SE_M_YAWN}unique.\p"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}b{SE_M_REVERSAL}prou{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}yourself\n"
-	.string "fo{SE_M_SAND_TOMB}gettin{SE_M_SANDSTORM}thi{SE_M_GRASSWHISTLE}far!\p"
-	.string "Now{SE_M_SUPERSONIC}g{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}'em!$"
+	.string "Congrats on making it here!\p"
+	.string "I've seen tons of trainers come\n"
+	.string "through here over the years, and\l"
+	.string "all of them are wonderfully unique.\p"
+	.string "You should be proud of yourself\n"
+	.string "for getting this far!\p"
+	.string "Now, go get 'em!$"
 
 IndigoPlateau_Text_Blackbelt:
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}LEAGU{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}taking\n"
-	.string "ne{SE_M_TWISTER}challenger{SE_M_GRASSWHISTLE}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}moment.\p"
-	.string "Pleas{SE_M_REVERSAL}chec{SE_M_ENCORE2}bac{SE_M_ENCORE2}later.$"
+	.string "The POKéMON LEAGUE is not taking\n"
+	.string "new challengers at the moment.\p"
+	.string "Please check back later.$"
 
 IndigoPlateau_Text_CooltrainerM:
-	.string "A{SE_M_SPIT_UP}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}LEAGUE{SE_M_SUPERSONIC}you'l{SE_M_BATON_PASS}get\n"
-	.string "teste{SE_M_WATERFALL}b{SE_M_YAWN}th{SE_M_REVERSAL}ELIT{SE_M_SWORDS_DANCE}FOUR.\p"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}bea{SE_M_SPIT_UP}the{SE_M_MILK_DRINK}all{SE_M_PERISH_SONG}I{SE_M_ACID_ARMOR}you\n"
-	.string "lose{SE_M_SUPERSONIC}yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}star{SE_M_SPIT_UP}al{SE_M_BATON_PASS}over!$"
+	.string "At the POKéMON LEAGUE, you'll get\n"
+	.string "tested by the ELITE FOUR.\p"
+	.string "You have to beat them all. If you\n"
+	.string "lose, you have to start all over!$"
 
 IndigoPlateau_EventScript_Silver::
 	lock
@@ -87,24 +87,24 @@ IndigoPlateau_Silver_Battle_Chikorita::
 	return
 
 IndigoPlateau_Text_RivalEntrance1:
-	.string "Hol{SE_M_WATERFALL}it.\p"
-	.string "You'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}th{SE_M_REVERSAL}POKéMON\n"
-	.string "LEAGU{SE_M_SWORDS_DANCE}challeng{SE_M_REVERSAL}now?\p"
-	.string "That'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}happen.\p"
-	.string "M{SE_M_YAWN}super-well-traine{SE_M_WATERFALL}POKéMON\n"
-	.string "ar{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}poun{SE_M_WATERFALL}you.\p"
+	.string "Hold it.\p"
+	.string "You're going to take the POKéMON\n"
+	.string "LEAGUE challenge now?\p"
+	.string "That's not going to happen.\p"
+	.string "My super-well-trained POKéMON\n"
+	.string "are going to pound you.\p"
 	.string "{PLAYER}!\n"
-	.string "{SE_M_HEAL_BELL}challeng{SE_M_REVERSAL}you!$"
+	.string "I challenge you!$"
 
 IndigoPlateau_Text_RivalWin:
 	.string "…\p"
-	.string "OK--{SE_M_HEAL_BELL}lost…$"
+	.string "OK--I lost…$"
 
 IndigoPlateau_Text_RivalAfter:
-	.string "…Darn{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}stil{SE_M_BATON_PASS}can'{SE_M_SPIT_UP}win…\p"
-	.string "I{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}thin{SE_M_ENCORE2}mor{SE_M_REVERSAL}abou{SE_M_SPIT_UP}my\n"
+	.string "…Darn… I still can't win…\p"
+	.string "I… I have to think more about my\n"
 	.string "POKéMON…\p"
-	.string "Humph{SE_M_DRAGON_RAGE}Tr{SE_M_YAWN}no{SE_M_SPIT_UP}t{SE_M_ATTRACT2}lose!$"
+	.string "Humph! Try not to lose!$"
 
 IndigoPlateau_EventScript_Psychic::
 	lock
@@ -147,20 +147,20 @@ IndigoPlateau_EventScript_Abra::
 	end
 
 IndigoPlateau_Text_TeleportGuy1:
-	.string "Ah{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}challengin{SE_M_SANDSTORM}th{SE_M_REVERSAL}ELITE\n"
-	.string "FOUR{SE_M_SING}Ar{SE_M_REVERSAL}yo{SE_M_DIVE}sur{SE_M_REVERSAL}you'r{SE_M_REVERSAL}ready?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}som{SE_M_REVERSAL}more,\n"
-	.string "m{SE_M_YAWN}ABR{SE_M_BONEMERANG}ca{SE_M_ATTRACT}hel{SE_M_MORNING_SUN}you.\p"
-	.string "I{SE_M_SPIT_UP}ca{SE_M_ATTRACT}TELEPOR{SE_M_SWIFT}yo{SE_M_DIVE}home.\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}hom{SE_M_REVERSAL}now?$"
+	.string "Ah! You're challenging the ELITE\n"
+	.string "FOUR? Are you sure you're ready?\p"
+	.string "If you need to train some more,\n"
+	.string "my ABRA can help you.\p"
+	.string "It can TELEPORT you home.\p"
+	.string "Would you like to go home now?$"
 
 IndigoPlateau_Text_TeleportGuyYes:
-	.string "OK{SE_M_SUPERSONIC}OK{SE_M_PERISH_SONG}Pictur{SE_M_REVERSAL}you{SE_M_SAND_TOMB}hous{SE_M_REVERSAL}i{SE_M_ATTRACT}your\n"
+	.string "OK, OK. Picture your house in your\n"
 	.string "mind…$"
 
 IndigoPlateau_Text_TeleportGuyNo:
-	.string "OK{SE_M_SUPERSONIC}OK{SE_M_PERISH_SONG}Th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}luc{SE_M_ENCORE2}t{SE_M_ATTRACT2}you!$"
+	.string "OK, OK. The best of luck to you!$"
 
 IndigoPlateau_Text_Abra:
-	.string "ABRA{SE_M_HEAT_WAVE}Aabra…$"
+	.string "ABRA: Aabra…$"
 

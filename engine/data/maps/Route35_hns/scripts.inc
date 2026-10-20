@@ -111,136 +111,136 @@ Route35_EventScript_Item_ParalyzeHeal::
 	end
 
 Route35_Text_CamperIvanSeen:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}gettin{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}dat{SE_M_CHARGE}off\n"
-	.string "m{SE_M_YAWN}radio{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}I'{SE_M_MILK_DRINK}good.$"
+	.string "I've been getting POKéMON data off\n"
+	.string "my radio. I think I'm good.$"
 
 Route35_Text_CamperIvanBeaten:
-	.string "{SE_M_HEAL_BELL}give!$"
+	.string "I give!$"
 
 Route35_Text_CamperIvanAfter:
-	.string "Musi{SE_M_HYPER_BEAM}o{SE_M_ATTRACT}th{SE_M_REVERSAL}radi{SE_M_ATTRACT2}change{SE_M_GRASSWHISTLE}the\n"
-	.string "mood{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}wil{SE_M_WATERFALL}POKéMON.$"
+	.string "Music on the radio changes the\n"
+	.string "moods of wild POKéMON.$"
 
 Route35_Text_CamperElliotSeen:
-	.string "I'{SE_M_MILK_DRINK}gonn{SE_M_CHARGE}sho{SE_M_TWISTER}m{SE_M_YAWN}girlfrien{SE_M_WATERFALL}I'm\n"
-	.string "ho{SE_M_SPIT_UP}stuff!$"
+	.string "I'm gonna show my girlfriend I'm\n"
+	.string "hot stuff!$"
 
 Route35_Text_CamperElliotBeaten:
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}yo{SE_M_DIVE}woul{SE_M_WATERFALL}hav{SE_M_REVERSAL}los{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}me…$"
+	.string "I wish you would have lost for me…$"
 
 Route35_Text_CamperElliotAfter:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}humiliate{SE_M_WATERFALL}i{SE_M_ATTRACT}fron{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}my\n"
+	.string "I was humiliated in front of my\n"
 	.string "girlfriend…$"
 
 Route35_Text_PicnickerBrookeSeen:
-	.string "M{SE_M_YAWN}boyfriend'{SE_M_GRASSWHISTLE}weak{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}rely\n"
-	.string "o{SE_M_ATTRACT}him.$"
+	.string "My boyfriend's weak, so I can't rely\n"
+	.string "on him.$"
 
 Route35_Text_PicnickerBrookeBeaten:
-	.string "Oh{SE_M_SUPERSONIC}my{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}s{SE_M_ATTRACT2}strong!$"
+	.string "Oh, my! You're so strong!$"
 
 Route35_Text_PicnickerBrookeAfter:
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}coun{SE_M_SPIT_UP}o{SE_M_ATTRACT}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}mor{SE_M_REVERSAL}than\n"
-	.string "m{SE_M_YAWN}boyfriend.$"
+	.string "I can count on my POKéMON more than\n"
+	.string "my boyfriend.$"
 
 Route35_Text_PicnickerKimSeen:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}GYM{SE_M_SING}M{SE_M_REVERSAL}too!$"
+	.string "Are you going to the GYM? Me too!$"
 
 Route35_Text_PicnickerKimBeaten:
-	.string "Oh{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}win…$"
+	.string "Oh. I couldn't win…$"
 
 Route35_Text_PicnickerKimAfter:
-	.string "Th{SE_M_REVERSAL}GY{SE_M_GIGA_DRAIN}BADGE{SE_M_SKETCH}ar{SE_M_REVERSAL}pretty{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}collect\n"
+	.string "The GYM BADGES are pretty. I collect\n"
 	.string "them.$"
 
 Route35_Text_BirdKeeperBryanSeen:
-	.string "Wha{SE_M_SPIT_UP}kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}BALL{SE_M_SKETCH}d{SE_M_ATTRACT2}yo{SE_M_DIVE}use?$"
+	.string "What kinds of BALLS do you use?$"
 
 Route35_Text_BirdKeeperBryanBeaten:
-	.string "Yikes{SE_M_DRAGON_RAGE}No{SE_M_SPIT_UP}fas{SE_M_SPIT_UP}enough!$"
+	.string "Yikes! Not fast enough!$"
 
 Route35_Text_BirdKeeperBryanAfter:
-	.string "Som{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}fle{SE_M_REVERSAL}righ{SE_M_SPIT_UP}away.\p"
-	.string "Tr{SE_M_YAWN}catchin{SE_M_SANDSTORM}the{SE_M_MILK_DRINK}wit{SE_M_TRI_ATTACK}KURT's\n"
-	.string "FAS{SE_M_SWIFT}BALL.\p"
-	.string "Wheneve{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}fin{SE_M_WATERFALL}{SE_M_CHARGE}ASPEA{SE_M_MINIMIZE}BERRY{SE_M_SUPERSONIC}I\n"
-	.string "tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}KURT.\p"
-	.string "H{SE_M_REVERSAL}turn{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}int{SE_M_ATTRACT2}{SE_M_CHARGE}custo{SE_M_MILK_DRINK}BALL.$"
+	.string "Some POKéMON flee right away.\p"
+	.string "Try catching them with KURT's\n"
+	.string "FAST BALL.\p"
+	.string "Whenever I find a ASPEAR BERRY, I\n"
+	.string "take it to KURT.\p"
+	.string "He turns it into a custom BALL.$"
 
 Route35_Text_JugglerIrwinSeen:
-	.string "Behol{SE_M_WATERFALL}m{SE_M_YAWN}gracefu{SE_M_BATON_PASS}BAL{SE_M_BRICK_BREAK}dexterity!$"
+	.string "Behold my graceful BALL dexterity!$"
 
 Route35_Text_JugglerIrwinBeaten:
-	.string "Whew{SE_M_DRAGON_RAGE}Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}jolt!$"
+	.string "Whew! That was a jolt!$"
 
 Route35_Text_JugglerIrwinAfter:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}dazzl{SE_M_REVERSAL}yo{SE_M_DIVE}wit{SE_M_TRI_ATTACK}my\n"
-	.string "priz{SE_M_REVERSAL}POKéMON.\p"
-	.string "Bu{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}prowes{SE_M_GRASSWHISTLE}electrifie{SE_M_WATERFALL}me!$"
+	.string "I was going to dazzle you with my\n"
+	.string "prize POKéMON.\p"
+	.string "But your prowess electrified me!$"
 
 Route35_Text_BugCatcherArnieSeen:
-	.string "I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}anywher{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}bu{SE_M_SANDSTORM}POKéMON\n"
-	.string "appea{SE_M_SAND_TOMB}there.$"
+	.string "I'll go anywhere if bug POKéMON\n"
+	.string "appear there.$"
 
 Route35_Text_BugCatcherArnieBeaten:
-	.string "Huh{SE_M_SING}{SE_M_HEAL_BELL}shouldn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}los{SE_M_SPIT_UP}that…$"
+	.string "Huh? I shouldn't have lost that…$"
 
 Route35_Text_BugCatcherArnieAfter:
-	.string "M{SE_M_YAWN}VENONA{SE_M_SWIFT}wo{SE_M_ATTRACT}m{SE_M_REVERSAL}th{SE_M_REVERSAL}Bug-Catching\n"
-	.string "Contes{SE_M_SPIT_UP}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}NATIONA{SE_M_BRICK_BREAK}PARK.$"
+	.string "My VENONAT won me the Bug-Catching\n"
+	.string "Contest at the NATIONAL PARK.$"
 
 Route35_Text_IrwinRegister:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}dazzl{SE_M_REVERSAL}yo{SE_M_DIVE}wit{SE_M_TRI_ATTACK}my\n"
-	.string "priz{SE_M_REVERSAL}POKéMON.\p"
-	.string "Bu{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}prowes{SE_M_GRASSWHISTLE}electrifie{SE_M_WATERFALL}me!$"
+	.string "I was going to dazzle you with my\n"
+	.string "prize POKéMON.\p"
+	.string "But your prowess electrified me!$"
 
 Route35_Text_ArnieRegister:
-	.string "M{SE_M_YAWN}VENONA{SE_M_SWIFT}wo{SE_M_ATTRACT}m{SE_M_REVERSAL}th{SE_M_REVERSAL}Bug-Catching\n"
-	.string "Contes{SE_M_SPIT_UP}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}NATIONA{SE_M_BRICK_BREAK}PARK.$"
+	.string "My VENONAT won me the Bug-Catching\n"
+	.string "Contest at the NATIONAL PARK.$"
 
 Route35_Text_ArnieRematchIntro:
-	.string "I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}anywher{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}bu{SE_M_SANDSTORM}POKéMON\n"
-	.string "appea{SE_M_SAND_TOMB}there.$"
+	.string "I'll go anywhere if bug POKéMON\n"
+	.string "appear there.$"
 
 Route35_Text_ArnieRematchDefeat:
-	.string "Huh{SE_M_SING}{SE_M_HEAL_BELL}shouldn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}los{SE_M_SPIT_UP}that…$"
+	.string "Huh? I shouldn't have lost that…$"
 
 Route35_Text_ArniePostRematch:
-	.string "M{SE_M_YAWN}VENONA{SE_M_SWIFT}wo{SE_M_ATTRACT}m{SE_M_REVERSAL}th{SE_M_REVERSAL}Bug-Catching\n"
-	.string "Contes{SE_M_SPIT_UP}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}NATIONA{SE_M_BRICK_BREAK}PARK.$"
+	.string "My VENONAT won me the Bug-Catching\n"
+	.string "Contest at the NATIONAL PARK.$"
 
 Route35_Text_BugCatcherArnieYanma:
-	.string "Wow{SE_M_DIZZY_PUNCH}Loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}al{SE_M_BATON_PASS}thos{SE_M_REVERSAL}YANMA!\p"
-	.string "I'{SE_M_MILK_DRINK}s{SE_M_ATTRACT2}blow{SE_M_ATTRACT}away{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}move.$"
+	.string "Wow… Look at all those YANMA!\p"
+	.string "I'm so blown away, I can't move.$"
 
 Route35_Text_FirebreatherWaltSeen:
-	.string "I'{SE_M_MILK_DRINK}practicin{SE_M_SANDSTORM}m{SE_M_YAWN}fir{SE_M_REVERSAL}breathing.$"
+	.string "I'm practicing my fire breathing.$"
 
 Route35_Text_FirebreatherWaltBeaten:
-	.string "Ow{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}scorche{SE_M_WATERFALL}th{SE_M_REVERSAL}ti{SE_M_MORNING_SUN}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}nose!$"
+	.string "Ow! I scorched the tip of my nose!$"
 
 Route35_Text_FirebreatherWaltAfter:
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}Marc{SE_M_TRI_ATTACK}o{SE_M_ATTRACT}th{SE_M_REVERSAL}radio\n"
-	.string "lure{SE_M_GRASSWHISTLE}wil{SE_M_WATERFALL}POKéMON.$"
+	.string "The POKéMON March on the radio\n"
+	.string "lures wild POKéMON.$"
 
 Route35_Text_OfficerDirkSeen:
-	.string "Dange{SE_M_SAND_TOMB}lurk{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}th{SE_M_REVERSAL}night!$"
+	.string "Danger lurks in the night!$"
 
 Route35_Text_OfficerDirkBeaten:
 	.string "Whoops!$"
 
 Route35_Text_OfficerDirkAfter:
-	.string "Yo{SE_M_DIVE}know{SE_M_SUPERSONIC}nigh{SE_M_SPIT_UP}tim{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}fu{SE_M_ATTRACT}i{SE_M_ATTRACT}its\n"
-	.string "ow{SE_M_ATTRACT}ways.\p"
-	.string "Bu{SE_M_SPIT_UP}don'{SE_M_SPIT_UP}overd{SE_M_ATTRACT2}it{SE_M_SUPERSONIC}OK?$"
+	.string "You know, night time is fun in its\n"
+	.string "own ways.\p"
+	.string "But don't overdo it, OK?$"
 
 Route35_Text_OfficerDirkTough:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}loo{SE_M_ENCORE2}prett{SE_M_YAWN}tough.\p"
-	.string "Yo{SE_M_DIVE}coul{SE_M_WATERFALL}g{SE_M_ATTRACT2}anywher{SE_M_REVERSAL}safely.$"
+	.string "Your POKéMON look pretty tough.\p"
+	.string "You could go anywhere safely.$"
 
 Route35_Text_Sign:
-	.string "ROUT{SE_M_SWORDS_DANCE}35$"
+	.string "ROUTE 35$"
 
 Route35_Text_Sign2:
-	.string "NATIONA{SE_M_BRICK_BREAK}PAR{SE_M_SNORE}GATE$"
+	.string "NATIONAL PARK GATE$"
 

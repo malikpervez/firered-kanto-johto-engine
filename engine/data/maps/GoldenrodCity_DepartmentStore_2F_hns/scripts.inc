@@ -37,20 +37,20 @@ GoldenrodDeptStore2_EventScript_Sign::
 	end
 
 GoldenrodDeptStore_Text_2FYoungster:
-	.string "POKéGEA{SE_M_MINIMIZE}ca{SE_M_ATTRACT}stor{SE_M_REVERSAL}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}10{SE_M_BITE}phone\n"
+	.string "POKéGEAR can store up to 100 phone\n"
 	.string "numbers.\p"
-	.string "It'{SE_M_GRASSWHISTLE}har{SE_M_WATERFALL}t{SE_M_ATTRACT2}decid{SE_M_REVERSAL}whic{SE_M_TRI_ATTACK}numbers\n"
-	.string "t{SE_M_ATTRACT2}keep.$"
+	.string "It's hard to decide which numbers\n"
+	.string "to keep.$"
 
 GoldenrodDeptStore_Text_2FCooltrainerF:
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}m{SE_M_YAWN}ABR{SE_M_BONEMERANG}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}GAM{SE_M_SWORDS_DANCE}CORNER.\p"
-	.string "No{SE_M_TWISTER}it'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}bes{SE_M_SPIT_UP}partner.$"
+	.string "I got my ABRA at the GAME CORNER.\p"
+	.string "Now it's my best partner.$"
 
 GoldenrodDeptStore_Text_2FGentleman:
-	.string "Thi{SE_M_GRASSWHISTLE}DEPT.STOR{SE_M_SWORDS_DANCE}make{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}realize\n"
-	.string "tha{SE_M_SPIT_UP}GOLDENRO{SE_M_FAINT_ATTACK}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bi{SE_M_SANDSTORM}city.\p"
-	.string "Th{SE_M_REVERSAL}selectio{SE_M_ATTRACT}her{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}unmatched\n"
-	.string "anywher{SE_M_REVERSAL}else.$"
+	.string "This DEPT.STORE makes me realize\n"
+	.string "that GOLDENROD is a big city.\p"
+	.string "The selection here is unmatched\n"
+	.string "anywhere else.$"
 
 GoldenrodDeptStore2_EventScript_Clerk::
 	lock
@@ -209,25 +209,25 @@ GoldenrodDeptStore_EventScript_ExitVendingMachine::
 	end
 
 GoldenrodDeptStore_Text_WhichDrinkWouldYouLike:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}VENDIN{SE_M_SWAGGER}MACHINE.\n"
-	.string "Whic{SE_M_TRI_ATTACK}drin{SE_M_ENCORE2}woul{SE_M_WATERFALL}yo{SE_M_DIVE}like?$"
+	.string "It's a VENDING MACHINE.\n"
+	.string "Which drink would you like?$"
 
 GoldenrodDeptStore_Text_DrinkClankedDown:
 	.string "Clang!\p"
-	.string "{SE_M_BONEMERANG}ca{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}{STR_VAR_1} droppe{SE_M_WATERFALL}down.$"
+	.string "A can of {STR_VAR_1} dropped down.$"
 
 GoldenrodDeptStore_Text_ExtraDrinkClankedDown:
 	.string "Clang!\p"
-	.string "Score{SE_M_DRAGON_RAGE}A{SE_M_ATTRACT}extr{SE_M_CHARGE}ca{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}{STR_VAR_1}\n"
-	.string "droppe{SE_M_WATERFALL}down!$"
+	.string "Score! An extra can of {STR_VAR_1}\n"
+	.string "dropped down!$"
 
 GoldenrodDeptStore_Text_NotEnoughMoney:
-	.string "No{SE_M_SPIT_UP}enoug{SE_M_TRI_ATTACK}money…$"
+	.string "Not enough money…$"
 
 GoldenrodDeptStore_Text_DecidedAgainstBuyingDrink:
-	.string "Decide{SE_M_WATERFALL}agains{SE_M_SPIT_UP}buyin{SE_M_SANDSTORM}{SE_M_CHARGE}drink.$"
+	.string "Decided against buying a drink.$"
 
 GoldenrodDeptStore_Text_2FDirectory:
-	.string "You{SE_M_SAND_TOMB}Trave{SE_M_BATON_PASS}Companion\p"
-	.string "2{SE_M_LEER}TRAINER'{SE_M_SKETCH}MARKET$"
+	.string "Your Travel Companion\p"
+	.string "2F TRAINER'S MARKET$"
 

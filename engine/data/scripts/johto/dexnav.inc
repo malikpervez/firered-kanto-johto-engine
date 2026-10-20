@@ -31,20 +31,20 @@ J_EventScript_TooDark::
 	end
 
 J_sText_NotFoundNearby:
-	.string "I{SE_M_SPIT_UP}couldn'{SE_M_SPIT_UP}b{SE_M_REVERSAL}foun{SE_M_WATERFALL}nearby.\n"
-	.string "Tr{SE_M_YAWN}lookin{SE_M_SANDSTORM}i{SE_M_ATTRACT}{SE_M_CHARGE}differen{SE_M_SPIT_UP}area!$"
+	.string "It couldn't be found nearby.\n"
+	.string "Try looking in a different area!$"
 
 J_sText_TryMovingSlower:
-	.string "Th{SE_M_REVERSAL}Pokémo{SE_M_ATTRACT}go{SE_M_SPIT_UP}away!\n"
-	.string "Tr{SE_M_YAWN}movin{SE_M_SANDSTORM}mor{SE_M_REVERSAL}slowly.$"
+	.string "The Pokémon got away!\n"
+	.string "Try moving more slowly.$"
 
 J_sText_PokemonGotAway:
-	.string "Th{SE_M_REVERSAL}Pokémo{SE_M_ATTRACT}go{SE_M_SPIT_UP}away!$"
+	.string "The Pokémon got away!$"
 
 J_sText_LostSignal:
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}reaction.\n"
-	.string "Th{SE_M_REVERSAL}signa{SE_M_BATON_PASS}wa{SE_M_GRASSWHISTLE}lost!$"
+	.string "There is no reaction.\n"
+	.string "The signal was lost!$"
 
 J_sText_TooDark:
-	.string "It'{SE_M_GRASSWHISTLE}to{SE_M_ATTRACT2}dar{SE_M_ENCORE2}t{SE_M_ATTRACT2}search\nfo{SE_M_SAND_TOMB}{SE_M_CHARGE}Pokémon!$"
+	.string "It's too dark to search\nfor a Pokémon!$"
 

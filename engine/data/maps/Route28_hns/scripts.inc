@@ -18,7 +18,7 @@ Route28_EventScript_Item_Flamethrower::
 	end
 
 Route28_Text_Sign:
-	.string "ROUT{SE_M_SWORDS_DANCE}28$"
+	.string "ROUTE 28$"
 
 Route28_EventScript_Trigger_Scientist::
 	lock
@@ -74,19 +74,19 @@ Route28_Movement_ScientistLeave:
 	step_end
 
 Route28_Text_Scientist:
-	.string "Hiya{SE_M_SUPERSONIC}Boss.\p"
-	.string "Yes{SE_M_SUPERSONIC}I'v{SE_M_REVERSAL}foun{SE_M_WATERFALL}severa{SE_M_BATON_PASS}artifacts,\n"
-	.string "bu{SE_M_SPIT_UP}n{SE_M_ATTRACT2}sig{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}AZUR{SE_M_SWORDS_DANCE}FLUTE.\p"
-	.string "I{SE_M_SPIT_UP}ma{SE_M_YAWN}b{SE_M_REVERSAL}insid{SE_M_REVERSAL}th{SE_M_REVERSAL}MOUNTAIN{SE_M_SUPERSONIC}but\n"
-	.string "th{SE_M_REVERSAL}wil{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}her{SE_M_REVERSAL}ar{SE_M_REVERSAL}strong,\l"
-	.string "an{SE_M_WATERFALL}m{SE_M_YAWN}tea{SE_M_MILK_DRINK}need{SE_M_GRASSWHISTLE}som{SE_M_REVERSAL}rest...\p"
+	.string "Hiya, Boss.\p"
+	.string "Yes, I've found several artifacts,\n"
+	.string "but no sign of the AZURE FLUTE.\p"
+	.string "It may be inside the MOUNTAIN, but\n"
+	.string "the wild POKéMON here are strong,\l"
+	.string "and my team needs some rest...\p"
 	.string "..................\p"
-	.string "You'r{SE_M_REVERSAL}breakin{SE_M_SANDSTORM}up...\l"
+	.string "You're breaking up...\l"
 	.string "Boss....?\p"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}CENTER.\p"
-	.string "I'l{SE_M_BATON_PASS}cal{SE_M_BATON_PASS}bac{SE_M_ENCORE2}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}fin{SE_M_WATERFALL}th{SE_M_REVERSAL}FLUTE.$"
+	.string "I'm going to the POKéMON CENTER.\p"
+	.string "I'll call back if I find the FLUTE.$"
 
 Route28_Text_Scientist2:
 	.string ".......CLICK\p"
-	.string "Th{SE_M_REVERSAL}signa{SE_M_BATON_PASS}i{SE_M_ATTRACT}SINJO{SE_M_SWAGGER2}sucks...$"
+	.string "The signal in SINJOH sucks...$"
 

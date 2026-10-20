@@ -64,44 +64,44 @@ SafariZoneGate_EventScript_SlowpokeLady::
 	end
 
 SafariZone_Text_ForeignFeeling:
-	.string "SAFAR{SE_M_HEAL_BELL}ZONE...\n"
-	.string "I{SE_M_SPIT_UP}make{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}fee{SE_M_BATON_PASS}lik{SE_M_REVERSAL}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}i{SE_M_ATTRACT}a\l"
-	.string "foreig{SE_M_ATTRACT}country.\p"
-	.string "I{SE_M_SPIT_UP}bring{SE_M_GRASSWHISTLE}u{SE_M_MORNING_SUN}{SE_M_CHARGE}strang{SE_M_REVERSAL}feeling.$"
+	.string "SAFARI ZONE...\n"
+	.string "It makes me feel like I am in a\l"
+	.string "foreign country.\p"
+	.string "It brings up a strange feeling.$"
 
 SafariZone_Text_SilentNPC:
 	.string "..................\p"
-	.string "({SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}{SE_M_CHARGE}talker.)$"
+	.string "(I am not a talker.)$"
 
 SafariZone_Text_Kangaskhan:
-	.string "KANGASKHAN{SE_M_HEAT_WAVE}..................$"
+	.string "KANGASKHAN: ..................$"
 
 SafariZone_Text_JigglypuffTrainer:
-	.string "Thi{SE_M_GRASSWHISTLE}SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}great!\n"
-	.string "{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}kep{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}afte{SE_M_SAND_TOMB}POKéMON!\p"
-	.string "Tha{SE_M_SPIT_UP}mad{SE_M_REVERSAL}m{SE_M_YAWN}JIGGLYPUF{SE_M_LEER}upse{SE_M_SPIT_UP}though.$"
+	.string "This SAFARI ZONE is great!\n"
+	.string "I just kept going after POKéMON!\p"
+	.string "That made my JIGGLYPUFF upset though.$"
 
 SafariZone_Text_FirstCatch:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}alway{SE_M_GRASSWHISTLE}wante{SE_M_WATERFALL}t{SE_M_ATTRACT2}catc{SE_M_TRI_ATTACK}m{SE_M_YAWN}first\n"
-	.string "POKéMO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZONE.$"
+	.string "I have always wanted to catch my first\n"
+	.string "POKéMON at the SAFARI ZONE.$"
 
 SafariZone_Text_SlowpokeFan:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}man{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}t{SE_M_ATTRACT2}choos{SE_M_REVERSAL}from,\n"
-	.string "bu{SE_M_SPIT_UP}nothin{SE_M_SANDSTORM}beat{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}cutenes{SE_M_GRASSWHISTLE}of\l"
+	.string "There are many POKéMON to choose from,\n"
+	.string "but nothing beats the cuteness of\l"
 	.string "SLOWPOKE.\p"
-	.string "Peopl{SE_M_REVERSAL}ofte{SE_M_ATTRACT}sa{SE_M_YAWN}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}loo{SE_M_ENCORE2}lik{SE_M_REVERSAL}one!$"
+	.string "People often say that I look like one!$"
 
 SafariZone_Text_CustomSystem:
-	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}b{SE_M_REVERSAL}unde{SE_M_SAND_TOMB}th{SE_M_REVERSAL}impressio{SE_M_ATTRACT}there\n"
-	.string "i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}sophisticate{SE_M_WATERFALL}syste{SE_M_MILK_DRINK}to\l"
-	.string "customizin{SE_M_SANDSTORM}th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZONE{SE_M_SUPERSONIC}right?\p"
-	.string "Th{SE_M_REVERSAL}rea{SE_M_BATON_PASS}trut{SE_M_TRI_ATTACK}i{SE_M_GRASSWHISTLE}that...$"
+	.string "You may be under the impression there\n"
+	.string "is a sophisticated system to\l"
+	.string "customizing the SAFARI ZONE, right?\p"
+	.string "The real truth is that...$"
 
 SafariZone_Text_Sign:
-	.string "SAFAR{SE_M_HEAL_BELL}ZONE\n"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}wher{SE_M_REVERSAL}everythin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}thrilling.\p"
-	.string "Fee{SE_M_BATON_PASS}fre{SE_M_REVERSAL}t{SE_M_ATTRACT2}com{SE_M_REVERSAL}b{SE_M_YAWN}an{SE_M_WATERFALL}experience\n"
-	.string "th{SE_M_REVERSAL}wild!$"
+	.string "SAFARI ZONE\n"
+	.string "This is where everything is thrilling.\p"
+	.string "Feel free to come by and experience\n"
+	.string "the wild!$"
 
 SafariZoneGate_EventScript_IncenseClerk::
 	goto_if_set JOHTO_FLAG_FINITE_TMS, SafariZoneGate_EventScript_IncenseClerkFinite
@@ -168,6 +168,6 @@ SafariZoneGate_Pokemart_VitaminGuru:
 	end
 
 SafariZoneGate_Text_VitaminGuruSellWhatYouNeed:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}ENERG{SE_M_MOONLIGHT}GURU{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}fo{SE_M_SAND_TOMB}i{SE_M_SPIT_UP}and\n"
-	.string "sel{SE_M_BATON_PASS}yo{SE_M_DIVE}wha{SE_M_SPIT_UP}yo{SE_M_DIVE}need!$"
+	.string "I'm the ENERGY GURU! I'll go for it and\n"
+	.string "sell you what you need!$"
 

@@ -59,8 +59,8 @@ J_LittlerootTown_MaysHouse_2F_EventScript_WallClock::
 	end
 
 J_PlayersHouse_2F_Text_ClockChange:
-	.string "Pres{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}{SE_M_MINIMIZE}Butto{SE_M_ATTRACT}t{SE_M_ATTRACT2}se{SE_M_SPIT_UP}the\n"
-	.string "cloc{SE_M_ENCORE2}whe{SE_M_ATTRACT}lookin{SE_M_SANDSTORM}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}time.$"
+	.string "Press the R Button to set the\n"
+	.string "clock when looking at the time.$"
 
 J_PlayersHouse_2F_EventScript_WallClock::
 	goto_if_set JOHTO_FLAG_SET_WALL_CLOCK, J_PlayersHouse_2F_EventScript_CheckWallClock
@@ -367,8 +367,8 @@ J_PlayersHouse_1F_EventScript_MomHealsParty_PokecenterChallenge::
 	end
 
 J_PlayersHouse_1F_Text_YouShouldRestABit_PokecenterChallenge:
-	.string "MOM{SE_M_HEAT_WAVE}Sorr{SE_M_YAWN}honey{SE_M_SUPERSONIC}yo{SE_M_DIVE}ar{SE_M_REVERSAL}playing\n"
-	.string "wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}POKéCENTE{SE_M_MINIMIZE}challenge!$"
+	.string "MOM: Sorry honey, you are playing\n"
+	.string "with the POKéCENTER challenge!$"
 
 J_PlayersHouse_1F_EventScript_SeeYouHoney::
 	msgbox J_PlayersHouse_1F_Text_SeeYouHoney, MSGBOX_DEFAULT

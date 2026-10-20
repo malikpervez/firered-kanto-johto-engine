@@ -44,29 +44,29 @@ GoldenrodDeptStore1_EventScript_Directory::
 	end
 
 GoldenrodDeptStor1_Text_Receptionist:
-	.string "Welcom{SE_M_REVERSAL}t{SE_M_ATTRACT2}GOLDENRO{SE_M_FAINT_ATTACK}DEPT.STORE.$"
+	.string "Welcome to GOLDENROD DEPT.STORE.$"
 
 GoldenrodDeptStore1_Text_Gentleman:
-	.string "Th{SE_M_REVERSAL}DEPT.STOR{SE_M_SWORDS_DANCE}ha{SE_M_GRASSWHISTLE}{SE_M_CHARGE}decent\n"
+	.string "The DEPT.STORE has a decent\n"
 	.string "selection.\p"
-	.string "Bu{SE_M_SPIT_UP}som{SE_M_REVERSAL}item{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}onl{SE_M_YAWN}available\n"
-	.string "a{SE_M_GRASSWHISTLE}GAM{SE_M_SWORDS_DANCE}CORNE{SE_M_MINIMIZE}prizes.$"
+	.string "But some items are only available\n"
+	.string "as GAME CORNER prizes.$"
 
 GoldenrodDeptStore1_Text_PokefanF:
-	.string "I'{SE_M_MILK_DRINK}rarin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}sho{SE_M_MORNING_SUN}agai{SE_M_ATTRACT}today!$"
+	.string "I'm raring to shop again today!$"
 
 GoldenrodDeptStore1_Text_BugCatcher:
-	.string "Mom'{SE_M_GRASSWHISTLE}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}bargai{SE_M_ATTRACT}hunting.\p"
-	.string "Sh{SE_M_REVERSAL}alway{SE_M_GRASSWHISTLE}buy{SE_M_GRASSWHISTLE}stuf{SE_M_ACID_ARMOR}a{SE_M_SPIT_UP}lower\n"
+	.string "Mom's good at bargain hunting.\p"
+	.string "She always buys stuff at lower\n"
 	.string "prices.$"
 
 GoldenrodDeptStore1_Text_Directory:
-	.string "1{SE_M_LEER}SERVIC{SE_M_SWORDS_DANCE}COUNTER\n"
-	.string "YO{SE_M_REFLECT}AR{SE_M_SWORDS_DANCE}HERE.\p"
-	.string "2{SE_M_LEER}TRAINER'{SE_M_SKETCH}MARKET\p"
-	.string "3{SE_M_LEER}BATTL{SE_M_SWORDS_DANCE}COLLECTION\p"
-	.string "4{SE_M_LEER}MEDICIN{SE_M_SWORDS_DANCE}BOX\p"
-	.string "5{SE_M_LEER}T{SE_M_GIGA_DRAIN}CORNER\p"
-	.string "6{SE_M_LEER}TRANQUI{SE_M_BRICK_BREAK}SQUARE\p"
-	.string "ROOFTO{SE_M_PETAL_DANCE}LOOKOUT$"
+	.string "1F SERVICE COUNTER\n"
+	.string "YOU ARE HERE.\p"
+	.string "2F TRAINER'S MARKET\p"
+	.string "3F BATTLE COLLECTION\p"
+	.string "4F MEDICINE BOX\p"
+	.string "5F TM CORNER\p"
+	.string "6F TRANQUIL SQUARE\p"
+	.string "ROOFTOP LOOKOUT$"
 

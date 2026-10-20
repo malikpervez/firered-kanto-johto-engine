@@ -65,110 +65,110 @@ Route26_EventScript_Richard::
 	end
 
 Route26_Text_CooltrainermJakeSeen:
-	.string "I'{SE_M_MILK_DRINK}makin{SE_M_SANDSTORM}m{SE_M_YAWN}fina{SE_M_BATON_PASS}preparations\n"
-	.string "fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}LEAGUE.$"
+	.string "I'm making my final preparations\n"
+	.string "for the POKéMON LEAGUE.$"
 
 Route26_Text_CooltrainermJakeBeaten:
-	.string "{SE_M_HEAL_BELL}ble{SE_M_TWISTER}it!$"
+	.string "I blew it!$"
 
 Route26_Text_CooltrainermJakeAfter:
-	.string "It'{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}toug{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}wi{SE_M_ATTRACT}at\n"
-	.string "th{SE_M_REVERSAL}LEAGUE.\p"
-	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}som{SE_M_REVERSAL}mor{SE_M_REVERSAL}training.\p"
-	.string "{SE_M_HEAL_BELL}hea{SE_M_SAND_TOMB}tha{SE_M_SPIT_UP}th{SE_M_REVERSAL}LEAGUE'{SE_M_GRASSWHISTLE}ELITE\n"
-	.string "FOU{SE_M_MINIMIZE}ar{SE_M_REVERSAL}toughe{SE_M_SAND_TOMB}tha{SE_M_ATTRACT}GY{SE_M_GIGA_DRAIN}LEADERS.$"
+	.string "It's going to be tough to win at\n"
+	.string "the LEAGUE.\p"
+	.string "I need to do some more training.\p"
+	.string "I hear that the LEAGUE's ELITE\n"
+	.string "FOUR are tougher than GYM LEADERS.$"
 
 Route26_Text_CooltrainermGavenSeen:
-	.string "B{SE_M_YAWN}experiencin{SE_M_SANDSTORM}toug{SE_M_TRI_ATTACK}battles{SE_M_SUPERSONIC}you\n"
-	.string "gai{SE_M_ATTRACT}power.$"
+	.string "By experiencing tough battles, you\n"
+	.string "gain power.$"
 
 Route26_Text_CooltrainermGavenBeaten:
-	.string "Gaah{SE_M_DRAGON_RAGE}Lif{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}eve{SE_M_ATTRACT}tougher!$"
+	.string "Gaah! Life is even tougher!$"
 
 Route26_Text_CooltrainermGavenAfter:
-	.string "T{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}POKéMO{SE_M_PSYBEAM2}LEAGUE{SE_M_SUPERSONIC}yo{SE_M_DIVE}have\n"
-	.string "t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}throug{SE_M_TRI_ATTACK}VICTOR{SE_M_MOONLIGHT}ROAD.\p"
-	.string "Bu{SE_M_SPIT_UP}VICTOR{SE_M_MOONLIGHT}ROA{SE_M_FAINT_ATTACK}i{SE_M_GRASSWHISTLE}tough.\p"
-	.string "Practicall{SE_M_YAWN}nobod{SE_M_YAWN}goe{SE_M_GRASSWHISTLE}there!$"
+	.string "To get to POKéMON LEAGUE, you have\n"
+	.string "to get through VICTORY ROAD.\p"
+	.string "But VICTORY ROAD is tough.\p"
+	.string "Practically nobody goes there!$"
 
 Route26_Text_GavenRegister:
-	.string "T{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}POKéMO{SE_M_PSYBEAM2}LEAGUE{SE_M_SUPERSONIC}yo{SE_M_DIVE}have\n"
-	.string "t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}throug{SE_M_TRI_ATTACK}VICTOR{SE_M_MOONLIGHT}ROAD.\p"
-	.string "Bu{SE_M_SPIT_UP}VICTOR{SE_M_MOONLIGHT}ROA{SE_M_FAINT_ATTACK}i{SE_M_GRASSWHISTLE}tough.\p"
-	.string "Practicall{SE_M_YAWN}nobod{SE_M_YAWN}goe{SE_M_GRASSWHISTLE}there!$"
+	.string "To get to POKéMON LEAGUE, you have\n"
+	.string "to get through VICTORY ROAD.\p"
+	.string "But VICTORY ROAD is tough.\p"
+	.string "Practically nobody goes there!$"
 
 Route26_Text_GavenRematchIntro:
-	.string "B{SE_M_YAWN}experiencin{SE_M_SANDSTORM}toug{SE_M_TRI_ATTACK}battles{SE_M_SUPERSONIC}you\n"
-	.string "gai{SE_M_ATTRACT}power.$"
+	.string "By experiencing tough battles, you\n"
+	.string "gain power.$"
 
 Route26_Text_GavenRematchDefeat:
-	.string "Gaah{SE_M_DRAGON_RAGE}Lif{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}eve{SE_M_ATTRACT}tougher!$"
+	.string "Gaah! Life is even tougher!$"
 
 Route26_Text_GavenPostRematch:
-	.string "T{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}POKéMO{SE_M_PSYBEAM2}LEAGUE{SE_M_SUPERSONIC}yo{SE_M_DIVE}have\n"
-	.string "t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}throug{SE_M_TRI_ATTACK}VICTOR{SE_M_MOONLIGHT}ROAD.\p"
-	.string "Bu{SE_M_SPIT_UP}VICTOR{SE_M_MOONLIGHT}ROA{SE_M_FAINT_ATTACK}i{SE_M_GRASSWHISTLE}tough.\p"
-	.string "Practicall{SE_M_YAWN}nobod{SE_M_YAWN}goe{SE_M_GRASSWHISTLE}there!$"
+	.string "To get to POKéMON LEAGUE, you have\n"
+	.string "to get through VICTORY ROAD.\p"
+	.string "But VICTORY ROAD is tough.\p"
+	.string "Practically nobody goes there!$"
 
 Route26_Text_CooltrainerfJoyceSeen:
-	.string "Sinc{SE_M_REVERSAL}you'v{SE_M_REVERSAL}com{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}far,\n"
-	.string "yo{SE_M_DIVE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}good.\p"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}giv{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}battle\n"
-	.string "everythin{SE_M_SANDSTORM}I'v{SE_M_REVERSAL}got!$"
+	.string "Since you've come this far,\n"
+	.string "you must be good.\p"
+	.string "I'm going to give this battle\n"
+	.string "everything I've got!$"
 
 Route26_Text_CooltrainerfJoyceBeaten:
-	.string "No{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}believ{SE_M_REVERSAL}this!$"
+	.string "No! I don't believe this!$"
 
 Route26_Text_CooltrainerfJoyceAfter:
-	.string "I'v{SE_M_REVERSAL}defeate{SE_M_WATERFALL}eigh{SE_M_SPIT_UP}GY{SE_M_GIGA_DRAIN}LEADERS,\n"
-	.string "s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}feelin{SE_M_SANDSTORM}confident.\p"
-	.string "I'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}tr{SE_M_YAWN}harde{SE_M_SAND_TOMB}nex{SE_M_SPIT_UP}time.$"
+	.string "I've defeated eight GYM LEADERS,\n"
+	.string "so I was feeling confident.\p"
+	.string "I'll have to try harder next time.$"
 
 Route26_Text_CooltrainerfBethSeen:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}t{SE_M_ATTRACT2}{SE_M_CHARGE}traine{SE_M_SAND_TOMB}name{SE_M_WATERFALL}{RIVAL}.\p"
-	.string "H{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}reall{SE_M_YAWN}strong{SE_M_SUPERSONIC}but…\p"
-	.string "I{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}h{SE_M_REVERSAL}absolutel{SE_M_YAWN}ha{SE_M_WATERFALL}to\n"
-	.string "wi{SE_M_ATTRACT}a{SE_M_SPIT_UP}an{SE_M_YAWN}cost.\p"
-	.string "{SE_M_HEAL_BELL}fel{SE_M_SPIT_UP}sorr{SE_M_YAWN}fo{SE_M_SAND_TOMB}hi{SE_M_GRASSWHISTLE}POKéMON.$"
+	.string "I lost to a trainer named {RIVAL}.\p"
+	.string "He was really strong, but…\p"
+	.string "It was as if he absolutely had to\n"
+	.string "win at any cost.\p"
+	.string "I felt sorry for his POKéMON.$"
 
 Route26_Text_CooltrainerfBethBeaten:
-	.string "POKéMO{SE_M_PSYBEAM2}aren'{SE_M_SPIT_UP}tool{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}war.$"
+	.string "POKéMON aren't tools of war.$"
 
 Route26_Text_CooltrainerfBethAfter:
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}in-valuable{SE_M_SUPERSONIC}lifelong\n"
+	.string "POKéMON are in-valuable, lifelong\n"
 	.string "partners.$"
 
 Route26_Text_BethRegister:
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}invaluable{SE_M_SUPERSONIC}lifelong\n"
+	.string "POKéMON are invaluable, lifelong\n"
 	.string "partners.$"
 
 Route26_Text_BethRematchIntro:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}t{SE_M_ATTRACT2}{SE_M_CHARGE}traine{SE_M_SAND_TOMB}name{SE_M_WATERFALL}{RIVAL}.\p"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}los{SE_M_REVERSAL}t{SE_M_ATTRACT2}you!$"
+	.string "I lost to a trainer named {RIVAL}.\p"
+	.string "But I won't lose to you!$"
 
 Route26_Text_BethRematchDefeat:
-	.string "POKéMO{SE_M_PSYBEAM2}aren'{SE_M_SPIT_UP}tool{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}war.$"
+	.string "POKéMON aren't tools of war.$"
 
 Route26_Text_BethPostRematch:
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}invaluable{SE_M_SUPERSONIC}lifelong\n"
+	.string "POKéMON are invaluable, lifelong\n"
 	.string "partners.$"
 
 Route26_Text_PsychicRichardSeen:
-	.string "Wow{SE_M_SUPERSONIC}loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}al{SE_M_BATON_PASS}thos{SE_M_REVERSAL}BADGES!\n"
-	.string "I'{SE_M_MILK_DRINK}impressed.\p"
-	.string "Bu{SE_M_SPIT_UP}you'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}satisfie{SE_M_WATERFALL}b{SE_M_YAWN}just\n"
-	.string "collectin{SE_M_SANDSTORM}them{SE_M_SUPERSONIC}right?$"
+	.string "Wow, look at all those BADGES!\n"
+	.string "I'm impressed.\p"
+	.string "But you're not satisfied by just\n"
+	.string "collecting them, right?$"
 
 Route26_Text_PsychicRichardBeaten:
-	.string "Goo{SE_M_WATERFALL}battle!$"
+	.string "Good battle!$"
 
 Route26_Text_PsychicRichardAfter:
-	.string "Peopl{SE_M_REVERSAL}an{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}gro{SE_M_TWISTER}fro{SE_M_MILK_DRINK}their\n"
+	.string "People and POKéMON grow from their\n"
 	.string "experiences.\p"
-	.string "Don'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}laz{SE_M_YAWN}an{SE_M_WATERFALL}complacent.$"
+	.string "Don't get lazy and complacent.$"
 
 Route26_Text_Sign:
-	.string "ROUT{SE_M_SWORDS_DANCE}26\p"
-	.string "POKéMO{SE_M_PSYBEAM2}LEAGUE\n"
-	.string "RECEPTIO{SE_M_PSYBEAM2}GATE$"
+	.string "ROUTE 26\p"
+	.string "POKéMON LEAGUE\n"
+	.string "RECEPTION GATE$"
 

@@ -143,43 +143,43 @@ SSAqua_1F_Movement_GrandpaLeave:
 	step_end
 
 SSAqua_1F_Text_Sailor1_ToVermilion:
-	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQU{SE_M_BONEMERANG}i{SE_M_GRASSWHISTLE}e{SE_M_ATTRACT}rout{SE_M_REVERSAL}to\n"
-	.string "VERMILIO{SE_M_PSYBEAM2}CITY.\p"
-	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}mak{SE_M_REVERSAL}a{SE_M_ATTRACT}announcemen{SE_M_SPIT_UP}when\n"
-	.string "w{SE_M_REVERSAL}arrive.$"
+	.string "FAST SHIP S.S.AQUA is en route to\n"
+	.string "VERMILION CITY.\p"
+	.string "We will make an announcement when\n"
+	.string "we arrive.$"
 
 SSAqua_1F_Text_Sailor1_ToOlivine:
-	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQU{SE_M_BONEMERANG}i{SE_M_GRASSWHISTLE}e{SE_M_ATTRACT}rout{SE_M_REVERSAL}to\n"
-	.string "OLIVIN{SE_M_SWORDS_DANCE}CITY.\p"
-	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}mak{SE_M_REVERSAL}a{SE_M_ATTRACT}announcemen{SE_M_SPIT_UP}when\n"
-	.string "w{SE_M_REVERSAL}arrive.$"
+	.string "FAST SHIP S.S.AQUA is en route to\n"
+	.string "OLIVINE CITY.\p"
+	.string "We will make an announcement when\n"
+	.string "we arrive.$"
 
 SSAqua_1F_Text_Sailor2_FirstTime:
-	.string "Here'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}cabin.\p"
-	.string "I{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}hurt{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}a\n"
-	.string "na{SE_M_MORNING_SUN}i{SE_M_ATTRACT}th{SE_M_REVERSAL}bed.\p"
-	.string "Tha{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}hea{SE_M_BATON_PASS}them.$"
+	.string "Here's your cabin.\p"
+	.string "If your POKéMON are hurt, take a\n"
+	.string "nap in the bed.\p"
+	.string "That will heal them.$"
 
 SSAqua_1F_Text_Sailor3:
-	.string "Th{SE_M_REVERSAL}passenger{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}al{SE_M_BATON_PASS}trainers.\p"
-	.string "They'r{SE_M_REVERSAL}al{SE_M_BATON_PASS}itchin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}in\n"
-	.string "thei{SE_M_SAND_TOMB}cabins.$"
+	.string "The passengers are all trainers.\p"
+	.string "They're all itching to battle in\n"
+	.string "their cabins.$"
 
 SSAqua_1F_Text_Grandpa:
-	.string "Whoa{SE_M_DRAGON_RAGE}Excus{SE_M_REVERSAL}me{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}{SE_M_CHARGE}hurry!\p"
-	.string "M{SE_M_YAWN}granddaughte{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}missing!\p"
-	.string "She'{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}{SE_M_CHARGE}we{SE_M_REVERSAL}girl{SE_M_PERISH_SONG}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}see\n"
-	.string "her{SE_M_SUPERSONIC}pleas{SE_M_REVERSAL}le{SE_M_SPIT_UP}m{SE_M_REVERSAL}know!$"
+	.string "Whoa! Excuse me. I was in a hurry!\p"
+	.string "My granddaughter is missing!\p"
+	.string "She's just a wee girl. If you see\n"
+	.string "her, please let me know!$"
 
 SSAqua_1F_Text_Sailor1_InOlivine:
-	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQU{SE_M_BONEMERANG}ha{SE_M_GRASSWHISTLE}arrive{SE_M_WATERFALL}in\n"
-	.string "OLIVIN{SE_M_SWORDS_DANCE}CITY.$"
+	.string "FAST SHIP S.S.AQUA has arrived in\n"
+	.string "OLIVINE CITY.$"
 
 SSAqua_1F_Text_Sailor1_InVermilion:
-	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQU{SE_M_BONEMERANG}ha{SE_M_GRASSWHISTLE}arrive{SE_M_WATERFALL}in\n"
-	.string "VERMILIO{SE_M_PSYBEAM2}CITY.$"
+	.string "FAST SHIP S.S.AQUA has arrived in\n"
+	.string "VERMILION CITY.$"
 
 SSAqua_1F_Text_SailorDoorArrived:
-	.string "W{SE_M_REVERSAL}hav{SE_M_REVERSAL}arrive{SE_M_WATERFALL}i{SE_M_ATTRACT}VERMILIO{SE_M_PSYBEAM2}CITY.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}disembark?$"
+	.string "We have arrived in VERMILION CITY.\n"
+	.string "Would you like to disembark?$"
 

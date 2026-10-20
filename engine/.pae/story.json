@@ -1,0 +1,311 @@
+{
+  "chapters": [
+    {
+      "name": "01. A first partner, a glimpse of the sky (Pallet Town, Route 1)",
+      "maps": [
+        "PalletTown_Frlg",
+        "Route1_Frlg"
+      ],
+      "flags": []
+    },
+    {
+      "name": "02. The road north (Viridian, Viridian Forest, Pewter)",
+      "maps": [
+        "ViridianCity_Frlg",
+        "Route22_Frlg",
+        "Route2_Frlg",
+        "ViridianForest_Frlg",
+        "PewterCity_Frlg"
+      ],
+      "flags": [
+        "FLAG_BADGE01_GET"
+      ]
+    },
+    {
+      "name": "03. Partners along the way (Mt. Moon, Cerulean, Route 24/25)",
+      "maps": [
+        "Route3_Frlg",
+        "MtMoon_Frlg",
+        "Route4_Frlg",
+        "CeruleanCity_Frlg",
+        "Route24_Frlg",
+        "Route25_Frlg"
+      ],
+      "flags": [
+        "FLAG_BADGE02_GET"
+      ]
+    },
+    {
+      "name": "04. Harbor trouble (Vermilion, S.S. Anne, Route 11)",
+      "maps": [
+        "Route5_Frlg",
+        "Route6_Frlg",
+        "UndergroundPath_Frlg",
+        "VermilionCity_Frlg",
+        "SSAnne_Frlg",
+        "Route11_Frlg",
+        "DiglettsCave_Frlg"
+      ],
+      "flags": [
+        "FLAG_BADGE03_GET"
+      ]
+    },
+    {
+      "name": "05. Rocket's copies (Celadon, Rocket Hideout)",
+      "maps": [
+        "Route7_Frlg",
+        "Route8_Frlg",
+        "CeladonCity_Frlg",
+        "RocketHideout_Frlg",
+        "Route16_Frlg",
+        "Route17_Frlg",
+        "Route18_Frlg"
+      ],
+      "flags": [
+        "FLAG_BADGE04_GET"
+      ]
+    },
+    {
+      "name": "06. A home, not a cage (Lavender, Pokemon Tower)",
+      "maps": [
+        "Route9_Frlg",
+        "Route10_Frlg",
+        "RockTunnel_Frlg",
+        "PowerPlant_Frlg",
+        "LavenderTown_Frlg",
+        "PokemonTower_Frlg",
+        "Route12_Frlg",
+        "Route13_Frlg",
+        "Route14_Frlg",
+        "Route15_Frlg"
+      ],
+      "flags": []
+    },
+    {
+      "name": "07. Responsibility and the disguise slipping (Fuchsia, Safari Zone, Saffron, Silph Co.)",
+      "maps": [
+        "FuchsiaCity_Frlg",
+        "SafariZone_Frlg",
+        "SaffronCity_Frlg",
+        "SilphCo_Frlg"
+      ],
+      "flags": [
+        "FLAG_BADGE05_GET",
+        "FLAG_BADGE06_GET"
+      ]
+    },
+    {
+      "name": "08. The quiet stranger reveals himself (Cinnabar, Mansion, Sevii)",
+      "maps": [
+        "Route19_Frlg",
+        "Route20_Frlg",
+        "Route21_Frlg",
+        "SeafoamIslands_Frlg",
+        "CinnabarIsland_Frlg",
+        "PokemonMansion_Frlg",
+        "OneIsland_Frlg",
+        "TwoIsland_Frlg",
+        "ThreeIsland_Frlg",
+        "MtEmber_Frlg"
+      ],
+      "flags": [
+        "FLAG_BADGE07_GET"
+      ]
+    },
+    {
+      "name": "09. Kanto Champion (Route 22/23, Victory Road, Indigo Plateau)",
+      "maps": [
+        "ViridianCity_Gym_Frlg",
+        "Route22_NorthEntrance_Frlg",
+        "Route23_Frlg",
+        "VictoryRoad_Frlg",
+        "IndigoPlateau_Frlg",
+        "PokemonLeague_Frlg"
+      ],
+      "flags": [
+        "FLAG_BADGE08_GET",
+        "FLAG_SYS_GAME_CLEAR"
+      ]
+    },
+    {
+      "name": "10. West, down to the water (League West Pass, Route 27, New Bark)",
+      "maps": [
+        "LeagueWestPass_Frlg",
+        "Route27_hns",
+        "TohjoFalls_hns",
+        "NewBarkTown_hns"
+      ],
+      "flags": []
+    },
+    {
+      "name": "11. A visiting Champion (Cherrygrove, Mr. Pokemon, Violet)",
+      "maps": [
+        "Route29_hns",
+        "CherrygroveCity_hns",
+        "Route30_hns",
+        "Route31_hns",
+        "DarkCave_hns",
+        "VioletCity_hns",
+        "SproutTower_hns",
+        "Route32_hns",
+        "Route36_hns",
+        "Gate_Route31_VioletCity_hns"
+      ],
+      "flags": [
+        "JOHTO_FLAG_BADGE01_GET"
+      ]
+    },
+    {
+      "name": "12. Finding their footing (Ruins of Alph, Azalea, Ilex Forest, Goldenrod)",
+      "maps": [
+        "RuinsOfAlph_hns",
+        "UnionCave_hns",
+        "Route33_hns",
+        "AzaleaTown_hns",
+        "SlowpokeWell_hns",
+        "IlexForest_hns",
+        "Route34_hns",
+        "GoldenrodCity_hns",
+        "Route35_hns",
+        "NationalPark_hns",
+        "Gate_NationalPark_hns",
+        "Gate_AzaleaTown_IlexForest_hns",
+        "Gate_IlexForest_Route34_hns",
+        "Gate_GoldenrodCity_Route35_hns",
+        "Gate_RuinsOfAlph_Route32_hns",
+        "Gate_RuinsOfAlph_Route36_hns"
+      ],
+      "flags": [
+        "JOHTO_FLAG_BADGE02_GET",
+        "JOHTO_FLAG_BADGE03_GET"
+      ]
+    },
+    {
+      "name": "13. The towers, the lighthouse and the sea (Ecruteak, Olivine, Cianwood)",
+      "maps": [
+        "Route37_hns",
+        "EcruteakCity_hns",
+        "BurnedTower_hns",
+        "Route38_hns",
+        "Route39_hns",
+        "OlivineCity_hns",
+        "Route40_hns",
+        "Route41_hns",
+        "CianwoodCity_hns",
+        "CianwoodHouse1_hns",
+        "CianwoodHouse2_hns",
+        "CianwoodHouse3_hns",
+        "CianwoodGym_hns",
+        "CianwoodPokecenter_hns",
+        "CianwoodShop_hns",
+        "WhirlIslands_hns",
+        "Gate_EcruteakCity_Route38_hns"
+      ],
+      "flags": [
+        "JOHTO_FLAG_BADGE04_GET",
+        "JOHTO_FLAG_BADGE05_GET"
+      ]
+    },
+    {
+      "name": "14. Silence the signal (Lake of Rage, Mahogany, Radio Tower)",
+      "maps": [
+        "Route42_hns",
+        "MtMortar_hns",
+        "MahoganyTown_hns",
+        "Route43_hns",
+        "LakeOfRage_hns",
+        "LakeOfRageLowTide_hns",
+        "Mahoganytown_hns",
+        "RocketHideout_hns",
+        "Gate_EcruteakCity_Route42_hns",
+        "Gate_MahoganyTown_Route43_hns",
+        "Gate_Route43_hns"
+      ],
+      "flags": [
+        "JOHTO_FLAG_BADGE06_GET",
+        "JOHTO_FLAG_BADGE07_GET"
+      ]
+    },
+    {
+      "name": "15. The last badge (Ice Path, Blackthorn, Dragon's Den)",
+      "maps": [
+        "Route44_hns",
+        "IcePath_hns",
+        "BlackthornCity_hns",
+        "DragonsDen_hns"
+      ],
+      "flags": [
+        "JOHTO_FLAG_BADGE08_GET"
+      ]
+    },
+    {
+      "name": "16. Two legendary roads (Tin Tower, Lugia's chamber)",
+      "maps": [
+        "TinTower_hns",
+        "BellchimeTrail_hns",
+        "EcruteakCity_Theater_hns"
+      ],
+      "flags": []
+    },
+    {
+      "name": "17. A second championship (Route 26, Victory Road, Indigo)",
+      "maps": [
+        "Route26_hns",
+        "Route26North_hns",
+        "VictoryRoadKanto_hns",
+        "Route22_hns",
+        "Route23_hns",
+        "ReceptionGate_hns",
+        "IndigoPlateau_hns",
+        "PokemonLeague_hns"
+      ],
+      "flags": [
+        "JOHTO_FLAG_SYS_GAME_CLEAR"
+      ]
+    },
+    {
+      "name": "18. Everybody goes home, when you say so",
+      "maps": [],
+      "flags": []
+    },
+    {
+      "name": "19. The roads remain open (postgame: Mt. Silver, Cerulean Cave, Safari, Sevii)",
+      "maps": [
+        "Route28_hns",
+        "MtSilver_hns",
+        "SafariZoneGate_hns",
+        "SafariZone_hns",
+        "Route47_hns",
+        "Route48_hns",
+        "CliffEdgeGate_hns",
+        "CliffEdgeCave_hns",
+        "EmbeddedTower_hns",
+        "Route45_hns",
+        "Route46_hns",
+        "Route49_hns",
+        "SinjohRuins_hns",
+        "NewSinjoh_hns",
+        "Route50_hns",
+        "SnowsweptCavern_hns",
+        "Gate_Route29_Route46_hns",
+        "SSAqua_hns",
+        "SafariZone1_hns",
+        "SafariZone2_hns",
+        "SafariZone3_hns",
+        "SafariZoneIndoor_hns",
+        "BirthIsland_hns",
+        "FarawayIsland_hns",
+        "SouthernIsland_hns",
+        "CeruleanCave_Frlg",
+        "FourIsland_Frlg",
+        "FiveIsland_Frlg",
+        "SixIsland_Frlg",
+        "SevenIsland_Frlg",
+        "NavelRock_Frlg",
+        "BirthIsland_Frlg",
+        "TrainerTower_Frlg"
+      ],
+      "flags": []
+    }
+  ]
+}

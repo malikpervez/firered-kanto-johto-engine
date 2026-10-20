@@ -17,13 +17,13 @@ ReceptionGate_EventScript_Janine::
 	end
 
 ReceptionGate_Text_Janine:
-	.string "JANINE{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}o{SE_M_ATTRACT}th{SE_M_REVERSAL}wa{SE_M_YAWN}t{SE_M_ATTRACT2}m{SE_M_YAWN}dad's\n"
-	.string "hous{SE_M_REVERSAL}t{SE_M_ATTRACT2}giv{SE_M_REVERSAL}hi{SE_M_MILK_DRINK}hi{SE_M_GRASSWHISTLE}lunch.\p"
-	.string "Th{SE_M_REVERSAL}ELIT{SE_M_SWORDS_DANCE}FOU{SE_M_MINIMIZE}ha{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}tim{SE_M_REVERSAL}t{SE_M_ATTRACT2}rest\n"
-	.string "da{SE_M_YAWN}o{SE_M_SAND_TOMB}night{SE_M_PERISH_SONG}It'{SE_M_GRASSWHISTLE}suc{SE_M_TRI_ATTACK}har{SE_M_WATERFALL}work,\l"
-	.string "yo{SE_M_DIVE}know?\p"
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}read{SE_M_YAWN}fo{SE_M_SAND_TOMB}anothe{SE_M_SAND_TOMB}battle,\n"
-	.string "I'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}DOJ{SE_M_SOLAR_BEAM}later.$"
+	.string "JANINE: I'm on the way to my dad's\n"
+	.string "house to give him his lunch.\p"
+	.string "The ELITE FOUR has no time to rest\n"
+	.string "day or night. It's such hard work,\l"
+	.string "you know?\p"
+	.string "If you're ready for another battle,\n"
+	.string "I'll be at the DOJO later.$"
 
 ReceptionGate_EventScript_Officer::
 	msgbox VictoryRoadGate_Text_EightBadges, MSGBOX_NPC
@@ -69,31 +69,31 @@ ReceptionGate_EventScript_KantoGuard::
 	end
 
 VictoryRoadGate_Text_Officer:
-	.string "Onl{SE_M_YAWN}trainer{SE_M_GRASSWHISTLE}wh{SE_M_ATTRACT2}hav{SE_M_REVERSAL}proven\n"
-	.string "themselve{SE_M_GRASSWHISTLE}ma{SE_M_YAWN}pass.$"
+	.string "Only trainers who have proven\n"
+	.string "themselves may pass.$"
 
 VictoryRoadGate_Text_Kimono:
-	.string "Sorr{SE_M_YAWN}kid{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}wa{SE_M_YAWN}i{SE_M_GRASSWHISTLE}close{SE_M_WATERFALL}until\n"
-	.string "someon{SE_M_REVERSAL}deal{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}tha{SE_M_SPIT_UP}LEGENDARY\l"
+	.string "Sorry kid, this way is closed until\n"
+	.string "someone deals with that LEGENDARY\l"
 	.string "POKéMON...$"
 
 VictoryRoadGate_Text_NotEnoughBadges:
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}GY{SE_M_GIGA_DRAIN}BADGES\n"
-	.string "o{SE_M_ACID_ARMOR}JOHTO.\p"
-	.string "I'{SE_M_MILK_DRINK}sorry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}le{SE_M_SPIT_UP}yo{SE_M_DIVE}go\n"
+	.string "You don't have all the GYM BADGES\n"
+	.string "of JOHTO.\p"
+	.string "I'm sorry, but I can't let you go\n"
 	.string "through.$"
 
 VictoryRoadGate_Text_EightBadges:
-	.string "Oh{SE_M_DRAGON_RAGE}Th{SE_M_REVERSAL}eigh{SE_M_SPIT_UP}BADGE{SE_M_SKETCH}o{SE_M_ACID_ARMOR}JOHTO!\p"
-	.string "Please{SE_M_SUPERSONIC}g{SE_M_ATTRACT2}righ{SE_M_SPIT_UP}o{SE_M_ATTRACT}through!$"
+	.string "Oh! The eight BADGES of JOHTO!\p"
+	.string "Please, go right on through!$"
 
 VictoryRoadGate_Text_LeftBlackBelt:
-	.string "Thi{SE_M_GRASSWHISTLE}wa{SE_M_YAWN}lead{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}MT.SILVER.\p"
-	.string "You'l{SE_M_BATON_PASS}se{SE_M_REVERSAL}scary-stron{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}out\n"
+	.string "This way leads to MT.SILVER.\p"
+	.string "You'll see scary-strong POKéMON out\n"
 	.string "there.$"
 
 VictoryRoadGate_Text_RightBlackBelt:
-	.string "Of{SE_M_ACID_ARMOR}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}LEAGUE{SE_M_SUPERSONIC}ar{SE_M_REVERSAL}you?\p"
-	.string "Th{SE_M_REVERSAL}ELIT{SE_M_SWORDS_DANCE}FOU{SE_M_MINIMIZE}ar{SE_M_REVERSAL}s{SE_M_ATTRACT2}stron{SE_M_SANDSTORM}it's\n"
-	.string "scary{SE_M_SUPERSONIC}an{SE_M_WATERFALL}they'r{SE_M_REVERSAL}read{SE_M_YAWN}fo{SE_M_SAND_TOMB}you!$"
+	.string "Off to the POKéMON LEAGUE, are you?\p"
+	.string "The ELITE FOUR are so strong it's\n"
+	.string "scary, and they're ready for you!$"
 

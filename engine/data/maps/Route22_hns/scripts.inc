@@ -14,8 +14,8 @@ Route22_EventScript_Sign::
 	end
 
 Route22_Text_VictoryRoadEntranceSign:
-	.string "POKéMO{SE_M_PSYBEAM2}LEAGUE\p"
-	.string "VICTOR{SE_M_MOONLIGHT}ROA{SE_M_FAINT_ATTACK}ENTRANCE$"
+	.string "POKéMON LEAGUE\p"
+	.string "VICTORY ROAD ENTRANCE$"
 
 Route22_EventScript_ResetActivation::
 	setvar VAR_TEMP_0, 0
@@ -283,61 +283,61 @@ Route22_Movement_CelebiPush:
 	step_end
 
 Route22_Text_Silver1:
-	.string "{RIVAL}{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}tol{SE_M_WATERFALL}me...\n"
-	.string "yo{SE_M_DIVE}wer{SE_M_REVERSAL}th{SE_M_REVERSAL}numbe{SE_M_SAND_TOMB}on{SE_M_REVERSAL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}whole\l"
+	.string "{RIVAL}: You told me...\n"
+	.string "you were the number one in the whole\l"
 	.string "world!\p"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}gonn{SE_M_CHARGE}quit?\p"
-	.string "Wha{SE_M_SPIT_UP}ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}now?$"
+	.string "Are you gonna quit?\p"
+	.string "What are you going to do now?$"
 
 Route22_Text_Giovanni1:
 	.string "....................\p"
-	.string "GIOVANNI{SE_M_HEAT_WAVE}On{SE_M_REVERSAL}mus{SE_M_SPIT_UP}acknowledg{SE_M_REVERSAL}one's\n"
-	.string "defea{SE_M_SPIT_UP}befor{SE_M_REVERSAL}h{SE_M_REVERSAL}ca{SE_M_ATTRACT}mov{SE_M_REVERSAL}on...\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}g{SE_M_ATTRACT2}solo..{SE_M_PERISH_SONG}fo{SE_M_SAND_TOMB}now...\p"
-	.string "S{SE_M_ATTRACT2}tha{SE_M_SPIT_UP}on{SE_M_REVERSAL}da{SE_M_YAWN}{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}for{SE_M_MILK_DRINK}a\n"
-	.string "stronge{SE_M_SAND_TOMB}organization!$"
+	.string "GIOVANNI: One must acknowledge one's\n"
+	.string "defeat before he can move on...\p"
+	.string "I will go solo... for now...\p"
+	.string "So that one day I will form a\n"
+	.string "stronger organization!$"
 
 Route22_Text_Silver2:
-	.string "{RIVAL}{SE_M_HEAT_WAVE}Wha{SE_M_SPIT_UP}aspec{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}yo{SE_M_DIVE}was\n"
-	.string "numbe{SE_M_SAND_TOMB}one?\p"
-	.string "Gatherin{SE_M_SANDSTORM}s{SE_M_ATTRACT2}man{SE_M_YAWN}onl{SE_M_YAWN}t{SE_M_ATTRACT2}be\n"
-	.string "defeate{SE_M_WATERFALL}b{SE_M_YAWN}{SE_M_CHARGE}mer{SE_M_REVERSAL}child!$"
+	.string "{RIVAL}: What aspect of you was\n"
+	.string "number one?\p"
+	.string "Gathering so many only to be\n"
+	.string "defeated by a mere child!$"
 
 Route22_Text_Giovanni2:
-	.string "GIOVANNI{SE_M_HEAT_WAVE}Puttin{SE_M_SANDSTORM}togethe{SE_M_SAND_TOMB}the\n"
-	.string "potentia{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}man{SE_M_YAWN}i{SE_M_GRASSWHISTLE}ho{SE_M_TWISTER}you\l"
-	.string "produc{SE_M_REVERSAL}{SE_M_CHARGE}hug{SE_M_REVERSAL}power...\l"
-	.string "That'{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}a{SE_M_ATTRACT}organizatio{SE_M_ATTRACT}is...\l"
-	.string "That'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}strengt{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}organization\p"
-	.string "{SE_M_HEAL_BELL}failed..{SE_M_PERISH_SONG}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}us{SE_M_REVERSAL}of\n"
-	.string "m{SE_M_YAWN}subordinates{SE_M_ABSORB}potential...!\p"
-	.string "Bu{SE_M_SPIT_UP}yo{SE_M_DIVE}shal{SE_M_BATON_PASS}witnes{SE_M_GRASSWHISTLE}on{SE_M_REVERSAL}da{SE_M_YAWN}the\n"
-	.string "reviva{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}m{SE_M_REVERSAL}an{SE_M_WATERFALL}m{SE_M_YAWN}TEA{SE_M_GIGA_DRAIN}ROCKET!$"
+	.string "GIOVANNI: Putting together the\n"
+	.string "potential of many is how you\l"
+	.string "produce a huge power...\l"
+	.string "That's what an organization is...\l"
+	.string "That's the strength of organization\p"
+	.string "I failed... to make the best use of\n"
+	.string "my subordinates' potential...!\p"
+	.string "But you shall witness one day the\n"
+	.string "revival of me and my TEAM ROCKET!$"
 
 Route22_Text_Silver3:
-	.string "{RIVAL}{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}understan{SE_M_WATERFALL}you!\p"
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}mak{SE_M_REVERSAL}an{SE_M_YAWN}sense!$"
+	.string "{RIVAL}: I don't understand you!\p"
+	.string "You don't make any sense!$"
 
 Route22_Text_Giovanni3:
 	.string ".......................\p"
-	.string "GIOVANNI{SE_M_HEAT_WAVE}On{SE_M_REVERSAL}da{SE_M_YAWN}yo{SE_M_DIVE}will\n"
+	.string "GIOVANNI: One day you will\n"
 	.string "understand.$"
 
 Route22_Text_Silver4:
-	.string "{RIVAL}{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}wan{SE_M_SPIT_UP}to\n"
-	.string "understan{SE_M_WATERFALL}you!\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}neve{SE_M_SAND_TOMB}becom{SE_M_REVERSAL}someon{SE_M_REVERSAL}like\n"
+	.string "{RIVAL}: I don't want to\n"
+	.string "understand you!\p"
+	.string "I will never become someone like\n"
 	.string "you.\p"
-	.string "{SE_M_BONEMERANG}cowar{SE_M_WATERFALL}whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}alon{SE_M_REVERSAL}and\n"
-	.string "actin{SE_M_SANDSTORM}lik{SE_M_REVERSAL}{SE_M_CHARGE}tyran{SE_M_SPIT_UP}whe{SE_M_ATTRACT}you're\l"
-	.string "i{SE_M_ATTRACT}fron{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}othe{SE_M_SAND_TOMB}cowards!\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}becom{SE_M_REVERSAL}strong!\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}becom{SE_M_REVERSAL}{SE_M_CHARGE}stronge{SE_M_SAND_TOMB}ma{SE_M_ATTRACT}all\n"
-	.string "b{SE_M_YAWN}myself!$"
+	.string "A coward when you're alone and\n"
+	.string "acting like a tyrant when you're\l"
+	.string "in front of other cowards!\p"
+	.string "I will become strong!\p"
+	.string "I will become a stronger man all\n"
+	.string "by myself!$"
 
 Route22_Text_Silver5:
-	.string "AL{SE_M_BRICK_BREAK}B{SE_M_MOONLIGHT}MYSELF!$"
+	.string "ALL BY MYSELF!$"
 
 Route22_Text_Silver6:
-	.string "{RIVAL}{SE_M_HEAT_WAVE}..{SE_M_PERISH_SONG}Wha{SE_M_SPIT_UP}ar{SE_M_REVERSAL}yo{SE_M_DIVE}starin{SE_M_SANDSTORM}at?$"
+	.string "{RIVAL}: ... What are you staring at?$"
 

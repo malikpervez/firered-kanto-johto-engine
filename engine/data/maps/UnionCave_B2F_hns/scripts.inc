@@ -51,39 +51,39 @@ UnionCave_B2F_EventScript_Item_MaxRevive::
 	end
 
 UnionCave_B2F_Text_CooltrainermNickSeen:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}tw{SE_M_ATTRACT2}kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}people.\p"
-	.string "Thos{SE_M_REVERSAL}wh{SE_M_ATTRACT2}hav{SE_M_REVERSAL}style{SE_M_SUPERSONIC}an{SE_M_WATERFALL}those\n"
-	.string "wh{SE_M_ATTRACT2}don't.\p"
-	.string "Wha{SE_M_SPIT_UP}kin{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}perso{SE_M_ATTRACT}ar{SE_M_REVERSAL}you?$"
+	.string "There are two kinds of people.\p"
+	.string "Those who have style, and those\n"
+	.string "who don't.\p"
+	.string "What kind of person are you?$"
 
 UnionCave_B2F_Text_CooltrainermNickBeaten:
-	.string "You'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}dazzlin{SE_M_SANDSTORM}style!$"
+	.string "You've got dazzling style!$"
 
 UnionCave_B2F_Text_CooltrainermNickAfter:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}styl{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}stunnin{SE_M_SANDSTORM}and\n"
-	.string "colorful{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}admit.\p"
-	.string "You'l{SE_M_BATON_PASS}jus{SE_M_SPIT_UP}kee{SE_M_MORNING_SUN}gettin{SE_M_SANDSTORM}better!$"
+	.string "Your POKéMON style is stunning and\n"
+	.string "colorful, I admit.\p"
+	.string "You'll just keep getting better!$"
 
 UnionCave_B2F_Text_CooltrainerfGwenSeen:
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}training{SE_M_PERISH_SONG}Car{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}round?$"
+	.string "I'm in training. Care for a round?$"
 
 UnionCave_B2F_Text_CooltrainerfGwenBeaten:
-	.string "Aww{SE_M_SUPERSONIC}no{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}to{SE_M_ATTRACT2}goo{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}me.$"
+	.string "Aww, no! You're too good for me.$"
 
 UnionCave_B2F_Text_CooltrainerfGwenAfter:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}b{SE_M_YAWN}mysel{SE_M_ACID_ARMOR}unti{SE_M_BATON_PASS}I\n"
+	.string "I'm going to train by myself until I\n"
 	.string "improve.$"
 
 UnionCave_B2F_Text_CooltrainerfEmmaSeen:
-	.string "I{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}{SE_M_HEAL_BELL}like{SE_M_WATERFALL}wer{SE_M_REVERSAL}there,\n"
-	.string "I'{SE_M_WATERFALL}g{SE_M_ATTRACT2}anywhere.\p"
-	.string "That'{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}{SE_M_CHARGE}rea{SE_M_BATON_PASS}traine{SE_M_SAND_TOMB}does.$"
+	.string "If the POKéMON I liked were there,\n"
+	.string "I'd go anywhere.\p"
+	.string "That's what a real trainer does.$"
 
 UnionCave_B2F_Text_CooltrainerfEmmaBeaten:
-	.string "I'{SE_M_WATERFALL}rathe{SE_M_SAND_TOMB}pe{SE_M_SPIT_UP}m{SE_M_YAWN}babie{SE_M_GRASSWHISTLE}tha{SE_M_ATTRACT}this!$"
+	.string "I'd rather pet my babies than this!$"
 
 UnionCave_B2F_Text_CooltrainerfEmmaAfter:
-	.string "Jus{SE_M_SPIT_UP}onc{SE_M_REVERSAL}{SE_M_CHARGE}week{SE_M_SUPERSONIC}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}come{SE_M_GRASSWHISTLE}to\n"
-	.string "th{SE_M_REVERSAL}water'{SE_M_GRASSWHISTLE}edge.\p"
-	.string "{SE_M_HEAL_BELL}wante{SE_M_WATERFALL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}tha{SE_M_SPIT_UP}POKéMON…$"
+	.string "Just once a week, a POKéMON comes to\n"
+	.string "the water's edge.\p"
+	.string "I wanted to see that POKéMON…$"
 

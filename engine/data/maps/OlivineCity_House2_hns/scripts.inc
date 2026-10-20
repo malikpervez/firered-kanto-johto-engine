@@ -20,12 +20,12 @@ OlivineCity_EventScript_PunisherBoy::
 	end
 
 OlivineCity_Text_PunishmentBro:
-	.string "Alon{SE_M_SANDSTORM}th{SE_M_REVERSAL}wa{SE_M_YAWN}t{SE_M_ATTRACT2}CIANWOOD,\n"
-	.string "ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}fou{SE_M_SAND_TOMB}deserte{SE_M_WATERFALL}islands.\p"
-	.string "Ba{SE_M_WATERFALL}kid{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}take{SE_M_ATTRACT}t{SE_M_ATTRACT2}those\n"
-	.string "island{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}punishment!$"
+	.string "Along the way to CIANWOOD,\n"
+	.string "there are four deserted islands.\p"
+	.string "Bad kids are taken to those\n"
+	.string "islands as punishment!$"
 
 OlivineCity_Text_PunishmentBoy:
-	.string "Wheneve{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}i{SE_M_ATTRACT}trouble,\n"
-	.string "bi{SE_M_SANDSTORM}br{SE_M_ATTRACT2}alway{SE_M_GRASSWHISTLE}scare{SE_M_GRASSWHISTLE}me.$"
+	.string "Whenever I get in trouble,\n"
+	.string "big bro always scares me.$"
 

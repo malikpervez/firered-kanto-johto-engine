@@ -86,63 +86,63 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_TeachWord::
 	end
 
 J_MauvilleCity_PokemonCenter_1F_Text_WantToTradeDecor:
-	.string "Hi{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}TRADER.\n"
-	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}trad{SE_M_REVERSAL}decoration{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}me?$"
+	.string "Hi, I'm the TRADER.\n"
+	.string "Want to trade decorations with me?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TraderFeelingTheBlues:
 	.string "Oh…\n"
-	.string "You'v{SE_M_REVERSAL}lef{SE_M_SPIT_UP}m{SE_M_REVERSAL}feelin{SE_M_SANDSTORM}th{SE_M_REVERSAL}blues…$"
+	.string "You've left me feeling the blues…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WeveAlreadyTraded:
-	.string "Bu{SE_M_SPIT_UP}we'v{SE_M_REVERSAL}trade{SE_M_WATERFALL}decoration{SE_M_GRASSWHISTLE}already,\n"
-	.string "yo{SE_M_DIVE}an{SE_M_WATERFALL}I.$"
+	.string "But we've traded decorations already,\n"
+	.string "you and I.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_PickADecorItem:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}se{SE_M_REVERSAL}an{SE_M_YAWN}decorativ{SE_M_REVERSAL}ite{SE_M_MILK_DRINK}that\n"
-	.string "yo{SE_M_DIVE}wan{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}mine{SE_M_SUPERSONIC}spea{SE_M_ENCORE2}up.$"
+	.string "If you see any decorative item that\n"
+	.string "you want of mine, speak up.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_YouDontWantAnything:
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}wan{SE_M_SPIT_UP}anything?\n"
-	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}unwanted…$"
+	.string "You don't want anything?\n"
+	.string "I feel unwanted…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_OnceBelongedToPlayerDoYouWantIt:
-	.string "Tha{SE_M_SPIT_UP}decorativ{SE_M_REVERSAL}ite{SE_M_MILK_DRINK}onc{SE_M_REVERSAL}belonged\n"
-	.string "t{SE_M_ATTRACT2}{STR_VAR_1}.\p"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}it?$"
+	.string "That decorative item once belonged\n"
+	.string "to {STR_VAR_1}.\p"
+	.string "Do you want it?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_YouDontHaveAnyDecor:
-	.string "Uh{SE_M_DIZZY_PUNCH}Wai{SE_M_SPIT_UP}{SE_M_CHARGE}second{SE_M_PERISH_SONG}Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}a\n"
-	.string "singl{SE_M_REVERSAL}piec{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}decoration!$"
+	.string "Uh… Wait a second. You don't have a\n"
+	.string "single piece of decoration!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_PickTheDecorToTrade:
-	.string "Okay{SE_M_SUPERSONIC}pic{SE_M_ENCORE2}th{SE_M_REVERSAL}decoratio{SE_M_ATTRACT}tha{SE_M_SPIT_UP}you'll\n"
-	.string "trad{SE_M_REVERSAL}t{SE_M_ATTRACT2}me.$"
+	.string "Okay, pick the decoration that you'll\n"
+	.string "trade to me.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_YouDontWantToTrade:
-	.string "Yo{SE_M_DIVE}won'{SE_M_SPIT_UP}trad{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?\n"
-	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}unwanted…$"
+	.string "You won't trade with me?\n"
+	.string "I feel unwanted…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_YouveNoRoomForThis:
-	.string "You'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}{STR_VAR_2}{SE_M_SKETCH}tha{SE_M_SPIT_UP}can\n"
-	.string "b{SE_M_REVERSAL}stored{SE_M_PERISH_SONG}You'v{SE_M_REVERSAL}n{SE_M_ATTRACT2}roo{SE_M_MILK_DRINK}fo{SE_M_SAND_TOMB}this.$"
+	.string "You've got all the {STR_VAR_2}S that can\n"
+	.string "be stored. You've no room for this.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SoWellTradeTheseDecor:
-	.string "Okay{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}we'l{SE_M_BATON_PASS}trad{SE_M_REVERSAL}m{SE_M_YAWN}{STR_VAR_3}\n"
-	.string "fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}{STR_VAR_2}?$"
+	.string "Okay, so we'll trade my {STR_VAR_3}\n"
+	.string "for your {STR_VAR_2}?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_ThatDecorIsInUse:
-	.string "Tha{SE_M_SPIT_UP}piec{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}decoratio{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}use.\n"
-	.string "Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}trad{SE_M_REVERSAL}it.$"
+	.string "That piece of decoration is in use.\n"
+	.string "You can't trade it.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SendDecorToYourPC:
-	.string "The{SE_M_ATTRACT}we'l{SE_M_BATON_PASS}trade!\n"
-	.string "I'l{SE_M_BATON_PASS}sen{SE_M_WATERFALL}m{SE_M_YAWN}decoratio{SE_M_ATTRACT}t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}PC.$"
+	.string "Then we'll trade!\n"
+	.string "I'll send my decoration to your PC.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_CantTradeThatOne:
-	.string "Oops{SE_M_DRAGON_RAGE}Sorry{SE_M_DRAGON_RAGE}That'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}reall{SE_M_YAWN}rare\n"
-	.string "piec{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}decoration.\l"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}trad{SE_M_REVERSAL}tha{SE_M_SPIT_UP}on{SE_M_REVERSAL}away!\p"
-	.string "Ca{SE_M_ATTRACT}{SE_M_HEAL_BELL}interes{SE_M_SPIT_UP}yo{SE_M_DIVE}i{SE_M_ATTRACT}somethin{SE_M_SANDSTORM}else?$"
+	.string "Oops! Sorry! That's a really rare\n"
+	.string "piece of decoration.\l"
+	.string "I can't trade that one away!\p"
+	.string "Can I interest you in something else?$"
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_Trader::
 	lock
@@ -231,559 +231,559 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_NoRoomForDecor::
 	end
 
 J_MauvilleCity_PokemonCenter_1F_Text_WillYouHearMyTale:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}STORYTELLER.\n"
-	.string "I'l{SE_M_BATON_PASS}tel{SE_M_BATON_PASS}yo{SE_M_DIVE}tale{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}legendary\l"
+	.string "I'm the STORYTELLER.\n"
+	.string "I'll tell you tales of legendary\l"
 	.string "TRAINERS.\p"
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}hea{SE_M_SAND_TOMB}m{SE_M_YAWN}tale?$"
+	.string "Will you hear my tale?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_StorytellerFeelingTheBlues:
 	.string "Oh…\n"
-	.string "You'v{SE_M_REVERSAL}lef{SE_M_SPIT_UP}m{SE_M_REVERSAL}feelin{SE_M_SANDSTORM}th{SE_M_REVERSAL}blues…$"
+	.string "You've left me feeling the blues…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WhichTaleToTell:
-	.string "{SE_M_HEAL_BELL}kno{SE_M_TWISTER}o{SE_M_ACID_ARMOR}thes{SE_M_REVERSAL}legends.\n"
-	.string "Whic{SE_M_TRI_ATTACK}tal{SE_M_REVERSAL}wil{SE_M_BATON_PASS}yo{SE_M_DIVE}hav{SE_M_REVERSAL}m{SE_M_REVERSAL}tell?$"
+	.string "I know of these legends.\n"
+	.string "Which tale will you have me tell?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_IKnowNoTales:
-	.string "But{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}kno{SE_M_TWISTER}o{SE_M_ACID_ARMOR}n{SE_M_ATTRACT2}legendar{SE_M_YAWN}TRAINERS.\n"
-	.string "Hence{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}kno{SE_M_TWISTER}n{SE_M_ATTRACT2}tales.\p"
-	.string "Wher{SE_M_REVERSAL}doe{SE_M_GRASSWHISTLE}on{SE_M_REVERSAL}fin{SE_M_WATERFALL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}worthy\n"
-	.string "o{SE_M_ACID_ARMOR}{SE_M_CHARGE}legendar{SE_M_YAWN}tale?$"
+	.string "But, I know of no legendary TRAINERS.\n"
+	.string "Hence, I know no tales.\p"
+	.string "Where does one find a TRAINER worthy\n"
+	.string "of a legendary tale?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_YouDidStatXTimes:
-	.string "What'{SE_M_GRASSWHISTLE}that?!\n"
-	.string "You{SE_M_DIZZY_PUNCH}You…\p"
+	.string "What's that?!\n"
+	.string "You… You…\p"
 	.string "{STR_VAR_2}\n"
 	.string "{STR_VAR_1} time(s)?!\p"
-	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}indee{SE_M_WATERFALL}magnificent!\n"
-	.string "It'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}birt{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}ne{SE_M_TWISTER}legend!$"
+	.string "That is indeed magnificent!\n"
+	.string "It's the birth of a new legend!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_CouldThereBeOtherLegends:
-	.string "I{SE_M_SPIT_UP}get{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}thinking{SE_M_SUPERSONIC}coul{SE_M_WATERFALL}ther{SE_M_REVERSAL}be\n"
-	.string "othe{SE_M_SAND_TOMB}TRAINER{SE_M_SKETCH}wit{SE_M_TRI_ATTACK}mor{SE_M_REVERSAL}impressive\l"
-	.string "legend{SE_M_GRASSWHISTLE}awaitin{SE_M_SANDSTORM}discovery?$"
+	.string "It gets me thinking, could there be\n"
+	.string "other TRAINERS with more impressive\l"
+	.string "legends awaiting discovery?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_HaveYouAnyLegendaryTales:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}{SE_M_CHARGE}TRAINER?\p"
-	.string "The{SE_M_ATTRACT}tel{SE_M_BATON_PASS}me{SE_M_SUPERSONIC}hav{SE_M_REVERSAL}yo{SE_M_DIVE}an{SE_M_YAWN}tale{SE_M_GRASSWHISTLE}that\n"
-	.string "ar{SE_M_REVERSAL}eve{SE_M_ATTRACT}remotel{SE_M_YAWN}legendary?$"
+	.string "Are you a TRAINER?\p"
+	.string "Then tell me, have you any tales that\n"
+	.string "are even remotely legendary?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_HearAnotherLegendaryTale:
-	.string "Incidentally{SE_M_DIZZY_PUNCH}Woul{SE_M_WATERFALL}yo{SE_M_DIVE}car{SE_M_REVERSAL}t{SE_M_ATTRACT2}hear\n"
-	.string "anothe{SE_M_SAND_TOMB}legendar{SE_M_YAWN}tale?$"
+	.string "Incidentally… Would you care to hear\n"
+	.string "another legendary tale?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_NotWorthyOfLegend:
 	.string "Hmm…\n"
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}satisfied…\p"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}yo{SE_M_DIVE}woul{SE_M_WATERFALL}brin{SE_M_SANDSTORM}m{SE_M_REVERSAL}new{SE_M_GRASSWHISTLE}worthy\n"
-	.string "o{SE_M_ACID_ARMOR}bein{SE_M_SANDSTORM}calle{SE_M_WATERFALL}{SE_M_CHARGE}legend.$"
+	.string "I'm not satisfied…\p"
+	.string "I wish you would bring me news worthy\n"
+	.string "of being called a legend.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_IWishMorePeopleWereInterested:
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}mor{SE_M_REVERSAL}peopl{SE_M_REVERSAL}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}interested\n"
-	.string "i{SE_M_ATTRACT}hearin{SE_M_SANDSTORM}m{SE_M_YAWN}epi{SE_M_HYPER_BEAM}tale{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}legendary\l"
+	.string "I wish more people would be interested\n"
+	.string "in hearing my epic tales of legendary\l"
 	.string "TRAINERS.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SavedGameTitle::
-	.string "Th{SE_M_REVERSAL}Save-Happ{SE_M_YAWN}TRAINER$"
+	.string "The Save-Happy TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SavedGameAction::
-	.string "Save{SE_M_WATERFALL}th{SE_M_REVERSAL}game$"
+	.string "Saved the game$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SavedGameStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}save{SE_M_WATERFALL}th{SE_M_REVERSAL}game\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER saved the game\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{SE_M_BONEMERANG}mor{SE_M_REVERSAL}cautiou{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}than\n"
-	.string "{STR_VAR_3} on{SE_M_REVERSAL}wil{SE_M_BATON_PASS}neve{SE_M_SAND_TOMB}find!$"
+	.string "A more cautious TRAINER than\n"
+	.string "{STR_VAR_3} one will never find!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TrendsStartedTitle::
-	.string "Th{SE_M_REVERSAL}Trendsette{SE_M_SAND_TOMB}TRAINER$"
+	.string "The Trendsetter TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TrendsStartedAction::
-	.string "Starte{SE_M_WATERFALL}trends$"
+	.string "Started trends$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TrendsStartedStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}starte{SE_M_WATERFALL}ne{SE_M_TWISTER}trends\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER started new trends\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}settin{SE_M_SANDSTORM}trend{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}all\n"
-	.string "th{SE_M_REVERSAL}HOEN{SE_M_PSYBEAM2}region!$"
+	.string "{STR_VAR_3} is setting trends for all\n"
+	.string "the HOENN region!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedTitle::
-	.string "Th{SE_M_REVERSAL}BERRY-Plantin{SE_M_SANDSTORM}TRAINER$"
+	.string "The BERRY-Planting TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedAction::
-	.string "Plante{SE_M_WATERFALL}BERRIES$"
+	.string "Planted BERRIES$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}plante{SE_M_WATERFALL}BERRIES\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER planted BERRIES\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}legendar{SE_M_YAWN}love{SE_M_SAND_TOMB}of\n"
+	.string "{STR_VAR_3} is a legendary lover of\n"
 	.string "BERRIES!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BikeTradesTitle::
-	.string "Th{SE_M_REVERSAL}BIKE-Lovin{SE_M_SANDSTORM}TRAINER$"
+	.string "The BIKE-Loving TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BikeTradesAction::
-	.string "Trade{SE_M_WATERFALL}BIKES$"
+	.string "Traded BIKES$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BikeTradesStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}swappe{SE_M_WATERFALL}BIKES\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER swapped BIKES\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}lov{SE_M_REVERSAL}BIKE{SE_M_SKETCH}deeply\n"
-	.string "an{SE_M_WATERFALL}passionately!$"
+	.string "{STR_VAR_3} must love BIKES deeply\n"
+	.string "and passionately!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_InterviewsTitle::
-	.string "Th{SE_M_REVERSAL}Interviewe{SE_M_WATERFALL}TRAINER$"
+	.string "The Interviewed TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_InterviewsAction::
-	.string "Go{SE_M_SPIT_UP}interviewed$"
+	.string "Got interviewed$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_InterviewsStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}go{SE_M_SPIT_UP}interviewed\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER got interviewed\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}who's\n"
-	.string "attractin{SE_M_SANDSTORM}muc{SE_M_TRI_ATTACK}attention!$"
+	.string "{STR_VAR_3} must be a TRAINER who's\n"
+	.string "attracting much attention!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesTitle::
-	.string "Th{SE_M_REVERSAL}Battle-Happ{SE_M_YAWN}TRAINER$"
+	.string "The Battle-Happy TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesAction::
 	.string "Battled$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}battle{SE_M_WATERFALL}{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}wh{SE_M_ATTRACT2}can\n"
-	.string "neve{SE_M_SAND_TOMB}refus{SE_M_REVERSAL}{SE_M_CHARGE}chanc{SE_M_REVERSAL}t{SE_M_ATTRACT2}battle!$"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER battled {STR_VAR_1} times!\p"
+	.string "{STR_VAR_3} must be a TRAINER who can\n"
+	.string "never refuse a chance to battle!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtTitle::
-	.string "Th{SE_M_REVERSAL}POKéMON-Catchin{SE_M_SANDSTORM}TRAINER$"
+	.string "The POKéMON-Catching TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtAction::
-	.string "Caugh{SE_M_SPIT_UP}POKéMON$"
+	.string "Caught POKéMON$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}caught\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER caught\n"
 	.string "{STR_VAR_1} POKéMON!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}legendar{SE_M_YAWN}catche{SE_M_SAND_TOMB}of\n"
-	.string "wil{SE_M_WATERFALL}POKéMON!$"
+	.string "{STR_VAR_3} is a legendary catcher of\n"
+	.string "wild POKéMON!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtTitle::
-	.string "Th{SE_M_REVERSAL}Fishin{SE_M_SANDSTORM}TRAINER$"
+	.string "The Fishing TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtAction::
-	.string "Caugh{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}ROD$"
+	.string "Caught POKéMON with a ROD$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}caught\n"
-	.string "{STR_VAR_1} POKéMO{SE_M_PSYBEAM2}whil{SE_M_REVERSAL}fishing!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}legendar{SE_M_YAWN}fishing\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER caught\n"
+	.string "{STR_VAR_1} POKéMON while fishing!\p"
+	.string "{STR_VAR_3} is a legendary fishing\n"
 	.string "expert!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_EggsHatchedTitle::
-	.string "Th{SE_M_REVERSAL}EGG-Warmin{SE_M_SANDSTORM}TRAINER$"
+	.string "The EGG-Warming TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_EggsHatchedAction::
-	.string "Hatche{SE_M_WATERFALL}EGGS$"
+	.string "Hatched EGGS$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_EggsHatchedStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}hatche{SE_M_WATERFALL}{STR_VAR_1} POKéMON\n"
-	.string "fro{SE_M_MILK_DRINK}EGGS!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}legendar{SE_M_YAWN}warmer\n"
-	.string "o{SE_M_ACID_ARMOR}EGGS!$"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER hatched {STR_VAR_1} POKéMON\n"
+	.string "from EGGS!\p"
+	.string "{STR_VAR_3} is a legendary warmer\n"
+	.string "of EGGS!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedTitle::
-	.string "Th{SE_M_REVERSAL}Evolve{SE_M_SAND_TOMB}TRAINER$"
+	.string "The Evolver TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedAction::
-	.string "Evolve{SE_M_WATERFALL}POKéMON$"
+	.string "Evolved POKéMON$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}mad{SE_M_REVERSAL}{STR_VAR_1} POKéMON\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER made {STR_VAR_1} POKéMON\n"
 	.string "evolve!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}ultimat{SE_M_REVERSAL}evolver\n"
-	.string "o{SE_M_ACID_ARMOR}POKéMON!$"
+	.string "{STR_VAR_3} is the ultimate evolver\n"
+	.string "of POKéMON!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterTitle::
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}CENTER-Lovin{SE_M_SANDSTORM}TRAINER$"
+	.string "The POKéMON CENTER-Loving TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterAction::
-	.string "Use{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}CENTERS$"
+	.string "Used POKéMON CENTERS$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}heale{SE_M_WATERFALL}POKéMON\n"
-	.string "{STR_VAR_1} time{SE_M_GRASSWHISTLE}a{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}CENTERS!\p"
-	.string "Ther{SE_M_REVERSAL}coul{SE_M_WATERFALL}b{SE_M_REVERSAL}n{SE_M_ATTRACT2}greate{SE_M_SAND_TOMB}love{SE_M_SAND_TOMB}of\n"
-	.string "POKéMO{SE_M_PSYBEAM2}CENTER{SE_M_SKETCH}tha{SE_M_ATTRACT}{STR_VAR_3}!$"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER healed POKéMON\n"
+	.string "{STR_VAR_1} times at POKéMON CENTERS!\p"
+	.string "There could be no greater lover of\n"
+	.string "POKéMON CENTERS than {STR_VAR_3}!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeTitle::
-	.string "Th{SE_M_REVERSAL}Homebod{SE_M_YAWN}TRAINER$"
+	.string "The Homebody TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeAction::
-	.string "Reste{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}home$"
+	.string "Rested POKéMON at home$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}heale{SE_M_WATERFALL}POKéMON\n"
-	.string "{STR_VAR_1} time{SE_M_GRASSWHISTLE}a{SE_M_SPIT_UP}home!\p"
-	.string "Ther{SE_M_REVERSAL}coul{SE_M_WATERFALL}b{SE_M_REVERSAL}n{SE_M_ATTRACT2}mor{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}homebody\n"
-	.string "tha{SE_M_ATTRACT}{STR_VAR_3}!$"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER healed POKéMON\n"
+	.string "{STR_VAR_1} times at home!\p"
+	.string "There could be no more of a homebody\n"
+	.string "than {STR_VAR_3}!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SafariGamesTitle::
-	.string "Th{SE_M_REVERSAL}SAFARI-Lovin{SE_M_SANDSTORM}TRAINER$"
+	.string "The SAFARI-Loving TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SafariGamesAction::
-	.string "Entere{SE_M_WATERFALL}th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZONE$"
+	.string "Entered the SAFARI ZONE$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SafariGamesStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}wen{SE_M_SPIT_UP}int{SE_M_ATTRACT2}th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZONE\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER went into the SAFARI ZONE\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}whos{SE_M_REVERSAL}wil{SE_M_WATERFALL}side\n"
-	.string "mus{SE_M_SPIT_UP}com{SE_M_REVERSAL}ou{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZONE!$"
+	.string "{STR_VAR_3} is a TRAINER whose wild side\n"
+	.string "must come out in the SAFARI ZONE!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedCutTitle::
-	.string "Th{SE_M_REVERSAL}CUT-Frenz{SE_M_YAWN}TRAINER$"
+	.string "The CUT-Frenzy TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedCutAction::
-	.string "Use{SE_M_WATERFALL}CUT$"
+	.string "Used CUT$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedCutStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}use{SE_M_WATERFALL}CUT\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER used CUT\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}wh{SE_M_ATTRACT2}jus{SE_M_SPIT_UP}must\n"
-	.string "lov{SE_M_REVERSAL}t{SE_M_ATTRACT2}CUT!$"
+	.string "{STR_VAR_3} is a TRAINER who just must\n"
+	.string "love to CUT!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashTitle::
-	.string "Th{SE_M_REVERSAL}ROCK-SMASHIN{SE_M_SWAGGER}TRAINER$"
+	.string "The ROCK-SMASHING TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashAction::
-	.string "Smashe{SE_M_WATERFALL}rocks$"
+	.string "Smashed rocks$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}use{SE_M_WATERFALL}ROC{SE_M_SNORE}SMASH\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER used ROCK SMASH\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}who\n"
-	.string "can'{SE_M_SPIT_UP}leav{SE_M_REVERSAL}{SE_M_CHARGE}ston{SE_M_REVERSAL}unsmashed!$"
+	.string "{STR_VAR_3} must be a TRAINER who\n"
+	.string "can't leave a stone unsmashed!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_MovedBasesTitle::
-	.string "Th{SE_M_REVERSAL}Move-Lovin{SE_M_SANDSTORM}TRAINER$"
+	.string "The Move-Loving TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_MovedBasesAction::
-	.string "Move{SE_M_WATERFALL}th{SE_M_REVERSAL}SECRE{SE_M_SWIFT}BASE$"
+	.string "Moved the SECRET BASE$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_MovedBasesStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}move{SE_M_WATERFALL}th{SE_M_REVERSAL}SECRE{SE_M_SWIFT}BASE\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER moved the SECRET BASE\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}wh{SE_M_ATTRACT2}loves\n"
-	.string "t{SE_M_ATTRACT2}mov{SE_M_REVERSAL}house{SE_M_GRASSWHISTLE}often!$"
+	.string "{STR_VAR_3} is a TRAINER who loves\n"
+	.string "to move houses often!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedSplashTitle::
-	.string "Th{SE_M_REVERSAL}SPLASH-Happ{SE_M_YAWN}TRAINER$"
+	.string "The SPLASH-Happy TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedSplashAction::
-	.string "Use{SE_M_WATERFALL}SPLASH$"
+	.string "Used SPLASH$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedSplashStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}use{SE_M_WATERFALL}SPLASH\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER used SPLASH\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}wh{SE_M_ATTRACT2}mus{SE_M_SPIT_UP}love\n"
-	.string "SPLASHIN{SE_M_SWAGGER}around!$"
+	.string "{STR_VAR_3} is a TRAINER who must love\n"
+	.string "SPLASHING around!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedStruggleTitle::
-	.string "Th{SE_M_REVERSAL}Tenaciou{SE_M_GRASSWHISTLE}TRAINER$"
+	.string "The Tenacious TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedStruggleAction::
-	.string "Resorte{SE_M_WATERFALL}t{SE_M_ATTRACT2}usin{SE_M_SANDSTORM}STRUGGLE$"
+	.string "Resorted to using STRUGGLE$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedStruggleStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}ha{SE_M_WATERFALL}t{SE_M_ATTRACT2}rel{SE_M_YAWN}o{SE_M_ATTRACT}STRUGGLE\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER had to rely on STRUGGLE\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tenaciou{SE_M_GRASSWHISTLE}TRAINER\n"
-	.string "wh{SE_M_ATTRACT2}neve{SE_M_SAND_TOMB}give{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}t{SE_M_ATTRACT2}adversity!$"
+	.string "{STR_VAR_3} is a tenacious TRAINER\n"
+	.string "who never gives in to adversity!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsTitle::
-	.string "Th{SE_M_REVERSAL}SLO{SE_M_SWIFT}Champ$"
+	.string "The SLOT Champ$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsAction::
-	.string "Wo{SE_M_ATTRACT}th{SE_M_REVERSAL}jackpo{SE_M_SPIT_UP}o{SE_M_ATTRACT}th{SE_M_REVERSAL}SLOTS$"
+	.string "Won the jackpot on the SLOTS$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}wo{SE_M_ATTRACT}th{SE_M_REVERSAL}jackpo{SE_M_SPIT_UP}on\n"
-	.string "th{SE_M_REVERSAL}SLOT{SE_M_SKETCH}{STR_VAR_1} times.\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}wh{SE_M_ATTRACT2}wa{SE_M_GRASSWHISTLE}lucky\n"
-	.string "o{SE_M_ATTRACT}th{SE_M_REVERSAL}SLOTS!$"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER won the jackpot on\n"
+	.string "the SLOTS {STR_VAR_1} times.\p"
+	.string "{STR_VAR_3} is a TRAINER who was lucky\n"
+	.string "on the SLOTS!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RouletteWinsTitle::
-	.string "Th{SE_M_REVERSAL}ROULETT{SE_M_SWORDS_DANCE}Champ$"
+	.string "The ROULETTE Champ$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RouletteWinsAction::
-	.string "Ha{SE_M_WATERFALL}consecutiv{SE_M_REVERSAL}ROULETT{SE_M_SWORDS_DANCE}win{SE_M_GRASSWHISTLE}of$"
+	.string "Had consecutive ROULETTE wins of$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}wo{SE_M_ATTRACT}i{SE_M_ATTRACT}ROULETTE\n"
-	.string "{STR_VAR_1} time{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}{SE_M_CHARGE}row.\p"
-	.string "{STR_VAR_3} wa{SE_M_GRASSWHISTLE}luck{SE_M_YAWN}whe{SE_M_ATTRACT}th{SE_M_REVERSAL}ball\n"
-	.string "bounce{SE_M_WATERFALL}i{SE_M_ATTRACT}ROULETTE!$"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER won in ROULETTE\n"
+	.string "{STR_VAR_1} times in a row.\p"
+	.string "{STR_VAR_3} was lucky when the ball\n"
+	.string "bounced in ROULETTE!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesTitle::
-	.string "Th{SE_M_REVERSAL}BATTL{SE_M_SWORDS_DANCE}TOWE{SE_M_MINIMIZE}Challenger$"
+	.string "The BATTLE TOWER Challenger$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesAction::
-	.string "Too{SE_M_ENCORE2}th{SE_M_REVERSAL}BATTL{SE_M_SWORDS_DANCE}TOWE{SE_M_MINIMIZE}challenge$"
+	.string "Took the BATTLE TOWER challenge$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}too{SE_M_ENCORE2}th{SE_M_REVERSAL}BATTL{SE_M_SWORDS_DANCE}TOWER\n"
-	.string "challeng{SE_M_REVERSAL}{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}wh{SE_M_ATTRACT2}aspires\n"
-	.string "fo{SE_M_SAND_TOMB}excellenc{SE_M_REVERSAL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}BATTL{SE_M_SWORDS_DANCE}TOWER!$"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER took the BATTLE TOWER\n"
+	.string "challenge {STR_VAR_1} times!\p"
+	.string "{STR_VAR_3} is a TRAINER who aspires\n"
+	.string "for excellence in the BATTLE TOWER!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksTitle::
-	.string "Th{SE_M_REVERSAL}Blend-Lovin{SE_M_SANDSTORM}TRAINER$"
+	.string "The Blend-Loving TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksAction::
-	.string "Mad{SE_M_REVERSAL}{POKEBLOCK}S$"
+	.string "Made オカキクケS$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}mad{SE_M_REVERSAL}{POKEBLOCK}S\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER made オカキクケS\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}non{SE_M_REVERSAL}bette{SE_M_SAND_TOMB}a{SE_M_SPIT_UP}usin{SE_M_SANDSTORM}{SE_M_CHARGE}BERRY\n"
-	.string "BLENDE{SE_M_MINIMIZE}tha{SE_M_ATTRACT}{STR_VAR_3}!$"
+	.string "There is none better at using a BERRY\n"
+	.string "BLENDER than {STR_VAR_3}!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_EnteredContestsTitle::
-	.string "Th{SE_M_REVERSAL}CONTEST-Lovin{SE_M_SANDSTORM}TRAINER$"
+	.string "The CONTEST-Loving TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_EnteredContestsAction::
-	.string "Entere{SE_M_WATERFALL}CONTESTS$"
+	.string "Entered CONTESTS$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_EnteredContestsStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}entere{SE_M_WATERFALL}CONTESTS\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER entered CONTESTS\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}lov{SE_M_REVERSAL}showin{SE_M_SANDSTORM}off\n"
-	.string "POKéMO{SE_M_PSYBEAM2}t{SE_M_ATTRACT2}others!$"
+	.string "{STR_VAR_3} must love showing off\n"
+	.string "POKéMON to others!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WonContestsTitle::
-	.string "Th{SE_M_REVERSAL}CONTES{SE_M_SWIFT}Master$"
+	.string "The CONTEST Master$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WonContestsAction::
-	.string "Wo{SE_M_ATTRACT}CONTESTS$"
+	.string "Won CONTESTS$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WonContestsStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}wo{SE_M_ATTRACT}CONTESTS\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER won CONTESTS\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}a{SE_M_ATTRACT}incredible\n"
-	.string "CONTES{SE_M_SWIFT}master!$"
+	.string "{STR_VAR_3} must be an incredible\n"
+	.string "CONTEST master!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TimesShoppedTitle::
-	.string "Th{SE_M_REVERSAL}Happ{SE_M_YAWN}Shopper$"
+	.string "The Happy Shopper$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TimesShoppedAction::
 	.string "Shopped$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TimesShoppedStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}bough{SE_M_SPIT_UP}item{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}shops\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER bought items in shops\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}those\n"
-	.string "peopl{SE_M_REVERSAL}wh{SE_M_ATTRACT2}ar{SE_M_REVERSAL}bor{SE_M_ATTRACT}t{SE_M_ATTRACT2}shop.$"
+	.string "{STR_VAR_3} must be one of those\n"
+	.string "people who are born to shop.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderTitle::
-	.string "Th{SE_M_REVERSAL}Item-Findin{SE_M_SANDSTORM}TRAINER$"
+	.string "The Item-Finding TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderAction::
-	.string "Use{SE_M_WATERFALL}a{SE_M_ATTRACT}ITEMFINDER$"
+	.string "Used an ITEMFINDER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}use{SE_M_WATERFALL}a{SE_M_ATTRACT}ITEMFINDER\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER used an ITEMFINDER\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}enjo{SE_M_YAWN}scourin{SE_M_SANDSTORM}the\n"
-	.string "groun{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}hidde{SE_M_ATTRACT}items!$"
+	.string "{STR_VAR_3} must enjoy scouring the\n"
+	.string "ground for hidden items!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TimesRainedTitle::
-	.string "Th{SE_M_REVERSAL}Rain-Soake{SE_M_WATERFALL}TRAINER$"
+	.string "The Rain-Soaked TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TimesRainedAction::
-	.string "Go{SE_M_SPIT_UP}raine{SE_M_WATERFALL}on$"
+	.string "Got rained on$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TimesRainedStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}go{SE_M_SPIT_UP}soake{SE_M_WATERFALL}b{SE_M_YAWN}rain\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER got soaked by rain\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3}'{SE_M_GRASSWHISTLE}charism{SE_M_CHARGE}mus{SE_M_SPIT_UP}even\n"
-	.string "attrac{SE_M_SPIT_UP}rain!$"
+	.string "{STR_VAR_3}'s charisma must even\n"
+	.string "attract rain!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexTitle::
-	.string "Th{SE_M_REVERSAL}Avi{SE_M_WATERFALL}POKéDE{SE_M_LOCK_ON}Reader$"
+	.string "The Avid POKéDEX Reader$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexAction::
-	.string "Checke{SE_M_WATERFALL}{SE_M_CHARGE}POKéDEX$"
+	.string "Checked a POKéDEX$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}checke{SE_M_WATERFALL}{SE_M_CHARGE}POKéDEX\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER checked a POKéDEX\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}lov{SE_M_REVERSAL}inspecting\n"
-	.string "POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}{SE_M_CHARGE}POKéDEX!$"
+	.string "{STR_VAR_3} must love inspecting\n"
+	.string "POKéMON in a POKéDEX!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsTitle::
-	.string "Th{SE_M_REVERSAL}RIBBO{SE_M_PSYBEAM2}Collector$"
+	.string "The RIBBON Collector$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsAction::
-	.string "Receive{SE_M_WATERFALL}RIBBONS$"
+	.string "Received RIBBONS$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}receive{SE_M_WATERFALL}RIBBONS\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER received RIBBONS\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}who\n"
-	.string "love{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}collec{SE_M_SPIT_UP}RIBBONS!$"
+	.string "{STR_VAR_3} must be a TRAINER who\n"
+	.string "loves to collect RIBBONS!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedTitle::
-	.string "Th{SE_M_REVERSAL}Ledge-Jumpin{SE_M_SANDSTORM}TRAINER$"
+	.string "The Ledge-Jumping TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedAction::
-	.string "Jumpe{SE_M_WATERFALL}dow{SE_M_ATTRACT}ledges$"
+	.string "Jumped down ledges$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}jumpe{SE_M_WATERFALL}dow{SE_M_ATTRACT}ledges\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER jumped down ledges\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "I{SE_M_ACID_ARMOR}there'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}ledg{SE_M_REVERSAL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}jumped,\n"
-	.string "{STR_VAR_3} can'{SE_M_SPIT_UP}ignor{SE_M_REVERSAL}it!$"
+	.string "If there's a ledge to be jumped,\n"
+	.string "{STR_VAR_3} can't ignore it!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TVWatchedTitle::
-	.string "Th{SE_M_REVERSAL}Legendar{SE_M_YAWN}T{SE_M_BARRIER}Viewer$"
+	.string "The Legendary TV Viewer$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TVWatchedAction::
-	.string "Watche{SE_M_WATERFALL}TV$"
+	.string "Watched TV$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TVWatchedStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}watche{SE_M_WATERFALL}TV\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER watched TV\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}lov{SE_M_REVERSAL}watchin{SE_M_SANDSTORM}TV!$"
+	.string "{STR_VAR_3} must love watching TV!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_CheckedClockTitle::
-	.string "Th{SE_M_REVERSAL}Time-Consciou{SE_M_GRASSWHISTLE}TRAINER$"
+	.string "The Time-Conscious TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_CheckedClockAction::
-	.string "Checke{SE_M_WATERFALL}th{SE_M_REVERSAL}time$"
+	.string "Checked the time$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_CheckedClockStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}checke{SE_M_WATERFALL}th{SE_M_REVERSAL}time\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER checked the time\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}punctua{SE_M_BATON_PASS}TRAINER\n"
-	.string "who'{SE_M_GRASSWHISTLE}consciou{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}time.$"
+	.string "{STR_VAR_3} must be a punctual TRAINER\n"
+	.string "who's conscious of the time.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WonLotteryTitle::
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}LOTTER{SE_M_MOONLIGHT}Wizard$"
+	.string "The POKéMON LOTTERY Wizard$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WonLotteryAction::
-	.string "Wo{SE_M_ATTRACT}POKéMO{SE_M_PSYBEAM2}LOTTERIES$"
+	.string "Won POKéMON LOTTERIES$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WonLotteryStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}wo{SE_M_ATTRACT}POKéMO{SE_M_PSYBEAM2}LOTTERIES\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER won POKéMON LOTTERIES\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}man{SE_M_YAWN}friends\n"
-	.string "t{SE_M_ATTRACT2}trad{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}with!$"
+	.string "{STR_VAR_3} must have many friends\n"
+	.string "to trade POKéMON with!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedDaycareTitle::
-	.string "Th{SE_M_REVERSAL}DA{SE_M_MOONLIGHT}CARE-Usin{SE_M_SANDSTORM}Trainer$"
+	.string "The DAY CARE-Using Trainer$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedDaycareAction::
-	.string "Lef{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}DA{SE_M_MOONLIGHT}CARE$"
+	.string "Left POKéMON at the DAY CARE$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_UsedDaycareStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}lef{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}the\n"
-	.string "DA{SE_M_MOONLIGHT}CAR{SE_M_SWORDS_DANCE}{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}rea{SE_M_BATON_PASS}go-getter\n"
-	.string "wh{SE_M_ATTRACT2}raise{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}aggressively!$"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER left POKéMON with the\n"
+	.string "DAY CARE {STR_VAR_1} times!\p"
+	.string "{STR_VAR_3} must be a real go-getter\n"
+	.string "who raises POKéMON aggressively!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RodeCableCarTitle::
-	.string "Th{SE_M_REVERSAL}CABL{SE_M_SWORDS_DANCE}CAR-Lovin{SE_M_SANDSTORM}TRAINER$"
+	.string "The CABLE CAR-Loving TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RodeCableCarAction::
-	.string "Rod{SE_M_REVERSAL}th{SE_M_REVERSAL}CABL{SE_M_SWORDS_DANCE}CAR$"
+	.string "Rode the CABLE CAR$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_RodeCableCarStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}rod{SE_M_REVERSAL}th{SE_M_REVERSAL}CABL{SE_M_SWORDS_DANCE}CAR\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER rode the CABLE CAR\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}bus{SE_M_YAWN}TRAINER\n"
-	.string "who'{SE_M_GRASSWHISTLE}u{SE_M_MORNING_SUN}an{SE_M_WATERFALL}dow{SE_M_ATTRACT}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}time!$"
+	.string "{STR_VAR_3} must be a busy TRAINER\n"
+	.string "who's up and down all the time!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_HotSpringsTitle::
-	.string "Th{SE_M_REVERSAL}Ho{SE_M_SPIT_UP}Spring-Lovin{SE_M_SANDSTORM}TRAINER$"
+	.string "The Hot Spring-Loving TRAINER$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_HotSpringsAction::
-	.string "Bathe{SE_M_WATERFALL}i{SE_M_ATTRACT}ho{SE_M_SPIT_UP}springs$"
+	.string "Bathed in hot springs$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_HotSpringsStory::
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}tal{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TRAINER\n"
-	.string "name{SE_M_WATERFALL}{STR_VAR_3}.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}bathe{SE_M_WATERFALL}i{SE_M_ATTRACT}ho{SE_M_SPIT_UP}springs\n"
+	.string "This is a tale of a TRAINER\n"
+	.string "named {STR_VAR_3}.\p"
+	.string "This TRAINER bathed in hot springs\n"
 	.string "{STR_VAR_1} times!\p"
-	.string "{STR_VAR_3} mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}with\n"
-	.string "baby-smoot{SE_M_TRI_ATTACK}skin!$"
+	.string "{STR_VAR_3} must be a TRAINER with\n"
+	.string "baby-smooth skin!$"
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_Storyteller::
 	lock
@@ -851,20 +851,20 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_StorytellerEnd::
 	end
 
 J_MauvilleCity_PokemonCenter_1F_Text_HearMyStory:
-	.string "I'{SE_M_MILK_DRINK}GIDDY!\n"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}{SE_M_CHARGE}scintillatin{SE_M_SANDSTORM}stor{SE_M_YAWN}fo{SE_M_SAND_TOMB}you!\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}hea{SE_M_SAND_TOMB}m{SE_M_YAWN}story?$"
+	.string "I'm GIDDY!\n"
+	.string "I have a scintillating story for you!\p"
+	.string "Would you like to hear my story?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_GiddyFeelingTheBlues:
 	.string "Oh…\n"
-	.string "You'v{SE_M_REVERSAL}lef{SE_M_SPIT_UP}m{SE_M_REVERSAL}feelin{SE_M_SANDSTORM}th{SE_M_REVERSAL}blues…$"
+	.string "You've left me feeling the blues…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_AlsoIWasThinking:
-	.string "Also{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}thinking…$"
+	.string "Also, I was thinking…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WeShouldChatAgain:
-	.string "That'{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}it{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}think…\p"
-	.string "W{SE_M_REVERSAL}shoul{SE_M_WATERFALL}cha{SE_M_SPIT_UP}again!\n"
+	.string "That's about it, I think…\p"
+	.string "We should chat again!\n"
 	.string "Bye-bye!$"
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_Giddy::
@@ -912,59 +912,59 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_ToldEnoughTales::
 	end
 
 J_MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToHearMySong:
-	.string "Hi{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}BARD.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}hea{SE_M_SAND_TOMB}m{SE_M_YAWN}song?$"
+	.string "Hi, I'm the BARD.\n"
+	.string "Would you like to hear my song?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BardFeelingTheBlues1:
 	.string "Oh…\n"
-	.string "You'v{SE_M_REVERSAL}lef{SE_M_SPIT_UP}m{SE_M_REVERSAL}feelin{SE_M_SANDSTORM}th{SE_M_REVERSAL}blues…$"
+	.string "You've left me feeling the blues…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WishICouldPlaySongForOthers:
-	.string "Oh{SE_M_SUPERSONIC}wha{SE_M_SPIT_UP}{SE_M_CHARGE}movin{SE_M_SANDSTORM}song…\n"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}pla{SE_M_YAWN}i{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}others…$"
+	.string "Oh, what a moving song…\n"
+	.string "I wish I could play it for others…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToWriteSomeLyrics:
 	.string "So?\n"
-	.string "Ho{SE_M_TWISTER}d{SE_M_ATTRACT2}yo{SE_M_DIVE}lik{SE_M_REVERSAL}m{SE_M_YAWN}song?\p"
-	.string "Bu{SE_M_SPIT_UP}I'{SE_M_MILK_DRINK}non{SE_M_REVERSAL}to{SE_M_ATTRACT2}happ{SE_M_YAWN}about\n"
-	.string "th{SE_M_REVERSAL}lyrics.\p"
-	.string "Ho{SE_M_TWISTER}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}writ{SE_M_REVERSAL}some\n"
-	.string "ne{SE_M_TWISTER}lyric{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}me?$"
+	.string "How do you like my song?\p"
+	.string "But I'm none too happy about\n"
+	.string "the lyrics.\p"
+	.string "How would you like to write some\n"
+	.string "new lyrics for me?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_BardFeelingTheBlues2:
 	.string "Oh…\n"
-	.string "You'v{SE_M_REVERSAL}lef{SE_M_SPIT_UP}m{SE_M_REVERSAL}feelin{SE_M_SANDSTORM}th{SE_M_REVERSAL}blues…$"
+	.string "You've left me feeling the blues…$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_LetMeSingItForYou:
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}kindly!\n"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}sin{SE_M_SANDSTORM}i{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}you.$"
+	.string "Thank you kindly!\n"
+	.string "Let me sing it for you.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_ThatHowYouWantedSongToGo:
-	.string "Wa{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}ho{SE_M_TWISTER}yo{SE_M_DIVE}wante{SE_M_WATERFALL}you{SE_M_SAND_TOMB}song\n"
-	.string "t{SE_M_ATTRACT2}go?$"
+	.string "Was that how you wanted your song\n"
+	.string "to go?$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_IllSingThisSongForAWhile:
-	.string "Okay{SE_M_DRAGON_RAGE}That'{SE_M_GRASSWHISTLE}it{SE_M_SUPERSONIC}then.\n"
-	.string "I'l{SE_M_BATON_PASS}sin{SE_M_SANDSTORM}thi{SE_M_GRASSWHISTLE}son{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}while.$"
+	.string "Okay! That's it, then.\n"
+	.string "I'll sing this song for a while.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_TeachWhatsHipAndHappening:
-	.string "Hey{SE_M_SUPERSONIC}yo{SE_M_DRAGON_RAGE}The{SE_M_YAWN}cal{SE_M_BATON_PASS}m{SE_M_REVERSAL}th{SE_M_REVERSAL}HIPSTER.\n"
-	.string "I'l{SE_M_BATON_PASS}teac{SE_M_TRI_ATTACK}yo{SE_M_DIVE}what'{SE_M_GRASSWHISTLE}hi{SE_M_MORNING_SUN}an{SE_M_WATERFALL}happening.$"
+	.string "Hey, yo! They call me the HIPSTER.\n"
+	.string "I'll teach you what's hip and happening.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_IAlreadyTaughtYou:
-	.string "But{SE_M_SUPERSONIC}hey{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}taugh{SE_M_SPIT_UP}yo{SE_M_DIVE}what'{SE_M_GRASSWHISTLE}hi{SE_M_MORNING_SUN}and\n"
-	.string "happenin{SE_M_SANDSTORM}already.\p"
-	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}sprea{SE_M_WATERFALL}th{SE_M_REVERSAL}goo{SE_M_WATERFALL}wor{SE_M_WATERFALL}to\n"
-	.string "othe{SE_M_SAND_TOMB}folks.$"
+	.string "But, hey, I taught you what's hip and\n"
+	.string "happening already.\p"
+	.string "I'd like to spread the good word to\n"
+	.string "other folks.$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_IveGotNothingNewToTeach:
-	.string "But{SE_M_SUPERSONIC}hey{SE_M_SUPERSONIC}yo{SE_M_DIVE}alread{SE_M_YAWN}kno{SE_M_TWISTER}{SE_M_CHARGE}lo{SE_M_SPIT_UP}about\n"
-	.string "what'{SE_M_GRASSWHISTLE}hi{SE_M_MORNING_SUN}an{SE_M_WATERFALL}happening.\p"
-	.string "I'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}nothin{SE_M_SANDSTORM}ne{SE_M_TWISTER}t{SE_M_ATTRACT2}teac{SE_M_TRI_ATTACK}you!$"
+	.string "But, hey, you already know a lot about\n"
+	.string "what's hip and happening.\p"
+	.string "I've got nothing new to teach you!$"
 
 J_MauvilleCity_PokemonCenter_1F_Text_HaveYouHeardOfWord:
-	.string "Hey{SE_M_SUPERSONIC}hav{SE_M_REVERSAL}yo{SE_M_DIVE}hear{SE_M_WATERFALL}about\n"
+	.string "Hey, have you heard about\n"
 	.string "“{STR_VAR_1}”?\p"
-	.string "What'{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}mean{SE_M_SING}Well…\n"
-	.string "As{SE_M_ENCORE2}you{SE_M_SAND_TOMB}dadd{SE_M_YAWN}o{SE_M_SAND_TOMB}mommy{SE_M_SUPERSONIC}okay?$"
+	.string "What's it mean? Well…\n"
+	.string "Ask your daddy or mommy, okay?$"
 

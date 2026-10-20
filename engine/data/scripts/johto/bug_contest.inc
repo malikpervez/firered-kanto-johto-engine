@@ -127,87 +127,87 @@ J_BugContest_EventScript_SideEnd::
 	end
 
 J_BugContest_Text_Judging0::
-	.string "Th{SE_M_REVERSAL}contes{SE_M_SPIT_UP}ha{SE_M_GRASSWHISTLE}no{SE_M_TWISTER}concluded.\n"
-	.string "Pleas{SE_M_REVERSAL}pic{SE_M_ENCORE2}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}yo{SE_M_DIVE}would\l"
-	.string "lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}an{SE_M_WATERFALL}hav{SE_M_REVERSAL}judged.$"
+	.string "The contest has now concluded.\n"
+	.string "Please pick the POKéMON you would\l"
+	.string "like to keep and have judged.$"
 
 J_BugContest_Text_Judging1::
-	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}no{SE_M_TWISTER}judg{SE_M_REVERSAL}th{SE_M_REVERSAL}POKéMON\n"
-	.string "you'v{SE_M_REVERSAL}caught.\p"
+	.string "We will now judge the POKéMON\n"
+	.string "you've caught.\p"
 	.string "...................\n"
 	.string "...................\p"
-	.string "W{SE_M_REVERSAL}hav{SE_M_REVERSAL}chose{SE_M_ATTRACT}th{SE_M_REVERSAL}winners{SE_M_DRAGON_RAGE}Are\n"
-	.string "read{SE_M_YAWN}fo{SE_M_SAND_TOMB}this?$"
+	.string "We have chosen the winners! Are\n"
+	.string "ready for this?$"
 
 J_BugContest_Text_WrongChoiceMon:
-	.string "Pleas{SE_M_REVERSAL}pic{SE_M_ENCORE2}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}yo{SE_M_DIVE}would\n"
-	.string "lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}an{SE_M_WATERFALL}hav{SE_M_REVERSAL}judged.$"
+	.string "Please pick the POKéMON you would\n"
+	.string "like to keep and have judged.$"
 
 J_BugContest_Text_DidntCatch:
-	.string "O{SE_M_TRI_ATTACK}no{SE_M_DRAGON_RAGE}Yo{SE_M_DIVE}didn'{SE_M_SPIT_UP}catc{SE_M_TRI_ATTACK}{SE_M_CHARGE}POKéMON.\n"
-	.string "You'v{SE_M_REVERSAL}forfeite{SE_M_WATERFALL}th{SE_M_REVERSAL}competition.\p"
-	.string "You{SE_M_SAND_TOMB}part{SE_M_YAWN}wil{SE_M_BATON_PASS}no{SE_M_TWISTER}b{SE_M_REVERSAL}returned.$"
+	.string "Oh no! You didn't catch a POKéMON.\n"
+	.string "You've forfeited the competition.\p"
+	.string "Your party will now be returned.$"
 
 J_BugContest_Text_TimesUp:
-	.string "Ding-dong{SE_M_DRAGON_RAGE}Time'{SE_M_GRASSWHISTLE}up!$"
+	.string "Ding-dong! Time's up!$"
 
 J_BugContest_Text_WhiteOut:
-	.string "{PLAYER} i{SE_M_GRASSWHISTLE}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}useabl{SE_M_REVERSAL}POKéMON.\n"
-	.string "{PLAYER} forfeite{SE_M_WATERFALL}th{SE_M_REVERSAL}contest.$"
+	.string "{PLAYER} is out of useable POKéMON.\n"
+	.string "{PLAYER} forfeited the contest.$"
 
 J_BugContest_Text_First1:
-	.string "Placin{SE_M_SANDSTORM}thir{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}COOLTRAINER\n"
-	.string "BELINDA{SE_M_SUPERSONIC}wh{SE_M_ATTRACT2}caugh{SE_M_SPIT_UP}{SE_M_CHARGE}wriggling\l"
+	.string "Placing third is the COOLTRAINER\n"
+	.string "BELINDA, who caught a wriggling\l"
 	.string "BUTTERFREE!$"
 
 J_BugContest_Text_First2:
-	.string "Placin{SE_M_SANDSTORM}secon{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}BUGCATCHER\n"
-	.string "SHAUN{SE_M_SUPERSONIC}wh{SE_M_ATTRACT2}caugh{SE_M_SPIT_UP}{SE_M_CHARGE}writhing\l"
+	.string "Placing second is the BUGCATCHER\n"
+	.string "SHAUN, who caught a writhing\l"
 	.string "PINSIR!$"
 
 J_BugContest_Text_First3:
-	.string "Thi{SE_M_GRASSWHISTLE}Bug-Catchin{SE_M_SANDSTORM}Contes{SE_M_SPIT_UP}Winner\n"
+	.string "This Bug-Catching Contest Winner\n"
 	.string "is...\p"
-	.string "{PLAYER}{SE_M_SUPERSONIC}wh{SE_M_ATTRACT2}caugh{SE_M_SPIT_UP}{SE_M_CHARGE}whopping\n"
+	.string "{PLAYER}, who caught a whopping\n"
 	.string "{STR_VAR_1}!$"
 
 J_BugContest_Text_Second1:
-	.string "Placin{SE_M_SANDSTORM}thir{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}COOLTRAINER\n"
-	.string "BELINDA{SE_M_SUPERSONIC}wh{SE_M_ATTRACT2}caugh{SE_M_SPIT_UP}{SE_M_CHARGE}wriggling\l"
+	.string "Placing third is the COOLTRAINER\n"
+	.string "BELINDA, who caught a wriggling\l"
 	.string "BUTTERFREE!$"
 
 J_BugContest_Text_Second2:
-	.string "Placin{SE_M_SANDSTORM}secon{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}{PLAYER}{SE_M_SUPERSONIC}who\n"
-	.string "caugh{SE_M_SPIT_UP}{SE_M_CHARGE}writhin{SE_M_SANDSTORM}{STR_VAR_1}!$"
+	.string "Placing second is {PLAYER}, who\n"
+	.string "caught a writhing {STR_VAR_1}!$"
 
 J_BugContest_Text_Second3:
-	.string "Thi{SE_M_GRASSWHISTLE}Bug-Catchin{SE_M_SANDSTORM}Contes{SE_M_SPIT_UP}Winner\n"
+	.string "This Bug-Catching Contest Winner\n"
 	.string "is...\p"
-	.string "BUGCATCHE{SE_M_MINIMIZE}SHAUN{SE_M_SUPERSONIC}wh{SE_M_ATTRACT2}caugh{SE_M_SPIT_UP}a\n"
-	.string "whoppin{SE_M_SANDSTORM}PINSIR!$"
+	.string "BUGCATCHER SHAUN, who caught a\n"
+	.string "whopping PINSIR!$"
 
 J_BugContest_Text_Third1:
-	.string "Placin{SE_M_SANDSTORM}thir{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}{PLAYER}{SE_M_SUPERSONIC}who\n"
-	.string "caugh{SE_M_SPIT_UP}{SE_M_CHARGE}wrigglin{SE_M_SANDSTORM}{STR_VAR_1}!$"
+	.string "Placing third is {PLAYER}, who\n"
+	.string "caught a wriggling {STR_VAR_1}!$"
 
 J_BugContest_Text_Third2:
-	.string "Placin{SE_M_SANDSTORM}secon{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}COOLTRAINER\n"
-	.string "BELINDA{SE_M_SUPERSONIC}wh{SE_M_ATTRACT2}caugh{SE_M_SPIT_UP}{SE_M_CHARGE}writhing\l"
+	.string "Placing second is the COOLTRAINER\n"
+	.string "BELINDA, who caught a writhing\l"
 	.string "BUTTERFREE!$"
 
 J_BugContest_Text_Third3:
-	.string "Thi{SE_M_GRASSWHISTLE}Bug-Catchin{SE_M_SANDSTORM}Contes{SE_M_SPIT_UP}Winner\n"
+	.string "This Bug-Catching Contest Winner\n"
 	.string "is...\p"
-	.string "BUGCATCHE{SE_M_MINIMIZE}SHAUN{SE_M_SUPERSONIC}wh{SE_M_ATTRACT2}caugh{SE_M_SPIT_UP}a\n"
-	.string "whoppin{SE_M_SANDSTORM}PINSIR!$"
+	.string "BUGCATCHER SHAUN, who caught a\n"
+	.string "whopping PINSIR!$"
 
 J_BugContest_Text_TakePartInFuture:
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}participating!\n"
-	.string "W{SE_M_REVERSAL}hop{SE_M_REVERSAL}you'l{SE_M_BATON_PASS}tak{SE_M_REVERSAL}par{SE_M_SPIT_UP}i{SE_M_ATTRACT}the\l"
+	.string "Thank you for participating!\n"
+	.string "We hope you'll take part in the\l"
 	.string "future.$"
 
 J_BugContest_Text_TransferAndReturn:
-	.string "You{SE_M_SAND_TOMB}chose{SE_M_ATTRACT}BU{SE_M_SWAGGER}POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}now\n"
-	.string "b{SE_M_REVERSAL}sen{SE_M_SPIT_UP}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}P{SE_M_PSYBEAM}an{SE_M_WATERFALL}you{SE_M_SAND_TOMB}party\l"
-	.string "wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}returne{SE_M_WATERFALL}t{SE_M_ATTRACT2}you.$"
+	.string "Your chosen BUG POKéMON will now\n"
+	.string "be sent to the PC and your party\l"
+	.string "will be returned to you.$"
 

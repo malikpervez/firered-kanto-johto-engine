@@ -321,12 +321,12 @@ SinjohRuins_ArceusRoom_EventScript_ArceusRan::
 	end
 
 SinjohRuins_ArceusRoom_Text_CryArceus:
-	.string "ARCEUS{SE_M_HEAT_WAVE}Dodogyuuun!$"
+	.string "ARCEUS: Dodogyuuun!$"
 
 SinjohRuins_ArceusRoom_Text_CryArceus2:
-	.string "ARCEUS{SE_M_HEAT_WAVE}Dodogyuuun!\p"
-	.string "Th{SE_M_REVERSAL}ARCEU{SE_M_SKETCH}i{SE_M_GRASSWHISTLE}weakened...\n"
-	.string "Ca{SE_M_ATTRACT}b{SE_M_REVERSAL}caught?$"
+	.string "ARCEUS: Dodogyuuun!\p"
+	.string "The ARCEUS is weakened...\n"
+	.string "Can be caught?$"
 
 SinjohRuins_ArceusRoom_TriggerSteven::
 	lock
@@ -362,24 +362,24 @@ SinjohRuins_ArceusRoom_Movement_StevenWalkDown:
 	step_end
 
 SinjohRuins_ArceusRoom_Text_StevenCongrats:
-	.string "STEVEN{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}di{SE_M_WATERFALL}it{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Tha{SE_M_SPIT_UP}battl{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}breathtaking.\p"
-	.string "Seein{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}powe{SE_M_SAND_TOMB}mad{SE_M_REVERSAL}m{SE_M_REVERSAL}realize.\p"
-	.string "Th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}didn'{SE_M_SPIT_UP}sen{SE_M_WATERFALL}you\n"
-	.string "t{SE_M_ATTRACT2}hel{SE_M_MORNING_SUN}ou{SE_M_SAND_TOMB}research.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}the{SE_M_YAWN}sen{SE_M_SPIT_UP}yo{SE_M_DIVE}because\n"
-	.string "yo{SE_M_DIVE}wer{SE_M_REVERSAL}th{SE_M_REVERSAL}onl{SE_M_YAWN}on{SE_M_REVERSAL}worth{SE_M_YAWN}of\l"
-	.string "tamin{SE_M_SANDSTORM}th{SE_M_REVERSAL}legendar{SE_M_YAWN}POKéMON.\p"
-	.string "The{SE_M_YAWN}didn'{SE_M_SPIT_UP}trus{SE_M_SPIT_UP}m{SE_M_YAWN}tea{SE_M_MILK_DRINK}an{SE_M_WATERFALL}I\n"
-	.string "t{SE_M_ATTRACT2}handl{SE_M_REVERSAL}it.\p"
-	.string "An{SE_M_WATERFALL}afte{SE_M_SAND_TOMB}wha{SE_M_SPIT_UP}I'v{SE_M_REVERSAL}jus{SE_M_SPIT_UP}seen...\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}the{SE_M_YAWN}wer{SE_M_REVERSAL}right.\p"
-	.string "I'v{SE_M_REVERSAL}brough{SE_M_SPIT_UP}{SE_M_CHARGE}lo{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}unwanted\n"
-	.string "attentio{SE_M_ATTRACT}t{SE_M_ATTRACT2}thi{SE_M_GRASSWHISTLE}town.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}I'l{SE_M_BATON_PASS}spen{SE_M_WATERFALL}som{SE_M_REVERSAL}time\n"
-	.string "wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}locals.\p"
-	.string "Afte{SE_M_SAND_TOMB}al{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}this{SE_M_SUPERSONIC}yo{SE_M_DIVE}an{SE_M_WATERFALL}your\n"
-	.string "POKéMO{SE_M_PSYBEAM2}deserv{SE_M_REVERSAL}som{SE_M_REVERSAL}rest.\p"
-	.string "I'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}villag{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}nee{SE_M_WATERFALL}me.\p"
-	.string "Fufufu{SE_M_SUPERSONIC}wha{SE_M_SPIT_UP}coul{SE_M_WATERFALL}yo{SE_M_DIVE}nee{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}me?$"
+	.string "STEVEN: You did it, {PLAYER}!\p"
+	.string "That battle was breathtaking.\p"
+	.string "Seeing your power made me realize.\p"
+	.string "The KIMONO GIRLS didn't send you\n"
+	.string "to help our research.\p"
+	.string "I think they sent you because\n"
+	.string "you were the only one worthy of\l"
+	.string "taming the legendary POKéMON.\p"
+	.string "They didn't trust my team and I\n"
+	.string "to handle it.\p"
+	.string "And after what I've just seen...\p"
+	.string "I think they were right.\p"
+	.string "I've brought a lot of unwanted\n"
+	.string "attention to this town.\p"
+	.string "I think I'll spend some time\n"
+	.string "with the locals.\p"
+	.string "After all of this, you and your\n"
+	.string "POKéMON deserve some rest.\p"
+	.string "I'll be at the village if you need me.\p"
+	.string "Fufufu, what could you need from me?$"
 

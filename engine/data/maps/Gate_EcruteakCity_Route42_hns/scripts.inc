@@ -12,8 +12,8 @@ Gate_EcruteakCity_Route42_EventScript_Policeman::
 	end
 
 Route42_Text_EcruteakGateOfficer:
-	.string "MT.MORTA{SE_M_MINIMIZE}i{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}{SE_M_CHARGE}maze\n"
+	.string "MT.MORTAR is like a maze\n"
 	.string "inside.\p"
-	.string "B{SE_M_REVERSAL}careful{SE_M_PERISH_SONG}Don'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}lost\n"
-	.string "i{SE_M_ATTRACT}there.$"
+	.string "Be careful. Don't get lost\n"
+	.string "in there.$"
 

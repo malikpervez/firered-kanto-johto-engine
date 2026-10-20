@@ -183,75 +183,75 @@ SafariZoneGate_SafariZoneEntrance_EventScript_Test::
 	end
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBeachDone:
-	.string "Than{SE_M_ENCORE2}you{SE_M_SUPERSONIC}{PLAYER}!\n"
-	.string "Here{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}mone{SE_M_YAWN}t{SE_M_ATTRACT2}upgrade\l"
-	.string "you{SE_M_SAND_TOMB}SAFAR{SE_M_HEAL_BELL}LEVE{SE_M_BRICK_BREAK}an{SE_M_WATERFALL}sho{SE_M_TWISTER}m{SE_M_REVERSAL}an\l"
-	.string "exoti{SE_M_HYPER_BEAM}POKéMO{SE_M_PSYBEAM2}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}BRUS{SE_M_SWAGGER2}area\l"
+	.string "Thank you, {PLAYER}!\n"
+	.string "Here, take this money to upgrade\l"
+	.string "your SAFARI LEVEL and show me an\l"
+	.string "exotic POKéMON from the BRUSH area\l"
 	.string "next!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBrushDone:
-	.string "Than{SE_M_ENCORE2}you{SE_M_SUPERSONIC}{PLAYER}!\n"
-	.string "Here{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}mone{SE_M_YAWN}t{SE_M_ATTRACT2}upgrade\l"
-	.string "you{SE_M_SAND_TOMB}SAFAR{SE_M_HEAL_BELL}LEVE{SE_M_BRICK_BREAK}an{SE_M_WATERFALL}sho{SE_M_TWISTER}m{SE_M_REVERSAL}an\l"
-	.string "exoti{SE_M_HYPER_BEAM}POKéMO{SE_M_PSYBEAM2}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}MOUNTAIN\l"
-	.string "are{SE_M_CHARGE}next!$"
+	.string "Thank you, {PLAYER}!\n"
+	.string "Here, take this money to upgrade\l"
+	.string "your SAFARI LEVEL and show me an\l"
+	.string "exotic POKéMON from the MOUNTAIN\l"
+	.string "area next!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaMountainDone:
-	.string "Than{SE_M_ENCORE2}you{SE_M_SUPERSONIC}{PLAYER}!\n"
-	.string "Here{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}mone{SE_M_YAWN}t{SE_M_ATTRACT2}upgrade\l"
-	.string "you{SE_M_SAND_TOMB}SAFAR{SE_M_HEAL_BELL}LEVE{SE_M_BRICK_BREAK}an{SE_M_WATERFALL}sho{SE_M_TWISTER}m{SE_M_REVERSAL}an\l"
-	.string "exoti{SE_M_HYPER_BEAM}POKéMO{SE_M_PSYBEAM2}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}CAV{SE_M_SWORDS_DANCE}area\l"
+	.string "Thank you, {PLAYER}!\n"
+	.string "Here, take this money to upgrade\l"
+	.string "your SAFARI LEVEL and show me an\l"
+	.string "exotic POKéMON from the CAVE area\l"
 	.string "next!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaCaveDone:
-	.string "Than{SE_M_ENCORE2}you{SE_M_SUPERSONIC}{PLAYER}!\n"
-	.string "That'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}see.\p"
-	.string "No{SE_M_TWISTER}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}kno{SE_M_TWISTER}wha{SE_M_SPIT_UP}DEVO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}up\n"
-	.string "to{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}m{SE_M_YAWN}SAFARI\l"
-	.string "competitive{SE_M_PERISH_SONG}Here{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}a\l"
-	.string "rewar{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}troubles.$"
+	.string "Thank you, {PLAYER}!\n"
+	.string "That's all I need to see.\p"
+	.string "Now that I know what DEVON is up\n"
+	.string "to, I'll be able to keep my SAFARI\l"
+	.string "competitive. Here, take this as a\l"
+	.string "reward for your troubles.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaWrong:
-	.string "Tha{SE_M_SPIT_UP}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}right!$"
+	.string "That can't be right!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBeach:
-	.string "Ah{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}brin{SE_M_SANDSTORM}a{SE_M_ATTRACT}exoti{SE_M_HYPER_BEAM}POKéMON\n"
-	.string "fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}BEAC{SE_M_SWAGGER2}are{SE_M_CHARGE}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}FUCHSIA\l"
-	.string "SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}me?$"
+	.string "Ah, {PLAYER}!\p"
+	.string "Did you bring an exotic POKéMON\n"
+	.string "from the BEACH area of the FUCHSIA\l"
+	.string "SAFARI ZONE to show me?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBrush:
-	.string "Ah{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}brin{SE_M_SANDSTORM}a{SE_M_ATTRACT}exoti{SE_M_HYPER_BEAM}POKéMON\n"
-	.string "fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}BRUS{SE_M_SWAGGER2}are{SE_M_CHARGE}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}FUCHSIA\l"
-	.string "SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}me?$"
+	.string "Ah, {PLAYER}!\p"
+	.string "Did you bring an exotic POKéMON\n"
+	.string "from the BRUSH area of the FUCHSIA\l"
+	.string "SAFARI ZONE to show me?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaMountain:
-	.string "Ah{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}brin{SE_M_SANDSTORM}a{SE_M_ATTRACT}exoti{SE_M_HYPER_BEAM}POKéMON\n"
-	.string "fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}MOUNTAI{SE_M_PSYBEAM2}are{SE_M_CHARGE}o{SE_M_ACID_ARMOR}the\l"
-	.string "FUCHSI{SE_M_BONEMERANG}SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}me?$"
+	.string "Ah, {PLAYER}!\p"
+	.string "Did you bring an exotic POKéMON\n"
+	.string "from the MOUNTAIN area of the\l"
+	.string "FUCHSIA SAFARI ZONE to show me?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaCave:
-	.string "Ah{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}brin{SE_M_SANDSTORM}a{SE_M_ATTRACT}exoti{SE_M_HYPER_BEAM}POKéMON\n"
-	.string "fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}CAV{SE_M_SWORDS_DANCE}are{SE_M_CHARGE}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}FUCHSIA\l"
-	.string "SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}me?$"
+	.string "Ah, {PLAYER}!\p"
+	.string "Did you bring an exotic POKéMON\n"
+	.string "from the CAVE area of the FUCHSIA\l"
+	.string "SAFARI ZONE to show me?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaDeclined:
-	.string "Wha{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}{SE_M_HEAL_BELL}d{SE_M_ATTRACT2}now?\n"
-	.string "We'l{SE_M_BATON_PASS}neve{SE_M_SAND_TOMB}kee{SE_M_MORNING_SUN}u{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}DEVON!$"
+	.string "What will I do now?\n"
+	.string "We'll never keep up with DEVON!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaLastMon:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}tak{SE_M_REVERSAL}you{SE_M_SAND_TOMB}las{SE_M_SPIT_UP}POKéMON!$"
+	.string "I can't take your last POKéMON!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaDone:
-	.string "Ah{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Thank{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}you{SE_M_SUPERSONIC}th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}is\n"
+	.string "Ah, {PLAYER}!\p"
+	.string "Thanks to you, the SAFARI ZONE is\n"
 	.string "thriving!\p"
-	.string "Mayb{SE_M_REVERSAL}{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}nam{SE_M_REVERSAL}yo{SE_M_DIVE}OWNE{SE_M_MINIMIZE}of\n"
-	.string "th{SE_M_REVERSAL}safar{SE_M_TRI_ATTACK2}zone...\p"
-	.string "No{SE_M_SUPERSONIC}tha{SE_M_SPIT_UP}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}ridiculous.\n"
+	.string "Maybe I should name you OWNER of\n"
+	.string "the safari zone...\p"
+	.string "No, that would be ridiculous.\n"
 	.string "Ahahahaha.$"
 
 SafariZoneGate_SafariZoneEntrance_EventScript_EntranceCounterTrigger::
@@ -382,48 +382,48 @@ SafariZoneGate_SafariZoneEntrance_Movement_ReturnToTable:
 	step_end
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaWelcome:
-	.string "H{SE_M_TRI_ATTACK2}{PLAYER}!\n"
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you.\n"
-	.string "Wha{SE_M_SPIT_UP}d{SE_M_ATTRACT2}yo{SE_M_DIVE}think?\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bran{SE_M_WATERFALL}ne{SE_M_TWISTER}SAFAR{SE_M_HEAL_BELL}ZONE\n"
-	.string "b{SE_M_YAWN}th{SE_M_REVERSAL}way...\p"
-	.string "An{SE_M_WATERFALL}it'{SE_M_GRASSWHISTLE}stil{SE_M_BATON_PASS}expanding!\p"
-	.string "S{SE_M_ATTRACT2}far{SE_M_SUPERSONIC}w{SE_M_REVERSAL}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}zone{SE_M_GRASSWHISTLE}open\n"
-	.string "an{SE_M_WATERFALL}{SE_M_WHIRLPOOL}mor{SE_M_REVERSAL}o{SE_M_ATTRACT}th{SE_M_REVERSAL}way!\p"
-	.string "Enjo{SE_M_YAWN}th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZONE{SE_M_DRAGON_RAGE}I'll\n"
-	.string "cal{SE_M_BATON_PASS}yo{SE_M_DIVE}whe{SE_M_ATTRACT}th{SE_M_REVERSAL}othe{SE_M_SAND_TOMB}zones\l"
-	.string "ar{SE_M_REVERSAL}ready!$"
+	.string "Hi {PLAYER}!\n"
+	.string "I've been waiting for you.\l"
+	.string "What do you think?\p"
+	.string "This is a brand new SAFARI ZONE\n"
+	.string "by the way...\p"
+	.string "And it's still expanding!\p"
+	.string "So far, we have two zones open\n"
+	.string "and 4 more on the way!\p"
+	.string "Enjoy the SAFARI ZONE! I'll\n"
+	.string "call you when the other zones\l"
+	.string "are ready!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaPokeblocks:
-	.string "Oh{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}almos{SE_M_SPIT_UP}forgot.\p"
-	.string "POKéBLOCK{SE_M_SKETCH}ar{SE_M_REVERSAL}a{SE_M_ATTRACT}essential\n"
-	.string "featur{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}SAFAR{SE_M_HEAL_BELL}ZONE{SE_M_SUPERSONIC}so\l"
-	.string "you'{SE_M_WATERFALL}bette{SE_M_SAND_TOMB}hav{SE_M_REVERSAL}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}these!$"
+	.string "Oh! I almost forgot.\p"
+	.string "POKéBLOCKS are an essential\n"
+	.string "feature of my SAFARI ZONE, so\l"
+	.string "you'd better have one of these!$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Baoba:
-	.string "H{SE_M_TRI_ATTACK2}{PLAYER}!\p"
-	.string "Ho{SE_M_TWISTER}ar{SE_M_REVERSAL}yo{SE_M_DIVE}enjoyin{SE_M_SANDSTORM}th{SE_M_REVERSAL}SAFARI\n"
+	.string "Hi {PLAYER}!\p"
+	.string "How are you enjoying the SAFARI\n"
 	.string "ZONE?$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Boy:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}abou{SE_M_SPIT_UP}POKéBLOCK\n"
+	.string "Do you know about POKéBLOCK\n"
 	.string "feeders?\p"
-	.string "Puttin{SE_M_SANDSTORM}{SE_M_CHARGE}POKéBLOC{SE_M_SNORE}i{SE_M_ATTRACT}th{SE_M_REVERSAL}feeder\n"
-	.string "bring{SE_M_GRASSWHISTLE}ou{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}HIDDEN\l"
+	.string "Putting a POKéBLOCK in the feeder\n"
+	.string "brings out POKéMON with HIDDEN\l"
 	.string "ABILITIES!\p"
-	.string "Th{SE_M_REVERSAL}typ{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}POKéBLOC{SE_M_SNORE}als{SE_M_ATTRACT2}affects\n"
-	.string "th{SE_M_REVERSAL}POKéMON'{SE_M_GRASSWHISTLE}nature.\p"
-	.string "An{SE_M_WATERFALL}bes{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}all{SE_M_SUPERSONIC}th{SE_M_REVERSAL}typ{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}POKéBLOCK\n"
-	.string "yo{SE_M_DIVE}us{SE_M_REVERSAL}ca{SE_M_ATTRACT}attrac{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}with\l"
-	.string "perfec{SE_M_SPIT_UP}IVs!\p"
-	.string "Thos{SE_M_REVERSAL}chart{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}th{SE_M_REVERSAL}wal{SE_M_BATON_PASS}hav{SE_M_REVERSAL}all\n"
-	.string "th{SE_M_REVERSAL}details.$"
+	.string "The type of POKéBLOCK also affects\n"
+	.string "the POKéMON's nature.\p"
+	.string "And best of all, the type of POKéBLOCK\n"
+	.string "you use can attract POKéMON with\l"
+	.string "perfect IVs!\p"
+	.string "Those charts on the wall have all\n"
+	.string "the details.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_BoyGiveCase:
-	.string "Here{SE_M_SUPERSONIC}yo{SE_M_DIVE}see{SE_M_MILK_DRINK}lik{SE_M_REVERSAL}yo{SE_M_DIVE}nee{SE_M_WATERFALL}this.$"
+	.string "Here, you seem like you need this.$"
 
 SafariZoneGate_SafariZoneEntrance_Text_Engineer:
-	.string "Sorr{SE_M_YAWN}Trainer{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}are{SE_M_CHARGE}i{SE_M_GRASSWHISTLE}still\n"
-	.string "unde{SE_M_SAND_TOMB}construction{SE_M_PERISH_SONG}Chec{SE_M_ENCORE2}back\l"
+	.string "Sorry Trainer, this area is still\n"
+	.string "under construction. Check back\l"
 	.string "later!$"
 

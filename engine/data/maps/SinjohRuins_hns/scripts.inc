@@ -160,21 +160,21 @@ SinjohRuins_StairsScene::
 	end
 
 SinjohRuins_Text_StevenGotoStairs1:
-	.string "STEVEN{SE_M_HEAT_WAVE}Thi{SE_M_GRASSWHISTLE}coul{SE_M_WATERFALL}onl{SE_M_YAWN}mea{SE_M_ATTRACT}on{SE_M_REVERSAL}thing.$"
+	.string "STEVEN: This could only mean one thing.$"
 
 SinjohRuins_Text_StevenGotoStairs2:
-	.string "{PLAYER}{SE_M_PERISH_SONG}W{SE_M_REVERSAL}wer{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}decipher\n"
-	.string "th{SE_M_REVERSAL}res{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}glyphs...\p"
-	.string "I{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}translatio{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}right{SE_M_SUPERSONIC}\n"
-	.string "th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}to{SE_M_MORNING_SUN}o{SE_M_ACID_ARMOR}that\l"
-	.string "staircas{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}mos{SE_M_SPIT_UP}powerful\l"
-	.string "bein{SE_M_SANDSTORM}i{SE_M_ATTRACT}th{SE_M_REVERSAL}universe.\p"
-	.string "An{SE_M_WATERFALL}i{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}dut{SE_M_YAWN}a{SE_M_GRASSWHISTLE}former\n"
-	.string "CHAMPIO{SE_M_PSYBEAM2}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}HOEN{SE_M_PSYBEAM2}LEAGUE\l"
-	.string "t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}sur{SE_M_REVERSAL}yo{SE_M_DIVE}ar{SE_M_REVERSAL}strong\l"
-	.string "enoug{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}fac{SE_M_REVERSAL}it.\p"
-	.string "Mee{SE_M_SPIT_UP}m{SE_M_REVERSAL}a{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}landing\n"
-	.string "whe{SE_M_ATTRACT}yo{SE_M_DIVE}ar{SE_M_REVERSAL}ready.$"
+	.string "{PLAYER}. We were able to decipher\n"
+	.string "the rest of the glyphs...\p"
+	.string "If the translation is right, \n"
+	.string "the POKéMON at the top of that\l"
+	.string "staircase is the most powerful\l"
+	.string "being in the universe.\p"
+	.string "And it is my duty as former\n"
+	.string "CHAMPION of the HOENN LEAGUE\l"
+	.string "to make sure you are strong\l"
+	.string "enough to face it.\p"
+	.string "Meet me at that landing\n"
+	.string "when you are ready.$"
 
 SinjohRuins_Movement_StevenGoesToStairs:
 	walk_up
@@ -331,35 +331,35 @@ SinjohRuins_EventScript_StevenBattle::
 	return
 
 SinjohRuins_Text_HealParty::
-	.string "STEVEN{SE_M_HEAT_WAVE}Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}hea{SE_M_BATON_PASS}you{SE_M_SAND_TOMB}POKéMON\n"
-	.string "befor{SE_M_REVERSAL}yo{SE_M_DIVE}go.$"
+	.string "STEVEN: Let me heal your POKéMON\n"
+	.string "before you go.$"
 
 SinjohRuins_Text_StevenAfterPlate:
-	.string "STEVEN{SE_M_HEAT_WAVE}Goo{SE_M_WATERFALL}luck{SE_M_SUPERSONIC}{PLAYER}\p"
-	.string "G{SE_M_ATTRACT2}on{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}righ{SE_M_SPIT_UP}behin{SE_M_WATERFALL}you.$"
+	.string "STEVEN: Good luck, {PLAYER}\p"
+	.string "Go on, I'm right behind you.$"
 
 SinjohRuins_Text_StevenAfterBattle:
-	.string "STEVEN{SE_M_HEAT_WAVE}T{SE_M_ATTRACT2}think{SE_M_SUPERSONIC}anothe{SE_M_SAND_TOMB}traine{SE_M_SAND_TOMB}\n"
-	.string "woul{SE_M_WATERFALL}defea{SE_M_SPIT_UP}m{SE_M_REVERSAL}lik{SE_M_REVERSAL}this.\p"
+	.string "STEVEN: To think, another trainer \n"
+	.string "would defeat me like this.\p"
 	.string "Incredible.\p"
-	.string "Tak{SE_M_REVERSAL}this{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}fina{SE_M_BATON_PASS}plate.$"
+	.string "Take this, it's the final plate.$"
 
 SinjohRuins_Text_StevenReadytoBattle:
-	.string "STEVEN{SE_M_HEAT_WAVE}{PLAYER}.\p"
-	.string "Eve{SE_M_SAND_TOMB}sinc{SE_M_REVERSAL}{SE_M_HEAL_BELL}firs{SE_M_SPIT_UP}sa{SE_M_TWISTER}the\n"
-	.string "determinatio{SE_M_ATTRACT}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}eyes,\l"
-	.string "{SE_M_HEAL_BELL}fel{SE_M_SPIT_UP}i{SE_M_SPIT_UP}woul{SE_M_WATERFALL}lea{SE_M_WATERFALL}t{SE_M_ATTRACT2}this.\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}tes{SE_M_SPIT_UP}th{SE_M_REVERSAL}bon{SE_M_WATERFALL}betwee{SE_M_ATTRACT}you\n"
-	.string "an{SE_M_WATERFALL}you{SE_M_SAND_TOMB}POKéMON.\p"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}ready?$"
+	.string "STEVEN: {PLAYER}.\p"
+	.string "Ever since I first saw the\n"
+	.string "determination in your eyes,\l"
+	.string "I felt it would lead to this.\p"
+	.string "I will test the bond between you\n"
+	.string "and your POKéMON.\p"
+	.string "Are you ready?$"
 
 SinjohRuins_Text_ChallengeSteven:
-	.string "Okay{SE_M_SUPERSONIC}{PLAYER}{KUN}{SE_M_SUPERSONIC}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}mount\n"
-	.string "{SE_M_CHARGE}seriou{SE_M_GRASSWHISTLE}challenge{SE_M_SUPERSONIC}expec{SE_M_SPIT_UP}th{SE_M_REVERSAL}worst!$"
+	.string "Okay, {PLAYER}{KUN}, if you're going to mount\n"
+	.string "a serious challenge, expect the worst!$"
 
 SinjohRuins_Text_StevenDefeat:
 	.string "You...\n"
-	.string "Yo{SE_M_DIVE}ar{SE_M_REVERSAL}ready.$"
+	.string "You are ready.$"
 
 SinjohRuins_EventScript_Steven::
 	msgbox SinjohRuins_Text_StevenAfterPlate, MSGBOX_NPC
@@ -370,5 +370,5 @@ SinjohRuins_EventScript_Sign::
 	end
 
 SinjohRuins_Text_Sign:
-	.string "SINJO{SE_M_SWAGGER2}RUINS$"
+	.string "SINJOH RUINS$"
 

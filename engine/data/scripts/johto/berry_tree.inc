@@ -63,16 +63,16 @@ J_BerryTree_EventScript_ItemUseWailmerPail::
 	end
 
 J_BerryTree_Text_Hns_NotRipe:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}BERR{SE_M_MOONLIGHT}tree!\n"
-	.string "Thes{SE_M_REVERSAL}BERRIE{SE_M_SKETCH}aren'{SE_M_SPIT_UP}rip{SE_M_REVERSAL}yet.$"
+	.string "It's a BERRY tree!\n"
+	.string "These BERRIES aren't ripe yet.$"
 
 J_BerryTree_Text_Hns_Picked:
-	.string "{PLAYER} picke{SE_M_WATERFALL}th{SE_M_REVERSAL}{STR_VAR_2} {STR_VAR_1}.$"
+	.string "{PLAYER} picked the {STR_VAR_2} {STR_VAR_1}.$"
 
 J_BerryTree_Text_Hns_BagFull:
-	.string "Th{SE_M_REVERSAL}BAG'{SE_M_GRASSWHISTLE}BERRIE{SE_M_SKETCH}POCKE{SE_M_SWIFT}i{SE_M_GRASSWHISTLE}full.\p"
-	.string "Th{SE_M_REVERSAL}{STR_VAR_1} couldn'{SE_M_SPIT_UP}b{SE_M_REVERSAL}taken.$"
+	.string "The BAG's BERRIES POCKET is full.\p"
+	.string "The {STR_VAR_1} couldn't be taken.$"
 
 J_BerryTree_Text_Hns_Sprouted:
-	.string "Th{SE_M_REVERSAL}berr{SE_M_YAWN}tre{SE_M_REVERSAL}suddenl{SE_M_YAWN}sprouted!$"
+	.string "The berry tree suddenly sprouted!$"
 

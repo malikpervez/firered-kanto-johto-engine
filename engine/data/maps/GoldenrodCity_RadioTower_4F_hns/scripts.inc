@@ -87,102 +87,102 @@ GoldenrodCity_RadioTower_4F4_EventScript_Meowth::
 	end
 
 GoldenrodCity_RadioTower_4F4_Text_Proton_Seen:
-	.string "PROTON{SE_M_HEAT_WAVE}No{SE_M_TWISTER}wai{SE_M_SPIT_UP}jus{SE_M_SPIT_UP}on{SE_M_REVERSAL}second!\p"
-	.string "Aren'{SE_M_SPIT_UP}yo{SE_M_DIVE}th{SE_M_REVERSAL}on{SE_M_REVERSAL}wh{SE_M_ATTRACT2}go{SE_M_SPIT_UP}i{SE_M_ATTRACT}our\n"
-	.string "wa{SE_M_YAWN}a{SE_M_SPIT_UP}SLOWPOK{SE_M_SWORDS_DANCE}WELL?\p"
-	.string "{SE_M_HEAL_BELL}see..{SE_M_PERISH_SONG}You'r{SE_M_REVERSAL}doin{SE_M_SANDSTORM}al{SE_M_BATON_PASS}this\n"
-	.string "becaus{SE_M_REVERSAL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}m{SE_M_REVERSAL}angry.\l"
-	.string "B{SE_M_REVERSAL}careful!\p"
-	.string "Bu{SE_M_SPIT_UP}sinc{SE_M_REVERSAL}yo{SE_M_DIVE}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}wis{SE_M_TRI_ATTACK}it{SE_M_SUPERSONIC}I'll\n"
-	.string "sho{SE_M_TWISTER}yo{SE_M_DIVE}th{SE_M_REVERSAL}ful{SE_M_BATON_PASS}exten{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}TEAM\l"
-	.string "ROCKE{SE_M_SWIFT}EXECUTIVE'{SE_M_GRASSWHISTLE}wrath!$"
+	.string "PROTON: Now wait just one second!\p"
+	.string "Aren't you the one who got in our\n"
+	.string "way at SLOWPOKE WELL?\p"
+	.string "I see... You're doing all this\n"
+	.string "because you want to make me angry.\l"
+	.string "Be careful!\p"
+	.string "But since you seem to wish it, I'll\n"
+	.string "show you the full extent of a TEAM\l"
+	.string "ROCKET EXECUTIVE's wrath!$"
 
 GoldenrodCity_RadioTower_4F4_Text_Proton_Beaten:
 	.string "Phew...$"
 
 GoldenrodCity_RadioTower_4F4_Text_Proton_After:
-	.string "PROTON{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}ma{SE_M_YAWN}hav{SE_M_REVERSAL}wo{SE_M_ATTRACT}this\n"
-	.string "time..{SE_M_PERISH_SONG}Bu{SE_M_SPIT_UP}al{SE_M_BATON_PASS}yo{SE_M_DIVE}di{SE_M_WATERFALL}wa{SE_M_GRASSWHISTLE}make\p"
-	.string "TEA{SE_M_GIGA_DRAIN}ROCKET'{SE_M_GRASSWHISTLE}wrat{SE_M_TRI_ATTACK}grow.$"
+	.string "PROTON: You may have won this\n"
+	.string "time... But all you did was make\p"
+	.string "TEAM ROCKET's wrath grow.$"
 
 GoldenrodCity_RadioTower_4F4_Text_Fisher:
-	.string "{SE_M_HEAL_BELL}listene{SE_M_WATERFALL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}radi{SE_M_ATTRACT2}whil{SE_M_REVERSAL}{SE_M_HEAL_BELL}was\n"
-	.string "a{SE_M_SPIT_UP}th{SE_M_REVERSAL}RUINS.\p"
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}{SE_M_CHARGE}strang{SE_M_REVERSAL}broadcas{SE_M_SPIT_UP}there.$"
+	.string "I listened to the radio while I was\n"
+	.string "at the RUINS.\p"
+	.string "I heard a strange broadcast there.$"
 
 GoldenrodCity_RadioTower_4F4_Text_DJMary:
-	.string "MARY{SE_M_HEAT_WAVE}Why{SE_M_SING}Wh{SE_M_YAWN}d{SE_M_ATTRACT2}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}suffer\n"
-	.string "throug{SE_M_TRI_ATTACK}this?\p"
-	.string "MEOWTH{SE_M_SUPERSONIC}hel{SE_M_MORNING_SUN}me!$"
+	.string "MARY: Why? Why do I have to suffer\n"
+	.string "through this?\p"
+	.string "MEOWTH, help me!$"
 
 GoldenrodCity_RadioTower_4F4_Text_DJMaryCleared:
-	.string "MARY{SE_M_HEAT_WAVE}Oh{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}m{SE_M_YAWN}littl{SE_M_REVERSAL}savior!\p"
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}m{SE_M_YAWN}thanks?$"
+	.string "MARY: Oh! You're my little savior!\p"
+	.string "Will you take this as my thanks?$"
 
 GoldenrodCity_RadioTower_4F4_Text_DJMaryPinkBow:
-	.string "MARY{SE_M_HEAT_WAVE}It'{SE_M_GRASSWHISTLE}goo{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}dodgin{SE_M_SANDSTORM}the\n"
-	.string "enemy'{SE_M_GRASSWHISTLE}attacks.$"
+	.string "MARY: It's good for dodging the\n"
+	.string "enemy's attacks.$"
 
 GoldenrodCity_RadioTower_4F4_Text_DJMaryAfter:
-	.string "MARY{SE_M_HEAT_WAVE}Pleas{SE_M_REVERSAL}tun{SE_M_REVERSAL}int{SE_M_ATTRACT2}m{SE_M_REVERSAL}o{SE_M_ATTRACT}PROF.\n"
-	.string "OAK'{SE_M_SKETCH}POKéMO{SE_M_PSYBEAM2}TAL{SE_M_SNORE}show!$"
+	.string "MARY: Please tune into me on PROF.\n"
+	.string "OAK'S POKéMON TALK show!$"
 
 GoldenrodCity_RadioTower_4F4_Text_Meowth:
-	.string "MEOWTH{SE_M_HEAT_WAVE}Meowth…$"
+	.string "MEOWTH: Meowth…$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntM10Seen:
-	.string "Yo{SE_M_DIVE}pla{SE_M_ATTRACT}t{SE_M_ATTRACT2}rescu{SE_M_REVERSAL}th{SE_M_REVERSAL}DIRECTOR?\p"
-	.string "Tha{SE_M_SPIT_UP}won'{SE_M_SPIT_UP}b{SE_M_REVERSAL}possibl{SE_M_REVERSAL}becaus{SE_M_REVERSAL}I'm\n"
-	.string "goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}bea{SE_M_SPIT_UP}you!$"
+	.string "You plan to rescue the DIRECTOR?\p"
+	.string "That won't be possible because I'm\n"
+	.string "going to beat you!$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntM10Beaten:
-	.string "No{SE_M_DRAGON_RAGE}Unbelievable!$"
+	.string "No! Unbelievable!$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntM10After:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}believ{SE_M_REVERSAL}it{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}beaten!$"
+	.string "I don't believe it! I was beaten!$"
 
 GoldenrodCity_RadioTower_4F4_Text_ExecutiveM2Seen:
-	.string "Stop{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}know{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}TEA{SE_M_GIGA_DRAIN}ROCKET\n"
+	.string "Stop! I'm known as the TEAM ROCKET\n"
 	.string "fortress!\p"
-	.string "You'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}takin{SE_M_SANDSTORM}anothe{SE_M_SAND_TOMB}step!$"
+	.string "You're not taking another step!$"
 
 GoldenrodCity_RadioTower_4F4_Text_ExecutiveM2Beaten:
-	.string "Th{SE_M_REVERSAL}fortres{SE_M_GRASSWHISTLE}cam{SE_M_REVERSAL}down!$"
+	.string "The fortress came down!$"
 
 GoldenrodCity_RadioTower_4F4_Text_ExecutiveM2After:
-	.string "You'v{SE_M_REVERSAL}earne{SE_M_WATERFALL}m{SE_M_YAWN}respect{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}here's\n"
-	.string "som{SE_M_REVERSAL}advice.\p"
-	.string "It'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}to{SE_M_ATTRACT2}late{SE_M_PERISH_SONG}Yo{SE_M_DIVE}ca{SE_M_ATTRACT}stil{SE_M_BATON_PASS}turn\n"
+	.string "You've earned my respect, so here's\n"
+	.string "some advice.\p"
+	.string "It's not too late. You can still turn\n"
 	.string "back.$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntF4Seen:
-	.string "Don'{SE_M_SPIT_UP}{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}cute?\p"
-	.string "I'l{SE_M_BATON_PASS}thin{SE_M_ENCORE2}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}cute--\p"
-	.string "afte{SE_M_SAND_TOMB}the{SE_M_YAWN}bea{SE_M_SPIT_UP}yours!$"
+	.string "Don't I think POKéMON are cute?\p"
+	.string "I'll think my POKéMON are cute--\p"
+	.string "after they beat yours!$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntF4Beaten:
-	.string "Oh{SE_M_SUPERSONIC}no{SE_M_DRAGON_RAGE}They'r{SE_M_REVERSAL}s{SE_M_ATTRACT2}useless!$"
+	.string "Oh, no! They're so useless!$"
 
 GoldenrodCity_RadioTower_4F4_Text_GruntF4After:
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}m{SE_M_YAWN}beautifu{SE_M_BATON_PASS}self!\p"
-	.string "Wh{SE_M_ATTRACT2}care{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}POKéMON?$"
+	.string "I love my beautiful self!\p"
+	.string "Who cares about POKéMON?$"
 
 GoldenrodCity_RadioTower_4F4_Text_ScientistRichSeen:
-	.string "Mos{SE_M_SPIT_UP}excellent.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}RADI{SE_M_SOLAR_BEAM}TOWE{SE_M_MINIMIZE}wil{SE_M_BATON_PASS}fulfil{SE_M_BATON_PASS}our\n"
-	.string "gran{SE_M_WATERFALL}design.$"
+	.string "Most excellent.\p"
+	.string "This RADIO TOWER will fulfill our\n"
+	.string "grand design.$"
 
 GoldenrodCity_RadioTower_4F4_Text_ScientistRichBeaten:
 	.string "Hmmm…\p"
-	.string "Al{SE_M_BATON_PASS}gran{SE_M_WATERFALL}plan{SE_M_GRASSWHISTLE}com{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}snags.$"
+	.string "All grand plans come with snags.$"
 
 GoldenrodCity_RadioTower_4F4_Text_ScientistRichAfter:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}honestl{SE_M_YAWN}believ{SE_M_REVERSAL}yo{SE_M_DIVE}ca{SE_M_ATTRACT}stop\n"
-	.string "TEA{SE_M_GIGA_DRAIN}ROCKET?$"
+	.string "Do you honestly believe you can stop\n"
+	.string "TEAM ROCKET?$"
 
 GoldenrodCity_RadioTower_4F4_Text_ProductionSign:
-	.string "4{SE_M_LEER}PRODUCTION$"
+	.string "4F PRODUCTION$"
 
 GoldenrodCity_RadioTower_4F4_Text_Studio2Sign:
-	.string "4{SE_M_LEER}STUDI{SE_M_SOLAR_BEAM}2$"
+	.string "4F STUDIO 2$"
 

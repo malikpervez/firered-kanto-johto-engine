@@ -154,26 +154,26 @@ IcePath_B3F_Movement_StuckSwinubJump:
 	step_end
 
 IcePath_B3F_Text_Swinub:
-	.string "SWINUB{SE_M_HEAT_WAVE}Swiiiiii!$"
+	.string "SWINUB: Swiiiiii!$"
 
 IcePath_B3F_Text_SwinubBerry:
-	.string "Giv{SE_M_REVERSAL}th{SE_M_REVERSAL}SWINU{SE_M_LICK}{SE_M_CHARGE}BERRY?$"
+	.string "Give the SWINUB a BERRY?$"
 
 IcePath_B3F_Text_SwinubAteBerry:
-	.string "SWINU{SE_M_LICK}enjoye{SE_M_WATERFALL}th{SE_M_REVERSAL}ASPEA{SE_M_MINIMIZE}BERRY!$"
+	.string "SWINUB enjoyed the ASPEAR BERRY!$"
 
 IcePath_B3F_Text_SwinubTurnedAway:
-	.string "SWINU{SE_M_LICK}doesn'{SE_M_SPIT_UP}lik{SE_M_REVERSAL}it!$"
+	.string "SWINUB doesn't like it!$"
 
 IcePath_B3F_Text_Delibird:
-	.string "DELIBIRD{SE_M_HEAT_WAVE}SKWAAAAA!$"
+	.string "DELIBIRD: SKWAAAAA!$"
 
 IcePath_B3F_Text_DelibirdBerry:
-	.string "Giv{SE_M_REVERSAL}th{SE_M_REVERSAL}DELIBIR{SE_M_FAINT_ATTACK}{SE_M_CHARGE}BERRY?$"
+	.string "Give the DELIBIRD a BERRY?$"
 
 IcePath_B3F_Text_DelibirdAteBerry:
-	.string "DELIBIR{SE_M_FAINT_ATTACK}enjoye{SE_M_WATERFALL}th{SE_M_REVERSAL}ASPEA{SE_M_MINIMIZE}BERRY!$"
+	.string "DELIBIRD enjoyed the ASPEAR BERRY!$"
 
 IcePath_B3F_Text_DelibirdTurnedAway:
-	.string "DELIBIR{SE_M_FAINT_ATTACK}doesn'{SE_M_SPIT_UP}lik{SE_M_REVERSAL}it!$"
+	.string "DELIBIRD doesn't like it!$"
 

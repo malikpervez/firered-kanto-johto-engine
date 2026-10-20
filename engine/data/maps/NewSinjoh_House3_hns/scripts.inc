@@ -35,8 +35,8 @@ NewSinjoh_HauntedHouse_EventScript_TooEarly::
 	end
 
 NewSinjoh_HauntedHouse_Text_TooEarlyNoReaction:
-	.string "Yo{SE_M_DIVE}sens{SE_M_REVERSAL}a{SE_M_ATTRACT}od{SE_M_WATERFALL}presence...\p"
-	.string "Bu{SE_M_SPIT_UP}ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}reaction.$"
+	.string "You sense an odd presence...\p"
+	.string "But there is no reaction.$"
 
 NewSinjoh_HauntedHouse_EventScript_StartScary::
 	msgbox NewSinjoh_HauntedHouse_Text_StartScary, MSGBOX_AUTOCLOSE
@@ -135,8 +135,8 @@ NewSinjoh_House3_Movement_CameraPanRight:
 	step_end
 
 NewSinjoh_HauntedHouse_Text_StartScary:
-	.string "Yo{SE_M_DIVE}sens{SE_M_REVERSAL}a{SE_M_ATTRACT}od{SE_M_WATERFALL}presence...\p"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}bein{SE_M_SANDSTORM}watched?$"
+	.string "You sense an odd presence...\p"
+	.string "Are you being watched?$"
 
 NewSinjoh_HauntedHouse_EventScript_Log1::
 	msgbox NewSinjoh_HauntedHouse_Text_Log1, MSGBOX_SIGN
@@ -151,51 +151,51 @@ NewSinjoh_HauntedHouse_EventScript_Log3::
 	end
 
 NewSinjoh_HauntedHouse_Text_Log1:
-	.string "Researc{SE_M_TRI_ATTACK}Lo{SE_M_SANDSTORM}9{SE_M_HEAT_WAVE} Septembe{SE_M_SAND_TOMB}20{SE_M_SUPERSONIC}1975\p"
-	.string "Th{SE_M_REVERSAL}day{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}gettin{SE_M_SANDSTORM}shorte{SE_M_SAND_TOMB}now\n"
-	.string "an{SE_M_WATERFALL}th{SE_M_REVERSAL}win{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}becomin{SE_M_SANDSTORM}harsh.\p"
-	.string "Th{SE_M_REVERSAL}villager{SE_M_GRASSWHISTLE}wer{SE_M_REVERSAL}quit{SE_M_REVERSAL}welcoming.\p"
-	.string "The{SE_M_YAWN}ar{SE_M_REVERSAL}allowin{SE_M_SANDSTORM}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}sta{SE_M_YAWN}here\n"
-	.string "i{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}cabi{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}winter.\p"
-	.string "I{SE_M_SPIT_UP}seem{SE_M_GRASSWHISTLE}{SE_M_CHARGE}famil{SE_M_YAWN}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}liv{SE_M_REVERSAL}here.\n"
-	.string "{SE_M_HEAL_BELL}ofte{SE_M_ATTRACT}thin{SE_M_ENCORE2}abou{SE_M_SPIT_UP}m{SE_M_YAWN}family.\p"
-	.string "Mayb{SE_M_REVERSAL}{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}hav{SE_M_REVERSAL}th{SE_M_REVERSAL}courag{SE_M_REVERSAL}to\n"
-	.string "retur{SE_M_ATTRACT}t{SE_M_ATTRACT2}the{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}spring.$"
+	.string "Research Log 9:  September 20, 1975\p"
+	.string "The days are getting shorter now\n"
+	.string "and the wind is becoming harsh.\p"
+	.string "The villagers were quite welcoming.\p"
+	.string "They are allowing me to stay here\n"
+	.string "in this cabin for the winter.\p"
+	.string "It seems a family used to live here.\n"
+	.string "I often think about my family.\p"
+	.string "Maybe I will have the courage to\n"
+	.string "return to them in the spring.$"
 
 NewSinjoh_HauntedHouse_Text_Log2:
-	.string "Researc{SE_M_TRI_ATTACK}Lo{SE_M_SANDSTORM}10{SE_M_HEAT_WAVE}Octobe{SE_M_SAND_TOMB}20{SE_M_SUPERSONIC}1975\p"
-	.string "M{SE_M_YAWN}thought{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}turne{SE_M_WATERFALL}dark.\p"
-	.string "Perhap{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}changin{SE_M_SANDSTORM}o{SE_M_ACID_ARMOR}the\n"
+	.string "Research Log 10: October 20, 1975\p"
+	.string "My thoughts have turned dark.\p"
+	.string "Perhaps it is the changing of the\n"
 	.string "seasons.\p"
-	.string "Th{SE_M_REVERSAL}villager{SE_M_GRASSWHISTLE}continu{SE_M_REVERSAL}t{SE_M_ATTRACT2}trea{SE_M_SPIT_UP}me\n"
-	.string "a{SE_M_GRASSWHISTLE}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}thei{SE_M_SAND_TOMB}own.\p"
-	.string "Bu{SE_M_SPIT_UP}th{SE_M_REVERSAL}guil{SE_M_SPIT_UP}{SE_M_HEAL_BELL}carr{SE_M_YAWN}prevent{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}from\n"
-	.string "returnin{SE_M_SANDSTORM}th{SE_M_REVERSAL}sentiment.\p"
-	.string "{SE_M_HEAL_BELL}rarel{SE_M_YAWN}leav{SE_M_REVERSAL}th{SE_M_REVERSAL}cabi{SE_M_ATTRACT}now.\p"
-	.string "An{SE_M_WATERFALL}whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}family...\n"
-	.string "Thei{SE_M_SAND_TOMB}face{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}changed...\l"
-	.string "{SE_M_HEAL_BELL}onl{SE_M_YAWN}se{SE_M_REVERSAL}th{SE_M_REVERSAL}face{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}POKéMON\l"
-	.string "tha{SE_M_SPIT_UP}wer{SE_M_REVERSAL}los{SE_M_SPIT_UP}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}ruins...\p"
-	.string "Sometime{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}are\n"
-	.string "her{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}the{SE_M_MILK_DRINK}in\l"
-	.string "reflections{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}thei{SE_M_SAND_TOMB}gaze.\p"
-	.string "Thing{SE_M_GRASSWHISTLE}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}bette{SE_M_SAND_TOMB}i{SE_M_ATTRACT}th{SE_M_REVERSAL}spring.$"
+	.string "The villagers continue to treat me\n"
+	.string "as one of their own.\p"
+	.string "But the guilt I carry prevents me from\n"
+	.string "returning the sentiment.\p"
+	.string "I rarely leave the cabin now.\p"
+	.string "And when I think of my family...\n"
+	.string "Their faces have changed...\l"
+	.string "I only see the faces of the POKéMON\l"
+	.string "that were lost at the ruins...\p"
+	.string "Sometimes I think the POKéMON are\n"
+	.string "here with me. I see them in\l"
+	.string "reflections, I feel their gaze.\p"
+	.string "Things will be better in the spring.$"
 
 NewSinjoh_HauntedHouse_Text_Log3:
-	.string "Researc{SE_M_TRI_ATTACK}Lo{SE_M_SANDSTORM}10{SE_M_HEAT_WAVE}Novembe{SE_M_SAND_TOMB}1{SE_M_SUPERSONIC}1975\p"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}alon{SE_M_REVERSAL}here.\n"
-	.string "Mayb{SE_M_REVERSAL}{SE_M_HEAL_BELL}neve{SE_M_SAND_TOMB}was.\p"
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me...\p"
-	.string "The{SE_M_YAWN}ar{SE_M_REVERSAL}angr{SE_M_YAWN}wit{SE_M_TRI_ATTACK}me{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}think.\p"
-	.string "Object{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}thrown{SE_M_SUPERSONIC}door{SE_M_GRASSWHISTLE}slam.\p"
-	.string "Heav{SE_M_YAWN}boxe{SE_M_GRASSWHISTLE}bloc{SE_M_ENCORE2}th{SE_M_REVERSAL}fron{SE_M_SPIT_UP}door.\p"
-	.string "Bu{SE_M_SPIT_UP}truthfully{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}leave\n"
-	.string "i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}wante{SE_M_WATERFALL}to.\p"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}els{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}m{SE_M_REVERSAL}now.\p"
-	.string "I'v{SE_M_REVERSAL}writte{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}famil{SE_M_YAWN}before,\n"
-	.string "bu{SE_M_SPIT_UP}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}th{SE_M_REVERSAL}onl{SE_M_YAWN}family\l"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}remember...\p"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}runnin{SE_M_SANDSTORM}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}food{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}my\n"
-	.string "guil{SE_M_SPIT_UP}outpace{SE_M_GRASSWHISTLE}m{SE_M_YAWN}hunger.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}sta{SE_M_YAWN}her{SE_M_REVERSAL}{SE_M_CHARGE}while...$"
+	.string "Research Log 10: November 1, 1975\p"
+	.string "I am not alone here.\n"
+	.string "Maybe I never was.\p"
+	.string "The POKéMON are with me...\p"
+	.string "They are angry with me, I think.\p"
+	.string "Objects are thrown, doors slam.\p"
+	.string "Heavy boxes block the front door.\p"
+	.string "But truthfully, I could leave\n"
+	.string "if I wanted to.\p"
+	.string "There is nothing else for me now.\p"
+	.string "I've written of a family before,\n"
+	.string "but the POKéMON are the only family\l"
+	.string "I can remember...\p"
+	.string "I am running out of food, but my\n"
+	.string "guilt outpaces my hunger.\p"
+	.string "I think I will stay here a while...$"
 

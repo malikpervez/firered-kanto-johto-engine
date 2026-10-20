@@ -64,36 +64,36 @@ GoldenrodDeptStore5_EventScript_Receptionist_Already::
 	end
 
 GoldenrodDeptStore_Text_5FReceptionistOhYourMon:
-	.string "Hello{SE_M_PERISH_SONG}Oh{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}POKéMON…$"
+	.string "Hello. Oh, your POKéMON…$"
 
 GoldenrodDeptStore_Text_5FReceptionistWait:
-	.string "Wait{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}alread{SE_M_YAWN}gav{SE_M_REVERSAL}yo{SE_M_DIVE}tha{SE_M_SPIT_UP}TM!$"
+	.string "Wait, I already gave you that TM!$"
 
 GoldenrodDeptStore_Text_5FReceptionistPutInSomeMoreEffort:
 	.string "Hmm…\n"
-	.string "It'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}bad{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}it'{SE_M_GRASSWHISTLE}als{SE_M_ATTRACT2}no{SE_M_SPIT_UP}good.\p"
-	.string "You{SE_M_SUPERSONIC}a{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}TRAINER{SE_M_SUPERSONIC}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}pu{SE_M_SPIT_UP}in\n"
-	.string "som{SE_M_REVERSAL}mor{SE_M_REVERSAL}effort.$"
+	.string "It's not bad, but it's also not good.\p"
+	.string "You, as the TRAINER, need to put in\n"
+	.string "some more effort.$"
 
 GoldenrodDeptStore_Text_5FReceptionistThisMoveShouldBePerfect:
-	.string "It'{SE_M_GRASSWHISTLE}ver{SE_M_YAWN}attache{SE_M_WATERFALL}t{SE_M_ATTRACT2}you.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}mov{SE_M_REVERSAL}shoul{SE_M_WATERFALL}b{SE_M_REVERSAL}perfec{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}a\n"
-	.string "pai{SE_M_SAND_TOMB}lik{SE_M_REVERSAL}you.$"
+	.string "It's very attached to you.\p"
+	.string "This move should be perfect for a\n"
+	.string "pair like you.$"
 
 GoldenrodDeptStore_Text_5FLass:
-	.string "Durin{SE_M_SANDSTORM}th{SE_M_REVERSAL}day{SE_M_SUPERSONIC}{SE_M_CHARGE}lad{SE_M_YAWN}come{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}check\n"
-	.string "ou{SE_M_SPIT_UP}POKéMON.\p"
-	.string "Sh{SE_M_REVERSAL}eve{SE_M_ATTRACT}give{SE_M_GRASSWHISTLE}awa{SE_M_YAWN}TMs!$"
+	.string "During the day, a lady comes to check\n"
+	.string "out POKéMON.\p"
+	.string "She even gives away TMs!$"
 
 GoldenrodDeptStore_Text_5FPokefanM:
-	.string "Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}renam{SE_M_REVERSAL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}yo{SE_M_DIVE}get\n"
-	.string "i{SE_M_ATTRACT}{SE_M_CHARGE}trade.\p"
-	.string "Th{SE_M_REVERSAL}nam{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}reflectio{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}the\n"
-	.string "origina{SE_M_BATON_PASS}trainer'{SE_M_GRASSWHISTLE}feeling{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}it.$"
+	.string "You can't rename a POKéMON you get\n"
+	.string "in a trade.\p"
+	.string "The name is a reflection of the\n"
+	.string "original trainer's feelings for it.$"
 
 GoldenrodDeptStore_Text_Girl:
-	.string "Th{SE_M_REVERSAL}lad{SE_M_YAWN}gav{SE_M_REVERSAL}m{SE_M_REVERSAL}RETURN!\n"
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}mus{SE_M_SPIT_UP}reall{SE_M_YAWN}lik{SE_M_REVERSAL}me!$"
+	.string "The lady gave me RETURN!\n"
+	.string "My POKéMON must really like me!$"
 
 GoldenrodDeptStore5_EventScript_Clerk::
 	lock
@@ -121,6 +121,6 @@ GoldenrodDeptStore5_Pokemart:
 	pokemartlistend
 
 GoldenrodDeptStore_Text_5FDirectory:
-	.string "Customiz{SE_M_REVERSAL}You{SE_M_SAND_TOMB}POKéMON\p"
-	.string "5{SE_M_LEER}T{SE_M_GIGA_DRAIN}CORNER$"
+	.string "Customize Your POKéMON\p"
+	.string "5F TM CORNER$"
 

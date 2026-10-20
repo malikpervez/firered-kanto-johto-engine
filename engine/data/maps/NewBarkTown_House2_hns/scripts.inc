@@ -20,11 +20,11 @@ NewBarkTown_House2_EventScript_ElmsSon::
 	end
 
 NewBarkTown_House2_Text_ElmsWife:
-	.string "Hi{SE_M_SUPERSONIC}{PLAYER}{SE_M_DRAGON_RAGE}M{SE_M_YAWN}husband'{SE_M_GRASSWHISTLE}always\n"
-	.string "s{SE_M_ATTRACT2}busy--{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}he'{SE_M_GRASSWHISTLE}OK.\p"
-	.string "Whe{SE_M_ATTRACT}he'{SE_M_GRASSWHISTLE}caugh{SE_M_SPIT_UP}u{SE_M_MORNING_SUN}i{SE_M_ATTRACT}his\n"
-	.string "POKéMO{SE_M_PSYBEAM2}research{SE_M_SUPERSONIC}h{SE_M_REVERSAL}even\l"
-	.string "forget{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}eat.$"
+	.string "Hi, {PLAYER}! My husband's always\n"
+	.string "so busy--I hope he's OK.\p"
+	.string "When he's caught up in his\n"
+	.string "POKéMON research, he even\l"
+	.string "forgets to eat.$"
 
 NewBarkTown_House2_Text_ElmsSon:
 	.byte 0xD1, 0xDC, 0xD9, 0xE2, 0x00, 0xC3, 0x00, 0xDB, 0xE6, 0xE3, 0xEB, 0x00, 0xE9, 0xE4, 0xB8, 0x00, 0xC3, 0xB4, 0xE1, 0x00, 0xDB, 0xE3, 0xDD, 0xE2, 0xDB, 0x00, 0xE8, 0xE3, 0xFE

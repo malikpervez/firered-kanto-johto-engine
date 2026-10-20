@@ -51,67 +51,67 @@ Route46_EventScript_Item_Revive::
 	end
 
 Route46_Text_HikerBaileySeen:
-	.string "Awright{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}the\n"
-	.string "powe{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}mountai{SE_M_ATTRACT}POKéMON!$"
+	.string "Awright! I'll show you the\n"
+	.string "power of mountain POKéMON!$"
 
 Route46_Text_HikerBaileyBeaten:
-	.string "Mercy{SE_M_DRAGON_RAGE}Yo{SE_M_DIVE}showe{SE_M_WATERFALL}m{SE_M_REVERSAL}your\n"
+	.string "Mercy! You showed me your\n"
 	.string "power!$"
 
 Route46_Text_HikerBaileyAfterBattle:
-	.string "It'{SE_M_GRASSWHISTLE}over{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}mind.\n"
-	.string "W{SE_M_REVERSAL}HIKER{SE_M_SKETCH}ar{SE_M_REVERSAL}lik{SE_M_REVERSAL}that.$"
+	.string "It's over. I don't mind.\n"
+	.string "We HIKERS are like that.$"
 
 Route46_Text_CamperTedSeen:
-	.string "I'{SE_M_MILK_DRINK}raisin{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}too!\p"
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?$"
+	.string "I'm raising POKéMON too!\p"
+	.string "Will you battle with me?$"
 
 Route46_Text_CamperTedBeaten:
 	.string "Wha…?$"
 
 Route46_Text_CamperTedAfterBattle:
-	.string "{SE_M_HEAL_BELL}di{SE_M_WATERFALL}m{SE_M_YAWN}bes{SE_M_SPIT_UP}bu{SE_M_SPIT_UP}cam{SE_M_REVERSAL}up\n"
+	.string "I did my best but came up\n"
 	.string "short.\p"
-	.string "N{SE_M_ATTRACT2}excuses--{SE_M_HEAL_BELL}admi{SE_M_SPIT_UP}{SE_M_HEAL_BELL}lost.$"
+	.string "No excuses--I admit I lost.$"
 
 Route46_Text_PicnickerErinSeen:
-	.string "{SE_M_HEAL_BELL}rais{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}too!\p"
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?$"
+	.string "I raise POKéMON too!\p"
+	.string "Will you battle with me?$"
 
 Route46_Text_PicnickerErinBeaten:
-	.string "Oh{SE_M_SUPERSONIC}rats!$"
+	.string "Oh, rats!$"
 
 Route46_Text_PicnickerErinAfterBattle:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}t{SE_M_ATTRACT2}man{SE_M_YAWN}GYMS{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}the\n"
-	.string "GY{SE_M_GIGA_DRAIN}i{SE_M_ATTRACT}GOLDENRO{SE_M_FAINT_ATTACK}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}favorite.\p"
-	.string "It'{SE_M_GRASSWHISTLE}fille{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}prett{SE_M_YAWN}flowers!$"
+	.string "I've been to many GYMS, but the\n"
+	.string "GYM in GOLDENROD is my favorite.\p"
+	.string "It's filled with pretty flowers!$"
 
 Route46_Text_ErinRegister:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}t{SE_M_ATTRACT2}man{SE_M_YAWN}GYMS{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}the\n"
-	.string "GY{SE_M_GIGA_DRAIN}i{SE_M_ATTRACT}GOLDENRO{SE_M_FAINT_ATTACK}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}favorite.\p"
-	.string "It'{SE_M_GRASSWHISTLE}fille{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}prett{SE_M_YAWN}flowers!$"
+	.string "I've been to many GYMS, but the\n"
+	.string "GYM in GOLDENROD is my favorite.\p"
+	.string "It's filled with pretty flowers!$"
 
 Route46_Text_ErinRematchIntro:
-	.string "{SE_M_HEAL_BELL}rais{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}too!\p"
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?$"
+	.string "I raise POKéMON too!\p"
+	.string "Will you battle with me?$"
 
 Route46_Text_ErinRematchDefeat:
-	.string "Oh{SE_M_SUPERSONIC}rats!$"
+	.string "Oh, rats!$"
 
 Route46_Text_ErinPostRematch:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}t{SE_M_ATTRACT2}man{SE_M_YAWN}GYMS{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}the\n"
-	.string "GY{SE_M_GIGA_DRAIN}i{SE_M_ATTRACT}GOLDENRO{SE_M_FAINT_ATTACK}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}favorite.\p"
-	.string "It'{SE_M_GRASSWHISTLE}fille{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}prett{SE_M_YAWN}flowers!$"
+	.string "I've been to many GYMS, but the\n"
+	.string "GYM in GOLDENROD is my favorite.\p"
+	.string "It's filled with pretty flowers!$"
 
 Route46_Text_PicnickerErin2Beaten:
-	.string "Aww{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}kee{SE_M_MORNING_SUN}losin{SE_M_SANDSTORM}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}time!\p"
-	.string "I'l{SE_M_BATON_PASS}jus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}tr{SE_M_YAWN}harder!\n"
-	.string "Anyway{SE_M_SUPERSONIC}thank{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}battling\n"
-	.string "m{SE_M_REVERSAL}agai{SE_M_ATTRACT}an{SE_M_WATERFALL}again.\p"
-	.string "Here'{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}presen{SE_M_SPIT_UP}fro{SE_M_MILK_DRINK}the\n"
-	.string "othe{SE_M_SAND_TOMB}time.$"
+	.string "Aww… I keep losing all the time!\p"
+	.string "I'll just have to try harder!\n"
+	.string "Anyway, thanks for battling\l"
+	.string "me again and again.\p"
+	.string "Here's that present from the\n"
+	.string "other time.$"
 
 Route46_Text_Sign:
-	.string "ROUT{SE_M_SWORDS_DANCE}46\n"
-	.string "MOUNTAI{SE_M_PSYBEAM2}RD{SE_M_PERISH_SONG}AHEAD$"
+	.string "ROUTE 46\n"
+	.string "MOUNTAIN RD. AHEAD$"
 

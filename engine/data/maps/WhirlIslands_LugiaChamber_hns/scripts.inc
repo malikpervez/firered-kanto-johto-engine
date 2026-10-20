@@ -341,19 +341,19 @@ WhirlIslands_LugiaChamber_EventScript_KuniAfter::
 	end
 
 WhirlIslands_LugiaChamber_Text_Kimono_AfterNotCaught:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}no{SE_M_SPIT_UP}onl{SE_M_YAWN}mad{SE_M_REVERSAL}LUGIA\n"
-	.string "appear{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}als{SE_M_ATTRACT2}defeated\l"
+	.string "You have not only made LUGIA\n"
+	.string "appear, but you have also defeated\l"
 	.string "it...\p"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}mor{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}u{SE_M_GRASSWHISTLE}to\n"
-	.string "say{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}yoursel{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}your\l"
+	.string "There is nothing more for us to\n"
+	.string "say. Take care of yourself in your\l"
 	.string "journey...$"
 
 WhirlIslands_LugiaChamber_Text_Kimono_AfterCaught:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}no{SE_M_SPIT_UP}onl{SE_M_YAWN}mad{SE_M_REVERSAL}LUGIA\n"
-	.string "appear{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}als{SE_M_ATTRACT2}caught\l"
+	.string "You have not only made LUGIA\n"
+	.string "appear, but you have also caught\l"
 	.string "it...\p"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}mor{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}u{SE_M_GRASSWHISTLE}to\n"
-	.string "say{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}yoursel{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}your\l"
+	.string "There is nothing more for us to\n"
+	.string "say. Take care of yourself in your\l"
 	.string "journey...$"
 
 WhirlIslands_LugiaChamber_Movement_CameraPanUp:
@@ -611,46 +611,46 @@ WhirlIslands_LugiaChamber_Movement_Kimono_Dance_Shift_Right2:
 	step_end
 
 WhirlIslands_LugiaChamber_Text_Zuki_Before::
-	.string "ZUKI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}LUGIA{SE_M_PERISH_SONG}$"
+	.string "ZUKI: Go, face LUGIA. $"
 
 WhirlIslands_LugiaChamber_Text_Naoko_Before::
-	.string "NAOKO{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}LUGIA{SE_M_PERISH_SONG}$"
+	.string "NAOKO: Go, face LUGIA. $"
 
 WhirlIslands_LugiaChamber_Text_Miki_Before::
-	.string "MIKI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}LUGIA{SE_M_PERISH_SONG}$"
+	.string "MIKI: Go, face LUGIA. $"
 
 WhirlIslands_LugiaChamber_Text_Sayo_Before::
-	.string "SAYO{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}LUGIA{SE_M_PERISH_SONG}$"
+	.string "SAYO: Go, face LUGIA. $"
 
 WhirlIslands_LugiaChamber_Text_Kuni_Before::
-	.string "KUNI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}LUGIA{SE_M_PERISH_SONG}$"
+	.string "KUNI: Go, face LUGIA. $"
 
 WhirlIslands_LugiaChamber_Text_Kimono_Opening::
-	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_HEAT_WAVE}That'{SE_M_GRASSWHISTLE}right.\n"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}wher{SE_M_REVERSAL}w{SE_M_REVERSAL}welcom{SE_M_REVERSAL}LUGIA.\p"
-	.string "Whe{SE_M_ATTRACT}th{SE_M_REVERSAL}danc{SE_M_REVERSAL}w{SE_M_REVERSAL}practice{SE_M_WATERFALL}many\n"
-	.string "day{SE_M_GRASSWHISTLE}become{SE_M_GRASSWHISTLE}on{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}soun{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}the\l"
-	.string "Tida{SE_M_BATON_PASS}Bel{SE_M_BATON_PASS}w{SE_M_REVERSAL}entruste{SE_M_WATERFALL}t{SE_M_ATTRACT2}you{SE_M_SUPERSONIC}then\l"
-	.string "LUGI{SE_M_BONEMERANG}shal{SE_M_BATON_PASS}com{SE_M_REVERSAL}ou{SE_M_SPIT_UP}fro{SE_M_MILK_DRINK}dee{SE_M_MORNING_SUN}within\l"
-	.string "th{SE_M_REVERSAL}waterfal{SE_M_BATON_PASS}basi{SE_M_ATTRACT}onc{SE_M_REVERSAL}again{SE_M_PERISH_SONG}$"
+	.string "KIMONO GIRL: That's right.\n"
+	.string "This is where we welcome LUGIA.\p"
+	.string "When the dance we practiced many\n"
+	.string "days becomes one with the sound of the\l"
+	.string "Tidal Bell we entrusted to you, then\l"
+	.string "LUGIA shall come out from deep within\l"
+	.string "the waterfall basin once again. $"
 
 WhirlIslands_LugiaChamber_Text_Kimono_Closing1::
-	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}indee{SE_M_WATERFALL}LUGIA...\n"
-	.string "Th{SE_M_REVERSAL}guardia{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}thes{SE_M_REVERSAL}island{SE_M_GRASSWHISTLE}from\l"
-	.string "ancien{SE_M_SPIT_UP}times..{SE_M_PERISH_SONG}\p"
-	.string "S{SE_M_ATTRACT2}man{SE_M_YAWN}hav{SE_M_REVERSAL}trie{SE_M_WATERFALL}agai{SE_M_ATTRACT}an{SE_M_WATERFALL}again,\n"
-	.string "onl{SE_M_YAWN}t{SE_M_ATTRACT2}fail...\p"
-	.string "{PLAYER}{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}hear{SE_M_SPIT_UP}i{SE_M_ATTRACT}complete\n"
-	.string "harmon{SE_M_YAWN}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}Tida{SE_M_BATON_PASS}Bel{SE_M_BATON_PASS}ha{SE_M_GRASSWHISTLE}finally\l"
-	.string "allowe{SE_M_WATERFALL}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}appear...\n"
-	.string "{PLAYER}{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}yo{SE_M_DIVE}see?\p"
-	.string "LUGIA..{SE_M_PERISH_SONG}I{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}waitin{SE_M_SANDSTORM}for\n"
-	.string "someon{SE_M_REVERSAL}lik{SE_M_REVERSAL}yo{SE_M_DIVE}al{SE_M_BATON_PASS}thi{SE_M_GRASSWHISTLE}time.\p"
-	.string "Wouldn'{SE_M_SPIT_UP}yo{SE_M_DIVE}agree{SE_M_SING}$"
+	.string "That is indeed LUGIA...\n"
+	.string "The guardian of these islands from\l"
+	.string "ancient times... \p"
+	.string "So many have tried again and again,\n"
+	.string "only to fail...\p"
+	.string "{PLAYER}, your heart in complete\n"
+	.string "harmony with the Tidal Bell has finally\l"
+	.string "allowed it to appear...\l"
+	.string "{PLAYER}, don't you see?\p"
+	.string "LUGIA... It must have been waiting for\n"
+	.string "someone like you all this time.\p"
+	.string "Wouldn't you agree? $"
 
 WhirlIslands_LugiaChamber_Text_Kimono_After::
-	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_HEAT_WAVE}You'v{SE_M_REVERSAL}prove{SE_M_ATTRACT}yourself\n"
-	.string "today{SE_M_SUPERSONIC}{PLAYER}.$"
+	.string "KIMONO GIRL: You've proven yourself\n"
+	.string "today, {PLAYER}.$"
 
 BlackTide_OnFrame:
 	map_script_2 JOHTO_VAR_TEMP_2, 1, BlackTide_FirstSafeFrame
@@ -1024,55 +1024,55 @@ BlackTide_Movement_FireStrike:
 	step_end
 
 BlackTide_Text_Attack:
-	.string "Thre{SE_M_REVERSAL}crie{SE_M_GRASSWHISTLE}cu{SE_M_SPIT_UP}throug{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}cave.\pTh{SE_M_REVERSAL}bird{SE_M_GRASSWHISTLE}strik{SE_M_REVERSAL}i{SE_M_ATTRACT}{SE_M_CHARGE}cruel\npattern{SE_M_PERISH_SONG}LUGI{SE_M_BONEMERANG}turn{SE_M_GRASSWHISTLE}awa{SE_M_YAWN}from\lth{SE_M_REVERSAL}inhabite{SE_M_WATERFALL}coast.\pI{SE_M_SPIT_UP}shield{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}frightene{SE_M_WATERFALL}POKéMON\nfro{SE_M_MILK_DRINK}fallin{SE_M_SANDSTORM}stone.$"
+	.string "Three cries cut through the cave.\pThe birds strike in a cruel\npattern. LUGIA turns away from\lthe inhabited coast.\pIt shields the frightened POKéMON\nfrom falling stone.$"
 
 BlackTide_Text_Technician:
-	.string "ROCKE{SE_M_SWIFT}TECHNICIAN{SE_M_HEAT_WAVE}First{SE_M_SUPERSONIC}make\ni{SE_M_SPIT_UP}angry{SE_M_PERISH_SONG}The{SE_M_ATTRACT}kee{SE_M_MORNING_SUN}i{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}way.\pThre{SE_M_REVERSAL}manufacture{SE_M_WATERFALL}specimens.\nThre{SE_M_REVERSAL}links{SE_M_PERISH_SONG}N{SE_M_ATTRACT2}orde{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}retreat!$"
+	.string "ROCKET TECHNICIAN: First, make\nit angry. Then keep it that way.\pThree manufactured specimens.\nThree links. No order to retreat!$"
 
 BlackTide_Text_Transformation:
-	.string "Th{SE_M_REVERSAL}attack{SE_M_GRASSWHISTLE}follo{SE_M_TWISTER}on{SE_M_REVERSAL}las{SE_M_SPIT_UP}pulse.\nLUGIA'{SE_M_GRASSWHISTLE}colo{SE_M_SAND_TOMB}darkens!\pIt{SE_M_GRASSWHISTLE}cr{SE_M_YAWN}shake{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}water.\nTh{SE_M_REVERSAL}technicia{SE_M_ATTRACT}slip{SE_M_GRASSWHISTLE}away.$"
+	.string "The attacks follow one last pulse.\nLUGIA's color darkens!\pIts cry shakes the water.\nThe technician slips away.$"
 
 BlackTide_Text_ThreeLinks:
-	.string "Th{SE_M_REVERSAL}replica{SE_M_GRASSWHISTLE}guar{SE_M_WATERFALL}thre{SE_M_REVERSAL}relays.\nSto{SE_M_MORNING_SUN}the{SE_M_MILK_DRINK}i{SE_M_ATTRACT}an{SE_M_YAWN}order.\pDefea{SE_M_SPIT_UP}o{SE_M_SAND_TOMB}catc{SE_M_TRI_ATTACK}eac{SE_M_TRI_ATTACK}replica\nt{SE_M_ATTRACT2}brea{SE_M_ENCORE2}ROCKET'{SE_M_GRASSWHISTLE}contro{SE_M_BATON_PASS}links.\pYo{SE_M_DIVE}ca{SE_M_ATTRACT}leav{SE_M_REVERSAL}t{SE_M_ATTRACT2}hea{SE_M_BATON_PASS}o{SE_M_SAND_TOMB}save.\nTher{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}countdown.$"
+	.string "The replicas guard three relays.\nStop them in any order.\pDefeat or catch each replica\nto break ROCKET's control links.\pYou can leave to heal or save.\nThere is no countdown.$"
 
 BlackTide_Text_Articuno:
-	.string "Yo{SE_M_DIVE}guid{SE_M_REVERSAL}{SE_M_CHARGE}frightene{SE_M_WATERFALL}POKéMON\nbehin{SE_M_WATERFALL}cover.\pTh{SE_M_REVERSAL}ic{SE_M_REVERSAL}replic{SE_M_CHARGE}follow{SE_M_GRASSWHISTLE}{SE_M_CHARGE}light.\nI{SE_M_SPIT_UP}attack{SE_M_GRASSWHISTLE}befor{SE_M_REVERSAL}th{SE_M_REVERSAL}nex{SE_M_SPIT_UP}pulse!$"
+	.string "You guide a frightened POKéMON\nbehind cover.\pThe ice replica follows a light.\nIt attacks before the next pulse!$"
 
 BlackTide_Text_Zapdos:
-	.string "Eac{SE_M_TRI_ATTACK}flas{SE_M_TRI_ATTACK}make{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}rela{SE_M_YAWN}answer.\nTh{SE_M_REVERSAL}answe{SE_M_SAND_TOMB}trigger{SE_M_GRASSWHISTLE}anothe{SE_M_SAND_TOMB}flash.\pTh{SE_M_REVERSAL}electri{SE_M_HYPER_BEAM}replic{SE_M_CHARGE}turn{SE_M_GRASSWHISTLE}toward\nyou{SE_M_PERISH_SONG}Yo{SE_M_DIVE}stan{SE_M_WATERFALL}you{SE_M_SAND_TOMB}ground.$"
+	.string "Each flash makes the relay answer.\nThe answer triggers another flash.\pThe electric replica turns toward\nyou. You stand your ground.$"
 
 BlackTide_Text_Moltres:
-	.string "Th{SE_M_REVERSAL}fir{SE_M_REVERSAL}replic{SE_M_CHARGE}trie{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}leave.\nIt{SE_M_GRASSWHISTLE}flame{SE_M_GRASSWHISTLE}flare{SE_M_PERISH_SONG}Th{SE_M_REVERSAL}rela{SE_M_YAWN}answers.\pI{SE_M_SPIT_UP}turn{SE_M_GRASSWHISTLE}bac{SE_M_ENCORE2}towar{SE_M_WATERFALL}you!$"
+	.string "The fire replica tries to leave.\nIts flames flare. The relay answers.\pIt turns back toward you!$"
 
 BlackTide_Text_ReplicaWon:
-	.string "Th{SE_M_REVERSAL}conditionin{SE_M_SANDSTORM}breaks.\nTh{SE_M_REVERSAL}bird'{SE_M_GRASSWHISTLE}colo{SE_M_SAND_TOMB}returns.\pI{SE_M_SPIT_UP}withdraw{SE_M_GRASSWHISTLE}safely.\nOn{SE_M_REVERSAL}contro{SE_M_BATON_PASS}lin{SE_M_ENCORE2}i{SE_M_GRASSWHISTLE}silent.$"
+	.string "The conditioning breaks.\nThe bird's color returns.\pIt withdraws safely.\nOne control link is silent.$"
 
 BlackTide_Text_ReplicaCaught:
-	.string "Th{SE_M_REVERSAL}conditionin{SE_M_SANDSTORM}break{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}the\ncaugh{SE_M_SPIT_UP}bird'{SE_M_GRASSWHISTLE}colo{SE_M_SAND_TOMB}returns.\pTh{SE_M_REVERSAL}rescue{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}safe.\nOn{SE_M_REVERSAL}contro{SE_M_BATON_PASS}lin{SE_M_ENCORE2}i{SE_M_GRASSWHISTLE}silent.$"
+	.string "The conditioning breaks as the\ncaught bird's color returns.\pThe rescued POKéMON is safe.\nOne control link is silent.$"
 
 BlackTide_Text_LinksBroken:
-	.string "Th{SE_M_REVERSAL}las{SE_M_SPIT_UP}rela{SE_M_YAWN}goe{SE_M_GRASSWHISTLE}dark.\nFo{SE_M_SAND_TOMB}{SE_M_CHARGE}moment{SE_M_SUPERSONIC}th{SE_M_REVERSAL}wate{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}still.\p{SE_M_BONEMERANG}dee{SE_M_MORNING_SUN}cr{SE_M_YAWN}shake{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}cavern.\nLUGI{SE_M_BONEMERANG}remain{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}th{SE_M_REVERSAL}SHADO{SE_M_DETECT}state.\pTh{SE_M_REVERSAL}link{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}gone{SE_M_PERISH_SONG}No{SE_M_TWISTER}{SE_M_CHARGE}rescue\ni{SE_M_GRASSWHISTLE}possible{SE_M_PERISH_SONG}Yo{SE_M_DIVE}ca{SE_M_ATTRACT}prepar{SE_M_REVERSAL}first.$"
+	.string "The last relay goes dark.\nFor a moment, the water is still.\pA deep cry shakes the cavern.\nLUGIA remains in the SHADOW state.\pThe links are gone. Now a rescue\nis possible. You can prepare first.$"
 
 BlackTide_Text_KimonoWait:
-	.string "Thre{SE_M_REVERSAL}replica{SE_M_GRASSWHISTLE}kee{SE_M_MORNING_SUN}ROCKET's\ncontro{SE_M_BATON_PASS}link{SE_M_GRASSWHISTLE}alive.\pSto{SE_M_MORNING_SUN}eac{SE_M_TRI_ATTACK}one{SE_M_SUPERSONIC}i{SE_M_ATTRACT}an{SE_M_YAWN}order.\nThe{SE_M_ATTRACT}w{SE_M_REVERSAL}ca{SE_M_ATTRACT}approac{SE_M_TRI_ATTACK}LUGIA.$"
+	.string "Three replicas keep ROCKET's\ncontrol links alive.\pStop each one, in any order.\nThen we can approach LUGIA.$"
 
 BlackTide_Text_KimonoOpening:
-	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_HEAT_WAVE}Th{SE_M_REVERSAL}link{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}gone.\nW{SE_M_REVERSAL}ca{SE_M_ATTRACT}cal{SE_M_BATON_PASS}t{SE_M_ATTRACT2}LUGI{SE_M_BONEMERANG}now.\pOu{SE_M_SAND_TOMB}danc{SE_M_REVERSAL}an{SE_M_WATERFALL}you{SE_M_SAND_TOMB}earne{SE_M_WATERFALL}TIDAL\nBEL{SE_M_BRICK_BREAK}wil{SE_M_BATON_PASS}giv{SE_M_REVERSAL}i{SE_M_SPIT_UP}{SE_M_CHARGE}familia{SE_M_SAND_TOMB}sound.$"
+	.string "KIMONO GIRL: The links are gone.\nWe can call to LUGIA now.\pOur dance and your earned TIDAL\nBELL will give it a familiar sound.$"
 
 BlackTide_Text_KimonoClosing:
-	.string "W{SE_M_REVERSAL}canno{SE_M_SPIT_UP}mak{SE_M_REVERSAL}LUGI{SE_M_BONEMERANG}trus{SE_M_SPIT_UP}us.\pStan{SE_M_WATERFALL}you{SE_M_SAND_TOMB}ground{SE_M_PERISH_SONG}Giv{SE_M_REVERSAL}it\nsomethin{SE_M_SANDSTORM}beside{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}attack\lt{SE_M_ATTRACT2}recognize.\pYo{SE_M_DIVE}ca{SE_M_ATTRACT}leav{SE_M_REVERSAL}t{SE_M_ATTRACT2}prepar{SE_M_REVERSAL}first.$"
+	.string "We cannot make LUGIA trust us.\pStand your ground. Give it\nsomething besides the attack\lto recognize.\pYou can leave to prepare first.$"
 
 BlackTide_Text_FaceLugia:
-	.string "Fac{SE_M_REVERSAL}SHADO{SE_M_DETECT}LUGI{SE_M_BONEMERANG}now?\pYES{SE_M_HEAT_WAVE}Fac{SE_M_REVERSAL}LUGIA.\nNO{SE_M_HEAT_WAVE}Prepar{SE_M_REVERSAL}first.$"
+	.string "Face SHADOW LUGIA now?\pYES: Face LUGIA.\nNO: Prepare first.$"
 
 BlackTide_Text_RestoredWon:
-	.string "Th{SE_M_REVERSAL}SHADO{SE_M_DETECT}colorin{SE_M_SANDSTORM}fades.\nLUGI{SE_M_BONEMERANG}i{SE_M_GRASSWHISTLE}restored.\pFo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}firs{SE_M_SPIT_UP}tim{SE_M_REVERSAL}sinc{SE_M_REVERSAL}this\nbegan{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}chos{SE_M_REVERSAL}wher{SE_M_REVERSAL}t{SE_M_ATTRACT2}go.$"
+	.string "The SHADOW coloring fades.\nLUGIA is restored.\pFor the first time since this\nbegan, it chose where to go.$"
 
 BlackTide_Text_RestoredCaught:
-	.string "Th{SE_M_REVERSAL}caugh{SE_M_SPIT_UP}LUGI{SE_M_BONEMERANG}i{SE_M_GRASSWHISTLE}restored.\nI{SE_M_SPIT_UP}ca{SE_M_ATTRACT}hea{SE_M_SAND_TOMB}mor{SE_M_REVERSAL}tha{SE_M_ATTRACT}command{SE_M_GRASSWHISTLE}now.\pTak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}it.$"
+	.string "The caught LUGIA is restored.\nIt can hear more than commands now.\pTake care of it.$"
 
 BlackTide_Text_CoastRestored:
-	.string "Th{SE_M_REVERSAL}relay{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}silent.\nTh{SE_M_REVERSAL}island{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}recovering.\pTh{SE_M_REVERSAL}guardian'{SE_M_GRASSWHISTLE}choice{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}it{SE_M_GRASSWHISTLE}own.$"
+	.string "The relays are silent.\nThe islands are recovering.\pThe guardian's choices are its own.$"
 
 WhirlIslands_LugiaChamber_EventScript_LugiaPostgame::
 	goto BlackTide_LugiaPostgame
@@ -1090,7 +1090,7 @@ BlackTide_WarningRestored:
 	return
 
 BlackTide_Text_CoastalWarning:
-	.string "Sailor{SE_M_GRASSWHISTLE}sa{SE_M_TWISTER}thre{SE_M_REVERSAL}hug{SE_M_REVERSAL}birds\ncirclin{SE_M_SANDSTORM}th{SE_M_REVERSAL}WHIR{SE_M_BRICK_BREAK}ISLANDS.\pThe{SE_M_YAWN}too{SE_M_ENCORE2}turn{SE_M_GRASSWHISTLE}striking{SE_M_SUPERSONIC}a{SE_M_GRASSWHISTLE}if\nsomeon{SE_M_REVERSAL}tol{SE_M_WATERFALL}the{SE_M_MILK_DRINK}whe{SE_M_ATTRACT}t{SE_M_ATTRACT2}attack.\pFollo{SE_M_TWISTER}you{SE_M_SAND_TOMB}earne{SE_M_WATERFALL}legendary\njourney{SE_M_PERISH_SONG}W{SE_M_REVERSAL}canno{SE_M_SPIT_UP}rus{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}sea.$"
+	.string "Sailors saw three huge birds\ncircling the WHIRL ISLANDS.\pThey took turns striking, as if\nsomeone told them when to attack.\pFollow your earned legendary\njourney. We cannot rush the sea.$"
 
 BlackTide_Keeper::
 	lockall
@@ -1111,7 +1111,7 @@ BlackTide_KeeperRestored:
 	goto BlackTide_Release
 
 BlackTide_Text_KeeperReady:
-	.string "KEEPER{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}ca{SE_M_ATTRACT}approac{SE_M_TRI_ATTACK}now.\nW{SE_M_REVERSAL}canno{SE_M_SPIT_UP}mak{SE_M_REVERSAL}LUGI{SE_M_BONEMERANG}trus{SE_M_SPIT_UP}us.\pStan{SE_M_WATERFALL}you{SE_M_SAND_TOMB}ground{SE_M_PERISH_SONG}Giv{SE_M_REVERSAL}it\nsomethin{SE_M_SANDSTORM}beside{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}attack\lt{SE_M_ATTRACT2}recognize.\pPrepar{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}lon{SE_M_SANDSTORM}a{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}need.$"
+	.string "KEEPER: We can approach now.\nWe cannot make LUGIA trust us.\pStand your ground. Give it\nsomething besides the attack\lto recognize.\pPrepare as long as you need.$"
 
 BlackTide_OnReturnToField:
 	call BlackTide_ReapplyPresentation
