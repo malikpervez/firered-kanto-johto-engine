@@ -1,33 +1,44 @@
-# FireRed Kanto → Johto engine — private 37C test snapshot
+# FireRed Kanto → Johto
 
-One trainer and collection through FireRed’s Kanto/Sevii, then HnS Johto with independent regional progression. This repository is the owner-authorized **private cloud review/testing handoff**, not a game release.
+One trainer and one collection through FireRed's Kanto and Sevii Islands, then Heart & Soul's Johto, with the
+owner's own stories (Pikachu's companion and bike, the friends' arc, Nao and the rainbow, the Rocket trio, Mewtwo
+and the Stranger, Black Tide). After the Kanto League, the road west of Indigo Plateau (League West Pass) leads down
+to Route 27 and New Bark Town; Kanto and Johto keep separate story progress.
 
-## Start here
+This is a private repository in active development. **Read [AGENTS.md](AGENTS.md) before changing anything.**
 
-- Read [AGENTS.md](AGENTS.md), [CLOUD_TESTING.md](CLOUD_TESTING.md), and the [current Claude assignment](CLAUDE.md).
-- [Start-to-finish story guide](project/docs/campaign-story-and-progression-guide.md): 19 chapters; original dialogue remains in the actual scripts under `engine/data/`.
-- [Exact source/build reference](provenance/local-build-reference.json) and [raw input manifest](provenance/engine-inputs.json).
-- [Cumulative source patch against pinned upstream](provenance/complete-upstream-to-37c.patch) and [940 changed/added file records](provenance/changed-files.json).
-- [Attribution](ATTRIBUTION.md) and [export exclusions](provenance/export-policy.json).
+## Build and test
 
-`engine/` contains the current **37C** game source and integrated runtime graphics, byte-checked against the frozen local candidate. Its upstream base is PokemonHnS-Development/pokehns-expansion commit **167aa6d537b109bb229c231ddce4616974c4da71**. It does not use the historical 35A review prompt as its baseline.
+```sh
+python3 scripts/bootstrap_upstream_inputs.py --fetch   # once: three small upstream inputs (git-ignored)
+cd engine && make -j4                                   # pokefirered.gba
+```
 
-The complete patch is preserved as raw Git patch bytes, including inherited legacy text encodings and binary asset hunks. Do not recode it as UTF-8 to inspect or apply it.
+The game is edited and tested with [pae](https://github.com/malikpervez/pkmn-asset-editor):
 
-The original 37C local ROM SHA-256 is `14ffbb4739e873eb259ce584e879c081a78ee65cdef59103f4a3e3a110265023`. That artifact is **not uploaded**. The local linker measured **781,436 ROM bytes free**, EWRAM used 255,044 and IWRAM used 25,920. Native SaveBlock1 is 15,868 / 15,872 bytes; the protected 256-byte reserve and FireRed roamer fidelity issue remain unchanged/open. Reproduce and report your own cloud results; a source hash or compilation does not certify gameplay.
+```sh
+pae doctor -p engine      # can this machine build and play-test?
+pae serve -p engine       # the editor: http://localhost:8765
+pae test run -p engine    # build, then replay every test in engine/pae_tests/
+```
 
-## Source and evidence boundaries
+## Where to look
 
-Included: current source, integrated build-input sprites/palettes and encoded title/player data, complete cumulative patch, pinned input/configuration records, existing battle-test sources, 397-fact ARM probes, project scripts and current/historical story/engineering documentation.
+* [Story guide](project/docs/campaign-story-and-progression-guide.md): 19 chapters, start to finish.
+* [AGENTS.md](AGENTS.md): how the source is organised, how to make and prove a change, and what not to touch.
+* [Attribution](ATTRIBUTION.md). Upstream base: PokemonHnS-Development/pokehns-expansion commit
+  `167aa6d537b109bb229c231ddce4616974c4da71` (pret pokeemerald → RHH pokeemerald-expansion → HnS).
+* `provenance/`, `CLOUD_TESTING.md` and the `project/` records describe the 37C review snapshot this development
+  started from.
 
-Excluded: full ROM/BIOS outputs, the three upstream embedded multiboot `.gba` inputs, emulator executables, personal/test saves, save states, private screenshots/recordings, raw reference photographs, unused/rejected asset packages, credentials, old source checkouts, generated local HTML/evidence, installed tools and every GitHub workflow. The three original embedded inputs are restored explicitly with the setup script; they stay ignored and are never committed. The full source-input manifest records the exclusions.
+## What changed since 37C
 
-The polished HTML review, its 512 private images and browser-local feedback remain on the owner’s computer. `project/scripts/review_hub/shell.html` is a **template**, not a working generated review. Cloud reviewers should use the Markdown and real engine scripts. `[LOCAL_WORKSPACE]` references in historical records identify intentionally excluded local evidence; missing screenshots are not new failed gameplay tests.
+* Hoenn, the Battle Frontier, Trainer Hill, the Battle Tents and HnS's own Kanto are gone; the event islands use
+  HnS tiles. Cries of Pokémon the game never shows play Ditto's cry (4.4 MB saved). The ROM uses about 27.1 MB.
+* Johto's scripts are ordinary source again (one file per map, readable texts and names) instead of one generated
+  7.4 MB file, and every map's `map.json` holds the events the game has.
+* The repository builds one game: the Emerald, HnS and LeafGreen targets, their code branches, 788 maps and 750
+  layout folders that the game did not have are removed. Every cleanup step built a byte-identical ROM
+  (removing the other targets' code branches changed only the line numbers that asserts embed).
 
-## Current story status
-
-Implemented source includes Nao/Ho-Oh; Mewtwo/Mew; Black Tide’s separate Rocket-created bird replicas and Shadow Lugia; Pikachu opening and optional Kanto starters; Blue/Silver’s independent arcs; Jessie/James/Meowth and the optional Celadon double battle; FG01–FG22 and 14 friend opponents; Pikachu’s permanent presentation companion, 15 reaction selectors and 37C bicycle riding; Trail/title preview assets. Current scripts and actual source gates are authoritative.
-
-The October 19 Friends dialogue/art expansion and **FG-A–FG-G are proposed, not implemented in 37C**. Friends still use 22 scene receipts and required-zero bits 0x956–0x95F. No third region or additional legendary chapter is implied. Final visual acceptance and the reports’ unexecuted branches remain separate.
-
-GitHub Actions/CI/deployment are deliberately absent and disabled. Builds/tests are manual, with logs and generated binaries under ignored `_local/`. Workstreams A/C, the separate native port, services and networking are outside this repository’s scope.
+Original upstream notices remain applicable. Personal saves and private review evidence are not in this repository.

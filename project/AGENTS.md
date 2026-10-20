@@ -1,4 +1,4 @@
-> Historical local-workspace record. Root `AGENTS.md`, `CLAUDE.md` and `CLOUD_TESTING.md` govern this current 37C cloud handoff. Local evidence links are not included.
+> Historical local-workspace record. The development rules are in the root [AGENTS.md](../AGENTS.md); local evidence links are not included.
 
 # AGENTS.md — Project FireRed Online / Workstream B
 

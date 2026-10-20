@@ -1,3 +1,7 @@
+> **History.** This was the manual verification procedure for the 37C review snapshot. Development now follows
+> [AGENTS.md](AGENTS.md): build with `make` in `engine/`, test with pae. `scripts/verify_source.py` checks the 37C
+> snapshot and reports the files changed since (expected).
+
 # Manual cloud verification
 
 This is source/build/engineering testing. A complete game playthrough or Delta/device acceptance is not established by these commands. The cloud platform itself has not been operated by the exporting agent.
