@@ -1,13 +1,8 @@
 #include "global.h"
-#ifdef FIRERED
 #include "field_control_avatar.h"
 #include "regions.h"
 #define ITEMFINDER_HIDDEN_FLAG(id) HiddenItemFlagId(id)
 #define ITEMFINDER_HNS_MAP IsJohtoCampaignMap()
-#else
-#define ITEMFINDER_HIDDEN_FLAG(id) ((id) + FLAG_HIDDEN_ITEMS_START)
-#define ITEMFINDER_HNS_MAP IS_HNS
-#endif
 #include "item_use.h"
 #include "battle.h"
 #include "battle_anim.h"

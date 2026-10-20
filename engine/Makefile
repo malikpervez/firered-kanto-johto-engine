@@ -1,32 +1,9 @@
-GAME_VERSION ?= EMERALD
-TITLE        ?= POKEMON EMER
-GAME_CODE    ?= BPEE
-BUILD_NAME   ?= emerald
-MAP_VERSION  ?= emerald
-
-ifeq (firered, $(or $(BUILD), $(MAKECMDGOALS)))
-  	GAME_VERSION 	:= FIRERED
-	TITLE       	:= POKEMON FIRE
-	GAME_CODE   	:= BPRE
-	BUILD_NAME  	:= firered
-	MAP_VERSION 	:= firered
-else
-ifeq (leafgreen, $(or $(BUILD), $(MAKECMDGOALS)))
-	GAME_VERSION 	:= LEAFGREEN
-	TITLE       	:= POKEMON LEAF
-	GAME_CODE   	:= BPGE
-	BUILD_NAME  	:= leafgreen
-	MAP_VERSION 	:= firered
-else
-ifeq (hns, $(or $(BUILD), $(MAKECMDGOALS)))
-	GAME_VERSION 	:= POKEMON_HNS
-	TITLE       	:= POKEMON HNS
-	GAME_CODE   	:= BPEE
-	BUILD_NAME  	:= hns
-	MAP_VERSION 	:= hns
-endif
-endif
-endif
+# This repository builds one game: the FireRed Kanto + Johto game. `make` and `make firered` are the same.
+GAME_VERSION := FIRERED
+TITLE        := POKEMON FIRE
+GAME_CODE    := BPRE
+BUILD_NAME   := firered
+MAP_VERSION  := firered
 
 # GBA rom header
 MAKER_CODE  := 01
@@ -163,7 +140,8 @@ INCLUDE_SCANINC_ARGS := $(INCLUDE_DIRS:%=-I %)
 ifeq ($(DEBUG),1)
 O_LEVEL ?= g
 else
-O_LEVEL ?= 2
+# this game is built with -Os (the size it is measured and tested at); `make` and pae use it without being told
+O_LEVEL ?= s
 endif
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=$(TEST) -D$(GAME_VERSION) -std=gnu17
 ifeq ($(RELEASE),1)
@@ -192,10 +170,6 @@ ifeq ($(UNUSED_ERROR),0)
   ifneq ($(GITHUB_REPOSITORY_OWNER),rh-hideout)
     override CFLAGS += -Wno-error=unused-variable -Wno-error=unused-const-variable -Wno-error=unused-parameter -Wno-error=unused-function -Wno-error=unused-but-set-parameter -Wno-error=unused-but-set-variable -Wno-error=unused-value -Wno-error=unused-local-typedefs
   endif
-endif
-
-ifeq ($(GAME_VERSION),POKEMON_HNS)
-  override CFLAGS += -Wno-error=override-init
 endif
 
 ifeq ($(DEPRECATED_ERROR),0)
@@ -574,13 +548,14 @@ $(LEARNSET_HELPERS_BUILD_DIR):
 $(ALL_LEARNABLES_JSON):  | $(wildcard $(LEARNSET_HELPERS_DATA_DIR)/*.json)
 	python3 $(LEARNSET_HELPERS_DIR)/make_learnables.py $(LEARNSET_HELPERS_DATA_DIR) $@
 
-$(ALL_TUTORS_JSON): $(shell find data/ -type f -name '*.inc')  $(LEARNSET_HELPERS_DIR)/make_tutors.py | $(LEARNSET_HELPERS_BUILD_DIR)
+$(ALL_TUTORS_JSON): $(shell find data/ -type f -name '*.inc')  $(LEARNSET_HELPERS_DIR)/make_tutors.py $(DATA_SRC_SUBDIR)/pokemon/extra_tutor_moves.json | $(LEARNSET_HELPERS_BUILD_DIR)
 	python3 $(LEARNSET_HELPERS_DIR)/make_tutors.py $@
 
 $(ALL_TEACHING_TYPES_JSON): $(wildcard $(DATA_SRC_SUBDIR)/pokemon/species_info/*_families.h)  $(LEARNSET_HELPERS_DIR)/make_teaching_types.py | $(LEARNSET_HELPERS_BUILD_DIR)
 	python3 $(LEARNSET_HELPERS_DIR)/make_teaching_types.py $@
 
-$(DATA_SRC_SUBDIR)/pokemon/teachable_learnsets.h: $(TEACHABLE_DEPS) | $(ALL_TUTORS_JSON) $(ALL_TEACHING_TYPES_JSON)
+# the tutor and teaching-type lists are real inputs: a changed tutor script changes the learnsets
+$(DATA_SRC_SUBDIR)/pokemon/teachable_learnsets.h: $(TEACHABLE_DEPS) $(ALL_TUTORS_JSON) $(ALL_TEACHING_TYPES_JSON)
 	python3 $(LEARNSET_HELPERS_DIR)/make_teachables.py --build $(GAME_VERSION) $(LEARNSET_HELPERS_BUILD_DIR)
 
 $(DATA_SRC_SUBDIR)/tutor_moves.h: $(DATA_SRC_SUBDIR)/pokemon/special_movesets.json | $(ALL_TUTORS_JSON)
@@ -616,10 +591,7 @@ $(ROM): $(ELF)
 	$(OBJCOPY) -O binary $< $@
 	$(FIX) $@ -p --silent
 
-emerald: all
 firered: all
-leafgreen: all
-hns: all
 # Symbol file (`make syms`)
 $(SYM): $(ELF)
 	$(OBJDUMP) -t $< | sort -u | grep -E "^0[2389]" | $(PERL) -p -e 's/^(\w{8}) (\w).{6} \S+\t(\w{8}) (\S+)$$/\1 \2 \3 \4/g' > $@

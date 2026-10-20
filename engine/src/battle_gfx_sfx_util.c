@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "rainbow_visuals.h"
-#endif
 #include "battle.h"
 #include "battle_controllers.h"
 #include "battle_ai_main.h"
@@ -704,9 +702,7 @@ void BattleLoadMonSpriteGfx(struct Pokemon *mon, enum BattlerId battler)
                              gMonSpritesGfxPtr->spritesGfx[position],
                              species, personalityValue);
 
-#ifdef FIRERED
     RainbowVisuals_PatchBattleGfx(battler, species, gMonSpritesGfxPtr->spritesGfx[position]);
-#endif
     paletteOffset = OBJ_PLTT_ID(battler);
 
     if (gBattleSpritesDataPtr->battlerData[battler].transformSpecies == SPECIES_NONE)
@@ -714,9 +710,7 @@ void BattleLoadMonSpriteGfx(struct Pokemon *mon, enum BattlerId battler)
     else
         paletteData = GetMonSpritePalFromSpeciesAndPersonality(species, isShiny, personalityValue);
 
-#ifdef FIRERED
     paletteData = RainbowVisuals_BattlePalette(battler, species, paletteData);
-#endif
     LoadPalette(paletteData, paletteOffset, PLTT_SIZE_4BPP);
     LoadPalette(paletteData, BG_PLTT_ID(8) + BG_PLTT_ID(battler), PLTT_SIZE_4BPP);
 
@@ -1052,17 +1046,13 @@ void HandleSpeciesGfxDataChange(enum BattlerId battlerAtk, enum BattlerId battle
                                  targetSpecies,
                                  personalityValue);
     }
-#ifdef FIRERED
     RainbowVisuals_PatchBattleGfx(battlerAtk, targetSpecies, gMonSpritesGfxPtr->spritesGfx[position]);
-#endif
     src = gMonSpritesGfxPtr->spritesGfx[position];
     dst = (void *)(OBJ_VRAM0 + gSprites[gBattlerSpriteIds[battlerAtk]].oam.tileNum * 32);
     DmaCopy32(3, src, dst, MON_PIC_SIZE);
     paletteOffset = OBJ_PLTT_ID(battlerAtk);
     paletteData = GetMonSpritePalFromSpeciesAndPersonality(targetSpecies, isShiny, personalityValue);
-#ifdef FIRERED
     paletteData = RainbowVisuals_BattlePalette(battlerAtk, targetSpecies, paletteData);
-#endif
     LoadPalette(paletteData, paletteOffset, PLTT_SIZE_4BPP);
 
     if (changeType == SPECIES_GFX_CHANGE_GHOST_UNVEIL)

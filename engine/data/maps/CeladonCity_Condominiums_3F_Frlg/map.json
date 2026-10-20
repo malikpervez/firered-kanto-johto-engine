@@ -90,7 +90,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 12,
+      "x": 13,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_ROOF",
@@ -171,45 +171,13 @@
       "script": "CeladonCity_Condominiums_3F_EventScript_Computer2"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 16,
-      "height": 20,
-      "primary_tileset": "gTileset_Kanto_Building_Hns",
-      "secondary_tileset": "gTileset_CeladonApartments_Hns",
-      "border_filepath": "data/layouts/CeladonCity_Apartments_3F_hns/border.bin",
-      "blockdata_filepath": "data/layouts/CeladonCity_Apartments_3F_hns/map.bin",
-      "layout_version": "hns"
-    },
-    "warp_events": [
-      {
-        "x": 2,
-        "y": 2,
-        "elevation": 3,
-        "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_2F",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 4,
-        "y": 2,
-        "elevation": 3,
-        "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_ROOF",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 13,
-        "y": 2,
-        "elevation": 3,
-        "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_ROOF",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 11,
-        "y": 2,
-        "elevation": 3,
-        "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_2F",
-        "dest_warp_id": "2"
-      }
-    ]
+  "firered_geometry": {
+    "width": 16,
+    "height": 20,
+    "primary_tileset": "gTileset_Kanto_Building_Hns",
+    "secondary_tileset": "gTileset_CeladonApartments_Hns",
+    "border_filepath": "data/layouts/CeladonCity_Apartments_3F_hns/border.bin",
+    "blockdata_filepath": "data/layouts/CeladonCity_Apartments_3F_hns/map.bin",
+    "layout_version": "hns"
   }
 }

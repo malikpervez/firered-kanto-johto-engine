@@ -129,10 +129,8 @@ bool32 IsEventIslandMapSecId(mapsec_u8_t mapSecId);
 u8 *GetMapName(u8 *dest, mapsec_u16_t regionMapId, u16 padLength);
 u8 *GetMapNameGeneric(u8 *dest, mapsec_u16_t mapSecId);
 u8 *GetMapNameHandleAquaHideout(u8 *dest, mapsec_u16_t mapSecId);
-#ifdef FIRERED
 bool32 IsMetLocationNamedForOrigin(mapsec_u16_t mapSecId, u8 originGame);
 u8 *GetMapNameForOrigin(u8 *dest, mapsec_u16_t mapSecId, u8 originGame);
-#endif
 mapsec_u16_t CorrectSpecialMapSecId(mapsec_u16_t mapSecId);
 void ShowRegionMapForPokedexAreaScreen(struct RegionMap *regionMap);
 void PokedexAreaScreen_UpdateRegionMapVariablesAndVideoRegs(s16 x, s16 y);

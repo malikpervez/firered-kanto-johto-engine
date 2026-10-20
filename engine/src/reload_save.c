@@ -15,13 +15,11 @@
 void ReloadSave(void)
 {
     u16 imeBackup = REG_IME;
-#ifdef FIRERED
     if (FireRedSave_IsBusy())
     {
         FireRedSave_Abort();
         return;
     }
-#endif
     REG_IME = 0;
     RegisterRamReset(RESET_EWRAM);
     ReInitializeEWRAM();
@@ -33,9 +31,6 @@ void ReloadSave(void)
     Save_ResetSaveCounters();
     LoadGameSave(SAVE_NORMAL);
     if (gSaveFileStatus == SAVE_STATUS_EMPTY
-#ifndef FIRERED
-            || gSaveFileStatus == SAVE_STATUS_CORRUPT
-#endif
         )
     {
         Sav2_ClearSetDefault();
@@ -44,12 +39,10 @@ void ReloadSave(void)
     }
     SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
     InitHeap(gHeap, HEAP_SIZE);
-#ifdef FIRERED
     if (!FireRedSave_IsLoaded())
     {
         SetMainCallback2(CB2_InitMainMenu);
         return;
     }
-#endif
     SetMainCallback2(CB2_ContinueSavedGame);
 }

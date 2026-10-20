@@ -1,6 +1,5 @@
 #include "global.h"
 
-#ifdef FIRERED
 #include "friends_visuals.h"
 #include "bg.h"
 #include "decompress.h"
@@ -304,4 +303,3 @@ bool8 FriendsVisuals_IsShowing(void)
 {
     return sHomeView != NULL;
 }
-#endif

@@ -1,10 +1,12 @@
+@ Johto (data/maps/Route42_hns/scripts.inc), as built into the FireRed game.
+
 Route42_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route42_MapScript_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route42_MapScript_OnTransition::
-	call_if_set FLAG_HIDE_ROUTE42_SUICUNE, Route42_MapScript_HideTrigger
+	call_if_set JOHTO_FLAG_HIDE_ROUTE42_SUICUNE, Route42_MapScript_HideTrigger
 	callnative SetTimeBasedEncounters
 	end
 
@@ -23,7 +25,7 @@ Route42_EventScript_Suicune_Trigger::
 	waitmovement 0
 	waitmoncry
 	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
 	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement LOCALID_ROUTE42_SUICUNE, Route42_Movement_Suicune2
 	playse SE_LEDGE
@@ -54,8 +56,8 @@ Route42_EventScript_Suicune_Trigger::
 	waitmovement 0
 	delay 60
 	removeobject LOCALID_ROUTE42_SUICUNE
-	setflag FLAG_HIDE_ROUTE42_SUICUNE
-	clearflag FLAG_HIDE_ROUTE42_EUSINE
+	setflag JOHTO_FLAG_HIDE_ROUTE42_SUICUNE
+	clearflag JOHTO_FLAG_HIDE_ROUTE42_EUSINE
 	addobject LOCALID_ROUTE42_EUSINE
 	playse SE_EXIT
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
@@ -70,15 +72,15 @@ Route42_EventScript_Suicune_Trigger::
 	closemessage
 	applymovement LOCALID_ROUTE42_EUSINE, Route42_Movement_Eusine2
 	waitmovement 0
-	setflag FLAG_HIDE_ROUTE42_EUSINE
+	setflag JOHTO_FLAG_HIDE_ROUTE42_EUSINE
 	removeobject LOCALID_ROUTE42_EUSINE
 	setvar VAR_TEMP_0, 1
-	call_if_eq VAR_SUICUNE_ENCOUNTERS, 2, Route42_EventScript_DoneJohtoSuicune
+	call_if_eq JOHTO_VAR_SUICUNE_ENCOUNTERS, 2, Route42_EventScript_DoneJohtoSuicune
 	release
 	end
 
 Route42_EventScript_DoneJohtoSuicune::
-	setvar VAR_SUICUNE_ENCOUNTERS, 3
+	setvar JOHTO_VAR_SUICUNE_ENCOUNTERS, 3
 	return
 
 Route42_Movement_Suicune1:
@@ -132,35 +134,34 @@ Route42_Movement_Eusine2:
 	step_end
 
 Route42_Text_EusineAdmireSuicune:
-	.string "EUSINE: SUICUNE...\n"
-	.string "How brave it is!\p"
-	.string "How refreshing it is!\n"
-	.string "How beautiful it is!\p"
-	.string "And how quickly it moves!$"
+	.string "EUSINE{SE_M_HEAT_WAVE}SUICUNE...\n"
+	.string "Ho{SE_M_TWISTER}brav{SE_M_REVERSAL}i{SE_M_SPIT_UP}is!\p"
+	.string "Ho{SE_M_TWISTER}refreshin{SE_M_SANDSTORM}i{SE_M_SPIT_UP}is!\n"
+	.string "Ho{SE_M_TWISTER}beautifu{SE_M_BATON_PASS}i{SE_M_SPIT_UP}is!\p"
+	.string "An{SE_M_WATERFALL}ho{SE_M_TWISTER}quickl{SE_M_YAWN}i{SE_M_SPIT_UP}moves!$"
 
 Route42_Text_EusineJealous:
 	.string "{PLAYER}!\p"
-	.string "You seem to be around where\n"
-	.string "SUICUNE would appear.\p"
-	.string "Well, that's OK.\l"
-	.string "My desire to search for\n"
-	.string "SUICUNE is far beyond yours...\p"
-	.string "My grandpa was... quite into\n"
+	.string "Yo{SE_M_DIVE}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}aroun{SE_M_WATERFALL}where\n"
+	.string "SUICUN{SE_M_SWORDS_DANCE}woul{SE_M_WATERFALL}appear.\p"
+	.string "Well{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}OK.\l"
+	.string "M{SE_M_YAWN}desir{SE_M_REVERSAL}t{SE_M_ATTRACT2}searc{SE_M_TRI_ATTACK}for\n"
+	.string "SUICUN{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}fa{SE_M_SAND_TOMB}beyon{SE_M_WATERFALL}yours...\p"
+	.string "M{SE_M_YAWN}grandp{SE_M_CHARGE}was..{SE_M_PERISH_SONG}quit{SE_M_REVERSAL}into\n"
 	.string "myths.\p"
-	.string "I've heard so many stories\n"
-	.string "about SUICUNE from him.$"
+	.string "I'v{SE_M_REVERSAL}hear{SE_M_WATERFALL}s{SE_M_ATTRACT2}man{SE_M_YAWN}stories\n"
+	.string "abou{SE_M_SPIT_UP}SUICUN{SE_M_SWORDS_DANCE}fro{SE_M_MILK_DRINK}him.$"
 
 Route42_Text_EusineWontGiveUp:
 	.string "SUICUNE...\n"
-	.string "I won't stop following you\l"
-	.string "until I've found out what\l"
-	.string "you're after...\p"
-	.string "You hear me!$"
-
+	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}sto{SE_M_MORNING_SUN}followin{SE_M_SANDSTORM}you\l"
+	.string "unti{SE_M_BATON_PASS}I'v{SE_M_REVERSAL}foun{SE_M_WATERFALL}ou{SE_M_SPIT_UP}what\l"
+	.string "you'r{SE_M_REVERSAL}after...\p"
+	.string "Yo{SE_M_DIVE}hea{SE_M_SAND_TOMB}me!$"
 
 Route42_EventScript_Tully::
-	trainerbattle_single TRAINER_TULLY_HNS, Route42_Text_FisherTullySeen, Route42_Text_FisherTullyBeaten, Route42_EventScript_RegisterTully
-	goto_if_set FLAG_TULLY_HAS_ITEM_HNS, Route42_EventScript_TullyGiveItem
+	trainerbattle_single TRAINER_JOHTO_TULLY_HNS, Route42_Text_FisherTullySeen, Route42_Text_FisherTullyBeaten, Route42_EventScript_RegisterTully
+	goto_if_set JOHTO_FLAG_TULLY_HAS_ITEM_HNS, Route42_EventScript_TullyGiveItem
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route42_EventScript_RematchTully
 	msgbox Route42_Text_FisherTullyAfter, MSGBOX_AUTOCLOSE
@@ -170,20 +171,20 @@ Route42_EventScript_RegisterTully::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route42_Text_TullyRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_TULLY_HNS
+	register_matchcall TRAINER_JOHTO_TULLY_HNS
 	release
 	end
 
 Route42_EventScript_RematchTully::
-	trainerbattle_rematch TRAINER_TULLY_HNS, Route42_Text_TullyRematchIntro, Route42_Text_TullyRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_TULLY_HNS, Route42_Text_TullyRematchIntro, Route42_Text_TullyRematchDefeat
 	msgbox Route42_Text_TullyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route42_EventScript_TullyGiveItem::
 	msgbox Route42_Text_TullyHasItem, MSGBOX_DEFAULT
-	giveitem VAR_TULLY_ITEM_HNS
+	giveitem JOHTO_VAR_TULLY_ITEM_HNS
 	goto_if_eq VAR_RESULT, FALSE, Route42_EventScript_TullyNoRoom
-	clearflag FLAG_TULLY_HAS_ITEM_HNS
+	clearflag JOHTO_FLAG_TULLY_HAS_ITEM_HNS
 	msgbox Route42_Text_TullyGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -192,12 +193,12 @@ Route42_EventScript_TullyNoRoom::
 	end
 
 Route42_EventScript_Ben::
-	trainerbattle_single TRAINER_BENJAMIN_HNS, Route42_Text_HikerBenjaminSeen, Route42_Text_HikerBenjaminBeaten
+	trainerbattle_single TRAINER_JOHTO_BENJAMIN_HNS, Route42_Text_HikerBenjaminSeen, Route42_Text_HikerBenjaminBeaten
 	msgbox Route42_Text_HikerBenjaminAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route42_EventScript_Shane::
-	trainerbattle_single TRAINER_SHANE_HNS, Route42_Text_PokemaniacShaneSeen, Route42_Text_PokemaniacShaneBeaten
+	trainerbattle_single TRAINER_JOHTO_SHANE_HNS, Route42_Text_PokemaniacShaneSeen, Route42_Text_PokemaniacShaneBeaten
 	msgbox Route42_Text_PokemaniacShaneAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -218,92 +219,95 @@ Route42_EventScript_MortarSign::
 Route42_EventScript_Item_SuperPotion::
 	finditem ITEM_SUPER_POTION
 	end
+
 Route42_EventScript_Item_Shadow_Claw::
-    finditem ITEM_TM_SHADOW_CLAW
-    end
+	finditem ITEM_TM_SHADOW_CLAW
+	end
+
 Route42_EventScript_Item_UltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
 Route42_Text_FisherTullySeen:
-	.string "Let me demonstrate the power\n"
-	.string "of the POKéMON I caught!$"
+	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}demonstrat{SE_M_REVERSAL}th{SE_M_REVERSAL}power\n"
+	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}{SE_M_HEAL_BELL}caught!$"
 
 Route42_Text_FisherTullyBeaten:
-	.string "What? That's not right.\n"
-	.string "I can't believe this!$"
+	.string "What{SE_M_SING}That'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}right.\n"
+	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}believ{SE_M_REVERSAL}this!$"
 
 Route42_Text_FisherTullyAfter:
-	.string "I want to become the trainer\n"
-	.string "CHAMP using the POKéMON I\l"
-	.string "caught myself.\p"
-	.string "That's the best part of fishing!$"
+	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}becom{SE_M_REVERSAL}th{SE_M_REVERSAL}trainer\n"
+	.string "CHAM{SE_M_PETAL_DANCE}usin{SE_M_SANDSTORM}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}I\l"
+	.string "caugh{SE_M_SPIT_UP}myself.\p"
+	.string "That'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}par{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}fishing!$"
 
 Route42_Text_HikerBenjaminSeen:
-	.string "Ah, it's good to be outside!\n"
-	.string "I feel so free!$"
+	.string "Ah{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}goo{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}outside!\n"
+	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}s{SE_M_ATTRACT2}free!$"
 
 Route42_Text_HikerBenjaminBeaten:
-	.string "Gahahah! That was a good\n"
+	.string "Gahahah{SE_M_DRAGON_RAGE}Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}good\n"
 	.string "battle!$"
 
 Route42_Text_HikerBenjaminAfter:
-	.string "Losing feels insignificant\n"
-	.string "if you look up at the big sky!$"
+	.string "Losin{SE_M_SANDSTORM}feel{SE_M_GRASSWHISTLE}insignificant\n"
+	.string "i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}loo{SE_M_ENCORE2}u{SE_M_MORNING_SUN}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}bi{SE_M_SANDSTORM}sky!$"
 
 Route42_Text_PokemaniacShaneSeen:
 	.string "HEY!\p"
-	.string "This is my secret place!\n"
-	.string "Get lost, you outsider!$"
+	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}secre{SE_M_SPIT_UP}place!\n"
+	.string "Ge{SE_M_SPIT_UP}lost{SE_M_SUPERSONIC}yo{SE_M_DIVE}outsider!$"
 
 Route42_Text_PokemaniacShaneBeaten:
-	.string "I should have used my\n"
-	.string "MOON STONE…$"
+	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}hav{SE_M_REVERSAL}use{SE_M_WATERFALL}my\n"
+	.string "MOO{SE_M_PSYBEAM2}STONE…$"
 
 Route42_Text_PokemaniacShaneAfter:
-	.string "You're working on a POKéDEX?\p"
-	.string "Wow, you must know some\n"
-	.string "pretty rare POKéMON!\p"
-	.string "May I please see it?\n"
+	.string "You'r{SE_M_REVERSAL}workin{SE_M_SANDSTORM}o{SE_M_ATTRACT}{SE_M_CHARGE}POKéDEX?\p"
+	.string "Wow{SE_M_SUPERSONIC}yo{SE_M_DIVE}mus{SE_M_SPIT_UP}kno{SE_M_TWISTER}some\n"
+	.string "prett{SE_M_YAWN}rar{SE_M_REVERSAL}POKéMON!\p"
+	.string "Ma{SE_M_YAWN}{SE_M_HEAL_BELL}pleas{SE_M_REVERSAL}se{SE_M_REVERSAL}it?\n"
 	.string "Please?$"
 
 Route42_Text_Sign1:
-	.string "ROUTE 42\p"
-	.string "ECRUTEAK CITY - MAHOGANY TOWN$"
+	.string "ROUT{SE_M_SWORDS_DANCE}42\p"
+	.string "ECRUTEA{SE_M_SNORE}CIT{SE_M_MOONLIGHT}{SE_M_PAY_DAY}MAHOGAN{SE_M_MOONLIGHT}TOWN$"
 
 Route42_Text_MtMortarSign1:
 	.string "MT.MORTAR\p"
-	.string "WATERFALL CAVE INSIDE$"
+	.string "WATERFAL{SE_M_BRICK_BREAK}CAV{SE_M_SWORDS_DANCE}INSIDE$"
 
 Route42_Text_TullyRegister:
-	.string "I want to become the trainer\n"
-	.string "CHAMP using the POKéMON I\l"
-	.string "caught myself.\p"
-	.string "That's the best part of fishing!$"
+	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}becom{SE_M_REVERSAL}th{SE_M_REVERSAL}trainer\n"
+	.string "CHAM{SE_M_PETAL_DANCE}usin{SE_M_SANDSTORM}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}I\l"
+	.string "caugh{SE_M_SPIT_UP}myself.\p"
+	.string "That'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}par{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}fishing!$"
 
 Route42_Text_TullyRematchIntro:
-	.string "Let me demonstrate the power\n"
-	.string "of the POKéMON I caught!$"
+	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}demonstrat{SE_M_REVERSAL}th{SE_M_REVERSAL}power\n"
+	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}{SE_M_HEAL_BELL}caught!$"
 
 Route42_Text_TullyRematchDefeat:
-	.string "What? That's not right.\n"
-	.string "I can't believe this!$"
+	.string "What{SE_M_SING}That'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}right.\n"
+	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}believ{SE_M_REVERSAL}this!$"
 
 Route42_Text_TullyPostRematch:
-	.string "I want to become the trainer\n"
-	.string "CHAMP using the POKéMON I\l"
-	.string "caught myself.\p"
-	.string "That's the best part of fishing!$"
+	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}becom{SE_M_REVERSAL}th{SE_M_REVERSAL}trainer\n"
+	.string "CHAM{SE_M_PETAL_DANCE}usin{SE_M_SANDSTORM}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}I\l"
+	.string "caugh{SE_M_SPIT_UP}myself.\p"
+	.string "That'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}par{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}fishing!$"
 
 Route42_Text_TullyHasItem:
-	.string "Hey! I found something\n"
-	.string "while I was fishing!\p"
-	.string "Here, you can have it!$"
+	.string "Hey{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}something\n"
+	.string "whil{SE_M_REVERSAL}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}fishing!\p"
+	.string "Here{SE_M_SUPERSONIC}yo{SE_M_DIVE}ca{SE_M_ATTRACT}hav{SE_M_REVERSAL}it!$"
 
 Route42_Text_TullyGaveItem:
-	.string "I'll let you know if I\n"
-	.string "reel in anything else!$"
+	.string "I'l{SE_M_BATON_PASS}le{SE_M_SPIT_UP}yo{SE_M_DIVE}kno{SE_M_TWISTER}i{SE_M_ACID_ARMOR}I\n"
+	.string "ree{SE_M_BATON_PASS}i{SE_M_ATTRACT}anythin{SE_M_SANDSTORM}else!$"
 
 Route42_Text_TullyNoRoom:
-	.string "Hmm, your BAG is full.\p"
-	.string "Come back when you have room.$"
+	.string "Hmm{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}BA{SE_M_SWAGGER}i{SE_M_GRASSWHISTLE}full.\p"
+	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}whe{SE_M_ATTRACT}yo{SE_M_DIVE}hav{SE_M_REVERSAL}room.$"
+

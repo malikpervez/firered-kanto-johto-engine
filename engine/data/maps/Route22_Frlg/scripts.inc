@@ -11,22 +11,14 @@ Route22_EventScript_EarlyRivalTriggerTop::
 Route22_EventScript_EarlyRivalTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
-#ifdef FIRERED
 	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
-#else
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
-#endif
 	goto Route22_EventScript_EarlyRival
 	end
 
 Route22_EventScript_EarlyRivalTriggerBottom::
 	lockall
 	setvar VAR_TEMP_1, 2
-#ifdef FIRERED
 	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
-#else
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
-#endif
 	goto Route22_EventScript_EarlyRival
 	end
 
@@ -170,22 +162,14 @@ Route22_EventScript_LateRivalTriggerTop::
 Route22_EventScript_LateRivalTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
-#ifdef FIRERED
 	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
-#else
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
-#endif
 	goto Route22_EventScript_LateRival
 	end
 
 Route22_EventScript_LateRivalTriggerBottom::
 	lockall
 	setvar VAR_TEMP_1, 2
-#ifdef FIRERED
 	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
-#else
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
-#endif
 	goto Route22_EventScript_LateRival
 	end
 

@@ -18,10 +18,8 @@
 #include "pokedex.h"
 #include "pokemon_icon.h"
 #include "region_map.h"
-#ifdef FIRERED
 #include "regions.h"
 #include "constants/johto_ids.h"
-#endif
 #include "sound.h"
 #include "string_util.h"
 #include "strings.h"
@@ -1888,9 +1886,7 @@ void BlitMenuInfoIcon(u8 windowId, u8 iconId, u16 x, u16 y)
 void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
 {
     s32 curFlag;
-#ifdef FIRERED
     s32 firstBadgeFlag;
-#endif
     s32 flagCount;
     u8 *endOfString;
     u8 *string = dest;
@@ -1923,27 +1919,8 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
         GetMapNameGeneric(string, gMapHeader.regionMapSectionId);
         break;
     case SAVE_MENU_BADGES:
-#if IS_HNS
-    {
-        u8 badgeCount = 0;
-
-        for (curFlag = FLAG_BADGE01_GET; curFlag < FLAG_BADGE01_GET + NUM_BADGES; curFlag++)
-        {
-            if (FlagGet(curFlag))
-                badgeCount++;
-        }
-
-        string = ConvertIntToDecimalStringN(string, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 2);
-        *string = EOS;
-        break;
-    }
-#else
-#ifdef FIRERED
         firstBadgeFlag = IsJohtoCampaignMap() ? JOHTO_FLAG_BADGE01_GET : FLAG_BADGE01_GET;
         for (curFlag = firstBadgeFlag, flagCount = 0, endOfString = string + 1; curFlag < firstBadgeFlag + NUM_BADGES; curFlag++)
-#else
-        for (curFlag = FLAG_BADGE01_GET, flagCount = 0, endOfString = string + 1; curFlag < FLAG_BADGE01_GET + NUM_BADGES; curFlag++)
-#endif
         {
             if (FlagGet(curFlag))
                 flagCount++;
@@ -1951,7 +1928,6 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
         *string = flagCount + CHAR_0;
         *endOfString = EOS;
         break;
-#endif
     }
 }
 

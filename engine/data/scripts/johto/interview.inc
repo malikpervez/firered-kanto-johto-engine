@@ -1,0 +1,321 @@
+@ Johto (data/scripts/interview.inc), as built into the FireRed game.
+
+J_Interview_EventScript_EndInterview::
+	special InterviewAfter
+	incrementgamestat GAME_STAT_GOT_INTERVIEWED
+	release
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_ReporterNoNickname::
+	setvar VAR_0x8005, TVSHOW_FAN_CLUB_LETTER
+	special InterviewBefore
+	goto_if_eq VAR_RESULT, TRUE, J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed2
+	copyvar VAR_0x8009, VAR_0x8006
+	msgbox J_SlateportCity_PokemonFanClub_Text_InterviewRequest, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview2
+	goto_if_eq VAR_RESULT, NO, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview2::
+	msgbox J_SlateportCity_PokemonFanClub_Text_TellMeAnythingAboutYourMon, MSGBOX_DEFAULT
+	setvar VAR_0x8004, EASY_CHAT_TYPE_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, EASY_CHAT_PERSON_REPORTER_FEMALE
+	call J_Common_ShowEasyChatScreen
+	lock
+	faceplayer
+	goto_if_eq VAR_RESULT, 1, J_SlateportCity_PokemonFanClub_EventScript_SubmitResponse2
+	goto_if_eq VAR_RESULT, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2::
+	msgbox J_SlateportCity_PokemonFanClub_Text_HereIfYouGetUrgeToTellMe, MSGBOX_DEFAULT
+	release
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_SubmitResponse2::
+	msgbox J_SlateportCity_PokemonFanClub_Text_ThatsAllForInterview2, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TVSHOW_FAN_CLUB_LETTER
+	goto J_Interview_EventScript_EndInterview
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed2::
+	msgbox J_SlateportCity_PokemonFanClub_Text_EnjoyDoingInterviews, MSGBOX_DEFAULT
+	release
+	end
+
+J_SlateportCity_OceanicMuseum_1F_EventScript_Reporter::
+	lock
+	faceplayer
+	setvar VAR_0x8005, TVSHOW_RECENT_HAPPENINGS
+	special InterviewBefore
+	goto_if_eq VAR_RESULT, TRUE, J_SlateportCity_OceanicMuseum_1F_EventScript_AlreadyInterviewed
+	copyvar VAR_0x8009, VAR_0x8006
+	goto_if_set FLAG_OCEANIC_MUSEUM_MET_REPORTER, J_SlateportCity_OceanicMuseum_1F_EventScript_RequestInterviewShort
+	setflag FLAG_OCEANIC_MUSEUM_MET_REPORTER
+	msgbox J_SlateportCity_OceanicMuseum_1F_Text_InterviewRequest, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, J_SlateportCity_OceanicMuseum_1F_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
+	end
+
+J_SlateportCity_OceanicMuseum_1F_EventScript_RequestInterviewShort::
+	msgbox J_SlateportCity_OceanicMuseum_1F_Text_InterviewRequestShort, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, J_SlateportCity_OceanicMuseum_1F_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
+	end
+
+J_SlateportCity_OceanicMuseum_1F_EventScript_AcceptInterview::
+	msgbox J_SlateportCity_OceanicMuseum_1F_Text_TellMeExperienceInvolvingPokemon, MSGBOX_DEFAULT
+	setvar VAR_0x8004, EASY_CHAT_TYPE_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, EASY_CHAT_PERSON_REPORTER_MALE
+	call J_Common_ShowEasyChatScreen
+	lock
+	faceplayer
+	goto_if_eq VAR_RESULT, 1, J_SlateportCity_OceanicMuseum_1F_EventScript_SubmitResponse
+	goto_if_eq VAR_RESULT, 0, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
+	end
+
+J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview::
+	msgbox J_SlateportCity_OceanicMuseum_1F_Text_LetMeKnowIfYouHaveStory, MSGBOX_DEFAULT
+	release
+	end
+
+J_SlateportCity_OceanicMuseum_1F_EventScript_SubmitResponse::
+	msgbox J_SlateportCity_OceanicMuseum_1F_Text_ThatsAllForInterview, MSGBOX_DEFAULT
+	setvar VAR_0x8005, TVSHOW_RECENT_HAPPENINGS
+	goto J_Interview_EventScript_EndInterview
+	end
+
+J_SlateportCity_OceanicMuseum_1F_EventScript_AlreadyInterviewed::
+	msgbox J_SlateportCity_OceanicMuseum_1F_Text_BetterWriteUpStory, MSGBOX_DEFAULT
+	release
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_Reporter::
+	lock
+	faceplayer
+	specialvar VAR_RESULT, IsLeadMonNicknamedOrNotEnglish
+	goto_if_eq VAR_RESULT, FALSE, J_SlateportCity_PokemonFanClub_EventScript_ReporterNoNickname
+	setvar VAR_0x8005, TVSHOW_PKMN_FAN_CLUB_OPINIONS
+	special InterviewBefore
+	goto_if_eq VAR_RESULT, TRUE, J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed
+	copyvar VAR_0x8009, VAR_0x8006
+	msgbox J_SlateportCity_PokemonFanClub_Text_InterviewRequestHasName, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview::
+	msgbox J_SlateportCity_PokemonFanClub_Text_HereGoesQuickAnswers, MSGBOX_DEFAULT
+	random 3
+	copyvar VAR_0x800A, VAR_RESULT
+	switch VAR_RESULT
+	case 0, J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion1
+	case 1, J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion2
+	case 2, J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion3
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion1::
+	msgbox J_SlateportCity_PokemonFanClub_Text_DescribeFeelingsFirstMetMon, MSGBOX_DEFAULT
+	goto J_SlateportCity_PokemonFanClub_EventScript_ContinueInterview
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion2::
+	msgbox J_SlateportCity_PokemonFanClub_Text_LikenMonToSomethingYouLike, MSGBOX_DEFAULT
+	goto J_SlateportCity_PokemonFanClub_EventScript_ContinueInterview
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion3::
+	msgbox J_SlateportCity_PokemonFanClub_Text_WhatAttractedYouAboutMon, MSGBOX_DEFAULT
+	goto J_SlateportCity_PokemonFanClub_EventScript_ContinueInterview
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_ContinueInterview::
+	setvar VAR_0x8004, EASY_CHAT_TYPE_FAN_CLUB
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, 0
+	call J_Common_ShowEasyChatScreen
+	lock
+	faceplayer
+	goto_if_eq VAR_RESULT, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
+	msgbox J_SlateportCity_PokemonFanClub_Text_WhatDoPokemonMeanToYou, MSGBOX_DEFAULT
+	setvar VAR_0x8006, 1
+	call J_Common_ShowEasyChatScreen
+	lock
+	faceplayer
+	goto_if_eq VAR_RESULT, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
+	msgbox J_SlateportCity_PokemonFanClub_Text_ThatsAllForInterview, MSGBOX_DEFAULT
+	copyvar VAR_0x8007, VAR_0x800A
+	setvar VAR_0x8005, TVSHOW_PKMN_FAN_CLUB_OPINIONS
+	goto J_Interview_EventScript_EndInterview
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview::
+	msgbox J_SlateportCity_PokemonFanClub_Text_HereIfYouGetUrgeToTellMe, MSGBOX_DEFAULT
+	release
+	end
+
+J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed::
+	msgbox J_SlateportCity_PokemonFanClub_Text_EnjoyDoingInterviews, MSGBOX_DEFAULT
+	release
+	end
+
+J_LilycoveCity_ContestLobby_EventScript_Reporter::
+	lock
+	faceplayer
+	goto_if_set FLAG_TEMP_2, J_LilycoveCity_ContestLobby_EventScript_AlreadyInterviewed
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_POKEMON_PROFILE
+	special InterviewBefore
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_ContestLobby_EventScript_AlreadyInterviewed
+	copyvar VAR_0x8009, VAR_0x8006
+	msgbox J_LilycoveCity_ContestLobby_Text_InterviewRequest, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_ContestLobby_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
+	end
+
+J_LilycoveCity_ContestLobby_EventScript_AcceptInterview::
+	msgbox J_LilycoveCity_ContestLobby_Text_DescribeContest, MSGBOX_DEFAULT
+	setvar VAR_0x8004, EASY_CHAT_TYPE_CONTEST_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, 0
+	call J_Common_ShowEasyChatScreen
+	lock
+	faceplayer
+	goto_if_eq VAR_RESULT, 1, J_LilycoveCity_ContestLobby_EventScript_SubmitResponse
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
+	end
+
+J_LilycoveCity_ContestLobby_EventScript_DeclineInterview::
+	msgbox J_LilycoveCity_ContestLobby_Text_PleaseDoShareStoryWithMe, MSGBOX_DEFAULT
+	release
+	end
+
+J_LilycoveCity_ContestLobby_EventScript_SubmitResponse::
+	setvar VAR_0x8004, 24
+	special SetContestCategoryStringVarForInterview
+	msgbox J_LilycoveCity_ContestLobby_Text_WhatImageWhenYouHearX, MSGBOX_DEFAULT
+	setvar VAR_0x8004, EASY_CHAT_TYPE_CONTEST_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, 1
+	call J_Common_ShowEasyChatScreen
+	lock
+	faceplayer
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
+	msgbox J_LilycoveCity_ContestLobby_Text_ThatsAllForInterview, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_2
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_POKEMON_PROFILE
+	goto J_Interview_EventScript_EndInterview
+	end
+
+J_LilycoveCity_ContestLobby_EventScript_AlreadyInterviewed::
+	msgbox J_LilycoveCity_ContestLobby_Text_LookingForwardToNextContest, MSGBOX_DEFAULT
+	release
+	end
+
+J_LilycoveCity_ContestLobby_EventScript_TryShowContestReporter::
+	goto_if_ne JOHTO_VAR_CONTEST_HALL_STATE, 2, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_POKEMON_PROFILE
+	special InterviewBefore
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
+	switch JOHTO_VAR_CONTEST_TYPE
+	case 0, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
+	case 2, J_LilycoveCity_ContestLobby_EventScript_ShowContestReporter
+	case 1, J_LilycoveCity_ContestLobby_EventScript_ShowContestReporter
+	case 3, J_LilycoveCity_ContestLobby_EventScript_ShowContestReporter
+	case 4, J_LilycoveCity_ContestLobby_EventScript_ShowContestReporter
+	case 5, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
+	end
+
+J_LilycoveCity_ContestLobby_EventScript_ShowContestReporter::
+	clearflag FLAG_HIDE_LILYCOVE_CONTEST_HALL_REPORTER
+	return
+
+J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter::
+	return
+
+J_BattleFrontier_BattleTowerLobby_EventScript_Reporter::
+	lock
+	faceplayer
+	goto_if_set FLAG_TEMP_2, J_BattleFrontier_BattleTowerLobby_EventScript_AlreadyInterviewed
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_BATTLE_TOWER_PROFILE
+	special InterviewBefore
+	goto_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattleTowerLobby_EventScript_AlreadyInterviewed
+	copyvar VAR_0x8009, VAR_0x8006
+	msgbox J_BattleFrontier_BattleTowerLobby_Text_InterviewRequest, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, J_BattleFrontier_BattleTowerLobby_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_BattleFrontier_BattleTowerLobby_EventScript_DeclineInterview
+	end
+
+J_BattleFrontier_BattleTowerLobby_EventScript_AcceptInterview::
+	message J_BattleFrontier_BattleTowerLobby_Text_HowDidBattleTowerTurnOut
+	waitmessage
+	multichoice 20, 8, MULTI_SATISFACTION, TRUE
+	copyvar VAR_0x8008, VAR_RESULT
+	call_if_eq VAR_RESULT, 0, J_BattleFrontier_BattleTowerLobby_EventScript_Satisfied
+	call_if_eq VAR_RESULT, 1, J_BattleFrontier_BattleTowerLobby_EventScript_Dissatisfied
+	msgbox J_BattleFrontier_BattleTowerLobby_Text_DescribeYourBattle, MSGBOX_DEFAULT
+	setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_TOWER_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	call J_Common_ShowEasyChatScreen
+	lock
+	faceplayer
+	goto_if_eq VAR_RESULT, 1, J_BattleFrontier_BattleTowerLobby_EventScript_SubmitResponse
+	goto_if_eq VAR_RESULT, 0, J_BattleFrontier_BattleTowerLobby_EventScript_CancelInterview
+	end
+
+J_BattleFrontier_BattleTowerLobby_EventScript_DeclineInterview::
+	msgbox J_BattleFrontier_BattleTowerLobby_Text_SorryWeDisturbedYou, MSGBOX_DEFAULT
+	release
+	end
+
+J_BattleFrontier_BattleTowerLobby_EventScript_Satisfied::
+	msgbox J_BattleFrontier_BattleTowerLobby_Text_ObviousYouHadGreatBattle, MSGBOX_DEFAULT
+	return
+
+J_BattleFrontier_BattleTowerLobby_EventScript_Dissatisfied::
+	msgbox J_BattleFrontier_BattleTowerLobby_Text_DifficultToMakeBattleTurnOutAsPlanned, MSGBOX_DEFAULT
+	return
+
+J_BattleFrontier_BattleTowerLobby_EventScript_SubmitResponse::
+	goto_if_eq VAR_RESULT, 0, J_BattleFrontier_BattleTowerLobby_EventScript_CancelInterview
+	msgbox J_BattleFrontier_BattleTowerLobby_Text_ThatsGreatLine, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_2
+	copyvar VAR_0x8004, VAR_0x8008
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_BATTLE_TOWER_PROFILE
+	goto J_Interview_EventScript_EndInterview
+	end
+
+J_BattleFrontier_BattleTowerLobby_EventScript_CancelInterview::
+	msgbox J_BattleFrontier_BattleTowerLobby_Text_SilentType, MSGBOX_DEFAULT
+	release
+	end
+
+J_BattleFrontier_BattleTowerLobby_EventScript_AlreadyInterviewed::
+	msgbox J_BattleFrontier_BattleTowerLobby_Text_LookingForwardToNextBattle, MSGBOX_DEFAULT
+	release
+	end
+
+J_BattleFrontier_BattleTowerLobby_EventScript_ShowOrHideReporter::
+	goto_if_eq JOHTO_VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, 0, J_BattleFrontier_BattleTowerLobby_EventScript_HideReporter
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_BATTLE_TOWER_PROFILE
+	special InterviewBefore
+	goto_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattleTowerLobby_EventScript_HideReporter
+	clearflag JOHTO_FLAG_HIDE_BATTLE_TOWER_REPORTER
+	return
+
+J_BattleFrontier_BattleTowerLobby_EventScript_HideReporter::
+	setflag JOHTO_FLAG_HIDE_BATTLE_TOWER_REPORTER
+	return
+
+J_EventScript_ContestLiveInterview::
+	setvar VAR_0x8005, TVSHOW_CONTEST_LIVE_UPDATES
+	special InterviewBefore
+	goto_if_eq VAR_RESULT, TRUE, J_EventScript_ContestLiveInterviewEnd
+	setvar VAR_0x8005, TVSHOW_CONTEST_LIVE_UPDATES
+	special InterviewAfter
+	return
+
+J_EventScript_ContestLiveInterviewEnd::
+	return
+

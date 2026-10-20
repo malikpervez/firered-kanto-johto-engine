@@ -48,11 +48,7 @@ const u32 gItemIcon_RepeatBall[] = INCBIN_U32("graphics/items/icons/repeat_ball.
 const u16 gItemIconPalette_RepeatBall[] = INCBIN_U16("graphics/items/icon_palettes/repeat_ball.gbapal");
 
 const u32 gItemIcon_LuxuryBall[] = INCBIN_U32("graphics/items/icons/luxury_ball.4bpp.smol");
-#ifdef FIRERED
 extern const u16 gItemIconPalette_LuxuryBall[16] __attribute__((alias("gItemIconPalette_PremierBall")));
-#else
-const u16 gItemIconPalette_LuxuryBall[] = INCBIN_U16("graphics/items/icon_palettes/luxury_ball.gbapal");
-#endif
 
 const u32 gItemIcon_LevelBall[] = INCBIN_U32("graphics/items/icons/level_ball.4bpp.smol");
 const u16 gItemIconPalette_LevelBall[] = INCBIN_U16("graphics/items/icon_palettes/level_ball.gbapal");
@@ -748,11 +744,7 @@ const u16 gItemIconPalette_CharizarditeX[] = INCBIN_U16("graphics/items/icon_pal
 const u32 gItemIcon_CharizarditeY[] = INCBIN_U32("graphics/items/icons/charizardite_y.4bpp.smol");
 const u16 gItemIconPalette_CharizarditeY[] = INCBIN_U16("graphics/items/icon_palettes/charizardite_y.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Blastoisinite[30] __attribute__((alias("gItemIcon_CharizarditeY")));
-#else
-const u32 gItemIcon_Blastoisinite[] = INCBIN_U32("graphics/items/icons/blastoisinite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Blastoisinite[] = INCBIN_U16("graphics/items/icon_palettes/blastoisinite.gbapal");
 
 const u32 gItemIcon_Beedrillite[] = INCBIN_U32("graphics/items/icons/beedrillite.4bpp.smol");
@@ -764,18 +756,10 @@ const u16 gItemIconPalette_Pidgeotite[] = INCBIN_U16("graphics/items/icon_palett
 const u32 gItemIcon_Alakazite[] = INCBIN_U32("graphics/items/icons/alakazite.4bpp.smol");
 const u16 gItemIconPalette_Alakazite[] = INCBIN_U16("graphics/items/icon_palettes/alakazite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Slowbronite[30] __attribute__((alias("gItemIcon_Pidgeotite")));
-#else
-const u32 gItemIcon_Slowbronite[] = INCBIN_U32("graphics/items/icons/slowbronite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Slowbronite[] = INCBIN_U16("graphics/items/icon_palettes/slowbronite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Gengarite[30] __attribute__((alias("gItemIcon_CharizarditeY")));
-#else
-const u32 gItemIcon_Gengarite[] = INCBIN_U32("graphics/items/icons/gengarite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Gengarite[] = INCBIN_U16("graphics/items/icon_palettes/gengarite.gbapal");
 
 const u32 gItemIcon_Kangaskhanite[] = INCBIN_U32("graphics/items/icons/kangaskhanite.4bpp.smol");
@@ -784,11 +768,7 @@ const u16 gItemIconPalette_Kangaskhanite[] = INCBIN_U16("graphics/items/icon_pal
 const u32 gItemIcon_Pinsirite[] = INCBIN_U32("graphics/items/icons/pinsirite.4bpp.smol");
 const u16 gItemIconPalette_Pinsirite[] = INCBIN_U16("graphics/items/icon_palettes/pinsirite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Gyaradosite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Gyaradosite[] = INCBIN_U32("graphics/items/icons/gyaradosite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Gyaradosite[] = INCBIN_U16("graphics/items/icon_palettes/gyaradosite.gbapal");
 
 const u32 gItemIcon_Aerodactylite[] = INCBIN_U32("graphics/items/icons/aerodactylite.4bpp.smol");
@@ -800,62 +780,34 @@ const u16 gItemIconPalette_MewtwoniteX[] = INCBIN_U16("graphics/items/icon_palet
 const u32 gItemIcon_MewtwoniteY[] = INCBIN_U32("graphics/items/icons/mewtwonite_y.4bpp.smol");
 const u16 gItemIconPalette_MewtwoniteY[] = INCBIN_U16("graphics/items/icon_palettes/mewtwonite_y.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Ampharosite[30] __attribute__((alias("gItemIcon_Venusaurite")));
-#else
-const u32 gItemIcon_Ampharosite[] = INCBIN_U32("graphics/items/icons/ampharosite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Ampharosite[] = INCBIN_U16("graphics/items/icon_palettes/ampharosite.gbapal");
 
 const u32 gItemIcon_Steelixite[] = INCBIN_U32("graphics/items/icons/steelixite.4bpp.smol");
 const u16 gItemIconPalette_Steelixite[] = INCBIN_U16("graphics/items/icon_palettes/steelixite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Scizorite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Scizorite[] = INCBIN_U32("graphics/items/icons/scizorite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Scizorite[] = INCBIN_U16("graphics/items/icon_palettes/scizorite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Heracronite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Heracronite[] = INCBIN_U32("graphics/items/icons/heracronite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Heracronite[] = INCBIN_U16("graphics/items/icon_palettes/heracronite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Houndoominite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Houndoominite[] = INCBIN_U32("graphics/items/icons/houndoominite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Houndoominite[] = INCBIN_U16("graphics/items/icon_palettes/houndoominite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Tyranitarite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Tyranitarite[] = INCBIN_U32("graphics/items/icons/tyranitarite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Tyranitarite[] = INCBIN_U16("graphics/items/icon_palettes/tyranitarite.gbapal");
 
 const u32 gItemIcon_Sceptilite[] = INCBIN_U32("graphics/items/icons/sceptilite.4bpp.smol");
 const u16 gItemIconPalette_Sceptilite[] = INCBIN_U16("graphics/items/icon_palettes/sceptilite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Blazikenite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Blazikenite[] = INCBIN_U32("graphics/items/icons/blazikenite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Blazikenite[] = INCBIN_U16("graphics/items/icon_palettes/blazikenite.gbapal");
 
 const u32 gItemIcon_Swampertite[] = INCBIN_U32("graphics/items/icons/swampertite.4bpp.smol");
 const u16 gItemIconPalette_Swampertite[] = INCBIN_U16("graphics/items/icon_palettes/swampertite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Gardevoirite[30] __attribute__((alias("gItemIcon_Venusaurite")));
-#else
-const u32 gItemIcon_Gardevoirite[] = INCBIN_U32("graphics/items/icons/gardevoirite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Gardevoirite[] = INCBIN_U16("graphics/items/icon_palettes/gardevoirite.gbapal");
 
 const u32 gItemIcon_Sablenite[] = INCBIN_U32("graphics/items/icons/sablenite.4bpp.smol");
@@ -864,49 +816,25 @@ const u16 gItemIconPalette_Sablenite[] = INCBIN_U16("graphics/items/icon_palette
 const u32 gItemIcon_Mawilite[] = INCBIN_U32("graphics/items/icons/mawilite.4bpp.smol");
 const u16 gItemIconPalette_Mawilite[] = INCBIN_U16("graphics/items/icon_palettes/mawilite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Aggronite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Aggronite[] = INCBIN_U32("graphics/items/icons/aggronite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Aggronite[] = INCBIN_U16("graphics/items/icon_palettes/aggronite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Medichamite[30] __attribute__((alias("gItemIcon_CharizarditeY")));
-#else
-const u32 gItemIcon_Medichamite[] = INCBIN_U32("graphics/items/icons/medichamite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Medichamite[] = INCBIN_U16("graphics/items/icon_palettes/medichamite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Manectite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Manectite[] = INCBIN_U32("graphics/items/icons/manectite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Manectite[] = INCBIN_U16("graphics/items/icon_palettes/manectite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Sharpedonite[30] __attribute__((alias("gItemIcon_Pidgeotite")));
-#else
-const u32 gItemIcon_Sharpedonite[] = INCBIN_U32("graphics/items/icons/sharpedonite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Sharpedonite[] = INCBIN_U16("graphics/items/icon_palettes/sharpedonite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Cameruptite[30] __attribute__((alias("gItemIcon_Pidgeotite")));
-#else
-const u32 gItemIcon_Cameruptite[] = INCBIN_U32("graphics/items/icons/cameruptite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Cameruptite[] = INCBIN_U16("graphics/items/icon_palettes/cameruptite.gbapal");
 
 const u32 gItemIcon_Altarianite[] = INCBIN_U32("graphics/items/icons/altarianite.4bpp.smol");
 const u16 gItemIconPalette_Altarianite[] = INCBIN_U16("graphics/items/icon_palettes/altarianite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Banettite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Banettite[] = INCBIN_U32("graphics/items/icons/banettite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Banettite[] = INCBIN_U16("graphics/items/icon_palettes/banettite.gbapal");
 
 const u32 gItemIcon_Absolite[] = INCBIN_U32("graphics/items/icons/absolite.4bpp.smol");
@@ -915,11 +843,7 @@ const u16 gItemIconPalette_Absolite[] = INCBIN_U16("graphics/items/icon_palettes
 const u32 gItemIcon_Glalitite[] = INCBIN_U32("graphics/items/icons/glalitite.4bpp.smol");
 const u16 gItemIconPalette_Glalitite[] = INCBIN_U16("graphics/items/icon_palettes/glalitite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Salamencite[30] __attribute__((alias("gItemIcon_Pidgeotite")));
-#else
-const u32 gItemIcon_Salamencite[] = INCBIN_U32("graphics/items/icons/salamencite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Salamencite[] = INCBIN_U16("graphics/items/icon_palettes/salamencite.gbapal");
 
 const u32 gItemIcon_Metagrossite[] = INCBIN_U32("graphics/items/icons/metagrossite.4bpp.smol");
@@ -928,28 +852,16 @@ const u16 gItemIconPalette_Metagrossite[] = INCBIN_U16("graphics/items/icon_pale
 const u32 gItemIcon_Latiasite[] = INCBIN_U32("graphics/items/icons/latiasite.4bpp.smol");
 const u16 gItemIconPalette_Latiasite[] = INCBIN_U16("graphics/items/icon_palettes/latiasite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Latiosite[30] __attribute__((alias("gItemIcon_Latiasite")));
-#else
-const u32 gItemIcon_Latiosite[] = INCBIN_U32("graphics/items/icons/latiosite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Latiosite[] = INCBIN_U16("graphics/items/icon_palettes/latiosite.gbapal");
 
 const u32 gItemIcon_Lopunnite[] = INCBIN_U32("graphics/items/icons/lopunnite.4bpp.smol");
 const u16 gItemIconPalette_Lopunnite[] = INCBIN_U16("graphics/items/icon_palettes/lopunnite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Garchompite[30] __attribute__((alias("gItemIcon_Pinsirite")));
-#else
-const u32 gItemIcon_Garchompite[] = INCBIN_U32("graphics/items/icons/garchompite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Garchompite[] = INCBIN_U16("graphics/items/icon_palettes/garchompite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Lucarionite[30] __attribute__((alias("gItemIcon_Kangaskhanite")));
-#else
-const u32 gItemIcon_Lucarionite[] = INCBIN_U32("graphics/items/icons/lucarionite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Lucarionite[] = INCBIN_U16("graphics/items/icon_palettes/lucarionite.gbapal");
 
 const u32 gItemIcon_Abomasite[] = INCBIN_U32("graphics/items/icons/abomasite.4bpp.smol");
@@ -970,293 +882,133 @@ const u16 gItemIconPalette_Clefablite[] = INCBIN_U16("graphics/items/icon_palett
 const u32 gItemIcon_Victreebelite[] = INCBIN_U32("graphics/items/icons/victreebelite.4bpp.smol");
 const u16 gItemIconPalette_Victreebelite[] = INCBIN_U16("graphics/items/icon_palettes/victreebelite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Starminite[32] __attribute__((alias("gItemIcon_Clefablite")));
-#else
-const u32 gItemIcon_Starminite[] = INCBIN_U32("graphics/items/icons/starminite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Starminite[] = INCBIN_U16("graphics/items/icon_palettes/starminite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Dragoninite[32] __attribute__((alias("gItemIcon_Clefablite")));
-#else
-const u32 gItemIcon_Dragoninite[] = INCBIN_U32("graphics/items/icons/dragoninite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Dragoninite[] = INCBIN_U16("graphics/items/icon_palettes/dragoninite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Meganiumite[32] __attribute__((alias("gItemIcon_Clefablite")));
-#else
-const u32 gItemIcon_Meganiumite[] = INCBIN_U32("graphics/items/icons/meganiumite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Meganiumite[] = INCBIN_U16("graphics/items/icon_palettes/meganiumite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Feraligite[32] __attribute__((alias("gItemIcon_Clefablite")));
-#else
-const u32 gItemIcon_Feraligite[] = INCBIN_U32("graphics/items/icons/feraligite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Feraligite[] = INCBIN_U16("graphics/items/icon_palettes/feraligite.gbapal");
 
 const u32 gItemIcon_Skarmorite[] = INCBIN_U32("graphics/items/icons/skarmorite.4bpp.smol");
 const u16 gItemIconPalette_Skarmorite[] = INCBIN_U16("graphics/items/icon_palettes/skarmorite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Froslassite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Froslassite[] = INCBIN_U32("graphics/items/icons/froslassite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Froslassite[] = INCBIN_U16("graphics/items/icon_palettes/froslassite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Emboarite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Emboarite[] = INCBIN_U32("graphics/items/icons/emboarite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Emboarite[] = INCBIN_U16("graphics/items/icon_palettes/emboarite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Excadrite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Excadrite[] = INCBIN_U32("graphics/items/icons/excadrite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Excadrite[] = INCBIN_U16("graphics/items/icon_palettes/excadrite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Scolipite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Scolipite[] = INCBIN_U32("graphics/items/icons/scolipite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Scolipite[] = INCBIN_U16("graphics/items/icon_palettes/scolipite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Scraftinite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Scraftinite[] = INCBIN_U32("graphics/items/icons/scraftinite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Scraftinite[] = INCBIN_U16("graphics/items/icon_palettes/scraftinite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Eelektrossite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Eelektrossite[] = INCBIN_U32("graphics/items/icons/eelektrossite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Eelektrossite[] = INCBIN_U16("graphics/items/icon_palettes/eelektrossite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Chandelurite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Chandelurite[] = INCBIN_U32("graphics/items/icons/chandelurite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Chandelurite[] = INCBIN_U16("graphics/items/icon_palettes/chandelurite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Chesnaughtite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Chesnaughtite[] = INCBIN_U32("graphics/items/icons/chesnaughtite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Chesnaughtite[] = INCBIN_U16("graphics/items/icon_palettes/chesnaughtite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Delphoxite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Delphoxite[] = INCBIN_U32("graphics/items/icons/delphoxite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Delphoxite[] = INCBIN_U16("graphics/items/icon_palettes/delphoxite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Greninjite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Greninjite[] = INCBIN_U32("graphics/items/icons/greninjite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Greninjite[] = INCBIN_U16("graphics/items/icon_palettes/greninjite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Pyroarite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Pyroarite[] = INCBIN_U32("graphics/items/icons/pyroarite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Pyroarite[] = INCBIN_U16("graphics/items/icon_palettes/pyroarite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Floettite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Floettite[] = INCBIN_U32("graphics/items/icons/floettite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Floettite[] = INCBIN_U16("graphics/items/icon_palettes/floettite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Malamarite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Malamarite[] = INCBIN_U32("graphics/items/icons/malamarite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Malamarite[] = INCBIN_U16("graphics/items/icon_palettes/malamarite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Barbaracite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Barbaracite[] = INCBIN_U32("graphics/items/icons/barbaracite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Barbaracite[] = INCBIN_U16("graphics/items/icon_palettes/barbaracite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Dragalgite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Dragalgite[] = INCBIN_U32("graphics/items/icons/dragalgite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Dragalgite[] = INCBIN_U16("graphics/items/icon_palettes/dragalgite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Hawluchanite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Hawluchanite[] = INCBIN_U32("graphics/items/icons/hawluchanite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Hawluchanite[] = INCBIN_U16("graphics/items/icon_palettes/hawluchanite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Zygardite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Zygardite[] = INCBIN_U32("graphics/items/icons/zygardite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Zygardite[] = INCBIN_U16("graphics/items/icon_palettes/zygardite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Drampanite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Drampanite[] = INCBIN_U32("graphics/items/icons/drampanite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Drampanite[] = INCBIN_U16("graphics/items/icon_palettes/drampanite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Falinksite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Falinksite[] = INCBIN_U32("graphics/items/icons/falinksite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Falinksite[] = INCBIN_U16("graphics/items/icon_palettes/falinksite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Heatranite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Heatranite[] = INCBIN_U32("graphics/items/icons/heatranite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Heatranite[] = INCBIN_U16("graphics/items/icon_palettes/heatranite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Darkranite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Darkranite[] = INCBIN_U32("graphics/items/icons/darkranite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Darkranite[] = INCBIN_U16("graphics/items/icon_palettes/darkranite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Zeraorite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Zeraorite[] = INCBIN_U32("graphics/items/icons/zeraorite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Zeraorite[] = INCBIN_U16("graphics/items/icon_palettes/zeraorite.gbapal");
 
 const u32 gItemIcon_RaichuniteX[] = INCBIN_U32("graphics/items/icons/raichunite_x.4bpp.smol");
 const u16 gItemIconPalette_RaichuniteX[] = INCBIN_U16("graphics/items/icon_palettes/raichunite_x.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_RaichuniteY[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_RaichuniteY[] = INCBIN_U32("graphics/items/icons/raichunite_y.4bpp.smol");
-#endif
 const u16 gItemIconPalette_RaichuniteY[] = INCBIN_U16("graphics/items/icon_palettes/raichunite_y.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Chimechite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Chimechite[] = INCBIN_U32("graphics/items/icons/chimechite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Chimechite[] = INCBIN_U16("graphics/items/icon_palettes/chimechite.gbapal");
 
 const u32 gItemIcon_AbsoliteZ[] = INCBIN_U32("graphics/items/icons/absolite_z.4bpp.smol");
 const u16 gItemIconPalette_AbsoliteZ[] = INCBIN_U16("graphics/items/icon_palettes/absolite_z.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Staraptite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Staraptite[] = INCBIN_U32("graphics/items/icons/staraptite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Staraptite[] = INCBIN_U16("graphics/items/icon_palettes/staraptite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_GarchompiteZ[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_GarchompiteZ[] = INCBIN_U32("graphics/items/icons/garchompite_z.4bpp.smol");
-#endif
 const u16 gItemIconPalette_GarchompiteZ[] = INCBIN_U16("graphics/items/icon_palettes/garchompite_z.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_LucarioniteZ[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_LucarioniteZ[] = INCBIN_U32("graphics/items/icons/lucarionite_z.4bpp.smol");
-#endif
 const u16 gItemIconPalette_LucarioniteZ[] = INCBIN_U16("graphics/items/icon_palettes/lucarionite_z.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Golurkite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Golurkite[] = INCBIN_U32("graphics/items/icons/golurkite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Golurkite[] = INCBIN_U16("graphics/items/icon_palettes/golurkite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Meowsticite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Meowsticite[] = INCBIN_U32("graphics/items/icons/meowsticite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Meowsticite[] = INCBIN_U16("graphics/items/icon_palettes/meowsticite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Crabominite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Crabominite[] = INCBIN_U32("graphics/items/icons/crabominite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Crabominite[] = INCBIN_U16("graphics/items/icon_palettes/crabominite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Golisopite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Golisopite[] = INCBIN_U32("graphics/items/icons/golisopite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Golisopite[] = INCBIN_U16("graphics/items/icon_palettes/golisopite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Magearnite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Magearnite[] = INCBIN_U32("graphics/items/icons/magearnite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Magearnite[] = INCBIN_U16("graphics/items/icon_palettes/magearnite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Scovillainite[32] __attribute__((alias("gItemIcon_AbsoliteZ")));
-#else
-const u32 gItemIcon_Scovillainite[] = INCBIN_U32("graphics/items/icons/scovillainite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Scovillainite[] = INCBIN_U16("graphics/items/icon_palettes/scovillainite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Baxcalibrite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Baxcalibrite[] = INCBIN_U32("graphics/items/icons/baxcalibrite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Baxcalibrite[] = INCBIN_U16("graphics/items/icon_palettes/baxcalibrite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Tatsugirinite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Tatsugirinite[] = INCBIN_U32("graphics/items/icons/tatsugirinite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Tatsugirinite[] = INCBIN_U16("graphics/items/icon_palettes/tatsugirinite.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Glimmoranite[32] __attribute__((alias("gItemIcon_Skarmorite")));
-#else
-const u32 gItemIcon_Glimmoranite[] = INCBIN_U32("graphics/items/icons/glimmoranite.4bpp.smol");
-#endif
 const u16 gItemIconPalette_Glimmoranite[] = INCBIN_U16("graphics/items/icon_palettes/glimmoranite.gbapal");
 
 // Gems
@@ -2259,11 +2011,7 @@ const u16 gItemIconPalette_MirrorHerb[] = INCBIN_U16("graphics/items/icon_palett
 const u32 gItemIcon_ScrollOfDarkness[] = INCBIN_U32("graphics/items/icons/scroll_of_darkness.4bpp.smol");
 const u16 gItemIconPalette_ScrollOfDarkness[] = INCBIN_U16("graphics/items/icon_palettes/scroll_of_darkness.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_ScrollOfWaters[28] __attribute__((alias("gItemIcon_ScrollOfDarkness")));
-#else
-const u32 gItemIcon_ScrollOfWaters[] = INCBIN_U32("graphics/items/icons/scroll_of_waters.4bpp.smol");
-#endif
 const u16 gItemIconPalette_ScrollOfWaters[] = INCBIN_U16("graphics/items/icon_palettes/scroll_of_waters.gbapal");
 
 const u32 gItemIcon_TeraOrb[] = INCBIN_U32("graphics/items/icons/tera_orb.4bpp.smol");
@@ -2398,46 +2146,18 @@ const u32 gItemIcon_HnsPass[] = INCBIN_U32("graphics/items/icons/pass.4bpp.smol"
 const u16 gItemIconPalette_HnsPass[] = INCBIN_U16("graphics/items/icon_palettes/pass.gbapal");
 
 const u32 gItemIcon_Radio[] = INCBIN_U32("graphics/items/icons/radio.4bpp.smol");
-#ifdef FIRERED
 extern const u16 gItemIconPalette_Radio[16] __attribute__((alias("gItemIconPalette_DevonParts")));
-#else
-const u16 gItemIconPalette_Radio[] = INCBIN_U16("graphics/items/icon_palettes/radio.gbapal");
-#endif
 
 const u32 gItemIcon_SecretPotion[] = INCBIN_U32("graphics/items/icons/secretpotion.4bpp.smol");
 const u16 gItemIconPalette_SecretPotion[] = INCBIN_U16("graphics/items/icon_palettes/secretpotion.gbapal");
 
-#ifdef FIRERED
 extern const u32 gItemIcon_HealingHeart[29] __attribute__((alias("gItemIcon_SweetHeart")));
-#else
-const u32 gItemIcon_HealingHeart[] = INCBIN_U32("graphics/items/icons/sweet_heart.4bpp.smol");
-#endif
-#ifdef FIRERED
 extern const u16 gItemIconPalette_HealingHeart[16] __attribute__((alias("gItemIconPalette_SweetHeart")));
-#else
-const u16 gItemIconPalette_HealingHeart[] = INCBIN_U16("graphics/items/icon_palettes/sweet_heart.gbapal");
-#endif
 
-#ifdef FIRERED
 extern const u32 gItemIcon_Room1Key[36] __attribute__((alias("gItemIcon_KeyToRoom1")));
-#else
-const u32 gItemIcon_Room1Key[] = INCBIN_U32("graphics/items/icons/room1_key.4bpp.smol");
-#endif
-#ifdef FIRERED
 extern const u32 gItemIcon_Room2Key[37] __attribute__((alias("gItemIcon_KeyToRoom2")));
-#else
-const u32 gItemIcon_Room2Key[] = INCBIN_U32("graphics/items/icons/room2_key.4bpp.smol");
-#endif
-#ifdef FIRERED
 extern const u32 gItemIcon_Room4Key[36] __attribute__((alias("gItemIcon_KeyToRoom4")));
-#else
-const u32 gItemIcon_Room4Key[] = INCBIN_U32("graphics/items/icons/room4_key.4bpp.smol");
-#endif
-#ifdef FIRERED
 extern const u32 gItemIcon_Room6Key[37] __attribute__((alias("gItemIcon_KeyToRoom6")));
-#else
-const u32 gItemIcon_Room6Key[] = INCBIN_U32("graphics/items/icons/room6_key.4bpp.smol");
-#endif
 
 const u32 gItemIcon_AzureFlute[] = INCBIN_U32("graphics/items/icons/azure_flute.4bpp.smol");
 const u16 gItemIconPalette_AzureFlute[] = INCBIN_U16("graphics/items/icon_palettes/azure_flute.gbapal");

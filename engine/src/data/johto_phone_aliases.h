@@ -1,4 +1,3 @@
-#ifdef FIRERED
 #include "johto_rematches.h"
 #include "johto_campaign.h"
 #include "constants/johto_ids.h"
@@ -302,4 +301,3 @@
 #define FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE JOHTO_FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE
 #undef FLAG_WATTSON_REMATCH_AVAILABLE
 #define FLAG_WATTSON_REMATCH_AVAILABLE JOHTO_FLAG_WATTSON_REMATCH_AVAILABLE
-#endif

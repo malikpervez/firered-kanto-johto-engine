@@ -30,3 +30,6 @@ engine/poke*.map
 engine/poke*.sym
 engine/tools/*/*
 !engine/tools/*/
+
+# pae (the game editor) caches and test results; pae_tests/ itself is committed
+/engine/.pae/

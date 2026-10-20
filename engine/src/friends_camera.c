@@ -1,6 +1,5 @@
 #include "global.h"
 
-#ifdef FIRERED
 #include "friends_camera.h"
 #include "friends_scene.h"
 #include "event_data.h"
@@ -508,4 +507,3 @@ u16 FriendsCamera_GetFault(void)
 {
     return sCamera.fault;
 }
-#endif

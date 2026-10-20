@@ -136,11 +136,7 @@ static void DisplayDiplomaText(void)
     else
     {
         SetGpuReg(REG_OFFSET_BG1HOFS, 0);
-#if IS_HNS
-        StringCopy(gStringVar1, gText_Johto);
-#else
         StringCopy(gStringVar1, gText_DexHoenn);
-#endif
     }
     StringExpandPlaceholders(gStringVar4, gText_PokedexDiploma);
     PrintDiplomaText(gStringVar4, 0, 1);

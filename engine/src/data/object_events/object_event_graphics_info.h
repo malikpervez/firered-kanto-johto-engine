@@ -4467,7 +4467,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree = {
     .images = sPicTable_ApricornTree,
 };
 
-#if IS_FRLG
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedNormal = {
     .tileTag = TAG_NONE,
@@ -4484,11 +4483,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedNormal = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_BrendanMayNormal,
-#ifdef FIRERED
     .images = sPicTable_TrailNormal,
-#else
-    .images = sPicTable_RedNormal,
-#endif
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4507,11 +4502,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedBike = {
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Standard,
-#ifdef FIRERED
     .images = sPicTable_TrailBike,
-#else
-    .images = sPicTable_RedBike,
-#endif
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4530,11 +4521,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedSurf = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Surfing,
-#ifdef FIRERED
     .images = sPicTable_TrailSurf,
-#else
-    .images = sPicTable_RedSurf,
-#endif
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4553,11 +4540,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedFieldMove = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_FieldMove,
-#ifdef FIRERED
     .images = sPicTable_TrailItem,
-#else
-    .images = sPicTable_RedItem,
-#endif
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4576,11 +4559,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedFish = {
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Fishing,
-#ifdef FIRERED
     .images = sPicTable_TrailFish,
-#else
-    .images = sPicTable_RedFish,
-#endif
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4599,11 +4578,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedVSSeeker = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_RedGreenVSSeeker,
-#ifdef FIRERED
     .images = sPicTable_TrailItem,
-#else
-    .images = sPicTable_RedItem,
-#endif
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4622,11 +4597,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedVSSeekerBike = 
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_RedGreenVSSeekerBike,
-#ifdef FIRERED
     .images = sPicTable_TrailVSSeekerBike,
-#else
-    .images = sPicTable_RedVSSeekerBike,
-#endif
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
@@ -4651,11 +4622,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenFish = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenVSSeeker = {
     .tileTag = TAG_NONE,
-#ifdef FIRERED
     .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_GREEN,
-#else
-    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
-#endif
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION,
     .size = 256,
     .width = 16,
@@ -4674,11 +4641,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenVSSeeker = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreenVSSeekerBike = {
     .tileTag = TAG_NONE,
-#ifdef FIRERED
     .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_GREEN,
-#else
-    .paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED,
-#endif
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION,
     .size = 512,
     .width = 32,
@@ -7260,9 +7223,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-#endif // IS_FRLG
 
-#if IS_HNS || defined(FIRERED)
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AttendantF_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_1_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 4, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_AttendantF_hns, gDummySpriteAffineAnimTable};
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AttendantM_hns = {TAG_NONE, OBJ_EVENT_PAL_TAG_NPC_1_HNS, OBJ_EVENT_PAL_TAG_NONE, 256, 16, 32, 3, SHADOW_SIZE_M, FALSE, FALSE, TRACKS_FOOT, &gObjectEventBaseOam_16x32, sOamTables_16x32, sAnimTable_Standard, sPicTable_AttendantM_hns, gDummySpriteAffineAnimTable};
@@ -7917,5 +7878,4 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MartLight_Hns = {
     .images = gFieldEffectObjectPicTable_MartLight_Hns,
 };
 
-#endif // IS_HNS
 

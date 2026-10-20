@@ -46,11 +46,7 @@ enum DifficultyLevel GetTrainerDifficultyLevel(u16 trainerId)
     if (difficulty == DIFFICULTY_NORMAL)
         return DIFFICULTY_NORMAL;
 
-#ifdef FIRERED
     if (GetTrainerStructForDifficulty(trainerId, difficulty)->party == NULL)
-#else
-    if (gTrainers[difficulty][trainerId].party == NULL)
-#endif
         return DIFFICULTY_NORMAL;
 
     return difficulty;

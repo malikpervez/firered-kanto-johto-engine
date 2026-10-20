@@ -1,15 +1,18 @@
+@ Johto (data/maps/SouthernIsland_Interior_hns/scripts.inc), as built into the FireRed game.
+
 SouthernIsland_Interior_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SouthernIsland_Interior_hns_OnTransition
 	.byte 0
 
 SouthernIsland_Interior_hns_OnTransition::
-	goto_if_eq VAR_ROAMER_POKEMON_HNS, 0, SouthernIsland_Interior_hns_HideLatias
+	goto_if_eq JOHTO_VAR_ROAMER_POKEMON_HNS, 0, SouthernIsland_Interior_hns_HideLatias
 	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIOS
-	setflag FLAG_HIDE_LATIOS
+	setflag JOHTO_FLAG_HIDE_LATIOS
 	end
+
 SouthernIsland_Interior_hns_HideLatias::
 	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIAS
-	setflag FLAG_HIDE_LATIAS
+	setflag JOHTO_FLAG_HIDE_LATIAS
 	end
 
 SouthernIsland_Interior_hns_EventScript_Latios::
@@ -24,7 +27,7 @@ SouthernIsland_Interior_hns_EventScript_Latios::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SouthernIsland_Interior_hns_EventScript_LatiosRan
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIOS
-	setflag FLAG_HIDE_LATIOS
+	setflag JOHTO_FLAG_HIDE_LATIOS
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
@@ -32,7 +35,6 @@ SouthernIsland_Interior_hns_EventScript_Latios::
 SouthernIsland_Interior_hns_EventScript_LatiosRan::
 	release
 	end
-
 
 SouthernIsland_Interior_hns_EventScript_Latias::
 	lock
@@ -46,7 +48,7 @@ SouthernIsland_Interior_hns_EventScript_Latias::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SouthernIsland_Interior_hns_EventScript_LatiasRan
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIAS
-	setflag FLAG_HIDE_LATIAS
+	setflag JOHTO_FLAG_HIDE_LATIAS
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
@@ -54,3 +56,4 @@ SouthernIsland_Interior_hns_EventScript_Latias::
 SouthernIsland_Interior_hns_EventScript_LatiasRan::
 	release
 	end
+

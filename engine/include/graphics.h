@@ -3504,9 +3504,6 @@ extern const u16 gContestResultsTitle_Tough_Tilemap[];
 extern const u16 gContestResultsTitle_Tilemap[];
 
 // Trainer Card.
-#if IS_HNS
-extern const u16 gHnsTrainerCardGreen_Pal[];
-#endif
 extern const u16 gHoennTrainerCardGreen_Pal[];
 extern const u32 gHoennTrainerCard_Gfx[];
 extern const u16 gKantoTrainerCardBlue_Pal[];

@@ -1,5 +1,4 @@
 #include "global.h"
-#if IS_HNS || defined(FIRERED)
 #include "event_data.h"
 #include "pokenav.h"
 #include "window.h"
@@ -31,10 +30,6 @@
 #include "constants/songs.h"
 #include "constants/region_map_sections.h"
 #include "regions.h"
-#if IS_HNS
-#include "constants/flags_hns.h"
-#include "constants/vars_hns.h"
-#endif
 #include "constants/trainers.h"
 #include "data/johto_phone_aliases.h"
 
@@ -978,12 +973,7 @@ bool8 IsHoennSoundPlaying(void)
 
 static bool8 IsPlayerInJohto(void)
 {
-#ifdef FIRERED
     return IsJohtoCampaignMap();
-#else
-    u16 mapsec = gMapHeader.regionMapSectionId;
-    return (mapsec >= JOHTO_MAPSEC_START && mapsec <= JOHTO_MAPSEC_END);
-#endif
 }
 
 static bool8 IsStationAvailable(u8 station)
@@ -1467,12 +1457,3 @@ void Special_BuenaRollReward(void)
     CopyItemName(ITEM_GREAT_BALL, gStringVar1);
 }
 
-#else // !IS_HNS
-
-#include "event_data.h"
-
-void CheckRadioStation(void)
-{
-    gSpecialVar_Result = 0;
-}
-#endif // IS_HNS

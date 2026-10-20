@@ -1,6 +1,5 @@
 #include "global.h"
 
-#ifdef FIRERED
 #include "event_data.h"
 #include "firered_save.h"
 #include "johto_progression.h"
@@ -84,4 +83,3 @@ void Special_JohtoErrandClaimReward(void)
     if (itemAdded && GetErrandState() == JOHTO_ERRAND_GUIDE_VISITED)
         gSpecialVar_Result = AdvanceErrand(JOHTO_ERRAND_REWARDED, JOHTO_ERRAND_EVENT_REWARDED);
 }
-#endif // FIRERED

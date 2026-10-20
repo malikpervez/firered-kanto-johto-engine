@@ -1,7 +1,10 @@
+@ Johto (data/maps/Route26North_hns/scripts.inc), as built into the FireRed game.
+
 Route26North_hns_MapScripts::
 	.byte 0
 
 Route26North_Trigger::
-	setflag FLAG_VISITED_RECEPTION_GATE
+	setflag JOHTO_FLAG_VISITED_RECEPTION_GATE
 	setvar VAR_TEMP_0, 1
 	end
+

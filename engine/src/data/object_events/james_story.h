@@ -1,7 +1,6 @@
 #ifndef GUARD_JAMES_STORY_GRAPHICS_H
 #define GUARD_JAMES_STORY_GRAPHICS_H
 
-#ifdef FIRERED
 // Exact package atlas: down/up/left idle, then two steps per facing.
 // Right-facing poses use the native standard animation horizontal mirror.
 static const u16 sJamesStoryPic[] = INCBIN_U16("graphics/object_events/pics/people/story/james.4bpp");
@@ -37,6 +36,5 @@ static const struct ObjectEventGraphicsInfo sJamesStoryGraphicsInfo = {
     .images = sJamesStoryFrames,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
-#endif
 
 #endif

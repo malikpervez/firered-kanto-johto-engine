@@ -62,23 +62,9 @@ enum Language
     NUM_LANGUAGES = LANGUAGE_SPANISH,
 };
 
-#ifdef FIRERED
     #define GAME_VERSION (VERSION_FIRE_RED)
     #define IS_FRLG 1
     #define IS_HNS 0
-#elif defined(LEAFGREEN)
-    #define GAME_VERSION (VERSION_LEAF_GREEN)
-    #define IS_FRLG 1
-    #define IS_HNS 0
-#elif defined(POKEMON_HNS)
-    #define GAME_VERSION (VERSION_EMERALD)
-    #define IS_FRLG 0
-    #define IS_HNS 1
-#else
-    #define GAME_VERSION (VERSION_EMERALD)
-    #define IS_FRLG 0
-    #define IS_HNS 0
-#endif
 #define GAME_LANGUAGE (LANGUAGE_ENGLISH)
 
 // party sizes
@@ -111,11 +97,7 @@ enum Language
 #define GIFT_RIBBONS_COUNT 11
 #define SAVED_TRENDS_COUNT 5
 #define PYRAMID_BAG_ITEMS_COUNT 10
-#if IS_HNS
-#define ROAMER_COUNT 4
-#else
 #define ROAMER_COUNT 1
-#endif
 
 // Bag constants
 #if I_COMBINE_BAG_POCKETS == TRUE

@@ -467,12 +467,8 @@ static void FreeAllHoFMem(void)
 static void Task_Hof_TrySaveData(u8 taskId)
 {
     gGameContinueCallback = CB2_DoHallOfFameScreenDontSaveDataFrlg;
-#ifdef FIRERED
     if (TrySavingData(SAVE_HALL_OF_FAME) != SAVE_STATUS_OK)
         return;
-#else
-    TrySavingData(SAVE_HALL_OF_FAME);
-#endif
     PlaySE(SE_SAVE);
     gTasks[taskId].func = Task_Hof_DelayAfterSave;
     gTasks[taskId].data[3] = 32;

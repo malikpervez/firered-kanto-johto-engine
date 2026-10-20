@@ -20,8 +20,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_FRLG",
-      "x": 5,
-      "y": 6,
+      "x": 11,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -34,29 +34,29 @@
   ],
   "warp_events": [
     {
-      "x": 5,
-      "y": 8,
+      "x": 12,
+      "y": 12,
       "elevation": 3,
       "dest_map": "MAP_ROUTE6",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 8,
+      "x": 13,
+      "y": 12,
       "elevation": 3,
       "dest_map": "MAP_ROUTE6",
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
-      "y": 8,
+      "x": 14,
+      "y": 12,
       "elevation": 3,
       "dest_map": "MAP_ROUTE6",
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
-      "y": 4,
+      "x": 14,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL",
       "dest_warp_id": "1"
@@ -64,61 +64,13 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "blockdata_filepath": "data/layouts/Route6_TunnelEntrance_hns/map.bin",
-      "border_filepath": "data/layouts/Route6_TunnelEntrance_hns/border.bin",
-      "height": 18,
-      "layout_version": "hns",
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_GoldenrodUndergroundTunnel_Hns",
-      "width": 27
-    },
-    "object_events": [
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_FRLG",
-        "x": 11,
-        "y": 10,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "UndergroundPath_SouthEntrance_EventScript_Woman",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 12,
-        "y": 12,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE6",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 13,
-        "y": 12,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE6",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 14,
-        "y": 12,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE6",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 14,
-        "y": 8,
-        "elevation": 3,
-        "dest_map": "MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL",
-        "dest_warp_id": "1"
-      }
-    ]
+  "firered_geometry": {
+    "blockdata_filepath": "data/layouts/Route6_TunnelEntrance_hns/map.bin",
+    "border_filepath": "data/layouts/Route6_TunnelEntrance_hns/border.bin",
+    "height": 18,
+    "layout_version": "hns",
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_GoldenrodUndergroundTunnel_Hns",
+    "width": 27
   }
 }

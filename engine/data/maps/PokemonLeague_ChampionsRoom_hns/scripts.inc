@@ -1,9 +1,11 @@
+@ Johto (data/maps/PokemonLeague_ChampionsRoom_hns/scripts.inc), as built into the FireRed game.
+
 PokemonLeague_ChampionsRoom_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChampionRoom_OnFrame
-	map_script MAP_SCRIPT_ON_RESUME, PokemonLeague_ChampionsRoom_OnResume
+	map_script MAP_SCRIPT_ON_RESUME, J_PokemonLeague_ChampionsRoom_OnResume
 	.byte 0
 
-PokemonLeague_ChampionsRoom_OnResume::
+J_PokemonLeague_ChampionsRoom_OnResume::
 	setvar VAR_0x8004, 4
 	special DoPokemonLeagueLightingEffect
 	end
@@ -33,7 +35,7 @@ ChamionRoom_Movement_Enter:
 
 ChampionRoom_Trigger::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	release
 	end
@@ -44,29 +46,29 @@ PokemonLeague_WillsRoom_EventScript_Lance::
 	call_if_eq VAR_FACING, DIR_SOUTH, PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingSouth
 	call_if_eq VAR_FACING, DIR_WEST, PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingWest
 	faceplayer
-	goto_if_set FLAG_IS_CHAMPION, PokemonLeague_WillsRoom_EventScript_LanceRematch
+	goto_if_set JOHTO_FLAG_IS_CHAMPION, PokemonLeague_WillsRoom_EventScript_LanceRematch
 	msgbox PokemonLeague_ChampionsRoom_Text_BattleIntro, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_LANCE_1_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
+	trainerbattle_no_intro TRAINER_JOHTO_LANCE_1_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
 	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto
 
 PokemonLeague_WillsRoom_EventScript_LanceRematch::
-	goto_if_unset FLAG_IS_KANTO_CHAMPION, PokemonLeague_WillsRoom_EventScript_LanceRematchStandard
-	goto_if_ge VAR_SINJOH_STORYLINE, 13, PokemonLeague_WillsRoom_EventScript_LanceRematchPostOBC
+	goto_if_unset JOHTO_FLAG_IS_KANTO_CHAMPION, PokemonLeague_WillsRoom_EventScript_LanceRematchStandard
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, PokemonLeague_WillsRoom_EventScript_LanceRematchPostOBC
 
 PokemonLeague_WillsRoom_EventScript_LanceRematchStandard::
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchBattleIntro, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_LANCE_2_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
+	trainerbattle_no_intro TRAINER_JOHTO_LANCE_2_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
 	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto
 
 PokemonLeague_WillsRoom_EventScript_LanceRematchPostOBC::
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchBattleIntro, MSGBOX_DEFAULT
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	trainerbattle_no_intro TRAINER_LANCE_POSTOBC_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
+	trainerbattle_no_intro TRAINER_JOHTO_LANCE_POSTOBC_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
 	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto
 
 PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
@@ -74,17 +76,17 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
 	msgbox PokemonLeague_ChampionsRoom_Text_BattleAfter, MSGBOX_DEFAULT
 	closemessage
 	setmetatile 6, 1, 0x3F2, FALSE
-	setmetatile 6, 2, 0x296, FALSE	
+	setmetatile 6, 2, 0x296, FALSE
 	playse SE_BANG
-	setvar VAR_0x8004, 1  @ vertical pan
-	setvar VAR_0x8005, 1  @ horizontal pan
-	setvar VAR_0x8006, 4  @ num shakes
-	setvar VAR_0x8007, 4  @ shake delay
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 4
+	setvar VAR_0x8007, 4
 	special ShakeCamera
 	waitstate
 	special DrawWholeMapView
 	playse SE_PIN
-	applymovement LOCALID_LEAGUE_LANCE, Common_Movement_ExclamationMark
+	applymovement LOCALID_LEAGUE_LANCE, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_LEAGUE_LANCE
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
@@ -116,7 +118,7 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerLeave
 	waitmovement LOCALID_LEAGUE_LANCE
-	@setobjectxyperm LOCALID_LEAGUE_LANCE, 6, 14
+
 	removeobject LOCALID_LEAGUE_LANCE
 	playse SE_EXIT
 	waitmovement OBJ_EVENT_ID_PLAYER
@@ -128,12 +130,12 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
 	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryLeft
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_LEAGUE_MARY, Common_Movement_ExclamationMark
+	applymovement LOCALID_LEAGUE_MARY, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_LEAGUE_MARY
 	msgbox PokemonLeague_ChampionsRoom_Text_MaryNoInterview, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_LEAGUE_STATE, 6
+	setvar JOHTO_VAR_LEAGUE_STATE, 6
 	warpsilent MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS, 0
 	waitstate
 	releaseall
@@ -144,17 +146,17 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto::
 	msgbox PokemonLeague_ChampionsRoom_Text_BattleAfter, MSGBOX_DEFAULT
 	closemessage
 	setmetatile 6, 1, 0x3F2, FALSE
-	setmetatile 6, 2, 0x296, FALSE	
+	setmetatile 6, 2, 0x296, FALSE
 	playse SE_BANG
-	setvar VAR_0x8004, 1  @ vertical pan
-	setvar VAR_0x8005, 1  @ horizontal pan
-	setvar VAR_0x8006, 4  @ num shakes
-	setvar VAR_0x8007, 4  @ shake delay
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 4
+	setvar VAR_0x8007, 4
 	special ShakeCamera
 	waitstate
 	special DrawWholeMapView
 	playse SE_PIN
-	applymovement LOCALID_LEAGUE_LANCE, Common_Movement_ExclamationMark
+	applymovement LOCALID_LEAGUE_LANCE, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_LEAGUE_LANCE
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
@@ -186,7 +188,7 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto::
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerLeave
 	waitmovement LOCALID_LEAGUE_LANCE
-	@setobjectxyperm LOCALID_LEAGUE_LANCE, 6, 14
+
 	removeobject LOCALID_LEAGUE_LANCE
 	playse SE_EXIT
 	waitmovement OBJ_EVENT_ID_PLAYER
@@ -198,12 +200,12 @@ PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto::
 	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryLeft
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_LEAGUE_MARY, Common_Movement_ExclamationMark
+	applymovement LOCALID_LEAGUE_MARY, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_LEAGUE_MARY
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchMaryNoInterview, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_LEAGUE_STATE, 6
+	setvar JOHTO_VAR_LEAGUE_STATE, 6
 	warpsilent MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS, 0
 	waitstate
 	releaseall
@@ -213,10 +215,12 @@ PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingEast::
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingEast
 	waitmovement 0
 	return
+
 PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingSouth::
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingSouth
 	waitmovement 0
 	return
+
 PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingWest::
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingWest
 	waitmovement 0
@@ -227,6 +231,7 @@ PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingEast:
 	walk_right
 	face_up
 	step_end
+
 PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingSouth:
 	walk_left
 	walk_down
@@ -234,6 +239,7 @@ PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingSouth:
 	walk_right
 	face_up
 	step_end
+
 PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingWest:
 	walk_down
 	walk_left
@@ -321,111 +327,88 @@ PokemonLeague_ChampionsRoom_Movement_MaryLeft:
 	step_end
 
 PokemonLeague_ChampionsRoom_Text_RematchBattleIntro:
-    .string "LANCE: Welcome back!\p"
-    .string "You've proven yourself in JOHTO,\p"
-    .string "acquiring all 8 badges and even\n"
-    .string "besting me once.\p"
-    .string "But now, you're in the big\n"
-    .string "leagues.\p"
-    .string "The KANTO LEAGUE!\p"
-    .string "A region with its own trials and\n"
-    .string "champions.\p"
-    .string "Here, I am the final challenge,\n"
-    .string "with a team stronger than ever\l"
-    .string "before.\p"
-    .string "This is the true test,\p"
-    .string "a battle to determine the\n"
-    .string "CHAMPION of KANTO.\p"
-    .string "Are you ready to rise to this new\n"
-    .string "challenge?\p"
-    .string "To prove yourself once more?\p"
-    .string "Show me the strength that\n"
-    .string "conquered JOHTO, CHAMPION.$"
+	.string "LANCE{SE_M_HEAT_WAVE}Welcom{SE_M_REVERSAL}back{SE_M_SUPERSONIC}{PLAYER}!\p"
+	.string "Yo{SE_M_DIVE}conquere{SE_M_WATERFALL}th{SE_M_REVERSAL}JOHT{SE_M_SOLAR_BEAM}LEAGUE,\n"
+	.string "an{SE_M_WATERFALL}prove{SE_M_WATERFALL}yoursel{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}KANTO.\p"
+	.string "M{SE_M_YAWN}tea{SE_M_MILK_DRINK}i{SE_M_GRASSWHISTLE}stronge{SE_M_SAND_TOMB}tha{SE_M_ATTRACT}before.\p"
+	.string "Sho{SE_M_TWISTER}m{SE_M_REVERSAL}ho{SE_M_TWISTER}fa{SE_M_SAND_TOMB}yo{SE_M_DIVE}an{SE_M_WATERFALL}your\n"
+	.string "POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}come{SE_M_SUPERSONIC}CHAMPION!$"
 
 PokemonLeague_ChampionsRoom_Text_BattleIntro:
-    .string "LANCE: I've been waiting for you.\p"
-    .string "{PLAYER}!\p"
-    .string "I knew that you, with your skills,\n"
-    .string "would eventually reach me here.\p"
-    .string "There's no need for words now.\p"
-    .string "We will battle to determine who is\n"
-    .string "the stronger of the two of us.\p"
-    .string "As the most powerful trainer and as\n"
-    .string "the POKéMON LEAGUE CHAMPION…\p"
-    .string "I, LANCE the dragon master, accept\n"
-    .string "your challenge!$"
+	.string "LANCE{SE_M_HEAT_WAVE}I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you.\p"
+	.string "{PLAYER}!\p"
+	.string "{SE_M_HEAL_BELL}kne{SE_M_TWISTER}tha{SE_M_SPIT_UP}you{SE_M_SUPERSONIC}wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}skills,\n"
+	.string "woul{SE_M_WATERFALL}eventuall{SE_M_YAWN}reac{SE_M_TRI_ATTACK}m{SE_M_REVERSAL}here.\p"
+	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}nee{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}word{SE_M_GRASSWHISTLE}now.\p"
+	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}battl{SE_M_REVERSAL}t{SE_M_ATTRACT2}determin{SE_M_REVERSAL}wh{SE_M_ATTRACT2}is\n"
+	.string "th{SE_M_REVERSAL}stronge{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}tw{SE_M_ATTRACT2}o{SE_M_ACID_ARMOR}us.\p"
+	.string "A{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}mos{SE_M_SPIT_UP}powerfu{SE_M_BATON_PASS}traine{SE_M_SAND_TOMB}an{SE_M_WATERFALL}as\n"
+	.string "th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}LEAGU{SE_M_SWORDS_DANCE}CHAMPION…\p"
+	.string "I{SE_M_SUPERSONIC}LANC{SE_M_SWORDS_DANCE}th{SE_M_REVERSAL}drago{SE_M_ATTRACT}master{SE_M_SUPERSONIC}accept\n"
+	.string "you{SE_M_SAND_TOMB}challenge!$"
 
 PokemonLeague_ChampionsRoom_Text_BattleWin:
-    .string "…It's over.\p"
-    .string "But it's an odd feeling.\p"
-    .string "I'm not angry that I lost. In fact,\n"
-    .string "I feel happy.\p"
-    .string "Happy that I witnessed the rise\n"
-    .string "of a great new CHAMPION!$"
+	.string "…It'{SE_M_GRASSWHISTLE}over.\p"
+	.string "Bu{SE_M_SPIT_UP}it'{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}od{SE_M_WATERFALL}feeling.\p"
+	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}angr{SE_M_YAWN}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}lost{SE_M_PERISH_SONG}I{SE_M_ATTRACT}fact,\n"
+	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}happy.\p"
+	.string "Happ{SE_M_YAWN}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}witnesse{SE_M_WATERFALL}th{SE_M_REVERSAL}rise\n"
+	.string "o{SE_M_ACID_ARMOR}{SE_M_CHARGE}grea{SE_M_SPIT_UP}ne{SE_M_TWISTER}CHAMPION!$"
 
 PokemonLeague_ChampionsRoom_Text_BattleAfter:
-    .string "…Whew.\p"
-    .string "You have become truly powerful,\n"
-    .string "{PLAYER}.\p"
-    .string "Your POKéMON have responded to your\n"
-    .string "strong and upstanding nature.\p"
-    .string "As a trainer, you will continue to\n"
-    .string "grow strong with your POKéMON.$"
+	.string "…Whew.\p"
+	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}becom{SE_M_REVERSAL}trul{SE_M_YAWN}powerful,\n"
+	.string "{PLAYER}.\p"
+	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}responde{SE_M_WATERFALL}t{SE_M_ATTRACT2}your\n"
+	.string "stron{SE_M_SANDSTORM}an{SE_M_WATERFALL}upstandin{SE_M_SANDSTORM}nature.\p"
+	.string "A{SE_M_GRASSWHISTLE}{SE_M_CHARGE}trainer{SE_M_SUPERSONIC}yo{SE_M_DIVE}wil{SE_M_BATON_PASS}continu{SE_M_REVERSAL}to\n"
+	.string "gro{SE_M_TWISTER}stron{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}POKéMON.$"
 
 PokemonLeague_ChampionsRoom_Text_MaryOhNoOak:
-    .string "MARY: Oh, no! It's all over!\p"
-    .string "PROF.OAK, if you weren't so slow…$"
+	.string "MARY{SE_M_HEAT_WAVE}Oh{SE_M_SUPERSONIC}no{SE_M_DRAGON_RAGE}It'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}over!\p"
+	.string "PROF.OAK{SE_M_SUPERSONIC}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}weren'{SE_M_SPIT_UP}s{SE_M_ATTRACT2}slow…$"
 
 PokemonLeague_ChampionsRoom_Text_OakCongratulations:
-    .string "PROF.OAK: Ah, {PLAYER}!\p"
-    .string "It's been a long while.\p"
-    .string "You certainly look more impressive.\p"
-    .string "Your conquest of the JOHTO LEAGUE\n"
-    .string "is just fantastic!\p"
-    .string "Your dedication, trust and love for\n"
-    .string "your POKéMON made this happen.\p"
-    .string "Your POKéMON were outstanding too.\p"
-    .string "Because they believed in you as a\n"
-    .string "trainer, they persevered.\p"
-    .string "Congratulations, {PLAYER}!$"
+	.string "PROF.OAK{SE_M_HEAT_WAVE}Ah{SE_M_SUPERSONIC}{PLAYER}!\p"
+	.string "It'{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}{SE_M_CHARGE}lon{SE_M_SANDSTORM}while.\p"
+	.string "Yo{SE_M_DIVE}certainl{SE_M_YAWN}loo{SE_M_ENCORE2}mor{SE_M_REVERSAL}impressive.\p"
+	.string "You{SE_M_SAND_TOMB}conques{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}JOHT{SE_M_SOLAR_BEAM}LEAGUE\n"
+	.string "i{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}fantastic!\p"
+	.string "You{SE_M_SAND_TOMB}dedication{SE_M_SUPERSONIC}trus{SE_M_SPIT_UP}an{SE_M_WATERFALL}lov{SE_M_REVERSAL}for\n"
+	.string "you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}mad{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}happen.\p"
+	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}wer{SE_M_REVERSAL}outstandin{SE_M_SANDSTORM}too.\p"
+	.string "Becaus{SE_M_REVERSAL}the{SE_M_YAWN}believe{SE_M_WATERFALL}i{SE_M_ATTRACT}yo{SE_M_DIVE}a{SE_M_GRASSWHISTLE}a\n"
+	.string "trainer{SE_M_SUPERSONIC}the{SE_M_YAWN}persevered.\p"
+	.string "Congratulations{SE_M_SUPERSONIC}{PLAYER}!$"
 
 PokemonLeague_ChampionsRoom_Text_RematchOakCongratulations:
-    .string "PROF.OAK: Ah, {PLAYER}!\p"
-    .string "I've been following your progress\n"
-    .string "since PROF.ELM sent you on your\l"
-    .string "way.\p"
-    .string "You've certainly become more\n"
-    .string "impressive.\p"
-    .string "Conquering both the JOHTO and now\n"
-    .string "the KANTO LEAGUE is no small feat.\p"
-    .string "You've truly outdone yourself!\p"
-    .string "It's clear that your POKéMON trust\n"
-    .string "you immensely,\p"
-    .string "and that trust has been the\n"
-    .string "foundation of your success.\p"
-    .string "But remember, a trainer's journey\n"
-    .string "is never truly over.\p"
-    .string "Congratulations on your victory,\n"
-    .string "{PLAYER}!$"
+	.string "PROF.OAK{SE_M_HEAT_WAVE}Anothe{SE_M_SAND_TOMB}fin{SE_M_REVERSAL}victory,\n"
+	.string "{PLAYER}!\p"
+	.string "You{SE_M_SAND_TOMB}journey{SE_M_GRASSWHISTLE}throug{SE_M_TRI_ATTACK}KANT{SE_M_SOLAR_BEAM}and\n"
+	.string "JOHT{SE_M_SOLAR_BEAM}hav{SE_M_REVERSAL}brough{SE_M_SPIT_UP}yo{SE_M_DIVE}far.\p"
+	.string "Th{SE_M_REVERSAL}trus{SE_M_SPIT_UP}betwee{SE_M_ATTRACT}yo{SE_M_DIVE}an{SE_M_WATERFALL}your\n"
+	.string "POKéMO{SE_M_PSYBEAM2}keep{SE_M_GRASSWHISTLE}growing.\p"
+	.string "Congratulation{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}return\n"
+	.string "t{SE_M_ATTRACT2}th{SE_M_REVERSAL}JOHT{SE_M_SOLAR_BEAM}LEAGUE!$"
 
 PokemonLeague_ChampionsRoom_Text_MaryInterview:
-    .string "MARY: Let's interview the brand new\n"
-    .string "JOHTO CHAMPION!$"
+	.string "MARY{SE_M_HEAT_WAVE}Let'{SE_M_GRASSWHISTLE}intervie{SE_M_TWISTER}th{SE_M_REVERSAL}bran{SE_M_WATERFALL}new\n"
+	.string "JOHT{SE_M_SOLAR_BEAM}CHAMPION!$"
 
 PokemonLeague_ChampionsRoom_Text_RematchMaryInterview:
-    .string "MARY: Let's interview the brand new\n"
-    .string "KANTO CHAMPION!$"
+	.string "MARY{SE_M_HEAT_WAVE}Let'{SE_M_GRASSWHISTLE}intervie{SE_M_TWISTER}JOHTO's\n"
+	.string "returnin{SE_M_SANDSTORM}CHAMPION{SE_M_SUPERSONIC}{PLAYER}!$"
 
 PokemonLeague_ChampionsRoom_Text_Noisy:
-    .string "LANCE: This is getting to be a bit\n"
-    .string "too noisy…\p"
-    .string "{PLAYER}, could you come with me?$"
+	.string "LANCE{SE_M_HEAT_WAVE}Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}gettin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}{SE_M_CHARGE}bit\n"
+	.string "to{SE_M_ATTRACT2}noisy…\p"
+	.string "{PLAYER}{SE_M_SUPERSONIC}coul{SE_M_WATERFALL}yo{SE_M_DIVE}com{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?$"
 
 PokemonLeague_ChampionsRoom_Text_MaryNoInterview:
-    .string "MARY: Oh, wait! We haven't done\n"
-    .string "the interview!$"
+	.string "MARY{SE_M_HEAT_WAVE}Oh{SE_M_SUPERSONIC}wait{SE_M_DRAGON_RAGE}W{SE_M_REVERSAL}haven'{SE_M_SPIT_UP}done\n"
+	.string "th{SE_M_REVERSAL}interview!$"
 
 PokemonLeague_ChampionsRoom_Text_RematchMaryNoInterview:
-    .string "MARY: Come on! You can't blow off\n"
-    .string "the interview AGAIN!$"
+	.string "MARY{SE_M_HEAT_WAVE}Com{SE_M_REVERSAL}on{SE_M_DRAGON_RAGE}Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}blo{SE_M_TWISTER}off\n"
+	.string "th{SE_M_REVERSAL}intervie{SE_M_TWISTER}AGAIN!$"
 

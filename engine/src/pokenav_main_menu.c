@@ -13,12 +13,8 @@
 #include "menu.h"
 #include "dma3.h"
 #include "data/johto_phone_aliases.h"
-#ifdef FIRERED
 #include "regions.h"
 #define POKEGEAR_LABEL_RESOURCE(native, johto, johtoContext) ((johtoContext) ? (const void *)(johto) : (const void *)(native))
-#else
-#define POKEGEAR_LABEL_RESOURCE(native, johto, johtoContext) native
-#endif
 
 struct Pokenav_MainMenu
 {
@@ -61,16 +57,10 @@ static void DrawHelpBar(u32);
 static void SpriteCB_SpinningPokenav(struct Sprite *);
 static u32 LoopedTask_InitPokenavMenu(s32);
 
-#if IS_HNS || defined(FIRERED)
 static const u16 sSpinningPokenav_Pal[] = INCBIN_U16("graphics/pokenav/hns/nav_icon.gbapal");
 static const u32 sSpinningPokenav_Gfx[] = INCBIN_U32("graphics/pokenav/hns/nav_icon.4bpp.smol");
-#else
-static const u16 sSpinningPokenav_Pal[] = INCBIN_U16("graphics/pokenav/nav_icon.gbapal");
-static const u32 sSpinningPokenav_Gfx[] = INCBIN_U32("graphics/pokenav/nav_icon.4bpp.smol");
-#endif
 static const u32 sBlueLightCopy[] = INCBIN_U32("graphics/pokenav/blue_light.4bpp.smol"); // Unused copy of sMatchCallBlueLightTiles
 
-#ifdef FIRERED
 // Reuse the original HnS Pokégear/MAP labels only on Johto campaign maps.
 // Native labels and all existing sprite/window buffers remain unchanged.
 static const u16 sJohtoPokegearHeader_Pal[] = INCBIN_U16("graphics/pokenav/hns/header.gbapal");
@@ -78,7 +68,6 @@ static const u32 sJohtoPokegearHeader_Gfx[] = INCBIN_U32("graphics/pokenav/hns/h
 static const u32 sJohtoPokegearHeader_Tilemap[] = INCBIN_U32("graphics/pokenav/hns/header.bin.smolTM");
 static const u16 sJohtoMapHeader_Pal[] = INCBIN_U16("graphics/pokenav/hns/left_headers/palette.gbapal");
 static const u32 sJohtoMapHeader_Gfx[] = INCBIN_U32("graphics/pokenav/hns/left_headers/hoenn_map.4bpp.smol");
-#endif
 
 const struct BgTemplate gPokenavMainMenuBgTemplates[] =
 {
@@ -110,17 +99,10 @@ static const struct WindowTemplate sHelpBarWindowTemplate[] =
 static const u8 *const sHelpBarTexts[HELPBAR_COUNT] =
 {
     [HELPBAR_NONE]                  = COMPOUND_STRING("{CLEAR 0x80}"),
-#if IS_HNS || defined(FIRERED)
     [HELPBAR_MAP_ZOOMED_OUT]        = COMPOUND_STRING("{B_BUTTON}CANCEL"),
     [HELPBAR_MAP_ZOOMED_IN]         = COMPOUND_STRING("{B_BUTTON}CANCEL"),
     [HELPBAR_MAP_ZOOMED_OUT_CANFLY] = COMPOUND_STRING("{B_BUTTON}CANCEL {R_BUTTON}FLY"),
     [HELPBAR_MAP_ZOOMED_IN_CANFLY]  = COMPOUND_STRING("{B_BUTTON}CANCEL {R_BUTTON}FLY"),
-#else
-    [HELPBAR_MAP_ZOOMED_OUT]        = COMPOUND_STRING("{A_BUTTON}ZOOM {B_BUTTON}CANCEL"),
-    [HELPBAR_MAP_ZOOMED_IN]         = COMPOUND_STRING("{A_BUTTON}FULL {B_BUTTON}CANCEL"),
-    [HELPBAR_MAP_ZOOMED_OUT_CANFLY] = COMPOUND_STRING("{A_BUTTON}ZOOM {B_BUTTON}CANCEL {R_BUTTON}FLY"),
-    [HELPBAR_MAP_ZOOMED_IN_CANFLY]  = COMPOUND_STRING("{A_BUTTON}FULL {B_BUTTON}CANCEL {R_BUTTON}FLY"),
-#endif
     [HELPBAR_CONDITION_MON_LIST]    = COMPOUND_STRING("{A_BUTTON}CONDITION {B_BUTTON}CANCEL"),
     [HELPBAR_CONDITION_MON_STATUS]  = COMPOUND_STRING("{A_BUTTON}MARKINGS {B_BUTTON}CANCEL"),
     [HELPBAR_CONDITION_MARKINGS]    = COMPOUND_STRING("{A_BUTTON}SELECT MARK {B_BUTTON}CANCEL"),
@@ -696,10 +678,8 @@ static void LoadLeftHeaderGfxForMenu(u32 menuGfxId)
 {
     struct Pokenav_MainMenu *menu;
     u32 size, tag;
-#ifdef FIRERED
     bool32 useJohtoMapLabel = IsJohtoCampaignMap()
         && (menuGfxId == POKENAV_GFX_MAP_MENU_ZOOMED_OUT || menuGfxId == POKENAV_GFX_MAP_MENU_ZOOMED_IN);
-#endif
 
     if (menuGfxId >= POKENAV_GFX_SUBMENUS_START)
         return;

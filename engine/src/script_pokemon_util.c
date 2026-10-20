@@ -87,11 +87,9 @@ u8 ScriptGiveEgg(u16 species)
     struct Pokemon mon;
     u8 isEgg;
 
-#ifdef FIRERED
     // Giratina is a scripted visitor, never a new player gift or Egg.
     if (species == SPECIES_GIRATINA_ALTERED || species == SPECIES_GIRATINA_ORIGIN)
         return MON_CANT_GIVE;
-#endif
     CreateEgg(&mon, species, TRUE);
     isEgg = TRUE;
     SetMonData(&mon, MON_DATA_IS_EGG, &isEgg);
@@ -545,12 +543,10 @@ static u32 ScriptGiveMonParameterized(u8 side, u8 slot, u16 species, u8 level, e
     u32 i;
     bool32 isShiny;
 
-#ifdef FIRERED
     // Do not restrict enemy construction or alter an already-owned Pokemon.
     if (side == B_SIDE_PLAYER
         && (species == SPECIES_GIRATINA_ALTERED || species == SPECIES_GIRATINA_ORIGIN))
         return MON_CANT_GIVE;
-#endif
     u32 personality = GetMonPersonality(species, gender, nature, RANDOM_UNOWN_LETTER);
     CreateMon(&mon, species, level, personality, OTID_STRUCT_PLAYER_ID);
 
@@ -681,11 +677,9 @@ u32 ScriptGiveMon(u16 species, u8 level, enum Item item)
 #endif
     if (IsOneTypeChallengeActive() && !FlagGet(FLAG_SYS_POKEMON_GET))
         species = GetStarterPokemon(VarGet(VAR_STARTER_MON));
-#ifdef FIRERED
     // Check the final species after randomizer/challenge selection as well.
     if (species == SPECIES_GIRATINA_ALTERED || species == SPECIES_GIRATINA_ORIGIN)
         return MON_CANT_GIVE;
-#endif
     CreateRandomMon(&mon, species, level);
     if (item)
     {

@@ -34,29 +34,23 @@ Route24_EventScript_RocketTriggerRight::
 	goto Route24_EventScript_RocketTrigger
 	end
 
-#ifdef FIRERED
 Route24_FireRed_EventScript_RocketTriggerEast::
 	lockall
 	setvar VAR_TEMP_1, 2
 	goto Route24_EventScript_RocketTrigger
 	end
-#endif
 
 Route24_EventScript_RocketTrigger::
 	textcolor NPC_TEXT_COLOR_MALE
 	call_if_eq VAR_TEMP_1, 0, Route24_EventScript_RocketApproachPlayer
 	call_if_eq VAR_TEMP_1, 1, Route24_EventScript_RocketMotionToPlayer
-#ifdef FIRERED
 	call_if_eq VAR_TEMP_1, 2, Route24_FireRed_EventScript_RocketFaceEast
 	goto_if_eq VAR_TEMP_1, 2, Route24_FireRed_EventScript_PlayerFaceWest
-#endif
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-#ifdef FIRERED
 	goto Route24_FireRed_EventScript_AfterFacing
 Route24_FireRed_EventScript_PlayerFaceWest::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 Route24_FireRed_EventScript_AfterFacing::
-#endif
 	waitmovement 0
 	msgbox Route24_Text_JustEarnedFabulousPrize
 	checkitemspace ITEM_NUGGET
@@ -215,9 +209,7 @@ Route24_Text_CaleDefeat::
 Route24_Text_CalePostBattle::
 	.string "I did my best. I have no regrets!$"
 
-#ifdef FIRERED
 Route24_FireRed_EventScript_RocketFaceEast::
 	applymovement LOCALID_ROUTE24_ROCKET, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	return
-#endif

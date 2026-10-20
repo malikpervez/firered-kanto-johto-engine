@@ -4198,12 +4198,10 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     else
         value = num;
 
-#ifdef FIRERED
     // Newly caught Johto species have no Kanto index before the National Dex.
     // Show their real number on registration without changing Dex unlocks.
     if (newEntry && value == 0)
         value = num;
-#endif
 
     ConvertIntToDecimalStringN(StringCopy(str, gText_NumberClear01), value, STR_CONV_MODE_LEADING_ZEROS, digitCount);
     PrintInfoScreenText(str, 0x60, 0x19);

@@ -11015,13 +11015,8 @@ DirectSoundWaveData_Phoneme_51::
 .endif @ PHONEMES_SHARED
 
 	.align 2
-#ifdef FIRERED
 .global DirectSoundWaveData_sc88pro_accordion_duplicate
 .set DirectSoundWaveData_sc88pro_accordion_duplicate, DirectSoundWaveData_sc88pro_accordion
-#else
-DirectSoundWaveData_sc88pro_accordion_duplicate::
-	.incbin "sound/direct_sound_samples/sc88pro_accordion_duplicate.bin"
-#endif
 
 	.align 2
 DirectSoundWaveData_steinway_b_piano::

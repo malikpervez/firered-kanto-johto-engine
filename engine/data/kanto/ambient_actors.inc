@@ -1,4 +1,3 @@
-#ifdef FIRERED
 
 KantoAmbient_ViridianCity_House1_EventScript_Rattey::
 	lock
@@ -110,4 +109,3 @@ KantoAmbient_LavenderTown_VolunteerPokemonHouse_Text_2:
 	.string "The MAROWAK is quiet, though it\n"
 	.string "appears quite happy.$"
 
-#endif

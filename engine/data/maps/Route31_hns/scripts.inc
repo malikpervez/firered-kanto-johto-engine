@@ -1,15 +1,17 @@
+@ Johto (data/maps/Route31_hns/scripts.inc), as built into the FireRed game.
+
 Route31_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route31_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
-Route31_OnTransition: 
+Route31_OnTransition:
 	callnative SetTimeBasedEncounters
 	end
 
 Route31_EventScript_Bugcatcher_Wade::
-	trainerbattle_single TRAINER_WADE_HNS, Route31_Text_BugCatcherWade1_Seen, Route31_Text_BugCatcherWade1_Beaten, Route31_EventScript_RegisterWade
-	goto_if_set FLAG_WADE_HAS_ITEM_HNS, Route31_EventScript_WadeGiveItem
+	trainerbattle_single TRAINER_JOHTO_WADE_HNS, Route31_Text_BugCatcherWade1_Seen, Route31_Text_BugCatcherWade1_Beaten, Route31_EventScript_RegisterWade
+	goto_if_set JOHTO_FLAG_WADE_HAS_ITEM_HNS, Route31_EventScript_WadeGiveItem
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route31_EventScript_RematchWade
 	msgbox Route31_Text_BugCatcherWade1_After, MSGBOX_AUTOCLOSE
@@ -19,20 +21,20 @@ Route31_EventScript_RegisterWade::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route31_Text_WadeRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_WADE_HNS
+	register_matchcall TRAINER_JOHTO_WADE_HNS
 	release
 	end
 
 Route31_EventScript_RematchWade::
-	trainerbattle_rematch TRAINER_WADE_HNS, Route31_Text_WadeRematchIntro, Route31_Text_WadeRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_WADE_HNS, Route31_Text_WadeRematchIntro, Route31_Text_WadeRematchDefeat
 	msgbox Route31_Text_WadePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route31_EventScript_WadeGiveItem::
 	msgbox Route31_Text_WadeHasItem, MSGBOX_DEFAULT
-	giveitem VAR_WADE_ITEM_HNS
+	giveitem JOHTO_VAR_WADE_ITEM_HNS
 	goto_if_eq VAR_RESULT, FALSE, Route31_EventScript_WadeNoRoom
-	clearflag FLAG_WADE_HAS_ITEM_HNS
+	clearflag JOHTO_FLAG_WADE_HAS_ITEM_HNS
 	msgbox Route31_Text_WadeGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -51,7 +53,7 @@ Route31_EventScript_Youngster::
 Route31_EventScript_SleepyMan::
 	lock
 	faceplayer
-	goto_if_eq VAR_KENYA, 1, Route31_EventScript_SleepyMan_AskForKenya
+	goto_if_eq JOHTO_VAR_KENYA, 1, Route31_EventScript_SleepyMan_AskForKenya
 	msgbox Route31_Text_SleepyMan, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -75,7 +77,7 @@ Route31_EventScript_SleepyMan_GiveKenya::
 	giveitem ITEM_TM_REST
 	msgbox Route31_Text_DescribeRest, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_KENYA, 2
+	setvar JOHTO_VAR_KENYA, 2
 	release
 	end
 
@@ -83,7 +85,6 @@ Route31_EventScript_SleepyMan_Fail::
 	msgbox Route31_Text_SleepyManFail, MSGBOX_DEFAULT
 	release
 	end
-
 
 Route31_EventScript_Boy::
 	lock
@@ -116,129 +117,130 @@ Route31_EventScript_ItemAntidote::
 	end
 
 Route31_Text_CooltrainerM:
-	.string "DARK CAVE…\p"
-	.string "If POKéMON could light it up,\n"
-	.string "I'd explore it.$"
+	.string "DAR{SE_M_SNORE}CAVE…\p"
+	.string "I{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}coul{SE_M_WATERFALL}ligh{SE_M_SPIT_UP}i{SE_M_SPIT_UP}up,\n"
+	.string "I'{SE_M_WATERFALL}explor{SE_M_REVERSAL}it.$"
 
 Route31_Text_BugCatcherWade1_Seen:
-	.string "I caught a bunch of POKéMON.\n"
-	.string "Let me battle with you!$"
+	.string "{SE_M_HEAL_BELL}caugh{SE_M_SPIT_UP}{SE_M_CHARGE}bunc{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}POKéMON.\n"
+	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}you!$"
 
 Route31_Text_BugCatcherWade1_Beaten:
 	.string "Awwwww…$"
 
 Route31_Text_BugCatcherWade1_After:
-	.string "You can catch POKéMON even if\n"
-	.string "you have six with you.\p"
-	.string "If you catch one, it'll go to\n"
-	.string "your BOX automatically.$"
+	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}catc{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}eve{SE_M_ATTRACT}if\n"
+	.string "yo{SE_M_DIVE}hav{SE_M_REVERSAL}si{SE_M_SWEET_SCENT}wit{SE_M_TRI_ATTACK}you.\p"
+	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}catc{SE_M_TRI_ATTACK}one{SE_M_SUPERSONIC}it'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}to\n"
+	.string "you{SE_M_SAND_TOMB}BO{SE_M_LOCK_ON}automatically.$"
 
 Route31_Text_SleepyMan:
-	.string "… Hnuurg… Huh?\p"
-	.string "I walked too far today looking\n"
-	.string "for POKéMON.\p"
-	.string "My feet hurt and I'm sleepy…\p"
-	.string "If I were a wild POKéMON, I'd\n"
-	.string "be easy to catch…\p"
+	.string "{SE_M_DIZZY_PUNCH}Hnuurg{SE_M_DIZZY_PUNCH}Huh?\p"
+	.string "{SE_M_HEAL_BELL}walke{SE_M_WATERFALL}to{SE_M_ATTRACT2}fa{SE_M_SAND_TOMB}toda{SE_M_YAWN}looking\n"
+	.string "fo{SE_M_SAND_TOMB}POKéMON.\p"
+	.string "M{SE_M_YAWN}fee{SE_M_SPIT_UP}hur{SE_M_SPIT_UP}an{SE_M_WATERFALL}I'{SE_M_MILK_DRINK}sleepy…\p"
+	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}wer{SE_M_REVERSAL}{SE_M_CHARGE}wil{SE_M_WATERFALL}POKéMON{SE_M_SUPERSONIC}I'd\n"
+	.string "b{SE_M_REVERSAL}eas{SE_M_YAWN}t{SE_M_ATTRACT2}catch…\p"
 	.string "…Zzzz…$"
 
 Route31_Text_SleepyManGotMail:
-	.string "…Zzzz… Huh?\p"
-	.string "What's that? You have MAIL\n"
-	.string "for me?$"
+	.string "…Zzzz{SE_M_DIZZY_PUNCH}Huh?\p"
+	.string "What'{SE_M_GRASSWHISTLE}that{SE_M_SING}Yo{SE_M_DIVE}hav{SE_M_REVERSAL}MAIL\n"
+	.string "fo{SE_M_SAND_TOMB}me?$"
 
 Route31_Text_SleepyManFail:
 	.string "…Zzzz…$"
 
 Route31_Text_HandOverMailMon:
-	.string "{PLAYER} handed over the\n"
-	.string "POKéMON holding the MAIL.$"
+	.string "{PLAYER} hande{SE_M_WATERFALL}ove{SE_M_SAND_TOMB}the\n"
+	.string "POKéMO{SE_M_PSYBEAM2}holdin{SE_M_SANDSTORM}th{SE_M_REVERSAL}MAIL.$"
 
 Route31_Text_ReadingMail:
-	.string "Let's see…\p"
-	.string "Thanks for bringing this to\n"
+	.string "Let'{SE_M_GRASSWHISTLE}see…\p"
+	.string "Thank{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}bringin{SE_M_SANDSTORM}thi{SE_M_GRASSWHISTLE}to\n"
 	.string "me.\p"
-	.string "My friend's a good guy, and\n"
-	.string "you're swell too!\p"
-	.string "I'd like to do something good\n"
-	.string "in return too!\p"
-	.string "I know! I want you to have\n"
+	.string "M{SE_M_YAWN}friend'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}goo{SE_M_WATERFALL}guy{SE_M_SUPERSONIC}and\n"
+	.string "you'r{SE_M_REVERSAL}swel{SE_M_BATON_PASS}too!\p"
+	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}somethin{SE_M_SANDSTORM}good\n"
+	.string "i{SE_M_ATTRACT}retur{SE_M_ATTRACT}too!\p"
+	.string "{SE_M_HEAL_BELL}know{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}have\n"
 	.string "this!$"
 
 Route31_Text_DescribeRest:
 	.string "...Zzz...\p"
-	.string "...Umm... Rest!\p"
-	.string "The phrase 'recover fast' became\n"
-	.string "shortened to 'Rest,' you see?\p"
-	.string "This is a move to sleep and recover\n"
-	.string "some HP.$"
+	.string "...Umm..{SE_M_PERISH_SONG}Rest!\p"
+	.string "Th{SE_M_REVERSAL}phras{SE_M_REVERSAL}'recove{SE_M_SAND_TOMB}fast{SE_M_ABSORB}became\n"
+	.string "shortene{SE_M_WATERFALL}t{SE_M_ATTRACT2}'Rest,{SE_M_ABSORB}yo{SE_M_DIVE}see?\p"
+	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}mov{SE_M_REVERSAL}t{SE_M_ATTRACT2}slee{SE_M_MORNING_SUN}an{SE_M_WATERFALL}recover\n"
+	.string "som{SE_M_REVERSAL}HP.$"
 
 Route31_Text_WrongMail:
-	.string "This MAIL isn't for me.$"
+	.string "Thi{SE_M_GRASSWHISTLE}MAI{SE_M_BRICK_BREAK}isn'{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}me.$"
 
 Route31_Text_MissingMail:
-	.string "Why is this POKéMON so special?\p"
-	.string "It doesn't have any MAIL.$"
+	.string "Wh{SE_M_YAWN}i{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}s{SE_M_ATTRACT2}special?\p"
+	.string "I{SE_M_SPIT_UP}doesn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}MAIL.$"
 
 Route31_Text_DeclinedToHandOverMail:
-	.string "What? You don't want\n"
+	.string "What{SE_M_SING}Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}want\n"
 	.string "anything?$"
 
 Route31_Text_CantTakeLastMon:
-	.string "If I take that POKéMON from\n"
+	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}tak{SE_M_REVERSAL}tha{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}from\n"
 	.string "you,\p"
-	.string "what are you going to use in\n"
+	.string "wha{SE_M_SPIT_UP}ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}in\n"
 	.string "battle?$"
 
 Route31_Text_Youngster:
-	.string "I found a good POKéMON in DARK\n"
+	.string "{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}{SE_M_CHARGE}goo{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}DARK\n"
 	.string "CAVE.\p"
-	.string "I'm going to raise it to take\n"
-	.string "on FALKNER.\p"
-	.string "He's the leader of VIOLET\n"
-	.string "CITY's GYM.$"
+	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}rais{SE_M_REVERSAL}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}take\n"
+	.string "o{SE_M_ATTRACT}FALKNER.\p"
+	.string "He'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}leade{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}VIOLET\n"
+	.string "CITY'{SE_M_GRASSWHISTLE}GYM.$"
 
 Route31_Text_Sign:
-	.string "ROUTE 31\p"
-	.string "VIOLET CITY - CHERRYGROVE CITY$"
+	.string "ROUT{SE_M_SWORDS_DANCE}31\p"
+	.string "VIOLE{SE_M_SWIFT}CIT{SE_M_MOONLIGHT}{SE_M_PAY_DAY}CHERRYGROV{SE_M_SWORDS_DANCE}CITY$"
 
 Route31_Text_WadeRegister:
-	.string "You're awesome! I like you!\p"
-	.string "I look for POKéMON here every\n"
+	.string "You'r{SE_M_REVERSAL}awesome{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}you!\p"
+	.string "{SE_M_HEAL_BELL}loo{SE_M_ENCORE2}fo{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}her{SE_M_REVERSAL}every\n"
 	.string "day.\p"
-	.string "When I'm in the grass, I find\n"
-	.string "all kinds of BERRIES.\p"
-	.string "If you'd like, I'll share\n"
+	.string "Whe{SE_M_ATTRACT}I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}grass{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}find\n"
+	.string "al{SE_M_BATON_PASS}kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}BERRIES.\p"
+	.string "I{SE_M_ACID_ARMOR}you'{SE_M_WATERFALL}like{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}share\n"
 	.string "some.$"
 
 Route31_Text_WadeRematchIntro:
-	.string "I was waiting for you.\n"
-	.string "Let's battle!$"
+	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you.\n"
+	.string "Let'{SE_M_GRASSWHISTLE}battle!$"
 
 Route31_Text_WadeRematchDefeat:
 	.string "Awwwww…$"
 
 Route31_Text_WadePostRematch:
-	.string "You'll hear from me as soon\n"
-	.string "as I find anything that you\l"
-	.string "might like.$"
+	.string "You'l{SE_M_BATON_PASS}hea{SE_M_SAND_TOMB}fro{SE_M_MILK_DRINK}m{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}soon\n"
+	.string "a{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}fin{SE_M_WATERFALL}anythin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}you\l"
+	.string "migh{SE_M_SPIT_UP}like.$"
 
 Route31_Text_WadeHasItem:
-	.string "Hey! I've been looking for\n"
+	.string "Hey{SE_M_DRAGON_RAGE}I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}lookin{SE_M_SANDSTORM}for\n"
 	.string "you!\p"
-	.string "I found something while I\n"
-	.string "was in the grass.\p"
-	.string "Here, you can have it!$"
+	.string "{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}somethin{SE_M_SANDSTORM}whil{SE_M_REVERSAL}I\n"
+	.string "wa{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}th{SE_M_REVERSAL}grass.\p"
+	.string "Here{SE_M_SUPERSONIC}yo{SE_M_DIVE}ca{SE_M_ATTRACT}hav{SE_M_REVERSAL}it!$"
 
 Route31_Text_WadeGaveItem:
-	.string "I'll let you know if I find\n"
-	.string "anything else!$"
+	.string "I'l{SE_M_BATON_PASS}le{SE_M_SPIT_UP}yo{SE_M_DIVE}kno{SE_M_TWISTER}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}find\n"
+	.string "anythin{SE_M_SANDSTORM}else!$"
 
 Route31_Text_WadeNoRoom:
-	.string "Hmm, looks like your BAG\n"
-	.string "is full.\p"
-	.string "Come back when you have\n"
+	.string "Hmm{SE_M_SUPERSONIC}look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}you{SE_M_SAND_TOMB}BAG\n"
+	.string "i{SE_M_GRASSWHISTLE}full.\p"
+	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}whe{SE_M_ATTRACT}yo{SE_M_DIVE}have\n"
 	.string "room!$"
 
 Route31_Text_DarkCaveSign:
-	.string "DARK CAVE$"
+	.string "DAR{SE_M_SNORE}CAVE$"
+

@@ -205,11 +205,7 @@ static enum TrainerPicID PlayerPartnerGetTrainerBackPicId(enum DifficultyLevel d
     if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)
         trainerPicId = gBattlePartners[difficulty][gPartnerTrainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerBackPic;
     else
-#ifdef FIRERED
         trainerPicId = gSaveBlock2Ptr->playerGender == FEMALE ? TRAINER_BACK_PIC_PLAYER_FEMALE : TRAINER_BACK_PIC_PLAYER_MALE;
-#else
-        trainerPicId = gSaveBlock2Ptr->playerGender + TRAINER_BACK_PIC_PLAYER_MALE;
-#endif
 
     return trainerPicId;
 }

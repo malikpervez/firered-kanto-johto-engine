@@ -1,3 +1,5 @@
+@ Johto (data/maps/BirthIsland_Exterior_hns/scripts.inc), as built into the FireRed game.
+
 BirthIsland_Exterior_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, BirthIsland_Exterior_hns_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, BirthIsland_Exterior_hns_OnResume
@@ -9,33 +11,33 @@ BirthIsland_Exterior_hns_OnReturnToField:
 	end
 
 BirthIsland_Exterior_hns_OnTransition:
-	@setflag FLAG_TEMP_HIDE_FOLLOWER
-	setflag FLAG_MAP_SCRIPT_CHECKED_DEOXYS
+
+	setflag JOHTO_FLAG_MAP_SCRIPT_CHECKED_DEOXYS
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GOLD_NORMAL_HNS
-	setvar VAR_DEOXYS_ROCK_STEP_COUNT, 0
-	setvar VAR_DEOXYS_ROCK_LEVEL, 0
-	call_if_set FLAG_BATTLED_DEOXYS, BirthIsland_Exterior_hns_EventScript_HideDeoxysAndPuzzle
-	call_if_unset FLAG_BATTLED_DEOXYS, BirthIsland_Exterior_hns_EventScript_TryShowDeoxysPuzzle
+	setvar JOHTO_VAR_DEOXYS_ROCK_STEP_COUNT, 0
+	setvar JOHTO_VAR_DEOXYS_ROCK_LEVEL, 0
+	call_if_set JOHTO_FLAG_BATTLED_DEOXYS, BirthIsland_Exterior_hns_EventScript_HideDeoxysAndPuzzle
+	call_if_unset JOHTO_FLAG_BATTLED_DEOXYS, BirthIsland_Exterior_hns_EventScript_TryShowDeoxysPuzzle
 	end
 
 BirthIsland_Exterior_hns_EventScript_HideDeoxysAndPuzzle::
-	setflag FLAG_HIDE_DEOXYS
-	setflag FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE
+	setflag JOHTO_FLAG_HIDE_DEOXYS
+	setflag JOHTO_FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE
 	return
 
 BirthIsland_Exterior_hns_EventScript_TryShowDeoxysPuzzle::
-	goto_if_set FLAG_DEFEATED_DEOXYS, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE
-	clearflag FLAG_DEOXYS_ROCK_COMPLETE
+	goto_if_set JOHTO_FLAG_DEFEATED_DEOXYS, J_Common_EventScript_NopReturn
+	clearflag JOHTO_FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE
+	clearflag JOHTO_FLAG_DEOXYS_ROCK_COMPLETE
 	return
 
 BirthIsland_Exterior_hns_OnResume:
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, BirthIsland_Exterior_hns_EventScript_TryRemoveDeoxys
+	call_if_set JOHTO_FLAG_SYS_CTRL_OBJ_DELETE, BirthIsland_Exterior_hns_EventScript_TryRemoveDeoxys
 	end
 
 BirthIsland_Exterior_hns_EventScript_TryRemoveDeoxys::
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, J_Common_EventScript_NopReturn
 	removeobject LOCALID_BIRTH_ISLAND_EXTERIOR_HNS_DEOXYS
 	return
 
@@ -45,10 +47,10 @@ BirthIsland_Exterior_hns_EventScript_Triangle::
 	special DoDeoxysRockInteraction
 	waitstate
 	switch VAR_RESULT
-	case DEOXYS_ROCK_FAILED,     BirthIsland_Exterior_hns_EventScript_Failed
+	case DEOXYS_ROCK_FAILED, BirthIsland_Exterior_hns_EventScript_Failed
 	case DEOXYS_ROCK_PROGRESSED, BirthIsland_Exterior_hns_EventScript_Progressed
-	case DEOXYS_ROCK_SOLVED,     BirthIsland_Exterior_hns_EventScript_Deoxys
-	case DEOXYS_ROCK_COMPLETE,   BirthIsland_Exterior_hns_EventScript_Complete
+	case DEOXYS_ROCK_SOLVED, BirthIsland_Exterior_hns_EventScript_Deoxys
+	case DEOXYS_ROCK_COMPLETE, BirthIsland_Exterior_hns_EventScript_Complete
 	end
 
 BirthIsland_Exterior_hns_EventScript_Failed::
@@ -66,8 +68,8 @@ BirthIsland_Exterior_hns_EventScript_Complete::
 BirthIsland_Exterior_hns_EventScript_Deoxys::
 	waitse
 	setfieldeffectargument 0, LOCALID_BIRTH_ISLAND_EXTERIOR_HNS_ROCK
-	setfieldeffectargument 1, MAP_NUM(MAP_BIRTH_ISLAND_EXTERIOR_HNS)
-	setfieldeffectargument 2, MAP_GROUP(MAP_BIRTH_ISLAND_EXTERIOR_HNS)
+	setfieldeffectargument 1, (MAP_BIRTH_ISLAND_EXTERIOR_HNS & 0xFF)
+	setfieldeffectargument 2, (MAP_BIRTH_ISLAND_EXTERIOR_HNS >> 8)
 	dofieldeffect FLDEFF_DESTROY_DEOXYS_ROCK
 	playbgm MUS_RG_ENCOUNTER_DEOXYS, FALSE
 	waitfieldeffect FLDEFF_DESTROY_DEOXYS_ROCK
@@ -80,27 +82,27 @@ BirthIsland_Exterior_hns_EventScript_Deoxys::
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_BIRTH_ISLAND_EXTERIOR_HNS_DEOXYS
 	seteventmon SPECIES_DEOXYS, 70
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setflag JOHTO_FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	clearflag JOHTO_FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, BirthIsland_Exterior_hns_EventScript_DefeatedDeoxys
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, BirthIsland_Exterior_hns_EventScript_RanFromDeoxys
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, BirthIsland_Exterior_hns_EventScript_RanFromDeoxys
-	setflag FLAG_BATTLED_DEOXYS
+	setflag JOHTO_FLAG_BATTLED_DEOXYS
 	release
 	end
 
 BirthIsland_Exterior_hns_EventScript_DefeatedDeoxys::
-	setflag FLAG_DEFEATED_DEOXYS
+	setflag JOHTO_FLAG_DEFEATED_DEOXYS
 	setvar VAR_0x8004, SPECIES_DEOXYS
-	goto Common_EventScript_LegendaryFlewAway
+	goto J_Common_EventScript_LegendaryFlewAway
 	end
 
 BirthIsland_Exterior_hns_EventScript_RanFromDeoxys::
 	setvar VAR_0x8004, SPECIES_DEOXYS
-	goto Common_EventScript_LegendaryFlewAway
+	goto J_Common_EventScript_LegendaryFlewAway
 	end
 
 BirthIsland_Exterior_hns_Movement_DeoxysApproach:
@@ -126,3 +128,4 @@ BirthIsland_Exterior_hns_MeteorInteract::
 BirthIsland_Exterior_hns_GotMeteor::
 	release
 	end
+

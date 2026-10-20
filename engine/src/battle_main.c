@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "character_starter.h"
-#endif
 #include "battle.h"
 #include "battle_anim.h"
 #include "challenge_menu.h"
@@ -2184,10 +2182,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u8 retVal;
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
-#ifdef FIRERED
     if (CharacterStarter_TryCreateBlueParty(party, trainerNum, firstTrainer, gBattleTypeFlags, &retVal))
         return retVal;
-#endif
     if (GetTrainerStructFromId(trainerNum)->overrideTrainer)
     {
         struct Trainer tempTrainer;
@@ -5627,12 +5623,6 @@ static void HandleEndTurn_BattleWon(void)
             // Brains only ever appear in the Battle Frontier, so this is always Emerald.
             PlayBGM(MUS_VICTORY_GYM_LEADER);
         }
-    #if IS_HNS
-        else if (gMapHeader.regionMapSectionId == MAPSEC_TRAINER_HILL)
-        {
-            PlayBGM(MUS_HG_VICTORY_TRAINER);
-        }
-    #endif
         else
         {
             PlayBGM(MUS_VICTORY_TRAINER);
@@ -5656,20 +5646,7 @@ static void HandleEndTurn_BattleWon(void)
         // Elite Four and Champion share the Gym Leader one.
         case TRAINER_CLASS_ELITE_FOUR_FRLG:
         case TRAINER_CLASS_CHAMPION_FRLG:
-        #if IS_HNS
-            // Steven is an Emerald guest, so he keeps the Emerald league victory theme
-            // to match the Emerald champion battle theme GetBattleBGM gives him. No
-            // facility check needed here, the Frontier and Trainer Hill are handled by
-            // the branch above, so opponentA is always a real gTrainers id at this point.
-            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_STEVEN_HNS)
-                PlayBGM(MUS_VICTORY_LEAGUE);
-            else
-                PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
-        #elif IS_FRLG
             PlayBGM(MUS_RG_VICTORY_GYM_LEADER);
-        #else
-            PlayBGM(MUS_VICTORY_LEAGUE);
-        #endif
             break;
         case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_MAGMA:
@@ -5683,20 +5660,10 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_LEADER_HNS:
         case TRAINER_CLASS_LEADER_KANTO_HNS:
         case TRAINER_CLASS_LEADER_FRLG:
-        #if IS_HNS
-            PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
-        #elif IS_FRLG
             PlayBGM(MUS_RG_VICTORY_GYM_LEADER);
-        #else
-            PlayBGM(MUS_VICTORY_GYM_LEADER);
-        #endif
             break;
         default:
-        #if IS_HNS
-            PlayBGM(MUS_HG_VICTORY_TRAINER);
-        #else
             PlayBGM(MUS_VICTORY_TRAINER);
-        #endif
             break;
         }
     }

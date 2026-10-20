@@ -1190,11 +1190,7 @@ static const struct SpriteTemplate sSpriteTemplate_StatusCondition =
     .oam = &sOamData_StatusCondition,
     .anims = sSpriteAnimTable_StatusCondition,
 };
-#if IS_HNS
-static const u16 sMarkings_Pal[] = INCBIN_U16("graphics/summary_screen/hns/markings.gbapal");
-#else
 static const u16 sMarkings_Pal[] = INCBIN_U16("graphics/summary_screen/markings.gbapal");
-#endif
 
 static const u32 sShinyStarObjTiles[] = INCBIN_U32("graphics/summary_screen/shiny_icon.4bpp.smol");
 static const u16 sShinyStarObjPal[] = INCBIN_U16("graphics/summary_screen/heart.gbapal");
@@ -3784,9 +3780,7 @@ static void BufferMonTrainerMemo(void)
 {
     struct PokeSummary *sum = &sMonSummaryScreen->summary;
     const u8 *text;
-#ifdef FIRERED
     bool32 hasNamedMetLocation = IsMetLocationNamedForOrigin(sum->metLocation, sum->metGame);
-#endif
 
     DynamicPlaceholderTextUtil_Reset();
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, sMemoNatureTextColor);
@@ -3810,34 +3804,18 @@ static void BufferMonTrainerMemo(void)
         u8 *metLocationString = Alloc(32);
         GetMetLevelString(metLevelString);
 
-#ifdef FIRERED
         if (hasNamedMetLocation)
-#else
-        if (sum->metLocation < MAPSEC_NONE)
-#endif
         {
-#ifdef FIRERED
             GetMapNameForOrigin(metLocationString, sum->metLocation, sum->metGame);
-#else
-            GetMapNameHandleAquaHideout(metLocationString, sum->metLocation);
-#endif
             DynamicPlaceholderTextUtil_SetPlaceholderPtr(4, metLocationString);
         }
 
         if (DoesMonOTMatchOwner() == TRUE)
         {
             if (sum->metLevel == 0)
-#ifdef FIRERED
                 text = (!hasNamedMetLocation) ? gText_XNatureHatchedSomewhereAt : gText_XNatureHatchedAtYZ;
-#else
-                text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureHatchedSomewhereAt : gText_XNatureHatchedAtYZ;
-#endif
             else
-#ifdef FIRERED
                 text = (!hasNamedMetLocation) ? gText_XNatureMetSomewhereAt : gText_XNatureMetAtYZ;
-#else
-                text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureMetSomewhereAt : gText_XNatureMetAtYZ;
-#endif
         }
         else if (sum->metLocation == METLOC_FATEFUL_ENCOUNTER)
         {
@@ -3845,11 +3823,7 @@ static void BufferMonTrainerMemo(void)
         }
         else if (sum->metLocation != METLOC_IN_GAME_TRADE && DidMonComeFromGBAGames())
         {
-#ifdef FIRERED
             text = (!hasNamedMetLocation) ? gText_XNatureObtainedInTrade : gText_XNatureProbablyMetAt;
-#else
-            text = (sum->metLocation >= MAPSEC_NONE) ? gText_XNatureObtainedInTrade : gText_XNatureProbablyMetAt;
-#endif
         }
         else
         {
@@ -3987,11 +3961,7 @@ static void PrintEggMemo(void)
         else if (DidMonComeFromGBAGames() == FALSE || DoesMonOTMatchOwner() == FALSE)
             text = gText_PeculiarEggTrade;
         else if (sum->metLocation == METLOC_SPECIAL_EGG)
-        #if IS_HNS
-            text = gText_OddEggFromDaycare;
-        #else
             text = (DidMonComeFromRSE() == TRUE) ? gText_EggFromHotSprings : gText_EggFromTraveler;
-        #endif
         else
             text = gText_OddEggFoundByCouple;
     }

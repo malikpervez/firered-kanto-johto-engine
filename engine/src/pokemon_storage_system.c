@@ -9687,10 +9687,8 @@ u8 StorageGetCurrentBox(void)
 
 static void SetCurrentBox(u8 boxId)
 {
-#ifdef FIRERED
     if (boxId < TOTAL_BOXES_COUNT && gPokemonStoragePtr->currentBox != boxId)
         FireRedSave_NotifyPersistentWrite();
-#endif
     if (boxId < TOTAL_BOXES_COUNT)
         gPokemonStoragePtr->currentBox = boxId;
 }
@@ -9715,9 +9713,7 @@ u32 GetBoxMonDataAt(u8 boxId, u8 boxPosition, s32 request)
 
 void SetBoxMonDataAt(u8 boxId, u8 boxPosition, s32 request, const void *value)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     if (boxId < TOTAL_BOXES_COUNT && boxPosition < IN_BOX_COUNT)
         SetBoxMonData(&gPokemonStoragePtr->boxes[boxId][boxPosition], request, value);
 }
@@ -9742,9 +9738,7 @@ u32 GetAndCopyBoxMonDataAt(u8 boxId, u8 boxPosition, s32 request, void *dst)
 
 void SetBoxMonAt(u8 boxId, u8 boxPosition, struct BoxPokemon *src)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     if (boxId < TOTAL_BOXES_COUNT && boxPosition < IN_BOX_COUNT)
         gPokemonStoragePtr->boxes[boxId][boxPosition] = *src;
 }
@@ -9757,9 +9751,7 @@ void CopyBoxMonAt(u8 boxId, u8 boxPosition, struct BoxPokemon *dst)
 
 void ZeroBoxMonAt(u8 boxId, u8 boxPosition)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     if (boxId < TOTAL_BOXES_COUNT && boxPosition < IN_BOX_COUNT)
         ZeroBoxMonData(&gPokemonStoragePtr->boxes[boxId][boxPosition]);
 }
@@ -9796,9 +9788,7 @@ static u8 GetBoxWallpaper(u8 boxId)
 
 static void SetBoxWallpaper(u8 boxId, u8 wallpaperId)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     if (boxId < TOTAL_BOXES_COUNT && wallpaperId < WALLPAPER_COUNT)
         gPokemonStoragePtr->boxWallpapers[boxId] = wallpaperId;
 }

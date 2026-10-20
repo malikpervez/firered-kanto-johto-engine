@@ -84,74 +84,71 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "blockdata_filepath": "data/layouts/CeruleanCity_Mart_hns/map.bin",
-      "border_filepath": "data/layouts/CeruleanCity_Mart_hns/border.bin",
-      "height": 9,
-      "layout_version": "hns",
-      "primary_tileset": "gTileset_Kanto_Building_Hns",
-      "secondary_tileset": "gTileset_KantoMart_Hns",
-      "width": 11
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_Questionnaire"
     },
-    "bg_events": [
-      {
-        "type": "sign",
-        "x": 1,
-        "y": 4,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "EventScript_Questionnaire"
-      },
-      {
-        "type": "sign",
-        "x": 2,
-        "y": 1,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "EventScript_AdvertisingPoster"
-      },
-      {
-        "type": "sign",
-        "x": 4,
-        "y": 1,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "EventScript_NeatlyLinedUpTools"
-      },
-      {
-        "type": "sign",
-        "x": 5,
-        "y": 1,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "EventScript_NeatlyLinedUpTools"
-      },
-      {
-        "type": "sign",
-        "x": 6,
-        "y": 1,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "EventScript_NeatlyLinedUpTools"
-      },
-      {
-        "type": "sign",
-        "x": 1,
-        "y": 6,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "EventScript_NeatlyLinedUpTools"
-      },
-      {
-        "type": "sign",
-        "x": 2,
-        "y": 6,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "EventScript_NeatlyLinedUpTools"
-      }
-    ]
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_AdvertisingPoster"
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_NeatlyLinedUpTools"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_NeatlyLinedUpTools"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_NeatlyLinedUpTools"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_NeatlyLinedUpTools"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EventScript_NeatlyLinedUpTools"
+    }
+  ],
+  "firered_geometry": {
+    "blockdata_filepath": "data/layouts/CeruleanCity_Mart_hns/map.bin",
+    "border_filepath": "data/layouts/CeruleanCity_Mart_hns/border.bin",
+    "height": 9,
+    "layout_version": "hns",
+    "primary_tileset": "gTileset_Kanto_Building_Hns",
+    "secondary_tileset": "gTileset_KantoMart_Hns",
+    "width": 11
   }
 }

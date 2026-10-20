@@ -58,13 +58,11 @@
 #include "constants/trainer_types.h"
 #include "constants/union_room.h"
 #include "constants/weather.h"
-#ifdef FIRERED
 #include "character_story.h"
 #include "constants/game_stat.h"
 #include "rainbow_visuals.h"
 #include "regions.h"
 #include "constants/johto_ids.h"
-#endif
 
 #define SPECIAL_LOCALIDS_START (min(LOCALID_CAMERA, \
                                 min(LOCALID_PLAYER, \
@@ -538,14 +536,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
-#if IS_FRLG
-#ifdef FIRERED
     {gObjectEventPal_PlayerTrail,           OBJ_EVENT_PAL_TAG_PLAYER_RED},
     {gObjectEventPal_PlayerTrailReflection, OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION},
-#else
-    {gObjectEventPal_PlayerFrlg,            OBJ_EVENT_PAL_TAG_PLAYER_RED},
-    {gObjectEventPal_PlayerReflectionFrlg,  OBJ_EVENT_PAL_TAG_PLAYER_RED_REFLECTION},
-#endif
     {gObjectEventPal_PlayerFrlg,            OBJ_EVENT_PAL_TAG_PLAYER_GREEN},
     {gObjectEventPal_PlayerReflectionFrlg,  OBJ_EVENT_PAL_TAG_PLAYER_GREEN_REFLECTION},
     {gObjectEventPal_NpcBlue,               OBJ_EVENT_PAL_TAG_NPC_BLUE},
@@ -559,8 +551,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Meteorite,             OBJ_EVENT_PAL_TAG_METEORITE},
     {gObjectEventPal_SSAnne,                OBJ_EVENT_PAL_TAG_SS_ANNE},
     {gObjectEventPal_Seagallop,             OBJ_EVENT_PAL_TAG_SEAGALLOP},
-#endif // IS_FRLG
-#if IS_HNS || defined(FIRERED)
     {gObjectEventPal_BirthIslandStone_hns, OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE_HNS},
     {gObjectEventPal_Bugsy_hns, OBJ_EVENT_PAL_TAG_BUGSY_HNS},
     {gObjectEventPal_Train_hns, OBJ_EVENT_PAL_TAG_TRAIN_HNS},
@@ -604,8 +594,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Kris_hns, OBJ_EVENT_PAL_TAG_KRIS_HNS},
     {gObjectEventPal_KrisReflection_hns, OBJ_EVENT_PAL_TAG_KRIS_REFLECTION_HNS},
     {gObjectEventPal_AlolaOak_hns, OBJ_EVENT_PAL_TAG_ALOLA_OAK_HNS},
-#endif // IS_HNS
-#ifdef FIRERED
     {sJessieStoryPalette, OBJ_EVENT_PAL_TAG_JESSIE_STORY},
     {sJamesStoryPalette, OBJ_EVENT_PAL_TAG_JAMES_STORY},
     {sJennyStoryPalette, OBJ_EVENT_PAL_TAG_JENNY_STORY},
@@ -617,7 +605,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {sFriendLbPalette, OBJ_EVENT_PAL_TAG_FRIEND_LB},
     {sFriendTimPalette, OBJ_EVENT_PAL_TAG_FRIEND_TIM},
     {sFriendsGiratinaPalette, OBJ_EVENT_PAL_TAG_FRIENDS_GIRATINA},
-#endif
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
@@ -862,66 +849,6 @@ static const u16 *const sObjectPaletteTagSets[] = {
     sObjectPaletteTags3,
 };
 
-#if IS_HNS
-static const u16 sObjectPaletteTagsHns0[] = {
-    [PALSLOT_PLAYER]            = OBJ_EVENT_PAL_TAG_GOLD_HNS,
-    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_GOLD_REFLECTION_HNS,
-    [PALSLOT_NPC_1]             = OBJ_EVENT_PAL_TAG_NPC_1_HNS,
-    [PALSLOT_NPC_2]             = OBJ_EVENT_PAL_TAG_NPC_2_HNS,
-    [PALSLOT_NPC_3]             = OBJ_EVENT_PAL_TAG_NPC_3_HNS,
-    [PALSLOT_NPC_4]             = OBJ_EVENT_PAL_TAG_NPC_4_HNS,
-    [PALSLOT_NPC_1_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_1_REFLECTION,
-    [PALSLOT_NPC_2_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_2_REFLECTION,
-    [PALSLOT_NPC_3_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_3_REFLECTION,
-    [PALSLOT_NPC_4_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_4_REFLECTION,
-};
-
-static const u16 sObjectPaletteTagsHns1[] = {
-    [PALSLOT_PLAYER]            = OBJ_EVENT_PAL_TAG_GOLD_HNS,
-    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_GOLD_REFLECTION_HNS,
-    [PALSLOT_NPC_1]             = OBJ_EVENT_PAL_TAG_NPC_1_HNS,
-    [PALSLOT_NPC_2]             = OBJ_EVENT_PAL_TAG_NPC_2_HNS,
-    [PALSLOT_NPC_3]             = OBJ_EVENT_PAL_TAG_NPC_3_HNS,
-    [PALSLOT_NPC_4]             = OBJ_EVENT_PAL_TAG_NPC_4_HNS,
-    [PALSLOT_NPC_1_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_1_REFLECTION,
-    [PALSLOT_NPC_2_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_2_REFLECTION,
-    [PALSLOT_NPC_3_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_3_REFLECTION,
-    [PALSLOT_NPC_4_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_4_REFLECTION,
-};
-
-static const u16 sObjectPaletteTagsHns2[] = {
-    [PALSLOT_PLAYER]            = OBJ_EVENT_PAL_TAG_GOLD_HNS,
-    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_GOLD_REFLECTION_HNS,
-    [PALSLOT_NPC_1]             = OBJ_EVENT_PAL_TAG_NPC_1_HNS,
-    [PALSLOT_NPC_2]             = OBJ_EVENT_PAL_TAG_NPC_2_HNS,
-    [PALSLOT_NPC_3]             = OBJ_EVENT_PAL_TAG_NPC_3_HNS,
-    [PALSLOT_NPC_4]             = OBJ_EVENT_PAL_TAG_NPC_4_HNS,
-    [PALSLOT_NPC_1_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_1_REFLECTION,
-    [PALSLOT_NPC_2_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_2_REFLECTION,
-    [PALSLOT_NPC_3_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_3_REFLECTION,
-    [PALSLOT_NPC_4_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_4_REFLECTION,
-};
-
-static const u16 sObjectPaletteTagsHns3[] = {
-    [PALSLOT_PLAYER]            = OBJ_EVENT_PAL_TAG_GOLD_HNS,
-    [PALSLOT_PLAYER_REFLECTION] = OBJ_EVENT_PAL_TAG_GOLD_REFLECTION_HNS,
-    [PALSLOT_NPC_1]             = OBJ_EVENT_PAL_TAG_NPC_1_HNS,
-    [PALSLOT_NPC_2]             = OBJ_EVENT_PAL_TAG_NPC_2_HNS,
-    [PALSLOT_NPC_3]             = OBJ_EVENT_PAL_TAG_NPC_3_HNS,
-    [PALSLOT_NPC_4]             = OBJ_EVENT_PAL_TAG_NPC_4_HNS,
-    [PALSLOT_NPC_1_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_1_REFLECTION,
-    [PALSLOT_NPC_2_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_2_REFLECTION,
-    [PALSLOT_NPC_3_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_3_REFLECTION,
-    [PALSLOT_NPC_4_REFLECTION]  = OBJ_EVENT_PAL_TAG_NPC_4_REFLECTION,
-};
-
-static const u16 *const sObjectPaletteTagSetsHns[] = {
-    sObjectPaletteTagsHns0,
-    sObjectPaletteTagsHns1,
-    sObjectPaletteTagsHns2,
-    sObjectPaletteTagsHns3,
-};
-#endif // IS_HNS
 
 #include "data/object_events/berry_tree_graphics_tables.h"
 #include "data/field_effects/field_effect_objects.h"
@@ -1778,7 +1705,6 @@ static u8 InitObjectEventStateFromTemplate(const struct ObjectEventTemplate *tem
     return objectEventId;
 }
 
-#ifdef FIRERED
 static bool32 IsObjectEventTemplateHidden(const struct ObjectEventTemplate *template)
 {
     // Cosmetic Kanto mons use the live clock even before Johto state exists.
@@ -1795,7 +1721,6 @@ static bool32 IsObjectEventTemplateHidden(const struct ObjectEventTemplate *temp
     }
     return FlagGet(template->flagId);
 }
-#endif
 
 u8 Unref_TryInitLocalObjectEvent(u8 localId)
 {
@@ -1815,11 +1740,7 @@ u8 Unref_TryInitLocalObjectEvent(u8 localId)
         for (i = 0; i < objectEventCount; i++)
         {
             template = &gSaveBlock1Ptr->objectEventTemplates[i];
-#ifdef FIRERED
             if (template->localId == localId && !IsObjectEventTemplateHidden(template))
-#else
-            if (template->localId == localId && !FlagGet(template->flagId))
-#endif
                 return InitObjectEventStateFromTemplate(template, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
         }
     }
@@ -2011,10 +1932,8 @@ u16 LoadSheetGraphicsInfo(const struct ObjectEventGraphicsInfo *info, u16 uuid, 
     }
     else if (sprite && !sprite->sheetTileStart
         && (sprite->oam.size != info->oam->size
-#ifdef FIRERED
             // 16x32 and 32x32 both encode size 2; Jessie's reveal also changes shape.
             || (info == &sJessieStoryGraphicsInfo && sprite->oam.shape != info->oam->shape)
-#endif
         ))
     {
         // Not usingSheet and info size differs; realloc tiles
@@ -2088,10 +2007,8 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
 u8 TrySpawnObjectEventTemplate(const struct ObjectEventTemplate *objectEventTemplate, u8 mapNum, u8 mapGroup, s16 cameraX, s16 cameraY)
 {
     u8 objectEventId;
-#ifdef FIRERED
     if (!FriendsScene_ShouldSpawn(objectEventTemplate->localId, mapNum, mapGroup))
         return OBJECT_EVENTS_COUNT;
-#endif
     u16 graphicsId = objectEventTemplate->graphicsId;
     struct SpriteTemplate spriteTemplate;
     struct SpriteFrameImage spriteFrameImage;
@@ -2110,20 +2027,10 @@ u8 TrySpawnObjectEventTemplate(const struct ObjectEventTemplate *objectEventTemp
     if (subspriteTables)
         SetSubspriteTables(&gSprites[gObjectEvents[objectEventId].spriteId], subspriteTables);
 
-#if IS_HNS
-    // Whirlpool sprites render below the player's surf sprite
-    if (graphicsId == OBJ_EVENT_GFX_WHIRLPOOL_HNS)
-    {
-        gObjectEvents[objectEventId].fixedPriority = TRUE;
-        gSprites[gObjectEvents[objectEventId].spriteId].subpriority = 182;
-    }
-#endif
 
-#ifdef FIRERED
     // Sprite, local id, map, graphics and subsprites are fully initialized.
     RainbowVisuals_OnObjectSpawn(objectEventId);
     CharacterStory_OnObjectSpawn(objectEventId);
-#endif
     return objectEventId;
 }
 
@@ -2562,7 +2469,6 @@ static bool8 GetMonInfo(struct Pokemon *mon, u32 *species, bool32 *shiny, bool32
 }
 
 // Retrieve graphic information about the following pokemon, if any
-#ifdef FIRERED
 bool32 IsPikachuCompanionActive(void)
 {
     // Native shared flag survives regional travel and older-save adoption.
@@ -2610,11 +2516,9 @@ void Special_PikachuCompanionReaction(void)
 {
     gSpecialVar_Result = GetPikachuCompanionReaction();
 }
-#endif
 
 bool8 GetFollowerInfo(u32 *species, bool32 *shiny, bool32 *female)
 {
-#ifdef FIRERED
     if (IsPikachuCompanionActive())
     {
         *species = SPECIES_PIKACHU;
@@ -2622,7 +2526,6 @@ bool8 GetFollowerInfo(u32 *species, bool32 *shiny, bool32 *female)
         *female = FALSE;
         return TRUE;
     }
-#endif
     return GetMonInfo(GetFirstLiveMon(), species, shiny, female);
 }
 
@@ -2642,11 +2545,7 @@ void UpdateFollowingPokemon(void)
     if (OW_POKEMON_OBJECT_EVENTS == FALSE
      || OW_FOLLOWERS_ENABLED == FALSE
      || FlagGet(B_FLAG_FOLLOWERS_DISABLED)
-#ifdef FIRERED
      || (gSaveBlock3Ptr->challengeSettings.followerEnable == 1 && !IsPikachuCompanionActive())
-#else
-     || gSaveBlock3Ptr->challengeSettings.followerEnable == 1
-#endif
      || !GetFollowerInfo(&species, &shiny, &female)
      || SpeciesToGraphicsInfo(species, shiny, female) == NULL
      || (gMapHeader.mapType == MAP_TYPE_INDOOR && SpeciesToGraphicsInfo(species, shiny, female)->oam->size > ST_OAM_SIZE_2)
@@ -2921,30 +2820,21 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
     {
         switch (gMapHeader.regionMapSectionId)
         {
-#if !IS_HNS
         case MAPSEC_RUSTBORO_CITY:
-#endif
         case MAPSEC_PEWTER_CITY:
             multi = TYPE_ROCK;
             break;
-#if !IS_HNS
         case MAPSEC_DEWFORD_TOWN:
             multi = TYPE_FIGHTING;
             break;
         case MAPSEC_MAUVILLE_CITY:
-#endif
         case MAPSEC_VERMILION_CITY:
             multi = TYPE_ELECTRIC;
             break;
-#if !IS_HNS
         case MAPSEC_LAVARIDGE_TOWN:
-#else
-        case MAPSEC_SEAFOAM_ISLANDS: // Blaine's gym was relocated here in HG/SS
-#endif
         case MAPSEC_CINNABAR_ISLAND:
             multi = TYPE_FIRE;
             break;
-#if !IS_HNS
         case MAPSEC_PETALBURG_CITY:
             multi = TYPE_NORMAL;
             break;
@@ -2952,13 +2842,10 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
             multi = TYPE_FLYING;
             break;
         case MAPSEC_MOSSDEEP_CITY:
-#endif
         case MAPSEC_SAFFRON_CITY:
             multi = TYPE_PSYCHIC;
             break;
-#if !IS_HNS
         case MAPSEC_SOOTOPOLIS_CITY:
-#endif
         case MAPSEC_CERULEAN_CITY:
             multi = TYPE_WATER;
             break;
@@ -2971,42 +2858,9 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
         case MAPSEC_VIRIDIAN_CITY:
             multi = TYPE_GROUND;
             break;
-#if IS_HNS
-        case MAPSEC_VIOLET_CITY:
-            multi = TYPE_FLYING;
-            break;
-        case MAPSEC_AZALEA_TOWN:
-            multi = TYPE_BUG;
-            break;
-        case MAPSEC_GOLDENROD_CITY:
-            multi = TYPE_NORMAL;
-            break;
-        case MAPSEC_ECRUTEAK_CITY:
-            multi = TYPE_GHOST;
-            break;
-        case MAPSEC_CIANWOOD_CITY:
-            multi = TYPE_FIGHTING;
-            break;
-        case MAPSEC_OLIVINE_CITY:
-            multi = TYPE_STEEL;
-            break;
-        case MAPSEC_MAHOGANY_TOWN:
-            multi = TYPE_ICE;
-            break;
-        case MAPSEC_BLACKTHORN_CITY:
-            multi = TYPE_DRAGON;
-            break;
-#endif
         default:
             multi = NUMBER_OF_MON_TYPES;
         }
-#if IS_HNS
-        // The Fighting Dojo shares Saffron City's map section with Sabrina's gym, but holds
-        // EV-training NPCs rather than trainer battles, so there's no type to hint at.
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SAFFRON_CITY_FIGHTING_DOJO_HNS))
-            multi = NUMBER_OF_MON_TYPES;
-#endif
         if (multi < NUMBER_OF_MON_TYPES)
         {
             multi = GetOverworldTypeEffectiveness(mon, multi);
@@ -3080,31 +2934,11 @@ static bool32 IsLightSpriteGfxId(u16 graphicsId)
 {
     if (graphicsId == OBJ_EVENT_GFX_LIGHT_SPRITE)
         return TRUE;
-#if IS_HNS
-    switch (graphicsId)
-    {
-    case OBJ_EVENT_GFX_LIGHT_HNS:
-    case OBJ_EVENT_GFX_POKE_CENTER_LIGHT_HNS:
-    case OBJ_EVENT_GFX_MART_LIGHT_HNS:
-    case OBJ_EVENT_GFX_SMALL_LIGHT_HNS:
-        return TRUE;
-    }
-#endif
     return FALSE;
 }
 
 static u32 GetLightTypeFromTemplate(struct ObjectEventTemplate *template)
 {
-#if IS_HNS
-    switch (template->graphicsId)
-    {
-    case OBJ_EVENT_GFX_POKE_CENTER_LIGHT_HNS: return LIGHT_TYPE_PKMN_CENTER_SIGN;
-    case OBJ_EVENT_GFX_MART_LIGHT_HNS:        return LIGHT_TYPE_POKE_MART_SIGN;
-    case OBJ_EVENT_GFX_LIGHT_HNS:
-    case OBJ_EVENT_GFX_SMALL_LIGHT_HNS:
-        return template->trainerRange_berryTreeId;
-    }
-#endif
     return template->trainerRange_berryTreeId;
 }
 
@@ -3271,11 +3105,7 @@ void TrySpawnLightSprites(s16 camX, s16 camY)
         s16 npcY = template->y + MAP_OFFSET;
         if (top <= npcY && bottom >= npcY
          && left <= npcX && right >= npcX
-#ifdef FIRERED
          && !IsObjectEventTemplateHidden(template)
-#else
-         && !FlagGet(template->flagId)
-#endif
          && IsLightSpriteGfxId(template->graphicsId))
             SpawnLightSprite(npcX, npcY, camX, camY, GetLightTypeFromTemplate(template));
     }
@@ -3306,11 +3136,7 @@ void TrySpawnObjectEvents(s16 cameraX, s16 cameraY)
             s16 npcX = template->x + MAP_OFFSET;
             s16 npcY = template->y + MAP_OFFSET;
 
-#ifdef FIRERED
             if (top <= npcY && bottom >= npcY && left <= npcX && right >= npcX && !IsObjectEventTemplateHidden(template))
-#else
-            if (top <= npcY && bottom >= npcY && left <= npcX && right >= npcX && !FlagGet(template->flagId))
-#endif
             {
                 if (IsLightSpriteGfxId(template->graphicsId))
                     SpawnLightSprite(npcX, npcY, cameraX, cameraY, GetLightTypeFromTemplate(template));
@@ -3441,17 +3267,8 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
 
         ResetObjectEventFldEffData(objectEvent);
         SetObjectSubpriorityByElevation(objectEvent->previousElevation, sprite, 1);
-#if IS_HNS
-        if (objectEvent->graphicsId == OBJ_EVENT_GFX_WHIRLPOOL_HNS)
-        {
-            objectEvent->fixedPriority = TRUE;
-            sprite->subpriority = 182;
-        }
-#endif
-#ifdef FIRERED
         // Continue/menu return has reconstructed the active sprite completely.
         CharacterStory_OnObjectSpawn(objectEventId);
-#endif
     }
 }
 
@@ -3516,9 +3333,7 @@ static void ObjectEventSetGraphics(struct ObjectEvent *objectEvent, const struct
     // If gfx size changes, we need to reallocate tiles
     if (OW_LARGE_OW_SUPPORT && !OW_GFX_COMPRESS
         && (graphicsInfo->oam->size != sprite->oam.size
-#ifdef FIRERED
             || (graphicsInfo == &sJessieStoryGraphicsInfo && graphicsInfo->oam->shape != sprite->oam.shape)
-#endif
         ))
         ReallocSpriteTiles(sprite, graphicsInfo->images->size);
 
@@ -3584,20 +3399,7 @@ static void SetBerryTreeGraphicsById(struct ObjectEvent *objectEvent, u8 berryId
     const u16 graphicsId = gBerryTreeObjectEventGraphicsIdTable[berryStage];
     const struct ObjectEventGraphicsInfo *graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
     struct Sprite *sprite = &gSprites[objectEvent->spriteId];
-#if IS_HNS
-    {
-        static const u16 sHnsBerryPalTags[] = {
-            OBJ_EVENT_PAL_TAG_NPC_1_HNS,
-            OBJ_EVENT_PAL_TAG_NPC_2_HNS,
-            OBJ_EVENT_PAL_TAG_NPC_3_HNS,
-            OBJ_EVENT_PAL_TAG_NPC_4_HNS,
-        };
-        u8 palSlot = gBerryTreePaletteSlotTablePointers[berryId][berryStage] - 2;
-        UpdateSpritePalette(&sObjectEventSpritePalettes[FindObjectEventPaletteIndexByTag(sHnsBerryPalTags[palSlot])], sprite);
-    }
-#else
     UpdateSpritePalette(&sObjectEventSpritePalettes[gBerryTreePaletteSlotTablePointers[berryId][berryStage]-2], sprite);
-#endif
     sprite->oam.shape = graphicsInfo->oam->shape;
     sprite->oam.size = graphicsInfo->oam->size;
     sprite->images = gBerryTreePicTablePointers[berryId];
@@ -3644,7 +3446,6 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
     if (graphicsId == OBJ_EVENT_GFX_BARD)
         return gMauvilleOldManGraphicsInfoPointers[GetCurrentMauvilleOldMan()];
 
-#ifdef FIRERED
     if (graphicsId == OBJ_EVENT_GFX_JESSIE_STORY)
         return &sJessieStoryGraphicsInfo;
     if (graphicsId == OBJ_EVENT_GFX_JAMES_STORY)
@@ -3655,7 +3456,6 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
         return sFriendsStoryGraphicsInfoPointers[graphicsId - OBJ_EVENT_GFX_FRIEND_BRIAN];
     if (graphicsId == OBJ_EVENT_GFX_FRIENDS_GIRATINA)
         return &sFriendsGiratinaGraphicsInfo;
-#endif
 
     if (graphicsId & OBJ_EVENT_MON)
         return SpeciesToGraphicsInfo(graphicsId & OBJ_EVENT_MON_SPECIES_MASK, graphicsId & OBJ_EVENT_MON_SHINY, graphicsId & OBJ_EVENT_MON_FEMALE);
@@ -3769,22 +3569,10 @@ u8 LoadPlayerObjectEventPalette(enum Gender gender)
     {
     default:
     case MALE:
-#if IS_HNS
-        paletteTag = OBJ_EVENT_PAL_TAG_GOLD_HNS;
-#elif IS_FRLG
         paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_RED;
-#else
-        paletteTag = OBJ_EVENT_PAL_TAG_BRENDAN;
-#endif
         break;
     case FEMALE:
-#if IS_HNS
-        paletteTag = OBJ_EVENT_PAL_TAG_KRIS_HNS;
-#elif IS_FRLG
         paletteTag = OBJ_EVENT_PAL_TAG_PLAYER_GREEN;
-#else
-        paletteTag = OBJ_EVENT_PAL_TAG_MAY;
-#endif
         break;
     }
     return LoadObjectEventPalette(paletteTag);
@@ -4139,10 +3927,8 @@ static const u8 *GetObjectEventScriptPointerByLocalIdAndMap(u8 localId, u8 mapNu
 {
     if (localId == OBJ_EVENT_ID_FOLLOWER)
     {
-#ifdef FIRERED
         if (IsPikachuCompanionActive())
             return EventScript_PikachuCompanion;
-#endif
         return EventScript_Follower;
     }
     return GetObjectEventTemplateByLocalIdAndMap(localId, mapNum, mapGroup)->script;
@@ -4255,11 +4041,9 @@ void OverrideTemplateCoordsForObjectEvent(const struct ObjectEvent *objectEvent)
     objectEventTemplate = GetBaseTemplateForObjectEvent(objectEvent);
     if (objectEventTemplate != NULL)
     {
-#ifdef FIRERED
         if (objectEventTemplate->x != objectEvent->currentCoords.x - MAP_OFFSET
          || objectEventTemplate->y != objectEvent->currentCoords.y - MAP_OFFSET)
             FireRedSave_NotifyPersistentWrite();
-#endif
         objectEventTemplate->x = objectEvent->currentCoords.x - MAP_OFFSET;
         objectEventTemplate->y = objectEvent->currentCoords.y - MAP_OFFSET;
     }
@@ -4272,10 +4056,8 @@ static void OverrideObjectEventTemplateScript(const struct ObjectEvent *objectEv
     objectEventTemplate = GetBaseTemplateForObjectEvent(objectEvent);
     if (objectEventTemplate)
     {
-#ifdef FIRERED
         if (objectEventTemplate->script != script)
             FireRedSave_NotifyPersistentWrite();
-#endif
         objectEventTemplate->script = script;
     }
 }
@@ -4287,10 +4069,8 @@ void TryOverrideTemplateCoordsForObjectEvent(const struct ObjectEvent *objectEve
     objectEventTemplate = GetBaseTemplateForObjectEvent(objectEvent);
     if (objectEventTemplate != NULL)
     {
-#ifdef FIRERED
         if (objectEventTemplate->movementType != movementType)
             FireRedSave_NotifyPersistentWrite();
-#endif
         objectEventTemplate->movementType = movementType;
     }
 }
@@ -4321,11 +4101,7 @@ void OverrideSecretBaseDecorationSpriteScript(u8 localId, u8 mapNum, u8 mapGroup
 
 void InitObjectEventPalettes(u8 reflectionType)
 {
-#if IS_HNS
-    const u16 *const *palTagSets = sObjectPaletteTagSetsHns;
-#else
     const u16 *const *palTagSets = sObjectPaletteTagSets;
-#endif
     FreeAndReserveObjectSpritePalettes();
     sCurrentSpecialObjectPaletteTag = OBJ_EVENT_PAL_TAG_NONE;
     sCurrentReflectionType = reflectionType;
@@ -4336,15 +4112,7 @@ void InitObjectEventPalettes(u8 reflectionType)
     }
     else
     {
-#if IS_HNS
-        // HNS: only load player + 4 NPC palettes (slots 0-5).
-        // NPC reflections are generated dynamically by LoadObjectRegularReflectionPalette,
-        // so slots 6-9 don't need Emerald's pre-loaded reflection palettes.
-        PatchObjectPaletteRange(palTagSets[sCurrentReflectionType], PALSLOT_PLAYER, PALSLOT_NPC_4 + 1);
-        gReservedSpritePaletteCount = 6;
-#else
         PatchObjectPaletteRange(palTagSets[sCurrentReflectionType], PALSLOT_PLAYER, PALSLOT_NPC_4_REFLECTION + 1);
-#endif
     }
 }
 
@@ -4353,11 +4121,7 @@ u16 GetObjectPaletteTag(u8 palSlot)
     u8 i;
 
     if (palSlot < PALSLOT_NPC_SPECIAL)
-#if IS_HNS
-        return sObjectPaletteTagSetsHns[sCurrentReflectionType][palSlot];
-#else
         return sObjectPaletteTagSets[sCurrentReflectionType][palSlot];
-#endif
 
     for (i = 0; sSpecialObjectReflectionPaletteSets[i].tag != OBJ_EVENT_PAL_TAG_NONE; i++)
     {
@@ -4906,14 +4670,7 @@ bool8 MovementType_BerryTreeGrowth_Normal(struct ObjectEvent *objectEvent, struc
     berryStage--;
     if (sprite->animNum != berryStage)
     {
-#if IS_HNS
-        sprite->animNum = berryStage;
-        SetBerryTreeGraphics(objectEvent, sprite);
-        ObjectEventSetSingleMovement(objectEvent, sprite, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
-        sprite->sTypeFuncId = BERRYTREEFUNC_MOVE;
-#else
         sprite->sTypeFuncId = BERRYTREEFUNC_SPARKLE_START;
-#endif
         return TRUE;
     }
     SetBerryTreeGraphics(objectEvent, sprite);
@@ -6241,10 +5998,8 @@ static bool32 TryStartFollowerTransformEffect(struct ObjectEvent *objectEvent, s
     u32 multi;
     struct Pokemon *mon;
     enum Ability ability;
-#ifdef FIRERED
     if (IsPikachuCompanionActive())
         return FALSE;
-#endif
     if (DoesSpeciesHaveFormChangeMethod(OW_SPECIES(objectEvent), FORM_CHANGE_OVERWORLD_WEATHER)
         && OW_SPECIES(objectEvent) != (multi = GetOverworldWeatherSpecies(OW_SPECIES(objectEvent))))
     {
@@ -6320,7 +6075,6 @@ static bool8 UpdateFollowerTransformEffect(struct ObjectEvent *objectEvent, stru
     return TRUE;
 }
 
-#ifdef FIRERED
 // The riding companion is the existing follower, with its original six-frame
 // Pikachu sheet and independent native palette. No replacement artwork, extra
 // actor, Pokemon grant or persistent field is needed.
@@ -6442,17 +6196,12 @@ static u8 MovementType_FollowPlayer_callback(struct ObjectEvent *objectEvent, st
 {
     return gMovementTypeFuncs_FollowPlayer[sprite->sTypeFuncId](objectEvent, sprite);
 }
-#else
-movement_type_def(MovementType_FollowPlayer, gMovementTypeFuncs_FollowPlayer)
-#endif
 
 bool8 MovementType_FollowPlayer_Shadow(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     ClearObjectEventMovement(objectEvent, sprite);
-#ifdef FIRERED
     if (IsPikachuCompanionActive())
         objectEvent->noShadow = FALSE;
-#endif
     if (!IsFollowerVisible())
     {
         // Shadow player's position
@@ -7080,9 +6829,7 @@ void IsFollowerFieldMoveUser(struct ScriptContext *ctx)
         return;
     *var = FALSE;
     if (follower && obj && !obj->invisible
-#ifdef FIRERED
         && !IsPikachuCompanionActive()
-#endif
         )
     {
         u16 followIndex = ((u32)follower - (u32)gPlayerParty) / sizeof(struct Pokemon);
@@ -7610,12 +7357,10 @@ void UpdateObjectEventCurrentMovement(struct ObjectEvent *objectEvent, struct Sp
     UpdateObjectEventSpriteAnimPause(objectEvent, sprite);
     UpdateObjectEventVisibility(objectEvent, sprite);
     ObjectEventUpdateSubpriority(objectEvent, sprite);
-#ifdef FIRERED
     // Sprite callbacks run by slot, which older Continue files may reorder.
     // Synchronize again after the player's movement to avoid a one-frame lag.
     if (objectEvent->localId == OBJ_EVENT_ID_PLAYER)
         TryAttachPikachuToBike(GetFollowerObject());
-#endif
 }
 
 #define dirn_to_anim(name, table)\
@@ -8463,11 +8208,9 @@ static void ObjectEventSetPokeballGfx(struct ObjectEvent *objEvent)
     enum PokeBall ball = BALL_STRANGE;
     if (objEvent->localId == OBJ_EVENT_ID_FOLLOWER)
     {
-#ifdef FIRERED
         if (IsPikachuCompanionActive())
             ball = BALL_POKE;
         else
-#endif
         {
         struct Pokemon *mon = GetFirstLiveMon();
         if (mon)
@@ -10378,11 +10121,9 @@ static void UpdateObjectEventSpriteVisibility(struct ObjectEvent *objectEvent, s
     sprite->invisible = FALSE;
     if (objectEvent->invisible || objectEvent->offScreen)
         sprite->invisible = TRUE;
-#ifdef FIRERED
     else if (objectEvent->localId == OBJ_EVENT_ID_FOLLOWER
           && FriendsScene_HideOverlappingFollower(objectEvent, sprite))
         sprite->invisible = TRUE;
-#endif
 }
 
 static void GetAllGroundEffectFlags_OnSpawn(struct ObjectEvent *objEvent, u32 *flags)

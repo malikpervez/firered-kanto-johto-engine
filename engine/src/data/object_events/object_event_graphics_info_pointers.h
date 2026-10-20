@@ -797,7 +797,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_LIGHT_SPRITE] =             &gObjectEventGraphicsInfo_BallLight,
     [OBJ_EVENT_GFX_APRICORN_TREE] =            &gObjectEventGraphicsInfo_ApricornTree,
-#if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,
     [OBJ_EVENT_GFX_RED_SURF] =                 &gObjectEventGraphicsInfo_RedSurf,
@@ -942,8 +941,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_A]                 = &gObjectEventGraphicsInfo_DeoxysA,
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
-#endif // IS_FRLG
-#if IS_HNS || defined(FIRERED)
     [OBJ_EVENT_GFX_ATTENDANT_F_HNS] = &gObjectEventGraphicsInfo_AttendantF_hns,
     [OBJ_EVENT_GFX_ATTENDANT_M_HNS] = &gObjectEventGraphicsInfo_AttendantM_hns,
     [OBJ_EVENT_GFX_BALDING_MAN_HNS] = &gObjectEventGraphicsInfo_BaldingMan_hns,
@@ -1095,7 +1092,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_KRIS_FISHING_HNS] =      &gObjectEventGraphicsInfo_KrisFishing_hns,
     [OBJ_EVENT_GFX_KRIS_WATERING_HNS] =     &gObjectEventGraphicsInfo_KrisWatering_hns,
     [OBJ_EVENT_GFX_KRIS_DECORATING_HNS] =   &gObjectEventGraphicsInfo_KrisDecorating_hns,
-#endif // IS_HNS
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

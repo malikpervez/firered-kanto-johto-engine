@@ -38,12 +38,10 @@ static const u8 sLastCursorPositions[] =
     [POKENAV_MENU_TYPE_DEFAULT]           = 2,
     [POKENAV_MENU_TYPE_UNLOCK_MC]         = 3,
     [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS] = 4,
-#if IS_HNS || defined(FIRERED)
     [POKENAV_MENU_TYPE_UNLOCK_MC_RADIO]                = 4,
     [POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_RADIO]        = 5,
     [POKENAV_MENU_TYPE_DEFAULT_NO_COND]                = 1,
     [POKENAV_MENU_TYPE_UNLOCK_MC_NO_COND]              = 2,
-#endif
     [POKENAV_MENU_TYPE_CONDITION]         = 2,
     [POKENAV_MENU_TYPE_CONDITION_SEARCH]  = 5
 };
@@ -71,7 +69,6 @@ static const u8 sMenuItems[][MAX_POKENAV_MENUITEMS] =
         POKENAV_MENUITEM_RIBBONS,
         [4 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
     },
-#if IS_HNS || defined(FIRERED)
     [POKENAV_MENU_TYPE_UNLOCK_MC_RADIO] =
     {
         POKENAV_MENUITEM_MAP,
@@ -100,7 +97,6 @@ static const u8 sMenuItems[][MAX_POKENAV_MENUITEMS] =
         POKENAV_MENUITEM_MATCH_CALL,
         [2 ... MAX_POKENAV_MENUITEMS - 1] = POKENAV_MENUITEM_SWITCH_OFF
     },
-#endif
     [POKENAV_MENU_TYPE_CONDITION] =
     {
         POKENAV_MENUITEM_CONDITION_PARTY,
@@ -146,7 +142,6 @@ static u8 GetPokenavMainMenuType(void)
             menuType = POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS;
     }
 
-#if IS_HNS || defined(FIRERED)
     if (FlagGet(FLAG_ENABLE_RADIO))
     {
         if (menuType == POKENAV_MENU_TYPE_UNLOCK_MC)
@@ -162,7 +157,6 @@ static u8 GetPokenavMainMenuType(void)
         else if (menuType == POKENAV_MENU_TYPE_UNLOCK_MC)
             menuType = POKENAV_MENU_TYPE_UNLOCK_MC_NO_COND;
     }
-#endif
 
     return menuType;
 }
@@ -208,7 +202,6 @@ bool32 PokenavCallback_Init_MainMenuCursorOnRibbons(void)
     return TRUE;
 }
 
-#if IS_HNS || defined(FIRERED)
 bool32 PokenavCallback_Init_MainMenuCursorOnRadio(void)
 {
     struct Pokenav_Menu *menu = AllocSubstruct(POKENAV_SUBSTRUCT_MAIN_MENU_HANDLER, sizeof(struct Pokenav_Menu));
@@ -222,7 +215,6 @@ bool32 PokenavCallback_Init_MainMenuCursorOnRadio(void)
     SetMenuInputHandler(menu);
     return TRUE;
 }
-#endif
 
 bool32 PokenavCallback_Init_ConditionMenu(void)
 {
@@ -261,12 +253,10 @@ static void SetMenuInputHandler(struct Pokenav_Menu *menu)
         // fallthrough
     case POKENAV_MENU_TYPE_UNLOCK_MC:
     case POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS:
-#if IS_HNS || defined(FIRERED)
     case POKENAV_MENU_TYPE_UNLOCK_MC_RADIO:
     case POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_RADIO:
     case POKENAV_MENU_TYPE_DEFAULT_NO_COND:
     case POKENAV_MENU_TYPE_UNLOCK_MC_NO_COND:
-#endif
         menu->callback = GetMainMenuInputHandler();
         break;
     case POKENAV_MENU_TYPE_CONDITION:
@@ -338,12 +328,10 @@ static u32 HandleMainMenuInput(struct Pokenav_Menu *menu)
                 menu->callback = HandleCantOpenRibbonsInput;
                 return POKENAV_MENU_FUNC_NO_RIBBON_WINNERS;
             }
-#if IS_HNS || defined(FIRERED)
         case POKENAV_MENUITEM_RADIO:
             menu->helpBarIndex = HELPBAR_NONE;
             SetMenuIdAndCB(menu, POKENAV_RADIO);
             return POKENAV_MENU_FUNC_OPEN_FEATURE;
-#endif
         case POKENAV_MENUITEM_SWITCH_OFF:
             return POKENAV_MENU_FUNC_EXIT;
         }

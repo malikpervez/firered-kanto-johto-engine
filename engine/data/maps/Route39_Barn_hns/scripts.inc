@@ -1,3 +1,5 @@
+@ Johto (data/maps/Route39_Barn_hns/scripts.inc), as built into the FireRed game.
+
 Route39_Barn_hns_MapScripts::
 	.byte 0
 
@@ -6,11 +8,11 @@ Route39_Barn_EventScript_Miltank::
 	faceplayer
 	waitse
 	playmoncry SPECIES_MILTANK, CRY_MODE_NORMAL
-	goto_if_eq VAR_ROUTE39_BARN, 0, Route39_Barn_EventScript_Miltank_NeedBerries5
-	goto_if_eq VAR_ROUTE39_BARN, 1, Route39_Barn_EventScript_Miltank_NeedBerries4
-	goto_if_eq VAR_ROUTE39_BARN, 2, Route39_Barn_EventScript_Miltank_NeedBerries3
-	goto_if_eq VAR_ROUTE39_BARN, 3, Route39_Barn_EventScript_Miltank_NeedBerries2
-	goto_if_eq VAR_ROUTE39_BARN, 4, Route39_Barn_EventScript_Miltank_NeedBerries1
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 0, Route39_Barn_EventScript_Miltank_NeedBerries5
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 1, Route39_Barn_EventScript_Miltank_NeedBerries4
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 2, Route39_Barn_EventScript_Miltank_NeedBerries3
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 3, Route39_Barn_EventScript_Miltank_NeedBerries2
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 4, Route39_Barn_EventScript_Miltank_NeedBerries1
 	msgbox Route39_Text_MoomooHappyMoo, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -33,9 +35,10 @@ Route39_Barn_EventScript_Miltank_NeedBerries5::
 	msgbox Route39_Text_BarnLittleHealthier, MSGBOX_DEFAULT
 	closemessage
 
-	setvar VAR_ROUTE39_BARN, 1
+	setvar JOHTO_VAR_ROUTE39_BARN, 1
 	release
 	end
+
 Route39_Barn_EventScript_Miltank_NeedBerries4::
 	msgbox Route39_Text_MoomooWeakMoo, MSGBOX_DEFAULT
 	waitmoncry
@@ -53,9 +56,10 @@ Route39_Barn_EventScript_Miltank_NeedBerries4::
 	msgbox Route39_Text_BarnLittleHealthier, MSGBOX_DEFAULT
 	closemessage
 
-	setvar VAR_ROUTE39_BARN, 2
+	setvar JOHTO_VAR_ROUTE39_BARN, 2
 	release
 	end
+
 Route39_Barn_EventScript_Miltank_NeedBerries3::
 	msgbox Route39_Text_MoomooWeakMoo, MSGBOX_DEFAULT
 	waitmoncry
@@ -71,9 +75,10 @@ Route39_Barn_EventScript_Miltank_NeedBerries3::
 	waitse
 	msgbox Route39_Text_BarnQuiteHealthy, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_ROUTE39_BARN, 3
+	setvar JOHTO_VAR_ROUTE39_BARN, 3
 	release
 	end
+
 Route39_Barn_EventScript_Miltank_NeedBerries2::
 	msgbox Route39_Text_MoomooWeakMoo, MSGBOX_DEFAULT
 	waitmoncry
@@ -89,9 +94,10 @@ Route39_Barn_EventScript_Miltank_NeedBerries2::
 	waitse
 	msgbox Route39_Text_BarnQuiteHealthy, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_ROUTE39_BARN, 4
+	setvar JOHTO_VAR_ROUTE39_BARN, 4
 	release
 	end
+
 Route39_Barn_EventScript_Miltank_NeedBerries1::
 	msgbox Route39_Text_MoomooWeakMoo, MSGBOX_DEFAULT
 	waitmoncry
@@ -106,10 +112,10 @@ Route39_Barn_EventScript_Miltank_NeedBerries1::
 	msgbox Route39_Text_BarnGaveBerry, MSGBOX_AUTOCLOSE
 	waitse
 	msgbox Route39_Text_BarnTotallyHealthy, MSGBOX_DEFAULT
-	playfanfare MUS_HEAL 
+	playfanfare MUS_HEAL
 	waitfanfare
 	closemessage
-	setvar VAR_ROUTE39_BARN, 5
+	setvar JOHTO_VAR_ROUTE39_BARN, 5
 	release
 	end
 
@@ -127,7 +133,7 @@ Route39_Barn_EventScript_Miltank_NoBerries::
 Route39_Barn_EventScript_Twins::
 	lock
 	faceplayer
-	goto_if_eq VAR_ROUTE39_BARN, 5, Route39_Barn_EventScript_TwinsAfter
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 5, Route39_Barn_EventScript_TwinsAfter
 	msgbox Route39_Text_BarnTwinMoomooIsSick, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -140,43 +146,44 @@ Route39_Barn_EventScript_TwinsAfter::
 	end
 
 Route39_Text_BarnTwinMoomooIsSick:
-	.string "MOOMOO is sick…\p"
-	.string "She needs lots of ORAN BERRIES.$"
+	.string "MOOMO{SE_M_SOLAR_BEAM}i{SE_M_GRASSWHISTLE}sick…\p"
+	.string "Sh{SE_M_REVERSAL}need{SE_M_GRASSWHISTLE}lot{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}ORA{SE_M_PSYBEAM2}BERRIES.$"
 
 Route39_Text_BarnTwinFeedingMoomoo:
-	.string "MOOMOO is all better!\n"
-	.string "Thank you!$"
+	.string "MOOMO{SE_M_SOLAR_BEAM}i{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}better!\n"
+	.string "Than{SE_M_ENCORE2}you!$"
 
 Route39_Text_MoomooWeakMoo:
-	.string "MILTANK: …Moo…$"
+	.string "MILTANK{SE_M_HEAT_WAVE}…Moo…$"
 
 Route39_Text_BarnCryIsWeak:
-	.string "Its cry is weak…\n"
-	.string "Give an ORAN BERRY to MILTANK?$"
+	.string "It{SE_M_GRASSWHISTLE}cr{SE_M_YAWN}i{SE_M_GRASSWHISTLE}weak…\n"
+	.string "Giv{SE_M_REVERSAL}a{SE_M_ATTRACT}ORA{SE_M_PSYBEAM2}BERR{SE_M_MOONLIGHT}t{SE_M_ATTRACT2}MILTANK?$"
 
 Route39_Text_MoomooHappyMoo:
-	.string "MILTANK: Mooo!$"
+	.string "MILTANK{SE_M_HEAT_WAVE}Mooo!$"
 
 Route39_Text_BarnGaveBerry:
-	.string "{PLAYER} gave an ORAN BERRY to\n"
+	.string "{PLAYER} gav{SE_M_REVERSAL}a{SE_M_ATTRACT}ORA{SE_M_PSYBEAM2}BERR{SE_M_MOONLIGHT}to\n"
 	.string "MILTANK.$"
 
 Route39_Text_BarnLittleHealthier:
-	.string "MILTANK became a little\n"
+	.string "MILTAN{SE_M_SNORE}becam{SE_M_REVERSAL}{SE_M_CHARGE}little\n"
 	.string "healthier!$"
 
 Route39_Text_BarnQuiteHealthy:
-	.string "MILTANK became quite\n"
+	.string "MILTAN{SE_M_SNORE}becam{SE_M_REVERSAL}quite\n"
 	.string "healthy!$"
 
 Route39_Text_BarnTotallyHealthy:
-	.string "MILTANK became totally\n"
+	.string "MILTAN{SE_M_SNORE}becam{SE_M_REVERSAL}totally\n"
 	.string "healthy!$"
 
 Route39_Text_BarnNoBerries:
-	.string "{PLAYER} has no ORAN BERRIES…$"
+	.string "{PLAYER} ha{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}ORA{SE_M_PSYBEAM2}BERRIES…$"
 
 Route39_Text_BarnRefusedBerry:
-	.string "{PLAYER} wouldn't give an\n"
-	.string "ORAN BERRY.\p"
-	.string "MILTANK looks sad.$"
+	.string "{PLAYER} wouldn'{SE_M_SPIT_UP}giv{SE_M_REVERSAL}an\n"
+	.string "ORA{SE_M_PSYBEAM2}BERRY.\p"
+	.string "MILTAN{SE_M_SNORE}look{SE_M_GRASSWHISTLE}sad.$"
+

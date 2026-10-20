@@ -3,7 +3,6 @@
 
 #include "global.h"
 
-#ifdef FIRERED
 void RainbowStory_NewGame(void);
 bool8 RainbowStory_IsReady(void);
 bool8 RainbowStory_TryAdopt(void);
@@ -15,6 +14,5 @@ void Special_RainbowStoryAdoptWhirl(void);
 void Special_RainbowStoryGetReplicaResult(void);
 void Special_RainbowStoryRecordReplicaResult(void);
 void Special_RainbowStoryAllReplicasResolved(void);
-#endif
 
 #endif

@@ -1,3 +1,5 @@
+@ Johto (data/maps/DarkCave_SouthSide_hns/scripts.inc), as built into the FireRed game.
+
 DarkCave_SouthSide_hns_MapScripts::
 	.byte 0
 
@@ -16,3 +18,4 @@ DarkCave1_EventScript_Item_Elixir::
 DarkCave1_EventScript_Item_MaxRevive::
 	finditem ITEM_MAX_REVIVE
 	end
+

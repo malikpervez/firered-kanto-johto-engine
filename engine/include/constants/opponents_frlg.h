@@ -632,13 +632,9 @@
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT_FRLG can be increased but will take up additional saveblock space
 
-#ifdef FIRERED
 #define TRAINER_STORY_JESSIE                     624
 #define TRAINER_STORY_JAMES                      625
 #define TRAINERS_COUNT_FRLG                      640
-#else
-#define TRAINERS_COUNT_FRLG                      624
-#endif
 #define MAX_TRAINERS_COUNT_FRLG                  768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_FRLG_H

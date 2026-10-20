@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "character_starter.h"
-#endif
 #include "debug.h"
 #include "malloc.h"
 #include "battle.h"
@@ -84,7 +82,6 @@
 #include "naming_screen.h"
 #include "chooseboxmon.h"
 
-#ifdef FIRERED
 #include "regions.h"
 
 static bool8 IsJohtoPCContext(void)
@@ -101,7 +98,6 @@ static bool8 IsChampionRoomLightingMap(void)
         || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM_HNS)
          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM_HNS));
 }
-#endif
 
 #define TAG_ITEM_ICON 5500
 
@@ -1108,9 +1104,7 @@ static bool8 IsPlayerInFrontOfPC(void)
 void DoPCTurnOnEffect(void)
 {
     if (FuncIsActiveTask(Task_PCTurnOnEffect) != TRUE && (IS_HNS
-#ifdef FIRERED
         || IsJohtoPCContext()
-#endif
         || IsPlayerInFrontOfPC() == TRUE))
     {
         u8 taskId = CreateTask(Task_PCTurnOnEffect, 8);
@@ -1227,9 +1221,7 @@ static void PCTurnOffEffect(void)
     enum Direction playerDirection = GetPlayerFacingDirection();
 
     if (!IS_HNS
-#ifdef FIRERED
         && !IsJohtoPCContext()
-#endif
         && IsPlayerInFrontOfPC() == FALSE)
         return;
     switch (playerDirection)
@@ -1596,11 +1588,7 @@ bool8 IsStarterInParty(void)
 {
     u8 i;
     u16 starter = 
-#ifdef FIRERED
         CharacterStarter_GetKantoSpecies()
-#else
-        GetStarterPokemon(VarGet(VAR_STARTER_MON))
-#endif
     ;
     u8 partyCount = CalculatePlayerPartyCount();
     for (i = 0; i < partyCount; i++)
@@ -2522,7 +2510,6 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
-#if IS_HNS || defined(FIRERED)
     case SCROLL_MULTI_BF_MOVE_TUTOR_3:
         task->tMaxItemsOnScreen = 4;
         task->tNumItems = 4;
@@ -2533,7 +2520,6 @@ void ShowScrollableMultichoice(void)
         task->tKeepOpenAfterSelect = FALSE;
         task->tTaskId = taskId;
         break;
-#endif
     case SCROLL_MULTI_SS_TIDAL_DESTINATION:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
         task->tNumItems = 7;
@@ -2717,7 +2703,6 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("FIRE PUNCH{CLEAR_TO 0x4E}48BP"),
         gText_Exit
     },
-#if IS_HNS || defined(FIRERED)
         [SCROLL_MULTI_BF_MOVE_TUTOR_3] =
     {
         COMPOUND_STRING("FRENZY PLANT{CLEAR_TO 0x4E}64BP"),
@@ -2725,7 +2710,6 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         COMPOUND_STRING("HYDRO CANNON{CLEAR_TO 0x4E}64BP"),
         gText_Exit
     },
-#endif
     [SCROLL_MULTI_SS_TIDAL_DESTINATION] =
     {
         gText_SlateportCity,
@@ -3287,9 +3271,7 @@ static void ShowBattleFrontierTutorWindow(enum ScrollMulti menu, u16 selection)
     };
 
     if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_1 || menu == SCROLL_MULTI_BF_MOVE_TUTOR_2
-#if IS_HNS || defined(FIRERED)
         || menu == SCROLL_MULTI_BF_MOVE_TUTOR_3
-#endif
     )
     {
         if (gSpecialVar_0x8006 == 0)
@@ -3334,7 +3316,6 @@ static void ShowBattleFrontierTutorMoveDescription(enum ScrollMulti menu, u16 se
     };
 
 
-#if IS_HNS || defined(FIRERED)
     static const u8 *const sBattleFrontier_TutorMoveDescriptions3[] =
     {
         BattleFrontier_Lounge7_Text_StrongElementalMoveDesc,
@@ -3342,12 +3323,9 @@ static void ShowBattleFrontierTutorMoveDescription(enum ScrollMulti menu, u16 se
         BattleFrontier_Lounge7_Text_StrongElementalMoveDesc,
         gText_Exit,
     };
-#endif
 
     if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_1 || menu == SCROLL_MULTI_BF_MOVE_TUTOR_2
-#if IS_HNS || defined(FIRERED)
         || menu == SCROLL_MULTI_BF_MOVE_TUTOR_3
-#endif
     )
     {
         FillWindowPixelRect(sTutorMoveAndElevatorWindowId, PIXEL_FILL(1), 0, 0, 96, 48);
@@ -3355,10 +3333,8 @@ static void ShowBattleFrontierTutorMoveDescription(enum ScrollMulti menu, u16 se
             AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, sBattleFrontier_TutorMoveDescriptions2[selection], 0, 1, 0, NULL);
         else if (menu == SCROLL_MULTI_BF_MOVE_TUTOR_1)
             AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, sBattleFrontier_TutorMoveDescriptions1[selection], 0, 1, 0, NULL);
-#if IS_HNS || defined(FIRERED)
         else
             AddTextPrinterParameterized(sTutorMoveAndElevatorWindowId, FONT_NORMAL, sBattleFrontier_TutorMoveDescriptions3[selection], 0, 1, 0, NULL);
-#endif
     }
 }
 
@@ -3775,11 +3751,9 @@ void Unused_SetWeatherSunny(void)
 // Most marts use local ID1; retained FireRed Pewter uses its original ID3.
 u32 GetMartEmployeeObjectEventId(void)
 {
-#ifdef FIRERED
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PEWTER_CITY_MART)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PEWTER_CITY_MART))
         return 3;
-#endif
     static const u8 sPokeMarts[][3] =
     {
         { MAP_GROUP(MAP_OLDALE_TOWN_MART),     MAP_NUM(MAP_OLDALE_TOWN_MART),     LOCALID_OLDALE_MART_CLERK },
@@ -5612,11 +5586,7 @@ void DoPokemonLeagueLightingEffect(void)
     }
     else
     {
-#ifdef FIRERED
         if (IsChampionRoomLightingMap())
-#else
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM))
-#endif
         {
             data[0] = sChampionRoomLightingTimers[0];
             data[2] = 8;
@@ -5645,11 +5615,7 @@ static void Task_RunPokemonLeagueLightingEffect(u8 taskId)
         if (++data[1] == data[2])
             data[1] = 0;
 
-#ifdef FIRERED
         if (IsChampionRoomLightingMap())
-#else
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM))
-#endif
         {
             data[0] = sChampionRoomLightingTimers[data[1]];
             LoadPalette(sChampionRoomLightingPalettes[data[1]], BG_PLTT_ID(7), PLTT_SIZE_4BPP);
@@ -5667,11 +5633,7 @@ static void Task_CancelPokemonLeagueLightingEffect(u8 taskId)
 {
     if (FlagGet(FLAG_TEMP_4) != FALSE)
     {
-#ifdef FIRERED
         if (IsChampionRoomLightingMap())
-#else
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM))
-#endif
             LoadPalette(sChampionRoomLightingPalettes[8], BG_PLTT_ID(7), PLTT_SIZE_4BPP);
         else
             LoadPalette(sEliteFourLightingPalettes[11], BG_PLTT_ID(7), PLTT_SIZE_4BPP);

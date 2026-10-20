@@ -1,49 +1,51 @@
+@ Johto (data/maps/VioletCity_Gym_hns/scripts.inc), as built into the FireRed game.
+
 VioletCity_Gym_hns_MapScripts::
 	.byte 0
 
 VioletCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_GymGuy2
+	goto_if_set JOHTO_FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_GymGuy2
 	msgbox VioletGym_Text_GymGuide_Intro, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
-	
+
 VioletCity_Gym_EventScript_GymGuy2::
 	msgbox VioletGym_Text_GymGuide_Win, MSGBOX_DEFAULT
 	release
-	end	
+	end
 
 VioletCity_Gym_EventScript_Rod::
-	trainerbattle_single TRAINER_ROD_HNS, VioletGym_Text_BirdKeeperRod_Seen, VioletGym_Text_BirdKeeperRod_Beaten
+	trainerbattle_single TRAINER_JOHTO_ROD_HNS, VioletGym_Text_BirdKeeperRod_Seen, VioletGym_Text_BirdKeeperRod_Beaten
 	msgbox VioletGym_Text_BirdKeeperRod_After, MSGBOX_AUTOCLOSE
 	end
 
 VioletCity_Gym_EventScript_Abe::
-	trainerbattle_single TRAINER_ABE_HNS, VioletGym_Text_BirdKeeperAbe_Seen, VioletGym_Text_BirdKeeperAbe_Beaten
+	trainerbattle_single TRAINER_JOHTO_ABE_HNS, VioletGym_Text_BirdKeeperAbe_Seen, VioletGym_Text_BirdKeeperAbe_Beaten
 	msgbox VioletGym_Text_BirdKeeperAbe_After, MSGBOX_AUTOCLOSE
 	end
 
 VioletCity_Gym_EventScript_Falkner::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_Falkner_Defeated
+	goto_if_set JOHTO_FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_Falkner_Defeated
 	msgbox VioletGym_Text_Falkner_Intro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_FALKNER_1_HNS, VioletGym_Text_Falkner_WinLoss
+	trainerbattle_no_intro TRAINER_JOHTO_FALKNER_1_HNS, VioletGym_Text_Falkner_WinLoss
 	message VioletGym_Text_ReceivedZephyrBadge
 	waitmessage
-	call Common_EventScript_PlayGymBadgeFanfare
+	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox VioletGym_Text_Falkner_BadgeExplain, MSGBOX_DEFAULT
-	setflag FLAG_BADGE01_GET
-	setflag FLAG_DEFEATED_VIOLET_GYM
-	addvar VAR_NUM_BADGES, 1
+	setflag JOHTO_FLAG_BADGE01_GET
+	setflag JOHTO_FLAG_DEFEATED_VIOLET_GYM
+	addvar JOHTO_VAR_NUM_BADGES, 1
 	setvar VAR_0x8008, 1
-	call Common_EventScript_SetGymTrainers_hns
+	call J_Common_EventScript_SetGymTrainers_hns
 	giveitem ITEM_TM_ROOST
 	msgbox VioletGym_Text_Falkner_TMExplain, MSGBOX_DEFAULT
-	setvar VAR_VIOLET_CITY_STATE, 3
-	setrespawn HEAL_LOCATION_VIOLET_CITY_HNS
+	setvar JOHTO_VAR_VIOLET_CITY_STATE, 3
+	setrespawn JOHTO_HEAL_LOCATION_VIOLET_CITY_HNS
 	closemessage
 	release
 	end
@@ -55,115 +57,115 @@ VioletCity_Gym_EventScript_Falkner_Defeated::
 	end
 
 VioletGym_Text_Falkner_Intro:
-	.string "I'm FALKNER, the VIOLET POKéMON\n"
-	.string "GYM leader!\p"
-	.string "People say you can clip\n"
-	.string "FLYING-type POKéMON's wings\p"
-	.string "with a jolt of electricity…\n"
-	.string "I won't allow such insults to bird\l"
+	.string "I'{SE_M_MILK_DRINK}FALKNER{SE_M_SUPERSONIC}th{SE_M_REVERSAL}VIOLE{SE_M_SWIFT}POKéMON\n"
+	.string "GY{SE_M_GIGA_DRAIN}leader!\p"
+	.string "Peopl{SE_M_REVERSAL}sa{SE_M_YAWN}yo{SE_M_DIVE}ca{SE_M_ATTRACT}clip\n"
+	.string "FLYING-typ{SE_M_REVERSAL}POKéMON'{SE_M_GRASSWHISTLE}wings\p"
+	.string "wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}jol{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}electricity…\n"
+	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}allo{SE_M_TWISTER}suc{SE_M_TRI_ATTACK}insult{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}bird\l"
 	.string "POKéMON!\p"
-	.string "I'll show you the real power\n"
-	.string "of the magnificent bird POKéMON!$"
+	.string "I'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}th{SE_M_REVERSAL}rea{SE_M_BATON_PASS}power\n"
+	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}magnificen{SE_M_SPIT_UP}bir{SE_M_WATERFALL}POKéMON!$"
 
 VioletGym_Text_Falkner_WinLoss:
-	.string "…Darn! My dad's cherished bird\n"
+	.string "…Darn{SE_M_DRAGON_RAGE}M{SE_M_YAWN}dad'{SE_M_GRASSWHISTLE}cherishe{SE_M_WATERFALL}bird\n"
 	.string "POKéMON…\p"
-	.string "All right. Take this.\p"
-	.string "It's the official POKéMON LEAGUE\n"
+	.string "Al{SE_M_BATON_PASS}right{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}this.\p"
+	.string "It'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}officia{SE_M_BATON_PASS}POKéMO{SE_M_PSYBEAM2}LEAGUE\n"
 	.string "ZEPHYRBADGE.$"
 
 VioletGym_Text_ReceivedZephyrBadge:
-	.string "{PLAYER} received ZEPHYRBADGE.$"
+	.string "{PLAYER} receive{SE_M_WATERFALL}ZEPHYRBADGE.$"
 
 VioletGym_Text_Falkner_BadgeExplain:
-	.string "ZEPHYRBADGE raises the ATTACK\n"
-	.string "power of POKéMON.\p"
-	.string "It also enables POKéMON to use\n"
-	.string "FLASH, if they can learn it,\l"
+	.string "ZEPHYRBADG{SE_M_SWORDS_DANCE}raise{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}ATTACK\n"
+	.string "powe{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}POKéMON.\p"
+	.string "I{SE_M_SPIT_UP}als{SE_M_ATTRACT2}enable{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}t{SE_M_ATTRACT2}use\n"
+	.string "FLASH{SE_M_SUPERSONIC}i{SE_M_ACID_ARMOR}the{SE_M_YAWN}ca{SE_M_ATTRACT}lear{SE_M_ATTRACT}it,\l"
 	.string "anytime.\p"
-	.string "Here--take this too.$"
+	.string "Here--tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}too.$"
 
 VioletGym_Text_Falkner_TMExplain:
-	.string "By using a TM, a POKéMON will\n"
-	.string "instantly learn a new move.\p"
-	.string "That TM contains ROOST.\p"
-	.string "It restores HP up to half of your\n"
-	.string "POKéMON's maximum.\p"
-	.string "In other words, it heals your\n"
+	.string "B{SE_M_YAWN}usin{SE_M_SANDSTORM}{SE_M_CHARGE}TM{SE_M_SUPERSONIC}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}will\n"
+	.string "instantl{SE_M_YAWN}lear{SE_M_ATTRACT}{SE_M_CHARGE}ne{SE_M_TWISTER}move.\p"
+	.string "Tha{SE_M_SPIT_UP}T{SE_M_GIGA_DRAIN}contain{SE_M_GRASSWHISTLE}ROOST.\p"
+	.string "I{SE_M_SPIT_UP}restore{SE_M_GRASSWHISTLE}H{SE_M_PETAL_DANCE}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}hal{SE_M_ACID_ARMOR}o{SE_M_ACID_ARMOR}your\n"
+	.string "POKéMON'{SE_M_GRASSWHISTLE}maximum.\p"
+	.string "I{SE_M_ATTRACT}othe{SE_M_SAND_TOMB}words{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}heal{SE_M_GRASSWHISTLE}your\n"
 	.string "POKéMON.$"
 
 VioletGym_Text_Falkner_AfterFight:
-	.string "There are POKéMON GYMS in cities\n"
-	.string "and towns ahead.\p"
-	.string "You should test your skills at\n"
-	.string "these GYMS.\p"
-	.string "I'm going to train harder to\n"
-	.string "become the greatest bird master!$"
+	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}GYM{SE_M_SKETCH}i{SE_M_ATTRACT}cities\n"
+	.string "an{SE_M_WATERFALL}town{SE_M_GRASSWHISTLE}ahead.\p"
+	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}tes{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}skill{SE_M_GRASSWHISTLE}at\n"
+	.string "thes{SE_M_REVERSAL}GYMS.\p"
+	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}harde{SE_M_SAND_TOMB}to\n"
+	.string "becom{SE_M_REVERSAL}th{SE_M_REVERSAL}greates{SE_M_SPIT_UP}bir{SE_M_WATERFALL}master!$"
 
 VioletGym_Text_Falkner_Rematch:
-	.string "Congratulations on defeating\n"
-	.string "the ELITE 4!\p"
-	.string "I've been training my\n"
-	.string "FLYING-type POKéMON even harder.\p"
-	.string "Think you can take on the power\n"
-	.string "of the skies again?$"
+	.string "Congratulation{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}defeating\n"
+	.string "th{SE_M_REVERSAL}ELIT{SE_M_SWORDS_DANCE}4!\p"
+	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}trainin{SE_M_SANDSTORM}my\n"
+	.string "FLYING-typ{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}eve{SE_M_ATTRACT}harder.\p"
+	.string "Thin{SE_M_ENCORE2}yo{SE_M_DIVE}ca{SE_M_ATTRACT}tak{SE_M_REVERSAL}o{SE_M_ATTRACT}th{SE_M_REVERSAL}power\n"
+	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}skie{SE_M_GRASSWHISTLE}again?$"
 
 VioletGym_Text_Falkner_RematchLoss:
-	.string "Wow… You beat me again.\p"
-	.string "I'm going to train harder to\n"
-	.string "become the greatest bird master!$"
+	.string "Wow{SE_M_DIZZY_PUNCH}Yo{SE_M_DIVE}bea{SE_M_SPIT_UP}m{SE_M_REVERSAL}again.\p"
+	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}harde{SE_M_SAND_TOMB}to\n"
+	.string "becom{SE_M_REVERSAL}th{SE_M_REVERSAL}greates{SE_M_SPIT_UP}bir{SE_M_WATERFALL}master!$"
 
 VioletGym_Text_BirdKeeperRod_Seen:
-	.string "The keyword is guts!\p"
-	.string "Those here are training night and\n"
-	.string "day to become bird POKéMON masters.\p"
-	.string "Come on!$"
+	.string "Th{SE_M_REVERSAL}keywor{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}guts!\p"
+	.string "Thos{SE_M_REVERSAL}her{SE_M_REVERSAL}ar{SE_M_REVERSAL}trainin{SE_M_SANDSTORM}nigh{SE_M_SPIT_UP}and\n"
+	.string "da{SE_M_YAWN}t{SE_M_ATTRACT2}becom{SE_M_REVERSAL}bir{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}masters.\p"
+	.string "Com{SE_M_REVERSAL}on!$"
 
 VioletGym_Text_BirdKeeperRod_Beaten:
 	.string "Gaaah!$"
 
 VioletGym_Text_BirdKeeperRod_After:
-	.string "FALKNER's skills are for real!\p"
-	.string "Don't get cocky just because\n"
-	.string "you beat me!$"
+	.string "FALKNER'{SE_M_GRASSWHISTLE}skill{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}real!\p"
+	.string "Don'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}cock{SE_M_YAWN}jus{SE_M_SPIT_UP}because\n"
+	.string "yo{SE_M_DIVE}bea{SE_M_SPIT_UP}me!$"
 
 VioletGym_Text_BirdKeeperAbe_Seen:
-	.string "Let me see if you are good\n"
-	.string "enough to face FALKNER!$"
+	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}se{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ar{SE_M_REVERSAL}good\n"
+	.string "enoug{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}fac{SE_M_REVERSAL}FALKNER!$"
 
 VioletGym_Text_BirdKeeperAbe_Beaten:
-	.string "This can't be true!$"
+	.string "Thi{SE_M_GRASSWHISTLE}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}true!$"
 
 VioletGym_Text_BirdKeeperAbe_After:
-	.string "This is pathetic, losing to some\n"
-	.string "rookie trainer…$"
+	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}pathetic{SE_M_SUPERSONIC}losin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}some\n"
+	.string "rooki{SE_M_REVERSAL}trainer…$"
 
 VioletGym_Text_GymGuide_Intro:
-	.string "Hey! What's up? I'm no trainer,\n"
-	.string "but I can give some advice!\p"
-	.string "Believe me! If you believe, a\n"
-	.string "championship dream can come true.\p"
-	.string "You believe? Then listen.\p"
-	.string "FALKNER's ace is a bulky owl\n"
-	.string "that loves to eat BERRIES.\p"
-	.string "While it's not the strongest,\n"
-	.string "it can take a lot of hits.\p"
-	.string "You can hurt it with ELECTRIC \n"
-	.string "and ROCK-type moves, but watch out\l"
-	.string "for MUD-SLAP!\p"
-	.string "If you want more help, go visit the\n"
-	.string "POKéMON ACADEMY.\p"
-	.string "The students there really know\n"
-	.string "their stuff!$"
+	.string "Hey{SE_M_DRAGON_RAGE}What'{SE_M_GRASSWHISTLE}up{SE_M_SING}I'{SE_M_MILK_DRINK}n{SE_M_ATTRACT2}trainer,\n"
+	.string "bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}giv{SE_M_REVERSAL}som{SE_M_REVERSAL}advice!\p"
+	.string "Believ{SE_M_REVERSAL}me{SE_M_DRAGON_RAGE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}believe{SE_M_SUPERSONIC}a\n"
+	.string "championshi{SE_M_MORNING_SUN}drea{SE_M_MILK_DRINK}ca{SE_M_ATTRACT}com{SE_M_REVERSAL}true.\p"
+	.string "Yo{SE_M_DIVE}believe{SE_M_SING}The{SE_M_ATTRACT}listen.\p"
+	.string "FALKNER'{SE_M_GRASSWHISTLE}ac{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bulk{SE_M_YAWN}owl\n"
+	.string "tha{SE_M_SPIT_UP}love{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}ea{SE_M_SPIT_UP}BERRIES.\p"
+	.string "Whil{SE_M_REVERSAL}it'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}th{SE_M_REVERSAL}strongest,\n"
+	.string "i{SE_M_SPIT_UP}ca{SE_M_ATTRACT}tak{SE_M_REVERSAL}{SE_M_CHARGE}lo{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}hits.\p"
+	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}hur{SE_M_SPIT_UP}i{SE_M_SPIT_UP}wit{SE_M_TRI_ATTACK}ELECTRI{SE_M_PSYBEAM}\n"
+	.string "an{SE_M_WATERFALL}ROCK-typ{SE_M_REVERSAL}moves{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}watc{SE_M_TRI_ATTACK}out\l"
+	.string "fo{SE_M_SAND_TOMB}MUD-SLAP!\p"
+	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}mor{SE_M_REVERSAL}help{SE_M_SUPERSONIC}g{SE_M_ATTRACT2}visi{SE_M_SPIT_UP}the\n"
+	.string "POKéMO{SE_M_PSYBEAM2}ACADEMY.\p"
+	.string "Th{SE_M_REVERSAL}student{SE_M_GRASSWHISTLE}ther{SE_M_REVERSAL}reall{SE_M_YAWN}know\n"
+	.string "thei{SE_M_SAND_TOMB}stuff!$"
 
 VioletGym_Text_GymGuide_Win:
-	.string "Nice battle! Keep it up,\n"
-	.string "and you'll be the CHAMP in no\l"
-	.string "time at all!$"
+	.string "Nic{SE_M_REVERSAL}battle{SE_M_DRAGON_RAGE}Kee{SE_M_MORNING_SUN}i{SE_M_SPIT_UP}up,\n"
+	.string "an{SE_M_WATERFALL}you'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}th{SE_M_REVERSAL}CHAM{SE_M_PETAL_DANCE}i{SE_M_ATTRACT}no\l"
+	.string "tim{SE_M_REVERSAL}a{SE_M_SPIT_UP}all!$"
 
 VioletCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_Statue2
+	goto_if_set JOHTO_FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_Statue2
 	msgbox VioletCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -176,9 +178,10 @@ VioletCity_Gym_EventScript_Statue2::
 	end
 
 VioletCity_Gym_Text_GymStatue:
-	.string "VIOLET CITY POKéMON GYM$"
+	.string "VIOLE{SE_M_SWIFT}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM$"
 
 VioletCity_Gym_Text_GymStatueCertified:
-	.string "VIOLET CITY POKéMON GYM\p"
-	.string "FALKNER'S CERTIFIED TRAINERS:\n"
+	.string "VIOLE{SE_M_SWIFT}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM\p"
+	.string "FALKNER'{SE_M_SKETCH}CERTIFIE{SE_M_FAINT_ATTACK}TRAINERS:\n"
 	.string "{PLAYER}$"
+

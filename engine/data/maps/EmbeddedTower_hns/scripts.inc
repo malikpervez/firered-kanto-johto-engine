@@ -1,7 +1,7 @@
+@ Johto (data/maps/EmbeddedTower_hns/scripts.inc), as built into the FireRed game.
+
 EmbeddedTower_hns_MapScripts::
 	.byte 0
-
-
 
 EmbeddedTower_EventScript_Rayquaza::
 	lock
@@ -10,12 +10,12 @@ EmbeddedTower_EventScript_Rayquaza::
 	waitmoncry
 	seteventmon SPECIES_RAYQUAZA, 70
 	special BattleSetup_StartLegendaryBattle
-waitstate
+	waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, EmbeddedTower_EventScript_RayquazaRan
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_EMBEDDEDRAYQUAZA
-	setflag FLAG_HIDE_RAYQUAZA
+	setflag JOHTO_FLAG_HIDE_RAYQUAZA
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
@@ -23,3 +23,4 @@ waitstate
 EmbeddedTower_EventScript_RayquazaRan::
 	release
 	end
+

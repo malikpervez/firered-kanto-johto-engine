@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "kanto_connection_seam.h"
-#endif
 #include "save.h"
 #include "battle_pyramid.h"
 #include "bg.h"
@@ -248,13 +246,9 @@ static void FillConnection(int x, int y, struct MapHeader const *connectedMapHea
 
     for (i = 0; i < height; i++)
     {
-#ifdef FIRERED
         int j;
         for (j = 0; j < width; j++)
             dest[j] = KantoSeam_TranslateBlock(gMapHeader.mapLayout, connectedMapHeader->mapLayout, src[j]);
-#else
-        CpuCopy16(src, dest, width * 2);
-#endif
         dest += gBackupMapLayout.width;
         src += mapWidth;
     }
@@ -549,11 +543,9 @@ static u32 GetAttributeByMetatileIdAndMapLayoutFrlg(u16 metatile, u8 attributeTy
 u32 GetAttributeByMetatileIdAndMapLayout(u16 metatile, u8 attributeType, u8 layoutVersion)
 {
     u32 attribute;
-#ifdef FIRERED
     const struct KantoSeamMetatile *seam = KantoSeam_GetMetatile(gMapHeader.mapLayout, metatile);
     if (seam != NULL)
         return ExtractMetatileAttribute(seam->attributes, attributeType, seam->layoutVersion);
-#endif
 
     if (layoutVersion == LAYOUT_VERSION_FRLG)
         return GetAttributeByMetatileIdAndMapLayoutFrlg(metatile, attributeType);
@@ -579,9 +571,7 @@ u32 GetAttributeByMetatileIdAndMapLayout(u16 metatile, u8 attributeType, u8 layo
 
 void SaveMapView(void)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     int i, j;
     int x, y;
     u16 *mapView;
@@ -665,9 +655,7 @@ static void LoadSavedMapView(void)
 }
 
 static void MoveMapViewToBackup(enum Connection direction
-#ifdef FIRERED
     , const struct MapLayout *previousLayout
-#endif
 )
 {
     int width;
@@ -720,11 +708,7 @@ static void MoveMapViewToBackup(enum Connection direction
             srci = (y + r8) * MAP_OFFSET_W + r9;
             src = &mapView[srci + i];
             dest = &sBackupMapData[x0 + desti + j];
-#ifdef FIRERED
             *dest = KantoSeam_ReencodeCacheBlock(previousLayout, gMapHeader.mapLayout, *src);
-#else
-            *dest = *src;
-#endif
             i++;
             j++;
         }
@@ -819,11 +803,9 @@ static void SetPositionFromConnection(const struct MapConnection *connection, en
 
 bool8 CameraMove(int x, int y)
 {
-#ifdef FIRERED
     const struct MapLayout *previousLayout = gMapHeader.mapLayout;
     if (x != 0 || y != 0)
         FireRedSave_NotifyPersistentWrite();
-#endif
     enum Connection direction;
     const struct MapConnection *connection;
     int old_x, old_y;
@@ -854,9 +836,7 @@ bool8 CameraMove(int x, int y)
         gSaveBlock1Ptr->pos.x += x;
         gSaveBlock1Ptr->pos.y += y;
         MoveMapViewToBackup(direction
-#ifdef FIRERED
             , previousLayout
-#endif
         );
     }
 
@@ -978,10 +958,8 @@ const struct MapConnection *GetMapConnectionAtPos(s16 x, s16 y)
 
 void SetCameraFocusCoords(u16 x, u16 y)
 {
-#ifdef FIRERED
     if (gSaveBlock1Ptr->pos.x != x - MAP_OFFSET || gSaveBlock1Ptr->pos.y != y - MAP_OFFSET)
         FireRedSave_NotifyPersistentWrite();
-#endif
     gSaveBlock1Ptr->pos.x = x - MAP_OFFSET;
     gSaveBlock1Ptr->pos.y = y - MAP_OFFSET;
 }
@@ -1113,12 +1091,10 @@ static void LoadPrimaryTilesetPalette(struct MapLayout const *mapLayout)
     LoadTilesetPalette(mapLayout->primaryTileset, 0, GetNumPalsInPrimary(mapLayout) * PLTT_SIZE_4BPP, FALSE, GetNumPalsInPrimary(mapLayout));
 }
 
-#ifdef FIRERED
 void LoadPrimaryTilesetPaletteSkipFaded(struct MapLayout const *mapLayout)
 {
     LoadTilesetPalette(mapLayout->primaryTileset, 0, GetNumPalsInPrimary(mapLayout) * PLTT_SIZE_4BPP, TRUE, GetNumPalsInPrimary(mapLayout));
 }
-#endif
 
 void LoadSecondaryTilesetPalette(struct MapLayout const *mapLayout, bool8 skipFaded)
 {
@@ -1140,8 +1116,6 @@ void LoadMapTilesetPalettes(struct MapLayout const *mapLayout)
     {
         LoadPrimaryTilesetPalette(mapLayout);
         LoadSecondaryTilesetPalette(mapLayout, FALSE);
-#ifdef FIRERED
         KantoSeam_LoadResources(mapLayout, FALSE);
-#endif
     }
 }

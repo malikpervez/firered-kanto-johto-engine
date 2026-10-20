@@ -1,3 +1,5 @@
+@ Johto (data/maps/FarawayIsland_Interior_hns/scripts.inc), as built into the FireRed game.
+
 FarawayIsland_Interior_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, FarawayIsland_Interior_hns_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, FarawayIsland_Interior_hns_OnTransition
@@ -6,7 +8,7 @@ FarawayIsland_Interior_hns_MapScripts::
 	.byte 0
 
 FarawayIsland_Interior_hns_OnReturnToField:
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_hns_EventScript_TrySetMewAboveGrass
+	call_if_set JOHTO_FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_hns_EventScript_TrySetMewAboveGrass
 	end
 
 FarawayIsland_Interior_hns_EventScript_TrySetMewAboveGrass::
@@ -23,25 +25,25 @@ FarawayIsland_Interior_hns_EventScript_SetMewAboveGrass::
 	return
 
 FarawayIsland_Interior_hns_OnResume:
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_hns_EventScript_TryRemoveMew
+	call_if_set JOHTO_FLAG_SYS_CTRL_OBJ_DELETE, FarawayIsland_Interior_hns_EventScript_TryRemoveMew
 	end
 
 FarawayIsland_Interior_hns_EventScript_TryRemoveMew::
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, J_Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
 	return
 
 FarawayIsland_Interior_hns_OnTransition:
 	setflag FLAG_TEMP_HIDE_FOLLOWER
-	setvar VAR_FARAWAY_ISLAND_STEP_COUNTER, 0
+	setvar JOHTO_VAR_FARAWAY_ISLAND_STEP_COUNTER, 0
 	setvar VAR_TEMP_1, 1
-	call_if_unset FLAG_CAUGHT_MEW, FarawayIsland_Interior_hns_EventScript_TryShowMew
+	call_if_unset JOHTO_FLAG_CAUGHT_MEW, FarawayIsland_Interior_hns_EventScript_TryShowMew
 	end
 
 FarawayIsland_Interior_hns_EventScript_TryShowMew::
-	goto_if_set FLAG_DEFEATED_MEW, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_MEW
+	goto_if_set JOHTO_FLAG_DEFEATED_MEW, J_Common_EventScript_NopReturn
+	clearflag JOHTO_FLAG_HIDE_MEW
 	setvar VAR_TEMP_1, 0
 	return
 
@@ -52,10 +54,10 @@ FarawayIsland_Interior_hns_OnFrame:
 FarawayIsland_Interior_hns_EventScript_FindMew::
 	lockall
 	playse SE_PIN
-	applymovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW, Common_Movement_ExclamationMark
+	applymovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW
-	applymovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW, Common_Movement_Delay48
+	applymovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW, J_Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW, FarawayIsland_Interior_hns_Movement_MewMoveAndHide
 	waitmovement 0
@@ -119,7 +121,7 @@ FarawayIsland_Interior_hns_EventScript_Mew::
 	waitmovement 0
 	setvar VAR_0x8004, 0
 	special SetMewAboveGrass
-	message FarawayIsland_Interior_Text_Mew
+	message J_FarawayIsland_Interior_Text_Mew
 	waitse
 	playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
 	call_if_eq VAR_FACING, DIR_NORTH, FarawayIsland_Interior_hns_EventScript_FoundMewNorth
@@ -130,28 +132,28 @@ FarawayIsland_Interior_hns_EventScript_Mew::
 	delay 40
 	waitmoncry
 	seteventmon SPECIES_MEW, 50
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	setflag JOHTO_FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	clearflag JOHTO_FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, FarawayIsland_Interior_hns_EventScript_MewDefeated
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, FarawayIsland_Interior_hns_EventScript_PlayerOrMewRan
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FarawayIsland_Interior_hns_EventScript_PlayerOrMewRan
 	goto_if_eq VAR_RESULT, B_OUTCOME_MON_TELEPORTED, FarawayIsland_Interior_hns_EventScript_PlayerOrMewRan
-	setflag FLAG_CAUGHT_MEW
+	setflag JOHTO_FLAG_CAUGHT_MEW
 	release
 	end
 
 FarawayIsland_Interior_hns_EventScript_MewDefeated::
-	setflag FLAG_DEFEATED_MEW
+	setflag JOHTO_FLAG_DEFEATED_MEW
 	setvar VAR_0x8004, SPECIES_MEW
-	goto Common_EventScript_LegendaryFlewAway
+	goto J_Common_EventScript_LegendaryFlewAway
 	end
 
 FarawayIsland_Interior_hns_EventScript_PlayerOrMewRan::
 	setvar VAR_0x8004, SPECIES_MEW
-	goto Common_EventScript_LegendaryFlewAway
+	goto J_Common_EventScript_LegendaryFlewAway
 	end
 
 FarawayIsland_Interior_hns_EventScript_FoundMewNorth::
@@ -177,7 +179,7 @@ FarawayIsland_Interior_hns_EventScript_FoundMewEast::
 FarawayIsland_Interior_hns_EventScript_HideMewWhenGrassCut::
 	lockall
 	fadescreenswapbuffers FADE_TO_BLACK
-	setflag FLAG_HIDE_MEW
+	setflag JOHTO_FLAG_HIDE_MEW
 	removeobject LOCALID_FARAWAY_ISLAND_INTERIOR_HNS_MEW
 	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox FarawayIsland_Interior_hns_Text_TheFeelingOfBeingWatchedFaded, MSGBOX_DEFAULT
@@ -186,4 +188,5 @@ FarawayIsland_Interior_hns_EventScript_HideMewWhenGrassCut::
 	end
 
 FarawayIsland_Interior_hns_Text_TheFeelingOfBeingWatchedFaded:
-	.string "The feeling of being watched faded…$"
+	.string "Th{SE_M_REVERSAL}feelin{SE_M_SANDSTORM}o{SE_M_ACID_ARMOR}bein{SE_M_SANDSTORM}watche{SE_M_WATERFALL}faded…$"
+

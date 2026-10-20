@@ -1,3 +1,5 @@
+@ Johto (data/maps/TohjoFalls_GiovanniRoom_hns/scripts.inc), as built into the FireRed game.
+
 TohjoFalls_GiovanniRoom_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, TohjoFalls_GiovanniRoom_OnTransition
 	.byte 0
@@ -5,13 +7,13 @@ TohjoFalls_GiovanniRoom_hns_MapScripts::
 TohjoFalls_GiovanniRoom_OnTransition::
 	specialvar VAR_RESULT, CheckCelebi
 	goto_if_eq VAR_RESULT, TRUE, TohjoFalls_GiovanniRoom_SetScene
-	setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
+	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
 	end
 
 TohjoFalls_GiovanniRoom_SetScene::
-	setflag FLAG_HIDE_TOHJO_GIOVANNI
-	goto_if_ne VAR_TOHJO_FALLS_GIOVANNI_STATE, 0, TohjoFalls_GiovanniRoom_DoNothing
-	setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 1
+	setflag JOHTO_FLAG_HIDE_TOHJO_GIOVANNI
+	goto_if_ne JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 0, TohjoFalls_GiovanniRoom_DoNothing
+	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 1
 	end
 
 TohjoFalls_GiovanniRoom_DoNothing::
@@ -22,20 +24,20 @@ TohjoFalls_GiovanniRoom_EventScript_Radio::
 	end
 
 TohjoFalls_GiovanniRoom_Text_RadioObject::
-	.string "A radio...\n"
-	.string "The battery is dead...$"
+	.string "{SE_M_BONEMERANG}radio...\n"
+	.string "Th{SE_M_REVERSAL}batter{SE_M_YAWN}i{SE_M_GRASSWHISTLE}dead...$"
 
 TohjoFalls_GiovanniRoom_CancelScene::
-	setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
+	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
 	end
 
 TohjoFalls_EventScript_GiovanniSceneRight::
 	specialvar VAR_RESULT, CheckCelebi
 	goto_if_eq VAR_RESULT, FALSE, TohjoFalls_GiovanniRoom_CancelScene
 	lock
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	goto TohjoFalls_EventScript_GiovanniScene
 
@@ -43,9 +45,9 @@ TohjoFalls_EventScript_GiovanniSceneLeft::
 	specialvar VAR_RESULT, CheckCelebi
 	goto_if_eq VAR_RESULT, FALSE, TohjoFalls_GiovanniRoom_CancelScene
 	lock
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	goto TohjoFalls_EventScript_GiovanniScene
 
@@ -60,20 +62,20 @@ TohjoFalls_EventScript_GiovanniScene::
 	waitse
 	waitmovement 0
 	playse SE_PIN
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
 	waitmovement OBJ_EVENT_ID_PLAYER
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 20
 	playse SE_PIN
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_QuestionMark
 	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement2 OBJ_EVENT_ID_FOLLOWER, TohjoFalls_Movement_CelebiSpin
 	playse SE_LEDGE
 	waitse
 	playse SE_LEDGE
 	waitse
-	@playse SE_M_PETAL_DANCE
-	@delay 10
+
+
 	playse SE_LEDGE
 	waitse
 	playse SE_LEDGE
@@ -84,36 +86,36 @@ TohjoFalls_EventScript_GiovanniScene::
 	delay 60
 	playse SE_M_TELEPORT
 	waitse
-	clearflag FLAG_HIDE_TOHJO_GIOVANNI
+	clearflag JOHTO_FLAG_HIDE_TOHJO_GIOVANNI
 	addobject LOCALID_TOHJOFALLS_GIOVANNI
 	waitse
-	playbgm MUS_HG_RADIO_ROCKET, FALSE
+	playbgm ((558 + 1) + 0x3F), FALSE
 	fadescreen FADE_FROM_WHITE
 	delay 50
-	turnobject  OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox TohjoFalls_GiovanniRoom_Text_Radio, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
-	applymovement2 OBJ_EVENT_ID_FOLLOWER, Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	waitmovement OBJ_EVENT_ID_FOLLOWER
 	playse SE_PIN
-	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, Common_Movement_ExclamationMark
+	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_TOHJOFALLS_GIOVANNI
 	turnobject LOCALID_TOHJOFALLS_GIOVANNI, DIR_SOUTH
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniIntro, MSGBOX_DEFAULT
-	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, Common_Movement_WalkDown1
+	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, J_Common_Movement_WalkDown1
 	waitmovement 0
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GIOVANNI_HNS, TohjoFalls_GiovanniRoom_Text_GiovanniDefeat
-	playbgm MUS_HG_RADIO_ROCKET, FALSE
+	trainerbattle_no_intro TRAINER_JOHTO_GIOVANNI_HNS, TohjoFalls_GiovanniRoom_Text_GiovanniDefeat
+	playbgm ((558 + 1) + 0x3F), FALSE
 	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, TohjoFalls_Movement_GiovanniTakenAback
 	waitmovement 0
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, TohjoFalls_Movement_GiovanniLeave
-	waitmovement 0 
+	waitmovement 0
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_TOHJOFALLS_GIOVANNI
 	playse SE_EXIT
@@ -127,20 +129,20 @@ TohjoFalls_EventScript_GiovanniScene::
 	waitse
 	waitmovement 0
 	playse SE_PIN
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
 	waitmovement OBJ_EVENT_ID_PLAYER
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 20
 	playse SE_PIN
-	applymovement2 OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_QuestionMark
 	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement2 OBJ_EVENT_ID_FOLLOWER, TohjoFalls_Movement_CelebiSpin
 	playse SE_LEDGE
 	waitse
 	playse SE_LEDGE
 	waitse
-	@playse SE_M_PETAL_DANCE
-	@delay 10
+
+
 	playse SE_LEDGE
 	waitse
 	playse SE_LEDGE
@@ -153,7 +155,7 @@ TohjoFalls_EventScript_GiovanniScene::
 	waitse
 	fadedefaultbgm
 	fadescreen FADE_FROM_WHITE
-	setvar VAR_TOHJO_FALLS_GIOVANNI_STATE, 2
+	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 2
 	release
 	end
 
@@ -189,45 +191,46 @@ TohjoFalls_Movement_GiovanniLeave:
 	step_end
 
 TohjoFalls_GiovanniRoom_Text_Radio:
-	.string "RADIO: ... ...\n"
-	.string "Ahem, we are TEAM ROCKET!\l"
-	.string "After three years of preparation,\l"
-	.string "we have risen again from the ashes!\l"
-	.string "GIOVANNI! Can you hear us?\l"
-	.string "We did it!\l"
-	.string "Where is our boss?\l"
-	.string "Is he listening?$"
+	.string "RADIO{SE_M_HEAT_WAVE}..{SE_M_PERISH_SONG}...\n"
+	.string "Ahem{SE_M_SUPERSONIC}w{SE_M_REVERSAL}ar{SE_M_REVERSAL}TEA{SE_M_GIGA_DRAIN}ROCKET!\l"
+	.string "Afte{SE_M_SAND_TOMB}thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}preparation,\l"
+	.string "w{SE_M_REVERSAL}hav{SE_M_REVERSAL}rise{SE_M_ATTRACT}agai{SE_M_ATTRACT}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}ashes!\l"
+	.string "GIOVANNI{SE_M_DRAGON_RAGE}Ca{SE_M_ATTRACT}yo{SE_M_DIVE}hea{SE_M_SAND_TOMB}us?\l"
+	.string "W{SE_M_REVERSAL}di{SE_M_WATERFALL}it!\l"
+	.string "Wher{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}ou{SE_M_SAND_TOMB}boss?\l"
+	.string "I{SE_M_GRASSWHISTLE}h{SE_M_REVERSAL}listening?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniIntro:
-	.string "GIOVANNI: ...\p"
-	.string "I don't know why you have come\n"
+	.string "GIOVANNI{SE_M_HEAT_WAVE}...\p"
+	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}wh{SE_M_YAWN}yo{SE_M_DIVE}hav{SE_M_REVERSAL}come\n"
 	.string "here.\p"
-	.string "Anyway, I have to warn you that\n"
-	.string "this is not a place for kids like\l"
+	.string "Anyway{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}war{SE_M_ATTRACT}yo{SE_M_DIVE}that\n"
+	.string "thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}{SE_M_CHARGE}plac{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}kid{SE_M_GRASSWHISTLE}like\l"
 	.string "you.\p"
-	.string "You have a certain look.\n"
-	.string "It reminds me of the kid who stood\l"
-	.string "in front of me three years ago...\p"
-	.string "You have the same eyes...\p"
+	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}certai{SE_M_ATTRACT}look.\n"
+	.string "I{SE_M_SPIT_UP}remind{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}ki{SE_M_WATERFALL}wh{SE_M_ATTRACT2}stood\l"
+	.string "i{SE_M_ATTRACT}fron{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}m{SE_M_REVERSAL}thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}ago...\p"
+	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}eyes...\p"
 	.string "...\p"
-	.string "I'm on my way to GOLDENROD CITY\n"
-	.string "to answer the call and join my team.\l"
-	.string "Are you going to get in my way?$"
+	.string "I'{SE_M_MILK_DRINK}o{SE_M_ATTRACT}m{SE_M_YAWN}wa{SE_M_YAWN}t{SE_M_ATTRACT2}GOLDENRO{SE_M_FAINT_ATTACK}CITY\n"
+	.string "t{SE_M_ATTRACT2}answe{SE_M_SAND_TOMB}th{SE_M_REVERSAL}cal{SE_M_BATON_PASS}an{SE_M_WATERFALL}joi{SE_M_ATTRACT}m{SE_M_YAWN}team.\l"
+	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}i{SE_M_ATTRACT}m{SE_M_YAWN}way?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle:
-	.string "My old associates need me...\n"
-	.string "We will not repeat the failure of\l"
-	.string "three years ago!$"
+	.string "M{SE_M_YAWN}ol{SE_M_WATERFALL}associate{SE_M_GRASSWHISTLE}nee{SE_M_WATERFALL}me...\n"
+	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}no{SE_M_SPIT_UP}repea{SE_M_SPIT_UP}th{SE_M_REVERSAL}failur{SE_M_REVERSAL}of\l"
+	.string "thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}ago!$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniDefeat:
-	.string "What in the world are you?$"
+	.string "Wha{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}worl{SE_M_WATERFALL}ar{SE_M_REVERSAL}you?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniAfter:
-	.string "GIOVANNI: How is this possible...?\n"
-	.string "The past three years have been a\l"
+	.string "GIOVANNI{SE_M_HEAT_WAVE}Ho{SE_M_TWISTER}i{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}possible...?\n"
+	.string "Th{SE_M_REVERSAL}pas{SE_M_SPIT_UP}thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}a\l"
 	.string "waste...?\p"
-	.string "How can a kid like you manage to\n"
-	.string "destroy my dream once again?\p"
-	.string "The precious dream of TEAM ROCKET\n"
-	.string "has become little more than an\l"
+	.string "Ho{SE_M_TWISTER}ca{SE_M_ATTRACT}{SE_M_CHARGE}ki{SE_M_WATERFALL}lik{SE_M_REVERSAL}yo{SE_M_DIVE}manag{SE_M_REVERSAL}to\n"
+	.string "destro{SE_M_YAWN}m{SE_M_YAWN}drea{SE_M_MILK_DRINK}onc{SE_M_REVERSAL}again?\p"
+	.string "Th{SE_M_REVERSAL}preciou{SE_M_GRASSWHISTLE}drea{SE_M_MILK_DRINK}o{SE_M_ACID_ARMOR}TEA{SE_M_GIGA_DRAIN}ROCKET\n"
+	.string "ha{SE_M_GRASSWHISTLE}becom{SE_M_REVERSAL}littl{SE_M_REVERSAL}mor{SE_M_REVERSAL}tha{SE_M_ATTRACT}an\l"
 	.string "illusion...$"
+

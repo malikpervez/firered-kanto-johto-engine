@@ -16,7 +16,73 @@
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
+      "x": 70,
+      "y": 53,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_range_x": 10,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
+      "x": 30,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+      "movement_range_x": 10,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
+      "x": 52,
+      "y": 42,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
+      "x": 74,
+      "y": 68,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 10,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DUGTRIO",
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_range_x": 10,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
+  ],
   "warp_events": [
     {
       "x": 3,
@@ -35,101 +101,13 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "object_events": [
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
-        "x": 70,
-        "y": 53,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
-        "movement_range_x": 10,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
-        "x": 30,
-        "y": 26,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
-        "movement_range_x": 10,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
-        "x": 52,
-        "y": 42,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 10,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
-        "x": 74,
-        "y": 68,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
-        "movement_range_x": 0,
-        "movement_range_y": 10,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DUGTRIO",
-        "x": 4,
-        "y": 7,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
-        "movement_range_x": 10,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 3,
-        "y": 3,
-        "elevation": 3,
-        "dest_map": "MAP_DIGLETTS_CAVE_NORTH_ENTRANCE",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 82,
-        "y": 71,
-        "elevation": 3,
-        "dest_map": "MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE",
-        "dest_warp_id": "1"
-      }
-    ],
-    "coord_events": [],
-    "bg_events": [],
-    "connections": null,
-    "firered_geometry": {
-      "width": 85,
-      "height": 80,
-      "primary_tileset": "gTileset_Johto_General_Hns",
-      "secondary_tileset": "gTileset_Cave_Sandy_Hns",
-      "border_filepath": "data/layouts/DiglettsCave_Tunnel_hns/border.bin",
-      "blockdata_filepath": "data/layouts/DiglettsCave_Tunnel_hns/map.bin",
-      "layout_version": "hns"
-    }
+  "firered_geometry": {
+    "width": 85,
+    "height": 80,
+    "primary_tileset": "gTileset_Johto_General_Hns",
+    "secondary_tileset": "gTileset_Cave_Sandy_Hns",
+    "border_filepath": "data/layouts/DiglettsCave_Tunnel_hns/border.bin",
+    "blockdata_filepath": "data/layouts/DiglettsCave_Tunnel_hns/map.bin",
+    "layout_version": "hns"
   }
 }

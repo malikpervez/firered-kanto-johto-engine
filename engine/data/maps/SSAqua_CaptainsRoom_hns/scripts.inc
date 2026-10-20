@@ -1,3 +1,5 @@
+@ Johto (data/maps/SSAqua_CaptainsRoom_hns/scripts.inc), as built into the FireRed game.
+
 SSAqua_CaptainsRoom_hns_MapScripts::
 	.byte 0
 
@@ -5,6 +7,7 @@ SSAqua_CaptainsRoom_EventScript_Captain::
 	goto_if_eq VAR_TEMP_0, 1, SSAqua_CaptainsRoom_EventScrip_CaptainAfter
 	msgbox SSAqua_CaptainsRoom_Text_CaptainExhausting, MSGBOX_NPC
 	setvar VAR_TEMP_0, 1
+
 SSAqua_CaptainsRoom_EventScrip_CaptainAfter::
 	msgbox SSAqua_CaptainsRoom_Text_CaptainHowDoYouLike, MSGBOX_DEFAULT
 	closemessage
@@ -17,7 +20,7 @@ SSAqua_CaptainsRoom_EventScript_Granddaughter::
 	msgbox SSAqua_CaptainsRoom_Text_GranddaughterCaptainPlayWithMe, MSGBOX_DEFAULT
 	turnobject LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN, DIR_WEST
 	playse SE_PIN
-	applymovement LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN, Common_Movement_QuestionMark
+	applymovement LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN, J_Common_Movement_QuestionMark
 	delay 55
 	waitmovement LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN
 	delay 60
@@ -25,9 +28,9 @@ SSAqua_CaptainsRoom_EventScript_Granddaughter::
 	msgbox SSAqua_CaptainsRoom_Text_GranddaughterHasToFindGrandpa, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	setflag FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
-	setvar VAR_SSAQUA_STATE, 4
-	clearflag FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
+	setflag JOHTO_FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
+	setvar JOHTO_VAR_SSAQUA_STATE, 4
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
 	warp MAP_SSAQUA_ROOM_SSE_HNS, 0
 	waitstate
 	release
@@ -40,23 +43,23 @@ SSAqua_CaptainsRoom_Movement_Jump:
 	step_end
 
 SSAqua_CaptainsRoom_Text_GranddaughterCaptainPlayWithMe:
-	.string "CAPTAIN, play with me, please?\p"
-	.string "I'm bored! I want to play more!$"
+	.string "CAPTAIN{SE_M_SUPERSONIC}pla{SE_M_YAWN}wit{SE_M_TRI_ATTACK}me{SE_M_SUPERSONIC}please?\p"
+	.string "I'{SE_M_MILK_DRINK}bored{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}pla{SE_M_YAWN}more!$"
 
 SSAqua_CaptainsRoom_Text_GranddaughterHasToFindGrandpa:
-	.string "Hi! Will you play with me?\p"
+	.string "Hi{SE_M_DRAGON_RAGE}Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}pla{SE_M_YAWN}wit{SE_M_TRI_ATTACK}me?\p"
 	.string "…Oh!\p"
-	.string "Grandpa's worried about me?\p"
-	.string "I have to go!\p"
-	.string "I have to go find Grandpa!$"
+	.string "Grandpa'{SE_M_GRASSWHISTLE}worrie{SE_M_WATERFALL}abou{SE_M_SPIT_UP}me?\p"
+	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}go!\p"
+	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}fin{SE_M_WATERFALL}Grandpa!$"
 
 SSAqua_CaptainsRoom_Text_CaptainExhausting:
-	.string "Whew! Thanks for coming along.\p"
-	.string "Keeping that little girl amused\n"
-	.string "was exhausting.$"
+	.string "Whew{SE_M_DRAGON_RAGE}Thank{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}comin{SE_M_SANDSTORM}along.\p"
+	.string "Keepin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}littl{SE_M_REVERSAL}gir{SE_M_BATON_PASS}amused\n"
+	.string "wa{SE_M_GRASSWHISTLE}exhausting.$"
 
 SSAqua_CaptainsRoom_Text_CaptainHowDoYouLike:
-	.string "How do you like S.S.AQUA's ride?\p"
-	.string "She practically skates across\n"
-	.string "the waves.$"
+	.string "Ho{SE_M_TWISTER}d{SE_M_ATTRACT2}yo{SE_M_DIVE}lik{SE_M_REVERSAL}S.S.AQUA'{SE_M_GRASSWHISTLE}ride?\p"
+	.string "Sh{SE_M_REVERSAL}practicall{SE_M_YAWN}skate{SE_M_GRASSWHISTLE}across\n"
+	.string "th{SE_M_REVERSAL}waves.$"
 

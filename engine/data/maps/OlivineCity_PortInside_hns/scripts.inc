@@ -1,12 +1,13 @@
+@ Johto (data/maps/OlivineCity_PortInside_hns/scripts.inc), as built into the FireRed game.
+
 OlivineCity_PortInside_hns_MapScripts::
 	.byte 0
 
-
 OlivineCity_PortInside_EventScript_Oak::
 	lock
-	playbgm MUS_HG_OAK, FALSE
+	playbgm ((558 + 1) + 0x26), FALSE
 	playse SE_PIN
-	applymovement2 LOCALID_OLIVINEPORT_OAK, Common_Movement_ExclamationMark
+	applymovement2 LOCALID_OLIVINEPORT_OAK, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_OLIVINEPORT_OAK
 	turnobject LOCALID_OLIVINEPORT_OAK, DIR_NORTH
@@ -15,16 +16,11 @@ OlivineCity_PortInside_EventScript_Oak::
 	applymovement2 LOCALID_OLIVINEPORT_OAK, OlivineCity_PortInside_Movement_OakFixDex
 	waitmovement 0
 	delay 30
-	setflag FLAG_SYS_NATIONAL_DEX
-	special EnableNationalPokedex
-	playfanfare MUS_OBTAIN_ITEM
-	message OlivineCity_PortInside_Text_Nationaldex2
-	waitfanfare
 	delay 50
 	msgbox OlivineCity_PortInside_Text_Nationaldex3, MSGBOX_DEFAULT
 	closemessage
 	playse SE_PIN
-	applymovement2 LOCALID_OLIVINEPORT_OAK, Common_Movement_ExclamationMark
+	applymovement2 LOCALID_OLIVINEPORT_OAK, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_OLIVINEPORT_OAK
 	msgbox OlivineCity_PortInside_Text_Nationaldex4, MSGBOX_DEFAULT
@@ -33,7 +29,7 @@ OlivineCity_PortInside_EventScript_Oak::
 	waitmovement 0
 	applymovement LOCALID_OLIVINEPORT_OAK, OlivineCity_PortInside_Movement_OakLeave
 	waitmovement 0
-	setflag FLAG_HIDE_OLIVINE_PORT_OAK
+	setflag JOHTO_FLAG_HIDE_OLIVINE_PORT_OAK
 	playse SE_EXIT
 	removeobject LOCALID_OLIVINEPORT_OAK
 	fadedefaultbgm
@@ -63,30 +59,17 @@ OlivineCity_PortInside_Movement_OakLeave:
 	step_end
 
 OlivineCity_PortInside_Text_Nationaldex1:
-	.string "PROF.OAK: Hello!\n"
-	.string "You are starting to have the\l"
-	.string "attitude of a CHAMPION, {PLAYER}!\p"
-	.string "It's time for your POKéDEX to\n"
-	.string "match who you are.\p"
-	.string "Let me see your POKéDEX for a\n"
-	.string "second.\p"
-	.string "I'll upgrade your POKéDEX with the\n"
-	.string "NATIONAL MODE.$"
+	.string "PROF.OAK{SE_M_HEAT_WAVE}Congratulations{SE_M_SUPERSONIC}{PLAYER}!\nYo{SE_M_DIVE}hav{SE_M_REVERSAL}becom{SE_M_REVERSAL}JOHTO'{SE_M_GRASSWHISTLE}CHAMPION.\pPROF.EL{SE_M_GIGA_DRAIN}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}al{SE_M_BATON_PASS}abou{SE_M_SPIT_UP}your\njourney{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}kne{SE_M_TWISTER}yo{SE_M_DIVE}woul{SE_M_WATERFALL}d{SE_M_ATTRACT2}well!$"
+
 OlivineCity_PortInside_Text_Nationaldex2:
-	.string "{PLAYER}'s POKéDEX was upgraded\n"
-	.string "with the NATIONAL MODE!$"
+	.string "{PLAYER}'{SE_M_GRASSWHISTLE}POKéDE{SE_M_LOCK_ON}wa{SE_M_GRASSWHISTLE}upgraded\n"
+	.string "wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}NATIONA{SE_M_BRICK_BREAK}MODE!$"
+
 OlivineCity_PortInside_Text_Nationaldex3:
-	.string "PROF.OAK: It won't be easy to\n"
-	.string "complete the NATIONAL POKéDEX...\p"
-	.string "However, I'm sure you will make\n"
-	.string "honest attempt on our behalf!$"
+	.string "You{SE_M_SAND_TOMB}POKéDE{SE_M_LOCK_ON}record{SE_M_GRASSWHISTLE}bot{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}your\njourneys{SE_M_PERISH_SONG}Kee{SE_M_MORNING_SUN}u{SE_M_MORNING_SUN}th{SE_M_REVERSAL}goo{SE_M_WATERFALL}work!\pCom{SE_M_REVERSAL}se{SE_M_REVERSAL}m{SE_M_REVERSAL}i{SE_M_ATTRACT}PALLE{SE_M_SWIFT}TOW{SE_M_PSYBEAM2}when\nyo{SE_M_DIVE}woul{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}discus{SE_M_GRASSWHISTLE}it.$"
+
 OlivineCity_PortInside_Text_Nationaldex4:
-	.string "Oh, time flies!\p"
-	.string "I have a radio show to record at\n"
-	.string "GOLDENROD RADIO TOWER.\p"
-	.string "You must be heading for KANTO.\p"
-	.string "If you come near PALLET TOWN, do\n"
-	.string "drop by my POKéMON RESEARCH LAB!$"
+	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}{SE_M_CHARGE}radi{SE_M_ATTRACT2}sho{SE_M_TWISTER}t{SE_M_ATTRACT2}recor{SE_M_WATERFALL}at\nGOLDENRO{SE_M_FAINT_ATTACK}RADI{SE_M_SOLAR_BEAM}TOWER.\pEnjo{SE_M_YAWN}you{SE_M_SAND_TOMB}travels{SE_M_SUPERSONIC}an{SE_M_WATERFALL}com{SE_M_REVERSAL}visit\nm{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}RESEARC{SE_M_SWAGGER2}LA{SE_M_LICK}soon!$"
 
 OlivinePort_EventScript_CooltrainerF::
 	msgbox OlivinePort_Text_CooltrainerF, MSGBOX_NPC
@@ -107,7 +90,7 @@ OlivinePort_EventScript_Youngster::
 OlivinePort_EventScript_Sailor::
 	lock
 	faceplayer
-	goto_if_ge VAR_SSAQUA_STATE, 7, OlivinePort_EventScript_Sailor_AfterKanto
+	goto_if_ge JOHTO_VAR_SSAQUA_STATE, 7, OlivinePort_EventScript_Sailor_AfterKanto
 	msgbox OlivinePort_Text_AskBoard, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_Refused
 	checkitem ITEM_SS_TICKET
@@ -125,9 +108,8 @@ OlivinePort_EventScript_Sailor_AfterKanto::
 	case 1, OlivinePort_EventScript_ChoseSouthernIsland
 	case 2, OlivinePort_EventScript_ChoseBirthIsland
 	case 3, OlivinePort_EventScript_ChoseFarawayIsland
-	case 4, OlivinePort_EventScript_ChoseBattleFrontier
-	case 5, OlivinePort_EventScript_Sailor_Refused
-	case MULTI_B_PRESSED, OlivinePort_EventScript_Sailor_Refused
+	case 4, OlivinePort_EventScript_Sailor_Refused
+	case 127, OlivinePort_EventScript_Sailor_Refused
 	release
 	end
 
@@ -138,7 +120,7 @@ OlivinePort_EventScript_ChoseVermilion::
 	bufferitemname STR_VAR_1, ITEM_SS_TICKET
 	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
-	warpsilent MAP_VERMILION_CITY_PORT_INSIDE_HNS, 8, 9
+	warpsilent MAP_VERMILION_CITY, 13, 26
 	waitstate
 	release
 	end
@@ -177,26 +159,17 @@ OlivinePort_EventScript_ChoseFarawayIsland::
 	warpsilent MAP_FARAWAY_ISLAND_ENTRANCE_HNS, 13, 38
 	waitstate
 	release
-	end	
-
-OlivinePort_EventScript_ChoseBattleFrontier::
-	closemessage
-	delay 20
-	call OlivinePort_EventScript_EnterShip
-	warpsilent MAP_BATTLE_FRONTIER_OUTSIDE_WEST_HNS, 20, 67
-	waitstate
-	release
-	end	
+	end
 
 OlivinePort_EventScript_Sailor_MaidenVoyage::
 	msgbox OlivinePort_Text_FlashTicket, MSGBOX_DEFAULT
 	call OlivinePort_EventScript_EnterShip
-	setvar VAR_SSAQUA_STATE, 1
-	clearflag FLAG_HIDE_SSAQUA_1F_GRANDPA
-	setflag FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
+	setvar JOHTO_VAR_SSAQUA_STATE, 1
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_1F_GRANDPA
+	setflag JOHTO_FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
 
-	clearflag FLAG_HIDE_SSAQUA_SAILOR
-	clearflag FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_SAILOR
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
 
 	warpsilent MAP_SSAQUA_1F_HNS, 29, 3
 	waitstate
@@ -219,7 +192,7 @@ OlivinePort_EventScript_EnterShip::
 	applymovement LOCALID_OLIVINEPORT_SAILOR, OlivinePort_Movement_BoatLeave
 	applymovement LOCALID_OLIVINEPORT_BOAT, OlivinePort_Movement_BoatLeave
 	waitmovement LOCALID_OLIVINEPORT_BOAT
-	setrespawn HEAL_LOCATION_OLIVINE_CITY_HNS
+	setrespawn JOHTO_HEAL_LOCATION_OLIVINE_CITY_HNS
 	return
 
 OlivinePort_EventScript_Sailor_Refused::
@@ -254,62 +227,63 @@ OlivinePort_Movement_BoatLeave:
 	step_end
 
 OlivinePort_Text_NoPass:
-    .string "{PLAYER} tried to show the\n"
-    .string "{STR_VAR_1}…\p"
-    .string "…But no {STR_VAR_1}!\p"
-    .string "Sorry!\n"
-    .string "You may board only if you have an\l"
-    .string "{STR_VAR_1}.$"
+	.string "{PLAYER} trie{SE_M_WATERFALL}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}the\n"
+	.string "{STR_VAR_1}…\p"
+	.string "…Bu{SE_M_SPIT_UP}n{SE_M_ATTRACT2}{STR_VAR_1}!\p"
+	.string "Sorry!\n"
+	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}boar{SE_M_WATERFALL}onl{SE_M_YAWN}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}an\l"
+	.string "{STR_VAR_1}.$"
 
 OlivinePort_Text_SailorGetOnBoard:
-    .string "We're departing soon.\n"
-    .string "Please get on board.$"
+	.string "We'r{SE_M_REVERSAL}departin{SE_M_SANDSTORM}soon.\n"
+	.string "Pleas{SE_M_REVERSAL}ge{SE_M_SPIT_UP}o{SE_M_ATTRACT}board.$"
 
 OlivinePort_Text_CantBoard:
-    .string "Sorry. You can't board now.$"
+	.string "Sorry{SE_M_PERISH_SONG}Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}boar{SE_M_WATERFALL}now.$"
 
 OlivinePort_Text_WhereSail:
-    .string "Where would you like to sail?$"
+	.string "Wher{SE_M_REVERSAL}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}sail?$"
 
 OlivinePort_Text_AskBoard:
-    .string "Welcome to FAST SHIP S.S.AQUA.\p"
-    .string "Will you be boarding today?$"
+	.string "Welcom{SE_M_REVERSAL}t{SE_M_ATTRACT2}FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQUA.\p"
+	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}b{SE_M_REVERSAL}boardin{SE_M_SANDSTORM}today?$"
 
 OlivinePort_Text_AskTicket:
-    .string "May I see your S.S.TICKET?$"
+	.string "Ma{SE_M_YAWN}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}you{SE_M_SAND_TOMB}S.S.TICKET?$"
 
 OlivinePort_Text_ComeAgain:
-    .string "We hope to see you again!$"
+	.string "W{SE_M_REVERSAL}hop{SE_M_REVERSAL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}yo{SE_M_DIVE}again!$"
 
 OlivinePort_Text_FlashTicket:
-    .string "{PLAYER} flashed the S.S.TICKET.\p"
-    .string "That's it. Thank you!$"
+	.string "{PLAYER} flashe{SE_M_WATERFALL}th{SE_M_REVERSAL}S.S.TICKET.\p"
+	.string "That'{SE_M_GRASSWHISTLE}it{SE_M_PERISH_SONG}Than{SE_M_ENCORE2}you!$"
 
 OlivinePort_Text_NoTicket:
-    .string "{PLAYER} tried to show the\n"
-    .string "S.S.TICKET…\p"
-    .string "…But no TICKET!\p"
-    .string "Sorry!\n"
-    .string "You may board only\l"
-    .string "if you have an S.S.TICKET.$"
+	.string "{PLAYER} trie{SE_M_WATERFALL}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}the\n"
+	.string "S.S.TICKET…\p"
+	.string "…Bu{SE_M_SPIT_UP}n{SE_M_ATTRACT2}TICKET!\p"
+	.string "Sorry!\n"
+	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}boar{SE_M_WATERFALL}only\l"
+	.string "i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}a{SE_M_ATTRACT}S.S.TICKET.$"
 
 OlivinePort_Text_FishingGuru1:
-    .string "SHELLDER are easy to catch here.\p"
-    .string "They're kind of rare elsewhere.$"
+	.string "SHELLDE{SE_M_MINIMIZE}ar{SE_M_REVERSAL}eas{SE_M_YAWN}t{SE_M_ATTRACT2}catc{SE_M_TRI_ATTACK}here.\p"
+	.string "They'r{SE_M_REVERSAL}kin{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}rar{SE_M_REVERSAL}elsewhere.$"
 
 OlivinePort_Text_FishingGuru2:
-    .string "How many RODS do you have?\p"
-    .string "Different RODS catch different\n"
-    .string "POKéMON.$"
+	.string "Ho{SE_M_TWISTER}man{SE_M_YAWN}ROD{SE_M_SKETCH}d{SE_M_ATTRACT2}yo{SE_M_DIVE}have?\p"
+	.string "Differen{SE_M_SPIT_UP}ROD{SE_M_SKETCH}catc{SE_M_TRI_ATTACK}different\n"
+	.string "POKéMON.$"
 
 OlivinePort_Text_Youngster:
-    .string "S.S.AQUA uses jets to skim\n"
-    .string "over the waves!$"
+	.string "S.S.AQU{SE_M_BONEMERANG}use{SE_M_GRASSWHISTLE}jet{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}skim\n"
+	.string "ove{SE_M_SAND_TOMB}th{SE_M_REVERSAL}waves!$"
 
 OlivinePort_Text_CooltrainerF:
-    .string "There are lots of POKéMON in KANTO.\p"
-    .string "I wish I could go…$"
+	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}lot{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}KANTO.\p"
+	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}go…$"
 
 OlivinePort_Text_SailorBeforeHOF:
-    .string "We don't want you to fall into the\n"
-    .string "sea, so you're not allowed in.$"
+	.string "W{SE_M_REVERSAL}don'{SE_M_SPIT_UP}wan{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}fal{SE_M_BATON_PASS}int{SE_M_ATTRACT2}the\n"
+	.string "sea{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}you'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}allowe{SE_M_WATERFALL}in.$"
+

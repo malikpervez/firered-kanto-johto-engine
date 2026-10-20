@@ -1,20 +1,5 @@
-#ifdef FIRERED
-CherrygroveCity_House3_hns_MapScripts::
-	.byte 0
+@ Johto (data/maps/CherrygroveCity_House3_hns/scripts.inc), as built into the FireRed game.
 
-B3_CherrygroveHouse3_EventScript_Visitor::
-	lock
-	faceplayer
-	msgbox B3_CherrygroveHouse3_EventScript_Visitor_Text, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-B3_CherrygroveHouse3_EventScript_Visitor_Text::
-	.string "Traveling with POKéMON is fun!\n"
-	.string "They stay with you wherever you go.$"
-
-#else
 CherrygroveCity_House3_hns_MapScripts::
 	.byte 0
 
@@ -35,12 +20,11 @@ CherrygroveCity_House3_EventScript_Girl::
 	end
 
 CherrygroveCity_EvolutionHouse_Text_Youngster:
-	.string "POKéMON gain experience in\n"
-	.string "battle and change their form.$"
+	.string "POKéMO{SE_M_PSYBEAM2}gai{SE_M_ATTRACT}experienc{SE_M_REVERSAL}in\n"
+	.string "battl{SE_M_REVERSAL}an{SE_M_WATERFALL}chang{SE_M_REVERSAL}thei{SE_M_SAND_TOMB}form.$"
 
 CherrygroveCity_EvolutionHouse_Text_Lass:
-	.string "POKéMON change?\p"
-	.string "I would be shocked if one did\n"
+	.string "POKéMO{SE_M_PSYBEAM2}change?\p"
+	.string "{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}shocke{SE_M_WATERFALL}i{SE_M_ACID_ARMOR}on{SE_M_REVERSAL}did\n"
 	.string "that!$"
 
-#endif // FIRERED

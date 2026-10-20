@@ -1,5 +1,4 @@
 #include "global.h"
-#ifdef FIRERED
 #include "bg.h"
 #include "palette.h"
 #include "fieldmap.h"
@@ -2306,4 +2305,3 @@ void KantoSeam_LoadResources(const struct MapLayout *layout, bool8 skipFaded)
         else
             LoadPaletteFast(seam->palettes[i].colors, seam->palettes[i].destination, PLTT_SIZE_4BPP);
 }
-#endif

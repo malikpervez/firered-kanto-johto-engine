@@ -201,33 +201,11 @@ Debug_EventScript_Text_OffensiveIVs:
 
 Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
-#if IS_HNS
-Debug_EventScript_Script_1::
-	goto UnionCave_B2F_EventScript_Lapras
-	release
-	end
-
-Debug_Text_1:
-	.string "{STR_VAR_1}$"
-
-#endif
 Debug_EventScript_Script_2::
 	finditem ITEM_POTION
 	giveitem ITEM_SUPER_POTION
 	release
 	end
-#if IS_HNS
-Debug_EventScript_Script_3::
-	goto SinjohRuins_EventScript_StevenBattle
-	release
-	end
-
-Debug_EventScript_Script_4::
-	msgbox SinjohRuins_Lab_Text_StevenCall3Plates, MSGBOX_DEFAULT
-	pokenavcall SinjohRuins_Lab_Text_StevenCall6Plates
-	release
-	end
-#endif
 Debug_EventScript_Script_5::
 	special InitKantoRoamers
 	release

@@ -132,10 +132,8 @@ enum
     POKENAV_RIBBONS_MON_LIST,                   // The list of Pokémon with ribbons
     POKENAV_RIBBONS_SUMMARY_SCREEN,             // The ribbon summary screen shown when a Pokémon has been selected
     POKENAV_RIBBONS_RETURN_TO_MON_LIST,         // Exited the summary screen back to the ribbon list
-#if IS_HNS || defined(FIRERED)
     POKENAV_RADIO,
     POKENAV_MAIN_MENU_CURSOR_ON_RADIO,
-#endif
 };
 
 enum
@@ -143,12 +141,10 @@ enum
     POKENAV_MENU_TYPE_DEFAULT,
     POKENAV_MENU_TYPE_UNLOCK_MC,
     POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS,
-#if IS_HNS || defined(FIRERED)
     POKENAV_MENU_TYPE_UNLOCK_MC_RADIO,
     POKENAV_MENU_TYPE_UNLOCK_MC_RIBBONS_RADIO,
     POKENAV_MENU_TYPE_DEFAULT_NO_COND,
     POKENAV_MENU_TYPE_UNLOCK_MC_NO_COND,
-#endif
     POKENAV_MENU_TYPE_CONDITION,
     POKENAV_MENU_TYPE_CONDITION_SEARCH,
     POKENAV_MENU_TYPE_COUNT
@@ -162,9 +158,7 @@ enum
     POKENAV_MENUITEM_CONDITION,
     POKENAV_MENUITEM_MATCH_CALL,
     POKENAV_MENUITEM_RIBBONS,
-#if IS_HNS || defined(FIRERED)
     POKENAV_MENUITEM_RADIO,
-#endif
     POKENAV_MENUITEM_SWITCH_OFF,
     POKENAV_MENUITEM_CONDITION_PARTY,
     POKENAV_MENUITEM_CONDITION_SEARCH,
@@ -199,7 +193,6 @@ enum
     HELPBAR_COUNT
 };
 
-#if IS_HNS || defined(FIRERED)
 enum
 {
     MC_HEADER_MR_STONE,
@@ -226,33 +219,6 @@ enum
     MC_HEADER_WALLACE,
     MC_HEADER_COUNT
 };
-#else
-enum
-{
-    MC_HEADER_MR_STONE,
-    MC_HEADER_PROF_BIRCH,
-    MC_HEADER_BRENDAN,
-    MC_HEADER_MAY,
-    MC_HEADER_WALLY,
-    MC_HEADER_NORMAN,
-    MC_HEADER_MOM,
-    MC_HEADER_STEVEN,
-    MC_HEADER_SCOTT,
-    MC_HEADER_ROXANNE,
-    MC_HEADER_BRAWLY,
-    MC_HEADER_WATTSON,
-    MC_HEADER_FLANNERY,
-    MC_HEADER_WINONA,
-    MC_HEADER_TATE_LIZA,
-    MC_HEADER_JUAN,
-    MC_HEADER_SIDNEY,
-    MC_HEADER_PHOEBE,
-    MC_HEADER_GLACIA,
-    MC_HEADER_DRAKE,
-    MC_HEADER_WALLACE,
-    MC_HEADER_COUNT
-};
-#endif
 
 enum
 {
@@ -432,9 +398,7 @@ void ShutdownPokenav(void);
 bool32 PokenavCallback_Init_MainMenuCursorOnMap(void);
 bool32 PokenavCallback_Init_MainMenuCursorOnMatchCall(void);
 bool32 PokenavCallback_Init_MainMenuCursorOnRibbons(void);
-#if IS_HNS || defined(FIRERED)
 bool32 PokenavCallback_Init_MainMenuCursorOnRadio(void);
-#endif
 bool32 PokenavCallback_Init_ConditionMenu(void);
 bool32 PokenavCallback_Init_ConditionSearchMenu(void);
 u32 GetMenuHandlerCallback(void);
@@ -548,7 +512,6 @@ void FreeRibbonsSummaryScreen2(void);
 
 // pokenav_radio.c
 void CheckRadioStation(void);
-#if IS_HNS || defined(FIRERED)
 bool32 PokenavCallback_Init_Radio(void);
 u32 GetRadioCallback(void);
 bool32 OpenPokenavRadio(void);
@@ -557,6 +520,5 @@ bool32 IsRadioLoopedTaskActive(void);
 void FreeRadioSubstruct1(void);
 void FreeRadioSubstruct2(void);
 bool8 IsHoennSoundPlaying(void);
-#endif
 
 #endif // GUARD_POKENAV_H

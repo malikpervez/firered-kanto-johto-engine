@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "johto_campaign.h"
-#endif
 #include "frontier_util.h"
 #include "battle_setup.h"
 #include "battle_util.h"
@@ -171,9 +169,7 @@ bool8 ScrCmd_specialvar(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
     Script_CheckEffectInstrumentedSpecial(index);
 
     *ptr = gSpecials[index]();
@@ -472,9 +468,7 @@ bool8 ScrCmd_setvar(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     *ptr = ScriptReadHalfword(ctx);
     return FALSE;
@@ -487,9 +481,7 @@ bool8 ScrCmd_copyvar(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     *ptr = *GetVarPointer(ScriptReadHalfword(ctx));
     return FALSE;
@@ -502,9 +494,7 @@ bool8 ScrCmd_setorcopyvar(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     *ptr = VarGet(ScriptReadHalfword(ctx));
     return FALSE;
@@ -617,9 +607,7 @@ bool8 ScrCmd_addvar(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     *ptr += ScriptReadHalfword(ctx);
     return FALSE;
@@ -632,9 +620,7 @@ bool8 ScrCmd_subvar(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     *ptr -= VarGet(ScriptReadHalfword(ctx));
     return FALSE;
@@ -1173,13 +1159,9 @@ bool8 ScrCmd_getplayerxy(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varIdX);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varIdX);
-#endif
     Script_RequestWriteVar(varIdY);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varIdY);
-#endif
 
     *pX = gSaveBlock1Ptr->pos.x;
     *pY = gSaveBlock1Ptr->pos.y;
@@ -2677,70 +2659,6 @@ bool8 ScrCmd_showmonpic(struct ScriptContext *ctx)
     // If we have not gotten a pokemon yet, assume this is the starter preview
     if (!FlagGet(FLAG_SYS_POKEMON_GET))
     {
-#if IS_HNS
-        u8 starter = VarGet(VAR_STARTER_MON);
-
-        u32 flagPreviewChecked = 0;
-        u32 flagShinyPreview = 0;
-
-        if (starter == 0)
-        {
-            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_1;
-            flagShinyPreview = FLAG_SHINY_STARTER_1;
-        }
-        else if (starter == 1)
-        {
-            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_2;
-            flagShinyPreview = FLAG_SHINY_STARTER_2;
-        }
-        else if (starter == 2)
-        {
-            flagPreviewChecked = FLAG_STARTER_PREVIEW_CHECKED_3;
-            flagShinyPreview = FLAG_SHINY_STARTER_3;
-        }
-
-        #ifndef NDEBUG
-            DebugPrintfLevel(MGBA_LOG_DEBUG, "******** Possible Temp Flags: %x, %x, %x ********", FLAG_TEMP_1, FLAG_TEMP_2, FLAG_TEMP_3);
-            DebugPrintfLevel(MGBA_LOG_DEBUG, "******** Possible Shiny Starter Flags: %x, %x, %x ********", FLAG_SHINY_STARTER_1, FLAG_SHINY_STARTER_2, FLAG_SHINY_STARTER_3);
-            DebugPrintfLevel(MGBA_LOG_DEBUG, "******** Actual Temp and Shiny Flags: %x, %x ********", flagPreviewChecked, flagShinyPreview);
-        #endif
-
-        // if FLAG_TEMP_X not set for this starter preview, roll for shininess,
-        // then set FLAG_TEMP_X to prevent re-rolls
-        if (!FlagGet(flagPreviewChecked))
-        {
-            #ifndef NDEBUG
-                DebugPrintfLevel(MGBA_LOG_DEBUG, "\n******** Rolling Starter Preview Shininess ********");
-                DebugPrintfLevel(MGBA_LOG_DEBUG, "******** Flag Values Before: %d, %d ********", FlagGet(flagPreviewChecked), FlagGet(flagShinyPreview));
-            #endif
-
-            u32 value = READ_OTID_FROM_SAVE;
-            u32 shinyPersonality = Random32();
-
-            // this is technically unnecessary right now, but will replace GetShinyOdds in terms of implementing user-defined shiny odds
-            u32 totalRerolls = 0;
-            if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
-                totalRerolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
-            
-            while (GET_SHINY_VALUE(value, shinyPersonality) >= GetShinyOdds() && totalRerolls > 0)
-            {
-                shinyPersonality = Random32();
-                totalRerolls--;
-            }
-
-            if (GET_SHINY_VALUE(value, shinyPersonality) < GetShinyOdds())
-                FlagSet(flagShinyPreview);
-
-            FlagSet(flagPreviewChecked);
-        }
-
-        shinyStarter = FlagGet(flagShinyPreview);
-
-        #ifndef NDEBUG
-            DebugPrintfLevel(MGBA_LOG_DEBUG, "******** Flag Values: %d, %d ********", FlagGet(flagPreviewChecked), FlagGet(flagShinyPreview));
-            DebugPrintfLevel(MGBA_LOG_DEBUG, "******** Preview Should be Shiny: %d ********", shinyStarter);
-        #endif
-#endif // IS_HNS
 
         #if RANDOMIZER_AVAILABLE
         if (RandomizerFeatureEnabled(RANDOMIZE_STARTER_AND_GIFT_MON))
@@ -3749,9 +3667,7 @@ bool8 ScrCmd_checkcoins(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     *ptr = GetCoins();
     return FALSE;
@@ -3991,13 +3907,9 @@ bool8 ScrCmd_getobjectxy(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varIdX);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varIdX);
-#endif
     Script_RequestWriteVar(varIdY);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varIdY);
-#endif
 
     u16 *pX = GetVarPointer(varIdX);
     u16 *pY = GetVarPointer(varIdY);
@@ -4014,9 +3926,7 @@ bool8 ScrCmd_checkobjectat(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     u16 *varPointer = GetVarPointer(varId);
 
@@ -4072,9 +3982,7 @@ bool8 Scrcmd_getobjectfacingdirection(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     u16 *varPointer = GetVarPointer(varId);
 
@@ -4204,9 +4112,7 @@ bool8 ScrCmd_getmoverelearnerstate(struct ScriptContext *ctx)
 
     Script_RequestEffects(SCREFF_V1);
     Script_RequestWriteVar(varId);
-#ifdef FIRERED
     JohtoCampaign_BeforeVarWrite(varId);
-#endif
 
     u16 *varPointer = GetVarPointer(varId);
     *varPointer = gMoveRelearnerState;

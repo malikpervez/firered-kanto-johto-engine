@@ -7228,10 +7228,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GIRATINA_ALTERED] =
     {
-#ifdef FIRERED
         // Friends arc: scripted visitor, never a new incoming trade.
         .cannotBeTraded = TRUE,
-#endif
         .dexNotRequired = TRUE,
         .baseHP        = 150,
         .baseAttack    = 100,
@@ -7305,10 +7303,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 
     [SPECIES_GIRATINA_ORIGIN] =
     {
-#ifdef FIRERED
         // Friends arc: scripted visitor, never a new incoming trade.
         .cannotBeTraded = TRUE,
-#endif
         .dexNotRequired = TRUE,
         .baseHP        = 150,
         .baseAttack    = 120,

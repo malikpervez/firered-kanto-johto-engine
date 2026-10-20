@@ -25,11 +25,7 @@ SSAnne_Exterior_ExitSSAnne::
 	waitmovement 0
 	setvar VAR_MAP_SCENE_VERMILION_CITY, 2
 	setvar VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER, 0
-#if defined(FIRERED)
 	warp MAP_VERMILION_CITY, 38, 65
-#else
-	warp MAP_VERMILION_CITY, 23, 34
-#endif
 	waitstate
 	releaseall
 	end

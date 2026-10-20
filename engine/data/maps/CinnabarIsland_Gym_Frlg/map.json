@@ -148,6 +148,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CinnabarIsland_Gym_EventScript_GymGuy",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
+      "x": 2,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
+      "x": 1,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
+      "x": 28,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
+      "x": 2,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -296,463 +348,275 @@
       "script": "CinnabarIsland_Gym_EventScript_BlaineFujiPhoto"
     }
   ],
-  "firered_campaign": {
-    "object_events": [
+  "firered_geometry": {
+    "width": 30,
+    "height": 25,
+    "primary_tileset": "gTileset_BuildingFrlg",
+    "secondary_tileset": "gTileset_CinnabarGym",
+    "border_filepath": "data/layouts/CinnabarIsland_Gym_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/CinnabarIsland_Gym_Frlg/map.bin",
+    "border_height": 2,
+    "border_width": 2,
+    "layout_version": "frlg",
+    "blockdata_overrides": [
       {
-        "local_id": "LOCALID_QUINN",
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SUPER_NERD",
-        "x": 25,
-        "y": 11,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_Quinn",
-        "flag": "0"
+        "x": 10,
+        "y": 0,
+        "expected": 1731,
+        "value": 2044
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-        "x": 25,
-        "y": 4,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_Erik",
-        "flag": "0"
+        "x": 11,
+        "y": 0,
+        "expected": 1732,
+        "value": 2045
       },
       {
-        "local_id": "LOCALID_AVERY",
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-        "x": 17,
-        "y": 5,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_Avery",
-        "flag": "0"
+        "x": 12,
+        "y": 0,
+        "expected": 1733,
+        "value": 2046
       },
       {
-        "local_id": "LOCALID_RAMON",
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SUPER_NERD",
-        "x": 16,
-        "y": 11,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_Ramon",
-        "flag": "0"
-      },
-      {
-        "local_id": "LOCALID_DEREK",
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-        "x": 16,
-        "y": 18,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_Derek",
-        "flag": "0"
-      },
-      {
-        "local_id": "LOCALID_DUSTY",
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SUPER_NERD",
-        "x": 4,
-        "y": 19,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_Dusty",
-        "flag": "0"
-      },
-      {
-        "local_id": "LOCALID_ZAC",
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-        "x": 4,
-        "y": 11,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_Zac",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BLAINE",
-        "x": 5,
-        "y": 4,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_Blaine",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
-        "x": 24,
-        "y": 20,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CinnabarIsland_Gym_EventScript_GymGuy",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
-        "x": 2,
-        "y": 23,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
         "x": 1,
-        "y": 20,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
+        "y": 2,
+        "expected": 1688,
+        "value": 2040
       },
       {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
-        "x": 28,
-        "y": 6,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
+        "x": 8,
+        "y": 2,
+        "expected": 1688,
+        "value": 2040
       },
       {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGMAR",
+        "x": 1,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
         "x": 2,
-        "y": 7,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 3,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 7,
+        "y": 8,
+        "expected": 1689,
+        "value": 2041
+      },
+      {
+        "x": 8,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 9,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 13,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 14,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 15,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 19,
+        "y": 8,
+        "expected": 1689,
+        "value": 2041
+      },
+      {
+        "x": 20,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 22,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 23,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 24,
+        "y": 8,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 28,
+        "y": 8,
+        "expected": 1689,
+        "value": 2041
+      },
+      {
+        "x": 8,
+        "y": 9,
+        "expected": 1698,
+        "value": 2043
+      },
+      {
+        "x": 9,
+        "y": 9,
+        "expected": 1698,
+        "value": 2043
+      },
+      {
+        "x": 20,
+        "y": 9,
+        "expected": 1698,
+        "value": 2043
+      },
+      {
+        "x": 22,
+        "y": 14,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 23,
+        "y": 14,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 24,
+        "y": 14,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 13,
+        "y": 15,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 14,
+        "y": 15,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 15,
+        "y": 15,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 19,
+        "y": 15,
+        "expected": 1689,
+        "value": 2041
+      },
+      {
+        "x": 20,
+        "y": 15,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 22,
+        "y": 15,
+        "expected": 1698,
+        "value": 2043
+      },
+      {
+        "x": 23,
+        "y": 15,
+        "expected": 1698,
+        "value": 2043
+      },
+      {
+        "x": 24,
+        "y": 15,
+        "expected": 1698,
+        "value": 2043
+      },
+      {
+        "x": 1,
+        "y": 16,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 2,
+        "y": 16,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 3,
+        "y": 16,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 7,
+        "y": 16,
+        "expected": 1689,
+        "value": 2041
+      },
+      {
+        "x": 8,
+        "y": 16,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 9,
+        "y": 16,
+        "expected": 1690,
+        "value": 2042
+      },
+      {
+        "x": 20,
+        "y": 16,
+        "expected": 1698,
+        "value": 2043
+      },
+      {
+        "x": 8,
+        "y": 17,
+        "expected": 1698,
+        "value": 2043
+      },
+      {
+        "x": 9,
+        "y": 17,
+        "expected": 1698,
+        "value": 2043
       }
-    ],
-    "firered_geometry": {
-      "width": 30,
-      "height": 25,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_CinnabarGym",
-      "border_filepath": "data/layouts/CinnabarIsland_Gym_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/CinnabarIsland_Gym_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg",
-      "blockdata_overrides": [
-        {
-          "x": 10,
-          "y": 0,
-          "expected": 1731,
-          "value": 2044
-        },
-        {
-          "x": 11,
-          "y": 0,
-          "expected": 1732,
-          "value": 2045
-        },
-        {
-          "x": 12,
-          "y": 0,
-          "expected": 1733,
-          "value": 2046
-        },
-        {
-          "x": 1,
-          "y": 2,
-          "expected": 1688,
-          "value": 2040
-        },
-        {
-          "x": 8,
-          "y": 2,
-          "expected": 1688,
-          "value": 2040
-        },
-        {
-          "x": 1,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 2,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 3,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 7,
-          "y": 8,
-          "expected": 1689,
-          "value": 2041
-        },
-        {
-          "x": 8,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 9,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 13,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 14,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 15,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 19,
-          "y": 8,
-          "expected": 1689,
-          "value": 2041
-        },
-        {
-          "x": 20,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 22,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 23,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 24,
-          "y": 8,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 28,
-          "y": 8,
-          "expected": 1689,
-          "value": 2041
-        },
-        {
-          "x": 8,
-          "y": 9,
-          "expected": 1698,
-          "value": 2043
-        },
-        {
-          "x": 9,
-          "y": 9,
-          "expected": 1698,
-          "value": 2043
-        },
-        {
-          "x": 20,
-          "y": 9,
-          "expected": 1698,
-          "value": 2043
-        },
-        {
-          "x": 22,
-          "y": 14,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 23,
-          "y": 14,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 24,
-          "y": 14,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 13,
-          "y": 15,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 14,
-          "y": 15,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 15,
-          "y": 15,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 19,
-          "y": 15,
-          "expected": 1689,
-          "value": 2041
-        },
-        {
-          "x": 20,
-          "y": 15,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 22,
-          "y": 15,
-          "expected": 1698,
-          "value": 2043
-        },
-        {
-          "x": 23,
-          "y": 15,
-          "expected": 1698,
-          "value": 2043
-        },
-        {
-          "x": 24,
-          "y": 15,
-          "expected": 1698,
-          "value": 2043
-        },
-        {
-          "x": 1,
-          "y": 16,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 2,
-          "y": 16,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 3,
-          "y": 16,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 7,
-          "y": 16,
-          "expected": 1689,
-          "value": 2041
-        },
-        {
-          "x": 8,
-          "y": 16,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 9,
-          "y": 16,
-          "expected": 1690,
-          "value": 2042
-        },
-        {
-          "x": 20,
-          "y": 16,
-          "expected": 1698,
-          "value": 2043
-        },
-        {
-          "x": 8,
-          "y": 17,
-          "expected": 1698,
-          "value": 2043
-        },
-        {
-          "x": 9,
-          "y": 17,
-          "expected": 1698,
-          "value": 2043
-        }
-      ]
-    }
+    ]
   }
 }

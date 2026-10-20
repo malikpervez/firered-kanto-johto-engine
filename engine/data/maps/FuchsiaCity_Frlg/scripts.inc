@@ -251,7 +251,6 @@ FuchsiaCity_Text_MyFatherIsGymLeader::
 	.string "as well as my father.$"
 
 
-#ifdef FIRERED
 KantoHnsFuchsiaCity_EventScript_Omanyte::
 	lock
 	showmonpic SPECIES_OMANYTE, 10, 3
@@ -259,4 +258,3 @@ KantoHnsFuchsiaCity_EventScript_Omanyte::
 	hidemonpic
 	release
 	end
-#endif

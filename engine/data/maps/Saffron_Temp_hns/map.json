@@ -3,7 +3,7 @@
   "name": "Saffron_Temp_hns",
   "layout": "LAYOUT_SAFFRON_TEMP_HNS",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "JOHTO_MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -17,15 +17,6 @@
   "warp_events": [],
   "coord_events": [],
   "bg_events": [],
-  "game_version": "hns",
-  "region": "REGION_JOHTO",
-  "firered_campaign": {
-    "connections": 0,
-    "object_events": [],
-    "warp_events": [],
-    "coord_events": [],
-    "bg_events": [],
-    "region_map_section": "JOHTO_MAPSEC_ABANDONED_SHIP",
-    "region": "REGION_JOHTO"
-  }
+  "game_version": "frlg",
+  "region": "REGION_JOHTO"
 }

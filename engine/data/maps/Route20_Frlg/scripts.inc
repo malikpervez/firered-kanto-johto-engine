@@ -152,7 +152,6 @@ Route20_Text_MistyTrainsHere::
 	.string "They say that MISTY of the\n"
 	.string "CERULEAN GYM trains here.$"
 
-#ifdef FIRERED
 KantoHnsRoute20_EventScript_Seel::
 	lock
 	faceplayer
@@ -179,4 +178,3 @@ KantoHnsRoute20_Text_Seel:
 KantoHnsRoute20_Text_Dewgong:
 	.string "DEWGONG: Goooong!$"
 
-#endif

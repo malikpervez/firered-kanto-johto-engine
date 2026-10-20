@@ -2,9 +2,7 @@
 #define GUARD_EVENT_SCRIPTS_H
 
 extern const u8 EventScript_Follower[];
-#ifdef FIRERED
 extern const u8 EventScript_PikachuCompanion[];
-#endif
 extern const u8 EventScript_FollowerEnd[];
 extern const u8 EventScript_FollowerGeneric[];
 extern const u8 EventScript_FollowerLovesYou[];

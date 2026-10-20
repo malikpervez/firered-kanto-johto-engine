@@ -1,53 +1,14 @@
 SafariZone_EventScript_OutOfBallsMidBattle::
-#if IS_FRLG
 	setvar VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 3
-#elif IS_HNS
-	setvar VAR_SAFARI_ZONE_STATE, 1
-#else
-	setvar VAR_SAFARI_ZONE_STATE, 1
-#endif
 	special ExitSafariMode
-#if IS_FRLG
 	setwarp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, 1
-#elif IS_HNS
-	goto_if_set FLAG_IN_KANTO_SAFARI_ZONE, SafariZone_EventScript_ExitKantoMidBattle
-	setwarp MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS, 9, 3
-#else
-	setwarp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
-#endif
 	end
-#if IS_HNS
-SafariZone_EventScript_ExitKantoMidBattle::
-	clearflag FLAG_IN_KANTO_SAFARI_ZONE
-	setwarp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS, 5, 6
-	end
-#endif
 SafariZone_EventScript_Exit::
-#if IS_FRLG
 	setvar VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 1
-#elif IS_HNS
-	setvar VAR_SAFARI_ZONE_STATE, 1
-#else
-	setvar VAR_SAFARI_ZONE_STATE, 1
-#endif
 	special ExitSafariMode
-#if IS_FRLG
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, 1
-#elif IS_HNS
-	goto_if_set FLAG_IN_KANTO_SAFARI_ZONE, SafariZone_EventScript_ExitKanto
-	warp MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS, 9, 3
-#else
-	warp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
-#endif
 	waitstate
 	end
-#if IS_HNS
-SafariZone_EventScript_ExitKanto::
-	clearflag FLAG_IN_KANTO_SAFARI_ZONE
-	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS, 5, 6
-	waitstate
-	end
-#endif
 SafariZone_EventScript_RetirePrompt::
 	lockall
 	msgbox SafariZone_Text_WouldYouLikeToExit, MSGBOX_YESNO
@@ -212,11 +173,7 @@ Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
 	.string "fruitful if you use {POKEBLOCK}S.\p"
 	.string "Please come back with a {POKEBLOCK} CASE.\p"
 	.string "You may obtain a {POKEBLOCK} CASE from\n"
-#if IS_HNS
-	.string "that boy over there.$"
-#else
 	.string "the LILYCOVE CONTEST HALL.$"
-#endif
 
 SafariZone_South_Text_StillHaveTimeExit:
 	.string "You still have time left. Would you like\n"

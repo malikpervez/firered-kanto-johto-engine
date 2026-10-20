@@ -820,10 +820,8 @@ enum __attribute__((packed)) Item
     ITEM_HM06 = 687,
     ITEM_HM07 = 688,
     ITEM_HM08 = 689,
-#ifdef FIRERED
     // Previously inactive reserved TM100 slot; Dive retains its native HM08 ID.
     ITEM_HM09 = ITEM_TM100,
-#endif
 
 
     /* Expands to:

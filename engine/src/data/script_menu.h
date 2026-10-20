@@ -904,19 +904,11 @@ static const struct MenuAction sMultichoiceList_SeagallopVermilion[] = {
 const u8 sText_NoThanks[] = _("NO THANKS");
 
 static const struct MenuAction sMultichoiceList_GameCornerPokemonPrizes[] = {
-#if defined(FIRERED)
     { COMPOUND_STRING("ABRA{CLEAR_TO 0x55}{FONT_SMALL} 180 COINS") },
     { COMPOUND_STRING("CLEFAIRY{CLEAR_TO 0x55}{FONT_SMALL} 500 COINS") },
     { COMPOUND_STRING("DRATINI{CLEAR_TO 0x4B}{FONT_SMALL} 2,800 COINS") },
     { COMPOUND_STRING("SCYTHER{CLEAR_TO 0x4B}{FONT_SMALL} 5,500 COINS") },
     { COMPOUND_STRING("PORYGON{CLEAR_TO 0x4B}{FONT_SMALL} 9,999 COINS") },
-#else
-    { COMPOUND_STRING("ABRA{CLEAR_TO 0x55}{FONT_SMALL} 120") },
-    { COMPOUND_STRING("CLEFAIRY{CLEAR_TO 0x55}{FONT_SMALL} 750") },
-    { COMPOUND_STRING("PINSIR{CLEAR_TO 0x4B}{FONT_SMALL} 2,500") },
-    { COMPOUND_STRING("DRATINI{CLEAR_TO 0x4B}{FONT_SMALL} 4,600") },
-    { COMPOUND_STRING("PORYGON{CLEAR_TO 0x4B}{FONT_SMALL} 6,500") },
-#endif
     { sText_NoThanks }
 };
 
@@ -1149,9 +1141,6 @@ static const struct MenuAction MultichoiceList_OlivineHarbor[] =
     {gText_SouthernIsland},
     {gText_BirthIsland},
     {gText_FarawayIsland},
-#ifndef FIRERED // the FireRed game has no Battle Frontier
-    {gText_BattleFrontier},
-#endif
     {gText_Exit},
 };
 static const struct MenuAction MultichoiceList_VermilionHarbor[] =
@@ -1269,7 +1258,6 @@ struct MultichoiceListStruct
 
 static const struct MultichoiceListStruct sMultichoiceLists[] =
 {
-#ifdef FIRERED
     [MULTI_FG01] = MULTICHOICE(MultichoiceList_FG01),
     [MULTI_FG02] = MULTICHOICE(MultichoiceList_FG02),
     [MULTI_FG03] = MULTICHOICE(MultichoiceList_FG03),
@@ -1286,7 +1274,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FG21] = MULTICHOICE(MultichoiceList_FG21),
     [MULTI_FG22] = MULTICHOICE(MultichoiceList_FG22),
     [MULTI_FG_OPPONENTS] = MULTICHOICE(MultichoiceList_FG_OPPONENTS),
-#endif
 
     [MULTI_BRINEY_ON_DEWFORD]          = MULTICHOICE(MultichoiceList_BrineyOnDewford),
     [MULTI_PC]                         = MULTICHOICE(MultichoiceList_Exit),

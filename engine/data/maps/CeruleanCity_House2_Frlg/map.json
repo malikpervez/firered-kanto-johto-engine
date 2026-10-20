@@ -44,6 +44,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CeruleanCity_House2_EventScript_Lass",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
+      "x": 2,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KantoAmbient_CeruleanCity_House2_EventScript_Diglett",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -87,60 +100,15 @@
       "script": "CeruleanCity_House2_EventScript_WallHole"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 10,
-      "height": 9,
-      "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
-      "secondary_tileset": "gTileset_BurgledHouse",
-      "border_filepath": "data/layouts/CeruleanCity_House2_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/CeruleanCity_House2_Frlg/map.bin",
-      "layout_version": "frlg",
-      "border_width": 2,
-      "border_height": 2
-    },
-    "object_events": [
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
-        "x": 1,
-        "y": 2,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CeruleanCity_House2_EventScript_Hiker",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_LASS_FRLG",
-        "x": 7,
-        "y": 6,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CeruleanCity_House2_EventScript_Lass",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DIGLETT",
-        "x": 2,
-        "y": 4,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "KantoAmbient_CeruleanCity_House2_EventScript_Diglett",
-        "flag": "0"
-      }
-    ]
+  "firered_geometry": {
+    "width": 10,
+    "height": 9,
+    "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
+    "secondary_tileset": "gTileset_BurgledHouse",
+    "border_filepath": "data/layouts/CeruleanCity_House2_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/CeruleanCity_House2_Frlg/map.bin",
+    "layout_version": "frlg",
+    "border_width": 2,
+    "border_height": 2
   }
 }

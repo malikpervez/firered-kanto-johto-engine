@@ -1,5 +1,4 @@
 #include "global.h"
-#ifdef FIRERED
 #include "character_starter.h"
 #include "character_story.h"
 #include "challenge_menu.h"
@@ -191,4 +190,3 @@ bool8 CharacterStarter_TryCreateBlueParty(struct Pokemon *party, u16 trainerNum,
     *result = CreateNPCTrainerPartyFromTrainer(party, &trainer, firstTrainer, battleTypeFlags);
     return TRUE;
 }
-#endif

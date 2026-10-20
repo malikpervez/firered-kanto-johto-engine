@@ -224,7 +224,6 @@ static bool32 AI_ShouldHeal(enum BattlerId battler, u32 healAmount)
         }
     }
 
-#if !IS_HNS
     // also heal if a 2HKO is outhealed
     if (AI_OpponentCanFaintAiWithMod(battler, 0)
       && !AI_OpponentCanFaintAiWithMod(battler, healAmount)
@@ -240,7 +239,6 @@ static bool32 AI_ShouldHeal(enum BattlerId battler, u32 healAmount)
     {
         return TRUE;
     }
-#endif
 
     return shouldHeal;
 }

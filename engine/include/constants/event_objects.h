@@ -607,7 +607,6 @@
 #define OBJ_EVENT_GFX_VAR_E  (OBJ_EVENT_GFX_VARS + 0xE)
 #define OBJ_EVENT_GFX_VAR_F  (OBJ_EVENT_GFX_VARS + 0xF)
 
-#ifdef FIRERED
 // Keep the native graphics table and its dynamic549..564 IDs unchanged.
 #define OBJ_EVENT_GFX_JESSIE_STORY                565
 #define OBJ_EVENT_GFX_JAMES_STORY                 566
@@ -620,7 +619,6 @@
 #define OBJ_EVENT_GFX_FRIEND_LB                   573
 #define OBJ_EVENT_GFX_FRIEND_TIM                  574
 #define OBJ_EVENT_GFX_FRIENDS_GIRATINA             575
-#endif
 
 // Don't use (1u << 15) to avoid conflict with BLEND_IMMUNE_FLAG.
 #define OBJ_EVENT_MON               (1u << 14)
@@ -795,7 +793,6 @@
 #define OBJ_EVENT_PAL_TAG_KRIS_REFLECTION_HNS     0x119B
 #define OBJ_EVENT_PAL_TAG_ALOLA_OAK_HNS           0x119C
 
-#ifdef FIRERED
 #define OBJ_EVENT_PAL_TAG_JESSIE_STORY            0x119D
 #define OBJ_EVENT_PAL_TAG_JAMES_STORY             0x119E
 #define OBJ_EVENT_PAL_TAG_JENNY_STORY             0x119F
@@ -807,7 +804,6 @@
 #define OBJ_EVENT_PAL_TAG_FRIEND_LB               0x11A5
 #define OBJ_EVENT_PAL_TAG_FRIEND_TIM              0x11A6
 #define OBJ_EVENT_PAL_TAG_FRIENDS_GIRATINA         0x11A7
-#endif
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

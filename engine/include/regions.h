@@ -4,14 +4,11 @@
 #include "global.h"
 #include "constants/regions.h"
 #include "constants/region_map_sections.h"
-#ifdef FIRERED
 #include "constants/maps.h"
 #include "constants/johto_map_sections.h"
-#endif
 
 enum KantoSubRegion GetKantoSubregion(u32 mapSecId);
 
-#ifdef FIRERED
 // MapHeader has no region member. Use the exact selected map identities so
 // shared Indigo/Route22/etc. sections keep their native Kanto interpretation.
 static inline bool32 IsJohtoCampaignMapId(u32 mapId)
@@ -97,40 +94,22 @@ static inline bool32 IsJohtoMainlandMap(void)
     }
 }
 
-#endif // FIRERED
 
 
 static inline enum Region GetRegionForSectionId(u32 sectionId)
 {
-#if IS_HNS
-    // Must precede the Johto test: the Hisui mapsecs sit inside the Johto range.
-    if (sectionId >= HISUI_MAPSEC_START && sectionId <= HISUI_MAPSEC_END)
-        return REGION_HISUI;
-    if (sectionId >= JOHTO_MAPSEC_START && sectionId <= JOHTO_MAPSEC_END)
-        return REGION_JOHTO;
-    if (sectionId >= KANTO_MAPSEC_START && sectionId <= KANTO_MAPSEC_END)
-        return REGION_KANTO;
-    if (sectionId >= ALOLA_MAPSEC_START && sectionId <= ALOLA_MAPSEC_END)
-        return REGION_ALOLA;
-    return REGION_HOENN;
-#else
-#ifdef FIRERED
     // Only distinct Johto IDs classify without a current map context.
     if (JOHTO_MAPSEC_IS_DISTINCT(sectionId))
         return REGION_JOHTO;
-#endif
     if (sectionId >= KANTO_MAPSEC_START && sectionId < MAPSEC_SPECIAL_AREA)
         return REGION_KANTO;
     return REGION_HOENN;
-#endif
 }
 
 static inline enum Region GetCurrentRegion(void)
 {
-#ifdef FIRERED
     if (IsJohtoCampaignMap())
         return REGION_JOHTO;
-#endif
     return GetRegionForSectionId(gMapHeader.regionMapSectionId);
 }
 

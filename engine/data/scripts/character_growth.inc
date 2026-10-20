@@ -1,4 +1,3 @@
-#ifdef FIRERED
 @ Optional conversations. Native quests, services and battle receipts own progress.
 CG_Return::
 	return
@@ -237,4 +236,3 @@ CG_Text_SV03_Partner::
 	.string "{RIVAL}: Another round?$"
 CG_Text_SV03_Player::
 	.string "{RIVAL}: We'll be ready\nnext time.$"
-#endif

@@ -1,7 +1,6 @@
 #ifndef GUARD_KANTO_CONNECTION_SEAM_H
 #define GUARD_KANTO_CONNECTION_SEAM_H
 
-#ifdef FIRERED
 // ROM-only adapters for explicitly qualified incoming Kanto connection bands.
 // No fields are added to MapLayout, MapHeader, saves, or animation RAM state.
 struct KantoSeamMetatile
@@ -56,6 +55,5 @@ u16 KantoSeam_CanonicalMid(const struct MapLayout *layout, u16 mid);
 u16 KantoSeam_CutResult(const struct MapLayout *layout, u16 previousMid, u16 result);
 bool8 KantoSeam_ChangesPrimaryPalette(const struct MapLayout *layout);
 void KantoSeam_LoadResources(const struct MapLayout *layout, bool8 skipFaded);
-#endif
 
 #endif

@@ -1,3 +1,5 @@
+@ Johto (data/maps/SlowpokeWell_B1F_hns/scripts.inc), as built into the FireRed game.
+
 SlowpokeWell_B1F_hns_MapScripts::
 	.byte 0
 
@@ -24,17 +26,17 @@ SlowpokeWell_B1F_EventScript_Kurt::
 	end
 
 SlowpokeWell_B1F_EventScript_Grunt21::
-	trainerbattle_single TRAINER_GRUNT_21_HNS, SlowpokeWell_B1F_Text_GruntM29Seen, SlowpokeWell_B1F_Text_GruntM29Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_21_HNS, SlowpokeWell_B1F_Text_GruntM29Seen, SlowpokeWell_B1F_Text_GruntM29Beaten
 	msgbox SlowpokeWell_B1F_Text_GruntM29After, MSGBOX_AUTOCLOSE
 	end
 
 SlowpokeWell_B1F_EventScript_Grunt22F::
-	trainerbattle_single TRAINER_GRUNT_22_HNS, SlowpokeWell_B1F_Text_GruntF1Seen, SlowpokeWell_B1F_Text_GruntF1Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_22_HNS, SlowpokeWell_B1F_Text_GruntF1Seen, SlowpokeWell_B1F_Text_GruntF1Beaten
 	msgbox SlowpokeWell_B1F_Text_GruntF1After, MSGBOX_AUTOCLOSE
 	end
 
 SlowpokeWell_B1F_EventScript_Eto::
-	trainerbattle_single TRAINER_ETO_HNS, SlowpokeWell_B1F_Text_GruntM2Seen, SlowpokeWell_B1F_Text_GruntM2Beaten
+	trainerbattle_single TRAINER_JOHTO_ETO_HNS, SlowpokeWell_B1F_Text_GruntM2Seen, SlowpokeWell_B1F_Text_GruntM2Beaten
 	msgbox SlowpokeWell_B1F_Text_GruntM2After, MSGBOX_AUTOCLOSE
 	end
 
@@ -43,12 +45,12 @@ SlowpokeWell_B1F_EventScript_Proton::
 	faceplayer
 	msgbox SlowpokeWell_B1F_Text_ProtonSeen, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro TRAINER_PROTON_1_HNS, SlowpokeWell_B1F_Text_ProtonBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_PROTON_1_HNS, SlowpokeWell_B1F_Text_ProtonBeaten
 	msgbox SlowpokeWell_B1F_Text_ProtonAfter, MSGBOX_AUTOCLOSE
 	closemessage
 	fadescreen FADE_TO_BLACK
-	setflag FLAG_HIDE_AZALEA_TOWN_ROCKETS
-	clearflag FLAG_HIDE_KURT_1
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_ROCKETS
+	clearflag JOHTO_FLAG_HIDE_KURT_1
 	addobject LOCALID_WELL_KURT
 	removeobject 11
 	removeobject 12
@@ -62,11 +64,11 @@ SlowpokeWell_B1F_EventScript_Proton::
 	msgbox SlowpokeWell_B1F_Text_KurtAfter, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	setflag FLAG_HIDE_SLOWPOKE_WELL_KURT
-	setflag FLAG_HIDE_KURT_1
-	clearflag FLAG_HIDE_KURT_2
-	clearflag FLAG_HIDE_AZALEA_TOWN_SLOWPOKE
-	setvar VAR_AZALEA_TOWN_STATE, 3
+	setflag JOHTO_FLAG_HIDE_SLOWPOKE_WELL_KURT
+	setflag JOHTO_FLAG_HIDE_KURT_1
+	clearflag JOHTO_FLAG_HIDE_KURT_2
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SLOWPOKE
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 3
 	warp MAP_AZALEA_TOWN_KURTS_HOUSE_HNS, 15, 4
 	waitstate
 	end
@@ -81,103 +83,104 @@ SlowpokeWell_B1F_Movement_Kurt:
 	step_end
 
 SlowpokeWell_B1F_Text_KurtIntro:
-	.string "KURT: Hey there, {PLAYER}!\p"
-	.string "The guard up top took off when\n"
-	.string "I shouted at him.\p"
-	.string "But then I took a tumble down\n"
-	.string "the WELL.\p"
-	.string "I slammed down hard on my back,\n"
-	.string "so I can't move.\p"
-	.string "Rats! If I were fit, my POKéMON\n"
-	.string "would've punished them…\p"
-	.string "Ah, it can't be helped.\p"
-	.string "{PLAYER}, show them how gutsy\n"
-	.string "you are in my place!$"
+	.string "KURT{SE_M_HEAT_WAVE}He{SE_M_YAWN}there{SE_M_SUPERSONIC}{PLAYER}!\p"
+	.string "Th{SE_M_REVERSAL}guar{SE_M_WATERFALL}u{SE_M_MORNING_SUN}to{SE_M_MORNING_SUN}too{SE_M_ENCORE2}of{SE_M_ACID_ARMOR}when\n"
+	.string "{SE_M_HEAL_BELL}shoute{SE_M_WATERFALL}a{SE_M_SPIT_UP}him.\p"
+	.string "Bu{SE_M_SPIT_UP}the{SE_M_ATTRACT}{SE_M_HEAL_BELL}too{SE_M_ENCORE2}{SE_M_CHARGE}tumbl{SE_M_REVERSAL}down\n"
+	.string "th{SE_M_REVERSAL}WELL.\p"
+	.string "{SE_M_HEAL_BELL}slamme{SE_M_WATERFALL}dow{SE_M_ATTRACT}har{SE_M_WATERFALL}o{SE_M_ATTRACT}m{SE_M_YAWN}back,\n"
+	.string "s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}move.\p"
+	.string "Rats{SE_M_DRAGON_RAGE}I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}wer{SE_M_REVERSAL}fit{SE_M_SUPERSONIC}m{SE_M_YAWN}POKéMON\n"
+	.string "would'v{SE_M_REVERSAL}punishe{SE_M_WATERFALL}them…\p"
+	.string "Ah{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}helped.\p"
+	.string "{PLAYER}{SE_M_SUPERSONIC}sho{SE_M_TWISTER}the{SE_M_MILK_DRINK}ho{SE_M_TWISTER}gutsy\n"
+	.string "yo{SE_M_DIVE}ar{SE_M_REVERSAL}i{SE_M_ATTRACT}m{SE_M_YAWN}place!$"
 
 SlowpokeWell_B1F_Text_KurtAfter:
-	.string "KURT: Way to go, {PLAYER}!\p"
-	.string "TEAM ROCKET has taken off.\p"
-	.string "My back's better too.\n"
-	.string "Let's get out of here.$"
+	.string "KURT{SE_M_HEAT_WAVE}Wa{SE_M_YAWN}t{SE_M_ATTRACT2}go{SE_M_SUPERSONIC}{PLAYER}!\p"
+	.string "TEA{SE_M_GIGA_DRAIN}ROCKE{SE_M_SWIFT}ha{SE_M_GRASSWHISTLE}take{SE_M_ATTRACT}off.\p"
+	.string "M{SE_M_YAWN}back'{SE_M_GRASSWHISTLE}bette{SE_M_SAND_TOMB}too.\n"
+	.string "Let'{SE_M_GRASSWHISTLE}ge{SE_M_SPIT_UP}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}here.$"
 
 SlowpokeWell_B1F_Text_GruntM29Seen:
-	.string "Darn! I was standing guard up\n"
-	.string "top when some old coot yelled\l"
-	.string "at me.\p"
-	.string "He startled me so much that\n"
-	.string "I fell down here.\p"
-	.string "I think I'll vent my anger by\n"
-	.string "taking it out on you!$"
+	.string "Darn{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}standin{SE_M_SANDSTORM}guar{SE_M_WATERFALL}up\n"
+	.string "to{SE_M_MORNING_SUN}whe{SE_M_ATTRACT}som{SE_M_REVERSAL}ol{SE_M_WATERFALL}coo{SE_M_SPIT_UP}yelled\l"
+	.string "a{SE_M_SPIT_UP}me.\p"
+	.string "H{SE_M_REVERSAL}startle{SE_M_WATERFALL}m{SE_M_REVERSAL}s{SE_M_ATTRACT2}muc{SE_M_TRI_ATTACK}that\n"
+	.string "{SE_M_HEAL_BELL}fel{SE_M_BATON_PASS}dow{SE_M_ATTRACT}here.\p"
+	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}I'l{SE_M_BATON_PASS}ven{SE_M_SPIT_UP}m{SE_M_YAWN}ange{SE_M_SAND_TOMB}by\n"
+	.string "takin{SE_M_SANDSTORM}i{SE_M_SPIT_UP}ou{SE_M_SPIT_UP}o{SE_M_ATTRACT}you!$"
 
 SlowpokeWell_B1F_Text_GruntM29Beaten:
-	.string "Arrgh! This is NOT my day!$"
+	.string "Arrgh{SE_M_DRAGON_RAGE}Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}NO{SE_M_SWIFT}m{SE_M_YAWN}day!$"
 
 SlowpokeWell_B1F_Text_GruntM29After:
-	.string "Sure, we've been hacking the\n"
-	.string "tails off SLOWPOKE and selling\l"
+	.string "Sure{SE_M_SUPERSONIC}we'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}hackin{SE_M_SANDSTORM}the\n"
+	.string "tail{SE_M_GRASSWHISTLE}of{SE_M_ACID_ARMOR}SLOWPOK{SE_M_SWORDS_DANCE}an{SE_M_WATERFALL}selling\l"
 	.string "them.\p"
-	.string "Everything we do is for profit.\p"
-	.string "That's right! We're TEAM ROCKET,\n"
-	.string "and we'll do anything for money!$"
+	.string "Everythin{SE_M_SANDSTORM}w{SE_M_REVERSAL}d{SE_M_ATTRACT2}i{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}profit.\p"
+	.string "That'{SE_M_GRASSWHISTLE}right{SE_M_DRAGON_RAGE}We'r{SE_M_REVERSAL}TEA{SE_M_GIGA_DRAIN}ROCKET,\n"
+	.string "an{SE_M_WATERFALL}we'l{SE_M_BATON_PASS}d{SE_M_ATTRACT2}anythin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}money!$"
 
 SlowpokeWell_B1F_Text_ProtonSeen:
-	.string "What do you want?\p"
-	.string "If you interrupt our work,\n"
-	.string "don't expect any mercy!$"
+	.string "Wha{SE_M_SPIT_UP}d{SE_M_ATTRACT2}yo{SE_M_DIVE}want?\p"
+	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}interrup{SE_M_SPIT_UP}ou{SE_M_SAND_TOMB}work,\n"
+	.string "don'{SE_M_SPIT_UP}expec{SE_M_SPIT_UP}an{SE_M_YAWN}mercy!$"
 
 SlowpokeWell_B1F_Text_ProtonBeaten:
-	.string "You did OK today,\n"
-	.string "but wait till next time!$"
+	.string "Yo{SE_M_DIVE}di{SE_M_WATERFALL}O{SE_M_SNORE}today,\n"
+	.string "bu{SE_M_SPIT_UP}wai{SE_M_SPIT_UP}til{SE_M_BATON_PASS}nex{SE_M_SPIT_UP}time!$"
 
 SlowpokeWell_B1F_Text_ProtonAfter:
-	.string "Yeah, TEAM ROCKET was broken up\n"
-	.string "three years ago.\p"
-	.string "The boss went into hiding.\p"
-	.string "But we continued our activities\n"
+	.string "Yeah{SE_M_SUPERSONIC}TEA{SE_M_GIGA_DRAIN}ROCKE{SE_M_SWIFT}wa{SE_M_GRASSWHISTLE}broke{SE_M_ATTRACT}up\n"
+	.string "thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}ago.\p"
+	.string "Th{SE_M_REVERSAL}bos{SE_M_GRASSWHISTLE}wen{SE_M_SPIT_UP}int{SE_M_ATTRACT2}hiding.\p"
+	.string "Bu{SE_M_SPIT_UP}w{SE_M_REVERSAL}continue{SE_M_WATERFALL}ou{SE_M_SAND_TOMB}activities\n"
 	.string "underground!\p"
-	.string "A small obstacle like you won't be\n"
-	.string "much of a problem for our mission.\p"
-	.string "I advise you to be very afraid of\n"
-	.string "what is to come!$"
+	.string "{SE_M_BONEMERANG}smal{SE_M_BATON_PASS}obstacl{SE_M_REVERSAL}lik{SE_M_REVERSAL}yo{SE_M_DIVE}won'{SE_M_SPIT_UP}be\n"
+	.string "muc{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}proble{SE_M_MILK_DRINK}fo{SE_M_SAND_TOMB}ou{SE_M_SAND_TOMB}mission.\p"
+	.string "{SE_M_HEAL_BELL}advis{SE_M_REVERSAL}yo{SE_M_DIVE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}ver{SE_M_YAWN}afrai{SE_M_WATERFALL}of\n"
+	.string "wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}come!$"
 
 SlowpokeWell_B1F_Text_GruntM2Seen:
 	.string "Hyuck-hyuck-hyuck!\n"
-	.string "Quit taking SLOWPOKETAILS?\p"
-	.string "You're nuts!\n"
-	.string "If we obeyed you, TEAM ROCKET's\l"
-	.string "rep would be ruined!$"
+	.string "Qui{SE_M_SPIT_UP}takin{SE_M_SANDSTORM}SLOWPOKETAILS?\p"
+	.string "You'r{SE_M_REVERSAL}nuts!\n"
+	.string "I{SE_M_ACID_ARMOR}w{SE_M_REVERSAL}obeye{SE_M_WATERFALL}you{SE_M_SUPERSONIC}TEA{SE_M_GIGA_DRAIN}ROCKET's\l"
+	.string "re{SE_M_MORNING_SUN}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}ruined!$"
 
 SlowpokeWell_B1F_Text_GruntM2Beaten:
 	.string "Hyuck…\n"
-	.string "Too strong…$"
+	.string "To{SE_M_ATTRACT2}strong…$"
 
 SlowpokeWell_B1F_Text_GruntM2After:
-	.string "We need the money,\n"
-	.string "but selling SLOWPOKETAILS?\p"
-	.string "It's tough being a ROCKET GRUNT!$"
+	.string "W{SE_M_REVERSAL}nee{SE_M_WATERFALL}th{SE_M_REVERSAL}money,\n"
+	.string "bu{SE_M_SPIT_UP}sellin{SE_M_SANDSTORM}SLOWPOKETAILS?\p"
+	.string "It'{SE_M_GRASSWHISTLE}toug{SE_M_TRI_ATTACK}bein{SE_M_SANDSTORM}{SE_M_CHARGE}ROCKE{SE_M_SWIFT}GRUNT!$"
 
 SlowpokeWell_B1F_Text_GruntF1Seen:
-	.string "Stop taking TAILS?\p"
-	.string "Yeah, just try to defeat all\n"
-	.string "of us!$"
+	.string "Sto{SE_M_MORNING_SUN}takin{SE_M_SANDSTORM}TAILS?\p"
+	.string "Yeah{SE_M_SUPERSONIC}jus{SE_M_SPIT_UP}tr{SE_M_YAWN}t{SE_M_ATTRACT2}defea{SE_M_SPIT_UP}all\n"
+	.string "o{SE_M_ACID_ARMOR}us!$"
 
 SlowpokeWell_B1F_Text_GruntF1Beaten:
-	.string "You rotten brat!$"
+	.string "Yo{SE_M_DIVE}rotte{SE_M_ATTRACT}brat!$"
 
 SlowpokeWell_B1F_Text_GruntF1After:
-	.string "SLOWPOKETAILS grow back fast!\p"
-	.string "What's wrong with selling them?$"
+	.string "SLOWPOKETAIL{SE_M_SKETCH}gro{SE_M_TWISTER}bac{SE_M_ENCORE2}fast!\p"
+	.string "What'{SE_M_GRASSWHISTLE}wron{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}sellin{SE_M_SANDSTORM}them?$"
 
 SlowpokeWell_B1F_Text_SlowpokeWithMail:
-	.string "A SLOWPOKE with its TAIL cut off…\p"
-	.string "Huh? It has MAIL.\n"
-	.string "Read it?$"
+	.string "{SE_M_BONEMERANG}SLOWPOK{SE_M_SWORDS_DANCE}wit{SE_M_TRI_ATTACK}it{SE_M_GRASSWHISTLE}TAI{SE_M_BRICK_BREAK}cu{SE_M_SPIT_UP}off…\p"
+	.string "Huh{SE_M_SING}I{SE_M_SPIT_UP}ha{SE_M_GRASSWHISTLE}MAIL.\n"
+	.string "Rea{SE_M_WATERFALL}it?$"
 
 SlowpokeWell_B1F_Text_SlowpokeMail:
-	.string "{PLAYER} read the MAIL.\p"
-	.string "Be good and look after the\n"
-	.string "house with Grandpa and SLOWPOKE.\p"
-	.string "Love, Dad$"
+	.string "{PLAYER} rea{SE_M_WATERFALL}th{SE_M_REVERSAL}MAIL.\p"
+	.string "B{SE_M_REVERSAL}goo{SE_M_WATERFALL}an{SE_M_WATERFALL}loo{SE_M_ENCORE2}afte{SE_M_SAND_TOMB}the\n"
+	.string "hous{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}Grandp{SE_M_CHARGE}an{SE_M_WATERFALL}SLOWPOKE.\p"
+	.string "Love{SE_M_SUPERSONIC}Dad$"
 
 SlowpokeWell_B1F_Text_TaillessSlowpoke:
-	.string "A SLOWPOKE with its TAIL cut off…$"
+	.string "{SE_M_BONEMERANG}SLOWPOK{SE_M_SWORDS_DANCE}wit{SE_M_TRI_ATTACK}it{SE_M_GRASSWHISTLE}TAI{SE_M_BRICK_BREAK}cu{SE_M_SPIT_UP}off…$"
+

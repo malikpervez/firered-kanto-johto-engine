@@ -12,14 +12,10 @@
 #include "sprite.h"
 #include "task.h"
 #include "constants/event_objects.h"
-#if IS_HNS || defined(FIRERED)
 #include "pokedex.h"
-#endif
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "firered_save.h"
 #include "regions.h"
-#endif
 
 // Despite having a variable to track it, the roamer is
 // hard-coded to only ever be in map group 0
@@ -35,7 +31,6 @@ EWRAM_DATA static u8 sLocationHistory[ROAMER_COUNT][3][2] = {0};
 EWRAM_DATA static u8 sRoamerLocation[ROAMER_COUNT][2] = {0};
 EWRAM_DATA u8 gEncounteredRoamerIndex = 0;
 
-#ifdef FIRERED
 // This tag belongs only to the transient encounter index, never to a save flag.
 #define JOHTO_ROAMER_ENCOUNTER_TAG 0x80
 #define JOHTO_DOG_COUNT 2
@@ -94,13 +89,6 @@ struct Roamer *GetEncounteredRoamer(void)
 #define ROAMER_LOCATION(index) GetCurrentRoamerLocation(index)
 #define CURRENT_ROAMER_COUNT GetCurrentRoamerCount()
 #define ROAMER_BEFORE_WRITE(index) RoamerBeforeWrite(index)
-#else
-#define ROAMER(index) (&gSaveBlock1Ptr->roamer[index])
-#define ROAMER_HISTORY(index) sLocationHistory[index]
-#define ROAMER_LOCATION(index) sRoamerLocation[index]
-#define CURRENT_ROAMER_COUNT ROAMER_COUNT
-#define ROAMER_BEFORE_WRITE(index) ((void)0)
-#endif
 
 #define ___ MAP_NUM(MAP_UNDEFINED) // For empty spots in the location table
 
@@ -116,79 +104,6 @@ struct Roamer *GetEncounteredRoamer(void)
 //         map in the location table there is not a location set that starts with
 //         that map then the roamer will be significantly less likely to move away
 //         from that map when it lands there.
-#if IS_HNS
-
-enum
-{
-    ROAMER_LOC_TABLE_JOHTO,
-    ROAMER_LOC_TABLE_KANTO,
-    ROAMER_LOC_TABLE_COUNT,
-};
-
-static const u8 sRoamerLocationsJohto[][6] =
-{
-    { MAP_NUM(MAP_ROUTE29_HNS), MAP_NUM(MAP_ROUTE30_HNS), MAP_NUM(MAP_ROUTE46_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE30_HNS), MAP_NUM(MAP_ROUTE29_HNS), MAP_NUM(MAP_ROUTE31_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE31_HNS), MAP_NUM(MAP_ROUTE30_HNS), MAP_NUM(MAP_ROUTE29_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE32_HNS), MAP_NUM(MAP_ROUTE31_HNS), MAP_NUM(MAP_ROUTE33_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE33_HNS), MAP_NUM(MAP_ROUTE32_HNS), MAP_NUM(MAP_ROUTE34_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE34_HNS), MAP_NUM(MAP_ROUTE33_HNS), MAP_NUM(MAP_ROUTE35_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE35_HNS), MAP_NUM(MAP_ROUTE34_HNS), MAP_NUM(MAP_ROUTE36_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE36_HNS), MAP_NUM(MAP_ROUTE31_HNS), MAP_NUM(MAP_ROUTE32_HNS), MAP_NUM(MAP_ROUTE35_HNS), MAP_NUM(MAP_ROUTE37_HNS), ___ },
-    { MAP_NUM(MAP_ROUTE37_HNS), MAP_NUM(MAP_ROUTE36_HNS), MAP_NUM(MAP_ROUTE38_HNS), MAP_NUM(MAP_ROUTE42_HNS), ___, ___ },
-    { MAP_NUM(MAP_ROUTE38_HNS), MAP_NUM(MAP_ROUTE37_HNS), MAP_NUM(MAP_ROUTE39_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE39_HNS), MAP_NUM(MAP_ROUTE48_HNS), MAP_NUM(MAP_ROUTE35_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE42_HNS), MAP_NUM(MAP_ROUTE37_HNS), MAP_NUM(MAP_ROUTE38_HNS), MAP_NUM(MAP_ROUTE43_HNS), MAP_NUM(MAP_ROUTE44_HNS), ___ },
-    { MAP_NUM(MAP_ROUTE43_HNS), MAP_NUM(MAP_ROUTE42_HNS), MAP_NUM(MAP_ROUTE44_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE44_HNS), MAP_NUM(MAP_ROUTE42_HNS), MAP_NUM(MAP_ROUTE45_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE45_HNS), MAP_NUM(MAP_ROUTE44_HNS), MAP_NUM(MAP_ROUTE46_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE46_HNS), MAP_NUM(MAP_ROUTE45_HNS), MAP_NUM(MAP_ROUTE29_HNS), ___, ___, ___ },
-    { ___, ___, ___, ___, ___, ___ },
-};
-
-static const u8 sRoamerLocationsKanto[][6] =
-{
-    { MAP_NUM(MAP_ROUTE1_HNS),  MAP_NUM(MAP_ROUTE2_HNS),  MAP_NUM(MAP_ROUTE22_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE2_HNS),  MAP_NUM(MAP_ROUTE1_HNS),  MAP_NUM(MAP_ROUTE3_HNS),  ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE3_HNS),  MAP_NUM(MAP_ROUTE2_HNS),  MAP_NUM(MAP_ROUTE4_HNS),  ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE4_HNS),  MAP_NUM(MAP_ROUTE3_HNS),  MAP_NUM(MAP_ROUTE5_HNS),  MAP_NUM(MAP_ROUTE24_HNS), ___, ___ },
-    { MAP_NUM(MAP_ROUTE5_HNS),  MAP_NUM(MAP_ROUTE4_HNS),  MAP_NUM(MAP_ROUTE6_HNS),  MAP_NUM(MAP_ROUTE9_HNS),  ___, ___ },
-    { MAP_NUM(MAP_ROUTE6_HNS),  MAP_NUM(MAP_ROUTE5_HNS),  MAP_NUM(MAP_ROUTE7_HNS),  MAP_NUM(MAP_ROUTE11_HNS), ___, ___ },
-    { MAP_NUM(MAP_ROUTE7_HNS),  MAP_NUM(MAP_ROUTE6_HNS),  MAP_NUM(MAP_ROUTE8_HNS),  MAP_NUM(MAP_ROUTE16_HNS), ___, ___ },
-    { MAP_NUM(MAP_ROUTE8_HNS),  MAP_NUM(MAP_ROUTE7_HNS),  MAP_NUM(MAP_ROUTE9_HNS),  MAP_NUM(MAP_ROUTE10_HNS), ___, ___ },
-    { MAP_NUM(MAP_ROUTE9_HNS),  MAP_NUM(MAP_ROUTE5_HNS),  MAP_NUM(MAP_ROUTE8_HNS),  MAP_NUM(MAP_ROUTE10_HNS), ___, ___ },
-    { MAP_NUM(MAP_ROUTE10_HNS), MAP_NUM(MAP_ROUTE8_HNS),  MAP_NUM(MAP_ROUTE9_HNS),  ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE11_HNS), MAP_NUM(MAP_ROUTE6_HNS),  MAP_NUM(MAP_ROUTE12_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE12_HNS), MAP_NUM(MAP_ROUTE11_HNS), MAP_NUM(MAP_ROUTE13_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE13_HNS), MAP_NUM(MAP_ROUTE12_HNS), MAP_NUM(MAP_ROUTE14_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE14_HNS), MAP_NUM(MAP_ROUTE13_HNS), MAP_NUM(MAP_ROUTE15_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE15_HNS), MAP_NUM(MAP_ROUTE14_HNS), MAP_NUM(MAP_ROUTE18_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE16_HNS), MAP_NUM(MAP_ROUTE7_HNS),  MAP_NUM(MAP_ROUTE17_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE17_HNS), MAP_NUM(MAP_ROUTE16_HNS), MAP_NUM(MAP_ROUTE18_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE18_HNS), MAP_NUM(MAP_ROUTE17_HNS), MAP_NUM(MAP_ROUTE15_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE19_HNS), MAP_NUM(MAP_ROUTE20_HNS), MAP_NUM(MAP_ROUTE21_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE20_HNS), MAP_NUM(MAP_ROUTE19_HNS), MAP_NUM(MAP_ROUTE21_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE21_HNS), MAP_NUM(MAP_ROUTE19_HNS), MAP_NUM(MAP_ROUTE20_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE22_HNS), MAP_NUM(MAP_ROUTE1_HNS),  MAP_NUM(MAP_ROUTE23_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE23_HNS), MAP_NUM(MAP_ROUTE22_HNS), MAP_NUM(MAP_ROUTE1_HNS),  ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE24_HNS), MAP_NUM(MAP_ROUTE4_HNS),  MAP_NUM(MAP_ROUTE25_HNS), ___, ___, ___ },
-    { MAP_NUM(MAP_ROUTE25_HNS), MAP_NUM(MAP_ROUTE24_HNS), MAP_NUM(MAP_ROUTE4_HNS),  ___, ___, ___ },
-    { ___, ___, ___, ___, ___, ___ },
-};
-
-struct RoamerLocationTable
-{
-    const u8 (*locations)[6];
-    u8 numSets;
-};
-
-static const struct RoamerLocationTable sRoamerLocationTables[ROAMER_LOC_TABLE_COUNT] =
-{
-    [ROAMER_LOC_TABLE_JOHTO] = { sRoamerLocationsJohto, ARRAY_COUNT(sRoamerLocationsJohto) - 1 },
-    [ROAMER_LOC_TABLE_KANTO] = { sRoamerLocationsKanto, ARRAY_COUNT(sRoamerLocationsKanto) - 1 },
-};
-
-#else
 
 static const u8 sRoamerLocationsHoenn[][6] =
 {
@@ -232,9 +147,7 @@ static const struct RoamerLocationTable sRoamerLocationTables[ROAMER_LOC_TABLE_C
     [ROAMER_LOC_TABLE_HOENN] = { sRoamerLocationsHoenn, ARRAY_COUNT(sRoamerLocationsHoenn) - 1 },
 };
 
-#endif
 
-#ifdef FIRERED
 static const u8 sFireRedJohtoRoamerLocations[][6] =
 {
     { MAP_NUM(MAP_ROUTE29_HNS), MAP_NUM(MAP_ROUTE30_HNS), MAP_NUM(MAP_ROUTE46_HNS), ___, ___, ___ },
@@ -255,26 +168,21 @@ static const u8 sFireRedJohtoRoamerLocations[][6] =
     { MAP_NUM(MAP_ROUTE46_HNS), MAP_NUM(MAP_ROUTE45_HNS), MAP_NUM(MAP_ROUTE29_HNS), ___, ___, ___ },
     { ___, ___, ___, ___, ___, ___ },
 };
-#endif
 
 #undef ___
 #define NUM_LOCATIONS_PER_SET 6
 
 static inline const u8 (*GetRoamerLocations(u32 roamerIndex))[6]
 {
-#ifdef FIRERED
     if (UsesJohtoRoamerBank(roamerIndex))
         return sFireRedJohtoRoamerLocations;
-#endif
     return sRoamerLocationTables[ROAMER(roamerIndex)->locationTableId].locations;
 }
 
 static inline u8 GetRoamerNumLocationSets(u32 roamerIndex)
 {
-#ifdef FIRERED
     if (UsesJohtoRoamerBank(roamerIndex))
         return ARRAY_COUNT(sFireRedJohtoRoamerLocations) - 1;
-#endif
     return sRoamerLocationTables[ROAMER(roamerIndex)->locationTableId].numSets;
 }
 
@@ -437,36 +345,9 @@ bool8 TryAddRoamer(u16 species, u8 level, u8 locationTableId)
     return FALSE;
 }
 
-#if IS_HNS
-void InitRoamer(void)
-{
-    DeactivateRoamersByLocationTable(ROAMER_LOC_TABLE_JOHTO);
-    GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_ENTEI), FLAG_SET_SEEN);
-    GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_RAIKOU), FLAG_SET_SEEN);
-    GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_SUICUNE), FLAG_SET_SEEN);
-    TryAddRoamer(SPECIES_RAIKOU, 40, ROAMER_LOC_TABLE_JOHTO);
-    TryAddRoamer(SPECIES_ENTEI, 40, ROAMER_LOC_TABLE_JOHTO);
-}
-
-void InitKantoRoamers(void)
-{
-    DeactivateRoamersByLocationTable(ROAMER_LOC_TABLE_KANTO);
-    if (gSpecialVar_0x8004 == 0)
-    {
-        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LATIAS), FLAG_SET_SEEN);
-        TryAddRoamer(SPECIES_LATIAS, 60, ROAMER_LOC_TABLE_KANTO);
-    }
-    else
-    {
-        GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_LATIOS), FLAG_SET_SEEN);
-        TryAddRoamer(SPECIES_LATIOS, 60, ROAMER_LOC_TABLE_KANTO);
-    }
-}
-#else
 // gSpecialVar_0x8004 here corresponds to the options in the multichoice MULTI_TV_LATI (0 for 'Red', 1 for 'Blue')
 void InitRoamer(void)
 {
-#ifdef FIRERED
     if (IsJohtoRoamerContext())
     {
         if (GetCurrentRoamerCount() == 0)
@@ -479,7 +360,6 @@ void InitRoamer(void)
         TryAddRoamer(SPECIES_ENTEI, 40, 0);
         return;
     }
-#endif
     if (gSpecialVar_0x8004 == 0) // Red
         TryAddRoamer(SPECIES_LATIAS, 40, ROAMER_LOC_TABLE_HOENN);
     else
@@ -489,7 +369,6 @@ void InitRoamer(void)
 void InitKantoRoamers(void)
 {
 }
-#endif
 
 void UpdateLocationHistoryForRoamer(void)
 {
@@ -573,10 +452,8 @@ void RoamerMove(u32 roamerIndex)
 
 bool8 IsRoamerAt(u32 roamerIndex, u8 mapGroup, u8 mapNum)
 {
-#ifdef FIRERED
     if (ROAMER(roamerIndex) == NULL)
         return FALSE;
-#endif
     if (ROAMER(roamerIndex)->active && mapGroup == ROAMER_LOCATION(roamerIndex)[MAP_GRP] && mapNum == ROAMER_LOCATION(roamerIndex)[MAP_NUM])
         return TRUE;
     else
@@ -608,11 +485,7 @@ bool8 TryStartRoamerEncounter(void)
         if (IsRoamerAt(i, gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum) == TRUE && (Random() % 4) == 0)
         {
             CreateRoamerMonInstance(i);
-#ifdef FIRERED
             gEncounteredRoamerIndex = i | (IsJohtoRoamerContext() ? JOHTO_ROAMER_ENCOUNTER_TAG : 0);
-#else
-            gEncounteredRoamerIndex = i;
-#endif
             return TRUE;
         }
     }
@@ -641,14 +514,12 @@ void SetRoamerInactive(u32 roamerIndex)
 
 void GetRoamerLocation(u32 roamerIndex, u8 *mapGroup, u8 *mapNum)
 {
-#ifdef FIRERED
     if (ROAMER(roamerIndex) == NULL)
     {
         *mapGroup = MAP_GROUP(MAP_UNDEFINED);
         *mapNum = MAP_NUM(MAP_UNDEFINED);
         return;
     }
-#endif
     *mapGroup = ROAMER_LOCATION(roamerIndex)[MAP_GRP];
     *mapNum = ROAMER_LOCATION(roamerIndex)[MAP_NUM];
 }

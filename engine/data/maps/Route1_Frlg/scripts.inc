@@ -67,9 +67,7 @@ Route1_Text_RouteSign::
 
 Route1_Frlg_RainbowTransition::
 	call RB_Route1Transition
-#ifdef FIRERED
 	call CG_BlueRoute1Visibility
-#endif
 	end
 
 Route1_Frlg_RainbowFrame::

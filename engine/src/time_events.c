@@ -8,9 +8,7 @@
 #include "rtc.h"
 #include "script.h"
 #include "task.h"
-#ifdef FIRERED
 #include "constants/johto_ids.h"
-#endif
 
 static u32 GetMirageRnd(void)
 {
@@ -84,7 +82,6 @@ void UpdateShoalTideFlag(void)
         1, // 23
     };
 
-#ifdef FIRERED
     // Lake transitions use the current map, including exits from its houses.
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_LAKE_OF_RAGE_HNS)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_LAKE_OF_RAGE_HNS))
@@ -95,7 +92,6 @@ void UpdateShoalTideFlag(void)
         else
             FlagClear(JOHTO_FLAG_SYS_LAKE_OF_RAGE_TIDE);
     }
-#endif
 
     if (IsMapTypeOutdoors(GetLastUsedWarpMapType()))
     {
@@ -103,16 +99,10 @@ void UpdateShoalTideFlag(void)
         if (tide[gLocalTime.hours])
         {
             FlagSet(FLAG_SYS_SHOAL_TIDE);
-#if IS_HNS
-            FlagSet(FLAG_SYS_LAKE_OF_RAGE_TIDE);
-#endif
         }
         else
         {
             FlagClear(FLAG_SYS_SHOAL_TIDE);
-#if IS_HNS
-            FlagClear(FLAG_SYS_LAKE_OF_RAGE_TIDE);
-#endif
         }
     }
 }

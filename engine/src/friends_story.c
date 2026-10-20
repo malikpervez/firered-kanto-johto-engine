@@ -1,6 +1,5 @@
 #include "global.h"
 
-#ifdef FIRERED
 #include "battle.h"
 #include "character_story.h"
 #include "event_data.h"
@@ -407,4 +406,3 @@ void Special_FriendsStoryIsReunionReady(void)
     Script_RequestEffects(SCREFF_V1);
     gSpecialVar_Result = Here(22);
 }
-#endif

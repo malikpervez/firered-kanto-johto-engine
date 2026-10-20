@@ -66,11 +66,7 @@ static const struct BgTemplate sBGTemplates[] = {
 };
 
 static const s8 sSeag[][4] = {
-#if defined(FIRERED)
     [SEAGALLOP_VERMILION_CITY]  = {MAP_GROUP(MAP_VERMILION_CITY), MAP_NUM(MAP_VERMILION_CITY),      38, 63},
-#else
-    [SEAGALLOP_VERMILION_CITY]  = {MAP_GROUP(MAP_VERMILION_CITY), MAP_NUM(MAP_VERMILION_CITY),      0x17, 0x20},
-#endif
     [SEAGALLOP_ONE_ISLAND]      = {MAP_GROUP(MAP_ONE_ISLAND_HARBOR), MAP_NUM(MAP_ONE_ISLAND_HARBOR),   0x08, 0x05},
     [SEAGALLOP_TWO_ISLAND]      = {MAP_GROUP(MAP_TWO_ISLAND_HARBOR), MAP_NUM(MAP_TWO_ISLAND_HARBOR),   0x08, 0x05},
     [SEAGALLOP_THREE_ISLAND]    = {MAP_GROUP(MAP_THREE_ISLAND_HARBOR), MAP_NUM(MAP_THREE_ISLAND_HARBOR), 0x08, 0x05},
@@ -504,11 +500,7 @@ bool8 IsPlayerLeftOfVermilionSailor(void)
 {
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VERMILION_CITY) 
        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VERMILION_CITY) 
-#if defined(FIRERED)
        && gSaveBlock1Ptr->pos.x < 39)
-#else
-       && gSaveBlock1Ptr->pos.x < 24)
-#endif
         return TRUE;
 
     return FALSE;

@@ -1,75 +1,8 @@
-#ifdef FIRERED
-CherrygroveCity_hns_MapScripts::
-	.byte 0
+@ Johto (data/maps/CherrygroveCity_hns/scripts.inc), as built into the FireRed game.
 
-B3_Johto_EventScript_CherrygroveGuide::
-	lock
-	faceplayer
-	special Special_JohtoErrandGetState
-	goto_if_eq VAR_RESULT, 0, B3_Johto_EventScript_GuideBeforeErrand
-	goto_if_eq VAR_RESULT, 1, B3_Johto_EventScript_GuideVisit
-	goto_if_eq VAR_RESULT, 2, B3_Johto_EventScript_GuideVisited
-	goto_if_eq VAR_RESULT, 3, B3_Johto_EventScript_GuideDone
-	goto B3_Johto_EventScript_GuideUnavailable
-
-B3_Johto_EventScript_GuideBeforeErrand::
-	msgbox B3_Johto_Text_GuideBeforeErrand
-	release
-	end
-
-B3_Johto_EventScript_GuideVisit::
-	special Special_JohtoErrandVisitGuide
-	goto_if_eq VAR_RESULT, FALSE, B3_Johto_EventScript_GuideUnavailable
-	msgbox B3_Johto_Text_GuideVisit
-	release
-	end
-
-B3_Johto_EventScript_GuideVisited::
-	msgbox B3_Johto_Text_GuideVisited
-	release
-	end
-
-B3_Johto_EventScript_GuideDone::
-	msgbox B3_Johto_Text_GuideDone
-	release
-	end
-
-B3_Johto_EventScript_GuideUnavailable::
-	msgbox B3_Johto_Text_GuideUnavailable
-	release
-	end
-
-B3_Johto_Text_GuideBeforeErrand::
-	.string "GUIDE: Welcome to\n"
-	.string "CHERRYGROVE CITY!\p"
-	.string "Have you met ELM in\n"
-	.string "NEW BARK TOWN?$"
-
-B3_Johto_Text_GuideVisit::
-	.string "GUIDE: ELM sent you?\n"
-	.string "It's good to meet you!\p"
-	.string "You've made it to\n"
-	.string "CHERRYGROVE CITY.\p"
-	.string "Please tell ELM you\n"
-	.string "found me safe and sound.$"
-
-B3_Johto_Text_GuideVisited::
-	.string "GUIDE: ELM is waiting\n"
-	.string "back in NEW BARK TOWN.\p"
-	.string "Follow ROUTE 29 east\n"
-	.string "to return to his lab.$"
-
-B3_Johto_Text_GuideDone::
-	.string "GUIDE: Good to see you\n"
-	.string "and your POKéMON again!$"
-
-B3_Johto_Text_GuideUnavailable::
-	.string "GUIDE: Enjoy your visit\n"
-	.string "to CHERRYGROVE CITY.$"
-#else
 CherrygroveCity_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, CherryGroveCity_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 CherryGroveCity_OnTransition::
@@ -78,10 +11,10 @@ CherryGroveCity_OnTransition::
 
 CherryGroveCity_EventScript_TriggerGent_Top::
 	lock
-	setflag FLAG_VISITED_CHERRYGROVE_CITY
-	setflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
+	setflag JOHTO_FLAG_VISITED_CHERRYGROVE_CITY
+	setflag JOHTO_FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	playse SE_PIN
-	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
+	applymovement LOCALID_GUIDE_GENT, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_GUIDE_GENT
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -91,19 +24,19 @@ CherryGroveCity_EventScript_TriggerGent_Top::
 	msgbox CherrygroveCity_Text_GuideGentTourStart, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Trigger_Top
-	waitmovement 0 
+	waitmovement 0
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
-	waitmovement 0 
+	waitmovement 0
 	goto CherryGroveCity_EventScript_GentTour
 	release
 	end
 
 CherryGroveCity_EventScript_TriggerGent_Mid::
 	lock
-	setflag FLAG_VISITED_CHERRYGROVE_CITY
-	setflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
+	setflag JOHTO_FLAG_VISITED_CHERRYGROVE_CITY
+	setflag JOHTO_FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	playse SE_PIN
-	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
+	applymovement LOCALID_GUIDE_GENT, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_GUIDE_GENT
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -113,7 +46,7 @@ CherryGroveCity_EventScript_TriggerGent_Mid::
 	msgbox CherrygroveCity_Text_GuideGentTourStart, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
-	waitmovement 0 
+	waitmovement 0
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	goto CherryGroveCity_EventScript_GentTour
 	release
@@ -121,10 +54,10 @@ CherryGroveCity_EventScript_TriggerGent_Mid::
 
 CherryGroveCity_EventScript_TriggerGent_Bottom::
 	lock
-	setflag FLAG_VISITED_CHERRYGROVE_CITY
-	setflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
+	setflag JOHTO_FLAG_VISITED_CHERRYGROVE_CITY
+	setflag JOHTO_FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	playse SE_PIN
-	applymovement LOCALID_GUIDE_GENT, Common_Movement_ExclamationMark
+	applymovement LOCALID_GUIDE_GENT, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_GUIDE_GENT
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -134,9 +67,9 @@ CherryGroveCity_EventScript_TriggerGent_Bottom::
 	msgbox CherrygroveCity_Text_GuideGentTourStart, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Trigger_Gent
-	waitmovement 0 
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Trigger_Bottom
-	waitmovement 0 
+	waitmovement 0
 	goto CherryGroveCity_EventScript_GentTour
 	release
 	end
@@ -144,12 +77,12 @@ CherryGroveCity_EventScript_TriggerGent_Bottom::
 CherryGroveCity_EventScript_TriggerGent_Cancel::
 	msgbox CherrygroveCity_Text_GuideGentDecline, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_CHERRYGROVE_CITY_STATE, 1 @ CHANGE THIS TO 1 LATER
+	setvar JOHTO_VAR_CHERRYGROVE_CITY_STATE, 1
 	release
 	end
 
 CherryGroveCity_EventScript_GentTour::
-	playbgm MUS_HG_FOLLOW_ME_2, FALSE
+	playbgm ((558 + 1) + 0x3A), FALSE
 	applymovement LOCALID_GUIDE_GENT, CherryGroveCity_Movement_Pokecenter
 	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Pokecenter
 	waitmovement 0
@@ -191,10 +124,10 @@ CherryGroveCity_EventScript_GentTour::
 	removeobject LOCALID_GUIDE_GENT
 	closedoor 42, 14
 	waitdooranim
-	
-	clearflag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
-	setflag FLAG_HIDE_GUIDE_GENT_CHERRYGROVE
-	setvar VAR_CHERRYGROVE_CITY_STATE, 1
+
+	clearflag JOHTO_FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
+	setflag JOHTO_FLAG_HIDE_GUIDE_GENT_CHERRYGROVE
+	setvar JOHTO_VAR_CHERRYGROVE_CITY_STATE, 1
 	fadedefaultbgm
 	release
 	end
@@ -202,13 +135,13 @@ CherryGroveCity_EventScript_GentTour::
 CherryGroveCity_EventScript_Fisherman::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_MYSTICWATER, CherryGroveCity_EventScript_Fisherman2
+	goto_if_set JOHTO_FLAG_GOT_MYSTICWATER, CherryGroveCity_EventScript_Fisherman2
 	msgbox CherrygroveCity_Text_MysticWaterGuyBefore, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CherryGroveCity_EventScript_Fisherman2
 	giveitem ITEM_MYSTIC_WATER
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull 
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
 	closemessage
-	setflag FLAG_GOT_MYSTICWATER
+	setflag JOHTO_FLAG_GOT_MYSTICWATER
 	release
 	end
 
@@ -276,7 +209,7 @@ CherryGroveCity_EventScript_Sign::
 	msgbox CherrygroveCity_Text_CitySign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 CherryGroveCity_EventScript_TriggerSilver_Top::
 	lock
@@ -294,31 +227,31 @@ CherryGroveCity_EventScript_TriggerSilver_Bottom::
 
 CherryGroveCity_EventScript_TriggerSilver::
 	lock
-	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
+	playbgm ((558 + 1) + 0x3B), FALSE
 	applymovement LOCALID_CHERRYGROVE_SILVER, CherryGroveCity_Movement_Silver_Enter
 	waitmovement 0
 	msgbox CherrygroveCity_Text_RivalSeen, MSGBOX_DEFAULT
 	closemessage
-	goto_if_eq VAR_STARTER_MON, 0, CherryGroveCity_Silver_Battle_Cyndaquil
-	goto_if_eq VAR_STARTER_MON, 1, CherryGroveCity_Silver_Battle_Totodile
-	goto_if_eq VAR_STARTER_MON, 2, CherryGroveCity_Silver_Battle_Chikorita
+	goto_if_eq JOHTO_VAR_STARTER_MON, 0, CherryGroveCity_Silver_Battle_Cyndaquil
+	goto_if_eq JOHTO_VAR_STARTER_MON, 1, CherryGroveCity_Silver_Battle_Totodile
+	goto_if_eq JOHTO_VAR_STARTER_MON, 2, CherryGroveCity_Silver_Battle_Chikorita
 	release
 	end
 
 CherryGroveCity_Silver_Battle_Cyndaquil::
-	trainerbattle_no_intro TRAINER_RIVAL_CYNDAQUIL_1_HNS, CherrygroveCity_Text_SilverWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CYNDAQUIL_1_HNS, CherrygroveCity_Text_SilverWin
 	goto CherryGroveCity_Silver_AfterBattle
 
 CherryGroveCity_Silver_Battle_Totodile::
-	trainerbattle_no_intro TRAINER_RIVAL_TOTODILE_1_HNS, CherrygroveCity_Text_SilverWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_TOTODILE_1_HNS, CherrygroveCity_Text_SilverWin
 	goto CherryGroveCity_Silver_AfterBattle
 
 CherryGroveCity_Silver_Battle_Chikorita::
-	trainerbattle_no_intro TRAINER_RIVAL_CHIKORITA_1_HNS, CherrygroveCity_Text_SilverWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CHIKORITA_1_HNS, CherrygroveCity_Text_SilverWin
 	goto CherryGroveCity_Silver_AfterBattle
 
 CherryGroveCity_Silver_AfterBattle::
-	playbgm MUS_HG_RIVAL_EXIT, FALSE
+	playbgm ((558 + 1) + 0x3C), FALSE
 	msgbox CherrygroveCity_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, CherryGroveCity_Movement_Silver_Leave1Player
@@ -326,7 +259,7 @@ CherryGroveCity_Silver_AfterBattle::
 	waitmovement 0
 	waitmovement 0
 	playse SE_PIN
-	applymovement LOCALID_CHERRYGROVE_SILVER, Common_Movement_ExclamationMark
+	applymovement LOCALID_CHERRYGROVE_SILVER, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_CHERRYGROVE_SILVER
 	turnobject LOCALID_CHERRYGROVE_SILVER, DIR_EAST
@@ -340,126 +273,110 @@ CherryGroveCity_Silver_AfterBattle::
 	applymovement LOCALID_CHERRYGROVE_SILVER, CherryGroveCity_Movement_Silver_Leave2
 	waitmovement 0
 	removeobject LOCALID_CHERRYGROVE_SILVER
-	setflag FLAG_HIDE_SILVER_CHERRYGROVE
-	setvar VAR_CHERRYGROVE_CITY_STATE, 4
+	setflag JOHTO_FLAG_HIDE_SILVER_CHERRYGROVE
+	setvar JOHTO_VAR_CHERRYGROVE_CITY_STATE, 4
 	fadedefaultbgm
 	release
 	end
 
 CherrygroveCity_Text_GuideGentIntro:
-	.string "You're a rookie trainer,\n"
-	.string "aren't you? I can tell!\p"
-	.string "That's OK! Everyone is a\n"
-	.string "rookie at some point!\p"
-	.string "If you'd like, I can teach\n"
-	.string "you a few things.$"
+	.string "Welcome{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}ne{SE_M_TWISTER}to\nCHERRYGROVE{SE_M_SUPERSONIC}aren'{SE_M_SPIT_UP}you?\p{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}sho{SE_M_TWISTER}yo{SE_M_DIVE}aroun{SE_M_WATERFALL}town\nbefor{SE_M_REVERSAL}yo{SE_M_DIVE}continu{SE_M_REVERSAL}you{SE_M_SAND_TOMB}journey.$"
 
 CherrygroveCity_Text_GuideGentTourStart:
-	.string "OK, then!\n"
-	.string "Follow me!$"
+	.string "OK{SE_M_SUPERSONIC}then!\n"
+	.string "Follo{SE_M_TWISTER}me!$"
 
 CherrygroveCity_Text_GuideGentPokecenter:
-	.string "This is a POKéMON CENTER.\p"
-	.string "They heal your POKéMON in no\n"
-	.string "time at all.\p"
-	.string "You'll be relying on them a lot,\n"
-	.string "so you better learn about them.$"
+	.string "Here'{SE_M_GRASSWHISTLE}CHERRYGROVE's\nPOKéMO{SE_M_PSYBEAM2}CENTER.\pYou{SE_M_SAND_TOMB}tea{SE_M_MILK_DRINK}ca{SE_M_ATTRACT}res{SE_M_SPIT_UP}her{SE_M_REVERSAL}between\ntrips{SE_M_SUPERSONIC}jus{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}di{SE_M_WATERFALL}i{SE_M_ATTRACT}KANTO.$"
 
 CherrygroveCity_Text_GuideGentMart:
-	.string "This is a POKéMON MART.\p"
-	.string "They sell BALLS for catching wild\n"
-	.string "POKéMON and other useful items.$"
+	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}MART.\p"
+	.string "The{SE_M_YAWN}sel{SE_M_BATON_PASS}BALL{SE_M_SKETCH}fo{SE_M_SAND_TOMB}catchin{SE_M_SANDSTORM}wild\n"
+	.string "POKéMO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}othe{SE_M_SAND_TOMB}usefu{SE_M_BATON_PASS}items.$"
 
 CherrygroveCity_Text_GuideGentRoute30:
-	.string "ROUTE 30 is out this way.\p"
-	.string "Trainers will be battling\n"
-	.string "their prized POKéMON there.$"
+	.string "ROUT{SE_M_SWORDS_DANCE}3{SE_M_BITE}i{SE_M_GRASSWHISTLE}ou{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}way.\p"
+	.string "Trainer{SE_M_GRASSWHISTLE}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}battling\n"
+	.string "thei{SE_M_SAND_TOMB}prize{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}there.$"
 
 CherrygroveCity_Text_GuideGentSea:
-	.string "This is the sea, as you can see.\p"
-	.string "Some POKéMON are found only in\n"
-	.string "in water.$"
+	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}sea{SE_M_SUPERSONIC}a{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}ca{SE_M_ATTRACT}see.\p"
+	.string "Som{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}foun{SE_M_WATERFALL}onl{SE_M_YAWN}in\n"
+	.string "i{SE_M_ATTRACT}water.$"
 
 CherrygroveCity_Text_GuideGentMap:
 	.string "Here…\p"
-	.string "It's my house! Thanks for\n"
-	.string "your company.\p"
-	.string "Oh, and if you're ever lost, check\n"
-	.string "the MAP on your POKéGEAR!\p"
-	.string "I wish you luck on your journey!$"
+	.string "It'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}house{SE_M_DRAGON_RAGE}Thank{SE_M_GRASSWHISTLE}for\n"
+	.string "you{SE_M_SAND_TOMB}company.\p"
+	.string "Oh{SE_M_SUPERSONIC}an{SE_M_WATERFALL}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}eve{SE_M_SAND_TOMB}lost{SE_M_SUPERSONIC}check\n"
+	.string "th{SE_M_REVERSAL}MA{SE_M_PETAL_DANCE}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéGEAR!\p"
+	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}yo{SE_M_DIVE}luc{SE_M_ENCORE2}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}journey!$"
 
 CherrygroveCity_Text_GuideGentDecline:
-	.string "Oh… It's something I enjoy\n"
+	.string "Oh{SE_M_DIZZY_PUNCH}It'{SE_M_GRASSWHISTLE}somethin{SE_M_SANDSTORM}{SE_M_HEAL_BELL}enjoy\n"
 	.string "doing…\p"
-	.string "Fine. Come see me whenever\n"
-	.string "you like.$"
+	.string "Fine{SE_M_PERISH_SONG}Com{SE_M_REVERSAL}se{SE_M_REVERSAL}m{SE_M_REVERSAL}whenever\n"
+	.string "yo{SE_M_DIVE}like.$"
 
 CherrygroveCity_Text_RivalSeen:
-	.string "… … … … … … … …\p"
-	.string "You got a POKéMON at the LAB.\p"
-	.string "What a waste.\n"
-	.string "A wimp like you.\p"
-	.string "… … … … … … … …\p"
-	.string "Don't you get what I'm saying?\n"
-	.string "Well, I too, have a good POKéMON.\p"
-	.string "I'll show you what I mean!$"
+	.string "S{SE_M_ATTRACT2}you'r{SE_M_REVERSAL}{PLAYER}{SE_M_SUPERSONIC}the\nKANT{SE_M_SOLAR_BEAM}CHAMPION.\p{SE_M_BONEMERANG}titl{SE_M_REVERSAL}doesn'{SE_M_SPIT_UP}mak{SE_M_REVERSAL}yo{SE_M_DIVE}strong.\pI'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}{SE_M_CHARGE}powerfu{SE_M_BATON_PASS}POKéMON.\nI'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}mean!$"
 
 CherrygroveCity_Text_SilverWin:
-	.string "Humph. Are you happy you won?$"
+	.string "Humph{SE_M_PERISH_SONG}Ar{SE_M_REVERSAL}yo{SE_M_DIVE}happ{SE_M_YAWN}yo{SE_M_DIVE}won?$"
 
 CherrygroveCity_Text_RivalAfter:
-	.string "… … … … … … … …\p"
-	.string "Do you want to know who I am?\p"
-	.string "I'm going to be the world's\n"
-	.string "greatest POKéMON trainer.$"
+	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\p"
+	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}kno{SE_M_TWISTER}wh{SE_M_ATTRACT2}{SE_M_HEAL_BELL}am?\p"
+	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}th{SE_M_REVERSAL}world's\n"
+	.string "greates{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}trainer.$"
 
 CherrygroveCity_Text_RivalID:
-	.string "Give it back!\n"
-	.string "That's my TRAINER CARD!\p"
-	.string "Oh no!\n"
-	.string "You saw my name...$"
+	.string "Giv{SE_M_REVERSAL}i{SE_M_SPIT_UP}back!\n"
+	.string "That'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}TRAINE{SE_M_MINIMIZE}CARD!\p"
+	.string "O{SE_M_TRI_ATTACK}no!\n"
+	.string "Yo{SE_M_DIVE}sa{SE_M_TWISTER}m{SE_M_YAWN}name...$"
 
 CherrygroveCity_Text_TeacherHaveMapCard:
-	.string "When you're with POKéMON,\n"
-	.string "going anywhere is fun.$"
+	.string "Whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}POKéMON,\n"
+	.string "goin{SE_M_SANDSTORM}anywher{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}fun.$"
 
 CherrygroveCity_Text_YoungsterNoPokedex:
-	.string "MR. POKéMON's house is still\n"
-	.string "farther up ahead.$"
+	.string "MR{SE_M_PERISH_SONG}POKéMON'{SE_M_GRASSWHISTLE}hous{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}still\n"
+	.string "farthe{SE_M_SAND_TOMB}u{SE_M_MORNING_SUN}ahead.$"
 
 CherrygroveCity_Text_YoungsterHavePokedex:
-	.string "I battled the trainers on the\n"
+	.string "{SE_M_HEAL_BELL}battle{SE_M_WATERFALL}th{SE_M_REVERSAL}trainer{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}the\n"
 	.string "road.\p"
-	.string "My POKéMON lost. They're a\n"
-	.string "mess! I must take them to a\l"
-	.string "POKéMON CENTER.$"
+	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}lost{SE_M_PERISH_SONG}They'r{SE_M_REVERSAL}a\n"
+	.string "mess{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}tak{SE_M_REVERSAL}the{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}a\l"
+	.string "POKéMO{SE_M_PSYBEAM2}CENTER.$"
 
 CherrygroveCity_Text_MysticWaterGuyBefore:
-	.string "A POKéMON I caught had an\n"
+	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}{SE_M_HEAL_BELL}caugh{SE_M_SPIT_UP}ha{SE_M_WATERFALL}an\n"
 	.string "item.\p"
-	.string "I think it's MYSTIC WATER.\p"
-	.string "I don't need it, so do you\n"
-	.string "want it?$"
+	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}it'{SE_M_GRASSWHISTLE}MYSTI{SE_M_PSYBEAM}WATER.\p"
+	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}nee{SE_M_WATERFALL}it{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}d{SE_M_ATTRACT2}you\n"
+	.string "wan{SE_M_SPIT_UP}it?$"
 
 CherrygroveCity_Text_MysticWaterGuyAfter:
-	.string "Back to fishing for me, then.$"
+	.string "Bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}fishin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}me{SE_M_SUPERSONIC}then.$"
 
 CherrygroveCity_Text_CitySign:
-	.string "CHERRYGROVE CITY\p"
-	.string "The City of Cute, Fragrant\n"
+	.string "CHERRYGROV{SE_M_SWORDS_DANCE}CITY\p"
+	.string "Th{SE_M_REVERSAL}Cit{SE_M_YAWN}o{SE_M_ACID_ARMOR}Cute{SE_M_SUPERSONIC}Fragrant\n"
 	.string "Flowers$"
 
 CherrygroveCity_Text_GuideGentsHouseSign:
-	.string "GUIDE GENT'S HOUSE$"
+	.string "GUID{SE_M_SWORDS_DANCE}GENT'{SE_M_SKETCH}HOUSE$"
 
 CherryGroveCity_Text_Staryu:
-	.string "STARYU: Yuuuuuuuu.$"
+	.string "STARYU{SE_M_HEAT_WAVE}Yuuuuuuuu.$"
 
 CherryGroveCity_Text_Corsola:
-	.string "CORSOLA: Corsola! La!$"
+	.string "CORSOLA{SE_M_HEAT_WAVE}Corsola{SE_M_DRAGON_RAGE}La!$"
 
 CherryGroveCity_Text_Krabby:
-	.string "KRABBY: KOOOOKEEE!$"
+	.string "KRABBY{SE_M_HEAT_WAVE}KOOOOKEEE!$"
 
 CherryGroveCity_Movement_Trigger_Gent:
 	walk_down
@@ -627,7 +544,6 @@ CherryGroveCity_Movement_Silver_Return:
 	face_down
 	step_end
 
-
 CherryGroveCity_Movement_Silver_Leave2:
 	walk_fast_left
 	walk_fast_left
@@ -639,4 +555,4 @@ CherryGroveCity_Movement_Silver_Leave2:
 	walk_fast_left
 	walk_fast_left
 	step_end
-#endif // FIRERED
+

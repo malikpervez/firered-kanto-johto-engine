@@ -1,6 +1,7 @@
+@ Johto (data/maps/NewBarkTown_House2_hns/scripts.inc), as built into the FireRed game.
+
 NewBarkTown_House2_hns_MapScripts::
 	.byte 0
-
 
 NewBarkTown_House2_EventScript_ElmsWife::
 	lock
@@ -19,14 +20,19 @@ NewBarkTown_House2_EventScript_ElmsSon::
 	end
 
 NewBarkTown_House2_Text_ElmsWife:
-	.string "Hi, {PLAYER}! My husband's always\n"
-	.string "so busy--I hope he's OK.\p"
-	.string "When he's caught up in his\n"
-	.string "POKéMON research, he even\l"
-	.string "forgets to eat.$"
+	.string "Hi{SE_M_SUPERSONIC}{PLAYER}{SE_M_DRAGON_RAGE}M{SE_M_YAWN}husband'{SE_M_GRASSWHISTLE}always\n"
+	.string "s{SE_M_ATTRACT2}busy--{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}he'{SE_M_GRASSWHISTLE}OK.\p"
+	.string "Whe{SE_M_ATTRACT}he'{SE_M_GRASSWHISTLE}caugh{SE_M_SPIT_UP}u{SE_M_MORNING_SUN}i{SE_M_ATTRACT}his\n"
+	.string "POKéMO{SE_M_PSYBEAM2}research{SE_M_SUPERSONIC}h{SE_M_REVERSAL}even\l"
+	.string "forget{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}eat.$"
 
 NewBarkTown_House2_Text_ElmsSon:
-	.string "When I grow up, I'm going to\n"
-	.string "help my dad!\p"
-	.string "I'm going to be a great\n"
-	.string "POKéMON professor!$"
+	.byte 0xD1, 0xDC, 0xD9, 0xE2, 0x00, 0xC3, 0x00, 0xDB, 0xE6, 0xE3, 0xEB, 0x00, 0xE9, 0xE4, 0xB8, 0x00, 0xC3, 0xB4, 0xE1, 0x00, 0xDB, 0xE3, 0xDD, 0xE2, 0xDB, 0x00, 0xE8, 0xE3, 0xFE
+	.byte 0xDC, 0xD9, 0xE0, 0xE4, 0x00, 0xE1, 0xED, 0x00, 0xD8, 0xD5, 0xD8, 0xAB, 0xFB
+	.byte 0xC3, 0xB4, 0xE1, 0x00, 0xDB, 0xE3, 0xDD, 0xE2, 0xDB, 0x00, 0xE8, 0xE3, 0x00, 0xD6, 0xD9, 0x00, 0xD5, 0x00, 0xDB, 0xE6, 0xD9, 0xD5, 0xE8, 0xFE
+	.byte 0xCA, 0xC9, 0xC5, 0x1B, 0xC7, 0xC9, 0xC8, 0x00, 0xE4, 0xE6, 0xE3, 0xDA, 0xD9, 0xE7, 0xE7, 0xE3, 0xE6, 0xAB, 0xFF
+
+
+
+	.set PLAYER_STARTER_SPECIES, 16386
+

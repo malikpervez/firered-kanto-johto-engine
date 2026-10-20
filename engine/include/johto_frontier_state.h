@@ -1,7 +1,6 @@
 #ifndef GUARD_JOHTO_FRONTIER_STATE_H
 #define GUARD_JOHTO_FRONTIER_STATE_H
 
-#ifdef FIRERED
 #include "regions.h"
 #include "constants/johto_ids.h"
 
@@ -15,11 +14,5 @@ static inline u16 JohtoFrontierStateId(u16 nativeId, u16 johtoId)
 #define FRONTIER_GFX(nativeId, johtoId) JohtoFrontierStateId(nativeId, johtoId)
 #define FRONTIER_LAYOUT(nativeId, johtoId) JohtoFrontierStateId(nativeId, johtoId)
 #define FRONTIER_MAP(nativeId, johtoId) JohtoFrontierStateId(nativeId, johtoId)
-#else
-#define FRONTIER_STATE_ID(nativeId, johtoId) nativeId
-#define FRONTIER_GFX(nativeId, johtoId) nativeId
-#define FRONTIER_LAYOUT(nativeId, johtoId) nativeId
-#define FRONTIER_MAP(nativeId, johtoId) nativeId
-#endif
 
 #endif // GUARD_JOHTO_FRONTIER_STATE_H

@@ -4,9 +4,7 @@ CeladonCity_Frlg_MapScripts::
 
 CeladonCity_OnTransition::
 	call MW04_Visibility
-#ifdef FIRERED
 	call JT_CeladonVisibility
-#endif
 	setworldmapflag FLAG_WORLD_MAP_CELADON_CITY
 	end
 

@@ -52,17 +52,15 @@
       "script": "CeruleanCity_House5_EventScript_BerryCrushRankings"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 11,
-      "height": 9,
-      "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
-      "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/CeruleanCity_House5_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/CeruleanCity_House5_Frlg/map.bin",
-      "layout_version": "frlg",
-      "border_width": 2,
-      "border_height": 2
-    }
+  "firered_geometry": {
+    "width": 11,
+    "height": 9,
+    "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
+    "secondary_tileset": "gTileset_GenericBuilding2",
+    "border_filepath": "data/layouts/CeruleanCity_House5_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/CeruleanCity_House5_Frlg/map.bin",
+    "layout_version": "frlg",
+    "border_width": 2,
+    "border_height": 2
   }
 }

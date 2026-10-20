@@ -351,14 +351,8 @@ static void FindMapsWithMon(u16 species)
     {
         u32 headerSectionId = Overworld_GetMapHeaderByGroupAndId(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum)->regionMapSectionId;
 
-#if IS_HNS
-        if (currentRegionMapType == REGION_MAP_JOHTO
-            && headerSectionId >= KANTO_MAPSEC_START && headerSectionId <= KANTO_MAPSEC_END)
-            continue;
-#else
         if (GetRegionMapType(headerSectionId) != currentRegionMapType)
             continue;
-#endif
 
         if (MapHasSpecies(&gWildMonHeaders[i].encounterTypes[gAreaTimeOfDay], headerSectionId, species))
         {

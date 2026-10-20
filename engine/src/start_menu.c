@@ -1,8 +1,6 @@
 #include "global.h"
-#ifdef FIRERED
 #include "constants/johto_ids.h"
 #include "regions.h"
-#endif
 #include "config/save.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
@@ -208,9 +206,7 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
 };
 
 static const u8 sText_MenuDebug[] = _("DEBUG");
-#ifdef FIRERED
 static const u8 sText_MenuPokeGear[] = _("{POKE}GEAR");
-#endif
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -356,19 +352,15 @@ static void BuildStartMenuActions(void)
 
 static bool8 HasStartMenuPokeNav(void)
 {
-#ifdef FIRERED
     if (FlagGet(JOHTO_FLAG_SYS_POKENAV_GET))
         return TRUE;
-#endif
     return FlagGet(FLAG_SYS_POKENAV_GET);
 }
 
 static const u8 *GetStartMenuActionText(u8 action)
 {
-#ifdef FIRERED
     if (action == MENU_ACTION_POKENAV && FlagGet(JOHTO_FLAG_SYS_POKENAV_GET))
         return sText_MenuPokeGear;
-#endif
     return sStartMenuItems[action].text;
 }
 
@@ -418,9 +410,7 @@ static void BuildSafariZoneStartMenu(void)
 {
     AddStartMenuAction(MENU_ACTION_RETIRE_SAFARI);
     AddStartMenuAction(MENU_ACTION_POKEDEX);
-#if !IS_HNS
     AddStartMenuAction(MENU_ACTION_POKEMON);
-#endif
     AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -1063,16 +1053,10 @@ static bool8 BattlePyramidRetireCallback(void)
         ClearDialogWindowAndFrameToTransparent(0, TRUE);
         ScriptUnfreezeObjectEvents();
         UnlockPlayerFieldControls();
-#ifdef FIRERED
         if (IsJohtoCampaignMap())
             ScriptContext_SetupScript(BattlePyramid_Retire_hns);
         else
             ScriptContext_SetupScript(BattlePyramid_Retire);
-#elif IS_HNS
-        ScriptContext_SetupScript(BattlePyramid_Retire_hns);
-#else
-        ScriptContext_SetupScript(BattlePyramid_Retire);
-#endif
         return TRUE;
     }
 
@@ -1248,11 +1232,7 @@ static u8 SaveFileExistsCallback(void)
     }
     else
     {
-#if IS_HNS
-        sSaveDialogCallback = SaveSavingMessageCallback;
-#else
         ShowSaveMessage(gText_AlreadySavedFile, SaveConfirmOverwriteCallback);
-#endif
     }
 
     return SAVE_IN_PROGRESS;
@@ -1305,9 +1285,7 @@ static u8 SaveDoSaveCallback(void)
     if (gDifferentSaveFile == TRUE)
     {
         saveStatus = TrySavingData(SAVE_OVERWRITE_DIFFERENT_FILE);
-#ifdef FIRERED
         if (saveStatus == SAVE_STATUS_OK)
-#endif
             gDifferentSaveFile = FALSE;
     }
     else
@@ -1510,27 +1488,21 @@ static void Task_SaveAfterLinkBattle(u8 taskId)
             break;
         case 1:
             SetContinueGameWarpStatusToDynamicWarp();
-#ifdef FIRERED
         if (WriteSaveBlock2())
         {
             DoSaveFailedScreen(SAVE_LINK);
             return;
         }
-#else
-        WriteSaveBlock2();
-#endif
             *state = 2;
             break;
         case 2:
             if (WriteSaveBlock1Sector())
             {
-#ifdef FIRERED
                 if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
                 {
                     DoSaveFailedScreen(SAVE_LINK);
                     return;
                 }
-#endif
                 ClearContinueGameWarpStatus2();
                 *state = 3;
                 gSoftResetDisabled = FALSE;
@@ -1552,13 +1524,11 @@ static void Task_SaveAfterLinkBattle(u8 taskId)
         case 6:
             if (!FuncIsActiveTask(Task_LinkFullSave))
             {
-#ifdef FIRERED
         if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return;
         }
-#endif
                 *state = 3;
             }
             break;
@@ -1590,11 +1560,7 @@ static void ShowSaveInfoWindow(void)
 
     // Print region name
     yOffset = 1;
-#if IS_HNS
-    BufferSaveMenuText(SAVE_MENU_LOCATION, gStringVar4, TEXT_COLOR_DARK_GRAY);
-#else
     BufferSaveMenuText(SAVE_MENU_LOCATION, gStringVar4, TEXT_COLOR_GREEN);
-#endif
     AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL, gStringVar4, 0, yOffset, TEXT_SKIP_DRAW, NULL);
 
     // Print player name
@@ -1641,13 +1607,11 @@ static void Task_WaitForBattleTowerLinkSave(u8 taskId)
 {
     if (!FuncIsActiveTask(Task_LinkFullSave))
     {
-#ifdef FIRERED
         if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return;
         }
-#endif
         DestroyTask(taskId);
         ScriptContext_Enable();
     }
@@ -1675,17 +1639,6 @@ static void HideStartMenuWindow(void)
 void HideStartMenu(void)
 {
     PlaySE(SE_SELECT);
-#if IS_HNS
-    // Sets VAR_TEMP_MTSILVER_RESUME_BLIZZARD_SE to 0 if the player is in Mt. Silver,
-    // which is used to restart the SE_Blizzard which is stopped after opening the menu.
-    // Ideal fix would be to create a new Background Music file of the Blizzard
-    // music or similar sound effect that doesn't stop when the menu is opened.
-    // WARNING: VAR_TEMP_MTSILVER_RESUME_BLIZZARD_SE should not be used for anything else
-    // in MAPSEC_MT_SILVER, as it will be set to 0 when the start menu is opened and closed.
-    // Check variable aliases in vars_hns.h to ensire temporary variable is not used for anything else.
-    if (gMapHeader.regionMapSectionId == MAPSEC_MT_SILVER && (gMapHeader.mapLayoutId == LAYOUT_MT_SILVER_SUMMIT_DAY_HNS || gMapHeader.mapLayoutId == LAYOUT_MT_SILVER_SUMMIT_NIGHT_HNS))
-        VarSet(VAR_TEMP_MTSILVER_RESUME_BLIZZARD_SE, 0);
-#endif
     HideStartMenuWindow();
 }
 

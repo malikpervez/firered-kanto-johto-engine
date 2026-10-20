@@ -1,3 +1,5 @@
+@ Johto (data/maps/WhirlIslands_B1F_hns/scripts.inc), as built into the FireRed game.
+
 WhirlIslands_B1F_hns_MapScripts::
 	.byte 0
 
@@ -35,3 +37,4 @@ WhirlIslands_B1F_EventScript_Item_Calcium::
 WhirlIslands_B1F_EventScript_Item_Escape_Rope::
 	finditem ITEM_ESCAPE_ROPE
 	end
+

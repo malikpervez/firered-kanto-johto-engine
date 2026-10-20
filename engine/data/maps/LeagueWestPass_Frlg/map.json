@@ -64,8 +64,7 @@
       "script": "LeagueWestPass_EventScript_Sign"
     }
   ],
-  "game_version": "firered",
+  "game_version": "frlg",
   "region": "REGION_KANTO",
-  "firered_campaign": {},
   "floor_number": 0
 }

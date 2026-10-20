@@ -1,9 +1,7 @@
 #include "global.h"
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "constants/johto_ids.h"
 #include "regions.h"
-#endif
 #include "main.h"
 #include "credits.h"
 #include "event_data.h"
@@ -41,14 +39,12 @@ int GameClear(void)
 
     SetContinueGameWarpStatus();
 
-#ifdef FIRERED
     if (IsJohtoCampaignMap())
     {
         FlagSet(JOHTO_FLAG_SYS_GAME_CLEAR);
         SetContinueGameWarpToHealLocation(JOHTO_HEAL_LOCATION_NEW_BARK_TOWN_HNS);
     }
     else
-#endif
     if (IS_HNS)
         SetContinueGameWarpToHealLocation(HEAL_LOCATION_NEW_BARK_TOWN_HNS);
     else if (gSaveBlock2Ptr->playerGender == MALE)
@@ -97,11 +93,9 @@ int GameClear(void)
         }
     }
 
-#ifdef FIRERED
     if (IsJohtoCampaignMap())
         SetMainCallback2(CB2_DoHallOfFameScreenFrlg);
     else
-#endif
         SetMainCallback2(CB2_DoHallOfFameScreen);
     return 0;
 }
@@ -133,14 +127,12 @@ bool8 EnterHallOfFame(void)
         SetGameStat(GAME_STAT_FIRST_HOF_PLAY_TIME, (gSaveBlock2Ptr->playTimeHours << 16) | (gSaveBlock2Ptr->playTimeMinutes << 8) | gSaveBlock2Ptr->playTimeSeconds);
     }
     SetContinueGameWarpStatus();
-#ifdef FIRERED
     if (IsJohtoCampaignMap())
     {
         FlagSet(JOHTO_FLAG_SYS_GAME_CLEAR);
         SetContinueGameWarpToHealLocation(JOHTO_HEAL_LOCATION_NEW_BARK_TOWN_HNS);
     }
     else
-#endif
     if (IS_HNS)
         SetContinueGameWarpToHealLocation(HEAL_LOCATION_NEW_BARK_TOWN_HNS);
     else

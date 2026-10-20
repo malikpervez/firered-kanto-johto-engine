@@ -15,12 +15,8 @@
 #define TRAINER_PIC_SIZE (TRAINER_PIC_WIDTH * TRAINER_PIC_HEIGHT / 2)
 
 // Red and Leaf's back pics have 5 frames, but this is presumably irrelevant in the places this is used.
-#ifdef FIRERED
 // Kanto rear poses contain five frames, including the native follow-through.
 #define MAX_TRAINER_PIC_FRAMES 5
-#else
-#define MAX_TRAINER_PIC_FRAMES 4
-#endif
 
 enum {
     BATTLER_AFFINE_NORMAL,
@@ -212,9 +208,7 @@ extern const struct TrainerSprite gTrainerSprites[];
 extern const struct TrainerBacksprite gTrainerBacksprites[];
 
 extern const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT];
-#ifdef FIRERED
 extern const struct Trainer gJohtoTrainers[DIFFICULTY_COUNT][JOHTO_TRAINER_CATALOG_COUNT];
-#endif
 extern const struct Trainer gBattlePartners[DIFFICULTY_COUNT][PARTNER_COUNT];
 
 extern const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT];
@@ -254,10 +248,8 @@ static inline bool32 IsSpecialTrainer(u16 trainerId)
 
 static inline u16 SanitizeTrainerId(u16 trainerId)
 {
-#ifdef FIRERED
     if (JOHTO_TRAINER_IS_CATALOG_ID(trainerId))
         return trainerId;
-#endif
     assertf(trainerId < TRAINERS_COUNT, "invalid trainer: %d", trainerId)
     {
         return TRAINER_NONE;
@@ -266,7 +258,6 @@ static inline u16 SanitizeTrainerId(u16 trainerId)
     return trainerId;
 }
 
-#ifdef FIRERED
 // Battle IDs are stable across regions; the compact Johto ROM pool uses raw IDs.
 static inline const struct Trainer *GetTrainerStructForDifficulty(u16 trainerId, enum DifficultyLevel difficulty)
 {
@@ -275,7 +266,6 @@ static inline const struct Trainer *GetTrainerStructForDifficulty(u16 trainerId,
         return &gJohtoTrainers[difficulty][trainerId - JOHTO_TRAINER_ID_BASE];
     return &gTrainers[difficulty][trainerId];
 }
-#endif
 
 //sanitizes but also converts partner trainer ids into gBattlePartners indexes
 static inline u16 GetPartnerIdFromTrainerId(u16 trainerId)
@@ -301,11 +291,7 @@ static inline const struct Trainer *GetTrainerStructFromId(u16 trainerId)
     else
     {
         difficulty = GetTrainerDifficultyLevel(trainerId);
-#ifdef FIRERED
         return GetTrainerStructForDifficulty(trainerId, difficulty);
-#else
-        return &gTrainers[difficulty][SanitizeTrainerId(trainerId)];
-#endif
     }
 }
 

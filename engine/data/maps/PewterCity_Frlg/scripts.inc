@@ -17,10 +17,8 @@ PewterCity_EventScript_GymGuide::
 	closemessage
 	playbgm MUS_FOLLOW_ME, 0
 	call_if_eq VAR_FACING, DIR_EAST, PewterCity_EventScript_WalkToGymEast
-#ifdef FIRERED
 	call_if_eq VAR_FACING, DIR_WEST, PewterCity_EventScript_WalkToGymWest
 	call_if_eq VAR_FACING, DIR_NORTH, PewterCity_EventScript_WalkToGymNorth
-#endif
 	msgbox PewterCity_Text_GoTakeOnBrock
 	closemessage
 	applymovement LOCALID_PEWTER_GYM_GUIDE, PewterCity_Movement_GymGuideExit
@@ -61,7 +59,6 @@ PewterCity_EventScript_WalkToGymNorth::
 	return
 
 .macro walk_to_gym
-#ifdef FIRERED
 	walk_up
 	walk_left
 	walk_left
@@ -127,73 +124,9 @@ PewterCity_EventScript_WalkToGymNorth::
 	walk_up
 	walk_up
 	walk_left
-#else
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-#endif
 .endm
 
 .macro walk_to_gym_alt
-#ifdef FIRERED
 	walk_up
 	walk_up
 	walk_up
@@ -255,47 +188,6 @@ PewterCity_EventScript_WalkToGymNorth::
 	walk_up
 	walk_up
 	walk_left
-#else
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-#endif
 .endm
 
 PewterCity_Movement_PlayerWaitForGuideEast::
@@ -378,7 +270,6 @@ PewterCity_Movement_GuideWalkToGymNorth::
 	step_end
 
 PewterCity_Movement_GymGuideExit::
-#ifdef FIRERED
 	walk_down
 	walk_down
 	walk_left
@@ -394,20 +285,6 @@ PewterCity_Movement_GymGuideExit::
 	walk_left
 	walk_left
 	step_end
-#else
-	walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	step_end
-
-#endif
 PewterCity_EventScript_GymGuideTriggerTop::
 	lockall
 	setvar VAR_TEMP_1, 0
@@ -637,7 +514,6 @@ PewterCity_EventScript_CheckedOutMuseum::
 	end
 
 .macro walk_to_museum
-#ifdef FIRERED
 	walk_up
 	walk_left
 	walk_left
@@ -664,36 +540,9 @@ PewterCity_EventScript_CheckedOutMuseum::
 	walk_left
 	walk_up
 	walk_left
-#else
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-#endif
 .endm
 
 .macro walk_to_museum_south
-#ifdef FIRERED
 	walk_left
 	walk_left
 	walk_left
@@ -718,30 +567,6 @@ PewterCity_EventScript_CheckedOutMuseum::
 	walk_left
 	walk_up
 	walk_left
-#else
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-#endif
 .endm
 
 PewterCity_Movement_PlayerWalkToMuseumNorth::
@@ -801,7 +626,6 @@ PewterCity_Movement_GuideWalkToMuseumEast::
 	step_end
 
 PewterCity_Movement_MuseumGuideExit::
-#ifdef FIRERED
 	walk_down
 	walk_down
 	walk_down
@@ -819,24 +643,6 @@ PewterCity_Movement_MuseumGuideExit::
 	walk_right
 	walk_right
 	step_end
-#else
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-#endif
 PewterCity_EventScript_FatMan::
 	lock
 	faceplayer

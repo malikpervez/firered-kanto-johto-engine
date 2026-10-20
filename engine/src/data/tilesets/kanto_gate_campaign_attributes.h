@@ -1,5 +1,4 @@
 // Original pinned HnS GateStandard art with native FireRed gate behavior/layers.
-#ifdef FIRERED
 const u16 gMetatileAttributes_Gate_Standard_FireRedCampaign[] = {
     0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000,
     0x1000, 0x1000, 0x1000, 0x1080, 0x0000, 0x0080, 0x0000, 0x0000,
@@ -28,4 +27,3 @@ const u16 gMetatileAttributes_Gate_Standard_FireRedCampaign[] = {
     0x1000, 0x0000, 0x0000, 0x0000, 0x0000,
 };
 STATIC_ASSERT(ARRAY_COUNT(gMetatileAttributes_Gate_Standard_FireRedCampaign) == 197, Gate_Standard_FireRedCampaign_AttributeCount);
-#endif

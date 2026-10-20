@@ -20,7 +20,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_FRLG",
-      "x": 10,
+      "x": 9,
       "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -34,7 +34,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
-      "x": 4,
+      "x": 5,
       "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -49,21 +49,21 @@
   "warp_events": [
     {
       "x": 6,
-      "y": 10,
+      "y": 9,
       "elevation": 3,
       "dest_map": "MAP_ROUTE2",
       "dest_warp_id": "2"
     },
     {
       "x": 7,
-      "y": 10,
+      "y": 9,
       "elevation": 3,
       "dest_map": "MAP_ROUTE2",
       "dest_warp_id": "2"
     },
     {
       "x": 8,
-      "y": 10,
+      "y": 9,
       "elevation": 3,
       "dest_map": "MAP_ROUTE2",
       "dest_warp_id": "2"
@@ -78,75 +78,13 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "blockdata_filepath": "data/layouts/Gate_Route2_ViridianForest_hns/map.bin",
-      "border_filepath": "data/layouts/Gate_Route2_ViridianForest_hns/border.bin",
-      "height": 12,
-      "layout_version": "hns",
-      "primary_tileset": "gTileset_Kanto_Building_Hns",
-      "secondary_tileset": "gTileset_Gate_Standard_Hns",
-      "width": 15
-    },
-    "object_events": [
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_FRLG",
-        "x": 9,
-        "y": 6,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Route2_ViridianForest_SouthEntrance_EventScript_Woman1",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
-        "x": 5,
-        "y": 7,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Route2_ViridianForest_SouthEntrance_EventScript_Woman2",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 6,
-        "y": 9,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE2",
-        "dest_warp_id": "2"
-      },
-      {
-        "x": 7,
-        "y": 9,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE2",
-        "dest_warp_id": "2"
-      },
-      {
-        "x": 8,
-        "y": 9,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE2",
-        "dest_warp_id": "2"
-      },
-      {
-        "x": 7,
-        "y": 1,
-        "elevation": 3,
-        "dest_map": "MAP_VIRIDIAN_FOREST",
-        "dest_warp_id": "0"
-      }
-    ]
+  "firered_geometry": {
+    "blockdata_filepath": "data/layouts/Gate_Route2_ViridianForest_hns/map.bin",
+    "border_filepath": "data/layouts/Gate_Route2_ViridianForest_hns/border.bin",
+    "height": 12,
+    "layout_version": "hns",
+    "primary_tileset": "gTileset_Kanto_Building_Hns",
+    "secondary_tileset": "gTileset_Gate_Standard_Hns",
+    "width": 15
   }
 }

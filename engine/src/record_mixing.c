@@ -996,27 +996,21 @@ static void Task_DoRecordMixing(u8 taskId)
     case 2:
         // Mixing Ruby/Sapphire records.
         SetContinueGameWarpStatusToDynamicWarp();
-        #ifdef FIRERED
         if (WriteSaveBlock2())
         {
             DoSaveFailedScreen(SAVE_LINK);
             return;
         }
-#else
-        WriteSaveBlock2();
-#endif
         task->tState++;
         break;
     case 3:
         if (WriteSaveBlock1Sector())
         {
-#ifdef FIRERED
                 if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
                 {
                     DoSaveFailedScreen(SAVE_LINK);
                     return;
                 }
-#endif
             ClearContinueGameWarpStatus2();
             task->tState = 4;
             task->data[1] = 0;
@@ -1046,13 +1040,11 @@ static void Task_DoRecordMixing(u8 taskId)
     case 7: // wait for Task_LinkFullSave to finish.
         if (!FuncIsActiveTask(Task_LinkFullSave))
         {
-#ifdef FIRERED
         if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return;
         }
-#endif
             if (gWirelessCommType)
             {
                 Rfu_SetLinkRecovery(TRUE);

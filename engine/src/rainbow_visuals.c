@@ -1,5 +1,4 @@
 #include "global.h"
-#ifdef FIRERED
 #include "battle.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -333,4 +332,3 @@ void Special_RainbowMewGlimpse(void)
 {
     StartSkyVisit(gSpecialVar_0x8004 >= 2 ? 3 : (gSpecialVar_0x8004 ? 2 : 1));
 }
-#endif

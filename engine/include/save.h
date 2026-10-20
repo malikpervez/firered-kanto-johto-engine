@@ -16,11 +16,7 @@
 
 #define SPECIAL_SECTOR_SENTINEL 0xB39D
 
-#ifdef FIRERED
 #define SAVE_VERSION       6
-#else
-#define SAVE_VERSION       5
-#endif
 #define SAVE_VERSION_MAGIC 0xE8F828BC
 
 #define SECTOR_ID_SAVEBLOCK2          0

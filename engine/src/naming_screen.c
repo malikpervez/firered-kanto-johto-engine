@@ -1,10 +1,8 @@
 #include "global.h"
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "regional_save.h"
 #include "firered_save.h"
 #include "regions.h"
-#endif
 #include "naming_screen.h"
 #include "malloc.h"
 #include "palette.h"
@@ -201,18 +199,11 @@ static const u8 sPCIconOn_Gfx[] = INCBIN_U8("graphics/naming_screen/pc_icon_on.4
 static const u16 sKeyboard_Pal[] = INCBIN_U16("graphics/naming_screen/keyboard.gbapal");
 static const u32 sShinyStarTiles[] = INCBIN_U32("graphics/summary_screen/shiny_icon.4bpp.lz");
 static const u16 sShinyStarPal[] = INCBIN_U16("graphics/summary_screen/heart.gbapal");
-#if IS_HNS
-static const u16 sRival_Gfx[] = INCBIN_U16("graphics/naming_screen/silver.4bpp");
-static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/silver.gbapal");
-#else
 static const u16 sRival_Gfx[] = INCBIN_U16("graphics/naming_screen/rival.4bpp");
 static const u16 sRival_Pal[] = INCBIN_U16("graphics/naming_screen/rival.gbapal");
-#endif
 
-#ifdef FIRERED
 static const u16 sJohtoRival_Gfx[] = INCBIN_U16("graphics/naming_screen/silver.4bpp");
 static const u16 sJohtoRival_Pal[] = INCBIN_U16("graphics/naming_screen/silver.gbapal");
-#endif
 
 static const u8 *const sTransferredToPCMessages[] =
 {
@@ -727,10 +718,8 @@ static bool8 MainState_Exit(void)
 {
     if (!gPaletteFade.active)
     {
-#if !IS_HNS
         if (sNamingScreen->templateNum == NAMING_SCREEN_PLAYER)
             SeedRngAndSetTrainerId();
-#endif
         if (sNamingScreen->templateNum == NAMING_SCREEN_CAUGHT_MON
          && CalculatePlayerPartyCount() < PARTY_SIZE)
             SetMainCallback2(BattleMainCB2);
@@ -1497,25 +1486,16 @@ static const union AnimCmd *const sAnims_Rival[] =
 
 static void NamingScreen_CreateRivalIcon(void)
 {
-#ifdef FIRERED
     struct SpriteSheet sheet = {
-#else
-    const struct SpriteSheet sheet = {
-#endif
         sRival_Gfx, 0x900, GFXTAG_RIVAL
     };
-#ifdef FIRERED
     struct SpritePalette palette = {
-#else
-    const struct SpritePalette palette = {
-#endif
         sRival_Pal, PALTAG_RIVAL
     };
     struct SpriteTemplate template;
     const struct SubspriteTable * tables_p;
     u8 spriteId;
 
-#ifdef FIRERED
     if (sNamingScreen->destBuffer == (u8 *)gSaveBlock3Ptr + REGIONAL_SAVE_JOHTO_RIVAL_OFFSET
         && JohtoCampaign_IsSeeded())
     {
@@ -1525,11 +1505,6 @@ static void NamingScreen_CreateRivalIcon(void)
     }
     else
         CopyObjectGraphicsInfoToSpriteTemplate(OBJ_EVENT_GFX_RED_NORMAL, SpriteCallbackDummy, &template, &tables_p);
-#elif IS_HNS
-    CopyObjectGraphicsInfoToSpriteTemplate(OBJ_EVENT_GFX_GOLD_NORMAL_HNS, SpriteCallbackDummy, &template, &tables_p);
-#else
-    CopyObjectGraphicsInfoToSpriteTemplate(OBJ_EVENT_GFX_RED_NORMAL, SpriteCallbackDummy, &template, &tables_p);
-#endif
 
     template.tileTag = sheet.tag;
     template.paletteTag = palette.tag;
@@ -2294,7 +2269,6 @@ static void UNUSED Debug_NamingScreenNickname(void)
 
 void NameRival(void)
 {
-#ifdef FIRERED
     if (IsJohtoCampaignMap() && JohtoCampaign_IsSeeded())
     {
         u8 *name = (u8 *)gSaveBlock3Ptr + REGIONAL_SAVE_JOHTO_RIVAL_OFFSET;
@@ -2302,7 +2276,6 @@ void NameRival(void)
         DoNamingScreen(NAMING_SCREEN_RIVAL, name, 0, 0, 0, 0, CB2_ReturnToFieldContinueScript);
         return;
     }
-#endif
     StringCopy(gSaveBlock2Ptr->rivalName, gText_ExpandedPlaceholder_Silver);
     DoNamingScreen(NAMING_SCREEN_RIVAL, gSaveBlock2Ptr->rivalName, 0, 0, 0, 0, CB2_ReturnToFieldContinueScript);
 }

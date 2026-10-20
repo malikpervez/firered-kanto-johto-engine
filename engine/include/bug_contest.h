@@ -16,10 +16,8 @@ void BugContestRetirePrompt(void);
 bool8 RemoveSportBalls(void);
 bool8 ShowBugContestChosenMon(void);
 
-#ifdef FIRERED
 #define BugContest_EventScript_TimesUp J_BugContest_EventScript_TimesUp
 #define BugContest_EventScript_WhiteOut J_BugContest_EventScript_WhiteOut
-#endif
 extern const u8 BugContest_EventScript_TimesUp[];
 extern const u8 BugContest_EventScript_WhiteOut[];
 

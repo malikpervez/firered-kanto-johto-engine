@@ -1,3 +1,5 @@
+@ Johto (data/maps/SinjohRuins_RegirockRoom_hns/scripts.inc), as built into the FireRed game.
+
 SinjohRuins_RegirockRoom_hns_MapScripts::
 	.byte 0
 
@@ -13,7 +15,7 @@ SinjohRuins_RegirockRoom_EventScript_Regirock::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_RegirockRoom_EventScript_RegirockRan
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_SINJOHRUINS_REGIROCK
-	setflag FLAG_HIDE_SINJOHRUINS_REGIROCK
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGIROCK
 	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end

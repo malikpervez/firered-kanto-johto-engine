@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "kanto_connection_seam.h"
-#endif
 #include "berry.h"
 #include "bike.h"
 #include "field_camera.h"
@@ -230,14 +228,12 @@ static void DrawMetatileAt(const struct MapLayout *mapLayout, u16 offset, int x,
 {
     u16 metatileId = MapGridGetMetatileIdAt(x, y);
     const u16 *metatiles;
-#ifdef FIRERED
     const struct KantoSeamMetatile *seam = KantoSeam_GetMetatile(mapLayout, metatileId);
     if (seam != NULL)
     {
         DrawMetatile(ExtractMetatileAttribute(seam->attributes, METATILE_ATTRIBUTE_LAYER_TYPE, seam->layoutVersion), seam->tiles, offset);
         return;
     }
-#endif
 
     if (metatileId > NUM_METATILES_TOTAL)
         metatileId = 0;

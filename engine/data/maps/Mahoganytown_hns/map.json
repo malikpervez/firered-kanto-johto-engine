@@ -3,7 +3,7 @@
   "name": "Mahoganytown_hns",
   "layout": "LAYOUT_MAHOGANYTOWN_HNS",
   "music": "MUS_HG_CHERRYGROVE",
-  "region_map_section": "MAPSEC_MAHOGANY_TOWN",
+  "region_map_section": "JOHTO_MAPSEC_MAHOGANY_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
@@ -81,7 +81,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MahoganyTown_EventScript_Fisher",
-      "flag": "FLAG_HIDE_MAHOGANY_TOWN_FATMAN"
+      "flag": "JOHTO_FLAG_HIDE_MAHOGANY_TOWN_FATMAN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_AIPOM",
@@ -192,7 +192,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "1",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -201,7 +201,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "1",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -210,7 +210,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "1",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -219,7 +219,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "2",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -228,7 +228,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "2",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -237,7 +237,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "2",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -246,7 +246,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "3",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -255,7 +255,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "3",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -264,7 +264,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "3",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -273,7 +273,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "4",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -282,7 +282,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "4",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -291,7 +291,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "4",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -300,7 +300,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "5",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -309,7 +309,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "5",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -318,7 +318,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "5",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -327,7 +327,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "6",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -336,7 +336,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "6",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -345,7 +345,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "6",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -354,7 +354,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "7",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -363,7 +363,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "8",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -372,7 +372,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "9",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -381,7 +381,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "10",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -390,7 +390,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "11",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -399,7 +399,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "12",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -408,7 +408,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "13",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -417,7 +417,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "14",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -426,7 +426,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "15",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -435,7 +435,7 @@
       "x": 30,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "16",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -444,7 +444,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "16",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -453,7 +453,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "15",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -462,7 +462,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "14",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -471,7 +471,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "13",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -480,7 +480,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "12",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -489,7 +489,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "11",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -498,7 +498,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "10",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -507,7 +507,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "9",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -516,7 +516,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "8",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -525,7 +525,7 @@
       "x": 30,
       "y": 13,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "7",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -534,7 +534,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "16",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -543,7 +543,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "15",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -552,7 +552,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "14",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -561,7 +561,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "13",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -570,7 +570,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "12",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -579,7 +579,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "11",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -588,7 +588,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "10",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -597,7 +597,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "9",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -606,7 +606,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "8",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     },
@@ -615,7 +615,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_MAHOGANY_TOWN_STATE",
+      "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
       "var_value": "7",
       "script": "MahoganyTown_EventScript_MerchantTrigger"
     }
@@ -646,644 +646,6 @@
       "script": "MahoganyTown_EventScript_GymSign"
     }
   ],
-  "game_version": "hns",
-  "region": "REGION_JOHTO",
-  "firered_campaign": {
-    "connections": [
-      {
-        "map": "MAP_ROUTE42_HNS",
-        "offset": -3,
-        "direction": "left"
-      },
-      {
-        "map": "MAP_ROUTE43_HNS",
-        "offset": 2,
-        "direction": "up"
-      },
-      {
-        "map": "MAP_ROUTE44_HNS",
-        "offset": -2,
-        "direction": "right"
-      }
-    ],
-    "object_events": [
-      {
-        "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
-        "x": 7,
-        "y": 13,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "MahoganyTown_EventScript_Gramps",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_HNS",
-        "x": 24,
-        "y": 8,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "MahoganyTown_EventScript_Lass",
-        "flag": "0"
-      },
-      {
-        "local_id": "LOCALID_MAHOGANY_MERCHANT",
-        "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN_HNS",
-        "x": 30,
-        "y": 11,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "MahoganyTown_EventScript_Merchant",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_HNS",
-        "x": 10,
-        "y": 20,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "MahoganyTown_EventScript_Fisher",
-        "flag": "JOHTO_FLAG_HIDE_MAHOGANY_TOWN_FATMAN"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_AIPOM",
-        "x": 27,
-        "y": 6,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_AIPOM",
-        "x": 28,
-        "y": 16,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_AIPOM",
-        "x": 24,
-        "y": 17,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_AIPOM",
-        "x": 9,
-        "y": 2,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
-        "x": 8,
-        "y": 16,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 14,
-        "y": 4,
-        "elevation": 0,
-        "dest_map": "MAP_GATE_MAHOGANY_TOWN_ROUTE43_HNS",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 15,
-        "y": 10,
-        "elevation": 0,
-        "dest_map": "MAP_MAHOGANY_TOWN_SHOP_HNS",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 27,
-        "y": 10,
-        "elevation": 0,
-        "dest_map": "MAP_MAHOGANY_TOWN_HOUSE1_HNS",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 10,
-        "y": 19,
-        "elevation": 0,
-        "dest_map": "MAP_MAHOGANY_TOWN_GYM_HNS",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 21,
-        "y": 19,
-        "elevation": 0,
-        "dest_map": "MAP_MAHOGANY_TOWN_POKEMON_CENTER_HNS",
-        "dest_warp_id": "0"
-      }
-    ],
-    "coord_events": [
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "1",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "1",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "1",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "2",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "2",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "2",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "3",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "3",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "3",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "4",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "4",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "4",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "5",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "5",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "5",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "6",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "6",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "6",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "7",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "8",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "9",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "10",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "11",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "12",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "13",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "14",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "15",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 12,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "16",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "16",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "15",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "14",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "13",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "12",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "11",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "10",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "9",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "8",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 13,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "7",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "16",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "15",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "14",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "13",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "12",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "11",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "10",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "9",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "8",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      },
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_MAHOGANY_TOWN_STATE",
-        "var_value": "7",
-        "script": "MahoganyTown_EventScript_MerchantTrigger"
-      }
-    ],
-    "bg_events": [
-      {
-        "type": "sign",
-        "x": 7,
-        "y": 11,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "MahoganyTown_EventScript_Sign"
-      },
-      {
-        "type": "sign",
-        "x": 17,
-        "y": 11,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "MahoganyTown_EventScript_CandybarSign"
-      },
-      {
-        "type": "sign",
-        "x": 12,
-        "y": 19,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "MahoganyTown_EventScript_GymSign"
-      }
-    ],
-    "region_map_section": "JOHTO_MAPSEC_MAHOGANY_TOWN",
-    "region": "REGION_JOHTO"
-  }
+  "game_version": "frlg",
+  "region": "REGION_JOHTO"
 }

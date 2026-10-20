@@ -1,7 +1,6 @@
 #ifndef GUARD_FRIENDS_GIRATINA_GRAPHICS_H
 #define GUARD_FRIENDS_GIRATINA_GRAPHICS_H
 
-#ifdef FIRERED
 // Exact native Giratina Altered south-idle frame and original palette. Only
 // this scripted presence uses the one-frame sheet; species/follower art and
 // normal species graphics remain unchanged. No new form or acquisition route.
@@ -40,6 +39,5 @@ static const struct ObjectEventGraphicsInfo sFriendsGiratinaGraphicsInfo = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 STATIC_ASSERT(sizeof(sFriendsGiratinaPic) == 2048, FriendsGiratinaSingleFrame);
-#endif
 
 #endif

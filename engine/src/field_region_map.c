@@ -10,9 +10,7 @@
 #include "overworld.h"
 #include "palette.h"
 #include "region_map.h"
-#ifdef FIRERED
 #include "regions.h"
-#endif
 #include "sound.h"
 #include "strings.h"
 #include "text.h"
@@ -157,12 +155,10 @@ static void FieldUpdateRegionMap(void)
         sFieldRegionMapHandler->state++;
         break;
     case 1:
-#if !IS_HNS
         DrawStdFrameWithCustomTileAndPalette(WIN_TITLE, FALSE, 0x27, 0xd);
         FillWindowPixelBuffer(WIN_TITLE, PIXEL_FILL(1));
         PrintTitleWindowText();
         ScheduleBgCopyTilemapToVram(0);
-#endif
         DrawStdFrameWithCustomTileAndPalette(WIN_MAPSEC_NAME, FALSE, 0x27, 0xd);
         PrintRegionMapSecName();
         BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
@@ -185,9 +181,7 @@ static void FieldUpdateRegionMap(void)
         {
         case MAP_INPUT_MOVE_END:
                 PrintRegionMapSecName();
-#if !IS_HNS
                 PrintTitleWindowText();
-#endif
                 break;
         case MAP_INPUT_A_BUTTON:
         case MAP_INPUT_B_BUTTON:
@@ -239,11 +233,9 @@ static void PrintTitleWindowText(void)
 {
     static const u8 FlyPromptText[] = _("{R_BUTTON} FLY");
     const u8 *region;
-#ifdef FIRERED
     if (IsJohtoCampaignMap())
         region = gText_Johto;
     else
-#endif
     if (IS_HNS)
         region = gText_Johto;
     else if (IS_FRLG)

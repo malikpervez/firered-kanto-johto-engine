@@ -20231,17 +20231,10 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 
 #if OW_POKEMON_OBJECT_EVENTS
     const u32 gObjectEventPic_FloetteRed[] = INCBIN_COMP("graphics/pokemon/floette/overworld.4bpp");
-#ifdef FIRERED
     extern const u32 gObjectEventPic_FloetteYellow[228] __attribute__((alias("gObjectEventPic_FloetteRed")));
     extern const u32 gObjectEventPic_FloetteOrange[228] __attribute__((alias("gObjectEventPic_FloetteRed")));
     extern const u32 gObjectEventPic_FloetteBlue[228] __attribute__((alias("gObjectEventPic_FloetteRed")));
     extern const u32 gObjectEventPic_FloetteWhite[228] __attribute__((alias("gObjectEventPic_FloetteRed")));
-#else
-    const u32 gObjectEventPic_FloetteYellow[] = INCBIN_COMP("graphics/pokemon/floette/yellow/overworld.4bpp");
-    const u32 gObjectEventPic_FloetteOrange[] = INCBIN_COMP("graphics/pokemon/floette/orange/overworld.4bpp");
-    const u32 gObjectEventPic_FloetteBlue[] = INCBIN_COMP("graphics/pokemon/floette/blue/overworld.4bpp");
-    const u32 gObjectEventPic_FloetteWhite[] = INCBIN_COMP("graphics/pokemon/floette/white/overworld.4bpp");
-#endif
     const u32 gObjectEventPic_FloetteEternal[] = INCBIN_COMP("graphics/pokemon/floette/eternal/overworld.4bpp");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const u16 gOverworldPalette_FloetteRed[] = INCBIN_U16("graphics/pokemon/floette/overworld_normal.gbapal");

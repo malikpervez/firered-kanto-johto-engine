@@ -1,12 +1,8 @@
 #include "global.h"
-#ifdef FIRERED
 #include "kanto_connection_seam.h"
-#endif
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "constants/johto_ids.h"
 #include "regions.h"
-#endif
 #include "overworld.h"
 #include "constants/heal_locations.h"
 #include "battle_pyramid.h"
@@ -429,9 +425,7 @@ void Overworld_ResetStateAfterFly(void)
     FlagClear(FLAG_SYS_CYCLING_ROAD);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
-#if IS_FRLG
     VarSet(VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 0);
-#endif
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
 }
@@ -442,9 +436,7 @@ void Overworld_ResetStateAfterTeleport(void)
     FlagClear(FLAG_SYS_CYCLING_ROAD);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
-#if IS_FRLG
     VarSet(VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 0);
-#endif
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
     RunScriptImmediately(EventScript_ResetMrBriney);
@@ -456,9 +448,7 @@ void Overworld_ResetStateAfterDigEscRope(void)
     FlagClear(FLAG_SYS_CYCLING_ROAD);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
-#if IS_FRLG
     VarSet(VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 0);
-#endif
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
 }
@@ -493,9 +483,7 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_SYS_CYCLING_ROAD);
     FlagClear(FLAG_SYS_CRUISE_MODE);
     FlagClear(FLAG_SYS_SAFARI_MODE);
-#if IS_FRLG
     VarSet(VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 0);
-#endif
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
     if (B_RESET_FLAGS_VARS_AFTER_WHITEOUT == TRUE)
@@ -513,9 +501,7 @@ static void Overworld_ResetStateAfterWhiteOut(void)
 static void UpdateMiscOverworldStates(void)
 {
     FlagClear(FLAG_SYS_SAFARI_MODE);
-#if IS_FRLG
     VarSet(VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 0);
-#endif
     ChooseAmbientCrySpecies();
     ResetCyclingRoadChallengeData();
     UpdateLocationHistoryForRoamer();
@@ -554,10 +540,8 @@ u32 GetGameStat(u8 index)
 
 void SetGameStat(u8 index, u32 value)
 {
-#ifdef FIRERED
     if (index < NUM_USED_GAME_STATS && GetGameStat(index) != value)
         FireRedSave_NotifyPersistentWrite();
-#endif
     if (index < NUM_USED_GAME_STATS)
         gSaveBlock1Ptr->gameStats[index] = value ^ gSaveBlock2Ptr->encryptionKey;
 }
@@ -608,13 +592,9 @@ void LoadSaveblockObjEventScripts(void)
     s32 i;
 
     for (i = 0; i < OBJECT_EVENT_TEMPLATES_COUNT; i++)
-#ifdef FIRERED
         // Saved templates have fixed capacity; the current ROM array does not.
         savObjTemplates[i].script = i < gMapHeader.events->objectEventCount
             ? mapHeaderObjTemplates[i].script : NULL;
-#else
-        savObjTemplates[i].script = mapHeaderObjTemplates[i].script;
-#endif
 }
 
 static struct ObjectEventTemplate *GetObjectEventTemplate(u8 localId)
@@ -634,10 +614,8 @@ void SetObjEventTemplateCoords(u8 localId, s16 x, s16 y)
     struct ObjectEventTemplate *objectEventTemplate = GetObjectEventTemplate(localId);
     if (objectEventTemplate)
     {
-#ifdef FIRERED
         if (objectEventTemplate->x != x || objectEventTemplate->y != y)
             FireRedSave_NotifyPersistentWrite();
-#endif
         objectEventTemplate->x = x;
         objectEventTemplate->y = y;
     }
@@ -648,10 +626,8 @@ void SetObjEventTemplateMovementType(u8 localId, u8 movementType)
     struct ObjectEventTemplate *objectEventTemplate = GetObjectEventTemplate(localId);
     if (objectEventTemplate)
     {
-#ifdef FIRERED
         if (objectEventTemplate->movementType != movementType)
             FireRedSave_NotifyPersistentWrite();
-#endif
         objectEventTemplate->movementType = movementType;
     }
 }
@@ -672,9 +648,7 @@ const struct MapLayout *GetMapLayout(u16 mapLayoutId)
 
 void ApplyCurrentWarp(void)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     gLastUsedWarp = gSaveBlock1Ptr->location;
     gSaveBlock1Ptr->location = sWarpDestination;
     sFixedDiveWarp = sDummyWarpData;
@@ -727,19 +701,14 @@ static void LoadCurrentMapData(void)
     sLastMapSectionId = gMapHeader.regionMapSectionId;
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
     gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
-#ifndef FIRERED
-    gMapHeader.mapLayout = GetMapLayout(gMapHeader.mapLayoutId);
-#endif
 }
 
 static void LoadSaveblockMapHeader(void)
 {
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
-#ifdef FIRERED
     // A map can use local artwork while retaining its original layout ID.
     // Explicit saved dynamic layouts still resolve through the global table.
     if (gSaveBlock1Ptr->mapLayoutId != gMapHeader.mapLayoutId)
-#endif
     gMapHeader.mapLayout = GetMapLayout(gSaveBlock1Ptr->mapLayoutId);
 }
 
@@ -819,14 +788,6 @@ void SetWarpDestinationToLastHealLocation(void)
     else
         sWarpDestination = gSaveBlock1Ptr->lastHealLocation;
 
-#if IS_HNS
-    if (sWarpDestination.mapGroup == 0 && sWarpDestination.mapNum == 0)
-    {
-        const struct HealLocation *fallback = GetHealLocation(HEAL_LOCATION_NEW_BARK_TOWN_HNS);
-        if (fallback)
-            SetWarpDestination(fallback->mapGroup, fallback->mapNum, WARP_ID_NONE, fallback->x, fallback->y);
-    }
-#endif
 }
 
 void SetWarpDestinationForTeleport(void)
@@ -950,9 +911,7 @@ bool8 SetDiveWarpDive(u16 x, u16 y)
 
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
 {
-#ifdef FIRERED
     const struct MapLayout *previousLayout = gMapHeader.mapLayout;
-#endif
     SetWarpDestination(mapGroup, mapNum, WARP_ID_NONE, -1, -1);
 
     // Dont transition map music between BF Outside West/East
@@ -981,7 +940,6 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     Overworld_ClearSavedMusic();
     RunOnTransitionMapScript();
     InitMap();
-#ifdef FIRERED
     if (previousLayout->primaryTileset != gMapHeader.mapLayout->primaryTileset
      || GetNumTilesInPrimary(previousLayout) != GetNumTilesInPrimary(gMapHeader.mapLayout)
      || GetNumPalsInPrimary(previousLayout) != GetNumPalsInPrimary(gMapHeader.mapLayout))
@@ -997,32 +955,23 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     }
     else
     {
-#endif
-#ifdef FIRERED
     // Restore raw primary palette entries when entering or leaving an exact
     // index-packed seam, retaining the current primary glyph animation phase.
     bool8 refreshPrimaryPalette = KantoSeam_ChangesPrimaryPalette(previousLayout)
                               || KantoSeam_ChangesPrimaryPalette(gMapHeader.mapLayout);
     if (refreshPrimaryPalette)
         LoadPrimaryTilesetPaletteSkipFaded(gMapHeader.mapLayout);
-#endif
     CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
     LoadSecondaryTilesetPalette(gMapHeader.mapLayout, TRUE); // skip copying to Faded, gamma shift will take care of it
-#ifdef FIRERED
     KantoSeam_LoadResources(gMapHeader.mapLayout, TRUE);
-#endif
 
-#ifdef FIRERED
     if (refreshPrimaryPalette)
         ApplyWeatherColorMapToPals(0, NUM_PALS_TOTAL);
     else
-#endif
     ApplyWeatherColorMapToPals(GetNumPalsInPrimary(gMapHeader.mapLayout), NUM_PALS_TOTAL - GetNumPalsInPrimary(gMapHeader.mapLayout)); // palettes [6,12]
 
     InitSecondaryTilesetAnimation();
-#ifdef FIRERED
     }
-#endif
     UpdateLocationHistoryForRoamer();
     MoveAllRoamers();
     TryShowRoamerFlash();
@@ -1243,11 +1192,9 @@ u8 GetFlashLevel(void)
 void SetCurrentMapLayout(u16 mapLayoutId)
 {
     gSaveBlock1Ptr->mapLayoutId = mapLayoutId;
-#ifdef FIRERED
     if (mapLayoutId == gMapHeader.mapLayoutId)
         gMapHeader.mapLayout = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->mapLayout;
     else
-#endif
     gMapHeader.mapLayout = GetMapLayout(mapLayoutId);
 }
 
@@ -1429,11 +1376,7 @@ void Overworld_PlaySpecialMapMusic(void)
     if (gDisableMapMusicChangeOnMapLoad == MUSIC_DISABLE_KEEP)
         return;
 
-#if defined(FIRERED)
     if ((IS_HNS || IsJohtoCampaignMap()) && VarGet(VAR_TEMP_RADIO_MUSIC) != 0)
-#else
-    if (IS_HNS && VarGet(VAR_TEMP_RADIO_MUSIC) != 0)
-#endif
     {
         music = VarGet(VAR_TEMP_RADIO_MUSIC);
     }
@@ -1444,11 +1387,7 @@ void Overworld_PlaySpecialMapMusic(void)
         else if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
             music = MUS_UNDERWATER;
         else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && !gSaveblock3.challengeSettings.surfMusic)
-#if defined(FIRERED)
             music = ((IS_HNS || IsJohtoCampaignMap()) ? MUS_HG_SURF : MUS_RG_SURF);
-#else
-            music = (IS_HNS ? MUS_HG_SURF : IS_FRLG ? MUS_RG_SURF : MUS_SURF);
-#endif
     }
 
     if (music != GetCurrentMapMusic())
@@ -1872,25 +1811,6 @@ void UpdateTimeOfDay(void)
         gTimeOfDay = TIME_DAY;
     }
 
-#if IS_HNS
-    if (IS_HNS)
-    {
-        // HnS wild encounter tables only define Day and Night variants, so TIME_MORNING
-        // and TIME_EVENING both fall back to the Day table (OW_TIME_OF_DAY_FALLBACK).
-        // The overworld mons must swap on the same boundary, i.e. only at TIME_NIGHT.
-        if (gTimeOfDay == TIME_NIGHT)
-        {
-            FlagClear(FLAG_NIGHT_POKEMON);
-            FlagSet(FLAG_DAY_POKEMON);
-        }
-        else
-        {
-            FlagSet(FLAG_NIGHT_POKEMON);
-            FlagClear(FLAG_DAY_POKEMON);
-        }
-    }
-#endif
-#ifdef FIRERED
     if (JohtoCampaign_IsSeeded())
     {
         if (gTimeOfDay == TIME_NIGHT)
@@ -1904,7 +1824,6 @@ void UpdateTimeOfDay(void)
             FlagClear(JOHTO_FLAG_DAY_POKEMON);
         }
     }
-#endif
 }
 
 #undef MORNING_HOUR_MIDDLE

@@ -819,7 +819,6 @@ gSongTable::
 dummy_song_header:
 	.byte 0, 0, 0, 0
 gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGSS instead of being from Crystal.
-#ifdef FIRERED
 	@ Optional GB PLAYER counterparts for the native Kanto map/movement BGMs.
 	@ Reuse the existing HnS mappings' headers; ordinary music stays unchanged.
 	song_gbs MUS_RG_PALLET, gbs_pallettown_Header, 0, 0
@@ -835,7 +834,6 @@ gGBSSongTable:: @ "gbs_hg_" tracks are new tracks that were transcribed from HGS
 	song_gbs MUS_RG_ROUTE24, gbs_hg_route24_Header, 0, 0
 	song_gbs MUS_RG_SURF, gbs_surf_Header, 0, 0
 	song_gbs MUS_RG_CYCLING, gbs_bicycle_Header, 0, 0
-#endif
 	
 	@song_gbs SE_SELECT, gbs_sfx_readtext_Header, 2, 2
 

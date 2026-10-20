@@ -8,21 +8,9 @@ CeruleanCity_OnTransition::
 	end
 
 CeruleanCity_EventScript_BlockExits::
-#ifdef FIRERED
 	setobjectxyperm LOCALID_CERULEAN_POLICEMAN, 35, 23
-#else
-	setobjectxyperm LOCALID_CERULEAN_POLICEMAN, 30, 12
-#endif
-#ifdef FIRERED
 	setobjectxyperm LOCALID_CERULEAN_SLOWBRO, 15, 45
-#else
-	setobjectxyperm LOCALID_CERULEAN_SLOWBRO, 26, 31
-#endif
-#ifdef FIRERED
 	setobjectxyperm LOCALID_CERULEAN_LASS, 16, 45
-#else
-	setobjectxyperm LOCALID_CERULEAN_LASS, 27, 31
-#endif
 	return
 
 CeruleanCity_EventScript_RivalTriggerLeft::
@@ -34,22 +22,14 @@ CeruleanCity_EventScript_RivalTriggerLeft::
 CeruleanCity_EventScript_RivalTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
-#ifdef FIRERED
 	setobjectxyperm LOCALID_CERULEAN_RIVAL, 42, 1
-#else
-	setobjectxyperm LOCALID_CERULEAN_RIVAL, 23, 0
-#endif
 	goto CeruleanCity_EventScript_Rival
 	end
 
 CeruleanCity_EventScript_RivalTriggerRight::
 	lockall
 	setvar VAR_TEMP_1, 2
-#ifdef FIRERED
 	setobjectxyperm LOCALID_CERULEAN_RIVAL, 44, 1
-#else
-	setobjectxyperm LOCALID_CERULEAN_RIVAL, 24, 0
-#endif
 	goto CeruleanCity_EventScript_Rival
 	end
 
@@ -555,11 +535,9 @@ CeruleanCity_Text_GymSign::
 	.string "The Tomboyish Mermaid!$"
 
 
-#ifdef FIRERED
 CeruleanCity_EventScript_RivalTriggerExtraMid::
     lockall
     setvar VAR_TEMP_1, 1
     setobjectxyperm LOCALID_CERULEAN_RIVAL, 43, 1
     goto CeruleanCity_EventScript_Rival
     end
-#endif

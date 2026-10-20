@@ -1,18 +1,19 @@
+@ Johto (data/maps/NationalPark_BugContest_hns/scripts.inc), as built into the FireRed game.
+
 NationalPark_BugContest_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NationalPark_BugContest_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NationalPark_BugContest_OnFrame
 	.byte 0
 
 NationalPark_BugContest_OnTransition::
-	goto_if_eq VAR_BUG_CONTEST_STATE, 3, NationalPark_BugContest_EventScript_JudgeScene
+	goto_if_eq JOHTO_VAR_BUG_CONTEST_STATE, 3, NationalPark_BugContest_EventScript_JudgeScene
 	end
 
 NationalPark_BugContest_OnFrame::
-	map_script_2 VAR_BUG_CONTEST_STATE, 1, NationalPark_BugContest_EventScript_Enter
-	map_script_2 VAR_BUG_CONTEST_STATE, 5, NationalPark_BugContest_EventScript_EnterSide
-	map_script_2 VAR_BUG_CONTEST_STATE, 3, NationalPark_BugContest_EventScript_JudgeSceneActivate
+	map_script_2 JOHTO_VAR_BUG_CONTEST_STATE, 1, NationalPark_BugContest_EventScript_Enter
+	map_script_2 JOHTO_VAR_BUG_CONTEST_STATE, 5, NationalPark_BugContest_EventScript_EnterSide
+	map_script_2 JOHTO_VAR_BUG_CONTEST_STATE, 3, NationalPark_BugContest_EventScript_JudgeSceneActivate
 	.2byte 0
-
 
 NationalPark_BugContest_EventScript_BC1::
 	lock
@@ -98,15 +99,14 @@ NationalPark_BugContest_EventScript_JudgeScene::
 NationalPark_BugContest_EventScript_JudgeSceneActivate::
 	lockall
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-	goto BugContestEventScript_Judging
+	goto J_BugContestEventScript_Judging
 	end
-
 
 NationalPark_BugContest_EventScript_Enter::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
-	setvar VAR_BUG_CONTEST_STATE, 2
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 2
 	msgbox NationlParkBugContest_Text_EnjoyTheContest, MSGBOX_DEFAULT
 	closemessage
 	releaseall
@@ -115,15 +115,15 @@ NationalPark_BugContest_EventScript_Enter::
 NationalPark_BugContest_EventScript_EnterSide::
 	lockall
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	delay 20
-	clearflag FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
+	clearflag JOHTO_FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
 	addobject LOCALID_BUGCONTEST_ATTENDANT_SIDE
 	setvar VAR_TEMP_1, 1
-	setvar VAR_BUG_CONTEST_STATE, 2
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 2
 	msgbox NationlParkBugContest_Text_EnjoyTheContest, MSGBOX_DEFAULT
 	closemessage
 	releaseall
@@ -133,11 +133,12 @@ NationalPark_BugContest_EventScript_Trigger::
 	lock
 	turnobject LOCALID_BUGCONTEST_ATTENDANT, DIR_EAST
 	goto NationalPark_BugContest_EventScript_RetireChoice
+
 NationalPark_BugContest_EventScript_Attendant::
 	lock
 	faceplayer
 	msgbox NationalParkBugContest_Text_Attendant, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, BugContest_EventScript_TimesUp
+	goto_if_eq VAR_RESULT, TRUE, J_BugContest_EventScript_TimesUp
 	msgbox NationlParkBugContest_Text_EnjoyTheContest, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -145,10 +146,10 @@ NationalPark_BugContest_EventScript_Attendant::
 
 NationalPark_BugContest_EventScript_RetireChoice::
 	msgbox NationalParkBugContest_Text_Attendant, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, BugContest_EventScript_TimesUp
+	goto_if_eq VAR_RESULT, TRUE, J_BugContest_EventScript_TimesUp
 	msgbox NationlParkBugContest_Text_EnjoyTheContest, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	release
 	end
@@ -158,62 +159,62 @@ NationalPark_BugContest_Movement_AttendantSide:
 	step_end
 
 NationalPark_BugContest_Text_Trash:
-	.string "Nothing here.$"
+	.string "Nothin{SE_M_SANDSTORM}here.$"
 
 NationlParkBugContest_Text_EnjoyTheContest:
-	.string "ATTENDANT: Enjoy the Contest!$"
+	.string "ATTENDANT{SE_M_HEAT_WAVE}Enjo{SE_M_YAWN}th{SE_M_REVERSAL}Contest!$"
 
 NationalParkBugContest_Text_Attendant:
-	.string "ATTENDANT: Would you like to end\n"
-	.string "the contest?$"
+	.string "ATTENDANT{SE_M_HEAT_WAVE}Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}end\n"
+	.string "th{SE_M_REVERSAL}contest?$"
 
 NationalParkBugContest_Text_ContestantBelinda:
-	.string "BELINDA: I'm going to win!\n"
-	.string "Don't bother me.$"
+	.string "BELINDA{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}win!\n"
+	.string "Don'{SE_M_SPIT_UP}bothe{SE_M_SAND_TOMB}me.$"
 
 NationalParkBugContest_Text_Contestant2A:
-	.string "ED: My PARASECT puts POKéMON to\n"
-	.string "sleep with SPORE.$"
+	.string "ED{SE_M_HEAT_WAVE}M{SE_M_YAWN}PARASEC{SE_M_SWIFT}put{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}to\n"
+	.string "slee{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}SPORE.$"
 
 NationalParkBugContest_Text_ContestantShaun:
-	.string "SHAUN: I'm not concerned about\n"
+	.string "SHAUN{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}concerne{SE_M_WATERFALL}about\n"
 	.string "winning.\p"
-	.string "I'm just looking for rare POKéMON.$"
+	.string "I'{SE_M_MILK_DRINK}jus{SE_M_SPIT_UP}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}rar{SE_M_REVERSAL}POKéMON.$"
 
 NationalParkBugContest_Text_Contestant6A:
-	.string "BARRY: You should weaken bug\n"
-	.string "POKéMON first,\p"
-	.string "then throw a BALL.$"
+	.string "BARRY{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}weake{SE_M_ATTRACT}bug\n"
+	.string "POKéMO{SE_M_PSYBEAM2}first,\p"
+	.string "the{SE_M_ATTRACT}thro{SE_M_TWISTER}{SE_M_CHARGE}BALL.$"
 
 NationalParkBugContest_Text_Contestant7A:
-	.string "CINDY: I love bug POKéMON.\p"
-	.string "I guess you must like them too.$"
+	.string "CINDY{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}bu{SE_M_SANDSTORM}POKéMON.\p"
+	.string "{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}mus{SE_M_SPIT_UP}lik{SE_M_REVERSAL}the{SE_M_MILK_DRINK}too.$"
 
 NationalParkBugContest_Text_Contestant8A:
-	.string "JOSH: I've been collecting bug\n"
-	.string "POKéMON since I was just a baby.\p"
-	.string "There's no way I'm going to lose!$"
+	.string "JOSH{SE_M_HEAT_WAVE}I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}collectin{SE_M_SANDSTORM}bug\n"
+	.string "POKéMO{SE_M_PSYBEAM2}sinc{SE_M_REVERSAL}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}{SE_M_CHARGE}baby.\p"
+	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}wa{SE_M_YAWN}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}lose!$"
 
 NationalParkBugContest_Text_Contestant9A:
-	.string "SAMUEL: If you've got the time to\n"
-	.string "chat, go find some bug POKéMON.$"
+	.string "SAMUEL{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}you'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}th{SE_M_REVERSAL}tim{SE_M_REVERSAL}to\n"
+	.string "chat{SE_M_SUPERSONIC}g{SE_M_ATTRACT2}fin{SE_M_WATERFALL}som{SE_M_REVERSAL}bu{SE_M_SANDSTORM}POKéMON.$"
 
 NationalParkBugContest_Text_Contestant10A:
-	.string "KIPP: I've studied about bug\n"
-	.string "POKéMON a lot.\p"
-	.string "I'm going to win for sure.$"
+	.string "KIPP{SE_M_HEAT_WAVE}I'v{SE_M_REVERSAL}studie{SE_M_WATERFALL}abou{SE_M_SPIT_UP}bug\n"
+	.string "POKéMO{SE_M_PSYBEAM2}{SE_M_CHARGE}lot.\p"
+	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}wi{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}sure.$"
 
 NationalParkBugContest_Text_Sign_RelaxationSquare:
-	.string "RELAXATION SQUARE\n"
-	.string "NATIONAL PARK$"
+	.string "RELAXATIO{SE_M_PSYBEAM2}SQUARE\n"
+	.string "NATIONA{SE_M_BRICK_BREAK}PARK$"
 
 NationalParkBugContest_Text_Sign_BattleNotice:
-	.string "What is this notice?\p"
-	.string "Please battle only in the grass.\p"
-	.string "NATIONAL PARK WARDEN'S OFFICE$"
+	.string "Wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}notice?\p"
+	.string "Pleas{SE_M_REVERSAL}battl{SE_M_REVERSAL}onl{SE_M_YAWN}i{SE_M_ATTRACT}th{SE_M_REVERSAL}grass.\p"
+	.string "NATIONA{SE_M_BRICK_BREAK}PAR{SE_M_SNORE}WARDEN'{SE_M_SKETCH}OFFICE$"
 
 NationalParkBugContest_Text_TrainerTips:
-	.string "The NATIONAL PARK has different\n"
-	.string "POKéMON during the BUG-CATCHING\l"
+	.string "Th{SE_M_REVERSAL}NATIONA{SE_M_BRICK_BREAK}PAR{SE_M_SNORE}ha{SE_M_GRASSWHISTLE}different\n"
+	.string "POKéMO{SE_M_PSYBEAM2}durin{SE_M_SANDSTORM}th{SE_M_REVERSAL}BUG-CATCHING\l"
 	.string "CONTEST.$"
 

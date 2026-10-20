@@ -20,7 +20,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-      "x": 11,
+      "x": 19,
       "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -34,7 +34,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-      "x": 1,
+      "x": 9,
       "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -48,7 +48,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-      "x": 11,
+      "x": 19,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -62,7 +62,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-      "x": 1,
+      "x": 9,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -77,7 +77,7 @@
       "local_id": "LOCALID_KARATE_MASTER",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-      "x": 6,
+      "x": 14,
       "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -91,7 +91,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 5,
+      "x": 13,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -105,7 +105,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 7,
+      "x": 15,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -119,21 +119,21 @@
   ],
   "warp_events": [
     {
-      "x": 5,
+      "x": 13,
       "y": 14,
       "elevation": 3,
       "dest_map": "MAP_SAFFRON_CITY",
       "dest_warp_id": "2"
     },
     {
-      "x": 6,
+      "x": 14,
       "y": 14,
       "elevation": 3,
       "dest_map": "MAP_SAFFRON_CITY",
       "dest_warp_id": "2"
     },
     {
-      "x": 7,
+      "x": 15,
       "y": 14,
       "elevation": 3,
       "dest_map": "MAP_SAFFRON_CITY",
@@ -143,7 +143,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 5,
+      "x": 13,
       "y": 5,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_SAFFRON_CITY_DOJO",
@@ -152,7 +152,7 @@
     },
     {
       "type": "trigger",
-      "x": 7,
+      "x": 15,
       "y": 5,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_SAFFRON_CITY_DOJO",
@@ -163,7 +163,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 3,
+      "x": 11,
       "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -171,7 +171,7 @@
     },
     {
       "type": "sign",
-      "x": 9,
+      "x": 17,
       "y": 13,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -179,7 +179,7 @@
     },
     {
       "type": "sign",
-      "x": 5,
+      "x": 13,
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -187,375 +187,195 @@
     },
     {
       "type": "sign",
-      "x": 7,
+      "x": 15,
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SaffronCity_Dojo_EventScript_RightScroll"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 29,
-      "height": 16,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_EcruteakTheater_Hns",
-      "border_filepath": "data/layouts/SaffronCity_FightingDojo_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SaffronCity_FightingDojo_hns/map.bin",
-      "layout_version": "hns",
-      "blockdata_overrides": [
-        {
-          "x": 12,
-          "y": 1,
-          "expected": 1032,
-          "value": 1733
-        },
-        {
-          "x": 13,
-          "y": 1,
-          "expected": 1032,
-          "value": 1735
-        },
-        {
-          "x": 14,
-          "y": 1,
-          "expected": 1032,
-          "value": 1729
-        },
-        {
-          "x": 15,
-          "y": 1,
-          "expected": 1032,
-          "value": 1735
-        },
-        {
-          "x": 16,
-          "y": 1,
-          "expected": 1032,
-          "value": 1733
-        },
-        {
-          "x": 12,
-          "y": 2,
-          "expected": 1032,
-          "value": 1741
-        },
-        {
-          "x": 13,
-          "y": 2,
-          "expected": 1032,
-          "value": 1743
-        },
-        {
-          "x": 14,
-          "y": 2,
-          "expected": 1032,
-          "value": 1763
-        },
-        {
-          "x": 15,
-          "y": 2,
-          "expected": 1032,
-          "value": 1743
-        },
-        {
-          "x": 16,
-          "y": 2,
-          "expected": 1032,
-          "value": 1741
-        },
-        {
-          "x": 12,
-          "y": 3,
-          "expected": 1735,
-          "value": 1741
-        },
-        {
-          "x": 13,
-          "y": 3,
-          "expected": 1722,
-          "value": 13019
-        },
-        {
-          "x": 14,
-          "y": 3,
-          "expected": 1723,
-          "value": 13028
-        },
-        {
-          "x": 15,
-          "y": 3,
-          "expected": 1724,
-          "value": 13019
-        },
-        {
-          "x": 16,
-          "y": 3,
-          "expected": 1735,
-          "value": 1741
-        },
-        {
-          "x": 12,
-          "y": 4,
-          "expected": 1743,
-          "value": 1741
-        },
-        {
-          "x": 13,
-          "y": 4,
-          "expected": 1725,
-          "value": 13008
-        },
-        {
-          "x": 14,
-          "y": 4,
-          "expected": 12990,
-          "value": 12992
-        },
-        {
-          "x": 15,
-          "y": 4,
-          "expected": 1727,
-          "value": 12992
-        },
-        {
-          "x": 16,
-          "y": 4,
-          "expected": 1743,
-          "value": 1741
-        },
-        {
-          "x": 12,
-          "y": 5,
-          "expected": 13008,
-          "value": 1749
-        },
-        {
-          "x": 13,
-          "y": 5,
-          "expected": 12992,
-          "value": 13008
-        },
-        {
-          "x": 14,
-          "y": 5,
-          "expected": 13017,
-          "value": 12992
-        },
-        {
-          "x": 15,
-          "y": 5,
-          "expected": 12992,
-          "value": 13018
-        },
-        {
-          "x": 16,
-          "y": 5,
-          "expected": 12992,
-          "value": 1749
-        },
-        {
-          "x": 12,
-          "y": 6,
-          "expected": 13008,
-          "value": 1757
-        },
-        {
-          "x": 13,
-          "y": 6,
-          "expected": 13017,
-          "value": 13008
-        },
-        {
-          "x": 15,
-          "y": 6,
-          "expected": 13017,
-          "value": 12992
-        },
-        {
-          "x": 16,
-          "y": 6,
-          "expected": 12992,
-          "value": 1757
-        }
-      ]
-    },
-    "object_events": [
+  "firered_geometry": {
+    "width": 29,
+    "height": 16,
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_EcruteakTheater_Hns",
+    "border_filepath": "data/layouts/SaffronCity_FightingDojo_hns/border.bin",
+    "blockdata_filepath": "data/layouts/SaffronCity_FightingDojo_hns/map.bin",
+    "layout_version": "hns",
+    "blockdata_overrides": [
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-        "x": 19,
-        "y": 10,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "7",
-        "script": "SaffronCity_Dojo_EventScript_Hitoshi",
-        "flag": "0"
+        "x": 12,
+        "y": 1,
+        "expected": 1032,
+        "value": 1733
       },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-        "x": 9,
-        "y": 10,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "7",
-        "script": "SaffronCity_Dojo_EventScript_Hideki",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-        "x": 19,
-        "y": 8,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "7",
-        "script": "SaffronCity_Dojo_EventScript_Aaron",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-        "x": 9,
-        "y": 8,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "7",
-        "script": "SaffronCity_Dojo_EventScript_Mike",
-        "flag": "0"
-      },
-      {
-        "local_id": "LOCALID_KARATE_MASTER",
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-        "x": 14,
-        "y": 5,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "2",
-        "script": "SaffronCity_Dojo_EventScript_MasterKoichi",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-        "x": 13,
-        "y": 3,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "SaffronCity_Dojo_EventScript_HitmonleeBall",
-        "flag": "FLAG_HIDE_DOJO_HITMONLEE_BALL"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-        "x": 15,
-        "y": 3,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "SaffronCity_Dojo_EventScript_HitmonchanBall",
-        "flag": "FLAG_HIDE_DOJO_HITMONCHAN_BALL"
-      }
-    ],
-    "warp_events": [
       {
         "x": 13,
-        "y": 14,
-        "elevation": 3,
-        "dest_map": "MAP_SAFFRON_CITY",
-        "dest_warp_id": "2"
+        "y": 1,
+        "expected": 1032,
+        "value": 1735
       },
       {
         "x": 14,
-        "y": 14,
-        "elevation": 3,
-        "dest_map": "MAP_SAFFRON_CITY",
-        "dest_warp_id": "2"
+        "y": 1,
+        "expected": 1032,
+        "value": 1729
       },
       {
         "x": 15,
-        "y": 14,
-        "elevation": 3,
-        "dest_map": "MAP_SAFFRON_CITY",
-        "dest_warp_id": "2"
-      }
-    ],
-    "coord_events": [
-      {
-        "type": "trigger",
-        "x": 13,
-        "y": 5,
-        "elevation": 3,
-        "var": "VAR_MAP_SCENE_SAFFRON_CITY_DOJO",
-        "var_value": "0",
-        "script": "SaffronCity_Dojo_EventScript_TriggerMasterBattleLeft"
+        "y": 1,
+        "expected": 1032,
+        "value": 1735
       },
       {
-        "type": "trigger",
-        "x": 15,
-        "y": 5,
-        "elevation": 3,
-        "var": "VAR_MAP_SCENE_SAFFRON_CITY_DOJO",
-        "var_value": "0",
-        "script": "SaffronCity_Dojo_EventScript_TriggerMasterBattleRight"
-      }
-    ],
-    "bg_events": [
-      {
-        "type": "sign",
-        "x": 11,
-        "y": 13,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "SaffronCity_Dojo_EventScript_Statue"
+        "x": 16,
+        "y": 1,
+        "expected": 1032,
+        "value": 1733
       },
       {
-        "type": "sign",
-        "x": 17,
-        "y": 13,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "SaffronCity_Dojo_EventScript_Statue"
+        "x": 12,
+        "y": 2,
+        "expected": 1032,
+        "value": 1741
       },
       {
-        "type": "sign",
         "x": 13,
         "y": 2,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "SaffronCity_Dojo_EventScript_LeftScroll"
+        "expected": 1032,
+        "value": 1743
       },
       {
-        "type": "sign",
+        "x": 14,
+        "y": 2,
+        "expected": 1032,
+        "value": 1763
+      },
+      {
         "x": 15,
         "y": 2,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "SaffronCity_Dojo_EventScript_RightScroll"
+        "expected": 1032,
+        "value": 1743
+      },
+      {
+        "x": 16,
+        "y": 2,
+        "expected": 1032,
+        "value": 1741
+      },
+      {
+        "x": 12,
+        "y": 3,
+        "expected": 1735,
+        "value": 1741
+      },
+      {
+        "x": 13,
+        "y": 3,
+        "expected": 1722,
+        "value": 13019
+      },
+      {
+        "x": 14,
+        "y": 3,
+        "expected": 1723,
+        "value": 13028
+      },
+      {
+        "x": 15,
+        "y": 3,
+        "expected": 1724,
+        "value": 13019
+      },
+      {
+        "x": 16,
+        "y": 3,
+        "expected": 1735,
+        "value": 1741
+      },
+      {
+        "x": 12,
+        "y": 4,
+        "expected": 1743,
+        "value": 1741
+      },
+      {
+        "x": 13,
+        "y": 4,
+        "expected": 1725,
+        "value": 13008
+      },
+      {
+        "x": 14,
+        "y": 4,
+        "expected": 12990,
+        "value": 12992
+      },
+      {
+        "x": 15,
+        "y": 4,
+        "expected": 1727,
+        "value": 12992
+      },
+      {
+        "x": 16,
+        "y": 4,
+        "expected": 1743,
+        "value": 1741
+      },
+      {
+        "x": 12,
+        "y": 5,
+        "expected": 13008,
+        "value": 1749
+      },
+      {
+        "x": 13,
+        "y": 5,
+        "expected": 12992,
+        "value": 13008
+      },
+      {
+        "x": 14,
+        "y": 5,
+        "expected": 13017,
+        "value": 12992
+      },
+      {
+        "x": 15,
+        "y": 5,
+        "expected": 12992,
+        "value": 13018
+      },
+      {
+        "x": 16,
+        "y": 5,
+        "expected": 12992,
+        "value": 1749
+      },
+      {
+        "x": 12,
+        "y": 6,
+        "expected": 13008,
+        "value": 1757
+      },
+      {
+        "x": 13,
+        "y": 6,
+        "expected": 13017,
+        "value": 13008
+      },
+      {
+        "x": 15,
+        "y": 6,
+        "expected": 13017,
+        "value": 12992
+      },
+      {
+        "x": 16,
+        "y": 6,
+        "expected": 12992,
+        "value": 1757
       }
     ]
   }

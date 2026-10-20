@@ -66,7 +66,6 @@ PokemonLeague_HallOfFame_Text_OakCongratulations::
 	.string "You have worked hard to become\n"
 	.string "the new LEAGUE CHAMPION.\p"
 	.string "Congratulations, {PLAYER}, you and\n"
-#ifdef FIRERED
 	.string "your POKéMON are HALL OF FAMERS!\p"
 	.string "My colleague, PROF.ELM, studies\n"
 	.string "POKéMON in JOHTO.\p"
@@ -87,7 +86,4 @@ PokemonLeague_HallOfFame_Text_OakCongratulations::
 	.string "the road ready by then.\p"
 	.string "There's a whole new journey ahead\n"
 	.string "of you, {PLAYER}!$"
-#else
-	.string "your POKéMON are HALL OF FAMERS!$"
-#endif
 

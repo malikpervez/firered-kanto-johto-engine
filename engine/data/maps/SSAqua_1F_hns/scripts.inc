@@ -1,30 +1,32 @@
+@ Johto (data/maps/SSAqua_1F_hns/scripts.inc), as built into the FireRed game.
+
 SSAqua_1F_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SSAqua_1F_OnFrame
 	.byte 0
 
 SSAqua_1F_OnFrame::
-	map_script_2 VAR_SSAQUA_STATE, 5, SSAqua_1F_EventScript_Arrived
+	map_script_2 JOHTO_VAR_SSAQUA_STATE, 5, SSAqua_1F_EventScript_Arrived
 	.2byte 0
 
 SSAqua_1F_EventScript_Arrived::
 	lock
-	setvar VAR_0x8004, 1  @ vertical pan
-	setvar VAR_0x8005, 1  @ horizontal pan
-	setvar VAR_0x8006, 10  @ num shakes
-	setvar VAR_0x8007, 6  @ shake delay
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	playse SE_DING_DONG
 	msgbox SSAqua_1F_Text_Sailor1_InVermilion, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_SSAQUA_STATE, 6
+	setvar JOHTO_VAR_SSAQUA_STATE, 6
 	release
 	end
 
 SSAqua_1F_EventScript_DoorSailor::
 	lock
 	faceplayer
-	goto_if_ge VAR_SSAQUA_STATE, 5, SSAqua_1F_EventScript_DoorSailorArrived
+	goto_if_ge JOHTO_VAR_SSAQUA_STATE, 5, SSAqua_1F_EventScript_DoorSailorArrived
 	msgbox SSAqua_1F_Text_Sailor1_ToVermilion, MSGBOX_NPC
 	end
 
@@ -37,124 +39,15 @@ SSAqua_1F_EventScript_DoorSailorArrived::
 
 SSAqua_1F_EventScript_LeaveBoat::
 	fadescreenswapbuffers FADE_TO_BLACK
-
-	@Kanto FLAGHEAP
-	setflag FLAG_HIDE_COPYCAT_CLEFAIRY_DOLL
-	setflag FLAG_HIDE_CERULEAN_GYM_TRAINERS
-	setflag FLAG_HIDE_CERULEAN_CAPE_ROCKET
-	setflag FLAG_HIDE_CERULEAN_GYM_ROCKET
-	setflag FLAG_HIDDEN_ITEM_MACHINE_PART
-	setflag FLAG_HIDE_ROUTE25_MISTY
-	setflag FLAG_HIDE_ROUTE25_EUSINE
-	setflag FLAG_HIDE_ROUTE25_SUICUNE
-	setflag FLAG_HIDE_CELADON_EUSINE
-	setflag FLAG_HIDE_SEAFOAM_GYMGUY
-	setflag FLAG_HIDE_VIRIDIAN_BLUE
-	setflag FLAG_HIDE_ROUTE14_EUSINE
-	setflag FLAG_HIDE_ROUTE14_SUICUNE
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU1
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU2
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU3
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU4
-	setflag FLAG_HIDE_ROUTE13_BOAT
-	setflag FLAG_MT_SILVER_1F_HIDE_SCIENTIST
-	setflag FLAG_HIDE_VERMILION_CITY_SAMSON
-	setflag FLAG_HIDE_ROUTE28_SCIENTIST
-
-	clearflag FLAG_BADGE09_GET
-	clearflag FLAG_BADGE10_GET
-	clearflag FLAG_BADGE11_GET
-	clearflag FLAG_BADGE12_GET
-	clearflag FLAG_BADGE13_GET
-	clearflag FLAG_BADGE14_GET
-	clearflag FLAG_BADGE15_GET
-	clearflag FLAG_BADGE16_GET
-	clearflag FLAG_GOT_VERMILION_HP_UP
-	clearflag FLAG_KANTO_RADIO_GOT
-	clearflag FLAG_HIDE_VERMILION_SNORLAX
-	clearflag FLAG_HIDE_FAN_CLUB_CLEFAIRY_DOLL
-	clearflag FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES
-	clearflag FLAG_RETURNED_MACHINE_PART
-	clearflag FLAG_GOT_TM_PSYCHIC
-	clearflag FLAG_GOT_HOENN_STARTER
-	clearflag FLAG_GOT_UP_GRADE
-	clearflag FLAG_GOT_CLEANSE_TAG
-	clearflag FLAG_ROUTE25_GOT_NUGGET
-	clearflag FLAG_HIDE_POWER_PLANT_ENGINEER
-	clearflag FLAG_HIDE_ZAPDOS
-	clearflag FLAG_HIDE_ARTICUNO
-	clearflag FLAG_HIDE_MOLTRES
-	clearflag FLAG_GOT_TM_SLEEP_TALK
-	clearflag FLAG_GOT_SUPER_ROD
-	clearflag FLAG_HIDE_CINNABAR_BLUE
-	clearflag FLAG_GOT_ROUTE2_NUGGET
-	clearflag FLAG_GOT_VIRIDIAN_TM_DREAM_EATER
-	clearflag FLAG_GOT_ROUTE_14_AERIAL_ACE
-	clearflag FLAG_HIDE_PEWTER_ROOT_FOSSIL
-	clearflag FLAG_HIDE_PEWTER_CLAW_FOSSIL
-	clearflag FLAG_HIDE_MTMOON_SILVER
-	clearflag FLAG_GOT_TM_STEEL_WING
-	clearflag FLAG_HIDE_CERULEANCAVE_GUARD
-	clearflag FLAG_HIDE_MTSILVER_RED
-	clearflag FLAG_HIDE_MEWTWO
-	clearflag FLAG_HIDE_LATIAS
-	clearflag FLAG_HIDE_LATIOS
-	clearflag FLAG_HIDE_GROUDON
-	clearflag FLAG_HIDE_KYOGRE
-	clearflag FLAG_HIDE_RAYQUAZA
-	clearflag FLAG_HIDE_SEAFOAM_BLAINE
-
-	clearflag FLAG_HIDE_CELADON_FALKNER
-	clearflag FLAG_HIDE_VIRIDIAN_BUGSY
-	clearflag FLAG_HIDE_DEPTSTORE_WHITNEY
-	clearflag FLAG_HIDE_BELLCHIME_MORTY
-	clearflag FLAG_HIDE_CAFE_JASMINE
-	clearflag FLAG_HIDE_LAKE_PRYCE
-	clearflag FLAG_HIDE_DEN_CLAIR
-
-
-	setvar VAR_KANTO_ROCKET_STORY_STATE, 0
-	setvar VAR_BILLS_GRANDPA, 0
-	setvar VAR_VERMILION_CITY_STEVEN, 0
-	setvar VAR_OAK_MT_SILVER_CALL, 0
-	setvar VAR_VIRIDIAN_FOREST_PICHU, 0
-
-
-	setvar VAR_FAN_CLUB_CLEFAIRY, 0
-	setvar VAR_FAN_CLUB_GUY, 0
-	setvar VAR_CLEFAIRY_DOLL_STATE, 0
-	setvar VAR_NUM_BADGES, 8
-	setvar VAR_VERMILION_CITY_STATE, 1
-
-	setvar VAR_KANTO_SAFARI_ZONE_PROGRESS, 0 
-	clearflag FLAG_IN_KANTO_SAFARI_ZONE 
-	clearflag FLAG_IS_KANTO_CHAMPION 
-	setvar VAR_BAOBA_QUEST_STATE, 0 
-	setvar VAR_CINNABAR_ISLAND_STATE, 0 
-	setvar VAR_MT_SILVER_STATE, 0, 
-	setvar VAR_PALLETTOWN_LABSTATE, 0 
-	clearflag FLAG_HIDE_LEAGUE_BLACKBELT 
-	
-	setflag FLAG_HIDE_DOJO_FALKNER
-	setflag FLAG_HIDE_DOJO_BUGSY
-	setflag FLAG_HIDE_DOJO_WHITNEY
-	setflag FLAG_HIDE_DOJO_MORTY
-	setflag FLAG_HIDE_DOJO_CHUCK
-	setflag FLAG_HIDE_DOJO_JASMINE
-	setflag FLAG_HIDE_DOJO_PRYCE
-	setflag FLAG_HIDE_DOJO_CLAIR
-	setflag FLAG_HIDE_DOJO_BROCK
-	setflag FLAG_HIDE_DOJO_MISTY
-	setflag FLAG_HIDE_DOJO_SURGE
-	setflag FLAG_HIDE_DOJO_ERIKA
-	setflag FLAG_HIDE_DOJO_JANINE
-	setflag FLAG_HIDE_DOJO_SABRINA
-	setflag FLAG_HIDE_DOJO_BLAINE
-	setflag FLAG_HIDE_DOJO_BLUE
-	@end flagheap
-	setvar VAR_SSAQUA_STATE, 7
-	warp MAP_VERMILION_CITY_PORT_INSIDE_HNS, 8, 9
+	clearflag JOHTO_FLAG_HIDE_CELADON_FALKNER
+	clearflag JOHTO_FLAG_HIDE_VIRIDIAN_BUGSY
+	clearflag JOHTO_FLAG_HIDE_DEPTSTORE_WHITNEY
+	clearflag JOHTO_FLAG_HIDE_BELLCHIME_MORTY
+	clearflag JOHTO_FLAG_HIDE_CAFE_JASMINE
+	clearflag JOHTO_FLAG_HIDE_LAKE_PRYCE
+	clearflag JOHTO_FLAG_HIDE_DEN_CLAIR
+	setvar JOHTO_VAR_SSAQUA_STATE, 7
+	warp MAP_VERMILION_CITY, 13, 26
 	waitstate
 	release
 	end
@@ -169,13 +62,13 @@ SSAqua_1F_EventScript_Sailor3::
 
 SSAqua_1F_Trigger_Grandpa::
 	lock
-	clearflag FLAG_HIDE_SSAQUA_1F_GRANDPA
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_1F_GRANDPA
 	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 	call_if_eq VAR_TEMP_0, 28, SSAqua_1F_EventScript_GrandpaEnterLeft
 	call_if_eq VAR_TEMP_0, 29, SSAqua_1F_EventScript_GrandpaEnterRight
 	applymovement OBJ_EVENT_ID_PLAYER, SSAqua_1F_Movement_PlayerSlideRight
 	waitmovement 0
-	applymovement LOCALID_SSAQUA_1F_GRANDPA, Common_Movement_WalkRight1
+	applymovement LOCALID_SSAQUA_1F_GRANDPA, J_Common_Movement_WalkRight1
 	waitmovement 0
 	msgbox SSAqua_1F_Text_Grandpa, MSGBOX_DEFAULT
 	closemessage
@@ -183,14 +76,14 @@ SSAqua_1F_Trigger_Grandpa::
 	waitmovement 0
 	playse SE_DOOR
 	removeobject LOCALID_SSAQUA_1F_GRANDPA
-	
-	setflag FLAG_HIDE_SSAQUA_1F_GRANDPA		@flagheap
-	setflag FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
 
-	clearflag FLAG_HIDE_SSAQUA_SAILOR
-	clearflag FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
+	setflag JOHTO_FLAG_HIDE_SSAQUA_1F_GRANDPA
+	setflag JOHTO_FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
 
-	setvar VAR_SSAQUA_STATE, 2
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_SAILOR
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
+
+	setvar JOHTO_VAR_SSAQUA_STATE, 2
 	release
 	end
 
@@ -250,43 +143,43 @@ SSAqua_1F_Movement_GrandpaLeave:
 	step_end
 
 SSAqua_1F_Text_Sailor1_ToVermilion:
-    .string "FAST SHIP S.S.AQUA is en route to\n"
-    .string "VERMILION CITY.\p"
-    .string "We will make an announcement when\n"
-    .string "we arrive.$"
+	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQU{SE_M_BONEMERANG}i{SE_M_GRASSWHISTLE}e{SE_M_ATTRACT}rout{SE_M_REVERSAL}to\n"
+	.string "VERMILIO{SE_M_PSYBEAM2}CITY.\p"
+	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}mak{SE_M_REVERSAL}a{SE_M_ATTRACT}announcemen{SE_M_SPIT_UP}when\n"
+	.string "w{SE_M_REVERSAL}arrive.$"
 
 SSAqua_1F_Text_Sailor1_ToOlivine:
-    .string "FAST SHIP S.S.AQUA is en route to\n"
-    .string "OLIVINE CITY.\p"
-    .string "We will make an announcement when\n"
-    .string "we arrive.$"
+	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQU{SE_M_BONEMERANG}i{SE_M_GRASSWHISTLE}e{SE_M_ATTRACT}rout{SE_M_REVERSAL}to\n"
+	.string "OLIVIN{SE_M_SWORDS_DANCE}CITY.\p"
+	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}mak{SE_M_REVERSAL}a{SE_M_ATTRACT}announcemen{SE_M_SPIT_UP}when\n"
+	.string "w{SE_M_REVERSAL}arrive.$"
 
 SSAqua_1F_Text_Sailor2_FirstTime:
-    .string "Here's your cabin.\p"
-    .string "If your POKéMON are hurt, take a\n"
-    .string "nap in the bed.\p"
-    .string "That will heal them.$"
+	.string "Here'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}cabin.\p"
+	.string "I{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}hurt{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}a\n"
+	.string "na{SE_M_MORNING_SUN}i{SE_M_ATTRACT}th{SE_M_REVERSAL}bed.\p"
+	.string "Tha{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}hea{SE_M_BATON_PASS}them.$"
 
 SSAqua_1F_Text_Sailor3:
-    .string "The passengers are all trainers.\p"
-    .string "They're all itching to battle in\n"
-    .string "their cabins.$"
+	.string "Th{SE_M_REVERSAL}passenger{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}al{SE_M_BATON_PASS}trainers.\p"
+	.string "They'r{SE_M_REVERSAL}al{SE_M_BATON_PASS}itchin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}in\n"
+	.string "thei{SE_M_SAND_TOMB}cabins.$"
 
 SSAqua_1F_Text_Grandpa:
-    .string "Whoa! Excuse me. I was in a hurry!\p"
-    .string "My granddaughter is missing!\p"
-    .string "She's just a wee girl. If you see\n"
-    .string "her, please let me know!$"
+	.string "Whoa{SE_M_DRAGON_RAGE}Excus{SE_M_REVERSAL}me{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}{SE_M_CHARGE}hurry!\p"
+	.string "M{SE_M_YAWN}granddaughte{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}missing!\p"
+	.string "She'{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}{SE_M_CHARGE}we{SE_M_REVERSAL}girl{SE_M_PERISH_SONG}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}see\n"
+	.string "her{SE_M_SUPERSONIC}pleas{SE_M_REVERSAL}le{SE_M_SPIT_UP}m{SE_M_REVERSAL}know!$"
 
 SSAqua_1F_Text_Sailor1_InOlivine:
-    .string "FAST SHIP S.S.AQUA has arrived in\n"
-    .string "OLIVINE CITY.$"
+	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQU{SE_M_BONEMERANG}ha{SE_M_GRASSWHISTLE}arrive{SE_M_WATERFALL}in\n"
+	.string "OLIVIN{SE_M_SWORDS_DANCE}CITY.$"
 
 SSAqua_1F_Text_Sailor1_InVermilion:
-    .string "FAST SHIP S.S.AQUA has arrived in\n"
-    .string "VERMILION CITY.$"
-
+	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}S.S.AQU{SE_M_BONEMERANG}ha{SE_M_GRASSWHISTLE}arrive{SE_M_WATERFALL}in\n"
+	.string "VERMILIO{SE_M_PSYBEAM2}CITY.$"
 
 SSAqua_1F_Text_SailorDoorArrived:
-    .string "We have arrived in VERMILION CITY.\n"
-    .string "Would you like to disembark?$"
+	.string "W{SE_M_REVERSAL}hav{SE_M_REVERSAL}arrive{SE_M_WATERFALL}i{SE_M_ATTRACT}VERMILIO{SE_M_PSYBEAM2}CITY.\n"
+	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}disembark?$"
+

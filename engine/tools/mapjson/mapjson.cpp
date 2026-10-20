@@ -548,6 +548,24 @@ void process_map(string map_filepath, string layouts_filepath, string output_dir
     write_text_file(out_dir + "connections.inc", connections_text);
 }
 
+// Maps that are no longer in the game keep their place in map_groups.json (so other maps keep their numbers) and
+// their MAP_ constant; data/maps/removed_maps.json gives that constant, since their folder is gone.
+Json removed_maps(const string &file_dir) {
+    static bool loaded = false;
+    static Json removed;
+    if (!loaded) {
+        loaded = true;
+        ifstream f(file_dir + "removed_maps.json");
+        if (f.is_open()) {
+            string err;
+            removed = Json::parse(read_text_file(file_dir + "removed_maps.json"), err);
+            if (!err.empty())
+                FATAL_ERROR("Invalid removed_maps.json: %s\n", err.c_str());
+        }
+    }
+    return removed;
+}
+
 void process_event_constants(const vector<string> &map_filepaths, string output_ids_file) {
     string warning = get_generated_warning("data/maps/*/map.json", false);
 
@@ -584,6 +602,20 @@ void process_event_constants(const vector<string> &map_filepaths, string output_
         string temp = map_ids_text.str();
         if (!temp.empty()) {
             ids_file_text << "// " << map_id << "\n" << temp << "\n";
+        }
+    }
+
+    // event constants of the maps that are no longer in the game (see removed_maps)
+    if (!map_filepaths.empty()) {
+        string map_dir = file_parent(map_filepaths[0]);  // data/maps/X/
+        Json removed = removed_maps(file_parent(map_dir.substr(0, map_dir.size() - 1)));
+        for (auto &entry : removed.object_items()) {
+            ostringstream map_ids_text;
+            for (auto &id : entry.second["event_ids"].object_items())
+                map_ids_text << "#define " << id.first << " " << id.second.int_value() << "\n";
+            string temp = map_ids_text.str();
+            if (!temp.empty())
+                ids_file_text << "// " << json_to_string(entry.second, "id") << " (removed)\n" << temp << "\n";
         }
     }
 
@@ -738,11 +770,17 @@ string generate_map_constants_text(string groups_filepath, Json groups_data, vec
 
         for (auto &map_name : groups_data[groupName].array_items()) {
             string map_filepath = file_dir + json_to_string(map_name) + sep + "map.json";
-            string err_str;
-            Json map_data = Json::parse(read_text_file(map_filepath), err_str);
-            if (map_data == Json())
-                FATAL_ERROR("%s: %s\n", map_filepath.c_str(), err_str.c_str());
-            string id = json_to_string(map_data, "id", true);
+            string id;
+            Json removed = removed_maps(file_dir)[json_to_string(map_name)];
+            if (removed.is_object()) {
+                id = json_to_string(removed, "id");
+            } else {
+                string err_str;
+                Json map_data = Json::parse(read_text_file(map_filepath), err_str);
+                if (map_data == Json())
+                    FATAL_ERROR("%s: %s\n", map_filepath.c_str(), err_str.c_str());
+                id = json_to_string(map_data, "id", true);
+            }
             map_ids.push_back(id);
             valid_map_ids.push_back(id);
             if (id.length() > max_length)
@@ -844,30 +882,21 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
     vector<string> invalid_maps;
     vector<string> valid_map_ids;
 
+    // One game: every map that has a folder is built; removed maps (removed_maps.json) get an empty slot below.
     for (const string &filepath : map_filepaths) {
         string err;
-        string map_json_text = read_text_file(filepath);
-        Json map_data = Json::parse(map_json_text, err);
-        if (map_data == Json())
+        if (Json::parse(read_text_file(filepath), err) == Json())
             FATAL_ERROR("Failed to read '%s' while processing groups: %s\n", filepath.c_str(), err.c_str());
-
-        string game_ver = json_to_string(map_data, "game_version", true);
-        if (game_ver.empty())
-            game_ver = "emerald";
-
-        string map_name = json_to_string(map_data, "name");
-
-        string expected_game_ver = version;
-        if (expected_game_ver == "firered")
-            expected_game_ver = "frlg";
-
-        if (game_ver != expected_game_ver && !is_firered_campaign_map(map_data)) {
-            invalid_maps.push_back(map_name);
-        }
     }
 
     if (groups_data == Json())
         FATAL_ERROR("%s\n", err.c_str());
+
+    Json removed = removed_maps(file_parent(groups_filepath));
+    for (auto &group : groups_data["group_order"].array_items())
+        for (auto &map_name : groups_data[json_to_string(group)].array_items())
+            if (removed[json_to_string(map_name)].is_object())
+                invalid_maps.push_back(json_to_string(map_name));
 
     string groups_text = generate_groups_text(groups_data, invalid_maps);
     string connections_text = generate_connections_text(groups_data, invalid_maps, output_asm);
@@ -883,16 +912,9 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
     write_text_file(output_c + sep + "map_groups.h", map_header_text);
 }
 
+// One game: every layout is built except the removed ones (see layout_removed).
 bool layout_matches_version(const Json &layout) {
-    string game_ver = json_to_string(layout, "game_version", true);
-    if (game_ver.empty())
-        game_ver = "emerald";
-    string expected = version;
-    if (expected == "firered")
-        expected = "frlg";
-    return game_ver == expected
-        || (build_game == "FIRERED" && (layout["firered_campaign"].bool_value()
-            || layout["firered_campaign"].is_object()));
+    return !layout["removed"].bool_value();
 }
 
 // Native FireRed layouts may adopt donor geometry without changing identities.
@@ -1141,13 +1163,19 @@ string generate_layout_geometry_text(const Json &layout, const string &layoutNam
     return text.str();
 }
 
+// A layout of a map the game no longer has: it keeps its slot in the table (so other layouts keep their numbers) and
+// its LAYOUT_ constant, but has no data.
+bool layout_removed(const Json &layout) {
+    return layout["removed"].bool_value();
+}
+
 string generate_layout_headers_text(Json layouts_data) {
     ostringstream text;
 
     text << get_generated_warning("data/layouts/layouts.json", true);
 
     for (const auto &layout_data : layouts_data["layouts"].array_items()) {
-        if (layout_data == Json::object()) continue;
+        if (layout_data == Json::object() || layout_removed(layout_data)) continue;
         if (!std::filesystem::exists(json_to_string(layout_data, "border_filepath")))
             continue;
         if (!layout_matches_version(layout_data))
@@ -1171,9 +1199,9 @@ string generate_layouts_table_text(Json layouts_data) {
          << json_to_string(layouts_data, "layouts_table_label") << "::\n";
 
     for (auto &layout : layouts_data["layouts"].array_items()) {
-        if (!std::filesystem::exists(json_to_string(layout, "border_filepath")))
+        if (!layout_removed(layout) && !std::filesystem::exists(json_to_string(layout, "border_filepath")))
             continue;
-        if (!layout_matches_version(layout)) {
+        if (layout_removed(layout) || !layout_matches_version(layout)) {
             text << "\t.4byte NULL\n";
         } else {
             string layout_name = json_to_string(layout, "name", true);
@@ -1195,7 +1223,7 @@ string generate_layouts_table_text(Json layouts_data) {
                  || map["layout"].string_value() != id
                  || map["game_version"].string_value() != "frlg"
                  || map["region"].string_value() != "REGION_KANTO"
-                 || !map["firered_campaign"]["firered_geometry"].is_object()
+                 || !map["firered_geometry"].is_object()
                  || selected != owner + "_FireRedGeometry"
                  || layouts_data["firered_global_geometry_aliases"][owner] != Json()
                  || may_alias_current25_interior_descriptor(owner, id, layouts_data))
@@ -1238,7 +1266,7 @@ string generate_layouts_constants_text(Json layouts_data) {
 
     int i = 1;
     for (auto &layout : layouts_data["layouts"].array_items()) {
-        if (!std::filesystem::exists(json_to_string(layout, "border_filepath")))
+        if (!layout_removed(layout) && !std::filesystem::exists(json_to_string(layout, "border_filepath")))
             continue;
         if (layout != Json::object())
         {

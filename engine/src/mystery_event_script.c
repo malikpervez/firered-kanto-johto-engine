@@ -322,7 +322,6 @@ bool8 MEScrCmd_givepokemon(struct ScriptContext *ctx)
     void *mailPtr = (void *)(data + sizeof(struct Pokemon));
 
     pokemon = *(struct Pokemon *)pokemonPtr;
-#ifdef FIRERED
     // The underlying species also rejects a Giratina Egg before any delivery.
     species = GetMonData(&pokemon, MON_DATA_SPECIES);
     if (species == SPECIES_GIRATINA_ALTERED || species == SPECIES_GIRATINA_ORIGIN)
@@ -331,7 +330,6 @@ bool8 MEScrCmd_givepokemon(struct ScriptContext *ctx)
         ctx->mStatus = MEVENT_STATUS_FAILURE;
         return FALSE;
     }
-#endif
     species = GetMonData(&pokemon, MON_DATA_SPECIES_OR_EGG);
 
     if (species == SPECIES_EGG)

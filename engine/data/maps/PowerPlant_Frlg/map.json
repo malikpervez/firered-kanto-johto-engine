@@ -190,103 +190,101 @@
       "underfoot": false
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 49,
-      "height": 40,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_PowerPlant",
-      "border_filepath": "data/layouts/PowerPlant_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PowerPlant_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg",
-      "blockdata_overrides": [
-        {
-          "x": 45,
-          "y": 9,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 46,
-          "y": 9,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 47,
-          "y": 9,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 26,
-          "y": 22,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 27,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 28,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 29,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 30,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 31,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 32,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 33,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 34,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 35,
-          "y": 24,
-          "expected": 13008,
-          "value": 13310
-        },
-        {
-          "x": 38,
-          "y": 36,
-          "expected": 13008,
-          "value": 13310
-        }
-      ]
-    }
+  "firered_geometry": {
+    "width": 49,
+    "height": 40,
+    "primary_tileset": "gTileset_BuildingFrlg",
+    "secondary_tileset": "gTileset_PowerPlant",
+    "border_filepath": "data/layouts/PowerPlant_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/PowerPlant_Frlg/map.bin",
+    "border_height": 2,
+    "border_width": 2,
+    "layout_version": "frlg",
+    "blockdata_overrides": [
+      {
+        "x": 45,
+        "y": 9,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 46,
+        "y": 9,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 47,
+        "y": 9,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 26,
+        "y": 22,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 27,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 28,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 29,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 30,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 31,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 32,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 33,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 34,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 35,
+        "y": 24,
+        "expected": 13008,
+        "value": 13310
+      },
+      {
+        "x": 38,
+        "y": 36,
+        "expected": 13008,
+        "value": 13310
+      }
+    ]
   }
 }

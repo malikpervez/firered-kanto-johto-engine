@@ -185,7 +185,6 @@ IndigoPlateau_Exterior_Movement_OakExitBuilding::
 	walk_down
 	step_end
 
-#ifdef FIRERED
 IndigoPlateau_EventScript_Construction::
 	lock
 	faceplayer
@@ -200,4 +199,3 @@ IndigoPlateau_Text_Construction::
 	.string "down to the ROUTE 27 coast.\p"
 	.string "Come back after your LEAGUE\n"
 	.string "challenge. We should be done then!$"
-#endif

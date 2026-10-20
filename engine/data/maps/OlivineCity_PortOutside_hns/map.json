@@ -3,7 +3,7 @@
   "name": "OlivineCity_PortOutside_hns",
   "layout": "LAYOUT_OLIVINE_CITY_PORT_OUTSIDE_HNS",
   "music": "MUS_HG_VIOLET",
-  "region_map_section": "MAPSEC_OLIVINE_CITY",
+  "region_map_section": "JOHTO_MAPSEC_OLIVINE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_RAIN",
   "map_type": "MAP_TYPE_OCEAN_ROUTE",
@@ -58,7 +58,112 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OlivineCity_PortOutside_EventScript_Sabrina",
-      "flag": "FLAG_HIDE_OLIVINE_SABRINA"
+      "flag": "JOHTO_FLAG_HIDE_OLIVINE_SABRINA"
+    },
+    {
+      "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_BRIAN",
+      "graphics_id": "OBJ_EVENT_GFX_FRIEND_BRIAN",
+      "x": 16,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Friends_Interact",
+      "flag": "0",
+      "firered_slice_only": true
+    },
+    {
+      "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_HAM",
+      "graphics_id": "OBJ_EVENT_GFX_FRIEND_HAM",
+      "x": 15,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Friends_Interact",
+      "flag": "0",
+      "firered_slice_only": true
+    },
+    {
+      "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_JON",
+      "graphics_id": "OBJ_EVENT_GFX_FRIEND_JON",
+      "x": 18,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Friends_Interact",
+      "flag": "0",
+      "firered_slice_only": true
+    },
+    {
+      "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_NICK",
+      "graphics_id": "OBJ_EVENT_GFX_FRIEND_NICK",
+      "x": 14,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Friends_Interact",
+      "flag": "0",
+      "firered_slice_only": true
+    },
+    {
+      "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_X",
+      "graphics_id": "OBJ_EVENT_GFX_FRIEND_X",
+      "x": 15,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Friends_Interact",
+      "flag": "0",
+      "firered_slice_only": true
+    },
+    {
+      "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_LB",
+      "graphics_id": "OBJ_EVENT_GFX_FRIEND_LB",
+      "x": 16,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Friends_Interact",
+      "flag": "0",
+      "firered_slice_only": true
+    },
+    {
+      "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_TIM",
+      "graphics_id": "OBJ_EVENT_GFX_FRIEND_TIM",
+      "x": 14,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Friends_Interact",
+      "flag": "0",
+      "firered_slice_only": true
     }
   ],
   "warp_events": [
@@ -78,187 +183,9 @@
       "y": 6,
       "elevation": 0,
       "item": "ITEM_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_OLIVINE_PEARL"
+      "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_OLIVINE_PEARL"
     }
   ],
-  "game_version": "hns",
-  "region": "REGION_JOHTO",
-  "firered_campaign": {
-    "connections": [
-      {
-        "map": "MAP_OLIVINE_CITY_HNS",
-        "offset": -5,
-        "direction": "up"
-      }
-    ],
-    "object_events": [
-      {
-        "graphics_id": "OBJ_EVENT_GFX_FISHERMAN_HNS",
-        "x": 12,
-        "y": 5,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_UP",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "OlivineCity_PortOutside_EventScript_Fisherman1",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_FISHERMAN_HNS",
-        "x": 21,
-        "y": 6,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "OlivineCity_PortOutside_EventScript_Fisherman2",
-        "flag": "0"
-      },
-      {
-        "local_id": "LOCALID_OLIVINE_SABRINA",
-        "graphics_id": "OBJ_EVENT_GFX_SABRINA_HNS",
-        "x": 24,
-        "y": 5,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "OlivineCity_PortOutside_EventScript_Sabrina",
-        "flag": "JOHTO_FLAG_HIDE_OLIVINE_SABRINA"
-      },
-      {
-        "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_BRIAN",
-        "graphics_id": "OBJ_EVENT_GFX_FRIEND_BRIAN",
-        "x": 16,
-        "y": 6,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Friends_Interact",
-        "flag": "0",
-        "firered_slice_only": true
-      },
-      {
-        "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_HAM",
-        "graphics_id": "OBJ_EVENT_GFX_FRIEND_HAM",
-        "x": 15,
-        "y": 5,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Friends_Interact",
-        "flag": "0",
-        "firered_slice_only": true
-      },
-      {
-        "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_JON",
-        "graphics_id": "OBJ_EVENT_GFX_FRIEND_JON",
-        "x": 18,
-        "y": 6,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Friends_Interact",
-        "flag": "0",
-        "firered_slice_only": true
-      },
-      {
-        "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_NICK",
-        "graphics_id": "OBJ_EVENT_GFX_FRIEND_NICK",
-        "x": 14,
-        "y": 6,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_UP",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Friends_Interact",
-        "flag": "0",
-        "firered_slice_only": true
-      },
-      {
-        "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_X",
-        "graphics_id": "OBJ_EVENT_GFX_FRIEND_X",
-        "x": 15,
-        "y": 7,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_UP",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Friends_Interact",
-        "flag": "0",
-        "firered_slice_only": true
-      },
-      {
-        "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_LB",
-        "graphics_id": "OBJ_EVENT_GFX_FRIEND_LB",
-        "x": 16,
-        "y": 8,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_UP",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Friends_Interact",
-        "flag": "0",
-        "firered_slice_only": true
-      },
-      {
-        "local_id": "LOCALID_FRIENDS_OLIVINECITY_PORTOUTSIDE_HNS_TIM",
-        "graphics_id": "OBJ_EVENT_GFX_FRIEND_TIM",
-        "x": 14,
-        "y": 4,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Friends_Interact",
-        "flag": "0",
-        "firered_slice_only": true
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 15,
-        "y": 10,
-        "elevation": 0,
-        "dest_map": "MAP_OLIVINE_CITY_PORT_INSIDE_HNS",
-        "dest_warp_id": "0"
-      }
-    ],
-    "coord_events": [],
-    "bg_events": [
-      {
-        "type": "hidden_item",
-        "x": 10,
-        "y": 6,
-        "elevation": 0,
-        "item": "ITEM_PEARL",
-        "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_OLIVINE_PEARL"
-      }
-    ],
-    "region_map_section": "JOHTO_MAPSEC_OLIVINE_CITY",
-    "region": "REGION_JOHTO"
-  }
+  "game_version": "frlg",
+  "region": "REGION_JOHTO"
 }

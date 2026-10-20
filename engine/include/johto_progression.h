@@ -3,7 +3,6 @@
 
 #include "global.h"
 
-#ifdef FIRERED
 // These are regional codec indices, never native Kanto flag or variable IDs.
 #define JOHTO_ERRAND_VAR 0
 #define JOHTO_ERRAND_EVENT_ACCEPTED 0
@@ -24,6 +23,5 @@ void Special_JohtoErrandAccept(void);
 void Special_JohtoErrandVisitGuide(void);
 // VAR_RESULT must still be the successful native additem result.
 void Special_JohtoErrandClaimReward(void);
-#endif // FIRERED
 
 #endif // GUARD_JOHTO_PROGRESSION_H

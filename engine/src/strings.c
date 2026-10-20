@@ -72,11 +72,7 @@ const u8 gText_ListByFirstLetter[] = _("List by the first letter in the name.\nS
 const u8 gText_ListByBodyColor[] = _("List by body color.\nSpotted POKéMON only.");
 const u8 gText_ListByType[] = _("List by type.\nOwned POKéMON only.");
 const u8 gText_ExecuteSearchSwitch[] = _("Execute search/switch.");
-#if IS_HNS
-const u8 gText_DexHoennTitle[] = _("JOHTO DEX");
-#else
 const u8 gText_DexHoennTitle[] = _("HOENN DEX");
-#endif
 const u8 gText_DexNatTitle[] = _("NATIONAL DEX");
 const u8 gText_DexSortNumericalTitle[] = _("NUMERICAL MODE");
 const u8 gText_DexSortAtoZTitle[] = _("A TO Z MODE");
@@ -103,11 +99,7 @@ const u8 gText_DexSearchColorPurple[] = _("PURPLE");
 const u8 gText_DexSearchColorGray[] = _("GRAY");
 const u8 gText_DexSearchColorWhite[] = _("WHITE");
 const u8 gText_DexSearchColorPink[] = _("PINK");
-#if IS_HNS
-const u8 gText_DexHoennDescription[] = _("JOHTO region's POKéDEX");
-#else
 const u8 gText_DexHoennDescription[] = _("HOENN region's POKéDEX");
-#endif
 const u8 gText_DexNatDescription[] = _("National edition POKéDEX");
 const u8 gText_DexSortNumericalDescription[] = _("POKéMON are listed according to their\nnumber.");
 const u8 gText_DexSortAtoZDescription[] = _("Spotted and owned POKéMON are listed\nalphabetically.");
@@ -172,11 +164,7 @@ const u8 gText_Var1CantBeHeld[] = _("The {STR_VAR_1} can't be held.");
 const u8 gText_TossHowManyVar1s[] = _("Toss out how many\n{STR_VAR_1}?");
 const u8 gText_ThrewAwayVar2Var1s[] = _("Threw away {STR_VAR_2}\n{STR_VAR_1}.");
 const u8 gText_ConfirmTossItems[] = _("Is it okay to\nthrow away {STR_VAR_2}\n{STR_VAR_1}?");
-#if IS_HNS
-    const u8 gText_DadsAdvice[] = _("ELM's advice…\n{PLAYER}, there's a time and place for\leverything!{PAUSE_UNTIL_PRESS}");
-#else
     const u8 gText_DadsAdvice[] = _("DAD's advice…\n{PLAYER}, there's a time and place for\leverything!{PAUSE_UNTIL_PRESS}");
-#endif
 const u8 gText_PlayerUsedVar2[] = _("{PLAYER} used the\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
 const u8 gText_RepelEffectsLingered[] = _("But the effects of a REPEL\nlingered from earlier.{PAUSE_UNTIL_PRESS}");
 const u8 gText_LureEffectsLingered[] = _("But the effects of a Lure\nlingered from earlier.{PAUSE_UNTIL_PRESS}");
@@ -487,13 +475,8 @@ const u8 gText_BagIsFull[] = _("The BAG is full.{PAUSE_UNTIL_PRESS}");
 const u8 gText_MailToBagMessageErased[] = _("The MAIL was returned to the BAG\nwith its message erased.{PAUSE_UNTIL_PRESS}");
 const u8 gText_Dad[] = _("DAD");
 const u8 gText_Mom[] = _("MOM");
-#ifdef FIRERED
 const u8 gText_MomHowMuchDeposit[] = _("How much would you like to\ndeposit into savings?");
 const u8 gText_MomHowMuchWithdraw[] = _("How much would you like to\nwithdraw from savings?");
-#else
-const u8 gText_MomHowMuchDeposit[] = _("How much would you like to\ndeposit with your MOM?");
-const u8 gText_MomHowMuchWithdraw[] = _("How much would you like to\nwithdraw from your MOM?");
-#endif
 const u8 gText_MomMatchCallDesc[] = _("CALM & KIND");
 const u8 gText_MomMatchCallName[] = _("MOM");
 const u8 gText_MomMenuCheckSavings[] = _("CHECK SAVINGS");
@@ -561,11 +544,7 @@ const u8 gText_MultiLink[] = _("MULTI-LINK");
 const u8 gText_MenuOptionPokedex[] = _("POKéDEX");
 const u8 gText_MenuOptionPokemon[] = _("POKéMON");
 const u8 gText_MenuOptionBag[] = _("BAG");
-#if IS_HNS
-const u8 gText_MenuOptionPokenav[] = _("POKéGEAR");
-#else
 const u8 gText_MenuOptionPokenav[] = _("POKéNAV");
-#endif
 const u8 gText_Blank[] = _("");
 const u8 gText_MenuOptionSave[] = _("SAVE");
 const u8 gText_MenuOptionOption[] = _("OPTION");
@@ -1031,11 +1010,7 @@ const u8 gText_UpdatedTime[] = _("Updated time"); // Unused
 const u8 gText_MenuPokedex[] = _("POKéDEX");
 const u8 gText_MenuPokemon[] = _("POKéMON");
 const u8 gText_MenuBag[] = _("BAG");
-#if IS_HNS
-const u8 gText_MenuPokenav[] = _("{POKE}GEAR");
-#else
 const u8 gText_MenuPokenav[] = _("POKéNAV");
-#endif
 const u8 gText_MenuPlayer[] = _("{PLAYER}");
 const u8 gText_MenuSave[] = _("SAVE");
 const u8 gText_MenuOption[] = _("OPTION");

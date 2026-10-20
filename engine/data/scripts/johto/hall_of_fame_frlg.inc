@@ -1,0 +1,40 @@
+@ Johto (data/scripts/hall_of_fame_frlg.inc), as built into the FireRed game.
+
+J_EventScript_SetDefeatedEliteFourFlagsVars::
+	clearflag JOHTO_FLAG_HIDE_POSTGAME_GOSSIPERS
+	call J_EventScript_ResetEliteFour
+	special Script_UpdateTrainerFanClubGameClear
+	specialvar VAR_RESULT, IsNationalPokedexEnabled
+	call_if_eq VAR_RESULT, FALSE, J_EventScript_SetReadyTryGiveNationalDexScene
+	call J_EventScript_ResetLegendaries
+	return
+
+J_EventScript_SetReadyTryGiveNationalDexScene::
+	setvar JOHTO_VAR_MAP_SCENE_PALLET_TOWN_OAK, 2
+	return
+
+J_EventScript_ResetLegendaries::
+	clearflag JOHTO_FLAG_LUGIA_FLEW_AWAY
+	clearflag JOHTO_FLAG_HO_OH_FLEW_AWAY
+	clearflag JOHTO_FLAG_DEOXYS_FLEW_AWAY
+	return
+
+J_EventScript_ResetEliteFourEnd::
+	call J_EventScript_ResetEliteFour
+	end
+
+J_EventScript_ResetEliteFour::
+	clearflag JOHTO_FLAG_DEFEATED_LORELEI
+	clearflag JOHTO_FLAG_DEFEATED_BRUNO
+	clearflag JOHTO_FLAG_DEFEATED_AGATHA
+	clearflag JOHTO_FLAG_DEFEATED_LANCE
+	clearflag JOHTO_FLAG_DEFEATED_CHAMP
+	cleartrainerflag TRAINER_CHAMPION_FIRST_SQUIRTLE
+	cleartrainerflag TRAINER_CHAMPION_FIRST_BULBASAUR
+	cleartrainerflag TRAINER_CHAMPION_FIRST_CHARMANDER
+	cleartrainerflag TRAINER_CHAMPION_REMATCH_SQUIRTLE
+	cleartrainerflag TRAINER_CHAMPION_REMATCH_BULBASAUR
+	cleartrainerflag TRAINER_CHAMPION_REMATCH_CHARMANDER
+	setvar JOHTO_VAR_MAP_SCENE_POKEMON_LEAGUE, 0
+	return
+

@@ -1,7 +1,6 @@
 #ifndef GUARD_CONSTANTS_CHARACTER_STORY_H
 #define GUARD_CONSTANTS_CHARACTER_STORY_H
 
-#ifdef FIRERED
 // Audited native SaveBlock1 bits, independent of the older Rainbow cohort.
 #define FLAG_CHARACTER_STORY_ADOPTED     0x920
 #define FLAG_ST01_NEW_COHORT             0x921
@@ -26,6 +25,5 @@
 #define CHARACTER_STORY_FLAGS_FIRST     0x920
 #define CHARACTER_STORY_FLAGS_LAST      0x93F
 #define CHARACTER_STORY_UNUSED_FIRST    0x934
-#endif
 
 #endif

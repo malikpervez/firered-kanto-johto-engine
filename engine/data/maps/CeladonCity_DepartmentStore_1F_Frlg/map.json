@@ -35,7 +35,7 @@
   "warp_events": [
     {
       "x": 1,
-      "y": 15,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY",
       "dest_warp_id": "1"
@@ -49,14 +49,14 @@
     },
     {
       "x": 3,
-      "y": 15,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY",
       "dest_warp_id": "1"
     },
     {
       "x": 9,
-      "y": 15,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY",
       "dest_warp_id": "2"
@@ -70,7 +70,7 @@
     },
     {
       "x": 11,
-      "y": 15,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY",
       "dest_warp_id": "2"
@@ -109,73 +109,13 @@
       "script": "CeladonCity_DepartmentStore_1F_EventScript_FloorSign"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 13,
-      "height": 16,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_DepartmentStore_Hns",
-      "border_filepath": "data/layouts/CeladonCity_DepartmentStore_1F_hns/border.bin",
-      "blockdata_filepath": "data/layouts/CeladonCity_DepartmentStore_1F_hns/map.bin",
-      "layout_version": "hns"
-    },
-    "warp_events": [
-      {
-        "x": 1,
-        "y": 14,
-        "elevation": 0,
-        "dest_map": "MAP_CELADON_CITY",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 2,
-        "y": 14,
-        "elevation": 3,
-        "dest_map": "MAP_CELADON_CITY",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 3,
-        "y": 14,
-        "elevation": 0,
-        "dest_map": "MAP_CELADON_CITY",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 9,
-        "y": 14,
-        "elevation": 0,
-        "dest_map": "MAP_CELADON_CITY",
-        "dest_warp_id": "2"
-      },
-      {
-        "x": 10,
-        "y": 14,
-        "elevation": 3,
-        "dest_map": "MAP_CELADON_CITY",
-        "dest_warp_id": "2"
-      },
-      {
-        "x": 11,
-        "y": 14,
-        "elevation": 0,
-        "dest_map": "MAP_CELADON_CITY",
-        "dest_warp_id": "2"
-      },
-      {
-        "x": 6,
-        "y": 1,
-        "elevation": 0,
-        "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 4,
-        "y": 2,
-        "elevation": 3,
-        "dest_map": "MAP_CELADON_CITY_DEPARTMENT_STORE_2F",
-        "dest_warp_id": "1"
-      }
-    ]
+  "firered_geometry": {
+    "width": 13,
+    "height": 16,
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_DepartmentStore_Hns",
+    "border_filepath": "data/layouts/CeladonCity_DepartmentStore_1F_hns/border.bin",
+    "blockdata_filepath": "data/layouts/CeladonCity_DepartmentStore_1F_hns/map.bin",
+    "layout_version": "hns"
   }
 }

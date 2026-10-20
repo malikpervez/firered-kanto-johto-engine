@@ -1,0 +1,202 @@
+@ Johto (data/scripts/battle_pike_hns.inc), as built into the FireRed game.
+
+J_BattleFrontier_BattlePikeRoom_MapScripts_hns:
+	map_script MAP_SCRIPT_ON_TRANSITION, J_BattleFrontier_BattlePikeRoom_OnTransition_hns
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, J_BattleFrontier_BattlePikeRoom_OnWarp_hns
+
+J_BattleFrontier_BattlePikeRoom_OnTransition_hns:
+	pike_setroomobjects
+	pike_getroomtype
+	switch VAR_RESULT
+	case PIKE_ROOM_SINGLE_BATTLE, J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetOneObjectRoomPos
+	case PIKE_ROOM_HEAL_FULL, J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetOneObjectRoomPos
+	case PIKE_ROOM_NPC, J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetNPCRoomObjPos
+	case PIKE_ROOM_STATUS, J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetTwoObjectRoomPos
+	case PIKE_ROOM_HEAL_PART, J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetOneObjectRoomPos
+	case PIKE_ROOM_DOUBLE_BATTLE, J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetDoubleBattleObjPos
+	case PIKE_ROOM_HARD_BATTLE, J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetTwoObjectRoomPos
+	case PIKE_ROOM_BRAIN, J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetBrainRoomObjPos
+	end
+
+J_BattleFrontier_BattlePikeRoom_OnWarp_hns:
+	map_script_2 VAR_TEMP_4, 0, J_BattleFrontier_BattlePikeRoomNormal_EventScript_InitRoomObjects_hns
+	.2byte 0
+
+J_BattleFrontier_BattlePikeRoomNormal_EventScript_InitRoomObjects_hns::
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_LINK_RECEPTIONIST_HNS
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LINK_RECEPTIONIST_HNS
+	pike_getroomtype
+	goto_if_eq VAR_RESULT, PIKE_ROOM_STATUS, J_BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom
+	goto_if_eq VAR_RESULT, PIKE_ROOM_HARD_BATTLE, J_BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom
+	goto_if_eq VAR_RESULT, PIKE_ROOM_DOUBLE_BATTLE, J_BattleFrontier_BattlePikeRoomNormal_EventScript_InitTwoObjectRoom
+	goto_if_eq VAR_RESULT, PIKE_ROOM_BRAIN, J_BattleFrontier_BattlePikeRoomNormal_EventScript_InitBrainRoomObjects_hns
+	hideobjectat LOCALID_PIKE_ROOM_NPC_2, MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL_HNS
+	setvar VAR_TEMP_4, 1
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	end
+
+J_BattleFrontier_BattlePikeRoomNormal_EventScript_InitBrainRoomObjects_hns::
+	setvar VAR_TEMP_4, 1
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	hideobjectat LOCALID_PIKE_ROOM_NPC_1, MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL_HNS
+	end
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_LeftRoomWarp_hns::
+	setvar VAR_0x8007, PIKE_ROOM_LEFT
+	goto J_BattleFrontier_BattlePikeThreePathRoom_EventScript_RoomWarp_hns
+	end
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_CenterRoomWarp_hns::
+	setvar VAR_0x8007, PIKE_ROOM_CENTER
+	goto J_BattleFrontier_BattlePikeThreePathRoom_EventScript_RoomWarp_hns
+	end
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_RightRoomWarp_hns::
+	setvar VAR_0x8007, PIKE_ROOM_RIGHT
+	goto J_BattleFrontier_BattlePikeThreePathRoom_EventScript_RoomWarp_hns
+	end
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_RoomWarp_hns::
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	pike_get PIKE_DATA_WIN_STREAK
+	addvar VAR_RESULT, 1
+	pike_set PIKE_DATA_WIN_STREAK, VAR_RESULT
+	frontier_get FRONTIER_DATA_BATTLE_NUM
+	addvar VAR_RESULT, 1
+	frontier_set FRONTIER_DATA_BATTLE_NUM, VAR_RESULT
+	pike_setnextroom
+	pike_getroomtype
+	switch VAR_RESULT
+	case PIKE_ROOM_SINGLE_BATTLE, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns
+	case PIKE_ROOM_HEAL_FULL, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns
+	case PIKE_ROOM_NPC, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns
+	case PIKE_ROOM_STATUS, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns
+	case PIKE_ROOM_HEAL_PART, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns
+	case PIKE_ROOM_WILD_MONS, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpWildMonRoom_hns
+	case PIKE_ROOM_HARD_BATTLE, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns
+	case PIKE_ROOM_DOUBLE_BATTLE, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns
+	case PIKE_ROOM_BRAIN, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns
+	end
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpNPCRoom_hns::
+	applymovement LOCALID_PLAYER, J_BattleFrontier_BattlePikeRoom_Movement_HidePlayer
+	waitmovement 0
+	call BattleFrontier_BattlePike_EventScript_CloseCurtain
+	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL_HNS, 4, 7
+	waitstate
+	end
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_WarpWildMonRoom_hns::
+	applymovement LOCALID_PLAYER, J_BattleFrontier_BattlePikeRoom_Movement_HidePlayer
+	waitmovement 0
+	call BattleFrontier_BattlePike_EventScript_CloseCurtain
+	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS_HNS, 4, 19
+	waitstate
+	end
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_SetEnteredRoom_hns::
+	setvar VAR_TEMP_3, 1
+	setvar VAR_TEMP_2, 1
+	end
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_NoTurningBack_hns::
+	setvar VAR_TEMP_3, 0
+	setvar VAR_TEMP_2, 0
+	lockall
+	msgbox J_BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
+J_BattleFrontier_BattlePikeRoomNormal_EventScript_SetEnteredRoom_hns::
+	setvar VAR_TEMP_3, 1
+	setvar VAR_TEMP_2, 1
+	end
+
+J_BattleFrontier_BattlePikeRoomNormal_EventScript_NoTurningBack_hns::
+	setvar VAR_TEMP_3, 0
+	setvar VAR_TEMP_2, 0
+	lockall
+	msgbox J_BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
+J_BattleFrontier_BattlePikeRoomNormal_EventScript_Exit_hns::
+	pike_ispartyfullhealth
+	call_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattlePikeRoom_EventScript_DisableHealing
+	call_if_ne VAR_RESULT, TRUE, J_BattleFrontier_BattlePikeRoom_EventScript_EnableHealing
+	pike_get PIKE_DATA_WIN_STREAK
+	addvar VAR_RESULT, 1
+	pike_set PIKE_DATA_WIN_STREAK, VAR_RESULT
+	frontier_get FRONTIER_DATA_BATTLE_NUM
+	addvar VAR_RESULT, 1
+	frontier_set FRONTIER_DATA_BATTLE_NUM, VAR_RESULT
+	pike_isfinalroom
+	call_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattlePikeRoom_EventScript_WarpToFinalRoom_hns
+	call_if_eq VAR_RESULT, FALSE, J_BattleFrontier_BattlePikeRoom_EventScript_WarpToThreePathRoom_hns
+	waitstate
+	end
+
+J_BattleFrontier_BattlePikeRoom_EventScript_WarpToFinalRoom_hns::
+	applymovement LOCALID_PLAYER, J_BattleFrontier_BattlePikeRoom_Movement_HidePlayer
+	waitmovement 0
+	call BattleFrontier_BattlePike_EventScript_CloseCurtain
+	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_FINAL_HNS, 2, 7
+	return
+
+J_BattleFrontier_BattlePikeRoom_EventScript_WarpToThreePathRoom_hns::
+	applymovement LOCALID_PLAYER, J_BattleFrontier_BattlePikeRoom_Movement_HidePlayer
+	waitmovement 0
+	call BattleFrontier_BattlePike_EventScript_CloseCurtain
+	warpsilent MAP_BATTLE_FRONTIER_BATTLE_PIKE_THREE_PATH_ROOM_HNS, 6, 10
+	return
+
+J_BattleFrontier_BattlePikeRoomWildMons_EventScript_Exit_hns::
+	pike_exitwildmonroom
+	pike_ispartyfullhealth
+	call_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattlePikeRoom_EventScript_DisableHealing
+	call_if_ne VAR_RESULT, TRUE, J_BattleFrontier_BattlePikeRoom_EventScript_EnableHealing
+	pike_get PIKE_DATA_WIN_STREAK
+	addvar VAR_RESULT, 1
+	pike_set PIKE_DATA_WIN_STREAK, VAR_RESULT
+	frontier_get FRONTIER_DATA_BATTLE_NUM
+	addvar VAR_RESULT, 1
+	frontier_set FRONTIER_DATA_BATTLE_NUM, VAR_RESULT
+	pike_isfinalroom
+	call_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattlePikeRoom_EventScript_WarpToFinalRoom_hns
+	call_if_eq VAR_RESULT, FALSE, J_BattleFrontier_BattlePikeRoom_EventScript_WarpToThreePathRoom_hns
+	waitstate
+	end
+
+J_BattleFrontier_BattlePikeRoomWildMons_EventScript_SetEnteredRoom_hns::
+	setvar VAR_TEMP_3, 1
+	setvar VAR_TEMP_2, 1
+	end
+
+J_BattleFrontier_BattlePikeRoomWildMons_EventScript_NoTurningBack_hns::
+	setvar VAR_TEMP_3, 0
+	setvar VAR_TEMP_2, 0
+	lockall
+	msgbox J_BattleFrontier_BattlePike_Text_PathBlockedNoTurningBack, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
+J_BattleFrontier_BattlePike_EventScript_Retire_hns::
+	frontier_set 0 4
+	warp MAP_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY_HNS, 5, 6
+	waitstate
+	end
+
+J_BattleFrontier_BattlePikeRoom_OnResume_hns:
+	setorcopyvar VAR_0x8006, VAR_RESULT
+	frontier_get FRONTIER_DATA_CHALLENGE_STATUS
+	goto_if_eq VAR_RESULT, CHALLENGE_STATUS_PAUSED, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_EndOnResume_hns
+	goto_if_eq VAR_RESULT, CHALLENGE_STATUS_SAVING, J_BattleFrontier_BattlePikeThreePathRoom_EventScript_EndOnResume_hns
+	call J_BattleFrontier_BattlePikeRoom_EventScript_ResetSketchedMoves
+
+J_BattleFrontier_BattlePikeThreePathRoom_EventScript_EndOnResume_hns::
+	setorcopyvar VAR_RESULT, VAR_0x8006
+	end
+

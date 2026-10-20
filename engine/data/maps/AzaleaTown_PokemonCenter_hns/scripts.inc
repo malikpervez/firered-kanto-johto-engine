@@ -1,9 +1,11 @@
+@ Johto (data/maps/AzaleaTown_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
+
 AzaleaTown_PokemonCenter_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, AzaleaTown_Pokecenter_OnTransition
 	.byte 0
 
 AzaleaTown_Pokecenter_OnTransition::
-	setrespawn HEAL_LOCATION_AZALEA_TOWN_HNS
+	setrespawn JOHTO_HEAL_LOCATION_AZALEA_TOWN_HNS
 	end
 
 AzaleaPokeCenter_EventScript_Gentleman::
@@ -31,24 +33,25 @@ AzaleaPokeCenter_EventScript_PokefanF::
 	end
 
 AzaleaPokecenter_Text_Gentleman:
-	.string "Do your POKéMON know HM moves?\p"
-	.string "Those moves can be used even if\n"
-	.string "your POKéMON has fainted.$"
+	.string "D{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}kno{SE_M_TWISTER}H{SE_M_GIGA_DRAIN}moves?\p"
+	.string "Thos{SE_M_REVERSAL}move{SE_M_GRASSWHISTLE}ca{SE_M_ATTRACT}b{SE_M_REVERSAL}use{SE_M_WATERFALL}eve{SE_M_ATTRACT}if\n"
+	.string "you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ha{SE_M_GRASSWHISTLE}fainted.$"
 
 AzaleaPokecenter_Text_UnusedPCExplanation:
-	.string "This BILL guy created the system\n"
-	.string "for storing POKéMON in a PC.\p"
-	.string "BILL's PC can store up to 30\n"
-	.string "POKéMON per BOX.$"
+	.string "Thi{SE_M_GRASSWHISTLE}BIL{SE_M_BRICK_BREAK}gu{SE_M_YAWN}create{SE_M_WATERFALL}th{SE_M_REVERSAL}system\n"
+	.string "fo{SE_M_SAND_TOMB}storin{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}{SE_M_CHARGE}PC.\p"
+	.string "BILL'{SE_M_GRASSWHISTLE}P{SE_M_PSYBEAM}ca{SE_M_ATTRACT}stor{SE_M_REVERSAL}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}30\n"
+	.string "POKéMO{SE_M_PSYBEAM2}pe{SE_M_SAND_TOMB}BOX.$"
 
 AzaleaPokecenter_Text_FishingGuru:
-	.string "BILL's PC can store up to 30\n"
-	.string "POKéMON per BOX.$"
+	.string "BILL'{SE_M_GRASSWHISTLE}P{SE_M_PSYBEAM}ca{SE_M_ATTRACT}stor{SE_M_REVERSAL}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}30\n"
+	.string "POKéMO{SE_M_PSYBEAM2}pe{SE_M_SAND_TOMB}BOX.$"
 
 AzaleaPokecenter_Text_PokefanF:
-	.string "Do you know about BERRIES?\p"
-	.string "Crack one open, hollow it out and\n"
-	.string "fit it with a special device.\p"
-	.string "Then you can catch POKéMON with it.\p"
-	.string "Before POKé BALLS were invented,\n"
-	.string "everyone used BERRIES.$"
+	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}abou{SE_M_SPIT_UP}BERRIES?\p"
+	.string "Crac{SE_M_ENCORE2}on{SE_M_REVERSAL}open{SE_M_SUPERSONIC}hollo{SE_M_TWISTER}i{SE_M_SPIT_UP}ou{SE_M_SPIT_UP}and\n"
+	.string "fi{SE_M_SPIT_UP}i{SE_M_SPIT_UP}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}specia{SE_M_BATON_PASS}device.\p"
+	.string "The{SE_M_ATTRACT}yo{SE_M_DIVE}ca{SE_M_ATTRACT}catc{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}it.\p"
+	.string "Befor{SE_M_REVERSAL}POK{SE_U}BALL{SE_M_SKETCH}wer{SE_M_REVERSAL}invented,\n"
+	.string "everyon{SE_M_REVERSAL}use{SE_M_WATERFALL}BERRIES.$"
+

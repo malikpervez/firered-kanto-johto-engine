@@ -1,4 +1,3 @@
-#ifdef FIRERED
 // Exact pinned HnS rematch catalog; original enum indices and native catalog remain unchanged.
 const struct RematchTrainer gJohtoRematchTable[REMATCH_TABLE_ENTRIES] =
 {
@@ -87,4 +86,3 @@ static const u8 sJohtoRematchOriginalIds[40] =
     REMATCH_JOEL_HNS,
     REMATCH_CHARLES_HNS,
 };
-#endif

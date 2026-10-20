@@ -19,7 +19,7 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 10,
+      "x": 9,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
@@ -30,15 +30,15 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 6,
-      "y": 5,
+      "x": 4,
+      "y": 2,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PalletTown_PlayersHouse_2F_EventScript_NES"
     },
     {
       "type": "sign",
-      "x": 1,
+      "x": 2,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -46,48 +46,11 @@
     },
     {
       "type": "sign",
-      "x": 11,
+      "x": 1,
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PalletTown_PlayersHouse_2F_EventScript_Sign"
     }
-  ],
-  "firered_campaign": {
-    "warp_events": [
-      {
-        "x": 9,
-        "y": 2,
-        "elevation": 3,
-        "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
-        "dest_warp_id": "2"
-      }
-    ],
-    "bg_events": [
-      {
-        "type": "sign",
-        "x": 4,
-        "y": 2,
-        "elevation": 3,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "PalletTown_PlayersHouse_2F_EventScript_NES"
-      },
-      {
-        "type": "sign",
-        "x": 2,
-        "y": 1,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
-      },
-      {
-        "type": "sign",
-        "x": 1,
-        "y": 1,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "PalletTown_PlayersHouse_2F_EventScript_Sign"
-      }
-    ]
-  }
+  ]
 }

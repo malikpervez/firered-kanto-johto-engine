@@ -1,4 +1,3 @@
-#ifdef FIRERED
 // Shared across difficulties; ordinary native Pokémon/moves/animation pipeline.
 static const struct TrainerMon sStoryJessieParty[] =
 {
@@ -24,4 +23,3 @@ static const struct TrainerMon sStoryJamesParty[] =
         .moves = { MOVE_TACKLE, MOVE_SMOG, MOVE_SMOKESCREEN, MOVE_SLUDGE },
     },
 };
-#endif

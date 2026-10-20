@@ -37,17 +37,15 @@
       "script": "SilphCo_Elevator_EventScript_FloorSelect"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 5,
-      "height": 7,
-      "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
-      "secondary_tileset": "gTileset_SilphCo",
-      "blockdata_filepath": "data/layouts/SilphCo_Elevator_Frlg/map.bin",
-      "border_filepath": "data/layouts/SilphCo_Elevator_Frlg/border.bin",
-      "layout_version": "frlg",
-      "border_width": 2,
-      "border_height": 2
-    }
+  "firered_geometry": {
+    "width": 5,
+    "height": 7,
+    "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
+    "secondary_tileset": "gTileset_SilphCo",
+    "blockdata_filepath": "data/layouts/SilphCo_Elevator_Frlg/map.bin",
+    "border_filepath": "data/layouts/SilphCo_Elevator_Frlg/border.bin",
+    "layout_version": "frlg",
+    "border_width": 2,
+    "border_height": 2
   }
 }

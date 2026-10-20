@@ -1,4 +1,3 @@
-#ifdef FIRERED
 @ ST02–ST04: optional native gifts. No campaign, weather or party gate.
 @ Map-local IDs are append-only and bound in the private placement manifest.
 
@@ -374,4 +373,3 @@ ST01_Text_RivalWaiting:
 	.string "{RIVAL}: Go on, {PLAYER}!\n"
 	.string "PIKACHU is watching you.\p"
 	.string "I have EEVEE to train!$"
-#endif

@@ -1,29 +1,31 @@
+@ Johto (data/maps/IlexForest_hns/scripts.inc), as built into the FireRed game.
+
 IlexForest_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, IlexForest_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
-IlexForest_OnTransition: 
-	call_if_eq VAR_ILEX_FOREST_FARFETCHD, 1, IlexForest_EventScript_ReenterWhenFarfetchdLeaving
-	call_if_eq VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_ReenterDuringCutScene
+IlexForest_OnTransition:
+	call_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 1, IlexForest_EventScript_ReenterWhenFarfetchdLeaving
+	call_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_ReenterDuringCutScene
 	callnative SetTimeBasedEncounters
-	end	
+	end
 
 IlexForest_EventScript_ReenterWhenFarfetchdLeaving::
 	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 33, 51
 	return
 
 IlexForest_EventScript_ReenterDuringCutScene::
-	clearflag FLAG_HIDE_ILEX_FOREST_MASTER
-	clearflag FLAG_HIDE_ILEX_FOREST_APPRENTICE
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_MASTER
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_APPRENTICE
 	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 28, 42
 	return
 
 IlexForest_EventScript_Apprentice::
 	lock
 	faceplayer
-	goto_if_eq VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_Apprentice2
-	goto_if_eq VAR_ILEX_FOREST_FARFETCHD, 3, IlexForest_EventScript_Apprentice2
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_Apprentice2
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 3, IlexForest_EventScript_Apprentice2
 	msgbox IlexForest_Text_ApprenticeIntro, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -50,23 +52,24 @@ IlexForest_EventScript_Farfetchd_1A::
 	msgbox IlexForest_Text_Kwaaaa, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	goto_if_eq VAR_ILEX_FOREST_FARFETCHD, 3, IlexForest_EventScript_Farfetchd_Done
-	goto_if_eq VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_Farfetchd_Done
-	goto_if_eq VAR_ILEX_FOREST_FARFETCHD, 1, IlexForest_EventScript_Farfetchd_Leave
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 3, IlexForest_EventScript_Farfetchd_Done
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_Farfetchd_Done
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 1, IlexForest_EventScript_Farfetchd_Leave
 	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_1B
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_1, IlexForest_Movement_Farfetchd_1A
 	waitmovement 0
-	setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
 	removeobject LOCALID_ILEX_FOREST_FARFETCHD_1
-	@add clockwise farfetchd
-	clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
 	addobject LOCALID_ILEX_FOREST_FARFETCHD_2
 	release
 	end
+
 IlexForest_EventScript_Farfetchd_1B::
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_1, IlexForest_Movement_Farfetchd_1B
 	waitmovement 0
-	setvar VAR_ILEX_FOREST_FARFETCHD, 1
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 1
 	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 33, 51
 	release
 	end
@@ -81,20 +84,21 @@ IlexForest_EventScript_Farfetchd_2A::
 	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_2B
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_2, IlexForest_Movement_Farfetchd_2A
 	waitmovement 0
-	setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
 	removeobject LOCALID_ILEX_FOREST_FARFETCHD_2
-	@add clockwise farfetchd
-	clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
 	addobject LOCALID_ILEX_FOREST_FARFETCHD_3
 	release
 	end
+
 IlexForest_EventScript_Farfetchd_2B::
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_2, IlexForest_Movement_Farfetchd_2B
 	waitmovement 0
-	setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
 	removeobject LOCALID_ILEX_FOREST_FARFETCHD_2
-	@add counterclockwise farfetchd
-	clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
 	addobject LOCALID_ILEX_FOREST_FARFETCHD_1
 	release
 	end
@@ -109,20 +113,21 @@ IlexForest_EventScript_Farfetchd_3A::
 	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_3B
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_3, IlexForest_Movement_Farfetchd_3A
 	waitmovement 0
-	setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
 	removeobject LOCALID_ILEX_FOREST_FARFETCHD_3
-	@add clockwise farfetchd
-	clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
 	addobject LOCALID_ILEX_FOREST_FARFETCHD_2
 	release
 	end
+
 IlexForest_EventScript_Farfetchd_3B::
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_3, IlexForest_Movement_Farfetchd_3B
 	waitmovement 0
-	setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
 	removeobject LOCALID_ILEX_FOREST_FARFETCHD_3
-	@add counterclockwise farfetchd
-	clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
+
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
 	addobject LOCALID_ILEX_FOREST_FARFETCHD_4
 	release
 	end
@@ -137,24 +142,24 @@ IlexForest_EventScript_Farfetchd_4A::
 	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_4B
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_4, IlexForest_Movement_Farfetchd_4A
 	waitmovement 0
-	setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
 	removeobject LOCALID_ILEX_FOREST_FARFETCHD_4
-	@add clockwise farfetchd
-	clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
 	addobject LOCALID_ILEX_FOREST_FARFETCHD_3
 	release
 	end
+
 IlexForest_EventScript_Farfetchd_4B::
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_4, IlexForest_Movement_Farfetchd_4B
 	waitmovement 0
-	setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
 	removeobject LOCALID_ILEX_FOREST_FARFETCHD_4
-	@add counterclockwise farfetchd
-	clearflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
 	addobject LOCALID_ILEX_FOREST_FARFETCHD_1
 	release
 	end
-
 
 IlexForest_EventScript_Farfetchd_Leave::
 	goto_if_eq VAR_FACING, DIR_EAST, IlexForest_EventScript_Farfetchd_Return
@@ -162,44 +167,47 @@ IlexForest_EventScript_Farfetchd_Leave::
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_1, IlexForest_Movement_Farfetchd_Leave
 	waitmovement 0
 	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 28, 42
-	setvar VAR_ILEX_FOREST_FARFETCHD, 2
-	clearflag FLAG_HIDE_ILEX_FOREST_KIMONO
-	clearflag FLAG_HIDE_ILEX_FOREST_MASTER
-	setflag FLAG_HIDE_AZALEA_TOWN_CUT_MASTER
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 2
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_KIMONO
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_MASTER
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_CUT_MASTER
 	addobject 1
 	release
 	end
+
 IlexForest_EventScript_Farfetchd_Return::
-	setvar VAR_ILEX_FOREST_FARFETCHD, 0
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 0
 	applymovement LOCALID_ILEX_FOREST_FARFETCHD_1, IlexForest_Movement_Farfetchd_Return
 	waitmovement 0
 	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 42, 47
 	release
 	end
+
 IlexForest_EventScript_Farfetchd_Done::
 	release
 	end
 
 IlexForest_EventScript_TriggerBot::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER Common_Movement_WalkUp
+	applymovement 255 J_Common_Movement_WalkUp
 	waitmovement 0
+
 IlexForest_EventScript_Trigger::
 	lock
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox IlexForest_Text_CharcoalMasterIntro, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_HM_CUT
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_BagIsFull
 	msgbox IlexForest_Text_CharcoalMasterOutro, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_HM_CUT
-	setflag FLAG_HIDE_ILEX_FOREST_MASTER
-	setflag FLAG_HIDE_ILEX_FOREST_APPRENTICE
-	setflag FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
-	setvar VAR_ILEX_FOREST_FARFETCHD, 3
-	setvar VAR_AZALEA_TOWN_STATE, 7
-	clearflag FLAG_HIDE_AZALEA_TOWN_FARFETCHD
-	clearflag FLAG_HIDE_AZALEA_TOWN_CUT_MASTER
+	setflag JOHTO_FLAG_RECEIVED_HM_CUT
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_MASTER
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_APPRENTICE
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 3
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 7
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_FARFETCHD
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_CUT_MASTER
 	closemessage
 	release
 	end
@@ -213,13 +221,13 @@ IlexForest_EventScript_Picnicker::
 	end
 
 IlexForest_EventScript_BugcatcherWayne::
-	trainerbattle_single TRAINER_WAYNE_HNS, IlexForest_Text_BugCatcherWayneSeen, IlexForest_Text_BugCatcherWayneBeaten
+	trainerbattle_single TRAINER_JOHTO_WAYNE_HNS, IlexForest_Text_BugCatcherWayneSeen, IlexForest_Text_BugCatcherWayneBeaten
 	msgbox IlexForest_Text_BugCatcherWayneAfter, MSGBOX_AUTOCLOSE
 	end
 
 IlexForest_EventScript_Shrine::
 	lock
-	goto_if_eq VAR_AZALEA_TOWN_STATE, 9, IlexForest_EventScript_Celebi_Event
+	goto_if_eq JOHTO_VAR_AZALEA_TOWN_STATE, 9, IlexForest_EventScript_Celebi_Event
 	msgbox IlexForest_Text_Shrine, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -229,7 +237,7 @@ IlexForest_EventScript_Celebi_Event::
 	msgbox IlexForest_Text_ShrineCelebiEvent, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, IlexForest_EventScript_Shrine_Cancel
 	msgbox IlexForest_Text_InsertGSBall, MSGBOX_DEFAULT
-	clearflag FLAG_HIDE_CELEBI
+	clearflag JOHTO_FLAG_HIDE_CELEBI
 	addobject LOCALID_ILEX_FOREST_CELEBI
 	playse SE_M_PETAL_DANCE
 	applymovement LOCALID_ILEX_FOREST_CELEBI, IlexForest_Movement_Celebi1
@@ -247,16 +255,17 @@ IlexForest_EventScript_Celebi_Event::
 	waitmoncry
 	seteventmon SPECIES_CELEBI, 40
 	special BattleSetup_StartLegendaryBattle
-waitstate
+	waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
 	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, IlexForest_EventScript_Shrine_Caught
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_ILEX_FOREST_CELEBI
-	setflag FLAG_HIDE_CELEBI
+	setflag JOHTO_FLAG_HIDE_CELEBI
 	special GivePartyMonNationalRibbon
 	fadescreenswapbuffers FADE_FROM_BLACK
+
 IlexForest_EventScript_Kurt::
-	clearflag FLAG_HIDE_ILEX_FOREST_KURT
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_KURT
 	addobject LOCALID_ILEX_FOREST_KURT
 	applymovement LOCALID_ILEX_FOREST_KURT, IlexForest_Movement_Kurt1
 	waitmovement 0
@@ -265,21 +274,20 @@ IlexForest_EventScript_Kurt::
 	closemessage
 	applymovement LOCALID_ILEX_FOREST_KURT, IlexForest_Movement_Kurt2
 	waitmovement 0
-	setflag FLAG_HIDE_ILEX_FOREST_KURT
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_KURT
 	removeobject LOCALID_ILEX_FOREST_KURT
-	setvar VAR_AZALEA_TOWN_STATE, 10
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 10
 	release
 	end
 
 IlexForest_EventScript_Shrine_Caught::
-	setflag FLAG_CAUGHT_CELEBI
+	setflag JOHTO_FLAG_CAUGHT_CELEBI
 	return
 
 IlexForest_EventScript_Shrine_Cancel::
 	closemessage
 	release
 	end
-
 
 IlexForest_EventScript_SecondCelebi::
 	lock
@@ -289,12 +297,12 @@ IlexForest_EventScript_SecondCelebi::
 	waitmoncry
 	seteventmon SPECIES_CELEBI, 40
 	special BattleSetup_StartLegendaryBattle
-waitstate
+	waitstate
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, IlexForest_EventScript_SecondCelebiRan
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject LOCALID_ILEX_FOREST_SECOND_CELEBI
-	setflag FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI
 	fadescreenswapbuffers FADE_FROM_BLACK
 	special GivePartyMonNationalRibbon
 	release
@@ -303,7 +311,6 @@ waitstate
 IlexForest_EventScript_SecondCelebiRan::
 	release
 	end
-
 
 IlexForest_EventScript_Sign::
 	lock
@@ -314,10 +321,10 @@ IlexForest_EventScript_Sign::
 
 IlexForest_EventScript_Kimono::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, FALSE
+	playbgm ((558 + 1) + 0x85), FALSE
 	playse SE_PIN
 	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
-	applymovement2 LOCALID_ILEX_FOREST_KIMONO, Common_Movement_ExclamationMark
+	applymovement2 LOCALID_ILEX_FOREST_KIMONO, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_ILEX_FOREST_KIMONO
 	applymovement2 LOCALID_ILEX_FOREST_KIMONO, IlexForest_Movement_Kimono_Girl1
@@ -338,7 +345,7 @@ IlexForest_EventScript_Kimono::
 	playfirstmoncry
 	turnobject LOCALID_ILEX_FOREST_KIMONO, DIR_WEST
 	msgbox IlexForest_Text_Kimono_Girl4, MSGBOX_DEFAULT
-	closemessage 
+	closemessage
 	turnobject LOCALID_ILEX_FOREST_KIMONO, DIR_SOUTH
 	delay 16
 	msgbox IlexForest_Text_Kimono_Girl5, MSGBOX_DEFAULT
@@ -350,8 +357,8 @@ IlexForest_EventScript_Kimono::
 	waitmovement 0
 	waitmovement 0
 	fadedefaultbgm
-	setvar VAR_ILEX_FOREST_FARFETCHD, 4
-	setflag FLAG_HIDE_ILEX_FOREST_KIMONO
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 4
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_KIMONO
 	removeobject LOCALID_ILEX_FOREST_KIMONO
 	playfirstmoncry
 	applymovement OBJ_EVENT_ID_FOLLOWER, IlexForest_Movement_Follower3
@@ -455,7 +462,6 @@ IlexForest_Movement_Follower3:
 	face_up
 	step_end
 
-
 IlexForest_Movement_Farfetchd_1A:
 	walk_fast_up
 	walk_fast_up
@@ -464,6 +470,7 @@ IlexForest_Movement_Farfetchd_1A:
 	walk_fast_up
 	walk_fast_up
 	step_end
+
 IlexForest_Movement_Farfetchd_1B:
 	walk_fast_down
 	walk_fast_down
@@ -479,6 +486,7 @@ IlexForest_Movement_Farfetchd_1B:
 	walk_fast_left
 	walk_fast_left
 	step_end
+
 IlexForest_Movement_Farfetchd_2A:
 	walk_fast_up
 	walk_fast_right
@@ -490,6 +498,7 @@ IlexForest_Movement_Farfetchd_2A:
 	walk_fast_right
 	walk_fast_right
 	step_end
+
 IlexForest_Movement_Farfetchd_2B:
 	walk_fast_down
 	walk_fast_down
@@ -498,6 +507,7 @@ IlexForest_Movement_Farfetchd_2B:
 	walk_fast_down
 	walk_fast_down
 	step_end
+
 IlexForest_Movement_Farfetchd_3A:
 	walk_fast_up
 	walk_fast_left
@@ -509,6 +519,7 @@ IlexForest_Movement_Farfetchd_3A:
 	walk_fast_left
 	walk_fast_left
 	step_end
+
 IlexForest_Movement_Farfetchd_3B:
 	walk_fast_down
 	walk_fast_down
@@ -517,6 +528,7 @@ IlexForest_Movement_Farfetchd_3B:
 	walk_fast_down
 	walk_fast_down
 	step_end
+
 IlexForest_Movement_Farfetchd_4A:
 	walk_fast_up
 	walk_fast_right
@@ -528,6 +540,7 @@ IlexForest_Movement_Farfetchd_4A:
 	walk_fast_up
 	walk_fast_up
 	step_end
+
 IlexForest_Movement_Farfetchd_4B:
 	walk_fast_down
 	walk_fast_left
@@ -557,6 +570,7 @@ IlexForest_Movement_Farfetchd_Leave:
 	walk_fast_left
 	face_down
 	step_end
+
 IlexForest_Movement_Farfetchd_Return:
 	walk_fast_right
 	walk_fast_right
@@ -570,7 +584,7 @@ IlexForest_Movement_Farfetchd_Return:
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
-	walk_fast_up	
+	walk_fast_up
 	step_end
 
 IlexForest_Movement_Celebi1:
@@ -650,117 +664,118 @@ IlexForest_Movement_Kurt2:
 	step_end
 
 IlexForest_Text_ApprenticeIntro:
-	.string "Oh, man… My boss is going to be\n"
+	.string "Oh{SE_M_SUPERSONIC}man{SE_M_DIZZY_PUNCH}M{SE_M_YAWN}bos{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}be\n"
 	.string "steaming…\p"
-	.string "The FARFETCH'D that CUTS trees\n"
-	.string "for charcoal took off on me.\p"
-	.string "I can't go looking for it here\n"
-	.string "in the ILEX FOREST.\p"
-	.string "It's too big, dark and scary\n"
-	.string "for me…$"
+	.string "Th{SE_M_REVERSAL}FARFETCH'{SE_M_FAINT_ATTACK}tha{SE_M_SPIT_UP}CUT{SE_M_SKETCH}trees\n"
+	.string "fo{SE_M_SAND_TOMB}charcoa{SE_M_BATON_PASS}too{SE_M_ENCORE2}of{SE_M_ACID_ARMOR}o{SE_M_ATTRACT}me.\p"
+	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}g{SE_M_ATTRACT2}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}i{SE_M_SPIT_UP}here\n"
+	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}ILE{SE_M_LOCK_ON}FOREST.\p"
+	.string "It'{SE_M_GRASSWHISTLE}to{SE_M_ATTRACT2}big{SE_M_SUPERSONIC}dar{SE_M_ENCORE2}an{SE_M_WATERFALL}scary\n"
+	.string "fo{SE_M_SAND_TOMB}me…$"
 
 IlexForest_Text_ApprenticeAfter:
-	.string "Wow! Thanks a whole bunch!\p"
-	.string "My boss' POKéMON won't obey me\n"
-	.string "because I don't have a BADGE.$"
+	.string "Wow{SE_M_DRAGON_RAGE}Thank{SE_M_GRASSWHISTLE}{SE_M_CHARGE}whol{SE_M_REVERSAL}bunch!\p"
+	.string "M{SE_M_YAWN}boss{SE_M_ABSORB}POKéMO{SE_M_PSYBEAM2}won'{SE_M_SPIT_UP}obe{SE_M_YAWN}me\n"
+	.string "becaus{SE_M_REVERSAL}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}{SE_M_CHARGE}BADGE.$"
 
 IlexForest_Text_ItsTheMissingPokemon:
-	.string "It's the missing POKéMON!$"
+	.string "It'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}missin{SE_M_SANDSTORM}POKéMON!$"
 
 IlexForest_Text_Kwaaaa:
-	.string "FARFETCH'D: Kwaa!$"
+	.string "FARFETCH'D{SE_M_HEAT_WAVE}Kwaa!$"
 
 IlexForest_Text_CharcoalMasterIntro:
-	.string "Ah! My FARFETCH'D!\p"
-	.string "You found it for us, kid?\p"
-	.string "Without it, we wouldn't be able\n"
-	.string "to CUT trees for charcoal.\p"
-	.string "Thanks, kid!\p"
-	.string "Now, how can I thank you…\p"
-	.string "I know! Here, take this.$"
+	.string "Ah{SE_M_DRAGON_RAGE}M{SE_M_YAWN}FARFETCH'D!\p"
+	.string "Yo{SE_M_DIVE}foun{SE_M_WATERFALL}i{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}us{SE_M_SUPERSONIC}kid?\p"
+	.string "Withou{SE_M_SPIT_UP}it{SE_M_SUPERSONIC}w{SE_M_REVERSAL}wouldn'{SE_M_SPIT_UP}b{SE_M_REVERSAL}able\n"
+	.string "t{SE_M_ATTRACT2}CU{SE_M_SWIFT}tree{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}charcoal.\p"
+	.string "Thanks{SE_M_SUPERSONIC}kid!\p"
+	.string "Now{SE_M_SUPERSONIC}ho{SE_M_TWISTER}ca{SE_M_ATTRACT}{SE_M_HEAL_BELL}than{SE_M_ENCORE2}you…\p"
+	.string "{SE_M_HEAL_BELL}know{SE_M_DRAGON_RAGE}Here{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}this.$"
 
 IlexForest_Text_CharcoalMasterOutro:
-	.string "That's the CUT HM.\n"
-	.string "Teach that to a POKéMON to clear\l"
-	.string "small trees.\p"
-	.string "Of course, you have to have the\n"
-	.string "GYM BADGE from AZALEA to use it.$"
+	.string "That'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}CU{SE_M_SWIFT}HM.\n"
+	.string "Teac{SE_M_TRI_ATTACK}tha{SE_M_SPIT_UP}t{SE_M_ATTRACT2}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}t{SE_M_ATTRACT2}clear\l"
+	.string "smal{SE_M_BATON_PASS}trees.\p"
+	.string "O{SE_M_ACID_ARMOR}course{SE_M_SUPERSONIC}yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}the\n"
+	.string "GY{SE_M_GIGA_DRAIN}BADG{SE_M_SWORDS_DANCE}fro{SE_M_MILK_DRINK}AZALE{SE_M_BONEMERANG}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}it.$"
 
 IlexForest_Text_CharcoalMasterTalkAfter:
-	.string "Do you want to apprentice as a\n"
-	.string "charcoal maker with me?\p"
-	.string "You'll be first-rate in ten years!$"
+	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}apprentic{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}a\n"
+	.string "charcoa{SE_M_BATON_PASS}make{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}me?\p"
+	.string "You'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}first-rat{SE_M_REVERSAL}i{SE_M_ATTRACT}te{SE_M_ATTRACT}years!$"
 
 IlexForest_Text_Lass:
-	.string "Did something happen to the\n"
-	.string "forest's guardian?$"
+	.string "Di{SE_M_WATERFALL}somethin{SE_M_SANDSTORM}happe{SE_M_ATTRACT}t{SE_M_ATTRACT2}the\n"
+	.string "forest'{SE_M_GRASSWHISTLE}guardian?$"
 
 IlexForest_Text_Signpost:
-	.string "ILEX FOREST is so overgrown with\n"
-	.string "trees that you can't see the sky.\p"
-	.string "Please watch out for items that may\n"
-	.string "have been dropped.$"
+	.string "ILE{SE_M_LOCK_ON}FORES{SE_M_SWIFT}i{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}overgrow{SE_M_ATTRACT}with\n"
+	.string "tree{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}se{SE_M_REVERSAL}th{SE_M_REVERSAL}sky.\p"
+	.string "Pleas{SE_M_REVERSAL}watc{SE_M_TRI_ATTACK}ou{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}item{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}may\n"
+	.string "hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}dropped.$"
 
 IlexForest_Text_Shrine:
-	.string "ILEX FOREST SHRINE…\p"
-	.string "It's in honor of the forest's\n"
+	.string "ILE{SE_M_LOCK_ON}FORES{SE_M_SWIFT}SHRINE…\p"
+	.string "It'{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}hono{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}forest's\n"
 	.string "protector…$"
 
 IlexForest_Text_ShrineCelebiEvent:
-	.string "ILEX FOREST SHRINE…\p"
-	.string "It's in honor of the forest's\n"
+	.string "ILE{SE_M_LOCK_ON}FORES{SE_M_SWIFT}SHRINE…\p"
+	.string "It'{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}hono{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}forest's\n"
 	.string "protector…\p"
-	.string "Oh? What is this?\p"
-	.string "It's a hole.\n"
-	.string "It looks like the GS BALL would fit\l"
-	.string "inside it.\p"
-	.string "Want to put the GS BALL here?$"
+	.string "Oh{SE_M_SING}Wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}this?\p"
+	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}hole.\n"
+	.string "I{SE_M_SPIT_UP}look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}th{SE_M_REVERSAL}G{SE_M_SKETCH}BAL{SE_M_BRICK_BREAK}woul{SE_M_WATERFALL}fit\l"
+	.string "insid{SE_M_REVERSAL}it.\p"
+	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}pu{SE_M_SPIT_UP}th{SE_M_REVERSAL}G{SE_M_SKETCH}BAL{SE_M_BRICK_BREAK}here?$"
 
 IlexForest_Text_InsertGSBall:
-	.string "{PLAYER} put in the GS BALL.$"
+	.string "{PLAYER} pu{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}G{SE_M_SKETCH}BALL.$"
 
 IlexForest_Text_KurtCaughtCelebi:
-	.string "Whew, wasn't that something!\p"
-	.string "{PLAYER}, that was fantastic. Thanks!\p"
-	.string "The legends about that SHRINE were\n"
-	.string "real after all.\p"
-	.string "I feel inspired by what I just saw.\p"
-	.string "It motivates me to make better BALLS!\p"
-	.string "I'm going!$"
+	.string "Whew{SE_M_SUPERSONIC}wasn'{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}something!\p"
+	.string "{PLAYER}{SE_M_SUPERSONIC}tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}fantastic{SE_M_PERISH_SONG}Thanks!\p"
+	.string "Th{SE_M_REVERSAL}legend{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}SHRIN{SE_M_SWORDS_DANCE}were\n"
+	.string "rea{SE_M_BATON_PASS}afte{SE_M_SAND_TOMB}all.\p"
+	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}inspire{SE_M_WATERFALL}b{SE_M_YAWN}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}saw.\p"
+	.string "I{SE_M_SPIT_UP}motivate{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}bette{SE_M_SAND_TOMB}BALLS!\p"
+	.string "I'{SE_M_MILK_DRINK}going!$"
 
 IlexForest_Text_BugCatcherWayneSeen:
-	.string "Don't sneak up on me like that!\p"
-	.string "You frightened a POKéMON away!$"
+	.string "Don'{SE_M_SPIT_UP}snea{SE_M_ENCORE2}u{SE_M_MORNING_SUN}o{SE_M_ATTRACT}m{SE_M_REVERSAL}lik{SE_M_REVERSAL}that!\p"
+	.string "Yo{SE_M_DIVE}frightene{SE_M_WATERFALL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}away!$"
 
 IlexForest_Text_BugCatcherWayneBeaten:
-	.string "I hadn't seen that POKéMON before…$"
+	.string "{SE_M_HEAL_BELL}hadn'{SE_M_SPIT_UP}see{SE_M_ATTRACT}tha{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}before…$"
 
 IlexForest_Text_BugCatcherWayneAfter:
-	.string "A POKéMON I've never seen before\n"
-	.string "fell out of the tree when I used\l"
+	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}I'v{SE_M_REVERSAL}neve{SE_M_SAND_TOMB}see{SE_M_ATTRACT}before\n"
+	.string "fel{SE_M_BATON_PASS}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}tre{SE_M_REVERSAL}whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}used\l"
 	.string "HEADBUTT.\p"
-	.string "I ought to use HEADBUTT in other\n"
-	.string "places too.$"
+	.string "{SE_M_HEAL_BELL}ough{SE_M_SPIT_UP}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}HEADBUT{SE_M_SWIFT}i{SE_M_ATTRACT}other\n"
+	.string "place{SE_M_GRASSWHISTLE}too.$"
 
 IlexForest_Text_Kimono_Girl1:
-	.string "KIMONO GIRL, KIMONO GIRL, lost and\n"
-	.string "all alone. Poor girl lost in the\l"
-	.string "dark ILEX FOREST.$"
+	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SUPERSONIC}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SUPERSONIC}los{SE_M_SPIT_UP}and\n"
+	.string "al{SE_M_BATON_PASS}alone{SE_M_PERISH_SONG}Poo{SE_M_SAND_TOMB}gir{SE_M_BATON_PASS}los{SE_M_SPIT_UP}i{SE_M_ATTRACT}the\l"
+	.string "dar{SE_M_ENCORE2}ILE{SE_M_LOCK_ON}FOREST.$"
 
 IlexForest_Text_Kimono_Girl2:
-	.string "You remember me from VIOLET CITY?\n"
-	.string "You must be imagining.\p"
-	.string "Anyway, will you show me how to\n"
-	.string "get out of this forest?$"
+	.string "Yo{SE_M_DIVE}remembe{SE_M_SAND_TOMB}m{SE_M_REVERSAL}fro{SE_M_MILK_DRINK}VIOLE{SE_M_SWIFT}CITY?\n"
+	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}imagining.\p"
+	.string "Anyway{SE_M_SUPERSONIC}wil{SE_M_BATON_PASS}yo{SE_M_DIVE}sho{SE_M_TWISTER}m{SE_M_REVERSAL}ho{SE_M_TWISTER}to\n"
+	.string "ge{SE_M_SPIT_UP}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}thi{SE_M_GRASSWHISTLE}forest?$"
 
 IlexForest_Text_Kimono_Girl3:
-	.string "Me oh my... You are lost yourself,\n"
-	.string "aren't you?$"
+	.string "M{SE_M_REVERSAL}o{SE_M_TRI_ATTACK}my..{SE_M_PERISH_SONG}Yo{SE_M_DIVE}ar{SE_M_REVERSAL}los{SE_M_SPIT_UP}yourself,\n"
+	.string "aren'{SE_M_SPIT_UP}you?$"
 
 IlexForest_Text_Kimono_Girl4:
-	.string "Wow! Are you going to show me how\n"
-	.string "to get out?\p"
-	.string "You are such a smart POKéMON!$"
+	.string "Wow{SE_M_DRAGON_RAGE}Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}m{SE_M_REVERSAL}how\n"
+	.string "t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}out?\p"
+	.string "Yo{SE_M_DIVE}ar{SE_M_REVERSAL}suc{SE_M_TRI_ATTACK}{SE_M_CHARGE}smar{SE_M_SPIT_UP}POKéMON!$"
 
 IlexForest_Text_Kimono_Girl5:
-	.string "See you.$"
+	.string "Se{SE_M_REVERSAL}you.$"
+

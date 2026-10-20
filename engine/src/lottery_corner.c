@@ -8,7 +8,6 @@
 #include "text.h"
 #include "pokemon_storage_system.h"
 
-#ifdef FIRERED
 #include "regions.h"
 #include "constants/johto_ids.h"
 
@@ -17,9 +16,6 @@ static u16 GetLotteryVarId(u16 nativeId, u16 johtoId)
     return GetCurrentRegion() == REGION_JOHTO ? johtoId : nativeId;
 }
 #define LOTTERY_VAR(nativeId, johtoId) GetLotteryVarId(nativeId, johtoId)
-#else
-#define LOTTERY_VAR(nativeId, johtoId) nativeId
-#endif
 
 static EWRAM_DATA u16 sWinNumberDigit = 0;
 static EWRAM_DATA u16 sOtIdDigit = 0;

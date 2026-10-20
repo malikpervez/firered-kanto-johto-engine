@@ -108,11 +108,9 @@
 	.if \flag < FLAG_HIDDEN_ITEMS_START
 	.error "Hidden Item flag \flag is too small. Must be >= FLAG_HIDDEN_ITEMS_START."
 	.endif
-#ifdef FIRERED
 	.if (\flag - FLAG_HIDDEN_ITEMS_START) >= (1 << 13)
 	.error "Hidden Item flag does not fit existing13-bit ID."
 	.endif
-#endif
 	.if \item >= (1 << 12)
 	.error "quantity \quantity too large"
 	.endif

@@ -109,13 +109,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
 {
     [FRONTIER_FACILITY_TOWER] =
     {
-#if IS_HNS
-        .trainerId = TRAINER_ANABEL_BF_BRAIN_HNS,
-        .objEventGfx = OBJ_EVENT_GFX_ANABEL_HNS,
-#else
         .trainerId = TRAINER_ANABEL,
         .objEventGfx = OBJ_EVENT_GFX_ANABEL,
-#endif
         .isFemale = TRUE,
         .lostTexts = {
             COMPOUND_STRING("Okay, I understand…"), //Silver
@@ -130,13 +125,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
     },
     [FRONTIER_FACILITY_DOME] =
     {
-#if IS_HNS
-        .trainerId = TRAINER_TUCKER_BF_BRAIN_HNS,
-        .objEventGfx = OBJ_EVENT_GFX_TUCKER_HNS,
-#else
         .trainerId = TRAINER_TUCKER,
         .objEventGfx = OBJ_EVENT_GFX_TUCKER,
-#endif
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
@@ -157,13 +147,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
     },
     [FRONTIER_FACILITY_PALACE] =
     {
-#if IS_HNS
-        .trainerId = TRAINER_SPENSER_BF_BRAIN_HNS,
-        .objEventGfx = OBJ_EVENT_GFX_SPENSER_HNS,
-#else
         .trainerId = TRAINER_SPENSER,
         .objEventGfx = OBJ_EVENT_GFX_SPENSER,
-#endif
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
@@ -186,13 +171,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
     },
     [FRONTIER_FACILITY_ARENA] =
     {
-#if IS_HNS
-        .trainerId = TRAINER_GRETA_BF_BRAIN_HNS,
-        .objEventGfx = OBJ_EVENT_GFX_GRETA_HNS,
-#else
         .trainerId = TRAINER_GRETA,
         .objEventGfx = OBJ_EVENT_GFX_GRETA,
-#endif
         .isFemale = TRUE,
         .lostTexts = {
             COMPOUND_STRING(
@@ -215,13 +195,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
     },
     [FRONTIER_FACILITY_FACTORY] =
     {
-#if IS_HNS
-        .trainerId = TRAINER_NOLAND_BF_BRAIN_HNS,
-        .objEventGfx = OBJ_EVENT_GFX_NOLAND_HNS,
-#else
         .trainerId = TRAINER_NOLAND,
         .objEventGfx = OBJ_EVENT_GFX_NOLAND,
-#endif
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
@@ -242,13 +217,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
     },
     [FRONTIER_FACILITY_PIKE] =
     {
-#if IS_HNS
-        .trainerId = TRAINER_LUCY_BF_BRAIN_HNS,
-        .objEventGfx = OBJ_EVENT_GFX_LUCY_HNS,
-#else
         .trainerId = TRAINER_LUCY,
         .objEventGfx = OBJ_EVENT_GFX_LUCY,
-#endif
         .isFemale = TRUE,
         .lostTexts = {
             COMPOUND_STRING("Urk…"), //Silver
@@ -263,13 +233,8 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
     },
     [FRONTIER_FACILITY_PYRAMID] =
     {
-#if IS_HNS
-        .trainerId = TRAINER_BRANDON_BF_BRAIN_HNS,
-        .objEventGfx = OBJ_EVENT_GFX_BRANDON_HNS,
-#else
         .trainerId = TRAINER_BRANDON,
         .objEventGfx = OBJ_EVENT_GFX_BRANDON,
-#endif
         .isFemale = FALSE,
         .lostTexts = {
             COMPOUND_STRING(
@@ -292,7 +257,6 @@ const struct FrontierBrain gFrontierBrainInfo[NUM_FRONTIER_FACILITIES] =
     },
 };
 
-#ifdef FIRERED
 #include "constants/johto_trainers.h"
 static const u16 sJohtoFrontierBrainTrainerIds[NUM_FRONTIER_FACILITIES] =
 {
@@ -318,12 +282,6 @@ static const u16 sJohtoFrontierBrainGfx[NUM_FRONTIER_FACILITIES] =
 #define FRONTIER_BRAIN_GFX(facility) (IsJohtoCampaignMap() ? sJohtoFrontierBrainGfx[facility] : gFrontierBrainInfo[facility].objEventGfx)
 #define FRONTIER_MALE_GFX(index) (IsJohtoCampaignMap() ? gJohtoTowerMaleTrainerGfxIds[index] : gTowerMaleTrainerGfxIds[index])
 #define FRONTIER_FEMALE_GFX(index) (IsJohtoCampaignMap() ? gJohtoTowerFemaleTrainerGfxIds[index] : gTowerFemaleTrainerGfxIds[index])
-#else
-#define FRONTIER_BRAIN_TRAINER_ID(facility) gFrontierBrainInfo[facility].trainerId
-#define FRONTIER_BRAIN_GFX(facility) gFrontierBrainInfo[facility].objEventGfx
-#define FRONTIER_MALE_GFX(index) gTowerMaleTrainerGfxIds[index]
-#define FRONTIER_FEMALE_GFX(index) gTowerFemaleTrainerGfxIds[index]
-#endif
 
 static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZE] =
 {
@@ -2617,13 +2575,8 @@ void SaveGameFrontier(void)
     i = gPlayerPartyCount;
     LoadPlayerParty();
     SetContinueGameWarpStatusToDynamicWarp();
-#ifdef FIRERED
     if (TrySavingData(SAVE_LINK) == SAVE_STATUS_OK)
         ClearContinueGameWarpStatus2();
-#else
-    TrySavingData(SAVE_LINK);
-    ClearContinueGameWarpStatus2();
-#endif
     gPlayerPartyCount = i;
 
     for (i = 0; i < PARTY_SIZE; i++)
@@ -3046,25 +2999,13 @@ void SetBattleFacilityTrainerGfxId(u16 trainerId, u8 tempVarId)
     {
     case 0:
     default:
-    #if IS_HNS
-        VarSet(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_YOUNGSTER_HNS);
-    #else
         VarSet(VAR_OBJ_GFX_ID_0, FRONTIER_GFX(OBJ_EVENT_GFX_BOY_1, OBJ_EVENT_GFX_YOUNGSTER_HNS));
-    #endif
         return;
     case 1:
-    #if IS_HNS
-        VarSet(VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_YOUNGSTER_HNS);
-    #else
         VarSet(VAR_OBJ_GFX_ID_1, FRONTIER_GFX(OBJ_EVENT_GFX_BOY_1, OBJ_EVENT_GFX_YOUNGSTER_HNS));
-    #endif
         return;
     case 15:
-    #if IS_HNS
-        VarSet(VAR_OBJ_GFX_ID_E, OBJ_EVENT_GFX_YOUNGSTER_HNS);
-    #else
         VarSet(VAR_OBJ_GFX_ID_E, FRONTIER_GFX(OBJ_EVENT_GFX_BOY_1, OBJ_EVENT_GFX_YOUNGSTER_HNS));
-    #endif
         return;
     }
 }
@@ -3122,11 +3063,7 @@ u16 GetBattleFacilityTrainerGfxId(u16 trainerId)
     }
     else
     {
-    #if IS_HNS
-        return OBJ_EVENT_GFX_YOUNGSTER_HNS;
-    #else
         return FRONTIER_GFX(OBJ_EVENT_GFX_BOY_1, OBJ_EVENT_GFX_YOUNGSTER_HNS);
-    #endif
     }
 }
 
@@ -3442,11 +3379,7 @@ u16 FacilityClassToGraphicsId(u8 facilityClass)
     }
     else
     {
-    #if IS_HNS
-        return OBJ_EVENT_GFX_YOUNGSTER_HNS;
-    #else
         return FRONTIER_GFX(OBJ_EVENT_GFX_BOY_1, OBJ_EVENT_GFX_YOUNGSTER_HNS);
-    #endif
     }
 }
 

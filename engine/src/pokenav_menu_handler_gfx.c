@@ -18,9 +18,7 @@
 #include "constants/rgb.h"
 #include "event_data.h"
 #include "data/johto_phone_aliases.h"
-#ifdef FIRERED
 #include "regions.h"
-#endif
 
 #define GFXTAG_BLUE_LIGHT 1
 #define GFXTAG_OPTIONS    3
@@ -104,28 +102,15 @@ static void InitMenuOptionGlow(void);
 static void Task_CurrentMenuOptionGlow(u8);
 static void SetMenuOptionGlow(void);
 
-#if IS_HNS || defined(FIRERED)
 static const u16 sPokenavBgDotsPal[] = INCBIN_U16("graphics/pokenav/hns/bg_dots.gbapal");
 static const u32 sPokenavBgDotsTiles[] = INCBIN_U32("graphics/pokenav/hns/bg_dots.4bpp.smol");
 static const u32 sPokenavBgDotsTilemap[] = INCBIN_U32("graphics/pokenav/hns/bg_dots.bin.smolTM");
-#else
-static const u16 sPokenavBgDotsPal[] = INCBIN_U16("graphics/pokenav/bg_dots.gbapal");
-static const u32 sPokenavBgDotsTiles[] = INCBIN_U32("graphics/pokenav/bg_dots.4bpp.smol");
-static const u32 sPokenavBgDotsTilemap[] = INCBIN_U32("graphics/pokenav/bg_dots.bin.smolTM");
-#endif
-#if IS_HNS || defined(FIRERED)
 static const u16 sPokenavDeviceBgPal[] = INCBIN_U16("graphics/pokenav/hns/device_outline.gbapal");
 static const u32 sPokenavDeviceBgTiles[] = INCBIN_U32("graphics/pokenav/hns/device_outline.4bpp.smol");
 static const u32 sPokenavDeviceBgTilemap[] = INCBIN_U32("graphics/pokenav/hns/device_outline_map.bin.smolTM");
-#else
-static const u16 sPokenavDeviceBgPal[] = INCBIN_U16("graphics/pokenav/device_outline.gbapal");
-static const u32 sPokenavDeviceBgTiles[] = INCBIN_U32("graphics/pokenav/device_outline.4bpp.smol");
-static const u32 sPokenavDeviceBgTilemap[] = INCBIN_U32("graphics/pokenav/device_outline_map.bin.smolTM");
-#endif
 static const u16 sMatchCallBlueLightPal[] = INCBIN_U16("graphics/pokenav/blue_light.gbapal");
 static const u32 sMatchCallBlueLightTiles[] = INCBIN_U32("graphics/pokenav/blue_light.4bpp.smol");
 
-#ifdef FIRERED
 // Each existing option occupies 32 tiles. Reuse the original HnS MAP/RADIO
 // glyphs in those allocated slots; keep all other native option graphics.
 static const u16 sJohtoMapOption_Gfx[] = INCBIN_U16("graphics/pokenav/hns/options/hoenn_map.4bpp");
@@ -133,7 +118,6 @@ static const u16 sJohtoRadioOption_Gfx[] = INCBIN_U16("graphics/pokenav/hns/opti
 STATIC_ASSERT(sizeof(sJohtoMapOption_Gfx) == 0x400, JohtoMapOptionTileCount);
 STATIC_ASSERT(sizeof(sJohtoRadioOption_Gfx) == 0x400, JohtoRadioOptionTileCount);
 STATIC_ASSERT(0x1A0 * 32 + sizeof(sJohtoRadioOption_Gfx) <= 0x3800, JohtoRadioOptionAllocatedBound);
-#endif
 
 static const u8 gText_NoRibbonWinners[] = _("There are no RIBBON winners.");
 
@@ -182,11 +166,7 @@ static const struct CompressedSpriteSheet sPokenavOptionsSpriteSheets[] =
 {
     {
         .data = gPokenavOptions_Gfx,
-#if IS_HNS || defined(FIRERED)
         .size = 0x3800,
-#else
-        .size = 0x3400,
-#endif
         .tag = GFXTAG_OPTIONS
     },
     {
@@ -221,9 +201,7 @@ static const u16 sOptionsLabelGfx_Cute[]      = {0x120, PALTAG_OPTIONS_PINK - PA
 static const u16 sOptionsLabelGfx_Smart[]     = {0x140, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
 static const u16 sOptionsLabelGfx_Tough[]     = {0x160, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
 static const u16 sOptionsLabelGfx_Cancel[]    = {0x180, PALTAG_OPTIONS_BEIGE - PALTAG_OPTIONS_START};
-#if IS_HNS || defined(FIRERED)
 static const u16 sOptionsLabelGfx_Radio[]     = {0x1A0, PALTAG_OPTIONS_DEFAULT - PALTAG_OPTIONS_START};
-#endif
 
 struct
 {
@@ -265,7 +243,6 @@ struct
             sOptionsLabelGfx_SwitchOff
         }
     },
-#if IS_HNS || defined(FIRERED)
     [POKENAV_MENU_TYPE_UNLOCK_MC_RADIO] =
     {
         .yStart = 42,
@@ -310,7 +287,6 @@ struct
             sOptionsLabelGfx_SwitchOff
         }
     },
-#endif
     [POKENAV_MENU_TYPE_CONDITION] =
     {
         .yStart = 56,
@@ -347,10 +323,8 @@ static const struct WindowTemplate sOptionDescWindowTemplate =
     .baseBlock = 8
 };
 
-#if IS_HNS || defined(FIRERED)
 static const u8 *const sHnSMapPageDescriptionJohto = COMPOUND_STRING("Check the map of the JOHTO region");
 static const u8 *const sHnSMapPageDescriptionJohtoKanto = COMPOUND_STRING("Check the combined region map");
-#endif
 
 static const u8 *const sPageDescriptions[] =
 {
@@ -358,14 +332,9 @@ static const u8 *const sPageDescriptions[] =
     [POKENAV_MENUITEM_CONDITION]               = COMPOUND_STRING("Check POKéMON in detail."),
     [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("Call a registered TRAINER."),
     [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("Check obtained RIBBONS."),
-#if IS_HNS || defined(FIRERED)
     [POKENAV_MENUITEM_RADIO]                   = COMPOUND_STRING("Listen to the radio."),
     [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéGEAR."),
     [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéGEAR menu."),
-#else
-    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéNAV."),
-    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéNAV menu."),
-#endif
     [POKENAV_MENUITEM_CONDITION_PARTY]         = COMPOUND_STRING("Check party POKéMON in detail."),
     [POKENAV_MENUITEM_CONDITION_SEARCH]        = COMPOUND_STRING("Check all POKéMON in detail."),
     [POKENAV_MENUITEM_CONDITION_SEARCH_COOL]   = COMPOUND_STRING("Find cool POKéMON."),
@@ -885,14 +854,12 @@ static void LoadPokenavOptionPalettes(void)
 
     for (i = 0; i < ARRAY_COUNT(sPokenavOptionsSpriteSheets); i++)
         LoadCompressedSpriteSheet(&sPokenavOptionsSpriteSheets[i]);
-#ifdef FIRERED
     if (IsJohtoCampaignMap())
     {
         u32 baseTile = GetSpriteTileStartByTag(GFXTAG_OPTIONS);
         CpuCopy16(sJohtoMapOption_Gfx, (void *)OBJ_VRAM0 + (baseTile + sOptionsLabelGfx_RegionMap[0]) * 32, sizeof(sJohtoMapOption_Gfx));
         CpuCopy16(sJohtoRadioOption_Gfx, (void *)OBJ_VRAM0 + (baseTile + sOptionsLabelGfx_Radio[0]) * 32, sizeof(sJohtoRadioOption_Gfx));
     }
-#endif
     Pokenav_AllocAndLoadPalettes(sPokenavOptionsSpritePalettes);
 }
 
@@ -1284,14 +1251,7 @@ static void CreateMatchCallBlueLightSprite(void)
     struct Pokenav_MenuGfx *gfx = GetSubstructPtr(POKENAV_SUBSTRUCT_MENU_GFX);
     u8 spriteId = CreateSprite(&sMatchCallBlueLightSpriteTemplate, 0x10, 0x60, 4);
     gfx->blueLightSprite = &gSprites[spriteId];
-#if IS_HNS || defined(FIRERED)
     gfx->blueLightSprite->invisible = TRUE;
-#else
-    if (AreAnyTrainerRematchesNearby())
-        gfx->blueLightSprite->callback = SpriteCB_BlinkingBlueLight;
-    else
-        gfx->blueLightSprite->invisible = TRUE;
-#endif
 }
 
 static void DestroyRematchBlueLightSprite(void)
@@ -1325,11 +1285,9 @@ static void PrintCurrentOptionDescription(void)
     struct Pokenav_MenuGfx *gfx = GetSubstructPtr(POKENAV_SUBSTRUCT_MENU_GFX);
     int menuItem = GetCurrentMenuItemId();
     const u8 *desc;
-#if IS_HNS || defined(FIRERED)
     if (menuItem == POKENAV_MENUITEM_MAP)
         desc = FlagGet(FLAG_VISITED_KANTO) ? sHnSMapPageDescriptionJohtoKanto : sHnSMapPageDescriptionJohto;
     else
-#endif
         desc = sPageDescriptions[menuItem];
     u32 width = GetStringWidth(FONT_NORMAL, desc, -1);
     FillWindowPixelBuffer(gfx->optionDescWindowId, PIXEL_FILL(6));

@@ -358,14 +358,11 @@ struct SaveBlock3
 #endif
     struct ChallengeSettings challengeSettings;
     u16 registeredItemHold;
-#ifdef FIRERED
     // Retain the two bytes which were trailing padding in the 52-byte prefix.
     u8 regionalLegacyPadding[2];
     u8 regionalState[1280];
-#endif
 }; /* max size 1624 bytes */
 
-#ifdef FIRERED
 STATIC_ASSERT(GAME_VERSION == VERSION_FIRE_RED, RegionalSaveFireRedOnly);
 STATIC_ASSERT(__builtin_offsetof(struct SaveBlock3, fakeRTC) == 0, RegionalSaveRtcOffset);
 STATIC_ASSERT(__builtin_offsetof(struct SaveBlock3, dexNavChain) == 12, RegionalSaveChainOffset);
@@ -375,7 +372,6 @@ STATIC_ASSERT(__builtin_offsetof(struct SaveBlock3, regionalLegacyPadding) == 50
 STATIC_ASSERT(__builtin_offsetof(struct SaveBlock3, regionalState) == 52, RegionalSaveExtensionOffset);
 STATIC_ASSERT(sizeof(struct SaveBlock3) == 1332, RegionalSaveImageSize);
 STATIC_ASSERT(__alignof__(struct SaveBlock3) == 4, RegionalSaveImageAlignment);
-#endif
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
 
@@ -1298,13 +1294,9 @@ struct SaveBlock1
     /*0x31B3*/ struct ExternalEventData externalEventData;
     /*0x31C7*/ struct ExternalEventFlags externalEventFlags;
     /*0x31DC*/ struct Roamer roamer[ROAMER_COUNT];
-#ifdef FIRERED
     // B0 FireRed-only experiment: reclaim three unused reserved slots (84 bytes).
     // This changes downstream FireRed save offsets; use fresh disposable saves.
     /*0x3???*/ struct Roamer roamerPadding[4 - ROAMER_COUNT];
-#else
-    /*0x3???*/ struct Roamer roamerPadding[7 - ROAMER_COUNT]; // Padding for extra roamers
-#endif
 #if FREE_ENIGMA_BERRY == FALSE
     /*0x31F8*/ struct EnigmaBerry enigmaBerry;
 #endif //FREE_ENIGMA_BERRY
@@ -1335,13 +1327,8 @@ struct SaveBlock1
     u32 towerChallengeId;
     struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];
 #endif //FREE_TRAINER_TOWER
-#if IS_FRLG
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
     struct DaycareMon route5DayCareMon;
-#endif
-#if IS_HNS
-    struct MomSavingsData momSavings;
-#endif
     // sizeof: 0x3???
 };
 

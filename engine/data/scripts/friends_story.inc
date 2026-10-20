@@ -1,4 +1,3 @@
-#ifdef FIRERED
 @ Generated from the complete owner-authorized Friends script. See private
 @ narrative-dialogue.json for draft anchors, exact pages, branches and widths.
 @ No event/battle receipt stands in for an unexecuted visual or gameplay check.
@@ -5272,4 +5271,3 @@ FG_Battle14_Lost04::
 	.string "NICK: You can say that too.$"
 FG_Battle14_Lost05::
 	.string "HAM: Good game. We'll be here.$"
-#endif

@@ -20,13 +20,8 @@
 #include "constants/rgb.h"
 #include "constants/sound.h"
 
-#if IS_FRLG
 
-#if defined(FIRERED)
 #define TITLE_TEXT gString_PokemonFireRed_Staff
-#else
-#define TITLE_TEXT gString_PokemonLeafGreen_Staff
-#endif
 
 enum CreditsSceneIdx
 {
@@ -1555,4 +1550,3 @@ static void LoadPlayerOrRivalSprite(u8 whichScene)
     }
 }
 
-#endif // IS_FRLG

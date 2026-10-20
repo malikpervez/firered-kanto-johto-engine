@@ -1,3 +1,5 @@
+@ Johto (data/maps/SlowpokeWell_B2F_hns/scripts.inc), as built into the FireRed game.
+
 SlowpokeWell_B2F_hns_MapScripts::
 	.byte 0
 
@@ -12,7 +14,7 @@ SlowpokeWell_EventScript_Slowking::
 	msgbox SlowpokeWell_Text_Slowking, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	goto_if_set FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE, SlowpokeWell_EventScript_Slowking2
+	goto_if_set JOHTO_FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE, SlowpokeWell_EventScript_Slowking2
 	playmoncry SPECIES_SLOWKING, CRY_MODE_NORMAL
 	applymovement LOCALID_WELL_SLOWKING, SlowpokeWell_Movement_RainDance1
 	waitmovement 0
@@ -34,8 +36,8 @@ SlowpokeWell_EventScript_Slowking::
 	doweather
 	waitmoncry
 	giveitem ITEM_TM_RAIN_DANCE
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	setflag FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_BagIsFull
+	setflag JOHTO_FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE
 	release
 	end
 
@@ -44,8 +46,6 @@ SlowpokeWell_EventScript_Slowking2::
 	doweather
 	release
 	end
-
-
 
 SlowpokeWell_Movement_RainDance1:
 	face_right
@@ -81,4 +81,5 @@ SlowpokeWell_Movement_RainDance4:
 	step_end
 
 SlowpokeWell_Text_Slowking:
-	.string "SLOWKING: ........................$"
+	.string "SLOWKING{SE_M_HEAT_WAVE}........................$"
+

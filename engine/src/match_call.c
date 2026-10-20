@@ -37,15 +37,11 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "data/johto_phone_aliases.h"
-#ifdef FIRERED
 #include "johto_phone.h"
 #define GetRegionalPokedexCount GetJohtoPokedexCount
 #define GetPokedexRatingText JohtoPhone_GetPokedexRatingText
 #define GetNationalPokedexRatingText JohtoPhone_GetNationalPokedexRatingText
 #define PHONE_REMATCH_STATE(index) JohtoRematch_GetReadiness(index)
-#else
-#define PHONE_REMATCH_STATE(index) gSaveBlock1Ptr->trainerRematches[index]
-#endif
 
 // In this file only the values normally associated with Battle Pike and Factory are swapped.
 // Note that this is *not* a bug, because they are properly swapped consistently in this file.
@@ -123,7 +119,6 @@ struct MatchCallTrainerTextInfo
     u16 differentRouteMatchCallTextId;
 };
 
-#if IS_HNS || defined(FIRERED)
 #define HNS_MAX_GENERAL_TEXTS 3
 #define HNS_MAX_GIFT_ITEMS    4
 
@@ -223,7 +218,6 @@ static const struct HnsMatchCallTrainerInfo sHnsMatchCallTrainers[] =
     HNS_MC_ENTRY2(Joel,     TRAINER_JOEL_HNS),
     HNS_MC_ENTRY2(Charles,  TRAINER_CHARLES_HNS),
 };
-#endif
 
 struct MatchCallText
 {
@@ -262,9 +256,6 @@ static const struct MatchCallText *GetSameRouteMatchCallText(int, u8 *);
 static const struct MatchCallText *GetDifferentRouteMatchCallText(int, u8 *);
 static const struct MatchCallText *GetBattleMatchCallText(int, u8 *);
 static const struct MatchCallText *GetGeneralMatchCallText(int, u8 *);
-#if !IS_HNS && !defined(FIRERED)
-static bool32 ShouldTrainerRequestBattle(int);
-#endif
 static void BuildMatchCallString(int, const struct MatchCallText *, u8 *);
 static u16 GetFrontierStreakInfo(u16, u32 *);
 static void PopulateMatchCallStringVars(int, const s8 *);
@@ -1155,17 +1146,14 @@ void InitMatchCallCounters(void)
     sMatchCallState.stepCounter = 0;
 }
 
-#if IS_HNS || defined(FIRERED)
 #define ROUTE_STEP_COUNTER_MAX 255
 
 static EWRAM_DATA u16 sRouteStepLastMap = 0;
 
 bool32 HnsUpdateRouteStepCounter(void)
 {
-#ifdef FIRERED
     if (!JohtoCampaign_IsSeeded())
         return FALSE;
-#endif
 
     u16 curMap = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
     u16 steps;
@@ -1246,7 +1234,6 @@ bool32 HnsUpdateRouteStepCounter(void)
 
     return FALSE;
 }
-#endif
 
 static u32 GetCurrentTotalMinutes(struct Time *time)
 {
@@ -1258,12 +1245,8 @@ static bool32 UpdateMatchCallMinutesCounter(void)
     int curMinutes;
     RtcCalcLocalTime();
     curMinutes = GetCurrentTotalMinutes(&gLocalTime);
-#if IS_HNS || defined(FIRERED)
     if (sMatchCallState.minutes > curMinutes
      || curMinutes - sMatchCallState.minutes > (UseFakeRtc() ? 179 : 9))
-#else
-    if (sMatchCallState.minutes > curMinutes || curMinutes - sMatchCallState.minutes > 9)
-#endif
     {
         sMatchCallState.minutes = curMinutes;
         return TRUE;
@@ -1284,7 +1267,6 @@ static bool32 CheckMatchCallChance(void)
         return FALSE;
 }
 
-#if IS_HNS || defined(FIRERED)
 // Calls are held off entirely while inside, rather than being rolled and
 // discarded, so stepping back outside doesn't cost the player a full timer.
 static bool32 HnsMapAllowsMatchCall(void)
@@ -1295,7 +1277,6 @@ static bool32 HnsMapAllowsMatchCall(void)
     return Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType)
         || gMapHeader.mapType == MAP_TYPE_UNDERGROUND;
 }
-#endif
 
 static bool32 MapAllowsMatchCall(void)
 {
@@ -1317,11 +1298,7 @@ static bool32 MapAllowsMatchCall(void)
 
 static bool32 UpdateMatchCallStepCounter(void)
 {
-#if IS_HNS || defined(FIRERED)
     if (++sMatchCallState.stepCounter >= 30)
-#else
-    if (++sMatchCallState.stepCounter >= 10)
-#endif
     {
         sMatchCallState.stepCounter = 0;
         return TRUE;
@@ -1344,13 +1321,9 @@ static bool32 SelectMatchCallTrainer(void)
     if (sMatchCallState.trainerId == REMATCH_TABLE_ENTRIES)
         return FALSE;
 
-#if IS_HNS || defined(FIRERED)
     matchCallId = GetRematchIdxByTrainerIdx(sMatchCallState.trainerId);
     if (matchCallId < 0)
         return FALSE;
-#else
-    matchCallId = GetTrainerMatchCallId(sMatchCallState.trainerId);
-#endif
     if (GetRematchTrainerLocation(matchCallId) == gMapHeader.regionMapSectionId && !TrainerIsEligibleForRematch(matchCallId))
         return FALSE;
 
@@ -1398,15 +1371,12 @@ static u32 GetActiveMatchCallTrainerId(u32 activeMatchCallId)
 */
 bool32 TryStartMatchCall(void)
 {
-#ifdef FIRERED
     if (!JohtoCampaign_IsSeeded())
         return FALSE;
-#endif
 
     if (gSaveBlock3Ptr->challengeSettings.disableMatchCall)
         return FALSE;
 
-#if IS_HNS || defined(FIRERED)
     if (FlagGet(FLAG_HAS_MATCH_CALL)
         && HasEnoughBadgesForRematch()
         && HnsMapAllowsMatchCall()
@@ -1414,14 +1384,6 @@ bool32 TryStartMatchCall(void)
         && UpdateMatchCallMinutesCounter()
         && CheckMatchCallChance()
         && SelectMatchCallTrainer())
-#else
-    if (FlagGet(FLAG_HAS_MATCH_CALL)
-        && UpdateMatchCallStepCounter()
-        && UpdateMatchCallMinutesCounter()
-        && CheckMatchCallChance()
-        && MapAllowsMatchCall()
-        && SelectMatchCallTrainer())
-#endif
     {
         StartMatchCall();
         return TRUE;
@@ -1455,20 +1417,10 @@ static void StartMatchCall(void)
     CreateTask(ExecuteMatchCall, 1);
 }
 
-#if IS_HNS || defined(FIRERED)
 static const u16 sMatchCallWindow_Pal[] = INCBIN_U16("graphics/pokenav/hns/match_call/window.gbapal");
 static const u8 sMatchCallWindow_Gfx[] = INCBIN_U8("graphics/pokenav/hns/match_call/window.4bpp");
-#else
-static const u16 sMatchCallWindow_Pal[] = INCBIN_U16("graphics/pokenav/match_call/window.gbapal");
-static const u8 sMatchCallWindow_Gfx[] = INCBIN_U8("graphics/pokenav/match_call/window.4bpp");
-#endif
-#if IS_HNS || defined(FIRERED)
 static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/hns/match_call/nav_icon.gbapal");
 static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/hns/match_call/nav_icon.4bpp.smol");
-#else
-static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/match_call/nav_icon.gbapal");
-static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/match_call/nav_icon.4bpp.smol");
-#endif
 
 static const u8 sText_PokenavCallEllipsis[] = _("………………\p");
 
@@ -1595,9 +1547,7 @@ static bool32 MatchCall_PrintIntro(u8 taskId)
         if (!sMatchCallState.triggeredFromScript)
         {
             SelectMatchCallMessage(sMatchCallState.trainerId, gStringVar4);
-#if IS_HNS || defined(FIRERED)
             gSpeakerName = GetTrainerNameFromId(sMatchCallState.trainerId);
-#endif
         }
 
         TrySpawnAndShowNamebox(gSpeakerName, NAME_BOX_BASE_TILE_NUM);
@@ -1813,7 +1763,6 @@ static u32 GetNthRematchTrainerFought(int n)
 
 bool32 SelectMatchCallMessage(int trainerId, u8 *str)
 {
-#if IS_HNS || defined(FIRERED)
     u32 i;
     const u8 *text = NULL;
     bool32 newRematchRequest = FALSE;
@@ -1858,44 +1807,6 @@ bool32 SelectMatchCallMessage(int trainerId, u8 *str)
     }
 
     return newRematchRequest;
-#else
-    u32 matchCallId;
-    const struct MatchCallText *matchCallText;
-    bool32 newRematchRequest = FALSE;
-
-    matchCallId = GetTrainerMatchCallId(trainerId);
-    sBattleFrontierStreakInfo.facilityId = 0;
-
-    // If the player is on the same route as the trainer
-    // and they can be rematched, they will always request a battle
-    if (TrainerIsEligibleForRematch(matchCallId)
-     && GetRematchTrainerLocation(matchCallId) == gMapHeader.regionMapSectionId)
-    {
-        matchCallText = GetSameRouteMatchCallText(matchCallId, str);
-    }
-    // If the player is not on the same route as the trainer
-    // and they can be rematched, there is a random chance for
-    // the trainer to request a battle
-    else if (ShouldTrainerRequestBattle(matchCallId))
-    {
-        matchCallText = GetDifferentRouteMatchCallText(matchCallId, str);
-        newRematchRequest = TRUE;
-        UpdateRematchIfDefeated(matchCallId);
-    }
-    else if (Random() % 3)
-    {
-        // Message talking about a battle the NPC had
-        matchCallText = GetBattleMatchCallText(matchCallId, str);
-    }
-    else
-    {
-        // Message talking about something else
-        matchCallText = GetGeneralMatchCallText(matchCallId, str);
-    }
-
-    BuildMatchCallString(matchCallId, matchCallText, str);
-    return newRematchRequest;
-#endif
 }
 
 static int GetTrainerMatchCallId(int trainerId)
@@ -2206,36 +2117,6 @@ static int GetNumOwnedBadges(void)
     return i;
 }
 
-#if !IS_HNS && !defined(FIRERED)
-// Whether or not a trainer calling the player from a different route should request a battle
-static bool32 ShouldTrainerRequestBattle(int matchCallId)
-{
-    int dayCount;
-    int otId;
-    u16 dewfordRand;
-    int numRematchTrainersFought;
-    int max, rand, n;
-
-    if (GetNumOwnedBadges() < 5)
-        return FALSE;
-
-    dayCount = RtcGetLocalDayCount();
-    otId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId) & 0xFFFF;
-
-    dewfordRand = gSaveBlock1Ptr->dewfordTrends[0].rand;
-    numRematchTrainersFought = GetNumRematchTrainersFought();
-    max = (numRematchTrainersFought * 13) / 10;
-    rand = ((dayCount ^ dewfordRand) + (dewfordRand ^ GetGameStat(GAME_STAT_TRAINER_BATTLES))) ^ otId;
-    n = rand % max;
-    if (n < numRematchTrainersFought)
-    {
-        if (GetNthRematchTrainerFought(n) == matchCallId)
-            return TRUE;
-    }
-
-    return FALSE;
-}
-#endif
 
 static u16 GetFrontierStreakInfo(u16 facilityId, u32 *topicTextId)
 {
@@ -2323,7 +2204,6 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
     int numSeen, numCaught;
     u8 *str, *str2;
 
-#if IS_HNS || defined(FIRERED)
     if (VarGet(VAR_NEWBARKTOWN_LABSTATE) == 3)
     {
         StringExpandPlaceholders(destStr, gElmDexRatingText_GoFindMrPokemon);
@@ -2334,7 +2214,6 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         StringExpandPlaceholders(destStr, gElmDexRatingText_Robbery);
         return;
     }
-#endif
 
     u8 *buffer = Alloc(sizeof(gStringVar4));
     if (!buffer)
@@ -2343,35 +2222,26 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         return;
     }
 
-#if IS_HNS || defined(FIRERED)
     bool8 hasAckJohtoDex = FlagGet(FLAG_SYS_ACK_COMPLETE_JOHTO_DEX);
     if (!hasAckJohtoDex || !IsNationalPokedexEnabled())
     {
-#endif
 
         numSeen = GetRegionalPokedexCount(FLAG_GET_SEEN);
         numCaught = GetRegionalPokedexCount(FLAG_GET_CAUGHT);
         ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
         ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
-#if IS_HNS || defined(FIRERED)
         str = StringCopy(buffer, gElmDexRatingText_AreYouCurious);
         *(str++) = CHAR_PROMPT_CLEAR;
-#else
-        str = StringCopy(buffer, gBirchDexRatingText_AreYouCurious);
-        *(str++) = CHAR_PROMPT_CLEAR;
-#endif
         str = StringCopy(str, gBirchDexRatingText_SoYouveSeenAndCaught);
         *(str++) = CHAR_PROMPT_CLEAR;
         StringCopy(str, GetPokedexRatingText(numCaught));
         str = StringExpandPlaceholders(destStr, buffer);
 
-#if IS_HNS || defined(FIRERED)
         if (gSpecialVar_Result == TRUE)
             FlagSet(FLAG_SYS_ACK_COMPLETE_JOHTO_DEX);
     }
     else
         str = StringExpandPlaceholders(destStr, gElmDexRatingText_AreYouCuriousNational);
-#endif
 
     if (IsNationalPokedexEnabled())
     {
@@ -2380,7 +2250,6 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         numCaught = GetNationalPokedexCount(FLAG_GET_CAUGHT);
         ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 4);
         ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 4);
-#if IS_HNS || defined(FIRERED)
         if (hasAckJohtoDex || HasAllMons())
         {
             if (!hasAckJohtoDex)
@@ -2393,9 +2262,6 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         else
             str2 = StringCopy(buffer, gBirchDexRatingText_OnANationwideBasis);
         StringExpandPlaceholders(str, buffer);
-#else
-    StringExpandPlaceholders(str, gBirchDexRatingText_OnANationwideBasis);
-#endif
     }
 
     Free(buffer);
@@ -2415,51 +2281,23 @@ void DrawMatchCallTextBoxBorder(u32 windowId, u32 tileOffset, u32 paletteId)
 
 u32 GetTrainerRematchStepCounter(void)
 {
-#ifdef FIRERED
     return JohtoRematch_GetStepCounter();
-#else
-#if FREE_MATCH_CALL == FALSE
-    return gSaveBlock1Ptr->trainerRematchStepCounter;
-#else
-    return 0;
-#endif
-#endif
 }
 
 void SetTrainerRematchStepCounter(u32 value)
 {
-#ifdef FIRERED
     JohtoRematch_SetStepCounter(min(value, 255));
-#else
-#if FREE_MATCH_CALL == FALSE
-    gSaveBlock1Ptr->trainerRematchStepCounter = value;
-#endif
-#endif
 }
 
 u32 GetActiveTrainerRematches(u32 matchCallId)
 {
-#ifdef FIRERED
     if (matchCallId >= REMATCH_TABLE_ENTRIES)
         return 0;
     return JohtoRematch_GetReadiness(matchCallId);
-#else
-#if FREE_MATCH_CALL == FALSE
-    return PHONE_REMATCH_STATE(matchCallId);
-#else
-    return 0;
-#endif
-#endif
 }
 
 void SetActiveTrainerRematches(u32 matchCallId, u32 value)
 {
-#ifdef FIRERED
     if (matchCallId < REMATCH_TABLE_ENTRIES && value <= REMATCHES_COUNT)
         JohtoRematch_SetReadiness(matchCallId, value);
-#else
-#if FREE_MATCH_CALL == FALSE
-    gSaveBlock1Ptr->trainerRematches[matchCallId] = value;
-#endif
-#endif
 }

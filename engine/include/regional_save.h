@@ -3,7 +3,6 @@
 
 #include "global.h"
 
-#ifdef FIRERED
 #define REGIONAL_SAVE_SIZE 1332
 #define REGIONAL_SAVE_PREFIX_SIZE 52
 #define REGIONAL_SAVE_HEADER_SIZE 64
@@ -124,6 +123,5 @@ bool8 RegionalSave_GetTrainer(const u8 *image, u16 region, u16 index, bool8 *val
 bool8 RegionalSave_SetTrainer(u8 *image, u16 region, u16 index, bool8 value);
 bool8 RegionalSave_GetVar(const u8 *image, u16 region, u16 index, u16 *value);
 bool8 RegionalSave_SetVar(u8 *image, u16 region, u16 index, u16 value);
-#endif // FIRERED
 
 #endif // GUARD_REGIONAL_SAVE_H

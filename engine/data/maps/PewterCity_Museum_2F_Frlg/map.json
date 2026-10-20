@@ -164,17 +164,15 @@
       "script": "PewterCity_Museum_2F_EventScript_MoonStone"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 19,
-      "height": 10,
-      "primary_tileset": "gTileset_Johto_Building_FireRedNative",
-      "secondary_tileset": "gTileset_Museum_FireRedNative",
-      "blockdata_filepath": "data/layouts/PewterCity_Museum_2F_Frlg/map.bin",
-      "border_filepath": "data/layouts/PewterCity_Museum_2F_Frlg/border.bin",
-      "layout_version": "frlg",
-      "border_width": 2,
-      "border_height": 2
-    }
+  "firered_geometry": {
+    "width": 19,
+    "height": 10,
+    "primary_tileset": "gTileset_Johto_Building_FireRedNative",
+    "secondary_tileset": "gTileset_Museum_FireRedNative",
+    "blockdata_filepath": "data/layouts/PewterCity_Museum_2F_Frlg/map.bin",
+    "border_filepath": "data/layouts/PewterCity_Museum_2F_Frlg/border.bin",
+    "layout_version": "frlg",
+    "border_width": 2,
+    "border_height": 2
   }
 }

@@ -233,17 +233,10 @@ const union AnimCmd *const gAnims_Trainer[] ={
 #if !TESTING
 const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT] =
 {
-#if IS_FRLG
 #include "data/trainers_frlg.h"
-#elif IS_HNS
-#include "data/trainers_hns.h"
-#else
-#include "data/trainers.h"
-#endif
 #include "data/story_rocket_duo_trainers.h"
 #include "data/friends_story_trainers.h"
 };
-#ifdef FIRERED
 // Separate ROM catalog; native trainer counts and persistent flag capacity stay fixed.
 const struct Trainer gJohtoTrainers[DIFFICULTY_COUNT][JOHTO_TRAINER_CATALOG_COUNT] =
 {
@@ -251,7 +244,6 @@ const struct Trainer gJohtoTrainers[DIFFICULTY_COUNT][JOHTO_TRAINER_CATALOG_COUN
 };
 STATIC_ASSERT(JOHTO_TRAINER_ID_BASE > TRAINER_PARTNER(PARTNER_COUNT), JohtoTrainerIdsAfterNativePartnerIds);
 STATIC_ASSERT(JOHTO_TRAINER_CATALOG_COUNT <= JOHTO_TRAINER_FLAG_COUNT, JohtoTrainerCatalogWithinFlagMapping);
-#endif
 #endif
 
 #include "data/text/follower_messages.h"

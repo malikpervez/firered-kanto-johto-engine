@@ -35,7 +35,8 @@ def extract_repo_tutors() -> typing.Generator[str, None, None]:
     Yield MOVE constants which are *likely* assigned to a move tutor. This isn't
     foolproof, but it's suitable.
     """
-    for inc_fname in chain(glob.glob("./data/scripts/*.inc"), glob.glob("./data/maps/*/scripts.inc")):
+    found = set()
+    for inc_fname in chain(glob.glob("./data/scripts/**/*.inc", recursive=True), glob.glob("./data/maps/*/scripts.inc")):
         with open(inc_fname, "r") as inc_fp:
             incfile = inc_fp.read()
             if not INCFILE_HAS_TUTOR_PAT.search(incfile) and not INCFILE_HAS_TUTOR_PAT2.search(incfile):
@@ -43,9 +44,18 @@ def extract_repo_tutors() -> typing.Generator[str, None, None]:
 
             for move in INCFILE_MOVE_PAT.finditer(incfile):
                 yield move.group(1)
+                found.add(move.group(1))
 
             for move in INCFILE_MOVE_PAT2.finditer(incfile):
                 yield move.group(1)
+                found.add(move.group(1))
+
+    # tutor moves without a tutor script in the game (see the file)
+    extra = pathlib.Path("./src/data/pokemon/extra_tutor_moves.json")
+    if extra.exists():
+        for move in json.loads(extra.read_text())["moves"]:
+            if move not in found:
+                yield move
 
 def dump_output(file, data):
     with open(file, "w") as fp:

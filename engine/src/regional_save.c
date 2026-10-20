@@ -1,7 +1,6 @@
 #include "global.h"
 #include "regional_save.h"
 
-#ifdef FIRERED
 static const u8 sMagic[4] = {'F', 'R', 'J', 'S'};
 static const u8 sMainDomain[8] = {'F', 'R', 'J', 'S', 'M', 'A', 'I', 'N'};
 static const u16 sMainSectorSizes[14] =
@@ -512,4 +511,3 @@ bool8 RegionalSave_SetVar(u8 *image, u16 region, u16 index, u16 value)
     RegionalSave_Write16(image + REGIONAL_SAVE_VARS_OFFSET + 2 * index, value);
     return TRUE;
 }
-#endif // FIRERED

@@ -1,3 +1,5 @@
+@ Johto (data/maps/WhirlIslands_1F_hns/scripts.inc), as built into the FireRed game.
+
 WhirlIslands_1F_hns_MapScripts::
 	.byte 0
 

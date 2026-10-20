@@ -22,9 +22,7 @@
 #include "constants/songs.h"
 #include "event_data.h"
 #include "constants/flags.h"
-#ifdef FIRERED
 #include "firered_save.h"
-#endif
 
 // =============================================================================
 // Tab definitions
@@ -287,18 +285,11 @@ static const u8 *const sDesc_ButtonMode[] = {
     COMPOUND_STRING("The L button acts as another A\nbutton for one-handed play."),
 };
 static const u8 *const sDesc_Follower[] = {
-#ifdef FIRERED
     COMPOUND_STRING("PIKACHU keeps you company,\neven outside your party."),
-#else
-    COMPOUND_STRING("Let the first {PKMN} in your\nparty follow you."),
-    COMPOUND_STRING("Walk alone."),
-#endif
 };
-#ifdef FIRERED
 static const u8 *const sChoices_PikachuCompanion[] = {
     COMPOUND_STRING("PIKACHU"),
 };
-#endif
 static const u8 *const sDesc_LargeFollower[] = {
     COMPOUND_STRING("Enable large {PKMN} followers.\nCan cause graphical issues."),
     COMPOUND_STRING("Disable large {PKMN} followers.\nRecommended."),
@@ -409,13 +400,8 @@ static const struct OptionMenuItem sTabItems_Main[] = {
     [ITEM_MAIN_FOLLOWER] = {
         .name         = COMPOUND_STRING("FOLLOWER"),
         .descriptions = sDesc_Follower,
-#ifdef FIRERED
         .numChoices   = 1,
         .choiceNames  = sChoices_PikachuCompanion,
-#else
-        .numChoices   = 2,
-        .choiceNames  = sChoices_OnOff,
-#endif
     },
     [ITEM_MAIN_LARGE_FOLLOWER] = {
         .name         = COMPOUND_STRING("BIG FOLLOWERS"),
@@ -764,11 +750,9 @@ static void OptionMenu_ItemPrintFunc(u8 windowId, u32 itemId, u8 y)
 
     switch (items[itemId].numChoices)
     {
-#ifdef FIRERED
     case 1:
         DrawRightSideChoiceText(items[itemId].choiceNames[0], 104, y + 1, TRUE, active);
         break;
-#endif
     case 2:
         DrawChoices_Two(items[itemId].choiceNames, sel, y, active);
         break;
@@ -1084,9 +1068,7 @@ static void Task_ProcessInput(u8 taskId)
 
 static void Task_Save(u8 taskId)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     // SaveBlock2 — original options
     gSaveBlock2Ptr->optionsTextSpeed        = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_TEXTSPEED);
     gSaveBlock2Ptr->optionsBattleSceneOff   = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_BATTLESCENE);
@@ -1097,9 +1079,6 @@ static void Task_Save(u8 taskId)
 
     // SaveBlock3 — HnS options plus
     struct ChallengeSettings *cs = &gSaveBlock3Ptr->challengeSettings;
-#ifndef FIRERED
-    cs->followerEnable     = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_FOLLOWER);
-#endif
     cs->followerLargeEnable= *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_LARGE_FOLLOWER);
     cs->autoRun            = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_AUTORUN);
     cs->autorunSurf        = *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_AUTORUN_SURF);
@@ -1211,11 +1190,7 @@ void CB2_InitOptionMenu(void)
 
         // Load SaveBlock3 HnS options
         struct ChallengeSettings *cs = &gSaveBlock3Ptr->challengeSettings;
-#ifdef FIRERED
         *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_FOLLOWER)       = 0;
-#else
-        *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_FOLLOWER)       = cs->followerEnable;
-#endif
         *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_LARGE_FOLLOWER) = cs->followerLargeEnable;
         *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_AUTORUN)        = cs->autoRun;
         *GetSelectionPtr(TAB_MAIN, ITEM_MAIN_AUTORUN_SURF)   = cs->autorunSurf;

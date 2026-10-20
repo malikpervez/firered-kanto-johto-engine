@@ -1,9 +1,7 @@
 #ifndef GUARD_HEAL_LOCATION_H
 #define GUARD_HEAL_LOCATION_H
 
-#ifdef FIRERED
 #include "constants/johto_heal_locations.h"
-#endif
 
 struct HealLocation
 {

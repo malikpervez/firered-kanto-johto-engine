@@ -518,403 +518,401 @@
       "script": "CeladonCity_GameCorner_EventScript_PhotoPrinter"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 18,
-      "height": 15,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_GameCorner",
-      "border_filepath": "data/layouts/CeladonCity_GameCorner_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/CeladonCity_GameCorner_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg",
-      "blockdata_overrides": [
-        {
-          "x": 0,
-          "y": 0,
-          "expected": 1665,
-          "value": 2026
-        },
-        {
-          "x": 1,
-          "y": 0,
-          "expected": 1665,
-          "value": 2026
-        },
-        {
-          "x": 2,
-          "y": 0,
-          "expected": 1669,
-          "value": 2030
-        },
-        {
-          "x": 3,
-          "y": 0,
-          "expected": 1670,
-          "value": 2031
-        },
-        {
-          "x": 4,
-          "y": 0,
-          "expected": 1666,
-          "value": 2027
-        },
-        {
-          "x": 5,
-          "y": 0,
-          "expected": 1667,
-          "value": 2028
-        },
-        {
-          "x": 6,
-          "y": 0,
-          "expected": 1668,
-          "value": 2029
-        },
-        {
-          "x": 7,
-          "y": 0,
-          "expected": 1669,
-          "value": 2030
-        },
-        {
-          "x": 8,
-          "y": 0,
-          "expected": 1670,
-          "value": 2031
-        },
-        {
-          "x": 9,
-          "y": 0,
-          "expected": 1665,
-          "value": 2026
-        },
-        {
-          "x": 13,
-          "y": 0,
-          "expected": 1665,
-          "value": 2026
-        },
-        {
-          "x": 14,
-          "y": 0,
-          "expected": 1665,
-          "value": 2026
-        },
-        {
-          "x": 15,
-          "y": 0,
-          "expected": 1665,
-          "value": 2026
-        },
-        {
-          "x": 16,
-          "y": 0,
-          "expected": 1665,
-          "value": 2026
-        },
-        {
-          "x": 17,
-          "y": 0,
-          "expected": 1665,
-          "value": 2026
-        },
-        {
-          "x": 4,
-          "y": 1,
-          "expected": 1674,
-          "value": 2033
-        },
-        {
-          "x": 5,
-          "y": 1,
-          "expected": 1675,
-          "value": 2034
-        },
-        {
-          "x": 6,
-          "y": 1,
-          "expected": 1676,
-          "value": 2035
-        },
-        {
-          "x": 13,
-          "y": 1,
-          "expected": 1673,
-          "value": 2032
-        },
-        {
-          "x": 17,
-          "y": 1,
-          "expected": 1673,
-          "value": 2032
-        },
-        {
-          "x": 0,
-          "y": 2,
-          "expected": 1750,
-          "value": 2046
-        },
-        {
-          "x": 2,
-          "y": 2,
-          "expected": 12996,
-          "value": 13305
-        },
-        {
-          "x": 3,
-          "y": 2,
-          "expected": 12999,
-          "value": 13307
-        },
-        {
-          "x": 4,
-          "y": 2,
-          "expected": 12980,
-          "value": 13302
-        },
-        {
-          "x": 5,
-          "y": 2,
-          "expected": 12981,
-          "value": 13303
-        },
-        {
-          "x": 6,
-          "y": 2,
-          "expected": 12982,
-          "value": 13304
-        },
-        {
-          "x": 7,
-          "y": 2,
-          "expected": 12998,
-          "value": 13306
-        },
-        {
-          "x": 4,
-          "y": 4,
-          "expected": 12944,
-          "value": 13300
-        },
-        {
-          "x": 5,
-          "y": 4,
-          "expected": 12944,
-          "value": 13300
-        },
-        {
-          "x": 6,
-          "y": 4,
-          "expected": 12944,
-          "value": 13300
-        },
-        {
-          "x": 2,
-          "y": 6,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 3,
-          "y": 6,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 8,
-          "y": 7,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 9,
-          "y": 7,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 14,
-          "y": 7,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 15,
-          "y": 7,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 14,
-          "y": 8,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 15,
-          "y": 8,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 14,
-          "y": 9,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 15,
-          "y": 9,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 14,
-          "y": 10,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 15,
-          "y": 10,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 8,
-          "y": 11,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 9,
-          "y": 11,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 14,
-          "y": 11,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 15,
-          "y": 11,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 16,
-          "y": 11,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 17,
-          "y": 11,
-          "expected": 13000,
-          "value": 13308
-        },
-        {
-          "x": 0,
-          "y": 12,
-          "expected": 13013,
-          "value": 13309
-        },
-        {
-          "x": 4,
-          "y": 12,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 0,
-          "y": 13,
-          "expected": 1750,
-          "value": 2046
-        },
-        {
-          "x": 1,
-          "y": 13,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 2,
-          "y": 13,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 3,
-          "y": 13,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 4,
-          "y": 13,
-          "expected": 12945,
-          "value": 13301
-        },
-        {
-          "x": 0,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        },
-        {
-          "x": 1,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        },
-        {
-          "x": 2,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        },
-        {
-          "x": 3,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        },
-        {
-          "x": 4,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        },
-        {
-          "x": 5,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        },
-        {
-          "x": 6,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        },
-        {
-          "x": 7,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        },
-        {
-          "x": 13,
-          "y": 14,
-          "expected": 1032,
-          "value": 2025
-        }
-      ]
-    }
+  "firered_geometry": {
+    "width": 18,
+    "height": 15,
+    "primary_tileset": "gTileset_BuildingFrlg",
+    "secondary_tileset": "gTileset_GameCorner",
+    "border_filepath": "data/layouts/CeladonCity_GameCorner_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/CeladonCity_GameCorner_Frlg/map.bin",
+    "border_height": 2,
+    "border_width": 2,
+    "layout_version": "frlg",
+    "blockdata_overrides": [
+      {
+        "x": 0,
+        "y": 0,
+        "expected": 1665,
+        "value": 2026
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "expected": 1665,
+        "value": 2026
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "expected": 1669,
+        "value": 2030
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "expected": 1670,
+        "value": 2031
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "expected": 1666,
+        "value": 2027
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "expected": 1667,
+        "value": 2028
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "expected": 1668,
+        "value": 2029
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "expected": 1669,
+        "value": 2030
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "expected": 1670,
+        "value": 2031
+      },
+      {
+        "x": 9,
+        "y": 0,
+        "expected": 1665,
+        "value": 2026
+      },
+      {
+        "x": 13,
+        "y": 0,
+        "expected": 1665,
+        "value": 2026
+      },
+      {
+        "x": 14,
+        "y": 0,
+        "expected": 1665,
+        "value": 2026
+      },
+      {
+        "x": 15,
+        "y": 0,
+        "expected": 1665,
+        "value": 2026
+      },
+      {
+        "x": 16,
+        "y": 0,
+        "expected": 1665,
+        "value": 2026
+      },
+      {
+        "x": 17,
+        "y": 0,
+        "expected": 1665,
+        "value": 2026
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "expected": 1674,
+        "value": 2033
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "expected": 1675,
+        "value": 2034
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "expected": 1676,
+        "value": 2035
+      },
+      {
+        "x": 13,
+        "y": 1,
+        "expected": 1673,
+        "value": 2032
+      },
+      {
+        "x": 17,
+        "y": 1,
+        "expected": 1673,
+        "value": 2032
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "expected": 1750,
+        "value": 2046
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "expected": 12996,
+        "value": 13305
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "expected": 12999,
+        "value": 13307
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "expected": 12980,
+        "value": 13302
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "expected": 12981,
+        "value": 13303
+      },
+      {
+        "x": 6,
+        "y": 2,
+        "expected": 12982,
+        "value": 13304
+      },
+      {
+        "x": 7,
+        "y": 2,
+        "expected": 12998,
+        "value": 13306
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "expected": 12944,
+        "value": 13300
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "expected": 12944,
+        "value": 13300
+      },
+      {
+        "x": 6,
+        "y": 4,
+        "expected": 12944,
+        "value": 13300
+      },
+      {
+        "x": 2,
+        "y": 6,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 8,
+        "y": 7,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 9,
+        "y": 7,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 14,
+        "y": 7,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 15,
+        "y": 7,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 14,
+        "y": 8,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 15,
+        "y": 8,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 14,
+        "y": 9,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 15,
+        "y": 9,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 14,
+        "y": 10,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 15,
+        "y": 10,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 8,
+        "y": 11,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 9,
+        "y": 11,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 14,
+        "y": 11,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 15,
+        "y": 11,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 16,
+        "y": 11,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 17,
+        "y": 11,
+        "expected": 13000,
+        "value": 13308
+      },
+      {
+        "x": 0,
+        "y": 12,
+        "expected": 13013,
+        "value": 13309
+      },
+      {
+        "x": 4,
+        "y": 12,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 0,
+        "y": 13,
+        "expected": 1750,
+        "value": 2046
+      },
+      {
+        "x": 1,
+        "y": 13,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 2,
+        "y": 13,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 3,
+        "y": 13,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 4,
+        "y": 13,
+        "expected": 12945,
+        "value": 13301
+      },
+      {
+        "x": 0,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      },
+      {
+        "x": 1,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      },
+      {
+        "x": 2,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      },
+      {
+        "x": 3,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      },
+      {
+        "x": 4,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      },
+      {
+        "x": 5,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      },
+      {
+        "x": 6,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      },
+      {
+        "x": 7,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      },
+      {
+        "x": 13,
+        "y": 14,
+        "expected": 1032,
+        "value": 2025
+      }
+    ]
   }
 }

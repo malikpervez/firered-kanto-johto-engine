@@ -2636,11 +2636,7 @@ enum
 
 static const u32 sAbilityPopUpGfx[] = INCBIN_U32("graphics/battle_interface/ability_pop_up.4bpp");
 static const u16 sAbilityPopUpPaletteGen4[] = INCBIN_U16("graphics/battle_interface/gen4/ability_pop_up.gbapal");
-#if IS_HNS
-static const u16 sAbilityPopUpPaletteGen3[] = INCBIN_U16("graphics/battle_interface/hns/ability_pop_up.gbapal");
-#else
 static const u16 sAbilityPopUpPaletteGen3[] = INCBIN_U16("graphics/battle_interface/ability_pop_up.gbapal");
-#endif
 
 static const struct SpriteSheet sSpriteSheet_AbilityPopUp =
 {
@@ -3036,11 +3032,7 @@ static const struct SpriteTemplate sSpriteTemplate_MoveInfoWindow =
 };
 
 #if B_LAST_USED_BALL_BUTTON == R_BUTTON && B_LAST_USED_BALL_CYCLE == TRUE
-    #if IS_HNS
-    static const u8 ALIGNED(4) sLastUsedBallWindowGfxGen3[] = INCBIN_U8("graphics/battle_interface/hns/last_used_ball_r_cycle.4bpp");
-    #else
     static const u8 ALIGNED(4) sLastUsedBallWindowGfxGen3[] = INCBIN_U8("graphics/battle_interface/last_used_ball_r_cycle.4bpp");
-    #endif
     static const u8 ALIGNED(4) sLastUsedBallWindowGfxGen4[] = INCBIN_U8("graphics/battle_interface/gen4/last_used_ball_r_cycle.4bpp");
 #elif B_LAST_USED_BALL_CYCLE == TRUE
     static const u8 ALIGNED(4) sLastUsedBallWindowGfxGen3[] = INCBIN_U8("graphics/battle_interface/last_used_ball_l_cycle.4bpp");

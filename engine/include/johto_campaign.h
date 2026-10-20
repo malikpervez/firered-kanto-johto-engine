@@ -3,7 +3,6 @@
 
 #include "global.h"
 
-#ifdef FIRERED
 #define JOHTO_CAMPAIGN_FLAG_ID_BASE 0x2000
 #define JOHTO_CAMPAIGN_FLAG_ID_PAGE_END 0x3000
 #define JOHTO_CAMPAIGN_VAR_ID_BASE 0x5000
@@ -42,6 +41,5 @@ u8 (*JohtoCampaign_GetDogLocationHistory(u32 index))[2];
 u8 *JohtoCampaign_GetDogLocation(u32 index);
 void Special_JohtoCampaignGetState(void);
 void Special_JohtoCampaignInitialize(void);
-#endif // FIRERED
 
 #endif // GUARD_JOHTO_CAMPAIGN_H

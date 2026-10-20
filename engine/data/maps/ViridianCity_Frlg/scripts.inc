@@ -17,21 +17,13 @@ ViridianCity_EventScript_SetOldManNormal::
 
 ViridianCity_EventScript_SetOldManStandingByRoad::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1
-#ifdef FIRERED
 	setobjectxyperm LOCALID_TUTORIAL_MAN, 24, 18
-#else
-	setobjectxyperm LOCALID_TUTORIAL_MAN, 21, 8
-#endif
 	setobjectmovementtype LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_LOOK_AROUND
 	return
 
 ViridianCity_EventScript_SetOldManBlockingRoad::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN
-#ifdef FIRERED
 	setobjectxyperm LOCALID_TUTORIAL_MAN, 25, 18
-#else
-	setobjectxyperm LOCALID_TUTORIAL_MAN, 21, 11
-#endif
 	setobjectmovementtype LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_FACE_DOWN
 	return
 

@@ -1,6 +1,5 @@
 #include "global.h"
 
-#ifdef FIRERED
 #include "event_data.h"
 #include "firered_save.h"
 #include "johto_campaign.h"
@@ -397,4 +396,3 @@ void Special_JohtoCampaignInitialize(void)
     Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
     gSpecialVar_Result = JohtoCampaign_Initialize();
 }
-#endif // FIRERED

@@ -1,12 +1,14 @@
+@ Johto (data/maps/VioletCity_hns/scripts.inc), as built into the FireRed game.
+
 VioletCity_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, VioletCity_OnFrame
 	map_script MAP_SCRIPT_ON_TRANSITION, VioletCity_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 VioletCity_OnFrame::
-	map_script_2 VAR_VIOLET_CITY_KIMONO_GIRL, 1, VioletCity_EventScript_Kimono_Girl
-	map_script_2 VAR_VIOLET_CITY_STATE, 3, VioletCity_EventScript_ElmCall_Trigger
+	map_script_2 JOHTO_VAR_VIOLET_CITY_KIMONO_GIRL, 1, VioletCity_EventScript_Kimono_Girl
+	map_script_2 JOHTO_VAR_VIOLET_CITY_STATE, 3, VioletCity_EventScript_ElmCall_Trigger
 	.2byte 0
 
 VioletCity_OnTransition::
@@ -14,36 +16,36 @@ VioletCity_OnTransition::
 	end
 
 VioletCity_EventScript_Trigger::
-	@LOCAL FLAGHEAP
-	clearflag FLAG_RECEIVED_TOGEPI_EGG
-	clearflag FLAG_VIOLET_NPC_TRADE_COMPLETED
-	clearflag FLAG_HIDE_SPROUT_TOWER_SILVER
-	clearflag FLAG_HIDE_JOHTO_GYM_LEADERS
-	clearflag FLAG_HOOH_BROUGHT
-	clearflag FLAG_OMANYTE_BROUGHT
-	clearflag FLAG_AERODACTYL_BROUGHT
-	clearflag FLAG_KABUTO_BROUGHT
-	clearflag FLAG_HIDE_SUDOWOODO
-	clearflag FLAG_GOT_HARD_STONE
-	clearflag FLAG_GOT_POISON_BARB
-	clearflag FLAG_HIDE_UNION_CAVE_LAPRAS
-	clearflag FLAG_GOT_BLACK_GLASSES
-	
-	setvar VAR_SLOWPOKE_TAIL, 0
-	setvar VAR_VIOLET_CITY_KIMONO_GIRL, 0
-	setvar VAR_RUINSOFALPH_STATE, 0
-	
-	setflag FLAG_ITEM_GS_BALL
-	setflag FLAG_ITEM_DOME_FOSSIL
-	setflag FLAG_ITEM_HELIX_FOSSIL
-	setflag FLAG_ITEM_OLD_AMBER
-	setflag FLAG_HIDE_TRAINER_SCHOOL_EARL
-	setflag FLAG_HIDE_VIOLET_CITY_AIDE
-	setflag FLAG_VISITED_VIOLET_CITY
-	setflag FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL
-	
-	setvar VAR_SPROUT_TOWER, 0
-	setvar VAR_VIOLET_CITY_STATE, 1
+
+	clearflag JOHTO_FLAG_RECEIVED_TOGEPI_EGG
+	clearflag JOHTO_FLAG_VIOLET_NPC_TRADE_COMPLETED
+	clearflag JOHTO_FLAG_HIDE_SPROUT_TOWER_SILVER
+	clearflag JOHTO_FLAG_HIDE_JOHTO_GYM_LEADERS
+	clearflag JOHTO_FLAG_HOOH_BROUGHT
+	clearflag JOHTO_FLAG_OMANYTE_BROUGHT
+	clearflag JOHTO_FLAG_AERODACTYL_BROUGHT
+	clearflag JOHTO_FLAG_KABUTO_BROUGHT
+	clearflag JOHTO_FLAG_HIDE_SUDOWOODO
+	clearflag JOHTO_FLAG_GOT_HARD_STONE
+	clearflag JOHTO_FLAG_GOT_POISON_BARB
+	clearflag JOHTO_FLAG_HIDE_UNION_CAVE_LAPRAS
+	clearflag JOHTO_FLAG_GOT_BLACK_GLASSES
+
+	setvar JOHTO_VAR_SLOWPOKE_TAIL, 0
+	setvar JOHTO_VAR_VIOLET_CITY_KIMONO_GIRL, 0
+	setvar JOHTO_VAR_RUINSOFALPH_STATE, 0
+
+	setflag JOHTO_FLAG_ITEM_GS_BALL
+	setflag JOHTO_FLAG_ITEM_DOME_FOSSIL
+	setflag JOHTO_FLAG_ITEM_HELIX_FOSSIL
+	setflag JOHTO_FLAG_ITEM_OLD_AMBER
+	setflag JOHTO_FLAG_HIDE_TRAINER_SCHOOL_EARL
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_AIDE
+	setflag JOHTO_FLAG_VISITED_VIOLET_CITY
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL
+
+	setvar JOHTO_VAR_SPROUT_TOWER, 0
+	setvar JOHTO_VAR_VIOLET_CITY_STATE, 1
 	end
 
 VioletCity_EventScript_Earl::
@@ -62,7 +64,7 @@ VioletCity_EventScript_Earl::
 VioletCity_EventScript_EarlTrainerSchool::
 	msgbox VioletCity_Text_FollowEarl, MSGBOX_DEFAULT
 	closemessage
-	playbgm MUS_HG_FOLLOW_ME_2, FALSE
+	playbgm ((558 + 1) + 0x3A), FALSE
 	switch VAR_FACING
 	case DIR_NORTH, VioletCity_EventScript_EarlTrainerSchoolSouth
 	case DIR_WEST, VioletCity_EventScript_EarlTrainerSchoolEast
@@ -104,11 +106,11 @@ VioletCity_EventScript_EarlTrainerSchoolTransition:
 	opendoor 39, 36
 	waitdooranim
 	waitmovement 0
-	setflag FLAG_HIDE_VIOLET_CITY_EARL
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_EARL
 	removeobject LOCALID_VIOLETCITY_EARL
 	closedoor 39, 36
 	waitdooranim
-	clearflag FLAG_HIDE_TRAINER_SCHOOL_EARL
+	clearflag JOHTO_FLAG_HIDE_TRAINER_SCHOOL_EARL
 	fadedefaultbgm
 	release
 	end
@@ -181,17 +183,17 @@ VioletCity_EventScript_ElmCall_Trigger::
 	pokenavcall VioletCity_Text_Elm_Call
 	waitmessage
 	delay 30
-	clearflag FLAG_HIDE_VIOLET_CITY_AIDE
-	setflag FLAG_HIDE_NEWBARKTOWN_LAB_AIDE
-	setvar VAR_VIOLET_CITY_STATE, 4
+	clearflag JOHTO_FLAG_HIDE_VIOLET_CITY_AIDE
+	setflag JOHTO_FLAG_HIDE_NEWBARKTOWN_LAB_AIDE
+	setvar JOHTO_VAR_VIOLET_CITY_STATE, 4
 	release
 	end
 
 VioletCity_EventScript_Kimono_Girl::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, FALSE
+	playbgm ((558 + 1) + 0x85), FALSE
 	playse SE_PIN
-	applymovement LOCALID_VIOLET_KIMONO, Common_Movement_ExclamationMark
+	applymovement LOCALID_VIOLET_KIMONO, J_Common_Movement_ExclamationMark
 	delay 55
 	waitmovement LOCALID_VIOLET_KIMONO
 	applymovement LOCALID_VIOLET_KIMONO, VioletCity_Movement_Kimono_Girl_1
@@ -214,12 +216,11 @@ VioletCity_EventScript_Kimono_Girl::
 	applymovement LOCALID_VIOLET_KIMONO, VioletCity_Movement_Kimono_Girl_5
 	waitmovement 0
 	fadedefaultbgm
-	setvar VAR_VIOLET_CITY_KIMONO_GIRL, 2
-	setflag FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL
+	setvar JOHTO_VAR_VIOLET_CITY_KIMONO_GIRL, 2
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL
 	removeobject LOCALID_VIOLET_KIMONO
 	release
 	end
-
 
 VioletCity_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
@@ -380,7 +381,7 @@ VioletCity_Movement_Kimono_Girl_5:
 	walk_up
 	walk_up
 	walk_up
-	step_end	
+	step_end
 
 VioletCity_EventScript_LiquidJustice::
 	msgbox VioletCity_Text_LiquidJustice, MSGBOX_NPC
@@ -391,107 +392,106 @@ VioletCity_EventScript_GymSign::
 	end
 
 VioletCity_Text_LiquidJustice:
-	.string "Look around!\p"
-	.string "It's easy to see what POKéMON\n"
-	.string "you can catch in an area without\l"
-	.string "having to run around in tall\l"
-	.string "grass all day!$"
+	.string "Loo{SE_M_ENCORE2}around!\p"
+	.string "It'{SE_M_GRASSWHISTLE}eas{SE_M_YAWN}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}wha{SE_M_SPIT_UP}POKéMON\n"
+	.string "yo{SE_M_DIVE}ca{SE_M_ATTRACT}catc{SE_M_TRI_ATTACK}i{SE_M_ATTRACT}a{SE_M_ATTRACT}are{SE_M_CHARGE}without\l"
+	.string "havin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}ru{SE_M_ATTRACT}aroun{SE_M_WATERFALL}i{SE_M_ATTRACT}tall\l"
+	.string "gras{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}day!$"
 
 VioletCity_Text_EarlAsksIfYouBeatFalkner:
 	.string "Hello!\n"
-	.string "You are trainer?\p"
-	.string "Battle GYM LEADER,\n"
-	.string "win you did?$"
+	.string "Yo{SE_M_DIVE}ar{SE_M_REVERSAL}trainer?\p"
+	.string "Battl{SE_M_REVERSAL}GY{SE_M_GIGA_DRAIN}LEADER,\n"
+	.string "wi{SE_M_ATTRACT}yo{SE_M_DIVE}did?$"
 
 VioletCity_Text_VeryNiceIndeed:
-	.string "Ooh, la la!\n"
-	.string "Very indeed nice!$"
+	.string "Ooh{SE_M_SUPERSONIC}l{SE_M_CHARGE}la!\n"
+	.string "Ver{SE_M_YAWN}indee{SE_M_WATERFALL}nice!$"
 
 VioletCity_Text_FollowEarl:
-	.string "Is that so? Then study shall\n"
-	.string "you! Follow me!$"
+	.string "I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}so{SE_M_SING}The{SE_M_ATTRACT}stud{SE_M_YAWN}shall\n"
+	.string "you{SE_M_DRAGON_RAGE}Follo{SE_M_TWISTER}me!$"
 
 VioletCity_Text_HereTeacherIAm:
-	.string "Here, teacher I am.\n"
-	.string "Good it is you study here!$"
+	.string "Here{SE_M_SUPERSONIC}teache{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}am.\n"
+	.string "Goo{SE_M_WATERFALL}i{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}stud{SE_M_YAWN}here!$"
 
 VioletCity_Text_Lass:
-	.string "Ghosts are rumored to appear\n"
-	.string "in SPROUT TOWER.\p"
-	.string "They say that GHOST-type\n"
-	.string "moves can bypass the defenses\p"
-	.string "of tough POKéMON like ONIX\n"
-	.string "and GEODUDE.$"
+	.string "Ghost{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}rumore{SE_M_WATERFALL}t{SE_M_ATTRACT2}appear\n"
+	.string "i{SE_M_ATTRACT}SPROU{SE_M_SWIFT}TOWER.\p"
+	.string "The{SE_M_YAWN}sa{SE_M_YAWN}tha{SE_M_SPIT_UP}GHOST-type\n"
+	.string "move{SE_M_GRASSWHISTLE}ca{SE_M_ATTRACT}bypas{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}defenses\p"
+	.string "o{SE_M_ACID_ARMOR}toug{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}lik{SE_M_REVERSAL}ONIX\n"
+	.string "an{SE_M_WATERFALL}GEODUDE.$"
 
 VioletCity_Text_Boy:
-	.string "Hey, you're a POKéMON trainer?\p"
-	.string "If you head to the ACADEMY,\n"
-	.string "you might learn something new!$"
+	.string "Hey{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}trainer?\p"
+	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hea{SE_M_WATERFALL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}ACADEMY,\n"
+	.string "yo{SE_M_DIVE}migh{SE_M_SPIT_UP}lear{SE_M_ATTRACT}somethin{SE_M_SANDSTORM}new!$"
 
 VioletCity_Text_Gramps:
-	.string "FALKNER, from the VIOLET\n"
-	.string "POKéMON GYM, is a fine trainer!\p"
-	.string "He inherited his father's gym\n"
-	.string "and has done a great job with\l"
+	.string "FALKNER{SE_M_SUPERSONIC}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}VIOLET\n"
+	.string "POKéMO{SE_M_PSYBEAM2}GYM{SE_M_SUPERSONIC}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}fin{SE_M_REVERSAL}trainer!\p"
+	.string "H{SE_M_REVERSAL}inherite{SE_M_WATERFALL}hi{SE_M_GRASSWHISTLE}father'{SE_M_GRASSWHISTLE}gym\n"
+	.string "an{SE_M_WATERFALL}ha{SE_M_GRASSWHISTLE}don{SE_M_REVERSAL}{SE_M_CHARGE}grea{SE_M_SPIT_UP}jo{SE_M_STRENGTH}with\l"
 	.string "it.$"
 
 VioletCity_Text_Youngster:
-	.string "I saw a wiggly tree up ahead!\p"
-	.string "If you touch it, it squirms\n"
-	.string "and dances! Cool!$"
+	.string "{SE_M_HEAL_BELL}sa{SE_M_TWISTER}{SE_M_CHARGE}wiggl{SE_M_YAWN}tre{SE_M_REVERSAL}u{SE_M_MORNING_SUN}ahead!\p"
+	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}touc{SE_M_TRI_ATTACK}it{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}squirms\n"
+	.string "an{SE_M_WATERFALL}dances{SE_M_DRAGON_RAGE}Cool!$"
 
 VioletCity_Text_Sign:
-	.string "VIOLET CITY\p"
-	.string "The City of Nostalgic Scents$"
+	.string "VIOLE{SE_M_SWIFT}CITY\p"
+	.string "Th{SE_M_REVERSAL}Cit{SE_M_YAWN}o{SE_M_ACID_ARMOR}Nostalgi{SE_M_HYPER_BEAM}Scents$"
 
 VioletCity_Text_GymSign:
-	.string "VIOLET CITY POKéMON GYM\p"
-	.string "LEADER: FALKNER, The Elegant\n"
-	.string "Master of Flying POKéMON$"
+	.string "VIOLE{SE_M_SWIFT}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM\p"
+	.string "LEADER{SE_M_HEAT_WAVE}FALKNER{SE_M_SUPERSONIC}Th{SE_M_REVERSAL}Elegant\n"
+	.string "Maste{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}Flyin{SE_M_SANDSTORM}POKéMON$"
 
 VioletCity_Text_SproutTowerSign:
-	.string "SPROUT TOWER\p"
-	.string "Experience the Way of POKéMON$"
+	.string "SPROU{SE_M_SWIFT}TOWER\p"
+	.string "Experienc{SE_M_REVERSAL}th{SE_M_REVERSAL}Wa{SE_M_YAWN}o{SE_M_ACID_ARMOR}POKéMON$"
 
 VioletCity_Text_EarlsAcademySign:
-	.string "EARL'S POKéMON ACADEMY$"
+	.string "EARL'{SE_M_SKETCH}POKéMO{SE_M_PSYBEAM2}ACADEMY$"
 
 VioletCity_Text_Pichu:
-	.string "PICHU: Chuuuu!$"
+	.string "PICHU{SE_M_HEAT_WAVE}Chuuuu!$"
 
 VioletCity_Text_Bellsprout:
-	.string "BELLSPROUT: Sprouuuut.$"
+	.string "BELLSPROUT{SE_M_HEAT_WAVE}Sprouuuut.$"
 
 VioletCity_Text_Rattata:
-	.string "RATTATA: RATTATARATTA!$"
+	.string "RATTATA{SE_M_HEAT_WAVE}RATTATARATTA!$"
 
 VioletCity_Text_ElmName:
 	.string "PROF.ELM$"
 
 VioletCity_Text_Elm_Call:
-	.string "PROF.ELM: Hello, {PLAYER}? We\n"
-	.string "discovered something about the EGG!\p"
-	.string "My assistant is at the POKéMON\n"
-	.string "CENTER in VIOLET CITY.\p"
-	.string "Could you talk to him?$"
+	.string "PROF.ELM{SE_M_HEAT_WAVE}Hello{SE_M_SUPERSONIC}{PLAYER}{SE_M_SING}We\n"
+	.string "discovere{SE_M_WATERFALL}somethin{SE_M_SANDSTORM}abou{SE_M_SPIT_UP}th{SE_M_REVERSAL}EGG!\p"
+	.string "M{SE_M_YAWN}assistan{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}POKéMON\n"
+	.string "CENTE{SE_M_MINIMIZE}i{SE_M_ATTRACT}VIOLE{SE_M_SWIFT}CITY.\p"
+	.string "Coul{SE_M_WATERFALL}yo{SE_M_DIVE}tal{SE_M_ENCORE2}t{SE_M_ATTRACT2}him?$"
 
 VioletCity_Text_Kimono_Girl1:
-.string "Me oh my...\n"
-.string "That EGG must be...!$"
+	.string "M{SE_M_REVERSAL}o{SE_M_TRI_ATTACK}my...\n"
+	.string "Tha{SE_M_SPIT_UP}EG{SE_M_SWAGGER}mus{SE_M_SPIT_UP}be...!$"
 
 VioletCity_Text_Kimono_Girl2:
-.string "I see...\p"
-.string "So it was handed from MR. POKéMON\n"
-.string "to PROF.ELM, then from \l"
-.string "PROF.ELM to you.\p"
-.string "Now I get it...$"
+	.string "{SE_M_HEAL_BELL}see...\p"
+	.string "S{SE_M_ATTRACT2}i{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}hande{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}MR{SE_M_PERISH_SONG}POKéMON\n"
+	.string "t{SE_M_ATTRACT2}PROF.ELM{SE_M_SUPERSONIC}the{SE_M_ATTRACT}fro{SE_M_MILK_DRINK}\l"
+	.string "PROF.EL{SE_M_GIGA_DRAIN}t{SE_M_ATTRACT2}you.\p"
+	.string "No{SE_M_TWISTER}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}it...$"
 
 VioletCity_Text_Kimono_Girl3:
-.string "That EGG is truly an important EGG.\p"
-.string "Please do take good care of it\n"
-.string "for me. Is that understood?$"
+	.string "Tha{SE_M_SPIT_UP}EG{SE_M_SWAGGER}i{SE_M_GRASSWHISTLE}trul{SE_M_YAWN}a{SE_M_ATTRACT}importan{SE_M_SPIT_UP}EGG.\p"
+	.string "Pleas{SE_M_REVERSAL}d{SE_M_ATTRACT2}tak{SE_M_REVERSAL}goo{SE_M_WATERFALL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}it\n"
+	.string "fo{SE_M_SAND_TOMB}me{SE_M_PERISH_SONG}I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}understood?$"
 
 VioletCity_Text_Kimono_Girl4:
-.string "I am counting on you.$"
-
+	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}countin{SE_M_SANDSTORM}o{SE_M_ATTRACT}you.$"
 
