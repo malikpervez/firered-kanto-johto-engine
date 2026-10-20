@@ -1,6 +1,5 @@
 #include "global.h"
 
-#ifdef FIRERED
 #include "character_story.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -167,4 +166,3 @@ void Special_CharacterStoryPartner(void)
     gSpecialVar_Result = TRUE;
 }
 
-#endif

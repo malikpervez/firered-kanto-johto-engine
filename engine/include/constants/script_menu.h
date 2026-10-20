@@ -188,7 +188,6 @@
 #define MULTI_GAME_CORNER_DOLLS2           177
 
 
-#ifdef FIRERED
 #define MULTI_FG01 178
 #define MULTI_FG02 179
 #define MULTI_FG03 180
@@ -205,7 +204,6 @@
 #define MULTI_FG21 191
 #define MULTI_FG22 192
 #define MULTI_FG_OPPONENTS 193
-#endif
 
 #define MULTI_NONE 255
 

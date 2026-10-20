@@ -2766,15 +2766,11 @@ static bool8 LinkPlayAgainHandleSaving(void)
         }
         break;
     case 2:
-        #ifdef FIRERED
         if (WriteSaveBlock2())
         {
             DoSaveFailedScreen(SAVE_LINK);
             return FALSE;
         }
-#else
-        WriteSaveBlock2();
-#endif
         sBerryBlender->linkPlayAgainState++;
         sBerryBlender->framesToWait = 0;
         break;
@@ -2790,13 +2786,11 @@ static bool8 LinkPlayAgainHandleSaving(void)
         {
             if (WriteSaveBlock1Sector())
             {
-#ifdef FIRERED
                 if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
                 {
                     DoSaveFailedScreen(SAVE_LINK);
                     return FALSE;
                 }
-#endif
                 sBerryBlender->linkPlayAgainState = 5;
             }
             else

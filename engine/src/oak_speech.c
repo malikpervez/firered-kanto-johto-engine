@@ -22,7 +22,6 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
-#if IS_FRLG
 
 #define INTRO_SPECIES SPECIES_NIDORAN_F
 
@@ -130,13 +129,8 @@ static const u16 sControlsGuide_Tilemap_Page2[] = INCBIN_U16("graphics/oak_speec
 static const u16 sControlsGuide_Tilemap_Page3[] = INCBIN_U16("graphics/oak_speech/controls_guide_page_3.bin");
 static const u16 sOakSpeech_Leaf_Pal[] = INCBIN_U16("graphics/oak_speech/leaf/pal.gbapal");
 static const u32 sOakSpeech_Leaf_Tiles[] = INCBIN_U32("graphics/oak_speech/leaf/pic.8bpp.smol");
-#ifdef FIRERED
 static const u16 sOakSpeech_Red_Pal[] = INCBIN_U16("graphics/oak_speech/trail/pal.gbapal");
 static const u32 sOakSpeech_Red_Tiles[] = INCBIN_U32("graphics/oak_speech/trail/pic.8bpp.smol");
-#else
-static const u16 sOakSpeech_Red_Pal[] = INCBIN_U16("graphics/oak_speech/red/pal.gbapal");
-static const u32 sOakSpeech_Red_Tiles[] = INCBIN_U32("graphics/oak_speech/red/pic.8bpp.smol");
-#endif
 static const u16 sOakSpeech_Oak_Pal[] = INCBIN_U16("graphics/oak_speech/oak/pal.gbapal");
 static const u32 sOakSpeech_Oak_Tiles[] = INCBIN_U32("graphics/oak_speech/oak/pic.8bpp.smol");
 static const u16 sOakSpeech_Rival_Pal[] = INCBIN_U16("graphics/oak_speech/rival/pal.gbapal");
@@ -597,19 +591,11 @@ static const u8 *const sControlsGuide_Pages2And3_Strings[CONTROLS_GUIDE_STRINGS_
 
 static const u8 *const sMaleNameChoices[] =
 {
-#if defined(FIRERED)
     gNameChoice_Red,
     gNameChoice_Fire,
     gNameChoice_Ash,
     gNameChoice_Kene,
     gNameChoice_Geki,
-#else
-    gNameChoice_Green,
-    gNameChoice_Leaf,
-    gNameChoice_Gary,
-    gNameChoice_Kaz,
-    gNameChoice_Toru,
-#endif
     gNameChoice_Jak,
     gNameChoice_Janne,
     gNameChoice_Jonn,
@@ -628,13 +614,8 @@ static const u8 *const sMaleNameChoices[] =
 
 static const u8 *const sFemaleNameChoices[] =
 {
-#if defined(FIRERED)
     gNameChoice_Red,
     gNameChoice_Fire,
-#else
-    gNameChoice_Green,
-    gNameChoice_Leaf,
-#endif
     gNameChoice_Omi,
     gNameChoice_Jodi,
     gNameChoice_Amanda,
@@ -656,17 +637,10 @@ static const u8 *const sFemaleNameChoices[] =
 
 static const u8 *const sRivalNameChoices[] =
 {
-#if defined(FIRERED)
     gNameChoice_Green,
     gNameChoice_Gary,
     gNameChoice_Kaz,
     gNameChoice_Toru
-#else
-    gNameChoice_Red,
-    gNameChoice_Ash,
-    gNameChoice_Kene,
-    gNameChoice_Geki
-#endif
 };
 
 enum
@@ -2195,4 +2169,3 @@ static void GetDefaultName(u8 hasPlayerBeenNamed, u8 nameChoice)
 #undef tUnusedState
 #undef tFadeTimer
 
-#endif // IS_FRLG

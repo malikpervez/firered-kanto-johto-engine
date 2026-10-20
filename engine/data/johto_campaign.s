@@ -1,4 +1,3 @@
-#ifdef FIRERED
 @ Johto scripts of the FireRed game. Same constants and macros as data/event_scripts.s;
 @ the files are listed in the order they are built.
 #include "config/general.h"
@@ -38,12 +37,10 @@
 #include "constants/field_tasks.h"
 #include "constants/field_weather.h"
 #include "constants/flags.h"
-#ifdef FIRERED
 #include "constants/johto_ids.h"
 #include "constants/rainbow_story.h"
 #include "constants/character_story.h"
 #include "constants/starter_recruitment.h"
-#endif
 #include "constants/follower_npc.h"
 #include "constants/frontier_util.h"
 #include "constants/game_stat.h"
@@ -517,4 +514,3 @@
 	.include "data/scripts/johto/BattleFrontier_BattlePalaceBattleRoom.inc"
 	.include "data/scripts/johto/Route7_hns.inc"
 
-#endif

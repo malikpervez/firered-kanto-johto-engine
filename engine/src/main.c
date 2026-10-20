@@ -366,15 +366,11 @@ static void VBlankIntr(void)
 
     if (gTrainerHillVBlankCounter && *gTrainerHillVBlankCounter < 0xFFFFFFFF)
     {
-#ifdef FIRERED
         u32 *counter = gTrainerHillVBlankCounter;
         // Normally held off by the save coordinator; catch a callback rebinding
         // the persistent timer before allowing it to mutate a frozen source.
         FireRedSave_NotifyPersistentWrite();
         (*counter)++;
-#else
-        (*gTrainerHillVBlankCounter)++;
-#endif
     }
 
     if (gMain.vblankCallback)

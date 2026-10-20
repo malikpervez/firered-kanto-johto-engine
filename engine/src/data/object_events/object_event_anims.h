@@ -1656,7 +1656,6 @@ static const union AnimCmd *const sAnimTable_RedGreenVSSeekerBike[] = {
     sAnim_VSSeekerBike,
 };
 
-#if IS_HNS || defined(FIRERED)
 static const union AnimCmd *const sAnimTable_Nurse_hns[] = {
     [ANIM_STD_FACE_SOUTH] = sAnim_FaceSouth,
     [ANIM_STD_FACE_NORTH] = sAnim_FaceNorth,
@@ -1736,4 +1735,3 @@ static const union AnimCmd *const sAnimTable_Whirlpool_hns[] = {
     [ANIM_STD_GO_FASTEST_WEST] = sAnim_RayquazaCoiledMouthOpen,
     [ANIM_STD_GO_FASTEST_EAST] = sAnim_RayquazaNormal,
 };
-#endif // IS_HNS

@@ -1,6 +1,5 @@
 #ifndef GUARD_FRIENDS_SCENE_H
 #define GUARD_FRIENDS_SCENE_H
-#ifdef FIRERED
 struct ObjectEvent;
 struct Sprite;
 // Derived field rendering only; native object/collision/options remain intact.
@@ -21,5 +20,4 @@ void Special_FriendsStoryAtFujiHouse(void);
 void Special_FriendsStoryReadFujiReturn(void);
 void Special_FriendsStoryPrepareFujiWarp(void);
 void Special_FriendsStoryConsumeFujiWarp(void);
-#endif
 #endif

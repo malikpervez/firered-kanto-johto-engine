@@ -146,12 +146,10 @@ void ClearObjectEventMovement(struct ObjectEvent *objectEvent, struct Sprite *sp
 void ObjectEventClearHeldMovement(struct ObjectEvent *objectEvent);
 void ObjectEventClearHeldMovementIfActive(struct ObjectEvent *objectEvent);
 struct Pokemon *GetFirstLiveMon(void);
-#ifdef FIRERED
 // Overworld companion only: never an owned party/PC Pokemon or field-move user.
 bool32 IsPikachuCompanionActive(void);
 u16 GetPikachuCompanionReaction(void);
 void Special_PikachuCompanionReaction(void);
-#endif
 u16 GetOverworldWeatherSpecies(u16 species);
 void UpdateFollowingPokemon(void);
 void RemoveFollowingPokemon(void);

@@ -1,7 +1,6 @@
 #ifndef GUARD_CONSTANTS_FRIENDS_STORY_H
 #define GUARD_CONSTANTS_FRIENDS_STORY_H
 
-#ifdef FIRERED
 // Audited, already allocated native flags. No SaveBlock or regional reserve grows.
 #define FRIENDS_STORY_FLAGS_FIRST           0x934
 #define FLAG_FRIENDS_STORY_ADOPTED          0x934
@@ -24,6 +23,5 @@
 #define FRIENDS_STORY_EARLY_TRAINER_LAST    632
 #define FRIENDS_STORY_FINAL_TRAINER_FIRST   633
 #define FRIENDS_STORY_TRAINER_LAST          639
-#endif
 
 #endif

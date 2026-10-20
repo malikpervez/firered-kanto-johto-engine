@@ -1539,10 +1539,8 @@ void SetLinkErrorBuffer(u32 status, u8 lastSendQueueCount, u8 lastRecvQueueCount
 void CB2_LinkError(void)
 {
     u8 *tilemapBuffer;
-#ifdef FIRERED
     // Link cleanup must proceed, but cannot strand a transaction or its buffer.
     FireRedSave_Abort();
-#endif
 
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     m4aMPlayStop(&gMPlayInfo_SE1);

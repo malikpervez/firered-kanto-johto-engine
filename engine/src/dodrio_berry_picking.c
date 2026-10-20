@@ -5037,13 +5037,11 @@ static void Msg_SavingDontTurnOff(void)
     case 3:
         if (!FuncIsActiveTask(Task_LinkFullSave))
         {
-#ifdef FIRERED
             if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
             {
                 DoSaveFailedScreen(SAVE_NORMAL);
                 return;
             }
-#endif
             sGfx->state++;
         }
         break;

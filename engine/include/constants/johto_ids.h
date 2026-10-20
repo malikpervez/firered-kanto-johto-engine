@@ -2,7 +2,6 @@
 #define GUARD_JOHTO_IDS_H
 
 // Explicit pinned-HnS operands for the FireRed campaign. Native IDs stay intact.
-#ifdef FIRERED
 #include "constants/johto_trainers.h"
 #include "constants/johto_map_sections.h"
 #define JOHTO_FLAG_0x077                                           0x0000
@@ -4028,5 +4027,4 @@
 #define JOHTO_VAR_WILTON_ITEM_HNS                                  0x50B3
 #define JOHTO_VAR_WONDER_NEWS_STEP_COUNTER                         0x501E
 #define JOHTO_VAR_WONDER_NEWS_STEP_COUNTER_FRLG                    0x5018
-#endif
 #endif

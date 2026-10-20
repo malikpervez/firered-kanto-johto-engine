@@ -1,8 +1,6 @@
 #include "global.h"
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "regions.h"
-#endif
 #include "battle_setup.h"
 #include "bike.h"
 #include "bug_contest.h"
@@ -62,10 +60,8 @@ static const u8 *GetInteractionScript(struct MapPosition *, u8, enum Direction);
 static const u8 *GetInteractedObjectEventScript(struct MapPosition *, u8, enum Direction);
 u16 HiddenItemFlagId(u16 hiddenItemId)
 {
-#ifdef FIRERED
     if (IsJohtoCampaignMap())
         return JOHTO_CAMPAIGN_FLAG_ID_BASE + hiddenItemId;
-#endif
     return FLAG_HIDDEN_ITEMS_START + hiddenItemId;
 }
 
@@ -266,27 +262,8 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     if (input->heldSelectButton && UseRegisteredKeyItemOnField(TRUE) == TRUE)
         return TRUE;
 
-#if IS_HNS
-    if (input->pressedRButton && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
-    {
-        if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
-        {
-            gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_MACH_BIKE;
-            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_ACRO_BIKE;
-            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
-        }
-        else
-        {
-            gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_ACRO_BIKE;
-            gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_MACH_BIKE;
-            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
-        }
-        PlaySE(SE_BIKE_BELL);
-    }
-#else
     if (input->pressedRButton && TryStartDexNavSearch())
         return TRUE;
-#endif
 
     if (input->input_field_1_2 && DEBUG_OVERWORLD_MENU && !DEBUG_OVERWORLD_IN_MENU)
     {
@@ -347,9 +324,6 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
      && script != SecretBase_EventScript_DollInteract
      && script != SecretBase_EventScript_CushionInteract
      && script != EventScript_PC
-#if IS_HNS
-     && script != GoldenrodCity_RadioTower_5F_EventScript_Petrel
-#endif
        )
         PlaySE(SE_SELECT);
 
@@ -536,13 +510,11 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
     }
     if (MetatileBehavior_IsPC(metatileBehavior) == TRUE)
         return EventScript_PC;
-#ifdef FIRERED
     if (IsJohtoCampaignMap() && MetatileBehavior_IsHeadbuttTree(metatileBehavior))
     {
         extern const u8 J_EventScript_Headbutt[];
         return J_EventScript_Headbutt;
     }
-#endif
     if (IS_HNS && MetatileBehavior_IsHeadbuttTree(metatileBehavior) == TRUE)
         return EventScript_Headbutt;
     if (MetatileBehavior_IsClosedSootopolisDoor(metatileBehavior) == TRUE)
@@ -751,10 +723,8 @@ static bool8 TryStartStepBasedScript(struct MapPosition *position, u16 metatileB
         return TRUE;
     if (TryStartStepCountScript(metatileBehavior) == TRUE)
         return TRUE;
-#if IS_HNS || defined(FIRERED)
     if (Mom_TryTriggerGiftCall() == TRUE)
         return TRUE;
-#endif
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED_MOVE) && !MetatileBehavior_IsForcedMovementTile(metatileBehavior) && UpdateRepelCounter() == TRUE)
         return TRUE;
     if (OnStep_DexNavSearch())
@@ -788,16 +758,10 @@ static bool8 TryStartMiscWalkingScripts(u16 metatileBehavior)
     }
     else if (MetatileBehavior_IsBattlePyramidWarp(metatileBehavior))
     {
-#ifdef FIRERED
         if (IsJohtoCampaignMap())
             ScriptContext_SetupScript(BattlePyramid_WarpToNextFloor_hns);
         else
             ScriptContext_SetupScript(BattlePyramid_WarpToNextFloor);
-#elif IS_HNS
-        ScriptContext_SetupScript(BattlePyramid_WarpToNextFloor_hns);
-#else
-        ScriptContext_SetupScript(BattlePyramid_WarpToNextFloor);
-#endif
         return TRUE;
     }
     else if (MetatileBehavior_IsSecretBaseGlitterMat(metatileBehavior) == TRUE)
@@ -892,10 +856,8 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         ScriptContext_SetupScript(SSTidalCorridor_EventScript_ReachedStepCount);
         return TRUE;
     }
-#if IS_HNS || defined(FIRERED)
     if (HnsUpdateRouteStepCounter())
         return TRUE;
-#endif
     if (TryStartMatchCall())
         return TRUE;
     return FALSE;

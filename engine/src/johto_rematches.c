@@ -1,5 +1,4 @@
 #include "global.h"
-#ifdef FIRERED
 #include "battle_setup.h"
 #include "data.h"
 #include "johto_rematches.h"
@@ -177,4 +176,3 @@ u16 JohtoRematch_CountBattledTeams(u16 tableId)
             return i;
     return REMATCHES_COUNT - 1;
 }
-#endif

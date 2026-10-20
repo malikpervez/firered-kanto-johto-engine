@@ -381,7 +381,6 @@ enum CopyMovement
 };
 
 // PC02: transient dialogue selectors, not persistent flags or variables.
-#ifdef FIRERED
 #define PIKACHU_REACTION_SHY 0
 #define PIKACHU_REACTION_CURIOUS 1
 #define PIKACHU_REACTION_HAPPY 2
@@ -399,6 +398,5 @@ enum CopyMovement
 #define PIKACHU_REACTION_EAGER 14
 #define PIKACHU_BOND_FRIENDLY_STEPS 4000
 #define PIKACHU_BOND_DEVOTED_STEPS 16000
-#endif
 
 #endif // GUARD_CONSTANTS_EVENT_OBJECT_MOVEMENT_H

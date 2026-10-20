@@ -1,6 +1,5 @@
 #include "global.h"
 
-#ifdef FIRERED
 #include "battle.h"
 #include "event_data.h"
 #include "johto_campaign.h"
@@ -158,4 +157,3 @@ void Special_RainbowStoryAllReplicasResolved(void)
     Script_RequestEffects(SCREFF_V1);
     gSpecialVar_Result = RainbowStory_AllReplicasResolved();
 }
-#endif

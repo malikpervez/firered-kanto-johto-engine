@@ -4744,15 +4744,11 @@ static void CB2_SaveAndEndTrade(void)
             MysteryGift_TryIncrementStat(CARD_STAT_NUM_TRADES, gLinkPlayers[GetMultiplayerId() ^ 1].trainerId);
 
         SetContinueGameWarpStatusToDynamicWarp();
-#ifdef FIRERED
         if (LinkFullSave_Init())
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return;
         }
-#else
-        LinkFullSave_Init();
-#endif
         gMain.state++;
         sTradeAnim->timer = 0;
         break;
@@ -4763,13 +4759,11 @@ static void CB2_SaveAndEndTrade(void)
     case 52:
         if (LinkFullSave_WriteSector()) /* FRJS body only */
         {
-#ifdef FIRERED
             if (FireRedSave_LastResult() != SAVE_STATUS_OK)
             {
                 DoSaveFailedScreen(SAVE_NORMAL);
                 return;
             }
-#endif
             ClearContinueGameWarpStatus2();
             gMain.state = 4;
         }
@@ -4782,13 +4776,11 @@ static void CB2_SaveAndEndTrade(void)
         break;
     case 4:
         LinkFullSave_ReplaceLastSector();
-#ifdef FIRERED
         if (FireRedSave_LastResult() != SAVE_STATUS_OK)
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return;
         }
-#endif
         gMain.state = 40;
         sTradeAnim->timer = 0;
         break;
@@ -4817,13 +4809,11 @@ static void CB2_SaveAndEndTrade(void)
         if (_IsLinkTaskFinished())
         {
             LinkFullSave_SetLastSectorSignature();
-#ifdef FIRERED
             if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
             {
                 DoSaveFailedScreen(SAVE_NORMAL);
                 return;
             }
-#endif
             gMain.state = 5;
         }
         break;
@@ -5070,15 +5060,11 @@ static void CB2_SaveAndEndWirelessTrade(void)
             StringExpandPlaceholders(gStringVar4, gText_SavingDontTurnOffPower);
             DrawTextOnTradeWindow(0, gStringVar4, 0);
             IncrementGameStat(GAME_STAT_POKEMON_TRADES);
-#ifdef FIRERED
         if (LinkFullSave_Init())
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return;
         }
-#else
-        LinkFullSave_Init();
-#endif
             sTradeAnim->timer = 0;
         }
         break;
@@ -5089,13 +5075,11 @@ static void CB2_SaveAndEndWirelessTrade(void)
     case 4:
         if (LinkFullSave_WriteSector()) /* FRJS body only */
         {
-#ifdef FIRERED
             if (FireRedSave_LastResult() != SAVE_STATUS_OK)
             {
                 DoSaveFailedScreen(SAVE_NORMAL);
                 return;
             }
-#endif
             gMain.state = 5;
         }
         else
@@ -5106,13 +5090,11 @@ static void CB2_SaveAndEndWirelessTrade(void)
         break;
     case 5:
         LinkFullSave_ReplaceLastSector();
-#ifdef FIRERED
         if (FireRedSave_LastResult() != SAVE_STATUS_OK)
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return;
         }
-#endif
         gMain.state = 6;
         sTradeAnim->timer = 0;
         break;
@@ -5141,13 +5123,11 @@ static void CB2_SaveAndEndWirelessTrade(void)
         if (_IsLinkTaskFinished())
         {
             LinkFullSave_SetLastSectorSignature();
-#ifdef FIRERED
             if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
             {
                 DoSaveFailedScreen(SAVE_NORMAL);
                 return;
             }
-#endif
             gMain.state = 9;
         }
         break;

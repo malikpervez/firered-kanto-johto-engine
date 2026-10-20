@@ -17,10 +17,8 @@ PalletTown_ProfessorOaksLab_OnTransition::
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_SetNationalDexSceneFinished
 	call_if_set FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL, PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck
-#ifdef FIRERED
 	call CG_BlueLabVisibility
 	call ST01_LabVisibility
-#endif
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck::
@@ -219,10 +217,8 @@ PalletTown_ProfessorOaksLab_ChooseStarterScene::
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting
 	closemessage
 	delay 60
-#ifdef FIRERED
 	callnative Special_CharacterStarterPreflight, requests_effects=1
 	goto_if_eq VAR_RESULT, TRUE, ST01_LabIntroduction
-#endif
 	msgbox PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne
 	closemessage
 	delay 30
@@ -563,10 +559,8 @@ PalletTown_ProfessorOaksLab_EventScript_Rival::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalWaitingForStarter::
-#ifdef FIRERED
 	callnative Special_CharacterStarterPreflight, requests_effects=1
 	goto_if_eq VAR_RESULT, TRUE, ST01_RivalWaiting
-#endif
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer
 	release
 	end
@@ -579,10 +573,8 @@ PalletTown_ProfessorOaksLab_EventScript_RivalChoseStarter::
 PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	lock
 	faceplayer
-#ifdef FIRERED
 	call RB_OakStory
 	call_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_JohtoReferral
-#endif
 	goto_if_set SHOWED_OAK_COMPLETE_DEX, PalletTown_ProfessorOaksLab_EventScript_OakJustShownCompleteDex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 9, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait
@@ -592,12 +584,10 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	goto_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1, PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon
-#ifdef FIRERED
 	goto_if_ne VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_NativeStarterPrompt
 	callnative Special_CharacterStarterPreflight, requests_effects=1
 	goto_if_eq VAR_RESULT, TRUE, ST01_OakRepeat
 PalletTown_ProfessorOaksLab_EventScript_NativeStarterPrompt:
-#endif
 	msgbox PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose
 	release
 	end
@@ -1087,10 +1077,8 @@ PalletTown_ProfessorOaksLab_Movement_RivalExit::
 	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
-#ifdef FIRERED
 	callnative Special_CharacterStarterPreflight, requests_effects=1
 	goto_if_eq VAR_RESULT, TRUE, ST01_ReservedBall
-#endif
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 0
@@ -1234,10 +1222,8 @@ PalletTown_ProfessorOaksLab_Movement_RivalWalksToBulbasaur::
 	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
-#ifdef FIRERED
 	callnative Special_CharacterStarterPreflight, requests_effects=1
 	goto_if_eq VAR_RESULT, TRUE, ST01_ReservedBall
-#endif
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 1
@@ -1251,10 +1237,8 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
-#ifdef FIRERED
 	callnative Special_CharacterStarterPreflight, requests_effects=1
 	goto_if_eq VAR_RESULT, TRUE, ST01_ReservedBall
-#endif
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 2
@@ -1633,40 +1617,19 @@ PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer::
 	.string "I need you to listen closely.$"
 
 PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons::
-#ifdef FIRERED
 	.string "Recently, there have been sightings\n"
 	.string "of rare POKéMON species.\p"
 	.string "Some have never been seen in KANTO.\p"
 	.string "We need careful notes from both\n"
 	.string "regions. {PLAYER}, I'd like you\l"
 	.string "to help with that research.$"
-#else
-	.string "Recently, there have been sightings\n"
-	.string "of many rare POKéMON species.\p"
-	.string "I'm talking about POKéMON that\n"
-	.string "have never been seen in KANTO.\p"
-	.string "I would love to go see things for\n"
-	.string "myself, but I'm much too old.\p"
-	.string "Since I can't do it, {PLAYER}, I'd\n"
-	.string "like you to go in my place.$"
-#endif
 
 PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything::
-#ifdef FIRERED
 	.string "{RIVAL}: Hey, I heard that!\p"
 	.string "Grandpa, I've got fresh notes\n"
 	.string "from my latest field survey.\p"
 	.string "Let's compare our POKéDEXES,\n"
 	.string "{PLAYER}!$"
-#else
-	.string "{RIVAL}: Hey, I heard that!\p"
-	.string "Gramps, what's with favoring\n"
-	.string "{PLAYER} over me all the time?\p"
-	.string "I went and collected more POKéMON,\n"
-	.string "and faster, too.\p"
-	.string "You should just let me handle\n"
-	.string "everything.$"
-#endif
 
 PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes::
 	.string "OAK: I know, I know.\n"
@@ -1707,7 +1670,6 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
 	.string "Anyways, I'm outta here!$"
 
 
-#ifdef FIRERED
 PalletTown_ProfessorOaksLab_EventScript_JohtoReferral::
 	special Special_JohtoCampaignGetState
 	goto_if_eq VAR_RESULT, FALSE, PalletTown_ProfessorOaksLab_EventScript_JohtoFirstReferral
@@ -1819,4 +1781,3 @@ PalletTown_ProfessorOaksLab_Text_JohtoPassBagFull::
 	.string "Make room and talk to me again.\n"
 	.string "Your MT.SILVER access is already\l"
 	.string "arranged.$"
-#endif

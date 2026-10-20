@@ -3220,13 +3220,11 @@ static u32 Cmd_SaveGame(struct BerryCrushGame *game, u8 *args)
     case 3:
         if (FuncIsActiveTask(Task_LinkFullSave))
             return 0;
-#ifdef FIRERED
         if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return 0;
         }
-#endif
         break;
     case 4:
         RunOrScheduleCommand(CMD_ASK_PLAY_AGAIN, SCHEDULE_CMD, NULL);

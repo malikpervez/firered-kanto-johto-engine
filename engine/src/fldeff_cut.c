@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "kanto_connection_seam.h"
-#endif
 #include "event_object_lock.h"
 #include "event_object_movement.h"
 #include "event_scripts.h"
@@ -53,7 +51,6 @@ struct HyperCutterUnk
 // this file's functions
 static void FieldCallback_CutTree(void);
 
-#ifdef FIRERED
 static u16 CutGetMetatileIdAt(s16 x, s16 y)
 {
     return KantoSeam_CanonicalMid(gMapHeader.mapLayout, MapGridGetMetatileIdAt(x, y));
@@ -64,10 +61,6 @@ static void CutSetMetatileIdAt(s16 x, s16 y, u16 result)
     u16 previous = MapGridGetMetatileIdAt(x, y);
     MapGridSetMetatileIdAt(x, y, KantoSeam_CutResult(gMapHeader.mapLayout, previous, result));
 }
-#else
-#define CutGetMetatileIdAt MapGridGetMetatileIdAt
-#define CutSetMetatileIdAt MapGridSetMetatileIdAt
-#endif
 
 static void FieldCallback_CutGrass(void);
 static void StartCutTreeFieldEffect(void);
@@ -174,9 +167,7 @@ bool32 SetUpFieldMove_Cut(void)
     }
 
     if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE) == TRUE || CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG) == TRUE
-#ifdef FIRERED
         || CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE_HNS) == TRUE
-#endif
        )
     {
         // Standing in front of cuttable tree.

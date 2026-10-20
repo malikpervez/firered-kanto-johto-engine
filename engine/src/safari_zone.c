@@ -73,9 +73,6 @@ void EnterSafariMode(void)
     SetSafariZoneFlag();
     ClearAllPokeblockFeeders();
     gNumSafariBalls = 30;
-#if IS_HNS
-    AddBagItem(ITEM_SAFARI_BALL, 30);
-#endif
     if (IS_FRLG)
         gSafariZoneStepCounter = SAFARI_ZONE_STEPS_FRLG;
     else if (IS_HNS)
@@ -91,13 +88,6 @@ void ExitSafariMode(void)
     TryPutSafariFanClubOnAir(sSafariZoneCaughtMons, sSafariZonePkblkUses);
     ResetSafariZoneFlag();
     ClearAllPokeblockFeeders();
-#if IS_HNS
-    {
-        u16 remaining = CountTotalItemQuantityInBag(ITEM_SAFARI_BALL);
-        if (remaining > 0)
-            RemoveBagItem(ITEM_SAFARI_BALL, remaining);
-    }
-#endif
     gNumSafariBalls = 0;
     gSafariZoneStepCounter = 0;
 }

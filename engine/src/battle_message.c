@@ -1,8 +1,6 @@
 #include "global.h"
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "constants/johto_trainers.h"
-#endif
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_ai_util.h"
@@ -434,13 +432,8 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_ITAPPEAREDCAUGHT]                     = COMPOUND_STRING("Aww! It appeared to be caught!"),
     [STRINGID_AARGHALMOSTHADIT]                     = COMPOUND_STRING("Aargh! Almost had it!"),
     [STRINGID_SHOOTSOCLOSE]                         = COMPOUND_STRING("Gah! It was so close, too!"),
-#if IS_HNS
-    [STRINGID_GOTCHAPKMNCAUGHTPLAYER]               = COMPOUND_STRING("Gotcha! {B_DEF_NAME} was caught!{WAIT_SE}{PLAY_BGM 659}\p"),
-    [STRINGID_GOTCHAPKMNCAUGHTWALLY]                = COMPOUND_STRING("Gotcha! {B_DEF_NAME} was caught!{WAIT_SE}{PLAY_BGM 659}{PAUSE 127}"),
-#else
     [STRINGID_GOTCHAPKMNCAUGHTPLAYER]               = COMPOUND_STRING("Gotcha! {B_DEF_NAME} was caught!{WAIT_SE}{PLAY_BGM MUS_CAUGHT}\p"),
     [STRINGID_GOTCHAPKMNCAUGHTWALLY]                = COMPOUND_STRING("Gotcha! {B_DEF_NAME} was caught!{WAIT_SE}{PLAY_BGM MUS_CAUGHT}{PAUSE 127}"),
-#endif
     [STRINGID_GIVENICKNAMECAPTURED]                 = COMPOUND_STRING("Would you like to give {B_DEF_NAME} a nickname?"),
     [STRINGID_PKMNDATAADDEDTODEX]                   = COMPOUND_STRING("{B_DEF_NAME}'s data has been added to the Pokédex!\p"),
     [STRINGID_ITISRAINING]                          = COMPOUND_STRING("It's raining!"),
@@ -3562,10 +3555,8 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                 break;
             case B_TXT_RIVAL_NAME:
                 toCpy = gSaveBlock2Ptr->rivalName;
-#ifdef FIRERED
                 if (JOHTO_TRAINER_IS_CATALOG_ID(TRAINER_BATTLE_PARAM.opponentA) && JohtoCampaign_IsSeeded())
                     toCpy = (u8 *)gSaveBlock3Ptr + 160;
-#endif
                 break;
             case B_TXT_PARTNER_NAME_WITH_CLASS:
                 toCpy = textStart;

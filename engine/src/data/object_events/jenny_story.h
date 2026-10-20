@@ -1,7 +1,6 @@
 #ifndef GUARD_JENNY_STORY_GRAPHICS_H
 #define GUARD_JENNY_STORY_GRAPHICS_H
 
-#ifdef FIRERED
 // Native encoding of the local Jenny atlas. No trainer or battle is attached.
 static const u16 sJennyStoryPic[] = INCBIN_U16("graphics/object_events/pics/people/story/jenny.4bpp");
 static const u16 sJennyStoryPalette[] = INCBIN_U16("graphics/object_events/palettes/jenny_story.gbapal");
@@ -36,6 +35,5 @@ static const struct ObjectEventGraphicsInfo sJennyStoryGraphicsInfo = {
     .images = sJennyStoryFrames,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
-#endif
 
 #endif

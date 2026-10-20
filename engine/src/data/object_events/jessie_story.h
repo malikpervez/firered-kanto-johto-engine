@@ -1,7 +1,6 @@
 #ifndef GUARD_JESSIE_STORY_GRAPHICS_H
 #define GUARD_JESSIE_STORY_GRAPHICS_H
 
-#ifdef FIRERED
 // Technically converted from the local generated character sheet.
 // Nine complete 512-byte frames preserve aspect ratio in a 32x32 canvas.
 // The compact character retains the native feet baseline and walk order.
@@ -38,6 +37,5 @@ static const struct ObjectEventGraphicsInfo sJessieStoryGraphicsInfo = {
     .images = sJessieStoryFrames,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
-#endif
 
 #endif

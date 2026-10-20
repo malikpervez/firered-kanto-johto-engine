@@ -877,12 +877,8 @@ static bool32 SaveOnMysteryGiftMenu(u8 *state)
         (*state)++;
         break;
     case 1:
-#ifdef FIRERED
         if (TrySavingData(SAVE_NORMAL) != SAVE_STATUS_OK)
             break;
-#else
-        TrySavingData(SAVE_NORMAL);
-#endif
         (*state)++;
         break;
     case 2:

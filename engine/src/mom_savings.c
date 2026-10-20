@@ -1,6 +1,5 @@
 #include "global.h"
 
-#if IS_HNS || defined(FIRERED)
 
 #include "mom_savings.h"
 #include "main.h"
@@ -29,7 +28,6 @@
 #include "decoration_inventory.h"
 #include "randomizer.h"
 
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "firered_save.h"
 #include "regions.h"
@@ -54,21 +52,10 @@ static bool8 Mom_IsAvailable(void)
 #define MOM_SAVINGS_PTR JohtoCampaign_GetMomSavings()
 #define MOM_SAVINGS (*MOM_SAVINGS_PTR)
 #define MOM_BEFORE_WRITE() FireRedSave_NotifyPersistentWrite()
-#else
-#define MOM_FLAG_HAS_GIFT FLAG_MOM_HAS_GIFT
-#define MOM_VAR_STARTER VAR_STARTER_MON
-#define MOM_VAR_GIFT_ITEM VAR_MOM_GIFT_ITEM
-#define MOM_VAR_GIFT_QUANTITY VAR_MOM_GIFT_QUANTITY
-#define MOM_SAVINGS_PTR (&gSaveBlock1Ptr->momSavings)
-#define MOM_SAVINGS gSaveBlock1Ptr->momSavings
-#define MOM_BEFORE_WRITE() ((void)0)
-#endif
 
-#ifdef FIRERED
 #define EventScript_MomGiftCall_Item J_EventScript_MomGiftCall_Item
 #define EventScript_MomGiftCall_Berry J_EventScript_MomGiftCall_Berry
 #define EventScript_MomGiftCall_Decoration J_EventScript_MomGiftCall_Decoration
-#endif
 
 extern const u8 EventScript_MomGiftCall_Item[];
 extern const u8 EventScript_MomGiftCall_Berry[];
@@ -111,24 +98,13 @@ static void Mom_AddItemToPC(u16 itemId, u16 quantity, bool8 isDecoration);
 
 void InitMomSavings(void)
 {
-#ifdef FIRERED
     Mom_EnsureInitialized();
-#else
-    struct MomSavingsData *mom = MOM_SAVINGS_PTR;
-    MOM_BEFORE_WRITE();
-    mom->momsMoney = 0;
-    mom->normalGiftFlags = 0;
-    mom->isSavingMoney = FALSE;
-    mom->isInitialized = TRUE;
-#endif
 }
 
 void Mom_EnsureInitialized(void)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return;
-#endif
 
     struct MomSavingsData *mom = MOM_SAVINGS_PTR;
 
@@ -144,10 +120,8 @@ void Mom_EnsureInitialized(void)
 
 void Mom_EnableSaving(bool8 enable)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return;
-#endif
 
     MOM_BEFORE_WRITE();
     MOM_SAVINGS.isSavingMoney = enable;
@@ -155,30 +129,24 @@ void Mom_EnableSaving(bool8 enable)
 
 bool8 Mom_IsSavingEnabled(void)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return FALSE;
-#endif
 
     return MOM_SAVINGS.isSavingMoney;
 }
 
 u32 Mom_GetBalance(void)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return 0;
-#endif
 
     return MOM_SAVINGS.momsMoney;
 }
 
 bool8 Mom_TryDepositMoney(u32 amount)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return FALSE;
-#endif
 
     struct MomSavingsData *mom = MOM_SAVINGS_PTR;
     u32 oldBalance = mom->momsMoney;
@@ -194,10 +162,8 @@ bool8 Mom_TryDepositMoney(u32 amount)
 
 bool8 Mom_AutoDepositFromBattle(u32 amount)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return FALSE;
-#endif
 
     struct MomSavingsData *mom = MOM_SAVINGS_PTR;
     u32 oldBalance = mom->momsMoney;
@@ -213,10 +179,8 @@ bool8 Mom_AutoDepositFromBattle(u32 amount)
 
 bool8 Mom_TryWithdrawMoney(u32 amount)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return FALSE;
-#endif
 
     struct MomSavingsData *mom = MOM_SAVINGS_PTR;
 
@@ -230,10 +194,8 @@ bool8 Mom_TryWithdrawMoney(u32 amount)
 
 bool8 Mom_CheckForGiftPurchase(u32 newBalance, u32 oldBalance, bool8 isAutomatic)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return FALSE;
-#endif
 
     u16 purchasedItem = ITEM_NONE;
     u16 quantity = 1;
@@ -362,10 +324,8 @@ static bool8 Mom_GiftIsDecoration(void)
 
 bool8 Mom_TryTriggerGiftCall(void)
 {
-#ifdef FIRERED
     if (!Mom_IsAvailable())
         return FALSE;
-#endif
 
     u8 mapType = gMapHeader.mapType;
 
@@ -481,7 +441,6 @@ static void Task_MomInput_HandleInput(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-#ifdef FIRERED
     if (!Mom_IsAvailable())
     {
         gSpecialVar_0x8000 = 0;
@@ -490,7 +449,6 @@ static void Task_MomInput_HandleInput(u8 taskId)
         ScriptContext_Enable();
         return;
     }
-#endif
 
     if (AdjustQuantityAccordingToDPadInput_MomVersion(&sMomInputAmount, sMomInputMaxAmount) == TRUE)
     {
@@ -654,4 +612,3 @@ void Special_MomOpenWithdrawInput(void)
 #undef tWindowInput
 #undef tWindowMessage
 
-#endif // IS_HNS

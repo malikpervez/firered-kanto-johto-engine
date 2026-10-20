@@ -1,10 +1,6 @@
 EventScript_PC::
 	lockall
-#if IS_HNS
-	setvar VAR_0x8004, PC_LOCATION_HNS
-#else
 	setvar VAR_0x8004, PC_LOCATION_OTHER
-#endif
 	special DoPCTurnOnEffect
 	playse SE_PC_ON
 	msgbox Text_BootUpPC, MSGBOX_DEFAULT
@@ -13,11 +9,7 @@ EventScript_PC::
 
 EventScript_FakePC::
 	lockall
-#if IS_HNS
-	setvar VAR_0x8004, PC_LOCATION_HNS
-#else
 	setvar VAR_0x8004, PC_LOCATION_OTHER
-#endif
 	playse SE_PC_ON
 	msgbox Text_BootUpPC, MSGBOX_DEFAULT
 	goto EventScript_FakePCMainMenu
@@ -135,19 +127,11 @@ EventScript_AccessSomeonesPC::
 	return
 
 EventScript_AccessLanettesPC::
-#if IS_FRLG || IS_HNS
 	msgbox gText_AccessedBillsPC, MSGBOX_DEFAULT
-#else
-	msgbox gText_AccessedLanettesPC, MSGBOX_DEFAULT
-#endif
 	return
 
 EventScript_TurnOffPC::
-#if IS_HNS
-	setvar VAR_0x8004, PC_LOCATION_HNS
-#else
 	setvar VAR_0x8004, PC_LOCATION_OTHER
-#endif
 	playse SE_PC_OFF
 	special DoPCTurnOffEffect
 	releaseall

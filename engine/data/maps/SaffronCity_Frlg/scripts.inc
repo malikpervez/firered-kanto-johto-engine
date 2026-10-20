@@ -55,9 +55,7 @@ SaffronCity_EventScript_DoorGuardAsleep::
 	end
 
 SaffronCity_EventScript_WorkerM::
-#ifdef FIRERED
 	goto_if_set JOHTO_FLAG_SYS_GAME_CLEAR, B4_Saffron_EventScript_RailTravel
-#endif
 	msgbox SaffronCity_Text_YouBeatTeamRocket, MSGBOX_NPC
 	end
 
@@ -242,7 +240,6 @@ SaffronCity_Text_HowCanClubNotRecognizeLance::
 	.string "He's the greatest, LANCE!$"
 
 
-#ifdef FIRERED
 @ FireRed has no Magnet Train station. The existing Saffron worker arranges
 @ the return journey after Oak has awarded the original HnS rail pass.
 @ Original Goldenrod arrival coordinates and train-exit scene are preserved.
@@ -279,4 +276,3 @@ B4_Saffron_Text_RailPassRequired::
 	.string "trainers who complete both journeys.\p"
 	.string "Visit him in PALLET TOWN for your\n"
 	.string "Magnet Train PASS.$"
-#endif

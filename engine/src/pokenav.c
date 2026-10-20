@@ -201,7 +201,6 @@ const struct PokenavCallbacks PokenavMenuCallbacks[17] =
         .free1 = FreeRibbonsMonList,
         .free2 = FreeRibbonsMonMenu,
     },
-#if IS_HNS || defined(FIRERED)
     [POKENAV_RADIO - POKENAV_MENU_IDS_START] =
     {
         .init = PokenavCallback_Init_Radio,
@@ -222,7 +221,6 @@ const struct PokenavCallbacks PokenavMenuCallbacks[17] =
         .free1 = FreeMenuHandlerSubstruct1,
         .free2 = FreeMenuHandlerSubstruct2,
     },
-#endif
 };
 
 EWRAM_DATA u8 gNextLoopedTaskId = 0;

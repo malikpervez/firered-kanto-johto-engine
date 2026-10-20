@@ -677,25 +677,17 @@ void OakOldManBufferExecCompleted(enum BattlerId battler)
 
 static void OakOldManHandleDrawTrainerPic(enum BattlerId battler)
 {
-#ifdef FIRERED
     u32 trainerPicId = (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
         ? (gSaveBlock2Ptr->playerGender == FEMALE ? TRAINER_BACK_PIC_PLAYER_FEMALE : TRAINER_BACK_PIC_PLAYER_MALE)
         : TRAINER_PIC_BACK_OLD_MAN;
-#else
-    u32 trainerPicId = (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE) ? gSaveBlock2Ptr->playerGender + TRAINER_PIC_BACK_RED : TRAINER_PIC_BACK_OLD_MAN;
-#endif
     BtlController_HandleDrawTrainerPic(battler, trainerPicId, FALSE, 80, (8 - gTrainerBacksprites[trainerPicId].coordinates.size) * 4 + 80, 30);
 }
 
 static void OakOldManHandleTrainerSlide(enum BattlerId battler)
 {
-#ifdef FIRERED
     u32 trainerPicId = (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
         ? (gSaveBlock2Ptr->playerGender == FEMALE ? TRAINER_BACK_PIC_PLAYER_FEMALE : TRAINER_BACK_PIC_PLAYER_MALE)
         : TRAINER_PIC_BACK_OLD_MAN;
-#else
-    u32 trainerPicId = (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE) ? gSaveBlock2Ptr->playerGender + TRAINER_PIC_BACK_RED : TRAINER_PIC_BACK_OLD_MAN;
-#endif
     BtlController_HandleTrainerSlide(battler, trainerPicId);
 }
 

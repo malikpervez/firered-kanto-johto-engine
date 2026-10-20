@@ -1,4 +1,3 @@
-#ifdef FIRERED
 // Each native victory pays its ordinary trainer payout. No extra scripted prize.
 [DIFFICULTY_EASY][626] = {
     .trainerName = _("BRIAN"),
@@ -504,4 +503,3 @@
     .party = sFriendsHamFinalParty,
     .partySize = ARRAY_COUNT(sFriendsHamFinalParty),
 },
-#endif

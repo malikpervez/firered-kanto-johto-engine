@@ -1,7 +1,6 @@
 #ifndef GUARD_FRIENDS_CAMERA_H
 #define GUARD_FRIENDS_CAMERA_H
 
-#ifdef FIRERED
 // Begin1 means an owned asynchronous task will resume the script once;
 // Begin2 means a validated existing HOLD, return synchronously without waitstate.
 // Begin0 means unavailable: leave without a scene receipt.
@@ -12,6 +11,5 @@ void Special_FriendsCameraReturn(void);
 // only; never apply an old map's coordinates to a newly loaded map.
 void FriendsCamera_OnMapLoad(void);
 u16 FriendsCamera_GetFault(void);
-#endif
 
 #endif

@@ -3165,11 +3165,9 @@ void ZeroBoxMonData(struct BoxPokemon *boxMon)
 {
     u8 *raw = (u8 *)boxMon;
     u32 i;
-#ifdef FIRERED
     if ((u32)boxMon >= (u32)gPokemonStoragePtr
         && (u32)boxMon < (u32)gPokemonStoragePtr + sizeof(*gPokemonStoragePtr))
         FireRedSave_NotifyPersistentWrite();
-#endif
     for (i = 0; i < sizeof(struct BoxPokemon); i++)
         raw[i] = 0;
 }
@@ -5033,13 +5031,11 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
 void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
 {
     const u8 *data = dataArg;
-#ifdef FIRERED
     // The PC payload is a live transaction source for full saves. Party/local
     // copies outside storage do not need this barrier.
     if ((u32)boxMon >= (u32)gPokemonStoragePtr
         && (u32)boxMon < (u32)gPokemonStoragePtr + sizeof(*gPokemonStoragePtr))
         FireRedSave_NotifyPersistentWrite();
-#endif
 
     if (field > MON_DATA_ENCRYPT_SEPARATOR)
     {
@@ -7701,11 +7697,7 @@ u8 GetTrainerEncounterMusicId(u16 trainerOpponentId)
     else if (InTrainerHillChallenge())
         return GetTrainerEncounterMusicIdInTrainerHill(trainerOpponentId);
     else
-#ifdef FIRERED
         return GetTrainerStructForDifficulty(sanitizedTrainerId, difficulty)->encounterMusic;
-#else
-        return gTrainers[difficulty][sanitizedTrainerId].encounterMusic;
-#endif
 }
 
 u16 ModifyStatByNature(u8 nature, u16 stat, enum Stat statIndex)
@@ -7829,9 +7821,6 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
 
     // In HnS, Red lifts the No EVs challenge; other targets retain the shared restriction.
     if (gSaveBlock3Ptr->challengeSettings.tx_Challenges_NoEVs
-#if IS_HNS
-        && !FlagGet(FLAG_DEFEATED_RED)
-#endif
     )
         return;
 
@@ -8088,12 +8077,6 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
         case TRAINER_CLASS_PKMN_TRAINER_1_HNS:
-        #if IS_HNS
-            // Steven is an Emerald guest, so he keeps the Emerald champion theme.
-            if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_TRAINER_HILL))
-             && TRAINER_BATTLE_PARAM.opponentA == TRAINER_STEVEN_HNS)
-                return MUS_VS_CHAMPION;
-        #endif
             return MUS_HG_VS_CHAMPION;
         case TRAINER_CLASS_CHAMPION_HNS:
             return MUS_HG_VS_CHAMPION;
@@ -8137,51 +8120,18 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING_HNS:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-        #if IS_HNS
-            // Trainer Hill and the three Battle Tents in its courtyard all use
-            // MAPSEC_TRAINER_HILL, which sits outside every range in GetRegionForSectionId
-            // and so falls through to REGION_HOENN and the Emerald theme. The facility is
-            // in Johto. Corrected here rather than in GetRegionForSectionId, which feeds
-            // far more than music, and inside default so class cases still take priority.
-            if (gMapHeader.regionMapSectionId == MAPSEC_TRAINER_HILL)
-                return MUS_HG_VS_TRAINER;
-            if (GetCurrentRegion() == REGION_JOHTO)
-                return MUS_HG_VS_TRAINER;
-            else if (GetCurrentRegion() == REGION_KANTO)
-                return MUS_HG_VS_TRAINER_KANTO;
-            else if (GetCurrentRegion() == REGION_ALOLA)
-                return MUS_HG_VS_TRAINER_KANTO;  // Alola trainer battles
-            else if (GetCurrentRegion() == REGION_HISUI)
-                return MUS_HG_VS_TRAINER;        // Sinjoh keeps the Johto theme
-            else
-                return MUS_VS_TRAINER;
-        #else
             if (GetCurrentRegion() == REGION_KANTO)
                 return MUS_RG_VS_TRAINER;
             else
                 return MUS_VS_TRAINER;
-        #endif
         }
     }
     else
     {
-    #if IS_HNS
-        if (GetCurrentRegion() == REGION_JOHTO)
-            return MUS_HG_VS_WILD;
-        else if (GetCurrentRegion() == REGION_KANTO)
-            return MUS_HG_VS_WILD_KANTO;
-        else if (GetCurrentRegion() == REGION_ALOLA)
-            return MUS_HG_VS_WILD_KANTO;  // Alola wild battles
-        else if (GetCurrentRegion() == REGION_HISUI)
-            return MUS_HG_VS_WILD;        // Sinjoh keeps the Johto theme
-        else
-            return MUS_VS_WILD;
-    #else
         if (GetCurrentRegion() == REGION_KANTO)
             return MUS_RG_VS_WILD;
         else
             return MUS_VS_WILD;
-    #endif
     }
 }
 
@@ -8677,10 +8627,8 @@ enum TrainerPicID FacilityClassToPicIndex(u16 facilityClass)
 
 enum TrainerPicID PlayerGenderToFrontTrainerPicId(enum Gender playerGender)
 {
-#ifdef FIRERED
     if (playerGender == MALE)
         return TRAINER_PIC_FRONT_TRAIL;
-#endif
     if (playerGender != MALE)
         return FacilityClassToPicIndex(IS_HNS ? FACILITY_CLASS_KRIS_HNS : IS_FRLG ? FACILITY_CLASS_LEAF : FACILITY_CLASS_MAY);
     else

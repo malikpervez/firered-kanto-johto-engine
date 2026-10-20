@@ -62,38 +62,32 @@ void CheckForFlashMemory(void)
 
 void ClearSav3(void)
 {
-#ifdef FIRERED
     if (FireRedSave_IsBusy())
     {
         FireRedSave_Abort();
         return;
     }
-#endif
     CpuFill16(0, &gSaveblock3, sizeof(struct SaveBlock3));
     FakeRtc_Reset();
 }
 
 void ClearSav2(void)
 {
-#ifdef FIRERED
     if (FireRedSave_IsBusy())
     {
         FireRedSave_Abort();
         return;
     }
-#endif
     CpuFill16(0, &gSaveblock2, sizeof(struct SaveBlock2ASLR));
 }
 
 void ClearSav1(void)
 {
-#ifdef FIRERED
     if (FireRedSave_IsBusy())
     {
         FireRedSave_Abort();
         return;
     }
-#endif
     CpuFill16(0, &gSaveblock1, sizeof(struct SaveBlock1ASLR));
 }
 
@@ -102,13 +96,11 @@ void SetSaveBlocksPointers(u16 offset)
 {
     struct SaveBlock1 **sav1_LocalVar = &gSaveBlock1Ptr;
 
-#ifdef FIRERED
     if (FireRedSave_IsBusy())
     {
         FireRedSave_Abort();
         return;
     }
-#endif
     offset = (offset + Random()) & (SAVEBLOCK_MOVE_RANGE - 4);
 
     gSaveBlock2Ptr = (void *)(&gSaveblock2) + offset;
@@ -127,7 +119,6 @@ void MoveSaveBlocks_ResetHeap(void)
     struct SaveBlock1 *saveBlock1Copy;
     struct PokemonStorage *pokemonStorageCopy;
 
-#ifdef FIRERED
     // An opportunistic relocation can wait. Never reset the transaction heap,
     // move persistent pointers or change encryption while flash is pending.
     if (FireRedSave_IsBusy())
@@ -135,7 +126,6 @@ void MoveSaveBlocks_ResetHeap(void)
         FireRedSave_Abort();
         return;
     }
-#endif
     // save interrupt functions and turn them off
     vblankCB = gMain.vblankCallback;
     hblankCB = gMain.hblankCallback;
@@ -207,9 +197,7 @@ void ClearContinueGameWarpStatus2(void)
 void SavePlayerParty(void)
 {
     int i;
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     *GetSavedPlayerPartyCount() = gPlayerPartyCount;
 
     for (i = 0; i < PARTY_SIZE; i++)
@@ -240,9 +228,7 @@ void SaveObjectEvents(void)
 {
     int i;
     u16 graphicsId;
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
 
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
     {
@@ -313,9 +299,7 @@ void SavePlayerBag(void)
 {
     int i;
     u32 encryptionKeyBackup;
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
 
     // save player bag.
     memcpy(&gSaveBlock1Ptr->bag, &gLoadedSaveData.bag, sizeof(struct Bag));

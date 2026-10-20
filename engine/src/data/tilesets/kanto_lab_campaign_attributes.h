@@ -1,5 +1,4 @@
 // Exact175row FRLG Lab attributes from ancestor97e83ebe; original frames/maps byte-equal.
-#ifdef FIRERED
 const u32 gMetatileAttributes_Lab_FireRedNative[] = {
     0x20000000,
     0x20000000,
@@ -178,4 +177,3 @@ const u32 gMetatileAttributes_Lab_FireRedNative[] = {
     0x20000000,
 };
 STATIC_ASSERT(ARRAY_COUNT(gMetatileAttributes_Lab_FireRedNative) == 175, Lab_FireRedNative_AttributeCount);
-#endif

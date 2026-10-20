@@ -2,7 +2,6 @@ CeladonCity_Condominiums_3F_Frlg_MapScripts::
 	.byte 0
 
 CeladonCity_Condominiums_3F_EventScript_Programmer::
-#ifdef FIRERED
 	lock
 	faceplayer
 	msgbox CeladonCity_Condominiums_3F_Text_ImTheProgrammer, MSGBOX_DEFAULT
@@ -16,10 +15,6 @@ CeladonCity_Condominiums_3F_EventScript_Programmer::
 CeladonCity_Condominiums_3F_EventScript_GBPlayerDone::
 	release
 	end
-#else
-	msgbox CeladonCity_Condominiums_3F_Text_ImTheProgrammer, MSGBOX_NPC
-	end
-#endif
 
 CeladonCity_Condominiums_3F_EventScript_GraphicArtist::
 	msgbox CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist, MSGBOX_NPC
@@ -70,7 +65,6 @@ CeladonCity_Condominiums_3F_EventScript_Computer3::
 CeladonCity_Condominiums_3F_Text_ImTheProgrammer::
 	.string "Me?\n"
 	.string "I'm the programmer!$"
-#ifdef FIRERED
 CeladonCity_Condominiums_3F_Text_GBPlayerGift::
 	.string "You became KANTO's CHAMPION!\p"
 	.string "Here's a little reward.\n"
@@ -81,7 +75,6 @@ CeladonCity_Condominiums_3F_Text_GBPlayerUse::
 	.string "to turn its music on or off.\p"
 	.string "Your journey's usual music will\n"
 	.string "return when you turn it off.$"
-#endif
 
 CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist::
 	.string "I'm the graphic artist!\n"

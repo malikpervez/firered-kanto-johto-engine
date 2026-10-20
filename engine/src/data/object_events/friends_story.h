@@ -1,7 +1,6 @@
 #ifndef GUARD_FRIENDS_STORY_GRAPHICS_H
 #define GUARD_FRIENDS_STORY_GRAPHICS_H
 
-#ifdef FIRERED
 // Owner-supplied seven-walking-npcs-v1 atlases, preserved without art changes.
 // Each sheet: south/up/left idle, then two steps per facing. Standard native
 // animations mirror the left poses for right; no player-only frames are used.
@@ -72,6 +71,5 @@ static const struct ObjectEventGraphicsInfo *const sFriendsStoryGraphicsInfoPoin
     &sFriendTimGraphicsInfo,
 };
 STATIC_ASSERT(ARRAY_COUNT(sFriendsStoryGraphicsInfoPointers) == 7, FriendsStoryGraphicsCount);
-#endif
 
 #endif

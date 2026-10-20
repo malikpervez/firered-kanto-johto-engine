@@ -1052,11 +1052,7 @@ static void SerialCB_CopyrightScreen(void)
 
 static u8 SetUpCopyrightScreen(void)
 {
-#if IS_FRLG
     return SetUpCopyrightScreenFrlg();
-#elif IS_HNS
-    return SetUpCopyrightScreenHns();
-#endif
 
     switch (gMain.state)
     {
@@ -1149,9 +1145,6 @@ void CB2_InitCopyrightScreenAfterBootup(void)
         Save_ResetSaveCounters();
         LoadGameSave(SAVE_NORMAL);
         if (gSaveFileStatus == SAVE_STATUS_EMPTY
-#ifndef FIRERED
-            || gSaveFileStatus == SAVE_STATUS_CORRUPT
-#endif
         )
         {
             Sav2_ClearSetDefault();

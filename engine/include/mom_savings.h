@@ -3,7 +3,6 @@
 
 #include "global.h"
 
-#if IS_HNS || defined(FIRERED)
 
 #define MOM_RANDOM_THRESHOLD 2300
 #define MOM_BERRY_QUANTITY 5
@@ -31,6 +30,5 @@ bool8 Mom_TryTriggerGiftCall(void);
 void Special_MomOpenDepositInput(void);
 void Special_MomOpenWithdrawInput(void);
 
-#endif // IS_HNS
 
 #endif // GUARD_MOM_SAVINGS_H

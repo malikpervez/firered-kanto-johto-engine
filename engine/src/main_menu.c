@@ -180,11 +180,9 @@ static u8 sBirchSpeechMainTaskId;
 
 static u32 InitMainMenu(bool8);
 static void Task_MainMenuCheckSaveFile(u8);
-#ifdef FIRERED
 static void Task_SaveFileBlocked(u8);
 static const u8 sText_UnsupportedSave[] = _("Save format unsupported.\nKeep a backup and use the\noriginal build or converter.");
 static const u8 sText_UnrecoverableSave[] = _("No complete save can load.\nKeep a backup. This file\nhas not been erased.");
-#endif
 static void Task_MainMenuCheckBattery(u8);
 static void Task_WaitForSaveFileErrorWindow(u8);
 static void CreateMainMenuErrorWindow(const u8 *);
@@ -665,16 +663,13 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
             tWirelessAdapterConnected = TRUE;
         switch (gSaveFileStatus)
         {
-#ifdef FIRERED
         case SAVE_STATUS_RECOVERED:
-#endif
         case SAVE_STATUS_OK:
             tMenuType = HAS_SAVED_GAME;
             if (IsMysteryGiftEnabled())
                 tMenuType++;
             gTasks[taskId].func = Task_MainMenuCheckBattery;
             break;
-#ifdef FIRERED
         case SAVE_STATUS_UNSUPPORTED:
             CreateMainMenuErrorWindow(sText_UnsupportedSave);
             gTasks[taskId].func = Task_SaveFileBlocked;
@@ -684,20 +679,6 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
             CreateMainMenuErrorWindow(sText_UnrecoverableSave);
             gTasks[taskId].func = Task_SaveFileBlocked;
             return;
-#else
-        case SAVE_STATUS_CORRUPT:
-            CreateMainMenuErrorWindow(gText_SaveFileErased);
-            tMenuType = HAS_NO_SAVED_GAME;
-            gTasks[taskId].func = Task_WaitForSaveFileErrorWindow;
-            break;
-        case SAVE_STATUS_ERROR:
-            CreateMainMenuErrorWindow(gText_SaveFileCorrupted);
-            gTasks[taskId].func = Task_WaitForSaveFileErrorWindow;
-            tMenuType = HAS_SAVED_GAME;
-            if (IsMysteryGiftEnabled() == TRUE)
-                tMenuType++;
-            break;
-#endif
         case SAVE_STATUS_EMPTY:
         default:
             tMenuType = HAS_NO_SAVED_GAME;
@@ -731,14 +712,12 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
     }
 }
 
-#ifdef FIRERED
 // No Continue or New Game is exposed for a retained unsupported/corrupt file.
 // The title-screen explicit delete-save flow remains the owner's choice.
 static void Task_SaveFileBlocked(u8 taskId)
 {
     RunTextPrinters();
 }
-#endif
 
 static void Task_WaitForSaveFileErrorWindow(u8 taskId)
 {

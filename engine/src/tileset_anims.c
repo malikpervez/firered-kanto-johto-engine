@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "kanto_connection_seam.h"
-#endif
 #include "graphics.h"
 #include "palette.h"
 #include "util.h"
@@ -25,10 +23,8 @@ static void (*sPrimaryTilesetAnimCallback)(u16);
 static void (*sSecondaryTilesetAnimCallback)(u16);
 static u16 sSecondaryTilesetBaseTile;
 
-#ifdef FIRERED
 static void TilesetAnim_KantoSeam(u16 timer);
 static void KantoSeam_InitSecondaryAnimation(const struct KantoSeam *seam);
-#endif
 static void _InitPrimaryTilesetAnimation(void);
 static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
@@ -217,31 +213,11 @@ const u16 gTilesetAnims_Mauville_Flower1_Frame1[] = INCBIN_U16("data/tilesets/se
 const u16 gTilesetAnims_Mauville_Flower1_Frame2[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/2.4bpp");
 const u16 gTilesetAnims_Mauville_Flower1_Frame3[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/3.4bpp");
 const u16 gTilesetAnims_Mauville_Flower1_Frame4[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_1/4.4bpp");
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Mauville_Flower2_Frame0[64] __attribute__((alias("gTilesetAnims_Mauville_Flower1_Frame0")));
-#else
-const u16 gTilesetAnims_Mauville_Flower2_Frame0[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/0.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Mauville_Flower2_Frame1[64] __attribute__((alias("gTilesetAnims_Mauville_Flower1_Frame1")));
-#else
-const u16 gTilesetAnims_Mauville_Flower2_Frame1[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/1.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Mauville_Flower2_Frame2[64] __attribute__((alias("gTilesetAnims_Mauville_Flower1_Frame2")));
-#else
-const u16 gTilesetAnims_Mauville_Flower2_Frame2[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/2.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Mauville_Flower2_Frame3[64] __attribute__((alias("gTilesetAnims_Mauville_Flower1_Frame3")));
-#else
-const u16 gTilesetAnims_Mauville_Flower2_Frame3[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/3.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Mauville_Flower2_Frame4[64] __attribute__((alias("gTilesetAnims_Mauville_Flower1_Frame4")));
-#else
-const u16 gTilesetAnims_Mauville_Flower2_Frame4[] = INCBIN_U16("data/tilesets/secondary/mauville/anim/flower_2/4.4bpp");
-#endif
 const u16 tileset_anims_space_1[16] = {};
 
 
@@ -292,31 +268,11 @@ const u16 *const gTilesetAnims_Mauville_Flower2_B[] = {
 const u16 gTilesetAnims_Rustboro_WindyWater_Frame0[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/0.4bpp");
 const u16 gTilesetAnims_Rustboro_WindyWater_Frame1[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/1.4bpp");
 const u16 gTilesetAnims_Rustboro_WindyWater_Frame2[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/2.4bpp");
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Rustboro_WindyWater_Frame3[64] __attribute__((alias("gTilesetAnims_Rustboro_WindyWater_Frame2")));
-#else
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame3[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/3.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Rustboro_WindyWater_Frame4[64] __attribute__((alias("gTilesetAnims_Rustboro_WindyWater_Frame2")));
-#else
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame4[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/4.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Rustboro_WindyWater_Frame5[64] __attribute__((alias("gTilesetAnims_Rustboro_WindyWater_Frame2")));
-#else
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame5[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/5.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Rustboro_WindyWater_Frame6[64] __attribute__((alias("gTilesetAnims_Rustboro_WindyWater_Frame2")));
-#else
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame6[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/6.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Rustboro_WindyWater_Frame7[64] __attribute__((alias("gTilesetAnims_Rustboro_WindyWater_Frame2")));
-#else
-const u16 gTilesetAnims_Rustboro_WindyWater_Frame7[] = INCBIN_U16("data/tilesets/secondary/rustboro/anim/windy_water/7.4bpp");
-#endif
 
 
 const u16 *const gTilesetAnims_Rustboro_WindyWater[] = {
@@ -357,29 +313,13 @@ const u16 *const gTilesetAnims_Lavaridge_Cave_Lava[] = {
 };
 
 const u16 gTilesetAnims_EverGrande_Flowers_Frame0[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/0.4bpp");
-#ifdef FIRERED
 extern const u16 gTilesetAnims_EverGrande_Flowers_Frame1[64] __attribute__((alias("gTilesetAnims_EverGrande_Flowers_Frame0")));
-#else
-const u16 gTilesetAnims_EverGrande_Flowers_Frame1[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/1.4bpp");
-#endif
 const u16 gTilesetAnims_EverGrande_Flowers_Frame2[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/2.4bpp");
 const u16 gTilesetAnims_EverGrande_Flowers_Frame3[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/3.4bpp");
-#ifdef FIRERED
 extern const u16 gTilesetAnims_EverGrande_Flowers_Frame4[64] __attribute__((alias("gTilesetAnims_EverGrande_Flowers_Frame0")));
-#else
-const u16 gTilesetAnims_EverGrande_Flowers_Frame4[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/4.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_EverGrande_Flowers_Frame5[64] __attribute__((alias("gTilesetAnims_EverGrande_Flowers_Frame0")));
-#else
-const u16 gTilesetAnims_EverGrande_Flowers_Frame5[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/5.4bpp");
-#endif
 const u16 gTilesetAnims_EverGrande_Flowers_Frame6[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/6.4bpp");
-#ifdef FIRERED
 extern const u16 gTilesetAnims_EverGrande_Flowers_Frame7[64] __attribute__((alias("gTilesetAnims_EverGrande_Flowers_Frame6")));
-#else
-const u16 gTilesetAnims_EverGrande_Flowers_Frame7[] = INCBIN_U16("data/tilesets/secondary/ever_grande/anim/flowers/7.4bpp");
-#endif
 const u16 tileset_anims_space_4[16] = {};
 
 
@@ -406,26 +346,10 @@ const u16 *const gTilesetAnims_Dewford_Flag[] = {
     gTilesetAnims_Dewford_Flag_Frame3
 };
 
-#ifdef FIRERED
 extern const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame0[96] __attribute__((alias("gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame0")));
-#else
-const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/anim/flag/0.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame1[96] __attribute__((alias("gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame1")));
-#else
-const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame1[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/anim/flag/1.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame2[96] __attribute__((alias("gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame2")));
-#else
-const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame2[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/anim/flag/2.4bpp");
-#endif
-#ifdef FIRERED
 extern const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame3[96] __attribute__((alias("gTilesetAnims_BattleFrontierOutsideEast_Flag_Frame3")));
-#else
-const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame3[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/anim/flag/3.4bpp");
-#endif
 
 const u16 *const gTilesetAnims_BattleFrontierOutsideWest_Flag[] = {
     gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame0,
@@ -449,11 +373,7 @@ const u16 *const gTilesetAnims_BattleFrontierOutsideEast_Flag[] = {
 const u16 gTilesetAnims_Slateport_Balloons_Frame0[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/0.4bpp");
 const u16 gTilesetAnims_Slateport_Balloons_Frame1[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/1.4bpp");
 const u16 gTilesetAnims_Slateport_Balloons_Frame2[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/2.4bpp");
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Slateport_Balloons_Frame3[64] __attribute__((alias("gTilesetAnims_Slateport_Balloons_Frame1")));
-#else
-const u16 gTilesetAnims_Slateport_Balloons_Frame3[] = INCBIN_U16("data/tilesets/secondary/slateport/anim/balloons/3.4bpp");
-#endif
 
 const u16 *const gTilesetAnims_Slateport_Balloons[] = {
     gTilesetAnims_Slateport_Balloons_Frame0,
@@ -494,11 +414,7 @@ const u16 gTilesetAnims_EliteFour_FloorLight_Frame1[] = INCBIN_U16("data/tileset
 const u16 gTilesetAnims_EliteFour_WallLights_Frame0[] = INCBIN_U16("data/tilesets/secondary/elite_four/anim/wall_lights/0.4bpp");
 const u16 gTilesetAnims_EliteFour_WallLights_Frame1[] = INCBIN_U16("data/tilesets/secondary/elite_four/anim/wall_lights/1.4bpp");
 const u16 gTilesetAnims_EliteFour_WallLights_Frame2[] = INCBIN_U16("data/tilesets/secondary/elite_four/anim/wall_lights/2.4bpp");
-#ifdef FIRERED
 extern const u16 gTilesetAnims_EliteFour_WallLights_Frame3[16] __attribute__((alias("gTilesetAnims_EliteFour_WallLights_Frame1")));
-#else
-const u16 gTilesetAnims_EliteFour_WallLights_Frame3[] = INCBIN_U16("data/tilesets/secondary/elite_four/anim/wall_lights/3.4bpp");
-#endif
 const u16 tileset_anims_space_5[16] = {};
 
 const u16 *const gTilesetAnims_EliteFour_WallLights[] = {
@@ -542,11 +458,7 @@ const u16 gTilesetAnims_Sootopolis_StormyWater_Frame7[] = INCBIN_U16("data/tiles
 const u16 tileset_anims_space_8[16] = {};
 
 const u16 gTilesetAnims_Unused1_Frame0[] = INCBIN_U16("data/tilesets/secondary/unused_1/0.4bpp");
-#ifdef FIRERED
 extern const u16 gTilesetAnims_Unused1_Frame1[1024] __attribute__((alias("gTilesetAnims_Unused1_Frame0")));
-#else
-const u16 gTilesetAnims_Unused1_Frame1[] = INCBIN_U16("data/tilesets/secondary/unused_1/1.4bpp");
-#endif
 const u16 gTilesetAnims_Unused1_Frame2[] = INCBIN_U16("data/tilesets/secondary/unused_1/2.4bpp");
 const u16 gTilesetAnims_Unused1_Frame3[] = INCBIN_U16("data/tilesets/secondary/unused_1/3.4bpp");
 
@@ -659,18 +571,14 @@ static void _InitPrimaryTilesetAnimation(void)
 
 static void _InitSecondaryTilesetAnimation(void)
 {
-#ifdef FIRERED
     const struct KantoSeam *seam = KantoSeam_Find(gMapHeader.mapLayout);
-#endif
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = 0;
     sSecondaryTilesetAnimCallback = NULL;
     sSecondaryTilesetBaseTile = GetNumTilesInPrimary(gMapHeader.mapLayout);
     if (gMapHeader.mapLayout->secondaryTileset && gMapHeader.mapLayout->secondaryTileset->callback)
         gMapHeader.mapLayout->secondaryTileset->callback();
-#ifdef FIRERED
     KantoSeam_InitSecondaryAnimation(seam);
-#endif
 }
 
 void InitTilesetAnim_General(void)
@@ -1248,31 +1156,11 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
 // FRLG anims
 
 // palette: general 00
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Flower_Frame0[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame0")));
-#else
-static const u16 sTilesetAnims_General_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/flower/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Flower_Frame1[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame1")));
-#else
-static const u16 sTilesetAnims_General_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/flower/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Flower_Frame2[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame2")));
-#else
-static const u16 sTilesetAnims_General_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/flower/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Flower_Frame3[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame3")));
-#else
-static const u16 sTilesetAnims_General_Flower_Frame3[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/flower/3.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Flower_Frame4[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame4")));
-#else
-static const u16 sTilesetAnims_General_Flower_Frame4[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/flower/4.4bpp");
-#endif
 
 static const u16 *const sTilesetAnims_General_Flower[] = {
     sTilesetAnims_General_Flower_Frame0,
@@ -1283,46 +1171,14 @@ static const u16 *const sTilesetAnims_General_Flower[] = {
 };
 
 // palette: general 04
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame0[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame0")));
-#else
-static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/water_current_landwatersedge/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame1[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame1")));
-#else
-static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/water_current_landwatersedge/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame2[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame2")));
-#else
-static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/water_current_landwatersedge/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame3[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame3")));
-#else
-static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/water_current_landwatersedge/3.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame4[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame4")));
-#else
-static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/water_current_landwatersedge/4.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame5[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame5")));
-#else
-static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/water_current_landwatersedge/5.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame6[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame6")));
-#else
-static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/water_current_landwatersedge/6.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame7[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame7")));
-#else
-static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame7[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/water_current_landwatersedge/7.4bpp");
-#endif
 
 static const u16 *const sTilesetAnims_General_Water_Current_LandWatersEdge[] = {
     sTilesetAnims_General_Water_Current_LandWatersEdge_Frame0,
@@ -1336,46 +1192,14 @@ static const u16 *const sTilesetAnims_General_Water_Current_LandWatersEdge[] = {
 };
 
 // palette: general 04
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_SandWatersEdge_Frame0[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame0")));
-#else
-static const u16 sTilesetAnims_General_SandWatersEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/sandwatersedge/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_SandWatersEdge_Frame1[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame1")));
-#else
-static const u16 sTilesetAnims_General_SandWatersEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/sandwatersedge/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_SandWatersEdge_Frame2[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame2")));
-#else
-static const u16 sTilesetAnims_General_SandWatersEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/sandwatersedge/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_SandWatersEdge_Frame3[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame3")));
-#else
-static const u16 sTilesetAnims_General_SandWatersEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/sandwatersedge/3.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_SandWatersEdge_Frame4[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame4")));
-#else
-static const u16 sTilesetAnims_General_SandWatersEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/sandwatersedge/4.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_SandWatersEdge_Frame5[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame5")));
-#else
-static const u16 sTilesetAnims_General_SandWatersEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/sandwatersedge/5.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_SandWatersEdge_Frame6[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame6")));
-#else
-static const u16 sTilesetAnims_General_SandWatersEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/sandwatersedge/6.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_General_SandWatersEdge_Frame7[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame7")));
-#else
-static const u16 sTilesetAnims_General_SandWatersEdge_Frame7[] = INCBIN_U16("data/tilesets/primary/general_frlg/anim/sandwatersedge/7.4bpp");
-#endif
 
 static const u16 *const sTilesetAnims_General_SandWatersEdge[] = {
     sTilesetAnims_General_SandWatersEdge_Frame0,
@@ -1389,31 +1213,11 @@ static const u16 *const sTilesetAnims_General_SandWatersEdge[] = {
 };
 
 // palette: general 00
-#ifdef FIRERED
 static const u16 sTilesetAnims_CeladonCity_Fountain_Frame0[128] __attribute__((used, alias("sCeladonCityHns_Fountain_Frame0")));
-#else
-static const u16 sTilesetAnims_CeladonCity_Fountain_Frame0[] = INCBIN_U16("data/tilesets/secondary/celadon_city_frlg/anim/fountain/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_CeladonCity_Fountain_Frame1[128] __attribute__((used, alias("sCeladonCityHns_Fountain_Frame1")));
-#else
-static const u16 sTilesetAnims_CeladonCity_Fountain_Frame1[] = INCBIN_U16("data/tilesets/secondary/celadon_city_frlg/anim/fountain/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_CeladonCity_Fountain_Frame2[128] __attribute__((used, alias("sCeladonCityHns_Fountain_Frame2")));
-#else
-static const u16 sTilesetAnims_CeladonCity_Fountain_Frame2[] = INCBIN_U16("data/tilesets/secondary/celadon_city_frlg/anim/fountain/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_CeladonCity_Fountain_Frame3[128] __attribute__((used, alias("sCeladonCityHns_Fountain_Frame3")));
-#else
-static const u16 sTilesetAnims_CeladonCity_Fountain_Frame3[] = INCBIN_U16("data/tilesets/secondary/celadon_city_frlg/anim/fountain/3.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_CeladonCity_Fountain_Frame4[128] __attribute__((used, alias("sCeladonCityHns_Fountain_Frame4")));
-#else
-static const u16 sTilesetAnims_CeladonCity_Fountain_Frame4[] = INCBIN_U16("data/tilesets/secondary/celadon_city_frlg/anim/fountain/4.4bpp");
-#endif
 static const u16 sTilesetAnims_CeladonCity_Fountain_Empty[16] = {};
 
 static const u16 *const sTilesetAnims_CeladonCity_Fountain[] = {
@@ -1424,26 +1228,10 @@ static const u16 *const sTilesetAnims_CeladonCity_Fountain[] = {
     sTilesetAnims_CeladonCity_Fountain_Frame4
 };
 
-#ifdef FIRERED
 static const u16 sTilesetAnims_SilphCo_Fountain_Frame0[128] __attribute__((used, alias("sSilphCoHns_Fountain_Frame0")));
-#else
-static const u16 sTilesetAnims_SilphCo_Fountain_Frame0[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/anim/fountain/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_SilphCo_Fountain_Frame1[128] __attribute__((used, alias("sSilphCoHns_Fountain_Frame1")));
-#else
-static const u16 sTilesetAnims_SilphCo_Fountain_Frame1[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/anim/fountain/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_SilphCo_Fountain_Frame2[128] __attribute__((used, alias("sSilphCoHns_Fountain_Frame2")));
-#else
-static const u16 sTilesetAnims_SilphCo_Fountain_Frame2[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/anim/fountain/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_SilphCo_Fountain_Frame3[128] __attribute__((used, alias("sSilphCoHns_Fountain_Frame3")));
-#else
-static const u16 sTilesetAnims_SilphCo_Fountain_Frame3[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/anim/fountain/3.4bpp");
-#endif
 static const u16 sTilesetAnims_SilphCo_Fountain_Empty[16] = {};
 
 static const u16 *const sTilesetAnims_SilphCo_Fountain[] = {
@@ -1453,26 +1241,10 @@ static const u16 *const sTilesetAnims_SilphCo_Fountain[] = {
     sTilesetAnims_SilphCo_Fountain_Frame3
 };
 
-#ifdef FIRERED
 static const u16 sTilesetAnims_MtEmber_Steam_Frame0[128] __attribute__((used, alias("sTilesetAnims_MtEmber_Hns_Steam_Frame0")));
-#else
-static const u16 sTilesetAnims_MtEmber_Steam_Frame0[] = INCBIN_U16("data/tilesets/secondary/mt_ember_frlg/anim/steam/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_MtEmber_Steam_Frame1[128] __attribute__((used, alias("sTilesetAnims_MtEmber_Hns_Steam_Frame1")));
-#else
-static const u16 sTilesetAnims_MtEmber_Steam_Frame1[] = INCBIN_U16("data/tilesets/secondary/mt_ember_frlg/anim/steam/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_MtEmber_Steam_Frame2[128] __attribute__((used, alias("sTilesetAnims_MtEmber_Hns_Steam_Frame2")));
-#else
-static const u16 sTilesetAnims_MtEmber_Steam_Frame2[] = INCBIN_U16("data/tilesets/secondary/mt_ember_frlg/anim/steam/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sTilesetAnims_MtEmber_Steam_Frame3[128] __attribute__((used, alias("sTilesetAnims_MtEmber_Hns_Steam_Frame3")));
-#else
-static const u16 sTilesetAnims_MtEmber_Steam_Frame3[] = INCBIN_U16("data/tilesets/secondary/mt_ember_frlg/anim/steam/3.4bpp");
-#endif
 
 static const u16 *const sTilesetAnims_MtEmber_Steam[] = {
     sTilesetAnims_MtEmber_Steam_Frame0,
@@ -1627,7 +1399,6 @@ void InitTilesetAnim_CeladonGym(void)
 }
 
 
-#if IS_HNS || defined(FIRERED)
 
 // HnS Johto tileset animations
 
@@ -1658,31 +1429,11 @@ static void QueueAnimTiles_MtSilverExp_Steam(u16);
 
 // Johto General primary tileset frame data
 
-#ifdef FIRERED
 static const u16 sJohtoGeneral_Flower_Frame0[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame0")));
-#else
-static const u16 sJohtoGeneral_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/flower/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_Flower_Frame1[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame1")));
-#else
-static const u16 sJohtoGeneral_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/flower/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_Flower_Frame2[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame2")));
-#else
-static const u16 sJohtoGeneral_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/flower/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_Flower_Frame3[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame3")));
-#else
-static const u16 sJohtoGeneral_Flower_Frame3[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/flower/3.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_Flower_Frame4[64] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Flower_Frame4")));
-#else
-static const u16 sJohtoGeneral_Flower_Frame4[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/flower/4.4bpp");
-#endif
 
 static const u16 *const sJohtoGeneral_Flower[] = {
     sJohtoGeneral_Flower_Frame0,
@@ -1692,46 +1443,14 @@ static const u16 *const sJohtoGeneral_Flower[] = {
     sJohtoGeneral_Flower_Frame4
 };
 
-#ifdef FIRERED
 static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame0[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame0")));
-#else
-static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/water_current_landwatersedge/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame1[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame1")));
-#else
-static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/water_current_landwatersedge/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame2[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame2")));
-#else
-static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/water_current_landwatersedge/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame3[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame3")));
-#else
-static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/water_current_landwatersedge/3.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame4[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame4")));
-#else
-static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/water_current_landwatersedge/4.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame5[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame5")));
-#else
-static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/water_current_landwatersedge/5.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame6[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame6")));
-#else
-static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/water_current_landwatersedge/6.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame7[768] __attribute__((used, alias("gTilesetAnims_AlolaIslands_Water_Frame7")));
-#else
-static const u16 sJohtoGeneral_WaterCurrentLandWatersEdge_Frame7[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/water_current_landwatersedge/7.4bpp");
-#endif
 
 static const u16 *const sJohtoGeneral_WaterCurrentLandWatersEdge[] = {
     sJohtoGeneral_WaterCurrentLandWatersEdge_Frame0,
@@ -1744,46 +1463,14 @@ static const u16 *const sJohtoGeneral_WaterCurrentLandWatersEdge[] = {
     sJohtoGeneral_WaterCurrentLandWatersEdge_Frame7
 };
 
-#ifdef FIRERED
 static const u16 sJohtoGeneral_SandWatersEdge_Frame0[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame0")));
-#else
-static const u16 sJohtoGeneral_SandWatersEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/sandwatersedge/0.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_SandWatersEdge_Frame1[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame1")));
-#else
-static const u16 sJohtoGeneral_SandWatersEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/sandwatersedge/1.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_SandWatersEdge_Frame2[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame2")));
-#else
-static const u16 sJohtoGeneral_SandWatersEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/sandwatersedge/2.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_SandWatersEdge_Frame3[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame3")));
-#else
-static const u16 sJohtoGeneral_SandWatersEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/sandwatersedge/3.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_SandWatersEdge_Frame4[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame4")));
-#else
-static const u16 sJohtoGeneral_SandWatersEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/sandwatersedge/4.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_SandWatersEdge_Frame5[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame5")));
-#else
-static const u16 sJohtoGeneral_SandWatersEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/sandwatersedge/5.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_SandWatersEdge_Frame6[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame6")));
-#else
-static const u16 sJohtoGeneral_SandWatersEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/sandwatersedge/6.4bpp");
-#endif
-#ifdef FIRERED
 static const u16 sJohtoGeneral_SandWatersEdge_Frame7[288] __attribute__((used, alias("gTilesetAnims_AlolaIslands_SandWaterEdge_Frame7")));
-#else
-static const u16 sJohtoGeneral_SandWatersEdge_Frame7[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/anim/sandwatersedge/7.4bpp");
-#endif
 
 static const u16 *const sJohtoGeneral_SandWatersEdge[] = {
     sJohtoGeneral_SandWatersEdge_Frame0,
@@ -1852,11 +1539,7 @@ static const u16 sEcruteakTheater_Flower_Frame0[] = INCBIN_U16("data/tilesets/se
 static const u16 sEcruteakTheater_Flower_Frame1[] = INCBIN_U16("data/tilesets/secondary/ecruteak_theater_hns/anim/flower/1.4bpp");
 static const u16 sEcruteakTheater_Flower_Frame2[] = INCBIN_U16("data/tilesets/secondary/ecruteak_theater_hns/anim/flower/2.4bpp");
 static const u16 sEcruteakTheater_Flower_Frame3[] = INCBIN_U16("data/tilesets/secondary/ecruteak_theater_hns/anim/flower/3.4bpp");
-#ifdef FIRERED
 static const u16 sEcruteakTheater_Flower_Frame4[64] __attribute__((used, alias("sEcruteakTheater_Flower_Frame0")));
-#else
-static const u16 sEcruteakTheater_Flower_Frame4[] = INCBIN_U16("data/tilesets/secondary/ecruteak_theater_hns/anim/flower/4.4bpp");
-#endif
 
 static const u16 *const sEcruteakTheater_Flower[] = {
     sEcruteakTheater_Flower_Frame0,
@@ -2282,10 +1965,8 @@ void InitTilesetAnim_MtEmber_Hns(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_MtEmber_Hns;
 }
 
-#endif // IS_HNS
 
 
-#ifdef FIRERED
 // Read-only source clocks retain the original fountain callbacks while the
 // existing secondary counter also drives source-qualified borrowed glyphs.
 struct KantoSeamSecondaryClock
@@ -2338,4 +2019,3 @@ static void TilesetAnim_KantoSeam(u16 timer)
                 (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(animation->destination)), animation->size);
     }
 }
-#endif

@@ -1,7 +1,5 @@
 #include "global.h"
-#ifdef FIRERED
 #include "firered_save.h"
-#endif
 #include "malloc.h"
 #include "battle.h"
 #include "challenge_menu.h"
@@ -2925,9 +2923,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     u8 maxFieldMoves = MAX_MON_MOVES;
 
     if (slotId == GetFirstLiveMonIndex()
-#ifdef FIRERED
         && !IsPikachuCompanionActive()
-#endif
         )
         maxFieldMoves--;
 
@@ -3012,9 +3008,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     
     // Show follower option on whichever Pokemon is actually following the player
     if (slotId == GetFirstLiveMonIndex()
-#ifdef FIRERED
         && !IsPikachuCompanionActive()
-#endif
         )
     {
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_PKMN_FOLLOWER);
@@ -4950,9 +4944,6 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
         cannotUse = TRUE;
     }
     else if (IsEVItem(item) && gSaveBlock3Ptr->challengeSettings.tx_Challenges_NoEVs
-#if IS_HNS
-        && !FlagGet(FLAG_DEFEATED_RED)
-#endif
     )
     {
         cannotUse = TRUE;
@@ -7077,9 +7068,7 @@ static void CursorCb_PkmnFollower(u8 taskId)
     // Save current cursor position
     cursorPos = Menu_GetCursorPos();
     // Toggle the follower setting (0 = enabled, 1 = disabled)
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     gSaveBlock3Ptr->challengeSettings.followerEnable ^= 1;
     
     // Find which menu index contains the follower option

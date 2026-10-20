@@ -26,9 +26,6 @@ void ObjectEventInteractionApplyMulch(void);
 bool8 PlayerHasBerries(void);
 void SetBerryTreesSeen(void);
 bool32 BerryTreeGrow(struct BerryTree *tree);
-#if IS_HNS
-void Berry_Ready(void);
-#endif
 
 extern const struct Berry gBerries[];
 

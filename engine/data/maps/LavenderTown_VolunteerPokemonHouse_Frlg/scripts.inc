@@ -1,8 +1,6 @@
 LavenderTown_VolunteerPokemonHouse_Frlg_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavenderTown_VolunteerPokemonHouse_Frlg_RainbowTransition
-#ifdef FIRERED
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, FG08_InsideOnFrame
-#endif
 	.byte 0
 
 LavenderTown_VolunteerPokemonHouse_EventScript_MrFuji::

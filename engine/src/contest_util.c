@@ -606,16 +606,12 @@ static void Task_ShowContestResults(u8 taskId)
             var = VarGet(VAR_CONTEST_HALL_STATE);
             VarSet(VAR_CONTEST_HALL_STATE, 0);
             SetContinueGameWarpStatusToDynamicWarp();
-#ifdef FIRERED
             if (TrySavingData(SAVE_LINK) != SAVE_STATUS_OK)
             {
                 // Restore the temporary live variable without acknowledging a failed save.
                 VarSet(VAR_CONTEST_HALL_STATE, var);
                 return;
             }
-#else
-            TrySavingData(SAVE_LINK);
-#endif
             ClearContinueGameWarpStatus2();
             VarSet(VAR_CONTEST_HALL_STATE, var);
             gTasks[taskId].tState++;

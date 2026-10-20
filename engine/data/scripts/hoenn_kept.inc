@@ -820,20 +820,13 @@ PlayersHouse_1F_Text_StillUnknownPokemon:
 @ from data/maps/LittlerootTown_BrendansHouse_2F/scripts.inc
 LittlerootTown_BrendansHouse_2F_EventScript_PC::
 	lockall
-#if IS_HNS
-	goto LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC
-#endif
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC
 	goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_BrendansHouse_2F_EventScript_CheckRivalsPC
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC::
-#if IS_HNS
-	setvar VAR_0x8004, PC_LOCATION_PLAYER_HOUSE_HNS
-#else
 	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
-#endif
 	special DoPCTurnOnEffect
 	playse SE_PC_ON
 	msgbox gText_PlayerHouseBootPC, MSGBOX_DEFAULT
@@ -843,11 +836,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_CheckPlayersPC::
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC::
-#if IS_HNS
-	setvar VAR_0x8004, PC_LOCATION_PLAYER_HOUSE_HNS
-#else
 	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
-#endif
 	playse SE_PC_OFF
 	special DoPCTurnOffEffect
 	releaseall

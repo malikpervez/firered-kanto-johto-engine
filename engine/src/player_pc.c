@@ -30,9 +30,7 @@
 #include "window.h"
 #include "menu_specialized.h"
 #include "constants/layouts.h"
-#ifdef FIRERED
 #include "constants/maps.h"
-#endif
 
 // Top level PC menu options
 enum {
@@ -499,11 +497,9 @@ static void PlayerPC_TurnOff(u8 taskId)
     {
         if (gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_2F_FRLG)
             ScriptContext_SetupScript(EventScript_PalletTown_PlayersHouse_2F_ShutDownPC);
-#ifdef FIRERED
         else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS)
               && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F_HNS))
             ScriptContext_SetupScript(NewBarkTown_PlayersHouse_2F_EventScript_TurnOffPlayerPC);
-#endif
         else if (IS_HNS)
             ScriptContext_SetupScript(NewBarkTown_PlayersHouse_2F_EventScript_TurnOffPlayerPC);
         else if (gSaveBlock2Ptr->playerGender == MALE)

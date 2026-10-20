@@ -41,11 +41,6 @@ static void SafariHandleEndLinkBattle(enum BattlerId battler);
 static void SafariBufferRunCommand(enum BattlerId battler);
 static void CompleteWhenChosePokeblock(enum BattlerId battler);
 static void WaitForMonSelection(enum BattlerId battler);
-#if IS_HNS
-static void SafariOpenBagAndChooseItem(enum BattlerId battler);
-static void SafariCompleteWhenChoseItem(enum BattlerId battler);
-static void CB2_SafariBagExitAndReshow(void);
-#endif
 
 static void (*const sSafariBufferCommands[CONTROLLER_CMDS_COUNT])(enum BattlerId battler) =
 {
@@ -131,11 +126,7 @@ static void HandleInputChooseAction(enum BattlerId battler)
         switch (gActionSelectionCursor[battler])
         {
         case 0:
-#if IS_HNS
-            BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_USE_ITEM, 0);
-#else
             BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_SAFARI_BALL, 0);
-#endif
             break;
         case 1:
             BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_SAFARI_POKEBLOCK, 0);
@@ -233,39 +224,6 @@ static void CompleteWhenChosePokeblock(enum BattlerId battler)
     }
 }
 
-#if IS_HNS
-static void CB2_SafariBagExitAndReshow(void)
-{
-    if (gSpecialVar_ItemId != ITEM_NONE)
-        gNumSafariBalls--;
-    CB2_SetUpReshowBattleScreenAfterMenu2();
-}
-
-static void SafariOpenBagAndChooseItem(enum BattlerId battler)
-{
-    if (!gPaletteFade.active)
-    {
-        gBattlerControllerFuncs[battler] = SafariCompleteWhenChoseItem;
-        ReshowBattleScreenDummy();
-        FreeAllWindowBuffers();
-        GoToBagMenu(ITEMMENULOCATION_BATTLE, POCKET_POKE_BALLS, CB2_SafariBagExitAndReshow);
-    }
-}
-
-static void SafariCompleteWhenChoseItem(enum BattlerId battler)
-{
-    if (gMain.callback2 == BattleMainCB2 && !gPaletteFade.active)
-    {
-        if (gSpecialVar_ItemId != ITEM_NONE)
-        {
-            gBallToDisplay = gSpecialVar_ItemId;
-            gChosenActionByBattler[battler] = B_ACTION_SAFARI_BALL;
-        }
-        BtlController_EmitOneReturnValue(battler, B_COMM_TO_ENGINE, gSpecialVar_ItemId);
-        BtlController_Complete(battler);
-    }
-}
-#endif
 
 static void OpenPartyMenuToChooseMon(enum BattlerId battler)
 {
@@ -355,11 +313,6 @@ static void SafariHandleChooseAction(enum BattlerId battler)
 static void SafariHandleChooseItem(enum BattlerId battler)
 {
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
-#if IS_HNS
-    if (gChosenActionByBattler[battler] == B_ACTION_USE_ITEM)
-        gBattlerControllerFuncs[battler] = SafariOpenBagAndChooseItem;
-    else
-#endif
         gBattlerControllerFuncs[battler] = SafariOpenPokeblockCase;
     gBattlerInMenuId = battler;
 }

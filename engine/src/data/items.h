@@ -13203,7 +13203,6 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-#if IS_HNS || defined(FIRERED)
     [ITEM_TM70] = // Rock Climb
     {
         .name = ITEM_NAME("TM70"),
@@ -13217,21 +13216,6 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-#else
-    [ITEM_TM70] = // Flash
-    {
-        .name = ITEM_NAME("TM70"),
-        .price = 3000,
-        .description = COMPOUND_STRING(
-            "Looses a powerful\n"
-            "blast of light that\n"
-            "cuts accuracy."),
-        .importance = I_REUSABLE_TMS,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-#endif
 
     [ITEM_TM71] = // Stone Edge
     {
@@ -13618,19 +13602,6 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-#ifndef FIRERED
-    [ITEM_TM100] =
-    {
-        .name = ITEM_NAME("TM100"),
-        .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
-        .importance = I_REUSABLE_TMS,
-        .pocket = POCKET_TM_HM,
-        .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-    },
-
-#endif
 
     [ITEM_HM_CUT] =
     {
@@ -13730,14 +13701,9 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-#if IS_HNS || defined(FIRERED)
     [ITEM_HM_WHIRLPOOL] =
     {
-#ifdef FIRERED
         .name = ITEM_NAME("HM09"),
-#else
-        .name = ITEM_NAME("HM08"),
-#endif
         .price = 0,
         .description = COMPOUND_STRING(
             "Traps the foe in a\n"
@@ -13748,8 +13714,6 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-#endif
-#if !IS_HNS
     [ITEM_HM_DIVE] =
     {
         .name = ITEM_NAME("HM08"),
@@ -13763,7 +13727,6 @@ const struct ItemInfo gItemsInfo[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
-#endif
 
 
 // Charms
@@ -14533,17 +14496,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("BASEMENT KEY"),
         .price = 0,
-#if IS_HNS
-        .description = COMPOUND_STRING(
-            "The key for the\n"
-            "GOLDENROD\n"
-            "UNDERGROUND."),
-#else
         .description = COMPOUND_STRING(
             "The key for New\n"
             "Mauville beneath\n"
             "Mauville City."),
-#endif
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -14644,15 +14600,9 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("METEORITE"),
         .price = 0,
-#if IS_HNS
-        .description = COMPOUND_STRING(
-            "A meteorite found\n"
-            "at Birth Island."),
-#else
         .description = COMPOUND_STRING(
             "A meteorite found\n"
             "at Meteor Falls."),
-#endif
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -14763,17 +14713,10 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ITEM_NAME("CARD KEY"),
         .price = 0,
-#if IS_HNS
-        .description = COMPOUND_STRING(
-            "A card-type door\n"
-            "key used in RADIO\n"
-            "TOWER."),
-#else
         .description = COMPOUND_STRING(
             "A card-type door\n"
             "key used in Silph\n"
             "Co's office."),
-#endif
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

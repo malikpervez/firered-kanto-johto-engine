@@ -33,10 +33,8 @@ bool8 CheckObjectGraphicsInFrontOfPlayer(u16 graphicsId)
     GetXYCoordsOneStepInFrontOfPlayer(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
     gPlayerFacingPosition.elevation = PlayerGetElevation();
     objEventId = GetObjectEventIdByPosition(gPlayerFacingPosition.x, gPlayerFacingPosition.y, gPlayerFacingPosition.elevation);
-#ifdef FIRERED
     if (objEventId >= OBJECT_EVENTS_COUNT)
         return FALSE;
-#endif
     if (gObjectEvents[objEventId].graphicsId != graphicsId)
     {
         return FALSE;
@@ -135,10 +133,8 @@ bool32 SetUpFieldMove_RockSmash(void)
         return TRUE;
     }
     else if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE
-#ifdef FIRERED
              || CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG) == TRUE
              || CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS) == TRUE
-#endif
             )
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;

@@ -118,11 +118,7 @@ EWRAM_DATA static u8 sPlayerRoomItemsIndicesBuffer[DECOR_MAX_PLAYERS_HOUSE] = {}
 EWRAM_DATA static u16 sDecorationsCursorPos = 0;
 EWRAM_DATA static u16 sDecorationsScrollOffset = 0;
 EWRAM_DATA u8 gCurDecorationIndex = 0;
-#if IS_HNS
-EWRAM_DATA static u8 sCurDecorationCategory = DECORCAT_DOLL;
-#else
 EWRAM_DATA static u8 sCurDecorationCategory = DECORCAT_DESK;
-#endif
 EWRAM_DATA static struct DecorationPCContext sDecorationContext = {};
 EWRAM_DATA static u8 sDecorMenuWindowIds[WINDOW_COUNT] = {};
 EWRAM_DATA static struct DecorationItemsMenu *sDecorationItemsMenu = NULL;
@@ -220,9 +216,6 @@ static void TossDecoration(u8 taskId);
 
 static const u8 *const sDecorationCategoryNames[] =
 {
-    #if IS_HNS
-    gText_Doll
-    #else
     gText_Desk,
     gText_Chair,
     gText_Plant,
@@ -231,7 +224,6 @@ static const u8 *const sDecorationCategoryNames[] =
     gText_Poster,
     gText_Doll,
     gText_Cushion
-    #endif
 };
 
 static const struct MenuAction sDecorationMainMenuActions[] =
@@ -1439,17 +1431,10 @@ static void SetUpPlacingDecorationPlayerAvatar(u8 taskId, struct PlaceDecoration
     if (data->decoration->shape == DECORSHAPE_3x1 || data->decoration->shape == DECORSHAPE_3x3 || data->decoration->shape == DECORSHAPE_3x2)
         x -= 8;
 
-#if IS_HNS
-    if (gSaveBlock2Ptr->playerGender == MALE)
-        sDecor_CameraSpriteObjectIdx2 = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_GOLD_DECORATING_HNS, SpriteCallbackDummy, x, 72, 0);
-    else
-        sDecor_CameraSpriteObjectIdx2 = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_KRIS_DECORATING_HNS, SpriteCallbackDummy, x, 72, 0);
-#else
     if (gSaveBlock2Ptr->playerGender == MALE)
         sDecor_CameraSpriteObjectIdx2 = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_BRENDAN_DECORATING, SpriteCallbackDummy, x, 72, 0);
     else
         sDecor_CameraSpriteObjectIdx2 = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_MAY_DECORATING, SpriteCallbackDummy, x, 72, 0);
-#endif
 
     gSprites[sDecor_CameraSpriteObjectIdx2].oam.priority = 1;
     DestroySprite(&gSprites[sDecor_CameraSpriteObjectIdx1]);
@@ -2370,17 +2355,10 @@ static void SetUpPuttingAwayDecorationPlayerAvatar(void)
     LoadPlayerSpritePalette();
     gFieldCamera.spriteId = CreateSprite(&sPuttingAwayCursorSpriteTemplate, 120, 80, 0);
     
-#if IS_HNS
-    if (gSaveBlock2Ptr->playerGender == MALE)
-        sDecor_CameraSpriteObjectIdx2 = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_GOLD_DECORATING_HNS, SpriteCallbackDummy, 136, 72, 0);
-    else
-        sDecor_CameraSpriteObjectIdx2 = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_KRIS_DECORATING_HNS, SpriteCallbackDummy, 136, 72, 0);
-#else
     if (gSaveBlock2Ptr->playerGender == MALE)
         sDecor_CameraSpriteObjectIdx2 = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_BRENDAN_DECORATING, SpriteCallbackDummy, 136, 72, 0);
     else
         sDecor_CameraSpriteObjectIdx2 = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_MAY_DECORATING, SpriteCallbackDummy, 136, 72, 0);
-#endif
 
     gSprites[sDecor_CameraSpriteObjectIdx2].oam.priority = 1;
     DestroySprite(&gSprites[sDecor_CameraSpriteObjectIdx1]);
@@ -2773,17 +2751,10 @@ static void InitializeCameraSprite1(struct Sprite *sprite)
 
 static void LoadPlayerSpritePalette(void)
 {
-#if IS_HNS
-    if (gSaveBlock2Ptr->playerGender == MALE)
-        LoadSpritePalette(&sSpritePal_PuttingAwayCursorGold);
-    else
-        LoadSpritePalette(&sSpritePal_PuttingAwayCursorKris);
-#else
     if (gSaveBlock2Ptr->playerGender == MALE)
         LoadSpritePalette(&sSpritePal_PuttingAwayCursorBrendan);
     else
         LoadSpritePalette(&sSpritePal_PuttingAwayCursorMay);
-#endif
 }
 
 static void FreePlayerSpritePalette(void)

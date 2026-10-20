@@ -1,4 +1,3 @@
-#ifdef FIRERED
 // Fixed novice/late teams. Explicit moves come from this build's GEN_7
 // native level-up table at or below the declared level; no adaptive scaling.
 static const struct TrainerMon sFriendsBrianEarlyParty[] =
@@ -259,4 +258,3 @@ static const struct TrainerMon sFriendsHamFinalParty[] =
         .moves = { MOVE_SLAM, MOVE_SUCKER_PUNCH, MOVE_PLAY_ROUGH, MOVE_COIL },
     },
 };
-#endif

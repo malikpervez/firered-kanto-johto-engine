@@ -133,11 +133,7 @@ const u32 gObjectEventPic_Teala[] = INCBIN_U32("graphics/object_events/pics/peop
 const u32 gObjectEventPic_Artist[] = INCBIN_U32("graphics/object_events/pics/people/artist.4bpp");
 const u32 gObjectEventPic_Cameraman[] = INCBIN_U32("graphics/object_events/pics/people/cameraman.4bpp");
 const u32 gObjectEventPic_Scientist2[] = INCBIN_U32("graphics/object_events/pics/people/scientist_2.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_DevonEmployee[576] __attribute__((alias("gObjectEventPic_Man2")));
-#else
-const u32 gObjectEventPic_DevonEmployee[] = INCBIN_U32("graphics/object_events/pics/people/devon_employee.4bpp");
-#endif
 const u32 gObjectEventPic_AquaMemberM[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/aqua_member_m.4bpp");
 const u32 gObjectEventPic_AquaMemberF[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/aqua_member_f.4bpp");
 const u32 gObjectEventPic_MagmaMemberM[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/magma_member_m.4bpp");
@@ -242,40 +238,6 @@ const u16 gObjectEventPal_CableCar[] = INCBIN_U16("graphics/object_events/palett
 const u32 gObjectEventPic_SSTidal[] = INCBIN_U32("graphics/object_events/pics/misc/ss_tidal.4bpp");
 const u16 gObjectEventPal_SSTidal[] = INCBIN_U16("graphics/object_events/palettes/ss_tidal.gbapal");
 const u32 gFieldEffectObjectPic_Sparkle[] = INCBIN_U32("graphics/field_effects/pics/sparkle.4bpp");
-#if IS_HNS
-const u32 gObjectEventPic_BerryTreeDirtPile[] = INCBIN_U32("graphics/object_events/pics/berry_trees/dirt_pile_hns.4bpp");
-const u32 gObjectEventPic_BerryTreeSprout[] = INCBIN_U32("graphics/object_events/pics/berry_trees/sprout_hns.4bpp");
-const u32 gObjectEventPic_CheriBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/cheri_hns.4bpp");
-const u32 gObjectEventPic_ChestoBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/chesto_hns.4bpp");
-const u32 gObjectEventPic_PechaBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/pecha_hns.4bpp");
-const u32 gObjectEventPic_RawstBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/rawst_hns.4bpp");
-const u32 gObjectEventPic_AspearBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/aspear_hns.4bpp");
-const u32 gObjectEventPic_LeppaBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/leppa_hns.4bpp");
-const u32 gObjectEventPic_OranBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/oran_hns.4bpp");
-const u32 gObjectEventPic_PersimBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/persim_hns.4bpp");
-const u32 gObjectEventPic_LumBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/lum_hns.4bpp");
-const u32 gObjectEventPic_SitrusBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/sitrus_hns.4bpp");
-const u32 gObjectEventPic_FigyBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/figy_hns.4bpp");
-const u32 gObjectEventPic_WikiBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/wiki_hns.4bpp");
-const u32 gObjectEventPic_MagoBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/mago_hns.4bpp");
-const u32 gObjectEventPic_AguavBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/aguav_hns.4bpp");
-const u32 gObjectEventPic_IapapaBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/iapapa_hns.4bpp");
-const u32 gObjectEventPic_RazzBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/razz_hns.4bpp");
-const u32 gObjectEventPic_WepearBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/wepear_hns.4bpp");
-const u32 gObjectEventPic_PomegBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/pomeg_hns.4bpp");
-const u32 gObjectEventPic_KelpsyBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/kelpsy_hns.4bpp");
-const u32 gObjectEventPic_HondewBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/hondew_hns.4bpp");
-const u32 gObjectEventPic_GrepaBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/grepa_hns.4bpp");
-const u32 gObjectEventPic_TamatoBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/tamato_hns.4bpp");
-const u32 gObjectEventPic_CornnBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/cornn_hns.4bpp");
-const u32 gObjectEventPic_RabutaBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/rabuta_hns.4bpp");
-const u32 gObjectEventPic_NomelBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/nomel_hns.4bpp");
-const u32 gObjectEventPic_SpelonBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/spelon_hns.4bpp");
-const u32 gObjectEventPic_PamtreBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/pamtre_hns.4bpp");
-const u32 gObjectEventPic_DurinBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/durin_hns.4bpp");
-const u32 gObjectEventPic_LiechiBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/liechi_hns.4bpp");
-const u32 gObjectEventPic_LansatBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/lansat_hns.4bpp");
-#else
 const u32 gObjectEventPic_BerryTreeDirtPile[] = INCBIN_U32("graphics/object_events/pics/berry_trees/dirt_pile.4bpp");
 const u32 gObjectEventPic_BerryTreeSprout[] = INCBIN_U32("graphics/object_events/pics/berry_trees/sprout.4bpp");
 const u32 gObjectEventPic_CheriBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/cheri.4bpp");
@@ -306,7 +268,6 @@ const u32 gObjectEventPic_NomelBerryTree[] = INCBIN_U32("graphics/object_events/
 const u32 gObjectEventPic_SpelonBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/spelon.4bpp");
 const u32 gObjectEventPic_PamtreBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/pamtre.4bpp");
 const u32 gObjectEventPic_DurinBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/durin.4bpp");
-#endif
 const u32 gObjectEventPic_OccaBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/occa.4bpp");
 const u32 gObjectEventPic_YacheBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/yache.4bpp");
 const u32 gObjectEventPic_ChopleBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/chople.4bpp");
@@ -318,10 +279,8 @@ const u32 gObjectEventPic_KasibBerryTree[] = INCBIN_U32("graphics/object_events/
 const u32 gObjectEventPic_HabanBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/haban.4bpp");
 const u32 gObjectEventPic_ColburBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/colbur.4bpp");
 const u32 gObjectEventPic_RoseliBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/roseli.4bpp");
-#if !IS_HNS
 const u32 gObjectEventPic_LiechiBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/liechi.4bpp");
 const u32 gObjectEventPic_LansatBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/lansat.4bpp");
-#endif
 const u32 gObjectEventPic_MicleBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/micle.4bpp");
 const u32 gObjectEventPic_CustapBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/custap.4bpp");
 const u32 gObjectEventPic_JabocaBerryTree[] = INCBIN_U32("graphics/object_events/pics/berry_trees/jaboca.4bpp");
@@ -339,12 +298,10 @@ const u32 gFieldEffectObjectPic_ShadowExtraLarge[] = INCBIN_U32("graphics/field_
 const u32 gFieldEffectObjectPic_BallLight[] = INCBIN_U32("graphics/object_events/pics/misc/light.4bpp");
 const u32 gFieldEffectObjectPic_PokeCenterLight[] = INCBIN_U32("graphics/object_events/pics/misc/poke_center_light.4bpp");
 const u32 gFieldEffectObjectPic_MartLight[] = INCBIN_U32("graphics/object_events/pics/misc/mart_light.4bpp");
-#if IS_HNS || defined(FIRERED)
 const u32 gFieldEffectObjectPic_BallLight_Hns[] = INCBIN_U32("graphics/object_events/pics/misc/light_hns.4bpp");
 const u32 gFieldEffectObjectPic_SmallLight_Hns[] = INCBIN_U32("graphics/object_events/pics/misc/small_light_hns.4bpp");
 const u32 gFieldEffectObjectPic_PokeCenterLight_Hns[] = INCBIN_U32("graphics/object_events/pics/misc/poke_center_light_hns.4bpp");
 const u32 gFieldEffectObjectPic_MartLight_Hns[] = INCBIN_U32("graphics/object_events/pics/misc/mart_light_hns.4bpp");
-#endif
 const u8 gFieldEffectPic_CutGrass[] = INCBIN_U8("graphics/field_effects/pics/cut_grass.4bpp");
 const u32 gFieldEffectPic_CutGrass_Copy[] = INCBIN_U32("graphics/field_effects/pics/cut_grass.4bpp");
 const u16 gFieldEffectPal_CutGrass[] = INCBIN_U16("graphics/field_effects/palettes/cut_grass.gbapal");
@@ -517,7 +474,6 @@ const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effe
 
 const u32 gObjectEventPic_ApricornTree[] = INCBIN_U32("graphics/object_events/pics/misc/apricorn_tree.4bpp");
 
-#if IS_FRLG
 
 const u16 gObjectEventPic_RedNormal[] = INCBIN_U16("graphics/object_events/pics/people/red/red_normal.4bpp");
 const u16 gObjectEventPic_RedBike[] = INCBIN_U16("graphics/object_events/pics/people/red/red_bike.4bpp");
@@ -683,246 +639,72 @@ const u16 gObjectEventPic_JigglypuffOld[] = INCBIN_U16("graphics/object_events/p
 const u16 gObjectEventPic_PidgeyOld[] = INCBIN_U16("graphics/object_events/pics/pokemon_old/pidgey.4bpp");
 const u16 gObjectEventPic_ClefairyOld[] = INCBIN_U16("graphics/object_events/pics/pokemon_old/clefairy.4bpp");
 
-#endif // IS_FRLG
 
-#if IS_HNS || defined(FIRERED)
 // HnS sprite data
 const u32 gObjectEventPic_AttendantF_hns[] = INCBIN_U32("graphics/object_events/pics/people/attendant_f_hns.4bpp");
 const u32 gObjectEventPic_AttendantM_hns[] = INCBIN_U32("graphics/object_events/pics/people/attendant_m_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_BaldingMan_hns[640] __attribute__((alias("gObjectEventPic_BaldingMan")));
-#else
-const u32 gObjectEventPic_BaldingMan_hns[] = INCBIN_U32("graphics/object_events/pics/people/balding_man_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_BattleGirl_hns[640] __attribute__((alias("gObjectEventPic_BattleGirl")));
-#else
-const u32 gObjectEventPic_BattleGirl_hns[] = INCBIN_U32("graphics/object_events/pics/people/battle_girl_hns.4bpp");
-#endif
 const u32 gObjectEventPic_BattleTowerTrainerDude_hns[] = INCBIN_U32("graphics/object_events/pics/people/battle_tower_trainer_dude_hns.4bpp");
 const u32 gObjectEventPic_Beauty_hns[] = INCBIN_U32("graphics/object_events/pics/people/beauty_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Biker_hns[1280] __attribute__((alias("gObjectEventPic_Biker")));
-#else
-const u32 gObjectEventPic_Biker_hns[] = INCBIN_U32("graphics/object_events/pics/people/biker_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_BlackBelt_hns[640] __attribute__((alias("gObjectEventPic_Blackbelt")));
-#else
-const u32 gObjectEventPic_BlackBelt_hns[] = INCBIN_U32("graphics/object_events/pics/people/black_belt_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Boy2_hns[640] __attribute__((alias("gObjectEventPic_Boy")));
-#else
-const u32 gObjectEventPic_Boy2_hns[] = INCBIN_U32("graphics/object_events/pics/people/boy_2_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_BugCatcher_hns[640] __attribute__((alias("gObjectEventPic_BugCatcherFrlg")));
-#else
-const u32 gObjectEventPic_BugCatcher_hns[] = INCBIN_U32("graphics/object_events/pics/people/bug_catcher_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Burglar_hns[] = INCBIN_U32("graphics/object_events/pics/people/burglar_hns.4bpp");
 const u32 gObjectEventPic_Camper_hns[] = INCBIN_U32("graphics/object_events/pics/people/camper_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Captain_hns[576] __attribute__((alias("gObjectEventPic_Captain")));
-#else
-const u32 gObjectEventPic_Captain_hns[] = INCBIN_U32("graphics/object_events/pics/people/captain_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Channeler_hns[640] __attribute__((alias("gObjectEventPic_Channeler")));
-#else
-const u32 gObjectEventPic_Channeler_hns[] = INCBIN_U32("graphics/object_events/pics/people/channeler_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Cook_hns[576] __attribute__((alias("gObjectEventPic_Chef")));
-#else
-const u32 gObjectEventPic_Cook_hns[] = INCBIN_U32("graphics/object_events/pics/people/cook_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_CooltrainerF_hns[640] __attribute__((alias("gObjectEventPic_CooltrainerF")));
-#else
-const u32 gObjectEventPic_CooltrainerF_hns[] = INCBIN_U32("graphics/object_events/pics/people/cooltrainer_f_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_CooltrainerM_hns[640] __attribute__((alias("gObjectEventPic_CooltrainerM")));
-#else
-const u32 gObjectEventPic_CooltrainerM_hns[] = INCBIN_U32("graphics/object_events/pics/people/cooltrainer_m_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Man_hns[] = INCBIN_U32("graphics/object_events/pics/people/man_hns.4bpp");
 const u32 gObjectEventPic_Engineer_hns[] = INCBIN_U32("graphics/object_events/pics/people/engineer_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_FatMan_hns[576] __attribute__((alias("gObjectEventPic_FatManFrlg")));
-#else
-const u32 gObjectEventPic_FatMan_hns[] = INCBIN_U32("graphics/object_events/pics/people/fat_man_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Firebreather_hns[] = INCBIN_U32("graphics/object_events/pics/people/firebreather_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Fisherman_hns[640] __attribute__((alias("gObjectEventPic_Fisher")));
-#else
-const u32 gObjectEventPic_Fisherman_hns[] = INCBIN_U32("graphics/object_events/pics/people/fisherman_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_GameboyKid_hns[192] __attribute__((alias("gObjectEventPic_GBAKid")));
-#else
-const u32 gObjectEventPic_GameboyKid_hns[] = INCBIN_U32("graphics/object_events/pics/people/gameboy_kid_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Gentleman_hns[640] __attribute__((alias("gObjectEventPic_GentlemanFrlg")));
-#else
-const u32 gObjectEventPic_Gentleman_hns[] = INCBIN_U32("graphics/object_events/pics/people/gentleman_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Girl1_hns[576] __attribute__((alias("gObjectEventPic_Daisy")));
-#else
-const u32 gObjectEventPic_Girl1_hns[] = INCBIN_U32("graphics/object_events/pics/people/girl_1_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_GymGuy_hns[576] __attribute__((alias("gObjectEventPic_GymGuy")));
-#else
-const u32 gObjectEventPic_GymGuy_hns[] = INCBIN_U32("graphics/object_events/pics/people/gym_guy_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Hiker_hns[640] __attribute__((alias("gObjectEventPic_HikerFrlg")));
-#else
-const u32 gObjectEventPic_Hiker_hns[] = INCBIN_U32("graphics/object_events/pics/people/hiker_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Juggler_hns[] = INCBIN_U32("graphics/object_events/pics/people/juggler_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Lass_hns[640] __attribute__((alias("gObjectEventPic_LassFrlg")));
-#else
-const u32 gObjectEventPic_Lass_hns[] = INCBIN_U32("graphics/object_events/pics/people/lass_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_LinkReceptionist_hns[576] __attribute__((alias("gObjectEventPic_LinkReceptionist")));
-#else
-const u32 gObjectEventPic_LinkReceptionist_hns[] = INCBIN_U32("graphics/object_events/pics/people/link_receptionist_hns.4bpp");
-#endif
 const u32 gObjectEventPic_LittleBoy_hns[] = INCBIN_U32("graphics/object_events/pics/people/little_boy_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_LittleGirl_hns[320] __attribute__((alias("gObjectEventPic_LittleGirlFrlg")));
-#else
-const u32 gObjectEventPic_LittleGirl_hns[] = INCBIN_U32("graphics/object_events/pics/people/little_girl_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_MartEmployee_hns[576] __attribute__((alias("gObjectEventPic_Clerk")));
-#else
-const u32 gObjectEventPic_MartEmployee_hns[] = INCBIN_U32("graphics/object_events/pics/people/mart_employee_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Mom_hns[] = INCBIN_U32("graphics/object_events/pics/people/mom_hns.4bpp");
 const u32 gObjectEventPic_MysteryEventDeliveryman_hns[] = INCBIN_U32("graphics/object_events/pics/people/mystery_event_deliveryman_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Nurse_hns[256] __attribute__((alias("gObjectEventPic_NurseFrlg")));
-#else
-const u32 gObjectEventPic_Nurse_hns[] = INCBIN_U32("graphics/object_events/pics/people/nurse_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Officer_hns[576] __attribute__((alias("gObjectEventPic_Policeman")));
-#else
-const u32 gObjectEventPic_Officer_hns[] = INCBIN_U32("graphics/object_events/pics/people/officer_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_OldMan_hns[640] __attribute__((alias("gObjectEventPic_OldMan1")));
-#else
-const u32 gObjectEventPic_OldMan_hns[] = INCBIN_U32("graphics/object_events/pics/people/old_man_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_OldMan2_hns[576] __attribute__((alias("gObjectEventPic_OldMan2")));
-#else
-const u32 gObjectEventPic_OldMan2_hns[] = INCBIN_U32("graphics/object_events/pics/people/old_man_2_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_OldWoman_hns[576] __attribute__((alias("gObjectEventPic_OldWomanFrlg")));
-#else
-const u32 gObjectEventPic_OldWoman_hns[] = INCBIN_U32("graphics/object_events/pics/people/old_woman_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Picnicker_hns[640] __attribute__((alias("gObjectEventPic_PicnickerFrlg")));
-#else
-const u32 gObjectEventPic_Picnicker_hns[] = INCBIN_U32("graphics/object_events/pics/people/picnicker_hns.4bpp");
-#endif
 const u32 gObjectEventPic_PsychicM_hns[] = INCBIN_U32("graphics/object_events/pics/people/psychic_m_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Rocker_hns[640] __attribute__((alias("gObjectEventPic_Rocker")));
-#else
-const u32 gObjectEventPic_Rocker_hns[] = INCBIN_U32("graphics/object_events/pics/people/rocker_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Sage_hns[] = INCBIN_U32("graphics/object_events/pics/people/sage_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_SageElder_hns[576] __attribute__((alias("gObjectEventPic_MrFuji")));
-#else
-const u32 gObjectEventPic_SageElder_hns[] = INCBIN_U32("graphics/object_events/pics/people/sage_elder_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Sailor_hns[640] __attribute__((alias("gObjectEventPic_SailorFrlg")));
-#else
-const u32 gObjectEventPic_Sailor_hns[] = INCBIN_U32("graphics/object_events/pics/people/sailor_hns.4bpp");
-#endif
 const u32 gObjectEventPic_ScientistF_hns[] = INCBIN_U32("graphics/object_events/pics/people/scientist_f_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_ScientistM_hns[640] __attribute__((alias("gObjectEventPic_Scientist")));
-#else
-const u32 gObjectEventPic_ScientistM_hns[] = INCBIN_U32("graphics/object_events/pics/people/scientist_m_hns.4bpp");
-#endif
 const u32 gObjectEventPic_SkierF_hns[] = INCBIN_U32("graphics/object_events/pics/people/skier_f_hns.4bpp");
 const u32 gObjectEventPic_SkierM_hns[] = INCBIN_U32("graphics/object_events/pics/people/skier_m_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_SuperNerd_hns[640] __attribute__((alias("gObjectEventPic_SuperNerd")));
-#else
-const u32 gObjectEventPic_SuperNerd_hns[] = INCBIN_U32("graphics/object_events/pics/people/super_nerd_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_SwimmerF_hns[640] __attribute__((alias("gObjectEventPic_SwimmerFWater")));
-#else
-const u32 gObjectEventPic_SwimmerF_hns[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_f_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_SwimmerFLand_hns[640] __attribute__((alias("gObjectEventPic_SwimmerFLand")));
-#else
-const u32 gObjectEventPic_SwimmerFLand_hns[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_f_land_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_SwimmerM_hns[640] __attribute__((alias("gObjectEventPic_SwimmerMWater")));
-#else
-const u32 gObjectEventPic_SwimmerM_hns[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_m_hns.4bpp");
-#endif
 const u32 gObjectEventPic_TuberF_hns[] = INCBIN_U32("graphics/object_events/pics/people/tuber_f_hns.4bpp");
 const u32 gObjectEventPic_TuberM_hns[] = INCBIN_U32("graphics/object_events/pics/people/tuber_m_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_TuberMSwimming_hns[320] __attribute__((alias("gObjectEventPic_TuberMWater")));
-#else
-const u32 gObjectEventPic_TuberMSwimming_hns[] = INCBIN_U32("graphics/object_events/pics/people/tuber_m_swimming_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Twin_hns[] = INCBIN_U32("graphics/object_events/pics/people/twin_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Woman1_hns[640] __attribute__((alias("gObjectEventPic_Woman1Frlg")));
-#else
-const u32 gObjectEventPic_Woman1_hns[] = INCBIN_U32("graphics/object_events/pics/people/woman_1_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Woman2_hns[640] __attribute__((alias("gObjectEventPic_Woman2Frlg")));
-#else
-const u32 gObjectEventPic_Woman2_hns[] = INCBIN_U32("graphics/object_events/pics/people/woman_2_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Woman3_hns[576] __attribute__((alias("gObjectEventPic_Woman3Frlg")));
-#else
-const u32 gObjectEventPic_Woman3_hns[] = INCBIN_U32("graphics/object_events/pics/people/woman_3_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_WorkerF_hns[640] __attribute__((alias("gObjectEventPic_WorkerF")));
-#else
-const u32 gObjectEventPic_WorkerF_hns[] = INCBIN_U32("graphics/object_events/pics/people/worker_f_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_WorkerM_hns[640] __attribute__((alias("gObjectEventPic_WorkerM")));
-#else
-const u32 gObjectEventPic_WorkerM_hns[] = INCBIN_U32("graphics/object_events/pics/people/worker_m_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Youngster_hns[640] __attribute__((alias("gObjectEventPic_YoungsterFrlg")));
-#else
-const u32 gObjectEventPic_Youngster_hns[] = INCBIN_U32("graphics/object_events/pics/people/youngster_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Bruno_hns[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/bruno_hns.4bpp");
 const u32 gObjectEventPic_Karen_hns[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/karen_hns.4bpp");
 const u32 gObjectEventPic_Koga_hns[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/koga_hns.4bpp");
@@ -930,27 +712,11 @@ const u32 gObjectEventPic_Lance_hns[] = INCBIN_U32("graphics/object_events/pics/
 const u32 gObjectEventPic_Will_hns[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/will_hns.4bpp");
 const u32 gObjectEventPic_Anabel_hns[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/anabel_hns.4bpp");
 const u32 gObjectEventPic_Brandon_hns[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/brandon_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Greta_hns[576] __attribute__((alias("gObjectEventPic_Greta")));
-#else
-const u32 gObjectEventPic_Greta_hns[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/greta_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Lucy_hns[576] __attribute__((alias("gObjectEventPic_Lucy")));
-#else
-const u32 gObjectEventPic_Lucy_hns[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/lucy_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Noland_hns[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/noland_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Spenser_hns[576] __attribute__((alias("gObjectEventPic_Spenser")));
-#else
-const u32 gObjectEventPic_Spenser_hns[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/spenser_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Tucker_hns[576] __attribute__((alias("gObjectEventPic_Tucker")));
-#else
-const u32 gObjectEventPic_Tucker_hns[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/tucker_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Blaine_hns[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/blaine_hns.4bpp");
 const u32 gObjectEventPic_Blue_hns[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/blue_hns.4bpp");
 const u32 gObjectEventPic_Brock_hns[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/brock_hns.4bpp");
@@ -972,73 +738,29 @@ const u32 gObjectEventPic_Ariana_hns[] = INCBIN_U32("graphics/object_events/pics
 const u32 gObjectEventPic_Giovanni_hns[] = INCBIN_U32("graphics/object_events/pics/people/rockets/giovanni_hns.4bpp");
 const u32 gObjectEventPic_Petrel_hns[] = INCBIN_U32("graphics/object_events/pics/people/rockets/petrel_hns.4bpp");
 const u32 gObjectEventPic_Proton_hns[] = INCBIN_U32("graphics/object_events/pics/people/rockets/proton_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_RocketF_hns[576] __attribute__((alias("gObjectEventPic_RocketF")));
-#else
-const u32 gObjectEventPic_RocketF_hns[] = INCBIN_U32("graphics/object_events/pics/people/rockets/rocket_f_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_RocketM_hns[576] __attribute__((alias("gObjectEventPic_RocketM")));
-#else
-const u32 gObjectEventPic_RocketM_hns[] = INCBIN_U32("graphics/object_events/pics/people/rockets/rocket_m_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Bill_hns[576] __attribute__((alias("gObjectEventPic_Bill")));
-#else
-const u32 gObjectEventPic_Bill_hns[] = INCBIN_U32("graphics/object_events/pics/people/special/bill_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Elm_hns[] = INCBIN_U32("graphics/object_events/pics/people/special/elm_hns.4bpp");
 const u32 gObjectEventPic_Eusine_hns[] = INCBIN_U32("graphics/object_events/pics/people/special/eusine_hns.4bpp");
 const u32 gObjectEventPic_Kimono_hns[] = INCBIN_U32("graphics/object_events/pics/people/special/kimono_hns.4bpp");
 const u32 gObjectEventPic_Kurt_hns[] = INCBIN_U32("graphics/object_events/pics/people/special/kurt_hns.4bpp");
 const u32 gObjectEventPic_KurtLyingDown_hns[] = INCBIN_U32("graphics/object_events/pics/dolls/kurt_lying_down_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_ProfOak_hns[576] __attribute__((alias("gObjectEventPic_ProfOak")));
-#else
-const u32 gObjectEventPic_ProfOak_hns[] = INCBIN_U32("graphics/object_events/pics/people/special/prof_oak_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_RedNormal_hns[576] __attribute__((alias("gObjectEventPic_RedNormal")));
-#else
-const u32 gObjectEventPic_RedNormal_hns[] = INCBIN_U32("graphics/object_events/pics/people/special/red_normal_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_Scott_hns[576] __attribute__((alias("gObjectEventPic_Scott")));
-#else
-const u32 gObjectEventPic_Scott_hns[] = INCBIN_U32("graphics/object_events/pics/people/scott_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Silver_hns[] = INCBIN_U32("graphics/object_events/pics/people/special/silver_hns.4bpp");
 const u32 gObjectEventPic_Steven_hns[] = INCBIN_U32("graphics/object_events/pics/people/steven_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_BirthIslandStone_hns[128] __attribute__((alias("gObjectEventPic_BirthIslandStone")));
-#else
-const u32 gObjectEventPic_BirthIslandStone_hns[] = INCBIN_U32("graphics/object_events/pics/misc/birth_island_stone_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_BreakableRock_hns[128] __attribute__((alias("gObjectEventPic_BreakableRockFrlg")));
-#else
-const u32 gObjectEventPic_BreakableRock_hns[] = INCBIN_U32("graphics/object_events/pics/misc/breakable_rock_hns.4bpp");
-#endif
-#ifdef FIRERED
 extern const u32 gObjectEventPic_CuttableTree_hns[128] __attribute__((alias("gObjectEventPic_CuttableTreeFrlg")));
-#else
-const u32 gObjectEventPic_CuttableTree_hns[] = INCBIN_U32("graphics/object_events/pics/misc/cuttable_tree_hns.4bpp");
-#endif
 const u32 gObjectEventPic_Fossil_hns[] = INCBIN_U32("graphics/object_events/pics/misc/fossil_hns.4bpp");
 const u32 gObjectEventPic_LegendaryShadow_hns[] = INCBIN_U32("graphics/object_events/pics/misc/legendary_shadow_hns.4bpp");
 const u32 gObjectEventPic_NoTailSlowpoke_hns[] = INCBIN_U32("graphics/object_events/pics/misc/no_tail_slowpoke_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_PushableBoulder_hns[32] __attribute__((alias("gObjectEventPic_PushableBoulderFrlg")));
-#else
-const u32 gObjectEventPic_PushableBoulder_hns[] = INCBIN_U32("graphics/object_events/pics/misc/pushable_boulder_hns.4bpp");
-#endif
 const u32 gObjectEventPic_ShinyGyarados_hns[] = INCBIN_U32("graphics/object_events/pics/misc/shiny_gyarados_hns.4bpp");
 const u32 gObjectEventPic_SleepingSnorlax_hns[] = INCBIN_U32("graphics/object_events/pics/dolls/sleeping_snorlax_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_SsAqua_hns[480] __attribute__((alias("gObjectEventPic_SSTidal")));
-#else
-const u32 gObjectEventPic_SsAqua_hns[] = INCBIN_U32("graphics/object_events/pics/misc/ss_aqua_hns.4bpp");
-#endif
 const u32 gObjectEventPic_SwimmingLapras_hns[] = INCBIN_U32("graphics/object_events/pics/dolls/swimming_lapras_hns.4bpp");
 const u32 gObjectEventPic_TowerBeam_hns[] = INCBIN_U32("graphics/object_events/pics/misc/tower_beam_hns.4bpp");
 const u32 gObjectEventPic_TrainEast_hns[] = INCBIN_U32("graphics/object_events/pics/misc/train_east_hns.4bpp");
@@ -1097,17 +819,9 @@ const u32 gObjectEventPic_GoldSurfing_hns[] = INCBIN_U32("graphics/object_events
 const u32 gObjectEventPic_GoldMachBike_hns[] = INCBIN_U32("graphics/object_events/pics/people/gold/mach_bike_hns.4bpp");
 const u32 gObjectEventPic_GoldAcroBike_hns[] = INCBIN_U32("graphics/object_events/pics/people/gold/acro_bike_hns.4bpp");
 const u32 gObjectEventPic_GoldFishing_hns[] = INCBIN_U32("graphics/object_events/pics/people/gold/fishing_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_GoldWatering_hns[768] __attribute__((alias("gObjectEventPic_BrendanWatering")));
-#else
-const u32 gObjectEventPic_GoldWatering_hns[] = INCBIN_U32("graphics/object_events/pics/people/gold/watering_hns.4bpp");
-#endif
 const u32 gObjectEventPic_GoldDecorating_hns[] = INCBIN_U32("graphics/object_events/pics/people/gold/decorating_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_GoldUnderwater_hns[512] __attribute__((alias("gObjectEventPic_BrendanUnderwater")));
-#else
-const u32 gObjectEventPic_GoldUnderwater_hns[] = INCBIN_U32("graphics/object_events/pics/people/gold/underwater_hns.4bpp");
-#endif
 const u32 gObjectEventPic_KrisNormalRunning_hns[] = INCBIN_U32("graphics/object_events/pics/people/kris/walking_hns.4bpp", "graphics/object_events/pics/people/kris/running_hns.4bpp");
 const u16 gObjectEventPal_Kris_hns[] = INCBIN_U16("graphics/object_events/palettes/kris_hns.gbapal");
 const u16 gObjectEventPal_KrisReflection_hns[] = INCBIN_U16("graphics/object_events/palettes/kris_reflection_hns.gbapal");
@@ -1116,20 +830,10 @@ const u32 gObjectEventPic_KrisSurfing_hns[] = INCBIN_U32("graphics/object_events
 const u32 gObjectEventPic_KrisMachBike_hns[] = INCBIN_U32("graphics/object_events/pics/people/kris/mach_bike_hns.4bpp");
 const u32 gObjectEventPic_KrisAcroBike_hns[] = INCBIN_U32("graphics/object_events/pics/people/kris/acro_bike_hns.4bpp");
 const u32 gObjectEventPic_KrisFishing_hns[] = INCBIN_U32("graphics/object_events/pics/people/kris/fishing_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_KrisWatering_hns[768] __attribute__((alias("gObjectEventPic_MayWatering")));
-#else
-const u32 gObjectEventPic_KrisWatering_hns[] = INCBIN_U32("graphics/object_events/pics/people/kris/watering_hns.4bpp");
-#endif
 const u32 gObjectEventPic_KrisDecorating_hns[] = INCBIN_U32("graphics/object_events/pics/people/kris/decorating_hns.4bpp");
-#ifdef FIRERED
 extern const u32 gObjectEventPic_KrisUnderwater_hns[512] __attribute__((alias("gObjectEventPic_MayUnderwater")));
-#else
-const u32 gObjectEventPic_KrisUnderwater_hns[] = INCBIN_U32("graphics/object_events/pics/people/kris/underwater_hns.4bpp");
-#endif
-#endif // IS_HNS
 
-#ifdef FIRERED
 // Trail uses private art; native Red/Leaf and Mt. Silver resources remain.
 const u16 gObjectEventPic_TrailNormal[] = INCBIN_U16("graphics/object_events/pics/people/trail/trail_normal.4bpp");
 const u16 gObjectEventPic_TrailBike[] = INCBIN_U16("graphics/object_events/pics/people/trail/trail_bike.4bpp");
@@ -1140,4 +844,3 @@ const u16 gObjectEventPic_TrailItem[] = INCBIN_U16("graphics/object_events/pics/
 const u16 gObjectEventPic_TrailVSSeekerBike[] = INCBIN_U16("graphics/object_events/pics/people/trail/trail_vs_seeker_bike.4bpp");
 const u16 gObjectEventPal_PlayerTrail[] = INCBIN_U16("graphics/object_events/palettes/player_trail.gbapal");
 const u16 gObjectEventPal_PlayerTrailReflection[] = INCBIN_U16("graphics/object_events/palettes/player_trail_reflection.gbapal");
-#endif

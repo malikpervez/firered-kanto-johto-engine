@@ -1,4 +1,3 @@
-#ifdef FIRERED
 RB_Return::
 	return
 RB_Release::
@@ -671,4 +670,3 @@ RB_RadioAftermath::
 RB_Text_RadioAftermath::
 	.string "The DIRECTOR recovered a copied\nbell recording. NAO sent word:\pAn invitation leaves a choice.\nROCKET forgot that.\pWill you disconnect the player?\nOr leave it to the director?$"
 
-#endif

@@ -1162,13 +1162,11 @@ static bool32 SavePokeJump(void)
     case 3:
         if (!FuncIsActiveTask(Task_LinkFullSave))
         {
-#ifdef FIRERED
         if (FireRedSave_IsBusy() || FireRedSave_LastResult() != SAVE_STATUS_OK)
         {
             DoSaveFailedScreen(SAVE_NORMAL);
             return TRUE;
         }
-#endif
             ClearMessageWindow();
             sPokemonJump->mainState++;
         }

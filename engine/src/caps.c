@@ -69,16 +69,8 @@ u32 GetCurrentLevelCap(void)
         if (badgeCount > 8)
             badgeCount = 8;
 
-#if IS_HNS
-        if (FlagGet(FLAG_IS_KANTO_CHAMPION))
-            return MAX_LEVEL;
-
-        if (FlagGet(FLAG_IS_CHAMPION))
-            return KANTO_MAX_LEVEL;
-#else
         if (FlagGet(FLAG_IS_CHAMPION))
             return MAX_LEVEL;
-#endif
 
         if (challengeLevelCap == 1)
             return sLevelCapTable_Normal[badgeCount];

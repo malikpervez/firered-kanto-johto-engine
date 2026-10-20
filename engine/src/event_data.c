@@ -2,11 +2,9 @@
 #include "save.h"
 #include "event_data.h"
 #include "pokedex.h"
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "constants/johto_ids.h"
 STATIC_ASSERT(JOHTO_FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS - JOHTO_FLAG_DAILY_BEAT_SILVER == 10, JohtoDailyFlagRangePinned);
-#endif
 
 #define SPECIAL_FLAGS_SIZE  (NUM_SPECIAL_FLAGS / 8)  // 8 flags per byte
 #define TEMP_FLAGS_SIZE     (NUM_TEMP_FLAGS / 8)
@@ -75,14 +73,7 @@ void ClearTempFieldEventData(void)
 
 void ClearDailyFlags(void)
 {
-#if IS_HNS
-    u16 i;
-    for (i = DAILY_FLAGS_START; i <= DAILY_FLAGS_END; i++)
-        FlagClear(i);
-#else
     memset(&gSaveBlock1Ptr->flags[DAILY_FLAGS_START / 8], 0, DAILY_FLAGS_SIZE);
-#endif
-#ifdef FIRERED
     // The imported HnS daily flags have their own persistent namespace.
     // Date rollover must clear it even while the trainer is back in Kanto.
     if (JohtoCampaign_IsSeeded())
@@ -91,7 +82,6 @@ void ClearDailyFlags(void)
         for (i = JOHTO_FLAG_DAILY_BEAT_SILVER; i <= JOHTO_FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS; i++)
             FlagClear(i);
     }
-#endif
 }
 
 void DisableNationalPokedex(void)
@@ -205,10 +195,8 @@ bool32 CanResetRTC(void)
 
 u16 *GetVarPointer(u16 id)
 {
-#ifdef FIRERED
     if (JohtoCampaign_IsVarId(id))
         return JohtoCampaign_GetVarPointer(id);
-#endif
     if (id < VARS_START)
         return NULL;
     else if (id < SPECIAL_VARS_START)
@@ -242,7 +230,6 @@ bool8 VarSet(u16 id, u16 value)
     u16 *ptr = GetVarPointer(id);
     if (!ptr)
         return FALSE;
-#ifdef FIRERED
     if (JohtoCampaign_IsVarId(id))
     {
         if (*ptr != value)
@@ -252,7 +239,6 @@ bool8 VarSet(u16 id, u16 value)
     }
     if (id < SPECIAL_VARS_START && *ptr != value)
         FireRedSave_NotifyPersistentWrite();
-#endif
     *ptr = value;
     return TRUE;
 }
@@ -264,12 +250,10 @@ u16 VarGetObjectEventGraphicsId(u8 id)
 
 u8 *GetFlagPointer(u16 id)
 {
-#ifdef FIRERED
     // Compact regional indices have different bit offsets from encoded IDs.
     // Only the explicit flag operations below may access that namespace.
     if (JohtoCampaign_IsFlagId(id))
         return NULL;
-#endif
     if (id == 0)
         return NULL;
     else if (id < SPECIAL_FLAGS_START)
@@ -284,18 +268,14 @@ u8 *GetFlagPointer(u16 id)
 
 u8 FlagSet(u16 id)
 {
-#ifdef FIRERED
     if (JohtoCampaign_IsFlagId(id))
     {
         JohtoCampaign_SetFlag(id, TRUE);
         return 0;
     }
-#endif
     u8 *ptr = GetFlagPointer(id);
-#ifdef FIRERED
     if (ptr && id < SPECIAL_FLAGS_START && !(*ptr & (1 << (id & 7))))
         FireRedSave_NotifyPersistentWrite();
-#endif
     if (ptr)
         *ptr |= 1 << (id & 7);
     return 0;
@@ -303,18 +283,14 @@ u8 FlagSet(u16 id)
 
 u8 FlagToggle(u16 id)
 {
-#ifdef FIRERED
     if (JohtoCampaign_IsFlagId(id))
     {
         JohtoCampaign_SetFlag(id, !JohtoCampaign_GetFlag(id));
         return 0;
     }
-#endif
     u8 *ptr = GetFlagPointer(id);
-#ifdef FIRERED
     if (ptr && id < SPECIAL_FLAGS_START)
         FireRedSave_NotifyPersistentWrite();
-#endif
     if (ptr)
         *ptr ^= 1 << (id & 7);
     return 0;
@@ -322,18 +298,14 @@ u8 FlagToggle(u16 id)
 
 u8 FlagClear(u16 id)
 {
-#ifdef FIRERED
     if (JohtoCampaign_IsFlagId(id))
     {
         JohtoCampaign_SetFlag(id, FALSE);
         return 0;
     }
-#endif
     u8 *ptr = GetFlagPointer(id);
-#ifdef FIRERED
     if (ptr && id < SPECIAL_FLAGS_START && (*ptr & (1 << (id & 7))))
         FireRedSave_NotifyPersistentWrite();
-#endif
     if (ptr)
         *ptr &= ~(1 << (id & 7));
     return 0;
@@ -341,10 +313,8 @@ u8 FlagClear(u16 id)
 
 bool8 FlagGet(u16 id)
 {
-#ifdef FIRERED
     if (JohtoCampaign_IsFlagId(id))
         return JohtoCampaign_GetFlag(id);
-#endif
     u8 *ptr = GetFlagPointer(id);
 
     if (!ptr)

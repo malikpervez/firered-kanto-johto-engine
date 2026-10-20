@@ -1,8 +1,6 @@
 #include "global.h"
-#ifdef FIRERED
 #include "johto_campaign.h"
 #include "regions.h"
-#endif
 #include "string_util.h"
 #include "text.h"
 #include "strings.h"
@@ -484,17 +482,10 @@ static const u8 *ExpandPlaceholder_KunChan(void)
 
 static const u8 *ExpandPlaceholder_RivalName(void)
 {
-#ifdef FIRERED
     if (IsJohtoCampaignMap() && JohtoCampaign_IsSeeded())
         return (const u8 *)gSaveBlock3Ptr + 160;
-#endif
-#if IS_FRLG
     if (gSaveBlock1Ptr->rivalName[0] != EOS)
         return gSaveBlock1Ptr->rivalName;
-#elif IS_HNS
-    if (gSaveBlock2Ptr->rivalName[0] != EOS)
-        return gSaveBlock2Ptr->rivalName;
-#endif
 
     if (gSaveBlock2Ptr->playerGender == MALE)
         return (IS_FRLG ? gText_ExpandedPlaceholder_Green : gText_ExpandedPlaceholder_May);

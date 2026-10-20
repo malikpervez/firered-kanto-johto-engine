@@ -3,7 +3,6 @@
 
 #include "constants/region_map_sections.h"
 
-#ifdef FIRERED
 // Existing section constants and u8 location fields retain their original values.
 // These aliases use slots absent from all native FireRed map headers/scripts.
 // Origin-aware memo lookup retains the old names for imported RSE Pokemon.
@@ -92,6 +91,5 @@
      || (id) == JOHTO_MAPSEC_TRAINER_HILL \
      || (id) == JOHTO_MAPSEC_ROUTE_22)
 
-#endif // FIRERED
 
 #endif // GUARD_CONSTANTS_JOHTO_MAP_SECTIONS_H

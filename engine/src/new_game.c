@@ -1,11 +1,9 @@
 #include "global.h"
 #include "new_game.h"
-#ifdef FIRERED
 #include "challenge_menu.h"
 #include "rainbow_story.h"
 #include "character_story.h"
 #include "friends_story.h"
-#endif
 #include "random.h"
 #include "config/randomizer.h"
 #include "pokemon.h"
@@ -40,9 +38,7 @@
 #include "frontier_util.h"
 #include "pokedex.h"
 #include "save.h"
-#ifdef FIRERED
 #include "regional_save.h"
-#endif
 #include "link_rfu.h"
 #include "main.h"
 #include "contest.h"
@@ -64,12 +60,7 @@
 #include "follower_npc.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
-#if IS_FRLG
 extern const u8 EventScript_ResetAllMapFlagsFrlg[];
-#endif
-#if IS_HNS
-extern const u8 EventScript_ResetAllMapFlagsHnS[];
-#endif
 
 static void ClearFrontierRecord(void);
 static void WarpToTruck(void);
@@ -147,9 +138,7 @@ void SetDefaultChallengeSettings(void)
     gSaveblock3.challengeSettings.musicOnOff = 0;
     gSaveblock3.challengeSettings.runType = 0;
 
-#ifdef FIRERED
     gSaveblock3.challengeSettings.tx_Challenges_OneTypeChallenge = ONE_TYPE_OFF;
-#endif
 
     // Challenge menu — "RECOMMENDED" defaults
     gSaveblock3.challengeSettings.tx_Mode_Modern_Moves       = 1;
@@ -228,24 +217,18 @@ void ResetMenuAndMonGlobals(void)
 
 void NewGameInitData(void)
 {
-#ifdef FIRERED
     if (FireRedSave_IsBusy())
     {
         FireRedSave_Abort();
         return;
     }
     FireRedSave_ResetSession();
-#endif
-#if IS_FRLG
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
-#endif
     struct ChallengeSettings savedChallenge = gSaveBlock3Ptr->challengeSettings;
     if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
         RtcReset();
 
-#if IS_FRLG
     StringCopy(rivalName, gSaveBlock1Ptr->rivalName);
-#endif
     gDifferentSaveFile = TRUE;
     gSaveBlock2Ptr->encryptionKey = 0;
     ZeroPlayerPartyMons();
@@ -258,9 +241,7 @@ void NewGameInitData(void)
     gSaveBlock1Ptr->saveVersion = SAVE_VERSION;
     SetDefaultChallengeSettings();
     gSaveBlock3Ptr->challengeSettings = savedChallenge;
-#ifdef FIRERED
     RegionalSave_InitExtension((u8 *)gSaveBlock3Ptr);
-#endif
     ClearAllMail();
     gSaveBlock2Ptr->specialSaveWarpFlags = 0;
     gSaveBlock2Ptr->gcnLinkFlags = 0;
@@ -296,21 +277,11 @@ void NewGameInitData(void)
     ResetFanClub();
     ResetLotteryCorner();
     WarpToTruck();
-#if IS_FRLG
     RunScriptImmediately(EventScript_ResetAllMapFlagsFrlg);
-#elif IS_HNS
-    RunScriptImmediately(EventScript_ResetAllMapFlagsHnS);
-#else
-    RunScriptImmediately(EventScript_ResetAllMapFlags);
-#endif
-#ifdef FIRERED
     RainbowStory_NewGame();
     CharacterStory_NewGame();
     FriendsStory_NewGame();
-#endif
-#if IS_FRLG
         StringCopy(gSaveBlock1Ptr->rivalName, rivalName);
-#endif
     ResetMiniGamesRecords();
     InitUnionRoomChatRegisteredTexts();
     InitLilycoveLady();
@@ -333,10 +304,6 @@ void NewGameInitData(void)
     if (gSaveBlock3Ptr->challengeSettings.evenFasterJoy == 0)
         FlagSet(FLAG_EVEN_FASTER_JOY);
 
-#if IS_HNS
-    StringCopy(gSaveBlock2Ptr->rivalName, gText_ExpandedPlaceholder_Silver);
-    InitMomSavings();
-#endif
 }
 
 static void ResetMiniGamesRecords(void)

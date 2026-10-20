@@ -99,7 +99,5 @@ Route4_Text_PeopleLikeAndRespectBrock::
 
 Route4_Frlg_RainbowTransition::
 	call MW02_Visibility
-#ifdef FIRERED
 	call JT01_Visibility
-#endif
 	end

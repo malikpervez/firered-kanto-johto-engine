@@ -546,7 +546,6 @@ PalletTown_Text_PressStartToOpenMenuCopy::
 	.string "Press START to open the MENU!$"
 
 
-#ifdef FIRERED
 @ The actual Kanto game-clear event supplies Oak's post-League eligibility.
 B2_Pallet_EventScript_VisitJohto::
 	lock
@@ -612,6 +611,5 @@ B2_Pallet_Text_TravelUnavailable::
 	.string "The trip to JOHTO isn't available\n"
 	.string "right now. Please speak to\l"
 	.string "PROF.OAK again.$"
-#endif
 
 

@@ -1,4 +1,3 @@
-#ifdef FIRERED
 @ James deliberately speaks from offscreen in JT01/JT04; no substitute actor
 @ represents him. Jessie and Meowth use their actual graphics. The net is
 @ conveyed by narration/Meowth's struggle, not a claimed net graphic.
@@ -268,4 +267,3 @@ JT04_Text_Jessie::
 	.string "JESSIE: We were inspecting\ncompany property.$"
 JT04_Text_Meowth::
 	.string "MEOWTH: Sure.\nWith all the doors open.$"
-#endif

@@ -1081,13 +1081,7 @@ static void ShowPostBattleHintText(void)
         case HINT_REMAINING_ITEMS:
             for (i = 0; i < GetNumBattlePyramidObjectEvents(); i++)
             {
-#if IS_HNS
-                if (events[i].graphicsId == OBJ_EVENT_GFX_ITEM_BALL_HNS && events[i].x != SHRT_MAX && events[i].y != SHRT_MAX)
-#elif defined(FIRERED)
                 if (events[i].graphicsId == FRONTIER_GFX(OBJ_EVENT_GFX_ITEM_BALL, OBJ_EVENT_GFX_ITEM_BALL_HNS) && events[i].x != SHRT_MAX && events[i].y != SHRT_MAX)
-#else
-                if (events[i].graphicsId == OBJ_EVENT_GFX_ITEM_BALL && events[i].x != SHRT_MAX && events[i].y != SHRT_MAX)
-#endif
                     textIndex++;
             }
             i = 1;
@@ -1732,13 +1726,7 @@ u8 GetTrainerEncounterMusicIdInBattlePyramid(u16 trainerId)
 
 static void UNUSED BattlePyramidRetireChallenge(void)
 {
-#if IS_HNS
-    ScriptContext_SetupScript(BattlePyramid_Retire_hns);
-#elif defined(FIRERED)
     ScriptContext_SetupScript(IsJohtoCampaignMap() ? BattlePyramid_Retire_hns : BattlePyramid_Retire);
-#else
-    ScriptContext_SetupScript(BattlePyramid_Retire);
-#endif
 }
 
 static u16 GetUniqueTrainerId(u8 objectEventId)
@@ -1789,13 +1777,7 @@ void GenerateBattlePyramidFloorLayout(u16 *backupMapData, bool8 setPlayerPositio
     {
         u16 *map;
         int yOffset, xOffset;
-    #if IS_HNS
-        const struct MapLayout *mapLayout = gMapLayouts[floorLayoutOffsets[i] + LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS];
-    #elif defined(FIRERED)
         const struct MapLayout *mapLayout = gMapLayouts[floorLayoutOffsets[i] + FRONTIER_LAYOUT(LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR, LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS)];
-    #else
-        const struct MapLayout *mapLayout = gMapLayouts[floorLayoutOffsets[i] + LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR];
-    #endif
         const u16 *layoutMap = mapLayout->map;
 
         gBackupMapLayout.map = backupMapData;
@@ -1889,22 +1871,10 @@ void LoadBattlePyramidFloorObjectEventScripts(void)
 
     for (i = 0; i < OBJECT_EVENT_TEMPLATES_COUNT; i++)
     {
-#if IS_HNS
-        if (events[i].graphicsId != OBJ_EVENT_GFX_ITEM_BALL_HNS)
-            events[i].script = BattlePyramid_TrainerBattle_hns;
-        else
-            events[i].script = BattlePyramid_FindItemBall_hns;
-#elif defined(FIRERED)
         if (events[i].graphicsId != FRONTIER_GFX(OBJ_EVENT_GFX_ITEM_BALL, OBJ_EVENT_GFX_ITEM_BALL_HNS))
             events[i].script = IsJohtoCampaignMap() ? BattlePyramid_TrainerBattle_hns : BattlePyramid_TrainerBattle;
         else
             events[i].script = IsJohtoCampaignMap() ? BattlePyramid_FindItemBall_hns : BattlePyramid_FindItemBall;
-#else
-        if (events[i].graphicsId != OBJ_EVENT_GFX_ITEM_BALL)
-            events[i].script = BattlePyramid_TrainerBattle;
-        else
-            events[i].script = BattlePyramid_FindItemBall;
-#endif
     }
 }
 
@@ -2133,38 +2103,18 @@ static bool8 TrySetPyramidObjectEventPositionAtCoords(u8 objType, u8 x, u8 y, u8
     const struct MapHeader *mapHeader;
     struct ObjectEventTemplate *floorEvents = gSaveBlock1Ptr->objectEventTemplates;
 
-#if IS_HNS
-    mapHeader = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(MAP_BATTLE_PYRAMID_SQUARE01_HNS), floorLayoutOffsets[squareId] + MAP_NUM(MAP_BATTLE_PYRAMID_SQUARE01_HNS));
-#elif defined(FIRERED)
     u16 squareBase = FRONTIER_MAP(MAP_BATTLE_PYRAMID_SQUARE01, MAP_BATTLE_PYRAMID_SQUARE01_HNS);
     mapHeader = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(squareBase), floorLayoutOffsets[squareId] + MAP_NUM(squareBase));
-#else
-    mapHeader = Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(MAP_BATTLE_PYRAMID_SQUARE01), floorLayoutOffsets[squareId] + MAP_NUM(MAP_BATTLE_PYRAMID_SQUARE01));
-#endif
     for (i = 0; i < mapHeader->events->objectEventCount; i++)
     {
         if (mapHeader->events->objectEvents[i].x != x || mapHeader->events->objectEvents[i].y != y)
             continue;
 
-#if IS_HNS
-        if (objType != OBJ_TRAINERS || mapHeader->events->objectEvents[i].graphicsId == OBJ_EVENT_GFX_ITEM_BALL_HNS)
-        {
-            if (objType != OBJ_ITEMS || mapHeader->events->objectEvents[i].graphicsId != OBJ_EVENT_GFX_ITEM_BALL_HNS)
-                continue;
-        }
-#elif defined(FIRERED)
         if (objType != OBJ_TRAINERS || mapHeader->events->objectEvents[i].graphicsId == FRONTIER_GFX(OBJ_EVENT_GFX_ITEM_BALL, OBJ_EVENT_GFX_ITEM_BALL_HNS))
         {
             if (objType != OBJ_ITEMS || mapHeader->events->objectEvents[i].graphicsId != FRONTIER_GFX(OBJ_EVENT_GFX_ITEM_BALL, OBJ_EVENT_GFX_ITEM_BALL_HNS))
                 continue;
         }
-#else
-        if (objType != OBJ_TRAINERS || mapHeader->events->objectEvents[i].graphicsId == OBJ_EVENT_GFX_ITEM_BALL)
-        {
-            if (objType != OBJ_ITEMS || mapHeader->events->objectEvents[i].graphicsId != OBJ_EVENT_GFX_ITEM_BALL)
-                continue;
-        }
-#endif
 
         // Ensure an object wasn't previously placed in the exact same position.
         for (j = 0; j < objectEventId; j++)
@@ -2179,13 +2129,7 @@ static bool8 TrySetPyramidObjectEventPositionAtCoords(u8 objType, u8 x, u8 y, u8
             floorEvents[objectEventId].x += (squareId % 4) * 8;
             floorEvents[objectEventId].y += (squareId / 4) * 8;
             floorEvents[objectEventId].localId = objectEventId + 1;
-#if IS_HNS
-            if (floorEvents[objectEventId].graphicsId != OBJ_EVENT_GFX_ITEM_BALL_HNS)
-#elif defined(FIRERED)
             if (floorEvents[objectEventId].graphicsId != FRONTIER_GFX(OBJ_EVENT_GFX_ITEM_BALL, OBJ_EVENT_GFX_ITEM_BALL_HNS))
-#else
-            if (floorEvents[objectEventId].graphicsId != OBJ_EVENT_GFX_ITEM_BALL)
-#endif
             {
                 i = GetUniqueTrainerId(objectEventId);
                 floorEvents[objectEventId].graphicsId = GetBattleFacilityTrainerGfxId(i);

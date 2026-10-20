@@ -370,9 +370,7 @@ static bool32 NONNULL BagPocket_AddItem(struct BagPocket *pocket, enum Item item
 
 bool32 AddBagItem(enum Item itemId, u16 count)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     if (GetItemPocket(itemId) >= POCKETS_COUNT)
         return FALSE;
 
@@ -429,9 +427,7 @@ static bool32 NONNULL BagPocket_RemoveItem(struct BagPocket *pocket, enum Item i
 
 bool32 RemoveBagItem(enum Item itemId, u16 count)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     if (GetItemPocket(itemId) >= POCKETS_COUNT || itemId == ITEM_NONE)
         return FALSE;
 
@@ -445,9 +441,7 @@ bool32 RemoveBagItem(enum Item itemId, u16 count)
 // Unsafe function: Only use with functions that already check the slot and count are valid
 void RemoveBagItemFromSlot(struct BagPocket *pocket, u16 slotId, u16 count)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     struct ItemSlot itemSlot = BagPocket_GetSlotData(pocket, slotId);
     BagPocket_SetSlotItemIdAndCount(pocket, slotId, itemSlot.itemId, itemSlot.quantity - count);
 }
@@ -491,9 +485,7 @@ bool32 CheckPCHasItem(enum Item itemId, u16 count)
 
 bool32 AddPCItem(enum Item itemId, u16 count)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     struct BagPocket dummyPocket = DUMMY_PC_BAG_POCKET;
     return BagPocket_AddItem(&dummyPocket, itemId, count);
 }
@@ -520,9 +512,7 @@ static void NONNULL BagPocket_CompactItems(struct BagPocket *pocket)
 
 void RemovePCItem(u8 index, u16 count)
 {
-#ifdef FIRERED
     FireRedSave_NotifyPersistentWrite();
-#endif
     struct BagPocket dummyPocket = DUMMY_PC_BAG_POCKET;
 
     // Get id, quantity at slot

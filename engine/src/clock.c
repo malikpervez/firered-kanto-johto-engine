@@ -43,10 +43,8 @@ static void UpdatePerDay(struct Time *localTime)
     u16 *days = GetVarPointer(VAR_DAYS);
     u16 daysSince;
 
-#ifdef FIRERED
     if (*days != localTime->days)
         FireRedSave_NotifyPersistentWrite();
-#endif
     if (*days != localTime->days && *days <= localTime->days)
     {
         daysSince = localTime->days - *days;
@@ -79,10 +77,8 @@ static void UpdatePerMinute(struct Time *localTime)
     CalcTimeDifference(&difference, &gSaveBlock2Ptr->lastBerryTreeUpdate, localTime);
     minutes = 24 * 60 * difference.days + 60 * difference.hours + difference.minutes;
 
-#ifdef FIRERED
     if (minutes != 0)
         FireRedSave_NotifyPersistentWrite();
-#endif
     if (minutes > 0)
     {
         BerryTreeTimeUpdate(minutes);

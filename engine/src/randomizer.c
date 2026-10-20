@@ -344,12 +344,10 @@ static bool32 IsSpeciesValidForRandomizer(u16 species)
 // randomizer can roll has to pass this, so the gen scope applies here.
 static bool32 IsSpeciesPermitted(u16 species)
 {
-#ifdef FIRERED
     // Giratina is a scripted visitor in the approved Friends arc. This
     // filters new randomized results without deleting or rewriting owned mons.
     if (species == SPECIES_GIRATINA_ALTERED || species == SPECIES_GIRATINA_ORIGIN)
         return FALSE;
-#endif
     return IsSpeciesValidForRandomizer(species) && IsSpeciesInGenScope(species);
 };
 

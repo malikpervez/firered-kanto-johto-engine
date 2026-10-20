@@ -313,11 +313,7 @@ static const struct SpriteTemplate sSpriteTemplate_HofConfetti =
     .callback = SpriteCB_HofConfetti
 };
 
-#if IS_HNS
-static const u16 sHallOfFame_Pal[] = INCBIN_U16("graphics/misc/japanese_hof_hns.gbapal");
-#else
 static const u16 sHallOfFame_Pal[] = INCBIN_U16("graphics/misc/japanese_hof.gbapal");
-#endif
 
 static const u32 sHallOfFame_Gfx[] = INCBIN_U32("graphics/misc/japanese_hof.4bpp.smol");
 
@@ -526,11 +522,7 @@ static void FreeAllHoFMem(void)
 static void Task_Hof_TrySaveData(u8 taskId)
 {
     gGameContinueCallback = CB2_DoHallOfFameScreenDontSaveData;
-#ifdef FIRERED
     if (TrySavingData(SAVE_HALL_OF_FAME) != SAVE_STATUS_OK)
-#else
-    if (TrySavingData(SAVE_HALL_OF_FAME) == SAVE_STATUS_ERROR && gDamagedSaveSectors != 0)
-#endif
     {
         UnsetBgTilemapBuffer(1);
         UnsetBgTilemapBuffer(3);

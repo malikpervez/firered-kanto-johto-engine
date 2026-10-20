@@ -18,9 +18,7 @@ void MoveAllRoamersToOtherLocationSets(void);
 void MoveAllRoamers(void);
 void TryShowRoamerFlash(void);
 
-#ifdef FIRERED
 struct Roamer *GetEncounteredRoamer(void);
-#endif
 
 extern u8 gEncounteredRoamerIndex;
 

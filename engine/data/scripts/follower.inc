@@ -20,7 +20,6 @@ EventScript_FollowerEnd::
 	release
 	end
 
-#ifdef FIRERED
 @ PC02: read-only journey bond and situation, independent of party ownership.
 EventScript_PikachuCompanion::
 	lock
@@ -240,7 +239,6 @@ PikachuCompanion_Text_Eager:
 	.string "PIKACHU bounces with excitement.\n"
 	.string "It is cheering you on!$"
 
-#endif
 
 EventScript_FollowerLovesYou::
 	applymovement OBJ_EVENT_ID_FOLLOWER, ContestHall_Movement_Heart

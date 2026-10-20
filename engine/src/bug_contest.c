@@ -1,9 +1,7 @@
 #include "global.h"
-#ifdef FIRERED
 #include "constants/johto_ids.h"
 #undef FLAG_SYS_BUG_CONTEST_MODE
 #define FLAG_SYS_BUG_CONTEST_MODE JOHTO_FLAG_SYS_BUG_CONTEST_MODE
-#endif
 #include "challenge_menu.h"
 #include "script.h"
 #include "event_data.h"
@@ -20,7 +18,6 @@
 #include "field_screen_effect.h"
 #include "string_util.h"
 
-#if IS_HNS || defined(FIRERED)
 
 static u32 sBugContestStartTime;
 static bool8 sBugContestTimerActive;
@@ -224,19 +221,3 @@ bool8 ShowBugContestChosenMon(void)
     return FALSE;
 }
 
-#else
-
-void BugContestRetirePrompt(void) {}
-void EnterBugContestMode(void) {}
-void ExitBugContestMode(void) {}
-bool8 TransferBugContestMon(void) { return FALSE; }
-bool8 JudgeBugContestMon(void) { return FALSE; }
-bool8 RemoveSportBalls(void) { return FALSE; }
-bool8 ShowBugContestChosenMon(void) { return FALSE; }
-bool32 GetBugContestFlag(void) { return FALSE; }
-void CB2_EndBugContestBattle(void) {}
-bool8 BugContestCheckTimeLimit(void) { return FALSE; }
-const u8 BugContest_EventScript_WhiteOut[] = {0};
-const u8 BugContest_EventScript_TimesUp[] = {0};
-
-#endif

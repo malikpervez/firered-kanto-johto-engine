@@ -4,7 +4,6 @@
 #include "global.h"
 #include "battle_setup.h"
 
-#ifdef FIRERED
 #include "constants/johto_ids.h"
 #define JOHTO_REMATCH_ROW_COUNT 40
 #define JOHTO_REMATCH_REGISTERED_FLAGS_START JOHTO_FLAG_REGISTERED_JOEY_HNS
@@ -22,6 +21,5 @@ bool32 JohtoRematch_IsRegistered(s32 tableId);
 void JohtoRematch_UpdateIfDefeated(s32 tableId);
 u16 JohtoRematch_CountMaxPossible(u16 tableId);
 u16 JohtoRematch_CountBattledTeams(u16 tableId);
-#endif
 
 #endif

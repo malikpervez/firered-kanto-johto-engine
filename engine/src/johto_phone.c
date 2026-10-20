@@ -1,5 +1,4 @@
 #include "global.h"
-#ifdef FIRERED
 #include "johto_phone.h"
 #include "event_data.h"
 #include "pokedex.h"
@@ -217,4 +216,3 @@ const u8 *JohtoPhone_GetNationalPokedexRatingText(u32 count)
     return gNationalDexRatingText_LessThanMaxDex;
 }
 
-#endif

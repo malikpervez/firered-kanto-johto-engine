@@ -1,6 +1,5 @@
 #include "global.h"
 
-#ifdef FIRERED
 #include "friends_scene.h"
 #include "friends_camera.h"
 #include "friends_story.h"
@@ -828,4 +827,3 @@ void Special_FriendsStoryStage(void)
     }
     gSpecialVar_Result = TRUE;
 }
-#endif

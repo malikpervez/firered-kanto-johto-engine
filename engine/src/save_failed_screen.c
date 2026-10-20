@@ -26,9 +26,7 @@ extern const u8 gText_SaveCompleteGameCannotContinue[];
 extern const u8 gText_SaveCompletePressA[];
 extern const u8 gText_GamePlayCannotBeContinued[];
 
-#ifdef FIRERED
 static const u8 sText_TransactionFailed[] = _("Save failed.\nPrevious save retained.\nPress A to restart.");
-#endif
 
 // sClockInfo enum
 enum
@@ -263,7 +261,6 @@ static void CB2_WipeSave(void)
 
     sClockInfo[CLOCK_RUNNING] = TRUE;
 
-#ifdef FIRERED
     // A failed FRJS transaction retains the old bank. Never wipe sectors or
     // replay preparation/statistics, even when the failure was not flash damage.
     FireRedSave_Abort();
@@ -272,7 +269,6 @@ static void CB2_WipeSave(void)
     SaveFailedScreenTextPrint(sText_TransactionFailed, 1, 0);
     SetMainCallback2(CB2_FadeAndReturnToTitleScreen);
     return;
-#endif
 
     while (gDamagedSaveSectors != 0 && wipeTries < 3)
     {

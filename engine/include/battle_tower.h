@@ -20,10 +20,8 @@ extern const u8 gTowerMaleFacilityClasses[30];
 extern const u16 gTowerMaleTrainerGfxIds[30];
 extern const u8 gTowerFemaleFacilityClasses[20];
 extern const u16 gTowerFemaleTrainerGfxIds[20];
-#ifdef FIRERED
 extern const u16 gJohtoTowerMaleTrainerGfxIds[30];
 extern const u16 gJohtoTowerFemaleTrainerGfxIds[20];
-#endif
 extern const struct TrainerMon gSlateportBattleTentMons[];
 extern const struct BattleFrontierTrainer gSlateportBattleTentTrainers[];
 

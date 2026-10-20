@@ -1,4 +1,3 @@
-#ifdef FIRERED
 // Exact menu choices from approved Friends scenes. Include before sMultichoiceLists.
 static const struct MenuAction MultichoiceList_FG01[] = {
     {COMPOUND_STRING("You're in Kanto")},
@@ -76,4 +75,3 @@ static const struct MenuAction MultichoiceList_FG_OPPONENTS[] = {
     {COMPOUND_STRING("Ham")},
     {COMPOUND_STRING("Back")},
 };
-#endif

@@ -380,19 +380,15 @@ const u8 *MapHeaderCheckScriptTable(u8 tag)
 
 void RunOnLoadMapScript(void)
 {
-#ifdef FIRERED
     FriendsStory_OnMapLoad();
     FriendsScene_OnMapLoad();
-#endif
     MapHeaderRunScriptType(MAP_SCRIPT_ON_LOAD);
 }
 
 void RunOnTransitionMapScript(void)
 {
-#ifdef FIRERED
     FriendsStory_OnMapLoad();
     FriendsScene_OnMapLoad();
-#endif
     MapHeaderRunScriptType(MAP_SCRIPT_ON_TRANSITION);
 }
 

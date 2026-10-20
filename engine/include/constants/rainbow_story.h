@@ -3,7 +3,6 @@
 
 // FireRed-only story receipts in audited, previously unused native flags.
 // These are existing SaveBlock1 bits, not Johto IDs or new save storage.
-#ifdef FIRERED
 #define FLAG_RB_OPENING_SEEN             0x900
 #define FLAG_RB_NAO_INTRODUCED           0x901
 #define FLAG_RB_FUJI_SCENE_SEEN          0x902
@@ -44,6 +43,5 @@
 #define LG_REPLICA_UNRESOLVED            0
 #define LG_REPLICA_DEFEATED              1
 #define LG_REPLICA_CAUGHT                2
-#endif
 
 #endif

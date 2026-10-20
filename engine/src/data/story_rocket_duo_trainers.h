@@ -1,4 +1,3 @@
-#ifdef FIRERED
 // Separate native portraits use the approved local Rocket package.
 // All original trainer records and generic Rocket portraits are retained.
 [DIFFICULTY_EASY][TRAINER_STORY_JESSIE] =
@@ -79,4 +78,3 @@
     .party = sStoryJamesParty,
     .partySize = ARRAY_COUNT(sStoryJamesParty),
 },
-#endif

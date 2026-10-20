@@ -1118,12 +1118,10 @@ static const struct SpriteFrameImage sPicTable_PokeBall[] = {
 };
 
 extern const struct SpriteFrameImage gFieldEffectObjectPicTable_BallLight[];
-#if IS_HNS || defined(FIRERED)
 extern const struct SpriteFrameImage gFieldEffectObjectPicTable_BallLight_Hns[];
 extern const struct SpriteFrameImage gFieldEffectObjectPicTable_SmallLight_Hns[];
 extern const struct SpriteFrameImage gFieldEffectObjectPicTable_PokeCenterLight_Hns[];
 extern const struct SpriteFrameImage gFieldEffectObjectPicTable_MartLight_Hns[];
-#endif
 
 #if OW_FOLLOWERS_POKEBALLS
 #define POKEBALL_PIC_FRAMES(name)                              \
@@ -1367,7 +1365,6 @@ static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
     overworld_frame(gObjectEventPic_ApricornTree, 2, 2, 0),
 };
 
-#if IS_FRLG
 
 static const struct SpriteFrameImage sPicTable_RedNormal[] = {
     overworld_frame(gObjectEventPic_RedNormal, 2, 4, 0),
@@ -3034,9 +3031,7 @@ static const struct SpriteFrameImage sPicTable_MomFrlg[] = {
     overworld_frame(gObjectEventPic_MomFrlg, 2, 4, 2),
 };
 
-#endif // IS_FRLG
 
-#if IS_HNS || defined(FIRERED)
 static const struct SpriteFrameImage sPicTable_AttendantF_hns[] = {
     overworld_frame(gObjectEventPic_AttendantF_hns, 2, 4, 0),
     overworld_frame(gObjectEventPic_AttendantF_hns, 2, 4, 1),
@@ -4605,10 +4600,8 @@ static const struct SpriteFrameImage sPicTable_KrisDecorating_hns[] = {
     obj_frame_tiles(gObjectEventPic_KrisDecorating_hns),
 };
 
-#endif // IS_HNS
 
 
-#ifdef FIRERED
 // Native player table dimensions/reuse; private Trail pixel data.
 static const struct SpriteFrameImage sPicTable_TrailNormal[] = {
     overworld_frame(gObjectEventPic_TrailNormal, 2, 4, 0),
@@ -4690,4 +4683,3 @@ static const struct SpriteFrameImage sPicTable_TrailVSSeekerBike[] = {
     overworld_frame(gObjectEventPic_TrailVSSeekerBike, 4, 4, 4),
     overworld_frame(gObjectEventPic_TrailVSSeekerBike, 4, 4, 5),
 };
-#endif

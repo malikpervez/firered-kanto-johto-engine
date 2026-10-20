@@ -1,8 +1,6 @@
 LavenderTown_Frlg_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavenderTown_OnTransition
-#ifdef FIRERED
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, FG08_OutsideOnFrame
-#endif
 	.byte 0
 
 LavenderTown_OnTransition::

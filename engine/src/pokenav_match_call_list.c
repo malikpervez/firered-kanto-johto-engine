@@ -14,11 +14,7 @@
 #include "strings.h"
 #include "constants/songs.h"
 #include "data/johto_phone_aliases.h"
-#ifdef FIRERED
 #define PHONE_REMATCH_STATE(index) JohtoRematch_GetReadiness(index)
-#else
-#define PHONE_REMATCH_STATE(index) gSaveBlock1Ptr->trainerRematches[index]
-#endif
 
 struct Pokenav_MatchCallMenu
 {

@@ -285,13 +285,11 @@ static void SwapRentalMons(void)
 
 bool8 InSlateportBattleTent(void)
 {
-#ifdef FIRERED
     if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SLATEPORT_CITY_BATTLE_TENT_CORRIDOR_HNS)
       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SLATEPORT_CITY_BATTLE_TENT_CORRIDOR_HNS))
      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SLATEPORT_CITY_BATTLE_TENT_BATTLE_ROOM_HNS)
       && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SLATEPORT_CITY_BATTLE_TENT_BATTLE_ROOM_HNS)))
         return TRUE;
-#endif
     return gMapHeader.regionMapSectionId == MAPSEC_SLATEPORT_CITY
            && (gMapHeader.mapLayoutId == LAYOUT_BATTLE_TENT_CORRIDOR || gMapHeader.mapLayoutId == LAYOUT_BATTLE_TENT_BATTLE_ROOM);
 }

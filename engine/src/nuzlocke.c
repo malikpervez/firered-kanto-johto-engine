@@ -26,133 +26,6 @@ EWRAM_DATA u8 OneTypeChallengeCaptureBlocked = FALSE;
 // Special/gift Pokemon do NOT consume the zone's encounter.
 static const u8 sNuzlockeLUT[] =
 {
-#if IS_HNS
-    // Kanto Routes
-    [MAPSEC_ROUTE_1]          = 0x00,
-    [MAPSEC_ROUTE_2]          = 0x01,
-    [MAPSEC_ROUTE_3]          = 0x02,
-    [MAPSEC_ROUTE_4]          = 0x03,
-    [MAPSEC_ROUTE_5]          = 0x04,
-    [MAPSEC_ROUTE_6]          = 0x05,
-    [MAPSEC_ROUTE_7]          = 0x06,
-    [MAPSEC_ROUTE_8]          = 0x07,
-    [MAPSEC_ROUTE_9]          = 0x08,
-    [MAPSEC_ROUTE_10]         = 0x09,
-    [MAPSEC_ROUTE_11]         = 0x0A,
-    [MAPSEC_ROUTE_12]         = 0x0B,
-    [MAPSEC_ROUTE_13]         = 0x0C,
-    [MAPSEC_ROUTE_14]         = 0x0D,
-    [MAPSEC_ROUTE_15]         = 0x0E,
-    [MAPSEC_ROUTE_16]         = 0x0F,
-    [MAPSEC_ROUTE_17]         = 0x10,
-    [MAPSEC_ROUTE_18]         = 0x11,
-    [MAPSEC_ROUTE_19]         = 0x12,
-    [MAPSEC_ROUTE_20]         = 0x13,
-    [MAPSEC_ROUTE_21]         = 0x14,
-    [MAPSEC_ROUTE_22]         = 0x15,
-    [MAPSEC_ROUTE_23]         = 0x16,
-    [MAPSEC_ROUTE_24]         = 0x17,
-    [MAPSEC_ROUTE_25]         = 0x18,
-    // Johto-Kanto Routes
-    [MAPSEC_ROUTE_26]         = 0x19,
-    [MAPSEC_ROUTE_27]         = 0x1A,
-    [MAPSEC_ROUTE_28]         = 0x1B,
-    // Johto Routes
-    [MAPSEC_ROUTE_29]         = 0x1C,
-    [MAPSEC_ROUTE_30]         = 0x1D,
-    [MAPSEC_ROUTE_31]         = 0x1E,
-    [MAPSEC_ROUTE_32]         = 0x1F,
-    [MAPSEC_ROUTE_33]         = 0x20,
-    [MAPSEC_ROUTE_34]         = 0x21,
-    [MAPSEC_ROUTE_35]         = 0x22,
-    [MAPSEC_ROUTE_36]         = 0x23,
-    [MAPSEC_ROUTE_37]         = 0x24,
-    [MAPSEC_ROUTE_38]         = 0x25,
-    [MAPSEC_ROUTE_39]         = 0x26,
-    [MAPSEC_ROUTE_40]         = 0x27,
-    [MAPSEC_ROUTE_41]         = 0x28,
-    [MAPSEC_ROUTE_42]         = 0x29,
-    [MAPSEC_ROUTE_43]         = 0x2A,
-    [MAPSEC_ROUTE_44]         = 0x2B,
-    [MAPSEC_ROUTE_45]         = 0x2C,
-    [MAPSEC_ROUTE_46]         = 0x2D,
-    [MAPSEC_ROUTE_47]         = 0x2E,
-    [MAPSEC_ROUTE_48]         = 0x2F,
-    // Dungeons: Johto
-    [MAPSEC_DARK_CAVE]        = 0x30,
-    [MAPSEC_SPROUT_TOWER]     = 0x31,
-    [MAPSEC_RUINS_OF_ALPH]    = 0x32,
-    [MAPSEC_UNION_CAVE]       = 0x33,
-    [MAPSEC_SLOWPOKE_WELL]    = 0x34,
-    [MAPSEC_ILEX_FOREST]      = 0x35,
-    [MAPSEC_NATIONAL_PARK]    = 0x36,
-    [MAPSEC_LAKE_OF_RAGE]     = 0x37,
-    [MAPSEC_ICE_PATH]         = 0x38,
-    [MAPSEC_MT_SILVER]        = 0x39,
-    [MAPSEC_TOHJO_FALLS]      = 0x3A,
-    [MAPSEC_SAFARI_ZONE_GATE] = 0x3B,
-    [MAPSEC_DRAGONS_DEN]      = 0x3C,
-    [MAPSEC_CLIFF_CAVE]       = 0x3D,
-    [MAPSEC_ROCKET_HIDEOUT_HNS] = 0x3E,
-    [MAPSEC_TIN_TOWER]        = 0x3F,
-    [MAPSEC_MT_MORTAR]        = 0x40,
-    [MAPSEC_WHIRL_ISLANDS]    = 0x41,
-    [MAPSEC_BURNED_TOWER]     = 0x42,
-    [MAPSEC_SAFARI_ZONE]      = 0x43,
-    // Dungeons: Kanto
-    [MAPSEC_ROCK_TUNNEL]      = 0x44,
-    [MAPSEC_SEAFOAM_ISLANDS]  = 0x45,
-    [MAPSEC_VIRIDIAN_FOREST]  = 0x46,
-    [MAPSEC_MT_MOON]          = 0x47,
-    [MAPSEC_DIGLETTS_CAVE]    = 0x48,
-    [MAPSEC_VICTORY_ROAD_HNS] = 0x49,
-    [MAPSEC_CERULEAN_CAVE]    = 0x4A,
-    // Cities/Towns: Johto
-    [MAPSEC_OLIVINE_CITY]     = 0x4B,
-    [MAPSEC_BLACKTHORN_CITY]  = 0x4C,
-    [MAPSEC_AZALEA_TOWN]      = 0x4D,
-    [MAPSEC_MAHOGANY_TOWN]    = 0x4E,
-    [MAPSEC_CIANWOOD_CITY]    = 0x4F,
-    [MAPSEC_GOLDENROD_CITY]   = 0x50,
-    [MAPSEC_CHERRYGROVE_CITY] = 0x51,
-    [MAPSEC_NEW_BARK_TOWN]    = 0x52,
-    [MAPSEC_VIOLET_CITY]      = 0x53,
-    [MAPSEC_ECRUTEAK_CITY]    = 0x54,
-    // Cities/Towns: Kanto
-    [MAPSEC_VERMILION_CITY]   = 0x55,
-    [MAPSEC_CERULEAN_CITY]    = 0x56,
-    [MAPSEC_CINNABAR_ISLAND]  = 0x57,
-    [MAPSEC_SAFFRON_CITY]     = 0x58,
-    [MAPSEC_FUCHSIA_CITY]     = 0x59,
-    [MAPSEC_CELADON_CITY]     = 0x5A,
-    [MAPSEC_PALLET_TOWN]      = 0x5B,
-    [MAPSEC_VIRIDIAN_CITY]    = 0x5C,
-    [MAPSEC_PEWTER_CITY]      = 0x5D,
-    [MAPSEC_LAVENDER_TOWN]    = 0x5E,
-    // Special
-    [MAPSEC_BATTLE_FRONTIER]  = 0x5F,
-    [MAPSEC_FARAWAY_ISLAND]   = 0x60,
-    // Alola
-    [MAPSEC_MELEMELE_ISLAND] = 0x61,
-    [MAPSEC_AKALA_ISLAND] = 0x62,
-    [MAPSEC_ULAULA_ISLAND] = 0x63,
-    [MAPSEC_PONI_ISLAND] = 0x64,
-    [MAPSEC_ALOLA_OCEAN] = 0x65,
-    [MAPSEC_AKALA_CAVE] = 0x66,
-    [MAPSEC_AKALA_FOREST] = 0x67,
-    [MAPSEC_PONI_CAVE] = 0x68,
-    [MAPSEC_ULAULA_CAVE] = 0x69,
-    [MAPSEC_ULAULA_CAVE_2] = 0x6A,
-    // Sinjoh
-    [MAPSEC_SNOWSWEPT_CAVERN] = 0x6B,
-    [MAPSEC_ROUTE_49] = 0x6C,
-    [MAPSEC_ROUTE_50] = 0x6D,
-    [MAPSEC_NEW_SINJOH] = 0x6E,
-    [MAPSEC_SINJOH_RUINS] = 0x6F,
-    // Max bit index: 0x6F (112 bits). nuzlockeEncounterFlags[16] supports up to 0x7F (128 bits).
-    // If you exceed 0x7F, grow nuzlockeEncounterFlags in include/global.h.
-
-#else
     // Hoenn Routes
     [MAPSEC_ROUTE_101]        = 0x00,
     [MAPSEC_ROUTE_102]        = 0x01,
@@ -260,7 +133,6 @@ static const u8 sNuzlockeLUT[] =
     [MAPSEC_LOST_CAVE]        = 0x63,
     [MAPSEC_PATTERN_BUSH]     = 0x64,
     [MAPSEC_BATTLE_FRONTIER]  = 0x65,
-#endif
 };
 
 // The Bug Catching Contest and the Safari Zone hand out balls and expect the
@@ -315,11 +187,9 @@ bool8 IsNuzlockeNicknamingActive(void)
 
 u8 NuzlockeFlagSet(u16 mapsec)
 {
-#ifdef FIRERED
     // The B2 visit has no encounter allocation; never read an absent LUT entry.
     if (mapsec >= ARRAY_COUNT(sNuzlockeLUT))
         return 0;
-#endif
     u16 id = sNuzlockeLUT[mapsec];
     u8 *ptr = &gSaveBlock3Ptr->challengeSettings.nuzlockeEncounterFlags[id / 8];
 
@@ -329,10 +199,8 @@ u8 NuzlockeFlagSet(u16 mapsec)
 
 u8 NuzlockeFlagClear(u16 mapsec)
 {
-#ifdef FIRERED
     if (mapsec >= ARRAY_COUNT(sNuzlockeLUT))
         return 0;
-#endif
     u16 id = sNuzlockeLUT[mapsec];
     u8 *ptr = &gSaveBlock3Ptr->challengeSettings.nuzlockeEncounterFlags[id / 8];
 
@@ -342,10 +210,8 @@ u8 NuzlockeFlagClear(u16 mapsec)
 
 u8 NuzlockeFlagGet(u16 mapsec)
 {
-#ifdef FIRERED
     if (mapsec >= ARRAY_COUNT(sNuzlockeLUT))
         return 0;
-#endif
     u16 id = sNuzlockeLUT[mapsec];
     u8 *ptr = &gSaveBlock3Ptr->challengeSettings.nuzlockeEncounterFlags[id / 8];
 

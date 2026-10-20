@@ -1,7 +1,6 @@
 #ifndef GUARD_FRIENDS_STORY_H
 #define GUARD_FRIENDS_STORY_H
 
-#ifdef FIRERED
 bool8 FriendsStory_AllocationValid(void);
 bool8 FriendsStory_IsReady(void);
 bool8 FriendsStory_TryAdopt(void);
@@ -27,6 +26,5 @@ void Special_FriendsStoryMarkInvitation(void);
 void Special_FriendsStoryInvitation(void);
 void Special_FriendsStoryCompleteDeparture(void);
 void Special_FriendsStoryIsReunionReady(void);
-#endif
 
 #endif
