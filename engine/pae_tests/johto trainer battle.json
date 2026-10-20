@@ -1,0 +1,37 @@
+{
+ "note": "Bug Catcher Al (Azalea Gym) from the Johto trainer table.",
+ "created": "2026-10-20 22:09",
+ "start": {
+  "map": "AzaleaTown_Gym_hns",
+  "x": 5,
+  "y": 10,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_TOTODILE lv20 MOVE_WATER_GUN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "battle",
+   "trainer": "TRAINER_AL_HNS",
+   "species": null,
+   "level": 5,
+   "item": null,
+   "double": false,
+   "frames": 400
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "AzaleaTown_Gym_hns",
+  "x": 5,
+  "y": 10,
+  "in_battle": true
+ }
+}

@@ -140,7 +140,8 @@ INCLUDE_SCANINC_ARGS := $(INCLUDE_DIRS:%=-I %)
 ifeq ($(DEBUG),1)
 O_LEVEL ?= g
 else
-O_LEVEL ?= 2
+# this game is built with -Os (the size it is measured and tested at); `make` and pae use it without being told
+O_LEVEL ?= s
 endif
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=$(TEST) -D$(GAME_VERSION) -std=gnu17
 ifeq ($(RELEASE),1)

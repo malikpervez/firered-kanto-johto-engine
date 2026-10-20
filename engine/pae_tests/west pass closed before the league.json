@@ -1,0 +1,67 @@
+{
+ "note": "Before the League the road crew blocks the way west.",
+ "created": "2026-10-20 22:09",
+ "start": {
+  "map": "IndigoPlateau_Exterior_Frlg",
+  "x": 4,
+  "y": 10,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_SYS_GAME_CLEAR"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "IndigoPlateau_Exterior_Frlg",
+  "x": 3,
+  "y": 10,
+  "in_battle": false,
+  "flags": {
+   "FLAG_SYS_GAME_CLEAR": false
+  }
+ }
+}
