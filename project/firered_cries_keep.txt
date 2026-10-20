@@ -1,0 +1,4 @@
+# Pokémon families whose cries the FireRed build keeps even though project/scripts/prune_cries.py finds them nowhere
+# in the game yet (one family per line, as in include/config/species_enabled.h without P_FAMILY_, e.g. TEPIG).
+# Add a family here, or just add the Pokémon to a wild table, trainer or script, then rerun:
+#   python3 project/scripts/prune_cries.py <a FireRed build tree>
