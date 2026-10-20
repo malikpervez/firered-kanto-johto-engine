@@ -134,6 +134,8 @@ gStdScripts::
 gStdScripts_End::
 
 
+@ Hoenn maps are not part of the FireRed Kanto + Johto game
+#ifndef FIRERED
 	.include "data/maps/PetalburgCity/scripts.inc"
 	.include "data/maps/SlateportCity/scripts.inc"
 	.include "data/maps/MauvilleCity/scripts.inc"
@@ -607,6 +609,11 @@ gStdScripts_End::
 	.include "data/maps/Route119_WeatherInstitute_2F/scripts.inc"
 	.include "data/maps/Route119_House/scripts.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/scripts.inc"
+#endif
+#ifdef FIRERED
+	.include "data/scripts/hoenn_kept.inc"
+	.include "data/scripts/hoenn_stubs.inc"
+#endif
 
 .if IS_FRLG
 
