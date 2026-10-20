@@ -96,7 +96,7 @@ RuinsOfAlph_Outside_Text_Scientist:
 	.string "writing on the walls of the\p"
 	.string "RUINS.\p"
 	.string "If those drawings are really\n"
-	.string "POKéMON, there should be many\n"
+	.string "POKéMON, there should be many\l"
 	.string "more.\p"
 	.string "I know! Let me upgrade your\n"
 	.string "POKéDEX. Follow me.$"

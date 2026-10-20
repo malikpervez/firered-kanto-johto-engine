@@ -129,7 +129,7 @@ CianwoodCity_Text_ManiacHappinessSpeech:
 
 CianwoodCity_Text_ManiacLastMon:
 	.string "If I take my POKéMON back,\n"
-	.string "what are you going to use\n"
+	.string "what are you going to use\l"
 	.string "in battle?$"
 
 CianwoodCity_Text_ManiacReturnedMon:

@@ -347,7 +347,7 @@ Route36_Text_Tips1:
 
 Route36_Text_Tips2:
 	.string "TRAINER TIPS\n"
-	.string "Use DIG to return to the entrance of\n"
+	.string "Use DIG to return to the entrance of\l"
 	.string "any place.\p"
 	.string "It is convenient for exploring\n"
 	.string "caves and other landmarks.$"

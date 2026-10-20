@@ -654,7 +654,7 @@ RocketHideout_B3F_Text_GruntM28Seen:
 	.string "guts!\p"
 	.string "I'll warn you, I got better!\p"
 	.string "If you can beat me, I'll tell\l"
-	.string "you a password to the boss'\n"
+	.string "you a password to the boss'\l"
 	.string "room!$"
 
 RocketHideout_B3F_Text_GruntM28Beaten:

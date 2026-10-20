@@ -62,7 +62,7 @@ Text_ItemGiveaway:
 
 NewSinjoh_Text_Artist_No:
 	.string "You aren't one of those anti-tourist\n"
-	.string "types are you?\n"
+	.string "types are you?\l"
 	.string "Beauty is meant to be shared.$"
 
 NewSinjoh_EventScript_ZoomLens_No::

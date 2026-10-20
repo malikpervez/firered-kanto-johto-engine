@@ -41,7 +41,7 @@ DarkCave2_Text_Nerd:
 	.string "What am I doing here?\p"
 	.string "Hey, don't you worry about it.\p"
 	.string "I'll give you a pair of BLACK-\n"
-	.string "GLASSES, so forget you saw me,\n"
+	.string "GLASSES, so forget you saw me,\l"
 	.string "OK?$"
 
 DarkCave2_Text_Nerd2:

@@ -106,7 +106,7 @@ Route46_Text_ErinPostRematch:
 Route46_Text_PicnickerErin2Beaten:
 	.string "Aww… I keep losing all the time!\p"
 	.string "I'll just have to try harder!\n"
-	.string "Anyway, thanks for battling\n"
+	.string "Anyway, thanks for battling\l"
 	.string "me again and again.\p"
 	.string "Here's that present from the\n"
 	.string "other time.$"

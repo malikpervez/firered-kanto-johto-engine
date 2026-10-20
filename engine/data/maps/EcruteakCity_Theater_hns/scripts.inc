@@ -1071,7 +1071,7 @@ EcruteakCity_Theater_Text_GirlLugia:
 
 EcruteakCity_Theater_Text_ZukiHooh:
 	.string "ZUKI: {PLAYER}!\n"
-	.string "We'll be at the TIN TOWER.\n"
+	.string "We'll be at the TIN TOWER.\l"
 	.string "See you there!$"
 
 EcruteakCity_Theater_Text_ZukiLugia:

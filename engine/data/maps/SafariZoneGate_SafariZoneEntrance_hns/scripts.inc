@@ -383,7 +383,7 @@ SafariZoneGate_SafariZoneEntrance_Movement_ReturnToTable:
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaWelcome:
 	.string "Hi {PLAYER}!\n"
-	.string "I've been waiting for you.\n"
+	.string "I've been waiting for you.\l"
 	.string "What do you think?\p"
 	.string "This is a brand new SAFARI ZONE\n"
 	.string "by the way...\p"

@@ -187,10 +187,10 @@ VioletCity_TrainerSchool_Text_Notebook2:
 
 VioletCity_TrainerSchool_Text_Notebook3:
 	.string "People who catch and use\n"
-	.string "POKéMON in battle are POKéMON\n"
+	.string "POKéMON in battle are POKéMON\l"
 	.string "trainers.\p"
 	.string "They are expected to visit\n"
-	.string "POKéMON GYMS and defeat other\n"
+	.string "POKéMON GYMS and defeat other\l"
 	.string "trainers.\p"
 	.string "The next page is… Blank!\p"
 	.string "Boy: E-he-he…\p"

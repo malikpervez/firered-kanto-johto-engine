@@ -642,7 +642,7 @@ WhirlIslands_LugiaChamber_Text_Kimono_Closing1::
 	.string "only to fail...\p"
 	.string "{PLAYER}, your heart in complete\n"
 	.string "harmony with the Tidal Bell has finally\l"
-	.string "allowed it to appear...\n"
+	.string "allowed it to appear...\l"
 	.string "{PLAYER}, don't you see?\p"
 	.string "LUGIA... It must have been waiting for\n"
 	.string "someone like you all this time.\p"

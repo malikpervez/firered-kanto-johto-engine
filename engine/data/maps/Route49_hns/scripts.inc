@@ -125,7 +125,7 @@ Route49_Text_KimonoGirl:
 	.string "your deeds from my cousins\l"
 	.string "in ECRUTEAK CITY.\p"
 	.string "My sisters wish to meet with you.\l"
-	.string "If you find the time, please\n"
+	.string "If you find the time, please\l"
 	.string "seek us out in the town up ahead.$"
 
 Route49_EventScript_Item_StarDust::

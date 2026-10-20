@@ -176,7 +176,7 @@ Route45_Text_HikerParryGivesIron:
 	.string "I just can't find a way to win!\p"
 	.string "Keep it up!\p"
 	.string "Oh, and take this -- it's the\n"
-	.string "gift you couldn't take when we\n"
+	.string "gift you couldn't take when we\l"
 	.string "last met.$"
 
 Route45_Text_BlackbeltKenjiSeen:

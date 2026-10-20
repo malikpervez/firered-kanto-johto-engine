@@ -728,7 +728,7 @@ SinjohRuins_Lab_Text_Note8:
 	.string "......................\p"
 	.string "My POKéMON....\p"
 	.string "Together, all 6 of my POKéMON\n"
-	.string "were able to smash through\n"
+	.string "were able to smash through\l"
 	.string "A false wall in the temple.\p"
 	.string "But it was waiting for us...\p"
 	.string "Something like a giant titan...\p"
