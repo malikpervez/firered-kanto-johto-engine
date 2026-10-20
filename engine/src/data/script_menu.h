@@ -1149,7 +1149,9 @@ static const struct MenuAction MultichoiceList_OlivineHarbor[] =
     {gText_SouthernIsland},
     {gText_BirthIsland},
     {gText_FarawayIsland},
+#ifndef FIRERED // the FireRed game has no Battle Frontier
     {gText_BattleFrontier},
+#endif
     {gText_Exit},
 };
 static const struct MenuAction MultichoiceList_VermilionHarbor[] =

@@ -37,411 +37,54 @@
       "bytes": 216,
       "sha256": "b4469368016755809e884b73bbe3a546ac5fac922a4fcd2df5307f149fdb4430"
     },
-    "BattleFrontier_BattleArenaBattleRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleArenaBattleRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleArenaCorridor_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleArenaCorridor_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleArenaLobby_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleArenaLobby_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleDomeBattleRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleDomeBattleRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleDomeCorridor_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleDomeCorridor_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleDomeLobby_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleDomeLobby_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleDomePreBattleRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleDomePreBattleRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleFactoryBattleRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleFactoryBattleRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleFactoryLobby_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleFactoryLobby_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleFactoryPreBattleRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleFactoryPreBattleRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePalaceLobby_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePalaceLobby_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePikeCorridor_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePikeCorridor_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePikeLobby_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePikeLobby_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePikeRoomFinal_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePikeRoomFinal_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePikeRoomNormal_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePikeRoomNormal_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePikeRoomWildMons_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePikeRoomWildMons_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePikeThreePathRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePikeThreePathRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePyramidFloor_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePyramidFloor_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePyramidLobby_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePyramidLobby_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePyramidTop_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePyramidTop_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleTowerBattleRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleTowerBattleRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleTowerCorridor_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleTowerCorridor_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleTowerLobby_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleTowerLobby_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleTowerMultiCorridor_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleTowerMultiCorridor_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattleTowerMultiPartnerRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattleTowerMultiPartnerRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_ExchangeServiceCorner_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_ExchangeServiceCorner_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_Lounge1_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_Lounge1_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_Lounge2_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_Lounge2_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_RankingHall_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_RankingHall_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_ScottsHouse_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_ScottsHouse_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare01_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare01_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare02_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare02_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare03_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare03_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare04_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare04_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare05_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare05_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare06_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare06_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare07_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare07_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare08_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare08_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare09_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare09_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare10_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare10_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare11_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare11_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare12_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare12_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare13_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare13_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare14_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare14_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare15_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare15_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattlePyramidSquare16_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattlePyramidSquare16_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleTentBattleRoom_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
     "BattleTentCorridor_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
+      "owner": "BattleTentBattleRoom_hns_Layout_Border",
       "source_filepath": "data/layouts/BattleTentCorridor_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
+      "owner_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
       "bytes": 8,
       "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
     },
     "BattleTentLobby_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
+      "owner": "BattleTentBattleRoom_hns_Layout_Border",
       "source_filepath": "data/layouts/BattleTentLobby_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
-      "bytes": 8,
-      "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "Mart_hns_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
-      "source_filepath": "data/layouts/Mart_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
+      "owner_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
       "bytes": 8,
       "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
     },
     "MossdeepCity_EReaderTrainerHouse_1F_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
+      "owner": "BattleTentBattleRoom_hns_Layout_Border",
       "source_filepath": "data/layouts/MossdeepCity_EReaderTrainerHouse_1F_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
+      "owner_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
       "bytes": 8,
       "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
     },
     "MossdeepCity_EReaderTrainerHouse_2F_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
+      "owner": "BattleTentBattleRoom_hns_Layout_Border",
       "source_filepath": "data/layouts/MossdeepCity_EReaderTrainerHouse_2F_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
+      "owner_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
       "bytes": 8,
       "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
     },
     "RS_SafariZone_Entrance_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
+      "owner": "BattleTentBattleRoom_hns_Layout_Border",
       "source_filepath": "data/layouts/RS_SafariZone_Entrance_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
+      "owner_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
       "bytes": 8,
       "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
     },
     "RS_SafariZone_RestHouse_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
+      "owner": "BattleTentBattleRoom_hns_Layout_Border",
       "source_filepath": "data/layouts/RS_SafariZone_RestHouse_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
+      "owner_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
       "bytes": 8,
       "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
     },
     "UnionRoom_Layout_Border": {
-      "owner": "BattleElevator_hns_Layout_Border",
+      "owner": "BattleTentBattleRoom_hns_Layout_Border",
       "source_filepath": "data/layouts/UnionRoom/border.bin",
-      "owner_filepath": "data/layouts/BattleElevator_hns/border.bin",
+      "owner_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
       "bytes": 8,
       "sha256": "efef8d5a9f8dbe5bb218e6b0cc452583eb9d1452b615b1c7ab66ad49c82e9d70"
-    },
-    "BattleFrontier_BattlePalaceCorridor_hns_Layout_Border": {
-      "owner": "BattleFrontier_BattlePalaceBattleRoom_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_BattlePalaceCorridor_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleFrontier_BattlePalaceBattleRoom_hns/border.bin",
-      "bytes": 8,
-      "sha256": "56df6c33017e6cf2c18e4f3182d0bba6f355f43f1710a56a4c503f1df8427a24"
-    },
-    "BattleFrontier_ReceptionGate_hns_Layout_Border": {
-      "owner": "BattleFrontier_BattlePalaceBattleRoom_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_ReceptionGate_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleFrontier_BattlePalaceBattleRoom_hns/border.bin",
-      "bytes": 8,
-      "sha256": "56df6c33017e6cf2c18e4f3182d0bba6f355f43f1710a56a4c503f1df8427a24"
-    },
-    "VerdanturfTown_BattleTentBattleRoom_hns_Layout_Border": {
-      "owner": "BattleFrontier_BattlePalaceBattleRoom_hns_Layout_Border",
-      "source_filepath": "data/layouts/VerdanturfTown_BattleTentBattleRoom_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleFrontier_BattlePalaceBattleRoom_hns/border.bin",
-      "bytes": 8,
-      "sha256": "56df6c33017e6cf2c18e4f3182d0bba6f355f43f1710a56a4c503f1df8427a24"
     },
     "ArtisanCave_B1F_Layout_Border": {
       "owner": "ArtisanCave_1F_Layout_Border",
@@ -3047,38 +2690,24 @@
       "bytes": 8,
       "sha256": "aa298641e3346d9c7ac51454222ff057768946e61980fd82e4db65912df412fe"
     },
-    "BattleFrontier_OutsideWest_hns_Layout_Border": {
-      "owner": "BattleFrontier_OutsideEast_hns_Layout_Border",
-      "source_filepath": "data/layouts/BattleFrontier_OutsideWest_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleFrontier_OutsideEast_hns/border.bin",
-      "bytes": 8,
-      "sha256": "0c2871e576a63043efd779a5664d84741cc6512c07b03ae39e8deb07b064d3a4"
-    },
-    "BirthIsland_Exterior_hns_Layout_Border": {
-      "owner": "BattleFrontier_OutsideEast_hns_Layout_Border",
-      "source_filepath": "data/layouts/BirthIsland_Exterior_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleFrontier_OutsideEast_hns/border.bin",
-      "bytes": 8,
-      "sha256": "0c2871e576a63043efd779a5664d84741cc6512c07b03ae39e8deb07b064d3a4"
-    },
     "FarawayIsland_Entrance_hns_Layout_Border": {
-      "owner": "BattleFrontier_OutsideEast_hns_Layout_Border",
+      "owner": "BirthIsland_Exterior_hns_Layout_Border",
       "source_filepath": "data/layouts/FarawayIsland_Entrance_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleFrontier_OutsideEast_hns/border.bin",
+      "owner_filepath": "data/layouts/BirthIsland_Exterior_hns/border.bin",
       "bytes": 8,
       "sha256": "0c2871e576a63043efd779a5664d84741cc6512c07b03ae39e8deb07b064d3a4"
     },
     "RS_BattleTower_Layout_Border": {
-      "owner": "BattleFrontier_OutsideEast_hns_Layout_Border",
+      "owner": "BirthIsland_Exterior_hns_Layout_Border",
       "source_filepath": "data/layouts/RS_BattleTower_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BattleFrontier_OutsideEast_hns/border.bin",
+      "owner_filepath": "data/layouts/BirthIsland_Exterior_hns/border.bin",
       "bytes": 8,
       "sha256": "0c2871e576a63043efd779a5664d84741cc6512c07b03ae39e8deb07b064d3a4"
     },
     "SouthernIsland_Exterior_hns_Layout_Border": {
-      "owner": "BattleFrontier_OutsideEast_hns_Layout_Border",
+      "owner": "BirthIsland_Exterior_hns_Layout_Border",
       "source_filepath": "data/layouts/SouthernIsland_Exterior_hns/border.bin",
-      "owner_filepath": "data/layouts/BattleFrontier_OutsideEast_hns/border.bin",
+      "owner_filepath": "data/layouts/BirthIsland_Exterior_hns/border.bin",
       "bytes": 8,
       "sha256": "0c2871e576a63043efd779a5664d84741cc6512c07b03ae39e8deb07b064d3a4"
     },
@@ -6050,41 +5679,6 @@
       "bytes": 176,
       "sha256": "c684b5b57d33200ecb47e00c062aff1aa8fa45825253056b97f4cfe0ae20d99b"
     },
-    "TrainerHill_2F_hns_Layout_Border": {
-      "owner": "TrainerHill_1F_hns_Layout_Border",
-      "source_filepath": "data/layouts/TrainerHill_2F_hns/border.bin",
-      "owner_filepath": "data/layouts/TrainerHill_1F_hns/border.bin",
-      "bytes": 8,
-      "sha256": "0bde8b5d0bef72ccc3fde59c9bf351ad45a86b2094e5e2f318528ff3f136ef4b"
-    },
-    "TrainerHill_3F_hns_Layout_Border": {
-      "owner": "TrainerHill_1F_hns_Layout_Border",
-      "source_filepath": "data/layouts/TrainerHill_3F_hns/border.bin",
-      "owner_filepath": "data/layouts/TrainerHill_1F_hns/border.bin",
-      "bytes": 8,
-      "sha256": "0bde8b5d0bef72ccc3fde59c9bf351ad45a86b2094e5e2f318528ff3f136ef4b"
-    },
-    "TrainerHill_4F_hns_Layout_Border": {
-      "owner": "TrainerHill_1F_hns_Layout_Border",
-      "source_filepath": "data/layouts/TrainerHill_4F_hns/border.bin",
-      "owner_filepath": "data/layouts/TrainerHill_1F_hns/border.bin",
-      "bytes": 8,
-      "sha256": "0bde8b5d0bef72ccc3fde59c9bf351ad45a86b2094e5e2f318528ff3f136ef4b"
-    },
-    "TrainerHill_Entrance_hns_Layout_Border": {
-      "owner": "TrainerHill_1F_hns_Layout_Border",
-      "source_filepath": "data/layouts/TrainerHill_Entrance_hns/border.bin",
-      "owner_filepath": "data/layouts/TrainerHill_1F_hns/border.bin",
-      "bytes": 8,
-      "sha256": "0bde8b5d0bef72ccc3fde59c9bf351ad45a86b2094e5e2f318528ff3f136ef4b"
-    },
-    "TrainerHill_Roof_hns_Layout_Border": {
-      "owner": "TrainerHill_1F_hns_Layout_Border",
-      "source_filepath": "data/layouts/TrainerHill_Roof_hns/border.bin",
-      "owner_filepath": "data/layouts/TrainerHill_1F_hns/border.bin",
-      "bytes": 8,
-      "sha256": "0bde8b5d0bef72ccc3fde59c9bf351ad45a86b2094e5e2f318528ff3f136ef4b"
-    },
     "WhirlIslands_B1F_hns_Layout_Border": {
       "owner": "WhirlIslands_B1F_Inner_hns_Layout_Border",
       "source_filepath": "data/layouts/WhirlIslands_B1F_hns/border.bin",
@@ -6119,62 +5713,6 @@
       "owner_filepath": "data/layouts/SinjohRuins_RegigigasRoom_hns/border.bin",
       "bytes": 8,
       "sha256": "0cc8440e46eb505176725dbaf10cc2837fba6105185e9da788e39c249c7defe0"
-    },
-    "CinnabarIsland_Mart_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "CeruleanCity_Mart_Frlg_FireRedGeometry_Blockdata",
-      "source_filepath": "data/layouts/PewterCity_Mart_hns/map.bin",
-      "owner_filepath": "data/layouts/CeruleanCity_Mart_hns/map.bin",
-      "bytes": 198,
-      "sha256": "87e68f94083db170de581a81f57bbca41a81a6e8bfa0bf8bf736724259c161a6"
-    },
-    "FuchsiaCity_Mart_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "CeruleanCity_Mart_Frlg_FireRedGeometry_Blockdata",
-      "source_filepath": "data/layouts/FuchsiaCity_Mart_hns/map.bin",
-      "owner_filepath": "data/layouts/CeruleanCity_Mart_hns/map.bin",
-      "bytes": 198,
-      "sha256": "87e68f94083db170de581a81f57bbca41a81a6e8bfa0bf8bf736724259c161a6"
-    },
-    "LavenderTown_Mart_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "CeruleanCity_Mart_Frlg_FireRedGeometry_Blockdata",
-      "source_filepath": "data/layouts/LavenderTown_Mart_hns/map.bin",
-      "owner_filepath": "data/layouts/CeruleanCity_Mart_hns/map.bin",
-      "bytes": 198,
-      "sha256": "87e68f94083db170de581a81f57bbca41a81a6e8bfa0bf8bf736724259c161a6"
-    },
-    "PewterCity_Mart_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "CeruleanCity_Mart_Frlg_FireRedGeometry_Blockdata",
-      "source_filepath": "data/layouts/PewterCity_Mart_hns/map.bin",
-      "owner_filepath": "data/layouts/CeruleanCity_Mart_hns/map.bin",
-      "bytes": 198,
-      "sha256": "87e68f94083db170de581a81f57bbca41a81a6e8bfa0bf8bf736724259c161a6"
-    },
-    "SaffronCity_Mart_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "CeruleanCity_Mart_Frlg_FireRedGeometry_Blockdata",
-      "source_filepath": "data/layouts/SaffronCity_Mart_hns/map.bin",
-      "owner_filepath": "data/layouts/CeruleanCity_Mart_hns/map.bin",
-      "bytes": 198,
-      "sha256": "87e68f94083db170de581a81f57bbca41a81a6e8bfa0bf8bf736724259c161a6"
-    },
-    "VermilionCity_Mart_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "CeruleanCity_Mart_Frlg_FireRedGeometry_Blockdata",
-      "source_filepath": "data/layouts/VermilionCity_Mart_hns/map.bin",
-      "owner_filepath": "data/layouts/CeruleanCity_Mart_hns/map.bin",
-      "bytes": 198,
-      "sha256": "87e68f94083db170de581a81f57bbca41a81a6e8bfa0bf8bf736724259c161a6"
-    },
-    "UndergroundPath_SouthEntrance_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "UndergroundPath_EastEntrance_Frlg_FireRedGeometry_Blockdata",
-      "source_filepath": "data/layouts/Route6_TunnelEntrance_hns/map.bin",
-      "owner_filepath": "data/layouts/Route8_TunnelEntrance_hns/map.bin",
-      "bytes": 972,
-      "sha256": "b3b6d3b9d40d3e846d9a143ed9ee1ca71e5d72cc8a00406e6e36f0e313392a60"
-    },
-    "UndergroundPath_WestEntrance_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "UndergroundPath_NorthEntrance_Frlg_FireRedGeometry_Blockdata",
-      "source_filepath": "data/layouts/Route7_TunnelEntrance_hns/map.bin",
-      "owner_filepath": "data/layouts/Route5_TunnelEntrance_hns/map.bin",
-      "bytes": 972,
-      "sha256": "ff00acc5fd66f2e9b49ec091369f5ba3d362e55d904fd4adf5d295a46f28f1c4"
     }
   }
 }

@@ -613,6 +613,7 @@ gStdScripts_End::
 #ifdef FIRERED
 	.include "data/scripts/hoenn_kept.inc"
 	.include "data/scripts/hoenn_stubs.inc"
+	.include "data/scripts/frontier_stubs.inc"
 #endif
 
 .if IS_FRLG

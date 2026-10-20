@@ -13767,8 +13767,7 @@
             "border_filepath": "data/layouts/Gate_Route40_TrainerHill_Courtyard_hns/border.bin",
             "blockdata_filepath": "data/layouts/Gate_Route40_TrainerHill_Courtyard_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "hns",
-            "firered_campaign": true
+            "layout_version": "hns"
         },
         {
             "id": "LAYOUT_GATE_ROUTE43_HNS",
@@ -17042,8 +17041,7 @@
             "border_filepath": "data/layouts/TrainerHill_Courtyard_hns/border.bin",
             "blockdata_filepath": "data/layouts/TrainerHill_Courtyard_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "hns",
-            "firered_campaign": true
+            "layout_version": "hns"
         },
         {
             "id": "LAYOUT_TRAINER_HILL_ENTRANCE_HNS",
@@ -17055,8 +17053,7 @@
             "border_filepath": "data/layouts/TrainerHill_Entrance_hns/border.bin",
             "blockdata_filepath": "data/layouts/TrainerHill_Entrance_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_TRAINER_HILL_1F_HNS",
@@ -17068,8 +17065,7 @@
             "border_filepath": "data/layouts/TrainerHill_1F_hns/border.bin",
             "blockdata_filepath": "data/layouts/TrainerHill_1F_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_TRAINER_HILL_2F_HNS",
@@ -17081,8 +17077,7 @@
             "border_filepath": "data/layouts/TrainerHill_2F_hns/border.bin",
             "blockdata_filepath": "data/layouts/TrainerHill_2F_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_TRAINER_HILL_3F_HNS",
@@ -17094,8 +17089,7 @@
             "border_filepath": "data/layouts/TrainerHill_3F_hns/border.bin",
             "blockdata_filepath": "data/layouts/TrainerHill_3F_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_TRAINER_HILL_4F_HNS",
@@ -17107,8 +17101,7 @@
             "border_filepath": "data/layouts/TrainerHill_4F_hns/border.bin",
             "blockdata_filepath": "data/layouts/TrainerHill_4F_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_TRAINER_HILL_ROOF_HNS",
@@ -17120,8 +17113,7 @@
             "border_filepath": "data/layouts/TrainerHill_Roof_hns/border.bin",
             "blockdata_filepath": "data/layouts/TrainerHill_Roof_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_TREES_HNS",
@@ -18439,8 +18431,7 @@
             "border_filepath": "data/layouts/BattleFrontier_OutsideWest_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_OutsideWest_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY_HNS",
@@ -18452,8 +18443,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleTowerLobby_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleTowerLobby_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_TOWER_CORRIDOR_HNS",
@@ -18465,8 +18455,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleTowerCorridor_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleTowerCorridor_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_TOWER_BATTLE_ROOM_HNS",
@@ -18478,8 +18467,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleTowerBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleTowerBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_OUTSIDE_EAST_HNS",
@@ -18491,8 +18479,7 @@
             "border_filepath": "data/layouts/BattleFrontier_OutsideEast_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_OutsideEast_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_PARTNER_ROOM_HNS",
@@ -18504,8 +18491,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleTowerMultiPartnerRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleTowerMultiPartnerRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_TOWER_MULTI_CORRIDOR_HNS",
@@ -18517,8 +18503,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleTowerMultiCorridor_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleTowerMultiCorridor_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_DOME_LOBBY_HNS",
@@ -18530,8 +18515,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleDomeLobby_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleDomeLobby_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_DOME_CORRIDOR_HNS",
@@ -18543,8 +18527,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleDomeCorridor_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleDomeCorridor_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM_HNS",
@@ -18556,8 +18539,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleDomePreBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleDomePreBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM_HNS",
@@ -18569,8 +18551,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleDomeBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleDomeBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY_HNS",
@@ -18582,8 +18563,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePalaceLobby_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePalaceLobby_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PALACE_CORRIDOR_HNS",
@@ -18595,8 +18575,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePalaceCorridor_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePalaceCorridor_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PALACE_BATTLE_ROOM_HNS",
@@ -18608,8 +18587,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePalaceBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePalaceBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY_HNS",
@@ -18621,8 +18599,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePyramidLobby_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePyramidLobby_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR_HNS",
@@ -18634,8 +18611,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePyramidFloor_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePyramidFloor_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE01_HNS",
@@ -18646,8 +18622,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare01_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare01_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE02_HNS",
@@ -18658,8 +18633,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare02_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare02_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE03_HNS",
@@ -18670,8 +18644,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare03_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare03_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE04_HNS",
@@ -18682,8 +18655,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare04_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare04_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE05_HNS",
@@ -18694,8 +18666,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare05_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare05_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE06_HNS",
@@ -18706,8 +18677,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare06_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare06_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE07_HNS",
@@ -18718,8 +18688,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare07_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare07_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE08_HNS",
@@ -18730,8 +18699,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare08_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare08_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE09_HNS",
@@ -18742,8 +18710,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare09_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare09_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE10_HNS",
@@ -18754,8 +18721,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare10_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare10_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE11_HNS",
@@ -18766,8 +18732,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare11_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare11_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE12_HNS",
@@ -18778,8 +18743,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare12_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare12_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE13_HNS",
@@ -18790,8 +18754,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare13_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare13_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE14_HNS",
@@ -18802,8 +18765,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare14_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare14_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE15_HNS",
@@ -18814,8 +18776,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare15_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare15_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_PYRAMID_SQUARE16_HNS",
@@ -18826,8 +18787,7 @@
             "secondary_tileset": "gTileset_BattlePyramid",
             "border_filepath": "data/layouts/BattlePyramidSquare16_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattlePyramidSquare16_hns/map.bin",
-            "game_version": "hns",
-            "firered_campaign": true
+            "game_version": "hns"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_TOP_HNS",
@@ -18839,8 +18799,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePyramidTop_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePyramidTop_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_ARENA_LOBBY_HNS",
@@ -18852,8 +18811,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleArenaLobby_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleArenaLobby_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_ARENA_CORRIDOR_HNS",
@@ -18865,8 +18823,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleArenaCorridor_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleArenaCorridor_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_ARENA_BATTLE_ROOM_HNS",
@@ -18878,8 +18835,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleArenaBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleArenaBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY_HNS",
@@ -18891,8 +18847,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleFactoryLobby_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleFactoryLobby_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_FACTORY_PRE_BATTLE_ROOM_HNS",
@@ -18904,8 +18859,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleFactoryPreBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleFactoryPreBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_FACTORY_BATTLE_ROOM_HNS",
@@ -18917,8 +18871,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattleFactoryBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattleFactoryBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_LOBBY_HNS",
@@ -18930,8 +18883,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePikeLobby_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePikeLobby_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_CORRIDOR_HNS",
@@ -18943,8 +18895,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePikeCorridor_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePikeCorridor_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_THREE_PATH_ROOM_HNS",
@@ -18956,8 +18907,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePikeThreePathRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePikeThreePathRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_NORMAL_HNS",
@@ -18969,8 +18919,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePikeRoomNormal_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePikeRoomNormal_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_FINAL_HNS",
@@ -18982,8 +18931,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePikeRoomFinal_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePikeRoomFinal_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS_HNS",
@@ -18995,8 +18943,7 @@
             "border_filepath": "data/layouts/BattleFrontier_BattlePikeRoomWildMons_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePikeRoomWildMons_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_RANKING_HALL_HNS",
@@ -19008,8 +18955,7 @@
             "border_filepath": "data/layouts/BattleFrontier_RankingHall_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_RankingHall_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_LOUNGE1_HNS",
@@ -19021,8 +18967,7 @@
             "border_filepath": "data/layouts/BattleFrontier_Lounge1_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_Lounge1_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER_HNS",
@@ -19034,8 +18979,7 @@
             "border_filepath": "data/layouts/BattleFrontier_ExchangeServiceCorner_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_ExchangeServiceCorner_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_LOUNGE2_HNS",
@@ -19047,8 +18991,7 @@
             "border_filepath": "data/layouts/BattleFrontier_Lounge2_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_Lounge2_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_SCOTTS_HOUSE_HNS",
@@ -19060,8 +19003,7 @@
             "border_filepath": "data/layouts/BattleFrontier_ScottsHouse_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_ScottsHouse_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_FRONTIER_RECEPTION_GATE_HNS",
@@ -19073,8 +19015,7 @@
             "border_filepath": "data/layouts/BattleFrontier_ReceptionGate_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleFrontier_ReceptionGate_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_ELEVATOR_HNS",
@@ -19086,8 +19027,7 @@
             "border_filepath": "data/layouts/BattleElevator_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleElevator_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_POKEMON_CENTER_1F_HNS",
@@ -19111,8 +19051,7 @@
             "border_filepath": "data/layouts/PokemonCenter_2F_hns/border.bin",
             "blockdata_filepath": "data/layouts/PokemonCenter_2F_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_MART_HNS",
@@ -19124,8 +19063,7 @@
             "border_filepath": "data/layouts/Mart_hns/border.bin",
             "blockdata_filepath": "data/layouts/Mart_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_CONTEST_HALL_HNS",
