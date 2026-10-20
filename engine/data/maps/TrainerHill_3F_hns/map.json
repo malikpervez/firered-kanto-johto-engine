@@ -32,29 +32,5 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
-  "firered_campaign": {
-    "connections": null,
-    "object_events": [],
-    "warp_events": [
-      {
-        "x": 2,
-        "y": 1,
-        "elevation": 3,
-        "dest_map": "MAP_TRAINER_HILL_2F_HNS",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 12,
-        "y": 1,
-        "elevation": 3,
-        "dest_map": "MAP_TRAINER_HILL_4F_HNS",
-        "dest_warp_id": "0"
-      }
-    ],
-    "coord_events": [],
-    "bg_events": [],
-    "region_map_section": "JOHTO_MAPSEC_TRAINER_HILL",
-    "region": "REGION_JOHTO"
-  }
+  "bg_events": []
 }

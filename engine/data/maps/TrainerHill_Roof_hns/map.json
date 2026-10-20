@@ -46,43 +46,5 @@
     }
   ],
   "coord_events": [],
-  "bg_events": [],
-  "firered_campaign": {
-    "connections": null,
-    "object_events": [
-      {
-        "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_HNS",
-        "x": 12,
-        "y": 7,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "TrainerHill_Roof_hns_EventScript_Owner",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 9,
-        "y": 5,
-        "elevation": 3,
-        "dest_map": "MAP_TRAINER_HILL_4F_HNS",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 15,
-        "y": 5,
-        "elevation": 0,
-        "dest_map": "MAP_TRAINER_HILL_ELEVATOR_HNS",
-        "dest_warp_id": "1"
-      }
-    ],
-    "coord_events": [],
-    "bg_events": [],
-    "region_map_section": "JOHTO_MAPSEC_TRAINER_HILL",
-    "region": "REGION_JOHTO"
-  }
+  "bg_events": []
 }
