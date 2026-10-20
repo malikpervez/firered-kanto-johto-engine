@@ -1,28 +1,28 @@
 @ Johto (data/maps/BlackthornCity_hns/scripts.inc), as built into the FireRed game.
 
 BlackthornCity_hns_MapScripts::
-	map_script 2, BlackthornCity_OnFrame
-	map_script 1, BlackthornCity_OnLoad
-	map_script 3, BlackthornCity_EventScript_CityEnter
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, BlackthornCity_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, BlackthornCity_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, BlackthornCity_EventScript_CityEnter
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 BlackthornCity_OnLoad::
-	goto_if_unset 10372, BlackThornCity_EventScript_MoveGymBoy
-	goto_if_unset 10373, BlackThornCity_EventScript_MoveGymBoy
-	goto_if_unset 10374, BlackThornCity_EventScript_MoveGymBoy
+	goto_if_unset JOHTO_FLAG_BADGE05_GET, BlackThornCity_EventScript_MoveGymBoy
+	goto_if_unset JOHTO_FLAG_BADGE06_GET, BlackThornCity_EventScript_MoveGymBoy
+	goto_if_unset JOHTO_FLAG_BADGE07_GET, BlackThornCity_EventScript_MoveGymBoy
 	end
 
 BlackThornCity_EventScript_MoveGymBoy::
-	setobjectxyperm 2, 24, 27
+	setobjectxyperm LOCALID_BLACKTHORN_BOY, 24, 27
 	end
 
 BlackthornCity_OnFrame::
-	map_script_2 20550, 4, BlackthornCity_EventScript_Call
+	map_script_2 JOHTO_VAR_BLACKTHORN_CITY_STATE, 4, BlackthornCity_EventScript_Call
 	.2byte 0
 
 BlackthornCity_EventScript_CityEnter::
-	setflag 10490
+	setflag JOHTO_FLAG_VISITED_BLACKTHORN_CITY
 	callnative SetTimeBasedEncounters
 	end
 
@@ -32,8 +32,8 @@ BlackthornCity_EventScript_Call::
 	pokenavcall BlackthornCity_Text_ElmCall
 	waitmessage
 	delay 30
-	setvar 20550, 5
-	setvar 20580, 7
+	setvar JOHTO_VAR_BLACKTHORN_CITY_STATE, 5
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 7
 	release
 	end
 
@@ -56,7 +56,7 @@ BlackthornCity_Text_ElmCall:
 BlackThornCity_EventScript_Sage::
 	lock
 	faceplayer
-	goto_if_eq 20550, 1, BlackThornCity_EventScript_SageRefuse
+	goto_if_eq JOHTO_VAR_BLACKTHORN_CITY_STATE, 1, BlackThornCity_EventScript_SageRefuse
 	msgbox BlackthornGrampsGrantsEntryText, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -70,22 +70,22 @@ BlackThornCity_EventScript_SageRefuse::
 
 BlackThornCity_Trigger_Sage::
 	lock
-	turnobject 7, DIR_EAST
+	turnobject LOCALID_BLACKTHORN_SAGE, DIR_EAST
 	msgbox BlackthornGrampsRefusesEntryText, MSGBOX_DEFAULT
 	closemessage
 	applymovement 255 J_Common_Movement_WalkDown1
 	waitmovement 0
-	turnobject 7, DIR_SOUTH
+	turnobject LOCALID_BLACKTHORN_SAGE, DIR_SOUTH
 	release
 	end
 
 BlackthornCity_EventScript_GymBoy::
 	lock
 	faceplayer
-	goto_if_unset 10372, BlackThornCity_EventScript_GymBoyNotReady
-	goto_if_unset 10373, BlackThornCity_EventScript_GymBoyNotReady
-	goto_if_unset 10374, BlackThornCity_EventScript_GymBoyNotReady
-	goto_if_eq 20550, 1, BlackThornCity_EventScript_GymBoyBefore
+	goto_if_unset JOHTO_FLAG_BADGE05_GET, BlackThornCity_EventScript_GymBoyNotReady
+	goto_if_unset JOHTO_FLAG_BADGE06_GET, BlackThornCity_EventScript_GymBoyNotReady
+	goto_if_unset JOHTO_FLAG_BADGE07_GET, BlackThornCity_EventScript_GymBoyNotReady
+	goto_if_eq JOHTO_VAR_BLACKTHORN_CITY_STATE, 1, BlackThornCity_EventScript_GymBoyBefore
 	msgbox BlackthornCity_Text_ClairIsBeaten, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -138,11 +138,11 @@ BlackthornCity_EventScript_DragonsDenSign::
 BlackthornCity_EventScript_Santos::
 	lock
 	faceplayer
-	goto_if_set 8736, BlackthornCity_EventScript_SantosCompleted
+	goto_if_set JOHTO_FLAG_GOT_SPELL_TAG, BlackthornCity_EventScript_SantosCompleted
 	msgbox BlackthornCity_MeetSantosText, MSGBOX_DEFAULT
 	closemessage
-	multichoice 20, 0, 159, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
+	switch VAR_RESULT
 	case 0, BlackthornCity_EventScript_SantosNope
 	case 1, BlackthornCity_EventScript_SantosNope
 	case 2, BlackthornCity_EventScript_SantosNope
@@ -151,7 +151,7 @@ BlackthornCity_EventScript_Santos::
 	case 5, BlackthornCity_EventScript_SantosNope
 	case 6, BlackthornCity_EventScript_SantosYes
 	case 7 BlackthornCity_EventScript_SantosCancel
-	case 127, BlackthornCity_EventScript_SantosCancel
+	case MULTI_B_PRESSED, BlackthornCity_EventScript_SantosCancel
 	closemessage
 	release
 	end
@@ -159,8 +159,8 @@ BlackthornCity_EventScript_Santos::
 BlackthornCity_EventScript_SantosYes::
 	msgbox BlackthornCity_SantosGivesGiftText, MSGBOX_DEFAULT
 	giveitem ITEM_SPELL_TAG
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 8736
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_GOT_SPELL_TAG
 	msgbox BlackthornCity_SantosGaveGiftText, MSGBOX_DEFAULT
 	closemessage
 	release

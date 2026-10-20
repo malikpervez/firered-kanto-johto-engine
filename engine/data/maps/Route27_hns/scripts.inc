@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route27_hns/scripts.inc), as built into the FireRed game.
 
 Route27_hns_MapScripts::
-	map_script 3, Route27_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route27_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route27_OnTransition:
@@ -10,55 +10,55 @@ Route27_OnTransition:
 	end
 
 Route27_EventScript_BaobaCall::
-	goto_if_unset 10375, Route27_EventScript_DeferLateArrival
+	goto_if_unset JOHTO_FLAG_BADGE08_GET, Route27_EventScript_DeferLateArrival
 	setspeaker Route27_Text_BaobaName
 	pokenavcall BlackthornCity_Text_BaobaCall
 	waitmessage
 	delay 30
-	setflag 8795
-	setvar 20593, 1
+	setflag JOHTO_FLAG_SAFARI_ZONE_WEST_EXPANSION
+	setvar JOHTO_VAR_ROUTE27_BAOBA_CALL, 1
 	end
 
 Route27_Text_BaobaName:
 	.string "BAOBA$"
 
 Route27_EventScript_FirstSteps::
-	goto_if_unset 10375, Route27_EventScript_DeferLateArrival
+	goto_if_unset JOHTO_FLAG_BADGE08_GET, Route27_EventScript_DeferLateArrival
 	lock
-	playse 21
-	setflag 10495
-	applymovement2 1, J_Common_Movement_ExclamationMark
-	turnobject 1, DIR_WEST
+	playse SE_PIN
+	setflag JOHTO_FLAG_VISITED_KANTO
+	applymovement2 LOCALID_ROUTE27_FATMAN, J_Common_Movement_ExclamationMark
+	turnobject LOCALID_ROUTE27_FATMAN, DIR_WEST
 	delay 30
-	getplayerxy 16384, 16385
-	call_if_eq 16385, 24, Route27_EventScript_FirstStepsWalkTop
-	call_if_eq 16385, 25, Route27_EventScript_FirstStepsWalkBot
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_eq VAR_TEMP_1, 24, Route27_EventScript_FirstStepsWalkTop
+	call_if_eq VAR_TEMP_1, 25, Route27_EventScript_FirstStepsWalkBot
 
 	msgbox Route27_Text_FisherHey, MSGBOX_DEFAULT
 	msgbox Route27_Text_FisherMessage, MSGBOX_DEFAULT
 	closemessage
-	turnobject 1, DIR_SOUTH
+	turnobject LOCALID_ROUTE27_FATMAN, DIR_SOUTH
 
 
-	setflag 8360
-	setflag 8358
-	setflag 8357
+	setflag JOHTO_FLAG_HIDE_VICTORY_ROAD_SILVER
+	setflag JOHTO_FLAG_HIDE_INDIGO_PLATEAU_SILVER
+	setflag JOHTO_FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK
 
-	clearflag 8717
-	clearflag 8364
-	clearflag 8363
+	clearflag JOHTO_FLAG_GOT_TM_SANDSTORM
+	clearflag JOHTO_FLAG_INDIGOJUNCTION_HIDE_SILVER_GUARD
+	clearflag JOHTO_FLAG_INDIGOJUNCTION_HIDE_KANTO_GUARD
 
-	setvar 20594, 1
+	setvar JOHTO_VAR_ROUTE27_STATE, 1
 	release
 	end
 
 Route27_EventScript_FirstStepsWalkTop::
-	applymovement2 1, Route27_Movement_WalkTop
+	applymovement2 LOCALID_ROUTE27_FATMAN, Route27_Movement_WalkTop
 	waitmovement 0
 	return
 
 Route27_EventScript_FirstStepsWalkBot::
-	applymovement2 1, Route27_Movement_WalkBot
+	applymovement2 LOCALID_ROUTE27_FATMAN, Route27_Movement_WalkBot
 	waitmovement 0
 	return
 
@@ -81,7 +81,7 @@ Route27_EventScript_Item_RareCandy::
 	end
 
 Route27_EventScript_Item_DragonClaw::
-	finditem 583
+	finditem ITEM_TM_DRAGON_CLAW
 	end
 
 Route27_EventScript_Item_Destiny_Knot::
@@ -93,19 +93,19 @@ Route27_EventScript_Fatman::
 	end
 
 Route27_EventScript_Blake::
-	trainerbattle_single 1087, Route27_Text_CooltrainermBlakeSeen, Route27_Text_CooltrainermBlakeBeaten
+	trainerbattle_single TRAINER_JOHTO_BLAKE_HNS, Route27_Text_CooltrainermBlakeSeen, Route27_Text_CooltrainermBlakeBeaten
 	msgbox Route27_Text_CooltrainermBlakeAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route27_EventScript_Brian::
-	trainerbattle_single 1088, Route27_Text_CooltrainermBrianSeen, Route27_Text_CooltrainermBrianBeaten
+	trainerbattle_single TRAINER_JOHTO_BRIAN_HNS, Route27_Text_CooltrainermBrianSeen, Route27_Text_CooltrainermBrianBeaten
 	msgbox Route27_Text_CooltrainermBrianAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route27_EventScript_Reena::
-	trainerbattle_single 1106, Route27_Text_CooltrainerfReenaSeen, Route27_Text_CooltrainerfReenaBeaten, Route27_EventScript_RegisterReena
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route27_EventScript_RematchReena
+	trainerbattle_single TRAINER_JOHTO_REENA_HNS, Route27_Text_CooltrainerfReenaSeen, Route27_Text_CooltrainerfReenaBeaten, Route27_EventScript_RegisterReena
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route27_EventScript_RematchReena
 	msgbox Route27_Text_CooltrainerfReenaAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -113,30 +113,30 @@ Route27_EventScript_RegisterReena::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route27_Text_ReenaRegister, MSGBOX_DEFAULT
-	register_matchcall 1106
+	register_matchcall TRAINER_JOHTO_REENA_HNS
 	release
 	end
 
 Route27_EventScript_RematchReena::
-	trainerbattle_rematch 1106, Route27_Text_ReenaRematchIntro, Route27_Text_ReenaRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_REENA_HNS, Route27_Text_ReenaRematchIntro, Route27_Text_ReenaRematchDefeat
 	msgbox Route27_Text_ReenaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route27_EventScript_Megan::
-	trainerbattle_single 1107, Route27_Text_CooltrainerfMeganSeen, Route27_Text_CooltrainerfMeganBeaten
+	trainerbattle_single TRAINER_JOHTO_MEGAN_HNS, Route27_Text_CooltrainerfMeganSeen, Route27_Text_CooltrainerfMeganBeaten
 	msgbox Route27_Text_CooltrainerfMeganAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route27_EventScript_Gilbert::
-	trainerbattle_single 1339, Route27_Text_PsychicGilbertSeen, Route27_Text_PsychicGilbertBeaten
+	trainerbattle_single TRAINER_JOHTO_GILBERT_HNS, Route27_Text_PsychicGilbertSeen, Route27_Text_PsychicGilbertBeaten
 	msgbox Route27_Text_PsychicGilbertAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route27_EventScript_Jose::
-	trainerbattle_single 1064, Route27_Text_BirdKeeperJoseSeen, Route27_Text_BirdKeeperJoseBeaten, Route27_EventScript_RegisterJose
-	goto_if_set 8945, Route27_EventScript_JoseGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route27_EventScript_RematchJose
+	trainerbattle_single TRAINER_JOHTO_JOSE_HNS, Route27_Text_BirdKeeperJoseSeen, Route27_Text_BirdKeeperJoseBeaten, Route27_EventScript_RegisterJose
+	goto_if_set JOHTO_FLAG_JOSE_HAS_ITEM_HNS, Route27_EventScript_JoseGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route27_EventScript_RematchJose
 	msgbox Route27_Text_BirdKeeperJoseAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -144,20 +144,20 @@ Route27_EventScript_RegisterJose::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route27_Text_JoseRegister, MSGBOX_DEFAULT
-	register_matchcall 1064
+	register_matchcall TRAINER_JOHTO_JOSE_HNS
 	release
 	end
 
 Route27_EventScript_RematchJose::
-	trainerbattle_rematch 1064, Route27_Text_JoseRematchIntro, Route27_Text_JoseRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_JOSE_HNS, Route27_Text_JoseRematchIntro, Route27_Text_JoseRematchDefeat
 	msgbox Route27_Text_JosePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route27_EventScript_JoseGiveItem::
 	msgbox Route27_Text_JoseHasItem, MSGBOX_DEFAULT
-	giveitem 20623
-	goto_if_eq 32781, FALSE, Route27_EventScript_JoseNoRoom
-	clearflag 8945
+	giveitem JOHTO_VAR_JOSE_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, Route27_EventScript_JoseNoRoom
+	clearflag JOHTO_FLAG_JOSE_HAS_ITEM_HNS
 	msgbox Route27_Text_JoseGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -166,7 +166,7 @@ Route27_EventScript_JoseNoRoom::
 	end
 
 Route27_EventScript_Scott::
-	trainerbattle_single 1215, Route27_Text_FisherScottSeen, Route27_Text_FisherScottBeaten
+	trainerbattle_single TRAINER_JOHTO_SCOTT_HNS, Route27_Text_FisherScottSeen, Route27_Text_FisherScottBeaten
 	msgbox Route27_Text_FisherScottAfter, MSGBOX_AUTOCLOSE
 	end
 

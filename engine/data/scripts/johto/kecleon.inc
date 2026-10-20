@@ -3,84 +3,84 @@
 J_Route120_EventScript_Kecleon1::
 	lock
 	faceplayer
-	setvar 32777, 1
+	setvar VAR_0x8009, 1
 	goto J_EventScript_Kecleon
 	end
 
 J_Route120_EventScript_Kecleon2::
 	lock
 	faceplayer
-	setvar 32777, 2
+	setvar VAR_0x8009, 2
 	goto J_EventScript_Kecleon
 	end
 
 J_Route120_EventScript_Kecleon3::
 	lock
 	faceplayer
-	setvar 32777, 3
+	setvar VAR_0x8009, 3
 	goto J_EventScript_Kecleon
 	end
 
 J_Route120_EventScript_Kecleon4::
 	lock
 	faceplayer
-	setvar 32777, 4
+	setvar VAR_0x8009, 4
 	goto J_EventScript_Kecleon
 	end
 
 J_Route120_EventScript_Kecleon5::
 	lock
 	faceplayer
-	setvar 32777, 5
+	setvar VAR_0x8009, 5
 	goto J_EventScript_Kecleon
 	end
 
 J_Route119_EventScript_Kecleon1::
 	lock
 	faceplayer
-	setvar 32777, 6
+	setvar VAR_0x8009, 6
 	goto J_EventScript_Kecleon
 	end
 
 J_Route119_EventScript_Kecleon2::
 	lock
 	faceplayer
-	setvar 32777, 7
+	setvar VAR_0x8009, 7
 	goto J_EventScript_Kecleon
 	end
 
 J_EventScript_Kecleon::
 	checkitem ITEM_DEVON_SCOPE
-	goto_if_eq 32781, TRUE, J_EventScript_AskUseDevonScope
+	goto_if_eq VAR_RESULT, TRUE, J_EventScript_AskUseDevonScope
 	msgbox J_Kecleon_Text_SomethingUnseeable, MSGBOX_DEFAULT
 	release
 	end
 
 J_EventScript_AskUseDevonScope::
 	msgbox J_Kecleon_Text_WantToUseDevonScope, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_EventScript_BattleKecleon
+	goto_if_eq VAR_RESULT, YES, J_EventScript_BattleKecleon
 	release
 	end
 
 J_EventScript_BattleKecleon::
 	msgbox J_Kecleon_Text_UseDevonScopeMonAttacked, MSGBOX_DEFAULT
 	closemessage
-	applymovement 32783, J_Common_Movement_FacePlayer
+	applymovement VAR_LAST_TALKED, J_Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement 32783, J_Movement_KecleonAppears
+	applymovement VAR_LAST_TALKED, J_Movement_KecleonAppears
 	waitmovement 0
 	waitse
-	playmoncry 352, 2
+	playmoncry SPECIES_KECLEON, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle 352, 30
-	setflag 10342
+	setwildbattle SPECIES_KECLEON, 30
+	setflag JOHTO_FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
-	clearflag 10342
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 1, J_EventScript_RemoveKecleon
-	goto_if_eq 32781, 4, J_EventScript_RemoveKecleon
-	goto_if_eq 32781, 5, J_EventScript_RemoveKecleon
+	clearflag JOHTO_FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, J_EventScript_RemoveKecleon
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, J_EventScript_RemoveKecleon
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, J_EventScript_RemoveKecleon
 	release
 	end
 

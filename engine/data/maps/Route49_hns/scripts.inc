@@ -1,36 +1,36 @@
 @ Johto (data/maps/Route49_hns/scripts.inc), as built into the FireRed game.
 
 Route49_hns_MapScripts::
-	map_script 2, Route49_hns_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route49_hns_OnFrame
 	.byte 0
 
 Route49_hns_OnFrame::
-	map_script_2 20639, 3, Route49_EventScripts_KimonoGirl
+	map_script_2 JOHTO_VAR_SINJOH_STORYLINE, 3, Route49_EventScripts_KimonoGirl
 	.2byte 0
 
 Route49_EventScript_Skylar::
-	goto_if_defeated 1640, Route49_EventScript_SkylarAfter
+	goto_if_defeated TRAINER_JOHTO_SKYLAR_HNS, Route49_EventScript_SkylarAfter
 	msgbox Route49_Text_SkylarBefore, MSGBOX_NPC
-	goto_if_not_defeated 1640, Route49_EventScript_TrySkylarBattle
+	goto_if_not_defeated TRAINER_JOHTO_SKYLAR_HNS, Route49_EventScript_TrySkylarBattle
 	end
 
 Route49_EventScript_TrySkylarBattle::
-	goto_if_eq 20639, 6, Route49_EventScript_SkylarBattle
+	goto_if_eq JOHTO_VAR_SINJOH_STORYLINE, 6, Route49_EventScript_SkylarBattle
 	end
 
 Route49_EventScript_SkylarBattle::
 	lock
 	msgbox Route49_Text_SkylarBeforeBattle, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro 1640, Route49_Text_SkylarDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_SKYLAR_HNS, Route49_Text_SkylarDefeat
 	giveitem ITEM_SKY_PLATE
-	addvar 20640, 1
+	addvar JOHTO_VAR_PLATECOUNTER, 1
 	msgbox Route49_Text_SkylarAfter, MSGBOX_AUTOCLOSE
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
 
@@ -78,19 +78,19 @@ Route49_EventScripts_KimonoGirl::
 	lock
 	playbgm ((558 + 1) + 0x27), FALSE
 	delay 10
-	playse 21
-	applymovement 3, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ROUTE49_KIMONOGIRL, J_Common_Movement_ExclamationMark
 	waitmovement
 	delay 20
-	applymovement 3, Route49_KimonoGirl_Movement1
+	applymovement LOCALID_ROUTE49_KIMONOGIRL, Route49_KimonoGirl_Movement1
 	waitmovement
 	msgbox Route49_Text_KimonoGirl MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, Route49_KimonoGitl_Movement2
+	applymovement LOCALID_ROUTE49_KIMONOGIRL, Route49_KimonoGitl_Movement2
 	waitmovement
-	setflag 9085
-	setvar 20639, 4
-	removeobject 3
+	setflag JOHTO_FLAG_ROUTE_49_KIMONOGIRL
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 4
+	removeobject LOCALID_ROUTE49_KIMONOGIRL
 	fadedefaultbgm
 	release
 	end
@@ -146,42 +146,42 @@ Route49_Text_Sign:
 
 Route49_EventScript_ActivateOverqwil::
 	lock
-	setobjectxyperm 11, 48, 42
-	playse 209
-	getplayerxy 16385, 16386
-	dofieldeffectsparkle 16385, 16386, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	setobjectxyperm LOCALID_ROUTE49_NOBLE_OVERQWIL, 48, 42
+	playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
 	delay 200
 	fadedefaultbgm
-	addobject 11
-	clearflag 9117
-	applymovement2 11, Route49_Movement_OverqwilEntrance1
+	addobject LOCALID_ROUTE49_NOBLE_OVERQWIL
+	clearflag JOHTO_FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL
+	applymovement2 LOCALID_ROUTE49_NOBLE_OVERQWIL, Route49_Movement_OverqwilEntrance1
 	delay 10
-	playmoncry 904, 0
+	playmoncry SPECIES_OVERQWIL, CRY_MODE_NORMAL
 	waitmoncry
-	playmoncry 904, 0
+	playmoncry SPECIES_OVERQWIL, CRY_MODE_NORMAL
 	waitmoncry
 	waitmovement 0
-	applymovement2 11, Route49_Movement_OverqwilEntrance2
+	applymovement2 LOCALID_ROUTE49_NOBLE_OVERQWIL, Route49_Movement_OverqwilEntrance2
 	delay 10
-	playse 10
+	playse SE_LEDGE
 	delay 20
-	waitmovement 11
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 2
+	waitmovement LOCALID_ROUTE49_NOBLE_OVERQWIL
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 2
 	special ShakeCamera
-	setobjectxyperm 11, 48, 44
-	setvar 20645, 2
+	setobjectxyperm LOCALID_ROUTE49_NOBLE_OVERQWIL, 48, 44
+	setvar JOHTO_VAR_NOBLE_OVERQWIL, 2
 	release
 	end
 
@@ -204,43 +204,43 @@ Route49_Movement_OverqwilEntrance2:
 Route49_EventScript_Overqwil::
 	lock
 	faceplayer
-	playmoncry 904, 2
+	playmoncry SPECIES_OVERQWIL, CRY_MODE_ENCOUNTER
 	waitmoncry
 	setwildbossbattle species=904, level=80, item=ITEM_BLACK_SLUDGE, move1_1=MOVE_BARB_BARRAGE, move1_2=MOVE_LIQUIDATION, move1_3=MOVE_TOXIC_SPIKES move1_4=MOVE_CURSE
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 2, 0, 0, 3, 0
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, Route49_EventScript_OverqwilRan
-	bufferspeciesname STR_VAR_1, 904
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route49_EventScript_OverqwilRan
+	bufferspeciesname STR_VAR_1, SPECIES_OVERQWIL
 	msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
 	giveitem ITEM_DREAD_PLATE
-	addvar 20640, 1
-	fadescreenswapbuffers 1
-	removeobject 11
-	setflag 9117
-	fadescreenswapbuffers 0
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE49_NOBLE_OVERQWIL
+	setflag JOHTO_FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL
+	fadescreenswapbuffers FADE_FROM_BLACK
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 Route49_EventScript_OverqwilRan::
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
@@ -261,86 +261,86 @@ Route49_Movement_PlayerWyrdeerLeft:
 
 Route49_EventScript_ActivateWyrdeerLeft::
 	lock
-	setobjectxyperm 12, 59, 2
-	playse 209
-	getplayerxy 16385, 16386
-	dofieldeffectsparkle 16385, 16386, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	setobjectxyperm LOCALID_ROUTE49_NOBLE_WYRDEER, 59, 2
+	playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
-	applymovement2 255, Route49_Movement_PlayerWyrdeerLeft
+	applymovement2 LOCALID_PLAYER, Route49_Movement_PlayerWyrdeerLeft
 	delay 200
 	waitmovement 0
 	fadedefaultbgm
-	addobject 12
-	clearflag 9116
-	applymovement2 12, Route49_Movement_WyrdeerEntrance1
+	addobject LOCALID_ROUTE49_NOBLE_WYRDEER
+	clearflag JOHTO_FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
+	applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance1
 	delay 10
-	playmoncry 899, 0
+	playmoncry SPECIES_WYRDEER, CRY_MODE_NORMAL
 	waitmoncry
-	playmoncry 899, 0
+	playmoncry SPECIES_WYRDEER, CRY_MODE_NORMAL
 	waitmoncry
 	waitmovement 0
-	applymovement2 12, Route49_Movement_WyrdeerEntrance2
+	applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance2
 	delay 90
-	playse 10
+	playse SE_LEDGE
 	delay 20
-	waitmovement 12
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 2
+	waitmovement LOCALID_ROUTE49_NOBLE_WYRDEER
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 2
 	special ShakeCamera
-	setobjectxyperm 12, 59, 7
-	setvar 20646, 2
+	setobjectxyperm LOCALID_ROUTE49_NOBLE_WYRDEER, 59, 7
+	setvar JOHTO_VAR_NOBLE_WYRDEER, 2
 	release
 	end
 
 Route49_EventScript_ActivateWyrdeerRight::
 	lock
-	setobjectxyperm 12, 59, 2
-	playse 209
-	getplayerxy 16385, 16386
-	dofieldeffectsparkle 16385, 16386, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	setobjectxyperm LOCALID_ROUTE49_NOBLE_WYRDEER, 59, 2
+	playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
-	applymovement2 255, Route49_Movement_PlayerWyrdeerRight
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	applymovement2 LOCALID_PLAYER, Route49_Movement_PlayerWyrdeerRight
 	delay 200
 	waitmovement 0
 	fadedefaultbgm
-	addobject 12
-	clearflag 9116
-	applymovement2 12, Route49_Movement_WyrdeerEntrance1
+	addobject LOCALID_ROUTE49_NOBLE_WYRDEER
+	clearflag JOHTO_FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
+	applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance1
 	delay 10
-	playmoncry 899, 0
+	playmoncry SPECIES_WYRDEER, CRY_MODE_NORMAL
 	waitmoncry
-	playmoncry 899, 0
+	playmoncry SPECIES_WYRDEER, CRY_MODE_NORMAL
 	waitmoncry
 	waitmovement 0
-	applymovement2 12, Route49_Movement_WyrdeerEntrance2
+	applymovement2 LOCALID_ROUTE49_NOBLE_WYRDEER, Route49_Movement_WyrdeerEntrance2
 	delay 10
-	playse 10
+	playse SE_LEDGE
 	delay 20
-	waitmovement 12
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 2
+	waitmovement LOCALID_ROUTE49_NOBLE_WYRDEER
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 2
 	special ShakeCamera
-	setobjectxyperm 12, 59, 7
-	setvar 20646, 2
+	setobjectxyperm LOCALID_ROUTE49_NOBLE_WYRDEER, 59, 7
+	setvar JOHTO_VAR_NOBLE_WYRDEER, 2
 	release
 	end
 
@@ -365,47 +365,47 @@ Route49_Movement_WyrdeerEntrance2:
 Route49_EventScript_Wyrdeer::
 	lock
 	faceplayer
-	playmoncry 899, 2
+	playmoncry SPECIES_WYRDEER, CRY_MODE_ENCOUNTER
 	waitmoncry
 	setwildbossbattle species=899, level=80, item=ITEM_CLEAR_AMULET, move1_1=MOVE_PSYSHIELD_BASH, move1_2=MOVE_LUNGE, move1_3=MOVE_CALM_MIND move1_4=MOVE_THUNDERBOLT
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 1, 2, 0, 1, 0
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, Route49_EventScript_WyrdeerRan
-	bufferspeciesname STR_VAR_1, 899
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route49_EventScript_WyrdeerRan
+	bufferspeciesname STR_VAR_1, SPECIES_WYRDEER
 	msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
 	giveitem ITEM_MIND_PLATE
-	addvar 20640, 1
-	fadescreenswapbuffers 1
-	removeobject 12
-	setflag 9116
-	fadescreenswapbuffers 0
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE49_NOBLE_WYRDEER
+	setflag JOHTO_FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
+	fadescreenswapbuffers FADE_FROM_BLACK
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 Route49_EventScript_WyrdeerRan::
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 Route49_EventScript_Item_TMRockClimb::
-	finditem 651
+	finditem ITEM_TM_ROCK_CLIMB
 	end
 

@@ -5,12 +5,12 @@ WhirlIslands_Descent_hns_MapScripts::
 	.byte 0
 
 BlackTide_DescentOnTransition:
-	call_if_eq 20559, 4, BlackTide_OpenNativePostgameApproach
+	call_if_eq JOHTO_VAR_COMPLETED_LUGIA, 4, BlackTide_OpenNativePostgameApproach
 	call JT04_Visibility
 	end
 
 BlackTide_OpenNativePostgameApproach:
-	setflag 8245
+	setflag JOHTO_FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
 	return
 
 WhirlIslands_Descent_EventScript_Item_Max_Revive::
@@ -26,7 +26,7 @@ WhirlIslands_Descent_EventScript_Item_PP_Max::
 	end
 
 WhirlIslands_B2F_Trigger_Fog::
-	setweather 6
+	setweather WEATHER_FOG_HORIZONTAL
 	doweather
 	end
 

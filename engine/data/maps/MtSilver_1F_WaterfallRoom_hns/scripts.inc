@@ -1,10 +1,10 @@
 @ Johto (data/maps/MtSilver_1F_WaterfallRoom_hns/scripts.inc), as built into the FireRed game.
 
 MtSilver_1F_WaterfallRoom_hns_MapScripts::
-	map_script 3, MtSilver_1F_WaterfallRoom_OnTransition
-	map_script 4, MtSilver_1F_WaterfallRoom_OnWarp
-	map_script 2, MtSilver_1F_WaterfallRoom_OnFrame
-	map_script 5, MtSilver_1F_WaterfallRoom_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_1F_WaterfallRoom_OnTransition
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, MtSilver_1F_WaterfallRoom_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MtSilver_1F_WaterfallRoom_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, MtSilver_1F_WaterfallRoom_OnResume
 	.byte 0
 
 MtSilver_1F_WaterfallRoom_OnResume::
@@ -13,26 +13,26 @@ MtSilver_1F_WaterfallRoom_OnResume::
 	end
 
 MtSilver_1F_WaterfallRoom_OnWarp::
-	map_script_2 20639, 1, MtSilver_1F_WaterfallRoom_TurnPlayer
+	map_script_2 JOHTO_VAR_SINJOH_STORYLINE, 1, MtSilver_1F_WaterfallRoom_TurnPlayer
 	.2byte 0
 
 MtSilver_1F_WaterfallRoom_TurnPlayer::
-	turnobject 255, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	end
 
 MtSilver_1F_WaterfallRoom_OnFrame::
-	map_script_2 20639, 1, MtSilver_1F_WaterfallRoom_Scientist_Scene
+	map_script_2 JOHTO_VAR_SINJOH_STORYLINE, 1, MtSilver_1F_WaterfallRoom_Scientist_Scene
 	.2byte 0
 
 MtSilver_1F_WaterfallRoom_Scientist_Scene::
 	msgbox MtSilver_1F_WaterfallRoom_Text_Scientist, MSGBOX_DEFAULT
 	closemessage
-	applymovement 19, MtSilver_1F_Movement_Scientist
-	playse 10
+	applymovement LOCALID_MT_SILVER_1F_WATERFALL_ROOM_SCIENTIST, MtSilver_1F_Movement_Scientist
+	playse SE_LEDGE
 	waitmovement 0
-	removeobject 19
-	setflag 9081
-	setvar 20639, 2
+	removeobject LOCALID_MT_SILVER_1F_WATERFALL_ROOM_SCIENTIST
+	setflag JOHTO_FLAG_MT_SILVER_1F_HIDE_SCIENTIST
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 2
 	release
 	end
 

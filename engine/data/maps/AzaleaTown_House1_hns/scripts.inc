@@ -6,10 +6,10 @@ AzaleaTown_House1_hns_MapScripts::
 AzaleaTown_House1_EventScript_Boss::
 	lock
 	faceplayer
-	goto_if_eq 20547, 5, AzaleaTown_House1_EventScript_Boss3
-	goto_if_eq 20547, 6, AzaleaTown_House1_EventScript_Boss3
-	goto_if_eq 20547, 7, AzaleaTown_House1_EventScript_Boss4
-	goto_if_set 8283, AzaleaTown_House1_EventScript_Boss2
+	goto_if_eq JOHTO_VAR_AZALEA_TOWN_STATE, 5, AzaleaTown_House1_EventScript_Boss3
+	goto_if_eq JOHTO_VAR_AZALEA_TOWN_STATE, 6, AzaleaTown_House1_EventScript_Boss3
+	goto_if_eq JOHTO_VAR_AZALEA_TOWN_STATE, 7, AzaleaTown_House1_EventScript_Boss4
+	goto_if_set JOHTO_FLAG_HIDE_AZALEA_TOWN_ROCKETS, AzaleaTown_House1_EventScript_Boss2
 	msgbox CharcoalKiln_Text_Boss1, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -36,8 +36,8 @@ AzaleaTown_House1_EventScript_Boss4::
 AzaleaTown_House1_EventScript_Apprentice::
 	lock
 	faceplayer
-	goto_if_ge 20547, 7, AzaleaTown_House1_EventScript_Apprentice3
-	goto_if_set 8283, AzaleaTown_House1_EventScript_Apprentice2
+	goto_if_ge JOHTO_VAR_AZALEA_TOWN_STATE, 7, AzaleaTown_House1_EventScript_Apprentice3
+	goto_if_set JOHTO_FLAG_HIDE_AZALEA_TOWN_ROCKETS, AzaleaTown_House1_EventScript_Apprentice2
 	msgbox CharcoalKiln_Text_Apprentice1, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -50,10 +50,10 @@ AzaleaTown_House1_EventScript_Apprentice2::
 	end
 
 AzaleaTown_House1_EventScript_Apprentice3::
-	goto_if_set 8725, AzaleaTown_House1_EventScript_Apprentice4
+	goto_if_set JOHTO_FLAG_GOT_CHARCOAL, AzaleaTown_House1_EventScript_Apprentice4
 	msgbox CharcoalKiln_Text_Apprentice3, MSGBOX_DEFAULT
 	giveitem ITEM_CHARCOAL
-	setflag 8725
+	setflag JOHTO_FLAG_GOT_CHARCOAL
 	closemessage
 	release
 	end
@@ -68,7 +68,7 @@ AzaleaTown_House1_EventScript_Farfetchd::
 	lock
 	faceplayer
 	waitse
-	playmoncry 83, 0
+	playmoncry SPECIES_FARFETCHD, CRY_MODE_NORMAL
 	msgbox CharcoalKiln_Text_Farfetchd, MSGBOX_DEFAULT
 	waitmoncry
 	release

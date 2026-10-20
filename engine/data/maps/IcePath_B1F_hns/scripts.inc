@@ -1,7 +1,7 @@
 @ Johto (data/maps/IcePath_B1F_hns/scripts.inc), as built into the FireRed game.
 
 IcePath_B1F_hns_MapScripts::
-	map_script 3, IcePath_B1F_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, IcePath_B1F_OnTransition
 	.byte 0
 
 IcePath_B1F_OnTransition:
@@ -11,7 +11,7 @@ IcePath_B1F_OnTransition:
 IcePath_B1F_EventScript_PuzzleSkipButton::
 	lock
 	msgbox IcePath_B1F_Text_PuzzleSkipButton, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, IcePath_B1F_EventScript_PuzzleSkipButtonNo
+	goto_if_eq VAR_RESULT, FALSE, IcePath_B1F_EventScript_PuzzleSkipButtonNo
 	warp MAP_ICE_PATH_B1F_HNS, 15, 12
 	release
 	end

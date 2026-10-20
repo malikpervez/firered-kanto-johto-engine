@@ -1,13 +1,13 @@
 @ Johto (data/maps/NewBarkTown_hns/scripts.inc), as built into the FireRed game.
 
 NewBarkTown_hns_MapScripts::
-	map_script 3, NewBarkTown_OnTransition
-	map_script 2, NewBarkTown_OnFrame
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewBarkTown_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 NewBarkTown_OnFrame::
-	map_script_2 20581, 6, NewBarkTown_EventScript_ElmCallAfterLeague
+	map_script_2 JOHTO_VAR_NEWBARK_TOWN_STATE, 6, NewBarkTown_EventScript_ElmCallAfterLeague
 	.2byte 0
 
 NewBarkTown_EventScript_ElmCallAfterLeague::
@@ -16,8 +16,8 @@ NewBarkTown_EventScript_ElmCallAfterLeague::
 	pokenavcall BlackthornCity_Text_ElmCall
 	waitmessage
 	delay 30
-	setvar 20581, 7
-	setvar 20580, 10
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 7
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 10
 	release
 	end
 
@@ -25,18 +25,18 @@ NewBarkTown_Text_ElmName:
 	.string "PROF.ELM$"
 
 NewBarkTown_OnTransition::
-	goto_if_eq 20581, 2, NewBarkTown_Set_TalkToElm
-	goto_if_eq 20581, 4, NewBarkTown_Set_TalkToMom
+	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_Set_TalkToElm
+	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 4, NewBarkTown_Set_TalkToMom
 	end
 
 NewBarkTown_Set_TalkToElm::
-	clearflag 8266
-	setobjectxyperm 2, 0, 11
+	clearflag JOHTO_FLAG_HIDE_SILVER_NEWBARKTOWN
+	setobjectxyperm LOCALID_LASS, 0, 11
 	callnative SetTimeBasedEncounters
 	end
 
 NewBarkTown_Set_TalkToMom::
-	setobjectxyperm 2, 0, 11
+	setobjectxyperm LOCALID_LASS, 0, 11
 	callnative SetTimeBasedEncounters
 	end
 
@@ -52,19 +52,19 @@ NewBarkTown_EventScript_TownSign::
 NewBarkTown_EventScript_Lass::
 	lock
 	faceplayer
-	goto_if_eq 20581, 2, NewBarkTown_EventScript_LassState2
-	goto_if_eq 20581, 3, NewBarkTown_EventScript_LassState3
-	goto_if_eq 20581, 4, NewBarkTown_EventScript_LassState4
+	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_EventScript_LassState2
+	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 3, NewBarkTown_EventScript_LassState3
+	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 4, NewBarkTown_EventScript_LassState4
 	msgbox NewBarkTown_Text_LassState5, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 NewBarkTown_EventScript_LassState2::
-	playse 21
-	applymovement 2, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_LASS, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
+	waitmovement LOCALID_LASS
 	faceplayer
 	waitmovement 0
 	msgbox NewBarkTown_Text_LassState2, MSGBOX_DEFAULT
@@ -79,10 +79,10 @@ NewBarkTown_EventScript_LassState3::
 	end
 
 NewBarkTown_EventScript_LassState4::
-	playse 21
-	applymovement 2, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_LASS, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
+	waitmovement LOCALID_LASS
 	faceplayer
 	waitmovement 0
 	msgbox NewBarkTown_Text_LassState4, MSGBOX_DEFAULT
@@ -94,7 +94,7 @@ NewBarkTown_EventScript_Wooper::
 	lock
 	faceplayer
 	waitse
-	playmoncry 194, 0
+	playmoncry SPECIES_WOOPER, CRY_MODE_NORMAL
 	msgbox NewBarkTown_Text_Wooper, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -102,30 +102,30 @@ NewBarkTown_EventScript_Wooper::
 
 NewBarkTown_EventScript_LeaveTrigger::
 	lock
-	call_if_eq 20581, 2, NewBarkTown_EventScript_LeaveTriggersState2
-	call_if_eq 20581, 4, NewBarkTown_EventScript_LeaveTriggersState4
-	applymovement 255, J_OldaleTown_Movement_PlayerStepBack
+	call_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_EventScript_LeaveTriggersState2
+	call_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 4, NewBarkTown_EventScript_LeaveTriggersState4
+	applymovement OBJ_EVENT_ID_PLAYER, J_OldaleTown_Movement_PlayerStepBack
 	waitmovement 0
 	release
 	end
 
 NewBarkTown_EventScript_LeaveTriggersState2::
-	playse 21
-	applymovement 2, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_LASS, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
-	applymovement 2, NewBarkTown_Movement_FaceDown
+	waitmovement LOCALID_LASS
+	applymovement LOCALID_LASS, NewBarkTown_Movement_FaceDown
 	waitmovement 0
 	msgbox NewBarkTown_Text_LassState2, MSGBOX_DEFAULT
 	closemessage
 	return
 
 NewBarkTown_EventScript_LeaveTriggersState4::
-	playse 21
-	applymovement 2, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_LASS, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
-	applymovement 2, NewBarkTown_Movement_FaceDown
+	waitmovement LOCALID_LASS
+	applymovement LOCALID_LASS, NewBarkTown_Movement_FaceDown
 	waitmovement 0
 	msgbox NewBarkTown_Text_LassState4, MSGBOX_DEFAULT
 	closemessage
@@ -134,7 +134,7 @@ NewBarkTown_EventScript_LeaveTriggersState4::
 NewBarkTown_EventScript_FatMan::
 	lock
 	faceplayer
-	goto_if_eq 20581, 2, NewBarkTown_EventScript_FatManState2
+	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_EventScript_FatManState2
 	msgbox NewBarkTown_Text_FatManState3, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -150,16 +150,16 @@ NewBarkTown_EventScript_Silver::
 	lock
 	msgbox NewBarkTown_Text_Silver1, MSGBOX_DEFAULT
 	delay 60
-	playse 21
-	applymovement 3, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_SILVER, J_Common_Movement_ExclamationMark
 	faceplayer
 	waitmovement 0
 	msgbox NewBarkTown_Text_Silver2, MSGBOX_DEFAULT
-	playse 20
-	applymovement 3, NewBarkTown_Movement_SilverPushesPlayer
-	applymovement 255, NewBarkTown_Movement_PlayerPushedBySilver
+	playse SE_BANG
+	applymovement LOCALID_SILVER, NewBarkTown_Movement_SilverPushesPlayer
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Movement_PlayerPushedBySilver
 	waitmovement 0
-	applymovement 3, J_Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_SILVER, J_Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	waitmovement 0
 	release
@@ -175,19 +175,19 @@ NewBarkTown_EventScript_TestMan1::
 	end
 
 NewBarkTown_EventScript_TestMan2::
-	setvar 20581, 4
-	setflag 8269
-	setflag 8660
-	setflag 8266
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 4
+	setflag JOHTO_FLAG_HIDE_MOMS_FRIEND
+	setflag JOHTO_FLAG_ADVENTURE_STARTED
+	setflag JOHTO_FLAG_HIDE_SILVER_NEWBARKTOWN
 	end
 
 NewBarkTown_EventScript_TestMan3::
-	setvar 20581, 5
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 5
 
-	clearflag 8674
-	clearflag 8675
-	clearflag 8676
-	clearflag 8677
+	clearflag JOHTO_FLAG_COMPLETED_AERODACTYL_PUZZLE
+	clearflag JOHTO_FLAG_COMPLETED_HOOH_PUZZLE
+	clearflag JOHTO_FLAG_COMPLETED_KABUTO_PUZZLE
+	clearflag JOHTO_FLAG_COMPLETED_OMANYTE_PUZZLE
 	end
 
 NewBarkTown_Movement_SilverPushesPlayer:
@@ -285,7 +285,7 @@ B2_NewBark_EventScript_ReturnToKanto::
 	lock
 	faceplayer
 	msgbox B2_NewBark_Text_ReturnToKanto, MSGBOX_YESNO
-	goto_if_eq 32781, NO, B2_NewBark_EventScript_DeclineTravel
+	goto_if_eq VAR_RESULT, NO, B2_NewBark_EventScript_DeclineTravel
 	closemessage
 	warp MAP_PALLET_TOWN, 10, 13
 	waitstate

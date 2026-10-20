@@ -14,7 +14,7 @@ GoldenrodCity_BillsHouse_EventScript_Sister::
 GoldenrodCity_BillsHouse_EventScript_Mom::
 	lock
 	faceplayer
-	goto_if_set 10391, GoldenrodCity_BillsHouse_EventScript_Mom2
+	goto_if_set JOHTO_FLAG_SYS_PC_BILL, GoldenrodCity_BillsHouse_EventScript_Mom2
 	msgbox BillHouse_Text_MomBeforeEcruteak, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -29,7 +29,7 @@ GoldenrodCity_BillsHouse_EventScript_Mom2::
 GoldenrodCity_BillsHouse_EventScript_Bill::
 	lock
 	faceplayer
-	goto_if_unset 8708, GoldenrodCity_BillsHouse_EventScript_Bill_Eevee
+	goto_if_unset JOHTO_FLAG_GOT_EEVEE, GoldenrodCity_BillsHouse_EventScript_Bill_Eevee
 	msgbox BillHouse_Text_PopWontWork, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -37,18 +37,18 @@ GoldenrodCity_BillsHouse_EventScript_Bill::
 
 GoldenrodCity_BillsHouse_EventScript_Bill_Eevee::
 	msgbox BillHouse_Text_TakeThisEevee, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, GoldenrodCity_BillsHouse_EventScript_Bill_Refused
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_BillsHouse_EventScript_Bill_Refused
 	msgbox BillHouse_Text_CountingOnYou, MSGBOX_DEFAULT
 
 
-	setvar 16385, 133
-	bufferspeciesname STR_VAR_1, 133
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_EEVEE
+	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
 	givenamedmon 3
 	call J_Common_EventScript_GiftMonNamed
 
 
 
-	setflag 8708
+	setflag JOHTO_FLAG_GOT_EEVEE
 	msgbox BillHouse_Text_EeveeMayEvolve, MSGBOX_DEFAULT
 	closemessage
 	release

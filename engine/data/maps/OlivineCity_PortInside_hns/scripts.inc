@@ -6,32 +6,32 @@ OlivineCity_PortInside_hns_MapScripts::
 OlivineCity_PortInside_EventScript_Oak::
 	lock
 	playbgm ((558 + 1) + 0x26), FALSE
-	playse 21
-	applymovement2 7, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement2 LOCALID_OLIVINEPORT_OAK, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 7
-	turnobject 7, DIR_NORTH
+	waitmovement LOCALID_OLIVINEPORT_OAK
+	turnobject LOCALID_OLIVINEPORT_OAK, DIR_NORTH
 	msgbox OlivineCity_PortInside_Text_Nationaldex1, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 7, OlivineCity_PortInside_Movement_OakFixDex
+	applymovement2 LOCALID_OLIVINEPORT_OAK, OlivineCity_PortInside_Movement_OakFixDex
 	waitmovement 0
 	delay 30
 	delay 50
 	msgbox OlivineCity_PortInside_Text_Nationaldex3, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement2 7, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement2 LOCALID_OLIVINEPORT_OAK, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 7
+	waitmovement LOCALID_OLIVINEPORT_OAK
 	msgbox OlivineCity_PortInside_Text_Nationaldex4, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, OlivineCity_PortInside_Movement_PlayerMoveOver
+	applymovement OBJ_EVENT_ID_PLAYER, OlivineCity_PortInside_Movement_PlayerMoveOver
 	waitmovement 0
-	applymovement 7, OlivineCity_PortInside_Movement_OakLeave
+	applymovement LOCALID_OLIVINEPORT_OAK, OlivineCity_PortInside_Movement_OakLeave
 	waitmovement 0
-	setflag 8321
-	playse 9
-	removeobject 7
+	setflag JOHTO_FLAG_HIDE_OLIVINE_PORT_OAK
+	playse SE_EXIT
+	removeobject LOCALID_OLIVINEPORT_OAK
 	fadedefaultbgm
 	waitse
 	release
@@ -90,11 +90,11 @@ OlivinePort_EventScript_Youngster::
 OlivinePort_EventScript_Sailor::
 	lock
 	faceplayer
-	goto_if_ge 20603, 7, OlivinePort_EventScript_Sailor_AfterKanto
+	goto_if_ge JOHTO_VAR_SSAQUA_STATE, 7, OlivinePort_EventScript_Sailor_AfterKanto
 	msgbox OlivinePort_Text_AskBoard, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, OlivinePort_EventScript_Sailor_Refused
+	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_Refused
 	checkitem ITEM_SS_TICKET
-	goto_if_eq 32781, TRUE, OlivinePort_EventScript_Sailor_MaidenVoyage
+	goto_if_eq VAR_RESULT, TRUE, OlivinePort_EventScript_Sailor_MaidenVoyage
 	msgbox OlivinePort_Text_NoTicket, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -102,8 +102,8 @@ OlivinePort_EventScript_Sailor::
 
 OlivinePort_EventScript_Sailor_AfterKanto::
 	message OlivinePort_Text_WhereSail
-	multichoice 20, 0, 169, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_OLIVINE_HARBOR, FALSE
+	switch VAR_RESULT
 	case 0, OlivinePort_EventScript_ChoseVermilion
 	case 1, OlivinePort_EventScript_ChoseSouthernIsland
 	case 2, OlivinePort_EventScript_ChoseBirthIsland
@@ -118,7 +118,7 @@ OlivinePort_EventScript_ChoseVermilion::
 	delay 20
 	checkitem ITEM_SS_TICKET
 	bufferitemname STR_VAR_1, ITEM_SS_TICKET
-	goto_if_eq 32781, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
+	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_VERMILION_CITY, 13, 26
 	waitstate
@@ -130,7 +130,7 @@ OlivinePort_EventScript_ChoseSouthernIsland::
 	delay 20
 	checkitem ITEM_EON_TICKET
 	bufferitemname STR_VAR_1, ITEM_EON_TICKET
-	goto_if_eq 32781, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
+	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_SOUTHERN_ISLAND_EXTERIOR_HNS, 13, 22
 	waitstate
@@ -142,7 +142,7 @@ OlivinePort_EventScript_ChoseBirthIsland::
 	delay 20
 	checkitem ITEM_AURORA_TICKET
 	bufferitemname STR_VAR_1, ITEM_AURORA_TICKET
-	goto_if_eq 32781, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
+	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_BIRTH_ISLAND_EXTERIOR_HNS, 13, 23
 	waitstate
@@ -154,7 +154,7 @@ OlivinePort_EventScript_ChoseFarawayIsland::
 	delay 20
 	checkitem ITEM_OLD_SEA_MAP
 	bufferitemname STR_VAR_1, ITEM_OLD_SEA_MAP
-	goto_if_eq 32781, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
+	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
 	warpsilent MAP_FARAWAY_ISLAND_ENTRANCE_HNS, 13, 38
 	waitstate
@@ -164,12 +164,12 @@ OlivinePort_EventScript_ChoseFarawayIsland::
 OlivinePort_EventScript_Sailor_MaidenVoyage::
 	msgbox OlivinePort_Text_FlashTicket, MSGBOX_DEFAULT
 	call OlivinePort_EventScript_EnterShip
-	setvar 20603, 1
-	clearflag 8325
-	setflag 8327
+	setvar JOHTO_VAR_SSAQUA_STATE, 1
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_1F_GRANDPA
+	setflag JOHTO_FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
 
-	clearflag 8328
-	clearflag 8326
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_SAILOR
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
 
 	warpsilent MAP_SSAQUA_1F_HNS, 29, 3
 	waitstate
@@ -180,19 +180,19 @@ OlivinePort_EventScript_EnterShip::
 	msgbox OlivinePort_Text_SailorGetOnBoard, MSGBOX_DEFAULT
 	closemessage
 	delay 20
-	applymovement 1, OlivinePort_Movement_SailorEnterBoat
+	applymovement LOCALID_OLIVINEPORT_SAILOR, OlivinePort_Movement_SailorEnterBoat
 	waitmovement 0
-	playse 9
-	applymovement 255, OlivinePort_Movement_PlayerEnterBoat
+	playse SE_EXIT
+	applymovement OBJ_EVENT_ID_PLAYER, OlivinePort_Movement_PlayerEnterBoat
 	waitmovement 0
 	special SpawnCameraObject
-	playse 9
-	removeobject 255
+	playse SE_EXIT
+	removeobject OBJ_EVENT_ID_PLAYER
 	delay 60
-	applymovement 1, OlivinePort_Movement_BoatLeave
-	applymovement 6, OlivinePort_Movement_BoatLeave
-	waitmovement 6
-	setrespawn 134
+	applymovement LOCALID_OLIVINEPORT_SAILOR, OlivinePort_Movement_BoatLeave
+	applymovement LOCALID_OLIVINEPORT_BOAT, OlivinePort_Movement_BoatLeave
+	waitmovement LOCALID_OLIVINEPORT_BOAT
+	setrespawn JOHTO_HEAL_LOCATION_OLIVINE_CITY_HNS
 	return
 
 OlivinePort_EventScript_Sailor_Refused::

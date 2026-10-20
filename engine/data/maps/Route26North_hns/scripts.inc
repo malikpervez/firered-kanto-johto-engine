@@ -4,7 +4,7 @@ Route26North_hns_MapScripts::
 	.byte 0
 
 Route26North_Trigger::
-	setflag 10493
-	setvar 16384, 1
+	setflag JOHTO_FLAG_VISITED_RECEPTION_GATE
+	setvar VAR_TEMP_0, 1
 	end
 

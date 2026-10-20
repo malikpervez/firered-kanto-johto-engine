@@ -1,8 +1,8 @@
 @ Johto (data/maps/IcePath_1F_hns/scripts.inc), as built into the FireRed game.
 
 IcePath_1F_hns_MapScripts::
-	map_script 3, IcePath_1F_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, IcePath_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 IcePath_1F_OnTransition:
@@ -18,13 +18,13 @@ IcePath_1F_EventScript_Item_Protein::
 	end
 
 IcePath_1F_EventScript_Item_HM_Waterfall::
-	finditem 688
+	finditem ITEM_HM_WATERFALL
 	end
 
 IcePath_1F_EventScript_KimonoGirl::
 	lock
 	playbgm ((558 + 1) + 0x85), FALSE
-	goto_if_eq 32780, DIR_SOUTH, IcePath_1F_EventScript_KimonoGirlPushPrompt
+	goto_if_eq VAR_FACING, DIR_SOUTH, IcePath_1F_EventScript_KimonoGirlPushPrompt
 	msgbox IcePath_1F_Text_Stuck1, MSGBOX_DEFAULT
 	closemessage
 	fadedefaultbgm
@@ -35,41 +35,41 @@ IcePath_1F_Trigger_KimonoGirl::
 	lock
 	msgbox IcePath_1F_Text_Leave, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	release
 	end
 
 IcePath_1F_EventScript_KimonoGirlPushPrompt::
 	msgbox IcePath_1F_Text_Stuck2, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, IcePath_1F_EventScript_KimonoGirlRefused
+	goto_if_eq VAR_RESULT, FALSE, IcePath_1F_EventScript_KimonoGirlRefused
 
 IcePath_1F_EventScript_KimonoGirlPush::
 	msgbox IcePath_1F_Text_Shove, MSGBOX_AUTOCLOSE
 	closemessage
-	playse 10
-	applymovement 255, IcePath_Movement_PlayerJump
+	playse SE_LEDGE
+	applymovement OBJ_EVENT_ID_PLAYER, IcePath_Movement_PlayerJump
 	waitmovement 0
 	waitse
-	playse 137
-	applymovement 9, IcePath_Movement_KimonoSlide
+	playse SE_M_ICY_WIND
+	applymovement LOCALID_ICEPATH1_KIMONO, IcePath_Movement_KimonoSlide
 	waitmovement 0
 	msgbox IcePath_1F_Text_Thanks, MSGBOX_DEFAULT
 	closemessage
-	applymovement 9, IcePath_Movement_KimonoLeave
-	waitmovement 9
-	setflag 8355
-	removeobject 9
-	playse 9
+	applymovement LOCALID_ICEPATH1_KIMONO, IcePath_Movement_KimonoLeave
+	waitmovement LOCALID_ICEPATH1_KIMONO
+	setflag JOHTO_FLAG_HIDE_ICE_PATH_KIMONO
+	removeobject LOCALID_ICEPATH1_KIMONO
+	playse SE_EXIT
 	fadedefaultbgm
-	setvar 20570, 1
+	setvar JOHTO_VAR_ICE_PATH_STATE, 1
 	release
 	end
 
 IcePath_1F_EventScript_KimonoGirlRefused::
 	msgbox IcePath_1F_Text_Cruel, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, IcePath_1F_EventScript_KimonoGirlPush
-	goto_if_eq 32781, FALSE, IcePath_1F_EventScript_KimonoGirlRefused
+	goto_if_eq VAR_RESULT, TRUE, IcePath_1F_EventScript_KimonoGirlPush
+	goto_if_eq VAR_RESULT, FALSE, IcePath_1F_EventScript_KimonoGirlRefused
 
 IcePath_Movement_PlayerJump:
 	jump_in_place_down

@@ -1,9 +1,9 @@
 @ Johto (data/maps/BurnedTower_B1F_hns/scripts.inc), as built into the FireRed game.
 
 BurnedTower_B1F_hns_MapScripts::
-	map_script 2,BurnedTower_B1F_OnFrame
-	map_script 3, BurnedTower_B1F_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, BurnedTower_B1F_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, BurnedTower_B1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 BurnedTower_B1F_OnTransition:
@@ -11,116 +11,116 @@ BurnedTower_B1F_OnTransition:
 	end
 
 BurnedTower_B1F_OnFrame::
-	map_script_2 20561, 3, BurnedTower_B1F_EventScript_ReleaseBeasts
+	map_script_2 JOHTO_VAR_ECRUTEAK_CITY_STATE, 3, BurnedTower_B1F_EventScript_ReleaseBeasts
 	.2byte 0
 
 BurnedTower_B1F_EventScript_ReleaseBeasts::
 	lock
-	turnobject 255, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	delay 60
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	delay 60
-	playse 21
-	applymovement 255, J_Common_Movement_ExclamationMark
-	turnobject 255, DIR_NORTH
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	delay 60
 
-	playmoncry 244, 0
-	applymovement 1, BurnedTower_B1F_Movement_AwakenBeasts
-	playse 10
+	playmoncry SPECIES_ENTEI, CRY_MODE_NORMAL
+	applymovement LOCALID_BURNEDTOWER_ENTEI, BurnedTower_B1F_Movement_AwakenBeasts
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
-	waitse
-	waitmovement 0
-
-	playmoncry 243, 0
-	applymovement 2, BurnedTower_B1F_Movement_AwakenBeasts
-	playse 10
-	waitse
-	playse 10
-	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
 
-	playmoncry 245, 0
-	applymovement 3, BurnedTower_B1F_Movement_AwakenBeasts
-	playse 10
+	playmoncry SPECIES_RAIKOU, CRY_MODE_NORMAL
+	applymovement LOCALID_BURNEDTOWER_RAIKOU, BurnedTower_B1F_Movement_AwakenBeasts
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
+	waitse
+	waitmovement 0
+
+	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
+	applymovement LOCALID_BURNEDTOWER_SUICUNE, BurnedTower_B1F_Movement_AwakenBeasts
+	playse SE_LEDGE
+	waitse
+	playse SE_LEDGE
+	waitse
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
 
 
-	applymovement 1, BurnedTower_B1F_Movement_EnteiLeave
-	playse 10
+	applymovement LOCALID_BURNEDTOWER_ENTEI, BurnedTower_B1F_Movement_EnteiLeave
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
-	delay 30
-	waitmovement 0
-
-	applymovement 2, BurnedTower_B1F_Movement_RaikouLeave
-	playse 10
-	delay 30
-	playse 10
-	delay 30
-	playse 10
-	delay 30
-	playse 10
-	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
 	waitmovement 0
 
-	applymovement 3, BurnedTower_B1F_Movement_SuicuneLeave
+	applymovement LOCALID_BURNEDTOWER_RAIKOU, BurnedTower_B1F_Movement_RaikouLeave
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playmoncry 245, 0
+	playse SE_LEDGE
+	delay 30
+	playse SE_LEDGE
+	delay 30
+	playse SE_LEDGE
+	delay 30
+	waitmovement 0
+
+	applymovement LOCALID_BURNEDTOWER_SUICUNE, BurnedTower_B1F_Movement_SuicuneLeave
+	delay 30
+	playse SE_LEDGE
+	delay 30
+	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
 	waitse
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	waitmovement 0
 
-	setflag 8238
-	removeobject 1
-	removeobject 2
-	removeobject 3
+	setflag JOHTO_FLAG_HIDE_BURNED_TOWER_BEASTS
+	removeobject LOCALID_BURNEDTOWER_ENTEI
+	removeobject LOCALID_BURNEDTOWER_RAIKOU
+	removeobject LOCALID_BURNEDTOWER_SUICUNE
 	delay 55
 
-	playse 9
-	turnobject 255, DIR_EAST
-	applymovement 11, BurnedTower_B1F_Movement_EusineEnter
+	playse SE_EXIT
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_BURNEDTOWER2_EUSINE, BurnedTower_B1F_Movement_EusineEnter
 	waitmovement 0
 	msgbox BurnedTowerB1FEusineText, MSGBOX_DEFAULT
 	closemessage
-	applymovement 11, BurnedTower_B1F_Movement_EusineLeave
+	applymovement LOCALID_BURNEDTOWER2_EUSINE, BurnedTower_B1F_Movement_EusineLeave
 	waitmovement 0
-	playse 9
-	setflag 8315
-	removeobject 11
-	setflag 8316
-	setflag 8309
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_BURNED_TOWER_B1F_EUSINE
+	removeobject LOCALID_BURNEDTOWER2_EUSINE
+	setflag JOHTO_FLAG_HIDE_BURNED_TOWER_NPCS
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_SAGE
 	special InitRoamer
-	setflag 8664
-	setvar 20561, 4
+	setflag JOHTO_FLAG_RELEASED_BEASTS
+	setvar JOHTO_VAR_ECRUTEAK_CITY_STATE, 4
 	release
 	end
 
@@ -204,7 +204,7 @@ BurnedTowerB1FEusineText:
 	.string "Farewell!$"
 
 BurnedTower_B1F_EventScript_Item_Taunt::
-	finditem 593
+	finditem ITEM_TM_TAUNT
 	end
 
 BurnedTower_B1F_EventScript_Item_UltraBall::

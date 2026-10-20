@@ -6,17 +6,17 @@ SinjohRuins_RegielekiRoom_hns_MapScripts::
 SinjohRuins_RegielekiRoom_EventScript_Regieleki::
 	lock
 	faceplayer
-	playmoncry 894, 2
+	playmoncry SPECIES_REGIELEKI, CRY_MODE_ENCOUNTER
 	waitmoncry
-	seteventmon 894, 80
+	seteventmon SPECIES_REGIELEKI, 80
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, SinjohRuins_RegielekiRoom_EventScript_RegielekiRan
-	fadescreenswapbuffers 1
-	removeobject 1
-	setflag 9135
-	fadescreenswapbuffers 0
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_RegielekiRoom_EventScript_RegielekiRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SINJOHRUINS_REGIELEKI
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGIELEKI
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 

@@ -6,7 +6,7 @@ OlivineCity_Gym_hns_MapScripts::
 OlivineCity_Gym_EventScript_Gent::
 	lock
 	faceplayer
-	goto_if_set 8748, OlivineCity_Gym_EventScript_Gent2
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, OlivineCity_Gym_EventScript_Gent2
 	msgbox OlivineCity_Gym_Text_Gent, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -20,56 +20,56 @@ OlivineCity_Gym_EventScript_Gent2::
 
 OlivineCity_Gym_TriggerRow1::
 	lock
-	setvar 16384, 3
-	playse 21
-	applymovement 16384, J_Common_Movement_ExclamationMark
-	waitmovement 16384
-	getplayerxy 16385, 16386
-	call_if_eq 16385, 6, OlivineCity_Gym_EventScript_MoveLeft4
-	call_if_eq 16385, 7, OlivineCity_Gym_EventScript_MoveLeft3
-	call_if_eq 16385, 8, OlivineCity_Gym_EventScript_MoveLeft2
-	call_if_eq 16385, 9, OlivineCity_Gym_EventScript_MoveLeft1
-	call_if_eq 16385, 10, OlivineCity_Gym_EventScript_MoveLeft0
-	turnobject 255, DIR_EAST
+	setvar VAR_TEMP_0, LOCALID_OLIVINE_CITY_GYM_NPC1
+	playse SE_PIN
+	applymovement VAR_TEMP_0, J_Common_Movement_ExclamationMark
+	waitmovement VAR_TEMP_0
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	call_if_eq VAR_TEMP_1, 6, OlivineCity_Gym_EventScript_MoveLeft4
+	call_if_eq VAR_TEMP_1, 7, OlivineCity_Gym_EventScript_MoveLeft3
+	call_if_eq VAR_TEMP_1, 8, OlivineCity_Gym_EventScript_MoveLeft2
+	call_if_eq VAR_TEMP_1, 9, OlivineCity_Gym_EventScript_MoveLeft1
+	call_if_eq VAR_TEMP_1, 10, OlivineCity_Gym_EventScript_MoveLeft0
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox OlivineCity_Gym_Text_Gent, MSGBOX_DEFAULT
 	closemessage
-	setvar 20583, 6
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 6
 	release
 	end
 
 OlivineCity_Gym_EventScript_MoveLeft0::
-	turnobject 16384, DIR_WEST
+	turnobject VAR_TEMP_0, DIR_WEST
 	return
 
 OlivineCity_Gym_EventScript_MoveLeft1::
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveLeft2::
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveLeft3::
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveLeft4::
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkLeft1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	return
 
@@ -89,7 +89,7 @@ OlivineCity_Gym_Text_Gent2:
 OlivineCity_Gym_EventScript_Lass::
 	lock
 	faceplayer
-	goto_if_set 8748, OlivineCity_Gym_EventScript_Lass2
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, OlivineCity_Gym_EventScript_Lass2
 	msgbox OlivineCity_Gym_Text_Lass, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -103,56 +103,56 @@ OlivineCity_Gym_EventScript_Lass2::
 
 OlivineCity_Gym_TriggerRow2::
 	lock
-	setvar 16384, 2
-	playse 21
-	applymovement 16384, J_Common_Movement_ExclamationMark
-	waitmovement 16384
-	getplayerxy 16385, 16386
-	call_if_eq 16385, 6, OlivineCity_Gym_EventScript_MoveRight0
-	call_if_eq 16385, 7, OlivineCity_Gym_EventScript_MoveRight1
-	call_if_eq 16385, 8, OlivineCity_Gym_EventScript_MoveRight2
-	call_if_eq 16385, 9, OlivineCity_Gym_EventScript_MoveRight3
-	call_if_eq 16385, 10, OlivineCity_Gym_EventScript_MoveRight4
-	turnobject 255, DIR_WEST
+	setvar VAR_TEMP_0, LOCALID_OLIVINE_CITY_GYM_NPC2
+	playse SE_PIN
+	applymovement VAR_TEMP_0, J_Common_Movement_ExclamationMark
+	waitmovement VAR_TEMP_0
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	call_if_eq VAR_TEMP_1, 6, OlivineCity_Gym_EventScript_MoveRight0
+	call_if_eq VAR_TEMP_1, 7, OlivineCity_Gym_EventScript_MoveRight1
+	call_if_eq VAR_TEMP_1, 8, OlivineCity_Gym_EventScript_MoveRight2
+	call_if_eq VAR_TEMP_1, 9, OlivineCity_Gym_EventScript_MoveRight3
+	call_if_eq VAR_TEMP_1, 10, OlivineCity_Gym_EventScript_MoveRight4
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox OlivineCity_Gym_Text_Lass, MSGBOX_DEFAULT
 	closemessage
-	setvar 20583, 7
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 7
 	release
 	end
 
 OlivineCity_Gym_EventScript_MoveRight0::
-	turnobject 16384, DIR_EAST
+	turnobject VAR_TEMP_0, DIR_EAST
 	return
 
 OlivineCity_Gym_EventScript_MoveRight1::
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveRight2::
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveRight3::
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
 	return
 
 OlivineCity_Gym_EventScript_MoveRight4::
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 16384, J_Common_Movement_WalkRight1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkRight1
 	waitmovement 0
 	return
 
@@ -172,8 +172,8 @@ OlivineCity_Gym_Text_Lass2:
 OlivineCity_Gym_EventScript_GymGuide::
 	lock
 	faceplayer
-	goto_if_lt 20583, 5, OlivineCity_Gym_EventScript_GymGuideSick
-	goto_if_set 8748, OlivineCity_Gym_EventScript_GymGuideAfter
+	goto_if_lt JOHTO_VAR_OLIVINE_CITY_STATE, 5, OlivineCity_Gym_EventScript_GymGuideSick
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, OlivineCity_Gym_EventScript_GymGuideAfter
 	msgbox OlivineCity_Gym_Text_GymGuideText, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -223,10 +223,10 @@ OlivineCity_Gym_Text_GymGuidePreText:
 OlivineCity_Gym_EventScript_Jasmine::
 	lock
 	faceplayer
-	goto_if_set 8748, OlivineCity_Gym_EventScript_Jasmine_Defeated
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, OlivineCity_Gym_EventScript_Jasmine_Defeated
 	msgbox OlivineCity_Gym_Text_JasmineSteelTypeIntro, MSGBOX_DEFAULT
-	goto_if_set 8747, OlivineCity_Gym_EventScript_CianwoodCheckMahog
-	goto_if_set 8749, OlivineCity_Gym_EventScript_MahogCheckCianwood
+	goto_if_set JOHTO_FLAG_DEFEATED_CIANWOOD_GYM, OlivineCity_Gym_EventScript_CianwoodCheckMahog
+	goto_if_set JOHTO_FLAG_DEFEATED_MAHOGANY_TOWN_GYM, OlivineCity_Gym_EventScript_MahogCheckCianwood
 	goto OlivineCity_Gym_EventScript_Jasmine_Battle1
 
 OlivineCity_Gym_EventScript_JasmineVictory::
@@ -234,42 +234,42 @@ OlivineCity_Gym_EventScript_JasmineVictory::
 	waitmessage
 	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox OlivineCity_Gym_Text_JasmineBadgeSpeech, MSGBOX_DEFAULT
-	setflag 10373
-	setflag 8748
-	addvar 20582, 1
-	setvar 32776, 6
+	setflag JOHTO_FLAG_BADGE06_GET
+	setflag JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM
+	addvar JOHTO_VAR_NUM_BADGES, 1
+	setvar VAR_0x8008, 6
 	call J_Common_EventScript_SetGymTrainers_hns
-	giveitem 604
+	giveitem ITEM_TM_IRON_TAIL
 	msgbox OlivineCity_Gym_Text_JasmineIronTailSpeech, MSGBOX_DEFAULT
-	setvar 20583, 8
-	setrespawn 134
-	call_if_eq 20582, 7, MahoganyTown_Gym_EventScript_SetupElmRocketCall
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 8
+	setrespawn JOHTO_HEAL_LOCATION_OLIVINE_CITY_HNS
+	call_if_eq JOHTO_VAR_NUM_BADGES, 7, MahoganyTown_Gym_EventScript_SetupElmRocketCall
 	closemessage
 	release
 	end
 
 OlivineCity_Gym_EventScript_CianwoodCheckMahog::
-	goto_if_set 8749, OlivineCity_Gym_EventScript_Jasmine_Battle3
+	goto_if_set JOHTO_FLAG_DEFEATED_MAHOGANY_TOWN_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
 	goto OlivineCity_Gym_EventScript_Jasmine_Battle2
 
 OlivineCity_Gym_EventScript_MahogCheckCianwood::
-	goto_if_set 8747, OlivineCity_Gym_EventScript_Jasmine_Battle3
+	goto_if_set JOHTO_FLAG_DEFEATED_CIANWOOD_GYM, OlivineCity_Gym_EventScript_Jasmine_Battle3
 	goto OlivineCity_Gym_EventScript_Jasmine_Battle2
 
 OlivineCity_Gym_EventScript_Jasmine_Battle1::
-	trainerbattle_no_intro 1438, OlivineCity_Gym_Text_JasmineBetterTrainer
+	trainerbattle_no_intro TRAINER_JOHTO_JASMINE_1_HNS, OlivineCity_Gym_Text_JasmineBetterTrainer
 	goto OlivineCity_Gym_EventScript_JasmineVictory
 
 OlivineCity_Gym_EventScript_Jasmine_Battle2::
-	trainerbattle_no_intro 1440, OlivineCity_Gym_Text_JasmineBetterTrainer
+	trainerbattle_no_intro TRAINER_JOHTO_JASMINE_1_2_HNS, OlivineCity_Gym_Text_JasmineBetterTrainer
 	goto OlivineCity_Gym_EventScript_JasmineVictory
 
 OlivineCity_Gym_EventScript_Jasmine_Battle3::
-	trainerbattle_no_intro 1441, OlivineCity_Gym_Text_JasmineBetterTrainer
+	trainerbattle_no_intro TRAINER_JOHTO_JASMINE_1_3_HNS, OlivineCity_Gym_Text_JasmineBetterTrainer
 	goto OlivineCity_Gym_EventScript_JasmineVictory
 
 OlivineCity_Gym_EventScript_Jasmine_Defeated::
-	goto_if_unset 8395, OlivineCity_Gym_EventScript_Jasmine_Trade
+	goto_if_unset JOHTO_FLAG_HIDE_DOJO_JASMINE, OlivineCity_Gym_EventScript_Jasmine_Trade
 	msgbox OlivineCity_Gym_Text_JasmineGoodLuck, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -322,7 +322,7 @@ OlivineCity_Gym_Text_JasmineRematchDefeatText:
 
 OlivineCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set 8748, OlivineCity_Gym_EventScript_Statue2
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, OlivineCity_Gym_EventScript_Statue2
 	msgbox OlivineCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -343,19 +343,19 @@ OlivineCity_Gym_Text_GymStatueCertified:
 	.string "{PLAYER}$"
 
 OlivineCity_Gym_EventScript_Jasmine_Trade::
-	goto_if_set 8962, OlivineCity_Gym_EventScript_JasmineTradeCompleted
-	setvar 32773, INGAME_TRADE_STEELIX
-	specialvar 32777, GetInGameTradeSpeciesInfo
+	goto_if_set JOHTO_FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED, OlivineCity_Gym_EventScript_JasmineTradeCompleted
+	setvar VAR_0x8005, INGAME_TRADE_STEELIX
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
 	msgbox OlivineCity_Gym_Text_JasmineWantToTrade, MSGBOX_YESNO
-	goto_if_eq 32781, NO, OlivineCity_Gym_EventScript_JasmineDeclineTrade
+	goto_if_eq VAR_RESULT, NO, OlivineCity_Gym_EventScript_JasmineDeclineTrade
 	chooseboxmon SELECT_PC_MON_TRADE
 	waitstate
-	goto_if_eq 32772, 0xFF, OlivineCity_Gym_EventScript_JasmineDeclineTrade
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, OlivineCity_Gym_EventScript_JasmineDeclineTrade
 	special CreateInGameTradePokemon
 	special DoInGameTradeScene
 	waitstate
 	msgbox OlivineCity_Gym_Text_JasmineTakeCare, MSGBOX_DEFAULT
-	setflag 8962
+	setflag JOHTO_FLAG_OLIVINE_GYM_NPC_TRADE_COMPLETED
 	release
 	end
 

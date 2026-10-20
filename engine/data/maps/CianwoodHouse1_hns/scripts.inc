@@ -7,9 +7,9 @@ CianwoodHouse1_EventScript_Hermit::
 	lock
 	faceplayer
 	msgbox CianwoodCity_Text_OldManIntro, MSGBOX_DEFAULT
-	goto_if_eq 20577, 2, CianwoodHouse1_EventScript_HermitHooh
+	goto_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 2, CianwoodHouse1_EventScript_HermitHooh
 	checkitem ITEM_TIDAL_BELL
-	goto_if_eq 32781, TRUE, CianwoodHouse1_EventScript_HermitTidalBell
+	goto_if_eq VAR_RESULT, TRUE, CianwoodHouse1_EventScript_HermitTidalBell
 	msgbox CianwoodCity_Text_WhirlIslandsStory, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -23,7 +23,7 @@ CianwoodHouse1_EventScript_HermitTidalBell::
 
 CianwoodHouse1_EventScript_HermitHooh::
 	checkitem ITEM_CLEAR_BELL
-	goto_if_eq 32781, TRUE, CianwoodHouse1_EventScript_HermitClearBell
+	goto_if_eq VAR_RESULT, TRUE, CianwoodHouse1_EventScript_HermitClearBell
 	msgbox CianwoodCity_Text_BellTowerStory, MSGBOX_DEFAULT
 	closemessage
 	release

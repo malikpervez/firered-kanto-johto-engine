@@ -11,7 +11,7 @@ BlackthornCity_House1EventScript_Dratini::
 	lock
 	faceplayer
 	waitse
-	playmoncry 147, 0
+	playmoncry SPECIES_DRATINI, CRY_MODE_NORMAL
 	msgbox BlackthornCity_House1_Text_Dratini, MSGBOX_DEFAULT
 	waitmoncry
 	release

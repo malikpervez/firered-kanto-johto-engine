@@ -1,8 +1,8 @@
 @ Johto (data/maps/IcePath_B4F_hns/scripts.inc), as built into the FireRed game.
 
 IcePath_B4F_hns_MapScripts::
-	map_script 3, IcePath_B4F_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, IcePath_B4F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 IcePath_B4F_OnTransition:

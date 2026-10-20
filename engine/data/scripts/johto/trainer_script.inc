@@ -1,11 +1,11 @@
 @ Johto (data/scripts/trainer_script.inc), as built into the FireRed game.
 
 J_Std_RegisteredInMatchCall::
-	buffertrainerclassname STR_VAR_1, 32768
-	buffertrainername STR_VAR_2, 32768
+	buffertrainerclassname STR_VAR_1, VAR_0x8000
+	buffertrainername STR_VAR_2, VAR_0x8000
 	closemessage
 	delay 30
-	playfanfare 460
+	playfanfare MUS_REGISTER_MATCH_CALL
 	msgbox J_gText_RegisteredTrainerinPokeNav, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
@@ -14,7 +14,7 @@ J_Std_RegisteredInMatchCall::
 
 J_EventScript_TryGetTrainerScript::
 	special ShouldTryGetTrainerScript
-	goto_if_eq 32781, TRUE, J_EventScript_GotoTrainerScript
+	goto_if_eq VAR_RESULT, TRUE, J_EventScript_GotoTrainerScript
 	releaseall
 	end
 

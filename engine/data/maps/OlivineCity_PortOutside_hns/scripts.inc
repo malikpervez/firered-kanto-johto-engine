@@ -1,7 +1,7 @@
 @ Johto (data/maps/OlivineCity_PortOutside_hns/scripts.inc), as built into the FireRed game.
 
 OlivineCity_PortOutside_hns_MapScripts::
-	map_script 3, OlivineCity_MapScript_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, OlivineCity_MapScript_OnTransition
 	.byte 0
 
 OlivineCity_PortOutside_EventScript_Sabrina::
@@ -9,11 +9,11 @@ OlivineCity_PortOutside_EventScript_Sabrina::
 	faceplayer
 	msgbox OlivineCity_PortOutside_Text_Sabrina, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
-	setflag 8322
-	removeobject 3
-	fadescreenswapbuffers 0
-	clearflag 8399
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_OLIVINE_SABRINA
+	removeobject LOCALID_OLIVINE_SABRINA
+	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag JOHTO_FLAG_HIDE_DOJO_SABRINA
 	release
 	end
 

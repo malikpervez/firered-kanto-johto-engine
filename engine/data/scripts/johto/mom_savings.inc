@@ -5,7 +5,7 @@ J_EventScript_MomGiftCall_Item::
 	pokenavcall J_Mom_Text_GiftCall_Item
 	waitmessage
 	delay 30
-	clearflag 8957
+	clearflag JOHTO_FLAG_MOM_HAS_GIFT
 	releaseall
 	end
 
@@ -14,7 +14,7 @@ J_EventScript_MomGiftCall_Berry::
 	pokenavcall J_Mom_Text_GiftCall_Berry
 	waitmessage
 	delay 30
-	clearflag 8957
+	clearflag JOHTO_FLAG_MOM_HAS_GIFT
 	releaseall
 	end
 
@@ -23,7 +23,7 @@ J_EventScript_MomGiftCall_Decoration::
 	pokenavcall J_Mom_Text_GiftCall_Decoration
 	waitmessage
 	delay 30
-	clearflag 8957
+	clearflag JOHTO_FLAG_MOM_HAS_GIFT
 	releaseall
 	end
 

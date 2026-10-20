@@ -8,7 +8,7 @@ Cherrygrove_Pokemart_EventScript_Clerk::
 	faceplayer
 	message J_gText_HowMayIServeYou
 	waitmessage
-	goto_if_ge 20581, 5, Cherrygrove_Pokemart_EventScript_Clerk2
+	goto_if_ge JOHTO_VAR_NEWBARK_TOWN_STATE, 5, Cherrygrove_Pokemart_EventScript_Clerk2
 	pokemart Cherrygrove_Pokemart_Pokemart
 	msgbox J_gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
@@ -25,7 +25,7 @@ Cherrygrove_Pokemart_EventScript_Youngster::
 Cherrygrove_Pokemart_EventScript_Bugcatcher::
 	lock
 	faceplayer
-	goto_if_eq 20581, 5, Cherrygrove_Pokemart_EventScript_Bugcatcher2
+	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 5, Cherrygrove_Pokemart_EventScript_Bugcatcher2
 	msgbox Cherrygrove_Pokemart_Text_CooltrainerM, MSGBOX_DEFAULT
 	closemessage
 	release

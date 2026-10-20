@@ -3,19 +3,19 @@
 J_ProfileMan_EventScript_Man::
 	lock
 	faceplayer
-	goto_if_set 0, J_ProfileMan_EventScript_GivenProfileBefore
+	goto_if_set FLAG_SYS_CHAT_USED, J_ProfileMan_EventScript_GivenProfileBefore
 	msgbox J_ProfileMan_Text_CollectTrainerProfiles, MSGBOX_DEFAULT
 	goto J_ProfileMan_EventScript_AskToSeeProfile
 	end
 
 J_ProfileMan_EventScript_AskToSeeProfile::
 	msgbox J_ProfileMan_Text_MayISeeYourProfile, MSGBOX_DEFAULT
-	multichoice 17, 6, 20, FALSE
-	switch 32781
+	multichoice 17, 6, MULTI_YESNOINFO_2, FALSE
+	switch VAR_RESULT
 	case 0, J_ProfileMan_EventScript_CreateProfile
 	case 1, J_ProfileMan_EventScript_DeclineShowProfile
 	case 2, J_ProfileMan_EventScript_Info
-	case 127, J_ProfileMan_EventScript_DeclineShowProfile
+	case MULTI_B_PRESSED, J_ProfileMan_EventScript_DeclineShowProfile
 	end
 
 J_ProfileMan_EventScript_Info::
@@ -26,12 +26,12 @@ J_ProfileMan_EventScript_Info::
 J_ProfileMan_EventScript_CreateProfile::
 	msgbox J_ProfileMan_Text_LetsSeeItThen, MSGBOX_DEFAULT
 	closemessage
-	setvar 32772, 0
+	setvar VAR_0x8004, EASY_CHAT_TYPE_PROFILE
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 0, J_ProfileMan_EventScript_CancelShowProfile
-	goto_if_eq 32781, 1, J_ProfileMan_EventScript_ShowProfile
+	goto_if_eq VAR_RESULT, 0, J_ProfileMan_EventScript_CancelShowProfile
+	goto_if_eq VAR_RESULT, 1, J_ProfileMan_EventScript_ShowProfile
 	end
 
 J_ProfileMan_EventScript_CancelShowProfile::
@@ -40,7 +40,7 @@ J_ProfileMan_EventScript_CancelShowProfile::
 	end
 
 J_ProfileMan_EventScript_ShowProfile::
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	special ShowEasyChatProfile
 	waitmessage
 	delay 80
@@ -60,12 +60,12 @@ J_ProfileMan_EventScript_GivenProfileBefore::
 
 J_ProfileMan_EventScript_AskToSeeNewProfile::
 	msgbox J_ProfileMan_Text_MayISeeYourNewProfile, MSGBOX_DEFAULT
-	multichoice 17, 6, 20, FALSE
-	switch 32781
+	multichoice 17, 6, MULTI_YESNOINFO_2, FALSE
+	switch VAR_RESULT
 	case 0, J_ProfileMan_EventScript_CreateNewProfile
 	case 1, J_ProfileMan_EventScript_DeclineNewProfile
 	case 2, J_ProfileMan_EventScript_InfoNewProfile
-	case 127, J_ProfileMan_EventScript_DeclineNewProfile
+	case MULTI_B_PRESSED, J_ProfileMan_EventScript_DeclineNewProfile
 	end
 
 J_ProfileMan_EventScript_InfoNewProfile::
@@ -76,12 +76,12 @@ J_ProfileMan_EventScript_InfoNewProfile::
 J_ProfileMan_EventScript_CreateNewProfile::
 	msgbox J_ProfileMan_Text_EvenBetterThanLastProfile, MSGBOX_DEFAULT
 	closemessage
-	setvar 32772, 0
+	setvar VAR_0x8004, EASY_CHAT_TYPE_PROFILE
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 0, J_ProfileMan_EventScript_CancelShowProfile
-	goto_if_eq 32781, 1, J_ProfileMan_EventScript_ShowProfile
+	goto_if_eq VAR_RESULT, 0, J_ProfileMan_EventScript_CancelShowProfile
+	goto_if_eq VAR_RESULT, 1, J_ProfileMan_EventScript_ShowProfile
 	end
 
 J_ProfileMan_EventScript_DeclineNewProfile::

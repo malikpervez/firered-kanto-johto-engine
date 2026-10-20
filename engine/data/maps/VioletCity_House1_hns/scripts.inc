@@ -14,9 +14,9 @@ VioletCity_House1_EventScript_Kyle::
 VioletCity_House1_EventScript_Rudy::
 	lock
 	faceplayer
-	goto_if_set 8773, VioletCity_House1_EventScript_TradeCompleted
+	goto_if_set JOHTO_FLAG_VIOLET_NPC_TRADE_COMPLETED, VioletCity_House1_EventScript_TradeCompleted
 	ingame_trade INGAME_TRADE_ONIX, VioletCity_House1_Text_YouWillTradeWontYou, VioletCity_House1_EventScript_DeclineTrade, VioletCity_House1_EventScript_NotRequestedMon, VioletCity_House1_Text_MonYouTakeCare
-	setflag 8773
+	setflag JOHTO_FLAG_VIOLET_NPC_TRADE_COMPLETED
 	release
 	end
 
@@ -26,7 +26,7 @@ VioletCity_House1_EventScript_DeclineTrade::
 	end
 
 VioletCity_House1_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, 32777
+	bufferspeciesname STR_VAR_1, VAR_0x8009
 	msgbox VioletCity_House1_Text_ThisIsntAMon, MSGBOX_DEFAULT
 	release
 	end

@@ -1,8 +1,8 @@
 @ Johto (data/maps/DarkCave_NorthSide_hns/scripts.inc), as built into the FireRed game.
 
 DarkCave_NorthSide_hns_MapScripts::
-	map_script 3, DarkCave_NorthSide_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, DarkCave_NorthSide_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 DarkCave_NorthSide_OnTransition:
@@ -20,10 +20,10 @@ DarkCave2_EventScript_Item_StarPiece::
 DarkCave2_EventScript_BlackGlasses::
 	lock
 	faceplayer
-	goto_if_set 8724, DarkCave2_EventScript_BlackGlassesGot
+	goto_if_set JOHTO_FLAG_GOT_BLACK_GLASSES, DarkCave2_EventScript_BlackGlassesGot
 	msgbox DarkCave2_Text_Nerd, MSGBOX_DEFAULT
 	giveitem ITEM_BLACK_GLASSES
-	setflag 8724
+	setflag JOHTO_FLAG_GOT_BLACK_GLASSES
 	closemessage
 	release
 	end

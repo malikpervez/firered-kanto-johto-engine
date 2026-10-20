@@ -1,16 +1,16 @@
 @ Johto (data/maps/GoldenrodCity_UndergroundSwitches_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_UndergroundSwitches_hns_MapScripts::
-	map_script 1, GoldenrodUnderground1_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, GoldenrodUnderground1_OnLoad
 	.byte 0
 
 GoldenrodUnderground1_OnLoad::
-	setvar 16384, 0
-	call_if_set 8667, GoldenrodUnderground1_ClearTheWay
-	clearflag 8685
-	clearflag 8686
-	clearflag 8687
-	clearflag 8688
+	setvar VAR_TEMP_0, 0
+	call_if_set JOHTO_FLAG_COMPLETED_SWITCHES, GoldenrodUnderground1_ClearTheWay
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_1
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_2
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_3
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_ORDER
 	end
 
 GoldenrodUnderground1_ClearTheWay::
@@ -26,7 +26,7 @@ GoldenrodCity_UndergroundSwitches_InDoorAntiLock::
 	lock
 	msgbox GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, J_Common_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_NoOp
 	warp MAP_GOLDENROD_CITY_UNDERGROUND_SWITCHES_HNS, 2, 25, 5
 	waitstate
 	release
@@ -34,14 +34,14 @@ GoldenrodCity_UndergroundSwitches_InDoorAntiLock::
 
 GoldenrodCity_UndergroundSwitches_InDoorAntiLock2::
 	lock
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 	release
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock::
 	lock
 	msgbox GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_TP
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_TP
 	closemessage
 	release
 	end
@@ -59,9 +59,9 @@ GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text::
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel1::
 	lock
-	goto_if_unset 8685, GoldenrodCity_UndergroundSwitches_EventScript_Panel1Activate
-	clearflag 8685
-	playse 20
+	goto_if_unset JOHTO_FLAG_GOLDENROD_SWITCH_1, GoldenrodCity_UndergroundSwitches_EventScript_Panel1Activate
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_1
+	playse SE_BANG
 	msgbox GoldenrodUnderground_Text_Switch1Off, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_CreateWall1
@@ -76,10 +76,10 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel1::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel1Activate::
-	setflag 8685
-	goto_if_set 8688, GoldenrodCity_UndergroundSwitches_EventScript_Panel1ActivateCorrect
-	clearflag 8688
-	playse 20
+	setflag JOHTO_FLAG_GOLDENROD_SWITCH_1
+	goto_if_set JOHTO_FLAG_GOLDENROD_SWITCH_ORDER, GoldenrodCity_UndergroundSwitches_EventScript_Panel1ActivateCorrect
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_ORDER
+	playse SE_BANG
 	msgbox GoldenrodUnderground_Text_Switch1, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_RemoveWall1
@@ -94,8 +94,8 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel1Activate::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel1ActivateCorrect::
-	playse 36
-	setflag 8667
+	playse SE_CLICK
+	setflag JOHTO_FLAG_COMPLETED_SWITCHES
 	msgbox GoldenrodUnderground_Text_Switch1, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_CreateWall1
@@ -111,10 +111,10 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel1ActivateCorrect::
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel2::
 	lock
-	goto_if_unset 8686, GoldenrodCity_UndergroundSwitches_EventScript_Panel2Activate
-	clearflag 8686
-	clearflag 8688
-	playse 20
+	goto_if_unset JOHTO_FLAG_GOLDENROD_SWITCH_2, GoldenrodCity_UndergroundSwitches_EventScript_Panel2Activate
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_2
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_ORDER
+	playse SE_BANG
 	msgbox GoldenrodUnderground_Text_Switch2Off, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_CreateWall1
@@ -129,10 +129,10 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel2::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel2Activate::
-	setflag 8686
-	goto_if_set 8685, GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateWrong
-	goto_if_set 8687, GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateCorrect
-	playse 20
+	setflag JOHTO_FLAG_GOLDENROD_SWITCH_2
+	goto_if_set JOHTO_FLAG_GOLDENROD_SWITCH_1, GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateWrong
+	goto_if_set JOHTO_FLAG_GOLDENROD_SWITCH_3, GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateCorrect
+	playse SE_BANG
 	msgbox GoldenrodUnderground_Text_Switch2, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_RemoveWall1
@@ -147,8 +147,8 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel2Activate::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateWrong::
-	clearflag 8688
-	playse 20
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_ORDER
+	playse SE_BANG
 	msgbox GoldenrodUnderground_Text_Switch2, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_RemoveWall1
@@ -163,8 +163,8 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateWrong::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateCorrect::
-	setflag 8688
-	playse 36
+	setflag JOHTO_FLAG_GOLDENROD_SWITCH_ORDER
+	playse SE_CLICK
 	msgbox GoldenrodUnderground_Text_Switch2, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_CreateWall1
@@ -180,10 +180,10 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateCorrect::
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel3::
 	lock
-	goto_if_unset 8687, GoldenrodCity_UndergroundSwitches_EventScript_Panel3Activate
-	clearflag 8687
-	clearflag 8688
-	playse 20
+	goto_if_unset JOHTO_FLAG_GOLDENROD_SWITCH_3, GoldenrodCity_UndergroundSwitches_EventScript_Panel3Activate
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_3
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_ORDER
+	playse SE_BANG
 	msgbox GoldenrodUnderground_Text_Switch3Off, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_CreateWall1
@@ -198,9 +198,9 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel3::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel3Activate::
-	setflag 8687
-	clearflag 8688
-	playse 36
+	setflag JOHTO_FLAG_GOLDENROD_SWITCH_3
+	clearflag JOHTO_FLAG_GOLDENROD_SWITCH_ORDER
+	playse SE_CLICK
 	msgbox GoldenrodUnderground_Text_Switch3, MSGBOX_DEFAULT
 	closemessage
 	call GoldenrodCity_UndergroundSwitches_EventScript_RemoveWall1
@@ -336,78 +336,78 @@ GoldenrodCity_UndergroundSwitches_EventScript_RemoveWall6::
 
 GoldenrodCity_UndergroundSwitches_EventScript_SilverTriggerTop::
 	lock
-	playse 9
+	playse SE_EXIT
 	waitse
-	playse 21
+	playse SE_PIN
 	playbgm ((558 + 1) + 0x3B), FALSE
 
-	addobject 7
-	applymovement 255, J_Common_Movement_ExclamationMark
-	applymovement 7, GoldenrodCity_UndergroundSwitches_Movement_SilverEnterTop
+	addobject LOCALID_GOLDENROD_UNDERGROUND_SILVER
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_SILVER, GoldenrodCity_UndergroundSwitches_Movement_SilverEnterTop
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkRight1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
 	waitmovement 0
 	msgbox GoldenrodUnderground_Text_SilverBefore, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20499, 0, GoldenrodCity_UndergroundSwitches_EventScript_Cyndaquil
-	call_if_eq 20499, 1, GoldenrodCity_UndergroundSwitches_EventScript_Totodile
-	call_if_eq 20499, 2, GoldenrodCity_UndergroundSwitches_EventScript_Chikorita
+	call_if_eq JOHTO_VAR_STARTER_MON, 0, GoldenrodCity_UndergroundSwitches_EventScript_Cyndaquil
+	call_if_eq JOHTO_VAR_STARTER_MON, 1, GoldenrodCity_UndergroundSwitches_EventScript_Totodile
+	call_if_eq JOHTO_VAR_STARTER_MON, 2, GoldenrodCity_UndergroundSwitches_EventScript_Chikorita
 	playbgm ((558 + 1) + 0x3C), FALSE
 	msgbox GoldenrodUnderground_Text_SilverAfter, MSGBOX_DEFAULT
 	closemessage
-	applymovement 7, GoldenrodCity_UndergroundSwitches_Movement_SilverLeaveTop
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_SILVER, GoldenrodCity_UndergroundSwitches_Movement_SilverLeaveTop
 	waitmovement 0
-	playse 9
-	setflag 8303
-	removeobject 7
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_UNDERGROUND_SILVER
+	removeobject LOCALID_GOLDENROD_UNDERGROUND_SILVER
 	fadedefaultbgm
-	setvar 20569, 9
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 9
 	release
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_SilverTriggerBot::
 	lock
-	playse 9
+	playse SE_EXIT
 	waitse
-	playse 21
+	playse SE_PIN
 	playbgm ((558 + 1) + 0x3B), FALSE
-	clearflag 8303
-	addobject 7
-	applymovement 255, J_Common_Movement_ExclamationMark
-	applymovement 7, GoldenrodCity_UndergroundSwitches_Movement_SilverEnterBot
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_UNDERGROUND_SILVER
+	addobject LOCALID_GOLDENROD_UNDERGROUND_SILVER
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_SILVER, GoldenrodCity_UndergroundSwitches_Movement_SilverEnterBot
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkRight1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
 	waitmovement 0
 	msgbox GoldenrodUnderground_Text_SilverBefore, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20499, 0, GoldenrodCity_UndergroundSwitches_EventScript_Cyndaquil
-	call_if_eq 20499, 1, GoldenrodCity_UndergroundSwitches_EventScript_Totodile
-	call_if_eq 20499, 2, GoldenrodCity_UndergroundSwitches_EventScript_Chikorita
+	call_if_eq JOHTO_VAR_STARTER_MON, 0, GoldenrodCity_UndergroundSwitches_EventScript_Cyndaquil
+	call_if_eq JOHTO_VAR_STARTER_MON, 1, GoldenrodCity_UndergroundSwitches_EventScript_Totodile
+	call_if_eq JOHTO_VAR_STARTER_MON, 2, GoldenrodCity_UndergroundSwitches_EventScript_Chikorita
 	playbgm ((558 + 1) + 0x3C), FALSE
 	msgbox GoldenrodUnderground_Text_SilverAfter, MSGBOX_DEFAULT
 	closemessage
-	applymovement 7, GoldenrodCity_UndergroundSwitches_Movement_SilverLeaveBot
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_SILVER, GoldenrodCity_UndergroundSwitches_Movement_SilverLeaveBot
 	waitmovement 0
-	playse 9
-	setflag 8303
-	removeobject 7
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_UNDERGROUND_SILVER
+	removeobject LOCALID_GOLDENROD_UNDERGROUND_SILVER
 	fadedefaultbgm
-	setvar 20569, 9
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 9
 	release
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Cyndaquil::
-	trainerbattle_no_intro 1477, GoldenrodUnderground_Text_SilverWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CYNDAQUIL_4_HNS, GoldenrodUnderground_Text_SilverWin
 	return
 
 GoldenrodCity_UndergroundSwitches_EventScript_Totodile::
-	trainerbattle_no_intro 1484, GoldenrodUnderground_Text_SilverWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_TOTODILE_4_HNS, GoldenrodUnderground_Text_SilverWin
 	return
 
 GoldenrodCity_UndergroundSwitches_EventScript_Chikorita::
-	trainerbattle_no_intro 1470, GoldenrodUnderground_Text_SilverWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CHIKORITA_4_HNS, GoldenrodUnderground_Text_SilverWin
 	return
 
 GoldenrodCity_UndergroundSwitches_Movement_SilverEnterTop:
@@ -465,32 +465,32 @@ GoldenrodCity_UndergroundSwitches_Movement_SilverLeaveBot:
 	step_end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Grunt10::
-	trainerbattle_single 1152, GoldenrodUnderground_Text_GruntM11Seen, GoldenrodUnderground_Text_GruntM11Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_10_HNS, GoldenrodUnderground_Text_GruntM11Seen, GoldenrodUnderground_Text_GruntM11Beaten
 	msgbox GoldenrodUnderground_Text_GruntM11After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Grunt20::
-	trainerbattle_single 1162, GoldenrodUnderground_Text_GruntM25Seen, GoldenrodUnderground_Text_GruntM25Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_20_HNS, GoldenrodUnderground_Text_GruntM25Seen, GoldenrodUnderground_Text_GruntM25Beaten
 	msgbox GoldenrodUnderground_Text_GruntM25After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Duncan::
-	trainerbattle_single 1307, GoldenrodUnderground_Text_BurglarDuncanSeen, GoldenrodUnderground_Text_BurglarDuncanBeaten
+	trainerbattle_single TRAINER_JOHTO_DUNCAN_HNS, GoldenrodUnderground_Text_BurglarDuncanSeen, GoldenrodUnderground_Text_BurglarDuncanBeaten
 	msgbox GoldenrodUnderground_Text_BurglarDuncanAfter, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Eddie::
-	trainerbattle_single 1308, GoldenrodUnderground_Text_BurglarEddieSeen, GoldenrodUnderground_Text_BurglarEddieBeaten
+	trainerbattle_single TRAINER_JOHTO_EDDIE_HNS, GoldenrodUnderground_Text_BurglarEddieSeen, GoldenrodUnderground_Text_BurglarEddieBeaten
 	msgbox GoldenrodUnderground_Text_BurglarEddieAfter, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Grunt11::
-	trainerbattle_single 1153, GoldenrodUnderground_Text_GruntM13Seen, GoldenrodUnderground_Text_GruntM13Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_11_HNS, GoldenrodUnderground_Text_GruntM13Seen, GoldenrodUnderground_Text_GruntM13Beaten
 	msgbox GoldenrodUnderground_Text_GruntM13After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_Grunt27::
-	trainerbattle_single 1169, GoldenrodUnderground_Text_GruntF3Seen, GoldenrodUnderground_Text_GruntF3Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_27_HNS, GoldenrodUnderground_Text_GruntF3Seen, GoldenrodUnderground_Text_GruntF3Beaten
 	msgbox GoldenrodUnderground_Text_GruntF3After, MSGBOX_AUTOCLOSE
 	end
 

@@ -1,12 +1,12 @@
 @ Johto (data/maps/BlackthornCity_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 BlackthornCity_PokemonCenter_hns_MapScripts::
-	map_script 5, J_CableClub_OnResume
-	map_script 3, BlackthornCity_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_CableClub_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, BlackthornCity_PokemonCenter_OnTransition
 	.byte 0
 
 BlackthornCity_PokemonCenter_OnTransition::
-	setrespawn 137
+	setrespawn JOHTO_HEAL_LOCATION_BLACKTHORN_CITY_HNS
 	end
 
 BlackthornCity_PokemonCenter_EventScript_Gent::

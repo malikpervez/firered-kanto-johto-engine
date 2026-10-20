@@ -15,14 +15,14 @@ J_Common_EventScript_MoveRelearnerDynMultiChoice::
 	dynmultipush J_MoveRelearner_Text_TMMoves, 2
 	dynmultipush J_MoveRelearner_Text_TutormoveMoves, 3
 	.else
-	call_if_set 0, J_MoveRelearner_EventScript_PushEggMoves
+	call_if_set P_FLAG_EGG_MOVES, J_MoveRelearner_EventScript_PushEggMoves
 	istmrelearneractive J_MoveRelearner_EventScript_PushTMMoves
-	call_if_set 0, J_MoveRelearner_EventScript_PushTutorMoves
+	call_if_set P_FLAG_TUTOR_MOVES, J_MoveRelearner_EventScript_PushTutorMoves
 	.endif
 	dynmultipush J_MoveRelearner_Text_SeeYa, 4
-	dynmultistack 0, 0, FALSE, 5, 0, 0, 255
+	dynmultistack 0, 0, FALSE, 5, 0, 0, DYN_MULTICHOICE_CB_NONE
 	closemessage
-	switch 32781
+	switch VAR_RESULT
 	case 0, J_MoveRelearner_EventScript_TeachLevelUpMoves
 	case 1, J_MoveRelearner_EventScript_TeachEggMoves
 	case 2, J_MoveRelearner_EventScript_TeachTMMoves
@@ -72,15 +72,15 @@ J_MoveRelearner_EventScript_TeachTutorMoves:
 
 J_MoveRelearner_EventScript_TeachMove::
 	getpartysize
-	goto_if_eq 32781, 0, J_MoveRelearner_EventScript_NoPkmn
+	goto_if_eq VAR_RESULT, 0, J_MoveRelearner_EventScript_NoPkmn
 	msgbox J_MoveRelearner_Text_ChoosePkmn, MSGBOX_DEFAULT
 	chooseboxmon SELECT_PC_MON_MOVE_RELEARNER
 	waitstate
-	call_if_eq 32772, 0xFF, J_MoveRelearner_EventScript_AnythingElse
+	call_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, J_MoveRelearner_EventScript_AnythingElse
 	special IsSelectedMonEgg
-	call_if_eq 32781, TRUE, J_MoveRelearner_EventScript_CantTeachMoveToEgg
+	call_if_eq VAR_RESULT, TRUE, J_MoveRelearner_EventScript_CantTeachMoveToEgg
 	special HasMovesToRelearn
-	call_if_eq 32781, FALSE, J_MoveRelearner_EventScript_CantTeachMoveToPkmn
+	call_if_eq VAR_RESULT, FALSE, J_MoveRelearner_EventScript_CantTeachMoveToPkmn
 	msgbox J_MoveRelearner_Text_WhichXmoveShouldTeach, MSGBOX_DEFAULT
 	special TeachMoveRelearnerMove
 	waitstate

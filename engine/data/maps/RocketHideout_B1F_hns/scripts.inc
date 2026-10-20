@@ -1,16 +1,16 @@
 @ Johto (data/maps/RocketHideout_B1F_hns/scripts.inc), as built into the FireRed game.
 
 RocketHideout_B1F_hns_MapScripts::
-	map_script 1, J_RocketHideout_B1F_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, J_RocketHideout_B1F_OnLoad
 	.byte 0
 
 J_RocketHideout_B1F_OnLoad::
-	setflag 8335
-	call_if_eq 20586, 2, RocketHideout_B1F_EventScript_SetStatue1
-	call_if_eq 20587, 2, RocketHideout_B1F_EventScript_SetStatue2
-	call_if_eq 20588, 2, RocketHideout_B1F_EventScript_SetStatue3
-	call_if_eq 20589, 2, RocketHideout_B1F_EventScript_SetStatue4
-	call_if_eq 20590, 2, RocketHideout_B1F_EventScript_SetStatue5
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT_ROCKETS
+	call_if_eq JOHTO_VAR_ROCKET_HIDEOUT_STATUE_1, 2, RocketHideout_B1F_EventScript_SetStatue1
+	call_if_eq JOHTO_VAR_ROCKET_HIDEOUT_STATUE_2, 2, RocketHideout_B1F_EventScript_SetStatue2
+	call_if_eq JOHTO_VAR_ROCKET_HIDEOUT_STATUE_3, 2, RocketHideout_B1F_EventScript_SetStatue3
+	call_if_eq JOHTO_VAR_ROCKET_HIDEOUT_STATUE_4, 2, RocketHideout_B1F_EventScript_SetStatue4
+	call_if_eq JOHTO_VAR_ROCKET_HIDEOUT_STATUE_5, 2, RocketHideout_B1F_EventScript_SetStatue5
 	end
 
 RocketHideout_B1F_EventScript_SetStatue1::
@@ -34,65 +34,65 @@ RocketHideout_B1F_EventScript_SetStatue5::
 	return
 
 RocketHideout_B1F_TriggerTest::
-	setflag 8335
-	clearflag 8671
-	clearflag 8338
-	clearflag 8337
-	setflag 8347
-	clearflag 8341
-	clearflag 8741
-	clearflag 8742
-	setvar 20591, 0
-	clearflag 8344
-	clearflag 8342
-	setflag 8346
-	setflag 8340
-	setflag 8339
-	setflag 8345
-	setflag 8336
-	setvar 16387, 1
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT_ROCKETS
+	clearflag JOHTO_FLAG_ROCKETHIDEOUT_SWITCH
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_GATE
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_SILVER
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_GATE
+	clearflag JOHTO_FLAG_GOT_PASSWORD_FROM_ETO
+	clearflag JOHTO_FLAG_GOT_PASSWORD_FROM_GRUNTF
+	setvar JOHTO_VAR_ROCKET_PASSWORD, 0
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_MURKROW
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_GIOVANNI
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_PETREL
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_MURKROWSTAIRS
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_MURKROWGATE
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_MURKROWSTAIRS
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT
+	setvar VAR_TEMP_3, 1
 	end
 
 RocketHideout_B1F_EventScript_SpawnGruntLeft::
-	clearflag 8335
-	addobject 16384
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT_ROCKETS
+	addobject VAR_TEMP_0
 	return
 
 RocketHideout_B1F_EventScript_SpawnGruntRight::
-	clearflag 8335
-	addobject 16384
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT_ROCKETS
+	addobject VAR_TEMP_0
 	return
 
 RocketHideout_B1F_EventScript_HeightAdjust::
-	applymovement 16384, J_Common_Movement_WalkDown1
+	applymovement VAR_TEMP_0, J_Common_Movement_WalkDown1
 	waitmovement 0
 	return
 
 RocketHideout_B1F_Trigger_SpawnGruntStatue1::
 	setvar 16384, 1
 	call RocketHideout_B1F_EventScript_SpawnGruntLeft
-	setvar 20586, 1
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_1, LOCALID_ROCKETHIDEOUT_GRUNTM1
 	end
 
 RocketHideout_B1F_Trigger_Statue1::
 	lock
-	setvar 16384, 1
+	setvar VAR_TEMP_0, LOCALID_ROCKETHIDEOUT_GRUNTM1
 	call RocketHideout_B1F_EventScript_SpawnGruntLeft
 	call RocketHideout_B1F_EventScript_SpawnGruntRight
 	call RocketHideout_B1F_Trigger_StatueGruntLeft
-	setvar 20586, 2
-	fadescreenswapbuffers 1
-	removeobject 16384
-	fadescreenswapbuffers 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_1, 2
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_TEMP_0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setmetatile 45, 1, 0x2A9, TRUE
 	special DrawWholeMapView
 	release
 	end
 
 RocketHideout_B1F_Trigger_SpawnGruntStatue2::
-	setvar 16384, 2
+	setvar VAR_TEMP_0, LOCALID_ROCKETHIDEOUT_GRUNTM2
 	call RocketHideout_B1F_EventScript_SpawnGruntRight
-	setvar 20587, 1
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_2, 1
 	end
 
 RocketHideout_B1F_Trigger_Statue2::
@@ -101,130 +101,130 @@ RocketHideout_B1F_Trigger_Statue2::
 	call RocketHideout_B1F_EventScript_SpawnGruntLeft
 	call RocketHideout_B1F_EventScript_SpawnGruntRight
 	call RocketHideout_B1F_Trigger_StatueGruntRight
-	setvar 20587, 2
-	fadescreenswapbuffers 1
-	removeobject 16384
-	fadescreenswapbuffers 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_2, LOCALID_ROCKETHIDEOUT_GRUNTM2
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_TEMP_0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setmetatile 24, 1, 0x2A9, TRUE
 	special DrawWholeMapView
 	release
 	end
 
 RocketHideout_B1F_Trigger_SpawnGruntStatue3::
-	setvar 16384, 3
+	setvar VAR_TEMP_0, LOCALID_ROCKETHIDEOUT_GRUNTM3
 	call RocketHideout_B1F_EventScript_SpawnGruntLeft
-	setvar 20588, 1
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_3, 1
 	end
 
 RocketHideout_B1F_Trigger_Statue3::
 	lock
-	setvar 16384, 3
+	setvar VAR_TEMP_0, LOCALID_ROCKETHIDEOUT_GRUNTM3
 	call RocketHideout_B1F_EventScript_SpawnGruntLeft
 	call RocketHideout_B1F_EventScript_SpawnGruntRight
 	call RocketHideout_B1F_Trigger_StatueGruntLeft
-	setvar 20588, 2
-	fadescreenswapbuffers 1
-	removeobject 16384
-	fadescreenswapbuffers 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_3, 2
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_TEMP_0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setmetatile 45, 6, 0x2A9, TRUE
 	special DrawWholeMapView
 	release
 	end
 
 RocketHideout_B1F_Trigger_SpawnGruntStatue4::
-	setvar 16384, 4
+	setvar VAR_TEMP_0, LOCALID_ROCKETHIDEOUT_GRUNTM4
 	call RocketHideout_B1F_EventScript_SpawnGruntLeft
-	setvar 20589, 1
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_4, 1
 	end
 
 RocketHideout_B1F_Trigger_Statue4::
 	lock
-	setvar 16384, 4
+	setvar VAR_TEMP_0, LOCALID_ROCKETHIDEOUT_GRUNTM4
 	call RocketHideout_B1F_EventScript_SpawnGruntLeft
 	call RocketHideout_B1F_EventScript_SpawnGruntRight
 	call RocketHideout_B1F_Trigger_StatueGruntLeft
-	setvar 20589, 2
-	fadescreenswapbuffers 1
-	removeobject 16384
-	fadescreenswapbuffers 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_4, 2
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_TEMP_0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setmetatile 45, 19, 0x2A9, TRUE
 	special DrawWholeMapView
 	release
 	end
 
 RocketHideout_B1F_Trigger_SpawnGruntStatue5::
-	setvar 16384, 4
+	setvar VAR_TEMP_0, LOCALID_ROCKETHIDEOUT_GRUNTM4
 	call RocketHideout_B1F_EventScript_SpawnGruntRight
-	setvar 20590, 1
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_5, 1
 	end
 
 RocketHideout_B1F_Trigger_Statue5::
 	lock
-	setvar 16384, 4
+	setvar VAR_TEMP_0, LOCALID_ROCKETHIDEOUT_GRUNTM4
 	call RocketHideout_B1F_EventScript_SpawnGruntLeft
 	call RocketHideout_B1F_EventScript_SpawnGruntRight
 	call RocketHideout_B1F_Trigger_StatueGruntRight
-	setvar 20590, 2
-	fadescreenswapbuffers 1
-	removeobject 16384
-	fadescreenswapbuffers 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_5, 2
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_TEMP_0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	setmetatile 27, 19, 0x2A9, TRUE
 	special DrawWholeMapView
 	release
 	end
 
 RocketHideout_B1F_Trigger_StatueGruntLeft::
-	playse 45
-	applymovement 255, J_Common_Movement_ExclamationMark
-	getplayerxy 16385, 16386
-	call_if_eq 16386, 4, RocketHideout_B1F_EventScript_HeightAdjust
-	call_if_eq 16386, 9, RocketHideout_B1F_EventScript_HeightAdjust
-	call_if_eq 16386, 22, RocketHideout_B1F_EventScript_HeightAdjust
-	applymovement 16384, RocketHideout_B1F_Movement_GruntWalkRight
+	playse SE_WARP_IN
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	call_if_eq VAR_TEMP_2, 4, RocketHideout_B1F_EventScript_HeightAdjust
+	call_if_eq VAR_TEMP_2, 9, RocketHideout_B1F_EventScript_HeightAdjust
+	call_if_eq VAR_TEMP_2, 22, RocketHideout_B1F_EventScript_HeightAdjust
+	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkRight
 	waitmovement 0
-	turnobject 255, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox RocketHideout_B1F_Text_CameraGrunt1Seen, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1159, RocketHideout_B1F_Text_CameraGrunt1Beaten
-	applymovement 16384, RocketHideout_B1F_Movement_GruntWalkLeft
+	trainerbattle_no_intro TRAINER_JOHTO_GRUNT_17_HNS, RocketHideout_B1F_Text_CameraGrunt1Beaten
+	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkLeft
 	waitmovement 0
 	delay 55
-	applymovement 16384, RocketHideout_B1F_Movement_GruntWalkRight
+	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkRight
 	waitmovement 0
 	msgbox RocketHideout_B1F_Text_CameraGrunt2Seen, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1160, RocketHideout_B1F_Text_CameraGrunt2Beaten
-	applymovement 16384, RocketHideout_B1F_Movement_GruntWalkLeft
+	trainerbattle_no_intro TRAINER_JOHTO_GRUNT_18_HNS, RocketHideout_B1F_Text_CameraGrunt2Beaten
+	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkLeft
 	waitmovement 0
-	setflag 8335
-	removeobject 16384
-	removeobject 3
-	removeobject 1
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT_ROCKETS
+	removeobject VAR_TEMP_0
+	removeobject LOCALID_ROCKETHIDEOUT_GRUNTM3
+	removeobject LOCALID_ROCKETHIDEOUT_GRUNTM1
 	return
 
 RocketHideout_B1F_Trigger_StatueGruntRight::
-	playse 45
-	applymovement 255, J_Common_Movement_ExclamationMark
-	getplayerxy 16385, 16386
-	call_if_eq 16386, 4, RocketHideout_B1F_EventScript_HeightAdjust
-	call_if_eq 16386, 9, RocketHideout_B1F_EventScript_HeightAdjust
-	call_if_eq 16386, 22, RocketHideout_B1F_EventScript_HeightAdjust
-	applymovement 16384, RocketHideout_B1F_Movement_GruntWalkLeft
+	playse SE_WARP_IN
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	call_if_eq VAR_TEMP_2, 4, RocketHideout_B1F_EventScript_HeightAdjust
+	call_if_eq VAR_TEMP_2, 9, RocketHideout_B1F_EventScript_HeightAdjust
+	call_if_eq VAR_TEMP_2, 22, RocketHideout_B1F_EventScript_HeightAdjust
+	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkLeft
 	waitmovement 0
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox RocketHideout_B1F_Text_CameraGrunt1Seen, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1159, RocketHideout_B1F_Text_CameraGrunt1Beaten
-	applymovement 16384, RocketHideout_B1F_Movement_GruntWalkRight
+	trainerbattle_no_intro TRAINER_JOHTO_GRUNT_17_HNS, RocketHideout_B1F_Text_CameraGrunt1Beaten
+	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkRight
 	waitmovement 0
 	delay 55
-	applymovement 16384, RocketHideout_B1F_Movement_GruntWalkLeft
+	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkLeft
 	waitmovement 0
 	msgbox RocketHideout_B1F_Text_CameraGrunt2Seen, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1160, RocketHideout_B1F_Text_CameraGrunt2Beaten
-	applymovement 16384, RocketHideout_B1F_Movement_GruntWalkRight
+	trainerbattle_no_intro TRAINER_JOHTO_GRUNT_18_HNS, RocketHideout_B1F_Text_CameraGrunt2Beaten
+	applymovement VAR_TEMP_0, RocketHideout_B1F_Movement_GruntWalkRight
 	waitmovement 0
-	setflag 8335
-	removeobject 16384
-	removeobject 3
-	removeobject 1
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT_ROCKETS
+	removeobject VAR_TEMP_0
+	removeobject LOCALID_ROCKETHIDEOUT_GRUNTM3
+	removeobject LOCALID_ROCKETHIDEOUT_GRUNTM1
 	return
 
 RocketHideout_B1F_Movement_GruntWalkRight:
@@ -266,7 +266,7 @@ RocketHideout_B1F_Text_CameraGrunt2Beaten:
 	.string "tri{SE_M_MORNING_SUN}{SE_M_CHARGE}secre{SE_M_SPIT_UP}switch.$"
 
 RocketHideout_B1F_EventScript_TrainerJed::
-	trainerbattle_single 1028, RocketHideout_B1F_Text_ScientistJedSeen, RocketHideout_B1F_Text_ScientistJedBeaten
+	trainerbattle_single TRAINER_JOHTO_JED_HNS, RocketHideout_B1F_Text_ScientistJedSeen, RocketHideout_B1F_Text_ScientistJedBeaten
 	msgbox RocketHideout_B1F_Text_ScientistJedAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -299,7 +299,7 @@ RocketHideout_B1F_Text_GruntM16After:
 	.string "courag{SE_M_REVERSAL}an{SE_M_WATERFALL}walk.$"
 
 RocketHideout_B1F_EventScript_Rocket16::
-	trainerbattle_single 1155, RocketHideout_B1F_Text_GruntM16Seen, RocketHideout_B1F_Text_GruntM16Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_13_HNS, RocketHideout_B1F_Text_GruntM16Seen, RocketHideout_B1F_Text_GruntM16Beaten
 	msgbox RocketHideout_B1F_Text_GruntM16After, MSGBOX_AUTOCLOSE
 	end
 
@@ -328,37 +328,37 @@ RocketHideout_B1F_EventScript_DummyPanel::
 
 RocketHideout_B1F_EventScript_Switch::
 	lock
-	goto_if_set 8671, RocketHideout_B1F_EventScript_TurnOffSwitch
+	goto_if_set JOHTO_FLAG_ROCKETHIDEOUT_SWITCH, RocketHideout_B1F_EventScript_TurnOffSwitch
 	msgbox RocketHideout_B1F_Text_SecretSwitch, MSGBOX_DEFAULT
-	setvar 20586, 2
-	setvar 20587, 2
-	setvar 20588, 2
-	setvar 20589, 2
-	setvar 20590, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_1, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_2, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_3, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_4, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_5, 2
 	setmetatile 45, 1, 0x2A9, TRUE
 	setmetatile 24, 1, 0x2A9, TRUE
 	setmetatile 45, 6, 0x2A9, TRUE
 	setmetatile 45, 19, 0x2A9, TRUE
 	setmetatile 27, 19, 0x2A9, TRUE
 	special DrawWholeMapView
-	setflag 8671
+	setflag JOHTO_FLAG_ROCKETHIDEOUT_SWITCH
 	release
 	end
 
 RocketHideout_B1F_EventScript_TurnOffSwitch::
 	msgbox RocketHideout_B1F_Text_SwitchOff, MSGBOX_DEFAULT
-	setvar 20586, 0
-	setvar 20587, 0
-	setvar 20588, 0
-	setvar 20589, 0
-	setvar 20590, 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_1, 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_2, 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_3, 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_4, 0
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_5, 0
 	setmetatile 45, 1, 0x2A8, TRUE
 	setmetatile 24, 1, 0x2A8, TRUE
 	setmetatile 45, 6, 0x2A8, TRUE
 	setmetatile 45, 19, 0x2A8, TRUE
 	setmetatile 27, 19, 0x2A8, TRUE
 	special DrawWholeMapView
-	clearflag 8671
+	clearflag JOHTO_FLAG_ROCKETHIDEOUT_SWITCH
 	release
 	end
 

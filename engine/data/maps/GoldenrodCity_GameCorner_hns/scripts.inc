@@ -7,7 +7,7 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_PrizeClerkMons::
 	lock
 	faceplayer
 	checkitem ITEM_COIN_CASE
-	goto_if_eq 32781, FALSE, MauvilleCity_GameCorner_EventScript_NeedCoinCase
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NeedCoinCase
 	msgbox J_MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeMon
 	end
@@ -17,8 +17,8 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeMon::
 	showcoinsbox 1, 1
 	message J_MauvilleCity_GameCorner_Text_WhichPrize
 	waitmessage
-	multichoice 20, 0, 161, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_PRIZE_MONS, FALSE
+	switch VAR_RESULT
 	case 0, GoldenrodCity_GameCorner_PrizeRoom_EventScript_Abra
 	case 1, GoldenrodCity_GameCorner_PrizeRoom_EventScript_Clefairy
 	case 2, GoldenrodCity_GameCorner_PrizeRoom_EventScript_Munchlax
@@ -36,87 +36,87 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange::
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_Abra::
-	setvar 16385, 63
-	setvar 16386, 120
+	setvar VAR_TEMP_1, SPECIES_ABRA
+	setvar VAR_TEMP_2, 120
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_Clefairy::
-	setvar 16385, 35
-	setvar 16386, 500
+	setvar VAR_TEMP_1, SPECIES_CLEFAIRY
+	setvar VAR_TEMP_2, 500
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_Munchlax::
-	setvar 16385, 446
-	setvar 16386, 2800
+	setvar VAR_TEMP_1, SPECIES_MUNCHLAX
+	setvar VAR_TEMP_2, 2800
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_Dratini::
-	setvar 16385, 147
-	setvar 16386, 5500
+	setvar VAR_TEMP_1, SPECIES_DRATINI
+	setvar VAR_TEMP_2, 5500
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_Porygon::
-	setvar 16385, 137
-	setvar 16386, 6500
+	setvar VAR_TEMP_1, SPECIES_PORYGON
+	setvar VAR_TEMP_2, 6500
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon::
-	bufferspeciesname STR_VAR_1, 16385
+	bufferspeciesname STR_VAR_1, VAR_TEMP_1
 	msgbox GoldenrodCity_GameCorner_PrizeRoom_Text_YouWantPrize, MSGBOX_YESNO
-	goto_if_eq 32781, NO, GoldenrodCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
-	checkcoins 32781
-	goto_if_lt 32781, 16386, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoins
-	switch 16385
+	goto_if_eq VAR_RESULT, NO, GoldenrodCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
+	checkcoins VAR_RESULT
+	goto_if_lt VAR_RESULT, VAR_TEMP_2, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoins
+	switch VAR_TEMP_1
 	updatecoinsbox 1, 1
-	playse 95
-	case 63, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveAbra
-	case 35, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveClefairy
-	case 147, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveDratini
-	case 446, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveMunchlax
-	case 137, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GivePorygon
-	case 127, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GivePinsir
+	playse SE_SHOP
+	case SPECIES_ABRA, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveAbra
+	case SPECIES_CLEFAIRY, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveClefairy
+	case SPECIES_DRATINI, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveDratini
+	case SPECIES_MUNCHLAX, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveMunchlax
+	case SPECIES_PORYGON, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GivePorygon
+	case SPECIES_PINSIR, GoldenrodCity_GameCorner_PrizeRoom_EventScript_GivePinsir
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveAbra::
-	givemon 16385, 15
+	givemon VAR_TEMP_1, 15
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveClefairy::
-	givemon 16385, 15
+	givemon VAR_TEMP_1, 15
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveDratini::
-	givemon 16385, 15
+	givemon VAR_TEMP_1, 15
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_GiveMunchlax::
-	givemon 16385, 15
+	givemon VAR_TEMP_1, 15
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_GivePorygon::
-	givemon 16385, 15
+	givemon VAR_TEMP_1, 15
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_GivePinsir::
-	givemon 16385, 15
+	givemon VAR_TEMP_1, 15
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon::
-	bufferspeciesname STR_VAR_1, 16385
-	goto_if_eq 32781, 0, GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonParty
-	goto_if_eq 32781, 1, GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonPC
-	goto_if_eq 32781, 2, GoldenrodCity_GameCorner_PrizeRoom_EventScript_PartyFull
+	bufferspeciesname STR_VAR_1, VAR_TEMP_1
+	goto_if_eq VAR_RESULT, 0, GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonParty
+	goto_if_eq VAR_RESULT, 1, GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonPC
+	goto_if_eq VAR_RESULT, 2, GoldenrodCity_GameCorner_PrizeRoom_EventScript_PartyFull
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_PartyFull::
@@ -129,8 +129,8 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_PartyFull::
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_NicknamePartyMon::
 	getpartysize
-	subvar 32781, 1
-	copyvar 32772, 32781
+	subvar VAR_RESULT, 1
+	copyvar VAR_0x8004, VAR_RESULT
 	call J_Common_EventScript_GetGiftMonPartySlot
 	call J_Common_EventScript_NameReceivedPartyMon
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
@@ -139,8 +139,8 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_NicknamePartyMon::
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonParty_Nickname_Nuzlocke::
 	message GoldenrodGamecorner_Text_GiveNicknameToThisMon
 	getpartysize
-	subvar 32781, 1
-	copyvar 32772, 32781
+	subvar VAR_RESULT, 1
+	copyvar VAR_0x8004, VAR_RESULT
 	call J_Common_EventScript_GetGiftMonPartySlot
 	call J_Common_EventScript_NameReceivedPartyMon
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
@@ -157,27 +157,27 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoins::
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonParty::
-	removecoins 16386
-	playse 95
+	removecoins VAR_TEMP_2
+	playse SE_SHOP
 	updatecoinsbox 1, 1
-	bufferspeciesname STR_VAR_1, 16385
-	playfanfare 367
+	bufferspeciesname STR_VAR_1, VAR_TEMP_1
+	playfanfare MUS_LEVEL_UP
 	message GoldenrodCity_GameCorner_Text_PlayerObtainedTheMon
 	waitmessage
 	waitfanfare
-	specialvar 32781, IsNuzlockeNicknamingActive
-	goto_if_eq 32781, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonParty_Nickname_Nuzlocke
+	specialvar VAR_RESULT, IsNuzlockeNicknamingActive
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonParty_Nickname_Nuzlocke
 	msgbox GoldenrodGamecorner_Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	goto_if_eq 32781, YES, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NicknamePartyMon
+	goto_if_eq VAR_RESULT, YES, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NicknamePartyMon
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReceivedMonPC::
-	removecoins 16386
-	playse 95
+	removecoins VAR_TEMP_2
+	playse SE_SHOP
 	updatecoinsbox 1, 1
-	bufferspeciesname STR_VAR_1, 16385
-	playfanfare 367
+	bufferspeciesname STR_VAR_1, VAR_TEMP_1
+	playfanfare MUS_LEVEL_UP
 	message GoldenrodCity_GameCorner_Text_PlayerObtainedTheMon
 	waitmessage
 	waitfanfare
@@ -196,7 +196,7 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_PartyMon::
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_PcMon::
 	msgbox J_gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq 32781, NO, GoldenrodCity_GameCorner_EventScript_SendMon
+	goto_if_eq VAR_RESULT, NO, GoldenrodCity_GameCorner_EventScript_SendMon
 	call J_Common_EventScript_NameReceivedBoxMon
 	goto GoldenrodCity_GameCorner_EventScript_SendMon
 	closemessage
@@ -224,7 +224,7 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs::
 	lock
 	faceplayer
 	checkitem ITEM_COIN_CASE
-	goto_if_eq 32781, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NeedCoinCase
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NeedCoinCase
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorIntro, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChooseTMPrizeMessage
 	end
@@ -232,7 +232,7 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs::
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChooseTMPrizeMessage::
 	message GoldenrodCity_GameCorner_Text_PrizeVendorWhichPrize
 	waitmessage
-	setvar 16385, 0
+	setvar VAR_TEMP_1, 0
 	showcoinsbox 1, 1
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChooseTMPrize
 
@@ -242,8 +242,8 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize::
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChooseTMPrize
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChooseTMPrize::
-	dynmultichoice 12, 0, FALSE, 6, 0, 255, GoldenrodCity_GameCorner_PrizeRoom_Text_TM44, GoldenrodCity_GameCorner_PrizeRoom_Text_TM90, GoldenrodCity_GameCorner_PrizeRoom_Text_TM75, GoldenrodCity_GameCorner_PrizeRoom_Text_TM13, GoldenrodCity_GameCorner_PrizeRoom_Text_TM24, GoldenrodCity_GameCorner_PrizeRoom_Text_TM35, GoldenrodCity_GameCorner_PrizeRoom_Text_Cancel
-	switch 32781
+	dynmultichoice 12, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, GoldenrodCity_GameCorner_PrizeRoom_Text_TM44, GoldenrodCity_GameCorner_PrizeRoom_Text_TM90, GoldenrodCity_GameCorner_PrizeRoom_Text_TM75, GoldenrodCity_GameCorner_PrizeRoom_Text_TM13, GoldenrodCity_GameCorner_PrizeRoom_Text_TM24, GoldenrodCity_GameCorner_PrizeRoom_Text_TM35, GoldenrodCity_GameCorner_PrizeRoom_Text_Cancel
+	switch VAR_RESULT
 	case 0, GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMRest
 	case 1, GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMSubstitute
 	case 2, GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMSwordsDance
@@ -255,47 +255,47 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_ChooseTMPrize::
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMIceBeam::
-	setvar 16385, 1
-	bufferitemname STR_VAR_1, 594
-	setvar 32772, 594
+	setvar VAR_TEMP_1, 1
+	bufferitemname STR_VAR_1, ITEM_TM_ICE_BEAM
+	setvar VAR_0x8004, ITEM_TM_ICE_BEAM
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrize
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMFlamethrower::
-	setvar 16385, 2
-	bufferitemname STR_VAR_1, 616
-	setvar 32772, 616
+	setvar VAR_TEMP_1, 2
+	bufferitemname STR_VAR_1, ITEM_TM_FLAMETHROWER
+	setvar VAR_0x8004, ITEM_TM_FLAMETHROWER
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrize
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMThunderbolt::
-	setvar 16385, 6
-	bufferitemname STR_VAR_1, 605
-	setvar 32772, 605
+	setvar VAR_TEMP_1, 6
+	bufferitemname STR_VAR_1, ITEM_TM_THUNDERBOLT
+	setvar VAR_0x8004, ITEM_TM_THUNDERBOLT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrize
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMRest::
-	setvar 16385, 3
-	bufferitemname STR_VAR_1, 625
-	setvar 32772, 625
+	setvar VAR_TEMP_1, 3
+	bufferitemname STR_VAR_1, ITEM_TM_REST
+	setvar VAR_0x8004, ITEM_TM_REST
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrize
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMSwordsDance::
-	setvar 16385, 4
+	setvar VAR_TEMP_1, 4
 	bufferitemname STR_VAR_1, ITEM_TM75
-	setvar 32772, ITEM_TM75
+	setvar VAR_0x8004, ITEM_TM75
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrize
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_TMSubstitute::
-	setvar 16385, 5
+	setvar VAR_TEMP_1, 5
 	bufferitemname STR_VAR_1, ITEM_TM90
-	setvar 32772, ITEM_TM90
+	setvar VAR_0x8004, ITEM_TM90
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrize
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrize::
 	special BufferTMHMMoveName
 	msgbox GoldenrodCity_GameCorner_PrizeRoom_Text_SoYourChoiceIsTM, MSGBOX_YESNO
-	goto_if_eq 32781, NO, GoldenrodCity_GameCorner_PrizeRoom_EventScript_CancelTMSelect
-	goto_if_unset 8800, GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrizeInfinite
-	switch 16385
+	goto_if_eq VAR_RESULT, NO, GoldenrodCity_GameCorner_PrizeRoom_EventScript_CancelTMSelect
+	goto_if_unset JOHTO_FLAG_FINITE_TMS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrizeInfinite
+	switch VAR_TEMP_1
 	case 1, GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMIceBeam
 	case 2, GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMFlamethrower
 	case 3, GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMRest
@@ -305,7 +305,7 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrize::
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrizeInfinite::
-	switch 16385
+	switch VAR_TEMP_1
 	case 1, GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMIceBeamInfinite
 	case 2, GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMFlamethrowerInfinite
 	case 3, GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMRestInfinite
@@ -315,157 +315,157 @@ GoldenrodCity_GameCorner_PrizeRoom_EventScript_ConfirmTMPrizeInfinite::
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMIceBeamInfinite::
-	checkcoins 16386
-	goto_if_lt 16386, TM_ICE_BEAM_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
-	checkitem 594, 1
-	goto_if_eq 32781, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_ICE_BEAM_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkitem ITEM_TM_ICE_BEAM, 1
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
 	removecoins TM_ICE_BEAM_COINS
-	additem 594
+	additem ITEM_TM_ICE_BEAM
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMFlamethrowerInfinite::
-	checkcoins 16386
-	goto_if_lt 16386, TM_FLAMETHROWER_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
-	checkitem 616, 1
-	goto_if_eq 32781, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_FLAMETHROWER_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkitem ITEM_TM_FLAMETHROWER, 1
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
 	removecoins TM_FLAMETHROWER_COINS
-	additem 616
+	additem ITEM_TM_FLAMETHROWER
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMThunderboltInfinite::
-	checkcoins 16386
-	goto_if_lt 16386, TM_THUNDERBOLT_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
-	checkitem 605, 1
-	goto_if_eq 32781, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_THUNDERBOLT_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkitem ITEM_TM_THUNDERBOLT, 1
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
 	removecoins TM_THUNDERBOLT_COINS
-	additem 605
+	additem ITEM_TM_THUNDERBOLT
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMRestInfinite::
-	checkcoins 16386
-	goto_if_lt 16386, TM_REST_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
-	checkitem 625, 1
-	goto_if_eq 32781, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_REST_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkitem ITEM_TM_REST, 1
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
 	removecoins TM_REST_COINS
-	additem 625
+	additem ITEM_TM_REST
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMSwordsDanceInfinite::
-	checkcoins 16386
-	goto_if_lt 16386, TM_SWORDS_DANCE_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_SWORDS_DANCE_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
 	checkitem ITEM_TM75, 1
-	goto_if_eq 32781, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
 	removecoins TM_SWORDS_DANCE_COINS
 	additem ITEM_TM75
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMSubstituteInfinite::
-	checkcoins 16386
-	goto_if_lt 16386, TM_SUBSTITUTE_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_SUBSTITUTE_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
 	checkitem ITEM_TM90, 1
-	goto_if_eq 32781, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_YouAlreadyHaveThis
 	removecoins TM_SUBSTITUTE_COINS
 	additem ITEM_TM90
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMIceBeam::
-	checkcoins 16386
-	goto_if_lt 16386, TM_ICE_BEAM_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
-	checkitemspace 594
-	goto_if_eq 32781, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_ICE_BEAM_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkitemspace ITEM_TM_ICE_BEAM
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
 	removecoins TM_ICE_BEAM_COINS
-	additem 594
+	additem ITEM_TM_ICE_BEAM
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMFlamethrower::
-	checkcoins 16386
-	goto_if_lt 16386, TM_FLAMETHROWER_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
-	checkitemspace 616
-	goto_if_eq 32781, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_FLAMETHROWER_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkitemspace ITEM_TM_FLAMETHROWER
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
 	removecoins TM_FLAMETHROWER_COINS
-	additem 616
+	additem ITEM_TM_FLAMETHROWER
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMThunderbolt::
-	checkcoins 16386
-	goto_if_lt 16386, TM_THUNDERBOLT_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
-	checkitemspace 605
-	goto_if_eq 32781, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_THUNDERBOLT_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkitemspace ITEM_TM_THUNDERBOLT
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
 	removecoins TM_THUNDERBOLT_COINS
-	additem 605
+	additem ITEM_TM_THUNDERBOLT
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMRest::
-	checkcoins 16386
-	goto_if_lt 16386, TM_REST_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
-	checkitemspace 625
-	goto_if_eq 32781, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_REST_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkitemspace ITEM_TM_REST
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
 	removecoins TM_REST_COINS
-	additem 625
+	additem ITEM_TM_REST
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMSwordsDance::
-	checkcoins 16386
-	goto_if_lt 16386, TM_SWORDS_DANCE_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_SWORDS_DANCE_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
 	checkitemspace ITEM_TM75
-	goto_if_eq 32781, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
 	removecoins TM_SWORDS_DANCE_COINS
 	additem ITEM_TM75
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
 
 GoldenrodCity_GameCorner_PrizeRoom_EventScript_BuyTMSubstitute::
-	checkcoins 16386
-	goto_if_lt 16386, TM_SUBSTITUTE_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, TM_SUBSTITUTE_COINS, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NotEnoughCoinsForTM
 	checkitemspace ITEM_TM90
-	goto_if_eq 32781, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_PrizeRoom_EventScript_NoRoomForTM
 	removecoins TM_SUBSTITUTE_COINS
 	additem ITEM_TM90
 	updatecoinsbox 1, 1
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodCity_GameCorner_Text_PrizeVendorHereYouGo, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_PrizeRoom_EventScript_ReturnToChooseTMPrize
 	end
@@ -663,34 +663,34 @@ GoldenrodCity_GameCorner_Text_LeftTheirDrink:
 GoldenrodCity_GameCorner_EventScript_VoltorbFlip::
 	lockall
 	checkitem ITEM_COIN_CASE
-	goto_if_eq 32781, FALSE, GoldenrodCity_GameCorner_EventScript_VF_NoCoinCase
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_EventScript_VF_NoCoinCase
 	message GoldenrodCity_GameCorner_Text_VF_Welcome
 	waitmessage
-	setvar 16388, 0
+	setvar VAR_TEMP_4, 0
 
 GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap::
-	checkcoins 32781
-	goto_if_lt 32781, 9999, GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
+	checkcoins VAR_RESULT
+	goto_if_lt VAR_RESULT, MAX_COINS, GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
 	msgbox GoldenrodCity_GameCorner_Text_VF_CoinCap, MSGBOX_DEFAULT
-	setvar 16388, 0
-	setvar 16391, 0
+	setvar VAR_TEMP_4, 0
+	setvar VAR_TEMP_7, 0
 	hidecoinsbox 0, 5
 	releaseall
 	end
 
 GoldenrodCity_GameCorner_EventScript_VF_ShowMenu::
 	showcoinsbox 1, 1
-	copyvar 16394, 16388
-	addvar 16394, 1
-	buffernumberstring STR_VAR_1, 16394
+	copyvar VAR_TEMP_A, VAR_TEMP_4
+	addvar VAR_TEMP_A, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_A
 	message GoldenrodCity_GameCorner_Text_VF_PlayLevel
 	waitmessage
-	dynmultichoice 19, 6, FALSE, 3, 0, 255, GoldenrodCity_GameCorner_Text_VF_OptPlay, GoldenrodCity_GameCorner_Text_VF_OptGameInfo, GoldenrodCity_GameCorner_Text_VF_OptQuit
-	goto_if_eq 32781, 0, GoldenrodCity_GameCorner_EventScript_VF_Play
-	goto_if_eq 32781, 1, GoldenrodCity_GameCorner_EventScript_VF_GameInfo
+	dynmultichoice 19, 6, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE, GoldenrodCity_GameCorner_Text_VF_OptPlay, GoldenrodCity_GameCorner_Text_VF_OptGameInfo, GoldenrodCity_GameCorner_Text_VF_OptQuit
+	goto_if_eq VAR_RESULT, 0, GoldenrodCity_GameCorner_EventScript_VF_Play
+	goto_if_eq VAR_RESULT, 1, GoldenrodCity_GameCorner_EventScript_VF_GameInfo
 
-	setvar 16388, 0
-	setvar 16391, 0
+	setvar VAR_TEMP_4, 0
+	setvar VAR_TEMP_7, 0
 	closemessage
 	hidecoinsbox 0, 5
 	releaseall
@@ -699,10 +699,10 @@ GoldenrodCity_GameCorner_EventScript_VF_ShowMenu::
 GoldenrodCity_GameCorner_EventScript_VF_GameInfo::
 	message GoldenrodCity_GameCorner_Text_VF_WhichInfo
 	waitmessage
-	dynmultichoice 19, 4, FALSE, 4, 0, 255, GoldenrodCity_GameCorner_Text_VF_OptHowToPlay, GoldenrodCity_GameCorner_Text_VF_OptHint, GoldenrodCity_GameCorner_Text_VF_OptAboutNotes, GoldenrodCity_GameCorner_Text_VF_OptReturn
-	goto_if_eq 32781, 0, GoldenrodCity_GameCorner_EventScript_VF_HowToPlay
-	goto_if_eq 32781, 1, GoldenrodCity_GameCorner_EventScript_VF_Hint
-	goto_if_eq 32781, 2, GoldenrodCity_GameCorner_EventScript_VF_AboutNotes
+	dynmultichoice 19, 4, FALSE, 4, 0, DYN_MULTICHOICE_CB_NONE, GoldenrodCity_GameCorner_Text_VF_OptHowToPlay, GoldenrodCity_GameCorner_Text_VF_OptHint, GoldenrodCity_GameCorner_Text_VF_OptAboutNotes, GoldenrodCity_GameCorner_Text_VF_OptReturn
+	goto_if_eq VAR_RESULT, 0, GoldenrodCity_GameCorner_EventScript_VF_HowToPlay
+	goto_if_eq VAR_RESULT, 1, GoldenrodCity_GameCorner_EventScript_VF_Hint
+	goto_if_eq VAR_RESULT, 2, GoldenrodCity_GameCorner_EventScript_VF_AboutNotes
 	goto GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
 
 GoldenrodCity_GameCorner_EventScript_VF_HowToPlay::
@@ -719,56 +719,56 @@ GoldenrodCity_GameCorner_EventScript_VF_AboutNotes::
 
 GoldenrodCity_GameCorner_EventScript_VF_Play::
 	closemessage
-	copyvar 16390, 16388
-	setvar 16389, 0
+	copyvar VAR_TEMP_6, VAR_TEMP_4
+	setvar VAR_TEMP_5, 0
 	hidecoinsbox 0, 5
 	special Special_ViewVoltorbFlip
 	waitstate
-	goto_if_eq 32781, 0, GoldenrodCity_GameCorner_EventScript_VF_HandleLoss
-	goto_if_eq 32781, 1, GoldenrodCity_GameCorner_EventScript_VF_HandleWin
+	goto_if_eq VAR_RESULT, 0, GoldenrodCity_GameCorner_EventScript_VF_HandleLoss
+	goto_if_eq VAR_RESULT, 1, GoldenrodCity_GameCorner_EventScript_VF_HandleWin
 	goto GoldenrodCity_GameCorner_EventScript_VF_HandleQuit
 	end
 
 GoldenrodCity_GameCorner_EventScript_VF_HandleWin::
 	msgbox GoldenrodCity_GameCorner_Text_VF_GameClear, MSGBOX_DEFAULT
-	copyvar 16385, 16389
+	copyvar VAR_TEMP_1, VAR_TEMP_5
 	showcoinsbox 1, 1
-	buffernumberstring STR_VAR_1, 16385
+	buffernumberstring STR_VAR_1, VAR_TEMP_1
 	msgbox GoldenrodCity_GameCorner_Text_VF_ReceivedCoins, MSGBOX_DEFAULT
-	addcoins 16389
-	setvar 16389, 0
+	addcoins VAR_TEMP_5
+	setvar VAR_TEMP_5, 0
 	updatecoinsbox 1, 1
-	goto_if_le 16388, 16390, GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
-	copyvar 16394, 16388
-	addvar 16394, 1
-	buffernumberstring STR_VAR_1, 16394
+	goto_if_le VAR_TEMP_4, VAR_TEMP_6, GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
+	copyvar VAR_TEMP_A, VAR_TEMP_4
+	addvar VAR_TEMP_A, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_A
 	msgbox GoldenrodCity_GameCorner_Text_VF_Advanced, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
 
 GoldenrodCity_GameCorner_EventScript_VF_HandleLoss::
 	msgbox GoldenrodCity_GameCorner_Text_VF_OhNo, MSGBOX_DEFAULT
-	goto_if_ge 16388, 16390, GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
-	copyvar 16394, 16388
-	addvar 16394, 1
-	buffernumberstring STR_VAR_1, 16394
+	goto_if_ge VAR_TEMP_4, VAR_TEMP_6, GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
+	copyvar VAR_TEMP_A, VAR_TEMP_4
+	addvar VAR_TEMP_A, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_A
 	msgbox GoldenrodCity_GameCorner_Text_VF_Dropped, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_EventScript_VF_ShowMenu
 
 GoldenrodCity_GameCorner_EventScript_VF_HandleQuit::
-	goto_if_eq 16389, 0, GoldenrodCity_GameCorner_EventScript_VF_QuitNoCoins
-	copyvar 16385, 16389
+	goto_if_eq VAR_TEMP_5, 0, GoldenrodCity_GameCorner_EventScript_VF_QuitNoCoins
+	copyvar VAR_TEMP_1, VAR_TEMP_5
 	showcoinsbox 1, 1
-	buffernumberstring STR_VAR_1, 16385
+	buffernumberstring STR_VAR_1, VAR_TEMP_1
 	msgbox GoldenrodCity_GameCorner_Text_VF_ReceivedCoins, MSGBOX_DEFAULT
-	addcoins 16389
-	setvar 16389, 0
+	addcoins VAR_TEMP_5
+	setvar VAR_TEMP_5, 0
 	updatecoinsbox 1, 1
 
 GoldenrodCity_GameCorner_EventScript_VF_QuitNoCoins::
-	goto_if_ge 16388, 16390, GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
-	copyvar 16394, 16388
-	addvar 16394, 1
-	buffernumberstring STR_VAR_1, 16394
+	goto_if_ge VAR_TEMP_4, VAR_TEMP_6, GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
+	copyvar VAR_TEMP_A, VAR_TEMP_4
+	addvar VAR_TEMP_A, 1
+	buffernumberstring STR_VAR_1, VAR_TEMP_A
 	msgbox GoldenrodCity_GameCorner_Text_VF_Dropped, MSGBOX_DEFAULT
 	goto GoldenrodCity_GameCorner_EventScript_VF_CheckCoinCap
 
@@ -781,7 +781,7 @@ GoldenrodCity_GameCorner_EventScript_VFAttendant1::
 	lock
 	faceplayer
 	msgbox GoldenrodCity_GameCorner_Text_VFAttendant1, MSGBOX_DEFAULT
-	applymovement 32783, J_Common_Movement_FaceDown
+	applymovement VAR_LAST_TALKED, J_Common_Movement_FaceDown
 	waitmovement 0
 	release
 	end
@@ -790,7 +790,7 @@ GoldenrodCity_GameCorner_EventScript_VFAttendant2::
 	lock
 	faceplayer
 	msgbox GoldenrodCity_GameCorner_Text_VFAttendant2, MSGBOX_DEFAULT
-	applymovement 32783, J_Common_Movement_FaceDown
+	applymovement VAR_LAST_TALKED, J_Common_Movement_FaceDown
 	waitmovement 0
 	release
 	end

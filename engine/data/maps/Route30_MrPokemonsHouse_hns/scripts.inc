@@ -1,38 +1,38 @@
 @ Johto (data/maps/Route30_MrPokemonsHouse_hns/scripts.inc), as built into the FireRed game.
 
 Route30_MrPokemonsHouse_hns_MapScripts::
-	map_script 2, MrPokemonHouse_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MrPokemonHouse_OnFrame
 	.byte 0
 
 MrPokemonHouse_OnFrame::
-	map_script_2 20554, 1, MrPokemonHouse_EventScript_GiveEgg
+	map_script_2 JOHTO_VAR_CHERRYGROVE_CITY_STATE, 1, MrPokemonHouse_EventScript_GiveEgg
 	.2byte 0
 
 MrPokemonHouse_EventScript_GiveEgg::
 	lock
-	playse 21
-	applymovement 2, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_MRPOKEMON, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
-	turnobject 2, DIR_SOUTH
+	waitmovement LOCALID_MRPOKEMON
+	turnobject LOCALID_MRPOKEMON, DIR_SOUTH
 	msgbox MrPokemonHouse_Text_Intro1, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, MrPokemonHouse_Movement_MeetMrPokemon
+	applymovement OBJ_EVENT_ID_PLAYER, MrPokemonHouse_Movement_MeetMrPokemon
 	waitmovement 0
 	msgbox MrPokemonHouse_Text_Intro2, MSGBOX_DEFAULT
 
 	giveitem ITEM_MYSTERY_EGG
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
+	goto_if_eq JOHTO_VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
 
 	msgbox MrPokemonHouse_Text_Intro3, MSGBOX_DEFAULT
 	msgbox MrPokemonHouse_Text_Intro4, MSGBOX_DEFAULT
-	turnobject 3, DIR_WEST
+	turnobject LOCALID_ROUTE30_OAK, DIR_WEST
 	msgbox MrPokemonHouse_Text_Intro5, MSGBOX_DEFAULT
 	closemessage
 	playbgm ((558 + 1) + 0x26), FALSE
-	applymovement 3, MrPokemonHouse_Movement_OakToPlayer
+	applymovement LOCALID_ROUTE30_OAK, MrPokemonHouse_Movement_OakToPlayer
 	waitmovement 0
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox MrPokemonHouse_Text_OakIntro, MSGBOX_DEFAULT
 
 
@@ -40,31 +40,31 @@ MrPokemonHouse_EventScript_GiveEgg::
 
 	msgbox MrPokemonHouse_Text_OakParting, MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, MrPokemonHouse_Movement_OakLeave
+	applymovement LOCALID_ROUTE30_OAK, MrPokemonHouse_Movement_OakLeave
 	waitmovement 0
-	playse 9
-	removeobject 3
-	setflag 8662
+	playse SE_EXIT
+	removeobject LOCALID_ROUTE30_OAK
+	setflag JOHTO_FLAG_DELIVERED_EGG
 	turnobject 255 DIR_NORTH
 	fadedefaultbgm
 	msgbox MrPokemonHouse_Text_Heal, MSGBOX_DEFAULT
 	call J_Common_EventScript_OutOfCenterPartyHeal
 	msgbox MrPokemonHouse_Text_DependingOnYou, MSGBOX_DEFAULT
 	closemessage
-	applymovement 2, MrPokemonHouse_Movement_MrPokemon_Leave
+	applymovement LOCALID_MRPOKEMON, MrPokemonHouse_Movement_MrPokemon_Leave
 	waitmovement 0
-	removeobject 2
-	clearflag 8272
-	addobject 1
+	removeobject LOCALID_MRPOKEMON
+	clearflag JOHTO_FLAG_HIDE_MRPOKEMON
+	addobject LOCALID_MRPOKEMON2
 
-	setvar 20580, 4
-	setflag 8266
-	clearflag 8268
-	setvar 20554, 2
-	setrespawn 129
-	clearflag 8273
-	setflag 8275
-	clearflag 8274
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 4
+	setflag JOHTO_FLAG_HIDE_SILVER_NEWBARKTOWN
+	clearflag JOHTO_FLAG_HIDE_LAB_POLICEMAN
+	setvar JOHTO_VAR_CHERRYGROVE_CITY_STATE, 2
+	setrespawn JOHTO_HEAL_LOCATION_CHERRYGROVE_CITY_HNS
+	clearflag JOHTO_FLAG_HIDE_SILVER_CHERRYGROVE
+	setflag JOHTO_FLAG_HIDE_GUIDE_GENT_CHERRYGROVE
+	clearflag JOHTO_FLAG_HIDE_CHERRYGROVE_GUIDE_GENT_HOUSE
 	release
 	end
 
@@ -72,7 +72,7 @@ MrPokemonHouse_EventScript_MrPokemon::
 	lock
 	faceplayer
 	checkitem ITEM_RED_SCALE
-	goto_if_eq 32781, TRUE, MrPokemonHouse_EventScript_MrPokemon_RedScale
+	goto_if_eq VAR_RESULT, TRUE, MrPokemonHouse_EventScript_MrPokemon_RedScale
 	msgbox MrPokemonHouse_Text_AlwaysNewDiscoveries, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -80,7 +80,7 @@ MrPokemonHouse_EventScript_MrPokemon::
 
 MrPokemonHouse_EventScript_MrPokemon_RedScale::
 	msgbox MrPokemonHouse_Text_GimmeTheScale, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, MrPokemonHouse_EventScript_MrPokemon_RedScale_Accepted
+	goto_if_eq VAR_RESULT, TRUE, MrPokemonHouse_EventScript_MrPokemon_RedScale_Accepted
 	msgbox MrPokemonHouse_Text_Disappointed, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -89,7 +89,7 @@ MrPokemonHouse_EventScript_MrPokemon_RedScale::
 MrPokemonHouse_EventScript_MrPokemon_RedScale_Accepted::
 	removeitem ITEM_RED_SCALE
 	giveitem ITEM_EXP_SHARE_SMALL
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
 	release
 	end
 

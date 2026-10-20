@@ -4,78 +4,78 @@ J_BattleFrontier_BattleTowerLobby_EventScript_Apprentice::
 	lock
 	faceplayer
 	apprentice_gavelvlmode
-	goto_if_eq 32781, FALSE, J_Apprentice_EventScript_FirstMeeting
+	goto_if_eq VAR_RESULT, FALSE, J_Apprentice_EventScript_FirstMeeting
 	apprentice_shouldcheckgone
-	goto_if_eq 32772, FALSE, J_Apprentice_EventScript_AskQuestion
-	goto_if_set 10518, J_Apprentice_EventScript_Gone
+	goto_if_eq VAR_0x8004, FALSE, J_Apprentice_EventScript_AskQuestion
+	goto_if_set JOHTO_FLAG_DAILY_APPRENTICE_LEAVES, J_Apprentice_EventScript_Gone
 
 J_Apprentice_EventScript_AskQuestion:
 	apprentice_getquestion
-	goto_if_eq 32781, 2, J_Apprentice_EventScript_UseWhichMon
-	goto_if_eq 32781, 4, J_Apprentice_EventScript_UseWhatHeldItem
-	goto_if_eq 32781, 3, J_Apprentice_EventScript_UseWhichMove
-	goto_if_eq 32781, 1, J_Apprentice_EventScript_PutWhichMonFirst
-	goto_if_eq 32781, 5, J_Apprentice_EventScript_PickWinSpeech
+	goto_if_eq VAR_RESULT, APPRENTICE_QUESTION_WHICH_MON, J_Apprentice_EventScript_UseWhichMon
+	goto_if_eq VAR_RESULT, APPRENTICE_QUESTION_WHAT_ITEM, J_Apprentice_EventScript_UseWhatHeldItem
+	goto_if_eq VAR_RESULT, APPRENTICE_QUESTION_WHICH_MOVE, J_Apprentice_EventScript_UseWhichMove
+	goto_if_eq VAR_RESULT, APPRENTICE_QUESTION_WHICH_FIRST, J_Apprentice_EventScript_PutWhichMonFirst
+	goto_if_eq VAR_RESULT, APPRENTICE_QUESTION_WIN_SPEECH, J_Apprentice_EventScript_PickWinSpeech
 	release
 	releaseall
 	end
 
 J_Apprentice_EventScript_FirstMeeting:
-	apprentice_buff STR_VAR_1, 6
-	apprentice_msg FALSE, 0
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_NAME
+	apprentice_msg FALSE, APPRENTICE_MSG_PLEASE_TEACH
 
 J_Apprentice_EventScript_WhichLvlMode:
-	apprentice_menu 6
-	goto_if_eq 32781, 1, J_Apprentice_EventScript_RejectTeach
-	apprentice_msg FALSE, 2
-	apprentice_menu 0
-	apprentice_setlvlmode 32781
+	apprentice_menu APPRENTICE_ASK_YES_NO
+	goto_if_eq VAR_RESULT, 1, J_Apprentice_EventScript_RejectTeach
+	apprentice_msg FALSE, APPRENTICE_MSG_WHICH_LVL_MODE
+	apprentice_menu APPRENTICE_ASK_WHICH_LEVEL
+	apprentice_setlvlmode VAR_RESULT
 	apprentice_shufflespecies
-	apprentice_buff STR_VAR_1, 8
-	apprentice_msg TRUE, 3
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_LEVEL
+	apprentice_msg TRUE, APPRENTICE_MSG_THANKS_LVL_MODE
 	call J_Apprentice_EventScript_SetHideFlags
 	release
 	releaseall
-	switch 32780
+	switch VAR_FACING
 	case DIR_NORTH, J_Apprentice_EventScript_LeaveNorth
 	goto J_Apprentice_EventScript_Leave
 	end
 
 J_Apprentice_EventScript_RejectTeach:
-	apprentice_msg FALSE, 1
+	apprentice_msg FALSE, APPRENTICE_MSG_REJECT
 	goto J_Apprentice_EventScript_WhichLvlMode
 
 J_Apprentice_EventScript_UseWhichMon:
-	apprentice_initquestion 2
-	apprentice_buff STR_VAR_1, 0
-	apprentice_buff STR_VAR_2, 1
-	apprentice_msg FALSE, 6
-	apprentice_menu 2
-	copyvar 32773, 32781
-	call_if_eq 32773, 0, J_Apprentice_EventScript_ChoseFirstMon
-	call_if_eq 32773, 1, J_Apprentice_EventScript_ChoseSecondMon
+	apprentice_initquestion APPRENTICE_QUESTION_WHICH_MON
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_SPECIES1
+	apprentice_buff STR_VAR_2, APPRENTICE_BUFF_SPECIES2
+	apprentice_msg FALSE, APPRENTICE_MSG_WHICH_MON
+	apprentice_menu APPRENTICE_ASK_2SPECIES
+	copyvar VAR_0x8005, VAR_RESULT
+	call_if_eq VAR_0x8005, 0, J_Apprentice_EventScript_ChoseFirstMon
+	call_if_eq VAR_0x8005, 1, J_Apprentice_EventScript_ChoseSecondMon
 	apprentice_getnumpartymons
-	apprentice_setpartymon 32781
+	apprentice_setpartymon VAR_RESULT
 	apprentice_answeredquestion
 	apprentice_getnumpartymons
-	call_if_eq 32781, (6 / 2), J_Apprentice_EventScript_LastMonSelected
-	apprentice_buff STR_VAR_1, 32775
+	call_if_eq VAR_RESULT, (6 / 2), J_Apprentice_EventScript_LastMonSelected
+	apprentice_buff STR_VAR_1, VAR_0x8007
 	apprentice_freequestion
-	apprentice_msg TRUE, 7
+	apprentice_msg TRUE, APPRENTICE_MSG_THANKS_MON
 	call J_Apprentice_EventScript_SetHideFlags
 	release
 	releaseall
-	switch 32780
+	switch VAR_FACING
 	case DIR_NORTH, J_Apprentice_EventScript_LeaveNorth
 	goto J_Apprentice_EventScript_Leave
 	end
 
 J_Apprentice_EventScript_ChoseFirstMon:
-	setvar 32775, 0
+	setvar VAR_0x8007, APPRENTICE_BUFF_SPECIES1
 	return
 
 J_Apprentice_EventScript_ChoseSecondMon:
-	setvar 32775, 1
+	setvar VAR_0x8007, APPRENTICE_BUFF_SPECIES2
 	return
 
 J_Apprentice_EventScript_LastMonSelected:
@@ -83,140 +83,140 @@ J_Apprentice_EventScript_LastMonSelected:
 	return
 
 J_Apprentice_EventScript_UseWhatHeldItem:
-	apprentice_initquestion 4
-	apprentice_buff STR_VAR_1, 2
-	apprentice_msg TRUE, 10
+	apprentice_initquestion APPRENTICE_QUESTION_WHAT_ITEM
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_SPECIES3
+	apprentice_msg TRUE, APPRENTICE_MSG_WHAT_HELD_ITEM
 	apprentice_freequestion
 
 J_Apprentice_EventScript_ChooseHoldItem:
-	fadescreen 1
-	setvar 32781, 0
+	fadescreen FADE_TO_BLACK
+	setvar VAR_RESULT, 0
 	apprentice_openbag
-	goto_if_eq 32781, FALSE, J_Apprentice_EventScript_ConfirmHoldNothing
+	goto_if_eq VAR_RESULT, FALSE, J_Apprentice_EventScript_ConfirmHoldNothing
 	apprentice_trysetitem
-	goto_if_eq 32781, FALSE, J_Apprentice_EventScript_AlreadySuggestedItem
-	apprentice_buff STR_VAR_1, 5
-	apprentice_msg TRUE, 12
+	goto_if_eq VAR_RESULT, FALSE, J_Apprentice_EventScript_AlreadySuggestedItem
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_ITEM
+	apprentice_msg TRUE, APPRENTICE_MSG_THANKS_HELD_ITEM
 	apprentice_answeredquestion
 	call J_Apprentice_EventScript_SetHideFlags
 	release
 	releaseall
-	switch 32780
+	switch VAR_FACING
 	case DIR_NORTH, J_Apprentice_EventScript_LeaveNorth
 	goto J_Apprentice_EventScript_Leave
 	end
 
 J_Apprentice_EventScript_ConfirmHoldNothing:
-	apprentice_initquestion 4
-	apprentice_buff STR_VAR_1, 2
-	apprentice_msg FALSE, 13
-	apprentice_menu 4
+	apprentice_initquestion APPRENTICE_QUESTION_WHAT_ITEM
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_SPECIES3
+	apprentice_msg FALSE, APPRENTICE_MSG_HOLD_NOTHING
+	apprentice_menu APPRENTICE_ASK_GIVE
 	apprentice_freequestion
-	goto_if_eq 32781, 0, J_Apprentice_EventScript_ChooseHoldItem
+	goto_if_eq VAR_RESULT, 0, J_Apprentice_EventScript_ChooseHoldItem
 
 J_Apprentice_EventScript_HoldNothing:
-	apprentice_msg TRUE, 14
+	apprentice_msg TRUE, APPRENTICE_MSG_THANKS_NO_HELD_ITEM
 	apprentice_answeredquestion
 	call J_Apprentice_EventScript_SetHideFlags
 	release
 	releaseall
-	switch 32780
+	switch VAR_FACING
 	case DIR_NORTH, J_Apprentice_EventScript_LeaveNorth
 	goto J_Apprentice_EventScript_Leave
 	end
 
 J_Apprentice_EventScript_AlreadySuggestedItem:
-	apprentice_initquestion 4
-	apprentice_buff STR_VAR_1, 5
-	apprentice_buff STR_VAR_2, 2
-	apprentice_msg FALSE, 16
-	apprentice_menu 4
+	apprentice_initquestion APPRENTICE_QUESTION_WHAT_ITEM
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_ITEM
+	apprentice_buff STR_VAR_2, APPRENTICE_BUFF_SPECIES3
+	apprentice_msg FALSE, APPRENTICE_MSG_ITEM_ALREADY_SUGGESTED
+	apprentice_menu APPRENTICE_ASK_GIVE
 	apprentice_freequestion
-	goto_if_eq 32781, 0, J_Apprentice_EventScript_ChooseHoldItem
+	goto_if_eq VAR_RESULT, 0, J_Apprentice_EventScript_ChooseHoldItem
 	goto J_Apprentice_EventScript_HoldNothing
 	end
 
 J_Apprentice_EventScript_UseWhichMove:
-	apprentice_initquestion 3
-	apprentice_buff STR_VAR_1, 2
-	apprentice_buff STR_VAR_2, 3
-	apprentice_buff STR_VAR_3, 4
-	apprentice_msg FALSE, 8
-	apprentice_menu 3
-	copyvar 32773, 32781
-	call_if_eq 32773, 0, J_Apprentice_EventScript_ChoseMove1
-	call_if_eq 32773, 1, J_Apprentice_EventScript_ChoseMove2
+	apprentice_initquestion APPRENTICE_QUESTION_WHICH_MOVE
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_SPECIES3
+	apprentice_buff STR_VAR_2, APPRENTICE_BUFF_MOVE1
+	apprentice_buff STR_VAR_3, APPRENTICE_BUFF_MOVE2
+	apprentice_msg FALSE, APPRENTICE_MSG_WHICH_MOVE
+	apprentice_menu APPRENTICE_ASK_MOVES
+	copyvar VAR_0x8005, VAR_RESULT
+	call_if_eq VAR_0x8005, 0, J_Apprentice_EventScript_ChoseMove1
+	call_if_eq VAR_0x8005, 1, J_Apprentice_EventScript_ChoseMove2
 	apprentice_setmove
 	apprentice_answeredquestion
-	apprentice_buff STR_VAR_1, 32775
+	apprentice_buff STR_VAR_1, VAR_0x8007
 	apprentice_freequestion
-	apprentice_msg TRUE, 9
+	apprentice_msg TRUE, APPRENTICE_MSG_THANKS_MOVE
 	call J_Apprentice_EventScript_SetHideFlags
 	release
 	releaseall
-	switch 32780
+	switch VAR_FACING
 	case DIR_NORTH, J_Apprentice_EventScript_LeaveNorth
 	goto J_Apprentice_EventScript_Leave
 	end
 
 J_Apprentice_EventScript_ChoseMove1:
-	setvar 32775, 3
+	setvar VAR_0x8007, APPRENTICE_BUFF_MOVE1
 	return
 
 J_Apprentice_EventScript_ChoseMove2:
-	setvar 32775, 4
+	setvar VAR_0x8007, APPRENTICE_BUFF_MOVE2
 	return
 
 J_Apprentice_EventScript_PutWhichMonFirst:
-	apprentice_msg FALSE, 4
-	apprentice_menu 1
-	apprentice_setleadmon 32781
+	apprentice_msg FALSE, APPRENTICE_MSG_WHICH_MON_FIRST
+	apprentice_menu APPRENTICE_ASK_3SPECIES
+	apprentice_setleadmon VAR_RESULT
 	apprentice_answeredquestion
-	apprentice_buff STR_VAR_1, 9
-	apprentice_msg TRUE, 5
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_LEAD_MON_SPECIES
+	apprentice_msg TRUE, APPRENTICE_MSG_THANKS_MON_FIRST
 	call J_Apprentice_EventScript_SetHideFlags
 	release
 	releaseall
-	switch 32780
+	switch VAR_FACING
 	case DIR_NORTH, J_Apprentice_EventScript_LeaveNorth
 	goto J_Apprentice_EventScript_Leave
 	end
 
 J_Apprentice_EventScript_PickWinSpeech:
-	apprentice_msg TRUE, 11
+	apprentice_msg TRUE, APPRENTICE_MSG_PICK_WIN_SPEECH
 	apprentice_shiftsaved
-	setvar 32772, 19
+	setvar VAR_0x8004, EASY_CHAT_TYPE_APPRENTICE
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
 	apprentice_save
-	apprentice_buff STR_VAR_1, 7
-	apprentice_msg TRUE, 15
+	apprentice_buff STR_VAR_1, APPRENTICE_BUFF_WIN_SPEECH
+	apprentice_msg TRUE, APPRENTICE_MSG_THANKS_WIN_SPEECH
 	apprentice_reset
 	call J_Apprentice_EventScript_SetHideFlags
 	release
 	releaseall
-	switch 32780
+	switch VAR_FACING
 	case DIR_NORTH, J_Apprentice_EventScript_LeaveNorth
 	goto J_Apprentice_EventScript_Leave
 	end
 
 J_Apprentice_EventScript_SetHideFlags:
-	setflag 8412
-	setflag 10518
+	setflag JOHTO_FLAG_HIDE_APPRENTICE
+	setflag JOHTO_FLAG_DAILY_APPRENTICE_LEAVES
 	return
 
 J_Apprentice_EventScript_LeaveNorth:
 	apprentice_shouldleave
-	goto_if_eq 32772, FALSE, J_Apprentice_EventScript_DontMove
-	applymovement 6, J_Apprentice_Movement_LeaveNorth
+	goto_if_eq VAR_0x8004, FALSE, J_Apprentice_EventScript_DontMove
+	applymovement LOCALID_APPRENTICE, J_Apprentice_Movement_LeaveNorth
 	waitmovement 0
 	end
 
 J_Apprentice_EventScript_Leave:
 	apprentice_shouldleave
-	goto_if_eq 32772, FALSE, J_Apprentice_EventScript_DontMove
-	applymovement 6, J_Apprentice_Movement_Leave
+	goto_if_eq VAR_0x8004, FALSE, J_Apprentice_EventScript_DontMove
+	applymovement LOCALID_APPRENTICE, J_Apprentice_Movement_Leave
 	waitmovement 0
 	end
 

@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route46_hns/scripts.inc), as built into the FireRed game.
 
 Route46_hns_MapScripts::
-	map_script 3, Route29_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route29_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route46_OnTransition:
@@ -10,19 +10,19 @@ Route46_OnTransition:
 	end
 
 Route46_EventScript_Bailey::
-	trainerbattle_single 1291, Route46_Text_HikerBaileySeen, Route46_Text_HikerBaileyBeaten
+	trainerbattle_single TRAINER_JOHTO_BAILEY_HNS, Route46_Text_HikerBaileySeen, Route46_Text_HikerBaileyBeaten
 	msgbox Route46_Text_HikerBaileyAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route46_EventScript_Ted::
-	trainerbattle_single 1365, Route46_Text_CamperTedSeen, Route46_Text_CamperTedBeaten
+	trainerbattle_single TRAINER_JOHTO_TED_HNS, Route46_Text_CamperTedSeen, Route46_Text_CamperTedBeaten
 	msgbox Route46_Text_CamperTedAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route46_EventScript_Erin::
-	trainerbattle_single 1350, Route46_Text_PicnickerErinSeen, Route46_Text_PicnickerErinBeaten, Route46_EventScript_RegisterErin
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route46_EventScript_RematchErin
+	trainerbattle_single TRAINER_JOHTO_ERIN_HNS, Route46_Text_PicnickerErinSeen, Route46_Text_PicnickerErinBeaten, Route46_EventScript_RegisterErin
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route46_EventScript_RematchErin
 	msgbox Route46_Text_PicnickerErinAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -30,12 +30,12 @@ Route46_EventScript_RegisterErin::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route46_Text_ErinRegister, MSGBOX_DEFAULT
-	register_matchcall 1350
+	register_matchcall TRAINER_JOHTO_ERIN_HNS
 	release
 	end
 
 Route46_EventScript_RematchErin::
-	trainerbattle_rematch 1350, Route46_Text_ErinRematchIntro, Route46_Text_ErinRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_ERIN_HNS, Route46_Text_ErinRematchIntro, Route46_Text_ErinRematchDefeat
 	msgbox Route46_Text_ErinPostRematch, MSGBOX_AUTOCLOSE
 	end
 

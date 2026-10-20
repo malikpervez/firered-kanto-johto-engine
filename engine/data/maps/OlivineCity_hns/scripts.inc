@@ -1,24 +1,24 @@
 @ Johto (data/maps/OlivineCity_hns/scripts.inc), as built into the FireRed game.
 
 OlivineCity_hns_MapScripts::
-	map_script 3, OlivineCity_MapScript_OnTransition
-	map_script 5, J_SetTimeEncounters
-	map_script 2, OlivineCity_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, OlivineCity_MapScript_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, OlivineCity_OnFrame
 	.byte 0
 
 OlivineCity_MapScript_OnTransition::
 	call RB_OlivineVisibility
 	callnative SetTimeBasedEncounters
-	goto_if_ge 20583, 5, OlivineCity_MapScript_ClearWeather
+	goto_if_ge JOHTO_VAR_OLIVINE_CITY_STATE, 5, OlivineCity_MapScript_ClearWeather
 	end
 
 OlivineCity_MapScript_ClearWeather::
-	setweather 0
+	setweather WEATHER_NONE
 	end
 
 OlivineCity_OnFrame::
-	map_script_2 20597, 1, OlivineCity_EventScript_BaobaCall
-	map_script_2 20643, 1, Mahoganytown_EventScript_RocketTrigger
+	map_script_2 JOHTO_VAR_SAFARI_ZONE_GATE_STATE, 1, OlivineCity_EventScript_BaobaCall
+	map_script_2 JOHTO_VAR_TRIGGER_ELM_ROCKET_CALL, 1, Mahoganytown_EventScript_RocketTrigger
 	.2byte 0
 
 OlivineCity_EventScript_BaobaCall::
@@ -27,7 +27,7 @@ OlivineCity_EventScript_BaobaCall::
 	pokenavcall OlivineCity_Text_Baoba
 	waitmessage
 	delay 30
-	setvar 20597, 2
+	setvar JOHTO_VAR_SAFARI_ZONE_GATE_STATE, 2
 	release
 	end
 
@@ -50,47 +50,47 @@ OlivineCity_Text_Baoba:
 	.string "pleas{SE_M_REVERSAL}com{SE_M_REVERSAL}visit!$"
 
 OlivineCity_EventScript_CityTrigger::
-	setflag 8320
-	setflag 8323
-	setflag 10486
-	clearflag 8795
-	clearflag 8794
-	clearflag 8411
-	clearflag 8324
-	clearflag 8245
-	setvar 20568, 0
+	setflag JOHTO_FLAG_HIDE_OLIVINE_CITY_GYM_JASMINE
+	setflag JOHTO_FLAG_HIDE_OLIVINE_SILVER
+	setflag JOHTO_FLAG_VISITED_OLIVINE_CITY
+	clearflag JOHTO_FLAG_SAFARI_ZONE_WEST_EXPANSION
+	clearflag JOHTO_FLAG_SAFARI_ZONE_EAST_EXPANSION
+	clearflag JOHTO_FLAG_HIDE_BATTLEFRONTIER_ENGINEER
+	clearflag JOHTO_FLAG_HIDE_LIGHTHOUSE_JASMINE
+	clearflag JOHTO_FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
+	setvar JOHTO_VAR_GETFLY, 0
 
-	setvar 20583, 1
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 1
 
 
-	setvar 20604, 1
-	clearflag 8239
-	setflag 8330
-	setvar 20555, 1
+	setvar JOHTO_VAR_SUICUNE_ENCOUNTERS, 1
+	clearflag JOHTO_FLAG_HIDE_CIANWOOD_SUICUNE
+	setflag JOHTO_FLAG_HIDE_CIANWOOD_EUSINE
+	setvar JOHTO_VAR_CIANWOOD_CITY_STATE, 1
 	end
 
 OlivineCity_EventScript_SilverTrigger::
 	lock
-	clearflag 8323
+	clearflag JOHTO_FLAG_HIDE_OLIVINE_SILVER
 	opendoor 11, 27
-	addobject 4
+	addobject LOCALID_OLIVINE_SILVER
 	playbgm ((558 + 1) + 0x3B), FALSE
 	delay 20
 	closedoor 11, 27
-	getplayerxy 16384, 16385
-	call_if_eq 16385, 28, OlivineCity_EventScript_SilverWalkToPlayer1
-	call_if_eq 16385, 29, OlivineCity_EventScript_SilverWalkToPlayer2
-	call_if_eq 16385, 30, OlivineCity_EventScript_SilverWalkToPlayer3
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_eq VAR_TEMP_1, 28, OlivineCity_EventScript_SilverWalkToPlayer1
+	call_if_eq VAR_TEMP_1, 29, OlivineCity_EventScript_SilverWalkToPlayer2
+	call_if_eq VAR_TEMP_1, 30, OlivineCity_EventScript_SilverWalkToPlayer3
 	msgbox OlivineCity_Text_SilverEncounter, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 16385, 28, OlivineCity_EventScript_SilverLeaveAdjust1
-	call_if_eq 16385, 29, OlivineCity_EventScript_SilverLeaveAdjust2
-	call_if_eq 16385, 30, OlivineCity_EventScript_SilverLeaveAdjust2
-	applymovement 4, OlivineCity_Movement_SilverLeave
+	call_if_eq VAR_TEMP_1, 28, OlivineCity_EventScript_SilverLeaveAdjust1
+	call_if_eq VAR_TEMP_1, 29, OlivineCity_EventScript_SilverLeaveAdjust2
+	call_if_eq VAR_TEMP_1, 30, OlivineCity_EventScript_SilverLeaveAdjust2
+	applymovement LOCALID_OLIVINE_SILVER, OlivineCity_Movement_SilverLeave
 	waitmovement 0
-	setvar 20583, 2
-	setflag 8323
-	removeobject 4
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 2
+	setflag JOHTO_FLAG_HIDE_OLIVINE_SILVER
+	removeobject LOCALID_OLIVINE_SILVER
 	fadedefaultbgm
 	release
 	end
@@ -182,7 +182,7 @@ OlivineCity_EventScript_Sailor1::
 	lock
 	faceplayer
 	msgbox OlivineCity_Text_Sailor1, MSGBOX_DEFAULT
-	call_if_ge 20569, 10, BlackTide_CoastalWarning
+	call_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 10, BlackTide_CoastalWarning
 	closemessage
 	release
 	end
@@ -207,7 +207,7 @@ OlivineCity_EventScript_Machoke::
 	lock
 	faceplayer
 	waitse
-	playmoncry 67, 0
+	playmoncry SPECIES_MACHOKE, CRY_MODE_NORMAL
 	msgbox OlivineCity_Text_Machoke, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -238,15 +238,15 @@ OlivineCity_EventScript_LighthouseSign::
 	end
 
 OlivineCity_EventScript_Item_ChargeBeam::
-	finditem 638
+	finditem ITEM_TM_CHARGE_BEAM
 	end
 
 OlivineCity_EventScript_EonTicketWoman::
 	lock
 	faceplayer
 	checkitem ITEM_AURORA_TICKET
-	goto_if_eq 32781, TRUE, OlivineCity_EventScript_EonTicketWomanAfter
-	goto_if_set 10400, OlivineCity_EventScript_EonTicketWomanChamp
+	goto_if_eq VAR_RESULT, TRUE, OlivineCity_EventScript_EonTicketWomanAfter
+	goto_if_set JOHTO_FLAG_IS_KANTO_CHAMPION, OlivineCity_EventScript_EonTicketWomanChamp
 	msgbox OlivineCity_Text_EonTicketWoman1, MSGBOX_DEFAULT
 	closemessage
 	release

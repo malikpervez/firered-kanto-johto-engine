@@ -4,19 +4,19 @@ Route45_hns_MapScripts::
 	.byte 0
 
 Route45_EventScript_Erik::
-	trainerbattle_single 1287, Route45_Text_HikerErikSeen, Route45_Text_HikerErikBeaten
+	trainerbattle_single TRAINER_JOHTO_ERIK_HNS, Route45_Text_HikerErikSeen, Route45_Text_HikerErikBeaten
 	msgbox Route45_Text_HikerErikAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Michael::
-	trainerbattle_single 1288, Route45_Text_HikerMichaelSeen, Route45_Text_HikerMichaelBeaten
+	trainerbattle_single TRAINER_JOHTO_MICHAEL_HNS, Route45_Text_HikerMichaelSeen, Route45_Text_HikerMichaelBeaten
 	msgbox Route45_Text_HikerMichaelAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Parry::
-	trainerbattle_single 1289, Route45_Text_HikerParrySeen, Route45_Text_HikerParryBeaten, Route45_EventScript_RegisterParry
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route45_EventScript_RematchParry
+	trainerbattle_single TRAINER_JOHTO_PARRY_HNS, Route45_Text_HikerParrySeen, Route45_Text_HikerParryBeaten, Route45_EventScript_RegisterParry
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route45_EventScript_RematchParry
 	msgbox Route45_Text_HikerParryAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -24,25 +24,25 @@ Route45_EventScript_RegisterParry::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route45_Text_ParryRegister, MSGBOX_DEFAULT
-	register_matchcall 1289
+	register_matchcall TRAINER_JOHTO_PARRY_HNS
 	release
 	end
 
 Route45_EventScript_RematchParry::
-	trainerbattle_rematch 1289, Route45_Text_ParryRematchIntro, Route45_Text_ParryRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_PARRY_HNS, Route45_Text_ParryRematchIntro, Route45_Text_ParryRematchDefeat
 	msgbox Route45_Text_ParryPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Timothy::
-	trainerbattle_single 1290, Route45_Text_HikerTimothySeen, Route45_Text_HikerTimothyBeaten
+	trainerbattle_single TRAINER_JOHTO_TIMOTHY_HNS, Route45_Text_HikerTimothySeen, Route45_Text_HikerTimothyBeaten
 	msgbox Route45_Text_HikerTimothyAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Kenji::
-	trainerbattle_single 1323, Route45_Text_BlackbeltKenjiSeen, Route45_Text_BlackbeltKenjiBeaten, Route45_EventScript_RegisterKenji
-	goto_if_set 8946, Route45_EventScript_KenjiGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route45_EventScript_RematchKenji
+	trainerbattle_single TRAINER_JOHTO_KENJI_HNS, Route45_Text_BlackbeltKenjiSeen, Route45_Text_BlackbeltKenjiBeaten, Route45_EventScript_RegisterKenji
+	goto_if_set JOHTO_FLAG_KENJI_HAS_ITEM_HNS, Route45_EventScript_KenjiGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route45_EventScript_RematchKenji
 	msgbox Route45_Text_BlackbeltKenjiAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -50,20 +50,20 @@ Route45_EventScript_RegisterKenji::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route45_Text_KenjiRegister, MSGBOX_DEFAULT
-	register_matchcall 1323
+	register_matchcall TRAINER_JOHTO_KENJI_HNS
 	release
 	end
 
 Route45_EventScript_RematchKenji::
-	trainerbattle_rematch 1323, Route45_Text_KenjiRematchIntro, Route45_Text_KenjiRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_KENJI_HNS, Route45_Text_KenjiRematchIntro, Route45_Text_KenjiRematchDefeat
 	msgbox Route45_Text_KenjiPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_KenjiGiveItem::
 	msgbox Route45_Text_KenjiHasItem, MSGBOX_DEFAULT
-	giveitem 20624
-	goto_if_eq 32781, FALSE, Route45_EventScript_KenjiNoRoom
-	clearflag 8946
+	giveitem JOHTO_VAR_KENJI_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, Route45_EventScript_KenjiNoRoom
+	clearflag JOHTO_FLAG_KENJI_HAS_ITEM_HNS
 	msgbox Route45_Text_KenjiGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -72,17 +72,17 @@ Route45_EventScript_KenjiNoRoom::
 	end
 
 Route45_EventScript_Ryan::
-	trainerbattle_single 1085, Route45_Text_CooltrainermRyanSeen, Route45_Text_CooltrainermRyanBeaten
+	trainerbattle_single TRAINER_JOHTO_RYAN_HNS, Route45_Text_CooltrainermRyanSeen, Route45_Text_CooltrainermRyanBeaten
 	msgbox Route45_Text_CooltrainermRyanAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Kelly::
-	trainerbattle_single 1103, Route45_Text_CooltrainerfKellySeen, Route45_Text_CooltrainerfKellyBeaten
+	trainerbattle_single TRAINER_JOHTO_KELLY_HNS, Route45_Text_CooltrainerfKellySeen, Route45_Text_CooltrainerfKellyBeaten
 	msgbox Route45_Text_CooltrainerfKellyAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Quentin::
-	trainerbattle_single 1373, Route45_Text_CamperQuentinSeen, Route45_Text_CamperQuentinBeaten
+	trainerbattle_single TRAINER_JOHTO_QUENTIN_HNS, Route45_Text_CamperQuentinSeen, Route45_Text_CamperQuentinBeaten
 	msgbox Route45_Text_CamperQuentinAfter, MSGBOX_AUTOCLOSE
 	end
 

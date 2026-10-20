@@ -1,24 +1,24 @@
 @ Johto (data/maps/Route43_hns/scripts.inc), as built into the FireRed game.
 
 Route43_hns_MapScripts::
-	map_script 3, Route43_MapScript_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route43_MapScript_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route43_MapScript_OnTransition::
-	call_if_set 8244, Route42_MapScript_HideTrigger
+	call_if_set JOHTO_FLAG_HIDE_ROUTE42_SUICUNE, Route42_MapScript_HideTrigger
 	callnative SetTimeBasedEncounters
 	end
 
 Route43_EventScript_Ben::
-	trainerbattle_single 1135, Route43_Text_PokemaniacBenSeen, Route43_Text_PokemaniacBenBeaten
+	trainerbattle_single TRAINER_JOHTO_BEN_HNS, Route43_Text_PokemaniacBenSeen, Route43_Text_PokemaniacBenBeaten
 	msgbox Route43_Text_PokemaniacBenAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route43_EventScript_Brent::
-	trainerbattle_single 1136, Route43_Text_PokemaniacBrentSeen, Route43_Text_PokemaniacBrentBeaten, Route43_EventScript_RegisterBrent
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route43_EventScript_RematchBrent
+	trainerbattle_single TRAINER_JOHTO_BRENT_HNS, Route43_Text_PokemaniacBrentSeen, Route43_Text_PokemaniacBrentBeaten, Route43_EventScript_RegisterBrent
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route43_EventScript_RematchBrent
 	msgbox Route43_Text_PokemaniacBrentAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -26,34 +26,34 @@ Route43_EventScript_RegisterBrent::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route43_Text_BrentRegister, MSGBOX_DEFAULT
-	register_matchcall 1136
+	register_matchcall TRAINER_JOHTO_BRENT_HNS
 	release
 	end
 
 Route43_EventScript_RematchBrent::
-	trainerbattle_rematch 1136, Route43_Text_BrentRematchIntro, Route43_Text_BrentRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_BRENT_HNS, Route43_Text_BrentRematchIntro, Route43_Text_BrentRematchDefeat
 	msgbox Route43_Text_BrentPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route43_EventScript_Ron::
-	trainerbattle_single 1137, Route43_Text_PokemaniacRonSeen, Route43_Text_PokemaniacRonBeaten
+	trainerbattle_single TRAINER_JOHTO_RON_HNS, Route43_Text_PokemaniacRonSeen, Route43_Text_PokemaniacRonBeaten
 	msgbox Route43_Text_PokemaniacRonAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route43_EventScript_Marvin::
-	trainerbattle_single 1205, Route43_Text_FisherMarvinSeen, Route43_Text_FisherMarvinBeaten
+	trainerbattle_single TRAINER_JOHTO_MARVIN_HNS, Route43_Text_FisherMarvinSeen, Route43_Text_FisherMarvinBeaten
 	msgbox Route43_Text_FisherMarvinAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route43_EventScript_Spencer::
-	trainerbattle_single 1372, Route43_Text_CamperSpencerSeen, Route43_Text_CamperSpencerBeaten
+	trainerbattle_single TRAINER_JOHTO_SPENCER_HNS, Route43_Text_CamperSpencerSeen, Route43_Text_CamperSpencerBeaten
 	msgbox Route43_Text_CamperSpencerAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route43_EventScript_Tiffany::
-	trainerbattle_single 1353, Route43_Text_PicnickerTiffanySeen, Route43_Text_PicnickerTiffanyBeaten, Route43_EventScript_RegisterTiffany
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route43_EventScript_RematchTiffany
+	trainerbattle_single TRAINER_JOHTO_TIFFANY_HNS, Route43_Text_PicnickerTiffanySeen, Route43_Text_PicnickerTiffanyBeaten, Route43_EventScript_RegisterTiffany
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route43_EventScript_RematchTiffany
 	msgbox Route43_Text_PicnickerTiffanyWantsPicnic, MSGBOX_AUTOCLOSE
 	end
 
@@ -61,12 +61,12 @@ Route43_EventScript_RegisterTiffany::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route43_Text_TiffanyRegister, MSGBOX_DEFAULT
-	register_matchcall 1353
+	register_matchcall TRAINER_JOHTO_TIFFANY_HNS
 	release
 	end
 
 Route43_EventScript_RematchTiffany::
-	trainerbattle_rematch 1353, Route43_Text_TiffanyRematchIntro, Route43_Text_TiffanyRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_TIFFANY_HNS, Route43_Text_TiffanyRematchIntro, Route43_Text_TiffanyRematchDefeat
 	msgbox Route43_Text_TiffanyPostRematch, MSGBOX_AUTOCLOSE
 	end
 

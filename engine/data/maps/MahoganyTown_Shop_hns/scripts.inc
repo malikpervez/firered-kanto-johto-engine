@@ -1,12 +1,12 @@
 @ Johto (data/maps/MahoganyTown_Shop_hns/scripts.inc), as built into the FireRed game.
 
 MahoganyTown_Shop_hns_MapScripts::
-	map_script 1, MahoganyTown_Shop_OnLoad
-	map_script 2, MahoganyTown_Shop_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, MahoganyTown_Shop_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MahoganyTown_Shop_OnFrame
 	.byte 0
 
 MahoganyTown_Shop_OnLoad:
-	goto_if_ge 20578, 5, MahoganyTown_Shop_SetStairs
+	goto_if_ge JOHTO_VAR_MAHOGANY_TOWN_STATE, 5, MahoganyTown_Shop_SetStairs
 	end
 
 MahoganyTown_Shop_SetStairs::
@@ -14,58 +14,58 @@ MahoganyTown_Shop_SetStairs::
 	end
 
 MahoganyTown_Shop_OnFrame::
-	map_script_2 20578, 4, MahoganyTown_Shop_EventScript_Raid
+	map_script_2 JOHTO_VAR_MAHOGANY_TOWN_STATE, 4, MahoganyTown_Shop_EventScript_Raid
 	.2byte 0
 
 MahoganyTown_Shop_EventScript_Raid::
 	playbgm ((558 + 1) + 0x32), FALSE
 	lock
-	playse 21
-	applymovement 255, J_Common_Movement_ExclamationMark
-	waitmovement 255
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
 	msgbox MahoganyMart1F_Text_Lance_HyperBeam, MSGBOX_DEFAULT
 	closemessage
-	playse 215
-	applymovement 4, MahoganyTown_Shop_Movement_Dragonite1
+	playse SE_M_HYPER_BEAM
+	applymovement LOCALID_MAHOGANYSHOP_DRAGONITE, MahoganyTown_Shop_Movement_Dragonite1
 	delay 10
-	applymovement 2, MahoganyTown_Shop_Movement_Rocket1
-	waitmovement 2
+	applymovement LOCALID_MAHOGANYSHOP_ROCKET, MahoganyTown_Shop_Movement_Rocket1
+	waitmovement LOCALID_MAHOGANYSHOP_ROCKET
 	waitse
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 6
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 6
 	special ShakeCamera
-	waitmovement 4
+	waitmovement LOCALID_MAHOGANYSHOP_DRAGONITE
 	waitse
 	delay 10
-	turnobject 3, DIR_SOUTH
+	turnobject LOCALID_MAHOGANYSHOP_LANCE, DIR_SOUTH
 	delay 50
-	applymovement 3, MahoganyTown_Shop_Movement_LanceGreetPlayer
+	applymovement LOCALID_MAHOGANYSHOP_LANCE, MahoganyTown_Shop_Movement_LanceGreetPlayer
 	waitmovement 0
 	msgbox MahoganyMart1F_Text_Lance_Radio, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 4, J_Common_Movement_QuestionMark
+	playse SE_PIN
+	applymovement LOCALID_MAHOGANYSHOP_DRAGONITE, J_Common_Movement_QuestionMark
 	delay 55
-	waitmovement 4
-	applymovement 4, MahoganyTown_Shop_Movement_DragoniteGotoBox
+	waitmovement LOCALID_MAHOGANYSHOP_DRAGONITE
+	applymovement LOCALID_MAHOGANYSHOP_DRAGONITE, MahoganyTown_Shop_Movement_DragoniteGotoBox
 	waitmovement 0
-	playmoncry 149, 0
+	playmoncry SPECIES_DRAGONITE, CRY_MODE_NORMAL
 	waitmovement 0
-	applymovement 3, MahoganyTown_Shop_Movement_LanceGotoBox
-	applymovement 255, MahoganyTown_Shop_Movement_PlayerGotoBox
-	waitmovement 3
-	waitmovement 255
+	applymovement LOCALID_MAHOGANYSHOP_LANCE, MahoganyTown_Shop_Movement_LanceGotoBox
+	applymovement OBJ_EVENT_ID_PLAYER, MahoganyTown_Shop_Movement_PlayerGotoBox
+	waitmovement LOCALID_MAHOGANYSHOP_LANCE
+	waitmovement OBJ_EVENT_ID_PLAYER
 
-	playse 215
-	applymovement 4, MahoganyTown_Shop_Movement_Dragonite2
+	playse SE_M_HYPER_BEAM
+	applymovement LOCALID_MAHOGANYSHOP_DRAGONITE, MahoganyTown_Shop_Movement_Dragonite2
 	delay 20
 	waitse
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 6
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 
 	waitmovement 0
@@ -74,38 +74,38 @@ MahoganyTown_Shop_EventScript_Raid::
 	special DrawWholeMapView
 	delay 40
 	msgbox MahoganyMart1F_Text_Lance_Stairs, MSGBOX_DEFAULT
-	turnobject 4, DIR_WEST
-	playmoncry 149, 0
+	turnobject LOCALID_MAHOGANYSHOP_DRAGONITE, DIR_WEST
+	playmoncry SPECIES_DRAGONITE, CRY_MODE_NORMAL
 	waitmoncry
-	turnobject 4, DIR_EAST
+	turnobject LOCALID_MAHOGANYSHOP_DRAGONITE, DIR_EAST
 
-	turnobject 3, DIR_SOUTH
+	turnobject LOCALID_MAHOGANYSHOP_LANCE, DIR_SOUTH
 	msgbox MahoganyMart1F_Text_Lance_SplitUp, MSGBOX_DEFAULT
 	closemessage
-	applymovement 4, J_Common_Movement_WalkRight1
+	applymovement LOCALID_MAHOGANYSHOP_DRAGONITE, J_Common_Movement_WalkRight1
 	waitmovement 0
-	removeobject 4
-	playse 9
-	applymovement 3, J_Common_Movement_WalkRight1
+	removeobject LOCALID_MAHOGANYSHOP_DRAGONITE
+	playse SE_EXIT
+	applymovement LOCALID_MAHOGANYSHOP_LANCE, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 3, J_Common_Movement_WalkRight1
+	applymovement LOCALID_MAHOGANYSHOP_LANCE, J_Common_Movement_WalkRight1
 	waitmovement 0
-	removeobject 3
-	playse 9
+	removeobject LOCALID_MAHOGANYSHOP_LANCE
+	playse SE_EXIT
 	delay 50
 
-	playse 21
+	playse SE_PIN
 	applymovement 2 J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
+	waitmovement LOCALID_MAHOGANYSHOP_ROCKET
 	applymovement 2 MahoganyTown_Shop_Movement_RocketLeave
 	waitmovement 0
-	removeobject 2
-	playse 9
-	setflag 8334
+	removeobject LOCALID_MAHOGANYSHOP_ROCKET
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_MAHOGANY_TOWN_SHOP_NPCS
 
 
-	setvar 20578, 5
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 5
 	release
 	end
 
@@ -182,8 +182,8 @@ MahoganyTown_Shop_Movement_PlayerGotoBox:
 MahoganyTown_Shop_EventScript_Granny::
 	lock
 	faceplayer
-	goto_if_eq 20578, 5, MahoganyTown_Shop_EventScript_GrannyDuring
-	goto_if_ge 20578, 14, MahoganyTown_Shop_EventScript_GrannyShop
+	goto_if_eq JOHTO_VAR_MAHOGANY_TOWN_STATE, 5, MahoganyTown_Shop_EventScript_GrannyDuring
+	goto_if_ge JOHTO_VAR_MAHOGANY_TOWN_STATE, 14, MahoganyTown_Shop_EventScript_GrannyShop
 	msgbox MahoganyTown_Shop_Text_Granny, MSGBOX_NPC
 	release
 	end

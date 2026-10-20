@@ -2,28 +2,28 @@
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_MauvilleOldMan::
 	special Script_GetCurrentMauvilleMan
-	switch 32781
-	case 0, J_MauvilleCity_PokemonCenter_1F_EventScript_Bard
-	case 1, J_MauvilleCity_PokemonCenter_1F_EventScript_Hipster
-	case 2, J_MauvilleCity_PokemonCenter_1F_EventScript_Trader
-	case 3, J_MauvilleCity_PokemonCenter_1F_EventScript_Storyteller
-	case 4, J_MauvilleCity_PokemonCenter_1F_EventScript_Giddy
+	switch VAR_RESULT
+	case MAUVILLE_MAN_BARD, J_MauvilleCity_PokemonCenter_1F_EventScript_Bard
+	case MAUVILLE_MAN_HIPSTER, J_MauvilleCity_PokemonCenter_1F_EventScript_Hipster
+	case MAUVILLE_MAN_TRADER, J_MauvilleCity_PokemonCenter_1F_EventScript_Trader
+	case MAUVILLE_MAN_STORYTELLER, J_MauvilleCity_PokemonCenter_1F_EventScript_Storyteller
+	case MAUVILLE_MAN_GIDDY, J_MauvilleCity_PokemonCenter_1F_EventScript_Giddy
 	end
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_Bard::
 	lock
 	faceplayer
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToHearMySong, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_MauvilleCity_PokemonCenter_1F_EventScript_PlaySong
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineSong
+	goto_if_eq VAR_RESULT, YES, J_MauvilleCity_PokemonCenter_1F_EventScript_PlaySong
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineSong
 	end
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_PlaySong::
-	setvar 32772, FALSE
+	setvar VAR_0x8004, FALSE
 	special PlayBardSong
 	delay 60
 	special HasBardSongBeenChanged
-	goto_if_eq 32781, FALSE, J_MauvilleCity_PokemonCenter_1F_EventScript_AskToWriteLyrics
+	goto_if_eq VAR_RESULT, FALSE, J_MauvilleCity_PokemonCenter_1F_EventScript_AskToWriteLyrics
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_WishICouldPlaySongForOthers, MSGBOX_DEFAULT
 	release
 	end
@@ -35,22 +35,22 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineSong::
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_AskToWriteLyrics::
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToWriteSomeLyrics, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_MauvilleCity_PokemonCenter_1F_EventScript_WriteLyrics
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineWritingLyrics
+	goto_if_eq VAR_RESULT, YES, J_MauvilleCity_PokemonCenter_1F_EventScript_WriteLyrics
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineWritingLyrics
 	end
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_WriteLyrics::
-	setvar 32772, 6
+	setvar VAR_0x8004, EASY_CHAT_TYPE_BARD_SONG
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineWritingLyrics
+	goto_if_eq VAR_RESULT, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineWritingLyrics
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_LetMeSingItForYou, MSGBOX_DEFAULT
-	setvar 32772, TRUE
+	setvar VAR_0x8004, TRUE
 	special PlayBardSong
 	delay 60
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_ThatHowYouWantedSongToGo, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_WriteLyrics
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_WriteLyrics
 	special SaveBardSongLyrics
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_IllSingThisSongForAWhile, MSGBOX_DEFAULT
 	release
@@ -64,17 +64,17 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineWritingLyrics::
 J_MauvilleCity_PokemonCenter_1F_EventScript_Hipster::
 	lock
 	faceplayer
-	setflag 0
+	setflag FLAG_UNLOCKED_TRENDY_SAYINGS
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_TeachWhatsHipAndHappening, MSGBOX_DEFAULT
 	special HasHipsterTaughtWord
-	goto_if_eq 32781, FALSE, J_MauvilleCity_PokemonCenter_1F_EventScript_TryTeachWord
+	goto_if_eq VAR_RESULT, FALSE, J_MauvilleCity_PokemonCenter_1F_EventScript_TryTeachWord
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_IAlreadyTaughtYou, MSGBOX_DEFAULT
 	release
 	end
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_TryTeachWord::
 	special HipsterTryTeachWord
-	goto_if_eq 32781, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_TeachWord
+	goto_if_eq VAR_RESULT, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_TeachWord
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_IveGotNothingNewToTeach, MSGBOX_DEFAULT
 	release
 	end
@@ -148,9 +148,9 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_Trader::
 	lock
 	faceplayer
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_WantToTradeDecor, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineTrade
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineTrade
 	special GetTraderTradedFlag
-	goto_if_eq 32781, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_AlreadyTraded
+	goto_if_eq VAR_RESULT, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_AlreadyTraded
 	message J_MauvilleCity_PokemonCenter_1F_Text_PickADecorItem
 	waitmessage
 	goto J_MauvilleCity_PokemonCenter_1F_EventScript_PickDecorToReceive
@@ -169,12 +169,12 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_AlreadyTraded::
 J_MauvilleCity_PokemonCenter_1F_EventScript_PickDecorToReceive::
 	special TraderMenuGetDecoration
 	waitstate
-	goto_if_eq 32772, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_CancelPickDecor
-	goto_if_eq 32772, 0xFFFF, J_MauvilleCity_PokemonCenter_1F_EventScript_InvalidDecor
+	goto_if_eq VAR_0x8004, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_CancelPickDecor
+	goto_if_eq VAR_0x8004, 0xFFFF, J_MauvilleCity_PokemonCenter_1F_EventScript_InvalidDecor
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_OnceBelongedToPlayerDoYouWantIt, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_PickDifferentDecor
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_PickDifferentDecor
 	special DoesPlayerHaveNoDecorations
-	goto_if_eq 32781, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_DontHaveAnyDecor
+	goto_if_eq VAR_RESULT, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_DontHaveAnyDecor
 	goto J_MauvilleCity_PokemonCenter_1F_EventScript_PickDecorToGive
 	end
 
@@ -204,12 +204,12 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_PickDecorToGive::
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_PickTheDecorToTrade, MSGBOX_DEFAULT
 	special TraderShowDecorationMenu
 	waitstate
-	goto_if_eq 32774, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_CancelGiveDecor
-	goto_if_eq 32774, 0xFFFF, J_MauvilleCity_PokemonCenter_1F_EventScript_DecorInUse
+	goto_if_eq VAR_0x8006, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_CancelGiveDecor
+	goto_if_eq VAR_0x8006, 0xFFFF, J_MauvilleCity_PokemonCenter_1F_EventScript_DecorInUse
 	special IsDecorationCategoryFull
-	goto_if_eq 32781, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_NoRoomForDecor
+	goto_if_eq VAR_RESULT, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_NoRoomForDecor
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_SoWellTradeTheseDecor, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_PickDecorToGive
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_PickDecorToGive
 	special TraderDoDecorationTrade
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_SendDecorToYourPC, MSGBOX_DEFAULT
 	release
@@ -788,25 +788,25 @@ J_MauvilleCity_PokemonCenter_1F_Text_HotSpringsStory::
 J_MauvilleCity_PokemonCenter_1F_EventScript_Storyteller::
 	lock
 	faceplayer
-	setvar 32776, 0
-	setvar 32777, 0
-	setvar 32778, 0
-	setvar 32779, 0
+	setvar VAR_0x8008, 0
+	setvar VAR_0x8009, 0
+	setvar VAR_0x800A, 0
+	setvar VAR_0x800B, 0
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_WillYouHearMyTale, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineStoryteller
-	specialvar 32781, StorytellerGetFreeStorySlot
-	goto_if_eq 32781, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_KnowNoTales
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineStoryteller
+	specialvar VAR_RESULT, StorytellerGetFreeStorySlot
+	goto_if_eq VAR_RESULT, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_KnowNoTales
 	message J_MauvilleCity_PokemonCenter_1F_Text_WhichTaleToTell
 	waitmessage
 	special StorytellerStoryListMenu
 	waitstate
-	goto_if_eq 32781, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_CancelStorySelection
-	setvar 32776, 1
+	goto_if_eq VAR_RESULT, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_CancelStorySelection
+	setvar VAR_0x8008, 1
 	special Script_StorytellerDisplayStory
 	waitmessage
 	waitbuttonpress
-	specialvar 32781, StorytellerUpdateStat
-	goto_if_eq 32781, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_AreThereOtherTales
+	specialvar VAR_RESULT, StorytellerUpdateStat
+	goto_if_eq VAR_RESULT, 0, J_MauvilleCity_PokemonCenter_1F_EventScript_AreThereOtherTales
 	goto J_MauvilleCity_PokemonCenter_1F_EventScript_TellPlayersTale
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_CancelStorySelection::
@@ -815,8 +815,8 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_CancelStorySelection::
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_AreThereOtherTales::
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_CouldThereBeOtherLegends, MSGBOX_DEFAULT
-	specialvar 32781, HasStorytellerAlreadyRecorded
-	goto_if_eq 32781, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_StorytellerEnd
+	specialvar VAR_RESULT, HasStorytellerAlreadyRecorded
+	goto_if_eq VAR_RESULT, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_StorytellerEnd
 	goto J_MauvilleCity_PokemonCenter_1F_EventScript_DoYouHaveAnyTales
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_KnowNoTales::
@@ -824,9 +824,9 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_KnowNoTales::
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_DoYouHaveAnyTales::
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_HaveYouAnyLegendaryTales, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineStoryteller
-	specialvar 32781, Script_StorytellerInitializeRandomStat
-	goto_if_eq 32781, 1, J_MauvilleCity_PokemonCenter_1F_EventScript_TellPlayersTale
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineStoryteller
+	specialvar VAR_RESULT, Script_StorytellerInitializeRandomStat
+	goto_if_eq VAR_RESULT, 1, J_MauvilleCity_PokemonCenter_1F_EventScript_TellPlayersTale
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_NotWorthyOfLegend, MSGBOX_DEFAULT
 	release
 	end
@@ -871,20 +871,20 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_Giddy::
 	lock
 	faceplayer
 	msgbox J_MauvilleCity_PokemonCenter_1F_Text_HearMyStory, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_MauvilleCity_PokemonCenter_1F_EventScript_TryTellTale
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineGiddy
+	goto_if_eq VAR_RESULT, YES, J_MauvilleCity_PokemonCenter_1F_EventScript_TryTellTale
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineGiddy
 	end
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_TryTellTale::
 	special GiddyShouldTellAnotherTale
-	goto_if_eq 32781, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_GiddyTellTale
-	goto_if_eq 32781, FALSE, J_MauvilleCity_PokemonCenter_1F_EventScript_ToldEnoughTales
+	goto_if_eq VAR_RESULT, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_GiddyTellTale
+	goto_if_eq VAR_RESULT, FALSE, J_MauvilleCity_PokemonCenter_1F_EventScript_ToldEnoughTales
 	end
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_TryTellNewTale::
 	special GiddyShouldTellAnotherTale
-	goto_if_eq 32781, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_GiddyStartNewTale
-	goto_if_eq 32781, FALSE, J_MauvilleCity_PokemonCenter_1F_EventScript_ToldEnoughTales
+	goto_if_eq VAR_RESULT, TRUE, J_MauvilleCity_PokemonCenter_1F_EventScript_GiddyStartNewTale
+	goto_if_eq VAR_RESULT, FALSE, J_MauvilleCity_PokemonCenter_1F_EventScript_ToldEnoughTales
 	end
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_GiddyStartNewTale::
@@ -897,8 +897,8 @@ J_MauvilleCity_PokemonCenter_1F_EventScript_GiddyTellTale::
 	special ShowFieldMessageStringVar4
 	waitmessage
 	yesnobox 20, 8
-	goto_if_eq 32781, YES, J_MauvilleCity_PokemonCenter_1F_EventScript_TryTellNewTale
-	goto_if_eq 32781, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_TryTellNewTale
+	goto_if_eq VAR_RESULT, YES, J_MauvilleCity_PokemonCenter_1F_EventScript_TryTellNewTale
+	goto_if_eq VAR_RESULT, NO, J_MauvilleCity_PokemonCenter_1F_EventScript_TryTellNewTale
 	end
 
 J_MauvilleCity_PokemonCenter_1F_EventScript_DeclineGiddy::

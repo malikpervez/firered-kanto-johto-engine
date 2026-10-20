@@ -1,32 +1,32 @@
 @ Johto (data/maps/NewBarkTown_PlayersHouse_1F_hns/scripts.inc), as built into the FireRed game.
 
 NewBarkTown_PlayersHouse_1F_hns_MapScripts::
-	map_script 3, NewBarkTown_PlayersHouse_1F_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_PlayersHouse_1F_OnTransition
 	.byte 0
 
 NewBarkTown_PlayersHouse_1F_OnTransition::
-	call_if_eq 20581, 1, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
-	call_if_eq 20581, 2, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
-	call_if_eq 20581, 3, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
+	call_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 1, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
+	call_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
+	call_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 3, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
 	end
 
 NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable::
-	setobjectxyperm 1, 8, 4
-	setobjectmovementtype 1, 0x9
+	setobjectxyperm LOCALID_MOM, 8, 4
+	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_LEFT
 
 
-	clearflag 8269
-	clearflag 8805
+	clearflag JOHTO_FLAG_HIDE_MOMS_FRIEND
+	clearflag JOHTO_FLAG_MOM_VISITED
 	return
 
 NewBarkTown_PlayersHouse_1F_EventScript_Mom::
 	lock
 	faceplayer
-	call_if_unset 8699, NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear
-	goto_if_set 8805, NewBarkTown_PlayersHouse_1F_EventScript_Mom_Regular
-	goto_if_set 8660, NewBarkTown_PlayersHouse_1F_MomEventScript_GoodLuck
+	call_if_unset JOHTO_FLAG_RECEIVED_POKENAV, NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear
+	goto_if_set JOHTO_FLAG_MOM_VISITED, NewBarkTown_PlayersHouse_1F_EventScript_Mom_Regular
+	goto_if_set JOHTO_FLAG_ADVENTURE_STARTED, NewBarkTown_PlayersHouse_1F_MomEventScript_GoodLuck
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomHurryUpElmIsWaiting, MSGBOX_DEFAULT
-	applymovement 1, NewBarkTown_PlayersHouse_1F_MovementFaceLeft
+	applymovement LOCALID_MOM, NewBarkTown_PlayersHouse_1F_MovementFaceLeft
 	waitmovement 0
 	release
 	end
@@ -35,7 +35,7 @@ NewBarkTown_PlayersHouse_1F_EventScript_MomsFriend::
 	lock
 	faceplayer
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomsFriend, MSGBOX_DEFAULT
-	applymovement 2, NewBarkTown_PlayersHouse_1F_MovementFaceRight
+	applymovement LOCALID_MOMS_FRIEND, NewBarkTown_PlayersHouse_1F_MovementFaceRight
 	waitmovement 0
 	release
 	end
@@ -43,21 +43,21 @@ NewBarkTown_PlayersHouse_1F_EventScript_MomsFriend::
 NewBarkTown_PlayersHouse_1F_MomEventScript_GoodLuck::
 	playbgm ((558 + 1) + 0x39), FALSE
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomLeaving, MSGBOX_DEFAULT
-	setflag 8805
-	clearflag 8271
-	setvar 20581, 5
+	setflag JOHTO_FLAG_MOM_VISITED
+	clearflag JOHTO_FLAG_HIDE_ROUTE_30_NPCS
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 5
 	fadedefaultbgm
 	release
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_Mom_Regular::
 	playbgm ((558 + 1) + 0x39), FALSE
-	specialvar 32781, IsPokecenterChallengeActivated
-	goto_if_eq 32781, TRUE, NewBarkTown_PlayersHouse_1F_EventScript_Mom_PokecenterChallenge
+	specialvar VAR_RESULT, IsPokecenterChallengeActivated
+	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_PlayersHouse_1F_EventScript_Mom_PokecenterChallenge
 	msgbox NewBarkTown_PlayersHouse_1F_Text_GuestRest, MSGBOX_DEFAULT
 	closemessage
 	call J_Common_EventScript_OutOfCenterPartyHeal
-	incrementgamestat 16
+	incrementgamestat GAME_STAT_RESTED_AT_HOME
 	call NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	fadedefaultbgm
 	release
@@ -73,14 +73,14 @@ NewBarkTown_PlayersHouse_1F_EventScript_Mom_PokecenterChallenge::
 NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu::
 	special Special_MomEnsureInitialized
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomAnythingElse, MSGBOX_DEFAULT
-	multichoice 0, 0, 173, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_MOM_MENU, FALSE
+	switch VAR_RESULT
 	case 0, NewBarkTown_PlayersHouse_1F_EventScript_CheckSavings
 	case 1, NewBarkTown_PlayersHouse_1F_EventScript_Deposit
 	case 2, NewBarkTown_PlayersHouse_1F_EventScript_Withdraw
 	case 3, NewBarkTown_PlayersHouse_1F_EventScript_ToggleSaving
 	case 4, NewBarkTown_PlayersHouse_1F_EventScript_ExitSavings
-	case 127, NewBarkTown_PlayersHouse_1F_EventScript_ExitSavings
+	case MULTI_B_PRESSED, NewBarkTown_PlayersHouse_1F_EventScript_ExitSavings
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_CheckSavings::
@@ -91,12 +91,12 @@ NewBarkTown_PlayersHouse_1F_EventScript_CheckSavings::
 
 NewBarkTown_PlayersHouse_1F_EventScript_Deposit::
 	checkmoney 1
-	compare 32781, FALSE
+	compare VAR_RESULT, FALSE
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_DepositFailed
 	closemessage
 	special Special_MomOpenDepositInput
 	waitstate
-	compare 32768, 0
+	compare VAR_0x8000, 0
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	msgbox NewBarkTown_PlayersHouse_1F_Text_DepositSuccess, MSGBOX_DEFAULT
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
@@ -109,12 +109,12 @@ NewBarkTown_PlayersHouse_1F_EventScript_DepositFailed::
 
 NewBarkTown_PlayersHouse_1F_EventScript_Withdraw::
 	special Special_MomGetBalance
-	compare 32781, 0
+	compare VAR_RESULT, 0
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_WithdrawFailed
 	closemessage
 	special Special_MomOpenWithdrawInput
 	waitstate
-	compare 32768, 0
+	compare VAR_0x8000, 0
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	msgbox NewBarkTown_PlayersHouse_1F_Text_WithdrawSuccess, MSGBOX_DEFAULT
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
@@ -127,10 +127,10 @@ NewBarkTown_PlayersHouse_1F_EventScript_WithdrawFailed::
 
 NewBarkTown_PlayersHouse_1F_EventScript_ToggleSaving::
 	special Special_MomIsSavingEnabled
-	compare 32781, TRUE
+	compare VAR_RESULT, TRUE
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_DisableSaving
 	msgbox NewBarkTown_PlayersHouse_1F_Text_EnableSaving, MSGBOX_YESNO
-	compare 32781, YES
+	compare VAR_RESULT, YES
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_ConfirmEnable
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	end
@@ -143,7 +143,7 @@ NewBarkTown_PlayersHouse_1F_EventScript_ConfirmEnable::
 
 NewBarkTown_PlayersHouse_1F_EventScript_DisableSaving::
 	msgbox NewBarkTown_PlayersHouse_1F_Text_DisableSaving, MSGBOX_YESNO
-	compare 32781, YES
+	compare VAR_RESULT, YES
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_ConfirmDisable
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	end
@@ -201,32 +201,32 @@ NewBarkTown_PlayersHouse_1F_Text_NoMoneyToWithdraw:
 
 NewBarkTown_PlayersHouse_1F_EventScript_MomsIntroTrigger1::
 	lock
-	applymovement 255, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement1
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement1
 	waitmovement 0
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_MomsIntroTrigger2::
 	lock
-	applymovement 255, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement2
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement2
 	waitmovement 0
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro::
 	playbgm ((558 + 1) + 0x39), FALSE
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_MOM, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	applymovement 1, NewBarkTown_PlayersHouse_1F_MomMovement_1
+	waitmovement LOCALID_MOM
+	applymovement LOCALID_MOM, NewBarkTown_PlayersHouse_1F_MomMovement_1
 	waitmovement 0
 	msgbox NewBarkTown_PlayersHouse_1F_Text_ElmsLookingForYou, MSGBOX_DEFAULT
 	call NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear
-	applymovement 1, NewBarkTown_PlayersHouse_1F_MomMovement_2
+	applymovement LOCALID_MOM, NewBarkTown_PlayersHouse_1F_MomMovement_2
 	waitmovement 0
-	setflag 8268
-	setflag 10480
+	setflag JOHTO_FLAG_HIDE_LAB_POLICEMAN
+	setflag JOHTO_FLAG_VISITED_NEWBARK_TOWN
 
 
 
@@ -235,14 +235,14 @@ NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro::
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear::
-	playfanfare 460
+	playfanfare MUS_REGISTER_MATCH_CALL
 	message NewBarkTown_PlayersHouse_1F_Text_ObtainedPokeGear
 	waitfanfare
-	setflag 10386
-	setflag 8691
-	setflag 8699
-	setflag 8774
-	setflag 8777
+	setflag JOHTO_FLAG_SYS_POKENAV_GET
+	setflag JOHTO_FLAG_HAS_MATCH_CALL
+	setflag JOHTO_FLAG_RECEIVED_POKENAV
+	setflag JOHTO_FLAG_ADDED_MATCH_CALL_TO_POKENAV
+	setflag JOHTO_FLAG_REGISTER_RIVAL_POKENAV
 	msgbox NewBarkTown_PlayersHouse_1F_Text_ExplainPokeGear, MSGBOX_DEFAULT
 	closemessage
 	delay 30

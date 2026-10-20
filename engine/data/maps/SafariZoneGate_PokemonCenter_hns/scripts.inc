@@ -1,11 +1,11 @@
 @ Johto (data/maps/SafariZoneGate_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 SafariZoneGate_PokemonCenter_hns_MapScripts::
-	map_script 3, SafariZoneGate_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, SafariZoneGate_PokemonCenter_OnTransition
 	.byte 0
 
 SafariZoneGate_PokemonCenter_OnTransition::
-	setrespawn 141
+	setrespawn JOHTO_HEAL_LOCATION_SAFARI_ZONE_GATE_HNS
 	end
 
 SafariZoneGate_PokemonCenter_EventScript_NPC1::

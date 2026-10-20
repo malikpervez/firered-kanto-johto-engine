@@ -8,11 +8,11 @@ OlivineCity_Cafe_EventScript_Jasmine::
 	faceplayer
 	msgbox OlivineCity_Cafe_Text_Jasmine, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
-	setflag 8329
-	removeobject 4
-	fadescreenswapbuffers 0
-	clearflag 8395
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_CAFE_JASMINE
+	removeobject LOCALID_CAFE_JASMINE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag JOHTO_FLAG_HIDE_DOJO_JASMINE
 	release
 	end
 
@@ -30,10 +30,10 @@ OlivineCity_Cafe_Text_Jasmine:
 OlivineCity_EventScript_SailorA::
 	lock
 	faceplayer
-	goto_if_set 8696, OlivineCity_EventScript_SailorA2
+	goto_if_set JOHTO_FLAG_RECEIVED_HM_STRENGTH, OlivineCity_EventScript_SailorA2
 	msgbox OlivineCity_Text_CafeSailorStrength, MSGBOX_DEFAULT
-	giveitem 685
-	setflag 8696
+	giveitem ITEM_HM_STRENGTH
+	setflag JOHTO_FLAG_RECEIVED_HM_STRENGTH
 
 OlivineCity_EventScript_SailorA2::
 	msgbox OlivineCity_Text_CafeSailorGotStrength, MSGBOX_DEFAULT

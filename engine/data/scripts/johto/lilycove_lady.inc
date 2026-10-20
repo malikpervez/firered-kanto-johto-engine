@@ -2,20 +2,20 @@
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_LilycoveLady::
 	special Script_GetLilycoveLadyId
-	switch 32781
-	case 0, J_LilycoveCity_PokemonCenter_1F_EventScript_QuizLady
-	case 1, J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLady
-	case 2, J_LilycoveCity_PokemonCenter_1F_EventScript_ContestLady
+	switch VAR_RESULT
+	case LILYCOVE_LADY_QUIZ, J_LilycoveCity_PokemonCenter_1F_EventScript_QuizLady
+	case LILYCOVE_LADY_FAVOR, J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLady
+	case LILYCOVE_LADY_CONTEST, J_LilycoveCity_PokemonCenter_1F_EventScript_ContestLady
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLady::
 	lock
 	faceplayer
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_ImTheFavorLady, MSGBOX_DEFAULT
-	specialvar 32781, GetFavorLadyState
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyReady
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyCompleted
-	goto_if_eq 32781, 2, J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyPrize
+	specialvar VAR_RESULT, GetFavorLadyState
+	goto_if_eq VAR_RESULT, LILYCOVE_LADY_STATE_READY, J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyReady
+	goto_if_eq VAR_RESULT, LILYCOVE_LADY_STATE_COMPLETED, J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyCompleted
+	goto_if_eq VAR_RESULT, LILYCOVE_LADY_STATE_PRIZE, J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyPrize
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyCompleted::
@@ -26,17 +26,17 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyCompleted::
 J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyReady::
 	special BufferFavorLadyRequest
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_ObsessedWithThing, MSGBOX_DEFAULT
-	specialvar 32781, HasAnotherPlayerGivenFavorLadyItem
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_RequestItem
-	goto_if_eq 32781, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_TellAboutPlayersItem
+	specialvar VAR_RESULT, HasAnotherPlayerGivenFavorLadyItem
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_RequestItem
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_TellAboutPlayersItem
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_TellAboutPlayersItem::
 	special BufferFavorLadyItemName
 	special BufferFavorLadyPlayerName
-	specialvar 32781, DidFavorLadyLikeItem
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_PlayerGaveBadThing
-	goto_if_eq 32781, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_PlayerGaveGreatThing
+	specialvar VAR_RESULT, DidFavorLadyLikeItem
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_PlayerGaveBadThing
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_PlayerGaveGreatThing
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_PlayerGaveBadThing::
@@ -51,8 +51,8 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_PlayerGaveGreatThing::
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_RequestItem::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_WillYouShareThing, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineFavor
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_AcceptFavor
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineFavor
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_AcceptFavor
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineFavor::
@@ -66,24 +66,24 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_AcceptFavor::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_ChooseFavorItem::
-	fadescreen 1
-	setvar 32781, 0
+	fadescreen FADE_TO_BLACK
+	setvar VAR_RESULT, 0
 	special Script_FavorLadyOpenBagMenu
 	waitstate
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitChooseFavorItem
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_GiveFavorItem
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitChooseFavorItem
+	goto_if_eq VAR_RESULT, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_GiveFavorItem
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitChooseFavorItem::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_NotWillingToShare, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineFavor
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_ChooseFavorItem
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineFavor
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_ChooseFavorItem
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_GiveFavorItem::
-	specialvar 32781, Script_DoesFavorLadyLikeItem
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_DidntLikeFavorItem
-	goto_if_eq 32781, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_CheckLovedItem
+	specialvar VAR_RESULT, Script_DoesFavorLadyLikeItem
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_DidntLikeFavorItem
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_CheckLovedItem
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_DidntLikeFavorItem::
@@ -93,9 +93,9 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_DidntLikeFavorItem::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_CheckLovedItem::
-	specialvar 32781, IsFavorLadyThresholdMet
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_LikedFavorItem
-	goto_if_eq 32781, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_LovedFavorItem
+	specialvar VAR_RESULT, IsFavorLadyThresholdMet
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_LikedFavorItem
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_LovedFavorItem
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_LikedFavorItem::
@@ -111,12 +111,12 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_LovedFavorItem::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_FavorLadyPrize::
-	setvar 32772, 0
-	specialvar 32772, FavorLadyGetPrize
+	setvar VAR_0x8004, 0
+	specialvar VAR_0x8004, FavorLadyGetPrize
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_IllGiveYouThisInReturn, MSGBOX_DEFAULT
-	giveitem 32772
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_NoRoomForFavorPrize
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_ReceivedFavorPrize
+	giveitem VAR_0x8004
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_NoRoomForFavorPrize
+	goto_if_eq VAR_RESULT, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_ReceivedFavorPrize
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_NoRoomForFavorPrize::
@@ -133,23 +133,23 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_QuizLady::
 	lock
 	faceplayer
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_ImTheQuizLady, MSGBOX_DEFAULT
-	specialvar 32781, GetQuizLadyState
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_HasQuiz
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_CheckMadeQuiz
-	goto_if_eq 32781, 2, J_LilycoveCity_PokemonCenter_1F_EventScript_ReadyGivePrize
+	specialvar VAR_RESULT, GetQuizLadyState
+	goto_if_eq VAR_RESULT, LILYCOVE_LADY_STATE_READY, J_LilycoveCity_PokemonCenter_1F_EventScript_HasQuiz
+	goto_if_eq VAR_RESULT, LILYCOVE_LADY_STATE_COMPLETED, J_LilycoveCity_PokemonCenter_1F_EventScript_CheckMadeQuiz
+	goto_if_eq VAR_RESULT, LILYCOVE_LADY_STATE_PRIZE, J_LilycoveCity_PokemonCenter_1F_EventScript_ReadyGivePrize
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_HasQuiz::
-	specialvar 32781, GetQuizAuthor
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_WaitingToTakeYourQuiz
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_PlayerQuizReady
-	goto_if_eq 32781, 2, J_LilycoveCity_PokemonCenter_1F_EventScript_LadyQuizReady
+	specialvar VAR_RESULT, GetQuizAuthor
+	goto_if_eq VAR_RESULT, QUIZ_AUTHOR_PLAYER, J_LilycoveCity_PokemonCenter_1F_EventScript_WaitingToTakeYourQuiz
+	goto_if_eq VAR_RESULT, QUIZ_AUTHOR_OTHER_PLAYER, J_LilycoveCity_PokemonCenter_1F_EventScript_PlayerQuizReady
+	goto_if_eq VAR_RESULT, QUIZ_AUTHOR_LADY, J_LilycoveCity_PokemonCenter_1F_EventScript_LadyQuizReady
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_CheckMadeQuiz::
-	specialvar 32781, IsQuizLadyWaitingForChallenger
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_AskMakeQuiz
-	goto_if_eq 32781, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_WaitingToTakeYourQuiz
+	specialvar VAR_RESULT, IsQuizLadyWaitingForChallenger
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_AskMakeQuiz
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_WaitingToTakeYourQuiz
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_WaitingToTakeYourQuiz::
@@ -168,10 +168,10 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_LadyQuizReady::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_AskTakeQuiz::
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_TakeQuizChallenge, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_TakeQuiz
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineQuiz
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_TakeQuiz
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineQuiz
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineQuiz::
@@ -181,12 +181,12 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineQuiz::
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_TakeQuiz::
 	special ClearQuizLadyPlayerAnswer
-	goto_if_eq 32772, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_ShowQuestion
-	goto_if_eq 32772, 15, J_LilycoveCity_PokemonCenter_1F_EventScript_GetAnswer
+	goto_if_eq VAR_0x8004, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_ShowQuestion
+	goto_if_eq VAR_0x8004, EASY_CHAT_TYPE_QUIZ_ANSWER, J_LilycoveCity_PokemonCenter_1F_EventScript_GetAnswer
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_CheckQuizTakingState::
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitQuiz
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_SubmitQuizResponse
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitQuiz
+	goto_if_eq VAR_RESULT, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_SubmitQuizResponse
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_ShowQuestion::
@@ -203,8 +203,8 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_GetAnswer::
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitQuiz::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_YoureGoingToQuit, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_QuitTakingQuiz
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_TakeQuiz
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_QuitTakingQuiz
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_TakeQuiz
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_QuitTakingQuiz::
@@ -215,15 +215,15 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_QuitTakingQuiz::
 J_LilycoveCity_PokemonCenter_1F_EventScript_SubmitQuizResponse::
 	special SetQuizLadyState_Complete
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_WaitForAnswer, MSGBOX_DEFAULT
-	specialvar 32781, IsQuizAnswerCorrect
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_IncorrectResponse
-	goto_if_eq 32781, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_CorrectResponse
+	specialvar VAR_RESULT, IsQuizAnswerCorrect
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_IncorrectResponse
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_CorrectResponse
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_CorrectResponse::
-	playse 31
+	playse SE_SUCCESS
 	delay 10
-	playse 31
+	playse SE_SUCCESS
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_YouGotItRight, MSGBOX_DEFAULT
 	goto J_LilycoveCity_PokemonCenter_1F_EventScript_ReadyGivePrize
 	end
@@ -231,18 +231,18 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_CorrectResponse::
 J_LilycoveCity_PokemonCenter_1F_EventScript_IncorrectResponse::
 	special BufferQuizCorrectAnswer
 	special BufferQuizPrizeName
-	playse 32
+	playse SE_FAILURE
 	delay 10
-	playse 32
+	playse SE_FAILURE
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_WrongTheCorrectAnswerIs, MSGBOX_DEFAULT
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_IGetToKeepPrize, MSGBOX_DEFAULT
 	goto J_LilycoveCity_PokemonCenter_1F_EventScript_AskMakeQuiz
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_ReadyGivePrize::
-	specialvar 32781, BufferQuizAuthorNameAndCheckIfLady
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_GivePrize1
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_GivePrize0
+	specialvar VAR_RESULT, BufferQuizAuthorNameAndCheckIfLady
+	goto_if_eq VAR_RESULT, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_GivePrize1
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_GivePrize0
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_GivePrize1::
@@ -256,11 +256,11 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_GivePrize0::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_GivePrize::
-	setvar 32773, 0
+	setvar VAR_0x8005, 0
 	special BufferQuizPrizeItem
 	special SetQuizLadyState_Complete
-	giveitem 32773
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_NoSpaceForQuizPrize
+	giveitem VAR_0x8005
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_NoSpaceForQuizPrize
 	goto J_LilycoveCity_PokemonCenter_1F_EventScript_AskMakeQuiz
 	end
 
@@ -272,8 +272,8 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_NoSpaceForQuizPrize::
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_AskMakeQuiz::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_MakeYourOwnQuiz, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_MakeQuiz
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineMakeQuiz
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_MakeQuiz
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineMakeQuiz
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineMakeQuiz::
@@ -286,38 +286,38 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_MakeQuiz::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_PickYourPrize, MSGBOX_DEFAULT
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_PickPrize::
-	fadescreen 1
-	setvar 32781, 0
+	fadescreen FADE_TO_BLACK
+	setvar VAR_RESULT, 0
 	special Script_QuizLadyOpenBagMenu
 	waitstate
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitChoosingPrize
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_WriteQuiz
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitChoosingPrize
+	goto_if_eq VAR_RESULT, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_WriteQuiz
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitChoosingPrize::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_QuitChoosingPrize, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineMakeQuiz
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_PickPrize
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineMakeQuiz
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_PickPrize
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_WriteQuiz::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_WriteYourQuiz, MSGBOX_DEFAULT
 	special ClearQuizLadyQuestionAndAnswer
 	special ClearQuizLadyPlayerAnswer
-	setvar 32772, 16
+	setvar VAR_0x8004, EASY_CHAT_TYPE_QUIZ_QUESTION
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_WriteQuizQuestion::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special QuizLadySetCustomQuestion
 	waitstate
-	goto_if_eq 32781, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitWritingQuizQuestion
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitWritingQuizQuestion
 	goto J_LilycoveCity_PokemonCenter_1F_EventScript_FinishMakingQuiz
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitWritingQuizQuestion::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_QuitWritingQuizQuestion, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineMakeQuiz
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_WriteQuizQuestion
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineMakeQuiz
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_WriteQuizQuestion
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_FinishMakingQuiz::
@@ -332,15 +332,15 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_ContestLady::
 	lock
 	faceplayer
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_ImTheContestLady, MSGBOX_DEFAULT
-	specialvar 32781, HasPlayerGivenContestLadyPokeblock
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_NotGivenPokeblock
-	goto_if_eq 32781, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_GivenPokeblock
+	specialvar VAR_RESULT, HasPlayerGivenContestLadyPokeblock
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_NotGivenPokeblock
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_GivenPokeblock
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_NotGivenPokeblock::
-	specialvar 32781, ShouldContestLadyShowGoOnAir
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_AskForPokeblock
-	goto_if_eq 32781, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_GivenPokeblock
+	specialvar VAR_RESULT, ShouldContestLadyShowGoOnAir
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_AskForPokeblock
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_PokemonCenter_1F_EventScript_GivenPokeblock
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_GivenPokeblock::
@@ -352,10 +352,10 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_AskForPokeblock::
 	special Script_BufferContestLadyCategoryAndMonName
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_MyFriendDisplaysQuality, MSGBOX_DEFAULT
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_NoPokeblockCase
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_PokemonCenter_1F_EventScript_NoPokeblockCase
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_AskingForOnePokeblock, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineGivePokeblock
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_ChoosePokeblock
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineGivePokeblock
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_ChoosePokeblock
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineGivePokeblock::
@@ -364,17 +364,17 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineGivePokeblock::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_ChoosePokeblock::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special OpenPokeblockCaseForContestLady
 	waitstate
-	goto_if_eq 32781, 0xFFFF, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitGivingPokeblock
-	goto_if_ne 32781, 0xFFFF, J_LilycoveCity_PokemonCenter_1F_EventScript_GivePokeblock
+	goto_if_eq VAR_RESULT, 0xFFFF, J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitGivingPokeblock
+	goto_if_ne VAR_RESULT, 0xFFFF, J_LilycoveCity_PokemonCenter_1F_EventScript_GivePokeblock
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_AskQuitGivingPokeblock::
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_ICantHaveOnePokeblock, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineGivePokeblock
-	goto_if_eq 32781, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_ChoosePokeblock
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_PokemonCenter_1F_EventScript_DeclineGivePokeblock
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_PokemonCenter_1F_EventScript_ChoosePokeblock
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_GivePokeblock::
@@ -385,31 +385,31 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_GivePokeblock::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_FeedPokeblock::
-	applymovement 4, J_LilycoveCity_PokemonCenter_1F_Movement_LadyFaceMon
+	applymovement LOCALID_LILYCOVE_LADY, J_LilycoveCity_PokemonCenter_1F_Movement_LadyFaceMon
 	waitmovement 0
 	delay 60
-	applymovement 5, J_LilycoveCity_PokemonCenter_1F_Movement_MonFaceLady
+	applymovement LOCALID_LILYCOVE_LADYS_MON, J_LilycoveCity_PokemonCenter_1F_Movement_MonFaceLady
 	waitmovement 0
 	delay 60
 	waitse
-	playmoncry 32773, 0
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
 	delay 120
 	waitmoncry
-	goto_if_eq 32772, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_MonEnjoyPokeblock
+	goto_if_eq VAR_0x8004, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_MonEnjoyPokeblock
 	goto J_LilycoveCity_PokemonCenter_1F_EventScript_FinishFeedPokeblock
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_MonEnjoyPokeblock::
-	applymovement 5, J_LilycoveCity_PokemonCenter_1F_Movement_MonJump
+	applymovement LOCALID_LILYCOVE_LADYS_MON, J_LilycoveCity_PokemonCenter_1F_Movement_MonJump
 	waitmovement 0
 	delay 60
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_FinishFeedPokeblock::
-	applymovement 4, J_LilycoveCity_PokemonCenter_1F_Movement_LadyFacePlayer
+	applymovement LOCALID_LILYCOVE_LADY, J_LilycoveCity_PokemonCenter_1F_Movement_LadyFacePlayer
 	waitmovement 0
 	delay 60
-	goto_if_eq 32772, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_MonDislikedPokeblock
-	goto_if_eq 32772, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_MonLikedPokeblock
+	goto_if_eq VAR_0x8004, 0, J_LilycoveCity_PokemonCenter_1F_EventScript_MonDislikedPokeblock
+	goto_if_eq VAR_0x8004, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_MonLikedPokeblock
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_MonDislikedPokeblock::
@@ -424,8 +424,8 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_MonLikedPokeblock::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_CheckAirContestLadyShow::
-	specialvar 32781, ShouldContestLadyShowGoOnAir
-	goto_if_eq 32781, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_AirContestLadyShow
+	specialvar VAR_RESULT, ShouldContestLadyShowGoOnAir
+	goto_if_eq VAR_RESULT, 1, J_LilycoveCity_PokemonCenter_1F_EventScript_AirContestLadyShow
 	release
 	end
 
@@ -466,21 +466,21 @@ J_LilycoveCity_PokemonCenter_1F_Movement_MonJump:
 	step_end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_ContestLadyMon::
-	specialvar 32781, GetContestLadyCategory
+	specialvar VAR_RESULT, GetContestLadyCategory
 	special Script_BufferContestLadyCategoryAndMonName
 	special GetContestLadyMonSpecies
-	goto_if_eq 32781, CONTEST_CATEGORY_COOL, J_LilycoveCity_PokemonCenter_1F_EventScript_Zigzagoon
-	goto_if_eq 32781, CONTEST_CATEGORY_BEAUTY, J_LilycoveCity_PokemonCenter_1F_EventScript_Skitty
-	goto_if_eq 32781, CONTEST_CATEGORY_CUTE, J_LilycoveCity_PokemonCenter_1F_EventScript_Poochyena
-	goto_if_eq 32781, CONTEST_CATEGORY_SMART, J_LilycoveCity_PokemonCenter_1F_EventScript_Kecleon
-	goto_if_eq 32781, CONTEST_CATEGORY_TOUGH, J_LilycoveCity_PokemonCenter_1F_EventScript_Pikachu
+	goto_if_eq VAR_RESULT, CONTEST_CATEGORY_COOL, J_LilycoveCity_PokemonCenter_1F_EventScript_Zigzagoon
+	goto_if_eq VAR_RESULT, CONTEST_CATEGORY_BEAUTY, J_LilycoveCity_PokemonCenter_1F_EventScript_Skitty
+	goto_if_eq VAR_RESULT, CONTEST_CATEGORY_CUTE, J_LilycoveCity_PokemonCenter_1F_EventScript_Poochyena
+	goto_if_eq VAR_RESULT, CONTEST_CATEGORY_SMART, J_LilycoveCity_PokemonCenter_1F_EventScript_Kecleon
+	goto_if_eq VAR_RESULT, CONTEST_CATEGORY_TOUGH, J_LilycoveCity_PokemonCenter_1F_EventScript_Pikachu
 	end
 
 J_LilycoveCity_PokemonCenter_1F_EventScript_Zigzagoon::
 	lock
 	faceplayer
 	waitse
-	playmoncry 32773, 0
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_Zigzagoon, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -490,7 +490,7 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_Skitty::
 	lock
 	faceplayer
 	waitse
-	playmoncry 32773, 0
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_Skitty, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -500,7 +500,7 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_Poochyena::
 	lock
 	faceplayer
 	waitse
-	playmoncry 32773, 0
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_Poochyena, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -510,7 +510,7 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_Kecleon::
 	lock
 	faceplayer
 	waitse
-	playmoncry 32773, 0
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_Kecleon, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -520,7 +520,7 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_Pikachu::
 	lock
 	faceplayer
 	waitse
-	playmoncry 32773, 0
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
 	msgbox J_LilycoveCity_PokemonCenter_1F_Text_Pikachu, MSGBOX_DEFAULT
 	waitmoncry
 	release

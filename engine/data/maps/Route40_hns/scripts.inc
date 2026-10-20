@@ -1,20 +1,20 @@
 @ Johto (data/maps/Route40_hns/scripts.inc), as built into the FireRed game.
 
 Route40_hns_MapScripts::
-	map_script 3, Route40_MapScript_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, Route40_MapScript_OnTransition
 	.byte 0
 
 Route40_MapScript_OnTransition::
 	callnative SetTimeBasedEncounters
-	goto_if_ge 20583, 5, Route40_MapScript_ClearWeather
+	goto_if_ge JOHTO_VAR_OLIVINE_CITY_STATE, 5, Route40_MapScript_ClearWeather
 	end
 
 Route40_MapScript_ClearWeather::
-	setweather 0
+	setweather WEATHER_NONE
 	end
 
 Route40_EventScript_Simon::
-	trainerbattle_single 1217, Route40_Text_SwimmermSimonSeen, Route40_Text_SwimmermSimonBeaten
+	trainerbattle_single TRAINER_JOHTO_SIMON_HNS, Route40_Text_SwimmermSimonSeen, Route40_Text_SwimmermSimonBeaten
 	msgbox Route40_Text_SwimmermSimonAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -31,7 +31,7 @@ Route40_Text_SwimmermSimonAfter:
 	.string "distanc{SE_M_REVERSAL}awa{SE_M_YAWN}fro{SE_M_MILK_DRINK}here.$"
 
 Route40_EventScript_Randall::
-	trainerbattle_single 1218, Route40_Text_SwimmermRandallSeen, Route40_Text_SwimmermRandallBeaten
+	trainerbattle_single TRAINER_JOHTO_RANDALL_HNS, Route40_Text_SwimmermRandallSeen, Route40_Text_SwimmermRandallBeaten
 	msgbox Route40_Text_SwimmermRandallAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -48,7 +48,7 @@ Route40_Text_SwimmermRandallAfter:
 	.string "entir{SE_M_REVERSAL}body{SE_M_PERISH_SONG}It'{SE_M_GRASSWHISTLE}healthy.$"
 
 Route40_EventScript_Elaine::
-	trainerbattle_single 1237, Route40_Text_SwimmerfElaineSeen, Route40_Text_SwimmerfElaineBeaten
+	trainerbattle_single TRAINER_JOHTO_ELAINE_HNS, Route40_Text_SwimmerfElaineSeen, Route40_Text_SwimmerfElaineBeaten
 	msgbox Route40_Text_SwimmerfElaineAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -65,7 +65,7 @@ Route40_Text_SwimmerfElaineAfter:
 	.string "tha{SE_M_ATTRACT}you{SE_M_PERISH_SONG}Yeah!$"
 
 Route40_EventScript_Paula::
-	trainerbattle_single 1238, Route40_Text_SwimmerfPaulaSeen, Route40_Text_SwimmerfPaulaBeaten
+	trainerbattle_single TRAINER_JOHTO_PAULA_HNS, Route40_Text_SwimmerfPaulaSeen, Route40_Text_SwimmerfPaulaBeaten
 	msgbox Route40_Text_SwimmerfPaulaAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -157,11 +157,11 @@ Route40_Text_MonicaNope:
 Rotue40_EventScript_Monica::
 	lock
 	faceplayer
-	goto_if_set 8734, Rotue40_EventScript_MonicaCompleted
+	goto_if_set JOHTO_FLAG_GOT_SHARP_BEAK, Rotue40_EventScript_MonicaCompleted
 	msgbox Route40_Text_Monica, MSGBOX_DEFAULT
 	closemessage
-	multichoice 20, 0, 159, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
+	switch VAR_RESULT
 	case 0, Rotue40_EventScript_MonicaNope
 	case 1, Rotue40_EventScript_MonicaYes
 	case 2, Rotue40_EventScript_MonicaNope
@@ -170,7 +170,7 @@ Rotue40_EventScript_Monica::
 	case 5, Rotue40_EventScript_MonicaNope
 	case 6, Rotue40_EventScript_MonicaNope
 	case 7 Rotue40_EventScript_MonicaCancel
-	case 127, Rotue40_EventScript_MonicaCancel
+	case MULTI_B_PRESSED, Rotue40_EventScript_MonicaCancel
 	closemessage
 	release
 	end
@@ -178,8 +178,8 @@ Rotue40_EventScript_Monica::
 Rotue40_EventScript_MonicaYes::
 	msgbox Route40_Text_MonicaGivesGift, MSGBOX_DEFAULT
 	giveitem ITEM_SHARP_BEAK
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 8734
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_GOT_SHARP_BEAK
 	msgbox Route40_Text_MonicaGaveGift, MSGBOX_DEFAULT
 	closemessage
 	release

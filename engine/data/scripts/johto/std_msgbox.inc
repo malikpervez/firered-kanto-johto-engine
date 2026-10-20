@@ -10,13 +10,13 @@ J_Std_MsgboxNPC:
 	return
 
 J_Std_MsgboxSign:
-	setflag 16389
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	lockall
 	message NULL
 	waitmessage
 	waitbuttonpress
 	releaseall
-	clearflag 16389
+	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
 	return
 
 J_Std_MsgboxDefault:
@@ -32,23 +32,23 @@ J_Std_MsgboxYesNo:
 	return
 
 J_Std_ReceivedItem::
-	textcolor 3
-	call_if_eq 32770, 367, J_EventScript_ReceivedItemFanfare1
-	call_if_eq 32770, 530, J_EventScript_ReceivedItemFanfare2
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	call_if_eq VAR_0x8002, MUS_LEVEL_UP, J_EventScript_ReceivedItemFanfare1
+	call_if_eq VAR_0x8002, MUS_RG_OBTAIN_KEY_ITEM, J_EventScript_ReceivedItemFanfare2
 	message 0x0
 	waitmessage
 	waitfanfare
-	call_if_eq 32770, 367, J_EventScript_ReceivedItemWaitFanfare
-	putitemaway 32768, 32769
+	call_if_eq VAR_0x8002, MUS_LEVEL_UP, J_EventScript_ReceivedItemWaitFanfare
+	putitemaway VAR_0x8000, VAR_0x8001
 	call J_EventScript_RestorePrevTextColor
 	return
 
 J_EventScript_ReceivedItemFanfare1::
-	playfanfare 367
+	playfanfare MUS_LEVEL_UP
 	return
 
 J_EventScript_ReceivedItemFanfare2::
-	playfanfare 530
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	return
 
 J_EventScript_ReceivedItemWaitFanfare::
@@ -57,7 +57,7 @@ J_EventScript_ReceivedItemWaitFanfare::
 
 J_Std_MsgboxGetPoints:
 	message NULL
-	playfanfare 459
+	playfanfare MUS_OBTAIN_B_POINTS
 	waitfanfare
 	waitmessage
 	return

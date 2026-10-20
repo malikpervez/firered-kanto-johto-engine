@@ -88,7 +88,7 @@ NewSinjoh_Cafe_Text_Gentleman:
 NewSinjoh_EventScript_Scyther::
 	lock
 	faceplayer
-	playmoncry 123, 0
+	playmoncry SPECIES_SCYTHER, 0
 	msgbox NewSinjoh_Text_Scyther, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage

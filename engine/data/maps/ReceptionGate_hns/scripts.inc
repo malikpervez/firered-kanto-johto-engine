@@ -8,11 +8,11 @@ ReceptionGate_EventScript_Janine::
 	faceplayer
 	msgbox ReceptionGate_Text_Janine, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
-	setflag 8409
-	removeobject 4
-	fadescreenswapbuffers 0
-	clearflag 8394
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_ROUTE22_JANINE
+	removeobject LOCALID_INDIGOJUNCTION_JANINE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag JOHTO_FLAG_HIDE_DOJO_JANINE
 	release
 	end
 
@@ -31,23 +31,23 @@ ReceptionGate_EventScript_Officer::
 
 ReceptionGate_Trigger::
 	lock
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_INDIGOJUNCTION_POLICEMAN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	goto_if_lt 20562, 8, ReceptionGate_EventScript_Kimono
+	waitmovement LOCALID_INDIGOJUNCTION_POLICEMAN
+	goto_if_lt JOHTO_VAR_ECRUTEAK_CITY_THEATER, 8, ReceptionGate_EventScript_Kimono
 	msgbox VictoryRoadGate_Text_Officer, MSGBOX_DEFAULT
-	goto_if_unset 10375, ReceptionGate_EventScript_NotEnough
+	goto_if_unset JOHTO_FLAG_BADGE08_GET, ReceptionGate_EventScript_NotEnough
 	msgbox VictoryRoadGate_Text_EightBadges, MSGBOX_DEFAULT
 	closemessage
-	setvar 20594, 2
+	setvar JOHTO_VAR_ROUTE27_STATE, 2
 	release
 	end
 
 ReceptionGate_EventScript_Kimono::
 	msgbox VictoryRoadGate_Text_Kimono, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
 	release
 	end
@@ -55,7 +55,7 @@ ReceptionGate_EventScript_Kimono::
 ReceptionGate_EventScript_NotEnough::
 	msgbox VictoryRoadGate_Text_NotEnoughBadges, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
 	release
 	end

@@ -1,13 +1,13 @@
 @ Johto (data/maps/MtSilver_Outside_hns/scripts.inc), as built into the FireRed game.
 
 MtSilver_Outside_hns_MapScripts::
-	map_script 3, MtSilver_Outside_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_Outside_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 MtSilver_Outside_OnTransition:
 	callnative SetTimeBasedEncounters
-	setflag 10492
+	setflag JOHTO_FLAG_VISITED_MT_SILVER
 	end
 
 MtSilver_Outside_EventScript_Sign::

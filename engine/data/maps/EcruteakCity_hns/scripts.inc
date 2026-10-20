@@ -1,8 +1,8 @@
 @ Johto (data/maps/EcruteakCity_hns/scripts.inc), as built into the FireRed game.
 
 EcruteakCity_hns_MapScripts::
-	map_script 3, EcruteakCity_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, EcruteakCity_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 EcruteakCity_OnTransition::
@@ -12,54 +12,54 @@ EcruteakCity_OnTransition::
 	end
 
 EcruteakCity_Test_Lugia::
-	setvar 20577, 1
+	setvar JOHTO_VAR_LUGIA_OR_HOOH, 1
 	end
 
 EcruteakCity_Test_League::
-	setvar 20558, 4
-	setvar 20559, 4
+	setvar JOHTO_VAR_COMPLETED_HO_OH, 4
+	setvar JOHTO_VAR_COMPLETED_LUGIA, 4
 	end
 
 EcruteakCity_EventScript_Trigger::
 
-	clearflag 8664
-	clearflag 8661
-	clearflag 8308
-	clearflag 8759
-	clearflag 8764
-	clearflag 8760
-	clearflag 8765
-	clearflag 8313
-	clearflag 8316
-	clearflag 8238
-	clearflag 8315
-	clearflag 8309
-	clearflag 8766
-	clearflag 8767
-	clearflag 8718
-	clearflag 8244
-	clearflag 8709
-	clearflag 8665
-	clearflag 8775
-	clearflag 8311
-	clearflag 8312
-	clearflag 8317
-	clearflag 8245
-	clearflag 8254
-	clearflag 8253
+	clearflag JOHTO_FLAG_RELEASED_BEASTS
+	clearflag JOHTO_FLAG_AMPHAROS_HEALED
+	clearflag JOHTO_FLAG_HIDE_ECRUTEAK_BILL
+	clearflag JOHTO_FLAG_DEFEATED_HO_OH
+	clearflag JOHTO_FLAG_CAUGHT_HO_OH
+	clearflag JOHTO_FLAG_DEFEATED_LUGIA
+	clearflag JOHTO_FLAG_CAUGHT_LUGIA
+	clearflag JOHTO_FLAG_HIDE_ECRUTEAK_ROCKET
+	clearflag JOHTO_FLAG_HIDE_BURNED_TOWER_NPCS
+	clearflag JOHTO_FLAG_HIDE_BURNED_TOWER_BEASTS
+	clearflag JOHTO_FLAG_HIDE_BURNED_TOWER_B1F_EUSINE
+	clearflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_SAGE
+	clearflag JOHTO_FLAG_CAUGHT_ENTEI
+	clearflag JOHTO_FLAG_CAUGHT_RAIKOU
+	clearflag JOHTO_FLAG_GOT_TM_SNATCH
+	clearflag JOHTO_FLAG_HIDE_ROUTE42_SUICUNE
+	clearflag JOHTO_FLAG_GOT_TYROGUE
+	clearflag JOHTO_FLAG_BEAT_KIYO
+	clearflag JOHTO_FLAG_ENABLE_BAOBA_MATCH_CALL
+	clearflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS
+	clearflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_ZUKI
+	clearflag JOHTO_FLAG_HIDE_TINTOWER_GUARD
+	clearflag JOHTO_FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
+	clearflag JOHTO_FLAG_HIDE_LUGIA
+	clearflag JOHTO_FLAG_HIDE_HO_OH
 
-	setflag 10485
-	setflag 8366
+	setflag JOHTO_FLAG_VISITED_ECRUTEAK_CITY
+	setflag JOHTO_FLAG_HIDE_ROUTE42_EUSINE
 
-	setflag 8318
-	setflag 8356
-	setflag 8310
-	setflag 8365
-	setflag 8314
-	setvar 20558, 0
-	setvar 20559, 0
-	setvar 20562, 0
-	setvar 20561, 1
+	setflag JOHTO_FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS
+	setflag JOHTO_FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS
+	setflag JOHTO_FLAG_HIDE_ROUTE39_SHADOW
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_SILVER
+	setvar JOHTO_VAR_COMPLETED_HO_OH, 0
+	setvar JOHTO_VAR_COMPLETED_LUGIA, 0
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 0
+	setvar JOHTO_VAR_ECRUTEAK_CITY_STATE, 1
 	end
 
 EcruteakCity_Trigger_Silver::
@@ -67,38 +67,38 @@ EcruteakCity_Trigger_Silver::
 	opendoor 39, 40
 	waitdooranim
 	delay 10
-	clearflag 8314
-	addobject 33
+	clearflag JOHTO_FLAG_HIDE_ECRUTEAK_SILVER
+	addobject LOCALID_ECRUTEK_SILVER
 	playbgm ((558 + 1) + 0x3B), FALSE
-	playse 20
-	applymovement 33, EcruteakCity_Movement_Silver1
-	applymovement 255, EcruteakCity_Movement_Silver1
+	playse SE_BANG
+	applymovement LOCALID_ECRUTEK_SILVER, EcruteakCity_Movement_Silver1
+	applymovement OBJ_EVENT_ID_PLAYER, EcruteakCity_Movement_Silver1
 	message EcruteakCity_Text_Silver1
 
-	waitmovement 255
-	waitmovement 33
-	turnobject 255, DIR_NORTH
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_ECRUTEK_SILVER
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	closedoor 39, 40
 	waitdooranim
 	msgbox EcruteakCity_Text_Silver2, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 33, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ECRUTEK_SILVER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 33
-	turnobject 33, DIR_SOUTH
+	waitmovement LOCALID_ECRUTEK_SILVER
+	turnobject LOCALID_ECRUTEK_SILVER, DIR_SOUTH
 	msgbox EcruteakCity_Text_Silver3, MSGBOX_DEFAULT
 	closemessage
 
-	applymovement 33, EcruteakCity_Movement_Silver2
-	waitmovement 33
+	applymovement LOCALID_ECRUTEK_SILVER, EcruteakCity_Movement_Silver2
+	waitmovement LOCALID_ECRUTEK_SILVER
 
 
-	setflag 8314
-	removeobject 33
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_SILVER
+	removeobject LOCALID_ECRUTEK_SILVER
 	fadedefaultbgm
 
-	setvar 20562, 5
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 5
 	releaseall
 	end
 
@@ -166,7 +166,7 @@ EcruteakCity_EventScript_Lass::
 EcruteakCity_EventScript_Girl::
 	lock
 	faceplayer
-	goto_if_set 8664, EcruteakCity_EventScript_Girl2
+	goto_if_set JOHTO_FLAG_RELEASED_BEASTS, EcruteakCity_EventScript_Girl2
 	msgbox EcruteakCity_Text_Lass2, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -181,7 +181,7 @@ EcruteakCity_EventScript_Girl2::
 EcruteakCity_EventScrip_Man::
 	lock
 	faceplayer
-	goto_if_set 8661, EcruteakCity_EventScrip_Man2
+	goto_if_set JOHTO_FLAG_AMPHAROS_HEALED, EcruteakCity_EventScrip_Man2
 	msgbox EcruteakCity_Text_Fisher, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -264,7 +264,7 @@ EcruteakCity_EventScript_Eevee::
 	lock
 	faceplayer
 	waitse
-	playmoncry 133, 0
+	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
 	msgbox EcruteakCity_Text_Eevee, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -274,7 +274,7 @@ EcruteakCity_EventScript_Vulpix::
 	lock
 	faceplayer
 	waitse
-	playmoncry 37, 0
+	playmoncry SPECIES_VULPIX, CRY_MODE_NORMAL
 	msgbox EcruteakCity_Text_Vulpix, MSGBOX_DEFAULT
 	waitmoncry
 	release

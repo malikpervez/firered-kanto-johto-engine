@@ -8,7 +8,7 @@ VictoryRoadKanto_B2F_EventScript_Item_MaxRevive::
 	end
 
 VictoryRoadKanto_B2F_EventScript_Item_Earthquake::
-	finditem 607
+	finditem ITEM_TM_EARTHQUAKE
 	end
 
 VictoryRoadKanto_B2F_EventScript_Item_Potion::

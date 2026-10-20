@@ -7,9 +7,9 @@ OlivineCityHouse3_EventScriptFishingGuru::
 	lock
 	faceplayer
 	checkitem ITEM_GOOD_ROD
-	goto_if_eq 32781, TRUE, OlivineCityHouse3_EventScriptFishingGuru2
+	goto_if_eq VAR_RESULT, TRUE, OlivineCityHouse3_EventScriptFishingGuru2
 	msgbox OlivineCity_Text_OfferGoodRod, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, OlivineCityHouse3_EventScriptFishingGuruRefused
+	goto_if_eq VAR_RESULT, FALSE, OlivineCityHouse3_EventScriptFishingGuruRefused
 	msgbox OlivineCity_Text_GiveGoodRod, MSGBOX_DEFAULT
 	giveitem ITEM_GOOD_ROD
 	msgbox OlivineCity_Text_GaveGoodRod, MSGBOX_DEFAULT

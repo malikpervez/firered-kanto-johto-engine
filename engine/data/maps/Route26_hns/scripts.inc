@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route26_hns/scripts.inc), as built into the FireRed game.
 
 Route26_hns_MapScripts::
-	map_script 3, Route26_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route26_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route26_OnTransition:
@@ -10,14 +10,14 @@ Route26_OnTransition:
 	end
 
 Route26_EventScript_Jake::
-	trainerbattle_single 1086, Route26_Text_CooltrainermJakeSeen, Route26_Text_CooltrainermJakeBeaten
+	trainerbattle_single TRAINER_JOHTO_JAKE_HNS, Route26_Text_CooltrainermJakeSeen, Route26_Text_CooltrainermJakeBeaten
 	msgbox Route26_Text_CooltrainermJakeAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route26_EventScript_Gaven::
-	trainerbattle_single 1084, Route26_Text_CooltrainermGavenSeen, Route26_Text_CooltrainermGavenBeaten, Route26_EventScript_RegisterGaven
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route26_EventScript_RematchGaven
+	trainerbattle_single TRAINER_JOHTO_GAVEN_HNS, Route26_Text_CooltrainermGavenSeen, Route26_Text_CooltrainermGavenBeaten, Route26_EventScript_RegisterGaven
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_RematchGaven
 	msgbox Route26_Text_CooltrainermGavenAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -25,24 +25,24 @@ Route26_EventScript_RegisterGaven::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route26_Text_GavenRegister, MSGBOX_DEFAULT
-	register_matchcall 1084
+	register_matchcall TRAINER_JOHTO_GAVEN_HNS
 	release
 	end
 
 Route26_EventScript_RematchGaven::
-	trainerbattle_rematch 1084, Route26_Text_GavenRematchIntro, Route26_Text_GavenRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_GAVEN_HNS, Route26_Text_GavenRematchIntro, Route26_Text_GavenRematchDefeat
 	msgbox Route26_Text_GavenPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route26_EventScript_Joyce::
-	trainerbattle_single 1104, Route26_Text_CooltrainerfJoyceSeen, Route26_Text_CooltrainerfJoyceBeaten
+	trainerbattle_single TRAINER_JOHTO_JOYCE_HNS, Route26_Text_CooltrainerfJoyceSeen, Route26_Text_CooltrainerfJoyceBeaten
 	msgbox Route26_Text_CooltrainerfJoyceAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route26_EventScript_Beth::
-	trainerbattle_single 1105, Route26_Text_CooltrainerfBethSeen, Route26_Text_CooltrainerfBethBeaten, Route26_EventScript_RegisterBeth
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route26_EventScript_RematchBeth
+	trainerbattle_single TRAINER_JOHTO_BETH_HNS, Route26_Text_CooltrainerfBethSeen, Route26_Text_CooltrainerfBethBeaten, Route26_EventScript_RegisterBeth
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_RematchBeth
 	msgbox Route26_Text_CooltrainerfBethAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -50,17 +50,17 @@ Route26_EventScript_RegisterBeth::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route26_Text_BethRegister, MSGBOX_DEFAULT
-	register_matchcall 1105
+	register_matchcall TRAINER_JOHTO_BETH_HNS
 	release
 	end
 
 Route26_EventScript_RematchBeth::
-	trainerbattle_rematch 1105, Route26_Text_BethRematchIntro, Route26_Text_BethRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_BETH_HNS, Route26_Text_BethRematchIntro, Route26_Text_BethRematchDefeat
 	msgbox Route26_Text_BethPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route26_EventScript_Richard::
-	trainerbattle_single 1338, Route26_Text_PsychicRichardSeen, Route26_Text_PsychicRichardBeaten
+	trainerbattle_single TRAINER_JOHTO_RICHARD_HNS, Route26_Text_PsychicRichardSeen, Route26_Text_PsychicRichardBeaten
 	msgbox Route26_Text_PsychicRichardAfter, MSGBOX_AUTOCLOSE
 	end
 

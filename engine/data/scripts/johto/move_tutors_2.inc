@@ -3,7 +3,7 @@
 J_SlateportCity_PokemonFanClub_EventScript_SwaggerTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_SWAGGER, J_MoveTutor_Text_SwaggerTeach, J_MoveTutor_Text_SwaggerWhichMon, J_MoveTutor_EventScript_SwaggerDeclined, J_MoveTutor_EventScript_SwaggerTaught, 0
+	move_tutor MOVE_SWAGGER, J_MoveTutor_Text_SwaggerTeach, J_MoveTutor_Text_SwaggerWhichMon, J_MoveTutor_EventScript_SwaggerDeclined, J_MoveTutor_EventScript_SwaggerTaught, FLAG_MOVE_TUTOR_TAUGHT_SWAGGER
 	release
 	end
 
@@ -20,7 +20,7 @@ J_MoveTutor_EventScript_SwaggerTaught::
 J_MauvilleCity_EventScript_RolloutTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_ROLLOUT, J_MoveTutor_Text_RolloutTeach, J_MoveTutor_Text_RolloutWhichMon, J_MoveTutor_EventScript_RolloutDeclined, J_MoveTutor_EventScript_RolloutTaught, 0
+	move_tutor MOVE_ROLLOUT, J_MoveTutor_Text_RolloutTeach, J_MoveTutor_Text_RolloutWhichMon, J_MoveTutor_EventScript_RolloutDeclined, J_MoveTutor_EventScript_RolloutTaught, FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT
 	release
 	end
 
@@ -37,7 +37,7 @@ J_MoveTutor_EventScript_RolloutTaught::
 J_VerdanturfTown_PokemonCenter_1F_EventScript_FuryCutterTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_FURY_CUTTER, J_MoveTutor_Text_FuryCutterTeach, J_MoveTutor_Text_FuryCutterWhichMon, J_MoveTutor_EventScript_FuryCutterDeclined, J_MoveTutor_EventScript_FuryCutterTaught, 0
+	move_tutor MOVE_FURY_CUTTER, J_MoveTutor_Text_FuryCutterTeach, J_MoveTutor_Text_FuryCutterWhichMon, J_MoveTutor_EventScript_FuryCutterDeclined, J_MoveTutor_EventScript_FuryCutterTaught, FLAG_MOVE_TUTOR_TAUGHT_FURY_CUTTER
 	end
 
 J_MoveTutor_EventScript_FuryCutterDeclined::
@@ -53,7 +53,7 @@ J_MoveTutor_EventScript_FuryCutterTaught::
 J_LavaridgeTown_House_EventScript_MimicTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_MIMIC, J_MoveTutor_MimicTeach, J_MoveTutor_Text_MimicWhichMon, J_MoveTutor_EventScript_MimicDeclined, J_MoveTutor_EventScript_MimicTaught, 0
+	move_tutor MOVE_MIMIC, J_MoveTutor_MimicTeach, J_MoveTutor_Text_MimicWhichMon, J_MoveTutor_EventScript_MimicDeclined, J_MoveTutor_EventScript_MimicTaught, FLAG_MOVE_TUTOR_TAUGHT_MIMIC
 	end
 
 J_MoveTutor_EventScript_MimicDeclined::
@@ -69,7 +69,7 @@ J_MoveTutor_EventScript_MimicTaught::
 J_FallarborTown_Mart_EventScript_MetronomeTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_METRONOME, J_MoveTutor_Text_MetronomeTeach, J_MoveTutor_Text_MetronomeWhichMon, J_MoveTutor_EventScript_MetronomeDeclined, J_MoveTutor_EventScript_MetronomeTaught, 0
+	move_tutor MOVE_METRONOME, J_MoveTutor_Text_MetronomeTeach, J_MoveTutor_Text_MetronomeWhichMon, J_MoveTutor_EventScript_MetronomeDeclined, J_MoveTutor_EventScript_MetronomeTaught, FLAG_MOVE_TUTOR_TAUGHT_METRONOME
 	end
 
 J_MoveTutor_EventScript_MetronomeDeclined::
@@ -85,7 +85,7 @@ J_MoveTutor_EventScript_MetronomeTaught::
 J_FortreeCity_House2_EventScript_SleepTalkTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_SLEEP_TALK, J_MoveTutor_Text_SleepTalkTeach, J_MoveTutor_Text_SleepTalkWhichMon, J_MoveTutor_EventScript_SleepTalkDeclined, J_MoveTutor_EventScript_SleepTalkTaught, 0
+	move_tutor MOVE_SLEEP_TALK, J_MoveTutor_Text_SleepTalkTeach, J_MoveTutor_Text_SleepTalkWhichMon, J_MoveTutor_EventScript_SleepTalkDeclined, J_MoveTutor_EventScript_SleepTalkTaught, FLAG_MOVE_TUTOR_TAUGHT_SLEEP_TALK
 	end
 
 J_MoveTutor_EventScript_SleepTalkDeclined::
@@ -101,7 +101,7 @@ J_MoveTutor_EventScript_SleepTalkTaught::
 J_LilycoveCity_DepartmentStoreRooftop_EventScript_SubstituteTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_SUBSTITUTE, J_MoveTutor_Text_SubstituteTeach, J_MoveTutor_Text_SubstituteWhichMon, J_MoveTutor_EventScript_SubstituteDeclined, J_MoveTutor_EventScript_SubstituteTaught, 0
+	move_tutor MOVE_SUBSTITUTE, J_MoveTutor_Text_SubstituteTeach, J_MoveTutor_Text_SubstituteWhichMon, J_MoveTutor_EventScript_SubstituteDeclined, J_MoveTutor_EventScript_SubstituteTaught, FLAG_MOVE_TUTOR_TAUGHT_SUBSTITUTE
 	end
 
 J_MoveTutor_EventScript_SubstituteDeclined::
@@ -117,7 +117,7 @@ J_MoveTutor_EventScript_SubstituteTaught::
 J_MossdeepCity_EventScript_DynamicPunchTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_DYNAMIC_PUNCH, J_MoveTutor_Text_DynamicPunchTeach, J_MoveTutor_Text_DynamicPunchWhichMon, J_MoveTutor_EventScript_DynamicPunchDeclined, J_MoveTutor_EventScript_DynamicPunchTaught, 0
+	move_tutor MOVE_DYNAMIC_PUNCH, J_MoveTutor_Text_DynamicPunchTeach, J_MoveTutor_Text_DynamicPunchWhichMon, J_MoveTutor_EventScript_DynamicPunchDeclined, J_MoveTutor_EventScript_DynamicPunchTaught, FLAG_MOVE_TUTOR_TAUGHT_DYNAMICPUNCH
 	end
 
 J_MoveTutor_EventScript_DynamicPunchDeclined::
@@ -133,7 +133,7 @@ J_MoveTutor_EventScript_DynamicPunchTaught::
 J_SootopolisCity_PokemonCenter_1F_EventScript_DoubleEdgeTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_DOUBLE_EDGE, J_MoveTutor_Text_DoubleEdgeTeach, J_MoveTutor_Text_DoubleEdgeWhichMon, J_MoveTutor_EventScript_DoubleEdgeDeclined, J_MoveTutor_EventScript_DoubleEdgeTaught, 0
+	move_tutor MOVE_DOUBLE_EDGE, J_MoveTutor_Text_DoubleEdgeTeach, J_MoveTutor_Text_DoubleEdgeWhichMon, J_MoveTutor_EventScript_DoubleEdgeDeclined, J_MoveTutor_EventScript_DoubleEdgeTaught, FLAG_MOVE_TUTOR_TAUGHT_DOUBLE_EDGE
 	end
 
 J_MoveTutor_EventScript_DoubleEdgeDeclined::
@@ -149,7 +149,7 @@ J_MoveTutor_EventScript_DoubleEdgeTaught::
 J_PacifidlogTown_PokemonCenter_1F_EventScript_ExplosionTutor::
 	lock
 	faceplayer
-	move_tutor MOVE_EXPLOSION, J_MoveTutor_Text_ExplosionTeach, J_MoveTutor_Text_ExplosionWhichMon, J_MoveTutor_EventScript_ExplosionDeclined, J_MoveTutor_EventScript_ExplosionTaught, 0
+	move_tutor MOVE_EXPLOSION, J_MoveTutor_Text_ExplosionTeach, J_MoveTutor_Text_ExplosionWhichMon, J_MoveTutor_EventScript_ExplosionDeclined, J_MoveTutor_EventScript_ExplosionTaught, FLAG_MOVE_TUTOR_TAUGHT_EXPLOSION
 	end
 
 J_MoveTutor_EventScript_ExplosionDeclined::
@@ -174,7 +174,7 @@ J_MoveTutor_EventScript_HeadbuttDeclined::
 	end
 
 J_MoveTutor_EventScript_HeadbuttTaught::
-	setflag 8704
+	setflag JOHTO_FLAG_GET_HEADBUTT
 	msgbox J_MoveTutor_Text_HeadbuttTaught, MSGBOX_DEFAULT
 	release
 	end

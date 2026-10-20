@@ -6,7 +6,7 @@ Route27_House_hns_MapScripts::
 Route27_House_EventScript_Woman::
 	lock
 	faceplayer
-	goto_if_unset 8717, Route27_House_EventScript_WomanBeforeGiven
+	goto_if_unset JOHTO_FLAG_GOT_TM_SANDSTORM, Route27_House_EventScript_WomanBeforeGiven
 	msgbox SandstormHouse_Text_TM37Description, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -14,13 +14,13 @@ Route27_House_EventScript_Woman::
 
 Route27_House_EventScript_WomanBeforeGiven::
 	msgbox SandstormHouse_Text_Woman1, MSGBOX_DEFAULT
-	specialvar 32781, GetLeadMonFriendshipScore
-	goto_if_ge 32781, 4, Route27_House_EventScript_WomanHighFriendship
+	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, Route27_House_EventScript_WomanHighFriendship
 	playfirstmoncry
 	applymovement 0xFE J_FollowerLookAway
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	applymovement 0xFE J_Common_Movement_QuestionMark
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	msgbox SandstormHouse_Text_DisloyalMon, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -33,8 +33,8 @@ Route27_House_EventScript_WomanHighFriendship::
 	applymovement 0xFE J_ContestHall_Movement_Heart
 	waitmovement 0
 	msgbox SandstormHouse_Text_LoyalMon, MSGBOX_DEFAULT
-	giveitem 618
-	setflag 8717
+	giveitem ITEM_TM_SANDSTORM
+	setflag JOHTO_FLAG_GOT_TM_SANDSTORM
 	msgbox SandstormHouse_Text_TM37Description, MSGBOX_DEFAULT
 	closemessage
 	release

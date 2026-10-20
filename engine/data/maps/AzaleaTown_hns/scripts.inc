@@ -1,54 +1,54 @@
 @ Johto (data/maps/AzaleaTown_hns/scripts.inc), as built into the FireRed game.
 
 AzaleaTown_hns_MapScripts::
-	map_script 3, AzaleaTown_OnTransition
-	map_script 2, AzaleaTown_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, AzaleaTown_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, AzaleaTown_OnFrame
 	.byte 0
 
 AzaleaTown_OnTransition::
-	goto_if_eq 20547, 5, AzaleaTown_MapScript_Hide_Silver
+	goto_if_eq JOHTO_VAR_AZALEA_TOWN_STATE, 5, AzaleaTown_MapScript_Hide_Silver
 	end
 
 AzaleaTown_OnFrame::
-	map_script_2 20547, 8, AzaleaTown_EventScript_GSBall
+	map_script_2 JOHTO_VAR_AZALEA_TOWN_STATE, 8, AzaleaTown_EventScript_GSBall
 	.2byte 0
 
 AzaleaTown_MapScript_Hide_Silver:
-	setflag 8284
-	removeobject 6
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SILVER
+	removeobject LOCALID_AZALEA_TOWN_SILVER
 	end
 
 AzaleaTown_EventScript_Trigger::
-	setflag 10483
-	setflag 8230
-	setflag 8284
-	setflag 8293
-	setflag 8287
-	setflag 8290
-	setflag 8237
-	setflag 8236
-	setflag 8235
-	setflag 8234
-	setflag 8255
-	setflag 8289
-	setflag 8282
-	setflag 8231
-	setflag 8232
-	setflag 8233
+	setflag JOHTO_FLAG_VISITED_AZALEA_TOWN
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SLOWPOKE
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SILVER
+	setflag JOHTO_FLAG_HIDE_KURT_2
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_APPRENTICE
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_MASTER
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+	setflag JOHTO_FLAG_HIDE_CELEBI
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_KURT
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_KURT
+	setflag JOHTO_FLAG_HIDE_AZALEA_ARIADOS_LEFT
+	setflag JOHTO_FLAG_HIDE_AZALEA_ARIADOS_MID
+	setflag JOHTO_FLAG_HIDE_AZALEA_ARIADOS_RIGHT
 
 
-	clearflag 8288
-	clearflag 8439
-	clearflag 8283
-	clearflag 8285
-	clearflag 8292
-	clearflag 8725
-	clearflag 8229
-	clearflag 8281
-	clearflag 8781
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_KIMONO
+	clearflag JOHTO_FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_ROCKETS
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_WELL_ROCKET
+	clearflag JOHTO_FLAG_HIDE_KURT_1
+	clearflag JOHTO_FLAG_GOT_CHARCOAL
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_FARFETCHD
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_CUT_MASTER
+	clearflag JOHTO_FLAG_MOVE_TUTOR_TAUGHT_HEADBUTT
 
 	removeitem 684
-	setvar 20547, 1
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 1
 	end
 
 AzaleaTown_EventScript_Rocket1::
@@ -70,7 +70,7 @@ AzaleaTown_EventScript_Rocket2::
 AzaleaTown_EventScript_Gramps::
 	lock
 	faceplayer
-	goto_if_set 8283, AzaleaTown_EventScript_Gramps2
+	goto_if_set JOHTO_FLAG_HIDE_AZALEA_TOWN_ROCKETS, AzaleaTown_EventScript_Gramps2
 	msgbox AzaleaTown_Text_GrampsBefore, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -102,7 +102,7 @@ AzaleaTown_EventScript_Slowpoke::
 	lock
 	faceplayer
 	waitse
-	playmoncry 79, 0
+	playmoncry SPECIES_SLOWPOKE, CRY_MODE_NORMAL
 	msgbox AzaleaTown_Text_Slowpoke1, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -152,110 +152,110 @@ AzaleaTown_EventScript_AzaleaSign::
 
 AzaleaTown_EventScript_SilverTriggerTop::
 	lock
-	clearflag 8284
-	addobject 6
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SILVER
+	addobject LOCALID_AZALEA_TOWN_SILVER
 	playbgm ((558 + 1) + 0x3B), FALSE
-	applymovement 6, AzaleaTown_Movement_Silver_EnterTop
+	applymovement LOCALID_AZALEA_TOWN_SILVER, AzaleaTown_Movement_Silver_EnterTop
 	waitmovement 0
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox AzaleaTown_Text_RivalBefore, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20499, 0, AzaleaTown_Silver_Battle_Cyndaquil
-	call_if_eq 20499, 1, AzaleaTown_Silver_Battle_Totodile
-	call_if_eq 20499, 2, AzaleaTown_Silver_Battle_Chikorita
+	call_if_eq JOHTO_VAR_STARTER_MON, 0, AzaleaTown_Silver_Battle_Cyndaquil
+	call_if_eq JOHTO_VAR_STARTER_MON, 1, AzaleaTown_Silver_Battle_Totodile
+	call_if_eq JOHTO_VAR_STARTER_MON, 2, AzaleaTown_Silver_Battle_Chikorita
 	msgbox AzaleaTown_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, AzaleaTown_Movement_Player_LeaveTop
+	applymovement OBJ_EVENT_ID_PLAYER, AzaleaTown_Movement_Player_LeaveTop
 	waitmovement 0
-	applymovement 6, AzaleaTown_Movement_Silver_LeaveTop
+	applymovement LOCALID_AZALEA_TOWN_SILVER, AzaleaTown_Movement_Silver_LeaveTop
 	waitmovement 0
-	playse 9
-	setflag 8284
-	removeobject 6
-	setvar 20547, 6
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SILVER
+	removeobject LOCALID_AZALEA_TOWN_SILVER
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 6
 	fadedefaultbgm
 	release
 	end
 
 AzaleaTown_EventScript_SilverTriggerBot::
 	lock
-	clearflag 8284
-	addobject 6
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SILVER
+	addobject LOCALID_AZALEA_TOWN_SILVER
 	playbgm ((558 + 1) + 0x3B), FALSE
-	applymovement 6, AzaleaTown_Movement_Silver_EnterBot
+	applymovement LOCALID_AZALEA_TOWN_SILVER, AzaleaTown_Movement_Silver_EnterBot
 	waitmovement 0
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox AzaleaTown_Text_RivalBefore, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20499, 0, AzaleaTown_Silver_Battle_Cyndaquil
-	call_if_eq 20499, 1, AzaleaTown_Silver_Battle_Totodile
-	call_if_eq 20499, 2, AzaleaTown_Silver_Battle_Chikorita
+	call_if_eq JOHTO_VAR_STARTER_MON, 0, AzaleaTown_Silver_Battle_Cyndaquil
+	call_if_eq JOHTO_VAR_STARTER_MON, 1, AzaleaTown_Silver_Battle_Totodile
+	call_if_eq JOHTO_VAR_STARTER_MON, 2, AzaleaTown_Silver_Battle_Chikorita
 	playbgm ((558 + 1) + 0x3C), FALSE
 	msgbox AzaleaTown_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, AzaleaTown_Movement_Player_LeaveBot
+	applymovement OBJ_EVENT_ID_PLAYER, AzaleaTown_Movement_Player_LeaveBot
 	waitmovement 0
-	applymovement 6, AzaleaTown_Movement_Silver_LeaveBot
+	applymovement LOCALID_AZALEA_TOWN_SILVER, AzaleaTown_Movement_Silver_LeaveBot
 	waitmovement 0
-	playse 9
-	setflag 8284
-	removeobject 6
-	setvar 20547, 6
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SILVER
+	removeobject LOCALID_AZALEA_TOWN_SILVER
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 6
 	fadedefaultbgm
 	release
 	end
 
 AzaleaTown_Silver_Battle_Cyndaquil::
-	trainerbattle_no_intro 1475, AzaleaTown_Text_RivalWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CYNDAQUIL_2_HNS, AzaleaTown_Text_RivalWin
 	return
 
 AzaleaTown_Silver_Battle_Totodile::
-	trainerbattle_no_intro 1482, AzaleaTown_Text_RivalWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_TOTODILE_2_HNS, AzaleaTown_Text_RivalWin
 	return
 
 AzaleaTown_Silver_Battle_Chikorita::
-	trainerbattle_no_intro 1468, AzaleaTown_Text_RivalWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CHIKORITA_2_HNS, AzaleaTown_Text_RivalWin
 	return
 
 AzaleaTown_EventScript_GSBall::
 	lock
-	applymovement 255, AzaleaTown_Movement_PlayerGSBall
+	applymovement OBJ_EVENT_ID_PLAYER, AzaleaTown_Movement_PlayerGSBall
 	waitmovement 0
-	clearflag 8282
-	addobject 18
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_KURT
+	addobject LOCALID_AZALEA_TOWN_KURT_GS
 	opendoor 19, 11
 	waitdooranim
 	waitmovement 0
 	closedoor 19, 11
 	waitdooranim
-	applymovement 18, AzaleaTown_Movement_Kurt2
-	playse 202
+	applymovement LOCALID_AZALEA_TOWN_KURT_GS, AzaleaTown_Movement_Kurt2
+	playse SE_M_PETAL_DANCE
 	waitmovement 0
 	msgbox AzaleaTown_Text_Kurt1, MSGBOX_DEFAULT
 	closemessage
-	playse 202
+	playse SE_M_PETAL_DANCE
 	msgbox AzaleaTown_Text_Kurt2, MSGBOX_DEFAULT
 	giveitem ITEM_GS_BALL
 	waitse
-	playse 202
-	turnobject 18, DIR_WEST
-	turnobject 255, DIR_WEST
-	playse 202
+	playse SE_M_PETAL_DANCE
+	turnobject LOCALID_AZALEA_TOWN_KURT_GS, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	playse SE_M_PETAL_DANCE
 	waitse
-	turnobject 18, DIR_SOUTH
-	turnobject 255, DIR_NORTH
+	turnobject LOCALID_AZALEA_TOWN_KURT_GS, DIR_SOUTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox AzaleaTown_Text_Kurt3, MSGBOX_DEFAULT
 	closemessage
-	applymovement 18, AzaleaTown_Movement_KurtLeave
+	applymovement LOCALID_AZALEA_TOWN_KURT_GS, AzaleaTown_Movement_KurtLeave
 	delay 60
 	opendoor 19, 11
 	waitdooranim
 	waitmovement 0
-	setflag 8282
-	removeobject 18
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_KURT
+	removeobject LOCALID_AZALEA_TOWN_KURT_GS
 	closedoor 19, 11
 	waitdooranim
-	setvar 20547, 9
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 9
 	release
 	end
 

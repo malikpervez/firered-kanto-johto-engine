@@ -9,24 +9,24 @@ J_Common_EventScript_ShowPokemonCenterSign::
 	end
 
 J_Common_ShowEasyChatScreen::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ShowEasyChatScreen
-	fadescreen 0
+	fadescreen FADE_FROM_BLACK
 	return
 
 J_Common_EventScript_ReadyPetalburgGymForBattle::
-	clearflag 0
-	setflag 0
+	clearflag FLAG_HIDE_PETALBURG_GYM_GREETER
+	setflag FLAG_PETALBURG_MART_EXPANDED_ITEMS
 	return
 
 J_Common_EventScript_BufferTrendyPhrase::
 	dotimebasedevents
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	special BufferTrendyPhraseString
 	return
 
 J_EventScript_BackupMrBrineyLocation::
-	copyvar 32776, 20614
-	setvar 20614, 0
+	copyvar VAR_0x8008, JOHTO_VAR_BRINEY_LOCATION
+	setvar JOHTO_VAR_BRINEY_LOCATION, 0
 	return
 

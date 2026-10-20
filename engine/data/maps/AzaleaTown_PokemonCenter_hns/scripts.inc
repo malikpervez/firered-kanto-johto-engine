@@ -1,11 +1,11 @@
 @ Johto (data/maps/AzaleaTown_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 AzaleaTown_PokemonCenter_hns_MapScripts::
-	map_script 3, AzaleaTown_Pokecenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, AzaleaTown_Pokecenter_OnTransition
 	.byte 0
 
 AzaleaTown_Pokecenter_OnTransition::
-	setrespawn 131
+	setrespawn JOHTO_HEAL_LOCATION_AZALEA_TOWN_HNS
 	end
 
 AzaleaPokeCenter_EventScript_Gentleman::

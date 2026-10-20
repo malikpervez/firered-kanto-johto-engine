@@ -1,8 +1,8 @@
 @ Johto (data/maps/SproutTower_3F_hns/scripts.inc), as built into the FireRed game.
 
 SproutTower_3F_hns_MapScripts::
-	map_script 3, SproutTower_3F_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, SproutTower_3F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 SproutTower_3F_OnTransition:
@@ -10,17 +10,17 @@ SproutTower_3F_OnTransition:
 	end
 
 SproutTower_3F_EventScript_SageJin::
-	trainerbattle_single 1376, SproutTower_Text_SageJin_Seen, SproutTower_Text_SageJin_Beaten
+	trainerbattle_single TRAINER_JOHTO_JIN_HNS, SproutTower_Text_SageJin_Seen, SproutTower_Text_SageJin_Beaten
 	msgbox SproutTower_Text_SageJin_AfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 SproutTower_3F_EventScript_SageNeal::
-	trainerbattle_single 1381, SproutTower_Text_SageNeal_Seen, SproutTower_Text_SageNeal_Beaten
+	trainerbattle_single TRAINER_JOHTO_NEAL_HNS, SproutTower_Text_SageNeal_Seen, SproutTower_Text_SageNeal_Beaten
 	msgbox SproutTower_Text_SageNeal_AfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 SproutTower_3F_EventScript_SageTroy::
-	trainerbattle_single 1377, SproutTower_Text_SageTroy_Seen, SproutTower_Text_SageTroy_Beaten
+	trainerbattle_single TRAINER_JOHTO_TROY_HNS, SproutTower_Text_SageTroy_Seen, SproutTower_Text_SageTroy_Beaten
 	msgbox SproutTower_Text_SageTroy_AfterBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -41,15 +41,15 @@ SproutTower_3F_EventScript_EscapeRope::
 SproutTower_3F_EventScript_TriggerSceneLeft::
 	lock
 	playbgm ((558 + 1) + 0x3B), FALSE
-	applymovement 5, SproutTower_3F_Movement_Silver1
+	applymovement LOCALID_SPROUT_TOWER_SILVER, SproutTower_3F_Movement_Silver1
 	waitmovement 0
 	msgbox SproutTower_Text_ElderLecturesRival, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 5, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_SPROUT_TOWER_SILVER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 5
-	applymovement 5, SproutTower_3F_Movement_SilverLeft
+	waitmovement LOCALID_SPROUT_TOWER_SILVER
+	applymovement LOCALID_SPROUT_TOWER_SILVER, SproutTower_3F_Movement_SilverLeft
 	waitmovement 0
 	msgbox SproutTower_Text_RivalOnlyCaresStrong, MSGBOX_DEFAULT
 	delay 30
@@ -57,30 +57,30 @@ SproutTower_3F_EventScript_TriggerSceneLeft::
 	applymovement 5 SproutTower_3F_Movement_EscapeRope
 	waitmovement 0
 	closemessage
-	fadescreen 1
-	playse 9
-	setflag 8280
-	removeobject 5
+	fadescreen FADE_TO_BLACK
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_SPROUT_TOWER_SILVER
+	removeobject LOCALID_SPROUT_TOWER_SILVER
 	delay 55
-	fadescreen 0
+	fadescreen FADE_FROM_BLACK
 	special DrawWholeMapView
 	fadedefaultbgm
-	setvar 20656, 1
+	setvar JOHTO_VAR_SPROUT_TOWER, 1
 	release
 	end
 
 SproutTower_3F_EventScript_TriggerSceneRight::
 	lock
 	playbgm ((558 + 1) + 0x3B), FALSE
-	applymovement 5, SproutTower_3F_Movement_Silver1
+	applymovement LOCALID_SPROUT_TOWER_SILVER, SproutTower_3F_Movement_Silver1
 	waitmovement 0
 	msgbox SproutTower_Text_ElderLecturesRival, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 5, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_SPROUT_TOWER_SILVER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 5
-	applymovement 5, SproutTower_3F_Movement_SilverRight
+	waitmovement LOCALID_SPROUT_TOWER_SILVER
+	applymovement LOCALID_SPROUT_TOWER_SILVER, SproutTower_3F_Movement_SilverRight
 	waitmovement 0
 	waitmovement 0
 	msgbox SproutTower_Text_RivalOnlyCaresStrong, MSGBOX_DEFAULT
@@ -88,28 +88,28 @@ SproutTower_3F_EventScript_TriggerSceneRight::
 	applymovement 5 SproutTower_3F_Movement_EscapeRope
 	waitmovement 0
 	closemessage
-	fadescreen 1
-	playse 9
-	setflag 8280
-	removeobject 5
+	fadescreen FADE_TO_BLACK
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_SPROUT_TOWER_SILVER
+	removeobject LOCALID_SPROUT_TOWER_SILVER
 	delay 55
-	fadescreen 0
+	fadescreen FADE_FROM_BLACK
 	special DrawWholeMapView
 	fadedefaultbgm
-	setvar 20656, 1
+	setvar JOHTO_VAR_SPROUT_TOWER, 1
 	release
 	end
 
 SproutTower_3F_EventScript_SageLi::
 	lock
 	faceplayer
-	goto_if_set 8694, SproutTower_3F_EventScript_SageLi_Beaten
+	goto_if_set JOHTO_FLAG_RECEIVED_HM_FLASH, SproutTower_3F_EventScript_SageLi_Beaten
 	msgbox SproutTower_Text_SageLi_Seen, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro 1382, SproutTower_Text_SageLi_Beaten
+	trainerbattle_no_intro TRAINER_JOHTO_LI_HNS, SproutTower_Text_SageLi_Beaten
 	msgbox SproutTower_Text_SageLi_TakeFlash, MSGBOX_DEFAULT
-	giveitem 686
-	setflag 8694
+	giveitem ITEM_HM_FLASH
+	setflag JOHTO_FLAG_RECEIVED_HM_FLASH
 	msgbox SproutTower_Text_SageLi_FlashExplain, MSGBOX_DEFAULT
 	closemessage
 	release

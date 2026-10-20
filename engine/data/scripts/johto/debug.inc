@@ -11,120 +11,120 @@ J_Debug_ShowFieldMessageStringVar4::
 	goto J_Debug_MessageEnd
 
 J_Debug_CheatStart::
-	setflag 2088
-	setflag 0
-	setflag 0
-	setflag 8660
-	clearflag 0
-	setflag 0
-	setvar 20596, 2
-	setvar 20560, 3
-	givemon 252, 20, ITEM_NONE
-	givemon 255, 20, ITEM_NONE
-	givemon 258, 20, ITEM_NONE
-	setflag 2089
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_RESCUED_BIRCH
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	setflag JOHTO_FLAG_ADVENTURE_STARTED
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	setvar JOHTO_VAR_BIRCH_LAB_STATE, 2
+	setvar JOHTO_VAR_ROUTE101_STATE, 3
+	givemon SPECIES_TREECKO, 20, ITEM_NONE
+	givemon SPECIES_TORCHIC, 20, ITEM_NONE
+	givemon SPECIES_MUDKIP, 20, ITEM_NONE
+	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
-	setflag 10403
-	setvar 20669, 2
-	setflag 2112
+	setflag JOHTO_FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	setvar JOHTO_VAR_CABLE_CLUB_TUTORIAL_STATE, 2
+	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex
-	setflag 8701
-	setflag 2095
-	setvar 20544, 4
-	setvar 20610, 7
-	setvar 20604, 2
-	setvar 20594, 2
-	setvar 20605, 4
-	setflag 8690
+	setflag JOHTO_FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
+	setvar JOHTO_VAR_LITTLEROOT_TOWN_STATE, 4
+	setvar JOHTO_VAR_LITTLEROOT_INTRO_STATE, 7
+	setvar JOHTO_VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2
+	setvar JOHTO_VAR_LITTLEROOT_HOUSES_STATE_MAY, 2
+	setvar JOHTO_VAR_LITTLEROOT_RIVAL_STATE, 4
+	setflag JOHTO_FLAG_RECEIVED_BIKE
 	additem ITEM_ACRO_BIKE
-	setvar 20608, 1
-	setvar 20575, 2
-	setflag 0
-	setflag 10368
-	setflag 10369
-	setflag 10370
-	setflag 10371
-	setflag 10372
-	setflag 10373
-	setflag 10374
-	setflag 10375
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 10401
-	clearflag 0
-	clearflag 0
+	setvar JOHTO_VAR_BRINEY_HOUSE_STATE, 1
+	setvar JOHTO_VAR_ROUTE116_STATE, 2
+	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY
+	setflag JOHTO_FLAG_BADGE01_GET
+	setflag JOHTO_FLAG_BADGE02_GET
+	setflag JOHTO_FLAG_BADGE03_GET
+	setflag JOHTO_FLAG_BADGE04_GET
+	setflag JOHTO_FLAG_BADGE05_GET
+	setflag JOHTO_FLAG_BADGE06_GET
+	setflag JOHTO_FLAG_BADGE07_GET
+	setflag JOHTO_FLAG_BADGE08_GET
+	setflag FLAG_VISITED_LITTLEROOT_TOWN
+	setflag FLAG_VISITED_OLDALE_TOWN
+	setflag FLAG_VISITED_DEWFORD_TOWN
+	setflag FLAG_VISITED_LAVARIDGE_TOWN
+	setflag FLAG_VISITED_FALLARBOR_TOWN
+	setflag FLAG_VISITED_VERDANTURF_TOWN
+	setflag FLAG_VISITED_PACIFIDLOG_TOWN
+	setflag FLAG_VISITED_PETALBURG_CITY
+	setflag FLAG_VISITED_SLATEPORT_CITY
+	setflag FLAG_VISITED_MAUVILLE_CITY
+	setflag FLAG_VISITED_RUSTBORO_CITY
+	setflag FLAG_VISITED_FORTREE_CITY
+	setflag FLAG_VISITED_LILYCOVE_CITY
+	setflag FLAG_VISITED_MOSSDEEP_CITY
+	setflag FLAG_VISITED_SOOTOPOLIS_CITY
+	setflag FLAG_VISITED_EVER_GRANDE_CITY
+	setflag FLAG_LANDMARK_POKEMON_LEAGUE
+	setflag JOHTO_FLAG_LANDMARK_BATTLE_FRONTIER
+	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	release
 	end
 
 J_Debug_CheatStartFrlg::
-	setflag 2088
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	givemon 1, 20, ITEM_NONE
-	givemon 4, 20, ITEM_NONE
-	givemon 7, 20, ITEM_NONE
-	clearflag 0
-	setflag 0
-	setvar 20544, 1
-	setflag 2089
+	setflag FLAG_SYS_POKEMON_GET
+	setflag JOHTO_FLAG_PALLET_LADY_NOT_BLOCKING_SIGN
+	setflag JOHTO_FLAG_OPENED_START_MENU
+	setflag JOHTO_FLAG_VISITED_OAKS_LAB
+	setflag JOHTO_FLAG_BEAT_RIVAL_IN_OAKS_LAB
+	givemon SPECIES_BULBASAUR, 20, ITEM_NONE
+	givemon SPECIES_CHARMANDER, 20, ITEM_NONE
+	givemon SPECIES_SQUIRTLE, 20, ITEM_NONE
+	clearflag JOHTO_FLAG_HIDE_OAK_IN_HIS_LAB
+	setflag JOHTO_FLAG_HIDE_RIVAL_IN_LAB
+	setvar JOHTO_VAR_MAP_SCENE_PALLET_TOWN_OAK, 1
+	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
-	setvar 20549, 6
-	setvar 20551, 2
-	setvar 20545, 1
-	setvar 20552, 1
-	setvar 20548, 1
-	setvar 20588, 1
-	setflag 2112
+	setvar JOHTO_VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
+	setvar JOHTO_VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 2
+	setvar JOHTO_VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1
+	setvar JOHTO_VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 1
+	setvar JOHTO_VAR_MAP_SCENE_ROUTE22, 1
+	setvar JOHTO_VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
+	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex
-	setflag 2095
-	setflag 10368
-	setflag 10369
-	setflag 10370
-	setflag 10371
-	setflag 10372
-	setflag 10373
-	setflag 10374
-	setflag 10375
-	setflag 0
-	setflag 0
+	setflag FLAG_SYS_B_DASH
+	setflag JOHTO_FLAG_BADGE01_GET
+	setflag JOHTO_FLAG_BADGE02_GET
+	setflag JOHTO_FLAG_BADGE03_GET
+	setflag JOHTO_FLAG_BADGE04_GET
+	setflag JOHTO_FLAG_BADGE05_GET
+	setflag JOHTO_FLAG_BADGE06_GET
+	setflag JOHTO_FLAG_BADGE07_GET
+	setflag JOHTO_FLAG_BADGE08_GET
+	setflag JOHTO_FLAG_GOT_BIKE_VOUCHER
+	setflag JOHTO_FLAG_GOT_BICYCLE
 	additem ITEM_BICYCLE
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
+	setflag JOHTO_FLAG_WORLD_MAP_PALLET_TOWN
+	setflag JOHTO_FLAG_WORLD_MAP_VIRIDIAN_CITY
+	setflag JOHTO_FLAG_WORLD_MAP_PEWTER_CITY
+	setflag JOHTO_FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F
+	setflag JOHTO_FLAG_WORLD_MAP_CERULEAN_CITY
+	setflag JOHTO_FLAG_WORLD_MAP_VERMILION_CITY
+	setflag JOHTO_FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F
+	setflag JOHTO_FLAG_WORLD_MAP_LAVENDER_TOWN
+	setflag JOHTO_FLAG_WORLD_MAP_CELADON_CITY
+	setflag JOHTO_FLAG_WORLD_MAP_FUCHSIA_CITY
+	setflag JOHTO_FLAG_WORLD_MAP_SAFFRON_CITY
+	setflag JOHTO_FLAG_WORLD_MAP_CINNABAR_ISLAND
+	setflag JOHTO_FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR
+	setflag JOHTO_FLAG_WORLD_MAP_ONE_ISLAND
+	setflag JOHTO_FLAG_WORLD_MAP_TWO_ISLAND
+	setflag JOHTO_FLAG_WORLD_MAP_THREE_ISLAND
+	setflag JOHTO_FLAG_WORLD_MAP_FOUR_ISLAND
+	setflag JOHTO_FLAG_WORLD_MAP_FIVE_ISLAND
+	setflag JOHTO_FLAG_WORLD_MAP_SIX_ISLAND
+	setflag JOHTO_FLAG_WORLD_MAP_SEVEN_ISLAND
 	release
 	end
 
@@ -165,10 +165,10 @@ J_Debug_BoxFilledMessage_Text:
 J_Debug_EventScript_CheckEVs::
 	lockall
 	getpartysize
-	goto_if_eq 32781, 0, J_Debug_NoPokemon
+	goto_if_eq VAR_RESULT, 0, J_Debug_NoPokemon
 	special ChoosePartyMon
 	waitstate
-	goto_if_ge 32772, 6, J_Debug_EventScript_CheckEVs_End
+	goto_if_ge VAR_0x8004, PARTY_SIZE, J_Debug_EventScript_CheckEVs_End
 	callnative Script_GetChosenMonOffensiveEVs
 	msgbox J_Debug_EventScript_Text_OffensiveEVs, MSGBOX_DEFAULT
 	callnative Script_GetChosenMonDefensiveEVs
@@ -187,10 +187,10 @@ J_Debug_EventScript_Text_DefensiveEVs:
 J_Debug_EventScript_CheckIVs::
 	lockall
 	getpartysize
-	goto_if_eq 32781, 0, J_Debug_NoPokemon
+	goto_if_eq VAR_RESULT, 0, J_Debug_NoPokemon
 	special ChoosePartyMon
 	waitstate
-	goto_if_ge 32772, 6, J_Debug_EventScript_CheckIVs_End
+	goto_if_ge VAR_0x8004, PARTY_SIZE, J_Debug_EventScript_CheckIVs_End
 	callnative Script_GetChosenMonOffensiveIVs
 	msgbox J_Debug_EventScript_Text_OffensiveIVs, MSGBOX_DEFAULT
 	callnative Script_GetChosenMonDefensiveIVs
@@ -238,12 +238,12 @@ J_Debug_EventScript_Script_5::
 
 J_Debug_EventScript_Script_6::
 	lockall
-	setvar 20671, 0
-	setvar 20670, 0
+	setvar JOHTO_VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
+	setvar JOHTO_VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_SINGLES
 	frontier_settrainers
-	setvar 32789, 300
+	setvar VAR_TRAINER_BATTLE_OPPONENT_A, FRONTIER_TRAINER_LEADER_BROCK_HNS
 	special HealPlayerParty
-	dofacilitytrainerbattle 0
+	dofacilitytrainerbattle FACILITY_BATTLE_TOWER
 	waitstate
 	special HealPlayerParty
 	releaseall
@@ -259,19 +259,19 @@ J_Debug_EventScript_Script_8::
 
 J_Debug_EventScript_Lance_Multi::
 	special SavePlayerParty
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
-	goto_if_ne 32781, 0, J_Debug_EventScript_DoLanceMultiBattle
+	goto_if_ne VAR_RESULT, 0, J_Debug_EventScript_DoLanceMultiBattle
 	special LoadPlayerParty
 	release
 	end
 
 J_Debug_EventScript_DoLanceMultiBattle::
-	multi_2_vs_2 1499, J_Debug_Text_ArianaDefeat, 1165, J_Debug_Text_Grunt23Defeat, 2
-	switch 32781
+	multi_2_vs_2 TRAINER_JOHTO_ARIANA_1_HNS, J_Debug_Text_ArianaDefeat, TRAINER_JOHTO_GRUNT_23_HNS, J_Debug_Text_Grunt23Defeat, PARTNER_LANCE_HNS
+	switch VAR_RESULT
 	case 1, J_Debug_EventScript_LanceMultiWin
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
 	waitstate
 
@@ -291,37 +291,37 @@ J_Debug_Text_LanceMultiVictory:
 
 J_Debug_EventScript_Silver_Multi::
 	special SavePlayerParty
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
-	goto_if_ne 32781, 0, J_Debug_EventScript_PickSilverPartner
+	goto_if_ne VAR_RESULT, 0, J_Debug_EventScript_PickSilverPartner
 	special LoadPlayerParty
 	release
 	end
 
 J_Debug_EventScript_PickSilverPartner::
-	switch 20499
+	switch JOHTO_VAR_STARTER_MON
 	case 0, J_Debug_EventScript_DoSilverMulti_Typhlosion
 	case 1, J_Debug_EventScript_DoSilverMulti_Feraligatr
 	case 2, J_Debug_EventScript_DoSilverMulti_Meganium
 	goto J_Debug_EventScript_DoSilverMulti_Typhlosion
 
 J_Debug_EventScript_DoSilverMulti_Typhlosion::
-	multi_2_vs_2 1584, J_Debug_Text_Lance3Defeat, 1585, J_Debug_Text_Clair3Defeat, 4
+	multi_2_vs_2 TRAINER_JOHTO_LANCE_3_HNS, J_Debug_Text_Lance3Defeat, TRAINER_JOHTO_CLAIR_3_HNS, J_Debug_Text_Clair3Defeat, PARTNER_SILVER_TYPHLOSION_HNS
 	goto J_Debug_EventScript_SilverMultiResult
 
 J_Debug_EventScript_DoSilverMulti_Feraligatr::
-	multi_2_vs_2 1584, J_Debug_Text_Lance3Defeat, 1585, J_Debug_Text_Clair3Defeat, 5
+	multi_2_vs_2 TRAINER_JOHTO_LANCE_3_HNS, J_Debug_Text_Lance3Defeat, TRAINER_JOHTO_CLAIR_3_HNS, J_Debug_Text_Clair3Defeat, PARTNER_SILVER_FERALIGATR_HNS
 	goto J_Debug_EventScript_SilverMultiResult
 
 J_Debug_EventScript_DoSilverMulti_Meganium::
-	multi_2_vs_2 1584, J_Debug_Text_Lance3Defeat, 1585, J_Debug_Text_Clair3Defeat, 3
+	multi_2_vs_2 TRAINER_JOHTO_LANCE_3_HNS, J_Debug_Text_Lance3Defeat, TRAINER_JOHTO_CLAIR_3_HNS, J_Debug_Text_Clair3Defeat, PARTNER_SILVER_MEGANIUM_HNS
 	goto J_Debug_EventScript_SilverMultiResult
 
 J_Debug_EventScript_SilverMultiResult::
-	switch 32781
+	switch VAR_RESULT
 	case 1, J_Debug_EventScript_SilverMultiWin
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
 	waitstate
 
@@ -380,12 +380,12 @@ J_Debug_ROMSize::
 J_Debug_HatchAnEgg::
 	lockall
 	getpartysize
-	goto_if_eq 32781, 0, J_Debug_NoPokemon
+	goto_if_eq VAR_RESULT, 0, J_Debug_NoPokemon
 	special ChoosePartyMon
 	waitstate
-	goto_if_ge 32772, 6, J_Debug_HatchAnEgg_End
-	specialvar 32781, ScriptGetPartyMonSpecies
-	goto_if_ne 32781, (1572 + 1), J_DebugScript_HatchAnEgg_CantForceHatch
+	goto_if_ge VAR_0x8004, PARTY_SIZE, J_Debug_HatchAnEgg_End
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_ne VAR_RESULT, (1572 + 1), J_DebugScript_HatchAnEgg_CantForceHatch
 	special EggHatch
 	waitstate
 
@@ -495,12 +495,12 @@ J_DebugText_BerryWeedsDisabled:
 J_Debug_EventScript_InflictStatus1::
 	lockall
 	getpartysize
-	goto_if_eq 32781, 0, J_Debug_NoPokemon
+	goto_if_eq VAR_RESULT, 0, J_Debug_NoPokemon
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Single, 0
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_PartyWide, 1
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Close, 2
 	dynmultistack 0, 0, FALSE, 3 FALSE, 0, NULL
-	switch 32781
+	switch VAR_RESULT
 	case 0, J_Debug_EventScript_InflictStatus1_Single
 	case 1, J_Debug_EventScript_InflictStatus1_Party
 	case 2, J_Debug_EventScript_InflictStatus1_Close
@@ -512,9 +512,9 @@ J_Debug_EventScript_InflictStatus1_Close:
 J_Debug_EventScript_InflictStatus1_Single:
 	special ChoosePartyMon
 	waitstate
-	goto_if_ge 32772, 6, J_Debug_EventScript_InflictStatus1_Close
-	specialvar 32781, ScriptGetPartyMonSpecies
-	goto_if_eq 32781, (1572 + 1), J_Debug_EventScript_InflictStatus1_Close
+	goto_if_ge VAR_0x8004, PARTY_SIZE, J_Debug_EventScript_InflictStatus1_Close
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, (1572 + 1), J_Debug_EventScript_InflictStatus1_Close
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Poison, 0
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Paralysis, 1
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Sleep, 2
@@ -523,7 +523,7 @@ J_Debug_EventScript_InflictStatus1_Single:
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Frostbite, 5
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Close, 6
 	dynmultistack 0, 0, FALSE, 7, FALSE, 0, NULL
-	switch 32781
+	switch VAR_RESULT
 	case 0, J_Debug_EventScript_InflictStatus1_Single_Poison
 	case 1, J_Debug_EventScript_InflictStatus1_Single_Paralysis
 	case 2, J_Debug_EventScript_InflictStatus1_Single_Sleep
@@ -531,26 +531,26 @@ J_Debug_EventScript_InflictStatus1_Single:
 	case 4, J_Debug_EventScript_InflictStatus1_Single_Freeze
 	case 5, J_Debug_EventScript_InflictStatus1_Single_Frostbite
 	case 6, J_Debug_EventScript_InflictStatus1_Close
-	case 127, J_Debug_EventScript_InflictStatus1_Close
+	case MULTI_B_PRESSED, J_Debug_EventScript_InflictStatus1_Close
 	releaseall
 	end
 
 J_Debug_EventScript_KoPokemon::
 	special ChoosePartyMon
 	waitstate
-	goto_if_ge 32772, 6, J_Debug_EventScript_InflictStatus1_Close
-	specialvar 32781, ScriptGetPartyMonSpecies
-	goto_if_eq 32781, (1572 + 1), J_Debug_EventScript_InflictStatus1_Close
-	setko 32772
+	goto_if_ge VAR_0x8004, PARTY_SIZE, J_Debug_EventScript_InflictStatus1_Close
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, (1572 + 1), J_Debug_EventScript_InflictStatus1_Close
+	setko VAR_0x8004
 	releaseall
 	end
 
 J_Debug_EventScript_SetHiddenNature::
 	special ChoosePartyMon
 	waitstate
-	goto_if_ge 32772, 6, J_Debug_EventScript_InflictStatus1_Close
-	specialvar 32781, ScriptGetPartyMonSpecies
-	goto_if_eq 32781, (1572 + 1), J_Debug_EventScript_InflictStatus1_Close
+	goto_if_ge VAR_0x8004, PARTY_SIZE, J_Debug_EventScript_InflictStatus1_Close
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, (1572 + 1), J_Debug_EventScript_InflictStatus1_Close
 	dynmultipush J_Debug_EventScript_ChangeNature_Text_Hardy, 0
 	dynmultipush J_Debug_EventScript_ChangeNature_Text_Lonely, 1
 	dynmultipush J_Debug_EventScript_ChangeNature_Text_Brave, 2
@@ -577,8 +577,8 @@ J_Debug_EventScript_SetHiddenNature::
 	dynmultipush J_Debug_EventScript_ChangeNature_Text_Careful, 23
 	dynmultipush J_Debug_EventScript_ChangeNature_Text_Quirky, 24
 	dynmultistack 0, 0, TRUE, 7, FALSE, 0, NULL
-	switch 32781
-	case 127, J_Debug_EventScript_InflictStatus1_Close
+	switch VAR_RESULT
+	case MULTI_B_PRESSED, J_Debug_EventScript_InflictStatus1_Close
 	special SetHiddenNature
 	releaseall
 	end
@@ -591,8 +591,8 @@ J_Debug_EventScript_SetAbility::
 	dynmultipush gStringVar2, 1
 	dynmultipush gStringVar3, 2
 	dynmultistack 0, 0, FALSE, 3 FALSE, 0, NULL
-	switch 32781
-	case 127, J_Debug_EventScript_SetAbilityClose
+	switch VAR_RESULT
+	case MULTI_B_PRESSED, J_Debug_EventScript_SetAbilityClose
 	special SetAbility
 
 J_Debug_EventScript_SetAbilityClose:
@@ -614,32 +614,32 @@ J_Debug_EventScript_GivePokerus::
 	end
 
 J_Debug_EventScript_InflictStatus1_Single_Poison:
-	setstatus1 (1 << 3), 32772
+	setstatus1 (1 << 3), VAR_0x8004
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Single_Paralysis:
-	setstatus1 (1 << 6), 32772
+	setstatus1 (1 << 6), VAR_0x8004
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Single_Sleep:
-	setstatus1 (1 << 0 | 1 << 1 | 1 << 2), 32772
+	setstatus1 (1 << 0 | 1 << 1 | 1 << 2), VAR_0x8004
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Single_Burn:
-	setstatus1 (1 << 4), 32772
+	setstatus1 (1 << 4), VAR_0x8004
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Single_Freeze:
-	setstatus1 (1 << 5), 32772
+	setstatus1 (1 << 5), VAR_0x8004
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Single_Frostbite:
-	setstatus1 (1 << 12), 32772
+	setstatus1 (1 << 12), VAR_0x8004
 	releaseall
 	end
 
@@ -652,7 +652,7 @@ J_Debug_EventScript_InflictStatus1_Party:
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Frostbite, 5
 	dynmultipush J_Debug_EventScript_InflictStatus1_Text_Close, 6
 	dynmultistack 0, 0, FALSE, 7, FALSE, 0, NULL
-	switch 32781
+	switch VAR_RESULT
 	case 0, J_Debug_EventScript_InflictStatus1_Party_Poison
 	case 1, J_Debug_EventScript_InflictStatus1_Party_Paralysis
 	case 2, J_Debug_EventScript_InflictStatus1_Party_Sleep
@@ -660,37 +660,37 @@ J_Debug_EventScript_InflictStatus1_Party:
 	case 4, J_Debug_EventScript_InflictStatus1_Party_Freeze
 	case 5, J_Debug_EventScript_InflictStatus1_Party_Frostbite
 	case 6, J_Debug_EventScript_InflictStatus1_Close
-	case 127, J_Debug_EventScript_InflictStatus1_Close
+	case MULTI_B_PRESSED, J_Debug_EventScript_InflictStatus1_Close
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Party_Poison:
-	setstatus1 (1 << 3), 6
+	setstatus1 (1 << 3), PARTY_SIZE
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Party_Paralysis:
-	setstatus1 (1 << 6), 6
+	setstatus1 (1 << 6), PARTY_SIZE
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Party_Sleep:
-	setstatus1 (1 << 0 | 1 << 1 | 1 << 2), 6
+	setstatus1 (1 << 0 | 1 << 1 | 1 << 2), PARTY_SIZE
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Party_Burn:
-	setstatus1 (1 << 4), 6
+	setstatus1 (1 << 4), PARTY_SIZE
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Party_Freeze:
-	setstatus1 (1 << 5), 6
+	setstatus1 (1 << 5), PARTY_SIZE
 	releaseall
 	end
 
 J_Debug_EventScript_InflictStatus1_Party_Frostbite:
-	setstatus1 (1 << 12), 6
+	setstatus1 (1 << 12), PARTY_SIZE
 	releaseall
 	end
 

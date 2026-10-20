@@ -1,11 +1,11 @@
 @ Johto (data/maps/Route32_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 Route32_PokemonCenter_hns_MapScripts::
-	map_script 3, Route32_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, Route32_PokemonCenter_OnTransition
 	.byte 0
 
 Route32_PokemonCenter_OnTransition::
-	setrespawn 143
+	setrespawn JOHTO_HEAL_LOCATION_ROUTE_32_HNS
 	end
 
 Route32_PokemonCenter_EventScript_Lass::
@@ -20,9 +20,9 @@ Route32_PokemonCenter_EventScript_FishingGuru::
 	lock
 	faceplayer
 	checkitem ITEM_OLD_ROD
-	goto_if_eq 32781, TRUE, Route32_PokemonCenter_EventScript_FishingGuru3
+	goto_if_eq VAR_RESULT, TRUE, Route32_PokemonCenter_EventScript_FishingGuru3
 	msgbox Route32_Pokecenter_Text_FishingGuruQuestion, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Route32_PokemonCenter_EventScript_FishingGuru2
+	goto_if_eq VAR_RESULT, TRUE, Route32_PokemonCenter_EventScript_FishingGuru2
 	msgbox Route32_Pokecenter_Text_FishingGuruNo, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -31,7 +31,7 @@ Route32_PokemonCenter_EventScript_FishingGuru::
 Route32_PokemonCenter_EventScript_FishingGuru2::
 	msgbox Route32_Pokecenter_Text_FishingGuruYes, MSGBOX_DEFAULT
 	giveitem ITEM_OLD_ROD
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
 	msgbox Route32_Pokecenter_Text_FishingGuruGiveRod, MSGBOX_DEFAULT
 	closemessage
 	release

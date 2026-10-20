@@ -1,14 +1,14 @@
 @ Johto (data/maps/BlackthornCity_Gym_hns/scripts.inc), as built into the FireRed game.
 
 BlackthornCity_Gym_hns_MapScripts::
-	map_script 1, BlackthornGym_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, BlackthornGym_OnLoad
 	.byte 0
 
 BlackthornGym_OnLoad::
-	call_if_eq 20551, 1, BlackthornGym_MapScript_Var1
-	call_if_eq 20551, 2, BlackthornGym_MapScript_Var2
-	call_if_eq 20551, 3, BlackthornGym_MapScript_Var3
-	call_if_eq 20551, 4, BlackthornGym_MapScript_Var4
+	call_if_eq JOHTO_VAR_BLACKTHORN_GYM_STATE, 1, BlackthornGym_MapScript_Var1
+	call_if_eq JOHTO_VAR_BLACKTHORN_GYM_STATE, 2, BlackthornGym_MapScript_Var2
+	call_if_eq JOHTO_VAR_BLACKTHORN_GYM_STATE, 3, BlackthornGym_MapScript_Var3
+	call_if_eq JOHTO_VAR_BLACKTHORN_GYM_STATE, 4, BlackthornGym_MapScript_Var4
 	end
 
 BlackthornGym_MapScript_Var1::
@@ -35,9 +35,9 @@ BlackthornGym_MapScript_Var4::
 
 BlackthornGym_TriggerBridge1::
 	call BlackthornGym_MapScript_BuildBridge1
-	playse 20
+	playse SE_BANG
 	special DrawWholeMapView
-	setvar 20551, 1
+	setvar JOHTO_VAR_BLACKTHORN_GYM_STATE, 1
 	end
 
 BlackthornGym_MapScript_BuildBridge1::
@@ -69,9 +69,9 @@ BlackthornGym_MapScript_BuildBridge1::
 
 BlackthornGym_TriggerBridge2::
 	call BlackthornGym_MapScript_BuildBridge2
-	playse 20
+	playse SE_BANG
 	special DrawWholeMapView
-	setvar 20551, 2
+	setvar JOHTO_VAR_BLACKTHORN_GYM_STATE, 2
 	end
 
 BlackthornGym_MapScript_BuildBridge2::
@@ -109,9 +109,9 @@ BlackthornGym_MapScript_BuildBridge2::
 
 BlackthornGym_TriggerBridge3::
 	call BlackthornGym_MapScript_BuildBridge3
-	playse 20
+	playse SE_BANG
 	special DrawWholeMapView
-	setvar 20551, 3
+	setvar JOHTO_VAR_BLACKTHORN_GYM_STATE, 3
 	end
 
 BlackthornGym_MapScript_BuildBridge3::
@@ -149,9 +149,9 @@ BlackthornGym_MapScript_BuildBridge3::
 
 BlackthornGym_TriggerBridge4::
 	call BlackthornGym_MapScript_BuildBridge4
-	playse 20
+	playse SE_BANG
 	special DrawWholeMapView
-	setvar 20551, 4
+	setvar JOHTO_VAR_BLACKTHORN_GYM_STATE, 4
 	end
 
 BlackthornGym_MapScript_BuildBridge4::
@@ -173,43 +173,43 @@ BlackthornGym_MapScript_BuildBridge4::
 	return
 
 BlackthornGym_EventScript_Cody::
-	trainerbattle_single 1082, BlackthornGym_Text_CooltrainermCodySeenText, BlackthornGym_Text_CooltrainermCodyBeatenText
+	trainerbattle_single TRAINER_JOHTO_CODY_HNS, BlackthornGym_Text_CooltrainermCodySeenText, BlackthornGym_Text_CooltrainermCodyBeatenText
 	msgbox BlackthornGym_Text_CooltrainermCodyAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 BlackthornGym_EventScript_Fran::
-	trainerbattle_single 1099, BlackthornGym_Text_CooltrainerfFranSeenText, BlackthornGym_Text_CooltrainerfFranBeatenText
+	trainerbattle_single TRAINER_JOHTO_FRAN_HNS, BlackthornGym_Text_CooltrainerfFranSeenText, BlackthornGym_Text_CooltrainerfFranBeatenText
 	msgbox BlackthornGym_Text_CooltrainerfFranAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 BlackthornGym_EventScript_Paul::
-	trainerbattle_single 1081, BlackthornGym_Text_CooltrainermPaulSeenText, BlackthornGym_Text_CooltrainermPaulBeatenText
+	trainerbattle_single TRAINER_JOHTO_PAUL_HNS, BlackthornGym_Text_CooltrainermPaulSeenText, BlackthornGym_Text_CooltrainermPaulBeatenText
 	msgbox BlackthornGym_Text_CooltrainermPaulAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 BlackthornGym_EventScript_Mike::
-	trainerbattle_single 1083, BlackthornGym_Text_CooltrainermMikeSeenText, BlackthornGym_Text_CooltrainermMikeBeatenText
+	trainerbattle_single TRAINER_JOHTO_MIKE_HNS, BlackthornGym_Text_CooltrainermMikeSeenText, BlackthornGym_Text_CooltrainermMikeBeatenText
 	msgbox BlackthornGym_Text_CooltrainermMikeAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 BlackthornGym_EventScript_Lola::
-	trainerbattle_single 1100, BlackthornGym_Text_CooltrainerfLolaSeenText, BlackthornGym_Text_CooltrainerfLolaBeatenText
+	trainerbattle_single TRAINER_JOHTO_LOLA_HNS, BlackthornGym_Text_CooltrainerfLolaSeenText, BlackthornGym_Text_CooltrainerfLolaBeatenText
 	msgbox BlackthornGym_Text_CooltrainerfLolaAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 BlackthornGym_EventScript_Clair::
 	lock
 	faceplayer
-	goto_if_set 10399, BlackthornGym_EventScript_ClairAfterLeague
-	goto_if_ge 20550, 4, BlackthornGym_EventScript_Clair_Defeated
-	goto_if_eq 20550, 2, BlackthornGym_EventScript_ClairDuringChallenge
+	goto_if_set JOHTO_FLAG_IS_CHAMPION, BlackthornGym_EventScript_ClairAfterLeague
+	goto_if_ge JOHTO_VAR_BLACKTHORN_CITY_STATE, 4, BlackthornGym_EventScript_Clair_Defeated
+	goto_if_eq JOHTO_VAR_BLACKTHORN_CITY_STATE, 2, BlackthornGym_EventScript_ClairDuringChallenge
 	msgbox BlackthornGym_Text_ClairIntroText, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1446, BlackthornGym_Text_ClairWinText
+	trainerbattle_no_intro TRAINER_JOHTO_CLAIR_1_HNS, BlackthornGym_Text_ClairWinText
 	msgbox BlackthornGym_Text_ClairText_GoToDragonsDen, MSGBOX_DEFAULT
-	setflag 8750
-	setvar 32776, 8
+	setflag JOHTO_FLAG_DEFEATED_BLACKTHORN_GYM
+	setvar VAR_0x8008, 8
 	call J_Common_EventScript_SetGymTrainers_hns
-	setvar 20550, 2
+	setvar JOHTO_VAR_BLACKTHORN_CITY_STATE, 2
 	closemessage
 	release
 	end
@@ -370,14 +370,14 @@ BlackthornGym_Text_CooltrainerfLolaAfterBattleText:
 BlackthornGym_EventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set 8750, BlackthornGym_EventScript_GymGuy2
+	goto_if_set JOHTO_FLAG_DEFEATED_BLACKTHORN_GYM, BlackthornGym_EventScript_GymGuy2
 	msgbox BlackthornGym_Text_GuideText, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 BlackthornGym_EventScript_GymGuy2::
-	goto_if_set 10375, BlackthornGym_EventScript_GymGuy3
+	goto_if_set JOHTO_FLAG_BADGE08_GET, BlackthornGym_EventScript_GymGuy3
 	msgbox BlackthornGym_Text_GuideGotoDragonsDen, MSGBOX_DEFAULT
 	release
 	end
@@ -419,7 +419,7 @@ BlackthornGym_Text_GuideWinText:
 
 BlackthornGym_EventScript_Statue::
 	lock
-	goto_if_set 10375, BlackthornGym_EventScript_Statue2
+	goto_if_set JOHTO_FLAG_BADGE08_GET, BlackthornGym_EventScript_Statue2
 	msgbox BlackthornGym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

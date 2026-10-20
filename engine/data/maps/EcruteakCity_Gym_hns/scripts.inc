@@ -6,7 +6,7 @@ EcruteakCity_Gym_hns_MapScripts::
 EcruteakCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set 8746, EcruteakCity_Gym_EventScript_GymGuy2
+	goto_if_set JOHTO_FLAG_DEFEATED_ECRUTEAK_CITY_GYM, EcruteakCity_Gym_EventScript_GymGuy2
 	msgbox EcruteakCity_GymGuideText, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -18,43 +18,43 @@ EcruteakCity_Gym_EventScript_GymGuy2::
 	end
 
 EcruteakCity_Gym_EventScript_Jeffrey::
-	trainerbattle_single 1378, SageJeffreySeenText, SageJeffreyBeatenText
+	trainerbattle_single TRAINER_JOHTO_JEFFREY_HNS, SageJeffreySeenText, SageJeffreyBeatenText
 	msgbox SageJeffreyAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 EcruteakCity_Gym_EventScript_Ping::
-	trainerbattle_single 1379, SagePingSeenText, SagePingBeatenText
+	trainerbattle_single TRAINER_JOHTO_PING_HNS, SagePingSeenText, SagePingBeatenText
 	msgbox SagePingAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 EcruteakCity_Gym_EventScript_Martha::
-	trainerbattle_single 1386, MediumMarthaSeenText, MediumMarthaBeatenText
+	trainerbattle_single TRAINER_JOHTO_MARTHA_HNS, MediumMarthaSeenText, MediumMarthaBeatenText
 	msgbox MediumMarthaAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 EcruteakCity_Gym_EventScript_Grace::
-	trainerbattle_single 1387, MediumGraceSeenText, MediumGraceBeatenText
+	trainerbattle_single TRAINER_JOHTO_GRACE_HNS, MediumGraceSeenText, MediumGraceBeatenText
 	msgbox MediumGraceAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 EcruteakCity_Gym_EventScript_Morty::
 	lock
 	faceplayer
-	goto_if_set 8746, EcruteakCity_Gym_EventScript_Morty_Defeated
+	goto_if_set JOHTO_FLAG_DEFEATED_ECRUTEAK_CITY_GYM, EcruteakCity_Gym_EventScript_Morty_Defeated
 	msgbox MortyIntroText, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1432, MortyWinLossText
+	trainerbattle_no_intro TRAINER_JOHTO_MORTY_1_HNS, MortyWinLossText
 	message Text_ReceivedFogBadge
 	waitmessage
 	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox MortyText_FogBadgeSpeech, MSGBOX_DEFAULT
-	setflag 10371
-	setflag 8746
-	addvar 20582, 1
-	setvar 32776, 4
+	setflag JOHTO_FLAG_BADGE04_GET
+	setflag JOHTO_FLAG_DEFEATED_ECRUTEAK_CITY_GYM
+	addvar JOHTO_VAR_NUM_BADGES, 1
+	setvar VAR_0x8008, 4
 	call J_Common_EventScript_SetGymTrainers_hns
-	giveitem 611
+	giveitem ITEM_TM_SHADOW_BALL
 	msgbox MortyText_ShadowBallSpeech, MSGBOX_DEFAULT
-	setvar 20561, 4
+	setvar JOHTO_VAR_ECRUTEAK_CITY_STATE, 4
 	closemessage
 	release
 	end
@@ -67,7 +67,7 @@ EcruteakCity_Gym_EventScript_Morty_Defeated::
 
 EcruteakCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set 8746, EcruteakCity_Gym_EventScript_Statue2
+	goto_if_set JOHTO_FLAG_DEFEATED_ECRUTEAK_CITY_GYM, EcruteakCity_Gym_EventScript_Statue2
 	msgbox EcruteakCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

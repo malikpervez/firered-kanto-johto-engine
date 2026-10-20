@@ -1,18 +1,18 @@
 @ Johto (data/maps/RuinsOfAlph_B1F_hns/scripts.inc), as built into the FireRed game.
 
 RuinsOfAlph_B1F_hns_MapScripts::
-	map_script 2, RuinsOfAlph_B1F_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, RuinsOfAlph_B1F_OnFrame
 	.byte 0
 
 RuinsOfAlph_B1F_OnFrame::
-	map_script_2 20596, 1, RuinsOfAlph_B1F_EventScript_Presence
+	map_script_2 JOHTO_VAR_RUINSOFALPH_STATE, 1, RuinsOfAlph_B1F_EventScript_Presence
 	.2byte 0
 
 RuinsOfAlph_B1F_EventScript_Presence::
 	lock
 	msgbox RuinsOfAlph_B1F_Text_Presence, MSGBOX_DEFAULT
 	closemessage
-	setvar 20596, 0
+	setvar JOHTO_VAR_RUINSOFALPH_STATE, 0
 	release
 	end
 

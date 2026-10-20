@@ -6,17 +6,17 @@ EmbeddedTower_hns_MapScripts::
 EmbeddedTower_EventScript_Rayquaza::
 	lock
 	faceplayer
-	playmoncry 384, 2
+	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
 	waitmoncry
-	seteventmon 384, 70
+	seteventmon SPECIES_RAYQUAZA, 70
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, EmbeddedTower_EventScript_RayquazaRan
-	fadescreenswapbuffers 1
-	removeobject 1
-	setflag 8262
-	fadescreenswapbuffers 0
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, EmbeddedTower_EventScript_RayquazaRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_EMBEDDEDRAYQUAZA
+	setflag JOHTO_FLAG_HIDE_RAYQUAZA
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 

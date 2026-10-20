@@ -1,8 +1,8 @@
 @ Johto (data/maps/NationalPark_Normal_hns/scripts.inc), as built into the FireRed game.
 
 NationalPark_Normal_hns_MapScripts::
-	map_script 3, NationalPark_Normal_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, NationalPark_Normal_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 NationalPark_Normal_OnTransition:
@@ -45,11 +45,11 @@ NationalPark_Normal_EventScript_Teacher2::
 NationalPark_Normal_EventScript_TeacherQuickclaw::
 	lock
 	faceplayer
-	goto_if_set 8732, NationalPark_Normal_EventScript_TeacherQuickclaw2
+	goto_if_set JOHTO_FLAG_GOT_QUICK_CLAW, NationalPark_Normal_EventScript_TeacherQuickclaw2
 	msgbox NationalPark_Normal_Text_Teacher1, MSGBOX_DEFAULT
 	giveitem ITEM_QUICK_CLAW
-	goto_if_eq 32781, FALSE, J_Common_EventScript_BagIsFull
-	setflag 8732
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_BagIsFull
+	setflag JOHTO_FLAG_GOT_QUICK_CLAW
 
 NationalPark_Normal_EventScript_TeacherQuickclaw2::
 	msgbox NationalPark_Normal_Text_Teacher1_QuickClaw, MSGBOX_DEFAULT
@@ -61,7 +61,7 @@ NationalPark_Normal_EventScript_Persian::
 	lock
 	faceplayer
 	waitse
-	playmoncry 53, 0
+	playmoncry SPECIES_PERSIAN, CRY_MODE_NORMAL
 	msgbox NationalPark_Normal_Text_Persian, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -108,9 +108,9 @@ NationalPark_Normal_Text_Persian:
 	.string "PERSIAN{SE_M_HEAT_WAVE}Fufushaa!$"
 
 NationalPark_Normal_EventScript_Jack::
-	trainerbattle_single 1041, NationalPark_Normal_Text_SchoolboyJack1_Seen, NationalPark_Normal_Text_SchoolboyJack1_Beaten, NationalPark_Normal_EventScript_RegisterJack
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, NationalPark_Normal_EventScript_RematchJack
+	trainerbattle_single TRAINER_JOHTO_JACK_HNS, NationalPark_Normal_Text_SchoolboyJack1_Seen, NationalPark_Normal_Text_SchoolboyJack1_Beaten, NationalPark_Normal_EventScript_RegisterJack
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, NationalPark_Normal_EventScript_RematchJack
 	msgbox NationalPark_Normal_Text_SchoolboyJack_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -118,25 +118,25 @@ NationalPark_Normal_EventScript_RegisterJack::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox NationalPark_Normal_Text_JackRegister, MSGBOX_DEFAULT
-	register_matchcall 1041
+	register_matchcall TRAINER_JOHTO_JACK_HNS
 	release
 	end
 
 NationalPark_Normal_EventScript_RematchJack::
-	trainerbattle_rematch 1041, NationalPark_Normal_Text_JackRematchIntro, NationalPark_Normal_Text_JackRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_JACK_HNS, NationalPark_Normal_Text_JackRematchIntro, NationalPark_Normal_Text_JackRematchDefeat
 	msgbox NationalPark_Normal_Text_JackPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 NationalPark_Normal_EventScript_Beverly::
-	trainerbattle_single 1418, NationalPark_Normal_Text_PokefanFBeverly1_Seen, NationalPark_Normal_Text_PokefanFBeverly1_Beaten, NationalPark_Normal_EventScript_RegisterBeverly
-	goto_if_set 8944, NationalPark_Normal_EventScript_BeverlyGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, NationalPark_Normal_EventScript_RematchBeverly
+	trainerbattle_single TRAINER_JOHTO_BEVERLY_HNS, NationalPark_Normal_Text_PokefanFBeverly1_Seen, NationalPark_Normal_Text_PokefanFBeverly1_Beaten, NationalPark_Normal_EventScript_RegisterBeverly
+	goto_if_set JOHTO_FLAG_BEVERLY_HAS_ITEM_HNS, NationalPark_Normal_EventScript_BeverlyGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, NationalPark_Normal_EventScript_RematchBeverly
 	msgbox NationalPark_Normal_Text_PokefanFBeverly_After, MSGBOX_AUTOCLOSE
 	end
 
 NationalPark_Normal_EventScript_RematchBeverly::
-	trainerbattle_rematch 1418, NationalPark_Normal_Text_PokefanFBeverly1_Seen, NationalPark_Normal_Text_PokefanFBeverly1_Beaten
+	trainerbattle_rematch TRAINER_JOHTO_BEVERLY_HNS, NationalPark_Normal_Text_PokefanFBeverly1_Seen, NationalPark_Normal_Text_PokefanFBeverly1_Beaten
 	msgbox NationalPark_Normal_Text_PokefanFBeverly_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -144,15 +144,15 @@ NationalPark_Normal_EventScript_RegisterBeverly::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox NationalPark_Normal_Text_BeverlyRegister, MSGBOX_DEFAULT
-	register_matchcall 1418
+	register_matchcall TRAINER_JOHTO_BEVERLY_HNS
 	release
 	end
 
 NationalPark_Normal_EventScript_BeverlyGiveItem::
 	msgbox NationalPark_Normal_Text_BeverlyHasItem, MSGBOX_DEFAULT
-	giveitem 20622
-	goto_if_eq 32781, FALSE, NationalPark_Normal_EventScript_BeverlyNoRoom
-	clearflag 8944
+	giveitem JOHTO_VAR_BEVERLY_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, NationalPark_Normal_EventScript_BeverlyNoRoom
+	clearflag JOHTO_FLAG_BEVERLY_HAS_ITEM_HNS
 	msgbox NationalPark_Normal_Text_BeverlyGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -161,17 +161,17 @@ NationalPark_Normal_EventScript_BeverlyNoRoom::
 	end
 
 NationalPark_Normal_EventScript_William::
-	trainerbattle_single 1396, NationalPark_Normal_Text_PokefanmWilliam_Seen, NationalPark_Normal_Text_PokefanmWilliam_Beaten
+	trainerbattle_single TRAINER_JOHTO_WILLIAM_HNS, NationalPark_Normal_Text_PokefanmWilliam_Seen, NationalPark_Normal_Text_PokefanmWilliam_Beaten
 	msgbox NationalPark_Normal_Text_PokefanmWilliam_After, MSGBOX_AUTOCLOSE
 	end
 
 NationalPark_Normal_EventScript_Krise::
-	trainerbattle_single 1071, NationalPark_Normal_Text_LassKrise_Seen, NationalPark_Normal_Text_LassKrise_Beaten
+	trainerbattle_single TRAINER_JOHTO_KRISE_HNS, NationalPark_Normal_Text_LassKrise_Seen, NationalPark_Normal_Text_LassKrise_Beaten
 	msgbox NationalPark_Normal_Text_LassKrise_After, MSGBOX_AUTOCLOSE
 	end
 
 NationalPark_Normal_EventScript_TM_Dig::
-	finditem 609
+	finditem ITEM_TM_DIG
 	end
 
 NationalPark_Normal_EventScript_Item_Soothe_Bell::

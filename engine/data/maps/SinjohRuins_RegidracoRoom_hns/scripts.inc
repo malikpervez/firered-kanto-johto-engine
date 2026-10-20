@@ -6,17 +6,17 @@ SinjohRuins_RegidracoRoom_hns_MapScripts::
 SinjohRuins_RegidragoRoom_EventScript_Regidrago::
 	lock
 	faceplayer
-	playmoncry 895, 2
+	playmoncry SPECIES_REGIDRAGO, CRY_MODE_ENCOUNTER
 	waitmoncry
-	seteventmon 895, 80
+	seteventmon SPECIES_REGIDRAGO, 80
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, SinjohRuins_RegidragoRoom_EventScript_RegidragoRan
-	fadescreenswapbuffers 1
-	removeobject 1
-	setflag 9136
-	fadescreenswapbuffers 0
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_RegidragoRoom_EventScript_RegidragoRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SINJOHRUINS_REGIDRAGO
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGIDRAGO
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 

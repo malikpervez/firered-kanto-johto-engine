@@ -1,38 +1,38 @@
 @ Johto (data/maps/GoldenrodCity_DepartmentStoreBasement_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_DepartmentStoreBasement_hns_MapScripts::
-	map_script 2, GoldenrodDeptElevator_OnFrame
-	map_script 1, GoldenrodCity_DepartmentStoreBasement_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, GoldenrodDeptElevator_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, GoldenrodCity_DepartmentStoreBasement_OnLoad
 	.byte 0
 
 GoldenrodCity_DepartmentStoreBasement_OnLoad::
-	call_if_set 8682, GoldenrodCity_DepartmentStoreBasement_TryMachoke1
-	call_if_set 8683, GoldenrodCity_DepartmentStoreBasement_TryMachoke2
-	call_if_set 8684, GoldenrodCity_DepartmentStoreBasement_TryMachoke3
+	call_if_set JOHTO_FLAG_GOLDENROD_MACHOKE_1, GoldenrodCity_DepartmentStoreBasement_TryMachoke1
+	call_if_set JOHTO_FLAG_GOLDENROD_MACHOKE_2, GoldenrodCity_DepartmentStoreBasement_TryMachoke2
+	call_if_set JOHTO_FLAG_GOLDENROD_MACHOKE_3, GoldenrodCity_DepartmentStoreBasement_TryMachoke3
 
 	end
 
 GoldenrodCity_DepartmentStoreBasement_TryMachoke1::
-	setobjectxyperm 11, 1, 12
-	setobjectxyperm 1, 1, 11
-	setobjectmovementtype 11, 0xA
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE1, 1, 12
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER1, 1, 11
+	setobjectmovementtype LOCALID_GOLDENROD_MACHOKE1, MOVEMENT_TYPE_FACE_RIGHT
 	return
 
 GoldenrodCity_DepartmentStoreBasement_TryMachoke2::
-	setobjectxyperm 12, 10, 11
-	setobjectxyperm 2, 9, 11
-	setobjectmovementtype 12, 0x8
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE2, 10, 11
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER2, 9, 11
+	setobjectmovementtype LOCALID_GOLDENROD_MACHOKE2, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 GoldenrodCity_DepartmentStoreBasement_TryMachoke3::
-	setobjectxyperm 13, 17, 16
-	setobjectxyperm 3, 18, 16
-	setobjectmovementtype 13, 0x9
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE3, 17, 16
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER3, 18, 16
+	setobjectmovementtype LOCALID_GOLDENROD_MACHOKE3, MOVEMENT_TYPE_FACE_LEFT
 	return
 
 GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt1::
 	lock
-	goto_if_unset 8682, GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder1
+	goto_if_unset JOHTO_FLAG_GOLDENROD_MACHOKE_1, GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder1
 	faceplayer
 	msgbox GoldenrodDeptStore_Text_B1FBlackBelt1, MSGBOX_DEFAULT
 	closemessage
@@ -41,7 +41,7 @@ GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt1::
 
 GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt2::
 	lock
-	goto_if_unset 8683, GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt2_Mid
+	goto_if_unset JOHTO_FLAG_GOLDENROD_MACHOKE_2, GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt2_Mid
 	faceplayer
 	msgbox GoldenrodDeptStore_Text_B1FBlackBelt2, MSGBOX_DEFAULT
 	closemessage
@@ -50,7 +50,7 @@ GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt2::
 
 GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt2_Mid::
 	checkitem ITEM_CARD_KEY
-	goto_if_eq 32781, TRUE, GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder2
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder2
 	msgbox GoldenrodDeptStore_Text_B1FBlackBelt2, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -58,7 +58,7 @@ GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt2_Mid::
 
 GoldenrodCity_DepartmentStoreBasement_EventScript_BlackBelt3::
 	lock
-	goto_if_unset 8684, GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder3
+	goto_if_unset JOHTO_FLAG_GOLDENROD_MACHOKE_3, GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder3
 	faceplayer
 	msgbox GoldenrodDeptStore_Text_B1FBlackBelt3After, MSGBOX_DEFAULT
 	closemessage
@@ -69,7 +69,7 @@ GoldenrodCity_DepartmentStoreBasement_EventScript_Machoke::
 	lock
 	faceplayer
 	waitse
-	playmoncry 67, 0
+	playmoncry SPECIES_MACHOKE, CRY_MODE_NORMAL
 	msgbox GoldenrodDeptStore_Text_B1FMachoke, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -78,42 +78,42 @@ GoldenrodCity_DepartmentStoreBasement_EventScript_Machoke::
 GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder1::
 	msgbox GoldenrodDeptStore_Text_BlackBeltMove, MSGBOX_DEFAULT
 	closemessage
-	playse 214
-	applymovement 1, GoldenrodCity_DepartmentStoreBasement_Movement_Boulder1
-	applymovement 11, GoldenrodCity_DepartmentStoreBasement_Movement_Machoke1
+	playse SE_M_STRENGTH
+	applymovement LOCALID_GOLDENROD_BOULDER1, GoldenrodCity_DepartmentStoreBasement_Movement_Boulder1
+	applymovement LOCALID_GOLDENROD_MACHOKE1, GoldenrodCity_DepartmentStoreBasement_Movement_Machoke1
 	waitmovement 0
 	waitmovement 0
-	setobjectxyperm 11, 1, 12
-	setobjectxyperm 1, 1, 11
-	setflag 8682
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE1, 1, 12
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER1, 1, 11
+	setflag JOHTO_FLAG_GOLDENROD_MACHOKE_1
 	release
 	end
 
 GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder2::
 	msgbox GoldenrodDeptStore_Text_BlackBeltMove, MSGBOX_DEFAULT
 	closemessage
-	playse 214
-	applymovement 2, GoldenrodCity_DepartmentStoreBasement_Movement_Boulder2
-	applymovement 12, GoldenrodCity_DepartmentStoreBasement_Movement_Machoke2
+	playse SE_M_STRENGTH
+	applymovement LOCALID_GOLDENROD_BOULDER2, GoldenrodCity_DepartmentStoreBasement_Movement_Boulder2
+	applymovement LOCALID_GOLDENROD_MACHOKE2, GoldenrodCity_DepartmentStoreBasement_Movement_Machoke2
 	waitmovement 0
 	waitmovement 0
-	setobjectxyperm 12, 10, 11
-	setobjectxyperm 2, 9, 11
-	setflag 8683
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE2, 10, 11
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER2, 9, 11
+	setflag JOHTO_FLAG_GOLDENROD_MACHOKE_2
 	release
 	end
 
 GoldenrodCity_DepartmentStoreBasement_EventScript_MachokeMoveBoulder3::
 	msgbox GoldenrodDeptStore_Text_BlackBeltMove, MSGBOX_DEFAULT
 	closemessage
-	playse 214
-	applymovement 3, GoldenrodCity_DepartmentStoreBasement_Movement_Boulder3
-	applymovement 13, GoldenrodCity_DepartmentStoreBasement_Movement_Machoke3
+	playse SE_M_STRENGTH
+	applymovement LOCALID_GOLDENROD_BOULDER3, GoldenrodCity_DepartmentStoreBasement_Movement_Boulder3
+	applymovement LOCALID_GOLDENROD_MACHOKE3, GoldenrodCity_DepartmentStoreBasement_Movement_Machoke3
 	waitmovement 0
 	waitmovement 0
-	setobjectxyperm 13, 17, 16
-	setobjectxyperm 3, 18, 16
-	setflag 8684
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE3, 17, 16
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER3, 18, 16
+	setflag JOHTO_FLAG_GOLDENROD_MACHOKE_3
 	release
 	end
 

@@ -4,7 +4,7 @@ Route47_hns_MapScripts::
 	.byte 0
 
 Route47_EventScript_Hiker::
-	trainerbattle_single 1297, Route47_Text_HikerSeen, Route47_Text_HikerBeaten
+	trainerbattle_single TRAINER_JOHTO_DEVIN_HNS, Route47_Text_HikerSeen, Route47_Text_HikerBeaten
 	msgbox Route47_Text_HikerAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -22,7 +22,7 @@ Route47_Text_HikerAfter::
 	.string "wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}partin{SE_M_SANDSTORM}laugh!$"
 
 Route47_EventScript_Camper::
-	trainerbattle_single 1371, Route47_Text_CamperSeen, Route47_Text_CamperBeaten
+	trainerbattle_single TRAINER_JOHTO_GRANT_HNS, Route47_Text_CamperSeen, Route47_Text_CamperBeaten
 	msgbox Route47_Text_CamperAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -39,13 +39,13 @@ Route47_Text_CamperAfter::
 	.string "Se{SE_M_REVERSAL}ya!$"
 
 Route47_EventScript_Thom::
-	trainerbattle_double 1424, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, J_Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_JOHTO_THOM_AND_KAE_HNS, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, J_Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route47_Text_Couple1After1, MSGBOX_AUTOCLOSE
 	end
 
 Route47_EventScript_Kae::
-	trainerbattle_double 1424, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, J_Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_JOHTO_THOM_AND_KAE_HNS, Route47_Text_Couple1Seen, Route47_Text_Couple1Beaten, J_Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route47_Text_Couple1After2, MSGBOX_AUTOCLOSE
 	end
@@ -70,13 +70,13 @@ Route47_Text_Couple1After2::
 	.string "lon{SE_M_REVERSAL}trainer{SE_M_PERISH_SONG}Bo{SE_M_YAWN}wa{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}wrong!$"
 
 Route47_EventScript_Duff::
-	trainerbattle_double 1425, Route47_Text_Couple2Seen, Route47_Text_Couple2Beaten, J_Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_JOHTO_DUFF_AND_EDA_HNS, Route47_Text_Couple2Seen, Route47_Text_Couple2Beaten, J_Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route47_Text_Couple2After1, MSGBOX_AUTOCLOSE
 	end
 
 Route47_EventScript_Eda::
-	trainerbattle_double 1425, Route47_Text_Couple2Seen, Route47_Text_Couple2Beaten, J_Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_JOHTO_DUFF_AND_EDA_HNS, Route47_Text_Couple2Seen, Route47_Text_Couple2Beaten, J_Route104_Text_GinaNotEnoughMons
 	msgbox Route47_Text_Couple2After2, MSGBOX_AUTOCLOSE
 	end
 
@@ -152,7 +152,7 @@ Route47_EventScript_Chinchou::
 	lock
 	faceplayer
 	waitse
-	playmoncry 170, 0
+	playmoncry SPECIES_CHINCHOU, CRY_MODE_NORMAL
 	msgbox Route47_Text_Chinchou, MSGBOX_DEFAULT
 	waitmoncry
 	release

@@ -2,30 +2,30 @@
 
 J_Interview_EventScript_EndInterview::
 	special InterviewAfter
-	incrementgamestat 6
+	incrementgamestat GAME_STAT_GOT_INTERVIEWED
 	release
 	end
 
 J_SlateportCity_PokemonFanClub_EventScript_ReporterNoNickname::
-	setvar 32773, 1
+	setvar VAR_0x8005, TVSHOW_FAN_CLUB_LETTER
 	special InterviewBefore
-	goto_if_eq 32781, TRUE, J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed2
-	copyvar 32777, 32774
+	goto_if_eq VAR_RESULT, TRUE, J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed2
+	copyvar VAR_0x8009, VAR_0x8006
 	msgbox J_SlateportCity_PokemonFanClub_Text_InterviewRequest, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview2
-	goto_if_eq 32781, NO, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2
+	goto_if_eq VAR_RESULT, YES, J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview2
+	goto_if_eq VAR_RESULT, NO, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2
 	end
 
 J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview2::
 	msgbox J_SlateportCity_PokemonFanClub_Text_TellMeAnythingAboutYourMon, MSGBOX_DEFAULT
-	setvar 32772, 5
-	copyvar 32773, 32777
-	setvar 32774, 1
+	setvar VAR_0x8004, EASY_CHAT_TYPE_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, EASY_CHAT_PERSON_REPORTER_FEMALE
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 1, J_SlateportCity_PokemonFanClub_EventScript_SubmitResponse2
-	goto_if_eq 32781, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2
+	goto_if_eq VAR_RESULT, 1, J_SlateportCity_PokemonFanClub_EventScript_SubmitResponse2
+	goto_if_eq VAR_RESULT, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2
 	end
 
 J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2::
@@ -35,7 +35,7 @@ J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview2::
 
 J_SlateportCity_PokemonFanClub_EventScript_SubmitResponse2::
 	msgbox J_SlateportCity_PokemonFanClub_Text_ThatsAllForInterview2, MSGBOX_DEFAULT
-	setvar 32773, 1
+	setvar VAR_0x8005, TVSHOW_FAN_CLUB_LETTER
 	goto J_Interview_EventScript_EndInterview
 	end
 
@@ -47,33 +47,33 @@ J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed2::
 J_SlateportCity_OceanicMuseum_1F_EventScript_Reporter::
 	lock
 	faceplayer
-	setvar 32773, 2
+	setvar VAR_0x8005, TVSHOW_RECENT_HAPPENINGS
 	special InterviewBefore
-	goto_if_eq 32781, TRUE, J_SlateportCity_OceanicMuseum_1F_EventScript_AlreadyInterviewed
-	copyvar 32777, 32774
-	goto_if_set 0, J_SlateportCity_OceanicMuseum_1F_EventScript_RequestInterviewShort
-	setflag 0
+	goto_if_eq VAR_RESULT, TRUE, J_SlateportCity_OceanicMuseum_1F_EventScript_AlreadyInterviewed
+	copyvar VAR_0x8009, VAR_0x8006
+	goto_if_set FLAG_OCEANIC_MUSEUM_MET_REPORTER, J_SlateportCity_OceanicMuseum_1F_EventScript_RequestInterviewShort
+	setflag FLAG_OCEANIC_MUSEUM_MET_REPORTER
 	msgbox J_SlateportCity_OceanicMuseum_1F_Text_InterviewRequest, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_SlateportCity_OceanicMuseum_1F_EventScript_AcceptInterview
-	goto_if_eq 32781, NO, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, YES, J_SlateportCity_OceanicMuseum_1F_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
 	end
 
 J_SlateportCity_OceanicMuseum_1F_EventScript_RequestInterviewShort::
 	msgbox J_SlateportCity_OceanicMuseum_1F_Text_InterviewRequestShort, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_SlateportCity_OceanicMuseum_1F_EventScript_AcceptInterview
-	goto_if_eq 32781, NO, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, YES, J_SlateportCity_OceanicMuseum_1F_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
 	end
 
 J_SlateportCity_OceanicMuseum_1F_EventScript_AcceptInterview::
 	msgbox J_SlateportCity_OceanicMuseum_1F_Text_TellMeExperienceInvolvingPokemon, MSGBOX_DEFAULT
-	setvar 32772, 5
-	copyvar 32773, 32777
-	setvar 32774, 0
+	setvar VAR_0x8004, EASY_CHAT_TYPE_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, EASY_CHAT_PERSON_REPORTER_MALE
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 1, J_SlateportCity_OceanicMuseum_1F_EventScript_SubmitResponse
-	goto_if_eq 32781, 0, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, 1, J_SlateportCity_OceanicMuseum_1F_EventScript_SubmitResponse
+	goto_if_eq VAR_RESULT, 0, J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview
 	end
 
 J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview::
@@ -83,7 +83,7 @@ J_SlateportCity_OceanicMuseum_1F_EventScript_DeclineInterview::
 
 J_SlateportCity_OceanicMuseum_1F_EventScript_SubmitResponse::
 	msgbox J_SlateportCity_OceanicMuseum_1F_Text_ThatsAllForInterview, MSGBOX_DEFAULT
-	setvar 32773, 2
+	setvar VAR_0x8005, TVSHOW_RECENT_HAPPENINGS
 	goto J_Interview_EventScript_EndInterview
 	end
 
@@ -95,22 +95,22 @@ J_SlateportCity_OceanicMuseum_1F_EventScript_AlreadyInterviewed::
 J_SlateportCity_PokemonFanClub_EventScript_Reporter::
 	lock
 	faceplayer
-	specialvar 32781, IsLeadMonNicknamedOrNotEnglish
-	goto_if_eq 32781, FALSE, J_SlateportCity_PokemonFanClub_EventScript_ReporterNoNickname
-	setvar 32773, 3
+	specialvar VAR_RESULT, IsLeadMonNicknamedOrNotEnglish
+	goto_if_eq VAR_RESULT, FALSE, J_SlateportCity_PokemonFanClub_EventScript_ReporterNoNickname
+	setvar VAR_0x8005, TVSHOW_PKMN_FAN_CLUB_OPINIONS
 	special InterviewBefore
-	goto_if_eq 32781, TRUE, J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed
-	copyvar 32777, 32774
+	goto_if_eq VAR_RESULT, TRUE, J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed
+	copyvar VAR_0x8009, VAR_0x8006
 	msgbox J_SlateportCity_PokemonFanClub_Text_InterviewRequestHasName, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview
-	goto_if_eq 32781, NO, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, YES, J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
 	end
 
 J_SlateportCity_PokemonFanClub_EventScript_AcceptInterview::
 	msgbox J_SlateportCity_PokemonFanClub_Text_HereGoesQuickAnswers, MSGBOX_DEFAULT
 	random 3
-	copyvar 32778, 32781
-	switch 32781
+	copyvar VAR_0x800A, VAR_RESULT
+	switch VAR_RESULT
 	case 0, J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion1
 	case 1, J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion2
 	case 2, J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion3
@@ -132,22 +132,22 @@ J_SlateportCity_PokemonFanClub_EventScript_RandomQuestion3::
 	end
 
 J_SlateportCity_PokemonFanClub_EventScript_ContinueInterview::
-	setvar 32772, 7
-	copyvar 32773, 32777
-	setvar 32774, 0
+	setvar VAR_0x8004, EASY_CHAT_TYPE_FAN_CLUB
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, 0
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
 	msgbox J_SlateportCity_PokemonFanClub_Text_WhatDoPokemonMeanToYou, MSGBOX_DEFAULT
-	setvar 32774, 1
+	setvar VAR_0x8006, 1
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, 0, J_SlateportCity_PokemonFanClub_EventScript_DeclineInterview
 	msgbox J_SlateportCity_PokemonFanClub_Text_ThatsAllForInterview, MSGBOX_DEFAULT
-	copyvar 32775, 32778
-	setvar 32773, 3
+	copyvar VAR_0x8007, VAR_0x800A
+	setvar VAR_0x8005, TVSHOW_PKMN_FAN_CLUB_OPINIONS
 	goto J_Interview_EventScript_EndInterview
 	end
 
@@ -164,26 +164,26 @@ J_SlateportCity_PokemonFanClub_EventScript_AlreadyInterviewed::
 J_LilycoveCity_ContestLobby_EventScript_Reporter::
 	lock
 	faceplayer
-	goto_if_set 2, J_LilycoveCity_ContestLobby_EventScript_AlreadyInterviewed
-	setvar 32773, 6
+	goto_if_set FLAG_TEMP_2, J_LilycoveCity_ContestLobby_EventScript_AlreadyInterviewed
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_POKEMON_PROFILE
 	special InterviewBefore
-	goto_if_eq 32781, TRUE, J_LilycoveCity_ContestLobby_EventScript_AlreadyInterviewed
-	copyvar 32777, 32774
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_ContestLobby_EventScript_AlreadyInterviewed
+	copyvar VAR_0x8009, VAR_0x8006
 	msgbox J_LilycoveCity_ContestLobby_Text_InterviewRequest, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_LilycoveCity_ContestLobby_EventScript_AcceptInterview
-	goto_if_eq 32781, NO, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, YES, J_LilycoveCity_ContestLobby_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_AcceptInterview::
 	msgbox J_LilycoveCity_ContestLobby_Text_DescribeContest, MSGBOX_DEFAULT
-	setvar 32772, 11
-	copyvar 32773, 32777
-	setvar 32774, 0
+	setvar VAR_0x8004, EASY_CHAT_TYPE_CONTEST_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, 0
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 1, J_LilycoveCity_ContestLobby_EventScript_SubmitResponse
-	goto_if_eq 32781, 0, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, 1, J_LilycoveCity_ContestLobby_EventScript_SubmitResponse
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_DeclineInterview::
@@ -192,19 +192,19 @@ J_LilycoveCity_ContestLobby_EventScript_DeclineInterview::
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_SubmitResponse::
-	setvar 32772, 24
+	setvar VAR_0x8004, 24
 	special SetContestCategoryStringVarForInterview
 	msgbox J_LilycoveCity_ContestLobby_Text_WhatImageWhenYouHearX, MSGBOX_DEFAULT
-	setvar 32772, 11
-	copyvar 32773, 32777
-	setvar 32774, 1
+	setvar VAR_0x8004, EASY_CHAT_TYPE_CONTEST_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
+	setvar VAR_0x8006, 1
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 0, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, 0, J_LilycoveCity_ContestLobby_EventScript_DeclineInterview
 	msgbox J_LilycoveCity_ContestLobby_Text_ThatsAllForInterview, MSGBOX_DEFAULT
-	setflag 2
-	setvar 32773, 6
+	setflag FLAG_TEMP_2
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_POKEMON_PROFILE
 	goto J_Interview_EventScript_EndInterview
 	end
 
@@ -214,11 +214,11 @@ J_LilycoveCity_ContestLobby_EventScript_AlreadyInterviewed::
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_TryShowContestReporter::
-	goto_if_ne 20598, 2, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
-	setvar 32773, 6
+	goto_if_ne JOHTO_VAR_CONTEST_HALL_STATE, 2, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_POKEMON_PROFILE
 	special InterviewBefore
-	goto_if_eq 32781, TRUE, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
-	switch 20600
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
+	switch JOHTO_VAR_CONTEST_TYPE
 	case 0, J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter
 	case 2, J_LilycoveCity_ContestLobby_EventScript_ShowContestReporter
 	case 1, J_LilycoveCity_ContestLobby_EventScript_ShowContestReporter
@@ -228,7 +228,7 @@ J_LilycoveCity_ContestLobby_EventScript_TryShowContestReporter::
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_ShowContestReporter::
-	clearflag 0
+	clearflag FLAG_HIDE_LILYCOVE_CONTEST_HALL_REPORTER
 	return
 
 J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter::
@@ -237,31 +237,31 @@ J_LilycoveCity_ContestLobby_EventScript_DontShowContestReporter::
 J_BattleFrontier_BattleTowerLobby_EventScript_Reporter::
 	lock
 	faceplayer
-	goto_if_set 2, J_BattleFrontier_BattleTowerLobby_EventScript_AlreadyInterviewed
-	setvar 32773, 7
+	goto_if_set FLAG_TEMP_2, J_BattleFrontier_BattleTowerLobby_EventScript_AlreadyInterviewed
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_BATTLE_TOWER_PROFILE
 	special InterviewBefore
-	goto_if_eq 32781, TRUE, J_BattleFrontier_BattleTowerLobby_EventScript_AlreadyInterviewed
-	copyvar 32777, 32774
+	goto_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattleTowerLobby_EventScript_AlreadyInterviewed
+	copyvar VAR_0x8009, VAR_0x8006
 	msgbox J_BattleFrontier_BattleTowerLobby_Text_InterviewRequest, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BattleFrontier_BattleTowerLobby_EventScript_AcceptInterview
-	goto_if_eq 32781, NO, J_BattleFrontier_BattleTowerLobby_EventScript_DeclineInterview
+	goto_if_eq VAR_RESULT, YES, J_BattleFrontier_BattleTowerLobby_EventScript_AcceptInterview
+	goto_if_eq VAR_RESULT, NO, J_BattleFrontier_BattleTowerLobby_EventScript_DeclineInterview
 	end
 
 J_BattleFrontier_BattleTowerLobby_EventScript_AcceptInterview::
 	message J_BattleFrontier_BattleTowerLobby_Text_HowDidBattleTowerTurnOut
 	waitmessage
-	multichoice 20, 8, 45, TRUE
-	copyvar 32776, 32781
-	call_if_eq 32781, 0, J_BattleFrontier_BattleTowerLobby_EventScript_Satisfied
-	call_if_eq 32781, 1, J_BattleFrontier_BattleTowerLobby_EventScript_Dissatisfied
+	multichoice 20, 8, MULTI_SATISFACTION, TRUE
+	copyvar VAR_0x8008, VAR_RESULT
+	call_if_eq VAR_RESULT, 0, J_BattleFrontier_BattleTowerLobby_EventScript_Satisfied
+	call_if_eq VAR_RESULT, 1, J_BattleFrontier_BattleTowerLobby_EventScript_Dissatisfied
 	msgbox J_BattleFrontier_BattleTowerLobby_Text_DescribeYourBattle, MSGBOX_DEFAULT
-	setvar 32772, 12
-	copyvar 32773, 32777
+	setvar VAR_0x8004, EASY_CHAT_TYPE_BATTLE_TOWER_INTERVIEW
+	copyvar VAR_0x8005, VAR_0x8009
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 1, J_BattleFrontier_BattleTowerLobby_EventScript_SubmitResponse
-	goto_if_eq 32781, 0, J_BattleFrontier_BattleTowerLobby_EventScript_CancelInterview
+	goto_if_eq VAR_RESULT, 1, J_BattleFrontier_BattleTowerLobby_EventScript_SubmitResponse
+	goto_if_eq VAR_RESULT, 0, J_BattleFrontier_BattleTowerLobby_EventScript_CancelInterview
 	end
 
 J_BattleFrontier_BattleTowerLobby_EventScript_DeclineInterview::
@@ -278,11 +278,11 @@ J_BattleFrontier_BattleTowerLobby_EventScript_Dissatisfied::
 	return
 
 J_BattleFrontier_BattleTowerLobby_EventScript_SubmitResponse::
-	goto_if_eq 32781, 0, J_BattleFrontier_BattleTowerLobby_EventScript_CancelInterview
+	goto_if_eq VAR_RESULT, 0, J_BattleFrontier_BattleTowerLobby_EventScript_CancelInterview
 	msgbox J_BattleFrontier_BattleTowerLobby_Text_ThatsGreatLine, MSGBOX_DEFAULT
-	setflag 2
-	copyvar 32772, 32776
-	setvar 32773, 7
+	setflag FLAG_TEMP_2
+	copyvar VAR_0x8004, VAR_0x8008
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_BATTLE_TOWER_PROFILE
 	goto J_Interview_EventScript_EndInterview
 	end
 
@@ -297,22 +297,22 @@ J_BattleFrontier_BattleTowerLobby_EventScript_AlreadyInterviewed::
 	end
 
 J_BattleFrontier_BattleTowerLobby_EventScript_ShowOrHideReporter::
-	goto_if_eq 20652, 0, J_BattleFrontier_BattleTowerLobby_EventScript_HideReporter
-	setvar 32773, 7
+	goto_if_eq JOHTO_VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, 0, J_BattleFrontier_BattleTowerLobby_EventScript_HideReporter
+	setvar VAR_0x8005, TVSHOW_BRAVO_TRAINER_BATTLE_TOWER_PROFILE
 	special InterviewBefore
-	goto_if_eq 32781, TRUE, J_BattleFrontier_BattleTowerLobby_EventScript_HideReporter
-	clearflag 8423
+	goto_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattleTowerLobby_EventScript_HideReporter
+	clearflag JOHTO_FLAG_HIDE_BATTLE_TOWER_REPORTER
 	return
 
 J_BattleFrontier_BattleTowerLobby_EventScript_HideReporter::
-	setflag 8423
+	setflag JOHTO_FLAG_HIDE_BATTLE_TOWER_REPORTER
 	return
 
 J_EventScript_ContestLiveInterview::
-	setvar 32773, 8
+	setvar VAR_0x8005, TVSHOW_CONTEST_LIVE_UPDATES
 	special InterviewBefore
-	goto_if_eq 32781, TRUE, J_EventScript_ContestLiveInterviewEnd
-	setvar 32773, 8
+	goto_if_eq VAR_RESULT, TRUE, J_EventScript_ContestLiveInterviewEnd
+	setvar VAR_0x8005, TVSHOW_CONTEST_LIVE_UPDATES
 	special InterviewAfter
 	return
 

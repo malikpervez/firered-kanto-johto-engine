@@ -7,14 +7,14 @@ RadioTower1F_EventScript_Grunt::
 	lock
 	faceplayer
 	msgbox RadioTower1F_Text_GruntM3Seen, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1144, RadioTower1F_Text_GruntM3Beaten
+	trainerbattle_no_intro TRAINER_JOHTO_GRUNT_2_HNS, RadioTower1F_Text_GruntM3Beaten
 	msgbox RadioTower1F_Text_GruntM3After, MSGBOX_AUTOCLOSE
-	turnobject 3, DIR_EAST
-	applymovement2 3, RadioTower1F_Movement_Rocket
+	turnobject LOCALID_GOLDENROD_RADIOTOWER_GRUNT, DIR_EAST
+	applymovement2 LOCALID_GOLDENROD_RADIOTOWER_GRUNT, RadioTower1F_Movement_Rocket
 	waitmovement 0
-	playse 9
-	removeobject 3
-	setflag 8306
+	playse SE_EXIT
+	removeobject LOCALID_GOLDENROD_RADIOTOWER_GRUNT
+	setflag JOHTO_FLAG_HIDE_ROCKET_GOLDENROD_RADIOTOWER_1
 	release
 	end
 
@@ -44,7 +44,7 @@ RadioTower1F_EventScript_Whitney::
 	faceplayer
 	msgbox RadioTower1F_Text_Whitney1, MSGBOX_DEFAULT
 	closemessage
-	turnobject 6, DIR_SOUTH
+	turnobject LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, DIR_SOUTH
 	release
 	end
 
@@ -67,7 +67,7 @@ RadioTower1F_EventScript_Reception::
 	lock
 	faceplayer
 	msgbox RadioTower1F_Text_ReceptionistWelcome, MSGBOX_DEFAULT
-	goto_if_unset 8798, RadioTower1F_EventScript_ReceptionOfferQuiz
+	goto_if_unset JOHTO_FLAG_ENABLE_RADIO, RadioTower1F_EventScript_ReceptionOfferQuiz
 	msgbox RadioTower1F_Text_ReceptionistNoTours, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -75,7 +75,7 @@ RadioTower1F_EventScript_Reception::
 
 RadioTower1F_EventScript_ReceptionOfferQuiz::
 	msgbox RadioTower1F_Text_RadioCardWomanOfferQuiz, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, RadioTower1F_EventScript_ReceptionQuiz1
+	goto_if_eq VAR_RESULT, TRUE, RadioTower1F_EventScript_ReceptionQuiz1
 	msgbox RadioTower1F_Text_DeclineQuiz, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -83,7 +83,7 @@ RadioTower1F_EventScript_ReceptionOfferQuiz::
 
 RadioTower1F_EventScript_ReceptionQuiz1::
 	msgbox RadioTower1F_Text_QuizQuestion1, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, RadioTower1F_EventScript_ReceptionQuiz2
+	goto_if_eq VAR_RESULT, TRUE, RadioTower1F_EventScript_ReceptionQuiz2
 	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -91,7 +91,7 @@ RadioTower1F_EventScript_ReceptionQuiz1::
 
 RadioTower1F_EventScript_ReceptionQuiz2::
 	msgbox RadioTower1F_Text_QuizQuestion2, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, RadioTower1F_EventScript_ReceptionQuiz3
+	goto_if_eq VAR_RESULT, TRUE, RadioTower1F_EventScript_ReceptionQuiz3
 	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -99,7 +99,7 @@ RadioTower1F_EventScript_ReceptionQuiz2::
 
 RadioTower1F_EventScript_ReceptionQuiz3::
 	msgbox RadioTower1F_Text_QuizQuestion3, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, RadioTower1F_EventScript_ReceptionQuiz4
+	goto_if_eq VAR_RESULT, FALSE, RadioTower1F_EventScript_ReceptionQuiz4
 	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -107,7 +107,7 @@ RadioTower1F_EventScript_ReceptionQuiz3::
 
 RadioTower1F_EventScript_ReceptionQuiz4::
 	msgbox RadioTower1F_Text_QuizQuestion4, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, RadioTower1F_EventScript_ReceptionQuiz5
+	goto_if_eq VAR_RESULT, TRUE, RadioTower1F_EventScript_ReceptionQuiz5
 	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -115,7 +115,7 @@ RadioTower1F_EventScript_ReceptionQuiz4::
 
 RadioTower1F_EventScript_ReceptionQuiz5::
 	msgbox RadioTower1F_Text_QuizQuestion5, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, RadioTower1F_EventScript_ReceptionGiveRadio
+	goto_if_eq VAR_RESULT, FALSE, RadioTower1F_EventScript_ReceptionGiveRadio
 	msgbox RadioTower1F_Text_WrongAnswer, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -124,27 +124,27 @@ RadioTower1F_EventScript_ReceptionQuiz5::
 RadioTower1F_EventScript_ReceptionGiveRadio::
 	msgbox RadioTower1F_Text_QuizWin, MSGBOX_DEFAULT
 	closemessage
-	playfanfare 530
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	msgbox RadioTower1F_Text_PokegearRadio, MSGBOX_AUTOCLOSE
 	waitfanfare
 	msgbox RadioTower1F_Text_TuneIn, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 6, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 6
-	turnobject 6, DIR_EAST
+	waitmovement LOCALID_GOLDENROD_RADIOTOWER_WHITNEY
+	turnobject LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, DIR_EAST
 	delay 20
-	turnobject 255, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox RadioTower1F_Text_Whitney2, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 6, GoldenrodCity_RadioTower_4F_Movement_WhitneyLeave
+	applymovement2 LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, GoldenrodCity_RadioTower_4F_Movement_WhitneyLeave
 	waitmovement 0
-	playse 9
-	removeobject 6
-	setflag 8798
-	setflag 8294
-	setvar 20569, 2
+	playse SE_EXIT
+	removeobject LOCALID_GOLDENROD_RADIOTOWER_WHITNEY
+	setflag JOHTO_FLAG_ENABLE_RADIO
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_BEAUTY
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 2
 	release
 	end
 
@@ -271,34 +271,34 @@ GoldenrodCity_RadioTower_1F_EventScript_LotteryClerk::
 	lock
 	faceplayer
 	dotimebasedevents
-	goto_if_ne 20533, ITEM_NONE, GoldenrodCity_RadioTower_1F_EventScript_GivePrizeFromEarlier
-	goto_if_set 10517, GoldenrodCity_RadioTower_1F_EventScript_ComeBackTomorrow
+	goto_if_ne JOHTO_VAR_POKELOT_PRIZE_ITEM, ITEM_NONE, GoldenrodCity_RadioTower_1F_EventScript_GivePrizeFromEarlier
+	goto_if_set JOHTO_FLAG_DAILY_PICKED_LOTO_TICKET, GoldenrodCity_RadioTower_1F_EventScript_ComeBackTomorrow
 	msgbox GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket, MSGBOX_YESNO
-	goto_if_eq 32781, NO, GoldenrodCity_RadioTower_1F_EventScript_PleaseVisitAgain
-	setflag 10517
+	goto_if_eq VAR_RESULT, NO, GoldenrodCity_RadioTower_1F_EventScript_PleaseVisitAgain
+	setflag JOHTO_FLAG_DAILY_PICKED_LOTO_TICKET
 	message GoldenrodCity_RadioTower_1F_Text_PleasePickTicket
 	waitmessage
 	special RetrieveLotteryNumber
-	copyvar 32776, 32781
+	copyvar VAR_0x8008, VAR_RESULT
 	special BufferLottoTicketNumber
 	msgbox GoldenrodCity_RadioTower_1F_Text_TicketNumberIsXPleaseWait, MSGBOX_DEFAULT
 	applymovement 4, J_Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	playse 4
+	playse SE_PC_ON
 	special PickLotteryCornerTicket
 	applymovement 4, J_Common_Movement_FacePlayer
 	waitmovement 0
-	goto_if_eq 32772, 0, GoldenrodCity_RadioTower_1F_EventScript_NoMatch
-	incrementgamestat 46
-	call_if_eq 32774, 0, GoldenrodCity_RadioTower_1F_EventScript_TicketMatchPartyMon
-	call_if_eq 32774, 1, GoldenrodCity_RadioTower_1F_EventScript_TicketMatchPCMon
-	bufferitemname STR_VAR_1, 32773
-	call_if_eq 32772, 1, GoldenrodCity_RadioTower_1F_EventScript_TwoDigitMatch
-	call_if_eq 32772, 2, GoldenrodCity_RadioTower_1F_EventScript_ThreeDigitMatch
-	call_if_eq 32772, 3, GoldenrodCity_RadioTower_1F_EventScript_FourDigitMatch
-	call_if_eq 32772, 4, GoldenrodCity_RadioTower_1F_EventScript_FullMatch
-	giveitem 32773
-	goto_if_eq 32781, FALSE, GoldenrodCity_RadioTower_1F_EventScript_RecordPrizeNoRoom
+	goto_if_eq VAR_0x8004, 0, GoldenrodCity_RadioTower_1F_EventScript_NoMatch
+	incrementgamestat GAME_STAT_WON_POKEMON_LOTTERY
+	call_if_eq VAR_0x8006, 0, GoldenrodCity_RadioTower_1F_EventScript_TicketMatchPartyMon
+	call_if_eq VAR_0x8006, 1, GoldenrodCity_RadioTower_1F_EventScript_TicketMatchPCMon
+	bufferitemname STR_VAR_1, VAR_0x8005
+	call_if_eq VAR_0x8004, 1, GoldenrodCity_RadioTower_1F_EventScript_TwoDigitMatch
+	call_if_eq VAR_0x8004, 2, GoldenrodCity_RadioTower_1F_EventScript_ThreeDigitMatch
+	call_if_eq VAR_0x8004, 3, GoldenrodCity_RadioTower_1F_EventScript_FourDigitMatch
+	call_if_eq VAR_0x8004, 4, GoldenrodCity_RadioTower_1F_EventScript_FullMatch
+	giveitem VAR_0x8005
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_RadioTower_1F_EventScript_RecordPrizeNoRoom
 	special TryPutLotteryWinnerReportOnAir
 	goto GoldenrodCity_RadioTower_1F_EventScript_PleaseVisitAgain2
 	end
@@ -348,8 +348,8 @@ GoldenrodCity_RadioTower_1F_EventScript_FullMatch::
 	return
 
 GoldenrodCity_RadioTower_1F_EventScript_RecordPrizeNoRoom::
-	copyvar 20541, 32772
-	copyvar 20533, 32773
+	copyvar JOHTO_VAR_POKELOT_PRIZE_PLACE, VAR_0x8004
+	copyvar JOHTO_VAR_POKELOT_PRIZE_ITEM, VAR_0x8005
 	goto GoldenrodCity_RadioTower_1F_EventScript_NoRoomForPrize
 	end
 
@@ -360,13 +360,13 @@ GoldenrodCity_RadioTower_1F_EventScript_NoRoomForPrize::
 
 GoldenrodCity_RadioTower_1F_EventScript_GivePrizeFromEarlier::
 	msgbox GoldenrodCity_RadioTower_1F_Text_PrizeWeveBeenHolding, MSGBOX_DEFAULT
-	giveitem 20533
-	goto_if_eq 32781, FALSE, GoldenrodCity_RadioTower_1F_EventScript_NoRoomForPrize
-	copyvar 32772, 20541
-	copyvar 32773, 20533
+	giveitem JOHTO_VAR_POKELOT_PRIZE_ITEM
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_RadioTower_1F_EventScript_NoRoomForPrize
+	copyvar VAR_0x8004, JOHTO_VAR_POKELOT_PRIZE_PLACE
+	copyvar VAR_0x8005, JOHTO_VAR_POKELOT_PRIZE_ITEM
 	special TryPutLotteryWinnerReportOnAir
-	setvar 20533, ITEM_NONE
-	setvar 20541, 0
+	setvar JOHTO_VAR_POKELOT_PRIZE_ITEM, ITEM_NONE
+	setvar JOHTO_VAR_POKELOT_PRIZE_PLACE, 0
 	release
 	end
 

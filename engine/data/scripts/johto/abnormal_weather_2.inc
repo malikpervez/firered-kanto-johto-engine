@@ -1,194 +1,194 @@
 @ Johto (data/scripts/abnormal_weather.inc), as built into the FireRed game.
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute114North::
-	setmetatile 7, 3, 0x347, TRUE
-	setmetatile 7, 4, 0x34F, FALSE
+	setmetatile 7, 3, METATILE_Fallarbor_RedCaveEntrance_Top, TRUE
+	setmetatile 7, 4, METATILE_Fallarbor_RedCaveEntrance_Bottom, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute114South::
-	setmetatile 6, 45, 0x259, TRUE
-	setmetatile 6, 46, 0x261, FALSE
+	setmetatile 6, 45, METATILE_Fallarbor_BrownCaveEntrance_Top, TRUE
+	setmetatile 6, 46, METATILE_Fallarbor_BrownCaveEntrance_Bottom, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute115West::
-	setmetatile 21, 5, 0x259, TRUE
-	setmetatile 21, 6, 0x261, FALSE
+	setmetatile 21, 5, METATILE_Fallarbor_BrownCaveEntrance_Top, TRUE
+	setmetatile 21, 6, METATILE_Fallarbor_BrownCaveEntrance_Bottom, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute115East::
-	setmetatile 36, 9, 0x259, TRUE
-	setmetatile 36, 10, 0x261, FALSE
+	setmetatile 36, 9, METATILE_Fallarbor_BrownCaveEntrance_Top, TRUE
+	setmetatile 36, 10, METATILE_Fallarbor_BrownCaveEntrance_Bottom, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute116North::
-	setmetatile 59, 12, 0x09F, TRUE
-	setmetatile 59, 13, 0x0A7, FALSE
+	setmetatile 59, 12, METATILE_General_CaveEntrance_Top, TRUE
+	setmetatile 59, 13, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute116South::
-	setmetatile 79, 5, 0x09F, TRUE
-	setmetatile 79, 6, 0x0A7, FALSE
+	setmetatile 79, 5, METATILE_General_CaveEntrance_Top, TRUE
+	setmetatile 79, 6, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute118East::
-	setmetatile 42, 5, 0x09F, TRUE
-	setmetatile 42, 6, 0x0A7, FALSE
+	setmetatile 42, 5, METATILE_General_CaveEntrance_Top, TRUE
+	setmetatile 42, 6, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute118West::
-	setmetatile 9, 5, 0x09F, TRUE
-	setmetatile 9, 6, 0x0A7, FALSE
+	setmetatile 9, 5, METATILE_General_CaveEntrance_Top, TRUE
+	setmetatile 9, 6, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute105North::
-	setmetatile 10, 28, 0x14E, FALSE
-	setmetatile 11, 28, 0x14E, FALSE
-	setmetatile 9, 29, 0x14E, FALSE
-	setmetatile 10, 29, 0x14F, FALSE
-	setmetatile 11, 29, 0x14F, FALSE
-	setmetatile 12, 29, 0x14E, FALSE
-	setmetatile 9, 30, 0x14E, FALSE
-	setmetatile 10, 30, 0x14F, FALSE
-	setmetatile 11, 30, 0x14F, FALSE
-	setmetatile 12, 30, 0x14E, FALSE
-	setmetatile 10, 31, 0x14E, FALSE
-	setmetatile 11, 31, 0x14E, FALSE
+	setmetatile 10, 28, METATILE_General_RoughWater, FALSE
+	setmetatile 11, 28, METATILE_General_RoughWater, FALSE
+	setmetatile 9, 29, METATILE_General_RoughWater, FALSE
+	setmetatile 10, 29, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 11, 29, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 12, 29, METATILE_General_RoughWater, FALSE
+	setmetatile 9, 30, METATILE_General_RoughWater, FALSE
+	setmetatile 10, 30, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 11, 30, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 12, 30, METATILE_General_RoughWater, FALSE
+	setmetatile 10, 31, METATILE_General_RoughWater, FALSE
+	setmetatile 11, 31, METATILE_General_RoughWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute105South::
-	setmetatile 20, 53, 0x14E, FALSE
-	setmetatile 21, 53, 0x14E, FALSE
-	setmetatile 19, 54, 0x14E, FALSE
-	setmetatile 20, 54, 0x14F, FALSE
-	setmetatile 21, 54, 0x14F, FALSE
-	setmetatile 22, 54, 0x14E, FALSE
-	setmetatile 19, 55, 0x14E, FALSE
-	setmetatile 20, 55, 0x14F, FALSE
-	setmetatile 21, 55, 0x14F, FALSE
-	setmetatile 22, 55, 0x14E, FALSE
-	setmetatile 20, 56, 0x14E, FALSE
-	setmetatile 21, 56, 0x14E, FALSE
+	setmetatile 20, 53, METATILE_General_RoughWater, FALSE
+	setmetatile 21, 53, METATILE_General_RoughWater, FALSE
+	setmetatile 19, 54, METATILE_General_RoughWater, FALSE
+	setmetatile 20, 54, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 21, 54, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 22, 54, METATILE_General_RoughWater, FALSE
+	setmetatile 19, 55, METATILE_General_RoughWater, FALSE
+	setmetatile 20, 55, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 21, 55, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 22, 55, METATILE_General_RoughWater, FALSE
+	setmetatile 20, 56, METATILE_General_RoughWater, FALSE
+	setmetatile 21, 56, METATILE_General_RoughWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute125West::
-	setmetatile 8, 16, 0x14E, FALSE
-	setmetatile 9, 16, 0x14E, FALSE
-	setmetatile 7, 17, 0x14E, FALSE
-	setmetatile 8, 17, 0x14F, FALSE
-	setmetatile 9, 17, 0x14F, FALSE
-	setmetatile 10, 17, 0x14E, FALSE
-	setmetatile 7, 18, 0x14E, FALSE
-	setmetatile 8, 18, 0x14F, FALSE
-	setmetatile 9, 18, 0x14F, FALSE
-	setmetatile 10, 18, 0x14E, FALSE
-	setmetatile 8, 19, 0x14E, FALSE
-	setmetatile 9, 19, 0x14E, FALSE
+	setmetatile 8, 16, METATILE_General_RoughWater, FALSE
+	setmetatile 9, 16, METATILE_General_RoughWater, FALSE
+	setmetatile 7, 17, METATILE_General_RoughWater, FALSE
+	setmetatile 8, 17, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 9, 17, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 10, 17, METATILE_General_RoughWater, FALSE
+	setmetatile 7, 18, METATILE_General_RoughWater, FALSE
+	setmetatile 8, 18, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 9, 18, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 10, 18, METATILE_General_RoughWater, FALSE
+	setmetatile 8, 19, METATILE_General_RoughWater, FALSE
+	setmetatile 9, 19, METATILE_General_RoughWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute125East::
-	setmetatile 53, 18, 0x14E, FALSE
-	setmetatile 54, 18, 0x14E, FALSE
-	setmetatile 52, 19, 0x14E, FALSE
-	setmetatile 53, 19, 0x14F, FALSE
-	setmetatile 54, 19, 0x14F, FALSE
-	setmetatile 55, 19, 0x14E, FALSE
-	setmetatile 52, 20, 0x14E, FALSE
-	setmetatile 53, 20, 0x14F, FALSE
-	setmetatile 54, 20, 0x14F, FALSE
-	setmetatile 55, 20, 0x14E, FALSE
-	setmetatile 53, 21, 0x14E, FALSE
-	setmetatile 54, 21, 0x14E, FALSE
+	setmetatile 53, 18, METATILE_General_RoughWater, FALSE
+	setmetatile 54, 18, METATILE_General_RoughWater, FALSE
+	setmetatile 52, 19, METATILE_General_RoughWater, FALSE
+	setmetatile 53, 19, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 54, 19, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 55, 19, METATILE_General_RoughWater, FALSE
+	setmetatile 52, 20, METATILE_General_RoughWater, FALSE
+	setmetatile 53, 20, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 54, 20, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 55, 20, METATILE_General_RoughWater, FALSE
+	setmetatile 53, 21, METATILE_General_RoughWater, FALSE
+	setmetatile 54, 21, METATILE_General_RoughWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute127North::
-	setmetatile 57, 9, 0x14E, FALSE
-	setmetatile 58, 9, 0x14E, FALSE
-	setmetatile 56, 10, 0x14E, FALSE
-	setmetatile 57, 10, 0x14F, FALSE
-	setmetatile 58, 10, 0x14F, FALSE
-	setmetatile 59, 10, 0x14E, FALSE
-	setmetatile 56, 11, 0x14E, FALSE
-	setmetatile 57, 11, 0x14F, FALSE
-	setmetatile 58, 11, 0x14F, FALSE
-	setmetatile 59, 11, 0x14E, FALSE
-	setmetatile 57, 12, 0x14E, FALSE
-	setmetatile 58, 12, 0x14E, FALSE
+	setmetatile 57, 9, METATILE_General_RoughWater, FALSE
+	setmetatile 58, 9, METATILE_General_RoughWater, FALSE
+	setmetatile 56, 10, METATILE_General_RoughWater, FALSE
+	setmetatile 57, 10, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 58, 10, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 59, 10, METATILE_General_RoughWater, FALSE
+	setmetatile 56, 11, METATILE_General_RoughWater, FALSE
+	setmetatile 57, 11, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 58, 11, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 59, 11, METATILE_General_RoughWater, FALSE
+	setmetatile 57, 12, METATILE_General_RoughWater, FALSE
+	setmetatile 58, 12, METATILE_General_RoughWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute127South::
-	setmetatile 61, 30, 0x14E, FALSE
-	setmetatile 62, 30, 0x14E, FALSE
-	setmetatile 60, 31, 0x14E, FALSE
-	setmetatile 61, 31, 0x14F, FALSE
-	setmetatile 62, 31, 0x14F, FALSE
-	setmetatile 63, 31, 0x14E, FALSE
-	setmetatile 60, 32, 0x14E, FALSE
-	setmetatile 61, 32, 0x14F, FALSE
-	setmetatile 62, 32, 0x14F, FALSE
-	setmetatile 63, 32, 0x14E, FALSE
-	setmetatile 61, 33, 0x14E, FALSE
-	setmetatile 62, 33, 0x14E, FALSE
+	setmetatile 61, 30, METATILE_General_RoughWater, FALSE
+	setmetatile 62, 30, METATILE_General_RoughWater, FALSE
+	setmetatile 60, 31, METATILE_General_RoughWater, FALSE
+	setmetatile 61, 31, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 62, 31, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 63, 31, METATILE_General_RoughWater, FALSE
+	setmetatile 60, 32, METATILE_General_RoughWater, FALSE
+	setmetatile 61, 32, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 62, 32, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 63, 32, METATILE_General_RoughWater, FALSE
+	setmetatile 61, 33, METATILE_General_RoughWater, FALSE
+	setmetatile 62, 33, METATILE_General_RoughWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute129West::
-	setmetatile 16, 14, 0x14E, FALSE
-	setmetatile 17, 14, 0x14E, FALSE
-	setmetatile 15, 15, 0x14E, FALSE
-	setmetatile 16, 15, 0x14F, FALSE
-	setmetatile 17, 15, 0x14F, FALSE
-	setmetatile 18, 15, 0x14E, FALSE
-	setmetatile 15, 16, 0x14E, FALSE
-	setmetatile 16, 16, 0x14F, FALSE
-	setmetatile 17, 16, 0x14F, FALSE
-	setmetatile 18, 16, 0x14E, FALSE
-	setmetatile 16, 17, 0x14E, FALSE
-	setmetatile 17, 17, 0x14E, FALSE
+	setmetatile 16, 14, METATILE_General_RoughWater, FALSE
+	setmetatile 17, 14, METATILE_General_RoughWater, FALSE
+	setmetatile 15, 15, METATILE_General_RoughWater, FALSE
+	setmetatile 16, 15, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 17, 15, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 18, 15, METATILE_General_RoughWater, FALSE
+	setmetatile 15, 16, METATILE_General_RoughWater, FALSE
+	setmetatile 16, 16, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 17, 16, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 18, 16, METATILE_General_RoughWater, FALSE
+	setmetatile 16, 17, METATILE_General_RoughWater, FALSE
+	setmetatile 17, 17, METATILE_General_RoughWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_PlaceTilesRoute129East::
-	setmetatile 42, 19, 0x14E, FALSE
-	setmetatile 43, 19, 0x14E, FALSE
-	setmetatile 41, 20, 0x14E, FALSE
-	setmetatile 42, 20, 0x14F, FALSE
-	setmetatile 43, 20, 0x14F, FALSE
-	setmetatile 44, 20, 0x14E, FALSE
-	setmetatile 41, 21, 0x14E, FALSE
-	setmetatile 42, 21, 0x14F, FALSE
-	setmetatile 43, 21, 0x14F, FALSE
-	setmetatile 44, 21, 0x14E, FALSE
-	setmetatile 42, 22, 0x14E, FALSE
-	setmetatile 43, 22, 0x14E, FALSE
+	setmetatile 42, 19, METATILE_General_RoughWater, FALSE
+	setmetatile 43, 19, METATILE_General_RoughWater, FALSE
+	setmetatile 41, 20, METATILE_General_RoughWater, FALSE
+	setmetatile 42, 20, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 43, 20, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 44, 20, METATILE_General_RoughWater, FALSE
+	setmetatile 41, 21, METATILE_General_RoughWater, FALSE
+	setmetatile 42, 21, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 43, 21, METATILE_General_RoughDeepWater, FALSE
+	setmetatile 44, 21, METATILE_General_RoughWater, FALSE
+	setmetatile 42, 22, METATILE_General_RoughWater, FALSE
+	setmetatile 43, 22, METATILE_General_RoughWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_HideMapNamePopup::
-	setflag 16384
+	setflag FLAG_HIDE_MAP_NAME_POPUP
 	return
 
 J_AbnormalWeather_StartKyogreWeather::
-	setweather 13
+	setweather WEATHER_DOWNPOUR
 	return
 
 J_AbnormalWeather_StartGroudonWeather::
-	setweather 12
+	setweather WEATHER_DROUGHT
 	return
 
 J_AbnormalWeather_EventScript_EndEventAndCleanup_1::
 	lockall
-	goto_if_ge 20519, (1 + 8), J_AbnormalWeather_EventScript_ShowRainEndedMessage
+	goto_if_ge JOHTO_VAR_ABNORMAL_WEATHER_LOCATION, (1 + 8), J_AbnormalWeather_EventScript_ShowRainEndedMessage
 	goto J_AbnormalWeather_EventScript_ShowSunEndedMessage
 	end
 
 J_AbnormalWeather_EventScript_EndEventAndCleanup_2::
 	closemessage
-	fadescreenswapbuffers 1
-	setweather 2
+	fadescreenswapbuffers FADE_TO_BLACK
+	setweather WEATHER_SUNNY
 	doweather
 	call J_AbnormalWeather_EventScript_CleanupMapTiles
 	special DrawWholeMapView
-	setvar 20519, 0
-	setvar 20521, 0
-	clearflag 16384
-	fadescreenswapbuffers 0
+	setvar JOHTO_VAR_ABNORMAL_WEATHER_LOCATION, 0
+	setvar 20521, ABNORMAL_WEATHER_NONE
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
 	end
 
@@ -203,7 +203,7 @@ J_AbnormalWeather_EventScript_ShowSunEndedMessage::
 	end
 
 J_AbnormalWeather_EventScript_CleanupMapTiles::
-	switch 20519
+	switch JOHTO_VAR_ABNORMAL_WEATHER_LOCATION
 	case (1 + 0), J_AbnormalWeather_EventScript_CleanupRoute114North
 	case (1 + 1), J_AbnormalWeather_EventScript_CleanupRoute114South
 	case (1 + 2), J_AbnormalWeather_EventScript_CleanupRoute115West
@@ -223,167 +223,167 @@ J_AbnormalWeather_EventScript_CleanupMapTiles::
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute114North::
-	setmetatile 7, 3, 0x269, TRUE
-	setmetatile 7, 4, 0x269, TRUE
+	setmetatile 7, 3, METATILE_Fallarbor_RedRockWall, TRUE
+	setmetatile 7, 4, METATILE_Fallarbor_RedRockWall, TRUE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute114South::
-	setmetatile 6, 45, 0x265, TRUE
-	setmetatile 6, 46, 0x265, TRUE
+	setmetatile 6, 45, METATILE_Fallarbor_BrownRockWall, TRUE
+	setmetatile 6, 46, METATILE_Fallarbor_BrownRockWall, TRUE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute115West::
-	setmetatile 21, 5, 0x265, TRUE
-	setmetatile 21, 6, 0x265, TRUE
+	setmetatile 21, 5, METATILE_Fallarbor_BrownRockWall, TRUE
+	setmetatile 21, 6, METATILE_Fallarbor_BrownRockWall, TRUE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute115East::
-	setmetatile 36, 9, 0x265, TRUE
-	setmetatile 36, 10, 0x265, TRUE
+	setmetatile 36, 9, METATILE_Fallarbor_BrownRockWall, TRUE
+	setmetatile 36, 10, METATILE_Fallarbor_BrownRockWall, TRUE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute116North::
-	setmetatile 59, 12, 0x07C, TRUE
-	setmetatile 59, 13, 0x07C, TRUE
+	setmetatile 59, 12, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 59, 13, METATILE_General_RockWall_RockBase, TRUE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute116South::
-	setmetatile 79, 5, 0x07C, TRUE
-	setmetatile 79, 6, 0x07C, TRUE
+	setmetatile 79, 5, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 79, 6, METATILE_General_RockWall_RockBase, TRUE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute118East::
-	setmetatile 42, 5, 0x07C, TRUE
-	setmetatile 42, 6, 0x079, TRUE
+	setmetatile 42, 5, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 42, 6, METATILE_General_RockWall_GrassBase, TRUE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute118West::
-	setmetatile 9, 5, 0x07C, TRUE
-	setmetatile 9, 6, 0x079, TRUE
+	setmetatile 9, 5, METATILE_General_RockWall_RockBase, TRUE
+	setmetatile 9, 6, METATILE_General_RockWall_GrassBase, TRUE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute105North::
-	setmetatile 10, 28, 0x170, FALSE
-	setmetatile 11, 28, 0x170, FALSE
-	setmetatile 9, 29, 0x170, FALSE
-	setmetatile 10, 29, 0x170, FALSE
-	setmetatile 11, 29, 0x170, FALSE
-	setmetatile 12, 29, 0x170, FALSE
-	setmetatile 9, 30, 0x170, FALSE
-	setmetatile 10, 30, 0x170, FALSE
-	setmetatile 11, 30, 0x170, FALSE
-	setmetatile 12, 30, 0x170, FALSE
-	setmetatile 10, 31, 0x170, FALSE
-	setmetatile 11, 31, 0x170, FALSE
+	setmetatile 10, 28, METATILE_General_CalmWater, FALSE
+	setmetatile 11, 28, METATILE_General_CalmWater, FALSE
+	setmetatile 9, 29, METATILE_General_CalmWater, FALSE
+	setmetatile 10, 29, METATILE_General_CalmWater, FALSE
+	setmetatile 11, 29, METATILE_General_CalmWater, FALSE
+	setmetatile 12, 29, METATILE_General_CalmWater, FALSE
+	setmetatile 9, 30, METATILE_General_CalmWater, FALSE
+	setmetatile 10, 30, METATILE_General_CalmWater, FALSE
+	setmetatile 11, 30, METATILE_General_CalmWater, FALSE
+	setmetatile 12, 30, METATILE_General_CalmWater, FALSE
+	setmetatile 10, 31, METATILE_General_CalmWater, FALSE
+	setmetatile 11, 31, METATILE_General_CalmWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute105South::
-	setmetatile 20, 53, 0x170, FALSE
-	setmetatile 21, 53, 0x170, FALSE
-	setmetatile 19, 54, 0x170, FALSE
-	setmetatile 20, 54, 0x170, FALSE
-	setmetatile 21, 54, 0x170, FALSE
-	setmetatile 22, 54, 0x170, FALSE
-	setmetatile 19, 55, 0x170, FALSE
-	setmetatile 20, 55, 0x170, FALSE
-	setmetatile 21, 55, 0x170, FALSE
-	setmetatile 22, 55, 0x170, FALSE
-	setmetatile 20, 56, 0x170, FALSE
-	setmetatile 21, 56, 0x170, FALSE
+	setmetatile 20, 53, METATILE_General_CalmWater, FALSE
+	setmetatile 21, 53, METATILE_General_CalmWater, FALSE
+	setmetatile 19, 54, METATILE_General_CalmWater, FALSE
+	setmetatile 20, 54, METATILE_General_CalmWater, FALSE
+	setmetatile 21, 54, METATILE_General_CalmWater, FALSE
+	setmetatile 22, 54, METATILE_General_CalmWater, FALSE
+	setmetatile 19, 55, METATILE_General_CalmWater, FALSE
+	setmetatile 20, 55, METATILE_General_CalmWater, FALSE
+	setmetatile 21, 55, METATILE_General_CalmWater, FALSE
+	setmetatile 22, 55, METATILE_General_CalmWater, FALSE
+	setmetatile 20, 56, METATILE_General_CalmWater, FALSE
+	setmetatile 21, 56, METATILE_General_CalmWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute125West::
-	setmetatile 8, 16, 0x170, FALSE
-	setmetatile 9, 16, 0x170, FALSE
-	setmetatile 7, 17, 0x170, FALSE
-	setmetatile 8, 17, 0x170, FALSE
-	setmetatile 9, 17, 0x170, FALSE
-	setmetatile 10, 17, 0x170, FALSE
-	setmetatile 7, 18, 0x170, FALSE
-	setmetatile 8, 18, 0x170, FALSE
-	setmetatile 9, 18, 0x170, FALSE
-	setmetatile 10, 18, 0x170, FALSE
-	setmetatile 8, 19, 0x170, FALSE
-	setmetatile 9, 19, 0x170, FALSE
+	setmetatile 8, 16, METATILE_General_CalmWater, FALSE
+	setmetatile 9, 16, METATILE_General_CalmWater, FALSE
+	setmetatile 7, 17, METATILE_General_CalmWater, FALSE
+	setmetatile 8, 17, METATILE_General_CalmWater, FALSE
+	setmetatile 9, 17, METATILE_General_CalmWater, FALSE
+	setmetatile 10, 17, METATILE_General_CalmWater, FALSE
+	setmetatile 7, 18, METATILE_General_CalmWater, FALSE
+	setmetatile 8, 18, METATILE_General_CalmWater, FALSE
+	setmetatile 9, 18, METATILE_General_CalmWater, FALSE
+	setmetatile 10, 18, METATILE_General_CalmWater, FALSE
+	setmetatile 8, 19, METATILE_General_CalmWater, FALSE
+	setmetatile 9, 19, METATILE_General_CalmWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute125East::
-	setmetatile 53, 18, 0x170, FALSE
-	setmetatile 54, 18, 0x170, FALSE
-	setmetatile 52, 19, 0x170, FALSE
-	setmetatile 53, 19, 0x170, FALSE
-	setmetatile 54, 19, 0x170, FALSE
-	setmetatile 55, 19, 0x170, FALSE
-	setmetatile 52, 20, 0x170, FALSE
-	setmetatile 53, 20, 0x170, FALSE
-	setmetatile 54, 20, 0x170, FALSE
-	setmetatile 55, 20, 0x170, FALSE
-	setmetatile 53, 21, 0x170, FALSE
-	setmetatile 54, 21, 0x170, FALSE
+	setmetatile 53, 18, METATILE_General_CalmWater, FALSE
+	setmetatile 54, 18, METATILE_General_CalmWater, FALSE
+	setmetatile 52, 19, METATILE_General_CalmWater, FALSE
+	setmetatile 53, 19, METATILE_General_CalmWater, FALSE
+	setmetatile 54, 19, METATILE_General_CalmWater, FALSE
+	setmetatile 55, 19, METATILE_General_CalmWater, FALSE
+	setmetatile 52, 20, METATILE_General_CalmWater, FALSE
+	setmetatile 53, 20, METATILE_General_CalmWater, FALSE
+	setmetatile 54, 20, METATILE_General_CalmWater, FALSE
+	setmetatile 55, 20, METATILE_General_CalmWater, FALSE
+	setmetatile 53, 21, METATILE_General_CalmWater, FALSE
+	setmetatile 54, 21, METATILE_General_CalmWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute127North::
-	setmetatile 57, 9, 0x170, FALSE
-	setmetatile 58, 9, 0x170, FALSE
-	setmetatile 56, 10, 0x170, FALSE
-	setmetatile 57, 10, 0x170, FALSE
-	setmetatile 58, 10, 0x170, FALSE
-	setmetatile 59, 10, 0x170, FALSE
-	setmetatile 56, 11, 0x170, FALSE
-	setmetatile 57, 11, 0x170, FALSE
-	setmetatile 58, 11, 0x170, FALSE
-	setmetatile 59, 11, 0x170, FALSE
-	setmetatile 57, 12, 0x170, FALSE
-	setmetatile 58, 12, 0x170, FALSE
+	setmetatile 57, 9, METATILE_General_CalmWater, FALSE
+	setmetatile 58, 9, METATILE_General_CalmWater, FALSE
+	setmetatile 56, 10, METATILE_General_CalmWater, FALSE
+	setmetatile 57, 10, METATILE_General_CalmWater, FALSE
+	setmetatile 58, 10, METATILE_General_CalmWater, FALSE
+	setmetatile 59, 10, METATILE_General_CalmWater, FALSE
+	setmetatile 56, 11, METATILE_General_CalmWater, FALSE
+	setmetatile 57, 11, METATILE_General_CalmWater, FALSE
+	setmetatile 58, 11, METATILE_General_CalmWater, FALSE
+	setmetatile 59, 11, METATILE_General_CalmWater, FALSE
+	setmetatile 57, 12, METATILE_General_CalmWater, FALSE
+	setmetatile 58, 12, METATILE_General_CalmWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute127South::
-	setmetatile 61, 30, 0x170, FALSE
-	setmetatile 62, 30, 0x170, FALSE
-	setmetatile 60, 31, 0x170, FALSE
-	setmetatile 61, 31, 0x170, FALSE
-	setmetatile 62, 31, 0x170, FALSE
-	setmetatile 63, 31, 0x170, FALSE
-	setmetatile 60, 32, 0x170, FALSE
-	setmetatile 61, 32, 0x170, FALSE
-	setmetatile 62, 32, 0x170, FALSE
-	setmetatile 63, 32, 0x170, FALSE
-	setmetatile 61, 33, 0x170, FALSE
-	setmetatile 62, 33, 0x170, FALSE
+	setmetatile 61, 30, METATILE_General_CalmWater, FALSE
+	setmetatile 62, 30, METATILE_General_CalmWater, FALSE
+	setmetatile 60, 31, METATILE_General_CalmWater, FALSE
+	setmetatile 61, 31, METATILE_General_CalmWater, FALSE
+	setmetatile 62, 31, METATILE_General_CalmWater, FALSE
+	setmetatile 63, 31, METATILE_General_CalmWater, FALSE
+	setmetatile 60, 32, METATILE_General_CalmWater, FALSE
+	setmetatile 61, 32, METATILE_General_CalmWater, FALSE
+	setmetatile 62, 32, METATILE_General_CalmWater, FALSE
+	setmetatile 63, 32, METATILE_General_CalmWater, FALSE
+	setmetatile 61, 33, METATILE_General_CalmWater, FALSE
+	setmetatile 62, 33, METATILE_General_CalmWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute129West::
-	setmetatile 16, 14, 0x170, FALSE
-	setmetatile 17, 14, 0x170, FALSE
-	setmetatile 15, 15, 0x170, FALSE
-	setmetatile 16, 15, 0x170, FALSE
-	setmetatile 17, 15, 0x170, FALSE
-	setmetatile 18, 15, 0x170, FALSE
-	setmetatile 15, 16, 0x170, FALSE
-	setmetatile 16, 16, 0x170, FALSE
-	setmetatile 17, 16, 0x170, FALSE
-	setmetatile 18, 16, 0x170, FALSE
-	setmetatile 16, 17, 0x170, FALSE
-	setmetatile 17, 17, 0x170, FALSE
+	setmetatile 16, 14, METATILE_General_CalmWater, FALSE
+	setmetatile 17, 14, METATILE_General_CalmWater, FALSE
+	setmetatile 15, 15, METATILE_General_CalmWater, FALSE
+	setmetatile 16, 15, METATILE_General_CalmWater, FALSE
+	setmetatile 17, 15, METATILE_General_CalmWater, FALSE
+	setmetatile 18, 15, METATILE_General_CalmWater, FALSE
+	setmetatile 15, 16, METATILE_General_CalmWater, FALSE
+	setmetatile 16, 16, METATILE_General_CalmWater, FALSE
+	setmetatile 17, 16, METATILE_General_CalmWater, FALSE
+	setmetatile 18, 16, METATILE_General_CalmWater, FALSE
+	setmetatile 16, 17, METATILE_General_CalmWater, FALSE
+	setmetatile 17, 17, METATILE_General_CalmWater, FALSE
 	return
 
 J_AbnormalWeather_EventScript_CleanupRoute129East::
-	setmetatile 42, 19, 0x170, FALSE
-	setmetatile 43, 19, 0x170, FALSE
-	setmetatile 41, 20, 0x170, FALSE
-	setmetatile 42, 20, 0x170, FALSE
-	setmetatile 43, 20, 0x170, FALSE
-	setmetatile 44, 20, 0x170, FALSE
-	setmetatile 41, 21, 0x170, FALSE
-	setmetatile 42, 21, 0x170, FALSE
-	setmetatile 43, 21, 0x170, FALSE
-	setmetatile 44, 21, 0x170, FALSE
-	setmetatile 42, 22, 0x170, FALSE
-	setmetatile 43, 22, 0x170, FALSE
+	setmetatile 42, 19, METATILE_General_CalmWater, FALSE
+	setmetatile 43, 19, METATILE_General_CalmWater, FALSE
+	setmetatile 41, 20, METATILE_General_CalmWater, FALSE
+	setmetatile 42, 20, METATILE_General_CalmWater, FALSE
+	setmetatile 43, 20, METATILE_General_CalmWater, FALSE
+	setmetatile 44, 20, METATILE_General_CalmWater, FALSE
+	setmetatile 41, 21, METATILE_General_CalmWater, FALSE
+	setmetatile 42, 21, METATILE_General_CalmWater, FALSE
+	setmetatile 43, 21, METATILE_General_CalmWater, FALSE
+	setmetatile 44, 21, METATILE_General_CalmWater, FALSE
+	setmetatile 42, 22, METATILE_General_CalmWater, FALSE
+	setmetatile 43, 22, METATILE_General_CalmWater, FALSE
 	return
 
 J_AbnormalWeather_Underwater_SetupEscapeWarp::
-	switch 20519
+	switch JOHTO_VAR_ABNORMAL_WEATHER_LOCATION
 	case ((1 + 8) + 0), J_AbnormalWeather_Underwater_SetupEscapeWarpRoute105North
 	case ((1 + 8) + 1), J_AbnormalWeather_Underwater_SetupEscapeWarpRoute105South
 	case ((1 + 8) + 2), J_AbnormalWeather_Underwater_SetupEscapeWarpRoute125West

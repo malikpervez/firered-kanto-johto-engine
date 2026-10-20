@@ -1,19 +1,19 @@
 @ Johto (data/maps/RuinsOfAlph_PuzzleAndRewardChambers_hns/scripts.inc), as built into the FireRed game.
 
 RuinsOfAlph_PuzzleAndRewardChambers_hns_MapScripts::
-	map_script 1, RuinsOfAlph_PuzzleAndRewardChambers_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, RuinsOfAlph_PuzzleAndRewardChambers_OnLoad
 	.byte 0
 
 RuinsOfAlph_PuzzleAndRewardChambers_OnLoad::
-	call_if_set 8676, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoHole
-	call_if_set 8677, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteHole
-	call_if_set 8674, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylHole
-	call_if_set 8675, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohHole
+	call_if_set JOHTO_FLAG_COMPLETED_KABUTO_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoHole
+	call_if_set JOHTO_FLAG_COMPLETED_OMANYTE_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteHole
+	call_if_set JOHTO_FLAG_COMPLETED_AERODACTYL_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylHole
+	call_if_set JOHTO_FLAG_COMPLETED_HOOH_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohHole
 
-	call_if_set 8680, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoDoor
-	call_if_set 8681, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteDoor
-	call_if_set 8678, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylDoor
-	call_if_set 8679, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohDoor
+	call_if_set JOHTO_FLAG_KABUTO_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoDoor
+	call_if_set JOHTO_FLAG_OMANYTE_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteDoor
+	call_if_set JOHTO_FLAG_AERODACTYL_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylDoor
+	call_if_set JOHTO_FLAG_HOOH_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohDoor
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoHole::
@@ -91,8 +91,8 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_UnownText::
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_Receptionist::
 	lock
 	faceplayer
-	goto_if_set 8680, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_Receptionist3
-	goto_if_set 8676, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_Receptionist2
+	goto_if_set JOHTO_FLAG_KABUTO_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_Receptionist3
+	goto_if_set JOHTO_FLAG_COMPLETED_KABUTO_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_Receptionist2
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Receptionist1, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -111,41 +111,41 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_Receptionist3::
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzle::
-	fadescreen 1
-	setvar 32772, 0
-	goto_if_set 8676, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzleCompleted
-	setvar 32773, FALSE
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_KABUTO
+	goto_if_set JOHTO_FLAG_COMPLETED_KABUTO_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzleCompleted
+	setvar VAR_0x8005, FALSE
 	special DoSlidingPuzzle
 	waitstate
-	goto_if_eq 32781, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoSuccess
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoSuccess
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzleCompleted::
-	setvar 32773, TRUE
+	setvar VAR_0x8005, TRUE
 	special DoSlidingPuzzle
 	waitstate
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoSuccess::
-	setflag 8676
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setflag JOHTO_FLAG_COMPLETED_KABUTO_PUZZLE
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	setmetatile 20, 5, 0x302, FALSE
 	setmetatile 21, 5, 0x303, FALSE
-	playse 36
+	playse SE_CLICK
 	special DrawWholeMapView
 	delay 30
-	clearflag 8654
-	setvar 20596, 1
-	applymovement 255, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
+	clearflag JOHTO_FLAG_ITEM_DOME_FOSSIL
+	setvar JOHTO_VAR_RUINSOFALPH_STATE, 1
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
 	delay 30
 	special SpawnCameraObject
-	removeobject 255
-	playse 43
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
 	delay 60
 	warphole MAP_RUINS_OF_ALPH_B1F_HNS
 	waitstate
@@ -159,40 +159,40 @@ RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall:
 	step_end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzle::
-	fadescreen 1
-	setvar 32772, 1
-	goto_if_set 8677, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzleCompleted
-	setvar 32773, FALSE
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_OMANYTE
+	goto_if_set JOHTO_FLAG_COMPLETED_OMANYTE_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzleCompleted
+	setvar VAR_0x8005, FALSE
 	special DoSlidingPuzzle
 	waitstate
-	goto_if_eq 32781, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteSuccess
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteSuccess
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzleCompleted::
-	setvar 32773, TRUE
+	setvar VAR_0x8005, TRUE
 	special DoSlidingPuzzle
 	waitstate
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteSuccess::
-	setflag 8677
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setflag JOHTO_FLAG_COMPLETED_OMANYTE_PUZZLE
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	setmetatile 4, 22, 0x302, FALSE
 	setmetatile 5, 22, 0x303, FALSE
-	playse 36
+	playse SE_CLICK
 	special DrawWholeMapView
 	delay 30
-	clearflag 8655
-	applymovement 255, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
+	clearflag JOHTO_FLAG_ITEM_HELIX_FOSSIL
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
 	delay 30
 	special SpawnCameraObject
-	removeobject 255
-	playse 43
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
 	delay 60
 	warphole MAP_RUINS_OF_ALPH_B1F_HNS
 	waitstate
@@ -200,40 +200,40 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteSuccess::
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzle::
-	fadescreen 1
-	setvar 32772, 2
-	goto_if_set 8674, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzleCompleted
-	setvar 32773, FALSE
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_AERODACTYL
+	goto_if_set JOHTO_FLAG_COMPLETED_AERODACTYL_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzleCompleted
+	setvar VAR_0x8005, FALSE
 	special DoSlidingPuzzle
 	waitstate
-	goto_if_eq 32781, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylSuccess
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylSuccess
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzleCompleted::
-	setvar 32773, TRUE
+	setvar VAR_0x8005, TRUE
 	special DoSlidingPuzzle
 	waitstate
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylSuccess::
-	setflag 8674
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setflag JOHTO_FLAG_COMPLETED_AERODACTYL_PUZZLE
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	setmetatile 20, 22, 0x302, FALSE
 	setmetatile 21, 22, 0x303, FALSE
-	playse 36
+	playse SE_CLICK
 	special DrawWholeMapView
 	delay 30
-	clearflag 8656
-	applymovement 255, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
+	clearflag JOHTO_FLAG_ITEM_OLD_AMBER
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
 	delay 30
 	special SpawnCameraObject
-	removeobject 255
-	playse 43
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
 	delay 60
 	warphole MAP_RUINS_OF_ALPH_B1F_HNS
 	waitstate
@@ -241,40 +241,40 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylSuccess::
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HooHPuzzle::
-	fadescreen 1
-	setvar 32772, 3
-	goto_if_set 8675, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HoohPuzzleCompleted
-	setvar 32773, FALSE
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_HO_OH
+	goto_if_set JOHTO_FLAG_COMPLETED_HOOH_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HoohPuzzleCompleted
+	setvar VAR_0x8005, FALSE
 	special DoSlidingPuzzle
 	waitstate
-	goto_if_eq 32781, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohSuccess
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohSuccess
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HoohPuzzleCompleted::
-	setvar 32773, TRUE
+	setvar VAR_0x8005, TRUE
 	special DoSlidingPuzzle
 	waitstate
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohSuccess::
-	setflag 8675
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setflag JOHTO_FLAG_COMPLETED_HOOH_PUZZLE
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	setmetatile 4, 5, 0x302, FALSE
 	setmetatile 5, 5, 0x303, FALSE
-	playse 36
+	playse SE_CLICK
 	special DrawWholeMapView
 	delay 30
-	clearflag 8657
-	applymovement 255, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
+	clearflag JOHTO_FLAG_ITEM_GS_BALL
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
 	delay 30
 	special SpawnCameraObject
-	removeobject 255
-	playse 43
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
 	delay 60
 	warphole MAP_RUINS_OF_ALPH_B1F_HNS
 	waitstate
@@ -283,105 +283,105 @@ RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohSuccess::
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_CheckHooh::
 	lock
-	goto_if_set 8679, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten
-	checkspecies 250
-	goto_if_eq 32781, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardHooh
+	goto_if_set JOHTO_FLAG_HOOH_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten
+	checkspecies SPECIES_HO_OH
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardHooh
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Mon, MSGBOX_SIGN
 	closemessage
 	release
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardHooh::
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward, MSGBOX_DEFAULT
 	closemessage
-	playse 36
+	playse SE_CLICK
 	setmetatile 5, 1, 0x308, FALSE
 	special DrawWholeMapView
-	setflag 8679
+	setflag JOHTO_FLAG_HOOH_BROUGHT
 	release
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_CheckAerodactyl::
 	lock
-	goto_if_set 8678, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten
-	checkspecies 142
-	goto_if_eq 32781, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardAerodactyl
+	goto_if_set JOHTO_FLAG_AERODACTYL_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten
+	checkspecies SPECIES_AERODACTYL
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardAerodactyl
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Mon, MSGBOX_SIGN
 	closemessage
 	release
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardAerodactyl::
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward, MSGBOX_DEFAULT
 	closemessage
-	playse 36
+	playse SE_CLICK
 	setmetatile 21, 18, 0x308, FALSE
 	special DrawWholeMapView
-	setflag 8678
+	setflag JOHTO_FLAG_AERODACTYL_BROUGHT
 	release
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_CheckKabuto::
 	lock
-	goto_if_set 8680, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten
-	checkspecies 140
-	goto_if_eq 32781, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardKabuto
+	goto_if_set JOHTO_FLAG_KABUTO_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten
+	checkspecies SPECIES_KABUTO
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardKabuto
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Mon, MSGBOX_SIGN
 	closemessage
 	release
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardKabuto::
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward, MSGBOX_DEFAULT
 	closemessage
-	playse 36
+	playse SE_CLICK
 	setmetatile 21, 1, 0x308, FALSE
 	special DrawWholeMapView
-	setflag 8680
+	setflag JOHTO_FLAG_KABUTO_BROUGHT
 	release
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_CheckOmanyte::
 	lock
-	goto_if_set 8681, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten
-	checkspecies 138
-	goto_if_eq 32781, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardOmanyte
+	goto_if_set JOHTO_FLAG_OMANYTE_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardGotten
+	checkspecies SPECIES_OMANYTE
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardOmanyte
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Mon, MSGBOX_SIGN
 	closemessage
 	release
 	end
 
 RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardOmanyte::
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	msgbox RuinsOfAlph_PuzzleAndRewardChambers_Text_Reward, MSGBOX_DEFAULT
 	closemessage
-	playse 36
+	playse SE_CLICK
 	setmetatile 5, 18, 0x308, FALSE
 	special DrawWholeMapView
-	setflag 8681
+	setflag JOHTO_FLAG_OMANYTE_BROUGHT
 	release
 	end
 

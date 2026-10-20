@@ -1,31 +1,31 @@
 @ Johto (data/maps/IlexForest_hns/scripts.inc), as built into the FireRed game.
 
 IlexForest_hns_MapScripts::
-	map_script 3, IlexForest_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, IlexForest_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 IlexForest_OnTransition:
-	call_if_eq 20571, 1, IlexForest_EventScript_ReenterWhenFarfetchdLeaving
-	call_if_eq 20571, 2, IlexForest_EventScript_ReenterDuringCutScene
+	call_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 1, IlexForest_EventScript_ReenterWhenFarfetchdLeaving
+	call_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_ReenterDuringCutScene
 	callnative SetTimeBasedEncounters
 	end
 
 IlexForest_EventScript_ReenterWhenFarfetchdLeaving::
-	setobjectxyperm 3, 33, 51
+	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 33, 51
 	return
 
 IlexForest_EventScript_ReenterDuringCutScene::
-	clearflag 8290
-	clearflag 8287
-	setobjectxyperm 3, 28, 42
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_MASTER
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_APPRENTICE
+	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 28, 42
 	return
 
 IlexForest_EventScript_Apprentice::
 	lock
 	faceplayer
-	goto_if_eq 20571, 2, IlexForest_EventScript_Apprentice2
-	goto_if_eq 20571, 3, IlexForest_EventScript_Apprentice2
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_Apprentice2
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 3, IlexForest_EventScript_Apprentice2
 	msgbox IlexForest_Text_ApprenticeIntro, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -48,138 +48,138 @@ IlexForest_EventScript_Boss::
 IlexForest_EventScript_Farfetchd_1A::
 	lock
 	faceplayer
-	playmoncry 83, 0
+	playmoncry SPECIES_FARFETCHD, CRY_MODE_NORMAL
 	msgbox IlexForest_Text_Kwaaaa, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	goto_if_eq 20571, 3, IlexForest_EventScript_Farfetchd_Done
-	goto_if_eq 20571, 2, IlexForest_EventScript_Farfetchd_Done
-	goto_if_eq 20571, 1, IlexForest_EventScript_Farfetchd_Leave
-	goto_if_eq 32780, DIR_SOUTH, IlexForest_EventScript_Farfetchd_1B
-	applymovement 3, IlexForest_Movement_Farfetchd_1A
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 3, IlexForest_EventScript_Farfetchd_Done
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 2, IlexForest_EventScript_Farfetchd_Done
+	goto_if_eq JOHTO_VAR_ILEX_FOREST_FARFETCHD, 1, IlexForest_EventScript_Farfetchd_Leave
+	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_1B
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_1, IlexForest_Movement_Farfetchd_1A
 	waitmovement 0
-	setflag 8234
-	removeobject 3
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+	removeobject LOCALID_ILEX_FOREST_FARFETCHD_1
 
-	clearflag 8235
-	addobject 30
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+	addobject LOCALID_ILEX_FOREST_FARFETCHD_2
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_1B::
-	applymovement 3, IlexForest_Movement_Farfetchd_1B
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_1, IlexForest_Movement_Farfetchd_1B
 	waitmovement 0
-	setvar 20571, 1
-	setobjectxyperm 3, 33, 51
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 1
+	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 33, 51
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_2A::
 	lock
 	faceplayer
-	playmoncry 83, 0
+	playmoncry SPECIES_FARFETCHD, CRY_MODE_NORMAL
 	msgbox IlexForest_Text_Kwaaaa, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	goto_if_eq 32780, DIR_SOUTH, IlexForest_EventScript_Farfetchd_2B
-	applymovement 30, IlexForest_Movement_Farfetchd_2A
+	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_2B
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_2, IlexForest_Movement_Farfetchd_2A
 	waitmovement 0
-	setflag 8235
-	removeobject 30
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+	removeobject LOCALID_ILEX_FOREST_FARFETCHD_2
 
-	clearflag 8236
-	addobject 32
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+	addobject LOCALID_ILEX_FOREST_FARFETCHD_3
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_2B::
-	applymovement 30, IlexForest_Movement_Farfetchd_2B
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_2, IlexForest_Movement_Farfetchd_2B
 	waitmovement 0
-	setflag 8235
-	removeobject 30
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+	removeobject LOCALID_ILEX_FOREST_FARFETCHD_2
 
-	clearflag 8234
-	addobject 3
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+	addobject LOCALID_ILEX_FOREST_FARFETCHD_1
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_3A::
 	lock
 	faceplayer
-	playmoncry 83, 0
+	playmoncry SPECIES_FARFETCHD, CRY_MODE_NORMAL
 	msgbox IlexForest_Text_Kwaaaa, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	goto_if_eq 32780, DIR_SOUTH, IlexForest_EventScript_Farfetchd_3B
-	applymovement 32, IlexForest_Movement_Farfetchd_3A
+	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_3B
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_3, IlexForest_Movement_Farfetchd_3A
 	waitmovement 0
-	setflag 8236
-	removeobject 32
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+	removeobject LOCALID_ILEX_FOREST_FARFETCHD_3
 
-	clearflag 8235
-	addobject 30
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_2
+	addobject LOCALID_ILEX_FOREST_FARFETCHD_2
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_3B::
-	applymovement 32, IlexForest_Movement_Farfetchd_3B
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_3, IlexForest_Movement_Farfetchd_3B
 	waitmovement 0
-	setflag 8236
-	removeobject 32
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+	removeobject LOCALID_ILEX_FOREST_FARFETCHD_3
 
-	clearflag 8237
-	addobject 31
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
+	addobject LOCALID_ILEX_FOREST_FARFETCHD_4
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_4A::
 	lock
 	faceplayer
-	playmoncry 83, 0
+	playmoncry SPECIES_FARFETCHD, CRY_MODE_NORMAL
 	msgbox IlexForest_Text_Kwaaaa, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	goto_if_eq 32780, DIR_SOUTH, IlexForest_EventScript_Farfetchd_4B
-	applymovement 31, IlexForest_Movement_Farfetchd_4A
+	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_4B
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_4, IlexForest_Movement_Farfetchd_4A
 	waitmovement 0
-	setflag 8237
-	removeobject 31
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
+	removeobject LOCALID_ILEX_FOREST_FARFETCHD_4
 
-	clearflag 8236
-	addobject 32
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_3
+	addobject LOCALID_ILEX_FOREST_FARFETCHD_3
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_4B::
-	applymovement 31, IlexForest_Movement_Farfetchd_4B
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_4, IlexForest_Movement_Farfetchd_4B
 	waitmovement 0
-	setflag 8237
-	removeobject 31
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_4
+	removeobject LOCALID_ILEX_FOREST_FARFETCHD_4
 
-	clearflag 8234
-	addobject 3
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+	addobject LOCALID_ILEX_FOREST_FARFETCHD_1
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_Leave::
-	goto_if_eq 32780, DIR_EAST, IlexForest_EventScript_Farfetchd_Return
-	goto_if_eq 32780, DIR_SOUTH, IlexForest_EventScript_Farfetchd_Return
-	applymovement 3, IlexForest_Movement_Farfetchd_Leave
+	goto_if_eq VAR_FACING, DIR_EAST, IlexForest_EventScript_Farfetchd_Return
+	goto_if_eq VAR_FACING, DIR_SOUTH, IlexForest_EventScript_Farfetchd_Return
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_1, IlexForest_Movement_Farfetchd_Leave
 	waitmovement 0
-	setobjectxyperm 3, 28, 42
-	setvar 20571, 2
-	clearflag 8288
-	clearflag 8290
-	setflag 8281
+	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 28, 42
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 2
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_KIMONO
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_MASTER
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_CUT_MASTER
 	addobject 1
 	release
 	end
 
 IlexForest_EventScript_Farfetchd_Return::
-	setvar 20571, 0
-	applymovement 3, IlexForest_Movement_Farfetchd_Return
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 0
+	applymovement LOCALID_ILEX_FOREST_FARFETCHD_1, IlexForest_Movement_Farfetchd_Return
 	waitmovement 0
-	setobjectxyperm 3, 42, 47
+	setobjectxyperm LOCALID_ILEX_FOREST_FARFETCHD_1, 42, 47
 	release
 	end
 
@@ -194,20 +194,20 @@ IlexForest_EventScript_TriggerBot::
 
 IlexForest_EventScript_Trigger::
 	lock
-	turnobject 255, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox IlexForest_Text_CharcoalMasterIntro, MSGBOX_DEFAULT
 	closemessage
-	giveitem 682
-	goto_if_eq 32781, FALSE, J_Common_EventScript_BagIsFull
+	giveitem ITEM_HM_CUT
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_BagIsFull
 	msgbox IlexForest_Text_CharcoalMasterOutro, MSGBOX_DEFAULT
-	setflag 8693
-	setflag 8290
-	setflag 8287
-	setflag 8234
-	setvar 20571, 3
-	setvar 20547, 7
-	clearflag 8229
-	clearflag 8281
+	setflag JOHTO_FLAG_RECEIVED_HM_CUT
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_MASTER
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_APPRENTICE
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_FARFETCHD_1
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 3
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 7
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_FARFETCHD
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_CUT_MASTER
 	closemessage
 	release
 	end
@@ -221,13 +221,13 @@ IlexForest_EventScript_Picnicker::
 	end
 
 IlexForest_EventScript_BugcatcherWayne::
-	trainerbattle_single 1199, IlexForest_Text_BugCatcherWayneSeen, IlexForest_Text_BugCatcherWayneBeaten
+	trainerbattle_single TRAINER_JOHTO_WAYNE_HNS, IlexForest_Text_BugCatcherWayneSeen, IlexForest_Text_BugCatcherWayneBeaten
 	msgbox IlexForest_Text_BugCatcherWayneAfter, MSGBOX_AUTOCLOSE
 	end
 
 IlexForest_EventScript_Shrine::
 	lock
-	goto_if_eq 20547, 9, IlexForest_EventScript_Celebi_Event
+	goto_if_eq JOHTO_VAR_AZALEA_TOWN_STATE, 9, IlexForest_EventScript_Celebi_Event
 	msgbox IlexForest_Text_Shrine, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -235,53 +235,53 @@ IlexForest_EventScript_Shrine::
 
 IlexForest_EventScript_Celebi_Event::
 	msgbox IlexForest_Text_ShrineCelebiEvent, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, IlexForest_EventScript_Shrine_Cancel
+	goto_if_eq VAR_RESULT, FALSE, IlexForest_EventScript_Shrine_Cancel
 	msgbox IlexForest_Text_InsertGSBall, MSGBOX_DEFAULT
-	clearflag 8255
-	addobject 7
-	playse 202
-	applymovement 7, IlexForest_Movement_Celebi1
+	clearflag JOHTO_FLAG_HIDE_CELEBI
+	addobject LOCALID_ILEX_FOREST_CELEBI
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_ILEX_FOREST_CELEBI, IlexForest_Movement_Celebi1
 	waitmovement 0
-	playse 202
-	applymovement 7, IlexForest_Movement_Celebi2
-	turnobject 255, DIR_SOUTH
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_ILEX_FOREST_CELEBI, IlexForest_Movement_Celebi2
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	waitmovement 0
-	playse 202
-	applymovement 7, IlexForest_Movement_Celebi3
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_ILEX_FOREST_CELEBI, IlexForest_Movement_Celebi3
 	waitmovement 0
-	turnobject 255, DIR_WEST
-	playmoncry 251, 2
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	seteventmon 251, 40
+	seteventmon SPECIES_CELEBI, 40
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar 32781, GetBattleOutcome
-	call_if_eq 32781, 7, IlexForest_EventScript_Shrine_Caught
-	fadescreenswapbuffers 1
-	removeobject 7
-	setflag 8255
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, IlexForest_EventScript_Shrine_Caught
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ILEX_FOREST_CELEBI
+	setflag JOHTO_FLAG_HIDE_CELEBI
 	special GivePartyMonNationalRibbon
-	fadescreenswapbuffers 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 
 IlexForest_EventScript_Kurt::
-	clearflag 8289
-	addobject 33
-	applymovement 33, IlexForest_Movement_Kurt1
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_KURT
+	addobject LOCALID_ILEX_FOREST_KURT
+	applymovement LOCALID_ILEX_FOREST_KURT, IlexForest_Movement_Kurt1
 	waitmovement 0
-	turnobject 255, DIR_SOUTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	msgbox IlexForest_Text_KurtCaughtCelebi, MSGBOX_DEFAULT
 	closemessage
-	applymovement 33, IlexForest_Movement_Kurt2
+	applymovement LOCALID_ILEX_FOREST_KURT, IlexForest_Movement_Kurt2
 	waitmovement 0
-	setflag 8289
-	removeobject 33
-	setvar 20547, 10
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_KURT
+	removeobject LOCALID_ILEX_FOREST_KURT
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 10
 	release
 	end
 
 IlexForest_EventScript_Shrine_Caught::
-	setflag 8768
+	setflag JOHTO_FLAG_CAUGHT_CELEBI
 	return
 
 IlexForest_EventScript_Shrine_Cancel::
@@ -292,18 +292,18 @@ IlexForest_EventScript_Shrine_Cancel::
 IlexForest_EventScript_SecondCelebi::
 	lock
 	faceplayer
-	playmoncry 251, 2
+	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	seteventmon 251, 40
+	seteventmon SPECIES_CELEBI, 40
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, IlexForest_EventScript_SecondCelebiRan
-	fadescreenswapbuffers 1
-	removeobject 37
-	setflag 8291
-	fadescreenswapbuffers 0
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, IlexForest_EventScript_SecondCelebiRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ILEX_FOREST_SECOND_CELEBI
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI
+	fadescreenswapbuffers FADE_FROM_BLACK
 	special GivePartyMonNationalRibbon
 	release
 	end
@@ -322,46 +322,46 @@ IlexForest_EventScript_Sign::
 IlexForest_EventScript_Kimono::
 	lock
 	playbgm ((558 + 1) + 0x85), FALSE
-	playse 21
-	turnobject 0xFE, DIR_NORTH
-	applymovement2 35, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
+	applymovement2 LOCALID_ILEX_FOREST_KIMONO, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 35
-	applymovement2 35, IlexForest_Movement_Kimono_Girl1
+	waitmovement LOCALID_ILEX_FOREST_KIMONO
+	applymovement2 LOCALID_ILEX_FOREST_KIMONO, IlexForest_Movement_Kimono_Girl1
 	waitmovement 0
 	msgbox IlexForest_Text_Kimono_Girl1, MSGBOX_DEFAULT
 	closemessage
-	playse 202
-	applymovement2 35, IlexForest_Movement_Kimono_Girl_Spin
+	playse SE_M_PETAL_DANCE
+	applymovement2 LOCALID_ILEX_FOREST_KIMONO, IlexForest_Movement_Kimono_Girl_Spin
 	waitmovement 0
-	turnobject 35, DIR_SOUTH
+	turnobject LOCALID_ILEX_FOREST_KIMONO, DIR_SOUTH
 	msgbox IlexForest_Text_Kimono_Girl2, MSGBOX_YESNO
 	closemessage
 	msgbox IlexForest_Text_Kimono_Girl3, MSGBOX_DEFAULT
 	closemessage
 	playfirstmoncry
-	applymovement2 0xFE, IlexForest_Movement_Follower1
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, IlexForest_Movement_Follower1
 	waitmovement 0
 	playfirstmoncry
-	turnobject 35, DIR_WEST
+	turnobject LOCALID_ILEX_FOREST_KIMONO, DIR_WEST
 	msgbox IlexForest_Text_Kimono_Girl4, MSGBOX_DEFAULT
 	closemessage
-	turnobject 35, DIR_SOUTH
+	turnobject LOCALID_ILEX_FOREST_KIMONO, DIR_SOUTH
 	delay 16
 	msgbox IlexForest_Text_Kimono_Girl5, MSGBOX_DEFAULT
 	closemessage
 	delay 16
 	playfirstmoncry
-	applymovement2 0xFE, IlexForest_Movement_Follower2
-	applymovement2 35, IlexForest_Movement_Kimono_Girl2
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, IlexForest_Movement_Follower2
+	applymovement2 LOCALID_ILEX_FOREST_KIMONO, IlexForest_Movement_Kimono_Girl2
 	waitmovement 0
 	waitmovement 0
 	fadedefaultbgm
-	setvar 20571, 4
-	setflag 8288
-	removeobject 35
+	setvar JOHTO_VAR_ILEX_FOREST_FARFETCHD, 4
+	setflag JOHTO_FLAG_HIDE_ILEX_FOREST_KIMONO
+	removeobject LOCALID_ILEX_FOREST_KIMONO
 	playfirstmoncry
-	applymovement 0xFE, IlexForest_Movement_Follower3
+	applymovement OBJ_EVENT_ID_FOLLOWER, IlexForest_Movement_Follower3
 	waitmovement 0
 	playfirstmoncry
 	release
@@ -380,7 +380,7 @@ IlexForest_EventScript_FullHeal::
 	end
 
 IlexForest_EventScript_Item_FalseSwipe::
-	finditem 635
+	finditem ITEM_TM_FALSE_SWIPE
 	end
 
 IlexForest_Movement_Kimono_Girl1:

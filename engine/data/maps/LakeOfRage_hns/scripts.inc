@@ -1,35 +1,35 @@
 @ Johto (data/maps/LakeOfRage_hns/scripts.inc), as built into the FireRed game.
 
 LakeOfRage_hns_MapScripts::
-	map_script 3, LakeOfRage_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, LakeOfRage_OnTransition
 	.byte 0
 
 LakeOfRage_OnTransition::
-	setflag 10489
-	call_if_lt 20578, 2, LakeOfRage_EventScript_HideLois
-	goto_if_lt 20578, 14, LakeOfRage_EventScript_SetHighTide
+	setflag JOHTO_FLAG_VISITED_LAKE_OF_RAGE
+	call_if_lt JOHTO_VAR_MAHOGANY_TOWN_STATE, 2, LakeOfRage_EventScript_HideLois
+	goto_if_lt JOHTO_VAR_MAHOGANY_TOWN_STATE, 14, LakeOfRage_EventScript_SetHighTide
 	special UpdateShoalTideFlag
-	goto_if_set 10344, LakeOfRage_EventScript_SetHighTide
+	goto_if_set JOHTO_FLAG_SYS_LAKE_OF_RAGE_TIDE, LakeOfRage_EventScript_SetHighTide
 	goto LakeOfRage_EventScript_SetLowTide
 
 LakeOfRage_EventScript_SetLowTide::
-	setweather 0
-	setmaplayoutindex 932
+	setweather WEATHER_NONE
+	setmaplayoutindex LAYOUT_LAKE_OF_RAGE_LOW_TIDE_HNS
 	end
 
 LakeOfRage_EventScript_SetHighTide::
-	setmaplayoutindex 929
-	goto_if_lt 20578, 14, LakeOfRage_EventScript_ThunderStorm
+	setmaplayoutindex LAYOUT_LAKE_OF_RAGE_HNS
+	goto_if_lt JOHTO_VAR_MAHOGANY_TOWN_STATE, 14, LakeOfRage_EventScript_ThunderStorm
 	random 2
-	goto_if_eq 32781, 1, LakeOfRage_EventScript_ThunderStorm
+	goto_if_eq VAR_RESULT, 1, LakeOfRage_EventScript_ThunderStorm
 	end
 
 LakeOfRage_EventScript_HideLois::
-	setflag 1
+	setflag FLAG_TEMP_1
 	return
 
 LakeOfRage_EventScript_ThunderStorm::
-	setweather 5
+	setweather WEATHER_RAIN_THUNDERSTORM
 	end
 
 LakeOfRage_EventScript_Pryce::
@@ -37,11 +37,11 @@ LakeOfRage_EventScript_Pryce::
 	faceplayer
 	msgbox LakeOfRage_Text_Pryce, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
-	setflag 8349
-	removeobject 17
-	fadescreenswapbuffers 0
-	clearflag 8398
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_LAKE_PRYCE
+	removeobject LOCALID_LAKE_PRYCE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag JOHTO_FLAG_HIDE_DOJO_PRYCE
 	release
 	end
 
@@ -52,7 +52,7 @@ LakeOfRage_Text_Pryce:
 	.string "t{SE_M_ATTRACT2}th{SE_M_REVERSAL}FIGHTIN{SE_M_SWAGGER}DOJO.$"
 
 LakeOfRage_EventScript_Gramps::
-	goto_if_ge 20578, 14, LakeOfRage_EventScript_Gramps2
+	goto_if_ge JOHTO_VAR_MAHOGANY_TOWN_STATE, 14, LakeOfRage_EventScript_Gramps2
 	msgbox LakeOfRage_Text_Gramps, MSGBOX_NPC
 	end
 
@@ -69,22 +69,22 @@ LakeOfRage_EventScript_Nerd::
 	end
 
 LakeOfRage_EventScript_Andre::
-	trainerbattle_single 1207, LakeOfRage_Text_FisherAndreSeen, LakeOfRage_Text_FisherAndreBeaten
+	trainerbattle_single TRAINER_JOHTO_ANDRE_HNS, LakeOfRage_Text_FisherAndreSeen, LakeOfRage_Text_FisherAndreBeaten
 	msgbox LakeOfRage_Text_FisherAndreAfter, MSGBOX_AUTOCLOSE
 	end
 
 LakeOfRage_EventScript_Raymond::
-	trainerbattle_single 1208, LakeOfRage_Text_FisherRaymondSeen, LakeOfRage_Text_FisherRaymondBeaten
+	trainerbattle_single TRAINER_JOHTO_RAYMOND_HNS, LakeOfRage_Text_FisherRaymondSeen, LakeOfRage_Text_FisherRaymondBeaten
 	msgbox LakeOfRage_Text_FisherRaymondAfter, MSGBOX_AUTOCLOSE
 	end
 
 LakeOfRage_EventScript_Aaron::
-	trainerbattle_single 1080, LakeOfRage_Text_CooltrainermAaronSeen, LakeOfRage_Text_CooltrainermAaronBeaten
+	trainerbattle_single TRAINER_JOHTO_AARON_HNS, LakeOfRage_Text_CooltrainermAaronSeen, LakeOfRage_Text_CooltrainermAaronBeaten
 	msgbox LakeOfRage_Text_CooltrainermAaronAfter, MSGBOX_AUTOCLOSE
 	end
 
 LakeOfRage_EventScript_Lois::
-	trainerbattle_single 1098, LakeOfRage_Text_CooltrainerfLoisSeen, LakeOfRage_Text_CooltrainerfLoisBeaten
+	trainerbattle_single TRAINER_JOHTO_LOIS_HNS, LakeOfRage_Text_CooltrainerfLoisSeen, LakeOfRage_Text_CooltrainerfLoisBeaten
 	msgbox LakeOfRage_Text_CooltrainerfLoisAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -93,25 +93,25 @@ LakeOfRage_EventScript_Gyarados::
 	faceplayer
 	msgbox LakeOfRage_Text_GyaradosCry, MSGBOX_DEFAULT
 	waitse
-	playmoncry 130, 2
+	playmoncry SPECIES_GYARADOS, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattleshiny 130, 30
+	setwildbattleshiny SPECIES_GYARADOS, 30
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 1, LakeOfRage_EventScript_Defeated_Gyarados
-	goto_if_eq 32781, 4, LakeOfRage_EventScript_Ran_Gyarados
-	goto_if_eq 32781, 5, LakeOfRage_EventScript_Ran_Gyarados
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, LakeOfRage_EventScript_Defeated_Gyarados
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, LakeOfRage_EventScript_Ran_Gyarados
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, LakeOfRage_EventScript_Ran_Gyarados
 
 LakeOfRage_EventScript_Defeated_Gyarados::
-	setflag 8243
-	clearflag 1
-	removeobject 8
-	clearflag 8348
-	addobject 3
+	setflag JOHTO_FLAG_HIDE_LAKE_OF_RAGE_GYARADOS
+	clearflag FLAG_TEMP_1
+	removeobject LOCALID_LAKEOFRAGE_GYARADOS
+	clearflag JOHTO_FLAG_HIDE_LAKE_OF_RAGE_LANCE
+	addobject LOCALID_LAKEOFRAGE_LANCE
 	giveitem ITEM_RED_SCALE
-	setobjectxyperm 4, 32, 38
-	setvar 20578, 2
+	setobjectxyperm LOCALID_LAKEOFRAGE_OLDMAN, 32, 38
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 2
 	release
 	end
 
@@ -124,7 +124,7 @@ LakeOfRage_EventScript_Item_Full_Restore::
 	end
 
 LakeOfRage_EventScript_Item_Secret_Power::
-	finditem 624
+	finditem ITEM_TM_SECRET_POWER
 	end
 
 LakeOfRage_EventScript_Item_Red_Flute::
@@ -135,42 +135,42 @@ LakeOfRage_EventScript_Dragonite::
 	lock
 	faceplayer
 	waitse
-	playmoncry 149, 0
+	playmoncry SPECIES_DRAGONITE, CRY_MODE_NORMAL
 	msgbox LakeOfRage_Text_Dragonite, MSGBOX_DEFAULT
 	waitmoncry
-	turnobject 16, DIR_WEST
+	turnobject LOCALID_LAKEOFRAGE_DRAGONITE, DIR_WEST
 	release
 	end
 
 LakeOfRage_EventScript_Lance::
 	lock
-	goto_if_eq 20578, 3, LakeOfRage_EventScript_Lance_Return
+	goto_if_eq JOHTO_VAR_MAHOGANY_TOWN_STATE, 3, LakeOfRage_EventScript_Lance_Return
 	msgbox LakeOfRage_Text_LanceForcedToEvolve, MSGBOX_DEFAULT
 	closemessage
 	delay 20
 	faceplayer
-	turnobject 4, DIR_WEST
+	turnobject LOCALID_LAKEOFRAGE_OLDMAN, DIR_WEST
 	msgbox LakeOfRage_Text_LanceIntro2, MSGBOX_DEFAULT
-	setvar 20578, 3
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 3
 	msgbox LakeOfRage_Text_LanceIntro3, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, LakeOfRage_EventScript_LancDeclined
+	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_EventScript_LancDeclined
 
 LakeOfRage_EventScript_LanceAccept::
 	lock
 	msgbox LakeOfRage_Text_LanceRadioSignal, MSGBOX_DEFAULT
 	closemessage
-	goto_if_eq 32780, DIR_NORTH, LakeOfRage_EventScript_LanceDragoniteLeaveNorth
-	applymovement 3, LakeOfRage_Movement_LanceLeave
-	applymovement 16, LakeOfRage_Movement_DragoniteLeave
-	waitmovement 3
-	waitmovement 16
+	goto_if_eq VAR_FACING, DIR_NORTH, LakeOfRage_EventScript_LanceDragoniteLeaveNorth
+	applymovement LOCALID_LAKEOFRAGE_LANCE, LakeOfRage_Movement_LanceLeave
+	applymovement LOCALID_LAKEOFRAGE_DRAGONITE, LakeOfRage_Movement_DragoniteLeave
+	waitmovement LOCALID_LAKEOFRAGE_LANCE
+	waitmovement LOCALID_LAKEOFRAGE_DRAGONITE
 
 LakeOfRage_EventScript_EndScene::
-	setflag 8348
-	removeobject 3
-	removeobject 16
-	setvar 20578, 4
-	clearflag 8334
+	setflag JOHTO_FLAG_HIDE_LAKE_OF_RAGE_LANCE
+	removeobject LOCALID_LAKEOFRAGE_LANCE
+	removeobject LOCALID_LAKEOFRAGE_DRAGONITE
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 4
+	clearflag JOHTO_FLAG_HIDE_MAHOGANY_TOWN_SHOP_NPCS
 	release
 	end
 
@@ -178,8 +178,8 @@ LakeOfRage_EventScript_Lance_Return::
 	lock
 	faceplayer
 	msgbox LakeOfRage_Text_LanceAskHelp, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, LakeOfRage_EventScript_LanceAccept
-	goto_if_eq 32781, FALSE, LakeOfRage_EventScript_LancDeclined
+	goto_if_eq VAR_RESULT, TRUE, LakeOfRage_EventScript_LanceAccept
+	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_EventScript_LancDeclined
 
 LakeOfRage_EventScript_LancDeclined::
 	msgbox LakeOfRage_Text_LanceRefused, MSGBOX_DEFAULT
@@ -188,10 +188,10 @@ LakeOfRage_EventScript_LancDeclined::
 	end
 
 LakeOfRage_EventScript_LanceDragoniteLeaveNorth::
-	applymovement 3, LakeOfRage_Movement_LanceLeaveNorth
-	applymovement 16, LakeOfRage_Movement_DragoniteLeaveNorth
-	waitmovement 3
-	waitmovement 16
+	applymovement LOCALID_LAKEOFRAGE_LANCE, LakeOfRage_Movement_LanceLeaveNorth
+	applymovement LOCALID_LAKEOFRAGE_DRAGONITE, LakeOfRage_Movement_DragoniteLeaveNorth
+	waitmovement LOCALID_LAKEOFRAGE_LANCE
+	waitmovement LOCALID_LAKEOFRAGE_DRAGONITE
 	goto LakeOfRage_EventScript_EndScene
 
 LakeOfRage_Movement_LanceLeaveNorth:
@@ -366,11 +366,11 @@ LakeOfRage_Text_CooltrainerfLoisAfter:
 LakeOfRage_EventScript_Wesley::
 	lock
 	faceplayer
-	goto_if_set 8723, LakeOfRage_EventScript_WesleyCompleted
+	goto_if_set JOHTO_FLAG_GOT_BLACK_BELT, LakeOfRage_EventScript_WesleyCompleted
 	msgbox LakeOfRage_Text_MeetWesley, MSGBOX_DEFAULT
 	closemessage
-	multichoice 20, 0, 159, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
+	switch VAR_RESULT
 	case 0, LakeOfRage_EventScript_WesleyNope
 	case 1, LakeOfRage_EventScript_WesleyNope
 	case 2, LakeOfRage_EventScript_WesleyNope
@@ -379,7 +379,7 @@ LakeOfRage_EventScript_Wesley::
 	case 5, LakeOfRage_EventScript_WesleyNope
 	case 6, LakeOfRage_EventScript_WesleyNope
 	case 7 LakeOfRage_EventScript_WesleyCancel
-	case 127, LakeOfRage_EventScript_WesleyCancel
+	case MULTI_B_PRESSED, LakeOfRage_EventScript_WesleyCancel
 	closemessage
 	release
 	end
@@ -387,8 +387,8 @@ LakeOfRage_EventScript_Wesley::
 LakeOfRage_EventScript_WesleyYes::
 	msgbox LakeOfRage_Text_WesleyGivesGift, MSGBOX_DEFAULT
 	giveitem ITEM_BLACK_BELT
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 8723
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_GOT_BLACK_BELT
 	msgbox LakeOfRage_Text_WesleyGaveGift, MSGBOX_DEFAULT
 	closemessage
 	release

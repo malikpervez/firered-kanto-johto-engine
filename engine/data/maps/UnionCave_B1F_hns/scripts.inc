@@ -4,27 +4,27 @@ UnionCave_B1F_hns_MapScripts::
 	.byte 0
 
 UnionCave_B1F_EventScript_HikerPhillip::
-	trainerbattle_single 1284, UnionCave_B1F_Text_HikerPhillipSeen, UnionCave_B1F_Text_HikerPhillipBeaten
+	trainerbattle_single TRAINER_JOHTO_PHILLIP_HNS, UnionCave_B1F_Text_HikerPhillipSeen, UnionCave_B1F_Text_HikerPhillipBeaten
 	msgbox UnionCave_B1F_Text_HikerPhillipAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_B1F_EventScript_HikerLeonard::
-	trainerbattle_single 1285, UnionCave_B1F_Text_HikerLeonardSeen, UnionCave_B1F_Text_HikerLeonardBeaten
+	trainerbattle_single TRAINER_JOHTO_LEONARD_HNS, UnionCave_B1F_Text_HikerLeonardSeen, UnionCave_B1F_Text_HikerLeonardBeaten
 	msgbox UnionCave_B1F_Text_HikerLeonardAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_B1F_EventScript_PokemaniacAndrew::
-	trainerbattle_single 1132, UnionCave_B1F_Text_PokemaniacAndrewSeen, UnionCave_B1F_Text_PokemaniacAndrewBeaten
+	trainerbattle_single TRAINER_JOHTO_ANDREW_HNS, UnionCave_B1F_Text_PokemaniacAndrewSeen, UnionCave_B1F_Text_PokemaniacAndrewBeaten
 	msgbox UnionCave_B1F_Text_PokemaniacAndrewAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_B1F_EventScript_PokemaniacCalvin::
-	trainerbattle_single 1133, UnionCave_B1F_Text_PokemaniacCalvinSeen, UnionCave_B1F_Text_PokemaniacCalvinBeaten
+	trainerbattle_single TRAINER_JOHTO_CALVIN_HNS, UnionCave_B1F_Text_PokemaniacCalvinSeen, UnionCave_B1F_Text_PokemaniacCalvinBeaten
 	msgbox UnionCave_B1F_Text_PokemaniacCalvinAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_B1F_EventScript_Item_RockTomb::
-	finditem 620
+	finditem ITEM_TM_ROCK_TOMB
 	end
 
 UnionCave_B1F_EventScript_Item_Xdefend::

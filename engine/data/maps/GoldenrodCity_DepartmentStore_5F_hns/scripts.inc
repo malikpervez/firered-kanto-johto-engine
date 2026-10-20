@@ -1,7 +1,7 @@
 @ Johto (data/maps/GoldenrodCity_DepartmentStore_5F_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_DepartmentStore_5F_hns_MapScripts::
-	map_script 2, GoldenrodDeptElevator_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, GoldenrodDeptElevator_OnFrame
 	.byte 0
 
 GoldenrodDeptStore5_EventScript_Lass::
@@ -39,19 +39,19 @@ GoldenrodDeptStore5_EventScript_Sign::
 GoldenrodDeptStore5_EventScript_Receptionist::
 	lock
 	faceplayer
-	goto_if_set 8712, GoldenrodDeptStore5_EventScript_Receptionist_Already
+	goto_if_set JOHTO_FLAG_GOT_RETURN, GoldenrodDeptStore5_EventScript_Receptionist_Already
 	msgbox GoldenrodDeptStore_Text_5FReceptionistOhYourMon, MSGBOX_DEFAULT
 	closemessage
-	specialvar 32781, GetLeadMonFriendshipScore
-	goto_if_ge 32781, 4, GoldenrodDeptStore5_EventScript_Receptionist_GiveReturn
+	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, GoldenrodDeptStore5_EventScript_Receptionist_GiveReturn
 	msgbox GoldenrodDeptStore_Text_5FReceptionistPutInSomeMoreEffort, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 GoldenrodDeptStore5_EventScript_Receptionist_GiveReturn::
-	giveitem 608
-	setflag 8712
+	giveitem ITEM_TM_RETURN
+	setflag JOHTO_FLAG_GOT_RETURN
 	msgbox GoldenrodDeptStore_Text_5FReceptionistThisMoveShouldBePerfect, MSGBOX_DEFAULT
 	closemessage
 	release

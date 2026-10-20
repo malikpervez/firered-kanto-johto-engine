@@ -2,43 +2,43 @@
 
 J_Common_EventScript_SetupRivalGfxId::
 	checkplayergender
-	goto_if_eq 32781, MALE, J_EventScript_SetupRivalGfxIdFemale
-	goto_if_eq 32781, FEMALE, J_EventScript_SetupRivalGfxIdMale
+	goto_if_eq VAR_RESULT, MALE, J_EventScript_SetupRivalGfxIdFemale
+	goto_if_eq VAR_RESULT, FEMALE, J_EventScript_SetupRivalGfxIdMale
 	end
 
 J_EventScript_SetupRivalGfxIdFemale::
-	setvar 16400, 105
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 	return
 
 J_EventScript_SetupRivalGfxIdMale::
-	setvar 16400, 100
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	return
 
 J_Common_EventScript_SetupRivalOnBikeGfxId::
 	checkplayergender
-	goto_if_eq 32781, MALE, J_EventScript_SetupRivalOnBikeGfxIdFemale
-	goto_if_eq 32781, FEMALE, J_EventScript_SetupRivalOnBikeGfxIdMale
+	goto_if_eq VAR_RESULT, MALE, J_EventScript_SetupRivalOnBikeGfxIdFemale
+	goto_if_eq VAR_RESULT, FEMALE, J_EventScript_SetupRivalOnBikeGfxIdMale
 	end
 
 J_EventScript_SetupRivalOnBikeGfxIdFemale::
-	setvar 16403, 106
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE
 	return
 
 J_EventScript_SetupRivalOnBikeGfxIdMale::
-	setvar 16403, 101
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_RIVAL_BRENDAN_MACH_BIKE
 	return
 
 J_Common_EventScript_SetupRivalGfxIdSameGender::
 	checkplayergender
-	goto_if_eq 32781, MALE, J_EventScript_SetupRivalGfxIdMale2
-	goto_if_eq 32781, FEMALE, J_EventScript_SetupRivalGfxIdFemale2
+	goto_if_eq VAR_RESULT, MALE, J_EventScript_SetupRivalGfxIdMale2
+	goto_if_eq VAR_RESULT, FEMALE, J_EventScript_SetupRivalGfxIdFemale2
 	end
 
 J_EventScript_SetupRivalGfxIdMale2::
-	setvar 16400, 100
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	return
 
 J_EventScript_SetupRivalGfxIdFemale2::
-	setvar 16400, 105
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 	return
 

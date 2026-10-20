@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route37_hns/scripts.inc), as built into the FireRed game.
 
 Route37_hns_MapScripts::
-	map_script 3, Route37_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route37_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route37_OnTransition:
@@ -10,32 +10,32 @@ Route37_OnTransition:
 	end
 
 Route37_EventScript_TwinAnn::
-	trainerbattle_double 1414, Route37_Text_TwinsAnnAndAnne1_Seen, Route37_Text_TwinsAnnAndAnne1_Beaten, J_Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_JOHTO_ANN_AND_ANNE_HNS, Route37_Text_TwinsAnnAndAnne1_Seen, Route37_Text_TwinsAnnAndAnne1_Beaten, J_Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route37_Text_TwinsAnnAndAnne1_After, MSGBOX_DEFAULT
 	release
 	end
 
 Route37_EventScript_TwinAnne::
-	trainerbattle_double 1414, Route37_Text_TwinsAnnAndAnne2_Seen, Route37_Text_TwinsAnnAndAnne2_Beaten, J_Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_JOHTO_ANN_AND_ANNE_HNS, Route37_Text_TwinsAnnAndAnne2_Seen, Route37_Text_TwinsAnnAndAnne2_Beaten, J_Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox Route37_Text_TwinsAnnAndAnne2_After, MSGBOX_DEFAULT
 	release
 	end
 
 Route37_EventScript_Greg::
-	trainerbattle_single 1334, Route37_Text_PsychicGreg_Seen, Route37_Text_PsychicGreg_Beaten
+	trainerbattle_single TRAINER_JOHTO_GREG_HNS, Route37_Text_PsychicGreg_Seen, Route37_Text_PsychicGreg_Beaten
 	msgbox Route37_Text_PsychicGreg_After, MSGBOX_AUTOCLOSE
 	end
 
 Route37_EventScript_Sunny::
 	lock
 	faceplayer
-	goto_if_set 8728, Route37_EventScript_SunnyCompleted
+	goto_if_set JOHTO_FLAG_GOT_MAGNET, Route37_EventScript_SunnyCompleted
 	msgbox Route37_Text_Sunny_Meet, MSGBOX_DEFAULT
 	closemessage
-	multichoice 20, 0, 159, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
+	switch VAR_RESULT
 	case 0, Route37_EventScript_SunnyYes
 	case 1, Route37_EventScript_SunnyNope
 	case 2, Route37_EventScript_SunnyNope
@@ -44,7 +44,7 @@ Route37_EventScript_Sunny::
 	case 5, Route37_EventScript_SunnyNope
 	case 6, Route37_EventScript_SunnyNope
 	case 7 Route37_EventScript_SunnyCancel
-	case 127, Route37_EventScript_SunnyCancel
+	case MULTI_B_PRESSED, Route37_EventScript_SunnyCancel
 	closemessage
 	release
 	end
@@ -52,8 +52,8 @@ Route37_EventScript_Sunny::
 Route37_EventScript_SunnyYes::
 	msgbox Route37_Text_Sunny_GiveGift2, MSGBOX_DEFAULT
 	giveitem ITEM_MAGNET
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 8728
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_GOT_MAGNET
 	msgbox Route37_Text_Sunny_GaveGift, MSGBOX_DEFAULT
 	closemessage
 	release

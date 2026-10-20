@@ -1,55 +1,55 @@
 @ Johto (data/maps/EcruteakCity_Theater_hns/scripts.inc), as built into the FireRed game.
 
 EcruteakCity_Theater_hns_MapScripts::
-	map_script 3, EcruteakCity_Theater_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, EcruteakCity_Theater_OnTransition
 	.byte 0
 
 EcruteakCity_Theater_OnTransition::
-	call_if_eq 20562, 1, EcruteakCity_Theater_MapScript_SetRocketSceneActive
-	call_if_eq 20562, 8, EcruteakCity_Theater_MapScript_SetKimonoMovement
+	call_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 1, EcruteakCity_Theater_MapScript_SetRocketSceneActive
+	call_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 8, EcruteakCity_Theater_MapScript_SetKimonoMovement
 	end
 
 EcruteakCity_Theater_MapScript_SetRocketSceneActive::
-	setobjectxyperm 5, 10, 2
-	setobjectmovementtype 12, 0x53
+	setobjectxyperm LOCALID_ECRUTEAK_ZUKI, 10, 2
+	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_TOWER_BEAM
 	return
 
 EcruteakCity_Theater_MapScript_SetKimonoMovement::
-	setobjectmovementtype 5, 0x18
-	setobjectmovementtype 2, 0x18
-	setobjectmovementtype 4, 0x18
-	setobjectmovementtype 1, 0x17
-	setobjectmovementtype 3, 0x17
-	setobjectmovementtype 11, 0x18
+	setobjectmovementtype LOCALID_ECRUTEAK_ZUKI, MOVEMENT_TYPE_ROTATE_CLOCKWISE
+	setobjectmovementtype LOCALID_ECRUTEAK_NAOKO, MOVEMENT_TYPE_ROTATE_CLOCKWISE
+	setobjectmovementtype LOCALID_ECRUTEAK_MIKI, MOVEMENT_TYPE_ROTATE_CLOCKWISE
+	setobjectmovementtype LOCALID_ECRUTEAK_SAYO, MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE
+	setobjectmovementtype LOCALID_ECRUTEAK_KUNI, MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE
+	setobjectmovementtype LOCALID_ECRUTEAK_SISTER, MOVEMENT_TYPE_ROTATE_CLOCKWISE
 	return
 
 EcruteakCity_Theater_EventScript_RocketEventTrigger::
 	lockall
-	playse 21
-	applymovement 255, J_Common_Movement_ExclamationMark
-	turnobject 255, DIR_NORTH
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	delay 60
-	turnobject 12, DIR_NORTH
+	turnobject LOCALID_ECRUTEAK_ROCKET, DIR_NORTH
 	special SpawnCameraObject
-	applymovement 127, EcruteakCity_Theater_Movement_CameraPanUp
+	applymovement OBJ_EVENT_ID_CAMERA, EcruteakCity_Theater_Movement_CameraPanUp
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_Rocket1, MSGBOX_DEFAULT
 	closemessage
 	msgbox EcruteakCity_Theater_Text_KimonoRocket1, MSGBOX_DEFAULT
 	closemessage
 	msgbox EcruteakCity_Theater_Text_Rocket2, MSGBOX_DEFAULT
-	applymovement 5, EcruteakCity_Theater_Movement_KimonoGirlMoveBack
+	applymovement LOCALID_ECRUTEAK_ZUKI, EcruteakCity_Theater_Movement_KimonoGirlMoveBack
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_Rocket3, MSGBOX_DEFAULT
 	closemessage
-	applymovement 12, EcruteakCity_Theater_Movement_RocketDance
+	applymovement LOCALID_ECRUTEAK_ROCKET, EcruteakCity_Theater_Movement_RocketDance
 	delay 50
-	applymovement 127, EcruteakCity_Theater_Movement_CameraPanDown
+	applymovement OBJ_EVENT_ID_CAMERA, EcruteakCity_Theater_Movement_CameraPanDown
 	waitmovement 0
 	special RemoveCameraObject
-	setobjectmovementtype 12, 0x53
-	setobjectxyperm 5, 10, 2
-	setvar 20562, 1
+	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_TOWER_BEAM
+	setobjectxyperm LOCALID_ECRUTEAK_ZUKI, 10, 2
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 1
 	releaseall
 	end
 
@@ -132,39 +132,39 @@ EcruteakCity_Theater_EventScript_Rocket::
 	lock
 	faceplayer
 	msgbox EcruteakCity_Theater_Text_RocketSeen, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1175, EcruteakCity_Theater_Text_RocketBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_GRUNT_33_HNS, EcruteakCity_Theater_Text_RocketBeaten
 	msgbox EcruteakCity_Theater_Text_RocketAfter, MSGBOX_DEFAULT
 	closemessage
-	applymovement 12, EcruteakCity_Theater_Movement_RocketLeave
+	applymovement LOCALID_ECRUTEAK_ROCKET, EcruteakCity_Theater_Movement_RocketLeave
 	waitmovement 0
-	setflag 8313
-	removeobject 12
-	call_if_eq 32780, DIR_EAST, EcruteakCity_Theater_EventScript_PostRocketLeft
-	call_if_eq 32780, DIR_WEST, EcruteakCity_Theater_EventScript_PostRocketRight
-	call_if_eq 32780, DIR_SOUTH, EcruteakCity_Theater_EventScript_PostRocketTop
-	turnobject 255, DIR_NORTH
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_ROCKET
+	removeobject LOCALID_ECRUTEAK_ROCKET
+	call_if_eq VAR_FACING, DIR_EAST, EcruteakCity_Theater_EventScript_PostRocketLeft
+	call_if_eq VAR_FACING, DIR_WEST, EcruteakCity_Theater_EventScript_PostRocketRight
+	call_if_eq VAR_FACING, DIR_SOUTH, EcruteakCity_Theater_EventScript_PostRocketTop
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox EcruteakCity_Theater_Text_KimonoRocket3, MSGBOX_DEFAULT
 	closemessage
-	setvar 20562, 2
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 2
 	release
 	end
 
 EcruteakCity_Theater_EventScript_PostRocketLeft::
-	applymovement 5, J_Common_Movement_WalkLeft1
+	applymovement LOCALID_ECRUTEAK_ZUKI, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 5, J_Common_Movement_WalkDown1
+	applymovement LOCALID_ECRUTEAK_ZUKI, J_Common_Movement_WalkDown1
 	waitmovement 0
 	return
 
 EcruteakCity_Theater_EventScript_PostRocketRight::
-	applymovement 5, J_Common_Movement_WalkRight1
+	applymovement LOCALID_ECRUTEAK_ZUKI, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 5, J_Common_Movement_WalkDown1
+	applymovement LOCALID_ECRUTEAK_ZUKI, J_Common_Movement_WalkDown1
 	waitmovement 0
 	return
 
 EcruteakCity_Theater_EventScript_PostRocketTop::
-	turnobject 5, DIR_SOUTH
+	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	return
 
 EcruteakCity_Theater_Movement_RocketLeave:
@@ -210,7 +210,7 @@ EcruteakCity_Theater_Text_KimonoRocket3:
 EcruteakCity_Theater_EventScript_KimonoGirl::
 	lock
 	faceplayer
-	goto_if_eq 20562, 6, EcruteakCity_Theater_EventScript_KimonoGirlDuringEvent
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 6, EcruteakCity_Theater_EventScript_KimonoGirlDuringEvent
 	msgbox EcruteakCity_Theater_Text_KimonoDone, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -225,9 +225,9 @@ EcruteakCity_Theater_EventScript_KimonoGirlDuringEvent::
 EcruteakCity_Theater_EventScript_Zuki::
 	lock
 	faceplayer
-	goto_if_ge 20562, 8, EcruteakCity_Theater_EventScript_ZukiAfterLegendary
-	goto_if_eq 20562, 6, EcruteakCity_Theater_EventScript_ZukiBattle
-	goto_if_eq 20562, 1, EcruteakCity_Theater_EventScript_ZukiDuringRocket
+	goto_if_ge JOHTO_VAR_ECRUTEAK_CITY_THEATER, 8, EcruteakCity_Theater_EventScript_ZukiAfterLegendary
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 6, EcruteakCity_Theater_EventScript_ZukiBattle
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 1, EcruteakCity_Theater_EventScript_ZukiDuringRocket
 	msgbox EcruteakCity_Theater_Text_Kimono, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -257,8 +257,8 @@ EcruteakCity_Theater_Text_Kimono:
 EcruteakCity_Theater_EventScript_SurfGuy::
 	lock
 	faceplayer
-	goto_if_eq 20562, 1, EcruteakCity_Theater_EventScript_SurfGuyDuringRocket
-	goto_if_unset 8697, EcruteakCity_Theater_EventScript_SurfGuy_GiveSurf
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 1, EcruteakCity_Theater_EventScript_SurfGuyDuringRocket
+	goto_if_unset JOHTO_FLAG_RECEIVED_HM_SURF, EcruteakCity_Theater_EventScript_SurfGuy_GiveSurf
 	msgbox EcruteakCity_Theater_Text_SurfGuyAfter, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -266,12 +266,12 @@ EcruteakCity_Theater_EventScript_SurfGuy::
 
 EcruteakCity_Theater_EventScript_SurfGuy_GiveSurf::
 	msgbox EcruteakCity_Theater_Text_SurfGuyGiveSurf, MSGBOX_DEFAULT
-	giveitem 684
-	setflag 8697
+	giveitem ITEM_HM_SURF
+	setflag JOHTO_FLAG_RECEIVED_HM_SURF
 	msgbox EcruteakCity_Theater_Text_SurfGuyGaveSurf
 	closemessage
-	setflag 8697
-	setvar 20562, 3
+	setflag JOHTO_FLAG_RECEIVED_HM_SURF
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 3
 	release
 	end
 
@@ -283,17 +283,17 @@ EcruteakCity_Theater_EventScript_SurfGuyDuringRocket::
 
 EcruteakCity_Theater_EventScript_TriggerSurfGuy::
 	lock
-	applymovement 7, EcruteakCity_Theater_Movement_SurfGuy1
+	applymovement LOCALID_SURF_GUY, EcruteakCity_Theater_Movement_SurfGuy1
 	waitmovement 0
-	turnobject 255, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox EcruteakCity_Theater_Text_SurfGuyGiveSurf, MSGBOX_DEFAULT
-	giveitem 684
-	setflag 8697
+	giveitem ITEM_HM_SURF
+	setflag JOHTO_FLAG_RECEIVED_HM_SURF
 	msgbox EcruteakCity_Theater_Text_SurfGuyGaveSurf
 	closemessage
-	setflag 8697
-	setvar 20562, 3
-	applymovement 7, EcruteakCity_Theater_Movement_SurfGuy2
+	setflag JOHTO_FLAG_RECEIVED_HM_SURF
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 3
+	applymovement LOCALID_SURF_GUY, EcruteakCity_Theater_Movement_SurfGuy2
 	waitmovement 0
 	release
 	end
@@ -302,7 +302,7 @@ EcruteakCity_Theater_EventScript_Psyduck::
 	lock
 	faceplayer
 	waitse
-	playmoncry 54, 0
+	playmoncry SPECIES_PSYDUCK, CRY_MODE_NORMAL
 	msgbox EcruteakCity_Theater_Text_Psyduck, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -311,7 +311,7 @@ EcruteakCity_Theater_EventScript_Psyduck::
 EcruteakCity_Theater_EventScript_Boy::
 	lock
 	faceplayer
-	goto_if_eq 20562, 1, EcruteakCity_Theater_EventScript_BoyDuringRocket
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 1, EcruteakCity_Theater_EventScript_BoyDuringRocket
 	msgbox EcruteakCity_Theater_Text_Boy, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -326,7 +326,7 @@ EcruteakCity_Theater_EventScript_BoyDuringRocket::
 EcruteakCity_Theater_EventScript_Granny::
 	lock
 	faceplayer
-	goto_if_eq 20562, 1, EcruteakCity_Theater_EventScript_GrannyDuringRocket
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 1, EcruteakCity_Theater_EventScript_GrannyDuringRocket
 	msgbox EcruteakCity_Theater_Text_Granny, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -341,7 +341,7 @@ EcruteakCity_Theater_EventScript_GrannyDuringRocket::
 EcruteakCity_Theater_EventScript_Gramps::
 	lock
 	faceplayer
-	goto_if_eq 20562, 1, EcruteakCity_Theater_EventScript_GrampsDuringRocket
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 1, EcruteakCity_Theater_EventScript_GrampsDuringRocket
 	msgbox EcruteakCity_Theater_Text_Gramps, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -356,7 +356,7 @@ EcruteakCity_Theater_EventScript_GrampsDuringRocket::
 EcruteakCity_Theater_EventScript_Girl::
 	lock
 	faceplayer
-	goto_if_eq 20562, 1, EcruteakCity_Theater_EventScript_GirlDuringRocket
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_THEATER, 1, EcruteakCity_Theater_EventScript_GirlDuringRocket
 	msgbox EcruteakCity_Theater_Text_Girl, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -482,30 +482,30 @@ EcruteakCity_Theater_Text_FancyPanel:
 
 EcruteakCity_Theater_Trigger_PreBattleCutsceneLeft::
 	lock
-	applymovement2 255, EcruteakCity_Theater_Movement_PlayerWalkToZukiLeft
-	applymovement2 0xFE, EcruteakCity_Theater_Movement_MonWalkToZukiLeft
-	waitmovement 0xFE
-	waitmovement 255
+	applymovement2 OBJ_EVENT_ID_PLAYER, EcruteakCity_Theater_Movement_PlayerWalkToZukiLeft
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, EcruteakCity_Theater_Movement_MonWalkToZukiLeft
+	waitmovement OBJ_EVENT_ID_FOLLOWER
+	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 10
 	lockall
 	goto EcruteakCity_Theater_EventScript_LegendaryCutscene
 
 EcruteakCity_Theater_Trigger_PreBattleCutsceneTop::
 	lock
-	applymovement2 255, EcruteakCity_Theater_Movement_PlayerWalkToZukiTop
-	applymovement2 0xFE, EcruteakCity_Theater_Movement_MonWalkToZukiTop
-	waitmovement 0xFE
-	waitmovement 255
+	applymovement2 OBJ_EVENT_ID_PLAYER, EcruteakCity_Theater_Movement_PlayerWalkToZukiTop
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, EcruteakCity_Theater_Movement_MonWalkToZukiTop
+	waitmovement OBJ_EVENT_ID_FOLLOWER
+	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 10
 	lockall
 	goto EcruteakCity_Theater_EventScript_LegendaryCutscene
 
 EcruteakCity_Theater_Trigger_PreBattleCutsceneRight::
 	lock
-	applymovement2 255, EcruteakCity_Theater_Movement_PlayerWalkToZukiRight
-	applymovement2 0xFE, EcruteakCity_Theater_Movement_MonWalkToZukiRight
-	waitmovement 0xFE
-	waitmovement 255
+	applymovement2 OBJ_EVENT_ID_PLAYER, EcruteakCity_Theater_Movement_PlayerWalkToZukiRight
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, EcruteakCity_Theater_Movement_MonWalkToZukiRight
+	waitmovement OBJ_EVENT_ID_FOLLOWER
+	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 10
 	lockall
 	goto EcruteakCity_Theater_EventScript_LegendaryCutscene
@@ -674,213 +674,213 @@ EcruteakCity_Theater_Movement_KimonoSpin:
 	step_end
 
 EcruteakCity_Theater_EventScript_LugiaBuffer::
-	bufferspeciesname STR_VAR_1, 249
+	bufferspeciesname STR_VAR_1, SPECIES_LUGIA
 	return
 
 EcruteakCity_Theater_EventScript_HoohBuffer::
-	bufferspeciesname STR_VAR_1, 250
+	bufferspeciesname STR_VAR_1, SPECIES_HO_OH
 	return
 
 EcruteakCity_Theater_EventScript_LegendaryCutscene::
-	call_if_eq 20577, 1, EcruteakCity_Theater_EventScript_LugiaBuffer
-	call_if_eq 20577, 2, EcruteakCity_Theater_EventScript_HoohBuffer
+	call_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 1, EcruteakCity_Theater_EventScript_LugiaBuffer
+	call_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 2, EcruteakCity_Theater_EventScript_HoohBuffer
 	msgbox EcruteakCity_Theater_Text_ZukiSeen, MSGBOX_DEFAULT
 	closemessage
 	delay 20
-	playse 202
-	applymovement2 5, EcruteakCity_Theater_Movement_KimonoSpin
+	playse SE_M_PETAL_DANCE
+	applymovement2 LOCALID_ECRUTEAK_ZUKI, EcruteakCity_Theater_Movement_KimonoSpin
 	waitmovement 0
-	setvar 20562, 6
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 6
 
 EcruteakCity_Theater_EventScript_ZukiBattle::
 	msgbox EcruteakCity_Theater_Text_ZukiSeenAgain, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, EcruteakCity_Theater_EventScript_LegendaryDenied
-	call_if_eq 32780, DIR_SOUTH, EcruteakCity_Theater_Movement_SouthCorrection
-	call_if_eq 32780, DIR_WEST, EcruteakCity_Theater_Movement_WestCorrection
-	call_if_eq 32780, DIR_EAST, EcruteakCity_Theater_Movement_EastCorrection
+	goto_if_eq VAR_RESULT, FALSE, EcruteakCity_Theater_EventScript_LegendaryDenied
+	call_if_eq VAR_FACING, DIR_SOUTH, EcruteakCity_Theater_Movement_SouthCorrection
+	call_if_eq VAR_FACING, DIR_WEST, EcruteakCity_Theater_Movement_WestCorrection
+	call_if_eq VAR_FACING, DIR_EAST, EcruteakCity_Theater_Movement_EastCorrection
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 1, 2, 0, 0
-	trainerbattle_no_intro 1410, EcruteakCity_Theater_Text_KimonoGirlBeaten
-	applymovement2 5, EcruteakCity_Theater_Movement_ZukiWalkUp
+	trainerbattle_no_intro TRAINER_JOHTO_ZUKI_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
+	applymovement2 LOCALID_ECRUTEAK_ZUKI, EcruteakCity_Theater_Movement_ZukiWalkUp
 	waitmovement 0
 
 EcruteakCity_Theater_EventScript_NaokoBattle::
-	playse 202
-	applymovement2 2, EcruteakCity_Theater_Movement_KimonoSpin
+	playse SE_M_PETAL_DANCE
+	applymovement2 LOCALID_ECRUTEAK_NAOKO, EcruteakCity_Theater_Movement_KimonoSpin
 	waitmovement 0
-	applymovement2 2, EcruteakCity_Theater_Movement_NaokoWalkToPlayer
+	applymovement2 LOCALID_ECRUTEAK_NAOKO, EcruteakCity_Theater_Movement_NaokoWalkToPlayer
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_NaokoSeen, MSGBOX_DEFAULT
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 1, 0, 1, 1, 0
-	trainerbattle_no_intro 1408, EcruteakCity_Theater_Text_KimonoGirlBeaten
-	applymovement2 2, EcruteakCity_Theater_Movement_NaokoWalkBack
+	trainerbattle_no_intro TRAINER_JOHTO_NAOKO_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
+	applymovement2 LOCALID_ECRUTEAK_NAOKO, EcruteakCity_Theater_Movement_NaokoWalkBack
 	waitmovement 0
 
 EcruteakCity_Theater_EventScript_MikiBattle::
-	playse 202
-	applymovement2 4, EcruteakCity_Theater_Movement_KimonoSpin
+	playse SE_M_PETAL_DANCE
+	applymovement2 LOCALID_ECRUTEAK_MIKI, EcruteakCity_Theater_Movement_KimonoSpin
 	waitmovement 0
-	applymovement2 4, EcruteakCity_Theater_Movement_MikiWalkToPlayer
+	applymovement2 LOCALID_ECRUTEAK_MIKI, EcruteakCity_Theater_Movement_MikiWalkToPlayer
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_MikiSeen, MSGBOX_DEFAULT
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 0, 1, 2, 0
-	trainerbattle_no_intro 1412, EcruteakCity_Theater_Text_KimonoGirlBeaten
-	applymovement2 4, EcruteakCity_Theater_Movement_MikiWalkBack
+	trainerbattle_no_intro TRAINER_JOHTO_MIKI_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
+	applymovement2 LOCALID_ECRUTEAK_MIKI, EcruteakCity_Theater_Movement_MikiWalkBack
 	waitmovement 0
 
 EcruteakCity_Theater_EventScript_SayoBattle::
-	playse 202
-	applymovement2 1, EcruteakCity_Theater_Movement_KimonoSpin
+	playse SE_M_PETAL_DANCE
+	applymovement2 LOCALID_ECRUTEAK_SAYO, EcruteakCity_Theater_Movement_KimonoSpin
 	waitmovement 0
-	applymovement2 1, EcruteakCity_Theater_Movement_SayoWalkToPlayer
+	applymovement2 LOCALID_ECRUTEAK_SAYO, EcruteakCity_Theater_Movement_SayoWalkToPlayer
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_SayoSeen, MSGBOX_DEFAULT
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 0, 2, 1, 0, 0
-	trainerbattle_no_intro 1409, EcruteakCity_Theater_Text_KimonoGirlBeaten
-	applymovement2 1, EcruteakCity_Theater_Movement_SayoWalkBack
+	trainerbattle_no_intro TRAINER_JOHTO_SAYO_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
+	applymovement2 LOCALID_ECRUTEAK_SAYO, EcruteakCity_Theater_Movement_SayoWalkBack
 	waitmovement 0
 
 EcruteakCity_Theater_EventScript_KuniBattle::
-	playse 202
-	applymovement2 3, EcruteakCity_Theater_Movement_KimonoSpin
+	playse SE_M_PETAL_DANCE
+	applymovement2 LOCALID_ECRUTEAK_KUNI, EcruteakCity_Theater_Movement_KimonoSpin
 	waitmovement 0
-	applymovement2 3, EcruteakCity_Theater_Movement_KuniWalkToPlayer
+	applymovement2 LOCALID_ECRUTEAK_KUNI, EcruteakCity_Theater_Movement_KuniWalkToPlayer
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_KuniSeen, MSGBOX_DEFAULT
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 2, 0, 0, 1, 0
-	trainerbattle_no_intro 1411, EcruteakCity_Theater_Text_KimonoGirlBeaten
-	applymovement2 3, EcruteakCity_Theater_Movement_KuniWalkBack
+	trainerbattle_no_intro TRAINER_JOHTO_KUNI_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
+	applymovement2 LOCALID_ECRUTEAK_KUNI, EcruteakCity_Theater_Movement_KuniWalkBack
 	waitmovement 0
 
 EcruteakCity_Theater_EventScript_BeatGauntlet::
-	applymovement2 5, J_Common_Movement_WalkDown1
+	applymovement2 LOCALID_ECRUTEAK_ZUKI, J_Common_Movement_WalkDown1
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_ZukiDone, MSGBOX_DEFAULT
-	goto_if_eq 20577, 1, EcruteakCity_Theater_EventScript_Lugia
-	goto_if_eq 20577, 2, EcruteakCity_Theater_EventScript_Hooh
+	goto_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 1, EcruteakCity_Theater_EventScript_Lugia
+	goto_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 2, EcruteakCity_Theater_EventScript_Hooh
 
 EcruteakCity_Theater_Movement_SouthCorrection::
-	applymovement 255, J_Common_Movement_WalkRight1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkLeft1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	turnobject 255, DIR_NORTH
-	turnobject 5, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	return
 
 EcruteakCity_Theater_Movement_WestCorrection::
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkLeft1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	turnobject 255, DIR_NORTH
-	turnobject 5, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	return
 
 EcruteakCity_Theater_Movement_EastCorrection::
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkRight1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
-	turnobject 255, DIR_NORTH
-	turnobject 5, DIR_SOUTH
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	return
 
 EcruteakCity_Theater_EventScript_Lugia::
 	giveitem ITEM_TIDAL_BELL
 	closemessage
-	playse 136
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	playse SE_M_RAZOR_WIND
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
-	addobject 11
-	applymovement2 11, EcruteakCity_Theater_Movement_Sister
+	addobject LOCALID_ECRUTEAK_SISTER
+	applymovement2 LOCALID_ECRUTEAK_SISTER, EcruteakCity_Theater_Movement_Sister
 	waitmovement 0
-	turnobject 5, DIR_WEST
+	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_WEST
 	msgbox EcruteakCity_Theater_Text_GirlLugia, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 5, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ECRUTEAK_ZUKI, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 5
-	turnobject 5, DIR_SOUTH
+	waitmovement LOCALID_ECRUTEAK_ZUKI
+	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	msgbox EcruteakCity_Theater_Text_ZukiLugia, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
+	fadescreenswapbuffers FADE_TO_BLACK
 
-	removeobject 5
-	removeobject 4
-	removeobject 2
-	removeobject 3
-	removeobject 1
-	removeobject 4
+	removeobject LOCALID_ECRUTEAK_ZUKI
+	removeobject LOCALID_ECRUTEAK_MIKI
+	removeobject LOCALID_ECRUTEAK_NAOKO
+	removeobject LOCALID_ECRUTEAK_KUNI
+	removeobject LOCALID_ECRUTEAK_SAYO
+	removeobject LOCALID_ECRUTEAK_MIKI
 
-	removeobject 11
-	playse 9
+	removeobject LOCALID_ECRUTEAK_SISTER
+	playse SE_EXIT
 	delay 120
-	fadescreenswapbuffers 0
-	clearflag 8356
-	clearflag 8245
-	setvar 20559, 2
-	setvar 20558, 3
-	setflag 8245
-	setflag 8312
-	setflag 8310
-	setvar 20580, 9
-	setvar 20562, 7
+	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag JOHTO_FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS
+	clearflag JOHTO_FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
+	setvar JOHTO_VAR_COMPLETED_LUGIA, 2
+	setvar JOHTO_VAR_COMPLETED_HO_OH, 3
+	setflag JOHTO_FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_ZUKI
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 9
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 7
 	release
 	end
 
 EcruteakCity_Theater_EventScript_Hooh::
 	giveitem ITEM_CLEAR_BELL
 	closemessage
-	playse 136
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	playse SE_M_RAZOR_WIND
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
-	addobject 11
-	applymovement2 11, EcruteakCity_Theater_Movement_Sister
+	addobject LOCALID_ECRUTEAK_SISTER
+	applymovement2 LOCALID_ECRUTEAK_SISTER, EcruteakCity_Theater_Movement_Sister
 	waitmovement 0
 	msgbox EcruteakCity_Theater_Text_GirlHooh, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 5, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ECRUTEAK_ZUKI, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 5
-	turnobject 5, DIR_SOUTH
+	waitmovement LOCALID_ECRUTEAK_ZUKI
+	turnobject LOCALID_ECRUTEAK_ZUKI, DIR_SOUTH
 	msgbox EcruteakCity_Theater_Text_ZukiHooh, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
+	fadescreenswapbuffers FADE_TO_BLACK
 
-	removeobject 5
-	removeobject 4
-	removeobject 2
-	removeobject 3
-	removeobject 1
-	removeobject 4
+	removeobject LOCALID_ECRUTEAK_ZUKI
+	removeobject LOCALID_ECRUTEAK_MIKI
+	removeobject LOCALID_ECRUTEAK_NAOKO
+	removeobject LOCALID_ECRUTEAK_KUNI
+	removeobject LOCALID_ECRUTEAK_SAYO
+	removeobject LOCALID_ECRUTEAK_MIKI
 
-	removeobject 11
-	playse 9
+	removeobject LOCALID_ECRUTEAK_SISTER
+	playse SE_EXIT
 	delay 120
-	fadescreenswapbuffers 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 
-	clearflag 8317
-	clearflag 8318
-	setvar 20558, 2
-	setvar 20559, 3
-	setflag 8312
-	setflag 8310
-	setvar 20580, 9
-	setvar 20562, 7
+	clearflag JOHTO_FLAG_HIDE_TINTOWER_GUARD
+	clearflag JOHTO_FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS
+	setvar JOHTO_VAR_COMPLETED_HO_OH, 2
+	setvar JOHTO_VAR_COMPLETED_LUGIA, 3
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_ZUKI
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 9
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 7
 	release
 	end
 

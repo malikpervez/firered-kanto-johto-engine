@@ -10,39 +10,39 @@ SlowpokeWell_EventScript_Item_Kings_Rock::
 SlowpokeWell_EventScript_Slowking::
 	lock
 	faceplayer
-	playmoncry 199, 0
+	playmoncry SPECIES_SLOWKING, CRY_MODE_NORMAL
 	msgbox SlowpokeWell_Text_Slowking, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	goto_if_set 8439, SlowpokeWell_EventScript_Slowking2
-	playmoncry 199, 0
-	applymovement 1, SlowpokeWell_Movement_RainDance1
+	goto_if_set JOHTO_FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE, SlowpokeWell_EventScript_Slowking2
+	playmoncry SPECIES_SLOWKING, CRY_MODE_NORMAL
+	applymovement LOCALID_WELL_SLOWKING, SlowpokeWell_Movement_RainDance1
 	waitmovement 0
 	delay 55
-	playmoncry 199, 0
-	applymovement 1, SlowpokeWell_Movement_RainDance2
+	playmoncry SPECIES_SLOWKING, CRY_MODE_NORMAL
+	applymovement LOCALID_WELL_SLOWKING, SlowpokeWell_Movement_RainDance2
 	waitmovement 0
 	delay 55
-	playmoncry 199, 0
-	applymovement 1, SlowpokeWell_Movement_RainDance3
+	playmoncry SPECIES_SLOWKING, CRY_MODE_NORMAL
+	applymovement LOCALID_WELL_SLOWKING, SlowpokeWell_Movement_RainDance3
 	waitmovement 0
 	delay 55
-	playmoncry 199, 0
-	applymovement 1, SlowpokeWell_Movement_RainDance4
+	playmoncry SPECIES_SLOWKING, CRY_MODE_NORMAL
+	applymovement LOCALID_WELL_SLOWKING, SlowpokeWell_Movement_RainDance4
 	waitmovement 0
 	delay 55
-	playmoncry 199, 0
-	setweather 3
+	playmoncry SPECIES_SLOWKING, CRY_MODE_NORMAL
+	setweather WEATHER_RAIN
 	doweather
 	waitmoncry
-	giveitem 599
-	goto_if_eq 32781, FALSE, J_Common_EventScript_BagIsFull
-	setflag 8439
+	giveitem ITEM_TM_RAIN_DANCE
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_BagIsFull
+	setflag JOHTO_FLAG_ITEM_SLOWPOKE_WELL_RAIN_DANCE
 	release
 	end
 
 SlowpokeWell_EventScript_Slowking2::
-	setweather 3
+	setweather WEATHER_RAIN
 	doweather
 	release
 	end

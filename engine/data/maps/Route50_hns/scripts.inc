@@ -23,28 +23,28 @@ Route50_Text_BlackBelt2::
 	.string "t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}her{SE_M_REVERSAL}bu{SE_M_SPIT_UP}train.$"
 
 Route50_EventScript_Wessel::
-	goto_if_defeated 1639, Route50_EventScript_WesselAfter
+	goto_if_defeated TRAINER_JOHTO_WESSEL_HNS, Route50_EventScript_WesselAfter
 	msgbox Route50_Text_WesselBefore, MSGBOX_NPC
-	goto_if_not_defeated 1639, Route50_EventScript_TryWesselBattle
+	goto_if_not_defeated TRAINER_JOHTO_WESSEL_HNS, Route50_EventScript_TryWesselBattle
 	end
 
 Route50_EventScript_TryWesselBattle::
-	goto_if_eq 20639, 6, Route50_EventScript_WesselBattle
+	goto_if_eq JOHTO_VAR_SINJOH_STORYLINE, 6, Route50_EventScript_WesselBattle
 	end
 
 Route50_EventScript_WesselBattle::
 	lock
 	msgbox Route50_Text_WesselBeforeBattle, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro 1639, Route50_Text_WesselDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_WESSEL_HNS, Route50_Text_WesselDefeat
 	giveitem ITEM_IRON_PLATE
-	addvar 20640, 1
+	addvar JOHTO_VAR_PLATECOUNTER, 1
 	msgbox Route50_Text_WesselAfter, MSGBOX_AUTOCLOSE
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
 
@@ -76,28 +76,28 @@ Route50_Text_WesselAfter:
 	.string "tal{SE_M_ENCORE2}abou{SE_M_SPIT_UP}it.$"
 
 Route50_EventScript_Finley::
-	goto_if_defeated 1637, Route50_EventScript_FinleyAfter
+	goto_if_defeated TRAINER_JOHTO_FINLEY_HNS, Route50_EventScript_FinleyAfter
 	msgbox Route50_Text_FinleyBefore, MSGBOX_NPC
-	goto_if_not_defeated 1637, Route50_EventScript_TryFinleyBattle
+	goto_if_not_defeated TRAINER_JOHTO_FINLEY_HNS, Route50_EventScript_TryFinleyBattle
 	end
 
 Route50_EventScript_TryFinleyBattle::
-	goto_if_eq 20639, 6, Route50_EventScript_FinleyBattle
+	goto_if_eq JOHTO_VAR_SINJOH_STORYLINE, 6, Route50_EventScript_FinleyBattle
 	end
 
 Route50_EventScript_FinleyBattle::
 	lock
 	msgbox Route50_Text_FinleyBeforeBattle, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro 1637, Route50_Text_FinleyDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_FINLEY_HNS, Route50_Text_FinleyDefeat
 	giveitem ITEM_DRACO_PLATE
-	addvar 20640, 1
+	addvar JOHTO_VAR_PLATECOUNTER, 1
 	msgbox Route50_Text_FinleyAfter, MSGBOX_AUTOCLOSE
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
 
@@ -143,42 +143,42 @@ Route50_EventScript_Item_Big_Nugget::
 
 Route50_EventScript_ActivateKleavor::
 	lock
-	setobjectxyperm 1, 75, 12
-	playse 209
-	getplayerxy 16385, 16386
-	dofieldeffectsparkle 16385, 16386, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	setobjectxyperm LOCALID_ROUTE50_NOBLE_KLEAVOR, 75, 12
+	playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
 	delay 200
 	fadedefaultbgm
-	addobject 1
-	clearflag 9121
-	applymovement2 1, Route50_Movement_KleavorEntrance1
+	addobject LOCALID_ROUTE50_NOBLE_KLEAVOR
+	clearflag JOHTO_FLAG_HIDE_ROUTE50_NOBLE_KLEAVOR
+	applymovement2 LOCALID_ROUTE50_NOBLE_KLEAVOR, Route50_Movement_KleavorEntrance1
 	delay 10
-	playmoncry 900, 0
+	playmoncry SPECIES_KLEAVOR, CRY_MODE_NORMAL
 	waitmoncry
-	playmoncry 900, 0
+	playmoncry SPECIES_KLEAVOR, CRY_MODE_NORMAL
 	waitmoncry
 	waitmovement 0
-	applymovement2 1, Route50_Movement_KleavorEntrance2
+	applymovement2 LOCALID_ROUTE50_NOBLE_KLEAVOR, Route50_Movement_KleavorEntrance2
 	delay 10
-	playse 10
+	playse SE_LEDGE
 	delay 20
-	waitmovement 1
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 2
+	waitmovement LOCALID_ROUTE50_NOBLE_KLEAVOR
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 2
 	special ShakeCamera
-	setobjectxyperm 1, 75, 14
-	setvar 20649, 2
+	setobjectxyperm LOCALID_ROUTE50_NOBLE_KLEAVOR, 75, 14
+	setvar JOHTO_VAR_NOBLE_KLEAVOR, 2
 	release
 	end
 
@@ -198,90 +198,90 @@ Route50_Movement_KleavorEntrance2:
 Route50_EventScript_Kleavor::
 	lock
 	faceplayer
-	playmoncry 900, 2
+	playmoncry SPECIES_KLEAVOR, CRY_MODE_ENCOUNTER
 	waitmoncry
 	setwildbossbattle species=900, level=80, item=ITEM_SCOPE_LENS, move1_1=MOVE_STONE_AXE, move1_2=MOVE_CROSS_POISON, move1_3=MOVE_LUNGE move1_4=MOVE_FOCUS_ENERGY
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 2, 0, 0, 2, 0
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, Route50_EventScript_KleavorRan
-	bufferspeciesname STR_VAR_1, 900
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route50_EventScript_KleavorRan
+	bufferspeciesname STR_VAR_1, SPECIES_KLEAVOR
 	msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
 	giveitem ITEM_INSECT_PLATE
-	addvar 20640, 1
-	fadescreenswapbuffers 1
-	removeobject 1
-	setflag 9121
-	fadescreenswapbuffers 0
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE50_NOBLE_KLEAVOR
+	setflag JOHTO_FLAG_HIDE_ROUTE50_NOBLE_KLEAVOR
+	fadescreenswapbuffers FADE_FROM_BLACK
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 Route50_EventScript_KleavorRan::
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 Route50_EventScript_ActivateElectrode::
 	lock
-	setobjectxyperm 29, 18, 26
-	playse 209
-	getplayerxy 16385, 16386
-	dofieldeffectsparkle 16385, 16386, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	setobjectxyperm LOCALID_ROUTE50_NOBLE_ELECTRODE, 18, 26
+	playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
 	delay 200
 	fadedefaultbgm
-	addobject 29
-	clearflag 9120
-	applymovement2 29, Route50_Movement_ElectrodeEntrance1
+	addobject LOCALID_ROUTE50_NOBLE_ELECTRODE
+	clearflag JOHTO_FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE
+	applymovement2 LOCALID_ROUTE50_NOBLE_ELECTRODE, Route50_Movement_ElectrodeEntrance1
 	delay 10
-	playmoncry 996, 0
+	playmoncry SPECIES_ELECTRODE_HISUI, CRY_MODE_NORMAL
 	waitmoncry
-	playmoncry 996, 0
+	playmoncry SPECIES_ELECTRODE_HISUI, CRY_MODE_NORMAL
 	waitmoncry
 	waitmovement 0
-	applymovement2 29, Route50_Movement_ElectrodeEntrance2
+	applymovement2 LOCALID_ROUTE50_NOBLE_ELECTRODE, Route50_Movement_ElectrodeEntrance2
 	delay 10
-	playse 10
+	playse SE_LEDGE
 	delay 20
 	waitmovement 0
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 2
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 2
 	special ShakeCamera
-	applymovement2 29, Route50_Movement_ElectrodeEntrance3
-	waitmovement 29
-	removeobject 29
+	applymovement2 LOCALID_ROUTE50_NOBLE_ELECTRODE, Route50_Movement_ElectrodeEntrance3
+	waitmovement LOCALID_ROUTE50_NOBLE_ELECTRODE
+	removeobject LOCALID_ROUTE50_NOBLE_ELECTRODE
 	delay 20
-	setobjectxyperm 29, 14, 31
-	addobject 29
-	clearflag 9120
-	setvar 20650, 2
+	setobjectxyperm LOCALID_ROUTE50_NOBLE_ELECTRODE, 14, 31
+	addobject LOCALID_ROUTE50_NOBLE_ELECTRODE
+	clearflag JOHTO_FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE
+	setvar JOHTO_VAR_NOBLE_ELECTRODE, 2
 	release
 	end
 
@@ -310,43 +310,43 @@ Route50_Movement_ElectrodeEntrance3:
 Route50_EventScript_Electrode::
 	lock
 	faceplayer
-	playmoncry 996, 2
+	playmoncry SPECIES_ELECTRODE_HISUI, CRY_MODE_ENCOUNTER
 	waitmoncry
 	setwildbossbattle species=996, level=80, item=ITEM_BRIGHT_POWDER, move1_1=MOVE_FOUL_PLAY, move1_2=MOVE_ELECTRO_BALL, move1_3=MOVE_ENERGY_BALL move1_4=MOVE_CHLOROBLAST
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 3, 1, 0, 3, 0
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, Route50_EventScript_ElectrodeRan
-	bufferspeciesname STR_VAR_1, 996
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route50_EventScript_ElectrodeRan
+	bufferspeciesname STR_VAR_1, SPECIES_ELECTRODE_HISUI
 	msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
 	giveitem ITEM_ZAP_PLATE
-	addvar 20640, 1
-	fadescreenswapbuffers 1
-	removeobject 29
-	setflag 9120
-	fadescreenswapbuffers 0
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_ROUTE50_NOBLE_ELECTRODE
+	setflag JOHTO_FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 Route50_EventScript_ElectrodeRan::
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 

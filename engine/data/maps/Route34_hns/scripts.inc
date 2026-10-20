@@ -1,34 +1,34 @@
 @ Johto (data/maps/Route34_hns/scripts.inc), as built into the FireRed game.
 
 Route34_hns_MapScripts::
-	map_script 3, Route34_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route34_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route34_OnTransition:
-	specialvar 32781, GetDaycareState
-	call_if_eq 32781, 1, Route34_MapScript_EggReady
+	specialvar VAR_RESULT, GetDaycareState
+	call_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, Route34_MapScript_EggReady
 	callnative SetTimeBasedEncounters
 	end
 
 Route34_MapScript_EggReady::
-	setobjectxyperm 12, 30, 34
+	setobjectxyperm LOCALID_ROUTE34_DAYCAREMAN, 30, 34
 	return
 
 Route34_EventScript_YoungsterSamuel::
-	trainerbattle_single 1035, Route34_Text_YoungsterSamuel_Seen, Route34_Text_YoungsterSamuel_Beaten
+	trainerbattle_single TRAINER_JOHTO_SAMUEL_HNS, Route34_Text_YoungsterSamuel_Seen, Route34_Text_YoungsterSamuel_Beaten
 	msgbox Route34_Text_YoungsterSamuel_After, MSGBOX_AUTOCLOSE
 	end
 
 Route34_EventScript_YoungsterIan::
-	trainerbattle_single 1036, Route34_Text_YoungsterIan_Seen, Route34_Text_YoungsterIan_Beaten
+	trainerbattle_single TRAINER_JOHTO_IAN_HNS, Route34_Text_YoungsterIan_Seen, Route34_Text_YoungsterIan_Beaten
 	msgbox Route34_Text_YoungsterIan_After, MSGBOX_AUTOCLOSE
 	end
 
 Route34_EventScript_CamperTodd::
-	trainerbattle_single 1356, Route34_Text_CamperTodd_Seen, Route34_Text_CamperTodd_Beaten, Route34_EventScript_RegisterTodd
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route34_EventScript_RematchTodd
+	trainerbattle_single TRAINER_JOHTO_TODD_HNS, Route34_Text_CamperTodd_Seen, Route34_Text_CamperTodd_Beaten, Route34_EventScript_RegisterTodd
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route34_EventScript_RematchTodd
 	msgbox Route34_Text_CamperTodd_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -36,19 +36,19 @@ Route34_EventScript_RegisterTodd::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route34_Text_ToddRegister, MSGBOX_DEFAULT
-	register_matchcall 1356
+	register_matchcall TRAINER_JOHTO_TODD_HNS
 	release
 	end
 
 Route34_EventScript_RematchTodd::
-	trainerbattle_rematch 1356, Route34_Text_ToddRematchIntro, Route34_Text_ToddRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_TODD_HNS, Route34_Text_ToddRematchIntro, Route34_Text_ToddRematchDefeat
 	msgbox Route34_Text_ToddPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route34_EventScript_PicnickerGina::
-	trainerbattle_single 1343, Route34_Text_PicnickerGina_Seen, Route34_Text_PicnickerGina_Beaten, Route34_EventScript_RegisterGina
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route34_EventScript_RematchGina
+	trainerbattle_single TRAINER_JOHTO_GINA_HNS, Route34_Text_PicnickerGina_Seen, Route34_Text_PicnickerGina_Beaten, Route34_EventScript_RegisterGina
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route34_EventScript_RematchGina
 	msgbox Route34_Text_PicnickerGina_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -56,37 +56,37 @@ Route34_EventScript_RegisterGina::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route34_Text_GinaRegister, MSGBOX_DEFAULT
-	register_matchcall 1343
+	register_matchcall TRAINER_JOHTO_GINA_HNS
 	release
 	end
 
 Route34_EventScript_RematchGina::
-	trainerbattle_rematch 1343, Route34_Text_PicnickerGina_Seen, Route34_Text_PicnickerGina_Beaten
+	trainerbattle_rematch TRAINER_JOHTO_GINA_HNS, Route34_Text_PicnickerGina_Seen, Route34_Text_PicnickerGina_Beaten
 	msgbox Route34_Text_PicnickerGina_After, MSGBOX_AUTOCLOSE
 	end
 
 Route34_EventScript_OfficerKeith::
-	trainerbattle_single 1422, Route34_Text_OfficerKeith_Seen, Route34_Text_OfficerKeith_Win
+	trainerbattle_single TRAINER_JOHTO_KEITH_HNS, Route34_Text_OfficerKeith_Seen, Route34_Text_OfficerKeith_Win
 	msgbox Route34_Text_OfficerKeith_After, MSGBOX_AUTOCLOSE
 	end
 
 Route34_EventScript_PokefanMBrandon::
-	trainerbattle_single 1402, Route34_Text_PokefanBrandon_Seen, Route34_Text_PokefanBrandon_Beaten
+	trainerbattle_single TRAINER_JOHTO_BRANDON_HNS, Route34_Text_PokefanBrandon_Seen, Route34_Text_PokefanBrandon_Beaten
 	msgbox Route34_Text_PokefanBrandon_After, MSGBOX_AUTOCLOSE
 	end
 
 Route34_EventScript_Irene::
-	trainerbattle_single 1102, Route34_Text_CooltrainerIrene_Seen, Route34_Text_CooltrainerIrene_Beaten
+	trainerbattle_single TRAINER_JOHTO_IRENE_HNS, Route34_Text_CooltrainerIrene_Seen, Route34_Text_CooltrainerIrene_Beaten
 	msgbox Route34_Text_CooltrainerIrene_After2, MSGBOX_AUTOCLOSE
 	end
 
 Route34_EventScript_Jenn::
-	trainerbattle_single 1112, Route34_Text_CooltrainerJenn_Seen, Route34_Text_CooltrainerJenn_Beaten
+	trainerbattle_single TRAINER_JOHTO_JENN_HNS, Route34_Text_CooltrainerJenn_Seen, Route34_Text_CooltrainerJenn_Beaten
 	msgbox Route34_Text_CooltrainerJenn_After2, MSGBOX_AUTOCLOSE
 	end
 
 Route34_EventScript_Kate::
-	trainerbattle_single 1101, Route34_Text_CooltrainerKate_Seen, Route34_Text_CooltrainerKate_Beaten
+	trainerbattle_single TRAINER_JOHTO_KATE_HNS, Route34_Text_CooltrainerKate_Seen, Route34_Text_CooltrainerKate_Beaten
 	msgbox Route34_Text_CooltrainerKate_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -120,7 +120,7 @@ Route34_EventScript_Item_RareCandy::
 	end
 
 Route34_EventScript_Item_Embargo::
-	finditem 644
+	finditem ITEM_TM_EMBARGO
 	end
 
 Route34_Text_YoungsterSamuel_Seen:

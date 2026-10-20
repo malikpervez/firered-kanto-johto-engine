@@ -1,39 +1,39 @@
 @ Johto (data/maps/GoldenrodCity_RadioTower_5F_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_RadioTower_5F_hns_MapScripts::
-	map_script 1, GoldenrodCity_RadioTower_5F_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, GoldenrodCity_RadioTower_5F_OnLoad
 	.byte 0
 
 GoldenrodCity_RadioTower_5F_OnLoad::
-	call_if_eq 20569, 6, GoldenrodCity_RadioTower_5F_MapScript_HidePetrel
+	call_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_RadioTower_5F_MapScript_HidePetrel
 	end
 
 GoldenrodCity_RadioTower_5F_MapScript_HidePetrel::
-	clearflag 8297
-	setflag 8299
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_PETREL
 	return
 
 GoldenrodCity_RadioTower_5F_EventScript_Petrel::
 	lock
-	goto_if_ge 20569, 10, GoldenrodCity_RadioTower_5F_EventScript_Director
-	goto_if_eq 32780, DIR_SOUTH, GoldenrodCity_RadioTower_5F_EventScript_PetrelNorth
+	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 10, GoldenrodCity_RadioTower_5F_EventScript_Director
+	goto_if_eq VAR_FACING, DIR_SOUTH, GoldenrodCity_RadioTower_5F_EventScript_PetrelNorth
 	faceplayer
 	msgbox GoldenrodCity_RadioTower_5F_Text_FakeDirector1, MSGBOX_DEFAULT
 	closemessage
-	applymovement 1, GoldenrodCity_RadioTower_5F_Movement_Spin
+	applymovement LOCALID_DIRECTOR_OFFICE, GoldenrodCity_RadioTower_5F_Movement_Spin
 	waitmovement 0
-	setflag 8297
-	removeobject 1
-	clearflag 8299
-	addobject 4
-	applymovement 4, GoldenrodCity_RadioTower_5F_Movement_Spin2
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR
+	removeobject LOCALID_DIRECTOR_OFFICE
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_PETREL
+	addobject LOCALID_PETREL_OFFICE
+	applymovement LOCALID_PETREL_OFFICE, GoldenrodCity_RadioTower_5F_Movement_Spin2
 	waitmovement 0
 	msgbox GoldenrodCity_RadioTower_5F_Text_FakeDirector2, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1498, GoldenrodCity_RadioTower_5F_Text_FakeDirectorWin
+	trainerbattle_no_intro TRAINER_JOHTO_PETREL_2_HNS, GoldenrodCity_RadioTower_5F_Text_FakeDirectorWin
 	msgbox GoldenrodCity_RadioTower_5F_Text_FakeDirectorAfter, MSGBOX_DEFAULT
 	giveitem ITEM_BASEMENT_KEY
-	setvar 20569, 7
-	clearflag 8302
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 7
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_UNDERGROUND_KIMONO
 	closemessage
 	release
 	end
@@ -145,64 +145,64 @@ GoldenrodCity_RadioTower_5F_EventScript_Archer::
 	lock
 	faceplayer
 	msgbox GoldenrodCity_RadioTower_5F_Text_RocketBossSeen, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1493, GoldenrodCity_RadioTower_5F_Text_RocketBossBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_ARCHER_HNS, GoldenrodCity_RadioTower_5F_Text_RocketBossBeaten
 	msgbox GoldenrodCity_RadioTower_5F_Text_RocketBossAfter, MSGBOX_DEFAULT
 	delay 55
 	closemessage
-	fadescreen 1
-	setflag 8300
-	playse 9
-	setvar 20569, 10
-	removeobject 2
-	removeobject 3
-	setflag 8299
-	clearflag 8297
-	removeobject 4
-	addobject 5
+	fadescreen FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_ROCKETS
+	playse SE_EXIT
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 10
+	removeobject LOCALID_GOLDENROD_ARCHER
+	removeobject LOCALID_GOLDENROD_ARIANA
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_PETREL
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR
+	removeobject LOCALID_PETREL_OFFICE
+	addobject LOCALID_DIRECTOR_STUDIO
 	playbgm ((558 + 1) + 0x0E), TRUE
 	delay 120
-	fadescreen 0
-	goto_if_eq 32780, DIR_SOUTH, GoldenrodCity_RadioTower_5F_EventScript_WingTop
-	goto_if_eq 32780, DIR_WEST, GoldenrodCity_RadioTower_5F_EventScript_WingMid
-	goto_if_eq 32780, DIR_NORTH, GoldenrodCity_RadioTower_5F_EventScript_WingBot
+	fadescreen FADE_FROM_BLACK
+	goto_if_eq VAR_FACING, DIR_SOUTH, GoldenrodCity_RadioTower_5F_EventScript_WingTop
+	goto_if_eq VAR_FACING, DIR_WEST, GoldenrodCity_RadioTower_5F_EventScript_WingMid
+	goto_if_eq VAR_FACING, DIR_NORTH, GoldenrodCity_RadioTower_5F_EventScript_WingBot
 	release
 	end
 
 GoldenrodCity_RadioTower_5F_EventScript_WingTop::
-	applymovement 5, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerTop
+	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerTop
 	waitmovement 0
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20577, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
-	call_if_eq 20577, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
-	applymovement 5, GoldenrodCity_RadioTower_5F_Movement_LeaveTop
+	call_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
+	call_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
+	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_LeaveTop
 	waitmovement 0
 	goto GoldenrodCity_RadioTower_5F_Fakeout
 	end
 
 GoldenrodCity_RadioTower_5F_EventScript_WingMid::
-	applymovement 5, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerMid
+	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerMid
 	waitmovement 0
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20577, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
-	call_if_eq 20577, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
-	applymovement 5, GoldenrodCity_RadioTower_5F_Movement_LeaveMid
+	call_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
+	call_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
+	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_LeaveMid
 	waitmovement 0
 	goto GoldenrodCity_RadioTower_5F_Fakeout
 	end
 
 GoldenrodCity_RadioTower_5F_EventScript_WingBot::
-	applymovement 5, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerBot
+	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerBot
 	waitmovement 0
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorThanks, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20577, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
-	call_if_eq 20577, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
-	applymovement 5, GoldenrodCity_RadioTower_5F_Movement_LeaveBot
+	call_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 1, GoldenrodCity_RadioTower_5F_EventScript_GiveTidalWing
+	call_if_eq JOHTO_VAR_LUGIA_OR_HOOH, 2, GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing
+	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_LeaveBot
 	waitmovement 0
 	goto GoldenrodCity_RadioTower_5F_Fakeout
 	end
@@ -222,31 +222,31 @@ GoldenrodCity_RadioTower_5F_EventScript_GiveClearWing::
 	return
 
 GoldenrodCity_RadioTower_5F_Fakeout::
-	playse 21
-	applymovement 5, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_DIRECTOR_STUDIO, J_Common_Movement_ExclamationMark
 	delay 60
-	turnobject 5, DIR_WEST
+	turnobject LOCALID_DIRECTOR_STUDIO, DIR_WEST
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorLegendary, MSGBOX_DEFAULT
 	closemessage
-	applymovement 5, GoldenrodCity_RadioTower_5F_Movement_Leave1
+	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_Leave1
 	waitmovement 0
-	playse 21
-	applymovement 5, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_DIRECTOR_STUDIO, J_Common_Movement_ExclamationMark
 	delay 60
-	turnobject 5, DIR_SOUTH
+	turnobject LOCALID_DIRECTOR_STUDIO, DIR_SOUTH
 	msgbox GoldenrodCity_RadioTower_5F_Text_DirectorFakeout, MSGBOX_DEFAULT
 	closemessage
-	applymovement 5, GoldenrodCity_RadioTower_5F_Movement_Leave2
+	applymovement LOCALID_DIRECTOR_STUDIO, GoldenrodCity_RadioTower_5F_Movement_Leave2
 	waitmovement 0
-	setflag 8298
-	removeobject 5
-	setvar 20578, 17
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR_2
+	removeobject LOCALID_DIRECTOR_STUDIO
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 17
 	release
 	end
 
 GoldenrodCity_RadioTower_5F_EventScript_Trigger_NPCS::
-	clearflag 8296
-	setvar 20569, 11
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_NPCS
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 11
 	end
 
 GoldenrodCity_RadioTower_5F_Movement_WalkToPlayerTop:

@@ -1,103 +1,103 @@
 @ Johto (data/maps/SinjohRuins_House1_hns/scripts.inc), as built into the FireRed game.
 
 SinjohRuins_House1_hns_MapScripts::
-	map_script 2, SinjohRuins_Lab_OnFrame
-	map_script 3, SinjohRuins_Lab_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SinjohRuins_Lab_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, SinjohRuins_Lab_OnTransition
 	.byte 0
 
 SinjohRuins_Lab_OnTransition::
-	call_if_eq 20639, 7, SinjohRuins_Lab_SetupFinalPlateScene
+	call_if_eq JOHTO_VAR_SINJOH_STORYLINE, 7, SinjohRuins_Lab_SetupFinalPlateScene
 	end
 
 SinjohRuins_Lab_OnFrame::
-	map_script_2 20639, 7, SinjohRuins_Lab_FinalPlateScene
+	map_script_2 JOHTO_VAR_SINJOH_STORYLINE, 7, SinjohRuins_Lab_FinalPlateScene
 	.2byte 0
 
 SinjohRuins_Lab_EventScript_TriggerIntroTop::
 	lock
-	playse 21
-	applymovement2 8, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 8
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 255, J_Common_Movement_WalkDown1
-	applymovement2 8, SinjohRuins_Lab_Movement_StevenMeetPlayer
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_WalkDown1
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
 	waitmovement 0
-	waitmovement 8
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
 	goto SinjohRuins_Lab_EventScript_TriggerIntro
 
 SinjohRuins_Lab_EventScript_TriggerIntroMid::
 	lock
-	playse 21
-	applymovement2 8, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 8
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 8, SinjohRuins_Lab_Movement_StevenMeetPlayer
-	waitmovement 8
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
 	goto SinjohRuins_Lab_EventScript_TriggerIntro
 
 SinjohRuins_Lab_EventScript_TriggerIntroBot::
 	lock
-	playse 21
-	applymovement2 8, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 8
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene1, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 255, J_Common_Movement_WalkUp1
-	applymovement2 8, SinjohRuins_Lab_Movement_StevenMeetPlayer
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_WalkUp1
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenMeetPlayer
 	waitmovement 0
-	waitmovement 8
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
 	goto SinjohRuins_Lab_EventScript_TriggerIntro
 
 SinjohRuins_Lab_EventScript_TriggerIntro::
-	turnobject 255, DIR_EAST
+	turnobject LOCALID_PLAYER, DIR_EAST
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene2, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 8, SinjohRuins_Lab_Movement_StevenSitsDown
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenSitsDown
 	delay 10
-	applymovement 255, SinjohRuins_Lab_Movement_PlayerGoesToTable
+	applymovement LOCALID_PLAYER, SinjohRuins_Lab_Movement_PlayerGoesToTable
 	delay 40
-	applymovement2 1, SinjohRuins_Lab_Movement_LinguistWalkDown
+	applymovement2 LOCALID_NEWSINJOH_LAB_LINGUIST, SinjohRuins_Lab_Movement_LinguistWalkDown
 	waitmovement 0
-	waitmovement 8
-	waitmovement 1
-	applymovement2 8, J_Common_Movement_WalkInPlaceRight
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
+	waitmovement LOCALID_NEWSINJOH_LAB_LINGUIST
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, J_Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene3, MSGBOX_DEFAULT
 	closemessage
 	delay 10
-	applymovement2 1, J_Common_Movement_WalkInPlaceDown
+	applymovement2 LOCALID_NEWSINJOH_LAB_LINGUIST, J_Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene4, MSGBOX_DEFAULT
 	closemessage
 	delay 10
-	applymovement 1, SinjohRuins_Lab_Movement_LinguistWalkUp
-	applymovement2 8, J_Common_Movement_WalkInPlaceRight
+	applymovement LOCALID_NEWSINJOH_LAB_LINGUIST, SinjohRuins_Lab_Movement_LinguistWalkUp
+	applymovement2 LOCALID_SINJOHRUINS_LAB_STEVEN, J_Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene5, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, SinjohRuins_Lab_EventScript_IntroChoseYes
+	goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Lab_EventScript_IntroChoseYes
 
 SinjohRuins_Lab_EventScript_IntroChoice::
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutsceneRefused, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, SinjohRuins_Lab_EventScript_IntroChoseYes
+	goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Lab_EventScript_IntroChoseYes
 	goto SinjohRuins_Lab_EventScript_IntroChoice
 
 SinjohRuins_Lab_EventScript_IntroChoseYes::
 	msgbox SinjohRuins_Lab_Text_StevenIntroCutscene6, MSGBOX_DEFAULT
 	closemessage
-	setvar 20639, 6
-	setvar 20642, 1
-	setvar 20645, 1
-	setvar 20646, 1
-	setvar 20647, 1
-	setvar 20648, 1
-	setvar 20649, 1
-	setvar 20650, 1
-	setvar 20651, 1
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 6
+	setvar JOHTO_VAR_NOBLE_SNEASLER, 1
+	setvar JOHTO_VAR_NOBLE_OVERQWIL, 1
+	setvar JOHTO_VAR_NOBLE_WYRDEER, 1
+	setvar JOHTO_VAR_NOBLE_ARCANINE, 1
+	setvar JOHTO_VAR_NOBLE_URSALUNA, 1
+	setvar JOHTO_VAR_NOBLE_KLEAVOR, 1
+	setvar JOHTO_VAR_NOBLE_ELECTRODE, 1
+	setvar JOHTO_VAR_NOBLE_TYPHLOSION, 1
 	release
 	end
 
@@ -214,51 +214,51 @@ SinjohRuins_Lab_Text_StevenIntroCutsceneRefused:
 	.string "Won'{SE_M_SPIT_UP}yo{SE_M_DIVE}reconsider?$"
 
 SinjohRuins_Lab_SetupFinalPlateScene::
-	setobjectxyperm 8, 4, 7
-	setobjectmovementtype 8, 0xA
-	setobjectxyperm 1, 5, 7
-	setobjectmovementtype 1, 0x9
+	setobjectxyperm LOCALID_SINJOHRUINS_LAB_STEVEN, 4, 7
+	setobjectmovementtype LOCALID_SINJOHRUINS_LAB_STEVEN, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm LOCALID_NEWSINJOH_LAB_LINGUIST, 5, 7
+	setobjectmovementtype LOCALID_NEWSINJOH_LAB_LINGUIST, MOVEMENT_TYPE_FACE_LEFT
 	return
 
 SinjohRuins_Lab_FinalPlateScene::
 	lock
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
-	playse 21
-	applymovement 8, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 8
-	turnobject 8, DIR_SOUTH
+	waitmovement LOCALID_SINJOHRUINS_LAB_STEVEN
+	turnobject LOCALID_SINJOHRUINS_LAB_STEVEN, DIR_SOUTH
 	delay 30
-	applymovement 8, J_Common_Movement_WalkDown1
-	turnobject 1, DIR_SOUTH
+	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, J_Common_Movement_WalkDown1
+	turnobject LOCALID_NEWSINJOH_LAB_LINGUIST, DIR_SOUTH
 	delay 30
 	msgbox SinjohRuins_Lab_Text_FinalPlateScene1, MSGBOX_DEFAULT
 	closemessage
 	dofieldeffectsparkle 3, 8, 0
-	waitfieldeffect 54
-	setvar 32781, 3
-	playfanfare 388
-	playse 107
+	waitfieldeffect FLDEFF_SPARKLE
+	setvar VAR_RESULT, 3
+	playfanfare MUS_AWAKEN_LEGEND
+	playse SE_ORB
 	special DoOrbEffect
 	delay 200
 	special FadeOutOrbEffect
 	waitstate
-	setvar 32772, 2
-	setvar 32773, 2
-	setvar 32774, 40
-	setvar 32775, 3
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 40
+	setvar VAR_0x8007, 3
 	special ShakeCamera
 	waitstate
 	msgbox SinjohRuins_Lab_Text_FinalPlateScene2, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, SinjohRuins_Lab_Movement_PlayerLeaveLab
-	applymovement 8, SinjohRuins_Lab_Movement_StevenLeaveLab
+	applymovement LOCALID_PLAYER, SinjohRuins_Lab_Movement_PlayerLeaveLab
+	applymovement LOCALID_SINJOHRUINS_LAB_STEVEN, SinjohRuins_Lab_Movement_StevenLeaveLab
 	waitmovement 0
 	waitmovement 0
-	setvar 20639, 8
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 8
 	warp MAP_SINJOH_RUINS_HNS, 0
 	waitstate
 	end
@@ -291,13 +291,13 @@ SinjohRuins_Lab_Movement_StevenLeaveLab:
 SinjohRuins_Lab_EventScript_Steven::
 	lock
 	faceplayer
-	buffernumberstring STR_VAR_1, 20640
-	goto_if_ge 20640, 17, SinjohRuins_Lab_EventScript_StevenAfterAllPlates
-	goto_if_ge 20640, 15, SinjohRuins_Lab_EventScript_StevenAfter15Plates
-	goto_if_ge 20640, 12, SinjohRuins_Lab_EventScript_StevenAfter12Plates
-	goto_if_ge 20640, 9, SinjohRuins_Lab_EventScript_StevenAfter9Plates
-	goto_if_ge 20640, 6, SinjohRuins_Lab_EventScript_StevenAfter6Plates
-	goto_if_ge 20640, 3, SinjohRuins_Lab_EventScript_StevenAfter3Plates
+	buffernumberstring STR_VAR_1, JOHTO_VAR_PLATECOUNTER
+	goto_if_ge JOHTO_VAR_PLATECOUNTER, 17, SinjohRuins_Lab_EventScript_StevenAfterAllPlates
+	goto_if_ge JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_StevenAfter15Plates
+	goto_if_ge JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_StevenAfter12Plates
+	goto_if_ge JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_StevenAfter9Plates
+	goto_if_ge JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_StevenAfter6Plates
+	goto_if_ge JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_StevenAfter3Plates
 	msgbox SinjohRuins_Lab_Text_StevenFindPlates, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -379,8 +379,8 @@ SinjohRuins_Lab_Text_StevenAfterAll:
 	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}w{SE_M_REVERSAL}ca{SE_M_ATTRACT}mee{SE_M_SPIT_UP}agai{SE_M_ATTRACT}somewhere.$"
 
 SinjohRuins_Lab_EventScript_Geologist::
-	goto_if_ge 20639, 13, SinjohRuins_Lab_EventScript_GeologistAfterEvent
-	goto_if_ge 20639, 9, SinjohRuins_Lab_EventScript_GeologistDuringEvent
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, SinjohRuins_Lab_EventScript_GeologistAfterEvent
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_GeologistDuringEvent
 	msgbox SinjohRuins_Lab_Text_Geologist MSGBOX_NPC
 	end
 
@@ -413,8 +413,8 @@ SinjohRuins_Lab_Text_GeologistAfter:
 	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}mor{SE_M_REVERSAL}tim{SE_M_REVERSAL}t{SE_M_ATTRACT2}stud{SE_M_YAWN}them.$"
 
 SinjohRuins_Lab_EventScript_Linguist::
-	goto_if_ge 20639, 13, SinjohRuins_Lab_EventScript_LinguistAfterEvent
-	goto_if_ge 20639, 9, SinjohRuins_Lab_EventScript_LinguistDuringEvent
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, SinjohRuins_Lab_EventScript_LinguistAfterEvent
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_LinguistDuringEvent
 	msgbox SinjohRuins_Lab_Text_Linguist MSGBOX_NPC
 	end
 
@@ -449,8 +449,8 @@ SinjohRuins_Lab_Text_LinguistAfter:
 	.string "th{SE_M_REVERSAL}field-work.$"
 
 SinjohRuins_Lab_EventScript_Archaeologist::
-	goto_if_ge 20639, 13, SinjohRuins_Lab_EventScript_ArchaeologistAfterEvent
-	goto_if_ge 20639, 9, SinjohRuins_Lab_EventScript_ArchaeologistDuringEvent
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, SinjohRuins_Lab_EventScript_ArchaeologistAfterEvent
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_ArchaeologistDuringEvent
 	msgbox SinjohRuins_Lab_Text_Archaeologist MSGBOX_NPC
 	end
 
@@ -490,7 +490,7 @@ SinjohRuins_Lab_Text_ArchaeologistAfter:
 SinjohRuins_Lab_EventScript_Growlithe_Hisui::
 	lock
 	faceplayer
-	playmoncry 58, 0
+	playmoncry SPECIES_GROWLITHE, 0
 	msgbox SinjohRuins_Lab_Text_Growlithe_Cry, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
@@ -509,8 +509,8 @@ SinjohRuins_Lab_Text_GrowlitheBall:
 	.string "Bette{SE_M_SAND_TOMB}leav{SE_M_REVERSAL}i{SE_M_SPIT_UP}alone.$"
 
 SinjohRuins_Lab_EventScript_Biologist::
-	goto_if_ge 20639, 13, SinjohRuins_Lab_EventScript_BiologistAfterEvent
-	goto_if_ge 20639, 9, SinjohRuins_Lab_EventScript_BiologistDuringEvent
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, SinjohRuins_Lab_EventScript_BiologistAfterEvent
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_BiologistDuringEvent
 	msgbox SinjohRuins_Lab_Text_Biologist MSGBOX_NPC
 	end
 
@@ -552,7 +552,7 @@ SinjohRuins_Lab_Text_BiologistAfter:
 	.string "{PLAYER}.$"
 
 SinjohRuins_Lab_EventScript_Hiker::
-	goto_if_ge 20639, 9, SinjohRuins_Lab_EventScript_HikerDuringAfter
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 9, SinjohRuins_Lab_EventScript_HikerDuringAfter
 	msgbox SinjohRuins_Lab_Text_Hiker MSGBOX_NPC
 	end
 
@@ -834,7 +834,7 @@ SinjohRuins_Lab_EventScript_16Plates::
 	pokenavcall SinjohRuins_Lab_Text_StevenCall16Plates
 	waitmessage
 	delay 30
-	setvar 20639, 7
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 7
 	return
 
 SinjohRuins_Lab_Text_StevenCall3Plates:

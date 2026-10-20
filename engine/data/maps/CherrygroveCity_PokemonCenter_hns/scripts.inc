@@ -1,11 +1,11 @@
 @ Johto (data/maps/CherrygroveCity_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 CherrygroveCity_PokemonCenter_hns_MapScripts::
-	map_script 3, CherryGrove_Pokecenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, CherryGrove_Pokecenter_OnTransition
 	.byte 0
 
 CherryGrove_Pokecenter_OnTransition::
-	setrespawn 129
+	setrespawn JOHTO_HEAL_LOCATION_CHERRYGROVE_CITY_HNS
 	end
 
 CherryGrove_Pokecenter_EventScript_Fisher::
@@ -35,7 +35,7 @@ CherryGrove_Pokecenter_EventScript_Lass::
 CherryGrove_Pokecenter_Chansey::
 	lock
 	faceplayer
-	playmoncry 113, 0
+	playmoncry SPECIES_CHANSEY, CRY_MODE_NORMAL
 	msgbox CherryGrove_Pokecenter_Text_Chansey, MSGBOX_DEFAULT
 	delay 40
 	waitmoncry

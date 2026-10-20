@@ -4,33 +4,33 @@ UnionCave_B2F_hns_MapScripts::
 	.byte 0
 
 UnionCave_B2F_EventScript_CooltrainerNick::
-	trainerbattle_single 1079, UnionCave_B2F_Text_CooltrainermNickSeen, UnionCave_B2F_Text_CooltrainermNickBeaten
+	trainerbattle_single TRAINER_JOHTO_NICK_HNS, UnionCave_B2F_Text_CooltrainermNickSeen, UnionCave_B2F_Text_CooltrainermNickBeaten
 	msgbox UnionCave_B2F_Text_CooltrainermNickAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_B2F_EventScript_CooltrainerfGwen::
-	trainerbattle_single 1097, UnionCave_B2F_Text_CooltrainerfGwenSeen, UnionCave_B2F_Text_CooltrainerfGwenBeaten
+	trainerbattle_single TRAINER_JOHTO_GWEN_HNS, UnionCave_B2F_Text_CooltrainerfGwenSeen, UnionCave_B2F_Text_CooltrainerfGwenBeaten
 	msgbox UnionCave_B2F_Text_CooltrainerfGwenAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_B2F_EventScript_CooltrainerfEmma::
-	trainerbattle_single 1110, UnionCave_B2F_Text_CooltrainerfEmmaSeen, UnionCave_B2F_Text_CooltrainerfEmmaBeaten
+	trainerbattle_single TRAINER_JOHTO_EMMA_HNS, UnionCave_B2F_Text_CooltrainerfEmmaSeen, UnionCave_B2F_Text_CooltrainerfEmmaBeaten
 	msgbox UnionCave_B2F_Text_CooltrainerfEmmaAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_B2F_EventScript_Lapras::
 	lock
 	faceplayer
-	playmoncry 131, 2
+	playmoncry SPECIES_LAPRAS, CRY_MODE_ENCOUNTER
 	waitmoncry
-	setwildbattle 131, 20
+	setwildbattle SPECIES_LAPRAS, 20
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, UnionCave_B2F_EventScript_LaprasRan
-	fadescreenswapbuffers 1
-	removeobject 6
-	setflag 8247
-	fadescreenswapbuffers 0
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, UnionCave_B2F_EventScript_LaprasRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_UNION_CAVE_LAPRAS
+	setflag JOHTO_FLAG_HIDE_UNION_CAVE_LAPRAS
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 

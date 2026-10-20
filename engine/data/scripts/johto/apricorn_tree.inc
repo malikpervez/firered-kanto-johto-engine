@@ -7,7 +7,7 @@ J_ApricornTreeScript::
 	waitmessage
 	waitbuttonpress
 	special ObjectEventInteractionGetApricornTreeData
-	goto_if_gt 32773, 0, J_ApricornTree_EventScript_WantToPick
+	goto_if_gt VAR_0x8005, 0, J_ApricornTree_EventScript_WantToPick
 	message J_ApricornTree_Text_Empty
 	waitmessage
 	waitbuttonpress
@@ -15,10 +15,10 @@ J_ApricornTreeScript::
 	end
 
 J_ApricornTree_EventScript_WantToPick::
-	buffernumberstring STR_VAR_2, 32773
+	buffernumberstring STR_VAR_2, VAR_0x8005
 	msgbox J_ApricornTree_Text_WantToPick, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_ApricornTree_EventScript_PickApricorn
-	goto_if_eq 32781, NO, J_ApricornTree_EventScript_CancelPickingApricorn
+	goto_if_eq VAR_RESULT, YES, J_ApricornTree_EventScript_PickApricorn
+	goto_if_eq VAR_RESULT, NO, J_ApricornTree_EventScript_CancelPickingApricorn
 
 	.set APRICORN_NORMAL_BAG_FULL, 0
 	.set APRICORN_NORMAL_SPACE_IN_BAG, 1
@@ -26,7 +26,7 @@ J_ApricornTree_EventScript_WantToPick::
 J_ApricornTree_EventScript_PickApricorn::
 	special ObjectEventInteractionPickApricornTree
 	call J_EventScript_BufferPocketNameAndTryFanfare
-	goto_if_eq 32774, APRICORN_NORMAL_BAG_FULL, J_ApricornTree_EventScript_PocketFull
+	goto_if_eq VAR_0x8006, APRICORN_NORMAL_BAG_FULL, J_ApricornTree_EventScript_PocketFull
 	message J_ApricornTree_Text_PickedTheApricorn
 	.if 0 != 0
 	copyvar 32774 32772
@@ -35,7 +35,7 @@ J_ApricornTree_EventScript_PickApricorn::
 	.if 0 != 0
 	showberrydescription
 	.endif
-	playfanfare 387
+	playfanfare MUS_OBTAIN_BERRY
 	waitmessage
 	waitfanfare
 	waitbuttonpress

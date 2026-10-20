@@ -1,35 +1,35 @@
 @ Johto (data/maps/SinjohRuins_hns/scripts.inc), as built into the FireRed game.
 
 SinjohRuins_hns_MapScripts::
-	map_script 2, SinjohRuins_OnFrame
-	map_script 3, SinjohRuins_hns_OnTransition
-	map_script 1, SinjohRuins_hns_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SinjohRuins_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, SinjohRuins_hns_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, SinjohRuins_hns_OnLoad
 	.byte 0
 
 SinjohRuins_OnFrame::
-	map_script_2 20639, 8, SinjohRuins_StairsScene
+	map_script_2 JOHTO_VAR_SINJOH_STORYLINE, 8, SinjohRuins_StairsScene
 	.2byte 0
 
 SinjohRuins_hns_OnTransition::
-	call_if_eq 20639, 9, SinjohRuins_StevenLanding
-	call_if_eq 20639, 10, SinjohRuins_StevenLanding
-	call_if_eq 20639, 11, SinjohRuins_StevenLanding
-	call_if_eq 20639, 12, SinjohRuins_StevenLanding
+	call_if_eq JOHTO_VAR_SINJOH_STORYLINE, 9, SinjohRuins_StevenLanding
+	call_if_eq JOHTO_VAR_SINJOH_STORYLINE, 10, SinjohRuins_StevenLanding
+	call_if_eq JOHTO_VAR_SINJOH_STORYLINE, 11, SinjohRuins_StevenLanding
+	call_if_eq JOHTO_VAR_SINJOH_STORYLINE, 12, SinjohRuins_StevenLanding
 	callnative SetTimeBasedEncounters
 	end
 
 SinjohRuins_StevenLanding::
-	setobjectxyperm 1, 24, 31
-	setobjectmovementtype 1, 0x7
+	setobjectxyperm LOCALID_SINJOHRUINS_STEVEN, 24, 31
+	setobjectmovementtype LOCALID_SINJOHRUINS_STEVEN, MOVEMENT_TYPE_FACE_UP
 	return
 
 SinjohRuins_hns_OnLoad::
-	call_if_ge 20640, 3, SinjohRuins_OpenRegirock
-	call_if_ge 20640, 6, SinjohRuins_OpenRegice
-	call_if_ge 20640, 9, SinjohRuins_OpenRegisteel
-	call_if_ge 20640, 12, SinjohRuins_OpenRegieleki
-	call_if_ge 20640, 15, SinjohRuins_OpenRegidrago
-	call_if_ge 20640, 17, SinjohRuins_OpenArceus
+	call_if_ge JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_OpenRegirock
+	call_if_ge JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_OpenRegice
+	call_if_ge JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_OpenRegisteel
+	call_if_ge JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_OpenRegieleki
+	call_if_ge JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_OpenRegidrago
+	call_if_ge JOHTO_VAR_PLATECOUNTER, 17, SinjohRuins_OpenArceus
 	end
 
 SinjohRuins_OpenRegirock::
@@ -94,68 +94,68 @@ SinjohRuins_OpenArceus::
 
 SinjohRuins_StairsScene::
 	lock
-	setvar 32772, 2
-	setvar 32773, 2
-	setvar 32774, 40
-	setvar 32775, 3
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 40
+	setvar VAR_0x8007, 3
 	special ShakeCamera
-	applymovement 255, SinjohRuins_Movement_PlayerWalkRight
+	applymovement LOCALID_PLAYER, SinjohRuins_Movement_PlayerWalkRight
 	opendoor 14, 52
 	waitdooranim
-	addobject 1
-	clearflag 9122
-	applymovement 1, J_Common_Movement_WalkDown1
-	waitmovement 1
-	applymovement 1, SinjohRuins_Movement_StevenWalkRight
+	addobject LOCALID_SINJOHRUINS_STEVEN
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_STEVEN
+	applymovement LOCALID_SINJOHRUINS_STEVEN, J_Common_Movement_WalkDown1
+	waitmovement LOCALID_SINJOHRUINS_STEVEN
+	applymovement LOCALID_SINJOHRUINS_STEVEN, SinjohRuins_Movement_StevenWalkRight
 	waitmovement 0
 	closedoor 14, 52
 	waitdooranim
-	setvar 32772, 2
-	setvar 32773, 2
-	setvar 32774, 40
-	setvar 32775, 3
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 40
+	setvar VAR_0x8007, 3
 	special ShakeCamera
 	waitstate
-	waitmovement 1
+	waitmovement LOCALID_SINJOHRUINS_STEVEN
 	waitmovement 0
-	setvar 32772, 2
-	setvar 32773, 2
-	setvar 32774, 40
-	setvar 32775, 3
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 40
+	setvar VAR_0x8007, 3
 	special ShakeCamera
 	waitstate
 	special SpawnCameraObject
-	applymovement 127, SinjohRuins_Movement_CameraPanUp
+	applymovement OBJ_EVENT_ID_CAMERA, SinjohRuins_Movement_CameraPanUp
 	waitmovement 0
-	setvar 32772, 2
-	setvar 32773, 2
-	setvar 32774, 40
-	setvar 32775, 3
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 40
+	setvar VAR_0x8007, 3
 	special ShakeCamera
-	setobjectxyperm 1, 19, 52
-	setobjectmovementtype 1, 0x7
+	setobjectxyperm LOCALID_SINJOHRUINS_STEVEN, 19, 52
+	setobjectmovementtype LOCALID_SINJOHRUINS_STEVEN, MOVEMENT_TYPE_FACE_UP
 	call SinjohRuins_OpenArceus
 	special DrawWholeMapView
 	delay 60
-	applymovement 127, SinjohRuins_Movement_CameraPanDown
+	applymovement OBJ_EVENT_ID_CAMERA, SinjohRuins_Movement_CameraPanDown
 	waitmovement 0
 	special RemoveCameraObject
 	msgbox SinjohRuins_Text_StevenGotoStairs1, MSGBOX_AUTOCLOSE
-	turnobject 1, DIR_EAST
+	turnobject LOCALID_SINJOHRUINS_STEVEN, DIR_EAST
 	delay 10
-	turnobject 255, DIR_WEST
+	turnobject LOCALID_PLAYER, DIR_WEST
 	msgbox SinjohRuins_Text_StevenGotoStairs2, MSGBOX_AUTOCLOSE
-	setvar 20639, 9
-	setvar 20640, 17
-	applymovement 1, SinjohRuins_Movement_StevenGoesToStairs
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 9
+	setvar JOHTO_VAR_PLATECOUNTER, 17
+	applymovement LOCALID_SINJOHRUINS_STEVEN, SinjohRuins_Movement_StevenGoesToStairs
 	waitmovement 0
-	removeobject 1
-	setobjectxyperm 1, 24, 31
-	setobjectmovementtype 1, 0x7
-	addobject 1
-	clearflag 9122
-	setflag 9123
-	setvar 20639, 9
+	removeobject LOCALID_SINJOHRUINS_STEVEN
+	setobjectxyperm LOCALID_SINJOHRUINS_STEVEN, 24, 31
+	setobjectmovementtype LOCALID_SINJOHRUINS_STEVEN, MOVEMENT_TYPE_FACE_UP
+	addobject LOCALID_SINJOHRUINS_STEVEN
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_STEVEN
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_LAB_STEVEN
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 9
 	release
 	end
 
@@ -253,34 +253,34 @@ SinjohRuins_Movement_PlayerWalkRight:
 
 SinjohRuins_EventScript_TriggerStevenBattleRight::
 	lock
-	turnobject 1, DIR_EAST
+	turnobject LOCALID_SINJOHRUINS_STEVEN, DIR_EAST
 	msgbox SinjohRuins_Text_StevenReadytoBattle, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, SinjohRuins_EventScript_TriggerPlayerLeaveRight
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_EventScript_TriggerPlayerLeaveRight
 	call SinjohRuins_EventScript_StevenBattle
-	setvar 20639, 10
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 10
 	release
 	end
 
 SinjohRuins_EventScript_TriggerPlayerLeaveRight::
 	closemessage
-	applymovement 255, J_Common_Movement_WalkRight1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
 	release
 	end
 
 SinjohRuins_EventScript_TriggerStevenBattleLeft::
 	lock
-	turnobject 1, DIR_WEST
+	turnobject LOCALID_SINJOHRUINS_STEVEN, DIR_WEST
 	msgbox SinjohRuins_Text_StevenReadytoBattle, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, SinjohRuins_EventScript_TriggerPlayerLeaveLeft
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_EventScript_TriggerPlayerLeaveLeft
 	call SinjohRuins_EventScript_StevenBattle
-	setvar 20639, 10
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 10
 	release
 	end
 
 SinjohRuins_EventScript_TriggerPlayerLeaveLeft::
 	closemessage
-	applymovement 255, J_Common_Movement_WalkLeft1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	release
 	end
@@ -317,16 +317,16 @@ SinjohRuins_Movement_StevenLeaveLeft:
 
 SinjohRuins_EventScript_StevenBattle::
 	msgbox SinjohRuins_Text_ChallengeSteven, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro 1636, SinjohRuins_Text_StevenDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_STEVEN_HNS, SinjohRuins_Text_StevenDefeat
 	msgbox SinjohRuins_Text_StevenAfterBattle, MSGBOX_AUTOCLOSE
 	giveitem ITEM_STONE_PLATE
 	msgbox SinjohRuins_Text_HealParty, MSGBOX_AUTOCLOSE
-	fadescreenswapbuffers 1
+	fadescreenswapbuffers FADE_TO_BLACK
 	special HealPlayerParty
 	closemessage
-	playfanfare 368
+	playfanfare MUS_HEAL
 	waitfanfare
-	fadescreenswapbuffers 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox SinjohRuins_Text_StevenAfterPlate, MSGBOX_AUTOCLOSE
 	return
 

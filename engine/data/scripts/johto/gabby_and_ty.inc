@@ -1,9 +1,9 @@
 @ Johto (data/scripts/gabby_and_ty.inc), as built into the FireRed game.
 
 J_GabbyAndTy_EventScript_UpdateLocation::
-	cleartrainerflag 56
-	specialvar 32781, GabbyAndTyGetBattleNum
-	switch 32781
+	cleartrainerflag TRAINER_GABBY_AND_TY_6
+	specialvar VAR_RESULT, GabbyAndTyGetBattleNum
+	switch VAR_RESULT
 	case 0, J_GabbyAndTy_EventScript_MoveForBattle1
 	case 1, J_GabbyAndTy_EventScript_MoveForBattle2
 	case 2, J_GabbyAndTy_EventScript_MoveForBattle3
@@ -60,137 +60,137 @@ J_GabbyAndTy_EventScript_MoveForBattle9::
 	return
 
 J_GabbyAndTy_EventScript_HideAtRoute111_1::
-	setflag 0
+	setflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_1
 	return
 
 J_GabbyAndTy_EventScript_ShowAtRoute111_1::
-	clearflag 0
+	clearflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_1
 	return
 
 J_GabbyAndTy_EventScript_HideAtRoute118_1::
-	setflag 0
+	setflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_1
 	return
 
 J_GabbyAndTy_EventScript_ShowAtRoute118_1::
-	clearflag 0
+	clearflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_1
 	return
 
 J_GabbyAndTy_EventScript_HideAtRoute120_1::
-	setflag 0
+	setflag FLAG_HIDE_ROUTE_120_GABBY_AND_TY_1
 	return
 
 J_GabbyAndTy_EventScript_ShowAtRoute120_1::
-	clearflag 0
+	clearflag FLAG_HIDE_ROUTE_120_GABBY_AND_TY_1
 	return
 
 J_GabbyAndTy_EventScript_HideAtRoute111_2::
-	setflag 0
+	setflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_2
 	return
 
 J_GabbyAndTy_EventScript_ShowAtRoute111_2::
-	clearflag 0
+	clearflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_2
 	return
 
 J_GabbyAndTy_EventScript_HideAtRoute118_2::
-	setflag 0
+	setflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2
 	return
 
 J_GabbyAndTy_EventScript_ShowAtRoute118_2::
-	clearflag 0
+	clearflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2
 	return
 
 J_GabbyAndTy_EventScript_HideAtRoute120_2::
-	setflag 0
+	setflag FLAG_HIDE_ROUTE_120_GABBY_AND_TY_2
 	return
 
 J_GabbyAndTy_EventScript_ShowAtRoute120_2::
-	clearflag 0
+	clearflag FLAG_HIDE_ROUTE_120_GABBY_AND_TY_2
 	return
 
 J_GabbyAndTy_EventScript_HideAtRoute111_3::
-	setflag 0
+	setflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_3
 	return
 
 J_GabbyAndTy_EventScript_ShowAtRoute111_3::
-	clearflag 0
+	clearflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_3
 	return
 
 J_GabbyAndTy_EventScript_HideAtRoute118_3::
-	setflag 0
+	setflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_3
 	return
 
 J_GabbyAndTy_EventScript_ShowAtRoute118_3::
-	clearflag 0
+	clearflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_3
 	return
 
 J_GabbyAndTy_EventScript_GabbyBattle1::
-	trainerbattle_double 51, J_GabbyAndTy_Text_GabbyPreFirstBattle, J_GabbyAndTy_Text_GabbyDefeatFirstTime, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_FirstInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_1, J_GabbyAndTy_Text_GabbyPreFirstBattle, J_GabbyAndTy_Text_GabbyDefeatFirstTime, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_FirstInterview
 	msgbox J_GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_TyBattle1::
-	trainerbattle_double 51, J_GabbyAndTy_Text_TyPreFirstBattle, J_GabbyAndTy_Text_TyDefeatFirstTime, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_FirstInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_1, J_GabbyAndTy_Text_TyPreFirstBattle, J_GabbyAndTy_Text_TyDefeatFirstTime, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_FirstInterview
 	msgbox J_GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_GabbyBattle2::
-	trainerbattle_double 52, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_2, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_TyBattle2::
-	trainerbattle_double 52, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_2, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_GabbyBattle3::
-	trainerbattle_double 53, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_3, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_TyBattle3::
-	trainerbattle_double 53, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_3, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_GabbyBattle4::
-	trainerbattle_double 54, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_4, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_TyBattle4::
-	trainerbattle_double 54, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_4, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_GabbyBattle5::
-	trainerbattle_double 55, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_5, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_TyBattle5::
-	trainerbattle_double 55, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_5, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_GabbyBattle6::
-	trainerbattle_double 56, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_6, J_GabbyAndTy_Text_GabbyIntro, J_GabbyAndTy_Text_GabbyDefeat, J_GabbyAndTy_Text_GabbyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_KeepingAnEyeOutForYou, MSGBOX_DEFAULT
 	release
 	end
 
 J_GabbyAndTy_EventScript_TyBattle6::
-	trainerbattle_double 56, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
+	trainerbattle_double TRAINER_GABBY_AND_TY_6, J_GabbyAndTy_Text_TyIntro, J_GabbyAndTy_Text_TyDefeat, J_GabbyAndTy_Text_TyNotEnoughMons, J_GabbyAndTy_EventScript_RequestInterview
 	msgbox J_GabbyAndTy_Text_TyPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -198,43 +198,43 @@ J_GabbyAndTy_EventScript_TyBattle6::
 J_GabbyAndTy_EventScript_FirstInterview::
 	special GabbyAndTyBeforeInterview
 	special GetGabbyAndTyLocalIds
-	call_if_eq 32780, DIR_NORTH, J_GabbyAndTy_EventScript_FacePlayerNorth
-	call_if_eq 32780, DIR_SOUTH, J_GabbyAndTy_EventScript_FacePlayerSouth
-	call_if_eq 32780, DIR_EAST, J_GabbyAndTy_EventScript_FacePlayerEast
-	goto_if_set 1, J_GabbyAndTy_EventScript_KeepingAnEyeOutForYou
+	call_if_eq VAR_FACING, DIR_NORTH, J_GabbyAndTy_EventScript_FacePlayerNorth
+	call_if_eq VAR_FACING, DIR_SOUTH, J_GabbyAndTy_EventScript_FacePlayerSouth
+	call_if_eq VAR_FACING, DIR_EAST, J_GabbyAndTy_EventScript_FacePlayerEast
+	goto_if_set FLAG_TEMP_SKIP_GABBY_INTERVIEW, J_GabbyAndTy_EventScript_KeepingAnEyeOutForYou
 	msgbox J_GabbyAndTy_Text_WhoAreYouInterview, MSGBOX_YESNO
 	goto J_GabbyAndTy_EventScript_Interview
 	end
 
 J_GabbyAndTy_EventScript_FacePlayerNorth::
-	applymovement 32772, J_GabbyAndTy_Movement_WalkInPlaceDown
+	applymovement VAR_0x8004, J_GabbyAndTy_Movement_WalkInPlaceDown
 	waitmovement 0
 	return
 
 J_GabbyAndTy_EventScript_FacePlayerSouth::
-	applymovement 32772, J_GabbyAndTy_Movement_WalkInPlaceUp
-	applymovement 32773, J_Common_Movement_WalkInPlaceFasterUp
+	applymovement VAR_0x8004, J_GabbyAndTy_Movement_WalkInPlaceUp
+	applymovement VAR_0x8005, J_Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	return
 
 J_GabbyAndTy_EventScript_FacePlayerEast::
-	applymovement 32772, J_GabbyAndTy_Movement_WalkInPlaceLeft
-	applymovement 32773, J_Common_Movement_WalkInPlaceFasterLeft
+	applymovement VAR_0x8004, J_GabbyAndTy_Movement_WalkInPlaceLeft
+	applymovement VAR_0x8005, J_Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	return
 
 J_GabbyAndTy_EventScript_RequestInterview::
 	special GabbyAndTyBeforeInterview
 	special GetGabbyAndTyLocalIds
-	call_if_eq 32780, DIR_NORTH, J_GabbyAndTy_EventScript_FacePlayerNorth
-	call_if_eq 32780, DIR_SOUTH, J_GabbyAndTy_EventScript_FacePlayerSouth
-	call_if_eq 32780, DIR_EAST, J_GabbyAndTy_EventScript_FacePlayerEast
-	goto_if_set 1, J_GabbyAndTy_EventScript_KeepingAnEyeOutForYou
-	specialvar 32781, GabbyAndTyGetLastQuote
-	goto_if_eq 32781, 0, J_GabbyAndTy_EventScript_DidntInterviewLastTime
+	call_if_eq VAR_FACING, DIR_NORTH, J_GabbyAndTy_EventScript_FacePlayerNorth
+	call_if_eq VAR_FACING, DIR_SOUTH, J_GabbyAndTy_EventScript_FacePlayerSouth
+	call_if_eq VAR_FACING, DIR_EAST, J_GabbyAndTy_EventScript_FacePlayerEast
+	goto_if_set FLAG_TEMP_SKIP_GABBY_INTERVIEW, J_GabbyAndTy_EventScript_KeepingAnEyeOutForYou
+	specialvar VAR_RESULT, GabbyAndTyGetLastQuote
+	goto_if_eq VAR_RESULT, 0, J_GabbyAndTy_EventScript_DidntInterviewLastTime
 	msgbox J_GabbyAndTy_Text_QuoteFromLastInterview, MSGBOX_DEFAULT
-	specialvar 32781, GabbyAndTyGetLastBattleTrivia
-	switch 32781
+	specialvar VAR_RESULT, GabbyAndTyGetLastBattleTrivia
+	switch VAR_RESULT
 	case 0, J_GabbyAndTy_EventScript_RequestInterviewNoTrivia
 	case 1, J_GabbyAndTy_EventScript_RequestInterviewShortBattle
 	case 2, J_GabbyAndTy_EventScript_RequestInterviewThrewBall
@@ -285,22 +285,22 @@ J_GabbyAndTy_EventScript_RequestInterviewLostAMon::
 	end
 
 J_GabbyAndTy_EventScript_Interview::
-	goto_if_eq 32781, NO, J_GabbyAndTy_EventScript_DontGiveUpKeepingEyeOut
+	goto_if_eq VAR_RESULT, NO, J_GabbyAndTy_EventScript_DontGiveUpKeepingEyeOut
 	msgbox J_GabbyAndTy_Text_DescribeYourFeelings, MSGBOX_DEFAULT
-	setvar 32772, 10
+	setvar VAR_0x8004, EASY_CHAT_TYPE_GABBY_AND_TY
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq 32781, 0, J_GabbyAndTy_EventScript_DontGiveUpKeepingEyeOut
+	goto_if_eq VAR_RESULT, 0, J_GabbyAndTy_EventScript_DontGiveUpKeepingEyeOut
 	msgbox J_GabbyAndTy_Text_PerfectWellBeSeeingYou, MSGBOX_DEFAULT
 	special GabbyAndTyAfterInterview
-	setflag 1
+	setflag FLAG_TEMP_SKIP_GABBY_INTERVIEW
 	release
 	end
 
 J_GabbyAndTy_EventScript_DontGiveUpKeepingEyeOut::
 	msgbox J_GabbyAndTy_Text_DontGiveUpKeepingEyeOut, MSGBOX_DEFAULT
-	setflag 1
+	setflag FLAG_TEMP_SKIP_GABBY_INTERVIEW
 	release
 	end
 

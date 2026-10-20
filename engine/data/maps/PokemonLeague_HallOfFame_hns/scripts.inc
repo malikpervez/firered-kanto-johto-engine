@@ -1,159 +1,159 @@
 @ Johto (data/maps/PokemonLeague_HallOfFame_hns/scripts.inc), as built into the FireRed game.
 
 PokemonLeague_HallOfFame_hns_MapScripts::
-	map_script 2, J_PokemonLeague_HallOfFame_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, J_PokemonLeague_HallOfFame_OnFrame
 	.byte 0
 
 J_PokemonLeague_HallOfFame_OnFrame::
-	map_script_2 20576, 6, PokemonLeague_HallOfFame_EventScript_Cutscene
+	map_script_2 JOHTO_VAR_LEAGUE_STATE, 6, PokemonLeague_HallOfFame_EventScript_Cutscene
 	.2byte 0
 
 PokemonLeague_HallOfFame_EventScript_Cutscene::
 	lock
-	goto_if_set 10399, PokemonLeague_HallOfFame_EventScript_CutsceneKantoChamp
-	applymovement 1, PokemonLeague_HallOfFame_Movement_LanceEnter
-	applymovement 255, PokemonLeague_HallOfFame_Movement_PlayerEnter
-	waitmovement 255
-	waitmovement 1
+	goto_if_set JOHTO_FLAG_IS_CHAMPION, PokemonLeague_HallOfFame_EventScript_CutsceneKantoChamp
+	applymovement LOCALID_HALLOFFAME_LANCE, PokemonLeague_HallOfFame_Movement_LanceEnter
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_HallOfFame_Movement_PlayerEnter
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_HALLOFFAME_LANCE
 	msgbox PokemonLeague_HallOfFame_LanceText, MSGBOX_DEFAULT
 	closemessage
 	special GivePartyMonChampionRibbon
-	applymovement 255, J_Common_Movement_WalkInPlaceFasterUp
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
-	dofieldeffect 79
-	waitfieldeffect 79
+	dofieldeffect FLDEFF_HALL_OF_FAME_RECORD_FRLG
+	waitfieldeffect FLDEFF_HALL_OF_FAME_RECORD_FRLG
 	delay 40
-	setvar 16385, 1
+	setvar VAR_TEMP_1, 1
 	call PokemonLeague_HallOfFame_EventScript_SetFirstGameClearFlags
-	setrespawn 128
-	fadescreenspeed 1, 24
+	setrespawn JOHTO_HEAL_LOCATION_NEW_BARK_TOWN_HNS
+	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
 	waitstate
 	releaseall
 	end
 
 PokemonLeague_HallOfFame_EventScript_CutsceneKantoChamp::
-	applymovement 1, PokemonLeague_HallOfFame_Movement_LanceEnter
-	applymovement 255, PokemonLeague_HallOfFame_Movement_PlayerEnter
-	waitmovement 255
-	waitmovement 1
+	applymovement LOCALID_HALLOFFAME_LANCE, PokemonLeague_HallOfFame_Movement_LanceEnter
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_HallOfFame_Movement_PlayerEnter
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_HALLOFFAME_LANCE
 	msgbox PokemonLeague_HallOfFame_Rematch_LanceText, MSGBOX_DEFAULT
 	closemessage
 	special GivePartyMonChampionRibbon
-	applymovement 255, J_Common_Movement_WalkInPlaceFasterUp
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
-	dofieldeffect 79
-	waitfieldeffect 79
+	dofieldeffect FLDEFF_HALL_OF_FAME_RECORD_FRLG
+	waitfieldeffect FLDEFF_HALL_OF_FAME_RECORD_FRLG
 	delay 40
-	setvar 16385, 1
+	setvar VAR_TEMP_1, 1
 	call PokemonLeague_HallOfFame_EventScript_SetGameClearFlags
-	setrespawn 128
-	fadescreenspeed 1, 24
+	setrespawn JOHTO_HEAL_LOCATION_NEW_BARK_TOWN_HNS
+	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
 	waitstate
 	releaseall
 	end
 
 PokemonLeague_HallOfFame_EventScript_SetFirstGameClearFlags::
-	setflag 8230
-	setflag 9142
-	clearflag 9166
-	clearflag 8359
-	setflag 10399
-	setflag 8411
-	setvar 20576, 1
-	setvar 20581, 6
-	setvar 20603, 0
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SLOWPOKE
+	setflag JOHTO_FLAG_HIDE_SLOWPOKE_WELL_TAILLESS_SLOWPOKES
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_TAILED_SLOWPOKES
+	clearflag JOHTO_FLAG_HIDE_LEAGUE_BLACKBELT
+	setflag JOHTO_FLAG_IS_CHAMPION
+	setflag JOHTO_FLAG_HIDE_BATTLEFRONTIER_ENGINEER
+	setvar JOHTO_VAR_LEAGUE_STATE, 1
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 6
+	setvar JOHTO_VAR_SSAQUA_STATE, 0
 	return
 
 PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
-	setflag 8372
-	setflag 8230
-	setflag 9142
-	clearflag 9166
-	clearflag 8264
-	clearflag 8263
-	clearflag 8262
-	clearflag 8260
-	clearflag 8261
-	clearflag 8259
-	clearflag 8250
-	clearflag 8247
-	clearflag 8246
-	clearflag 8257
-	clearflag 8256
-	clearflag 8258
-	clearflag 8657
-	setflag 8411
-	setflag 10400
-	setvar 20559, 4
-	clearflag 8254
-	setvar 20558, 4
-	clearflag 8253
+	setflag JOHTO_FLAG_HIDE_CERULEANCAVE_GUARD
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SLOWPOKE
+	setflag JOHTO_FLAG_HIDE_SLOWPOKE_WELL_TAILLESS_SLOWPOKES
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_TAILED_SLOWPOKES
+	clearflag JOHTO_FLAG_HIDE_LATIOS
+	clearflag JOHTO_FLAG_HIDE_LATIAS
+	clearflag JOHTO_FLAG_HIDE_RAYQUAZA
+	clearflag JOHTO_FLAG_HIDE_GROUDON
+	clearflag JOHTO_FLAG_HIDE_KYOGRE
+	clearflag JOHTO_FLAG_HIDE_MEWTWO
+	clearflag JOHTO_FLAG_HIDE_VERMILION_SNORLAX
+	clearflag JOHTO_FLAG_HIDE_UNION_CAVE_LAPRAS
+	clearflag JOHTO_FLAG_HIDE_SUDOWOODO
+	clearflag JOHTO_FLAG_HIDE_ZAPDOS
+	clearflag JOHTO_FLAG_HIDE_ARTICUNO
+	clearflag JOHTO_FLAG_HIDE_MOLTRES
+	clearflag JOHTO_FLAG_ITEM_GS_BALL
+	setflag JOHTO_FLAG_HIDE_BATTLEFRONTIER_ENGINEER
+	setflag JOHTO_FLAG_IS_KANTO_CHAMPION
+	setvar JOHTO_VAR_COMPLETED_LUGIA, 4
+	clearflag JOHTO_FLAG_HIDE_LUGIA
+	setvar JOHTO_VAR_COMPLETED_HO_OH, 4
+	clearflag JOHTO_FLAG_HIDE_HO_OH
 	call PokemonLeague_HallOfFame_EventScript_SpawnRoamers
-	call_if_ge 20604, 8, PokemonLeague_HallOfFame_EventScript_SpawnSuicune
-	call_if_set 8768, PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi
-	call_if_ge 20632, 4, PokemonLeague_HallOfFame_EventScript_SpawnPichu
-	call_if_ge 20638, 4, PokemonLeague_HallOfFame_EventScript_SpawnAlolaMons
+	call_if_ge JOHTO_VAR_SUICUNE_ENCOUNTERS, 8, PokemonLeague_HallOfFame_EventScript_SpawnSuicune
+	call_if_set JOHTO_FLAG_CAUGHT_CELEBI, PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi
+	call_if_ge JOHTO_VAR_VIRIDIAN_FOREST_PICHU, 4, PokemonLeague_HallOfFame_EventScript_SpawnPichu
+	call_if_ge JOHTO_VAR_ALOLA_STATE, 4, PokemonLeague_HallOfFame_EventScript_SpawnAlolaMons
 	call PokemonLeague_HallOfFame_EventScript_SpawnSinjohMons
-	call_if_ge 20639, 13 PokemonLeague_HallOfFame_EventScript_SpawnArceus
-	clearflag 8761
-	clearflag 8769
-	clearflag 8666
-	clearflag 8762
-	clearflag 8673
-	setvar 20576, 1
+	call_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13 PokemonLeague_HallOfFame_EventScript_SpawnArceus
+	clearflag JOHTO_FLAG_DEFEATED_MEW
+	clearflag JOHTO_FLAG_CAUGHT_MEW
+	clearflag JOHTO_FLAG_BATTLED_DEOXYS
+	clearflag JOHTO_FLAG_DEFEATED_DEOXYS
+	clearflag JOHTO_FLAG_SUMMONED_MTMOON_JIRACHI
+	setvar JOHTO_VAR_LEAGUE_STATE, 1
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnAlolaMons::
-	clearflag 9302
-	clearflag 9304
-	clearflag 9305
-	clearflag 9303
-	clearflag 9340
-	clearflag 9341
-	clearflag 9344
-	clearflag 9337
-	clearflag 9338
-	clearflag 9339
-	clearflag 9342
-	clearflag 9343
+	clearflag JOHTO_FLAG_HIDE_TAPU_BULU
+	clearflag JOHTO_FLAG_HIDE_TAPU_FINI
+	clearflag JOHTO_FLAG_HIDE_TAPU_KOKO
+	clearflag JOHTO_FLAG_HIDE_TAPU_LELE
+	clearflag JOHTO_FLAG_HIDE_DUGTRIO_ALOLA
+	clearflag JOHTO_FLAG_HIDE_MAROWAK_ALOLA
+	clearflag JOHTO_FLAG_HIDE_EXEGGUTOR_ALOLA
+	clearflag JOHTO_FLAG_HIDE_SANDSLASH_ALOLA
+	clearflag JOHTO_FLAG_HIDE_NINETALES_ALOLA
+	clearflag JOHTO_FLAG_HIDE_MUK_ALOLA
+	clearflag JOHTO_FLAG_HIDE_RAICHU_ALOLA
+	clearflag JOHTO_FLAG_HIDE_GOLEM_ALOLA
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnSinjohMons::
-	clearflag 9133
-	clearflag 9132
-	clearflag 9134
-	clearflag 9135
-	clearflag 9136
-	clearflag 9137
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGIROCK
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGICE
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGISTEEL
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGIELEKI
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGIDRAGO
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_REGIGIGAS
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnArceus::
-	clearflag 9124
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnPichu::
-	clearflag 9286
+	clearflag JOHTO_FLAG_HIDE_VIRIDIAN_FOREST_SPIKY_EARED_PICHU
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnRoamers::
-	clearflag 8766
-	clearflag 8767
+	clearflag JOHTO_FLAG_CAUGHT_ENTEI
+	clearflag JOHTO_FLAG_CAUGHT_RAIKOU
 	special InitRoamer
-	copyvar 32772, 20626
+	copyvar VAR_0x8004, JOHTO_VAR_ROAMER_POKEMON_HNS
 	special InitKantoRoamers
-	setflag 8955
+	setflag JOHTO_FLAG_LATIOS_OR_LATIAS_ROAMING
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnSuicune::
-	clearflag 8249
+	clearflag JOHTO_FLAG_HIDE_ROUTE25_SUICUNE
 	return
 
 PokemonLeague_HallOfFame_EventScript_SpawnSecondCelebi::
-	clearflag 8291
+	clearflag JOHTO_FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI
 	return
 
 PokemonLeague_HallOfFame_Movement_LanceEnter:

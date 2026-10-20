@@ -1,64 +1,64 @@
 @ Johto (data/scripts/elite_four.inc), as built into the FireRed game.
 
 J_PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles::
-	applymovement 255, J_Common_Movement_Delay32
+	applymovement LOCALID_PLAYER, J_Common_Movement_Delay32
 	waitmovement 0
-	playse 8
-	setmetatile 6, 1, 0x344, FALSE
-	setmetatile 6, 2, 0x345, FALSE
-	setmetatile 0, 2, 0x2DE, TRUE
-	setmetatile 1, 2, 0x2DD, TRUE
-	setmetatile 2, 2, 0x2DE, TRUE
-	setmetatile 3, 2, 0x2DD, TRUE
-	setmetatile 4, 2, 0x2DE, TRUE
-	setmetatile 8, 2, 0x2DD, TRUE
-	setmetatile 9, 2, 0x2DE, TRUE
-	setmetatile 10, 2, 0x2DD, TRUE
-	setmetatile 11, 2, 0x2DE, TRUE
-	setmetatile 12, 2, 0x2DD, TRUE
+	playse SE_DOOR
+	setmetatile 6, 1, METATILE_EliteFour_OpenDoor_Frame, FALSE
+	setmetatile 6, 2, METATILE_EliteFour_OpenDoor_Opening, FALSE
+	setmetatile 0, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 1, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
+	setmetatile 2, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 3, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
+	setmetatile 4, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 8, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
+	setmetatile 9, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 10, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
+	setmetatile 11, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 12, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
 	special DrawWholeMapView
 	return
 
 J_PokemonLeague_EliteFour_EventScript_WalkInCloseDoor::
-	applymovement 255, J_Common_Movement_WalkUp6
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkUp6
 	waitmovement 0
-	playse 52
-	setmetatile 5, 12, 0x206, TRUE
-	setmetatile 6, 12, 0x206, TRUE
-	setmetatile 7, 12, 0x206, TRUE
-	setmetatile 5, 13, 0x20E, TRUE
-	setmetatile 6, 13, 0x20E, TRUE
-	setmetatile 7, 13, 0x20E, TRUE
+	playse SE_TRUCK_DOOR
+	setmetatile 5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
 	special DrawWholeMapView
 	return
 
 J_PokemonLeague_EliteFour_EventScript_ResetAdvanceToNextRoom::
-	setmetatile 6, 1, 0x344, FALSE
-	setmetatile 6, 2, 0x345, FALSE
-	setmetatile 5, 12, 0x206, TRUE
-	setmetatile 6, 12, 0x206, TRUE
-	setmetatile 7, 12, 0x206, TRUE
-	setmetatile 5, 13, 0x20E, TRUE
-	setmetatile 6, 13, 0x20E, TRUE
-	setmetatile 7, 13, 0x20E, TRUE
-	setmetatile 0, 2, 0x2DE, TRUE
-	setmetatile 1, 2, 0x2DD, TRUE
-	setmetatile 2, 2, 0x2DE, TRUE
-	setmetatile 3, 2, 0x2DD, TRUE
-	setmetatile 4, 2, 0x2DE, TRUE
-	setmetatile 8, 2, 0x2DD, TRUE
-	setmetatile 9, 2, 0x2DE, TRUE
-	setmetatile 10, 2, 0x2DD, TRUE
-	setmetatile 11, 2, 0x2DE, TRUE
-	setmetatile 12, 2, 0x2DD, TRUE
+	setmetatile 6, 1, METATILE_EliteFour_OpenDoor_Frame, FALSE
+	setmetatile 6, 2, METATILE_EliteFour_OpenDoor_Opening, FALSE
+	setmetatile 5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 0, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 1, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
+	setmetatile 2, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 3, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
+	setmetatile 4, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 8, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
+	setmetatile 9, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 10, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
+	setmetatile 11, 2, METATILE_EliteFour_RightSpotlightOff, TRUE
+	setmetatile 12, 2, METATILE_EliteFour_LeftSpotlightOff, TRUE
 	return
 
 J_PokemonLeague_EliteFour_EventScript_CloseDoor::
-	setmetatile 5, 12, 0x206, TRUE
-	setmetatile 6, 12, 0x206, TRUE
-	setmetatile 7, 12, 0x206, TRUE
-	setmetatile 5, 13, 0x20E, TRUE
-	setmetatile 6, 13, 0x20E, TRUE
-	setmetatile 7, 13, 0x20E, TRUE
+	setmetatile 5, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 6, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 7, 12, METATILE_EliteFour_EntryDoor_ClosedTop, TRUE
+	setmetatile 5, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
+	setmetatile 7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
 	return
 

@@ -1,11 +1,11 @@
 @ Johto (data/maps/OlivineCity_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 OlivineCity_PokemonCenter_hns_MapScripts::
-	map_script 3, OlivineCity_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, OlivineCity_PokemonCenter_OnTransition
 	.byte 0
 
 OlivineCity_PokemonCenter_OnTransition::
-	setrespawn 134
+	setrespawn JOHTO_HEAL_LOCATION_OLIVINE_CITY_HNS
 	end
 
 OlivineCity_EventScript_Fisher::

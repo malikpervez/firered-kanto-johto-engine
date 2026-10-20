@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route38_hns/scripts.inc), as built into the FireRed game.
 
 Route38_hns_MapScripts::
-	map_script 3, Route38_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route38_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route38_OnTransition:
@@ -10,14 +10,14 @@ Route38_OnTransition:
 	end
 
 Route38_EventScript_Toby::
-	trainerbattle_single 1057, Route38_Text_BirdKeeperTobySeen, Route38_Text_BirdKeeperTobyBeaten
+	trainerbattle_single TRAINER_JOHTO_TOBY_HNS, Route38_Text_BirdKeeperTobySeen, Route38_Text_BirdKeeperTobyBeaten
 	msgbox Route38_Text_BirdKeeperTobyAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route38_EventScript_Chad::
-	trainerbattle_single 1050, Route38_Text_SchoolboyChad1Seen, Route38_Text_SchoolboyChad1Beaten, Route38_EventScript_RegisterChad
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route38_EventScript_RematchChad
+	trainerbattle_single TRAINER_JOHTO_CHAD_HNS, Route38_Text_SchoolboyChad1Seen, Route38_Text_SchoolboyChad1Beaten, Route38_EventScript_RegisterChad
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route38_EventScript_RematchChad
 	msgbox Route38_Text_SchoolboyChadAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -25,20 +25,20 @@ Route38_EventScript_RegisterChad::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route38_Text_ChadRegister, MSGBOX_DEFAULT
-	register_matchcall 1050
+	register_matchcall TRAINER_JOHTO_CHAD_HNS
 	release
 	end
 
 Route38_EventScript_RematchChad::
-	trainerbattle_rematch 1050, Route38_Text_ChadRematchIntro, Route38_Text_ChadRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_CHAD_HNS, Route38_Text_ChadRematchIntro, Route38_Text_ChadRematchDefeat
 	msgbox Route38_Text_ChadPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route38_EventScript_Dana::
-	trainerbattle_single 1077, Route38_Text_LassDana1Seen, Route38_Text_LassDana1Beaten, Route38_EventScript_RegisterDana
-	goto_if_set 8940, Route38_EventScript_DanaGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route38_EventScript_RematchDana
+	trainerbattle_single TRAINER_JOHTO_DANA_HNS, Route38_Text_LassDana1Seen, Route38_Text_LassDana1Beaten, Route38_EventScript_RegisterDana
+	goto_if_set JOHTO_FLAG_DANA_HAS_ITEM_HNS, Route38_EventScript_DanaGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route38_EventScript_RematchDana
 	msgbox Route38_Text_LassDanaAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -46,20 +46,20 @@ Route38_EventScript_RegisterDana::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route38_Text_DanaRegister, MSGBOX_DEFAULT
-	register_matchcall 1077
+	register_matchcall TRAINER_JOHTO_DANA_HNS
 	release
 	end
 
 Route38_EventScript_RematchDana::
-	trainerbattle_rematch 1077, Route38_Text_DanaRematchIntro, Route38_Text_DanaRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_DANA_HNS, Route38_Text_DanaRematchIntro, Route38_Text_DanaRematchDefeat
 	msgbox Route38_Text_DanaPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route38_EventScript_DanaGiveItem::
 	msgbox Route38_Text_DanaHasItem, MSGBOX_DEFAULT
-	giveitem 20618
-	goto_if_eq 32781, FALSE, Route38_EventScript_DanaNoRoom
-	clearflag 8940
+	giveitem JOHTO_VAR_DANA_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, Route38_EventScript_DanaNoRoom
+	clearflag JOHTO_FLAG_DANA_HAS_ITEM_HNS
 	msgbox Route38_Text_DanaGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -68,17 +68,17 @@ Route38_EventScript_DanaNoRoom::
 	end
 
 Route38_EventScript_Valerie::
-	trainerbattle_single 1129, Route38_Text_BeautyValerieSeen, Route38_Text_BeautyValerieBeaten
+	trainerbattle_single TRAINER_JOHTO_VALERIE_HNS, Route38_Text_BeautyValerieSeen, Route38_Text_BeautyValerieBeaten
 	msgbox Route38_Text_BeautyValerieAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route38_EventScript_Harry::
-	trainerbattle_single 1265, Route38_Text_SailorHarrySeen, Route38_Text_SailorHarryBeaten
+	trainerbattle_single TRAINER_JOHTO_HARRY_HNS, Route38_Text_SailorHarrySeen, Route38_Text_SailorHarryBeaten
 	msgbox Route38_Text_SailorHarryAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route38_EventScript_Olivia::
-	trainerbattle_single 1130, Route38_Text_BeautyOliviaSeen, Route38_Text_BeautyOliviaBeaten
+	trainerbattle_single TRAINER_JOHTO_OLIVIA_HNS, Route38_Text_BeautyOliviaSeen, Route38_Text_BeautyOliviaBeaten
 	msgbox Route38_Text_BeautyOliviaAfter, MSGBOX_AUTOCLOSE
 	end
 

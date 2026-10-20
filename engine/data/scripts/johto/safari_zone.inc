@@ -4,7 +4,7 @@ J_SafariZone_EventScript_OutOfBallsMidBattle::
 
 
 
-	setvar 20628, 1
+	setvar JOHTO_VAR_SAFARI_ZONE_STATE, 1
 
 
 
@@ -12,7 +12,7 @@ J_SafariZone_EventScript_OutOfBallsMidBattle::
 
 
 
-	goto_if_set 8793, J_SafariZone_EventScript_ExitKantoMidBattle
+	goto_if_set JOHTO_FLAG_IN_KANTO_SAFARI_ZONE, J_SafariZone_EventScript_ExitKantoMidBattle
 	setwarp MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS, 9, 3
 
 
@@ -20,7 +20,7 @@ J_SafariZone_EventScript_OutOfBallsMidBattle::
 	end
 
 J_SafariZone_EventScript_ExitKantoMidBattle::
-	clearflag 8793
+	clearflag JOHTO_FLAG_IN_KANTO_SAFARI_ZONE
 	setwarp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS, 5, 6
 	end
 
@@ -28,7 +28,7 @@ J_SafariZone_EventScript_Exit::
 
 
 
-	setvar 20628, 1
+	setvar JOHTO_VAR_SAFARI_ZONE_STATE, 1
 
 
 
@@ -36,7 +36,7 @@ J_SafariZone_EventScript_Exit::
 
 
 
-	goto_if_set 8793, J_SafariZone_EventScript_ExitKanto
+	goto_if_set JOHTO_FLAG_IN_KANTO_SAFARI_ZONE, J_SafariZone_EventScript_ExitKanto
 	warp MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS, 9, 3
 
 
@@ -45,7 +45,7 @@ J_SafariZone_EventScript_Exit::
 	end
 
 J_SafariZone_EventScript_ExitKanto::
-	clearflag 8793
+	clearflag JOHTO_FLAG_IN_KANTO_SAFARI_ZONE
 	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_HNS, 5, 6
 	waitstate
 	end
@@ -53,7 +53,7 @@ J_SafariZone_EventScript_ExitKanto::
 J_SafariZone_EventScript_RetirePrompt::
 	lockall
 	msgbox J_SafariZone_Text_WouldYouLikeToExit, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_SafariZone_EventScript_Retire
+	goto_if_eq VAR_RESULT, YES, J_SafariZone_EventScript_Retire
 	releaseall
 	end
 
@@ -62,7 +62,7 @@ J_SafariZone_EventScript_Retire::
 
 J_SafariZone_EventScript_TimesUp::
 	lockall
-	playse 73
+	playse SE_DING_DONG
 	message J_SafariZone_Text_TimesUp
 	waitmessage
 	waitbuttonpress
@@ -71,7 +71,7 @@ J_SafariZone_EventScript_TimesUp::
 
 J_SafariZone_EventScript_OutOfBalls::
 	lockall
-	playse 73
+	playse SE_DING_DONG
 	message J_SafariZone_Text_OutOfBalls
 	waitmessage
 	waitbuttonpress
@@ -81,17 +81,17 @@ J_SafariZone_EventScript_OutOfBalls::
 J_EventScript_PokeBlockFeeder::
 	lockall
 	special GetPokeblockFeederInFront
-	goto_if_ne 32781, 0xFFFF, J_SafariZone_EventScript_PokeblockPresent
+	goto_if_ne VAR_RESULT, 0xFFFF, J_SafariZone_EventScript_PokeblockPresent
 	msgbox J_SafariZone_Text_PlacePokeblockOnFeeder, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_SafariZone_EventScript_ChoosePokeblock
+	goto_if_eq VAR_RESULT, YES, J_SafariZone_EventScript_ChoosePokeblock
 	releaseall
 	end
 
 J_SafariZone_EventScript_ChoosePokeblock::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special OpenPokeblockCaseOnFeeder
 	waitstate
-	goto_if_ne 32781, 0xFFFF, J_SafariZone_EventScript_PokeblockPlaced
+	goto_if_ne VAR_RESULT, 0xFFFF, J_SafariZone_EventScript_PokeblockPlaced
 
 	releaseall
 

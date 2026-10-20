@@ -1,19 +1,19 @@
 @ Johto (data/maps/GoldenrodCity_TrainStation_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_TrainStation_hns_MapScripts::
-	map_script 2, GoldenrodCity_TrainStation_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, GoldenrodCity_TrainStation_OnFrame
 	.byte 0
 
 GoldenrodCity_TrainStation_OnFrame::
-	map_script_2 20606, 1, GoldenrodCity_TrainStation_EventScript_ExitTrain
+	map_script_2 JOHTO_VAR_TRAIN, 1, GoldenrodCity_TrainStation_EventScript_ExitTrain
 	.2byte 0
 
 GoldenrodCity_TrainStation_EventScript_Attendant::
 	lock
 	faceplayer
 	checkitem ITEM_PASS
-	goto_if_eq 32781, TRUE, GoldenrodCity_TrainStation_EventScript_BoardTrain
-	goto_if_set 8669, GoldenrodCity_TrainStation_EventScript_Attendant2
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_TrainStation_EventScript_BoardTrain
+	goto_if_set JOHTO_FLAG_RETURNED_MACHINE_PART, GoldenrodCity_TrainStation_EventScript_Attendant2
 	msgbox GoldenrodMagnetTrainStation_Text_OfficerTrainHasntComeIn, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -28,36 +28,36 @@ GoldenrodCity_TrainStation_EventScript_Attendant2::
 GoldenrodCity_TrainStation_EventScript_BoardTrain::
 	msgbox GoldenrodMagnetTrainStation_Text_OfficerRightThisWay, MSGBOX_DEFAULT
 	closemessage
-	applymovement 1, GoldenrodCity_TrainStation_Movement_Attendant_Move_Up
+	applymovement LOCALID_GOLDENROD_CITY_TRAIN_STATION_ATTENDANT, GoldenrodCity_TrainStation_Movement_Attendant_Move_Up
 	waitmovement 0
-	applymovement 255, GoldenrodCity_TrainStation_Movement_WalktoTrain
+	applymovement OBJ_EVENT_ID_PLAYER, GoldenrodCity_TrainStation_Movement_WalktoTrain
 	waitmovement 0
 	special SpawnCameraObject
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
-	playse 9
+	playse SE_EXIT
 	waitse
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 
-	applymovement 127, GoldenrodCity_TrainStation_Movement_CameraPanUp
+	applymovement OBJ_EVENT_ID_CAMERA, GoldenrodCity_TrainStation_Movement_CameraPanUp
 	waitmovement 0
-	applymovement 127, GoldenrodCity_TrainStation_Movement_CameraPanLeft
+	applymovement OBJ_EVENT_ID_CAMERA, GoldenrodCity_TrainStation_Movement_CameraPanLeft
 	waitmovement 0
 	delay 60
 
 	applymovement 7 GoldenrodCity_TrainStation_Movement_SlideRight
-	applymovement 127, GoldenrodCity_TrainStation_Movement_SlideRight
+	applymovement OBJ_EVENT_ID_CAMERA, GoldenrodCity_TrainStation_Movement_SlideRight
 	playbgm ((558 + 1) + 0x41), FALSE
-	fadescreen 0
-	playse 49
+	fadescreen FADE_FROM_BLACK
+	playse SE_TRUCK_MOVE
 	delay 220
-	playse 50
+	playse SE_TRUCK_STOP
 	applymovement 7 GoldenrodCity_TrainStation_Movement_SlideRight
-	applymovement 127, GoldenrodCity_TrainStation_Movement_SlideRight
-	fadescreen 1
+	applymovement OBJ_EVENT_ID_CAMERA, GoldenrodCity_TrainStation_Movement_SlideRight
+	fadescreen FADE_TO_BLACK
 	waitse
 	special RemoveCameraObject
-	setvar 20606, 0
+	setvar JOHTO_VAR_TRAIN, 0
 	delay 60
 	warp MAP_SAFFRON_CITY, 22, 15
 	waitstate
@@ -66,12 +66,12 @@ GoldenrodCity_TrainStation_EventScript_BoardTrain::
 
 GoldenrodCity_TrainStation_EventScript_ExitTrain::
 	lock
-	applymovement 1, GoldenrodCity_TrainStation_Movement_Attendant_Move_Up
-	applymovement 255, GoldenrodCity_TrainStation_Movement_ExitTrain
+	applymovement LOCALID_GOLDENROD_CITY_TRAIN_STATION_ATTENDANT, GoldenrodCity_TrainStation_Movement_Attendant_Move_Up
+	applymovement OBJ_EVENT_ID_PLAYER, GoldenrodCity_TrainStation_Movement_ExitTrain
 	waitmovement 0
 	waitmovement 0
-	setvar 20606, 0
-	applymovement 1, GoldenrodCity_TrainStation_Movement_Attendant_Move_Down
+	setvar JOHTO_VAR_TRAIN, 0
+	applymovement LOCALID_GOLDENROD_CITY_TRAIN_STATION_ATTENDANT, GoldenrodCity_TrainStation_Movement_Attendant_Move_Down
 	waitmovement 0
 	release
 	end

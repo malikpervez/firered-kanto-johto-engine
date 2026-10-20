@@ -1,8 +1,8 @@
 @ Johto (data/maps/MtMortar_B1F_hns/scripts.inc), as built into the FireRed game.
 
 MtMortar_B1F_hns_MapScripts::
-	map_script 3, MtMortar_B1F_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, MtMortar_B1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 MtMortar_B1F_OnTransition:
@@ -32,20 +32,20 @@ MtMortar_B1F_EventScript_Item_MaxRevive::
 MountMortar4_EventScript_Kiyo::
 	lock
 	faceplayer
-	goto_if_set 8709, MountMortar4_EventScript_KiyoAfter
-	goto_if_set 8665, MountMortar4_EventScript_KiyoTryGiveTyrogue
+	goto_if_set JOHTO_FLAG_GOT_TYROGUE, MountMortar4_EventScript_KiyoAfter
+	goto_if_set JOHTO_FLAG_BEAT_KIYO, MountMortar4_EventScript_KiyoTryGiveTyrogue
 	msgbox MountMortar4_Text_KiyoIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1327, MountMortar4_Text_KiyoWin
-	setflag 8665
+	trainerbattle_no_intro TRAINER_JOHTO_KIYO_HNS, MountMortar4_Text_KiyoWin
+	setflag JOHTO_FLAG_BEAT_KIYO
 
 MountMortar4_EventScript_KiyoTryGiveTyrogue::
 	msgbox MountMortar4_Text_KiyoTyrogueReward, MSGBOX_DEFAULT
 
-	setvar 16385, 236
-	bufferspeciesname STR_VAR_1, 236
-	givemon 236, 25
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TYROGUE
+	bufferspeciesname STR_VAR_1, SPECIES_TYROGUE
+	givemon SPECIES_TYROGUE, 25
 	call J_Common_EventScript_GiftMon
-	setflag 8709
+	setflag JOHTO_FLAG_GOT_TYROGUE
 
 MountMortar4_EventScript_KiyoAfter::
 	msgbox MountMortar4_Text_KiyoGotTyrogue, MSGBOX_DEFAULT

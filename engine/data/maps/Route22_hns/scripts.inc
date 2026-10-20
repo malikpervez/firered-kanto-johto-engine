@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route22_hns/scripts.inc), as built into the FireRed game.
 
 Route22_hns_MapScripts::
-	map_script 3, Route22_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route22_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route22_OnTransition:
@@ -18,175 +18,175 @@ Route22_Text_VictoryRoadEntranceSign:
 	.string "VICTOR{SE_M_MOONLIGHT}ROA{SE_M_FAINT_ATTACK}ENTRANCE$"
 
 Route22_EventScript_ResetActivation::
-	setvar 16384, 0
+	setvar VAR_TEMP_0, 0
 	end
 
 Route22_EventScript_DoNothing::
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 	end
 
 Route22_EventScript_TriggerBottom::
-	goto_if_ne 20592, 0, Route22_EventScript_DoNothing
-	specialvar 32781, CheckCelebi
-	goto_if_eq 32781, FALSE, Route22_EventScript_DoNothing
+	goto_if_ne JOHTO_VAR_ROUTE22_GIOVANNI_STATE, 0, Route22_EventScript_DoNothing
+	specialvar VAR_RESULT, CheckCelebi
+	goto_if_eq VAR_RESULT, FALSE, Route22_EventScript_DoNothing
 	goto Route22_EventScript_Scene
 
 Route22_EventScript_TriggerTop::
-	goto_if_ne 20592, 0, Route22_EventScript_DoNothing
-	specialvar 32781, CheckCelebi
-	goto_if_eq 32781, FALSE, Route22_EventScript_DoNothing
+	goto_if_ne JOHTO_VAR_ROUTE22_GIOVANNI_STATE, 0, Route22_EventScript_DoNothing
+	specialvar VAR_RESULT, CheckCelebi
+	goto_if_eq VAR_RESULT, FALSE, Route22_EventScript_DoNothing
 	goto Route22_EventScript_Scene
 
 Route22_EventScript_TriggerMid::
-	goto_if_ne 20592, 0, Route22_EventScript_DoNothing
-	specialvar 32781, CheckCelebi
-	goto_if_eq 32781, FALSE, Route22_EventScript_DoNothing
+	goto_if_ne JOHTO_VAR_ROUTE22_GIOVANNI_STATE, 0, Route22_EventScript_DoNothing
+	specialvar VAR_RESULT, CheckCelebi
+	goto_if_eq VAR_RESULT, FALSE, Route22_EventScript_DoNothing
 	goto Route22_EventScript_Scene
 
 Route22_EventScript_Scene::
 	lock
-	applymovement2 0xFE, Route22_Movement_CelebiBegin
-	playse 10
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, Route22_Movement_CelebiBegin
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
-	waitmovement 255
-	turnobject 255, DIR_EAST
-	playse 21
-	applymovement2 255, J_Common_Movement_QuestionMark
-	waitmovement 255
-	applymovement2 0xFE, Route22_Movement_CelebiSpin1
-	playse 10
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_QuestionMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, Route22_Movement_CelebiSpin1
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitmovement 0
-	fadescreenswapbuffers 3
-	playse 203
+	fadescreenswapbuffers FADE_TO_WHITE
+	playse SE_M_TELEPORT
 	waitse
 	delay 60
-	playse 203
+	playse SE_M_TELEPORT
 	waitse
-	clearflag 8408
-	addobject 6
-	addobject 7
+	clearflag JOHTO_FLAG_HIDE_ROUTE22_GIOVANNI_SILVER
+	addobject LOCALID_ROUTE22_GIOVANNI
+	addobject LOCALID_ROUTE22_SILVER
 	waitse
 	playbgm ((558 + 1) + 0x1E), FALSE
-	fadescreenswapbuffers 2
+	fadescreenswapbuffers FADE_FROM_WHITE
 	delay 50
-	turnobject 255, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	special SpawnCameraObject
-	applymovement2 127, Route22_Movement_CameraPanLeft
+	applymovement2 OBJ_EVENT_ID_CAMERA, Route22_Movement_CameraPanLeft
 	waitmovement 0
 	delay 30
-	applymovement2 7, J_Common_Movement_WalkLeft1
+	applymovement2 LOCALID_ROUTE22_SILVER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	msgbox Route22_Text_Silver1, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	applymovement2 6, Route22_Movement_WalkInPlaceRight
+	applymovement2 LOCALID_ROUTE22_GIOVANNI, Route22_Movement_WalkInPlaceRight
 	waitmovement 0
 	msgbox Route22_Text_Giovanni1, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	applymovement2 7, Route22_Movement_WalkInPlaceLeft
+	applymovement2 LOCALID_ROUTE22_SILVER, Route22_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route22_Text_Silver2, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	applymovement2 6, Route22_Movement_WalkInPlaceRight
+	applymovement2 LOCALID_ROUTE22_GIOVANNI, Route22_Movement_WalkInPlaceRight
 	waitmovement 0
 	msgbox Route22_Text_Giovanni2, MSGBOX_DEFAULT
 	closemessage
 	delay 10
-	applymovement2 7, J_Common_Movement_WalkLeft1
+	applymovement2 LOCALID_ROUTE22_SILVER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	msgbox Route22_Text_Silver3, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	applymovement2 6, Route22_Movement_WalkInPlaceLeft
+	applymovement2 LOCALID_ROUTE22_GIOVANNI, Route22_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox Route22_Text_Giovanni3, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	applymovement2 6, Route22_Movement_GiovanniLeave
+	applymovement2 LOCALID_ROUTE22_GIOVANNI, Route22_Movement_GiovanniLeave
 	waitmovement 0
 	msgbox Route22_Text_Silver4, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	applymovement2 7, J_Common_Movement_WalkLeft1
+	applymovement2 LOCALID_ROUTE22_SILVER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	msgbox Route22_Text_Silver5, MSGBOX_DEFAULT
 	closemessage
 	delay 20
 	playbgm ((558 + 1) + 0x3B), FALSE
-	applymovement2 7, Route22_Movement_SilverStartLeave
-	applymovement2 127, Route22_Movement_CameraPanRight
-	waitmovement 7
-	waitmovement 127
+	applymovement2 LOCALID_ROUTE22_SILVER, Route22_Movement_SilverStartLeave
+	applymovement2 OBJ_EVENT_ID_CAMERA, Route22_Movement_CameraPanRight
+	waitmovement LOCALID_ROUTE22_SILVER
+	waitmovement OBJ_EVENT_ID_CAMERA
 	special RemoveCameraObject
-	turnobject 255, DIR_WEST
-	playse 21
-	applymovement2 7, J_Common_Movement_ExclamationMark
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	playse SE_PIN
+	applymovement2 LOCALID_ROUTE22_SILVER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 7
+	waitmovement LOCALID_ROUTE22_SILVER
 	msgbox Route22_Text_Silver6, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 7, J_Common_Movement_WalkRight1
-	applymovement2 255, Route22_Movement_PlayerPushed
-	applymovement2 0xFE, Route22_Movement_CelebiPush
-	playse 10
-	waitmovement 7
-	waitmovement 255
-	waitmovement 0xFE
+	applymovement2 LOCALID_ROUTE22_SILVER, J_Common_Movement_WalkRight1
+	applymovement2 OBJ_EVENT_ID_PLAYER, Route22_Movement_PlayerPushed
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, Route22_Movement_CelebiPush
+	playse SE_LEDGE
+	waitmovement LOCALID_ROUTE22_SILVER
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	waitse
-	applymovement2 7, Route22_Movement_SilverFinishLeave
+	applymovement2 LOCALID_ROUTE22_SILVER, Route22_Movement_SilverFinishLeave
 	waitmovement 0
-	setflag 8408
-	removeobject 7
-	removeobject 6
+	setflag JOHTO_FLAG_HIDE_ROUTE22_GIOVANNI_SILVER
+	removeobject LOCALID_ROUTE22_SILVER
+	removeobject LOCALID_ROUTE22_GIOVANNI
 
-	applymovement2 0xFE, Route22_Movement_CelebiBegin
-	playse 10
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, Route22_Movement_CelebiBegin
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
-	waitmovement 255
-	turnobject 255, DIR_EAST
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	delay 20
-	playse 21
-	applymovement2 255, J_Common_Movement_QuestionMark
-	waitmovement 255
-	applymovement2 0xFE, Route22_Movement_CelebiSpin1
-	playse 10
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_QuestionMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, Route22_Movement_CelebiSpin1
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 
 
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitmovement 0
-	fadescreenswapbuffers 3
-	playse 203
+	fadescreenswapbuffers FADE_TO_WHITE
+	playse SE_M_TELEPORT
 	waitse
 	delay 60
-	playse 203
+	playse SE_M_TELEPORT
 	waitse
 	fadedefaultbgm
-	fadescreenswapbuffers 2
-	setvar 20592, 2
-	setvar 16384, 2
+	fadescreenswapbuffers FADE_FROM_WHITE
+	setvar JOHTO_VAR_ROUTE22_GIOVANNI_STATE, 2
+	setvar VAR_TEMP_0, 2
 	release
 	end
 
@@ -197,19 +197,19 @@ Route22_Movement_PlayerPushed:
 	step_end
 
 Route22_EventScript_PlayerFaceSouth::
-	turnobject 255, DIR_SOUTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	return
 
 Route22_EventScript_PlayerFaceWest::
-	turnobject 255, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	return
 
 Route22_EventScript_PlayerFaceNorth::
-	turnobject 255, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	return
 
 Route22_EventScript_PlayerFaceEast::
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	return
 
 Route22_Movement_CameraPanLeft:

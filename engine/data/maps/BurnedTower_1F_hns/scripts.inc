@@ -1,10 +1,10 @@
 @ Johto (data/maps/BurnedTower_1F_hns/scripts.inc), as built into the FireRed game.
 
 BurnedTower_1F_hns_MapScripts::
-	map_script 1, BurnedTower_1F_OnLoad
-	map_script 2, BurnedTower_1F_OnFrame
-	map_script 3, BurnedTower_1F_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_LOAD, BurnedTower_1F_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, BurnedTower_1F_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, BurnedTower_1F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 BurnedTower_1F_OnTransition:
@@ -12,7 +12,7 @@ BurnedTower_1F_OnTransition:
 	end
 
 BurnedTower_1F_OnLoad::
-	goto_if_ge 20561, 4, BurnedTower_1F_MapScript_CreateHole
+	goto_if_ge JOHTO_VAR_ECRUTEAK_CITY_STATE, 4, BurnedTower_1F_MapScript_CreateHole
 	end
 
 BurnedTower_1F_MapScript_CreateHole::
@@ -20,22 +20,22 @@ BurnedTower_1F_MapScript_CreateHole::
 	end
 
 BurnedTower_1F_OnFrame::
-	map_script_2 20561, 1, BurnedTower_1F_EventScript_MeetEusine
+	map_script_2 JOHTO_VAR_ECRUTEAK_CITY_STATE, 1, BurnedTower_1F_EventScript_MeetEusine
 	.2byte 0
 
 BurnedTower_1F_EventScript_MeetEusine::
 	lock
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_BURNED_TOWER_EUSINE, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	applymovement 1, BurnedTower_Movement_Eusine1
+	waitmovement LOCALID_BURNED_TOWER_EUSINE
+	applymovement LOCALID_BURNED_TOWER_EUSINE, BurnedTower_Movement_Eusine1
 	waitmovement 0
 	msgbox BurnedTower_1FEusineIntroText, MSGBOX_DEFAULT
 	closemessage
-	applymovement 1, BurnedTower_Movement_Eusine2
+	applymovement LOCALID_BURNED_TOWER_EUSINE, BurnedTower_Movement_Eusine2
 	waitmovement 0
-	setvar 20561, 2
+	setvar JOHTO_VAR_ECRUTEAK_CITY_STATE, 2
 	release
 	end
 
@@ -101,54 +101,54 @@ BurnedTower_1FMortyText:
 
 BurnedTower_1F_EventScript_Silver::
 	lock
-	playse 21
-	applymovement 3, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_BURNED_TOWER_SILVER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 3
-	applymovement 255, J_Common_Movement_WalkRight1
-	applymovement 3, J_Common_Movement_WalkLeft1
+	waitmovement LOCALID_BURNED_TOWER_SILVER
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkRight1
+	applymovement LOCALID_BURNED_TOWER_SILVER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	waitmovement 0
 	msgbox BurnedTowerSilver_BeforeText, MSGBOX_DEFAULT
-	call_if_eq 20499, 0, BurnedTower_1F_Silver_Battle_Cyndaquil
-	call_if_eq 20499, 1, BurnedTower_1F_Silver_Battle_Totodile
-	call_if_eq 20499, 2, BurnedTower_1F_Silver_Battle_Chikorita
+	call_if_eq JOHTO_VAR_STARTER_MON, 0, BurnedTower_1F_Silver_Battle_Cyndaquil
+	call_if_eq JOHTO_VAR_STARTER_MON, 1, BurnedTower_1F_Silver_Battle_Totodile
+	call_if_eq JOHTO_VAR_STARTER_MON, 2, BurnedTower_1F_Silver_Battle_Chikorita
 	playbgm ((558 + 1) + 0x3C), FALSE
 	msgbox BurnedTowerSilver_AfterText1, MSGBOX_DEFAULT
 	closemessage
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 20
-	setvar 32775, 6
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
-	playse 36
+	playse SE_CLICK
 	setmetatile 16, 12, 0x37E, FALSE
 	special DrawWholeMapView
 	waitse
 	delay 60
 	special SpawnCameraObject
-	removeobject 255
-	playse 43
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
 	delay 60
 	msgbox BurnedTowerSilver_AfterText2, MSGBOX_AUTOCLOSE
 	waitmessage
 	warphole MAP_BURNED_TOWER_B1F_HNS
-	setvar 20561, 3
+	setvar JOHTO_VAR_ECRUTEAK_CITY_STATE, 3
 	waitstate
 	release
 	end
 
 BurnedTower_1F_Silver_Battle_Cyndaquil::
-	trainerbattle_no_intro 1476, BurnedTowerSilver_WinText
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CYNDAQUIL_3_HNS, BurnedTowerSilver_WinText
 	return
 
 BurnedTower_1F_Silver_Battle_Totodile::
-	trainerbattle_no_intro 1483, BurnedTowerSilver_WinText
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_TOTODILE_3_HNS, BurnedTowerSilver_WinText
 	return
 
 BurnedTower_1F_Silver_Battle_Chikorita::
-	trainerbattle_no_intro 1469, BurnedTowerSilver_WinText
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CHIKORITA_3_HNS, BurnedTowerSilver_WinText
 	return
 
 BurnedTowerSilver_BeforeText:
@@ -186,12 +186,12 @@ BurnedTowerSilver_AfterText2:
 	.string "Serve{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}right!$"
 
 BurnedTower_1F_EventScript_Nard::
-	trainerbattle_single 1310, BurnedTower_Text_NardSeen, BurnedTower_Text_NardBeaten
+	trainerbattle_single TRAINER_JOHTO_NARD_HNS, BurnedTower_Text_NardSeen, BurnedTower_Text_NardBeaten
 	msgbox BurnedTower_Text_NardAfter, MSGBOX_AUTOCLOSE
 	end
 
 BurnedTower_1F_EventScript_Richardo::
-	trainerbattle_single 1309, BurnedTower_Text_RichardoSeen, BurnedTower_Text_RichardoBeaten
+	trainerbattle_single TRAINER_JOHTO_RICHARDO_HNS, BurnedTower_Text_RichardoSeen, BurnedTower_Text_RichardoBeaten
 	msgbox BurnedTower_Text_RichardoAfter, MSGBOX_AUTOCLOSE
 	end
 

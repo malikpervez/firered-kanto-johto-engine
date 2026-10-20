@@ -8,8 +8,8 @@ MahoganyTown_House1_EventScript_BlackBelt::
 	end
 
 MahoganyTown_House1_EventScript_Teacher::
-	goto_if_lt 20569, 6, MahoganyTown_House1_EventScript_TeacherBeforeAfter
-	goto_if_lt 20569, 10, MahoganyTown_House1_EventScript_TeacherDuring
+	goto_if_lt JOHTO_VAR_GOLDENROD_CITY_STATE, 6, MahoganyTown_House1_EventScript_TeacherBeforeAfter
+	goto_if_lt JOHTO_VAR_GOLDENROD_CITY_STATE, 10, MahoganyTown_House1_EventScript_TeacherDuring
 
 MahoganyTown_House1_EventScript_TeacherBeforeAfter::
 	msgbox MahoganyRedGyaradosHouse_Text_Teacher, MSGBOX_NPC

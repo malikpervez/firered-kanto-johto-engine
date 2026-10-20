@@ -23,7 +23,7 @@ VioletCity_House2_EventScript_Pidgey::
 	lock
 	faceplayer
 	waitse
-	playmoncry 16, 0
+	playmoncry SPECIES_PIDGEY, CRY_MODE_NORMAL
 	msgbox VioletCity_NicknameHouse_Text_Bird, MSGBOX_DEFAULT
 	waitmoncry
 	release

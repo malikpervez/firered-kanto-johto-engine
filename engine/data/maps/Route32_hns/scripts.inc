@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route32_hns/scripts.inc), as built into the FireRed game.
 
 Route32_hns_MapScripts::
-	map_script 3, Route32_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route32_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route32_OnTransition:
@@ -10,14 +10,14 @@ Route32_OnTransition:
 	end
 
 Route32_EventScript_FisherJustin::
-	trainerbattle_single 1200, Route32_Text_FisherJustin_Seen, Route32_Text_FisherJustin_Beaten
+	trainerbattle_single TRAINER_JOHTO_JUSTIN_HNS, Route32_Text_FisherJustin_Seen, Route32_Text_FisherJustin_Beaten
 	msgbox Route32_Text_FisherJustin_After, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_FisherRalph::
-	trainerbattle_single 1201, Route32_Text_FisherRalph1_Seen, Route32_Text_FisherRalph1_Beaten, Route32_EventScript_RegisterRalph
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route32_EventScript_RematchRalph
+	trainerbattle_single TRAINER_JOHTO_RALPH_HNS, Route32_Text_FisherRalph1_Seen, Route32_Text_FisherRalph1_Beaten, Route32_EventScript_RegisterRalph
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route32_EventScript_RematchRalph
 	msgbox Route32_Text_FisherRalph1_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -25,39 +25,39 @@ Route32_EventScript_RegisterRalph::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route32_Text_RalphRegister, MSGBOX_DEFAULT
-	register_matchcall 1201
+	register_matchcall TRAINER_JOHTO_RALPH_HNS
 	release
 	end
 
 Route32_EventScript_RematchRalph::
-	trainerbattle_rematch 1201, Route32_Text_RalphRematchIntro, Route32_Text_RalphRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_RALPH_HNS, Route32_Text_RalphRematchIntro, Route32_Text_RalphRematchDefeat
 	msgbox Route32_Text_RalphPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_FisherHenry::
-	trainerbattle_single 1204, Route32_Text_FisherHenry_Seen, Route32_Text_FisherHenry_Beaten
+	trainerbattle_single TRAINER_JOHTO_HENRY_HNS, Route32_Text_FisherHenry_Seen, Route32_Text_FisherHenry_Beaten
 	msgbox Route32_Text_FisherHenry_After, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_YoungsterAlbert::
-	trainerbattle_single 1033, Route32_Text_YoungsterAlbert_Seen, Route32_Text_YoungsterAlbert_Beaten
+	trainerbattle_single TRAINER_JOHTO_ALBERT_HNS, Route32_Text_YoungsterAlbert_Seen, Route32_Text_YoungsterAlbert_Beaten
 	msgbox Route32_Text_YoungsterAlbert_After, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_YoungsterGordon::
-	trainerbattle_single 1034, Route32_Text_YoungsterGordon_Seen, Route32_Text_YoungsterGordon_Beaten
+	trainerbattle_single TRAINER_JOHTO_GORDON_HNS, Route32_Text_YoungsterGordon_Seen, Route32_Text_YoungsterGordon_Beaten
 	msgbox Route32_Text_YoungsterGordon_After, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_CamperRoland::
-	trainerbattle_single 1355, Route32_Text_CamperRoland_Seen, Route32_Text_CamperRoland_Beaten
+	trainerbattle_single TRAINER_JOHTO_ROLAND_HNS, Route32_Text_CamperRoland_Seen, Route32_Text_CamperRoland_Beaten
 	msgbox Route32_Text_CamperRoland_After, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_PicnickerLiz::
-	trainerbattle_single 1342, Route32_Text_PicnickerLiz1_Seen, Route32_Text_PicnickerLiz1_Beaten, Route32_EventScript_RegisterLiz
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route32_EventScript_RematchLiz
+	trainerbattle_single TRAINER_JOHTO_LIZ_HNS, Route32_Text_PicnickerLiz1_Seen, Route32_Text_PicnickerLiz1_Beaten, Route32_EventScript_RegisterLiz
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route32_EventScript_RematchLiz
 	msgbox Route32_Text_PicnickerLiz1_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -65,27 +65,27 @@ Route32_EventScript_RegisterLiz::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route32_Text_LizRegister, MSGBOX_DEFAULT
-	register_matchcall 1342
+	register_matchcall TRAINER_JOHTO_LIZ_HNS
 	release
 	end
 
 Route32_EventScript_RematchLiz::
-	trainerbattle_rematch 1342, Route32_Text_LizRematchIntro, Route32_Text_LizRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_LIZ_HNS, Route32_Text_LizRematchIntro, Route32_Text_LizRematchDefeat
 	msgbox Route32_Text_LizPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_BirdkeeperPeter::
-	trainerbattle_single 1065, Route32_Text_BirdKeeperPeter_Seen, Route32_Text_BirdKeeperPeter_Beaten
+	trainerbattle_single TRAINER_JOHTO_PETER_HNS, Route32_Text_BirdKeeperPeter_Seen, Route32_Text_BirdKeeperPeter_Beaten
 	msgbox Route32_Text_BirdKeeperPeter_After, MSGBOX_AUTOCLOSE
 	end
 
 Route32_EventScript_Roar::
 	lock
 	faceplayer
-	checkitem 586
-	goto_if_eq 32781, TRUE, Route32_EventScript_Roar2
+	checkitem ITEM_TM_ROAR
+	goto_if_eq VAR_RESULT, TRUE, Route32_EventScript_Roar2
 	msgbox Route32_Text_RoarIntro, MSGBOX_DEFAULT
-	giveitem 586
+	giveitem ITEM_TM_ROAR
 	msgbox Route32_Text_RoarOutro, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -99,78 +99,78 @@ Route32_EventScript_Roar2::
 
 Route32_EventScript_SlowpokeTail_TriggerLeft::
 	lock
-	turnobject 14, DIR_EAST
-	turnobject 255, DIR_WEST
-	playse 21
-	applymovement 14, J_Common_Movement_ExclamationMark
+	turnobject LOCALID_SLOWPOKETAIL_MAN, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	playse SE_PIN
+	applymovement LOCALID_SLOWPOKETAIL_MAN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 14
-	applymovement 14, Route32_Movement_SlowpokeLeft
+	waitmovement LOCALID_SLOWPOKETAIL_MAN
+	applymovement LOCALID_SLOWPOKETAIL_MAN, Route32_Movement_SlowpokeLeft
 	waitmovement 0
 	goto Route32_EventScript_SlowpokeTail_Trigger
 
 Route32_EventScript_SlowpokeTail_TriggerMid::
 	lock
-	turnobject 14, DIR_EAST
-	turnobject 255, DIR_WEST
-	playse 21
-	applymovement 14, J_Common_Movement_ExclamationMark
+	turnobject LOCALID_SLOWPOKETAIL_MAN, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	playse SE_PIN
+	applymovement LOCALID_SLOWPOKETAIL_MAN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 14
-	applymovement 14, Route32_Movement_SlowpokeMid
+	waitmovement LOCALID_SLOWPOKETAIL_MAN
+	applymovement LOCALID_SLOWPOKETAIL_MAN, Route32_Movement_SlowpokeMid
 	waitmovement 0
 	goto Route32_EventScript_SlowpokeTail_Trigger
 
 Route32_EventScript_SlowpokeTail_TriggerRight::
 	lock
-	turnobject 14, DIR_EAST
-	turnobject 255, DIR_WEST
-	playse 21
-	applymovement 14, J_Common_Movement_ExclamationMark
+	turnobject LOCALID_SLOWPOKETAIL_MAN, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	playse SE_PIN
+	applymovement LOCALID_SLOWPOKETAIL_MAN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 14
-	applymovement 14, Route32_Movement_SlowpokeRight
+	waitmovement LOCALID_SLOWPOKETAIL_MAN
+	applymovement LOCALID_SLOWPOKETAIL_MAN, Route32_Movement_SlowpokeRight
 	waitmovement 0
 	goto Route32_EventScript_SlowpokeTail_Trigger
 
 Route32_EventScript_SlowpokeTail_Trigger::
 	msgbox Route32_Text_SlowpokeTailOffer, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Route32_EventScript_SlowpokeTail_Trigger2
+	goto_if_eq VAR_RESULT, TRUE, Route32_EventScript_SlowpokeTail_Trigger2
 	msgbox Route32_Text_RefusedSlowpokeTail, MSGBOX_DEFAULT
 	closemessage
-	setvar 20655, 1
+	setvar JOHTO_VAR_SLOWPOKE_TAIL, 1
 	release
 	end
 
 Route32_EventScript_SlowpokeTail_Trigger2::
 	msgbox Route32_Text_ThoughtKidsLoaded, MSGBOX_DEFAULT
 	closemessage
-	getplayerxy 16384, 16385
-	call_if_eq 16384, 16, Route32_EventScript_Movement_Left
-	call_if_eq 16384, 17, Route32_EventScript_Movement_Right
-	setvar 20655, 1
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_eq VAR_TEMP_0, 16, Route32_EventScript_Movement_Left
+	call_if_eq VAR_TEMP_0, 17, Route32_EventScript_Movement_Right
+	setvar JOHTO_VAR_SLOWPOKE_TAIL, 1
 	release
 	end
 
 Route32_EventScript_Movement_Left::
-	applymovement 14, J_Common_Movement_WalkLeft1
+	applymovement LOCALID_SLOWPOKETAIL_MAN, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	turnobject 14, DIR_EAST
+	turnobject LOCALID_SLOWPOKETAIL_MAN, DIR_EAST
 	return
 
 Route32_EventScript_Movement_Right::
-	applymovement 14, J_Common_Movement_WalkLeft1
+	applymovement LOCALID_SLOWPOKETAIL_MAN, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 14, J_Common_Movement_WalkLeft1
+	applymovement LOCALID_SLOWPOKETAIL_MAN, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	turnobject 14, DIR_EAST
+	turnobject LOCALID_SLOWPOKETAIL_MAN, DIR_EAST
 	return
 
 Route32_EventScript_SlowpokeTail::
 	lock
 	faceplayer
 	msgbox Route32_Text_SlowpokeTailOffer, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Route32_EventScript_SlowpokeTail2
+	goto_if_eq VAR_RESULT, TRUE, Route32_EventScript_SlowpokeTail2
 	msgbox Route32_Text_RefusedSlowpokeTail, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -185,11 +185,11 @@ Route32_EventScript_SlowpokeTail2::
 Route32_EventScript_Frieda::
 	lock
 	faceplayer
-	goto_if_set 8731, Route32_EventScript_FriedaCompleted
+	goto_if_set JOHTO_FLAG_GOT_POISON_BARB, Route32_EventScript_FriedaCompleted
 	msgbox Route32_Text_MeetFrieda, MSGBOX_DEFAULT
 	closemessage
-	multichoice 20, 0, 159, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
+	switch VAR_RESULT
 	case 0, Route32_EventScript_FriedaNope
 	case 1, Route32_EventScript_FriedaNope
 	case 2, Route32_EventScript_FriedaNope
@@ -198,7 +198,7 @@ Route32_EventScript_Frieda::
 	case 5, Route32_EventScript_FriedaYes
 	case 6, Route32_EventScript_FriedaNope
 	case 7, Route32_EventScript_FriedaCancel
-	case 127, Route32_EventScript_FriedaCancel
+	case MULTI_B_PRESSED, Route32_EventScript_FriedaCancel
 	closemessage
 	release
 	end
@@ -206,8 +206,8 @@ Route32_EventScript_Frieda::
 Route32_EventScript_FriedaYes::
 	msgbox Route32_Text_FriedaGivesGift, MSGBOX_DEFAULT
 	giveitem ITEM_POISON_BARB
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 8731
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_GOT_POISON_BARB
 	msgbox Route32_Text_FriedaGaveGift, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -235,51 +235,51 @@ Route32_EventScript_BaldingMan::
 	faceplayer
 	msgbox Route32_Text_CooltrainerM_Experiences, MSGBOX_DEFAULT
 	closemessage
-	turnobject 1, DIR_EAST
+	turnobject LOCALID_ROUTE32_BALDINGMAN, DIR_EAST
 	release
 	end
 
 Route32_EventScript_BaldingManTriggerLeft::
 	lock
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ROUTE32_BALDINGMAN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	turnobject 255, DIR_WEST
+	waitmovement LOCALID_ROUTE32_BALDINGMAN
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	goto Route32_EventScript_BaldingManCheck
 	end
 
 Route32_EventScript_BaldingManTriggerMid::
 	lock
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ROUTE32_BALDINGMAN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	applymovement 255, Route32_Movement_StartMid
+	waitmovement LOCALID_ROUTE32_BALDINGMAN
+	applymovement OBJ_EVENT_ID_PLAYER, Route32_Movement_StartMid
 	waitmovement 0
 	goto Route32_EventScript_BaldingManCheck
 	end
 
 Route32_EventScript_BaldingManTriggerRight::
 	lock
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ROUTE32_BALDINGMAN, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	applymovement 255, Route32_Movment_StartRight
+	waitmovement LOCALID_ROUTE32_BALDINGMAN
+	applymovement OBJ_EVENT_ID_PLAYER, Route32_Movment_StartRight
 	waitmovement 0
 	goto Route32_EventScript_BaldingManCheck
 	end
 
 Route32_EventScript_BaldingManCheck::
-	goto_if_unset 8280, Route32_EventScript_BaldingManTower
-	goto_if_unset 8743, Route32_EventScript_BaldingManGym
-	goto_if_unset 8703, Route32_EventScript_BaldingManEgg
+	goto_if_unset JOHTO_FLAG_HIDE_SPROUT_TOWER_SILVER, Route32_EventScript_BaldingManTower
+	goto_if_unset JOHTO_FLAG_DEFEATED_VIOLET_GYM, Route32_EventScript_BaldingManGym
+	goto_if_unset JOHTO_FLAG_RECEIVED_TOGEPI_EGG, Route32_EventScript_BaldingManEgg
 	msgbox Route32_Text_CooltrainerM_HaveThisSeed, MSGBOX_DEFAULT
 	giveitem ITEM_MIRACLE_SEED
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
 	closemessage
-	setvar 20609, 5
+	setvar JOHTO_VAR_VIOLET_CITY_STATE, 5
 	release
 	end
 
@@ -287,7 +287,7 @@ Route32_EventScript_BaldingManTower::
 	msgbox Route32_Text_CooltrainerM_WhatsTheHurry, MSGBOX_DEFAULT
 	msgbox Route32_Text_CooltrainerM_SproutTower, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, Route32_Movement_Turnback
+	applymovement OBJ_EVENT_ID_PLAYER, Route32_Movement_Turnback
 	waitmovement 0
 	release
 	end
@@ -296,7 +296,7 @@ Route32_EventScript_BaldingManGym::
 	msgbox Route32_Text_CooltrainerM_WhatsTheHurry, MSGBOX_DEFAULT
 	msgbox Route32_Text_CooltrainerM_VioletGym, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, Route32_Movement_Turnback
+	applymovement OBJ_EVENT_ID_PLAYER, Route32_Movement_Turnback
 	waitmovement 0
 	release
 	end
@@ -305,13 +305,13 @@ Route32_EventScript_BaldingManEgg::
 	msgbox Route32_Text_CooltrainerM_WhatsTheHurry, MSGBOX_DEFAULT
 	msgbox Route32_Text_CooltrainerM_AideIsWaiting, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, Route32_Movement_Turnback
+	applymovement OBJ_EVENT_ID_PLAYER, Route32_Movement_Turnback
 	waitmovement 0
 	release
 	end
 
 Route32_EventScript_Item_Bullet_Seed::
-	finditem 590
+	finditem ITEM_TM_BULLET_SEED
 	end
 
 Route32_EventScript_GreatBall::

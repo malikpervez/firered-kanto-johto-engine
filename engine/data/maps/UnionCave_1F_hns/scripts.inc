@@ -5,52 +5,52 @@ UnionCave_1F_hns_MapScripts::
 
 UnionCave_1F_Trigger_Monview::
 	special SpawnCameraObject
-	applymovement2 127, J_Common_Movement_WalkRight1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkRight1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkRight1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkRight1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkRight1
 	waitmovement 0
 	message Route29_Text_PressAorB
 	waitbuttonpress
 	closemessage
-	applymovement2 127, J_Common_Movement_WalkLeft1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkLeft1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkLeft1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkLeft1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	special RemoveCameraObject
-	applymovement2 255, J_Common_Movement_WalkLeft1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	end
 
 UnionCave_1F_EventScript_HikerRussell::
-	trainerbattle_single 1283, UnionCave_1F_Text_HikerRussellSeen, UnionCave_1F_Text_HikerRussellBeaten
+	trainerbattle_single TRAINER_JOHTO_RUSSELL_HNS, UnionCave_1F_Text_HikerRussellSeen, UnionCave_1F_Text_HikerRussellBeaten
 	msgbox UnionCave_1F_Text_HikerRussellAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_1F_EventScript_PokemaniacLarry::
-	trainerbattle_single 1131, UnionCave_1F_Text_PokemaniacLarrySeen, UnionCave_1F_Text_PokemaniacLarryBeaten
+	trainerbattle_single TRAINER_JOHTO_LARRY_HNS, UnionCave_1F_Text_PokemaniacLarrySeen, UnionCave_1F_Text_PokemaniacLarryBeaten
 	msgbox UnionCave_1F_Text_PokemaniacLarryAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_1F_EventScript_HikerDaniel::
-	trainerbattle_single 1298, UnionCave_1F_Text_HikerDanielSeen, UnionCave_1F_Text_HikerDanielBeaten
+	trainerbattle_single TRAINER_JOHTO_DANIEL_HNS, UnionCave_1F_Text_HikerDanielSeen, UnionCave_1F_Text_HikerDanielBeaten
 	msgbox UnionCave_1F_Text_HikerDanielAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_1F_EventScript_FirebreatherBill::
-	trainerbattle_single 1316, UnionCave_1F_Text_FirebreatherBillSeen, UnionCave_1F_Text_FirebreatherBillBeaten
+	trainerbattle_single TRAINER_JOHTO_BILL_HNS, UnionCave_1F_Text_FirebreatherBillSeen, UnionCave_1F_Text_FirebreatherBillBeaten
 	msgbox UnionCave_1F_Text_FirebreatherBillAfter, MSGBOX_AUTOCLOSE
 	end
 
 UnionCave_1F_EventScript_FirebreatherRay::
-	trainerbattle_single 1318, UnionCave_1F_Text_FirebreatherRaySeen, UnionCave_1F_Text_FirebreatherRayBeaten
+	trainerbattle_single TRAINER_JOHTO_RAY_HNS, UnionCave_1F_Text_FirebreatherRaySeen, UnionCave_1F_Text_FirebreatherRayBeaten
 	msgbox UnionCave_1F_Text_FirebreatherRayAfter, MSGBOX_AUTOCLOSE
 	end
 

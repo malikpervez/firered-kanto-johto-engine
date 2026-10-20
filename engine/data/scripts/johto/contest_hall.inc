@@ -4,10 +4,10 @@ J_LilycoveCity_ContestLobby_EventScript_SpeakToContestReceptionist::
 	lock
 	faceplayer
 
-	goto_if_ne 20636, 0, J_LilycoveCity_ContestLobby_EventScript_PickUpPrize
+	goto_if_ne JOHTO_VAR_CONTEST_PRIZE_PICKUP_HNS, 0, J_LilycoveCity_ContestLobby_EventScript_PickUpPrize
 	checkitem ITEM_POKEBLOCK_CASE
-	call_if_eq 32781, TRUE, J_LilycoveCity_ContestLobby_EventScript_ReceptionWelcome
-	call_if_eq 32781, FALSE, J_LilycoveCity_ContestLobby_EventScript_GivePokeblockCase
+	call_if_eq VAR_RESULT, TRUE, J_LilycoveCity_ContestLobby_EventScript_ReceptionWelcome
+	call_if_eq VAR_RESULT, FALSE, J_LilycoveCity_ContestLobby_EventScript_GivePokeblockCase
 
 
 
@@ -23,7 +23,7 @@ J_LilycoveCity_ContestLobby_EventScript_ReceptionWelcome::
 J_LilycoveCity_ContestLobby_EventScript_GivePokeblockCase::
 	msgbox J_LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase, MSGBOX_DEFAULT
 	giveitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
 
 
 
@@ -33,7 +33,7 @@ J_LilycoveCity_ContestLobby_EventScript_GivePokeblockCase::
 J_LilycoveCity_ContestLobby_EventScript_PickUpPrize::
 	msgbox J_LilycoveCity_ContestLobby_Text_PokemonWonWeHavePrize, MSGBOX_DEFAULT
 
-	switch 20636
+	switch JOHTO_VAR_CONTEST_PRIZE_PICKUP_HNS
 
 
 
@@ -42,9 +42,9 @@ J_LilycoveCity_ContestLobby_EventScript_PickUpPrize::
 
 J_LilycoveCity_ContestLobby_EventScript_GiveLuxuryBallAtCounter::
 	giveitem ITEM_LUXURY_BALL
-	goto_if_eq 32781, FALSE, J_LilycoveCity_ContestLobby_EventScript_NoRoomForLuxuryBallAtCounter
+	goto_if_eq VAR_RESULT, FALSE, J_LilycoveCity_ContestLobby_EventScript_NoRoomForLuxuryBallAtCounter
 
-	setvar 20636, 0
+	setvar JOHTO_VAR_CONTEST_PRIZE_PICKUP_HNS, 0
 
 
 
@@ -61,24 +61,24 @@ J_LilycoveCity_ContestLobby_EventScript_NoRoomForLuxuryBallAtCounter::
 J_LilycoveCity_ContestLobby_EventScript_AskEnterContest::
 	message J_LilycoveCity_ContestLobby_Text_EnterContest1
 	waitmessage
-	multichoice 0, 0, 2, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_ENTERINFO, FALSE
+	switch VAR_RESULT
 	case 0, J_LilycoveCity_ContestLobby_EventScript_ChooseContestRank
 	case 1, J_LilycoveCity_ContestLobby_EventScript_ContestInfo
 	case 2, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
-	case 127, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
+	case MULTI_B_PRESSED, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_ContestInfo::
 	message J_LilycoveCity_ContestLobby_Text_WhichTopic1
 	waitmessage
-	multichoice 0, 0, 3, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_CONTEST_INFO, FALSE
+	switch VAR_RESULT
 	case 0, J_LilycoveCity_ContestLobby_EventScript_ExplainContests
 	case 1, J_LilycoveCity_ContestLobby_EventScript_ExplainContestTypes
 	case 2, J_LilycoveCity_ContestLobby_EventScript_ExplainContestRanks
 	case 3, J_LilycoveCity_ContestLobby_EventScript_AskEnterContest
-	case 127, J_LilycoveCity_ContestLobby_EventScript_AskEnterContest
+	case MULTI_B_PRESSED, J_LilycoveCity_ContestLobby_EventScript_AskEnterContest
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_ExplainContests::
@@ -104,56 +104,56 @@ J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest::
 J_LilycoveCity_ContestLobby_EventScript_ChooseContestMon::
 	msgbox J_LilycoveCity_ContestLobby_Text_EnterWhichPokemon1, MSGBOX_DEFAULT
 	choosecontestmon
-	goto_if_eq 32772, 0xFF, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
 	special TryEnterContestMon
-	goto_if_eq 32781, 0, J_LilycoveCity_ContestLobby_EventScript_CantEnterLowRank
-	goto_if_eq 32781, 1, J_LilycoveCity_ContestLobby_EventScript_EnterMon
-	goto_if_eq 32781, 2, J_LilycoveCity_ContestLobby_EventScript_ConfirmEntryAlreadyWon
-	goto_if_eq 32781, 3, J_LilycoveCity_ContestLobby_EventScript_CantEnterEgg
-	goto_if_eq 32781, 4, J_LilycoveCity_ContestLobby_EventScript_CantEnterFainted
+	goto_if_eq VAR_RESULT, CANT_ENTER_CONTEST, J_LilycoveCity_ContestLobby_EventScript_CantEnterLowRank
+	goto_if_eq VAR_RESULT, CAN_ENTER_CONTEST_EQUAL_RANK, J_LilycoveCity_ContestLobby_EventScript_EnterMon
+	goto_if_eq VAR_RESULT, CAN_ENTER_CONTEST_HIGH_RANK, J_LilycoveCity_ContestLobby_EventScript_ConfirmEntryAlreadyWon
+	goto_if_eq VAR_RESULT, CANT_ENTER_CONTEST_EGG, J_LilycoveCity_ContestLobby_EventScript_CantEnterEgg
+	goto_if_eq VAR_RESULT, CANT_ENTER_CONTEST_FAINTED, J_LilycoveCity_ContestLobby_EventScript_CantEnterFainted
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_ChooseContestRank::
 	message J_LilycoveCity_ContestLobby_Text_EnterWhichRank
 	waitmessage
-	multichoice 0, 0, 82, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_CONTEST_RANK, FALSE
+	switch VAR_RESULT
 	case 0, J_LilycoveCity_ContestLobby_EventScript_EnterNormalRank
 	case 1, J_LilycoveCity_ContestLobby_EventScript_EnterSuperRank
 	case 2, J_LilycoveCity_ContestLobby_EventScript_EnterHyperRank
 	case 3, J_LilycoveCity_ContestLobby_EventScript_EnterMasterRank
 	case 4, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
-	case 127, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
+	case MULTI_B_PRESSED, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_EnterNormalRank::
-	setvar 32784, 0
+	setvar VAR_CONTEST_RANK, CONTEST_RANK_NORMAL
 	goto J_LilycoveCity_ContestLobby_EventScript_ChooseContestType
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_EnterSuperRank::
-	setvar 32784, 1
+	setvar VAR_CONTEST_RANK, CONTEST_RANK_SUPER
 	goto J_LilycoveCity_ContestLobby_EventScript_ChooseContestType
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_EnterHyperRank::
-	setvar 32784, 2
+	setvar VAR_CONTEST_RANK, CONTEST_RANK_HYPER
 	goto J_LilycoveCity_ContestLobby_EventScript_ChooseContestType
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_EnterMasterRank::
-	setvar 32784, 3
+	setvar VAR_CONTEST_RANK, CONTEST_RANK_MASTER
 	goto J_LilycoveCity_ContestLobby_EventScript_ChooseContestType
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_ChooseContestType::
 	message J_LilycoveCity_ContestLobby_Text_EnterWhichContest1
 	waitmessage
-	multichoice 0, 0, 4, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_CONTEST_TYPE, FALSE
+	switch VAR_RESULT
 	case 5, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
-	case 127, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
-	copyvar 32785, 32781
+	case MULTI_B_PRESSED, J_LilycoveCity_ContestLobby_EventScript_CancelEnterContest
+	copyvar VAR_CONTEST_CATEGORY, VAR_RESULT
 	goto J_LilycoveCity_ContestLobby_EventScript_ChooseContestMon
 	end
 
@@ -165,14 +165,14 @@ J_LilycoveCity_ContestLobby_EventScript_CantEnterLowRank::
 
 J_LilycoveCity_ContestLobby_EventScript_ConfirmEntry::
 	msgbox J_LilycoveCity_ContestLobby_Text_ConfirmContestMon, MSGBOX_YESNO
-	switch 32781
+	switch VAR_RESULT
 	case NO, J_LilycoveCity_ContestLobby_EventScript_ChooseContestMon
 	case YES, J_LilycoveCity_ContestLobby_EventScript_EnterMon
 	end
 
 J_LilycoveCity_ContestLobby_EventScript_ConfirmEntryAlreadyWon::
 	msgbox J_LilycoveCity_ContestLobby_Text_AlreadyWonEnterAnyway, MSGBOX_YESNO
-	switch 32781
+	switch VAR_RESULT
 	case NO, J_LilycoveCity_ContestLobby_EventScript_ChooseContestMon
 	case YES, J_LilycoveCity_ContestLobby_EventScript_EnterMon
 	end
@@ -193,16 +193,16 @@ J_LilycoveCity_ContestLobby_EventScript_EnterMon::
 	msgbox J_LilycoveCity_ContestLobby_Text_YourMonIsEntryNum4, MSGBOX_DEFAULT
 	closemessage
 	releaseall
-	setvar 20598, 1
+	setvar JOHTO_VAR_CONTEST_HALL_STATE, 1
 	return
 
 J_ContestHall_EventScript_DoContest::
 	special LinkContestTryShowWirelessIndicator
-	setvar 32774, 0
+	setvar VAR_0x8006, 0
 	lockall
-	applymovement 14, J_ContestHall_Movement_Player4FaceUp
+	applymovement LOCALID_CONTESTANT_4, J_ContestHall_Movement_Player4FaceUp
 	waitmovement 0
-	applymovement 1, J_ContestHall_Movement_MCWalkDown
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_MCWalkDown
 	waitmovement 0
 	releaseall
 	call J_ContestHall_EventScript_TryWaitForLink
@@ -216,35 +216,35 @@ J_ContestHall_EventScript_DoContest::
 	call J_ContestHall_EventScript_CongratulateWinner
 	call J_ContestHall_EventScript_AudienceLookAround
 	call J_ContestHall_EventScript_GiveWinnerPrize
-	setvar 20598, 2
+	setvar JOHTO_VAR_CONTEST_HALL_STATE, 2
 	return
 
 J_ContestHall_EventScript_GetContestRankStringId::
-	switch 32784
-	case 0, J_ContestHall_EventScript_GetNormalStringId
-	case 1, J_ContestHall_EventScript_GetSuperStringId
-	case 2, J_ContestHall_EventScript_GetHyperStringId
-	case 3, J_ContestHall_EventScript_GetMasterStringId
+	switch VAR_CONTEST_RANK
+	case CONTEST_RANK_NORMAL, J_ContestHall_EventScript_GetNormalStringId
+	case CONTEST_RANK_SUPER, J_ContestHall_EventScript_GetSuperStringId
+	case CONTEST_RANK_HYPER, J_ContestHall_EventScript_GetHyperStringId
+	case CONTEST_RANK_MASTER, J_ContestHall_EventScript_GetMasterStringId
 	return
 
 J_ContestHall_EventScript_GetNormalStringId::
-	setvar 32777, 5
+	setvar VAR_0x8009, STDSTRING_NORMAL
 	return
 
 J_ContestHall_EventScript_GetSuperStringId::
-	setvar 32777, 6
+	setvar VAR_0x8009, STDSTRING_SUPER
 	return
 
 J_ContestHall_EventScript_GetHyperStringId::
-	setvar 32777, 7
+	setvar VAR_0x8009, STDSTRING_HYPER
 	return
 
 J_ContestHall_EventScript_GetMasterStringId::
-	setvar 32777, 8
+	setvar VAR_0x8009, STDSTRING_MASTER
 	return
 
 J_ContestHall_EventScript_GetContestCategory::
-	switch 32785
+	switch VAR_CONTEST_CATEGORY
 	case CONTEST_CATEGORY_COOL, J_ContestHall_EventScript_GetCategoryCool
 	case CONTEST_CATEGORY_BEAUTY, J_ContestHall_EventScript_GetCategoryBeauty
 	case CONTEST_CATEGORY_CUTE, J_ContestHall_EventScript_GetCategoryCute
@@ -253,45 +253,45 @@ J_ContestHall_EventScript_GetContestCategory::
 	return
 
 J_ContestHall_EventScript_GetCategoryCool::
-	setvar 32776, CONTEST_CATEGORY_COOL
+	setvar VAR_0x8008, CONTEST_CATEGORY_COOL
 	return
 
 J_ContestHall_EventScript_GetCategoryBeauty::
-	setvar 32776, CONTEST_CATEGORY_BEAUTY
+	setvar VAR_0x8008, CONTEST_CATEGORY_BEAUTY
 	return
 
 J_ContestHall_EventScript_GetCategoryCute::
-	setvar 32776, CONTEST_CATEGORY_CUTE
+	setvar VAR_0x8008, CONTEST_CATEGORY_CUTE
 	return
 
 J_ContestHall_EventScript_GetCategorySmart::
-	setvar 32776, CONTEST_CATEGORY_SMART
+	setvar VAR_0x8008, CONTEST_CATEGORY_SMART
 	return
 
 J_ContestHall_EventScript_GetCategoryTough::
-	setvar 32776, CONTEST_CATEGORY_TOUGH
+	setvar VAR_0x8008, CONTEST_CATEGORY_TOUGH
 	return
 
 J_ContestHall_EventScript_ContestGettingStarted::
-	buffercontestname STR_VAR_2, 32776
-	bufferstdstring STR_VAR_3, 32777
+	buffercontestname STR_VAR_2, VAR_0x8008
+	bufferstdstring STR_VAR_3, VAR_0x8009
 	call J_ContestHall_EventScript_GettingStarted
 	lockall
-	applymovement 1, J_ContestHall_Movement_MCBackUp
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_MCBackUp
 	waitmovement 0
 	releaseall
 	return
 
 J_ContestHall_EventScript_GettingStarted::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_GettingStartedLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_GettingStartedLink
 	lockall
 	msgbox J_ContestHall_Text_GettingStartedParticipantsAsFollows, MSGBOX_DEFAULT
 	releaseall
 	return
 
 J_ContestHall_EventScript_GettingStartedLink::
-	specialvar 32781, IsWirelessContest
-	goto_if_eq 32781, TRUE, J_ContestHall_EventScript_GettingStartedWireless
+	specialvar VAR_RESULT, IsWirelessContest
+	goto_if_eq VAR_RESULT, TRUE, J_ContestHall_EventScript_GettingStartedWireless
 	messageautoscroll J_ContestHall_Text_GettingStartedParticipantsAsFollowsLink
 	waitmessage
 	return
@@ -313,15 +313,15 @@ J_ContestHall_EventScript_ShowContestMons::
 	call J_ContestHall_EventScript_ContestantReturn
 	call J_ContestHall_EventScript_TryWaitForLink
 	call J_ContestHall_EventScript_TryWaitForLink
-	addvar 32774, 1
-	goto_if_ne 32774, 4, J_ContestHall_EventScript_ShowContestMons
+	addvar VAR_0x8006, 1
+	goto_if_ne VAR_0x8006, CONTESTANT_COUNT, J_ContestHall_EventScript_ShowContestMons
 	call J_ContestHall_EventScript_AudienceVote
-	setvar 16385, 6
+	setvar VAR_TEMP_1, 6
 	return
 
 J_ContestHall_EventScript_TryWaitForLink::
-	specialvar 32781, IsWirelessContest
-	goto_if_eq 32781, TRUE, J_ContestHall_EventScript_WaitForLink
+	specialvar VAR_RESULT, IsWirelessContest
+	goto_if_eq VAR_RESULT, TRUE, J_ContestHall_EventScript_WaitForLink
 	return
 
 J_ContestHall_EventScript_WaitForLink::
@@ -330,72 +330,72 @@ J_ContestHall_EventScript_WaitForLink::
 	return
 
 J_ContestHall_EventScript_ContestantWalkToCenter::
-	goto_if_eq 32774, 0, J_ContestHall_EventScript_Player1WalkToCenter
-	goto_if_eq 32774, 1, J_ContestHall_EventScript_Player2WalkToCenter
-	goto_if_eq 32774, 2, J_ContestHall_EventScript_Player3WalkToCenter
-	goto_if_eq 32774, 3, J_ContestHall_EventScript_Player4WalkToCenter
+	goto_if_eq VAR_0x8006, 0, J_ContestHall_EventScript_Player1WalkToCenter
+	goto_if_eq VAR_0x8006, 1, J_ContestHall_EventScript_Player2WalkToCenter
+	goto_if_eq VAR_0x8006, 2, J_ContestHall_EventScript_Player3WalkToCenter
+	goto_if_eq VAR_0x8006, 3, J_ContestHall_EventScript_Player4WalkToCenter
 	return
 
 J_ContestHall_EventScript_Player1WalkToCenter::
 	call J_ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement 3, J_ContestHall_Movement_Player1WalkToCenter
+	applymovement LOCALID_CONTESTANT_1, J_ContestHall_Movement_Player1WalkToCenter
 	waitmovement 0
 	releaseall
-	setvar 32779, 3
+	setvar VAR_0x800B, LOCALID_CONTESTANT_1
 	return
 
 J_ContestHall_EventScript_Player2WalkToCenter::
 	call J_ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement 4, J_ContestHall_Movement_Player2WalkToCenter
+	applymovement LOCALID_CONTESTANT_2, J_ContestHall_Movement_Player2WalkToCenter
 	waitmovement 0
 	releaseall
-	setvar 32779, 4
+	setvar VAR_0x800B, LOCALID_CONTESTANT_2
 	return
 
 J_ContestHall_EventScript_Player3WalkToCenter::
 	call J_ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement 5, J_ContestHall_Movement_Player3WalkToCenter
+	applymovement LOCALID_CONTESTANT_3, J_ContestHall_Movement_Player3WalkToCenter
 	waitmovement 0
 	releaseall
-	setvar 32779, 5
+	setvar VAR_0x800B, LOCALID_CONTESTANT_3
 	return
 
 J_ContestHall_EventScript_Player4WalkToCenter::
 	call J_ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement 14, J_ContestHall_Movement_Player4WalkToCenter
+	applymovement LOCALID_CONTESTANT_4, J_ContestHall_Movement_Player4WalkToCenter
 	waitmovement 0
 	releaseall
-	setvar 32779, 14
+	setvar VAR_0x800B, LOCALID_CONTESTANT_4
 	return
 
 J_ContestHall_EventScript_ShowContestMonPic::
 	special BufferContestTrainerAndMonNames
-	addvar 32774, 1
-	buffernumberstring STR_VAR_2, 32774
+	addvar VAR_0x8006, 1
+	buffernumberstring STR_VAR_2, VAR_0x8006
 	lockall
-	applymovement 32779, J_ContestHall_Movement_ContestantDelay32
+	applymovement VAR_0x800B, J_ContestHall_Movement_ContestantDelay32
 	waitmovement 0
 	releaseall
 	call J_ContestHall_EventScript_TryWaitForLink
 	call J_ContestHall_EventScript_CheckIfContestWithRSPlayer
-	addobject 13
-	playse 10
+	addobject LOCALID_CONTEST_POKEBALL
+	playse SE_LEDGE
 	lockall
-	applymovement 32779, J_ContestHall_Movement_ContestantDelay32
+	applymovement VAR_0x800B, J_ContestHall_Movement_ContestantDelay32
 	waitmovement 0
 	releaseall
-	addvar 32774, -1
-	playse 15
+	addvar VAR_0x8006, -1
+	playse SE_BALL_OPEN
 	special ShowContestEntryMonPic
 	call J_ContestHall_EventScript_EntryXTrainersMon
 	return
 
 J_ContestHall_EventScript_EntryXTrainersMon::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_EntryXTrainersMonLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_EntryXTrainersMonLink
 	message J_ContestHall_Text_EntryXTrainersMon
 	waitmessage
 	return
@@ -408,27 +408,27 @@ J_ContestHall_EventScript_EntryXTrainersMonLink::
 J_ContestHall_EventScript_AudienceVote::
 	call J_ContestHall_EventScript_AudienceWillVote
 	call J_ContestHall_EventScript_VotingUnderWay
-	playse 223
+	playse SE_M_ENCORE2
 	waitmessage
 	call J_ContestHall_EventScript_AudienceLookAround
-	applymovement 1, J_ContestHall_Movement_MCFaceJudge2
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_MCFaceJudge2
 	waitmovement 0
-	applymovement 2, J_ContestHall_Movement_JudgeFaceMC
+	applymovement LOCALID_CONTEST_JUDGE, J_ContestHall_Movement_JudgeFaceMC
 	waitmovement 0
 	delay 20
-	applymovement 1, J_ContestHall_Movement_FaceContestants
-	applymovement 2, J_ContestHall_Movement_FaceContestants
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_FaceContestants
+	applymovement LOCALID_CONTEST_JUDGE, J_ContestHall_Movement_FaceContestants
 	waitmovement 0
 	return
 
 J_ContestHall_EventScript_AudienceWillVote::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_AudienceWillVoteLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_AudienceWillVoteLink
 	msgbox J_ContestHall_Text_SeenContestantsAudienceWillVote, MSGBOX_DEFAULT
 	return
 
 J_ContestHall_EventScript_AudienceWillVoteLink::
-	specialvar 32781, IsWirelessContest
-	goto_if_eq 32781, TRUE, J_ContestHall_EventScript_AudienceWillVoteWireless
+	specialvar VAR_RESULT, IsWirelessContest
+	goto_if_eq VAR_RESULT, TRUE, J_ContestHall_EventScript_AudienceWillVoteWireless
 	messageautoscroll J_ContestHall_Text_SeenContestantsAudienceWillVote
 	waitmessage
 	return
@@ -446,7 +446,7 @@ J_ContestHall_EventScript_AudienceWillVoteWireless::
 	return
 
 J_ContestHall_EventScript_VotingUnderWay::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_VotingUnderWayLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_VotingUnderWayLink
 	message J_ContestHall_Text_VotingUnderWay
 	return
 
@@ -457,25 +457,25 @@ J_ContestHall_EventScript_VotingUnderWayLink::
 
 J_ContestHall_EventScript_AudienceReactToContestant::
 	call J_ContestHall_EventScript_TryWaitForLink
-	applymovement 1, J_ContestHall_Movement_AudienceMemberLookLeft
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_AudienceMemberLookLeft
 	waitmovement 0
-	playse 223
+	playse SE_M_ENCORE2
 	call J_ContestHall_EventScript_VObjectAudienceLookAround
-	applymovement 9, J_ContestHall_Movement_AudienceMemberLookRight
-	applymovement 12, J_ContestHall_Movement_AudienceMemberLookDown
-	applymovement 7, J_ContestHall_Movement_AudienceMemberLookRight
+	applymovement LOCALID_CONTEST_AUDIENCE_5, J_ContestHall_Movement_AudienceMemberLookRight
+	applymovement LOCALID_CONTEST_AUDIENCE_2, J_ContestHall_Movement_AudienceMemberLookDown
+	applymovement LOCALID_CONTEST_AUDIENCE_3, J_ContestHall_Movement_AudienceMemberLookRight
 	waitmovement 0
-	applymovement 1, J_ContestHall_Movement_AudienceMemberLookRight
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_AudienceMemberLookRight
 	waitmovement 0
-	applymovement 10, J_ContestHall_Movement_AudienceMemberLookLeft
-	applymovement 11, J_ContestHall_Movement_AudienceMemberLookDown
-	applymovement 6, J_ContestHall_Movement_AudienceMemberLookUp
-	applymovement 8, J_ContestHall_Movement_AudienceMemberLookLeft
+	applymovement LOCALID_CONTEST_AUDIENCE_6, J_ContestHall_Movement_AudienceMemberLookLeft
+	applymovement LOCALID_CONTEST_AUDIENCE_7, J_ContestHall_Movement_AudienceMemberLookDown
+	applymovement LOCALID_CONTEST_AUDIENCE_1, J_ContestHall_Movement_AudienceMemberLookUp
+	applymovement LOCALID_CONTEST_AUDIENCE_4, J_ContestHall_Movement_AudienceMemberLookLeft
 	waitmovement 0
-	applymovement 1, J_ContestHall_Movement_MCLookAtJudge
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_MCLookAtJudge
 	waitmovement 0
-	applymovement 1, J_ContestHall_Movement_MCWalkInPlaceDown
-	applymovement 2, J_ContestHall_Movement_JudgeLookAtMC
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_MCWalkInPlaceDown
+	applymovement LOCALID_CONTEST_JUDGE, J_ContestHall_Movement_JudgeLookAtMC
 	waitmovement 0
 	releaseall
 	call J_ContestHall_EventScript_TryWaitForLink
@@ -483,228 +483,228 @@ J_ContestHall_EventScript_AudienceReactToContestant::
 
 J_ContestHall_EventScript_AudienceHeartEmotes::
 	special GetContestMonCondition
-	call_if_eq 20600, (0 + 1), J_ContestHall_EventScript_GetNumberOfHeartsNormal
-	call_if_eq 20600, (1 + 1), J_ContestHall_EventScript_GetNumberOfHeartsSuper
-	call_if_eq 20600, (2 + 1), J_ContestHall_EventScript_GetNumberOfHeartsHyper
-	call_if_eq 20600, (3 + 1), J_ContestHall_EventScript_GetNumberOfHeartsMaster
-	call_if_eq 20600, (4 + 1), J_ContestHall_EventScript_GetNumberOfHeartsLink
-	setvar 16385, 9
-	setvar 16386, 9
-	setvar 16387, 9
-	setvar 16388, 9
-	setvar 16389, 9
-	setvar 16390, 9
-	setvar 16391, 9
-	setvar 16392, 9
-	call_if_gt 16384, 0, J_ContestHall_EventScript_DisplayHearts
-	setvar 16385, 0
-	setvar 16386, 0
-	setvar 16387, 0
-	setvar 16388, 0
-	setvar 16389, 0
-	setvar 16390, 0
-	setvar 16391, 0
-	setvar 16392, 0
+	call_if_eq JOHTO_VAR_CONTEST_TYPE, (0 + 1), J_ContestHall_EventScript_GetNumberOfHeartsNormal
+	call_if_eq JOHTO_VAR_CONTEST_TYPE, (1 + 1), J_ContestHall_EventScript_GetNumberOfHeartsSuper
+	call_if_eq JOHTO_VAR_CONTEST_TYPE, (2 + 1), J_ContestHall_EventScript_GetNumberOfHeartsHyper
+	call_if_eq JOHTO_VAR_CONTEST_TYPE, (3 + 1), J_ContestHall_EventScript_GetNumberOfHeartsMaster
+	call_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_GetNumberOfHeartsLink
+	setvar VAR_TEMP_1, 9
+	setvar VAR_TEMP_2, 9
+	setvar VAR_TEMP_3, 9
+	setvar VAR_TEMP_4, 9
+	setvar VAR_TEMP_5, 9
+	setvar VAR_TEMP_6, 9
+	setvar VAR_TEMP_7, 9
+	setvar VAR_TEMP_8, 9
+	call_if_gt VAR_TEMP_0, 0, J_ContestHall_EventScript_DisplayHearts
+	setvar VAR_TEMP_1, 0
+	setvar VAR_TEMP_2, 0
+	setvar VAR_TEMP_3, 0
+	setvar VAR_TEMP_4, 0
+	setvar VAR_TEMP_5, 0
+	setvar VAR_TEMP_6, 0
+	setvar VAR_TEMP_7, 0
+	setvar VAR_TEMP_8, 0
 	return
 
 J_ContestHall_EventScript_DisplayHearts::
-	setvar 32781, 8
+	setvar VAR_RESULT, 8
 	special GenerateContestRand
-	call_if_eq 32781, 0, J_ContestHall_EventScript_TryDisplayHeartAudienceMember1
-	call_if_eq 32781, 1, J_ContestHall_EventScript_TryDisplayHeartAudienceMember2
-	call_if_eq 32781, 2, J_ContestHall_EventScript_TryDisplayHeartAudienceMember3
-	call_if_eq 32781, 3, J_ContestHall_EventScript_TryDisplayHeartAudienceMember4
-	call_if_eq 32781, 4, J_ContestHall_EventScript_TryDisplayHeartAudienceMember5
-	call_if_eq 32781, 5, J_ContestHall_EventScript_TryDisplayHeartAudienceMember6
-	call_if_eq 32781, 6, J_ContestHall_EventScript_TryDisplayHeartAudienceMember7
-	call_if_eq 32781, 7, J_ContestHall_EventScript_TryDisplayHeartAudienceMember8
-	goto_if_gt 16384, 0, J_ContestHall_EventScript_DisplayHearts
+	call_if_eq VAR_RESULT, 0, J_ContestHall_EventScript_TryDisplayHeartAudienceMember1
+	call_if_eq VAR_RESULT, 1, J_ContestHall_EventScript_TryDisplayHeartAudienceMember2
+	call_if_eq VAR_RESULT, 2, J_ContestHall_EventScript_TryDisplayHeartAudienceMember3
+	call_if_eq VAR_RESULT, 3, J_ContestHall_EventScript_TryDisplayHeartAudienceMember4
+	call_if_eq VAR_RESULT, 4, J_ContestHall_EventScript_TryDisplayHeartAudienceMember5
+	call_if_eq VAR_RESULT, 5, J_ContestHall_EventScript_TryDisplayHeartAudienceMember6
+	call_if_eq VAR_RESULT, 6, J_ContestHall_EventScript_TryDisplayHeartAudienceMember7
+	call_if_eq VAR_RESULT, 7, J_ContestHall_EventScript_TryDisplayHeartAudienceMember8
+	goto_if_gt VAR_TEMP_0, 0, J_ContestHall_EventScript_DisplayHearts
 	waitmovement 0
 	return
 
 J_ContestHall_EventScript_GetNumberOfHeartsNormal::
-	goto_if_gt 32772, 80, J_ContestHall_EventScript_Set8Hearts
-	goto_if_gt 32772, 70, J_ContestHall_EventScript_Set7Hearts
-	goto_if_gt 32772, 60, J_ContestHall_EventScript_Set6Hearts
-	goto_if_gt 32772, 50, J_ContestHall_EventScript_Set5Hearts
-	goto_if_gt 32772, 40, J_ContestHall_EventScript_Set4Hearts
-	goto_if_gt 32772, 30, J_ContestHall_EventScript_Set3Hearts
-	goto_if_gt 32772, 20, J_ContestHall_EventScript_Set2Hearts
-	goto_if_gt 32772, 10, J_ContestHall_EventScript_Set1Heart
-	setvar 16384, 0
+	goto_if_gt VAR_0x8004, 80, J_ContestHall_EventScript_Set8Hearts
+	goto_if_gt VAR_0x8004, 70, J_ContestHall_EventScript_Set7Hearts
+	goto_if_gt VAR_0x8004, 60, J_ContestHall_EventScript_Set6Hearts
+	goto_if_gt VAR_0x8004, 50, J_ContestHall_EventScript_Set5Hearts
+	goto_if_gt VAR_0x8004, 40, J_ContestHall_EventScript_Set4Hearts
+	goto_if_gt VAR_0x8004, 30, J_ContestHall_EventScript_Set3Hearts
+	goto_if_gt VAR_0x8004, 20, J_ContestHall_EventScript_Set2Hearts
+	goto_if_gt VAR_0x8004, 10, J_ContestHall_EventScript_Set1Heart
+	setvar VAR_TEMP_0, 0
 	return
 
 J_ContestHall_EventScript_GetNumberOfHeartsSuper::
-	goto_if_gt 32772, 230, J_ContestHall_EventScript_Set8Hearts
-	goto_if_gt 32772, 210, J_ContestHall_EventScript_Set7Hearts
-	goto_if_gt 32772, 190, J_ContestHall_EventScript_Set6Hearts
-	goto_if_gt 32772, 170, J_ContestHall_EventScript_Set5Hearts
-	goto_if_gt 32772, 150, J_ContestHall_EventScript_Set4Hearts
-	goto_if_gt 32772, 130, J_ContestHall_EventScript_Set3Hearts
-	goto_if_gt 32772, 110, J_ContestHall_EventScript_Set2Hearts
-	goto_if_gt 32772, 90, J_ContestHall_EventScript_Set1Heart
-	setvar 16384, 0
+	goto_if_gt VAR_0x8004, 230, J_ContestHall_EventScript_Set8Hearts
+	goto_if_gt VAR_0x8004, 210, J_ContestHall_EventScript_Set7Hearts
+	goto_if_gt VAR_0x8004, 190, J_ContestHall_EventScript_Set6Hearts
+	goto_if_gt VAR_0x8004, 170, J_ContestHall_EventScript_Set5Hearts
+	goto_if_gt VAR_0x8004, 150, J_ContestHall_EventScript_Set4Hearts
+	goto_if_gt VAR_0x8004, 130, J_ContestHall_EventScript_Set3Hearts
+	goto_if_gt VAR_0x8004, 110, J_ContestHall_EventScript_Set2Hearts
+	goto_if_gt VAR_0x8004, 90, J_ContestHall_EventScript_Set1Heart
+	setvar VAR_TEMP_0, 0
 	return
 
 J_ContestHall_EventScript_GetNumberOfHeartsHyper::
-	goto_if_gt 32772, 380, J_ContestHall_EventScript_Set8Hearts
-	goto_if_gt 32772, 350, J_ContestHall_EventScript_Set7Hearts
-	goto_if_gt 32772, 320, J_ContestHall_EventScript_Set6Hearts
-	goto_if_gt 32772, 290, J_ContestHall_EventScript_Set5Hearts
-	goto_if_gt 32772, 260, J_ContestHall_EventScript_Set4Hearts
-	goto_if_gt 32772, 230, J_ContestHall_EventScript_Set3Hearts
-	goto_if_gt 32772, 200, J_ContestHall_EventScript_Set2Hearts
-	goto_if_gt 32772, 170, J_ContestHall_EventScript_Set1Heart
-	setvar 16384, 0
+	goto_if_gt VAR_0x8004, 380, J_ContestHall_EventScript_Set8Hearts
+	goto_if_gt VAR_0x8004, 350, J_ContestHall_EventScript_Set7Hearts
+	goto_if_gt VAR_0x8004, 320, J_ContestHall_EventScript_Set6Hearts
+	goto_if_gt VAR_0x8004, 290, J_ContestHall_EventScript_Set5Hearts
+	goto_if_gt VAR_0x8004, 260, J_ContestHall_EventScript_Set4Hearts
+	goto_if_gt VAR_0x8004, 230, J_ContestHall_EventScript_Set3Hearts
+	goto_if_gt VAR_0x8004, 200, J_ContestHall_EventScript_Set2Hearts
+	goto_if_gt VAR_0x8004, 170, J_ContestHall_EventScript_Set1Heart
+	setvar VAR_TEMP_0, 0
 	return
 
 J_ContestHall_EventScript_GetNumberOfHeartsMaster::
-	goto_if_gt 32772, 600, J_ContestHall_EventScript_Set8Hearts
-	goto_if_gt 32772, 560, J_ContestHall_EventScript_Set7Hearts
-	goto_if_gt 32772, 520, J_ContestHall_EventScript_Set6Hearts
-	goto_if_gt 32772, 480, J_ContestHall_EventScript_Set5Hearts
-	goto_if_gt 32772, 440, J_ContestHall_EventScript_Set4Hearts
-	goto_if_gt 32772, 400, J_ContestHall_EventScript_Set3Hearts
-	goto_if_gt 32772, 360, J_ContestHall_EventScript_Set2Hearts
-	goto_if_gt 32772, 320, J_ContestHall_EventScript_Set1Heart
-	setvar 16384, 0
+	goto_if_gt VAR_0x8004, 600, J_ContestHall_EventScript_Set8Hearts
+	goto_if_gt VAR_0x8004, 560, J_ContestHall_EventScript_Set7Hearts
+	goto_if_gt VAR_0x8004, 520, J_ContestHall_EventScript_Set6Hearts
+	goto_if_gt VAR_0x8004, 480, J_ContestHall_EventScript_Set5Hearts
+	goto_if_gt VAR_0x8004, 440, J_ContestHall_EventScript_Set4Hearts
+	goto_if_gt VAR_0x8004, 400, J_ContestHall_EventScript_Set3Hearts
+	goto_if_gt VAR_0x8004, 360, J_ContestHall_EventScript_Set2Hearts
+	goto_if_gt VAR_0x8004, 320, J_ContestHall_EventScript_Set1Heart
+	setvar VAR_TEMP_0, 0
 	return
 
 J_ContestHall_EventScript_GetNumberOfHeartsLink::
-	goto_if_gt 32772, 600, J_ContestHall_EventScript_Set8Hearts
-	goto_if_gt 32772, 550, J_ContestHall_EventScript_Set7Hearts
-	goto_if_gt 32772, 500, J_ContestHall_EventScript_Set6Hearts
-	goto_if_gt 32772, 450, J_ContestHall_EventScript_Set5Hearts
-	goto_if_gt 32772, 400, J_ContestHall_EventScript_Set4Hearts
-	goto_if_gt 32772, 300, J_ContestHall_EventScript_Set3Hearts
-	goto_if_gt 32772, 200, J_ContestHall_EventScript_Set2Hearts
-	goto_if_gt 32772, 100, J_ContestHall_EventScript_Set1Heart
-	setvar 16384, 0
+	goto_if_gt VAR_0x8004, 600, J_ContestHall_EventScript_Set8Hearts
+	goto_if_gt VAR_0x8004, 550, J_ContestHall_EventScript_Set7Hearts
+	goto_if_gt VAR_0x8004, 500, J_ContestHall_EventScript_Set6Hearts
+	goto_if_gt VAR_0x8004, 450, J_ContestHall_EventScript_Set5Hearts
+	goto_if_gt VAR_0x8004, 400, J_ContestHall_EventScript_Set4Hearts
+	goto_if_gt VAR_0x8004, 300, J_ContestHall_EventScript_Set3Hearts
+	goto_if_gt VAR_0x8004, 200, J_ContestHall_EventScript_Set2Hearts
+	goto_if_gt VAR_0x8004, 100, J_ContestHall_EventScript_Set1Heart
+	setvar VAR_TEMP_0, 0
 	return
 
 J_ContestHall_EventScript_Set1Heart::
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 	return
 
 J_ContestHall_EventScript_Set2Hearts::
-	setvar 16384, 2
+	setvar VAR_TEMP_0, 2
 	return
 
 J_ContestHall_EventScript_Set3Hearts::
-	setvar 16384, 3
+	setvar VAR_TEMP_0, 3
 	return
 
 J_ContestHall_EventScript_Set4Hearts::
-	setvar 16384, 4
+	setvar VAR_TEMP_0, 4
 	return
 
 J_ContestHall_EventScript_Set5Hearts::
-	setvar 16384, 5
+	setvar VAR_TEMP_0, 5
 	return
 
 J_ContestHall_EventScript_Set6Hearts::
-	setvar 16384, 6
+	setvar VAR_TEMP_0, 6
 	return
 
 J_ContestHall_EventScript_Set7Hearts::
-	setvar 16384, 7
+	setvar VAR_TEMP_0, 7
 	return
 
 J_ContestHall_EventScript_Set8Hearts::
-	setvar 16384, 8
+	setvar VAR_TEMP_0, 8
 	return
 
 J_ContestHall_EventScript_TryDisplayHeartAudienceMember1::
-	goto_if_eq 16385, 1, J_ContestHall_EventScript_AudienceMember1AlreadyEmoted
-	applymovement 6, J_ContestHall_Movement_Heart
-	playse 21
+	goto_if_eq VAR_TEMP_1, 1, J_ContestHall_EventScript_AudienceMember1AlreadyEmoted
+	applymovement LOCALID_CONTEST_AUDIENCE_1, J_ContestHall_Movement_Heart
+	playse SE_PIN
 	delay 14
-	setvar 16385, 1
-	addvar 16384, -1
+	setvar VAR_TEMP_1, 1
+	addvar VAR_TEMP_0, -1
 	return
 
 J_ContestHall_EventScript_AudienceMember1AlreadyEmoted::
 	return
 
 J_ContestHall_EventScript_TryDisplayHeartAudienceMember2::
-	goto_if_eq 16386, 1, J_ContestHall_EventScript_AudienceMember2AlreadyEmoted
-	applymovement 12, J_ContestHall_Movement_Heart
-	playse 21
+	goto_if_eq VAR_TEMP_2, 1, J_ContestHall_EventScript_AudienceMember2AlreadyEmoted
+	applymovement LOCALID_CONTEST_AUDIENCE_2, J_ContestHall_Movement_Heart
+	playse SE_PIN
 	delay 14
-	setvar 16386, 1
-	addvar 16384, -1
+	setvar VAR_TEMP_2, 1
+	addvar VAR_TEMP_0, -1
 	return
 
 J_ContestHall_EventScript_AudienceMember2AlreadyEmoted::
 	return
 
 J_ContestHall_EventScript_TryDisplayHeartAudienceMember3::
-	goto_if_eq 16387, 1, J_ContestHall_EventScript_AudienceMember3AlreadyEmoted
-	applymovement 7, J_ContestHall_Movement_Heart
-	playse 21
+	goto_if_eq VAR_TEMP_3, 1, J_ContestHall_EventScript_AudienceMember3AlreadyEmoted
+	applymovement LOCALID_CONTEST_AUDIENCE_3, J_ContestHall_Movement_Heart
+	playse SE_PIN
 	delay 14
-	setvar 16387, 1
-	addvar 16384, -1
+	setvar VAR_TEMP_3, 1
+	addvar VAR_TEMP_0, -1
 	return
 
 J_ContestHall_EventScript_AudienceMember3AlreadyEmoted::
 	return
 
 J_ContestHall_EventScript_TryDisplayHeartAudienceMember4::
-	goto_if_eq 16388, 1, J_ContestHall_EventScript_Audience4MemberAlreadyEmoted
-	applymovement 8, J_ContestHall_Movement_Heart
-	playse 21
+	goto_if_eq VAR_TEMP_4, 1, J_ContestHall_EventScript_Audience4MemberAlreadyEmoted
+	applymovement LOCALID_CONTEST_AUDIENCE_4, J_ContestHall_Movement_Heart
+	playse SE_PIN
 	delay 14
-	setvar 16388, 1
-	addvar 16384, -1
+	setvar VAR_TEMP_4, 1
+	addvar VAR_TEMP_0, -1
 	return
 
 J_ContestHall_EventScript_Audience4MemberAlreadyEmoted::
 	return
 
 J_ContestHall_EventScript_TryDisplayHeartAudienceMember5::
-	goto_if_eq 16389, 1, J_ContestHall_EventScript_AudienceMember5AlreadyEmoted
-	applymovement 9, J_ContestHall_Movement_Heart
-	playse 21
+	goto_if_eq VAR_TEMP_5, 1, J_ContestHall_EventScript_AudienceMember5AlreadyEmoted
+	applymovement LOCALID_CONTEST_AUDIENCE_5, J_ContestHall_Movement_Heart
+	playse SE_PIN
 	delay 14
-	setvar 16389, 1
-	addvar 16384, -1
+	setvar VAR_TEMP_5, 1
+	addvar VAR_TEMP_0, -1
 	return
 
 J_ContestHall_EventScript_AudienceMember5AlreadyEmoted::
 	return
 
 J_ContestHall_EventScript_TryDisplayHeartAudienceMember6::
-	goto_if_eq 16390, 1, J_ContestHall_EventScript_AudienceMember6AlreadyEmoted
-	applymovement 10, J_ContestHall_Movement_Heart
-	playse 21
+	goto_if_eq VAR_TEMP_6, 1, J_ContestHall_EventScript_AudienceMember6AlreadyEmoted
+	applymovement LOCALID_CONTEST_AUDIENCE_6, J_ContestHall_Movement_Heart
+	playse SE_PIN
 	delay 14
-	setvar 16390, 1
-	addvar 16384, -1
+	setvar VAR_TEMP_6, 1
+	addvar VAR_TEMP_0, -1
 	return
 
 J_ContestHall_EventScript_AudienceMember6AlreadyEmoted::
 	return
 
 J_ContestHall_EventScript_TryDisplayHeartAudienceMember7::
-	goto_if_eq 16391, 1, J_ContestHall_EventScript_AudienceMember7AlreadyEmoted
-	applymovement 11, J_ContestHall_Movement_Heart
-	playse 21
+	goto_if_eq VAR_TEMP_7, 1, J_ContestHall_EventScript_AudienceMember7AlreadyEmoted
+	applymovement LOCALID_CONTEST_AUDIENCE_7, J_ContestHall_Movement_Heart
+	playse SE_PIN
 	delay 14
-	setvar 16391, 1
-	addvar 16384, -1
+	setvar VAR_TEMP_7, 1
+	addvar VAR_TEMP_0, -1
 	return
 
 J_ContestHall_EventScript_AudienceMember7AlreadyEmoted::
 	return
 
 J_ContestHall_EventScript_TryDisplayHeartAudienceMember8::
-	goto_if_eq 16392, 1, J_ContestHall_EventScript_AudienceMember8AlreadyEmoted
-	applymovement 15, J_ContestHall_Movement_Heart
-	playse 21
+	goto_if_eq VAR_TEMP_8, 1, J_ContestHall_EventScript_AudienceMember8AlreadyEmoted
+	applymovement LOCALID_CONTEST_ARTIST, J_ContestHall_Movement_Heart
+	playse SE_PIN
 	delay 14
-	setvar 16392, 1
-	addvar 16384, -1
+	setvar VAR_TEMP_8, 1
+	addvar VAR_TEMP_0, -1
 	return
 
 J_ContestHall_EventScript_AudienceMember8AlreadyEmoted::
@@ -713,10 +713,10 @@ J_ContestHall_EventScript_AudienceMember8AlreadyEmoted::
 J_ContestHall_EventScript_ContestantReturn::
 	closemessage
 	release
-	removeobject 13
+	removeobject LOCALID_CONTEST_POKEBALL
 	special HideContestEntryMonPic
 	call J_ContestHall_EventScript_TryWaitForLink
-	switch 32774
+	switch VAR_0x8006
 	case 0, J_ContestHall_EventScript_Player1WalkBack
 	case 1, J_ContestHall_EventScript_Player2WalkBack
 	case 2, J_ContestHall_EventScript_Player3WalkBack
@@ -726,7 +726,7 @@ J_ContestHall_EventScript_ContestantReturn::
 J_ContestHall_EventScript_Player1WalkBack::
 	call J_ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement 32779, J_ContestHall_Movement_Player1WalkBack
+	applymovement VAR_0x800B, J_ContestHall_Movement_Player1WalkBack
 	waitmovement 0
 	releaseall
 	return
@@ -734,7 +734,7 @@ J_ContestHall_EventScript_Player1WalkBack::
 J_ContestHall_EventScript_Player2WalkBack::
 	call J_ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement 32779, J_ContestHall_Movement_Player2WalkBack
+	applymovement VAR_0x800B, J_ContestHall_Movement_Player2WalkBack
 	waitmovement 0
 	releaseall
 	return
@@ -742,7 +742,7 @@ J_ContestHall_EventScript_Player2WalkBack::
 J_ContestHall_EventScript_Player3WalkBack::
 	call J_ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement 32779, J_ContestHall_Movement_Player3WalkBack
+	applymovement VAR_0x800B, J_ContestHall_Movement_Player3WalkBack
 	waitmovement 0
 	releaseall
 	return
@@ -750,43 +750,43 @@ J_ContestHall_EventScript_Player3WalkBack::
 J_ContestHall_EventScript_Player4WalkBack::
 	call J_ContestHall_EventScript_TryWaitForLink
 	lockall
-	applymovement 32779, J_ContestHall_Movement_Player4WalkBack
+	applymovement VAR_0x800B, J_ContestHall_Movement_Player4WalkBack
 	waitmovement 0
 	releaseall
 	return
 
 J_ContestHall_EventScript_DoContestAppeals::
 	lockall
-	applymovement 1, J_ContestHall_Movement_FaceContestants2
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_FaceContestants2
 	waitmovement 0
 	call J_ContestHall_EventScript_TryWaitForLink
 	call J_ContestHall_EventScript_LetsAppeal
 	waitmessage
-	applymovement 1, J_ContestHall_Movement_WalkStageLeft
-	applymovement 2, J_ContestHall_Movement_WalkStageRight
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_WalkStageLeft
+	applymovement LOCALID_CONTEST_JUDGE, J_ContestHall_Movement_WalkStageRight
 	waitmovement 0
 	releaseall
 	call J_ContestHall_EventScript_TryWaitForLink
-	setvar 16393, 1
+	setvar VAR_TEMP_9, 1
 	special LinkContestTryHideWirelessIndicator
 	startcontest
 	special LinkContestTryShowWirelessIndicator
-	setvar 16393, 0
+	setvar VAR_TEMP_9, 0
 	lockall
-	applymovement 1, J_ContestHall_Movement_WalkStageRight
-	applymovement 2, J_ContestHall_Movement_WalkStageLeft
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_WalkStageRight
+	applymovement LOCALID_CONTEST_JUDGE, J_ContestHall_Movement_WalkStageLeft
 	waitmovement 0
 	releaseall
 	return
 
 J_ContestHall_EventScript_LetsAppeal::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_LetsAppealLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_LetsAppealLink
 	msgbox J_ContestHall_Text_VotingCompleteLetsAppeal, MSGBOX_DEFAULT
 	return
 
 J_ContestHall_EventScript_LetsAppealLink::
-	specialvar 32781, IsWirelessContest
-	goto_if_eq 32781, TRUE, J_ContestHall_EventScript_LetsAppealWireless
+	specialvar VAR_RESULT, IsWirelessContest
+	goto_if_eq VAR_RESULT, TRUE, J_ContestHall_EventScript_LetsAppealWireless
 	messageautoscroll J_ContestHall_Text_VotingCompleteLetsAppeal
 	waitmessage
 	return
@@ -810,25 +810,25 @@ J_ContestHall_EventScript_ContestResults::
 	call J_ContestHall_EventScript_TryWaitForLink
 	call J_ContestHall_EventScript_ThankYouForAppeals
 	call J_ContestHall_EventScript_TryWaitForLink
-	applymovement 1, J_ContestHall_Movement_MCFaceJudge
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_MCFaceJudge
 	waitmovement 0
 	call J_ContestHall_EventScript_JudgeLooksReady
 	call J_ContestHall_EventScript_TryWaitForLink
 	call J_ContestHall_EventScript_WeWillDeclareWinner
 	call J_ContestHall_EventScript_TryWaitForLink
-	applymovement 1, J_ContestHall_Movement_FaceContestants
+	applymovement LOCALID_CONTEST_MC, J_ContestHall_Movement_FaceContestants
 	waitmovement 0
 	closemessage
 	releaseall
 	special LinkContestTryHideWirelessIndicator
-	setvar 16393, 1
+	setvar VAR_TEMP_9, 1
 	showcontestresults
-	setvar 16393, 0
-	playbgm 439, FALSE
+	setvar VAR_TEMP_9, 0
+	playbgm MUS_CONTEST_WINNER, FALSE
 	return
 
 J_ContestHall_EventScript_ThatsItForJudging::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_ThatsItForJudgingLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_ThatsItForJudgingLink
 	msgbox J_ContestHall_Text_ThatsItForJudging, MSGBOX_DEFAULT
 	return
 
@@ -840,7 +840,7 @@ J_ContestHall_EventScript_ThatsItForJudgingLink::
 	return
 
 J_ContestHall_EventScript_ThankYouForAppeals::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_ThankYouForAppealsLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_ThankYouForAppealsLink
 	msgbox J_ContestHall_Text_ThankYouForAppeals, MSGBOX_DEFAULT
 	return
 
@@ -852,7 +852,7 @@ J_ContestHall_EventScript_ThankYouForAppealsLink::
 	return
 
 J_ContestHall_EventScript_JudgeLooksReady::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_JudgeLooksReadyLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_JudgeLooksReadyLink
 	msgbox J_ContestHall_Text_JudgeLooksReady, MSGBOX_DEFAULT
 	return
 
@@ -864,7 +864,7 @@ J_ContestHall_EventScript_JudgeLooksReadyLink::
 	return
 
 J_ContestHall_EventScript_WeWillDeclareWinner::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_WeWillDeclareWinnerLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_WeWillDeclareWinnerLink
 	msgbox J_ContestHall_Text_WeWillNowDeclareWinner, MSGBOX_DEFAULT
 	return
 
@@ -877,7 +877,7 @@ J_ContestHall_EventScript_WeWillDeclareWinnerLink::
 
 J_ContestHall_EventScript_GetWinnerObjEventId::
 	special GetContestWinnerId
-	switch 32773
+	switch VAR_0x8005
 	case 0, J_ContestHall_EventScript_GetPlayer1ObjEventId
 	case 1, J_ContestHall_EventScript_GetPlayer2ObjEventId
 	case 2, J_ContestHall_EventScript_GetPlayer3ObjEventId
@@ -885,36 +885,36 @@ J_ContestHall_EventScript_GetWinnerObjEventId::
 	return
 
 J_ContestHall_EventScript_GetPlayer1ObjEventId::
-	setvar 16387, 3
+	setvar VAR_TEMP_3, LOCALID_CONTESTANT_1
 	return
 
 J_ContestHall_EventScript_GetPlayer2ObjEventId::
-	setvar 16387, 4
+	setvar VAR_TEMP_3, LOCALID_CONTESTANT_2
 	return
 
 J_ContestHall_EventScript_GetPlayer3ObjEventId::
-	setvar 16387, 5
+	setvar VAR_TEMP_3, LOCALID_CONTESTANT_3
 	return
 
 J_ContestHall_EventScript_GetPlayer4ObjEventId::
-	setvar 16387, 14
+	setvar VAR_TEMP_3, LOCALID_CONTESTANT_4
 	return
 
 J_ContestHall_EventScript_CongratulateWinner::
 	special BufferContestWinnerTrainerName
 	special BufferContestWinnerMonName
-	addvar 32773, 1
-	buffernumberstring STR_VAR_2, 32773
-	addvar 32773, -1
+	addvar VAR_0x8005, 1
+	buffernumberstring STR_VAR_2, VAR_0x8005
+	addvar VAR_0x8005, -1
 	call J_ContestHall_EventScript_CongratsWinner
-	applymovement 16387, J_ContestHall_Movement_WinningPlayerWalkUp
+	applymovement VAR_TEMP_3, J_ContestHall_Movement_WinningPlayerWalkUp
 	waitmovement 0
-	playse 223
-	setvar 16385, 0
+	playse SE_M_ENCORE2
+	setvar VAR_TEMP_1, 0
 	return
 
 J_ContestHall_EventScript_CongratsWinner::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_CongratsWinnerLink
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_CongratsWinnerLink
 	msgbox J_ContestHall_Text_CongratsTrainerXandMon, MSGBOX_DEFAULT
 	return
 
@@ -924,23 +924,23 @@ J_ContestHall_EventScript_CongratsWinnerLink::
 	return
 
 J_ContestHall_EventScript_AudienceLookAround::
-	addvar 16385, 1
+	addvar VAR_TEMP_1, 1
 	lockall
-	call_if_gt 20600, (0 + 1), J_ContestHall_EventScript_VObjectAudienceLookAround
-	applymovement 9, J_ContestHall_Movement_AudienceMemberLookRight
-	applymovement 12, J_ContestHall_Movement_AudienceMemberLookDown
-	applymovement 7, J_ContestHall_Movement_AudienceMemberLookRight
+	call_if_gt JOHTO_VAR_CONTEST_TYPE, (0 + 1), J_ContestHall_EventScript_VObjectAudienceLookAround
+	applymovement LOCALID_CONTEST_AUDIENCE_5, J_ContestHall_Movement_AudienceMemberLookRight
+	applymovement LOCALID_CONTEST_AUDIENCE_2, J_ContestHall_Movement_AudienceMemberLookDown
+	applymovement LOCALID_CONTEST_AUDIENCE_3, J_ContestHall_Movement_AudienceMemberLookRight
 	delay 30
-	applymovement 10, J_ContestHall_Movement_AudienceMemberLookLeft
-	applymovement 11, J_ContestHall_Movement_AudienceMemberLookDown
-	applymovement 6, J_ContestHall_Movement_AudienceMemberLookUp
-	applymovement 8, J_ContestHall_Movement_AudienceMemberLookLeft
-	goto_if_ne 16385, 4, J_ContestHall_EventScript_AudienceLookAround
+	applymovement LOCALID_CONTEST_AUDIENCE_6, J_ContestHall_Movement_AudienceMemberLookLeft
+	applymovement LOCALID_CONTEST_AUDIENCE_7, J_ContestHall_Movement_AudienceMemberLookDown
+	applymovement LOCALID_CONTEST_AUDIENCE_1, J_ContestHall_Movement_AudienceMemberLookUp
+	applymovement LOCALID_CONTEST_AUDIENCE_4, J_ContestHall_Movement_AudienceMemberLookLeft
+	goto_if_ne VAR_TEMP_1, 4, J_ContestHall_EventScript_AudienceLookAround
 	delay 30
 	return
 
 J_ContestHall_EventScript_VObjectAudienceLookAround::
-	turnvobject 0, DIR_SOUTH
+	turnvobject LOCALID_NONE, DIR_SOUTH
 	turnvobject 2, DIR_SOUTH
 	turnvobject 4, DIR_EAST
 	turnvobject 6, DIR_SOUTH
@@ -956,7 +956,7 @@ J_ContestHall_EventScript_VObjectAudienceLookAround::
 	turnvobject 27, DIR_WEST
 	turnvobject 28, DIR_EAST
 	delay 10
-	turnvobject 0, DIR_EAST
+	turnvobject LOCALID_NONE, DIR_EAST
 	turnvobject 2, DIR_EAST
 	turnvobject 4, DIR_EAST
 	turnvobject 6, DIR_EAST
@@ -1009,20 +1009,20 @@ J_ContestHall_EventScript_VObjectAudienceLookAround::
 	return
 
 J_ContestHall_EventScript_GiveWinnerPrize::
-	goto_if_eq 20600, (4 + 1), J_ContestHall_EventScript_EndLinkContest
+	goto_if_eq JOHTO_VAR_CONTEST_TYPE, (4 + 1), J_ContestHall_EventScript_EndLinkContest
 	call J_ContestHall_EventScript_CheckShouldSkipPrize
-	goto_if_set 2, J_ContestHall_EventScript_SkipPrize
+	goto_if_set FLAG_TEMP_2, J_ContestHall_EventScript_SkipPrize
 	lockall
 	msgbox J_ContestHall_Text_AcceptYourPrize, MSGBOX_DEFAULT
 	releaseall
 	call J_ContestHall_EventScript_WinnerApproachForPrize
 	call J_ContestHall_EventScript_GivePrizeIfWinner
-	playse 223
-	setvar 16385, 0
+	playse SE_M_ENCORE2
+	setvar VAR_TEMP_1, 0
 	call J_ContestHall_EventScript_AudienceLookAround
 	delay 30
 	special ShouldReadyContestArtist
-	goto_if_eq 32772, TRUE, J_ContestHall_EventScript_SetReadyForContestArtist
+	goto_if_eq VAR_0x8004, TRUE, J_ContestHall_EventScript_SetReadyForContestArtist
 	return
 
 J_ContestHall_EventScript_SkipPrize::
@@ -1031,33 +1031,33 @@ J_ContestHall_EventScript_SkipPrize::
 	releaseall
 	delay 90
 	special ShouldReadyContestArtist
-	goto_if_eq 32772, TRUE, J_ContestHall_EventScript_SetReadyForContestArtist
+	goto_if_eq VAR_0x8004, TRUE, J_ContestHall_EventScript_SetReadyForContestArtist
 	return
 
 J_ContestHall_EventScript_CheckShouldSkipPrize::
-	specialvar 32781, HasMonWonThisContestBefore
-	goto_if_eq 32781, TRUE, J_ContestHall_EventScript_CheckPlayerWon
+	specialvar VAR_RESULT, HasMonWonThisContestBefore
+	goto_if_eq VAR_RESULT, TRUE, J_ContestHall_EventScript_CheckPlayerWon
 	return
 
 J_ContestHall_EventScript_CheckPlayerWon::
 	special GetContestWinnerId
-	goto_if_eq 32773, 3, J_ContestHall_EventScript_CheckRankIsMaster
+	goto_if_eq VAR_0x8005, 3, J_ContestHall_EventScript_CheckRankIsMaster
 	return
 
 J_ContestHall_EventScript_CheckRankIsMaster::
-	goto_if_eq 32784, 3, J_ContestHall_EventScript_DontSkipPrize
-	setflag 2
+	goto_if_eq VAR_CONTEST_RANK, CONTEST_RANK_MASTER, J_ContestHall_EventScript_DontSkipPrize
+	setflag FLAG_TEMP_2
 	return
 
 J_ContestHall_EventScript_DontSkipPrize::
 	return
 
 J_ContestHall_EventScript_SetSketchFlag::
-	setflag 0
+	setflag FLAG_CONTEST_SKETCH_CREATED
 	return
 
 J_ContestHall_EventScript_SetReadyForContestArtist::
-	setvar 20617, 1
+	setvar JOHTO_VAR_LILYCOVE_CONTEST_LOBBY_STATE, 1
 	return
 
 J_ContestHall_EventScript_EndLinkContest::
@@ -1065,19 +1065,19 @@ J_ContestHall_EventScript_EndLinkContest::
 	special GetContestPlayerId
 	special GetContestWinnerId
 	special ShouldReadyContestArtist
-	goto_if_eq 32772, TRUE, J_ContestHall_EventScript_SetReadyForLinkContestArtist
+	goto_if_eq VAR_0x8004, TRUE, J_ContestHall_EventScript_SetReadyForLinkContestArtist
 	closemessage
 	return
 
 J_ContestHall_EventScript_SetReadyForLinkContestArtist::
-	setvar 20617, 2
+	setvar JOHTO_VAR_LILYCOVE_CONTEST_LOBBY_STATE, 2
 	return
 
 J_ContestHall_EventScript_Ret::
 	return
 
 J_ContestHall_EventScript_WinnerApproachForPrize::
-	switch 32773
+	switch VAR_0x8005
 	case 0, J_ContestHall_EventScript_Player1ApproachForPrize
 	case 1, J_ContestHall_EventScript_Player2ApproachForPrize
 	case 2, J_ContestHall_EventScript_Player3ApproachForPrize
@@ -1086,45 +1086,45 @@ J_ContestHall_EventScript_WinnerApproachForPrize::
 
 J_ContestHall_EventScript_Player1ApproachForPrize::
 	lockall
-	applymovement 16387, J_ContestHall_Movement_Player1ApproachForPrize
+	applymovement VAR_TEMP_3, J_ContestHall_Movement_Player1ApproachForPrize
 	waitmovement 0
 	releaseall
 	return
 
 J_ContestHall_EventScript_Player2ApproachForPrize::
 	lockall
-	applymovement 16387, J_ContestHall_Movement_Player2ApproachForPrize
+	applymovement VAR_TEMP_3, J_ContestHall_Movement_Player2ApproachForPrize
 	waitmovement 0
 	releaseall
 	return
 
 J_ContestHall_EventScript_Player3ApproachForPrize::
 	lockall
-	applymovement 16387, J_ContestHall_Movement_Player3ApproachForPrize
+	applymovement VAR_TEMP_3, J_ContestHall_Movement_Player3ApproachForPrize
 	waitmovement 0
 	releaseall
 	return
 
 J_ContestHall_EventScript_Player4ApproachForPrize::
 	lockall
-	applymovement 16387, J_ContestHall_Movement_Player4ApproachForPrize
+	applymovement VAR_TEMP_3, J_ContestHall_Movement_Player4ApproachForPrize
 	waitmovement 0
 	releaseall
 	return
 
 J_ContestHall_EventScript_GivePrizeIfWinner::
 	special GetContestWinnerId
-	goto_if_eq 32773, 3, J_ContestHall_EventScript_GiveContestPrizes
+	goto_if_eq VAR_0x8005, 3, J_ContestHall_EventScript_GiveContestPrizes
 	lockall
 	msgbox J_ContestHall_Text_CongratsPleaseCompeteAgain, MSGBOX_DEFAULT
 	releaseall
 	return
 
 J_ContestHall_EventScript_GiveContestPrizes::
-	call_if_eq 20600, (1 + 1), J_ContestHall_EventScript_SetSketchFlag
-	specialvar 32781, HasMonWonThisContestBefore
-	goto_if_eq 32781, FALSE, J_ContestHall_EventScript_ReceiveContestRibbon
-	goto_if_eq 32784, 3, J_ContestHall_EventScript_GiveLuxuryBall
+	call_if_eq JOHTO_VAR_CONTEST_TYPE, (1 + 1), J_ContestHall_EventScript_SetSketchFlag
+	specialvar VAR_RESULT, HasMonWonThisContestBefore
+	goto_if_eq VAR_RESULT, FALSE, J_ContestHall_EventScript_ReceiveContestRibbon
+	goto_if_eq VAR_CONTEST_RANK, CONTEST_RANK_MASTER, J_ContestHall_EventScript_GiveLuxuryBall
 	lockall
 	msgbox J_ContestHall_Text_CongratsPleaseCompeteAgain, MSGBOX_DEFAULT
 	releaseall
@@ -1136,7 +1136,7 @@ J_ContestHall_EventScript_NoRoomForLuxuryBall::
 	msgbox J_ContestHall_Text_PickUpPrizeAtCounterLater, MSGBOX_DEFAULT
 	releaseall
 
-	setvar 20636, 4
+	setvar JOHTO_VAR_CONTEST_PRIZE_PICKUP_HNS, 4
 
 
 
@@ -1145,7 +1145,7 @@ J_ContestHall_EventScript_NoRoomForLuxuryBall::
 
 J_ContestHall_EventScript_GiveLuxuryBall::
 	giveitem ITEM_LUXURY_BALL
-	goto_if_eq 32781, FALSE, J_ContestHall_EventScript_NoRoomForLuxuryBall
+	goto_if_eq VAR_RESULT, FALSE, J_ContestHall_EventScript_NoRoomForLuxuryBall
 	lockall
 	msgbox J_ContestHall_Text_CongratsPleaseCompeteAgain, MSGBOX_DEFAULT
 	releaseall
@@ -1153,11 +1153,11 @@ J_ContestHall_EventScript_GiveLuxuryBall::
 
 J_ContestHall_EventScript_ReceiveContestRibbon::
 	special GiveMonContestRibbon
-	incrementgamestat 42
-	setflag 2107
+	incrementgamestat GAME_STAT_RECEIVED_RIBBONS
+	setflag FLAG_SYS_RIBBON_GET
 	lockall
 	msgbox J_ContestHall_Text_ConferRibbonAsPrize, MSGBOX_DEFAULT
-	playfanfare 370
+	playfanfare MUS_OBTAIN_ITEM
 	msgbox J_ContestHall_Text_ReceivedRibbon, MSGBOX_DEFAULT
 	waitfanfare
 	special BufferContestWinnerMonName
@@ -1349,16 +1349,16 @@ J_ContestHall_Movement_Player2ApproachForPrize:
 	step_end
 
 J_ContestHall_EventScript_CheckIfContestWithRSPlayer::
-	specialvar 32781, IsContestWithRSPlayer
-	goto_if_eq 32781, TRUE, J_ContestHall_EventScript_RetRSPlayer
+	specialvar VAR_RESULT, IsContestWithRSPlayer
+	goto_if_eq VAR_RESULT, TRUE, J_ContestHall_EventScript_RetRSPlayer
 	return
 
 J_ContestHall_EventScript_RetRSPlayer::
 	return
 
 J_LilycoveCity_ContestLobby_EventScript_DelayIfContestWithRSPlayer::
-	specialvar 32781, IsContestWithRSPlayer
-	goto_if_eq 32781, TRUE, J_LilycoveCity_ContestLobby_EventScript_DelayForRSPlayer
+	specialvar VAR_RESULT, IsContestWithRSPlayer
+	goto_if_eq VAR_RESULT, TRUE, J_LilycoveCity_ContestLobby_EventScript_DelayForRSPlayer
 	return
 
 J_LilycoveCity_ContestLobby_EventScript_DelayForRSPlayer::

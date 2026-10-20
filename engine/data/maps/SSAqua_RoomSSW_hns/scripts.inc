@@ -4,12 +4,12 @@ SSAqua_RoomSSW_hns_MapScripts::
 	.byte 0
 
 SSAqua_RoomSSW_EventScript_Lyle::
-	trainerbattle_single 1319, SSAqua_RoomSSW_Text_FirebreatherLyleSeen, SSAqua_RoomSSW_Text_FirebreatherLyleBeaten
+	trainerbattle_single TRAINER_JOHTO_LYLE_HNS, SSAqua_RoomSSW_Text_FirebreatherLyleSeen, SSAqua_RoomSSW_Text_FirebreatherLyleBeaten
 	msgbox SSAqua_RoomSSW_Text_FirebreatherLyleAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 SSAqua_RoomSSW_EventScript_Ken::
-	trainerbattle_single 1197, SSAqua_RoomSSW_Text_BugCatcherKenSeen, SSAqua_RoomSSW_Text_BugCatcherKenBeaten
+	trainerbattle_single TRAINER_JOHTO_KEN_HNS, SSAqua_RoomSSW_Text_BugCatcherKenSeen, SSAqua_RoomSSW_Text_BugCatcherKenBeaten
 	msgbox SSAqua_RoomSSW_Text_BugCatcherKenAfterBattle, MSGBOX_AUTOCLOSE
 	end
 

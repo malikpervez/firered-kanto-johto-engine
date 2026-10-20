@@ -6,9 +6,9 @@ GoldenrodCity_BikeShop_hns_MapScripts::
 GoldenrodCity_BikeShop_EventScript_Clerk::
 	lock
 	faceplayer
-	goto_if_set 8690, GoldenrodCity_BikeShop_EventScript_Clerk_BikeReceived
+	goto_if_set JOHTO_FLAG_RECEIVED_BIKE, GoldenrodCity_BikeShop_EventScript_Clerk_BikeReceived
 	msgbox GoldenrodCity_BikeShop_Text_ClerkIntro, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, GoldenrodCity_BikeShop_EventScript_Clerk_BikeAgreed
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_BikeShop_EventScript_Clerk_BikeAgreed
 	msgbox GoldenrodCity_BikeShop_Text_Refused, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -17,7 +17,7 @@ GoldenrodCity_BikeShop_EventScript_Clerk::
 GoldenrodCity_BikeShop_EventScript_Clerk_BikeAgreed::
 	msgbox GoldenrodCity_BikeShop_Text_ClerkAgreed, MSGBOX_DEFAULT
 	giveitem ITEM_BICYCLE
-	setflag 8690
+	setflag JOHTO_FLAG_RECEIVED_BIKE
 	closemessage
 	release
 	end

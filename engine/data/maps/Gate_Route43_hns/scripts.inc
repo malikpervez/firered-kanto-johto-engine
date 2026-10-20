@@ -1,20 +1,20 @@
 @ Johto (data/maps/Gate_Route43_hns/scripts.inc), as built into the FireRed game.
 
 Gate_Route43_hns_MapScripts::
-	map_script 2, Gate_Route43_Rocket_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Gate_Route43_Rocket_OnFrame
 	.byte 0
 
 Gate_Route43_Rocket_OnFrame::
-	map_script_2 16384, 0, Gate_Route43_RocketChecker
+	map_script_2 VAR_TEMP_0, 0, Gate_Route43_RocketChecker
 	.2byte 0
 
 Gate_Route43_RocketChecker::
-	setvar 16384, 1
-	goto_if_eq 20578, 1, Gate_Route43_Rocket_EventScript_Shakedown
-	goto_if_eq 20578, 2, Gate_Route43_Rocket_EventScript_Shakedown
-	goto_if_eq 20578, 3, Gate_Route43_Rocket_EventScript_Shakedown
-	goto_if_eq 20578, 4, Gate_Route43_Rocket_EventScript_Shakedown
-	goto_if_eq 20578, 5, Gate_Route43_Rocket_EventScript_Shakedown
+	setvar VAR_TEMP_0, 1
+	goto_if_eq JOHTO_VAR_MAHOGANY_TOWN_STATE, 1, Gate_Route43_Rocket_EventScript_Shakedown
+	goto_if_eq JOHTO_VAR_MAHOGANY_TOWN_STATE, 2, Gate_Route43_Rocket_EventScript_Shakedown
+	goto_if_eq JOHTO_VAR_MAHOGANY_TOWN_STATE, 3, Gate_Route43_Rocket_EventScript_Shakedown
+	goto_if_eq JOHTO_VAR_MAHOGANY_TOWN_STATE, 4, Gate_Route43_Rocket_EventScript_Shakedown
+	goto_if_eq JOHTO_VAR_MAHOGANY_TOWN_STATE, 5, Gate_Route43_Rocket_EventScript_Shakedown
 	end
 
 Gate_Route43_Rocket_EventScript_Shakedown::
@@ -22,9 +22,9 @@ Gate_Route43_Rocket_EventScript_Shakedown::
 	showmoneybox 0, 0
 	msgbox Gate_Route43_Rocket_Text_TollFee, MSGBOX_DEFAULT
 	checkmoney 500
-	goto_if_eq 32781, FALSE, Gate_Route43_Rocket_EventScript_ShakedownBroke
+	goto_if_eq VAR_RESULT, FALSE, Gate_Route43_Rocket_EventScript_ShakedownBroke
 	removemoney 500
-	playse 95
+	playse SE_SHOP
 	updatemoneybox
 	msgbox Gate_Route43_Rocket_Text_ThankYou, MSGBOX_DEFAULT
 	hidemoneybox
@@ -33,10 +33,10 @@ Gate_Route43_Rocket_EventScript_Shakedown::
 
 Gate_Route43_Rocket_EventScript_ShakedownBroke::
 	checkmoney 1
-	goto_if_eq 32781, FALSE, Gate_Route43_Rocket_EventScript_KickOut
+	goto_if_eq VAR_RESULT, FALSE, Gate_Route43_Rocket_EventScript_KickOut
 	msgbox Gate_Route43_Rocket_Text_AllYouGot, MSGBOX_DEFAULT
 	removemoney 500
-	playse 95
+	playse SE_SHOP
 	updatemoneybox
 	msgbox Gate_Route43_Rocket_Text_ThankYou, MSGBOX_DEFAULT
 	hidemoneybox
@@ -53,10 +53,10 @@ Gate_Route43_Rocket_EventScript_KickOut::
 Gate_Route43_Rocket_EventScript_Policeman::
 	lock
 	faceplayer
-	goto_if_set 8714, Gate_Route43_Rocket_EventScript_PolicemanAfter
+	goto_if_set JOHTO_FLAG_GOT_TM_FROM_MAHOGANY_COP, Gate_Route43_Rocket_EventScript_PolicemanAfter
 	msgbox Route43Gate_Text_OfficerFoundTM, MSGBOX_DEFAULT
-	giveitem 617
-	setflag 8714
+	giveitem ITEM_TM_SLUDGE_BOMB
+	setflag JOHTO_FLAG_GOT_TM_FROM_MAHOGANY_COP
 	closemessage
 	release
 	end

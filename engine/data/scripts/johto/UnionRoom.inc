@@ -1,38 +1,38 @@
 @ Johto (data/maps/UnionRoom/scripts.inc), as built into the FireRed game.
 
 J_UnionRoom_MapScripts::
-	map_script 5, UnionRoom_OnResume
-	map_script 3, UnionRoom_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, UnionRoom_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, UnionRoom_OnTransition
 	.byte 0
 
 UnionRoom_OnResume:
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	removeobject 9
-	removeobject 8
-	removeobject 7
-	removeobject 2
-	removeobject 6
-	removeobject 5
-	removeobject 4
-	removeobject 3
+	setflag JOHTO_FLAG_HIDE_UNION_ROOM_PLAYER_1
+	setflag JOHTO_FLAG_HIDE_UNION_ROOM_PLAYER_2
+	setflag JOHTO_FLAG_HIDE_UNION_ROOM_PLAYER_3
+	setflag JOHTO_FLAG_HIDE_UNION_ROOM_PLAYER_4
+	setflag JOHTO_FLAG_HIDE_UNION_ROOM_PLAYER_5
+	setflag JOHTO_FLAG_HIDE_UNION_ROOM_PLAYER_6
+	setflag JOHTO_FLAG_HIDE_UNION_ROOM_PLAYER_7
+	setflag JOHTO_FLAG_HIDE_UNION_ROOM_PLAYER_8
+	removeobject LOCALID_UNION_ROOM_PLAYER_1
+	removeobject LOCALID_UNION_ROOM_PLAYER_2
+	removeobject LOCALID_UNION_ROOM_PLAYER_3
+	removeobject LOCALID_UNION_ROOM_PLAYER_4
+	removeobject LOCALID_UNION_ROOM_PLAYER_5
+	removeobject LOCALID_UNION_ROOM_PLAYER_6
+	removeobject LOCALID_UNION_ROOM_PLAYER_7
+	removeobject LOCALID_UNION_ROOM_PLAYER_8
 	special RunUnionRoom
 	end
 
 UnionRoom_OnTransition:
-	setflag 14
+	setflag FLAG_TEMP_HIDE_FOLLOWER
 	end
 
 J_UnionRoom_EventScript_Player1::
 	lock
 	faceplayer
-	setvar 32781, 1
+	setvar VAR_RESULT, UR_INTERACT_PLAYER_1
 	waitstate
 	release
 	end
@@ -40,7 +40,7 @@ J_UnionRoom_EventScript_Player1::
 J_UnionRoom_EventScript_Player2::
 	lock
 	faceplayer
-	setvar 32781, 2
+	setvar VAR_RESULT, UR_INTERACT_PLAYER_2
 	waitstate
 	release
 	end
@@ -48,7 +48,7 @@ J_UnionRoom_EventScript_Player2::
 J_UnionRoom_EventScript_Player3::
 	lock
 	faceplayer
-	setvar 32781, 3
+	setvar VAR_RESULT, UR_INTERACT_PLAYER_3
 	waitstate
 	release
 	end
@@ -56,7 +56,7 @@ J_UnionRoom_EventScript_Player3::
 J_UnionRoom_EventScript_Player4::
 	lock
 	faceplayer
-	setvar 32781, 4
+	setvar VAR_RESULT, UR_INTERACT_PLAYER_4
 	waitstate
 	release
 	end
@@ -64,7 +64,7 @@ J_UnionRoom_EventScript_Player4::
 J_UnionRoom_EventScript_Player5::
 	lock
 	faceplayer
-	setvar 32781, 5
+	setvar VAR_RESULT, UR_INTERACT_PLAYER_5
 	waitstate
 	release
 	end
@@ -72,7 +72,7 @@ J_UnionRoom_EventScript_Player5::
 J_UnionRoom_EventScript_Player6::
 	lock
 	faceplayer
-	setvar 32781, 6
+	setvar VAR_RESULT, UR_INTERACT_PLAYER_6
 	waitstate
 	release
 	end
@@ -80,7 +80,7 @@ J_UnionRoom_EventScript_Player6::
 J_UnionRoom_EventScript_Player7::
 	lock
 	faceplayer
-	setvar 32781, 7
+	setvar VAR_RESULT, UR_INTERACT_PLAYER_7
 	waitstate
 	release
 	end
@@ -88,7 +88,7 @@ J_UnionRoom_EventScript_Player7::
 J_UnionRoom_EventScript_Player8::
 	lock
 	faceplayer
-	setvar 32781, 8
+	setvar VAR_RESULT, UR_INTERACT_PLAYER_8
 	waitstate
 	release
 	end
@@ -96,14 +96,14 @@ J_UnionRoom_EventScript_Player8::
 J_UnionRoom_EventScript_Attendant::
 	lock
 	faceplayer
-	setvar 32781, 9
+	setvar VAR_RESULT, UR_INTERACT_ATTENDANT
 	waitstate
 	release
 	end
 
 J_UnionRoom_EventScript_Unused::
 	lockall
-	setvar 32781, 10
+	setvar VAR_RESULT, UR_INTERACT_UNUSED
 	waitstate
 	releaseall
 	end

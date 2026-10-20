@@ -1,8 +1,8 @@
 @ Johto (data/maps/MtSilver_1F_MoltresRoom_hns/scripts.inc), as built into the FireRed game.
 
 MtSilver_1F_MoltresRoom_hns_MapScripts::
-	map_script 3, MtSilver_1F_MoltresRoom_OnTransition
-	map_script 5, MtSilver_1F_MoltresRoom_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_1F_MoltresRoom_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, MtSilver_1F_MoltresRoom_OnResume
 	.byte 0
 
 MtSilver_1F_MoltresRoom_OnResume::
@@ -16,19 +16,19 @@ MtSilver_1F_MoltresRoom_OnTransition:
 MtSilver_1F_MoltresRoom_EventScript_Moltres::
 	lock
 	faceplayer
-	playmoncry 146, 2
+	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
 	msgbox J_SeafoamIslands_B1F_Text_ArticunoBattle
 	delay 40
 	waitmoncry
-	seteventmon 146, 50
+	seteventmon SPECIES_MOLTRES, 50
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, MtSilver_1F_MoltresRoom_EventScript_MoltresRan
-	fadescreenswapbuffers 1
-	removeobject 1
-	setflag 8258
-	fadescreenswapbuffers 0
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MtSilver_1F_MoltresRoom_EventScript_MoltresRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_MTSILVER_MOLTRES
+	setflag JOHTO_FLAG_HIDE_MOLTRES
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 

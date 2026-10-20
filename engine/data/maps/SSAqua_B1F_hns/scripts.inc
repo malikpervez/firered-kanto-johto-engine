@@ -5,20 +5,20 @@ SSAqua_B1F_hns_MapScripts::
 
 SSAqua_B1F_EventScript_Trigger::
 	lock
-	turnobject 10, DIR_EAST
-	turnobject 255, DIR_WEST
+	turnobject LOCALID_SSAQUA_B1F_SAILORLOOKING, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox SSAqua_B1F_Text_FastShipOnDutySailor, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
-	turnobject 10, DIR_SOUTH
+	turnobject LOCALID_SSAQUA_B1F_SAILORLOOKING, DIR_SOUTH
 	release
 	end
 
 SSAqua_B1F_EventScript_SailorLookingForBuddy::
 	lock
 	faceplayer
-	goto_if_set 8328, SSAqua_B1F_EventScript_SailorLookingFoundBuddy
+	goto_if_set JOHTO_FLAG_HIDE_SSAQUA_SAILOR, SSAqua_B1F_EventScript_SailorLookingFoundBuddy
 	msgbox SSAqua_B1F_Text_FastShipOnDutySailor, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -26,7 +26,7 @@ SSAqua_B1F_EventScript_SailorLookingForBuddy::
 
 SSAqua_B1F_EventScript_SailorLookingFoundBuddy::
 	msgbox SSAqua_B1F_Text_FastShipOnDutySailorThanks, MSGBOX_DEFAULT
-	goto_if_lt 20603, 5, SSAqua_B1F_EventScript_SailorGirl
+	goto_if_lt JOHTO_VAR_SSAQUA_STATE, 5, SSAqua_B1F_EventScript_SailorGirl
 	closemessage
 	release
 	end
@@ -75,7 +75,7 @@ SSAqua_B1F_Text_FastShipOnDutySailorDirections:
 	.string "th{SE_M_REVERSAL}CAPTAIN'{SE_M_GRASSWHISTLE}cabin.$"
 
 SSAqua_B1F_EventScript_Jeff::
-	trainerbattle_single 1261, SSAqua_B1F_Text_SailorJeffSeen, SSAqua_B1F_Text_SailorJeffBeaten
+	trainerbattle_single TRAINER_JOHTO_JEFF_HNS, SSAqua_B1F_Text_SailorJeffSeen, SSAqua_B1F_Text_SailorJeffBeaten
 	msgbox SSAqua_B1F_Text_SailorJeffAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -91,7 +91,7 @@ SSAqua_B1F_Text_SailorJeffAfter:
 	.string "ge{SE_M_SPIT_UP}serious.$"
 
 SSAqua_B1F_EventScript_Debra::
-	trainerbattle_single 1349, SSAqua_B1F_Text_PicnickerDebraSeen, SSAqua_B1F_Text_PicnickerDebraBeaten
+	trainerbattle_single TRAINER_JOHTO_DEBRA_HNS, SSAqua_B1F_Text_PicnickerDebraSeen, SSAqua_B1F_Text_PicnickerDebraBeaten
 	msgbox SSAqua_B1F_Text_PicnickerDebraAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -106,7 +106,7 @@ SSAqua_B1F_Text_PicnickerDebraAfter:
 	.string "ar{SE_M_REVERSAL}man{SE_M_YAWN}bi{SE_M_SANDSTORM}citie{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}KANTO.$"
 
 SSAqua_B1F_EventScript_Fritz::
-	trainerbattle_single 1321, SSAqua_B1F_Text_JugglerFritzSeen, SSAqua_B1F_Text_JugglerFritzBeaten
+	trainerbattle_single TRAINER_JOHTO_FRITZ_HNS, SSAqua_B1F_Text_JugglerFritzSeen, SSAqua_B1F_Text_JugglerFritzBeaten
 	msgbox SSAqua_B1F_Text_JugglerFritzAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -122,7 +122,7 @@ SSAqua_B1F_Text_JugglerFritzAfter:
 	.string "I'{SE_M_MILK_DRINK}takin{SE_M_SANDSTORM}th{SE_M_REVERSAL}MAGNE{SE_M_SWIFT}TRAIN.$"
 
 SSAqua_B1F_EventScript_Garrett::
-	trainerbattle_single 1262, SSAqua_B1F_Text_SailorGarrettSeen, SSAqua_B1F_Text_SailorGarrettBeaten
+	trainerbattle_single TRAINER_JOHTO_GARRETT_HNS, SSAqua_B1F_Text_SailorGarrettSeen, SSAqua_B1F_Text_SailorGarrettBeaten
 	msgbox SSAqua_B1F_Text_SailorGarrettAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -138,7 +138,7 @@ SSAqua_B1F_Text_SailorGarrettAfter:
 	.string "OLIVIN{SE_M_SWORDS_DANCE}CITY.$"
 
 SSAqua_B1F_EventScript_Jonah::
-	trainerbattle_single 1211, SSAqua_B1F_Text_FisherJonahSeen, SSAqua_B1F_Text_FisherJonahBeaten
+	trainerbattle_single TRAINER_JOHTO_JONAH_HNS, SSAqua_B1F_Text_FisherJonahSeen, SSAqua_B1F_Text_FisherJonahBeaten
 	msgbox SSAqua_B1F_Text_FisherJonahAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -155,7 +155,7 @@ SSAqua_B1F_Text_FisherJonahAfter:
 	.string "VERMILION'{SE_M_GRASSWHISTLE}pier.$"
 
 SSAqua_B1F_EventScript_Wai::
-	trainerbattle_single 1329, SSAqua_B1F_Text_BlackbeltWaiSeen, SSAqua_B1F_Text_BlackbeltWaiBeaten
+	trainerbattle_single TRAINER_JOHTO_WAI_HNS, SSAqua_B1F_Text_BlackbeltWaiSeen, SSAqua_B1F_Text_BlackbeltWaiBeaten
 	msgbox SSAqua_B1F_Text_BlackbeltWaiAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -174,7 +174,7 @@ SSAqua_B1F_Text_BlackbeltWaiAfter:
 	.string "{SE_M_CHARGE}cav{SE_M_REVERSAL}somewhere.$"
 
 SSAqua_B1F_EventScript_Kenneth::
-	trainerbattle_single 1263, SSAqua_B1F_Text_SailorKennethSeen, SSAqua_B1F_Text_SailorKennethBeaten
+	trainerbattle_single TRAINER_JOHTO_KENNETH_HNS, SSAqua_B1F_Text_SailorKennethSeen, SSAqua_B1F_Text_SailorKennethBeaten
 	msgbox SSAqua_B1F_Text_SailorKennethAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -193,7 +193,7 @@ SSAqua_B1F_Text_SailorKennethAfter:
 	.string "N{SE_M_ATTRACT2}wonde{SE_M_SAND_TOMB}you'r{SE_M_REVERSAL}s{SE_M_ATTRACT2}good!$"
 
 SSAqua_B1F_EventScript_Shirley::
-	trainerbattle_single 1188, SSAqua_B1F_Text_TeacherShirleySeen, SSAqua_B1F_Text_TeacherShirleyBeaten
+	trainerbattle_single TRAINER_JOHTO_SHIRLEY_HNS, SSAqua_B1F_Text_TeacherShirleySeen, SSAqua_B1F_Text_TeacherShirleyBeaten
 	msgbox SSAqua_B1F_Text_TeacherShirleyAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -209,7 +209,7 @@ SSAqua_B1F_Text_TeacherShirleyAfter:
 	.string "RUIN{SE_M_SKETCH}outsid{SE_M_REVERSAL}VIOLET.$"
 
 SSAqua_B1F_EventScript_Nate::
-	trainerbattle_single 1051, SSAqua_B1F_Text_SchoolboyNateSeen, SSAqua_B1F_Text_SchoolboyNateBeaten
+	trainerbattle_single TRAINER_JOHTO_NATE_HNS, SSAqua_B1F_Text_SchoolboyNateSeen, SSAqua_B1F_Text_SchoolboyNateBeaten
 	msgbox SSAqua_B1F_Text_SchoolboyNateAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -224,7 +224,7 @@ SSAqua_B1F_Text_SchoolboyNateAfter:
 	.string "insid{SE_M_REVERSAL}th{SE_M_REVERSAL}RUINS.$"
 
 SSAqua_B1F_EventScript_Ricky::
-	trainerbattle_single 1052, SSAqua_B1F_Text_SchoolboyRickySeen, SSAqua_B1F_Text_SchoolboyRickyBeaten
+	trainerbattle_single TRAINER_JOHTO_RICKY_HNS, SSAqua_B1F_Text_SchoolboyRickySeen, SSAqua_B1F_Text_SchoolboyRickyBeaten
 	msgbox SSAqua_B1F_Text_SchoolboyRickyAfter, MSGBOX_AUTOCLOSE
 	end
 

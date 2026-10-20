@@ -5,69 +5,69 @@ GoldenrodCity_hns_MapScripts::
 	.byte 0
 
 GoldenrodCity_EventScript_Trigger::
-	call_if_unset 8663, GoldenrodCity_Elm_Togepi_Call
-	setflag 10484
-	setflag 8300
-	setflag 8295
-	setflag 8302
-	setflag 8303
-	setflag 8306
-	setflag 8299
-	setflag 8298
+	call_if_unset JOHTO_FLAG_SHOWN_ELM_TOGEPI, GoldenrodCity_Elm_Togepi_Call
+	setflag JOHTO_FLAG_VISITED_GOLDENROD_CITY
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_ROCKETS
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_BILL
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_UNDERGROUND_KIMONO
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_UNDERGROUND_SILVER
+	setflag JOHTO_FLAG_HIDE_ROCKET_GOLDENROD_RADIOTOWER_1
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_PETREL
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR_2
 
-	clearflag 8294
-	clearflag 8301
-	clearflag 8296
-	clearflag 8712
-	clearflag 8710
-	clearflag 8690
-	clearflag 8702
-	clearflag 8708
-	clearflag 10391
-	clearflag 8669
-	clearflag 8689
-	clearflag 8682
-	clearflag 8683
-	clearflag 8684
-	clearflag 8667
-	clearflag 8798
-	clearflag 8801
-	clearflag 8771
-	clearflag 8713
-	clearflag 8305
-	clearflag 8297
-	clearflag 8729
-	clearflag 8732
-	clearflag 8728
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_BEAUTY
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_ROCKET_SCOUT
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_NPCS
+	clearflag JOHTO_FLAG_GOT_RETURN
+	clearflag JOHTO_FLAG_GOT_FRUSTRATION
+	clearflag JOHTO_FLAG_RECEIVED_BIKE
+	clearflag JOHTO_FLAG_RECEIVED_SQUIRTBOTTLE
+	clearflag JOHTO_FLAG_GOT_EEVEE
+	clearflag JOHTO_FLAG_SYS_PC_LANETTE
+	clearflag JOHTO_FLAG_RETURNED_MACHINE_PART
+	clearflag JOHTO_FLAG_UNLOCKED_GOLDENROD_UNDERGROUND_DOOR
+	clearflag JOHTO_FLAG_GOLDENROD_MACHOKE_1
+	clearflag JOHTO_FLAG_GOLDENROD_MACHOKE_2
+	clearflag JOHTO_FLAG_GOLDENROD_MACHOKE_3
+	clearflag JOHTO_FLAG_COMPLETED_SWITCHES
+	clearflag JOHTO_FLAG_ENABLE_RADIO
+	clearflag JOHTO_FLAG_KANTO_RADIO_GOT
+	clearflag JOHTO_FLAG_GOLDENROD_NPC_TRADE_COMPLETED
+	clearflag JOHTO_FLAG_GOT_SUNNY_DAY
+	clearflag JOHTO_FLAG_HIDE_RADIOTOWER_GATE
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_RADIOTOWER_DIRECTOR
+	clearflag JOHTO_FLAG_GOT_MARY_BRIGHT_POWDER
+	clearflag JOHTO_FLAG_GOT_QUICK_CLAW
+	clearflag JOHTO_FLAG_GOT_MAGNET
 
-	setvar 20552, 0
-	setvar 20574, 0
-	setvar 20577, 0
-	setvar 20606, 0
-	setvar 20564, 0
-	setvar 20569, 1
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 0
+	setvar JOHTO_VAR_KENYA, 0
+	setvar JOHTO_VAR_LUGIA_OR_HOOH, 0
+	setvar JOHTO_VAR_TRAIN, 0
+	setvar JOHTO_VAR_ELEVATOR, 0
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 1
 	release
 	end
 
 GoldenrodCity_Trigger_Music::
-	goto_if_lt 20569, 6, GoldenrodCity_Trigger_MusicNotYet
-	goto_if_ge 20569, 11, GoldenrodCity_Trigger_MusicNotYet
+	goto_if_lt JOHTO_VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_Trigger_MusicNotYet
+	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 11, GoldenrodCity_Trigger_MusicNotYet
 	fadenewbgm ((558 + 1) + 0x40)
 	special ShowMapNamePopup
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 	end
 
 GoldenrodCity_Trigger_Music2::
-	goto_if_lt 20569, 6, GoldenrodCity_Trigger_MusicNotYet
-	goto_if_ge 20569, 11, GoldenrodCity_Trigger_MusicNotYet
+	goto_if_lt JOHTO_VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_Trigger_MusicNotYet
+	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 11, GoldenrodCity_Trigger_MusicNotYet
 	fadedefaultbgm
 	special ShowMapNamePopup
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 	end
 
 GoldenrodCity_Trigger_MusicNotYet::
 	special ShowMapNamePopup
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 	end
 
 GoldenrodCity_Elm_Togepi_Call::
@@ -98,7 +98,7 @@ GoldenrodCity_EventScript_Youngster2::
 GoldenrodCity_EventScript_CooltrainerF::
 	lock
 	faceplayer
-	goto_if_set 8301, GoldenrodCity_EventScript_CooltrainerFCleared
+	goto_if_set JOHTO_FLAG_HIDE_GOLDENROD_ROCKET_SCOUT, GoldenrodCity_EventScript_CooltrainerFCleared
 	msgbox GoldenrodCity_Text_CooltrainerF1, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -132,14 +132,14 @@ GoldenrodCity_EventScript_RocketScout::
 	lock
 	msgbox GoldenrodCity_Text_RocketScout1, MSGBOX_DEFAULT
 	closemessage
-	PLAYSE 21
-	applymovement 11, J_Common_Movement_ExclamationMark
+	PLAYSE SE_PIN
+	applymovement LOCALID_GOLDENROD_ROCKET_SCOUT, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 11
+	waitmovement LOCALID_GOLDENROD_ROCKET_SCOUT
 	faceplayer
 	msgbox GoldenrodCity_Text_RocketScout2, MSGBOX_DEFAULT
 	closemessage
-	turnobject 11, DIR_NORTH
+	turnobject LOCALID_GOLDENROD_ROCKET_SCOUT, DIR_NORTH
 	release
 	end
 
@@ -202,7 +202,7 @@ GoldenrodCity_EventScript_Woman::
 GoldenrodCity_EventScript_Hiker::
 	lock
 	faceplayer
-	goto_if_set 8796, GoldenrodCity_EventScript_Hiker2
+	goto_if_set JOHTO_FLAG_DAY_POKEMON, GoldenrodCity_EventScript_Hiker2
 	msgbox GoldenrodCity_Text_HikerDay, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -218,7 +218,7 @@ GoldenrodCity_EventScript_Snubbull::
 	lock
 	faceplayer
 	waitse
-	playmoncry 209, 0
+	playmoncry SPECIES_SNUBBULL, CRY_MODE_NORMAL
 	msgbox GoldenrodCity_Text_Snubbull, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -228,7 +228,7 @@ GoldenrodCity_EventScript_Mime::
 	lock
 	faceplayer
 	waitse
-	playmoncry 122, 0
+	playmoncry SPECIES_MR_MIME, CRY_MODE_NORMAL
 	msgbox GoldenrodCity_Text_MrMime, MSGBOX_DEFAULT
 	waitmoncry
 	release

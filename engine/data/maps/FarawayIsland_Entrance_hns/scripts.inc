@@ -1,20 +1,20 @@
 @ Johto (data/maps/FarawayIsland_Entrance_hns/scripts.inc), as built into the FireRed game.
 
 FarawayIsland_Entrance_hns_MapScripts::
-	map_script 3, FarawayIsland_Entrance_hns_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, FarawayIsland_Entrance_hns_OnTransition
 	.byte 0
 
 FarawayIsland_Entrance_hns_OnTransition:
-	setflag 0
+	setflag FLAG_ARRIVED_ON_FARAWAY_ISLAND
 	end
 
 FarawayIsland_Entrance_hns_EventScript_SetCloudsWeather::
-	setweather 1
+	setweather WEATHER_SUNNY_CLOUDS
 	doweather
 	end
 
 FarawayIsland_Entrance_hns_EventScript_ClearWeather::
-	setweather 0
+	setweather WEATHER_NONE
 	doweather
 	end
 
@@ -22,14 +22,14 @@ FarawayIsland_Entrance_hns_EventScript_Sailor::
 	lock
 	faceplayer
 	msgbox J_FarawayIsland_Entrance_Text_SailorReturn, MSGBOX_YESNO
-	goto_if_eq 32781, NO, FarawayIsland_Entrance_hns_EventScript_AsYouLike
+	goto_if_eq VAR_RESULT, NO, FarawayIsland_Entrance_hns_EventScript_AsYouLike
 	msgbox J_EventTicket_Text_SailHome, MSGBOX_DEFAULT
 	closemessage
-	applymovement 32783, J_Common_Movement_WalkInPlaceFasterDown
+	applymovement VAR_LAST_TALKED, J_Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 30
-	hideobjectat 1, MAP_FARAWAY_ISLAND_ENTRANCE_HNS
-	setvar 32772, 2
+	hideobjectat LOCALID_FARAWAY_ISLAND_ENTRANCE_HNS_SAILOR, MAP_FARAWAY_ISLAND_ENTRANCE_HNS
+	setvar VAR_0x8004, LOCALID_FARAWAY_ISLAND_ENTRANCE_HNS_SS_TIDAL
 	call J_Common_EventScript_FerryDepartIsland
 	warpsilent MAP_OLIVINE_CITY_PORT_INSIDE_HNS, 8, 16
 	waitstate

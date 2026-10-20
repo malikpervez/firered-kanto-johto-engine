@@ -6,7 +6,7 @@ DragonsDen_Cavern_hns_MapScripts::
 	.byte 0
 
 DragonsDen_Cavern_OnFrame::
-	map_script_2 20550, 3, DragonsDen_Cavern_EventScript_Clair
+	map_script_2 JOHTO_VAR_BLACKTHORN_CITY_STATE, 3, DragonsDen_Cavern_EventScript_Clair
 	.2byte 0
 
 DragonsDen_EventScript_ClairRematch::
@@ -14,11 +14,11 @@ DragonsDen_EventScript_ClairRematch::
 	faceplayer
 	msgbox DragonsDen_Text_Clair, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
-	setflag 8350
-	removeobject 35
-	fadescreenswapbuffers 0
-	clearflag 8391
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_DEN_CLAIR
+	removeobject LOCALID_DEN_CLAIR
+	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag JOHTO_FLAG_HIDE_DOJO_CLAIR
 	release
 	end
 
@@ -30,77 +30,77 @@ DragonsDen_Text_Clair:
 
 DragonsDen_Cavern_Trigger_ClairLeft::
 	lock
-	setflag 14
-	playse 21
+	setflag FLAG_TEMP_HIDE_FOLLOWER
+	playse SE_PIN
 	playbgm ((558 + 1) + 0x4C), FALSE
-	applymovement2 5, J_Common_Movement_ExclamationMark
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 5
+	waitmovement LOCALID_DRAGONSDEN2_CLAIR
 	call DragonsDen_Cavern_EventScript_Clair
-	applymovement 255, DragonsDen_Cavern_Movement_ClairLeaveLeftPLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, DragonsDen_Cavern_Movement_ClairLeaveLeftPLAYER
 	waitmovement 0
-	applymovement2 5, DragonsDen_Cavern_Movement_ClairLeaveLeft
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, DragonsDen_Cavern_Movement_ClairLeaveLeft
 	waitmovement 0
-	setflag 8351
-	removeobject 5
-	playse 9
+	setflag JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
+	removeobject LOCALID_DRAGONSDEN2_CLAIR
+	playse SE_EXIT
 	fadedefaultbgm
-	setvar 20550, 4
-	setrespawn 137
+	setvar JOHTO_VAR_BLACKTHORN_CITY_STATE, 4
+	setrespawn JOHTO_HEAL_LOCATION_BLACKTHORN_CITY_HNS
 	releaseall
 	end
 
 DragonsDen_Cavern_Trigger_ClairMid::
 	lock
-	playse 21
+	playse SE_PIN
 	playbgm ((558 + 1) + 0x4C), FALSE
-	applymovement2 5, J_Common_Movement_ExclamationMark
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 5
-	applymovement2 5, J_Common_Movement_WalkRight1
+	waitmovement LOCALID_DRAGONSDEN2_CLAIR
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, J_Common_Movement_WalkRight1
 	call DragonsDen_Cavern_EventScript_Clair
-	applymovement2 5, DragonsDen_Cavern_Movement_ClairLeaveMid
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, DragonsDen_Cavern_Movement_ClairLeaveMid
 	waitmovement 0
-	setflag 8351
-	removeobject 5
-	playse 9
+	setflag JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
+	removeobject LOCALID_DRAGONSDEN2_CLAIR
+	playse SE_EXIT
 	fadedefaultbgm
-	setvar 20550, 4
+	setvar JOHTO_VAR_BLACKTHORN_CITY_STATE, 4
 	release
 	end
 
 DragonsDen_Cavern_Trigger_ClairRight::
 	lock
-	playse 21
+	playse SE_PIN
 	playbgm ((558 + 1) + 0x4C), FALSE
-	applymovement2 5, J_Common_Movement_ExclamationMark
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 5
-	applymovement2 5, J_Common_Movement_WalkRight1
+	waitmovement LOCALID_DRAGONSDEN2_CLAIR
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement2 5, J_Common_Movement_WalkRight1
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, J_Common_Movement_WalkRight1
 	call DragonsDen_Cavern_EventScript_Clair
-	applymovement2 5, DragonsDen_Cavern_Movement_ClairLeaveRight
+	applymovement2 LOCALID_DRAGONSDEN2_CLAIR, DragonsDen_Cavern_Movement_ClairLeaveRight
 	waitmovement 0
-	setflag 8351
-	removeobject 5
-	playse 9
+	setflag JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
+	removeobject LOCALID_DRAGONSDEN2_CLAIR
+	playse SE_EXIT
 	fadedefaultbgm
-	setvar 20550, 4
+	setvar JOHTO_VAR_BLACKTHORN_CITY_STATE, 4
 	release
 	end
 
 DragonsDen_Cavern_EventScript_Clair::
-	turnobject 255, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox DragonsDen_Cavern_Text_Clair_GiveTM, MSGBOX_DEFAULT
-	giveitem 640
+	giveitem ITEM_TM_DRAGON_PULSE
 	msgbox DragonsDen_Cavern_Text_Clair_ExplainTM, MSGBOX_DEFAULT
 	closemessage
 	delay 30
 	msgbox DragonsDen_Cavern_Text_ClairWhatsTheMatter, MSGBOX_DEFAULT
 	closemessage
 	delay 10
-	clearflag 8707
+	clearflag JOHTO_FLAG_GOT_DRATINI
 	return
 
 DragonsDen_Cavern_Movement_ClairLeaveLeftPLAYER:
@@ -175,24 +175,24 @@ DragonsDen_Cavern_Text_ClairWhatsTheMatter:
 	.string "Giv{SE_M_REVERSAL}i{SE_M_SPIT_UP}everythin{SE_M_SANDSTORM}you'v{SE_M_REVERSAL}got.$"
 
 DragonsDen_Cavern_EventScript_Darin::
-	trainerbattle_single 1096, DragonsDen_Cavern_Text_CooltrainermDarinSeen, DragonsDen_Cavern_Text_CooltrainermDarinBeaten
+	trainerbattle_single TRAINER_JOHTO_DARIN_HNS, DragonsDen_Cavern_Text_CooltrainermDarinSeen, DragonsDen_Cavern_Text_CooltrainermDarinBeaten
 	msgbox DragonsDen_Cavern_Text_CooltrainermDarinAfter, MSGBOX_AUTOCLOSE
 	end
 
 DragonsDen_Cavern_EventScript_Cara::
-	trainerbattle_single 1113, DragonsDen_Cavern_Text_CooltrainerfCaraSeen, DragonsDen_Cavern_Text_CooltrainerfCaraBeaten
+	trainerbattle_single TRAINER_JOHTO_CARA_HNS, DragonsDen_Cavern_Text_CooltrainerfCaraSeen, DragonsDen_Cavern_Text_CooltrainerfCaraBeaten
 	msgbox DragonsDen_Cavern_Text_CooltrainerfCaraAfter, MSGBOX_AUTOCLOSE
 	end
 
 DragonsDen_Cavern_EventScript_TwinLea::
-	trainerbattle_double 1417, DragonsDen_Cavern_Text_TwinsLeaandPia1Seen, DragonsDen_Cavern_Text_TwinsLeaandPia1Beaten, J_Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_JOHTO_LEA_AND_PIA_HNS, DragonsDen_Cavern_Text_TwinsLeaandPia1Seen, DragonsDen_Cavern_Text_TwinsLeaandPia1Beaten, J_Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox DragonsDen_Cavern_Text_TwinsLeaandPia1After, MSGBOX_DEFAULT
 	release
 	end
 
 DragonsDen_Cavern_EventScript_TwinPia::
-	trainerbattle_double 1417, DragonsDen_Cavern_Text_TwinsLeaandPia2Seen, DragonsDen_Cavern_Text_TwinsLeaandPia2Beaten, J_Route104_Text_GinaNotEnoughMons
+	trainerbattle_double TRAINER_JOHTO_LEA_AND_PIA_HNS, DragonsDen_Cavern_Text_TwinsLeaandPia2Seen, DragonsDen_Cavern_Text_TwinsLeaandPia2Beaten, J_Route104_Text_GinaNotEnoughMons
 	special GetPlayerBigGuyGirlString
 	msgbox DragonsDen_Cavern_Text_TwinsLeaandPia2After, MSGBOX_DEFAULT
 	release

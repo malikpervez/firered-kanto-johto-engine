@@ -4,9 +4,9 @@ SSAqua_CaptainsRoom_hns_MapScripts::
 	.byte 0
 
 SSAqua_CaptainsRoom_EventScript_Captain::
-	goto_if_eq 16384, 1, SSAqua_CaptainsRoom_EventScrip_CaptainAfter
+	goto_if_eq VAR_TEMP_0, 1, SSAqua_CaptainsRoom_EventScrip_CaptainAfter
 	msgbox SSAqua_CaptainsRoom_Text_CaptainExhausting, MSGBOX_NPC
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 
 SSAqua_CaptainsRoom_EventScrip_CaptainAfter::
 	msgbox SSAqua_CaptainsRoom_Text_CaptainHowDoYouLike, MSGBOX_DEFAULT
@@ -15,22 +15,22 @@ SSAqua_CaptainsRoom_EventScrip_CaptainAfter::
 
 SSAqua_CaptainsRoom_EventScript_Granddaughter::
 	lock
-	applymovement 2, SSAqua_CaptainsRoom_Movement_Jump
+	applymovement LOCALID_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER, SSAqua_CaptainsRoom_Movement_Jump
 	waitmovement 0
 	msgbox SSAqua_CaptainsRoom_Text_GranddaughterCaptainPlayWithMe, MSGBOX_DEFAULT
-	turnobject 1, DIR_WEST
-	playse 21
-	applymovement 1, J_Common_Movement_QuestionMark
+	turnobject LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN, DIR_WEST
+	playse SE_PIN
+	applymovement LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN, J_Common_Movement_QuestionMark
 	delay 55
-	waitmovement 1
+	waitmovement LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN
 	delay 60
 	faceplayer
 	msgbox SSAqua_CaptainsRoom_Text_GranddaughterHasToFindGrandpa, MSGBOX_DEFAULT
 	closemessage
-	fadescreen 1
-	setflag 8326
-	setvar 20603, 4
-	clearflag 8327
+	fadescreen FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER
+	setvar JOHTO_VAR_SSAQUA_STATE, 4
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_ROOM_SSE_GRANDDAUGHTER
 	warp MAP_SSAQUA_ROOM_SSE_HNS, 0
 	waitstate
 	release

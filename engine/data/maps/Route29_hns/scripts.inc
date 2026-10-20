@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route29_hns/scripts.inc), as built into the FireRed game.
 
 Route29_hns_MapScripts::
-	map_script 3, Route29_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route29_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route29_OnTransition:
@@ -11,27 +11,27 @@ Route29_OnTransition:
 
 Route29_Trigger_Monview::
 	special SpawnCameraObject
-	applymovement2 127, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkUp1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkUp1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkUp1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkUp1
 	waitmovement 0
 	message Route29_Text_PressAorB
 	waitbuttonpress
 	closemessage
-	applymovement2 127, J_Common_Movement_WalkDown1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkDown1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkDown1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkDown1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkDown1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkDown1
 	waitmovement 0
-	applymovement2 127, J_Common_Movement_WalkDown1
+	applymovement2 OBJ_EVENT_ID_CAMERA, J_Common_Movement_WalkDown1
 	waitmovement 0
 	special RemoveCameraObject
-	applymovement2 255, J_Common_Movement_WalkDown1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
 	end
 
@@ -41,7 +41,7 @@ Route29_Text_PressAorB:
 Route29_EventScript_OldMan::
 	lock
 	faceplayer
-	goto_if_set 8660, Route29_EventScript_OldMan2
+	goto_if_set JOHTO_FLAG_ADVENTURE_STARTED, Route29_EventScript_OldMan2
 	msgbox Route29_Text_OldMan1, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -49,7 +49,7 @@ Route29_EventScript_OldMan::
 
 Route29_EventScript_OldMan2::
 	msgbox Route29_Text_OldMan2, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route29_EventScript_OldMan_Tutorial
+	goto_if_eq VAR_RESULT, YES, Route29_EventScript_OldMan_Tutorial
 	waitmessage
 	msgbox Route29_Text_OldManDeclined, MSGBOX_DEFAULT
 	closemessage
@@ -81,11 +81,11 @@ Route29_EventScript_Youngster::
 Route29_EventScript_Tuscany::
 	lock
 	faceplayer
-	goto_if_set 8735, Route29_EventScript_TuscanyCompleted
+	goto_if_set JOHTO_FLAG_GOT_SILK_SCARF, Route29_EventScript_TuscanyCompleted
 	msgbox Route29_Text_MeetTuscany, MSGBOX_DEFAULT
 	closemessage
-	multichoice 20, 0, 159, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
+	switch VAR_RESULT
 	case 0, Route29_EventScript_TuscanyNope
 	case 1, Route29_EventScript_TuscanyNope
 	case 2, Route29_EventScript_TuscanyYes
@@ -94,7 +94,7 @@ Route29_EventScript_Tuscany::
 	case 5, Route29_EventScript_TuscanyNope
 	case 6, Route29_EventScript_TuscanyNope
 	case 7 Route29_EventScript_TuscanyCancel
-	case 127, Route29_EventScript_TuscanyCancel
+	case MULTI_B_PRESSED, Route29_EventScript_TuscanyCancel
 	closemessage
 	release
 	end
@@ -102,8 +102,8 @@ Route29_EventScript_Tuscany::
 Route29_EventScript_TuscanyYes::
 	msgbox Route29_Text_TuscanyGivesGift, MSGBOX_DEFAULT
 	giveitem ITEM_SILK_SCARF
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 8735
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_GOT_SILK_SCARF
 	msgbox Route29_Text_TuscanyGaveGift, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -137,7 +137,7 @@ Route29_EventScript_Girl::
 Route29_EventScript_Boy::
 	lock
 	faceplayer
-	goto_if_set 8797, Route29_EventScript_Boy2
+	goto_if_set JOHTO_FLAG_NIGHT_POKEMON, Route29_EventScript_Boy2
 	msgbox Route29_Text_Boy_WaitingForDay, MSGBOX_DEFAULT
 	closemessage
 	release

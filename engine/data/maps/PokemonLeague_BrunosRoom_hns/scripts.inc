@@ -1,60 +1,60 @@
 @ Johto (data/maps/PokemonLeague_BrunosRoom_hns/scripts.inc), as built into the FireRed game.
 
 PokemonLeague_BrunosRoom_hns_MapScripts::
-	map_script 2, EliteFourRoom_OnFrame
-	map_script 5, J_PokemonLeague_BrunosRoom_OnResume
-	map_script 1, EliteFourRoom_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, EliteFourRoom_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, J_PokemonLeague_BrunosRoom_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, EliteFourRoom_OnLoad
 	.byte 0
 
 J_PokemonLeague_BrunosRoom_OnResume::
-	setvar 32772, 2
+	setvar VAR_0x8004, 2
 	special DoPokemonLeagueLightingEffect
 	end
 
 J_PokemonLeague_BrunosRoom_EventScript_Bruno::
 	lock
 	faceplayer
-	goto_if_ge 20576, 4, PokemonLeague_BrunosRoom_EventScript_BrunoDefeated
-	goto_if_set 10399, PokemonLeague_BrunosRoom_EventScript_BrunoRematch
+	goto_if_ge JOHTO_VAR_LEAGUE_STATE, 4, PokemonLeague_BrunosRoom_EventScript_BrunoDefeated
+	goto_if_set JOHTO_FLAG_IS_CHAMPION, PokemonLeague_BrunosRoom_EventScript_BrunoRematch
 	msgbox PokemonLeague_BrunosRoom_Text_Before, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1459, PokemonLeague_BrunosRoom_Text_Beaten
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_BRUNO_1_HNS, PokemonLeague_BrunosRoom_Text_Beaten
 	goto PokemonLeague_BrunosRoom_EventScript_BrunoOnDefeat
 
 PokemonLeague_BrunosRoom_EventScript_BrunoRematch::
-	goto_if_unset 10400, PokemonLeague_BrunosRoom_EventScript_BrunoRematchStandard
-	goto_if_ge 20639, 13, PokemonLeague_BrunosRoom_EventScript_BrunoRematchPostOBC
+	goto_if_unset JOHTO_FLAG_IS_KANTO_CHAMPION, PokemonLeague_BrunosRoom_EventScript_BrunoRematchStandard
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, PokemonLeague_BrunosRoom_EventScript_BrunoRematchPostOBC
 
 PokemonLeague_BrunosRoom_EventScript_BrunoRematchStandard::
 	msgbox PokemonLeague_BrunosRoom_Text_RematchBefore, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1460, PokemonLeague_BrunosRoom_Text_Beaten
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_BRUNO_2_HNS, PokemonLeague_BrunosRoom_Text_Beaten
 	goto PokemonLeague_BrunosRoom_EventScript_BrunoOnDefeat
 
 PokemonLeague_BrunosRoom_EventScript_BrunoRematchPostOBC::
 	msgbox PokemonLeague_BrunosRoom_Text_RematchBefore, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1671, PokemonLeague_BrunosRoom_Text_Beaten
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_BRUNO_POSTOBC_HNS, PokemonLeague_BrunosRoom_Text_Beaten
 	goto PokemonLeague_BrunosRoom_EventScript_BrunoOnDefeat
 
 PokemonLeague_BrunosRoom_EventScript_BrunoOnDefeat::
-	clearflag 5
+	clearflag FLAG_TEMP_5
 	msgbox PokemonLeague_BrunosRoom_Text_Defeat, MSGBOX_DEFAULT
 	closemessage
 	setmetatile 6, 1, 0x28E, FALSE
 	setmetatile 6, 2, 0x296, FALSE
-	playse 20
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 4
-	setvar 32775, 4
+	playse SE_BANG
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 4
+	setvar VAR_0x8007, 4
 	special ShakeCamera
 	waitstate
 	special DrawWholeMapView
-	setvar 20576, 4
+	setvar JOHTO_VAR_LEAGUE_STATE, 4
 	release
 	end
 

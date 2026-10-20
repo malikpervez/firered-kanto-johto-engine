@@ -1,7 +1,7 @@
 @ Johto (data/maps/TinTower_1F_hns/scripts.inc), as built into the FireRed game.
 
 TinTower_1F_hns_MapScripts::
-	map_script 3, TinTower_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, TinTower_OnTransition
 	.byte 0
 
 TinTower_OnTransition::
@@ -11,7 +11,7 @@ TinTower_OnTransition::
 TinTower_1F_EventScript_SageA::
 	lock
 	faceplayer
-	goto_if_eq 20561, 11, TinTower_1F_EventScript_SageA_Hooh
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_STATE, 11, TinTower_1F_EventScript_SageA_Hooh
 	msgbox TinTower_1F_Sage4_Text2, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -26,7 +26,7 @@ TinTower_1F_EventScript_SageA_Hooh::
 TinTower_1F_EventScript_SageB::
 	lock
 	faceplayer
-	goto_if_eq 20561, 11, TinTower_1F_EventScript_SageB_Hooh
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_STATE, 11, TinTower_1F_EventScript_SageB_Hooh
 	msgbox TinTower_1F_Sage2_Text, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -41,7 +41,7 @@ TinTower_1F_EventScript_SageB_Hooh::
 TinTower_1F_EventScript_SageC::
 	lock
 	faceplayer
-	goto_if_eq 20561, 11, TinTower_1F_EventScript_SageC_Hooh
+	goto_if_eq JOHTO_VAR_ECRUTEAK_CITY_STATE, 11, TinTower_1F_EventScript_SageC_Hooh
 	msgbox TinTower_1F_Sage6_Text2, MSGBOX_DEFAULT
 	closemessage
 	release

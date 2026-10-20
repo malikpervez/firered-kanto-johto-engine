@@ -5,7 +5,7 @@ CianwoodGym_hns_MapScripts::
 
 CianwoodGym_EventScript_Statue::
 	lock
-	goto_if_set 8747, CianwoodGym_EventScript_Statue2
+	goto_if_set JOHTO_FLAG_DEFEATED_CIANWOOD_GYM, CianwoodGym_EventScript_Statue2
 	msgbox CianwoodGym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -28,29 +28,29 @@ CianwoodGym_Text_GymStatueCertified:
 CianwoodGym_EventScript_Chuck::
 	lock
 	faceplayer
-	goto_if_unset 8390, CianwoodGym_EventScript_ChuckAtDojo
-	goto_if_set 10500, CianwoodGym_EventScript_ChuckGotoDojo
-	goto_if_set 8747, CianwoodGym_EventScript_Chuck_Defeated
+	goto_if_unset JOHTO_FLAG_HIDE_DOJO_CHUCK, CianwoodGym_EventScript_ChuckAtDojo
+	goto_if_set JOHTO_FLAG_VISITED_VERMILION_CITY, CianwoodGym_EventScript_ChuckGotoDojo
+	goto_if_set JOHTO_FLAG_DEFEATED_CIANWOOD_GYM, CianwoodGym_EventScript_Chuck_Defeated
 	msgbox CianwoodGym_Text_ChuckIntro1, MSGBOX_DEFAULT
-	applymovement 1, CianwoodGym_Movement_ChuckLeft
+	applymovement LOCALID_CIANWOOD_CHUCK, CianwoodGym_Movement_ChuckLeft
 	waitmovement 0
 	message CianwoodGym_Text_ChuckIntro2
-	applymovement 10, J_Movement_SmashRock
-	playse 131
+	applymovement LOCALID_CIANWOOD_CHUCK_ROCK_LEFT, J_Movement_SmashRock
+	playse SE_M_ROCK_THROW
 	waitmovement 0
 
 	delay 20
 
-	applymovement 1, CianwoodGym_Movement_ChuckRight
+	applymovement LOCALID_CIANWOOD_CHUCK, CianwoodGym_Movement_ChuckRight
 	waitmovement 0
-	applymovement 9, J_Movement_SmashRock
-	playse 131
+	applymovement LOCALID_CIANWOOD_CHUCK_ROCK_RIGHT, J_Movement_SmashRock
+	playse SE_M_ROCK_THROW
 	waitmovement 0
 	waitmessage
-	turnobject 1, DIR_SOUTH
+	turnobject LOCALID_CIANWOOD_CHUCK, DIR_SOUTH
 	msgbox CianwoodGym_Text_ChuckIntro3, MSGBOX_DEFAULT
-	goto_if_set 8748, CianwoodGym_EventScript_OlivineCheckMahog
-	goto_if_set 8749, CianwoodGym_EventScript_MahogCheckOlivine
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, CianwoodGym_EventScript_OlivineCheckMahog
+	goto_if_set JOHTO_FLAG_DEFEATED_MAHOGANY_TOWN_GYM, CianwoodGym_EventScript_MahogCheckOlivine
 	goto CianwoodGym_EventScript_Chuck_Battle1
 
 CianwoodGym_EventScript_ChuckVictory::
@@ -58,16 +58,16 @@ CianwoodGym_EventScript_ChuckVictory::
 	waitmessage
 	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox CianwoodGym_Text_ChuckBadgeSpeech, MSGBOX_DEFAULT
-	setflag 10372
-	setflag 8747
-	addvar 20582, 1
-	setvar 32776, 5
+	setflag JOHTO_FLAG_BADGE05_GET
+	setflag JOHTO_FLAG_DEFEATED_CIANWOOD_GYM
+	addvar JOHTO_VAR_NUM_BADGES, 1
+	setvar VAR_0x8008, 5
 	call J_Common_EventScript_SetGymTrainers_hns
-	giveitem 582
+	giveitem ITEM_TM_FOCUS_PUNCH
 	msgbox CianwoodGym_Text_ChuckTMSpeech, MSGBOX_DEFAULT
-	setvar 20568, 1
-	setrespawn 135
-	call_if_eq 20582, 7, MahoganyTown_Gym_EventScript_SetupElmRocketCall
+	setvar JOHTO_VAR_GETFLY, 1
+	setrespawn JOHTO_HEAL_LOCATION_CIANWOOD_CITY_HNS
+	call_if_eq JOHTO_VAR_NUM_BADGES, 7, MahoganyTown_Gym_EventScript_SetupElmRocketCall
 	closemessage
 	release
 	end
@@ -75,7 +75,7 @@ CianwoodGym_EventScript_ChuckVictory::
 CianwoodGym_EventScript_ChuckGotoDojo::
 	msgbox CianwoodGym_Text_ChuckGotoDojo, MSGBOX_DEFAULT
 	closemessage
-	clearflag 8390
+	clearflag JOHTO_FLAG_HIDE_DOJO_CHUCK
 	release
 	end
 
@@ -96,23 +96,23 @@ CianwoodGym_Text_ChuckAtDojo:
 	.string "WAHAHAHAHAHA$"
 
 CianwoodGym_EventScript_OlivineCheckMahog::
-	goto_if_set 8749, CianwoodGym_EventScript_Chuck_Battle3
+	goto_if_set JOHTO_FLAG_DEFEATED_MAHOGANY_TOWN_GYM, CianwoodGym_EventScript_Chuck_Battle3
 	goto CianwoodGym_EventScript_Chuck_Battle2
 
 CianwoodGym_EventScript_MahogCheckOlivine::
-	goto_if_set 8748, CianwoodGym_EventScript_Chuck_Battle3
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, CianwoodGym_EventScript_Chuck_Battle3
 	goto CianwoodGym_EventScript_Chuck_Battle2
 
 CianwoodGym_EventScript_Chuck_Battle1::
-	trainerbattle_no_intro 1442, CianwoodGym_Text_ChuckIntro2
+	trainerbattle_no_intro TRAINER_JOHTO_CHUCK_1_HNS, CianwoodGym_Text_ChuckIntro2
 	goto CianwoodGym_EventScript_ChuckVictory
 
 CianwoodGym_EventScript_Chuck_Battle2::
-	trainerbattle_no_intro 1444, CianwoodGym_Text_ChuckIntro2
+	trainerbattle_no_intro TRAINER_JOHTO_CHUCK_1_2_HNS, CianwoodGym_Text_ChuckIntro2
 	goto CianwoodGym_EventScript_ChuckVictory
 
 CianwoodGym_EventScript_Chuck_Battle3::
-	trainerbattle_no_intro 1445, CianwoodGym_Text_ChuckIntro2
+	trainerbattle_no_intro TRAINER_JOHTO_CHUCK_1_3_HNS, CianwoodGym_Text_ChuckIntro2
 	goto CianwoodGym_EventScript_ChuckVictory
 
 CianwoodGym_EventScript_Chuck_Defeated::
@@ -186,7 +186,7 @@ CianwoodGym_Text_ChuckRematchDefeat:
 	.string "Again?$"
 
 CianwoodGym_EventScript_Yoshi::
-	trainerbattle_single 1324, CianwoodGym_Text_BlackbeltYoshiSeen, CianwoodGym_Text_BlackbeltYoshiBeaten
+	trainerbattle_single TRAINER_JOHTO_YOSHI_HNS, CianwoodGym_Text_BlackbeltYoshiSeen, CianwoodGym_Text_BlackbeltYoshiBeaten
 	msgbox CianwoodGym_Text_BlackbeltYoshiAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -203,7 +203,7 @@ CianwoodGym_Text_BlackbeltYoshiAfter:
 	.string "wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}too!$"
 
 CianwoodGym_EventScript_Lao::
-	trainerbattle_single 1325, CianwoodGym_Text_BlackbeltLaoSeen, CianwoodGym_Text_BlackbeltLaoBeaten
+	trainerbattle_single TRAINER_JOHTO_LAO_HNS, CianwoodGym_Text_BlackbeltLaoSeen, CianwoodGym_Text_BlackbeltLaoBeaten
 	msgbox CianwoodGym_Text_BlackbeltLaoAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -218,7 +218,7 @@ CianwoodGym_Text_BlackbeltLaoAfter:
 	.string "psychics…$"
 
 CianwoodGym_EventScript_Nob::
-	trainerbattle_single 1326, CianwoodGym_Text_BlackbeltNobSeen, CianwoodGym_Text_BlackbeltNobBeaten
+	trainerbattle_single TRAINER_JOHTO_NOB_HNS, CianwoodGym_Text_BlackbeltNobSeen, CianwoodGym_Text_BlackbeltNobBeaten
 	msgbox CianwoodGym_Text_BlackbeltNobAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -233,7 +233,7 @@ CianwoodGym_Text_BlackbeltNobAfter:
 	.string "{SE_M_HEAL_BELL}lost{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}speechless!$"
 
 CianwoodGym_EventScript_Lung::
-	trainerbattle_single 1328, CianwoodGym_Text_BlackbeltLungSeen, CianwoodGym_Text_BlackbeltLungBeaten
+	trainerbattle_single TRAINER_JOHTO_LUNG_HNS, CianwoodGym_Text_BlackbeltLungSeen, CianwoodGym_Text_BlackbeltLungBeaten
 	msgbox CianwoodGym_Text_BlackbeltLungAfter, MSGBOX_AUTOCLOSE
 	end
 

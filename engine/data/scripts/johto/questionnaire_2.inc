@@ -3,46 +3,46 @@
 J_EventScript_Questionnaire::
 	lockall
 	msgbox J_Questionnaire_Text_FillOut, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_Questionnaire_EventScript_Release
-	setvar 32772, 20
+	goto_if_eq VAR_RESULT, NO, J_Questionnaire_EventScript_Release
+	setvar VAR_0x8004, EASY_CHAT_TYPE_QUESTIONNAIRE
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	specialvar 32776, GetMartEmployeeObjectEventId
-	goto_if_eq 32772, 1, J_Questionnaire_EventScript_PlayerInputMysteryEventPhrase
-	goto_if_eq 32772, 2, J_Questionnaire_EventScript_PlayerInputMysteryGiftPhrase
-	goto_if_eq 32781, 0, J_Questionnaire_EventScript_Release
-	goto_if_eq 32781, 1, J_Questionnaire_EventScript_ThankYou
+	specialvar VAR_0x8008, GetMartEmployeeObjectEventId
+	goto_if_eq VAR_0x8004, 1, J_Questionnaire_EventScript_PlayerInputMysteryEventPhrase
+	goto_if_eq VAR_0x8004, 2, J_Questionnaire_EventScript_PlayerInputMysteryGiftPhrase
+	goto_if_eq VAR_RESULT, 0, J_Questionnaire_EventScript_Release
+	goto_if_eq VAR_RESULT, 1, J_Questionnaire_EventScript_ThankYou
 	end
 
 J_Questionnaire_EventScript_PlayerInputMysteryEventPhrase::
-	goto_if_unset 2089, J_Questionnaire_EventScript_ThankYou
-	goto_if_set 10395, J_Questionnaire_EventScript_ThankYou
-	applymovement 32776, J_Common_Movement_FaceDown
+	goto_if_unset FLAG_SYS_POKEDEX_GET, J_Questionnaire_EventScript_ThankYou
+	goto_if_set JOHTO_FLAG_SYS_MYSTERY_EVENT_ENABLE, J_Questionnaire_EventScript_ThankYou
+	applymovement VAR_0x8008, J_Common_Movement_FaceDown
 	waitmovement 0
-	playse 21
-	applymovement 32776, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement VAR_0x8008, J_Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement 32776, J_Common_Movement_Delay48
+	applymovement VAR_0x8008, J_Common_Movement_Delay48
 	waitmovement 0
 	msgbox J_Questionnaire_Text_YouKnowThoseWordsEvent, MSGBOX_DEFAULT
-	setflag 10395
+	setflag JOHTO_FLAG_SYS_MYSTERY_EVENT_ENABLE
 	msgbox J_Questionnaire_Text_YouCanAccessMysteryEvent, MSGBOX_DEFAULT
 	releaseall
 	end
 
 J_Questionnaire_EventScript_PlayerInputMysteryGiftPhrase::
-	goto_if_unset 2089, J_Questionnaire_EventScript_ThankYou
-	goto_if_set 10395, J_Questionnaire_EventScript_ThankYou
-	applymovement 32776, J_Common_Movement_FaceDown
+	goto_if_unset FLAG_SYS_POKEDEX_GET, J_Questionnaire_EventScript_ThankYou
+	goto_if_set JOHTO_FLAG_SYS_MYSTERY_GIFT_ENABLE, J_Questionnaire_EventScript_ThankYou
+	applymovement VAR_0x8008, J_Common_Movement_FaceDown
 	waitmovement 0
-	playse 21
-	applymovement 32776, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement VAR_0x8008, J_Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement 32776, J_Common_Movement_Delay48
+	applymovement VAR_0x8008, J_Common_Movement_Delay48
 	waitmovement 0
 	msgbox J_Questionnaire_Text_YouKnowThoseWordsGift, MSGBOX_DEFAULT
-	setflag 10395
+	setflag JOHTO_FLAG_SYS_MYSTERY_GIFT_ENABLE
 	msgbox J_Questionnaire_Text_YouCanAccessMysteryGift, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -52,7 +52,7 @@ J_Questionnaire_EventScript_Release::
 	end
 
 J_Questionnaire_EventScript_ThankYou::
-	applymovement 32776, J_Common_Movement_FaceDown
+	applymovement VAR_0x8008, J_Common_Movement_FaceDown
 	waitmovement 0
 	msgbox J_Questionnaire_Text_ThankYou, MSGBOX_DEFAULT
 	releaseall

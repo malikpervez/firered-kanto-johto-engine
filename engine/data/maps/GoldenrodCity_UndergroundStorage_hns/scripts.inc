@@ -7,7 +7,7 @@ GoldenrodCity_UndergroundStorage_EventScript_Director::
 	lock
 	faceplayer
 	checkitem ITEM_CARD_KEY
-	goto_if_eq 32781, TRUE, GoldenrodCity_UndergroundStorage_EventScript_Director2
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_UndergroundStorage_EventScript_Director2
 	msgbox RadioTowerBasement_Text_DirectorIntro, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_CARD_KEY
@@ -23,22 +23,22 @@ GoldenrodCity_UndergroundStorage_EventScript_Director2::
 	end
 
 GoldenrodCity_UndergroundStorage_EventScript_Grunt19::
-	trainerbattle_single 1161, RadioTowerBasement_Text_GruntM24Seen, RadioTowerBasement_Text_GruntM24Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_19_HNS, RadioTowerBasement_Text_GruntM24Seen, RadioTowerBasement_Text_GruntM24Beaten
 	msgbox RadioTowerBasement_Text_GruntM24After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_UndergroundStorage_EventScript_Grunt12::
-	trainerbattle_single 1154, RadioTowerBasement_Text_GruntM14Seen, RadioTowerBasement_Text_GruntM14Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_12_HNS, RadioTowerBasement_Text_GruntM14Seen, RadioTowerBasement_Text_GruntM14Beaten
 	msgbox RadioTowerBasement_Text_GruntM14After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_UndergroundStorage_EventScript_Eto::
-	trainerbattle_single 1178, RadioTowerBasement_Text_GruntM15Seen, RadioTowerBasement_Text_GruntM15Beaten
+	trainerbattle_single TRAINER_JOHTO_ETO_3_HNS, RadioTowerBasement_Text_GruntM15Seen, RadioTowerBasement_Text_GruntM15Beaten
 	msgbox RadioTowerBasement_Text_GruntM15After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_UndergroundStorage_EventScript_Item_TM_CALM_MIND::
-	finditem 585
+	finditem ITEM_TM_CALM_MIND
 	end
 
 GoldenrodCity_UndergroundStorage_EventScript_Item_UltraBall::

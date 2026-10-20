@@ -1,19 +1,19 @@
 @ Johto (data/maps/TohjoFalls_GiovanniRoom_hns/scripts.inc), as built into the FireRed game.
 
 TohjoFalls_GiovanniRoom_hns_MapScripts::
-	map_script 3, TohjoFalls_GiovanniRoom_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, TohjoFalls_GiovanniRoom_OnTransition
 	.byte 0
 
 TohjoFalls_GiovanniRoom_OnTransition::
-	specialvar 32781, CheckCelebi
-	goto_if_eq 32781, TRUE, TohjoFalls_GiovanniRoom_SetScene
-	setvar 20605, 0
+	specialvar VAR_RESULT, CheckCelebi
+	goto_if_eq VAR_RESULT, TRUE, TohjoFalls_GiovanniRoom_SetScene
+	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
 	end
 
 TohjoFalls_GiovanniRoom_SetScene::
-	setflag 8410
-	goto_if_ne 20605, 0, TohjoFalls_GiovanniRoom_DoNothing
-	setvar 20605, 1
+	setflag JOHTO_FLAG_HIDE_TOHJO_GIOVANNI
+	goto_if_ne JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 0, TohjoFalls_GiovanniRoom_DoNothing
+	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 1
 	end
 
 TohjoFalls_GiovanniRoom_DoNothing::
@@ -28,134 +28,134 @@ TohjoFalls_GiovanniRoom_Text_RadioObject::
 	.string "Th{SE_M_REVERSAL}batter{SE_M_YAWN}i{SE_M_GRASSWHISTLE}dead...$"
 
 TohjoFalls_GiovanniRoom_CancelScene::
-	setvar 20605, 0
+	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
 	end
 
 TohjoFalls_EventScript_GiovanniSceneRight::
-	specialvar 32781, CheckCelebi
-	goto_if_eq 32781, FALSE, TohjoFalls_GiovanniRoom_CancelScene
+	specialvar VAR_RESULT, CheckCelebi
+	goto_if_eq VAR_RESULT, FALSE, TohjoFalls_GiovanniRoom_CancelScene
 	lock
-	applymovement2 255, J_Common_Movement_WalkLeft1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement2 255, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	goto TohjoFalls_EventScript_GiovanniScene
 
 TohjoFalls_EventScript_GiovanniSceneLeft::
-	specialvar 32781, CheckCelebi
-	goto_if_eq 32781, FALSE, TohjoFalls_GiovanniRoom_CancelScene
+	specialvar VAR_RESULT, CheckCelebi
+	goto_if_eq VAR_RESULT, FALSE, TohjoFalls_GiovanniRoom_CancelScene
 	lock
-	applymovement2 255, J_Common_Movement_WalkRight1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
-	applymovement2 255, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	goto TohjoFalls_EventScript_GiovanniScene
 
 TohjoFalls_EventScript_GiovanniScene::
-	specialvar 32781, CheckCelebi
-	goto_if_eq 32781, FALSE, TohjoFalls_GiovanniRoom_CancelScene
+	specialvar VAR_RESULT, CheckCelebi
+	goto_if_eq VAR_RESULT, FALSE, TohjoFalls_GiovanniRoom_CancelScene
 	lock
-	applymovement2 0xFE, TohjoFalls_Movement_CelebiBegin
-	playse 10
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, TohjoFalls_Movement_CelebiBegin
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
-	waitmovement 255
-	turnobject 255, DIR_SOUTH
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 20
-	playse 21
-	applymovement2 255, J_Common_Movement_QuestionMark
-	waitmovement 255
-	applymovement2 0xFE, TohjoFalls_Movement_CelebiSpin
-	playse 10
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_QuestionMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, TohjoFalls_Movement_CelebiSpin
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 
 
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitmovement 0
-	fadescreen 3
-	playse 203
+	fadescreen FADE_TO_WHITE
+	playse SE_M_TELEPORT
 	waitse
 	delay 60
-	playse 203
+	playse SE_M_TELEPORT
 	waitse
-	clearflag 8410
-	addobject 1
+	clearflag JOHTO_FLAG_HIDE_TOHJO_GIOVANNI
+	addobject LOCALID_TOHJOFALLS_GIOVANNI
 	waitse
 	playbgm ((558 + 1) + 0x3F), FALSE
-	fadescreen 2
+	fadescreen FADE_FROM_WHITE
 	delay 50
-	turnobject 255, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	msgbox TohjoFalls_GiovanniRoom_Text_Radio, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 255, J_Common_Movement_WalkUp1
-	applymovement2 0xFE, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, J_Common_Movement_WalkUp1
 	waitmovement 0
-	waitmovement 0xFE
-	playse 21
-	applymovement2 1, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_FOLLOWER
+	playse SE_PIN
+	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	turnobject 1, DIR_SOUTH
+	waitmovement LOCALID_TOHJOFALLS_GIOVANNI
+	turnobject LOCALID_TOHJOFALLS_GIOVANNI, DIR_SOUTH
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniIntro, MSGBOX_DEFAULT
-	applymovement2 1, J_Common_Movement_WalkDown1
+	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, J_Common_Movement_WalkDown1
 	waitmovement 0
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1490, TohjoFalls_GiovanniRoom_Text_GiovanniDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_GIOVANNI_HNS, TohjoFalls_GiovanniRoom_Text_GiovanniDefeat
 	playbgm ((558 + 1) + 0x3F), FALSE
-	applymovement2 1, TohjoFalls_Movement_GiovanniTakenAback
+	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, TohjoFalls_Movement_GiovanniTakenAback
 	waitmovement 0
 	msgbox TohjoFalls_GiovanniRoom_Text_GiovanniAfter, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 1, TohjoFalls_Movement_GiovanniLeave
+	applymovement2 LOCALID_TOHJOFALLS_GIOVANNI, TohjoFalls_Movement_GiovanniLeave
 	waitmovement 0
-	fadescreen 1
-	removeobject 1
-	playse 9
-	fadescreen 0
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_TOHJOFALLS_GIOVANNI
+	playse SE_EXIT
+	fadescreen FADE_FROM_BLACK
 	delay 30
 
-	applymovement2 0xFE, TohjoFalls_Movement_CelebiBegin
-	playse 10
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, TohjoFalls_Movement_CelebiBegin
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
-	waitmovement 255
-	turnobject 255, DIR_SOUTH
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 20
-	playse 21
-	applymovement2 255, J_Common_Movement_QuestionMark
-	waitmovement 255
-	applymovement2 0xFE, TohjoFalls_Movement_CelebiSpin
-	playse 10
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_QuestionMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, TohjoFalls_Movement_CelebiSpin
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 
 
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitmovement 0
-	fadescreen 3
-	playse 203
+	fadescreen FADE_TO_WHITE
+	playse SE_M_TELEPORT
 	waitse
 	delay 60
-	playse 203
+	playse SE_M_TELEPORT
 	waitse
 	fadedefaultbgm
-	fadescreen 2
-	setvar 20605, 2
+	fadescreen FADE_FROM_WHITE
+	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 2
 	release
 	end
 

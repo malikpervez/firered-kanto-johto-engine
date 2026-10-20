@@ -1,8 +1,8 @@
 @ Johto (data/scripts/pokedex_rating.inc), as built into the FireRed game.
 
 J_PokedexRating_EventScript_RateInPerson::
-	call_if_set 0, J_PokedexRating_EventScript_DexCompleteIntro
-	call_if_unset 0, J_PokedexRating_EventScript_NormalIntro
+	call_if_set JOHTO_FLAG_OAK_SAW_DEX_COMPLETION, J_PokedexRating_EventScript_DexCompleteIntro
+	call_if_unset JOHTO_FLAG_OAK_SAW_DEX_COMPLETION, J_PokedexRating_EventScript_NormalIntro
 	call J_PokedexRating_EventScript_Rate
 	return
 
@@ -15,48 +15,48 @@ J_PokedexRating_EventScript_NormalIntro::
 	return
 
 J_PokedexRating_EventScript_ShowRatingMsg::
-	copyvar 32772, 32777
+	copyvar VAR_0x8004, VAR_0x8009
 	special GetProfOaksRatingMessage
 	waitmessage
-	call_if_eq 32781, FALSE, J_PokedexRating_EventScript_NormalFanfare
-	call_if_eq 32781, TRUE, J_PokedexRating_EventScript_DexCompleteFanfare
+	call_if_eq VAR_RESULT, FALSE, J_PokedexRating_EventScript_NormalFanfare
+	call_if_eq VAR_RESULT, TRUE, J_PokedexRating_EventScript_DexCompleteFanfare
 	waitfanfare
 	waitbuttonpress
 	return
 
 J_PokedexRating_EventScript_NormalFanfare::
-	playfanfare 529
+	playfanfare MUS_RG_DEX_RATING
 	return
 
 J_PokedexRating_EventScript_DexCompleteFanfare::
-	playfanfare 371
+	playfanfare MUS_EVOLVED
 	return
 
 J_PokedexRating_EventScript_Rate::
-	specialvar 32781, GetFrlgPokedexCount
-	copyvar 32776, 32773
-	copyvar 32777, 32774
-	copyvar 32778, 32781
-	buffernumberstring STR_VAR_1, 32776
-	buffernumberstring STR_VAR_2, 32777
+	specialvar VAR_RESULT, GetFrlgPokedexCount
+	copyvar VAR_0x8008, VAR_0x8005
+	copyvar VAR_0x8009, VAR_0x8006
+	copyvar VAR_0x800A, VAR_RESULT
+	buffernumberstring STR_VAR_1, VAR_0x8008
+	buffernumberstring STR_VAR_2, VAR_0x8009
 	msgbox J_PokedexRating_Text_SeenXOwnedY
-	call_if_unset 0, J_PokedexRating_EventScript_SetTextColor
+	call_if_unset JOHTO_FLAG_OAKS_RATING_IS_VIA_PC, J_PokedexRating_EventScript_SetTextColor
 	call J_PokedexRating_EventScript_ShowRatingMsg
-	goto_if_eq 32778, FALSE, J_PokedexRating_EventScript_EndRating
-	setvar 32772, 1
-	specialvar 32781, GetFrlgPokedexCount
-	copyvar 32776, 32773
-	copyvar 32777, 32774
-	buffernumberstring STR_VAR_1, 32776
-	buffernumberstring STR_VAR_2, 32777
+	goto_if_eq VAR_0x800A, FALSE, J_PokedexRating_EventScript_EndRating
+	setvar VAR_0x8004, 1
+	specialvar VAR_RESULT, GetFrlgPokedexCount
+	copyvar VAR_0x8008, VAR_0x8005
+	copyvar VAR_0x8009, VAR_0x8006
+	buffernumberstring STR_VAR_1, VAR_0x8008
+	buffernumberstring STR_VAR_2, VAR_0x8009
 	msgbox J_PokedexRating_Text_NationalDexSeenXOwnedY
-	specialvar 32781, HasAllMons
-	goto_if_eq 32781, FALSE, J_PokedexRating_EventScript_DexIncomplete
-	goto_if_eq 32781, TRUE, J_PokedexRating_EventScript_DexComplete
+	specialvar VAR_RESULT, HasAllMons
+	goto_if_eq VAR_RESULT, FALSE, J_PokedexRating_EventScript_DexIncomplete
+	goto_if_eq VAR_RESULT, TRUE, J_PokedexRating_EventScript_DexComplete
 	end
 
 J_PokedexRating_EventScript_SetTextColor::
-	textcolor 0
+	textcolor NPC_TEXT_COLOR_MALE
 	return
 
 J_PokedexRating_EventScript_DexIncomplete::
@@ -65,7 +65,7 @@ J_PokedexRating_EventScript_DexIncomplete::
 	end
 
 J_PokedexRating_EventScript_DexComplete::
-	setflag 0
+	setflag JOHTO_FLAG_OAK_SAW_DEX_COMPLETION
 	msgbox J_PokedexRating_Text_YouveCompletedDex
 	goto J_PokedexRating_EventScript_EndRating
 	end

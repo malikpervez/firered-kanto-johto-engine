@@ -6,8 +6,8 @@ LakeOfRage_House2_hns_MapScripts::
 LakeOfRage_House2_EventScript_Fisher::
 	lock
 	faceplayer
-	goto_if_ge 20578, 14, LakeOfRage_House2_EventScript_FisherAfterRockets
-	goto_if_eq 20575, 0, LakeOfRage_House2_EventScript_FisherFirstMeeting
+	goto_if_ge JOHTO_VAR_MAHOGANY_TOWN_STATE, 14, LakeOfRage_House2_EventScript_FisherAfterRockets
+	goto_if_eq JOHTO_VAR_LAKE_OF_RAGE_FISHERMAN, 0, LakeOfRage_House2_EventScript_FisherFirstMeeting
 	msgbox LakeOfRage_House2_Text_MenInBlack, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -16,28 +16,28 @@ LakeOfRage_House2_EventScript_Fisher::
 LakeOfRage_House2_EventScript_FisherFirstMeeting::
 	msgbox LakeOfRage_House2_Text_LakeHistory, MSGBOX_DEFAULT
 	msgbox LakeOfRage_House2_Text_MenInBlack, MSGBOX_DEFAULT
-	setvar 20575, 1
+	setvar JOHTO_VAR_LAKE_OF_RAGE_FISHERMAN, 1
 	closemessage
 	release
 	end
 
 LakeOfRage_House2_EventScript_FisherAfterRockets::
-	goto_if_eq 20575, 2, LakeOfRage_House2_EventScript_FisherAnotherMagikarp
+	goto_if_eq JOHTO_VAR_LAKE_OF_RAGE_FISHERMAN, 2, LakeOfRage_House2_EventScript_FisherAnotherMagikarp
 	msgbox LakeOfRage_House2_Text_WorldsLargest, MSGBOX_DEFAULT
 	msgbox LakeOfRage_House2_Text_ForMe, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, LakeOfRage_House2_EventScript_FisherNo
+	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_House2_EventScript_FisherNo
 	getpartysize
-	goto_if_eq 32781, 1, LakeOfRage_House2_EventScript_LastMon
+	goto_if_eq VAR_RESULT, 1, LakeOfRage_House2_EventScript_LastMon
 	special ChoosePartyMon
 	waitstate
 	lock
 	showmoneybox 0, 0
-	copyvar 32778, 32772
-	goto_if_eq 32772, 0xFF, LakeOfRage_House2_EventScript_FisherNoMoneyBox
-	removegenericmon 129
-	goto_if_eq 32781, FALSE, LakeOfRage_House2_EventScript_FisherNotMagikarp
-	goto_if_eq 32781, 2, LakeOfRage_House2_EventScript_FisherSatisfied
-	goto_if_eq 32781, 1, LakeOfRage_House2_EventScript_FisherSmallMagikarp
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, LakeOfRage_House2_EventScript_FisherNoMoneyBox
+	removegenericmon SPECIES_MAGIKARP
+	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_House2_EventScript_FisherNotMagikarp
+	goto_if_eq VAR_RESULT, MON_SATISFACTORY, LakeOfRage_House2_EventScript_FisherSatisfied
+	goto_if_eq VAR_RESULT, MON_UNSATISFACTORY, LakeOfRage_House2_EventScript_FisherSmallMagikarp
 
 LakeOfRage_House2_EventScript_FisherNo::
 	msgbox LakeOfRage_House2_Text_Refused, MSGBOX_DEFAULT
@@ -60,11 +60,11 @@ LakeOfRage_House2_EventScript_FisherNotMagikarp::
 	end
 
 LakeOfRage_House2_EventScript_FisherSmallMagikarp::
-	setvar 20575, 2
+	setvar JOHTO_VAR_LAKE_OF_RAGE_FISHERMAN, 2
 	msgbox LakeOfRage_House2_Text_TooShort, MSGBOX_DEFAULT
 	addmoney 2000
 	updatemoneybox
-	playse 95
+	playse SE_SHOP
 	waitse
 	hidemoneybox
 	closemessage
@@ -73,19 +73,19 @@ LakeOfRage_House2_EventScript_FisherSmallMagikarp::
 
 LakeOfRage_House2_EventScript_FisherAnotherMagikarp::
 	msgbox LakeOfRage_House2_Text_ForMe, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, LakeOfRage_House2_EventScript_FisherNo
+	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_House2_EventScript_FisherNo
 	getpartysize
-	goto_if_eq 32781, 1, LakeOfRage_House2_EventScript_LastMon
+	goto_if_eq VAR_RESULT, 1, LakeOfRage_House2_EventScript_LastMon
 	special ChoosePartyMon
 	waitstate
 	lock
 	showmoneybox 0, 0
-	copyvar 32778, 32772
-	goto_if_eq 32772, 0xFF, LakeOfRage_House2_EventScript_FisherNoMoneyBox
-	removegenericmon 129
-	goto_if_eq 32781, FALSE, LakeOfRage_House2_EventScript_FisherNotMagikarp
-	goto_if_eq 32781, 2, LakeOfRage_House2_EventScript_FisherSatisfied
-	goto_if_eq 32781, 1, LakeOfRage_House2_EventScript_FisherSmallMagikarp
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, LakeOfRage_House2_EventScript_FisherNoMoneyBox
+	removegenericmon SPECIES_MAGIKARP
+	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_House2_EventScript_FisherNotMagikarp
+	goto_if_eq VAR_RESULT, MON_SATISFACTORY, LakeOfRage_House2_EventScript_FisherSatisfied
+	goto_if_eq VAR_RESULT, MON_UNSATISFACTORY, LakeOfRage_House2_EventScript_FisherSmallMagikarp
 
 LakeOfRage_House2_EventScript_LastMon::
 	msgbox LakeOfRage_House2_Text_LastMon, MSGBOX_DEFAULT
@@ -94,11 +94,11 @@ LakeOfRage_House2_EventScript_LastMon::
 	end
 
 LakeOfRage_House2_EventScript_FisherSatisfied::
-	setvar 20575, 2
+	setvar JOHTO_VAR_LAKE_OF_RAGE_FISHERMAN, 2
 	msgbox LakeOfRage_House2_Text_BigPayout, MSGBOX_DEFAULT
 	addmoney 100000
 	updatemoneybox
-	playse 95
+	playse SE_SHOP
 	waitse
 	hidemoneybox
 	closemessage

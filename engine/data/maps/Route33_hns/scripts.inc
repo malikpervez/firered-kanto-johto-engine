@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route33_hns/scripts.inc), as built into the FireRed game.
 
 Route33_hns_MapScripts::
-	map_script 3, Route33_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route33_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route33_OnTransition:
@@ -10,9 +10,9 @@ Route33_OnTransition:
 	end
 
 Route33_EventScript_HikerAnthony::
-	trainerbattle_single 1282, Route33_Text_HikerAnthony2Seen, Route33_Text_HikerAnthony2Beaten, Route33_EventScript_RegisterAnthony
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route33_EventScript_RematchAnthony
+	trainerbattle_single TRAINER_JOHTO_ANTHONY_HNS, Route33_Text_HikerAnthony2Seen, Route33_Text_HikerAnthony2Beaten, Route33_EventScript_RegisterAnthony
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route33_EventScript_RematchAnthony
 	msgbox Route33_Text_HikerAnthony2After, MSGBOX_AUTOCLOSE
 	end
 
@@ -20,12 +20,12 @@ Route33_EventScript_RegisterAnthony::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route33_Text_AnthonyRegister, MSGBOX_DEFAULT
-	register_matchcall 1282
+	register_matchcall TRAINER_JOHTO_ANTHONY_HNS
 	release
 	end
 
 Route33_EventScript_RematchAnthony::
-	trainerbattle_rematch 1282, Route33_Text_AnthonyRematchIntro, Route33_Text_AnthonyRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_ANTHONY_HNS, Route33_Text_AnthonyRematchIntro, Route33_Text_AnthonyRematchDefeat
 	msgbox Route33_Text_AnthonyPostRematch, MSGBOX_AUTOCLOSE
 	end
 

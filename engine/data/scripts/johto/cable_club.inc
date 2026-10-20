@@ -5,24 +5,24 @@ J_CableClub_OnTransition:
 	end
 
 J_CableClub_EventScript_HideOrShowMysteryGiftMan::
-	specialvar 32781, ShouldDistributeEonTicket
-	goto_if_eq 32781, TRUE, J_CableClub_EventScript_ShowMysteryGiftMan
-	specialvar 32781, ValidateSavedWonderCard
-	goto_if_eq 32781, FALSE, J_CableClub_EventScript_HideMysteryGiftMan
+	specialvar VAR_RESULT, ShouldDistributeEonTicket
+	goto_if_eq VAR_RESULT, TRUE, J_CableClub_EventScript_ShowMysteryGiftMan
+	specialvar VAR_RESULT, ValidateSavedWonderCard
+	goto_if_eq VAR_RESULT, FALSE, J_CableClub_EventScript_HideMysteryGiftMan
 	goto J_CableClub_EventScript_ShowMysteryGiftMan
 	end
 
 J_CableClub_EventScript_ShowMysteryGiftMan::
-	clearflag 8424
+	clearflag JOHTO_FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN
 	return
 
 J_CableClub_EventScript_HideMysteryGiftMan::
-	setflag 8424
+	setflag JOHTO_FLAG_HIDE_POKEMON_CENTER_2F_MYSTERY_GIFT_MAN
 	return
 
 J_CableClub_EventScript_MysteryGiftMan::
-	specialvar 32781, ShouldDistributeEonTicket
-	goto_if_eq 32781, TRUE, J_CableClub_EventScript_DistributeEonTicket
+	specialvar VAR_RESULT, ShouldDistributeEonTicket
+	goto_if_eq VAR_RESULT, TRUE, J_CableClub_EventScript_DistributeEonTicket
 	goto J_CableClub_EventScript_TryWonderCardScript
 	end
 
@@ -35,12 +35,12 @@ J_CableClub_EventScript_MysteryGiftThankYou::
 
 J_CableClub_EventScript_DistributeEonTicket::
 	checkitem ITEM_EON_TICKET
-	goto_if_eq 32781, TRUE, J_CableClub_EventScript_TryWonderCardScript
-	goto_if_set 0, J_CableClub_EventScript_TryWonderCardScript
+	goto_if_eq VAR_RESULT, TRUE, J_CableClub_EventScript_TryWonderCardScript
+	goto_if_set FLAG_ENABLE_SHIP_SOUTHERN_ISLAND, J_CableClub_EventScript_TryWonderCardScript
 	msgbox J_MysteryGift_Text_TheresATicketForYou, MSGBOX_DEFAULT
 	giveitem ITEM_EON_TICKET
-	setflag 0
-	setvar 20527, 0
+	setflag FLAG_ENABLE_SHIP_SOUTHERN_ISLAND
+	setvar JOHTO_VAR_DISTRIBUTE_EON_TICKET, 0
 	msgbox J_MysteryGift_Text_TryUsingItAtLilycovePort, MSGBOX_DEFAULT
 	release
 	end
@@ -51,32 +51,32 @@ J_CableClub_EventScript_MysteryGiftThankYou2::
 	end
 
 J_CableClub_OnWarp:
-	map_script_2 20599, 1, J_CableClub_EventScript_CheckTurnAttendant
-	map_script_2 20599, 2, J_CableClub_EventScript_CheckTurnAttendant
-	map_script_2 20599, 5, J_CableClub_EventScript_CheckTurnAttendant
-	map_script_2 20599, 3, J_CableClub_EventScript_CheckTurnAttendant
-	map_script_2 20599, 4, J_CableClub_EventScript_CheckTurnAttendant
-	map_script_2 20599, 6, J_CableClub_EventScript_CheckTurnAttendant
-	map_script_2 20599, 7, J_CableClub_EventScript_CheckTurnAttendant
-	map_script_2 20599, 8, J_CableClub_EventScript_CheckTurnAttendant
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, J_CableClub_EventScript_CheckTurnAttendant
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, J_CableClub_EventScript_CheckTurnAttendant
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, J_CableClub_EventScript_CheckTurnAttendant
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, J_CableClub_EventScript_CheckTurnAttendant
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_RECORD_CORNER, J_CableClub_EventScript_CheckTurnAttendant
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, J_CableClub_EventScript_CheckTurnAttendant
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, J_CableClub_EventScript_CheckTurnAttendant
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_MINIGAME, J_CableClub_EventScript_CheckTurnAttendant
 	.2byte 0
 
 J_CableClub_EventScript_CheckTurnAttendant::
-	goto_if_eq 32775, 0, J_CableClub_EventScript_DontTurnAttendant
-	turnobject 32775, DIR_WEST
+	goto_if_eq VAR_0x8007, 0, J_CableClub_EventScript_DontTurnAttendant
+	turnobject VAR_0x8007, DIR_WEST
 
 J_CableClub_EventScript_DontTurnAttendant::
 	end
 
 J_CableClub_OnLoad:
-	goto_if_eq 20599, 1, J_CableClub_EventScript_OnLoadFromColosseum
-	goto_if_eq 20599, 2, J_CableClub_EventScript_OnLoadFromColosseum
-	goto_if_eq 20599, 5, J_CableClub_EventScript_OnLoadFromColosseum
-	goto_if_eq 20599, 3, J_CableClub_EventScript_OnLoadFromTradeCenter
-	goto_if_eq 20599, 4, J_CableClub_EventScript_OnLoadFromRecordCorner
-	goto_if_eq 20599, 6, J_CableClub_EventScript_OnLoadFromUnionRoom
-	goto_if_eq 20599, 7, J_CableClub_EventScript_OnLoadFromBerryCrush
-	goto_if_eq 20599, 8, J_CableClub_EventScript_OnLoadFromGameCorner
+	goto_if_eq JOHTO_VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, J_CableClub_EventScript_OnLoadFromColosseum
+	goto_if_eq JOHTO_VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, J_CableClub_EventScript_OnLoadFromColosseum
+	goto_if_eq JOHTO_VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, J_CableClub_EventScript_OnLoadFromColosseum
+	goto_if_eq JOHTO_VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, J_CableClub_EventScript_OnLoadFromTradeCenter
+	goto_if_eq JOHTO_VAR_CABLE_CLUB_STATE, USING_RECORD_CORNER, J_CableClub_EventScript_OnLoadFromRecordCorner
+	goto_if_eq JOHTO_VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, J_CableClub_EventScript_OnLoadFromUnionRoom
+	goto_if_eq JOHTO_VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, J_CableClub_EventScript_OnLoadFromBerryCrush
+	goto_if_eq JOHTO_VAR_CABLE_CLUB_STATE, USING_MINIGAME, J_CableClub_EventScript_OnLoadFromGameCorner
 	end
 
 J_CableClub_EventScript_OnLoadFromColosseum::
@@ -104,15 +104,15 @@ J_CableClub_EventScript_OnLoadFromGameCorner::
 	end
 
 J_CableClub_OnFrame:
-	map_script_2 20669, 1, J_CableClub_EventScript_Tutorial
-	map_script_2 20599, 1, J_CableClub_EventScript_ExitLinkRoom
-	map_script_2 20599, 2, J_CableClub_EventScript_ExitLinkRoom
-	map_script_2 20599, 5, J_CableClub_EventScript_ExitLinkRoom
-	map_script_2 20599, 3, J_CableClub_EventScript_ExitTradeCenter
-	map_script_2 20599, 4, J_CableClub_EventScript_ExitRecordCorner
-	map_script_2 20599, 6, J_CableClub_EventScript_ExitUnionRoom
-	map_script_2 20599, 7, J_CableClub_EventScript_ExitLinkRoom
-	map_script_2 20599, 8, J_CableClub_EventScript_ExitMinigameRoom
+	map_script_2 JOHTO_VAR_CABLE_CLUB_TUTORIAL_STATE, 1, J_CableClub_EventScript_Tutorial
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, J_CableClub_EventScript_ExitLinkRoom
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, J_CableClub_EventScript_ExitLinkRoom
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_MULTI_BATTLE, J_CableClub_EventScript_ExitLinkRoom
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_TRADE_CENTER, J_CableClub_EventScript_ExitTradeCenter
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_RECORD_CORNER, J_CableClub_EventScript_ExitRecordCorner
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_UNION_ROOM, J_CableClub_EventScript_ExitUnionRoom
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_BERRY_CRUSH, J_CableClub_EventScript_ExitLinkRoom
+	map_script_2 JOHTO_VAR_CABLE_CLUB_STATE, USING_MINIGAME, J_CableClub_EventScript_ExitMinigameRoom
 	.2byte 0
 
 J_CableClub_EventScript_ExitLinkRoom::
@@ -120,7 +120,7 @@ J_CableClub_EventScript_ExitLinkRoom::
 	call J_CableClub_EventScript_CloseLinkAndExitLinkRoom
 	call J_CableClub_EventScript_CloseDirectCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	erasebox 0, 0, 29, 19
 	releaseall
 	end
@@ -130,20 +130,20 @@ J_CableClub_EventScript_ExitMinigameRoom::
 	call J_CableClub_EventScript_CloseLinkAndExitLinkRoom
 	call J_EventScript_CloseMossdeepGameCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	erasebox 0, 0, 29, 19
 	releaseall
 	end
 
 J_CableClub_EventScript_CloseLinkAndExitLinkRoom::
 	special CloseLink
-	setvar 20599, 0
-	goto_if_eq 32775, 0, J_CableClub_EventScript_PlayerExitLinkRoom
-	applymovement 32775, J_Movement_AttendantFaceLeft
+	setvar JOHTO_VAR_CABLE_CLUB_STATE, 0
+	goto_if_eq VAR_0x8007, 0, J_CableClub_EventScript_PlayerExitLinkRoom
+	applymovement VAR_0x8007, J_Movement_AttendantFaceLeft
 	waitmovement 0
-	applymovement 255, J_Movement_PlayerExitLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerExitLinkRoom
 	waitmovement 0
-	applymovement 32775, J_Movement_AttendantFaceDown
+	applymovement VAR_0x8007, J_Movement_AttendantFaceDown
 	waitmovement 0
 	return
 
@@ -152,18 +152,18 @@ J_CableClub_EventScript_ExitTradeCenter::
 	call J_CableClub_EventScript_PlayerExitTradeCenter
 	call J_CableClub_EventScript_CloseDirectCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	erasebox 0, 0, 29, 19
 	releaseall
 	end
 
 J_CableClub_EventScript_PlayerExitTradeCenter::
 	special CloseLink
-	setvar 20599, 0
-	goto_if_eq 32775, 0, J_CableClub_EventScript_PlayerExitLinkRoom
-	applymovement 255, J_Movement_PlayerFaceAttendantRight
+	setvar JOHTO_VAR_CABLE_CLUB_STATE, 0
+	goto_if_eq VAR_0x8007, 0, J_CableClub_EventScript_PlayerExitLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerFaceAttendantRight
 	waitmovement 0
-	applymovement 32775, J_Movement_AttendantFaceLeft
+	applymovement VAR_0x8007, J_Movement_AttendantFaceLeft
 	waitmovement 0
 	call J_CableClub_EventScript_TrainerCardDataOverwritten
 	return
@@ -173,18 +173,18 @@ J_CableClub_EventScript_ExitRecordCorner::
 	call J_CableClub_EventScript_PlayerExitRecordCorner
 	call J_CableClub_EventScript_CloseDirectCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	erasebox 0, 0, 29, 19
 	releaseall
 	end
 
 J_CableClub_EventScript_PlayerExitRecordCorner::
 	special CloseLink
-	setvar 20599, 0
-	applymovement 255, J_Movement_PlayerExitLinkRoom
+	setvar JOHTO_VAR_CABLE_CLUB_STATE, 0
+	applymovement LOCALID_PLAYER, J_Movement_PlayerExitLinkRoom
 	waitmovement 0
-	goto_if_eq 32775, 0, J_CableClub_EventScript_ExitRecordCornerRet
-	applymovement 32775, J_Movement_AttendantFaceDown
+	goto_if_eq VAR_0x8007, 0, J_CableClub_EventScript_ExitRecordCornerRet
+	applymovement VAR_0x8007, J_Movement_AttendantFaceDown
 	waitmovement 0
 
 J_CableClub_EventScript_ExitRecordCornerRet::
@@ -195,17 +195,17 @@ J_CableClub_EventScript_ExitUnionRoom::
 	call J_CableClub_EventScript_PlayerExitUnionRoom
 	call J_CableClub_EventScript_CloseUnionRoomBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	erasebox 0, 0, 29, 19
 	releaseall
 	end
 
 J_CableClub_EventScript_PlayerExitUnionRoom::
-	setvar 20599, 0
-	goto_if_eq 32775, 0, J_CableClub_EventScript_PlayerExitLinkRoom
-	applymovement 255, J_Movement_PlayerFaceAttendantRight
+	setvar JOHTO_VAR_CABLE_CLUB_STATE, 0
+	goto_if_eq VAR_0x8007, 0, J_CableClub_EventScript_PlayerExitLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerFaceAttendantRight
 	waitmovement 0
-	applymovement 32775, J_Movement_AttendantFaceLeft
+	applymovement VAR_0x8007, J_Movement_AttendantFaceLeft
 	waitmovement 0
 	call J_CableClub_EventScript_TrainerCardDataOverwritten
 	return
@@ -213,32 +213,32 @@ J_CableClub_EventScript_PlayerExitUnionRoom::
 J_CableClub_EventScript_TrainerCardDataOverwritten::
 	message J_CableClub_Text_TrainerCardDataOverwritten
 	waitmessage
-	playse 21
+	playse SE_PIN
 	delay 60
 	message J_CableClub_Text_HopeToSeeYouAgain
 	waitmessage
-	applymovement 255, J_Movement_PlayerExitLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerExitLinkRoom
 	waitmovement 0
-	applymovement 32775, J_Movement_AttendantFaceDown
+	applymovement VAR_0x8007, J_Movement_AttendantFaceDown
 	waitmovement 0
 	return
 
 J_CableClub_EventScript_PlayerExitLinkRoom::
-	applymovement 255, J_Movement_PlayerExitLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerExitLinkRoom
 	waitmovement 0
 	return
 
 J_CableClub_EventScript_Tutorial::
 	lockall
-	applymovement 255, J_Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox J_CableClub_Text_FirstTimeRightThisWay, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, J_CableClub_Movement_PlayerApproachCounter
+	applymovement LOCALID_PLAYER, J_CableClub_Movement_PlayerApproachCounter
 	waitmovement 0
 	delay 30
 	msgbox J_CableClub_Text_ExplainWirelessClubFirstTime, MSGBOX_DEFAULT
-	setvar 20669, 2
+	setvar JOHTO_VAR_CABLE_CLUB_TUTORIAL_STATE, 2
 	releaseall
 	end
 
@@ -260,42 +260,42 @@ J_CableClub_EventScript_UnusedWelcomeToCableClub::
 	end
 
 J_CableClub_EventScript_SelectCableClubRoom::
-	setvar 32772, 0
-	goto_if_set 0, J_CableClub_EventScript_CableClubUnlockedRecordCorner
-	multichoice 0, 0, 74, FALSE
-	switch 32781
+	setvar VAR_0x8004, 0
+	goto_if_set FLAG_VISITED_MAUVILLE_CITY, J_CableClub_EventScript_CableClubUnlockedRecordCorner
+	multichoice 0, 0, MULTI_CABLE_CLUB_NO_RECORD_MIX, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_TradeCenter
 	case 1, J_CableClub_EventScript_Colosseum
 	case 2, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_CableClubUnlockedRecordCorner::
-	multichoice 0, 0, 76, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_CABLE_CLUB_WITH_RECORD_MIX, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_TradeCenter
 	case 1, J_CableClub_EventScript_Colosseum
 	case 2, J_CableClub_EventScript_RecordCorner
 	case 3, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_Colosseum::
-	copyvar 32775, 32783
+	copyvar VAR_0x8007, VAR_LAST_TALKED
 	goto J_CableClub_EventScript_SelectBattleMode
 	end
 
 J_CableClub_EventScript_SelectBattleMode::
 	message J_CableClub_Text_PlayWhichBattleMode
 	waitmessage
-	multichoice 0, 0, 18, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_BATTLE_MODE, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_SingleBattleMode
 	case 1, J_CableClub_EventScript_DoubleBattleMode
 	case 2, J_CableClub_EventScript_MultiBattleMode
 	case 3, J_CableClub_EventScript_BattleModeInfo
 	case 4, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_BattleModeInfo::
@@ -304,14 +304,14 @@ J_CableClub_EventScript_BattleModeInfo::
 	end
 
 J_CableClub_EventScript_SingleBattleMode::
-	setvar 32772, 1
+	setvar VAR_0x8004, USING_SINGLE_BATTLE
 	goto J_CableClub_EventScript_TryEnterColosseum
 	end
 
 J_CableClub_EventScript_DoubleBattleMode::
 	special HasEnoughMonsForDoubleBattle
-	goto_if_ne 32781, 0, J_CableClub_EventScript_NeedTwoMonsForDoubleBattle
-	setvar 32772, 2
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, J_CableClub_EventScript_NeedTwoMonsForDoubleBattle
+	setvar VAR_0x8004, USING_DOUBLE_BATTLE
 	goto J_CableClub_EventScript_TryEnterColosseum
 	end
 
@@ -321,50 +321,50 @@ J_CableClub_EventScript_NeedTwoMonsForDoubleBattle::
 	end
 
 J_CableClub_EventScript_MultiBattleMode::
-	setvar 32772, 5
+	setvar VAR_0x8004, USING_MULTI_BATTLE
 	goto J_CableClub_EventScript_TryEnterColosseum
 	end
 
 J_CableClub_EventScript_TryEnterColosseum::
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, 0, J_CableClub_EventScript_AbortLink
 	message J_gText_PleaseWaitForLink
 	waitmessage
 	special TryBattleLinkup
 	waitstate
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterColosseum
-	goto_if_eq 32781, 2, J_CableClub_EventScript_AbortLinkSomeoneNotReady
-	goto_if_eq 32781, 3, J_CableClub_EventScript_AbortLinkDifferentSelections
-	goto_if_eq 32781, 4, J_CableClub_EventScript_AbortLinkIncorrectNumberOfBattlers
-	goto_if_eq 32781, 5, J_CableClub_EventScript_AbortLink
-	goto_if_eq 32781, 6, J_CableClub_EventScript_AbortLinkConnectionError
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterColosseum
+	goto_if_eq VAR_RESULT, LINKUP_SOMEONE_NOT_READY, J_CableClub_EventScript_AbortLinkSomeoneNotReady
+	goto_if_eq VAR_RESULT, LINKUP_DIFF_SELECTIONS, J_CableClub_EventScript_AbortLinkDifferentSelections
+	goto_if_eq VAR_RESULT, LINKUP_WRONG_NUM_PLAYERS, J_CableClub_EventScript_AbortLinkIncorrectNumberOfBattlers
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, LINKUP_CONNECTION_ERROR, J_CableClub_EventScript_AbortLinkConnectionError
 	end
 
 J_CableClub_EventScript_EnterColosseum::
 	special HealPlayerParty
 	special SavePlayerParty
 	special LoadPlayerBag
-	copyvar 20599, 32772
+	copyvar JOHTO_VAR_CABLE_CLUB_STATE, VAR_0x8004
 	messageautoscroll J_CableClub_Text_PleaseEnter
 	waitmessage
 	call J_CableClub_EventScript_OpenDirectCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	delay 60
-	applymovement 32783, J_Movement_AttendantFaceLeft
+	applymovement VAR_LAST_TALKED, J_Movement_AttendantFaceLeft
 	waitmovement 0
 	closemessage
-	applymovement 255, J_Movement_PlayerApproachLinkRoomLeft
+	applymovement LOCALID_PLAYER, J_Movement_PlayerApproachLinkRoomLeft
 	waitmovement 0
 	opendoor 9, 1
 	waitdooranim
-	applymovement 255, J_Movement_PlayerEnterLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerEnterLinkRoom
 	waitmovement 0
 	hideplayer
 	closedoor 9, 1
 	waitdooranim
 	release
-	goto_if_eq 32772, 5, J_CableClub_EventScript_WarpTo4PColosseum
+	goto_if_eq VAR_0x8004, USING_MULTI_BATTLE, J_CableClub_EventScript_WarpTo4PColosseum
 	special SetCableClubWarp
 	warp MAP_BATTLE_COLOSSEUM_2P, 6, 8
 	special DoCableClubWarp
@@ -372,7 +372,7 @@ J_CableClub_EventScript_EnterColosseum::
 	end
 
 J_CableClub_EventScript_PlayerApproachLinkRoomRight::
-	applymovement 255, J_Movement_PlayerApproachLinkRoomRight
+	applymovement LOCALID_PLAYER, J_Movement_PlayerApproachLinkRoomRight
 	waitmovement 0
 	return
 
@@ -384,10 +384,10 @@ J_CableClub_EventScript_WarpTo4PColosseum::
 	end
 
 J_CableClub_EventScript_AbortLinkIncorrectNumberOfBattlers::
-	switch 32772
-	case 1, J_CableClub_EventScript_AbortLinkWrongNumberForSingleBattle
-	case 2, J_CableClub_EventScript_AbortLinkWrongNumberForDoubleBattle
-	case 5, J_CableClub_EventScript_AbortLinkNeedFourPlayers
+	switch VAR_0x8004
+	case USING_SINGLE_BATTLE, J_CableClub_EventScript_AbortLinkWrongNumberForSingleBattle
+	case USING_DOUBLE_BATTLE, J_CableClub_EventScript_AbortLinkWrongNumberForDoubleBattle
+	case USING_MULTI_BATTLE, J_CableClub_EventScript_AbortLinkNeedFourPlayers
 	goto J_CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants
 	end
 
@@ -416,42 +416,42 @@ J_CableClub_EventScript_ConfirmNumberAndRestart::
 	end
 
 J_CableClub_EventScript_TradeCenter::
-	copyvar 32775, 32783
+	copyvar VAR_0x8007, VAR_LAST_TALKED
 	call J_CableClub_EventScript_CheckPartyTradeRequirements
-	goto_if_eq 32781, 0, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, 0, J_CableClub_EventScript_AbortLink
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, 0, J_CableClub_EventScript_AbortLink
 	message J_gText_PleaseWaitForLink
 	waitmessage
 	special TryTradeLinkup
 	waitstate
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterTradeCenter
-	goto_if_eq 32781, 2, J_CableClub_EventScript_AbortLinkSomeoneNotReady
-	goto_if_eq 32781, 3, J_CableClub_EventScript_AbortLinkDifferentSelections
-	goto_if_eq 32781, 4, J_CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants
-	goto_if_eq 32781, 5, J_CableClub_EventScript_AbortLink
-	goto_if_eq 32781, 6, J_CableClub_EventScript_AbortLinkConnectionError
-	goto_if_eq 32781, 7, J_CableClub_EventScript_AbortLinkPlayerNotReady
-	goto_if_eq 32781, 9, J_CableClub_EventScript_AbortLinkOtherTrainerNotReady
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterTradeCenter
+	goto_if_eq VAR_RESULT, LINKUP_SOMEONE_NOT_READY, J_CableClub_EventScript_AbortLinkSomeoneNotReady
+	goto_if_eq VAR_RESULT, LINKUP_DIFF_SELECTIONS, J_CableClub_EventScript_AbortLinkDifferentSelections
+	goto_if_eq VAR_RESULT, LINKUP_WRONG_NUM_PLAYERS, J_CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, LINKUP_CONNECTION_ERROR, J_CableClub_EventScript_AbortLinkConnectionError
+	goto_if_eq VAR_RESULT, LINKUP_PLAYER_NOT_READY, J_CableClub_EventScript_AbortLinkPlayerNotReady
+	goto_if_eq VAR_RESULT, LINKUP_PARTNER_NOT_READY, J_CableClub_EventScript_AbortLinkOtherTrainerNotReady
 	end
 
 J_CableClub_EventScript_EnterTradeCenter::
-	setvar 32772, 3
-	copyvar 20599, 32772
+	setvar VAR_0x8004, USING_TRADE_CENTER
+	copyvar JOHTO_VAR_CABLE_CLUB_STATE, VAR_0x8004
 	messageautoscroll J_CableClub_Text_PleaseEnter
 	waitmessage
 	call J_CableClub_EventScript_OpenDirectCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	delay 60
-	applymovement 32783, J_Movement_AttendantFaceLeft
+	applymovement VAR_LAST_TALKED, J_Movement_AttendantFaceLeft
 	waitmovement 0
 	closemessage
-	applymovement 255, J_Movement_PlayerApproachLinkRoomLeft
+	applymovement LOCALID_PLAYER, J_Movement_PlayerApproachLinkRoomLeft
 	waitmovement 0
 	opendoor 9, 1
 	waitdooranim
-	applymovement 255, J_Movement_PlayerEnterLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerEnterLinkRoom
 	waitmovement 0
 	hideplayer
 	closedoor 9, 1
@@ -464,59 +464,59 @@ J_CableClub_EventScript_EnterTradeCenter::
 	end
 
 J_CableClub_EventScript_CheckPartyTradeRequirements::
-	specialvar 32781, CalculatePlayerPartyCount
-	goto_if_lt 32781, 2, J_CableClub_EventScript_NeedTwoMonsToTrade
-	specialvar 32781, DoesPartyHaveEnigmaBerry
-	goto_if_eq 32781, TRUE, J_CableClub_EventScript_CantTradeEnigmaBerry
-	setvar 32781, 1
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	goto_if_lt VAR_RESULT, 2, J_CableClub_EventScript_NeedTwoMonsToTrade
+	specialvar VAR_RESULT, DoesPartyHaveEnigmaBerry
+	goto_if_eq VAR_RESULT, TRUE, J_CableClub_EventScript_CantTradeEnigmaBerry
+	setvar VAR_RESULT, 1
 	return
 
 J_CableClub_EventScript_NeedTwoMonsToTrade::
 	msgbox J_CableClub_Text_NeedTwoMonsToTrade, MSGBOX_DEFAULT
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	return
 
 J_CableClub_EventScript_CantTradeEnigmaBerry::
 	msgbox J_CableClub_Text_CantTradeEnigmaBerry, MSGBOX_DEFAULT
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	return
 
 J_CableClub_EventScript_RecordCorner::
-	copyvar 32775, 32783
+	copyvar VAR_0x8007, VAR_LAST_TALKED
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, 0, J_CableClub_EventScript_AbortLink
 	message J_gText_PleaseWaitForLink
 	waitmessage
 	special TryRecordMixLinkup
 	waitstate
 	special ValidateMixingGameLanguage
 	waitstate
-	goto_if_eq 32781, 12, J_CableClub_EventScript_AbortLinkForeignGame
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterRecordCorner
-	goto_if_eq 32781, 2, J_CableClub_EventScript_AbortLinkSomeoneNotReady
-	goto_if_eq 32781, 3, J_CableClub_EventScript_AbortLinkDifferentSelections
-	goto_if_eq 32781, 4, J_CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants
-	goto_if_eq 32781, 5, J_CableClub_EventScript_AbortLink
-	goto_if_eq 32781, 6, J_CableClub_EventScript_AbortLinkConnectionError
+	goto_if_eq VAR_RESULT, LINKUP_FOREIGN_GAME, J_CableClub_EventScript_AbortLinkForeignGame
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterRecordCorner
+	goto_if_eq VAR_RESULT, LINKUP_SOMEONE_NOT_READY, J_CableClub_EventScript_AbortLinkSomeoneNotReady
+	goto_if_eq VAR_RESULT, LINKUP_DIFF_SELECTIONS, J_CableClub_EventScript_AbortLinkDifferentSelections
+	goto_if_eq VAR_RESULT, LINKUP_WRONG_NUM_PLAYERS, J_CableClub_EventScript_AbortLinkIncorrectNumberOfParticipants
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, LINKUP_CONNECTION_ERROR, J_CableClub_EventScript_AbortLinkConnectionError
 	end
 
 J_CableClub_EventScript_EnterRecordCorner::
-	setvar 32772, 4
-	copyvar 20599, 32772
+	setvar VAR_0x8004, USING_RECORD_CORNER
+	copyvar JOHTO_VAR_CABLE_CLUB_STATE, VAR_0x8004
 	messageautoscroll J_CableClub_Text_PleaseEnter
 	waitmessage
 	call J_CableClub_EventScript_OpenDirectCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	delay 60
-	applymovement 32783, J_Movement_AttendantFaceLeft
+	applymovement VAR_LAST_TALKED, J_Movement_AttendantFaceLeft
 	waitmovement 0
 	closemessage
-	applymovement 255, J_Movement_PlayerApproachLinkRoomLeft
+	applymovement LOCALID_PLAYER, J_Movement_PlayerApproachLinkRoomLeft
 	waitmovement 0
 	opendoor 9, 1
 	waitdooranim
-	applymovement 255, J_Movement_PlayerEnterLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerEnterLinkRoom
 	waitmovement 0
 	hideplayer
 	closedoor 9, 1
@@ -654,7 +654,7 @@ J_Movement_PlayerEnterMinigameRoom:
 
 J_EventScript_CableBoxResults::
 	lockall
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	special ShowLinkBattleRecords
 	waitbuttonpress
 	special RemoveRecordsWindow
@@ -662,53 +662,53 @@ J_EventScript_CableBoxResults::
 	end
 
 J_EventScript_BattleColosseum_2P_PlayerSpot0::
-	setvar 32773, 0
+	setvar VAR_0x8005, 0
 	special ColosseumPlayerSpotTriggered
 	waitstate
 	end
 
 J_EventScript_BattleColosseum_2P_PlayerSpot1::
-	setvar 32773, 1
+	setvar VAR_0x8005, 1
 	special ColosseumPlayerSpotTriggered
 	waitstate
 	end
 
 J_EventScript_BattleColosseum_4P_PlayerSpot0::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
-	goto_if_eq 32781, 0, J_EventScript_BattleColosseum_4P_CancelSpotTrigger
-	setvar 32773, 0
+	goto_if_eq VAR_RESULT, 0, J_EventScript_BattleColosseum_4P_CancelSpotTrigger
+	setvar VAR_0x8005, 0
 	special ColosseumPlayerSpotTriggered
 	waitstate
 	end
 
 J_EventScript_BattleColosseum_4P_PlayerSpot1::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
-	goto_if_eq 32781, 0, J_EventScript_BattleColosseum_4P_CancelSpotTrigger
-	setvar 32773, 1
+	goto_if_eq VAR_RESULT, 0, J_EventScript_BattleColosseum_4P_CancelSpotTrigger
+	setvar VAR_0x8005, 1
 	special ColosseumPlayerSpotTriggered
 	waitstate
 	end
 
 J_EventScript_BattleColosseum_4P_PlayerSpot2::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
-	goto_if_eq 32781, 0, J_EventScript_BattleColosseum_4P_CancelSpotTrigger
-	setvar 32773, 2
+	goto_if_eq VAR_RESULT, 0, J_EventScript_BattleColosseum_4P_CancelSpotTrigger
+	setvar VAR_0x8005, 2
 	special ColosseumPlayerSpotTriggered
 	waitstate
 	end
 
 J_EventScript_BattleColosseum_4P_PlayerSpot3::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
-	goto_if_eq 32781, 0, J_EventScript_BattleColosseum_4P_CancelSpotTrigger
-	setvar 32773, 3
+	goto_if_eq VAR_RESULT, 0, J_EventScript_BattleColosseum_4P_CancelSpotTrigger
+	setvar VAR_0x8005, 3
 	special ColosseumPlayerSpotTriggered
 	waitstate
 	end
@@ -717,59 +717,59 @@ J_EventScript_BattleColosseum_4P_CancelSpotTrigger::
 	end
 
 J_EventScript_TradeCenter_Chair0::
-	setvar 32773, 0
+	setvar VAR_0x8005, 0
 	special PlayerEnteredTradeSeat
 	waitstate
 	end
 
 J_EventScript_TradeCenter_Chair1::
-	setvar 32773, 1
+	setvar VAR_0x8005, 1
 	special PlayerEnteredTradeSeat
 	waitstate
 	end
 
 J_EventScript_TradeCenter_Chair2::
-	setvar 32773, 2
+	setvar VAR_0x8005, 2
 	special PlayerEnteredTradeSeat
 	waitstate
 	end
 
 J_EventScript_TradeCenter_Chair3::
-	setvar 32773, 3
+	setvar VAR_0x8005, 3
 	special PlayerEnteredTradeSeat
 	waitstate
 	end
 
 J_EventScript_RecordCenter_Spot0::
-	setvar 32773, 0
+	setvar VAR_0x8005, 0
 	special RecordMixingPlayerSpotTriggered
 	waitstate
-	goto_if_ne 16385, ITEM_NONE, J_RecordCorner_EventScript_ReceivedGiftItem
+	goto_if_ne VAR_TEMP_RECORD_MIX_GIFT_ITEM, ITEM_NONE, J_RecordCorner_EventScript_ReceivedGiftItem
 	end
 
 J_EventScript_RecordCenter_Spot1::
-	setvar 32773, 1
+	setvar VAR_0x8005, 1
 	special RecordMixingPlayerSpotTriggered
 	waitstate
-	goto_if_ne 16385, ITEM_NONE, J_RecordCorner_EventScript_ReceivedGiftItem
+	goto_if_ne VAR_TEMP_RECORD_MIX_GIFT_ITEM, ITEM_NONE, J_RecordCorner_EventScript_ReceivedGiftItem
 	end
 
 J_EventScript_RecordCenter_Spot2::
-	setvar 32773, 2
+	setvar VAR_0x8005, 2
 	special RecordMixingPlayerSpotTriggered
 	waitstate
-	goto_if_ne 16385, ITEM_NONE, J_RecordCorner_EventScript_ReceivedGiftItem
+	goto_if_ne VAR_TEMP_RECORD_MIX_GIFT_ITEM, ITEM_NONE, J_RecordCorner_EventScript_ReceivedGiftItem
 	end
 
 J_EventScript_RecordCenter_Spot3::
-	setvar 32773, 3
+	setvar VAR_0x8005, 3
 	special RecordMixingPlayerSpotTriggered
 	waitstate
-	goto_if_ne 16385, ITEM_NONE, J_RecordCorner_EventScript_ReceivedGiftItem
+	goto_if_ne VAR_TEMP_RECORD_MIX_GIFT_ITEM, ITEM_NONE, J_RecordCorner_EventScript_ReceivedGiftItem
 	end
 
 J_RecordCorner_EventScript_ReceivedGiftItem::
-	bufferitemname STR_VAR_2, 16385
+	bufferitemname STR_VAR_2, VAR_TEMP_RECORD_MIX_GIFT_ITEM
 	message J_RecordCorner_Text_PlayerSentOverOneX
 	waitmessage
 	waitbuttonpress
@@ -778,14 +778,14 @@ J_RecordCorner_EventScript_ReceivedGiftItem::
 
 J_CableClub_EventScript_ReadTrainerCard::
 	msgbox J_CableClub_Text_GotToLookAtTrainerCard, MSGBOX_DEFAULT
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special Script_ShowLinkTrainerCard
 	waitstate
 	end
 
 J_CableClub_EventScript_ReadTrainerCardColored::
 	msgbox J_CableClub_Text_GotToLookAtColoredTrainerCard, MSGBOX_DEFAULT
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special Script_ShowLinkTrainerCard
 	waitstate
 	end
@@ -810,7 +810,7 @@ J_TradeCenter_EventScript_Attendant::
 	end
 
 J_RecordCorner_EventScript_Attendant::
-	goto_if_ne 16384, 0, J_RecordCorner_EventScript_AlreadyMixed
+	goto_if_ne VAR_TEMP_MIXED_RECORDS, 0, J_RecordCorner_EventScript_AlreadyMixed
 	special Script_FacePlayer
 	message J_RecordCorner_Text_TakeSeatAndWait
 	waitmessage
@@ -830,7 +830,7 @@ J_RecordCorner_EventScript_AlreadyMixed::
 
 J_EventScript_ConfirmLeaveCableClubRoom::
 	msgbox J_Text_TerminateLinkConfirmation, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_EventScript_TerminateLink
+	goto_if_eq VAR_RESULT, YES, J_EventScript_TerminateLink
 	erasebox 0, 0, 29, 19
 	releaseall
 	end
@@ -850,25 +850,25 @@ J_EventScript_DoLinkRoomExit::
 J_CableClub_EventScript_UnionRoomAttendant::
 	lock
 	faceplayer
-	setvar 20671, 8
-	goto_if_unset 2089, J_CableClub_EventScript_WirelessClubAdjustements
-	specialvar 32781, IsBadEggInParty
-	goto_if_eq 32781, TRUE, J_CableClub_EventScript_AbortLinkPlayerHasBadEgg
-	copyvar 32775, 32783
-	specialvar 32781, IsWirelessAdapterConnected
-	goto_if_eq 32781, FALSE, J_CableClub_EventScript_UnionRoomAdapterNotConnected
+	setvar JOHTO_VAR_FRONTIER_FACILITY, FACILITY_UNION_ROOM
+	goto_if_unset FLAG_SYS_POKEDEX_GET, J_CableClub_EventScript_WirelessClubAdjustements
+	specialvar VAR_RESULT, IsBadEggInParty
+	goto_if_eq VAR_RESULT, TRUE, J_CableClub_EventScript_AbortLinkPlayerHasBadEgg
+	copyvar VAR_0x8007, VAR_LAST_TALKED
+	specialvar VAR_RESULT, IsWirelessAdapterConnected
+	goto_if_eq VAR_RESULT, FALSE, J_CableClub_EventScript_UnionRoomAdapterNotConnected
 	message J_CableClub_Text_WelcomeUnionRoomEnter
 	waitmessage
 	goto J_CableClub_EventScript_UnionRoomSelect
 	end
 
 J_CableClub_EventScript_UnionRoomSelect::
-	multichoice 17, 6, 17, FALSE
-	switch 32781
+	multichoice 17, 6, MULTI_YESNOINFO, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_EnterUnionRoom
 	case 1, J_CableClub_EventScript_AbortLink
 	case 2, J_CableClub_EventScript_UnionRoomInfo
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_UnionRoomInfo::
@@ -879,25 +879,25 @@ J_CableClub_EventScript_UnionRoomInfo::
 
 J_CableClub_EventScript_EnterUnionRoom::
 	call J_CableClub_EventScript_CheckPartyUnionRoomRequirements
-	goto_if_eq 32781, 0, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, 0, J_CableClub_EventScript_AbortLink
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, 0, J_CableClub_EventScript_AbortLink
 	msgbox J_CableClub_Text_EnjoyUnionRoom, MSGBOX_DEFAULT
 	closemessage
 	special HealPlayerParty
-	setvar 32772, 6
-	copyvar 20599, 32772
+	setvar VAR_0x8004, USING_UNION_ROOM
+	copyvar JOHTO_VAR_CABLE_CLUB_STATE, VAR_0x8004
 	call J_CableClub_EventScript_OpenUnionRoomBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	delay 60
-	applymovement 32783, J_Movement_AttendantFaceLeft
+	applymovement VAR_LAST_TALKED, J_Movement_AttendantFaceLeft
 	waitmovement 0
-	applymovement 255, J_Movement_PlayerApproachLinkRoomLeft
+	applymovement LOCALID_PLAYER, J_Movement_PlayerApproachLinkRoomLeft
 	waitmovement 0
 	opendoor 5, 1
 	waitdooranim
-	applymovement 255, J_Movement_PlayerEnterLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerEnterLinkRoom
 	waitmovement 0
 	hideplayer
 	closedoor 5, 1
@@ -911,11 +911,11 @@ J_CableClub_EventScript_EnterUnionRoom::
 	end
 
 J_CableClub_EventScript_CheckPartyUnionRoomRequirements::
-	specialvar 32781, CountPartyNonEggMons
-	goto_if_lt 32781, 2, J_CableClub_EventScript_NeedTwoMonsForUnionRoom
-	specialvar 32781, DoesPartyHaveEnigmaBerry
-	goto_if_eq 32781, TRUE, J_CableClub_EventScript_NoEnigmaBerryInUnionRoom
-	setvar 32781, 1
+	specialvar VAR_RESULT, CountPartyNonEggMons
+	goto_if_lt VAR_RESULT, 2, J_CableClub_EventScript_NeedTwoMonsForUnionRoom
+	specialvar VAR_RESULT, DoesPartyHaveEnigmaBerry
+	goto_if_eq VAR_RESULT, TRUE, J_CableClub_EventScript_NoEnigmaBerryInUnionRoom
+	setvar VAR_RESULT, 1
 	return
 
 J_CableClub_EventScript_NeedTwoMonsForUnionRoom::
@@ -936,9 +936,9 @@ J_CableClub_EventScript_UnionRoomAdapterNotConnected::
 J_CableClub_EventScript_WirelessClubAttendant::
 	lock
 	faceplayer
-	goto_if_unset 2089, J_CableClub_EventScript_WirelessClubAdjustements
+	goto_if_unset FLAG_SYS_POKEDEX_GET, J_CableClub_EventScript_WirelessClubAdjustements
 	msgbox J_CableClub_Text_AskAboutLinking, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_CableClub_EventScript_DontAskAboutLinking
+	goto_if_eq VAR_RESULT, NO, J_CableClub_EventScript_DontAskAboutLinking
 	msgbox J_CableClub_Text_ExplainWirelessClub, MSGBOX_DEFAULT
 	release
 	return
@@ -951,12 +951,12 @@ J_CableClub_EventScript_DontAskAboutLinking::
 J_CableClub_EventScript_DirectCornerAttendant::
 	lock
 	faceplayer
-	setvar 20671, 9
-	goto_if_unset 2089, J_CableClub_EventScript_WirelessClubAdjustements
-	specialvar 32781, IsBadEggInParty
-	goto_if_eq 32781, TRUE, J_CableClub_EventScript_AbortLinkPlayerHasBadEgg
-	specialvar 32781, IsWirelessAdapterConnected
-	goto_if_eq 32781, FALSE, J_CableClub_EventScript_WelcomeToCableClub
+	setvar JOHTO_VAR_FRONTIER_FACILITY, FACILITY_MULTI_OR_EREADER
+	goto_if_unset FLAG_SYS_POKEDEX_GET, J_CableClub_EventScript_WirelessClubAdjustements
+	specialvar VAR_RESULT, IsBadEggInParty
+	goto_if_eq VAR_RESULT, TRUE, J_CableClub_EventScript_AbortLinkPlayerHasBadEgg
+	specialvar VAR_RESULT, IsWirelessAdapterConnected
+	goto_if_eq VAR_RESULT, FALSE, J_CableClub_EventScript_WelcomeToCableClub
 	message J_CableClub_Text_WelcomeWhichDirectCornerRoom
 	waitmessage
 	delay 28
@@ -965,79 +965,79 @@ J_CableClub_EventScript_DirectCornerAttendant::
 
 J_CableClub_EventScript_DirectCornerSelectService::
 	checkitem ITEM_POWDER_JAR
-	goto_if_eq 32781, FALSE, J_CableClub_EventScript_DirectCornerNoBerry
-	goto_if_set 0, J_CableClub_EventScript_DirectCornerSelectAllServices
-	multichoice 0, 0, 78, FALSE
-	switch 32781
+	goto_if_eq VAR_RESULT, FALSE, J_CableClub_EventScript_DirectCornerNoBerry
+	goto_if_set FLAG_VISITED_MAUVILLE_CITY, J_CableClub_EventScript_DirectCornerSelectAllServices
+	multichoice 0, 0, MULTI_WIRELESS_NO_RECORD, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_WirelessTrade
 	case 1, J_CableClub_EventScript_WirelessBattleSelect
 	case 2, J_CableClub_EventScript_WirelessBerryCrush
 	case 3, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_DirectCornerSelectAllServices::
-	multichoice 0, 0, 79, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_WIRELESS_ALL_SERVICES, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_WirelessTrade
 	case 1, J_CableClub_EventScript_WirelessBattleSelect
 	case 2, J_CableClub_EventScript_WirelessRecordMix
 	case 3, J_CableClub_EventScript_WirelessBerryCrush
 	case 4, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_DirectCornerNoBerry::
-	goto_if_set 0, J_CableClub_EventScript_DirectCornerHasRecordMix
-	multichoice 0, 0, 75, FALSE
-	switch 32781
+	goto_if_set FLAG_VISITED_MAUVILLE_CITY, J_CableClub_EventScript_DirectCornerHasRecordMix
+	multichoice 0, 0, MULTI_WIRELESS_NO_RECORD_BERRY, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_WirelessTrade
 	case 1, J_CableClub_EventScript_WirelessBattleSelect
 	case 2, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_DirectCornerHasRecordMix::
-	multichoice 0, 0, 77, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_WIRELESS_NO_BERRY, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_WirelessTrade
 	case 1, J_CableClub_EventScript_WirelessBattleSelect
 	case 2, J_CableClub_EventScript_WirelessRecordMix
 	case 3, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_WirelessTrade::
 	msgbox J_CableClub_Text_TradePokemon, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, NO, J_CableClub_EventScript_AbortLink
 	call J_CableClub_EventScript_CheckPartyTradeRequirements
-	goto_if_eq 32781, 0, J_CableClub_EventScript_AbortLink
-	setvar 32772, 3
+	goto_if_eq VAR_RESULT, 0, J_CableClub_EventScript_AbortLink
+	setvar VAR_0x8004, LINK_GROUP_TRADE
 	goto J_CableClub_EventScript_SaveAndChooseLinkLeader
 	end
 
 J_CableClub_EventScript_WirelessBattleSelect::
 	message J_CableClub_Text_PlayWhichBattleMode
 	waitmessage
-	multichoice 0, 0, 18, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_BATTLE_MODE, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_WirelessSingleBattle
 	case 1, J_CableClub_EventScript_WirelessDoubleBattle
 	case 2, J_CableClub_EventScript_WirelessMultiBattle
 	case 3, J_CableClub_EventScript_WirelessBattleInfo
 	case 4, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_WirelessSingleBattle::
-	setvar 32772, 0
+	setvar VAR_0x8004, LINK_GROUP_SINGLE_BATTLE
 	goto J_CableClub_EventScript_SaveAndChooseLinkLeader
 	end
 
 J_CableClub_EventScript_WirelessDoubleBattle::
 	special HasEnoughMonsForDoubleBattle
-	goto_if_ne 32781, 0, J_CableClub_EventScript_TwoMonsNeededForWirelessDoubleBattle
-	setvar 32772, 1
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, J_CableClub_EventScript_TwoMonsNeededForWirelessDoubleBattle
+	setvar VAR_0x8004, LINK_GROUP_DOUBLE_BATTLE
 	goto J_CableClub_EventScript_SaveAndChooseLinkLeader
 	end
 
@@ -1047,7 +1047,7 @@ J_CableClub_EventScript_TwoMonsNeededForWirelessDoubleBattle::
 	end
 
 J_CableClub_EventScript_WirelessMultiBattle::
-	setvar 32772, 2
+	setvar VAR_0x8004, LINK_GROUP_MULTI_BATTLE
 	goto J_CableClub_EventScript_SaveAndChooseLinkLeader
 	end
 
@@ -1058,17 +1058,17 @@ J_CableClub_EventScript_WirelessBattleInfo::
 
 J_CableClub_EventScript_WirelessRecordMix::
 	msgbox J_CableClub_Text_AccessRecordCorner, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_CableClub_EventScript_AbortLink
-	setvar 32772, 12
+	goto_if_eq VAR_RESULT, NO, J_CableClub_EventScript_AbortLink
+	setvar VAR_0x8004, LINK_GROUP_RECORD_CORNER
 	goto J_CableClub_EventScript_SaveAndChooseLinkLeader
 	end
 
 J_CableClub_EventScript_WirelessBerryCrush::
 	msgbox J_CableClub_Text_UseBerryCrush, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_CableClub_EventScript_AbortLink
+	goto_if_eq VAR_RESULT, NO, J_CableClub_EventScript_AbortLink
 	special HasAtLeastOneBerry
-	goto_if_eq 32781, FALSE, J_CableClub_EventScript_NeedBerryForBerryCrush
-	setvar 32772, 5
+	goto_if_eq VAR_RESULT, FALSE, J_CableClub_EventScript_NeedBerryForBerryCrush
+	setvar VAR_0x8004, LINK_GROUP_BERRY_CRUSH
 	goto J_CableClub_EventScript_SaveAndChooseLinkLeader
 	end
 
@@ -1079,94 +1079,94 @@ J_CableClub_EventScript_NeedBerryForBerryCrush::
 
 J_CableClub_EventScript_SaveAndChooseLinkLeader::
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_CableClub_EventScript_AbortLink
-	switch 32772
-	case 3, J_CableClub_EventScript_ChooseLinkLeaderFrom2
-	case 0, J_CableClub_EventScript_ChooseLinkLeaderFrom2
-	case 1, J_CableClub_EventScript_ChooseLinkLeaderFrom2
-	case 2, J_CableClub_EventScript_ChooseLinkLeaderFrom4
-	case 5, J_CableClub_EventScript_ChooseLinkLeader
-	case 12, J_CableClub_EventScript_ChooseLinkLeader
+	goto_if_eq VAR_RESULT, 0, J_CableClub_EventScript_AbortLink
+	switch VAR_0x8004
+	case LINK_GROUP_TRADE, J_CableClub_EventScript_ChooseLinkLeaderFrom2
+	case LINK_GROUP_SINGLE_BATTLE, J_CableClub_EventScript_ChooseLinkLeaderFrom2
+	case LINK_GROUP_DOUBLE_BATTLE, J_CableClub_EventScript_ChooseLinkLeaderFrom2
+	case LINK_GROUP_MULTI_BATTLE, J_CableClub_EventScript_ChooseLinkLeaderFrom4
+	case LINK_GROUP_BERRY_CRUSH, J_CableClub_EventScript_ChooseLinkLeader
+	case LINK_GROUP_RECORD_CORNER, J_CableClub_EventScript_ChooseLinkLeader
 	end
 
 J_CableClub_EventScript_ChooseLinkLeaderFrom2::
 	message J_CableClub_Text_ChooseGroupLeaderOfTwo
 	waitmessage
-	multichoice 16, 6, 81, FALSE
-	switch 32781
+	multichoice 16, 6, MULTI_LINK_LEADER, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_TryJoinGroup2Players
 	case 1, J_CableClub_EventScript_TryLeadGroup2Players
 	case 2, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_TryLeadGroup2Players::
 	call J_CableClub_EventScript_TryBecomeLinkLeader
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterWirelessLinkRoom
-	goto_if_eq 32781, 5, J_CableClub_EventScript_ChooseLinkLeaderFrom2
-	goto_if_eq 32781, 8, J_CableClub_EventScript_TryLeadGroup2Players
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterWirelessLinkRoom
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_ChooseLinkLeaderFrom2
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_CableClub_EventScript_TryLeadGroup2Players
 	release
 	return
 
 J_CableClub_EventScript_TryJoinGroup2Players::
 	call J_CableClub_EventScript_TryJoinLinkGroup
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterWirelessLinkRoom
-	goto_if_eq 32781, 5, J_CableClub_EventScript_ChooseLinkLeaderFrom2
-	goto_if_eq 32781, 8, J_CableClub_EventScript_TryJoinGroup2Players
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterWirelessLinkRoom
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_ChooseLinkLeaderFrom2
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_CableClub_EventScript_TryJoinGroup2Players
 	release
 	return
 
 J_CableClub_EventScript_ChooseLinkLeaderFrom4::
 	message J_CableClub_Text_ChooseGroupLeaderOfFour
 	waitmessage
-	multichoice 16, 6, 81, FALSE
-	switch 32781
+	multichoice 16, 6, MULTI_LINK_LEADER, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_TryJoinGroup4Players
 	case 1, J_CableClub_EventScript_TryLeadGroup4Players
 	case 2, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_TryLeadGroup4Players::
 	call J_CableClub_EventScript_TryBecomeLinkLeader
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterWirelessLinkRoom
-	goto_if_eq 32781, 5, J_CableClub_EventScript_ChooseLinkLeaderFrom4
-	goto_if_eq 32781, 8, J_CableClub_EventScript_TryLeadGroup4Players
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterWirelessLinkRoom
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_ChooseLinkLeaderFrom4
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_CableClub_EventScript_TryLeadGroup4Players
 	release
 	return
 
 J_CableClub_EventScript_TryJoinGroup4Players::
 	call J_CableClub_EventScript_TryJoinLinkGroup
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterWirelessLinkRoom
-	goto_if_eq 32781, 5, J_CableClub_EventScript_ChooseLinkLeaderFrom4
-	goto_if_eq 32781, 8, J_CableClub_EventScript_TryJoinGroup4Players
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterWirelessLinkRoom
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_ChooseLinkLeaderFrom4
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_CableClub_EventScript_TryJoinGroup4Players
 	release
 	return
 
 J_CableClub_EventScript_ChooseLinkLeader::
 	message J_CableClub_Text_ChooseGroupLeader
 	waitmessage
-	multichoice 16, 6, 81, FALSE
-	switch 32781
+	multichoice 16, 6, MULTI_LINK_LEADER, FALSE
+	switch VAR_RESULT
 	case 0, J_CableClub_EventScript_TryJoinGroupXPlayers
 	case 1, J_CableClub_EventScript_TryLeadGroupXPlayers
 	case 2, J_CableClub_EventScript_AbortLink
-	case 127, J_CableClub_EventScript_AbortLink
+	case MULTI_B_PRESSED, J_CableClub_EventScript_AbortLink
 	end
 
 J_CableClub_EventScript_TryLeadGroupXPlayers::
 	call J_CableClub_EventScript_TryBecomeLinkLeader
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterWirelessLinkRoom
-	goto_if_eq 32781, 5, J_CableClub_EventScript_ChooseLinkLeader
-	goto_if_eq 32781, 8, J_CableClub_EventScript_TryLeadGroupXPlayers
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterWirelessLinkRoom
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_ChooseLinkLeader
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_CableClub_EventScript_TryLeadGroupXPlayers
 	release
 	return
 
 J_CableClub_EventScript_TryJoinGroupXPlayers::
 	call J_CableClub_EventScript_TryJoinLinkGroup
-	goto_if_eq 32781, 1, J_CableClub_EventScript_EnterWirelessLinkRoom
-	goto_if_eq 32781, 5, J_CableClub_EventScript_ChooseLinkLeader
-	goto_if_eq 32781, 8, J_CableClub_EventScript_TryJoinGroupXPlayers
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_CableClub_EventScript_EnterWirelessLinkRoom
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_CableClub_EventScript_ChooseLinkLeader
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_CableClub_EventScript_TryJoinGroupXPlayers
 	release
 	return
 
@@ -1185,19 +1185,19 @@ J_CableClub_EventScript_EnterWirelessLinkRoom::
 	waitmessage
 	delay 60
 	closemessage
-	copyvar 32775, 32783
+	copyvar VAR_0x8007, VAR_LAST_TALKED
 	call J_CableClub_EventScript_OpenDirectCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	delay 60
-	applymovement 32783, J_Movement_AttendantFaceLeft
+	applymovement VAR_LAST_TALKED, J_Movement_AttendantFaceLeft
 	waitmovement 0
 	closemessage
-	applymovement 255, J_Movement_PlayerApproachLinkRoomLeft
+	applymovement LOCALID_PLAYER, J_Movement_PlayerApproachLinkRoomLeft
 	waitmovement 0
 	opendoor 9, 1
 	waitdooranim
-	applymovement 255, J_Movement_PlayerEnterLinkRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerEnterLinkRoom
 	waitmovement 0
 	hideplayer
 	closedoor 9, 1
@@ -1208,10 +1208,10 @@ J_CableClub_EventScript_EnterWirelessLinkRoom::
 
 J_EventScript_WirelessBoxResults::
 	lockall
-	goto_if_unset 2089, J_CableClub_EventScript_NotReadyYet
-	specialvar 32781, IsWirelessAdapterConnected
-	goto_if_eq 32781, FALSE, J_CableClub_EventScript_AdapterNotConnected
-	fadescreen 1
+	goto_if_unset FLAG_SYS_POKEDEX_GET, J_CableClub_EventScript_NotReadyYet
+	specialvar VAR_RESULT, IsWirelessAdapterConnected
+	goto_if_eq VAR_RESULT, FALSE, J_CableClub_EventScript_AdapterNotConnected
+	fadescreen FADE_TO_BLACK
 	special ShowWirelessCommunicationScreen
 	waitstate
 	msgbox J_CableClub_Text_ParticipantsStepUpToCounter, MSGBOX_DEFAULT
@@ -1224,33 +1224,33 @@ J_CableClub_EventScript_AdapterNotConnected::
 	end
 
 J_CableClub_EventScript_OpenUnionRoomBarrier::
-	setmetatile 5, 2, 0x2DC, FALSE
-	setmetatile 5, 3, 0x2E4, FALSE
+	setmetatile 5, 2, METATILE_PokemonCenter_Floor_ShadowTop_Alt, FALSE
+	setmetatile 5, 3, METATILE_PokemonCenter_Floor_Plain_Alt, FALSE
 	return
 
 J_CableClub_EventScript_CloseUnionRoomBarrier::
-	setmetatile 5, 2, 0x21E, TRUE
-	setmetatile 5, 3, 0x25D, TRUE
+	setmetatile 5, 2, METATILE_PokemonCenter_Floor_ShadowTop, TRUE
+	setmetatile 5, 3, METATILE_PokemonCenter_CounterBarrier, TRUE
 	return
 
 J_CableClub_EventScript_OpenDirectCornerBarrier::
-	setmetatile 9, 2, 0x2DC, FALSE
-	setmetatile 9, 3, 0x2E4, FALSE
+	setmetatile 9, 2, METATILE_PokemonCenter_Floor_ShadowTop_Alt, FALSE
+	setmetatile 9, 3, METATILE_PokemonCenter_Floor_Plain_Alt, FALSE
 	return
 
 J_CableClub_EventScript_CloseDirectCornerBarrier::
-	setmetatile 9, 2, 0x21E, TRUE
-	setmetatile 9, 3, 0x25D, TRUE
+	setmetatile 9, 2, METATILE_PokemonCenter_Floor_ShadowTop, TRUE
+	setmetatile 9, 3, METATILE_PokemonCenter_CounterBarrier, TRUE
 	return
 
 J_EventScript_OpenMossdeepGameCornerBarrier::
-	setmetatile 5, 2, 0x22C, FALSE
-	setmetatile 5, 3, 0x234, FALSE
+	setmetatile 5, 2, METATILE_MossdeepGameCorner_CounterOpen_Top, FALSE
+	setmetatile 5, 3, METATILE_MossdeepGameCorner_CounterOpen_Bottom, FALSE
 	return
 
 J_EventScript_CloseMossdeepGameCornerBarrier::
-	setmetatile 5, 2, 0x22A, TRUE
-	setmetatile 5, 3, 0x232, TRUE
+	setmetatile 5, 2, METATILE_MossdeepGameCorner_CounterClosed_Top, TRUE
+	setmetatile 5, 3, METATILE_MossdeepGameCorner_CounterClosed_Bottom, TRUE
 	return
 
 J_CableClub_OnResume:
@@ -1266,12 +1266,12 @@ J_MossdeepCity_GameCorner_1F_EventScript_InfoMan2::
 	faceplayer
 	message J_MossdeepCity_GameCorner_1F_Text_DescribeWhichGame
 	waitmessage
-	multichoice 0, 0, 80, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_WIRELESS_MINIGAME, FALSE
+	switch VAR_RESULT
 	case 0, J_MossdeepCity_GameCorner_1F_EventScript_PokemonJumpInfo
 	case 1, J_MossdeepCity_GameCorner_1F_EventScript_DodrioBerryPickingInfo
 	case 2, J_MossdeepCity_GameCorner_1F_EventScript_MinigameInfoExit
-	case 127, J_MossdeepCity_GameCorner_1F_EventScript_MinigameInfoExit
+	case MULTI_B_PRESSED, J_MossdeepCity_GameCorner_1F_EventScript_MinigameInfoExit
 	end
 
 J_MossdeepCity_GameCorner_1F_EventScript_PokemonJumpInfo::
@@ -1294,75 +1294,75 @@ J_MossdeepCity_GameCorner_1F_EventScript_OldMan2::
 	faceplayer
 	message J_MossdeepCity_GameCorner_1F_Text_WelcomeCanYouWait
 	waitmessage
-	specialvar 32781, IsWirelessAdapterConnected
-	goto_if_eq 32781, FALSE, J_MossdeepCity_GameCorner_1F_EventScript_AdapterNotConnected
+	specialvar VAR_RESULT, IsWirelessAdapterConnected
+	goto_if_eq VAR_RESULT, FALSE, J_MossdeepCity_GameCorner_1F_EventScript_AdapterNotConnected
 	delay 60
 	message J_MossdeepCity_GameCorner_1F_Text_PlayWhichGame
 	waitmessage
-	multichoice 0, 0, 80, FALSE
-	switch 32781
+	multichoice 0, 0, MULTI_WIRELESS_MINIGAME, FALSE
+	switch VAR_RESULT
 	case 0, J_MossdeepCity_GameCorner_1F_EventScript_PlayPokemonJump
 	case 1, J_MossdeepCity_GameCorner_1F_EventScript_PlayDodrioBerryPicking
 	case 2, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
-	case 127, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+	case MULTI_B_PRESSED, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
 	end
 
 J_MossdeepCity_GameCorner_1F_EventScript_PlayPokemonJump::
-	setvar 32773, 0
+	setvar VAR_0x8005, 0
 	special IsPokemonJumpSpeciesInParty
-	goto_if_eq 32781, FALSE, J_MossdeepCity_GameCorner_1F_EventScript_DontHaveRequiredMon
+	goto_if_eq VAR_RESULT, FALSE, J_MossdeepCity_GameCorner_1F_EventScript_DontHaveRequiredMon
 	msgbox J_MossdeepCity_GameCorner_1F_Text_EnterWhichPokemon, MSGBOX_DEFAULT
-	fadescreen 1
-	setvar 32773, 0
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8005, 0
 	special ChooseMonForWirelessMinigame
 	waitstate
-	goto_if_ge 32772, 6, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+	goto_if_ge VAR_0x8004, PARTY_SIZE, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
-	setvar 32772, 4
+	goto_if_eq VAR_RESULT, 0, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+	setvar VAR_0x8004, LINK_GROUP_POKEMON_JUMP
 	goto J_MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader
 	end
 
 J_MossdeepCity_GameCorner_1F_EventScript_PlayDodrioBerryPicking::
-	setvar 32773, 1
+	setvar VAR_0x8005, 1
 	special IsDodrioInParty
-	goto_if_eq 32781, FALSE, J_MossdeepCity_GameCorner_1F_EventScript_DontHaveRequiredMon
+	goto_if_eq VAR_RESULT, FALSE, J_MossdeepCity_GameCorner_1F_EventScript_DontHaveRequiredMon
 	msgbox J_MossdeepCity_GameCorner_1F_Text_EnterWhichPokemon, MSGBOX_DEFAULT
-	fadescreen 1
-	setvar 32773, 1
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8005, 1
 	special ChooseMonForWirelessMinigame
 	waitstate
-	goto_if_ge 32772, 6, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+	goto_if_ge VAR_0x8004, PARTY_SIZE, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
-	setvar 32772, 6
+	goto_if_eq VAR_RESULT, 0, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+	setvar VAR_0x8004, LINK_GROUP_BERRY_PICKING
 	goto J_MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader
 	end
 
 J_MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader::
 	message J_CableClub_Text_ChooseGroupLeader
 	waitmessage
-	multichoice 16, 6, 81, FALSE
-	switch 32781
+	multichoice 16, 6, MULTI_LINK_LEADER, FALSE
+	switch VAR_RESULT
 	case 0, J_MossdeepCity_GameCorner_1F_EventScript_TryJoinLinkGroup
 	case 1, J_MossdeepCity_GameCorner_1F_EventScript_TryBecomeLinkLeader
 	case 2, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
-	case 127, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+	case MULTI_B_PRESSED, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
 	end
 
 J_MossdeepCity_GameCorner_1F_EventScript_TryBecomeLinkLeader::
 	call J_CableClub_EventScript_TryBecomeLinkLeader
-	goto_if_eq 32781, 1, J_MossdeepCity_GameCorner_1F_EventScript_EnterMinigameRoom
-	goto_if_eq 32781, 5, J_MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader
-	goto_if_eq 32781, 8, J_MossdeepCity_GameCorner_1F_EventScript_TryBecomeLinkLeader
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_MossdeepCity_GameCorner_1F_EventScript_EnterMinigameRoom
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_MossdeepCity_GameCorner_1F_EventScript_TryBecomeLinkLeader
 	release
 	return
 
 J_MossdeepCity_GameCorner_1F_EventScript_TryJoinLinkGroup::
 	call J_CableClub_EventScript_TryJoinLinkGroup
-	goto_if_eq 32781, 1, J_MossdeepCity_GameCorner_1F_EventScript_EnterMinigameRoom
-	goto_if_eq 32781, 5, J_MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader
-	goto_if_eq 32781, 8, J_MossdeepCity_GameCorner_1F_EventScript_TryJoinLinkGroup
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_MossdeepCity_GameCorner_1F_EventScript_EnterMinigameRoom
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_MossdeepCity_GameCorner_1F_EventScript_TryJoinLinkGroup
 	release
 	return
 
@@ -1371,15 +1371,15 @@ J_MossdeepCity_GameCorner_1F_EventScript_EnterMinigameRoom::
 	waitmessage
 	delay 60
 	closemessage
-	copyvar 32775, 32783
+	copyvar VAR_0x8007, VAR_LAST_TALKED
 	call J_EventScript_OpenMossdeepGameCornerBarrier
 	special DrawWholeMapView
-	playse 36
+	playse SE_CLICK
 	delay 60
-	applymovement 32783, J_Movement_AttendantFaceLeft
+	applymovement VAR_LAST_TALKED, J_Movement_AttendantFaceLeft
 	waitmovement 0
 	closemessage
-	applymovement 255, J_Movement_PlayerEnterMinigameRoom
+	applymovement LOCALID_PLAYER, J_Movement_PlayerEnterMinigameRoom
 	waitmovement 0
 	hideplayer
 	release
@@ -1394,9 +1394,9 @@ J_MossdeepCity_GameCorner_1F_EventScript_AdapterNotConnected::
 
 J_MossdeepCity_GameCorner_1F_EventScript_DontHaveRequiredMon::
 	msgbox J_MossdeepCity_GameCorner_1F_Text_ExplainRequiredMon, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
-	call_if_eq 32773, 0, J_MossdeepCity_GameCorner_1F_EventScript_ExplainPokemonJumpRequirements
-	call_if_eq 32773, 1, J_MossdeepCity_GameCorner_1F_EventScript_ExplainDodrioBerryPickingRequirements
+	goto_if_eq VAR_RESULT, NO, J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
+	call_if_eq VAR_0x8005, 0, J_MossdeepCity_GameCorner_1F_EventScript_ExplainPokemonJumpRequirements
+	call_if_eq VAR_0x8005, 1, J_MossdeepCity_GameCorner_1F_EventScript_ExplainDodrioBerryPickingRequirements
 	goto J_MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
 	end
 

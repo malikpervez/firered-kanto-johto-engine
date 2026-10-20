@@ -4,22 +4,22 @@ GoldenrodCity_RadioTower_2F_hns_MapScripts::
 	.byte 0
 
 GoldenrodRaidoTower2_EventScript_Grunt3::
-	trainerbattle_single 1145, GoldenrodCity_RadioTower_2F_Text_GruntM4Seen, GoldenrodCity_RadioTower_2F_Text_GruntM4Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_3_HNS, GoldenrodCity_RadioTower_2F_Text_GruntM4Seen, GoldenrodCity_RadioTower_2F_Text_GruntM4Beaten
 	msgbox GoldenrodCity_RadioTower_2F_Text_GruntM4After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodRaidoTower2_EventScript_Grunt4::
-	trainerbattle_single 1146, GoldenrodCity_RadioTower_2F_Text_GruntM5Seen, GoldenrodCity_RadioTower_2F_Text_GruntM5Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_4_HNS, GoldenrodCity_RadioTower_2F_Text_GruntM5Seen, GoldenrodCity_RadioTower_2F_Text_GruntM5Beaten
 	msgbox GoldenrodCity_RadioTower_2F_Text_GruntM5After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodRaidoTower2_EventScript_Grunt5::
-	trainerbattle_single 1147, GoldenrodCity_RadioTower_2F_Text_GruntM6Seen, GoldenrodCity_RadioTower_2F_Text_GruntM6Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_5_HNS, GoldenrodCity_RadioTower_2F_Text_GruntM6Seen, GoldenrodCity_RadioTower_2F_Text_GruntM6Beaten
 	msgbox GoldenrodCity_RadioTower_2F_Text_GruntM6After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodRaidoTower2_EventScript_GruntF2::
-	trainerbattle_single 1168, GoldenrodCity_RadioTower_2F_Text_GruntF2Seen, GoldenrodCity_RadioTower_2F_Text_GruntF2Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_26_HNS, GoldenrodCity_RadioTower_2F_Text_GruntF2Seen, GoldenrodCity_RadioTower_2F_Text_GruntF2Beaten
 	msgbox GoldenrodCity_RadioTower_2F_Text_GruntF2After, MSGBOX_AUTOCLOSE
 	end
 
@@ -56,21 +56,21 @@ GoldenrodCity_RadioTower_2F_EventScript_Policeman::
 GoldenrodCity_RadioTower_2F_EventScript_Buena::
 	lock
 	faceplayer
-	goto_if_eq 20569, 6, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
-	goto_if_eq 20569, 7, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
-	goto_if_eq 20569, 8, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
-	goto_if_eq 20569, 9, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
-	goto_if_set 10521, GoldenrodCity_RadioTower_2F_EventScript_BuenaAlreadyPlayed
-	goto_if_unset 10519, GoldenrodCity_RadioTower_2F_EventScript_BuenaNoShow
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 7, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 8, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 9, GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket
+	goto_if_set JOHTO_FLAG_DAILY_BUENAS_PASSWORD_GUESSED, GoldenrodCity_RadioTower_2F_EventScript_BuenaAlreadyPlayed
+	goto_if_unset JOHTO_FLAG_DAILY_BUENAS_PASSWORD, GoldenrodCity_RadioTower_2F_EventScript_BuenaNoShow
 	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaAskPassword, MSGBOX_DEFAULT
 	special Special_BuenaPasswordShowMultichoice
 	waitstate
-	compare 32781, 127
+	compare VAR_RESULT, 127
 	goto_if_eq GoldenrodCity_RadioTower_2F_EventScript_BuenaCancelled
 	special Special_BuenaCheckAnswer
-	compare 32781, TRUE
+	compare VAR_RESULT, TRUE
 	goto_if_eq GoldenrodCity_RadioTower_2F_EventScript_BuenaCorrect
-	setflag 10521
+	setflag JOHTO_FLAG_DAILY_BUENAS_PASSWORD_GUESSED
 	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaWrong, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -78,12 +78,12 @@ GoldenrodCity_RadioTower_2F_EventScript_Buena::
 
 GoldenrodCity_RadioTower_2F_EventScript_BuenaCorrect::
 	special Special_BuenaRollReward
-	copyvar 32772, 32781
-	checkitemspace 32772, 1
-	compare 32781, FALSE
+	copyvar VAR_0x8004, VAR_RESULT
+	checkitemspace VAR_0x8004, 1
+	compare VAR_RESULT, FALSE
 	goto_if_eq GoldenrodCity_RadioTower_2F_EventScript_BuenaBagFull
-	giveitem 32772, 1
-	setflag 10521
+	giveitem VAR_0x8004, 1
+	setflag JOHTO_FLAG_DAILY_BUENAS_PASSWORD_GUESSED
 	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaCorrect, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -122,10 +122,10 @@ GoldenrodCity_RadioTower_2F_EventScript_BuenaRocket::
 GoldenrodCity_RadioTower_2F_EventScript_Teacher::
 	lock
 	faceplayer
-	goto_if_eq 20569, 6, GoldenrodCity_RadioTower_2F_EventScript_Teacher2
-	goto_if_eq 20569, 7, GoldenrodCity_RadioTower_2F_EventScript_Teacher2
-	goto_if_eq 20569, 8, GoldenrodCity_RadioTower_2F_EventScript_Teacher2
-	goto_if_eq 20569, 9, GoldenrodCity_RadioTower_2F_EventScript_Teacher2
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_RadioTower_2F_EventScript_Teacher2
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 7, GoldenrodCity_RadioTower_2F_EventScript_Teacher2
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 8, GoldenrodCity_RadioTower_2F_EventScript_Teacher2
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 9, GoldenrodCity_RadioTower_2F_EventScript_Teacher2
 	msgbox GoldenrodCity_RadioTower_2F_Text_Teacher, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -141,7 +141,7 @@ GoldenrodCity_RadioTower_2F_EventScript_Jigglypuff::
 	lock
 	faceplayer
 	waitse
-	playmoncry 39, 0
+	playmoncry SPECIES_JIGGLYPUFF, CRY_MODE_NORMAL
 	msgbox GoldenrodCity_RadioTower_2F_Text_Jigglypuff, MSGBOX_DEFAULT
 	waitmoncry
 	release

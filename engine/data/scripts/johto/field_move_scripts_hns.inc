@@ -2,13 +2,13 @@
 
 J_EventScript_CutTree::
 	lockall
-	goto_if_set 2081, J_B4_CarriedFieldPermission_0
-	goto_if_unset 8693, J_EventScript_CheckTreeCantCut
-	goto_if_unset 10369, J_EventScript_CheckTreeCantCut
+	goto_if_set JOHTO_FLAG_BADGE10_GET, J_B4_CarriedFieldPermission_0
+	goto_if_unset JOHTO_FLAG_RECEIVED_HM_CUT, J_EventScript_CheckTreeCantCut
+	goto_if_unset JOHTO_FLAG_BADGE02_GET, J_EventScript_CheckTreeCantCut
 
 J_B4_CarriedFieldPermission_0::
 	checkpartymove MOVE_CUT
-	goto_if_eq 32781, 6, J_EventScript_CheckTreeCantCut
+	goto_if_eq JOHTO_VAR_RESULT, 6, J_EventScript_CheckTreeCantCut
 	bufferpartymonnick STR_VAR_1, 32781
 	setfieldeffectargument 0, 32781
 	buffermovename STR_VAR_2, MOVE_CUT
@@ -18,15 +18,15 @@ J_B4_CarriedFieldPermission_0::
 	closemessage
 
 J_EventScript_CutTreeCommon:
-	isfollowerfieldmoveuser 32772
+	isfollowerfieldmoveuser VAR_0x8004
 
 J_EventScript_CutTreeDown::
-	setflag 16389
+	setflag JOHTO_FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq 32772, TRUE, J_EventScript_FollowerFieldMove
-	applymovement 32783, J_Movement_CutTreeDown
-	playse 128
+	applymovement JOHTO_VAR_LAST_TALKED, J_Movement_CutTreeDown
+	playse SE_M_CUT
 	waitmovement 0
-	removeobject 32783
+	removeobject JOHTO_VAR_LAST_TALKED
 	releaseall
 	end
 
@@ -67,12 +67,12 @@ J_EventScript_UseRockSmash::
 J_EventScript_RockSmash::
 	lockall
 	checkpartymove MOVE_ROCK_SMASH
-	goto_if_set 2085, J_B4_CarriedFieldPermission_1
-	goto_if_unset 10368, J_EventScript_CantSmashRock
-	goto_if_unset 8695, J_EventScript_CantSmashRock
+	goto_if_set JOHTO_FLAG_BADGE14_GET, J_B4_CarriedFieldPermission_1
+	goto_if_unset JOHTO_FLAG_BADGE01_GET, J_EventScript_CantSmashRock
+	goto_if_unset JOHTO_FLAG_RECEIVED_HM_ROCK_SMASH, J_EventScript_CantSmashRock
 
 J_B4_CarriedFieldPermission_1::
-	goto_if_eq 32781, 6, J_EventScript_CantSmashRock
+	goto_if_eq JOHTO_VAR_RESULT, 6, J_EventScript_CantSmashRock
 	bufferpartymonnick STR_VAR_1, 32781
 	setfieldeffectargument 0, 32781
 	bufferpartymonnick STR_VAR_1, 32781
@@ -84,48 +84,48 @@ J_B4_CarriedFieldPermission_1::
 
 J_EventScript_RockSmashCommon:
 
-	isfollowerfieldmoveuser 32772
+	isfollowerfieldmoveuser VAR_0x8004
 
 J_EventScript_SmashRock::
-	setflag 16389
+	setflag JOHTO_FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq 32772, TRUE, J_EventScript_FollowerFieldMove
-	applymovement 32783, J_Movement_SmashRock
-	playse 131
+	applymovement JOHTO_VAR_LAST_TALKED, J_Movement_SmashRock
+	playse SE_M_ROCK_THROW
 	waitmovement 0
-	removeobject 32783
-	specialvar 32781, TryUpdateRusturfTunnelState
-	goto_if_eq 32781, TRUE, J_EventScript_EndSmash
+	removeobject JOHTO_VAR_LAST_TALKED
+	specialvar JOHTO_VAR_RESULT, TryUpdateRusturfTunnelState
+	goto_if_eq JOHTO_VAR_RESULT, TRUE, J_EventScript_EndSmash
 	special RockSmashWildEncounter
-	goto_if_eq 32781, FALSE, J_EventScript_EndSmash
+	goto_if_eq JOHTO_VAR_RESULT, FALSE, J_EventScript_EndSmash
 	waitstate
 	random 20
-	call_if_eq 32781, 1, J_EventScript_RockSmashHeartscale
-	call_if_eq 32781, 2, J_EventScript_RockSmashBlueShard
-	call_if_eq 32781, 3, J_EventScript_RockSmashRedShard
-	call_if_eq 32781, 4, J_EventScript_RockSmashGreenShard
-	call_if_eq 32781, 5, J_EventScript_RockSmashYellowShard
+	call_if_eq JOHTO_VAR_RESULT, 1, J_EventScript_RockSmashHeartscale
+	call_if_eq JOHTO_VAR_RESULT, 2, J_EventScript_RockSmashBlueShard
+	call_if_eq JOHTO_VAR_RESULT, 3, J_EventScript_RockSmashRedShard
+	call_if_eq JOHTO_VAR_RESULT, 4, J_EventScript_RockSmashGreenShard
+	call_if_eq JOHTO_VAR_RESULT, 5, J_EventScript_RockSmashYellowShard
 	releaseall
 	end
 
 J_EventScript_Headbutt::
 	lockall
-	goto_if_unset 8704, J_EventScript_CantHeadbuttTree
+	goto_if_unset JOHTO_FLAG_GET_HEADBUTT, J_EventScript_CantHeadbuttTree
 	checkpartymove MOVE_HEADBUTT
-	goto_if_eq 32781, 6, J_EventScript_CantHeadbuttTree
-	bufferpartymonnick STR_VAR_1, 32781
-	setfieldeffectargument 0, 32781
+	goto_if_eq VAR_RESULT, PARTY_SIZE, J_EventScript_CantHeadbuttTree
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
 	msgbox J_Text_MonUsedHeadbutt, MSGBOX_DEFAULT
 	closemessage
 
 J_EventScript_HeadbuttCommon:
 
-	isfollowerfieldmoveuser 32772
+	isfollowerfieldmoveuser VAR_0x8004
 
 J_EventScript_HeadbuttTree::
-	setflag 16389
+	setflag JOHTO_FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq 32772, TRUE, J_EventScript_FollowerFieldMove
-	applymovement 32783, J_Movement_HeadbuttTree
-	playse 162
+	applymovement JOHTO_VAR_LAST_TALKED, J_Movement_HeadbuttTree
+	playse SE_M_HEADBUTT
 	waitmovement 0
 	special RockSmashWildEncounter
 	goto J_EventScript_EndHeadbutt
@@ -155,13 +155,13 @@ J_Text_MonUsedHeadbutt::
 	.string "{STR_VAR_1} use{SE_M_WATERFALL}HEADBUTT!$"
 
 J_EventScript_FollowerFieldMove:
-	getdirectiontoface 32773, 0xFE, 255
-	specialvar 32774, GetPlayerFacingDirection
-	goto_if_eq 32773, DIR_NONE, J_EventScript_FollowerFieldMoveEnd
+	getdirectiontoface VAR_0x8005, OBJ_EVENT_ID_FOLLOWER, OBJ_EVENT_ID_PLAYER
+	specialvar VAR_0x8006, GetPlayerFacingDirection
+	goto_if_eq VAR_0x8005, DIR_NONE, J_EventScript_FollowerFieldMoveEnd
 
 	call J_EventScript_FollowerSwap
 
-	switch 32774
+	switch VAR_0x8006
 	case DIR_NORTH, J_EventScript_FollowerJumpNorth
 	case DIR_EAST, J_EventScript_FollowerJumpEast
 	case DIR_SOUTH, J_EventScript_FollowerJumpSouth
@@ -171,7 +171,7 @@ J_EventScript_FollowerFieldMoveEnd:
 	return
 
 J_EventScript_FollowerSwap:
-	switch 32773
+	switch VAR_0x8005
 	case DIR_NORTH, J_EventScript_FollowerMoveNorth
 	case DIR_EAST, J_EventScript_FollowerMoveEast
 	case DIR_SOUTH, J_EventScript_FollowerMoveSouth
@@ -179,64 +179,64 @@ J_EventScript_FollowerSwap:
 	return
 
 J_EventScript_FollowerMoveNorth:
-	applymovement 0xFE, J_Movement_WalkUp
-	applymovement 255, J_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_PLAYER, J_Movement_WalkDown
 	waitmovement 0
-	applymovement 255, J_Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_FaceUp
 	waitmovement 0
 	return
 
 J_EventScript_FollowerMoveEast:
-	applymovement 0xFE, J_Movement_WalkRight
-	applymovement 255, J_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_PLAYER, J_Movement_WalkLeft
 	waitmovement 0
-	applymovement 255, J_Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_FaceRight
 	waitmovement 0
 	return
 
 J_EventScript_FollowerMoveSouth:
-	applymovement 0xFE, J_Movement_WalkDown
-	applymovement 255, J_Movement_WalkUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_Movement_WalkDown
+	applymovement OBJ_EVENT_ID_PLAYER, J_Movement_WalkUp
 	waitmovement 0
-	applymovement 255, J_Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_FaceDown
 	waitmovement 0
 	return
 
 J_EventScript_FollowerMoveWest:
-	applymovement 0xFE, J_Movement_WalkLeft
-	applymovement 255, J_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, J_Movement_WalkRight
 	waitmovement 0
-	applymovement 255, J_Common_Movement_FaceLeft
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_FaceLeft
 	waitmovement 0
 	return
 
 J_EventScript_FollowerJumpNorth:
-	applymovement 0xFE, J_Movement_JumpUp
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_Movement_JumpUp
 	waitmovement 0
 	return
 
 J_EventScript_FollowerJumpEast:
-	applymovement 0xFE, J_Movement_JumpRight
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_Movement_JumpRight
 	waitmovement 0
 	return
 
 J_EventScript_FollowerJumpSouth:
-	applymovement 0xFE, J_Movement_JumpDown
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_Movement_JumpDown
 	waitmovement 0
 	return
 
 J_EventScript_FollowerJumpWest:
-	applymovement 0xFE, J_Movement_JumpLeft
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_Movement_JumpLeft
 	waitmovement 0
 	return
 
 J_EventScript_EndSmash::
 	random 20
-	call_if_eq 32781, 1, J_EventScript_RockSmashHeartscale
-	call_if_eq 32781, 2, J_EventScript_RockSmashBlueShard
-	call_if_eq 32781, 3, J_EventScript_RockSmashRedShard
-	call_if_eq 32781, 4, J_EventScript_RockSmashGreenShard
-	call_if_eq 32781, 5, J_EventScript_RockSmashYellowShard
+	call_if_eq VAR_RESULT, 1, J_EventScript_RockSmashHeartscale
+	call_if_eq VAR_RESULT, 2, J_EventScript_RockSmashBlueShard
+	call_if_eq VAR_RESULT, 3, J_EventScript_RockSmashRedShard
+	call_if_eq VAR_RESULT, 4, J_EventScript_RockSmashGreenShard
+	call_if_eq VAR_RESULT, 5, J_EventScript_RockSmashYellowShard
 	releaseall
 	end
 
@@ -324,15 +324,15 @@ J_Text_CantHeadbutt:
 
 J_EventScript_StrengthBoulder::
 	lockall
-	goto_if_set 2083, J_B4_CarriedFieldPermission_2
-	goto_if_unset 10370, J_EventScript_CantStrength
+	goto_if_set JOHTO_FLAG_BADGE12_GET, J_B4_CarriedFieldPermission_2
+	goto_if_unset JOHTO_FLAG_BADGE03_GET, J_EventScript_CantStrength
 
 J_B4_CarriedFieldPermission_2::
 	checkitem 685
-	goto_if_eq 32781, FALSE, J_EventScript_CantStrength
-	goto_if_set 2053, J_EventScript_CheckActivatedBoulder
+	goto_if_eq JOHTO_VAR_RESULT, FALSE, J_EventScript_CantStrength
+	goto_if_set JOHTO_FLAG_SYS_USE_STRENGTH, J_EventScript_CheckActivatedBoulder
 	checkpartymove MOVE_STRENGTH
-	goto_if_eq 32781, 6, J_EventScript_CantStrength
+	goto_if_eq JOHTO_VAR_RESULT, 6, J_EventScript_CantStrength
 	bufferpartymonnick STR_VAR_1, 32781
 	setfieldeffectargument 0, 32781
 
@@ -351,7 +351,7 @@ J_EventScript_UseStrength::
 	end
 
 J_EventScript_ActivateStrength::
-	setflag 2053
+	setflag FLAG_SYS_USE_STRENGTH
 	msgbox J_Text_MonUsedStrength, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -389,12 +389,12 @@ J_Text_StrengthActivated:
 
 J_EventScript_UseWaterfall::
 	lockall
-	goto_if_set 2086, J_B4_CarriedFieldPermission_3
-	goto_if_unset 10375, J_EventScript_CantWaterfall
+	goto_if_set JOHTO_FLAG_BADGE15_GET, J_B4_CarriedFieldPermission_3
+	goto_if_unset JOHTO_FLAG_BADGE08_GET, J_EventScript_CantWaterfall
 
 J_B4_CarriedFieldPermission_3::
 	checkpartymove MOVE_WATERFALL
-	goto_if_eq 32781, 6, J_EventScript_CantWaterfall
+	goto_if_eq JOHTO_VAR_RESULT, 6, J_EventScript_CantWaterfall
 	bufferpartymonnick STR_VAR_1, 32781
 	setfieldeffectargument 0, 32781
 
@@ -427,14 +427,14 @@ J_Text_MonUsedWaterfall:
 J_EventScript_UseDive::
 	lockall
 	checkpartymove MOVE_DIVE
-	goto_if_eq 32781, 6, J_EventScript_CantDive
-	bufferpartymonnick STR_VAR_1, 32781
-	setfieldeffectargument 0, 32781
+	goto_if_eq VAR_RESULT, PARTY_SIZE, J_EventScript_CantDive
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
 	msgbox J_Text_WantToDive, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_EventScript_EndDive
+	goto_if_eq VAR_RESULT, NO, J_EventScript_EndDive
 	msgbox J_Text_MonUsedDive, MSGBOX_DEFAULT
-	dofieldeffect 44
+	dofieldeffect FLDEFF_USE_DIVE
 	goto J_EventScript_EndDive
 	end
 
@@ -450,14 +450,14 @@ J_EventScript_EndDive::
 J_EventScript_UseDiveUnderwater::
 	lockall
 	checkpartymove MOVE_DIVE
-	goto_if_eq 32781, 6, J_EventScript_CantSurface
-	bufferpartymonnick STR_VAR_1, 32781
-	setfieldeffectargument 0, 32781
+	goto_if_eq VAR_RESULT, PARTY_SIZE, J_EventScript_CantSurface
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
 	msgbox J_Text_WantToSurface, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_EventScript_EndSurface
+	goto_if_eq VAR_RESULT, NO, J_EventScript_EndSurface
 	msgbox J_Text_MonUsedDive, MSGBOX_DEFAULT
-	dofieldeffect 44
+	dofieldeffect FLDEFF_USE_DIVE
 	goto J_EventScript_EndSurface
 	end
 
@@ -473,37 +473,37 @@ J_EventScript_EndSurface::
 
 J_EventScript_Whirlpool::
 	lockall
-	goto_if_unset 10374, J_EventScript_CantWhirlpool
+	goto_if_unset JOHTO_FLAG_BADGE07_GET, J_EventScript_CantWhirlpool
 
 
-	playse 216
-	goto_if_eq 32780, DIR_NORTH, J_EventScript_WhirlpoolGoNorth
-	goto_if_eq 32780, DIR_SOUTH, J_EventScript_WhirlpoolGoSouth
-	goto_if_eq 32780, DIR_EAST, J_EventScript_WhirlpoolGoEast
-	goto_if_eq 32780, DIR_WEST, J_EventScript_WhirlpoolGoWest
+	playse SE_M_WATERFALL
+	goto_if_eq VAR_FACING, DIR_NORTH, J_EventScript_WhirlpoolGoNorth
+	goto_if_eq VAR_FACING, DIR_SOUTH, J_EventScript_WhirlpoolGoSouth
+	goto_if_eq VAR_FACING, DIR_EAST, J_EventScript_WhirlpoolGoEast
+	goto_if_eq VAR_FACING, DIR_WEST, J_EventScript_WhirlpoolGoWest
 	releaseall
 	end
 
 J_EventScript_WhirlpoolGoNorth::
-	applymovement 255, J_Movement_WhirlpoolNorth
+	applymovement OBJ_EVENT_ID_PLAYER, J_Movement_WhirlpoolNorth
 	waitmovement 0
 	releaseall
 	end
 
 J_EventScript_WhirlpoolGoSouth::
-	applymovement 255, J_Movement_WhirlpoolSouth
+	applymovement OBJ_EVENT_ID_PLAYER, J_Movement_WhirlpoolSouth
 	waitmovement 0
 	releaseall
 	end
 
 J_EventScript_WhirlpoolGoEast::
-	applymovement 255, J_Movement_WhirlpoolEast
+	applymovement OBJ_EVENT_ID_PLAYER, J_Movement_WhirlpoolEast
 	waitmovement 0
 	releaseall
 	end
 
 J_EventScript_WhirlpoolGoWest::
-	applymovement 255, J_Movement_WhirlpoolWest
+	applymovement OBJ_EVENT_ID_PLAYER, J_Movement_WhirlpoolWest
 	waitmovement 0
 	releaseall
 	end
@@ -569,13 +569,13 @@ J_Text_FailSweetScent:
 	.string "Look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}there'{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}here…$"
 
 J_EventScript_DigCommon:
-	isfollowerfieldmoveuser 32772
-	setfieldeffectargument 3, 32772
-	dofieldeffect 38
+	isfollowerfieldmoveuser VAR_0x8004
+	setfieldeffectargument 3, VAR_0x8004
+	dofieldeffect FLDEFF_USE_DIG
 	waitstate
 
 J_EventScript_DigSealedChamber::
-	setflag 16389
+	setflag JOHTO_FLAG_SAFE_FOLLOWER_MOVEMENT
 	call_if_eq 32772, TRUE, J_EventScript_FollowerFieldMove
 	callnative DoBrailleDigEffect
 	releaseall
@@ -586,9 +586,9 @@ J_EventScript_UseDig::
 	goto J_EventScript_DigCommon
 
 J_EventScript_CutGrassCommon:
-	isfollowerfieldmoveuser 32772
-	setfieldeffectargument 3, 32772
-	dofieldeffect 1
+	isfollowerfieldmoveuser VAR_0x8004
+	setfieldeffectargument 3, VAR_0x8004
+	dofieldeffect FLDEFF_USE_CUT_ON_GRASS
 	waitstate
 
 J_EventScript_UseCutGrass::
@@ -597,17 +597,17 @@ J_EventScript_UseCutGrass::
 
 J_EventScript_UseDefog::
 	lockall
-	bufferpartymonnick STR_VAR_1, 32781
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	buffermovename STR_VAR_2, MOVE_DEFOG
 	msgbox J_Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	isfollowerfieldmoveuser 32772
-	setfieldeffectargument 3, 32772
-	setflag 16389
-	call_if_eq 32772, TRUE, J_EventScript_FollowerFieldMove
+	isfollowerfieldmoveuser VAR_0x8004
+	setfieldeffectargument 3, VAR_0x8004
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	call_if_eq VAR_0x8004, TRUE, J_EventScript_FollowerFieldMove
 	waitmovement 0
-	setfieldeffectargument 0, 32781
-	dofieldeffect 74
+	setfieldeffectargument 0, VAR_RESULT
+	dofieldeffect FLDEFF_DEFOG
 	waitstate
 	releaseall
 	end
@@ -615,14 +615,14 @@ J_EventScript_UseDefog::
 J_EventScript_UseRockClimb::
 	lockall
 	checkfieldmove FIELD_MOVE_ROCK_CLIMB
-	goto_if_eq 32781, 6, J_EventScript_CantRockClimb
-	bufferpartymonnick STR_VAR_1, 32781
-	setfieldeffectargument 0, 32781
+	goto_if_eq VAR_RESULT, PARTY_SIZE, J_EventScript_CantRockClimb
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	setfieldeffectargument 0, VAR_RESULT
 	msgbox J_Text_WantToRockClimb, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_EventScript_EndRockClimb
+	goto_if_eq VAR_RESULT, NO, J_EventScript_EndRockClimb
 	msgbox J_Text_MonUsedRockClimb, MSGBOX_DEFAULT
 	closemessage
-	dofieldeffect 75
+	dofieldeffect FLDEFF_USE_ROCK_CLIMB
 	waitstate
 	goto J_EventScript_EndRockClimb
 	end

@@ -2,7 +2,7 @@
 
 J_EventScript_BufferSprayName::
 	.if 0 != 0
-	bufferitemname STR_VAR_1, 0
+	bufferitemname STR_VAR_1, VAR_LAST_REPEL_LURE_USED
 	return
 	.endif
 	specialvar LOCAL_VAR_SPRAY_TYPE, GetLastUsedSprayType
@@ -44,8 +44,8 @@ J_EventScript_UseSingleSpray::
 	.if 0 == 0
 	call J_EventScript_UseDifferentSpray
 	.else
-	checkitem 0, 1
-	compare 32781, TRUE
+	checkitem VAR_LAST_REPEL_LURE_USED, 1
+	compare VAR_RESULT, TRUE
 	goto_if_eq J_EventScript_UseSingleSpray_2
 	call J_EventScript_UseDifferentSpray
 	.endif
@@ -63,7 +63,7 @@ J_EventScript_UseSingleSpray_2:
 	.endif
 
 J_EventScript_SetSingleSprayAndUse::
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	call J_EventScript_UseSpray
 	return
 
@@ -71,7 +71,7 @@ J_EventScript_UseDifferentSpray::
 	specialvar LOCAL_VAR_NEW_SPRAY, GetSprayId
 	bufferitemname STR_VAR_2, LOCAL_VAR_NEW_SPRAY
 	msgbox J_Text_SprayWoreOffAskUseX, MSGBOX_YESNO
-	compare 32781, YES
+	compare VAR_RESULT, YES
 	goto_if_eq J_EventScript_UseDifferentSpray_2
 
 J_EventScript_UseDifferentSpray_1:
@@ -87,14 +87,14 @@ J_EventScript_UseDifferentSpray_2:
 
 J_EventScript_UseLastUsedSpray::
 	msgbox J_Text_SprayWoreOffAskUseAnother, MSGBOX_YESNO
-	compare 32781, YES
+	compare VAR_RESULT, YES
 	goto_if_eq J_EventScript_UseLastUsedSpray_2
 
 J_EventScript_UseLastUsedSpray_1:
 	return
 
 J_EventScript_UseLastUsedSpray_2:
-	copyvar LOCAL_VAR_SPRAY, 0
+	copyvar LOCAL_VAR_SPRAY, VAR_LAST_REPEL_LURE_USED
 	call J_EventScript_SetSingleSprayAndUse
 	goto J_EventScript_UseLastUsedSpray_1
 	.endif
@@ -107,7 +107,7 @@ J_EventScript_ChooseWhichSpray::
 	waitmessage
 	callnative DrawSprayMenu
 	waitstate
-	compare 32781, 127
+	compare VAR_RESULT, MULTI_B_PRESSED
 	goto_if_ne J_EventScript_ChooseWhichSpray_3
 
 J_EventScript_ChooseWhichSpray_1:
@@ -120,13 +120,13 @@ J_EventScript_ChooseWhichSpray_2:
 	goto J_EventScript_ChooseWhichSpray_1
 
 J_EventScript_ChooseWhichSpray_3:
-	compare 32781, 32771
+	compare VAR_RESULT, VAR_0x8003
 	goto_if_ne J_EventScript_ChooseWhichSpray_2
 	goto J_EventScript_ChooseWhichSpray_1
 	.endif
 
 J_EventScript_UseSpray::
-	playse 47
+	playse SE_REPEL
 	waitse
 	callnative HandleSprayMenuChoice
 	removeitem LOCAL_VAR_SPRAY, 1

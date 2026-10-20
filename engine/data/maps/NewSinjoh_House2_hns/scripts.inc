@@ -21,7 +21,7 @@ NewSinjoh_House2_DeskLady_Text::
 NewSinjoh_House2_EventScript_Torkoal::
 	lock
 	faceplayer
-	playmoncry 324, 0
+	playmoncry SPECIES_TORKOAL, 0
 	msgbox NewSinjoh_Hosue2_Text_CryTorkoal, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage

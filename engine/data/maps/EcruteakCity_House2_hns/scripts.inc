@@ -32,9 +32,9 @@ EcruteakCity_House2_EventScript_ItemFinderMan::
 	lock
 	faceplayer
 	checkitem ITEM_DOWSING_MACHINE
-	goto_if_eq 32781, TRUE, EcruteakCity_House2_EventScript_AlreadyGotItemfinder
+	goto_if_eq VAR_RESULT, TRUE, EcruteakCity_House2_EventScript_AlreadyGotItemfinder
 	msgbox Ecruteak_Text_ItemfinderAdventure, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, EcruteakCity_House2_EventScript_GiveItemFinder
+	goto_if_eq VAR_RESULT, TRUE, EcruteakCity_House2_EventScript_GiveItemFinder
 	msgbox Ecruteak_Text_ItemfinderToEachHisOwn, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -53,14 +53,14 @@ EcruteakCity_House2_EventScript_AlreadyGotItemfinder::
 EcruteakCity_House2_EventScript_Book::
 	lock
 	msgbox Ecruteak_Text_HistoryBook, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, EcruteakCity_House2_EventScript_Book2
+	goto_if_eq VAR_RESULT, TRUE, EcruteakCity_House2_EventScript_Book2
 	closemessage
 	release
 	end
 
 EcruteakCity_House2_EventScript_Book2::
 	msgbox Ecruteak_Text_TwoTowers, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, EcruteakCity_House2_EventScript_Book3
+	goto_if_eq VAR_RESULT, TRUE, EcruteakCity_House2_EventScript_Book3
 	release
 	end
 

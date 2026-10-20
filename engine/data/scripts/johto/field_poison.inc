@@ -4,20 +4,20 @@ J_EventScript_FieldPoison::
 	lockall
 	special TryFieldPoisonWhiteOut
 	waitstate
-	goto_if_eq 32781, 1, J_EventScript_FieldWhiteOut
-	goto_if_eq 32781, 2, J_EventScript_FrontierFieldWhiteOut
+	goto_if_eq VAR_RESULT, FLDPSN_WHITEOUT, J_EventScript_FieldWhiteOut
+	goto_if_eq VAR_RESULT, FLDPSN_FRONTIER_WHITEOUT, J_EventScript_FrontierFieldWhiteOut
 	releaseall
 	end
 
 J_EventScript_FieldWhiteOut::
-	goto_if_set 10337, J_BugContest_EventScript_WhiteOut
+	goto_if_set JOHTO_FLAG_SYS_BUG_CONTEST_MODE, J_BugContest_EventScript_WhiteOut
 	message J_gText_PlayerWhitedOut
 	waitmessage
 	waitbuttonpress
 	special Script_FadeOutMapMusic
 	waitstate
-	fadescreen 1
-	call_if_set 0, J_EventScript_SetRespawnLavaridgePkmnCenter
+	fadescreen FADE_TO_BLACK
+	call_if_set FLAG_WHITEOUT_TO_LAVARIDGE, J_EventScript_SetRespawnLavaridgePkmnCenter
 	special SetCB2WhiteOut
 	waitstate
 	end
@@ -31,15 +31,15 @@ J_EventScript_FrontierFieldWhiteOut::
 	waitmessage
 	waitbuttonpress
 	pike_inchallenge
-	goto_if_eq 32781, TRUE, J_BattleFrontier_BattlePike_EventScript_Retire
+	goto_if_eq VAR_RESULT, TRUE, J_BattleFrontier_BattlePike_EventScript_Retire
 	pyramid_getlocation
-	goto_if_eq 32781, 1, BattleFrontier_BattlePyramid_EventScript_WarpToLobby_hnsLost_hns
-	goto_if_eq 32781, 2, BattleFrontier_BattlePyramid_EventScript_WarpToLobby_hnsLost_hns
+	goto_if_eq VAR_RESULT, PYRAMID_LOCATION_FLOOR, BattleFrontier_BattlePyramid_EventScript_WarpToLobby_hnsLost_hns
+	goto_if_eq VAR_RESULT, PYRAMID_LOCATION_TOP, BattleFrontier_BattlePyramid_EventScript_WarpToLobby_hnsLost_hns
 	trainerhill_inchallenge
-	goto_if_eq 32781, TRUE, J_TrainerHill_1F_EventScript_Lost
+	goto_if_eq VAR_RESULT, TRUE, J_TrainerHill_1F_EventScript_Lost
 	special Script_FadeOutMapMusic
 	waitstate
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
 	waitstate
 	end

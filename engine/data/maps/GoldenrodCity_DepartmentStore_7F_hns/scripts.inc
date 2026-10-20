@@ -1,20 +1,20 @@
 @ Johto (data/maps/GoldenrodCity_DepartmentStore_7F_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_DepartmentStore_7F_hns_MapScripts::
-	map_script 3, GoldenrodCity_DepartmentStore_7F_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, GoldenrodCity_DepartmentStore_7F_OnTransition
 	.byte 0
 
 GoldenrodCity_DepartmentStore_7F_OnTransition:
-	call_if_set 8796, GoldenrodCity_DepartmentStore_7F_EventScript_SetNight
-	call_if_unset 8796, GoldenrodCity_DepartmentStore_7F_EventScript_SetDay
+	call_if_set JOHTO_FLAG_DAY_POKEMON, GoldenrodCity_DepartmentStore_7F_EventScript_SetNight
+	call_if_unset JOHTO_FLAG_DAY_POKEMON, GoldenrodCity_DepartmentStore_7F_EventScript_SetDay
 	end
 
 GoldenrodCity_DepartmentStore_7F_EventScript_SetNight::
-	setmaplayoutindex 901
+	setmaplayoutindex LAYOUT_GOLDENROD_CITY_DEPARTMENT_STORE_7FNIGHT_HNS
 	return
 
 GoldenrodCity_DepartmentStore_7F_EventScript_SetDay::
-	setmaplayoutindex 900
+	setmaplayoutindex LAYOUT_GOLDENROD_CITY_DEPARTMENT_STORE_7F_HNS
 	return
 
 GoldenrodDeptStore7_EventScript_PokefanF::
@@ -45,14 +45,14 @@ GoldenrodDeptStore7_EventScript_Nerd::
 	lock
 	msgbox GoldenrodDeptStore_Text_RoofSuperNerdOhWow, MSGBOX_DEFAULT
 	closemessage
-	PLAYSE 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	PLAYSE SE_PIN
+	applymovement LOCALID_GOLDENROD_ROOF_NERD, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
+	waitmovement LOCALID_GOLDENROD_ROOF_NERD
 	faceplayer
 	msgbox GoldenrodDeptStore_Text_RoofSuperNerdQuitBotheringMe, MSGBOX_DEFAULT
 	closemessage
-	turnobject 1, DIR_SOUTH
+	turnobject LOCALID_GOLDENROD_ROOF_NERD, DIR_SOUTH
 	release
 	end
 

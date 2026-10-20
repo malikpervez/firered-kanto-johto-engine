@@ -6,22 +6,22 @@ Gate_GoldenrodCity_Route35_hns_MapScripts::
 Gate_GoldenrodCity_Route35_EventScript_Randy::
 	lock
 	faceplayer
-	goto_if_eq 20574, 3, Gate_GoldenrodCity_Route35_EventScript_RandyPostKenya
-	goto_if_eq 20574, 2, Gate_GoldenrodCity_Route35_EventScript_RandyDeliveredKenya
-	goto_if_eq 20574, 1, Gate_GoldenrodCity_Route35_EventScript_RandyHaveKenya
+	goto_if_eq JOHTO_VAR_KENYA, 3, Gate_GoldenrodCity_Route35_EventScript_RandyPostKenya
+	goto_if_eq JOHTO_VAR_KENYA, 2, Gate_GoldenrodCity_Route35_EventScript_RandyDeliveredKenya
+	goto_if_eq JOHTO_VAR_KENYA, 1, Gate_GoldenrodCity_Route35_EventScript_RandyHaveKenya
 	msgbox Route35GoldenrodGate_Text_RandyAskFavor, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, Gate_GoldenrodCity_Route35_EventScript_RandyCancel
+	goto_if_eq VAR_RESULT, FALSE, Gate_GoldenrodCity_Route35_EventScript_RandyCancel
 	closemessage
 
 	msgbox Route35GoldenrodGate_Text_RandyThanks, MSGBOX_DEFAULT
 
 
-	setvar 16385, 21
-	bufferspeciesname STR_VAR_1, 21
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SPEAROW
+	bufferspeciesname STR_VAR_1, SPECIES_SPEAROW
 	givenamedmon 1
 	call J_Common_EventScript_GiftMonNamed
 
-	setvar 20574, 1
+	setvar JOHTO_VAR_KENYA, 1
 	release
 	end
 
@@ -41,10 +41,10 @@ Gate_GoldenrodCity_Route35_EventScript_RandyDeliveredKenya::
 	msgbox Route35GoldenrodGate_Text_ThanksForDelivery, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_HP_UP
-	goto_if_eq 32781, FALSE, J_Common_EventScript_BagIsFull
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_BagIsFull
 	msgbox Route35GoldenrodGate_Text_RandyMyPalSnoozing, MSGBOX_DEFAULT
 	closemessage
-	setvar 20574, 3
+	setvar JOHTO_VAR_KENYA, 3
 	release
 	end
 
@@ -57,7 +57,7 @@ Gate_GoldenrodCity_Route35_EventScript_RandyPostKenya::
 Gate_GoldenrodCity_Route35_EventScript_Lady::
 	lock
 	faceplayer
-	goto_if_set 8246, Gate_GoldenrodCity_Route35_EventScript_Lady2
+	goto_if_set JOHTO_FLAG_HIDE_SUDOWOODO, Gate_GoldenrodCity_Route35_EventScript_Lady2
 	msgbox Route35GoldenrodGate_Text_PokefanF_TreeBlocking, MSGBOX_DEFAULT
 	closemessage
 	release

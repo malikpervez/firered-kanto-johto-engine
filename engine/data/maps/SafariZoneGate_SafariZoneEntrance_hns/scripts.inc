@@ -1,32 +1,32 @@
 @ Johto (data/maps/SafariZoneGate_SafariZoneEntrance_hns/scripts.inc), as built into the FireRed game.
 
 SafariZoneGate_SafariZoneEntrance_hns_MapScripts::
-	map_script 2, SafariZoneGate_SafariZoneEntrance_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SafariZoneGate_SafariZoneEntrance_OnFrame
 	.byte 0
 
 SafariZoneGate_SafariZoneEntrance_OnFrame::
-	map_script_2 20597, 3, SafariZoneGate_SafariZoneEntrance_MeetBaoba
-	map_script_2 20628, 2, SafariZoneGate_SafariZoneEntrance_EventScript_ExitSafari
+	map_script_2 JOHTO_VAR_SAFARI_ZONE_GATE_STATE, 3, SafariZoneGate_SafariZoneEntrance_MeetBaoba
+	map_script_2 JOHTO_VAR_SAFARI_ZONE_STATE, 2, SafariZoneGate_SafariZoneEntrance_EventScript_ExitSafari
 	.2byte 0
 
 SafariZoneGate_SafariZoneEntrance_EventScript_ExitSafari::
 	lock
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	msgbox J_SafariZone_Text_WouldYouLikeToExit, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_ReenterSafari
+	goto_if_eq VAR_RESULT, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_ReenterSafari
 	special ExitSafariMode
-	setvar 20628, 1
-	setflag 8792
+	setvar JOHTO_VAR_SAFARI_ZONE_STATE, 1
+	setflag JOHTO_FLAG_GOOD_LUCK_SAFARI_ZONE
 	msgbox J_SafariZone_South_Text_ExitEarlyThankYouForPlaying
 	closemessage
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
 	release
 	end
 
 SafariZoneGate_SafariZoneEntrance_EventScript_ReenterSafari::
 	closemessage
-	applymovement 255, SafariZoneGate_SafariZoneEntrance_Movement_EnterSafariZone
+	applymovement OBJ_EVENT_ID_PLAYER, SafariZoneGate_SafariZoneEntrance_Movement_EnterSafariZone
 	waitmovement 0
 	warp MAP_SAFARI_ZONE_ENTERANCE_HNS, 0
 	delay 120
@@ -34,33 +34,33 @@ SafariZoneGate_SafariZoneEntrance_EventScript_ReenterSafari::
 
 SafariZoneGate_SafariZoneEntrance_MeetBaoba::
 	lock
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_SAFARIZONEGATE_BAOBA, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	applymovement 1, SafariZoneGate_SafariZoneEntrance_Movement_WalkToPlayer
-	applymovement 255, J_Common_Movement_WalkUp1
-	waitmovement 1
+	waitmovement LOCALID_SAFARIZONEGATE_BAOBA
+	applymovement LOCALID_SAFARIZONEGATE_BAOBA, SafariZoneGate_SafariZoneEntrance_Movement_WalkToPlayer
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
+	waitmovement LOCALID_SAFARIZONEGATE_BAOBA
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaWelcome, MSGBOX_DEFAULT
 	closemessage
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaPokeblocks, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_POKEBLOCK_CASE
 	closemessage
-	applymovement 1, SafariZoneGate_SafariZoneEntrance_Movement_ReturnToTable
+	applymovement LOCALID_SAFARIZONEGATE_BAOBA, SafariZoneGate_SafariZoneEntrance_Movement_ReturnToTable
 	waitmovement 0
-	setvar 20597, 4
+	setvar JOHTO_VAR_SAFARI_ZONE_GATE_STATE, 4
 	release
 	end
 
 SafariZoneGate_SafariZoneEntrance_EventScript_Baoba::
 	lock
 	faceplayer
-	goto_if_eq 20548, 1, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaBeach
-	goto_if_eq 20548, 2, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaBrush
-	goto_if_eq 20548, 3, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaMountain
-	goto_if_eq 20548, 4, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaCave
-	goto_if_ge 20548, 5, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDone
+	goto_if_eq JOHTO_VAR_BAOBA_QUEST_STATE, 1, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaBeach
+	goto_if_eq JOHTO_VAR_BAOBA_QUEST_STATE, 2, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaBrush
+	goto_if_eq JOHTO_VAR_BAOBA_QUEST_STATE, 3, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaMountain
+	goto_if_eq JOHTO_VAR_BAOBA_QUEST_STATE, 4, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaCave
+	goto_if_ge JOHTO_VAR_BAOBA_QUEST_STATE, 5, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDone
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_Baoba, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -68,93 +68,93 @@ SafariZoneGate_SafariZoneEntrance_EventScript_Baoba::
 
 SafariZoneGate_SafariZoneEntrance_EventScript_BaobaBeach::
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaBeach, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
+	goto_if_eq VAR_RESULT, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
 	special ChoosePartyMon
 	waitstate
 	lockall
-	copyvar 32778, 32772
-	goto_if_eq 32772, 0xFF, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
 	baobacheckmon 1
-	goto_if_eq 32781, FALSE, SafarioneEntrance_EventScript_BaobaWrong
+	goto_if_eq VAR_RESULT, FALSE, SafarioneEntrance_EventScript_BaobaWrong
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaBeachDone, MSGBOX_DEFAULT
 	showmoneybox 0, 0
 	addmoney 200000
 	delay 60
-	playse 95
+	playse SE_SHOP
 	updatemoneybox
 	delay 60
 	closemessage
 	hidemoneybox
-	setvar 20548, 2
+	setvar JOHTO_VAR_BAOBA_QUEST_STATE, 2
 	release
 	end
 
 SafariZoneGate_SafariZoneEntrance_EventScript_BaobaBrush::
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaBrush, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
+	goto_if_eq VAR_RESULT, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
 	special ChoosePartyMon
 	waitstate
 	lockall
-	copyvar 32778, 32772
-	goto_if_eq 32772, 0xFF, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
 	baobacheckmon 2
-	goto_if_eq 32781, FALSE, SafarioneEntrance_EventScript_BaobaWrong
+	goto_if_eq VAR_RESULT, FALSE, SafarioneEntrance_EventScript_BaobaWrong
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaBrushDone, MSGBOX_DEFAULT
 	showmoneybox 0, 0
 	addmoney 300000
 	delay 60
-	playse 95
+	playse SE_SHOP
 	updatemoneybox
 	delay 60
 	closemessage
 	hidemoneybox
-	setvar 20548, 3
+	setvar JOHTO_VAR_BAOBA_QUEST_STATE, 3
 	release
 	end
 
 SafariZoneGate_SafariZoneEntrance_EventScript_BaobaMountain::
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaMountain, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
+	goto_if_eq VAR_RESULT, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
 	special ChoosePartyMon
 	waitstate
 	lockall
-	copyvar 32778, 32772
-	goto_if_eq 32772, 0xFF, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
 	baobacheckmon 3
-	goto_if_eq 32781, FALSE, SafarioneEntrance_EventScript_BaobaWrong
+	goto_if_eq VAR_RESULT, FALSE, SafarioneEntrance_EventScript_BaobaWrong
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaMountainDone, MSGBOX_DEFAULT
 	showmoneybox 0, 0
 	addmoney 400000
 	delay 60
-	playse 95
+	playse SE_SHOP
 	updatemoneybox
 	delay 60
 	closemessage
 	hidemoneybox
-	setvar 20548, 4
+	setvar JOHTO_VAR_BAOBA_QUEST_STATE, 4
 	release
 	end
 
 SafariZoneGate_SafariZoneEntrance_EventScript_BaobaCave::
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaCave, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
+	goto_if_eq VAR_RESULT, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
 	special ChoosePartyMon
 	waitstate
 	lockall
-	copyvar 32778, 32772
-	goto_if_eq 32772, 0xFF, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDeclined
 	baobacheckmon 4
-	goto_if_eq 32781, FALSE, SafarioneEntrance_EventScript_BaobaWrong
+	goto_if_eq VAR_RESULT, FALSE, SafarioneEntrance_EventScript_BaobaWrong
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_BaobaCaveDone, MSGBOX_DEFAULT
 	showmoneybox 0, 0
 	addmoney 400000
 	delay 20
-	playse 95
+	playse SE_SHOP
 	updatemoneybox
 	delay 20
 	closemessage
 	hidemoneybox
-	setvar 20548, 5
+	setvar JOHTO_VAR_BAOBA_QUEST_STATE, 5
 	release
 	end
 
@@ -176,10 +176,10 @@ SafariZoneGate_SafariZoneEntrance_EventScript_BaobaDone::
 	end
 
 SafariZoneGate_SafariZoneEntrance_EventScript_Test::
-	givemon 374, 5
-	givemon 351, 5
-	givemon 308, 5
-	givemon 371, 5
+	givemon SPECIES_BELDUM, 5
+	givemon SPECIES_CASTFORM, 5
+	givemon SPECIES_MEDICHAM, 5
+	givemon SPECIES_BAGON, 5
 	end
 
 SafariZoneGate_SafariZoneEntrance_Text_BaobaBeachDone:
@@ -256,45 +256,45 @@ SafariZoneGate_SafariZoneEntrance_Text_BaobaDone:
 
 SafariZoneGate_SafariZoneEntrance_EventScript_EntranceCounterTrigger::
 	lockall
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	showmoneybox 0, 0
 	msgbox J_Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay, MSGBOX_YESNO
-	goto_if_eq 32781, YES, SafariZoneGate_SafariZoneEntrance_EventScript_TryEnterSafariZone
+	goto_if_eq VAR_RESULT, YES, SafariZoneGate_SafariZoneEntrance_EventScript_TryEnterSafariZone
 	msgbox J_Route121_SafariZoneEntrance_Text_PlayAnotherTime, MSGBOX_DEFAULT
 	goto SafariZoneGate_SafariZoneEntrance_EventScript_MovePlayerBackFromCounter
 	end
 
 SafariZoneGate_SafariZoneEntrance_EventScript_TryEnterSafariZone::
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, 0, SafariZoneGate_SafariZoneEntrance_EventScript_NoPokeblockCase
+	goto_if_eq VAR_RESULT, 0, SafariZoneGate_SafariZoneEntrance_EventScript_NoPokeblockCase
 	call SafariZoneGate_SafariZoneEntrance_EventScript_CheckHasRoomForPokemon
 	checkmoney 500
-	goto_if_eq 32781, 0, SafariZoneGate_SafariZoneEntrance_EventScript_NotEnoughMoney
+	goto_if_eq VAR_RESULT, 0, SafariZoneGate_SafariZoneEntrance_EventScript_NotEnoughMoney
 	msgbox J_Route121_SafariZoneEntrance_Text_ThatWillBe500Please, MSGBOX_DEFAULT
 	removemoney 500
-	playse 95
+	playse SE_SHOP
 	updatemoneybox
 	msgbox J_Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls, MSGBOX_DEFAULT
-	playfanfare 370
+	playfanfare MUS_OBTAIN_ITEM
 	message J_Route121_SafariZoneEntrance_Text_Received30SafariBalls
 	waitfanfare
 	msgbox J_Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself, MSGBOX_DEFAULT
 	closemessage
 	hidemoneybox
-	applymovement 255, SafariZoneGate_SafariZoneEntrance_Movement_EnterSafariZone
+	applymovement OBJ_EVENT_ID_PLAYER, SafariZoneGate_SafariZoneEntrance_Movement_EnterSafariZone
 	waitmovement 0
 	special EnterSafariMode
-	setvar 20628, 2
-	clearflag 8792
+	setvar JOHTO_VAR_SAFARI_ZONE_STATE, 2
+	clearflag JOHTO_FLAG_GOOD_LUCK_SAFARI_ZONE
 	warp MAP_SAFARI_ZONE_ENTERANCE_HNS, 0
 	waitstate
 	end
 
 SafariZoneGate_SafariZoneEntrance_EventScript_CheckHasRoomForPokemon::
 	getpartysize
-	goto_if_ne 32781, 6, SafariZoneGate_SafariZoneEntrance_EventScript_HasRoomForPokemon
-	specialvar 32781, ScriptCheckFreePokemonStorageSpace
-	goto_if_eq 32781, 1, SafariZoneGate_SafariZoneEntrance_EventScript_HasRoomForPokemon
+	goto_if_ne VAR_RESULT, PARTY_SIZE, SafariZoneGate_SafariZoneEntrance_EventScript_HasRoomForPokemon
+	specialvar VAR_RESULT, ScriptCheckFreePokemonStorageSpace
+	goto_if_eq VAR_RESULT, 1, SafariZoneGate_SafariZoneEntrance_EventScript_HasRoomForPokemon
 	msgbox J_Route121_SafariZoneEntrance_Text_PCIsFull, MSGBOX_DEFAULT
 	goto SafariZoneGate_SafariZoneEntrance_EventScript_MovePlayerBackFromCounter
 	end
@@ -315,7 +315,7 @@ SafariZoneGate_SafariZoneEntrance_EventScript_NotEnoughMoney::
 SafariZoneGate_SafariZoneEntrance_EventScript_MovePlayerBackFromCounter::
 	closemessage
 	hidemoneybox
-	applymovement 255, SafariZoneGate_SafariZoneEntrance_Movement_BackAwayFromCounter
+	applymovement OBJ_EVENT_ID_PLAYER, SafariZoneGate_SafariZoneEntrance_Movement_BackAwayFromCounter
 	waitmovement 0
 	releaseall
 	end
@@ -336,7 +336,7 @@ SafariZoneGate_SafariZoneEntrance_EventScript_Boy::
 	lock
 	faceplayer
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BoyGiveExtraPokeblockCase
+	goto_if_eq VAR_RESULT, FALSE, SafariZoneGate_SafariZoneEntrance_EventScript_BoyGiveExtraPokeblockCase
 	msgbox SafariZoneGate_SafariZoneEntrance_Text_Boy, MSGBOX_DEFAULT
 	closemessage
 	release

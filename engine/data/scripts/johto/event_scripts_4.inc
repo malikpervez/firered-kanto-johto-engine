@@ -2,7 +2,7 @@
 
 J_Common_EventScript_FerryDepart::
 	delay 60
-	applymovement 32772, J_Movement_FerryDepart
+	applymovement VAR_0x8004, J_Movement_FerryDepart
 	waitmovement 0
 	return
 
@@ -17,33 +17,33 @@ J_Movement_FerryDepart:
 	step_end
 
 J_EventScript_HideMrBriney::
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setvar 20614, 0
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+	setvar JOHTO_VAR_BRINEY_LOCATION, 0
 	return
 
 J_RusturfTunnel_EventScript_SetRusturfTunnelOpen::
-	removeobject 1
-	removeobject 10
-	clearflag 0
-	clearflag 0
-	setvar 20618, 6
-	setflag 0
+	removeobject LOCALID_RUSTURF_TUNNEL_WANDAS_BF
+	removeobject LOCALID_RUSTURF_TUNNEL_WANDA
+	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDAS_BOYFRIEND
+	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WANDA
+	setvar JOHTO_VAR_RUSTURF_TUNNEL_STATE, 6
+	setflag FLAG_RUSTURF_TUNNEL_OPENED
 	return
 
 J_EventScript_UnusedBoardFerry::
 	delay 30
-	applymovement 255, J_Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	showplayer
 	delay 30
-	applymovement 255, J_Movement_UnusedBoardFerry
+	applymovement LOCALID_PLAYER, J_Movement_UnusedBoardFerry
 	waitmovement 0
 	delay 30
 	return
@@ -53,9 +53,9 @@ J_Movement_UnusedBoardFerry:
 	step_end
 
 J_Common_EventScript_FerryDepartIsland::
-	call_if_eq 32780, DIR_SOUTH, Ferry_EventScript_DepartIslandSouth
-	call_if_eq 32780, DIR_WEST, Ferry_EventScript_DepartIslandWest
-	call_if_eq 32780, DIR_EAST, Ferry_EventScript_DepartIslandEast
+	call_if_eq VAR_FACING, DIR_SOUTH, Ferry_EventScript_DepartIslandSouth
+	call_if_eq VAR_FACING, DIR_WEST, Ferry_EventScript_DepartIslandWest
+	call_if_eq VAR_FACING, DIR_EAST, Ferry_EventScript_DepartIslandEast
 	delay 30
 	hideplayer
 	call J_Common_EventScript_FerryDepart

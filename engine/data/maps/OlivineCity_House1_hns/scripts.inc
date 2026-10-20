@@ -6,9 +6,9 @@ OlivineCity_House1_hns_MapScripts::
 OlivineCity_House1_EventScript_Tim::
 	lock
 	faceplayer
-	goto_if_set 8772, OlivineCity_House1_EventScript_TradeCompleted
+	goto_if_set JOHTO_FLAG_OLIVINE_NPC_TRADE_COMPLETED, OlivineCity_House1_EventScript_TradeCompleted
 	ingame_trade INGAME_TRADE_VOLTORB, OlivineCity_House1_Text_YouWillTradeWontYou, OlivineCity_House1_EventScript_DeclineTrade, OlivineCity_House1_EventScript_NotRequestedMon, OlivineCity_House1_Text_MonYouTakeCare
-	setflag 8772
+	setflag JOHTO_FLAG_OLIVINE_NPC_TRADE_COMPLETED
 	release
 	end
 
@@ -18,7 +18,7 @@ OlivineCity_House1_EventScript_DeclineTrade::
 	end
 
 OlivineCity_House1_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, 32777
+	bufferspeciesname STR_VAR_1, VAR_0x8009
 	msgbox OlivineCity_House1_Text_ThisIsntAMon, MSGBOX_DEFAULT
 	release
 	end

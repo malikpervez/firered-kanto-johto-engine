@@ -1,26 +1,26 @@
 @ Johto (data/scripts/trainer_hill.inc), as built into the FireRed game.
 
 J_TrainerHill_OnResume:
-	setvar 16386, 0
+	setvar VAR_TEMP_2, 0
 	trainerhill_resumetimer
-	frontier_get 5
-	goto_if_eq 32781, 2, J_TrainerHill_1F_EventScript_Lost
-	goto_if_eq 32781, 3, J_TrainerHill_1F_EventScript_Lost
-	goto_if_eq 32781, 9, J_TrainerHill_1F_EventScript_Lost
+	frontier_get FRONTIER_DATA_BATTLE_OUTCOME
+	goto_if_eq VAR_RESULT, B_OUTCOME_LOST, J_TrainerHill_1F_EventScript_Lost
+	goto_if_eq VAR_RESULT, B_OUTCOME_DREW, J_TrainerHill_1F_EventScript_Lost
+	goto_if_eq VAR_RESULT, B_OUTCOME_FORFEITED, J_TrainerHill_1F_EventScript_Lost
 	end
 
 J_TrainerHill_OnWarp:
-	map_script_2 16387, 0, J_TrainerHill_1F_EventScript_DummyOnWarp
+	map_script_2 VAR_TEMP_3, 0, J_TrainerHill_1F_EventScript_DummyOnWarp
 	.2byte 0
 
 J_TrainerHill_1F_EventScript_DummyOnWarp::
-	setvar 16387, 1
+	setvar VAR_TEMP_3, 1
 
 	end
 
 J_TrainerHill_OnFrame:
-	map_script_2 16386, 0, J_TrainerHill_1F_EventScript_DummyWarpToEntranceCounter
-	map_script_2 16385, 1, J_TrainerHill_EventScript_WarpToEntranceCounter
+	map_script_2 VAR_TEMP_2, 0, J_TrainerHill_1F_EventScript_DummyWarpToEntranceCounter
+	map_script_2 VAR_TEMP_1, 1, J_TrainerHill_EventScript_WarpToEntranceCounter
 	.2byte 0
 
 J_EventScript_TrainerHillTimer::
@@ -31,9 +31,9 @@ J_EventScript_TrainerHillTimer::
 	end
 
 J_TrainerHill_1F_EventScript_DummyWarpToEntranceCounter::
-	setvar 16386, 1
+	setvar VAR_TEMP_2, 1
 	trainerhill_getusingereader
-	goto_if_eq 32781, TRUE, J_TrainerHill_1F_EventScript_WarpSilentToEntranceCounter
+	goto_if_eq VAR_RESULT, TRUE, J_TrainerHill_1F_EventScript_WarpSilentToEntranceCounter
 	end
 
 J_TrainerHill_1F_EventScript_WarpSilentToEntranceCounter::
@@ -48,11 +48,11 @@ J_TrainerHill_1F_EventScript_WarpSilentToEntranceCounter::
 J_TrainerHill_1F_EventScript_Lost::
 	trainerhill_settrainerflags
 	trainerhill_lost
-	setvar 16385, 1
+	setvar VAR_TEMP_1, 1
 	end
 
 J_TrainerHill_EventScript_WarpToEntranceCounter::
-	setvar 16385, 0
+	setvar VAR_TEMP_1, 0
 
 	warp MAP_TRAINER_HILL_ENTRANCE_HNS, 9, 6
 
@@ -66,7 +66,7 @@ J_TrainerHill_1F_Movement_SetInvisible::
 	step_end
 
 J_TrainerHill_EventScript_TrainerBattle::
-	facilitytrainerbattle 8
+	facilitytrainerbattle FACILITY_BATTLE_TRAINER_HILL
 	trainerhill_postbattletext
 	waitmessage
 	waitbuttonpress

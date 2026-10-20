@@ -1,8 +1,8 @@
 @ Johto (data/maps/MtSilver_Snow_hns/scripts.inc), as built into the FireRed game.
 
 MtSilver_Snow_hns_MapScripts::
-	map_script 3, MtSilver_Snow_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_Snow_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 MtSilver_Snow_OnTransition:

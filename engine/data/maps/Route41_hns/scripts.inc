@@ -1,19 +1,19 @@
 @ Johto (data/maps/Route41_hns/scripts.inc), as built into the FireRed game.
 
 Route41_hns_MapScripts::
-	map_script 3, Route41_MapScript_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, Route41_MapScript_OnTransition
 	.byte 0
 
 Route41_MapScript_OnTransition::
-	goto_if_eq 20559, 4, Route41_MapScript_DoNothing
-	goto_if_ge 20583, 5, OlivineCity_MapScript_ClearWeather
+	goto_if_eq JOHTO_VAR_COMPLETED_LUGIA, 4, Route41_MapScript_DoNothing
+	goto_if_ge JOHTO_VAR_OLIVINE_CITY_STATE, 5, OlivineCity_MapScript_ClearWeather
 	end
 
 Route41_MapScript_DoNothing::
 	end
 
 Route41_EventScript_Charlie::
-	trainerbattle_single 1219, Route41_Text_SwimmermCharlieSeen, Route41_Text_SwimmermCharlieBeaten
+	trainerbattle_single TRAINER_JOHTO_CHARLIE_HNS, Route41_Text_SwimmermCharlieSeen, Route41_Text_SwimmermCharlieBeaten
 	msgbox Route41_Text_SwimmermCharlieAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -30,7 +30,7 @@ Route41_Text_SwimmermCharlieAfter:
 	.string "lik{SE_M_REVERSAL}this?$"
 
 Route41_EventScript_George::
-	trainerbattle_single 1220, Route41_Text_SwimmermGeorgeSeen, Route41_Text_SwimmermGeorgeBeaten
+	trainerbattle_single TRAINER_JOHTO_GEORGE_HNS, Route41_Text_SwimmermGeorgeSeen, Route41_Text_SwimmermGeorgeBeaten
 	msgbox Route41_Text_SwimmermGeorgeAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -48,7 +48,7 @@ Route41_Text_SwimmermGeorgeAfter:
 	.string "Wha{SE_M_SPIT_UP}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}do?$"
 
 Route41_EventScript_Berke::
-	trainerbattle_single 1221, Route41_Text_SwimmermBerkeSeen, Route41_Text_SwimmermBerkeBeaten
+	trainerbattle_single TRAINER_JOHTO_BERKE_HNS, Route41_Text_SwimmermBerkeSeen, Route41_Text_SwimmermBerkeBeaten
 	msgbox Route41_Text_SwimmermBerkeAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -69,7 +69,7 @@ Route41_Text_SwimmermBerkeAfter:
 	.string "fro{SE_M_MILK_DRINK}it{SE_M_GRASSWHISTLE}silve{SE_M_SAND_TOMB}wings.$"
 
 Route41_EventScript_Kirk::
-	trainerbattle_single 1222, Route41_Text_SwimmermKirkSeen, Route41_Text_SwimmermKirkBeaten
+	trainerbattle_single TRAINER_JOHTO_KIRK_HNS, Route41_Text_SwimmermKirkSeen, Route41_Text_SwimmermKirkBeaten
 	msgbox Route41_Text_SwimmermKirkAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -86,7 +86,7 @@ Route41_Text_SwimmermKirkAfter:
 	.string "reachin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}island.$"
 
 Route41_EventScript_Mathew::
-	trainerbattle_single 1223, Route41_Text_SwimmermMathewSeen, Route41_Text_SwimmermMathewBeaten
+	trainerbattle_single TRAINER_JOHTO_MATHEW_HNS, Route41_Text_SwimmermMathewSeen, Route41_Text_SwimmermMathewBeaten
 	msgbox Route41_Text_SwimmermMathewAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -102,7 +102,7 @@ Route41_Text_SwimmermMathewAfter:
 	.string "It'{SE_M_GRASSWHISTLE}pitch-blac{SE_M_ENCORE2}inside!$"
 
 Route41_EventScript_Kaylee::
-	trainerbattle_single 1239, Route41_Text_SwimmerfKayleeSeen, Route41_Text_SwimmerfKayleeBeaten
+	trainerbattle_single TRAINER_JOHTO_KAYLEE_HNS, Route41_Text_SwimmerfKayleeSeen, Route41_Text_SwimmerfKayleeBeaten
 	msgbox Route41_Text_SwimmerfKayleeAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -119,7 +119,7 @@ Route41_Text_SwimmerfKayleeAfter:
 	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}wha{SE_M_SPIT_UP}i{SE_M_SPIT_UP}coul{SE_M_WATERFALL}be?$"
 
 Route41_EventScript_Susie::
-	trainerbattle_single 1240, Route41_Text_SwimmerfSusieSeen, Route41_Text_SwimmerfSusieBeaten
+	trainerbattle_single TRAINER_JOHTO_SUSIE_HNS, Route41_Text_SwimmerfSusieSeen, Route41_Text_SwimmerfSusieBeaten
 	msgbox Route41_Text_SwimmerfSusieAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -135,7 +135,7 @@ Route41_Text_SwimmerfSusieAfter:
 	.string "{SE_M_CHARGE}bo{SE_M_YAWN}ridin{SE_M_SANDSTORM}{SE_M_CHARGE}LAPRAS?$"
 
 Route41_EventScript_Denise::
-	trainerbattle_single 1241, Route41_Text_SwimmerfDeniseSeen, Route41_Text_SwimmerfDeniseBeaten
+	trainerbattle_single TRAINER_JOHTO_DENISE_HNS, Route41_Text_SwimmerfDeniseSeen, Route41_Text_SwimmerfDeniseBeaten
 	msgbox Route41_Text_SwimmerfDeniseAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -152,7 +152,7 @@ Route41_Text_SwimmerfDeniseAfter:
 	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}pollut{SE_M_REVERSAL}th{SE_M_REVERSAL}water.$"
 
 Route41_EventScript_Kara::
-	trainerbattle_single 1242, Route41_Text_SwimmerfKaraSeen, Route41_Text_SwimmerfKaraBeaten
+	trainerbattle_single TRAINER_JOHTO_KARA_HNS, Route41_Text_SwimmerfKaraSeen, Route41_Text_SwimmerfKaraBeaten
 	msgbox Route41_Text_SwimmerfKaraAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -170,7 +170,7 @@ Route41_Text_SwimmerfKaraAfter:
 	.string "th{SE_M_REVERSAL}ISLANDS.$"
 
 Route41_EventScript_Wendy::
-	trainerbattle_single 1243, Route41_Text_SwimmerfWendySeen, Route41_Text_SwimmerfWendyBeaten
+	trainerbattle_single TRAINER_JOHTO_WENDY_HNS, Route41_Text_SwimmerfWendySeen, Route41_Text_SwimmerfWendyBeaten
 	msgbox Route41_Text_SwimmerfWendyAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -190,27 +190,27 @@ Route41_EventScript_Tentacruel1::
 	lock
 	faceplayer
 	waitse
-	playmoncry 73, 0
-	goto_if_ge 16384, 2, Route41_EventScript_TentacruelAttack1
+	playmoncry SPECIES_TENTACRUEL, CRY_MODE_NORMAL
+	goto_if_ge VAR_TEMP_0, 2, Route41_EventScript_TentacruelAttack1
 	msgbox Route41_Text_Tentacruel, MSGBOX_DEFAULT
 	waitmoncry
-	addvar 16384, 1
+	addvar VAR_TEMP_0, 1
 	release
 	end
 
 Route41_EventScript_TentacruelAttack1::
 	msgbox Route41_Text_TentacruelAttack, MSGBOX_DEFAULT
 	waitmessage
-	setflag 2411
-	setflag 8804
-	setwildbattle 73, 100, ITEM_NONE
+	setflag FLAG_NO_WILD_CATCHING
+	setflag JOHTO_FLAG_NO_SHINY
+	setwildbattle SPECIES_TENTACRUEL, 100, ITEM_NONE
 	dowildbattle
 	closemessage
-	clearflag 2411
-	clearflag 8804
-	playse 1
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag JOHTO_FLAG_NO_SHINY
+	playse SE_USE_ITEM
 	msgbox Route41_Text_TentacruelHeal, MSGBOX_DEFAULT
-	setvar 16384, 0
+	setvar VAR_TEMP_0, 0
 	closemessage
 	release
 	end
@@ -219,23 +219,23 @@ Route41_EventScript_Tentacruel2::
 	lock
 	faceplayer
 	waitse
-	playmoncry 73, 0
-	goto_if_ge 16385, 2, Route41_EventScript_TentacruelAttack2
+	playmoncry SPECIES_TENTACRUEL, CRY_MODE_NORMAL
+	goto_if_ge VAR_TEMP_1, 2, Route41_EventScript_TentacruelAttack2
 	msgbox Route41_Text_Tentacruel, MSGBOX_DEFAULT
 	waitmoncry
-	addvar 16385, 1
+	addvar VAR_TEMP_1, 1
 	release
 	end
 
 Route41_EventScript_TentacruelAttack2::
 	msgbox Route41_Text_TentacruelAttack, MSGBOX_DEFAULT
 	waitmessage
-	setwildbattle 73, 100, ITEM_NONE
+	setwildbattle SPECIES_TENTACRUEL, 100, ITEM_NONE
 	dowildbattle
 	closemessage
-	playse 1
+	playse SE_USE_ITEM
 	msgbox Route41_Text_TentacruelHeal, MSGBOX_DEFAULT
-	setvar 16385, 0
+	setvar VAR_TEMP_1, 0
 	closemessage
 	release
 	end
@@ -244,23 +244,23 @@ Route41_EventScript_Tentacruel3::
 	lock
 	faceplayer
 	waitse
-	playmoncry 73, 0
-	goto_if_ge 16386, 2, Route41_EventScript_TentacruelAttack3
+	playmoncry SPECIES_TENTACRUEL, CRY_MODE_NORMAL
+	goto_if_ge VAR_TEMP_2, 2, Route41_EventScript_TentacruelAttack3
 	msgbox Route41_Text_Tentacruel, MSGBOX_DEFAULT
 	waitmoncry
-	addvar 16386, 1
+	addvar VAR_TEMP_2, 1
 	release
 	end
 
 Route41_EventScript_TentacruelAttack3::
 	msgbox Route41_Text_TentacruelAttack, MSGBOX_DEFAULT
 	waitmessage
-	setwildbattle 73, 100, ITEM_NONE
+	setwildbattle SPECIES_TENTACRUEL, 100, ITEM_NONE
 	dowildbattle
 	closemessage
-	playse 1
+	playse SE_USE_ITEM
 	msgbox Route41_Text_TentacruelHeal, MSGBOX_DEFAULT
-	setvar 16386, 0
+	setvar VAR_TEMP_2, 0
 	closemessage
 	release
 	end
@@ -269,23 +269,23 @@ Route41_EventScript_Tentacruel4::
 	lock
 	faceplayer
 	waitse
-	playmoncry 73, 0
-	goto_if_ge 16387, 2, Route41_EventScript_TentacruelAttack4
+	playmoncry SPECIES_TENTACRUEL, CRY_MODE_NORMAL
+	goto_if_ge VAR_TEMP_3, 2, Route41_EventScript_TentacruelAttack4
 	msgbox Route41_Text_Tentacruel, MSGBOX_DEFAULT
 	waitmoncry
-	addvar 16387, 1
+	addvar VAR_TEMP_3, 1
 	release
 	end
 
 Route41_EventScript_TentacruelAttack4::
 	msgbox Route41_Text_TentacruelAttack, MSGBOX_DEFAULT
 	waitmessage
-	setwildbattle 73, 100, ITEM_NONE
+	setwildbattle SPECIES_TENTACRUEL, 100, ITEM_NONE
 	dowildbattle
 	closemessage
-	playse 1
+	playse SE_USE_ITEM
 	msgbox Route41_Text_TentacruelHeal, MSGBOX_DEFAULT
-	setvar 16387, 0
+	setvar VAR_TEMP_3, 0
 	closemessage
 	release
 	end

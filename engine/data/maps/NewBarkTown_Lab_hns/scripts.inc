@@ -1,42 +1,42 @@
 @ Johto (data/maps/NewBarkTown_Lab_hns/scripts.inc), as built into the FireRed game.
 
 NewBarkTown_Lab_hns_MapScripts::
-	map_script 3, NewBarkTown_Lab_OnTransition
-	map_script 2, NewBarkTown_Lab_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_Lab_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewBarkTown_Lab_OnFrame
 	.byte 0
 
 NewBarkTown_Lab_OnTransition::
-	goto_if_eq 20580, 6, NewBarkTown_Lab_EventScript_ElmAtComputer
-	goto_if_eq 20580, 2, NewBarkTown_Lab_EventScript_ElmAtComputer
-	goto_if_eq 20580, 3, NewBarkTown_Lab_EventScript_ElmAtComputer
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 6, NewBarkTown_Lab_EventScript_ElmAtComputer
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 2, NewBarkTown_Lab_EventScript_ElmAtComputer
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 3, NewBarkTown_Lab_EventScript_ElmAtComputer
 	end
 
 NewBarkTown_Lab_OnFrame::
-	map_script_2 20580, 4, NewBarkTown_Lab_EventScript_PoliceEpisode
+	map_script_2 JOHTO_VAR_NEWBARKTOWN_LABSTATE, 4, NewBarkTown_Lab_EventScript_PoliceEpisode
 	.2byte 0
 
 NewBarkTown_Lab_EventScript_ElmAtComputer::
-	setobjectxyperm 2, 3, 2
-	setobjectmovementtype 2, 0x7
+	setobjectxyperm LOCALID_ELM, 3, 2
+	setobjectmovementtype LOCALID_ELM, MOVEMENT_TYPE_FACE_UP
 	end
 
 NewBarkTown_Lab_EventScript_TriggerStartLabLeft::
 	lock
-	applymovement 255, NewBarkTown_Lab_Movement_WalkRight
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_WalkRight
 	waitmovement 0
 	goto NewBarkTown_Lab_EventScript_TriggerStartLab
 	end
 
 NewBarkTown_Lab_EventScript_TriggerStartLabRight::
 	lock
-	applymovement 255, NewBarkTown_Lab_Movement_WalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_WalkLeft
 	waitmovement 0
 	goto NewBarkTown_Lab_EventScript_TriggerStartLab
 	end
 
 NewBarkTown_Lab_EventScript_TriggerStartLab::
 	lock
-	applymovement 255, NewBarkTown_LabMovement_WalkToElm
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_LabMovement_WalkToElm
 	waitmovement 0
 	goto NewBarkTown_Lab_EventScript_ElmIntro
 	end
@@ -52,7 +52,7 @@ NewBarkTown_EventScript_Aide1::
 NewBarkTown_EventScript_Aide2::
 	lock
 	faceplayer
-	goto_if_eq 20580, 5, NewBarkTown_EventScript_Aide2Testimony
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 5, NewBarkTown_EventScript_Aide2Testimony
 	msgbox NewBarkTown_Lab_Text_AideSave, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -67,25 +67,25 @@ NewBarkTown_EventScript_Aide2Testimony::
 NewBarkTown_Lab_EventScript_Elm::
 	lock
 	faceplayer
-	goto_if_set 8267, NewBarkTown_Lab_EventScript_ElmAideIsWaiting
-	goto_if_eq 20580, 7, NewBarkTown_Lab_EventScript_ElmMasterBall
-	goto_if_eq 20580, 8, NewBarkTown_Lab_EventScript_ElmKimono
-	goto_if_eq 20580, 9, NewBarkTown_Lab_EventScript_ElmLeague
-	goto_if_eq 20580, 10, NewBarkTown_Lab_EventScript_ElmSSTicket
+	goto_if_set JOHTO_FLAG_HIDE_NEWBARKTOWN_LAB_AIDE, NewBarkTown_Lab_EventScript_ElmAideIsWaiting
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 7, NewBarkTown_Lab_EventScript_ElmMasterBall
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 8, NewBarkTown_Lab_EventScript_ElmKimono
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 9, NewBarkTown_Lab_EventScript_ElmLeague
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 10, NewBarkTown_Lab_EventScript_ElmSSTicket
 
-	goto_if_unset 8703, NewBarkTown_Lab_EventScript_Elm_AfterEggCheck
-	goto_if_set 8663, NewBarkTown_Lab_EventScript_Elm_CallMe
-	call_if_unset 8663, NewBarkTown_Lab_EventScript_Elm_Check_Togepi
+	goto_if_unset JOHTO_FLAG_RECEIVED_TOGEPI_EGG, NewBarkTown_Lab_EventScript_Elm_AfterEggCheck
+	goto_if_set JOHTO_FLAG_SHOWN_ELM_TOGEPI, NewBarkTown_Lab_EventScript_Elm_CallMe
+	call_if_unset JOHTO_FLAG_SHOWN_ELM_TOGEPI, NewBarkTown_Lab_EventScript_Elm_Check_Togepi
 
 NewBarkTown_Lab_EventScript_Elm_AfterEggCheck:
-	goto_if_ge 20569, 1, NewBarkTown_Lab_EventScript_Elm_Check_WhereIsEgg
-	goto_if_eq 20580, 5, NewBarkTown_Lab_EventScript_ElmState5
+	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 1, NewBarkTown_Lab_EventScript_Elm_Check_WhereIsEgg
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 5, NewBarkTown_Lab_EventScript_ElmState5
 
-	goto_if_ge 20580, 6, NewBarkTown_Lab_EventScript_ElmState5
-	goto_if_eq 20580, 2, CopNewBarkTown_Lab_EventScript_ElmState2
-	goto_if_eq 20580, 3, CopNewBarkTown_Lab_EventScript_ElmState2
-	goto_if_eq 20580, 0, NewBarkTown_Lab_EventScript_ElmIntro
-	goto_if_eq 20580, 1, NewBarkTown_Lab_EventScript_ElmChoosePokemon
+	goto_if_ge JOHTO_VAR_NEWBARKTOWN_LABSTATE, 6, NewBarkTown_Lab_EventScript_ElmState5
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 2, CopNewBarkTown_Lab_EventScript_ElmState2
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 3, CopNewBarkTown_Lab_EventScript_ElmState2
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 0, NewBarkTown_Lab_EventScript_ElmIntro
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 1, NewBarkTown_Lab_EventScript_ElmChoosePokemon
 	end
 
 NewBarkTown_Lab_EventScript_ElmAideIsWaiting::
@@ -103,35 +103,35 @@ NewBarkTown_Lab_Text_ElmAideIsWaiting:
 NewBarkTown_Lab_EventScript_ElmIntro::
 	call RB_ElmBird
 	msgbox NewBarkTown_Lab_Text_ElmIntro, MSGBOX_YESNO
-	goto_if_eq 32781, YES, NewBarkTown_Lab_EventScript_ElmAccepted
-	goto_if_eq 32781, NO, NewBarkTown_Lab_EventScript_ElmRefused
+	goto_if_eq VAR_RESULT, YES, NewBarkTown_Lab_EventScript_ElmAccepted
+	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_ElmRefused
 	end
 
 NewBarkTown_Lab_EventScript_ElmRefused::
 	msgbox NewBarkTown_Lab_Text_ElmRefused, MSGBOX_YESNO
-	goto_if_eq 32781, YES, NewBarkTown_Lab_EventScript_ElmAccepted
-	goto_if_eq 32781, NO, NewBarkTown_Lab_EventScript_ElmRefused
+	goto_if_eq VAR_RESULT, YES, NewBarkTown_Lab_EventScript_ElmAccepted
+	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_ElmRefused
 	end
 
 NewBarkTown_Lab_EventScript_ElmAccepted::
 	msgbox NewBarkTown_Lab_Text_ElmAccepted, MSGBOX_DEFAULT
 	msgbox NewBarkTown_Lab_Text_ElmResearchAmbitions, MSGBOX_DEFAULT
 	delay 30
-	playse 2
+	playse SE_PC_LOGIN
 	waitse
-	playse 21
-	applymovement 2, J_Common_Movement_QuestionMark
+	playse SE_PIN
+	applymovement LOCALID_ELM, J_Common_Movement_QuestionMark
 	delay 55
-	waitmovement 2
-	applymovement 2, NewBarkTown_Lab_Movement_CheckEmail
-	applymovement 255, NewBarkTown_Lab_Movement_Look_Left
+	waitmovement LOCALID_ELM
+	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_CheckEmail
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_Look_Left
 	waitmovement 0
 	waitmovement 0
 	msgbox NewBarkTown_Lab_Text_ElmGotAnEmail, MSGBOX_DEFAULT
 	closemessage
-	applymovement 2, NewBarkTown_Lab_Movement_ReturnFromEmail
+	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_ReturnFromEmail
 	waitmovement 0
-	applymovement 255, NewBarkTown_Lab_Movement_Look_Up
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_Look_Up
 	waitmovement 0
 	delay 30
 	msgbox NewBarkTown_Lab_Text_ElmMissionFromMrPokemon, MSGBOX_DEFAULT
@@ -141,7 +141,7 @@ NewBarkTown_Lab_EventScript_ElmAccepted::
 NewBarkTown_Lab_EventScript_ElmChoosePokemon::
 	msgbox NewBarkTown_Lab_Text_ElmChooseAPokemon, MSGBOX_DEFAULT
 	closemessage
-	call_if_unset 8699, NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear
+	call_if_unset JOHTO_FLAG_RECEIVED_POKENAV, NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear
 	goto NewBarkTown_Lab_EventScript_MrPokemon
 	end
 
@@ -149,7 +149,7 @@ NewBarkTown_Lab_EventScript_TriggerReturnPlayer::
 	lock
 	msgbox NewBarkTown_Lab_Text_ElmWhereGoing, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, NewBarkTown_Lab_Movement_ReturnPlayer
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_ReturnPlayer
 	waitmovement 0
 	release
 	end
@@ -179,38 +179,38 @@ NewBarkTown_Lab_EventScript_TotodileBall::
 	end
 
 NewBarkTown_Lab_EventScript_MrPokemon::
-	setvar 20580, 2
-	setvar 20581, 3
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 2
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 3
 	msgbox NewBarkTown_Lab_Text_ElmDirections1_Register, MSGBOX_DEFAULT
-	playfanfare 460
+	playfanfare MUS_REGISTER_MATCH_CALL
 	msgbox NewBarkTown_Lab_Text_RegisteredElm, MSGBOX_DEFAULT
 	waitfanfare
-	setflag 8776
+	setflag JOHTO_FLAG_ENABLE_PROF_BIRCH_MATCH_CALL
 	msgbox NewBarkTown_Lab_Text_ElmDirections2, MSGBOX_DEFAULT
 	closemessage
-	goto_if_eq 32780, DIR_EAST, NewBarkTown_Lab_EventScript_MrPokemonMovementSafe
-	applymovement 2, NewBarkTown_Lab_Movement_CheckEmailSlow
+	goto_if_eq VAR_FACING, DIR_EAST, NewBarkTown_Lab_EventScript_MrPokemonMovementSafe
+	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_CheckEmailSlow
 	waitmovement 0
-	clearflag 10594
-	clearflag 8692
-	setvar 20581, 3
-	setflag 8963
+	clearflag JOHTO_FLAG_RECEIVED_FIRST_BALLS
+	clearflag JOHTO_FLAG_RECEIVED_FIRST_POTION
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 3
+	setflag JOHTO_FLAG_ENABLE_CONDITION
 	release
 	end
 
 NewBarkTown_Lab_EventScript_MrPokemonMovementSafe::
-	applymovement 2, NewBarkTown_Lab_Movement_GotoComputerSafe
+	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_GotoComputerSafe
 	waitmovement 0
-	clearflag 10594
-	clearflag 8692
-	setvar 20581, 3
+	clearflag JOHTO_FLAG_RECEIVED_FIRST_BALLS
+	clearflag JOHTO_FLAG_RECEIVED_FIRST_POTION
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 3
 	release
 	end
 
 CopNewBarkTown_Lab_EventScript_ElmState2::
 	msgbox NewBarkTown_Lab_Text_ElmDirections1, MSGBOX_DEFAULT
 	msgbox NewBarkTown_Lab_Text_ElmDirections2, MSGBOX_DEFAULT
-	applymovement 2, J_Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_ELM, J_Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	closemessage
 	release
@@ -218,7 +218,7 @@ CopNewBarkTown_Lab_EventScript_ElmState2::
 
 NewBarkTown_Lab_EventScript_HealingMachine1::
 	lock
-	goto_if_set 2088, NewBarkTown_Lab_EventScript_HealingMachine2
+	goto_if_set FLAG_SYS_POKEMON_GET, NewBarkTown_Lab_EventScript_HealingMachine2
 	msgbox J_LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine, MSGBOX_SIGN
 	closemessage
 	release
@@ -231,52 +231,52 @@ NewBarkTown_Lab_EventScript_HealingMachine2::
 
 NewBarkTown_Lab_EventScript_TriggerAideGivePotion::
 	lock
-	applymovement 1, NewBarkTown_Lab_Movement_Aide1WalkToPlayer
+	applymovement LOCALID_AIDE1, NewBarkTown_Lab_Movement_Aide1WalkToPlayer
 	waitmovement 0
-	turnobject 255, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox NewBarkTown_Lab_Text_AideGivePotion, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_POTION
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 8692
-	setvar 20580, 3
-	applymovement 1, NewBarkTown_Lab_Movement_Aide1LeavePlayer
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_RECEIVED_FIRST_POTION
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 3
+	applymovement LOCALID_AIDE1, NewBarkTown_Lab_Movement_Aide1LeavePlayer
 	waitmovement 0
-	turnobject 255, DIR_SOUTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	release
 	end
 
 NewBarkTown_Lab_EventScript_HideCyndaquil::
-	setflag 8227
+	setflag JOHTO_FLAG_HIDE_CYNDAQUILBALL
 	return
 
 NewBarkTown_Lab_EventScript_HideTotodile::
-	setflag 8228
+	setflag JOHTO_FLAG_HIDE_TOTODILEBALL
 	return
 
 NewBarkTown_Lab_EventScript_HideChikorita::
-	setflag 8226
+	setflag JOHTO_FLAG_HIDE_CHIKORITABALL
 	return
 
 NewBarkTown_Lab_EventScript_PoliceEpisode::
 	lock
-	setmetatile 7, 1, 0x32B, TRUE
-	call_if_eq 20499, 0 NewBarkTown_Lab_EventScript_HideCyndaquil
-	call_if_eq 20499, 1 NewBarkTown_Lab_EventScript_HideTotodile
-	call_if_eq 20499, 2 NewBarkTown_Lab_EventScript_HideChikorita
-	applymovement 255, NeBarkTownLab_Movement_PlayerWalkToCop
+	setmetatile 7, 1, METATILE_R26_21_Broken_Window, TRUE
+	call_if_eq JOHTO_VAR_STARTER_MON, 0 NewBarkTown_Lab_EventScript_HideCyndaquil
+	call_if_eq JOHTO_VAR_STARTER_MON, 1 NewBarkTown_Lab_EventScript_HideTotodile
+	call_if_eq JOHTO_VAR_STARTER_MON, 2 NewBarkTown_Lab_EventScript_HideChikorita
+	applymovement OBJ_EVENT_ID_PLAYER, NeBarkTownLab_Movement_PlayerWalkToCop
 	waitmovement 0
-	setflag 8268
+	setflag JOHTO_FLAG_HIDE_LAB_POLICEMAN
 	turnobject 7 DIR_WEST
 	msgbox NewBarkTown_Lab_Text_Officer1, MSGBOX_YESNO
-	goto_if_eq 32781, YES, NewBarkTown_Lab_EventScript_PoliceYes
-	goto_if_eq 32781, NO, NewBarkTown_Lab_EventScript_PoliceNo
+	goto_if_eq VAR_RESULT, YES, NewBarkTown_Lab_EventScript_PoliceYes
+	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_PoliceNo
 	end
 
 NewBarkTown_Lab_EventScript_PoliceNo::
 	msgbox NewBarkTown_Lab_Text_OfficerNo, MSGBOX_YESNO
-	goto_if_eq 32781, YES, NewBarkTown_Lab_EventScript_PoliceYes
-	goto_if_eq 32781, NO, NewBarkTown_Lab_EventScript_PoliceNo
+	goto_if_eq VAR_RESULT, YES, NewBarkTown_Lab_EventScript_PoliceYes
+	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_PoliceNo
 	end
 
 NewBarkTown_Lab_EventScript_PoliceYes::
@@ -284,35 +284,35 @@ NewBarkTown_Lab_EventScript_PoliceYes::
 	special NameRival
 	waitstate
 	msgbox NewBarkTown_Lab_Text_Officer2_1, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, NewBarkTown_Lab_EventScript_PoliceYes
+	goto_if_eq VAR_RESULT, FALSE, NewBarkTown_Lab_EventScript_PoliceYes
 	msgbox NewBarkTown_Lab_Text_Officer2, MSGBOX_DEFAULT
 	closemessage
-	applymovement 7, NewBarkTown_Lab_Movement_CopLeaves
+	applymovement LOCALID_COP, NewBarkTown_Lab_Movement_CopLeaves
 	waitmovement 0
-	removeobject 7
+	removeobject LOCALID_COP
 
 
-	applymovement 255, NewBarkTown_Lab_Movement_PlayerStepsToElm
+	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_Lab_Movement_PlayerStepsToElm
 	waitmovement 0
 	msgbox NewBarkTown_Lab_Text_ElmAfterTheft1, MSGBOX_DEFAULT
-	playfanfare 367
+	playfanfare MUS_LEVEL_UP
 	msgbox NewBarkTown_Lab_Text_ElmAfterTheft2, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
-	applymovement 2, NewBarkTown_Lab_Movement_ElmStepBack
+	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_ElmStepBack
 	waitmovement 0
 	msgbox NewBarkTown_Lab_Text_ElmAfterTheft3, MSGBOX_DEFAULT
 	delay 20
 	closemessage
-	applymovement 2, NewBarkTown_Lab_Movement_ElmStepForward
+	applymovement LOCALID_ELM, NewBarkTown_Lab_Movement_ElmStepForward
 	waitmovement 0
 	msgbox NewBarkTown_Lab_Text_ElmAfterTheft4, MSGBOX_DEFAULT
 	closemessage
-	setvar 20580, 5
-	setvar 20581, 4
-	setflag 8269
-	clearflag 8270
-	setflag 8660
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 5
+	setvar JOHTO_VAR_NEWBARK_TOWN_STATE, 4
+	setflag JOHTO_FLAG_HIDE_MOMS_FRIEND
+	clearflag JOHTO_FLAG_HIDE_MOMS_FRIEND2
+	setflag JOHTO_FLAG_ADVENTURE_STARTED
 	removeitem ITEM_MYSTERY_EGG
 	release
 	end
@@ -334,17 +334,17 @@ NewBarkTown_Lab_EventScript_ElmMasterBall::
 	msgbox NewBarkTown_Lab_Text_ElmGiveMasterBall2, MSGBOX_DEFAULT
 	closemessage
 	delay 20
-	playse 21
-	applymovement 2, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ELM, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
+	waitmovement LOCALID_ELM
 	msgbox NewBarkTown_Lab_Text_KimonoGirls, MSGBOX_DEFAULT
 	closemessage
-	setvar 20580, 8
-	setvar 20562, 4
-	setflag 8314
-	setflag 8311
-	clearflag 8310
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 8
+	setvar JOHTO_VAR_ECRUTEAK_CITY_THEATER, 4
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_SILVER
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS
+	clearflag JOHTO_FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS
 	release
 	end
 
@@ -369,26 +369,26 @@ NewBarkTown_Lab_EventScript_ElmSSTicket::
 	giveitem ITEM_SS_TICKET
 	msgbox NewBarkTown_Lab_Text_ElmGiveTicket2, MSGBOX_DEFAULT
 	closemessage
-	clearflag 8325
-	setvar 20580, 11
-	clearflag 8321
+	clearflag JOHTO_FLAG_HIDE_SSAQUA_1F_GRANDPA
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 11
+	clearflag JOHTO_FLAG_HIDE_OLIVINE_PORT_OAK
 	release
 	end
 
 NewBarkTown_Lab_EventScript_TriggerAideGiveBalls::
 	lock
-	applymovement 1, NewBarkTown_Lab_Movement_Aide1WalkToPlayer
+	applymovement LOCALID_AIDE1, NewBarkTown_Lab_Movement_Aide1WalkToPlayer
 	waitmovement 0
-	turnobject 255, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox NewBarkTown_Lab_Text_AideGiveBalls, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_POKE_BALL, 5
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 10594
-	setvar 20580, 6
-	applymovement 1, NewBarkTown_Lab_Movement_Aide1LeavePlayer
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_RECEIVED_FIRST_BALLS
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 6
+	applymovement LOCALID_AIDE1, NewBarkTown_Lab_Movement_Aide1LeavePlayer
 	waitmovement 0
-	turnobject 255, DIR_SOUTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	release
 	end
 
@@ -399,12 +399,12 @@ NewBarkTown_Lab_EventScript_Elm_Check_WhereIsEgg::
 	end
 
 NewBarkTown_Lab_EventScript_Elm_Check_Togepi::
-	checkspecies 175
-	goto_if_eq 32781, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
-	checkspecies 176
-	goto_if_eq 32781, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
-	checkspecies 468
-	goto_if_eq 32781, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
+	checkspecies SPECIES_TOGEPI
+	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
+	checkspecies SPECIES_TOGETIC
+	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
+	checkspecies SPECIES_TOGEKISS
+	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_Elm_Togepi_Seen
 	return
 
 NewBarkTown_Lab_EventScript_Elm_Togepi_Seen::
@@ -417,10 +417,10 @@ NewBarkTown_Lab_EventScript_Elm_Togepi_Seen::
 	msgbox NewBarkTown_Lab_Text_ElmGiveEverstone1, MSGBOX_DEFAULT
 	waitmessage
 	giveitem ITEM_EVERSTONE
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
 	msgbox NewBarkTown_Lab_Text_ElmGiveEverstone2, MSGBOX_DEFAULT
 	closemessage
-	setflag 8663
+	setflag JOHTO_FLAG_SHOWN_ELM_TOGEPI
 	release
 	end
 

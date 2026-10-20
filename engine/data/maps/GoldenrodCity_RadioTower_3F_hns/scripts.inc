@@ -1,11 +1,11 @@
 @ Johto (data/maps/GoldenrodCity_RadioTower_3F_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_RadioTower_3F_hns_MapScripts::
-	map_script 1, GoldenrodCity_RadioTower_3F_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, GoldenrodCity_RadioTower_3F_OnLoad
 	.byte 0
 
 GoldenrodCity_RadioTower_3F_OnLoad::
-	call_if_set 8305, GoldenrodCity_RadioTower_3F_HideGate
+	call_if_set JOHTO_FLAG_HIDE_RADIOTOWER_GATE, GoldenrodCity_RadioTower_3F_HideGate
 	end
 
 GoldenrodCity_RadioTower_3F_HideGate::
@@ -32,30 +32,30 @@ GoldenrodCity_RadioTower_3F_HideGate::
 	return
 
 GoldenrodRaidoTower3_EventScript_Grunt6::
-	trainerbattle_single 1148, GoldenrodCity_RadioTower_3F_Text_GruntM7Seen, GoldenrodCity_RadioTower_3F_Text_GruntM7Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_6_HNS, GoldenrodCity_RadioTower_3F_Text_GruntM7Seen, GoldenrodCity_RadioTower_3F_Text_GruntM7Beaten
 	msgbox GoldenrodCity_RadioTower_3F_Text_GruntM7After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodRaidoTower3_EventScript_Grunt7::
-	trainerbattle_single 1149, GoldenrodCity_RadioTower_3F_Text_GruntM8Seen, GoldenrodCity_RadioTower_3F_Text_GruntM8Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_7_HNS, GoldenrodCity_RadioTower_3F_Text_GruntM8Seen, GoldenrodCity_RadioTower_3F_Text_GruntM8Beaten
 	msgbox GoldenrodCity_RadioTower_3F_Text_GruntM8After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodRaidoTower3_EventScript_Grunt8::
-	trainerbattle_single 1150, GoldenrodCity_RadioTower_3F_Text_GruntM9Seen, GoldenrodCity_RadioTower_3F_Text_GruntM9Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_8_HNS, GoldenrodCity_RadioTower_3F_Text_GruntM9Seen, GoldenrodCity_RadioTower_3F_Text_GruntM9Beaten
 	msgbox GoldenrodCity_RadioTower_3F_Text_GruntM9After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodRaidoTower3_EventScript_Scientist::
-	trainerbattle_single 1029, GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen, GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten
+	trainerbattle_single TRAINER_JOHTO_MARC_HNS, GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen, GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten
 	msgbox GoldenrodCity_RadioTower_3F_Text_ScientistMarcAfter, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_RadioTower_3F_EventScript_Cooltrainer::
 	lock
 	faceplayer
-	goto_if_set 8713, GoldenrodCity_RadioTower_3F_EventScript_Cooltrainer3
-	goto_if_ge 20569, 10, GoldenrodCity_RadioTower_3F_EventScript_Cooltrainer2
+	goto_if_set JOHTO_FLAG_GOT_SUNNY_DAY, GoldenrodCity_RadioTower_3F_EventScript_Cooltrainer3
+	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 10, GoldenrodCity_RadioTower_3F_EventScript_Cooltrainer2
 
 	msgbox GoldenrodCity_RadioTower_3F_Text_CooltrainerFPleaseSave, MSGBOX_DEFAULT
 	closemessage
@@ -67,8 +67,8 @@ GoldenrodCity_RadioTower_3F_EventScript_Cooltrainer2::
 	faceplayer
 	msgbox GoldenrodCity_RadioTower_3F_Text_CooltrainerFHeroGift, MSGBOX_DEFAULT
 	closemessage
-	giveitem 592
-	setflag 8713
+	giveitem ITEM_TM_SUNNY_DAY
+	setflag JOHTO_FLAG_GOT_SUNNY_DAY
 	msgbox GoldenrodCity_RadioTower_3F_Text_CooltrainerFSunnyDay, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -91,9 +91,9 @@ GoldenrodCity_RadioTower_3F_EventScript_Nerd::
 GoldenrodCity_RadioTower_3F_EventScript_Gate::
 	lock
 	msgbox GoldenrodCity_RadioTower_3F_Text_CardKeySlot, MSGBOX_SIGN
-	goto_if_set 8305, GoldenrodCity_RadioTower_3F_EventScript_GateOpened
+	goto_if_set JOHTO_FLAG_HIDE_RADIOTOWER_GATE, GoldenrodCity_RadioTower_3F_EventScript_GateOpened
 	checkitem ITEM_CARD_KEY
-	goto_if_eq 32781, TRUE, GoldenrodCity_RadioTower_3F_EventScript_OpenGate
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_RadioTower_3F_EventScript_OpenGate
 	closemessage
 	release
 	end
@@ -107,10 +107,10 @@ GoldenrodCity_RadioTower_3F_EventScript_GateOpened::
 GoldenrodCity_RadioTower_3F_EventScript_OpenGate::
 	msgbox GoldenrodCity_RadioTower_3F_Text_InsertedCardKey, MSGBOX_SIGN
 	call GoldenrodCity_RadioTower_3F_HideGate
-	playse 36
+	playse SE_CLICK
 	special DrawWholeMapView
 	msgbox GoldenrodCity_RadioTower_3F_Text_Open, MSGBOX_SIGN
-	setflag 8305
+	setflag JOHTO_FLAG_HIDE_RADIOTOWER_GATE
 	closemessage
 	release
 	end

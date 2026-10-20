@@ -4,7 +4,7 @@ CianwoodShop_hns_MapScripts::
 	.byte 0
 
 CianwoodShop_EventScriptMan::
-	setvar 20583, 4
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 4
 	giveitem ITEM_SECRET_POTION
 	end
 
@@ -12,12 +12,12 @@ CianwoodCity_EventScript_Pharmacist::
 	lock
 	faceplayer
 	checkitem ITEM_SECRET_POTION
-	goto_if_eq 32781, TRUE, CianwoodCity_EventScript_PharmacistAfter
-	goto_if_ge 20583, 5, CianwoodCity_EventScript_PharmacistAfter
+	goto_if_eq VAR_RESULT, TRUE, CianwoodCity_EventScript_PharmacistAfter
+	goto_if_ge JOHTO_VAR_OLIVINE_CITY_STATE, 5, CianwoodCity_EventScript_PharmacistAfter
 	msgbox CianwoodCity_Text_PharmacistGivePotion, MSGBOX_DEFAULT
 	giveitem ITEM_SECRET_POTION
 	closemessage
-	setvar 20583, 4
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 4
 	release
 	end
 

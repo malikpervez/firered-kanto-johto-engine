@@ -15,7 +15,7 @@ Route34IlexForestGate_EventScript_Butterfree::
 	lock
 	faceplayer
 	waitse
-	playmoncry 12, 0
+	playmoncry SPECIES_BUTTERFREE, CRY_MODE_NORMAL
 	msgbox Route34IlexForestGate_Text_Butterfree, MSGBOX_DEFAULT
 	waitmoncry
 	release

@@ -1,12 +1,12 @@
 @ Johto (data/maps/NewSinjoh_House3_hns/scripts.inc), as built into the FireRed game.
 
 NewSinjoh_House3_hns_MapScripts::
-	map_script 2, NewSinjoh_House3_OnFrame
-	map_script 1, NewSinjoh_House3_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewSinjoh_House3_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, NewSinjoh_House3_OnTransition
 	.byte 0
 
 NewSinjoh_House3_OnTransition::
-	call_if_ge 20651, 2, NewSinjoh_House3_AddStairs
+	call_if_ge JOHTO_VAR_NOBLE_TYPHLOSION, 2, NewSinjoh_House3_AddStairs
 	end
 
 NewSinjoh_House3_AddStairs::
@@ -20,13 +20,13 @@ NewSinjoh_House3_AddStairs::
 	return
 
 NewSinjoh_House3_OnFrame:
-	map_script_2 16384, 0, NewSinjoh_HauntedHouse_EventScript_Enter
+	map_script_2 VAR_TEMP_0, 0, NewSinjoh_HauntedHouse_EventScript_Enter
 	.2byte 0
 
 NewSinjoh_HauntedHouse_EventScript_Enter::
-	setvar 16384, 1
-	goto_if_eq 20651, 1, NewSinjoh_HauntedHouse_EventScript_StartScary
-	goto_if_eq 20651, 0, NewSinjoh_HauntedHouse_EventScript_TooEarly
+	setvar VAR_TEMP_0, 1
+	goto_if_eq JOHTO_VAR_NOBLE_TYPHLOSION, 1, NewSinjoh_HauntedHouse_EventScript_StartScary
+	goto_if_eq JOHTO_VAR_NOBLE_TYPHLOSION, 0, NewSinjoh_HauntedHouse_EventScript_TooEarly
 	end
 
 NewSinjoh_HauntedHouse_EventScript_TooEarly::
@@ -40,81 +40,81 @@ NewSinjoh_HauntedHouse_Text_TooEarlyNoReaction:
 
 NewSinjoh_HauntedHouse_EventScript_StartScary::
 	msgbox NewSinjoh_HauntedHouse_Text_StartScary, MSGBOX_AUTOCLOSE
-	playse 209
-	getplayerxy 16385, 16386
-	dofieldeffectsparkle 16385, 16386, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
 	delay 200
 	fadedefaultbgm
 	special SpawnCameraObject
-	applymovement 127, NewSinjoh_House3_Movement_CameraPanLeft
+	applymovement OBJ_EVENT_ID_CAMERA, NewSinjoh_House3_Movement_CameraPanLeft
 	waitmovement 0
-	setvar 32772, 2
-	setvar 32773, 2
-	setvar 32774, 20
-	setvar 32775, 4
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 4
 	special ShakeCamera
 	waitstate
 	call NewSinjoh_House3_AddStairs
 	special DrawWholeMapView
-	playse 36
-	applymovement2 127, NewSinjoh_House3_Movement_CameraPanRight
+	playse SE_CLICK
+	applymovement2 OBJ_EVENT_ID_CAMERA, NewSinjoh_House3_Movement_CameraPanRight
 	waitmovement 0
 	special RemoveCameraObject
-	addobject 3
-	clearflag 9098
-	setvar 20651, 2
+	addobject LOCALID_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION
+	clearflag JOHTO_FLAG_HIDE_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION
+	setvar JOHTO_VAR_NOBLE_TYPHLOSION, 2
 	release
 	end
 
 NewSinjoh_House3_EventScript_NobleTyphlosion::
 	lock
 	faceplayer
-	playmoncry 997, 2
+	playmoncry SPECIES_TYPHLOSION_HISUI, CRY_MODE_ENCOUNTER
 	waitmoncry
 	setwildbossbattle species=997, level=80, item=ITEM_SPOOKY_PLATE, move1_1=MOVE_INFERNAL_PARADE, move1_2=MOVE_LAVA_PLUME, move1_3=MOVE_CONFUSE_RAY move1_4=MOVE_SOLAR_BEAM
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 2, 0, 1, 2, 0
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, NewSinjoh_House3_EventScript_NobleTyphlosionRan
-	bufferspeciesname STR_VAR_1, 997
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewSinjoh_House3_EventScript_NobleTyphlosionRan
+	bufferspeciesname STR_VAR_1, SPECIES_TYPHLOSION_HISUI
 	msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
 	giveitem ITEM_SPOOKY_PLATE
-	addvar 20640, 1
-	fadescreenswapbuffers 1
-	removeobject 3
-	setflag 9098
-	fadescreenswapbuffers 0
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION
+	setflag JOHTO_FLAG_HIDE_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION
+	fadescreenswapbuffers FADE_FROM_BLACK
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 NewSinjoh_House3_EventScript_NobleTyphlosionRan::
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 

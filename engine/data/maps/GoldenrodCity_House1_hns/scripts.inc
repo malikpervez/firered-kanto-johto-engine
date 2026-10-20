@@ -6,7 +6,7 @@ GoldenrodCity_House1_hns_MapScripts::
 GoldenrodCity_NameRatersHouse_EventScript_ToggleShinies::
 	lock
 	msgbox GoldenrodCity_NameRatersHouse_Text_AskToggleShinies, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, GoldenrodCity_NameRatersHouse_EventScript_ToggleShiniesRefused
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_NameRatersHouse_EventScript_ToggleShiniesRefused
 
 	msgbox GoldenrodCity_NameRatersHouse_Text_ToggleShinies, MSGBOX_DEFAULT
 	closemessage
@@ -43,8 +43,8 @@ GoldenrodCity_NameRatersHouse_EventScript_NameRater::
 	lock
 	faceplayer
 	msgbox GoldenrodCity_NameRatersHouse_Text_PleasedToRateMonNickname, MSGBOX_YESNO
-	goto_if_eq 32781, YES, GoldenrodCity_NameRatersHouse_EventScript_ChooseMonToRate
-	goto_if_eq 32781, NO, GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate
+	goto_if_eq VAR_RESULT, YES, GoldenrodCity_NameRatersHouse_EventScript_ChooseMonToRate
+	goto_if_eq VAR_RESULT, NO, GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate
 	end
 
 GoldenrodCity_NameRatersHouse_EventScript_ChooseMonToRate::
@@ -52,8 +52,8 @@ GoldenrodCity_NameRatersHouse_EventScript_ChooseMonToRate::
 	special ChoosePartyMon
 	waitstate
 	lock
-	goto_if_ne 32772, 0xFF, GoldenrodCity_NameRatersHouse_EventScript_RateMonNickname
-	goto_if_eq 32772, 0xFF, GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate
+	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, GoldenrodCity_NameRatersHouse_EventScript_RateMonNickname
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate
 	end
 
 GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate::
@@ -62,8 +62,8 @@ GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate::
 	end
 
 GoldenrodCity_NameRatersHouse_EventScript_RateMonNickname::
-	specialvar 32781, ScriptGetPartyMonSpecies
-	goto_if_eq 32781, (1572 + 1), GoldenrodCity_NameRatersHouse_EventScript_CantRateEgg
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, (1572 + 1), GoldenrodCity_NameRatersHouse_EventScript_CantRateEgg
 	special BufferMonNickname
 
 
@@ -71,8 +71,8 @@ GoldenrodCity_NameRatersHouse_EventScript_RateMonNickname::
 	special BufferMonNickname
 
 	msgbox GoldenrodCity_NameRatersHouse_Text_FineNameSuggestBetterOne, MSGBOX_YESNO
-	goto_if_eq 32781, YES, GoldenrodCity_NameRatersHouse_EventScript_ChangeNickname
-	goto_if_eq 32781, NO, GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate
+	goto_if_eq VAR_RESULT, YES, GoldenrodCity_NameRatersHouse_EventScript_ChangeNickname
+	goto_if_eq VAR_RESULT, NO, GoldenrodCity_NameRatersHouse_EventScript_DeclineNameRate
 	end
 
 GoldenrodCity_NameRatersHouse_EventScript_CantRateEgg::
@@ -88,9 +88,9 @@ GoldenrodCity_NameRatersHouse_EventScript_PlayerNotMonsOT::
 GoldenrodCity_NameRatersHouse_EventScript_ChangeNickname::
 	msgbox GoldenrodCity_NameRatersHouse_Text_WhatShallNewNameBe, MSGBOX_DEFAULT
 	call J_Common_EventScript_NameReceivedPartyMon
-	specialvar 32781, TryPutNameRaterShowOnTheAir
+	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
 	special BufferMonNickname
-	goto_if_eq 32781, TRUE, GoldenrodCity_NameRatersHouse_EventScript_NewNameDifferent
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_NameRatersHouse_EventScript_NewNameDifferent
 	msgbox GoldenrodCity_NameRatersHouse_Text_NameNoDifferentYetSuperior, MSGBOX_DEFAULT
 	release
 	end

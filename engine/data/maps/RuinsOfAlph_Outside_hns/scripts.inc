@@ -1,8 +1,8 @@
 @ Johto (data/maps/RuinsOfAlph_Outside_hns/scripts.inc), as built into the FireRed game.
 
 RuinsOfAlph_Outside_hns_MapScripts::
-	map_script 3, RuinsOfAlph_Outside_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, RuinsOfAlph_Outside_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 RuinsOfAlph_Outside_OnTransition:
@@ -13,7 +13,7 @@ RuinsOfAlph_Outside_EventScript_Quagsire::
 	lock
 	faceplayer
 	waitse
-	playmoncry 195, 0
+	playmoncry SPECIES_QUAGSIRE, CRY_MODE_NORMAL
 	msgbox RuinsOfAlph_Outside_Text_Quagsire, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -23,12 +23,12 @@ RuinsOfAlph_Outside_Text_Quagsire:
 	.string "QUAGSIRE{SE_M_HEAT_WAVE}Qua{SE_M_SANDSTORM}Quag$"
 
 RuinsOfAlph_Outside_EventScript_Stan::
-	trainerbattle_single 1266, RuinsOfAlph_Outside_Text_SuperNerdStan_Seen, RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten
+	trainerbattle_single TRAINER_JOHTO_STAN_HNS, RuinsOfAlph_Outside_Text_SuperNerdStan_Seen, RuinsOfAlph_Outside_Text_SuperNerdStan_Beaten
 	msgbox RuinsOfAlph_Outside_Text_SuperNerdStan_After, MSGBOX_AUTOCLOSE
 	end
 
 RuinsOfAlph_Outside_EventScript_Nathan::
-	trainerbattle_single 1330, RuinsOfAlph_Outside_Text_PsychicNathan_Seen, RuinsOfAlph_Outside_Text_PsychicNathan_Beaten
+	trainerbattle_single TRAINER_JOHTO_NATHAN_HNS, RuinsOfAlph_Outside_Text_PsychicNathan_Seen, RuinsOfAlph_Outside_Text_PsychicNathan_Beaten
 	msgbox RuinsOfAlph_Outside_Text_PsychicNathan_After, MSGBOX_AUTOCLOSE
 	end
 

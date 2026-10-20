@@ -1,60 +1,60 @@
 @ Johto (data/maps/SnowsweptCavern_hns/scripts.inc), as built into the FireRed game.
 
 SnowsweptCavern_hns_MapScripts::
-	map_script 3, SnowsweptCavern_hns_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, SnowsweptCavern_hns_OnTransition
 	.byte 0
 
 SnowsweptCavern_hns_OnTransition::
-	goto_if_ge 20639, 3, SnowsweptCavern_hns_SetBoulderLocation
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 3, SnowsweptCavern_hns_SetBoulderLocation
 	end
 
 SnowsweptCavern_hns_SetBoulderLocation::
-	setobjectxyperm 6, 38, 56
+	setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_BOULDER, 38, 56
 	end
 
 Snowswept_Cavern_EventScript_ActivateSneasler::
 	lock
-	setobjectmovementtype 38, 0x40
-	setobjectxyperm 38, 6, 24
-	playse 209
+	setobjectmovementtype LOCALID_SNOWSWEPT_CAVERN_SNEASLER, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
+	setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_SNEASLER, 6, 24
+	playse SE_M_DETECT
 	dofieldeffectsparkle 10, 28, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
 	delay 200
 	fadedefaultbgm
-	addobject 38
-	clearflag 9115
+	addobject LOCALID_SNOWSWEPT_CAVERN_SNEASLER
+	clearflag JOHTO_FLAG_HIDE_SNOWSWEPT_NOBLE_SNEASLER
 
-	applymovement2 38, Snowswept_Cavern_Movement_SpawnSneasler1
+	applymovement2 LOCALID_SNOWSWEPT_CAVERN_SNEASLER, Snowswept_Cavern_Movement_SpawnSneasler1
 	delay 10
-	playmoncry 461, 0
+	playmoncry SPECIES_WEAVILE, CRY_MODE_NORMAL
 	waitmoncry
-	playmoncry 461, 0
+	playmoncry SPECIES_WEAVILE, CRY_MODE_NORMAL
 	waitmoncry
 	waitmovement 0
 
 
-	applymovement2 38, Snowswept_Cavern_Movement_SpawnSneasler2
+	applymovement2 LOCALID_SNOWSWEPT_CAVERN_SNEASLER, Snowswept_Cavern_Movement_SpawnSneasler2
 	delay 10
-	playse 10
+	playse SE_LEDGE
 	delay 20
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 2
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 2
 	special ShakeCamera
 	waitmovement 0
 
-	setobjectxyperm 38, 5, 26
+	setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_SNEASLER, 5, 26
 
-	setvar 20642, 2
+	setvar JOHTO_VAR_NOBLE_SNEASLER, 2
 	release
 	end
 
@@ -75,101 +75,101 @@ Snowswept_Cavern_Movement_SpawnSneasler2:
 Snowswept_Cavern_EventScript_Sneasler::
 	lock
 	faceplayer
-	playmoncry 461, 2
+	playmoncry SPECIES_WEAVILE, CRY_MODE_ENCOUNTER
 	waitmoncry
 	setwildbossbattle species=903, level=80, item=ITEM_RAZOR_CLAW, move1_1=MOVE_DIRE_CLAW, move1_2=MOVE_ROCK_SLIDE, move1_3=MOVE_BRICK_BREAK move1_4=MOVE_LASH_OUT
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, Snowswept_Cavern_EventScript_SneaslerRan
-	bufferspeciesname STR_VAR_1, 903
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Snowswept_Cavern_EventScript_SneaslerRan
+	bufferspeciesname STR_VAR_1, SPECIES_SNEASLER
 	msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
 	giveitem ITEM_TOXIC_PLATE
-	addvar 20640, 1
-	fadescreenswapbuffers 1
-	removeobject 38
-	setflag 9115
-	fadescreenswapbuffers 0
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SNOWSWEPT_CAVERN_SNEASLER
+	setflag JOHTO_FLAG_HIDE_SNOWSWEPT_NOBLE_SNEASLER
+	fadescreenswapbuffers FADE_FROM_BLACK
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 Snowswept_Cavern_EventScript_SneaslerRan::
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 Snowswept_Cavern_Eventscript_Machamp::
 	lock
 	faceplayer
-	playmoncry 68, 2
+	playmoncry SPECIES_MACHAMP, CRY_MODE_ENCOUNTER
 	msgbox Snowswept_Text_Machamp_Cry, MSGBOX_AUTOCLOSE
 	waitmoncry
-	goto_if_ge 20639, 3, Snowswept_Cavern_Eventscript_Machamp_AfterBoulder
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 3, Snowswept_Cavern_Eventscript_Machamp_AfterBoulder
 	msgbox Snowswept_Text_Machamp_Plate, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, Snowswept_Cavern_Eventscript_Machamp_Ran
+	goto_if_eq VAR_RESULT, FALSE, Snowswept_Cavern_Eventscript_Machamp_Ran
 	setwildbossbattle species=68, level=75, item=ITEM_NONE, move1_1=MOVE_SEISMIC_TOSS, move1_2=MOVE_ROCK_SLIDE, move1_3=MOVE_BRICK_BREAK move1_4=MOVE_SUBMISSION
-	setflag 2411
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	clearflag 2411
-	clearflag 8804
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, Snowswept_Cavern_Eventscript_Machamp_Ran
-	playmoncry 68, 2
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag JOHTO_FLAG_NO_SHINY
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Snowswept_Cavern_Eventscript_Machamp_Ran
+	playmoncry SPECIES_MACHAMP, CRY_MODE_ENCOUNTER
 	msgbox Snowswept_Cavern_Text_DroppedItem, MSGBOX_AUTOCLOSE
 	giveitem ITEM_FIST_PLATE
 	closemessage
-	addvar 20640, 1
-	setflag 9091
-	applymovement2 5, Snowswept_Machamp_Movement
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	setflag JOHTO_FLAG_GOT_FIST_PLATE
+	applymovement2 LOCALID_SNOWSWEPT_CAVERN_MACHAMP, Snowswept_Machamp_Movement
 	waitmovement 0
 
-	setvar 32772, 2
-	setvar 32773, 2
-	setvar 32774, 20
-	setvar 32775, 4
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 20
+	setvar VAR_0x8007, 4
 	special ShakeCamera
 	waitstate
-	applymovement 6, Snowswept_Cavern_Movement_Boulder
-	playse 214
+	applymovement LOCALID_SNOWSWEPT_CAVERN_BOULDER, Snowswept_Cavern_Movement_Boulder
+	playse SE_M_STRENGTH
 	delay 5
-	playse 214
+	playse SE_M_STRENGTH
 	delay 5
-	playse 214
+	playse SE_M_STRENGTH
 	delay 5
 	waitmovement 0
-	playse 20
+	playse SE_BANG
 
-	setobjectxyperm 6, 38, 56
-	setvar 20639, 3
+	setobjectxyperm LOCALID_SNOWSWEPT_CAVERN_BOULDER, 38, 56
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 3
 	release
 	end
 
 Snowswept_Cavern_Eventscript_Machamp_Ran::
-	turnobject 5, DIR_SOUTH
+	turnobject LOCALID_SNOWSWEPT_CAVERN_MACHAMP, DIR_SOUTH
 	release
 	end
 
 Snowswept_Cavern_Eventscript_Machamp_AfterBoulder::
-	turnobject 5, DIR_SOUTH
+	turnobject LOCALID_SNOWSWEPT_CAVERN_MACHAMP, DIR_SOUTH
 	release
 	end
 

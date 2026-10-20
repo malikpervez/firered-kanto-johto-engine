@@ -18,17 +18,17 @@ GoldenrodCity_RadioTower_4F4_EventScript_Sign2::
 	end
 
 GoldenrodRaidoTower4_EventScript_Grunt28::
-	trainerbattle_single 1170, GoldenrodCity_RadioTower_4F4_Text_GruntF4Seen, GoldenrodCity_RadioTower_4F4_Text_GruntF4Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_28_HNS, GoldenrodCity_RadioTower_4F4_Text_GruntF4Seen, GoldenrodCity_RadioTower_4F4_Text_GruntF4Beaten
 	msgbox GoldenrodCity_RadioTower_4F4_Text_GruntF4After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodRaidoTower4_EventScript_Grunt9::
-	trainerbattle_single 1151, GoldenrodCity_RadioTower_4F4_Text_GruntM10Seen, GoldenrodCity_RadioTower_4F4_Text_GruntM10Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_9_HNS, GoldenrodCity_RadioTower_4F4_Text_GruntM10Seen, GoldenrodCity_RadioTower_4F4_Text_GruntM10Beaten
 	msgbox GoldenrodCity_RadioTower_4F4_Text_GruntM10After, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodRaidoTower4_EventScript_Proton::
-	trainerbattle_single 1492, GoldenrodCity_RadioTower_4F4_Text_Proton_Seen, GoldenrodCity_RadioTower_4F4_Text_Proton_Beaten
+	trainerbattle_single TRAINER_JOHTO_PROTON_2_HNS, GoldenrodCity_RadioTower_4F4_Text_Proton_Seen, GoldenrodCity_RadioTower_4F4_Text_Proton_Beaten
 	msgbox GoldenrodCity_RadioTower_4F4_Text_Proton_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -41,18 +41,18 @@ GoldenrodCity_RadioTower_4F4_EventScript_Fisher::
 	end
 
 GoldenrodCity_RadioTower_4F4_EventScript_Scientist::
-	trainerbattle_single 1030, GoldenrodCity_RadioTower_4F4_Text_ScientistRichSeen, GoldenrodCity_RadioTower_4F4_Text_ScientistRichBeaten
+	trainerbattle_single TRAINER_JOHTO_RICH_HNS, GoldenrodCity_RadioTower_4F4_Text_ScientistRichSeen, GoldenrodCity_RadioTower_4F4_Text_ScientistRichBeaten
 	msgbox GoldenrodCity_RadioTower_4F4_Text_ScientistRichAfter, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_RadioTower_4F4_EventScript_Mary::
 	lock
 	faceplayer
-	goto_if_eq 20569, 6, GoldenrodCity_RadioTower_4F4_EventScript_Mary2
-	goto_if_eq 20569, 7, GoldenrodCity_RadioTower_4F4_EventScript_Mary2
-	goto_if_eq 20569, 8, GoldenrodCity_RadioTower_4F4_EventScript_Mary2
-	goto_if_eq 20569, 9, GoldenrodCity_RadioTower_4F4_EventScript_Mary2
-	goto_if_unset 8729, GoldenrodCity_RadioTower_4F4_EventScript_Mary3
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 6, GoldenrodCity_RadioTower_4F4_EventScript_Mary2
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 7, GoldenrodCity_RadioTower_4F4_EventScript_Mary2
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 8, GoldenrodCity_RadioTower_4F4_EventScript_Mary2
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 9, GoldenrodCity_RadioTower_4F4_EventScript_Mary2
+	goto_if_unset JOHTO_FLAG_GOT_MARY_BRIGHT_POWDER, GoldenrodCity_RadioTower_4F4_EventScript_Mary3
 	msgbox GoldenrodCity_RadioTower_4F4_Text_DJMaryAfter, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -68,10 +68,10 @@ GoldenrodCity_RadioTower_4F4_EventScript_Mary3::
 	msgbox GoldenrodCity_RadioTower_4F4_Text_DJMaryCleared, MSGBOX_DEFAULT
 	closemessage
 	giveitem ITEM_BRIGHT_POWDER
-	goto_if_eq 32781, FALSE, J_Common_EventScript_BagIsFull
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_BagIsFull
 	msgbox GoldenrodCity_RadioTower_4F4_Text_DJMaryPinkBow, MSGBOX_DEFAULT
 	closemessage
-	setflag 8729
+	setflag JOHTO_FLAG_GOT_MARY_BRIGHT_POWDER
 	closemessage
 	release
 	end
@@ -80,7 +80,7 @@ GoldenrodCity_RadioTower_4F4_EventScript_Meowth::
 	lock
 	faceplayer
 	waitse
-	playmoncry 52, 0
+	playmoncry SPECIES_MEOWTH, CRY_MODE_NORMAL
 	msgbox GoldenrodCity_RadioTower_4F4_Text_Meowth, MSGBOX_DEFAULT
 	waitmoncry
 	release

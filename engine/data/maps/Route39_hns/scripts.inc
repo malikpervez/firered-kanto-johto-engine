@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route39_hns/scripts.inc), as built into the FireRed game.
 
 Route39_hns_MapScripts::
-	map_script 3, Route39_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route39_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route39_OnTransition:
@@ -10,7 +10,7 @@ Route39_OnTransition:
 	end
 
 Route39_EventScript_Item_TM::
-	finditem 641
+	finditem ITEM_TM_DRAIN_PUNCH
 	end
 
 Route39_EventScript_Item_Nugget::
@@ -19,57 +19,57 @@ Route39_EventScript_Item_Nugget::
 
 Route39_EventScript_LegendaryTrigger::
 	lock
-	clearflag 8365
-	addobject 17
-	playse 136
-	applymovement 17, Route39_Movement_ShadowSlideDown
+	clearflag JOHTO_FLAG_HIDE_ROUTE39_SHADOW
+	addobject LOCALID_R39_SHADOW
+	playse SE_M_RAZOR_WIND
+	applymovement LOCALID_R39_SHADOW, Route39_Movement_ShadowSlideDown
 	waitmovement 0
-	setflag 8365
-	removeobject 17
-	playse 21
-	applymovement 2, J_Common_Movement_QuestionMark
-	applymovement 255, J_Common_Movement_QuestionMark
+	setflag JOHTO_FLAG_HIDE_ROUTE39_SHADOW
+	removeobject LOCALID_R39_SHADOW
+	playse SE_PIN
+	applymovement LOCALID_R39_BAOBA, J_Common_Movement_QuestionMark
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_QuestionMark
 	turnobject 2 DIR_SOUTH
 	turnobject 255 DIR_SOUTH
 	delay 60
 
-	getplayerxy 16384, 16385
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
 
-	call_if_eq 16385, 20, Route39_EventScript_BaobaMovement1
-	call_if_eq 16385, 21, Route39_EventScript_BaobaMovement2
-	call_if_eq 16385, 22, Route39_EventScript_BaobaMovement3
-	call_if_eq 16385, 23, Route39_EventScript_BaobaMovement4
+	call_if_eq VAR_TEMP_1, 20, Route39_EventScript_BaobaMovement1
+	call_if_eq VAR_TEMP_1, 21, Route39_EventScript_BaobaMovement2
+	call_if_eq VAR_TEMP_1, 22, Route39_EventScript_BaobaMovement3
+	call_if_eq VAR_TEMP_1, 23, Route39_EventScript_BaobaMovement4
 
 	turnobject 2 DIR_EAST
 	turnobject 255 DIR_WEST
 
 Route39_EventScript_ChooseLegend::
 	msgbox Route39_Text_ChooseLegend, MSGBOX_DEFAULT
-	multichoice 20, 8, 163, FALSE
-	switch 32781
+	multichoice 20, 8, MULTI_GOLDSILVER, FALSE
+	switch VAR_RESULT
 	case 0, Route39_EventScript_LegendaryTriggerGold
 	case 1, Route39_EventScript_LegendaryTriggerSilver
-	case 127, Route39_EventScript_ChooseLegend
+	case MULTI_B_PRESSED, Route39_EventScript_ChooseLegend
 	release
 	end
 
 Route39_EventScript_BaobaMovement1::
-	applymovement 2, Route39_Movement_Baoba1
+	applymovement LOCALID_R39_BAOBA, Route39_Movement_Baoba1
 	waitmovement 0
 	return
 
 Route39_EventScript_BaobaMovement2::
-	applymovement 2, Route39_Movement_Baoba2
+	applymovement LOCALID_R39_BAOBA, Route39_Movement_Baoba2
 	waitmovement 0
 	return
 
 Route39_EventScript_BaobaMovement3::
-	applymovement 2, Route39_Movement_Baoba3
+	applymovement LOCALID_R39_BAOBA, Route39_Movement_Baoba3
 	waitmovement 0
 	return
 
 Route39_EventScript_BaobaMovement4::
-	applymovement 2, Route39_Movement_Baoba4
+	applymovement LOCALID_R39_BAOBA, Route39_Movement_Baoba4
 	waitmovement 0
 	return
 
@@ -120,24 +120,24 @@ Route39_Movement_Baoba4:
 	step_end
 
 Route39_EventScript_LegendaryTriggerGold::
-	setvar 20577, 2
+	setvar JOHTO_VAR_LUGIA_OR_HOOH, 2
 	goto Route39_EventScript_BaobaIntro
 
 Route39_EventScript_LegendaryTriggerSilver::
-	setvar 20577, 1
+	setvar JOHTO_VAR_LUGIA_OR_HOOH, 1
 	goto Route39_EventScript_BaobaIntro
 
 Route39_EventScript_BaobaIntro::
 	msgbox Route39_Text_BaobaIntro, MSGBOX_DEFAULT
-	playfanfare 460
+	playfanfare MUS_REGISTER_MATCH_CALL
 	msgbox Route39_Text_Registered, MSGBOX_DEFAULT
 	waitfanfare
 	msgbox Route39_Text_WillCall, MSGBOX_DEFAULT
 	closemessage
-	applymovement 2, Route39_Movement_BaobaLeave
+	applymovement LOCALID_R39_BAOBA, Route39_Movement_BaobaLeave
 	waitmovement 0
-	setflag 8775
-	removeobject 2
+	setflag JOHTO_FLAG_ENABLE_BAOBA_MATCH_CALL
+	removeobject LOCALID_R39_BAOBA
 	release
 	end
 
@@ -233,7 +233,7 @@ Route39_EventScript_Miltank::
 	lock
 	faceplayer
 	waitse
-	playmoncry 241, 0
+	playmoncry SPECIES_MILTANK, CRY_MODE_NORMAL
 	msgbox Route39_Text_Miltank, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -243,7 +243,7 @@ Route39_Text_Miltank:
 	.string "MILTANK{SE_M_HEAT_WAVE}Mooo!$"
 
 Route39_EventScript_Eugene::
-	trainerbattle_single 1256, Route39_Text_SailorEugeneSeen, Route39_Text_SailorEugeneBeaten
+	trainerbattle_single TRAINER_JOHTO_EUGENE_HNS, Route39_Text_SailorEugeneSeen, Route39_Text_SailorEugeneBeaten
 	msgbox Route39_Text_SailorEugeneAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -261,15 +261,15 @@ Route39_Text_SailorEugeneAfter:
 	.string "thos{SE_M_REVERSAL}lon{SE_M_SANDSTORM}voyages.$"
 
 Route39_EventScript_Derek::
-	trainerbattle_single 1397, Route39_Text_PokefanMDerekSeen, Route39_Text_PokefanMDerekBeaten, Route39_EventScript_RegisterDerek
-	goto_if_set 8943, Route39_EventScript_DerekGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route39_EventScript_RematchDerek
+	trainerbattle_single TRAINER_JOHTO_DEREK_HNS, Route39_Text_PokefanMDerekSeen, Route39_Text_PokefanMDerekBeaten, Route39_EventScript_RegisterDerek
+	goto_if_set JOHTO_FLAG_DEREK_HAS_ITEM_HNS, Route39_EventScript_DerekGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route39_EventScript_RematchDerek
 	msgbox Route39_Text_PokefanMDerekAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route39_EventScript_RematchDerek::
-	trainerbattle_rematch 1397, Route39_Text_PokefanMDerekSeen, Route39_Text_PokefanMDerekBeaten
+	trainerbattle_rematch TRAINER_JOHTO_DEREK_HNS, Route39_Text_PokefanMDerekSeen, Route39_Text_PokefanMDerekBeaten
 	msgbox Route39_Text_PokefanMDerekAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -277,15 +277,15 @@ Route39_EventScript_RegisterDerek::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route39_Text_DerekRegister, MSGBOX_DEFAULT
-	register_matchcall 1397
+	register_matchcall TRAINER_JOHTO_DEREK_HNS
 	release
 	end
 
 Route39_EventScript_DerekGiveItem::
 	msgbox Route39_Text_DerekHasItem, MSGBOX_DEFAULT
-	giveitem 20621
-	goto_if_eq 32781, FALSE, Route39_EventScript_DerekNoRoom
-	clearflag 8943
+	giveitem JOHTO_VAR_DEREK_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, Route39_EventScript_DerekNoRoom
+	clearflag JOHTO_FLAG_DEREK_HAS_ITEM_HNS
 	msgbox Route39_Text_DerekGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -308,7 +308,7 @@ Route39_Text_PokefanMDerekAfter:
 	.string "o{SE_M_ACID_ARMOR}no{SE_M_SPIT_UP}listenin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}bragging!$"
 
 Route39_EventScript_Ruth::
-	trainerbattle_single 1419, Route39_Text_PokefanFRuthSeen, Route39_Text_PokefanFRuthBeaten
+	trainerbattle_single TRAINER_JOHTO_RUTH_HNS, Route39_Text_PokefanFRuthSeen, Route39_Text_PokefanFRuthBeaten
 	msgbox Route39_Text_PokefanFRuthAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -326,7 +326,7 @@ Route39_Text_PokefanFRuthAfter:
 	.string "{SE_M_HEAL_BELL}be{SE_M_SPIT_UP}they'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}adorable!$"
 
 Route39_EventScript_Norman::
-	trainerbattle_single 1335, Route39_Text_PsychicNormanSeen, Route39_Text_PsychicNormanBeaten
+	trainerbattle_single TRAINER_JOHTO_NORMAN_HNS, Route39_Text_PsychicNormanSeen, Route39_Text_PsychicNormanBeaten
 	msgbox Route39_Text_PsychicNormanAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -346,7 +346,7 @@ Route39_Text_PsychicNormanAfter:
 	.string "potential.$"
 
 Route39_EventScript_Jamie::
-	trainerbattle_single 1421, Route39_Text_PokefanFJaimeSeen, Route39_Text_PokefanFJaimeBeaten
+	trainerbattle_single TRAINER_JOHTO_JAMIE_HNS, Route39_Text_PokefanFJaimeSeen, Route39_Text_PokefanFJaimeBeaten
 	msgbox Route39_Text_PokefanFJaimeAfter, MSGBOX_AUTOCLOSE
 	end
 

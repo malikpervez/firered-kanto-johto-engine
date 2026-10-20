@@ -5,14 +5,14 @@ NewSinjoh_hns_MapScripts::
 	.byte 0
 
 NewSinjoh_On_Transition:
-	setflag 9095
+	setflag JOHTO_FLAG_VISITED_NEW_SINJOH
 	end
 
 NewSinjoh_EventScript_TriggerNorthGate::
 	lock
 	msgbox NewSinjoh_Text_TriggerNorthGate, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement LOCALID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
 	release
 	end
@@ -24,7 +24,7 @@ NewSinjoh_Text_TriggerNorthGate:
 NewSinjoh_EventScript_PetStantler::
 	lock
 	faceplayer
-	playmoncry 234, 0
+	playmoncry SPECIES_STANTLER, 0
 	msgbox NewSinjoh_Text_Stantler_Cry, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
@@ -47,10 +47,10 @@ NewSinjoh_MilkMan_EventScript_Seller::
 	lock
 	faceplayer
 	checkitem ITEM_MOOMOO_MILK, 99
-	goto_if_eq 32781, 1, MilkMan_EventScript_Battle
+	goto_if_eq VAR_RESULT, 1, MilkMan_EventScript_Battle
 	showmoneybox 0, 0
 	msgbox NewSinjoh_MilkMan_text_BuyMilk, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, NewSinjoh_EventScript_MilkMan_BuyMilk
+	goto_if_eq VAR_RESULT, TRUE, NewSinjoh_EventScript_MilkMan_BuyMilk
 	msgbox NewSinjoh_MilkMan_NoSale, MSGBOX_DEFAULT
 	hidemoneybox
 	closemessage
@@ -59,17 +59,17 @@ NewSinjoh_MilkMan_EventScript_Seller::
 
 NewSinjoh_EventScript_MilkMan_BuyMilk::
 	checkmoney 500, 0
-	goto_if_eq 32781, FALSE, NewSinjoh_MilkMan_NotEnough
+	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_MilkMan_NotEnough
 	additem ITEM_MOOMOO_MILK
-	goto_if_eq 32781, FALSE, NewSinjoh_MilkMan_BagFull
+	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_MilkMan_BagFull
 	removemoney 500
 	updatemoneybox 0
 	msgbox NewSinjoh_MilkMan_Text_WouldYouLikeAnother, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, NewSinjoh_EventScript_MilkMan_BuyMilk
+	goto_if_eq VAR_RESULT, TRUE, NewSinjoh_EventScript_MilkMan_BuyMilk
 
 	msgbox NewSinjoh_MilkMan_GotMilk, MSGBOX_DEFAULT
 	closemessage
-	playse 370
+	playse MUS_OBTAIN_ITEM
 	msgbox NewSinjoh_Text_GotMilk, MSGBOX_DEFAULT
 	closemessage
 	hidemoneybox
@@ -119,7 +119,7 @@ NewSinjoh_Text_GotMilk:
 
 MilkMan_EventScript_Battle::
 	msgbox MilkMan_Battle_text
-	Trainerbattle_no_intro 1632, NewSinjoh_MilkMan_text_Lose
+	Trainerbattle_no_intro TRAINER_JOHTO_MILKMAN_HNS, NewSinjoh_MilkMan_text_Lose
 	release
 	end
 
@@ -188,7 +188,7 @@ NewSinjoh_Text_Josh:
 	.string "I'{SE_M_MILK_DRINK}gonn{SE_M_CHARGE}tel{SE_M_BATON_PASS}al{SE_M_BATON_PASS}m{SE_M_YAWN}friends!$"
 
 NewSinjoh_EventScript_Janice::
-	goto_if_ge 20639, 13, NewSinjoh_EventScript_JaniceAfter
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_JaniceAfter
 	msgbox NewSinjoh_Text_Janice, MSGBOX_NPC
 	end
 
@@ -215,7 +215,7 @@ NewSinjoh_Text_OldLady1:
 	.string "invigorat{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}ol{SE_M_WATERFALL}soul.$"
 
 NewSinjoh_EventScript_OldLady2::
-	goto_if_ge 20639, 13, NewSinjoh_EventScript_OldLady2Steven
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady2Steven
 	msgbox NewSinjoh_Text_OldLady2, MSGBOX_NPC
 	end
 
@@ -235,7 +235,7 @@ NewSinjoh_Text_OldLady2Steven:
 	.string "s{SE_M_ATTRACT2}ba{SE_M_WATERFALL}afte{SE_M_SAND_TOMB}all.$"
 
 NewSinjoh_EventScript_OldLady3::
-	goto_if_ge 20639, 13, NewSinjoh_EventScript_OldLady3After
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady3After
 	msgbox NewSinjoh_Text_OldLady3, MSGBOX_NPC
 	end
 
@@ -257,7 +257,7 @@ NewSinjoh_Text_OldLady3After:
 	.string "Good!$"
 
 NewSinjoh_EventScript_SpringsSage::
-	goto_if_ge 20639, 13, NewSinjoh_EventScript_SpringsSageAfter
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_SpringsSageAfter
 	msgbox NewSinjoh_Text_SpringsSage, MSGBOX_NPC
 	end
 
@@ -304,7 +304,7 @@ NewSinjoh_EventScript_Mother::
 	faceplayer
 	msgbox NewSinjoh_Text_Mother, MSGBOX_DEFAULT
 	closemessage
-	turnobject 22, DIR_EAST
+	turnobject LOCALID_NEWSINJOH_MOTHER, DIR_EAST
 	release
 	end
 
@@ -337,7 +337,7 @@ NewSinjoh_Text_Cave_Sign:
 	.string "HO{SE_M_SWIFT}SPRING{SE_M_SKETCH}CAVE$"
 
 NewSinjoh_EventScript_Hiker::
-	goto_if_ge 20639, 13, NewSinjoh_EventScript_HikerAfter
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_HikerAfter
 	msgbox NewSinjoh_Text_Hiker, MSGBOX_NPC
 	end
 
@@ -357,7 +357,7 @@ NewSinjoh_Text_HikerAfter:
 	.string "gu{SE_M_YAWN}tips{SE_M_SUPERSONIC}price{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}com{SE_M_REVERSAL}down!$"
 
 NewSinjoh_EventScript_OldLady4::
-	goto_if_ge 20639, 13, NewSinjoh_EventScript_OldLady4After
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_EventScript_OldLady4After
 	msgbox NewSinjoh_Text_OldLady4, MSGBOX_NPC
 	end
 

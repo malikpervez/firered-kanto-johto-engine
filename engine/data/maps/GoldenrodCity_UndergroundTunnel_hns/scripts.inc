@@ -1,7 +1,7 @@
 @ Johto (data/maps/GoldenrodCity_UndergroundTunnel_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_UndergroundTunnel_hns_MapScripts::
-	map_script 1, GoldenrodCity_UndergroundTunnel_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, GoldenrodCity_UndergroundTunnel_OnLoad
 	.byte 0
 
 GoldenrodCity_UndergroundTunnel_OnLoad::
@@ -11,58 +11,58 @@ GoldenrodCity_UndergroundTunnel_OnLoad::
 GoldenrodCity_UndergroundTunnel_EventScript_KimonoTriggerBot::
 	lock
 	playbgm ((558 + 1) + 0x85), FALSE
-	applymovement 12, GoldenrodCity_UndergroundTunnel_Movement_Kimono_WalkToPlayerBot
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_WalkToPlayerBot
 	waitmovement 0
 	msgbox GoldenrodCity_UndergroundTunnel_Text_Kimono1, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 12, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 12
+	waitmovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO
 	msgbox GoldenrodCity_UndergroundTunnel_Text_Kimono2, MSGBOX_DEFAULT
 	closemessage
-	applymovement 12, J_Common_Movement_WalkUp1
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, J_Common_Movement_WalkUp1
 	waitmovement 0
-	applymovement 12, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave1
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave1
 	waitmovement 0
-	playse 202
-	applymovement 12, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Spin
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Spin
 	waitmovement 0
-	applymovement 12, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave2
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave2
 	waitmovement 0
-	setflag 8302
-	removeobject 12
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_UNDERGROUND_KIMONO
+	removeobject LOCALID_GOLDENROD_UNDERGROUND_KIMONO
 	fadedefaultbgm
-	setvar 20569, 8
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 8
 	releaseall
 	end
 
 GoldenrodCity_UndergroundTunnel_EventScript_KimonoTriggerTop::
 	lock
 	playbgm ((558 + 1) + 0x85), FALSE
-	applymovement 12, GoldenrodCity_UndergroundTunnel_Movement_Kimono_WalkToPlayerTop
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_WalkToPlayerTop
 	waitmovement 0
 	msgbox GoldenrodCity_UndergroundTunnel_Text_Kimono1, MSGBOX_DEFAULT
 	closemessage
-	playse 21
-	applymovement 12, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 12
+	waitmovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO
 	msgbox GoldenrodCity_UndergroundTunnel_Text_Kimono2, MSGBOX_DEFAULT
 	closemessage
-	applymovement 12, J_Common_Movement_WalkDown1
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, J_Common_Movement_WalkDown1
 	waitmovement 0
-	applymovement 12, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave1
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave1
 	waitmovement 0
-	playse 202
-	applymovement 12, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Spin
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Spin
 	waitmovement 0
-	applymovement 12, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave2
+	applymovement LOCALID_GOLDENROD_UNDERGROUND_KIMONO, GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave2
 	waitmovement 0
-	setflag 8302
-	removeobject 12
+	setflag JOHTO_FLAG_HIDE_GOLDENROD_UNDERGROUND_KIMONO
+	removeobject LOCALID_GOLDENROD_UNDERGROUND_KIMONO
 	fadedefaultbgm
-	setvar 20569, 8
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 8
 	releaseall
 	end
 
@@ -124,32 +124,32 @@ GoldenrodCity_UndergroundTunnel_Text_Kimono2:
 	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}g{SE_M_ATTRACT2}now.$"
 
 GoldenrodUnderground_EventScript_Eric::
-	trainerbattle_single 1267, GoldenrodUnderground_Text_SupernerdEricSeen, GoldenrodUnderground_Text_SupernerdEricBeaten
+	trainerbattle_single TRAINER_JOHTO_ERIC_HNS, GoldenrodUnderground_Text_SupernerdEricSeen, GoldenrodUnderground_Text_SupernerdEricBeaten
 	msgbox GoldenrodUnderground_Text_SupernerdEricAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodUnderground_EventScript_Teru::
-	trainerbattle_single 1275, GoldenrodUnderground_Text_SupernerdTeruSeen, GoldenrodUnderground_Text_SupernerdTeruBeaten
+	trainerbattle_single TRAINER_JOHTO_TERU_HNS, GoldenrodUnderground_Text_SupernerdTeruSeen, GoldenrodUnderground_Text_SupernerdTeruBeaten
 	msgbox GoldenrodUnderground_Text_SupernerdTeruAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodUnderground_EventScript_Issac::
-	trainerbattle_single 1139, GoldenrodUnderground_Text_PokemaniacIssacSeen, GoldenrodUnderground_Text_PokemaniacIssacBeaten
+	trainerbattle_single TRAINER_JOHTO_ISSAC_HNS, GoldenrodUnderground_Text_PokemaniacIssacSeen, GoldenrodUnderground_Text_PokemaniacIssacBeaten
 	msgbox GoldenrodUnderground_Text_PokemaniacIssacAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodUnderground_EventScript_Donald::
-	trainerbattle_single 1140, GoldenrodUnderground_Text_PokemaniacDonaldSeen, GoldenrodUnderground_Text_PokemaniacDonaldBeaten
+	trainerbattle_single TRAINER_JOHTO_DONALD_HNS, GoldenrodUnderground_Text_PokemaniacDonaldSeen, GoldenrodUnderground_Text_PokemaniacDonaldBeaten
 	msgbox GoldenrodUnderground_Text_PokemaniacDonaldAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodUnderground_EventScript_Brother_Haircut1::
 	lock
 	faceplayer
-	goto_if_set 10515, GoldenrodUnderground_EventScript_Already_Got_Haircut1
+	goto_if_set JOHTO_FLAG_DAILY_HAIRCUT1_RECEIVED, GoldenrodUnderground_EventScript_Already_Got_Haircut1
 	showmoneybox 0, 0
 	msgbox GoldenrodUnderground_Text_OlderBrotherOffer, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, GoldenrodUnderground_EventScript_Haircut1
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodUnderground_EventScript_Haircut1
 	msgbox GoldenrodUnderground_Text_OlderBrotherThatsAShame, MSGBOX_DEFAULT
 	hidemoneybox
 	closemessage
@@ -162,25 +162,25 @@ GoldenrodUnderground_EventScript_Haircut1::
 	showmoneybox 0, 0
 	lock
 	faceplayer
-	goto_if_ge 32772, 6, GoldenrodUnderground_EventScript_Declined_Haircut1
-	specialvar 32781, ScriptGetPartyMonSpecies
-	goto_if_eq 32781, (1572 + 1), GoldenrodUnderground_EventScript_Declined_Haircut1
+	goto_if_ge VAR_0x8004, PARTY_SIZE, GoldenrodUnderground_EventScript_Declined_Haircut1
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, (1572 + 1), GoldenrodUnderground_EventScript_Declined_Haircut1
 	checkmoney 500, 0
-	goto_if_eq 32781, FALSE, GoldenrodUnderground_EventScript_NotEnough_Haircut1
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodUnderground_EventScript_NotEnough_Haircut1
 	removemoney 500
 	updatemoneybox 0
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodUnderground_Text_OlderBrotherWatchItBeautiful
 	closemessage
-	fadescreen 1
-	playfanfare 368
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
 	waitfanfare
 	special HaircutBrother2
-	fadescreen 0
+	fadescreen FADE_FROM_BLACK
 	special BufferMonNickname
 	msgbox GoldenrodUnderground_Text_OlderBrotherAllDone
 	hidemoneybox
-	setflag 10515
+	setflag JOHTO_FLAG_DAILY_HAIRCUT1_RECEIVED
 	release
 	end
 
@@ -207,10 +207,10 @@ GoldenrodUnderground_EventScript_NotEnough_Haircut1::
 GoldenrodUnderground_EventScript_Brother_Haircut2::
 	lock
 	faceplayer
-	goto_if_set 10516, GoldenrodUnderground_EventScript_Already_Got_Haircut2
+	goto_if_set JOHTO_FLAG_DAILY_HAIRCUT2_RECEIVED, GoldenrodUnderground_EventScript_Already_Got_Haircut2
 	showmoneybox 0, 0
 	msgbox GoldenrodUnderground_Text_YoungerBrotherOffer, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, GoldenrodUnderground_EventScript_Haircut2
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodUnderground_EventScript_Haircut2
 	msgbox GoldenrodUnderground_Text_YoungerBrotherDisappointed, MSGBOX_DEFAULT
 	hidemoneybox
 	closemessage
@@ -223,25 +223,25 @@ GoldenrodUnderground_EventScript_Haircut2::
 	showmoneybox 0, 0
 	lock
 	faceplayer
-	goto_if_ge 32772, 6, GoldenrodUnderground_EventScript_Declined_Haircut2
-	specialvar 32781, ScriptGetPartyMonSpecies
-	goto_if_eq 32781, (1572 + 1), GoldenrodUnderground_EventScript_Declined_Haircut2
+	goto_if_ge VAR_0x8004, PARTY_SIZE, GoldenrodUnderground_EventScript_Declined_Haircut2
+	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
+	goto_if_eq VAR_RESULT, (1572 + 1), GoldenrodUnderground_EventScript_Declined_Haircut2
 	checkmoney 300, 0
-	goto_if_eq 32781, FALSE, GoldenrodUnderground_EventScript_NotEnough_Haircut2
+	goto_if_eq VAR_RESULT, FALSE, GoldenrodUnderground_EventScript_NotEnough_Haircut2
 	removemoney 300
 	updatemoneybox 0
-	playse 95
+	playse SE_SHOP
 	msgbox GoldenrodUnderground_Text_YoungerBrotherLookCool
 	closemessage
-	fadescreen 1
-	playfanfare 368
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
 	waitfanfare
 	special HaircutBrother1
-	fadescreen 0
+	fadescreen FADE_FROM_BLACK
 	special BufferMonNickname
 	msgbox GoldenrodUnderground_Text_YoungerBrotherAllDone
 	hidemoneybox
-	setflag 10516
+	setflag JOHTO_FLAG_DAILY_HAIRCUT2_RECEIVED
 	release
 	end
 
@@ -266,7 +266,7 @@ GoldenrodUnderground_EventScript_NotEnough_Haircut2::
 	end
 
 GoldenrodCity_UndergroundTunnel_MapScript_TryOpenDoor::
-	goto_if_set 8689, GoldenrodCity_UndergroundTunnel_MapScript_OpenDoor
+	goto_if_set JOHTO_FLAG_UNLOCKED_GOLDENROD_UNDERGROUND_DOOR, GoldenrodCity_UndergroundTunnel_MapScript_OpenDoor
 	end
 
 GoldenrodCity_UndergroundTunnel_MapScript_OpenDoor::
@@ -275,9 +275,9 @@ GoldenrodCity_UndergroundTunnel_MapScript_OpenDoor::
 
 GoldenrodCity_UndergroundTunnel_EventScript_Door::
 	lock
-	goto_if_set 8689, GoldenrodCity_UndergroundTunnel_EventScript_DoorAlreadyOpened
+	goto_if_set JOHTO_FLAG_UNLOCKED_GOLDENROD_UNDERGROUND_DOOR, GoldenrodCity_UndergroundTunnel_EventScript_DoorAlreadyOpened
 	checkitem ITEM_BASEMENT_KEY
-	goto_if_eq 32781, TRUE, GoldenrodCity_UndergroundTunnel_EventScript_OpenDoor
+	goto_if_eq VAR_RESULT, TRUE, GoldenrodCity_UndergroundTunnel_EventScript_OpenDoor
 	msgbox GoldenrodUnderground_Text_DoorsLocked, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -286,9 +286,9 @@ GoldenrodCity_UndergroundTunnel_EventScript_Door::
 GoldenrodCity_UndergroundTunnel_EventScript_OpenDoor::
 	msgbox GoldenrodUnderground_Text_KeyOpenedDoor, MSGBOX_DEFAULT
 	closemessage
-	setflag 8689
+	setflag JOHTO_FLAG_UNLOCKED_GOLDENROD_UNDERGROUND_DOOR
 	setmetatile 12, 10, 0x2DD, FALSE
-	playse 20
+	playse SE_BANG
 	special DrawWholeMapView
 	waitse
 	release

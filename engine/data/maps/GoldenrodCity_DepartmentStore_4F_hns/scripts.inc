@@ -1,7 +1,7 @@
 @ Johto (data/maps/GoldenrodCity_DepartmentStore_4F_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_DepartmentStore_4F_hns_MapScripts::
-	map_script 2, GoldenrodDeptElevator_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, GoldenrodDeptElevator_OnFrame
 	.byte 0
 
 GoldenrodDeptStore4_EventScript_Cooltrainer::

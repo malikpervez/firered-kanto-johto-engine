@@ -4,8 +4,8 @@ J_EventScript_MixRecordsPrompt::
 	lock
 	faceplayer
 	msgbox J_Text_WouldYouLikeToMixRecords, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_EventScript_MixRecords
-	goto_if_eq 32781, NO, J_EventScript_EndMixRecords
+	goto_if_eq VAR_RESULT, YES, J_EventScript_MixRecords
+	goto_if_eq VAR_RESULT, NO, J_EventScript_EndMixRecords
 	goto J_EventScript_EndMixRecords
 
 J_EventScript_MixRecords::

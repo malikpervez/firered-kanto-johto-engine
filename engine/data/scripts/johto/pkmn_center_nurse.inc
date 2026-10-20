@@ -3,20 +3,20 @@
 J_Common_EventScript_PkmnCenterNurse::
 	lock
 	faceplayer
-	setvar 32772, 0
-	specialvar 32781, IsPokecenterChallengeActivated
-	goto_if_eq 32781, TRUE, J_EventScript_PkmnCenterNurse_PkmnCenterChallenge_NoVisits
-	specialvar 32781, CountPlayerTrainerStars
-	goto_if_eq 32781, 4, J_EventScript_PkmnCenterNurse_GoldCard
-	goto_if_set 10592, J_EventScript_PkmnCenterNurse_HealPkmnFast
+	setvar VAR_0x8004, 0
+	specialvar VAR_RESULT, IsPokecenterChallengeActivated
+	goto_if_eq VAR_RESULT, TRUE, J_EventScript_PkmnCenterNurse_PkmnCenterChallenge_NoVisits
+	specialvar VAR_RESULT, CountPlayerTrainerStars
+	goto_if_eq VAR_RESULT, 4, J_EventScript_PkmnCenterNurse_GoldCard
+	goto_if_set JOHTO_FLAG_EVEN_FASTER_JOY, J_EventScript_PkmnCenterNurse_HealPkmnFast
 	msgbox J_gText_WouldYouLikeToRestYourPkmn, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_EventScript_PkmnCenterNurse_HealPkmn
-	goto_if_eq 32781, NO, J_EventScript_PkmnCenterNurse_Goodbye
+	goto_if_eq VAR_RESULT, YES, J_EventScript_PkmnCenterNurse_HealPkmn
+	goto_if_eq VAR_RESULT, NO, J_EventScript_PkmnCenterNurse_Goodbye
 	end
 
 J_EventScript_PkmnCenterNurse_Goodbye::
 	waitmessage
-	applymovement 32779, J_Movement_PkmnCenterNurse_Bow
+	applymovement VAR_0x800B, J_Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message J_gText_WeHopeToSeeYouAgain
 	goto J_EventScript_PkmnCenterNurse_PlayerTurn
@@ -25,19 +25,19 @@ J_EventScript_PkmnCenterNurse_Goodbye::
 J_EventScript_PkmnCenterNurse_PkmnCenterChallenge_NoVisits::
 	message J_gText_PkmnCenterChallenge_NoVisitsLeft
 	waitmessage
-	applymovement 255, J_Common_Movement_FaceDown
+	applymovement LOCALID_PLAYER, J_Common_Movement_FaceDown
 	waitmovement 0
 	release
 	end
 
 J_EventScript_PkmnCenterNurse_HealPkmn::
-	incrementgamestat 15
-	call_if_eq 32772, 0, J_EventScript_PkmnCenterNurse_IllTakeYourPkmn
-	call_if_eq 32772, 1, J_EventScript_PkmnCenterNurse_IllTakeYourPkmn2
+	incrementgamestat GAME_STAT_USED_POKECENTER
+	call_if_eq VAR_0x8004, 0, J_EventScript_PkmnCenterNurse_IllTakeYourPkmn
+	call_if_eq VAR_0x8004, 1, J_EventScript_PkmnCenterNurse_IllTakeYourPkmn2
 	waitmessage
 	call J_EventScript_PkmnCenterNurse_TakeAndHealPkmn
 
-	goto_if_unset 8937, J_EventScript_PkmnCenterNurse_CheckPokerus_Hns
+	goto_if_unset JOHTO_FLAG_POKERUS_EXPLAINED, J_EventScript_PkmnCenterNurse_CheckPokerus_Hns
 	goto J_EventScript_PkmnCenterNurse_ReturnPkmn
 
 
@@ -46,7 +46,7 @@ J_EventScript_PkmnCenterNurse_HealPkmn::
 	end
 
 J_EventScript_PkmnCenterNurse_HealPkmnFast::
-	incrementgamestat 15
+	incrementgamestat GAME_STAT_USED_POKECENTER
 	special HealPlayerParty
 
 
@@ -64,34 +64,34 @@ J_EventScript_PkmnCenterNurse_IllTakeYourPkmn2::
 
 J_EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	hidefollower 0
-	applymovement 32779, J_Movement_PkmnCenterNurse_Turn
+	applymovement VAR_0x800B, J_Movement_PkmnCenterNurse_Turn
 	waitmovement 0
-	dofieldeffect 25
+	dofieldeffect FLDEFF_POKECENTER_HEAL
 	.if FALSE == FALSE && 0 != 0
-	setflag 0
+	setflag OW_FLAG_MOVE_UNION_ROOM_CHECK
 	call J_CableClub_OnResume
-	clearflag 0
+	clearflag OW_FLAG_MOVE_UNION_ROOM_CHECK
 	.endif
-	waitfieldeffect 25
-	applymovement 32779, J_Common_Movement_WalkInPlaceFasterDown
+	waitfieldeffect FLDEFF_POKECENTER_HEAL
+	applymovement VAR_0x800B, J_Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special HealPlayerParty
 	return
 
 J_EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom::
-	specialvar 32781, PlayerNotAtTrainerHillEntrance
-	goto_if_eq 32781, 0, J_EventScript_PkmnCenterNurse_ReturnPkmn
-	specialvar 32781, BufferUnionRoomPlayerName
-	copyvar 32776, 32781
-	goto_if_eq 32776, 0, J_EventScript_PkmnCenterNurse_ReturnPkmn
-	goto_if_eq 32776, 1, J_EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom
+	specialvar VAR_RESULT, PlayerNotAtTrainerHillEntrance
+	goto_if_eq VAR_RESULT, 0, J_EventScript_PkmnCenterNurse_ReturnPkmn
+	specialvar VAR_RESULT, BufferUnionRoomPlayerName
+	copyvar VAR_0x8008, VAR_RESULT
+	goto_if_eq VAR_0x8008, 0, J_EventScript_PkmnCenterNurse_ReturnPkmn
+	goto_if_eq VAR_0x8008, 1, J_EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom
 	end
 
 J_EventScript_PkmnCenterNurse_ReturnPkmn::
-	goto_if_eq 32772, 1, J_EventScript_PkmnCenterNurse_ReturnPkmn2
+	goto_if_eq VAR_0x8004, 1, J_EventScript_PkmnCenterNurse_ReturnPkmn2
 	message J_gText_RestoredPkmnToFullHealth
 	waitmessage
-	applymovement 32779, J_Movement_PkmnCenterNurse_Bow
+	applymovement VAR_0x800B, J_Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message J_gText_WeHopeToSeeYouAgain
 	goto J_EventScript_PkmnCenterNurse_PlayerTurn
@@ -100,54 +100,54 @@ J_EventScript_PkmnCenterNurse_ReturnPkmn::
 J_EventScript_PkmnCenterNurse_ReturnPkmn2::
 	message J_gText_ThankYouForWaiting
 	waitmessage
-	applymovement 32779, J_Movement_PkmnCenterNurse_Bow
+	applymovement VAR_0x800B, J_Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message J_gText_WeHopeToSeeYouAgain2
 	goto J_EventScript_PkmnCenterNurse_PlayerTurn
 	return
 
 J_EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom::
-	goto_if_set 10398, J_EventScript_PkmnCenterNurse_ReturnPkmn
+	goto_if_set JOHTO_FLAG_NURSE_UNION_ROOM_REMINDER, J_EventScript_PkmnCenterNurse_ReturnPkmn
 	msgbox J_gText_RestoredPkmnToFullHealth, MSGBOX_DEFAULT
-	setflag 10398
+	setflag JOHTO_FLAG_NURSE_UNION_ROOM_REMINDER
 	message J_CableClub_Text_PlayerIsWaiting
 	waitmessage
-	applymovement 32779, J_Movement_PkmnCenterNurse_Bow
+	applymovement VAR_0x800B, J_Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message J_gText_WeHopeToSeeYouAgain
 	goto J_EventScript_PkmnCenterNurse_PlayerTurn
 	return
 
 J_EventScript_PkmnCenterNurse_CheckPokerus_Hns::
-	specialvar 32781, IsPokerusInParty
-	goto_if_eq 32781, TRUE, J_EventScript_PkmnCenterNurse_ExplainPokerus
+	specialvar VAR_RESULT, IsPokerusInParty
+	goto_if_eq VAR_RESULT, TRUE, J_EventScript_PkmnCenterNurse_ExplainPokerus
 	goto J_EventScript_PkmnCenterNurse_ReturnPkmn
 	end
 
 J_EventScript_PkmnCenterNurse_CheckPokerus::
-	specialvar 32781, IsPokerusInParty
-	goto_if_eq 32781, TRUE, J_EventScript_PkmnCenterNurse_ExplainPokerus
-	goto_if_eq 32781, FALSE, J_EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
+	specialvar VAR_RESULT, IsPokerusInParty
+	goto_if_eq VAR_RESULT, TRUE, J_EventScript_PkmnCenterNurse_ExplainPokerus
+	goto_if_eq VAR_RESULT, FALSE, J_EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
 	end
 
 J_EventScript_PkmnCenterNurse_ExplainPokerus::
 	message J_gText_PokerusExplanation
-	setflag 8937
+	setflag JOHTO_FLAG_POKERUS_EXPLAINED
 	return
 
 J_EventScript_PkmnCenterNurse_GoldCard::
-	goto_if_set 0, J_EventScript_PkmnCenterNurse_AskForUsual
-	setflag 0
+	goto_if_set FLAG_NURSE_MENTIONS_GOLD_CARD, J_EventScript_PkmnCenterNurse_AskForUsual
+	setflag FLAG_NURSE_MENTIONS_GOLD_CARD
 	msgbox J_gText_WelcomeCutShort, MSGBOX_DEFAULT
-	playse 21
-	applymovement 32779, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement VAR_0x800B, J_Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement 32779, J_Common_Movement_Delay48
+	applymovement VAR_0x800B, J_Common_Movement_Delay48
 	waitmovement 0
 	msgbox J_gText_NoticesGoldCard, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_EventScript_PkmnCenterNurse_GoldCardHealPkmn
+	goto_if_eq VAR_RESULT, YES, J_EventScript_PkmnCenterNurse_GoldCardHealPkmn
 	waitmessage
-	applymovement 32779, J_Movement_PkmnCenterNurse_Bow
+	applymovement VAR_0x800B, J_Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message J_gText_WeHopeToSeeYouAgain2
 	goto J_EventScript_PkmnCenterNurse_PlayerTurn
@@ -155,23 +155,23 @@ J_EventScript_PkmnCenterNurse_GoldCard::
 
 J_EventScript_PkmnCenterNurse_AskForUsual::
 	msgbox J_gText_YouWantTheUsual, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_EventScript_PkmnCenterNurse_GoldCardHealPkmn
+	goto_if_eq VAR_RESULT, YES, J_EventScript_PkmnCenterNurse_GoldCardHealPkmn
 	waitmessage
-	applymovement 32779, J_Movement_PkmnCenterNurse_Bow
+	applymovement VAR_0x800B, J_Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message J_gText_WeHopeToSeeYouAgain2
 	goto J_EventScript_PkmnCenterNurse_PlayerTurn
 	return
 
 J_EventScript_PkmnCenterNurse_GoldCardHealPkmn::
-	setvar 32772, 1
+	setvar VAR_0x8004, 1
 	goto J_EventScript_PkmnCenterNurse_HealPkmn
 	end
 
 J_EventScript_PkmnCenterNurse_PlayerTurn::
 	closemessage
 	callnative UpdateFollowingPokemon
-	applymovement 255, J_Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_FaceDown
 	waitmovement 0
 	release
 	end

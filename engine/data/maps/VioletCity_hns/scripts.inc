@@ -1,14 +1,14 @@
 @ Johto (data/maps/VioletCity_hns/scripts.inc), as built into the FireRed game.
 
 VioletCity_hns_MapScripts::
-	map_script 2, VioletCity_OnFrame
-	map_script 3, VioletCity_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, VioletCity_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, VioletCity_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 VioletCity_OnFrame::
-	map_script_2 20608, 1, VioletCity_EventScript_Kimono_Girl
-	map_script_2 20609, 3, VioletCity_EventScript_ElmCall_Trigger
+	map_script_2 JOHTO_VAR_VIOLET_CITY_KIMONO_GIRL, 1, VioletCity_EventScript_Kimono_Girl
+	map_script_2 JOHTO_VAR_VIOLET_CITY_STATE, 3, VioletCity_EventScript_ElmCall_Trigger
 	.2byte 0
 
 VioletCity_OnTransition::
@@ -17,45 +17,45 @@ VioletCity_OnTransition::
 
 VioletCity_EventScript_Trigger::
 
-	clearflag 8703
-	clearflag 8773
-	clearflag 8280
-	clearflag 8425
-	clearflag 8679
-	clearflag 8681
-	clearflag 8678
-	clearflag 8680
-	clearflag 8246
-	clearflag 8727
-	clearflag 8731
-	clearflag 8247
-	clearflag 8724
+	clearflag JOHTO_FLAG_RECEIVED_TOGEPI_EGG
+	clearflag JOHTO_FLAG_VIOLET_NPC_TRADE_COMPLETED
+	clearflag JOHTO_FLAG_HIDE_SPROUT_TOWER_SILVER
+	clearflag JOHTO_FLAG_HIDE_JOHTO_GYM_LEADERS
+	clearflag JOHTO_FLAG_HOOH_BROUGHT
+	clearflag JOHTO_FLAG_OMANYTE_BROUGHT
+	clearflag JOHTO_FLAG_AERODACTYL_BROUGHT
+	clearflag JOHTO_FLAG_KABUTO_BROUGHT
+	clearflag JOHTO_FLAG_HIDE_SUDOWOODO
+	clearflag JOHTO_FLAG_GOT_HARD_STONE
+	clearflag JOHTO_FLAG_GOT_POISON_BARB
+	clearflag JOHTO_FLAG_HIDE_UNION_CAVE_LAPRAS
+	clearflag JOHTO_FLAG_GOT_BLACK_GLASSES
 
-	setvar 20655, 0
-	setvar 20608, 0
-	setvar 20596, 0
+	setvar JOHTO_VAR_SLOWPOKE_TAIL, 0
+	setvar JOHTO_VAR_VIOLET_CITY_KIMONO_GIRL, 0
+	setvar JOHTO_VAR_RUINSOFALPH_STATE, 0
 
-	setflag 8657
-	setflag 8654
-	setflag 8655
-	setflag 8656
-	setflag 8279
-	setflag 8276
-	setflag 10482
-	setflag 8278
+	setflag JOHTO_FLAG_ITEM_GS_BALL
+	setflag JOHTO_FLAG_ITEM_DOME_FOSSIL
+	setflag JOHTO_FLAG_ITEM_HELIX_FOSSIL
+	setflag JOHTO_FLAG_ITEM_OLD_AMBER
+	setflag JOHTO_FLAG_HIDE_TRAINER_SCHOOL_EARL
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_AIDE
+	setflag JOHTO_FLAG_VISITED_VIOLET_CITY
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL
 
-	setvar 20656, 0
-	setvar 20609, 1
+	setvar JOHTO_VAR_SPROUT_TOWER, 0
+	setvar JOHTO_VAR_VIOLET_CITY_STATE, 1
 	end
 
 VioletCity_EventScript_Earl::
 	lock
 	faceplayer
-	applymovement 4, VioletCity_Movement_Earl_Spin
+	applymovement LOCALID_VIOLETCITY_EARL, VioletCity_Movement_Earl_Spin
 	waitmovement 0
 	faceplayer
 	msgbox VioletCity_Text_EarlAsksIfYouBeatFalkner, MSGBOX_YESNO
-	goto_if_eq 32781, NO, VioletCity_EventScript_EarlTrainerSchool
+	goto_if_eq VAR_RESULT, NO, VioletCity_EventScript_EarlTrainerSchool
 	msgbox VioletCity_Text_VeryNiceIndeed, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -65,17 +65,17 @@ VioletCity_EventScript_EarlTrainerSchool::
 	msgbox VioletCity_Text_FollowEarl, MSGBOX_DEFAULT
 	closemessage
 	playbgm ((558 + 1) + 0x3A), FALSE
-	switch 32780
+	switch VAR_FACING
 	case DIR_NORTH, VioletCity_EventScript_EarlTrainerSchoolSouth
 	case DIR_WEST, VioletCity_EventScript_EarlTrainerSchoolEast
 	release
 	end
 
 VioletCity_EventScript_EarlTrainerSchoolSouth::
-	applymovement 4, VioletCity_Movement_Earl_South_Adjustment
+	applymovement LOCALID_VIOLETCITY_EARL, VioletCity_Movement_Earl_South_Adjustment
 	waitmovement 0
-	applymovement 4, VioletCity_Movement_Earl_Spin
-	applymovement 255, VioletCity_Movement_Player_South_Adjustment
+	applymovement LOCALID_VIOLETCITY_EARL, VioletCity_Movement_Earl_Spin
+	applymovement OBJ_EVENT_ID_PLAYER, VioletCity_Movement_Player_South_Adjustment
 	waitmovement 0
 	waitmovement 0
 	goto VioletCity_EventScript_EarlTrainerSchoolTransition
@@ -83,8 +83,8 @@ VioletCity_EventScript_EarlTrainerSchoolSouth::
 	end
 
 VioletCity_EventScript_EarlTrainerSchoolEast::
-	applymovement 4, VioletCity_Movement_Earl_East_Adjustment
-	applymovement 255, VioletCity_Movement_Player_East_Adjustment
+	applymovement LOCALID_VIOLETCITY_EARL, VioletCity_Movement_Earl_East_Adjustment
+	applymovement OBJ_EVENT_ID_PLAYER, VioletCity_Movement_Player_East_Adjustment
 	waitmovement 0
 	waitmovement 0
 	goto VioletCity_EventScript_EarlTrainerSchoolTransition
@@ -92,25 +92,25 @@ VioletCity_EventScript_EarlTrainerSchoolEast::
 	end
 
 VioletCity_EventScript_EarlTrainerSchoolTransition:
-	applymovement 4, VioletCity_Movement_Walk_To_School
-	applymovement 255, VioletCity_Movement_Walk_To_School
+	applymovement LOCALID_VIOLETCITY_EARL, VioletCity_Movement_Walk_To_School
+	applymovement OBJ_EVENT_ID_PLAYER, VioletCity_Movement_Walk_To_School
 	waitmovement 0
 	waitmovement 0
-	applymovement 4, VioletCity_Movement_Earl_Spin
+	applymovement LOCALID_VIOLETCITY_EARL, VioletCity_Movement_Earl_Spin
 	waitmovement 0
-	turnobject 4, DIR_WEST
+	turnobject LOCALID_VIOLETCITY_EARL, DIR_WEST
 	msgbox VioletCity_Text_HereTeacherIAm, MSGBOX_DEFAULT
 	closemessage
-	applymovement 4, VioletCity_Movement_Earl_Walk_Inside
+	applymovement LOCALID_VIOLETCITY_EARL, VioletCity_Movement_Earl_Walk_Inside
 	delay 20
 	opendoor 39, 36
 	waitdooranim
 	waitmovement 0
-	setflag 8277
-	removeobject 4
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_EARL
+	removeobject LOCALID_VIOLETCITY_EARL
 	closedoor 39, 36
 	waitdooranim
-	clearflag 8279
+	clearflag JOHTO_FLAG_HIDE_TRAINER_SCHOOL_EARL
 	fadedefaultbgm
 	release
 	end
@@ -151,7 +151,7 @@ VioletCity_EventScript_Pichu::
 	lock
 	faceplayer
 	waitse
-	playmoncry 172, 0
+	playmoncry SPECIES_PICHU, CRY_MODE_NORMAL
 	msgbox VioletCity_Text_Pichu, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -161,7 +161,7 @@ VioletCity_EventScript_Bellsprout::
 	lock
 	faceplayer
 	waitse
-	playmoncry 69, 0
+	playmoncry SPECIES_BELLSPROUT, CRY_MODE_NORMAL
 	msgbox VioletCity_Text_Bellsprout, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -171,7 +171,7 @@ VioletCity_EventScript_Rattata::
 	lock
 	faceplayer
 	waitse
-	playmoncry 19, 0
+	playmoncry SPECIES_RATTATA, CRY_MODE_NORMAL
 	msgbox VioletCity_Text_Rattata, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -183,42 +183,42 @@ VioletCity_EventScript_ElmCall_Trigger::
 	pokenavcall VioletCity_Text_Elm_Call
 	waitmessage
 	delay 30
-	clearflag 8276
-	setflag 8267
-	setvar 20609, 4
+	clearflag JOHTO_FLAG_HIDE_VIOLET_CITY_AIDE
+	setflag JOHTO_FLAG_HIDE_NEWBARKTOWN_LAB_AIDE
+	setvar JOHTO_VAR_VIOLET_CITY_STATE, 4
 	release
 	end
 
 VioletCity_EventScript_Kimono_Girl::
 	lock
 	playbgm ((558 + 1) + 0x85), FALSE
-	playse 21
-	applymovement 31, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_VIOLET_KIMONO, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 31
-	applymovement 31, VioletCity_Movement_Kimono_Girl_1
+	waitmovement LOCALID_VIOLET_KIMONO
+	applymovement LOCALID_VIOLET_KIMONO, VioletCity_Movement_Kimono_Girl_1
 	waitmovement 0
 	msgbox VioletCity_Text_Kimono_Girl1, MSGBOX_DEFAULT
 	closemessage
-	applymovement 31, VioletCity_Movement_Kimono_Girl_2
+	applymovement LOCALID_VIOLET_KIMONO, VioletCity_Movement_Kimono_Girl_2
 	waitmovement 0
 	msgbox VioletCity_Text_Kimono_Girl2, MSGBOX_DEFAULT
 	closemessage
-	applymovement 31, VioletCity_Movement_Kimono_Girl_3
+	applymovement LOCALID_VIOLET_KIMONO, VioletCity_Movement_Kimono_Girl_3
 	waitmovement 0
 	msgbox VioletCity_Text_Kimono_Girl3, MSGBOX_DEFAULT
 	closemessage
-	playse 202
-	applymovement 31, VioletCity_Movement_Kimono_Girl_4
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_VIOLET_KIMONO, VioletCity_Movement_Kimono_Girl_4
 	waitmovement 0
 	msgbox VioletCity_Text_Kimono_Girl4, MSGBOX_DEFAULT
 	closemessage
-	applymovement 31, VioletCity_Movement_Kimono_Girl_5
+	applymovement LOCALID_VIOLET_KIMONO, VioletCity_Movement_Kimono_Girl_5
 	waitmovement 0
 	fadedefaultbgm
-	setvar 20608, 2
-	setflag 8278
-	removeobject 31
+	setvar JOHTO_VAR_VIOLET_CITY_KIMONO_GIRL, 2
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL
+	removeobject LOCALID_VIOLET_KIMONO
 	release
 	end
 

@@ -12,67 +12,67 @@ VictoryRoadKanto_1F_EventScript_Item_MaxEther::
 	end
 
 VictoryRoadKanto_EventScript_Item_Dark_Pulse::
-	finditem 660
+	finditem ITEM_TM_DARK_PULSE
 	end
 
 VictoryRoadKanto_1F_Trigger::
 	lock
 	playbgm ((558 + 1) + 0x3B), FALSE
 	delay 5
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
-	waitmovement 255
-	addobject 13
-	getplayerxy 16384, 16385
-	call_if_eq 16384, 27, VictoryRoadKanto_1F_EventScript_SilverEnterLeft
-	call_if_eq 16384, 28, VictoryRoadKanto_1F_EventScript_SilverEnterMid
-	call_if_eq 16384, 29, VictoryRoadKanto_1F_EventScript_SilverEnterRight
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	addobject LOCALID_VICTORYROAD_SILVER
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_eq VAR_TEMP_0, 27, VictoryRoadKanto_1F_EventScript_SilverEnterLeft
+	call_if_eq VAR_TEMP_0, 28, VictoryRoadKanto_1F_EventScript_SilverEnterMid
+	call_if_eq VAR_TEMP_0, 29, VictoryRoadKanto_1F_EventScript_SilverEnterRight
 	msgbox VictoryRoad_Text_RivalBefore, MSGBOX_DEFAULT
-	call_if_eq 20499, 0, VictoryRoadKanto_1F_Silver_Battle_Cyndaquil
-	call_if_eq 20499, 1, VictoryRoadKanto_1F_Silver_Battle_Totodile
-	call_if_eq 20499, 2, VictoryRoadKanto_1F_Silver_Battle_Chikorita
+	call_if_eq JOHTO_VAR_STARTER_MON, 0, VictoryRoadKanto_1F_Silver_Battle_Cyndaquil
+	call_if_eq JOHTO_VAR_STARTER_MON, 1, VictoryRoadKanto_1F_Silver_Battle_Totodile
+	call_if_eq JOHTO_VAR_STARTER_MON, 2, VictoryRoadKanto_1F_Silver_Battle_Chikorita
 	playbgm ((558 + 1) + 0x3C), FALSE
 	msgbox VictoryRoad_Text_RivalAfter, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 13, VictoryRoadKanto_1F_Movement_SilverLeave
+	applymovement2 LOCALID_VICTORYROAD_SILVER, VictoryRoadKanto_1F_Movement_SilverLeave
 	waitmovement 0
-	removeobject 13
+	removeobject LOCALID_VICTORYROAD_SILVER
 	fadedefaultbgm
 	release
-	setvar 20594, 3
+	setvar JOHTO_VAR_ROUTE27_STATE, 3
 	end
 
 VictoryRoadKanto_1F_EventScript_SilverEnterLeft::
-	applymovement2 13, VictoryRoadKanto_1F_Movement_SilverEnterLeft
-	applymovement2 255, J_Common_Movement_WalkDown1
-	applymovement2 0xFE, J_Common_Movement_WalkUp1
-	waitmovement 13
+	applymovement2 LOCALID_VICTORYROAD_SILVER, VictoryRoadKanto_1F_Movement_SilverEnterLeft
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, J_Common_Movement_WalkUp1
+	waitmovement LOCALID_VICTORYROAD_SILVER
 	return
 
 VictoryRoadKanto_1F_EventScript_SilverEnterMid::
-	applymovement2 13, VictoryRoadKanto_1F_Movement_SilverEnterMid
-	applymovement2 255, J_Common_Movement_WalkDown1
-	applymovement2 0xFE, J_Common_Movement_WalkUp1
-	waitmovement 13
+	applymovement2 LOCALID_VICTORYROAD_SILVER, VictoryRoadKanto_1F_Movement_SilverEnterMid
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, J_Common_Movement_WalkUp1
+	waitmovement LOCALID_VICTORYROAD_SILVER
 	return
 
 VictoryRoadKanto_1F_EventScript_SilverEnterRight::
-	applymovement2 13, VictoryRoadKanto_1F_Movement_SilverEnterRight
-	applymovement2 255, J_Common_Movement_WalkDown1
-	applymovement2 0xFE, J_Common_Movement_WalkUp1
-	waitmovement 13
+	applymovement2 LOCALID_VICTORYROAD_SILVER, VictoryRoadKanto_1F_Movement_SilverEnterRight
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, J_Common_Movement_WalkUp1
+	waitmovement LOCALID_VICTORYROAD_SILVER
 	return
 
 VictoryRoadKanto_1F_Silver_Battle_Cyndaquil::
-	trainerbattle_no_intro 1478, VictoryRoad_Text_RivalDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CYNDAQUIL_5_HNS, VictoryRoad_Text_RivalDefeat
 	return
 
 VictoryRoadKanto_1F_Silver_Battle_Totodile::
-	trainerbattle_no_intro 1485, VictoryRoad_Text_RivalDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_TOTODILE_5_HNS, VictoryRoad_Text_RivalDefeat
 	return
 
 VictoryRoadKanto_1F_Silver_Battle_Chikorita::
-	trainerbattle_no_intro 1471, VictoryRoad_Text_RivalDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CHIKORITA_5_HNS, VictoryRoad_Text_RivalDefeat
 	return
 
 VictoryRoadKanto_1F_Movement_SilverEnterLeft:

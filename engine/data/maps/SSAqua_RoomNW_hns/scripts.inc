@@ -1,11 +1,11 @@
 @ Johto (data/maps/SSAqua_RoomNW_hns/scripts.inc), as built into the FireRed game.
 
 SSAqua_RoomNW_hns_MapScripts::
-	map_script 3, SSAqua_RoomNW_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, SSAqua_RoomNW_OnTransition
 	.byte 0
 
 SSAqua_RoomNW_OnTransition::
-	goto_if_ge 20603, 3, SSAqua_RoomNW_SetTrainerPos
+	goto_if_ge JOHTO_VAR_SSAQUA_STATE, 3, SSAqua_RoomNW_SetTrainerPos
 	end
 
 SSAqua_RoomNW_SetTrainerPos::
@@ -17,24 +17,24 @@ SSAqua_RoomNW_EventScript_Stanly::
 	lock
 	faceplayer
 	msgbox SSAqua_RoomNW_Text_SailorStanlySeen, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1264, SSAqua_RoomNW_Text_SailorStanlyBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_STANLY_HNS, SSAqua_RoomNW_Text_SailorStanlyBeaten
 	msgbox SSAqua_RoomNW_Text_SailorStanlyAfterBattle, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
+	fadescreenswapbuffers FADE_TO_BLACK
 	delay 60
-	playse 8
-	removeobject 1
-	fadescreenswapbuffers 0
-	setvar 20603, 3
+	playse SE_DOOR
+	removeobject LOCALID_SSAQUA_SLEEPYSAILOR
+	fadescreenswapbuffers FADE_FROM_BLACK
+	setvar JOHTO_VAR_SSAQUA_STATE, 3
 	end
 
 SSAqua_RoomNW_EventScript_Edward::
-	trainerbattle_single 1180, SSAqua_RoomNW_Text_GentlemanEdwardSeen, SSAqua_RoomNW_Text_GentlemanEdwardBeaten
+	trainerbattle_single TRAINER_JOHTO_EDWARD_HNS, SSAqua_RoomNW_Text_GentlemanEdwardSeen, SSAqua_RoomNW_Text_GentlemanEdwardBeaten
 	msgbox SSAqua_RoomNW_Text_GentlemanEdwardAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 SSAqua_RoomNW_EventScript_Corey::
-	trainerbattle_single 1311, SSAqua_RoomNW_Text_BurglarCoreySeen, SSAqua_RoomNW_Text_BurglarCoreyBeaten
+	trainerbattle_single TRAINER_JOHTO_COREY_HNS, SSAqua_RoomNW_Text_BurglarCoreySeen, SSAqua_RoomNW_Text_BurglarCoreyBeaten
 	msgbox SSAqua_RoomNW_Text_BurglarCoreyAfterBattle, MSGBOX_AUTOCLOSE
 	end
 

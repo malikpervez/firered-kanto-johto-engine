@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route44_hns/scripts.inc), as built into the FireRed game.
 
 Route44_hns_MapScripts::
-	map_script 3, Route44_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route44_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route44_OnTransition:
@@ -10,10 +10,10 @@ Route44_OnTransition:
 	end
 
 Route44_EventScript_Wilton::
-	trainerbattle_single 1209, Route44_Text_FisherWilton1Seen, Route44_Text_FisherWilton1Beaten, Route44_EventScript_RegisterWilton
-	goto_if_set 8942, Route44_EventScript_WiltonGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route44_EventScript_RematchWilton
+	trainerbattle_single TRAINER_JOHTO_WILTON_HNS, Route44_Text_FisherWilton1Seen, Route44_Text_FisherWilton1Beaten, Route44_EventScript_RegisterWilton
+	goto_if_set JOHTO_FLAG_WILTON_HAS_ITEM_HNS, Route44_EventScript_WiltonGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route44_EventScript_RematchWilton
 	msgbox Route44_Text_FisherWiltonHugePoliwag, MSGBOX_AUTOCLOSE
 	end
 
@@ -21,20 +21,20 @@ Route44_EventScript_RegisterWilton::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route44_Text_WiltonRegister, MSGBOX_DEFAULT
-	register_matchcall 1209
+	register_matchcall TRAINER_JOHTO_WILTON_HNS
 	release
 	end
 
 Route44_EventScript_RematchWilton::
-	trainerbattle_rematch 1209, Route44_Text_WiltonRematchIntro, Route44_Text_WiltonRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_WILTON_HNS, Route44_Text_WiltonRematchIntro, Route44_Text_WiltonRematchDefeat
 	msgbox Route44_Text_WiltonPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route44_EventScript_WiltonGiveItem::
 	msgbox Route44_Text_WiltonHasItem, MSGBOX_DEFAULT
-	giveitem 20659
-	goto_if_eq 32781, FALSE, Route44_EventScript_WiltonNoRoom
-	clearflag 8942
+	giveitem JOHTO_VAR_WILTON_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, Route44_EventScript_WiltonNoRoom
+	clearflag JOHTO_FLAG_WILTON_HAS_ITEM_HNS
 	msgbox Route44_Text_WiltonGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -43,14 +43,14 @@ Route44_EventScript_WiltonNoRoom::
 	end
 
 Route44_EventScript_Edgar::
-	trainerbattle_single 1210, Route44_Text_FisherEdgarSeen, Route44_Text_FisherEdgarBeaten
+	trainerbattle_single TRAINER_JOHTO_EDGAR_HNS, Route44_Text_FisherEdgarSeen, Route44_Text_FisherEdgarBeaten
 	msgbox Route44_Text_FisherEdgarAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route44_EventScript_Vance::
-	trainerbattle_single 1059, Route44_Text_BirdKeeperVance1Seen, Route44_Text_BirdKeeperVance1Beaten, Route44_EventScript_RegisterVance
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route44_EventScript_RematchVance
+	trainerbattle_single TRAINER_JOHTO_VANCE_HNS, Route44_Text_BirdKeeperVance1Seen, Route44_Text_BirdKeeperVance1Beaten, Route44_EventScript_RegisterVance
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route44_EventScript_RematchVance
 	msgbox Route44_Text_BirdKeeperVanceBirds, MSGBOX_AUTOCLOSE
 	end
 
@@ -58,32 +58,32 @@ Route44_EventScript_RegisterVance::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route44_Text_VanceRegister, MSGBOX_DEFAULT
-	register_matchcall 1059
+	register_matchcall TRAINER_JOHTO_VANCE_HNS
 	release
 	end
 
 Route44_EventScript_RematchVance::
-	trainerbattle_rematch 1059, Route44_Text_VanceRematchIntro, Route44_Text_VanceRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_VANCE_HNS, Route44_Text_VanceRematchIntro, Route44_Text_VanceRematchDefeat
 	msgbox Route44_Text_VancePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route44_EventScript_Phil::
-	trainerbattle_single 1337, Route44_Text_PsychicPhilSeen, Route44_Text_PsychicPhilBeaten
+	trainerbattle_single TRAINER_JOHTO_PHIL_HNS, Route44_Text_PsychicPhilSeen, Route44_Text_PsychicPhilBeaten
 	msgbox Route44_Text_PsychicPhilAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route44_EventScript_Zach::
-	trainerbattle_single 1141, Route44_Text_PokemaniacZachSeen, Route44_Text_PokemaniacZachBeaten
+	trainerbattle_single TRAINER_JOHTO_ZACH_HNS, Route44_Text_PokemaniacZachSeen, Route44_Text_PokemaniacZachBeaten
 	msgbox Route44_Text_PokemaniacZachAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route44_EventScript_Allen::
-	trainerbattle_single 1095, Route44_Text_CooltrainermAllenSeen, Route44_Text_CooltrainermAllenBeaten
+	trainerbattle_single TRAINER_JOHTO_ALLEN_HNS, Route44_Text_CooltrainermAllenSeen, Route44_Text_CooltrainermAllenBeaten
 	msgbox Route44_Text_CooltrainermAllenAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route44_EventScript_Cybil::
-	trainerbattle_single 1111, Route44_Text_CooltrainerfCybilSeen, Route44_Text_CooltrainerfCybilBeaten
+	trainerbattle_single TRAINER_JOHTO_CYBIL_HNS, Route44_Text_CooltrainerfCybilSeen, Route44_Text_CooltrainerfCybilBeaten
 	msgbox Route44_Text_CooltrainerfCybilAfter, MSGBOX_AUTOCLOSE
 	end
 

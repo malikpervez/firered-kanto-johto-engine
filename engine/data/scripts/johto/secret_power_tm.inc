@@ -39,32 +39,32 @@ J_Route111_EventScript_SecretPowerMan::
 	lock
 	faceplayer
 	msgbox J_Route111_Text_MakingRoomUseTMToMakeYourOwn, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_Route111_EventScript_GiveSecretPower
+	goto_if_eq VAR_RESULT, YES, J_Route111_EventScript_GiveSecretPower
 	msgbox J_Route111_Text_DontWantThis, MSGBOX_DEFAULT
 	release
 	end
 
 J_Route111_EventScript_GiveSecretPower::
-	giveitem 624
-	goto_if_eq 32781, FALSE, J_Route111_EventScript_NoRoomForSecretPower
+	giveitem ITEM_TM_SECRET_POWER
+	goto_if_eq VAR_RESULT, FALSE, J_Route111_EventScript_NoRoomForSecretPower
 	msgbox J_Route111_Text_ExplainSecretPower, MSGBOX_DEFAULT
 	closemessage
-	setflag 0
-	clearflag 0
-	call_if_eq 32780, DIR_WEST, J_Route111_EventScript_SecretPowerManExit
-	call_if_eq 32780, DIR_EAST, J_Route111_EventScript_SecretPowerManExit
-	call_if_eq 32780, DIR_NORTH, J_Route111_EventScript_SecretPowerManExitNorth
-	removeobject 32783
+	setflag FLAG_RECEIVED_SECRET_POWER
+	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
+	call_if_eq VAR_FACING, DIR_WEST, J_Route111_EventScript_SecretPowerManExit
+	call_if_eq VAR_FACING, DIR_EAST, J_Route111_EventScript_SecretPowerManExit
+	call_if_eq VAR_FACING, DIR_NORTH, J_Route111_EventScript_SecretPowerManExitNorth
+	removeobject VAR_LAST_TALKED
 	release
 	end
 
 J_Route111_EventScript_SecretPowerManExit::
-	applymovement 32783, J_Route111_Movement_SecretPowerManExit
+	applymovement VAR_LAST_TALKED, J_Route111_Movement_SecretPowerManExit
 	waitmovement 0
 	return
 
 J_Route111_EventScript_SecretPowerManExitNorth::
-	applymovement 32783, J_Route111_Movement_SecretPowerManExitNorth
+	applymovement VAR_LAST_TALKED, J_Route111_Movement_SecretPowerManExitNorth
 	waitmovement 0
 	return
 

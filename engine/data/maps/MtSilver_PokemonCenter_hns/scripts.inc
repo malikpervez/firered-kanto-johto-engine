@@ -1,20 +1,20 @@
 @ Johto (data/maps/MtSilver_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 MtSilver_PokemonCenter_hns_MapScripts::
-	map_script 3, MtSilver_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_PokemonCenter_OnTransition
 	.byte 0
 
 MtSilver_PokemonCenter_OnTransition::
-	setrespawn 138
+	setrespawn JOHTO_HEAL_LOCATION_MT_SILVER_HNS
 	end
 
 MtSilver_PokemonCenter_EventScript_Meara::
 	lock
 	faceplayer
-	goto_if_ge 20639, 1, MtSilver_PokemonCenter_EventScript_Meara_AfterUnlockSinjoh
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 1, MtSilver_PokemonCenter_EventScript_Meara_AfterUnlockSinjoh
 	msgbox MtSilver_PokemonCenter_Text_Meara1, MSGBOX_AUTOCLOSE
 	checkitem ITEM_AZURE_FLUTE
-	goto_if_eq 32781, TRUE, MtSilver_PokemonCenter_EventScript_Meara_BonusContentPrompt
+	goto_if_eq VAR_RESULT, TRUE, MtSilver_PokemonCenter_EventScript_Meara_BonusContentPrompt
 	release
 	end
 
@@ -23,26 +23,26 @@ MtSilver_PokemonCenter_EventScript_Meara_BonusContentPrompt::
 	helpwindow HELP_SINJOH_WINDOW
 
 	msgbox MtSilver_PokemonCenter_Text_Prompt, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, MtSilver_PokemonCenter_EventScript_Meara_BonusContentNo
+	goto_if_eq VAR_RESULT, FALSE, MtSilver_PokemonCenter_EventScript_Meara_BonusContentNo
 	closemessage
 
 
-	clearflag 9081
-	setflag 9115
-	setflag 9116
-	setflag 9117
-	setflag 9118
-	setflag 9119
-	setflag 9120
-	setflag 9121
-	setflag 9098
-	setflag 9122
-	setflag 9124
-	setflag 9125
-	setflag 9126
-	setvar 20639, 1
-	setvar 20640, 0
-	setvar 20641, 0
+	clearflag JOHTO_FLAG_MT_SILVER_1F_HIDE_SCIENTIST
+	setflag JOHTO_FLAG_HIDE_SNOWSWEPT_NOBLE_SNEASLER
+	setflag JOHTO_FLAG_HIDE_ROUTE49_NOBLE_WYRDEER
+	setflag JOHTO_FLAG_HIDE_ROUTE49_NOBLE_OVERQWIL
+	setflag JOHTO_FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE
+	setflag JOHTO_FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA
+	setflag JOHTO_FLAG_HIDE_ROUTE50_NOBLE_ELECTRODE
+	setflag JOHTO_FLAG_HIDE_ROUTE50_NOBLE_KLEAVOR
+	setflag JOHTO_FLAG_HIDE_NEWSINJOH_HOUSE3_NOBLE_TYPHLOSION
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_STEVEN
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_STEVEN
+	setflag JOHTO_FLAG_HIDE_NEWSINJOH_STEVEN
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 1
+	setvar JOHTO_VAR_PLATECOUNTER, 0
+	setvar JOHTO_VAR_REGIS_SCANNED, 0
 	warp MAP_MT_SILVER_1F_WATERFALL_ROOM_HNS, 43, 9
 	waitstate
 	end
@@ -53,7 +53,7 @@ MtSilver_PokemonCenter_EventScript_Meara_BonusContentNo::
 
 MtSilver_PokemonCenter_EventScript_Meara_AfterUnlockSinjoh::
 	msgbox MtSilver_PokemonCenter_Text_Meara3, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, MtSilver_PokemonCenter_EventScript_Meara_WarpToSinjoh
+	goto_if_eq VAR_RESULT, TRUE, MtSilver_PokemonCenter_EventScript_Meara_WarpToSinjoh
 	closemessage
 	release
 	end

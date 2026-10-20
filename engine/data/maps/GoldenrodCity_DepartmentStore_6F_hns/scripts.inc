@@ -1,7 +1,7 @@
 @ Johto (data/maps/GoldenrodCity_DepartmentStore_6F_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_DepartmentStore_6F_hns_MapScripts::
-	map_script 2, GoldenrodDeptElevator_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, GoldenrodDeptElevator_OnFrame
 	.byte 0
 
 GoldenrodDeptStore6_EventScript_Whitney::
@@ -9,11 +9,11 @@ GoldenrodDeptStore6_EventScript_Whitney::
 	faceplayer
 	msgbox GoldenrodDeptStore6_Text_Whitney, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
-	setflag 8304
-	removeobject 4
-	fadescreenswapbuffers 0
-	clearflag 8401
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_DEPTSTORE_WHITNEY
+	removeobject LOCALID_STORE_WHITNEY
+	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag JOHTO_FLAG_HIDE_DOJO_WHITNEY
 	release
 	end
 
@@ -27,9 +27,9 @@ GoldenrodDeptStore6_Text_Whitney:
 GoldenrodCity_DepartmentStore_6F_EventScript_Jose::
 	lock
 	faceplayer
-	goto_if_set 8771, GoldenrodCity_DepartmentStore_6F_EventScript_TradeCompleted
+	goto_if_set JOHTO_FLAG_GOLDENROD_NPC_TRADE_COMPLETED, GoldenrodCity_DepartmentStore_6F_EventScript_TradeCompleted
 	ingame_trade INGAME_TRADE_MACHOP, GoldenrodCity_DepartmentStore_6F_Text_YouWillTradeWontYou, GoldenrodCity_DepartmentStore_6F_EventScript_DeclineTrade, GoldenrodCity_DepartmentStore_6F_EventScript_NotRequestedMon, GoldenrodCity_DepartmentStore_6F_Text_MonYouTakeCare
-	setflag 8771
+	setflag JOHTO_FLAG_GOLDENROD_NPC_TRADE_COMPLETED
 	release
 	end
 
@@ -39,7 +39,7 @@ GoldenrodCity_DepartmentStore_6F_EventScript_DeclineTrade::
 	end
 
 GoldenrodCity_DepartmentStore_6F_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, 32777
+	bufferspeciesname STR_VAR_1, VAR_0x8009
 	msgbox GoldenrodCity_DepartmentStore_6F_Text_ThisIsntAMon, MSGBOX_DEFAULT
 	release
 	end

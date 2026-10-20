@@ -1,26 +1,26 @@
 @ Johto (data/maps/IndigoPlateau_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 IndigoPlateau_PokemonCenter_hns_MapScripts::
-	map_script 2, IndigoPlateau_PokemonCenter_OnFrame
-	map_script 3, IndigoPlateau_Pokecenter_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, IndigoPlateau_PokemonCenter_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, IndigoPlateau_Pokecenter_OnTransition
 	.byte 0
 
 IndigoPlateau_PokemonCenter_OnFrame::
-	map_script_2 20576, 0, IndigoPlateau_PokemonCenter_Enter
-	map_script_2 20576, 2, IndigoPlateau_PokemonCenter_Enter
-	map_script_2 20576, 3, IndigoPlateau_PokemonCenter_Enter
-	map_script_2 20576, 4, IndigoPlateau_PokemonCenter_Enter
-	map_script_2 20576, 5, IndigoPlateau_PokemonCenter_Enter
-	map_script_2 20576, 6, IndigoPlateau_PokemonCenter_Enter
+	map_script_2 JOHTO_VAR_LEAGUE_STATE, 0, IndigoPlateau_PokemonCenter_Enter
+	map_script_2 JOHTO_VAR_LEAGUE_STATE, 2, IndigoPlateau_PokemonCenter_Enter
+	map_script_2 JOHTO_VAR_LEAGUE_STATE, 3, IndigoPlateau_PokemonCenter_Enter
+	map_script_2 JOHTO_VAR_LEAGUE_STATE, 4, IndigoPlateau_PokemonCenter_Enter
+	map_script_2 JOHTO_VAR_LEAGUE_STATE, 5, IndigoPlateau_PokemonCenter_Enter
+	map_script_2 JOHTO_VAR_LEAGUE_STATE, 6, IndigoPlateau_PokemonCenter_Enter
 	.2byte 0
 
 IndigoPlateau_PokemonCenter_Enter::
-	setflag 10491
-	setvar 20576, 1
+	setflag JOHTO_FLAG_VISITED_INDIGO_PLATEAU
+	setvar JOHTO_VAR_LEAGUE_STATE, 1
 	end
 
 IndigoPlateau_Pokecenter_OnTransition::
-	setrespawn 140
+	setrespawn JOHTO_HEAL_LOCATION_INDIGO_PLATEAU_HNS
 	end
 
 IndigoPlateau_EventScript_Cooltrainer::
@@ -58,13 +58,13 @@ IndigoPlateau_Text_CooltrainerM:
 IndigoPlateau_EventScript_Silver::
 	lock
 	faceplayer
-	goto_if_set 10512, IndigoPlateau_EventScript_SilverBeat
+	goto_if_set JOHTO_FLAG_DAILY_BEAT_SILVER, IndigoPlateau_EventScript_SilverBeat
 	msgbox IndigoPlateau_Text_RivalEntrance1, MSGBOX_DEFAULT
-	call_if_eq 20499, 0, IndigoPlateau_Silver_Battle_Cyndaquil
-	call_if_eq 20499, 1, IndigoPlateau_Silver_Battle_Totodile
-	call_if_eq 20499, 2, IndigoPlateau_Silver_Battle_Chikorita
+	call_if_eq JOHTO_VAR_STARTER_MON, 0, IndigoPlateau_Silver_Battle_Cyndaquil
+	call_if_eq JOHTO_VAR_STARTER_MON, 1, IndigoPlateau_Silver_Battle_Totodile
+	call_if_eq JOHTO_VAR_STARTER_MON, 2, IndigoPlateau_Silver_Battle_Chikorita
 	msgbox IndigoPlateau_Text_RivalAfter, MSGBOX_DEFAULT
-	setflag 10512
+	setflag JOHTO_FLAG_DAILY_BEAT_SILVER
 	release
 	end
 
@@ -75,15 +75,15 @@ IndigoPlateau_EventScript_SilverBeat::
 	end
 
 IndigoPlateau_Silver_Battle_Cyndaquil::
-	trainerbattle_no_intro 1480, IndigoPlateau_Text_RivalWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CYNDAQUIL_7_HNS, IndigoPlateau_Text_RivalWin
 	return
 
 IndigoPlateau_Silver_Battle_Totodile::
-	trainerbattle_no_intro 1487, IndigoPlateau_Text_RivalWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_TOTODILE_7_HNS, IndigoPlateau_Text_RivalWin
 	return
 
 IndigoPlateau_Silver_Battle_Chikorita::
-	trainerbattle_no_intro 1473, IndigoPlateau_Text_RivalWin
+	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CHIKORITA_7_HNS, IndigoPlateau_Text_RivalWin
 	return
 
 IndigoPlateau_Text_RivalEntrance1:
@@ -110,7 +110,7 @@ IndigoPlateau_EventScript_Psychic::
 	lock
 	faceplayer
 	msgbox IndigoPlateau_Text_TeleportGuy1, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, IndigoPlateau_EventScript_PsychicTeleport
+	goto_if_eq VAR_RESULT, TRUE, IndigoPlateau_EventScript_PsychicTeleport
 	msgbox IndigoPlateau_Text_TeleportGuyNo, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -119,13 +119,13 @@ IndigoPlateau_EventScript_Psychic::
 IndigoPlateau_EventScript_PsychicTeleport::
 	msgbox IndigoPlateau_Text_TeleportGuyYes, MSGBOX_DEFAULT
 	closemessage
-	turnobject 255, DIR_SOUTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	playbgm ((558 + 1) + 0x0A), FALSE
 	delay 60
-	playmoncry 63, 0
-	applymovement2 6, IndigoPLateau_Movement_Abra
+	playmoncry SPECIES_ABRA, CRY_MODE_NORMAL
+	applymovement2 LOCALID_INDIGOPLATEAU_ABRA, IndigoPLateau_Movement_Abra
 	waitmovement 0
-	fadescreen 3
+	fadescreen FADE_TO_WHITE
 	warpteleport MAP_NEW_BARK_TOWN_HNS, 20, 12
 	waitstate
 	release
@@ -140,7 +140,7 @@ IndigoPlateau_EventScript_Abra::
 	lock
 	faceplayer
 	waitse
-	playmoncry 63, 0
+	playmoncry SPECIES_ABRA, CRY_MODE_NORMAL
 	msgbox IndigoPlateau_Text_Abra, MSGBOX_DEFAULT
 	waitmoncry
 	release

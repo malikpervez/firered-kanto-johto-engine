@@ -1,8 +1,8 @@
 @ Johto (data/maps/MtMortar_1F_North_hns/scripts.inc), as built into the FireRed game.
 
 MtMortar_1F_North_hns_MapScripts::
-	map_script 3, MtMortar_1F_North_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, MtMortar_1F_North_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 MtMortar_1F_North_OnTransition:
@@ -38,12 +38,12 @@ MtMortar_1F_North_EventScript_Item_KingsRock::
 	end
 
 MtMortar_1F_North_EventScript_Miller::
-	trainerbattle_single 1142, MountMortar2_Text_PokemaniacMillerSeen, MountMortar2_Text_PokemaniacMillerBeaten
+	trainerbattle_single TRAINER_JOHTO_MILLER_HNS, MountMortar2_Text_PokemaniacMillerSeen, MountMortar2_Text_PokemaniacMillerBeaten
 	msgbox MountMortar2_Text_PokemaniacMillerAfter, MSGBOX_AUTOCLOSE
 	end
 
 MtMortar_1F_North_EventScript_Markus::
-	trainerbattle_single 1279, MountMortar2_Text_SupernerdMarkusSeen, MountMortar2_Text_SupernerdMarkusBeaten
+	trainerbattle_single TRAINER_JOHTO_MARKUS_HNS, MountMortar2_Text_SupernerdMarkusSeen, MountMortar2_Text_SupernerdMarkusBeaten
 	msgbox MountMortar2_Text_SupernerdMarkusAfter, MSGBOX_AUTOCLOSE
 	end
 

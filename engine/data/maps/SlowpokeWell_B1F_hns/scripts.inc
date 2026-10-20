@@ -26,17 +26,17 @@ SlowpokeWell_B1F_EventScript_Kurt::
 	end
 
 SlowpokeWell_B1F_EventScript_Grunt21::
-	trainerbattle_single 1163, SlowpokeWell_B1F_Text_GruntM29Seen, SlowpokeWell_B1F_Text_GruntM29Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_21_HNS, SlowpokeWell_B1F_Text_GruntM29Seen, SlowpokeWell_B1F_Text_GruntM29Beaten
 	msgbox SlowpokeWell_B1F_Text_GruntM29After, MSGBOX_AUTOCLOSE
 	end
 
 SlowpokeWell_B1F_EventScript_Grunt22F::
-	trainerbattle_single 1164, SlowpokeWell_B1F_Text_GruntF1Seen, SlowpokeWell_B1F_Text_GruntF1Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_22_HNS, SlowpokeWell_B1F_Text_GruntF1Seen, SlowpokeWell_B1F_Text_GruntF1Beaten
 	msgbox SlowpokeWell_B1F_Text_GruntF1After, MSGBOX_AUTOCLOSE
 	end
 
 SlowpokeWell_B1F_EventScript_Eto::
-	trainerbattle_single 1176, SlowpokeWell_B1F_Text_GruntM2Seen, SlowpokeWell_B1F_Text_GruntM2Beaten
+	trainerbattle_single TRAINER_JOHTO_ETO_HNS, SlowpokeWell_B1F_Text_GruntM2Seen, SlowpokeWell_B1F_Text_GruntM2Beaten
 	msgbox SlowpokeWell_B1F_Text_GruntM2After, MSGBOX_AUTOCLOSE
 	end
 
@@ -45,30 +45,30 @@ SlowpokeWell_B1F_EventScript_Proton::
 	faceplayer
 	msgbox SlowpokeWell_B1F_Text_ProtonSeen, MSGBOX_DEFAULT
 	closemessage
-	trainerbattle_no_intro 1491, SlowpokeWell_B1F_Text_ProtonBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_PROTON_1_HNS, SlowpokeWell_B1F_Text_ProtonBeaten
 	msgbox SlowpokeWell_B1F_Text_ProtonAfter, MSGBOX_AUTOCLOSE
 	closemessage
-	fadescreen 1
-	setflag 8283
-	clearflag 8292
-	addobject 19
+	fadescreen FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_AZALEA_TOWN_ROCKETS
+	clearflag JOHTO_FLAG_HIDE_KURT_1
+	addobject LOCALID_WELL_KURT
 	removeobject 11
 	removeobject 12
 	removeobject 13
 	delay 120
-	fadescreen 0
+	fadescreen FADE_FROM_BLACK
 	special DrawWholeMapView
-	turnobject 255, DIR_SOUTH
-	applymovement 19, SlowpokeWell_B1F_Movement_Kurt
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	applymovement LOCALID_WELL_KURT, SlowpokeWell_B1F_Movement_Kurt
 	waitmovement 0
 	msgbox SlowpokeWell_B1F_Text_KurtAfter, MSGBOX_DEFAULT
 	closemessage
-	fadescreen 1
-	setflag 8286
-	setflag 8292
-	clearflag 8293
-	clearflag 8230
-	setvar 20547, 3
+	fadescreen FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_SLOWPOKE_WELL_KURT
+	setflag JOHTO_FLAG_HIDE_KURT_1
+	clearflag JOHTO_FLAG_HIDE_KURT_2
+	clearflag JOHTO_FLAG_HIDE_AZALEA_TOWN_SLOWPOKE
+	setvar JOHTO_VAR_AZALEA_TOWN_STATE, 3
 	warp MAP_AZALEA_TOWN_KURTS_HOUSE_HNS, 15, 4
 	waitstate
 	end

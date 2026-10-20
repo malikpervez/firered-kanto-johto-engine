@@ -6,9 +6,9 @@ Gate_NationalPark_hns_MapScripts::
 Gate_NationalPark_EventScript_Attendant::
 	lockall
 	faceplayer
-	goto_if_set 10513, Gate_NationalPark_EventScript_AttendantAlreadyPlayed
+	goto_if_set JOHTO_FLAG_DAILY_BUG_CONTEST_COMPLETED, Gate_NationalPark_EventScript_AttendantAlreadyPlayed
 	msgbox Route35NationalParkGate_Text_OfficerAskToParticipate, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Gate_NationalPark_EventScript_AttendantStart
+	goto_if_eq VAR_RESULT, TRUE, Gate_NationalPark_EventScript_AttendantStart
 	msgbox Route35NationalParkGate_Text_TakePartInFuture, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -16,15 +16,15 @@ Gate_NationalPark_EventScript_Attendant::
 Gate_NationalPark_EventScript_AttendantStart::
 	playbgm ((558 + 1) + 0x3D), FALSE
 	msgbox Route35NationalParkGate_Text_OfficerAskToUseFirstMon, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, Gate_NationalPark_EventScript_AttendantCancel
+	goto_if_eq VAR_RESULT, FALSE, Gate_NationalPark_EventScript_AttendantCancel
 	getpartysize
-	call_if_eq 32781, 1, Gate_NationalPark_EventScript_OnlyOneMon
+	call_if_eq VAR_RESULT, 1, Gate_NationalPark_EventScript_OnlyOneMon
 	msgbox Route35NationalParkGate_Text_OfficerHoldYourMon, MSGBOX_DEFAULT
 	closemessage
 	special SavePlayerParty
 	remove5mons
-	goto_if_eq 32781, 2, Gate_NationalPark_EventScript_AttendantFaint
-	playfanfare 370
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Gate_NationalPark_EventScript_AttendantFaint
+	playfanfare MUS_OBTAIN_ITEM
 	message Route35NationalParkGate_Text_MonLeftWithHelper
 	waitfanfare
 	closemessage
@@ -34,13 +34,13 @@ Gate_NationalPark_EventScript_AttendantStart::
 	closemessage
 	msgbox Route35NationalParkGate_Text_OfficerExplainRules, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 32780, DIR_WEST, Gate_NationalPark_EventScript_AttendantEnterTop
-	call_if_eq 32780, DIR_NORTH, Gate_NationalPark_EventScript_AttendantEnterBot
-	playse 9
-	clearflag 8307
+	call_if_eq VAR_FACING, DIR_WEST, Gate_NationalPark_EventScript_AttendantEnterTop
+	call_if_eq VAR_FACING, DIR_NORTH, Gate_NationalPark_EventScript_AttendantEnterBot
+	playse SE_EXIT
+	clearflag JOHTO_FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
 	special EnterBugContestMode
-	setflag 10604
-	setvar 20552, 1
+	setflag JOHTO_FLAG_DISABLE_EXP_GAIN
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 1
 	warp MAP_NATIONAL_PARK_BUG_CONTEST_HNS, 1
 	waitstate
 	end
@@ -53,24 +53,24 @@ Gate_NationalPark_EventScript_OnlyOneMon::
 	closemessage
 	msgbox Route35NationalParkGate_Text_OfficerExplainRules, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 32780, DIR_WEST, Gate_NationalPark_EventScript_AttendantEnterTop
-	call_if_eq 32780, DIR_NORTH, Gate_NationalPark_EventScript_AttendantEnterBot
-	playse 9
-	clearflag 8307
+	call_if_eq VAR_FACING, DIR_WEST, Gate_NationalPark_EventScript_AttendantEnterTop
+	call_if_eq VAR_FACING, DIR_NORTH, Gate_NationalPark_EventScript_AttendantEnterBot
+	playse SE_EXIT
+	clearflag JOHTO_FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
 	special EnterBugContestMode
-	setflag 10604
-	setvar 20552, 1
+	setflag JOHTO_FLAG_DISABLE_EXP_GAIN
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 1
 	warp MAP_NATIONAL_PARK_BUG_CONTEST_HNS, 1
 	waitstate
 	end
 
 Gate_NationalPark_EventScript_AttendantEnterTop::
-	applymovement 255, Gate_NationalPark_Movement_Player_EnterParkTop
+	applymovement OBJ_EVENT_ID_PLAYER, Gate_NationalPark_Movement_Player_EnterParkTop
 	waitmovement 0
 	return
 
 Gate_NationalPark_EventScript_AttendantEnterBot::
-	applymovement 255, Gate_NationalPark_Movement_Player_EnterParkBot
+	applymovement OBJ_EVENT_ID_PLAYER, Gate_NationalPark_Movement_Player_EnterParkBot
 	waitmovement 0
 	return
 
@@ -115,9 +115,9 @@ Gate_NationalPark_Movement_Player_EnterParkBot:
 Gate_NationalPark_EventScript_BAttendant::
 	lockall
 	faceplayer
-	goto_if_set 10513, Gate_NationalPark_EventScript_AttendantAlreadyPlayed
+	goto_if_set JOHTO_FLAG_DAILY_BUG_CONTEST_COMPLETED, Gate_NationalPark_EventScript_AttendantAlreadyPlayed
 	msgbox Route35NationalParkGate_Text_OfficerAskToParticipate, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Gate_NationalPark_EventScript_BAttendantStart
+	goto_if_eq VAR_RESULT, TRUE, Gate_NationalPark_EventScript_BAttendantStart
 	msgbox Route35NationalParkGate_Text_TakePartInFuture, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -125,15 +125,15 @@ Gate_NationalPark_EventScript_BAttendant::
 Gate_NationalPark_EventScript_BAttendantStart::
 	playbgm ((558 + 1) + 0x3D), FALSE
 	msgbox Route35NationalParkGate_Text_OfficerAskToUseFirstMon, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, Gate_NationalPark_EventScript_AttendantCancel
+	goto_if_eq VAR_RESULT, FALSE, Gate_NationalPark_EventScript_AttendantCancel
 	getpartysize
-	call_if_eq 32781, 1, Gate_NationalPark_EventScript_OnlyOneMonB
+	call_if_eq VAR_RESULT, 1, Gate_NationalPark_EventScript_OnlyOneMonB
 	msgbox Route35NationalParkGate_Text_OfficerHoldYourMon, MSGBOX_DEFAULT
 	closemessage
 	special SavePlayerParty
 	remove5mons
-	goto_if_eq 32781, 2, Gate_NationalPark_EventScript_AttendantFaint
-	playfanfare 370
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Gate_NationalPark_EventScript_AttendantFaint
+	playfanfare MUS_OBTAIN_ITEM
 	message Route35NationalParkGate_Text_MonLeftWithHelper
 	waitfanfare
 	closemessage
@@ -143,13 +143,13 @@ Gate_NationalPark_EventScript_BAttendantStart::
 	closemessage
 	msgbox Route35NationalParkGate_Text_OfficerExplainRules, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 32780, DIR_EAST, Gate_NationalPark_EventScript_AttendantBEnterTop
-	call_if_eq 32780, DIR_NORTH, Gate_NationalPark_EventScript_AttendantBEnterBot
-	playse 9
+	call_if_eq VAR_FACING, DIR_EAST, Gate_NationalPark_EventScript_AttendantBEnterTop
+	call_if_eq VAR_FACING, DIR_NORTH, Gate_NationalPark_EventScript_AttendantBEnterBot
+	playse SE_EXIT
 	special EnterBugContestMode
-	setflag 10604
-	setflag 8307
-	setvar 20552, 5
+	setflag JOHTO_FLAG_DISABLE_EXP_GAIN
+	setflag JOHTO_FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 5
 	warp MAP_NATIONAL_PARK_BUG_CONTEST_HNS, 40, 19
 	waitstate
 	end
@@ -162,24 +162,24 @@ Gate_NationalPark_EventScript_OnlyOneMonB::
 	closemessage
 	msgbox Route35NationalParkGate_Text_OfficerExplainRules, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 32780, DIR_EAST, Gate_NationalPark_EventScript_AttendantBEnterTop
-	call_if_eq 32780, DIR_NORTH, Gate_NationalPark_EventScript_AttendantBEnterBot
-	playse 9
+	call_if_eq VAR_FACING, DIR_EAST, Gate_NationalPark_EventScript_AttendantBEnterTop
+	call_if_eq VAR_FACING, DIR_NORTH, Gate_NationalPark_EventScript_AttendantBEnterBot
+	playse SE_EXIT
 	special EnterBugContestMode
-	setflag 10604
-	setflag 8307
-	setvar 20552, 5
+	setflag JOHTO_FLAG_DISABLE_EXP_GAIN
+	setflag JOHTO_FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 5
 	warp MAP_NATIONAL_PARK_BUG_CONTEST_HNS, 40, 19
 	waitstate
 	end
 
 Gate_NationalPark_EventScript_AttendantBEnterTop::
-	applymovement 255, Gate_NationalPark_Movement_Player_EnterParkTopB
+	applymovement OBJ_EVENT_ID_PLAYER, Gate_NationalPark_Movement_Player_EnterParkTopB
 	waitmovement 0
 	return
 
 Gate_NationalPark_EventScript_AttendantBEnterBot::
-	applymovement 255, Gate_NationalPark_Movement_Player_EnterParkBotB
+	applymovement OBJ_EVENT_ID_PLAYER, Gate_NationalPark_Movement_Player_EnterParkBotB
 	waitmovement 0
 	return
 

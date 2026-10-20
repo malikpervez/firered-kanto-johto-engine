@@ -5,7 +5,7 @@ MahoganyTown_Gym_hns_MapScripts::
 
 MahoganyTown_Gym_EventScript_Statue::
 	lock
-	goto_if_set 8749, MahoganyTown_Gym_EventScript_Statue2
+	goto_if_set JOHTO_FLAG_DEFEATED_MAHOGANY_TOWN_GYM, MahoganyTown_Gym_EventScript_Statue2
 	msgbox MahoganyTown_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -28,7 +28,7 @@ MahoganyTown_Gym_Text_GymStatueCertified:
 MahoganyTown_GymEventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set 8749, MahoganyTown_Gym_EventScript_GymGuy2
+	goto_if_set JOHTO_FLAG_DEFEATED_MAHOGANY_TOWN_GYM, MahoganyTown_Gym_EventScript_GymGuy2
 	msgbox MahoganyTown_Gym_Text_Guide, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -40,37 +40,37 @@ MahoganyTown_Gym_EventScript_GymGuy2::
 	end
 
 MahoganyTown_Gym_EventScript_Ronald::
-	trainerbattle_single 1393, MahoganyTown_Gym_Text_BoarderRonaldSeen, MahoganyTown_Gym_Text_BoarderRonaldBeaten
+	trainerbattle_single TRAINER_JOHTO_RONALD_HNS, MahoganyTown_Gym_Text_BoarderRonaldSeen, MahoganyTown_Gym_Text_BoarderRonaldBeaten
 	msgbox MahoganyTown_Gym_Text_BoarderRonaldAfter, MSGBOX_AUTOCLOSE
 	end
 
 MahoganyTown_Gym_EventScript_Brad::
-	trainerbattle_single 1394, MahoganyTown_Gym_Text_BoarderBradSeen, MahoganyTown_Gym_Text_BoarderBradBeaten
+	trainerbattle_single TRAINER_JOHTO_BRAD_HNS, MahoganyTown_Gym_Text_BoarderBradSeen, MahoganyTown_Gym_Text_BoarderBradBeaten
 	msgbox MahoganyTown_Gym_Text_BoarderBradAfter, MSGBOX_AUTOCLOSE
 	end
 
 MahoganyTown_Gym_EventScript_Douglas::
-	trainerbattle_single 1395, MahoganyTown_Gym_Text_BoarderDouglasSeen, MahoganyTown_Gym_Text_BoarderDouglasBeaten
+	trainerbattle_single TRAINER_JOHTO_DOUGLAS_HNS, MahoganyTown_Gym_Text_BoarderDouglasSeen, MahoganyTown_Gym_Text_BoarderDouglasBeaten
 	msgbox MahoganyTown_Gym_Text_BoarderDouglasAfter, MSGBOX_AUTOCLOSE
 	end
 
 MahoganyTown_Gym_EventScript_Roxanne::
-	trainerbattle_single 1184, MahoganyTown_Gym_Text_SkierRoxanneSeen, MahoganyTown_Gym_Text_SkierRoxanneBeaten
+	trainerbattle_single TRAINER_JOHTO_ROXANNE_HNS, MahoganyTown_Gym_Text_SkierRoxanneSeen, MahoganyTown_Gym_Text_SkierRoxanneBeaten
 	msgbox MahoganyTown_Gym_Text_SkierRoxanneAfter, MSGBOX_AUTOCLOSE
 	end
 
 MahoganyTown_Gym_EventScript_Clarissa::
-	trainerbattle_single 1185, MahoganyTown_Gym_Text_SkierClarissaSeen, MahoganyTown_Gym_Text_SkierClarissaBeaten
+	trainerbattle_single TRAINER_JOHTO_CLARISSA_HNS, MahoganyTown_Gym_Text_SkierClarissaSeen, MahoganyTown_Gym_Text_SkierClarissaBeaten
 	msgbox MahoganyTown_Gym_Text_SkierClarissaAfter, MSGBOX_AUTOCLOSE
 	end
 
 MahoganyTown_Gym_EventScript_Pryce::
 	lock
 	faceplayer
-	goto_if_set 8749, MahoganyTown_Gym_EventScript_Pryce_Defeated
+	goto_if_set JOHTO_FLAG_DEFEATED_MAHOGANY_TOWN_GYM, MahoganyTown_Gym_EventScript_Pryce_Defeated
 	msgbox MahoganyTown_Gym_Text_PryceIntro, MSGBOX_DEFAULT
-	goto_if_set 8748, MahoganyTown_Gym_EventScript_OlivineCheckCianwood
-	goto_if_set 8747, MahoganyTown_Gym_EventScript_CianwoodCheckOlivine
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, MahoganyTown_Gym_EventScript_OlivineCheckCianwood
+	goto_if_set JOHTO_FLAG_DEFEATED_CIANWOOD_GYM, MahoganyTown_Gym_EventScript_CianwoodCheckOlivine
 	goto MahoganyTown_Gym_EventScript_Pryce_Battle1
 
 MahoganyTown_Gym_EventScript_PryceVictory::
@@ -78,42 +78,42 @@ MahoganyTown_Gym_EventScript_PryceVictory::
 	waitmessage
 	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox MahoganyTown_Gym_Text_GlacierBadgeSpeech, MSGBOX_DEFAULT
-	setflag 10374
-	setflag 8749
-	addvar 20582, 1
-	setvar 32776, 7
+	setflag JOHTO_FLAG_BADGE07_GET
+	setflag JOHTO_FLAG_DEFEATED_MAHOGANY_TOWN_GYM
+	addvar JOHTO_VAR_NUM_BADGES, 1
+	setvar VAR_0x8008, 7
 	call J_Common_EventScript_SetGymTrainers_hns
-	giveitem 588
+	giveitem ITEM_TM_HAIL
 	msgbox MahoganyTown_Gym_Text_HailSpeech, MSGBOX_DEFAULT
-	setvar 20578, 15
-	setrespawn 136
-	call_if_eq 20582, 7, MahoganyTown_Gym_EventScript_SetupElmRocketCall
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 15
+	setrespawn JOHTO_HEAL_LOCATION_MAHOGANY_TOWN_HNS
+	call_if_eq JOHTO_VAR_NUM_BADGES, 7, MahoganyTown_Gym_EventScript_SetupElmRocketCall
 	closemessage
 	release
 	end
 
 MahoganyTown_Gym_EventScript_SetupElmRocketCall::
-	setvar 20643, 1
+	setvar JOHTO_VAR_TRIGGER_ELM_ROCKET_CALL, 1
 	return
 
 MahoganyTown_Gym_EventScript_OlivineCheckCianwood::
-	goto_if_set 8747, MahoganyTown_Gym_EventScript_Pryce_Battle3
+	goto_if_set JOHTO_FLAG_DEFEATED_CIANWOOD_GYM, MahoganyTown_Gym_EventScript_Pryce_Battle3
 	goto MahoganyTown_Gym_EventScript_Pryce_Battle2
 
 MahoganyTown_Gym_EventScript_CianwoodCheckOlivine::
-	goto_if_set 8748, MahoganyTown_Gym_EventScript_Pryce_Battle3
+	goto_if_set JOHTO_FLAG_DEFEATED_OLIVINE_CITY_GYM, MahoganyTown_Gym_EventScript_Pryce_Battle3
 	goto MahoganyTown_Gym_EventScript_Pryce_Battle2
 
 MahoganyTown_Gym_EventScript_Pryce_Battle1::
-	trainerbattle_no_intro 1434, MahoganyTown_Gym_Text_PryceImpressed
+	trainerbattle_no_intro TRAINER_JOHTO_PRYCE_1_HNS, MahoganyTown_Gym_Text_PryceImpressed
 	goto MahoganyTown_Gym_EventScript_PryceVictory
 
 MahoganyTown_Gym_EventScript_Pryce_Battle2::
-	trainerbattle_no_intro 1436, MahoganyTown_Gym_Text_PryceImpressed
+	trainerbattle_no_intro TRAINER_JOHTO_PRYCE_1_2_HNS, MahoganyTown_Gym_Text_PryceImpressed
 	goto MahoganyTown_Gym_EventScript_PryceVictory
 
 MahoganyTown_Gym_EventScript_Pryce_Battle3::
-	trainerbattle_no_intro 1437, MahoganyTown_Gym_Text_PryceImpressed
+	trainerbattle_no_intro TRAINER_JOHTO_PRYCE_1_3_HNS, MahoganyTown_Gym_Text_PryceImpressed
 	goto MahoganyTown_Gym_EventScript_PryceVictory
 
 MahoganyTown_Gym_EventScript_Pryce_Defeated::

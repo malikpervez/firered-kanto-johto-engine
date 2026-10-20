@@ -3,45 +3,45 @@
 J_CaveOfOrigin_EventScript_LegendaryCry::
 	lockall
 	waitse
-	playmoncry 382, 2
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
 	waitmoncry
-	setvar 16389, 1
+	setvar VAR_TEMP_5, 1
 	releaseall
 	end
 
 J_CaveOfOrigin_EventScript_Shake1::
 	lockall
-	setvar 16385, 1
+	setvar VAR_TEMP_1, 1
 	goto J_CaveOfOrigin_EventScript_Shake
 	end
 
 J_CaveOfOrigin_EventScript_Shake2::
 	lockall
-	setvar 16386, 1
+	setvar VAR_TEMP_2, 1
 	goto J_CaveOfOrigin_EventScript_Shake
 	end
 
 J_CaveOfOrigin_EventScript_Shake3::
 	lockall
-	setvar 16387, 1
+	setvar VAR_TEMP_3, 1
 	goto J_CaveOfOrigin_EventScript_Shake
 	end
 
 J_CaveOfOrigin_EventScript_Shake::
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 8
-	setvar 32775, 5
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 8
+	setvar VAR_0x8007, 5
 	special ShakeCamera
 	waitstate
 	releaseall
 	end
 
 J_CaveOfOrigin_EventScript_DisableTriggers::
-	setvar 16385, 1
-	setvar 16386, 1
-	setvar 16387, 1
-	setvar 16388, 1
-	setvar 16389, 1
+	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_2, 1
+	setvar VAR_TEMP_3, 1
+	setvar VAR_TEMP_4, 1
+	setvar VAR_TEMP_5, 1
 	return
 

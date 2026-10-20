@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route36_hns/scripts.inc), as built into the FireRed game.
 
 Route36_hns_MapScripts::
-	map_script 3, Route36_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route36_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route36_OnTransition:
@@ -12,17 +12,17 @@ Route36_OnTransition:
 Route36_EventScript_RockSmashGuy::
 	lock
 	faceplayer
-	goto_if_set 8246, Route36_EventScript_RockSmashGuy2
+	goto_if_set JOHTO_FLAG_HIDE_SUDOWOODO, Route36_EventScript_RockSmashGuy2
 	msgbox Route36_Text_RockSmashGuy1, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 Route36_EventScript_RockSmashGuy2::
-	goto_if_set 8695, Route36_EventScript_RockSmashGuy3
+	goto_if_set JOHTO_FLAG_RECEIVED_HM_ROCK_SMASH, Route36_EventScript_RockSmashGuy3
 	msgbox Route36_Text_RockSmashGuy2, MSGBOX_DEFAULT
-	giveitem 687
-	setflag 8695
+	giveitem ITEM_HM_ROCK_SMASH
+	setflag JOHTO_FLAG_RECEIVED_HM_ROCK_SMASH
 
 Route36_EventScript_RockSmashGuy3::
 	msgbox Route36_Text_RockSmashGuy3
@@ -33,7 +33,7 @@ Route36_EventScript_RockSmashGuy3::
 Route36_EventScript_Lass::
 	lock
 	faceplayer
-	goto_if_set 8246, Route36_EventScript_Lass2
+	goto_if_set JOHTO_FLAG_HIDE_SUDOWOODO, Route36_EventScript_Lass2
 	msgbox Route36_Text_Lass1, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -48,11 +48,11 @@ Route36_EventScript_Lass2::
 Route36_EventScript_Arthur::
 	lock
 	faceplayer
-	goto_if_set 8727, Route36_EventScript_ArthurCompleted
+	goto_if_set JOHTO_FLAG_GOT_HARD_STONE, Route36_EventScript_ArthurCompleted
 	msgbox Route36_Text_MeetArthur, MSGBOX_DEFAULT
 	closemessage
-	multichoice 20, 0, 159, FALSE
-	switch 32781
+	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
+	switch VAR_RESULT
 	case 0, Route36_EventScript_ArthurNope
 	case 1, Route36_EventScript_ArthurNope
 	case 2, Route36_EventScript_ArthurNope
@@ -61,7 +61,7 @@ Route36_EventScript_Arthur::
 	case 5, Route36_EventScript_ArthurNope
 	case 6, Route36_EventScript_ArthurNope
 	case 7, Route36_EventScript_ArthurCancel
-	case 127, Route36_EventScript_ArthurCancel
+	case MULTI_B_PRESSED, Route36_EventScript_ArthurCancel
 	closemessage
 	release
 	end
@@ -69,8 +69,8 @@ Route36_EventScript_Arthur::
 Route36_EventScript_ArthurYes::
 	msgbox Route36_Text_ArthurGivesGift, MSGBOX_DEFAULT
 	giveitem ITEM_HARD_STONE
-	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
-	setflag 8727
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_GOT_HARD_STONE
 	msgbox Route36_Text_ArthurGaveGift, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -97,69 +97,69 @@ Route36_EventScript_SudoWoodo::
 	lock
 	msgbox Route36_Text_OddTree, MSGBOX_DEFAULT
 	checkitem ITEM_SQUIRT_BOTTLE
-	goto_if_eq 32781, TRUE, Route36_EventScript_SudoWoodoChoice
+	goto_if_eq VAR_RESULT, TRUE, Route36_EventScript_SudoWoodoChoice
 	closemessage
 	release
 	end
 
 Route36_EventScript_SudoWoodoChoice::
 	msgbox Route36_Text_UseSquirtbottle, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Route36_EventScript_SudoWoodoWater
+	goto_if_eq VAR_RESULT, TRUE, Route36_EventScript_SudoWoodoWater
 	closemessage
 	release
 	end
 
 Route36_EventScript_SudoWoodoWater::
 	msgbox Route36_Text_UsedSquirtbottle, MSGBOX_DEFAULT
-	playse 83
+	playse SE_DOWNPOUR
 	waitse
 	closemessage
-	playse 269
-	applymovement 6, Route36_Movement_SudoWoodo
+	playse SE_SUDOWOODO_SHAKE
+	applymovement LOCALID_ROUTE36_SUDOWOODO, Route36_Movement_SudoWoodo
 	waitmovement 0
 	faceplayer
 	msgbox Route36_Text_SudowoodoAttacked
 	closemessage
 	waitse
-	playmoncry 185, 2
+	playmoncry SPECIES_SUDOWOODO, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setvar 32783, 6
-	setwildbattle 185, 20
+	setvar VAR_LAST_TALKED, LOCALID_ROUTE36_SUDOWOODO
+	setwildbattle SPECIES_SUDOWOODO, 20
 
 	dowildbattle
 
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 1, Route36_EventScript_Defeated_Sudowoodo
-	goto_if_eq 32781, 4, Route36_EventScript_RanSudowoodo
-	goto_if_eq 32781, 5, Route36_EventScript_RanSudowoodo
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route36_EventScript_Defeated_Sudowoodo
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route36_EventScript_RanSudowoodo
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route36_EventScript_RanSudowoodo
 
 Route36_EventScript_Defeated_Sudowoodo::
-	setflag 8246
-	removeobject 6
-	checkitem 687
-	call_if_eq 32781, FALSE, Route36_EventScript_RockSmashGuySudoWoodo
+	setflag JOHTO_FLAG_HIDE_SUDOWOODO
+	removeobject LOCALID_ROUTE36_SUDOWOODO
+	checkitem ITEM_HM_ROCK_SMASH
+	call_if_eq VAR_RESULT, FALSE, Route36_EventScript_RockSmashGuySudoWoodo
 	release
 	end
 
 Route36_EventScript_RanSudowoodo::
-	turnobject 6, DIR_NORTH
+	turnobject LOCALID_ROUTE36_SUDOWOODO, DIR_NORTH
 	release
 	end
 
 Route36_EventScript_RockSmashGuySudoWoodo:
-	playse 21
-	applymovement 3, J_Common_Movement_ExclamationMark
-	turnobject 3, DIR_WEST
+	playse SE_PIN
+	applymovement LOCALID_ROUTE36_ROCKSMASHGUY, J_Common_Movement_ExclamationMark
+	turnobject LOCALID_ROUTE36_ROCKSMASHGUY, DIR_WEST
 	waitmovement 0
-	applymovement 3, Route36_Movement_RockSmashGuy
-	playse 10
+	applymovement LOCALID_ROUTE36_ROCKSMASHGUY, Route36_Movement_RockSmashGuy
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitmovement 0
 	return
 
@@ -174,15 +174,15 @@ Route36_Movement_RockSmashGuy:
 	step_end
 
 Route36_EventScript_Mark::
-	trainerbattle_single 1336, Route36_Text_PsychicMarkSeen, Route36_Text_PsychicMarkBeaten
+	trainerbattle_single TRAINER_JOHTO_MARK_HNS, Route36_Text_PsychicMarkSeen, Route36_Text_PsychicMarkBeaten
 	msgbox Route36_Text_PsychicMarkAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route36_EventScript_Schoolboy::
-	trainerbattle_single 1043, Route36_Text_SchoolboyAlan1Seen, Route36_Text_SchoolboyAlan1Beaten, Route36_EventScript_RegisterAlan
-	goto_if_set 8939, Route36_EventScript_AlanGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route36_EventScript_RematchAlan
+	trainerbattle_single TRAINER_JOHTO_ALAN_HNS, Route36_Text_SchoolboyAlan1Seen, Route36_Text_SchoolboyAlan1Beaten, Route36_EventScript_RegisterAlan
+	goto_if_set JOHTO_FLAG_ALAN_HAS_ITEM_HNS, Route36_EventScript_AlanGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route36_EventScript_RematchAlan
 	msgbox Route36_Text_SchoolboyAlanAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -190,20 +190,20 @@ Route36_EventScript_RegisterAlan::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route36_Text_AlanRegister, MSGBOX_DEFAULT
-	register_matchcall 1043
+	register_matchcall TRAINER_JOHTO_ALAN_HNS
 	release
 	end
 
 Route36_EventScript_RematchAlan::
-	trainerbattle_rematch 1043, Route36_Text_AlanRematchIntro, Route36_Text_AlanRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_ALAN_HNS, Route36_Text_AlanRematchIntro, Route36_Text_AlanRematchDefeat
 	msgbox Route36_Text_AlanPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route36_EventScript_AlanGiveItem::
 	msgbox Route36_Text_AlanHasItem, MSGBOX_DEFAULT
-	giveitem 20616
-	goto_if_eq 32781, FALSE, Route36_EventScript_AlanNoRoom
-	clearflag 8939
+	giveitem JOHTO_VAR_ALAN_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, Route36_EventScript_AlanNoRoom
+	clearflag JOHTO_FLAG_ALAN_HAS_ITEM_HNS
 	msgbox Route36_Text_AlanGaveItem, MSGBOX_AUTOCLOSE
 	end
 

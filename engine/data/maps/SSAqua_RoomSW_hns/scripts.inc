@@ -4,12 +4,12 @@ SSAqua_RoomSW_hns_MapScripts::
 	.byte 0
 
 SSAqua_RoomSW_EventScript_Cassie::
-	trainerbattle_single 1119, SSAqua_RoomSW_Text_BeautyCassieSeen, SSAqua_RoomSW_Text_BeautyCassieBeaten
+	trainerbattle_single TRAINER_JOHTO_CASSIE_HNS, SSAqua_RoomSW_Text_BeautyCassieSeen, SSAqua_RoomSW_Text_BeautyCassieBeaten
 	msgbox SSAqua_RoomSW_Text_BeautyCassieAfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 SSAqua_RoomSW_EventScript_Clyde::
-	trainerbattle_single 1280, SSAqua_RoomSW_Text_GuitaristClydeSeen, SSAqua_RoomSW_Text_GuitaristClydeBeaten
+	trainerbattle_single TRAINER_JOHTO_CLYDE_HNS, SSAqua_RoomSW_Text_GuitaristClydeSeen, SSAqua_RoomSW_Text_GuitaristClydeBeaten
 	msgbox SSAqua_RoomSW_Text_GuitaristClydeAfterBattle, MSGBOX_AUTOCLOSE
 	end
 

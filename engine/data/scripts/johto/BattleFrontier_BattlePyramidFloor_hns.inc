@@ -1,8 +1,8 @@
 @ Johto (data/maps/BattleFrontier_BattlePyramidFloor_hns/scripts.inc), as built into the FireRed game.
 
 BattleFrontier_BattlePyramid_EventScript_WarpToLobby_hnsLost_hns::
-	frontier_set 0, 4
-	pyramid_set 7, 255
+	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST
+	pyramid_set PYRAMID_DATA_TRAINER_FLAGS, 255
 
 gText_BattlePyramidConfirmRest_hns::
 	.string "You{SE_M_SAND_TOMB}BATTL{SE_M_SWORDS_DANCE}PYRAMI{SE_M_FAINT_ATTACK}ques{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}be\n"

@@ -13,14 +13,14 @@ J_BugContest_EventScript_WhiteOut::
 
 J_BugContest_EventScript_TimesUp::
 	lockall
-	playse 73
+	playse SE_DING_DONG
 	msgbox J_BugContest_Text_TimesUp, MSGBOX_DEFAULT
 	closemessage
 	waitse
 	getpartysize
-	goto_if_eq 32781, 1, J_BugContest_EventScript_Didntcatch
-	fadescreen 1
-	setvar 20552, 3
+	goto_if_eq VAR_RESULT, 1, J_BugContest_EventScript_Didntcatch
+	fadescreen FADE_TO_BLACK
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 3
 
 	msgbox J_BugContest_Text_Judging0, MSGBOX_DEFAULT
 	closemessage
@@ -46,14 +46,14 @@ J_BugContestEventScript_Judging::
 	msgbox J_BugContest_Text_Judging1, MSGBOX_DEFAULT
 	closemessage
 	special JudgeBugContestMon
-	call_if_eq 32781, 1, J_BugContest_EventScript_First
-	call_if_eq 32781, 2, J_BugContest_EventScript_Second
-	call_if_eq 32781, 3, J_BugContest_EventScript_Third
+	call_if_eq VAR_RESULT, 1, J_BugContest_EventScript_First
+	call_if_eq VAR_RESULT, 2, J_BugContest_EventScript_Second
+	call_if_eq VAR_RESULT, 3, J_BugContest_EventScript_Third
 	special TransferBugContestMon
 	delay 20
-	giveitem 32773
+	giveitem VAR_0x8005
 	msgbox J_BugContest_Text_TransferAndReturn, MSGBOX_DEFAULT
-	playse 31
+	playse SE_SUCCESS
 	waitse
 	msgbox J_BugContest_Text_TakePartInFuture, MSGBOX_DEFAULT
 	closemessage
@@ -62,9 +62,9 @@ J_BugContestEventScript_Judging::
 
 J_BugContest_EventScript_Didntcatch::
 	msgbox J_BugContest_Text_DidntCatch, MSGBOX_DEFAULT
-	playse 31
+	playse SE_SUCCESS
 	closemessage
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	goto J_BugContest_EventScript_End
 	end
 
@@ -111,10 +111,10 @@ J_BugContest_EventScript_End::
 	special HealPlayerParty
 	special LoadPlayerParty
 	special ExitBugContestMode
-	clearflag 10604
-	setvar 20552, 0
+	clearflag JOHTO_FLAG_DISABLE_EXP_GAIN
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 0
 	special RemoveSportBalls
-	goto_if_eq 16385, 1, J_BugContest_EventScript_SideEnd
+	goto_if_eq VAR_TEMP_1, 1, J_BugContest_EventScript_SideEnd
 	warp MAP_GATE_NATIONAL_PARK_HNS, 7, 2
 	waitstate
 	releaseall

@@ -1,51 +1,51 @@
 @ Johto (data/maps/SSAqua_RoomSSE_hns/scripts.inc), as built into the FireRed game.
 
 SSAqua_RoomSSE_hns_MapScripts::
-	map_script 2, SSAqua_RoomSSE_OnFrame
-	map_script 3, SSAqua_RoomSSE_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SSAqua_RoomSSE_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, SSAqua_RoomSSE_OnTransition
 	.byte 0
 
 SSAqua_RoomSSE_OnTransition::
-	goto_if_ge 20603, 5, SSAqua_RoomSSE_SetGirlPos
+	goto_if_ge JOHTO_VAR_SSAQUA_STATE, 5, SSAqua_RoomSSE_SetGirlPos
 	end
 
 SSAqua_RoomSSE_OnFrame::
-	map_script_2 20603, 4, SSAqua_RoomSSE_EventScript_ReuinionScene
+	map_script_2 JOHTO_VAR_SSAQUA_STATE, 4, SSAqua_RoomSSE_EventScript_ReuinionScene
 	.2byte 0
 
 SSAqua_RoomSSE_SetGirlPos::
-	setobjectxyperm 2, 2, 4
-	setobjectmovementtype 2, 0x9
+	setobjectxyperm LOCALID_SSAQUA_ROOM_SSE_GRANDDAUGTHER, 2, 4
+	setobjectmovementtype LOCALID_SSAQUA_ROOM_SSE_GRANDDAUGTHER, MOVEMENT_TYPE_FACE_LEFT
 	end
 
 SSAqua_RoomSSE_EventScript_ReuinionScene::
 	lock
-	turnobject 255, DIR_NORTH
-	turnobject 1, DIR_SOUTH
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_SSAQUA_ROOM_SSE_GRANDFATHER, DIR_SOUTH
+	playse SE_PIN
+	applymovement LOCALID_SSAQUA_ROOM_SSE_GRANDFATHER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	applymovement 2, SSAqua_RoomSSE_Movement_GirlEnter
+	waitmovement LOCALID_SSAQUA_ROOM_SSE_GRANDFATHER
+	applymovement LOCALID_SSAQUA_ROOM_SSE_GRANDDAUGTHER, SSAqua_RoomSSE_Movement_GirlEnter
 	waitmovement 0
-	turnobject 1, DIR_EAST
+	turnobject LOCALID_SSAQUA_ROOM_SSE_GRANDFATHER, DIR_EAST
 	msgbox SSAqua_RoomSSE_Text_GranddaughterWasPlaying, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, SSAqua_RoomSSE_Movement_PlayerEnter
+	applymovement OBJ_EVENT_ID_PLAYER, SSAqua_RoomSSE_Movement_PlayerEnter
 	waitmovement 0
-	turnobject 1, DIR_SOUTH
+	turnobject LOCALID_SSAQUA_ROOM_SSE_GRANDFATHER, DIR_SOUTH
 	msgbox SSAqua_RoomSSE_Text_EntertainedGranddaughter, MSGBOX_DEFAULT
 	msgbox SSAqua_RoomSSE_Text_GrandpaHaveThis, MSGBOX_DEFAULT
 	giveitem ITEM_METAL_COAT
 	closemessage
-	setvar 20603, 5
+	setvar JOHTO_VAR_SSAQUA_STATE, 5
 	release
 	end
 
 SSAqua_RoomSSE_EventScript_Grandpa::
 	lock
 	faceplayer
-	goto_if_ge 20603, 4, SSAqua_RoomSSE_EventScript_GrandpaAfter
+	goto_if_ge JOHTO_VAR_SSAQUA_STATE, 4, SSAqua_RoomSSE_EventScript_GrandpaAfter
 	msgbox SSAqua_RoomSSE_Text_CantFindGranddaughter, MSGBOX_DEFAULT
 	closemessage
 	release

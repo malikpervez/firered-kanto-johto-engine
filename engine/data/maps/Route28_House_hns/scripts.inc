@@ -6,10 +6,10 @@ Route28_House_hns_MapScripts::
 Route28House_EventScript_Celebrity::
 	lock
 	faceplayer
-	goto_if_set 8719, Route28House_EventScript_CelebrityAfter
+	goto_if_set JOHTO_FLAG_GOT_TM_STEEL_WING, Route28House_EventScript_CelebrityAfter
 	msgbox Route28House_Text_Celebrity1, MSGBOX_NPC
-	giveitem 628
-	setflag 8719
+	giveitem ITEM_TM_STEEL_WING
+	setflag JOHTO_FLAG_GOT_TM_STEEL_WING
 
 Route28House_EventScript_CelebrityAfter::
 	msgbox Route28House_Text_Celebrity2, MSGBOX_NPC

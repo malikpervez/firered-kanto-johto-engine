@@ -8,11 +8,11 @@ BellchimeTrail_EventScript_Morty::
 	faceplayer
 	msgbox BellchimeTrail_Text_Morty, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
-	setflag 8319
-	removeobject 48
-	fadescreenswapbuffers 0
-	clearflag 8397
+	fadescreenswapbuffers FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_BELLCHIME_MORTY
+	removeobject LOCALID_BELLCHIME_MORTY
+	fadescreenswapbuffers FADE_FROM_BLACK
+	clearflag JOHTO_FLAG_HIDE_DOJO_MORTY
 	release
 	end
 
@@ -34,10 +34,10 @@ EcruteakBellchimeTrail_EventScript_DoorTrigger::
 	lock
 	opendoor 28, 12
 	waitdooranim
-	addobject 127
-	removeobject 255
+	addobject OBJ_EVENT_ID_CAMERA
+	removeobject OBJ_EVENT_ID_PLAYER
 	closedoor 28, 12
-	applymovement 127, EcruteakBellchimeTrail_Movement_CameraPanUp
+	applymovement OBJ_EVENT_ID_CAMERA, EcruteakBellchimeTrail_Movement_CameraPanUp
 	waitmovement 0
 	warp MAP_TIN_TOWER_1F_HNS, 1
 	release

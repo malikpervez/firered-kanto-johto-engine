@@ -6,14 +6,14 @@ Route26_House2_hns_MapScripts::
 Route26_House2_EventScript_Book::
 	lock
 	msgbox DayOfWeekSiblingsHouse_Text_Pokedex1, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE,Route26_House2_EventScript_BookRead
+	goto_if_eq VAR_RESULT, TRUE, Route26_House2_EventScript_BookRead
 	closemessage
 	release
 	end
 
 Route26_House2_EventScript_BookRead::
 	msgbox DayOfWeekSiblingsHouse_Text_Pokedex2, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Route26_House2_EventScript_BookRead2
+	goto_if_eq VAR_RESULT, TRUE, Route26_House2_EventScript_BookRead2
 	closemessage
 	release
 	end

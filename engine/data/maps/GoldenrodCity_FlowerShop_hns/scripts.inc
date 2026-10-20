@@ -6,7 +6,7 @@ GoldenrodCity_FlowerShop_hns_MapScripts::
 GoldenrodCity_FlowerShop_EventScript_MintClerk::
 	lock
 	faceplayer
-	goto_if_unset 10370, GoldenrodCity_FlowerShop_EventScript_MintClerkNotReady
+	goto_if_unset JOHTO_FLAG_BADGE03_GET, GoldenrodCity_FlowerShop_EventScript_MintClerkNotReady
 	message J_gText_HowMayIServeYou
 	waitmessage
 	pokemart GoldenrodCity_FlowerShop_Mints
@@ -53,9 +53,9 @@ GoldenrodCity_FlowerShop_Mints:
 GoldenrodCity_FlowerShop_EventScript_Owner::
 	lock
 	faceplayer
-	goto_if_set 8246, GoldenrodCity_FlowerShop_EventScript_Normal
-	goto_if_set 8702, GoldenrodCity_FlowerShop_EventScript_GotSquirtBottle
-	goto_if_set 10370, GoldenrodCity_FlowerShop_EventScript_GiveSquirtBottle
+	goto_if_set JOHTO_FLAG_HIDE_SUDOWOODO, GoldenrodCity_FlowerShop_EventScript_Normal
+	goto_if_set JOHTO_FLAG_RECEIVED_SQUIRTBOTTLE, GoldenrodCity_FlowerShop_EventScript_GotSquirtBottle
+	goto_if_set JOHTO_FLAG_BADGE03_GET, GoldenrodCity_FlowerShop_EventScript_GiveSquirtBottle
 	msgbox GoldenrodCity_FlowerShop_Text_Owner1, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -66,7 +66,7 @@ GoldenrodCity_FlowerShop_EventScript_GiveSquirtBottle::
 	faceplayer
 	msgbox GoldenrodCity_FlowerShop_Text_Owner2, MSGBOX_DEFAULT
 	giveitem ITEM_SQUIRT_BOTTLE
-	setflag 8702
+	setflag JOHTO_FLAG_RECEIVED_SQUIRTBOTTLE
 	closemessage
 	release
 	end
@@ -90,8 +90,8 @@ GoldenrodCity_FlowerShop_EventScript_Normal::
 GoldenrodCity_FlowerShop_EventScript_Floria1::
 	lock
 	faceplayer
-	goto_if_set 8246, GoldenrodCity_FlowerShop_EventScript_Floria3
-	goto_if_set 10370, GoldenrodCity_FlowerShop_EventScript_Floria2
+	goto_if_set JOHTO_FLAG_HIDE_SUDOWOODO, GoldenrodCity_FlowerShop_EventScript_Floria3
+	goto_if_set JOHTO_FLAG_BADGE03_GET, GoldenrodCity_FlowerShop_EventScript_Floria2
 	msgbox GoldenrodCity_FlowerShop_Text_Floria, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -162,13 +162,13 @@ GoldenrodCity_FlowerShop_EventScript_RandomBerryGirl::
 	lock
 	faceplayer
 	dotimebasedevents
-	goto_if_set 10522, GoldenrodCity_FlowerShop_EventScript_AlreadyReceivedBerry
+	goto_if_set JOHTO_FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS, GoldenrodCity_FlowerShop_EventScript_AlreadyReceivedBerry
 	msgbox J_Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
 	random 8
-	addvar 32781, FIRST_BERRY_INDEX
-	giveitem 32781
-	goto_if_eq 32781, 0, J_Common_EventScript_ShowBagIsFull
-	setflag 10522
+	addvar VAR_RESULT, FIRST_BERRY_INDEX
+	giveitem VAR_RESULT
+	goto_if_eq VAR_RESULT, 0, J_Common_EventScript_ShowBagIsFull
+	setflag JOHTO_FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS
 	msgbox J_Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
 	release
 	end

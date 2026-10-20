@@ -1,42 +1,42 @@
 @ Johto (data/event_scripts.s), as built into the FireRed game.
 
 J_Common_EventScript_NameReceivedPartyMon::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChangePokemonNickname
 	waitstate
 	return
 
 J_Common_EventScript_GiftMon::
-	call_if_eq 32781, 0, J_Common_EventScript_RecieveMonParty
-	call_if_eq 32781, 1, J_Common_EventScript_ReceiveMonPC
+	call_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, J_Common_EventScript_RecieveMonParty
+	call_if_eq VAR_RESULT, MON_GIVEN_TO_PC, J_Common_EventScript_ReceiveMonPC
 	return
 
 J_Common_EventScript_RecieveMonParty::
-	playfanfare 370
+	playfanfare MUS_OBTAIN_ITEM
 	message J_Common_Text_ReceivedMon
 	waitmessage
 	waitfanfare
-	specialvar 32781, IsNuzlockeNicknamingActive
-	goto_if_eq 32781, TRUE, J_Common_EventScript_ForceNameReceivedPartyMon
+	specialvar VAR_RESULT, IsNuzlockeNicknamingActive
+	goto_if_eq VAR_RESULT, TRUE, J_Common_EventScript_ForceNameReceivedPartyMon
 	msgbox J_gText_NicknameThisPokemon, MSGBOX_YESNO
-	call_if_eq 32781, TRUE, J_Common_EventScript_NameReceivedPartyMonFull
-	setvar 32781, 0
+	call_if_eq VAR_RESULT, TRUE, J_Common_EventScript_NameReceivedPartyMonFull
+	setvar VAR_RESULT, 0
 	return
 
 J_Common_EventScript_ForceNameReceivedPartyMon::
 	call J_Common_EventScript_NameReceivedPartyMonFull
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	return
 
 J_Common_EventScript_ReceiveMonPC::
-	playfanfare 370
+	playfanfare MUS_OBTAIN_ITEM
 	message J_Common_Text_ReceivedMon
 	waitmessage
 	waitfanfare
-	specialvar 32781, IsNuzlockeNicknamingActive
-	goto_if_eq 32781, TRUE, J_Common_EventScript_ForceNameReceivedBoxMon
+	specialvar VAR_RESULT, IsNuzlockeNicknamingActive
+	goto_if_eq VAR_RESULT, TRUE, J_Common_EventScript_ForceNameReceivedBoxMon
 	msgbox J_gText_NicknameThisPokemon, MSGBOX_YESNO
-	call_if_eq 32781, TRUE, J_Common_EventScript_NameReceivedBoxMon
+	call_if_eq VAR_RESULT, TRUE, J_Common_EventScript_NameReceivedBoxMon
 	call J_Common_EventScript_TransferredToPC
 	return
 
@@ -51,18 +51,18 @@ J_Common_EventScript_NameReceivedPartyMonFull::
 	return
 
 J_Common_EventScript_NameReceivedPartyMon_2::
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChangePokemonNickname
 	waitstate
 	return
 
 J_Common_EventScript_GiftMonNamed::
-	call_if_eq 32781, 0, J_Common_EventScript_RecieveMonPartyNamed
-	call_if_eq 32781, 2, J_Common_EventScript_PartyIsFull
+	call_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, J_Common_EventScript_RecieveMonPartyNamed
+	call_if_eq VAR_RESULT, MON_CANT_GIVE, J_Common_EventScript_PartyIsFull
 	return
 
 J_Common_EventScript_RecieveMonPartyNamed::
-	playfanfare 370
+	playfanfare MUS_OBTAIN_ITEM
 	message J_Common_Text_ReceivedMon
 	waitmessage
 	waitfanfare
@@ -81,11 +81,11 @@ J_Common_Text_PartyIsFull:
 	.string "mor{SE_M_REVERSAL}POKéMON.$"
 
 J_Common_EventScript_PlayerHandedOverTheItem::
-	bufferitemname STR_VAR_1, 32772
-	playfanfare 372
+	bufferitemname STR_VAR_1, VAR_0x8004
+	playfanfare MUS_OBTAIN_TMHM
 	message J_gText_PlayerHandedOverTheItem
 	waitmessage
 	waitfanfare
-	removeitem 32772
+	removeitem VAR_0x8004
 	return
 

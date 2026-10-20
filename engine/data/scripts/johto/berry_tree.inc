@@ -2,12 +2,12 @@
 
 J_BerryTreeScript::
 	special ObjectEventInteractionGetBerryTreeData
-	switch 32772
-	case 255, J_BerryTree_EventScript_Hns_NotRipe
-	case 0, J_BerryTree_EventScript_Hns_NotRipe
-	case 1, J_BerryTree_EventScript_Hns_NotRipe
-	case 2, J_BerryTree_EventScript_Hns_NotRipe
-	case 3, J_BerryTree_EventScript_Hns_NotRipe
+	switch VAR_0x8004
+	case BERRY_STAGE_SPARKLING, J_BerryTree_EventScript_Hns_NotRipe
+	case BERRY_STAGE_NO_BERRY, J_BerryTree_EventScript_Hns_NotRipe
+	case BERRY_STAGE_PLANTED, J_BerryTree_EventScript_Hns_NotRipe
+	case BERRY_STAGE_SPROUTED, J_BerryTree_EventScript_Hns_NotRipe
+	case BERRY_STAGE_TALLER, J_BerryTree_EventScript_Hns_NotRipe
 	case 4, J_BerryTree_EventScript_Hns_NotRipe
 	case 5, J_BerryTree_EventScript_Hns_FullyGrown
 	end
@@ -21,20 +21,20 @@ J_BerryTree_EventScript_Hns_NotRipe::
 	end
 
 J_BerryTree_EventScript_Hns_FullyGrown::
-	buffernumberstring STR_VAR_2, 32774
+	buffernumberstring STR_VAR_2, VAR_0x8006
 	lock
 	faceplayer
 	goto J_BerryTree_EventScript_Hns_PickBerry
 
 J_BerryTree_EventScript_Hns_PickBerry::
 	special ObjectEventInteractionPickBerryTree
-	goto_if_eq 32772, 0, J_BerryTree_EventScript_Hns_BagFull
+	goto_if_eq VAR_0x8004, 0, J_BerryTree_EventScript_Hns_BagFull
 	special IncrementDailyPickedBerries
 	special ObjectEventInteractionRemoveBerryTree
 	message J_BerryTree_Text_Hns_Picked
-	playfanfare 387
+	playfanfare MUS_OBTAIN_BERRY
 	special ObjectEventInteractionPlantBerryTree
-	incrementgamestat 3
+	incrementgamestat GAME_STAT_PLANTED_BERRIES
 	special IncrementDailyPlantedBerries
 	waitmessage
 	waitfanfare

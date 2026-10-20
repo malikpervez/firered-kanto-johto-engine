@@ -4,29 +4,29 @@ GoldenrodCity_Gym_hns_MapScripts::
 	.byte 0
 
 GoldenrodCity_Gym_EventScript_Carrie::
-	trainerbattle_single 1068, GoldenrodCity_Gym_Text_LassCarrieSeen, GoldenrodCity_Gym_Text_LassCarrieBeaten
+	trainerbattle_single TRAINER_JOHTO_CARRIE_HNS, GoldenrodCity_Gym_Text_LassCarrieSeen, GoldenrodCity_Gym_Text_LassCarrieBeaten
 	msgbox GoldenrodCity_Gym_Text_LassCarrieAfter, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_Gym_EventScript_Bridget::
-	trainerbattle_single 1069, GoldenrodCity_Gym_Text_LassBridgetSeen, GoldenrodCity_Gym_Text_LassBridgetBeaten
+	trainerbattle_single TRAINER_JOHTO_BRIDGET_HNS, GoldenrodCity_Gym_Text_LassBridgetSeen, GoldenrodCity_Gym_Text_LassBridgetBeaten
 	msgbox GoldenrodCity_Gym_Text_LassBridgetAfter, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_Gym_EventScript_Victoria::
-	trainerbattle_single 1114, GoldenrodCity_Gym_Text_BeautyVictoriaSeen, GoldenrodCity_Gym_Text_BeautyVictoriaBeaten
+	trainerbattle_single TRAINER_JOHTO_VICTORIA_HNS, GoldenrodCity_Gym_Text_BeautyVictoriaSeen, GoldenrodCity_Gym_Text_BeautyVictoriaBeaten
 	msgbox GoldenrodCity_Gym_Text_BeautyVictoriaAfter, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_Gym_EventScript_Samantha::
-	trainerbattle_single 1115, GoldenrodCity_Gym_Text_BeautySamanthaSeen, GoldenrodCity_Gym_Text_BeautySamanthaBeaten
+	trainerbattle_single TRAINER_JOHTO_SAMANTHA_HNS, GoldenrodCity_Gym_Text_BeautySamanthaSeen, GoldenrodCity_Gym_Text_BeautySamanthaBeaten
 	msgbox GoldenrodCity_Gym_Text_BeautySamanthaAfter, MSGBOX_AUTOCLOSE
 	end
 
 GoldenrodCity_Gym_EventScript_Gym_Guy::
 	lock
 	faceplayer
-	goto_if_set 10370, GoldenrodCity_Gym_EventScript_Gym_Guy_After
+	goto_if_set JOHTO_FLAG_BADGE03_GET, GoldenrodCity_Gym_EventScript_Gym_Guy_After
 	msgbox GoldenrodCity_Gym_Text_GymGuide, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -41,13 +41,13 @@ GoldenrodCity_Gym_EventScript_Gym_Guy_After::
 GoldenrodCity_Gym_EventScript_Whitney::
 	lock
 	faceplayer
-	goto_if_eq 20569, 3, GoldenrodCity_Gym_EventScript_WhitneyCrying
-	goto_if_eq 20569, 4, GoldenrodCity_Gym_EventScript_WhitneyBadge
-	goto_if_set 8745, GoldenrodCity_Gym_EventScript_WhitneyDefeated
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 3, GoldenrodCity_Gym_EventScript_WhitneyCrying
+	goto_if_eq JOHTO_VAR_GOLDENROD_CITY_STATE, 4, GoldenrodCity_Gym_EventScript_WhitneyBadge
+	goto_if_set JOHTO_FLAG_DEFEATED_GOLDENROD_CITY_GYM, GoldenrodCity_Gym_EventScript_WhitneyDefeated
 	msgbox GoldenrodCity_Gym_Text_WhitneyBefore, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1430, GoldenrodCity_Gym_Text_WhitneyShouldntBeSoSerious
+	trainerbattle_no_intro TRAINER_JOHTO_WHITNEY_1_HNS, GoldenrodCity_Gym_Text_WhitneyShouldntBeSoSerious
 	msgbox GoldenrodCity_Gym_Text_WhitneyYouMeanie, MSGBOX_DEFAULT
-	setvar 20569, 3
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 3
 	closemessage
 	release
 	end
@@ -69,14 +69,14 @@ GoldenrodCity_Gym_EventScript_WhitneyBadge::
 	waitmessage
 	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox GoldenrodCity_Gym_Text_WhitneyPlainBadge, MSGBOX_DEFAULT
-	setflag 10370
-	setflag 8745
-	addvar 20582, 1
-	setvar 32776, 3
+	setflag JOHTO_FLAG_BADGE03_GET
+	setflag JOHTO_FLAG_DEFEATED_GOLDENROD_CITY_GYM
+	addvar JOHTO_VAR_NUM_BADGES, 1
+	setvar VAR_0x8008, 3
 	call J_Common_EventScript_SetGymTrainers_hns
-	giveitem 626
+	giveitem ITEM_TM_ATTRACT
 	msgbox GoldenrodCity_Gym_Text_WhitneyAttract, MSGBOX_DEFAULT
-	setvar 20569, 5
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 5
 	closemessage
 	release
 	end
@@ -92,16 +92,16 @@ GoldenrodCity_Gym_EventScript_WhitneyDefeated::
 GoldenrodCity_Gym_EventScript_Trigger::
 	turnobject 6 DIR_WEST
 	msgbox GoldenrodCity_Gym_Text_BridgetWhitneyCries, MSGBOX_DEFAULT
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
-	setvar 20569, 4
+	setvar JOHTO_VAR_GOLDENROD_CITY_STATE, 4
 	closemessage
 	release
 	end
 
 GoldenrodCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set 8745, GoldenrodCity_Gym_EventScript_Statue2
+	goto_if_set JOHTO_FLAG_DEFEATED_GOLDENROD_CITY_GYM, GoldenrodCity_Gym_EventScript_Statue2
 	msgbox GoldenrodCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

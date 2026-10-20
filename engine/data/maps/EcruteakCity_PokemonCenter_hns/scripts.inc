@@ -1,47 +1,47 @@
 @ Johto (data/maps/EcruteakCity_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 EcruteakCity_PokemonCenter_hns_MapScripts::
-	map_script 3, EcruteakCity_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, EcruteakCity_PokemonCenter_OnTransition
 	.byte 0
 
 EcruteakCity_PokemonCenter_OnTransition::
-	setrespawn 133
+	setrespawn JOHTO_HEAL_LOCATION_ECRUTEAK_CITY_HNS
 	end
 
 EcruteakCity_PokemonCenter_EventScript_Bill::
 	lock
 	delay 30
-	playse 3
+	playse SE_PC_OFF
 	delay 55
 	faceplayer
 	msgbox EcruteakCity_PokemonCenter1F_Text_Bill1, MSGBOX_DEFAULT
 	msgbox EcruteakCity_PokemonCenter1F_Text_Bill2, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 32780, DIR_NORTH, EcruteakCity_PokemonCenter_EventScript_BillLeaveBot
-	call_if_eq 32780, DIR_WEST, EcruteakCity_PokemonCenter_EventScript_BillLeaveTop
-	playse 9
-	setflag 8308
-	removeobject 6
-	setflag 10391
-	clearflag 8295
+	call_if_eq VAR_FACING, DIR_NORTH, EcruteakCity_PokemonCenter_EventScript_BillLeaveBot
+	call_if_eq VAR_FACING, DIR_WEST, EcruteakCity_PokemonCenter_EventScript_BillLeaveTop
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_ECRUTEAK_BILL
+	removeobject LOCALID_ECRUTEAK_BILL
+	setflag JOHTO_FLAG_SYS_PC_BILL
+	clearflag JOHTO_FLAG_HIDE_GOLDENROD_BILL
 	release
 	end
 
 EcruteakCity_PokemonCenter_EventScript_BillFaceDown::
-	turnobject 6, DIR_SOUTH
+	turnobject LOCALID_ECRUTEAK_BILL, DIR_SOUTH
 	return
 
 EcruteakCity_PokemonCenter_EventScript_BillFaceRight::
-	turnobject 6, DIR_EAST
+	turnobject LOCALID_ECRUTEAK_BILL, DIR_EAST
 	return
 
 EcruteakCity_PokemonCenter_EventScript_BillLeaveTop::
-	applymovement 6, EcruteakCity_PokemonCenter_Movement_BillTop
+	applymovement LOCALID_ECRUTEAK_BILL, EcruteakCity_PokemonCenter_Movement_BillTop
 	waitmovement 0
 	return
 
 EcruteakCity_PokemonCenter_EventScript_BillLeaveBot::
-	applymovement 6, EcruteakCity_PokemonCenter_Movement_BillBot
+	applymovement LOCALID_ECRUTEAK_BILL, EcruteakCity_PokemonCenter_Movement_BillBot
 	waitmovement 0
 	return
 

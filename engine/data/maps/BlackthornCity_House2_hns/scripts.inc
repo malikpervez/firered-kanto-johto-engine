@@ -6,9 +6,9 @@ BlackthornCity_House2_hns_MapScripts::
 BlackthornCity_House2_EventScript_Emy::
 	lock
 	faceplayer
-	goto_if_set 8770, BlackthornCity_House2_EventScript_TradeCompleted
+	goto_if_set JOHTO_FLAG_BLACKTHORN_NPC_TRADE_COMPLETED, BlackthornCity_House2_EventScript_TradeCompleted
 	ingame_trade INGAME_TRADE_MR_MIME, BlackthornCity_House2_Text_YouWillTradeWontYou, BlackthornCity_House2_EventScript_DeclineTrade, BlackthornCity_House2_EventScript_NotRequestedMon, BlackthornCity_House2_Text_MonYouTakeCare
-	setflag 8770
+	setflag JOHTO_FLAG_BLACKTHORN_NPC_TRADE_COMPLETED
 	release
 	end
 
@@ -18,7 +18,7 @@ BlackthornCity_House2_EventScript_DeclineTrade::
 	end
 
 BlackthornCity_House2_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, 32777
+	bufferspeciesname STR_VAR_1, VAR_0x8009
 	msgbox BlackthornCity_House2_Text_ThisIsntAMon, MSGBOX_DEFAULT
 	release
 	end

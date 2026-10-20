@@ -1,7 +1,7 @@
 @ Johto (data/maps/NewSinjoh_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 NewSinjoh_PokemonCenter_hns_MapScripts::
-	map_script 3, NewSinjoh_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, NewSinjoh_PokemonCenter_OnTransition
 	.byte 0
 
 NewSinjoh_PokemonCenter_OnTransition:
@@ -11,13 +11,13 @@ NewSinjoh_PokemonCenter_OnTransition:
 NewSinjoh_EventScript_Artist::
 	lock
 	faceplayer
-	goto_if_set 9096, NewSinjoh_EventScript_ZoomLens_Gotten
+	goto_if_set JOHTO_FLAG_NEWSINJOH_POKEMONCENTER_ARTIST_GIFT, NewSinjoh_EventScript_ZoomLens_Gotten
 	msgbox NewSinjoh_Text_Artist, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, NewSinjoh_EventScript_ZoomLens_No
+	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_EventScript_ZoomLens_No
 	msgbox Text_ItemGiveaway, MSGBOX_DEFAULT
 	giveitem ITEM_ZOOM_LENS
-	goto_if_eq 32781, FALSE, J_Common_EventScript_BagIsFull
-	setflag 9096
+	goto_if_eq VAR_RESULT, FALSE, J_Common_EventScript_BagIsFull
+	setflag JOHTO_FLAG_NEWSINJOH_POKEMONCENTER_ARTIST_GIFT
 	release
 	end
 
@@ -26,13 +26,13 @@ NewSinjoh_PokemonCenter_EventScript_Skiier::
 	faceplayer
 	msgbox NewSinjoh_PokemonCenter_Text_Skiier, MSGBOX_DEFAULT
 	closemessage
-	turnobject 5, DIR_NORTH
+	turnobject LOCALID_NEWSINJOH_POKEMONCENTER_SKIIER, DIR_NORTH
 	release
 	end
 
 NewSinjoh_PokemonCenter_hns_Map::
 	lockall
-	setvar 32768, 1
+	setvar VAR_0x8000, 1
 	msgbox NewSinjoh_PokemonCenter_hns_Text_0, MSGBOX_DEFAULT
 	closemessage
 	callnative OpenScreenshotsFromScript

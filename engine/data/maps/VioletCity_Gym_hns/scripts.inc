@@ -6,7 +6,7 @@ VioletCity_Gym_hns_MapScripts::
 VioletCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set 8743, VioletCity_Gym_EventScript_GymGuy2
+	goto_if_set JOHTO_FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_GymGuy2
 	msgbox VioletGym_Text_GymGuide_Intro, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -18,34 +18,34 @@ VioletCity_Gym_EventScript_GymGuy2::
 	end
 
 VioletCity_Gym_EventScript_Rod::
-	trainerbattle_single 1053, VioletGym_Text_BirdKeeperRod_Seen, VioletGym_Text_BirdKeeperRod_Beaten
+	trainerbattle_single TRAINER_JOHTO_ROD_HNS, VioletGym_Text_BirdKeeperRod_Seen, VioletGym_Text_BirdKeeperRod_Beaten
 	msgbox VioletGym_Text_BirdKeeperRod_After, MSGBOX_AUTOCLOSE
 	end
 
 VioletCity_Gym_EventScript_Abe::
-	trainerbattle_single 1054, VioletGym_Text_BirdKeeperAbe_Seen, VioletGym_Text_BirdKeeperAbe_Beaten
+	trainerbattle_single TRAINER_JOHTO_ABE_HNS, VioletGym_Text_BirdKeeperAbe_Seen, VioletGym_Text_BirdKeeperAbe_Beaten
 	msgbox VioletGym_Text_BirdKeeperAbe_After, MSGBOX_AUTOCLOSE
 	end
 
 VioletCity_Gym_EventScript_Falkner::
 	lock
 	faceplayer
-	goto_if_set 8743, VioletCity_Gym_EventScript_Falkner_Defeated
+	goto_if_set JOHTO_FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_Falkner_Defeated
 	msgbox VioletGym_Text_Falkner_Intro, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1426, VioletGym_Text_Falkner_WinLoss
+	trainerbattle_no_intro TRAINER_JOHTO_FALKNER_1_HNS, VioletGym_Text_Falkner_WinLoss
 	message VioletGym_Text_ReceivedZephyrBadge
 	waitmessage
 	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox VioletGym_Text_Falkner_BadgeExplain, MSGBOX_DEFAULT
-	setflag 10368
-	setflag 8743
-	addvar 20582, 1
-	setvar 32776, 1
+	setflag JOHTO_FLAG_BADGE01_GET
+	setflag JOHTO_FLAG_DEFEATED_VIOLET_GYM
+	addvar JOHTO_VAR_NUM_BADGES, 1
+	setvar VAR_0x8008, 1
 	call J_Common_EventScript_SetGymTrainers_hns
-	giveitem 632
+	giveitem ITEM_TM_ROOST
 	msgbox VioletGym_Text_Falkner_TMExplain, MSGBOX_DEFAULT
-	setvar 20609, 3
-	setrespawn 130
+	setvar JOHTO_VAR_VIOLET_CITY_STATE, 3
+	setrespawn JOHTO_HEAL_LOCATION_VIOLET_CITY_HNS
 	closemessage
 	release
 	end
@@ -165,7 +165,7 @@ VioletGym_Text_GymGuide_Win:
 
 VioletCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set 8743, VioletCity_Gym_EventScript_Statue2
+	goto_if_set JOHTO_FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_Statue2
 	msgbox VioletCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

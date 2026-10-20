@@ -6,18 +6,18 @@ CianwoodHouse3_hns_MapScripts::
 CianwoodCity_EventScript_Kirk::
 	lock
 	faceplayer
-	goto_if_eq 20654, 1, CianwoodCity_EventScript_KirkGivenShuckie
-	goto_if_eq 20654, 3, CianwoodCity_EventScript_KirkReturnedShuckie
+	goto_if_eq JOHTO_VAR_SHUCKIE, 1, CianwoodCity_EventScript_KirkGivenShuckie
+	goto_if_eq JOHTO_VAR_SHUCKIE, 3, CianwoodCity_EventScript_KirkReturnedShuckie
 	msgbox CianwoodCity_Text_ManiacAskShuckle, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, CianwoodCity_EventScript_KirkDeclined
+	goto_if_eq VAR_RESULT, FALSE, CianwoodCity_EventScript_KirkDeclined
 
 
-	setvar 16385, 213
-	bufferspeciesname STR_VAR_1, 213
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SHUCKLE
+	bufferspeciesname STR_VAR_1, SPECIES_SHUCKLE
 	givenamedmon 2
 	call J_Common_EventScript_GiftMonNamed
 
-	setvar 20654, 1
+	setvar JOHTO_VAR_SHUCKIE, 1
 	release
 	end
 
@@ -27,23 +27,23 @@ CianwoodCity_EventScript_KirkDeclined::
 	end
 
 CianwoodCity_EventScript_KirkGivenShuckie::
-	goto_if_set 10368, CianwoodCity_EventScript_KirkReturnShuckie
+	goto_if_set JOHTO_FLAG_BADGE01_GET, CianwoodCity_EventScript_KirkReturnShuckie
 	msgbox CianwoodCity_Text_ManiacHowsdoing, MSGBOX_DEFAULT
 	closemessage
 	end
 
 CianwoodCity_EventScript_KirkReturnShuckie::
 	msgbox CianwoodCity_Text_ManiacAskReturn, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, CianwoodCity_EventScript_KirkDeclineReturnShuckie
+	goto_if_eq VAR_RESULT, FALSE, CianwoodCity_EventScript_KirkDeclineReturnShuckie
 	removenamedmon 2
-	goto_if_eq 32781, 2, CianwoodCity_EventScript_KirkNotRight
-	goto_if_eq 32781, 3, CianwoodCity_EventScript_KirkKeepShuckie
-	playse 370
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, CianwoodCity_EventScript_KirkNotRight
+	goto_if_eq VAR_RESULT, 3, CianwoodCity_EventScript_KirkKeepShuckie
+	playse MUS_OBTAIN_ITEM
 	callnative UpdateFollowingPokemon
 	msgbox CianwoodCity_Text_ManiacReturnedMon, MSGBOX_DEFAULT
 	waitse
 	msgbox CianwoodCity_Text_ManiacThankYou, MSGBOX_DEFAULT
-	setvar 20654, 3
+	setvar JOHTO_VAR_SHUCKIE, 3
 	release
 	end
 
@@ -62,7 +62,7 @@ CianwoodCity_EventScript_KirkNotRight::
 CianwoodCity_EventScript_KirkKeepShuckie::
 	msgbox CianwoodCity_Text_ManiacShuckleLikesYou, MSGBOX_DEFAULT
 	closemessage
-	setvar 20654, 3
+	setvar JOHTO_VAR_SHUCKIE, 3
 	release
 	end
 

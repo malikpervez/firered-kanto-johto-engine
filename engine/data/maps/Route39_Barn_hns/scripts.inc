@@ -7,12 +7,12 @@ Route39_Barn_EventScript_Miltank::
 	lock
 	faceplayer
 	waitse
-	playmoncry 241, 0
-	goto_if_eq 20595, 0, Route39_Barn_EventScript_Miltank_NeedBerries5
-	goto_if_eq 20595, 1, Route39_Barn_EventScript_Miltank_NeedBerries4
-	goto_if_eq 20595, 2, Route39_Barn_EventScript_Miltank_NeedBerries3
-	goto_if_eq 20595, 3, Route39_Barn_EventScript_Miltank_NeedBerries2
-	goto_if_eq 20595, 4, Route39_Barn_EventScript_Miltank_NeedBerries1
+	playmoncry SPECIES_MILTANK, CRY_MODE_NORMAL
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 0, Route39_Barn_EventScript_Miltank_NeedBerries5
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 1, Route39_Barn_EventScript_Miltank_NeedBerries4
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 2, Route39_Barn_EventScript_Miltank_NeedBerries3
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 3, Route39_Barn_EventScript_Miltank_NeedBerries2
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 4, Route39_Barn_EventScript_Miltank_NeedBerries1
 	msgbox Route39_Text_MoomooHappyMoo, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -24,18 +24,18 @@ Route39_Barn_EventScript_Miltank_NeedBerries5::
 	closemessage
 	delay 10
 	msgbox Route39_Text_BarnCryIsWeak, MSGBOX_YESNO
-	call_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_Refused
+	call_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_Refused
 
 	checkitem ITEM_ORAN_BERRY
-	goto_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
+	goto_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
 	removeitem ITEM_ORAN_BERRY, 1
-	playse 1
+	playse SE_USE_ITEM
 	msgbox Route39_Text_BarnGaveBerry, MSGBOX_AUTOCLOSE
 	waitse
 	msgbox Route39_Text_BarnLittleHealthier, MSGBOX_DEFAULT
 	closemessage
 
-	setvar 20595, 1
+	setvar JOHTO_VAR_ROUTE39_BARN, 1
 	release
 	end
 
@@ -45,18 +45,18 @@ Route39_Barn_EventScript_Miltank_NeedBerries4::
 	closemessage
 	delay 10
 	msgbox Route39_Text_BarnCryIsWeak, MSGBOX_YESNO
-	call_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_Refused
+	call_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_Refused
 
 	checkitem ITEM_ORAN_BERRY
-	goto_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
+	goto_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
 	removeitem ITEM_ORAN_BERRY, 1
-	playse 1
+	playse SE_USE_ITEM
 	msgbox Route39_Text_BarnGaveBerry, MSGBOX_AUTOCLOSE
 	waitse
 	msgbox Route39_Text_BarnLittleHealthier, MSGBOX_DEFAULT
 	closemessage
 
-	setvar 20595, 2
+	setvar JOHTO_VAR_ROUTE39_BARN, 2
 	release
 	end
 
@@ -66,16 +66,16 @@ Route39_Barn_EventScript_Miltank_NeedBerries3::
 	closemessage
 	delay 10
 	msgbox Route39_Text_BarnCryIsWeak, MSGBOX_YESNO
-	call_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_Refused
+	call_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_Refused
 	checkitem ITEM_ORAN_BERRY
-	goto_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
+	goto_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
 	removeitem ITEM_ORAN_BERRY, 1
-	playse 1
+	playse SE_USE_ITEM
 	msgbox Route39_Text_BarnGaveBerry, MSGBOX_AUTOCLOSE
 	waitse
 	msgbox Route39_Text_BarnQuiteHealthy, MSGBOX_DEFAULT
 	closemessage
-	setvar 20595, 3
+	setvar JOHTO_VAR_ROUTE39_BARN, 3
 	release
 	end
 
@@ -85,16 +85,16 @@ Route39_Barn_EventScript_Miltank_NeedBerries2::
 	closemessage
 	delay 10
 	msgbox Route39_Text_BarnCryIsWeak, MSGBOX_YESNO
-	call_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_Refused
+	call_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_Refused
 	checkitem ITEM_ORAN_BERRY
-	goto_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
+	goto_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
 	removeitem ITEM_ORAN_BERRY, 1
-	playse 1
+	playse SE_USE_ITEM
 	msgbox Route39_Text_BarnGaveBerry, MSGBOX_AUTOCLOSE
 	waitse
 	msgbox Route39_Text_BarnQuiteHealthy, MSGBOX_DEFAULT
 	closemessage
-	setvar 20595, 4
+	setvar JOHTO_VAR_ROUTE39_BARN, 4
 	release
 	end
 
@@ -104,18 +104,18 @@ Route39_Barn_EventScript_Miltank_NeedBerries1::
 	closemessage
 	delay 10
 	msgbox Route39_Text_BarnCryIsWeak, MSGBOX_YESNO
-	call_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_Refused
+	call_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_Refused
 	checkitem ITEM_ORAN_BERRY
-	goto_if_eq 32781, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
+	goto_if_eq VAR_RESULT, FALSE, Route39_Barn_EventScript_Miltank_NoBerries
 	removeitem ITEM_ORAN_BERRY, 1
-	playse 1
+	playse SE_USE_ITEM
 	msgbox Route39_Text_BarnGaveBerry, MSGBOX_AUTOCLOSE
 	waitse
 	msgbox Route39_Text_BarnTotallyHealthy, MSGBOX_DEFAULT
-	playfanfare 368
+	playfanfare MUS_HEAL
 	waitfanfare
 	closemessage
-	setvar 20595, 5
+	setvar JOHTO_VAR_ROUTE39_BARN, 5
 	release
 	end
 
@@ -133,7 +133,7 @@ Route39_Barn_EventScript_Miltank_NoBerries::
 Route39_Barn_EventScript_Twins::
 	lock
 	faceplayer
-	goto_if_eq 20595, 5, Route39_Barn_EventScript_TwinsAfter
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 5, Route39_Barn_EventScript_TwinsAfter
 	msgbox Route39_Text_BarnTwinMoomooIsSick, MSGBOX_DEFAULT
 	closemessage
 	release

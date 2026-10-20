@@ -1,108 +1,108 @@
 @ Johto (data/maps/SinjohRuins_ArceusRoom_hns/scripts.inc), as built into the FireRed game.
 
 SinjohRuins_ArceusRoom_hns_MapScripts::
-	map_script 3, SinjohRuins_ArceusRoom_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, SinjohRuins_ArceusRoom_OnTransition
 	.byte 0
 
 SinjohRuins_ArceusRoom_OnTransition::
-	call_if_ge 20639, 11, SinjohRuins_ArceusRoom_MoveArceus
+	call_if_ge JOHTO_VAR_SINJOH_STORYLINE, 11, SinjohRuins_ArceusRoom_MoveArceus
 	end
 
 SinjohRuins_ArceusRoom_MoveArceus::
-	setobjectxyperm 1, 18, 18
+	setobjectxyperm LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS, 18, 18
 	return
 
 SinjohRuins_ArceusRoom_TriggerRight::
 	lock
-	playse 209
+	playse SE_M_DETECT
 	dofieldeffectsparkle 19, 24, 0
-	waitfieldeffect 54
+	waitfieldeffect FLDEFF_SPARKLE
 	goto SinjohRuins_ArceusRoom_TriggerScene
 
 SinjohRuins_ArceusRoom_TriggerLeft::
 	lock
-	playse 209
+	playse SE_M_DETECT
 	dofieldeffectsparkle 17, 24, 0
-	waitfieldeffect 54
+	waitfieldeffect FLDEFF_SPARKLE
 	goto SinjohRuins_ArceusRoom_TriggerScene
 
 SinjohRuins_ArceusRoom_TriggerMid::
 	lock
-	playse 209
+	playse SE_M_DETECT
 	dofieldeffectsparkle 18, 24, 0
-	waitfieldeffect 54
+	waitfieldeffect FLDEFF_SPARKLE
 	goto SinjohRuins_ArceusRoom_TriggerScene
 
 SinjohRuins_ArceusRoom_TriggerScene::
 
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
-	applymovement2 255, SinjohRuins_ArceusRoom_Movement_WalkSlowUp
+	applymovement2 LOCALID_PLAYER, SinjohRuins_ArceusRoom_Movement_WalkSlowUp
 	waitmovement 0
-	setvar 32781, 3
-	playse 107
+	setvar VAR_RESULT, 3
+	playse SE_ORB
 	special DoOrbEffect
 
 	delay 200
-	applymovement2 255, SinjohRuins_ArceusRoom_Movement_Dance
-	applymovement2 0xFE, SinjohRuins_ArceusRoom_Movement_Dance
+	applymovement2 LOCALID_PLAYER, SinjohRuins_ArceusRoom_Movement_Dance
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, SinjohRuins_ArceusRoom_Movement_Dance
 	delay 400
 	waitmovement 0
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	special FadeOutOrbEffect
 
-	setweather 2
+	setweather WEATHER_SUNNY
 	doweather
-	playse 87
+	playse SE_THUNDER
 	delay 80
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 15
-	setvar 32775, 6
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 15
+	setvar VAR_0x8007, 6
 	special ShakeCamera
 	waitstate
 	delay 80
-	playse 87
-	fadescreen 3
-	addobject 1
-	clearflag 9124
+	playse SE_THUNDER
+	fadescreen FADE_TO_WHITE
+	addobject LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	clearflag JOHTO_FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
 
-	playse 87
-	applymovement2 1, SinjohRuins_ArceusRoom_Movement_ArceusWalkDown
-	playfanfare 388
-	fadescreen 2
-	playmoncry 493, 0
+	playse SE_THUNDER
+	applymovement2 LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS, SinjohRuins_ArceusRoom_Movement_ArceusWalkDown
+	playfanfare MUS_AWAKEN_LEGEND
+	fadescreen FADE_FROM_WHITE
+	playmoncry SPECIES_ARCEUS, 0
 	delay 20
-	waitmovement 1
-	setvar 32772, 0
-	setvar 32773, 1
-	setvar 32774, 6
-	setvar 32775, 2
+	waitmovement LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	setvar VAR_0x8004, 0
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 6
+	setvar VAR_0x8007, 2
 	special ShakeCamera
 	waitstate
 	waitmoncry
 	delay 8
-	playse 21
-	applymovement 255, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
-	setweather 0
+	waitmovement LOCALID_PLAYER
+	setweather WEATHER_NONE
 	doweather
-	applymovement2 1, SinjohRuins_ArceusRoom_Movement_ArceusLooksAround
-	playmoncry 493, 0
+	applymovement2 LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS, SinjohRuins_ArceusRoom_Movement_ArceusLooksAround
+	playmoncry SPECIES_ARCEUS, 0
 	waitmovement 0
-	playmoncry 493, 0
+	playmoncry SPECIES_ARCEUS, 0
 	waitmoncry
 	fadedefaultbgm
-	setobjectxyperm 1, 18, 18
-	setvar 20639, 11
+	setobjectxyperm LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS, 18, 18
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 11
 	release
 	end
 
@@ -274,45 +274,45 @@ SinjohRuins_ArceusRoom_Movement_WalkSlowUp:
 SinjohRuins_ArceusRoom_EventScript_Arceus::
 	lock
 	faceplayer
-	goto_if_ge 20639, 12, SinjohRuins_ArceusRoom_EventScript_ArceusPhase2
-	playmoncry 493, 2
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 12, SinjohRuins_ArceusRoom_EventScript_ArceusPhase2
+	playmoncry SPECIES_ARCEUS, CRY_MODE_ENCOUNTER
 	msgbox SinjohRuins_ArceusRoom_Text_CryArceus, MSGBOX_AUTOCLOSE
 	delay 40
 	waitmoncry
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	setwildbossbattle species=1080, level=100, item=ITEM_IRON_PLATE, move1_1=MOVE_JUDGMENT, move1_2=MOVE_HYDRO_PUMP, move1_3=MOVE_RECOVER move1_4=MOVE_DAZZLING_GLEAM
 	settotemboost B_POSITION_OPPONENT_LEFT, 2, 2, 0, 2, 2, 2
 	special BattleSetup_StartLegendaryBattle
-	playbgm ((558 + 1) + 0x90), 0
+	playbgm ((558 + 1) + 0x90), MUS_DUMMY
 	waitstate
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, SinjohRuins_ArceusRoom_EventScript_ArceusRan
-	setvar 20639, 12
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_ArceusRoom_EventScript_ArceusRan
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 12
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 
 SinjohRuins_ArceusRoom_EventScript_ArceusPhase2::
-	playmoncry 493, 2
+	playmoncry SPECIES_ARCEUS, CRY_MODE_ENCOUNTER
 	msgbox SinjohRuins_ArceusRoom_Text_CryArceus2, MSGBOX_AUTOCLOSE
 	delay 40
 	waitmoncry
 	setwildbossbattle species=493, level=80, item=ITEM_NONE, move1_1=MOVE_EXTREME_SPEED, move1_2=MOVE_EARTH_POWER, move1_3=MOVE_RECOVER move1_4=MOVE_HYPER_BEAM
 
 	special BattleSetup_StartLegendaryBattle
-	playbgm ((558 + 1) + 0x90), 0
+	playbgm ((558 + 1) + 0x90), MUS_DUMMY
 	waitstate
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, SinjohRuins_ArceusRoom_EventScript_ArceusRan
-	fadescreenswapbuffers 1
-	removeobject 1
-	setflag 9124
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_ArceusRoom_EventScript_ArceusRan
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_ARCEUS
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_ARCEUSROOM_ARCEUS
 	special GivePartyMonSkyRibbon
-	fadescreenswapbuffers 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 
@@ -330,17 +330,17 @@ SinjohRuins_ArceusRoom_Text_CryArceus2:
 
 SinjohRuins_ArceusRoom_TriggerSteven::
 	lock
-	addobject 2
-	applymovement2 2, SinjohRuins_ArceusRoom_Movement_StevenWalkUp
+	addobject LOCALID_SINJOHRUINS_ARCEUSROOM_STEVEN
+	applymovement2 LOCALID_SINJOHRUINS_ARCEUSROOM_STEVEN, SinjohRuins_ArceusRoom_Movement_StevenWalkUp
 	waitmovement 0
 	msgbox SinjohRuins_ArceusRoom_Text_StevenCongrats, MSGBOX_AUTOCLOSE
-	applymovement2 2, SinjohRuins_ArceusRoom_Movement_StevenWalkDown
+	applymovement2 LOCALID_SINJOHRUINS_ARCEUSROOM_STEVEN, SinjohRuins_ArceusRoom_Movement_StevenWalkDown
 	waitmovement 0
-	removeobject 2
-	playse 9
-	setflag 9122
-	clearflag 9126
-	setvar 20639, 13
+	removeobject LOCALID_SINJOHRUINS_ARCEUSROOM_STEVEN
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_SINJOHRUINS_STEVEN
+	clearflag JOHTO_FLAG_HIDE_NEWSINJOH_STEVEN
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 13
 	release
 	end
 

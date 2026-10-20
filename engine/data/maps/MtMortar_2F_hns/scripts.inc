@@ -1,8 +1,8 @@
 @ Johto (data/maps/MtMortar_2F_hns/scripts.inc), as built into the FireRed game.
 
 MtMortar_2F_hns_MapScripts::
-	map_script 3, MtMortar_2F_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, MtMortar_2F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 MtMortar_2F_OnTransition:
@@ -34,7 +34,7 @@ MtMortar_2F_EventScript_Item_Elixir::
 	end
 
 MtMortar_2F_EventScript_Nerd::
-	trainerbattle_single 1278, MtMortar_2F_Text_SupernerdHughSeen, MtMortar_2F_Text_SupernerdHughBeaten
+	trainerbattle_single TRAINER_JOHTO_HUGH_HNS, MtMortar_2F_Text_SupernerdHughSeen, MtMortar_2F_Text_SupernerdHughBeaten
 	msgbox MtMortar_2F_Text_SupernerdHughAfter, MSGBOX_AUTOCLOSE
 	end
 

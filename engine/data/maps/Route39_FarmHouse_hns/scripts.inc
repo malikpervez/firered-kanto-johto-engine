@@ -6,19 +6,19 @@ Route39_FarmHouse_hns_MapScripts::
 Route39House_EventScript_FarmerF::
 	lock
 	faceplayer
-	goto_if_eq 20595, 5, Route39House_EventScript_FarmerFAfter
+	goto_if_eq JOHTO_VAR_ROUTE39_BARN, 5, Route39House_EventScript_FarmerFAfter
 	msgbox Route39_Text_FarmerFInTrouble, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 Route39House_EventScript_FarmerFAfter::
-	goto_if_set 8718, Route39House_EventScript_FarmerFAfterTM
+	goto_if_set JOHTO_FLAG_GOT_TM_SNATCH, Route39House_EventScript_FarmerFAfterTM
 	msgbox Route39_Text_FarmerFHealedMiltank, MSGBOX_DEFAULT
-	giveitem 630
+	giveitem ITEM_TM_SNATCH
 	msgbox Route39_Text_FarmerFSnatchSpeech, MSGBOX_DEFAULT
 	closemessage
-	setflag 8718
+	setflag JOHTO_FLAG_GOT_TM_SNATCH
 	release
 	end
 
@@ -31,10 +31,10 @@ Route39House_EventScript_FarmerFAfterTM::
 Route39_FarmHouse_EventScript_FarmerM::
 	lock
 	faceplayer
-	goto_if_lt 20595, 5, Route39_FarmHouse_EventScript_FarmerM_Sick
+	goto_if_lt JOHTO_VAR_ROUTE39_BARN, 5, Route39_FarmHouse_EventScript_FarmerM_Sick
 	showmoneybox 0, 0
 	msgbox Route39_Text_FarmerMBuyMilk, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Route39_FarmHouse_EventScript_FarmerMBuyMilk
+	goto_if_eq VAR_RESULT, TRUE, Route39_FarmHouse_EventScript_FarmerMBuyMilk
 	msgbox Route39_Text_FarmerMNoSale, MSGBOX_DEFAULT
 	hidemoneybox
 	closemessage
@@ -42,18 +42,18 @@ Route39_FarmHouse_EventScript_FarmerM::
 
 Route39_FarmHouse_EventScript_FarmerMBuyMilk::
 	checkmoney 500, 0
-	goto_if_eq 32781, FALSE, Route39_FarmHouse_EventScript_FarmerM_NotEnough
+	goto_if_eq VAR_RESULT, FALSE, Route39_FarmHouse_EventScript_FarmerM_NotEnough
 	additem ITEM_MOOMOO_MILK
-	goto_if_eq 32781, FALSE, Route39_FarmHouse_EventScript_FarmerM_BagFull
+	goto_if_eq VAR_RESULT, FALSE, Route39_FarmHouse_EventScript_FarmerM_BagFull
 	removemoney 500
 	updatemoneybox 0
 	msgbox Route39FarmHouse_Text_WouldYouLikeAnother, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Route39_FarmHouse_EventScript_FarmerMBuyMilk
+	goto_if_eq VAR_RESULT, TRUE, Route39_FarmHouse_EventScript_FarmerMBuyMilk
 
 
 	msgbox Route39_Text_FarmerMGotMilk, MSGBOX_DEFAULT
 	closemessage
-	playse 370
+	playse MUS_OBTAIN_ITEM
 	msgbox Route39_Text_GotMilk, MSGBOX_DEFAULT
 	closemessage
 	hidemoneybox

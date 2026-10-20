@@ -12,28 +12,28 @@ NewSinjoh_HotSprings_EventScript_Item_LavaCookie::
 	end
 
 NewSinjoh_HotSprings_EventScript_Mualani::
-	goto_if_defeated 1638, NewSinjoh_HotSprings_EventScript_MualaniAfter
+	goto_if_defeated TRAINER_JOHTO_MUALANI_HNS, NewSinjoh_HotSprings_EventScript_MualaniAfter
 	msgbox NewSinjoh_HotSprings_Text_MualaniBefore, MSGBOX_NPC
-	goto_if_not_defeated 1638, NewSinjoh_HotSprings_EventScript_TryMualaniBattle
+	goto_if_not_defeated TRAINER_JOHTO_MUALANI_HNS, NewSinjoh_HotSprings_EventScript_TryMualaniBattle
 	end
 
 NewSinjoh_HotSprings_EventScript_TryMualaniBattle::
-	goto_if_eq 20639, 6, NewSinjoh_HotSprings_EventScript_MualaniBattle
+	goto_if_eq JOHTO_VAR_SINJOH_STORYLINE, 6, NewSinjoh_HotSprings_EventScript_MualaniBattle
 	end
 
 NewSinjoh_HotSprings_EventScript_MualaniBattle::
 	lock
 	msgbox NewSinjoh_HotSprings_Text_MualaniBeforeBattle, MSGBOX_AUTOCLOSE
-	trainerbattle_no_intro 1638, NewSinjoh_HotSprings_Text_MualaniDefeat
+	trainerbattle_no_intro TRAINER_JOHTO_MUALANI_HNS, NewSinjoh_HotSprings_Text_MualaniDefeat
 	giveitem ITEM_SPLASH_PLATE
-	addvar 20640, 1
+	addvar JOHTO_VAR_PLATECOUNTER, 1
 	msgbox NewSinjoh_HotSprings_Text_MualaniAfter, MSGBOX_AUTOCLOSE
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
 
@@ -125,11 +125,11 @@ NewSinjoh_HotSprings_EventScript_PLATutor::
 	lock
 	faceplayer
 	msgbox NewSinjoh_HotSprings_Text_PLATutorIntro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, NewSinjoh_HotSprings_EventScript_PLATutorDecline
+	goto_if_eq VAR_RESULT, NO, NewSinjoh_HotSprings_EventScript_PLATutorDecline
 	message NewSinjoh_HotSprings_Text_PLATutorChoose
 	waitmessage
-	dynmultichoice 0, 0, FALSE, 6, 0, 255, NewSinjoh_HotSprings_Text_PLAMove_PowerShift, NewSinjoh_HotSprings_Text_PLAMove_SpringtideStorm, NewSinjoh_HotSprings_Text_PLAMove_MysticalPower, NewSinjoh_HotSprings_Text_PLAMove_WaveCrash, NewSinjoh_HotSprings_Text_PLAMove_MountainGale, NewSinjoh_HotSprings_Text_PLAMove_VictoryDance, NewSinjoh_HotSprings_Text_PLAMove_EsperWing, NewSinjoh_HotSprings_Text_PLAMove_BitterMalice, NewSinjoh_HotSprings_Text_PLAMove_Shelter, NewSinjoh_HotSprings_Text_PLAMove_BleakwindStorm, NewSinjoh_HotSprings_Text_PLAMove_WildboltStorm, NewSinjoh_HotSprings_Text_PLAMove_SandsearStorm, NewSinjoh_HotSprings_Text_PLAMove_LunarBlessing, NewSinjoh_HotSprings_Text_PLAMove_TakeHeart, NewSinjoh_HotSprings_Text_PLAMove_Cancel
-	switch 32781
+	dynmultichoice 0, 0, FALSE, 6, 0, DYN_MULTICHOICE_CB_NONE, NewSinjoh_HotSprings_Text_PLAMove_PowerShift, NewSinjoh_HotSprings_Text_PLAMove_SpringtideStorm, NewSinjoh_HotSprings_Text_PLAMove_MysticalPower, NewSinjoh_HotSprings_Text_PLAMove_WaveCrash, NewSinjoh_HotSprings_Text_PLAMove_MountainGale, NewSinjoh_HotSprings_Text_PLAMove_VictoryDance, NewSinjoh_HotSprings_Text_PLAMove_EsperWing, NewSinjoh_HotSprings_Text_PLAMove_BitterMalice, NewSinjoh_HotSprings_Text_PLAMove_Shelter, NewSinjoh_HotSprings_Text_PLAMove_BleakwindStorm, NewSinjoh_HotSprings_Text_PLAMove_WildboltStorm, NewSinjoh_HotSprings_Text_PLAMove_SandsearStorm, NewSinjoh_HotSprings_Text_PLAMove_LunarBlessing, NewSinjoh_HotSprings_Text_PLAMove_TakeHeart, NewSinjoh_HotSprings_Text_PLAMove_Cancel
+	switch VAR_RESULT
 	case 0, NewSinjoh_HotSprings_EventScript_PLATeach_PowerShift
 	case 1, NewSinjoh_HotSprings_EventScript_PLATeach_SpringtideStorm
 	case 2, NewSinjoh_HotSprings_EventScript_PLATeach_MysticalPower
@@ -145,88 +145,88 @@ NewSinjoh_HotSprings_EventScript_PLATutor::
 	case 12, NewSinjoh_HotSprings_EventScript_PLATeach_LunarBlessing
 	case 13, NewSinjoh_HotSprings_EventScript_PLATeach_TakeHeart
 	case 14, NewSinjoh_HotSprings_EventScript_PLATutorDecline
-	case 127, NewSinjoh_HotSprings_EventScript_PLATutorDecline
+	case MULTI_B_PRESSED, NewSinjoh_HotSprings_EventScript_PLATutorDecline
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_PowerShift::
-	setvar 32773, MOVE_POWER_SHIFT
+	setvar VAR_0x8005, MOVE_POWER_SHIFT
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_SpringtideStorm::
-	setvar 32773, MOVE_SPRINGTIDE_STORM
+	setvar VAR_0x8005, MOVE_SPRINGTIDE_STORM
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_MysticalPower::
-	setvar 32773, MOVE_MYSTICAL_POWER
+	setvar VAR_0x8005, MOVE_MYSTICAL_POWER
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_WaveCrash::
-	setvar 32773, MOVE_WAVE_CRASH
+	setvar VAR_0x8005, MOVE_WAVE_CRASH
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_MountainGale::
-	setvar 32773, MOVE_MOUNTAIN_GALE
+	setvar VAR_0x8005, MOVE_MOUNTAIN_GALE
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_VictoryDance::
-	setvar 32773, MOVE_VICTORY_DANCE
+	setvar VAR_0x8005, MOVE_VICTORY_DANCE
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_EsperWing::
-	setvar 32773, MOVE_ESPER_WING
+	setvar VAR_0x8005, MOVE_ESPER_WING
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_BitterMalice::
-	setvar 32773, MOVE_BITTER_MALICE
+	setvar VAR_0x8005, MOVE_BITTER_MALICE
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_Shelter::
-	setvar 32773, MOVE_SHELTER
+	setvar VAR_0x8005, MOVE_SHELTER
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_BleakwindStorm::
-	setvar 32773, MOVE_BLEAKWIND_STORM
+	setvar VAR_0x8005, MOVE_BLEAKWIND_STORM
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_WildboltStorm::
-	setvar 32773, MOVE_WILDBOLT_STORM
+	setvar VAR_0x8005, MOVE_WILDBOLT_STORM
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_SandsearStorm::
-	setvar 32773, MOVE_SANDSEAR_STORM
+	setvar VAR_0x8005, MOVE_SANDSEAR_STORM
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_LunarBlessing::
-	setvar 32773, MOVE_LUNAR_BLESSING
+	setvar VAR_0x8005, MOVE_LUNAR_BLESSING
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeach_TakeHeart::
-	setvar 32773, MOVE_TAKE_HEART
+	setvar VAR_0x8005, MOVE_TAKE_HEART
 	goto NewSinjoh_HotSprings_EventScript_PLATeachMove
 	end
 
 NewSinjoh_HotSprings_EventScript_PLATeachMove::
-	buffermovename STR_VAR_1, 32773
+	buffermovename STR_VAR_1, VAR_0x8005
 	msgbox NewSinjoh_HotSprings_Text_PLATutorConfirm, MSGBOX_YESNO
-	goto_if_eq 32781, NO, NewSinjoh_HotSprings_EventScript_PLATutor
+	goto_if_eq VAR_RESULT, NO, NewSinjoh_HotSprings_EventScript_PLATutor
 	msgbox NewSinjoh_HotSprings_Text_PLATutorWhichMon, MSGBOX_DEFAULT
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	chooseboxmon SELECT_PC_MON_PLA_TUTOR
 	waitstate
-	goto_if_eq 32781, FALSE, NewSinjoh_HotSprings_EventScript_PLATutorCancelMon
+	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_HotSprings_EventScript_PLATutorCancelMon
 	msgbox NewSinjoh_HotSprings_Text_PLATutorDone, MSGBOX_DEFAULT
 	release
 	end
@@ -311,43 +311,43 @@ NewSinjoh_HotSprings_Text_PLAMove_Cancel:
 
 NewSinjoh_HotSprings_EventScript_ActivateArcanine::
 	lock
-	setobjectxyperm 8, 16, 4
-	playse 209
-	getplayerxy 16385, 16386
-	dofieldeffectsparkle 16385, 16386, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	setobjectxyperm LOCALID_HOTSPRINGS_NOBLE_ARCANINE, 16, 4
+	playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
 	delay 200
 	fadedefaultbgm
-	addobject 8
-	clearflag 9118
-	applymovement2 8, NewSinjoh_HotSprings_Movement_ArcanineEntrance1
+	addobject LOCALID_HOTSPRINGS_NOBLE_ARCANINE
+	clearflag JOHTO_FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE
+	applymovement2 LOCALID_HOTSPRINGS_NOBLE_ARCANINE, NewSinjoh_HotSprings_Movement_ArcanineEntrance1
 	delay 10
-	playse 10
-	playmoncry 994, 0
+	playse SE_LEDGE
+	playmoncry SPECIES_ARCANINE_HISUI, CRY_MODE_NORMAL
 	waitmoncry
 	waitmovement 0
-	applymovement2 8, NewSinjoh_HotSprings_Movement_ArcanineEntrance2
+	applymovement2 LOCALID_HOTSPRINGS_NOBLE_ARCANINE, NewSinjoh_HotSprings_Movement_ArcanineEntrance2
 	delay 10
-	playmoncry 994, 0
+	playmoncry SPECIES_ARCANINE_HISUI, CRY_MODE_NORMAL
 	waitmoncry
-	playse 10
+	playse SE_LEDGE
 	delay 20
-	waitmovement 8
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 2
+	waitmovement LOCALID_HOTSPRINGS_NOBLE_ARCANINE
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 2
 	special ShakeCamera
-	setobjectxyperm 8, 16, 8
-	setvar 20647, 2
+	setobjectxyperm LOCALID_HOTSPRINGS_NOBLE_ARCANINE, 16, 8
+	setvar JOHTO_VAR_NOBLE_ARCANINE, 2
 	release
 	end
 
@@ -367,85 +367,85 @@ NewSinjoh_HotSprings_Movement_ArcanineEntrance2:
 NewSinjoh_HotSprings_EventScript_Arcanine::
 	lock
 	faceplayer
-	playmoncry 994, 2
+	playmoncry SPECIES_ARCANINE_HISUI, CRY_MODE_ENCOUNTER
 	waitmoncry
 	setwildbossbattle species=994, level=80, item=ITEM_LOADED_DICE, move1_1=MOVE_ROCK_BLAST, move1_2=MOVE_WILD_CHARGE, move1_3=MOVE_RAGING_FURY move1_4=MOVE_PROTECT
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, NewSinjoh_HotSprings_EventScript_ArcanineRan
-	bufferspeciesname STR_VAR_1, 994
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewSinjoh_HotSprings_EventScript_ArcanineRan
+	bufferspeciesname STR_VAR_1, SPECIES_ARCANINE_HISUI
 	msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
 	giveitem ITEM_FLAME_PLATE
-	addvar 20640, 1
-	fadescreenswapbuffers 1
-	removeobject 8
-	setflag 9118
-	fadescreenswapbuffers 0
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOTSPRINGS_NOBLE_ARCANINE
+	setflag JOHTO_FLAG_HIDE_HOTSPRINGS_NOBLE_ARCANINE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 NewSinjoh_HotSprings_EventScript_ArcanineRan::
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 NewSinjoh_HotSprings_EventScript_ActivateUrsaluna::
 	lock
-	setobjectxyperm 9, 52, 26
-	playse 209
-	getplayerxy 16385, 16386
-	dofieldeffectsparkle 16385, 16386, 0
-	waitfieldeffect 54
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
+	setobjectxyperm LOCALID_HOTSPRINGS_NOBLE_URSALUNA, 52, 26
+	playse SE_M_DETECT
+	getplayerxy VAR_TEMP_1, VAR_TEMP_2
+	dofieldeffectsparkle VAR_TEMP_1, VAR_TEMP_2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	playse SE_PIN
+	applymovement2 LOCALID_PLAYER, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 255
+	waitmovement LOCALID_PLAYER
 	msgbox SinjohRuins_Lab_Text_PlayFlute, MSGBOX_YESNO
 	closemessage
-	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
 	playbgm ((((558 + 1) + 0xAF) + 1) + 0x00), FALSE
 	delay 200
 	fadedefaultbgm
-	addobject 9
-	clearflag 9119
-	applymovement2 9, NewSinjoh_HotSprings_Movement_UrsalunaEntrance1
+	addobject LOCALID_HOTSPRINGS_NOBLE_URSALUNA
+	clearflag JOHTO_FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA
+	applymovement2 LOCALID_HOTSPRINGS_NOBLE_URSALUNA, NewSinjoh_HotSprings_Movement_UrsalunaEntrance1
 	delay 10
-	playse 10
-	playmoncry 901, 0
+	playse SE_LEDGE
+	playmoncry SPECIES_URSALUNA, CRY_MODE_NORMAL
 	waitmoncry
 	waitmovement 0
-	applymovement2 9, NewSinjoh_HotSprings_Movement_UrsalunaEntrance2
+	applymovement2 LOCALID_HOTSPRINGS_NOBLE_URSALUNA, NewSinjoh_HotSprings_Movement_UrsalunaEntrance2
 	delay 10
-	playmoncry 901, 0
+	playmoncry SPECIES_URSALUNA, CRY_MODE_NORMAL
 	waitmoncry
-	playse 10
+	playse SE_LEDGE
 	delay 20
-	waitmovement 9
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 5
-	setvar 32775, 2
+	waitmovement LOCALID_HOTSPRINGS_NOBLE_URSALUNA
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 5
+	setvar VAR_0x8007, 2
 	special ShakeCamera
-	setobjectxyperm 9, 52, 28
-	setvar 20648, 2
+	setobjectxyperm LOCALID_HOTSPRINGS_NOBLE_URSALUNA, 52, 28
+	setvar JOHTO_VAR_NOBLE_URSALUNA, 2
 	release
 	end
 
@@ -465,43 +465,43 @@ NewSinjoh_HotSprings_Movement_UrsalunaEntrance2:
 NewSinjoh_HotSprings_EventScript_Ursaluna::
 	lock
 	faceplayer
-	playmoncry 901, 2
+	playmoncry SPECIES_URSALUNA, CRY_MODE_ENCOUNTER
 	waitmoncry
 	setwildbossbattle species=901, level=80, item=ITEM_EARTH_PLATE, move1_1=MOVE_EARTHQUAKE, move1_2=MOVE_AVALANCHE, move1_3=MOVE_BULK_UP move1_4=MOVE_GIGA_IMPACT
 	settotemboost B_POSITION_OPPONENT_LEFT, 1, 0, 2, 0, 0, 0
-	setflag 2411
-	setflag 2410
-	setflag 2409
-	setflag 8804
+	setflag FLAG_NO_WILD_CATCHING
+	setflag FLAG_NO_WILD_RUNNING
+	setflag FLAG_SMART_WILD_AI
+	setflag JOHTO_FLAG_NO_SHINY
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, NewSinjoh_HotSprings_EventScript_UrsalunaRan
-	bufferspeciesname STR_VAR_1, 901
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewSinjoh_HotSprings_EventScript_UrsalunaRan
+	bufferspeciesname STR_VAR_1, SPECIES_URSALUNA
 	msgbox SinjohRuins_Lab_Text_DropedItem, MSGBOX_DEFAULT
 	giveitem ITEM_EARTH_PLATE
-	addvar 20640, 1
-	fadescreenswapbuffers 1
-	removeobject 9
-	setflag 9119
-	fadescreenswapbuffers 0
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	addvar JOHTO_VAR_PLATECOUNTER, 1
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject LOCALID_HOTSPRINGS_NOBLE_URSALUNA
+	setflag JOHTO_FLAG_HIDE_HOTSPRINGS_NOBLE_URSALUNA
+	fadescreenswapbuffers FADE_FROM_BLACK
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 
 NewSinjoh_HotSprings_EventScript_UrsalunaRan::
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	release
 	end
 

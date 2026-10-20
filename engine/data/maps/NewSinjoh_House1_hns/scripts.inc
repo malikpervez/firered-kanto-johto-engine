@@ -6,11 +6,11 @@ NewSinjoh_House1_hns_MapScripts::
 NewSinjoh__House1_EventScripts_Elizabeth::
 	lock
 	faceplayer
-	goto_if_set 9097, NewSinjoh_House1_EventScript_Elizabeth_AfterGift
+	goto_if_set JOHTO_FLAG_NEWSINJOH_HOUSE1_ELIZABETH_GAVEWOOPER, NewSinjoh_House1_EventScript_Elizabeth_AfterGift
 	msgbox NewSinjoh_House1_Text_Looking4Celebi MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, NewSinjoh_House1_EventScript_Decline
-	checkspecies 251
-	goto_if_eq 32781, TRUE, NewSinjoh_House1_EventScript_GiveWooperPaldea
+	goto_if_eq VAR_RESULT, FALSE, NewSinjoh_House1_EventScript_Decline
+	checkspecies SPECIES_CELEBI
+	goto_if_eq VAR_RESULT, TRUE, NewSinjoh_House1_EventScript_GiveWooperPaldea
 	msgbox NewSinjoh_House1_Text_NicePokemonButNotCelebi, MSGBOX_DEFAULT
 	release
 	end
@@ -22,16 +22,16 @@ NewSinjoh_House1_EventScript_Decline::
 	end
 
 NewSinjoh_House1_EventScript_GiveWooperPaldea::
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_NEWSINJOH_HOUSE1_ELIZABETH, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
+	waitmovement LOCALID_NEWSINJOH_HOUSE1_ELIZABETH
 	msgbox NewSinjoh_House1_OffersWooper MSGBOX_DEFAULT
-	setvar 16385, 1405
-	bufferspeciesname STR_VAR_1, 1405
-	givemon 1405, 5
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_WOOPER_PALDEA
+	bufferspeciesname STR_VAR_1, SPECIES_WOOPER_PALDEA
+	givemon SPECIES_WOOPER_PALDEA, 5
 	call J_Common_EventScript_GiftMon
-	setflag 9097
+	setflag JOHTO_FLAG_NEWSINJOH_HOUSE1_ELIZABETH_GAVEWOOPER
 	closemessage
 	release
 	end
@@ -95,7 +95,7 @@ NewSinjoh_House1_Bookshelf_Text:
 NewSinjoh_House1_Eevee::
 	lock
 	faceplayer
-	playmoncry 133, 0
+	playmoncry SPECIES_EEVEE, 0
 	msgbox NewSinjoh_House1_Text_Eevee_Cry, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage

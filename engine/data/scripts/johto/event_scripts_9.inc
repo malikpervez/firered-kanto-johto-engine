@@ -4,11 +4,11 @@ J_Common_EventScript_NopReturn::
 	return
 
 J_EventScript_SetResultTrue::
-	setvar 32781, TRUE
+	setvar VAR_RESULT, TRUE
 	return
 
 J_EventScript_SetResultFalse::
-	setvar 32781, FALSE
+	setvar VAR_RESULT, FALSE
 	return
 
 J_EventScript_GetElevatorFloor::
@@ -16,11 +16,11 @@ J_EventScript_GetElevatorFloor::
 	return
 
 J_EventScript_CableClub_SetVarResult1::
-	setvar 32781, 1
+	setvar VAR_RESULT, 1
 	return
 
 J_EventScript_CableClub_SetVarResult0::
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	return
 
 J_Common_EventScript_UnionRoomAttendant::
@@ -48,17 +48,17 @@ J_Common_EventScript_DirectCornerAttendant::
 	end
 
 J_Common_EventScript_RemoveStaticPokemon::
-	fadescreenswapbuffers 1
-	removeobject 32783
-	fadescreenswapbuffers 0
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
 	release
 	end
 
 J_Common_EventScript_LegendaryFlewAway::
-	fadescreenswapbuffers 1
-	removeobject 32783
-	fadescreenswapbuffers 0
-	bufferspeciesname STR_VAR_1, 32772
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
+	bufferspeciesname STR_VAR_1, VAR_0x8004
 	msgbox J_gText_LegendaryFlewAway, MSGBOX_DEFAULT
 	release
 	end
@@ -72,20 +72,20 @@ J_EventScript_VsSeekerChargingDone::
 
 J_EventScript_SetExitingCyclingRoad::
 	lockall
-	clearflag 2096
-	setvar 20558, 0
+	clearflag FLAG_SYS_ON_CYCLING_ROAD
+	setvar JOHTO_VAR_MAP_SCENE_ROUTE16, 0
 	releaseall
 	end
 
 J_EventScript_SetEnteringCyclingRoad::
 	lockall
-	setvar 20558, 1
+	setvar JOHTO_VAR_MAP_SCENE_ROUTE16, 1
 	releaseall
 	end
 
 J_EventScript_TryDarkenRuins::
-	goto_if_set 0, J_Common_EventScript_NopReturn
-	setweather 11
+	goto_if_set JOHTO_FLAG_SYS_UNLOCKED_TANOBY_RUINS, J_Common_EventScript_NopReturn
+	setweather WEATHER_SHADE
 	doweather
 	return
 
@@ -99,23 +99,23 @@ J_EventScript_BrailleCursorWaitButton::
 	special BrailleCursorToggle
 	waitbuttonpress
 	closebraillemessage
-	playse 5
-	setvar 32774, 1
+	playse SE_SELECT
+	setvar VAR_0x8006, 1
 	special BrailleCursorToggle
 	return
 
 J_EventScript_PalletTown_PlayersHouse_2F_ShutDownPC::
-	setvar 32772, PC_LOCATION_PLAYER_HOUSE_FRLG
-	playse 3
+	setvar VAR_0x8004, PC_LOCATION_PLAYER_HOUSE_FRLG
+	playse SE_PC_OFF
 	special DoPCTurnOffEffect
 	releaseall
 	end
 
 J_EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	lockall
-	setvar 32772, PC_LOCATION_PLAYER_HOUSE_FRLG
+	setvar VAR_0x8004, PC_LOCATION_PLAYER_HOUSE_FRLG
 	special DoPCTurnOnEffect
-	playse 4
+	playse SE_PC_ON
 	msgbox J_gText_PlayerHouseBootPC
 	special BedroomPC
 	waitstate

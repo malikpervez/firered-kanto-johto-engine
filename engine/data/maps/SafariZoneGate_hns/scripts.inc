@@ -4,13 +4,13 @@ SafariZoneGate_hns_MapScripts::
 	.byte 0
 
 SafariZoneGate_EventScript_Trigger::
-	setflag 10494
-	setvar 20597, 3
+	setflag JOHTO_FLAG_VISITED_SAFARI_ZONE_GATE
+	setvar JOHTO_VAR_SAFARI_ZONE_GATE_STATE, 3
 	end
 
 SafariZoneGate_EventScript_BackupTrigger::
-	setflag 10494
-	setvar 16384, 1
+	setflag JOHTO_FLAG_VISITED_SAFARI_ZONE_GATE
+	setvar VAR_TEMP_0, 1
 	end
 
 SafariZoneGate_EventScript_WorkerM::
@@ -33,7 +33,7 @@ SafariZoneGate_EventScript_Kangaskhan::
 	lock
 	faceplayer
 	waitse
-	playmoncry 115, 0
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_NORMAL
 	msgbox SafariZone_Text_Kangaskhan, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -104,7 +104,7 @@ SafariZone_Text_Sign:
 	.string "th{SE_M_REVERSAL}wild!$"
 
 SafariZoneGate_EventScript_IncenseClerk::
-	goto_if_set 8800, SafariZoneGate_EventScript_IncenseClerkFinite
+	goto_if_set JOHTO_FLAG_FINITE_TMS, SafariZoneGate_EventScript_IncenseClerkFinite
 	lock
 	faceplayer
 	message J_gText_HowMayIServeYou

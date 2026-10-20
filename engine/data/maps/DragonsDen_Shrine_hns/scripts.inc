@@ -5,43 +5,43 @@ DragonsDen_Shrine_hns_MapScripts::
 	.byte 0
 
 DragonsDen_Shrine_OnFrame::
-	map_script_2 20550, 2, DragonsDen_Shrine_Trigger_ElderQuizTop
+	map_script_2 JOHTO_VAR_BLACKTHORN_CITY_STATE, 2, DragonsDen_Shrine_Trigger_ElderQuizTop
 	.2byte 0
 
 DragonsDen_Shrine_EventScript_Elder::
 	lock
 	faceplayer
-	goto_if_ge 20550, 4, DragonsDen_Shrine_EventScript_ElderChooseDratini
+	goto_if_ge JOHTO_VAR_BLACKTHORN_CITY_STATE, 4, DragonsDen_Shrine_EventScript_ElderChooseDratini
 	msgbox DragonsDen_Shrine_Text_ComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 DragonsDen_Shrine_Trigger_ElderQuizLeft::
 	lock
-	applymovement2 255, DragonsDen_Shrine_Movement_PlayerWalkToElderLeft
-	applymovement2 0xFE, DragonsDen_Shrine_Movement_MonWalkToElderLeft
-	waitmovement 0xFE
-	waitmovement 255
+	applymovement2 OBJ_EVENT_ID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderLeft
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, DragonsDen_Shrine_Movement_MonWalkToElderLeft
+	waitmovement OBJ_EVENT_ID_FOLLOWER
+	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 10
 	lockall
 	goto DragonsDen_Shrine_EventScript_ElderOfferQuiz
 
 DragonsDen_Shrine_Trigger_ElderQuizTop::
 	lock
-	applymovement2 255, DragonsDen_Shrine_Movement_PlayerWalkToElderTop
-	applymovement2 0xFE, DragonsDen_Shrine_Movement_PlayerWalkToElderTop
-	waitmovement 0xFE
-	waitmovement 255
+	applymovement2 OBJ_EVENT_ID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderTop
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, DragonsDen_Shrine_Movement_PlayerWalkToElderTop
+	waitmovement OBJ_EVENT_ID_FOLLOWER
+	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 10
 	lockall
 	goto DragonsDen_Shrine_EventScript_ElderOfferQuiz
 
 DragonsDen_Shrine_Trigger_ElderQuizRight::
 	lock
-	applymovement2 255, DragonsDen_Shrine_Movement_PlayerWalkToElderRight
-	applymovement2 0xFE, DragonsDen_Shrine_Movement_MonWalkToElderRight
-	waitmovement 0xFE
-	waitmovement 255
+	applymovement2 OBJ_EVENT_ID_PLAYER, DragonsDen_Shrine_Movement_PlayerWalkToElderRight
+	applymovement2 OBJ_EVENT_ID_FOLLOWER, DragonsDen_Shrine_Movement_MonWalkToElderRight
+	waitmovement OBJ_EVENT_ID_FOLLOWER
+	waitmovement OBJ_EVENT_ID_PLAYER
 	delay 10
 	lockall
 	goto DragonsDen_Shrine_EventScript_ElderOfferQuiz
@@ -96,16 +96,16 @@ DragonsDen_Shrine_Movement_MonWalkToElderRight:
 
 DragonsDen_Shrine_EventScript_ElderOfferQuiz::
 	msgbox DragonsDen_Shrine_Text_ElderGreeting, MSGBOX_DEFAULT
-	setvar 20560, 0
+	setvar JOHTO_VAR_DRAGONS_DEN_QUIZ, 0
 	goto DragonsDen_Shrine_EventScript_ElderQuiz1
 
 DragonsDen_Shrine_EventScript_ElderQuiz1::
 	message DragonsDen_Shrine_Text_Question1
-	multichoice 20, 6, 164, FALSE
-	switch 32781
+	multichoice 20, 6, MULTI_ELDERQUIIZ1, FALSE
+	switch VAR_RESULT
 	case 0, DragonsDen_Shrine_EventScript_ElderQuiz1Correct
 	case 2, DragonsDen_Shrine_EventScript_ElderQuiz1Correct
-	case 127, DragonsDen_Shrine_EventScript_ElderQuiz1
+	case MULTI_B_PRESSED, DragonsDen_Shrine_EventScript_ElderQuiz1
 	call DragonsDen_Shrine_EventScript_ElderWrong
 	goto DragonsDen_Shrine_EventScript_ElderQuiz1
 
@@ -115,11 +115,11 @@ DragonsDen_Shrine_EventScript_ElderQuiz1Correct::
 
 DragonsDen_Shrine_EventScript_ElderQuiz2::
 	message DragonsDen_Shrine_Text_Question2
-	multichoice 20, 6, 165, FALSE
-	switch 32781
+	multichoice 20, 6, MULTI_ELDERQUIIZ2, FALSE
+	switch VAR_RESULT
 	case 0, DragonsDen_Shrine_EventScript_ElderQuiz2Correct
 	case 1, DragonsDen_Shrine_EventScript_ElderQuiz2Correct
-	case 127, DragonsDen_Shrine_EventScript_ElderQuiz2
+	case MULTI_B_PRESSED, DragonsDen_Shrine_EventScript_ElderQuiz2
 	call DragonsDen_Shrine_EventScript_ElderWrong
 	goto DragonsDen_Shrine_EventScript_ElderQuiz2
 
@@ -129,11 +129,11 @@ DragonsDen_Shrine_EventScript_ElderQuiz2Correct::
 
 DragonsDen_Shrine_EventScript_ElderQuiz3::
 	message DragonsDen_Shrine_Text_Question3
-	multichoice 20, 6, 166, FALSE
-	switch 32781
+	multichoice 20, 6, MULTI_ELDERQUIIZ3, FALSE
+	switch VAR_RESULT
 	case 1, DragonsDen_Shrine_EventScript_ElderQuiz3Correct
 	case 2, DragonsDen_Shrine_EventScript_ElderQuiz3Correct
-	case 127, DragonsDen_Shrine_EventScript_ElderQuiz3
+	case MULTI_B_PRESSED, DragonsDen_Shrine_EventScript_ElderQuiz3
 	call DragonsDen_Shrine_EventScript_ElderWrong
 	goto DragonsDen_Shrine_EventScript_ElderQuiz3
 
@@ -143,11 +143,11 @@ DragonsDen_Shrine_EventScript_ElderQuiz3Correct::
 
 DragonsDen_Shrine_EventScript_ElderQuiz4::
 	message DragonsDen_Shrine_Text_Question4
-	multichoice 20, 6, 167, FALSE
-	switch 32781
+	multichoice 20, 6, MULTI_ELDERQUIIZ4, FALSE
+	switch VAR_RESULT
 	case 0, DragonsDen_Shrine_EventScript_ElderQuiz4Correct
 	case 2, DragonsDen_Shrine_EventScript_ElderQuiz4Correct
-	case 127, DragonsDen_Shrine_EventScript_ElderQuiz4
+	case MULTI_B_PRESSED, DragonsDen_Shrine_EventScript_ElderQuiz4
 	call DragonsDen_Shrine_EventScript_ElderWrong
 	goto DragonsDen_Shrine_EventScript_ElderQuiz4
 
@@ -157,16 +157,16 @@ DragonsDen_Shrine_EventScript_ElderQuiz4Correct::
 
 DragonsDen_Shrine_EventScript_ElderQuiz5::
 	message DragonsDen_Shrine_Text_Question5
-	multichoice 20, 6, 168, FALSE
-	switch 32781
+	multichoice 20, 6, MULTI_ELDERQUIIZ5, FALSE
+	switch VAR_RESULT
 	case 2, DragonsDen_Shrine_EventScript_ElderQuizFinish
-	case 127, DragonsDen_Shrine_EventScript_ElderQuiz5
+	case MULTI_B_PRESSED, DragonsDen_Shrine_EventScript_ElderQuiz5
 	call DragonsDen_Shrine_EventScript_ElderWrong
 	goto DragonsDen_Shrine_EventScript_ElderQuiz5
 
 DragonsDen_Shrine_EventScript_ElderWrong::
 	msgbox DragonsDen_Shrine_Text_WrongAnswer1, MSGBOX_DEFAULT
-	addvar 20560, 1
+	addvar JOHTO_VAR_DRAGONS_DEN_QUIZ, 1
 	return
 
 DragonsDen_Shrine_EventScript_ElderQuizFinish::
@@ -224,36 +224,36 @@ DragonsDen_Shrine_Text_PassedTest:
 	.string "POKéMO{SE_M_PSYBEAM2}LEAGUE.$"
 
 DragonsDen_Shrine_EventScript_ClairEnter::
-	clearflag 8354
-	addobject 4
+	clearflag JOHTO_FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR
+	addobject LOCALID_DRAGONSDEN3_CLAIR
 	playbgm ((558 + 1) + 0x4C), FALSE
-	playse 8
+	playse SE_DOOR
 	delay 40
-	playse 21
-	applymovement2 255, J_Common_Movement_ExclamationMark
-	turnobject 255, DIR_SOUTH
+	playse SE_PIN
+	applymovement2 OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
 	delay 20
-	turnobject 0xFE, DIR_SOUTH
-	applymovement2 4, DragonsDen_Shrine_Movement_ClairEnter
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_SOUTH
+	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairEnter
 	waitmovement 0
-	turnobject 1, DIR_WEST
-	turnobject 255, DIR_WEST
-	turnobject 0xFE, DIR_NORTH
+	turnobject LOCALID_DRAGONSDEN3_ELDER, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject OBJ_EVENT_ID_FOLLOWER, DIR_NORTH
 	msgbox DragonsDen_Shrine_Text_ClairYouPassed, MSGBOX_DEFAULT
-	applymovement2 4, DragonsDen_Shrine_Movement_ClairBackup1
+	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairBackup1
 	waitmovement 0
 	msgbox DragonsDen_Shrine_Text_ClairThatCantBe, MSGBOX_DEFAULT
-	applymovement2 4, DragonsDen_Shrine_Movement_ClairBackup2
+	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairBackup2
 	waitmovement 0
 	msgbox DragonsDen_Shrine_Text_ClairYoureLying, MSGBOX_DEFAULT
-	applymovement2 1, DragonsDen_Shrine_Movement_ElderWalkToClair
+	applymovement2 LOCALID_DRAGONSDEN3_ELDER, DragonsDen_Shrine_Movement_ElderWalkToClair
 	waitmovement 0
-	turnobject 4, DIR_NORTH
+	turnobject LOCALID_DRAGONSDEN3_CLAIR, DIR_NORTH
 	msgbox DragonsDen_Shrine_Text_MustIInformLance, MSGBOX_DEFAULT
-	playse 21
-	applymovement2 4, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, J_Common_Movement_ExclamationMark
 	msgbox DragonsDen_Shrine_Text_IUnderstand, MSGBOX_DEFAULT
-	applymovement2 4, DragonsDen_Shrine_Movement_ClairReturnToPlayer
+	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairReturnToPlayer
 	waitmovement 0
 	msgbox DragonsDen_Shrine_Text_HereRisingBadge, MSGBOX_DEFAULT
 
@@ -261,26 +261,26 @@ DragonsDen_Shrine_EventScript_ClairEnter::
 	waitmessage
 	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox DragonsDen_Shrine_Text_RisingBadgeExplanation, MSGBOX_DEFAULT
-	setflag 10375
-	addvar 20582, 1
+	setflag JOHTO_FLAG_BADGE08_GET
+	addvar JOHTO_VAR_NUM_BADGES, 1
 
-	applymovement2 1, DragonsDen_Shrine_Movement_ElderReturnToPlayer
+	applymovement2 LOCALID_DRAGONSDEN3_ELDER, DragonsDen_Shrine_Movement_ElderReturnToPlayer
 	waitmovement 0
-	turnobject 255, DIR_NORTH
-	turnobject 4, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_DRAGONSDEN3_CLAIR, DIR_NORTH
 	msgbox DragonsDen_Shrine_Text_ElderScoldsClair, MSGBOX_DEFAULT
 	closemessage
 	delay 20
 	msgbox DragonsDen_Shrine_Text_Speechless, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 4, DragonsDen_Shrine_Movement_ClairLeave
+	applymovement2 LOCALID_DRAGONSDEN3_CLAIR, DragonsDen_Shrine_Movement_ClairLeave
 	waitmovement 0
-	playse 9
+	playse SE_EXIT
 	fadedefaultbgm
-	setflag 8354
-	removeobject 4
-	clearflag 8351
-	setvar 20550, 3
+	setflag JOHTO_FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR
+	removeobject LOCALID_DRAGONSDEN3_CLAIR
+	clearflag JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR
+	setvar JOHTO_VAR_BLACKTHORN_CITY_STATE, 3
 	release
 	end
 
@@ -414,34 +414,34 @@ DragonsDen_Shrine_Text_Elder3:
 	.string "It'{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}thei{SE_M_SAND_TOMB}blood.$"
 
 DragonsDen_Shrine_EventScript_ElderChooseDratini::
-	goto_if_eq 20560, 0, DragonsDen_Shrine_EventScript_ElderGiveSpecialDratini
+	goto_if_eq JOHTO_VAR_DRAGONS_DEN_QUIZ, 0, DragonsDen_Shrine_EventScript_ElderGiveSpecialDratini
 	goto DragonsDen_Shrine_EventScript_ElderGiveBasicDratini
 
 DragonsDen_Shrine_EventScript_ElderGiveBasicDratini::
-	goto_if_set 8707, DragonsDen_Shrine_EventScript_ElderAlreadyGotDratini
+	goto_if_set JOHTO_FLAG_GOT_DRATINI, DragonsDen_Shrine_EventScript_ElderAlreadyGotDratini
 	msgbox DragonsDen_Shrine_Text_TakeThisDratini, MSGBOX_DEFAULT
 
-	setvar 16385, 147
-	bufferspeciesname STR_VAR_1, 147
-	givemon 147, 15
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_DRATINI
+	bufferspeciesname STR_VAR_1, SPECIES_DRATINI
+	givemon SPECIES_DRATINI, 15
 	call J_Common_EventScript_GiftMon
 
 	msgbox DragonsDen_Shrine_Text_SymbolicDragon, MSGBOX_DEFAULT
-	setflag 8707
+	setflag JOHTO_FLAG_GOT_DRATINI
 	release
 	end
 
 DragonsDen_Shrine_EventScript_ElderGiveSpecialDratini::
-	goto_if_set 8707, DragonsDen_Shrine_EventScript_ElderAlreadyGotDratini
+	goto_if_set JOHTO_FLAG_GOT_DRATINI, DragonsDen_Shrine_EventScript_ElderAlreadyGotDratini
 	msgbox DragonsDen_Shrine_Text_TakeThisDratini, MSGBOX_DEFAULT
 
-	setvar 16385, 147
-	bufferspeciesname STR_VAR_1, 147
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_DRATINI
+	bufferspeciesname STR_VAR_1, SPECIES_DRATINI
 	givenamedmon 4
 	call J_Common_EventScript_GiftMonNamed
 
 	msgbox DragonsDen_Shrine_Text_SymbolicDragon, MSGBOX_DEFAULT
-	setflag 8707
+	setflag JOHTO_FLAG_GOT_DRATINI
 	release
 	end
 

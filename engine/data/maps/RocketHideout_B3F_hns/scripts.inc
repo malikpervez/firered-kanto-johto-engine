@@ -1,13 +1,13 @@
 @ Johto (data/maps/RocketHideout_B3F_hns/scripts.inc), as built into the FireRed game.
 
 RocketHideout_B3F_hns_MapScripts::
-	map_script 2, RocketHideout_B3F_OnFrame
-	map_script 1, RocketHideout_B3F_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, RocketHideout_B3F_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, RocketHideout_B3F_OnLoad
 	.byte 0
 
 RocketHideout_B3F_OnLoad::
-	call_if_set 8341, RocketHideout_B3F_HideGate
-	call_if_eq 20591, 2, RocketHideout_B3F_HidePetrel
+	call_if_set JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_GATE, RocketHideout_B3F_HideGate
+	call_if_eq JOHTO_VAR_ROCKET_PASSWORD, 2, RocketHideout_B3F_HidePetrel
 	end
 
 RocketHideout_B3F_HideGate::
@@ -20,32 +20,32 @@ RocketHideout_B3F_HideGate::
 	return
 
 RocketHideout_B3F_HidePetrel::
-	setflag 8346
-	clearflag 8342
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_PETREL
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_GIOVANNI
 	return
 
 RocketHideout_B3F_OnFrame::
-	map_script_2 20578, 6, RocketHideout_B3F_EventScript_LancePassword
+	map_script_2 JOHTO_VAR_MAHOGANY_TOWN_STATE, 6, RocketHideout_B3F_EventScript_LancePassword
 	.2byte 0
 
 RocketHideout_B3F_EventScript_LancePassword::
 	lock
 	delay 55
-	playse 21
-	applymovement 3, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 3
-	applymovement 3, J_Common_Movement_WalkRight1
+	waitmovement LOCALID_ROCKETHIDEOUT3_LANCE
+	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, J_Common_Movement_WalkRight1
 	msgbox RocketHideout_B3F_Text_LanceGetPassword, MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, RocketHideout_B3F_Movement_LanceLeave
-	applymovement 2, RocketHideout_B3F_Movement_DragoniteLeave
-	waitmovement 3
-	waitmovement 2
-	setflag 8343
-	removeobject 2
-	removeobject 3
-	setvar 20578, 7
+	applymovement LOCALID_ROCKETHIDEOUT3_LANCE, RocketHideout_B3F_Movement_LanceLeave
+	applymovement LOCALID_ROCKETHIDEOUT3_DRAGONITE, RocketHideout_B3F_Movement_DragoniteLeave
+	waitmovement LOCALID_ROCKETHIDEOUT3_LANCE
+	waitmovement LOCALID_ROCKETHIDEOUT3_DRAGONITE
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_LANCE_DRAGONITE
+	removeobject LOCALID_ROCKETHIDEOUT3_DRAGONITE
+	removeobject LOCALID_ROCKETHIDEOUT3_LANCE
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 7
 	release
 	end
 
@@ -107,17 +107,17 @@ RocketHideout_B3F_Text_B3FRocket:
 
 RocketHideout_B3F_Trigger_MurkrowStairs::
 	lock
-	applymovement 17, RocketHideout_B3F_Movement_MurkrowStairs1
+	applymovement LOCALID_ROCKETHIDEOUT3_MURKROWSTAIRS, RocketHideout_B3F_Movement_MurkrowStairs1
 	waitmovement 0
-	playmoncry 198, 0
+	playmoncry SPECIES_MURKROW, CRY_MODE_NORMAL
 	msgbox RocketHideout_B3F_Text_MurkrowSpeak1, MSGBOX_DEFAULT
 	closemessage
-	applymovement 17, RocketHideout_B3F_Movement_MurkrowStairs2
+	applymovement LOCALID_ROCKETHIDEOUT3_MURKROWSTAIRS, RocketHideout_B3F_Movement_MurkrowStairs2
 	waitmovement 0
-	setflag 8345
-	removeobject 17
-	clearflag 8339
-	setvar 20578, 11
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_MURKROWSTAIRS
+	removeobject LOCALID_ROCKETHIDEOUT3_MURKROWSTAIRS
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_MURKROWGATE
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 11
 	release
 	end
 
@@ -146,19 +146,19 @@ RocketHideout_B3F_Movement_MurkrowStairs2:
 
 RocketHideout_B3F_Trigger_Silver::
 	lock
-	clearflag 8347
-	addobject 5
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_SILVER
+	addobject LOCALID_ROCKETHIDEOUT3_SILVER
 	playbgm ((558 + 1) + 0x3B), FALSE
-	applymovement 5, RocketHideout_B3F_Movement_SilverEnter
+	applymovement LOCALID_ROCKETHIDEOUT3_SILVER, RocketHideout_B3F_Movement_SilverEnter
 	waitmovement 0
-	turnobject 255, DIR_WEST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
 	msgbox RocketHideout_B3F_Text_Rival, MSGBOX_DEFAULT
 	closemessage
-	applymovement 5, RocketHideout_B3F_Movement_SilverLeave
+	applymovement LOCALID_ROCKETHIDEOUT3_SILVER, RocketHideout_B3F_Movement_SilverLeave
 	waitmovement 0
-	setflag 8347
-	removeobject 5
-	setvar 20578, 8
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_SILVER
+	removeobject LOCALID_ROCKETHIDEOUT3_SILVER
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 8
 	fadedefaultbgm
 	release
 	end
@@ -193,8 +193,8 @@ RocketHideout_B3F_Movement_SilverLeave:
 
 RocketHideout_B3F_EventScript_Door::
 	lock
-	goto_if_set 8341, RocketHideout_B3F_EventScript_DoorIsOpen
-	goto_if_eq 20591, 2, RocketHideout_B3F_EventScript_OpenDoor
+	goto_if_set JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_GATE, RocketHideout_B3F_EventScript_DoorIsOpen
+	goto_if_eq JOHTO_VAR_ROCKET_PASSWORD, 2, RocketHideout_B3F_EventScript_OpenDoor
 	msgbox RocketHideout_B3F_Text_B3FLockedDoorNeedsPassword, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -203,7 +203,7 @@ RocketHideout_B3F_EventScript_Door::
 RocketHideout_B3F_EventScript_OpenDoor::
 	msgbox RocketHideout_B3F_Text_B3FLockedDoorOpenSesame, MSGBOX_DEFAULT
 	closemessage
-	playse 36
+	playse SE_CLICK
 	setmetatile 11, 11, 0x378, FALSE
 	setmetatile 11, 12, 0x380, FALSE
 	setmetatile 12, 11, 0x379, FALSE
@@ -211,7 +211,7 @@ RocketHideout_B3F_EventScript_OpenDoor::
 	setmetatile 13, 11, 0x379, FALSE
 	setmetatile 13, 12, 0x379, FALSE
 	special DrawWholeMapView
-	setflag 8341
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_GATE
 	release
 	end
 
@@ -219,34 +219,34 @@ RocketHideout_B3F_EventScript_DoorIsOpen::
 	end
 
 RocketHideout_B3F_EventScript_GruntF5::
-	trainerbattle_single 1171, RocketHideout_B3F_Text_GruntF5Seen, RocketHideout_B3F_Text_GruntF5Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_29_HNS, RocketHideout_B3F_Text_GruntF5Seen, RocketHideout_B3F_Text_GruntF5Beaten
 	msgbox RocketHideout_B3F_Text_GruntF5After, MSGBOX_NPC
-	goto_if_unset 8742, RocketHideout_B3F_EventScript_IncrementPasswordGruntF
+	goto_if_unset JOHTO_FLAG_GOT_PASSWORD_FROM_GRUNTF, RocketHideout_B3F_EventScript_IncrementPasswordGruntF
 	end
 
 RocketHideout_B3F_EventScript_IncrementPasswordGruntF::
-	addvar 20591, 1
-	setflag 8742
+	addvar JOHTO_VAR_ROCKET_PASSWORD, 1
+	setflag JOHTO_FLAG_GOT_PASSWORD_FROM_GRUNTF
 	end
 
 RocketHideout_B3F_EventScript_Eto::
-	trainerbattle_single 1177, RocketHideout_B3F_Text_GruntM28Seen, RocketHideout_B3F_Text_GruntM28Beaten
+	trainerbattle_single TRAINER_JOHTO_ETO_2_HNS, RocketHideout_B3F_Text_GruntM28Seen, RocketHideout_B3F_Text_GruntM28Beaten
 	msgbox RocketHideout_B3F_Text_GruntM28After, MSGBOX_NPC
-	goto_if_unset 8741, RocketHideout_B3F_EventScript_IncrementPasswordEto
+	goto_if_unset JOHTO_FLAG_GOT_PASSWORD_FROM_ETO, RocketHideout_B3F_EventScript_IncrementPasswordEto
 	end
 
 RocketHideout_B3F_EventScript_IncrementPasswordEto::
-	addvar 20591, 1
-	setflag 8741
+	addvar JOHTO_VAR_ROCKET_PASSWORD, 1
+	setflag JOHTO_FLAG_GOT_PASSWORD_FROM_ETO
 	end
 
 RocketHideout_B3F_EventScript_Ross::
-	trainerbattle_single 1026, RocketHideout_B3F_Text_ScientistRossSeen, RocketHideout_B3F_Text_ScientistRossBeaten
+	trainerbattle_single TRAINER_JOHTO_ROSS_HNS, RocketHideout_B3F_Text_ScientistRossSeen, RocketHideout_B3F_Text_ScientistRossBeaten
 	msgbox RocketHideout_B3F_Text_ScientistRossAfter, MSGBOX_AUTOCLOSE
 	end
 
 RocketHideout_B3F_EventScript_Mitch::
-	trainerbattle_single 1027, RocketHideout_B3F_Text_ScientistMitchSeen, RocketHideout_B3F_Text_ScientistMitchBeaten
+	trainerbattle_single TRAINER_JOHTO_MITCH_HNS, RocketHideout_B3F_Text_ScientistMitchSeen, RocketHideout_B3F_Text_ScientistMitchBeaten
 	msgbox RocketHideout_B3F_Text_ScientistMitchAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -304,94 +304,94 @@ RocketHideout_B3F_EventScript_Giovanni::
 	lock
 	faceplayer
 	msgbox RocketHideout_B3F_Text_PetrelIntro, MSGBOX_DEFAULT
-	playse 21
-	applymovement 16, J_Common_Movement_QuestionMark
+	playse SE_PIN
+	applymovement LOCALID_ROCKETHIDEOUT3_GIOVANNI, J_Common_Movement_QuestionMark
 	delay 55
-	waitmovement 16
+	waitmovement LOCALID_ROCKETHIDEOUT3_GIOVANNI
 	msgbox RocketHideout_B3F_Text_PetrelDisbelief, MSGBOX_DEFAULT
 	closemessage
-	applymovement 16, RocketHideout_B3F_Movement_Spin
+	applymovement LOCALID_ROCKETHIDEOUT3_GIOVANNI, RocketHideout_B3F_Movement_Spin
 	waitmovement 0
-	setflag 8342
-	removeobject 16
-	clearflag 8346
-	addobject 15
-	applymovement 15, RocketHideout_B3F_Movement_Spin2
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_GIOVANNI
+	removeobject LOCALID_ROCKETHIDEOUT3_GIOVANNI
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_PETREL
+	addobject LOCALID_ROCKETHIDEOUT3_PETREL
+	applymovement LOCALID_ROCKETHIDEOUT3_PETREL, RocketHideout_B3F_Movement_Spin2
 	waitmovement 0
-	call_if_eq 32780, DIR_EAST, RocketHideout_B3F_EventScript_FacingEast
-	call_if_eq 32780, DIR_WEST, RocketHideout_B3F_EventScript_FacingWest
+	call_if_eq VAR_FACING, DIR_EAST, RocketHideout_B3F_EventScript_FacingEast
+	call_if_eq VAR_FACING, DIR_WEST, RocketHideout_B3F_EventScript_FacingWest
 	msgbox RocketHideout_B3F_Text_PetrelReveal, MSGBOX_DEFAULT
-	trainerbattle_no_intro 1497, RocketHideout_B3F_Text_PetrelBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_PETREL_1_HNS, RocketHideout_B3F_Text_PetrelBeaten
 	msgbox RocketHideout_B3F_Text_PetrelAfterBattle, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 32780, DIR_EAST, RocketHideout_B3F_EventScript_LeaveEast
-	call_if_eq 32780, DIR_WEST, RocketHideout_B3F_EventScript_LeaveWest
-	call_if_eq 32780, DIR_NORTH, RocketHideout_B3F_EventScript_LeaveEast
-	setflag 8346
-	playse 9
-	removeobject 15
+	call_if_eq VAR_FACING, DIR_EAST, RocketHideout_B3F_EventScript_LeaveEast
+	call_if_eq VAR_FACING, DIR_WEST, RocketHideout_B3F_EventScript_LeaveWest
+	call_if_eq VAR_FACING, DIR_NORTH, RocketHideout_B3F_EventScript_LeaveEast
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_PETREL
+	playse SE_EXIT
+	removeobject LOCALID_ROCKETHIDEOUT3_PETREL
 
-	applymovement 14, RocketHideout_B3F_Movement_Murkrow1
+	applymovement LOCALID_ROCKETHIDEOUT3_MURKROW, RocketHideout_B3F_Movement_Murkrow1
 
 	delay 120
 
-	call_if_eq 32780, DIR_EAST, RocketHideout_B3F_EventScript_FacingEastMurkrow
-	call_if_eq 32780, DIR_WEST, RocketHideout_B3F_EventScript_FacingWestMurkrow
+	call_if_eq VAR_FACING, DIR_EAST, RocketHideout_B3F_EventScript_FacingEastMurkrow
+	call_if_eq VAR_FACING, DIR_WEST, RocketHideout_B3F_EventScript_FacingWestMurkrow
 
-	turnobject 255, DIR_SOUTH
-	waitmovement 14
-	playmoncry 198, 0
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	waitmovement LOCALID_ROCKETHIDEOUT3_MURKROW
+	playmoncry SPECIES_MURKROW, CRY_MODE_NORMAL
 	msgbox RocketHideout_B3F_Text_MurkrowSpeak1, MSGBOX_DEFAULT
 	msgbox RocketHideout_B3F_Text_MurkrowMimic, MSGBOX_DEFAULT
 	closemessage
-	applymovement 14, RocketHideout_B3F_Movement_Murkrow2
-	waitmovement 14
+	applymovement LOCALID_ROCKETHIDEOUT3_MURKROW, RocketHideout_B3F_Movement_Murkrow2
+	waitmovement LOCALID_ROCKETHIDEOUT3_MURKROW
 
-	setflag 8344
-	playse 9
-	removeobject 14
-	clearflag 8340
-	setflag 8339
-	setflag 8345
-	setflag 8336
-	setvar 20591, 3
-	setvar 20578, 9
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_MURKROW
+	playse SE_EXIT
+	removeobject LOCALID_ROCKETHIDEOUT3_MURKROW
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_MURKROWSTAIRS
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_MURKROWGATE
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_MURKROWSTAIRS
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT
+	setvar JOHTO_VAR_ROCKET_PASSWORD, 3
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 9
 	release
 	end
 
 RocketHideout_B3F_EventScript_FacingEastMurkrow::
-	applymovement 255, J_Common_Movement_WalkRight1
-	waitmovement 255
-	applymovement 255, J_Common_Movement_WalkDown1
-	waitmovement 255
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkRight1
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
+	waitmovement OBJ_EVENT_ID_PLAYER
 	return
 
 RocketHideout_B3F_EventScript_FacingWestMurkrow::
-	applymovement 255, J_Common_Movement_WalkLeft1
-	waitmovement 255
-	applymovement 255, J_Common_Movement_WalkDown1
-	waitmovement 255
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
+	waitmovement OBJ_EVENT_ID_PLAYER
 	return
 
 RocketHideout_B3F_EventScript_FacingEast::
-	turnobject 15, DIR_WEST
+	turnobject LOCALID_ROCKETHIDEOUT3_PETREL, DIR_WEST
 	return
 
 RocketHideout_B3F_EventScript_FacingWest::
-	turnobject 15, DIR_EAST
+	turnobject LOCALID_ROCKETHIDEOUT3_PETREL, DIR_EAST
 	return
 
 RocketHideout_B3F_EventScript_FacingNorth::
-	turnobject 15, DIR_SOUTH
+	turnobject LOCALID_ROCKETHIDEOUT3_PETREL, DIR_SOUTH
 	return
 
 RocketHideout_B3F_EventScript_LeaveEast::
-	applymovement 15, RocketHideout_B3F_Movement_LeaveEast
+	applymovement LOCALID_ROCKETHIDEOUT3_PETREL, RocketHideout_B3F_Movement_LeaveEast
 	waitmovement 0
 	return
 
 RocketHideout_B3F_EventScript_LeaveWest::
-	applymovement 15, RocketHideout_B3F_Movement_LeaveWest
+	applymovement LOCALID_ROCKETHIDEOUT3_PETREL, RocketHideout_B3F_Movement_LeaveWest
 	waitmovement 0
 	return
 
@@ -613,7 +613,7 @@ RocketHideout_B3F_EventScript_Murkrow::
 	lock
 	faceplayer
 	waitse
-	playmoncry 198, 0
+	playmoncry SPECIES_MURKROW, CRY_MODE_NORMAL
 	msgbox RocketHideout_B3F_Text_MurkrowSpeak1, MSGBOX_DEFAULT
 	waitmoncry
 	release

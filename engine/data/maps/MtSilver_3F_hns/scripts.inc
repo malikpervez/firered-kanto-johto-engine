@@ -1,8 +1,8 @@
 @ Johto (data/maps/MtSilver_3F_hns/scripts.inc), as built into the FireRed game.
 
 MtSilver_3F_hns_MapScripts::
-	map_script 3, MtSilver_3F_OnTransition
-	map_script 5, MtSilver_3F_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_3F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, MtSilver_3F_OnResume
 	.byte 0
 
 MtSilver_3F_OnResume::

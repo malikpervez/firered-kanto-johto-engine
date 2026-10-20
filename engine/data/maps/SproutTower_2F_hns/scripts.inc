@@ -1,8 +1,8 @@
 @ Johto (data/maps/SproutTower_2F_hns/scripts.inc), as built into the FireRed game.
 
 SproutTower_2F_hns_MapScripts::
-	map_script 3, SproutTower_2F_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, SproutTower_2F_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 SproutTower_2F_OnTransition:
@@ -10,12 +10,12 @@ SproutTower_2F_OnTransition:
 	end
 
 SproutTower_2F_EventScript_SageNico::
-	trainerbattle_single 1375, SproutTower_Text_SageNico_Seen, SproutTower_Text_SageNico_Beaten
+	trainerbattle_single TRAINER_JOHTO_NICO_HNS, SproutTower_Text_SageNico_Seen, SproutTower_Text_SageNico_Beaten
 	msgbox SproutTower_Text_SageNico_AfterBattle, MSGBOX_AUTOCLOSE
 	end
 
 SproutTower_2F_EventScript_SageEdmond::
-	trainerbattle_single 1380, SproutTower_Text_SageEdmond_Seen, SproutTower_Text_SageEdmond_Beaten
+	trainerbattle_single TRAINER_JOHTO_EDMOND_HNS, SproutTower_Text_SageEdmond_Seen, SproutTower_Text_SageEdmond_Beaten
 	msgbox SproutTower_Text_SageEdmond_AfterBattle, MSGBOX_AUTOCLOSE
 	end
 

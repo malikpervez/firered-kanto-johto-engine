@@ -12,7 +12,7 @@ OlivineLighthouse_EventScript_Item_RareCandy::
 	end
 
 OlivineLighthouse_EventScript_Item_TMSwagger::
-	finditem 668
+	finditem ITEM_TM_SWAGGER
 	end
 
 OlivineLighthouse_EventScript_Item_HyperPotion::
@@ -51,9 +51,9 @@ OlivineLighthouse_Text_1FPokefanF:
 	.string "o{SE_M_ACID_ARMOR}thos{SE_M_REVERSAL}nobl{SE_M_REVERSAL}POKéMON.$"
 
 OlivineLighthouse_EventScript_Huey::
-	trainerbattle_single 1257, OlivineLighthouse_Text_SailorHueySeen, OlivineLighthouse_Text_SailorHueyBeaten, OlivineLighthouse_EventScript_RegisterHuey
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, OlivineLighthouse_EventScript_RematchHuey
+	trainerbattle_single TRAINER_JOHTO_HUEY_HNS, OlivineLighthouse_Text_SailorHueySeen, OlivineLighthouse_Text_SailorHueyBeaten, OlivineLighthouse_EventScript_RegisterHuey
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, OlivineLighthouse_EventScript_RematchHuey
 	msgbox OlivineLighthouse_Text_SailorHueyAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -61,17 +61,17 @@ OlivineLighthouse_EventScript_RegisterHuey::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox OlivineLighthouse_Text_HueyRegister, MSGBOX_DEFAULT
-	register_matchcall 1257
+	register_matchcall TRAINER_JOHTO_HUEY_HNS
 	release
 	end
 
 OlivineLighthouse_EventScript_RematchHuey::
-	trainerbattle_rematch 1257, OlivineLighthouse_Text_HueyRematchIntro, OlivineLighthouse_Text_HueyRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_HUEY_HNS, OlivineLighthouse_Text_HueyRematchIntro, OlivineLighthouse_Text_HueyRematchDefeat
 	msgbox OlivineLighthouse_Text_HueyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 OlivineLighthouse_EventScript_GentlemanAlfred::
-	trainerbattle_single 1183, OlivineLighthouse_Text_GentlemanAlfredSeen, OlivineLighthouse_Text_GentlemanAlfredBeaten
+	trainerbattle_single TRAINER_JOHTO_ALFRED_HNS, OlivineLighthouse_Text_GentlemanAlfredSeen, OlivineLighthouse_Text_GentlemanAlfredBeaten
 	msgbox OlivineLighthouse_Text_GentlemanAlfredAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -118,17 +118,17 @@ OlivineLighthouse_Text_GentlemanAlfredAfter:
 	.string "an{SE_M_WATERFALL}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}cure{SE_M_WATERFALL}normally.$"
 
 OlivineLighthouse_EventScript_BirdKeeperTheo::
-	trainerbattle_single 1056, OlivineLighthouse_Text_BirdKeeperTheoSeen, OlivineLighthouse_Text_BirdKeeperTheoBeaten
+	trainerbattle_single TRAINER_JOHTO_THEO_HNS, OlivineLighthouse_Text_BirdKeeperTheoSeen, OlivineLighthouse_Text_BirdKeeperTheoBeaten
 	msgbox OlivineLighthouse_Text_BirdKeeperTheoAfter, MSGBOX_AUTOCLOSE
 	end
 
 OlivineLighthouse_EventScript_SailorTerrell::
-	trainerbattle_single 1258, OlivineLighthouse_Text_SailorTerrellSeen, OlivineLighthouse_Text_SailorTerrellBeaten
+	trainerbattle_single TRAINER_JOHTO_TERRELL_HNS, OlivineLighthouse_Text_SailorTerrellSeen, OlivineLighthouse_Text_SailorTerrellBeaten
 	msgbox OlivineLighthouse_Text_SailorTerrellAfter, MSGBOX_AUTOCLOSE
 	end
 
 OlivineLighthouse_EventScript_GentlemanPreston::
-	trainerbattle_single 1179, OlivineLighthouse_Text_GentlemanPrestonSeen, OlivineLighthouse_Text_GentlemanPrestonBeaten
+	trainerbattle_single TRAINER_JOHTO_PRESTON_HNS, OlivineLighthouse_Text_GentlemanPrestonSeen, OlivineLighthouse_Text_GentlemanPrestonBeaten
 	msgbox OlivineLighthouse_Text_GentlemanPrestonAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -170,12 +170,12 @@ OlivineLighthouse_Text_GentlemanPrestonAfter:
 	.string "POKéMO{SE_M_PSYBEAM2}lik{SE_M_REVERSAL}ONIX.$"
 
 OlivineLighthouse_EventScript_SailorKent::
-	trainerbattle_single 1259, OlivineLighthouse_Text_SailorKentSeen, OlivineLighthouse_Text_SailorKentBeaten
+	trainerbattle_single TRAINER_JOHTO_KENT_HNS, OlivineLighthouse_Text_SailorKentSeen, OlivineLighthouse_Text_SailorKentBeaten
 	msgbox OlivineLighthouse_Text_SailorKentAfter, MSGBOX_AUTOCLOSE
 	end
 
 OlivineLighthouse_EventScript_LassConnie::
-	trainerbattle_single 1072, OlivineLighthouse_Text_LassConnieSeen, OlivineLighthouse_Text_LassConnieBeaten
+	trainerbattle_single TRAINER_JOHTO_CONNIE_HNS, OlivineLighthouse_Text_LassConnieSeen, OlivineLighthouse_Text_LassConnieBeaten
 	msgbox OlivineLighthouse_Text_LassConnieAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -206,12 +206,12 @@ OlivineLighthouse_Text_LassConnieAfter:
 	.string "JASMIN{SE_M_SWORDS_DANCE}ca{SE_M_ATTRACT}com{SE_M_REVERSAL}bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}GYM.$"
 
 OlivineLighthouse_EventScript_SailorErnest::
-	trainerbattle_single 1260, OlivineLighthouse_Text_SailorErnestSeen, OlivineLighthouse_Text_SailorErnestBeaten
+	trainerbattle_single TRAINER_JOHTO_ERNEST_HNS, OlivineLighthouse_Text_SailorErnestSeen, OlivineLighthouse_Text_SailorErnestBeaten
 	msgbox OlivineLighthouse_Text_SailorErnestAfter, MSGBOX_AUTOCLOSE
 	end
 
 OlivineLighthouse_EventScript_BirdKeeperDenis::
-	trainerbattle_single 1058, OlivineLighthouse_Text_BirdKeeperDenisSeen, OlivineLighthouse_Text_BirdKeeperDenisBeaten
+	trainerbattle_single TRAINER_JOHTO_DENIS_HNS, OlivineLighthouse_Text_BirdKeeperDenisSeen, OlivineLighthouse_Text_BirdKeeperDenisBeaten
 	msgbox OlivineLighthouse_Text_BirdKeeperDenisAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -245,12 +245,12 @@ OlivineLighthouse_Text_BirdKeeperDenisAfter:
 OlivineLighthouse_EventScript_Jasmine::
 	lock
 	faceplayer
-	goto_if_eq 20583, 3, OlivineLighthouse_EventScript_JasmineGoGetPotion
-	goto_if_eq 20583, 4, OlivineLighthouse_EventScript_JasmineDeliverPotion
+	goto_if_eq JOHTO_VAR_OLIVINE_CITY_STATE, 3, OlivineLighthouse_EventScript_JasmineGoGetPotion
+	goto_if_eq JOHTO_VAR_OLIVINE_CITY_STATE, 4, OlivineLighthouse_EventScript_JasmineDeliverPotion
 	msgbox OlivineLighthouse_Text_JasmineCianwoodPharmacy, MSGBOX_DEFAULT
 	msgbox OlivineLighthouse_Text_JasmineGetMedicine, MSGBOX_DEFAULT
 	closemessage
-	setvar 20583, 3
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 3
 	release
 	end
 
@@ -262,20 +262,20 @@ OlivineLighthouse_EventScript_JasmineGoGetPotion::
 OlivineLighthouse_EventScript_Ampharos::
 	lock
 	faceplayer
-	goto_if_lt 20583, 5, OlivineLighthouse_EventScript_AmpharosSick
-	fadescreen 3
-	playse 119
+	goto_if_lt JOHTO_VAR_OLIVINE_CITY_STATE, 5, OlivineLighthouse_EventScript_AmpharosSick
+	fadescreen FADE_TO_WHITE
+	playse SE_M_THUNDERBOLT2
 	waitse
-	fadescreen 2
-	playmoncry 181, 0
+	fadescreen FADE_FROM_WHITE
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
 	msgbox OlivineLighthouse_Text_AmphyPaluPalulu, MSGBOX_DEFAULT
 	waitmoncry
-	setflag 8661
+	setflag JOHTO_FLAG_AMPHAROS_HEALED
 	release
 	end
 
 OlivineLighthouse_EventScript_AmpharosSick::
-	playmoncry 181, 0
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
 	msgbox OlivineLighthouse_Text_AmphyPalPaloo, MSGBOX_DEFAULT
 	waitmoncry
 	msgbox OlivineLighthouse_Text_AmphyBreathingLabored, MSGBOX_DEFAULT
@@ -311,44 +311,44 @@ OlivineLighthouse_Text_JasmineCureAmphy:
 
 OlivineLighthouse_EventScript_JasmineDeliverPotion::
 	msgbox OlivineLighthouse_Text_JasmineCureAmphy, MSGBOX_YESNO
-	goto_if_eq 32781, FALSE, OlivineLighthouse_EventScript_JasmineRefuse
-	playse 1
+	goto_if_eq VAR_RESULT, FALSE, OlivineLighthouse_EventScript_JasmineRefuse
+	playse SE_USE_ITEM
 	removeitem ITEM_SECRET_POTION
 	msgbox OlivineLighthouse_Text_PlayerHandedSecretpotion, MSGBOX_DEFAULT
 	waitse
 	msgbox OlivineLighthouse_Text_JasmineDontBeOffended, MSGBOX_DEFAULT
 	closemessage
-	turnobject 12, DIR_NORTH
+	turnobject LOCALID_LIGHTHOUSE_JASMINE, DIR_NORTH
 	delay 20
-	turnobject 13, DIR_SOUTH
-	playfanfare 368
+	turnobject LOCALID_LIGHTHOUSE_AMPHAROS, DIR_SOUTH
+	playfanfare MUS_HEAL
 	waitfanfare
 	msgbox OlivineLighthouse_Text_JasmineAmphyHowFeeling, MSGBOX_DEFAULT
-	fadescreen 3
-	playse 119
+	fadescreen FADE_TO_WHITE
+	playse SE_M_THUNDERBOLT2
 	waitse
-	fadescreen 2
-	playmoncry 181, 0
+	fadescreen FADE_FROM_WHITE
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
 	msgbox OlivineLighthouse_Text_AmphyPaluPalulu, MSGBOX_DEFAULT
 	waitmoncry
 	closemessage
-	applymovement 13, OlivineLighthouse_Movement_Amphy
+	applymovement LOCALID_LIGHTHOUSE_AMPHAROS, OlivineLighthouse_Movement_Amphy
 	waitmovement 0
-	applymovement 12, OlivineLighthouse_Movement_Jasmine
+	applymovement LOCALID_LIGHTHOUSE_JASMINE, OlivineLighthouse_Movement_Jasmine
 	msgbox OlivineLighthouse_Text_JasmineThankYou, MSGBOX_DEFAULT
 	closemessage
 
-	fadescreen 1
-	playse 9
-	setflag 8324
-	removeobject 12
+	fadescreen FADE_TO_BLACK
+	playse SE_EXIT
+	setflag JOHTO_FLAG_HIDE_LIGHTHOUSE_JASMINE
+	removeobject LOCALID_LIGHTHOUSE_JASMINE
 	waitse
 	delay 50
-	fadescreen 0
-	setvar 20597, 1
-	setvar 20583, 5
-	setflag 8661
-	clearflag 8320
+	fadescreen FADE_FROM_BLACK
+	setvar JOHTO_VAR_SAFARI_ZONE_GATE_STATE, 1
+	setvar JOHTO_VAR_OLIVINE_CITY_STATE, 5
+	setflag JOHTO_FLAG_AMPHAROS_HEALED
+	clearflag JOHTO_FLAG_HIDE_OLIVINE_CITY_GYM_JASMINE
 	release
 	end
 

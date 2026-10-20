@@ -1,26 +1,26 @@
 @ Johto (data/maps/VioletCity_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 VioletCity_PokemonCenter_hns_MapScripts::
-	map_script 3, VioletCity_Pokecenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, VioletCity_Pokecenter_OnTransition
 	.byte 0
 
 VioletCity_Pokecenter_OnTransition::
-	setrespawn 130
+	setrespawn JOHTO_HEAL_LOCATION_VIOLET_CITY_HNS
 	end
 
 VioletCity_PokemonCenter_EventScript_Aide::
 	lock
 	faceplayer
-	goto_if_set 8703, VioletCity_PokemonCenter_EventScript_Aide_Received
-	specialvar 32772, GetMaxPartySize
-	goto_if_eq 32772, 1, VioletCity_PokemonCenter_EventScript_Aide_Offer
+	goto_if_set JOHTO_FLAG_RECEIVED_TOGEPI_EGG, VioletCity_PokemonCenter_EventScript_Aide_Received
+	specialvar VAR_0x8004, GetMaxPartySize
+	goto_if_eq VAR_0x8004, 1, VioletCity_PokemonCenter_EventScript_Aide_Offer
 	getpartysize
-	goto_if_eq 32781, 32772, VioletCity_PokemonCenter_EventScript_AideNoRoom
+	goto_if_eq VAR_RESULT, VAR_0x8004, VioletCity_PokemonCenter_EventScript_AideNoRoom
 
 VioletCity_PokemonCenter_EventScript_Aide_Offer::
 	msgbox VioletCity_PokeCenter_Text_ElmsAideFavor, MSGBOX_YESNO
-	goto_if_eq 32781, NO, VioletCity_PokemonCenter_EventScript_Aide_Refuse
-	goto_if_eq 32781, YES, VioletCity_PokemonCenter_EventScript_Aide_Accepted
+	goto_if_eq VAR_RESULT, NO, VioletCity_PokemonCenter_EventScript_Aide_Refuse
+	goto_if_eq VAR_RESULT, YES, VioletCity_PokemonCenter_EventScript_Aide_Accepted
 	release
 	end
 
@@ -38,33 +38,33 @@ VioletCity_PokemonCenter_EventScript_AideNoRoom::
 
 VioletCity_PokemonCenter_EventScript_Aide_Refuse::
 	msgbox VioletCity_PokeCenter_Text_ElmsAideRefuse, MSGBOX_YESNO
-	goto_if_eq 32781, NO, VioletCity_PokemonCenter_EventScript_Aide_Refuse
-	goto_if_eq 32781, YES, VioletCity_PokemonCenter_EventScript_Aide_Accepted
+	goto_if_eq VAR_RESULT, NO, VioletCity_PokemonCenter_EventScript_Aide_Refuse
+	goto_if_eq VAR_RESULT, YES, VioletCity_PokemonCenter_EventScript_Aide_Accepted
 	release
 	end
 
 VioletCity_PokemonCenter_EventScript_Aide_Accepted::
-	specialvar 32772, GetMaxPartySize
-	goto_if_eq 32772, 1, VioletCity_PokemonCenter_EventScript_Aide_GiveEgg
+	specialvar VAR_0x8004, GetMaxPartySize
+	goto_if_eq VAR_0x8004, 1, VioletCity_PokemonCenter_EventScript_Aide_GiveEgg
 	getpartysize
-	goto_if_eq 32781, 32772, VioletCity_PokemonCenter_EventScript_Aide_FullParty
+	goto_if_eq VAR_RESULT, VAR_0x8004, VioletCity_PokemonCenter_EventScript_Aide_FullParty
 
 VioletCity_PokemonCenter_EventScript_Aide_GiveEgg::
-	playfanfare 370
+	playfanfare MUS_OBTAIN_ITEM
 	message J_LavaridgeTown_Text_ReceivedTheEgg
 	waitfanfare
 	msgbox VioletCity_PokeCenter_Text_ElmsAideGiveEgg, MSGBOX_DEFAULT
 	closemessage
-	giveegg 175
-	goto_if_eq 32781, 2, J_Common_EventScript_NoMoreRoomForPokemon
-	call_if_eq 32781, 1, VioletCity_PokemonCenter_EventScript_Aide_EggSentToPC
-	setflag 8703
+	giveegg SPECIES_TOGEPI
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, J_Common_EventScript_NoMoreRoomForPokemon
+	call_if_eq VAR_RESULT, MON_GIVEN_TO_PC, VioletCity_PokemonCenter_EventScript_Aide_EggSentToPC
+	setflag JOHTO_FLAG_RECEIVED_TOGEPI_EGG
 	msgbox VioletCity_PokeCenter_Text_ElmsAideGiveItem, MSGBOX_DEFAULT
 	giveitem ITEM_EXP_SHARE_SMALL
-	setflag 8276
-	setvar 20608, 1
-	clearflag 8278
-	clearflag 8267
+	setflag JOHTO_FLAG_HIDE_VIOLET_CITY_AIDE
+	setvar JOHTO_VAR_VIOLET_CITY_KIMONO_GIRL, 1
+	clearflag JOHTO_FLAG_HIDE_VIOLET_CITY_KIMONO_GIRL
+	clearflag JOHTO_FLAG_HIDE_NEWBARKTOWN_LAB_AIDE
 	release
 	end
 

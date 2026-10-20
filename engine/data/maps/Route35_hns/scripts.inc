@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route35_hns/scripts.inc), as built into the FireRed game.
 
 Route35_hns_MapScripts::
-	map_script 3, Route35_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route35_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route35_OnTransition:
@@ -10,34 +10,34 @@ Route35_OnTransition:
 	end
 
 Route35_EventScript_CamperIvan::
-	trainerbattle_single 1357, Route35_Text_CamperIvanSeen, Route35_Text_CamperIvanBeaten
+	trainerbattle_single TRAINER_JOHTO_IVAN_HNS, Route35_Text_CamperIvanSeen, Route35_Text_CamperIvanBeaten
 	msgbox Route35_Text_CamperIvanAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_CamperElliot::
-	trainerbattle_single 1358, Route35_Text_CamperElliotSeen, Route35_Text_CamperElliotBeaten
+	trainerbattle_single TRAINER_JOHTO_ELLIOT_HNS, Route35_Text_CamperElliotSeen, Route35_Text_CamperElliotBeaten
 	msgbox Route35_Text_CamperElliotAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_PicnickerBrooke::
-	trainerbattle_single 1344, Route35_Text_PicnickerBrookeSeen, Route35_Text_PicnickerBrookeBeaten
+	trainerbattle_single TRAINER_JOHTO_BROOKE_HNS, Route35_Text_PicnickerBrookeSeen, Route35_Text_PicnickerBrookeBeaten
 	msgbox Route35_Text_PicnickerBrookeAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_PicnickerKim::
-	trainerbattle_single 1345, Route35_Text_PicnickerKimSeen, Route35_Text_PicnickerKimBeaten
+	trainerbattle_single TRAINER_JOHTO_KIM_HNS, Route35_Text_PicnickerKimSeen, Route35_Text_PicnickerKimBeaten
 	msgbox Route35_Text_PicnickerKimAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_BirdKeeperBryan::
-	trainerbattle_single 1055, Route35_Text_BirdKeeperBryanSeen, Route35_Text_BirdKeeperBryanBeaten
+	trainerbattle_single TRAINER_JOHTO_BRYAN_HNS, Route35_Text_BirdKeeperBryanSeen, Route35_Text_BirdKeeperBryanBeaten
 	msgbox Route35_Text_BirdKeeperBryanAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_JugglerIrwin::
-	trainerbattle_single 1320, Route35_Text_JugglerIrwinSeen, Route35_Text_JugglerIrwinBeaten, Route35_EventScript_RegisterIrwin
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route35_EventScript_RematchIrwin
+	trainerbattle_single TRAINER_JOHTO_IRWIN_HNS, Route35_Text_JugglerIrwinSeen, Route35_Text_JugglerIrwinBeaten, Route35_EventScript_RegisterIrwin
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route35_EventScript_RematchIrwin
 	msgbox Route35_Text_JugglerIrwinAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -45,19 +45,19 @@ Route35_EventScript_RegisterIrwin::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route35_Text_IrwinRegister, MSGBOX_DEFAULT
-	register_matchcall 1320
+	register_matchcall TRAINER_JOHTO_IRWIN_HNS
 	release
 	end
 
 Route35_EventScript_RematchIrwin::
-	trainerbattle_rematch 1320, Route35_Text_JugglerIrwinSeen, Route35_Text_JugglerIrwinBeaten
+	trainerbattle_rematch TRAINER_JOHTO_IRWIN_HNS, Route35_Text_JugglerIrwinSeen, Route35_Text_JugglerIrwinBeaten
 	msgbox Route35_Text_JugglerIrwinAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_BugCatcherArnie::
-	trainerbattle_single 1196, Route35_Text_BugCatcherArnieSeen, Route35_Text_BugCatcherArnieBeaten, Route35_EventScript_RegisterArnie
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route35_EventScript_RematchArnie
+	trainerbattle_single TRAINER_JOHTO_ARNIE_HNS, Route35_Text_BugCatcherArnieSeen, Route35_Text_BugCatcherArnieBeaten, Route35_EventScript_RegisterArnie
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route35_EventScript_RematchArnie
 	msgbox Route35_Text_BugCatcherArnieAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -65,22 +65,22 @@ Route35_EventScript_RegisterArnie::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route35_Text_ArnieRegister, MSGBOX_DEFAULT
-	register_matchcall 1196
+	register_matchcall TRAINER_JOHTO_ARNIE_HNS
 	release
 	end
 
 Route35_EventScript_RematchArnie::
-	trainerbattle_rematch 1196, Route35_Text_ArnieRematchIntro, Route35_Text_ArnieRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_ARNIE_HNS, Route35_Text_ArnieRematchIntro, Route35_Text_ArnieRematchDefeat
 	msgbox Route35_Text_ArniePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_FirebreatherWalt::
-	trainerbattle_single 1317, Route35_Text_FirebreatherWaltSeen, Route35_Text_FirebreatherWaltBeaten
+	trainerbattle_single TRAINER_JOHTO_WALT_HNS, Route35_Text_FirebreatherWaltSeen, Route35_Text_FirebreatherWaltBeaten
 	msgbox Route35_Text_FirebreatherWaltAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route35_EventScript_PolicemanDirk::
-	trainerbattle_single 1423, Route35_Text_OfficerDirkSeen, Route35_Text_OfficerDirkBeaten
+	trainerbattle_single TRAINER_JOHTO_DIRK_HNS, Route35_Text_OfficerDirkSeen, Route35_Text_OfficerDirkBeaten
 	msgbox Route35_Text_OfficerDirkAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -99,7 +99,7 @@ Route35_EventScript_Sign2::
 	end
 
 Route35_EventScript_Item_Payback::
-	finditem 647
+	finditem ITEM_TM_PAYBACK
 	end
 
 Route35_EventScript_Item_Nugget::

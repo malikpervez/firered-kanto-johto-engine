@@ -1,11 +1,11 @@
 @ Johto (data/maps/MahoganyTown_PokemonCenter_hns/scripts.inc), as built into the FireRed game.
 
 MahoganyTown_PokemonCenter_hns_MapScripts::
-	map_script 3, MahoganyTown_PokemonCenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, MahoganyTown_PokemonCenter_OnTransition
 	.byte 0
 
 MahoganyTown_PokemonCenter_OnTransition::
-	setrespawn 136
+	setrespawn JOHTO_HEAL_LOCATION_MAHOGANY_TOWN_HNS
 	end
 
 MahoganyTown_PokemonCenter_EventScript_Hiker::

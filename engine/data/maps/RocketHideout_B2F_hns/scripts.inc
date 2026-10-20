@@ -1,13 +1,13 @@
 @ Johto (data/maps/RocketHideout_B2F_hns/scripts.inc), as built into the FireRed game.
 
 RocketHideout_B2F_hns_MapScripts::
-	map_script 1, RocketHideout_B2F_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, RocketHideout_B2F_OnLoad
 	.byte 0
 
 RocketHideout_B2F_OnLoad::
-	call_if_set 8337, RocketHideout_B2F_HideGate
-	call_if_eq 20578, 13, RocketHideout_B2F_MoveLanceDragonite
-	call_if_ge 20563, 4, RockerHideout2_DeactivateGenerator
+	call_if_set JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_GATE, RocketHideout_B2F_HideGate
+	call_if_eq JOHTO_VAR_MAHOGANY_TOWN_STATE, 13, RocketHideout_B2F_MoveLanceDragonite
+	call_if_ge JOHTO_VAR_ELECTRODES_FAINTED, 4, RockerHideout2_DeactivateGenerator
 	end
 
 RockerHideout2_DeactivateGenerator::
@@ -76,25 +76,25 @@ RocketHideout_B2F_HideGate::
 	return
 
 RocketHideout_B2F_MoveLanceDragonite::
-	setobjectxyperm 8, 20, 16
-	setobjectxyperm 7, 19, 16
-	setobjectmovementtype 8, 0x41
-	setobjectmovementtype 7, 0x7
+	setobjectxyperm LOCALID_ROCKETHIDEOUT2_DRAGONITE, 20, 16
+	setobjectxyperm LOCALID_ROCKETHIDEOUT2_LANCE, 19, 16
+	setobjectmovementtype LOCALID_ROCKETHIDEOUT2_DRAGONITE, MOVEMENT_TYPE_WALK_IN_PLACE_UP
+	setobjectmovementtype LOCALID_ROCKETHIDEOUT2_LANCE, MOVEMENT_TYPE_FACE_UP
 	return
 
 RocketHideout_B2F_Trigger_MurkrowStairs::
 	lock
-	applymovement 15, RocketHideout_B2F_Movement_MurkrowStairs1
+	applymovement LOCALID_ROCKETHIDEOUT2_MURKROWSTAIRS, RocketHideout_B2F_Movement_MurkrowStairs1
 	waitmovement 0
-	playmoncry 198, 0
+	playmoncry SPECIES_MURKROW, CRY_MODE_NORMAL
 	msgbox RocketHideout_B3F_Text_MurkrowSpeak1, MSGBOX_DEFAULT
 	closemessage
-	applymovement 15, RocketHideout_B2F_Movement_MurkrowStairs2
+	applymovement LOCALID_ROCKETHIDEOUT2_MURKROWSTAIRS, RocketHideout_B2F_Movement_MurkrowStairs2
 	waitmovement 0
-	setflag 8340
-	removeobject 15
-	clearflag 8345
-	setvar 20578, 10
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_MURKROWSTAIRS
+	removeobject LOCALID_ROCKETHIDEOUT2_MURKROWSTAIRS
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT3_MURKROWSTAIRS
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 10
 	release
 	end
 
@@ -120,12 +120,12 @@ RocketHideout_B2F_Movement_MurkrowStairs2:
 
 RocketHideout_B2F_Trigger_MurkrowGate::
 	lock
-	applymovement 16, RocketHideout_B2F_Movement_MurkrowGate1
+	applymovement LOCALID_ROCKETHIDEOUT2_MURKROWGATE, RocketHideout_B2F_Movement_MurkrowGate1
 	waitmovement 0
-	playmoncry 198, 0
+	playmoncry SPECIES_MURKROW, CRY_MODE_NORMAL
 	msgbox RocketHideout_B3F_Text_Murkrow, MSGBOX_DEFAULT
 	msgbox RocketHideout_B2F_Text_MurkrowUnlock, MSGBOX_DEFAULT
-	playse 36
+	playse SE_CLICK
 	setmetatile 14, 19, 0x378, FALSE
 	setmetatile 14, 20, 0x380, FALSE
 	setmetatile 15, 19, 0x379, FALSE
@@ -133,13 +133,13 @@ RocketHideout_B2F_Trigger_MurkrowGate::
 	setmetatile 16, 19, 0x379, FALSE
 	setmetatile 16, 20, 0x379, FALSE
 	special DrawWholeMapView
-	setflag 8337
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_GATE
 	closemessage
-	applymovement 16, RocketHideout_B2F_Movement_MurkrowGate2
+	applymovement LOCALID_ROCKETHIDEOUT2_MURKROWGATE, RocketHideout_B2F_Movement_MurkrowGate2
 	waitmovement 0
-	setflag 8339
-	removeobject 16
-	setvar 20578, 12
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_MURKROWGATE
+	removeobject LOCALID_ROCKETHIDEOUT2_MURKROWGATE
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 12
 	release
 	end
 
@@ -176,47 +176,47 @@ RocketHideout_B2F_Text_MurkrowUnlock:
 	.string "unlocke{SE_M_WATERFALL}th{SE_M_REVERSAL}door!$"
 
 RocketHideout_B2F_Trigger_PlayerMoveLeft::
-	applymovement 255, J_Common_Movement_WalkRight1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
 	return
 
 RocketHideout_B2F_Trigger_PlayerMoveRight::
-	applymovement 255, J_Common_Movement_WalkLeft1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	return
 
 RocketHideout_B2F_Trigger_Ariana::
 	lock
-	setobjectxyperm 7, 6, 26
-	setobjectxyperm 8, 5, 26
-	clearflag 8336
-	addobject 14
-	addobject 12
+	setobjectxyperm LOCALID_ROCKETHIDEOUT2_LANCE, 6, 26
+	setobjectxyperm LOCALID_ROCKETHIDEOUT2_DRAGONITE, 5, 26
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT
+	addobject LOCALID_ROCKETHIDEOUT2_ARIANA
+	addobject LOCALID_ROCKETHIDEOUT2_GRUNT
 	delay 20
 	msgbox RocketHideout_B2F_Text_ArianaHoldIt, MSGBOX_AUTOCLOSE
-	playse 21
-	applymovement 255, J_Common_Movement_ExclamationMark
-	waitmovement 255
-	getplayerxy 16384, 16385
-	call_if_eq 16384, 14, RocketHideout_B2F_Trigger_PlayerMoveLeft
-	call_if_eq 16384, 16, RocketHideout_B2F_Trigger_PlayerMoveRight
-	applymovement 255, RocketHideout_B2F_Movement_PlayerMeetAriana
-	applymovement 14, RocketHideout_B2F_Movement_Ariana
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_eq VAR_TEMP_0, 14, RocketHideout_B2F_Trigger_PlayerMoveLeft
+	call_if_eq VAR_TEMP_0, 16, RocketHideout_B2F_Trigger_PlayerMoveRight
+	applymovement OBJ_EVENT_ID_PLAYER, RocketHideout_B2F_Movement_PlayerMeetAriana
+	applymovement LOCALID_ROCKETHIDEOUT2_ARIANA, RocketHideout_B2F_Movement_Ariana
 	delay 20
-	applymovement 12, RocketHideout_B2F_Movement_Ariana
-	waitmovement 12
+	applymovement LOCALID_ROCKETHIDEOUT2_GRUNT, RocketHideout_B2F_Movement_Ariana
+	waitmovement LOCALID_ROCKETHIDEOUT2_GRUNT
 	msgbox RocketHideout_B2F_Text_ArianaChallenge, MSGBOX_DEFAULT
 	closemessage
-	clearflag 8338
-	addobject 7
-	addobject 8
-	applymovement 7, RocketHideout_B2F_Movement_Lance
+	clearflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE
+	addobject LOCALID_ROCKETHIDEOUT2_LANCE
+	addobject LOCALID_ROCKETHIDEOUT2_DRAGONITE
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_Lance
 	delay 20
-	applymovement 8, RocketHideout_B2F_Movement_Lance
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_Lance
 	waitmovement 0
 	msgbox RocketHideout_B2F_Text_LanceInterrupt, MSGBOX_DEFAULT
 	closemessage
-	applymovement 14, J_Common_Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_ROCKETHIDEOUT2_ARIANA, J_Common_Movement_WalkInPlaceFasterUp
 	msgbox RocketHideout_B2F_Text_ArianaOutraged
 	closemessage
 	goto RocketHideout_B2F_EventScript_ReadyForBattlePrompt
@@ -291,12 +291,12 @@ RocketHideout_B2F_EventScript_ReadyForBattlePrompt::
 	end
 
 RocketHideout_B2F_EventScript_ChoosePartyForMultiBattle::
-	setflag 8670
+	setflag JOHTO_FLAG_ROCKETHIDEOUT2_BATTLE
 	special SavePlayerParty
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
 	waitstate
-	goto_if_ne 32781, 0, RocketHideout_B2F_EventScript_DoLanceMultiBattle
+	goto_if_ne VAR_RESULT, 0, RocketHideout_B2F_EventScript_DoLanceMultiBattle
 	special LoadPlayerParty
 	goto RocketHideout_B2F_EventScript_ReadyForBattlePrompt
 
@@ -305,67 +305,67 @@ RocketHideout_B2F_EventScript_DoLanceMultiBattle::
 
 
 
-	applymovement 14, J_Common_Movement_WalkUp1
-	applymovement 12, J_Common_Movement_WalkUp1
+	applymovement LOCALID_ROCKETHIDEOUT2_ARIANA, J_Common_Movement_WalkUp1
+	applymovement LOCALID_ROCKETHIDEOUT2_GRUNT, J_Common_Movement_WalkUp1
 	waitmovement 0
-	turnobject 12, DIR_WEST
-	multi_2_vs_2 1499, J_Debug_Text_ArianaDefeat, 1165, J_Debug_Text_Grunt23Defeat, 2
+	turnobject LOCALID_ROCKETHIDEOUT2_GRUNT, DIR_WEST
+	multi_2_vs_2 TRAINER_JOHTO_ARIANA_1_HNS, J_Debug_Text_ArianaDefeat, TRAINER_JOHTO_GRUNT_23_HNS, J_Debug_Text_Grunt23Defeat, PARTNER_LANCE_HNS
 
 
 
 
-	switch 32781
+	switch VAR_RESULT
 	case 1, RocketHideout_B2F_EventScript_DefeatedAriana
-	fadescreen 1
-	setflag 8338
-	setflag 8336
+	fadescreen FADE_TO_BLACK
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT
 	special SetCB2WhiteOut
 	waitstate
 
 RocketHideout_B2F_EventScript_DefeatedAriana::
-	clearflag 8670
+	clearflag JOHTO_FLAG_ROCKETHIDEOUT2_BATTLE
 	msgbox RocketHideout_Text_ArianaRetreat, MSGBOX_DEFAULT
 	closemessage
-	fadescreenswapbuffers 1
-	applymovement 7, J_Common_Movement_WalkUp1
-	applymovement 8, J_Common_Movement_WalkUp1
+	fadescreenswapbuffers FADE_TO_BLACK
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, J_Common_Movement_WalkUp1
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, J_Common_Movement_WalkUp1
 	waitmovement 0
-	applymovement 7, J_Common_Movement_WalkRight1
-	applymovement 8, J_Common_Movement_WalkRight1
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, J_Common_Movement_WalkRight1
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, J_Common_Movement_WalkRight1
 	waitmovement 0
-	setflag 8332
-	setflag 8336
-	removeobject 14
-	removeobject 12
-	turnobject 255, DIR_WEST
-	fadescreenswapbuffers 0
+	setflag JOHTO_FLAG_HIDE_MAHOGANY_ROCKETS
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT
+	removeobject LOCALID_ROCKETHIDEOUT2_ARIANA
+	removeobject LOCALID_ROCKETHIDEOUT2_GRUNT
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox RocketHideout_Text_LanceStepBack, MSGBOX_DEFAULT
 	closemessage
-	applymovement 7, RocketHideout_B2F_Movement_LanceWalkToGenerator
-	applymovement 8, RocketHideout_B2F_Movement_DragoniteWalkToGenerator
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_LanceWalkToGenerator
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_DragoniteWalkToGenerator
 	delay 55
-	applymovement 255, RocketHideout_B2F_Movement_LanceWalkToGenerator
+	applymovement OBJ_EVENT_ID_PLAYER, RocketHideout_B2F_Movement_LanceWalkToGenerator
 	waitmovement 0
 
-	applymovement 8, RocketHideout_B2F_Movement_DragoniteInvestigateGenerator
-	applymovement 7, RocketHideout_B2F_Movement_LanceInvestigateGenerator
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_DragoniteInvestigateGenerator
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_LanceInvestigateGenerator
 	delay 165
-	playmoncry 149, 0
-	waitmovement 8
-	waitmovement 7
+	playmoncry SPECIES_DRAGONITE, CRY_MODE_NORMAL
+	waitmovement LOCALID_ROCKETHIDEOUT2_DRAGONITE
+	waitmovement LOCALID_ROCKETHIDEOUT2_LANCE
 	msgbox RocketHideout_B2F_Text_LanceElectrodeFaint, MSGBOX_DEFAULT
 	closemessage
-	applymovement 7, RocketHideout_B2F_Movement_LanceWalkToElectrode
-	applymovement 8, RocketHideout_B2F_Movement_LanceWalkToElectrode
-	waitmovement 8
-	waitmovement 7
-	applymovement 255, RocketHideout_B2F_Movement_PlayerWalkToElectrode
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_LanceWalkToElectrode
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_LanceWalkToElectrode
+	waitmovement LOCALID_ROCKETHIDEOUT2_DRAGONITE
+	waitmovement LOCALID_ROCKETHIDEOUT2_LANCE
+	applymovement OBJ_EVENT_ID_PLAYER, RocketHideout_B2F_Movement_PlayerWalkToElectrode
 	waitmovement 0
-	setobjectxyperm 8, 20, 16
-	setobjectxyperm 7, 19, 16
-	setobjectmovementtype 8, 0x41
-	setobjectmovementtype 7, 0x7
-	setvar 20578, 13
+	setobjectxyperm LOCALID_ROCKETHIDEOUT2_DRAGONITE, 20, 16
+	setobjectxyperm LOCALID_ROCKETHIDEOUT2_LANCE, 19, 16
+	setobjectmovementtype LOCALID_ROCKETHIDEOUT2_DRAGONITE, MOVEMENT_TYPE_WALK_IN_PLACE_UP
+	setobjectmovementtype LOCALID_ROCKETHIDEOUT2_LANCE, MOVEMENT_TYPE_FACE_UP
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 13
 	release
 	end
 
@@ -447,28 +447,28 @@ RocketHideout_B2F_Movement_PlayerWalkToElectrode:
 
 RocketHideout_B2F_Trigger_Electrode::
 	lock
-	goto_if_eq 20563, 3, RocketHideout_B2F_EventScript_ElectrodeDone
-	turnobject 7, DIR_WEST
+	goto_if_eq JOHTO_VAR_ELECTRODES_FAINTED, 3, RocketHideout_B2F_EventScript_ElectrodeDone
+	turnobject LOCALID_ROCKETHIDEOUT2_LANCE, DIR_WEST
 	msgbox RocketHideout_B2F_Text_LanceSide, MSGBOX_DEFAULT
 	closemessage
-	turnobject 7, DIR_NORTH
-	applymovement 255, J_Common_Movement_WalkLeft1
+	turnobject LOCALID_ROCKETHIDEOUT2_LANCE, DIR_NORTH
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	release
 	end
 
 RocketHideout_B2F_EventScript_Electrode::
 	lock
-	playmoncry 101, 2
+	playmoncry SPECIES_ELECTRODE, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle 101, 30
+	setwildbattle SPECIES_ELECTRODE, 30
 	dowildbattle
-	specialvar 32781, GetBattleOutcome
-	goto_if_eq 32781, 4, RocketHideout_B2F_EventScript_Ran_Electrode
-	goto_if_eq 32781, 5, RocketHideout_B2F_EventScript_Ran_Electrode
-	removeobject 32783
-	addvar 20563, 1
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, RocketHideout_B2F_EventScript_Ran_Electrode
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, RocketHideout_B2F_EventScript_Ran_Electrode
+	removeobject VAR_LAST_TALKED
+	addvar JOHTO_VAR_ELECTRODES_FAINTED, 1
 	release
 	end
 
@@ -477,65 +477,65 @@ RocketHideout_B2F_EventScript_Ran_Electrode::
 	end
 
 RocketHideout_B2F_EventScript_ElectrodeDone::
-	playse 215
-	removeobject 3
-	removeobject 2
-	removeobject 1
+	playse SE_M_HYPER_BEAM
+	removeobject LOCALID_LANCEELECTRODE1
+	removeobject LOCALID_LANCEELECTRODE2
+	removeobject LOCALID_LANCEELECTRODE3
 	waitse
-	getplayerxy 16384, 16385
-	call_if_eq 16385, 16, RocketHideout_B2F_Movement_PlayerMeetLanceTop
-	call_if_eq 16385, 18, RocketHideout_B2F_Movement_PlayerMeetLanceBot
-	turnobject 255, DIR_EAST
-	applymovement 7, RocketHideout_B2F_Movement_LanceMeetPlayerAfterElectrode
-	applymovement 8, RocketHideout_B2F_Movement_LanceMeetPlayerAfterElectrode
-	waitmovement 8
+	getplayerxy VAR_TEMP_0, VAR_TEMP_1
+	call_if_eq VAR_TEMP_1, 16, RocketHideout_B2F_Movement_PlayerMeetLanceTop
+	call_if_eq VAR_TEMP_1, 18, RocketHideout_B2F_Movement_PlayerMeetLanceBot
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_LanceMeetPlayerAfterElectrode
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_LanceMeetPlayerAfterElectrode
+	waitmovement LOCALID_ROCKETHIDEOUT2_DRAGONITE
 
-	playse 36
-	turnobject 255, DIR_NORTH
-	turnobject 7, DIR_NORTH
+	playse SE_CLICK
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	turnobject LOCALID_ROCKETHIDEOUT2_LANCE, DIR_NORTH
 	call RockerHideout2_DeactivateGenerator
 	special DrawWholeMapView
 	delay 55
 	turnobject 7 DIR_WEST
-	turnobject 255, DIR_EAST
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	delay 30
 	msgbox RocketHideout_B2F_Text_LanceElectrodeDone, MSGBOX_DEFAULT
-	giveitem 681
+	giveitem ITEM_HM_WHIRLPOOL
 	msgbox RocketHideout_B2F_Text_LanceWhirlpool, MSGBOX_DEFAULT
 	closemessage
-	turnobject 7, DIR_SOUTH
+	turnobject LOCALID_ROCKETHIDEOUT2_LANCE, DIR_SOUTH
 	delay 20
 	msgbox RocketHideout_B2F_Text_LanceMonMaster, MSGBOX_DEFAULT
 	closemessage
-	applymovement 7, RocketHideout_B2F_Movement_LanceFinalExit
+	applymovement LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_LanceFinalExit
 	delay 20
 
-	applymovement 8, RocketHideout_B2F_Movement_DragoniteFinalExit
-	waitmovement 8
-	waitmovement 7
+	applymovement LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_DragoniteFinalExit
+	waitmovement LOCALID_ROCKETHIDEOUT2_DRAGONITE
+	waitmovement LOCALID_ROCKETHIDEOUT2_LANCE
 
-	setflag 8338
-	removeobject 8
-	removeobject 7
-	setvar 20563, 4
-	setvar 20578, 14
-	clearflag 8331
-	setflag 8333
-	setvar 20586, 2
-	setvar 20587, 2
-	setvar 20588, 2
-	setvar 20589, 2
-	setvar 20590, 2
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE
+	removeobject LOCALID_ROCKETHIDEOUT2_DRAGONITE
+	removeobject LOCALID_ROCKETHIDEOUT2_LANCE
+	setvar JOHTO_VAR_ELECTRODES_FAINTED, 4
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 14
+	clearflag JOHTO_FLAG_HIDE_MAHOGANY_COP
+	setflag JOHTO_FLAG_HIDE_MAHOGANY_TOWN_FATMAN
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_1, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_2, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_3, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_4, 2
+	setvar JOHTO_VAR_ROCKET_HIDEOUT_STATUE_5, 2
 	release
 	end
 
 RocketHideout_B2F_Movement_PlayerMeetLanceTop:
-	applymovement 255, J_Common_Movement_WalkDown1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkDown1
 	waitmovement 0
 	return
 
 RocketHideout_B2F_Movement_PlayerMeetLanceBot:
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	return
 
@@ -674,40 +674,40 @@ RocketHideout_B2F_Text_B2FDeactivateTransmitter:
 	.string "stoppe{SE_M_WATERFALL}it{SE_M_GRASSWHISTLE}evi{SE_M_BATON_PASS}broadcast.$"
 
 RocketHideout_EventScript_Item_Thief::
-	finditem 627
+	finditem ITEM_TM_THIEF
 	end
 
 RocketHideout_B2F_EventScript_LanceTriggerLeft::
 	lock
-	applymovement 255, J_Common_Movement_WalkRight1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkRight1
 	waitmovement 0
-	turnobject 255, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	goto RocketHideout_B2F_EventScript_Lance
 
 RocketHideout_B2F_EventScript_LanceTriggerRight::
 	lock
-	applymovement 255, J_Common_Movement_WalkLeft1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	turnobject 255, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	goto RocketHideout_B2F_EventScript_Lance
 
 RocketHideout_B2F_EventScript_Lance::
 	lock
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	msgbox RocketHideout_B2F_Text_LanceHeals1, MSGBOX_DEFAULT
 	closemessage
 	call J_Common_EventScript_OutOfCenterPartyHeal
 	msgbox RocketHideout_B2F_Text_LanceHeals2, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 7, RocketHideout_B2F_Movement_LanceGoDeeper
-	applymovement2 8, RocketHideout_B2F_Movement_DragoniteGoDeeper
-	waitmovement 7
-	waitmovement 8
-	setflag 8338
-	removeobject 7
-	setvar 20578, 6
-	removeobject 8
+	applymovement2 LOCALID_ROCKETHIDEOUT2_LANCE, RocketHideout_B2F_Movement_LanceGoDeeper
+	applymovement2 LOCALID_ROCKETHIDEOUT2_DRAGONITE, RocketHideout_B2F_Movement_DragoniteGoDeeper
+	waitmovement LOCALID_ROCKETHIDEOUT2_LANCE
+	waitmovement LOCALID_ROCKETHIDEOUT2_DRAGONITE
+	setflag JOHTO_FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE
+	removeobject LOCALID_ROCKETHIDEOUT2_LANCE
+	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 6
+	removeobject LOCALID_ROCKETHIDEOUT2_DRAGONITE
 	release
 	end
 
@@ -776,7 +776,7 @@ RocketHideout_B2F_Text_GruntM17After:
 	.string "To{SE_M_ATTRACT2}ba{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}you.$"
 
 RocketHideout_B2F_EventScript_Grunt14::
-	trainerbattle_single 1156, RocketHideout_B2F_Text_GruntM17Seen, RocketHideout_B2F_Text_GruntM17Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_14_HNS, RocketHideout_B2F_Text_GruntM17Seen, RocketHideout_B2F_Text_GruntM17Beaten
 	msgbox RocketHideout_B2F_Text_GruntM17After, MSGBOX_AUTOCLOSE
 	end
 
@@ -796,7 +796,7 @@ RocketHideout_B2F_Text_GruntM18After:
 	.string "creame{SE_M_WATERFALL}me…$"
 
 RocketHideout_B2F_EventScript_Grunt15::
-	trainerbattle_single 1157, RocketHideout_B2F_Text_GruntM18Seen, RocketHideout_B2F_Text_GruntM18Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_15_HNS, RocketHideout_B2F_Text_GruntM18Seen, RocketHideout_B2F_Text_GruntM18Beaten
 	msgbox RocketHideout_B2F_Text_GruntM18After, MSGBOX_AUTOCLOSE
 	end
 
@@ -813,7 +813,7 @@ RocketHideout_B2F_Text_GruntM19After:
 	.string "G{SE_M_ATTRACT2}loo{SE_M_ENCORE2}fo{SE_M_SAND_TOMB}yourself.$"
 
 RocketHideout_B2F_EventScript_Grunt16::
-	trainerbattle_single 1158, RocketHideout_B2F_Text_GruntM19Seen, RocketHideout_B2F_Text_GruntM19Beaten
+	trainerbattle_single TRAINER_JOHTO_GRUNT_16_HNS, RocketHideout_B2F_Text_GruntM19Seen, RocketHideout_B2F_Text_GruntM19Beaten
 	msgbox RocketHideout_B2F_Text_GruntM19After, MSGBOX_AUTOCLOSE
 	end
 

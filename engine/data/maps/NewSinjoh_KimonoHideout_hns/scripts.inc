@@ -1,44 +1,44 @@
 @ Johto (data/maps/NewSinjoh_KimonoHideout_hns/scripts.inc), as built into the FireRed game.
 
 NewSinjoh_KimonoHideout_hns_MapScripts::
-	map_script 2, NewSinjoh_KimonoHideout_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewSinjoh_KimonoHideout_OnFrame
 	.byte 0
 
 NewSinjoh_KimonoHideout_OnFrame:
-	map_script_2 20639, 4, NewSinjoh_KimonoHideout_EventScript_PlayerMeetsKimonos
+	map_script_2 JOHTO_VAR_SINJOH_STORYLINE, 4, NewSinjoh_KimonoHideout_EventScript_PlayerMeetsKimonos
 	.2byte 0
 
 NewSinjoh_KimonoHideout_EventScript_PlayerMeetsKimonos::
 	lock
 	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsKimonos, MSGBOX_AUTOCLOSE
-	applymovement 255, NewSinjoh_KimonoHideout_Movement_PlayerWalksIntoRoom
+	applymovement LOCALID_PLAYER, NewSinjoh_KimonoHideout_Movement_PlayerWalksIntoRoom
 	waitmovement 0
 
-	playse 202
-	applymovement 3, NewSinjoh_KimonoHideout_Movement_KimonoWalksDown
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_NEWSINJOH_KIMONOHIDEOUT_MIHARU, NewSinjoh_KimonoHideout_Movement_KimonoWalksDown
 	waitmovement 0
 	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsMiharu, MSGBOX_AUTOCLOSE
-	playse 202
-	applymovement 3, NewSinjoh_KimonoHideout_Movement_KimonoWalksUp
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_NEWSINJOH_KIMONOHIDEOUT_MIHARU, NewSinjoh_KimonoHideout_Movement_KimonoWalksUp
 	waitmovement 0
 
-	playse 202
-	applymovement 1, NewSinjoh_KimonoHideout_Movement_KimonoWalksDown
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_NEWSINJOH_KIMONOHIDEOUT_SHIZUKO, NewSinjoh_KimonoHideout_Movement_KimonoWalksDown
 	waitmovement 0
 	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsShizuko, MSGBOX_AUTOCLOSE
-	playse 202
-	applymovement 1, NewSinjoh_KimonoHideout_Movement_KimonoWalksUp
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_NEWSINJOH_KIMONOHIDEOUT_SHIZUKO, NewSinjoh_KimonoHideout_Movement_KimonoWalksUp
 	waitmovement 0
 
-	playse 202
-	applymovement 2, NewSinjoh_KimonoHideout_Movement_KimonoWalksDown
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_NEWSINJOH_KIMONOHIDEOUT_YOUKO, NewSinjoh_KimonoHideout_Movement_KimonoWalksDown
 	waitmovement 0
 	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsYouko, MSGBOX_AUTOCLOSE
-	playse 202
-	applymovement 2, NewSinjoh_KimonoHideout_Movement_KimonoWalksUp
+	playse SE_M_PETAL_DANCE
+	applymovement LOCALID_NEWSINJOH_KIMONOHIDEOUT_YOUKO, NewSinjoh_KimonoHideout_Movement_KimonoWalksUp
 	waitmovement 0
 
-	setvar 20639, 5
+	setvar JOHTO_VAR_SINJOH_STORYLINE, 5
 	release
 	end
 
@@ -127,15 +127,15 @@ NewSinjoh_KimonoHideout_Text_PlayerMeetsYouko:
 NewSinjoh_KimonoHideout_EventScript_Miharu::
 	lock
 	faceplayer
-	goto_if_ge 20639, 13, NewSinjoh_KimonoHideout_EventScript_MiharuFinal
-	goto_if_defeated 1633, NewSinjoh_KimonoHideout_EventScript_MiharuAfter
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_MiharuFinal
+	goto_if_defeated TRAINER_JOHTO_MIHARU_HNS, NewSinjoh_KimonoHideout_EventScript_MiharuAfter
 	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsMiharu, MSGBOX_AUTOCLOSE
-	goto_if_not_defeated 1633, NewSinjoh_KimonoHideout_EventScript_TryMiharuBattle
+	goto_if_not_defeated TRAINER_JOHTO_MIHARU_HNS, NewSinjoh_KimonoHideout_EventScript_TryMiharuBattle
 	release
 	end
 
 NewSinjoh_KimonoHideout_EventScript_TryMiharuBattle::
-	goto_if_eq 20639, 6, NewSinjoh_KimonoHideout_EventScript_MiharuBattle
+	goto_if_eq JOHTO_VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_MiharuBattle
 	release
 	end
 
@@ -143,17 +143,17 @@ NewSinjoh_KimonoHideout_EventScript_MiharuBattle::
 	msgbox NewSinjoh_KimonoHideout_Text_MiharuBeforeBattle, MSGBOX_DEFAULT
 	closemessage
 	settotemboost B_POSITION_OPPONENT_LEFT, 2, 2, 0, 0, 2, 0
-	trainerbattle_no_intro 1633, EcruteakCity_Theater_Text_KimonoGirlBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_MIHARU_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
 	giveitem ITEM_MEADOW_PLATE
-	addvar 20640, 1
+	addvar JOHTO_VAR_PLATECOUNTER, 1
 	msgbox NewSinjoh_KimonoHideout_Text_MiharuAfter, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
 
@@ -186,15 +186,15 @@ NewSinjoh_KimonoHideout_Text_MiharuFinal:
 NewSinjoh_KimonoHideout_EventScript_Youko::
 	lock
 	faceplayer
-	goto_if_ge 20639, 13, NewSinjoh_KimonoHideout_EventScript_YoukoFinal
-	goto_if_defeated 1634, NewSinjoh_KimonoHideout_EventScript_YoukoAfter
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_YoukoFinal
+	goto_if_defeated TRAINER_JOHTO_YOUKO_HNS, NewSinjoh_KimonoHideout_EventScript_YoukoAfter
 	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsYouko, MSGBOX_AUTOCLOSE
-	goto_if_not_defeated 1634, NewSinjoh_KimonoHideout_EventScript_TryYoukoBattle
+	goto_if_not_defeated TRAINER_JOHTO_YOUKO_HNS, NewSinjoh_KimonoHideout_EventScript_TryYoukoBattle
 	release
 	end
 
 NewSinjoh_KimonoHideout_EventScript_TryYoukoBattle::
-	goto_if_eq 20639, 6, NewSinjoh_KimonoHideout_EventScript_YoukoBattle
+	goto_if_eq JOHTO_VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_YoukoBattle
 	release
 	end
 
@@ -202,17 +202,17 @@ NewSinjoh_KimonoHideout_EventScript_YoukoBattle::
 	msgbox NewSinjoh_KimonoHideout_Text_YoukoBeforeBattle, MSGBOX_DEFAULT
 	closemessage
 	settotemboost B_POSITION_OPPONENT_LEFT, 0, 2, 1, 2, 2, 2
-	trainerbattle_no_intro 1634, EcruteakCity_Theater_Text_KimonoGirlBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_YOUKO_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
 	giveitem ITEM_ICICLE_PLATE
-	addvar 20640, 1
+	addvar JOHTO_VAR_PLATECOUNTER, 1
 	msgbox NewSinjoh_KimonoHideout_Text_YoukoAfter, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
 
@@ -243,15 +243,15 @@ NewSinjoh_KimonoHideout_Text_YoukoFinal:
 NewSinjoh_KimonoHideout_EventScript_Shizuko::
 	lock
 	faceplayer
-	goto_if_ge 20639, 13, NewSinjoh_KimonoHideout_EventScript_ShizukoFinal
-	goto_if_defeated 1635, NewSinjoh_KimonoHideout_EventScript_ShizukoAfter
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, NewSinjoh_KimonoHideout_EventScript_ShizukoFinal
+	goto_if_defeated TRAINER_JOHTO_SHIZUKO_HNS, NewSinjoh_KimonoHideout_EventScript_ShizukoAfter
 	msgbox NewSinjoh_KimonoHideout_Text_PlayerMeetsShizuko, MSGBOX_AUTOCLOSE
-	goto_if_not_defeated 1635, NewSinjoh_KimonoHideout_EventScript_TryShizukoBattle
+	goto_if_not_defeated TRAINER_JOHTO_SHIZUKO_HNS, NewSinjoh_KimonoHideout_EventScript_TryShizukoBattle
 	release
 	end
 
 NewSinjoh_KimonoHideout_EventScript_TryShizukoBattle::
-	goto_if_eq 20639, 6, NewSinjoh_KimonoHideout_EventScript_ShizukoBattle
+	goto_if_eq JOHTO_VAR_SINJOH_STORYLINE, 6, NewSinjoh_KimonoHideout_EventScript_ShizukoBattle
 	release
 	end
 
@@ -259,17 +259,17 @@ NewSinjoh_KimonoHideout_EventScript_ShizukoBattle::
 	msgbox NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle, MSGBOX_DEFAULT
 	closemessage
 	settotemboost B_POSITION_OPPONENT_LEFT, 2, 1, 0, 0, 1, 0
-	trainerbattle_no_intro 1635, EcruteakCity_Theater_Text_KimonoGirlBeaten
+	trainerbattle_no_intro TRAINER_JOHTO_SHIZUKO_HNS, EcruteakCity_Theater_Text_KimonoGirlBeaten
 	giveitem ITEM_PIXIE_PLATE
-	addvar 20640, 1
+	addvar JOHTO_VAR_PLATECOUNTER, 1
 	msgbox NewSinjoh_KimonoHideout_Text_ShizukoAfter, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq 20640, 3, SinjohRuins_Lab_EventScript_3Plates
-	call_if_eq 20640, 6, SinjohRuins_Lab_EventScript_6Plates
-	call_if_eq 20640, 9, SinjohRuins_Lab_EventScript_9Plates
-	call_if_eq 20640, 12, SinjohRuins_Lab_EventScript_12Plates
-	call_if_eq 20640, 15, SinjohRuins_Lab_EventScript_15Plates
-	call_if_eq 20640, 16, SinjohRuins_Lab_EventScript_16Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 3, SinjohRuins_Lab_EventScript_3Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 6, SinjohRuins_Lab_EventScript_6Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 9, SinjohRuins_Lab_EventScript_9Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 12, SinjohRuins_Lab_EventScript_12Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 15, SinjohRuins_Lab_EventScript_15Plates
+	call_if_eq JOHTO_VAR_PLATECOUNTER, 16, SinjohRuins_Lab_EventScript_16Plates
 	release
 	end
 

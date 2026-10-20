@@ -3,10 +3,10 @@
 J_EventScript_WhiteOut::
 	call J_EverGrandeCity_HallOfFame_EventScript_ResetEliteFour
 	.if 1
-	clearflag 2411
-	clearflag 2410
-	clearflag 2409
-	clearflag 8804
+	clearflag FLAG_NO_WILD_CATCHING
+	clearflag FLAG_NO_WILD_RUNNING
+	clearflag FLAG_SMART_WILD_AI
+	clearflag JOHTO_FLAG_NO_SHINY
 	.endif
 	goto J_EventScript_ResetMrBriney
 	end
@@ -15,9 +15,9 @@ J_EventScript_AfterWhiteOutHeal::
 	lockall
 	msgbox J_gText_FirstShouldRestoreMonsHealth
 	call J_EventScript_PkmnCenterNurse_TakeAndHealPkmn
-	call_if_unset 0, J_EventScript_AfterWhiteOutHealMsgPreFirstBoss
-	call_if_set 0, J_EventScript_AfterWhiteOutHealMsg
-	applymovement 32783, J_Movement_PkmnCenterNurse_Bow
+	call_if_unset FLAG_DEFEATED_RUSTBORO_GYM, J_EventScript_AfterWhiteOutHealMsgPreFirstBoss
+	call_if_set FLAG_DEFEATED_RUSTBORO_GYM, J_EventScript_AfterWhiteOutHealMsg
+	applymovement VAR_LAST_TALKED, J_Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	fadedefaultbgm
 	releaseall
@@ -33,8 +33,8 @@ J_EventScript_AfterWhiteOutHealMsg::
 
 J_EventScript_AfterWhiteOutMomHeal::
 	lockall
-	textcolor 1
-	applymovement 1, J_Common_Movement_WalkInPlaceFasterDown
+	textcolor NPC_TEXT_COLOR_FEMALE
+	applymovement LOCALID_PLAYERS_HOUSE_1F_MOM, J_Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox J_gText_HadQuiteAnExperienceTakeRest
 	call J_Common_EventScript_OutOfCenterPartyHeal
@@ -44,68 +44,68 @@ J_EventScript_AfterWhiteOutMomHeal::
 	end
 
 J_EventScript_ResetMrBriney::
-	goto_if_eq 20614, 1, J_EventScript_MoveMrBrineyToHouse
-	goto_if_eq 20614, 2, J_EventScript_MoveMrBrineyToDewford
-	goto_if_eq 20614, 3, J_EventScript_MoveMrBrineyToRoute109
+	goto_if_eq JOHTO_VAR_BRINEY_LOCATION, 1, J_EventScript_MoveMrBrineyToHouse
+	goto_if_eq JOHTO_VAR_BRINEY_LOCATION, 2, J_EventScript_MoveMrBrineyToDewford
+	goto_if_eq JOHTO_VAR_BRINEY_LOCATION, 3, J_EventScript_MoveMrBrineyToRoute109
 	end
 
 J_EventScript_MoveMrBrineyToHouse::
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	clearflag 0
-	clearflag 0
-	clearflag 0
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	end
 
 J_EventScript_MoveMrBrineyToDewford::
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	clearflag 0
-	clearflag 0
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	end
 
 J_EventScript_MoveMrBrineyToRoute109::
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	setflag 0
-	clearflag 0
-	clearflag 0
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
+	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
+	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
+	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
 	end
 
 J_EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
-	clearflag 0
-	clearflag 0
-	clearflag 0
-	clearflag 0
-	setvar 20620, 0
+	clearflag FLAG_DEFEATED_ELITE_4_SIDNEY
+	clearflag FLAG_DEFEATED_ELITE_4_PHOEBE
+	clearflag FLAG_DEFEATED_ELITE_4_GLACIA
+	clearflag FLAG_DEFEATED_ELITE_4_DRAKE
+	setvar JOHTO_VAR_ELITE_4_STATE, 0
 	return
 
 J_Common_EventScript_UpdateBrineyLocation::
-	goto_if_unset 8699, J_Common_EventScript_NopReturn
-	goto_if_set 0, J_Common_EventScript_NopReturn
-	goto_if_unset 0, J_EventScript_SetBrineyLocation_House
-	goto_if_unset 0, J_EventScript_SetBrineyLocation_Dewford
-	goto_if_unset 0, J_EventScript_SetBrineyLocation_Route109
+	goto_if_unset JOHTO_FLAG_RECEIVED_POKENAV, J_Common_EventScript_NopReturn
+	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, J_Common_EventScript_NopReturn
+	goto_if_unset FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT, J_EventScript_SetBrineyLocation_House
+	goto_if_unset FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN, J_EventScript_SetBrineyLocation_Dewford
+	goto_if_unset FLAG_HIDE_ROUTE_109_MR_BRINEY, J_EventScript_SetBrineyLocation_Route109
 	return
 
 J_EventScript_SetBrineyLocation_House::
-	setvar 20614, 1
+	setvar JOHTO_VAR_BRINEY_LOCATION, 1
 	return
 
 J_EventScript_SetBrineyLocation_Dewford::
-	setvar 20614, 2
+	setvar JOHTO_VAR_BRINEY_LOCATION, 2
 	return
 
 J_EventScript_SetBrineyLocation_Route109::
-	setvar 20614, 3
+	setvar JOHTO_VAR_BRINEY_LOCATION, 3
 	return
 

@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route31_hns/scripts.inc), as built into the FireRed game.
 
 Route31_hns_MapScripts::
-	map_script 3, Route31_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route31_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route31_OnTransition:
@@ -10,10 +10,10 @@ Route31_OnTransition:
 	end
 
 Route31_EventScript_Bugcatcher_Wade::
-	trainerbattle_single 1192, Route31_Text_BugCatcherWade1_Seen, Route31_Text_BugCatcherWade1_Beaten, Route31_EventScript_RegisterWade
-	goto_if_set 8938, Route31_EventScript_WadeGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route31_EventScript_RematchWade
+	trainerbattle_single TRAINER_JOHTO_WADE_HNS, Route31_Text_BugCatcherWade1_Seen, Route31_Text_BugCatcherWade1_Beaten, Route31_EventScript_RegisterWade
+	goto_if_set JOHTO_FLAG_WADE_HAS_ITEM_HNS, Route31_EventScript_WadeGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route31_EventScript_RematchWade
 	msgbox Route31_Text_BugCatcherWade1_After, MSGBOX_AUTOCLOSE
 	end
 
@@ -21,20 +21,20 @@ Route31_EventScript_RegisterWade::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route31_Text_WadeRegister, MSGBOX_DEFAULT
-	register_matchcall 1192
+	register_matchcall TRAINER_JOHTO_WADE_HNS
 	release
 	end
 
 Route31_EventScript_RematchWade::
-	trainerbattle_rematch 1192, Route31_Text_WadeRematchIntro, Route31_Text_WadeRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_WADE_HNS, Route31_Text_WadeRematchIntro, Route31_Text_WadeRematchDefeat
 	msgbox Route31_Text_WadePostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route31_EventScript_WadeGiveItem::
 	msgbox Route31_Text_WadeHasItem, MSGBOX_DEFAULT
-	giveitem 20615
-	goto_if_eq 32781, FALSE, Route31_EventScript_WadeNoRoom
-	clearflag 8938
+	giveitem JOHTO_VAR_WADE_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, Route31_EventScript_WadeNoRoom
+	clearflag JOHTO_FLAG_WADE_HAS_ITEM_HNS
 	msgbox Route31_Text_WadeGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -53,7 +53,7 @@ Route31_EventScript_Youngster::
 Route31_EventScript_SleepyMan::
 	lock
 	faceplayer
-	goto_if_eq 20574, 1, Route31_EventScript_SleepyMan_AskForKenya
+	goto_if_eq JOHTO_VAR_KENYA, 1, Route31_EventScript_SleepyMan_AskForKenya
 	msgbox Route31_Text_SleepyMan, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -61,7 +61,7 @@ Route31_EventScript_SleepyMan::
 
 Route31_EventScript_SleepyMan_AskForKenya::
 	msgbox Route31_Text_SleepyManGotMail, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, Route31_EventScript_SleepyMan_GiveKenya
+	goto_if_eq VAR_RESULT, TRUE, Route31_EventScript_SleepyMan_GiveKenya
 	msgbox Route31_Text_SleepyManFail, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -69,15 +69,15 @@ Route31_EventScript_SleepyMan_AskForKenya::
 
 Route31_EventScript_SleepyMan_GiveKenya::
 	removenamedmon 1
-	goto_if_eq 32781, 2, Route31_EventScript_SleepyMan_Fail
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, Route31_EventScript_SleepyMan_Fail
 	msgbox Route31_Text_HandOverMailMon, MSGBOX_DEFAULT
 	delay 55
 	callnative UpdateFollowingPokemon
 	msgbox Route31_Text_ReadingMail, MSGBOX_DEFAULT
-	giveitem 625
+	giveitem ITEM_TM_REST
 	msgbox Route31_Text_DescribeRest, MSGBOX_DEFAULT
 	closemessage
-	setvar 20574, 2
+	setvar JOHTO_VAR_KENYA, 2
 	release
 	end
 

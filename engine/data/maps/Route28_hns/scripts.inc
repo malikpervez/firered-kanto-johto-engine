@@ -1,8 +1,8 @@
 @ Johto (data/maps/Route28_hns/scripts.inc), as built into the FireRed game.
 
 Route28_hns_MapScripts::
-	map_script 3, Route28_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route28_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route28_OnTransition:
@@ -14,7 +14,7 @@ Route28_EventScript_Sign::
 	end
 
 Route28_EventScript_Item_Flamethrower::
-	finditem 616
+	finditem ITEM_TM_FLAMETHROWER
 	end
 
 Route28_Text_Sign:
@@ -22,25 +22,25 @@ Route28_Text_Sign:
 
 Route28_EventScript_Trigger_Scientist::
 	lock
-	clearflag 9168
-	addobject 17
+	clearflag JOHTO_FLAG_HIDE_ROUTE28_SCIENTIST
+	addobject LOCALID_ROUTE28_SCIENTIST
 	special SpawnCameraObject
-	applymovement2 127, Route28_Movement_CameraPanDown
-	waitmovement 127
-	playse 263
+	applymovement2 OBJ_EVENT_ID_CAMERA, Route28_Movement_CameraPanDown
+	waitmovement OBJ_EVENT_ID_CAMERA
+	playse SE_POKENAV_CALL
 	waitse
 	msgbox Route28_Text_Scientist, MSGBOX_DEFAULT
-	playse 264
+	playse SE_POKENAV_HANG_UP
 	msgbox Route28_Text_Scientist2, MSGBOX_DEFAULT
 	closemessage
-	applymovement2 17, Route28_Movement_ScientistLeave
-	waitmovement 17
-	applymovement2 127, Route28_Movement_CameraPanUp
-	waitmovement 127
+	applymovement2 LOCALID_ROUTE28_SCIENTIST, Route28_Movement_ScientistLeave
+	waitmovement LOCALID_ROUTE28_SCIENTIST
+	applymovement2 OBJ_EVENT_ID_CAMERA, Route28_Movement_CameraPanUp
+	waitmovement OBJ_EVENT_ID_CAMERA
 	special RemoveCameraObject
-	setvar 20684, 2
-	setflag 9168
-	removeobject 17
+	setvar JOHTO_VAR_ROUTE28_SCIENTIST, 2
+	setflag JOHTO_FLAG_HIDE_ROUTE28_SCIENTIST
+	removeobject LOCALID_ROUTE28_SCIENTIST
 	release
 	end
 

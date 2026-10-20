@@ -4,17 +4,17 @@ WhirlIslands_B1F_hns_MapScripts::
 	.byte 0
 
 WhirlIslands_B1F_Trigger_Sunlight::
-	setweather 2
+	setweather WEATHER_SUNNY
 	doweather
 	end
 
 WhirlIslands_B1F_Trigger_Shade::
-	setweather 11
+	setweather WEATHER_SHADE
 	doweather
 	end
 
 WhirlIslands_B1F_Trigger_Rain::
-	setweather 3
+	setweather WEATHER_RAIN
 	doweather
 	end
 

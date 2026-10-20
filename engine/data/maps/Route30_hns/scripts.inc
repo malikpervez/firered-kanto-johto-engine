@@ -1,9 +1,9 @@
 @ Johto (data/maps/Route30_hns/scripts.inc), as built into the FireRed game.
 
 Route30_hns_MapScripts::
-	map_script 3, Route30_OnTransition
-	map_script 5, J_SetTimeEncounters
-	map_script 2, Route30_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, Route30_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route30_OnFrame
 	.byte 0
 
 Route30_OnTransition:
@@ -11,13 +11,13 @@ Route30_OnTransition:
 	end
 
 Route30_OnFrame::
-	map_script_2 20554, 2, Route30_EventScript_ElmCall_Trigger
+	map_script_2 JOHTO_VAR_CHERRYGROVE_CITY_STATE, 2, Route30_EventScript_ElmCall_Trigger
 	.2byte 0
 
 Route30_EventScript_Boy::
 	lock
 	faceplayer
-	goto_if_set 8660, Route30_EventScript_Boy2
+	goto_if_set JOHTO_FLAG_ADVENTURE_STARTED, Route30_EventScript_Boy2
 	msgbox Route30_Text_YoungsterDirectionsToMrPokemon, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -43,10 +43,10 @@ Route30_EventScript_Youngster_Joey_Fighting::
 	lock
 	msgbox Route30_Text_UseTackle, MSGBOX_AUTOCLOSE
 	waitmessage
-	playse 21
-	applymovement 6, J_Common_Movement_QuestionMark
+	playse SE_PIN
+	applymovement LOCALID_ROUTE_30_JOEY, J_Common_Movement_QuestionMark
 	delay 55
-	waitmovement 6
+	waitmovement LOCALID_ROUTE_30_JOEY
 	faceplayer
 	msgbox Route30_Text_ThisIsABigBattle, MSGBOX_AUTOCLOSE
 	waitmessage
@@ -55,9 +55,9 @@ Route30_EventScript_Youngster_Joey_Fighting::
 	end
 
 Route30_EventScript_Youngster_Joey::
-	trainerbattle_single 1031, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten, Route30_EventScript_RegisterJoey
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route30_EventScript_RematchJoey
+	trainerbattle_single TRAINER_JOHTO_JOEY_HNS, Route30_Text_YoungsterJoey1Seen, Route30_Text_YoungsterJoey1Beaten, Route30_EventScript_RegisterJoey
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route30_EventScript_RematchJoey
 	msgbox Route30_Text_YoungsterJoey1After, MSGBOX_AUTOCLOSE
 	end
 
@@ -65,22 +65,22 @@ Route30_EventScript_RegisterJoey::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route30_Text_JoeyRegister, MSGBOX_DEFAULT
-	register_matchcall 1031
+	register_matchcall TRAINER_JOHTO_JOEY_HNS
 	release
 	end
 
 Route30_EventScript_RematchJoey::
-	trainerbattle_rematch 1031, Route30_Text_JoeyRematchIntro, Route30_Text_JoeyRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_JOEY_HNS, Route30_Text_JoeyRematchIntro, Route30_Text_JoeyRematchDefeat
 	msgbox Route30_Text_JoeyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route30_EventScript_Youngster_Mikey::
-	trainerbattle_single 1032, Route30_Text_YoungsterMikeySeen, Route30_Text_YoungsterMikeyBeaten
+	trainerbattle_single TRAINER_JOHTO_MIKEY_HNS, Route30_Text_YoungsterMikeySeen, Route30_Text_YoungsterMikeyBeaten
 	msgbox Route30_Text_YoungsterMikeyAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route30_EventScript_Bugcatcher_Don::
-	trainerbattle_single 1189, Route30_Text_BugCatcherDonSeen, Route30_Text_BugCatcherDonBeaten
+	trainerbattle_single TRAINER_JOHTO_DON_HNS, Route30_Text_BugCatcherDonSeen, Route30_Text_BugCatcherDonBeaten
 	msgbox Route30_Text_BugCatcherDonAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -90,7 +90,7 @@ Route30_EventScript_ElmCall_Trigger::
 	pokenavcall Route30_Text_Elm_Disaster
 	waitmessage
 	delay 30
-	setvar 20554, 3
+	setvar JOHTO_VAR_CHERRYGROVE_CITY_STATE, 3
 	release
 	end
 
@@ -112,7 +112,7 @@ Route30_EventScript_Poliwag::
 	lock
 	faceplayer
 	waitse
-	playmoncry 60, 0
+	playmoncry SPECIES_POLIWAG, CRY_MODE_NORMAL
 	msgbox Route30_Text_Poliwag, MSGBOX_DEFAULT
 	waitmoncry
 	release

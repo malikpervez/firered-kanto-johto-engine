@@ -1,18 +1,18 @@
 @ Johto (data/maps/NationalPark_BugContest_hns/scripts.inc), as built into the FireRed game.
 
 NationalPark_BugContest_hns_MapScripts::
-	map_script 3, NationalPark_BugContest_OnTransition
-	map_script 2, NationalPark_BugContest_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, NationalPark_BugContest_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NationalPark_BugContest_OnFrame
 	.byte 0
 
 NationalPark_BugContest_OnTransition::
-	goto_if_eq 20552, 3, NationalPark_BugContest_EventScript_JudgeScene
+	goto_if_eq JOHTO_VAR_BUG_CONTEST_STATE, 3, NationalPark_BugContest_EventScript_JudgeScene
 	end
 
 NationalPark_BugContest_OnFrame::
-	map_script_2 20552, 1, NationalPark_BugContest_EventScript_Enter
-	map_script_2 20552, 5, NationalPark_BugContest_EventScript_EnterSide
-	map_script_2 20552, 3, NationalPark_BugContest_EventScript_JudgeSceneActivate
+	map_script_2 JOHTO_VAR_BUG_CONTEST_STATE, 1, NationalPark_BugContest_EventScript_Enter
+	map_script_2 JOHTO_VAR_BUG_CONTEST_STATE, 5, NationalPark_BugContest_EventScript_EnterSide
+	map_script_2 JOHTO_VAR_BUG_CONTEST_STATE, 3, NationalPark_BugContest_EventScript_JudgeSceneActivate
 	.2byte 0
 
 NationalPark_BugContest_EventScript_BC1::
@@ -77,36 +77,36 @@ NationalPark_BugContest_EventScript_Trash::
 
 NationalPark_BugContest_EventScript_JudgeScene::
 	special ShowBugContestChosenMon
-	setobjectxyperm 32781, 20, 29
-	setobjectxyperm 18, 24, 29
-	setobjectxyperm 19, 22, 29
-	setobjectxyperm 20, 18, 29
-	setobjectxyperm 21, 16, 29
+	setobjectxyperm VAR_RESULT, 20, 29
+	setobjectxyperm LOCALID_BUGCONTEST_BUG1, 24, 29
+	setobjectxyperm LOCALID_BUGCONTEST_BUG2, 22, 29
+	setobjectxyperm LOCALID_BUGCONTEST_BUG3, 18, 29
+	setobjectxyperm LOCALID_BUGCONTEST_BUG4, 16, 29
 
-	setobjectxyperm 13, 18, 28
-	setobjectxyperm 1, 22, 28
-	setobjectxyperm 2, 24, 28
-	setobjectxyperm 12, 16, 28
-	setobjectxyperm 11, 20, 26
+	setobjectxyperm LOCALID_BUGCONTEST_GIRL, 18, 28
+	setobjectxyperm LOCALID_BUGCONTEST_BC1, 22, 28
+	setobjectxyperm LOCALID_BUGCONTEST_BC2, 24, 28
+	setobjectxyperm LOCALID_BUGCONTEST_BOY, 16, 28
+	setobjectxyperm LOCALID_BUGCONTEST_ATTENDANT, 20, 26
 
-	setobjectmovementtype 13, 0x7
-	setobjectmovementtype 1, 0x7
-	setobjectmovementtype 2, 0x7
-	setobjectmovementtype 12, 0x7
-	setobjectmovementtype 11, 0x8
+	setobjectmovementtype LOCALID_BUGCONTEST_GIRL, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype LOCALID_BUGCONTEST_BC1, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype LOCALID_BUGCONTEST_BC2, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype LOCALID_BUGCONTEST_BOY, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype LOCALID_BUGCONTEST_ATTENDANT, MOVEMENT_TYPE_FACE_DOWN
 	end
 
 NationalPark_BugContest_EventScript_JudgeSceneActivate::
 	lockall
-	turnobject 255, DIR_NORTH
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	goto J_BugContestEventScript_Judging
 	end
 
 NationalPark_BugContest_EventScript_Enter::
 	lockall
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
-	setvar 20552, 2
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 2
 	msgbox NationlParkBugContest_Text_EnjoyTheContest, MSGBOX_DEFAULT
 	closemessage
 	releaseall
@@ -114,16 +114,16 @@ NationalPark_BugContest_EventScript_Enter::
 
 NationalPark_BugContest_EventScript_EnterSide::
 	lockall
-	turnobject 255, DIR_WEST
-	applymovement 255, J_Common_Movement_WalkLeft1
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
-	applymovement 255, J_Common_Movement_WalkLeft1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkLeft1
 	waitmovement 0
 	delay 20
-	clearflag 8307
-	addobject 17
-	setvar 16385, 1
-	setvar 20552, 2
+	clearflag JOHTO_FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
+	addobject LOCALID_BUGCONTEST_ATTENDANT_SIDE
+	setvar VAR_TEMP_1, 1
+	setvar JOHTO_VAR_BUG_CONTEST_STATE, 2
 	msgbox NationlParkBugContest_Text_EnjoyTheContest, MSGBOX_DEFAULT
 	closemessage
 	releaseall
@@ -131,14 +131,14 @@ NationalPark_BugContest_EventScript_EnterSide::
 
 NationalPark_BugContest_EventScript_Trigger::
 	lock
-	turnobject 11, DIR_EAST
+	turnobject LOCALID_BUGCONTEST_ATTENDANT, DIR_EAST
 	goto NationalPark_BugContest_EventScript_RetireChoice
 
 NationalPark_BugContest_EventScript_Attendant::
 	lock
 	faceplayer
 	msgbox NationalParkBugContest_Text_Attendant, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, J_BugContest_EventScript_TimesUp
+	goto_if_eq VAR_RESULT, TRUE, J_BugContest_EventScript_TimesUp
 	msgbox NationlParkBugContest_Text_EnjoyTheContest, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -146,10 +146,10 @@ NationalPark_BugContest_EventScript_Attendant::
 
 NationalPark_BugContest_EventScript_RetireChoice::
 	msgbox NationalParkBugContest_Text_Attendant, MSGBOX_YESNO
-	goto_if_eq 32781, TRUE, J_BugContest_EventScript_TimesUp
+	goto_if_eq VAR_RESULT, TRUE, J_BugContest_EventScript_TimesUp
 	msgbox NationlParkBugContest_Text_EnjoyTheContest, MSGBOX_DEFAULT
 	closemessage
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	release
 	end

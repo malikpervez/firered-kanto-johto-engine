@@ -1,60 +1,60 @@
 @ Johto (data/maps/PokemonLeague_KogasRoom_hns/scripts.inc), as built into the FireRed game.
 
 PokemonLeague_KogasRoom_hns_MapScripts::
-	map_script 2, EliteFourRoom_OnFrame
-	map_script 5, PokemonLeague_KogasRoom_OnResume
-	map_script 1, EliteFourRoom_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, EliteFourRoom_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, PokemonLeague_KogasRoom_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, EliteFourRoom_OnLoad
 	.byte 0
 
 PokemonLeague_KogasRoom_OnResume::
-	setvar 32772, 1
+	setvar VAR_0x8004, 1
 	special DoPokemonLeagueLightingEffect
 	end
 
 PokemonLeague_KogasRoom_EventScript_Koga::
 	lock
 	faceplayer
-	goto_if_ge 20576, 3, PokemonLeague_KogasRoom_EventScript_KogaDefeated
-	goto_if_set 10399, PokemonLeague_KogasRoom_EventScript_KogaRematch
+	goto_if_ge JOHTO_VAR_LEAGUE_STATE, 3, PokemonLeague_KogasRoom_EventScript_KogaDefeated
+	goto_if_set JOHTO_FLAG_IS_CHAMPION, PokemonLeague_KogasRoom_EventScript_KogaRematch
 	msgbox PokemonLeague_KogasRoom_Text_Before, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1463, PokemonLeague_KogasRoom_Text_Beaten
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_KOGA_1_HNS, PokemonLeague_KogasRoom_Text_Beaten
 	goto PokemonLeague_KogasRoom_EventScript_KogaOnDefeat
 
 PokemonLeague_KogasRoom_EventScript_KogaRematch::
-	goto_if_unset 10400, PokemonLeague_KogasRoom_EventScript_KogaRematchStandard
-	goto_if_ge 20639, 13, PokemonLeague_KogasRoom_EventScript_KogaRematchPostOBC
+	goto_if_unset JOHTO_FLAG_IS_KANTO_CHAMPION, PokemonLeague_KogasRoom_EventScript_KogaRematchStandard
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, PokemonLeague_KogasRoom_EventScript_KogaRematchPostOBC
 
 PokemonLeague_KogasRoom_EventScript_KogaRematchStandard::
 	msgbox PokemonLeague_KogasRoom_Text_RematchBefore, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1464, PokemonLeague_KogasRoom_Text_Beaten
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_KOGA_2_HNS, PokemonLeague_KogasRoom_Text_Beaten
 	goto PokemonLeague_KogasRoom_EventScript_KogaOnDefeat
 
 PokemonLeague_KogasRoom_EventScript_KogaRematchPostOBC::
 	msgbox PokemonLeague_KogasRoom_Text_RematchBefore, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1670, PokemonLeague_KogasRoom_Text_Beaten
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_KOGA_POSTOBC_HNS, PokemonLeague_KogasRoom_Text_Beaten
 	goto PokemonLeague_KogasRoom_EventScript_KogaOnDefeat
 
 PokemonLeague_KogasRoom_EventScript_KogaOnDefeat::
-	clearflag 5
+	clearflag FLAG_TEMP_5
 	msgbox PokemonLeague_KogasRoom_Text_Defeat, MSGBOX_DEFAULT
 	closemessage
 	setmetatile 6, 1, 0x28E, FALSE
 	setmetatile 6, 2, 0x296, FALSE
-	playse 20
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 4
-	setvar 32775, 4
+	playse SE_BANG
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 4
+	setvar VAR_0x8007, 4
 	special ShakeCamera
 	waitstate
 	special DrawWholeMapView
-	setvar 20576, 3
+	setvar JOHTO_VAR_LEAGUE_STATE, 3
 	release
 	end
 

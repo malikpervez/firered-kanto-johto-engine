@@ -1,26 +1,26 @@
 @ Johto (data/maps/PokemonLeague_ChampionsRoom_hns/scripts.inc), as built into the FireRed game.
 
 PokemonLeague_ChampionsRoom_hns_MapScripts::
-	map_script 2, ChampionRoom_OnFrame
-	map_script 5, J_PokemonLeague_ChampionsRoom_OnResume
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ChampionRoom_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, J_PokemonLeague_ChampionsRoom_OnResume
 	.byte 0
 
 J_PokemonLeague_ChampionsRoom_OnResume::
-	setvar 32772, 4
+	setvar VAR_0x8004, 4
 	special DoPokemonLeagueLightingEffect
 	end
 
 ChampionRoom_OnFrame::
-	map_script_2 16384, 0, ChampionRoom_CloseDoor
+	map_script_2 VAR_TEMP_0, 0, ChampionRoom_CloseDoor
 	.2byte 0
 
 ChampionRoom_CloseDoor::
 	lock
-	setflag 2
+	setflag FLAG_TEMP_2
 	special DrawWholeMapView
-	applymovement 255, ChamionRoom_Movement_Enter
+	applymovement OBJ_EVENT_ID_PLAYER, ChamionRoom_Movement_Enter
 	waitmovement 0
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 	release
 	end
 
@@ -35,194 +35,194 @@ ChamionRoom_Movement_Enter:
 
 ChampionRoom_Trigger::
 	lock
-	applymovement 255, J_Common_Movement_WalkUp1
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_WalkUp1
 	waitmovement 0
 	release
 	end
 
 PokemonLeague_WillsRoom_EventScript_Lance::
 	lockall
-	call_if_eq 32780, DIR_EAST, PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingEast
-	call_if_eq 32780, DIR_SOUTH, PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingSouth
-	call_if_eq 32780, DIR_WEST, PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingWest
+	call_if_eq VAR_FACING, DIR_EAST, PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingEast
+	call_if_eq VAR_FACING, DIR_SOUTH, PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingSouth
+	call_if_eq VAR_FACING, DIR_WEST, PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingWest
 	faceplayer
-	goto_if_set 10399, PokemonLeague_WillsRoom_EventScript_LanceRematch
+	goto_if_set JOHTO_FLAG_IS_CHAMPION, PokemonLeague_WillsRoom_EventScript_LanceRematch
 	msgbox PokemonLeague_ChampionsRoom_Text_BattleIntro, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1465, PokemonLeague_ChampionsRoom_Text_BattleWin
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_LANCE_1_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
 	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto
 
 PokemonLeague_WillsRoom_EventScript_LanceRematch::
-	goto_if_unset 10400, PokemonLeague_WillsRoom_EventScript_LanceRematchStandard
-	goto_if_ge 20639, 13, PokemonLeague_WillsRoom_EventScript_LanceRematchPostOBC
+	goto_if_unset JOHTO_FLAG_IS_KANTO_CHAMPION, PokemonLeague_WillsRoom_EventScript_LanceRematchStandard
+	goto_if_ge JOHTO_VAR_SINJOH_STORYLINE, 13, PokemonLeague_WillsRoom_EventScript_LanceRematchPostOBC
 
 PokemonLeague_WillsRoom_EventScript_LanceRematchStandard::
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchBattleIntro, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1466, PokemonLeague_ChampionsRoom_Text_BattleWin
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_LANCE_2_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
 	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto
 
 PokemonLeague_WillsRoom_EventScript_LanceRematchPostOBC::
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchBattleIntro, MSGBOX_DEFAULT
-	setflag 3
-	setflag 5
-	trainerbattle_no_intro 1673, PokemonLeague_ChampionsRoom_Text_BattleWin
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_5
+	trainerbattle_no_intro TRAINER_JOHTO_LANCE_POSTOBC_HNS, PokemonLeague_ChampionsRoom_Text_BattleWin
 	goto PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto
 
 PokemonLeague_WillsRoom_EventScript_LanceOnDefeatJohto::
-	clearflag 5
+	clearflag FLAG_TEMP_5
 	msgbox PokemonLeague_ChampionsRoom_Text_BattleAfter, MSGBOX_DEFAULT
 	closemessage
 	setmetatile 6, 1, 0x3F2, FALSE
 	setmetatile 6, 2, 0x296, FALSE
-	playse 20
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 4
-	setvar 32775, 4
+	playse SE_BANG
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 4
+	setvar VAR_0x8007, 4
 	special ShakeCamera
 	waitstate
 	special DrawWholeMapView
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_LEAGUE_LANCE, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	turnobject 255, DIR_SOUTH
-	applymovement 255, PokemonLeague_ChampionsRoom_Movement_PlayerMoveToCenter
-	applymovement 1, PokemonLeague_ChampionsRoom_Movement_LanceMoveOver
-	waitmovement 255
-	waitmovement 1
-	addobject 2
-	addobject 3
-	applymovement 2, PokemonLeague_ChampionsRoom_Movement_MaryEnter
+	waitmovement LOCALID_LEAGUE_LANCE
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerMoveToCenter
+	applymovement LOCALID_LEAGUE_LANCE, PokemonLeague_ChampionsRoom_Movement_LanceMoveOver
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_LEAGUE_LANCE
+	addobject LOCALID_LEAGUE_MARY
+	addobject LOCALID_LEAGUE_OAK
+	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryEnter
 	waitmovement 0
 	msgbox PokemonLeague_ChampionsRoom_Text_MaryOhNoOak, MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, PokemonLeague_ChampionsRoom_Movement_OakEnter
+	applymovement LOCALID_LEAGUE_OAK, PokemonLeague_ChampionsRoom_Movement_OakEnter
 	delay 60
-	applymovement 2, PokemonLeague_ChampionsRoom_Movement_MaryMoveOver
-	waitmovement 2
-	waitmovement 3
+	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryMoveOver
+	waitmovement LOCALID_LEAGUE_MARY
+	waitmovement LOCALID_LEAGUE_OAK
 	msgbox PokemonLeague_ChampionsRoom_Text_OakCongratulations, MSGBOX_DEFAULT
-	applymovement 2, PokemonLeague_ChampionsRoom_Movement_MaryInterview
+	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryInterview
 	waitmovement 0
 	msgbox PokemonLeague_ChampionsRoom_Text_MaryInterview, MSGBOX_DEFAULT
 	closemessage
-	applymovement 1, PokemonLeague_ChampionsRoom_Movement_LanceAnxious
+	applymovement LOCALID_LEAGUE_LANCE, PokemonLeague_ChampionsRoom_Movement_LanceAnxious
 	waitmovement 0
 	msgbox PokemonLeague_ChampionsRoom_Text_Noisy, MSGBOX_DEFAULT
 	closemessage
-	applymovement 1, PokemonLeague_ChampionsRoom_Movement_LanceLeave
+	applymovement LOCALID_LEAGUE_LANCE, PokemonLeague_ChampionsRoom_Movement_LanceLeave
 	delay 30
-	applymovement 255, PokemonLeague_ChampionsRoom_Movement_PlayerLeave
-	waitmovement 1
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerLeave
+	waitmovement LOCALID_LEAGUE_LANCE
 
-	removeobject 1
-	playse 9
-	waitmovement 255
+	removeobject LOCALID_LEAGUE_LANCE
+	playse SE_EXIT
+	waitmovement OBJ_EVENT_ID_PLAYER
 	special SpawnCameraObject
-	removeobject 255
-	playse 9
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_EXIT
 	waitse
 	delay 50
-	applymovement 2, PokemonLeague_ChampionsRoom_Movement_MaryLeft
+	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryLeft
 	waitmovement 0
-	playse 21
-	applymovement 2, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_LEAGUE_MARY, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
+	waitmovement LOCALID_LEAGUE_MARY
 	msgbox PokemonLeague_ChampionsRoom_Text_MaryNoInterview, MSGBOX_DEFAULT
 	closemessage
-	setvar 20576, 6
+	setvar JOHTO_VAR_LEAGUE_STATE, 6
 	warpsilent MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS, 0
 	waitstate
 	releaseall
 	end
 
 PokemonLeague_WillsRoom_EventScript_LanceOnDefeatKanto::
-	clearflag 5
+	clearflag FLAG_TEMP_5
 	msgbox PokemonLeague_ChampionsRoom_Text_BattleAfter, MSGBOX_DEFAULT
 	closemessage
 	setmetatile 6, 1, 0x3F2, FALSE
 	setmetatile 6, 2, 0x296, FALSE
-	playse 20
-	setvar 32772, 1
-	setvar 32773, 1
-	setvar 32774, 4
-	setvar 32775, 4
+	playse SE_BANG
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 1
+	setvar VAR_0x8006, 4
+	setvar VAR_0x8007, 4
 	special ShakeCamera
 	waitstate
 	special DrawWholeMapView
-	playse 21
-	applymovement 1, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_LEAGUE_LANCE, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 1
-	turnobject 255, DIR_SOUTH
-	applymovement 255, PokemonLeague_ChampionsRoom_Movement_PlayerMoveToCenter
-	applymovement 1, PokemonLeague_ChampionsRoom_Movement_LanceMoveOver
-	waitmovement 255
-	waitmovement 1
-	addobject 2
-	addobject 3
-	applymovement 2, PokemonLeague_ChampionsRoom_Movement_MaryEnter
+	waitmovement LOCALID_LEAGUE_LANCE
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_SOUTH
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerMoveToCenter
+	applymovement LOCALID_LEAGUE_LANCE, PokemonLeague_ChampionsRoom_Movement_LanceMoveOver
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitmovement LOCALID_LEAGUE_LANCE
+	addobject LOCALID_LEAGUE_MARY
+	addobject LOCALID_LEAGUE_OAK
+	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryEnter
 	waitmovement 0
 	msgbox PokemonLeague_ChampionsRoom_Text_MaryOhNoOak, MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, PokemonLeague_ChampionsRoom_Movement_OakEnter
+	applymovement LOCALID_LEAGUE_OAK, PokemonLeague_ChampionsRoom_Movement_OakEnter
 	delay 60
-	applymovement 2, PokemonLeague_ChampionsRoom_Movement_MaryMoveOver
-	waitmovement 2
-	waitmovement 3
+	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryMoveOver
+	waitmovement LOCALID_LEAGUE_MARY
+	waitmovement LOCALID_LEAGUE_OAK
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchOakCongratulations, MSGBOX_DEFAULT
-	applymovement 2, PokemonLeague_ChampionsRoom_Movement_MaryInterview
+	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryInterview
 	waitmovement 0
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchMaryInterview, MSGBOX_DEFAULT
 	closemessage
-	applymovement 1, PokemonLeague_ChampionsRoom_Movement_LanceAnxious
+	applymovement LOCALID_LEAGUE_LANCE, PokemonLeague_ChampionsRoom_Movement_LanceAnxious
 	waitmovement 0
 	msgbox PokemonLeague_ChampionsRoom_Text_Noisy, MSGBOX_DEFAULT
 	closemessage
-	applymovement 1, PokemonLeague_ChampionsRoom_Movement_LanceLeave
+	applymovement LOCALID_LEAGUE_LANCE, PokemonLeague_ChampionsRoom_Movement_LanceLeave
 	delay 30
-	applymovement 255, PokemonLeague_ChampionsRoom_Movement_PlayerLeave
-	waitmovement 1
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerLeave
+	waitmovement LOCALID_LEAGUE_LANCE
 
-	removeobject 1
-	playse 9
-	waitmovement 255
+	removeobject LOCALID_LEAGUE_LANCE
+	playse SE_EXIT
+	waitmovement OBJ_EVENT_ID_PLAYER
 	special SpawnCameraObject
-	removeobject 255
-	playse 9
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_EXIT
 	waitse
 	delay 50
-	applymovement 2, PokemonLeague_ChampionsRoom_Movement_MaryLeft
+	applymovement LOCALID_LEAGUE_MARY, PokemonLeague_ChampionsRoom_Movement_MaryLeft
 	waitmovement 0
-	playse 21
-	applymovement 2, J_Common_Movement_ExclamationMark
+	playse SE_PIN
+	applymovement LOCALID_LEAGUE_MARY, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement 2
+	waitmovement LOCALID_LEAGUE_MARY
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchMaryNoInterview, MSGBOX_DEFAULT
 	closemessage
-	setvar 20576, 6
+	setvar JOHTO_VAR_LEAGUE_STATE, 6
 	warpsilent MAP_POKEMON_LEAGUE_HALL_OF_FAME_HNS, 0
 	waitstate
 	releaseall
 	end
 
 PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingEast::
-	applymovement 255, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingEast
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingEast
 	waitmovement 0
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingSouth::
-	applymovement 255, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingSouth
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingSouth
 	waitmovement 0
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_AdjustPlayerFacingWest::
-	applymovement 255, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingWest
+	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_AdjustPlayerFacingWest
 	waitmovement 0
 	return
 

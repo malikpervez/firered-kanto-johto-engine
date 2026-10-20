@@ -1,86 +1,86 @@
 @ Johto (data/maps/Route42_hns/scripts.inc), as built into the FireRed game.
 
 Route42_hns_MapScripts::
-	map_script 3, Route42_MapScript_OnTransition
-	map_script 5, J_SetTimeEncounters
+	map_script MAP_SCRIPT_ON_TRANSITION, Route42_MapScript_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, J_SetTimeEncounters
 	.byte 0
 
 Route42_MapScript_OnTransition::
-	call_if_set 8244, Route42_MapScript_HideTrigger
+	call_if_set JOHTO_FLAG_HIDE_ROUTE42_SUICUNE, Route42_MapScript_HideTrigger
 	callnative SetTimeBasedEncounters
 	end
 
 Route42_MapScript_HideTrigger::
-	setvar 16384, 1
+	setvar VAR_TEMP_0, 1
 	return
 
 Route42_EventScript_Suicune_Trigger::
 	lock
-	playmoncry 245, 0
-	applymovement 17, Route42_Movement_Suicune1
-	playse 10
+	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
+	applymovement LOCALID_ROUTE42_SUICUNE, Route42_Movement_Suicune1
+	playse SE_LEDGE
 	waitse
-	playse 10
+	playse SE_LEDGE
 	waitse
 	waitmovement 0
 	waitmoncry
-	playse 21
-	applymovement 255, J_Common_Movement_ExclamationMark
-	waitmovement 255
-	applymovement 17, Route42_Movement_Suicune2
-	playse 10
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, J_Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement LOCALID_ROUTE42_SUICUNE, Route42_Movement_Suicune2
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
 	waitmovement 0
 
-	playmoncry 245, 0
-	applymovement 17, Route42_Movement_Suicune3
-	applymovement 255, Route42_Movement_Player
-	playse 10
+	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
+	applymovement LOCALID_ROUTE42_SUICUNE, Route42_Movement_Suicune3
+	applymovement OBJ_EVENT_ID_PLAYER, Route42_Movement_Player
+	playse SE_LEDGE
 	delay 60
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
+	playse SE_LEDGE
 	delay 30
-	playse 10
-	waitmovement 17
+	playse SE_LEDGE
+	waitmovement LOCALID_ROUTE42_SUICUNE
 	waitmovement 0
 	delay 60
-	removeobject 17
-	setflag 8244
-	clearflag 8366
-	addobject 19
-	playse 9
-	turnobject 255, DIR_EAST
-	applymovement 19, Route42_Movement_Eusine1
+	removeobject LOCALID_ROUTE42_SUICUNE
+	setflag JOHTO_FLAG_HIDE_ROUTE42_SUICUNE
+	clearflag JOHTO_FLAG_HIDE_ROUTE42_EUSINE
+	addobject LOCALID_ROUTE42_EUSINE
+	playse SE_EXIT
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	applymovement LOCALID_ROUTE42_EUSINE, Route42_Movement_Eusine1
 	waitmovement 0
 	msgbox Route42_Text_EusineAdmireSuicune, MSGBOX_DEFAULT
 	closemessage
-	turnobject 19, DIR_WEST
+	turnobject LOCALID_ROUTE42_EUSINE, DIR_WEST
 	msgbox Route42_Text_EusineJealous, MSGBOX_DEFAULT
-	turnobject 19, DIR_EAST
+	turnobject LOCALID_ROUTE42_EUSINE, DIR_EAST
 	msgbox Route42_Text_EusineWontGiveUp, MSGBOX_DEFAULT
 	closemessage
-	applymovement 19, Route42_Movement_Eusine2
+	applymovement LOCALID_ROUTE42_EUSINE, Route42_Movement_Eusine2
 	waitmovement 0
-	setflag 8366
-	removeobject 19
-	setvar 16384, 1
-	call_if_eq 20604, 2, Route42_EventScript_DoneJohtoSuicune
+	setflag JOHTO_FLAG_HIDE_ROUTE42_EUSINE
+	removeobject LOCALID_ROUTE42_EUSINE
+	setvar VAR_TEMP_0, 1
+	call_if_eq JOHTO_VAR_SUICUNE_ENCOUNTERS, 2, Route42_EventScript_DoneJohtoSuicune
 	release
 	end
 
 Route42_EventScript_DoneJohtoSuicune::
-	setvar 20604, 3
+	setvar JOHTO_VAR_SUICUNE_ENCOUNTERS, 3
 	return
 
 Route42_Movement_Suicune1:
@@ -160,10 +160,10 @@ Route42_Text_EusineWontGiveUp:
 	.string "Yo{SE_M_DIVE}hea{SE_M_SAND_TOMB}me!$"
 
 Route42_EventScript_Tully::
-	trainerbattle_single 1206, Route42_Text_FisherTullySeen, Route42_Text_FisherTullyBeaten, Route42_EventScript_RegisterTully
-	goto_if_set 8941, Route42_EventScript_TullyGiveItem
-	specialvar 32781, ShouldTryRematchBattle
-	goto_if_eq 32781, TRUE, Route42_EventScript_RematchTully
+	trainerbattle_single TRAINER_JOHTO_TULLY_HNS, Route42_Text_FisherTullySeen, Route42_Text_FisherTullyBeaten, Route42_EventScript_RegisterTully
+	goto_if_set JOHTO_FLAG_TULLY_HAS_ITEM_HNS, Route42_EventScript_TullyGiveItem
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route42_EventScript_RematchTully
 	msgbox Route42_Text_FisherTullyAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -171,20 +171,20 @@ Route42_EventScript_RegisterTully::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route42_Text_TullyRegister, MSGBOX_DEFAULT
-	register_matchcall 1206
+	register_matchcall TRAINER_JOHTO_TULLY_HNS
 	release
 	end
 
 Route42_EventScript_RematchTully::
-	trainerbattle_rematch 1206, Route42_Text_TullyRematchIntro, Route42_Text_TullyRematchDefeat
+	trainerbattle_rematch TRAINER_JOHTO_TULLY_HNS, Route42_Text_TullyRematchIntro, Route42_Text_TullyRematchDefeat
 	msgbox Route42_Text_TullyPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route42_EventScript_TullyGiveItem::
 	msgbox Route42_Text_TullyHasItem, MSGBOX_DEFAULT
-	giveitem 20619
-	goto_if_eq 32781, FALSE, Route42_EventScript_TullyNoRoom
-	clearflag 8941
+	giveitem JOHTO_VAR_TULLY_ITEM_HNS
+	goto_if_eq VAR_RESULT, FALSE, Route42_EventScript_TullyNoRoom
+	clearflag JOHTO_FLAG_TULLY_HAS_ITEM_HNS
 	msgbox Route42_Text_TullyGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -193,12 +193,12 @@ Route42_EventScript_TullyNoRoom::
 	end
 
 Route42_EventScript_Ben::
-	trainerbattle_single 1286, Route42_Text_HikerBenjaminSeen, Route42_Text_HikerBenjaminBeaten
+	trainerbattle_single TRAINER_JOHTO_BENJAMIN_HNS, Route42_Text_HikerBenjaminSeen, Route42_Text_HikerBenjaminBeaten
 	msgbox Route42_Text_HikerBenjaminAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route42_EventScript_Shane::
-	trainerbattle_single 1134, Route42_Text_PokemaniacShaneSeen, Route42_Text_PokemaniacShaneBeaten
+	trainerbattle_single TRAINER_JOHTO_SHANE_HNS, Route42_Text_PokemaniacShaneSeen, Route42_Text_PokemaniacShaneBeaten
 	msgbox Route42_Text_PokemaniacShaneAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -221,7 +221,7 @@ Route42_EventScript_Item_SuperPotion::
 	end
 
 Route42_EventScript_Item_Shadow_Claw::
-	finditem 646
+	finditem ITEM_TM_SHADOW_CLAW
 	end
 
 Route42_EventScript_Item_UltraBall::

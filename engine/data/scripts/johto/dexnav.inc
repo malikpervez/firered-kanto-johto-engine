@@ -2,7 +2,7 @@
 
 J_EventScript_StartDexNavBattle::
 	lock
-	playse 21
+	playse SE_PIN
 	applymovement 255 J_Common_Movement_ExclamationMark
 	waitmovement 0
 	waitse

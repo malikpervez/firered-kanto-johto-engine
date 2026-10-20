@@ -3,34 +3,34 @@
 J_SecretBase_EventScript_CheckEntrance::
 	special GetSecretBaseTypeInFrontOfPlayer
 	special CheckPlayerHasSecretBase
-	goto_if_eq 32781, TRUE, J_SecretBase_EventScript_AlreadyHasSecretBase
+	goto_if_eq VAR_RESULT, TRUE, J_SecretBase_EventScript_AlreadyHasSecretBase
 	checkfieldmove FIELD_MOVE_SECRET_POWER
-	setfieldeffectargument 0, 32781
+	setfieldeffectargument 0, VAR_RESULT
 	buffermovename STR_VAR_2, MOVE_SECRET_POWER
-	goto_if_eq 32775, 1, J_SecretBase_EventScript_Cave
-	goto_if_eq 32775, 2, J_SecretBase_EventScript_Cave
-	goto_if_eq 32775, 3, J_SecretBase_EventScript_Cave
-	goto_if_eq 32775, 4, J_SecretBase_EventScript_Cave
-	goto_if_eq 32775, 5, J_SecretBase_EventScript_Tree
-	goto_if_eq 32775, 6, J_SecretBase_EventScript_Shrub
+	goto_if_eq VAR_0x8007, SECRET_BASE_RED_CAVE, J_SecretBase_EventScript_Cave
+	goto_if_eq VAR_0x8007, SECRET_BASE_BROWN_CAVE, J_SecretBase_EventScript_Cave
+	goto_if_eq VAR_0x8007, SECRET_BASE_BLUE_CAVE, J_SecretBase_EventScript_Cave
+	goto_if_eq VAR_0x8007, SECRET_BASE_YELLOW_CAVE, J_SecretBase_EventScript_Cave
+	goto_if_eq VAR_0x8007, SECRET_BASE_TREE, J_SecretBase_EventScript_Tree
+	goto_if_eq VAR_0x8007, SECRET_BASE_SHRUB, J_SecretBase_EventScript_Shrub
 	end
 
 J_SecretBase_EventScript_Cave::
 	lockall
-	goto_if_eq 32781, 6, J_SecretBase_EventScript_CaveNoSecretPower
-	bufferpartymonnick STR_VAR_1, 32781
+	goto_if_eq VAR_RESULT, PARTY_SIZE, J_SecretBase_EventScript_CaveNoSecretPower
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	msgbox SecretBase_Text_IndentUseSecretPower, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_CancelOnEntrance
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_CancelOnEntrance
 	msgbox J_Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	dofieldeffect 11
+	dofieldeffect FLDEFF_USE_SECRET_POWER_CAVE
 	waitstate
 	goto J_SecretBase_EventScript_CaveEnter
 	end
 
 J_SecretBase_EventScript_CaveUseSecretPower::
 	lockall
-	dofieldeffect 11
+	dofieldeffect FLDEFF_USE_SECRET_POWER_CAVE
 	waitstate
 	goto J_SecretBase_EventScript_CaveEnter
 	end
@@ -47,20 +47,20 @@ J_SecretBase_EventScript_CaveEnter::
 
 J_SecretBase_EventScript_Tree::
 	lockall
-	goto_if_eq 32781, 6, J_SecretBase_EventScript_TreeNoSecretPower
-	bufferpartymonnick STR_VAR_1, 32781
+	goto_if_eq VAR_RESULT, PARTY_SIZE, J_SecretBase_EventScript_TreeNoSecretPower
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	msgbox J_SecretBase_Text_TreeUseSecretPower, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_CancelOnEntrance
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_CancelOnEntrance
 	msgbox J_Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	dofieldeffect 26
+	dofieldeffect FLDEFF_USE_SECRET_POWER_TREE
 	waitstate
 	goto J_SecretBase_EventScript_TreeEnter
 	end
 
 J_SecretBase_EventScript_TreeUseSecretPower::
 	lockall
-	dofieldeffect 26
+	dofieldeffect FLDEFF_USE_SECRET_POWER_TREE
 	waitstate
 	goto J_SecretBase_EventScript_TreeEnter
 	end
@@ -77,20 +77,20 @@ J_SecretBase_EventScript_TreeEnter::
 
 J_SecretBase_EventScript_Shrub::
 	lockall
-	goto_if_eq 32781, 6, J_SecretBase_EventScript_ShrubNoSecretPower
-	bufferpartymonnick STR_VAR_1, 32781
+	goto_if_eq VAR_RESULT, PARTY_SIZE, J_SecretBase_EventScript_ShrubNoSecretPower
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	msgbox J_SecretBase_Text_ClumpUseSecretPower, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_CancelOnEntrance
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_CancelOnEntrance
 	msgbox J_Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	dofieldeffect 27
+	dofieldeffect FLDEFF_USE_SECRET_POWER_SHRUB
 	waitstate
 	goto J_SecretBase_EventScript_ShrubEnter
 	end
 
 J_SecretBase_EventScript_ShrubUseSecretPower::
 	lockall
-	dofieldeffect 27
+	dofieldeffect FLDEFF_USE_SECRET_POWER_SHRUB
 	waitstate
 	goto J_SecretBase_EventScript_ShrubEnter
 	end
@@ -107,32 +107,32 @@ J_SecretBase_EventScript_ShrubEnter::
 
 J_SecretBase_EventScript_InitSecretBase::
 	closemessage
-	playse 9
-	setvar 20615, 0
-	setflag 0
+	playse SE_EXIT
+	setvar JOHTO_VAR_INIT_SECRET_BASE, 0
+	setflag FLAG_HIDE_SECRET_BASE_TRAINER
 	special SetPlayerSecretBase
 	special EnterSecretBase
-	setvar 32772, 0
-	setvar 32773, 0
+	setvar VAR_0x8004, 0
+	setvar VAR_0x8005, 0
 	special InitSecretBaseDecorationSprites
-	setvar 20601, 1
+	setvar JOHTO_VAR_SECRET_BASE_INITIALIZED, 1
 	waitstate
 	end
 
 J_SecretBase_EventScript_FirstEntrance::
-	applymovement 255, J_SecretBase_Movement_EnterBase
+	applymovement LOCALID_PLAYER, J_SecretBase_Movement_EnterBase
 	waitmovement 0
-	setvar 20615, 1
+	setvar JOHTO_VAR_INIT_SECRET_BASE, 1
 	msgbox J_SecretBase_Text_WantToMakeYourSecretBaseHere, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_SecretBase_EventScript_SetAsBase
+	goto_if_eq VAR_RESULT, YES, J_SecretBase_EventScript_SetAsBase
 	closemessage
-	playse 9
+	playse SE_EXIT
 	special ClearAndLeaveSecretBase
 	end
 
 J_SecretBase_EventScript_SetAsBase::
 	closemessage
-	setflag 0
+	setflag FLAG_RECEIVED_SECRET_POWER
 	special EnterNewlyCreatedSecretBase
 	waitstate
 	end
@@ -144,62 +144,62 @@ J_SecretBase_Movement_EnterBase:
 
 J_SecretBase_EventScript_Enter::
 	lockall
-	setvar 20615, 1
-	playse 9
+	setvar JOHTO_VAR_INIT_SECRET_BASE, 1
+	playse SE_EXIT
 	special IsCurSecretBaseOwnedByAnotherPlayer
-	goto_if_eq 32781, FALSE, J_SecretBase_EventScript_EnterPlayersBase
-	clearflag 0
+	goto_if_eq VAR_RESULT, FALSE, J_SecretBase_EventScript_EnterPlayersBase
+	clearflag FLAG_HIDE_SECRET_BASE_TRAINER
 	special EnterSecretBase
-	setvar 20601, 0
+	setvar JOHTO_VAR_SECRET_BASE_INITIALIZED, 0
 	waitstate
 	end
 
 J_SecretBase_EventScript_EnterPlayersBase::
-	setflag 0
+	setflag FLAG_HIDE_SECRET_BASE_TRAINER
 	special EnterSecretBase
-	setvar 20601, 0
+	setvar JOHTO_VAR_SECRET_BASE_INITIALIZED, 0
 	waitstate
 	end
 
 J_SecretBase_EventScript_AlreadyHasSecretBase::
 	checkfieldmove FIELD_MOVE_SECRET_POWER
-	goto_if_eq 32781, 6, J_SecretBase_EventScript_NoSecretPower
-	setfieldeffectargument 0, 32781
-	setorcopyvar 32772, 32781
+	goto_if_eq VAR_RESULT, PARTY_SIZE, J_SecretBase_EventScript_NoSecretPower
+	setfieldeffectargument 0, VAR_RESULT
+	setorcopyvar VAR_0x8004, VAR_RESULT
 	lockall
 	special GetSecretBaseNearbyMapName
 	msgbox J_SecretBase_Text_WouldYouLikeToMoveBases, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_CancelOnEntrance
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_CancelOnEntrance
 	msgbox J_SecretBase_Text_AllDecorationsWillBeReturned, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_CancelOnEntrance
-	fadescreenswapbuffers 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_CancelOnEntrance
+	fadescreenswapbuffers FADE_TO_BLACK
 	special MoveOutOfSecretBaseFromOutside
 	closemessage
-	fadescreenswapbuffers 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 	msgbox J_SecretBase_Text_MovingCompletedUseSecretPower, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_CancelOnEntrance
-	bufferpartymonnick STR_VAR_1, 32772
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_CancelOnEntrance
+	bufferpartymonnick STR_VAR_1, VAR_0x8004
 	buffermovename STR_VAR_2, MOVE_SECRET_POWER
 	msgbox J_Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
 	closemessage
-	goto_if_eq 32775, 1, J_SecretBase_EventScript_CaveUseSecretPower
-	goto_if_eq 32775, 2, J_SecretBase_EventScript_CaveUseSecretPower
-	goto_if_eq 32775, 3, J_SecretBase_EventScript_CaveUseSecretPower
-	goto_if_eq 32775, 4, J_SecretBase_EventScript_CaveUseSecretPower
-	goto_if_eq 32775, 5, J_SecretBase_EventScript_TreeUseSecretPower
-	goto_if_eq 32775, 6, J_SecretBase_EventScript_ShrubUseSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_RED_CAVE, J_SecretBase_EventScript_CaveUseSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_BROWN_CAVE, J_SecretBase_EventScript_CaveUseSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_BLUE_CAVE, J_SecretBase_EventScript_CaveUseSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_YELLOW_CAVE, J_SecretBase_EventScript_CaveUseSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_TREE, J_SecretBase_EventScript_TreeUseSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_SHRUB, J_SecretBase_EventScript_ShrubUseSecretPower
 	releaseall
 	end
 
 J_SecretBase_EventScript_NoSecretPower::
 	lockall
-	goto_if_eq 32775, 1, J_SecretBase_EventScript_CaveNoSecretPower
-	goto_if_eq 32775, 2, J_SecretBase_EventScript_CaveNoSecretPower
-	goto_if_eq 32775, 3, J_SecretBase_EventScript_CaveNoSecretPower
-	goto_if_eq 32775, 4, J_SecretBase_EventScript_CaveNoSecretPower
-	goto_if_eq 32775, 5, J_SecretBase_EventScript_TreeNoSecretPower
-	goto_if_eq 32775, 6, J_SecretBase_EventScript_ShrubNoSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_RED_CAVE, J_SecretBase_EventScript_CaveNoSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_BROWN_CAVE, J_SecretBase_EventScript_CaveNoSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_BLUE_CAVE, J_SecretBase_EventScript_CaveNoSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_YELLOW_CAVE, J_SecretBase_EventScript_CaveNoSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_TREE, J_SecretBase_EventScript_TreeNoSecretPower
+	goto_if_eq VAR_0x8007, SECRET_BASE_SHRUB, J_SecretBase_EventScript_ShrubNoSecretPower
 	end
 
 J_SecretBase_EventScript_CancelOnEntrance::
@@ -208,31 +208,31 @@ J_SecretBase_EventScript_CancelOnEntrance::
 	end
 
 J_SecretBase_EventScript_SetDecorationFlags::
-	setflag 9066
-	setflag 9067
-	setflag 9068
-	setflag 9069
-	setflag 9070
-	setflag 9071
-	setflag 9072
-	setflag 9073
-	setflag 9074
-	setflag 9075
-	setflag 9076
-	setflag 9077
-	setflag 9078
-	setflag 9079
+	setflag JOHTO_FLAG_DECORATION_1
+	setflag JOHTO_FLAG_DECORATION_2
+	setflag JOHTO_FLAG_DECORATION_3
+	setflag JOHTO_FLAG_DECORATION_4
+	setflag JOHTO_FLAG_DECORATION_5
+	setflag JOHTO_FLAG_DECORATION_6
+	setflag JOHTO_FLAG_DECORATION_7
+	setflag JOHTO_FLAG_DECORATION_8
+	setflag JOHTO_FLAG_DECORATION_9
+	setflag JOHTO_FLAG_DECORATION_10
+	setflag JOHTO_FLAG_DECORATION_11
+	setflag JOHTO_FLAG_DECORATION_12
+	setflag JOHTO_FLAG_DECORATION_13
+	setflag JOHTO_FLAG_DECORATION_14
 	return
 
 J_SecretBase_EventScript_InitDecorations::
-	setvar 32772, 0
-	setvar 32773, 0
+	setvar VAR_0x8004, 0
+	setvar VAR_0x8005, 0
 	special InitSecretBaseDecorationSprites
-	setvar 20601, 1
+	setvar JOHTO_VAR_SECRET_BASE_INITIALIZED, 1
 	end
 
 J_SecretBase_EventScript_SetDecoration::
-	setvar 32773, 0
+	setvar VAR_0x8005, 0
 	goto J_SecretBase_EventScript_SetDecoration2
 	end
 
@@ -241,17 +241,17 @@ J_SecretBase_EventScript_SetDecoration2::
 	end
 
 J_SecretBase_EventScript_PutAwayDecoration::
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	goto J_SecretBase_EventScript_PutAwayDecorationLoop
 	end
 
 J_SecretBase_EventScript_PutAwayDecorationLoop::
 	special PutAwayDecorationIteration
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_PutAwayDecorationEnd
-	addvar 32772, 1
-	goto_if_eq 32773, 0, J_SecretBase_EventScript_PutAwayDecorationLoop
-	removeobject 32774
-	setflag 32773
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_PutAwayDecorationEnd
+	addvar VAR_0x8004, 1
+	goto_if_eq VAR_0x8005, 0, J_SecretBase_EventScript_PutAwayDecorationLoop
+	removeobject VAR_0x8006
+	setflag VAR_0x8005
 	goto J_SecretBase_EventScript_PutAwayDecorationLoop
 	end
 
@@ -260,29 +260,29 @@ J_SecretBase_EventScript_PutAwayDecorationEnd::
 
 J_SecretBase_EventScript_RecordMixTrainer::
 	special GetSecretBaseOwnerAndState
-	goto_if_eq 32772, 0, J_SecretBase_EventScript_Trainer0
-	goto_if_eq 32772, 1, J_SecretBase_EventScript_Trainer1
-	goto_if_eq 32772, 2, J_SecretBase_EventScript_Trainer2
-	goto_if_eq 32772, 3, J_SecretBase_EventScript_Trainer3
-	goto_if_eq 32772, 4, J_SecretBase_EventScript_Trainer4
-	goto_if_eq 32772, 5, J_SecretBase_EventScript_Trainer5
-	goto_if_eq 32772, 6, J_SecretBase_EventScript_Trainer6
-	goto_if_eq 32772, 7, J_SecretBase_EventScript_Trainer7
-	goto_if_eq 32772, 8, J_SecretBase_EventScript_Trainer8
-	goto_if_eq 32772, 9, J_SecretBase_EventScript_Trainer9
+	goto_if_eq VAR_0x8004, 0, J_SecretBase_EventScript_Trainer0
+	goto_if_eq VAR_0x8004, 1, J_SecretBase_EventScript_Trainer1
+	goto_if_eq VAR_0x8004, 2, J_SecretBase_EventScript_Trainer2
+	goto_if_eq VAR_0x8004, 3, J_SecretBase_EventScript_Trainer3
+	goto_if_eq VAR_0x8004, 4, J_SecretBase_EventScript_Trainer4
+	goto_if_eq VAR_0x8004, 5, J_SecretBase_EventScript_Trainer5
+	goto_if_eq VAR_0x8004, 6, J_SecretBase_EventScript_Trainer6
+	goto_if_eq VAR_0x8004, 7, J_SecretBase_EventScript_Trainer7
+	goto_if_eq VAR_0x8004, 8, J_SecretBase_EventScript_Trainer8
+	goto_if_eq VAR_0x8004, 9, J_SecretBase_EventScript_Trainer9
 	end
 
 J_SecretBase_EventScript_Trainer0::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer0PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer0PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer0PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer0PostBattle
 	msgbox J_SecretBase_Text_Trainer0Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer0DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer0DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer0DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer0DeclineBattle
 	msgbox J_SecretBase_Text_Trainer0AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -294,7 +294,7 @@ J_SecretBase_EventScript_Trainer0PreChampion::
 
 J_SecretBase_EventScript_Trainer0DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer0DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -308,14 +308,14 @@ J_SecretBase_EventScript_Trainer0PostBattle::
 J_SecretBase_EventScript_Trainer1::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer1PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer1PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer1PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer1PostBattle
 	msgbox J_SecretBase_Text_Trainer1Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer1DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer1DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer1DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer1DeclineBattle
 	msgbox J_SecretBase_Text_Trainer1AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -327,7 +327,7 @@ J_SecretBase_EventScript_Trainer1PreChampion::
 
 J_SecretBase_EventScript_Trainer1DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer1DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -341,14 +341,14 @@ J_SecretBase_EventScript_Trainer1PostBattle::
 J_SecretBase_EventScript_Trainer2::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer2PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer2PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer2PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer2PostBattle
 	msgbox J_SecretBase_Text_Trainer2Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer2DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer2DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer2DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer2DeclineBattle
 	msgbox J_SecretBase_Text_Trainer2AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -360,7 +360,7 @@ J_SecretBase_EventScript_Trainer2PreChampion::
 
 J_SecretBase_EventScript_Trainer2DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer2DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -374,14 +374,14 @@ J_SecretBase_EventScript_Trainer2PostBattle::
 J_SecretBase_EventScript_Trainer3::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer3PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer3PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer3PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer3PostBattle
 	msgbox J_SecretBase_Text_Trainer3Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer3DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer3DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer3DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer3DeclineBattle
 	msgbox J_SecretBase_Text_Trainer3AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -393,7 +393,7 @@ J_SecretBase_EventScript_Trainer3PreChampion::
 
 J_SecretBase_EventScript_Trainer3DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer3DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -407,14 +407,14 @@ J_SecretBase_EventScript_Trainer3PostBattle::
 J_SecretBase_EventScript_Trainer4::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer4PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer4PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer4PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer4PostBattle
 	msgbox J_SecretBase_Text_Trainer4Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer4DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer4DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer4DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer4DeclineBattle
 	msgbox J_SecretBase_Text_Trainer4AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -426,7 +426,7 @@ J_SecretBase_EventScript_Trainer4PreChampion::
 
 J_SecretBase_EventScript_Trainer4DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer4DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -440,14 +440,14 @@ J_SecretBase_EventScript_Trainer4PostBattle::
 J_SecretBase_EventScript_Trainer5::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer5PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer5PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer5PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer5PostBattle
 	msgbox J_SecretBase_Text_Trainer5Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer5DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer5DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer5DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer5DeclineBattle
 	msgbox J_SecretBase_Text_Trainer5AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -459,7 +459,7 @@ J_SecretBase_EventScript_Trainer5PreChampion::
 
 J_SecretBase_EventScript_Trainer5DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer5DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -473,14 +473,14 @@ J_SecretBase_EventScript_Trainer5PostBattle::
 J_SecretBase_EventScript_Trainer6::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer6PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer6PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer6PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer6PostBattle
 	msgbox J_SecretBase_Text_Trainer6Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer6DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer6DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer6DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer6DeclineBattle
 	msgbox J_SecretBase_Text_Trainer6AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -492,7 +492,7 @@ J_SecretBase_EventScript_Trainer6PreChampion::
 
 J_SecretBase_EventScript_Trainer6DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer6DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -506,14 +506,14 @@ J_SecretBase_EventScript_Trainer6PostBattle::
 J_SecretBase_EventScript_Trainer7::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer7PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer7PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer7PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer7PostBattle
 	msgbox J_SecretBase_Text_Trainer7Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer7DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer7DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer7DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer7DeclineBattle
 	msgbox J_SecretBase_Text_Trainer7AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -525,7 +525,7 @@ J_SecretBase_EventScript_Trainer7PreChampion::
 
 J_SecretBase_EventScript_Trainer7DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer7DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -539,14 +539,14 @@ J_SecretBase_EventScript_Trainer7PostBattle::
 J_SecretBase_EventScript_Trainer8::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer8PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer8PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer8PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer8PostBattle
 	msgbox J_SecretBase_Text_Trainer8Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer8DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer8DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer8DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer8DeclineBattle
 	msgbox J_SecretBase_Text_Trainer8AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -558,7 +558,7 @@ J_SecretBase_EventScript_Trainer8PreChampion::
 
 J_SecretBase_EventScript_Trainer8DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer8DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -572,14 +572,14 @@ J_SecretBase_EventScript_Trainer8PostBattle::
 J_SecretBase_EventScript_Trainer9::
 	lock
 	faceplayer
-	goto_if_unset 10387, J_SecretBase_EventScript_Trainer9PreChampion
-	goto_if_eq 32781, 1, J_SecretBase_EventScript_Trainer9PostBattle
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, J_SecretBase_EventScript_Trainer9PreChampion
+	goto_if_eq VAR_RESULT, 1, J_SecretBase_EventScript_Trainer9PostBattle
 	msgbox J_SecretBase_Text_Trainer9Intro, MSGBOX_YESNO
-	goto_if_eq 32781, NO, J_SecretBase_EventScript_Trainer9DeclineBattle
-	setvar 32781, 1
+	goto_if_eq VAR_RESULT, NO, J_SecretBase_EventScript_Trainer9DeclineBattle
+	setvar VAR_RESULT, 1
 	special SetBattledOwnerFromResult
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, 0, J_SecretBase_EventScript_Trainer9DeclineBattle
+	goto_if_eq VAR_RESULT, 0, J_SecretBase_EventScript_Trainer9DeclineBattle
 	msgbox J_SecretBase_Text_Trainer9AcceptBattle, MSGBOX_DEFAULT
 	goto J_SecretBase_EventScript_BattleTrainer
 	end
@@ -591,7 +591,7 @@ J_SecretBase_EventScript_Trainer9PreChampion::
 
 J_SecretBase_EventScript_Trainer9DeclineBattle::
 	special DeclinedSecretBaseBattle
-	setvar 32781, 0
+	setvar VAR_RESULT, 0
 	special SetBattledOwnerFromResult
 	msgbox J_SecretBase_Text_Trainer9DeclineBattle, MSGBOX_DEFAULT
 	release
@@ -604,13 +604,13 @@ J_SecretBase_EventScript_Trainer9PostBattle::
 
 J_SecretBase_EventScript_BattleTrainer::
 	special PrepSecretBaseBattleFlags
-	setvar 32772, 1
-	setvar 32773, 0
+	setvar VAR_0x8004, SPECIAL_BATTLE_SECRET_BASE
+	setvar VAR_0x8005, 0
 	special DoSpecialTrainerBattle
 	waitstate
-	call_if_eq 32781, 3, J_SecretBase_EventScript_DrewSecretBaseBattle
-	call_if_eq 32781, 1, J_SecretBase_EventScript_WonSecretBaseBattle
-	call_if_eq 32781, 2, J_SecretBase_EventScript_LostSecretBaseBattle
+	call_if_eq VAR_RESULT, B_OUTCOME_DREW, J_SecretBase_EventScript_DrewSecretBaseBattle
+	call_if_eq VAR_RESULT, B_OUTCOME_WON, J_SecretBase_EventScript_WonSecretBaseBattle
+	call_if_eq VAR_RESULT, B_OUTCOME_LOST, J_SecretBase_EventScript_LostSecretBaseBattle
 	special HealPlayerParty
 	callnative UpdateFollowingPokemon
 	release

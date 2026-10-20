@@ -19,13 +19,13 @@ J_EventScript_Follower::
 	getfolloweraction
 
 J_EventScript_FollowerEnd::
-	waitfieldeffect 33
+	waitfieldeffect FLDEFF_EMOTE
 	release
 	end
 
 J_EventScript_FollowerLovesYou::
-	applymovement 0xFE, J_ContestHall_Movement_Heart
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_ContestHall_Movement_Heart
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	waitmoncry
 	msgbox J_gText_FollowerLovesYou, MSGBOX_DEFAULT
 	return
@@ -34,7 +34,7 @@ J_EventScript_FollowerGeneric::
 	faceplayer
 
 J_EventScript_FollowerGenericSkipFace:
-	waitfieldeffect 33
+	waitfieldeffect FLDEFF_EMOTE
 	message 0x0
 	waitmessage
 	waitbuttonpress
@@ -42,9 +42,9 @@ J_EventScript_FollowerGenericSkipFace:
 
 J_EventScript_FollowerJump::
 	faceplayer
-	applymovement 0xFE, J_FollowerSplashMovement
-	waitmovement 0xFE
-	waitfieldeffect 33
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerSplashMovement
+	waitmovement OBJ_EVENT_ID_FOLLOWER
+	waitfieldeffect FLDEFF_EMOTE
 	message 0x0
 	waitmessage
 	waitbuttonpress
@@ -367,239 +367,239 @@ J_FollowerDance:
 
 J_EventScript_FollowerIsShivering::
 	faceplayer
-	compare 32780, DIR_NORTH
+	compare VAR_FACING, DIR_NORTH
 	call_if_eq J_ShiverVertical
-	compare 32780, DIR_SOUTH
+	compare VAR_FACING, DIR_SOUTH
 	call_if_eq J_ShiverVertical
-	compare 32780, DIR_WEST
+	compare VAR_FACING, DIR_WEST
 	call_if_eq J_ShiverHorizontal
-	compare 32780, DIR_EAST
+	compare VAR_FACING, DIR_EAST
 	call_if_eq J_ShiverHorizontal
 	goto J_EventScript_FollowerGeneric
 
 J_ShiverVertical:
-	applymovement 0xFE, J_FollowerShiverVerticalMovement
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerShiverVerticalMovement
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_ShiverHorizontal:
-	applymovement 0xFE, J_FollowerShiverHorizontalMovement
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerShiverHorizontalMovement
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_EventScript_FollowerNostalgia::
-	applymovement 0xFE, J_FollowerNostalgiaMovement
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerNostalgiaMovement
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGeneric
 
 J_EventScript_FollowerHopping::
 	faceplayer
-	applymovement 0xFE, J_FollowerSkippingMovement
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerSkippingMovement
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGeneric
 
 J_JumpOnN:
-	applymovement 0xFE, J_FollowerJumpOnPlayerNorth
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerJumpOnPlayerNorth
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_JumpOnS:
-	applymovement 0xFE, J_FollowerJumpOnPlayerSouth
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerJumpOnPlayerSouth
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_JumpOnE:
-	applymovement 0xFE, J_FollowerJumpOnPlayerEast
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerJumpOnPlayerEast
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_JumpOnW:
-	applymovement 0xFE, J_FollowerJumpOnPlayerWest
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerJumpOnPlayerWest
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_EventScript_FollowerJumpOnPlayer::
 	faceplayer
-	compare 32780, DIR_NORTH
+	compare VAR_FACING, DIR_NORTH
 	call_if_eq J_JumpOnS
-	compare 32780, DIR_SOUTH
+	compare VAR_FACING, DIR_SOUTH
 	call_if_eq J_JumpOnN
-	compare 32780, DIR_WEST
+	compare VAR_FACING, DIR_WEST
 	call_if_eq J_JumpOnE
-	compare 32780, DIR_EAST
+	compare VAR_FACING, DIR_EAST
 	call_if_eq J_JumpOnW
 	goto J_EventScript_FollowerGeneric
 
 J_CuddleN:
-	applymovement 0xFE, J_FollowerCuddlingNorth
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerCuddlingNorth
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_CuddleS:
-	applymovement 0xFE, J_FollowerCuddlingSouth
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerCuddlingSouth
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_CuddleE:
-	applymovement 0xFE, J_FollowerCuddlingEast
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerCuddlingEast
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_CuddleW:
-	applymovement 0xFE, J_FollowerCuddlingWest
-	waitmovement 0xFE
+	applymovement OBJ_EVENT_ID_FOLLOWER, J_FollowerCuddlingWest
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_EventScript_FollowerCuddling::
 	faceplayer
-	compare 32780, DIR_NORTH
+	compare JOHTO_VAR_FACING, DIR_NORTH
 	call_if_eq J_CuddleS
-	compare 32780, DIR_SOUTH
+	compare JOHTO_VAR_FACING, DIR_SOUTH
 	call_if_eq J_CuddleN
-	compare 32780, DIR_WEST
+	compare JOHTO_VAR_FACING, DIR_WEST
 	call_if_eq J_CuddleE
-	compare 32780, DIR_EAST
+	compare JOHTO_VAR_FACING, DIR_EAST
 	call_if_eq J_CuddleW
 	goto J_EventScript_FollowerGeneric
 
 J_ShCuddleN:
 	applymovement 0xFE J_FollowerShiverVerticalMovement
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	applymovement 0xFE J_FollowerCuddlingNorth
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_ShCuddleS:
 	applymovement 0xFE J_FollowerShiverVerticalMovement
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	applymovement 0xFE J_FollowerCuddlingSouth
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_ShCuddleE:
 	applymovement 0xFE J_FollowerShiverHorizontalMovement
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	applymovement 0xFE J_FollowerCuddlingEast
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_ShCuddleW:
 	applymovement 0xFE J_FollowerShiverHorizontalMovement
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	applymovement 0xFE J_FollowerCuddlingWest
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_EventScript_FollowerShiverCuddling::
 	faceplayer
-	compare 32780, DIR_NORTH
+	compare VAR_FACING, DIR_NORTH
 	call_if_eq J_ShCuddleS
-	compare 32780, DIR_SOUTH
+	compare VAR_FACING, DIR_SOUTH
 	call_if_eq J_ShCuddleN
-	compare 32780, DIR_WEST
+	compare VAR_FACING, DIR_WEST
 	call_if_eq J_ShCuddleE
-	compare 32780, DIR_EAST
+	compare VAR_FACING, DIR_EAST
 	call_if_eq J_ShCuddleW
 	goto J_EventScript_FollowerGeneric
 
 J_CreepCloserN:
 	applymovement 0xFE J_FollowerGetCloserNorth
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_CreepCloserS:
 	applymovement 0xFE J_FollowerGetCloserSouth
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_CreepCloserE:
 	applymovement 0xFE J_FollowerGetCloserEast
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_CreepCloserW:
 	applymovement 0xFE J_FollowerGetCloserWest
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_EventScript_FollowerGetCloser::
 	faceplayer
-	compare 32780, DIR_NORTH
+	compare VAR_FACING, DIR_NORTH
 	call_if_eq J_CreepCloserS
-	compare 32780, DIR_SOUTH
+	compare VAR_FACING, DIR_SOUTH
 	call_if_eq J_CreepCloserN
-	compare 32780, DIR_WEST
+	compare VAR_FACING, DIR_WEST
 	call_if_eq J_CreepCloserE
-	compare 32780, DIR_EAST
+	compare VAR_FACING, DIR_EAST
 	call_if_eq J_CreepCloserW
 	goto J_EventScript_FollowerGeneric
 
 J_PokePlayerN:
 	applymovement 0xFE J_FollowerGetCloserNorth
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_PokePlayerS:
 	applymovement 0xFE J_FollowerGetCloserSouth
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_PokePlayerE:
 	applymovement 0xFE J_FollowerGetCloserEast
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_PokePlayerW:
 	applymovement 0xFE J_FollowerGetCloserWest
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	return
 
 J_EventScript_FollowerPokingPlayer::
 	faceplayer
-	compare 32780, DIR_NORTH
+	compare VAR_FACING, DIR_NORTH
 	call_if_eq J_PokePlayerS
-	compare 32780, DIR_SOUTH
+	compare VAR_FACING, DIR_SOUTH
 	call_if_eq J_PokePlayerN
-	compare 32780, DIR_WEST
+	compare VAR_FACING, DIR_WEST
 	call_if_eq J_PokePlayerE
-	compare 32780, DIR_EAST
+	compare VAR_FACING, DIR_EAST
 	call_if_eq J_PokePlayerW
 	goto J_EventScript_FollowerGeneric
 
 J_EventScript_FollowerLookAround::
 	applymovement 0xFE J_FollowerLookAround
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGeneric
 
 J_EventScript_FollowerLookAway::
 	applymovement 0xFE J_FollowerLookAway
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 J_EventScript_FollowerLookAwayBark::
 	applymovement 0xFE J_FollowerLookAwayBark
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 J_EventScript_FollowerLookAwayPoke::
 	applymovement 0xFE J_FollowerLookAwayPokeG
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 J_EventScript_FollowerPokeGround::
 	faceplayer
 	applymovement 0xFE J_FollowerPokeGround
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGeneric
 
 J_EventScript_FollowerStartled::
 	applymovement 0xFE J_FollowerStartled
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 J_EventScript_FollowerFastHopping::
 	applymovement 0xFE J_FollowerHopFast
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 J_EventScript_FollowerDizzy::
@@ -609,7 +609,7 @@ J_EventScript_FollowerDizzy::
 
 J_EventScript_FollowerLookAroundScared::
 	applymovement 0xFE J_FollowerLookAroundScared
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGeneric
 
 J_EventScript_FollowerDance::
@@ -620,11 +620,11 @@ J_EventScript_FollowerDance::
 
 J_EventScript_FollowerFaceUp::
 	applymovement 0xFE J_Common_Movement_FaceUp
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 J_EventScript_FollowerFaceResult::
-	switch 32781
+	switch JOHTO_VAR_RESULT
 	case DIR_SOUTH, J_EventScript_FollowerFaceDown
 	case DIR_NORTH, J_EventScript_FollowerFaceUp
 	case DIR_WEST, J_EventScript_FollowerFaceLeft
@@ -633,17 +633,17 @@ J_EventScript_FollowerFaceResult::
 
 J_EventScript_FollowerFaceDown:
 	applymovement 0xFE J_Common_Movement_FaceDown
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 J_EventScript_FollowerFaceLeft:
 	applymovement 0xFE J_Common_Movement_FaceLeft
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 J_EventScript_FollowerFaceRight:
 	applymovement 0xFE J_Common_Movement_FaceRight
-	waitmovement 0xFE
+	waitmovement OBJ_EVENT_ID_FOLLOWER
 	goto J_EventScript_FollowerGenericSkipFace
 
 	.align 2

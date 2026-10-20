@@ -50,19 +50,19 @@ Route34_DayCare_Text_Bookshelf4:
 Route34_DayCare_EventScript_Clerk::
 	lock
 	faceplayer
-	goto_if_set 8698, Route34_DayCare_EventScript_ClerkAfter
+	goto_if_set JOHTO_FLAG_RECEIVED_ODD_EGG, Route34_DayCare_EventScript_ClerkAfter
 	msgbox Route34_DayCare_Text_ClerkBefore, MSGBOX_DEFAULT
-	specialvar 32772, GetMaxPartySize
+	specialvar VAR_0x8004, GetMaxPartySize
 	getpartysize
-	goto_if_eq 32781, 32772, Route34_DayCare_EventScript_ClerkPartyFull
+	goto_if_eq VAR_RESULT, VAR_0x8004, Route34_DayCare_EventScript_ClerkPartyFull
 	msgbox Route34_DayCare_Text_ClerkQuestion, MSGBOX_DEFAULT
 	closemessage
-	setvar 32772, 5
-	setvar 32773, 0
+	setvar VAR_0x8004, EASY_CHAT_TYPE_INTERVIEW
+	setvar VAR_0x8005, 0
 	call J_Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	switch 32781
+	switch VAR_RESULT
 	case 0, Route34_DayCare_EventScript_ClerkRejection
 	case 1, Route34_DayCare_EventScript_GivePichu
 	case 2, Route34_DayCare_EventScript_GiveCleffa
@@ -127,8 +127,8 @@ Route34_DayCare_EventScript_Clerk_GaveEgg::
 	msgbox Route34_DayCare_Text_TakeCare, MSGBOX_DEFAULT
 	closemessage
 	delay 30
-	setflag 8698
-	playfanfare 530
+	setflag JOHTO_FLAG_RECEIVED_ODD_EGG
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	message Route34_DayCare_Text_ReceivedOddEgg
 	waitfanfare
 	closemessage
@@ -193,7 +193,7 @@ Route34_DayCare_EventScript_Ditto::
 	lock
 	faceplayer
 	waitse
-	playmoncry 132, 0
+	playmoncry SPECIES_DITTO, CRY_MODE_NORMAL
 	msgbox Route34_DayCare_Text_Ditto, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -205,32 +205,32 @@ Route34_DayCare_Text_Ditto:
 Route34_EventScript_DaycareMan::
 	lock
 	faceplayer
-	specialvar 32781, IsPartyLimitChallengeActive
-	goto_if_eq 32781, TRUE, Route34_DayCare_EventScript_ClosedForChallenge
+	specialvar VAR_RESULT, IsPartyLimitChallengeActive
+	goto_if_eq VAR_RESULT, TRUE, Route34_DayCare_EventScript_ClosedForChallenge
 	special GetDaycareMonNicknames
-	specialvar 32781, GetDaycareState
-	goto_if_eq 32781, 1, Route34_EventScript_DaycareEggWaiting
-	goto_if_eq 32781, 2, Route34_EventScript_CheckOnOneMon
-	goto_if_eq 32781, 3, Route34_EventScript_CheckOnTwoMons
+	specialvar VAR_RESULT, GetDaycareState
+	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, Route34_EventScript_DaycareEggWaiting
+	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, Route34_EventScript_CheckOnOneMon
+	goto_if_eq VAR_RESULT, DAYCARE_TWO_MONS, Route34_EventScript_CheckOnTwoMons
 	msgbox Route34_Text_SeeWifeIfYoudLikeMeToRaiseMon, MSGBOX_DEFAULT
 	release
 	end
 
 Route34_EventScript_DaycareEggWaiting::
 	msgbox Route34_Text_DoYouWantEgg, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_EventScript_DaycareAcceptEgg
+	goto_if_eq VAR_RESULT, YES, Route34_EventScript_DaycareAcceptEgg
 	msgbox Route34_Text_IWillKeepDoYouWantIt, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_EventScript_DaycareAcceptEgg
+	goto_if_eq VAR_RESULT, YES, Route34_EventScript_DaycareAcceptEgg
 	msgbox Route34_Text_IllKeepIt, MSGBOX_DEFAULT
-	clearflag 8806
+	clearflag JOHTO_FLAG_PENDING_DAYCARE_EGG
 	special RejectEggFromDayCare
 	release
 	end
 
 Route34_EventScript_DaycareAcceptEgg::
-	specialvar 32772, GetMaxPartySize
-	specialvar 32781, CalculatePlayerPartyCount
-	goto_if_ne 32781, 32772, Route34_EventScript_DaycareReceiveEgg
+	specialvar VAR_0x8004, GetMaxPartySize
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	goto_if_ne VAR_RESULT, VAR_0x8004, Route34_EventScript_DaycareReceiveEgg
 	msgbox Route34_Text_YouHaveNoRoomForIt, MSGBOX_DEFAULT
 	release
 	end
@@ -242,13 +242,13 @@ Route34_EventScript_DaycareReceiveEgg::
 	waitbuttonpress
 	msgbox Route34_Text_TakeGoodCareOfIt, MSGBOX_DEFAULT
 	special GiveEggFromDaycare
-	clearflag 8806
+	clearflag JOHTO_FLAG_PENDING_DAYCARE_EGG
 	release
 	end
 
 Route34_EventScript_CheckMonReceivedMail::
-	specialvar 32781, CheckDaycareMonReceivedMail
-	call_if_eq 32781, 1, Route34_EventScript_MonReceivedMail
+	specialvar VAR_RESULT, CheckDaycareMonReceivedMail
+	call_if_eq VAR_RESULT, 1, Route34_EventScript_MonReceivedMail
 	return
 
 Route34_EventScript_MonReceivedMail::
@@ -258,7 +258,7 @@ Route34_EventScript_MonReceivedMail::
 Route34_EventScript_CheckOnOneMon::
 	special GetDaycareMonNicknames
 	msgbox Route34_Text_YourMonIsDoingFine, MSGBOX_DEFAULT
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	call Route34_EventScript_CheckMonReceivedMail
 	release
 	end
@@ -270,9 +270,9 @@ Route34_EventScript_CheckOnTwoMons::
 	special ShowFieldMessageStringVar4
 	waitmessage
 	waitbuttonpress
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	call Route34_EventScript_CheckMonReceivedMail
-	setvar 32772, 1
+	setvar VAR_0x8004, 1
 	call Route34_EventScript_CheckMonReceivedMail
 	release
 	end
@@ -280,40 +280,40 @@ Route34_EventScript_CheckOnTwoMons::
 Route34_DayCare_EventScript_DaycareWoman::
 	lock
 	faceplayer
-	specialvar 32781, IsPartyLimitChallengeActive
-	goto_if_eq 32781, TRUE, Route34_DayCare_EventScript_ClosedForChallenge
-	specialvar 32781, GetDaycareState
-	goto_if_eq 32781, 1, Route34_DayCare_EventScript_EggWaiting
-	goto_if_eq 32781, 2, Route34_DayCare_EventScript_OneMonInDaycare
-	goto_if_eq 32781, 3, Route34_DayCare_EventScript_TwoMonsInDaycare
+	specialvar VAR_RESULT, IsPartyLimitChallengeActive
+	goto_if_eq VAR_RESULT, TRUE, Route34_DayCare_EventScript_ClosedForChallenge
+	specialvar VAR_RESULT, GetDaycareState
+	goto_if_eq VAR_RESULT, DAYCARE_EGG_WAITING, Route34_DayCare_EventScript_EggWaiting
+	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, Route34_DayCare_EventScript_OneMonInDaycare
+	goto_if_eq VAR_RESULT, DAYCARE_TWO_MONS, Route34_DayCare_EventScript_TwoMonsInDaycare
 	msgbox Route34_DayCare_Text_WouldYouLikeUsToRaiseAMon, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_DayCare_EventScript_GiveMonToRaise
+	goto_if_eq VAR_RESULT, YES, Route34_DayCare_EventScript_GiveMonToRaise
 	msgbox Route34_DayCare_Text_FineThenComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 Route34_DayCare_EventScript_GiveMonToRaise::
-	specialvar 32781, CountPartyNonEggMons
-	goto_if_eq 32781, 1, Route34_DayCare_EventScript_OnlyOneMon
-	specialvar 32781, CountPartyAliveNonEggMons
-	goto_if_eq 32781, 2, Route34_DayCare_EventScript_OnlyTwoAliveMons
+	specialvar VAR_RESULT, CountPartyNonEggMons
+	goto_if_eq VAR_RESULT, 1, Route34_DayCare_EventScript_OnlyOneMon
+	specialvar VAR_RESULT, CountPartyAliveNonEggMons
+	goto_if_eq VAR_RESULT, 2, Route34_DayCare_EventScript_OnlyTwoAliveMons
 	msgbox Route34_DayCare_Text_WhichMonShouldWeRaise, MSGBOX_DEFAULT
-	fadescreen 1
+	fadescreen FADE_TO_BLACK
 	special ChooseSendDaycareMon
 	waitstate
-	goto_if_eq 32772, 0xFF, Route34_DayCare_EventScript_ComeAgain
-	specialvar 32781, CountPartyAliveNonEggMons_IgnoreVar0x8004Slot
-	goto_if_eq 32781, 0, Route34_DayCare_EventScript_OnlyOneAliveMon
-	specialvar 32773, GetSelectedMonNicknameAndSpecies
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, Route34_DayCare_EventScript_ComeAgain
+	specialvar VAR_RESULT, CountPartyAliveNonEggMons_IgnoreVar0x8004Slot
+	goto_if_eq VAR_RESULT, 0, Route34_DayCare_EventScript_OnlyOneAliveMon
+	specialvar VAR_0x8005, GetSelectedMonNicknameAndSpecies
 	waitse
-	playmoncry 32773, 0
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
 	msgbox Route34_DayCare_Text_WellRaiseYourMon, MSGBOX_DEFAULT
 	waitmoncry
 	special StoreSelectedPokemonInDaycare
 	callnative UpdateFollowingPokemon
-	incrementgamestat 47
-	specialvar 32781, GetDaycareState
-	goto_if_eq 32781, 2, Route34_DayCare_EventScript_CanRaiseOneMore
+	incrementgamestat GAME_STAT_USED_DAYCARE
+	specialvar VAR_RESULT, GetDaycareState
+	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, Route34_DayCare_EventScript_CanRaiseOneMore
 	release
 	end
 
@@ -324,7 +324,7 @@ Route34_DayCare_EventScript_ComeAgain::
 
 Route34_DayCare_EventScript_CanRaiseOneMore::
 	msgbox Route34_DayCare_Text_WeCanRaiseOneMore, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_DayCare_EventScript_GiveMonToRaise
+	goto_if_eq VAR_RESULT, YES, Route34_DayCare_EventScript_GiveMonToRaise
 	goto Route34_DayCare_EventScript_ComeAgain
 	end
 
@@ -363,45 +363,45 @@ Route34_DayCare_EventScript_YourMonHasGrownXLevels::
 	return
 
 Route34_DayCare_EventScript_DisplayLevelsGained::
-	specialvar 32781, GetNumLevelsGainedFromDaycare
-	call_if_ne 32781, 0, Route34_DayCare_EventScript_YourMonHasGrownXLevels
+	specialvar VAR_RESULT, GetNumLevelsGainedFromDaycare
+	call_if_ne VAR_RESULT, 0, Route34_DayCare_EventScript_YourMonHasGrownXLevels
 	return
 
 Route34_DayCare_EventScript_OneMonInDaycare::
 	msgbox Route34_DayCare_Text_GoodToSeeYou, MSGBOX_DEFAULT
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	call Route34_DayCare_EventScript_DisplayLevelsGained
 	msgbox Route34_DayCare_Text_WeCanRaiseOneMore, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_DayCare_EventScript_GiveMonToRaise
+	goto_if_eq VAR_RESULT, YES, Route34_DayCare_EventScript_GiveMonToRaise
 	msgbox Route34_DayCare_Text_TakeYourMonBack, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_DayCare_EventScript_TryRetrieveMon
+	goto_if_eq VAR_RESULT, YES, Route34_DayCare_EventScript_TryRetrieveMon
 	goto Route34_DayCare_EventScript_ComeAgain
 	end
 
 Route34_DayCare_EventScript_TryRetrieveMon::
-	specialvar 32772, GetMaxPartySize
-	specialvar 32781, CalculatePlayerPartyCount
-	goto_if_eq 32781, 32772, Route34_DayCare_EventScript_NoRoom
-	specialvar 32781, GetDaycareState
-	setvar 32772, 0
-	goto_if_eq 32781, 2, Route34_DayCare_EventScript_CostPrompt
+	specialvar VAR_0x8004, GetMaxPartySize
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	goto_if_eq VAR_RESULT, VAR_0x8004, Route34_DayCare_EventScript_NoRoom
+	specialvar VAR_RESULT, GetDaycareState
+	setvar VAR_0x8004, 0
+	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, Route34_DayCare_EventScript_CostPrompt
 	special ShowDaycareLevelMenu
 	waitstate
-	copyvar 32772, 32781
-	goto_if_eq 32781, 2, Route34_DayCare_EventScript_ComeAgain
+	copyvar VAR_0x8004, VAR_RESULT
+	goto_if_eq VAR_RESULT, DAYCARE_EXITED_LEVEL_MENU, Route34_DayCare_EventScript_ComeAgain
 	goto Route34_DayCare_EventScript_CostPrompt
 	end
 
 Route34_DayCare_EventScript_CostPrompt::
 	special GetDaycareCost
 	msgbox Route34_DayCare_Text_ItWillCostX, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_DayCare_EventScript_CheckEnoughMoney
+	goto_if_eq VAR_RESULT, YES, Route34_DayCare_EventScript_CheckEnoughMoney
 	goto Route34_DayCare_EventScript_ComeAgain
 	end
 
 Route34_DayCare_EventScript_CheckEnoughMoney::
-	specialvar 32781, IsEnoughForCostInVar0x8005
-	goto_if_eq 32781, 1, Route34_DayCare_EventScript_RetrieveMon
+	specialvar VAR_RESULT, IsEnoughForCostInVar0x8005
+	goto_if_eq VAR_RESULT, 1, Route34_DayCare_EventScript_RetrieveMon
 	msgbox Route34_DayCare_Text_NotEnoughMoney, MSGBOX_DEFAULT
 	release
 	end
@@ -409,22 +409,22 @@ Route34_DayCare_EventScript_CheckEnoughMoney::
 Route34_DayCare_EventScript_RetrieveMon::
 
 
-	specialvar 32781, TakePokemonFromDaycare
+	specialvar VAR_RESULT, TakePokemonFromDaycare
 	special SubtractMoneyFromVar0x8005
-	playse 95
+	playse SE_SHOP
 	msgbox Route34_DayCare_Text_HeresYourMon, MSGBOX_DEFAULT
 	waitse
-	playmoncry 32781, 0
+	playmoncry VAR_RESULT, CRY_MODE_NORMAL
 	msgbox Route34_DayCare_Text_TookBackMon, MSGBOX_DEFAULT
 	waitmoncry
-	specialvar 32781, GetDaycareState
-	goto_if_eq 32781, 2, Route34_DayCare_EventScript_AskRetrieveOtherMon
+	specialvar VAR_RESULT, GetDaycareState
+	goto_if_eq VAR_RESULT, DAYCARE_ONE_MON, Route34_DayCare_EventScript_AskRetrieveOtherMon
 	goto Route34_DayCare_EventScript_ComeAgain
 	end
 
 Route34_DayCare_EventScript_AskRetrieveOtherMon::
 	msgbox Route34_DayCare_Text_TakeOtherOneBackToo, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_DayCare_EventScript_TryRetrieveMon
+	goto_if_eq VAR_RESULT, YES, Route34_DayCare_EventScript_TryRetrieveMon
 	goto Route34_DayCare_EventScript_ComeAgain
 	end
 
@@ -460,12 +460,12 @@ Route34_DayCare_EventScript_UnusedEnd::
 
 Route34_DayCare_EventScript_TwoMonsInDaycare::
 	msgbox Route34_DayCare_Text_GoodToSeeYou, MSGBOX_DEFAULT
-	setvar 32772, 0
+	setvar VAR_0x8004, 0
 	call Route34_DayCare_EventScript_DisplayLevelsGained
-	setvar 32772, 1
+	setvar VAR_0x8004, 1
 	call Route34_DayCare_EventScript_DisplayLevelsGained
 	msgbox Route34_DayCare_Text_TakeYourMonBack, MSGBOX_YESNO
-	goto_if_eq 32781, YES, Route34_DayCare_EventScript_TryRetrieveMon
+	goto_if_eq VAR_RESULT, YES, Route34_DayCare_EventScript_TryRetrieveMon
 	msgbox Route34_DayCare_Text_ComeAgain, MSGBOX_DEFAULT
 	release
 	end

@@ -6,11 +6,11 @@ LakeOfRage_House1_hns_MapScripts::
 LakeOfRage_House1_EventScript_HiddenPowerGuy::
 	lock
 	faceplayer
-	goto_if_set 8711, LakeOfRage_House1_EventScript_HiddenPowerGuyAfter
+	goto_if_set JOHTO_FLAG_GOT_HIDDEN_POWER, LakeOfRage_House1_EventScript_HiddenPowerGuyAfter
 	msgbox HiddenPowerGuy_Text_Intro, MSGBOX_DEFAULT
-	giveitem 591
+	giveitem ITEM_TM_HIDDEN_POWER
 	msgbox HiddenPowerGuy_Text_Explanation, MSGBOX_DEFAULT
-	setflag 8711
+	setflag JOHTO_FLAG_GOT_HIDDEN_POWER
 	closemessage
 	release
 	end

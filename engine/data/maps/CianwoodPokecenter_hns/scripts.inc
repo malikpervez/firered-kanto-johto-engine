@@ -1,19 +1,19 @@
 @ Johto (data/maps/CianwoodPokecenter_hns/scripts.inc), as built into the FireRed game.
 
 CianwoodPokecenter_hns_MapScripts::
-	map_script 3, CianwoodPokecenter_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, CianwoodPokecenter_OnTransition
 	.byte 0
 
 CianwoodPokecenter_OnTransition::
-	setrespawn 135
+	setrespawn JOHTO_HEAL_LOCATION_CIANWOOD_CITY_HNS
 	end
 
 CianwoodPokemoncenter_EventScript_Fisher::
 	lock
 	faceplayer
-	goto_if_set 1, CianwoodPokemoncenter_EventScript_FisherNormal
+	goto_if_set FLAG_TEMP_1, CianwoodPokemoncenter_EventScript_FisherNormal
 	checkfieldmove FIELD_MOVE_SURF
-	goto_if_eq 32781, 6, CianwoodPokemoncenter_EventScript_FisherGiveTentacool
+	goto_if_eq VAR_RESULT, PARTY_SIZE, CianwoodPokemoncenter_EventScript_FisherGiveTentacool
 
 CianwoodPokemoncenter_EventScript_FisherNormal::
 	msgbox CianwoodPokemoncenter_Text_Fisher1, MSGBOX_DEFAULT
@@ -25,11 +25,11 @@ CianwoodPokemoncenter_EventScript_FisherGiveTentacool::
 	msgbox CianwoodPokemoncenter_Text_Fisher2, MSGBOX_DEFAULT
 
 
-	setvar 16385, 72
-	bufferspeciesname STR_VAR_1, 72
-	givemon 72, 25
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TENTACOOL
+	bufferspeciesname STR_VAR_1, SPECIES_TENTACOOL
+	givemon SPECIES_TENTACOOL, 25
 	call J_Common_EventScript_GiftMon
-	setflag 1
+	setflag FLAG_TEMP_1
 
 	closemessage
 	release
@@ -61,7 +61,7 @@ CianwoodCity_Text_PokecenterLass:
 CianwoodGym_EventScript_GymGuide::
 	lock
 	faceplayer
-	goto_if_set 8747, CianwoodGym_EventScript_GymGuideAfter
+	goto_if_set JOHTO_FLAG_DEFEATED_CIANWOOD_GYM, CianwoodGym_EventScript_GymGuideAfter
 	msgbox CianwoodCity_Text_GymGuide, MSGBOX_DEFAULT
 	closemessage
 	release

@@ -239,14 +239,14 @@ J_BerryBlender_EventScript_BerryBlender1::
 
 
 
-	goto_if_unset 10399, J_BerryBlender_EventScript_TooWeakToBlend
+	goto_if_unset JOHTO_FLAG_IS_CHAMPION, J_BerryBlender_EventScript_TooWeakToBlend
 
-	goto_if_unset 0, J_BerryBlender_EventScript_BlendMasterPresent
+	goto_if_unset FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER, J_BerryBlender_EventScript_BlendMasterPresent
 	setvar NUM_OPPONENTS, 1
-	applymovement 16, J_BerryBlender_Movement_BlendLeaderWalkInPlace
+	applymovement LOCALID_BLEND_MASTER, J_BerryBlender_Movement_BlendLeaderWalkInPlace
 	waitmovement 0
 	msgbox J_BerryBlender_Text_WantToMakePokeblocks, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BerryBlender_EventScript_TryUseBerryBlender1
+	goto_if_eq VAR_RESULT, YES, J_BerryBlender_EventScript_TryUseBerryBlender1
 	goto J_BerryBlender_EventScript_DeclineBlender1
 	end
 
@@ -272,7 +272,7 @@ J_BerryBlender_EventScript_DeclineBlender1:
 J_BerryBlender_EventScript_Blender1NoBerries:
 	msgbox J_BerryBlender_Text_DontHaveAnyBerries, MSGBOX_DEFAULT
 	dotimebasedevents
-	goto_if_set 0, J_BerryBlender_EventScript_Blender1NoSpareBerries
+	goto_if_set FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY, J_BerryBlender_EventScript_Blender1NoSpareBerries
 	goto J_BerryBlender_EventScript_Blender1GiveSpareBerry
 	end
 
@@ -284,13 +284,13 @@ J_BerryBlender_EventScript_Blender1NoSpareBerries:
 J_BerryBlender_EventScript_Blender1GiveSpareBerry:
 	msgbox J_BerryBlender_Text_CanHaveOneOfMyBerries, MSGBOX_DEFAULT
 	giveitem ITEM_PECHA_BERRY
-	setflag 0
+	setflag FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY
 	goto J_BerryBlender_EventScript_UseBerryBlender1
 	end
 
 J_BerryBlender_EventScript_UseBerryBlender1:
 	msgbox J_BerryBlender_Text_KnowHowToMakePokeblocks, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BerryBlender_EventScript_StartBlender1
+	goto_if_eq VAR_RESULT, YES, J_BerryBlender_EventScript_StartBlender1
 	goto J_BerryBlender_EventScript_ExplainBlending1
 	end
 
@@ -306,18 +306,18 @@ J_BerryBlender_EventScript_ExplainBlending1:
 
 J_BerryBlender_EventScript_TryUseBerryBlender1:
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_Blender1NoCase
-	specialvar 32781, GetFirstFreePokeblockSlot
-	goto_if_eq 32781, 65535, J_BerryBlender_EventScript_Blender1CaseFull
-	specialvar 32781, PlayerHasBerries
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_Blender1NoBerries
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_Blender1NoCase
+	specialvar VAR_RESULT, GetFirstFreePokeblockSlot
+	goto_if_eq VAR_RESULT, 65535, J_BerryBlender_EventScript_Blender1CaseFull
+	specialvar VAR_RESULT, PlayerHasBerries
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_Blender1NoBerries
 	msgbox J_BerryBlender_Text_Excellent, MSGBOX_DEFAULT
 	goto J_BerryBlender_EventScript_UseBerryBlender1
 	end
 
 J_BerryBlender_EventScript_DoBerryBlending:
-	copyvar 32772, NUM_OPPONENTS
-	fadescreen 1
+	copyvar VAR_0x8004, NUM_OPPONENTS
+	fadescreen FADE_TO_BLACK
 	special DoBerryBlending
 	waitstate
 	releaseall
@@ -336,11 +336,11 @@ J_BerryBlender_EventScript_Blender1NoCase:
 J_BerryBlender_EventScript_BerryBlender2::
 	lockall
 	setvar NUM_OPPONENTS, 2
-	applymovement 10, J_Common_Movement_FaceOriginalDirection
-	applymovement 3, J_BerryBlender_Movement_BlendLeaderWalkInPlace
+	applymovement LOCALID_CONTEST_LOBBY_BLENDER_2_PARTICIPANT, J_Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_CONTEST_LOBBY_BLENDER_2_LEADER, J_BerryBlender_Movement_BlendLeaderWalkInPlace
 	waitmovement 0
 	msgbox J_BerryBlender_Text_WantToBlendPokeblocksWithUs, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BerryBlender_EventScript_TryUseBerryBlender2
+	goto_if_eq VAR_RESULT, YES, J_BerryBlender_EventScript_TryUseBerryBlender2
 	goto J_BerryBlender_EventScript_DeclineBlender2
 	end
 
@@ -356,7 +356,7 @@ J_BerryBlender_EventScript_Blender2NoBerries:
 
 J_BerryBlender_EventScript_UseBerryBlender2:
 	msgbox J_BerryBlender_Text_KnowHowToMakePokeblocks2, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BerryBlender_EventScript_StartBlender2
+	goto_if_eq VAR_RESULT, YES, J_BerryBlender_EventScript_StartBlender2
 	goto J_BerryBlender_EventScript_ExplainBlending2
 	end
 
@@ -371,14 +371,14 @@ J_BerryBlender_EventScript_ExplainBlending2:
 	end
 
 J_BerryBlender_EventScript_TryUseBerryBlender2:
-	specialvar 32781, PlayerHasBerries
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_Blender2NoBerries
+	specialvar VAR_RESULT, PlayerHasBerries
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_Blender2NoBerries
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_Blender2NoCase
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_Blender2NoCase
 	msgbox J_BerryBlender_Text_Okay, MSGBOX_DEFAULT
-	specialvar 32781, GetFirstFreePokeblockSlot
-	goto_if_ne 32781, 65535, J_BerryBlender_EventScript_UseBerryBlender2
-	goto_if_eq 32781, 65535, J_BerryBlender_EventScript_Blender2CaseFull
+	specialvar VAR_RESULT, GetFirstFreePokeblockSlot
+	goto_if_ne VAR_RESULT, 65535, J_BerryBlender_EventScript_UseBerryBlender2
+	goto_if_eq VAR_RESULT, 65535, J_BerryBlender_EventScript_Blender2CaseFull
 	end
 
 J_BerryBlender_EventScript_Blender2CaseFull:
@@ -393,14 +393,14 @@ J_BerryBlender_EventScript_Blender2NoCase:
 
 J_BerryBlender_EventScript_BerryBlender3::
 	lockall
-	setvar 32776, 15
+	setvar VAR_0x8008, LOCALID_CONTEST_LOBBY_BLENDER_3_LEADER
 	setvar NUM_OPPONENTS, 3
-	applymovement 9, J_Common_Movement_FaceOriginalDirection
-	applymovement 17, J_Common_Movement_FaceOriginalDirection
-	applymovement 32776, J_BerryBlender_Movement_BlendLeaderWalkInPlace
+	applymovement LOCALID_CONTEST_LOBBY_BLENDER_3_PARTICIPANT_1, J_Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_CONTEST_LOBBY_BLENDER_3_PARTICIPANT_2, J_Common_Movement_FaceOriginalDirection
+	applymovement VAR_0x8008, J_BerryBlender_Movement_BlendLeaderWalkInPlace
 	waitmovement 0
 	msgbox J_BerryBlender_Text_LookGoodAtBlendingJoinUs, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BerryBlender_EventScript_TryUseBlender3
+	goto_if_eq VAR_RESULT, YES, J_BerryBlender_EventScript_TryUseBlender3
 	goto J_BerryBlender_EventScript_DeclineBlender3
 	end
 
@@ -416,7 +416,7 @@ J_BerryBlender_EventScript_Blender3NoBerries:
 
 J_BerryBlender_EventScript_UseBerryBlender3:
 	msgbox J_BerryBlender_Text_KnowHowToMakePokeblocks3, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BerryBlender_EventScript_StartBlender3
+	goto_if_eq VAR_RESULT, YES, J_BerryBlender_EventScript_StartBlender3
 	goto J_BerryBlender_EventScript_ExplainBlending3
 	end
 
@@ -431,14 +431,14 @@ J_BerryBlender_EventScript_ExplainBlending3:
 	end
 
 J_BerryBlender_EventScript_TryUseBlender3:
-	specialvar 32781, PlayerHasBerries
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_Blender3NoBerries
+	specialvar VAR_RESULT, PlayerHasBerries
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_Blender3NoBerries
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_Blender3NoCase
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_Blender3NoCase
 	msgbox J_BerryBlender_Text_OhDear, MSGBOX_DEFAULT
-	specialvar 32781, GetFirstFreePokeblockSlot
-	goto_if_ne 32781, 65535, J_BerryBlender_EventScript_UseBerryBlender3
-	goto_if_eq 32781, 65535, J_BerryBlender_EventScript_Blender3CaseFull
+	specialvar VAR_RESULT, GetFirstFreePokeblockSlot
+	goto_if_ne VAR_RESULT, 65535, J_BerryBlender_EventScript_UseBerryBlender3
+	goto_if_eq VAR_RESULT, 65535, J_BerryBlender_EventScript_Blender3CaseFull
 	end
 
 J_BerryBlender_EventScript_Blender3CaseFull:
@@ -455,7 +455,7 @@ J_BerryBlender_EventScript_BlendMasterPresent:
 	lockall
 	setvar NUM_OPPONENTS, 1
 	msgbox J_BerryBlender_Text_SeeMyMasteryInAction, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BerryBlender_EventScript_TryBlendWithBlendMaster
+	goto_if_eq VAR_RESULT, YES, J_BerryBlender_EventScript_TryBlendWithBlendMaster
 	msgbox J_BerryBlender_Text_TooBusyNowIsee, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -467,17 +467,17 @@ J_BerryBlender_EventScript_BlendMasterNoBerries:
 
 J_BerryBlender_EventScript_TryBlendWithBlendMaster:
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_BlendMasterNoCase
-	specialvar 32781, PlayerHasBerries
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_BlendMasterNoBerries
-	specialvar 32781, GetFirstFreePokeblockSlot
-	goto_if_ne 32781, 65535, J_BerryBlender_EventScript_BlendWithBlendMaster
-	goto_if_eq 32781, 65535, J_BerryBlender_EventScript_BlendMasterCaseFull
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_BlendMasterNoCase
+	specialvar VAR_RESULT, PlayerHasBerries
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_BlendMasterNoBerries
+	specialvar VAR_RESULT, GetFirstFreePokeblockSlot
+	goto_if_ne VAR_RESULT, 65535, J_BerryBlender_EventScript_BlendWithBlendMaster
+	goto_if_eq VAR_RESULT, 65535, J_BerryBlender_EventScript_BlendMasterCaseFull
 	end
 
 J_BerryBlender_EventScript_BlendWithBlendMaster:
 	msgbox J_BerryBlender_Text_BlendMasterKnowHowToMakePokeblocks, MSGBOX_YESNO
-	call_if_eq 32781, NO, J_BerryBlender_EventScript_BlendMasterExplainBlending
+	call_if_eq VAR_RESULT, NO, J_BerryBlender_EventScript_BlendMasterExplainBlending
 	msgbox J_BerryBlender_Text_BlendMasterLetsBerryBlender, MSGBOX_DEFAULT
 	goto J_BerryBlender_EventScript_DoBerryBlending
 	end
@@ -509,7 +509,7 @@ J_BerryBlender_EventScript_Blender2Twin::
 	end
 
 J_BerryBlender_EventScript_Blender1ExpertM::
-	setvar 32776, 15
+	setvar VAR_0x8008, 15
 	goto J_BerryBlender_EventScript_ExpertMCheckGiveBerry
 	end
 
@@ -517,9 +517,9 @@ J_BerryBlender_EventScript_ExpertMCheckGiveBerry:
 	lock
 	faceplayer
 	msgbox J_BerryBlender_Text_LoveMakingPokeblocks, MSGBOX_DEFAULT
-	specialvar 32781, PlayerHasBerries
-	goto_if_eq 32781, TRUE, J_BerryBlender_EventScript_ExpertMPlayerHasBerries
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_ExpertMNoBerries
+	specialvar VAR_RESULT, PlayerHasBerries
+	goto_if_eq VAR_RESULT, TRUE, J_BerryBlender_EventScript_ExpertMPlayerHasBerries
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_ExpertMNoBerries
 	end
 
 J_BerryBlender_EventScript_ExpertMPlayerHasBerries:
@@ -529,11 +529,11 @@ J_BerryBlender_EventScript_ExpertMPlayerHasBerries:
 
 J_BerryBlender_EventScript_ExpertMNoBerries:
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_ExpertMNoSpareBerries
-	specialvar 32781, GetFirstFreePokeblockSlot
-	goto_if_eq 32781, 65535, J_BerryBlender_EventScript_ExpertMNoSpareBerries
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_ExpertMNoSpareBerries
+	specialvar VAR_RESULT, GetFirstFreePokeblockSlot
+	goto_if_eq VAR_RESULT, 65535, J_BerryBlender_EventScript_ExpertMNoSpareBerries
 	dotimebasedevents
-	goto_if_set 0, J_BerryBlender_EventScript_ExpertMNoSpareBerries
+	goto_if_set FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY, J_BerryBlender_EventScript_ExpertMNoSpareBerries
 	goto J_BerryBlender_EventScript_ExpertMGiveBerry
 	end
 
@@ -545,7 +545,7 @@ J_BerryBlender_EventScript_ExpertMNoSpareBerries:
 J_BerryBlender_EventScript_ExpertMGiveBerry:
 	msgbox J_BerryBlender_Text_DontHaveAnyBerriesHaveOne, MSGBOX_DEFAULT
 	giveitem ITEM_PECHA_BERRY
-	setflag 0
+	setflag FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY
 	msgbox J_BerryBlender_Text_UseItToMakePokeblocksTogether, MSGBOX_DEFAULT
 	release
 	end
@@ -556,19 +556,19 @@ J_BerryBlender_Movement_BlendLeaderWalkInPlace:
 
 J_BerryBlender_EventScript_BerryBlenderLink::
 	lockall
-	specialvar 32781, PlayerHasBerries
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_LinkBlenderNoBerries
+	specialvar VAR_RESULT, PlayerHasBerries
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_LinkBlenderNoBerries
 	checkitem ITEM_POKEBLOCK_CASE
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_LinkBlenderNoCase
-	specialvar 32781, GetFirstFreePokeblockSlot
-	goto_if_ne 32781, 65535, J_BerryBlender_EventScript_LinkBlenderSaveGame
-	goto_if_eq 32781, 65535, J_BerryBlender_EventScript_LinkBlenderCaseFull
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_LinkBlenderNoCase
+	specialvar VAR_RESULT, GetFirstFreePokeblockSlot
+	goto_if_ne VAR_RESULT, 65535, J_BerryBlender_EventScript_LinkBlenderSaveGame
+	goto_if_eq VAR_RESULT, 65535, J_BerryBlender_EventScript_LinkBlenderCaseFull
 	end
 
 J_BerryBlender_EventScript_LinkBlenderSaveGame:
 	msgbox J_BerryBlender_Text_SaveGameBeforeBerryBlenderLink, MSGBOX_YESNO
-	goto_if_eq 32781, YES, J_BerryBlender_EventScript_TryDoLinkBlender
-	goto_if_eq 32781, NO, J_BerryBlender_EventScript_CancelLinkBlender
+	goto_if_eq VAR_RESULT, YES, J_BerryBlender_EventScript_TryDoLinkBlender
+	goto_if_eq VAR_RESULT, NO, J_BerryBlender_EventScript_CancelLinkBlender
 	end
 
 J_BerryBlender_EventScript_LinkBlenderNoBerries:
@@ -578,18 +578,18 @@ J_BerryBlender_EventScript_LinkBlenderNoBerries:
 
 J_BerryBlender_EventScript_TryDoLinkBlender:
 	call J_Common_EventScript_SaveGame
-	goto_if_eq 32781, FALSE, J_BerryBlender_EventScript_CancelLinkBlender
-	specialvar 32781, IsWirelessAdapterConnected
-	goto_if_eq 32781, TRUE, J_BerryBlender_EventScript_StartDecideLinkLeader
+	goto_if_eq VAR_RESULT, FALSE, J_BerryBlender_EventScript_CancelLinkBlender
+	specialvar VAR_RESULT, IsWirelessAdapterConnected
+	goto_if_eq VAR_RESULT, TRUE, J_BerryBlender_EventScript_StartDecideLinkLeader
 	message J_BerryBlender_Text_SearchingForFriends
 	waitmessage
 	special TryBerryBlenderLinkup
 	waitstate
-	goto_if_eq 32781, 1, J_BerryBlender_EventScript_SpawnLinkPartners
-	goto_if_eq 32781, 2, J_BerryBlender_EventScript_CloseLinkNotReady
-	goto_if_eq 32781, 3, J_BerryBlender_EventScript_CloseLinkDifferentSelections
-	goto_if_eq 32781, 5, J_BerryBlender_EventScript_CloseLink
-	goto_if_eq 32781, 6, J_BerryBlender_EventScript_LinkError
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_BerryBlender_EventScript_SpawnLinkPartners
+	goto_if_eq VAR_RESULT, LINKUP_SOMEONE_NOT_READY, J_BerryBlender_EventScript_CloseLinkNotReady
+	goto_if_eq VAR_RESULT, LINKUP_DIFF_SELECTIONS, J_BerryBlender_EventScript_CloseLinkDifferentSelections
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_BerryBlender_EventScript_CloseLink
+	goto_if_eq VAR_RESULT, LINKUP_CONNECTION_ERROR, J_BerryBlender_EventScript_LinkError
 	end
 
 J_BerryBlender_EventScript_TwoPlayerLink:
@@ -608,8 +608,8 @@ J_BerryBlender_EventScript_FourPlayerLink:
 	end
 
 J_BerryBlender_EventScript_DoLinkBerryBlending:
-	setvar 32772, 0
-	fadescreen 1
+	setvar VAR_0x8004, 0
+	fadescreen FADE_TO_BLACK
 	removeobject 240
 	removeobject 239
 	removeobject 238
@@ -658,51 +658,51 @@ J_BerryBlender_EventScript_LinkError:
 	end
 
 J_BerryBlender_EventScript_SpawnLinkPartners:
-	fadescreen 1
-	specialvar 32781, GetLinkPartnerNames
-	copyvar 32776, 32781
-	copyvar 32772, 32776
+	fadescreen FADE_TO_BLACK
+	specialvar VAR_RESULT, GetLinkPartnerNames
+	copyvar VAR_0x8008, VAR_RESULT
+	copyvar VAR_0x8004, VAR_0x8008
 	special SpawnLinkPartnerObjectEvent
 	goto J_BerryBlender_EventScript_LinkPlayersArrived
 	end
 
 J_BerryBlender_EventScript_LinkPlayersArrived:
-	fadescreen 0
-	switch 32776
+	fadescreen FADE_FROM_BLACK
+	switch VAR_0x8008
 	case 2, J_BerryBlender_EventScript_TwoPlayerLink
 	case 3, J_BerryBlender_EventScript_ThreePlayerLink
 	case 4, J_BerryBlender_EventScript_FourPlayerLink
 	end
 
 J_BerryBlender_EventScript_StartDecideLinkLeader:
-	setvar 32772, 13
+	setvar VAR_0x8004, LINK_GROUP_BERRY_BLENDER
 	goto J_BerryBlender_EventScript_DecideLinkLeader
 	end
 
 J_BerryBlender_EventScript_DecideLinkLeader:
 	message J_LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader
 	waitmessage
-	multichoice 16, 6, 81, FALSE
-	switch 32781
+	multichoice 16, 6, MULTI_LINK_LEADER, FALSE
+	switch VAR_RESULT
 	case 0, J_BerryBlender_EventScript_TryJoinGroup
 	case 1, J_BerryBlender_EventScript_TryLeadGroup
 	case 2, J_BerryBlender_EventScript_CloseLink
-	case 127, J_BerryBlender_EventScript_CloseLink
+	case MULTI_B_PRESSED, J_BerryBlender_EventScript_CloseLink
 	end
 
 J_BerryBlender_EventScript_TryLeadGroup:
 	call J_BerryBlender_EventScript_TryBecomeLinkLeader
-	goto_if_eq 32781, 1, J_BerryBlender_EventScript_LinkLeaderDecided
-	goto_if_eq 32781, 5, J_BerryBlender_EventScript_DecideLinkLeader
-	goto_if_eq 32781, 8, J_BerryBlender_EventScript_TryLeadGroup
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_BerryBlender_EventScript_LinkLeaderDecided
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_BerryBlender_EventScript_DecideLinkLeader
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_BerryBlender_EventScript_TryLeadGroup
 	release
 	end
 
 J_BerryBlender_EventScript_TryJoinGroup:
 	call J_BerryBlender_EventScript_TryJoinLinkGroup
-	goto_if_eq 32781, 1, J_BerryBlender_EventScript_LinkLeaderDecided
-	goto_if_eq 32781, 5, J_BerryBlender_EventScript_DecideLinkLeader
-	goto_if_eq 32781, 8, J_BerryBlender_EventScript_TryJoinGroup
+	goto_if_eq VAR_RESULT, LINKUP_SUCCESS, J_BerryBlender_EventScript_LinkLeaderDecided
+	goto_if_eq VAR_RESULT, LINKUP_FAILED, J_BerryBlender_EventScript_DecideLinkLeader
+	goto_if_eq VAR_RESULT, LINKUP_RETRY_ROLE_ASSIGN, J_BerryBlender_EventScript_TryJoinGroup
 	release
 	end
 
