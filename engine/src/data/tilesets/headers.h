@@ -36,6 +36,9 @@ const struct Tileset gTileset_SecretBaseRedCave =
 const struct Tileset *const gTilesetPointer_SecretBase = &gTileset_SecretBase;
 const struct Tileset *const gTilesetPointer_SecretBaseRedCave = &gTileset_SecretBaseRedCave;
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_General = {0};
+#else
 const struct Tileset gTileset_General =
 {
     .isCompressed = TRUE,
@@ -46,6 +49,7 @@ const struct Tileset gTileset_General =
     .metatileAttributes = gMetatileAttributes_General,
     .callback = InitTilesetAnim_General,
 };
+#endif
 
 const struct Tileset gTileset_Building =
 {
@@ -58,6 +62,9 @@ const struct Tileset gTileset_Building =
     .callback = InitTilesetAnim_Building,
 };
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_TrainerHill = {0};
+#else
 const struct Tileset gTileset_TrainerHill =
 {
     .isCompressed = TRUE,
@@ -68,7 +75,11 @@ const struct Tileset gTileset_TrainerHill =
     .metatileAttributes = gMetatileAttributes_TrainerHill,
     .callback = NULL,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattleTent = {0};
+#else
 const struct Tileset gTileset_BattleTent =
 {
     .isCompressed = TRUE,
@@ -79,6 +90,7 @@ const struct Tileset gTileset_BattleTent =
     .metatileAttributes = gMetatileAttributes_BattleTent,
     .callback = NULL,
 };
+#endif
 
 const struct Tileset gTileset_Rustboro =
 {
@@ -124,6 +136,9 @@ const struct Tileset gTileset_IslandHarbor =
     .callback = NULL,
 };
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattleFrontierOutsideWest = {0};
+#else
 const struct Tileset gTileset_BattleFrontierOutsideWest =
 {
     .isCompressed = TRUE,
@@ -134,7 +149,11 @@ const struct Tileset gTileset_BattleFrontierOutsideWest =
     .metatileAttributes = gMetatileAttributes_BattleFrontierOutsideWest,
     .callback = InitTilesetAnim_BattleFrontierOutsideWest,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattleFrontierOutsideEast = {0};
+#else
 const struct Tileset gTileset_BattleFrontierOutsideEast =
 {
     .isCompressed = TRUE,
@@ -145,7 +164,11 @@ const struct Tileset gTileset_BattleFrontierOutsideEast =
     .metatileAttributes = gMetatileAttributes_BattleFrontierOutsideEast,
     .callback = InitTilesetAnim_BattleFrontierOutsideEast,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_PokemonCenter = {0};
+#else
 const struct Tileset gTileset_PokemonCenter =
 {
     .isCompressed = TRUE,
@@ -156,7 +179,11 @@ const struct Tileset gTileset_PokemonCenter =
     .metatileAttributes = gMetatileAttributes_PokemonCenter,
     .callback = NULL,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_Shop = {0};
+#else
 const struct Tileset gTileset_Shop =
 {
     .isCompressed = TRUE,
@@ -167,7 +194,11 @@ const struct Tileset gTileset_Shop =
     .metatileAttributes = gMetatileAttributes_Shop,
     .callback = NULL,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattleFrontier = {0};
+#else
 const struct Tileset gTileset_BattleFrontier =
 {
     .isCompressed = TRUE,
@@ -178,7 +209,11 @@ const struct Tileset gTileset_BattleFrontier =
     .metatileAttributes = gMetatileAttributes_BattleFrontier,
     .callback = NULL,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattlePalace = {0};
+#else
 const struct Tileset gTileset_BattlePalace =
 {
     .isCompressed = TRUE,
@@ -189,7 +224,11 @@ const struct Tileset gTileset_BattlePalace =
     .metatileAttributes = gMetatileAttributes_BattlePalace,
     .callback = NULL,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattleDome = {0};
+#else
 const struct Tileset gTileset_BattleDome =
 {
     .isCompressed = TRUE,
@@ -200,7 +239,11 @@ const struct Tileset gTileset_BattleDome =
     .metatileAttributes = gMetatileAttributes_BattleDome,
     .callback = InitTilesetAnim_BattleDome,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattleFactory = {0};
+#else
 const struct Tileset gTileset_BattleFactory =
 {
     .isCompressed = TRUE,
@@ -211,7 +254,11 @@ const struct Tileset gTileset_BattleFactory =
     .metatileAttributes = gMetatileAttributes_BattleFactory,
     .callback = NULL,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattlePike = {0};
+#else
 const struct Tileset gTileset_BattlePike =
 {
     .isCompressed = TRUE,
@@ -222,7 +269,11 @@ const struct Tileset gTileset_BattlePike =
     .metatileAttributes = gMetatileAttributes_BattlePike,
     .callback = NULL,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattleArena = {0};
+#else
 const struct Tileset gTileset_BattleArena =
 {
     .isCompressed = TRUE,
@@ -233,7 +284,11 @@ const struct Tileset gTileset_BattleArena =
     .metatileAttributes = gMetatileAttributes_BattleArena,
     .callback = NULL,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattlePyramid = {0};
+#else
 const struct Tileset gTileset_BattlePyramid =
 {
     .isCompressed = TRUE,
@@ -244,7 +299,11 @@ const struct Tileset gTileset_BattlePyramid =
     .metatileAttributes = gMetatileAttributes_BattlePyramid,
     .callback = InitTilesetAnim_BattlePyramid,
 };
+#endif
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_BattleFrontierRankingHall = {0};
+#else
 const struct Tileset gTileset_BattleFrontierRankingHall =
 {
     .isCompressed = TRUE,
@@ -255,6 +314,7 @@ const struct Tileset gTileset_BattleFrontierRankingHall =
     .metatileAttributes = gMetatileAttributes_BattleFrontierRankingHall,
     .callback = NULL,
 };
+#endif
 
 #ifndef FIRERED
 #ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
@@ -3798,6 +3858,9 @@ const struct Tileset gTileset_SoulHouse_Hns =
     .callback = NULL,
 };
 
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_TrainerHill_Courtyard_Hns = {0};
+#else
 const struct Tileset gTileset_TrainerHill_Courtyard_Hns =
 {
     .isCompressed = TRUE,
@@ -3808,6 +3871,7 @@ const struct Tileset gTileset_TrainerHill_Courtyard_Hns =
     .metatileAttributes = gMetatileAttributes_TrainerHill_Courtyard_Hns,
     .callback = NULL,
 };
+#endif
 
 const struct Tileset gTileset_TrainerSchool_Hns =
 {
@@ -3865,6 +3929,9 @@ const struct Tileset gTileset_ssaqua_Hns =
 };
 
 // Exact upstream dependencies of the campaign Artisan Cave and shared link room.
+#ifdef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset; native code only compares its address
+const struct Tileset gTileset_Cave = {0};
+#else
 const struct Tileset gTileset_Cave =
 {
     .isCompressed = TRUE,
@@ -3875,6 +3942,7 @@ const struct Tileset gTileset_Cave =
     .metatileAttributes = gMetatileAttributes_Cave,
     .callback = InitTilesetAnim_Cave,
 };
+#endif
 
 const struct Tileset gTileset_UnionRoom =
 {
@@ -4251,5 +4319,19 @@ const struct Tileset gTileset_CeruleanCity_Hns =
     .metatiles = gMetatiles_CeruleanCity_Hns,
     .metatileAttributes = gMetatileAttributes_CeruleanCity_Hns,
     .callback = InitTilesetAnim_CeruleanCity_Hns,
+};
+#endif
+
+#ifdef FIRERED
+// HnS's restyled General tileset for the event islands (Birth, Faraway and Southern Island) instead of Emerald's.
+const struct Tileset gTileset_General_Hns =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Hns,
+    .palettes = gTilesetPalettes_General_Hns,
+    .metatiles = gMetatiles_General_Hns,
+    .metatileAttributes = gMetatileAttributes_General_Hns,
+    .callback = NULL,
 };
 #endif

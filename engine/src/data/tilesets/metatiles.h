@@ -12,8 +12,12 @@ const u16 gMetatiles_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatileAttributes_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondary/secret_base/metatile_attributes.bin");
 #endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_General[] = INCBIN_U16("data/tilesets/primary/general/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_General[] = INCBIN_U16("data/tilesets/primary/general/metatile_attributes.bin");
+#endif
 
 #ifdef FIRERED
 extern const u16 gMetatiles_InsideBuilding[64] __attribute__((alias("gMetatiles_Building")));
@@ -26,11 +30,19 @@ extern const u16 gMetatileAttributes_InsideBuilding[8] __attribute__((alias("gMe
 const u16 gMetatileAttributes_InsideBuilding[] = INCBIN_U16("data/tilesets/primary/building/metatile_attributes.bin");
 #endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_TrainerHill[] = INCBIN_U16("data/tilesets/secondary/trainer_hill/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_TrainerHill[] = INCBIN_U16("data/tilesets/secondary/trainer_hill/metatile_attributes.bin");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattleTent[] = INCBIN_U16("data/tilesets/secondary/battle_tent/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattleTent[] = INCBIN_U16("data/tilesets/secondary/battle_tent/metatile_attributes.bin");
+#endif
 
 const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatiles.bin");
 const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatile_attributes.bin");
@@ -44,30 +56,78 @@ const u16 gMetatileAttributes_Fortree[] = INCBIN_U16("data/tilesets/secondary/fo
 const u16 gMetatiles_IslandHarbor[] = INCBIN_U16("data/tilesets/secondary/island_harbor/metatiles.bin");
 const u16 gMetatileAttributes_IslandHarbor[] = INCBIN_U16("data/tilesets/secondary/island_harbor/metatile_attributes.bin");
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattleFrontierOutsideWest[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattleFrontierOutsideWest[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattleFrontierOutsideEast[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_east/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattleFrontierOutsideEast[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_east/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_PokemonCenter[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_PokemonCenter[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_Shop[] = INCBIN_U16("data/tilesets/secondary/shop/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_Shop[] = INCBIN_U16("data/tilesets/secondary/shop/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattlePalace[] = INCBIN_U16("data/tilesets/secondary/battle_palace/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattlePalace[] = INCBIN_U16("data/tilesets/secondary/battle_palace/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattleDome[] = INCBIN_U16("data/tilesets/secondary/battle_dome/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattleDome[] = INCBIN_U16("data/tilesets/secondary/battle_dome/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattleFactory[] = INCBIN_U16("data/tilesets/secondary/battle_factory/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattleFactory[] = INCBIN_U16("data/tilesets/secondary/battle_factory/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattlePike[] = INCBIN_U16("data/tilesets/secondary/battle_pike/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattlePike[] = INCBIN_U16("data/tilesets/secondary/battle_pike/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattleArena[] = INCBIN_U16("data/tilesets/secondary/battle_arena/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattleArena[] = INCBIN_U16("data/tilesets/secondary/battle_arena/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattlePyramid[] = INCBIN_U16("data/tilesets/secondary/battle_pyramid/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattlePyramid[] = INCBIN_U16("data/tilesets/secondary/battle_pyramid/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattleFrontierRankingHall[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_ranking_hall/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattleFrontierRankingHall[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_ranking_hall/metatile_attributes.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_BattleFrontier[] = INCBIN_U16("data/tilesets/secondary/battle_frontier/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_BattleFrontier[] = INCBIN_U16("data/tilesets/secondary/battle_frontier/metatile_attributes.bin");
+#endif
 
 #ifndef FIRERED
 #ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
@@ -162,8 +222,12 @@ const u16 gMetatileAttributes_Sootopolis[] = INCBIN_U16("data/tilesets/secondary
 
 
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_Cave[] = INCBIN_U16("data/tilesets/secondary/cave/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_Cave[] = INCBIN_U16("data/tilesets/secondary/cave/metatile_attributes.bin");
+#endif
 
 #ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_PokemonSchool[] = INCBIN_U16("data/tilesets/secondary/pokemon_school/metatiles.bin");
@@ -943,8 +1007,12 @@ const u16 gMetatileAttributes_SootopolisGym_Hns[] = INCBIN_U16("data/tilesets/se
 const u16 gMetatiles_SoulHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/soul_house_hns/metatiles.bin");
 const u16 gMetatileAttributes_SoulHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/soul_house_hns/metatile_attributes.bin");
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatiles.bin");
+#endif
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatile_attributes.bin");
+#endif
 
 const u16 gMetatiles_TrainerSchool_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_school_hns/metatiles.bin");
 const u16 gMetatileAttributes_TrainerSchool_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_school_hns/metatile_attributes.bin");
@@ -1167,7 +1235,9 @@ const u16 gMetatileAttributes_SootopolisGym_Hns[] = INCBIN_U16("data/tilesets/se
 
 const u16 gMetatileAttributes_SoulHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/soul_house_hns/metatile_attributes.bin");
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatile_attributes.bin");
+#endif
 
 const u16 gMetatileAttributes_TrainerSchool_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_school_hns/metatile_attributes.bin");
 
@@ -1327,7 +1397,9 @@ const u16 gMetatiles_SootopolisGym_Hns[] = INCBIN_U16("data/tilesets/secondary/s
 
 const u16 gMetatiles_SoulHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/soul_house_hns/metatiles.bin");
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatiles.bin");
+#endif
 
 const u16 gMetatiles_TrainerSchool_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_school_hns/metatiles.bin");
 
@@ -1340,9 +1412,13 @@ const u16 gMetatiles_WhirlIslands_Hns[] = INCBIN_U16("data/tilesets/secondary/wh
 const u16 gMetatiles_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatiles.bin");
 
 // Exact upstream dependencies of the campaign Artisan Cave and shared link room.
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatiles_Cave[] = INCBIN_U16("data/tilesets/secondary/cave/metatiles.bin");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gMetatileAttributes_Cave[] = INCBIN_U16("data/tilesets/secondary/cave/metatile_attributes.bin");
+#endif
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 
@@ -2359,4 +2435,10 @@ const u16 gMetatileAttributes_Lavaridge_Hns[] = INCBIN_U16("data/tilesets/second
 const u16 gMetatiles_CeruleanCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/metatiles.bin");
 
 const u16 gMetatileAttributes_CeruleanCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/metatile_attributes.bin");
+#endif
+
+#ifdef FIRERED
+// HnS's restyled General tileset for the event islands (Birth, Faraway and Southern Island) instead of Emerald's.
+const u16 gMetatiles_General_Hns[] = INCBIN_U16("data/tilesets/primary/general_hns/metatiles.bin");
+const u16 gMetatileAttributes_General_Hns[] = INCBIN_U16("data/tilesets/primary/general_hns/metatile_attributes.bin");
 #endif

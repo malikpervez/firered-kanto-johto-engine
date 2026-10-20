@@ -324,11 +324,16 @@ const u16 gTilesetPalettes_Sootopolis[][16] =
 };
 #endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattleFrontierOutsideWest[] = INCBIN_U32("data/tilesets/secondary/battle_frontier_outside_west/tiles.4bpp.fastSmol");
+#endif
 
 #ifdef FIRERED
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 extern const u16 gTilesetPalettes_BattleFrontierOutsideWest[16][16] __attribute__((alias("gTilesetPalettes_BattleFrontierOutsideEast")));
+#endif
 #else
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattleFrontierOutsideWest[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/palettes/00.gbapal"),
@@ -349,9 +354,13 @@ const u16 gTilesetPalettes_BattleFrontierOutsideWest[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/palettes/15.gbapal"),
 };
 #endif
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattleFrontierOutsideEast[] = INCBIN_U32("data/tilesets/secondary/battle_frontier_outside_east/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattleFrontierOutsideEast[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_east/palettes/00.gbapal"),
@@ -371,6 +380,7 @@ const u16 gTilesetPalettes_BattleFrontierOutsideEast[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_east/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_east/palettes/15.gbapal"),
 };
+#endif
 
 #ifdef FIRERED
 extern const u32 gTilesetTiles_InsideBuilding[449] __attribute__((alias("gTilesetTiles_Building")));
@@ -402,8 +412,11 @@ const u16 gTilesetPalettes_InsideBuilding[][16] =
 };
 #endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_Shop[] = INCBIN_U32("data/tilesets/secondary/shop/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_Shop[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/shop/palettes/00.gbapal"),
@@ -423,9 +436,13 @@ const u16 gTilesetPalettes_Shop[][16] =
     INCBIN_U16("data/tilesets/secondary/shop/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/shop/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_PokemonCenter[] = INCBIN_U32("data/tilesets/secondary/pokemon_center/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_PokemonCenter[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/pokemon_center/palettes/00.gbapal"),
@@ -445,9 +462,13 @@ const u16 gTilesetPalettes_PokemonCenter[][16] =
     INCBIN_U16("data/tilesets/secondary/pokemon_center/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/pokemon_center/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_Cave[] = INCBIN_U32("data/tilesets/secondary/cave/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_Cave[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/cave/palettes/00.gbapal"),
@@ -467,6 +488,7 @@ const u16 gTilesetPalettes_Cave[][16] =
     INCBIN_U16("data/tilesets/secondary/cave/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/cave/palettes/15.gbapal"),
 };
+#endif
 
 #ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_PokemonSchool[] = INCBIN_U32("data/tilesets/secondary/pokemon_school/tiles.4bpp.fastSmol");
@@ -704,7 +726,9 @@ const u32 gTilesetTiles_Facility[] = INCBIN_U32("data/tilesets/secondary/facilit
 #endif
 
 #ifdef FIRERED
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 extern const u16 gTilesetPalettes_Facility[16][16] __attribute__((alias("gTilesetPalettes_IslandHarbor")));
+#endif
 #else
 #ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_Facility[][16] =
@@ -1493,8 +1517,11 @@ const u16 gTilesetPalettes_EliteFour[][16] =
 };
 #endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattleFrontier[] = INCBIN_U32("data/tilesets/secondary/battle_frontier/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattleFrontier[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_frontier/palettes/00.gbapal"),
@@ -1514,9 +1541,13 @@ const u16 gTilesetPalettes_BattleFrontier[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_frontier/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_frontier/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattlePalace[] = INCBIN_U32("data/tilesets/secondary/battle_palace/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattlePalace[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_palace/palettes/00.gbapal"),
@@ -1536,9 +1567,13 @@ const u16 gTilesetPalettes_BattlePalace[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_palace/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_palace/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattleDome[] = INCBIN_U32("data/tilesets/secondary/battle_dome/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattleDome[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_dome/palettes/00.gbapal"),
@@ -1558,9 +1593,13 @@ const u16 gTilesetPalettes_BattleDome[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_dome/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_dome/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattleFactory[] = INCBIN_U32("data/tilesets/secondary/battle_factory/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattleFactory[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_factory/palettes/00.gbapal"),
@@ -1580,9 +1619,13 @@ const u16 gTilesetPalettes_BattleFactory[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_factory/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_factory/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattlePike[] = INCBIN_U32("data/tilesets/secondary/battle_pike/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattlePike[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_pike/palettes/00.gbapal"),
@@ -1602,9 +1645,13 @@ const u16 gTilesetPalettes_BattlePike[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_pike/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_pike/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattleArena[] = INCBIN_U32("data/tilesets/secondary/battle_arena/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattleArena[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_arena/palettes/00.gbapal"),
@@ -1624,9 +1671,13 @@ const u16 gTilesetPalettes_BattleArena[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_arena/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_arena/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattlePyramid[] = INCBIN_U32("data/tilesets/secondary/battle_pyramid/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattlePyramid[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_pyramid/palettes/00.gbapal"),
@@ -1646,6 +1697,7 @@ const u16 gTilesetPalettes_BattlePyramid[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_pyramid/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_pyramid/palettes/15.gbapal"),
 };
+#endif
 
 #ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_MirageTower[] = INCBIN_U32("data/tilesets/secondary/mirage_tower/tiles.4bpp.fastSmol");
@@ -1721,8 +1773,11 @@ const u16 gTilesetPalettes_IslandHarbor[][16] =
     INCBIN_U16("data/tilesets/secondary/island_harbor/palettes/15.gbapal"),
 };
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_TrainerHill[] = INCBIN_U32("data/tilesets/secondary/trainer_hill/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_TrainerHill[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/trainer_hill/palettes/00.gbapal"),
@@ -1742,6 +1797,7 @@ const u16 gTilesetPalettes_TrainerHill[][16] =
     INCBIN_U16("data/tilesets/secondary/trainer_hill/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/trainer_hill/palettes/15.gbapal"),
 };
+#endif
 
 #ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_NavelRock[] = INCBIN_U32("data/tilesets/secondary/navel_rock/tiles.4bpp.fastSmol");
@@ -1769,8 +1825,11 @@ const u16 gTilesetPalettes_NavelRock[][16] =
 };
 #endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattleFrontierRankingHall[] = INCBIN_U32("data/tilesets/secondary/battle_frontier_ranking_hall/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattleFrontierRankingHall[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_frontier_ranking_hall/palettes/00.gbapal"),
@@ -1790,9 +1849,13 @@ const u16 gTilesetPalettes_BattleFrontierRankingHall[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_frontier_ranking_hall/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_frontier_ranking_hall/palettes/15.gbapal"),
 };
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_BattleTent[] = INCBIN_U32("data/tilesets/secondary/battle_tent/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_BattleTent[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/battle_tent/palettes/00.gbapal"),
@@ -1812,6 +1875,7 @@ const u16 gTilesetPalettes_BattleTent[][16] =
     INCBIN_U16("data/tilesets/secondary/battle_tent/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/battle_tent/palettes/15.gbapal"),
 };
+#endif
 
 #ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_MysteryEventsHouse[] = INCBIN_U32("data/tilesets/secondary/mystery_events_house/tiles.4bpp.fastSmol");
@@ -5156,8 +5220,11 @@ const u16 gTilesetPalettes_SoulHouse_Hns[][16] =
     INCBIN_U16("data/tilesets/secondary/soul_house_hns/palettes/15.gbapal"),
 };
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_TrainerHill_Courtyard_Hns[] = INCBIN_U32("data/tilesets/secondary/trainer_hill_courtyard_hns/tiles.4bpp.fastSmol");
+#endif
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_TrainerHill_Courtyard_Hns[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/palettes/00.gbapal"),
@@ -5174,6 +5241,7 @@ const u16 gTilesetPalettes_TrainerHill_Courtyard_Hns[][16] =
     INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/palettes/11.gbapal"),
     INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/palettes/12.gbapal"),
 };
+#endif
 
 const u32 gTilesetTiles_TrainerSchool_Hns[] = INCBIN_U32("data/tilesets/secondary/trainer_school_hns/tiles.4bpp.fastSmol");
 
@@ -6842,6 +6910,7 @@ const u16 gTilesetPalettes_SoulHouse_Hns[][16] =
     INCBIN_U16("data/tilesets/secondary/soul_house_hns/palettes/15.gbapal"),
 };
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u16 gTilesetPalettes_TrainerHill_Courtyard_Hns[][16] =
 {
     INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/palettes/00.gbapal"),
@@ -6858,6 +6927,7 @@ const u16 gTilesetPalettes_TrainerHill_Courtyard_Hns[][16] =
     INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/palettes/11.gbapal"),
     INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/palettes/12.gbapal"),
 };
+#endif
 
 const u16 gTilesetPalettes_TrainerSchool_Hns[][16] =
 {
@@ -7095,7 +7165,9 @@ const u32 gTilesetTiles_SootopolisGym_Hns[] = INCBIN_U32("data/tilesets/secondar
 
 const u32 gTilesetTiles_SoulHouse_Hns[] = INCBIN_U32("data/tilesets/secondary/soul_house_hns/tiles.4bpp.fastSmol");
 
+#ifndef FIRERED // prune_tilesets.py: no FireRed layout uses this tileset
 const u32 gTilesetTiles_TrainerHill_Courtyard_Hns[] = INCBIN_U32("data/tilesets/secondary/trainer_hill_courtyard_hns/tiles.4bpp.fastSmol");
+#endif
 
 const u32 gTilesetTiles_TrainerSchool_Hns[] = INCBIN_U32("data/tilesets/secondary/trainer_school_hns/tiles.4bpp.fastSmol");
 
@@ -7533,5 +7605,30 @@ const u16 gTilesetPalettes_CeruleanCity_Hns[][16] =
     INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/palettes/10.gbapal"),
     INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/palettes/11.gbapal"),
     INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/palettes/12.gbapal"),
+};
+#endif
+
+#ifdef FIRERED
+// HnS's restyled General tileset for the event islands (Birth, Faraway and Southern Island) instead of Emerald's.
+const u32 gTilesetTiles_General_Hns[] = INCBIN_U32("data/tilesets/primary/general_hns/tiles.4bpp.fastSmol");
+
+const u16 gTilesetPalettes_General_Hns[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_hns/palettes/15.gbapal"),
 };
 #endif

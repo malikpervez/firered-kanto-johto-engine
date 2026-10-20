@@ -30,9 +30,10 @@ def wrap_definitions(path: Path, names: set[str]) -> int:
     """Put `#ifndef FIRERED` around the definitions of these arrays (one statement each, up to its `;`)."""
     text = path.read_text()
     out, i, n = [], 0, 0
-    pat = re.compile(r"^const u(?:16|32) (\w+)\[[^\n]*?=[^;]*?;[^\n]*\n", re.M | re.S)
+    pat = re.compile(r"^(?:const u(?:16|32) (\w+)\[[^\n]*?=[^;]*?;|extern const u(?:16|32) (\w+)\[[^\n]*__attribute__"
+                     r"\(\(alias\(\"\w+\"\)\)\);)[^\n]*\n", re.M | re.S)
     for m in pat.finditer(text):
-        if m.group(1) not in names:
+        if (m.group(1) or m.group(2)) not in names:
             continue
         out.append(text[i:m.start()])
         out.append(f"#ifndef FIRERED // {MARK}: no FireRed layout uses this tileset\n{m.group(0)}#endif\n")

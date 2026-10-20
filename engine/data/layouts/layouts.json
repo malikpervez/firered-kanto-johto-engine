@@ -4295,8 +4295,7 @@
             "border_filepath": "data/layouts/BattleTentLobby_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleTentLobby_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_TENT_CORRIDOR_HNS",
@@ -4308,8 +4307,7 @@
             "border_filepath": "data/layouts/BattleTentCorridor_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleTentCorridor_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_BATTLE_TENT_BATTLE_ROOM_HNS",
@@ -4321,8 +4319,7 @@
             "border_filepath": "data/layouts/BattleTentBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/BattleTentBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_VERDANTURF_TOWN_BATTLE_TENT_BATTLE_ROOM_HNS",
@@ -4334,8 +4331,7 @@
             "border_filepath": "data/layouts/VerdanturfTown_BattleTentBattleRoom_hns/border.bin",
             "blockdata_filepath": "data/layouts/VerdanturfTown_BattleTentBattleRoom_hns/map.bin",
             "game_version": "hns",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_MIRAGE_TOWER_4F",
@@ -4479,8 +4475,7 @@
             "secondary_tileset": "gTileset_Cave",
             "border_filepath": "data/layouts/ArtisanCave_B1F/border.bin",
             "blockdata_filepath": "data/layouts/ArtisanCave_B1F/map.bin",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_ARTISAN_CAVE_1F",
@@ -4491,8 +4486,7 @@
             "secondary_tileset": "gTileset_Cave",
             "border_filepath": "data/layouts/ArtisanCave_1F/border.bin",
             "blockdata_filepath": "data/layouts/ArtisanCave_1F/map.bin",
-            "layout_version": "emerald",
-            "firered_campaign": true
+            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_FARAWAY_ISLAND_ENTRANCE",
@@ -18348,7 +18342,7 @@
             "name": "SouthernIsland_Exterior_hns_Layout",
             "width": 33,
             "height": 30,
-            "primary_tileset": "gTileset_General",
+            "primary_tileset": "gTileset_General_Hns",
             "secondary_tileset": "gTileset_Rustboro",
             "border_filepath": "data/layouts/SouthernIsland_Exterior_hns/border.bin",
             "blockdata_filepath": "data/layouts/SouthernIsland_Exterior_hns/map.bin",
@@ -18361,7 +18355,7 @@
             "name": "SouthernIsland_Interior_hns_Layout",
             "width": 27,
             "height": 24,
-            "primary_tileset": "gTileset_General",
+            "primary_tileset": "gTileset_General_Hns",
             "secondary_tileset": "gTileset_Rustboro",
             "border_filepath": "data/layouts/SouthernIsland_Interior_hns/border.bin",
             "blockdata_filepath": "data/layouts/SouthernIsland_Interior_hns/map.bin",
@@ -18374,7 +18368,7 @@
             "name": "FarawayIsland_Entrance_hns_Layout",
             "width": 34,
             "height": 46,
-            "primary_tileset": "gTileset_General",
+            "primary_tileset": "gTileset_General_Hns",
             "secondary_tileset": "gTileset_Rustboro",
             "border_filepath": "data/layouts/FarawayIsland_Entrance_hns/border.bin",
             "blockdata_filepath": "data/layouts/FarawayIsland_Entrance_hns/map.bin",
@@ -18387,7 +18381,7 @@
             "name": "FarawayIsland_Interior_hns_Layout",
             "width": 29,
             "height": 26,
-            "primary_tileset": "gTileset_General",
+            "primary_tileset": "gTileset_General_Hns",
             "secondary_tileset": "gTileset_Fortree",
             "border_filepath": "data/layouts/FarawayIsland_Interior_hns/border.bin",
             "blockdata_filepath": "data/layouts/FarawayIsland_Interior_hns/map.bin",
@@ -18400,7 +18394,7 @@
             "name": "BirthIsland_Exterior_hns_Layout",
             "width": 30,
             "height": 30,
-            "primary_tileset": "gTileset_General",
+            "primary_tileset": "gTileset_General_Hns",
             "secondary_tileset": "gTileset_Dewford",
             "border_filepath": "data/layouts/BirthIsland_Exterior_hns/border.bin",
             "blockdata_filepath": "data/layouts/BirthIsland_Exterior_hns/map.bin",
@@ -18413,7 +18407,7 @@
             "name": "IslandHarbor_hns_Layout",
             "width": 17,
             "height": 13,
-            "primary_tileset": "gTileset_General",
+            "primary_tileset": "gTileset_General_Hns",
             "secondary_tileset": "gTileset_IslandHarbor",
             "border_filepath": "data/layouts/IslandHarbor_hns/border.bin",
             "blockdata_filepath": "data/layouts/IslandHarbor_hns/map.bin",
