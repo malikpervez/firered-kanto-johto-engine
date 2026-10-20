@@ -1,8 +1,10 @@
+@ Johto (data/maps/MtSilver_1F_WaterfallRoom_hns/scripts.inc), as built into the FireRed game.
+
 MtSilver_1F_WaterfallRoom_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_1F_WaterfallRoom_OnTransition
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, MtSilver_1F_WaterfallRoom_OnWarp
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, MtSilver_1F_WaterfallRoom_OnFrame
-	map_script MAP_SCRIPT_ON_RESUME, MtSilver_1F_WaterfallRoom_OnResume
+	map_script 3, MtSilver_1F_WaterfallRoom_OnTransition
+	map_script 4, MtSilver_1F_WaterfallRoom_OnWarp
+	map_script 2, MtSilver_1F_WaterfallRoom_OnFrame
+	map_script 5, MtSilver_1F_WaterfallRoom_OnResume
 	.byte 0
 
 MtSilver_1F_WaterfallRoom_OnResume::
@@ -11,35 +13,35 @@ MtSilver_1F_WaterfallRoom_OnResume::
 	end
 
 MtSilver_1F_WaterfallRoom_OnWarp::
-	map_script_2 VAR_SINJOH_STORYLINE, 1, MtSilver_1F_WaterfallRoom_TurnPlayer
+	map_script_2 20639, 1, MtSilver_1F_WaterfallRoom_TurnPlayer
 	.2byte 0
 
 MtSilver_1F_WaterfallRoom_TurnPlayer::
-	turnobject LOCALID_PLAYER, DIR_WEST
+	turnobject 255, DIR_WEST
 	end
 
 MtSilver_1F_WaterfallRoom_OnFrame::
-	map_script_2 VAR_SINJOH_STORYLINE, 1, MtSilver_1F_WaterfallRoom_Scientist_Scene
+	map_script_2 20639, 1, MtSilver_1F_WaterfallRoom_Scientist_Scene
 	.2byte 0
 
 MtSilver_1F_WaterfallRoom_Scientist_Scene::
 	msgbox MtSilver_1F_WaterfallRoom_Text_Scientist, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_MT_SILVER_1F_WATERFALL_ROOM_SCIENTIST, MtSilver_1F_Movement_Scientist
-	playse SE_LEDGE
+	applymovement 19, MtSilver_1F_Movement_Scientist
+	playse 10
 	waitmovement 0
-	removeobject LOCALID_MT_SILVER_1F_WATERFALL_ROOM_SCIENTIST
-	setflag FLAG_MT_SILVER_1F_HIDE_SCIENTIST
-	setvar VAR_SINJOH_STORYLINE, 2
+	removeobject 19
+	setflag 9081
+	setvar 20639, 2
 	release
 	end
 
 MtSilver_1F_WaterfallRoom_Text_Scientist:
-	.string "This is the entrance to the\n"
-	.string "unexplored branch... {PAUSE 0x0F}{PAUSE 0x0F}{PAUSE 0x0F}\p"
-	.string "Does it feel cold here to you?\p"
-	.string "Okay, I'm going to leave now.\p"
-	.string "Good luck!$"
+	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}entranc{SE_M_REVERSAL}t{SE_M_ATTRACT2}the\n"
+	.string "unexplore{SE_M_WATERFALL}branch..{SE_M_PERISH_SONG}{PAUSE}Ô{PAUSE}Ô{PAUSE}Ô\p"
+	.string "Doe{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}fee{SE_M_BATON_PASS}col{SE_M_WATERFALL}her{SE_M_REVERSAL}t{SE_M_ATTRACT2}you?\p"
+	.string "Okay{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}leav{SE_M_REVERSAL}now.\p"
+	.string "Goo{SE_M_WATERFALL}luck!$"
 
 MtSilver_1F_Movement_Scientist:
 	jump_2_down
@@ -49,7 +51,7 @@ MtSilver_1F_Movement_Scientist:
 	walk_fast_down
 	step_end
 
-MtSilver_1F_WaterfallRoom_OnTransition: 
+MtSilver_1F_WaterfallRoom_OnTransition:
 	callnative SetTimeBasedEncounters
 	setescapewarp MAP_MT_SILVER_OUTSIDE_HNS, 17, 8
 	end
@@ -73,3 +75,4 @@ MtSilver_1F_WaterfallRoom_EventScript_UltraBall::
 MtSilver_1F_WaterfallRoom_EventScript_SpellTag::
 	finditem ITEM_SPELL_TAG
 	end
+

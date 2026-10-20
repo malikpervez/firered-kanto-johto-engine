@@ -1,23 +1,26 @@
+@ Johto (data/maps/SinjohRuins_RegidracoRoom_hns/scripts.inc), as built into the FireRed game.
+
 SinjohRuins_RegidracoRoom_hns_MapScripts::
 	.byte 0
 
 SinjohRuins_RegidragoRoom_EventScript_Regidrago::
 	lock
 	faceplayer
-	playmoncry SPECIES_REGIDRAGO, CRY_MODE_ENCOUNTER
+	playmoncry 895, 2
 	waitmoncry
-	seteventmon SPECIES_REGIDRAGO, 80
+	seteventmon 895, 80
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SinjohRuins_RegidragoRoom_EventScript_RegidragoRan
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_SINJOHRUINS_REGIDRAGO
-	setflag FLAG_HIDE_SINJOHRUINS_REGIDRAGO
-	fadescreenswapbuffers FADE_FROM_BLACK
+	specialvar 32781, GetBattleOutcome
+	goto_if_eq 32781, 4, SinjohRuins_RegidragoRoom_EventScript_RegidragoRan
+	fadescreenswapbuffers 1
+	removeobject 1
+	setflag 9136
+	fadescreenswapbuffers 0
 	release
 	end
 
 SinjohRuins_RegidragoRoom_EventScript_RegidragoRan::
 	release
 	end
+

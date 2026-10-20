@@ -1,164 +1,166 @@
+@ Johto (data/maps/TinTower_RoofDay_hns/scripts.inc), as built into the FireRed game.
+
 TinTower_RoofDay_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, TinTower_RoofDay_OnTransition
+	map_script 3, TinTower_RoofDay_OnTransition
 	.byte 0
 
 TinTower_RoofDay_OnTransition:
-	call_if_set FLAG_DAY_POKEMON, TinTower_RoofDay_EventScript_SetNight
-	call_if_unset FLAG_DAY_POKEMON, TinTower_RoofDay_EventScript_SetDay
-	goto_if_eq VAR_COMPLETED_HO_OH, 2, TinTower_RoofDay_MapScript_HoohStory
-	goto_if_eq VAR_COMPLETED_HO_OH, 3, TinTower_RoofDay_MapScript_HoohPostStoryGone
-	goto_if_eq VAR_COMPLETED_HO_OH, 4, TinTower_RoofDay_MapScript_HoohPostStoryEncounter
+	call_if_set 8796, TinTower_RoofDay_EventScript_SetNight
+	call_if_unset 8796, TinTower_RoofDay_EventScript_SetDay
+	goto_if_eq 20558, 2, TinTower_RoofDay_MapScript_HoohStory
+	goto_if_eq 20558, 3, TinTower_RoofDay_MapScript_HoohPostStoryGone
+	goto_if_eq 20558, 4, TinTower_RoofDay_MapScript_HoohPostStoryEncounter
 	end
 
 TinTower_RoofDay_EventScript_SetNight::
-	setmaplayoutindex LAYOUT_TIN_TOWER_ROOF_NIGHT_HNS
+	setmaplayoutindex 1106
 	return
 
 TinTower_RoofDay_EventScript_SetDay::
-	setmaplayoutindex LAYOUT_TIN_TOWER_ROOF_DAY_HNS
+	setmaplayoutindex 1105
 	return
 
 TinTower_RoofDay_MapScript_HoohStory::
-	clearflag FLAG_HIDE_HO_OH
+	clearflag 8253
 	end
 
 TinTower_RoofDay_MapScript_HoohPostStoryGone::
-	setflag FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS
-	setflag FLAG_HIDE_HO_OH
+	setflag 8318
+	setflag 8253
 	end
 
 TinTower_RoofDay_MapScript_HoohPostStoryEncounter::
-	setflag FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS
-	clearflag FLAG_HIDE_HO_OH
-	setobjectxyperm LOCALID_HO_OH, 10, 6
+	setflag 8318
+	clearflag 8253
+	setobjectxyperm 8, 10, 6
 	end
 
 TinTower_RoofDay_EventScript_TalkToKimono::
 	lockall
-	playbgm MUS_HG_KIMONO_GIRL_DANCE, FALSE
+	playbgm ((558 + 1) + 0x84), FALSE
 	msgbox TinTower_RoofDay_Text_Kimono_Opening, MSGBOX_DEFAULT
 	closemessage
 
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Step_Aside
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Step_Aside
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, TinTower_RoofDay_Walk_To_Center
+	applymovement 255, TinTower_RoofDay_Walk_To_Center
 	waitmovement 0
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Step_In
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Step_Start_Left
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Step_Start_Right
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Step_In
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Step_Start_Left
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Step_Start_Right
 	waitmovement 5
-	playse SE_M_PETAL_DANCE
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	playse 202
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
 	waitmovement 0
-	playse SE_M_PETAL_DANCE
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Mid	
+	playse 202
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
 	waitmovement 0
-	playse SE_M_PETAL_DANCE
-	setweather WEATHER_DROUGHT
+	playse 202
+	setweather 12
 	doweather
-	@ 1
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Down
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Up
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Left
-	waitmovement LOCALID_KIMONO_4
+
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Down
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Up
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Left
+	waitmovement 5
 	delay 30
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
 	waitmovement 0
-	playse SE_M_PETAL_DANCE
-	@ 2
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Down
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Far_Right
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Up
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Far_Left
-	waitmovement LOCALID_KIMONO_4
+	playse 202
+
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Down
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Far_Right
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Up
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Far_Left
+	waitmovement 5
 	delay 30
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
 	waitmovement 0
-	playse SE_M_PETAL_DANCE
-	@ 3
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Up
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Left
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Down
-	waitmovement LOCALID_TINTOWER_KIMONO_3
+	playse 202
+
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Up
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Left
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Down
+	waitmovement 7
 	delay 30
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
 	waitmovement 0
-	playse SE_M_PETAL_DANCE
-	@ 4
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Far_Right
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Up
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Far_Left
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Down
-	waitmovement LOCALID_TINTOWER_KIMONO_3
+	playse 202
+
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Far_Right
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Up
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Far_Left
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Down
+	waitmovement 7
 	delay 30
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
 	waitmovement 0
-	playse SE_M_PETAL_DANCE
-	@ 5
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Left_Up
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right_Up
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Step_Up
-	waitmovement LOCALID_KIMONO_1
+	playse 202
+
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Left_Up
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right_Up
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Step_Up
+	waitmovement 3
 	delay 30
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Mid
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Mid
 	waitmovement 0
-	playse SE_M_PETAL_DANCE
+	playse 202
 	waitse
-	setvar VAR_TEMP_1, 1
+	setvar 16385, 1
 	special SpawnCameraObject
-	setvar VAR_0x8004, 3  @ num loops
-	setvar VAR_0x8005, 35 @ delay
+	setvar 32772, 3
+	setvar 32773, 35
 	special LoopWingFlapSE
-	applymovement LOCALID_HO_OH, TinTower_RoofDay_Movement_HoOhAppear
-	applymovement OBJ_EVENT_ID_CAMERA, TinTower_RoofDay_Movement_CameraPanUp
+	applymovement 8, TinTower_RoofDay_Movement_HoOhAppear
+	applymovement 127, TinTower_RoofDay_Movement_CameraPanUp
 	waitmovement 0
 	delay 50
-	@ setweather WEATHER_NONE
-	@ doweather
+
+
 	waitse
-	playmoncry SPECIES_HO_OH, CRY_MODE_ENCOUNTER
+	playmoncry 250, 2
 	delay 30
 	waitmoncry
 	delay 60
-	setvar VAR_0x8004, 3  @ num loops
-	setvar VAR_0x8005, 35 @ delay
+	setvar 32772, 3
+	setvar 32773, 35
 	special LoopWingFlapSE
-	applymovement LOCALID_HO_OH, TinTower_RoofDay_Movement_HoOhApproach
+	applymovement 8, TinTower_RoofDay_Movement_HoOhApproach
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_CAMERA, TinTower_RoofDay_Movement_CameraPanDown
+	applymovement 127, TinTower_RoofDay_Movement_CameraPanDown
 	waitmovement 0
 	special RemoveCameraObject
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
-	applymovement LOCALID_KIMONO_1, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
-	applymovement LOCALID_TINTOWER_KIMONO_2, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
-	applymovement LOCALID_TINTOWER_KIMONO_3, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
-	applymovement LOCALID_KIMONO_4, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
+	applymovement 3, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
+	applymovement 6, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
+	applymovement 7, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
+	applymovement 5, TinTower_RoofDay_Movement_Kimono_Dance_Look_Up
 	waitmovement 0
 	msgbox TinTower_RoofDay_Text_Kimono_Closing1, MSGBOX_DEFAULT
 	waitmessage
@@ -168,73 +170,73 @@ TinTower_RoofDay_EventScript_TalkToKimono::
 
 TinTower_RoofDay_EventScript_HoOh::
 	lockall
-	goto_if_eq VAR_COMPLETED_HO_OH, 4, TinTower_RoofDay_EventScript_HoOhPostgame
+	goto_if_eq 20558, 4, TinTower_RoofDay_EventScript_HoOhPostgame
 	waitse
-	playmoncry SPECIES_HO_OH, CRY_MODE_ENCOUNTER
+	playmoncry 250, 2
 	delay 30
 	waitmoncry
-	playbgm MUS_HG_VS_HO_OH, 0
-	seteventmon SPECIES_HO_OH, 50
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	playbgm ((558 + 1) + 0x66), 0
+	seteventmon 250, 50
+	setflag 10342
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	setvar VAR_LAST_TALKED, LOCALID_HO_OH
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TinTower_RoofDay_EventScript_RanFromHoOh
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TinTower_RoofDay_EventScript_RanFromHoOh
-	call_if_eq VAR_RESULT, B_OUTCOME_WON, TinTower_RoofDay_EventScript_HoohFlewAway
-	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, TinTower_RoofDay_EventScript_CaughtHooh
-	setflag FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS
-	applymovement LOCALID_KIMONO_MID, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right2
+	clearflag 10342
+	setvar 32783, 8
+	specialvar 32781, GetBattleOutcome
+	goto_if_eq 32781, 4, TinTower_RoofDay_EventScript_RanFromHoOh
+	goto_if_eq 32781, 5, TinTower_RoofDay_EventScript_RanFromHoOh
+	call_if_eq 32781, 1, TinTower_RoofDay_EventScript_HoohFlewAway
+	call_if_eq 32781, 7, TinTower_RoofDay_EventScript_CaughtHooh
+	setflag 8318
+	applymovement 4, TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right2
 	waitmovement 0
-	clearflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS
-	clearflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_ZUKI
-	clearflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS
-	setvar VAR_ECRUTEAK_CITY_THEATER, 8
-	setvar VAR_COMPLETED_HO_OH, 3
+	clearflag 8310
+	clearflag 8312
+	clearflag 8311
+	setvar 20562, 8
+	setvar 20558, 3
 	releaseall
 	end
 
 TinTower_RoofDay_EventScript_HoOhPostgame::
-	playmoncry SPECIES_HO_OH, CRY_MODE_ENCOUNTER
+	playmoncry 250, 2
 	delay 30
 	waitmoncry
-	playbgm MUS_HG_VS_HO_OH, 0
-	seteventmon SPECIES_HO_OH, 70
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	playbgm ((558 + 1) + 0x66), 0
+	seteventmon 250, 70
+	setflag 10342
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	setvar VAR_LAST_TALKED, LOCALID_HO_OH
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TinTower_RoofDay_EventScript_RanFromHoOh
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TinTower_RoofDay_EventScript_RanFromHoOh
-	call_if_eq VAR_RESULT, B_OUTCOME_WON, TinTower_RoofDay_EventScript_HoohFlewAway
-	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, TinTower_RoofDay_EventScript_CaughtHooh
-	setvar VAR_COMPLETED_HO_OH, 3
+	clearflag 10342
+	setvar 32783, 8
+	specialvar 32781, GetBattleOutcome
+	goto_if_eq 32781, 4, TinTower_RoofDay_EventScript_RanFromHoOh
+	goto_if_eq 32781, 5, TinTower_RoofDay_EventScript_RanFromHoOh
+	call_if_eq 32781, 1, TinTower_RoofDay_EventScript_HoohFlewAway
+	call_if_eq 32781, 7, TinTower_RoofDay_EventScript_CaughtHooh
+	setvar 20558, 3
 	releaseall
 	end
 
 TinTower_RoofDay_EventScript_HoohFlewAway::
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_HO_OH
-	setweather WEATHER_NONE
+	fadescreenswapbuffers 1
+	removeobject 8
+	setweather 0
 	doweather
-	setflag FLAG_HIDE_HO_OH
-	fadescreenswapbuffers FADE_FROM_BLACK
-	bufferspeciesname STR_VAR_1, SPECIES_HO_OH
-	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
+	setflag 8253
+	fadescreenswapbuffers 0
+	bufferspeciesname STR_VAR_1, 250
+	msgbox J_gText_LegendaryFlewAway, MSGBOX_DEFAULT
 	return
 
 TinTower_RoofDay_EventScript_CaughtHooh::
-	setflag FLAG_CAUGHT_HO_OH
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_HO_OH
-	setweather WEATHER_NONE
+	setflag 8764
+	fadescreenswapbuffers 1
+	removeobject 8
+	setweather 0
 	doweather
-	setflag FLAG_HIDE_HO_OH
-	fadescreenswapbuffers FADE_FROM_BLACK
+	setflag 8253
+	fadescreenswapbuffers 0
 	return
 
 TinTower_RoofDay_EventScript_RanFromHoOh::
@@ -242,63 +244,69 @@ TinTower_RoofDay_EventScript_RanFromHoOh::
 	end
 
 TinTower_RoofDay_EventScript_Zuki::
-	goto_if_eq VAR_COMPLETED_HO_OH, 3, TinTower_RoofDay_EventScript_ZukiAfter
+	goto_if_eq 20558, 3, TinTower_RoofDay_EventScript_ZukiAfter
 	msgbox TinTower_RoofDay_Text_Zuki_Before, MSGBOX_NPC
 	end
+
 TinTower_RoofDay_EventScript_ZukiAfter::
-	goto_if_unset FLAG_CAUGHT_HO_OH, TinTower_RoofDay_EventScript_ZukiAfterNotCaught
+	goto_if_unset 8764, TinTower_RoofDay_EventScript_ZukiAfterNotCaught
 	msgbox TinTower_RoofDay_Text_Kimono_AfterCaught, MSGBOX_NPC
 	end
+
 TinTower_RoofDay_EventScript_ZukiAfterNotCaught::
 	msgbox TinTower_RoofDay_Text_Kimono_AfterNotCaught, MSGBOX_NPC
 	end
 
 TinTower_RoofDay_EventScript_Naoko::
-	goto_if_eq VAR_COMPLETED_HO_OH, 3, TinTower_RoofDay_EventScript_NaokoAfter
+	goto_if_eq 20558, 3, TinTower_RoofDay_EventScript_NaokoAfter
 	msgbox TinTower_RoofDay_Text_Naoko_Before, MSGBOX_NPC
 	end
+
 TinTower_RoofDay_EventScript_NaokoAfter::
 	msgbox TinTower_RoofDay_Text_Kimono_After, MSGBOX_NPC
 	end
 
 TinTower_RoofDay_EventScript_Miki::
-	goto_if_eq VAR_COMPLETED_HO_OH, 3, TinTower_RoofDay_EventScript_MikiAfter
+	goto_if_eq 20558, 3, TinTower_RoofDay_EventScript_MikiAfter
 	msgbox TinTower_RoofDay_Text_Miki_Before, MSGBOX_NPC
 	end
+
 TinTower_RoofDay_EventScript_MikiAfter::
 	msgbox TinTower_RoofDay_Text_Kimono_After, MSGBOX_NPC
 	end
 
 TinTower_RoofDay_EventScript_Sayo::
-	goto_if_eq VAR_COMPLETED_HO_OH, 3, TinTower_RoofDay_EventScript_SayoAfter
+	goto_if_eq 20558, 3, TinTower_RoofDay_EventScript_SayoAfter
 	msgbox TinTower_RoofDay_Text_Sayo_Before, MSGBOX_NPC
 	end
+
 TinTower_RoofDay_EventScript_SayoAfter::
 	msgbox TinTower_RoofDay_Text_Kimono_After, MSGBOX_NPC
 	end
 
 TinTower_RoofDay_EventScript_Kuni::
-	goto_if_eq VAR_COMPLETED_HO_OH, 3, TinTower_RoofDay_EventScript_KuniAfter
+	goto_if_eq 20558, 3, TinTower_RoofDay_EventScript_KuniAfter
 	msgbox TinTower_RoofDay_Text_Kuni_Before, MSGBOX_NPC
 	end
+
 TinTower_RoofDay_EventScript_KuniAfter::
 	msgbox TinTower_RoofDay_Text_Kimono_After, MSGBOX_NPC
 	end
 
 TinTower_RoofDay_Text_Kimono_AfterNotCaught:
-	.string "You have not only made HO-OH\n"
-	.string "appear, but you have also defeated\l"
+	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}no{SE_M_SPIT_UP}onl{SE_M_YAWN}mad{SE_M_REVERSAL}HO-OH\n"
+	.string "appear{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}als{SE_M_ATTRACT2}defeated\l"
 	.string "it...\p"
-	.string "There is nothing more for us to\n"
-	.string "say. Take care of yourself in your\l"
+	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}mor{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}u{SE_M_GRASSWHISTLE}to\n"
+	.string "say{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}yoursel{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}your\l"
 	.string "journey...$"
 
 TinTower_RoofDay_Text_Kimono_AfterCaught:
-	.string "You have not only made HO-OH\n"
-	.string "appear, but you have also caught\l"
+	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}no{SE_M_SPIT_UP}onl{SE_M_YAWN}mad{SE_M_REVERSAL}HO-OH\n"
+	.string "appear{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}als{SE_M_ATTRACT2}caught\l"
 	.string "it...\p"
-	.string "There is nothing more for us to\n"
-	.string "say. Take care of yourself in your\l"
+	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}mor{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}u{SE_M_GRASSWHISTLE}to\n"
+	.string "say{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}yoursel{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}your\l"
 	.string "journey...$"
 
 TinTower_RoofDay_Movement_CameraPanUp:
@@ -341,7 +349,6 @@ TinTower_RoofDay_Movement_HoOhAppear:
 	walk_in_place_down
 	step_end
 
-
 TinTower_RoofDay_Movement_Kimono_Step_Aside:
 	face_right
 	delay_16
@@ -363,7 +370,6 @@ TinTower_RoofDay_Movement_Kimono_Step_In:
 	delay_16
 	face_down
 	step_end
-
 
 TinTower_RoofDay_Movement_Kimono_Step_Start_Left:
 	face_right
@@ -554,39 +560,44 @@ TinTower_RoofDay_Movement_Kimono_Dance_Shift_Right2:
 	step_end
 
 TinTower_RoofDay_Text_Zuki_Before::
-	.string "ZUKI: Go, face HO-OH. $"
+	.string "ZUKI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+
 TinTower_RoofDay_Text_Naoko_Before::
-	.string "NAOKO: Go, face HO-OH. $"
+	.string "NAOKO{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+
 TinTower_RoofDay_Text_Miki_Before::
-	.string "MIKI: Go, face HO-OH. $"
+	.string "MIKI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+
 TinTower_RoofDay_Text_Sayo_Before::
-	.string "SAYO: Go, face HO-OH. $"
+	.string "SAYO{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
+
 TinTower_RoofDay_Text_Kuni_Before::
-	.string "KUNI: Go, face HO-OH. $"
+	.string "KUNI{SE_M_HEAT_WAVE}Go{SE_M_SUPERSONIC}fac{SE_M_REVERSAL}HO-OH{SE_M_PERISH_SONG}$"
 
 TinTower_RoofDay_Text_Kimono_Opening::
-	.string "KIMONO GIRL: That's right.\n"
-	.string "This is where we welcome HO-OH.\p"
-	.string "When the dance we practiced many\n"
-	.string "days becomes one with the sound of the\p"
-	.string "CLEAR BELL we entrusted to you, then\n"
-	.string "HO-OH shall come down from the great\l"
-	.string "arch of the sky once again. $"
+	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_HEAT_WAVE}That'{SE_M_GRASSWHISTLE}right.\n"
+	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}wher{SE_M_REVERSAL}w{SE_M_REVERSAL}welcom{SE_M_REVERSAL}HO-OH.\p"
+	.string "Whe{SE_M_ATTRACT}th{SE_M_REVERSAL}danc{SE_M_REVERSAL}w{SE_M_REVERSAL}practice{SE_M_WATERFALL}many\n"
+	.string "day{SE_M_GRASSWHISTLE}become{SE_M_GRASSWHISTLE}on{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}soun{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}the\p"
+	.string "CLEA{SE_M_MINIMIZE}BEL{SE_M_BRICK_BREAK}w{SE_M_REVERSAL}entruste{SE_M_WATERFALL}t{SE_M_ATTRACT2}you{SE_M_SUPERSONIC}then\n"
+	.string "HO-O{SE_M_SWAGGER2}shal{SE_M_BATON_PASS}com{SE_M_REVERSAL}dow{SE_M_ATTRACT}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}great\l"
+	.string "arc{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}sk{SE_M_YAWN}onc{SE_M_REVERSAL}again{SE_M_PERISH_SONG}$"
 
 TinTower_RoofDay_Text_Kimono_Closing1::
-	.string "That is indeed HO-OH...\n"
-	.string "The guardian of the sky from\p"
-	.string "ancient times... \p"
-	.string "So many have tried again and again,\n"
-	.string "only to fail...\p"
-	.string "{PLAYER}, your heart in complete\n"
-	.string "harmony with the CLEAR BELL has finally\p"
-	.string "allowed it to appear...\n"
-	.string "{PLAYER}, don't you see?\p"
-	.string "HO-OH... It must have been waiting for\n"
-	.string "someone like you all this time.\p"
-	.string "Wouldn't you agree? $"
+	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}indee{SE_M_WATERFALL}HO-OH...\n"
+	.string "Th{SE_M_REVERSAL}guardia{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}sk{SE_M_YAWN}from\p"
+	.string "ancien{SE_M_SPIT_UP}times..{SE_M_PERISH_SONG}\p"
+	.string "S{SE_M_ATTRACT2}man{SE_M_YAWN}hav{SE_M_REVERSAL}trie{SE_M_WATERFALL}agai{SE_M_ATTRACT}an{SE_M_WATERFALL}again,\n"
+	.string "onl{SE_M_YAWN}t{SE_M_ATTRACT2}fail...\p"
+	.string "{PLAYER}{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}hear{SE_M_SPIT_UP}i{SE_M_ATTRACT}complete\n"
+	.string "harmon{SE_M_YAWN}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}CLEA{SE_M_MINIMIZE}BEL{SE_M_BRICK_BREAK}ha{SE_M_GRASSWHISTLE}finally\p"
+	.string "allowe{SE_M_WATERFALL}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}appear...\n"
+	.string "{PLAYER}{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}yo{SE_M_DIVE}see?\p"
+	.string "HO-OH..{SE_M_PERISH_SONG}I{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}waitin{SE_M_SANDSTORM}for\n"
+	.string "someon{SE_M_REVERSAL}lik{SE_M_REVERSAL}yo{SE_M_DIVE}al{SE_M_BATON_PASS}thi{SE_M_GRASSWHISTLE}time.\p"
+	.string "Wouldn'{SE_M_SPIT_UP}yo{SE_M_DIVE}agree{SE_M_SING}$"
 
 TinTower_RoofDay_Text_Kimono_After::
-	.string "You have done a great job.\n"
-	.string "Say hello to PROF.ELM for us.$"
+	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}don{SE_M_REVERSAL}{SE_M_CHARGE}grea{SE_M_SPIT_UP}job.\n"
+	.string "Sa{SE_M_YAWN}hell{SE_M_ATTRACT2}t{SE_M_ATTRACT2}PROF.EL{SE_M_GIGA_DRAIN}fo{SE_M_SAND_TOMB}us.$"
+

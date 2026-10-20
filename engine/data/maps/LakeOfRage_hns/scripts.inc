@@ -1,62 +1,65 @@
+@ Johto (data/maps/LakeOfRage_hns/scripts.inc), as built into the FireRed game.
+
 LakeOfRage_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, LakeOfRage_OnTransition
+	map_script 3, LakeOfRage_OnTransition
 	.byte 0
 
 LakeOfRage_OnTransition::
-	setflag FLAG_VISITED_LAKE_OF_RAGE
-	call_if_lt VAR_MAHOGANY_TOWN_STATE, 2, LakeOfRage_EventScript_HideLois
-	goto_if_lt VAR_MAHOGANY_TOWN_STATE, 14, LakeOfRage_EventScript_SetHighTide
+	setflag 10489
+	call_if_lt 20578, 2, LakeOfRage_EventScript_HideLois
+	goto_if_lt 20578, 14, LakeOfRage_EventScript_SetHighTide
 	special UpdateShoalTideFlag
-	goto_if_set FLAG_SYS_LAKE_OF_RAGE_TIDE, LakeOfRage_EventScript_SetHighTide
+	goto_if_set 10344, LakeOfRage_EventScript_SetHighTide
 	goto LakeOfRage_EventScript_SetLowTide
 
 LakeOfRage_EventScript_SetLowTide::
-	setweather WEATHER_NONE
-	setmaplayoutindex LAYOUT_LAKE_OF_RAGE_LOW_TIDE_HNS
+	setweather 0
+	setmaplayoutindex 932
 	end
 
 LakeOfRage_EventScript_SetHighTide::
-	setmaplayoutindex LAYOUT_LAKE_OF_RAGE_HNS
-	goto_if_lt VAR_MAHOGANY_TOWN_STATE, 14, LakeOfRage_EventScript_ThunderStorm
+	setmaplayoutindex 929
+	goto_if_lt 20578, 14, LakeOfRage_EventScript_ThunderStorm
 	random 2
-	goto_if_eq VAR_RESULT, 1, LakeOfRage_EventScript_ThunderStorm
+	goto_if_eq 32781, 1, LakeOfRage_EventScript_ThunderStorm
 	end
 
 LakeOfRage_EventScript_HideLois::
-	setflag FLAG_TEMP_1
+	setflag 1
 	return
 
 LakeOfRage_EventScript_ThunderStorm::
-	setweather WEATHER_RAIN_THUNDERSTORM
+	setweather 5
 	end
 
 LakeOfRage_EventScript_Pryce::
-    lock
-    faceplayer
-    msgbox LakeOfRage_Text_Pryce, MSGBOX_DEFAULT
-    closemessage
-    fadescreenswapbuffers FADE_TO_BLACK
-    setflag FLAG_HIDE_LAKE_PRYCE
-    removeobject LOCALID_LAKE_PRYCE
-    fadescreenswapbuffers FADE_FROM_BLACK
-    clearflag FLAG_HIDE_DOJO_PRYCE
-    release
-    end
+	lock
+	faceplayer
+	msgbox LakeOfRage_Text_Pryce, MSGBOX_DEFAULT
+	closemessage
+	fadescreenswapbuffers 1
+	setflag 8349
+	removeobject 17
+	fadescreenswapbuffers 0
+	clearflag 8398
+	release
+	end
 
 LakeOfRage_Text_Pryce:
-    .string "{PLAYER}.\p"
-	.string "Even here, the cold keeps me sharp.\p"
-	.string "If you wish to battle again, come\n"
-	.string "to the FIGHTING DOJO.$"
+	.string "{PLAYER}.\p"
+	.string "Eve{SE_M_ATTRACT}here{SE_M_SUPERSONIC}th{SE_M_REVERSAL}col{SE_M_WATERFALL}keep{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}sharp.\p"
+	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wis{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}again{SE_M_SUPERSONIC}come\n"
+	.string "t{SE_M_ATTRACT2}th{SE_M_REVERSAL}FIGHTIN{SE_M_SWAGGER}DOJO.$"
 
 LakeOfRage_EventScript_Gramps::
-	goto_if_ge VAR_MAHOGANY_TOWN_STATE, 14, LakeOfRage_EventScript_Gramps2
+	goto_if_ge 20578, 14, LakeOfRage_EventScript_Gramps2
 	msgbox LakeOfRage_Text_Gramps, MSGBOX_NPC
 	end
 
 LakeOfRage_EventScript_Gramps2::
 	msgbox LakeOfRage_Text_GrampsCleared, MSGBOX_NPC
 	end
+
 LakeOfRage_EventScript_Lass::
 	msgbox LakeOfRage_Text_CooltrainerF, MSGBOX_NPC
 	end
@@ -66,22 +69,22 @@ LakeOfRage_EventScript_Nerd::
 	end
 
 LakeOfRage_EventScript_Andre::
-	trainerbattle_single TRAINER_ANDRE_HNS, LakeOfRage_Text_FisherAndreSeen, LakeOfRage_Text_FisherAndreBeaten
+	trainerbattle_single 1207, LakeOfRage_Text_FisherAndreSeen, LakeOfRage_Text_FisherAndreBeaten
 	msgbox LakeOfRage_Text_FisherAndreAfter, MSGBOX_AUTOCLOSE
 	end
 
 LakeOfRage_EventScript_Raymond::
-	trainerbattle_single TRAINER_RAYMOND_HNS, LakeOfRage_Text_FisherRaymondSeen, LakeOfRage_Text_FisherRaymondBeaten
+	trainerbattle_single 1208, LakeOfRage_Text_FisherRaymondSeen, LakeOfRage_Text_FisherRaymondBeaten
 	msgbox LakeOfRage_Text_FisherRaymondAfter, MSGBOX_AUTOCLOSE
 	end
 
 LakeOfRage_EventScript_Aaron::
-	trainerbattle_single TRAINER_AARON_HNS, LakeOfRage_Text_CooltrainermAaronSeen, LakeOfRage_Text_CooltrainermAaronBeaten
+	trainerbattle_single 1080, LakeOfRage_Text_CooltrainermAaronSeen, LakeOfRage_Text_CooltrainermAaronBeaten
 	msgbox LakeOfRage_Text_CooltrainermAaronAfter, MSGBOX_AUTOCLOSE
 	end
 
 LakeOfRage_EventScript_Lois::
-	trainerbattle_single TRAINER_LOIS_HNS, LakeOfRage_Text_CooltrainerfLoisSeen, LakeOfRage_Text_CooltrainerfLoisBeaten
+	trainerbattle_single 1098, LakeOfRage_Text_CooltrainerfLoisSeen, LakeOfRage_Text_CooltrainerfLoisBeaten
 	msgbox LakeOfRage_Text_CooltrainerfLoisAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -90,24 +93,25 @@ LakeOfRage_EventScript_Gyarados::
 	faceplayer
 	msgbox LakeOfRage_Text_GyaradosCry, MSGBOX_DEFAULT
 	waitse
-	playmoncry SPECIES_GYARADOS, CRY_MODE_ENCOUNTER
+	playmoncry 130, 2
 	delay 40
 	waitmoncry
-	setwildbattleshiny SPECIES_GYARADOS, 30
+	setwildbattleshiny 130, 30
 	dowildbattle
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, LakeOfRage_EventScript_Defeated_Gyarados
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, LakeOfRage_EventScript_Ran_Gyarados
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, LakeOfRage_EventScript_Ran_Gyarados
+	specialvar 32781, GetBattleOutcome
+	goto_if_eq 32781, 1, LakeOfRage_EventScript_Defeated_Gyarados
+	goto_if_eq 32781, 4, LakeOfRage_EventScript_Ran_Gyarados
+	goto_if_eq 32781, 5, LakeOfRage_EventScript_Ran_Gyarados
+
 LakeOfRage_EventScript_Defeated_Gyarados::
-	setflag FLAG_HIDE_LAKE_OF_RAGE_GYARADOS
-	clearflag FLAG_TEMP_1
-	removeobject LOCALID_LAKEOFRAGE_GYARADOS
-	clearflag FLAG_HIDE_LAKE_OF_RAGE_LANCE
-	addobject LOCALID_LAKEOFRAGE_LANCE
+	setflag 8243
+	clearflag 1
+	removeobject 8
+	clearflag 8348
+	addobject 3
 	giveitem ITEM_RED_SCALE
-	setobjectxyperm LOCALID_LAKEOFRAGE_OLDMAN, 32, 38
-	setvar VAR_MAHOGANY_TOWN_STATE, 2
+	setobjectxyperm 4, 32, 38
+	setvar 20578, 2
 	release
 	end
 
@@ -118,9 +122,11 @@ LakeOfRage_EventScript_Ran_Gyarados::
 LakeOfRage_EventScript_Item_Full_Restore::
 	finditem ITEM_FULL_RESTORE
 	end
+
 LakeOfRage_EventScript_Item_Secret_Power::
-    finditem ITEM_TM_SECRET_POWER
-    end
+	finditem 624
+	end
+
 LakeOfRage_EventScript_Item_Red_Flute::
 	finditem ITEM_RED_FLUTE
 	end
@@ -129,40 +135,42 @@ LakeOfRage_EventScript_Dragonite::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_DRAGONITE, CRY_MODE_NORMAL
+	playmoncry 149, 0
 	msgbox LakeOfRage_Text_Dragonite, MSGBOX_DEFAULT
 	waitmoncry
-	turnobject LOCALID_LAKEOFRAGE_DRAGONITE, DIR_WEST
+	turnobject 16, DIR_WEST
 	release
 	end
 
 LakeOfRage_EventScript_Lance::
 	lock
-	goto_if_eq VAR_MAHOGANY_TOWN_STATE, 3, LakeOfRage_EventScript_Lance_Return
+	goto_if_eq 20578, 3, LakeOfRage_EventScript_Lance_Return
 	msgbox LakeOfRage_Text_LanceForcedToEvolve, MSGBOX_DEFAULT
 	closemessage
 	delay 20
 	faceplayer
-	turnobject LOCALID_LAKEOFRAGE_OLDMAN, DIR_WEST
+	turnobject 4, DIR_WEST
 	msgbox LakeOfRage_Text_LanceIntro2, MSGBOX_DEFAULT
-	setvar VAR_MAHOGANY_TOWN_STATE, 3
+	setvar 20578, 3
 	msgbox LakeOfRage_Text_LanceIntro3, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_EventScript_LancDeclined
+	goto_if_eq 32781, FALSE, LakeOfRage_EventScript_LancDeclined
+
 LakeOfRage_EventScript_LanceAccept::
 	lock
 	msgbox LakeOfRage_Text_LanceRadioSignal, MSGBOX_DEFAULT
 	closemessage
-	goto_if_eq VAR_FACING, DIR_NORTH, LakeOfRage_EventScript_LanceDragoniteLeaveNorth
-	applymovement LOCALID_LAKEOFRAGE_LANCE, LakeOfRage_Movement_LanceLeave
-	applymovement LOCALID_LAKEOFRAGE_DRAGONITE, LakeOfRage_Movement_DragoniteLeave
-	waitmovement LOCALID_LAKEOFRAGE_LANCE
-	waitmovement LOCALID_LAKEOFRAGE_DRAGONITE
+	goto_if_eq 32780, DIR_NORTH, LakeOfRage_EventScript_LanceDragoniteLeaveNorth
+	applymovement 3, LakeOfRage_Movement_LanceLeave
+	applymovement 16, LakeOfRage_Movement_DragoniteLeave
+	waitmovement 3
+	waitmovement 16
+
 LakeOfRage_EventScript_EndScene::
-	setflag FLAG_HIDE_LAKE_OF_RAGE_LANCE
-	removeobject LOCALID_LAKEOFRAGE_LANCE
-	removeobject LOCALID_LAKEOFRAGE_DRAGONITE
-	setvar VAR_MAHOGANY_TOWN_STATE, 4
-	clearflag FLAG_HIDE_MAHOGANY_TOWN_SHOP_NPCS
+	setflag 8348
+	removeobject 3
+	removeobject 16
+	setvar 20578, 4
+	clearflag 8334
 	release
 	end
 
@@ -170,8 +178,8 @@ LakeOfRage_EventScript_Lance_Return::
 	lock
 	faceplayer
 	msgbox LakeOfRage_Text_LanceAskHelp, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, TRUE, LakeOfRage_EventScript_LanceAccept
-	goto_if_eq VAR_RESULT, FALSE, LakeOfRage_EventScript_LancDeclined
+	goto_if_eq 32781, TRUE, LakeOfRage_EventScript_LanceAccept
+	goto_if_eq 32781, FALSE, LakeOfRage_EventScript_LancDeclined
 
 LakeOfRage_EventScript_LancDeclined::
 	msgbox LakeOfRage_Text_LanceRefused, MSGBOX_DEFAULT
@@ -179,12 +187,11 @@ LakeOfRage_EventScript_LancDeclined::
 	release
 	end
 
-
 LakeOfRage_EventScript_LanceDragoniteLeaveNorth::
-	applymovement LOCALID_LAKEOFRAGE_LANCE, LakeOfRage_Movement_LanceLeaveNorth
-	applymovement LOCALID_LAKEOFRAGE_DRAGONITE, LakeOfRage_Movement_DragoniteLeaveNorth
-	waitmovement LOCALID_LAKEOFRAGE_LANCE
-	waitmovement LOCALID_LAKEOFRAGE_DRAGONITE
+	applymovement 3, LakeOfRage_Movement_LanceLeaveNorth
+	applymovement 16, LakeOfRage_Movement_DragoniteLeaveNorth
+	waitmovement 3
+	waitmovement 16
 	goto LakeOfRage_EventScript_EndScene
 
 LakeOfRage_Movement_LanceLeaveNorth:
@@ -239,135 +246,131 @@ LakeOfRage_Movement_DragoniteLeave:
 	step_end
 
 LakeOfRage_Text_Dragonite:
-	.string "DRAGONITE: Gyafooha!$"
+	.string "DRAGONITE{SE_M_HEAT_WAVE}Gyafooha!$"
 
 LakeOfRage_Text_LanceForcedToEvolve:
-    .string "This lake is full of GYARADOS\n"
-    .string "but nothing else…\p"
-    .string "So the MAGIKARP are being forced\n"
-    .string "to evolve…$"
+	.string "Thi{SE_M_GRASSWHISTLE}lak{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}ful{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}GYARADOS\n"
+	.string "bu{SE_M_SPIT_UP}nothin{SE_M_SANDSTORM}else…\p"
+	.string "S{SE_M_ATTRACT2}th{SE_M_REVERSAL}MAGIKAR{SE_M_PETAL_DANCE}ar{SE_M_REVERSAL}bein{SE_M_SANDSTORM}forced\n"
+	.string "t{SE_M_ATTRACT2}evolve…$"
 
 LakeOfRage_Text_LanceIntro1:
-    .string "Did you come here because of\n"
-    .string "the rumors?\p"
-    .string "You're {PLAYER}? I'm LANCE, a\n"
-    .string "trainer like you.$"
+	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}com{SE_M_REVERSAL}her{SE_M_REVERSAL}becaus{SE_M_REVERSAL}of\n"
+	.string "th{SE_M_REVERSAL}rumors?\p"
+	.string "You'r{SE_M_REVERSAL}{PLAYER}{SE_M_SING}I'{SE_M_MILK_DRINK}LANCE{SE_M_SUPERSONIC}a\n"
+	.string "traine{SE_M_SAND_TOMB}lik{SE_M_REVERSAL}you.$"
 
 LakeOfRage_Text_LanceIntro2:
-    .string "This man here informed me of\n"
-    .string "some rumors.\p"
-    .string "So we came to investigate…$"
+	.string "Thi{SE_M_GRASSWHISTLE}ma{SE_M_ATTRACT}her{SE_M_REVERSAL}informe{SE_M_WATERFALL}m{SE_M_REVERSAL}of\n"
+	.string "som{SE_M_REVERSAL}rumors.\p"
+	.string "S{SE_M_ATTRACT2}w{SE_M_REVERSAL}cam{SE_M_REVERSAL}t{SE_M_ATTRACT2}investigate…$"
 
 LakeOfRage_Text_LanceIntro3:
-    .string "I saw the way you battled\n"
-    .string "earlier, {PLAYER}.\p"
-    .string "I can tell that you're a trainer\n"
-    .string "with considerable skill.\p"
-    .string "If you don't mind, could you help\n"
-    .string "us investigate?$"
+	.string "{SE_M_HEAL_BELL}sa{SE_M_TWISTER}th{SE_M_REVERSAL}wa{SE_M_YAWN}yo{SE_M_DIVE}battled\n"
+	.string "earlier{SE_M_SUPERSONIC}{PLAYER}.\p"
+	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}tel{SE_M_BATON_PASS}tha{SE_M_SPIT_UP}you'r{SE_M_REVERSAL}{SE_M_CHARGE}trainer\n"
+	.string "wit{SE_M_TRI_ATTACK}considerabl{SE_M_REVERSAL}skill.\p"
+	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}mind{SE_M_SUPERSONIC}coul{SE_M_WATERFALL}yo{SE_M_DIVE}help\n"
+	.string "u{SE_M_GRASSWHISTLE}investigate?$"
 
 LakeOfRage_Text_LanceRadioSignal:
-    .string "LANCE: Excellent!\p"
-    .string "It seems that the LAKE's MAGIKARP\n"
-    .string "are being forced to evolve.\p"
-    .string "A mysterious radio broadcast\n"
-    .string "coming from MAHOGANY is the cause.\p"
-    .string "We'll be waiting for you,\n"
-    .string "{PLAYER}.$"
+	.string "LANCE{SE_M_HEAT_WAVE}Excellent!\p"
+	.string "I{SE_M_SPIT_UP}seem{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}th{SE_M_REVERSAL}LAKE'{SE_M_GRASSWHISTLE}MAGIKARP\n"
+	.string "ar{SE_M_REVERSAL}bein{SE_M_SANDSTORM}force{SE_M_WATERFALL}t{SE_M_ATTRACT2}evolve.\p"
+	.string "{SE_M_BONEMERANG}mysteriou{SE_M_GRASSWHISTLE}radi{SE_M_ATTRACT2}broadcast\n"
+	.string "comin{SE_M_SANDSTORM}fro{SE_M_MILK_DRINK}MAHOGAN{SE_M_MOONLIGHT}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}cause.\p"
+	.string "We'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you,\n"
+	.string "{PLAYER}.$"
 
 LakeOfRage_Text_LanceRefused:
-    .string "Oh… Well, if you change your mind,\n"
-    .string "please help us.$"
+	.string "Oh{SE_M_DIZZY_PUNCH}Well{SE_M_SUPERSONIC}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}chang{SE_M_REVERSAL}you{SE_M_SAND_TOMB}mind,\n"
+	.string "pleas{SE_M_REVERSAL}hel{SE_M_MORNING_SUN}us.$"
 
 LakeOfRage_Text_LanceAskHelp:
-    .string "LANCE: Hm? Are you going to help\n"
-    .string "us?$"
+	.string "LANCE{SE_M_HEAT_WAVE}Hm{SE_M_SING}Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}help\n"
+	.string "us?$"
 
 LakeOfRage_Text_GyaradosCry:
-    .string "GYARADOS: Gyashaa!$"
+	.string "GYARADOS{SE_M_HEAT_WAVE}Gyashaa!$"
 
 LakeOfRage_Text_Gramps:
-    .string "The GYARADOS are angry!\p"
-    .string "It's a bad omen!$"
+	.string "Th{SE_M_REVERSAL}GYARADO{SE_M_SKETCH}ar{SE_M_REVERSAL}angry!\p"
+	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}ba{SE_M_WATERFALL}omen!$"
 
 LakeOfRage_Text_GrampsCleared:
-    .string "Hahah! The MAGIKARP are biting!$"
+	.string "Hahah{SE_M_DRAGON_RAGE}Th{SE_M_REVERSAL}MAGIKAR{SE_M_PETAL_DANCE}ar{SE_M_REVERSAL}biting!$"
 
 LakeOfRage_Text_SuperNerd:
-    .string "I heard this lake was made by\n"
-    .string "rampaging GYARADOS.\p"
-    .string "I wonder if there is any\n"
-    .string "connection to their mass outbreak\l"
-    .string "now?$"
+	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}thi{SE_M_GRASSWHISTLE}lak{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}mad{SE_M_REVERSAL}by\n"
+	.string "rampagin{SE_M_SANDSTORM}GYARADOS.\p"
+	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}i{SE_M_ACID_ARMOR}ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}any\n"
+	.string "connectio{SE_M_ATTRACT}t{SE_M_ATTRACT2}thei{SE_M_SAND_TOMB}mas{SE_M_GRASSWHISTLE}outbreak\l"
+	.string "now?$"
 
 LakeOfRage_Text_CooltrainerF:
-    .string "Did my eyes deceive me? I saw a\n"
-    .string "red GYARADOS in the LAKE…\p"
-    .string "But I thought GYARADOS were\n"
-    .string "usually blue?$"
-
+	.string "Di{SE_M_WATERFALL}m{SE_M_YAWN}eye{SE_M_GRASSWHISTLE}deceiv{SE_M_REVERSAL}me{SE_M_SING}{SE_M_HEAL_BELL}sa{SE_M_TWISTER}a\n"
+	.string "re{SE_M_WATERFALL}GYARADO{SE_M_SKETCH}i{SE_M_ATTRACT}th{SE_M_REVERSAL}LAKE…\p"
+	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}GYARADO{SE_M_SKETCH}were\n"
+	.string "usuall{SE_M_YAWN}blue?$"
 
 LakeOfRage_Text_FisherAndreSeen:
-    .string "Let me battle with the POKéMON I\n"
-    .string "just caught!$"
+	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}I\n"
+	.string "jus{SE_M_SPIT_UP}caught!$"
 
 LakeOfRage_Text_FisherAndreBeaten:
-    .string "I might be an expert angler, but\n"
-    .string "I stink as a POKéMON trainer…$"
+	.string "{SE_M_HEAL_BELL}migh{SE_M_SPIT_UP}b{SE_M_REVERSAL}a{SE_M_ATTRACT}exper{SE_M_SPIT_UP}angler{SE_M_SUPERSONIC}but\n"
+	.string "{SE_M_HEAL_BELL}stin{SE_M_ENCORE2}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}trainer…$"
 
 LakeOfRage_Text_FisherAndreAfter:
-    .string "I won't lose as an angler! I catch\n"
-    .string "POKéMON all day.$"
-
+	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}los{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}angler{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}catch\n"
+	.string "POKéMO{SE_M_PSYBEAM2}al{SE_M_BATON_PASS}day.$"
 
 LakeOfRage_Text_FisherRaymondSeen:
-    .string "No matter what I do, all I catch\n"
-    .string "are the same POKéMON…$"
+	.string "N{SE_M_ATTRACT2}matte{SE_M_SAND_TOMB}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}do{SE_M_SUPERSONIC}al{SE_M_BATON_PASS}{SE_M_HEAL_BELL}catch\n"
+	.string "ar{SE_M_REVERSAL}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}POKéMON…$"
 
 LakeOfRage_Text_FisherRaymondBeaten:
-    .string "My line's all tangled up…$"
+	.string "M{SE_M_YAWN}line'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}tangle{SE_M_WATERFALL}up…$"
 
 LakeOfRage_Text_FisherRaymondAfter:
-    .string "Why can't I catch any good\n"
-    .string "POKéMON?$"
+	.string "Wh{SE_M_YAWN}can'{SE_M_SPIT_UP}{SE_M_HEAL_BELL}catc{SE_M_TRI_ATTACK}an{SE_M_YAWN}good\n"
+	.string "POKéMON?$"
 
 LakeOfRage_Text_CooltrainermAaronSeen:
-    .string "If a trainer spots another trainer,\n"
-    .string "he has to make a challenge.\p"
-    .string "That is our destiny.$"
+	.string "I{SE_M_ACID_ARMOR}{SE_M_CHARGE}traine{SE_M_SAND_TOMB}spot{SE_M_GRASSWHISTLE}anothe{SE_M_SAND_TOMB}trainer,\n"
+	.string "h{SE_M_REVERSAL}ha{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}{SE_M_CHARGE}challenge.\p"
+	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}ou{SE_M_SAND_TOMB}destiny.$"
 
 LakeOfRage_Text_CooltrainermAaronBeaten:
-    .string "Whew… Good battle.$"
+	.string "Whew{SE_M_DIZZY_PUNCH}Goo{SE_M_WATERFALL}battle.$"
 
 LakeOfRage_Text_CooltrainermAaronAfter:
-    .string "POKéMON and their trainer become\n"
-    .string "powerful through constant battling.$"
+	.string "POKéMO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}thei{SE_M_SAND_TOMB}traine{SE_M_SAND_TOMB}become\n"
+	.string "powerfu{SE_M_BATON_PASS}throug{SE_M_TRI_ATTACK}constan{SE_M_SPIT_UP}battling.$"
 
 LakeOfRage_Text_CooltrainerfLoisSeen:
-    .string "What happened to the red\n"
-    .string "GYARADOS?\p"
-    .string "It's gone?\p"
-    .string "Oh, darn. I came here for\n"
-    .string "nothing?\p"
-    .string "I know--let's battle!$"
+	.string "Wha{SE_M_SPIT_UP}happene{SE_M_WATERFALL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}red\n"
+	.string "GYARADOS?\p"
+	.string "It'{SE_M_GRASSWHISTLE}gone?\p"
+	.string "Oh{SE_M_SUPERSONIC}darn{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}cam{SE_M_REVERSAL}her{SE_M_REVERSAL}for\n"
+	.string "nothing?\p"
+	.string "{SE_M_HEAL_BELL}know--let'{SE_M_GRASSWHISTLE}battle!$"
 
 LakeOfRage_Text_CooltrainerfLoisBeaten:
-    .string "Good going!$"
+	.string "Goo{SE_M_WATERFALL}going!$"
 
 LakeOfRage_Text_CooltrainerfLoisAfter:
-    .string "Come to think of it, I've seen a\n"
-    .string "pink BUTTERFREE.$"
-
-
+	.string "Com{SE_M_REVERSAL}t{SE_M_ATTRACT2}thin{SE_M_ENCORE2}o{SE_M_ACID_ARMOR}it{SE_M_SUPERSONIC}I'v{SE_M_REVERSAL}see{SE_M_ATTRACT}a\n"
+	.string "pin{SE_M_ENCORE2}BUTTERFREE.$"
 
 LakeOfRage_EventScript_Wesley::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_BLACK_BELT, LakeOfRage_EventScript_WesleyCompleted
+	goto_if_set 8723, LakeOfRage_EventScript_WesleyCompleted
 	msgbox LakeOfRage_Text_MeetWesley, MSGBOX_DEFAULT
 	closemessage
-	multichoice 20, 0, MULTI_DAYS_OF_WEEK, FALSE
-	switch VAR_RESULT
+	multichoice 20, 0, 159, FALSE
+	switch 32781
 	case 0, LakeOfRage_EventScript_WesleyNope
 	case 1, LakeOfRage_EventScript_WesleyNope
 	case 2, LakeOfRage_EventScript_WesleyNope
@@ -376,28 +379,32 @@ LakeOfRage_EventScript_Wesley::
 	case 5, LakeOfRage_EventScript_WesleyNope
 	case 6, LakeOfRage_EventScript_WesleyNope
 	case 7 LakeOfRage_EventScript_WesleyCancel
-	case MULTI_B_PRESSED, LakeOfRage_EventScript_WesleyCancel
+	case 127, LakeOfRage_EventScript_WesleyCancel
 	closemessage
 	release
 	end
+
 LakeOfRage_EventScript_WesleyYes::
 	msgbox LakeOfRage_Text_WesleyGivesGift, MSGBOX_DEFAULT
 	giveitem ITEM_BLACK_BELT
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_GOT_BLACK_BELT
+	goto_if_eq 32781, FALSE, J_Common_EventScript_ShowBagIsFull
+	setflag 8723
 	msgbox LakeOfRage_Text_WesleyGaveGift, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
+
 LakeOfRage_EventScript_WesleyNope::
 	msgbox LakeOfRage_Text_WesleyNotWednesday, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
+
 LakeOfRage_EventScript_WesleyCancel::
 	closemessage
 	release
 	end
+
 LakeOfRage_EventScript_WesleyCompleted::
 	msgbox LakeOfRage_Text_WesleyWednesday, MSGBOX_DEFAULT
 	closemessage
@@ -405,26 +412,26 @@ LakeOfRage_EventScript_WesleyCompleted::
 	end
 
 LakeOfRage_Text_MeetWesley:
-    .string "WESLEY: Well, how do you do?\p"
-    .string "I'm a member of the WEEKDAY family!\n"
-	.string "Can you guess my favorite day?$"
+	.string "WESLEY{SE_M_HEAT_WAVE}Well{SE_M_SUPERSONIC}ho{SE_M_TWISTER}d{SE_M_ATTRACT2}yo{SE_M_DIVE}do?\p"
+	.string "I'{SE_M_MILK_DRINK}{SE_M_CHARGE}membe{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}WEEKDA{SE_M_MOONLIGHT}family!\n"
+	.string "Ca{SE_M_ATTRACT}yo{SE_M_DIVE}gues{SE_M_GRASSWHISTLE}m{SE_M_YAWN}favorit{SE_M_REVERSAL}day?$"
 
 LakeOfRage_Text_WesleyGivesGift:
-    .string "Pleased to meet you. Please take a\n"
-    .string "souvenir.$"
+	.string "Please{SE_M_WATERFALL}t{SE_M_ATTRACT2}mee{SE_M_SPIT_UP}you{SE_M_PERISH_SONG}Pleas{SE_M_REVERSAL}tak{SE_M_REVERSAL}a\n"
+	.string "souvenir.$"
 
 LakeOfRage_Text_WesleyGaveGift:
-    .string "WESLEY: BLACK BELT beefs up the\n"
-    .string "power of fighting moves.$"
+	.string "WESLEY{SE_M_HEAT_WAVE}BLAC{SE_M_SNORE}BEL{SE_M_SWIFT}beef{SE_M_GRASSWHISTLE}u{SE_M_MORNING_SUN}the\n"
+	.string "powe{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}fightin{SE_M_SANDSTORM}moves.$"
 
 LakeOfRage_Text_WesleyWednesday:
-    .string "WESLEY: Since you found me, you\n"
-    .string "must have met my brothers and\l"
-    .string "sisters.\p"
-    .string "Or did you just get lucky?$"
+	.string "WESLEY{SE_M_HEAT_WAVE}Sinc{SE_M_REVERSAL}yo{SE_M_DIVE}foun{SE_M_WATERFALL}me{SE_M_SUPERSONIC}you\n"
+	.string "mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}me{SE_M_SPIT_UP}m{SE_M_YAWN}brother{SE_M_GRASSWHISTLE}and\l"
+	.string "sisters.\p"
+	.string "O{SE_M_SAND_TOMB}di{SE_M_WATERFALL}yo{SE_M_DIVE}jus{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}lucky?$"
 
 LakeOfRage_Text_WesleyNotWednesday:
-    .string "WESLEY: Not exactly...$"
+	.string "WESLEY{SE_M_HEAT_WAVE}No{SE_M_SPIT_UP}exactly...$"
 
 LakeOfRage_EventScript_Sign1::
 	msgbox LakeOfRage_Text_Sign, MSGBOX_SIGN
@@ -435,8 +442,9 @@ LakeOfRage_EventScript_Sign2::
 	end
 
 LakeOfRage_Text_Sign:
-    .string "LAKE OF RAGE,\n"
-    .string "also known as GYARADOS LAKE.$"
+	.string "LAK{SE_M_SWORDS_DANCE}O{SE_M_LEER}RAGE,\n"
+	.string "als{SE_M_ATTRACT2}know{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}GYARADO{SE_M_SKETCH}LAKE.$"
 
 LakeOfRage_Text_FishingGuruSign:
-    .string "FISHING GURU'S HOUSE$"
+	.string "FISHIN{SE_M_SWAGGER}GURU'{SE_M_SKETCH}HOUSE$"
+

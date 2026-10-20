@@ -1,18 +1,20 @@
+@ Johto (data/maps/WhirlIslands_B1F_hns/scripts.inc), as built into the FireRed game.
+
 WhirlIslands_B1F_hns_MapScripts::
 	.byte 0
 
 WhirlIslands_B1F_Trigger_Sunlight::
-	setweather WEATHER_SUNNY
+	setweather 2
 	doweather
 	end
 
 WhirlIslands_B1F_Trigger_Shade::
-	setweather WEATHER_SHADE
+	setweather 11
 	doweather
 	end
 
 WhirlIslands_B1F_Trigger_Rain::
-	setweather WEATHER_RAIN
+	setweather 3
 	doweather
 	end
 
@@ -35,3 +37,4 @@ WhirlIslands_B1F_EventScript_Item_Calcium::
 WhirlIslands_B1F_EventScript_Item_Escape_Rope::
 	finditem ITEM_ESCAPE_ROPE
 	end
+

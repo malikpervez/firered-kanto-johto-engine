@@ -1,61 +1,65 @@
+@ Johto (data/maps/EcruteakCity_hns/scripts.inc), as built into the FireRed game.
+
 EcruteakCity_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, EcruteakCity_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script 3, EcruteakCity_OnTransition
+	map_script 5, J_SetTimeEncounters
 	.byte 0
 
 EcruteakCity_OnTransition::
+	call RB_EcruteakVisibility
 	callnative SetTimeBasedEncounters
+	call CG_SilverEcruteakVisibility
 	end
 
 EcruteakCity_Test_Lugia::
-	setvar VAR_LUGIA_OR_HOOH, 1
-	end
-EcruteakCity_Test_League::
-	setvar VAR_COMPLETED_HO_OH, 4
-	setvar VAR_COMPLETED_LUGIA, 4
+	setvar 20577, 1
 	end
 
+EcruteakCity_Test_League::
+	setvar 20558, 4
+	setvar 20559, 4
+	end
 
 EcruteakCity_EventScript_Trigger::
-	@flagheap
-	clearflag FLAG_RELEASED_BEASTS
-	clearflag FLAG_AMPHAROS_HEALED
-	clearflag FLAG_HIDE_ECRUTEAK_BILL
-	clearflag FLAG_DEFEATED_HO_OH
-	clearflag FLAG_CAUGHT_HO_OH
-	clearflag FLAG_DEFEATED_LUGIA
-	clearflag FLAG_CAUGHT_LUGIA
-	clearflag FLAG_HIDE_ECRUTEAK_ROCKET
-	clearflag FLAG_HIDE_BURNED_TOWER_NPCS  
-	clearflag FLAG_HIDE_BURNED_TOWER_BEASTS
-	clearflag FLAG_HIDE_BURNED_TOWER_B1F_EUSINE
-	clearflag FLAG_HIDE_ECRUTEAK_CITY_SAGE
-	clearflag FLAG_CAUGHT_ENTEI
-	clearflag FLAG_CAUGHT_RAIKOU
-	clearflag FLAG_GOT_TM_SNATCH
-	clearflag FLAG_HIDE_ROUTE42_SUICUNE
-	clearflag FLAG_GOT_TYROGUE
-	clearflag FLAG_BEAT_KIYO
-	clearflag FLAG_ENABLE_BAOBA_MATCH_CALL
-	clearflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS
-	clearflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_ZUKI
-	clearflag FLAG_HIDE_TINTOWER_GUARD
-	clearflag FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL
-	clearflag FLAG_HIDE_LUGIA
-	clearflag FLAG_HIDE_HO_OH
 
-	setflag FLAG_VISITED_ECRUTEAK_CITY
-	setflag FLAG_HIDE_ROUTE42_EUSINE
+	clearflag 8664
+	clearflag 8661
+	clearflag 8308
+	clearflag 8759
+	clearflag 8764
+	clearflag 8760
+	clearflag 8765
+	clearflag 8313
+	clearflag 8316
+	clearflag 8238
+	clearflag 8315
+	clearflag 8309
+	clearflag 8766
+	clearflag 8767
+	clearflag 8718
+	clearflag 8244
+	clearflag 8709
+	clearflag 8665
+	clearflag 8775
+	clearflag 8311
+	clearflag 8312
+	clearflag 8317
+	clearflag 8245
+	clearflag 8254
+	clearflag 8253
 
-	setflag FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS
-	setflag FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS
-	setflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_KIMONOS
-	setflag FLAG_HIDE_ROUTE39_SHADOW
-	setflag FLAG_HIDE_ECRUTEAK_SILVER
-	setvar VAR_COMPLETED_HO_OH, 0
-	setvar VAR_COMPLETED_LUGIA, 0
-	setvar VAR_ECRUTEAK_CITY_THEATER, 0 
-	setvar VAR_ECRUTEAK_CITY_STATE, 1
+	setflag 10485
+	setflag 8366
+
+	setflag 8318
+	setflag 8356
+	setflag 8310
+	setflag 8365
+	setflag 8314
+	setvar 20558, 0
+	setvar 20559, 0
+	setvar 20562, 0
+	setvar 20561, 1
 	end
 
 EcruteakCity_Trigger_Silver::
@@ -63,38 +67,38 @@ EcruteakCity_Trigger_Silver::
 	opendoor 39, 40
 	waitdooranim
 	delay 10
-	clearflag FLAG_HIDE_ECRUTEAK_SILVER
-	addobject LOCALID_ECRUTEK_SILVER
-	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
-	playse SE_BANG
-	applymovement LOCALID_ECRUTEK_SILVER, EcruteakCity_Movement_Silver1
-	applymovement OBJ_EVENT_ID_PLAYER, EcruteakCity_Movement_Silver1
+	clearflag 8314
+	addobject 33
+	playbgm ((558 + 1) + 0x3B), FALSE
+	playse 20
+	applymovement 33, EcruteakCity_Movement_Silver1
+	applymovement 255, EcruteakCity_Movement_Silver1
 	message EcruteakCity_Text_Silver1
-	
-	waitmovement OBJ_EVENT_ID_PLAYER
-	waitmovement LOCALID_ECRUTEK_SILVER
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+
+	waitmovement 255
+	waitmovement 33
+	turnobject 255, DIR_NORTH
 	closedoor 39, 40
 	waitdooranim
 	msgbox EcruteakCity_Text_Silver2, MSGBOX_DEFAULT
 	closemessage
-	playse SE_PIN
-	applymovement LOCALID_ECRUTEK_SILVER, Common_Movement_ExclamationMark
+	playse 21
+	applymovement 33, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement LOCALID_ECRUTEK_SILVER
-	turnobject LOCALID_ECRUTEK_SILVER, DIR_SOUTH
+	waitmovement 33
+	turnobject 33, DIR_SOUTH
 	msgbox EcruteakCity_Text_Silver3, MSGBOX_DEFAULT
 	closemessage
 
-	applymovement LOCALID_ECRUTEK_SILVER, EcruteakCity_Movement_Silver2
-	waitmovement LOCALID_ECRUTEK_SILVER
+	applymovement 33, EcruteakCity_Movement_Silver2
+	waitmovement 33
 
 
-	setflag FLAG_HIDE_ECRUTEAK_SILVER
-	removeobject LOCALID_ECRUTEK_SILVER
+	setflag 8314
+	removeobject 33
 	fadedefaultbgm
 
-	setvar VAR_ECRUTEAK_CITY_THEATER, 5
+	setvar 20562, 5
 	releaseall
 	end
 
@@ -121,27 +125,27 @@ EcruteakCity_Text_Silver1:
 	.string "THUD!!$"
 
 EcruteakCity_Text_Silver2:
-	.string "{RIVAL}: How...? How is this\n"
-	.string "possible? How can I lose to mere\l"
-	.string "KIMONO GIRLS...?$"
+	.string "{RIVAL}{SE_M_HEAT_WAVE}How...{SE_M_SING}Ho{SE_M_TWISTER}i{SE_M_GRASSWHISTLE}this\n"
+	.string "possible{SE_M_SING}Ho{SE_M_TWISTER}ca{SE_M_ATTRACT}{SE_M_HEAL_BELL}los{SE_M_REVERSAL}t{SE_M_ATTRACT2}mere\l"
+	.string "KIMON{SE_M_SOLAR_BEAM}GIRLS...?$"
 
 EcruteakCity_Text_Silver3:
-	.string "{RIVAL}: You were watching me,\n"
+	.string "{RIVAL}{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}wer{SE_M_REVERSAL}watchin{SE_M_SANDSTORM}me,\n"
 	.string "{PLAYER}...\p"
-	.string "Yeah, that's right!\p"
-	.string "I never thought defeating five\n"
-	.string "KIMONO GIRLS would be so hard...\p"
-	.string "I got beaten to a pulp...\p"
+	.string "Yeah{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}right!\p"
+	.string "{SE_M_HEAL_BELL}neve{SE_M_SAND_TOMB}though{SE_M_SPIT_UP}defeatin{SE_M_SANDSTORM}five\n"
+	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}s{SE_M_ATTRACT2}hard...\p"
+	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}beate{SE_M_ATTRACT}t{SE_M_ATTRACT2}{SE_M_CHARGE}pulp...\p"
 	.string "...\p"
-	.string "You must have come here for the\n"
-	.string "same reason, right?\p"
-	.string "Don't get cocky just because you\n"
-	.string "defeated TEAM ROCKET!\p"
-	.string "These KIMONO GIRLS are insanely\n"
+	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}com{SE_M_REVERSAL}her{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}the\n"
+	.string "sam{SE_M_REVERSAL}reason{SE_M_SUPERSONIC}right?\p"
+	.string "Don'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}cock{SE_M_YAWN}jus{SE_M_SPIT_UP}becaus{SE_M_REVERSAL}you\n"
+	.string "defeate{SE_M_WATERFALL}TEA{SE_M_GIGA_DRAIN}ROCKET!\p"
+	.string "Thes{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}ar{SE_M_REVERSAL}insanely\n"
 	.string "strong.\p"
-	.string "See if you can defeat them.\p"
-	.string "But I'm not going back, I don't\n"
-	.string "want to see you win.$"
+	.string "Se{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ca{SE_M_ATTRACT}defea{SE_M_SPIT_UP}them.\p"
+	.string "Bu{SE_M_SPIT_UP}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}back{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}don't\n"
+	.string "wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}yo{SE_M_DIVE}win.$"
 
 EcruteakCity_EventScript_Gramps::
 	lock
@@ -150,7 +154,7 @@ EcruteakCity_EventScript_Gramps::
 	closemessage
 	release
 	end
-		
+
 EcruteakCity_EventScript_Lass::
 	lock
 	faceplayer
@@ -162,7 +166,7 @@ EcruteakCity_EventScript_Lass::
 EcruteakCity_EventScript_Girl::
 	lock
 	faceplayer
-	goto_if_set FLAG_RELEASED_BEASTS, EcruteakCity_EventScript_Girl2
+	goto_if_set 8664, EcruteakCity_EventScript_Girl2
 	msgbox EcruteakCity_Text_Lass2, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -177,7 +181,7 @@ EcruteakCity_EventScript_Girl2::
 EcruteakCity_EventScrip_Man::
 	lock
 	faceplayer
-	goto_if_set FLAG_AMPHAROS_HEALED, EcruteakCity_EventScrip_Man2
+	goto_if_set 8661, EcruteakCity_EventScrip_Man2
 	msgbox EcruteakCity_Text_Fisher, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -226,28 +230,28 @@ EcruteakCity_EventScript_TheaterSign::
 	msgbox EcruteakCity_Text_DanceTheaterSign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 EcruteakCity_EventScript_OfficeSign::
 	lock
 	msgbox EcruteakCity_Text_OfficeSign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 EcruteakCity_EventScript_BurnedSign::
 	lock
 	msgbox EcruteakCity_Text_BurnedTowerSign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 EcruteakCity_EventScript_CitySign::
 	lock
 	msgbox EcruteakCity_Text_Sign, MSGBOX_SIGN
 	closemessage
 	release
-	end	
+	end
 
 EcruteakCity_EventScript_GymSign::
 	lock
@@ -260,7 +264,7 @@ EcruteakCity_EventScript_Eevee::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
+	playmoncry 133, 0
 	msgbox EcruteakCity_Text_Eevee, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -270,7 +274,7 @@ EcruteakCity_EventScript_Vulpix::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_VULPIX, CRY_MODE_NORMAL
+	playmoncry 37, 0
 	msgbox EcruteakCity_Text_Vulpix, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -281,104 +285,104 @@ EcruteakCity_EventScript_Item_RareCandy::
 	end
 
 EcruteakCity_Text_Eevee:
-	.string "EEVEE: Veee!$"
+	.string "EEVEE{SE_M_HEAT_WAVE}Veee!$"
 
 EcruteakCity_Text_Vulpix:
-	.string "VULPIX: Vullll Pix!$"
-
+	.string "VULPIX{SE_M_HEAT_WAVE}Vulll{SE_M_BATON_PASS}Pix!$"
 
 EcruteakCity_Text_UnusedMissingDaughter:
-	.string "Oh, no. Oh, no…\p"
-	.string "My daughter is missing.\p"
-	.string "No… She couldn't have gone to the\n"
-	.string "BURNED TOWER.\p"
-	.string "I told her not to go near it…\p"
-	.string "People seem to disappear there…\p"
-	.string "Oh, what should I do…?$"
+	.string "Oh{SE_M_SUPERSONIC}no{SE_M_PERISH_SONG}Oh{SE_M_SUPERSONIC}no…\p"
+	.string "M{SE_M_YAWN}daughte{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}missing.\p"
+	.string "No{SE_M_DIZZY_PUNCH}Sh{SE_M_REVERSAL}couldn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}gon{SE_M_REVERSAL}t{SE_M_ATTRACT2}the\n"
+	.string "BURNE{SE_M_FAINT_ATTACK}TOWER.\p"
+	.string "{SE_M_HEAL_BELL}tol{SE_M_WATERFALL}he{SE_M_SAND_TOMB}no{SE_M_SPIT_UP}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}nea{SE_M_SAND_TOMB}it…\p"
+	.string "Peopl{SE_M_REVERSAL}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}disappea{SE_M_SAND_TOMB}there…\p"
+	.string "Oh{SE_M_SUPERSONIC}wha{SE_M_SPIT_UP}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}do…?$"
 
 EcruteakCity_Text_Gramps1:
-	.string "ECRUTEAK used to have two towers:\n"
-	.string "one each in the east and west.$"
+	.string "ECRUTEA{SE_M_SNORE}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}towers:\n"
+	.string "on{SE_M_REVERSAL}eac{SE_M_TRI_ATTACK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}eas{SE_M_SPIT_UP}an{SE_M_WATERFALL}west.$"
 
 EcruteakCity_Text_Gramps2:
-	.string "Ah, child. Have you learned to\n"
-	.string "dance like the KIMONO GIRLS?\p"
-	.string "If you go to their DANCE THEATER,\n"
-	.string "an odd old man will give you\l"
-	.string "something nice, I hear.$"
+	.string "Ah{SE_M_SUPERSONIC}child{SE_M_PERISH_SONG}Hav{SE_M_REVERSAL}yo{SE_M_DIVE}learne{SE_M_WATERFALL}to\n"
+	.string "danc{SE_M_REVERSAL}lik{SE_M_REVERSAL}th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRLS?\p"
+	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}g{SE_M_ATTRACT2}t{SE_M_ATTRACT2}thei{SE_M_SAND_TOMB}DANC{SE_M_SWORDS_DANCE}THEATER,\n"
+	.string "a{SE_M_ATTRACT}od{SE_M_WATERFALL}ol{SE_M_WATERFALL}ma{SE_M_ATTRACT}wil{SE_M_BATON_PASS}giv{SE_M_REVERSAL}you\l"
+	.string "somethin{SE_M_SANDSTORM}nice{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hear.$"
 
 EcruteakCity_Text_Lass1:
-	.string "I'm going to practice at the DANCE\n"
-	.string "THEATER. Care to join me?$"
+	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}practic{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}DANCE\n"
+	.string "THEATER{SE_M_PERISH_SONG}Car{SE_M_REVERSAL}t{SE_M_ATTRACT2}joi{SE_M_ATTRACT}me?$"
 
 EcruteakCity_Text_Lass2:
-	.string "The tower that used to be here…\p"
-	.string "My grandma told me it used to be\n"
-	.string "much taller.\p"
-	.string "I hear there are ghosts in it now.$"
+	.string "Th{SE_M_REVERSAL}towe{SE_M_SAND_TOMB}tha{SE_M_SPIT_UP}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}here…\p"
+	.string "M{SE_M_YAWN}grandm{SE_M_CHARGE}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}i{SE_M_SPIT_UP}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}be\n"
+	.string "muc{SE_M_TRI_ATTACK}taller.\p"
+	.string "{SE_M_HEAL_BELL}hea{SE_M_SAND_TOMB}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}ghost{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}i{SE_M_SPIT_UP}now.$"
 
 EcruteakCity_Text_Lass2_ReleasedBeasts:
-	.string "Three big POKéMON ran off in different\n"
-	.string "directions. What were they?$"
+	.string "Thre{SE_M_REVERSAL}bi{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}ra{SE_M_ATTRACT}of{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}different\n"
+	.string "directions{SE_M_PERISH_SONG}Wha{SE_M_SPIT_UP}wer{SE_M_REVERSAL}they?$"
 
 EcruteakCity_Text_Fisher:
-	.string "I heard a rumor about OLIVINE\n"
+	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}{SE_M_CHARGE}rumo{SE_M_SAND_TOMB}abou{SE_M_SPIT_UP}OLIVINE\n"
 	.string "LIGHTHOUSE.\p"
-	.string "The POKéMON that serves as the\n"
-	.string "beacon fell ill. Sounds like they\l"
-	.string "are in trouble.$"
+	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}serve{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}the\n"
+	.string "beaco{SE_M_ATTRACT}fel{SE_M_BATON_PASS}ill{SE_M_PERISH_SONG}Sound{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}they\l"
+	.string "ar{SE_M_REVERSAL}i{SE_M_ATTRACT}trouble.$"
 
 EcruteakCity_Text_Fisher_JasmineReturned:
-	.string "The POKéMON at OLIVINE LIGHTHOUSE\n"
-	.string "has been cured.\p"
-	.string "Boats can safely sail out to sea at\n"
-	.string "night again.$"
+	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}OLIVIN{SE_M_SWORDS_DANCE}LIGHTHOUSE\n"
+	.string "ha{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}cured.\p"
+	.string "Boat{SE_M_GRASSWHISTLE}ca{SE_M_ATTRACT}safel{SE_M_YAWN}sai{SE_M_BATON_PASS}ou{SE_M_SPIT_UP}t{SE_M_ATTRACT2}se{SE_M_CHARGE}at\n"
+	.string "nigh{SE_M_SPIT_UP}again.$"
 
 EcruteakCity_Text_Youngster:
-	.string "I hear POKéMON are rampaging at the\n"
-	.string "LAKE OF RAGE. I'd like to see that.$"
+	.string "{SE_M_HEAL_BELL}hea{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}rampagin{SE_M_SANDSTORM}a{SE_M_SPIT_UP}the\n"
+	.string "LAK{SE_M_SWORDS_DANCE}O{SE_M_LEER}RAGE{SE_M_PERISH_SONG}I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}that.$"
 
 EcruteakCity_Text_Gramps3:
-	.string "In the distant past…\p"
-	.string "This tower burned in a fire. Three\n"
-	.string "nameless POKéMON perished in it.\p"
-	.string "A rainbow-colored POKéMON descended\n"
-	.string "from the sky and resurrected them…\p"
-	.string "It's a legend that has been passed\n"
-	.string "down by ECRUTEAK GYM LEADERS.\p"
+	.string "I{SE_M_ATTRACT}th{SE_M_REVERSAL}distan{SE_M_SPIT_UP}past…\p"
+	.string "Thi{SE_M_GRASSWHISTLE}towe{SE_M_SAND_TOMB}burne{SE_M_WATERFALL}i{SE_M_ATTRACT}{SE_M_CHARGE}fire{SE_M_PERISH_SONG}Three\n"
+	.string "nameles{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}perishe{SE_M_WATERFALL}i{SE_M_ATTRACT}it.\p"
+	.string "{SE_M_BONEMERANG}rainbow-colore{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}descended\n"
+	.string "fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}sk{SE_M_YAWN}an{SE_M_WATERFALL}resurrecte{SE_M_WATERFALL}them…\p"
+	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}legen{SE_M_WATERFALL}tha{SE_M_SPIT_UP}ha{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}passed\n"
+	.string "dow{SE_M_ATTRACT}b{SE_M_YAWN}ECRUTEA{SE_M_SNORE}GY{SE_M_GIGA_DRAIN}LEADERS.\p"
 	.string "Me?\p"
-	.string "I was a trainer way back when.\n"
+	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}traine{SE_M_SAND_TOMB}wa{SE_M_YAWN}bac{SE_M_ENCORE2}when.\n"
 	.string "Hohoho!$"
 
 EcruteakCity_Text_SageGym:
-	.string "Gym Leader MORTY is not here right\n"
-	.string "now. You may find him at the\l"
-	.string "BURNED TOWER.$"
+	.string "Gy{SE_M_MILK_DRINK}Leade{SE_M_SAND_TOMB}MORT{SE_M_MOONLIGHT}i{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}her{SE_M_REVERSAL}right\n"
+	.string "now{SE_M_PERISH_SONG}Yo{SE_M_DIVE}ma{SE_M_YAWN}fin{SE_M_WATERFALL}hi{SE_M_MILK_DRINK}a{SE_M_SPIT_UP}the\l"
+	.string "BURNE{SE_M_FAINT_ATTACK}TOWER.$"
 
 EcruteakCity_Text_Sign:
-	.string "ECRUTEAK CITY\n"
-	.string "A Historical City\p"
-	.string "Where the Past Meets the Present$"
+	.string "ECRUTEA{SE_M_SNORE}CITY\n"
+	.string "{SE_M_BONEMERANG}Historica{SE_M_BATON_PASS}City\p"
+	.string "Wher{SE_M_REVERSAL}th{SE_M_REVERSAL}Pas{SE_M_SPIT_UP}Meet{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}Present$"
 
 EcruteakCity_Text_TinTowerSign:
-	.string "TIN TOWER\p"
-	.string "A legendary POKéMON is said to\n"
-	.string "roost here.$"
+	.string "TI{SE_M_PSYBEAM2}TOWER\p"
+	.string "{SE_M_BONEMERANG}legendar{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}sai{SE_M_WATERFALL}to\n"
+	.string "roos{SE_M_SPIT_UP}here.$"
 
 EcruteakCity_Text_OfficeSign:
-	.string "Barrier Station to TIN TOWER\p"
-	.string "No Trespassing by the Unworthy.$"
+	.string "Barrie{SE_M_SAND_TOMB}Statio{SE_M_ATTRACT}t{SE_M_ATTRACT2}TI{SE_M_PSYBEAM2}TOWER\p"
+	.string "N{SE_M_ATTRACT2}Trespassin{SE_M_SANDSTORM}b{SE_M_YAWN}th{SE_M_REVERSAL}Unworthy.$"
 
 EcruteakCity_Text_GymSign:
-	.string "ECRUTEAK CITY POKéMON GYM\n"
-	.string "LEADER: MORTY\p"
-	.string "The Mystic Seer of the Future$"
+	.string "ECRUTEA{SE_M_SNORE}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM\n"
+	.string "LEADER{SE_M_HEAT_WAVE}MORTY\p"
+	.string "Th{SE_M_REVERSAL}Mysti{SE_M_HYPER_BEAM}See{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}Future$"
 
 EcruteakCity_Text_DanceTheaterSign:
-	.string "ECRUTEAK DANCE THEATER$"
+	.string "ECRUTEA{SE_M_SNORE}DANC{SE_M_SWORDS_DANCE}THEATER$"
 
 EcruteakCity_Text_BurnedTowerSign:
-	.string "BURNED TOWER\p"
-	.string "It was destroyed by a mysterious\n"
+	.string "BURNE{SE_M_FAINT_ATTACK}TOWER\p"
+	.string "I{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}destroye{SE_M_WATERFALL}b{SE_M_YAWN}{SE_M_CHARGE}mysterious\n"
 	.string "fire.\p"
-	.string "Please stay away, as it is unsafe.$"
+	.string "Pleas{SE_M_REVERSAL}sta{SE_M_YAWN}away{SE_M_SUPERSONIC}a{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}unsafe.$"
+

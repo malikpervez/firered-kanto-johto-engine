@@ -1,57 +1,60 @@
+@ Johto (data/maps/EcruteakCity_Gym_hns/scripts.inc), as built into the FireRed game.
+
 EcruteakCity_Gym_hns_MapScripts::
 	.byte 0
 
 EcruteakCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_ECRUTEAK_CITY_GYM, EcruteakCity_Gym_EventScript_GymGuy2
+	goto_if_set 8746, EcruteakCity_Gym_EventScript_GymGuy2
 	msgbox EcruteakCity_GymGuideText, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
-	
+
 EcruteakCity_Gym_EventScript_GymGuy2::
 	msgbox EcruteakCity_GymGuideWinText, MSGBOX_DEFAULT
 	release
-	end	
+	end
 
 EcruteakCity_Gym_EventScript_Jeffrey::
-	trainerbattle_single TRAINER_JEFFREY_HNS, SageJeffreySeenText, SageJeffreyBeatenText
+	trainerbattle_single 1378, SageJeffreySeenText, SageJeffreyBeatenText
 	msgbox SageJeffreyAfterBattleText, MSGBOX_AUTOCLOSE
 	end
+
 EcruteakCity_Gym_EventScript_Ping::
-	trainerbattle_single TRAINER_PING_HNS, SagePingSeenText, SagePingBeatenText
+	trainerbattle_single 1379, SagePingSeenText, SagePingBeatenText
 	msgbox SagePingAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 EcruteakCity_Gym_EventScript_Martha::
-	trainerbattle_single TRAINER_MARTHA_HNS, MediumMarthaSeenText, MediumMarthaBeatenText
+	trainerbattle_single 1386, MediumMarthaSeenText, MediumMarthaBeatenText
 	msgbox MediumMarthaAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 EcruteakCity_Gym_EventScript_Grace::
-	trainerbattle_single TRAINER_GRACE_HNS, MediumGraceSeenText, MediumGraceBeatenText
+	trainerbattle_single 1387, MediumGraceSeenText, MediumGraceBeatenText
 	msgbox MediumGraceAfterBattleText, MSGBOX_AUTOCLOSE
 	end
 
 EcruteakCity_Gym_EventScript_Morty::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_ECRUTEAK_CITY_GYM, EcruteakCity_Gym_EventScript_Morty_Defeated
+	goto_if_set 8746, EcruteakCity_Gym_EventScript_Morty_Defeated
 	msgbox MortyIntroText, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_MORTY_1_HNS, MortyWinLossText
+	trainerbattle_no_intro 1432, MortyWinLossText
 	message Text_ReceivedFogBadge
 	waitmessage
-	call Common_EventScript_PlayGymBadgeFanfare
+	call J_Common_EventScript_PlayGymBadgeFanfare
 	msgbox MortyText_FogBadgeSpeech, MSGBOX_DEFAULT
-	setflag FLAG_BADGE04_GET
-	setflag FLAG_DEFEATED_ECRUTEAK_CITY_GYM
-	addvar VAR_NUM_BADGES, 1
-	setvar VAR_0x8008, 4
-	call Common_EventScript_SetGymTrainers_hns
-	giveitem ITEM_TM_SHADOW_BALL
+	setflag 10371
+	setflag 8746
+	addvar 20582, 1
+	setvar 32776, 4
+	call J_Common_EventScript_SetGymTrainers_hns
+	giveitem 611
 	msgbox MortyText_ShadowBallSpeech, MSGBOX_DEFAULT
-	setvar VAR_ECRUTEAK_CITY_STATE, 4
+	setvar 20561, 4
 	closemessage
 	release
 	end
@@ -64,7 +67,7 @@ EcruteakCity_Gym_EventScript_Morty_Defeated::
 
 EcruteakCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_ECRUTEAK_CITY_GYM, EcruteakCity_Gym_EventScript_Statue2
+	goto_if_set 8746, EcruteakCity_Gym_EventScript_Statue2
 	msgbox EcruteakCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -77,146 +80,147 @@ EcruteakCity_Gym_EventScript_Statue2::
 	end
 
 EcruteakCity_Gym_Text_GymStatue:
-	.string "ECRUTEAK CITY POKéMON GYM$"
+	.string "ECRUTEA{SE_M_SNORE}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM$"
 
 EcruteakCity_Gym_Text_GymStatueCertified:
-	.string "ECRUTEAK CITY POKéMON GYM\p"
-	.string "MORTY'S CERTIFIED TRAINERS:\n"
+	.string "ECRUTEA{SE_M_SNORE}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM\p"
+	.string "MORTY'{SE_M_SKETCH}CERTIFIE{SE_M_FAINT_ATTACK}TRAINERS:\n"
 	.string "{PLAYER}$"
 
 MortyIntroText:
-	.string "Good of you to have come.\p"
-	.string "Here in ECRUTEAK, POKéMON have\n"
-	.string "always been revered.\p"
-	.string "It's said that a rainbow-colored\n"
-	.string "POKéMON will come down to\l"
-	.string "appear before a true Trainer.\p"
-	.string "I believed that tale, so I've\n"
-	.string "trained here in secret.\p"
-	.string "As a result, I can now see what\n"
-	.string "others cannot.\p"
-	.string "Just a bit more...\p"
-	.string "With a little more, I could see\n"
-	.string "a future where I meet the\l"
-	.string "rainbow-colored POKéMON.\p"
-	.string "You're going to help me reach\n"
-	.string "that level!$"
+	.string "Goo{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}yo{SE_M_DIVE}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}come.\p"
+	.string "Her{SE_M_REVERSAL}i{SE_M_ATTRACT}ECRUTEAK{SE_M_SUPERSONIC}POKéMO{SE_M_PSYBEAM2}have\n"
+	.string "alway{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}revered.\p"
+	.string "It'{SE_M_GRASSWHISTLE}sai{SE_M_WATERFALL}tha{SE_M_SPIT_UP}{SE_M_CHARGE}rainbow-colored\n"
+	.string "POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}com{SE_M_REVERSAL}dow{SE_M_ATTRACT}to\l"
+	.string "appea{SE_M_SAND_TOMB}befor{SE_M_REVERSAL}{SE_M_CHARGE}tru{SE_M_REVERSAL}Trainer.\p"
+	.string "{SE_M_HEAL_BELL}believe{SE_M_WATERFALL}tha{SE_M_SPIT_UP}tale{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}I've\n"
+	.string "traine{SE_M_WATERFALL}her{SE_M_REVERSAL}i{SE_M_ATTRACT}secret.\p"
+	.string "A{SE_M_GRASSWHISTLE}{SE_M_CHARGE}result{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}no{SE_M_TWISTER}se{SE_M_REVERSAL}what\n"
+	.string "other{SE_M_GRASSWHISTLE}cannot.\p"
+	.string "Jus{SE_M_SPIT_UP}{SE_M_CHARGE}bi{SE_M_SPIT_UP}more...\p"
+	.string "Wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}littl{SE_M_REVERSAL}more{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}see\n"
+	.string "{SE_M_CHARGE}futur{SE_M_REVERSAL}wher{SE_M_REVERSAL}{SE_M_HEAL_BELL}mee{SE_M_SPIT_UP}the\l"
+	.string "rainbow-colore{SE_M_WATERFALL}POKéMON.\p"
+	.string "You'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}hel{SE_M_MORNING_SUN}m{SE_M_REVERSAL}reach\n"
+	.string "tha{SE_M_SPIT_UP}level!$"
 
 MortyWinLossText:
-	.string "I'm not good enough yet...\p"
-	.string "All right. This BADGE is yours.$"
+	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}goo{SE_M_WATERFALL}enoug{SE_M_TRI_ATTACK}yet...\p"
+	.string "Al{SE_M_BATON_PASS}right{SE_M_PERISH_SONG}Thi{SE_M_GRASSWHISTLE}BADG{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}yours.$"
 
 Text_ReceivedFogBadge:
-	.string "{PLAYER} received the FOGBADGE.$"
+	.string "{PLAYER} receive{SE_M_WATERFALL}th{SE_M_REVERSAL}FOGBADGE.$"
 
 MortyText_FogBadgeSpeech:
-	.string "With the FOGBADGE, POKéMON up\n"
-	.string "to Level 50 will obey you.\p"
-	.string "Also, any POKéMON that knows\n"
-	.string "SURF will be able to use it\l"
+	.string "Wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}FOGBADGE{SE_M_SUPERSONIC}POKéMO{SE_M_PSYBEAM2}up\n"
+	.string "t{SE_M_ATTRACT2}Leve{SE_M_BATON_PASS}5{SE_M_BITE}wil{SE_M_BATON_PASS}obe{SE_M_YAWN}you.\p"
+	.string "Also{SE_M_SUPERSONIC}an{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}knows\n"
+	.string "SUR{SE_M_LEER}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}it\l"
 	.string "anytime.\p"
-	.string "I want you to have this too.$"
+	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}too.$"
 
 MortyText_ShadowBallSpeech:
-	.string "That's SHADOW BALL.\n"
-	.string "It causes damage and may\l"
-	.string "lower SP. DEF.\p"
-	.string "Use it if it suits you.$"
+	.string "That'{SE_M_GRASSWHISTLE}SHADO{SE_M_DETECT}BALL.\n"
+	.string "I{SE_M_SPIT_UP}cause{SE_M_GRASSWHISTLE}damag{SE_M_REVERSAL}an{SE_M_WATERFALL}may\l"
+	.string "lowe{SE_M_SAND_TOMB}SP{SE_M_PERISH_SONG}DEF.\p"
+	.string "Us{SE_M_REVERSAL}i{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}i{SE_M_SPIT_UP}suit{SE_M_GRASSWHISTLE}you.$"
 
 MortyFightDoneText:
-	.string "I see...\p"
-	.string "Your journey has taken you to\n"
-	.string "far-off places.\p"
-	.string "You've witnessed more than I\n"
-	.string "ever have.\p"
-	.string "I envy you for that...$"
+	.string "{SE_M_HEAL_BELL}see...\p"
+	.string "You{SE_M_SAND_TOMB}journe{SE_M_YAWN}ha{SE_M_GRASSWHISTLE}take{SE_M_ATTRACT}yo{SE_M_DIVE}to\n"
+	.string "far-of{SE_M_ACID_ARMOR}places.\p"
+	.string "You'v{SE_M_REVERSAL}witnesse{SE_M_WATERFALL}mor{SE_M_REVERSAL}tha{SE_M_ATTRACT}I\n"
+	.string "eve{SE_M_SAND_TOMB}have.\p"
+	.string "{SE_M_HEAL_BELL}env{SE_M_YAWN}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}that...$"
 
 MortyRematchText:
-	.string "Ah, the JOHTO CHAMPION!\n"
-	.string "Good of you to come.\p"
-	.string "You've shown strength and skill,\n"
-	.string "but have you grown since we\l"
-	.string "last battled?\p"
-	.string "I've trained with my GHOST-type\n"
-	.string "POKéMON ever since.\p"
-	.string "Let's see if you can overcome\n"
-	.string "the shadows again.\p"
-	.string "Want to have a rematch?$"
+	.string "Ah{SE_M_SUPERSONIC}th{SE_M_REVERSAL}JOHT{SE_M_SOLAR_BEAM}CHAMPION!\n"
+	.string "Goo{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}yo{SE_M_DIVE}t{SE_M_ATTRACT2}come.\p"
+	.string "You'v{SE_M_REVERSAL}show{SE_M_ATTRACT}strengt{SE_M_TRI_ATTACK}an{SE_M_WATERFALL}skill,\n"
+	.string "bu{SE_M_SPIT_UP}hav{SE_M_REVERSAL}yo{SE_M_DIVE}grow{SE_M_ATTRACT}sinc{SE_M_REVERSAL}we\l"
+	.string "las{SE_M_SPIT_UP}battled?\p"
+	.string "I'v{SE_M_REVERSAL}traine{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}GHOST-type\n"
+	.string "POKéMO{SE_M_PSYBEAM2}eve{SE_M_SAND_TOMB}since.\p"
+	.string "Let'{SE_M_GRASSWHISTLE}se{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ca{SE_M_ATTRACT}overcome\n"
+	.string "th{SE_M_REVERSAL}shadow{SE_M_GRASSWHISTLE}again.\p"
+	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}{SE_M_CHARGE}rematch?$"
 
 Morty_RematchDefeatText:
-	.string "I'm not good enough yet...\p"
-	.string "You've witnessed more than I\n"
-	.string "ever have.\p"
-	.string "I envy you for that...$"
+	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}goo{SE_M_WATERFALL}enoug{SE_M_TRI_ATTACK}yet...\p"
+	.string "You'v{SE_M_REVERSAL}witnesse{SE_M_WATERFALL}mor{SE_M_REVERSAL}tha{SE_M_ATTRACT}I\n"
+	.string "eve{SE_M_SAND_TOMB}have.\p"
+	.string "{SE_M_HEAL_BELL}env{SE_M_YAWN}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}that...$"
 
 SageJeffreySeenText:
-	.string "I spent the spring with my\n"
+	.string "{SE_M_HEAL_BELL}spen{SE_M_SPIT_UP}th{SE_M_REVERSAL}sprin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}my\n"
 	.string "POKéMON.\p"
-	.string "Then summer, fall, and winter...\p"
-	.string "Then spring came again.\n"
-	.string "We've been together a long time.$"
+	.string "The{SE_M_ATTRACT}summer{SE_M_SUPERSONIC}fall{SE_M_SUPERSONIC}an{SE_M_WATERFALL}winter...\p"
+	.string "The{SE_M_ATTRACT}sprin{SE_M_SANDSTORM}cam{SE_M_REVERSAL}again.\n"
+	.string "We'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}togethe{SE_M_SAND_TOMB}{SE_M_CHARGE}lon{SE_M_SANDSTORM}time.$"
 
 SageJeffreyBeatenText:
-	.string "Wins and losses--I've known\n"
-	.string "them both.$"
+	.string "Win{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}losses--I'v{SE_M_REVERSAL}known\n"
+	.string "the{SE_M_MILK_DRINK}both.$"
 
 SageJeffreyAfterBattleText:
-	.string "Where did POKéMON come from?$"
+	.string "Wher{SE_M_REVERSAL}di{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}com{SE_M_REVERSAL}from?$"
 
 SagePingSeenText:
-	.string "Can you inflict any damage\n"
-	.string "on our POKéMON?$"
+	.string "Ca{SE_M_ATTRACT}yo{SE_M_DIVE}inflic{SE_M_SPIT_UP}an{SE_M_YAWN}damage\n"
+	.string "o{SE_M_ATTRACT}ou{SE_M_SAND_TOMB}POKéMON?$"
 
 SagePingBeatenText:
-	.string "Ah! Well done!$"
+	.string "Ah{SE_M_DRAGON_RAGE}Wel{SE_M_BATON_PASS}done!$"
 
 SagePingAfterBattleText:
-	.string "We use GHOST-type POKéMON.\p"
-	.string "No NORMAL-type attacks can\n"
-	.string "harm them!$"
+	.string "W{SE_M_REVERSAL}us{SE_M_REVERSAL}GHOST-typ{SE_M_REVERSAL}POKéMON.\p"
+	.string "N{SE_M_ATTRACT2}NORMAL-typ{SE_M_REVERSAL}attack{SE_M_GRASSWHISTLE}can\n"
+	.string "har{SE_M_MILK_DRINK}them!$"
 
 MediumMarthaSeenText:
-	.string "I shall win!$"
+	.string "{SE_M_HEAL_BELL}shal{SE_M_BATON_PASS}win!$"
 
 MediumMarthaBeatenText:
-	.string "I... I... I lost!$"
+	.string "I..{SE_M_PERISH_SONG}I..{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}lost!$"
 
 MediumMarthaAfterBattleText:
-	.string "The one who wants to win the\n"
-	.string "most is the one who will!$"
+	.string "Th{SE_M_REVERSAL}on{SE_M_REVERSAL}wh{SE_M_ATTRACT2}want{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}wi{SE_M_ATTRACT}the\n"
+	.string "mos{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}on{SE_M_REVERSAL}wh{SE_M_ATTRACT2}will!$"
 
 MediumGraceSeenText:
-	.string "Stumped by our dark corridors?\n"
-	.string "Defeat me if you want a hint!$"
+	.string "Stumpe{SE_M_WATERFALL}b{SE_M_YAWN}ou{SE_M_SAND_TOMB}dar{SE_M_ENCORE2}corridors?\n"
+	.string "Defea{SE_M_SPIT_UP}m{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}{SE_M_CHARGE}hint!$"
 
 MediumGraceBeatenText:
 	.string "Wha-what?$"
 
 MediumGraceAfterBattleText:
-	.string "Fine. I'll tell you the secret\n"
-	.string "of the shadows.\p"
-	.string "The path is right in front of\n"
-	.string "your eyes!$"
+	.string "Fine{SE_M_PERISH_SONG}I'l{SE_M_BATON_PASS}tel{SE_M_BATON_PASS}yo{SE_M_DIVE}th{SE_M_REVERSAL}secret\n"
+	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}shadows.\p"
+	.string "Th{SE_M_REVERSAL}pat{SE_M_TRI_ATTACK}i{SE_M_GRASSWHISTLE}righ{SE_M_SPIT_UP}i{SE_M_ATTRACT}fron{SE_M_SPIT_UP}of\n"
+	.string "you{SE_M_SAND_TOMB}eyes!$"
 
 EcruteakCity_GymGuideText:
-	.string "Hey CHAMP! You're almost\n"
-	.string "halfway there!\p"
-	.string "Trainers here use GHOST and\n"
-	.string "DARK-type POKéMON.\p"
-	.string "While MORTY is a GHOST-type\n"
-	.string "expert, be wary of his mystic\l"
+	.string "He{SE_M_YAWN}CHAMP{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}almost\n"
+	.string "halfwa{SE_M_YAWN}there!\p"
+	.string "Trainer{SE_M_GRASSWHISTLE}her{SE_M_REVERSAL}us{SE_M_REVERSAL}GHOS{SE_M_SWIFT}and\n"
+	.string "DARK-typ{SE_M_REVERSAL}POKéMON.\p"
+	.string "Whil{SE_M_REVERSAL}MORT{SE_M_MOONLIGHT}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}GHOST-type\n"
+	.string "expert{SE_M_SUPERSONIC}b{SE_M_REVERSAL}war{SE_M_YAWN}o{SE_M_ACID_ARMOR}hi{SE_M_GRASSWHISTLE}mystic\l"
 	.string "deer.\p"
-	.string "It's said to cause strange\n"
+	.string "It'{SE_M_GRASSWHISTLE}sai{SE_M_WATERFALL}t{SE_M_ATTRACT2}caus{SE_M_REVERSAL}strange\n"
 	.string "nightmares...$"
 
 EcruteakCity_GymGuideWinText:
-	.string "Whew, {PLAYER}. You did great!\p"
-	.string "I was cowering in the corner\n"
-	.string "out of pure terror!$"
+	.string "Whew{SE_M_SUPERSONIC}{PLAYER}{SE_M_PERISH_SONG}Yo{SE_M_DIVE}di{SE_M_WATERFALL}great!\p"
+	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}cowerin{SE_M_SANDSTORM}i{SE_M_ATTRACT}th{SE_M_REVERSAL}corner\n"
+	.string "ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}pur{SE_M_REVERSAL}terror!$"
 
 EcruteakCity_GymClosedText:
-	.string "MORTY, the GYM LEADER, is\n"
+	.string "MORTY{SE_M_SUPERSONIC}th{SE_M_REVERSAL}GY{SE_M_GIGA_DRAIN}LEADER{SE_M_SUPERSONIC}is\n"
 	.string "absent.\p"
-	.string "Sorry, but you'll have to\n"
+	.string "Sorry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}you'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}to\n"
 	.string "leave.\p"
 	.string "Hohohoho.$"
+

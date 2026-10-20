@@ -1,20 +1,22 @@
+@ Johto (data/maps/Route45_hns/scripts.inc), as built into the FireRed game.
+
 Route45_hns_MapScripts::
 	.byte 0
 
 Route45_EventScript_Erik::
-	trainerbattle_single TRAINER_ERIK_HNS, Route45_Text_HikerErikSeen, Route45_Text_HikerErikBeaten
+	trainerbattle_single 1287, Route45_Text_HikerErikSeen, Route45_Text_HikerErikBeaten
 	msgbox Route45_Text_HikerErikAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Michael::
-	trainerbattle_single TRAINER_MICHAEL_HNS, Route45_Text_HikerMichaelSeen, Route45_Text_HikerMichaelBeaten
+	trainerbattle_single 1288, Route45_Text_HikerMichaelSeen, Route45_Text_HikerMichaelBeaten
 	msgbox Route45_Text_HikerMichaelAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Parry::
-	trainerbattle_single TRAINER_PARRY_HNS, Route45_Text_HikerParrySeen, Route45_Text_HikerParryBeaten, Route45_EventScript_RegisterParry
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route45_EventScript_RematchParry
+	trainerbattle_single 1289, Route45_Text_HikerParrySeen, Route45_Text_HikerParryBeaten, Route45_EventScript_RegisterParry
+	specialvar 32781, ShouldTryRematchBattle
+	goto_if_eq 32781, TRUE, Route45_EventScript_RematchParry
 	msgbox Route45_Text_HikerParryAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -22,25 +24,25 @@ Route45_EventScript_RegisterParry::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route45_Text_ParryRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_PARRY_HNS
+	register_matchcall 1289
 	release
 	end
 
 Route45_EventScript_RematchParry::
-	trainerbattle_rematch TRAINER_PARRY_HNS, Route45_Text_ParryRematchIntro, Route45_Text_ParryRematchDefeat
+	trainerbattle_rematch 1289, Route45_Text_ParryRematchIntro, Route45_Text_ParryRematchDefeat
 	msgbox Route45_Text_ParryPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Timothy::
-	trainerbattle_single TRAINER_TIMOTHY_HNS, Route45_Text_HikerTimothySeen, Route45_Text_HikerTimothyBeaten
+	trainerbattle_single 1290, Route45_Text_HikerTimothySeen, Route45_Text_HikerTimothyBeaten
 	msgbox Route45_Text_HikerTimothyAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Kenji::
-	trainerbattle_single TRAINER_KENJI_HNS, Route45_Text_BlackbeltKenjiSeen, Route45_Text_BlackbeltKenjiBeaten, Route45_EventScript_RegisterKenji
-	goto_if_set FLAG_KENJI_HAS_ITEM_HNS, Route45_EventScript_KenjiGiveItem
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route45_EventScript_RematchKenji
+	trainerbattle_single 1323, Route45_Text_BlackbeltKenjiSeen, Route45_Text_BlackbeltKenjiBeaten, Route45_EventScript_RegisterKenji
+	goto_if_set 8946, Route45_EventScript_KenjiGiveItem
+	specialvar 32781, ShouldTryRematchBattle
+	goto_if_eq 32781, TRUE, Route45_EventScript_RematchKenji
 	msgbox Route45_Text_BlackbeltKenjiAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -48,20 +50,20 @@ Route45_EventScript_RegisterKenji::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
 	msgbox Route45_Text_KenjiRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_KENJI_HNS
+	register_matchcall 1323
 	release
 	end
 
 Route45_EventScript_RematchKenji::
-	trainerbattle_rematch TRAINER_KENJI_HNS, Route45_Text_KenjiRematchIntro, Route45_Text_KenjiRematchDefeat
+	trainerbattle_rematch 1323, Route45_Text_KenjiRematchIntro, Route45_Text_KenjiRematchDefeat
 	msgbox Route45_Text_KenjiPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_KenjiGiveItem::
 	msgbox Route45_Text_KenjiHasItem, MSGBOX_DEFAULT
-	giveitem VAR_KENJI_ITEM_HNS
-	goto_if_eq VAR_RESULT, FALSE, Route45_EventScript_KenjiNoRoom
-	clearflag FLAG_KENJI_HAS_ITEM_HNS
+	giveitem 20624
+	goto_if_eq 32781, FALSE, Route45_EventScript_KenjiNoRoom
+	clearflag 8946
 	msgbox Route45_Text_KenjiGaveItem, MSGBOX_AUTOCLOSE
 	end
 
@@ -70,17 +72,17 @@ Route45_EventScript_KenjiNoRoom::
 	end
 
 Route45_EventScript_Ryan::
-	trainerbattle_single TRAINER_RYAN_HNS, Route45_Text_CooltrainermRyanSeen, Route45_Text_CooltrainermRyanBeaten
+	trainerbattle_single 1085, Route45_Text_CooltrainermRyanSeen, Route45_Text_CooltrainermRyanBeaten
 	msgbox Route45_Text_CooltrainermRyanAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Kelly::
-	trainerbattle_single TRAINER_KELLY_HNS, Route45_Text_CooltrainerfKellySeen, Route45_Text_CooltrainerfKellyBeaten
+	trainerbattle_single 1103, Route45_Text_CooltrainerfKellySeen, Route45_Text_CooltrainerfKellyBeaten
 	msgbox Route45_Text_CooltrainerfKellyAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route45_EventScript_Quentin::
-	trainerbattle_single TRAINER_QUENTIN_HNS, Route45_Text_CamperQuentinSeen, Route45_Text_CamperQuentinBeaten
+	trainerbattle_single 1373, Route45_Text_CamperQuentinSeen, Route45_Text_CamperQuentinBeaten
 	msgbox Route45_Text_CamperQuentinAfter, MSGBOX_AUTOCLOSE
 	end
 
@@ -105,168 +107,169 @@ Route45_EventScript_Item_Nugget::
 	end
 
 Route45_Text_HikerErikSeen:
-    .string "Be prepared for anything!\p"
-    .string "Let me see if your POKéMON have\n"
-    .string "been raised properly!$"
+	.string "B{SE_M_REVERSAL}prepare{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}anything!\p"
+	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}se{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}have\n"
+	.string "bee{SE_M_ATTRACT}raise{SE_M_WATERFALL}properly!$"
 
 Route45_Text_HikerErikBeaten:
-    .string "Oh, I lost that!$"
+	.string "Oh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}that!$"
 
 Route45_Text_HikerErikAfter:
-    .string "I'll head back to BLACKTHORN's\n"
-    .string "ICE PATH and train some more.$"
+	.string "I'l{SE_M_BATON_PASS}hea{SE_M_WATERFALL}bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}BLACKTHORN's\n"
+	.string "IC{SE_M_SWORDS_DANCE}PAT{SE_M_SWAGGER2}an{SE_M_WATERFALL}trai{SE_M_ATTRACT}som{SE_M_REVERSAL}more.$"
 
 Route45_Text_HikerMichaelSeen:
-    .string "Yo! You're spunky! But you know\n"
-    .string "what?\p"
-    .string "When it comes to sheer\n"
-    .string "spunkiness, I'm the man!$"
+	.string "Yo{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}spunky{SE_M_DRAGON_RAGE}Bu{SE_M_SPIT_UP}yo{SE_M_DIVE}know\n"
+	.string "what?\p"
+	.string "Whe{SE_M_ATTRACT}i{SE_M_SPIT_UP}come{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}sheer\n"
+	.string "spunkiness{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}man!$"
 
 Route45_Text_HikerMichaelBeaten:
-    .string "My POKéMON weren't spunky enough!$"
+	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}weren'{SE_M_SPIT_UP}spunk{SE_M_YAWN}enough!$"
 
 Route45_Text_HikerMichaelAfter:
-    .string "Boy, do I love HP UP! Mmmm, yum!\p"
-    .string "I keep drinking my POKéMON's!\p"
-    .string "I can't help it!$"
+	.string "Boy{SE_M_SUPERSONIC}d{SE_M_ATTRACT2}{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}H{SE_M_PETAL_DANCE}UP{SE_M_DRAGON_RAGE}Mmmm{SE_M_SUPERSONIC}yum!\p"
+	.string "{SE_M_HEAL_BELL}kee{SE_M_MORNING_SUN}drinkin{SE_M_SANDSTORM}m{SE_M_YAWN}POKéMON's!\p"
+	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}hel{SE_M_MORNING_SUN}it!$"
 
 Route45_Text_HikerParrySeen:
-    .string "My POKéMON are power packed!$"
+	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}powe{SE_M_SAND_TOMB}packed!$"
 
 Route45_Text_HikerParryBeaten:
-    .string "Wahahah! I'm the big loser!$"
+	.string "Wahahah{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}bi{SE_M_SANDSTORM}loser!$"
 
 Route45_Text_HikerParryAfter:
-    .string "I'm not much good at thinking,\n"
-    .string "see?\p"
-    .string "So, I just plow ahead with power!$"
+	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}muc{SE_M_TRI_ATTACK}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}thinking,\n"
+	.string "see?\p"
+	.string "So{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}plo{SE_M_TWISTER}ahea{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}power!$"
 
 Route45_Text_ParryRegister:
-    .string "I'm not much good at thinking,\n"
-    .string "see?\p"
-    .string "So, I just plow ahead with power!$"
+	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}muc{SE_M_TRI_ATTACK}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}thinking,\n"
+	.string "see?\p"
+	.string "So{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}plo{SE_M_TWISTER}ahea{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}power!$"
 
 Route45_Text_ParryRematchIntro:
-    .string "My POKéMON are power packed!$"
+	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}powe{SE_M_SAND_TOMB}packed!$"
 
 Route45_Text_ParryRematchDefeat:
-    .string "Wahahah! I'm the big loser!$"
+	.string "Wahahah{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}bi{SE_M_SANDSTORM}loser!$"
 
 Route45_Text_ParryPostRematch:
-    .string "I'm not much good at thinking,\n"
-    .string "see?\p"
-    .string "So, I just plow ahead with power!$"
+	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}muc{SE_M_TRI_ATTACK}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}thinking,\n"
+	.string "see?\p"
+	.string "So{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}plo{SE_M_TWISTER}ahea{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}power!$"
 
 Route45_Text_HikerTimothySeen:
-    .string "Why do I climb mountains?\p"
-    .string "Because they're there.\p"
-    .string "Why do I train POKéMON?\p"
-    .string "Because they're there!$"
+	.string "Wh{SE_M_YAWN}d{SE_M_ATTRACT2}{SE_M_HEAL_BELL}clim{SE_M_STRENGTH}mountains?\p"
+	.string "Becaus{SE_M_REVERSAL}they'r{SE_M_REVERSAL}there.\p"
+	.string "Wh{SE_M_YAWN}d{SE_M_ATTRACT2}{SE_M_HEAL_BELL}trai{SE_M_ATTRACT}POKéMON?\p"
+	.string "Becaus{SE_M_REVERSAL}they'r{SE_M_REVERSAL}there!$"
 
 Route45_Text_HikerTimothyBeaten:
-    .string "Losses… They're there too!$"
+	.string "Losses{SE_M_DIZZY_PUNCH}They'r{SE_M_REVERSAL}ther{SE_M_REVERSAL}too!$"
 
 Route45_Text_HikerTimothyAfter:
-    .string "The best thing to ever happen to\n"
-    .string "me was discovering POKéMON.$"
+	.string "Th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}thin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}eve{SE_M_SAND_TOMB}happe{SE_M_ATTRACT}to\n"
+	.string "m{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}discoverin{SE_M_SANDSTORM}POKéMON.$"
 
 Route45_Text_HikerParryGivesIron:
-    .string "I just can't find a way to win!\p"
-    .string "Keep it up!\p"
-    .string "Oh, and take this -- it's the\n"
-    .string "gift you couldn't take when we\n"
-    .string "last met.$"
+	.string "{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}can'{SE_M_SPIT_UP}fin{SE_M_WATERFALL}{SE_M_CHARGE}wa{SE_M_YAWN}t{SE_M_ATTRACT2}win!\p"
+	.string "Kee{SE_M_MORNING_SUN}i{SE_M_SPIT_UP}up!\p"
+	.string "Oh{SE_M_SUPERSONIC}an{SE_M_WATERFALL}tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}-{SE_M_PAY_DAY}it'{SE_M_GRASSWHISTLE}the\n"
+	.string "gif{SE_M_SPIT_UP}yo{SE_M_DIVE}couldn'{SE_M_SPIT_UP}tak{SE_M_REVERSAL}whe{SE_M_ATTRACT}we\n"
+	.string "las{SE_M_SPIT_UP}met.$"
 
 Route45_Text_BlackbeltKenjiSeen:
-    .string "I was training here alone.\p"
-    .string "Behold the fruits of my labor!$"
+	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}trainin{SE_M_SANDSTORM}her{SE_M_REVERSAL}alone.\p"
+	.string "Behol{SE_M_WATERFALL}th{SE_M_REVERSAL}fruit{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}labor!$"
 
 Route45_Text_BlackbeltKenjiBeaten:
-    .string "Waaaargh!$"
+	.string "Waaaargh!$"
 
 Route45_Text_BlackbeltKenjiAfter:
-    .string "This calls for extreme measures.\p"
-    .string "I must take to the hills and train\n"
-    .string "in solitude.$"
+	.string "Thi{SE_M_GRASSWHISTLE}call{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}extrem{SE_M_REVERSAL}measures.\p"
+	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}tak{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}hill{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}train\n"
+	.string "i{SE_M_ATTRACT}solitude.$"
 
 Route45_Text_KenjiRegister:
-    .string "This calls for extreme measures.\p"
-    .string "I must take to the hills and train\n"
-    .string "in solitude.$"
+	.string "Thi{SE_M_GRASSWHISTLE}call{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}extrem{SE_M_REVERSAL}measures.\p"
+	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}tak{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}hill{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}train\n"
+	.string "i{SE_M_ATTRACT}solitude.$"
 
 Route45_Text_KenjiRematchIntro:
-    .string "I was training here alone.\p"
-    .string "Behold the fruits of my labor!$"
+	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}trainin{SE_M_SANDSTORM}her{SE_M_REVERSAL}alone.\p"
+	.string "Behol{SE_M_WATERFALL}th{SE_M_REVERSAL}fruit{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}labor!$"
 
 Route45_Text_KenjiRematchDefeat:
-    .string "Waaaargh!$"
+	.string "Waaaargh!$"
 
 Route45_Text_KenjiPostRematch:
-    .string "This calls for extreme measures.\p"
-    .string "I must take to the hills and train\n"
-    .string "in solitude.$"
+	.string "Thi{SE_M_GRASSWHISTLE}call{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}extrem{SE_M_REVERSAL}measures.\p"
+	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}tak{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}hill{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}train\n"
+	.string "i{SE_M_ATTRACT}solitude.$"
 
 Route45_Text_KenjiHasItem:
-    .string "Hey! I'm taking a break from\n"
-    .string "training.\p"
-    .string "I found something good while I\n"
-    .string "was out. Here, take it!$"
+	.string "Hey{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}takin{SE_M_SANDSTORM}{SE_M_CHARGE}brea{SE_M_ENCORE2}from\n"
+	.string "training.\p"
+	.string "{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}somethin{SE_M_SANDSTORM}goo{SE_M_WATERFALL}whil{SE_M_REVERSAL}I\n"
+	.string "wa{SE_M_GRASSWHISTLE}out{SE_M_PERISH_SONG}Here{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}it!$"
 
 Route45_Text_KenjiGaveItem:
-    .string "Use it well!\p"
-    .string "I need to get back to my\n"
-    .string "training. Oooooaaarrrgh!$"
+	.string "Us{SE_M_REVERSAL}i{SE_M_SPIT_UP}well!\p"
+	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}my\n"
+	.string "training{SE_M_PERISH_SONG}Oooooaaarrrgh!$"
 
 Route45_Text_KenjiNoRoom:
-    .string "Hmm, your BAG is full.\p"
-    .string "Come back when you have room.$"
+	.string "Hmm{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}BA{SE_M_SWAGGER}i{SE_M_GRASSWHISTLE}full.\p"
+	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}whe{SE_M_ATTRACT}yo{SE_M_DIVE}hav{SE_M_REVERSAL}room.$"
 
 Route45_Text_BlackbeltKenjiMorning:
-    .string "I'm going to train a bit more\n"
-    .string "before I break for lunch.$"
+	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}{SE_M_CHARGE}bi{SE_M_SPIT_UP}more\n"
+	.string "befor{SE_M_REVERSAL}{SE_M_HEAL_BELL}brea{SE_M_ENCORE2}fo{SE_M_SAND_TOMB}lunch.$"
 
 Route45_Text_BlackbeltKenjiNight:
-    .string "We had plenty of rest at lunch, so\p"
-    .string "now we're all ready to go again!\p"
-    .string "We're going to train again!$"
+	.string "W{SE_M_REVERSAL}ha{SE_M_WATERFALL}plent{SE_M_YAWN}o{SE_M_ACID_ARMOR}res{SE_M_SPIT_UP}a{SE_M_SPIT_UP}lunch{SE_M_SUPERSONIC}so\p"
+	.string "no{SE_M_TWISTER}we'r{SE_M_REVERSAL}al{SE_M_BATON_PASS}read{SE_M_YAWN}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}again!\p"
+	.string "We'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}again!$"
 
 Route45_Text_CooltrainermRyanSeen:
-    .string "What are your thoughts on\n"
-    .string "raising POKéMON?$"
+	.string "Wha{SE_M_SPIT_UP}ar{SE_M_REVERSAL}you{SE_M_SAND_TOMB}thought{SE_M_GRASSWHISTLE}on\n"
+	.string "raisin{SE_M_SANDSTORM}POKéMON?$"
 
 Route45_Text_CooltrainermRyanBeaten:
-    .string "You've won my respect.$"
+	.string "You'v{SE_M_REVERSAL}wo{SE_M_ATTRACT}m{SE_M_YAWN}respect.$"
 
 Route45_Text_CooltrainermRyanAfter:
-    .string "I see you're raising your POKéMON\n"
-    .string "with care.\p"
-    .string "The bond you build will save you\n"
-    .string "in tough situations.$"
+	.string "{SE_M_HEAL_BELL}se{SE_M_REVERSAL}you'r{SE_M_REVERSAL}raisin{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}POKéMON\n"
+	.string "wit{SE_M_TRI_ATTACK}care.\p"
+	.string "Th{SE_M_REVERSAL}bon{SE_M_WATERFALL}yo{SE_M_DIVE}buil{SE_M_WATERFALL}wil{SE_M_BATON_PASS}sav{SE_M_REVERSAL}you\n"
+	.string "i{SE_M_ATTRACT}toug{SE_M_TRI_ATTACK}situations.$"
 
 Route45_Text_CooltrainerfKellySeen:
-    .string "What is your battle strategy?\p"
-    .string "It is foolish to use strong moves\n"
-    .string "indiscriminately.$"
+	.string "Wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}battl{SE_M_REVERSAL}strategy?\p"
+	.string "I{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}foolis{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}stron{SE_M_SANDSTORM}moves\n"
+	.string "indiscriminately.$"
 
 Route45_Text_CooltrainerfKellyBeaten:
-    .string "Fine. I lost.$"
+	.string "Fine{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}lost.$"
 
 Route45_Text_CooltrainerfKellyAfter:
-    .string "I'm not in favor of overly\n"
-    .string "powerful moves.\p"
-    .string "I want to win, but I also don't\n"
-    .string "want to harm POKéMON.$"
+	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}i{SE_M_ATTRACT}favo{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}overly\n"
+	.string "powerfu{SE_M_BATON_PASS}moves.\p"
+	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}win{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}als{SE_M_ATTRACT2}don't\n"
+	.string "wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}har{SE_M_MILK_DRINK}POKéMON.$"
 
 Route45_Text_CamperQuentinSeen:
-    .string "I'm really, really tough!$"
+	.string "I'{SE_M_MILK_DRINK}really{SE_M_SUPERSONIC}reall{SE_M_YAWN}tough!$"
 
 Route45_Text_CamperQuentinBeaten:
-    .string "I was tough at the TRAINER HILL…$"
+	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}toug{SE_M_TRI_ATTACK}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}TRAINE{SE_M_MINIMIZE}HILL…$"
 
 Route45_Text_CamperQuentinAfter:
-    .string "Have you been to the TRAINER HILL?\p"
-    .string "I never, ever lose there, but…$"
+	.string "Hav{SE_M_REVERSAL}yo{SE_M_DIVE}bee{SE_M_ATTRACT}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}TRAINE{SE_M_MINIMIZE}HILL?\p"
+	.string "{SE_M_HEAL_BELL}never{SE_M_SUPERSONIC}eve{SE_M_SAND_TOMB}los{SE_M_REVERSAL}there{SE_M_SUPERSONIC}but…$"
 
 Route45_Text_Sign:
-    .string "ROUTE 45\n"
-    .string "MOUNTAIN RD. AHEAD$"
+	.string "ROUT{SE_M_SWORDS_DANCE}45\n"
+	.string "MOUNTAI{SE_M_PSYBEAM2}RD{SE_M_PERISH_SONG}AHEAD$"
+

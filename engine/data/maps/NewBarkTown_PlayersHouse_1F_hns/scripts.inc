@@ -1,29 +1,32 @@
+@ Johto (data/maps/NewBarkTown_PlayersHouse_1F_hns/scripts.inc), as built into the FireRed game.
+
 NewBarkTown_PlayersHouse_1F_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_PlayersHouse_1F_OnTransition
+	map_script 3, NewBarkTown_PlayersHouse_1F_OnTransition
 	.byte 0
 
 NewBarkTown_PlayersHouse_1F_OnTransition::
-	call_if_eq VAR_NEWBARK_TOWN_STATE, 1, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
-	call_if_eq VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
-	call_if_eq VAR_NEWBARK_TOWN_STATE, 3, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
+	call_if_eq 20581, 1, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
+	call_if_eq 20581, 2, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
+	call_if_eq 20581, 3, NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable
 	end
 
 NewBarkTown_PlayersHouse_1F_SetMomStandingAtTable::
-	setobjectxyperm LOCALID_MOM, 8, 4
-	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_LEFT
+	setobjectxyperm 1, 8, 4
+	setobjectmovementtype 1, 0x9
 
-	@add to newgame later
-	clearflag FLAG_HIDE_MOMS_FRIEND
-	clearflag FLAG_MOM_VISITED
+
+	clearflag 8269
+	clearflag 8805
 	return
 
 NewBarkTown_PlayersHouse_1F_EventScript_Mom::
 	lock
 	faceplayer
-	goto_if_set FLAG_MOM_VISITED, NewBarkTown_PlayersHouse_1F_EventScript_Mom_Regular
-	goto_if_set FLAG_ADVENTURE_STARTED, NewBarkTown_PlayersHouse_1F_MomEventScript_GoodLuck
+	call_if_unset 8699, NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear
+	goto_if_set 8805, NewBarkTown_PlayersHouse_1F_EventScript_Mom_Regular
+	goto_if_set 8660, NewBarkTown_PlayersHouse_1F_MomEventScript_GoodLuck
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomHurryUpElmIsWaiting, MSGBOX_DEFAULT
-	applymovement LOCALID_MOM, NewBarkTown_PlayersHouse_1F_MovementFaceLeft
+	applymovement 1, NewBarkTown_PlayersHouse_1F_MovementFaceLeft
 	waitmovement 0
 	release
 	end
@@ -32,37 +35,36 @@ NewBarkTown_PlayersHouse_1F_EventScript_MomsFriend::
 	lock
 	faceplayer
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomsFriend, MSGBOX_DEFAULT
-	applymovement LOCALID_MOMS_FRIEND, NewBarkTown_PlayersHouse_1F_MovementFaceRight
+	applymovement 2, NewBarkTown_PlayersHouse_1F_MovementFaceRight
 	waitmovement 0
 	release
 	end
 
 NewBarkTown_PlayersHouse_1F_MomEventScript_GoodLuck::
-	playbgm MUS_HG_FOLLOW_ME_1, FALSE
+	playbgm ((558 + 1) + 0x39), FALSE
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomLeaving, MSGBOX_DEFAULT
-	setflag FLAG_MOM_VISITED
-	clearflag FLAG_HIDE_ROUTE_30_NPCS
-	setvar VAR_NEWBARK_TOWN_STATE, 5
+	setflag 8805
+	clearflag 8271
+	setvar 20581, 5
 	fadedefaultbgm
 	release
 	end
 
-
 NewBarkTown_PlayersHouse_1F_EventScript_Mom_Regular::
-	playbgm MUS_HG_FOLLOW_ME_1, FALSE
-	specialvar VAR_RESULT, IsPokecenterChallengeActivated
-	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_PlayersHouse_1F_EventScript_Mom_PokecenterChallenge
-	msgbox PlayersHouse_1F_Text_YouShouldRestABit, MSGBOX_DEFAULT
+	playbgm ((558 + 1) + 0x39), FALSE
+	specialvar 32781, IsPokecenterChallengeActivated
+	goto_if_eq 32781, TRUE, NewBarkTown_PlayersHouse_1F_EventScript_Mom_PokecenterChallenge
+	msgbox NewBarkTown_PlayersHouse_1F_Text_GuestRest, MSGBOX_DEFAULT
 	closemessage
-	call Common_EventScript_OutOfCenterPartyHeal
-	incrementgamestat GAME_STAT_RESTED_AT_HOME
+	call J_Common_EventScript_OutOfCenterPartyHeal
+	incrementgamestat 16
 	call NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	fadedefaultbgm
 	release
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_Mom_PokecenterChallenge::
-	msgbox PlayersHouse_1F_Text_YouShouldRestABit_PokecenterChallenge, MSGBOX_DEFAULT
+	msgbox NewBarkTown_PlayersHouse_1F_Text_GuestRestChallenge, MSGBOX_DEFAULT
 	call NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	fadedefaultbgm
 	release
@@ -71,14 +73,14 @@ NewBarkTown_PlayersHouse_1F_EventScript_Mom_PokecenterChallenge::
 NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu::
 	special Special_MomEnsureInitialized
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomAnythingElse, MSGBOX_DEFAULT
-	multichoice 0, 0, MULTI_MOM_MENU, FALSE
-	switch VAR_RESULT
+	multichoice 0, 0, 173, FALSE
+	switch 32781
 	case 0, NewBarkTown_PlayersHouse_1F_EventScript_CheckSavings
 	case 1, NewBarkTown_PlayersHouse_1F_EventScript_Deposit
 	case 2, NewBarkTown_PlayersHouse_1F_EventScript_Withdraw
 	case 3, NewBarkTown_PlayersHouse_1F_EventScript_ToggleSaving
 	case 4, NewBarkTown_PlayersHouse_1F_EventScript_ExitSavings
-	case MULTI_B_PRESSED, NewBarkTown_PlayersHouse_1F_EventScript_ExitSavings
+	case 127, NewBarkTown_PlayersHouse_1F_EventScript_ExitSavings
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_CheckSavings::
@@ -89,12 +91,12 @@ NewBarkTown_PlayersHouse_1F_EventScript_CheckSavings::
 
 NewBarkTown_PlayersHouse_1F_EventScript_Deposit::
 	checkmoney 1
-	compare VAR_RESULT, FALSE
+	compare 32781, FALSE
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_DepositFailed
 	closemessage
 	special Special_MomOpenDepositInput
 	waitstate
-	compare VAR_0x8000, 0
+	compare 32768, 0
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	msgbox NewBarkTown_PlayersHouse_1F_Text_DepositSuccess, MSGBOX_DEFAULT
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
@@ -107,12 +109,12 @@ NewBarkTown_PlayersHouse_1F_EventScript_DepositFailed::
 
 NewBarkTown_PlayersHouse_1F_EventScript_Withdraw::
 	special Special_MomGetBalance
-	compare VAR_RESULT, 0
+	compare 32781, 0
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_WithdrawFailed
 	closemessage
 	special Special_MomOpenWithdrawInput
 	waitstate
-	compare VAR_0x8000, 0
+	compare 32768, 0
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	msgbox NewBarkTown_PlayersHouse_1F_Text_WithdrawSuccess, MSGBOX_DEFAULT
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
@@ -125,10 +127,10 @@ NewBarkTown_PlayersHouse_1F_EventScript_WithdrawFailed::
 
 NewBarkTown_PlayersHouse_1F_EventScript_ToggleSaving::
 	special Special_MomIsSavingEnabled
-	compare VAR_RESULT, TRUE
+	compare 32781, TRUE
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_DisableSaving
 	msgbox NewBarkTown_PlayersHouse_1F_Text_EnableSaving, MSGBOX_YESNO
-	compare VAR_RESULT, YES
+	compare 32781, YES
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_ConfirmEnable
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	end
@@ -141,7 +143,7 @@ NewBarkTown_PlayersHouse_1F_EventScript_ConfirmEnable::
 
 NewBarkTown_PlayersHouse_1F_EventScript_DisableSaving::
 	msgbox NewBarkTown_PlayersHouse_1F_Text_DisableSaving, MSGBOX_YESNO
-	compare VAR_RESULT, YES
+	compare 32781, YES
 	goto_if_eq NewBarkTown_PlayersHouse_1F_EventScript_ConfirmDisable
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomSavingsMenu
 	end
@@ -157,112 +159,91 @@ NewBarkTown_PlayersHouse_1F_EventScript_ExitSavings::
 	return
 
 NewBarkTown_PlayersHouse_1F_Text_MomAnythingElse:
-	.string "Is there anything else I can\n"
-	.string "help you with, sweetie?$"
+	.string "I{SE_M_GRASSWHISTLE}ther{SE_M_REVERSAL}anythin{SE_M_SANDSTORM}els{SE_M_REVERSAL}{SE_M_HEAL_BELL}can\n"
+	.string "hel{SE_M_MORNING_SUN}yo{SE_M_DIVE}with{SE_M_SUPERSONIC}sweetie?$"
 
 NewBarkTown_PlayersHouse_1F_Text_CurrentSavings:
-	.string "I'm holding {STR_VAR_2}\n"
-	.string "for you right now.$"
+	.string "I'{SE_M_MILK_DRINK}holdin{SE_M_SANDSTORM}{STR_VAR_2}\n"
+	.string "fo{SE_M_SAND_TOMB}yo{SE_M_DIVE}righ{SE_M_SPIT_UP}now.$"
 
 NewBarkTown_PlayersHouse_1F_Text_EnableSaving:
-	.string "Do you want me to save some of the\n"
-	.string "money you earn?$"
+	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}sav{SE_M_REVERSAL}som{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}the\n"
+	.string "mone{SE_M_YAWN}yo{SE_M_DIVE}earn?$"
 
 NewBarkTown_PlayersHouse_1F_Text_SavingEnabled:
-	.string "Okay! I'll save 25% of\n"
-	.string "the money you earn from battles.$"
+	.string "Okay{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}sav{SE_M_REVERSAL}25{SE_EXP_MAX}of\n"
+	.string "th{SE_M_REVERSAL}mone{SE_M_YAWN}yo{SE_M_DIVE}ear{SE_M_ATTRACT}fro{SE_M_MILK_DRINK}battles.$"
 
 NewBarkTown_PlayersHouse_1F_Text_DisableSaving:
-	.string "Would you like me to stop\n"
-	.string "saving for you?$"
+	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}stop\n"
+	.string "savin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you?$"
 
 NewBarkTown_PlayersHouse_1F_Text_SavingDisabled:
-	.string "Okay, I'll stop saving for now.$"
+	.string "Okay{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}sto{SE_M_MORNING_SUN}savin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}now.$"
 
 NewBarkTown_PlayersHouse_1F_Text_Goodbye:
-	.string "Take care, sweetie!$"
+	.string "Tak{SE_M_REVERSAL}care{SE_M_SUPERSONIC}sweetie!$"
 
 NewBarkTown_PlayersHouse_1F_Text_DepositSuccess:
-	.string "MOM: Sounds good! I'll put that in\n"
-	.string "savings for you.$"
+	.string "HOST{SE_M_HEAT_WAVE}Sound{SE_M_GRASSWHISTLE}good{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}pu{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}in\n"
+	.string "saving{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}you.$"
 
 NewBarkTown_PlayersHouse_1F_Text_WithdrawSuccess:
-	.string "MOM: Here you go!$"
+	.string "HOST{SE_M_HEAT_WAVE}Her{SE_M_REVERSAL}yo{SE_M_DIVE}go!$"
 
 NewBarkTown_PlayersHouse_1F_Text_NoMoneyToDeposit:
-	.string "MOM: You don't have any money to\n"
-	.string "deposit right now, sweetie.$"
+	.string "HOST{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}mone{SE_M_YAWN}to\n"
+	.string "deposi{SE_M_SPIT_UP}righ{SE_M_SPIT_UP}now{SE_M_SUPERSONIC}sweetie.$"
 
 NewBarkTown_PlayersHouse_1F_Text_NoMoneyToWithdraw:
-	.string "MOM: I haven't saved any money\n"
-	.string "for you yet, honey.$"
+	.string "HOST{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}save{SE_M_WATERFALL}an{SE_M_YAWN}money\n"
+	.string "fo{SE_M_SAND_TOMB}yo{SE_M_DIVE}yet{SE_M_SUPERSONIC}honey.$"
 
 NewBarkTown_PlayersHouse_1F_EventScript_MomsIntroTrigger1::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement1
+	applymovement 255, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement1
 	waitmovement 0
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro
 	end
 
 NewBarkTown_PlayersHouse_1F_EventScript_MomsIntroTrigger2::
 	lock
-	applymovement OBJ_EVENT_ID_PLAYER, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement2
+	applymovement 255, NewBarkTown_PlayersHouse_1F_PlayerIntroMovement2
 	waitmovement 0
 	goto NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro
 	end
 
-
 NewBarkTown_PlayersHouse_1F_EventScript_MomsIntro::
-	playbgm MUS_HG_FOLLOW_ME_1, FALSE
-	playse SE_PIN
-	applymovement LOCALID_MOM, Common_Movement_ExclamationMark
+	playbgm ((558 + 1) + 0x39), FALSE
+	playse 21
+	applymovement 1, J_Common_Movement_ExclamationMark
 	delay 55
-	waitmovement LOCALID_MOM
-	applymovement LOCALID_MOM, NewBarkTown_PlayersHouse_1F_MomMovement_1
+	waitmovement 1
+	applymovement 1, NewBarkTown_PlayersHouse_1F_MomMovement_1
 	waitmovement 0
 	msgbox NewBarkTown_PlayersHouse_1F_Text_ElmsLookingForYou, MSGBOX_DEFAULT
 	call NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear
-	call NewBarkTown_PlayersHouse_1F_EventScript_GiveRunningShoes
-	applymovement LOCALID_MOM, NewBarkTown_PlayersHouse_1F_MomMovement_2
+	applymovement 1, NewBarkTown_PlayersHouse_1F_MomMovement_2
 	waitmovement 0
-	setvar VAR_NEWBARK_TOWN_STATE, 2
-	setvar VAR_NEWBARKTOWN_LABSTATE, 0
-	setflag FLAG_HIDE_LAB_POLICEMAN
-	setflag FLAG_VISITED_NEWBARK_TOWN
+	setflag 8268
+	setflag 10480
 
-	@former flagheap location
+
 
 	fadedefaultbgm
 	releaseall
 	end
 
-
-
 NewBarkTown_PlayersHouse_1F_EventScript_GivePokeGear::
-	playfanfare MUS_REGISTER_MATCH_CALL
+	playfanfare 460
 	message NewBarkTown_PlayersHouse_1F_Text_ObtainedPokeGear
 	waitfanfare
-	setflag FLAG_SYS_POKENAV_GET
-	setflag FLAG_HAS_MATCH_CALL
-	setflag FLAG_RECEIVED_POKENAV
-	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
-	setflag FLAG_REGISTER_RIVAL_POKENAV
+	setflag 10386
+	setflag 8691
+	setflag 8699
+	setflag 8774
+	setflag 8777
 	msgbox NewBarkTown_PlayersHouse_1F_Text_ExplainPokeGear, MSGBOX_DEFAULT
-	closemessage
-	delay 30
-	return
-	
-NewBarkTown_PlayersHouse_1F_EventScript_GiveRunningShoes::
-	msgbox NewBarkTown_PlayersHouse_1F_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
-	waitmessage
-	closemessage
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox NewBarkTown_PlayersHouse_1F_Text_SwitchShoesWithRunningShoes, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-	setflag FLAG_SYS_B_DASH
-	msgbox NewBarkTown_PlayersHouse_1F_Text_ExplainRunningShoes, MSGBOX_DEFAULT
 	closemessage
 	delay 30
 	return
@@ -302,57 +283,51 @@ NewBarkTown_PlayersHouse_1F_MovementFaceLeft:
 	face_left
 	step_end
 
-NewBarkTown_PlayersHouse_1F_Text_ElmsLookingForYou:
-	.string "Oh, {PLAYER}…! Our neighbor,\n"
-	.string "PROF.ELM, was looking for you.\p"
-	.string "He said he wanted you to do\n"
-	.string "something for him.\p"
-	.string "Oh! I almost forgot! Your POKéGEAR\n"
-	.string "is back from the repair shop.\p"
-	.string "Here you go!$"
+NewBarkTown_PlayersHouse_1F_Text_ElmsLookingForYou::
+	.string "Welcome{SE_M_SUPERSONIC}{PLAYER}{SE_M_DRAGON_RAGE}PROF.EL{SE_M_GIGA_DRAIN}told\n"
+	.string "m{SE_M_REVERSAL}abou{SE_M_SPIT_UP}hi{SE_M_GRASSWHISTLE}gues{SE_M_SPIT_UP}fro{SE_M_MILK_DRINK}KANTO.\p"
+	.string "H{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}hel{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}his\n"
+	.string "POKéMO{SE_M_PSYBEAM2}research.\p"
+	.string "Her{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéGEA{SE_M_MINIMIZE}t{SE_M_ATTRACT2}hel{SE_M_MORNING_SUN}you\n"
+	.string "kee{SE_M_MORNING_SUN}i{SE_M_ATTRACT}touc{SE_M_TRI_ATTACK}whil{SE_M_REVERSAL}you'r{SE_M_REVERSAL}here.$"
 
 NewBarkTown_PlayersHouse_1F_Text_ObtainedPokeGear:
-	.string "{PLAYER} obtained the POKéGEAR.$"
+	.string "{PLAYER} obtaine{SE_M_WATERFALL}th{SE_M_REVERSAL}POKéGEAR.$"
 
-NewBarkTown_PlayersHouse_1F_Text_ExplainPokeGear:
-	.string "MOM: Phone numbers are stored\n"
-	.string "in memory.\p"
-	.string "Just choose a name you want to call.\n"
-	.string "I've already registered my number.\p"
-	.string "Gee, isn't that convenient?$"
+NewBarkTown_PlayersHouse_1F_Text_ExplainPokeGear::
+	.string "Phon{SE_M_REVERSAL}number{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}store{SE_M_WATERFALL}i{SE_M_ATTRACT}the\n"
+	.string "POKéGEAR'{SE_M_GRASSWHISTLE}memory.\p"
+	.string "Choos{SE_M_REVERSAL}{SE_M_CHARGE}nam{SE_M_REVERSAL}whe{SE_M_ATTRACT}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}to\n"
+	.string "call{SE_M_PERISH_SONG}Th{SE_M_REVERSAL}gues{SE_M_SPIT_UP}hous{SE_M_REVERSAL}numbe{SE_M_SAND_TOMB}is\l"
+	.string "registere{SE_M_WATERFALL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}nee{SE_M_WATERFALL}help.$"
 
-NewBarkTown_PlayersHouse_1F_Text_WearTheseRunningShoes:
-	.string "Oh, and don't forget your\n"
-	.string "RUNNING SHOES!$"
+NewBarkTown_PlayersHouse_1F_Text_MomHurryUpElmIsWaiting::
+	.string "PROF.EL{SE_M_GIGA_DRAIN}i{SE_M_GRASSWHISTLE}waitin{SE_M_SANDSTORM}i{SE_M_ATTRACT}hi{SE_M_GRASSWHISTLE}lab.\p"
+	.string "I'{SE_M_MILK_DRINK}gla{SE_M_WATERFALL}{SE_M_CHARGE}traine{SE_M_SAND_TOMB}fro{SE_M_MILK_DRINK}KANTO\n"
+	.string "ha{SE_M_GRASSWHISTLE}com{SE_M_REVERSAL}t{SE_M_ATTRACT2}hel{SE_M_MORNING_SUN}him.$"
 
-NewBarkTown_PlayersHouse_1F_Text_SwitchShoesWithRunningShoes:
-	.string "{PLAYER} switched shoes with the\n"
-	.string "RUNNING SHOES.$"
+NewBarkTown_PlayersHouse_1F_Text_MomsFriend::
+	.string "Hi{SE_M_SUPERSONIC}{PLAYER}{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}PROF.ELM's\n"
+	.string "gues{SE_M_SPIT_UP}fro{SE_M_MILK_DRINK}KANTO{SE_M_SUPERSONIC}aren'{SE_M_SPIT_UP}you?\p"
+	.string "M{SE_M_YAWN}daughte{SE_M_SAND_TOMB}hope{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}becom{SE_M_REVERSAL}his\n"
+	.string "assistant{SE_M_PERISH_SONG}Sh{SE_M_REVERSAL}love{SE_M_GRASSWHISTLE}POKéMON!$"
 
-NewBarkTown_PlayersHouse_1F_Text_ExplainRunningShoes:
-	.string "MOM: {PLAYER}, press the B Button\n"
-	.string "while wearing these to run fast!$"
+NewBarkTown_PlayersHouse_1F_Text_MomLeaving::
+	.string "You'r{SE_M_REVERSAL}read{SE_M_YAWN}t{SE_M_ATTRACT2}explor{SE_M_REVERSAL}JOHTO?\n"
+	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}loo{SE_M_ENCORE2}eager{SE_M_SUPERSONIC}too!\p"
+	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}hel{SE_M_MORNING_SUN}loo{SE_M_ENCORE2}afte{SE_M_SAND_TOMB}som{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}your\n"
+	.string "battl{SE_M_REVERSAL}winning{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}you'{SE_M_WATERFALL}like.\p"
+	.string "I{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}choice{SE_M_PERISH_SONG}Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}any\n"
+	.string "tim{SE_M_REVERSAL}t{SE_M_ATTRACT2}manag{SE_M_REVERSAL}you{SE_M_SAND_TOMB}savings.\p"
+	.string "Cal{SE_M_BATON_PASS}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéGEA{SE_M_MINIMIZE}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}need\n"
+	.string "anything{SE_M_PERISH_SONG}Tak{SE_M_REVERSAL}care{SE_M_SUPERSONIC}{PLAYER}!$"
 
-NewBarkTown_PlayersHouse_1F_Text_MomHurryUpElmIsWaiting:
-	.string "MOM: PROF.ELM is waiting for you.\p"
-	.string "Hurry up, baby!$"
+NewBarkTown_PlayersHouse_1F_Text_GuestRest::
+	.string "You{SE_M_SAND_TOMB}tea{SE_M_MILK_DRINK}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}tired.\n"
+	.string "Pleas{SE_M_REVERSAL}res{SE_M_SPIT_UP}her{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}while.$"
 
-NewBarkTown_PlayersHouse_1F_Text_MomsFriend:
-	.string "Hi, {PLAYER}!\p"
-	.string "I'm visiting!\p"
-	.string "Have you heard?\p"
-	.string "My daughter is adamant about\n"
-	.string "becoming PROF.ELM's assistant.\p"
-	.string "She really loves POKéMON!$"
+NewBarkTown_PlayersHouse_1F_Text_GuestRestChallenge::
+	.string "You{SE_M_SAND_TOMB}challeng{SE_M_REVERSAL}rule{SE_M_GRASSWHISTLE}d{SE_M_ATTRACT2}no{SE_M_SPIT_UP}allow\n"
+	.string "healin{SE_M_SANDSTORM}here{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}stil{SE_M_BATON_PASS}help\l"
+	.string "wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}savings.$"
 
-NewBarkTown_PlayersHouse_1F_Text_MomLeaving:
-	.string "MOM: Wow, that's a cute POKéMON.\n"
-	.string "Where did you get it?\p"
-	.string "…\p"
-	.string "So, you're leaving on an adventure...\n"
-	.string "That does sound challenging...\p"
-	.string "Just be careful.\p"
-	.string "POKéMON are your friends.\n"
-	.string "You need to work as a team.\p"
-	.string "Now, go on!\n"
-	.string "I'm behind you all the way!$"

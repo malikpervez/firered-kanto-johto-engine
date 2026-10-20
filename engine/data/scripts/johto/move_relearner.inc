@@ -1,0 +1,110 @@
+@ Johto (data/scripts/move_relearner.inc), as built into the FireRed game.
+
+J_Common_EventScript_MoveRelearner::
+	lockall
+	faceplayer
+	message J_MoveRelearner_Text_WouldLearnNewMoves
+	waitmessage
+	goto J_Common_EventScript_MoveRelearnerDynMultiChoice
+	end
+
+J_Common_EventScript_MoveRelearnerDynMultiChoice::
+	dynmultipush J_MoveRelearner_Text_LevelUpMoves, 0
+	.if FALSE == TRUE
+	dynmultipush J_MoveRelearner_Text_EggMoves, 1
+	dynmultipush J_MoveRelearner_Text_TMMoves, 2
+	dynmultipush J_MoveRelearner_Text_TutormoveMoves, 3
+	.else
+	call_if_set 0, J_MoveRelearner_EventScript_PushEggMoves
+	istmrelearneractive J_MoveRelearner_EventScript_PushTMMoves
+	call_if_set 0, J_MoveRelearner_EventScript_PushTutorMoves
+	.endif
+	dynmultipush J_MoveRelearner_Text_SeeYa, 4
+	dynmultistack 0, 0, FALSE, 5, 0, 0, 255
+	closemessage
+	switch 32781
+	case 0, J_MoveRelearner_EventScript_TeachLevelUpMoves
+	case 1, J_MoveRelearner_EventScript_TeachEggMoves
+	case 2, J_MoveRelearner_EventScript_TeachTMMoves
+	case 3, J_MoveRelearner_EventScript_TeachTutorMoves
+	case 4, J_MoveRelearner_EventScript_PleaseComeAgain
+
+J_MoveRelearner_EventScript_PleaseComeAgain:
+	msgbox J_MoveRelearner_Text_ThankYouComeAgain, MSGBOX_DEFAULT
+	releaseall
+	end
+
+J_MoveRelearner_EventScript_PushEggMoves:
+	dynmultipush J_MoveRelearner_Text_EggMoves, 1
+	return
+
+J_MoveRelearner_EventScript_PushTMMoves:
+	dynmultipush J_MoveRelearner_Text_TMMoves, 2
+	return
+
+J_MoveRelearner_EventScript_PushTutorMoves:
+	dynmultipush J_MoveRelearner_Text_TutormoveMoves, 3
+	return
+
+J_MoveRelearner_EventScript_TeachLevelUpMoves:
+	setmoverelearnerstate MOVE_RELEARNER_LEVEL_UP_MOVES
+	bufferstring STR_VAR_3, J_MoveRelearner_Text_LevelUpMoveLWR
+	goto J_MoveRelearner_EventScript_TeachMove
+	end
+
+J_MoveRelearner_EventScript_TeachEggMoves:
+	setmoverelearnerstate MOVE_RELEARNER_EGG_MOVES
+	bufferstring STR_VAR_3, J_MoveRelearner_Text_EggMoveLWR
+	goto J_MoveRelearner_EventScript_TeachMove
+	end
+
+J_MoveRelearner_EventScript_TeachTMMoves:
+	setmoverelearnerstate MOVE_RELEARNER_TM_MOVES
+	bufferstring STR_VAR_3, J_MoveRelearner_Text_TMMoveLWR
+	goto J_MoveRelearner_EventScript_TeachMove
+	end
+
+J_MoveRelearner_EventScript_TeachTutorMoves:
+	setmoverelearnerstate MOVE_RELEARNER_TUTOR_MOVES
+	bufferstring STR_VAR_3, J_MoveRelearner_Text_TutorMoveLWR
+	goto J_MoveRelearner_EventScript_TeachMove
+	end
+
+J_MoveRelearner_EventScript_TeachMove::
+	getpartysize
+	goto_if_eq 32781, 0, J_MoveRelearner_EventScript_NoPkmn
+	msgbox J_MoveRelearner_Text_ChoosePkmn, MSGBOX_DEFAULT
+	chooseboxmon SELECT_PC_MON_MOVE_RELEARNER
+	waitstate
+	call_if_eq 32772, 0xFF, J_MoveRelearner_EventScript_AnythingElse
+	special IsSelectedMonEgg
+	call_if_eq 32781, TRUE, J_MoveRelearner_EventScript_CantTeachMoveToEgg
+	special HasMovesToRelearn
+	call_if_eq 32781, FALSE, J_MoveRelearner_EventScript_CantTeachMoveToPkmn
+	msgbox J_MoveRelearner_Text_WhichXmoveShouldTeach, MSGBOX_DEFAULT
+	special TeachMoveRelearnerMove
+	waitstate
+	goto J_MoveRelearner_EventScript_AnythingElse
+	end
+
+J_MoveRelearner_EventScript_NoPkmn:
+	msgbox J_MoveRelearner_Text_HaveNoPkmn, MSGBOX_AUTOCLOSE
+	releaseall
+	end
+
+J_MoveRelearner_EventScript_CantTeachMoveToEgg:
+	msgbox J_MoveRelearner_Text_CantTeachMoveToEgg, MSGBOX_AUTOCLOSE
+	goto J_MoveRelearner_EventScript_AnythingElse
+	end
+
+J_MoveRelearner_EventScript_CantTeachMoveToPkmn:
+	msgbox J_MoveRelearner_Text_CantTeachMoveToPkmn, MSGBOX_AUTOCLOSE
+	goto J_MoveRelearner_EventScript_AnythingElse
+	end
+
+J_MoveRelearner_EventScript_AnythingElse::
+	message J_MoveRelearner_Text_AnythingElse
+	waitmessage
+	goto J_Common_EventScript_MoveRelearnerDynMultiChoice
+	end
+

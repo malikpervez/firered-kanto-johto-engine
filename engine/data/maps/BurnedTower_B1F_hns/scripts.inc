@@ -1,124 +1,126 @@
+@ Johto (data/maps/BurnedTower_B1F_hns/scripts.inc), as built into the FireRed game.
+
 BurnedTower_B1F_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE,BurnedTower_B1F_OnFrame
-	map_script MAP_SCRIPT_ON_TRANSITION, BurnedTower_B1F_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script 2,BurnedTower_B1F_OnFrame
+	map_script 3, BurnedTower_B1F_OnTransition
+	map_script 5, J_SetTimeEncounters
 	.byte 0
 
-BurnedTower_B1F_OnTransition: 
+BurnedTower_B1F_OnTransition:
 	callnative SetTimeBasedEncounters
 	end
 
 BurnedTower_B1F_OnFrame::
-	map_script_2 VAR_ECRUTEAK_CITY_STATE, 3, BurnedTower_B1F_EventScript_ReleaseBeasts
+	map_script_2 20561, 3, BurnedTower_B1F_EventScript_ReleaseBeasts
 	.2byte 0
 
 BurnedTower_B1F_EventScript_ReleaseBeasts::
 	lock
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	turnobject 255, DIR_WEST
 	delay 60
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	turnobject 255, DIR_EAST
 	delay 60
-	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	playse 21
+	applymovement 255, J_Common_Movement_ExclamationMark
+	turnobject 255, DIR_NORTH
 	delay 60
 
-	playmoncry SPECIES_ENTEI, CRY_MODE_NORMAL
-	applymovement LOCALID_BURNEDTOWER_ENTEI, BurnedTower_B1F_Movement_AwakenBeasts
-	playse SE_LEDGE
+	playmoncry 244, 0
+	applymovement 1, BurnedTower_B1F_Movement_AwakenBeasts
+	playse 10
 	waitse
-	playse SE_LEDGE
+	playse 10
 	waitse
-	playse SE_LEDGE
-	waitse
-	waitmovement 0
-
-	playmoncry SPECIES_RAIKOU, CRY_MODE_NORMAL
-	applymovement LOCALID_BURNEDTOWER_RAIKOU, BurnedTower_B1F_Movement_AwakenBeasts
-	playse SE_LEDGE
-	waitse
-	playse SE_LEDGE
-	waitse
-	playse SE_LEDGE
+	playse 10
 	waitse
 	waitmovement 0
 
-	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
-	applymovement LOCALID_BURNEDTOWER_SUICUNE, BurnedTower_B1F_Movement_AwakenBeasts
-	playse SE_LEDGE
+	playmoncry 243, 0
+	applymovement 2, BurnedTower_B1F_Movement_AwakenBeasts
+	playse 10
 	waitse
-	playse SE_LEDGE
+	playse 10
 	waitse
-	playse SE_LEDGE
+	playse 10
 	waitse
 	waitmovement 0
 
-	
-	applymovement LOCALID_BURNEDTOWER_ENTEI, BurnedTower_B1F_Movement_EnteiLeave
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	waitmovement 0
-
-	applymovement LOCALID_BURNEDTOWER_RAIKOU, BurnedTower_B1F_Movement_RaikouLeave
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	waitmovement 0
-
-	applymovement LOCALID_BURNEDTOWER_SUICUNE, BurnedTower_B1F_Movement_SuicuneLeave
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playmoncry SPECIES_SUICUNE, CRY_MODE_NORMAL
+	playmoncry 245, 0
+	applymovement 3, BurnedTower_B1F_Movement_AwakenBeasts
+	playse 10
 	waitse
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
-	delay 30
-	playse SE_LEDGE
+	playse 10
+	waitse
+	playse 10
+	waitse
 	waitmovement 0
-	
-	setflag FLAG_HIDE_BURNED_TOWER_BEASTS
-	removeobject LOCALID_BURNEDTOWER_ENTEI
-	removeobject LOCALID_BURNEDTOWER_RAIKOU
-	removeobject LOCALID_BURNEDTOWER_SUICUNE
+
+
+	applymovement 1, BurnedTower_B1F_Movement_EnteiLeave
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	waitmovement 0
+
+	applymovement 2, BurnedTower_B1F_Movement_RaikouLeave
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	waitmovement 0
+
+	applymovement 3, BurnedTower_B1F_Movement_SuicuneLeave
+	delay 30
+	playse 10
+	delay 30
+	playmoncry 245, 0
+	waitse
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	delay 30
+	playse 10
+	waitmovement 0
+
+	setflag 8238
+	removeobject 1
+	removeobject 2
+	removeobject 3
 	delay 55
 
-	playse SE_EXIT
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
-	applymovement LOCALID_BURNEDTOWER2_EUSINE, BurnedTower_B1F_Movement_EusineEnter
+	playse 9
+	turnobject 255, DIR_EAST
+	applymovement 11, BurnedTower_B1F_Movement_EusineEnter
 	waitmovement 0
 	msgbox BurnedTowerB1FEusineText, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_BURNEDTOWER2_EUSINE, BurnedTower_B1F_Movement_EusineLeave
+	applymovement 11, BurnedTower_B1F_Movement_EusineLeave
 	waitmovement 0
-	playse SE_EXIT
-	setflag FLAG_HIDE_BURNED_TOWER_B1F_EUSINE
-	removeobject LOCALID_BURNEDTOWER2_EUSINE
-	setflag FLAG_HIDE_BURNED_TOWER_NPCS
-	setflag FLAG_HIDE_ECRUTEAK_CITY_SAGE
+	playse 9
+	setflag 8315
+	removeobject 11
+	setflag 8316
+	setflag 8309
 	special InitRoamer
-	setflag FLAG_RELEASED_BEASTS
-	setvar VAR_ECRUTEAK_CITY_STATE, 4
+	setflag 8664
+	setvar 20561, 4
 	release
 	end
 
@@ -184,26 +186,25 @@ BurnedTower_B1F_Movement_EusineLeave:
 	step_end
 
 BurnedTowerB1FEusineText:
-	.string "EUSINE: I'm shocked!\p"
-	.string "SUICUNE raced by like a blur,\n"
-	.string "right in front of my eyes!\p"
-	.string "For ten years I chased\n"
-	.string "SUICUNE, and I finally got to\l"
-	.string "see it.\p"
-	.string "I'm all choked up!\p"
-	.string "{PLAYER}, I owe this all to you!\p"
-	.string "Thank you!\p"
-	.string "I heard that the legendary\n"
-	.string "POKéMON of ECRUTEAK test\l"
-	.string "chosen humans by allowing them\l"
-	.string "to get close.\p"
-	.string "I'm going to track SUICUNE.\p"
-	.string "{PLAYER}, let's meet again!\p"
+	.string "EUSINE{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}shocked!\p"
+	.string "SUICUN{SE_M_SWORDS_DANCE}race{SE_M_WATERFALL}b{SE_M_YAWN}lik{SE_M_REVERSAL}{SE_M_CHARGE}blur,\n"
+	.string "righ{SE_M_SPIT_UP}i{SE_M_ATTRACT}fron{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}eyes!\p"
+	.string "Fo{SE_M_SAND_TOMB}te{SE_M_ATTRACT}year{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}chased\n"
+	.string "SUICUNE{SE_M_SUPERSONIC}an{SE_M_WATERFALL}{SE_M_HEAL_BELL}finall{SE_M_YAWN}go{SE_M_SPIT_UP}to\l"
+	.string "se{SE_M_REVERSAL}it.\p"
+	.string "I'{SE_M_MILK_DRINK}al{SE_M_BATON_PASS}choke{SE_M_WATERFALL}up!\p"
+	.string "{PLAYER}{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}ow{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}t{SE_M_ATTRACT2}you!\p"
+	.string "Than{SE_M_ENCORE2}you!\p"
+	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}tha{SE_M_SPIT_UP}th{SE_M_REVERSAL}legendary\n"
+	.string "POKéMO{SE_M_PSYBEAM2}o{SE_M_ACID_ARMOR}ECRUTEA{SE_M_SNORE}test\l"
+	.string "chose{SE_M_ATTRACT}human{SE_M_GRASSWHISTLE}b{SE_M_YAWN}allowin{SE_M_SANDSTORM}them\l"
+	.string "t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}close.\p"
+	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}trac{SE_M_ENCORE2}SUICUNE.\p"
+	.string "{PLAYER}{SE_M_SUPERSONIC}let'{SE_M_GRASSWHISTLE}mee{SE_M_SPIT_UP}again!\p"
 	.string "Farewell!$"
 
-
 BurnedTower_B1F_EventScript_Item_Taunt::
-	finditem ITEM_TM_TAUNT
+	finditem 593
 	end
 
 BurnedTower_B1F_EventScript_Item_UltraBall::

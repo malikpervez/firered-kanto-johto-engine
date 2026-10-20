@@ -1,115 +1,122 @@
+@ Johto (data/maps/IcePath_B3F_hns/scripts.inc), as built into the FireRed game.
+
 IcePath_B3F_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, IcePath_B3F_OnTransition
-	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
+	map_script 3, IcePath_B3F_OnTransition
+	map_script 5, J_SetTimeEncounters
 	.byte 0
 
-IcePath_B3F_OnTransition: 
+IcePath_B3F_OnTransition:
 	callnative SetTimeBasedEncounters
 	end
 
 IcePath_B3F_Trigger_Swinub_Jump::
-	goto_if_set FLAG_DAY_POKEMON, IcePath_B3F_Trigger_Night
-	playse SE_PIN
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-	waitmovement OBJ_EVENT_ID_PLAYER
+	goto_if_set 8796, IcePath_B3F_Trigger_Night
+	playse 21
+	applymovement 255, J_Common_Movement_ExclamationMark
+	waitmovement 255
 	waitse
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
-	playmoncry SPECIES_SWINUB, CRY_MODE_NORMAL
-	applymovement LOCALID_ICEPATH4_STUCK_SWINUB, IcePath_B3F_Movement_StuckSwinubJump0
-	waitmovement LOCALID_ICEPATH4_STUCK_SWINUB
+	turnobject 255, DIR_WEST
+	playmoncry 220, 0
+	applymovement 4, IcePath_B3F_Movement_StuckSwinubJump0
+	waitmovement 4
 	delay 20
-	playse SE_LEDGE
-	applymovement LOCALID_ICEPATH4_STUCK_SWINUB, IcePath_B3F_Movement_StuckSwinubJump
+	playse 10
+	applymovement 4, IcePath_B3F_Movement_StuckSwinubJump
 	waitmovement 0
-	setobjectxyperm LOCALID_ICEPATH4_STUCK_SWINUB, 3, 19
-	setobjectmovementtype LOCALID_ICEPATH4_STUCK_SWINUB, MOVEMENT_TYPE_FACE_DOWN
-	setvar VAR_TEMP_0, 1
+	setobjectxyperm 4, 3, 19
+	setobjectmovementtype 4, 0x8
+	setvar 16384, 1
 	end
+
 IcePath_B3F_Trigger_Night::
-	setvar VAR_TEMP_0, 1
+	setvar 16384, 1
 	end
 
 IcePath_B3F_EventScript_Swinub::
 	lockall
 	faceplayer
-	playmoncry SPECIES_SWINUB, CRY_MODE_NORMAL
+	playmoncry 220, 0
 	msgbox IcePath_B3F_Text_Swinub, MSGBOX_DEFAULT
 	waitmoncry
-	goto_if_set FLAG_ITEM_ICEPATH4_TM_AVALANCHE, IcePath_B3F_EventScript_SwinubBlowPlayer
+	goto_if_set 8500, IcePath_B3F_EventScript_SwinubBlowPlayer
 	msgbox IcePath_B3F_Text_SwinubBerry, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, FALSE, IcePath_B3F_EventScript_SwinubBlowPlayer
-	fadescreen FADE_TO_BLACK
+	goto_if_eq 32781, FALSE, IcePath_B3F_EventScript_SwinubBlowPlayer
+	fadescreen 1
 	special Bag_ChooseBerry
 	waitstate
-	removeitem VAR_ITEM_ID, 1
-	goto_if_ne VAR_ITEM_ID, ITEM_ASPEAR_BERRY, IcePath_B3F_EventScript_SwinubDislikedBerry
+	removeitem 32782, 1
+	goto_if_ne 32782, ITEM_ASPEAR_BERRY, IcePath_B3F_EventScript_SwinubDislikedBerry
 	msgbox IcePath_B3F_Text_SwinubAteBerry, MSGBOX_DEFAULT
-	giveitem ITEM_TM_AVALANCHE
-	setflag FLAG_ITEM_ICEPATH4_TM_AVALANCHE
+	giveitem 653
+	setflag 8500
+
 IcePath_B3F_EventScript_SwinubBlowPlayer::
 	closemessage
-	playse SE_M_BLIZZARD
-	setweather WEATHER_SNOW
+	playse 153
+	setweather 4
 	doweather
-	call_if_eq VAR_FACING, DIR_SOUTH, IcePath_B3F_EventScript_SwinubBlowPlayerUp
-	call_if_eq VAR_FACING, DIR_EAST, IcePath_B3F_EventScript_SwinubBlowPlayerLeft
+	call_if_eq 32780, DIR_SOUTH, IcePath_B3F_EventScript_SwinubBlowPlayerUp
+	call_if_eq 32780, DIR_EAST, IcePath_B3F_EventScript_SwinubBlowPlayerLeft
 	releaseall
 	end
+
 IcePath_B3F_EventScript_SwinubDislikedBerry::
 	msgbox IcePath_B3F_Text_SwinubTurnedAway, MSGBOX_DEFAULT
 	goto IcePath_B3F_EventScript_SwinubBlowPlayer
 
 IcePath_B3F_EventScript_SwinubBlowPlayerUp::
-	applymovement LOCALID_ICEPATH4_ICYWIND_SWINUB, IcePath_B3F_Movement_JumpUp
-	applymovement OBJ_EVENT_ID_PLAYER, IcePath_B3F_Movement_Player_BlownUp
+	applymovement 2, IcePath_B3F_Movement_JumpUp
+	applymovement 255, IcePath_B3F_Movement_Player_BlownUp
 	waitmovement 0
 	return
 
 IcePath_B3F_EventScript_SwinubBlowPlayerLeft::
-	applymovement LOCALID_ICEPATH4_ICYWIND_SWINUB, IcePath_B3F_Movement_JumpLeft
-	applymovement OBJ_EVENT_ID_PLAYER, IcePath_B3F_Movement_Player_BlownLeft
+	applymovement 2, IcePath_B3F_Movement_JumpLeft
+	applymovement 255, IcePath_B3F_Movement_Player_BlownLeft
 	waitmovement 0
 	return
 
 IcePath_B3F_EventScript_Delibird::
 	lockall
 	faceplayer
-	playmoncry SPECIES_DELIBIRD, CRY_MODE_NORMAL
+	playmoncry 225, 0
 	msgbox IcePath_B3F_Text_Delibird, MSGBOX_DEFAULT
 	waitmoncry
-	goto_if_set FLAG_ITEM_ICEPATH4_TM_AVALANCHE, IcePath_B3F_EventScript_DelibirdBlowPlayer
+	goto_if_set 8500, IcePath_B3F_EventScript_DelibirdBlowPlayer
 	msgbox IcePath_B3F_Text_DelibirdBerry, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, FALSE, IcePath_B3F_EventScript_DelibirdBlowPlayer
-	fadescreen FADE_TO_BLACK
+	goto_if_eq 32781, FALSE, IcePath_B3F_EventScript_DelibirdBlowPlayer
+	fadescreen 1
 	special Bag_ChooseBerry
 	waitstate
-	removeitem VAR_ITEM_ID, 1
-	goto_if_ne VAR_ITEM_ID, ITEM_ASPEAR_BERRY, IcePath_B3F_EventScript_DelibirdDislikedBerry
+	removeitem 32782, 1
+	goto_if_ne 32782, ITEM_ASPEAR_BERRY, IcePath_B3F_EventScript_DelibirdDislikedBerry
 	msgbox IcePath_B3F_Text_DelibirdAteBerry, MSGBOX_DEFAULT
-	giveitem ITEM_TM_AVALANCHE
-	setflag FLAG_ITEM_ICEPATH4_TM_AVALANCHE
+	giveitem 653
+	setflag 8500
+
 IcePath_B3F_EventScript_DelibirdBlowPlayer::
 	closemessage
-	playse SE_M_BLIZZARD
-	setweather WEATHER_SNOW
+	playse 153
+	setweather 4
 	doweather
-	call_if_eq VAR_FACING, DIR_SOUTH, IcePath_B3F_EventScript_DelibirdBlowPlayerUp
-	call_if_eq VAR_FACING, DIR_EAST, IcePath_B3F_EventScript_DelibirdBlowPlayerLeft
+	call_if_eq 32780, DIR_SOUTH, IcePath_B3F_EventScript_DelibirdBlowPlayerUp
+	call_if_eq 32780, DIR_EAST, IcePath_B3F_EventScript_DelibirdBlowPlayerLeft
 	releaseall
 	end
+
 IcePath_B3F_EventScript_DelibirdDislikedBerry::
 	msgbox IcePath_B3F_Text_DelibirdTurnedAway, MSGBOX_DEFAULT
 	goto IcePath_B3F_EventScript_DelibirdBlowPlayer
 
 IcePath_B3F_EventScript_DelibirdBlowPlayerUp::
-	applymovement LOCALID_ICEPATH4_ICYWIND_DELIBIRD, IcePath_B3F_Movement_JumpUp
-	applymovement OBJ_EVENT_ID_PLAYER, IcePath_B3F_Movement_Player_BlownUp
+	applymovement 1, IcePath_B3F_Movement_JumpUp
+	applymovement 255, IcePath_B3F_Movement_Player_BlownUp
 	waitmovement 0
 	return
 
 IcePath_B3F_EventScript_DelibirdBlowPlayerLeft::
-	applymovement LOCALID_ICEPATH4_ICYWIND_DELIBIRD, IcePath_B3F_Movement_JumpLeft
-	applymovement OBJ_EVENT_ID_PLAYER, IcePath_B3F_Movement_Player_BlownLeft
+	applymovement 1, IcePath_B3F_Movement_JumpLeft
+	applymovement 255, IcePath_B3F_Movement_Player_BlownLeft
 	waitmovement 0
 	return
 
@@ -147,19 +154,26 @@ IcePath_B3F_Movement_StuckSwinubJump:
 	step_end
 
 IcePath_B3F_Text_Swinub:
-	.string "SWINUB: Swiiiiii!$"
+	.string "SWINUB{SE_M_HEAT_WAVE}Swiiiiii!$"
+
 IcePath_B3F_Text_SwinubBerry:
-	.string "Give the SWINUB a BERRY?$"
+	.string "Giv{SE_M_REVERSAL}th{SE_M_REVERSAL}SWINU{SE_M_LICK}{SE_M_CHARGE}BERRY?$"
+
 IcePath_B3F_Text_SwinubAteBerry:
-	.string "SWINUB enjoyed the ASPEAR BERRY!$"
+	.string "SWINU{SE_M_LICK}enjoye{SE_M_WATERFALL}th{SE_M_REVERSAL}ASPEA{SE_M_MINIMIZE}BERRY!$"
+
 IcePath_B3F_Text_SwinubTurnedAway:
-	.string "SWINUB doesn't like it!$"
+	.string "SWINU{SE_M_LICK}doesn'{SE_M_SPIT_UP}lik{SE_M_REVERSAL}it!$"
 
 IcePath_B3F_Text_Delibird:
-	.string "DELIBIRD: SKWAAAAA!$"
+	.string "DELIBIRD{SE_M_HEAT_WAVE}SKWAAAAA!$"
+
 IcePath_B3F_Text_DelibirdBerry:
-	.string "Give the DELIBIRD a BERRY?$"
+	.string "Giv{SE_M_REVERSAL}th{SE_M_REVERSAL}DELIBIR{SE_M_FAINT_ATTACK}{SE_M_CHARGE}BERRY?$"
+
 IcePath_B3F_Text_DelibirdAteBerry:
-	.string "DELIBIRD enjoyed the ASPEAR BERRY!$"
+	.string "DELIBIR{SE_M_FAINT_ATTACK}enjoye{SE_M_WATERFALL}th{SE_M_REVERSAL}ASPEA{SE_M_MINIMIZE}BERRY!$"
+
 IcePath_B3F_Text_DelibirdTurnedAway:
-	.string "DELIBIRD doesn't like it!$"
+	.string "DELIBIR{SE_M_FAINT_ATTACK}doesn'{SE_M_SPIT_UP}lik{SE_M_REVERSAL}it!$"
+

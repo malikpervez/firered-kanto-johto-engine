@@ -1,0 +1,10 @@
+@ Johto (data/maps/ArtisanCave_B1F/scripts.inc), as built into the FireRed game.
+
+J_ArtisanCave_B1F_MapScripts::
+	map_script 3, ArtisanCave_B1F_OnTransition
+	.byte 0
+
+ArtisanCave_B1F_OnTransition:
+	setflag 0
+	end
+

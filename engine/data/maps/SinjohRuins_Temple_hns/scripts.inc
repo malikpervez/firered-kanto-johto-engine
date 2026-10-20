@@ -1,10 +1,11 @@
+@ Johto (data/maps/SinjohRuins_Temple_hns/scripts.inc), as built into the FireRed game.
+
 SinjohRuins_Temple_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, SinjohRuins_Temple_OnLoad
+	map_script 1, SinjohRuins_Temple_OnLoad
 	.byte 0
 
-
 SinjohRuins_Temple_OnLoad::
-	call_if_ge VAR_REGIS_SCANNED, 5, SinjohRuins_Temple_OpenDoor
+	call_if_ge 20641, 5, SinjohRuins_Temple_OpenDoor
 	end
 
 SinjohRuins_Temple_OpenDoor::
@@ -12,86 +13,86 @@ SinjohRuins_Temple_OpenDoor::
 	return
 
 SinjohRuins_Temple_Text_Mon:
-	.string "Some kind of ancient sensor.\n"
-	.string "What is it looking for?$"
+	.string "Som{SE_M_REVERSAL}kin{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}ancien{SE_M_SPIT_UP}sensor.\n"
+	.string "Wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}lookin{SE_M_SANDSTORM}for?$"
 
 SinjohRuins_Temple_EventScript_RegiceScanner::
 	lock
-	goto_if_set FLAG_BROUGHT_REGICE, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
+	goto_if_set 9127, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
 	msgbox SinjohRuins_Temple_Text_Mon, MSGBOX_AUTOCLOSE
-	checkspecies SPECIES_REGICE
-	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
-	setflag FLAG_BROUGHT_REGICE
-    goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
+	checkspecies 378
+	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	setflag 9127
+	goto_if_eq 32781, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
 	release
 	end
 
 SinjohRuins_Temple_EventScript_RegirockScanner::
 	lock
-	goto_if_set FLAG_BROUGHT_REGIROCK, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
+	goto_if_set 9128, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
 	msgbox SinjohRuins_Temple_Text_Mon, MSGBOX_AUTOCLOSE
-	checkspecies SPECIES_REGIROCK
-	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
-	setflag FLAG_BROUGHT_REGIROCK
-    goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
+	checkspecies 377
+	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	setflag 9128
+	goto_if_eq 32781, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
 	release
 	end
 
 SinjohRuins_Temple_EventScript_RegisteelScanner::
 	lock
-	goto_if_set FLAG_BROUGHT_REGISTEEL, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
+	goto_if_set 9129, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
 	msgbox SinjohRuins_Temple_Text_Mon, MSGBOX_AUTOCLOSE
-	checkspecies SPECIES_REGISTEEL
-	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
-	setflag FLAG_BROUGHT_REGISTEEL
-    goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
+	checkspecies 379
+	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	setflag 9129
+	goto_if_eq 32781, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
 	release
 	end
 
 SinjohRuins_Temple_EventScript_RegielekiScanner::
 	lock
-	goto_if_set FLAG_BROUGHT_REGIELEKI, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
+	goto_if_set 9130, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
 	msgbox SinjohRuins_Temple_Text_Mon, MSGBOX_AUTOCLOSE
-	checkspecies SPECIES_REGIELEKI
-	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
-	setflag FLAG_BROUGHT_REGIELEKI
-    goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
+	checkspecies 894
+	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	setflag 9130
+	goto_if_eq 32781, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
 	release
 	end
 
 SinjohRuins_Temple_EventScript_RegidragoScanner::
 	lock
-	goto_if_set FLAG_BROUGHT_REGIDRAGO, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
+	goto_if_set 9131, SinjohRuins_Temple_EventScript_ScannerAlreadyDone
 	msgbox SinjohRuins_Temple_Text_Mon, MSGBOX_AUTOCLOSE
-	checkspecies SPECIES_REGIDRAGO
-	goto_if_eq VAR_RESULT, FALSE, SinjohRuins_Lab_EventScript_NoOp
-	setflag FLAG_BROUGHT_REGIDRAGO
-    goto_if_eq VAR_RESULT, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
+	checkspecies 895
+	goto_if_eq 32781, FALSE, SinjohRuins_Lab_EventScript_NoOp
+	setflag 9131
+	goto_if_eq 32781, TRUE, SinjohRuins_Temple_EventScript_SeenPokemon
 	release
 	end
 
 SinjohRuins_Temple_EventScript_SeenPokemon::
-	playse SE_CLICK
+	playse 36
 	waitse
-	setvar VAR_0x8004, 2  @ vertical pan
-    setvar VAR_0x8005, 2  @ horizontal pan
-    setvar VAR_0x8006, 20  @ num shakes
-    setvar VAR_0x8007, 4  @ shake delay
-    special ShakeCamera
-    waitstate
+	setvar 32772, 2
+	setvar 32773, 2
+	setvar 32774, 20
+	setvar 32775, 4
+	special ShakeCamera
+	waitstate
 	msgbox SinjohRuins_Temple_Text_Responds, MSGBOX_AUTOCLOSE
-	addvar VAR_REGIS_SCANNED, 1
-	call_if_eq VAR_REGIS_SCANNED, 5, SinjohRuins_Temple_EventScript_UnlockDoor
+	addvar 20641, 1
+	call_if_eq 20641, 5, SinjohRuins_Temple_EventScript_UnlockDoor
 	release
 	end
 
 SinjohRuins_Temple_EventScript_UnlockDoor::
-	setvar VAR_0x8004, 2  @ vertical pan
-    setvar VAR_0x8005, 2  @ horizontal pan
-    setvar VAR_0x8006, 20  @ num shakes
-    setvar VAR_0x8007, 4  @ shake delay
-    special ShakeCamera
-    waitstate
+	setvar 32772, 2
+	setvar 32773, 2
+	setvar 32774, 20
+	setvar 32775, 4
+	special ShakeCamera
+	waitstate
 	setmetatile 18, 7, 0x308, FALSE
 	special DrawWholeMapView
 	msgbox SinjohRuins_Temple_Text_Door, MSGBOX_AUTOCLOSE
@@ -103,11 +104,11 @@ SinjohRuins_Temple_EventScript_ScannerAlreadyDone::
 	end
 
 SinjohRuins_Temple_Text_ScannerAlreadyDone:
-	.string "This sensor has already been activated.$"
+	.string "Thi{SE_M_GRASSWHISTLE}senso{SE_M_SAND_TOMB}ha{SE_M_GRASSWHISTLE}alread{SE_M_YAWN}bee{SE_M_ATTRACT}activated.$"
 
 SinjohRuins_Temple_Text_Responds:
-	.string "The temple responds to your actions.$"
+	.string "Th{SE_M_REVERSAL}templ{SE_M_REVERSAL}respond{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}actions.$"
 
 SinjohRuins_Temple_Text_Door:
-	.string "The way is open.$"
+	.string "Th{SE_M_REVERSAL}wa{SE_M_YAWN}i{SE_M_GRASSWHISTLE}open.$"
 

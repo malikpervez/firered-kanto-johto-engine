@@ -1,31 +1,34 @@
+@ Johto (data/maps/SouthernIsland_Interior_hns/scripts.inc), as built into the FireRed game.
+
 SouthernIsland_Interior_hns_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SouthernIsland_Interior_hns_OnTransition
+	map_script 3, SouthernIsland_Interior_hns_OnTransition
 	.byte 0
 
 SouthernIsland_Interior_hns_OnTransition::
-	goto_if_eq VAR_ROAMER_POKEMON_HNS, 0, SouthernIsland_Interior_hns_HideLatias
-	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIOS
-	setflag FLAG_HIDE_LATIOS
+	goto_if_eq 20626, 0, SouthernIsland_Interior_hns_HideLatias
+	removeobject 1
+	setflag 8264
 	end
+
 SouthernIsland_Interior_hns_HideLatias::
-	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIAS
-	setflag FLAG_HIDE_LATIAS
+	removeobject 2
+	setflag 8263
 	end
 
 SouthernIsland_Interior_hns_EventScript_Latios::
 	lock
 	faceplayer
-	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
+	playmoncry 381, 2
 	waitmoncry
-	seteventmon SPECIES_LATIOS, 50
+	seteventmon 381, 50
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SouthernIsland_Interior_hns_EventScript_LatiosRan
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIOS
-	setflag FLAG_HIDE_LATIOS
-	fadescreenswapbuffers FADE_FROM_BLACK
+	specialvar 32781, GetBattleOutcome
+	goto_if_eq 32781, 4, SouthernIsland_Interior_hns_EventScript_LatiosRan
+	fadescreenswapbuffers 1
+	removeobject 1
+	setflag 8264
+	fadescreenswapbuffers 0
 	release
 	end
 
@@ -33,24 +36,24 @@ SouthernIsland_Interior_hns_EventScript_LatiosRan::
 	release
 	end
 
-
 SouthernIsland_Interior_hns_EventScript_Latias::
 	lock
 	faceplayer
-	playmoncry SPECIES_LATIAS, CRY_MODE_ENCOUNTER
+	playmoncry 380, 2
 	waitmoncry
-	seteventmon SPECIES_LATIAS, 50
+	seteventmon 380, 50
 	special BattleSetup_StartLegendaryBattle
 	waitstate
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SouthernIsland_Interior_hns_EventScript_LatiasRan
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_SOUTHERN_ISLAND_INTERIOR_HNS_LATIAS
-	setflag FLAG_HIDE_LATIAS
-	fadescreenswapbuffers FADE_FROM_BLACK
+	specialvar 32781, GetBattleOutcome
+	goto_if_eq 32781, 4, SouthernIsland_Interior_hns_EventScript_LatiasRan
+	fadescreenswapbuffers 1
+	removeobject 2
+	setflag 8263
+	fadescreenswapbuffers 0
 	release
 	end
 
 SouthernIsland_Interior_hns_EventScript_LatiasRan::
 	release
 	end
+
