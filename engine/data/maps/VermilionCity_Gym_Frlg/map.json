@@ -1,0 +1,658 @@
+{
+  "id": "MAP_VERMILION_CITY_GYM",
+  "name": "VermilionCity_Gym_Frlg",
+  "game_version": "frlg",
+  "layout": "LAYOUT_VERMILION_CITY_GYM",
+  "music": "MUS_RG_GYM",
+  "region": "REGION_KANTO",
+  "region_map_section": "MAPSEC_VERMILION_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": null,
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LT_SURGE",
+      "x": 5,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VermilionCity_Gym_EventScript_LtSurge",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+      "x": 2,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "VermilionCity_Gym_EventScript_Baily",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+      "x": 8,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "VermilionCity_Gym_EventScript_Dwayne",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
+      "x": 4,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VermilionCity_Gym_EventScript_GymGuy",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_FRLG",
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "VermilionCity_Gym_EventScript_Tucker",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 5,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 6,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "9"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_GymStatue"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_GymStatue"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan1"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan2"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan3"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan4"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan5"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan6"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan7"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan8"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan9"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan10"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan11"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan12"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan13"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan14"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "VermilionCity_Gym_EventScript_TrashCan15"
+    }
+  ],
+  "firered_campaign": {
+    "firered_geometry": {
+      "width": 11,
+      "height": 21,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_VermilionGym",
+      "border_filepath": "data/layouts/VermilionCity_Gym_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/VermilionCity_Gym_Frlg/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "frlg",
+      "blockdata_overrides": [
+        {
+          "x": 0,
+          "y": 0,
+          "expected": 1672,
+          "value": 2023
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "expected": 1682,
+          "value": 2029
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "expected": 1682,
+          "value": 2029
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "expected": 1682,
+          "value": 2029
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "expected": 1682,
+          "value": 2029
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "expected": 1680,
+          "value": 2027
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "expected": 1736,
+          "value": 2045
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "expected": 1737,
+          "value": 2046
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "expected": 1701,
+          "value": 2034
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "expected": 1702,
+          "value": 2035
+        },
+        {
+          "x": 6,
+          "y": 1,
+          "expected": 1703,
+          "value": 2036
+        },
+        {
+          "x": 8,
+          "y": 1,
+          "expected": 1736,
+          "value": 2045
+        },
+        {
+          "x": 9,
+          "y": 1,
+          "expected": 1737,
+          "value": 2046
+        },
+        {
+          "x": 10,
+          "y": 1,
+          "expected": 1687,
+          "value": 2030
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "expected": 1680,
+          "value": 2027
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "expected": 12930,
+          "value": 13284
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "expected": 12931,
+          "value": 13285
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "expected": 1704,
+          "value": 2037
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "expected": 12973,
+          "value": 13302
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "expected": 12974,
+          "value": 13303
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "expected": 12975,
+          "value": 13304
+        },
+        {
+          "x": 7,
+          "y": 2,
+          "expected": 1704,
+          "value": 2037
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "expected": 12945,
+          "value": 13292
+        },
+        {
+          "x": 9,
+          "y": 2,
+          "expected": 12931,
+          "value": 13285
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "expected": 1687,
+          "value": 2030
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "expected": 1680,
+          "value": 2027
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "expected": 12930,
+          "value": 13284
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "expected": 12976,
+          "value": 13305
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "expected": 12981,
+          "value": 13306
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "expected": 12982,
+          "value": 13307
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "expected": 12983,
+          "value": 13308
+        },
+        {
+          "x": 7,
+          "y": 3,
+          "expected": 12976,
+          "value": 13305
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "expected": 1687,
+          "value": 2030
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "expected": 1680,
+          "value": 2027
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "expected": 12930,
+          "value": 13284
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "expected": 1687,
+          "value": 2030
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "expected": 1688,
+          "value": 2031
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "expected": 12937,
+          "value": 13288
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "expected": 12938,
+          "value": 13289
+        },
+        {
+          "x": 7,
+          "y": 5,
+          "expected": 12942,
+          "value": 13290
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "expected": 12938,
+          "value": 13289
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "expected": 12938,
+          "value": 13289
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "expected": 1695,
+          "value": 2033
+        },
+        {
+          "x": 0,
+          "y": 7,
+          "expected": 1736,
+          "value": 2045
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "expected": 1737,
+          "value": 2046
+        },
+        {
+          "x": 9,
+          "y": 7,
+          "expected": 1736,
+          "value": 2045
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "expected": 1737,
+          "value": 2046
+        },
+        {
+          "x": 0,
+          "y": 8,
+          "expected": 12930,
+          "value": 13284
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "expected": 12931,
+          "value": 13285
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "expected": 12935,
+          "value": 13286
+        },
+        {
+          "x": 3,
+          "y": 8,
+          "expected": 12945,
+          "value": 13292
+        },
+        {
+          "x": 7,
+          "y": 8,
+          "expected": 12953,
+          "value": 13296
+        },
+        {
+          "x": 8,
+          "y": 8,
+          "expected": 12935,
+          "value": 13286
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "expected": 12945,
+          "value": 13292
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "expected": 12931,
+          "value": 13285
+        },
+        {
+          "x": 0,
+          "y": 16,
+          "expected": 12930,
+          "value": 13284
+        },
+        {
+          "x": 0,
+          "y": 17,
+          "expected": 12930,
+          "value": 13284
+        },
+        {
+          "x": 0,
+          "y": 18,
+          "expected": 12930,
+          "value": 13284
+        },
+        {
+          "x": 0,
+          "y": 19,
+          "expected": 12930,
+          "value": 13284
+        },
+        {
+          "x": 0,
+          "y": 20,
+          "expected": 1032,
+          "value": 2019
+        },
+        {
+          "x": 1,
+          "y": 20,
+          "expected": 1032,
+          "value": 2019
+        },
+        {
+          "x": 2,
+          "y": 20,
+          "expected": 1032,
+          "value": 2019
+        },
+        {
+          "x": 8,
+          "y": 20,
+          "expected": 1032,
+          "value": 2019
+        },
+        {
+          "x": 9,
+          "y": 20,
+          "expected": 1032,
+          "value": 2019
+        },
+        {
+          "x": 10,
+          "y": 20,
+          "expected": 1032,
+          "value": 2019
+        }
+      ]
+    }
+  }
+}

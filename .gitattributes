@@ -1,0 +1,8 @@
+engine/** -text
+provenance/complete-upstream-to-37c.patch -text
+*.png -text
+*.4bpp -text
+*.8bpp -text
+*.gbapal -text
+*.smol -text
+*.smolTM -text

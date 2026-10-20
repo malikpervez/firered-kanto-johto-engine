@@ -1,0 +1,10 @@
+#ifndef GUARD_JOHTO_SCRIPT_TABLES_H
+#define GUARD_JOHTO_SCRIPT_TABLES_H
+#ifdef FIRERED
+#define ArtisanCave_1F_MapScripts J_ArtisanCave_1F_MapScripts
+#define ArtisanCave_B1F_MapScripts J_ArtisanCave_B1F_MapScripts
+#define BattlePyramidSquare01_hns_MapScripts J_BattlePyramidSquare01_hns_MapScripts
+#define TradeCenter_MapScripts J_TradeCenter_MapScripts
+#define UnionRoom_MapScripts J_UnionRoom_MapScripts
+#endif
+#endif

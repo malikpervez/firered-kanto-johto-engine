@@ -1,0 +1,11 @@
+# Save-foundation notice for Workstream C
+
+The frozen tested010 handoff and its artifact hashes remain unchanged. B's approved save foundation is a later FireRed candidate, not a replacement of C's existing inventory baseline. C retains ownership of its isolated art inventory, packages, replacements and asset validation; B retains saves, campaign behavior, runtime time/palette systems, budgets and final integration.
+
+No art, tileset, map, animation or palette replacement is part of the save-foundation delta from accepted B2/014. Asset inventory and unchanged art comparisons do not need to restart. The cumulative patch still includes B2's two development destinations and its previously recorded NPC graphics selections; C should use the existing [B2 dependency notice](b2-c-dependency-notice.md) for that content delta from010.
+
+The affected assumptions are FireRed save-file identity and runtime resource use. This candidate requires fresh version-6/FRJS1 saves or a new copy converted from exactly one of the three approved B2 fixtures. C must not pair a010/014 native save with this later ROM or overwrite its old save folder. Any art validation that depends on a saved location must identify its ROM and save-format baseline; unrelated art work retains its evidence.
+
+SaveBlock3 grows by 1,280 bytes. Actual final05 transaction scratch is 5,476 bytes outside the movable heap, within its approved 5,504-byte bound. The combined EWRAM increase is 6,756 bytes, leaving 7,656 bytes of linked EWRAM headroom; the 115,968-byte heap is unchanged. These are linked budgets, not campaign runtime peaks. [Measured layout/budget results](save-foundation-layout-and-budget-results.md) and the [current review](save-foundation-review.md) retain the exact ROM/configuration and runtime-test identities. Future art packages that consume RAM or change save/load-time behavior must account for that budget. B will identify further changes to C's specific dependencies or test assumptions rather than require unchanged tests to restart.
+
+All new ROMs, saves, manifests and private evidence stay local and ignored. This notice changes no C repository or package and grants no asset-publication rights, remote write or campaign implementation approval.

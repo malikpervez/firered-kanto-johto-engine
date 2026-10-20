@@ -1,0 +1,9 @@
+# October 18, 2026 — Pikachu bond and situation reactions
+
+The owner authorized interactive Pikachu reactions reflecting closeness and situations in which it may be happy or scared. This is an additive FireRed-only presentation change from frozen 36O, with no changes to other workstreams or the native-port track.
+
+The companion remains independent of owned Pokémon. Bond is a presentation tier derived from the existing native, normally saved trainer walking statistic (`GAME_STAT_STEPS`, index 5): warming up below 4,000 steps, friendly at 4,000–15,999, devoted from 16,000. Existing supported saves adopt their current travel tier; this is not a claim that Pikachu witnessed earlier events. Repeated talking cannot farm closeness. No party/PC friendship, HP, status or ownership is read or changed. There is no separate happiness meter, new save field, protected-reserve allocation, gift or item cost.
+
+Location/situation takes precedence: Pokémon Tower and the actual imported Burned Tower alias, outdoor thunderstorms, caves, native Center music, native Gym music, outdoor rain/downpour and outdoor night. Bond changes nervous reassurance and thunder reactions; neutral surroundings offer two authored outcomes in each bond tier. These are local reactions, not new campaign triggers, interrupted scenes, battle results or proof of healing. No legendary, Rocket or farewell history is invented.
+
+Use existing cry, in-place movement/turning and emotes; add no actors or artwork. Preserve transport and scripted hiding, followers, battle logic, saves, normal menu control and native RNG ownership. Event PC02 and reaction constants are conceptual/transient selectors only, not persistent event allocations. Keep all frozen sources, ROMs, saves and private screenshots local and ignored. Record exact scripts/dialogue, actual current captures and pending branches in the offline HTML review. No commit, publishing or remote writes are authorized.

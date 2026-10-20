@@ -1,0 +1,372 @@
+{
+  "id": "MAP_VIRIDIAN_CITY_SCHOOL",
+  "name": "ViridianCity_School_Frlg",
+  "game_version": "frlg",
+  "layout": "LAYOUT_VIRIDIAN_CITY_SCHOOL",
+  "music": "MUS_RG_PEWTER",
+  "region": "REGION_KANTO",
+  "region_map_section": "MAPSEC_VIRIDIAN_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_SCHOOL_WOMAN",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_FRLG",
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianCity_School_EventScript_Woman",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SCHOOL_LASS",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_FRLG",
+      "x": 4,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianCity_School_EventScript_Lass",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 3,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "3"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ViridianCity_School_EventScript_Notebook"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ViridianCity_School_EventScript_Blackboard"
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ViridianCity_School_EventScript_Blackboard"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "ViridianCity_School_EventScript_PokemonJournal"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "ViridianCity_School_EventScript_PokemonJournal"
+    }
+  ],
+  "firered_campaign": {
+    "firered_geometry": {
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_School",
+      "border_filepath": "data/layouts/ViridianCity_School_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity_School_Frlg/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "frlg",
+      "blockdata_overrides": [
+        {
+          "x": 0,
+          "y": 2,
+          "expected": 12949,
+          "value": 13307
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "expected": 12950,
+          "value": 13308
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "expected": 12950,
+          "value": 13308
+        },
+        {
+          "x": 6,
+          "y": 2,
+          "expected": 12949,
+          "value": 13307
+        },
+        {
+          "x": 7,
+          "y": 2,
+          "expected": 12950,
+          "value": 13308
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "expected": 12957,
+          "value": 13309
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 7,
+          "y": 3,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 8,
+          "y": 3,
+          "expected": 12950,
+          "value": 13308
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "expected": 12950,
+          "value": 13308
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "expected": 12957,
+          "value": 13309
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "expected": 12957,
+          "value": 13309
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 6,
+          "y": 5,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 7,
+          "y": 5,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 2,
+          "y": 6,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 3,
+          "y": 6,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 6,
+          "y": 6,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 7,
+          "y": 6,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 8,
+          "y": 6,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 7,
+          "y": 7,
+          "expected": 12958,
+          "value": 13310
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "expected": 12958,
+          "value": 13310
+        }
+      ]
+    }
+  }
+}

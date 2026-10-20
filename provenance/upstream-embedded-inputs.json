@@ -1,0 +1,30 @@
+{
+  "sourceURL": "https://github.com/PokemonHnS-Development/pokehns-expansion",
+  "commit": "167aa6d537b109bb229c231ddce4616974c4da71",
+  "inputs": [
+    {
+      "path": "data/mb_berry_fix.gba",
+      "bytes": 15348,
+      "sha256": "f3d87e14688faf0190b33e071607887c7783462b45f92f1cb7135eec56260740",
+      "mode": "100755",
+      "exported": false,
+      "excludedReason": "Upstream embedded multiboot ROM; not committed; restore from pinned upstream into ignored paths"
+    },
+    {
+      "path": "data/mb_colosseum.gba",
+      "bytes": 163840,
+      "sha256": "d133d340ce7507932bcb3a83f9ee1dd9905072763d493b66db20e1bde4304572",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream embedded multiboot ROM; not committed; restore from pinned upstream into ignored paths"
+    },
+    {
+      "path": "data/mb_ereader.gba",
+      "bytes": 12512,
+      "sha256": "e50d06841b3485282bf772f1cfe2988da2bb476eb26ff5337b467af8a60bdf07",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream embedded multiboot ROM; not committed; restore from pinned upstream into ignored paths"
+    }
+  ]
+}

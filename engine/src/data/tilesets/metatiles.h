@@ -1,0 +1,2100 @@
+const u16 gMetatiles_SecretBasePrimary[] = INCBIN_U16("data/tilesets/primary/secret_base/metatiles.bin");
+const u16 gMetatileAttributes_SecretBasePrimary[] = INCBIN_U16("data/tilesets/primary/secret_base/metatile_attributes.bin");
+
+const u16 gMetatiles_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondary/secret_base/metatiles.bin");
+const u16 gMetatileAttributes_SecretBaseSecondary[] = INCBIN_U16("data/tilesets/secondary/secret_base/metatile_attributes.bin");
+
+const u16 gMetatiles_General[] = INCBIN_U16("data/tilesets/primary/general/metatiles.bin");
+const u16 gMetatileAttributes_General[] = INCBIN_U16("data/tilesets/primary/general/metatile_attributes.bin");
+
+#ifdef FIRERED
+extern const u16 gMetatiles_InsideBuilding[64] __attribute__((alias("gMetatiles_Building")));
+#else
+const u16 gMetatiles_InsideBuilding[] = INCBIN_U16("data/tilesets/primary/building/metatiles.bin");
+#endif
+#ifdef FIRERED
+extern const u16 gMetatileAttributes_InsideBuilding[8] __attribute__((alias("gMetatileAttributes_Building")));
+#else
+const u16 gMetatileAttributes_InsideBuilding[] = INCBIN_U16("data/tilesets/primary/building/metatile_attributes.bin");
+#endif
+
+const u16 gMetatiles_TrainerHill[] = INCBIN_U16("data/tilesets/secondary/trainer_hill/metatiles.bin");
+const u16 gMetatileAttributes_TrainerHill[] = INCBIN_U16("data/tilesets/secondary/trainer_hill/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleTent[] = INCBIN_U16("data/tilesets/secondary/battle_tent/metatiles.bin");
+const u16 gMetatileAttributes_BattleTent[] = INCBIN_U16("data/tilesets/secondary/battle_tent/metatile_attributes.bin");
+
+const u16 gMetatiles_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatiles.bin");
+const u16 gMetatileAttributes_Rustboro[] = INCBIN_U16("data/tilesets/secondary/rustboro/metatile_attributes.bin");
+
+const u16 gMetatiles_Dewford[] = INCBIN_U16("data/tilesets/secondary/dewford/metatiles.bin");
+const u16 gMetatileAttributes_Dewford[] = INCBIN_U16("data/tilesets/secondary/dewford/metatile_attributes.bin");
+
+const u16 gMetatiles_Fortree[] = INCBIN_U16("data/tilesets/secondary/fortree/metatiles.bin");
+const u16 gMetatileAttributes_Fortree[] = INCBIN_U16("data/tilesets/secondary/fortree/metatile_attributes.bin");
+
+const u16 gMetatiles_IslandHarbor[] = INCBIN_U16("data/tilesets/secondary/island_harbor/metatiles.bin");
+const u16 gMetatileAttributes_IslandHarbor[] = INCBIN_U16("data/tilesets/secondary/island_harbor/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleFrontierOutsideWest[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/metatiles.bin");
+const u16 gMetatileAttributes_BattleFrontierOutsideWest[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/metatile_attributes.bin");
+const u16 gMetatiles_BattleFrontierOutsideEast[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_east/metatiles.bin");
+const u16 gMetatileAttributes_BattleFrontierOutsideEast[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_east/metatile_attributes.bin");
+const u16 gMetatiles_PokemonCenter[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/metatiles.bin");
+const u16 gMetatileAttributes_PokemonCenter[] = INCBIN_U16("data/tilesets/secondary/pokemon_center/metatile_attributes.bin");
+const u16 gMetatiles_Shop[] = INCBIN_U16("data/tilesets/secondary/shop/metatiles.bin");
+const u16 gMetatileAttributes_Shop[] = INCBIN_U16("data/tilesets/secondary/shop/metatile_attributes.bin");
+const u16 gMetatiles_BattlePalace[] = INCBIN_U16("data/tilesets/secondary/battle_palace/metatiles.bin");
+const u16 gMetatileAttributes_BattlePalace[] = INCBIN_U16("data/tilesets/secondary/battle_palace/metatile_attributes.bin");
+const u16 gMetatiles_BattleDome[] = INCBIN_U16("data/tilesets/secondary/battle_dome/metatiles.bin");
+const u16 gMetatileAttributes_BattleDome[] = INCBIN_U16("data/tilesets/secondary/battle_dome/metatile_attributes.bin");
+const u16 gMetatiles_BattleFactory[] = INCBIN_U16("data/tilesets/secondary/battle_factory/metatiles.bin");
+const u16 gMetatileAttributes_BattleFactory[] = INCBIN_U16("data/tilesets/secondary/battle_factory/metatile_attributes.bin");
+const u16 gMetatiles_BattlePike[] = INCBIN_U16("data/tilesets/secondary/battle_pike/metatiles.bin");
+const u16 gMetatileAttributes_BattlePike[] = INCBIN_U16("data/tilesets/secondary/battle_pike/metatile_attributes.bin");
+const u16 gMetatiles_BattleArena[] = INCBIN_U16("data/tilesets/secondary/battle_arena/metatiles.bin");
+const u16 gMetatileAttributes_BattleArena[] = INCBIN_U16("data/tilesets/secondary/battle_arena/metatile_attributes.bin");
+const u16 gMetatiles_BattlePyramid[] = INCBIN_U16("data/tilesets/secondary/battle_pyramid/metatiles.bin");
+const u16 gMetatileAttributes_BattlePyramid[] = INCBIN_U16("data/tilesets/secondary/battle_pyramid/metatile_attributes.bin");
+const u16 gMetatiles_BattleFrontierRankingHall[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_ranking_hall/metatiles.bin");
+const u16 gMetatileAttributes_BattleFrontierRankingHall[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_ranking_hall/metatile_attributes.bin");
+const u16 gMetatiles_BattleFrontier[] = INCBIN_U16("data/tilesets/secondary/battle_frontier/metatiles.bin");
+const u16 gMetatileAttributes_BattleFrontier[] = INCBIN_U16("data/tilesets/secondary/battle_frontier/metatile_attributes.bin");
+
+#ifndef FIRERED
+const u16 gMetatiles_Contest[] = INCBIN_U16("data/tilesets/secondary/contest/metatiles.bin");
+#endif // FIRERED: no live consumer for gMetatiles_Contest
+#ifndef FIRERED
+const u16 gMetatileAttributes_Contest[] = INCBIN_U16("data/tilesets/secondary/contest/metatile_attributes.bin");
+#endif // FIRERED: no live consumer for gMetatileAttributes_Contest
+
+const u16 gMetatiles_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatiles.bin");
+const u16 gMetatileAttributes_CableClub[] = INCBIN_U16("data/tilesets/secondary/cable_club/metatile_attributes.bin");
+
+const u16 gMetatiles_Lab_Frlg[] = INCBIN_U16("data/tilesets/secondary/lab_frlg/metatiles.bin");
+const u16 gMetatileAttributes_Lab_Frlg[] = INCBIN_U16("data/tilesets/secondary/lab_frlg/metatile_attributes.bin");
+
+#if !IS_FRLG && !IS_HNS
+
+const u16 gMetatiles_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatiles.bin");
+const u16 gMetatileAttributes_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatile_attributes.bin");
+
+const u16 gMetatiles_Slateport[] = INCBIN_U16("data/tilesets/secondary/slateport/metatiles.bin");
+const u16 gMetatileAttributes_Slateport[] = INCBIN_U16("data/tilesets/secondary/slateport/metatile_attributes.bin");
+
+const u16 gMetatiles_Mauville[] = INCBIN_U16("data/tilesets/secondary/mauville/metatiles.bin");
+const u16 gMetatileAttributes_Mauville[] = INCBIN_U16("data/tilesets/secondary/mauville/metatile_attributes.bin");
+
+const u16 gMetatiles_Lavaridge[] = INCBIN_U16("data/tilesets/secondary/lavaridge/metatiles.bin");
+const u16 gMetatileAttributes_Lavaridge[] = INCBIN_U16("data/tilesets/secondary/lavaridge/metatile_attributes.bin");
+
+const u16 gMetatiles_Fallarbor[] = INCBIN_U16("data/tilesets/secondary/fallarbor/metatiles.bin");
+const u16 gMetatileAttributes_Fallarbor[] = INCBIN_U16("data/tilesets/secondary/fallarbor/metatile_attributes.bin");
+
+const u16 gMetatiles_Lilycove[] = INCBIN_U16("data/tilesets/secondary/lilycove/metatiles.bin");
+const u16 gMetatileAttributes_Lilycove[] = INCBIN_U16("data/tilesets/secondary/lilycove/metatile_attributes.bin");
+
+const u16 gMetatiles_Mossdeep[] = INCBIN_U16("data/tilesets/secondary/mossdeep/metatiles.bin");
+const u16 gMetatileAttributes_Mossdeep[] = INCBIN_U16("data/tilesets/secondary/mossdeep/metatile_attributes.bin");
+
+const u16 gMetatiles_EverGrande[] = INCBIN_U16("data/tilesets/secondary/ever_grande/metatiles.bin");
+const u16 gMetatileAttributes_EverGrande[] = INCBIN_U16("data/tilesets/secondary/ever_grande/metatile_attributes.bin");
+
+const u16 gMetatiles_Pacifidlog[] = INCBIN_U16("data/tilesets/secondary/pacifidlog/metatiles.bin");
+const u16 gMetatileAttributes_Pacifidlog[] = INCBIN_U16("data/tilesets/secondary/pacifidlog/metatile_attributes.bin");
+
+const u16 gMetatiles_Sootopolis[] = INCBIN_U16("data/tilesets/secondary/sootopolis/metatiles.bin");
+const u16 gMetatileAttributes_Sootopolis[] = INCBIN_U16("data/tilesets/secondary/sootopolis/metatile_attributes.bin");
+
+
+
+
+
+const u16 gMetatiles_Cave[] = INCBIN_U16("data/tilesets/secondary/cave/metatiles.bin");
+const u16 gMetatileAttributes_Cave[] = INCBIN_U16("data/tilesets/secondary/cave/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonSchool[] = INCBIN_U16("data/tilesets/secondary/pokemon_school/metatiles.bin");
+const u16 gMetatileAttributes_PokemonSchool[] = INCBIN_U16("data/tilesets/secondary/pokemon_school/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonFanClub[] = INCBIN_U16("data/tilesets/secondary/pokemon_fan_club/metatiles.bin");
+const u16 gMetatileAttributes_PokemonFanClub[] = INCBIN_U16("data/tilesets/secondary/pokemon_fan_club/metatile_attributes.bin");
+
+const u16 gMetatiles_Unused1[] = INCBIN_U16("data/tilesets/secondary/unused_1/metatiles.bin");
+const u16 gMetatileAttributes_Unused1[] = INCBIN_U16("data/tilesets/secondary/unused_1/metatile_attributes.bin");
+
+const u16 gMetatiles_MeteorFalls[] = INCBIN_U16("data/tilesets/secondary/meteor_falls/metatiles.bin");
+const u16 gMetatileAttributes_MeteorFalls[] = INCBIN_U16("data/tilesets/secondary/meteor_falls/metatile_attributes.bin");
+
+const u16 gMetatiles_OceanicMuseum[] = INCBIN_U16("data/tilesets/secondary/oceanic_museum/metatiles.bin");
+const u16 gMetatileAttributes_OceanicMuseum[] = INCBIN_U16("data/tilesets/secondary/oceanic_museum/metatile_attributes.bin");
+
+const u16 gMetatiles_SeashoreHouse[] = INCBIN_U16("data/tilesets/secondary/seashore_house/metatiles.bin");
+const u16 gMetatileAttributes_SeashoreHouse[] = INCBIN_U16("data/tilesets/secondary/seashore_house/metatile_attributes.bin");
+
+const u16 gMetatiles_PrettyPetalFlowerShop[] = INCBIN_U16("data/tilesets/secondary/pretty_petal_flower_shop/metatiles.bin");
+const u16 gMetatileAttributes_PrettyPetalFlowerShop[] = INCBIN_U16("data/tilesets/secondary/pretty_petal_flower_shop/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonDayCare[] = INCBIN_U16("data/tilesets/secondary/pokemon_day_care/metatiles.bin");
+const u16 gMetatileAttributes_PokemonDayCare[] = INCBIN_U16("data/tilesets/secondary/pokemon_day_care/metatile_attributes.bin");
+
+const u16 gMetatiles_Facility[] = INCBIN_U16("data/tilesets/secondary/facility/metatiles.bin");
+const u16 gMetatileAttributes_Facility[] = INCBIN_U16("data/tilesets/secondary/facility/metatile_attributes.bin");
+
+const u16 gMetatiles_BikeShop[] = INCBIN_U16("data/tilesets/secondary/bike_shop/metatiles.bin");
+const u16 gMetatileAttributes_BikeShop[] = INCBIN_U16("data/tilesets/secondary/bike_shop/metatile_attributes.bin");
+
+const u16 gMetatiles_RusturfTunnel[] = INCBIN_U16("data/tilesets/secondary/rusturf_tunnel/metatiles.bin");
+const u16 gMetatileAttributes_RusturfTunnel[] = INCBIN_U16("data/tilesets/secondary/rusturf_tunnel/metatile_attributes.bin");
+
+const u16 gMetatiles_InsideOfTruck[] = INCBIN_U16("data/tilesets/secondary/inside_of_truck/metatiles.bin");
+const u16 gMetatileAttributes_InsideOfTruck[] = INCBIN_U16("data/tilesets/secondary/inside_of_truck/metatile_attributes.bin");
+
+const u16 gMetatiles_LilycoveMuseum[] = INCBIN_U16("data/tilesets/secondary/lilycove_museum/metatiles.bin");
+const u16 gMetatileAttributes_LilycoveMuseum[] = INCBIN_U16("data/tilesets/secondary/lilycove_museum/metatile_attributes.bin");
+
+const u16 gMetatiles_BrendansMaysHouse[] = INCBIN_U16("data/tilesets/secondary/brendans_mays_house/metatiles.bin");
+const u16 gMetatileAttributes_BrendansMaysHouse[] = INCBIN_U16("data/tilesets/secondary/brendans_mays_house/metatile_attributes.bin");
+
+const u16 gMetatiles_Lab[] = INCBIN_U16("data/tilesets/secondary/lab/metatiles.bin");
+const u16 gMetatileAttributes_Lab[] = INCBIN_U16("data/tilesets/secondary/lab/metatile_attributes.bin");
+
+const u16 gMetatiles_Underwater[] = INCBIN_U16("data/tilesets/secondary/underwater/metatiles.bin");
+const u16 gMetatileAttributes_Underwater[] = INCBIN_U16("data/tilesets/secondary/underwater/metatile_attributes.bin");
+
+const u16 gMetatiles_GenericBuilding[] = INCBIN_U16("data/tilesets/secondary/generic_building/metatiles.bin");
+const u16 gMetatileAttributes_GenericBuilding[] = INCBIN_U16("data/tilesets/secondary/generic_building/metatile_attributes.bin");
+
+const u16 gMetatiles_MauvilleGameCorner[] = INCBIN_U16("data/tilesets/secondary/mauville_game_corner/metatiles.bin");
+const u16 gMetatileAttributes_MauvilleGameCorner[] = INCBIN_U16("data/tilesets/secondary/mauville_game_corner/metatile_attributes.bin");
+
+const u16 gMetatiles_Unused2[] = INCBIN_U16("data/tilesets/secondary/unused_2/metatiles.bin");
+const u16 gMetatileAttributes_Unused2[] = INCBIN_U16("data/tilesets/secondary/unused_2/metatile_attributes.bin");
+
+const u16 gMetatiles_RustboroGym[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/metatiles.bin");
+const u16 gMetatileAttributes_RustboroGym[] = INCBIN_U16("data/tilesets/secondary/rustboro_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_DewfordGym[] = INCBIN_U16("data/tilesets/secondary/dewford_gym/metatiles.bin");
+const u16 gMetatileAttributes_DewfordGym[] = INCBIN_U16("data/tilesets/secondary/dewford_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_MauvilleGym[] = INCBIN_U16("data/tilesets/secondary/mauville_gym/metatiles.bin");
+const u16 gMetatileAttributes_MauvilleGym[] = INCBIN_U16("data/tilesets/secondary/mauville_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_LavaridgeGym[] = INCBIN_U16("data/tilesets/secondary/lavaridge_gym/metatiles.bin");
+const u16 gMetatileAttributes_LavaridgeGym[] = INCBIN_U16("data/tilesets/secondary/lavaridge_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_PetalburgGym[] = INCBIN_U16("data/tilesets/secondary/petalburg_gym/metatiles.bin");
+const u16 gMetatileAttributes_PetalburgGym[] = INCBIN_U16("data/tilesets/secondary/petalburg_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_FortreeGym[] = INCBIN_U16("data/tilesets/secondary/fortree_gym/metatiles.bin");
+const u16 gMetatileAttributes_FortreeGym[] = INCBIN_U16("data/tilesets/secondary/fortree_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_MossdeepGym[] = INCBIN_U16("data/tilesets/secondary/mossdeep_gym/metatiles.bin");
+const u16 gMetatileAttributes_MossdeepGym[] = INCBIN_U16("data/tilesets/secondary/mossdeep_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_SootopolisGym[] = INCBIN_U16("data/tilesets/secondary/sootopolis_gym/metatiles.bin");
+const u16 gMetatileAttributes_SootopolisGym[] = INCBIN_U16("data/tilesets/secondary/sootopolis_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_TrickHousePuzzle[] = INCBIN_U16("data/tilesets/secondary/trick_house_puzzle/metatiles.bin");
+const u16 gMetatileAttributes_TrickHousePuzzle[] = INCBIN_U16("data/tilesets/secondary/trick_house_puzzle/metatile_attributes.bin");
+
+const u16 gMetatiles_InsideShip[] = INCBIN_U16("data/tilesets/secondary/inside_ship/metatiles.bin");
+const u16 gMetatileAttributes_InsideShip[] = INCBIN_U16("data/tilesets/secondary/inside_ship/metatile_attributes.bin");
+
+const u16 gMetatiles_EliteFour[] = INCBIN_U16("data/tilesets/secondary/elite_four/metatiles.bin");
+const u16 gMetatileAttributes_EliteFour[] = INCBIN_U16("data/tilesets/secondary/elite_four/metatile_attributes.bin");
+
+
+
+
+
+const u16 gMetatiles_MirageTower[] = INCBIN_U16("data/tilesets/secondary/mirage_tower/metatiles.bin");
+const u16 gMetatileAttributes_MirageTower[] = INCBIN_U16("data/tilesets/secondary/mirage_tower/metatile_attributes.bin");
+
+const u16 gMetatiles_MossdeepGameCorner[] = INCBIN_U16("data/tilesets/secondary/mossdeep_game_corner/metatiles.bin");
+const u16 gMetatileAttributes_MossdeepGameCorner[] = INCBIN_U16("data/tilesets/secondary/mossdeep_game_corner/metatile_attributes.bin");
+
+const u16 gMetatiles_NavelRock[] = INCBIN_U16("data/tilesets/secondary/navel_rock/metatiles.bin");
+const u16 gMetatileAttributes_NavelRock[] = INCBIN_U16("data/tilesets/secondary/navel_rock/metatile_attributes.bin");
+
+
+const u16 gMetatiles_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/secondary/mystery_events_house/metatiles.bin");
+const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/secondary/mystery_events_house/metatile_attributes.bin");
+
+const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
+const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+#elif IS_FRLG
+
+const u16 gMetatiles_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatiles.bin");
+const u16 gMetatileAttributes_Building_Frlg[] = INCBIN_U16("data/tilesets/primary/building_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_GenericBuilding1[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_frlg/metatiles.bin");
+const u16 gMetatileAttributes_GenericBuilding1[] = INCBIN_U16("data/tilesets/secondary/generic_building_1_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Frlg[] = INCBIN_U16("data/tilesets/primary/general_frlg/metatiles.bin");
+const u16 gMetatileAttributes_General_Frlg[] = INCBIN_U16("data/tilesets/primary/general_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PalletTown[] = INCBIN_U16("data/tilesets/secondary/pallet_town_frlg/metatiles.bin");
+const u16 gMetatileAttributes_PalletTown[] = INCBIN_U16("data/tilesets/secondary/pallet_town_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_ViridianCity[] = INCBIN_U16("data/tilesets/secondary/viridian_city_frlg/metatiles.bin");
+const u16 gMetatileAttributes_ViridianCity[] = INCBIN_U16("data/tilesets/secondary/viridian_city_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PewterCity[] = INCBIN_U16("data/tilesets/secondary/pewter_city_frlg/metatiles.bin");
+const u16 gMetatileAttributes_PewterCity[] = INCBIN_U16("data/tilesets/secondary/pewter_city_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_CeruleanCity[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_frlg/metatiles.bin");
+const u16 gMetatileAttributes_CeruleanCity[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_LavenderTown[] = INCBIN_U16("data/tilesets/secondary/lavender_town_frlg/metatiles.bin");
+const u16 gMetatileAttributes_LavenderTown[] = INCBIN_U16("data/tilesets/secondary/lavender_town_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_VermilionCity[] = INCBIN_U16("data/tilesets/secondary/vermilion_city_frlg/metatiles.bin");
+const u16 gMetatileAttributes_VermilionCity[] = INCBIN_U16("data/tilesets/secondary/vermilion_city_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadon_city_frlg/metatiles.bin");
+const u16 gMetatileAttributes_CeladonCity[] = INCBIN_U16("data/tilesets/secondary/celadon_city_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_FuchsiaCity[] = INCBIN_U16("data/tilesets/secondary/fuchsia_city_frlg/metatiles.bin");
+const u16 gMetatileAttributes_FuchsiaCity[] = INCBIN_U16("data/tilesets/secondary/fuchsia_city_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_CinnabarIsland[] = INCBIN_U16("data/tilesets/secondary/cinnabar_island_frlg/metatiles.bin");
+const u16 gMetatileAttributes_CinnabarIsland[] = INCBIN_U16("data/tilesets/secondary/cinnabar_island_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_IndigoPlateau[] = INCBIN_U16("data/tilesets/secondary/indigo_plateau_frlg/metatiles.bin");
+const u16 gMetatileAttributes_IndigoPlateau[] = INCBIN_U16("data/tilesets/secondary/indigo_plateau_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SaffronCity[] = INCBIN_U16("data/tilesets/secondary/saffron_city_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SaffronCity[] = INCBIN_U16("data/tilesets/secondary/saffron_city_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PewterGym[] = INCBIN_U16("data/tilesets/secondary/pewter_gym_frlg/metatiles.bin");
+const u16 gMetatileAttributes_PewterGym[] = INCBIN_U16("data/tilesets/secondary/pewter_gym_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_CeruleanGym[] = INCBIN_U16("data/tilesets/secondary/cerulean_gym_frlg/metatiles.bin");
+const u16 gMetatileAttributes_CeruleanGym[] = INCBIN_U16("data/tilesets/secondary/cerulean_gym_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_VermilionGym[] = INCBIN_U16("data/tilesets/secondary/vermilion_gym_frlg/metatiles.bin");
+const u16 gMetatileAttributes_VermilionGym[] = INCBIN_U16("data/tilesets/secondary/vermilion_gym_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonGym[] = INCBIN_U16("data/tilesets/secondary/celadon_gym_frlg/metatiles.bin");
+const u16 gMetatileAttributes_CeladonGym[] = INCBIN_U16("data/tilesets/secondary/celadon_gym_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_FuchsiaGym[] = INCBIN_U16("data/tilesets/secondary/fuchsia_gym_frlg/metatiles.bin");
+const u16 gMetatileAttributes_FuchsiaGym[] = INCBIN_U16("data/tilesets/secondary/fuchsia_gym_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SaffronGym[] = INCBIN_U16("data/tilesets/secondary/saffron_gym_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SaffronGym[] = INCBIN_U16("data/tilesets/secondary/saffron_gym_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_CinnabarGym[] = INCBIN_U16("data/tilesets/secondary/cinnabar_gym_frlg/metatiles.bin");
+const u16 gMetatileAttributes_CinnabarGym[] = INCBIN_U16("data/tilesets/secondary/cinnabar_gym_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_ViridianGym[] = INCBIN_U16("data/tilesets/secondary/viridian_gym_frlg/metatiles.bin");
+const u16 gMetatileAttributes_ViridianGym[] = INCBIN_U16("data/tilesets/secondary/viridian_gym_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_Building[] = INCBIN_U16("data/tilesets/primary/building/metatiles.bin");
+const u16 gMetatileAttributes_Building[] = INCBIN_U16("data/tilesets/primary/building/metatile_attributes.bin");
+
+const u16 gMetatiles_HoennBuilding[] = INCBIN_U16("data/tilesets/secondary/hoenn_building_frlg/metatiles.bin");
+const u16 gMetatileAttributes_HoennBuilding[] = INCBIN_U16("data/tilesets/secondary/hoenn_building_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_BikeShop_Frlg[] = INCBIN_U16("data/tilesets/secondary/bike_shop_frlg/metatiles.bin");
+const u16 gMetatileAttributes_BikeShop_Frlg[] = INCBIN_U16("data/tilesets/secondary/bike_shop_frlg/metatile_attributes.bin");
+
+#ifdef FIRERED
+extern const u16 gMetatiles_Mart[536] __attribute__((alias("gMetatiles_KantoMart_Hns")));
+#else
+const u16 gMetatiles_Mart[] = INCBIN_U16("data/tilesets/secondary/mart_frlg/metatiles.bin");
+#endif
+const u16 gMetatileAttributes_Mart[] = INCBIN_U16("data/tilesets/secondary/mart_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonCenter_Frlg[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_frlg/metatiles.bin");
+const u16 gMetatileAttributes_PokemonCenter_Frlg[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_Frlg[] = INCBIN_U16("data/tilesets/secondary/cave_frlg/metatiles.bin");
+const u16 gMetatileAttributes_Cave_Frlg[] = INCBIN_U16("data/tilesets/secondary/cave_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_GameCorner[] = INCBIN_U16("data/tilesets/secondary/game_corner_frlg/metatiles.bin");
+const u16 gMetatileAttributes_GameCorner[] = INCBIN_U16("data/tilesets/secondary/game_corner_frlg/metatile_attributes.bin");
+
+
+const u16 gMetatiles_SSAnne[] = INCBIN_U16("data/tilesets/secondary/ss_anne_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SSAnne[] = INCBIN_U16("data/tilesets/secondary/ss_anne_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_ViridianForest[] = INCBIN_U16("data/tilesets/secondary/viridian_forest_frlg/metatiles.bin");
+const u16 gMetatileAttributes_ViridianForest[] = INCBIN_U16("data/tilesets/secondary/viridian_forest_frlg/metatile_attributes.bin");
+
+#ifndef FIRERED
+const u16 gMetatiles_UnusedGatehouse1[] = INCBIN_U16("data/tilesets/secondary/unused_gatehouse_1_frlg/metatiles.bin");
+#endif // FIRERED: no live consumer for gMetatiles_UnusedGatehouse1
+#ifndef FIRERED
+const u16 gMetatileAttributes_UnusedGatehouse1[] = INCBIN_U16("data/tilesets/secondary/unused_gatehouse_1_frlg/metatile_attributes.bin");
+#endif // FIRERED: no live consumer for gMetatileAttributes_UnusedGatehouse1
+
+const u16 gMetatiles_RockTunnel[] = INCBIN_U16("data/tilesets/secondary/rock_tunnel_frlg/metatiles.bin");
+const u16 gMetatileAttributes_RockTunnel[] = INCBIN_U16("data/tilesets/secondary/rock_tunnel_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_DiglettsCave[] = INCBIN_U16("data/tilesets/secondary/digletts_cave_frlg/metatiles.bin");
+const u16 gMetatileAttributes_DiglettsCave[] = INCBIN_U16("data/tilesets/secondary/digletts_cave_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SeafoamIslands[] = INCBIN_U16("data/tilesets/secondary/seafoam_islands_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SeafoamIslands[] = INCBIN_U16("data/tilesets/secondary/seafoam_islands_frlg/metatile_attributes.bin");
+
+#ifndef FIRERED
+const u16 gMetatiles_UnusedGatehouse2[] = INCBIN_U16("data/tilesets/secondary/unused_gatehouse_2_frlg/metatiles.bin");
+#endif // FIRERED: no live consumer for gMetatiles_UnusedGatehouse2
+#ifndef FIRERED
+const u16 gMetatileAttributes_UnusedGatehouse2[] = INCBIN_U16("data/tilesets/secondary/unused_gatehouse_2_frlg/metatile_attributes.bin");
+#endif // FIRERED: no live consumer for gMetatileAttributes_UnusedGatehouse2
+
+const u16 gMetatiles_CeruleanCave[] = INCBIN_U16("data/tilesets/secondary/cerulean_cave_frlg/metatiles.bin");
+const u16 gMetatileAttributes_CeruleanCave[] = INCBIN_U16("data/tilesets/secondary/cerulean_cave_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_DepartmentStore[] = INCBIN_U16("data/tilesets/secondary/department_store_frlg/metatiles.bin");
+const u16 gMetatileAttributes_DepartmentStore[] = INCBIN_U16("data/tilesets/secondary/department_store_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_GenericBuilding2[] = INCBIN_U16("data/tilesets/secondary/generic_building_2_frlg/metatiles.bin");
+const u16 gMetatileAttributes_GenericBuilding2[] = INCBIN_U16("data/tilesets/secondary/generic_building_2_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PowerPlant[] = INCBIN_U16("data/tilesets/secondary/power_plant_frlg/metatiles.bin");
+const u16 gMetatileAttributes_PowerPlant[] = INCBIN_U16("data/tilesets/secondary/power_plant_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SeaCottage[] = INCBIN_U16("data/tilesets/secondary/sea_cottage_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SeaCottage[] = INCBIN_U16("data/tilesets/secondary/sea_cottage_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SilphCo[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SilphCo[] = INCBIN_U16("data/tilesets/secondary/silph_co_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_UndergroundPath[] = INCBIN_U16("data/tilesets/secondary/underground_path_frlg/metatiles.bin");
+const u16 gMetatileAttributes_UndergroundPath[] = INCBIN_U16("data/tilesets/secondary/underground_path_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonTower[] = INCBIN_U16("data/tilesets/secondary/pokemon_tower_frlg/metatiles.bin");
+const u16 gMetatileAttributes_PokemonTower[] = INCBIN_U16("data/tilesets/secondary/pokemon_tower_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SafariZoneBuilding[] = INCBIN_U16("data/tilesets/secondary/safari_zone_building_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SafariZoneBuilding[] = INCBIN_U16("data/tilesets/secondary/safari_zone_building_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonMansion[] = INCBIN_U16("data/tilesets/secondary/pokemon_mansion_frlg/metatiles.bin");
+const u16 gMetatileAttributes_PokemonMansion[] = INCBIN_U16("data/tilesets/secondary/pokemon_mansion_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_Museum[] = INCBIN_U16("data/tilesets/secondary/museum_frlg/metatiles.bin");
+const u16 gMetatileAttributes_Museum[] = INCBIN_U16("data/tilesets/secondary/museum_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_CableClub_Frlg[] = INCBIN_U16("data/tilesets/secondary/cable_club_frlg/metatiles.bin");
+const u16 gMetatileAttributes_CableClub_Frlg[] = INCBIN_U16("data/tilesets/secondary/cable_club_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_RestaurantHotel[] = INCBIN_U16("data/tilesets/secondary/restaurant_hotel_frlg/metatiles.bin");
+const u16 gMetatileAttributes_RestaurantHotel[] = INCBIN_U16("data/tilesets/secondary/restaurant_hotel_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_School[] = INCBIN_U16("data/tilesets/secondary/school_frlg/metatiles.bin");
+const u16 gMetatileAttributes_School[] = INCBIN_U16("data/tilesets/secondary/school_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_FanClubDaycare[] = INCBIN_U16("data/tilesets/secondary/fan_club_daycare_frlg/metatiles.bin");
+const u16 gMetatileAttributes_FanClubDaycare[] = INCBIN_U16("data/tilesets/secondary/fan_club_daycare_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_Condominiums[] = INCBIN_U16("data/tilesets/secondary/condominiums_frlg/metatiles.bin");
+const u16 gMetatileAttributes_Condominiums[] = INCBIN_U16("data/tilesets/secondary/condominiums_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_BurgledHouse[] = INCBIN_U16("data/tilesets/secondary/burgled_house_frlg/metatiles.bin");
+const u16 gMetatileAttributes_BurgledHouse[] = INCBIN_U16("data/tilesets/secondary/burgled_house_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_MtEmber[] = INCBIN_U16("data/tilesets/secondary/mt_ember_frlg/metatiles.bin");
+const u16 gMetatileAttributes_MtEmber[] = INCBIN_U16("data/tilesets/secondary/mt_ember_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_BerryForest[] = INCBIN_U16("data/tilesets/secondary/berry_forest_frlg/metatiles.bin");
+const u16 gMetatileAttributes_BerryForest[] = INCBIN_U16("data/tilesets/secondary/berry_forest_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_NavelRock_Frlg[] = INCBIN_U16("data/tilesets/secondary/navel_rock_frlg/metatiles.bin");
+const u16 gMetatileAttributes_NavelRock_Frlg[] = INCBIN_U16("data/tilesets/secondary/navel_rock_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_TanobyRuins[] = INCBIN_U16("data/tilesets/secondary/tanoby_ruins_frlg/metatiles.bin");
+const u16 gMetatileAttributes_TanobyRuins[] = INCBIN_U16("data/tilesets/secondary/tanoby_ruins_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiIslands123[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_123_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SeviiIslands123[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_123_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiIslands45[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_45_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SeviiIslands45[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_45_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiIslands67[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_67_frlg/metatiles.bin");
+const u16 gMetatileAttributes_SeviiIslands67[] = INCBIN_U16("data/tilesets/secondary/sevii_islands_67_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_TrainerTower[] = INCBIN_U16("data/tilesets/secondary/trainer_tower_frlg/metatiles.bin");
+const u16 gMetatileAttributes_TrainerTower[] = INCBIN_U16("data/tilesets/secondary/trainer_tower_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_IslandHarbor_Frlg[] = INCBIN_U16("data/tilesets/secondary/island_harbor_frlg/metatiles.bin");
+const u16 gMetatileAttributes_IslandHarbor_Frlg[] = INCBIN_U16("data/tilesets/secondary/island_harbor_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonLeague[] = INCBIN_U16("data/tilesets/secondary/pokemon_league_frlg/metatiles.bin");
+const u16 gMetatileAttributes_PokemonLeague[] = INCBIN_U16("data/tilesets/secondary/pokemon_league_frlg/metatile_attributes.bin");
+
+const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatiles.bin");
+const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatile_attributes.bin");
+
+#elif IS_HNS
+
+
+const u16 gMetatiles_General_Hns[] = INCBIN_U16("data/tilesets/primary/general_hns/metatiles.bin");
+const u16 gMetatileAttributes_General_Hns[] = INCBIN_U16("data/tilesets/primary/general_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Johto_Building_Hns[] = INCBIN_U16("data/tilesets/primary/johto_building_hns/metatiles.bin");
+const u16 gMetatileAttributes_Johto_Building_Hns[] = INCBIN_U16("data/tilesets/primary/johto_building_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Johto_General_Hns[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/metatiles.bin");
+const u16 gMetatileAttributes_Johto_General_Hns[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Johto_NorthEast_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_east_hns/metatiles.bin");
+const u16 gMetatileAttributes_Johto_NorthEast_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_east_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Johto_NorthWest_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_west_hns/metatiles.bin");
+const u16 gMetatileAttributes_Johto_NorthWest_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_west_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Johto_South_Hns[] = INCBIN_U16("data/tilesets/primary/johto_south_hns/metatiles.bin");
+const u16 gMetatileAttributes_Johto_South_Hns[] = INCBIN_U16("data/tilesets/primary/johto_south_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Kanto_Building_Hns[] = INCBIN_U16("data/tilesets/primary/kanto_building_hns/metatiles.bin");
+const u16 gMetatileAttributes_Kanto_Building_Hns[] = INCBIN_U16("data/tilesets/primary/kanto_building_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Kanto_General_Hns[] = INCBIN_U16("data/tilesets/primary/kanto_general_hns/metatiles.bin");
+const u16 gMetatileAttributes_Kanto_General_Hns[] = INCBIN_U16("data/tilesets/primary/kanto_general_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_AzaleaTown_Hns[] = INCBIN_U16("data/tilesets/secondary/azalea_town_hns/metatiles.bin");
+const u16 gMetatileAttributes_AzaleaTown_Hns[] = INCBIN_U16("data/tilesets/secondary/azalea_town_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_AzaleaTown_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/azalea_town_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_AzaleaTown_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/azalea_town_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Barn_Hns[] = INCBIN_U16("data/tilesets/secondary/barn_hns/metatiles.bin");
+const u16 gMetatileAttributes_Barn_Hns[] = INCBIN_U16("data/tilesets/secondary/barn_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_BellchimeTrail_Hns[] = INCBIN_U16("data/tilesets/secondary/bellchime_trail_hns/metatiles.bin");
+const u16 gMetatileAttributes_BellchimeTrail_Hns[] = INCBIN_U16("data/tilesets/secondary/bellchime_trail_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_BikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/bike_shop_hns/metatiles.bin");
+const u16 gMetatileAttributes_BikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/bike_shop_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Blackthorn_Hns[] = INCBIN_U16("data/tilesets/secondary/blackthorn_hns/metatiles.bin");
+const u16 gMetatileAttributes_Blackthorn_Hns[] = INCBIN_U16("data/tilesets/secondary/blackthorn_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_BlackthornGym_Hns[] = INCBIN_U16("data/tilesets/secondary/blackthorn_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_BlackthornGym_Hns[] = INCBIN_U16("data/tilesets/secondary/blackthorn_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_BurnedTower_Hns[] = INCBIN_U16("data/tilesets/secondary/burned_tower_hns/metatiles.bin");
+const u16 gMetatileAttributes_BurnedTower_Hns[] = INCBIN_U16("data/tilesets/secondary/burned_tower_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cafe_Hns[] = INCBIN_U16("data/tilesets/secondary/cafe_hns/metatiles.bin");
+const u16 gMetatileAttributes_Cafe_Hns[] = INCBIN_U16("data/tilesets/secondary/cafe_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_Default_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_default_hns/metatiles.bin");
+const u16 gMetatileAttributes_Cave_Default_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_default_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_DragonsDen_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_dragons_den_hns/metatiles.bin");
+const u16 gMetatileAttributes_Cave_DragonsDen_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_dragons_den_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_Gray_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_gray_hns/metatiles.bin");
+const u16 gMetatileAttributes_Cave_Gray_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_gray_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_Green_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_green_hns/metatiles.bin");
+const u16 gMetatileAttributes_Cave_Green_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_green_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_Ice_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_ice_hns/metatiles.bin");
+const u16 gMetatileAttributes_Cave_Ice_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_ice_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_MtMoon_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_mt_moon_hns/metatiles.bin");
+const u16 gMetatileAttributes_Cave_MtMoon_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_mt_moon_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_Sandy_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_sandy_hns/metatiles.bin");
+const u16 gMetatileAttributes_Cave_Sandy_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_sandy_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonApartments_Hns[] = INCBIN_U16("data/tilesets/secondary/celadon_apartments_hns/metatiles.bin");
+const u16 gMetatileAttributes_CeladonApartments_Hns[] = INCBIN_U16("data/tilesets/secondary/celadon_apartments_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonCity_Hns[] = INCBIN_U16("data/tilesets/secondary/celadon_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_CeladonCity_Hns[] = INCBIN_U16("data/tilesets/secondary/celadon_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CeruleanCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_CeruleanCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CeruleanCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_CeruleanCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CherrygroveCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cherrygrove_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_CherrygroveCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cherrygrove_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CianwoodCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cianwood_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_CianwoodCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cianwood_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CianwoodCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/cianwood_city_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_CianwoodCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/cianwood_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CyclingRoad_Hns[] = INCBIN_U16("data/tilesets/secondary/cycling_road_hns/metatiles.bin");
+const u16 gMetatileAttributes_CyclingRoad_Hns[] = INCBIN_U16("data/tilesets/secondary/cycling_road_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_DepartmentStore_Hns[] = INCBIN_U16("data/tilesets/secondary/department_store_hns/metatiles.bin");
+const u16 gMetatileAttributes_DepartmentStore_Hns[] = INCBIN_U16("data/tilesets/secondary/department_store_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_DragonsDen_Shrine_Hns[] = INCBIN_U16("data/tilesets/secondary/dragons_den_shrine_hns/metatiles.bin");
+const u16 gMetatileAttributes_DragonsDen_Shrine_Hns[] = INCBIN_U16("data/tilesets/secondary/dragons_den_shrine_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_EcruteakCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_city_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_EcruteakCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_EcruteakTheater_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_theater_hns/metatiles.bin");
+const u16 gMetatileAttributes_EcruteakTheater_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_theater_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Ecruteak_City_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_Ecruteak_City_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Fuchsia_Hns[] = INCBIN_U16("data/tilesets/secondary/fuchsia_hns/metatiles.bin");
+const u16 gMetatileAttributes_Fuchsia_Hns[] = INCBIN_U16("data/tilesets/secondary/fuchsia_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_FuchsiaCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/fuchsia_city_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_FuchsiaCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/fuchsia_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_GameCorner_Hns[] = INCBIN_U16("data/tilesets/secondary/game_corner_hns/metatiles.bin");
+const u16 gMetatileAttributes_GameCorner_Hns[] = INCBIN_U16("data/tilesets/secondary/game_corner_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Gate_Standard_Hns[] = INCBIN_U16("data/tilesets/secondary/gate_standard_hns/metatiles.bin");
+const u16 gMetatileAttributes_Gate_Standard_Hns[] = INCBIN_U16("data/tilesets/secondary/gate_standard_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Goldenrod_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_hns/metatiles.bin");
+const u16 gMetatileAttributes_Goldenrod_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_GoldenrodCity_TrainStation_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_station_hns/metatiles.bin");
+const u16 gMetatileAttributes_GoldenrodCity_TrainStation_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_station_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_GoldenrodUndergroundRocket_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_rocket_hns/metatiles.bin");
+const u16 gMetatileAttributes_GoldenrodUndergroundRocket_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_rocket_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_GoldenrodUndergroundTunnel_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_tunnel_hns/metatiles.bin");
+const u16 gMetatileAttributes_GoldenrodUndergroundTunnel_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_tunnel_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Goldenrod_Underground_Storage_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_storage_hns/metatiles.bin");
+const u16 gMetatileAttributes_Goldenrod_Underground_Storage_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_storage_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_HallOfFame_Hns[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_hns/metatiles.bin");
+const u16 gMetatileAttributes_HallOfFame_Hns[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_House_2_Hns[] = INCBIN_U16("data/tilesets/secondary/house_2_hns/metatiles.bin");
+const u16 gMetatileAttributes_House_2_Hns[] = INCBIN_U16("data/tilesets/secondary/house_2_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_House_Lab_Hns[] = INCBIN_U16("data/tilesets/secondary/house_lab_hns/metatiles.bin");
+const u16 gMetatileAttributes_House_Lab_Hns[] = INCBIN_U16("data/tilesets/secondary/house_lab_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_IlexForest_Hns[] = INCBIN_U16("data/tilesets/secondary/ilex_forest_hns/metatiles.bin");
+const u16 gMetatileAttributes_IlexForest_Hns[] = INCBIN_U16("data/tilesets/secondary/ilex_forest_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_IndigoPlateau_Hns[] = INCBIN_U16("data/tilesets/secondary/indigo_plateau_hns/metatiles.bin");
+const u16 gMetatileAttributes_IndigoPlateau_Hns[] = INCBIN_U16("data/tilesets/secondary/indigo_plateau_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_JohtoBikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_bike_shop_hns/metatiles.bin");
+const u16 gMetatileAttributes_JohtoBikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_bike_shop_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_JohtoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_mart_hns/metatiles.bin");
+const u16 gMetatileAttributes_JohtoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_mart_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_KantoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_mart_hns/metatiles.bin");
+const u16 gMetatileAttributes_KantoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_mart_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Kanto_PokemonCenter_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_pokemon_center_hns/metatiles.bin");
+const u16 gMetatileAttributes_Kanto_PokemonCenter_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_pokemon_center_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_KurtsHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/kurts_house_hns/metatiles.bin");
+const u16 gMetatileAttributes_KurtsHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/kurts_house_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Lavaridge_Hns[] = INCBIN_U16("data/tilesets/secondary/lavaridge_hns/metatiles.bin");
+const u16 gMetatileAttributes_Lavaridge_Hns[] = INCBIN_U16("data/tilesets/secondary/lavaridge_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_LavenderTown_Hns[] = INCBIN_U16("data/tilesets/secondary/lavender_town_hns/metatiles.bin");
+const u16 gMetatileAttributes_LavenderTown_Hns[] = INCBIN_U16("data/tilesets/secondary/lavender_town_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Lighthouse_Hns[] = INCBIN_U16("data/tilesets/secondary/lighthouse_hns/metatiles.bin");
+const u16 gMetatileAttributes_Lighthouse_Hns[] = INCBIN_U16("data/tilesets/secondary/lighthouse_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_MahoganyTown_Hns[] = INCBIN_U16("data/tilesets/secondary/mahogany_town_hns/metatiles.bin");
+const u16 gMetatileAttributes_MahoganyTown_Hns[] = INCBIN_U16("data/tilesets/secondary/mahogany_town_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_MtSilverSnow_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_snow_hns/metatiles.bin");
+const u16 gMetatileAttributes_MtSilverSnow_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_snow_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Museum_Hns[] = INCBIN_U16("data/tilesets/secondary/museum_hns/metatiles.bin");
+const u16 gMetatileAttributes_Museum_Hns[] = INCBIN_U16("data/tilesets/secondary/museum_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_NationalPark_Hns[] = INCBIN_U16("data/tilesets/secondary/national_park_hns/metatiles.bin");
+const u16 gMetatileAttributes_NationalPark_Hns[] = INCBIN_U16("data/tilesets/secondary/national_park_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_NewBarkTown_Hns[] = INCBIN_U16("data/tilesets/secondary/new_bark_town_hns/metatiles.bin");
+const u16 gMetatileAttributes_NewBarkTown_Hns[] = INCBIN_U16("data/tilesets/secondary/new_bark_town_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_OlivineCity_Hns[] = INCBIN_U16("data/tilesets/secondary/olivine_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_OlivineCity_Hns[] = INCBIN_U16("data/tilesets/secondary/olivine_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PalletTown_Hns[] = INCBIN_U16("data/tilesets/secondary/pallet_town_hns/metatiles.bin");
+const u16 gMetatileAttributes_PalletTown_Hns[] = INCBIN_U16("data/tilesets/secondary/pallet_town_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PewterCity_Hns[] = INCBIN_U16("data/tilesets/secondary/pewter_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_PewterCity_Hns[] = INCBIN_U16("data/tilesets/secondary/pewter_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PlayersHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/players_house_hns/metatiles.bin");
+const u16 gMetatileAttributes_PlayersHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/players_house_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonCenter_White_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_white_hns/metatiles.bin");
+const u16 gMetatileAttributes_PokemonCenter_White_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_white_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonDayCare_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_day_care_hns/metatiles.bin");
+const u16 gMetatileAttributes_PokemonDayCare_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_day_care_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonLeague_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_league_hns/metatiles.bin");
+const u16 gMetatileAttributes_PokemonLeague_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_league_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PortIndoor_Hns[] = INCBIN_U16("data/tilesets/secondary/port_indoor_hns/metatiles.bin");
+const u16 gMetatileAttributes_PortIndoor_Hns[] = INCBIN_U16("data/tilesets/secondary/port_indoor_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PowerPlant_GeneratorRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/power_plant_generator_room_hns/metatiles.bin");
+const u16 gMetatileAttributes_PowerPlant_GeneratorRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/power_plant_generator_room_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Route32_Hns[] = INCBIN_U16("data/tilesets/secondary/route_32_hns/metatiles.bin");
+const u16 gMetatileAttributes_Route32_Hns[] = INCBIN_U16("data/tilesets/secondary/route_32_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Route38_Farmland_Hns[] = INCBIN_U16("data/tilesets/secondary/route38_farmland_hns/metatiles.bin");
+const u16 gMetatileAttributes_Route38_Farmland_Hns[] = INCBIN_U16("data/tilesets/secondary/route38_farmland_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_RuinsOfAlphWriting_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_writing_hns/metatiles.bin");
+const u16 gMetatileAttributes_RuinsOfAlphWriting_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_writing_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_RuinsOfAlph_B1F_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_b1_f_hns/metatiles.bin");
+const u16 gMetatileAttributes_RuinsOfAlph_B1F_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_b1_f_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_RuinsOfAlph_Outside_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_outside_hns/metatiles.bin");
+const u16 gMetatileAttributes_RuinsOfAlph_Outside_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_outside_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SafariZoneJohto_Hns[] = INCBIN_U16("data/tilesets/secondary/safari_zone_johto_hns/metatiles.bin");
+const u16 gMetatileAttributes_SafariZoneJohto_Hns[] = INCBIN_U16("data/tilesets/secondary/safari_zone_johto_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SafariZone_Entrance_Hns[] = INCBIN_U16("data/tilesets/secondary/safari_zone_entrance_hns/metatiles.bin");
+const u16 gMetatileAttributes_SafariZone_Entrance_Hns[] = INCBIN_U16("data/tilesets/secondary/safari_zone_entrance_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SaffronCity_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_SaffronCity_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SaffronCity_FightingDojoVIP_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_dojo_vip_hns/metatiles.bin");
+const u16 gMetatileAttributes_SaffronCity_FightingDojoVIP_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_dojo_vip_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SaffronCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_SaffronCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SeaCottage_Hns[] = INCBIN_U16("data/tilesets/secondary/sea_cottage_hns/metatiles.bin");
+const u16 gMetatileAttributes_SeaCottage_Hns[] = INCBIN_U16("data/tilesets/secondary/sea_cottage_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_ShopRooftop_Hns[] = INCBIN_U16("data/tilesets/secondary/shop_rooftop_hns/metatiles.bin");
+const u16 gMetatileAttributes_ShopRooftop_Hns[] = INCBIN_U16("data/tilesets/secondary/shop_rooftop_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SilphCo_Hns[] = INCBIN_U16("data/tilesets/secondary/silph_co_hns/metatiles.bin");
+const u16 gMetatileAttributes_SilphCo_Hns[] = INCBIN_U16("data/tilesets/secondary/silph_co_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SootopolisGym_Hns[] = INCBIN_U16("data/tilesets/secondary/sootopolis_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_SootopolisGym_Hns[] = INCBIN_U16("data/tilesets/secondary/sootopolis_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SoulHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/soul_house_hns/metatiles.bin");
+const u16 gMetatileAttributes_SoulHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/soul_house_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatiles.bin");
+const u16 gMetatileAttributes_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_TrainerSchool_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_school_hns/metatiles.bin");
+const u16 gMetatileAttributes_TrainerSchool_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_school_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Vermilion_Hns[] = INCBIN_U16("data/tilesets/secondary/vermilion_hns/metatiles.bin");
+const u16 gMetatileAttributes_Vermilion_Hns[] = INCBIN_U16("data/tilesets/secondary/vermilion_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_VermilionCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/vermilion_city_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_VermilionCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/vermilion_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_VioletCity_Hns[] = INCBIN_U16("data/tilesets/secondary/violet_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_VioletCity_Hns[] = INCBIN_U16("data/tilesets/secondary/violet_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_ViridianCity_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_city_hns/metatiles.bin");
+const u16 gMetatileAttributes_ViridianCity_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_ViridianCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_city_gym_hns/metatiles.bin");
+const u16 gMetatileAttributes_ViridianCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_ViridianForest_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_forest_hns/metatiles.bin");
+const u16 gMetatileAttributes_ViridianForest_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_forest_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_WhirlIslands_Hns[] = INCBIN_U16("data/tilesets/secondary/whirl_islands_hns/metatiles.bin");
+const u16 gMetatileAttributes_WhirlIslands_Hns[] = INCBIN_U16("data/tilesets/secondary/whirl_islands_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatiles.bin");
+const u16 gMetatileAttributes_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_AlolaIsland[] = INCBIN_U16("data/tilesets/primary/alola_island/metatiles.bin");
+const u16 gMetatileAttributes_AlolaIsland[] = INCBIN_U16("data/tilesets/primary/alola_island/metatile_attributes.bin");
+
+const u16 gMetatiles_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatiles.bin");
+const u16 gMetatileAttributes_AlolaIslandSecondary[] = INCBIN_U16("data/tilesets/secondary/alola_island_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatiles.bin");
+const u16 gMetatileAttributes_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatile_attributes.bin");
+
+
+const u16 gMetatiles_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatiles.bin");
+const u16 gMetatileAttributes_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatiles.bin");
+const u16 gMetatileAttributes_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_MtSilver_NewSinjoh_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_newsinjoh_hns/metatiles.bin");
+const u16 gMetatileAttributes_MtSilver_NewSinjoh_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_newsinjoh_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_ArceusRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/arceus_room_hns/metatiles.bin");
+const u16 gMetatileAttributes_ArceusRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/arceus_room_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_MtEmber_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_ember_hns/metatiles.bin");
+const u16 gMetatileAttributes_MtEmber_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_ember_hns/metatile_attributes.bin");
+
+#endif // IS_FRLG || IS_HNS
+
+#ifdef FIRERED
+// Campaign: exact upstream tileset dependencies of selected Johto maps.
+
+const u16 gMetatileAttributes_ArceusRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/arceus_room_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_AzaleaTown_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/azalea_town_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_AzaleaTown_Hns[] = INCBIN_U16("data/tilesets/secondary/azalea_town_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Barn_Hns[] = INCBIN_U16("data/tilesets/secondary/barn_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_BellchimeTrail_Hns[] = INCBIN_U16("data/tilesets/secondary/bellchime_trail_hns/metatile_attributes.bin");
+
+#ifdef FIRERED
+extern const u16 gMetatileAttributes_BikeShop_Hns[66] __attribute__((alias("gMetatileAttributes_JohtoBikeShop_Hns")));
+#else
+const u16 gMetatileAttributes_BikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/bike_shop_hns/metatile_attributes.bin");
+#endif
+
+const u16 gMetatileAttributes_BlackthornGym_Hns[] = INCBIN_U16("data/tilesets/secondary/blackthorn_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Blackthorn_Hns[] = INCBIN_U16("data/tilesets/secondary/blackthorn_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_BurnedTower_Hns[] = INCBIN_U16("data/tilesets/secondary/burned_tower_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Cafe_Hns[] = INCBIN_U16("data/tilesets/secondary/cafe_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Cave_Default_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_default_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Cave_DragonsDen_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_dragons_den_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Cave_Gray_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_gray_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Cave_Ice_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_ice_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_CherrygroveCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cherrygrove_city_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_CianwoodCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/cianwood_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_CianwoodCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cianwood_city_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_DepartmentStore_Hns[] = INCBIN_U16("data/tilesets/secondary/department_store_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_DragonsDen_Shrine_Hns[] = INCBIN_U16("data/tilesets/secondary/dragons_den_shrine_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_EcruteakCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_EcruteakTheater_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_theater_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Ecruteak_City_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_city_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_GameCorner_Hns[] = INCBIN_U16("data/tilesets/secondary/game_corner_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Gate_Standard_Hns[] = INCBIN_U16("data/tilesets/secondary/gate_standard_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_GoldenrodCity_TrainStation_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_station_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_GoldenrodUndergroundRocket_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_rocket_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_GoldenrodUndergroundTunnel_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_tunnel_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Goldenrod_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Goldenrod_Underground_Storage_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_storage_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_HallOfFame_Hns[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_House_2_Hns[] = INCBIN_U16("data/tilesets/secondary/house_2_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_House_Lab_Hns[] = INCBIN_U16("data/tilesets/secondary/house_lab_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_IlexForest_Hns[] = INCBIN_U16("data/tilesets/secondary/ilex_forest_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_IndigoPlateau_Hns[] = INCBIN_U16("data/tilesets/secondary/indigo_plateau_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_JohtoBikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_bike_shop_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_JohtoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_mart_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Johto_Building_Hns[] = INCBIN_U16("data/tilesets/primary/johto_building_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Johto_General_Hns[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Johto_NorthEast_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_east_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Johto_NorthWest_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_west_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Johto_South_Hns[] = INCBIN_U16("data/tilesets/primary/johto_south_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Kanto_General_Hns[] = INCBIN_U16("data/tilesets/primary/kanto_general_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Kanto_PokemonCenter_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_pokemon_center_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_KurtsHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/kurts_house_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Lighthouse_Hns[] = INCBIN_U16("data/tilesets/secondary/lighthouse_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_MahoganyTown_Hns[] = INCBIN_U16("data/tilesets/secondary/mahogany_town_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_MtEmber_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_ember_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_MtSilverSnow_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_snow_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_MtSilver_NewSinjoh_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_newsinjoh_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_NationalPark_Hns[] = INCBIN_U16("data/tilesets/secondary/national_park_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_NewBarkTown_Hns[] = INCBIN_U16("data/tilesets/secondary/new_bark_town_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_OlivineCity_Hns[] = INCBIN_U16("data/tilesets/secondary/olivine_city_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_PlayersHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/players_house_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_PokemonCenter_White_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_white_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_PokemonDayCare_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_day_care_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_PokemonLeague_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_league_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_PortIndoor_Hns[] = INCBIN_U16("data/tilesets/secondary/port_indoor_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_PowerPlant_GeneratorRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/power_plant_generator_room_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Route32_Hns[] = INCBIN_U16("data/tilesets/secondary/route_32_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Route38_Farmland_Hns[] = INCBIN_U16("data/tilesets/secondary/route38_farmland_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_RuinsOfAlphWriting_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_writing_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_RuinsOfAlph_B1F_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_b1_f_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_RuinsOfAlph_Outside_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_outside_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_SafariZoneJohto_Hns[] = INCBIN_U16("data/tilesets/secondary/safari_zone_johto_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_SafariZone_Entrance_Hns[] = INCBIN_U16("data/tilesets/secondary/safari_zone_entrance_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_SaffronCity_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_ShopRooftop_Hns[] = INCBIN_U16("data/tilesets/secondary/shop_rooftop_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_SootopolisGym_Hns[] = INCBIN_U16("data/tilesets/secondary/sootopolis_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_SoulHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/soul_house_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_TrainerSchool_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_school_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_VioletCity_Hns[] = INCBIN_U16("data/tilesets/secondary/violet_city_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_ViridianCity_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_city_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_WhirlIslands_Hns[] = INCBIN_U16("data/tilesets/secondary/whirl_islands_hns/metatile_attributes.bin");
+
+const u16 gMetatileAttributes_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_ArceusRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/arceus_room_hns/metatiles.bin");
+
+const u16 gMetatiles_AzaleaTown_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/azalea_town_gym_hns/metatiles.bin");
+
+const u16 gMetatiles_AzaleaTown_Hns[] = INCBIN_U16("data/tilesets/secondary/azalea_town_hns/metatiles.bin");
+
+const u16 gMetatiles_Barn_Hns[] = INCBIN_U16("data/tilesets/secondary/barn_hns/metatiles.bin");
+
+const u16 gMetatiles_BellchimeTrail_Hns[] = INCBIN_U16("data/tilesets/secondary/bellchime_trail_hns/metatiles.bin");
+
+#ifdef FIRERED
+extern const u16 gMetatiles_BikeShop_Hns[528] __attribute__((alias("gMetatiles_JohtoBikeShop_Hns")));
+#else
+const u16 gMetatiles_BikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/bike_shop_hns/metatiles.bin");
+#endif
+
+const u16 gMetatiles_BlackthornGym_Hns[] = INCBIN_U16("data/tilesets/secondary/blackthorn_gym_hns/metatiles.bin");
+
+const u16 gMetatiles_Blackthorn_Hns[] = INCBIN_U16("data/tilesets/secondary/blackthorn_hns/metatiles.bin");
+
+const u16 gMetatiles_BurnedTower_Hns[] = INCBIN_U16("data/tilesets/secondary/burned_tower_hns/metatiles.bin");
+
+const u16 gMetatiles_Cafe_Hns[] = INCBIN_U16("data/tilesets/secondary/cafe_hns/metatiles.bin");
+
+const u16 gMetatiles_Cave_Default_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_default_hns/metatiles.bin");
+
+const u16 gMetatiles_Cave_DragonsDen_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_dragons_den_hns/metatiles.bin");
+
+const u16 gMetatiles_Cave_Gray_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_gray_hns/metatiles.bin");
+
+const u16 gMetatiles_Cave_Ice_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_ice_hns/metatiles.bin");
+
+const u16 gMetatiles_CherrygroveCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cherrygrove_city_hns/metatiles.bin");
+
+const u16 gMetatiles_CianwoodCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/cianwood_city_gym_hns/metatiles.bin");
+
+const u16 gMetatiles_CianwoodCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cianwood_city_hns/metatiles.bin");
+
+const u16 gMetatiles_DepartmentStore_Hns[] = INCBIN_U16("data/tilesets/secondary/department_store_hns/metatiles.bin");
+
+const u16 gMetatiles_DragonsDen_Shrine_Hns[] = INCBIN_U16("data/tilesets/secondary/dragons_den_shrine_hns/metatiles.bin");
+
+const u16 gMetatiles_EcruteakCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_city_gym_hns/metatiles.bin");
+
+const u16 gMetatiles_EcruteakTheater_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_theater_hns/metatiles.bin");
+
+const u16 gMetatiles_Ecruteak_City_Hns[] = INCBIN_U16("data/tilesets/secondary/ecruteak_city_hns/metatiles.bin");
+
+const u16 gMetatiles_GameCorner_Hns[] = INCBIN_U16("data/tilesets/secondary/game_corner_hns/metatiles.bin");
+
+const u16 gMetatiles_Gate_Standard_Hns[] = INCBIN_U16("data/tilesets/secondary/gate_standard_hns/metatiles.bin");
+
+const u16 gMetatiles_GoldenrodCity_TrainStation_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_station_hns/metatiles.bin");
+
+const u16 gMetatiles_GoldenrodUndergroundRocket_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_rocket_hns/metatiles.bin");
+
+const u16 gMetatiles_GoldenrodUndergroundTunnel_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_tunnel_hns/metatiles.bin");
+
+const u16 gMetatiles_Goldenrod_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_hns/metatiles.bin");
+
+const u16 gMetatiles_Goldenrod_Underground_Storage_Hns[] = INCBIN_U16("data/tilesets/secondary/goldenrod_underground_storage_hns/metatiles.bin");
+
+const u16 gMetatiles_HallOfFame_Hns[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_hns/metatiles.bin");
+
+const u16 gMetatiles_House_2_Hns[] = INCBIN_U16("data/tilesets/secondary/house_2_hns/metatiles.bin");
+
+const u16 gMetatiles_House_Lab_Hns[] = INCBIN_U16("data/tilesets/secondary/house_lab_hns/metatiles.bin");
+
+const u16 gMetatiles_IlexForest_Hns[] = INCBIN_U16("data/tilesets/secondary/ilex_forest_hns/metatiles.bin");
+
+const u16 gMetatiles_IndigoPlateau_Hns[] = INCBIN_U16("data/tilesets/secondary/indigo_plateau_hns/metatiles.bin");
+
+const u16 gMetatiles_JohtoBikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_bike_shop_hns/metatiles.bin");
+
+const u16 gMetatiles_JohtoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_mart_hns/metatiles.bin");
+
+const u16 gMetatiles_Johto_Building_Hns[] = INCBIN_U16("data/tilesets/primary/johto_building_hns/metatiles.bin");
+
+const u16 gMetatiles_Johto_General_Hns[] = INCBIN_U16("data/tilesets/primary/johto_general_hns/metatiles.bin");
+
+const u16 gMetatiles_Johto_NorthEast_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_east_hns/metatiles.bin");
+
+const u16 gMetatiles_Johto_NorthWest_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_west_hns/metatiles.bin");
+
+const u16 gMetatiles_Johto_South_Hns[] = INCBIN_U16("data/tilesets/primary/johto_south_hns/metatiles.bin");
+
+const u16 gMetatiles_Kanto_General_Hns[] = INCBIN_U16("data/tilesets/primary/kanto_general_hns/metatiles.bin");
+
+const u16 gMetatiles_Kanto_PokemonCenter_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_pokemon_center_hns/metatiles.bin");
+
+const u16 gMetatiles_KurtsHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/kurts_house_hns/metatiles.bin");
+
+const u16 gMetatiles_Lighthouse_Hns[] = INCBIN_U16("data/tilesets/secondary/lighthouse_hns/metatiles.bin");
+
+const u16 gMetatiles_MahoganyTown_Hns[] = INCBIN_U16("data/tilesets/secondary/mahogany_town_hns/metatiles.bin");
+
+const u16 gMetatiles_MtEmber_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_ember_hns/metatiles.bin");
+
+const u16 gMetatiles_MtSilverSnow_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_snow_hns/metatiles.bin");
+
+const u16 gMetatiles_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatiles.bin");
+
+const u16 gMetatiles_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatiles.bin");
+
+const u16 gMetatiles_MtSilver_NewSinjoh_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_newsinjoh_hns/metatiles.bin");
+
+const u16 gMetatiles_NationalPark_Hns[] = INCBIN_U16("data/tilesets/secondary/national_park_hns/metatiles.bin");
+
+const u16 gMetatiles_NewBarkTown_Hns[] = INCBIN_U16("data/tilesets/secondary/new_bark_town_hns/metatiles.bin");
+
+const u16 gMetatiles_OlivineCity_Hns[] = INCBIN_U16("data/tilesets/secondary/olivine_city_hns/metatiles.bin");
+
+const u16 gMetatiles_PlayersHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/players_house_hns/metatiles.bin");
+
+const u16 gMetatiles_PokemonCenter_White_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_white_hns/metatiles.bin");
+
+const u16 gMetatiles_PokemonDayCare_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_day_care_hns/metatiles.bin");
+
+const u16 gMetatiles_PokemonLeague_Hns[] = INCBIN_U16("data/tilesets/secondary/pokemon_league_hns/metatiles.bin");
+
+const u16 gMetatiles_PortIndoor_Hns[] = INCBIN_U16("data/tilesets/secondary/port_indoor_hns/metatiles.bin");
+
+const u16 gMetatiles_PowerPlant_GeneratorRoom_Hns[] = INCBIN_U16("data/tilesets/secondary/power_plant_generator_room_hns/metatiles.bin");
+
+const u16 gMetatiles_Route32_Hns[] = INCBIN_U16("data/tilesets/secondary/route_32_hns/metatiles.bin");
+
+const u16 gMetatiles_Route38_Farmland_Hns[] = INCBIN_U16("data/tilesets/secondary/route38_farmland_hns/metatiles.bin");
+
+const u16 gMetatiles_Route40_Hns[] = INCBIN_U16("data/tilesets/secondary/route_40_hns/metatiles.bin");
+
+const u16 gMetatiles_RuinsOfAlphWriting_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_writing_hns/metatiles.bin");
+
+const u16 gMetatiles_RuinsOfAlph_B1F_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_b1_f_hns/metatiles.bin");
+
+const u16 gMetatiles_RuinsOfAlph_Outside_Hns[] = INCBIN_U16("data/tilesets/secondary/ruins_of_alph_outside_hns/metatiles.bin");
+
+const u16 gMetatiles_SafariZoneJohto_Hns[] = INCBIN_U16("data/tilesets/secondary/safari_zone_johto_hns/metatiles.bin");
+
+const u16 gMetatiles_SafariZone_Entrance_Hns[] = INCBIN_U16("data/tilesets/secondary/safari_zone_entrance_hns/metatiles.bin");
+
+const u16 gMetatiles_SaffronCity_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_hns/metatiles.bin");
+
+const u16 gMetatiles_ShopRooftop_Hns[] = INCBIN_U16("data/tilesets/secondary/shop_rooftop_hns/metatiles.bin");
+
+const u16 gMetatiles_SootopolisGym_Hns[] = INCBIN_U16("data/tilesets/secondary/sootopolis_gym_hns/metatiles.bin");
+
+const u16 gMetatiles_SoulHouse_Hns[] = INCBIN_U16("data/tilesets/secondary/soul_house_hns/metatiles.bin");
+
+const u16 gMetatiles_TrainerHill_Courtyard_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_hill_courtyard_hns/metatiles.bin");
+
+const u16 gMetatiles_TrainerSchool_Hns[] = INCBIN_U16("data/tilesets/secondary/trainer_school_hns/metatiles.bin");
+
+const u16 gMetatiles_VioletCity_Hns[] = INCBIN_U16("data/tilesets/secondary/violet_city_hns/metatiles.bin");
+
+const u16 gMetatiles_ViridianCity_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_city_hns/metatiles.bin");
+
+const u16 gMetatiles_WhirlIslands_Hns[] = INCBIN_U16("data/tilesets/secondary/whirl_islands_hns/metatiles.bin");
+
+const u16 gMetatiles_ssaqua_Hns[] = INCBIN_U16("data/tilesets/secondary/ssaqua_hns/metatiles.bin");
+
+// Exact upstream dependencies of the campaign Artisan Cave and shared link room.
+const u16 gMetatiles_Cave[] = INCBIN_U16("data/tilesets/secondary/cave/metatiles.bin");
+
+const u16 gMetatileAttributes_Cave[] = INCBIN_U16("data/tilesets/secondary/cave/metatile_attributes.bin");
+
+const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
+
+const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+// Exact pinned providers for the selected native Kanto interior visuals.
+const u16 gMetatiles_Kanto_Building_Hns[] = INCBIN_U16("data/tilesets/primary/kanto_building_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_Kanto_Building_Hns[] = INCBIN_U16("data/tilesets/primary/kanto_building_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_KantoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_mart_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_KantoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_mart_hns/metatile_attributes.bin");
+
+// Redesigned native Kanto: exact pinned Pallet/Pewter provider definitions.
+const u16 gMetatiles_PalletTown_Hns[] = INCBIN_U16("data/tilesets/secondary/pallet_town_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_PalletTown_Hns[] = INCBIN_U16("data/tilesets/secondary/pallet_town_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PewterCity_Hns[] = INCBIN_U16("data/tilesets/secondary/pewter_city_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_PewterCity_Hns[] = INCBIN_U16("data/tilesets/secondary/pewter_city_hns/metatile_attributes.bin");
+
+// Exact pinned providers for redesigned native Kanto rooms; original peer branches retained.
+const u16 gMetatiles_CeladonApartments_Hns[] = INCBIN_U16("data/tilesets/secondary/celadon_apartments_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_CeladonApartments_Hns[] = INCBIN_U16("data/tilesets/secondary/celadon_apartments_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CeruleanCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_gym_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_CeruleanCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_FuchsiaCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/fuchsia_city_gym_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_FuchsiaCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/fuchsia_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_SaffronCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_gym_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_SaffronCity_Gym_Hns[] = INCBIN_U16("data/tilesets/secondary/saffron_city_gym_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_ViridianForest_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_forest_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_ViridianForest_Hns[] = INCBIN_U16("data/tilesets/secondary/viridian_forest_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Cave_MtMoon_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_mt_moon_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_Cave_MtMoon_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_mt_moon_hns/metatile_attributes.bin");
+
+// Exact original HnS words mapped onto native Mt. Moon IDs; native u32 attributes stay authoritative.
+const u16 gMetatiles_MtMoonNativeArt_FireRed[] =
+{
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 640
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 641
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 642
+    0x8281, 0x8282, 0x8291, 0x8292, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 643
+    0xA28E, 0xA28F, 0xA29E, 0xA29F, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 644
+    0x832A, 0x832B, 0x833A, 0x833B, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 645
+    0x9286, 0x9287, 0x9296, 0x9297, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 646
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 647
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 648
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 649
+    0x8281, 0x8282, 0x8291, 0x8292, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 650
+    0x82CC, 0xA304, 0x82DC, 0xA314, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 651
+    0xA305, 0xA306, 0xA315, 0xA316, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 652
+    0xA307, 0x82CD, 0xA317, 0x82DD, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 653
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 654
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 655
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 656
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C2, 0x82C3, 0x82D2, 0x82D3, // native MID 657
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C4, 0x82C5, 0x82D4, 0x82D5, // native MID 658
+    0x82CC, 0xA324, 0x82DC, 0xA334, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 659
+    0xA325, 0xA326, 0xA335, 0xA336, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 660
+    0xA327, 0x82CD, 0xA337, 0x82DD, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 661
+    0x8281, 0x8282, 0x8291, 0x8292, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 662
+    0x8281, 0x8282, 0x8291, 0x8292, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 663
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E0, 0x82E1, 0x82F0, 0x82F1, // native MID 664
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 665
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E4, 0x82E5, 0x82F4, 0x82F5, // native MID 666
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B8, 0x82B9, 0x82D2, 0x82D3, // native MID 667
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B8, 0x82B9, 0x82D2, 0x82D3, // native MID 668
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B7, 0x82B9, 0x82C7, 0x82D3, // native MID 669
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B8, 0x82BA, 0x82D2, 0x82CA, // native MID 670
+    0x8281, 0x8282, 0x8291, 0x8292, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 671
+    0x82A6, 0x82A7, 0x82B6, 0x82B1, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 672
+    0x82A8, 0x82A9, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 673
+    0x82AA, 0x82AB, 0x82B4, 0x82BB, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 674
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82D7, 0x82C3, 0x82E7, 0x82E8, // native MID 675
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 676
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82D7, 0x82C3, 0x82E7, 0x82E8, // native MID 677
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C2, 0x82DA, 0x82E9, 0x82EA, // native MID 678
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E4, 0x82E5, 0x82F4, 0x82F5, // native MID 679
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82D7, 0x0000, 0x82C7, 0x0000, // native MID 680
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x82DA, 0x0000, 0x82CA, // native MID 681
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B7, 0x82B9, 0x82C7, 0x82D3, // native MID 682
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B8, 0x82BA, 0x82D2, 0x82CA, // native MID 683
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 684
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 685
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 686
+    0x832A, 0x832B, 0x833A, 0x833B, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 687
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82D7, 0x0000, 0x82E7, 0x82E8, // native MID 688
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x82DA, 0x82E9, 0x82EA, // native MID 689
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82D7, 0x82C3, 0x82E7, 0x82E8, // native MID 690
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C2, 0x82DA, 0x82E9, 0x82EA, // native MID 691
+    0x8281, 0x8282, 0x8291, 0x8292, 0x30FE, 0x34FE, 0x0000, 0x0000, // native MID 692
+    0x8364, 0x8365, 0x8374, 0x8375, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 693
+    0x8302, 0x8301, 0x8312, 0x8311, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 694
+    0x8302, 0x8301, 0x8291, 0x8292, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 695
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x10CF, // native MID 696
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x10DF, 0x0000, // native MID 697
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x0000, 0x10CF, // native MID 698
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x10DF, 0x0000, // native MID 699
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x82D8, 0x82E9, // native MID 700
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x82E8, 0x82D9, // native MID 701
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x82D8, 0x82E9, // native MID 702
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x82E8, 0x82D9, // native MID 703
+    0x8281, 0x8282, 0x8291, 0x8292, 0x2340, 0x2341, 0x2350, 0x2351, // native MID 704
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x82E8, 0x82E9, // native MID 705
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x82E8, 0x82E9, // native MID 706
+    0x82E6, 0x82E1, 0x82F6, 0x82F7, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 707
+    0x82E2, 0x82E3, 0x82F8, 0x82F9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 708
+    0x82C6, 0x82C1, 0x82D6, 0x82D1, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 709
+    0x82C6, 0x82C1, 0x82D6, 0x82D1, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 710
+    0x82C6, 0x82C1, 0x82D6, 0x82D1, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 711
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 712
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 713
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 714
+    0x61A0, 0x61A1, 0x41A2, 0x41A3, 0x108E, 0x108D, 0x0000, 0x0000, // native MID 715
+    0x8323, 0x8282, 0x8313, 0x8292, 0x0000, 0x82C3, 0x0000, 0x82D3, // native MID 716
+    0x8281, 0x8282, 0x8291, 0x8292, 0x116C, 0x116D, 0x117C, 0x117D, // native MID 717
+    0x82CC, 0x82CD, 0x82DC, 0x82DD, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 718
+    0x831C, 0x831D, 0x832C, 0x832D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 719
+    0x8300, 0x8301, 0x8310, 0x8311, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 720
+    0x8302, 0x8301, 0x8312, 0x8311, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 721
+    0x8302, 0x8303, 0x8312, 0x8313, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 722
+    0x8346, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 723
+    0x8281, 0x8347, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 724
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 725
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 726
+    0x833C, 0x833D, 0x832C, 0x832D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 727
+    0x8320, 0x8321, 0x8310, 0x8311, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 728
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 729
+    0x8322, 0x8323, 0x8312, 0x8313, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 730
+    0x8281, 0x8282, 0x8356, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 731
+    0x8281, 0x8282, 0x8291, 0x8357, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 732
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 733
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 734
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B8, 0x82B9, 0x82D2, 0x82D3, // native MID 735
+    0x8320, 0x8321, 0x8330, 0x8331, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 736
+    0x8322, 0x8321, 0x8332, 0x8331, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 737
+    0x8322, 0x8323, 0x8332, 0x8333, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 738
+    0x8344, 0x8343, 0x8354, 0x8353, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 739
+    0x8342, 0x8343, 0x8352, 0x8353, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 740
+    0x8342, 0x8345, 0x8352, 0x8355, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 741
+    0x82D7, 0x82C3, 0x82C7, 0x82D3, 0x82D7, 0x82C3, 0x82C7, 0x82D3, // native MID 742
+    0x82C2, 0x82DA, 0x82D2, 0x82CA, 0x82C2, 0x82DA, 0x82D2, 0x82CA, // native MID 743
+    0x82C2, 0x82C3, 0x82D2, 0x82E8, 0x0000, 0x0000, 0x0000, 0x82BA, // native MID 744
+    0x82C2, 0x82C3, 0x82E9, 0x82D3, 0x0000, 0x0000, 0x82B7, 0x0000, // native MID 745
+    0x8342, 0x8343, 0x8352, 0x8353, 0x82B7, 0x82B9, 0x82C7, 0x82D3, // native MID 746
+    0x8342, 0x8343, 0x8352, 0x8353, 0x82B8, 0x82BA, 0x82D2, 0x82CA, // native MID 747
+    0x8342, 0x8343, 0x8352, 0x8353, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 748
+    0x8342, 0x8343, 0x8352, 0x8353, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 749
+    0x82E2, 0x82E3, 0x9B7F, 0x82F3, 0x82E2, 0x937C, 0x82F2, 0x936E, // native MID 750
+    0x82E2, 0x82E3, 0x82F2, 0x9B7F, 0x977C, 0x82E3, 0x936F, 0x82F3, // native MID 751
+    0x82C2, 0x82A3, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 752
+    0x82A2, 0x82C3, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 753
+    0xC290, 0xC290, 0xC290, 0xC290, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 754
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 755
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 756
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 757
+    0x8281, 0x8282, 0x8291, 0x8292, 0x937E, 0x937F, 0x0000, 0x0000, // native MID 758
+    0x8281, 0x8282, 0x8291, 0x8292, 0x977F, 0x977E, 0x0000, 0x0000, // native MID 759
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 760
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 761
+    0x8302, 0x8301, 0x8312, 0x8311, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 762
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 763
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 764
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 765
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 766
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 767
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 768
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 769
+    0xB34C, 0xB34F, 0xBB48, 0xBB4B, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 770
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 771
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 772
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 773
+    0xB34A, 0xB34B, 0xB35E, 0xB35F, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 774
+    0x8302, 0x8301, 0x8312, 0x8311, 0x82B7, 0x82BA, 0x82C7, 0x82CA, // native MID 775
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 776
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8366, 0x8367, 0x8376, 0x8377, // native MID 777
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8368, 0x8369, 0x8378, 0x8379, // native MID 778
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 779
+    0x82E2, 0x82E3, 0x82F2, 0x9B7F, 0x977C, 0x82E3, 0x936F, 0x82F3, // native MID 780
+    0x82E2, 0x82E3, 0x82F8, 0x82F9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 781
+    0x8320, 0x8321, 0x8310, 0x8311, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 782
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82D7, 0x82DA, 0x82E7, 0x82EA, // native MID 783
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 784
+    0x82E2, 0x82E3, 0x82F2, 0x9B7F, 0x977C, 0x82E3, 0x936F, 0x82F3, // native MID 785
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 786
+    0x82E2, 0x82E3, 0x82F8, 0x82F9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 787
+    0x82E2, 0x82E3, 0x82F2, 0x9B7F, 0x977C, 0x82E3, 0x936F, 0x82F3, // native MID 788
+    0x82E2, 0x82E3, 0x82F8, 0x82F9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 789
+    0x8320, 0x8321, 0x8310, 0x8311, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 790
+    0x8281, 0x8282, 0x8331, 0x8332, 0x82D7, 0x82DA, 0x82E7, 0x82EA, // native MID 791
+    0x8281, 0x8347, 0x8291, 0x8292, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 792
+    0x8344, 0x8343, 0x8354, 0x8353, 0x82D7, 0x82C3, 0x82E7, 0x82E8, // native MID 793
+    0x8342, 0x8345, 0x8352, 0x8355, 0x82C2, 0x82DA, 0x82E9, 0x82EA, // native MID 794
+    0x8281, 0x8282, 0x8332, 0x8331, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 795
+    0x8281, 0x8282, 0x8332, 0x8331, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 796
+    0x8320, 0x8282, 0x8310, 0x8292, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 797
+    0x8320, 0x8321, 0x8310, 0x8311, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 798
+    0x8346, 0x8282, 0x8291, 0x8292, 0x8283, 0x8284, 0x82EE, 0x82EF, // native MID 799
+    0x8281, 0x8323, 0x8291, 0x8313, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 800
+};
+
+
+const u16 gMetatiles_Cave_Sandy_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_sandy_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_Cave_Sandy_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_sandy_hns/metatile_attributes.bin");
+
+
+const u16 gMetatiles_Cave_Green_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_green_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_Cave_Green_Hns[] = INCBIN_U16("data/tilesets/secondary/cave_green_hns/metatile_attributes.bin");
+
+
+// Original HnS words by native MID; original native u32 attributes govern all mechanics.
+const u16 gMetatiles_SeafoamNativeGeneralArt_FireRed[] =
+{
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 0
+    0x026C, 0x026D, 0x0013, 0x0013, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 1
+    0x026C, 0x026D, 0x0001, 0x027D, 0x2130, 0x2131, 0x2140, 0x2141, // native MID 2
+    0x026C, 0x026D, 0x0001, 0x027D, 0x116C, 0x116D, 0x117C, 0x117D, // native MID 3
+    0x026C, 0x026D, 0x0001, 0x027D, 0x01FC, 0x01FD, 0x01FE, 0x01FF, // native MID 4
+    0x01EE, 0x01EF, 0x01EC, 0x01ED, 0x01EE, 0x01EF, 0x01EC, 0x01ED, // native MID 5
+    0x3245, 0x027F, 0x3255, 0x3255, 0x322D, 0x362E, 0x323D, 0x363E, // native MID 6
+    0x3245, 0x027F, 0x3255, 0x027F, 0x362D, 0x3245, 0x363D, 0x3255, // native MID 7
+    0x01D4, 0x01D5, 0x0001, 0x024D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 8
+    0x0013, 0x027D, 0x0013, 0x0013, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 9
+    0x01D6, 0x01D7, 0x01D8, 0x01D9, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 10
+    0x0044, 0x0045, 0x0054, 0x0055, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 11
+    0x0044, 0x0045, 0x0054, 0x0055, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 12
+    0x0044, 0x0045, 0x0054, 0x0055, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 13
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 14
+    0x026C, 0x026D, 0x026D, 0x027D, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 15
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 16
+    0x026C, 0x026D, 0x0013, 0x0013, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 17
+    0x0046, 0x0047, 0x0056, 0x0057, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 18
+    0x0447, 0x0446, 0x0457, 0x0456, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 19
+    0x01D0, 0x0049, 0x05D1, 0x01EA, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 20
+    0x0449, 0x05D0, 0x05EA, 0x01D1, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 21
+    0x0046, 0x0047, 0x0056, 0x0057, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 22
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x20C2, 0x24C2, // native MID 23
+    0x10A2, 0x10A3, 0x10B2, 0x10B3, 0x3000, 0x0007, 0x0016, 0x0017, // native MID 24
+    0x10A2, 0x10A3, 0x10B2, 0x1C95, 0x0407, 0x3000, 0x0417, 0x0416, // native MID 25
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0026, 0x0027, 0x0036, 0x0037, // native MID 26
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0427, 0x0426, 0x0437, 0x0436, // native MID 27
+    0x0013, 0x018A, 0x0001, 0x019A, 0x05D3, 0x0027, 0x01E0, 0x0037, // native MID 28
+    0x058A, 0x0413, 0x059A, 0x0401, 0x0427, 0x01D3, 0x0437, 0x05E0, // native MID 29
+    0x0013, 0x018A, 0x0001, 0x0039, 0x0028, 0x0027, 0x0038, 0x0037, // native MID 30
+    0x0001, 0x026D, 0x0439, 0x0001, 0x0427, 0x0428, 0x0437, 0x0438, // native MID 31
+    0x1154, 0x1154, 0x1164, 0x1164, 0x3000, 0x0009, 0x0016, 0x0017, // native MID 32
+    0x1154, 0x1154, 0x1164, 0x1164, 0x0409, 0x3000, 0x0417, 0x0416, // native MID 33
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0046, 0x0047, 0x0056, 0x0057, // native MID 34
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0447, 0x0446, 0x0457, 0x0456, // native MID 35
+    0x01D0, 0x0049, 0x05EB, 0x01EA, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 36
+    0x0449, 0x05D0, 0x05EA, 0x01EB, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 37
+    0x01D0, 0x0047, 0x0056, 0x0057, 0x0407, 0x3000, 0x0417, 0x0416, // native MID 38
+    0x0447, 0x05D0, 0x0457, 0x0456, 0x3000, 0x0007, 0x0016, 0x0017, // native MID 39
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0427, 0x0426, 0x0437, 0x0436, // native MID 40
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0026, 0x0027, 0x0036, 0x0037, // native MID 41
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0406, 0x0406, 0x305A, 0x345A, // native MID 42
+    0x10FF, 0x10FF, 0x0001, 0x027D, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 43
+    0x026C, 0x026D, 0x027C, 0x027D, 0x3128, 0x3129, 0x3138, 0x3139, // native MID 44
+    0x027F, 0x027F, 0x027F, 0x027F, 0x313B, 0x313B, 0x313A, 0x313A, // native MID 45
+    0x026C, 0x026D, 0x0001, 0x027D, 0x01E4, 0x01E5, 0x01E2, 0x01E3, // native MID 46
+    0x026C, 0x026D, 0x027C, 0x027D, 0x312A, 0x312B, 0x314A, 0x314B, // native MID 47
+    0x10FF, 0x10FF, 0x0001, 0x027D, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 48
+    0x10FF, 0x10FF, 0x0001, 0x027D, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 49
+    0x026C, 0x026D, 0x0001, 0x027D, 0x305B, 0x345B, 0x305C, 0x345C, // native MID 50
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 51
+    0x027F, 0x027F, 0x027F, 0x027F, 0x3148, 0x3149, 0x3158, 0x3159, // native MID 52
+    0x027F, 0x027F, 0x027F, 0x027F, 0x313A, 0x313A, 0x317A, 0x317A, // native MID 53
+    0x027F, 0x027F, 0x027F, 0x027F, 0x313A, 0x313A, 0x316A, 0x316A, // native MID 54
+    0x027F, 0x027F, 0x027F, 0x027F, 0x314A, 0x314B, 0x315A, 0x315B, // native MID 55
+    0x0447, 0x0446, 0x0457, 0x0456, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 56
+    0x5820, 0x5821, 0x5821, 0x5820, 0x116C, 0x116D, 0x117C, 0x117D, // native MID 57
+    0x026C, 0x026D, 0x0001, 0x027D, 0x305C, 0x345C, 0x305E, 0x318F, // native MID 58
+    0x6157, 0x6157, 0x6157, 0x6157, 0x5269, 0x5269, 0x0400, 0x0400, // native MID 59
+    0x026C, 0x026D, 0x0001, 0x027D, 0x3244, 0x2228, 0x3254, 0x2238, // native MID 60
+    0x027F, 0x027F, 0x027F, 0x027F, 0x20C8, 0x20C9, 0x20D8, 0x20D9, // native MID 61
+    0x3245, 0x3245, 0x3255, 0x3255, 0x3245, 0x3245, 0x3255, 0x3255, // native MID 62
+    0x027F, 0x027F, 0x027F, 0x027F, 0x2228, 0x3246, 0x2238, 0x3256, // native MID 63
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 64
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x20C0, 0x20C1, // native MID 65
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x20C2, 0x20C3, // native MID 66
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x24C3, 0x24C2, // native MID 67
+    0x0001, 0x0001, 0x0001, 0x0001, 0x50C5, 0x50C6, 0x50D5, 0x50D6, // native MID 68
+    0x027F, 0x027F, 0x027F, 0x027F, 0x50C6, 0x50C6, 0x50D6, 0x50D6, // native MID 69
+    0x0001, 0x0001, 0x0001, 0x0001, 0x50C6, 0x50C7, 0x50D6, 0x50D7, // native MID 70
+    0x50E6, 0x50E6, 0x310F, 0x310F, 0x50E6, 0x50E6, 0x310F, 0x310F, // native MID 71
+    0x41A0, 0x61A1, 0x61A2, 0x61A3, 0x61AE, 0x0000, 0x0000, 0x0C00, // native MID 72
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x0800, 0x61AF, 0x0C00, 0x0C00, // native MID 73
+    0x61A0, 0x41A1, 0x61A2, 0x61A3, 0x0800, 0x61AF, 0x0C00, 0x0C00, // native MID 74
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x24C1, 0x24C0, // native MID 75
+    0x50D5, 0x50D6, 0x50D5, 0x50D6, 0x50D5, 0x50D6, 0x50D5, 0x50D6, // native MID 76
+    0x50D6, 0x50D6, 0x50D6, 0x50D6, 0x50D6, 0x50D6, 0x50D6, 0x50D6, // native MID 77
+    0x50D6, 0x50D7, 0x50D6, 0x50D7, 0x50D6, 0x50D7, 0x50D6, 0x50D7, // native MID 78
+    0x5106, 0x5106, 0x5106, 0x5106, 0x311F, 0x311F, 0x0000, 0x0000, // native MID 79
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 80
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 81
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 82
+    0x026C, 0x026D, 0x0013, 0x027D, 0x20D0, 0x20D1, 0x20E0, 0x20D1, // native MID 83
+    0x50E5, 0x50E6, 0x20F5, 0x50F6, 0x50E5, 0x50E6, 0x20F5, 0x50F6, // native MID 84
+    0x50E6, 0x50E6, 0x50F6, 0x50F6, 0x50E6, 0x50E6, 0x0000, 0x0000, // native MID 85
+    0x50E6, 0x50E7, 0x50F6, 0x20F7, 0x50E6, 0x50E7, 0x50F6, 0x20F7, // native MID 86
+    0x5106, 0x5106, 0x5116, 0x5116, 0x311F, 0x311F, 0x0000, 0x0000, // native MID 87
+    0x61A0, 0x61A1, 0x41A2, 0x61A3, 0x0000, 0x0000, 0x61B0, 0x0000, // native MID 88
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 89
+    0x61A0, 0x61A1, 0x61A2, 0x41A3, 0x0000, 0x0C00, 0x0000, 0x61B1, // native MID 90
+    0x026C, 0x026D, 0x0013, 0x027D, 0x20D2, 0x20D2, 0x20D2, 0x20D2, // native MID 91
+    0x2105, 0x5106, 0x2105, 0x5106, 0x2105, 0x5106, 0x2105, 0x5106, // native MID 92
+    0x5106, 0x5106, 0x5106, 0x5106, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 93
+    0x5106, 0x2107, 0x5106, 0x2107, 0x5106, 0x2107, 0x5106, 0x2107, // native MID 94
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 95
+    0x026C, 0x026D, 0x0013, 0x027D, 0x24D2, 0x24D2, 0x24D2, 0x24D2, // native MID 96
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 97
+    0x3124, 0x3524, 0x3125, 0x3525, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 98
+    0x026C, 0x026D, 0x0013, 0x027D, 0x20D2, 0x24D2, 0x20D2, 0x24D2, // native MID 99
+    0x2105, 0x5106, 0x2115, 0x5116, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 100
+    0x5106, 0x5106, 0x5116, 0x5116, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 101
+    0x5106, 0x2107, 0x5116, 0x2117, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 102
+    0x50E6, 0x50E6, 0x50F6, 0x50F6, 0x50E6, 0x50E6, 0x50E9, 0x50E9, // native MID 103
+    0x018A, 0x018B, 0x0001, 0x019B, 0x1060, 0x1061, 0x1070, 0x1071, // native MID 104
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1062, 0x1063, 0x1072, 0x1073, // native MID 105
+    0x026C, 0x026D, 0x027C, 0x027D, 0x1064, 0x1065, 0x1074, 0x1075, // native MID 106
+    0x1082, 0x1083, 0x1092, 0x1093, 0x1060, 0x1061, 0x1070, 0x1071, // native MID 107
+    0x1068, 0x1069, 0x0013, 0x0013, 0x1062, 0x1063, 0x1072, 0x1073, // native MID 108
+    0x1082, 0x1083, 0x1092, 0x1093, 0x1064, 0x1065, 0x1074, 0x1075, // native MID 109
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x0000, 0x0000, 0x14DF, // native MID 110
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x0000, 0x10DF, 0x0000, // native MID 111
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1080, 0x1081, 0x1090, 0x1091, // native MID 112
+    0x0013, 0x0013, 0x0013, 0x0013, 0x1082, 0x1083, 0x1092, 0x1093, // native MID 113
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1084, 0x1085, 0x1094, 0x1095, // native MID 114
+    0x1082, 0x1081, 0x1092, 0x1091, 0x1080, 0x0000, 0x1090, 0x0000, // native MID 115
+    0x026C, 0x026D, 0x0013, 0x027D, 0x24D2, 0x24D0, 0x24D2, 0x24E0, // native MID 116
+    0x1084, 0x1083, 0x1094, 0x1093, 0x0000, 0x1085, 0x0000, 0x1095, // native MID 117
+    0x513D, 0x514D, 0x514D, 0x513D, 0x0000, 0x0000, 0x0000, 0x14DF, // native MID 118
+    0x513D, 0x514D, 0x514D, 0x513D, 0x0000, 0x0000, 0x10DF, 0x0000, // native MID 119
+    0x026C, 0x026D, 0x0001, 0x027D, 0x10A0, 0x10A1, 0x10B0, 0x10B1, // native MID 120
+    0x0013, 0x0013, 0x0013, 0x0013, 0x10A2, 0x10A3, 0x10B2, 0x10B3, // native MID 121
+    0x026C, 0x026D, 0x0001, 0x027D, 0x10A4, 0x10A5, 0x10B4, 0x10B5, // native MID 122
+    0x1082, 0x1083, 0x1092, 0x1093, 0x10A0, 0x10A1, 0x10B0, 0x10B1, // native MID 123
+    0x1082, 0x1083, 0x1092, 0x1093, 0x10A2, 0x10A3, 0x10B2, 0x10B3, // native MID 124
+    0x1082, 0x1083, 0x1092, 0x1093, 0x10A4, 0x10A5, 0x10B4, 0x10B5, // native MID 125
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x0000, 0x0000, 0x14DF, // native MID 126
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x0000, 0x10DF, 0x0000, // native MID 127
+    0x513D, 0x514D, 0x514D, 0x513D, 0x1060, 0x1061, 0x1070, 0x1071, // native MID 128
+    0x513D, 0x514D, 0x514D, 0x513D, 0x1062, 0x1063, 0x1072, 0x1073, // native MID 129
+    0x513D, 0x514D, 0x514D, 0x513D, 0x1064, 0x1065, 0x1074, 0x1075, // native MID 130
+    0x0013, 0x027D, 0x0013, 0x0013, 0x1077, 0x1000, 0x1087, 0x1000, // native MID 131
+    0x0199, 0x019A, 0x0013, 0x0013, 0x0000, 0x107A, 0x0000, 0x108A, // native MID 132
+    0x0013, 0x027D, 0x0013, 0x0013, 0x1087, 0x0000, 0x1087, 0x0000, // native MID 133
+    0x0199, 0x019A, 0x0013, 0x0013, 0x0000, 0x108A, 0x0000, 0x108A, // native MID 134
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x0000, 0x10A8, 0x10A9, // native MID 135
+    0x513D, 0x514D, 0x514D, 0x513D, 0x1080, 0x1081, 0x1090, 0x1091, // native MID 136
+    0x3126, 0x3127, 0x3126, 0x3127, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 137
+    0x513D, 0x514D, 0x514D, 0x513D, 0x1084, 0x1085, 0x1094, 0x1095, // native MID 138
+    0x0013, 0x027D, 0x0013, 0x0013, 0x1087, 0x0000, 0x1877, 0x0000, // native MID 139
+    0x0199, 0x019A, 0x0013, 0x0013, 0x0000, 0x108A, 0x0000, 0x187A, // native MID 140
+    0x0013, 0x027D, 0x0013, 0x0013, 0x1097, 0x0000, 0x10A7, 0x10A8, // native MID 141
+    0x0199, 0x019A, 0x0013, 0x0013, 0x0000, 0x109A, 0x10A9, 0x10AA, // native MID 142
+    0x513D, 0x514D, 0x514D, 0x513D, 0x0000, 0x0000, 0x10A8, 0x10A9, // native MID 143
+    0x513D, 0x514D, 0x514D, 0x513D, 0x10A0, 0x10A1, 0x10B0, 0x10B1, // native MID 144
+    0x3527, 0x3127, 0x3527, 0x3127, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 145
+    0x513D, 0x514D, 0x514D, 0x513D, 0x10A4, 0x10A5, 0x10B4, 0x10B5, // native MID 146
+    0x026C, 0x026D, 0x0013, 0x027D, 0x20E0, 0x20D1, 0x20F0, 0x20F1, // native MID 147
+    0x026C, 0x026D, 0x0013, 0x027D, 0x24D1, 0x24E0, 0x24F1, 0x24F0, // native MID 148
+    0x513D, 0x514D, 0x514D, 0x513D, 0x1087, 0x0000, 0x1087, 0x0000, // native MID 149
+    0x513D, 0x514D, 0x514D, 0x513D, 0x0000, 0x108A, 0x0000, 0x108A, // native MID 150
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x0000, 0x10A8, 0x10A9, // native MID 151
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1060, 0x1061, 0x1070, 0x1071, // native MID 152
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1062, 0x1063, 0x1072, 0x1073, // native MID 153
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1064, 0x1065, 0x1074, 0x1075, // native MID 154
+    0x026C, 0x026D, 0x0013, 0x027D, 0x20D2, 0x20D2, 0x20F2, 0x20F2, // native MID 155
+    0x20D2, 0x24D2, 0x20F2, 0x24F2, 0x20D2, 0x24D2, 0x20F3, 0x24F3, // native MID 156
+    0x513D, 0x514D, 0x514D, 0x513D, 0x1097, 0x0000, 0x10A7, 0x10A8, // native MID 157
+    0x513D, 0x514D, 0x514D, 0x513D, 0x0000, 0x109A, 0x10A9, 0x10AA, // native MID 158
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1078, 0x1079, 0x1088, 0x1089, // native MID 159
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1080, 0x1081, 0x1090, 0x1091, // native MID 160
+    0x026C, 0x026D, 0x0013, 0x027D, 0x24D2, 0x24D2, 0x24F2, 0x24F2, // native MID 161
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1084, 0x1085, 0x1094, 0x1095, // native MID 162
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1077, 0x0000, 0x1087, 0x0000, // native MID 163
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x107A, 0x0000, 0x108A, // native MID 164
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1087, 0x0000, 0x1087, 0x0000, // native MID 165
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x108A, 0x0000, 0x108A, // native MID 166
+    0x1082, 0x1083, 0x1092, 0x1093, 0x1078, 0x1079, 0x1088, 0x1089, // native MID 167
+    0x5020, 0x5021, 0x5021, 0x5020, 0x10A0, 0x10A1, 0x10B0, 0x10B1, // native MID 168
+    0x112E, 0x152E, 0x113E, 0x153E, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 169
+    0x5020, 0x5021, 0x5021, 0x5020, 0x10A4, 0x10A5, 0x10B4, 0x10B5, // native MID 170
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1087, 0x0000, 0x1877, 0x0000, // native MID 171
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x108A, 0x0000, 0x187A, // native MID 172
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1097, 0x0000, 0x10A7, 0x10A8, // native MID 173
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x109A, 0x10A9, 0x10AA, // native MID 174
+    0x5020, 0x5021, 0x5021, 0x5020, 0x1078, 0x1079, 0x1088, 0x1089, // native MID 175
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x0000, 0x1098, 0x10A8, // native MID 176
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x0000, 0x10A9, 0x1099, // native MID 177
+    0x106C, 0x106D, 0x107C, 0x107D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 178
+    0x106E, 0x106F, 0x107E, 0x107F, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 179
+    0x10A2, 0x10A3, 0x10B2, 0x10B3, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 180
+    0x10A2, 0x10A3, 0x10B2, 0x10B3, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 181
+    0x10A4, 0x10AB, 0x10BA, 0x10BB, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 182
+    0x513D, 0x514D, 0x514D, 0x513D, 0x1078, 0x1079, 0x1088, 0x1089, // native MID 183
+    0x513D, 0x514D, 0x514D, 0x513D, 0x0000, 0x0000, 0x1098, 0x10A8, // native MID 184
+    0x513D, 0x514D, 0x514D, 0x513D, 0x0000, 0x0000, 0x10A9, 0x1099, // native MID 185
+    0x1086, 0x1081, 0x0013, 0x0013, 0x1062, 0x1063, 0x1072, 0x1073, // native MID 186
+    0x1084, 0x108B, 0x0013, 0x0013, 0x1062, 0x1063, 0x1072, 0x1073, // native MID 187
+    0x026C, 0x026D, 0x0001, 0x027D, 0x5800, 0x5800, 0x5800, 0x5800, // native MID 188
+    0x0002, 0x0003, 0x0012, 0x0030, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 189
+    0x0003, 0x0003, 0x0031, 0x0030, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 190
+    0x0403, 0x0402, 0x0031, 0x0412, 0x0400, 0x0400, 0x0000, 0x0000, // native MID 191
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x0000, 0x1098, 0x10A8, // native MID 192
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0000, 0x0000, 0x10A9, 0x1099, // native MID 193
+    0x026C, 0x026D, 0x0013, 0x027D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 194
+    0x0410, 0x0031, 0x0031, 0x0030, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 195
+    0x0030, 0x0010, 0x0031, 0x0030, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 196
+    0x0012, 0x0031, 0x0012, 0x0030, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 197
+    0x0030, 0x0031, 0x0031, 0x0030, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 198
+    0x0030, 0x0412, 0x0031, 0x0412, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 199
+    0x5014, 0x5021, 0x5024, 0x5020, 0x0000, 0x0000, 0x10A9, 0x14A9, // native MID 200
+    0x5020, 0x5424, 0x5021, 0x5424, 0x0000, 0x0000, 0x10A9, 0x14A9, // native MID 201
+    0x026C, 0x3180, 0x0013, 0x027D, 0x2100, 0x20D4, 0x2174, 0x3181, // native MID 202
+    0x0030, 0x0031, 0x0C10, 0x0030, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 203
+    0x0030, 0x0031, 0x0031, 0x0810, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 204
+    0x0012, 0x0031, 0x0802, 0x0803, 0x0000, 0x0000, 0x0800, 0x0800, // native MID 205
+    0x0030, 0x0031, 0x0803, 0x0803, 0x0000, 0x0000, 0x0800, 0x0800, // native MID 206
+    0x0030, 0x0412, 0x0C03, 0x0C02, 0x0000, 0x0000, 0x0C00, 0x0C00, // native MID 207
+    0x0189, 0x018A, 0x0199, 0x019A, 0x595C, 0x552D, 0x513C, 0x513D, // native MID 208
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5D5D, 0x552D, 0x514D, 0x513D, // native MID 209
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5D5D, 0x5D5C, 0x514D, 0x5D4C, // native MID 210
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5004, 0x5005, 0x5014, 0x5020, // native MID 211
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5025, 0x5005, 0x5021, 0x5020, // native MID 212
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5025, 0x5404, 0x5021, 0x5424, // native MID 213
+    0x2134, 0x2134, 0x2144, 0x2144, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 214
+    0x2134, 0x2134, 0x2144, 0x2144, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 215
+    0x0189, 0x018A, 0x0199, 0x019A, 0x514C, 0x514D, 0x513C, 0x513D, // native MID 216
+    0x513D, 0x514D, 0x514D, 0x513D, 0x0000, 0x0000, 0x0C00, 0x0000, // native MID 217
+    0x0189, 0x018A, 0x0199, 0x019A, 0x513D, 0x5D3C, 0x514D, 0x5D4C, // native MID 218
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5824, 0x5021, 0x5814, 0x5020, // native MID 219
+    0x5020, 0x5021, 0x5021, 0x5020, 0x5000, 0x5000, 0x5000, 0x5000, // native MID 220
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5020, 0x5414, 0x5021, 0x5424, // native MID 221
+    0x10FF, 0x10FF, 0x0001, 0x027D, 0x102E, 0x102E, 0x103E, 0x103E, // native MID 222
+    0x10FF, 0x10FF, 0x0001, 0x027D, 0x340E, 0x340E, 0x2144, 0x2144, // native MID 223
+    0x0189, 0x018A, 0x0199, 0x019A, 0x514C, 0x514D, 0x515C, 0x515D, // native MID 224
+    0x0189, 0x018A, 0x0199, 0x019A, 0x513D, 0x514D, 0x592D, 0x515D, // native MID 225
+    0x0189, 0x018A, 0x0199, 0x019A, 0x513D, 0x5D3C, 0x592D, 0x5D2C, // native MID 226
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5024, 0x5021, 0x5804, 0x5825, // native MID 227
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5020, 0x5021, 0x5805, 0x5825, // native MID 228
+    0x0189, 0x018A, 0x0199, 0x019A, 0x5020, 0x5C14, 0x5C05, 0x5C04, // native MID 229
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1154, 0x1154, 0x1164, 0x1164, // native MID 230
+    0x026C, 0x026D, 0x0001, 0x027D, 0x2134, 0x2134, 0x2144, 0x2144, // native MID 231
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1154, 0x1154, 0x1165, 0x1164, // native MID 232
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1154, 0x1154, 0x1164, 0x1165, // native MID 233
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x102E, 0x0000, 0x103F, // native MID 234
+    0x026C, 0x026D, 0x0001, 0x027D, 0x102E, 0x0000, 0x103F, 0x0000, // native MID 235
+    0x026C, 0x026D, 0x0001, 0x027D, 0x2134, 0x2134, 0x2145, 0x2144, // native MID 236
+    0x026C, 0x026D, 0x0001, 0x027D, 0x2134, 0x340E, 0x2144, 0x201F, // native MID 237
+    0x026C, 0x0001, 0x0001, 0x0001, 0x026C, 0x300E, 0x0001, 0x301F, // native MID 238
+    0x026C, 0x026D, 0x0001, 0x027D, 0x2134, 0x0000, 0x301F, 0x0000, // native MID 239
+    0x026C, 0x026D, 0x0001, 0x027D, 0x103F, 0x0000, 0x103F, 0x0000, // native MID 240
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x103F, 0x0000, 0x103F, // native MID 241
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x103F, 0x0000, 0x103E, // native MID 242
+    0x026C, 0x026D, 0x0001, 0x027D, 0x103F, 0x0000, 0x103E, 0x0000, // native MID 243
+    0x026C, 0x026D, 0x0001, 0x027D, 0x2155, 0x026D, 0x2155, 0x027D, // native MID 244
+    0x026C, 0x026D, 0x0001, 0x027D, 0x026C, 0x2155, 0x0001, 0x2155, // native MID 245
+    0x026C, 0x026D, 0x0001, 0x027D, 0x0000, 0x200F, 0x0000, 0x201E, // native MID 246
+    0x026C, 0x026D, 0x0001, 0x027D, 0x200F, 0x026D, 0x2144, 0x027D, // native MID 247
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1165, 0x1154, 0x1164, 0x1164, // native MID 248
+    0x026C, 0x026D, 0x0001, 0x027D, 0x1154, 0x1165, 0x1164, 0x1164, // native MID 249
+    0x10FF, 0x10FF, 0x0001, 0x0001, 0x0026, 0x0027, 0x0036, 0x0037, // native MID 250
+    0x10FF, 0x10FF, 0x0001, 0x0001, 0x0427, 0x0426, 0x0437, 0x0436, // native MID 251
+    0x026C, 0x026D, 0x0001, 0x027D, 0x200F, 0x2134, 0x201E, 0x2144, // native MID 252
+    0x026C, 0x026D, 0x0001, 0x027D, 0x2134, 0x2135, 0x2144, 0x2144, // native MID 253
+    0x026C, 0x026D, 0x0001, 0x027D, 0x5422, 0x514D, 0x514D, 0x513D, // native MID 254
+    0x026C, 0x026D, 0x0001, 0x027D, 0x513D, 0x5022, 0x514D, 0x513D, // native MID 255
+    0x45A9, 0x45A8, 0x61A2, 0x61A3, 0x0000, 0x0000, 0x0000, 0x41A4, // native MID 256
+    0x45A9, 0x45A8, 0x61A2, 0x61A3, 0x0000, 0x0000, 0x41A5, 0x0000, // native MID 257
+    0x5411, 0x5021, 0x5021, 0x5020, 0x0C00, 0x0000, 0x0000, 0x0000, // native MID 258
+    0x5020, 0x5011, 0x5021, 0x5020, 0x0C00, 0x0000, 0x0000, 0x0000, // native MID 259
+    0x5020, 0x5021, 0x5C11, 0x5020, 0x0C00, 0x0000, 0x0000, 0x0000, // native MID 260
+    0x5020, 0x5021, 0x5021, 0x5811, 0x0C00, 0x0000, 0x0000, 0x0000, // native MID 261
+    0x026C, 0x026D, 0x0001, 0x027D, 0x513D, 0x514D, 0x5C22, 0x513D, // native MID 262
+    0x026C, 0x026D, 0x0001, 0x027D, 0x513D, 0x514D, 0x514D, 0x5822, // native MID 263
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x108E, 0x148E, 0x0000, 0x41A4, // native MID 264
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x108E, 0x148E, 0x41A5, 0x0000, // native MID 265
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x0006, 0x0007, 0x0016, 0x0017, // native MID 266
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x0407, 0x0406, 0x0417, 0x0416, // native MID 267
+    0x4DAC, 0x4DA9, 0x4DAB, 0x5020, 0x0C00, 0x0C00, 0x0400, 0x0400, // native MID 268
+    0x4DA8, 0x4DA8, 0x5021, 0x5020, 0x0C00, 0x0C00, 0x0400, 0x0400, // native MID 269
+    0x4DA8, 0x49AC, 0x5021, 0x41AA, 0x0C00, 0x0800, 0x0400, 0x0000, // native MID 270
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x1062, 0x1063, 0x1072, 0x1073, // native MID 271
+    0x41A0, 0x61A1, 0x61A2, 0x61A3, 0x61AE, 0x0000, 0x0000, 0x41A4, // native MID 272
+    0x61A0, 0x41A1, 0x61A2, 0x61A3, 0x0800, 0x61AF, 0x41A5, 0x0C00, // native MID 273
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x109C, 0x0000, 0x109C, 0x41A4, // native MID 274
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x0000, 0x109F, 0x41A5, 0x109F, // native MID 275
+    0x4DAA, 0x5021, 0x4DAA, 0x5020, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 276
+    0x5020, 0x5021, 0x5021, 0x5020, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 277
+    0x5020, 0x41AB, 0x5021, 0x41AB, 0x0400, 0x0000, 0x0400, 0x0000, // native MID 278
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x1060, 0x1061, 0x1070, 0x1071, // native MID 279
+    0x61A0, 0x61A1, 0x41A2, 0x61A3, 0x0000, 0x41A6, 0x61B0, 0x0000, // native MID 280
+    0x61A0, 0x61A1, 0x61A2, 0x41A3, 0x41A7, 0x0C00, 0x0000, 0x61B1, // native MID 281
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x109C, 0x41A6, 0x109C, 0x0000, // native MID 282
+    0x61A0, 0x61A1, 0x61A2, 0x61A3, 0x41A7, 0x109F, 0x0000, 0x109F, // native MID 283
+    0x4DAA, 0x5021, 0x45AC, 0x41A8, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 284
+    0x5020, 0x5021, 0x41A9, 0x41A9, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 285
+    0x5020, 0x41AB, 0x41A9, 0x41AC, 0x0400, 0x0000, 0x0400, 0x0000, // native MID 286
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x1064, 0x1065, 0x1074, 0x1075, // native MID 287
+    0x61A0, 0x61A1, 0x61A2, 0x41A3, 0x109D, 0x108D, 0x109C, 0x0000, // native MID 288
+    0x61A0, 0x61A1, 0x41A2, 0x61A3, 0x108E, 0x109E, 0x0000, 0x109F, // native MID 289
+    0x61A0, 0x61A1, 0x61A2, 0x41A3, 0x108C, 0x108D, 0x109C, 0x0000, // native MID 290
+    0x61A0, 0x61A1, 0x41A2, 0x41A3, 0x108E, 0x108D, 0x0000, 0x0000, // native MID 291
+    0x61A0, 0x61A1, 0x41A2, 0x61A3, 0x108E, 0x108F, 0x0000, 0x109F, // native MID 292
+    0x4DAD, 0x5021, 0x5021, 0x5020, 0x0000, 0x0400, 0x0400, 0x0400, // native MID 293
+    0x5020, 0x49AD, 0x5021, 0x5020, 0x0400, 0x0400, 0x0400, 0x0400, // native MID 294
+    0x61C2, 0x61C3, 0x61C4, 0x61C5, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 295
+    0x41A0, 0x61A1, 0x41A2, 0x61A3, 0x0000, 0x104E, 0x0000, 0x109F, // native MID 296
+    0x61A0, 0x41A1, 0x61A2, 0x41A3, 0x105F, 0x0000, 0x109C, 0x0000, // native MID 297
+    0x61A0, 0x41A1, 0x61A2, 0x41A3, 0x10AC, 0x0000, 0x109C, 0x0000, // native MID 298
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 299
+    0x41A0, 0x61A1, 0x41A2, 0x61A3, 0x0000, 0x10AF, 0x0000, 0x109F, // native MID 300
+    0x5020, 0x5021, 0x45AD, 0x5020, 0x0400, 0x0400, 0x0800, 0x0400, // native MID 301
+    0x5020, 0x5021, 0x5021, 0x41AD, 0x0400, 0x0400, 0x0400, 0x0C00, // native MID 302
+    0x61C6, 0x61C7, 0x61C8, 0x61C9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 303
+    0x41A0, 0x61A1, 0x41A2, 0x41A3, 0x0000, 0x10BF, 0x0000, 0x0000, // native MID 304
+    0x61A0, 0x41A1, 0x41A2, 0x41A3, 0x14BF, 0x0000, 0x0000, 0x0000, // native MID 305
+    0x10FF, 0x10FF, 0x0001, 0x027D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 306
+    0x10FF, 0x10FF, 0x0001, 0x027D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 307
+    0x10FF, 0x10FF, 0x0001, 0x027D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 308
+    0x2134, 0x026D, 0x0001, 0x027D, 0x200E, 0x200E, 0x201F, 0x201E, // native MID 309
+    0x026C, 0x2134, 0x0001, 0x027D, 0x200E, 0x200E, 0x201E, 0x201F, // native MID 310
+    0x61C6, 0x61C7, 0x61C8, 0x61C9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 311
+};
+
+// Original HnS words by native MID; original native u32 attributes govern all mechanics.
+const u16 gMetatiles_SeafoamNativeIceArt_FireRed[] =
+{
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 640
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 641
+    0x83DB, 0x83DC, 0x83EB, 0x83EC, 0x83DB, 0x83DC, 0x83EB, 0x83EC, // native MID 642
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8362, 0x8363, 0x8372, 0x8373, // native MID 643
+    0xA28E, 0xA28F, 0xA29E, 0xA29F, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 644
+    0x9288, 0x9289, 0x9298, 0x9299, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 645
+    0x9286, 0x9287, 0x9296, 0x9297, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 646
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 647
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 648
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x836C, 0x836D, 0x8310, 0x8311, // native MID 649
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 650
+    0xA2E2, 0xA304, 0xA2F2, 0xA314, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 651
+    0xA305, 0xA306, 0xA315, 0xA316, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 652
+    0xA307, 0xA2E3, 0xA317, 0xA2F3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 653
+    0x8362, 0x8363, 0x8372, 0x8373, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 654
+    0x82E2, 0x82E3, 0x82F2, 0x82F3, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 655
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 656
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C2, 0x82C3, 0x82D2, 0x82D3, // native MID 657
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C4, 0x82C5, 0x82D4, 0x82D5, // native MID 658
+    0x82CC, 0xA324, 0x82DC, 0xA334, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 659
+    0xA325, 0xA326, 0xA335, 0xA336, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 660
+    0xA327, 0xA2E3, 0xA337, 0xA2F3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 661
+    0x8281, 0x8282, 0x8291, 0x8292, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 662
+    0x8281, 0x8282, 0x8291, 0x8292, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 663
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E0, 0x82E1, 0x82F0, 0x82F1, // native MID 664
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E2, 0x82E3, 0x82F2, 0x82F3, // native MID 665
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E4, 0x82E5, 0x82F4, 0x82F5, // native MID 666
+    0x82AC, 0x82AD, 0x82BC, 0x82BD, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 667
+    0x82AE, 0x82AF, 0x82BE, 0x82BF, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 668
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8283, 0x8284, 0x82EE, 0x82EF, // native MID 669
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8283, 0x8284, 0x82EE, 0x82EF, // native MID 670
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8283, 0x8284, 0x82EE, 0x82EF, // native MID 671
+    0x82A6, 0x82A7, 0x82B6, 0x82B1, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 672
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C2, 0x82C3, 0x82D2, 0x82D3, // native MID 673
+    0x82AA, 0x82AB, 0x82B4, 0x82BB, 0x82AA, 0x82AB, 0x82B4, 0x82BB, // native MID 674
+    0x8281, 0x8282, 0x8291, 0x8292, 0x6127, 0x6127, 0x0000, 0x0000, // native MID 675
+    0x82A8, 0x82A9, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 676
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E0, 0x82E1, 0x82F0, 0x82F1, // native MID 677
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E4, 0x82E5, 0x82F4, 0x82F5, // native MID 678
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82FE, 0x82FF, 0x830E, 0x830F, // native MID 679
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C7, 0x8282, 0x82C7, 0x8292, // native MID 680
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x82DA, 0x0000, 0x82CA, // native MID 681
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 682
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 683
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 684
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 685
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 686
+    0x9288, 0x9289, 0x9298, 0x9299, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 687
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82D7, 0x0000, 0x82E7, 0x82E8, // native MID 688
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x82DA, 0x82E9, 0x82EA, // native MID 689
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E0, 0x82E1, 0x82F0, 0x82F1, // native MID 690
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E4, 0x82E5, 0x82F4, 0x82F5, // native MID 691
+    0x8281, 0x8282, 0x8291, 0x8292, 0x6127, 0x6127, 0x0000, 0x0000, // native MID 692
+    0x8364, 0x8365, 0x8374, 0x8375, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 693
+    0x8302, 0x8301, 0x8312, 0x8311, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 694
+    0x8322, 0x8321, 0x8332, 0x8331, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 695
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x10CF, // native MID 696
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x10DF, 0x0000, // native MID 697
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x0000, 0x10CF, // native MID 698
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x10DF, 0x0000, // native MID 699
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8281, 0x8282, 0x82D8, 0x82E9, // native MID 700
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8281, 0x8282, 0x82E8, 0x82D9, // native MID 701
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x82D8, 0x82E9, // native MID 702
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x82E8, 0x82D9, // native MID 703
+    0x8281, 0x8282, 0x8291, 0x8292, 0x1137, 0x1137, 0x0000, 0x0000, // native MID 704
+    0x8281, 0x8282, 0x82E8, 0x82E9, 0x8281, 0x8282, 0x82E8, 0x82E9, // native MID 705
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x82E8, 0x82E9, // native MID 706
+    0x82E6, 0x82E1, 0x82F6, 0x82F7, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 707
+    0x82E2, 0x82E3, 0x82F8, 0x82F9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 708
+    0x82E4, 0x82EB, 0x82FA, 0x82FB, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 709
+    0x82C6, 0x82C1, 0x82D6, 0x82D1, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 710
+    0x82C4, 0x82CB, 0x82D4, 0x82DB, 0x82C4, 0x82C5, 0x82D4, 0x82D5, // native MID 711
+    0x82A2, 0xA2CE, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 712
+    0xA2CF, 0xA2DE, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 713
+    0xA2DF, 0x82A3, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 714
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 715
+    0x8323, 0x8282, 0x8313, 0x8292, 0x0000, 0x82C3, 0x0000, 0x82D3, // native MID 716
+    0x026C, 0x026D, 0x0001, 0x027D, 0x2130, 0x2131, 0x2140, 0x2141, // native MID 717
+    0x82CC, 0x82CD, 0x82DC, 0x82DD, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 718
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 719
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 720
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 721
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 722
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 723
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 724
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 725
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 726
+    0x8391, 0x8392, 0x8385, 0x8386, 0x82B8, 0x82B9, 0x82B2, 0x82B3, // native MID 727
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 728
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 729
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 730
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 731
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 732
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 733
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 734
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B8, 0x82B9, 0x82D2, 0x82D3, // native MID 735
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 736
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 737
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 738
+    0x8F33, 0x8F32, 0x8310, 0x8311, 0x0C00, 0x0C00, 0x0000, 0x0000, // native MID 739
+    0x8F31, 0x8F32, 0x8312, 0x8311, 0x0C00, 0x0C00, 0x0000, 0x0000, // native MID 740
+    0x8F31, 0x8F30, 0x8312, 0x8313, 0x0C00, 0x0C00, 0x0000, 0x0000, // native MID 741
+    0x82D7, 0x82C3, 0x82C7, 0x82D3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 742
+    0x82C2, 0x82DA, 0x82D2, 0x82CA, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 743
+    0x82C2, 0x82C3, 0x82D2, 0x82E8, 0x0000, 0x0000, 0x0000, 0x82BA, // native MID 744
+    0x82C2, 0x82C3, 0x82E9, 0x82D3, 0x0000, 0x0000, 0x82B7, 0x0000, // native MID 745
+    0x8342, 0x8343, 0x8352, 0x8353, 0x82B7, 0x82B9, 0x82C7, 0x82D3, // native MID 746
+    0x8342, 0x8343, 0x8352, 0x8353, 0x82B8, 0x82BA, 0x82D2, 0x82CA, // native MID 747
+    0x8342, 0x8343, 0x8352, 0x8353, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 748
+    0x8342, 0x8343, 0x8352, 0x8353, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 749
+    0x82E2, 0x82E3, 0x82F2, 0x82F3, 0x0000, 0x937C, 0x0000, 0x937D, // native MID 750
+    0x82E2, 0x82E3, 0x82F2, 0x82F3, 0x977C, 0x0000, 0x977D, 0x0000, // native MID 751
+    0x82C2, 0x82A3, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 752
+    0x82A2, 0x82C3, 0x82B2, 0x82B3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 753
+    0xC290, 0xC290, 0xC290, 0xC290, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 754
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 755
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 756
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 757
+    0x8281, 0x8282, 0x8291, 0x8292, 0x937E, 0x937F, 0x0000, 0x0000, // native MID 758
+    0x8281, 0x8282, 0x8291, 0x8292, 0x977F, 0x977E, 0x0000, 0x0000, // native MID 759
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 760
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 761
+    0x8302, 0x8301, 0x8312, 0x8311, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 762
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 763
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 764
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 765
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 766
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 767
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 768
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 769
+    0x8281, 0x8282, 0x82F9, 0x8292, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 770
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 771
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 772
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 773
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 774
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 775
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x836C, 0x836D, 0x8310, 0x8311, // native MID 776
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x836E, 0x836D, 0x8312, 0x8311, // native MID 777
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x836E, 0x836F, 0x8312, 0x8313, // native MID 778
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 779
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 780
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 781
+    0x8393, 0x8282, 0x8387, 0x8292, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 782
+    0x41BE, 0x41BF, 0x41C0, 0x41C1, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 783
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x108E, 0x108D, 0x0000, 0x0000, // native MID 784
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x108E, 0x108D, 0x0000, 0x0000, // native MID 785
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x108E, 0x109E, 0x0000, 0x109F, // native MID 786
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x108E, 0x109E, 0x0000, 0x109F, // native MID 787
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x108E, 0x109E, 0x0000, 0x109F, // native MID 788
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x108E, 0x109E, 0x0000, 0x109F, // native MID 789
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x108E, 0x109E, 0x0000, 0x109F, // native MID 790
+    0x41BE, 0x41BF, 0x41C0, 0x41C1, 0x108E, 0x108D, 0x0000, 0x0000, // native MID 791
+    0x61C2, 0x61C3, 0x61C4, 0x61C5, 0x10AC, 0x0000, 0x109C, 0x0000, // native MID 792
+    0x61C2, 0x61C3, 0x61C4, 0x61C5, 0x10AC, 0x0000, 0x109C, 0x0000, // native MID 793
+    0x61C2, 0x61C3, 0x61C4, 0x61C5, 0x0000, 0x10AF, 0x0000, 0x109F, // native MID 794
+    0x61C6, 0x61C7, 0x61C8, 0x61C9, 0x10AC, 0x0000, 0x109C, 0x0000, // native MID 795
+    0x61C6, 0x61C7, 0x61C8, 0x61C9, 0x10AC, 0x0000, 0x109C, 0x0000, // native MID 796
+    0x41B6, 0x41B7, 0x41B8, 0x41B9, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 797
+    0x41B6, 0x41B7, 0x41B8, 0x41B9, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 798
+    0x82E2, 0x82E3, 0x82F2, 0x82F3, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 799
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 800
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 801
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 802
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 803
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 804
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 805
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 806
+    0x61CA, 0x61CB, 0x61CC, 0x61CD, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 807
+    0x61CA, 0x61CB, 0x61CC, 0x61CD, 0x0000, 0x10AF, 0x0000, 0x109F, // native MID 808
+    0x61CA, 0x61CB, 0x61CC, 0x61CD, 0x0000, 0x10AF, 0x0000, 0x109F, // native MID 809
+    0x61CA, 0x61CB, 0x61CC, 0x61CD, 0x0000, 0x10AF, 0x0000, 0x109F, // native MID 810
+    0x69CC, 0x69CD, 0x69CA, 0x69CB, 0x0000, 0x10AF, 0x0000, 0x109F, // native MID 811
+    0x838E, 0x838F, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 812
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 813
+    0x82E2, 0x82E3, 0x82F2, 0x82F3, 0x0000, 0x937C, 0x0000, 0x937D, // native MID 814
+    0x82E2, 0x82E3, 0x82F2, 0x82F3, 0x977C, 0x0000, 0x977D, 0x0000, // native MID 815
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 816
+    0x8281, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 817
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 818
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C4, 0x82C5, 0x82D4, 0x82D5, // native MID 819
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82C4, 0x82C5, 0x82D4, 0x82D5, // native MID 820
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E4, 0x82E5, 0x82F4, 0x82F5, // native MID 821
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E4, 0x82E5, 0x82F4, 0x82F5, // native MID 822
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82E4, 0x82E5, 0x82F4, 0x82F5, // native MID 823
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x10AC, 0x0000, 0x109C, 0x0000, // native MID 824
+    0x41B2, 0x41B3, 0x41B4, 0x41B5, 0x0000, 0x10AF, 0x0000, 0x109F, // native MID 825
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 826
+    0x41B6, 0x41B7, 0x41B8, 0x41B9, 0x10AC, 0x0000, 0x109C, 0x0000, // native MID 827
+    0x41B6, 0x41B7, 0x41B8, 0x41B9, 0x0000, 0x10AF, 0x0000, 0x109F, // native MID 828
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 829
+    0x82C2, 0x82C3, 0x82D2, 0x82D3, 0x82E0, 0x82E1, 0x82F0, 0x82F1, // native MID 830
+    0xB391, 0xB392, 0xB385, 0xB386, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 831
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82B7, 0x0000, 0x82C7, 0x0000, // native MID 832
+    0x8281, 0x8282, 0x8291, 0x8292, 0x82D7, 0x0000, 0x82E7, 0x0000, // native MID 833
+    0x839B, 0x839A, 0x83AB, 0x83AA, 0x839B, 0x839A, 0x83AB, 0x83AA, // native MID 834
+    0x8281, 0x8282, 0xB381, 0xB382, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 835
+    0x839D, 0x839C, 0x83AD, 0x83AC, 0x839D, 0x839C, 0x83AD, 0x83AC, // native MID 836
+    0x8281, 0x8282, 0x8291, 0x8282, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 837
+    0xB395, 0xB392, 0x3157, 0xB384, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 838
+    0x8391, 0x8392, 0x8385, 0x8386, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 839
+    0xB391, 0xB392, 0xB385, 0xB386, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 840
+    0xB391, 0xB392, 0xB385, 0xB386, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 841
+    0x8281, 0x8390, 0x8291, 0xB384, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 842
+    0xB391, 0xB392, 0xB385, 0xB386, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 843
+    0xB393, 0x8282, 0xB387, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 844
+    0x3157, 0x3157, 0x3147, 0x3157, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 845
+    0x8346, 0x8282, 0x8291, 0x8357, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 846
+    0x8391, 0x8392, 0x8385, 0x8386, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 847
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 848
+    0x8281, 0x41B7, 0x82E8, 0x82E9, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 849
+    0x8281, 0x839C, 0x83AB, 0x83AC, 0x8283, 0x0000, 0x0000, 0x0000, // native MID 850
+    0xB395, 0xB396, 0x8291, 0x8292, 0xB395, 0xB396, 0x8291, 0x8292, // native MID 851
+    0x83BD, 0x839C, 0x83AB, 0x83AC, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 852
+    0x839B, 0x839C, 0x838B, 0x838C, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 853
+    0x839B, 0x839C, 0x838B, 0x838C, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 854
+    0x839B, 0x839C, 0x838B, 0x838C, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 855
+    0x839B, 0x839C, 0x838B, 0x838C, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 856
+    0x82C6, 0x836C, 0x86D5, 0x8713, 0x8700, 0x8355, 0x8311, 0x8312, // native MID 857
+    0x8391, 0x8392, 0x8385, 0x8386, 0x82C4, 0x82C5, 0x82D4, 0x82D5, // native MID 858
+    0xB36A, 0xB36B, 0xB37A, 0xB37B, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 859
+    0x83BB, 0x83BC, 0x83AB, 0x83AC, 0x83BB, 0x83BC, 0x83AB, 0x83AC, // native MID 860
+    0xB34A, 0xB359, 0xB359, 0xB359, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 861
+    0x839B, 0x839A, 0x83AB, 0x83AA, 0x839B, 0x839A, 0x83AB, 0x83AA, // native MID 862
+    0x839D, 0x839C, 0x83AD, 0x83AC, 0x839D, 0x839C, 0x83AD, 0x83AC, // native MID 863
+    0x8281, 0x8282, 0x8291, 0xB380, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 864
+    0x8281, 0x8282, 0xB383, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 865
+    0x8283, 0x839C, 0x83AB, 0x838A, 0x8281, 0x0000, 0x0000, 0x0000, // native MID 866
+    0x839B, 0x839C, 0x838B, 0x838C, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 867
+    0xB397, 0x8282, 0x8291, 0xB380, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 868
+    0xB359, 0xB359, 0xB359, 0xB359, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 869
+    0x82A2, 0x82C1, 0x82D6, 0x82D1, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 870
+    0x82C4, 0x41A1, 0x82D4, 0x82DB, 0x82C4, 0x82C5, 0x82D4, 0x82D5, // native MID 871
+    0x8281, 0xB394, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 872
+    0xB397, 0x8282, 0x8291, 0x8292, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 873
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x836C, 0x836D, 0x8310, 0x8311, // native MID 874
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x836E, 0x836D, 0x8312, 0x8311, // native MID 875
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x836E, 0x836F, 0x8312, 0x8313, // native MID 876
+    0xB359, 0xB359, 0xB359, 0xB359, 0x82E0, 0x82E1, 0x82F0, 0x82F1, // native MID 877
+    0x8281, 0x8282, 0x8331, 0x8332, 0x82A0, 0x82A1, 0x82B0, 0x82B1, // native MID 878
+    0x8281, 0x8282, 0x8331, 0x8332, 0x82A4, 0x82A5, 0x82B4, 0x82B5, // native MID 879
+    0x8320, 0x8282, 0x8310, 0x8292, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 880
+    0x8281, 0x8323, 0x8291, 0x8313, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 881
+    0x8281, 0x8282, 0x8356, 0x8292, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 882
+    0x8281, 0x839C, 0x83AB, 0x83AC, 0x8283, 0x0000, 0x0000, 0x0000, // native MID 883
+    0x83A0, 0x83A1, 0x83B0, 0x83B1, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 884
+    0x8281, 0x8282, 0x8356, 0x8357, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 885
+    0x8322, 0x8323, 0x8356, 0x8313, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 886
+    0x8281, 0x8282, 0x8332, 0x8331, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 887
+};
+
+
+const u16 gMetatiles_VictoryRoadNativeArt_FireRed[] =
+{
+    0xA290, 0xA290, 0xA290, 0xA290, 0x8280, 0x8280, 0x8280, 0x8280, // native MID 640
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 641
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 642
+    0x8380, 0x8381, 0x8390, 0x8391, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 643
+    0xA28E, 0xA28F, 0xA29E, 0xA29F, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 644
+    0x9288, 0x9289, 0x9298, 0x9299, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 645
+    0x9286, 0x9287, 0x9296, 0x9297, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 646
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 647
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8384, 0x8385, 0x8394, 0x8395, // native MID 648
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8386, 0x8387, 0x8396, 0x8397, // native MID 649
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8388, 0x8389, 0x8398, 0x8399, // native MID 650
+    0x8342, 0x8343, 0x8352, 0x8353, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 651
+    0x83C6, 0x83C7, 0xA315, 0xA316, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 652
+    0x8342, 0x8343, 0x8352, 0x8353, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 653
+    0x8362, 0x8363, 0x8372, 0x8373, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 654
+    0x83C6, 0x83C7, 0x82DC, 0x82DD, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 655
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83A4, 0x83A5, 0x83B4, 0x83B5, // native MID 656
+    0x8281, 0x8282, 0x8291, 0x8292, 0x83A6, 0x83A7, 0x83B6, 0x83B7, // native MID 657
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83A8, 0x83A9, 0x83B8, 0x83B9, // native MID 658
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 659
+    0xA325, 0xA326, 0xA335, 0xA336, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 660
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 661
+    0x8380, 0x8381, 0x8390, 0x8391, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 662
+    0x8380, 0x8381, 0x8390, 0x8391, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 663
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83C4, 0x83C5, 0x83D4, 0x83D5, // native MID 664
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 665
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83C8, 0x83C9, 0x83D8, 0x83D9, // native MID 666
+    0x82AE, 0x82AD, 0x8314, 0x8314, 0x8388, 0x8389, 0x8398, 0x8399, // native MID 667
+    0x82AE, 0x83C7, 0x82F8, 0x83D7, 0x8384, 0x8385, 0x8394, 0x8395, // native MID 668
+    0x8380, 0x8381, 0x8390, 0x8391, 0x838A, 0x838B, 0x839A, 0x839B, // native MID 669
+    0x8380, 0x8381, 0x8390, 0x8391, 0x838C, 0x838D, 0x839C, 0x839D, // native MID 670
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8283, 0x8284, 0x82EE, 0x82EF, // native MID 671
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x8384, 0x8385, 0x8394, 0x8395, // native MID 672
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x8386, 0x8387, 0x8396, 0x8397, // native MID 673
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x8388, 0x8389, 0x8398, 0x8399, // native MID 674
+    0x83A8, 0x82CB, 0x8396, 0x8397, 0x8386, 0x8387, 0x0000, 0x0000, // native MID 675
+    0x83A4, 0x83A5, 0x83B4, 0x83B5, 0x8386, 0x8387, 0x8396, 0x8397, // native MID 676
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83AA, 0x83AB, 0x83BA, 0x83BB, // native MID 677
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83AC, 0x83AD, 0x83BC, 0x83BD, // native MID 678
+    0x8380, 0x8381, 0x8390, 0x8391, 0x82FE, 0x82FF, 0x830E, 0x830F, // native MID 679
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8087, 0x0000, 0x8087, 0x0000, // native MID 680
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x808A, 0x0000, 0x808A, // native MID 681
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8384, 0x8385, 0x8394, 0x8395, // native MID 682
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8388, 0x8389, 0x8398, 0x8399, // native MID 683
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 684
+    0x8362, 0x8363, 0x8372, 0x8373, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 685
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 686
+    0x9288, 0x9289, 0x9298, 0x9299, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 687
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8097, 0x0000, 0x80A7, 0x80A8, // native MID 688
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x809A, 0x80A9, 0x80AA, // native MID 689
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83AA, 0x83AB, 0x83BA, 0x83BB, // native MID 690
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83AC, 0x83AD, 0x83BC, 0x83BD, // native MID 691
+    0x8380, 0x8381, 0x8390, 0x8391, 0x30FE, 0x34FE, 0x0000, 0x0000, // native MID 692
+    0x8364, 0x8365, 0x8374, 0x8375, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 693
+    0x8302, 0x8301, 0x8312, 0x8311, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 694
+    0x82B8, 0x87C2, 0x8312, 0x8311, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 695
+    0x61A0, 0x41A1, 0x61A2, 0x41A3, 0x805F, 0x0000, 0x889C, 0x0000, // native MID 696
+    0x8060, 0x8061, 0x8070, 0x8071, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 697
+    0x61A0, 0x41A1, 0x61A2, 0x41A3, 0x80AC, 0x0000, 0x889C, 0x0000, // native MID 698
+    0x839A, 0x83AB, 0x83BA, 0x83BB, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 699
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x8098, 0x80A9, // native MID 700
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x80A8, 0x8099, // native MID 701
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x0000, 0x0000, 0x83DC, 0x83CD, // native MID 702
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x0000, 0x0000, 0x83CE, 0x83DD, // native MID 703
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x80A8, 0x80A9, // native MID 704
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x80A8, 0x80A9, // native MID 705
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x0000, 0x0000, 0x83CC, 0x83CD, // native MID 706
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x83C4, 0x83C5, 0x83D4, 0x83D5, // native MID 707
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 708
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x83C8, 0x83C9, 0x83D8, 0x83D9, // native MID 709
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x83A4, 0x83A5, 0x83B4, 0x83B5, // native MID 710
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x83A8, 0x83A9, 0x83B8, 0x83B9, // native MID 711
+    0x8780, 0x8781, 0x8780, 0x8791, 0x8786, 0xA2CE, 0x83B6, 0x83B7, // native MID 712
+    0xA2CF, 0xA2DE, 0x83B6, 0x83B7, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 713
+    0x8380, 0x8381, 0x8390, 0x8391, 0xA2DF, 0x8387, 0x8396, 0x8397, // native MID 714
+    0x61A0, 0x61A1, 0x41A2, 0x41A3, 0x83CC, 0x83CD, 0x0000, 0x0000, // native MID 715
+    0x8323, 0x8282, 0x8313, 0x8292, 0x0000, 0x82C3, 0x0000, 0x82D3, // native MID 716
+    0x8281, 0x8282, 0x8291, 0x8292, 0x116C, 0x116D, 0x117C, 0x117D, // native MID 717
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 718
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 719
+    0x8300, 0x8301, 0x8310, 0x8311, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 720
+    0x8302, 0x8301, 0x8312, 0x8311, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 721
+    0x8302, 0x8303, 0x8312, 0x8313, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 722
+    0x8346, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 723
+    0x8380, 0x8347, 0x8390, 0x8391, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 724
+    0x8308, 0x8309, 0x8318, 0x8319, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 725
+    0x830A, 0x830B, 0x831A, 0x831B, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 726
+    0x833C, 0x833D, 0x832C, 0x832D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 727
+    0x8320, 0x8321, 0x8310, 0x8311, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 728
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 729
+    0x8322, 0x8323, 0x8312, 0x8313, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 730
+    0x8380, 0x8381, 0x8356, 0x8391, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 731
+    0x8380, 0x8381, 0x8390, 0x8357, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 732
+    0x8328, 0x8329, 0x8338, 0x8339, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 733
+    0x832A, 0x832B, 0x833A, 0x833B, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 734
+    0x8382, 0x8383, 0x8390, 0x8391, 0x928A, 0x928B, 0x929A, 0x929B, // native MID 735
+    0x8320, 0x8321, 0x8330, 0x8331, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 736
+    0x8322, 0x8321, 0x8332, 0x8331, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 737
+    0x8322, 0x8323, 0x8332, 0x8333, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 738
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83A8, 0x83A9, 0x83B8, 0x83B9, // native MID 739
+    0x83C8, 0x83C9, 0x83D8, 0x83D9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 740
+    0x8342, 0x8345, 0x8352, 0x8355, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 741
+    0x83C6, 0x83C7, 0x83B2, 0x83B1, 0x83A4, 0x83A5, 0x83B4, 0x83B5, // native MID 742
+    0x83C6, 0x83C7, 0x83B2, 0x83B1, 0x83A8, 0x83A9, 0x83B8, 0x83B9, // native MID 743
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x836A, 0x836B, 0x837A, 0x837B, // native MID 744
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0xA2DF, 0x83C7, 0x837A, 0x83D7, // native MID 745
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x3000, 0x3000, 0x3000, 0x3000, // native MID 746
+    0x8380, 0x8381, 0x8390, 0x8391, 0x83A4, 0x83A5, 0x83B4, 0x83B5, // native MID 747
+    0x83C4, 0x83C5, 0x83D4, 0x83D5, 0x8000, 0x8000, 0x8000, 0x8000, // native MID 748
+    0x83A8, 0x8FB2, 0x83B8, 0x83B1, 0x83C8, 0x83C9, 0x83D8, 0x83D9, // native MID 749
+    0x83C6, 0x83C7, 0x977F, 0x83D7, 0x0000, 0x937C, 0x83D6, 0x937D, // native MID 750
+    0x83C6, 0x83C7, 0x83D6, 0x9F7F, 0x977C, 0x83C7, 0x977D, 0x83D7, // native MID 751
+    0x8380, 0x8381, 0x8390, 0x8391, 0x8386, 0x8387, 0x8396, 0x8397, // native MID 752
+    0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 753
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 754
+    0x8348, 0x8349, 0x8358, 0x8359, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 755
+    0x834A, 0x8349, 0x835A, 0x8359, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 756
+    0x834A, 0x834B, 0x835A, 0x835B, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 757
+    0x8380, 0x8381, 0x8390, 0x8391, 0x937E, 0x937F, 0x0000, 0x0000, // native MID 758
+    0x8380, 0x8381, 0x8390, 0x8391, 0x977F, 0x977E, 0x0000, 0x0000, // native MID 759
+    0x8360, 0x834D, 0x835A, 0x8359, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 760
+    0x834E, 0x8361, 0x835A, 0x8359, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 761
+    0x83A6, 0x83A7, 0x83B6, 0x83B7, 0x831E, 0x831F, 0x832E, 0x832F, // native MID 762
+    0x834C, 0x834D, 0x8358, 0x8359, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 763
+    0x834E, 0x834D, 0x835A, 0x8359, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 764
+    0x834E, 0x834F, 0x835A, 0x835B, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 765
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x8384, 0x8385, 0x8394, 0x8395, // native MID 766
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x8388, 0x8389, 0x8398, 0x8399, // native MID 767
+    0x834E, 0x834D, 0x8370, 0x8359, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 768
+    0x834E, 0x834D, 0x835A, 0x8371, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 769
+    0x0030, 0x0031, 0x0031, 0x0030, 0x0000, 0x0000, 0x50C5, 0x50C6, // native MID 770
+    0x834C, 0x834D, 0x835C, 0x835D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 771
+    0x834E, 0x834D, 0x835E, 0x835D, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 772
+    0x834E, 0x834F, 0x835E, 0x835F, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 773
+    0x0030, 0x0031, 0x0031, 0x0030, 0x0000, 0x0000, 0x50C6, 0x50C7, // native MID 774
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x8386, 0x8387, 0x8396, 0x8397, // native MID 775
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 776
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8366, 0x8367, 0x8376, 0x8377, // native MID 777
+    0x8281, 0x8282, 0x8291, 0x8292, 0x8368, 0x8369, 0x8378, 0x8379, // native MID 778
+    0x8380, 0x8381, 0x8390, 0x8391, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 779
+    0xB34E, 0xB34D, 0xB358, 0xB359, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 780
+    0x61C6, 0x61C7, 0x61C8, 0x61C9, 0x83A4, 0x83A5, 0x83B4, 0x83B5, // native MID 781
+    0x61C6, 0x61C7, 0x61C8, 0x61C9, 0x83A4, 0x83A5, 0x83B4, 0x83B5, // native MID 782
+    0x83C4, 0x83C5, 0x83D4, 0x83D5, 0x8000, 0x8000, 0x8000, 0x8000, // native MID 783
+    0xB34E, 0xB34D, 0xB35A, 0xB359, 0x83C4, 0x83C5, 0x83D4, 0x83D5, // native MID 784
+    0xB34E, 0xB34D, 0xB35A, 0xB359, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 785
+    0xB34E, 0xB34D, 0xB35A, 0xB359, 0x83C8, 0x83C9, 0x83D8, 0x83D9, // native MID 786
+    0xB34E, 0xB34D, 0xB35D, 0xB359, 0x82C0, 0x82C1, 0x82D0, 0x82D1, // native MID 787
+    0xB34E, 0xB34D, 0xB359, 0xB35B, 0x83C6, 0x83C7, 0x83D6, 0x83D7, // native MID 788
+    0x61C6, 0x61C7, 0x61C8, 0x61C9, 0x83A8, 0x83A9, 0x83B8, 0x83B9, // native MID 789
+    0x61C6, 0x61C7, 0x61C8, 0x61C9, 0x83A8, 0x83A9, 0x83B8, 0x83B9, // native MID 790
+    0x83C8, 0x83C9, 0x83D8, 0x83D9, 0x0000, 0x0000, 0x0000, 0x0000, // native MID 791
+    0x8380, 0x8347, 0x8390, 0x8391, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 792
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x0000, 0x0000, 0x83FC, 0x83FD, // native MID 793
+    0x8384, 0x8385, 0x8394, 0x8395, 0x3000, 0x3000, 0x3000, 0x3000, // native MID 794
+    0x8321, 0x8322, 0x8331, 0x8332, 0x928C, 0x928D, 0x929C, 0x929D, // native MID 795
+    0x41A0, 0x41A1, 0x41A2, 0x41A3, 0x0000, 0x0000, 0x8832, 0x8832, // native MID 796
+    0x8388, 0x8389, 0x8398, 0x8399, 0x3000, 0x3000, 0x3000, 0x3000, // native MID 797
+    0xB34E, 0xB34D, 0xB35A, 0xB35D, 0x83A8, 0x83A9, 0x83B8, 0x83B9, // native MID 798
+    0x0030, 0x0031, 0x0031, 0x0030, 0x50D4, 0x50D4, 0x50C6, 0x50C6, // native MID 799
+    0x8312, 0x8313, 0x8322, 0x8323, 0x8283, 0x8284, 0x8293, 0x8294, // native MID 800
+};
+
+#endif // FIRERED
+
+#ifdef FIRERED
+#include "kanto_gate_campaign_attributes.h"
+#endif
+
+#ifdef FIRERED
+#include "kanto_lab_campaign_attributes.h"
+#endif
+
+#ifdef FIRERED
+const u16 gMetatiles_Museum_Hns[] = INCBIN_U16("data/tilesets/secondary/museum_hns/metatiles.bin");
+#endif
+
+// Original HnS Vermilion provider required by the FireRed Route6 redesign.
+// Preserve the original HnS branch and every peer target.
+#if defined(FIRERED)
+const u16 gMetatiles_Vermilion_Hns[] = INCBIN_U16("data/tilesets/secondary/vermilion_hns/metatiles.bin");
+const u16 gMetatileAttributes_Vermilion_Hns[] = INCBIN_U16("data/tilesets/secondary/vermilion_hns/metatile_attributes.bin");
+#endif
+
+#ifdef FIRERED
+// Exact original eastern Kanto Lavender providers. Other targets retain their
+// original declarations; no source assets or provider semantics are changed.
+const u16 gMetatiles_LavenderTown_Hns[] = INCBIN_U16("data/tilesets/secondary/lavender_town_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_LavenderTown_Hns[] = INCBIN_U16("data/tilesets/secondary/lavender_town_hns/metatile_attributes.bin");
+#endif
+
+#ifdef FIRERED
+// Exact original western/southern Kanto providers. Other targets retain their
+// original declarations; no source assets or provider semantics are changed.
+const u16 gMetatiles_CeladonCity_Hns[] = INCBIN_U16("data/tilesets/secondary/celadon_city_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_CeladonCity_Hns[] = INCBIN_U16("data/tilesets/secondary/celadon_city_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_CyclingRoad_Hns[] = INCBIN_U16("data/tilesets/secondary/cycling_road_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_CyclingRoad_Hns[] = INCBIN_U16("data/tilesets/secondary/cycling_road_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Fuchsia_Hns[] = INCBIN_U16("data/tilesets/secondary/fuchsia_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_Fuchsia_Hns[] = INCBIN_U16("data/tilesets/secondary/fuchsia_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_Lavaridge_Hns[] = INCBIN_U16("data/tilesets/secondary/lavaridge_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_Lavaridge_Hns[] = INCBIN_U16("data/tilesets/secondary/lavaridge_hns/metatile_attributes.bin");
+#endif
+
+#ifdef FIRERED
+// Exact original Cerulean/Route5 Kanto provider. Other targets retain their
+// original declarations; no source assets or provider semantics are changed.
+const u16 gMetatiles_CeruleanCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/metatiles.bin");
+
+const u16 gMetatileAttributes_CeruleanCity_Hns[] = INCBIN_U16("data/tilesets/secondary/cerulean_city_hns/metatile_attributes.bin");
+#endif

@@ -1,0 +1,82 @@
+#ifdef FIRERED
+// Separate native portraits use the approved local Rocket package.
+// All original trainer records and generic Rocket portraits are retained.
+[DIFFICULTY_EASY][TRAINER_STORY_JESSIE] =
+{
+    .trainerName = _("JESSIE"),
+    .trainerClass = TRAINER_CLASS_TEAM_ROCKET_FRLG,
+    .trainerPic = TRAINER_PIC_FRONT_JESSIE_STORY,
+    .trainerBackPic = TRAINER_PIC_FRONT_JESSIE_STORY,
+    .gender = TRAINER_GENDER_FEMALE,
+    .encounterMusic = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+    .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+    .aiFlags = AI_FLAG_BASIC_TRAINER,
+    .party = sStoryJessieParty,
+    .partySize = ARRAY_COUNT(sStoryJessieParty),
+},
+[DIFFICULTY_EASY][TRAINER_STORY_JAMES] =
+{
+    .trainerName = _("JAMES"),
+    .trainerClass = TRAINER_CLASS_TEAM_ROCKET_FRLG,
+    .trainerPic = TRAINER_PIC_FRONT_JAMES_STORY,
+    .trainerBackPic = TRAINER_PIC_FRONT_JAMES_STORY,
+    .gender = TRAINER_GENDER_MALE,
+    .encounterMusic = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+    .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+    .aiFlags = AI_FLAG_BASIC_TRAINER,
+    .party = sStoryJamesParty,
+    .partySize = ARRAY_COUNT(sStoryJamesParty),
+},
+[DIFFICULTY_NORMAL][TRAINER_STORY_JESSIE] =
+{
+    .trainerName = _("JESSIE"),
+    .trainerClass = TRAINER_CLASS_TEAM_ROCKET_FRLG,
+    .trainerPic = TRAINER_PIC_FRONT_JESSIE_STORY,
+    .trainerBackPic = TRAINER_PIC_FRONT_JESSIE_STORY,
+    .gender = TRAINER_GENDER_FEMALE,
+    .encounterMusic = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+    .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+    .aiFlags = AI_FLAG_BASIC_TRAINER,
+    .party = sStoryJessieParty,
+    .partySize = ARRAY_COUNT(sStoryJessieParty),
+},
+[DIFFICULTY_NORMAL][TRAINER_STORY_JAMES] =
+{
+    .trainerName = _("JAMES"),
+    .trainerClass = TRAINER_CLASS_TEAM_ROCKET_FRLG,
+    .trainerPic = TRAINER_PIC_FRONT_JAMES_STORY,
+    .trainerBackPic = TRAINER_PIC_FRONT_JAMES_STORY,
+    .gender = TRAINER_GENDER_MALE,
+    .encounterMusic = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+    .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+    .aiFlags = AI_FLAG_BASIC_TRAINER,
+    .party = sStoryJamesParty,
+    .partySize = ARRAY_COUNT(sStoryJamesParty),
+},
+[DIFFICULTY_HARD][TRAINER_STORY_JESSIE] =
+{
+    .trainerName = _("JESSIE"),
+    .trainerClass = TRAINER_CLASS_TEAM_ROCKET_FRLG,
+    .trainerPic = TRAINER_PIC_FRONT_JESSIE_STORY,
+    .trainerBackPic = TRAINER_PIC_FRONT_JESSIE_STORY,
+    .gender = TRAINER_GENDER_FEMALE,
+    .encounterMusic = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+    .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+    .aiFlags = AI_FLAG_BASIC_TRAINER,
+    .party = sStoryJessieParty,
+    .partySize = ARRAY_COUNT(sStoryJessieParty),
+},
+[DIFFICULTY_HARD][TRAINER_STORY_JAMES] =
+{
+    .trainerName = _("JAMES"),
+    .trainerClass = TRAINER_CLASS_TEAM_ROCKET_FRLG,
+    .trainerPic = TRAINER_PIC_FRONT_JAMES_STORY,
+    .trainerBackPic = TRAINER_PIC_FRONT_JAMES_STORY,
+    .gender = TRAINER_GENDER_MALE,
+    .encounterMusic = TRAINER_ENCOUNTER_MUSIC_ROCKET,
+    .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+    .aiFlags = AI_FLAG_BASIC_TRAINER,
+    .party = sStoryJamesParty,
+    .partySize = ARRAY_COUNT(sStoryJamesParty),
+},
+#endif

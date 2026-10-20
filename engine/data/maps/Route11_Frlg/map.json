@@ -1,0 +1,1970 @@
+{
+  "id": "MAP_ROUTE11",
+  "name": "Route11_Frlg",
+  "layout": "LAYOUT_ROUTE11",
+  "music": "MUS_RG_ROUTE11",
+  "region_map_section": "MAPSEC_ROUTE_11",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_VERMILION_CITY",
+      "offset": -10,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE12",
+      "offset": -60,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
+      "x": 19,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Route11_EventScript_Eddie",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "x": 16,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route11_EventScript_Hugo",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
+      "x": 31,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Route11_EventScript_Dillon",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
+      "x": 28,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_LEFT_UP",
+      "movement_range_x": 8,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route11_EventScript_Dave",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "x": 38,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route11_EventScript_Jasper",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "x": 50,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route11_EventScript_Darian",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+      "x": 42,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Route11_EventScript_Braxton",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
+      "x": 50,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route11_EventScript_Yasu",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "x": 57,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route11_EventScript_Dirk",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+      "x": 32,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "Route11_EventScript_Bernie",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 42,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route11_EventScript_ItemXDefend",
+      "flag": "FLAG_HIDE_ROUTE11_X_DEFEND"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 63,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route11_EventScript_ItemGreatBall",
+      "flag": "FLAG_HIDE_ROUTE11_GREAT_BALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route11_EventScript_ItemAwakening",
+      "flag": "FLAG_HIDE_ROUTE11_AWAKENING"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 58,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE11_EAST_ENTRANCE_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 65,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE11_EAST_ENTRANCE_1F",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route11_EventScript_DiglettsCaveSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 58,
+      "y": 5,
+      "elevation": 0,
+      "item": "ITEM_ESCAPE_ROPE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE11_ESCAPE_ROPE",
+      "quantity": 1,
+      "underfoot": false
+    }
+  ],
+  "floor_number": 0,
+  "game_version": "frlg",
+  "region": "REGION_KANTO",
+  "firered_campaign": {
+    "firered_geometry": {
+      "width": 72,
+      "height": 40,
+      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "secondary_tileset": "gTileset_Vermilion_Hns",
+      "border_filepath": "data/layouts/Route11_hns/border.bin",
+      "blockdata_filepath": "data/layouts/Route11_hns/map.bin",
+      "layout_version": "hns",
+      "blockdata_overrides": [
+        {
+          "x": 14,
+          "y": 2,
+          "expected": 1052,
+          "value": 1985
+        },
+        {
+          "x": 15,
+          "y": 2,
+          "expected": 1053,
+          "value": 1984
+        },
+        {
+          "x": 16,
+          "y": 2,
+          "expected": 1044,
+          "value": 1985
+        },
+        {
+          "x": 17,
+          "y": 2,
+          "expected": 1045,
+          "value": 1984
+        },
+        {
+          "x": 18,
+          "y": 2,
+          "expected": 1052,
+          "value": 1985
+        },
+        {
+          "x": 19,
+          "y": 2,
+          "expected": 1053,
+          "value": 1984
+        },
+        {
+          "x": 20,
+          "y": 2,
+          "expected": 1044,
+          "value": 1985
+        },
+        {
+          "x": 14,
+          "y": 3,
+          "expected": 1044,
+          "value": 1982
+        },
+        {
+          "x": 15,
+          "y": 3,
+          "expected": 1045,
+          "value": 1988
+        },
+        {
+          "x": 16,
+          "y": 3,
+          "expected": 1052,
+          "value": 2046
+        },
+        {
+          "x": 17,
+          "y": 3,
+          "expected": 1053,
+          "value": 2045
+        },
+        {
+          "x": 18,
+          "y": 3,
+          "expected": 1044,
+          "value": 2045
+        },
+        {
+          "x": 19,
+          "y": 3,
+          "expected": 1045,
+          "value": 2044
+        },
+        {
+          "x": 20,
+          "y": 3,
+          "expected": 1052,
+          "value": 1989
+        },
+        {
+          "x": 14,
+          "y": 4,
+          "expected": 1052,
+          "value": 1987
+        },
+        {
+          "x": 15,
+          "y": 4,
+          "expected": 1053,
+          "value": 2000
+        },
+        {
+          "x": 16,
+          "y": 4,
+          "expected": 1044,
+          "value": 2005
+        },
+        {
+          "x": 17,
+          "y": 4,
+          "expected": 1045,
+          "value": 13267
+        },
+        {
+          "x": 18,
+          "y": 4,
+          "expected": 1052,
+          "value": 13267
+        },
+        {
+          "x": 19,
+          "y": 4,
+          "expected": 1053,
+          "value": 2006
+        },
+        {
+          "x": 20,
+          "y": 4,
+          "expected": 1044,
+          "value": 2001
+        },
+        {
+          "x": 14,
+          "y": 5,
+          "expected": 1060,
+          "value": 1990
+        },
+        {
+          "x": 15,
+          "y": 5,
+          "expected": 1061,
+          "value": 2002
+        },
+        {
+          "x": 16,
+          "y": 5,
+          "expected": 1052,
+          "value": 2005
+        },
+        {
+          "x": 17,
+          "y": 5,
+          "expected": 1053,
+          "value": 13267
+        },
+        {
+          "x": 18,
+          "y": 5,
+          "expected": 1060,
+          "value": 13267
+        },
+        {
+          "x": 19,
+          "y": 5,
+          "expected": 1061,
+          "value": 2006
+        },
+        {
+          "x": 20,
+          "y": 5,
+          "expected": 1052,
+          "value": 2004
+        },
+        {
+          "x": 14,
+          "y": 6,
+          "expected": 12297,
+          "value": 13236
+        },
+        {
+          "x": 15,
+          "y": 6,
+          "expected": 12296,
+          "value": 2002
+        },
+        {
+          "x": 16,
+          "y": 6,
+          "expected": 1058,
+          "value": 2010
+        },
+        {
+          "x": 17,
+          "y": 6,
+          "expected": 1059,
+          "value": 2011
+        },
+        {
+          "x": 18,
+          "y": 6,
+          "expected": 12297,
+          "value": 2011
+        },
+        {
+          "x": 19,
+          "y": 6,
+          "expected": 12296,
+          "value": 2012
+        },
+        {
+          "x": 20,
+          "y": 6,
+          "expected": 1058,
+          "value": 2004
+        },
+        {
+          "x": 14,
+          "y": 7,
+          "expected": 12296,
+          "value": 1973
+        },
+        {
+          "x": 15,
+          "y": 7,
+          "expected": 12296,
+          "value": 2007
+        },
+        {
+          "x": 16,
+          "y": 7,
+          "expected": 12296,
+          "value": 2008
+        },
+        {
+          "x": 17,
+          "y": 7,
+          "expected": 12296,
+          "value": 13278
+        },
+        {
+          "x": 18,
+          "y": 7,
+          "expected": 12296,
+          "value": 2008
+        },
+        {
+          "x": 19,
+          "y": 7,
+          "expected": 12296,
+          "value": 2008
+        },
+        {
+          "x": 20,
+          "y": 7,
+          "expected": 12296,
+          "value": 2009
+        },
+        {
+          "x": 14,
+          "y": 8,
+          "expected": 12288,
+          "value": 13239
+        },
+        {
+          "x": 15,
+          "y": 8,
+          "expected": 12496,
+          "value": 13238
+        },
+        {
+          "x": 16,
+          "y": 8,
+          "expected": 12497,
+          "value": 13239
+        },
+        {
+          "x": 17,
+          "y": 8,
+          "expected": 12497,
+          "value": 13238
+        },
+        {
+          "x": 18,
+          "y": 8,
+          "expected": 12497,
+          "value": 13239
+        },
+        {
+          "x": 19,
+          "y": 8,
+          "expected": 12497,
+          "value": 13238
+        },
+        {
+          "x": 20,
+          "y": 8,
+          "expected": 12497,
+          "value": 13244
+        },
+        {
+          "x": 54,
+          "y": 13,
+          "expected": 12301,
+          "value": 13240
+        },
+        {
+          "x": 55,
+          "y": 13,
+          "expected": 12297,
+          "value": 13239
+        },
+        {
+          "x": 56,
+          "y": 13,
+          "expected": 12485,
+          "value": 13244
+        },
+        {
+          "x": 57,
+          "y": 13,
+          "expected": 12486,
+          "value": 13243
+        },
+        {
+          "x": 58,
+          "y": 13,
+          "expected": 12487,
+          "value": 2013
+        },
+        {
+          "x": 59,
+          "y": 13,
+          "expected": 12296,
+          "value": 13243
+        },
+        {
+          "x": 60,
+          "y": 13,
+          "expected": 1042,
+          "value": 1983
+        },
+        {
+          "x": 61,
+          "y": 13,
+          "expected": 1045,
+          "value": 1982
+        },
+        {
+          "x": 62,
+          "y": 13,
+          "expected": 1044,
+          "value": 1981
+        },
+        {
+          "x": 63,
+          "y": 13,
+          "expected": 1045,
+          "value": 1982
+        },
+        {
+          "x": 64,
+          "y": 13,
+          "expected": 1044,
+          "value": 1981
+        },
+        {
+          "x": 65,
+          "y": 13,
+          "expected": 1045,
+          "value": 1982
+        },
+        {
+          "x": 66,
+          "y": 13,
+          "expected": 1044,
+          "value": 1981
+        },
+        {
+          "x": 67,
+          "y": 13,
+          "expected": 1045,
+          "value": 1982
+        },
+        {
+          "x": 68,
+          "y": 13,
+          "expected": 1044,
+          "value": 1981
+        },
+        {
+          "x": 69,
+          "y": 13,
+          "expected": 1045,
+          "value": 1982
+        },
+        {
+          "x": 54,
+          "y": 14,
+          "expected": 12301,
+          "value": 13240
+        },
+        {
+          "x": 55,
+          "y": 14,
+          "expected": 12296,
+          "value": 13238
+        },
+        {
+          "x": 56,
+          "y": 14,
+          "expected": 12493,
+          "value": 13239
+        },
+        {
+          "x": 57,
+          "y": 14,
+          "expected": 12494,
+          "value": 13238
+        },
+        {
+          "x": 58,
+          "y": 14,
+          "expected": 12495,
+          "value": 13239
+        },
+        {
+          "x": 59,
+          "y": 14,
+          "expected": 12296,
+          "value": 13238
+        },
+        {
+          "x": 60,
+          "y": 14,
+          "expected": 1054,
+          "value": 1986
+        },
+        {
+          "x": 61,
+          "y": 14,
+          "expected": 1053,
+          "value": 1985
+        },
+        {
+          "x": 62,
+          "y": 14,
+          "expected": 1052,
+          "value": 1984
+        },
+        {
+          "x": 63,
+          "y": 14,
+          "expected": 1053,
+          "value": 1985
+        },
+        {
+          "x": 64,
+          "y": 14,
+          "expected": 1052,
+          "value": 1984
+        },
+        {
+          "x": 65,
+          "y": 14,
+          "expected": 1053,
+          "value": 1985
+        },
+        {
+          "x": 66,
+          "y": 14,
+          "expected": 1052,
+          "value": 1984
+        },
+        {
+          "x": 67,
+          "y": 14,
+          "expected": 1053,
+          "value": 1985
+        },
+        {
+          "x": 68,
+          "y": 14,
+          "expected": 1052,
+          "value": 1984
+        },
+        {
+          "x": 69,
+          "y": 14,
+          "expected": 1053,
+          "value": 1985
+        },
+        {
+          "x": 54,
+          "y": 15,
+          "expected": 12497,
+          "value": 13240
+        },
+        {
+          "x": 55,
+          "y": 15,
+          "expected": 12498,
+          "value": 13239
+        },
+        {
+          "x": 56,
+          "y": 15,
+          "expected": 12296,
+          "value": 2028
+        },
+        {
+          "x": 57,
+          "y": 15,
+          "expected": 12296,
+          "value": 2028
+        },
+        {
+          "x": 58,
+          "y": 15,
+          "expected": 12296,
+          "value": 2028
+        },
+        {
+          "x": 59,
+          "y": 15,
+          "expected": 12296,
+          "value": 1991
+        },
+        {
+          "x": 60,
+          "y": 15,
+          "expected": 1058,
+          "value": 1992
+        },
+        {
+          "x": 61,
+          "y": 15,
+          "expected": 1061,
+          "value": 1992
+        },
+        {
+          "x": 62,
+          "y": 15,
+          "expected": 1060,
+          "value": 1992
+        },
+        {
+          "x": 63,
+          "y": 15,
+          "expected": 1061,
+          "value": 1992
+        },
+        {
+          "x": 64,
+          "y": 15,
+          "expected": 1060,
+          "value": 1993
+        },
+        {
+          "x": 65,
+          "y": 15,
+          "expected": 1061,
+          "value": 1989
+        },
+        {
+          "x": 66,
+          "y": 15,
+          "expected": 1060,
+          "value": 1988
+        },
+        {
+          "x": 67,
+          "y": 15,
+          "expected": 1061,
+          "value": 1989
+        },
+        {
+          "x": 68,
+          "y": 15,
+          "expected": 1060,
+          "value": 1988
+        },
+        {
+          "x": 69,
+          "y": 15,
+          "expected": 1061,
+          "value": 1989
+        },
+        {
+          "x": 54,
+          "y": 16,
+          "expected": 12505,
+          "value": 13240
+        },
+        {
+          "x": 55,
+          "y": 16,
+          "expected": 12506,
+          "value": 13243
+        },
+        {
+          "x": 56,
+          "y": 16,
+          "expected": 12297,
+          "value": 13239
+        },
+        {
+          "x": 57,
+          "y": 16,
+          "expected": 12296,
+          "value": 13238
+        },
+        {
+          "x": 58,
+          "y": 16,
+          "expected": 1255,
+          "value": 13303
+        },
+        {
+          "x": 59,
+          "y": 16,
+          "expected": 1255,
+          "value": 1994
+        },
+        {
+          "x": 60,
+          "y": 16,
+          "expected": 1255,
+          "value": 1995
+        },
+        {
+          "x": 61,
+          "y": 16,
+          "expected": 1255,
+          "value": 1995
+        },
+        {
+          "x": 62,
+          "y": 16,
+          "expected": 1255,
+          "value": 1995
+        },
+        {
+          "x": 63,
+          "y": 16,
+          "expected": 1255,
+          "value": 1995
+        },
+        {
+          "x": 64,
+          "y": 16,
+          "expected": 1255,
+          "value": 1996
+        },
+        {
+          "x": 65,
+          "y": 16,
+          "expected": 1255,
+          "value": 2043
+        },
+        {
+          "x": 66,
+          "y": 16,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 67,
+          "y": 16,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 68,
+          "y": 16,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 69,
+          "y": 16,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 54,
+          "y": 17,
+          "expected": 12551,
+          "value": 13279
+        },
+        {
+          "x": 55,
+          "y": 17,
+          "expected": 12514,
+          "value": 13280
+        },
+        {
+          "x": 56,
+          "y": 17,
+          "expected": 12296,
+          "value": 13244
+        },
+        {
+          "x": 57,
+          "y": 17,
+          "expected": 12499,
+          "value": 13281
+        },
+        {
+          "x": 58,
+          "y": 17,
+          "expected": 12500,
+          "value": 13294
+        },
+        {
+          "x": 59,
+          "y": 17,
+          "expected": 12500,
+          "value": 2036
+        },
+        {
+          "x": 60,
+          "y": 17,
+          "expected": 12500,
+          "value": 2037
+        },
+        {
+          "x": 61,
+          "y": 17,
+          "expected": 12500,
+          "value": 2037
+        },
+        {
+          "x": 62,
+          "y": 17,
+          "expected": 12500,
+          "value": 2037
+        },
+        {
+          "x": 63,
+          "y": 17,
+          "expected": 12500,
+          "value": 2037
+        },
+        {
+          "x": 64,
+          "y": 17,
+          "expected": 12500,
+          "value": 2038
+        },
+        {
+          "x": 65,
+          "y": 17,
+          "expected": 12500,
+          "value": 13295
+        },
+        {
+          "x": 66,
+          "y": 17,
+          "expected": 12500,
+          "value": 13282
+        },
+        {
+          "x": 67,
+          "y": 17,
+          "expected": 12500,
+          "value": 13282
+        },
+        {
+          "x": 68,
+          "y": 17,
+          "expected": 12500,
+          "value": 13282
+        },
+        {
+          "x": 69,
+          "y": 17,
+          "expected": 12500,
+          "value": 13282
+        },
+        {
+          "x": 54,
+          "y": 18,
+          "expected": 12506,
+          "value": 13285
+        },
+        {
+          "x": 55,
+          "y": 18,
+          "expected": 12296,
+          "value": 13286
+        },
+        {
+          "x": 56,
+          "y": 18,
+          "expected": 12297,
+          "value": 13239
+        },
+        {
+          "x": 57,
+          "y": 18,
+          "expected": 12507,
+          "value": 13287
+        },
+        {
+          "x": 58,
+          "y": 18,
+          "expected": 12508,
+          "value": 13296
+        },
+        {
+          "x": 59,
+          "y": 18,
+          "expected": 12508,
+          "value": 2041
+        },
+        {
+          "x": 60,
+          "y": 18,
+          "expected": 12508,
+          "value": 2040
+        },
+        {
+          "x": 61,
+          "y": 18,
+          "expected": 12508,
+          "value": 2040
+        },
+        {
+          "x": 62,
+          "y": 18,
+          "expected": 12508,
+          "value": 2040
+        },
+        {
+          "x": 63,
+          "y": 18,
+          "expected": 12508,
+          "value": 2040
+        },
+        {
+          "x": 64,
+          "y": 18,
+          "expected": 12508,
+          "value": 2042
+        },
+        {
+          "x": 65,
+          "y": 18,
+          "expected": 12508,
+          "value": 13297
+        },
+        {
+          "x": 66,
+          "y": 18,
+          "expected": 12508,
+          "value": 13288
+        },
+        {
+          "x": 67,
+          "y": 18,
+          "expected": 12508,
+          "value": 13288
+        },
+        {
+          "x": 68,
+          "y": 18,
+          "expected": 12508,
+          "value": 13288
+        },
+        {
+          "x": 69,
+          "y": 18,
+          "expected": 12508,
+          "value": 13288
+        },
+        {
+          "x": 54,
+          "y": 19,
+          "expected": 12506,
+          "value": 13293
+        },
+        {
+          "x": 55,
+          "y": 19,
+          "expected": 12296,
+          "value": 13289
+        },
+        {
+          "x": 56,
+          "y": 19,
+          "expected": 12296,
+          "value": 13244
+        },
+        {
+          "x": 57,
+          "y": 19,
+          "expected": 12515,
+          "value": 13290
+        },
+        {
+          "x": 58,
+          "y": 19,
+          "expected": 12516,
+          "value": 13298
+        },
+        {
+          "x": 59,
+          "y": 19,
+          "expected": 12516,
+          "value": 1997
+        },
+        {
+          "x": 60,
+          "y": 19,
+          "expected": 12516,
+          "value": 1998
+        },
+        {
+          "x": 61,
+          "y": 19,
+          "expected": 12516,
+          "value": 1998
+        },
+        {
+          "x": 62,
+          "y": 19,
+          "expected": 12516,
+          "value": 1998
+        },
+        {
+          "x": 63,
+          "y": 19,
+          "expected": 12516,
+          "value": 1998
+        },
+        {
+          "x": 64,
+          "y": 19,
+          "expected": 12516,
+          "value": 1999
+        },
+        {
+          "x": 65,
+          "y": 19,
+          "expected": 12516,
+          "value": 13299
+        },
+        {
+          "x": 66,
+          "y": 19,
+          "expected": 12516,
+          "value": 13291
+        },
+        {
+          "x": 67,
+          "y": 19,
+          "expected": 12516,
+          "value": 13291
+        },
+        {
+          "x": 68,
+          "y": 19,
+          "expected": 12516,
+          "value": 13291
+        },
+        {
+          "x": 69,
+          "y": 19,
+          "expected": 12516,
+          "value": 13291
+        },
+        {
+          "x": 54,
+          "y": 20,
+          "expected": 12506,
+          "value": 13286
+        },
+        {
+          "x": 55,
+          "y": 20,
+          "expected": 12296,
+          "value": 13244
+        },
+        {
+          "x": 56,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 57,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 58,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 59,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 60,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 61,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 62,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 63,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 64,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 65,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 66,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 67,
+          "y": 20,
+          "expected": 1255,
+          "value": 2028
+        },
+        {
+          "x": 68,
+          "y": 20,
+          "expected": 1238,
+          "value": 2019
+        },
+        {
+          "x": 69,
+          "y": 20,
+          "expected": 1239,
+          "value": 2020
+        },
+        {
+          "x": 54,
+          "y": 21,
+          "expected": 12506,
+          "value": 13286
+        },
+        {
+          "x": 55,
+          "y": 21,
+          "expected": 12296,
+          "value": 13239
+        },
+        {
+          "x": 56,
+          "y": 21,
+          "expected": 12288,
+          "value": 13239
+        },
+        {
+          "x": 57,
+          "y": 21,
+          "expected": 12289,
+          "value": 13238
+        },
+        {
+          "x": 58,
+          "y": 21,
+          "expected": 12288,
+          "value": 13239
+        },
+        {
+          "x": 59,
+          "y": 21,
+          "expected": 12289,
+          "value": 13238
+        },
+        {
+          "x": 60,
+          "y": 21,
+          "expected": 12302,
+          "value": 13241
+        },
+        {
+          "x": 61,
+          "y": 21,
+          "expected": 12303,
+          "value": 13242
+        },
+        {
+          "x": 62,
+          "y": 21,
+          "expected": 12302,
+          "value": 13241
+        },
+        {
+          "x": 63,
+          "y": 21,
+          "expected": 12303,
+          "value": 13242
+        },
+        {
+          "x": 64,
+          "y": 21,
+          "expected": 12302,
+          "value": 13241
+        },
+        {
+          "x": 65,
+          "y": 21,
+          "expected": 12303,
+          "value": 13242
+        },
+        {
+          "x": 66,
+          "y": 21,
+          "expected": 12302,
+          "value": 13241
+        },
+        {
+          "x": 67,
+          "y": 21,
+          "expected": 12303,
+          "value": 13242
+        },
+        {
+          "x": 68,
+          "y": 21,
+          "expected": 1054,
+          "value": 1986
+        },
+        {
+          "x": 69,
+          "y": 21,
+          "expected": 1055,
+          "value": 1987
+        },
+        {
+          "x": 54,
+          "y": 22,
+          "expected": 12506,
+          "value": 13286
+        },
+        {
+          "x": 55,
+          "y": 22,
+          "expected": 12296,
+          "value": 13243
+        },
+        {
+          "x": 56,
+          "y": 22,
+          "expected": 12296,
+          "value": 13244
+        },
+        {
+          "x": 57,
+          "y": 22,
+          "expected": 12297,
+          "value": 13243
+        },
+        {
+          "x": 58,
+          "y": 22,
+          "expected": 12296,
+          "value": 13244
+        },
+        {
+          "x": 59,
+          "y": 22,
+          "expected": 12297,
+          "value": 13243
+        },
+        {
+          "x": 60,
+          "y": 22,
+          "expected": 1054,
+          "value": 1986
+        },
+        {
+          "x": 61,
+          "y": 22,
+          "expected": 1055,
+          "value": 1987
+        },
+        {
+          "x": 62,
+          "y": 22,
+          "expected": 1054,
+          "value": 1986
+        },
+        {
+          "x": 63,
+          "y": 22,
+          "expected": 1055,
+          "value": 1987
+        },
+        {
+          "x": 64,
+          "y": 22,
+          "expected": 1054,
+          "value": 1986
+        },
+        {
+          "x": 65,
+          "y": 22,
+          "expected": 1055,
+          "value": 1987
+        },
+        {
+          "x": 66,
+          "y": 22,
+          "expected": 1054,
+          "value": 1986
+        },
+        {
+          "x": 67,
+          "y": 22,
+          "expected": 1055,
+          "value": 1987
+        },
+        {
+          "x": 68,
+          "y": 22,
+          "expected": 1042,
+          "value": 1981
+        },
+        {
+          "x": 69,
+          "y": 22,
+          "expected": 1045,
+          "value": 1982
+        }
+      ]
+    },
+    "object_events": [
+      {
+        "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
+        "x": 18,
+        "y": 15,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "4",
+        "script": "Route11_EventScript_Eddie",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+        "x": 18,
+        "y": 22,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "1",
+        "script": "Route11_EventScript_Hugo",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
+        "x": 34,
+        "y": 10,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_LEFT",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "4",
+        "script": "Route11_EventScript_Dillon",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
+        "x": 28,
+        "y": 20,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_LEFT_UP",
+        "movement_range_x": 8,
+        "movement_range_y": 4,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "1",
+        "script": "Route11_EventScript_Dave",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+        "x": 40,
+        "y": 25,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "1",
+        "script": "Route11_EventScript_Jasper",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+        "x": 50,
+        "y": 9,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "1",
+        "script": "Route11_EventScript_Darian",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+        "x": 47,
+        "y": 16,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "4",
+        "script": "Route11_EventScript_Braxton",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
+        "x": 48,
+        "y": 22,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
+        "movement_range_x": 1,
+        "movement_range_y": 4,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "1",
+        "script": "Route11_EventScript_Yasu",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+        "x": 56,
+        "y": 25,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "1",
+        "script": "Route11_EventScript_Dirk",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
+        "x": 32,
+        "y": 24,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "6",
+        "script": "Route11_EventScript_Bernie",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+        "x": 42,
+        "y": 20,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Route11_EventScript_ItemXDefend",
+        "flag": "FLAG_HIDE_ROUTE11_X_DEFEND"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+        "x": 66,
+        "y": 21,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Route11_EventScript_ItemGreatBall",
+        "flag": "FLAG_HIDE_ROUTE11_GREAT_BALL"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+        "x": 23,
+        "y": 8,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Route11_EventScript_ItemAwakening",
+        "flag": "FLAG_HIDE_ROUTE11_AWAKENING"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DROWZEE",
+        "x": 21,
+        "y": 31,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_FACE_UP",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "JOHTO_FLAG_NIGHT_POKEMON",
+        "type": "object"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HYPNO",
+        "x": 37,
+        "y": 1,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "JOHTO_FLAG_NIGHT_POKEMON",
+        "type": "object"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MEOWTH",
+        "x": 40,
+        "y": 1,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "JOHTO_FLAG_NIGHT_POKEMON",
+        "type": "object"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MEOWTH",
+        "x": 41,
+        "y": 1,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_ROTATE_COUNTERCLOCKWISE",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "JOHTO_FLAG_NIGHT_POKEMON",
+        "type": "object"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HYPNO",
+        "x": 44,
+        "y": 1,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "JOHTO_FLAG_NIGHT_POKEMON",
+        "type": "object"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGNEMITE",
+        "x": 52,
+        "y": 29,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
+        "movement_range_x": 5,
+        "movement_range_y": 5,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "0",
+        "type": "object"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGNEMITE",
+        "x": 57,
+        "y": 29,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT",
+        "movement_range_x": 5,
+        "movement_range_y": 5,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "0",
+        "type": "object"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HOPPIP",
+        "x": 13,
+        "y": 10,
+        "elevation": 4,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "JOHTO_FLAG_DAY_POKEMON",
+        "type": "object"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SLAKOTH",
+        "x": 24,
+        "y": 2,
+        "elevation": 4,
+        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "JOHTO_FLAG_NIGHT_POKEMON",
+        "type": "object"
+      },
+      {
+        "local_id": "LOCALID_FRIENDS_ROUTE11_FRLG_BRIAN",
+        "graphics_id": "OBJ_EVENT_GFX_FRIEND_BRIAN",
+        "x": 25,
+        "y": 7,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Friends_Interact",
+        "flag": "0",
+        "firered_slice_only": true
+      },
+      {
+        "local_id": "LOCALID_FRIENDS_ROUTE11_FRLG_HAM",
+        "graphics_id": "OBJ_EVENT_GFX_FRIEND_HAM",
+        "x": 26,
+        "y": 6,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Friends_Interact",
+        "flag": "0",
+        "firered_slice_only": true
+      },
+      {
+        "local_id": "LOCALID_FRIENDS_ROUTE11_FRLG_JON",
+        "graphics_id": "OBJ_EVENT_GFX_FRIEND_JON",
+        "x": 24,
+        "y": 8,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_UP",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Friends_Interact",
+        "flag": "0",
+        "firered_slice_only": true
+      },
+      {
+        "local_id": "LOCALID_FRIENDS_ROUTE11_FRLG_NICK",
+        "graphics_id": "OBJ_EVENT_GFX_FRIEND_NICK",
+        "x": 23,
+        "y": 7,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Friends_Interact",
+        "flag": "0",
+        "firered_slice_only": true
+      },
+      {
+        "local_id": "LOCALID_FRIENDS_ROUTE11_FRLG_X",
+        "graphics_id": "OBJ_EVENT_GFX_FRIEND_X",
+        "x": 27,
+        "y": 7,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Friends_Interact",
+        "flag": "0",
+        "firered_slice_only": true
+      },
+      {
+        "local_id": "LOCALID_FRIENDS_ROUTE11_FRLG_LB",
+        "graphics_id": "OBJ_EVENT_GFX_FRIEND_LB",
+        "x": 22,
+        "y": 8,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_UP",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Friends_Interact",
+        "flag": "0",
+        "firered_slice_only": true
+      },
+      {
+        "local_id": "LOCALID_FRIENDS_ROUTE11_FRLG_TIM",
+        "graphics_id": "OBJ_EVENT_GFX_FRIEND_TIM",
+        "x": 22,
+        "y": 6,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Friends_Interact",
+        "flag": "0",
+        "firered_slice_only": true
+      }
+    ],
+    "warp_events": [
+      {
+        "x": 17,
+        "y": 7,
+        "elevation": 3,
+        "dest_map": "MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 58,
+        "y": 18,
+        "elevation": 3,
+        "dest_map": "MAP_ROUTE11_EAST_ENTRANCE_1F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 65,
+        "y": 18,
+        "elevation": 3,
+        "dest_map": "MAP_ROUTE11_EAST_ENTRANCE_1F",
+        "dest_warp_id": "2"
+      }
+    ],
+    "coord_events": [],
+    "bg_events": [
+      {
+        "type": "sign",
+        "x": 15,
+        "y": 8,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Route11_EventScript_DiglettsCaveSign"
+      },
+      {
+        "type": "hidden_item",
+        "x": 67,
+        "y": 17,
+        "elevation": 3,
+        "item": "ITEM_ESCAPE_ROPE",
+        "flag": "FLAG_HIDDEN_ITEM_ROUTE11_ESCAPE_ROPE",
+        "quantity": 1,
+        "underfoot": false
+      }
+    ],
+    "connections": [
+      {
+        "map": "MAP_VERMILION_CITY",
+        "offset": 3,
+        "direction": "left"
+      },
+      {
+        "map": "MAP_ROUTE12",
+        "offset": -27,
+        "direction": "right"
+      }
+    ]
+  }
+}

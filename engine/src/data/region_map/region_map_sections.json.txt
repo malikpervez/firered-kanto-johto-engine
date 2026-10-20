@@ -1,0 +1,131 @@
+{{ doNotModifyHeader }}
+#ifndef GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
+#define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
+
+#if IS_HNS
+
+const struct RegionMapLocation gRegionMapEntries[] = {
+## for map_section in hns_map_sections
+    [{{ map_section.id }}] = {
+{% if existsIn(map_section, "x") %}
+        .x = {{ map_section.x }},
+{% else %}
+        .x = 0,
+{% endif %}
+{% if existsIn(map_section, "y") %}
+        .y = {{ map_section.y }},
+{% else %}
+        .y = 0,
+{% endif %}
+{% if existsIn(map_section, "width") %}
+        .width = {{ map_section.width }},
+{% else %}
+        .width = 1,
+{% endif %}
+{% if existsIn(map_section, "height") %}
+        .height = {{ map_section.height }},
+{% else %}
+        .height = 1,
+{% endif %}
+{% if existsIn(map_section, "name") %}
+        .name = COMPOUND_STRING("{{ map_section.name }}"),
+{% else %}
+        .name = (const u8[])_(""),
+{% endif %}
+    },
+## endfor
+};
+
+#else
+
+const struct RegionMapLocation gRegionMapEntries[] = {
+## for map_section in map_sections
+    [{{ map_section.id }}] = {
+{% if existsIn(map_section, "x") %}
+        .x = {{ map_section.x }},
+{% else %}
+        .x = 0,
+{% endif %}
+{% if existsIn(map_section, "y") %}
+        .y = {{ map_section.y }},
+{% else %}
+        .y = 0,
+{% endif %}
+{% if existsIn(map_section, "width") %}
+        .width = {{ map_section.width }},
+{% else %}
+        .width = 1,
+{% endif %}
+{% if existsIn(map_section, "height") %}
+        .height = {{ map_section.height }},
+{% else %}
+        .height = 1,
+{% endif %}
+{% if existsIn(map_section, "name") %}
+        .name = COMPOUND_STRING("{{ map_section.name }}"),
+{% else %}
+        .name = (const u8[])_(""),
+{% endif %}
+    },
+## endfor
+#ifdef FIRERED
+## for map_section in firered_slice_map_sections
+    [{{ map_section.id }}] = {
+        // This name entry does not add Johto world-map artwork or Fly access.
+        .x = {{ map_section.x }},
+        .y = {{ map_section.y }},
+        .width = {{ map_section.width }},
+        .height = {{ map_section.height }},
+        .name = COMPOUND_STRING("{{ map_section.name }}"),
+    },
+## endfor
+#endif
+};
+
+#ifdef FIRERED
+// Keep the original table for foreign-origin met-location display. The campaign
+// names use aliases without changing map-section constants or save fields.
+static const u8 *const sJohtoMapSectionNames[MAPSEC_COUNT] = {
+## for map_section in firered_campaign_map_sections
+    [{{ map_section.id }}] = COMPOUND_STRING("{{ map_section.name }}"),
+## endfor
+};
+
+// Context-selected table: native Kanto entries remain available to callers,
+// while the Johto aliases use the exact upstream Johto-only map coordinates.
+static const struct RegionMapLocation sFireRedJohtoRegionMapEntries[MAPSEC_COUNT] = {
+## for map_section in firered_johto_region_map_entries
+    [{{ map_section.id }}] = {
+{% if existsIn(map_section, "x") %}
+        .x = {{ map_section.x }},
+{% else %}
+        .x = 0,
+{% endif %}
+{% if existsIn(map_section, "y") %}
+        .y = {{ map_section.y }},
+{% else %}
+        .y = 0,
+{% endif %}
+{% if existsIn(map_section, "width") %}
+        .width = {{ map_section.width }},
+{% else %}
+        .width = 1,
+{% endif %}
+{% if existsIn(map_section, "height") %}
+        .height = {{ map_section.height }},
+{% else %}
+        .height = 1,
+{% endif %}
+{% if existsIn(map_section, "name") %}
+        .name = COMPOUND_STRING("{{ map_section.name }}"),
+{% else %}
+        .name = (const u8[])_(""),
+{% endif %}
+    },
+## endfor
+};
+#endif // FIRERED
+
+#endif // IS_HNS
+
+#endif // GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H

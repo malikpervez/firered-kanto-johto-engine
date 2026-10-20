@@ -1,0 +1,172 @@
+{
+  "schema": "37c-cloud-export-policy-1",
+  "includedEngineFiles": 36879,
+  "excludedInputs": [
+    {
+      "path": ".gitattributes",
+      "bytes": 513,
+      "sha256": "85e036cecc74c40a86f19380ca42aa07b9a1663f345886a23bb274ec0a1a0e50",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Replaced by export-root Git safety and exact-byte attributes; not a game change"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/01_battle_engine_bugs.yaml",
+      "bytes": 2809,
+      "sha256": "0179cd8b5cc1d9d8223857ec46918b105463eb8f86034c992a10f9dd285a0fa2",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/02_battle_ai_issues.yaml",
+      "bytes": 2743,
+      "sha256": "96975924c67d8e43a9c38e9af55414fedccc42027729d858bb3d7e0ab8105ea5",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/03_feature_requests.yaml",
+      "bytes": 1680,
+      "sha256": "802a3cefd5bb2990bde1036bdd9b5c7b91cf1f7729f1b3a7fdf39e00f4b584fd",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/04_other_errors.yaml",
+      "bytes": 2741,
+      "sha256": "8d0ec2fdd07bed10da8c9a7243b619548b8fa6228981cc2f036a8633937228b5",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 231,
+      "sha256": "a8912c8543837380c172b13a411a69d2c0d77fc143b8a7ecbaf247ff0a56ba53",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/calcrom/calcrom.pl",
+      "bytes": 5642,
+      "sha256": "0e9cc92ab1cfd9e394f3d7832ad9a14bb43e33001f7d00bf4889057f4467241c",
+      "mode": "100755",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/calcrom/webhook.sh",
+      "bytes": 492,
+      "sha256": "eb2a795bf28d2f88962b300f7c182d452762809064a656716ae0ed1ed7178920",
+      "mode": "100755",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/docs_validate/inclusive_summary.py",
+      "bytes": 1963,
+      "sha256": "6a2ed2f1f0e1de70d3dd5f565e4dc5b30c59ea3f79fc552f5d36905b882571f5",
+      "mode": "100755",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "bytes": 2681,
+      "sha256": "8a98ecbe5ced81e135ab56bb60452d82ddc3e4407f28054f56c4b74f466ca7f1",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "bytes": 7166,
+      "sha256": "ed38ab9b4f459930efe75ebb91f12223ba362b4986c993fe515dea26d0956e48",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/workflows/docs.yml",
+      "bytes": 1346,
+      "sha256": "586b9982baf76322e820a93dbabbe66601c465334c2d7993be9d99ea64f0fe83",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".github/workflows/labels.yml",
+      "bytes": 1096,
+      "sha256": "5f38f7b69fac4211736ce8391b9bfd19a081d4cec136867c3ee04ad60c3e7288",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream GitHub metadata / workflows; deliberately inert and excluded"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1015,
+      "sha256": "f21e31e3f27a87e2c8bc66de5079f9312f61cb5632dc182ff013e1dd3ac7167a",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Replaced by export-root Git safety and exact-byte attributes; not a game change"
+    },
+    {
+      "path": "data/mb_berry_fix.gba",
+      "bytes": 15348,
+      "sha256": "f3d87e14688faf0190b33e071607887c7783462b45f92f1cb7135eec56260740",
+      "mode": "100755",
+      "exported": false,
+      "excludedReason": "Upstream embedded multiboot ROM; not committed; restore from pinned upstream into ignored paths"
+    },
+    {
+      "path": "data/mb_colosseum.gba",
+      "bytes": 163840,
+      "sha256": "d133d340ce7507932bcb3a83f9ee1dd9905072763d493b66db20e1bde4304572",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream embedded multiboot ROM; not committed; restore from pinned upstream into ignored paths"
+    },
+    {
+      "path": "data/mb_ereader.gba",
+      "bytes": 12512,
+      "sha256": "e50d06841b3485282bf772f1cfe2988da2bb476eb26ff5337b467af8a60bdf07",
+      "mode": "100644",
+      "exported": false,
+      "excludedReason": "Upstream embedded multiboot ROM; not committed; restore from pinned upstream into ignored paths"
+    },
+    {
+      "path": "tools/mgba/mgba-rom-test",
+      "bytes": 1680280,
+      "sha256": "4304688a0b44007cca23c9e887af17c44530fd602ee3d1e57a232da397bec769",
+      "mode": "100755",
+      "exported": false,
+      "excludedReason": "Prebuilt emulator executable; not uploaded or used"
+    },
+    {
+      "path": "tools/mgba/mgba-rom-test-mac",
+      "bytes": 3081376,
+      "sha256": "9b8cc7e8d1de599239b7333407d718e9bdb5834b1a08575580a31d450f0e0f78",
+      "mode": "100755",
+      "exported": false,
+      "excludedReason": "Prebuilt emulator executable; not uploaded or used"
+    },
+    {
+      "path": "tools/mgba/mgba-rom-test.exe",
+      "bytes": 2341806,
+      "sha256": "84c7f1babecf563722224d462a889f7f6d34ab11bcfa6b6160eef569b5f2608a",
+      "mode": "100755",
+      "exported": false,
+      "excludedReason": "Prebuilt emulator executable; not uploaded or used"
+    }
+  ],
+  "runtimeAssetScope": "Only current frozen integrated graphics/palettes, not raw photos/research/drafts or private gameplay evidence",
+  "originalUpstreamInstructions": "Preserved as source references; never authorize remotes/CI/services or automatic upgrades",
+  "sourceExactness": "Every included engine file is verified byte-for-byte against the 37C raw-source inventory. Git metadata exclusions are explicit; game code and assets are unchanged.",
+  "localPrivateEvidenceExcluded": true,
+  "ROMsAndSavesExcluded": true,
+  "GitHubActionsExcluded": true
+}

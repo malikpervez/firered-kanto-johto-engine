@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-08T20:01:05.477500+00:00",
+  "scope": "B0 project-local prerequisites only; no system installs or profile changes",
+  "host": {
+    "os": "macOS",
+    "os_version": "27.0",
+    "os_build": "26A428",
+    "architecture": "arm64",
+    "native_cc": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+    "xcode_developer_path": "/Applications/Xcode.app/Contents/Developer",
+    "macos_sdk": "27.0"
+  },
+  "arm_toolchain": {
+    "release": "14.2.rel1",
+    "path": "[LOCAL_WORKSPACE]/_local/tools/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi",
+    "gcc_version": "arm-none-eabi-gcc (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119",
+    "binutils_version": "GNU ld (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 2.43.1.20241119",
+    "armv4t_thumb_smoke": "PASS — EXECUTED",
+    "smoke_log": "_local/tools/logs/versions-and-smoke.log"
+  },
+  "host_tools_prefix": "[LOCAL_WORKSPACE]/_local/tools/host",
+  "activation": {
+    "script": "_local/tools/activate.sh",
+    "variables": {
+      "B0_ARM_TOOLCHAIN": "[LOCAL_WORKSPACE]/_local/tools/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi",
+      "B0_HOST_PREFIX": "[LOCAL_WORKSPACE]/_local/tools/host",
+      "B0_MAKE": "[LOCAL_WORKSPACE]/_local/tools/host/bin/make",
+      "PATH_prepend": [
+        "[LOCAL_WORKSPACE]/_local/tools/host/bin",
+        "[LOCAL_WORKSPACE]/_local/tools/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi/bin"
+      ],
+      "PKG_CONFIG_PATH": "[LOCAL_WORKSPACE]/_local/tools/host/lib/pkgconfig",
+      "PKG_CONFIG_LIBDIR": "[LOCAL_WORKSPACE]/_local/tools/host/lib/pkgconfig",
+      "PKG_CONFIG_ALLOW_SYSTEM_LIBS": "1",
+      "PKG_CONFIG_ALLOW_SYSTEM_CFLAGS": "1",
+      "B0_HOST_DEPS": "[LOCAL_WORKSPACE]/_local/tools/host"
+    },
+    "upstream_make_argument": "TOOLCHAIN=\"$B0_ARM_TOOLCHAIN\"",
+    "validation_log": "_local/tools/logs/activation-validation.log",
+    "validation_exit_code": 0
+  },
+  "packages": [
+    {
+      "name": "arm-gnu-toolchain",
+      "version": "14.2.rel1",
+      "source_url": "https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi.tar.xz",
+      "official_reference_url": "https://developer.arm.com/tools-and-software/gnu-toolchain",
+      "archive_path": "_local/tools/downloads/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi.tar.xz",
+      "archive_bytes": 134812148,
+      "archive_sha256": "c7c78ffab9bebfce91d99d3c24da6bf4b81c01e16cf551eb2ff9f25b9e0a3818",
+      "publisher_sha256": "c7c78ffab9bebfce91d99d3c24da6bf4b81c01e16cf551eb2ff9f25b9e0a3818",
+      "checksum_verification": "MATCHES PUBLISHER SHA-256"
+    },
+    {
+      "name": "make",
+      "version": "4.4.1",
+      "source_url": "https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz",
+      "official_reference_url": "https://www.gnu.org/software/make/",
+      "archive_path": "_local/tools/downloads/make-4.4.1.tar.gz",
+      "archive_bytes": 2348200,
+      "archive_sha256": "dd16fb1d67bfab79a72f5e8390735c49e3e8e70b4945a15ab1f81ddb78658fb3",
+      "publisher_sha256": null,
+      "checksum_verification": "LOCAL SHA-256 PIN; PUBLISHER SIGNATURE NOT VERIFIED",
+      "build_commands": [
+        {
+          "label": "configure",
+          "command": [
+            "./configure",
+            "--prefix=[LOCAL_WORKSPACE]/_local/tools/host",
+            "--without-guile"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/make-4.4.1",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/make-configure.log",
+          "started": "2026-10-08T19:56:27.018676+00:00",
+          "finished": "2026-10-08T19:56:45.321903+00:00",
+          "exit_code": 0
+        },
+        {
+          "label": "build",
+          "command": [
+            "/usr/bin/make",
+            "-j2"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/make-4.4.1",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/make-build.log",
+          "started": "2026-10-08T19:56:45.322412+00:00",
+          "finished": "2026-10-08T19:56:47.777666+00:00",
+          "exit_code": 0
+        },
+        {
+          "label": "check",
+          "command": [
+            "/usr/bin/make",
+            "check"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/make-4.4.1",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/make-check.log",
+          "started": "2026-10-08T19:56:47.778276+00:00",
+          "finished": "2026-10-08T19:57:50.846134+00:00",
+          "exit_code": 2
+        }
+      ],
+      "install_exit_code": 0,
+      "build_command_notes": "All configure/build/install commands ran with CC=/usr/bin/clang and CXX=/usr/bin/clang++, project-local --prefix, no sudo."
+    },
+    {
+      "name": "pkgconf",
+      "version": "2.5.1",
+      "source_url": "https://distfiles.ariadne.space/pkgconf/pkgconf-2.5.1.tar.xz",
+      "official_reference_url": "https://github.com/pkgconf/pkgconf",
+      "archive_path": "_local/tools/downloads/pkgconf-2.5.1.tar.xz",
+      "archive_bytes": 328064,
+      "archive_sha256": "cd05c9589b9f86ecf044c10a2269822bc9eb001eced2582cfffd658b0a50c243",
+      "publisher_sha256": null,
+      "checksum_verification": "LOCAL SHA-256 PIN; PUBLISHER SIGNATURE NOT VERIFIED",
+      "build_commands": [
+        {
+          "label": "configure",
+          "command": [
+            "./configure",
+            "--prefix=[LOCAL_WORKSPACE]/_local/tools/host",
+            "--disable-shared",
+            "--enable-static",
+            "--with-pkg-config-dir=[LOCAL_WORKSPACE]/_local/tools/host/lib/pkgconfig"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/pkgconf-2.5.1",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/pkgconf-configure.log",
+          "started": "2026-10-08T19:56:27.019036+00:00",
+          "finished": "2026-10-08T19:56:37.897607+00:00",
+          "exit_code": 0
+        },
+        {
+          "label": "build",
+          "command": [
+            "/usr/bin/make",
+            "-j2"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/pkgconf-2.5.1",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/pkgconf-build.log",
+          "started": "2026-10-08T19:56:37.901484+00:00",
+          "finished": "2026-10-08T19:56:39.979972+00:00",
+          "exit_code": 0
+        },
+        {
+          "label": "check",
+          "command": [
+            "/usr/bin/make",
+            "check"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/pkgconf-2.5.1",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/pkgconf-check.log",
+          "started": "2026-10-08T19:56:39.980719+00:00",
+          "finished": "2026-10-08T19:56:40.066903+00:00",
+          "exit_code": 2
+        }
+      ],
+      "install_exit_code": 0,
+      "build_command_notes": "All configure/build/install commands ran with CC=/usr/bin/clang and CXX=/usr/bin/clang++, project-local --prefix, no sudo."
+    },
+    {
+      "name": "libpng",
+      "version": "1.6.59",
+      "source_url": "https://download.sourceforge.net/libpng/libpng-1.6.59.tar.gz",
+      "official_reference_url": "https://www.libpng.org/pub/png/libpng.html",
+      "archive_path": "_local/tools/downloads/libpng-1.6.59.tar.gz",
+      "archive_bytes": 1589315,
+      "archive_sha256": "86a3e4b501f7f50e392c4e456ea158893e9a595b1c63eb88c7bb9f6cf8772dad",
+      "publisher_sha256": "86a3e4b501f7f50e392c4e456ea158893e9a595b1c63eb88c7bb9f6cf8772dad",
+      "checksum_verification": "MATCHES PUBLISHER SHA-256",
+      "build_commands": [
+        {
+          "label": "configure",
+          "command": [
+            "./configure",
+            "--prefix=[LOCAL_WORKSPACE]/_local/tools/host",
+            "--disable-shared",
+            "--enable-static"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/libpng-1.6.59",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/libpng-configure.log",
+          "started": "2026-10-08T19:56:40.067545+00:00",
+          "finished": "2026-10-08T19:56:45.903589+00:00",
+          "exit_code": 0
+        },
+        {
+          "label": "build",
+          "command": [
+            "/usr/bin/make",
+            "-j2"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/libpng-1.6.59",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/libpng-build.log",
+          "started": "2026-10-08T19:56:45.904112+00:00",
+          "finished": "2026-10-08T19:56:51.145394+00:00",
+          "exit_code": 0
+        },
+        {
+          "label": "check",
+          "command": [
+            "/usr/bin/make",
+            "check"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/libpng-1.6.59",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/libpng-check.log",
+          "started": "2026-10-08T19:56:51.145902+00:00",
+          "finished": "2026-10-08T19:57:44.328789+00:00",
+          "exit_code": 0
+        },
+        {
+          "label": "install",
+          "command": [
+            "/usr/bin/make",
+            "install"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/libpng-1.6.59",
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/libpng-install.log",
+          "started": "2026-10-08T19:57:44.329706+00:00",
+          "finished": "2026-10-08T19:57:44.750025+00:00",
+          "exit_code": 0
+        }
+      ],
+      "install_exit_code": 0,
+      "build_command_notes": "All configure/build/install commands ran with CC=/usr/bin/clang and CXX=/usr/bin/clang++, project-local --prefix, no sudo."
+    },
+    {
+      "name": "zlib",
+      "version": "1.3.2",
+      "source_url": "https://zlib.net/zlib-1.3.2.tar.gz",
+      "official_reference_url": "https://zlib.net/",
+      "archive_path": "_local/tools/downloads/zlib-1.3.2.tar.gz",
+      "archive_bytes": 1502830,
+      "archive_sha256": "bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16",
+      "publisher_sha256": "bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16",
+      "checksum_verification": "MATCHES PUBLISHER SHA-256",
+      "build_commands": [
+        {
+          "label": "configure",
+          "command": [
+            "./configure",
+            "--prefix=[LOCAL_WORKSPACE]/_local/tools/host",
+            "--static"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/zlib-1.3.2",
+          "started": "2026-10-08T19:58:21.106381+00:00",
+          "exit_code": 0,
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/zlib-configure.log",
+          "finished": "2026-10-08T19:58:23.461191+00:00"
+        },
+        {
+          "label": "build",
+          "command": [
+            "/usr/bin/make",
+            "-j2"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/zlib-1.3.2",
+          "started": "2026-10-08T19:58:23.462021+00:00",
+          "exit_code": 0,
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/zlib-build.log",
+          "finished": "2026-10-08T19:58:24.231554+00:00"
+        },
+        {
+          "label": "check",
+          "command": [
+            "/usr/bin/make",
+            "check"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/zlib-1.3.2",
+          "started": "2026-10-08T19:58:24.231990+00:00",
+          "exit_code": 0,
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/zlib-check.log",
+          "finished": "2026-10-08T19:58:24.362547+00:00"
+        },
+        {
+          "label": "install",
+          "command": [
+            "/usr/bin/make",
+            "install"
+          ],
+          "cwd": "[LOCAL_WORKSPACE]/_local/tools/src/zlib-1.3.2",
+          "started": "2026-10-08T19:58:24.363225+00:00",
+          "exit_code": 0,
+          "log": "[LOCAL_WORKSPACE]/_local/tools/logs/zlib-install.log",
+          "finished": "2026-10-08T19:58:24.444046+00:00"
+        }
+      ],
+      "install_exit_code": 0,
+      "build_command_notes": "All configure/build/install commands ran with CC=/usr/bin/clang and CXX=/usr/bin/clang++, project-local --prefix, no sudo."
+    }
+  ],
+  "installed_files": {
+    "make": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/host/bin/make",
+      "sha256": "f0dfd493b7e49277f66c0f5b98eb4b4dd285d3cb00a9fc2e506b6ae27860336e",
+      "bytes": 302360
+    },
+    "pkgconf": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/host/bin/pkgconf",
+      "sha256": "0728c4a7d4942a0669515393b787164bed205f915ae594071825395a5de1deb0",
+      "bytes": 150744
+    },
+    "libpng": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/host/lib/libpng16.a",
+      "sha256": "de13b9d7924da9df6c438f469835d956cfd8ab829f243be301eec6dd998bd7e2",
+      "bytes": 960848
+    },
+    "zlib": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/host/lib/libz.a",
+      "sha256": "dd58f6d3b58ac61c0c66842237a65216f3fca4f1c0c36b52b858c7942c9674cd",
+      "bytes": 105392
+    },
+    "arm-none-eabi-gcc": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi/bin/arm-none-eabi-gcc",
+      "sha256": "07bfe9e74cfe028af639bf38703b2259c608aedee6ff991752084a10b82da614",
+      "bytes": 2048288
+    },
+    "arm-none-eabi-as": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi/bin/arm-none-eabi-as",
+      "sha256": "400294fdab05500a50825ed1fe0bedd5aadaec35440c2a16529f9a94bcc340bd",
+      "bytes": 1776896
+    },
+    "arm-none-eabi-ld": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi/bin/arm-none-eabi-ld",
+      "sha256": "450610f293b5e8d39b50f45baa7301ce0eaf8a3508f3f7cde1e9d264db2c675d",
+      "bytes": 1739104
+    },
+    "arm-none-eabi-objcopy": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi/bin/arm-none-eabi-objcopy",
+      "sha256": "2f69e7866e0d7cb8533243e9aecb3d01d6c9d90ce63018b282cbcd4f56c4d781",
+      "bytes": 1118832
+    },
+    "activation_script": {
+      "path": "[LOCAL_WORKSPACE]/_local/tools/activate.sh",
+      "bytes": 946
+    }
+  },
+  "tool_self_tests": {
+    "make": {
+      "result": "FAIL — EXECUTED",
+      "exit_code": 2,
+      "details": "9 archive member timestamp expectations in features/archives failed using Apple ar; other categories passed. Local make binary installed from successful build. No engine build result inferred.",
+      "log": "_local/tools/logs/make-check.log",
+      "failure_archive": "_local/tools/src/make-4.4.1/makeerror-4.4.1-aarch64-apple-darwin27.0.0-rxsy.tar.gz"
+    },
+    "pkgconf": {
+      "result": "BLOCKED",
+      "exit_code": 2,
+      "details": "make check requires kyua, absent on this host. Configure, build, and install passed. Final pkg-config lookup of local libpng/zlib passed.",
+      "log": "_local/tools/logs/pkgconf-check.log"
+    },
+    "libpng": {
+      "result": "PASS — EXECUTED",
+      "exit_code": 0,
+      "passed": 36,
+      "total": 36,
+      "log": "_local/tools/logs/libpng-check.log",
+      "notes": "Built and self-tested against Apple SDK zlib; final host-tools links can use project-local zlib1.3.2."
+    },
+    "zlib": {
+      "result": "PASS — EXECUTED",
+      "exit_code": 0,
+      "log": "_local/tools/logs/zlib-check.log"
+    },
+    "apple_make_or": {
+      "result": "PASS — EXECUTED",
+      "exit_code": 0,
+      "details": "Apple GNU Make3.81 does support $(or ...) selector. Local4.4.1 chosen for explicit pin, not because or is absent.",
+      "log": "_local/tools/logs/apple-make-or.log"
+    }
+  },
+  "notes": [
+    "Arm vendor archive checksum matched downloaded sha256asc; no OpenPGP signature verified.",
+    "All native library/tool sources, archives, installed binaries and raw logs remain in ignored _local/tools.",
+    "No commercial ROM/BIOS obtained. No gameplay source changes.",
+    "Initial pre-zlib compound smoke log contains pkg-config failure text; final set -e activation-validation.log passed and is the acceptance evidence."
+  ]
+}

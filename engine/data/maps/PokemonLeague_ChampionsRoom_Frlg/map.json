@@ -1,0 +1,184 @@
+{
+  "id": "MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM",
+  "name": "PokemonLeague_ChampionsRoom_Frlg",
+  "game_version": "frlg",
+  "layout": "LAYOUT_POKEMON_LEAGUE_CHAMPIONS_ROOM",
+  "music": "MUS_RG_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_POKEMON_LEAGUE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_KANTO_CHAMPIONS_ROOM_RIVAL",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 6,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_CHAMPIONS_ROOM_PROF_OAK",
+      "graphics_id": "OBJ_EVENT_GFX_PROF_OAK",
+      "x": 6,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_OAK_IN_CHAMP_ROOM"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 6,
+      "y": 19,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_LEAGUE_LANCES_ROOM",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_LEAGUE_HALL_OF_FAME",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [],
+  "floor_number": 0,
+  "region": "REGION_KANTO",
+  "firered_campaign": {
+    "firered_geometry": {
+      "width": 13,
+      "height": 20,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_PokemonLeague",
+      "border_filepath": "data/layouts/PokemonLeague_ChampionsRoom_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_ChampionsRoom_Frlg/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "frlg",
+      "blockdata_overrides": [
+        {
+          "x": 6,
+          "y": 3,
+          "expected": 13305,
+          "value": 13183
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "expected": 902,
+          "value": 881
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "expected": 928,
+          "value": 885
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "expected": 930,
+          "value": 886
+        },
+        {
+          "x": 11,
+          "y": 4,
+          "expected": 917,
+          "value": 883
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "expected": 910,
+          "value": 882
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "expected": 989,
+          "value": 890
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "expected": 988,
+          "value": 889
+        },
+        {
+          "x": 11,
+          "y": 5,
+          "expected": 925,
+          "value": 884
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "expected": 13287,
+          "value": 13182
+        },
+        {
+          "x": 6,
+          "y": 10,
+          "expected": 13286,
+          "value": 13181
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "expected": 992,
+          "value": 891
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "expected": 995,
+          "value": 892
+        },
+        {
+          "x": 1,
+          "y": 12,
+          "expected": 980,
+          "value": 887
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "expected": 989,
+          "value": 890
+        },
+        {
+          "x": 10,
+          "y": 12,
+          "expected": 988,
+          "value": 889
+        },
+        {
+          "x": 11,
+          "y": 12,
+          "expected": 981,
+          "value": 888
+        }
+      ]
+    }
+  }
+}

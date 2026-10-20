@@ -1,0 +1,35 @@
+{
+  "source_url": "https://github.com/PokemonHnS-Development/pokehns-expansion",
+  "commit": "167aa6d537b109bb229c231ddce4616974c4da71",
+  "observed_ref": "refs/heads/master",
+  "observed_at": "2026-10-08T19:55:08.613611+00:00",
+  "commit_subject": "2.0.6",
+  "commit_timestamp": "2026-09-16T18:48:14-04:00",
+  "clone": "_local/upstream/pokehns-expansion",
+  "acquisition": "git clone --filter=blob:none (history retained; blobs fetched as needed)",
+  "baseline_tracked_status": "",
+  "local_patches": [],
+  "save_layout_version": "NOT AUDITED in B0",
+  "reference_files_sha256": {
+    "README.md": "e7cbe665ac3e3fb4cc2a40df0c606d01fb4e3390f101dadea83c3692e3b3f391",
+    "INSTALL.md": "0395a74d61003169fcf231e23cb2f17848bdc239ccd3263aedd3c9571f5e3cb5",
+    "Makefile": "5a68941340b42dd95edcdefdc0df8d50f66807ba93cb2687b164885d067ea700",
+    "config.mk": "a226b3d8ad42cee85612129d35e1ce5686a4ce5b72eb78083f0dbb2002e2ec92",
+    "make_tools.mk": "9e7dddcb2c93da2a0b9b9b552c608133fcad594933786a4b13a0a27bb0bee1e2",
+    "map_data_rules.mk": "4fa75d717aead17dd1a3e88146b0aeed23518cac836beaef32725f9cf31af802",
+    "docs/install/mac/MAC_OS.md": "105a3d1cab5854d22cfba2fa1effc1405a77c7b0b2d34ab3857457019f352132",
+    "docs/tutorials/how_to_frlg.md": "7855dc336d6ba8d9eedd107279a721b2da0f85746393caf7098f40ba652296e6",
+    "CREDITS.md": "48406bac5c07dd3b55889427eb73a2a5a678453418f70bab5d3bc24ffd4e54a0",
+    "FEATURES.md": "df9363b16bb52b4c828e832b11092ee07a4a47763205a292d6083dd52ce9a015",
+    "ld_script_modern.ld": "85d33f7bfa2b5b78de92a836868fe472319d23968a3254bf4ee7c64770ed2063"
+  },
+  "observed_tags_at_commit": [
+    "Release-v2.0.6"
+  ],
+  "apparent_expansion_version": {
+    "macros": "1.15.2",
+    "tagged_release": false,
+    "last_release_comment": "1.15.1",
+    "exact_rhh_ancestor": "NOT ESTABLISHED"
+  }
+}

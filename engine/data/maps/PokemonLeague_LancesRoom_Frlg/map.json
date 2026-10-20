@@ -1,0 +1,290 @@
+{
+  "id": "MAP_POKEMON_LEAGUE_LANCES_ROOM",
+  "name": "PokemonLeague_LancesRoom_Frlg",
+  "game_version": "frlg",
+  "layout": "LAYOUT_POKEMON_LEAGUE_LANCES_ROOM",
+  "music": "MUS_RG_VICTORY_ROAD",
+  "region_map_section": "MAPSEC_POKEMON_LEAGUE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_LANCE",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_LANCE",
+      "graphics_id": "OBJ_EVENT_GFX_LANCE",
+      "x": 6,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PokemonLeague_LancesRoom_EventScript_Lance",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 23,
+      "y": 13,
+      "elevation": 3,
+      "dest_map": "MAP_POKEMON_LEAGUE_AGATHAS_ROOM",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [],
+  "floor_number": 0,
+  "region": "REGION_KANTO",
+  "firered_campaign": {
+    "firered_geometry": {
+      "width": 28,
+      "height": 24,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_PokemonLeague",
+      "border_filepath": "data/layouts/PokemonLeague_LancesRoom_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonLeague_LancesRoom_Frlg/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "frlg",
+      "blockdata_overrides": [
+        {
+          "x": 2,
+          "y": 6,
+          "expected": 1906,
+          "value": 2043
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "expected": 1907,
+          "value": 2044
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "expected": 13162,
+          "value": 13303
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "expected": 13083,
+          "value": 13290
+        },
+        {
+          "x": 8,
+          "y": 7,
+          "expected": 13085,
+          "value": 13291
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "expected": 13163,
+          "value": 13304
+        },
+        {
+          "x": 2,
+          "y": 8,
+          "expected": 1904,
+          "value": 2041
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "expected": 13088,
+          "value": 13292
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "expected": 13089,
+          "value": 13293
+        },
+        {
+          "x": 7,
+          "y": 8,
+          "expected": 13090,
+          "value": 13294
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "expected": 1905,
+          "value": 2042
+        },
+        {
+          "x": 2,
+          "y": 9,
+          "expected": 1912,
+          "value": 2045
+        },
+        {
+          "x": 5,
+          "y": 9,
+          "expected": 13091,
+          "value": 13295
+        },
+        {
+          "x": 6,
+          "y": 9,
+          "expected": 13092,
+          "value": 13296
+        },
+        {
+          "x": 7,
+          "y": 9,
+          "expected": 13093,
+          "value": 13297
+        },
+        {
+          "x": 10,
+          "y": 9,
+          "expected": 1913,
+          "value": 2046
+        },
+        {
+          "x": 2,
+          "y": 10,
+          "expected": 13160,
+          "value": 13301
+        },
+        {
+          "x": 5,
+          "y": 10,
+          "expected": 13099,
+          "value": 13298
+        },
+        {
+          "x": 6,
+          "y": 10,
+          "expected": 13100,
+          "value": 13299
+        },
+        {
+          "x": 7,
+          "y": 10,
+          "expected": 13101,
+          "value": 13300
+        },
+        {
+          "x": 10,
+          "y": 10,
+          "expected": 13161,
+          "value": 13302
+        },
+        {
+          "x": 2,
+          "y": 11,
+          "expected": 1904,
+          "value": 2041
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "expected": 1905,
+          "value": 2042
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "expected": 1912,
+          "value": 2045
+        },
+        {
+          "x": 4,
+          "y": 12,
+          "expected": 12952,
+          "value": 13288
+        },
+        {
+          "x": 8,
+          "y": 12,
+          "expected": 12960,
+          "value": 13289
+        },
+        {
+          "x": 10,
+          "y": 12,
+          "expected": 1913,
+          "value": 2046
+        },
+        {
+          "x": 21,
+          "y": 13,
+          "expected": 1609,
+          "value": 2023
+        },
+        {
+          "x": 25,
+          "y": 13,
+          "expected": 1609,
+          "value": 2023
+        },
+        {
+          "x": 1,
+          "y": 16,
+          "expected": 12865,
+          "value": 13286
+        },
+        {
+          "x": 4,
+          "y": 16,
+          "expected": 12865,
+          "value": 13286
+        },
+        {
+          "x": 8,
+          "y": 16,
+          "expected": 12865,
+          "value": 13286
+        },
+        {
+          "x": 11,
+          "y": 16,
+          "expected": 12865,
+          "value": 13286
+        },
+        {
+          "x": 1,
+          "y": 17,
+          "expected": 1609,
+          "value": 2023
+        },
+        {
+          "x": 4,
+          "y": 17,
+          "expected": 1609,
+          "value": 2023
+        },
+        {
+          "x": 8,
+          "y": 17,
+          "expected": 1609,
+          "value": 2023
+        },
+        {
+          "x": 11,
+          "y": 17,
+          "expected": 1609,
+          "value": 2023
+        }
+      ]
+    }
+  }
+}

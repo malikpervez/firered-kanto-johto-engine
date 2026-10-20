@@ -1,0 +1,271 @@
+{
+  "id": "MAP_ROUTE18",
+  "name": "Route18_Frlg",
+  "game_version": "frlg",
+  "layout": "LAYOUT_ROUTE18",
+  "music": "MUS_RG_ROUTE3",
+  "region": "REGION_KANTO",
+  "region_map_section": "MAPSEC_ROUTE_18",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE17",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_FUCHSIA_CITY",
+      "offset": -10,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "x": 46,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Route18_EventScript_Jacob",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "x": 41,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route18_EventScript_Ramiro",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+      "x": 39,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "Route18_EventScript_Wilton",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 41,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE18_EAST_ENTRANCE_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 48,
+      "y": 9,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE18_EAST_ENTRANCE_1F",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 37,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route18_EventScript_CyclingRoadSign"
+    },
+    {
+      "type": "sign",
+      "x": 52,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route18_EventScript_RouteSign"
+    }
+  ],
+  "firered_campaign": {
+    "object_events": [
+      {
+        "type": "object",
+        "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+        "x": 46,
+        "y": 14,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "4",
+        "script": "Route18_EventScript_Jacob",
+        "flag": "0"
+      },
+      {
+        "type": "object",
+        "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+        "x": 41,
+        "y": 15,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "1",
+        "script": "Route18_EventScript_Ramiro",
+        "flag": "0"
+      },
+      {
+        "type": "object",
+        "graphics_id": "OBJ_EVENT_GFX_ROCKER",
+        "x": 39,
+        "y": 12,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+        "movement_range_x": 1,
+        "movement_range_y": 1,
+        "trainer_type": "TRAINER_TYPE_NORMAL",
+        "trainer_sight_or_berry_tree_id": "6",
+        "script": "Route18_EventScript_Wilton",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KECLEON",
+        "x": 37,
+        "y": 6,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "FLAG_TEMP_1"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODRIO",
+        "x": 43,
+        "y": 7,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+        "movement_range_x": 5,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODRIO",
+        "x": 46,
+        "y": 7,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
+        "movement_range_x": 5,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KECLEON",
+        "x": 40,
+        "y": 6,
+        "elevation": 0,
+        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "NULL",
+        "flag": "FLAG_TEMP_2"
+      }
+    ],
+    "warp_events": [
+      {
+        "x": 41,
+        "y": 9,
+        "elevation": 3,
+        "dest_map": "MAP_ROUTE18_EAST_ENTRANCE_1F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 48,
+        "y": 9,
+        "elevation": 3,
+        "dest_map": "MAP_ROUTE18_EAST_ENTRANCE_1F",
+        "dest_warp_id": "1"
+      }
+    ],
+    "coord_events": [],
+    "bg_events": [
+      {
+        "type": "sign",
+        "x": 37,
+        "y": 7,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Route18_EventScript_CyclingRoadSign"
+      },
+      {
+        "type": "sign",
+        "x": 52,
+        "y": 7,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Route18_EventScript_RouteSign"
+      }
+    ],
+    "connections": [
+      {
+        "map": "MAP_ROUTE17",
+        "offset": -6,
+        "direction": "up"
+      },
+      {
+        "map": "MAP_FUCHSIA_CITY",
+        "offset": -10,
+        "direction": "right"
+      }
+    ],
+    "firered_geometry": {
+      "width": 60,
+      "height": 20,
+      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "secondary_tileset": "gTileset_Fuchsia_Hns",
+      "border_filepath": "data/layouts/Route18_hns/border.bin",
+      "blockdata_filepath": "data/layouts/Route18_hns/map.bin",
+      "layout_version": "hns",
+      "blockdata_overrides": [
+        {
+          "x": 37,
+          "y": 7,
+          "expected": 1255,
+          "value": 1026
+        }
+      ]
+    }
+  }
+}

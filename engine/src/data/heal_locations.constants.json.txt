@@ -1,0 +1,18 @@
+#ifndef GUARD_CONSTANTS_HEAL_LOCATIONS_H
+#define GUARD_CONSTANTS_HEAL_LOCATIONS_H
+
+{{ doNotModifyHeader }}
+
+enum {
+    HEAL_LOCATION_NONE,
+## for heal_location in heal_locations
+    {{ heal_location.id }},
+## endfor
+    NUM_HEAL_LOCATIONS
+};
+
+#ifdef FIRERED
+#include "constants/johto_heal_locations.h"
+#endif
+
+#endif // GUARD_CONSTANTS_HEAL_LOCATIONS_H

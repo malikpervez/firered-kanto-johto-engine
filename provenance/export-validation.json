@@ -1,0 +1,64 @@
+{
+  "schema": "37c-private-export-local-validation-1",
+  "createdUTC": "2026-10-20T15:58:42.536465+00:00",
+  "sourceIntegrity": {
+    "status": "PASS",
+    "includedEngineFiles": 36879,
+    "embeddedInputsRestoredLocally": 3,
+    "sourceFingerprint": "c40c2cc4437bab92c8a86e1e63e1e98819ebcc4d509e6eea0643ab920103723c"
+  },
+  "freshBuild": {
+    "status": "PASS",
+    "host": "macOS arm64 \u2014 local export validation, not cloud Linux",
+    "makeExit": 0,
+    "freshSourceCopy": true,
+    "config": {
+      "target": "firered",
+      "O_LEVEL": "s",
+      "RELEASE": 0,
+      "LTO": 0,
+      "jobs": 2
+    },
+    "artifacts": [
+      {
+        "name": "pokefirered.gba",
+        "bytes": 33554432,
+        "sha256": "14ffbb4739e873eb259ce584e879c081a78ee65cdef59103f4a3e3a110265023"
+      },
+      {
+        "name": "pokefirered.elf",
+        "bytes": 45359288,
+        "sha256": "4134b0bf38cbef333fcd09a6f413bc1fb2296ec7dd3f253a56069b67e8d2da74"
+      },
+      {
+        "name": "pokefirered.map",
+        "bytes": 6117935,
+        "sha256": "faa39b20e06a554ec7f2d362ea863518bdeadea8b4ebfd44ffef291cb7ef5b18"
+      }
+    ],
+    "allThreeHashesMatchFrozen37C": true,
+    "ROM": {
+      "used": 32772996,
+      "capacity": 33554432,
+      "free": 781436
+    }
+  },
+  "ARMLayout": {
+    "status": "PASS",
+    "facts": 397,
+    "compiler": "arm-none-eabi-gcc (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+    "against": "Actual generated headers and source in the same fresh build copy"
+  },
+  "preparationNotes": [
+    "An initial probe on the raw unbuilt tree failed because map_groups.h is generated. The supplied runner and instructions now require the real fresh build copy; no fake headers or assertions were introduced.",
+    "Earlier attempt records and complete command/stdout/stderr remain in ignored local export evidence, not this repository."
+  ],
+  "notRun": [
+    "Cloud/Linux executor tests",
+    "New gameplay or Delta/device tests"
+  ],
+  "exclusions": [
+    "ROM/BIOS payloads, saves, states, private screenshots/reference photos, credentials, emulator executables and workflows remain excluded"
+  ],
+  "sourceAndSaveChanges": false
+}

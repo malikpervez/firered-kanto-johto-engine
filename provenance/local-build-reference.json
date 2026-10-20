@@ -1,0 +1,216 @@
+{
+  "candidate": "37C",
+  "scope": "Historical local macOS build; no cloud build claimed",
+  "upstream": "167aa6d537b109bb229c231ddce4616974c4da71",
+  "sourceFingerprint": "c40c2cc4437bab92c8a86e1e63e1e98819ebcc4d509e6eea0643ab920103723c",
+  "config": {
+    "target": "firered",
+    "O_LEVEL": "s",
+    "RELEASE": 0,
+    "LTO": 0,
+    "jobs": 2
+  },
+  "toolchain": "Arm GNU 14.2.Rel1 (Build arm-14.52), GCC 14.2.1 20241119",
+  "configurationFiles": {
+    "sha256": "71d881de826df8ad06b9534df019465f8309b136740777c52ef5bf2e4a734d31",
+    "files": [
+      {
+        "path": "Makefile",
+        "bytes": 23034,
+        "sha256": "1670feacd95904f9372c35700c4145a08c0482e9427badcdbe726230eb908877"
+      },
+      {
+        "path": "audio_rules.mk",
+        "bytes": 2031,
+        "sha256": "c3dfb4d3b80cc441747452d38dfdb69977cc785b87182c4418a4f7a025dfc1a3"
+      },
+      {
+        "path": "config.mk",
+        "bytes": 91,
+        "sha256": "a226b3d8ad42cee85612129d35e1ce5686a4ce5b72eb78083f0dbb2002e2ec92"
+      },
+      {
+        "path": "graphics_file_rules.mk",
+        "bytes": 26786,
+        "sha256": "a4fabd95a2759db6c1cbc4f6353b5532b67bafb9f574e7e7eb9c6b2f4e2b09a1"
+      },
+      {
+        "path": "include/config/ai.h",
+        "bytes": 13364,
+        "sha256": "6eaa73d152dcf81727e7e60d3efa24f028cacd4cf6ad8aaa49010e2fd70f9ef5"
+      },
+      {
+        "path": "include/config/battle.h",
+        "bytes": 48988,
+        "sha256": "3931482c53f028182a598e4fda76e7e69294349fa36f75e32b3c1ea544300571"
+      },
+      {
+        "path": "include/config/caps.h",
+        "bytes": 2466,
+        "sha256": "9736cf6ac82da0743b40cab86750a0f496430bb82829724cf013a39f151f6d48"
+      },
+      {
+        "path": "include/config/contest.h",
+        "bytes": 270,
+        "sha256": "4738d4b8d84c9ccc81cc7e108b4807420d5c6c1c6febe865e5eedc2168d44094"
+      },
+      {
+        "path": "include/config/debug.h",
+        "bytes": 1935,
+        "sha256": "957498d23da1c5dde34b9e60b6d2f6947d4a1e3569aa6a7c2ca730013716d3d4"
+      },
+      {
+        "path": "include/config/dexnav.h",
+        "bytes": 3332,
+        "sha256": "159f1dc1a7a9b2778bf9c5c1bb30617e2dfbd324404c2917c44799ea0bb83172"
+      },
+      {
+        "path": "include/config/fishing.h",
+        "bytes": 1914,
+        "sha256": "fa88a9a28669e6723206de6d492b322ab10c900a3a3ab7f41045e8db15b72c50"
+      },
+      {
+        "path": "include/config/follower_npc.h",
+        "bytes": 1544,
+        "sha256": "7473fad59ffe7db1a530dbfab3924cb97144dc3e7d1735af82918c03ecef6958"
+      },
+      {
+        "path": "include/config/general.h",
+        "bytes": 3619,
+        "sha256": "7fb56cf6d851585f2fe41f7996e6682dd8076f685c06ad2037fb40719ce88203"
+      },
+      {
+        "path": "include/config/item.h",
+        "bytes": 5617,
+        "sha256": "6c572b334828239b5d4becc71938e4307f3bb1e7c12e5ca4734fac5bbacb42b0"
+      },
+      {
+        "path": "include/config/name_box.h",
+        "bytes": 1118,
+        "sha256": "e5fb790a23cd2b5c01e4c5139c44f2cff6dc34dd7f8161cff2bf5f1ca2a61ba6"
+      },
+      {
+        "path": "include/config/overworld.h",
+        "bytes": 16657,
+        "sha256": "e863dee6213da5d761bb6fb7b613ddfe277df38e8840929e1e9e11e2b689e661"
+      },
+      {
+        "path": "include/config/pokedex_plus_hgss.h",
+        "bytes": 935,
+        "sha256": "328a2ecb7611ccbb6304d49561e6beda8fb9a628e1c860d5b7c96ce8ba4d5395"
+      },
+      {
+        "path": "include/config/pokemon.h",
+        "bytes": 9907,
+        "sha256": "dd9d746661d18a81dce3539603858eabe48e174213b6e1f7c67350b75b4030e2"
+      },
+      {
+        "path": "include/config/pokerus.h",
+        "bytes": 2856,
+        "sha256": "6407021b6c99e49c9c6bf02f5ef5dcc0ab9eec3c42e2987d40780528ec1f744d"
+      },
+      {
+        "path": "include/config/randomizer.h",
+        "bytes": 2054,
+        "sha256": "85a5fa1271737c55a38199ebae5fe303a9b6c35c4211ef34ad536a31d366cfd0"
+      },
+      {
+        "path": "include/config/save.h",
+        "bytes": 1809,
+        "sha256": "e3898a7bf6f9bfe2ae3bbd5ba70f38bd18de0bddead3cf419c8c9b7c47c4ddf7"
+      },
+      {
+        "path": "include/config/species_enabled.h",
+        "bytes": 34145,
+        "sha256": "a6fb69e89b0f60a5bb4e7cb93b57e6ea1e16b00283e6e0b6ea7dd982b1740216"
+      },
+      {
+        "path": "include/config/summary_screen.h",
+        "bytes": 2574,
+        "sha256": "79dc86bb9322679942c349987e1f03f2cae59419c19165d691e59aa909346a06"
+      },
+      {
+        "path": "include/config/test.h",
+        "bytes": 40028,
+        "sha256": "63cbf70c00fee57daf812c5b18809030f6205afe4263d9c7ace7e258abc67fd1"
+      },
+      {
+        "path": "include/config/text.h",
+        "bytes": 1409,
+        "sha256": "2c4f70e37f708c2d718a88331d3423e5c510805c0093213264a4788e88f91ee6"
+      },
+      {
+        "path": "json_data_rules.mk",
+        "bytes": 1223,
+        "sha256": "3b4fa8398200b778cbd093152d795ec4f8c4b9e92a43ea808c9d1e48bdcf7e71"
+      },
+      {
+        "path": "ld_script_modern.ld",
+        "bytes": 2925,
+        "sha256": "85d33f7bfa2b5b78de92a836868fe472319d23968a3254bf4ee7c64770ed2063"
+      },
+      {
+        "path": "libagbsyscall/Makefile",
+        "bytes": 2671,
+        "sha256": "4de0e159ddb7918ead4ffef1af4ecfccc3d9462eeb3b5ba94a4db4979f8a293f"
+      },
+      {
+        "path": "make_tools.mk",
+        "bytes": 1030,
+        "sha256": "9e7dddcb2c93da2a0b9b9b552c608133fcad594933786a4b13a0a27bb0bee1e2"
+      },
+      {
+        "path": "map_data_rules.mk",
+        "bytes": 3469,
+        "sha256": "05ba3b818e66b4ffb5dc63d31224921a11a591bfbecafd9e77849af9097e7dc2"
+      },
+      {
+        "path": "spritesheet_rules.mk",
+        "bytes": 216205,
+        "sha256": "93380f7e52865da5107f62fa2c2d3be6822a21281a3818e90081f27aab63db3e"
+      },
+      {
+        "path": "trainer_rules.mk",
+        "bytes": 973,
+        "sha256": "0a0d0a38372a913eeccf5eebe996a753764b6bea49247f02b49b0c8b0fc2fc49"
+      }
+    ],
+    "definition": "SHA256 of canonical JSON file path/size/SHA256 records"
+  },
+  "artifacts": [
+    {
+      "kind": "ROM",
+      "filename": "pokefirered.gba",
+      "bytes": 33554432,
+      "sha256": "14ffbb4739e873eb259ce584e879c081a78ee65cdef59103f4a3e3a110265023"
+    },
+    {
+      "kind": "ELF",
+      "filename": "pokefirered.elf",
+      "bytes": 45359288,
+      "sha256": "4134b0bf38cbef333fcd09a6f413bc1fb2296ec7dd3f253a56069b67e8d2da74"
+    },
+    {
+      "kind": "MAP",
+      "filename": "pokefirered.map",
+      "bytes": 6117935,
+      "sha256": "faa39b20e06a554ec7f2d362ea863518bdeadea8b4ebfd44ffef291cb7ef5b18"
+    }
+  ],
+  "resources": {
+    "ROMcapacity": 33554432,
+    "ROMused": 32772996,
+    "ROMfree": 781436,
+    "EWRAMused": 255044,
+    "IWRAMused": 25920,
+    "SaveBlock1": 15868,
+    "SaveBlock1Capacity": 15872,
+    "protectedReserve": 256
+  },
+  "limits": [
+    "Not a release or complete natural campaign qualification.",
+    "Original local native captures and saves are intentionally excluded.",
+    "37A Trail/title and 37C rider presentation remain owner-review previews.",
+    "Four-byte main-save margin and FireRed roamer fidelity defect remain open."
+  ]
+}

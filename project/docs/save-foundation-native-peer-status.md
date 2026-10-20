@@ -1,0 +1,18 @@
+# Native peer qualification — owner deferred
+
+October 13, 2026. Status: **NOT RUN — OWNER DEFERRED** for the actual native cable battle, partial incremental peer save, and native peer timing. The owner changed priority to less testing and faster progress toward a workable merged game. No paired emulator session or battle was started. This is a deferred check, not a failed peer test or a peer pass.
+
+The complete [local closeout](../_local/evidence/save-foundation-resume-01/final05-native/single-battle-owner-deferred-closeout.json) preserves session files, configuration observations and evidence hashes. The [chronological observations](../_local/evidence/save-foundation-resume-01/final05-native/single-battle-gui-events.jsonl) retain what was actually executed. All saves, ROMs and private evidence remain local and ignored.
+
+| Isolated copy | Actually executed before deferral | Preserved state |
+| --- | --- | --- |
+| Peer 1, trainer ID 40,767 | Ordinary Pallet → Route 1 → Viridian Mart Parcel → Oak's Pokédex scene → Viridian Center 2F. Incidental wild encounters were left with normal Run. No catch, badge or postgame grant. Normal Save at the right cable receptionist staging point, followed by full quit and actual process absence. | Immutable `after-ordinary-dex-staging.sav`, SHA-256 `f6afd131342e20ecf9afa4f0e63fdd3a4ef4e8ecc139587a4a5df204baf351fc`. [Read-only inspection](../_local/evidence/save-foundation-resume-01/final05-native/peer1-after-dex-staging-inspection.json) selected counter 4, coherent banks, blank Johto/reserve, position `(10,4)`, Viridian Center 2F. Actual Dex flag `0x829` set; Sevii gate `0x844` unset. Party count one, money 3,080, coins zero, five Balls and one Potion. |
+| Peer 2, trainer ID 25,928 | FireRed title, native Continue `RED`, time `0:24`, zero badges, then Pallet field. Fast-forward was temporarily enabled through the normal emulator menu; no quest walking or new Save followed. | Active save remains byte-identical to the immutable converted baseline, SHA-256 `0d41eacb54e6046f9c7f8b5164f91d9dedd95ff9cfaefd6ca486ada7b9e5ae60`. |
+
+Both use the exact final05 FireRed ROM, SHA-256 `97eb56f51e542eea6a324d59c0c33d4e3b6b91858714174c23ce2db490004f76`. Their folders are `_local/saves/firered/save-foundation-05-cable-battle-peer1/` and `...peer2/`, relative to `[LOCAL_WORKSPACE]/`. The original fresh and converted fixtures remain unchanged.
+
+On deferral, fast-forward was switched **off** through the emulator UI and actual 60 fps was observed before normal full quit. The proposed 4× setting was never selected. The original unbounded ratio (`-1`) and held ratio (`-1`), native FPS target, mute preference, disabled state/cheat autoload, disabled rewind and disabled autosave were retained. An executed process check confirmed mGBA absent. No UI observation was made after quit, avoiding automatic app relaunch.
+
+The prepared peer frame observers were not loaded. No `.sa2` file was allocated, no multiplayer window was created, and no native handshake, postbattle save or subsequent cold-load check occurred. The source [Single Battle plan](../_local/evidence/save-foundation-resume-01/final05-native/single-battle-bounded-plan.md) remains preparation only. The existing same-FR trade story gate is recorded separately in the [source audit](../_local/evidence/save-foundation-resume-01/final05-native/native-trade-prerequisite-audit.json); it was not repaired or bypassed.
+
+Completed foundation load/full-save evidence remains in the [final05 native report](save-foundation-final05-native-results.md). This deferred case does not invalidate those executed checks or add a peer qualification claim. Workstream A, networking, NAS, remote writes and the save layout were untouched.

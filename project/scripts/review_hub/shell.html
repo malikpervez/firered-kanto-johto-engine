@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' file: data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'">
+<title>FireRed — The Review Room</title><style>/*__CSS__*/</style></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<aside class="sidebar" id="sidebar">
+ <a class="brand" href="#home" aria-label="FireRed review home"><span class="brand-mark" aria-hidden="true"></span><span>PROJECT FIRERED<small>THE REVIEW ROOM</small></span></a>
+ <div class="nav-kicker">YOUR WORKSPACE</div>
+ <nav id="navigation" aria-label="Main navigation">
+  <a href="#home" data-view="home"><span>⌂</span>Review desk</a>
+  <a href="#journey" data-view="journey" id="journey-nav"><span aria-hidden="true">↝</span>Start-to-finish story</a>
+  <a href="#pikachu" data-view="pikachu" id="pikachu-nav"><span aria-hidden="true">ϟ</span>Pikachu moods</a>
+  <a href="#library=stories" data-view="stories"><span>◇</span>Story & dialogue</a>
+  <a href="#gallery" data-view="gallery"><span>▧</span>Images & captures</a>
+  <a href="#notes" data-view="notes"><span>✎</span>Feedback notebook<b id="note-count">0</b></a>
+  <div class="nav-divider"></div>
+  <a href="#library=all" data-view="library"><span>▤</span>All documents</a>
+  <a href="#library=engineering" data-view="engineering"><span>◫</span>Builds & tests</a>
+  <a href="#library=decisions" data-view="decisions"><span>◎</span>Decisions & feedback</a>
+ </nav>
+ <div class="sidebar-bottom"><span class="local-dot"></span> Local & private<p>No account. No upload.<br>Your original evidence stays intact.</p><button id="export-sidebar" class="sidebar-export">Export my notes ↗</button></div>
+</aside>
+<div class="workspace">
+ <header class="topbar"><button class="mobile-menu icon-button" id="mobile-menu" aria-label="Toggle navigation">☰</button><div class="breadcrumb">KANTO <span>→</span> JOHTO <i>/</i> <b id="crumb">Review desk</b></div><button class="search-trigger" id="search-trigger"><span>⌕</span> Search everything <kbd>⌘ K</kbd></button><span class="build-pill"><span></span>__BUILD_LABEL__</span></header>
+ <main id="main" tabindex="-1"></main>
+ <footer class="site-footer"><span>PROJECT FIRERED · WORKSTREAM B</span><span>Original builds, original evidence. Made easier to review.</span></footer>
+</div>
+<dialog id="search-dialog" class="search-dialog"><form method="dialog"><div class="search-dialog-top"><label class="sr-only" for="global-search">Search all documents</label><input id="global-search" placeholder="Search a character, scene, issue, or script…" autocomplete="off"><button class="icon-button" aria-label="Close search">×</button></div></form><div id="search-results"></div></dialog>
+<dialog id="lightbox" class="lightbox"><div class="lightbox-top"><span id="lightbox-type"></span><button class="icon-button" id="lightbox-close" aria-label="Close image">×</button></div><div class="lightbox-image"><button class="lightbox-arrow" id="image-prev" aria-label="Previous image">‹</button><img id="large-image" alt=""><button class="lightbox-arrow" id="image-next" aria-label="Next image">›</button></div><div class="lightbox-bottom"><div><h2 id="lightbox-caption"></h2><p id="lightbox-source"></p><a class="lightbox-review" id="lightbox-review" href="#home">Read the associated review ↗</a></div><button class="button button-light" id="image-note">✎ Add feedback</button></div></dialog>
+<dialog id="note-dialog" class="note-dialog"><form id="note-form"><div class="note-heading"><div><span class="eyebrow">YOUR FEEDBACK</span><h2>Leave a note.</h2></div><button type="button" class="icon-button" id="note-close" aria-label="Close note">×</button></div><p id="note-context"></p><label for="note-kind">What is this about?</label><select id="note-kind"><option>Dialogue & story</option><option>Artwork & staging</option><option>Gameplay issue</option><option>Idea for later</option><option>General feedback</option></select><label for="note-text">Your note</label><textarea id="note-text" rows="6" maxlength="12000" placeholder="What feels good? What would you change?" required></textarea><p class="note-local">Saved in this browser only. Export notes to keep a backup or share them later.</p><div class="note-actions"><button type="button" class="button button-ghost" id="note-cancel">Cancel</button><button type="submit" class="button">Save note ↗</button></div></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script id="review-data" type="application/json">__DATA__</script><script>/*__JS__*/</script>
+</body></html>
