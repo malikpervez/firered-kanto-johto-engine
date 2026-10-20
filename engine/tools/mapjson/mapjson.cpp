@@ -882,26 +882,11 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
     vector<string> invalid_maps;
     vector<string> valid_map_ids;
 
+    // One game: every map that has a folder is built; removed maps (removed_maps.json) get an empty slot below.
     for (const string &filepath : map_filepaths) {
         string err;
-        string map_json_text = read_text_file(filepath);
-        Json map_data = Json::parse(map_json_text, err);
-        if (map_data == Json())
+        if (Json::parse(read_text_file(filepath), err) == Json())
             FATAL_ERROR("Failed to read '%s' while processing groups: %s\n", filepath.c_str(), err.c_str());
-
-        string game_ver = json_to_string(map_data, "game_version", true);
-        if (game_ver.empty())
-            game_ver = "emerald";
-
-        string map_name = json_to_string(map_data, "name");
-
-        string expected_game_ver = version;
-        if (expected_game_ver == "firered")
-            expected_game_ver = "frlg";
-
-        if (game_ver != expected_game_ver && !is_firered_campaign_map(map_data)) {
-            invalid_maps.push_back(map_name);
-        }
     }
 
     if (groups_data == Json())
@@ -927,16 +912,9 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
     write_text_file(output_c + sep + "map_groups.h", map_header_text);
 }
 
+// One game: every layout is built except the removed ones (see layout_removed).
 bool layout_matches_version(const Json &layout) {
-    string game_ver = json_to_string(layout, "game_version", true);
-    if (game_ver.empty())
-        game_ver = "emerald";
-    string expected = version;
-    if (expected == "firered")
-        expected = "frlg";
-    return game_ver == expected
-        || (build_game == "FIRERED" && (layout["firered_campaign"].bool_value()
-            || layout["firered_campaign"].is_object()));
+    return !layout["removed"].bool_value();
 }
 
 // Native FireRed layouts may adopt donor geometry without changing identities.
