@@ -3943,90 +3943,142 @@ Cry_Deoxys::
 .endif @ P_FAMILY_DEOXYS
 
 .if P_FAMILY_TURTWIG == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Turtwig family
+	.set Cry_Turtwig, Cry_Ditto
+#else
 	.align 2
 Cry_Turtwig::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/turtwig.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Turtwig family
+	.set Cry_Grotle, Cry_Ditto
+#else
 	.align 2
 Cry_Grotle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/grotle.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Turtwig family
+	.set Cry_Torterra, Cry_Ditto
+#else
 	.align 2
 Cry_Torterra::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/torterra.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TURTWIG
 
 .if P_FAMILY_CHIMCHAR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chimchar family
+	.set Cry_Chimchar, Cry_Ditto
+#else
 	.align 2
 Cry_Chimchar::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chimchar.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chimchar family
+	.set Cry_Monferno, Cry_Ditto
+#else
 	.align 2
 Cry_Monferno::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/monferno.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chimchar family
+	.set Cry_Infernape, Cry_Ditto
+#else
 	.align 2
 Cry_Infernape::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/infernape.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CHIMCHAR
 
 .if P_FAMILY_PIPLUP == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Piplup family
+	.set Cry_Piplup, Cry_Ditto
+#else
 	.align 2
 Cry_Piplup::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/piplup.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Piplup family
+	.set Cry_Prinplup, Cry_Ditto
+#else
 	.align 2
 Cry_Prinplup::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/prinplup.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Piplup family
+	.set Cry_Empoleon, Cry_Ditto
+#else
 	.align 2
 Cry_Empoleon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/empoleon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PIPLUP
 
 .if P_FAMILY_STARLY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Starly family
+	.set Cry_Starly, Cry_Ditto
+#else
 	.align 2
 Cry_Starly::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/starly.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Starly family
+	.set Cry_Staravia, Cry_Ditto
+#else
 	.align 2
 Cry_Staravia::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/staravia.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Starly family
+	.set Cry_Staraptor, Cry_Ditto
+#else
 	.align 2
 Cry_Staraptor::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/staraptor.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Starly family
+	.set Cry_StaraptorMega, Cry_Ditto
+#else
 	.align 2
 Cry_StaraptorMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/staraptor_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_STARLY
 
@@ -4045,65 +4097,101 @@ Cry_Bibarel::
 .endif @ P_FAMILY_BIDOOF
 
 .if P_FAMILY_KRICKETOT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Kricketot family
+	.set Cry_Kricketot, Cry_Ditto
+#else
 	.align 2
 Cry_Kricketot::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kricketot.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Kricketot family
+	.set Cry_Kricketune, Cry_Ditto
+#else
 	.align 2
 Cry_Kricketune::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kricketune.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KRICKETOT
 
 .if P_FAMILY_SHINX == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shinx family
+	.set Cry_Shinx, Cry_Ditto
+#else
 	.align 2
 Cry_Shinx::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shinx.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shinx family
+	.set Cry_Luxio, Cry_Ditto
+#else
 	.align 2
 Cry_Luxio::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/luxio.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shinx family
+	.set Cry_Luxray, Cry_Ditto
+#else
 	.align 2
 Cry_Luxray::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/luxray.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SHINX
 
 .if P_FAMILY_CRANIDOS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cranidos family
+	.set Cry_Cranidos, Cry_Ditto
+#else
 	.align 2
 Cry_Cranidos::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cranidos.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cranidos family
+	.set Cry_Rampardos, Cry_Ditto
+#else
 	.align 2
 Cry_Rampardos::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/rampardos.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CRANIDOS
 
 .if P_FAMILY_SHIELDON == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shieldon family
+	.set Cry_Shieldon, Cry_Ditto
+#else
 	.align 2
 Cry_Shieldon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shieldon.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shieldon family
+	.set Cry_Bastiodon, Cry_Ditto
+#else
 	.align 2
 Cry_Bastiodon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bastiodon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SHIELDON
 
 .if P_FAMILY_BURMY == TRUE
@@ -4141,11 +4229,15 @@ Cry_Vespiquen::
 .endif @ P_FAMILY_COMBEE
 
 .if P_FAMILY_PACHIRISU == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pachirisu family
+	.set Cry_Pachirisu, Cry_Ditto
+#else
 	.align 2
 Cry_Pachirisu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pachirisu.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PACHIRISU
 
 .if P_FAMILY_BUIZEL == TRUE
@@ -4191,203 +4283,315 @@ Cry_Gastrodon::
 .endif @ P_FAMILY_SHELLOS
 
 .if P_FAMILY_DRIFLOON == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Drifloon family
+	.set Cry_Drifloon, Cry_Ditto
+#else
 	.align 2
 Cry_Drifloon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/drifloon.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Drifloon family
+	.set Cry_Drifblim, Cry_Ditto
+#else
 	.align 2
 Cry_Drifblim::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/drifblim.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DRIFLOON
 
 .if P_FAMILY_BUNEARY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Buneary family
+	.set Cry_Buneary, Cry_Ditto
+#else
 	.align 2
 Cry_Buneary::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/buneary.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Buneary family
+	.set Cry_Lopunny, Cry_Ditto
+#else
 	.align 2
 Cry_Lopunny::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lopunny.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Buneary family
+	.set Cry_LopunnyMega, Cry_Ditto
+#else
 	.align 2
 Cry_LopunnyMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lopunny_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_BUNEARY
 
 .if P_FAMILY_GLAMEOW == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Glameow family
+	.set Cry_Glameow, Cry_Ditto
+#else
 	.align 2
 Cry_Glameow::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/glameow.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Glameow family
+	.set Cry_Purugly, Cry_Ditto
+#else
 	.align 2
 Cry_Purugly::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/purugly.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GLAMEOW
 
 .if P_FAMILY_STUNKY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Stunky family
+	.set Cry_Stunky, Cry_Ditto
+#else
 	.align 2
 Cry_Stunky::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stunky.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Stunky family
+	.set Cry_Skuntank, Cry_Ditto
+#else
 	.align 2
 Cry_Skuntank::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/skuntank.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_STUNKY
 
 .if P_FAMILY_BRONZOR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bronzor family
+	.set Cry_Bronzor, Cry_Ditto
+#else
 	.align 2
 Cry_Bronzor::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bronzor.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bronzor family
+	.set Cry_Bronzong, Cry_Ditto
+#else
 	.align 2
 Cry_Bronzong::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bronzong.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BRONZOR
 
 .if P_FAMILY_CHATOT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chatot family
+	.set Cry_Chatot, Cry_Ditto
+#else
 	.align 2
 Cry_Chatot::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chatot.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CHATOT
 
 .if P_FAMILY_SPIRITOMB == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Spiritomb family
+	.set Cry_Spiritomb, Cry_Ditto
+#else
 	.align 2
 Cry_Spiritomb::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/spiritomb.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SPIRITOMB
 
 .if P_FAMILY_GIBLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gible family
+	.set Cry_Gible, Cry_Ditto
+#else
 	.align 2
 Cry_Gible::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gible.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gible family
+	.set Cry_Gabite, Cry_Ditto
+#else
 	.align 2
 Cry_Gabite::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gabite.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gible family
+	.set Cry_Garchomp, Cry_Ditto
+#else
 	.align 2
 Cry_Garchomp::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/garchomp.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gible family
+	.set Cry_GarchompMega, Cry_Ditto
+#else
 	.align 2
 Cry_GarchompMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/garchomp_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_GIBLE
 
 .if P_FAMILY_RIOLU == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Riolu family
+	.set Cry_Riolu, Cry_Ditto
+#else
 	.align 2
 Cry_Riolu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/riolu.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Riolu family
+	.set Cry_Lucario, Cry_Ditto
+#else
 	.align 2
 Cry_Lucario::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lucario.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Riolu family
+	.set Cry_LucarioMega, Cry_Ditto
+#else
 	.align 2
 Cry_LucarioMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lucario_mega.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Riolu family
+	.set Cry_LucarioMegaZ, Cry_Ditto
+#else
 	.align 2
 Cry_LucarioMegaZ::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lucario_mega_z.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_RIOLU
 
 .if P_FAMILY_HIPPOPOTAS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Hippopotas family
+	.set Cry_Hippopotas, Cry_Ditto
+#else
 	.align 2
 Cry_Hippopotas::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/hippopotas.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Hippopotas family
+	.set Cry_Hippowdon, Cry_Ditto
+#else
 	.align 2
 Cry_Hippowdon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/hippowdon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_HIPPOPOTAS
 
 .if P_FAMILY_SKORUPI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skorupi family
+	.set Cry_Skorupi, Cry_Ditto
+#else
 	.align 2
 Cry_Skorupi::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/skorupi.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skorupi family
+	.set Cry_Drapion, Cry_Ditto
+#else
 	.align 2
 Cry_Drapion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/drapion.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SKORUPI
 
 .if P_FAMILY_CROAGUNK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Croagunk family
+	.set Cry_Croagunk, Cry_Ditto
+#else
 	.align 2
 Cry_Croagunk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/croagunk.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Croagunk family
+	.set Cry_Toxicroak, Cry_Ditto
+#else
 	.align 2
 Cry_Toxicroak::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/toxicroak.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CROAGUNK
 
 .if P_FAMILY_CARNIVINE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Carnivine family
+	.set Cry_Carnivine, Cry_Ditto
+#else
 	.align 2
 Cry_Carnivine::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/carnivine.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CARNIVINE
 
 .if P_FAMILY_FINNEON == TRUE
@@ -4405,24 +4609,36 @@ Cry_Lumineon::
 .endif @ P_FAMILY_FINNEON
 
 .if P_FAMILY_SNOVER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Snover family
+	.set Cry_Snover, Cry_Ditto
+#else
 	.align 2
 Cry_Snover::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/snover.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Snover family
+	.set Cry_Abomasnow, Cry_Ditto
+#else
 	.align 2
 Cry_Abomasnow::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/abomasnow.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Snover family
+	.set Cry_AbomasnowMega, Cry_Ditto
+#else
 	.align 2
 Cry_AbomasnowMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/abomasnow_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_SNOVER
 
@@ -4435,27 +4651,39 @@ Cry_Rotom::
 .endif @ P_FAMILY_ROTOM
 
 .if P_FAMILY_UXIE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Uxie family
+	.set Cry_Uxie, Cry_Ditto
+#else
 	.align 2
 Cry_Uxie::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/uxie.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_UXIE
 
 .if P_FAMILY_MESPRIT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Mesprit family
+	.set Cry_Mesprit, Cry_Ditto
+#else
 	.align 2
 Cry_Mesprit::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/mesprit.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MESPRIT
 
 .if P_FAMILY_AZELF == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Azelf family
+	.set Cry_Azelf, Cry_Ditto
+#else
 	.align 2
 Cry_Azelf::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/azelf.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_AZELF
 
 .if P_FAMILY_DIALGA == TRUE
@@ -4475,18 +4703,26 @@ Cry_Palkia::
 .endif @ P_FAMILY_PALKIA
 
 .if P_FAMILY_HEATRAN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Heatran family
+	.set Cry_Heatran, Cry_Ditto
+#else
 	.align 2
 Cry_Heatran::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/heatran.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Heatran family
+	.set Cry_HeatranMega, Cry_Ditto
+#else
 	.align 2
 Cry_HeatranMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/heatran_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_HEATRAN
 
@@ -4507,11 +4743,15 @@ Cry_Giratina::
 .endif @ P_FAMILY_GIRATINA
 
 .if P_FAMILY_CRESSELIA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cresselia family
+	.set Cry_Cresselia, Cry_Ditto
+#else
 	.align 2
 Cry_Cresselia::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cresselia.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CRESSELIA
 
 .if P_FAMILY_MANAPHY == TRUE
@@ -4545,17 +4785,25 @@ Cry_DarkraiMega::
 .endif @ P_FAMILY_DARKRAI
 
 .if P_FAMILY_SHAYMIN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shaymin family
+	.set Cry_ShayminLand, Cry_Ditto
+#else
 	.align 2
 Cry_ShayminLand::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shaymin_land.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shaymin family
+	.set Cry_ShayminSky, Cry_Ditto
+#else
 	.align 2
 Cry_ShayminSky::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shaymin_sky.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SHAYMIN
 
 .if P_FAMILY_ARCEUS == TRUE
@@ -4567,183 +4815,287 @@ Cry_Arceus::
 .endif @ P_FAMILY_ARCEUS
 
 .if P_FAMILY_VICTINI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Victini family
+	.set Cry_Victini, Cry_Ditto
+#else
 	.align 2
 Cry_Victini::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/victini.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_VICTINI
 
 .if P_FAMILY_SNIVY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Snivy family
+	.set Cry_Snivy, Cry_Ditto
+#else
 	.align 2
 Cry_Snivy::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/snivy.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Snivy family
+	.set Cry_Servine, Cry_Ditto
+#else
 	.align 2
 Cry_Servine::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/servine.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Snivy family
+	.set Cry_Serperior, Cry_Ditto
+#else
 	.align 2
 Cry_Serperior::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/serperior.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SNIVY
 
 .if P_FAMILY_TEPIG == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tepig family
+	.set Cry_Tepig, Cry_Ditto
+#else
 	.align 2
 Cry_Tepig::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tepig.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tepig family
+	.set Cry_Pignite, Cry_Ditto
+#else
 	.align 2
 Cry_Pignite::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pignite.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tepig family
+	.set Cry_Emboar, Cry_Ditto
+#else
 	.align 2
 Cry_Emboar::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/emboar.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tepig family
+	.set Cry_EmboarMega, Cry_Ditto
+#else
 	.align 2
 Cry_EmboarMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/emboar_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_TEPIG
 
 .if P_FAMILY_OSHAWOTT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Oshawott family
+	.set Cry_Oshawott, Cry_Ditto
+#else
 	.align 2
 Cry_Oshawott::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oshawott.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Oshawott family
+	.set Cry_Dewott, Cry_Ditto
+#else
 	.align 2
 Cry_Dewott::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dewott.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Oshawott family
+	.set Cry_Samurott, Cry_Ditto
+#else
 	.align 2
 Cry_Samurott::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/samurott.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_OSHAWOTT
 
 .if P_FAMILY_PATRAT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Patrat family
+	.set Cry_Patrat, Cry_Ditto
+#else
 	.align 2
 Cry_Patrat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/patrat.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Patrat family
+	.set Cry_Watchog, Cry_Ditto
+#else
 	.align 2
 Cry_Watchog::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/watchog.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PATRAT
 
 .if P_FAMILY_LILLIPUP == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Lillipup family
+	.set Cry_Lillipup, Cry_Ditto
+#else
 	.align 2
 Cry_Lillipup::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lillipup.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Lillipup family
+	.set Cry_Herdier, Cry_Ditto
+#else
 	.align 2
 Cry_Herdier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/herdier.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Lillipup family
+	.set Cry_Stoutland, Cry_Ditto
+#else
 	.align 2
 Cry_Stoutland::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stoutland.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_LILLIPUP
 
 .if P_FAMILY_PURRLOIN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Purrloin family
+	.set Cry_Purrloin, Cry_Ditto
+#else
 	.align 2
 Cry_Purrloin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/purrloin.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Purrloin family
+	.set Cry_Liepard, Cry_Ditto
+#else
 	.align 2
 Cry_Liepard::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/liepard.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PURRLOIN
 
 .if P_FAMILY_PANSAGE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pansage family
+	.set Cry_Pansage, Cry_Ditto
+#else
 	.align 2
 Cry_Pansage::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pansage.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pansage family
+	.set Cry_Simisage, Cry_Ditto
+#else
 	.align 2
 Cry_Simisage::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/simisage.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PANSAGE
 
 .if P_FAMILY_PANSEAR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pansear family
+	.set Cry_Pansear, Cry_Ditto
+#else
 	.align 2
 Cry_Pansear::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pansear.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pansear family
+	.set Cry_Simisear, Cry_Ditto
+#else
 	.align 2
 Cry_Simisear::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/simisear.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PANSEAR
 
 .if P_FAMILY_PANPOUR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Panpour family
+	.set Cry_Panpour, Cry_Ditto
+#else
 	.align 2
 Cry_Panpour::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/panpour.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Panpour family
+	.set Cry_Simipour, Cry_Ditto
+#else
 	.align 2
 Cry_Simipour::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/simipour.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PANPOUR
 
 .if P_FAMILY_MUNNA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Munna family
+	.set Cry_Munna, Cry_Ditto
+#else
 	.align 2
 Cry_Munna::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/munna.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Munna family
+	.set Cry_Musharna, Cry_Ditto
+#else
 	.align 2
 Cry_Musharna::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/musharna.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MUNNA
 
 .if P_FAMILY_PIDOVE == TRUE
@@ -4767,258 +5119,402 @@ Cry_Unfezant::
 .endif @ P_FAMILY_PIDOVE
 
 .if P_FAMILY_BLITZLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Blitzle family
+	.set Cry_Blitzle, Cry_Ditto
+#else
 	.align 2
 Cry_Blitzle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/blitzle.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Blitzle family
+	.set Cry_Zebstrika, Cry_Ditto
+#else
 	.align 2
 Cry_Zebstrika::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zebstrika.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BLITZLE
 
 .if P_FAMILY_ROGGENROLA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Roggenrola family
+	.set Cry_Roggenrola, Cry_Ditto
+#else
 	.align 2
 Cry_Roggenrola::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/roggenrola.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Roggenrola family
+	.set Cry_Boldore, Cry_Ditto
+#else
 	.align 2
 Cry_Boldore::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/boldore.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Roggenrola family
+	.set Cry_Gigalith, Cry_Ditto
+#else
 	.align 2
 Cry_Gigalith::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gigalith.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ROGGENROLA
 
 .if P_FAMILY_WOOBAT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Woobat family
+	.set Cry_Woobat, Cry_Ditto
+#else
 	.align 2
 Cry_Woobat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/woobat.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Woobat family
+	.set Cry_Swoobat, Cry_Ditto
+#else
 	.align 2
 Cry_Swoobat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/swoobat.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_WOOBAT
 
 .if P_FAMILY_DRILBUR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Drilbur family
+	.set Cry_Drilbur, Cry_Ditto
+#else
 	.align 2
 Cry_Drilbur::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/drilbur.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Drilbur family
+	.set Cry_Excadrill, Cry_Ditto
+#else
 	.align 2
 Cry_Excadrill::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/excadrill.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Drilbur family
+	.set Cry_ExcadrillMega, Cry_Ditto
+#else
 	.align 2
 Cry_ExcadrillMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/excadrill_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_DRILBUR
 
 .if P_FAMILY_AUDINO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Audino family
+	.set Cry_Audino, Cry_Ditto
+#else
 	.align 2
 Cry_Audino::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/audino.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Audino family
+	.set Cry_AudinoMega, Cry_Ditto
+#else
 	.align 2
 Cry_AudinoMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/audino_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_AUDINO
 
 .if P_FAMILY_TIMBURR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Timburr family
+	.set Cry_Timburr, Cry_Ditto
+#else
 	.align 2
 Cry_Timburr::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/timburr.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Timburr family
+	.set Cry_Gurdurr, Cry_Ditto
+#else
 	.align 2
 Cry_Gurdurr::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gurdurr.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Timburr family
+	.set Cry_Conkeldurr, Cry_Ditto
+#else
 	.align 2
 Cry_Conkeldurr::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/conkeldurr.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TIMBURR
 
 .if P_FAMILY_TYMPOLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tympole family
+	.set Cry_Tympole, Cry_Ditto
+#else
 	.align 2
 Cry_Tympole::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tympole.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tympole family
+	.set Cry_Palpitoad, Cry_Ditto
+#else
 	.align 2
 Cry_Palpitoad::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/palpitoad.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tympole family
+	.set Cry_Seismitoad, Cry_Ditto
+#else
 	.align 2
 Cry_Seismitoad::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/seismitoad.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TYMPOLE
 
 .if P_FAMILY_THROH == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Throh family
+	.set Cry_Throh, Cry_Ditto
+#else
 	.align 2
 Cry_Throh::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/throh.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_THROH
 
 .if P_FAMILY_SAWK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sawk family
+	.set Cry_Sawk, Cry_Ditto
+#else
 	.align 2
 Cry_Sawk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sawk.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SAWK
 
 .if P_FAMILY_SEWADDLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sewaddle family
+	.set Cry_Sewaddle, Cry_Ditto
+#else
 	.align 2
 Cry_Sewaddle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sewaddle.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sewaddle family
+	.set Cry_Swadloon, Cry_Ditto
+#else
 	.align 2
 Cry_Swadloon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/swadloon.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sewaddle family
+	.set Cry_Leavanny, Cry_Ditto
+#else
 	.align 2
 Cry_Leavanny::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/leavanny.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SEWADDLE
 
 .if P_FAMILY_VENIPEDE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Venipede family
+	.set Cry_Venipede, Cry_Ditto
+#else
 	.align 2
 Cry_Venipede::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/venipede.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Venipede family
+	.set Cry_Whirlipede, Cry_Ditto
+#else
 	.align 2
 Cry_Whirlipede::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/whirlipede.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Venipede family
+	.set Cry_Scolipede, Cry_Ditto
+#else
 	.align 2
 Cry_Scolipede::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scolipede.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Venipede family
+	.set Cry_ScolipedeMega, Cry_Ditto
+#else
 	.align 2
 Cry_ScolipedeMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scolipede_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_VENIPEDE
 
 .if P_FAMILY_COTTONEE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cottonee family
+	.set Cry_Cottonee, Cry_Ditto
+#else
 	.align 2
 Cry_Cottonee::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cottonee.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cottonee family
+	.set Cry_Whimsicott, Cry_Ditto
+#else
 	.align 2
 Cry_Whimsicott::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/whimsicott.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_COTTONEE
 
 .if P_FAMILY_PETILIL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Petilil family
+	.set Cry_Petilil, Cry_Ditto
+#else
 	.align 2
 Cry_Petilil::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/petilil.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Petilil family
+	.set Cry_Lilligant, Cry_Ditto
+#else
 	.align 2
 Cry_Lilligant::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lilligant.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PETILIL
 
 .if P_FAMILY_BASCULIN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Basculin family
+	.set Cry_Basculin, Cry_Ditto
+#else
 	.align 2
 Cry_Basculin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/basculin.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_HISUIAN_FORMS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Basculin family
+	.set Cry_Basculegion, Cry_Ditto
+#else
 	.align 2
 Cry_Basculegion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/basculegion.bin"
 .endif
+#endif // prune_cries.py
 
 .endif @ P_HISUIAN_FORMS
 .endif @ P_FAMILY_BASCULIN
 
 .if P_FAMILY_SANDILE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sandile family
+	.set Cry_Sandile, Cry_Ditto
+#else
 	.align 2
 Cry_Sandile::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sandile.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sandile family
+	.set Cry_Krokorok, Cry_Ditto
+#else
 	.align 2
 Cry_Krokorok::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/krokorok.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sandile family
+	.set Cry_Krookodile, Cry_Ditto
+#else
 	.align 2
 Cry_Krookodile::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/krookodile.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SANDILE
 
 .if P_FAMILY_DARUMAKA == TRUE
@@ -5036,106 +5532,162 @@ Cry_Darmanitan::
 .endif @ P_FAMILY_DARUMAKA
 
 .if P_FAMILY_MARACTUS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Maractus family
+	.set Cry_Maractus, Cry_Ditto
+#else
 	.align 2
 Cry_Maractus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/maractus.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MARACTUS
 
 .if P_FAMILY_DWEBBLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Dwebble family
+	.set Cry_Dwebble, Cry_Ditto
+#else
 	.align 2
 Cry_Dwebble::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dwebble.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Dwebble family
+	.set Cry_Crustle, Cry_Ditto
+#else
 	.align 2
 Cry_Crustle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/crustle.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DWEBBLE
 
 .if P_FAMILY_SCRAGGY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Scraggy family
+	.set Cry_Scraggy, Cry_Ditto
+#else
 	.align 2
 Cry_Scraggy::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scraggy.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Scraggy family
+	.set Cry_Scrafty, Cry_Ditto
+#else
 	.align 2
 Cry_Scrafty::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scrafty.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Scraggy family
+	.set Cry_ScraftyMega, Cry_Ditto
+#else
 	.align 2
 Cry_ScraftyMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scrafty_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_SCRAGGY
 
 .if P_FAMILY_SIGILYPH == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sigilyph family
+	.set Cry_Sigilyph, Cry_Ditto
+#else
 	.align 2
 Cry_Sigilyph::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sigilyph.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SIGILYPH
 
 .if P_FAMILY_YAMASK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Yamask family
+	.set Cry_Yamask, Cry_Ditto
+#else
 	.align 2
 Cry_Yamask::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/yamask.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Yamask family
+	.set Cry_Cofagrigus, Cry_Ditto
+#else
 	.align 2
 Cry_Cofagrigus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cofagrigus.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_GALARIAN_FORMS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Yamask family
+	.set Cry_Runerigus, Cry_Ditto
+#else
 	.align 2
 Cry_Runerigus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/runerigus.bin"
 .endif
+#endif // prune_cries.py
 
 .endif @ P_GALARIAN_FORMS
 .endif @ P_FAMILY_YAMASK
 
 .if P_FAMILY_TIRTOUGA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tirtouga family
+	.set Cry_Tirtouga, Cry_Ditto
+#else
 	.align 2
 Cry_Tirtouga::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tirtouga.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tirtouga family
+	.set Cry_Carracosta, Cry_Ditto
+#else
 	.align 2
 Cry_Carracosta::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/carracosta.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TIRTOUGA
 
 .if P_FAMILY_ARCHEN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Archen family
+	.set Cry_Archen, Cry_Ditto
+#else
 	.align 2
 Cry_Archen::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/archen.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Archen family
+	.set Cry_Archeops, Cry_Ditto
+#else
 	.align 2
 Cry_Archeops::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/archeops.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ARCHEN
 
 .if P_FAMILY_TRUBBISH == TRUE
@@ -5153,461 +5705,721 @@ Cry_Garbodor::
 .endif @ P_FAMILY_TRUBBISH
 
 .if P_FAMILY_ZORUA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zorua family
+	.set Cry_Zorua, Cry_Ditto
+#else
 	.align 2
 Cry_Zorua::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zorua.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zorua family
+	.set Cry_Zoroark, Cry_Ditto
+#else
 	.align 2
 Cry_Zoroark::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zoroark.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ZORUA
 
 .if P_FAMILY_MINCCINO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Minccino family
+	.set Cry_Minccino, Cry_Ditto
+#else
 	.align 2
 Cry_Minccino::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/minccino.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Minccino family
+	.set Cry_Cinccino, Cry_Ditto
+#else
 	.align 2
 Cry_Cinccino::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cinccino.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MINCCINO
 
 .if P_FAMILY_GOTHITA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gothita family
+	.set Cry_Gothita, Cry_Ditto
+#else
 	.align 2
 Cry_Gothita::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gothita.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gothita family
+	.set Cry_Gothorita, Cry_Ditto
+#else
 	.align 2
 Cry_Gothorita::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gothorita.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gothita family
+	.set Cry_Gothitelle, Cry_Ditto
+#else
 	.align 2
 Cry_Gothitelle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gothitelle.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GOTHITA
 
 .if P_FAMILY_SOLOSIS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Solosis family
+	.set Cry_Solosis, Cry_Ditto
+#else
 	.align 2
 Cry_Solosis::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/solosis.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Solosis family
+	.set Cry_Duosion, Cry_Ditto
+#else
 	.align 2
 Cry_Duosion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/duosion.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Solosis family
+	.set Cry_Reuniclus, Cry_Ditto
+#else
 	.align 2
 Cry_Reuniclus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/reuniclus.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SOLOSIS
 
 .if P_FAMILY_DUCKLETT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Ducklett family
+	.set Cry_Ducklett, Cry_Ditto
+#else
 	.align 2
 Cry_Ducklett::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/ducklett.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Ducklett family
+	.set Cry_Swanna, Cry_Ditto
+#else
 	.align 2
 Cry_Swanna::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/swanna.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DUCKLETT
 
 .if P_FAMILY_VANILLITE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Vanillite family
+	.set Cry_Vanillite, Cry_Ditto
+#else
 	.align 2
 Cry_Vanillite::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/vanillite.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Vanillite family
+	.set Cry_Vanillish, Cry_Ditto
+#else
 	.align 2
 Cry_Vanillish::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/vanillish.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Vanillite family
+	.set Cry_Vanilluxe, Cry_Ditto
+#else
 	.align 2
 Cry_Vanilluxe::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/vanilluxe.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_VANILLITE
 
 .if P_FAMILY_DEERLING == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Deerling family
+	.set Cry_Deerling, Cry_Ditto
+#else
 	.align 2
 Cry_Deerling::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/deerling.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Deerling family
+	.set Cry_Sawsbuck, Cry_Ditto
+#else
 	.align 2
 Cry_Sawsbuck::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sawsbuck.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DEERLING
 
 .if P_FAMILY_EMOLGA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Emolga family
+	.set Cry_Emolga, Cry_Ditto
+#else
 	.align 2
 Cry_Emolga::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/emolga.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_EMOLGA
 
 .if P_FAMILY_KARRABLAST == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Karrablast family
+	.set Cry_Karrablast, Cry_Ditto
+#else
 	.align 2
 Cry_Karrablast::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/karrablast.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Karrablast family
+	.set Cry_Escavalier, Cry_Ditto
+#else
 	.align 2
 Cry_Escavalier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/escavalier.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KARRABLAST
 
 .if P_FAMILY_FOONGUS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Foongus family
+	.set Cry_Foongus, Cry_Ditto
+#else
 	.align 2
 Cry_Foongus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/foongus.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Foongus family
+	.set Cry_Amoonguss, Cry_Ditto
+#else
 	.align 2
 Cry_Amoonguss::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/amoonguss.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FOONGUS
 
 .if P_FAMILY_FRILLISH == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Frillish family
+	.set Cry_Frillish, Cry_Ditto
+#else
 	.align 2
 Cry_Frillish::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/frillish.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Frillish family
+	.set Cry_Jellicent, Cry_Ditto
+#else
 	.align 2
 Cry_Jellicent::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/jellicent.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FRILLISH
 
 .if P_FAMILY_ALOMOMOLA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Alomomola family
+	.set Cry_Alomomola, Cry_Ditto
+#else
 	.align 2
 Cry_Alomomola::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/alomomola.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ALOMOMOLA
 
 .if P_FAMILY_JOLTIK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Joltik family
+	.set Cry_Joltik, Cry_Ditto
+#else
 	.align 2
 Cry_Joltik::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/joltik.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Joltik family
+	.set Cry_Galvantula, Cry_Ditto
+#else
 	.align 2
 Cry_Galvantula::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/galvantula.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_JOLTIK
 
 .if P_FAMILY_FERROSEED == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Ferroseed family
+	.set Cry_Ferroseed, Cry_Ditto
+#else
 	.align 2
 Cry_Ferroseed::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/ferroseed.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Ferroseed family
+	.set Cry_Ferrothorn, Cry_Ditto
+#else
 	.align 2
 Cry_Ferrothorn::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/ferrothorn.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FERROSEED
 
 .if P_FAMILY_KLINK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Klink family
+	.set Cry_Klink, Cry_Ditto
+#else
 	.align 2
 Cry_Klink::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/klink.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Klink family
+	.set Cry_Klang, Cry_Ditto
+#else
 	.align 2
 Cry_Klang::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/klang.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Klink family
+	.set Cry_Klinklang, Cry_Ditto
+#else
 	.align 2
 Cry_Klinklang::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/klinklang.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KLINK
 
 .if P_FAMILY_TYNAMO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tynamo family
+	.set Cry_Tynamo, Cry_Ditto
+#else
 	.align 2
 Cry_Tynamo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tynamo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tynamo family
+	.set Cry_Eelektrik, Cry_Ditto
+#else
 	.align 2
 Cry_Eelektrik::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eelektrik.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tynamo family
+	.set Cry_Eelektross, Cry_Ditto
+#else
 	.align 2
 Cry_Eelektross::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eelektross.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tynamo family
+	.set Cry_EelektrossMega, Cry_Ditto
+#else
 	.align 2
 Cry_EelektrossMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eelektross_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_TYNAMO
 
 .if P_FAMILY_ELGYEM == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Elgyem family
+	.set Cry_Elgyem, Cry_Ditto
+#else
 	.align 2
 Cry_Elgyem::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/elgyem.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Elgyem family
+	.set Cry_Beheeyem, Cry_Ditto
+#else
 	.align 2
 Cry_Beheeyem::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/beheeyem.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ELGYEM
 
 .if P_FAMILY_LITWICK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Litwick family
+	.set Cry_Litwick, Cry_Ditto
+#else
 	.align 2
 Cry_Litwick::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/litwick.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Litwick family
+	.set Cry_Lampent, Cry_Ditto
+#else
 	.align 2
 Cry_Lampent::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lampent.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Litwick family
+	.set Cry_Chandelure, Cry_Ditto
+#else
 	.align 2
 Cry_Chandelure::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chandelure.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Litwick family
+	.set Cry_ChandelureMega, Cry_Ditto
+#else
 	.align 2
 Cry_ChandelureMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chandelure_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_LITWICK
 
 .if P_FAMILY_AXEW == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Axew family
+	.set Cry_Axew, Cry_Ditto
+#else
 	.align 2
 Cry_Axew::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/axew.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Axew family
+	.set Cry_Fraxure, Cry_Ditto
+#else
 	.align 2
 Cry_Fraxure::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fraxure.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Axew family
+	.set Cry_Haxorus, Cry_Ditto
+#else
 	.align 2
 Cry_Haxorus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/haxorus.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_AXEW
 
 .if P_FAMILY_CUBCHOO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cubchoo family
+	.set Cry_Cubchoo, Cry_Ditto
+#else
 	.align 2
 Cry_Cubchoo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cubchoo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cubchoo family
+	.set Cry_Beartic, Cry_Ditto
+#else
 	.align 2
 Cry_Beartic::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/beartic.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CUBCHOO
 
 .if P_FAMILY_CRYOGONAL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cryogonal family
+	.set Cry_Cryogonal, Cry_Ditto
+#else
 	.align 2
 Cry_Cryogonal::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cryogonal.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CRYOGONAL
 
 .if P_FAMILY_SHELMET == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shelmet family
+	.set Cry_Shelmet, Cry_Ditto
+#else
 	.align 2
 Cry_Shelmet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shelmet.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shelmet family
+	.set Cry_Accelgor, Cry_Ditto
+#else
 	.align 2
 Cry_Accelgor::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/accelgor.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SHELMET
 
 .if P_FAMILY_STUNFISK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Stunfisk family
+	.set Cry_Stunfisk, Cry_Ditto
+#else
 	.align 2
 Cry_Stunfisk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stunfisk.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_STUNFISK
 
 .if P_FAMILY_MIENFOO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Mienfoo family
+	.set Cry_Mienfoo, Cry_Ditto
+#else
 	.align 2
 Cry_Mienfoo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/mienfoo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Mienfoo family
+	.set Cry_Mienshao, Cry_Ditto
+#else
 	.align 2
 Cry_Mienshao::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/mienshao.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MIENFOO
 
 .if P_FAMILY_DRUDDIGON == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Druddigon family
+	.set Cry_Druddigon, Cry_Ditto
+#else
 	.align 2
 Cry_Druddigon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/druddigon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DRUDDIGON
 
 .if P_FAMILY_GOLETT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Golett family
+	.set Cry_Golett, Cry_Ditto
+#else
 	.align 2
 Cry_Golett::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/golett.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Golett family
+	.set Cry_Golurk, Cry_Ditto
+#else
 	.align 2
 Cry_Golurk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/golurk.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Golett family
+	.set Cry_GolurkMega, Cry_Ditto
+#else
 	.align 2
 Cry_GolurkMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/golurk_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_GOLETT
 
 .if P_FAMILY_PAWNIARD == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pawniard family
+	.set Cry_Pawniard, Cry_Ditto
+#else
 	.align 2
 Cry_Pawniard::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pawniard.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pawniard family
+	.set Cry_Bisharp, Cry_Ditto
+#else
 	.align 2
 Cry_Bisharp::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bisharp.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_GEN_9_CROSS_EVOS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pawniard family
+	.set Cry_Kingambit, Cry_Ditto
+#else
 	.align 2
 Cry_Kingambit::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kingambit.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_GEN_9_CROSS_EVOS
 .endif @ P_FAMILY_PAWNIARD
 
 .if P_FAMILY_BOUFFALANT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bouffalant family
+	.set Cry_Bouffalant, Cry_Ditto
+#else
 	.align 2
 Cry_Bouffalant::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bouffalant.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BOUFFALANT
 
 .if P_FAMILY_RUFFLET == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Rufflet family
+	.set Cry_Rufflet, Cry_Ditto
+#else
 	.align 2
 Cry_Rufflet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/rufflet.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Rufflet family
+	.set Cry_Braviary, Cry_Ditto
+#else
 	.align 2
 Cry_Braviary::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/braviary.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_RUFFLET
 
 .if P_FAMILY_VULLABY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Vullaby family
+	.set Cry_Vullaby, Cry_Ditto
+#else
 	.align 2
 Cry_Vullaby::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/vullaby.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Vullaby family
+	.set Cry_Mandibuzz, Cry_Ditto
+#else
 	.align 2
 Cry_Mandibuzz::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/mandibuzz.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_VULLABY
 
 .if P_FAMILY_HEATMOR == TRUE
@@ -5627,221 +6439,341 @@ Cry_Durant::
 .endif @ P_FAMILY_DURANT
 
 .if P_FAMILY_DEINO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Deino family
+	.set Cry_Deino, Cry_Ditto
+#else
 	.align 2
 Cry_Deino::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/deino.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Deino family
+	.set Cry_Zweilous, Cry_Ditto
+#else
 	.align 2
 Cry_Zweilous::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zweilous.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Deino family
+	.set Cry_Hydreigon, Cry_Ditto
+#else
 	.align 2
 Cry_Hydreigon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/hydreigon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DEINO
 
 .if P_FAMILY_LARVESTA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Larvesta family
+	.set Cry_Larvesta, Cry_Ditto
+#else
 	.align 2
 Cry_Larvesta::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/larvesta.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Larvesta family
+	.set Cry_Volcarona, Cry_Ditto
+#else
 	.align 2
 Cry_Volcarona::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/volcarona.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_LARVESTA
 
 .if P_FAMILY_COBALION == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cobalion family
+	.set Cry_Cobalion, Cry_Ditto
+#else
 	.align 2
 Cry_Cobalion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cobalion.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_COBALION
 
 .if P_FAMILY_TERRAKION == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Terrakion family
+	.set Cry_Terrakion, Cry_Ditto
+#else
 	.align 2
 Cry_Terrakion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/terrakion.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TERRAKION
 
 .if P_FAMILY_VIRIZION == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Virizion family
+	.set Cry_Virizion, Cry_Ditto
+#else
 	.align 2
 Cry_Virizion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/virizion.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_VIRIZION
 
 .if P_FAMILY_TORNADUS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tornadus family
+	.set Cry_TornadusIncarnate, Cry_Ditto
+#else
 	.align 2
 Cry_TornadusIncarnate::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tornadus_incarnate.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tornadus family
+	.set Cry_TornadusTherian, Cry_Ditto
+#else
 	.align 2
 Cry_TornadusTherian::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tornadus_therian.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TORNADUS
 
 .if P_FAMILY_THUNDURUS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Thundurus family
+	.set Cry_ThundurusIncarnate, Cry_Ditto
+#else
 	.align 2
 Cry_ThundurusIncarnate::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/thundurus_incarnate.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Thundurus family
+	.set Cry_ThundurusTherian, Cry_Ditto
+#else
 	.align 2
 Cry_ThundurusTherian::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/thundurus_therian.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_THUNDURUS
 
 .if P_FAMILY_RESHIRAM == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Reshiram family
+	.set Cry_Reshiram, Cry_Ditto
+#else
 	.align 2
 Cry_Reshiram::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/reshiram.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_RESHIRAM
 
 .if P_FAMILY_ZEKROM == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zekrom family
+	.set Cry_Zekrom, Cry_Ditto
+#else
 	.align 2
 Cry_Zekrom::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zekrom.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ZEKROM
 
 .if P_FAMILY_LANDORUS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Landorus family
+	.set Cry_LandorusIncarnate, Cry_Ditto
+#else
 	.align 2
 Cry_LandorusIncarnate::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/landorus_incarnate.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Landorus family
+	.set Cry_LandorusTherian, Cry_Ditto
+#else
 	.align 2
 Cry_LandorusTherian::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/landorus_therian.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_LANDORUS
 
 .if P_FAMILY_KYUREM == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Kyurem family
+	.set Cry_Kyurem, Cry_Ditto
+#else
 	.align 2
 Cry_Kyurem::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kyurem.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_FUSION_FORMS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Kyurem family
+	.set Cry_KyuremWhite, Cry_Ditto
+#else
 	.align 2
 Cry_KyuremWhite::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kyurem_white.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Kyurem family
+	.set Cry_KyuremBlack, Cry_Ditto
+#else
 	.align 2
 Cry_KyuremBlack::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kyurem_black.bin"
 .endif
+#endif // prune_cries.py
 
 .endif @ P_FUSION_FORMS
 .endif @ P_FAMILY_KYUREM
 
 .if P_FAMILY_KELDEO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Keldeo family
+	.set Cry_Keldeo, Cry_Ditto
+#else
 	.align 2
 Cry_Keldeo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/keldeo.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KELDEO
 
 .if P_FAMILY_MELOETTA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Meloetta family
+	.set Cry_Meloetta, Cry_Ditto
+#else
 	.align 2
 Cry_Meloetta::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/meloetta.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MELOETTA
 
 .if P_FAMILY_GENESECT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Genesect family
+	.set Cry_Genesect, Cry_Ditto
+#else
 	.align 2
 Cry_Genesect::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/genesect.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GENESECT
 
 .if P_FAMILY_CHESPIN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chespin family
+	.set Cry_Chespin, Cry_Ditto
+#else
 	.align 2
 Cry_Chespin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chespin.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chespin family
+	.set Cry_Quilladin, Cry_Ditto
+#else
 	.align 2
 Cry_Quilladin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/quilladin.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chespin family
+	.set Cry_Chesnaught, Cry_Ditto
+#else
 	.align 2
 Cry_Chesnaught::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chesnaught.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chespin family
+	.set Cry_ChesnaughtMega, Cry_Ditto
+#else
 	.align 2
 Cry_ChesnaughtMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chesnaught_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_CHESPIN
 
 .if P_FAMILY_FENNEKIN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fennekin family
+	.set Cry_Fennekin, Cry_Ditto
+#else
 	.align 2
 Cry_Fennekin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fennekin.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fennekin family
+	.set Cry_Braixen, Cry_Ditto
+#else
 	.align 2
 Cry_Braixen::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/braixen.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fennekin family
+	.set Cry_Delphox, Cry_Ditto
+#else
 	.align 2
 Cry_Delphox::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/delphox.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fennekin family
+	.set Cry_DelphoxMega, Cry_Ditto
+#else
 	.align 2
 Cry_DelphoxMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/delphox_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_FENNEKIN
 
@@ -5874,37 +6806,57 @@ Cry_GreninjaMega::
 .endif @ P_FAMILY_FROAKIE
 
 .if P_FAMILY_BUNNELBY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bunnelby family
+	.set Cry_Bunnelby, Cry_Ditto
+#else
 	.align 2
 Cry_Bunnelby::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bunnelby.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bunnelby family
+	.set Cry_Diggersby, Cry_Ditto
+#else
 	.align 2
 Cry_Diggersby::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/diggersby.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BUNNELBY
 
 .if P_FAMILY_FLETCHLING == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fletchling family
+	.set Cry_Fletchling, Cry_Ditto
+#else
 	.align 2
 Cry_Fletchling::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fletchling.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fletchling family
+	.set Cry_Fletchinder, Cry_Ditto
+#else
 	.align 2
 Cry_Fletchinder::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fletchinder.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fletchling family
+	.set Cry_Talonflame, Cry_Ditto
+#else
 	.align 2
 Cry_Talonflame::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/talonflame.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FLETCHLING
 
 .if P_FAMILY_SCATTERBUG == TRUE
@@ -5928,24 +6880,36 @@ Cry_Vivillon::
 .endif @ P_FAMILY_SCATTERBUG
 
 .if P_FAMILY_LITLEO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Litleo family
+	.set Cry_Litleo, Cry_Ditto
+#else
 	.align 2
 Cry_Litleo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/litleo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Litleo family
+	.set Cry_Pyroar, Cry_Ditto
+#else
 	.align 2
 Cry_Pyroar::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pyroar.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Litleo family
+	.set Cry_PyroarMega, Cry_Ditto
+#else
 	.align 2
 Cry_PyroarMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pyroar_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_LITLEO
 
@@ -5984,60 +6948,92 @@ Cry_Florges::
 .endif @ P_FAMILY_FLABEBE
 
 .if P_FAMILY_SKIDDO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skiddo family
+	.set Cry_Skiddo, Cry_Ditto
+#else
 	.align 2
 Cry_Skiddo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/skiddo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skiddo family
+	.set Cry_Gogoat, Cry_Ditto
+#else
 	.align 2
 Cry_Gogoat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gogoat.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SKIDDO
 
 .if P_FAMILY_PANCHAM == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pancham family
+	.set Cry_Pancham, Cry_Ditto
+#else
 	.align 2
 Cry_Pancham::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pancham.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pancham family
+	.set Cry_Pangoro, Cry_Ditto
+#else
 	.align 2
 Cry_Pangoro::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pangoro.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PANCHAM
 
 .if P_FAMILY_FURFROU == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Furfrou family
+	.set Cry_Furfrou, Cry_Ditto
+#else
 	.align 2
 Cry_Furfrou::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/furfrou.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FURFROU
 
 .if P_FAMILY_ESPURR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Espurr family
+	.set Cry_Espurr, Cry_Ditto
+#else
 	.align 2
 Cry_Espurr::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/espurr.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Espurr family
+	.set Cry_Meowstic, Cry_Ditto
+#else
 	.align 2
 Cry_Meowstic::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/meowstic.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Espurr family
+	.set Cry_MeowsticMega, Cry_Ditto
+#else
 	.align 2
 Cry_MeowsticMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/meowstic_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_ESPURR
 
@@ -6062,177 +7058,273 @@ Cry_Aegislash::
 .endif @ P_FAMILY_HONEDGE
 
 .if P_FAMILY_SPRITZEE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Spritzee family
+	.set Cry_Spritzee, Cry_Ditto
+#else
 	.align 2
 Cry_Spritzee::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/spritzee.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Spritzee family
+	.set Cry_Aromatisse, Cry_Ditto
+#else
 	.align 2
 Cry_Aromatisse::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/aromatisse.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SPRITZEE
 
 .if P_FAMILY_SWIRLIX == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Swirlix family
+	.set Cry_Swirlix, Cry_Ditto
+#else
 	.align 2
 Cry_Swirlix::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/swirlix.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Swirlix family
+	.set Cry_Slurpuff, Cry_Ditto
+#else
 	.align 2
 Cry_Slurpuff::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/slurpuff.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SWIRLIX
 
 .if P_FAMILY_INKAY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Inkay family
+	.set Cry_Inkay, Cry_Ditto
+#else
 	.align 2
 Cry_Inkay::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/inkay.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Inkay family
+	.set Cry_Malamar, Cry_Ditto
+#else
 	.align 2
 Cry_Malamar::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/malamar.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Inkay family
+	.set Cry_MalamarMega, Cry_Ditto
+#else
 	.align 2
 Cry_MalamarMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/malamar_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_INKAY
 
 .if P_FAMILY_BINACLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Binacle family
+	.set Cry_Binacle, Cry_Ditto
+#else
 	.align 2
 Cry_Binacle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/binacle.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Binacle family
+	.set Cry_Barbaracle, Cry_Ditto
+#else
 	.align 2
 Cry_Barbaracle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/barbaracle.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Binacle family
+	.set Cry_BarbaracleMega, Cry_Ditto
+#else
 	.align 2
 Cry_BarbaracleMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/barbaracle_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_BINACLE
 
 .if P_FAMILY_SKRELP == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skrelp family
+	.set Cry_Skrelp, Cry_Ditto
+#else
 	.align 2
 Cry_Skrelp::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/skrelp.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skrelp family
+	.set Cry_Dragalge, Cry_Ditto
+#else
 	.align 2
 Cry_Dragalge::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dragalge.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skrelp family
+	.set Cry_DragalgeMega, Cry_Ditto
+#else
 	.align 2
 Cry_DragalgeMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dragalge_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_SKRELP
 
 .if P_FAMILY_CLAUNCHER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Clauncher family
+	.set Cry_Clauncher, Cry_Ditto
+#else
 	.align 2
 Cry_Clauncher::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/clauncher.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Clauncher family
+	.set Cry_Clawitzer, Cry_Ditto
+#else
 	.align 2
 Cry_Clawitzer::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/clawitzer.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CLAUNCHER
 
 .if P_FAMILY_HELIOPTILE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Helioptile family
+	.set Cry_Helioptile, Cry_Ditto
+#else
 	.align 2
 Cry_Helioptile::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/helioptile.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Helioptile family
+	.set Cry_Heliolisk, Cry_Ditto
+#else
 	.align 2
 Cry_Heliolisk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/heliolisk.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_HELIOPTILE
 
 .if P_FAMILY_TYRUNT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tyrunt family
+	.set Cry_Tyrunt, Cry_Ditto
+#else
 	.align 2
 Cry_Tyrunt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tyrunt.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tyrunt family
+	.set Cry_Tyrantrum, Cry_Ditto
+#else
 	.align 2
 Cry_Tyrantrum::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tyrantrum.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TYRUNT
 
 .if P_FAMILY_AMAURA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Amaura family
+	.set Cry_Amaura, Cry_Ditto
+#else
 	.align 2
 Cry_Amaura::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/amaura.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Amaura family
+	.set Cry_Aurorus, Cry_Ditto
+#else
 	.align 2
 Cry_Aurorus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/aurorus.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_AMAURA
 
 .if P_FAMILY_HAWLUCHA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Hawlucha family
+	.set Cry_Hawlucha, Cry_Ditto
+#else
 	.align 2
 Cry_Hawlucha::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/hawlucha.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Hawlucha family
+	.set Cry_HawluchaMega, Cry_Ditto
+#else
 	.align 2
 Cry_HawluchaMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/hawlucha_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_HAWLUCHA
 
 .if P_FAMILY_DEDENNE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Dedenne family
+	.set Cry_Dedenne, Cry_Ditto
+#else
 	.align 2
 Cry_Dedenne::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dedenne.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DEDENNE
 
 .if P_FAMILY_CARBINK == TRUE
@@ -6244,85 +7336,133 @@ Cry_Carbink::
 .endif @ P_FAMILY_CARBINK
 
 .if P_FAMILY_GOOMY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Goomy family
+	.set Cry_Goomy, Cry_Ditto
+#else
 	.align 2
 Cry_Goomy::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/goomy.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Goomy family
+	.set Cry_Sliggoo, Cry_Ditto
+#else
 	.align 2
 Cry_Sliggoo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sliggoo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Goomy family
+	.set Cry_Goodra, Cry_Ditto
+#else
 	.align 2
 Cry_Goodra::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/goodra.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GOOMY
 
 .if P_FAMILY_KLEFKI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Klefki family
+	.set Cry_Klefki, Cry_Ditto
+#else
 	.align 2
 Cry_Klefki::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/klefki.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KLEFKI
 
 .if P_FAMILY_PHANTUMP == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Phantump family
+	.set Cry_Phantump, Cry_Ditto
+#else
 	.align 2
 Cry_Phantump::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/phantump.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Phantump family
+	.set Cry_Trevenant, Cry_Ditto
+#else
 	.align 2
 Cry_Trevenant::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/trevenant.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PHANTUMP
 
 .if P_FAMILY_PUMPKABOO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pumpkaboo family
+	.set Cry_Pumpkaboo, Cry_Ditto
+#else
 	.align 2
 Cry_Pumpkaboo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pumpkaboo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pumpkaboo family
+	.set Cry_PumpkabooSuper, Cry_Ditto
+#else
 	.align 2
 Cry_PumpkabooSuper::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pumpkaboo_super.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pumpkaboo family
+	.set Cry_Gourgeist, Cry_Ditto
+#else
 	.align 2
 Cry_Gourgeist::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gourgeist.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pumpkaboo family
+	.set Cry_GourgeistSuper, Cry_Ditto
+#else
 	.align 2
 Cry_GourgeistSuper::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gourgeist_super.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PUMPKABOO
 
 .if P_FAMILY_BERGMITE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bergmite family
+	.set Cry_Bergmite, Cry_Ditto
+#else
 	.align 2
 Cry_Bergmite::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bergmite.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bergmite family
+	.set Cry_Avalugg, Cry_Ditto
+#else
 	.align 2
 Cry_Avalugg::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/avalugg.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BERGMITE
 
 .if P_FAMILY_NOIBAT == TRUE
@@ -6340,62 +7480,94 @@ Cry_Noivern::
 .endif @ P_FAMILY_NOIBAT
 
 .if P_FAMILY_XERNEAS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Xerneas family
+	.set Cry_Xerneas, Cry_Ditto
+#else
 	.align 2
 Cry_Xerneas::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/xerneas.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_XERNEAS
 
 .if P_FAMILY_YVELTAL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Yveltal family
+	.set Cry_Yveltal, Cry_Ditto
+#else
 	.align 2
 Cry_Yveltal::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/yveltal.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_YVELTAL
 
 .if P_FAMILY_ZYGARDE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zygarde family
+	.set Cry_Zygarde50, Cry_Ditto
+#else
 	.align 2
 Cry_Zygarde50::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zygarde_50.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zygarde family
+	.set Cry_Zygarde10, Cry_Ditto
+#else
 	.align 2
 Cry_Zygarde10::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zygarde_10.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zygarde family
+	.set Cry_ZygardeComplete, Cry_Ditto
+#else
 	.align 2
 Cry_ZygardeComplete::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zygarde_complete.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zygarde family
+	.set Cry_ZygardeMega, Cry_Ditto
+#else
 	.align 2
 Cry_ZygardeMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zygarde_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_ZYGARDE
 
 .if P_FAMILY_DIANCIE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Diancie family
+	.set Cry_Diancie, Cry_Ditto
+#else
 	.align 2
 Cry_Diancie::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/diancie.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Diancie family
+	.set Cry_DiancieMega, Cry_Ditto
+#else
 	.align 2
 Cry_DiancieMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/diancie_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_DIANCIE
 
@@ -6414,11 +7586,15 @@ Cry_HoopaUnbound::
 .endif @ P_FAMILY_HOOPA
 
 .if P_FAMILY_VOLCANION == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Volcanion family
+	.set Cry_Volcanion, Cry_Ditto
+#else
 	.align 2
 Cry_Volcanion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/volcanion.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_VOLCANION
 
 .if P_FAMILY_ROWLET == TRUE
@@ -6482,119 +7658,187 @@ Cry_Primarina::
 .endif @ P_FAMILY_POPPLIO
 
 .if P_FAMILY_PIKIPEK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pikipek family
+	.set Cry_Pikipek, Cry_Ditto
+#else
 	.align 2
 Cry_Pikipek::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pikipek.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pikipek family
+	.set Cry_Trumbeak, Cry_Ditto
+#else
 	.align 2
 Cry_Trumbeak::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/trumbeak.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pikipek family
+	.set Cry_Toucannon, Cry_Ditto
+#else
 	.align 2
 Cry_Toucannon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/toucannon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PIKIPEK
 
 .if P_FAMILY_YUNGOOS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Yungoos family
+	.set Cry_Yungoos, Cry_Ditto
+#else
 	.align 2
 Cry_Yungoos::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/yungoos.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Yungoos family
+	.set Cry_Gumshoos, Cry_Ditto
+#else
 	.align 2
 Cry_Gumshoos::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gumshoos.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_YUNGOOS
 
 .if P_FAMILY_GRUBBIN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Grubbin family
+	.set Cry_Grubbin, Cry_Ditto
+#else
 	.align 2
 Cry_Grubbin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/grubbin.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Grubbin family
+	.set Cry_Charjabug, Cry_Ditto
+#else
 	.align 2
 Cry_Charjabug::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/charjabug.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Grubbin family
+	.set Cry_Vikavolt, Cry_Ditto
+#else
 	.align 2
 Cry_Vikavolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/vikavolt.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GRUBBIN
 
 .if P_FAMILY_CRABRAWLER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Crabrawler family
+	.set Cry_Crabrawler, Cry_Ditto
+#else
 	.align 2
 Cry_Crabrawler::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/crabrawler.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Crabrawler family
+	.set Cry_Crabominable, Cry_Ditto
+#else
 	.align 2
 Cry_Crabominable::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/crabominable.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Crabrawler family
+	.set Cry_CrabominableMega, Cry_Ditto
+#else
 	.align 2
 Cry_CrabominableMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/crabominable_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_CRABRAWLER
 
 .if P_FAMILY_ORICORIO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Oricorio family
+	.set Cry_OricorioBaile, Cry_Ditto
+#else
 	.align 2
 Cry_OricorioBaile::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oricorio_baile.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Oricorio family
+	.set Cry_OricorioPomPom, Cry_Ditto
+#else
 	.align 2
 Cry_OricorioPomPom::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oricorio_pom_pom.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Oricorio family
+	.set Cry_OricorioPau, Cry_Ditto
+#else
 	.align 2
 Cry_OricorioPau::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oricorio_pau.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Oricorio family
+	.set Cry_OricorioSensu, Cry_Ditto
+#else
 	.align 2
 Cry_OricorioSensu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oricorio_sensu.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ORICORIO
 
 .if P_FAMILY_CUTIEFLY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cutiefly family
+	.set Cry_Cutiefly, Cry_Ditto
+#else
 	.align 2
 Cry_Cutiefly::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cutiefly.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cutiefly family
+	.set Cry_Ribombee, Cry_Ditto
+#else
 	.align 2
 Cry_Ribombee::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/ribombee.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CUTIEFLY
 
 .if P_FAMILY_ROCKRUFF == TRUE
@@ -6624,17 +7868,25 @@ Cry_LycanrocDusk::
 .endif @ P_FAMILY_ROCKRUFF
 
 .if P_FAMILY_WISHIWASHI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wishiwashi family
+	.set Cry_WishiwashiSolo, Cry_Ditto
+#else
 	.align 2
 Cry_WishiwashiSolo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wishiwashi_solo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wishiwashi family
+	.set Cry_WishiwashiSchool, Cry_Ditto
+#else
 	.align 2
 Cry_WishiwashiSchool::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wishiwashi_school.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_WISHIWASHI
 
 .if P_FAMILY_MAREANIE == TRUE
@@ -6652,152 +7904,236 @@ Cry_Toxapex::
 .endif @ P_FAMILY_MAREANIE
 
 .if P_FAMILY_MUDBRAY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Mudbray family
+	.set Cry_Mudbray, Cry_Ditto
+#else
 	.align 2
 Cry_Mudbray::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/mudbray.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Mudbray family
+	.set Cry_Mudsdale, Cry_Ditto
+#else
 	.align 2
 Cry_Mudsdale::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/mudsdale.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MUDBRAY
 
 .if P_FAMILY_DEWPIDER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Dewpider family
+	.set Cry_Dewpider, Cry_Ditto
+#else
 	.align 2
 Cry_Dewpider::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dewpider.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Dewpider family
+	.set Cry_Araquanid, Cry_Ditto
+#else
 	.align 2
 Cry_Araquanid::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/araquanid.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DEWPIDER
 
 .if P_FAMILY_FOMANTIS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fomantis family
+	.set Cry_Fomantis, Cry_Ditto
+#else
 	.align 2
 Cry_Fomantis::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fomantis.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fomantis family
+	.set Cry_Lurantis, Cry_Ditto
+#else
 	.align 2
 Cry_Lurantis::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lurantis.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FOMANTIS
 
 .if P_FAMILY_MORELULL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Morelull family
+	.set Cry_Morelull, Cry_Ditto
+#else
 	.align 2
 Cry_Morelull::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/morelull.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Morelull family
+	.set Cry_Shiinotic, Cry_Ditto
+#else
 	.align 2
 Cry_Shiinotic::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shiinotic.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MORELULL
 
 .if P_FAMILY_SALANDIT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Salandit family
+	.set Cry_Salandit, Cry_Ditto
+#else
 	.align 2
 Cry_Salandit::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/salandit.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Salandit family
+	.set Cry_Salazzle, Cry_Ditto
+#else
 	.align 2
 Cry_Salazzle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/salazzle.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SALANDIT
 
 .if P_FAMILY_STUFFUL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Stufful family
+	.set Cry_Stufful, Cry_Ditto
+#else
 	.align 2
 Cry_Stufful::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stufful.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Stufful family
+	.set Cry_Bewear, Cry_Ditto
+#else
 	.align 2
 Cry_Bewear::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bewear.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_STUFFUL
 
 .if P_FAMILY_BOUNSWEET == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bounsweet family
+	.set Cry_Bounsweet, Cry_Ditto
+#else
 	.align 2
 Cry_Bounsweet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bounsweet.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bounsweet family
+	.set Cry_Steenee, Cry_Ditto
+#else
 	.align 2
 Cry_Steenee::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/steenee.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bounsweet family
+	.set Cry_Tsareena, Cry_Ditto
+#else
 	.align 2
 Cry_Tsareena::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tsareena.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BOUNSWEET
 
 .if P_FAMILY_COMFEY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Comfey family
+	.set Cry_Comfey, Cry_Ditto
+#else
 	.align 2
 Cry_Comfey::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/comfey.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_COMFEY
 
 .if P_FAMILY_ORANGURU == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Oranguru family
+	.set Cry_Oranguru, Cry_Ditto
+#else
 	.align 2
 Cry_Oranguru::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oranguru.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ORANGURU
 
 .if P_FAMILY_PASSIMIAN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Passimian family
+	.set Cry_Passimian, Cry_Ditto
+#else
 	.align 2
 Cry_Passimian::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/passimian.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PASSIMIAN
 
 .if P_FAMILY_WIMPOD == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wimpod family
+	.set Cry_Wimpod, Cry_Ditto
+#else
 	.align 2
 Cry_Wimpod::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wimpod.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wimpod family
+	.set Cry_Golisopod, Cry_Ditto
+#else
 	.align 2
 Cry_Golisopod::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/golisopod.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wimpod family
+	.set Cry_GolisopodMega, Cry_Ditto
+#else
 	.align 2
 Cry_GolisopodMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/golisopod_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_WIMPOD
 
@@ -6816,25 +8152,37 @@ Cry_Palossand::
 .endif @ P_FAMILY_SANDYGAST
 
 .if P_FAMILY_PYUKUMUKU == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pyukumuku family
+	.set Cry_Pyukumuku, Cry_Ditto
+#else
 	.align 2
 Cry_Pyukumuku::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pyukumuku.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PYUKUMUKU
 
 .if P_FAMILY_TYPE_NULL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Type_Null family
+	.set Cry_TypeNull, Cry_Ditto
+#else
 	.align 2
 Cry_TypeNull::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/type_null.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Type_Null family
+	.set Cry_Silvally, Cry_Ditto
+#else
 	.align 2
 Cry_Silvally::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/silvally.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TYPE_NULL
 
 .if P_FAMILY_MINIOR == TRUE
@@ -6846,19 +8194,27 @@ Cry_Minior::
 .endif @ P_FAMILY_MINIOR
 
 .if P_FAMILY_KOMALA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Komala family
+	.set Cry_Komala, Cry_Ditto
+#else
 	.align 2
 Cry_Komala::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/komala.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KOMALA
 
 .if P_FAMILY_TURTONATOR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Turtonator family
+	.set Cry_Turtonator, Cry_Ditto
+#else
 	.align 2
 Cry_Turtonator::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/turtonator.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TURTONATOR
 
 .if P_FAMILY_TOGEDEMARU == TRUE
@@ -6878,35 +8234,51 @@ Cry_Mimikyu::
 .endif @ P_FAMILY_MIMIKYU
 
 .if P_FAMILY_BRUXISH == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bruxish family
+	.set Cry_Bruxish, Cry_Ditto
+#else
 	.align 2
 Cry_Bruxish::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bruxish.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BRUXISH
 
 .if P_FAMILY_DRAMPA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Drampa family
+	.set Cry_Drampa, Cry_Ditto
+#else
 	.align 2
 Cry_Drampa::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/drampa.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Drampa family
+	.set Cry_DrampaMega, Cry_Ditto
+#else
 	.align 2
 Cry_DrampaMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/drampa_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_DRAMPA
 
 .if P_FAMILY_DHELMISE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Dhelmise family
+	.set Cry_Dhelmise, Cry_Ditto
+#else
 	.align 2
 Cry_Dhelmise::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dhelmise.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DHELMISE
 
 .if P_FAMILY_JANGMO_O == TRUE
@@ -6988,59 +8360,87 @@ Cry_Lunala::
 .endif @ P_FAMILY_COSMOG
 
 .if P_FAMILY_NIHILEGO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Nihilego family
+	.set Cry_Nihilego, Cry_Ditto
+#else
 	.align 2
 Cry_Nihilego::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/nihilego.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_NIHILEGO
 
 .if P_FAMILY_BUZZWOLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Buzzwole family
+	.set Cry_Buzzwole, Cry_Ditto
+#else
 	.align 2
 Cry_Buzzwole::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/buzzwole.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BUZZWOLE
 
 .if P_FAMILY_PHEROMOSA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pheromosa family
+	.set Cry_Pheromosa, Cry_Ditto
+#else
 	.align 2
 Cry_Pheromosa::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pheromosa.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PHEROMOSA
 
 .if P_FAMILY_XURKITREE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Xurkitree family
+	.set Cry_Xurkitree, Cry_Ditto
+#else
 	.align 2
 Cry_Xurkitree::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/xurkitree.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_XURKITREE
 
 .if P_FAMILY_CELESTEELA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Celesteela family
+	.set Cry_Celesteela, Cry_Ditto
+#else
 	.align 2
 Cry_Celesteela::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/celesteela.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CELESTEELA
 
 .if P_FAMILY_KARTANA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Kartana family
+	.set Cry_Kartana, Cry_Ditto
+#else
 	.align 2
 Cry_Kartana::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kartana.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KARTANA
 
 .if P_FAMILY_GUZZLORD == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Guzzlord family
+	.set Cry_Guzzlord, Cry_Ditto
+#else
 	.align 2
 Cry_Guzzlord::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/guzzlord.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GUZZLORD
 
 .if P_FAMILY_NECROZMA == TRUE
@@ -7075,18 +8475,26 @@ Cry_NecrozmaUltra::
 .endif @ P_FAMILY_NECROZMA
 
 .if P_FAMILY_MAGEARNA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Magearna family
+	.set Cry_Magearna, Cry_Ditto
+#else
 	.align 2
 Cry_Magearna::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/magearna.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Magearna family
+	.set Cry_MagearnaMega, Cry_Ditto
+#else
 	.align 2
 Cry_MagearnaMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/magearna_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_MAGEARNA
 
@@ -7099,48 +8507,72 @@ Cry_Marshadow::
 .endif @ P_FAMILY_MARSHADOW
 
 .if P_FAMILY_POIPOLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Poipole family
+	.set Cry_Poipole, Cry_Ditto
+#else
 	.align 2
 Cry_Poipole::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/poipole.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Poipole family
+	.set Cry_Naganadel, Cry_Ditto
+#else
 	.align 2
 Cry_Naganadel::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/naganadel.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_POIPOLE
 
 .if P_FAMILY_STAKATAKA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Stakataka family
+	.set Cry_Stakataka, Cry_Ditto
+#else
 	.align 2
 Cry_Stakataka::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stakataka.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_STAKATAKA
 
 .if P_FAMILY_BLACEPHALON == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Blacephalon family
+	.set Cry_Blacephalon, Cry_Ditto
+#else
 	.align 2
 Cry_Blacephalon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/blacephalon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BLACEPHALON
 
 .if P_FAMILY_ZERAORA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zeraora family
+	.set Cry_Zeraora, Cry_Ditto
+#else
 	.align 2
 Cry_Zeraora::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zeraora.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zeraora family
+	.set Cry_ZeraoraMega, Cry_Ditto
+#else
 	.align 2
 Cry_ZeraoraMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zeraora_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_ZERAORA
 
@@ -7219,17 +8651,25 @@ Cry_Inteleon::
 .endif @ P_FAMILY_SOBBLE
 
 .if P_FAMILY_SKWOVET == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skwovet family
+	.set Cry_Skwovet, Cry_Ditto
+#else
 	.align 2
 Cry_Skwovet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/skwovet.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Skwovet family
+	.set Cry_Greedent, Cry_Ditto
+#else
 	.align 2
 Cry_Greedent::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/greedent.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SKWOVET
 
 .if P_FAMILY_ROOKIDEE == TRUE
@@ -7273,45 +8713,69 @@ Cry_Orbeetle::
 .endif @ P_FAMILY_BLIPBUG
 
 .if P_FAMILY_NICKIT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Nickit family
+	.set Cry_Nickit, Cry_Ditto
+#else
 	.align 2
 Cry_Nickit::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/nickit.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Nickit family
+	.set Cry_Thievul, Cry_Ditto
+#else
 	.align 2
 Cry_Thievul::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/thievul.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_NICKIT
 
 .if P_FAMILY_GOSSIFLEUR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gossifleur family
+	.set Cry_Gossifleur, Cry_Ditto
+#else
 	.align 2
 Cry_Gossifleur::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gossifleur.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gossifleur family
+	.set Cry_Eldegoss, Cry_Ditto
+#else
 	.align 2
 Cry_Eldegoss::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eldegoss.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GOSSIFLEUR
 
 .if P_FAMILY_WOOLOO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wooloo family
+	.set Cry_Wooloo, Cry_Ditto
+#else
 	.align 2
 Cry_Wooloo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wooloo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wooloo family
+	.set Cry_Dubwool, Cry_Ditto
+#else
 	.align 2
 Cry_Dubwool::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dubwool.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_WOOLOO
 
 .if P_FAMILY_CHEWTLE == TRUE
@@ -7329,17 +8793,25 @@ Cry_Drednaw::
 .endif @ P_FAMILY_CHEWTLE
 
 .if P_FAMILY_YAMPER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Yamper family
+	.set Cry_Yamper, Cry_Ditto
+#else
 	.align 2
 Cry_Yamper::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/yamper.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Yamper family
+	.set Cry_Boltund, Cry_Ditto
+#else
 	.align 2
 Cry_Boltund::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/boltund.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_YAMPER
 
 .if P_FAMILY_ROLYCOLY == TRUE
@@ -7425,17 +8897,25 @@ Cry_CramorantGulping::
 .endif @ P_FAMILY_CRAMORANT
 
 .if P_FAMILY_ARROKUDA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Arrokuda family
+	.set Cry_Arrokuda, Cry_Ditto
+#else
 	.align 2
 Cry_Arrokuda::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/arrokuda.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Arrokuda family
+	.set Cry_Barraskewda, Cry_Ditto
+#else
 	.align 2
 Cry_Barraskewda::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/barraskewda.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ARROKUDA
 
 .if P_FAMILY_TOXEL == TRUE
@@ -7473,17 +8953,25 @@ Cry_Centiskorch::
 .endif @ P_FAMILY_SIZZLIPEDE
 
 .if P_FAMILY_CLOBBOPUS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Clobbopus family
+	.set Cry_Clobbopus, Cry_Ditto
+#else
 	.align 2
 Cry_Clobbopus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/clobbopus.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Clobbopus family
+	.set Cry_Grapploct, Cry_Ditto
+#else
 	.align 2
 Cry_Grapploct::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/grapploct.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CLOBBOPUS
 
 .if P_FAMILY_SINISTEA == TRUE
@@ -7555,49 +9043,73 @@ Cry_Alcremie::
 .endif @ P_FAMILY_MILCERY
 
 .if P_FAMILY_FALINKS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Falinks family
+	.set Cry_Falinks, Cry_Ditto
+#else
 	.align 2
 Cry_Falinks::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/falinks.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Falinks family
+	.set Cry_FalinksMega, Cry_Ditto
+#else
 	.align 2
 Cry_FalinksMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/falinks_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_FALINKS
 
 .if P_FAMILY_PINCURCHIN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pincurchin family
+	.set Cry_Pincurchin, Cry_Ditto
+#else
 	.align 2
 Cry_Pincurchin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pincurchin.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PINCURCHIN
 
 .if P_FAMILY_SNOM == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Snom family
+	.set Cry_Snom, Cry_Ditto
+#else
 	.align 2
 Cry_Snom::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/snom.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Snom family
+	.set Cry_Frosmoth, Cry_Ditto
+#else
 	.align 2
 Cry_Frosmoth::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/frosmoth.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SNOM
 
 .if P_FAMILY_STONJOURNER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Stonjourner family
+	.set Cry_Stonjourner, Cry_Ditto
+#else
 	.align 2
 Cry_Stonjourner::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stonjourner.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_STONJOURNER
 
 .if P_FAMILY_EISCUE == TRUE
@@ -7615,17 +9127,25 @@ Cry_EiscueNoice::
 .endif @ P_FAMILY_EISCUE
 
 .if P_FAMILY_INDEEDEE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Indeedee family
+	.set Cry_IndeedeeM, Cry_Ditto
+#else
 	.align 2
 Cry_IndeedeeM::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/indeedee_m.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Indeedee family
+	.set Cry_IndeedeeF, Cry_Ditto
+#else
 	.align 2
 Cry_IndeedeeF::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/indeedee_f.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_INDEEDEE
 
 .if P_FAMILY_MORPEKO == TRUE
@@ -7657,35 +9177,51 @@ Cry_Copperajah::
 .endif @ P_FAMILY_CUFANT
 
 .if P_FAMILY_DRACOZOLT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Dracozolt family
+	.set Cry_Dracozolt, Cry_Ditto
+#else
 	.align 2
 Cry_Dracozolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dracozolt.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DRACOZOLT
 
 .if P_FAMILY_ARCTOZOLT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Arctozolt family
+	.set Cry_Arctozolt, Cry_Ditto
+#else
 	.align 2
 Cry_Arctozolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/arctozolt.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ARCTOZOLT
 
 .if P_FAMILY_DRACOVISH == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Dracovish family
+	.set Cry_Dracovish, Cry_Ditto
+#else
 	.align 2
 Cry_Dracovish::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dracovish.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_DRACOVISH
 
 .if P_FAMILY_ARCTOVISH == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Arctovish family
+	.set Cry_Arctovish, Cry_Ditto
+#else
 	.align 2
 Cry_Arctovish::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/arctovish.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ARCTOVISH
 
 .if P_FAMILY_DURALUDON == TRUE
@@ -7723,31 +9259,47 @@ Cry_Dragapult::
 .endif @ P_FAMILY_DREEPY
 
 .if P_FAMILY_ZACIAN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zacian family
+	.set Cry_ZacianHero, Cry_Ditto
+#else
 	.align 2
 Cry_ZacianHero::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zacian_hero.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zacian family
+	.set Cry_ZacianCrowned, Cry_Ditto
+#else
 	.align 2
 Cry_ZacianCrowned::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zacian_crowned.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ZACIAN
 
 .if P_FAMILY_ZAMAZENTA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zamazenta family
+	.set Cry_ZamazentaHero, Cry_Ditto
+#else
 	.align 2
 Cry_ZamazentaHero::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zamazenta_hero.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zamazenta family
+	.set Cry_ZamazentaCrowned, Cry_Ditto
+#else
 	.align 2
 Cry_ZamazentaCrowned::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zamazenta_crowned.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ZAMAZENTA
 
 .if P_FAMILY_ETERNATUS == TRUE
@@ -7785,11 +9337,15 @@ Cry_UrshifuRapidStrike::
 .endif @ P_FAMILY_KUBFU
 
 .if P_FAMILY_ZARUDE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Zarude family
+	.set Cry_Zarude, Cry_Ditto
+#else
 	.align 2
 Cry_Zarude::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zarude.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ZARUDE
 
 .if P_FAMILY_REGIELEKI == TRUE
@@ -7809,19 +9365,27 @@ Cry_Regidrago::
 .endif @ P_FAMILY_REGIDRAGO
 
 .if P_FAMILY_GLASTRIER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Glastrier family
+	.set Cry_Glastrier, Cry_Ditto
+#else
 	.align 2
 Cry_Glastrier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/glastrier.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GLASTRIER
 
 .if P_FAMILY_SPECTRIER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Spectrier family
+	.set Cry_Spectrier, Cry_Ditto
+#else
 	.align 2
 Cry_Spectrier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/spectrier.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SPECTRIER
 
 .if P_FAMILY_CALYREX == TRUE
@@ -7848,145 +9412,229 @@ Cry_CalyrexShadow::
 .endif @ P_FAMILY_CALYREX
 
 .if P_FAMILY_ENAMORUS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Enamorus family
+	.set Cry_EnamorusIncarnate, Cry_Ditto
+#else
 	.align 2
 Cry_EnamorusIncarnate::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/enamorus_incarnate.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Enamorus family
+	.set Cry_EnamorusTherian, Cry_Ditto
+#else
 	.align 2
 Cry_EnamorusTherian::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/enamorus_therian.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ENAMORUS
 
 .if P_FAMILY_SPRIGATITO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sprigatito family
+	.set Cry_Sprigatito, Cry_Ditto
+#else
 	.align 2
 Cry_Sprigatito::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sprigatito.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sprigatito family
+	.set Cry_Floragato, Cry_Ditto
+#else
 	.align 2
 Cry_Floragato::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/floragato.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sprigatito family
+	.set Cry_Meowscarada, Cry_Ditto
+#else
 	.align 2
 Cry_Meowscarada::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/meowscarada.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SPRIGATITO
 
 .if P_FAMILY_FUECOCO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fuecoco family
+	.set Cry_Fuecoco, Cry_Ditto
+#else
 	.align 2
 Cry_Fuecoco::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fuecoco.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fuecoco family
+	.set Cry_Crocalor, Cry_Ditto
+#else
 	.align 2
 Cry_Crocalor::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/crocalor.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fuecoco family
+	.set Cry_Skeledirge, Cry_Ditto
+#else
 	.align 2
 Cry_Skeledirge::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/skeledirge.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FUECOCO
 
 .if P_FAMILY_QUAXLY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Quaxly family
+	.set Cry_Quaxly, Cry_Ditto
+#else
 	.align 2
 Cry_Quaxly::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/quaxly.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Quaxly family
+	.set Cry_Quaxwell, Cry_Ditto
+#else
 	.align 2
 Cry_Quaxwell::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/quaxwell.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Quaxly family
+	.set Cry_Quaquaval, Cry_Ditto
+#else
 	.align 2
 Cry_Quaquaval::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/quaquaval.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_QUAXLY
 
 .if P_FAMILY_LECHONK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Lechonk family
+	.set Cry_Lechonk, Cry_Ditto
+#else
 	.align 2
 Cry_Lechonk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lechonk.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Lechonk family
+	.set Cry_OinkologneM, Cry_Ditto
+#else
 	.align 2
 Cry_OinkologneM::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oinkologne_m.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Lechonk family
+	.set Cry_OinkologneF, Cry_Ditto
+#else
 	.align 2
 Cry_OinkologneF::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oinkologne_f.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_LECHONK
 
 .if P_FAMILY_TAROUNTULA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tarountula family
+	.set Cry_Tarountula, Cry_Ditto
+#else
 	.align 2
 Cry_Tarountula::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tarountula.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tarountula family
+	.set Cry_Spidops, Cry_Ditto
+#else
 	.align 2
 Cry_Spidops::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/spidops.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TAROUNTULA
 
 .if P_FAMILY_NYMBLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Nymble family
+	.set Cry_Nymble, Cry_Ditto
+#else
 	.align 2
 Cry_Nymble::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/nymble.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Nymble family
+	.set Cry_Lokix, Cry_Ditto
+#else
 	.align 2
 Cry_Lokix::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lokix.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_NYMBLE
 
 .if P_FAMILY_PAWMI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pawmi family
+	.set Cry_Pawmi, Cry_Ditto
+#else
 	.align 2
 Cry_Pawmi::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pawmi.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pawmi family
+	.set Cry_Pawmo, Cry_Ditto
+#else
 	.align 2
 Cry_Pawmo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pawmo.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pawmi family
+	.set Cry_Pawmot, Cry_Ditto
+#else
 	.align 2
 Cry_Pawmot::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pawmot.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PAWMI
 
 .if P_FAMILY_TANDEMAUS == TRUE
@@ -8010,269 +9658,421 @@ Cry_MausholdFour::
 .endif @ P_FAMILY_TANDEMAUS
 
 .if P_FAMILY_FIDOUGH == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fidough family
+	.set Cry_Fidough, Cry_Ditto
+#else
 	.align 2
 Cry_Fidough::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fidough.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fidough family
+	.set Cry_Dachsbun, Cry_Ditto
+#else
 	.align 2
 Cry_Dachsbun::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dachsbun.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FIDOUGH
 
 .if P_FAMILY_SMOLIV == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Smoliv family
+	.set Cry_Smoliv, Cry_Ditto
+#else
 	.align 2
 Cry_Smoliv::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/smoliv.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Smoliv family
+	.set Cry_Dolliv, Cry_Ditto
+#else
 	.align 2
 Cry_Dolliv::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dolliv.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Smoliv family
+	.set Cry_Arboliva, Cry_Ditto
+#else
 	.align 2
 Cry_Arboliva::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/arboliva.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SMOLIV
 
 .if P_FAMILY_SQUAWKABILLY == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Squawkabilly family
+	.set Cry_Squawkabilly, Cry_Ditto
+#else
 	.align 2
 Cry_Squawkabilly::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/squawkabilly.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SQUAWKABILLY
 
 .if P_FAMILY_NACLI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Nacli family
+	.set Cry_Nacli, Cry_Ditto
+#else
 	.align 2
 Cry_Nacli::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/nacli.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Nacli family
+	.set Cry_Naclstack, Cry_Ditto
+#else
 	.align 2
 Cry_Naclstack::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/naclstack.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Nacli family
+	.set Cry_Garganacl, Cry_Ditto
+#else
 	.align 2
 Cry_Garganacl::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/garganacl.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_NACLI
 
 .if P_FAMILY_CHARCADET == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Charcadet family
+	.set Cry_Charcadet, Cry_Ditto
+#else
 	.align 2
 Cry_Charcadet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/charcadet.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Charcadet family
+	.set Cry_Armarouge, Cry_Ditto
+#else
 	.align 2
 Cry_Armarouge::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/armarouge.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Charcadet family
+	.set Cry_Ceruledge, Cry_Ditto
+#else
 	.align 2
 Cry_Ceruledge::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/ceruledge.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CHARCADET
 
 .if P_FAMILY_TADBULB == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tadbulb family
+	.set Cry_Tadbulb, Cry_Ditto
+#else
 	.align 2
 Cry_Tadbulb::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tadbulb.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tadbulb family
+	.set Cry_Bellibolt, Cry_Ditto
+#else
 	.align 2
 Cry_Bellibolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bellibolt.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TADBULB
 
 .if P_FAMILY_WATTREL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wattrel family
+	.set Cry_Wattrel, Cry_Ditto
+#else
 	.align 2
 Cry_Wattrel::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wattrel.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wattrel family
+	.set Cry_Kilowattrel, Cry_Ditto
+#else
 	.align 2
 Cry_Kilowattrel::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kilowattrel.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_WATTREL
 
 .if P_FAMILY_MASCHIFF == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Maschiff family
+	.set Cry_Maschiff, Cry_Ditto
+#else
 	.align 2
 Cry_Maschiff::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/maschiff.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Maschiff family
+	.set Cry_Mabosstiff, Cry_Ditto
+#else
 	.align 2
 Cry_Mabosstiff::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/mabosstiff.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MASCHIFF
 
 .if P_FAMILY_SHROODLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shroodle family
+	.set Cry_Shroodle, Cry_Ditto
+#else
 	.align 2
 Cry_Shroodle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shroodle.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Shroodle family
+	.set Cry_Grafaiai, Cry_Ditto
+#else
 	.align 2
 Cry_Grafaiai::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/grafaiai.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SHROODLE
 
 .if P_FAMILY_BRAMBLIN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bramblin family
+	.set Cry_Bramblin, Cry_Ditto
+#else
 	.align 2
 Cry_Bramblin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bramblin.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bramblin family
+	.set Cry_Brambleghast, Cry_Ditto
+#else
 	.align 2
 Cry_Brambleghast::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/brambleghast.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BRAMBLIN
 
 .if P_FAMILY_TOEDSCOOL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Toedscool family
+	.set Cry_Toedscool, Cry_Ditto
+#else
 	.align 2
 Cry_Toedscool::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/toedscool.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Toedscool family
+	.set Cry_Toedscruel, Cry_Ditto
+#else
 	.align 2
 Cry_Toedscruel::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/toedscruel.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TOEDSCOOL
 
 .if P_FAMILY_KLAWF == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Klawf family
+	.set Cry_Klawf, Cry_Ditto
+#else
 	.align 2
 Cry_Klawf::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/klawf.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KLAWF
 
 .if P_FAMILY_CAPSAKID == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Capsakid family
+	.set Cry_Capsakid, Cry_Ditto
+#else
 	.align 2
 Cry_Capsakid::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/capsakid.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Capsakid family
+	.set Cry_Scovillain, Cry_Ditto
+#else
 	.align 2
 Cry_Scovillain::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scovillain.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Capsakid family
+	.set Cry_ScovillainMega, Cry_Ditto
+#else
 	.align 2
 Cry_ScovillainMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scovillain_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_CAPSAKID
 
 .if P_FAMILY_RELLOR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Rellor family
+	.set Cry_Rellor, Cry_Ditto
+#else
 	.align 2
 Cry_Rellor::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/rellor.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Rellor family
+	.set Cry_Rabsca, Cry_Ditto
+#else
 	.align 2
 Cry_Rabsca::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/rabsca.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_RELLOR
 
 .if P_FAMILY_FLITTLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Flittle family
+	.set Cry_Flittle, Cry_Ditto
+#else
 	.align 2
 Cry_Flittle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/flittle.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Flittle family
+	.set Cry_Espathra, Cry_Ditto
+#else
 	.align 2
 Cry_Espathra::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/espathra.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FLITTLE
 
 .if P_FAMILY_TINKATINK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tinkatink family
+	.set Cry_Tinkatink, Cry_Ditto
+#else
 	.align 2
 Cry_Tinkatink::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tinkatink.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tinkatink family
+	.set Cry_Tinkatuff, Cry_Ditto
+#else
 	.align 2
 Cry_Tinkatuff::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tinkatuff.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Tinkatink family
+	.set Cry_Tinkaton, Cry_Ditto
+#else
 	.align 2
 Cry_Tinkaton::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tinkaton.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TINKATINK
 
 .if P_FAMILY_WIGLETT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wiglett family
+	.set Cry_Wiglett, Cry_Ditto
+#else
 	.align 2
 Cry_Wiglett::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wiglett.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wiglett family
+	.set Cry_Wugtrio, Cry_Ditto
+#else
 	.align 2
 Cry_Wugtrio::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wugtrio.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_WIGLETT
 
 .if P_FAMILY_BOMBIRDIER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Bombirdier family
+	.set Cry_Bombirdier, Cry_Ditto
+#else
 	.align 2
 Cry_Bombirdier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bombirdier.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BOMBIRDIER
 
 .if P_FAMILY_FINIZEN == TRUE
@@ -8290,99 +10090,151 @@ Cry_PalafinHero::
 .endif @ P_FAMILY_FINIZEN
 
 .if P_FAMILY_VAROOM == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Varoom family
+	.set Cry_Varoom, Cry_Ditto
+#else
 	.align 2
 Cry_Varoom::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/varoom.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Varoom family
+	.set Cry_Revavroom, Cry_Ditto
+#else
 	.align 2
 Cry_Revavroom::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/revavroom.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_VAROOM
 
 .if P_FAMILY_CYCLIZAR == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cyclizar family
+	.set Cry_Cyclizar, Cry_Ditto
+#else
 	.align 2
 Cry_Cyclizar::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cyclizar.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CYCLIZAR
 
 .if P_FAMILY_ORTHWORM == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Orthworm family
+	.set Cry_Orthworm, Cry_Ditto
+#else
 	.align 2
 Cry_Orthworm::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/orthworm.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ORTHWORM
 
 .if P_FAMILY_GLIMMET == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Glimmet family
+	.set Cry_Glimmet, Cry_Ditto
+#else
 	.align 2
 Cry_Glimmet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/glimmet.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Glimmet family
+	.set Cry_Glimmora, Cry_Ditto
+#else
 	.align 2
 Cry_Glimmora::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/glimmora.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Glimmet family
+	.set Cry_GlimmoraMega, Cry_Ditto
+#else
 	.align 2
 Cry_GlimmoraMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/glimmora_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_GLIMMET
 
 .if P_FAMILY_GREAVARD == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Greavard family
+	.set Cry_Greavard, Cry_Ditto
+#else
 	.align 2
 Cry_Greavard::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/greavard.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Greavard family
+	.set Cry_Houndstone, Cry_Ditto
+#else
 	.align 2
 Cry_Houndstone::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/houndstone.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GREAVARD
 
 .if P_FAMILY_FLAMIGO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Flamigo family
+	.set Cry_Flamigo, Cry_Ditto
+#else
 	.align 2
 Cry_Flamigo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/flamigo.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FLAMIGO
 
 .if P_FAMILY_CETODDLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cetoddle family
+	.set Cry_Cetoddle, Cry_Ditto
+#else
 	.align 2
 Cry_Cetoddle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cetoddle.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Cetoddle family
+	.set Cry_Cetitan, Cry_Ditto
+#else
 	.align 2
 Cry_Cetitan::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cetitan.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CETODDLE
 
 .if P_FAMILY_VELUZA == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Veluza family
+	.set Cry_Veluza, Cry_Ditto
+#else
 	.align 2
 Cry_Veluza::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/veluza.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_VELUZA
 
 .if P_FAMILY_DONDOZO == TRUE
@@ -8422,126 +10274,190 @@ Cry_TatsugiriMega::
 .endif @ P_FAMILY_TATSUGIRI
 
 .if P_FAMILY_GREAT_TUSK == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Great_Tusk family
+	.set Cry_GreatTusk, Cry_Ditto
+#else
 	.align 2
 Cry_GreatTusk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/great_tusk.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GREAT_TUSK
 
 .if P_FAMILY_SCREAM_TAIL == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Scream_Tail family
+	.set Cry_ScreamTail, Cry_Ditto
+#else
 	.align 2
 Cry_ScreamTail::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scream_tail.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SCREAM_TAIL
 
 .if P_FAMILY_BRUTE_BONNET == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Brute_Bonnet family
+	.set Cry_BruteBonnet, Cry_Ditto
+#else
 	.align 2
 Cry_BruteBonnet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/brute_bonnet.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_BRUTE_BONNET
 
 .if P_FAMILY_FLUTTER_MANE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Flutter_Mane family
+	.set Cry_FlutterMane, Cry_Ditto
+#else
 	.align 2
 Cry_FlutterMane::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/flutter_mane.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FLUTTER_MANE
 
 .if P_FAMILY_SLITHER_WING == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Slither_Wing family
+	.set Cry_SlitherWing, Cry_Ditto
+#else
 	.align 2
 Cry_SlitherWing::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/slither_wing.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SLITHER_WING
 
 .if P_FAMILY_SANDY_SHOCKS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Sandy_Shocks family
+	.set Cry_SandyShocks, Cry_Ditto
+#else
 	.align 2
 Cry_SandyShocks::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sandy_shocks.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_SANDY_SHOCKS
 
 .if P_FAMILY_IRON_TREADS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Treads family
+	.set Cry_IronTreads, Cry_Ditto
+#else
 	.align 2
 Cry_IronTreads::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_treads.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_TREADS
 
 .if P_FAMILY_IRON_BUNDLE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Bundle family
+	.set Cry_IronBundle, Cry_Ditto
+#else
 	.align 2
 Cry_IronBundle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_bundle.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_BUNDLE
 
 .if P_FAMILY_IRON_HANDS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Hands family
+	.set Cry_IronHands, Cry_Ditto
+#else
 	.align 2
 Cry_IronHands::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_hands.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_HANDS
 
 .if P_FAMILY_IRON_JUGULIS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Jugulis family
+	.set Cry_IronJugulis, Cry_Ditto
+#else
 	.align 2
 Cry_IronJugulis::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_jugulis.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_JUGULIS
 
 .if P_FAMILY_IRON_MOTH == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Moth family
+	.set Cry_IronMoth, Cry_Ditto
+#else
 	.align 2
 Cry_IronMoth::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_moth.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_MOTH
 
 .if P_FAMILY_IRON_THORNS == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Thorns family
+	.set Cry_IronThorns, Cry_Ditto
+#else
 	.align 2
 Cry_IronThorns::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_thorns.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_THORNS
 
 .if P_FAMILY_FRIGIBAX == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Frigibax family
+	.set Cry_Frigibax, Cry_Ditto
+#else
 	.align 2
 Cry_Frigibax::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/frigibax.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Frigibax family
+	.set Cry_Arctibax, Cry_Ditto
+#else
 	.align 2
 Cry_Arctibax::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/arctibax.bin"
 .endif
+#endif // prune_cries.py
 
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Frigibax family
+	.set Cry_Baxcalibur, Cry_Ditto
+#else
 	.align 2
 Cry_Baxcalibur::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/baxcalibur.bin"
 .endif
+#endif // prune_cries.py
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Frigibax family
+	.set Cry_BaxcaliburMega, Cry_Ditto
+#else
 	.align 2
 Cry_BaxcaliburMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/baxcalibur_mega.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_FRIGIBAX
 
@@ -8566,83 +10482,123 @@ Cry_Gholdengo::
 .endif @ P_FAMILY_GIMMIGHOUL
 
 .if P_FAMILY_WO_CHIEN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Wo_Chien family
+	.set Cry_WoChien, Cry_Ditto
+#else
 	.align 2
 Cry_WoChien::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wo_chien.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_WO_CHIEN
 
 .if P_FAMILY_CHIEN_PAO == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chien_Pao family
+	.set Cry_ChienPao, Cry_Ditto
+#else
 	.align 2
 Cry_ChienPao::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chien_pao.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CHIEN_PAO
 
 .if P_FAMILY_TING_LU == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Ting_Lu family
+	.set Cry_TingLu, Cry_Ditto
+#else
 	.align 2
 Cry_TingLu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/ting_lu.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_TING_LU
 
 .if P_FAMILY_CHI_YU == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Chi_Yu family
+	.set Cry_ChiYu, Cry_Ditto
+#else
 	.align 2
 Cry_ChiYu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chi_yu.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_CHI_YU
 
 .if P_FAMILY_ROARING_MOON == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Roaring_Moon family
+	.set Cry_RoaringMoon, Cry_Ditto
+#else
 	.align 2
 Cry_RoaringMoon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/roaring_moon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_ROARING_MOON
 
 .if P_FAMILY_IRON_VALIANT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Valiant family
+	.set Cry_IronValiant, Cry_Ditto
+#else
 	.align 2
 Cry_IronValiant::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_valiant.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_VALIANT
 
 .if P_FAMILY_KORAIDON == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Koraidon family
+	.set Cry_Koraidon, Cry_Ditto
+#else
 	.align 2
 Cry_Koraidon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/koraidon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_KORAIDON
 
 .if P_FAMILY_MIRAIDON == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Miraidon family
+	.set Cry_Miraidon, Cry_Ditto
+#else
 	.align 2
 Cry_Miraidon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/miraidon.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MIRAIDON
 
 .if P_FAMILY_WALKING_WAKE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Walking_Wake family
+	.set Cry_WalkingWake, Cry_Ditto
+#else
 	.align 2
 Cry_WalkingWake::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/walking_wake.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_WALKING_WAKE
 
 .if P_FAMILY_IRON_LEAVES == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Leaves family
+	.set Cry_IronLeaves, Cry_Ditto
+#else
 	.align 2
 Cry_IronLeaves::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_leaves.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_LEAVES
 
 .if P_FAMILY_POLTCHAGEIST == TRUE
@@ -8660,27 +10616,39 @@ Cry_Sinistcha::
 .endif @ P_FAMILY_POLTCHAGEIST
 
 .if P_FAMILY_OKIDOGI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Okidogi family
+	.set Cry_Okidogi, Cry_Ditto
+#else
 	.align 2
 Cry_Okidogi::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/okidogi.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_OKIDOGI
 
 .if P_FAMILY_MUNKIDORI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Munkidori family
+	.set Cry_Munkidori, Cry_Ditto
+#else
 	.align 2
 Cry_Munkidori::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/munkidori.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_MUNKIDORI
 
 .if P_FAMILY_FEZANDIPITI == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Fezandipiti family
+	.set Cry_Fezandipiti, Cry_Ditto
+#else
 	.align 2
 Cry_Fezandipiti::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fezandipiti.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_FEZANDIPITI
 
 .if P_FAMILY_OGERPON == TRUE
@@ -8692,35 +10660,51 @@ Cry_Ogerpon::
 .endif @ P_FAMILY_OGERPON
 
 .if P_FAMILY_GOUGING_FIRE == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Gouging_Fire family
+	.set Cry_GougingFire, Cry_Ditto
+#else
 	.align 2
 Cry_GougingFire::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gouging_fire.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_GOUGING_FIRE
 
 .if P_FAMILY_RAGING_BOLT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Raging_Bolt family
+	.set Cry_RagingBolt, Cry_Ditto
+#else
 	.align 2
 Cry_RagingBolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/raging_bolt.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_RAGING_BOLT
 
 .if P_FAMILY_IRON_BOULDER == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Boulder family
+	.set Cry_IronBoulder, Cry_Ditto
+#else
 	.align 2
 Cry_IronBoulder::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_boulder.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_BOULDER
 
 .if P_FAMILY_IRON_CROWN == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Iron_Crown family
+	.set Cry_IronCrown, Cry_Ditto
+#else
 	.align 2
 Cry_IronCrown::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_crown.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_IRON_CROWN
 
 .if P_FAMILY_TERAPAGOS == TRUE
@@ -8732,11 +10716,15 @@ Cry_Terapagos::
 .endif @ P_FAMILY_TERAPAGOS
 
 .if P_FAMILY_PECHARUNT == TRUE
+#ifdef FIRERED // prune_cries.py: the FireRed game never shows the Pecharunt family
+	.set Cry_Pecharunt, Cry_Ditto
+#else
 	.align 2
 Cry_Pecharunt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pecharunt.bin"
 .endif
+#endif // prune_cries.py
 .endif @ P_FAMILY_PECHARUNT
 .endif @ P_CRIES_ENABLED
 
