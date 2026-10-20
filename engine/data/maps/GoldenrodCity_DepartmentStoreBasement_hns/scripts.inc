@@ -181,28 +181,28 @@ GoldenrodCity_DepartmentStoreBasement_Movement_Boulder3:
 	step_end
 
 GoldenrodDeptStore_Text_BlackBeltMove:
-	.string "MACHOKE{SE_M_SUPERSONIC}hel{SE_M_MORNING_SUN}u{SE_M_GRASSWHISTLE}mov{SE_M_REVERSAL}tha{SE_M_SPIT_UP}boulder!$"
+	.string "MACHOKE, help us move that boulder!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt1:
-	.string "Hey{SE_M_SUPERSONIC}kid{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}holdin{SE_M_SANDSTORM}u{SE_M_GRASSWHISTLE}up!\p"
-	.string "Ou{SE_M_SAND_TOMB}polic{SE_M_YAWN}i{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}wor{SE_M_ENCORE2}behin{SE_M_WATERFALL}the\n"
-	.string "scene{SE_M_GRASSWHISTLE}wher{SE_M_REVERSAL}n{SE_M_ATTRACT2}on{SE_M_REVERSAL}ca{SE_M_ATTRACT}se{SE_M_REVERSAL}us!$"
+	.string "Hey, kid! You're holding us up!\p"
+	.string "Our policy is to work behind the\n"
+	.string "scenes where no one can see us!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt2:
-	.string "{SE_M_HEAL_BELL}los{SE_M_REVERSAL}m{SE_M_YAWN}passio{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}wor{SE_M_ENCORE2}if\n"
-	.string "someone'{SE_M_GRASSWHISTLE}watching.\p"
-	.string "Com{SE_M_REVERSAL}on{SE_M_SUPERSONIC}kid{SE_M_SUPERSONIC}scoot!$"
+	.string "I lose my passion for work if\n"
+	.string "someone's watching.\p"
+	.string "Come on, kid, scoot!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt3:
-	.string "Oohah{SE_M_DRAGON_RAGE}Oohah!\p"
-	.string "Wha{SE_M_SPIT_UP}d{SE_M_ATTRACT2}yo{SE_M_DIVE}nee{SE_M_WATERFALL}kid?\l"
-	.string "I'{SE_M_MILK_DRINK}workin{SE_M_SANDSTORM}here!$"
+	.string "Oohah! Oohah!\p"
+	.string "What do you need kid?\l"
+	.string "I'm working here!$"
 
 GoldenrodDeptStore_Text_B1FBlackBelt3After:
-	.string "Oohah{SE_M_DRAGON_RAGE}Oohah!\p"
-	.string "Th{SE_M_REVERSAL}stuf{SE_M_ACID_ARMOR}o{SE_M_ATTRACT}th{SE_M_REVERSAL}ground'{SE_M_GRASSWHISTLE}junk.\p"
-	.string "Tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}it!$"
+	.string "Oohah! Oohah!\p"
+	.string "The stuff on the ground's junk.\p"
+	.string "Take it if you want it!$"
 
 GoldenrodDeptStore_Text_B1FMachoke:
-	.string "MACHOKE{SE_M_HEAT_WAVE}Maaacho!$"
+	.string "MACHOKE: Maaacho!$"
 

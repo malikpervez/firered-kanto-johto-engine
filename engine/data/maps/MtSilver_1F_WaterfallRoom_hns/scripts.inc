@@ -37,11 +37,11 @@ MtSilver_1F_WaterfallRoom_Scientist_Scene::
 	end
 
 MtSilver_1F_WaterfallRoom_Text_Scientist:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}entranc{SE_M_REVERSAL}t{SE_M_ATTRACT2}the\n"
-	.string "unexplore{SE_M_WATERFALL}branch..{SE_M_PERISH_SONG}{PAUSE}Ô{PAUSE}Ô{PAUSE}Ô\p"
-	.string "Doe{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}fee{SE_M_BATON_PASS}col{SE_M_WATERFALL}her{SE_M_REVERSAL}t{SE_M_ATTRACT2}you?\p"
-	.string "Okay{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}leav{SE_M_REVERSAL}now.\p"
-	.string "Goo{SE_M_WATERFALL}luck!$"
+	.string "This is the entrance to the\n"
+	.string "unexplored branch... {PAUSE}Ô{PAUSE}Ô{PAUSE}Ô\p"
+	.string "Does it feel cold here to you?\p"
+	.string "Okay, I'm going to leave now.\p"
+	.string "Good luck!$"
 
 MtSilver_1F_Movement_Scientist:
 	jump_2_down

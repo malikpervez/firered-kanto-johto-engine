@@ -53,9 +53,9 @@ GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_TP::
 	end
 
 GoldenrodCity_UndergroundSwitches_EventScript_AntiSoftLock_Text::
-	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}b{SE_M_REVERSAL}stuck.\p"
-	.string "G{SE_M_ATTRACT2}bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}entrance\n"
-	.string "an{SE_M_WATERFALL}rese{SE_M_SPIT_UP}switches?$"
+	.string "You may be stuck.\p"
+	.string "Go back to the entrance\n"
+	.string "and reset switches?$"
 
 GoldenrodCity_UndergroundSwitches_EventScript_Panel1::
 	lock
@@ -507,131 +507,131 @@ GoldenrodCity_UndergroundSwitches_EventScript_Item_SmokeBall::
 	end
 
 GoldenrodUnderground_Text_SilverBefore:
-	.string "Hol{SE_M_WATERFALL}it!\p"
-	.string "{SE_M_HEAL_BELL}sa{SE_M_TWISTER}you{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}taile{SE_M_WATERFALL}you.\p"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}nee{SE_M_WATERFALL}yo{SE_M_DIVE}underfoo{SE_M_SPIT_UP}whil{SE_M_REVERSAL}I\n"
-	.string "tak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}TEA{SE_M_GIGA_DRAIN}ROCKET.\p"
-	.string "…Wai{SE_M_SPIT_UP}{SE_M_CHARGE}second{SE_M_PERISH_SONG}Yo{SE_M_DIVE}bea{SE_M_SPIT_UP}m{SE_M_REVERSAL}before,\n"
-	.string "didn'{SE_M_SPIT_UP}you?\p"
-	.string "Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}{SE_M_CHARGE}fluke.\p"
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}trainin{SE_M_SANDSTORM}m{SE_M_YAWN}tea{SE_M_MILK_DRINK}an{SE_M_WATERFALL}now\n"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}repa{SE_M_YAWN}m{SE_M_YAWN}debts!$"
+	.string "Hold it!\p"
+	.string "I saw you, so I tailed you.\p"
+	.string "I don't need you underfoot while I\n"
+	.string "take care of TEAM ROCKET.\p"
+	.string "…Wait a second. You beat me before,\n"
+	.string "didn't you?\p"
+	.string "That was just a fluke.\p"
+	.string "I've been training my team and now\n"
+	.string "I will repay my debts!$"
 
 GoldenrodUnderground_Text_SilverWin:
-	.string "…Why{SE_M_DIZZY_PUNCH}Wh{SE_M_YAWN}d{SE_M_ATTRACT2}{SE_M_HEAL_BELL}lose?\p"
-	.string "I'v{SE_M_REVERSAL}assemble{SE_M_WATERFALL}th{SE_M_REVERSAL}toughes{SE_M_SPIT_UP}POKéMON.\p"
-	.string "{SE_M_HEAL_BELL}didn'{SE_M_SPIT_UP}eas{SE_M_REVERSAL}u{SE_M_MORNING_SUN}o{SE_M_ATTRACT}th{SE_M_REVERSAL}gas.\p"
-	.string "S{SE_M_ATTRACT2}wh{SE_M_YAWN}d{SE_M_ATTRACT2}{SE_M_HEAL_BELL}lose?$"
+	.string "…Why… Why do I lose?\p"
+	.string "I've assembled the toughest POKéMON.\p"
+	.string "I didn't ease up on the gas.\p"
+	.string "So why do I lose?$"
 
 GoldenrodUnderground_Text_SilverAfter:
-	.string "…{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}understand…\p"
-	.string "I{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}LANC{SE_M_SWORDS_DANCE}gu{SE_M_YAWN}sai{SE_M_WATERFALL}true?\p"
-	.string "Tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}trea{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}properly?\p"
+	.string "…I don't understand…\p"
+	.string "Is what that LANCE guy said true?\p"
+	.string "That I don't treat POKéMON properly?\p"
 	.string "Love…\p"
 	.string "Trust…\p"
-	.string "Ar{SE_M_REVERSAL}the{SE_M_YAWN}reall{SE_M_YAWN}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}lack?\p"
-	.string "Ar{SE_M_REVERSAL}the{SE_M_YAWN}keepin{SE_M_SANDSTORM}m{SE_M_REVERSAL}fro{SE_M_MILK_DRINK}winning?\p"
-	.string "I{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}don'{SE_M_SPIT_UP}understand.\p"
-	.string "Bu{SE_M_SPIT_UP}it'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}en{SE_M_WATERFALL}here.\p"
-	.string "No{SE_M_SPIT_UP}now{SE_M_PERISH_SONG}No{SE_M_SPIT_UP}becaus{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}this.\p"
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}giv{SE_M_REVERSAL}u{SE_M_MORNING_SUN}m{SE_M_YAWN}drea{SE_M_MILK_DRINK}o{SE_M_ACID_ARMOR}becoming\n"
-	.string "th{SE_M_REVERSAL}world'{SE_M_GRASSWHISTLE}bes{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}trainer!$"
+	.string "Are they really what I lack?\p"
+	.string "Are they keeping me from winning?\p"
+	.string "I… I just don't understand.\p"
+	.string "But it's not going to end here.\p"
+	.string "Not now. Not because of this.\p"
+	.string "I won't give up my dream of becoming\n"
+	.string "the world's best POKéMON trainer!$"
 
 GoldenrodUnderground_Text_SilverLoss:
-	.string "Humph{SE_M_PERISH_SONG}Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}rea{SE_M_BATON_PASS}power{SE_M_SUPERSONIC}wimp.\p"
-	.string "I'l{SE_M_BATON_PASS}mak{SE_M_REVERSAL}TEA{SE_M_GIGA_DRAIN}ROCKE{SE_M_SWIFT}history.\p"
-	.string "An{SE_M_WATERFALL}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}grin{SE_M_WATERFALL}tha{SE_M_SPIT_UP}LANCE\n"
-	.string "unde{SE_M_SAND_TOMB}m{SE_M_YAWN}heels.$"
+	.string "Humph. This is my real power, wimp.\p"
+	.string "I'll make TEAM ROCKET history.\p"
+	.string "And I'm going to grind that LANCE\n"
+	.string "under my heels.$"
 
 GoldenrodUnderground_Text_GruntM11Seen:
-	.string "Ope{SE_M_ATTRACT}on{SE_M_REVERSAL}shutter{SE_M_SUPERSONIC}anothe{SE_M_SAND_TOMB}closes.\p"
-	.string "Be{SE_M_SPIT_UP}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}wher{SE_M_REVERSAL}yo{SE_M_DIVE}want!$"
+	.string "Open one shutter, another closes.\p"
+	.string "Bet you can't get where you want!$"
 
 GoldenrodUnderground_Text_GruntM11Beaten:
-	.string "Drat{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}sun{SE_M_ENCORE2}b{SE_M_YAWN}indecision!$"
+	.string "Drat! I was sunk by indecision!$"
 
 GoldenrodUnderground_Text_GruntM11After:
-	.string "I'{SE_M_MILK_DRINK}confuse{SE_M_WATERFALL}too{SE_M_DIZZY_PUNCH}Th{SE_M_REVERSAL}switc{SE_M_TRI_ATTACK}o{SE_M_ATTRACT}the\n"
-	.string "en{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}on{SE_M_REVERSAL}t{SE_M_ATTRACT2}pres{SE_M_GRASSWHISTLE}first{SE_M_SUPERSONIC}but…$"
+	.string "I'm confused too… The switch on the\n"
+	.string "end is the one to press first, but…$"
 
 GoldenrodUnderground_Text_GruntM25Seen:
 	.string "Kwahaha!\p"
-	.string "Confounde{SE_M_WATERFALL}b{SE_M_YAWN}th{SE_M_REVERSAL}shutters{SE_M_SUPERSONIC}ar{SE_M_REVERSAL}we?\p"
-	.string "I'l{SE_M_BATON_PASS}le{SE_M_SPIT_UP}yo{SE_M_DIVE}i{SE_M_ATTRACT}o{SE_M_ATTRACT}{SE_M_CHARGE}secre{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}you\n"
-	.string "ca{SE_M_ATTRACT}bea{SE_M_SPIT_UP}me!$"
+	.string "Confounded by the shutters, are we?\p"
+	.string "I'll let you in on a secret if you\n"
+	.string "can beat me!$"
 
 GoldenrodUnderground_Text_GruntM25Beaten:
-	.string "Uwww{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}ble{SE_M_TWISTER}it.$"
+	.string "Uwww… I blew it.$"
 
 GoldenrodUnderground_Text_GruntM25After:
-	.string "Al{SE_M_BATON_PASS}right{SE_M_PERISH_SONG}{SE_M_BONEMERANG}hint!\p"
-	.string "Chang{SE_M_REVERSAL}th{SE_M_REVERSAL}orde{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}switching.\p"
-	.string "That'l{SE_M_BATON_PASS}chang{SE_M_REVERSAL}th{SE_M_REVERSAL}way{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}shutters\n"
-	.string "ope{SE_M_ATTRACT}an{SE_M_WATERFALL}close.$"
+	.string "All right. A hint!\p"
+	.string "Change the order of switching.\p"
+	.string "That'll change the ways the shutters\n"
+	.string "open and close.$"
 
 GoldenrodUnderground_Text_BurglarDuncanSeen:
-	.string "For{SE_M_ENCORE2}ove{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}goodies!$"
+	.string "Fork over your goodies!$"
 
 GoldenrodUnderground_Text_BurglarDuncanBeaten:
 	.string "Mercy!$"
 
 GoldenrodUnderground_Text_BurglarDuncanAfter:
-	.string "Stea{SE_M_BATON_PASS}an{SE_M_WATERFALL}sell{SE_M_DRAGON_RAGE}That'{SE_M_GRASSWHISTLE}basi{SE_M_HYPER_BEAM}in\n"
-	.string "crime{SE_M_SUPERSONIC}kid!$"
+	.string "Steal and sell! That's basic in\n"
+	.string "crime, kid!$"
 
 GoldenrodUnderground_Text_BurglarEddieSeen:
-	.string "The{SE_M_YAWN}ditche{SE_M_WATERFALL}thi{SE_M_GRASSWHISTLE}projec{SE_M_SPIT_UP}befor{SE_M_REVERSAL}they\n"
+	.string "They ditched this project before they\n"
 	.string "finished.\p"
-	.string "I'{SE_M_MILK_DRINK}searchin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}leftove{SE_M_SAND_TOMB}loot.$"
+	.string "I'm searching for leftover loot.$"
 
 GoldenrodUnderground_Text_BurglarEddieBeaten:
-	.string "Ove{SE_M_SAND_TOMB}th{SE_M_REVERSAL}top!$"
+	.string "Over the top!$"
 
 GoldenrodUnderground_Text_BurglarEddieAfter:
-	.string "UNDERGROUN{SE_M_FAINT_ATTACK}WAREHOUSE?\p"
-	.string "Wha{SE_M_SPIT_UP}d{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}ther{SE_M_REVERSAL}for?\p"
-	.string "There'{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}dow{SE_M_ATTRACT}there.$"
+	.string "UNDERGROUND WAREHOUSE?\p"
+	.string "What do you want to go there for?\p"
+	.string "There's nothing down there.$"
 
 GoldenrodUnderground_Text_GruntM13Seen:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}car{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}lost.\p"
-	.string "Yo{SE_M_DIVE}sho{SE_M_TWISTER}u{SE_M_MORNING_SUN}here{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}nothin{SE_M_SANDSTORM}but\n"
-	.string "{SE_M_CHARGE}victim!$"
+	.string "I don't care if you're lost.\p"
+	.string "You show up here, you're nothing but\n"
+	.string "a victim!$"
 
 GoldenrodUnderground_Text_GruntM13Beaten:
-	.string "Urk{SE_M_DRAGON_RAGE}Yeah{SE_M_SUPERSONIC}thin{SE_M_ENCORE2}you'r{SE_M_REVERSAL}cool{SE_M_SUPERSONIC}huh?$"
+	.string "Urk! Yeah, think you're cool, huh?$"
 
 GoldenrodUnderground_Text_GruntM13After:
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}ic{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}vein{SE_M_GRASSWHISTLE}to\n"
-	.string "dis{SE_M_GRASSWHISTLE}TEA{SE_M_GIGA_DRAIN}ROCKET.$"
+	.string "You must have ice in your veins to\n"
+	.string "diss TEAM ROCKET.$"
 
 GoldenrodUnderground_Text_GruntF3Seen:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}lost{SE_M_SING}No{SE_M_SUPERSONIC}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}be.\p"
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}tha{SE_M_SPIT_UP}scare{SE_M_WATERFALL}look.\p"
-	.string "I'l{SE_M_BATON_PASS}giv{SE_M_REVERSAL}yo{SE_M_DIVE}somethin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}be\n"
-	.string "scare{SE_M_WATERFALL}about!$"
+	.string "Are you lost? No, you can't be.\p"
+	.string "You don't have that scared look.\p"
+	.string "I'll give you something to be\n"
+	.string "scared about!$"
 
 GoldenrodUnderground_Text_GruntF3Beaten:
-	.string "Ho{SE_M_TWISTER}coul{SE_M_WATERFALL}you?$"
+	.string "How could you?$"
 
 GoldenrodUnderground_Text_GruntF3After:
-	.string "G{SE_M_ATTRACT2}whereve{SE_M_SAND_TOMB}you'{SE_M_WATERFALL}like{SE_M_DRAGON_RAGE}Ge{SE_M_SPIT_UP}lost!\n"
-	.string "Se{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}care!$"
+	.string "Go wherever you'd like! Get lost!\n"
+	.string "See if I care!$"
 
 GoldenrodUnderground_Text_Switch1:
-	.string "SWITC{SE_M_SWAGGER2}{SE_M_HEADBUTT}activated.$"
+	.string "SWITCH 1 activated.$"
 
 GoldenrodUnderground_Text_Switch2:
-	.string "SWITC{SE_M_SWAGGER2}{SE_M_SURF}activated.$"
+	.string "SWITCH 2 activated.$"
 
 GoldenrodUnderground_Text_Switch3:
-	.string "SWITC{SE_M_SWAGGER2}{SE_M_HYDRO_PUMP}activated.$"
+	.string "SWITCH 3 activated.$"
 
 GoldenrodUnderground_Text_Switch1Off:
-	.string "SWITC{SE_M_SWAGGER2}{SE_M_HEADBUTT}deactivated.$"
+	.string "SWITCH 1 deactivated.$"
 
 GoldenrodUnderground_Text_Switch2Off:
-	.string "SWITC{SE_M_SWAGGER2}{SE_M_SURF}deactivated.$"
+	.string "SWITCH 2 deactivated.$"
 
 GoldenrodUnderground_Text_Switch3Off:
-	.string "SWITC{SE_M_SWAGGER2}{SE_M_HYDRO_PUMP}deactivated.$"
+	.string "SWITCH 3 deactivated.$"
 

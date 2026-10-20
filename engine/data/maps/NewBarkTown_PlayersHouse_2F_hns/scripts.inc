@@ -85,7 +85,7 @@ NewBarkTown_PlayersHouse_2F_EventScript_TurnOffPlayerPC::
 	end
 
 NewBarkTown_PlayersHouse_2F_Text_NES:
-	.string "{PLAYER} playe{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}NES.\p"
+	.string "{PLAYER} played with the NES.\p"
 	.string "…Okay!\n"
-	.string "It'{SE_M_GRASSWHISTLE}tim{SE_M_REVERSAL}t{SE_M_ATTRACT2}go!$"
+	.string "It's time to go!$"
 

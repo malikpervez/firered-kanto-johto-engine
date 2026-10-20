@@ -11,6 +11,6 @@ J_BattleFrontier_ShowCaughtBannedSpeciesEnd:
 	return
 
 J_BattleFrontier_DoYouWantToSeeTheListOfCaughtBannedSpecies:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}th{SE_M_REVERSAL}lis{SE_M_SPIT_UP}of\n"
-	.string "POKéMO{SE_M_PSYBEAM2}specie{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}bring?$"
+	.string "Do you want to see the list of\n"
+	.string "POKéMON species you can't bring?$"
 

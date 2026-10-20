@@ -230,37 +230,37 @@ MahoganyTown_Pokemart:
 	end
 
 MahoganyTown_Shop_Text_Granny:
-	.string "Pleas{SE_M_REVERSAL}com{SE_M_REVERSAL}bac{SE_M_ENCORE2}anothe{SE_M_SAND_TOMB}time.\n"
-	.string "Th{SE_M_REVERSAL}stor{SE_M_REVERSAL}is..{SE_M_PERISH_SONG}closed\l"
-	.string "righ{SE_M_SPIT_UP}now.$"
+	.string "Please come back another time.\n"
+	.string "The store is... closed\l"
+	.string "right now.$"
 
 MahoganyMart1F_Text_Pharmacist_Lance:
-	.string "ROCKET{SE_M_SKETCH}hav{SE_M_REVERSAL}hijacke{SE_M_WATERFALL}m{SE_M_YAWN}basement!$"
+	.string "ROCKETS have hijacked my basement!$"
 
 MahoganyMart1F_Text_BlackBelt:
-	.string "Heheh{SE_M_DRAGON_RAGE}Th{SE_M_REVERSAL}experi{SE_M_PAY_DAY}men{SE_M_SPIT_UP}worke{SE_M_WATERFALL}like\n"
-	.string "{SE_M_CHARGE}charm.\p"
-	.string "MAGIKAR{SE_M_PETAL_DANCE}ar{SE_M_REVERSAL}jus{SE_M_SPIT_UP}worthless{SE_M_SUPERSONIC}but\n"
-	.string "GYARADO{SE_M_SKETCH}ar{SE_M_REVERSAL}bi{SE_M_SANDSTORM}moneymakers.$"
+	.string "Heheh! The experi- ment worked like\n"
+	.string "a charm.\p"
+	.string "MAGIKARP are just worthless, but\n"
+	.string "GYARADOS are big moneymakers.$"
 
 MahoganyMart1F_Text_BlackBelt_Lance:
 	.string "Urrgh…\p"
-	.string "Tha{SE_M_SPIT_UP}guy'{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}tough…$"
+	.string "That guy's POKéMON are tough…$"
 
 MahoganyMart1F_Text_Lance_HyperBeam:
-	.string "LANCE{SE_M_HEAT_WAVE}DRAGONITE{SE_M_SUPERSONIC}HYPE{SE_M_MINIMIZE}BEAM.$"
+	.string "LANCE: DRAGONITE, HYPER BEAM.$"
 
 MahoganyMart1F_Text_Lance_Radio:
-	.string "Wha{SE_M_SPIT_UP}too{SE_M_ENCORE2}you{SE_M_SUPERSONIC}{PLAYER}?\p"
-	.string "Jus{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}w{SE_M_REVERSAL}thought{SE_M_SUPERSONIC}tha{SE_M_SPIT_UP}strange\n"
-	.string "radi{SE_M_ATTRACT2}signa{SE_M_BATON_PASS}i{SE_M_GRASSWHISTLE}comin{SE_M_SANDSTORM}fro{SE_M_MILK_DRINK}here.$"
+	.string "What took you, {PLAYER}?\p"
+	.string "Just as we thought, that strange\n"
+	.string "radio signal is coming from here.$"
 
 MahoganyMart1F_Text_Lance_Stairs:
-	.string "Excellen{SE_M_SPIT_UP}wor{SE_M_ENCORE2}findin{SE_M_SANDSTORM}th{SE_M_REVERSAL}stairs,\n"
+	.string "Excellent work finding the stairs,\n"
 	.string "DRAGONITE!$"
 
 MahoganyMart1F_Text_Lance_SplitUp:
-	.string "LANCE{SE_M_HEAT_WAVE}{PLAYER}{SE_M_SUPERSONIC}w{SE_M_REVERSAL}shoul{SE_M_WATERFALL}spli{SE_M_SPIT_UP}up\n"
-	.string "t{SE_M_ATTRACT2}chec{SE_M_ENCORE2}thi{SE_M_GRASSWHISTLE}place.\p"
-	.string "I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}first.$"
+	.string "LANCE: {PLAYER}, we should split up\n"
+	.string "to check this place.\p"
+	.string "I'll go first.$"
 

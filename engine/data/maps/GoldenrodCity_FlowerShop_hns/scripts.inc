@@ -110,53 +110,53 @@ GoldenrodCity_FlowerShop_EventScript_Floria3::
 	end
 
 GoldenrodCity_FlowerShop_Text_Floria:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}tol{SE_M_WATERFALL}m{SE_M_YAWN}si{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}th{SE_M_REVERSAL}jiggly\n"
-	.string "tree{SE_M_SUPERSONIC}sh{SE_M_REVERSAL}sai{SE_M_WATERFALL}it'{SE_M_GRASSWHISTLE}dangerous.\p"
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}bea{SE_M_SPIT_UP}WHITNEY{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}if\n"
-	.string "she'l{SE_M_BATON_PASS}len{SE_M_WATERFALL}m{SE_M_REVERSAL}he{SE_M_SAND_TOMB}wate{SE_M_SAND_TOMB}bottle…$"
+	.string "When I told my sis about the jiggly\n"
+	.string "tree, she said it's dangerous.\p"
+	.string "If I beat WHITNEY, I wonder if\n"
+	.string "she'll lend me her water bottle…$"
 
 GoldenrodCity_FlowerShop_Text_Owner1:
-	.string "Apparently{SE_M_SUPERSONIC}ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}od{SE_M_WATERFALL}tree\n"
-	.string "o{SE_M_ATTRACT}ROUT{SE_M_SWORDS_DANCE}36.\p"
-	.string "The{SE_M_YAWN}sa{SE_M_YAWN}i{SE_M_SPIT_UP}dance{SE_M_GRASSWHISTLE}whe{SE_M_ATTRACT}yo{SE_M_DIVE}water\n"
+	.string "Apparently, there is an odd tree\n"
+	.string "on ROUTE 36.\p"
+	.string "They say it dances when you water\n"
 	.string "it...\p"
-	.string "Oh{SE_M_SUPERSONIC}o{SE_M_ACID_ARMOR}cours{SE_M_REVERSAL}not!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}flowe{SE_M_SAND_TOMB}shop{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}w{SE_M_REVERSAL}do\n"
-	.string "hav{SE_M_REVERSAL}waterin{SE_M_SANDSTORM}cans...\p"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}canno{SE_M_SPIT_UP}le{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}one!\n"
-	.string "It'{SE_M_GRASSWHISTLE}to{SE_M_ATTRACT2}dangerous!\p"
-	.string "Well{SE_M_SUPERSONIC}mayb{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}manag{SE_M_REVERSAL}to\n"
-	.string "defea{SE_M_SPIT_UP}gy{SE_M_MILK_DRINK}leade{SE_M_SAND_TOMB}WHITNEY{SE_M_SUPERSONIC}it\l"
-	.string "migh{SE_M_SPIT_UP}b{SE_M_REVERSAL}okay.$"
+	.string "Oh, of course not!\p"
+	.string "This is a flower shop, so we do\n"
+	.string "have watering cans...\p"
+	.string "But I cannot let you have one!\n"
+	.string "It's too dangerous!\p"
+	.string "Well, maybe if you manage to\n"
+	.string "defeat gym leader WHITNEY, it\l"
+	.string "might be okay.$"
 
 GoldenrodCity_FlowerShop_Text_Owner2:
-	.string "Apparently{SE_M_SUPERSONIC}ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}od{SE_M_WATERFALL}tree\n"
-	.string "o{SE_M_ATTRACT}ROUT{SE_M_SWORDS_DANCE}36.\p"
-	.string "The{SE_M_YAWN}sa{SE_M_YAWN}i{SE_M_SPIT_UP}dance{SE_M_GRASSWHISTLE}whe{SE_M_ATTRACT}yo{SE_M_DIVE}water\n"
+	.string "Apparently, there is an odd tree\n"
+	.string "on ROUTE 36.\p"
+	.string "They say it dances when you water\n"
 	.string "it...\p"
-	.string "Oh{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}PLAINBADG{SE_M_SWORDS_DANCE}from\n"
-	.string "th{SE_M_REVERSAL}GOLDENRO{SE_M_FAINT_ATTACK}GYM!\p"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}defea{SE_M_SPIT_UP}WHITNEY?!\p"
-	.string "Well{SE_M_SUPERSONIC}the{SE_M_ATTRACT}there'{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}worry\n"
-	.string "about{SE_M_SUPERSONIC}i{SE_M_GRASSWHISTLE}there?\p"
-	.string "I'l{SE_M_BATON_PASS}le{SE_M_SPIT_UP}yo{SE_M_DIVE}us{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}SQUIRTBOTTLE\n"
-	.string "fo{SE_M_SAND_TOMB}{SE_M_CHARGE}whil{SE_M_REVERSAL}then.\l"
+	.string "Oh, that's a PLAINBADGE from\n"
+	.string "the GOLDENROD GYM!\p"
+	.string "Did you defeat WHITNEY?!\p"
+	.string "Well, then there's nothing to worry\n"
+	.string "about, is there?\p"
+	.string "I'll let you use this SQUIRTBOTTLE\n"
+	.string "for a while then.\l"
 	.string "...\p"
-	.string "Oh{SE_M_SUPERSONIC}neve{SE_M_SAND_TOMB}mind{SE_M_PERISH_SONG}Kee{SE_M_MORNING_SUN}it!$"
+	.string "Oh, never mind. Keep it!$"
 
 GoldenrodCity_FlowerShop_Text_Owner3:
-	.string "Th{SE_M_REVERSAL}od{SE_M_WATERFALL}tre{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}ROUT{SE_M_SWORDS_DANCE}36.\n"
-	.string "Pleas{SE_M_REVERSAL}b{SE_M_REVERSAL}careful!$"
+	.string "The odd tree is on ROUTE 36.\n"
+	.string "Please be careful!$"
 
 GoldenrodCity_FlowerShop_Text_Owner4:
-	.string "Lalal{SE_M_CHARGE}lalalala{SE_M_PERISH_SONG}Hav{SE_M_REVERSAL}plent{SE_M_YAWN}of\n"
-	.string "water{SE_M_SUPERSONIC}m{SE_M_YAWN}lovely!$"
+	.string "Lalala lalalala. Have plenty of\n"
+	.string "water, my lovely!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaYouBeatWhitney:
-	.string "Wow{SE_M_SUPERSONIC}yo{SE_M_DIVE}bea{SE_M_SPIT_UP}WHITNEY{SE_M_SING}Cool!$"
+	.string "Wow, you beat WHITNEY? Cool!$"
 
 GoldenrodCity_FlowerShop_Text_FloriaItWasAMon:
-	.string "S{SE_M_ATTRACT2}i{SE_M_SPIT_UP}reall{SE_M_YAWN}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéMON!$"
+	.string "So it really was a POKéMON!$"
 
 GoldenrodCity_FlowerShop_EventScript_RandomBerryGirl::
 	lock

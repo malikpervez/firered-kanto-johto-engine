@@ -48,32 +48,32 @@ MtMortar_1F_North_EventScript_Markus::
 	end
 
 MountMortar2_Text_PokemaniacMillerSeen:
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}losin{SE_M_SANDSTORM}thi{SE_M_GRASSWHISTLE}time!$"
+	.string "I'm not losing this time!$"
 
 MountMortar2_Text_PokemaniacMillerBeaten:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}t{SE_M_ATTRACT2}som{SE_M_REVERSAL}kid...?$"
+	.string "I lost to some kid...?$"
 
 MountMortar2_Text_PokemaniacMillerAfter:
-	.string "{SE_M_BONEMERANG}whil{SE_M_REVERSAL}back{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}karat{SE_M_REVERSAL}dude\n"
-	.string "wante{SE_M_WATERFALL}t{SE_M_ATTRACT2}battle.\p"
-	.string "H{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}ridiculousl{SE_M_YAWN}good.\n"
-	.string "H{SE_M_REVERSAL}jus{SE_M_SPIT_UP}thrashe{SE_M_WATERFALL}u{SE_M_GRASSWHISTLE}silly.\p"
-	.string "H{SE_M_REVERSAL}wen{SE_M_SPIT_UP}i{SE_M_ATTRACT}deepe{SE_M_SAND_TOMB}sayin{SE_M_SANDSTORM}it\n"
-	.string "wa{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}hi{SE_M_GRASSWHISTLE}training.\p"
-	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}ho{SE_M_TWISTER}h{SE_M_REVERSAL}is?$"
+	.string "A while back, this karate dude\n"
+	.string "wanted to battle.\p"
+	.string "He was ridiculously good.\n"
+	.string "He just thrashed us silly.\p"
+	.string "He went in deeper saying it\n"
+	.string "was for his training.\p"
+	.string "I wonder how he is?$"
 
 MountMortar2_Text_SupernerdMarkusSeen:
-	.string "Hey{SE_M_DRAGON_RAGE}HUGH!$"
+	.string "Hey! HUGH!$"
 
 MountMortar2_Text_SupernerdMarkusBeaten:
-	.string "{SE_M_HEAL_BELL}mistoo{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}someone\n"
+	.string "I mistook you for someone\n"
 	.string "else…$"
 
 MountMortar2_Text_SupernerdMarkusAfter:
-	.string "{SE_M_HEAL_BELL}cam{SE_M_REVERSAL}t{SE_M_ATTRACT2}explor{SE_M_REVERSAL}MT.MORTAR,\n"
-	.string "bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}separate{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}my\l"
+	.string "I came to explore MT.MORTAR,\n"
+	.string "but I got separated from my\l"
 	.string "partner…\p"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}ru{SE_M_ATTRACT}int{SE_M_ATTRACT2}{SE_M_CHARGE}trainer\n"
-	.string "wh{SE_M_ATTRACT2}use{SE_M_GRASSWHISTLE}{SE_M_CHARGE}SEADR{SE_M_BONEMERANG}tha{SE_M_SPIT_UP}knows\l"
+	.string "Did you run into a trainer\n"
+	.string "who uses a SEADRA that knows\l"
 	.string "WATERFALL?$"
 

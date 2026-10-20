@@ -1367,422 +1367,422 @@ J_LilycoveCity_ContestLobby_EventScript_DelayForRSPlayer::
 
 J_LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase:
 	.string "Hello!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}receptio{SE_M_ATTRACT}counte{SE_M_SAND_TOMB}for\n"
-	.string "POKéMO{SE_M_PSYBEAM2}CONTESTS.\p"
-	.string "Oh{SE_M_SING}I{SE_M_SPIT_UP}appear{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}have\n"
-	.string "{SE_M_CHARGE}{POKEBLOCK} CAS{SE_M_SWORDS_DANCE}yet.\p"
-	.string "I{SE_M_ATTRACT}tha{SE_M_SPIT_UP}case{SE_M_SUPERSONIC}w{SE_M_REVERSAL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}provid{SE_M_REVERSAL}you\n"
-	.string "wit{SE_M_TRI_ATTACK}this!$"
+	.string "This is the reception counter for\n"
+	.string "POKéMON CONTESTS.\p"
+	.string "Oh? It appears that you don't have\n"
+	.string "a オカキクケ CASE yet.\p"
+	.string "In that case, we need to provide you\n"
+	.string "with this!$"
 
 J_LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp:
-	.string "Okay{SE_M_SUPERSONIC}no{SE_M_TWISTER}tha{SE_M_SPIT_UP}we'v{SE_M_REVERSAL}cleare{SE_M_WATERFALL}that\n"
+	.string "Okay, now that we've cleared that\n"
 	.string "up…\p"
 	.string "Hello!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}receptio{SE_M_ATTRACT}counte{SE_M_SAND_TOMB}for\n"
-	.string "POKéMO{SE_M_PSYBEAM2}CONTESTS.$"
+	.string "This is the reception counter for\n"
+	.string "POKéMON CONTESTS.$"
 
 J_LilycoveCity_ContestLobby_Text_ContestReception:
 	.string "Hello!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}receptio{SE_M_ATTRACT}counte{SE_M_SAND_TOMB}for\n"
-	.string "POKéMO{SE_M_PSYBEAM2}CONTESTS.$"
+	.string "This is the reception counter for\n"
+	.string "POKéMON CONTESTS.$"
 
 J_LilycoveCity_ContestLobby_Text_CounterOnlyFor4PlayerContests:
 	.string "Hello!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}receptio{SE_M_ATTRACT}counte{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}only\n"
-	.string "fo{SE_M_SAND_TOMB}4-playe{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}CONTESTS.$"
+	.string "This reception counter is only\n"
+	.string "for 4-player POKéMON CONTESTS.$"
 
 J_LilycoveCity_ContestLobby_Text_EnterContest1:
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}ente{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}POKéMON\n"
-	.string "i{SE_M_ATTRACT}ou{SE_M_SAND_TOMB}CONTESTS?$"
+	.string "Would you like to enter your POKéMON\n"
+	.string "in our CONTESTS?$"
 
 J_LilycoveCity_ContestLobby_Text_WhichTopic1:
-	.string "Whic{SE_M_TRI_ATTACK}topi{SE_M_HYPER_BEAM}woul{SE_M_WATERFALL}yo{SE_M_DIVE}like?$"
+	.string "Which topic would you like?$"
 
 J_LilycoveCity_ContestLobby_Text_ExplainContests:
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}CONTES{SE_M_SWIFT}involve{SE_M_GRASSWHISTLE}four\n"
-	.string "TRAINER{SE_M_SKETCH}enterin{SE_M_SANDSTORM}on{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}each\l"
-	.string "i{SE_M_ATTRACT}competitiv{SE_M_REVERSAL}judging.\p"
-	.string "{SE_M_BONEMERANG}CONTES{SE_M_SWIFT}ha{SE_M_GRASSWHISTLE}tw{SE_M_ATTRACT2}stage{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}judging,\n"
-	.string "primar{SE_M_YAWN}an{SE_M_WATERFALL}secondary.\p"
-	.string "Primar{SE_M_YAWN}judgin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}popularit{SE_M_YAWN}poll\n"
-	.string "involvin{SE_M_SANDSTORM}th{SE_M_REVERSAL}audience.\p"
-	.string "Secondar{SE_M_YAWN}judgin{SE_M_SANDSTORM}feature{SE_M_GRASSWHISTLE}appeals\n"
-	.string "b{SE_M_YAWN}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}usin{SE_M_SANDSTORM}thei{SE_M_SAND_TOMB}moves.\p"
-	.string "Pla{SE_M_ATTRACT}appeal{SE_M_GRASSWHISTLE}carefull{SE_M_YAWN}t{SE_M_ATTRACT2}ear{SE_M_ATTRACT}the\n"
-	.string "mos{SE_M_SPIT_UP}attentio{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}JUDG{SE_M_SWORDS_DANCE}and\l"
-	.string "excit{SE_M_REVERSAL}th{SE_M_REVERSAL}audience.\l"
-	.string "D{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}bes{SE_M_SPIT_UP}t{SE_M_ATTRACT2}stan{SE_M_WATERFALL}out.\p"
-	.string "Th{SE_M_REVERSAL}primar{SE_M_YAWN}an{SE_M_WATERFALL}secondar{SE_M_YAWN}score{SE_M_GRASSWHISTLE}are\n"
-	.string "adde{SE_M_WATERFALL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}end.\p"
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}garnerin{SE_M_SANDSTORM}th{SE_M_REVERSAL}highest\n"
-	.string "scor{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}declare{SE_M_WATERFALL}th{SE_M_REVERSAL}winner.$"
+	.string "A POKéMON CONTEST involves four\n"
+	.string "TRAINERS entering one POKéMON each\l"
+	.string "in competitive judging.\p"
+	.string "A CONTEST has two stages of judging,\n"
+	.string "primary and secondary.\p"
+	.string "Primary judging is a popularity poll\n"
+	.string "involving the audience.\p"
+	.string "Secondary judging features appeals\n"
+	.string "by the POKéMON using their moves.\p"
+	.string "Plan appeals carefully to earn the\n"
+	.string "most attention of the JUDGE and\l"
+	.string "excite the audience.\l"
+	.string "Do your best to stand out.\p"
+	.string "The primary and secondary scores are\n"
+	.string "added at the end.\p"
+	.string "The POKéMON garnering the highest\n"
+	.string "score is declared the winner.$"
 
 J_LilycoveCity_ContestLobby_Text_ExplainContestTypes:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}fiv{SE_M_REVERSAL}kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}CONTESTS.\p"
-	.string "COOL{SE_M_SUPERSONIC}BEAUTY{SE_M_SUPERSONIC}CUTE{SE_M_SUPERSONIC}SMART{SE_M_SUPERSONIC}and\n"
-	.string "TOUG{SE_M_SWAGGER2}ar{SE_M_REVERSAL}th{SE_M_REVERSAL}fiv{SE_M_REVERSAL}categories.\p"
-	.string "Choos{SE_M_REVERSAL}th{SE_M_REVERSAL}CONTES{SE_M_SWIFT}tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}righ{SE_M_SPIT_UP}for\n"
-	.string "th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}yo{SE_M_DIVE}pla{SE_M_ATTRACT}t{SE_M_ATTRACT2}enter.$"
+	.string "There are five kinds of CONTESTS.\p"
+	.string "COOL, BEAUTY, CUTE, SMART, and\n"
+	.string "TOUGH are the five categories.\p"
+	.string "Choose the CONTEST that is right for\n"
+	.string "the POKéMON you plan to enter.$"
 
 J_LilycoveCity_ContestLobby_Text_ExplainContestRanks:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}fou{SE_M_SAND_TOMB}rank{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}POKéMON\n"
+	.string "There are four ranks of POKéMON\n"
 	.string "CONTESTS.\p"
-	.string "NORMAL{SE_M_SUPERSONIC}SUPER{SE_M_SUPERSONIC}HYPER{SE_M_SUPERSONIC}an{SE_M_WATERFALL}MASTER\n"
-	.string "ar{SE_M_REVERSAL}th{SE_M_REVERSAL}fou{SE_M_SAND_TOMB}ranks.\p"
-	.string "I{SE_M_ATTRACT}th{SE_M_REVERSAL}NORMA{SE_M_BRICK_BREAK}Rank{SE_M_SUPERSONIC}an{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}may\n"
+	.string "NORMAL, SUPER, HYPER, and MASTER\n"
+	.string "are the four ranks.\p"
+	.string "In the NORMAL Rank, any POKéMON may\n"
 	.string "enter.\p"
-	.string "An{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}wo{SE_M_ATTRACT}{SE_M_CHARGE}NORMA{SE_M_BRICK_BREAK}Rank\n"
-	.string "CONTES{SE_M_SWIFT}ma{SE_M_YAWN}mov{SE_M_REVERSAL}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}SUPE{SE_M_MINIMIZE}Rank\l"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}category.\p"
-	.string "I{SE_M_ATTRACT}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}way{SE_M_SUPERSONIC}{SE_M_CHARGE}SUPE{SE_M_MINIMIZE}Ran{SE_M_ENCORE2}winner\n"
-	.string "ca{SE_M_ATTRACT}mov{SE_M_REVERSAL}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}HYPE{SE_M_MINIMIZE}Rank{SE_M_SUPERSONIC}and\l"
-	.string "{SE_M_CHARGE}HYPE{SE_M_MINIMIZE}Ran{SE_M_ENCORE2}winne{SE_M_SAND_TOMB}ca{SE_M_ATTRACT}advanc{SE_M_REVERSAL}to\l"
-	.string "th{SE_M_REVERSAL}MASTE{SE_M_MINIMIZE}Ran{SE_M_ENCORE2}i{SE_M_ATTRACT}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}category.\p"
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}wo{SE_M_ATTRACT}i{SE_M_ATTRACT}th{SE_M_REVERSAL}MASTE{SE_M_MINIMIZE}Rank\n"
-	.string "ma{SE_M_YAWN}compet{SE_M_REVERSAL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}MASTE{SE_M_MINIMIZE}Ran{SE_M_ENCORE2}as\l"
-	.string "ofte{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}it{SE_M_GRASSWHISTLE}TRAINE{SE_M_MINIMIZE}wants.$"
+	.string "Any POKéMON that won a NORMAL Rank\n"
+	.string "CONTEST may move up to the SUPER Rank\l"
+	.string "in the same category.\p"
+	.string "In the same way, a SUPER Rank winner\n"
+	.string "can move up to the HYPER Rank, and\l"
+	.string "a HYPER Rank winner can advance to\l"
+	.string "the MASTER Rank in the same category.\p"
+	.string "A POKéMON that won in the MASTER Rank\n"
+	.string "may compete in the MASTER Rank as\l"
+	.string "often as its TRAINER wants.$"
 
 J_LilycoveCity_ContestLobby_Text_EnterWhichRank:
-	.string "Whic{SE_M_TRI_ATTACK}Ran{SE_M_ENCORE2}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}enter?$"
+	.string "Which Rank would you like to enter?$"
 
 J_LilycoveCity_ContestLobby_Text_EnterWhichContest1:
-	.string "Whic{SE_M_TRI_ATTACK}CONTES{SE_M_SWIFT}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}enter?$"
+	.string "Which CONTEST would you like to enter?$"
 
 J_LilycoveCity_ContestLobby_Text_EnterWhichPokemon1:
-	.string "Whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}enter?$"
+	.string "Which POKéMON would you like to enter?$"
 
 J_LilycoveCity_ContestLobby_Text_MonNotQualifiedForRank:
-	.string "I'{SE_M_MILK_DRINK}terribl{SE_M_YAWN}sorry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}POKéMON\n"
-	.string "i{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}qualifie{SE_M_WATERFALL}t{SE_M_ATTRACT2}compet{SE_M_REVERSAL}a{SE_M_SPIT_UP}this\l"
-	.string "Ran{SE_M_ENCORE2}yet…$"
+	.string "I'm terribly sorry, but your POKéMON\n"
+	.string "is not qualified to compete at this\l"
+	.string "Rank yet…$"
 
 J_LilycoveCity_ContestLobby_Text_EggCannotTakePart:
-	.string "I'{SE_M_MILK_DRINK}sorry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}a{SE_M_ATTRACT}EG{SE_M_SWAGGER}canno{SE_M_SPIT_UP}tak{SE_M_REVERSAL}part\n"
-	.string "i{SE_M_ATTRACT}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}CONTEST.$"
+	.string "I'm sorry, but an EGG cannot take part\n"
+	.string "in a POKéMON CONTEST.$"
 
 J_LilycoveCity_ContestLobby_Text_MonInNoConditionForContest:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}appear{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}i{SE_M_ATTRACT}no\n"
-	.string "conditio{SE_M_ATTRACT}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}par{SE_M_SPIT_UP}i{SE_M_ATTRACT}{SE_M_CHARGE}CONTEST…$"
+	.string "Your POKéMON appears to be in no\n"
+	.string "condition to take part in a CONTEST…$"
 
 J_LilycoveCity_ContestLobby_Text_AlreadyWonEnterAnyway:
-	.string "Oh{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}RIBBON…\p"
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ha{SE_M_GRASSWHISTLE}wo{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}CONTEST\n"
-	.string "before{SE_M_SUPERSONIC}hasn'{SE_M_SPIT_UP}it?\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}ente{SE_M_SAND_TOMB}i{SE_M_SPIT_UP}i{SE_M_ATTRACT}this\n"
-	.string "CONTES{SE_M_SWIFT}anyway?$"
+	.string "Oh, but that RIBBON…\p"
+	.string "Your POKéMON has won this CONTEST\n"
+	.string "before, hasn't it?\p"
+	.string "Would you like to enter it in this\n"
+	.string "CONTEST anyway?$"
 
 J_LilycoveCity_ContestLobby_Text_ConfirmContestMon:
-	.string "I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}CONTES{SE_M_SWIFT}POKéMON?$"
+	.string "Is that your CONTEST POKéMON?$"
 
 J_LilycoveCity_ContestLobby_Text_YourMonIsEntryNum4:
-	.string "Okay{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}entered\n"
-	.string "i{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}CONTEST.\p"
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}Entr{SE_M_YAWN}No{SE_M_PERISH_SONG}4.\n"
-	.string "Th{SE_M_REVERSAL}CONTES{SE_M_SWIFT}wil{SE_M_BATON_PASS}begi{SE_M_ATTRACT}shortly.$"
+	.string "Okay, your POKéMON will be entered\n"
+	.string "in this CONTEST.\p"
+	.string "Your POKéMON is Entry No. 4.\n"
+	.string "The CONTEST will begin shortly.$"
 
 J_LilycoveCity_ContestLobby_Text_ComeThroughHere:
-	.string "Pleas{SE_M_REVERSAL}com{SE_M_REVERSAL}i{SE_M_ATTRACT}throug{SE_M_TRI_ATTACK}here.\n"
-	.string "Goo{SE_M_WATERFALL}luck!$"
+	.string "Please come in through here.\n"
+	.string "Good luck!$"
 
 J_LilycoveCity_ContestLobby_Text_PokemonWonWeHavePrize:
-	.string "Congratulations{SE_M_DRAGON_RAGE}You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}the\n"
-	.string "CONTES{SE_M_SWIFT}winner!\p"
-	.string "W{SE_M_REVERSAL}hav{SE_M_REVERSAL}you{SE_M_SAND_TOMB}priz{SE_M_REVERSAL}righ{SE_M_SPIT_UP}here.\n"
-	.string "Please{SE_M_SUPERSONIC}righ{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}way!$"
+	.string "Congratulations! Your POKéMON is the\n"
+	.string "CONTEST winner!\p"
+	.string "We have your prize right here.\n"
+	.string "Please, right this way!$"
 
 J_LilycoveCity_ContestLobby_Text_ComeBackForPrizeLater:
-	.string "Pleas{SE_M_REVERSAL}com{SE_M_REVERSAL}bac{SE_M_ENCORE2}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}prize\n"
-	.string "late{SE_M_SAND_TOMB}on.$"
+	.string "Please come back for your prize\n"
+	.string "later on.$"
 
 J_ContestHall_Text_GettingStartedParticipantsAsFollows:
-	.string "MC{SE_M_HEAT_WAVE}Hello{SE_M_DRAGON_RAGE}We'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}gettin{SE_M_SANDSTORM}started\n"
-	.string "wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}{STR_VAR_3} Ran{SE_M_ENCORE2}POKéMON\l"
+	.string "MC: Hello! We're just getting started\n"
+	.string "with a {STR_VAR_3} Rank POKéMON\l"
 	.string "{STR_VAR_2}!\p"
-	.string "Th{SE_M_REVERSAL}participatin{SE_M_SANDSTORM}TRAINER{SE_M_SKETCH}an{SE_M_WATERFALL}their\n"
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}follows:$"
+	.string "The participating TRAINERS and their\n"
+	.string "POKéMON are as follows:$"
 
 J_ContestHall_Text_GettingStartedParticipantsAsFollowsLink:
-	.string "MC{SE_M_HEAT_WAVE}Hello{SE_M_DRAGON_RAGE}We'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}gettin{SE_M_SANDSTORM}started\n"
-	.string "wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}4-playe{SE_M_SAND_TOMB}linke{SE_M_WATERFALL}POKéMON\l"
+	.string "MC: Hello! We're just getting started\n"
+	.string "with a 4-player linked POKéMON\l"
 	.string "{STR_VAR_2}!\p"
-	.string "Th{SE_M_REVERSAL}participatin{SE_M_SANDSTORM}TRAINER{SE_M_SKETCH}an{SE_M_WATERFALL}their\n"
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}follows:$"
+	.string "The participating TRAINERS and their\n"
+	.string "POKéMON are as follows:$"
 
 J_ContestHall_Text_EntryXTrainersMon:
-	.string "MC{SE_M_HEAT_WAVE}Entr{SE_M_YAWN}No{SE_M_PERISH_SONG}{STR_VAR_2}!\n"
-	.string "{STR_VAR_1}'{SE_M_GRASSWHISTLE}{STR_VAR_3}!$"
+	.string "MC: Entry No. {STR_VAR_2}!\n"
+	.string "{STR_VAR_1}'s {STR_VAR_3}!$"
 
 J_ContestHall_Text_SeenContestantsAudienceWillVote:
-	.string "MC{SE_M_HEAT_WAVE}We'v{SE_M_REVERSAL}jus{SE_M_SPIT_UP}see{SE_M_ATTRACT}th{SE_M_REVERSAL}fou{SE_M_SAND_TOMB}POKéMON\n"
+	.string "MC: We've just seen the four POKéMON\n"
 	.string "contestants.\p"
-	.string "No{SE_M_TWISTER}it'{SE_M_GRASSWHISTLE}tim{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}primar{SE_M_YAWN}judging!\p"
-	.string "Th{SE_M_REVERSAL}audienc{SE_M_REVERSAL}wil{SE_M_BATON_PASS}vot{SE_M_REVERSAL}o{SE_M_ATTRACT}their\n"
-	.string "favorit{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}contestants.\p"
-	.string "Withou{SE_M_SPIT_UP}an{SE_M_YAWN}furthe{SE_M_SAND_TOMB}ado{SE_M_SUPERSONIC}le{SE_M_SPIT_UP}the\n"
-	.string "votin{SE_M_SANDSTORM}begin!$"
+	.string "Now it's time for primary judging!\p"
+	.string "The audience will vote on their\n"
+	.string "favorite POKéMON contestants.\p"
+	.string "Without any further ado, let the\n"
+	.string "voting begin!$"
 
 J_ContestHall_Text_VotingUnderWay:
-	.string "Votin{SE_M_SANDSTORM}unde{SE_M_SAND_TOMB}way…$"
+	.string "Voting under way…$"
 
 J_ContestHall_Text_VotingCompleteLetsAppeal:
-	.string "Votin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}no{SE_M_TWISTER}complete!\p"
-	.string "Whil{SE_M_REVERSAL}th{SE_M_REVERSAL}vote{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}bein{SE_M_SANDSTORM}tallied,\n"
-	.string "let'{SE_M_GRASSWHISTLE}mov{SE_M_REVERSAL}o{SE_M_ATTRACT}t{SE_M_ATTRACT2}secondar{SE_M_YAWN}judging!\p"
-	.string "Th{SE_M_REVERSAL}secon{SE_M_WATERFALL}stag{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}judgin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}the\n"
-	.string "muc{SE_M_TRI_ATTACK}anticipate{SE_M_WATERFALL}appea{SE_M_BATON_PASS}time!\p"
-	.string "Ma{SE_M_YAWN}th{SE_M_REVERSAL}contestant{SE_M_GRASSWHISTLE}amaz{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}with\n"
-	.string "super{SE_M_STRENGTH}appeal{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}dazzlin{SE_M_SANDSTORM}moves!\p"
-	.string "Let'{SE_M_GRASSWHISTLE}se{SE_M_REVERSAL}{SE_M_CHARGE}littl{SE_M_REVERSAL}enthusiasm!\n"
-	.string "Let'{SE_M_GRASSWHISTLE}appeal!$"
+	.string "Voting is now complete!\p"
+	.string "While the votes are being tallied,\n"
+	.string "let's move on to secondary judging!\p"
+	.string "The second stage of judging is the\n"
+	.string "much anticipated appeal time!\p"
+	.string "May the contestants amaze us with\n"
+	.string "superb appeals of dazzling moves!\p"
+	.string "Let's see a little enthusiasm!\n"
+	.string "Let's appeal!$"
 
 J_ContestHall_Text_ThatsItForJudging:
-	.string "MC{SE_M_HEAT_WAVE}That'{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}judging!$"
+	.string "MC: That's it for judging!$"
 
 J_ContestHall_Text_ThankYouForAppeals:
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}al{SE_M_BATON_PASS}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}mos{SE_M_SPIT_UP}wonderful\n"
-	.string "displa{SE_M_YAWN}o{SE_M_ACID_ARMOR}qualit{SE_M_YAWN}appeals!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}conclude{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}judging!\n"
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}fin{SE_M_REVERSAL}efforts!$"
+	.string "Thank you all for a most wonderful\n"
+	.string "display of quality appeals!\p"
+	.string "This concludes all judging!\n"
+	.string "Thank you for your fine efforts!$"
 
 J_ContestHall_Text_JudgeLooksReady:
-	.string "Now{SE_M_SUPERSONIC}al{SE_M_BATON_PASS}tha{SE_M_SPIT_UP}remain{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}pulse-\n"
-	.string "poundin{SE_M_SANDSTORM}proclamatio{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}winner.\p"
-	.string "Th{SE_M_REVERSAL}JUDG{SE_M_SWORDS_DANCE}look{SE_M_GRASSWHISTLE}read{SE_M_YAWN}t{SE_M_ATTRACT2}make\n"
-	.string "th{SE_M_REVERSAL}announcement!$"
+	.string "Now, all that remains is the pulse-\n"
+	.string "pounding proclamation of the winner.\p"
+	.string "The JUDGE looks ready to make\n"
+	.string "the announcement!$"
 
 J_ContestHall_Text_WeWillNowDeclareWinner:
-	.string "JUDGE{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}no{SE_M_TWISTER}declar{SE_M_REVERSAL}th{SE_M_REVERSAL}winner!$"
+	.string "JUDGE: We will now declare the winner!$"
 
 J_ContestHall_Text_CongratsTrainerXandMon:
-	.string "MC{SE_M_HEAT_WAVE}Entr{SE_M_YAWN}No{SE_M_PERISH_SONG}{STR_VAR_2}!\p"
-	.string "{STR_VAR_3} an{SE_M_WATERFALL}{STR_VAR_1},\n"
+	.string "MC: Entry No. {STR_VAR_2}!\p"
+	.string "{STR_VAR_3} and {STR_VAR_1},\n"
 	.string "congratulations!$"
 
 J_ContestHall_Text_CongratsPleaseCompeteAgain:
-	.string "MC{SE_M_HEAT_WAVE}Congratulations!\n"
-	.string "Pleas{SE_M_REVERSAL}d{SE_M_ATTRACT2}compet{SE_M_REVERSAL}again!$"
+	.string "MC: Congratulations!\n"
+	.string "Please do compete again!$"
 
 J_ContestHall_Text_AcceptYourPrize:
-	.string "MC{SE_M_HEAT_WAVE}Her{SE_M_REVERSAL}yo{SE_M_DIVE}are!\n"
-	.string "Pleas{SE_M_REVERSAL}accep{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}prize!$"
+	.string "MC: Here you are!\n"
+	.string "Please accept your prize!$"
 
 J_ContestHall_Text_ConferRibbonAsPrize:
-	.string "W{SE_M_REVERSAL}confe{SE_M_SAND_TOMB}o{SE_M_ATTRACT}yo{SE_M_DIVE}thi{SE_M_GRASSWHISTLE}RIBBON\n"
-	.string "a{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}prize!$"
+	.string "We confer on you this RIBBON\n"
+	.string "as your prize!$"
 
 J_ContestHall_Text_ReceivedRibbon:
-	.string "{PLAYER} receive{SE_M_WATERFALL}{SE_M_CHARGE}RIBBON.$"
+	.string "{PLAYER} received a RIBBON.$"
 
 J_ContestHall_Text_PutRibbonOnMon:
-	.string "{PLAYER} pu{SE_M_SPIT_UP}th{SE_M_REVERSAL}RIBBO{SE_M_PSYBEAM2}on\n"
+	.string "{PLAYER} put the RIBBON on\n"
 	.string "{STR_VAR_1}.$"
 
 J_ContestHall_Text_PickUpPrizeAtCounterLater:
-	.string "Pleas{SE_M_REVERSAL}pic{SE_M_ENCORE2}u{SE_M_MORNING_SUN}you{SE_M_SAND_TOMB}priz{SE_M_REVERSAL}at\n"
-	.string "th{SE_M_REVERSAL}receptio{SE_M_ATTRACT}counte{SE_M_SAND_TOMB}later.\l"
-	.string "Pleas{SE_M_REVERSAL}d{SE_M_ATTRACT2}compet{SE_M_REVERSAL}again!$"
+	.string "Please pick up your prize at\n"
+	.string "the reception counter later.\l"
+	.string "Please do compete again!$"
 
 J_ContestHall_Text_OnlyRegister4Players:
-	.string "{SE_M_HEAL_BELL}onl{SE_M_YAWN}registe{SE_M_SAND_TOMB}fou{SE_M_SAND_TOMB}player{SE_M_GRASSWHISTLE}for\n"
-	.string "POKéMO{SE_M_PSYBEAM2}CONTESTS.\p"
-	.string "I{SE_M_ACID_ARMOR}thre{SE_M_REVERSAL}othe{SE_M_SAND_TOMB}player{SE_M_GRASSWHISTLE}lin{SE_M_ENCORE2}up{SE_M_SUPERSONIC}all\n"
-	.string "fou{SE_M_SAND_TOMB}ma{SE_M_YAWN}ente{SE_M_SAND_TOMB}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}CONTEST.\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}part?$"
+	.string "I only register four players for\n"
+	.string "POKéMON CONTESTS.\p"
+	.string "If three other players link up, all\n"
+	.string "four may enter the same CONTEST.\p"
+	.string "Would you like to take part?$"
 
 J_LilycoveCity_ContestLobby_Text_ProgressWillBeSaved:
-	.string "Befor{SE_M_REVERSAL}enterin{SE_M_SANDSTORM}{SE_M_CHARGE}CONTEST{SE_M_SUPERSONIC}your\n"
-	.string "progres{SE_M_GRASSWHISTLE}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}saved.$"
+	.string "Before entering a CONTEST, your\n"
+	.string "progress will be saved.$"
 
 J_LilycoveCity_ContestLobby_Text_ParticipateAnotherTime:
-	.string "W{SE_M_REVERSAL}hop{SE_M_REVERSAL}yo{SE_M_DIVE}wil{SE_M_BATON_PASS}participat{SE_M_REVERSAL}another\n"
+	.string "We hope you will participate another\n"
 	.string "time.$"
 
 J_LilycoveCity_ContestLobby_Text_EnterContest2:
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}ente{SE_M_SAND_TOMB}{SE_M_CHARGE}CONTEST?$"
+	.string "Would you like to enter a CONTEST?$"
 
 J_LilycoveCity_ContestLobby_Text_Explain4PlayerContest:
-	.string "Whe{SE_M_ATTRACT}fou{SE_M_SAND_TOMB}player{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}ready{SE_M_SUPERSONIC}connect\n"
-	.string "ove{SE_M_SAND_TOMB}{SE_M_CHARGE}Gam{SE_M_REVERSAL}Lin{SE_M_ENCORE2}cable{SE_M_SUPERSONIC}an{SE_M_WATERFALL}register\l"
-	.string "wit{SE_M_TRI_ATTACK}me{SE_M_SUPERSONIC}please.\p"
-	.string "Pleas{SE_M_REVERSAL}choos{SE_M_REVERSAL}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}CONTEST\n"
-	.string "a{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}fello{SE_M_TWISTER}contestants.\p"
-	.string "Th{SE_M_REVERSAL}CONTES{SE_M_SWIFT}begin{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}soo{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}all\n"
-	.string "player{SE_M_GRASSWHISTLE}registe{SE_M_SAND_TOMB}thei{SE_M_SAND_TOMB}entry.\p"
-	.string "Afte{SE_M_SAND_TOMB}that{SE_M_SUPERSONIC}th{SE_M_REVERSAL}usua{SE_M_BATON_PASS}CONTES{SE_M_SWIFT}rules\n"
+	.string "When four players are ready, connect\n"
+	.string "over a Game Link cable, and register\l"
+	.string "with me, please.\p"
+	.string "Please choose the same CONTEST\n"
+	.string "as your fellow contestants.\p"
+	.string "The CONTEST begins as soon as all\n"
+	.string "players register their entry.\p"
+	.string "After that, the usual CONTEST rules\n"
 	.string "apply.$"
 
 J_LilycoveCity_ContestLobby_Text_EnterWhichContest2:
-	.string "Whic{SE_M_TRI_ATTACK}CONTES{SE_M_SWIFT}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}enter?$"
+	.string "Which CONTEST would you like to enter?$"
 
 J_LilycoveCity_ContestLobby_Text_EnterWhichPokemon2:
-	.string "Whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}enter?$"
+	.string "Which POKéMON would you like to enter?$"
 
 J_LilycoveCity_ContestLobby_Text_Transmitting:
 	.string "Transmitting…$"
 
 J_LilycoveCity_ContestLobby_Text_TransmissionError:
-	.string "Transmissio{SE_M_ATTRACT}error…$"
+	.string "Transmission error…$"
 
 J_LilycoveCity_ContestLobby_Text_PlayersChoseDifferentContest:
-	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}hav{SE_M_REVERSAL}chose{SE_M_ATTRACT}{SE_M_CHARGE}different\n"
-	.string "CONTES{SE_M_SWIFT}tha{SE_M_ATTRACT}anothe{SE_M_SAND_TOMB}player.$"
+	.string "You may have chosen a different\n"
+	.string "CONTEST than another player.$"
 
 J_LilycoveCity_ContestLobby_Text_PlayersMadeDifferentChoice:
-	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}hav{SE_M_REVERSAL}mad{SE_M_REVERSAL}{SE_M_CHARGE}different\n"
-	.string "choic{SE_M_REVERSAL}tha{SE_M_ATTRACT}anothe{SE_M_SAND_TOMB}player.$"
+	.string "You may have made a different\n"
+	.string "choice than another player.$"
 
 J_LilycoveCity_ContestLobby_Text_PleaseWaitBButtonCancel:
-	.string "Pleas{SE_M_REVERSAL}wait.\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_LICK}Button{SE_M_HEAT_WAVE}Cancel$"
+	.string "Please wait.\n"
+	.string "… … B Button: Cancel$"
 
 J_LilycoveCity_ContestLobby_Text_ParticipateAnotherTime2:
-	.string "W{SE_M_REVERSAL}hop{SE_M_REVERSAL}yo{SE_M_DIVE}wil{SE_M_BATON_PASS}participat{SE_M_REVERSAL}another\n"
+	.string "We hope you will participate another\n"
 	.string "time.$"
 
 J_LilycoveCity_ContestLobby_Text_TransmissionErrorTryAgain:
-	.string "Transmissio{SE_M_ATTRACT}error.\n"
-	.string "Pleas{SE_M_REVERSAL}tr{SE_M_YAWN}again.$"
+	.string "Transmission error.\n"
+	.string "Please try again.$"
 
 J_LilycoveCity_ContestLobby_Text_YourMonIsEntryNumX:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}entere{SE_M_WATERFALL}in\n"
-	.string "th{SE_M_REVERSAL}CONTEST.\p"
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}Entr{SE_M_YAWN}No{SE_M_PERISH_SONG}{STR_VAR_2}.$"
+	.string "Your POKéMON will be entered in\n"
+	.string "the CONTEST.\p"
+	.string "Your POKéMON is Entry No. {STR_VAR_2}.$"
 
 J_LilycoveCity_ContestLobby_Text_ContestBeginShortly:
-	.string "Th{SE_M_REVERSAL}CONTES{SE_M_SWIFT}wil{SE_M_BATON_PASS}begi{SE_M_ATTRACT}shortly.$"
+	.string "The CONTEST will begin shortly.$"
 
 J_LilycoveCity_ContestLobby_Text_LinkContestReception:
-	.string "Welcome{SE_M_DRAGON_RAGE}Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}CONTEST\n"
-	.string "lin{SE_M_ENCORE2}receptio{SE_M_ATTRACT}counter.\p"
-	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}ente{SE_M_SAND_TOMB}CONTEST{SE_M_SKETCH}togethe{SE_M_SAND_TOMB}with\n"
-	.string "on{SE_M_REVERSAL}o{SE_M_SAND_TOMB}mor{SE_M_REVERSAL}friends.$"
+	.string "Welcome! This is the POKéMON CONTEST\n"
+	.string "link reception counter.\p"
+	.string "You may enter CONTESTS together with\n"
+	.string "one or more friends.$"
 
 J_LilycoveCity_ContestLobby_Text_WhichTopic2:
-	.string "Whic{SE_M_TRI_ATTACK}topi{SE_M_HYPER_BEAM}woul{SE_M_WATERFALL}yo{SE_M_DIVE}like?$"
+	.string "Which topic would you like?$"
 
 J_LilycoveCity_ContestLobby_Text_EnterContest3:
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}ente{SE_M_SAND_TOMB}{SE_M_CHARGE}CONTEST?$"
+	.string "Would you like to enter a CONTEST?$"
 
 J_LilycoveCity_ContestLobby_Text_EnterWhichContest3:
-	.string "Whic{SE_M_TRI_ATTACK}CONTES{SE_M_SWIFT}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}enter?$"
+	.string "Which CONTEST would you like to enter?$"
 
 J_LilycoveCity_ContestLobby_Text_MonInNoCondition2:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}appear{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}i{SE_M_ATTRACT}no\n"
-	.string "conditio{SE_M_ATTRACT}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}par{SE_M_SPIT_UP}i{SE_M_ATTRACT}{SE_M_CHARGE}CONTEST…$"
+	.string "Your POKéMON appears to be in no\n"
+	.string "condition to take part in a CONTEST…$"
 
 J_LilycoveCity_ContestLobby_Text_EggCannotTakePart2:
-	.string "I'{SE_M_MILK_DRINK}sorry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}a{SE_M_ATTRACT}EG{SE_M_SWAGGER}canno{SE_M_SPIT_UP}tak{SE_M_REVERSAL}part\n"
-	.string "i{SE_M_ATTRACT}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}CONTEST.$"
+	.string "I'm sorry, but an EGG cannot take part\n"
+	.string "in a POKéMON CONTEST.$"
 
 J_LilycoveCity_ContestLobby_Text_EnterWhichPokemon3:
-	.string "Whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}enter?$"
+	.string "Which POKéMON would you like to enter?$"
 
 J_LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader:
-	.string "Pleas{SE_M_REVERSAL}decid{SE_M_REVERSAL}whic{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}yo{SE_M_DIVE}will\n"
-	.string "becom{SE_M_REVERSAL}th{SE_M_REVERSAL}GROU{SE_M_PETAL_DANCE}LEADER.\p"
-	.string "Th{SE_M_REVERSAL}othe{SE_M_SAND_TOMB}player{SE_M_GRASSWHISTLE}mus{SE_M_SPIT_UP}the{SE_M_ATTRACT}choose\n"
-	.string "“JOI{SE_M_PSYBEAM2}GROUP.”$"
+	.string "Please decide which of you will\n"
+	.string "become the GROUP LEADER.\p"
+	.string "The other players must then choose\n"
+	.string "“JOIN GROUP.”$"
 
 J_LilycoveCity_ContestLobby_Text_PlayerAt4PCounterUseGMode:
-	.string "A{SE_M_SPIT_UP}leas{SE_M_SPIT_UP}on{SE_M_REVERSAL}playe{SE_M_SAND_TOMB}ha{SE_M_GRASSWHISTLE}entere{SE_M_WATERFALL}using\n"
-	.string "th{SE_M_REVERSAL}4-playe{SE_M_SAND_TOMB}receptio{SE_M_ATTRACT}counter.\p"
-	.string "Ther{SE_M_REVERSAL}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}fou{SE_M_SAND_TOMB}player{SE_M_GRASSWHISTLE}connected\n"
-	.string "usin{SE_M_SANDSTORM}{SE_M_CHARGE}GB{SE_M_BONEMERANG}Gam{SE_M_REVERSAL}Lin{SE_M_ENCORE2}cable.\p"
-	.string "Whe{SE_M_ATTRACT}th{SE_M_REVERSAL}fou{SE_M_SAND_TOMB}player{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}ready,\n"
-	.string "selec{SE_M_SPIT_UP}G-MOD{SE_M_SWORDS_DANCE}(GLOBA{SE_M_BRICK_BREAK}MODE),\l"
-	.string "the{SE_M_ATTRACT}registe{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}ente{SE_M_SAND_TOMB}again{SE_M_SUPERSONIC}please.$"
+	.string "At least one player has entered using\n"
+	.string "the 4-player reception counter.\p"
+	.string "There must be four players connected\n"
+	.string "using a GBA Game Link cable.\p"
+	.string "When the four players are ready,\n"
+	.string "select G-MODE (GLOBAL MODE),\l"
+	.string "then register to enter again, please.$"
 
 J_LilycoveCity_ContestLobby_Text_ExplainLinkContest:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}CONTES{SE_M_SWIFT}fo{SE_M_SAND_TOMB}tw{SE_M_ATTRACT2}t{SE_M_ATTRACT2}four\n"
-	.string "player{SE_M_GRASSWHISTLE}linke{SE_M_WATERFALL}usin{SE_M_SANDSTORM}{SE_M_CHARGE}Wireless\l"
-	.string "Adapte{SE_M_SAND_TOMB}o{SE_M_SAND_TOMB}{SE_M_CHARGE}GB{SE_M_BONEMERANG}Gam{SE_M_REVERSAL}Lin{SE_M_ENCORE2}cable.\p"
-	.string "Participant{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}firs{SE_M_SPIT_UP}aske{SE_M_WATERFALL}t{SE_M_ATTRACT2}choose\n"
-	.string "th{SE_M_REVERSAL}mod{SE_M_REVERSAL}the{SE_M_YAWN}wis{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}enter.\p"
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}tw{SE_M_ATTRACT2}differen{SE_M_SPIT_UP}modes.\p"
-	.string "E-MOD{SE_M_SWORDS_DANCE}(EMERAL{SE_M_FAINT_ATTACK}MODE{SE_ROULETTE_BALL2}i{SE_M_GRASSWHISTLE}for\n"
-	.string "tw{SE_M_ATTRACT2}t{SE_M_ATTRACT2}fou{SE_M_SAND_TOMB}players{SE_M_SUPERSONIC}eac{SE_M_TRI_ATTACK}wit{SE_M_TRI_ATTACK}a\l"
-	.string "POKéMO{SE_M_PSYBEAM2}Emeral{SE_M_WATERFALL}Gam{SE_M_REVERSAL}Pak.\p"
-	.string "G-MOD{SE_M_SWORDS_DANCE}(GLOBA{SE_M_BRICK_BREAK}MODE{SE_ROULETTE_BALL2}i{SE_M_GRASSWHISTLE}onl{SE_M_YAWN}for\n"
-	.string "fou{SE_M_SAND_TOMB}players{SE_M_SUPERSONIC}eac{SE_M_TRI_ATTACK}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}POKéMON\l"
-	.string "Emerald{SE_M_SUPERSONIC}Ruby{SE_M_SUPERSONIC}o{SE_M_SAND_TOMB}Sapphir{SE_M_REVERSAL}Gam{SE_M_REVERSAL}Pak.\p"
-	.string "Th{SE_M_REVERSAL}player{SE_M_GRASSWHISTLE}shoul{SE_M_WATERFALL}discus{SE_M_GRASSWHISTLE}whic{SE_M_TRI_ATTACK}mode\n"
-	.string "the{SE_M_YAWN}want{SE_M_SUPERSONIC}the{SE_M_ATTRACT}choos{SE_M_REVERSAL}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}mode.\p"
-	.string "Onc{SE_M_REVERSAL}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}player{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}chosen\n"
-	.string "th{SE_M_REVERSAL}sam{SE_M_REVERSAL}CONTES{SE_M_SWIFT}i{SE_M_ATTRACT}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}mode,\l"
-	.string "th{SE_M_REVERSAL}entr{SE_M_YAWN}registratio{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}complete.\p"
-	.string "Afte{SE_M_SAND_TOMB}that{SE_M_SUPERSONIC}{SE_M_CHARGE}CONTES{SE_M_SWIFT}wil{SE_M_BATON_PASS}star{SE_M_SPIT_UP}in\n"
-	.string "th{SE_M_REVERSAL}usua{SE_M_BATON_PASS}manner.$"
+	.string "This is a CONTEST for two to four\n"
+	.string "players linked using a Wireless\l"
+	.string "Adapter or a GBA Game Link cable.\p"
+	.string "Participants are first asked to choose\n"
+	.string "the mode they wish to enter.\p"
+	.string "There are two different modes.\p"
+	.string "E-MODE (EMERALD MODE) is for\n"
+	.string "two to four players, each with a\l"
+	.string "POKéMON Emerald Game Pak.\p"
+	.string "G-MODE (GLOBAL MODE) is only for\n"
+	.string "four players, each with a POKéMON\l"
+	.string "Emerald, Ruby, or Sapphire Game Pak.\p"
+	.string "The players should discuss which mode\n"
+	.string "they want, then choose the same mode.\p"
+	.string "Once all the players have chosen\n"
+	.string "the same CONTEST in the same mode,\l"
+	.string "the entry registration is complete.\p"
+	.string "After that, a CONTEST will start in\n"
+	.string "the usual manner.$"
 
 J_LilycoveCity_ContestLobby_Text_ExplainEMode:
-	.string "I{SE_M_ATTRACT}E-MOD{SE_M_SWORDS_DANCE}(EMERAL{SE_M_FAINT_ATTACK}MODE),\n"
-	.string "{SE_M_CHARGE}LIN{SE_M_SNORE}CONTES{SE_M_SWIFT}ca{SE_M_ATTRACT}b{SE_M_REVERSAL}hel{SE_M_WATERFALL}with\l"
-	.string "tw{SE_M_ATTRACT2}t{SE_M_ATTRACT2}fou{SE_M_SAND_TOMB}players{SE_M_PERISH_SONG}Eac{SE_M_TRI_ATTACK}playe{SE_M_SAND_TOMB}must\l"
-	.string "hav{SE_M_REVERSAL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}Emeral{SE_M_WATERFALL}Gam{SE_M_REVERSAL}Pak.\p"
-	.string "Th{SE_M_REVERSAL}player{SE_M_GRASSWHISTLE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}linke{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}each\n"
-	.string "othe{SE_M_SAND_TOMB}usin{SE_M_SANDSTORM}Wireles{SE_M_GRASSWHISTLE}Adapter{SE_M_GRASSWHISTLE}or\l"
-	.string "GB{SE_M_BONEMERANG}Gam{SE_M_REVERSAL}Lin{SE_M_ENCORE2}cables.\p"
-	.string "I{SE_M_ACID_ARMOR}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}fewe{SE_M_SAND_TOMB}tha{SE_M_ATTRACT}fou{SE_M_SAND_TOMB}players,\n"
-	.string "TRAINER{SE_M_SKETCH}i{SE_M_ATTRACT}th{SE_M_REVERSAL}hal{SE_M_BATON_PASS}wil{SE_M_BATON_PASS}joi{SE_M_ATTRACT}t{SE_M_ATTRACT2}fill\l"
-	.string "th{SE_M_REVERSAL}4-playe{SE_M_SAND_TOMB}CONTES{SE_M_SWIFT}lineup.\p"
-	.string "Pleas{SE_M_REVERSAL}b{SE_M_REVERSAL}awar{SE_M_REVERSAL}tha{SE_M_SPIT_UP}E-MOD{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}not\n"
-	.string "availabl{SE_M_REVERSAL}i{SE_M_ATTRACT}POKéMO{SE_M_PSYBEAM2}Rub{SE_M_YAWN}o{SE_M_SAND_TOMB}Sapphire.$"
+	.string "In E-MODE (EMERALD MODE),\n"
+	.string "a LINK CONTEST can be held with\l"
+	.string "two to four players. Each player must\l"
+	.string "have a POKéMON Emerald Game Pak.\p"
+	.string "The players must be linked with each\n"
+	.string "other using Wireless Adapters or\l"
+	.string "GBA Game Link cables.\p"
+	.string "If there are fewer than four players,\n"
+	.string "TRAINERS in the hall will join to fill\l"
+	.string "the 4-player CONTEST lineup.\p"
+	.string "Please be aware that E-MODE is not\n"
+	.string "available in POKéMON Ruby or Sapphire.$"
 
 J_LilycoveCity_ContestLobby_Text_ExplainGMode:
-	.string "G-MOD{SE_M_SWORDS_DANCE}(GLOBA{SE_M_BRICK_BREAK}MODE{SE_ROULETTE_BALL2}i{SE_M_GRASSWHISTLE}specifically\n"
-	.string "fo{SE_M_SAND_TOMB}fou{SE_M_SAND_TOMB}player{SE_M_GRASSWHISTLE}wh{SE_M_ATTRACT2}ar{SE_M_REVERSAL}linke{SE_M_WATERFALL}using\l"
-	.string "GB{SE_M_BONEMERANG}Gam{SE_M_REVERSAL}Lin{SE_M_ENCORE2}cables.\p"
-	.string "Eac{SE_M_TRI_ATTACK}playe{SE_M_SAND_TOMB}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}{SE_M_CHARGE}POKéMON\n"
-	.string "Emerald{SE_M_SUPERSONIC}Ruby{SE_M_SUPERSONIC}o{SE_M_SAND_TOMB}Sapphir{SE_M_REVERSAL}Gam{SE_M_REVERSAL}Pak.\p"
-	.string "Th{SE_M_REVERSAL}CONTES{SE_M_SWIFT}start{SE_M_GRASSWHISTLE}afte{SE_M_SAND_TOMB}al{SE_M_BATON_PASS}players\n"
-	.string "choos{SE_M_REVERSAL}G-MOD{SE_M_SWORDS_DANCE}(POKéMO{SE_M_PSYBEAM2}Emerald{SE_ROULETTE_BALL2}or\l"
-	.string "ente{SE_M_SAND_TOMB}throug{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}4-playe{SE_M_SAND_TOMB}reception\l"
-	.string "counte{SE_M_SAND_TOMB}(POKéMO{SE_M_PSYBEAM2}Rub{SE_M_YAWN}o{SE_M_SAND_TOMB}Sapphire).$"
+	.string "G-MODE (GLOBAL MODE) is specifically\n"
+	.string "for four players who are linked using\l"
+	.string "GBA Game Link cables.\p"
+	.string "Each player must have a POKéMON\n"
+	.string "Emerald, Ruby, or Sapphire Game Pak.\p"
+	.string "The CONTEST starts after all players\n"
+	.string "choose G-MODE (POKéMON Emerald) or\l"
+	.string "enter through the 4-player reception\l"
+	.string "counter (POKéMON Ruby or Sapphire).$"
 
 J_LilycoveCity_ContestLobby_Text_NoWirelessAdapterInGMode:
-	.string "I'{SE_M_MILK_DRINK}terribl{SE_M_YAWN}sorry.\p"
-	.string "G-MOD{SE_M_SWORDS_DANCE}doe{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}function\n"
-	.string "wit{SE_M_TRI_ATTACK}Wireles{SE_M_GRASSWHISTLE}Adapters.\p"
-	.string "Pleas{SE_M_REVERSAL}selec{SE_M_SPIT_UP}E-MOD{SE_M_SWORDS_DANCE}o{SE_M_SAND_TOMB}try\n"
-	.string "agai{SE_M_ATTRACT}usin{SE_M_SANDSTORM}{SE_M_CHARGE}GB{SE_M_BONEMERANG}Gam{SE_M_REVERSAL}Lin{SE_M_ENCORE2}cable.$"
+	.string "I'm terribly sorry.\p"
+	.string "G-MODE does not function\n"
+	.string "with Wireless Adapters.\p"
+	.string "Please select E-MODE or try\n"
+	.string "again using a GBA Game Link cable.$"
 
 J_LilycoveCity_ContestLobby_Text_WhichContestMode:
-	.string "Whic{SE_M_TRI_ATTACK}CONTES{SE_M_SWIFT}MOD{SE_M_SWORDS_DANCE}woul{SE_M_WATERFALL}yo{SE_M_DIVE}like\n"
-	.string "t{SE_M_ATTRACT2}enter?$"
+	.string "Which CONTEST MODE would you like\n"
+	.string "to enter?$"
 
 J_ContestHall_Text_GettingStartedWireless:
-	.string "MC{SE_M_HEAT_WAVE}Hello{SE_M_DRAGON_RAGE}We'r{SE_M_REVERSAL}jus{SE_M_SPIT_UP}gettin{SE_M_SANDSTORM}started\n"
-	.string "wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}4-playe{SE_M_SAND_TOMB}linke{SE_M_WATERFALL}POKéMON\l"
+	.string "MC: Hello! We're just getting started\n"
+	.string "with a 4-player linked POKéMON\l"
 	.string "{STR_VAR_2}!$"
 
 J_ContestHall_Text_ParticipantsAsFollows:
-	.string "Th{SE_M_REVERSAL}participatin{SE_M_SANDSTORM}TRAINER{SE_M_SKETCH}an{SE_M_WATERFALL}their\n"
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}follows:$"
+	.string "The participating TRAINERS and their\n"
+	.string "POKéMON are as follows:$"
 
 J_ContestHall_Text_WeveSeenContestants:
-	.string "MC{SE_M_HEAT_WAVE}We'v{SE_M_REVERSAL}jus{SE_M_SPIT_UP}see{SE_M_ATTRACT}th{SE_M_REVERSAL}fou{SE_M_SAND_TOMB}POKéMON\n"
+	.string "MC: We've just seen the four POKéMON\n"
 	.string "contestants.\p"
-	.string "No{SE_M_TWISTER}it'{SE_M_GRASSWHISTLE}tim{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}primar{SE_M_YAWN}judging!$"
+	.string "Now it's time for primary judging!$"
 
 J_ContestHall_Text_AudienceWillVote:
-	.string "Th{SE_M_REVERSAL}audienc{SE_M_REVERSAL}wil{SE_M_BATON_PASS}vot{SE_M_REVERSAL}o{SE_M_ATTRACT}their\n"
-	.string "favorit{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}contestants.$"
+	.string "The audience will vote on their\n"
+	.string "favorite POKéMON contestants.$"
 
 J_ContestHall_Text_LetVotingBegin:
-	.string "Withou{SE_M_SPIT_UP}an{SE_M_YAWN}furthe{SE_M_SAND_TOMB}ado,\n"
-	.string "le{SE_M_SPIT_UP}th{SE_M_REVERSAL}votin{SE_M_SANDSTORM}begin!$"
+	.string "Without any further ado,\n"
+	.string "let the voting begin!$"
 
 J_ContestHall_Text_VotingComplete:
-	.string "Votin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}no{SE_M_TWISTER}complete!\p"
-	.string "Whil{SE_M_REVERSAL}th{SE_M_REVERSAL}vote{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}bein{SE_M_SANDSTORM}tallied,\n"
-	.string "let'{SE_M_GRASSWHISTLE}mov{SE_M_REVERSAL}o{SE_M_ATTRACT}t{SE_M_ATTRACT2}secondar{SE_M_YAWN}judging!$"
+	.string "Voting is now complete!\p"
+	.string "While the votes are being tallied,\n"
+	.string "let's move on to secondary judging!$"
 
 J_ContestHall_Text_SecondStageOfJudging:
-	.string "Th{SE_M_REVERSAL}secon{SE_M_WATERFALL}stag{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}judgin{SE_M_SANDSTORM}is\n"
-	.string "th{SE_M_REVERSAL}much-anticipate{SE_M_WATERFALL}appea{SE_M_BATON_PASS}time!\p"
-	.string "Ma{SE_M_YAWN}th{SE_M_REVERSAL}contestant{SE_M_GRASSWHISTLE}amaz{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}with\n"
-	.string "super{SE_M_STRENGTH}appeal{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}dazzlin{SE_M_SANDSTORM}moves!$"
+	.string "The second stage of judging is\n"
+	.string "the much-anticipated appeal time!\p"
+	.string "May the contestants amaze us with\n"
+	.string "superb appeals of dazzling moves!$"
 
 J_ContestHall_Text_LetsAppeal:
-	.string "Let'{SE_M_GRASSWHISTLE}se{SE_M_REVERSAL}{SE_M_CHARGE}littl{SE_M_REVERSAL}enthusiasm!\n"
-	.string "Let'{SE_M_GRASSWHISTLE}appeal!$"
+	.string "Let's see a little enthusiasm!\n"
+	.string "Let's appeal!$"
 

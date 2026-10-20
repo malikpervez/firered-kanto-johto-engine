@@ -159,62 +159,62 @@ NationalPark_BugContest_Movement_AttendantSide:
 	step_end
 
 NationalPark_BugContest_Text_Trash:
-	.string "Nothin{SE_M_SANDSTORM}here.$"
+	.string "Nothing here.$"
 
 NationlParkBugContest_Text_EnjoyTheContest:
-	.string "ATTENDANT{SE_M_HEAT_WAVE}Enjo{SE_M_YAWN}th{SE_M_REVERSAL}Contest!$"
+	.string "ATTENDANT: Enjoy the Contest!$"
 
 NationalParkBugContest_Text_Attendant:
-	.string "ATTENDANT{SE_M_HEAT_WAVE}Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}end\n"
-	.string "th{SE_M_REVERSAL}contest?$"
+	.string "ATTENDANT: Would you like to end\n"
+	.string "the contest?$"
 
 NationalParkBugContest_Text_ContestantBelinda:
-	.string "BELINDA{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}win!\n"
-	.string "Don'{SE_M_SPIT_UP}bothe{SE_M_SAND_TOMB}me.$"
+	.string "BELINDA: I'm going to win!\n"
+	.string "Don't bother me.$"
 
 NationalParkBugContest_Text_Contestant2A:
-	.string "ED{SE_M_HEAT_WAVE}M{SE_M_YAWN}PARASEC{SE_M_SWIFT}put{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}to\n"
-	.string "slee{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}SPORE.$"
+	.string "ED: My PARASECT puts POKéMON to\n"
+	.string "sleep with SPORE.$"
 
 NationalParkBugContest_Text_ContestantShaun:
-	.string "SHAUN{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}concerne{SE_M_WATERFALL}about\n"
+	.string "SHAUN: I'm not concerned about\n"
 	.string "winning.\p"
-	.string "I'{SE_M_MILK_DRINK}jus{SE_M_SPIT_UP}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}rar{SE_M_REVERSAL}POKéMON.$"
+	.string "I'm just looking for rare POKéMON.$"
 
 NationalParkBugContest_Text_Contestant6A:
-	.string "BARRY{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}weake{SE_M_ATTRACT}bug\n"
-	.string "POKéMO{SE_M_PSYBEAM2}first,\p"
-	.string "the{SE_M_ATTRACT}thro{SE_M_TWISTER}{SE_M_CHARGE}BALL.$"
+	.string "BARRY: You should weaken bug\n"
+	.string "POKéMON first,\p"
+	.string "then throw a BALL.$"
 
 NationalParkBugContest_Text_Contestant7A:
-	.string "CINDY{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}bu{SE_M_SANDSTORM}POKéMON.\p"
-	.string "{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}mus{SE_M_SPIT_UP}lik{SE_M_REVERSAL}the{SE_M_MILK_DRINK}too.$"
+	.string "CINDY: I love bug POKéMON.\p"
+	.string "I guess you must like them too.$"
 
 NationalParkBugContest_Text_Contestant8A:
-	.string "JOSH{SE_M_HEAT_WAVE}I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}collectin{SE_M_SANDSTORM}bug\n"
-	.string "POKéMO{SE_M_PSYBEAM2}sinc{SE_M_REVERSAL}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}{SE_M_CHARGE}baby.\p"
-	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}wa{SE_M_YAWN}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}lose!$"
+	.string "JOSH: I've been collecting bug\n"
+	.string "POKéMON since I was just a baby.\p"
+	.string "There's no way I'm going to lose!$"
 
 NationalParkBugContest_Text_Contestant9A:
-	.string "SAMUEL{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}you'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}th{SE_M_REVERSAL}tim{SE_M_REVERSAL}to\n"
-	.string "chat{SE_M_SUPERSONIC}g{SE_M_ATTRACT2}fin{SE_M_WATERFALL}som{SE_M_REVERSAL}bu{SE_M_SANDSTORM}POKéMON.$"
+	.string "SAMUEL: If you've got the time to\n"
+	.string "chat, go find some bug POKéMON.$"
 
 NationalParkBugContest_Text_Contestant10A:
-	.string "KIPP{SE_M_HEAT_WAVE}I'v{SE_M_REVERSAL}studie{SE_M_WATERFALL}abou{SE_M_SPIT_UP}bug\n"
-	.string "POKéMO{SE_M_PSYBEAM2}{SE_M_CHARGE}lot.\p"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}wi{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}sure.$"
+	.string "KIPP: I've studied about bug\n"
+	.string "POKéMON a lot.\p"
+	.string "I'm going to win for sure.$"
 
 NationalParkBugContest_Text_Sign_RelaxationSquare:
-	.string "RELAXATIO{SE_M_PSYBEAM2}SQUARE\n"
-	.string "NATIONA{SE_M_BRICK_BREAK}PARK$"
+	.string "RELAXATION SQUARE\n"
+	.string "NATIONAL PARK$"
 
 NationalParkBugContest_Text_Sign_BattleNotice:
-	.string "Wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}notice?\p"
-	.string "Pleas{SE_M_REVERSAL}battl{SE_M_REVERSAL}onl{SE_M_YAWN}i{SE_M_ATTRACT}th{SE_M_REVERSAL}grass.\p"
-	.string "NATIONA{SE_M_BRICK_BREAK}PAR{SE_M_SNORE}WARDEN'{SE_M_SKETCH}OFFICE$"
+	.string "What is this notice?\p"
+	.string "Please battle only in the grass.\p"
+	.string "NATIONAL PARK WARDEN'S OFFICE$"
 
 NationalParkBugContest_Text_TrainerTips:
-	.string "Th{SE_M_REVERSAL}NATIONA{SE_M_BRICK_BREAK}PAR{SE_M_SNORE}ha{SE_M_GRASSWHISTLE}different\n"
-	.string "POKéMO{SE_M_PSYBEAM2}durin{SE_M_SANDSTORM}th{SE_M_REVERSAL}BUG-CATCHING\l"
+	.string "The NATIONAL PARK has different\n"
+	.string "POKéMON during the BUG-CATCHING\l"
 	.string "CONTEST.$"
 

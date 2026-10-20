@@ -1,16 +1,16 @@
 @ Johto (data/scripts/follower.inc), as built into the FireRed game.
 
 J_gText_FollowerLovesYou::
-	.string "{STR_VAR_1} i{SE_M_GRASSWHISTLE}regardin{SE_M_SANDSTORM}yo{SE_M_DIVE}with\nadoration!$"
+	.string "{STR_VAR_1} is regarding you with\nadoration!$"
 
 J_gText_FollowerLostInThought::
-	.string "{STR_VAR_1} seem{SE_M_GRASSWHISTLE}los{SE_M_SPIT_UP}i{SE_M_ATTRACT}thought.$"
+	.string "{STR_VAR_1} seems lost in thought.$"
 
 J_gText_FollowerDefault::
-	.string "ERRO{SE_M_MINIMIZE}404{SE_M_HEAT_WAVE}Scrip{SE_M_SPIT_UP}no{SE_M_SPIT_UP}found.$"
+	.string "ERROR 404: Script not found.$"
 
 J_gText_WantsToFly::
-	.string "{STR_VAR_1} look{SE_M_GRASSWHISTLE}u{SE_M_MORNING_SUN}a{SE_M_SPIT_UP}the\nsk{SE_M_YAWN}restlessly.\pWoul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}FLY?$"
+	.string "{STR_VAR_1} looks up at the\nsky restlessly.\pWould you like to use FLY?$"
 
 J_EventScript_Follower::
 	lock

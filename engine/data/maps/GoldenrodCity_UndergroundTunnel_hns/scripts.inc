@@ -111,17 +111,17 @@ GoldenrodCity_UndergroundTunnel_Movement_Kimono_Leave2:
 	step_end
 
 GoldenrodCity_UndergroundTunnel_Text_Kimono1:
-	.string "Tea{SE_M_MILK_DRINK}Rocke{SE_M_SPIT_UP}member{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}blac{SE_M_ENCORE2}suits\n"
-	.string "hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}runnin{SE_M_SANDSTORM}around...\p"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}wonderin{SE_M_SANDSTORM}wha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}on.\n"
-	.string "So{SE_M_SUPERSONIC}yo{SE_M_DIVE}too{SE_M_ENCORE2}o{SE_M_ATTRACT}Tea{SE_M_MILK_DRINK}Rocket?\l"
-	.string "Yo{SE_M_DIVE}ar{SE_M_REVERSAL}impressive!\p"
-	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}fac{SE_M_REVERSAL}the\n"
-	.string "legendar{SE_M_YAWN}POKé...$"
+	.string "Team Rocket members in black suits\n"
+	.string "have been running around...\p"
+	.string "I was wondering what was going on.\n"
+	.string "So, you took on Team Rocket?\l"
+	.string "You are impressive!\p"
+	.string "You may be able to face the\n"
+	.string "legendary POKé...$"
 
 GoldenrodCity_UndergroundTunnel_Text_Kimono2:
-	.string "Hahaha{SE_M_DRAGON_RAGE}Neve{SE_M_SAND_TOMB}mind.\n"
-	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}g{SE_M_ATTRACT2}now.$"
+	.string "Hahaha! Never mind.\n"
+	.string "I must go now.$"
 
 GoldenrodUnderground_EventScript_Eric::
 	trainerbattle_single TRAINER_JOHTO_ERIC_HNS, GoldenrodUnderground_Text_SupernerdEricSeen, GoldenrodUnderground_Text_SupernerdEricBeaten
@@ -317,126 +317,126 @@ GoldenrodCity_UndergroundTunnel_EventScript_Item_Antidote::
 	end
 
 GoldenrodUnderground_Text_YoungerBrotherOffer:
-	.string "Welcom{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}SALON!\p"
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}younge{SE_M_SAND_TOMB}an{SE_M_WATERFALL}les{SE_M_GRASSWHISTLE}expensive\n"
-	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}tw{SE_M_ATTRACT2}HAIRCU{SE_M_SWIFT}BROTHERS.\p"
-	.string "I'l{SE_M_BATON_PASS}spif{SE_M_ACID_ARMOR}u{SE_M_MORNING_SUN}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}fo{SE_M_SAND_TOMB}just\n"
+	.string "Welcome to the POKéMON SALON!\p"
+	.string "I'm the younger and less expensive\n"
+	.string "of the two HAIRCUT BROTHERS.\p"
+	.string "I'll spiff up your POKéMON for just\n"
 	.string "¥300.\p"
-	.string "So{SE_M_SING}Ho{SE_M_TWISTER}abou{SE_M_SPIT_UP}it?$"
+	.string "So? How about it?$"
 
 GoldenrodUnderground_Text_YoungerBrotherAskWhich:
-	.string "OK{SE_M_SUPERSONIC}whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}do?$"
+	.string "OK, which POKéMON should I do?$"
 
 GoldenrodUnderground_Text_YoungerBrotherLookCool:
-	.string "OK{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}mak{SE_M_REVERSAL}i{SE_M_SPIT_UP}loo{SE_M_ENCORE2}cool!$"
+	.string "OK! I'll make it look cool!$"
 
 GoldenrodUnderground_Text_YoungerBrotherAllDone:
-	.string "Ther{SE_M_REVERSAL}w{SE_M_REVERSAL}go{SE_M_DRAGON_RAGE}Al{SE_M_BATON_PASS}done!$"
+	.string "There we go! All done!$"
 
 GoldenrodUnderground_Text_YoungerBrotherDisappointed:
-	.string "No{SE_M_SING}Ho{SE_M_TWISTER}disappointing!$"
+	.string "No? How disappointing!$"
 
 GoldenrodUnderground_Text_YoungerBrotherShortOnFunds:
-	.string "You'r{SE_M_REVERSAL}{SE_M_CHARGE}littl{SE_M_REVERSAL}shor{SE_M_SPIT_UP}o{SE_M_ATTRACT}funds.$"
+	.string "You're a little short on funds.$"
 
 GoldenrodUnderground_Text_YoungerBrotherOnePerDay:
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}d{SE_M_ATTRACT2}onl{SE_M_YAWN}on{SE_M_REVERSAL}haircu{SE_M_SPIT_UP}{SE_M_CHARGE}day.\p"
-	.string "Sorry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}I'{SE_M_MILK_DRINK}al{SE_M_BATON_PASS}don{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}today.$"
+	.string "I can do only one haircut a day.\p"
+	.string "Sorry, but I'm all done for today.$"
 
 GoldenrodUnderground_Text_OlderBrotherOffer:
 	.string "Welcome!\p"
-	.string "{SE_M_HEAL_BELL}ru{SE_M_ATTRACT}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}SALON!\p"
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}olde{SE_M_SAND_TOMB}an{SE_M_WATERFALL}bette{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}two\n"
-	.string "HAIRCU{SE_M_SWIFT}BROTHERS.\p"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}mak{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}beautiful\n"
-	.string "fo{SE_M_SAND_TOMB}jus{SE_M_SPIT_UP}¥500.\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}that?$"
+	.string "I run the POKéMON SALON!\p"
+	.string "I'm the older and better of the two\n"
+	.string "HAIRCUT BROTHERS.\p"
+	.string "I can make your POKéMON beautiful\n"
+	.string "for just ¥500.\p"
+	.string "Would you like me to do that?$"
 
 GoldenrodUnderground_Text_OlderBrotherAskWhich:
-	.string "Whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}wor{SE_M_ENCORE2}on?$"
+	.string "Which POKéMON should I work on?$"
 
 GoldenrodUnderground_Text_OlderBrotherWatchItBeautiful:
-	.string "OK{SE_M_DRAGON_RAGE}Watc{SE_M_TRI_ATTACK}i{SE_M_SPIT_UP}becom{SE_M_REVERSAL}beautiful!$"
+	.string "OK! Watch it become beautiful!$"
 
 GoldenrodUnderground_Text_OlderBrotherAllDone:
-	.string "There{SE_M_DRAGON_RAGE}Al{SE_M_BATON_PASS}done!$"
+	.string "There! All done!$"
 
 GoldenrodUnderground_Text_OlderBrotherThatsAShame:
-	.string "I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}right{SE_M_SING}That'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}shame!$"
+	.string "Is that right? That's a shame!$"
 
 GoldenrodUnderground_Text_OlderBrotherNeedMoreMoney:
-	.string "You'l{SE_M_BATON_PASS}nee{SE_M_WATERFALL}mor{SE_M_REVERSAL}mone{SE_M_YAWN}tha{SE_M_ATTRACT}that.$"
+	.string "You'll need more money than that.$"
 
 GoldenrodUnderground_Text_OlderBrotherOnePerDay:
-	.string "{SE_M_HEAL_BELL}d{SE_M_ATTRACT2}onl{SE_M_YAWN}on{SE_M_REVERSAL}haircu{SE_M_SPIT_UP}{SE_M_CHARGE}day.\n"
-	.string "I'{SE_M_MILK_DRINK}don{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}today.$"
+	.string "I do only one haircut a day.\n"
+	.string "I'm done for today.$"
 
 GoldenrodUnderground_Text_SupernerdEricSeen:
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}boote{SE_M_WATERFALL}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}GAM{SE_M_SWORDS_DANCE}CORNER.\p"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}tryin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}chea{SE_M_SPIT_UP}usin{SE_M_SANDSTORM}my\n"
+	.string "I got booted out of the GAME CORNER.\p"
+	.string "I was trying to cheat using my\n"
 	.string "POKéMON…$"
 
 GoldenrodUnderground_Text_SupernerdEricBeaten:
 	.string "…Grumble…$"
 
 GoldenrodUnderground_Text_SupernerdEricAfterBattle:
-	.string "{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}thing{SE_M_GRASSWHISTLE}fai{SE_M_SAND_TOMB}and\n"
+	.string "I guess I have to do things fair and\n"
 	.string "square…$"
 
 GoldenrodUnderground_Text_SupernerdTeruSeen:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}conside{SE_M_SAND_TOMB}typ{SE_M_REVERSAL}alignment{SE_M_GRASSWHISTLE}in\n"
+	.string "Do you consider type alignments in\n"
 	.string "battle?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}kno{SE_M_TWISTER}you{SE_M_SAND_TOMB}typ{SE_M_REVERSAL}advantages,\n"
-	.string "you'l{SE_M_BATON_PASS}d{SE_M_ATTRACT2}bette{SE_M_SAND_TOMB}i{SE_M_ATTRACT}battle.$"
+	.string "If you know your type advantages,\n"
+	.string "you'll do better in battle.$"
 
 GoldenrodUnderground_Text_SupernerdTeruBeaten:
-	.string "Ow{SE_M_SUPERSONIC}ow{SE_M_SUPERSONIC}ow!$"
+	.string "Ow, ow, ow!$"
 
 GoldenrodUnderground_Text_SupernerdTeruAfterBattle:
-	.string "{SE_M_HEAL_BELL}kno{SE_M_TWISTER}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}typ{SE_M_REVERSAL}alignments.\p"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}onl{SE_M_YAWN}us{SE_M_REVERSAL}on{SE_M_REVERSAL}typ{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}POKéMON.$"
+	.string "I know my POKéMON type alignments.\p"
+	.string "But I only use one type of POKéMON.$"
 
 GoldenrodUnderground_Text_PokemaniacIssacSeen:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}jus{SE_M_SPIT_UP}go{SE_M_SPIT_UP}{SE_M_CHARGE}haircut!\p"
-	.string "I'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}ho{SE_M_TWISTER}stron{SE_M_SANDSTORM}i{SE_M_SPIT_UP}is!$"
+	.string "My POKéMON just got a haircut!\p"
+	.string "I'll show you how strong it is!$"
 
 GoldenrodUnderground_Text_PokemaniacIssacBeaten:
 	.string "Aiyeeee!$"
 
 GoldenrodUnderground_Text_PokemaniacIssacAfterBattle:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}lik{SE_M_REVERSAL}yo{SE_M_DIVE}mor{SE_M_REVERSAL}if\n"
-	.string "yo{SE_M_DIVE}giv{SE_M_REVERSAL}the{SE_M_MILK_DRINK}haircuts.$"
+	.string "Your POKéMON will like you more if\n"
+	.string "you give them haircuts.$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldSeen:
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}yo{SE_M_DIVE}hav{SE_M_REVERSAL}som{SE_M_REVERSAL}rar{SE_M_REVERSAL}POKéMON\n"
-	.string "wit{SE_M_TRI_ATTACK}you.\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}se{SE_M_REVERSAL}them!$"
+	.string "I think you have some rare POKéMON\n"
+	.string "with you.\p"
+	.string "Let me see them!$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldBeaten:
-	.string "Gaah{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}lost{SE_M_DRAGON_RAGE}Tha{SE_M_SPIT_UP}make{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}mad!$"
+	.string "Gaah! I lost! That makes me mad!$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattle:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}walkin{SE_M_SANDSTORM}nea{SE_M_SAND_TOMB}th{SE_M_REVERSAL}BIKE\n"
-	.string "SHO{SE_M_PETAL_DANCE}las{SE_M_SPIT_UP}night{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}fel{SE_M_SPIT_UP}lik{SE_M_REVERSAL}{SE_M_HEAL_BELL}was\l"
-	.string "bein{SE_M_SANDSTORM}watche{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}rooftops...$"
+	.string "When I was walking near the BIKE\n"
+	.string "SHOP last night, I felt like I was\l"
+	.string "being watched from the rooftops...$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattleOld:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}makin{SE_M_SANDSTORM}{SE_M_CHARGE}POKéDEX{SE_M_SING}Here'{SE_M_GRASSWHISTLE}a\n"
-	.string "ho{SE_M_SPIT_UP}tip.\p"
-	.string "Th{SE_M_REVERSAL}HIKE{SE_M_MINIMIZE}o{SE_M_ATTRACT}ROUT{SE_M_SWORDS_DANCE}33{SE_M_SUPERSONIC}ANTHONY{SE_M_SUPERSONIC}i{SE_M_GRASSWHISTLE}a\n"
-	.string "goo{SE_M_WATERFALL}guy.\p"
-	.string "He'l{SE_M_BATON_PASS}phon{SE_M_REVERSAL}yo{SE_M_DIVE}i{SE_M_ACID_ARMOR}h{SE_M_REVERSAL}see{SE_M_GRASSWHISTLE}an{SE_M_YAWN}rare\n"
+	.string "Are you making a POKéDEX? Here's a\n"
+	.string "hot tip.\p"
+	.string "The HIKER on ROUTE 33, ANTHONY, is a\n"
+	.string "good guy.\p"
+	.string "He'll phone you if he sees any rare\n"
 	.string "POKéMON.$"
 
 GoldenrodUnderground_Text_DoorsLocked:
-	.string "Th{SE_M_REVERSAL}door'{SE_M_GRASSWHISTLE}locked…$"
+	.string "The door's locked…$"
 
 GoldenrodUnderground_Text_DoorIsOpen:
-	.string "Th{SE_M_REVERSAL}doo{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}open.$"
+	.string "The door is open.$"
 
 GoldenrodUnderground_Text_KeyOpenedDoor:
-	.string "Th{SE_M_REVERSAL}BASEMEN{SE_M_SWIFT}KE{SE_M_MOONLIGHT}opene{SE_M_WATERFALL}th{SE_M_REVERSAL}door.$"
+	.string "The BASEMENT KEY opened the door.$"
 
 GoldenrodUnderground_Text_NoEntry:
-	.string "N{SE_M_SOLAR_BEAM}ENTR{SE_M_MOONLIGHT}BEYON{SE_M_FAINT_ATTACK}THI{SE_M_SKETCH}POINT$"
+	.string "NO ENTRY BEYOND THIS POINT$"
 

@@ -108,24 +108,24 @@ EcruteakCity_Theater_Movement_KimonoGirlMoveBack:
 	step_end
 
 EcruteakCity_Theater_Text_Rocket1:
-	.string "ROCKET{SE_M_HEAT_WAVE}Sto{SE_M_MORNING_SUN}dancin{SE_M_SANDSTORM}suc{SE_M_TRI_ATTACK}{SE_M_CHARGE}serious\n"
-	.string "dance{SE_M_DRAGON_RAGE}Sho{SE_M_TWISTER}m{SE_M_REVERSAL}somethin{SE_M_SANDSTORM}like\l"
-	.string "{SE_M_CHARGE}hul{SE_M_CHARGE}dance!$"
+	.string "ROCKET: Stop dancing such a serious\n"
+	.string "dance! Show me something like\l"
+	.string "a hula dance!$"
 
 EcruteakCity_Theater_Text_KimonoRocket1:
-	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_HEAT_WAVE}...Yo{SE_M_DIVE}mustn'{SE_M_SPIT_UP}push\n"
-	.string "suc{SE_M_TRI_ATTACK}{SE_M_CHARGE}reques{SE_M_SPIT_UP}o{SE_M_ATTRACT}me.$"
+	.string "KIMONO GIRL: ...You mustn't push\n"
+	.string "such a request on me.$"
 
 EcruteakCity_Theater_Text_Rocket2:
-	.string "ROCKET{SE_M_HEAT_WAVE}Huh?\p"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}tellin{SE_M_SANDSTORM}m{SE_M_REVERSAL}yo{SE_M_DIVE}don't\n"
-	.string "respec{SE_M_SPIT_UP}wha{SE_M_SPIT_UP}th{SE_M_REVERSAL}customer\l"
+	.string "ROCKET: Huh?\p"
+	.string "Are you telling me you don't\n"
+	.string "respect what the customer\l"
 	.string "wants?$"
 
 EcruteakCity_Theater_Text_Rocket3:
-	.string "Well{SE_M_SUPERSONIC}the{SE_M_ATTRACT}I'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}how\n"
-	.string "t{SE_M_ATTRACT2}dance{SE_M_PERISH_SONG}I'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}a\l"
-	.string "grea{SE_M_SPIT_UP}one.\p"
+	.string "Well, then I'll show you how\n"
+	.string "to dance. I'll show you a\l"
+	.string "great one.\p"
 	.string "Wahahaha!$"
 
 EcruteakCity_Theater_EventScript_Rocket::
@@ -180,32 +180,32 @@ EcruteakCity_Theater_Movement_RocketLeave:
 	step_end
 
 EcruteakCity_Theater_Text_RocketSeen:
-	.string "Huh{SE_M_SING}Wh{SE_M_ATTRACT2}ar{SE_M_REVERSAL}you?\n"
-	.string "Yo{SE_M_DIVE}dar{SE_M_REVERSAL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}i{SE_M_ATTRACT}m{SE_M_YAWN}way?$"
+	.string "Huh? Who are you?\n"
+	.string "You dare to get in my way?$"
 
 EcruteakCity_Theater_Text_RocketBeaten:
-	.string "Oh{SE_M_SUPERSONIC}no!\n"
-	.string "Yo{SE_M_DIVE}mak{SE_M_REVERSAL}m{SE_M_REVERSAL}loo{SE_M_ENCORE2}lik{SE_M_REVERSAL}a\l"
+	.string "Oh, no!\n"
+	.string "You make me look like a\l"
 	.string "villain!$"
 
 EcruteakCity_Theater_Text_RocketAfter:
-	.string "Oops{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}a{SE_M_ATTRACT}importan{SE_M_SPIT_UP}mission!\n"
-	.string "I{SE_M_ACID_ARMOR}the{SE_M_YAWN}fin{SE_M_WATERFALL}ou{SE_M_SPIT_UP}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}wasting\l"
-	.string "tim{SE_M_REVERSAL}here{SE_M_SUPERSONIC}they'l{SE_M_BATON_PASS}mak{SE_M_REVERSAL}m{SE_M_REVERSAL}start\l"
-	.string "ove{SE_M_SAND_TOMB}a{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}lowes{SE_M_SPIT_UP}ROCKE{SE_M_SWIFT}GRUNT!\p"
-	.string "{SE_M_HEAL_BELL}bette{SE_M_SAND_TOMB}leav{SE_M_REVERSAL}now!$"
+	.string "Oops! I have an important mission!\n"
+	.string "If they find out I was wasting\l"
+	.string "time here, they'll make me start\l"
+	.string "over as the lowest ROCKET GRUNT!\p"
+	.string "I better leave now!$"
 
 EcruteakCity_Theater_Text_KimonoRocket3:
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{PLAYER},\n"
-	.string "correct{SE_M_SING}Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}indeed\l"
+	.string "You must be {PLAYER},\n"
+	.string "correct? That was indeed\l"
 	.string "excellent.\p"
-	.string "Kin{SE_M_WATERFALL}an{SE_M_WATERFALL}strong..{SE_M_PERISH_SONG}Goo{SE_M_WATERFALL}at\n"
-	.string "raisin{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}a{SE_M_GRASSWHISTLE}well...\p"
-	.string "Tha{SE_M_SPIT_UP}perso{SE_M_ATTRACT}doe{SE_M_GRASSWHISTLE}kno{SE_M_TWISTER}what\n"
-	.string "t{SE_M_ATTRACT2}loo{SE_M_ENCORE2}fo{SE_M_SAND_TOMB}i{SE_M_ATTRACT}people...\p"
-	.string "Ohoho{SE_M_DRAGON_RAGE}Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}me\n"
-	.string "talkin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}myself.\l"
-	.string "Neve{SE_M_SAND_TOMB}mind.$"
+	.string "Kind and strong... Good at\n"
+	.string "raising POKéMON as well...\p"
+	.string "That person does know what\n"
+	.string "to look for in people...\p"
+	.string "Ohoho! That was just me\n"
+	.string "talking to myself.\l"
+	.string "Never mind.$"
 
 EcruteakCity_Theater_EventScript_KimonoGirl::
 	lock
@@ -246,13 +246,13 @@ EcruteakCity_Theater_EventScript_ZukiDuringRocket::
 	end
 
 EcruteakCity_Theater_Text_Kimono:
-	.string "Fo{SE_M_SAND_TOMB}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}lik{SE_M_REVERSAL}me,\n"
-	.string "dancin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}everything.\p"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}neve{SE_M_SAND_TOMB}gon{SE_M_REVERSAL}{SE_M_CHARGE}day\n"
-	.string "withou{SE_M_SPIT_UP}{SE_M_CHARGE}danc{SE_M_REVERSAL}practice.\p"
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}th{SE_M_REVERSAL}same.\n"
-	.string "The{SE_M_YAWN}gro{SE_M_TWISTER}wit{SE_M_TRI_ATTACK}yo{SE_M_DIVE}little\l"
-	.string "b{SE_M_YAWN}littl{SE_M_REVERSAL}eac{SE_M_TRI_ATTACK}day.$"
+	.string "For KIMONO GIRLS like me,\n"
+	.string "dancing is everything.\p"
+	.string "I have never gone a day\n"
+	.string "without a dance practice.\p"
+	.string "POKéMON are the same.\n"
+	.string "They grow with you little\l"
+	.string "by little each day.$"
 
 EcruteakCity_Theater_EventScript_SurfGuy::
 	lock
@@ -398,87 +398,87 @@ EcruteakCity_Theater_Movement_SurfGuy2:
 	step_end
 
 EcruteakCity_Theater_Text_SurfGuyRocket:
-	.string "What'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}dea{SE_M_BATON_PASS}wit{SE_M_TRI_ATTACK}that\n"
-	.string "Tea{SE_M_MILK_DRINK}Rocke{SE_M_SPIT_UP}Grunt{SE_M_SUPERSONIC}messing\l"
-	.string "wit{SE_M_TRI_ATTACK}tha{SE_M_SPIT_UP}KIMON{SE_M_SOLAR_BEAM}GIRL?\p"
-	.string "Yo{SE_M_DIVE}ar{SE_M_REVERSAL}{SE_M_CHARGE}Trainer{SE_M_SUPERSONIC}right?\n"
-	.string "Pleas{SE_M_REVERSAL}hel{SE_M_MORNING_SUN}her!$"
+	.string "What's the deal with that\n"
+	.string "Team Rocket Grunt, messing\l"
+	.string "with that KIMONO GIRL?\p"
+	.string "You are a Trainer, right?\n"
+	.string "Please help her!$"
 
 EcruteakCity_Theater_Text_SurfGuyGiveSurf:
-	.string "Wonderful{SE_M_DRAGON_RAGE}Yo{SE_M_DIVE}wer{SE_M_REVERSAL}so\n"
-	.string "courageou{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}age!\p"
-	.string "I{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}rar{SE_M_REVERSAL}sigh{SE_M_SPIT_UP}t{SE_M_ATTRACT2}see!\n"
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}this.\p"
-	.string "Don'{SE_M_SPIT_UP}b{SE_M_REVERSAL}shy--tak{SE_M_REVERSAL}it!$"
+	.string "Wonderful! You were so\n"
+	.string "courageous for your age!\p"
+	.string "It was a rare sight to see!\n"
+	.string "I want you to have this.\p"
+	.string "Don't be shy--take it!$"
 
 EcruteakCity_Theater_Text_SurfGuyGaveSurf:
-	.string "That'{SE_M_GRASSWHISTLE}SURF.\n"
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}mov{SE_M_REVERSAL}tha{SE_M_SPIT_UP}let{SE_M_GRASSWHISTLE}POKéMON\l"
-	.string "swi{SE_M_MILK_DRINK}acros{SE_M_GRASSWHISTLE}wate{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}ease.$"
+	.string "That's SURF.\n"
+	.string "It's a move that lets POKéMON\l"
+	.string "swim across water with ease.$"
 
 EcruteakCity_Theater_Text_SurfGuyAfter:
-	.string "No{SE_M_SPIT_UP}onl{SE_M_YAWN}ar{SE_M_REVERSAL}th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRLS\n"
-	.string "grea{SE_M_SPIT_UP}dancers{SE_M_SUPERSONIC}they'r{SE_M_REVERSAL}also\l"
-	.string "skille{SE_M_WATERFALL}a{SE_M_SPIT_UP}POKéMON.\p"
-	.string "Bu{SE_M_SPIT_UP}the{SE_M_YAWN}battl{SE_M_REVERSAL}onl{SE_M_YAWN}fo{SE_M_SAND_TOMB}good\n"
+	.string "Not only are the KIMONO GIRLS\n"
+	.string "great dancers, they're also\l"
+	.string "skilled at POKéMON.\p"
+	.string "But they battle only for good\n"
 	.string "reasons.\p"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}coul{SE_M_WATERFALL}beat\n"
-	.string "the{SE_M_MILK_DRINK}i{SE_M_ACID_ARMOR}the{SE_M_YAWN}showe{SE_M_WATERFALL}thei{SE_M_SAND_TOMB}skill...$"
+	.string "I don't know if you could beat\n"
+	.string "them if they showed their skill...$"
 
 EcruteakCity_Theater_Text_Psyduck:
-	.string "PSYDUCK{SE_M_HEAT_WAVE}Da{SE_M_DIVE}dau!$"
+	.string "PSYDUCK: Dau dau!$"
 
 EcruteakCity_Theater_Text_BoyBefore:
 	.string "Eeeeek!$"
 
 EcruteakCity_Theater_Text_Boy:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}suppose{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}th{SE_M_REVERSAL}hero...!\n"
-	.string "S{SE_M_ATTRACT2}muc{SE_M_TRI_ATTACK}fo{SE_M_SAND_TOMB}gettin{SE_M_SANDSTORM}clos{SE_M_REVERSAL}to\l"
-	.string "{SE_M_CHARGE}KIMON{SE_M_SOLAR_BEAM}GIRL!$"
+	.string "I was supposed to be the hero...!\n"
+	.string "So much for getting close to\l"
+	.string "a KIMONO GIRL!$"
 
 EcruteakCity_Theater_Text_Granny:
-	.string "Tha{SE_M_SPIT_UP}man'{SE_M_GRASSWHISTLE}alway{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}his\n"
+	.string "That man's always with his\n"
 	.string "PSYDUCK.\p"
-	.string "Say{SE_M_GRASSWHISTLE}h{SE_M_REVERSAL}want{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}that\n"
-	.string "ca{SE_M_ATTRACT}SUR{SE_M_LEER}an{SE_M_WATERFALL}dance.\p"
-	.string "I{SE_M_GRASSWHISTLE}h{SE_M_REVERSAL}tryin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}{SE_M_CHARGE}POKéMON\n"
-	.string "tha{SE_M_SPIT_UP}star{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}synchronized\l"
+	.string "Says he wants a POKéMON that\n"
+	.string "can SURF and dance.\p"
+	.string "Is he trying to make a POKéMON\n"
+	.string "that stars in synchronized\l"
 	.string "swimming?$"
 
 EcruteakCity_Theater_Text_GrannyBefore:
-	.string "Oh..{SE_M_PERISH_SONG}Ouch...!\n"
-	.string "Thi{SE_M_GRASSWHISTLE}stomachache!\p"
-	.string "{SE_M_HEAL_BELL}wouldn'{SE_M_SPIT_UP}le{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}gu{SE_M_YAWN}ac{SE_M_SPIT_UP}like\n"
-	.string "tha{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}no{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}thi{SE_M_GRASSWHISTLE}pain...!$"
+	.string "Oh... Ouch...!\n"
+	.string "This stomachache!\p"
+	.string "I wouldn't let this guy act like\n"
+	.string "that if not for this pain...!$"
 
 EcruteakCity_Theater_Text_Gramps:
-	.string "Th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}ar{SE_M_REVERSAL}so\n"
+	.string "The KIMONO GIRLS are so\n"
 	.string "beautiful...\p"
-	.string "Bu{SE_M_SPIT_UP}the{SE_M_YAWN}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}through\n"
-	.string "rigorou{SE_M_GRASSWHISTLE}training.\p"
-	.string "An{SE_M_WATERFALL}the{SE_M_YAWN}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}lear{SE_M_ATTRACT}t{SE_M_ATTRACT2}follow\n"
-	.string "custom{SE_M_GRASSWHISTLE}befor{SE_M_REVERSAL}appearin{SE_M_SANDSTORM}in\l"
+	.string "But they have to go through\n"
+	.string "rigorous training.\p"
+	.string "And they have to learn to follow\n"
+	.string "customs before appearing in\l"
 	.string "public.\p"
-	.string "Bu{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}lov{SE_M_REVERSAL}something,\n"
-	.string "anythin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}possible.$"
+	.string "But if you love something,\n"
+	.string "anything is possible.$"
 
 EcruteakCity_Theater_Text_GrampsBefore:
-	.string "Oh..{SE_M_PERISH_SONG}Ouch...!\n"
-	.string "Thi{SE_M_GRASSWHISTLE}bac{SE_M_ENCORE2}pain!\p"
-	.string "{SE_M_HEAL_BELL}wouldn'{SE_M_SPIT_UP}le{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}gu{SE_M_YAWN}ac{SE_M_SPIT_UP}like\n"
-	.string "tha{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}no{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}thi{SE_M_GRASSWHISTLE}pain...!$"
+	.string "Oh... Ouch...!\n"
+	.string "This back pain!\p"
+	.string "I wouldn't let this guy act like\n"
+	.string "that if not for this pain...!$"
 
 EcruteakCity_Theater_Text_Girl:
-	.string "Th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}ar{SE_M_REVERSAL}m{SE_M_YAWN}big\n"
-	.string "sisters{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}lik{SE_M_REVERSAL}the{SE_M_MILK_DRINK}one\l"
+	.string "The KIMONO GIRLS are my big\n"
+	.string "sisters! I'll be like them one\l"
 	.string "day!$"
 
 EcruteakCity_Theater_Text_GirlBefore:
-	.string "{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}tha{SE_M_SPIT_UP}funn{SE_M_YAWN}dance!$"
+	.string "I like that funny dance!$"
 
 EcruteakCity_Theater_Text_FancyPanel:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}fanc{SE_M_YAWN}pane{SE_M_BATON_PASS}that's\n"
-	.string "decorate{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}flowers.$"
+	.string "It's a fancy panel that's\n"
+	.string "decorated with flowers.$"
 
 EcruteakCity_Theater_Trigger_PreBattleCutsceneLeft::
 	lock
@@ -983,117 +983,117 @@ EcruteakCity_Theater_Text_KimonoGirlBeaten:
 	.string "...$"
 
 EcruteakCity_Theater_Text_ZukiSeen:
-	.string "Welcome{SE_M_PERISH_SONG}M{SE_M_YAWN}nam{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}ZUKI.\n"
-	.string "{SE_M_HEAL_BELL}me{SE_M_SPIT_UP}yo{SE_M_DIVE}previousl{SE_M_YAWN}i{SE_M_ATTRACT}VIOLET\l"
+	.string "Welcome. My name is ZUKI.\n"
+	.string "I met you previously in VIOLET\l"
 	.string "CITY.\p"
-	.string "T{SE_M_ATTRACT2}brin{SE_M_SANDSTORM}bac{SE_M_ENCORE2}{STR_VAR_1}{SE_M_SUPERSONIC}we\n"
-	.string "neede{SE_M_WATERFALL}someon{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}righ{SE_M_SPIT_UP}bond\l"
-	.string "wit{SE_M_TRI_ATTACK}POKéMON.\p"
-	.string "W{SE_M_REVERSAL}aske{SE_M_WATERFALL}MR{SE_M_PERISH_SONG}POKéMO{SE_M_PSYBEAM2}t{SE_M_ATTRACT2}giv{SE_M_REVERSAL}this\n"
-	.string "MYSTER{SE_M_MOONLIGHT}EG{SE_M_SWAGGER}to\l"
-	.string "whoeve{SE_M_SAND_TOMB}showe{SE_M_WATERFALL}potential.\p"
-	.string "Th{SE_M_REVERSAL}EG{SE_M_SWAGGER}wen{SE_M_SPIT_UP}fro{SE_M_MILK_DRINK}MR{SE_M_PERISH_SONG}POKéMON\n"
-	.string "t{SE_M_ATTRACT2}PROF.ELM{SE_M_SUPERSONIC}the{SE_M_ATTRACT}t{SE_M_ATTRACT2}you.\p"
-	.string "Bu{SE_M_SPIT_UP}bein{SE_M_SANDSTORM}pur{SE_M_REVERSAL}alon{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}enough\n"
-	.string "t{SE_M_ATTRACT2}fac{SE_M_REVERSAL}th{SE_M_REVERSAL}powe{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}thi{SE_M_GRASSWHISTLE}POKéMON.$"
+	.string "To bring back {STR_VAR_1}, we\n"
+	.string "needed someone with the right bond\l"
+	.string "with POKéMON.\p"
+	.string "We asked MR. POKéMON to give this\n"
+	.string "MYSTERY EGG to\l"
+	.string "whoever showed potential.\p"
+	.string "The EGG went from MR. POKéMON\n"
+	.string "to PROF.ELM, then to you.\p"
+	.string "But being pure alone is not enough\n"
+	.string "to face the power of this POKéMON.$"
 
 EcruteakCity_Theater_Text_ZukiSeenAgain:
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}tes{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}are\n"
-	.string "{SE_M_CHARGE}goo{SE_M_WATERFALL}Trainer.\p"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}ready{SE_M_SUPERSONIC}{PLAYER}?$"
+	.string "I will test you to see if you are\n"
+	.string "a good Trainer.\p"
+	.string "Are you ready, {PLAYER}?$"
 
 EcruteakCity_Theater_Text_ZukiNo:
-	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}fine...\n"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}wai{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}yo{SE_M_DIVE}t{SE_M_ATTRACT2}get\l"
+	.string "That is fine...\n"
+	.string "I will wait for you to get\l"
 	.string "ready.$"
 
 EcruteakCity_Theater_Text_NaokoSeen:
-	.string "Yo{SE_M_DIVE}ar{SE_M_REVERSAL}quit{SE_M_REVERSAL}strong{SE_M_PERISH_SONG}Yo{SE_M_DIVE}helped\n"
-	.string "m{SE_M_REVERSAL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}ILE{SE_M_LOCK_ON}FOREST.\p"
-	.string "I'{SE_M_MILK_DRINK}NAOKO--no{SE_M_SPIT_UP}s{SE_M_ATTRACT2}goo{SE_M_WATERFALL}with\n"
+	.string "You are quite strong. You helped\n"
+	.string "me in the ILEX FOREST.\p"
+	.string "I'm NAOKO--not so good with\n"
 	.string "directions.\p"
-	.string "{SE_M_HEAL_BELL}sa{SE_M_TWISTER}yo{SE_M_DIVE}defea{SE_M_SPIT_UP}Tea{SE_M_MILK_DRINK}Rocket\n"
-	.string "whe{SE_M_ATTRACT}KUR{SE_M_SWIFT}wa{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}troubl{SE_M_REVERSAL}at\l"
-	.string "th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}WELL.\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}challeng{SE_M_REVERSAL}yo{SE_M_DIVE}an{SE_M_WATERFALL}your\n"
+	.string "I saw you defeat Team Rocket\n"
+	.string "when KURT was in trouble at\l"
+	.string "the SLOWPOKE WELL.\p"
+	.string "Let me challenge you and your\n"
 	.string "POKéMON!$"
 
 EcruteakCity_Theater_Text_MikiSeen:
-	.string "You'r{SE_M_REVERSAL}quit{SE_M_REVERSAL}th{SE_M_REVERSAL}Trainer{SE_M_PERISH_SONG}I\n"
-	.string "remembe{SE_M_SAND_TOMB}yo{SE_M_DIVE}chase{SE_M_WATERFALL}of{SE_M_ACID_ARMOR}that\l"
-	.string "Rocke{SE_M_SPIT_UP}Grun{SE_M_SPIT_UP}fro{SE_M_MILK_DRINK}righ{SE_M_SPIT_UP}here.\p"
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}that.\p"
-	.string "Though{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}{SE_M_CHARGE}Traine{SE_M_SAND_TOMB}too.\n"
-	.string "Sh{SE_M_REVERSAL}wh{SE_M_ATTRACT2}know{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}mos{SE_M_SPIT_UP}speaks\l"
-	.string "th{SE_M_REVERSAL}least!\p"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}MIKI--th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL!\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}challeng{SE_M_REVERSAL}yo{SE_M_DIVE}an{SE_M_WATERFALL}your\n"
+	.string "You're quite the Trainer. I\n"
+	.string "remember you chased off that\l"
+	.string "Rocket Grunt from right here.\p"
+	.string "Thank you for that.\p"
+	.string "Though, I'm a Trainer too.\n"
+	.string "She who knows the most speaks\l"
+	.string "the least!\p"
+	.string "I am MIKI--the KIMONO GIRL!\p"
+	.string "Let me challenge you and your\n"
 	.string "POKéMON!$"
 
 EcruteakCity_Theater_Text_SayoSeen:
-	.string "Excellen{SE_M_SPIT_UP}spirit{SE_M_DRAGON_RAGE}Yo{SE_M_DIVE}go{SE_M_SPIT_UP}me\n"
-	.string "of{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}ic{SE_M_REVERSAL}b{SE_M_YAWN}pushin{SE_M_SANDSTORM}me.\p"
-	.string "{SE_M_HEAL_BELL}skat{SE_M_REVERSAL}i{SE_M_ATTRACT}sandals.\n"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}SAYO--th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL!\p"
-	.string "{SE_M_HEAL_BELL}listene{SE_M_WATERFALL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}DRAGON'{SE_M_SKETCH}DEN\n"
-	.string "whe{SE_M_ATTRACT}yo{SE_M_DIVE}passe{SE_M_WATERFALL}th{SE_M_REVERSAL}Elder'{SE_M_GRASSWHISTLE}test.\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}challeng{SE_M_REVERSAL}yo{SE_M_DIVE}an{SE_M_WATERFALL}your\n"
+	.string "Excellent spirit! You got me\n"
+	.string "off the ice by pushing me.\p"
+	.string "I skate in sandals.\n"
+	.string "I am SAYO--the KIMONO GIRL!\p"
+	.string "I listened in the DRAGON'S DEN\n"
+	.string "when you passed the Elder's test.\p"
+	.string "Let me challenge you and your\n"
 	.string "POKéMON!$"
 
 EcruteakCity_Theater_Text_KuniSeen:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}las{SE_M_SPIT_UP}one.\p"
-	.string "Yo{SE_M_DIVE}wer{SE_M_REVERSAL}dependabl{SE_M_REVERSAL}a{SE_M_SPIT_UP}the\n"
-	.string "GOLDENRO{SE_M_FAINT_ATTACK}TUNNEL.\p"
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}on{SE_M_REVERSAL}wh{SE_M_ATTRACT2}twirl{SE_M_GRASSWHISTLE}even\n"
+	.string "I'm the last one.\p"
+	.string "You were dependable at the\n"
+	.string "GOLDENROD TUNNEL.\p"
+	.string "I'm the one who twirls even\n"
 	.string "underground--KUNI!\p"
-	.string "{SE_M_HEAL_BELL}sa{SE_M_TWISTER}yo{SE_M_DIVE}thwar{SE_M_SPIT_UP}Rocket's\n"
-	.string "pla{SE_M_ATTRACT}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}th{SE_M_REVERSAL}Radi{SE_M_ATTRACT2}Tower.\p"
-	.string "No{SE_M_TWISTER}sho{SE_M_TWISTER}m{SE_M_REVERSAL}you{SE_M_SAND_TOMB}strength!\n"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}challeng{SE_M_REVERSAL}yo{SE_M_DIVE}an{SE_M_WATERFALL}your\l"
+	.string "I saw you thwart Rocket's\n"
+	.string "plan to take the Radio Tower.\p"
+	.string "Now show me your strength!\n"
+	.string "Let me challenge you and your\l"
 	.string "POKéMON!$"
 
 EcruteakCity_Theater_Text_ZukiDone:
-	.string "W{SE_M_REVERSAL}wer{SE_M_REVERSAL}no{SE_M_SPIT_UP}wron{SE_M_SANDSTORM}abou{SE_M_SPIT_UP}you.\n"
-	.string "Yo{SE_M_DIVE}ar{SE_M_REVERSAL}indee{SE_M_WATERFALL}worth{SE_M_YAWN}o{SE_M_ACID_ARMOR}this...\p"
-	.string "Pleas{SE_M_REVERSAL}tak{SE_M_REVERSAL}it.$"
+	.string "We were not wrong about you.\n"
+	.string "You are indeed worthy of this...\p"
+	.string "Please take it.$"
 
 EcruteakCity_Theater_Text_GirlHooh:
-	.string "Bi{SE_M_SANDSTORM}sisters{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}sa{SE_M_TWISTER}the\n"
-	.string "bi{SE_M_SANDSTORM}shado{SE_M_TWISTER}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}over\l"
-	.string "th{SE_M_REVERSAL}TI{SE_M_PSYBEAM2}TOWER!\p"
-	.string "I{SE_M_SPIT_UP}coul{SE_M_WATERFALL}be...$"
+	.string "Big sisters! I just saw the\n"
+	.string "big shadow of a POKéMON over\l"
+	.string "the TIN TOWER!\p"
+	.string "It could be...$"
 
 EcruteakCity_Theater_Text_GirlLugia:
-	.string "Bi{SE_M_SANDSTORM}sisters{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}sa{SE_M_TWISTER}the\n"
-	.string "bi{SE_M_SANDSTORM}shado{SE_M_TWISTER}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}the\l"
-	.string "WHIR{SE_M_BRICK_BREAK}ISLANDS{SE_M_ABSORB}waters!\p"
-	.string "I{SE_M_SPIT_UP}coul{SE_M_WATERFALL}be...$"
+	.string "Big sisters! I just saw the\n"
+	.string "big shadow of a POKéMON in the\l"
+	.string "WHIRL ISLANDS' waters!\p"
+	.string "It could be...$"
 
 EcruteakCity_Theater_Text_ZukiHooh:
-	.string "ZUKI{SE_M_HEAT_WAVE}{PLAYER}!\n"
-	.string "We'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}TI{SE_M_PSYBEAM2}TOWER.\n"
-	.string "Se{SE_M_REVERSAL}yo{SE_M_DIVE}there!$"
+	.string "ZUKI: {PLAYER}!\n"
+	.string "We'll be at the TIN TOWER.\n"
+	.string "See you there!$"
 
 EcruteakCity_Theater_Text_ZukiLugia:
-	.string "ZUKI{SE_M_HEAT_WAVE}{PLAYER}!\n"
-	.string "We'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}WHIR{SE_M_BRICK_BREAK}ISLANDS.\l"
-	.string "Se{SE_M_REVERSAL}yo{SE_M_DIVE}there!$"
+	.string "ZUKI: {PLAYER}!\n"
+	.string "We'll be at the WHIRL ISLANDS.\l"
+	.string "See you there!$"
 
 EcruteakCity_Theater_Text_KimonoDone:
-	.string "W{SE_M_REVERSAL}ar{SE_M_REVERSAL}rehearsin{SE_M_SANDSTORM}{SE_M_CHARGE}dance.$"
+	.string "We are rehearsing a dance.$"
 
 EcruteakCity_Theater_Text_ZukiAfterAll:
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}hel{SE_M_MORNING_SUN}the\n"
-	.string "othe{SE_M_SAND_TOMB}day.\p"
-	.string "You'v{SE_M_REVERSAL}show{SE_M_ATTRACT}th{SE_M_REVERSAL}bon{SE_M_WATERFALL}between\n"
-	.string "peopl{SE_M_REVERSAL}ca{SE_M_ATTRACT}gro{SE_M_TWISTER}wit{SE_M_TRI_ATTACK}POKéMON...\p"
-	.string "W{SE_M_REVERSAL}appreciat{SE_M_REVERSAL}ho{SE_M_TWISTER}yo{SE_M_DIVE}live{SE_M_WATERFALL}up\n"
-	.string "t{SE_M_ATTRACT2}ou{SE_M_SAND_TOMB}hopes{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}learne{SE_M_WATERFALL}anythin{SE_M_SANDSTORM}from\n"
-	.string "this{SE_M_SUPERSONIC}than{SE_M_ENCORE2}MR{SE_M_PERISH_SONG}POKéMO{SE_M_PSYBEAM2}and\l"
+	.string "Thank you for your help the\n"
+	.string "other day.\p"
+	.string "You've shown the bond between\n"
+	.string "people can grow with POKéMON...\p"
+	.string "We appreciate how you lived up\n"
+	.string "to our hopes, {PLAYER}!\p"
+	.string "If you learned anything from\n"
+	.string "this, thank MR. POKéMON and\l"
 	.string "PROF.ELM...$"
 
 EcruteakCity_Theater_Text_KimonoGirlsBeforeBattle:
-	.string "Tal{SE_M_ENCORE2}t{SE_M_ATTRACT2}ZUK{SE_M_HEAL_BELL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}middle\n"
-	.string "whe{SE_M_ATTRACT}yo{SE_M_DIVE}ar{SE_M_REVERSAL}ready.$"
+	.string "Talk to ZUKI in the middle\n"
+	.string "when you are ready.$"
 

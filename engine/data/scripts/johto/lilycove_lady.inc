@@ -527,260 +527,260 @@ J_LilycoveCity_PokemonCenter_1F_EventScript_Pikachu::
 	end
 
 J_LilycoveCity_PokemonCenter_1F_Text_ImTheFavorLady:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}FAVO{SE_M_MINIMIZE}LADY…$"
+	.string "I'm the FAVOR LADY…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_ObsessedWithThing:
-	.string "I'v{SE_M_REVERSAL}recentl{SE_M_YAWN}develope{SE_M_WATERFALL}a{SE_M_ATTRACT}obsession\n"
-	.string "fo{SE_M_SAND_TOMB}{STR_VAR_1} things…$"
+	.string "I've recently developed an obsession\n"
+	.string "for {STR_VAR_1} things…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_ThankYouForLastTime:
 	.string "Oh…\n"
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}las{SE_M_SPIT_UP}time…$"
+	.string "Thank you for last time…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeBadThing:
-	.string "Before{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}i{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{STR_VAR_3}…\p"
-	.string "{STR_VAR_3} gav{SE_M_REVERSAL}m{SE_M_REVERSAL}on{SE_M_REVERSAL}{STR_VAR_2},\n"
-	.string "sayin{SE_M_SANDSTORM}i{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{STR_VAR_1}.\p"
-	.string "Bu{SE_M_SPIT_UP}i{SE_M_SPIT_UP}wasn'{SE_M_SPIT_UP}{STR_VAR_1}.\n"
-	.string "No{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}leas{SE_M_SPIT_UP}bit.$"
+	.string "Before, I think it was {STR_VAR_3}…\p"
+	.string "{STR_VAR_3} gave me one {STR_VAR_2},\n"
+	.string "saying it was {STR_VAR_1}.\p"
+	.string "But it wasn't {STR_VAR_1}.\n"
+	.string "Not in the least bit.$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeGreatThing:
-	.string "Before{SE_M_SUPERSONIC}{STR_VAR_3} gav{SE_M_REVERSAL}m{SE_M_REVERSAL}{SE_M_CHARGE}very\n"
+	.string "Before, {STR_VAR_3} gave me a very\n"
 	.string "{STR_VAR_1} {STR_VAR_2}.\p"
-	.string "{SE_M_HEAL_BELL}cheris{SE_M_TRI_ATTACK}i{SE_M_SPIT_UP}now.$"
+	.string "I cherish it now.$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_WillYouShareThing:
-	.string "Listen{SE_M_SUPERSONIC}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}anythin{SE_M_SANDSTORM}that\n"
-	.string "i{SE_M_GRASSWHISTLE}{STR_VAR_1}{SE_M_SUPERSONIC}wil{SE_M_BATON_PASS}yo{SE_M_DIVE}shar{SE_M_REVERSAL}it\l"
-	.string "wit{SE_M_TRI_ATTACK}me?$"
+	.string "Listen, if you have anything that\n"
+	.string "is {STR_VAR_1}, will you share it\l"
+	.string "with me?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_WhatWillYouGiveMe:
 	.string "…Really?\n"
-	.string "Wha{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}yo{SE_M_DIVE}giv{SE_M_REVERSAL}me?$"
+	.string "What will you give me?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_IsThatSoGoodbye:
-	.string "I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}so?\n"
-	.string "Then{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}good-bye…$"
+	.string "Is that so?\n"
+	.string "Then, it's good-bye…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_NotWillingToShare:
 	.string "Oh…\n"
-	.string "You'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}willin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}share?$"
+	.string "You're not willing to share?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_IllTryToCherishIt:
 	.string "Oh?\n"
-	.string "Tha{SE_M_SPIT_UP}{STR_VAR_2} i{SE_M_GRASSWHISTLE}{STR_VAR_1}?\p"
-	.string "…Oh{SE_M_SUPERSONIC}i{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}right?\p"
-	.string "Well{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}ow{SE_M_REVERSAL}yo{SE_M_DIVE}{SE_M_CHARGE}thank{SE_M_GRASSWHISTLE}anyway.\n"
-	.string "I'l{SE_M_BATON_PASS}tr{SE_M_YAWN}t{SE_M_ATTRACT2}cheris{SE_M_TRI_ATTACK}it…$"
+	.string "That {STR_VAR_2} is {STR_VAR_1}?\p"
+	.string "…Oh, is that right?\p"
+	.string "Well, I owe you a thanks anyway.\n"
+	.string "I'll try to cherish it…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_IWillCherishThis:
 	.string "Oh…\p"
-	.string "That'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}quit{SE_M_REVERSAL}{STR_VAR_1}\n"
+	.string "That's a quite {STR_VAR_1}\n"
 	.string "{STR_VAR_2}…\p"
-	.string "Isn'{SE_M_SPIT_UP}i{SE_M_SPIT_UP}nice?\n"
-	.string "It'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}dreamy…\p"
-	.string "Than{SE_M_ENCORE2}you…\n"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}cheris{SE_M_TRI_ATTACK}this…$"
+	.string "Isn't it nice?\n"
+	.string "It's so dreamy…\p"
+	.string "Thank you…\n"
+	.string "I will cherish this…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_IWillTreasureThis:
-	.string "…Oh{SE_M_SUPERSONIC}oh{SE_M_SUPERSONIC}oh…\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}amazing!\n"
-	.string "Thi{SE_M_GRASSWHISTLE}reall{SE_M_YAWN}i{SE_M_GRASSWHISTLE}{STR_VAR_1}!\p"
-	.string "{SE_M_HEAL_BELL}neve{SE_M_SAND_TOMB}kne{SE_M_TWISTER}tha{SE_M_SPIT_UP}on{SE_M_REVERSAL}{STR_VAR_2}\n"
-	.string "coul{SE_M_WATERFALL}b{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}{STR_VAR_1}!\p"
-	.string "Than{SE_M_ENCORE2}you!\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}treasur{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}rest\n"
-	.string "o{SE_M_ACID_ARMOR}m{SE_M_YAWN}life!$"
+	.string "…Oh, oh, oh…\p"
+	.string "This is amazing!\n"
+	.string "This really is {STR_VAR_1}!\p"
+	.string "I never knew that one {STR_VAR_2}\n"
+	.string "could be this {STR_VAR_1}!\p"
+	.string "Thank you!\p"
+	.string "I will treasure this for the rest\n"
+	.string "of my life!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_IllGiveYouThisInReturn:
-	.string "I'l{SE_M_BATON_PASS}giv{SE_M_REVERSAL}yo{SE_M_DIVE}thi{SE_M_GRASSWHISTLE}wonderfu{SE_M_BATON_PASS}ite{SE_M_MILK_DRINK}in\n"
-	.string "retur{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}fabulou{SE_M_GRASSWHISTLE}gift.\p"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}yo{SE_M_DIVE}wil{SE_M_BATON_PASS}cheris{SE_M_TRI_ATTACK}it…$"
+	.string "I'll give you this wonderful item in\n"
+	.string "return for your fabulous gift.\p"
+	.string "I hope you will cherish it…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_YouDontHaveSpaceForIt:
-	.string "Oh{SE_M_SUPERSONIC}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}i{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}have\n"
-	.string "th{SE_M_REVERSAL}spac{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}it.\p"
-	.string "Pleas{SE_M_REVERSAL}com{SE_M_REVERSAL}se{SE_M_REVERSAL}m{SE_M_REVERSAL}whe{SE_M_ATTRACT}yo{SE_M_DIVE}get\n"
-	.string "you{SE_M_SAND_TOMB}BA{SE_M_SWAGGER}organized…$"
+	.string "Oh, you can't have it if you don't have\n"
+	.string "the space for it.\p"
+	.string "Please come see me when you get\n"
+	.string "your BAG organized…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_ImTheQuizLady:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}QUI{SE_M_CHARM}LADY!\n"
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}quizzes!$"
+	.string "I'm the QUIZ LADY!\n"
+	.string "I love quizzes!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_WaitingToTakeYourQuiz:
 	.string "Oh?\p"
-	.string "I'{SE_M_MILK_DRINK}waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}challenge{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}answer\n"
-	.string "th{SE_M_REVERSAL}qui{SE_M_SKY_UPPERCUT}yo{SE_M_DIVE}made.\p"
-	.string "W{SE_M_REVERSAL}ca{SE_M_ATTRACT}cha{SE_M_SPIT_UP}anothe{SE_M_SAND_TOMB}time{SE_M_SUPERSONIC}okay?$"
+	.string "I'm waiting for a challenger to answer\n"
+	.string "the quiz you made.\p"
+	.string "We can chat another time, okay?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_WaitingForChallenger:
-	.string "I'{SE_M_MILK_DRINK}waitin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}someon{SE_M_REVERSAL}t{SE_M_ATTRACT2}challenge\n"
-	.string "{SE_M_CHARGE}qui{SE_M_SKY_UPPERCUT}thi{SE_M_GRASSWHISTLE}{STR_VAR_1} though{SE_M_SPIT_UP}up!$"
+	.string "I'm waiting for someone to challenge\n"
+	.string "a quiz this {STR_VAR_1} thought up!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_TakeQuizChallenge:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}answe{SE_M_SAND_TOMB}correctly{SE_M_SUPERSONIC}yo{SE_M_DIVE}ca{SE_M_ATTRACT}win\n"
-	.string "fabulou{SE_M_GRASSWHISTLE}prizes!\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}th{SE_M_REVERSAL}quiz\n"
+	.string "If you answer correctly, you can win\n"
+	.string "fabulous prizes!\p"
+	.string "Would you like to take the quiz\n"
 	.string "challenge?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_WaitForAnswer:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…$"
+	.string "… … … … … …\n"
+	.string "… … … … … …$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_HowBoringBye:
-	.string "Oh{SE_M_SUPERSONIC}ho{SE_M_TWISTER}boring!\n"
+	.string "Oh, how boring!\n"
 	.string "Bye-bye!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_YoureGoingToQuit:
 	.string "Awww!\n"
-	.string "You'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}quit?$"
+	.string "You're going to quit?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_TakeTheQuizAnotherTime:
-	.string "Pleas{SE_M_REVERSAL}tak{SE_M_REVERSAL}th{SE_M_REVERSAL}qui{SE_M_SKY_UPPERCUT}challenge\n"
-	.string "anothe{SE_M_SAND_TOMB}time!$"
+	.string "Please take the quiz challenge\n"
+	.string "another time!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_YouGotItRight:
-	.string "You'r{SE_M_REVERSAL}amazing{SE_M_DRAGON_RAGE}You'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}i{SE_M_SPIT_UP}right!\n"
-	.string "You'r{SE_M_REVERSAL}on{SE_M_REVERSAL}shar{SE_M_MORNING_SUN}customer!$"
+	.string "You're amazing! You've got it right!\n"
+	.string "You're one sharp customer!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_YouGotItRightYouveWonPersonsPrize:
 	.string "Congratulations!\n"
-	.string "You'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}th{SE_M_REVERSAL}qui{SE_M_SKY_UPPERCUT}right!\p"
-	.string "You'v{SE_M_REVERSAL}wo{SE_M_ATTRACT}{SE_M_CHARGE}priz{SE_M_REVERSAL}provide{SE_M_WATERFALL}by\n"
+	.string "You've got the quiz right!\p"
+	.string "You've won a prize provided by\n"
 	.string "{STR_VAR_1}!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_XReceivedOneY:
 	.string "{STR_VAR_1} received\n"
-	.string "on{SE_M_REVERSAL}{STR_VAR_2}!$"
+	.string "one {STR_VAR_2}!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_YourBagIsFilledUp:
-	.string "Oh{SE_M_SING}You{SE_M_SAND_TOMB}BA{SE_M_SWAGGER}i{SE_M_GRASSWHISTLE}fille{SE_M_WATERFALL}up!\n"
-	.string "Com{SE_M_REVERSAL}se{SE_M_REVERSAL}m{SE_M_REVERSAL}whe{SE_M_ATTRACT}yo{SE_M_DIVE}hav{SE_M_REVERSAL}room.$"
+	.string "Oh? Your BAG is filled up!\n"
+	.string "Come see me when you have room.$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_WrongTheCorrectAnswerIs:
-	.string "Hmm{SE_M_DIZZY_PUNCH}Wrong!\n"
-	.string "Th{SE_M_REVERSAL}correc{SE_M_SPIT_UP}answe{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}“{STR_VAR_3}”!$"
+	.string "Hmm… Wrong!\n"
+	.string "The correct answer is “{STR_VAR_3}”!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_IGetToKeepPrize:
-	.string "To{SE_M_ATTRACT2}bad!\p"
-	.string "{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}th{SE_M_REVERSAL}qui{SE_M_SKY_UPPERCUT}prize\n"
+	.string "Too bad!\p"
+	.string "I get to keep the quiz prize\n"
 	.string "{STR_VAR_1} now!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_MakeYourOwnQuiz:
-	.string "Listen{SE_M_SUPERSONIC}listen!\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}you{SE_M_SAND_TOMB}ow{SE_M_ATTRACT}quiz?$"
+	.string "Listen, listen!\n"
+	.string "Would you like to make your own quiz?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_MaybeNextTime:
-	.string "Oh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}see…\n"
-	.string "Well{SE_M_SUPERSONIC}mayb{SE_M_REVERSAL}nex{SE_M_SPIT_UP}time!$"
+	.string "Oh, I see…\n"
+	.string "Well, maybe next time!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_PickYourPrize:
-	.string "Okay{SE_M_SUPERSONIC}th{SE_M_REVERSAL}firs{SE_M_SPIT_UP}thin{SE_M_SANDSTORM}yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}do\n"
-	.string "i{SE_M_GRASSWHISTLE}pic{SE_M_ENCORE2}th{SE_M_REVERSAL}priz{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}perso{SE_M_ATTRACT}that\l"
-	.string "answer{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}qui{SE_M_SKY_UPPERCUT}correctly.\p"
-	.string "Bu{SE_M_SPIT_UP}beware{SE_M_SUPERSONIC}i{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}perso{SE_M_ATTRACT}taking\n"
-	.string "th{SE_M_REVERSAL}qui{SE_M_SKY_UPPERCUT}can'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}i{SE_M_SPIT_UP}right{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}to\l"
-	.string "kee{SE_M_MORNING_SUN}th{SE_M_REVERSAL}prize!$"
+	.string "Okay, the first thing you have to do\n"
+	.string "is pick the prize for the person that\l"
+	.string "answers your quiz correctly.\p"
+	.string "But beware, if the person taking\n"
+	.string "the quiz can't get it right, I get to\l"
+	.string "keep the prize!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_QuitChoosingPrize:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}choos{SE_M_REVERSAL}{SE_M_CHARGE}prize,\n"
-	.string "you{SE_M_SAND_TOMB}qui{SE_M_SKY_UPPERCUT}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}made.\p"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}qui{SE_M_SPIT_UP}making\n"
-	.string "you{SE_M_SAND_TOMB}quiz?$"
+	.string "If you don't choose a prize,\n"
+	.string "your quiz can't be made.\p"
+	.string "Are you going to quit making\n"
+	.string "your quiz?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_WriteYourQuiz:
-	.string "Oh{SE_M_SUPERSONIC}ho{SE_M_TWISTER}nice!\n"
-	.string "That'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}wonderfu{SE_M_BATON_PASS}prize!\p"
-	.string "Next{SE_M_SUPERSONIC}yo{SE_M_DIVE}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}writ{SE_M_REVERSAL}you{SE_M_SAND_TOMB}quiz\n"
-	.string "questio{SE_M_ATTRACT}an{SE_M_WATERFALL}it{SE_M_GRASSWHISTLE}answer.$"
+	.string "Oh, how nice!\n"
+	.string "That's a wonderful prize!\p"
+	.string "Next, you need to write your quiz\n"
+	.string "question and its answer.$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_QuitWritingQuizQuestion:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}qui{SE_M_SPIT_UP}writing\n"
-	.string "you{SE_M_SAND_TOMB}qui{SE_M_SKY_UPPERCUT}question?$"
+	.string "Are you going to quit writing\n"
+	.string "your quiz question?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_QuitWritingQuizAnswer:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}qui{SE_M_SPIT_UP}choosing\n"
-	.string "you{SE_M_SAND_TOMB}qui{SE_M_SKY_UPPERCUT}answer?$"
+	.string "Are you going to quit choosing\n"
+	.string "your quiz answer?$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_IllLookForAChallenger:
-	.string "Than{SE_M_ENCORE2}you!\n"
-	.string "You'v{SE_M_REVERSAL}pu{SE_M_SPIT_UP}togethe{SE_M_SAND_TOMB}{SE_M_CHARGE}nic{SE_M_REVERSAL}quiz.\p"
-	.string "I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}loo{SE_M_ENCORE2}fo{SE_M_SAND_TOMB}someon{SE_M_REVERSAL}who'l{SE_M_BATON_PASS}take\n"
-	.string "you{SE_M_SAND_TOMB}qui{SE_M_SKY_UPPERCUT}challeng{SE_M_REVERSAL}righ{SE_M_SPIT_UP}away.$"
+	.string "Thank you!\n"
+	.string "You've put together a nice quiz.\p"
+	.string "I'll go look for someone who'll take\n"
+	.string "your quiz challenge right away.$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_ImTheContestLady:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}CONTES{SE_M_SWIFT}LADY!\n"
-	.string "{SE_M_HEAL_BELL}sur{SE_M_REVERSAL}d{SE_M_ATTRACT2}lov{SE_M_REVERSAL}CONTESTS!$"
+	.string "I'm the CONTEST LADY!\n"
+	.string "I sure do love CONTESTS!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_ThankForPokeblock:
-	.string "Thank{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}{POKEBLOCK} before!$"
+	.string "Thanks for your オカキクケ before!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_MyFriendDisplaysQuality:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}frien{SE_M_WATERFALL}{STR_VAR_1}!\n"
-	.string "It'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}epitom{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{STR_VAR_2}!\p"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}tha{SE_M_SPIT_UP}i{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}display\n"
-	.string "eve{SE_M_ATTRACT}mor{SE_M_REVERSAL}{STR_VAR_2}!$"
+	.string "This is my friend {STR_VAR_1}!\n"
+	.string "It's the epitome of {STR_VAR_2}!\p"
+	.string "But I think that it will display\n"
+	.string "even more {STR_VAR_2}!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_DontHaveAPokeblockCase:
-	.string "So{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}you{SE_M_SAND_TOMB}help!\p"
-	.string "Please{SE_M_SUPERSONIC}ma{SE_M_YAWN}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}on{SE_M_REVERSAL}{POKEBLOCK}?\n"
-	.string "Al{SE_M_BATON_PASS}I'{SE_M_MILK_DRINK}askin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}one!\p"
-	.string "…Oh{SE_M_SUPERSONIC}but…\n"
-	.string "Don'{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}{POKEBLOCK} CASE?\l"
-	.string "That'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}good{SE_M_PERISH_SONG}Nex{SE_M_SPIT_UP}time{SE_M_SUPERSONIC}then!$"
+	.string "So, I need your help!\p"
+	.string "Please, may I have one オカキクケ?\n"
+	.string "All I'm asking for is one!\p"
+	.string "…Oh, but…\n"
+	.string "Don't you have a オカキクケ CASE?\l"
+	.string "That's no good. Next time, then!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_AskingForOnePokeblock:
-	.string "So{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}you{SE_M_SAND_TOMB}help!\p"
-	.string "Please{SE_M_SUPERSONIC}ma{SE_M_YAWN}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}on{SE_M_REVERSAL}{POKEBLOCK}?\n"
-	.string "Al{SE_M_BATON_PASS}I'{SE_M_MILK_DRINK}askin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}one!$"
+	.string "So, I need your help!\p"
+	.string "Please, may I have one オカキクケ?\n"
+	.string "All I'm asking for is one!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_ICantHaveOnePokeblock:
 	.string "Awww!\n"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}on{SE_M_REVERSAL}{POKEBLOCK}?!$"
+	.string "I can't have one オカキクケ?!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_WhatACheapskate:
 	.string "Sheesh!\n"
-	.string "Wha{SE_M_SPIT_UP}{SE_M_CHARGE}cheapskate!$"
+	.string "What a cheapskate!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_IllUseYourPokeblock:
 	.string "Yay!\n"
-	.string "Than{SE_M_ENCORE2}you!\p"
-	.string "I'l{SE_M_BATON_PASS}fee{SE_M_WATERFALL}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}you{SE_M_SAND_TOMB}{POKEBLOCK}\n"
-	.string "righ{SE_M_SPIT_UP}away.$"
+	.string "Thank you!\p"
+	.string "I'll feed my POKéMON your オカキクケ\n"
+	.string "right away.$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_NoChangeThanks:
-	.string "…I{SE_M_SPIT_UP}doesn'{SE_M_SPIT_UP}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}changed\n"
-	.string "i{SE_M_ATTRACT}an{SE_M_YAWN}wa{SE_M_YAWN}a{SE_M_SPIT_UP}all…\p"
+	.string "…It doesn't seem to have changed\n"
+	.string "in any way at all…\p"
 	.string "Hmm…\p"
-	.string "Oh{SE_M_SUPERSONIC}well!\n"
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}ver{SE_M_YAWN}much!$"
+	.string "Oh, well!\n"
+	.string "Thank you very much!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_ReallyImprovedThanks:
-	.string "Oh{SE_M_SUPERSONIC}yay!\n"
-	.string "It'{SE_M_GRASSWHISTLE}reall{SE_M_YAWN}delighted!\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}i{SE_M_SPIT_UP}reall{SE_M_YAWN}improve{SE_M_WATERFALL}{STR_VAR_1}'s\n"
-	.string "{STR_VAR_2} quality{SE_M_SUPERSONIC}too.\p"
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}s{SE_M_ATTRACT2}much!$"
+	.string "Oh, yay!\n"
+	.string "It's really delighted!\p"
+	.string "I think it really improved {STR_VAR_1}'s\n"
+	.string "{STR_VAR_2} quality, too.\p"
+	.string "Thank you so much!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_ReadyToEnterContests:
 	.string "Hmm…\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}w{SE_M_REVERSAL}ma{SE_M_YAWN}b{SE_M_REVERSAL}read{SE_M_YAWN}t{SE_M_ATTRACT2}enter\n"
-	.string "som{SE_M_REVERSAL}CONTESTS.\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}se{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}on{SE_M_REVERSAL}somewhere,\n"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}you'l{SE_M_BATON_PASS}chee{SE_M_SAND_TOMB}fo{SE_M_SAND_TOMB}us.$"
+	.string "I think we may be ready to enter\n"
+	.string "some CONTESTS.\p"
+	.string "If you see us in one somewhere,\n"
+	.string "I hope you'll cheer for us.$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_Zigzagoon:
-	.string "{STR_VAR_1}{SE_M_HEAT_WAVE}Guguuh!$"
+	.string "{STR_VAR_1}: Guguuh!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_Kecleon:
-	.string "{STR_VAR_1}{SE_M_HEAT_WAVE}Igigigiiih!$"
+	.string "{STR_VAR_1}: Igigigiiih!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_Poochyena:
-	.string "{STR_VAR_1}{SE_M_HEAT_WAVE}Baaarun…$"
+	.string "{STR_VAR_1}: Baaarun…$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_Pikachu:
-	.string "{STR_VAR_1}{SE_M_HEAT_WAVE}Pikka!$"
+	.string "{STR_VAR_1}: Pikka!$"
 
 J_LilycoveCity_PokemonCenter_1F_Text_Skitty:
-	.string "{STR_VAR_1}{SE_M_HEAT_WAVE}Umyaaaan!$"
+	.string "{STR_VAR_1}: Umyaaaan!$"
 

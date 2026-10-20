@@ -271,143 +271,143 @@ J_EventScript_EggHatch::
 	end
 
 J_Route117_Text_SeeWifeIfYoudLikeMeToRaiseMon:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}DAY-CAR{SE_M_SWORDS_DANCE}MAN.\p"
-	.string "{SE_M_HEAL_BELL}hel{SE_M_MORNING_SUN}tak{SE_M_REVERSAL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}precious\n"
-	.string "POKéMO{SE_M_PSYBEAM2}o{SE_M_ACID_ARMOR}TRAINERS.\p"
-	.string "I{SE_M_ACID_ARMOR}you'{SE_M_WATERFALL}lik{SE_M_REVERSAL}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}rais{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMON,\n"
-	.string "hav{SE_M_REVERSAL}{SE_M_CHARGE}wor{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}wife.$"
+	.string "I'm the DAY-CARE MAN.\p"
+	.string "I help take care of the precious\n"
+	.string "POKéMON of TRAINERS.\p"
+	.string "If you'd like me to raise your POKéMON,\n"
+	.string "have a word with my wife.$"
 
 J_Route117_Text_DoYouWantEgg:
-	.string "Ah{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}you!\p"
-	.string "W{SE_M_REVERSAL}wer{SE_M_REVERSAL}raisin{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}POKéMON,\n"
-	.string "an{SE_M_WATERFALL}m{SE_M_YAWN}goodness{SE_M_SUPERSONIC}wer{SE_M_REVERSAL}w{SE_M_REVERSAL}surprised!\p"
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ha{SE_M_WATERFALL}a{SE_M_ATTRACT}EGG!\p"
-	.string "W{SE_M_REVERSAL}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}ho{SE_M_TWISTER}i{SE_M_SPIT_UP}go{SE_M_SPIT_UP}there,\n"
-	.string "bu{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ha{SE_M_WATERFALL}it.\p"
-	.string "Yo{SE_M_DIVE}d{SE_M_ATTRACT2}wan{SE_M_SPIT_UP}it{SE_M_SUPERSONIC}yes?$"
+	.string "Ah, it's you!\p"
+	.string "We were raising your POKéMON,\n"
+	.string "and my goodness, were we surprised!\p"
+	.string "Your POKéMON had an EGG!\p"
+	.string "We don't know how it got there,\n"
+	.string "but your POKéMON had it.\p"
+	.string "You do want it, yes?$"
 
 J_Route117_Text_YourMonIsDoingFine:
-	.string "Ah{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}you{SE_M_DRAGON_RAGE}Goo{SE_M_WATERFALL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}you.\n"
-	.string "You{SE_M_SAND_TOMB}{STR_VAR_1}'{SE_M_GRASSWHISTLE}doin{SE_M_SANDSTORM}fine.$"
+	.string "Ah, it's you! Good to see you.\n"
+	.string "Your {STR_VAR_1}'s doing fine.$"
 
 J_Route117_Text_IllKeepIt:
-	.string "Wel{SE_M_BATON_PASS}then{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}kee{SE_M_MORNING_SUN}it.\n"
+	.string "Well then, I'll keep it.\n"
 	.string "Thanks!$"
 
 J_Route117_Text_YouHaveNoRoomForIt:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}n{SE_M_ATTRACT2}roo{SE_M_MILK_DRINK}fo{SE_M_SAND_TOMB}it…\n"
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}whe{SE_M_ATTRACT}you'v{SE_M_REVERSAL}mad{SE_M_REVERSAL}room.$"
+	.string "You have no room for it…\n"
+	.string "Come back when you've made room.$"
 
 J_Route117_Text_ReceivedEgg:
-	.string "{PLAYER} receive{SE_M_WATERFALL}th{SE_M_REVERSAL}EG{SE_M_SWAGGER}from\n"
-	.string "th{SE_M_REVERSAL}DAY-CAR{SE_M_SWORDS_DANCE}MAN.$"
+	.string "{PLAYER} received the EGG from\n"
+	.string "the DAY-CARE MAN.$"
 
 J_Route117_Text_TakeGoodCareOfIt:
-	.string "Tak{SE_M_REVERSAL}goo{SE_M_WATERFALL}car{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}it.$"
+	.string "Take good care of it.$"
 
 J_Route117_Text_FriendlyWithOtherTrainersMon:
-	.string "B{SE_M_YAWN}th{SE_M_REVERSAL}way{SE_M_SUPERSONIC}abou{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}{STR_VAR_1},\n"
-	.string "i{SE_M_SPIT_UP}seeme{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}friendl{SE_M_YAWN}with\l"
-	.string "{STR_VAR_2}'{SE_M_GRASSWHISTLE}{STR_VAR_3}.\p"
-	.string "{SE_M_HEAL_BELL}ma{SE_M_YAWN}eve{SE_M_ATTRACT}hav{SE_M_REVERSAL}see{SE_M_ATTRACT}i{SE_M_SPIT_UP}receiving\n"
-	.string "{SE_M_CHARGE}piec{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}MAIL.$"
+	.string "By the way, about your {STR_VAR_1},\n"
+	.string "it seemed to be friendly with\l"
+	.string "{STR_VAR_2}'s {STR_VAR_3}.\p"
+	.string "I may even have seen it receiving\n"
+	.string "a piece of MAIL.$"
 
 J_Route117_Text_SeeWifeIfYouWantToPickUpMon:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}pic{SE_M_ENCORE2}u{SE_M_MORNING_SUN}you{SE_M_SAND_TOMB}POKéMON,\n"
-	.string "hav{SE_M_REVERSAL}{SE_M_CHARGE}wor{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}wife.$"
+	.string "If you want to pick up your POKéMON,\n"
+	.string "have a word with my wife.$"
 
 J_Route117_Text_YourMonsAreDoingFine:
-	.string "Ah{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}you{SE_M_DRAGON_RAGE}You{SE_M_SAND_TOMB}{STR_VAR_1} and\n"
-	.string "{STR_VAR_2} ar{SE_M_REVERSAL}doin{SE_M_SANDSTORM}fine.$"
+	.string "Ah, it's you! Your {STR_VAR_1} and\n"
+	.string "{STR_VAR_2} are doing fine.$"
 
 J_Route117_Text_IWillKeepDoYouWantIt:
-	.string "{SE_M_HEAL_BELL}reall{SE_M_YAWN}wil{SE_M_BATON_PASS}kee{SE_M_MORNING_SUN}it.\n"
-	.string "Yo{SE_M_DIVE}d{SE_M_ATTRACT2}wan{SE_M_SPIT_UP}this{SE_M_SUPERSONIC}yes?$"
+	.string "I really will keep it.\n"
+	.string "You do want this, yes?$"
 
 J_Route117_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}DAY-CAR{SE_M_SWORDS_DANCE}LADY.\p"
-	.string "W{SE_M_REVERSAL}ca{SE_M_ATTRACT}rais{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}fo{SE_M_SAND_TOMB}you.\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}rais{SE_M_REVERSAL}one?$"
+	.string "I'm the DAY-CARE LADY.\p"
+	.string "We can raise POKéMON for you.\p"
+	.string "Would you like us to raise one?$"
 
 J_Route117_PokemonDayCare_Text_WhichMonShouldWeRaise:
-	.string "Whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}shoul{SE_M_WATERFALL}w{SE_M_REVERSAL}rais{SE_M_REVERSAL}for\n"
+	.string "Which POKéMON should we raise for\n"
 	.string "you?$"
 
 J_Route117_PokemonDayCare_Text_WellRaiseYourMon:
-	.string "Fine{SE_M_SUPERSONIC}we'l{SE_M_BATON_PASS}rais{SE_M_REVERSAL}you{SE_M_SAND_TOMB}{STR_VAR_1}\n"
-	.string "fo{SE_M_SAND_TOMB}{SE_M_CHARGE}while.\p"
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}fo{SE_M_SAND_TOMB}i{SE_M_SPIT_UP}later.$"
+	.string "Fine, we'll raise your {STR_VAR_1}\n"
+	.string "for a while.\p"
+	.string "Come back for it later.$"
 
 J_Route117_PokemonDayCare_Text_WeCanRaiseOneMore:
-	.string "W{SE_M_REVERSAL}ca{SE_M_ATTRACT}rais{SE_M_REVERSAL}tw{SE_M_ATTRACT2}o{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}POKéMON.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}rais{SE_M_REVERSAL}on{SE_M_REVERSAL}more?$"
+	.string "We can raise two of your POKéMON.\n"
+	.string "Would you like us to raise one more?$"
 
 J_Route117_PokemonDayCare_Text_HusbandWasLookingForYou:
-	.string "M{SE_M_YAWN}husban{SE_M_WATERFALL}wa{SE_M_GRASSWHISTLE}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you.$"
+	.string "My husband was looking for you.$"
 
 J_Route117_PokemonDayCare_Text_FineThenComeAgain:
-	.string "Oh{SE_M_SUPERSONIC}fine{SE_M_SUPERSONIC}then.\n"
-	.string "Com{SE_M_REVERSAL}again.$"
+	.string "Oh, fine, then.\n"
+	.string "Come again.$"
 
 J_Route117_PokemonDayCare_Text_NotEnoughMoney:
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}enoug{SE_M_TRI_ATTACK}money…$"
+	.string "You don't have enough money…$"
 
 J_Route117_PokemonDayCare_Text_TakeOtherOneBackToo:
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}tak{SE_M_REVERSAL}bac{SE_M_ENCORE2}th{SE_M_REVERSAL}othe{SE_M_SAND_TOMB}one,\n"
+	.string "Will you take back the other one,\n"
 	.string "too?$"
 
 J_Route117_PokemonDayCare_Text_ComeAgain:
 	.string "Fine.\n"
-	.string "Com{SE_M_REVERSAL}again.$"
+	.string "Come again.$"
 
 J_Route117_PokemonDayCare_Text_GoodToSeeYou:
-	.string "Ah{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}you{SE_M_DRAGON_RAGE}Goo{SE_M_WATERFALL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}you.\n"
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ca{SE_M_ATTRACT}onl{SE_M_YAWN}b{SE_M_REVERSAL}doin{SE_M_SANDSTORM}good!$"
+	.string "Ah, it's you! Good to see you.\n"
+	.string "Your POKéMON can only be doing good!$"
 
 J_Route117_PokemonDayCare_Text_YourMonHasGrownXLevels:
-	.string "B{SE_M_YAWN}level{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}{STR_VAR_1} has\n"
-	.string "grow{SE_M_ATTRACT}b{SE_M_YAWN}{STR_VAR_2}.$"
+	.string "By level, your {STR_VAR_1} has\n"
+	.string "grown by {STR_VAR_2}.$"
 
 J_Route117_PokemonDayCare_Text_YourTeamIsFull:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}tea{SE_M_MILK_DRINK}i{SE_M_GRASSWHISTLE}full.\n"
-	.string "Mak{SE_M_REVERSAL}room{SE_M_SUPERSONIC}the{SE_M_ATTRACT}com{SE_M_REVERSAL}se{SE_M_REVERSAL}me.$"
+	.string "Your POKéMON team is full.\n"
+	.string "Make room, then come see me.$"
 
 J_Route117_PokemonDayCare_Text_TakeBackWhichMon:
-	.string "Whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}yo{SE_M_DIVE}tak{SE_M_REVERSAL}back?$"
+	.string "Which POKéMON will you take back?$"
 
 J_Route117_PokemonDayCare_Text_ItWillCostX:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}{STR_VAR_1} back,\n"
-	.string "i{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}cos{SE_M_SPIT_UP}¥{STR_VAR_2}.$"
+	.string "If you want your {STR_VAR_1} back,\n"
+	.string "it will cost ¥{STR_VAR_2}.$"
 
 J_Route117_PokemonDayCare_Text_HeresYourMon:
 	.string "Perfect!\n"
-	.string "Here'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}POKéMON.$"
+	.string "Here's your POKéMON.$"
 
 J_Route117_PokemonDayCare_Text_TookBackMon:
-	.string "{PLAYER} too{SE_M_ENCORE2}bac{SE_M_ENCORE2}{STR_VAR_1} from\n"
-	.string "th{SE_M_REVERSAL}DAY-CAR{SE_M_SWORDS_DANCE}LADY.$"
+	.string "{PLAYER} took back {STR_VAR_1} from\n"
+	.string "the DAY-CARE LADY.$"
 
 J_Route117_PokemonDayCare_Text_YouHaveJustOneMon:
-	.string "Oh{SE_M_SING}Bu{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}jus{SE_M_SPIT_UP}one\n"
+	.string "Oh? But you have just one\n"
 	.string "POKéMON.\p"
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}anothe{SE_M_SAND_TOMB}time.$"
+	.string "Come back another time.$"
 
 J_Route117_PokemonDayCare_Text_TakeYourMonBack:
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}tak{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}back?$"
+	.string "Will you take your POKéMON back?$"
 
 J_Route117_PokemonDayCare_Text_WhatWillYouBattleWith:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}leav{SE_M_REVERSAL}m{SE_M_REVERSAL}tha{SE_M_SPIT_UP}POKéMON,\n"
-	.string "wha{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}yo{SE_M_DIVE}battl{SE_M_REVERSAL}with?\p"
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}anothe{SE_M_SAND_TOMB}time.$"
+	.string "If you leave me that POKéMON,\n"
+	.string "what will you battle with?\p"
+	.string "Come back another time.$"
 
 J_Text_EggHatchHuh:
 	.string "Huh?$"
 
 J_Route117_PokemonDayCare_Text_YoullBeLeftWithJustOne:
 	.string "Huh?\n"
-	.string "Now{SE_M_SUPERSONIC}now.\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}leav{SE_M_REVERSAL}tha{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}with\n"
-	.string "me{SE_M_SUPERSONIC}you'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}lef{SE_M_SPIT_UP}wit{SE_M_TRI_ATTACK}jus{SE_M_SPIT_UP}one.\p"
-	.string "Yo{SE_M_DIVE}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}bette{SE_M_SAND_TOMB}of{SE_M_ACID_ARMOR}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}catch\n"
-	.string "som{SE_M_REVERSAL}more{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}dar{SE_M_REVERSAL}say.$"
+	.string "Now, now.\p"
+	.string "If you leave that POKéMON with\n"
+	.string "me, you'll be left with just one.\p"
+	.string "You will be better off if you catch\n"
+	.string "some more, I dare say.$"
 

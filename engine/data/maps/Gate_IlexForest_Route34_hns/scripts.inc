@@ -22,13 +22,13 @@ Route34IlexForestGate_EventScript_Butterfree::
 	end
 
 Route34IlexForestGate_Text_Lass:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}se{SE_M_REVERSAL}th{SE_M_REVERSAL}shrin{SE_M_REVERSAL}honoring\n"
-	.string "th{SE_M_REVERSAL}protector?\p"
-	.string "I{SE_M_SPIT_UP}watche{SE_M_GRASSWHISTLE}ove{SE_M_SAND_TOMB}th{SE_M_REVERSAL}FORES{SE_M_SWIFT}from\n"
-	.string "acros{SE_M_GRASSWHISTLE}time.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}tha{SE_M_SPIT_UP}i{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}a\n"
-	.string "GRASS-typ{SE_M_REVERSAL}POKéMON.$"
+	.string "Did you see the shrine honoring\n"
+	.string "the protector?\p"
+	.string "It watches over the FOREST from\n"
+	.string "across time.\p"
+	.string "I think that it must be a\n"
+	.string "GRASS-type POKéMON.$"
 
 Route34IlexForestGate_Text_Butterfree:
-	.string "BUTTERFREE{SE_M_HEAT_WAVE}Freeh!$"
+	.string "BUTTERFREE: Freeh!$"
 

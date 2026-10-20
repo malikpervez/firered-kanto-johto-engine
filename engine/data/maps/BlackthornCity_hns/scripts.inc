@@ -41,17 +41,17 @@ BlackthornCity_Text_ElmName:
 	.string "PROF.ELM$"
 
 BlackthornCity_Text_BaobaCall:
-	.string "WARDE{SE_M_PSYBEAM2}BAOBA{SE_M_HEAT_WAVE}{PLAYER}!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}WARDE{SE_M_PSYBEAM2}BAOBA.\p"
-	.string "I'{SE_M_MILK_DRINK}callin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}tel{SE_M_BATON_PASS}yo{SE_M_DIVE}that\n"
-	.string "th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZON{SE_M_SWORDS_DANCE}ha{SE_M_GRASSWHISTLE}expanded!\p"
-	.string "Pleas{SE_M_REVERSAL}com{SE_M_REVERSAL}visit!$"
+	.string "WARDEN BAOBA: {PLAYER}!\p"
+	.string "This is WARDEN BAOBA.\p"
+	.string "I'm calling to tell you that\n"
+	.string "the SAFARI ZONE has expanded!\p"
+	.string "Please come visit!$"
 
 BlackthornCity_Text_ElmCall:
-	.string "PROF.ELM{SE_M_HEAT_WAVE}Hello{SE_M_SUPERSONIC}{PLAYER}?\p"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}somethin{SE_M_SANDSTORM}her{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}you.\n"
-	.string "Coul{SE_M_WATERFALL}yo{SE_M_DIVE}swin{SE_M_SANDSTORM}b{SE_M_YAWN}m{SE_M_YAWN}LAB?\p"
-	.string "Se{SE_M_REVERSAL}yo{SE_M_DIVE}later!$"
+	.string "PROF.ELM: Hello, {PLAYER}?\p"
+	.string "I have something here for you.\n"
+	.string "Could you swing by my LAB?\p"
+	.string "See you later!$"
 
 BlackThornCity_EventScript_Sage::
 	lock
@@ -184,83 +184,83 @@ BlackthornCity_EventScript_SantosCompleted::
 	end
 
 BlackthornCity_Text_ClairNotReady:
-	.string "CLAIR{SE_M_SUPERSONIC}ou{SE_M_SAND_TOMB}GY{SE_M_GIGA_DRAIN}LEADER{SE_M_SUPERSONIC}ha{SE_M_GRASSWHISTLE}been\n"
-	.string "followin{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}progress.\p"
-	.string "However{SE_M_SUPERSONIC}sh{SE_M_REVERSAL}onl{SE_M_YAWN}battle{SE_M_GRASSWHISTLE}trainers\n"
-	.string "wh{SE_M_ATTRACT2}alread{SE_M_YAWN}hav{SE_M_REVERSAL}{SE_M_MIST}badges.$"
+	.string "CLAIR, our GYM LEADER, has been\n"
+	.string "following your progress.\p"
+	.string "However, she only battles trainers\n"
+	.string "who already have 7 badges.$"
 
 BlackthornCity_Text_ClairIsIn:
-	.string "CLAIR{SE_M_SUPERSONIC}ou{SE_M_SAND_TOMB}GY{SE_M_GIGA_DRAIN}LEADER{SE_M_SUPERSONIC}i{SE_M_GRASSWHISTLE}waiting\n"
-	.string "fo{SE_M_SAND_TOMB}you.\p"
-	.string "However{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}impossibl{SE_M_REVERSAL}for\n"
-	.string "{SE_M_CHARGE}run-of-the-mil{SE_M_BATON_PASS}traine{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}win.$"
+	.string "CLAIR, our GYM LEADER, is waiting\n"
+	.string "for you.\p"
+	.string "However, it would be impossible for\n"
+	.string "a run-of-the-mill trainer to win.$"
 
 BlackthornCity_Text_ClairIsBeaten:
-	.string "Yo{SE_M_DIVE}defeate{SE_M_WATERFALL}CLAIR?\p"
-	.string "That'{SE_M_GRASSWHISTLE}amazing!\p"
-	.string "I'v{SE_M_REVERSAL}neve{SE_M_SAND_TOMB}hear{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}he{SE_M_SAND_TOMB}losin{SE_M_SANDSTORM}to\n"
-	.string "anyon{SE_M_REVERSAL}othe{SE_M_SAND_TOMB}tha{SE_M_ATTRACT}LANCE.$"
+	.string "You defeated CLAIR?\p"
+	.string "That's amazing!\p"
+	.string "I've never heard of her losing to\n"
+	.string "anyone other than LANCE.$"
 
 BlackthornGrampsRefusesEntryText:
-	.string "No{SE_M_PERISH_SONG}Onl{SE_M_YAWN}chose{SE_M_ATTRACT}trainer{SE_M_GRASSWHISTLE}ma{SE_M_YAWN}train\n"
+	.string "No. Only chosen trainers may train\n"
 	.string "here.\p"
-	.string "Pleas{SE_M_REVERSAL}leave.$"
+	.string "Please leave.$"
 
 BlackthornGrampsGrantsEntryText:
-	.string "I{SE_M_ACID_ARMOR}CLAI{SE_M_MINIMIZE}allow{SE_M_GRASSWHISTLE}it{SE_M_SUPERSONIC}he{SE_M_SAND_TOMB}grand-\n"
-	.string "father--ou{SE_M_SAND_TOMB}MASTER--wil{SE_M_BATON_PASS}also.\p"
-	.string "Yo{SE_M_DIVE}ma{SE_M_YAWN}enter.$"
+	.string "If CLAIR allows it, her grand-\n"
+	.string "father--our MASTER--will also.\p"
+	.string "You may enter.$"
 
 BlackBeltText_VoicesInMyHead:
-	.string "Arooo{SE_M_DRAGON_RAGE}Voice{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}m{SE_M_YAWN}head!\p"
-	.string "Huh{SE_M_SING}I'{SE_M_MILK_DRINK}listenin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}m{SE_M_YAWN}radio!$"
+	.string "Arooo! Voices in my head!\p"
+	.string "Huh? I'm listening to my radio!$"
 
 BlackthornCooltrainerF1Text:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMON\n"
-	.string "remembe{SE_M_SAND_TOMB}som{SE_M_REVERSAL}moves?$"
+	.string "Are you going to make your POKéMON\n"
+	.string "remember some moves?$"
 
 BlackthornYoungsterText:
-	.string "Drago{SE_M_ATTRACT}master{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}com{SE_M_REVERSAL}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}city\n"
-	.string "o{SE_M_ACID_ARMOR}BLACKTHORN.$"
+	.string "Dragon masters all come from the city\n"
+	.string "of BLACKTHORN.$"
 
 BlackthornCity_MeetSantosText:
-	.string "SANTOS{SE_M_HEAT_WAVE}…\p"
-	.string "I'{SE_M_MILK_DRINK}SANTO{SE_M_SKETCH}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}weekda{SE_M_YAWN}family.\p"
-	.string "Tak{SE_M_REVERSAL}{SE_M_CHARGE}guess.$"
+	.string "SANTOS: …\p"
+	.string "I'm SANTOS of the weekday family.\p"
+	.string "Take a guess.$"
 
 BlackthornCity_SantosGivesGiftText:
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}hav{SE_M_REVERSAL}this…$"
+	.string "You can have this…$"
 
 BlackthornCity_SantosGaveGiftText:
-	.string "SANTOS{SE_M_HEAT_WAVE}…\p"
-	.string "SPEL{SE_M_BRICK_BREAK}TAG…\p"
-	.string "GHOST-typ{SE_M_REVERSAL}move{SE_M_GRASSWHISTLE}ge{SE_M_SPIT_UP}stronger…\p"
-	.string "I{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}frighte{SE_M_ATTRACT}you…$"
+	.string "SANTOS: …\p"
+	.string "SPELL TAG…\p"
+	.string "GHOST-type moves get stronger…\p"
+	.string "It will frighten you…$"
 
 BlackthornCity_SantosSaturdayText:
-	.string "SANTOS{SE_M_HEAT_WAVE}…\p"
-	.string "Se{SE_M_REVERSAL}yo{SE_M_DIVE}agai{SE_M_ATTRACT}o{SE_M_ATTRACT}anothe{SE_M_SAND_TOMB}Saturday…\p"
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}mor{SE_M_REVERSAL}gifts…$"
+	.string "SANTOS: …\p"
+	.string "See you again on another Saturday…\p"
+	.string "I won't have any more gifts…$"
 
 BlackthornCity_SantosNopeText:
-	.string "SANTOS{SE_M_HEAT_WAVE}No.$"
+	.string "SANTOS: No.$"
 
 BlackthornCooltrainerF2Text:
-	.string "Wow{SE_M_SUPERSONIC}yo{SE_M_DIVE}cam{SE_M_REVERSAL}throug{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}IC{SE_M_SWORDS_DANCE}PATH?\p"
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{SE_M_CHARGE}rea{SE_M_BATON_PASS}hotsho{SE_M_SPIT_UP}trainer!$"
+	.string "Wow, you came through the ICE PATH?\p"
+	.string "You must be a real hotshot trainer!$"
 
 BlackthornCitySignText:
-	.string "BLACKTHOR{SE_M_PSYBEAM2}CITY\p"
-	.string "{SE_M_BONEMERANG}Quie{SE_M_SPIT_UP}Mountai{SE_M_ATTRACT}Retreat$"
+	.string "BLACKTHORN CITY\p"
+	.string "A Quiet Mountain Retreat$"
 
 BlackthornGymSignText:
-	.string "BLACKTHOR{SE_M_PSYBEAM2}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM\n"
-	.string "LEADER{SE_M_HEAT_WAVE}CLAIR\p"
-	.string "Th{SE_M_REVERSAL}Blesse{SE_M_WATERFALL}Use{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}Drago{SE_M_ATTRACT}POKéMON$"
+	.string "BLACKTHORN CITY POKéMON GYM\n"
+	.string "LEADER: CLAIR\p"
+	.string "The Blessed User of Dragon POKéMON$"
 
 BlackthornCity_Text_MoveDeletersHouseSign:
-	.string "MOV{SE_M_SWORDS_DANCE}BROS{SE_M_ABSORB}HOUSE$"
+	.string "MOVE BROS' HOUSE$"
 
 BlackthornCity_Text_DragonDenSign:
-	.string "DRAGON'{SE_M_SKETCH}DE{SE_M_PSYBEAM2}AHEAD$"
+	.string "DRAGON'S DEN AHEAD$"
 

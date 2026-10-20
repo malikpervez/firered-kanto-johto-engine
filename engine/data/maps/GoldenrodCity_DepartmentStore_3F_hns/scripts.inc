@@ -29,15 +29,15 @@ GoldenrodDeptStore3_EventScript_Rocker::
 	end
 
 GoldenrodDeptStore_Text_3FSuperNerd:
-	.string "I{SE_M_SUPERSONIC}I{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}reall{SE_M_YAWN}impatient!\p"
-	.string "{SE_M_HEAL_BELL}us{SE_M_REVERSAL}{SE_M_LOCK_ON}SPEE{SE_M_FAINT_ATTACK}i{SE_M_ATTRACT}battl{SE_M_REVERSAL}t{SE_M_ATTRACT2}spee{SE_M_WATERFALL}up\n"
-	.string "m{SE_M_YAWN}POKéMON.$"
+	.string "I, I, I'm really impatient!\p"
+	.string "I use X SPEED in battle to speed up\n"
+	.string "my POKéMON.$"
 
 GoldenrodDeptStore_Text_3FRocker:
-	.string "Hey{SE_M_DRAGON_RAGE}Whe{SE_M_ATTRACT}yo{SE_M_DIVE}battle{SE_M_SUPERSONIC}d{SE_M_ATTRACT2}yo{SE_M_DIVE}us{SE_M_REVERSAL}X\n"
+	.string "Hey! When you battle, do you use X\n"
 	.string "SPECIAL?\p"
-	.string "It'{SE_M_GRASSWHISTLE}awesome{SE_M_PERISH_SONG}I{SE_M_SPIT_UP}reall{SE_M_YAWN}jack{SE_M_GRASSWHISTLE}up\n"
-	.string "SPECIA{SE_M_BRICK_BREAK}ATTACK!$"
+	.string "It's awesome. It really jacks up\n"
+	.string "SPECIAL ATTACK!$"
 
 GoldenrodDeptStore3_EventScript_Clerk::
 	lock
@@ -62,6 +62,6 @@ GoldenrodDeptStore3_Pokemart:
 	pokemartlistend
 
 GoldenrodDeptStore_Text_3FDirectory:
-	.string "Fo{SE_M_SAND_TOMB}Victor{SE_M_YAWN}Seekers\p"
-	.string "3{SE_M_LEER}BATTL{SE_M_SWORDS_DANCE}COLLECTION$"
+	.string "For Victory Seekers\p"
+	.string "3F BATTLE COLLECTION$"
 

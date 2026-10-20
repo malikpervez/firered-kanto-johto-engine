@@ -244,141 +244,141 @@ Route36_Movement_SudoWoodo:
 	step_end
 
 Route36_Text_UseSquirtbottle:
-	.string "Us{SE_M_REVERSAL}SQUIRTBOTTLE?$"
+	.string "Use SQUIRTBOTTLE?$"
 
 Route36_Text_UsedSquirtbottle:
-	.string "{PLAYER} use{SE_M_WATERFALL}th{SE_M_REVERSAL}SQUIRTBOTTLE.$"
+	.string "{PLAYER} used the SQUIRTBOTTLE.$"
 
 Route36_Text_SudowoodoAttacked:
-	.string "Th{SE_M_REVERSAL}weir{SE_M_WATERFALL}tre{SE_M_REVERSAL}doesn'{SE_M_SPIT_UP}lik{SE_M_REVERSAL}the\n"
+	.string "The weird tree doesn't like the\n"
 	.string "SQUIRTBOTTLE!\p"
-	.string "Th{SE_M_REVERSAL}weir{SE_M_WATERFALL}tre{SE_M_REVERSAL}attacked!$"
+	.string "The weird tree attacked!$"
 
 Route36_Text_RockSmashGuy1:
 	.string "Wa-hey!\p"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}sna{SE_M_MORNING_SUN}tha{SE_M_SPIT_UP}tree\n"
-	.string "wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}straight-ar{SE_M_MILK_DRINK}punch.\p"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}couldn't{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}{SE_M_CHARGE}failure!$"
+	.string "I was going to snap that tree\n"
+	.string "with my straight-arm punch.\p"
+	.string "But I couldn't! I'm a failure!$"
 
 Route36_Text_RockSmashGuy2:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}clea{SE_M_SAND_TOMB}tha{SE_M_SPIT_UP}wretche{SE_M_WATERFALL}tree?\p"
-	.string "I'{SE_M_MILK_DRINK}impressed!\n"
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}this.$"
+	.string "Did you clear that wretched tree?\p"
+	.string "I'm impressed!\n"
+	.string "I want you to have this.$"
 
 Route36_Text_RockSmashGuy3:
-	.string "Tha{SE_M_SPIT_UP}happen{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}ROC{SE_M_SNORE}SMASH.\p"
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}shatte{SE_M_SAND_TOMB}rock{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}jus{SE_M_SPIT_UP}a\n"
-	.string "singl{SE_M_REVERSAL}well-aime{SE_M_WATERFALL}smack.\p"
-	.string "I{SE_M_ACID_ARMOR}an{SE_M_YAWN}rock{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}way,\n"
-	.string "jus{SE_M_SPIT_UP}smas{SE_M_TRI_ATTACK}'e{SE_M_MILK_DRINK}up!$"
+	.string "That happens to be ROCK SMASH.\p"
+	.string "You can shatter rocks with just a\n"
+	.string "single well-aimed smack.\p"
+	.string "If any rocks are in your way,\n"
+	.string "just smash 'em up!$"
 
 Route36_Text_OddTree:
-	.string "{SE_M_BONEMERANG}weir{SE_M_WATERFALL}tre{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}blockin{SE_M_SANDSTORM}th{SE_M_REVERSAL}way.$"
+	.string "A weird tree is blocking the way.$"
 
 Route36_Text_Lass1:
-	.string "B{SE_M_REVERSAL}carefu{SE_M_BATON_PASS}a{SE_M_SPIT_UP}nigh{SE_M_SPIT_UP}o{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}route!\p"
-	.string "{SE_M_HEAL_BELL}sa{SE_M_TWISTER}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}looke{SE_M_WATERFALL}like\n"
-	.string "GROWLITHE{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}i{SE_M_SPIT_UP}ha{SE_M_WATERFALL}{SE_M_CHARGE}scar{SE_M_YAWN}aura\l"
-	.string "t{SE_M_ATTRACT2}it.$"
+	.string "Be careful at night on this route!\p"
+	.string "I saw a POKéMON that looked like\n"
+	.string "GROWLITHE, but it had a scary aura\l"
+	.string "to it.$"
 
 Route36_Text_Lass2_ClearedSudowoodo:
-	.string "Tha{SE_M_SPIT_UP}od{SE_M_WATERFALL}tre{SE_M_REVERSAL}disappeare{SE_M_WATERFALL}without\n"
-	.string "{SE_M_CHARGE}trace.\p"
-	.string "Oh{SE_M_DRAGON_RAGE}Tha{SE_M_SPIT_UP}tre{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}reall{SE_M_YAWN}a\n"
+	.string "That odd tree disappeared without\n"
+	.string "a trace.\p"
+	.string "Oh! That tree was really a\n"
 	.string "POKéMON?$"
 
 Route36_Text_PsychicMarkSeen:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}rea{SE_M_WATERFALL}you{SE_M_SAND_TOMB}thoughts!$"
+	.string "I'm going to read your thoughts!$"
 
 Route36_Text_PsychicMarkBeaten:
-	.string "{SE_M_HEAL_BELL}misrea{SE_M_WATERFALL}you!$"
+	.string "I misread you!$"
 
 Route36_Text_PsychicMarkAfter:
-	.string "I'{SE_M_WATERFALL}b{SE_M_REVERSAL}stron{SE_M_SANDSTORM}i{SE_M_ACID_ARMOR}onl{SE_M_YAWN}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}tell\n"
-	.string "wha{SE_M_SPIT_UP}m{SE_M_YAWN}opponen{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}thinking.$"
+	.string "I'd be strong if only I could tell\n"
+	.string "what my opponent was thinking.$"
 
 Route36_Text_SchoolboyAlan1Seen:
-	.string "Thank{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}m{SE_M_YAWN}studies{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}ready\n"
-	.string "fo{SE_M_SAND_TOMB}an{SE_M_YAWN}POKéMON!$"
+	.string "Thanks to my studies, I'm ready\n"
+	.string "for any POKéMON!$"
 
 Route36_Text_SchoolboyAlan1Beaten:
-	.string "Oops{SE_M_DRAGON_RAGE}Computatio{SE_M_ATTRACT}error?$"
+	.string "Oops! Computation error?$"
 
 Route36_Text_SchoolboyAlanAfter:
-	.string "Darn{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}stud{SE_M_YAWN}fiv{SE_M_REVERSAL}hour{SE_M_GRASSWHISTLE}{SE_M_CHARGE}da{SE_M_YAWN}too.\p"
-	.string "There'{SE_M_GRASSWHISTLE}mor{SE_M_REVERSAL}t{SE_M_ATTRACT2}learnin{SE_M_SANDSTORM}tha{SE_M_ATTRACT}just\n"
-	.string "readin{SE_M_SANDSTORM}books.$"
+	.string "Darn. I study five hours a day too.\p"
+	.string "There's more to learning than just\n"
+	.string "reading books.$"
 
 Route36_Text_MeetArthur:
-	.string "ARTHUR{SE_M_HEAT_WAVE}Wh{SE_M_ATTRACT2}ar{SE_M_REVERSAL}you?\n"
-	.string "I'{SE_M_MILK_DRINK}ARTHU{SE_M_MINIMIZE}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}WEEKDA{SE_M_MOONLIGHT}FAMILY.\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ca{SE_M_ATTRACT}gues{SE_M_GRASSWHISTLE}m{SE_M_YAWN}favorit{SE_M_REVERSAL}day,\n"
-	.string "I'l{SE_M_BATON_PASS}giv{SE_M_REVERSAL}yo{SE_M_DIVE}{SE_M_CHARGE}reward.$"
+	.string "ARTHUR: Who are you?\n"
+	.string "I'm ARTHUR of the WEEKDAY FAMILY.\p"
+	.string "If you can guess my favorite day,\n"
+	.string "I'll give you a reward.$"
 
 Route36_Text_ArthurNope:
-	.string "No{SE_M_SPIT_UP}quite!$"
+	.string "Not quite!$"
 
 Route36_Text_ArthurGivesGift:
-	.string "Here{SE_M_PERISH_SONG}Yo{SE_M_DIVE}ca{SE_M_ATTRACT}hav{SE_M_REVERSAL}this.$"
+	.string "Here. You can have this.$"
 
 Route36_Text_ArthurGaveGift:
-	.string "ARTHUR{SE_M_HEAT_WAVE}{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}use{SE_M_GRASSWHISTLE}ROCK-\n"
-	.string "typ{SE_M_REVERSAL}move{SE_M_GRASSWHISTLE}shoul{SE_M_WATERFALL}hol{SE_M_WATERFALL}o{SE_M_ATTRACT}t{SE_M_ATTRACT2}that.\p"
-	.string "I{SE_M_SPIT_UP}pump{SE_M_GRASSWHISTLE}u{SE_M_MORNING_SUN}ROCK-typ{SE_M_REVERSAL}attacks.$"
+	.string "ARTHUR: A POKéMON that uses ROCK-\n"
+	.string "type moves should hold on to that.\p"
+	.string "It pumps up ROCK-type attacks.$"
 
 Route36_Text_ArthurThursday:
-	.string "ARTHUR{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}ARTHU{SE_M_MINIMIZE}o{SE_M_ACID_ARMOR}Thursday.\n"
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}fift{SE_M_TRI_ATTACK}so{SE_M_ATTRACT}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}seven.$"
+	.string "ARTHUR: I'm ARTHUR of Thursday.\n"
+	.string "I'm the fifth son out of seven.$"
 
 Route36_Text_Sign:
-	.string "ROUT{SE_M_SWORDS_DANCE}36$"
+	.string "ROUTE 36$"
 
 Route36_Text_Sign_RuinsNorth:
-	.string "RUIN{SE_M_SKETCH}O{SE_M_LEER}ALPH\n"
-	.string "NORT{SE_M_SWAGGER2}ENTRANCE$"
+	.string "RUINS OF ALPH\n"
+	.string "NORTH ENTRANCE$"
 
 Route36_Text_Tips1:
-	.string "TRAINE{SE_M_MINIMIZE}TIPS\n"
-	.string "POKéMO{SE_M_PSYBEAM2}stat{SE_M_GRASSWHISTLE}vary--eve{SE_M_ATTRACT}within\l"
-	.string "th{SE_M_REVERSAL}sam{SE_M_REVERSAL}species.\p"
-	.string "Thei{SE_M_SAND_TOMB}stat{SE_M_GRASSWHISTLE}ma{SE_M_YAWN}b{SE_M_REVERSAL}simila{SE_M_SAND_TOMB}a{SE_M_SPIT_UP}first.\p"
-	.string "However{SE_M_SUPERSONIC}difference{SE_M_GRASSWHISTLE}wil{SE_M_BATON_PASS}become\n"
-	.string "pronounce{SE_M_WATERFALL}a{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}grow.$"
+	.string "TRAINER TIPS\n"
+	.string "POKéMON stats vary--even within\l"
+	.string "the same species.\p"
+	.string "Their stats may be similar at first.\p"
+	.string "However, differences will become\n"
+	.string "pronounced as the POKéMON grow.$"
 
 Route36_Text_Tips2:
-	.string "TRAINE{SE_M_MINIMIZE}TIPS\n"
-	.string "Us{SE_M_REVERSAL}DI{SE_M_SWAGGER}t{SE_M_ATTRACT2}retur{SE_M_ATTRACT}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}entranc{SE_M_REVERSAL}of\n"
-	.string "an{SE_M_YAWN}place.\p"
-	.string "I{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}convenien{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}exploring\n"
-	.string "cave{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}othe{SE_M_SAND_TOMB}landmarks.$"
+	.string "TRAINER TIPS\n"
+	.string "Use DIG to return to the entrance of\n"
+	.string "any place.\p"
+	.string "It is convenient for exploring\n"
+	.string "caves and other landmarks.$"
 
 Route36_Text_AlanRegister:
-	.string "Darn{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}stud{SE_M_YAWN}fiv{SE_M_REVERSAL}hour{SE_M_GRASSWHISTLE}{SE_M_CHARGE}da{SE_M_YAWN}too.\p"
-	.string "There'{SE_M_GRASSWHISTLE}mor{SE_M_REVERSAL}t{SE_M_ATTRACT2}learnin{SE_M_SANDSTORM}tha{SE_M_ATTRACT}just\n"
-	.string "readin{SE_M_SANDSTORM}books.$"
+	.string "Darn. I study five hours a day too.\p"
+	.string "There's more to learning than just\n"
+	.string "reading books.$"
 
 Route36_Text_AlanRematchIntro:
-	.string "Thank{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}m{SE_M_YAWN}studies{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}ready\n"
-	.string "fo{SE_M_SAND_TOMB}an{SE_M_YAWN}POKéMON!$"
+	.string "Thanks to my studies, I'm ready\n"
+	.string "for any POKéMON!$"
 
 Route36_Text_AlanRematchDefeat:
-	.string "Oops{SE_M_DRAGON_RAGE}Computatio{SE_M_ATTRACT}error?$"
+	.string "Oops! Computation error?$"
 
 Route36_Text_AlanPostRematch:
-	.string "Darn{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}stud{SE_M_YAWN}fiv{SE_M_REVERSAL}hour{SE_M_GRASSWHISTLE}{SE_M_CHARGE}da{SE_M_YAWN}too.\p"
-	.string "There'{SE_M_GRASSWHISTLE}mor{SE_M_REVERSAL}t{SE_M_ATTRACT2}learnin{SE_M_SANDSTORM}tha{SE_M_ATTRACT}just\n"
-	.string "readin{SE_M_SANDSTORM}books.$"
+	.string "Darn. I study five hours a day too.\p"
+	.string "There's more to learning than just\n"
+	.string "reading books.$"
 
 Route36_Text_AlanHasItem:
-	.string "Hey{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}something\n"
-	.string "whil{SE_M_REVERSAL}studying!\p"
-	.string "Here{SE_M_SUPERSONIC}yo{SE_M_DIVE}ca{SE_M_ATTRACT}hav{SE_M_REVERSAL}it!$"
+	.string "Hey! I found something\n"
+	.string "while studying!\p"
+	.string "Here, you can have it!$"
 
 Route36_Text_AlanGaveItem:
-	.string "I'l{SE_M_BATON_PASS}le{SE_M_SPIT_UP}yo{SE_M_DIVE}kno{SE_M_TWISTER}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}find\n"
-	.string "anythin{SE_M_SANDSTORM}else!$"
+	.string "I'll let you know if I find\n"
+	.string "anything else!$"
 
 Route36_Text_AlanNoRoom:
-	.string "Hmm{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}BA{SE_M_SWAGGER}i{SE_M_GRASSWHISTLE}full.\p"
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}whe{SE_M_ATTRACT}yo{SE_M_DIVE}hav{SE_M_REVERSAL}room.$"
+	.string "Hmm, your BAG is full.\p"
+	.string "Come back when you have room.$"
 

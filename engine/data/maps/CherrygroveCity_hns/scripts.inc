@@ -280,103 +280,103 @@ CherryGroveCity_Silver_AfterBattle::
 	end
 
 CherrygroveCity_Text_GuideGentIntro:
-	.string "Welcome{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}ne{SE_M_TWISTER}to\nCHERRYGROVE{SE_M_SUPERSONIC}aren'{SE_M_SPIT_UP}you?\p{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}sho{SE_M_TWISTER}yo{SE_M_DIVE}aroun{SE_M_WATERFALL}town\nbefor{SE_M_REVERSAL}yo{SE_M_DIVE}continu{SE_M_REVERSAL}you{SE_M_SAND_TOMB}journey.$"
+	.string "Welcome! You're new to\nCHERRYGROVE, aren't you?\pI can show you around town\nbefore you continue your journey.$"
 
 CherrygroveCity_Text_GuideGentTourStart:
-	.string "OK{SE_M_SUPERSONIC}then!\n"
-	.string "Follo{SE_M_TWISTER}me!$"
+	.string "OK, then!\n"
+	.string "Follow me!$"
 
 CherrygroveCity_Text_GuideGentPokecenter:
-	.string "Here'{SE_M_GRASSWHISTLE}CHERRYGROVE's\nPOKéMO{SE_M_PSYBEAM2}CENTER.\pYou{SE_M_SAND_TOMB}tea{SE_M_MILK_DRINK}ca{SE_M_ATTRACT}res{SE_M_SPIT_UP}her{SE_M_REVERSAL}between\ntrips{SE_M_SUPERSONIC}jus{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}di{SE_M_WATERFALL}i{SE_M_ATTRACT}KANTO.$"
+	.string "Here's CHERRYGROVE's\nPOKéMON CENTER.\pYour team can rest here between\ntrips, just as it did in KANTO.$"
 
 CherrygroveCity_Text_GuideGentMart:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}MART.\p"
-	.string "The{SE_M_YAWN}sel{SE_M_BATON_PASS}BALL{SE_M_SKETCH}fo{SE_M_SAND_TOMB}catchin{SE_M_SANDSTORM}wild\n"
-	.string "POKéMO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}othe{SE_M_SAND_TOMB}usefu{SE_M_BATON_PASS}items.$"
+	.string "This is a POKéMON MART.\p"
+	.string "They sell BALLS for catching wild\n"
+	.string "POKéMON and other useful items.$"
 
 CherrygroveCity_Text_GuideGentRoute30:
-	.string "ROUT{SE_M_SWORDS_DANCE}3{SE_M_BITE}i{SE_M_GRASSWHISTLE}ou{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}way.\p"
-	.string "Trainer{SE_M_GRASSWHISTLE}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}battling\n"
-	.string "thei{SE_M_SAND_TOMB}prize{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}there.$"
+	.string "ROUTE 30 is out this way.\p"
+	.string "Trainers will be battling\n"
+	.string "their prized POKéMON there.$"
 
 CherrygroveCity_Text_GuideGentSea:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}sea{SE_M_SUPERSONIC}a{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}ca{SE_M_ATTRACT}see.\p"
-	.string "Som{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}foun{SE_M_WATERFALL}onl{SE_M_YAWN}in\n"
-	.string "i{SE_M_ATTRACT}water.$"
+	.string "This is the sea, as you can see.\p"
+	.string "Some POKéMON are found only in\n"
+	.string "in water.$"
 
 CherrygroveCity_Text_GuideGentMap:
 	.string "Here…\p"
-	.string "It'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}house{SE_M_DRAGON_RAGE}Thank{SE_M_GRASSWHISTLE}for\n"
-	.string "you{SE_M_SAND_TOMB}company.\p"
-	.string "Oh{SE_M_SUPERSONIC}an{SE_M_WATERFALL}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}eve{SE_M_SAND_TOMB}lost{SE_M_SUPERSONIC}check\n"
-	.string "th{SE_M_REVERSAL}MA{SE_M_PETAL_DANCE}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéGEAR!\p"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}yo{SE_M_DIVE}luc{SE_M_ENCORE2}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}journey!$"
+	.string "It's my house! Thanks for\n"
+	.string "your company.\p"
+	.string "Oh, and if you're ever lost, check\n"
+	.string "the MAP on your POKéGEAR!\p"
+	.string "I wish you luck on your journey!$"
 
 CherrygroveCity_Text_GuideGentDecline:
-	.string "Oh{SE_M_DIZZY_PUNCH}It'{SE_M_GRASSWHISTLE}somethin{SE_M_SANDSTORM}{SE_M_HEAL_BELL}enjoy\n"
+	.string "Oh… It's something I enjoy\n"
 	.string "doing…\p"
-	.string "Fine{SE_M_PERISH_SONG}Com{SE_M_REVERSAL}se{SE_M_REVERSAL}m{SE_M_REVERSAL}whenever\n"
-	.string "yo{SE_M_DIVE}like.$"
+	.string "Fine. Come see me whenever\n"
+	.string "you like.$"
 
 CherrygroveCity_Text_RivalSeen:
-	.string "S{SE_M_ATTRACT2}you'r{SE_M_REVERSAL}{PLAYER}{SE_M_SUPERSONIC}the\nKANT{SE_M_SOLAR_BEAM}CHAMPION.\p{SE_M_BONEMERANG}titl{SE_M_REVERSAL}doesn'{SE_M_SPIT_UP}mak{SE_M_REVERSAL}yo{SE_M_DIVE}strong.\pI'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}{SE_M_CHARGE}powerfu{SE_M_BATON_PASS}POKéMON.\nI'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}mean!$"
+	.string "So you're {PLAYER}, the\nKANTO CHAMPION.\pA title doesn't make you strong.\pI've got a powerful POKéMON.\nI'll show you what I mean!$"
 
 CherrygroveCity_Text_SilverWin:
-	.string "Humph{SE_M_PERISH_SONG}Ar{SE_M_REVERSAL}yo{SE_M_DIVE}happ{SE_M_YAWN}yo{SE_M_DIVE}won?$"
+	.string "Humph. Are you happy you won?$"
 
 CherrygroveCity_Text_RivalAfter:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\p"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}kno{SE_M_TWISTER}wh{SE_M_ATTRACT2}{SE_M_HEAL_BELL}am?\p"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}th{SE_M_REVERSAL}world's\n"
-	.string "greates{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}trainer.$"
+	.string "… … … … … … … …\p"
+	.string "Do you want to know who I am?\p"
+	.string "I'm going to be the world's\n"
+	.string "greatest POKéMON trainer.$"
 
 CherrygroveCity_Text_RivalID:
-	.string "Giv{SE_M_REVERSAL}i{SE_M_SPIT_UP}back!\n"
-	.string "That'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}TRAINE{SE_M_MINIMIZE}CARD!\p"
-	.string "O{SE_M_TRI_ATTACK}no!\n"
-	.string "Yo{SE_M_DIVE}sa{SE_M_TWISTER}m{SE_M_YAWN}name...$"
+	.string "Give it back!\n"
+	.string "That's my TRAINER CARD!\p"
+	.string "Oh no!\n"
+	.string "You saw my name...$"
 
 CherrygroveCity_Text_TeacherHaveMapCard:
-	.string "Whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}POKéMON,\n"
-	.string "goin{SE_M_SANDSTORM}anywher{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}fun.$"
+	.string "When you're with POKéMON,\n"
+	.string "going anywhere is fun.$"
 
 CherrygroveCity_Text_YoungsterNoPokedex:
-	.string "MR{SE_M_PERISH_SONG}POKéMON'{SE_M_GRASSWHISTLE}hous{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}still\n"
-	.string "farthe{SE_M_SAND_TOMB}u{SE_M_MORNING_SUN}ahead.$"
+	.string "MR. POKéMON's house is still\n"
+	.string "farther up ahead.$"
 
 CherrygroveCity_Text_YoungsterHavePokedex:
-	.string "{SE_M_HEAL_BELL}battle{SE_M_WATERFALL}th{SE_M_REVERSAL}trainer{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}the\n"
+	.string "I battled the trainers on the\n"
 	.string "road.\p"
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}lost{SE_M_PERISH_SONG}They'r{SE_M_REVERSAL}a\n"
-	.string "mess{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}tak{SE_M_REVERSAL}the{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}a\l"
-	.string "POKéMO{SE_M_PSYBEAM2}CENTER.$"
+	.string "My POKéMON lost. They're a\n"
+	.string "mess! I must take them to a\l"
+	.string "POKéMON CENTER.$"
 
 CherrygroveCity_Text_MysticWaterGuyBefore:
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}{SE_M_HEAL_BELL}caugh{SE_M_SPIT_UP}ha{SE_M_WATERFALL}an\n"
+	.string "A POKéMON I caught had an\n"
 	.string "item.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}it'{SE_M_GRASSWHISTLE}MYSTI{SE_M_PSYBEAM}WATER.\p"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}nee{SE_M_WATERFALL}it{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}d{SE_M_ATTRACT2}you\n"
-	.string "wan{SE_M_SPIT_UP}it?$"
+	.string "I think it's MYSTIC WATER.\p"
+	.string "I don't need it, so do you\n"
+	.string "want it?$"
 
 CherrygroveCity_Text_MysticWaterGuyAfter:
-	.string "Bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}fishin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}me{SE_M_SUPERSONIC}then.$"
+	.string "Back to fishing for me, then.$"
 
 CherrygroveCity_Text_CitySign:
-	.string "CHERRYGROV{SE_M_SWORDS_DANCE}CITY\p"
-	.string "Th{SE_M_REVERSAL}Cit{SE_M_YAWN}o{SE_M_ACID_ARMOR}Cute{SE_M_SUPERSONIC}Fragrant\n"
+	.string "CHERRYGROVE CITY\p"
+	.string "The City of Cute, Fragrant\n"
 	.string "Flowers$"
 
 CherrygroveCity_Text_GuideGentsHouseSign:
-	.string "GUID{SE_M_SWORDS_DANCE}GENT'{SE_M_SKETCH}HOUSE$"
+	.string "GUIDE GENT'S HOUSE$"
 
 CherryGroveCity_Text_Staryu:
-	.string "STARYU{SE_M_HEAT_WAVE}Yuuuuuuuu.$"
+	.string "STARYU: Yuuuuuuuu.$"
 
 CherryGroveCity_Text_Corsola:
-	.string "CORSOLA{SE_M_HEAT_WAVE}Corsola{SE_M_DRAGON_RAGE}La!$"
+	.string "CORSOLA: Corsola! La!$"
 
 CherryGroveCity_Text_Krabby:
-	.string "KRABBY{SE_M_HEAT_WAVE}KOOOOKEEE!$"
+	.string "KRABBY: KOOOOKEEE!$"
 
 CherryGroveCity_Movement_Trigger_Gent:
 	walk_down

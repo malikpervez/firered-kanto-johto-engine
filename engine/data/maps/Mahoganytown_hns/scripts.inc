@@ -250,72 +250,72 @@ MahoganyTown_Movement_PlayerMerchant2:
 	step_end
 
 MahoganyTown_Text_RageCandyBarMerchantTryOne:
-	.string "Hiya{SE_M_SUPERSONIC}kid!\p"
-	.string "{SE_M_HEAL_BELL}se{SE_M_REVERSAL}you'r{SE_M_REVERSAL}ne{SE_M_TWISTER}i{SE_M_ATTRACT}MAHOGAN{SE_M_MOONLIGHT}TOWN.\p"
-	.string "Sinc{SE_M_REVERSAL}you'r{SE_M_REVERSAL}new{SE_M_SUPERSONIC}yo{SE_M_DIVE}shoul{SE_M_WATERFALL}tr{SE_M_YAWN}a\n"
-	.string "yumm{SE_M_YAWN}RAGECANDYBAR!\p"
-	.string "Righ{SE_M_SPIT_UP}now{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}ca{SE_M_ATTRACT}b{SE_M_REVERSAL}your{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}just\n"
-	.string "¥300{SE_M_DRAGON_RAGE}Wan{SE_M_SPIT_UP}one?$"
+	.string "Hiya, kid!\p"
+	.string "I see you're new in MAHOGANY TOWN.\p"
+	.string "Since you're new, you should try a\n"
+	.string "yummy RAGECANDYBAR!\p"
+	.string "Right now, it can be yours for just\n"
+	.string "¥300! Want one?$"
 
 MahoganyTown_Text_RageCandyBarMerchantSavorIt:
-	.string "Good{SE_M_DRAGON_RAGE}Savo{SE_M_SAND_TOMB}it!$"
+	.string "Good! Savor it!$"
 
 MahoganyTown_Text_RageCandyBarMerchantNotEnoughMoney:
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}enoug{SE_M_TRI_ATTACK}money.$"
+	.string "You don't have enough money.$"
 
 MahoganyTown_Text_RageCandyBarMerchantRefused:
-	.string "Oh{SE_M_SUPERSONIC}fin{SE_M_REVERSAL}then…$"
+	.string "Oh, fine then…$"
 
 MahoganyTown_Text_RageCandyBarMerchantSoldOut:
-	.string "RAGECANDYBAR'{SE_M_GRASSWHISTLE}sol{SE_M_WATERFALL}out.\p"
-	.string "I'{SE_M_MILK_DRINK}packin{SE_M_SANDSTORM}up{SE_M_PERISH_SONG}Don'{SE_M_SPIT_UP}bothe{SE_M_SAND_TOMB}me,\n"
+	.string "RAGECANDYBAR's sold out.\p"
+	.string "I'm packing up. Don't bother me,\n"
 	.string "kiddo.$"
 
 MahoganyTown_Text_Gramps:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}of{SE_M_ACID_ARMOR}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}th{SE_M_REVERSAL}GYARADOS\n"
-	.string "rampag{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}LAKE?$"
+	.string "Are you off to see the GYARADOS\n"
+	.string "rampage at the LAKE?$"
 
 MahoganyTown_Text_GrampsClearedRocketHideout:
-	.string "MAGIKAR{SE_M_PETAL_DANCE}hav{SE_M_REVERSAL}returne{SE_M_WATERFALL}t{SE_M_ATTRACT2}LAKE\n"
-	.string "O{SE_M_LEER}RAGE.\p"
-	.string "Tha{SE_M_SPIT_UP}shoul{SE_M_WATERFALL}b{SE_M_REVERSAL}goo{SE_M_WATERFALL}new{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}the\n"
-	.string "angler{SE_M_GRASSWHISTLE}there.$"
+	.string "MAGIKARP have returned to LAKE\n"
+	.string "OF RAGE.\p"
+	.string "That should be good news for the\n"
+	.string "anglers there.$"
 
 MahoganyTown_Text_Fisher:
-	.string "Sinc{SE_M_REVERSAL}yo{SE_M_DIVE}cam{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}far{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}the\n"
-	.string "tim{SE_M_REVERSAL}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}som{SE_M_REVERSAL}sightseeing.\p"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}hea{SE_M_WATERFALL}nort{SE_M_TRI_ATTACK}an{SE_M_WATERFALL}check\n"
-	.string "ou{SE_M_SPIT_UP}LAK{SE_M_SWORDS_DANCE}O{SE_M_LEER}RAG{SE_M_SWORDS_DANCE}righ{SE_M_SPIT_UP}now.$"
+	.string "Since you came this far, take the\n"
+	.string "time to do some sightseeing.\p"
+	.string "You should head north and check\n"
+	.string "out LAKE OF RAGE right now.$"
 
 MahoganyTown_Text_Lass:
-	.string "Visi{SE_M_SPIT_UP}Grandma'{SE_M_GRASSWHISTLE}shop{SE_M_PERISH_SONG}Sh{SE_M_REVERSAL}sells\n"
-	.string "stuf{SE_M_ACID_ARMOR}tha{SE_M_SPIT_UP}nobod{SE_M_YAWN}els{SE_M_REVERSAL}has.$"
+	.string "Visit Grandma's shop. She sells\n"
+	.string "stuff that nobody else has.$"
 
 MahoganyTown_Text_Sign:
-	.string "MAHOGAN{SE_M_MOONLIGHT}TOWN\p"
-	.string "Welcom{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}Hom{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}Ninja$"
+	.string "MAHOGANY TOWN\p"
+	.string "Welcome to the Home of the Ninja$"
 
 MahoganyTown_Text_RagecandybarSign:
-	.string "Whil{SE_M_REVERSAL}visitin{SE_M_SANDSTORM}MAHOGAN{SE_M_MOONLIGHT}TOWN{SE_M_SUPERSONIC}try\n"
-	.string "{SE_M_CHARGE}RAGECANDYBAR!$"
+	.string "While visiting MAHOGANY TOWN, try\n"
+	.string "a RAGECANDYBAR!$"
 
 MahoganyTown_Text_GymSign:
-	.string "MAHOGAN{SE_M_MOONLIGHT}TOW{SE_M_PSYBEAM2}POKéMO{SE_M_PSYBEAM2}GYM\p"
-	.string "LEADER{SE_M_HEAT_WAVE}PRYCE\p"
-	.string "Th{SE_M_REVERSAL}Teache{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}Winter'{SE_M_GRASSWHISTLE}Harshness$"
+	.string "MAHOGANY TOWN POKéMON GYM\p"
+	.string "LEADER: PRYCE\p"
+	.string "The Teacher of Winter's Harshness$"
 
 ElmPhoneRadioTowerRocketTakeoverText:
-	.string "PROF.ELM{SE_M_HEAT_WAVE}{PLAYER}{SE_M_SUPERSONIC}ho{SE_M_TWISTER}are\n"
-	.string "thing{SE_M_GRASSWHISTLE}going?\p"
-	.string "{SE_M_HEAL_BELL}calle{SE_M_WATERFALL}becaus{SE_M_REVERSAL}somethin{SE_M_SANDSTORM}weird\n"
-	.string "i{SE_M_GRASSWHISTLE}happenin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}radio\l"
+	.string "PROF.ELM: {PLAYER}, how are\n"
+	.string "things going?\p"
+	.string "I called because something weird\n"
+	.string "is happening with the radio\l"
 	.string "broadcasts.\p"
-	.string "The{SE_M_YAWN}wer{SE_M_REVERSAL}talkin{SE_M_SANDSTORM}abou{SE_M_SPIT_UP}TEAM\n"
+	.string "They were talking about TEAM\n"
 	.string "ROCKET.\p"
-	.string "{PLAYER}{SE_M_SUPERSONIC}d{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}anything\n"
-	.string "abou{SE_M_SPIT_UP}it?\p"
-	.string "Mayb{SE_M_REVERSAL}TEA{SE_M_GIGA_DRAIN}ROCKE{SE_M_SWIFT}ha{SE_M_GRASSWHISTLE}returned.\n"
-	.string "No{SE_M_SUPERSONIC}tha{SE_M_SPIT_UP}jus{SE_M_SPIT_UP}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}true.\p"
-	.string "Sorr{SE_M_YAWN}t{SE_M_ATTRACT2}bu{SE_M_SANDSTORM}you.\n"
-	.string "Tak{SE_M_REVERSAL}care!$"
+	.string "{PLAYER}, do you know anything\n"
+	.string "about it?\p"
+	.string "Maybe TEAM ROCKET has returned.\n"
+	.string "No, that just can't be true.\p"
+	.string "Sorry to bug you.\n"
+	.string "Take care!$"
 

@@ -74,11 +74,11 @@ J_Common_EventScript_PartyIsFull::
 	end
 
 J_Common_Text_ReceivedMon:
-	.string "{PLAYER} receive{SE_M_WATERFALL}{STR_VAR_1}!$"
+	.string "{PLAYER} received {STR_VAR_1}!$"
 
 J_Common_Text_PartyIsFull:
-	.string "Whoa{SE_M_SUPERSONIC}wait{SE_M_PERISH_SONG}Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}carr{SE_M_YAWN}any\n"
-	.string "mor{SE_M_REVERSAL}POKéMON.$"
+	.string "Whoa, wait. You can't carry any\n"
+	.string "more POKéMON.$"
 
 J_Common_EventScript_PlayerHandedOverTheItem::
 	bufferitemname STR_VAR_1, VAR_0x8004

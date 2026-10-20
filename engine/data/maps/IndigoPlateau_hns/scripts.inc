@@ -8,7 +8,7 @@ IndigoPlateau_Sign::
 	end
 
 IndigoPlateau_Text_Sign:
-	.string "INDIG{SE_M_SOLAR_BEAM}PLATEAU\p"
-	.string "Th{SE_M_REVERSAL}Ultimat{SE_M_REVERSAL}Goa{SE_M_BATON_PASS}fo{SE_M_SAND_TOMB}Trainers!\p"
-	.string "POKéMO{SE_M_PSYBEAM2}LEAGU{SE_M_SWORDS_DANCE}HQ$"
+	.string "INDIGO PLATEAU\p"
+	.string "The Ultimate Goal for Trainers!\p"
+	.string "POKéMON LEAGUE HQ$"
 

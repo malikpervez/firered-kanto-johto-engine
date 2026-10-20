@@ -36,18 +36,18 @@ OlivineCity_Text_BaobaName:
 
 OlivineCity_Text_Baoba:
 	.string "{PLAYER}!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}WARDE{SE_M_PSYBEAM2}BAOBA.\p"
-	.string "Sorr{SE_M_YAWN}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}kep{SE_M_SPIT_UP}yo{SE_M_DIVE}waiting.\n"
-	.string "We'v{SE_M_REVERSAL}finall{SE_M_YAWN}opene{SE_M_WATERFALL}the\l"
-	.string "SAFAR{SE_M_HEAL_BELL}ZONE!\p"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}wher{SE_M_REVERSAL}i{SE_M_SPIT_UP}is?\p"
-	.string "Yo{SE_M_DIVE}kno{SE_M_TWISTER}th{SE_M_REVERSAL}GAT{SE_M_SWORDS_DANCE}insid{SE_M_REVERSAL}th{SE_M_REVERSAL}cavern\n"
-	.string "i{SE_M_ATTRACT}CIANWOO{SE_M_FAINT_ATTACK}CITY?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}g{SE_M_ATTRACT2}throug{SE_M_TRI_ATTACK}ther{SE_M_REVERSAL}an{SE_M_WATERFALL}wal{SE_M_ENCORE2}for\n"
-	.string "{SE_M_CHARGE}shor{SE_M_SPIT_UP}while{SE_M_SUPERSONIC}yo{SE_M_DIVE}shoul{SE_M_WATERFALL}soo{SE_M_ATTRACT}see\l"
-	.string "th{SE_M_REVERSAL}SAFAR{SE_M_HEAL_BELL}ZONE!\p"
-	.string "We'r{SE_M_REVERSAL}{SE_M_CHARGE}littl{SE_M_REVERSAL}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}way{SE_M_SUPERSONIC}but\n"
-	.string "pleas{SE_M_REVERSAL}com{SE_M_REVERSAL}visit!$"
+	.string "This is WARDEN BAOBA.\p"
+	.string "Sorry to have kept you waiting.\n"
+	.string "We've finally opened the\l"
+	.string "SAFARI ZONE!\p"
+	.string "Do you know where it is?\p"
+	.string "You know the GATE inside the cavern\n"
+	.string "in CIANWOOD CITY?\p"
+	.string "If you go through there and walk for\n"
+	.string "a short while, you should soon see\l"
+	.string "the SAFARI ZONE!\p"
+	.string "We're a little out of the way, but\n"
+	.string "please come visit!$"
 
 OlivineCity_EventScript_CityTrigger::
 	setflag JOHTO_FLAG_HIDE_OLIVINE_CITY_GYM_JASMINE
@@ -160,23 +160,23 @@ OlivineCity_Movement_SilverLeave:
 	step_end
 
 OlivineCity_Text_SilverEncounter:
-	.string "Yo{SE_M_DIVE}again?\n"
-	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}alert.\p"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}bothe{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}wimps\n"
-	.string "lik{SE_M_REVERSAL}you.\p"
-	.string "Speakin{SE_M_SANDSTORM}o{SE_M_ACID_ARMOR}weaklings{SE_M_SUPERSONIC}the\n"
-	.string "city'{SE_M_GRASSWHISTLE}GY{SE_M_GIGA_DRAIN}LEADE{SE_M_MINIMIZE}isn'{SE_M_SPIT_UP}here,\l"
-	.string "an{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}supposedl{SE_M_YAWN}takin{SE_M_SANDSTORM}care\l"
-	.string "o{SE_M_ACID_ARMOR}{SE_M_CHARGE}sic{SE_M_ENCORE2}POKéMO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}the\l"
+	.string "You again?\n"
+	.string "There's no need to be alert.\p"
+	.string "I don't bother with wimps\n"
+	.string "like you.\p"
+	.string "Speaking of weaklings, the\n"
+	.string "city's GYM LEADER isn't here,\l"
+	.string "and is supposedly taking care\l"
+	.string "of a sick POKéMON at the\l"
 	.string "LIGHTHOUSE.\p"
-	.string "Humph{SE_M_DRAGON_RAGE}Boo-hoo!\n"
-	.string "Jus{SE_M_SPIT_UP}le{SE_M_SPIT_UP}sic{SE_M_ENCORE2}POKéMO{SE_M_PSYBEAM2}go!\p"
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}can'{SE_M_SPIT_UP}battle\n"
-	.string "i{SE_M_GRASSWHISTLE}worthless!\p"
-	.string "Wh{SE_M_YAWN}don'{SE_M_SPIT_UP}yo{SE_M_DIVE}g{SE_M_ATTRACT2}trai{SE_M_ATTRACT}a{SE_M_SPIT_UP}the\n"
+	.string "Humph! Boo-hoo!\n"
+	.string "Just let sick POKéMON go!\p"
+	.string "A POKéMON that can't battle\n"
+	.string "is worthless!\p"
+	.string "Why don't you go train at the\n"
 	.string "LIGHTHOUSE?\p"
-	.string "Wh{SE_M_ATTRACT2}knows{SE_M_SING}I{SE_M_SPIT_UP}ma{SE_M_YAWN}mak{SE_M_REVERSAL}yo{SE_M_DIVE}a\n"
-	.string "bi{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}bette{SE_M_SAND_TOMB}Trainer!$"
+	.string "Who knows? It may make you a\n"
+	.string "bit of a better Trainer!$"
 
 OlivineCity_EventScript_Sailor1::
 	lock
@@ -266,80 +266,80 @@ OlivineCity_EventScript_EonTicketWomanAfter::
 	end
 
 OlivineCity_Text_CafeSign:
-	.string "OLIVIN{SE_M_SWORDS_DANCE}CAFE\n"
-	.string "WHER{SE_M_SWORDS_DANCE}STRON{SE_M_SWAGGER}SAILOR{SE_M_SKETCH}ENJOY\l"
-	.string "HEART{SE_M_MOONLIGHT}MEAL{SE_M_SKETCH}O{SE_M_LEER}STRENGTH$"
+	.string "OLIVINE CAFE\n"
+	.string "WHERE STRONG SAILORS ENJOY\l"
+	.string "HEARTY MEALS OF STRENGTH$"
 
 OlivineCity_Text_EonTicketWoman1:
-	.string "M{SE_M_YAWN}nam{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}MARY!\p"
-	.string "Jus{SE_M_SPIT_UP}kidding{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}MARY's\n"
-	.string "radi{SE_M_ATTRACT2}show!$"
+	.string "My name is MARY!\p"
+	.string "Just kidding, but I love MARY's\n"
+	.string "radio show!$"
 
 OlivineCity_Text_EonTicketWoman2:
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}{PLAYER}!!!\p"
-	.string "O{SE_M_TRI_ATTACK}m{SE_M_YAWN}goodness{SE_M_DRAGON_RAGE}Th{SE_M_REVERSAL}champion!\p"
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}abou{SE_M_SPIT_UP}yo{SE_M_DIVE}o{SE_M_ATTRACT}MARY's\n"
-	.string "radi{SE_M_ATTRACT2}show!\p"
-	.string "Here{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}this!$"
+	.string "You must be {PLAYER}!!!\p"
+	.string "Oh my goodness! The champion!\p"
+	.string "I heard about you on MARY's\n"
+	.string "radio show!\p"
+	.string "Here, take this!$"
 
 OlivineCity_Text_EonTicketWoman3:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}believ{SE_M_REVERSAL}{SE_M_HEAL_BELL}me{SE_M_SPIT_UP}the\n"
+	.string "I can't believe I met the\n"
 	.string "champion!!!$"
 
 OlivineCity_Text_Sailor1:
-	.string "Dar{SE_M_ENCORE2}road{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}dangerous\n"
-	.string "a{SE_M_SPIT_UP}night.\p"
-	.string "Bu{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}pitch-blac{SE_M_ENCORE2}of\n"
-	.string "night{SE_M_SUPERSONIC}th{SE_M_REVERSAL}se{SE_M_CHARGE}i{SE_M_GRASSWHISTLE}eve{SE_M_ATTRACT}more\l"
+	.string "Dark roads are dangerous\n"
+	.string "at night.\p"
+	.string "But in the pitch-black of\n"
+	.string "night, the sea is even more\l"
 	.string "treacherous!\p"
-	.string "Withou{SE_M_SPIT_UP}th{SE_M_REVERSAL}beaco{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}the\n"
-	.string "LIGHTHOUS{SE_M_SWORDS_DANCE}t{SE_M_ATTRACT2}guid{SE_M_REVERSAL}it,\l"
-	.string "n{SE_M_ATTRACT2}shi{SE_M_MORNING_SUN}ca{SE_M_ATTRACT}sail.$"
+	.string "Without the beacon of the\n"
+	.string "LIGHTHOUSE to guide it,\l"
+	.string "no ship can sail.$"
 
 OlivineCity_Text_YoungsterPokegear:
-	.string "Tha{SE_M_SPIT_UP}thin{SE_M_SANDSTORM}yo{SE_M_DIVE}have--\n"
-	.string "it'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéGEAR{SE_M_SUPERSONIC}right?\l"
-	.string "Wow{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}cool.$"
+	.string "That thing you have--\n"
+	.string "it's a POKéGEAR, right?\l"
+	.string "Wow, that's cool.$"
 
 OlivineCity_Text_YoungsterPokedex:
-	.string "Wow{SE_M_SUPERSONIC}yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}POKéDEX!\p"
-	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}s{SE_M_ATTRACT2}awesome.$"
+	.string "Wow, you have a POKéDEX!\p"
+	.string "That is just so awesome.$"
 
 OlivineCity_Text_Sailor2:
-	.string "Th{SE_M_REVERSAL}leagu{SE_M_REVERSAL}ha{SE_M_GRASSWHISTLE}JASMINE\n"
-	.string "pegge{SE_M_WATERFALL}a{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}sixth\l"
-	.string "stronges{SE_M_SPIT_UP}GY{SE_M_GIGA_DRAIN}LEADER!\p"
-	.string "Hah{SE_M_DRAGON_RAGE}That'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}loa{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}crud.\p"
-	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}wa{SE_M_YAWN}PRYC{SE_M_SWORDS_DANCE}could\n"
-	.string "hur{SE_M_SPIT_UP}JASMINE'{SE_M_GRASSWHISTLE}STEEL-type\l"
+	.string "The league has JASMINE\n"
+	.string "pegged as the sixth\l"
+	.string "strongest GYM LEADER!\p"
+	.string "Hah! That's a load of crud.\p"
+	.string "There's no way PRYCE could\n"
+	.string "hurt JASMINE's STEEL-type\l"
 	.string "POKéMON!\p"
-	.string "Bureaucrac{SE_M_YAWN}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}as{SE_M_ENCORE2}me.\p"
-	.string "She'{SE_M_GRASSWHISTLE}somethin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}feared,\n"
-	.string "that'{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}sure!$"
+	.string "Bureaucracy if you ask me.\p"
+	.string "She's something to be feared,\n"
+	.string "that's for sure!$"
 
 OlivineCity_Text_Sign:
-	.string "OLIVIN{SE_M_SWORDS_DANCE}CITY\p"
-	.string "Th{SE_M_REVERSAL}Por{SE_M_SPIT_UP}Closes{SE_M_SPIT_UP}t{SE_M_ATTRACT2}Foreig{SE_M_ATTRACT}Lands$"
+	.string "OLIVINE CITY\p"
+	.string "The Port Closest to Foreign Lands$"
 
 OlivineCity_Text_PortSign:
-	.string "OLIVIN{SE_M_SWORDS_DANCE}PORT\n"
-	.string "FAS{SE_M_SWIFT}SHI{SE_M_PETAL_DANCE}PIER$"
+	.string "OLIVINE PORT\n"
+	.string "FAST SHIP PIER$"
 
 OlivineCity_Text_GymSign:
-	.string "OLIVIN{SE_M_SWORDS_DANCE}CIT{SE_M_MOONLIGHT}POKéMO{SE_M_PSYBEAM2}GYM\n"
-	.string "LEADER{SE_M_HEAT_WAVE}JASMINE\p"
-	.string "Th{SE_M_REVERSAL}Steel-Cla{SE_M_WATERFALL}Defens{SE_M_REVERSAL}Girl$"
+	.string "OLIVINE CITY POKéMON GYM\n"
+	.string "LEADER: JASMINE\p"
+	.string "The Steel-Clad Defense Girl$"
 
 OlivineCity_Text_LighthouseSign:
-	.string "OLIVIN{SE_M_SWORDS_DANCE}LIGHTHOUSE\n"
-	.string "Als{SE_M_ATTRACT2}know{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}GLITTER\l"
+	.string "OLIVINE LIGHTHOUSE\n"
+	.string "Also known as the GLITTER\l"
 	.string "LIGHTHOUSE$"
 
 OlivineCity_Text_BattleTowerSign:
-	.string "TRAINE{SE_M_MINIMIZE}HIL{SE_M_BRICK_BREAK}and\n"
-	.string "BATTL{SE_M_SWORDS_DANCE}TENT{SE_M_SKETCH}AHEAD.\p"
-	.string "Openin{SE_M_SANDSTORM}Now!$"
+	.string "TRAINER HILL and\n"
+	.string "BATTLE TENTS AHEAD.\p"
+	.string "Opening Now!$"
 
 OlivineCity_Text_Machoke:
-	.string "MACHOKE{SE_M_HEAT_WAVE}CHO!$"
+	.string "MACHOKE: CHO!$"
 

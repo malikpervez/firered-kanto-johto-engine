@@ -373,233 +373,233 @@ Route32_Movement_SlowpokeRight::
 	step_end
 
 Route32_Text_CooltrainerM_WhatsTheHurry:
-	.string "Wai{SE_M_SPIT_UP}up!\n"
-	.string "What'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}hurry?$"
+	.string "Wait up!\n"
+	.string "What's the hurry?$"
 
 Route32_Text_CooltrainerM_AideIsWaiting:
-	.string "{PLAYER}{SE_M_SUPERSONIC}right?\n"
-	.string "Som{SE_M_REVERSAL}gu{SE_M_YAWN}wearin{SE_M_SANDSTORM}glasses\p"
-	.string "wa{SE_M_GRASSWHISTLE}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you.\p"
-	.string "Se{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}yourself{SE_M_PERISH_SONG}He'{SE_M_GRASSWHISTLE}waitin{SE_M_SANDSTORM}for\n"
-	.string "yo{SE_M_DIVE}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}CENTER.$"
+	.string "{PLAYER}, right?\n"
+	.string "Some guy wearing glasses\p"
+	.string "was looking for you.\p"
+	.string "See for yourself. He's waiting for\n"
+	.string "you at the POKéMON CENTER.$"
 
 Route32_Text_CooltrainerM_SproutTower:
-	.string "Hav{SE_M_REVERSAL}yo{SE_M_DIVE}gon{SE_M_REVERSAL}t{SE_M_ATTRACT2}SPROU{SE_M_SWIFT}TOWER?\n"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}eve{SE_M_SAND_TOMB}visi{SE_M_SPIT_UP}VIOLE{SE_M_SWIFT}CITY,\p"
-	.string "they'l{SE_M_BATON_PASS}expec{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}there.\n"
-	.string "That'{SE_M_GRASSWHISTLE}basi{SE_M_HYPER_BEAM}fo{SE_M_SAND_TOMB}trainers.\p"
-	.string "G{SE_M_ATTRACT2}t{SE_M_ATTRACT2}SPROU{SE_M_SWIFT}TOWER!$"
+	.string "Have you gone to SPROUT TOWER?\n"
+	.string "If you ever visit VIOLET CITY,\p"
+	.string "they'll expect you to train there.\n"
+	.string "That's basic for trainers.\p"
+	.string "Go to SPROUT TOWER!$"
 
 Route32_Text_CooltrainerM_VioletGym:
-	.string "Hav{SE_M_REVERSAL}yo{SE_M_DIVE}gon{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}GYM?\n"
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}tes{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}and\p"
-	.string "yoursel{SE_M_ACID_ARMOR}there.\n"
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}rit{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}passag{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}all\p"
+	.string "Have you gone to the POKéMON GYM?\n"
+	.string "You can test your POKéMON and\p"
+	.string "yourself there.\n"
+	.string "It's a rite of passage for all\p"
 	.string "trainers!$"
 
 Route32_Text_CooltrainerM_HaveThisSeed:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}som{SE_M_REVERSAL}goo{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}there.\n"
-	.string "I{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}trainin{SE_M_SANDSTORM}you\p"
-	.string "gav{SE_M_REVERSAL}the{SE_M_MILK_DRINK}aroun{SE_M_WATERFALL}VIOLE{SE_M_SWIFT}CITY.\n"
-	.string "Th{SE_M_REVERSAL}trainin{SE_M_SANDSTORM}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}GY{SE_M_GIGA_DRAIN}mus{SE_M_SPIT_UP}have\p"
-	.string "bee{SE_M_ATTRACT}especiall{SE_M_YAWN}helpful{SE_M_PERISH_SONG}A{SE_M_GRASSWHISTLE}a\n"
-	.string "souveni{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}VIOLE{SE_M_SWIFT}CITY{SE_M_SUPERSONIC}tak{SE_M_REVERSAL}this.\p"
-	.string "I{SE_M_SPIT_UP}increase{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}powe{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}GRASS-\n"
-	.string "typ{SE_M_REVERSAL}moves.$"
+	.string "You have some good POKéMON there.\n"
+	.string "It must be from the training you\p"
+	.string "gave them around VIOLET CITY.\n"
+	.string "The training at the GYM must have\p"
+	.string "been especially helpful. As a\n"
+	.string "souvenir of VIOLET CITY, take this.\p"
+	.string "It increases the power of GRASS-\n"
+	.string "type moves.$"
 
 Route32_Text_CooltrainerM_Experiences:
-	.string "You{SE_M_SAND_TOMB}experience{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}VIOLE{SE_M_SWIFT}CITY\n"
-	.string "shoul{SE_M_WATERFALL}b{SE_M_REVERSAL}usefu{SE_M_BATON_PASS}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}journey.$"
+	.string "Your experiences in VIOLET CITY\n"
+	.string "should be useful for your journey.$"
 
 Route32_Text_SlowpokeTailOffer:
-	.string "Ho{SE_M_TWISTER}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}this\n"
-	.string "tasty{SE_M_SUPERSONIC}nutritiou{SE_M_GRASSWHISTLE}SLOWPOKETAIL?\p"
-	.string "Fo{SE_M_SAND_TOMB}yo{SE_M_DIVE}righ{SE_M_SPIT_UP}now{SE_M_SUPERSONIC}just\n"
+	.string "How would you like to have this\n"
+	.string "tasty, nutritious SLOWPOKETAIL?\p"
+	.string "For you right now, just\n"
 	.string "¥1,000,000!\p"
-	.string "You'l{SE_M_BATON_PASS}wan{SE_M_SPIT_UP}this!$"
+	.string "You'll want this!$"
 
 Route32_Text_ThoughtKidsLoaded:
-	.string "Tch{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}kids\n"
-	.string "thes{SE_M_REVERSAL}day{SE_M_GRASSWHISTLE}wer{SE_M_REVERSAL}loaded…$"
+	.string "Tch! I thought kids\n"
+	.string "these days were loaded…$"
 
 Route32_Text_RefusedSlowpokeTail:
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}wan{SE_M_SPIT_UP}it?\n"
-	.string "The{SE_M_ATTRACT}scram{SE_M_PERISH_SONG}Shoo!$"
+	.string "You don't want it?\n"
+	.string "Then scram. Shoo!$"
 
 Route32_Text_FisherJustin_Seen:
 	.string "Whoa!\p"
-	.string "Yo{SE_M_DIVE}mad{SE_M_REVERSAL}m{SE_M_REVERSAL}los{SE_M_REVERSAL}tha{SE_M_SPIT_UP}fish!$"
+	.string "You made me lose that fish!$"
 
 Route32_Text_FisherJustin_Beaten:
 	.string "Sploosh!$"
 
 Route32_Text_FisherJustin_After:
-	.string "Calm{SE_M_SUPERSONIC}collected{SE_M_DIZZY_PUNCH}Th{SE_M_REVERSAL}essenc{SE_M_REVERSAL}of\n"
-	.string "fishin{SE_M_SANDSTORM}an{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}same.$"
+	.string "Calm, collected… The essence of\n"
+	.string "fishing and POKéMON is the same.$"
 
 Route32_Text_FisherRalph1_Seen:
-	.string "I'{SE_M_MILK_DRINK}reall{SE_M_YAWN}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}both\n"
-	.string "fishin{SE_M_SANDSTORM}an{SE_M_WATERFALL}POKéMON.\p"
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}abou{SE_M_SPIT_UP}t{SE_M_ATTRACT2}los{SE_M_REVERSAL}t{SE_M_ATTRACT2}an{SE_M_YAWN}kid!$"
+	.string "I'm really good at both\n"
+	.string "fishing and POKéMON.\p"
+	.string "I'm not about to lose to any kid!$"
 
 Route32_Text_FisherRalph1_Beaten:
-	.string "Tch{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}trie{SE_M_WATERFALL}t{SE_M_ATTRACT2}rush\n"
+	.string "Tch! I tried to rush\n"
 	.string "things…$"
 
 Route32_Text_FisherRalph1_After:
-	.string "Fishin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}lifelong\n"
+	.string "Fishing is a lifelong\n"
 	.string "passion.\p"
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}lifelon{SE_M_SANDSTORM}friends!$"
+	.string "POKéMON are lifelong friends!$"
 
 Route32_Text_RalphRegister:
-	.string "Fishin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}lifelong\n"
+	.string "Fishing is a lifelong\n"
 	.string "passion.\p"
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}lifelon{SE_M_SANDSTORM}friends!$"
+	.string "POKéMON are lifelong friends!$"
 
 Route32_Text_RalphRematchIntro:
-	.string "I'{SE_M_MILK_DRINK}reall{SE_M_YAWN}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}both\n"
-	.string "fishin{SE_M_SANDSTORM}an{SE_M_WATERFALL}POKéMON.\p"
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}abou{SE_M_SPIT_UP}t{SE_M_ATTRACT2}los{SE_M_REVERSAL}t{SE_M_ATTRACT2}an{SE_M_YAWN}kid!$"
+	.string "I'm really good at both\n"
+	.string "fishing and POKéMON.\p"
+	.string "I'm not about to lose to any kid!$"
 
 Route32_Text_RalphRematchDefeat:
-	.string "Tch{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}trie{SE_M_WATERFALL}t{SE_M_ATTRACT2}rush\n"
+	.string "Tch! I tried to rush\n"
 	.string "things…$"
 
 Route32_Text_RalphPostRematch:
-	.string "Fishin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}lifelong\n"
+	.string "Fishing is a lifelong\n"
 	.string "passion.\p"
-	.string "POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}lifelon{SE_M_SANDSTORM}friends!$"
+	.string "POKéMON are lifelong friends!$"
 
 Route32_Text_FisherHenry_Seen:
-	.string "M{SE_M_YAWN}POKéMON{SE_M_SING}Freshl{SE_M_YAWN}caught!$"
+	.string "My POKéMON? Freshly caught!$"
 
 Route32_Text_FisherHenry_Beaten:
 	.string "SPLASH?$"
 
 Route32_Text_FisherHenry_After:
-	.string "Freshl{SE_M_YAWN}caugh{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}are\n"
-	.string "n{SE_M_ATTRACT2}matc{SE_M_TRI_ATTACK}fo{SE_M_SAND_TOMB}properl{SE_M_YAWN}raise{SE_M_WATERFALL}ones.$"
+	.string "Freshly caught POKéMON are\n"
+	.string "no match for properly raised ones.$"
 
 Route32_Text_YoungsterAlbert_Seen:
-	.string "{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}see{SE_M_ATTRACT}yo{SE_M_DIVE}aroun{SE_M_WATERFALL}before.\n"
-	.string "S{SE_M_ATTRACT2}yo{SE_M_DIVE}thin{SE_M_ENCORE2}yo{SE_M_DIVE}ar{SE_M_REVERSAL}prett{SE_M_YAWN}tough?$"
+	.string "I haven't seen you around before.\n"
+	.string "So you think you are pretty tough?$"
 
 Route32_Text_YoungsterAlbert_Beaten:
-	.string "You'r{SE_M_REVERSAL}strong!$"
+	.string "You're strong!$"
 
 Route32_Text_YoungsterAlbert_After:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}tr{SE_M_YAWN}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}the\n"
-	.string "bes{SE_M_SPIT_UP}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}favorites.\p"
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}usin{SE_M_SANDSTORM}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}tough\n"
-	.string "POKéMO{SE_M_PSYBEAM2}a{SE_M_GRASSWHISTLE}everyon{SE_M_REVERSAL}else.$"
+	.string "I'm going to try to be the\n"
+	.string "best with my favorites.\p"
+	.string "I'm not using the same tough\n"
+	.string "POKéMON as everyone else.$"
 
 Route32_Text_YoungsterGordon_Seen:
-	.string "{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}som{SE_M_REVERSAL}goo{SE_M_WATERFALL}POKéMON\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}grass!\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}they'l{SE_M_BATON_PASS}d{SE_M_ATTRACT2}i{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}me!$"
+	.string "I found some good POKéMON\n"
+	.string "in the grass!\p"
+	.string "I think they'll do it for me!$"
 
 Route32_Text_YoungsterGordon_Beaten:
-	.string "Darn{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}win.$"
+	.string "Darn. I thought I could win.$"
 
 Route32_Text_YoungsterGordon_After:
-	.string "Th{SE_M_REVERSAL}gras{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}ful{SE_M_BATON_PASS}of\n"
-	.string "cling{SE_M_YAWN}things.$"
+	.string "The grass is full of\n"
+	.string "clingy things.$"
 
 Route32_Text_CamperRoland_Seen:
-	.string "Tha{SE_M_SPIT_UP}glance{SE_M_DIZZY_PUNCH}It'{SE_M_GRASSWHISTLE}intriguing.$"
+	.string "That glance… It's intriguing.$"
 
 Route32_Text_CamperRoland_Beaten:
-	.string "Hmmm{SE_M_PERISH_SONG}Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}disappointing.$"
+	.string "Hmmm. This is disappointing.$"
 
 Route32_Text_CamperRoland_After:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battle,\n"
-	.string "jus{SE_M_SPIT_UP}avoi{SE_M_WATERFALL}ey{SE_M_REVERSAL}contact.$"
+	.string "If you don't want to battle,\n"
+	.string "just avoid eye contact.$"
 
 Route32_Text_PicnickerLiz1_Seen:
-	.string "Uh-huh{SE_M_PERISH_SONG}Yeah{SE_M_SUPERSONIC}an{SE_M_WATERFALL}yo{SE_M_DIVE}know…\p"
-	.string "Pardon{SE_M_SING}Battle{SE_M_SING}I'{SE_M_MILK_DRINK}o{SE_M_ATTRACT}th{SE_M_REVERSAL}phone.\n"
-	.string "Oh{SE_M_SUPERSONIC}al{SE_M_BATON_PASS}right{SE_M_PERISH_SONG}Bu{SE_M_SPIT_UP}mak{SE_M_REVERSAL}i{SE_M_SPIT_UP}fast.$"
+	.string "Uh-huh. Yeah, and you know…\p"
+	.string "Pardon? Battle? I'm on the phone.\n"
+	.string "Oh, all right. But make it fast.$"
 
 Route32_Text_PicnickerLiz1_Beaten:
-	.string "Oh{SE_M_DRAGON_RAGE}I'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}t{SE_M_ATTRACT2}relieve\n"
-	.string "m{SE_M_YAWN}anger!$"
+	.string "Oh! I've got to relieve\n"
+	.string "my anger!$"
 
 Route32_Text_PicnickerLiz1_After:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}havin{SE_M_SANDSTORM}{SE_M_CHARGE}nic{SE_M_REVERSAL}cha{SE_M_SPIT_UP}too.$"
+	.string "I was having a nice chat too.$"
 
 Route32_Text_LizRegister:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}havin{SE_M_SANDSTORM}{SE_M_CHARGE}nic{SE_M_REVERSAL}cha{SE_M_SPIT_UP}too.$"
+	.string "I was having a nice chat too.$"
 
 Route32_Text_LizRematchIntro:
-	.string "Uh-huh{SE_M_PERISH_SONG}Yeah{SE_M_SUPERSONIC}an{SE_M_WATERFALL}yo{SE_M_DIVE}know…\p"
-	.string "Pardon{SE_M_SING}Battle{SE_M_SING}I'{SE_M_MILK_DRINK}o{SE_M_ATTRACT}th{SE_M_REVERSAL}phone.\n"
-	.string "Oh{SE_M_SUPERSONIC}al{SE_M_BATON_PASS}right{SE_M_PERISH_SONG}Bu{SE_M_SPIT_UP}mak{SE_M_REVERSAL}i{SE_M_SPIT_UP}fast.$"
+	.string "Uh-huh. Yeah, and you know…\p"
+	.string "Pardon? Battle? I'm on the phone.\n"
+	.string "Oh, all right. But make it fast.$"
 
 Route32_Text_LizRematchDefeat:
-	.string "Oh{SE_M_DRAGON_RAGE}I'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}t{SE_M_ATTRACT2}relieve\n"
-	.string "m{SE_M_YAWN}anger!$"
+	.string "Oh! I've got to relieve\n"
+	.string "my anger!$"
 
 Route32_Text_LizPostRematch:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}havin{SE_M_SANDSTORM}{SE_M_CHARGE}nic{SE_M_REVERSAL}cha{SE_M_SPIT_UP}too.$"
+	.string "I was having a nice chat too.$"
 
 Route32_Text_BirdKeeperPeter_Seen:
-	.string "Tha{SE_M_SPIT_UP}BADGE{SE_M_DRAGON_RAGE}It'{SE_M_GRASSWHISTLE}fro{SE_M_MILK_DRINK}VIOLE{SE_M_SWIFT}CITY!\n"
-	.string "Yo{SE_M_DIVE}bea{SE_M_SPIT_UP}FALKNER?$"
+	.string "That BADGE! It's from VIOLET CITY!\n"
+	.string "You beat FALKNER?$"
 
 Route32_Text_BirdKeeperPeter_Beaten:
-	.string "{SE_M_HEAL_BELL}kno{SE_M_TWISTER}wha{SE_M_SPIT_UP}m{SE_M_YAWN}weaknesse{SE_M_GRASSWHISTLE}are.$"
+	.string "I know what my weaknesses are.$"
 
 Route32_Text_BirdKeeperPeter_After:
-	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}trai{SE_M_ATTRACT}agai{SE_M_ATTRACT}a{SE_M_SPIT_UP}the\n"
-	.string "GY{SE_M_GIGA_DRAIN}i{SE_M_ATTRACT}VIOLE{SE_M_SWIFT}CITY.$"
+	.string "I should train again at the\n"
+	.string "GYM in VIOLET CITY.$"
 
 Route32_Text_RoarIntro:
-	.string "WROOOOAR{SE_M_DRAGON_RAGE}PEOPL{SE_M_SWORDS_DANCE}RU{SE_M_PSYBEAM2}WHE{SE_M_PSYBEAM2}I\n"
-	.string "ROAR{SE_M_DRAGON_RAGE}BU{SE_M_SWIFT}YO{SE_M_REFLECT}CAM{SE_M_SWORDS_DANCE}LOOKING!\p"
-	.string "THA{SE_M_SWIFT}PLEASE{SE_M_SKETCH}ME{SE_M_DRAGON_RAGE}NO{SE_M_DETECT}TAK{SE_M_SWORDS_DANCE}THIS!$"
+	.string "WROOOOAR! PEOPLE RUN WHEN I\n"
+	.string "ROAR! BUT YOU CAME LOOKING!\p"
+	.string "THAT PLEASES ME! NOW TAKE THIS!$"
 
 Route32_Text_RoarOutro:
-	.string "WROOOOAR{SE_M_DRAGON_RAGE}IT'{SE_M_SKETCH}ROAR!\p"
-	.string "EVE{SE_M_PSYBEAM2}POKéMO{SE_M_PSYBEAM2}RU{SE_M_PSYBEAM2}FRO{SE_M_GIGA_DRAIN}{SE_M_BONEMERANG}GOOD\n"
+	.string "WROOOOAR! IT'S ROAR!\p"
+	.string "EVEN POKéMON RUN FROM A GOOD\n"
 	.string "ROAR!$"
 
 Route32_Text_MeetFrieda:
-	.string "FRIEDA{SE_M_HEAT_WAVE}Yahoo!\p"
-	.string "I'{SE_M_MILK_DRINK}FRIED{SE_M_BONEMERANG}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}WEEKDA{SE_M_MOONLIGHT}FAMILY!\n"
-	.string "Nic{SE_M_REVERSAL}t{SE_M_ATTRACT2}mee{SE_M_SPIT_UP}you!\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ca{SE_M_ATTRACT}gues{SE_M_GRASSWHISTLE}m{SE_M_YAWN}favorit{SE_M_REVERSAL}day,\n"
-	.string "I'l{SE_M_BATON_PASS}giv{SE_M_REVERSAL}yo{SE_M_DIVE}{SE_M_CHARGE}reward.$"
+	.string "FRIEDA: Yahoo!\p"
+	.string "I'm FRIEDA of the WEEKDAY FAMILY!\n"
+	.string "Nice to meet you!\p"
+	.string "If you can guess my favorite day,\n"
+	.string "I'll give you a reward.$"
 
 Route32_Text_FriedaGivesGift:
-	.string "Here'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POISO{SE_M_PSYBEAM2}BAR{SE_M_LICK}fo{SE_M_SAND_TOMB}you!$"
+	.string "Here's a POISON BARB for you!$"
 
 Route32_Text_FriedaGaveGift:
-	.string "FRIEDA{SE_M_HEAT_WAVE}Giv{SE_M_REVERSAL}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}{SE_M_CHARGE}POKéMON\n"
-	.string "tha{SE_M_SPIT_UP}ha{SE_M_GRASSWHISTLE}POISON-typ{SE_M_REVERSAL}moves.\p"
+	.string "FRIEDA: Give it to a POKéMON\n"
+	.string "that has POISON-type moves.\p"
 	.string "Oh!\p"
-	.string "It'{SE_M_GRASSWHISTLE}wicked!\p"
-	.string "You'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}shocke{SE_M_WATERFALL}ho{SE_M_TWISTER}goo{SE_M_WATERFALL}it\n"
-	.string "make{SE_M_GRASSWHISTLE}poiso{SE_M_ATTRACT}moves!$"
+	.string "It's wicked!\p"
+	.string "You'll be shocked how good it\n"
+	.string "makes poison moves!$"
 
 Route32_Text_FriedaFriday:
-	.string "FRIEDA{SE_M_HEAT_WAVE}Hiya{SE_M_DRAGON_RAGE}Wha{SE_M_SPIT_UP}da{SE_M_YAWN}do\n"
-	.string "yo{SE_M_DIVE}like?\p"
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}Friday{SE_M_PERISH_SONG}N{SE_M_ATTRACT2}doub{SE_M_SPIT_UP}about\n"
+	.string "FRIEDA: Hiya! What day do\n"
+	.string "you like?\p"
+	.string "I love Friday. No doubt about\n"
 	.string "it!\p"
-	.string "Don'{SE_M_SPIT_UP}yo{SE_M_DIVE}thin{SE_M_ENCORE2}it'{SE_M_GRASSWHISTLE}grea{SE_M_SPIT_UP}too?$"
+	.string "Don't you think it's great too?$"
 
 Route32_Text_FriedaNope:
-	.string "FRIEDA{SE_M_HEAT_WAVE}No{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}one!$"
+	.string "FRIEDA: Not that one!$"
 
 Route32_Text_Sign1:
-	.string "ROUT{SE_M_SWORDS_DANCE}32\p"
-	.string "VIOLE{SE_M_SWIFT}CIT{SE_M_MOONLIGHT}{SE_M_PAY_DAY}AZALE{SE_M_BONEMERANG}TOWN$"
+	.string "ROUTE 32\p"
+	.string "VIOLET CITY - AZALEA TOWN$"
 
 Route32_Text_Sign2:
-	.string "RUIN{SE_M_SKETCH}O{SE_M_LEER}ALPH\n"
-	.string "EAS{SE_M_SWIFT}ENTRANCE$"
+	.string "RUINS OF ALPH\n"
+	.string "EAST ENTRANCE$"
 
 Route32_Text_Sign3:
-	.string "UNIO{SE_M_PSYBEAM2}CAVE\n"
+	.string "UNION CAVE\n"
 	.string "AHEAD$"
 

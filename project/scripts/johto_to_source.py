@@ -123,7 +123,14 @@ class Charmap:
                 ok = [c for c in cs if c not in ('{', '}', '"')]
                 if ok:
                     self.single[b[0]] = min(ok, key=lambda c: (not (c.isascii() and c.isprintable()), cs.index(c)))
-        self.multi = sorted(((b, n[0]) for b, n in named.items() if len(b) > 1), key=lambda x: -len(x[0]))
+        # only real text codes: they start with a control byte ({PLAYER}, {COLOR ...}, button icons). Sound, music
+        # and phoneme names (SE_/MUS_/PH_) only exist as arguments of play codes and must never stand for letters.
+        codes = {}
+        for b, ns in named.items():
+            ok = [n for n in ns if not n.startswith(("SE_", "MUS_", "PH_"))]
+            if len(b) > 1 and b[0] in (0xF8, 0xF9, 0xFC, 0xFD) and ok:
+                codes[b] = ok[0]
+        self.multi = sorted(codes.items(), key=lambda x: -len(x[0]))
         self.colors = {b[0]: n[0] for b, n in named.items() if len(b) == 1}
 
     def decode(self, data: bytes) -> str:

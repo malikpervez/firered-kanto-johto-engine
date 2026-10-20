@@ -12,10 +12,10 @@ Route38_EventScript_Officer::
 	end
 
 Route38_Text_EcruteakGateOfficer:
-	.string "Wher{SE_M_REVERSAL}di{SE_M_WATERFALL}yo{SE_M_DIVE}sa{SE_M_YAWN}you'r{SE_M_REVERSAL}from?\p"
-	.string "NE{SE_M_DETECT}BAR{SE_M_SNORE}TOWN?\p"
-	.string "PROF.EL{SE_M_GIGA_DRAIN}live{SE_M_GRASSWHISTLE}ove{SE_M_SAND_TOMB}there,\n"
+	.string "Where did you say you're from?\p"
+	.string "NEW BARK TOWN?\p"
+	.string "PROF.ELM lives over there,\n"
 	.string "right?\p"
-	.string "You'v{SE_M_REVERSAL}com{SE_M_REVERSAL}{SE_M_CHARGE}lon{SE_M_SANDSTORM}wa{SE_M_YAWN}t{SE_M_ATTRACT2}get\n"
+	.string "You've come a long way to get\n"
 	.string "here.$"
 

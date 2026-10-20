@@ -8,9 +8,9 @@ Route50_EventScript_BlackBelt1::
 	end
 
 Route50_Text_BlackBelt1::
-	.string "Th{SE_M_REVERSAL}bod{SE_M_YAWN}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}hardened\n"
-	.string "an{SE_M_WATERFALL}th{SE_M_REVERSAL}min{SE_M_WATERFALL}strengthened\l"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}harshes{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}conditions!$"
+	.string "The body must be hardened\n"
+	.string "and the mind strengthened\l"
+	.string "in the harshest of conditions!$"
 
 Route50_EventScript_BlackBelt2::
 	msgbox Route50_Text_BlackBelt2, MSGBOX_NPC
@@ -18,9 +18,9 @@ Route50_EventScript_BlackBelt2::
 
 Route50_Text_BlackBelt2::
 	.string "Phew!\p"
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}hardcor{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}h{SE_M_REVERSAL}is.\p"
-	.string "There'{SE_M_GRASSWHISTLE}reall{SE_M_YAWN}no{SE_M_SPIT_UP}muc{SE_M_TRI_ATTACK}else\n"
-	.string "t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}her{SE_M_REVERSAL}bu{SE_M_SPIT_UP}train.$"
+	.string "I'm not as hardcore as he is.\p"
+	.string "There's really not much else\n"
+	.string "to do here but train.$"
 
 Route50_EventScript_Wessel::
 	goto_if_defeated TRAINER_JOHTO_WESSEL_HNS, Route50_EventScript_WesselAfter
@@ -53,27 +53,27 @@ Route50_EventScript_WesselAfter::
 	end
 
 Route50_Text_WesselBefore:
-	.string "Incredible{SE_M_SUPERSONIC}{SE_M_BONEMERANG}VOLTORB!\p"
-	.string "Bu{SE_M_SPIT_UP}i{SE_M_SPIT_UP}appear{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}made\n"
-	.string "of..{SE_M_PERISH_SONG}Wood?\p"
-	.string "M{SE_M_YAWN}hypothesi{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}route\n"
-	.string "woul{SE_M_WATERFALL}contai{SE_M_ATTRACT}man{SE_M_YAWN}STEE{SE_M_BRICK_BREAK}TYPE\l"
-	.string "POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}disprove{SE_M_ATTRACT}ye{SE_M_SPIT_UP}again.\p"
-	.string "Bu{SE_M_SPIT_UP}wh{SE_M_YAWN}els{SE_M_REVERSAL}woul{SE_M_WATERFALL}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}found\n"
-	.string "thi{SE_M_GRASSWHISTLE}STEE{SE_M_BRICK_BREAK}PLAT{SE_M_SWORDS_DANCE}here?\p"
-	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}collec{SE_M_SPIT_UP}mor{SE_M_REVERSAL}data!$"
+	.string "Incredible, A VOLTORB!\p"
+	.string "But it appears to be made\n"
+	.string "of... Wood?\p"
+	.string "My hypothesis that this route\n"
+	.string "would contain many STEEL TYPE\l"
+	.string "POKéMON is disproven yet again.\p"
+	.string "But why else would I have found\n"
+	.string "this STEEL PLATE here?\p"
+	.string "I must collect more data!$"
 
 Route50_Text_WesselBeforeBattle:
-	.string "Yo{SE_M_DIVE}wan{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}PLATE?\n"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}analyze{SE_M_WATERFALL}i{SE_M_SPIT_UP}yet!\p"
-	.string "Fine{SE_M_SUPERSONIC}w{SE_M_REVERSAL}wil{SE_M_BATON_PASS}battl{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}it.$"
+	.string "You want this PLATE?\n"
+	.string "But I haven't analyzed it yet!\p"
+	.string "Fine, we will battle for it.$"
 
 Route50_Text_WesselDefeat:
-	.string "M{SE_M_YAWN}hypothesi{SE_M_GRASSWHISTLE}wa{SE_M_GRASSWHISTLE}wrong...$"
+	.string "My hypothesis was wrong...$"
 
 Route50_Text_WesselAfter:
-	.string "Tak{SE_M_REVERSAL}th{SE_M_REVERSAL}PLATE{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}wan{SE_M_SPIT_UP}to\n"
-	.string "tal{SE_M_ENCORE2}abou{SE_M_SPIT_UP}it.$"
+	.string "Take the PLATE. I don't want to\n"
+	.string "talk about it.$"
 
 Route50_EventScript_Finley::
 	goto_if_defeated TRAINER_JOHTO_FINLEY_HNS, Route50_EventScript_FinleyAfter
@@ -106,32 +106,32 @@ Route50_EventScript_FinleyAfter::
 	end
 
 Route50_Text_FinleyBefore:
-	.string "Ho{SE_M_TWISTER}ar{SE_M_REVERSAL}th{SE_M_REVERSAL}villager{SE_M_GRASSWHISTLE}treating\n"
+	.string "How are the villagers treating\n"
 	.string "you?\p"
-	.string "The{SE_M_YAWN}ca{SE_M_ATTRACT}b{SE_M_REVERSAL}ver{SE_M_YAWN}unwelcomin{SE_M_SANDSTORM}to\n"
+	.string "They can be very unwelcoming to\n"
 	.string "strangers.\p"
-	.string "Bu{SE_M_SPIT_UP}meetin{SE_M_SANDSTORM}ne{SE_M_TWISTER}peopl{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}one\n"
-	.string "o{SE_M_ACID_ARMOR}life'{SE_M_GRASSWHISTLE}greates{SE_M_SPIT_UP}joys.\p"
-	.string "On{SE_M_REVERSAL}day{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}t{SE_M_ATTRACT2}mee{SE_M_SPIT_UP}CHAMPION\n"
+	.string "But meeting new people is one\n"
+	.string "of life's greatest joys.\p"
+	.string "One day, I hope to meet CHAMPION\n"
 	.string "LANCE.\p"
-	.string "H{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}legendar{SE_M_YAWN}drago{SE_M_ATTRACT}tamer,\n"
-	.string "muc{SE_M_TRI_ATTACK}lik{SE_M_REVERSAL}myself.\l"
-	.string "Wh{SE_M_ATTRACT2}a{SE_M_MILK_DRINK}I?\p"
-	.string "Well{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}FINLEY{SE_M_SUPERSONIC}keepe{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}the\n"
-	.string "DRAC{SE_M_SOLAR_BEAM}PLATE.$"
+	.string "He is a legendary dragon tamer,\n"
+	.string "much like myself.\l"
+	.string "Who am I?\p"
+	.string "Well, I am FINLEY, keeper of the\n"
+	.string "DRACO PLATE.$"
 
 Route50_Text_FinleyBeforeBattle:
-	.string "{SE_M_HEAL_BELL}kno{SE_M_TWISTER}th{SE_M_REVERSAL}KIMONO'{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}sen{SE_M_SPIT_UP}you\n"
-	.string "t{SE_M_ATTRACT2}collec{SE_M_SPIT_UP}thes{SE_M_REVERSAL}PLATES.\p"
-	.string "The{SE_M_YAWN}sa{SE_M_YAWN}yo{SE_M_DIVE}ar{SE_M_REVERSAL}worthy...\n"
-	.string "Bu{SE_M_SPIT_UP}ca{SE_M_ATTRACT}yo{SE_M_DIVE}conque{SE_M_SAND_TOMB}m{SE_M_YAWN}dragons?$"
+	.string "I know the KIMONO's have sent you\n"
+	.string "to collect these PLATES.\p"
+	.string "They say you are worthy...\n"
+	.string "But can you conquer my dragons?$"
 
 Route50_Text_FinleyDefeat:
-	.string "M{SE_M_YAWN}dragon{SE_M_GRASSWHISTLE}fough{SE_M_SPIT_UP}well.$"
+	.string "My dragons fought well.$"
 
 Route50_Text_FinleyAfter:
-	.string "Perhap{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}ar{SE_M_REVERSAL}eve{SE_M_ATTRACT}stron{SE_M_SANDSTORM}enough\n"
-	.string "t{SE_M_ATTRACT2}bea{SE_M_SPIT_UP}LANCE...$"
+	.string "Perhaps you are even strong enough\n"
+	.string "to beat LANCE...$"
 
 Route50_EventScript_Item_ULtraBall::
 	finditem ITEM_ULTRA_BALL

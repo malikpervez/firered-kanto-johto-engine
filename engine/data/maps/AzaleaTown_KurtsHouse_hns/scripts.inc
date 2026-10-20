@@ -217,7 +217,7 @@ AzaleaTown_KurtsHouse_EventScript_KurtGsBall3::
 	end
 
 KurtsHouse_Text_BallAnyway:
-	.string "Anyway{SE_M_SUPERSONIC}ca{SE_M_ATTRACT}{SE_M_HEAL_BELL}mak{SE_M_REVERSAL}yo{SE_M_DIVE}som{SE_M_REVERSAL}BALLS?$"
+	.string "Anyway, can I make you some BALLS?$"
 
 AzaleaTown_KurtsHouse_EventScript_OakPhoto::
 	msgbox KurtsHouse_Text_OakPhoto, MSGBOX_SIGN
@@ -267,133 +267,133 @@ AzaleaTown_KurtsHouse_Movement_KurtWalkDown:
 	step_end
 
 KurtsHouse_Text_KurtGetStarted:
-	.string "KURT{SE_M_HEAT_WAVE}I'l{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}starte{SE_M_WATERFALL}righ{SE_M_SPIT_UP}now!$"
+	.string "KURT: I'll get started right now!$"
 
 KurtsHouse_Text_KurtMakingBallsMustWait:
-	.string "Hm{SE_M_SING}Wh{SE_M_ATTRACT2}ar{SE_M_REVERSAL}you?\p"
-	.string "{PLAYER}{SE_M_SUPERSONIC}eh{SE_M_SING}Yo{SE_M_DIVE}wan{SE_M_SPIT_UP}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}make\n"
-	.string "som{SE_M_REVERSAL}BALLS?\p"
-	.string "Sorry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}that'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}wait.\p"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}TEA{SE_M_GIGA_DRAIN}ROCKET?\n"
-	.string "Ah{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}worry.\p"
-	.string "I'l{SE_M_BATON_PASS}tel{SE_M_BATON_PASS}yo{SE_M_DIVE}anyhow.\p"
-	.string "TEA{SE_M_GIGA_DRAIN}ROCKET'{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}evi{SE_M_BATON_PASS}gan{SE_M_SANDSTORM}that\n"
-	.string "use{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}fo{SE_M_SAND_TOMB}thei{SE_M_SAND_TOMB}dirt{SE_M_YAWN}work.\p"
-	.string "They'r{SE_M_REVERSAL}suppose{SE_M_WATERFALL}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}disbanded\n"
-	.string "thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}ago.\p"
-	.string "Anyway{SE_M_SUPERSONIC}they'r{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}WELL,\n"
-	.string "cuttin{SE_M_SANDSTORM}of{SE_M_ACID_ARMOR}SLOWPOKETAIL{SE_M_SKETCH}t{SE_M_ATTRACT2}sell!\p"
-	.string "S{SE_M_ATTRACT2}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}giv{SE_M_REVERSAL}the{SE_M_MILK_DRINK}a\n"
-	.string "lesso{SE_M_ATTRACT}i{SE_M_ATTRACT}pain!\p"
-	.string "Han{SE_M_SANDSTORM}on{SE_M_SUPERSONIC}SLOWPOKE{SE_M_DRAGON_RAGE}Ol{SE_M_WATERFALL}KURT\n"
-	.string "i{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}hi{SE_M_GRASSWHISTLE}way!$"
+	.string "Hm? Who are you?\p"
+	.string "{PLAYER}, eh? You want me to make\n"
+	.string "some BALLS?\p"
+	.string "Sorry, but that'll have to wait.\p"
+	.string "Do you know TEAM ROCKET?\n"
+	.string "Ah, don't worry.\p"
+	.string "I'll tell you anyhow.\p"
+	.string "TEAM ROCKET's an evil gang that\n"
+	.string "uses POKéMON for their dirty work.\p"
+	.string "They're supposed to have disbanded\n"
+	.string "three years ago.\p"
+	.string "Anyway, they're at the WELL,\n"
+	.string "cutting off SLOWPOKETAILS to sell!\p"
+	.string "So I'm going to go give them a\n"
+	.string "lesson in pain!\p"
+	.string "Hang on, SLOWPOKE! Old KURT\n"
+	.string "is on his way!$"
 
 KurtsHouse_Text_KurtHonoredToMakeBalls:
-	.string "KURT{SE_M_HEAT_WAVE}Hi{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "Yo{SE_M_DIVE}handle{SE_M_WATERFALL}yoursel{SE_M_ACID_ARMOR}lik{SE_M_REVERSAL}a\n"
-	.string "rea{SE_M_BATON_PASS}her{SE_M_ATTRACT2}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}WELL.\p"
-	.string "{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}you{SE_M_SAND_TOMB}style!\p"
-	.string "{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}honore{SE_M_WATERFALL}t{SE_M_ATTRACT2}make\n"
-	.string "BALL{SE_M_SKETCH}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}traine{SE_M_SAND_TOMB}lik{SE_M_REVERSAL}you.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}now{SE_M_SUPERSONIC}\n"
-	.string "bu{SE_M_SPIT_UP}tak{SE_M_REVERSAL}it.$"
+	.string "KURT: Hi, {PLAYER}!\p"
+	.string "You handled yourself like a\n"
+	.string "real hero at the WELL.\p"
+	.string "I like your style!\p"
+	.string "I would be honored to make\n"
+	.string "BALLS for a trainer like you.\p"
+	.string "This is all I have now, \n"
+	.string "but take it.$"
 
 KurtsHouse_Text_KurtBallsFromApricorns:
-	.string "KURT{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}mak{SE_M_REVERSAL}BALL{SE_M_SKETCH}fro{SE_M_MILK_DRINK}BERRIES.\p"
-	.string "Collec{SE_M_SPIT_UP}the{SE_M_MILK_DRINK}fro{SE_M_MILK_DRINK}tree{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}bring\n"
-	.string "'e{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}me.\p"
-	.string "I'l{SE_M_BATON_PASS}mak{SE_M_REVERSAL}POK{SE_U}BALL{SE_M_SKETCH}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}them.$"
+	.string "KURT: I make BALLS from BERRIES.\p"
+	.string "Collect them from trees and bring\n"
+	.string "'em to me.\p"
+	.string "I'll make POKé BALLS out of them.$"
 
 KurtsHouse_Text_KurtAskYouHaveAnApricorn:
-	.string "KURT{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}hav{SE_M_REVERSAL}BERRIE{SE_M_SKETCH}fo{SE_M_SAND_TOMB}me?\p"
-	.string "Fine{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}tur{SE_M_ATTRACT}the{SE_M_MILK_DRINK}int{SE_M_ATTRACT2}POK{SE_U}BALLS.$"
+	.string "KURT: You have BERRIES for me?\p"
+	.string "Fine! I'll turn them into POKé BALLS.$"
 
 KurtsHouse_Text_KurtThatsALetdown:
-	.string "KURT{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}se{SE_M_REVERSAL}an{SE_M_YAWN}{STR_VAR_1}s!$"
+	.string "KURT: I don't see any {STR_VAR_1}s!$"
 
 KurtsHouse_Text_KurtFinishedPlural:
-	.string "KURT{SE_M_HEAT_WAVE}{PLAYER}!\n"
-	.string "You{SE_M_SAND_TOMB}{STR_VAR_1}{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}done{SE_M_PERISH_SONG}Here!$"
+	.string "KURT: {PLAYER}!\n"
+	.string "Your {STR_VAR_1}s are done. Here!$"
 
 KurtsHouse_Text_KurtObtainedPlural:
 	.string "{PLAYER} obtained\n"
 	.string "{STR_VAR_2} {STR_VAR_1}s!$"
 
 KurtsHouse_Text_KurtFinishedSingular:
-	.string "KURT{SE_M_HEAT_WAVE}{PLAYER}!\n"
-	.string "You{SE_M_SAND_TOMB}{STR_VAR_1} i{SE_M_GRASSWHISTLE}done{SE_M_PERISH_SONG}Here!$"
+	.string "KURT: {PLAYER}!\n"
+	.string "Your {STR_VAR_1} is done. Here!$"
 
 KurtsHouse_Text_KurtObtainedSingular:
 	.string "{PLAYER} obtained\n"
-	.string "th{SE_M_REVERSAL}{STR_VAR_1}!$"
+	.string "the {STR_VAR_1}!$"
 
 KurtsHouse_Text_KurtTurnedOutGreat:
-	.string "KURT{SE_M_HEAT_WAVE}Tha{SE_M_SPIT_UP}turne{SE_M_WATERFALL}ou{SE_M_SPIT_UP}great.\p"
-	.string "Tr{SE_M_YAWN}catchin{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}it.$"
+	.string "KURT: That turned out great.\p"
+	.string "Try catching POKéMON with it.$"
 
 KurtsHouse_Text_KurtWhatIsThat:
-	.string "Wh-wha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}that?\p"
-	.string "I'v{SE_M_REVERSAL}neve{SE_M_SAND_TOMB}see{SE_M_ATTRACT}on{SE_M_REVERSAL}before.\p"
-	.string "I{SE_M_SPIT_UP}look{SE_M_GRASSWHISTLE}{SE_M_CHARGE}lik{SE_M_REVERSAL}{SE_M_CHARGE}POK{SE_U}BALL{SE_M_SUPERSONIC}but\n"
-	.string "i{SE_M_SPIT_UP}appear{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}somethin{SE_M_SANDSTORM}else.\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}chec{SE_M_ENCORE2}i{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}you.$"
+	.string "Wh-what is that?\p"
+	.string "I've never seen one before.\p"
+	.string "It looks a like a POKé BALL, but\n"
+	.string "it appears to be something else.\p"
+	.string "Let me check it for you.$"
 
 KurtsHouse_Text_KurtImCheckingItNow:
-	.string "I'{SE_M_MILK_DRINK}checkin{SE_M_SANDSTORM}i{SE_M_SPIT_UP}now.$"
+	.string "I'm checking it now.$"
 
 KurtsHouse_Text_KurtAhHaISee:
-	.string "Ah-ha{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}see{SE_M_DRAGON_RAGE}So…$"
+	.string "Ah-ha! I see! So…$"
 
 KurtsHouse_Text_KurtThisBallStartedToShake:
 	.string "{PLAYER}!\p"
-	.string "Thi{SE_M_GRASSWHISTLE}BAL{SE_M_BRICK_BREAK}starte{SE_M_WATERFALL}t{SE_M_ATTRACT2}shake\n"
-	.string "whil{SE_M_REVERSAL}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}checkin{SE_M_SANDSTORM}it.\p"
-	.string "Ther{SE_M_REVERSAL}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}somethin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}this!$"
+	.string "This BALL started to shake\n"
+	.string "while I was checking it.\p"
+	.string "There must be something to this!$"
 
 KurtsHouse_Text_Kurt_Whatwasthat:
-	.string "Wha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}sound?!\p"
-	.string "Let'{SE_M_GRASSWHISTLE}g{SE_M_ATTRACT2}outsid{SE_M_REVERSAL}t{SE_M_ATTRACT2}investigate!$"
+	.string "What was that sound?!\p"
+	.string "Let's go outside to investigate!$"
 
 KurtsHouse_Text_GranddaughterSlowpokeGone:
-	.string "Th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}ar{SE_M_REVERSAL}gone{SE_M_DIZZY_PUNCH}\n"
-	.string "Wer{SE_M_REVERSAL}the{SE_M_YAWN}take{SE_M_ATTRACT}awa{SE_M_YAWN}b{SE_M_YAWN}ba{SE_M_WATERFALL}people?$"
+	.string "The SLOWPOKE are gone… \n"
+	.string "Were they taken away by bad people?$"
 
 KurtsHouse_Text_GranddaughterLonely:
-	.string "Grandpa'{SE_M_GRASSWHISTLE}gone{SE_M_DIZZY_PUNCH}I'{SE_M_MILK_DRINK}s{SE_M_ATTRACT2}lonely…$"
+	.string "Grandpa's gone… I'm so lonely…$"
 
 KurtsHouse_Text_GranddaughterSlowpokeBack:
-	.string "Th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}m{SE_M_YAWN}da{SE_M_WATERFALL}gav{SE_M_REVERSAL}m{SE_M_REVERSAL}cam{SE_M_REVERSAL}back!\p"
-	.string "It{SE_M_GRASSWHISTLE}TAI{SE_M_BRICK_BREAK}i{SE_M_GRASSWHISTLE}growin{SE_M_SANDSTORM}bac{SE_M_ENCORE2}too!$"
+	.string "The SLOWPOKE my dad gave me came back!\p"
+	.string "Its TAIL is growing back too!$"
 
 KurtsHouse_Text_GranddaughterDad:
-	.string "Da{SE_M_WATERFALL}work{SE_M_GRASSWHISTLE}a{SE_M_SPIT_UP}SILP{SE_M_SWAGGER2}where\n"
-	.string "h{SE_M_REVERSAL}studie{SE_M_GRASSWHISTLE}POK{SE_U}BALLS.\p"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}sta{SE_M_YAWN}home\n"
-	.string "wit{SE_M_TRI_ATTACK}Grandp{SE_M_CHARGE}an{SE_M_WATERFALL}SLOWPOKE.$"
+	.string "Dad works at SILPH where\n"
+	.string "he studies POKé BALLS.\p"
+	.string "I have to stay home\n"
+	.string "with Grandpa and SLOWPOKE.$"
 
 KurtsHouse_Text_GranddaughterHelp:
-	.string "{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}hel{SE_M_MORNING_SUN}Grandp{SE_M_CHARGE}now!\p"
-	.string "We'l{SE_M_BATON_PASS}mak{SE_M_REVERSAL}goo{SE_M_WATERFALL}BALLS\n"
-	.string "fo{SE_M_SAND_TOMB}you{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}pleas{SE_M_REVERSAL}wait!$"
+	.string "I get to help Grandpa now!\p"
+	.string "We'll make good BALLS\n"
+	.string "for you, so please wait!$"
 
 KurtsHouse_Text_GranddaughterFun:
-	.string "It'{SE_M_GRASSWHISTLE}fu{SE_M_ATTRACT}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}BALLS!$"
+	.string "It's fun to make BALLS!$"
 
 KurtsHouse_Text_GranddaughterSound:
-	.string "Di{SE_M_WATERFALL}tha{SE_M_SPIT_UP}soun{SE_M_WATERFALL}com{SE_M_REVERSAL}from\n"
-	.string "ILE{SE_M_LOCK_ON}FOREST????$"
+	.string "Did that sound come from\n"
+	.string "ILEX FOREST????$"
 
 KurtsHouse_Text_Forest:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}chec{SE_M_ENCORE2}ILE{SE_M_LOCK_ON}FORES{SE_M_SWIFT}yet?\n"
-	.string "I{SE_M_SPIT_UP}sound{SE_M_GRASSWHISTLE}ver{SE_M_YAWN}restless.$"
+	.string "Did you check ILEX FOREST yet?\n"
+	.string "It sounds very restless.$"
 
 KurtsHouse_Text_Slowpoke:
-	.string "SLOWPOKE{SE_M_HEAT_WAVE}{SE_M_DIZZY_PUNCH}Yawn?$"
+	.string "SLOWPOKE: … Yawn?$"
 
 KurtsHouse_Text_OakPhoto:
-	.string "…{SE_M_BONEMERANG}youn{SE_M_SANDSTORM}PROF{SE_M_PERISH_SONG}OAK?$"
+	.string "…A young PROF. OAK?$"
 
 KurtsHouse_Text_CelebiStatue:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}statu{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}forest's\n"
+	.string "It's a statue of the forest's\n"
 	.string "protector.$"
 

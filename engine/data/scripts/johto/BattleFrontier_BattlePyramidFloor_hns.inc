@@ -5,11 +5,11 @@ BattleFrontier_BattlePyramid_EventScript_WarpToLobby_hnsLost_hns::
 	pyramid_set PYRAMID_DATA_TRAINER_FLAGS, 255
 
 gText_BattlePyramidConfirmRest_hns::
-	.string "You{SE_M_SAND_TOMB}BATTL{SE_M_SWORDS_DANCE}PYRAMI{SE_M_FAINT_ATTACK}ques{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}be\n"
-	.string "save{SE_M_WATERFALL}s{SE_M_ATTRACT2}tha{SE_M_SPIT_UP}yo{SE_M_DIVE}ma{SE_M_YAWN}qui{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}now.\l"
-	.string "I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}okay?$"
+	.string "Your BATTLE PYRAMID quest will be\n"
+	.string "saved so that you may quit for now.\l"
+	.string "Is that okay?$"
 
 gText_BattlePyramidConfirmRetire_hns::
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}sur{SE_M_REVERSAL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}qui{SE_M_SPIT_UP}your\n"
-	.string "PYRAMI{SE_M_FAINT_ATTACK}quest?$"
+	.string "Are you sure you want to quit your\n"
+	.string "PYRAMID quest?$"
 

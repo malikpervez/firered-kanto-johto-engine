@@ -20,10 +20,10 @@ SSAquaRooms_EventScript_Bed_PokecenterChallenge::
 	end
 
 SSAquaRooms_Text_TakeRestOnBed_PokecenterChallenge:
-	.string "Sorry{SE_M_SUPERSONIC}yo{SE_M_DIVE}ar{SE_M_REVERSAL}playin{SE_M_SANDSTORM}with\n"
-	.string "th{SE_M_REVERSAL}POKéCENTE{SE_M_MINIMIZE}challenge!$"
+	.string "Sorry, you are playing with\n"
+	.string "the POKéCENTER challenge!$"
 
 SSAquaRooms_Text_TakeRestOnBed:
-	.string "There'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bed…\n"
-	.string "Let'{SE_M_GRASSWHISTLE}tak{SE_M_REVERSAL}{SE_M_CHARGE}rest.$"
+	.string "There's a bed…\n"
+	.string "Let's take a rest.$"
 

@@ -93,39 +93,39 @@ IcePath_Movement_KimonoLeave:
 	step_end
 
 IcePath_1F_Text_Leave:
-	.string "KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_HEAT_WAVE}.....................$"
+	.string "KIMONO GIRL: .....................$"
 
 IcePath_1F_Text_Stuck1:
-	.string "M{SE_M_REVERSAL}o{SE_M_TRI_ATTACK}my..{SE_M_PERISH_SONG}I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}you{SE_M_SUPERSONIC}{PLAYER}?\n"
-	.string "Fanc{SE_M_YAWN}meetin{SE_M_SANDSTORM}yo{SE_M_DIVE}here!\p"
-	.string "T{SE_M_ATTRACT2}tel{SE_M_BATON_PASS}th{SE_M_REVERSAL}truth..{SE_M_PERISH_SONG}m{SE_M_YAWN}sandal{SE_M_GRASSWHISTLE}are\n"
-	.string "froze{SE_M_ATTRACT}o{SE_M_ATTRACT}th{SE_M_REVERSAL}ice{SE_M_SUPERSONIC}an{SE_M_WATERFALL}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}stuck.\p"
-	.string "I{SE_M_ATTRACT}othe{SE_M_SAND_TOMB}words{SE_M_SUPERSONIC}m{SE_M_YAWN}flip-flop{SE_M_GRASSWHISTLE}are\n"
-	.string "quick-froze{SE_M_ATTRACT}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}ground.\p"
-	.string "Te{SE_M_REVERSAL}hee.\p"
-	.string "Well{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}laughin{SE_M_SANDSTORM}matter.\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}com{SE_M_REVERSAL}aroun{SE_M_WATERFALL}an{SE_M_WATERFALL}push\n"
-	.string "m{SE_M_YAWN}back?$"
+	.string "Me oh my... Is that you, {PLAYER}?\n"
+	.string "Fancy meeting you here!\p"
+	.string "To tell the truth... my sandals are\n"
+	.string "frozen on the ice, and I am stuck.\p"
+	.string "In other words, my flip-flops are\n"
+	.string "quick-frozen to the ground.\p"
+	.string "Tee hee.\p"
+	.string "Well, it's no laughing matter.\p"
+	.string "Would you come around and push\n"
+	.string "my back?$"
 
 IcePath_1F_Text_Stuck2:
-	.string "M{SE_M_REVERSAL}o{SE_M_TRI_ATTACK}my..{SE_M_PERISH_SONG}I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}you{SE_M_SUPERSONIC}{PLAYER}?\n"
-	.string "Fanc{SE_M_YAWN}meetin{SE_M_SANDSTORM}yo{SE_M_DIVE}here!\p"
-	.string "T{SE_M_ATTRACT2}tel{SE_M_BATON_PASS}th{SE_M_REVERSAL}truth..{SE_M_PERISH_SONG}m{SE_M_YAWN}sandal{SE_M_GRASSWHISTLE}are\n"
-	.string "froze{SE_M_ATTRACT}o{SE_M_ATTRACT}th{SE_M_REVERSAL}ice{SE_M_SUPERSONIC}an{SE_M_WATERFALL}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}stuck.\p"
-	.string "I{SE_M_ATTRACT}othe{SE_M_SAND_TOMB}words{SE_M_SUPERSONIC}m{SE_M_YAWN}flip-flop{SE_M_GRASSWHISTLE}are\n"
-	.string "quick-froze{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}ground.\p"
-	.string "Te{SE_M_REVERSAL}hee.\p"
-	.string "Well{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}laughin{SE_M_SANDSTORM}matter.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}pus{SE_M_TRI_ATTACK}m{SE_M_YAWN}back?$"
+	.string "Me oh my... Is that you, {PLAYER}?\n"
+	.string "Fancy meeting you here!\p"
+	.string "To tell the truth... my sandals are\n"
+	.string "frozen on the ice, and I am stuck.\p"
+	.string "In other words, my flip-flops are\n"
+	.string "quick-frozen with the ground.\p"
+	.string "Tee hee.\p"
+	.string "Well, it's no laughing matter.\n"
+	.string "Would you push my back?$"
 
 IcePath_1F_Text_Shove:
 	.string "....SHOVE!....$"
 
 IcePath_1F_Text_Cruel:
-	.string "Don'{SE_M_SPIT_UP}b{SE_M_REVERSAL}s{SE_M_ATTRACT2}cruel.\n"
-	.string "Yo{SE_M_DIVE}wil{SE_M_BATON_PASS}pus{SE_M_TRI_ATTACK}m{SE_M_YAWN}back{SE_M_SUPERSONIC}won'{SE_M_SPIT_UP}you?$"
+	.string "Don't be so cruel.\n"
+	.string "You will push my back, won't you?$"
 
 IcePath_1F_Text_Thanks:
-	.string "Yo{SE_M_DIVE}reall{SE_M_YAWN}ar{SE_M_REVERSAL}kind.\n"
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}s{SE_M_ATTRACT2}much!$"
+	.string "You really are kind.\n"
+	.string "Thank you so much!$"
 

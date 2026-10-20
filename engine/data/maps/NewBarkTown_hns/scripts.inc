@@ -218,54 +218,54 @@ NewBarkTown_Movement_FaceDown:
 	step_end
 
 NewBarkTown_Text_LabSign:
-	.string "PROF.ELM'{SE_M_SKETCH}LAB$"
+	.string "PROF.ELM'S LAB$"
 
 NewBarkTown_Text_Door:
-	.string "Th{SE_M_REVERSAL}doo{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}locked.$"
+	.string "The door is locked.$"
 
 NewBarkTown_Text_Wooper:
-	.string "WOOPER{SE_M_HEAT_WAVE}Woooooop.$"
+	.string "WOOPER: Woooooop.$"
 
 NewBarkTown_Text_FatManState2::
-	.string "Welcom{SE_M_REVERSAL}t{SE_M_ATTRACT2}JOHTO{SE_M_DRAGON_RAGE}PROF.ELM's\n"
-	.string "neighbo{SE_M_SAND_TOMB}ca{SE_M_ATTRACT}hel{SE_M_MORNING_SUN}yo{SE_M_DIVE}ge{SE_M_SPIT_UP}a\l"
-	.string "POKéGEA{SE_M_MINIMIZE}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}travels.$"
+	.string "Welcome to JOHTO! PROF.ELM's\n"
+	.string "neighbor can help you get a\l"
+	.string "POKéGEAR for your travels.$"
 
 NewBarkTown_Text_FatManState3:
-	.string "Yo{SE_M_SUPERSONIC}{PLAYER}!\p"
-	.string "{SE_M_HEAL_BELL}hea{SE_M_SAND_TOMB}PROF.EL{SE_M_GIGA_DRAIN}discovered\n"
-	.string "som{SE_M_REVERSAL}ne{SE_M_TWISTER}POKéMON.$"
+	.string "Yo, {PLAYER}!\p"
+	.string "I hear PROF.ELM discovered\n"
+	.string "some new POKéMON.$"
 
 NewBarkTown_Text_LassState2::
-	.string "You'r{SE_M_REVERSAL}PROF.OAK'{SE_M_GRASSWHISTLE}visitor{SE_M_SUPERSONIC}right?\p"
-	.string "PROF.EL{SE_M_GIGA_DRAIN}i{SE_M_GRASSWHISTLE}waitin{SE_M_SANDSTORM}i{SE_M_ATTRACT}hi{SE_M_GRASSWHISTLE}lab.\n"
-	.string "Pleas{SE_M_REVERSAL}se{SE_M_REVERSAL}hi{SE_M_MILK_DRINK}befor{SE_M_REVERSAL}settin{SE_M_SANDSTORM}out.$"
+	.string "You're PROF.OAK's visitor, right?\p"
+	.string "PROF.ELM is waiting in his lab.\n"
+	.string "Please see him before setting out.$"
 
 NewBarkTown_Text_LassState3:
-	.string "Oh{SE_M_DRAGON_RAGE}You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}adorable!\n"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}one!$"
+	.string "Oh! Your POKéMON is adorable!\n"
+	.string "I wish I had one!$"
 
 NewBarkTown_Text_LassState4::
-	.string "Leavin{SE_M_SANDSTORM}already{SE_M_SUPERSONIC}{PLAYER}?\p"
-	.string "Th{SE_M_REVERSAL}woma{SE_M_ATTRACT}i{SE_M_ATTRACT}th{SE_M_REVERSAL}gues{SE_M_SPIT_UP}house\n"
-	.string "woul{SE_M_WATERFALL}lik{SE_M_REVERSAL}{SE_M_CHARGE}wor{SE_M_WATERFALL}befor{SE_M_REVERSAL}yo{SE_M_DIVE}go.$"
+	.string "Leaving already, {PLAYER}?\p"
+	.string "The woman in the guest house\n"
+	.string "would like a word before you go.$"
 
 NewBarkTown_Text_LassState5::
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}cal{SE_M_BATON_PASS}th{SE_M_REVERSAL}gues{SE_M_SPIT_UP}hous{SE_M_REVERSAL}on\n"
-	.string "you{SE_M_SAND_TOMB}POKéGEA{SE_M_MINIMIZE}whil{SE_M_REVERSAL}traveling.$"
+	.string "You can call the guest house on\n"
+	.string "your POKéGEAR while traveling.$"
 
 NewBarkTown_Text_Silver1:
-	.string "{SE_M_PERISH_SONG}{SE_M_PERISH_SONG}.\p"
-	.string "S{SE_M_ATTRACT2}thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}famou{SE_M_GRASSWHISTLE}ELM\n"
-	.string "POKéMO{SE_M_PSYBEAM2}LAB…$"
+	.string ". . .\p"
+	.string "So this is the famous ELM\n"
+	.string "POKéMON LAB…$"
 
 NewBarkTown_Text_Silver2:
-	.string "…Wha{SE_M_SPIT_UP}ar{SE_M_REVERSAL}yo{SE_M_DIVE}starin{SE_M_SANDSTORM}at?$"
+	.string "…What are you staring at?$"
 
 NewBarkTown_Text_Sign:
-	.string "NE{SE_M_DETECT}BAR{SE_M_SNORE}TOWN\p"
-	.string "Th{SE_M_REVERSAL}Tow{SE_M_ATTRACT}Wher{SE_M_REVERSAL}th{SE_M_REVERSAL}Wind{SE_M_GRASSWHISTLE}of\n"
-	.string "{SE_M_CHARGE}Ne{SE_M_TWISTER}Beginnin{SE_M_SANDSTORM}Blow$"
+	.string "NEW BARK TOWN\p"
+	.string "The Town Where the Winds of\n"
+	.string "a New Beginning Blow$"
 
 NewBarkTown_EventScript_PlayersHouseMailbox::
 	msgbox NewBarkTown_Text_PlayersHouse, MSGBOX_SIGN
@@ -276,10 +276,10 @@ NewBarkTown_EventScript_ElmsHouseMailbox::
 	end
 
 NewBarkTown_Text_PlayersHouse::
-	.string "PROF.ELM'{SE_M_SKETCH}GUES{SE_M_SWIFT}HOUSE$"
+	.string "PROF.ELM'S GUEST HOUSE$"
 
 NewBarkTown_Text_ElmsHouse:
-	.string "PROF.ELM'{SE_M_SKETCH}HOUSE$"
+	.string "PROF.ELM'S HOUSE$"
 
 B2_NewBark_EventScript_ReturnToKanto::
 	lock
@@ -298,5 +298,5 @@ B2_NewBark_EventScript_DeclineTravel::
 	end
 
 B2_NewBark_Text_ReturnToKanto::
-	.string "Retur{SE_M_ATTRACT}t{SE_M_ATTRACT2}PALLE{SE_M_SWIFT}TOWN?$"
+	.string "Return to PALLET TOWN?$"
 

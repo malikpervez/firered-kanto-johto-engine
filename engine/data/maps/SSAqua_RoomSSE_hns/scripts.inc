@@ -75,34 +75,34 @@ SSAqua_RoomSSE_Movement_PlayerEnter:
 	step_end
 
 SSAqua_RoomSSE_Text_CantFindGranddaughter:
-	.string "Oh{SE_M_SUPERSONIC}hello…\p"
-	.string "{SE_M_HEAL_BELL}stil{SE_M_BATON_PASS}can'{SE_M_SPIT_UP}fin{SE_M_WATERFALL}my\n"
+	.string "Oh, hello…\p"
+	.string "I still can't find my\n"
 	.string "granddaughter.\p"
-	.string "I{SE_M_ACID_ARMOR}she'{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}th{SE_M_REVERSAL}ship,\n"
-	.string "that'{SE_M_GRASSWHISTLE}OK.\p"
-	.string "She'{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}energeti{SE_M_HYPER_BEAM}child,\n"
-	.string "s{SE_M_ATTRACT2}sh{SE_M_REVERSAL}ma{SE_M_YAWN}b{SE_M_REVERSAL}buggin{SE_M_SANDSTORM}someone\l"
-	.string "I'{SE_M_MILK_DRINK}worried…$"
+	.string "If she's on the ship,\n"
+	.string "that's OK.\p"
+	.string "She's an energetic child,\n"
+	.string "so she may be bugging someone\l"
+	.string "I'm worried…$"
 
 SSAqua_RoomSSE_Text_EntertainedGranddaughter:
-	.string "{PLAYER}{SE_M_SUPERSONIC}wa{SE_M_GRASSWHISTLE}it?\n"
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}yo{SE_M_DIVE}entertaine{SE_M_WATERFALL}my\l"
+	.string "{PLAYER}, was it?\n"
+	.string "I heard you entertained my\l"
 	.string "granddaughter.\p"
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}than{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}that.$"
+	.string "I want to thank you for that.$"
 
 SSAqua_RoomSSE_Text_GrandpaHaveThis:
-	.string "{SE_M_HEAL_BELL}know{SE_M_DRAGON_RAGE}I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}you\n"
-	.string "t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}this!$"
+	.string "I know! I'd like you\n"
+	.string "to have this!$"
 
 SSAqua_RoomSSE_Text_GrandpaTravelling:
-	.string "We'r{SE_M_REVERSAL}travelin{SE_M_SANDSTORM}around\n"
-	.string "th{SE_M_REVERSAL}world.$"
+	.string "We're traveling around\n"
+	.string "the world.$"
 
 SSAqua_RoomSSE_Text_GranddaughterWasPlaying:
-	.string "Grandpa{SE_M_SUPERSONIC}her{SE_M_REVERSAL}{SE_M_HEAL_BELL}am!\n"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}playin{SE_M_SANDSTORM}with\l"
-	.string "th{SE_M_REVERSAL}CAPTAI{SE_M_PSYBEAM2}an{SE_M_WATERFALL}thi{SE_M_GRASSWHISTLE}person!$"
+	.string "Grandpa, here I am!\n"
+	.string "I was playing with\l"
+	.string "the CAPTAIN and this person!$"
 
 SSAqua_RoomSSE_Text_GranddaughterHadFun:
-	.string "{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}lot{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}fu{SE_M_ATTRACT}playing!$"
+	.string "I had lots of fun playing!$"
 

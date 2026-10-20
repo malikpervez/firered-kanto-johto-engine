@@ -54,21 +54,21 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_GSBALL::
 	end
 
 RuinsOfAlph_B1F_Text_Presence:
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}strang{SE_M_REVERSAL}presenc{SE_M_REVERSAL}here.$"
+	.string "There is a strange presence here.$"
 
 RuinsOfAlph_B1F_Text_Hiker:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bi{SE_M_SANDSTORM}room{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}there's\n"
-	.string "nothin{SE_M_SANDSTORM}here.$"
+	.string "This is a big room, but there's\n"
+	.string "nothing here.$"
 
 RuinsOfAlph_B1F_Text_Teacher:
-	.string "Thi{SE_M_GRASSWHISTLE}plac{SE_M_REVERSAL}ha{SE_M_GRASSWHISTLE}{SE_M_CHARGE}mystical\n"
-	.string "qualit{SE_M_YAWN}t{SE_M_ATTRACT2}it.\p"
-	.string "I{SE_M_SPIT_UP}feel{SE_M_GRASSWHISTLE}sor{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}ethereal\n"
+	.string "This place has a mystical\n"
+	.string "quality to it.\p"
+	.string "It feels sort of ethereal\n"
 	.string "even.$"
 
 RuinsOfAlph_B1F_Text_Gramps:
-	.string "Ancien{SE_M_SPIT_UP}building{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}often\n"
-	.string "tomb{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}kings.\p"
-	.string "Lik{SE_M_REVERSAL}th{SE_M_REVERSAL}pyramids{SE_M_SUPERSONIC}for\n"
+	.string "Ancient buildings are often\n"
+	.string "tombs of kings.\p"
+	.string "Like the pyramids, for\n"
 	.string "instance.$"
 

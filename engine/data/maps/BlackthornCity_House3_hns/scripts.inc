@@ -70,41 +70,41 @@ BlackthornCity_MoveDeletersHouse_EventScript_LastMonWithSurf::
 
 BlackthornCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove:
 	.string "Uh…\n"
-	.string "Oh{SE_M_SUPERSONIC}yes{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}MOV{SE_M_SWORDS_DANCE}DELETER.\p"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}mak{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}forge{SE_M_SPIT_UP}thei{SE_M_SAND_TOMB}moves.\p"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}that?$"
+	.string "Oh, yes, I'm the MOVE DELETER.\p"
+	.string "I can make POKéMON forget their moves.\p"
+	.string "Would you like me to do that?$"
 
 BlackthornCity_MoveDeletersHouse_Text_WhichMonShouldForget:
-	.string "Whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}shoul{SE_M_WATERFALL}forge{SE_M_SPIT_UP}{SE_M_CHARGE}move?$"
+	.string "Which POKéMON should forget a move?$"
 
 BlackthornCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten:
-	.string "Whic{SE_M_TRI_ATTACK}mov{SE_M_REVERSAL}shoul{SE_M_WATERFALL}b{SE_M_REVERSAL}forgotten?$"
+	.string "Which move should be forgotten?$"
 
 BlackthornCity_MoveDeletersHouse_Text_MonOnlyKnowsOneMove:
-	.string "{STR_VAR_1} know{SE_M_GRASSWHISTLE}onl{SE_M_YAWN}on{SE_M_REVERSAL}move\n"
-	.string "s{SE_M_ATTRACT2}i{SE_M_SPIT_UP}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}forgotten…$"
+	.string "{STR_VAR_1} knows only one move\n"
+	.string "so it can't be forgotten…$"
 
 BlackthornCity_MoveDeletersHouse_Text_MonsMoveShouldBeForgotten:
-	.string "Hm{SE_M_DRAGON_RAGE}{STR_VAR_1}'{SE_M_GRASSWHISTLE}{STR_VAR_2}?\n"
-	.string "Tha{SE_M_SPIT_UP}mov{SE_M_REVERSAL}shoul{SE_M_WATERFALL}b{SE_M_REVERSAL}forgotten?$"
+	.string "Hm! {STR_VAR_1}'s {STR_VAR_2}?\n"
+	.string "That move should be forgotten?$"
 
 BlackthornCity_MoveDeletersHouse_Text_MonHasForgottenMove:
-	.string "I{SE_M_SPIT_UP}worke{SE_M_WATERFALL}t{SE_M_ATTRACT2}perfection!\p"
-	.string "{STR_VAR_1} ha{SE_M_GRASSWHISTLE}forgotten\n"
+	.string "It worked to perfection!\p"
+	.string "{STR_VAR_1} has forgotten\n"
 	.string "{STR_VAR_2} completely.$"
 
 BlackthornCity_MoveDeletersHouse_Text_ComeAgain:
-	.string "Com{SE_M_REVERSAL}agai{SE_M_ATTRACT}i{SE_M_ACID_ARMOR}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}move{SE_M_GRASSWHISTLE}that\n"
-	.string "nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}forgotten.$"
+	.string "Come again if there are moves that\n"
+	.string "need to be forgotten.$"
 
 BlackthornCity_MoveDeletersHouse_Text_EggCantForgetMoves:
 	.string "What?\n"
-	.string "N{SE_M_ATTRACT2}EG{SE_M_SWAGGER}shoul{SE_M_WATERFALL}kno{SE_M_TWISTER}an{SE_M_YAWN}moves.$"
+	.string "No EGG should know any moves.$"
 
 BlackthornCity_MoveDeletersHouse_Text_CantForgetSurf:
 	.string "Hm!\p"
-	.string "You{SE_M_SAND_TOMB}{STR_VAR_1} doesn'{SE_M_SPIT_UP}see{SE_M_MILK_DRINK}willing\n"
-	.string "t{SE_M_ATTRACT2}forge{SE_M_SPIT_UP}SURF.$"
+	.string "Your {STR_VAR_1} doesn't seem willing\n"
+	.string "to forget SURF.$"
 
 BlackthornCity_MoveRelearnersHouse_EventScript_MoveRelearner::
 	lockall
@@ -172,44 +172,44 @@ BlackthornCity_MoveRelearnersHouse_EventScript_Randomizer::
 	end
 
 BlackthornCity_MoveRelearnersHouse_Text_SorryCantHelp:
-	.string "Sorry{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}hel{SE_M_MORNING_SUN}you.$"
+	.string "Sorry, I can't help you.$"
 
 BlackthornCity_MoveRelearnersHouse_Text_ImTheMoveTutor:
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}MOV{SE_M_SWORDS_DANCE}TUTOR.\p"
-	.string "{SE_M_HEAL_BELL}kno{SE_M_TWISTER}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}move{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}POKéMON\n"
-	.string "learn--ever{SE_M_YAWN}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}them--an{SE_M_WATERFALL}{SE_M_HEAL_BELL}can\l"
-	.string "teac{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}thos{SE_M_REVERSAL}moves.\p"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}teac{SE_M_TRI_ATTACK}{SE_M_CHARGE}mov{SE_M_REVERSAL}t{SE_M_ATTRACT2}{SE_M_CHARGE}POKéMON\n"
-	.string "o{SE_M_ACID_ARMOR}your{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}you'{SE_M_WATERFALL}like.\p"
-	.string "I'l{SE_M_BATON_PASS}d{SE_M_ATTRACT2}i{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}HEAR{SE_M_SWIFT}SCALE.\n"
-	.string "I'{SE_M_MILK_DRINK}collectin{SE_M_SANDSTORM}thos{SE_M_REVERSAL}now.$"
+	.string "I'm the MOVE TUTOR.\p"
+	.string "I know all the moves that POKéMON\n"
+	.string "learn--every one of them--and I can\l"
+	.string "teach POKéMON those moves.\p"
+	.string "I can teach a move to a POKéMON\n"
+	.string "of yours if you'd like.\p"
+	.string "I'll do it for a HEART SCALE.\n"
+	.string "I'm collecting those now.$"
 
 BlackthornCity_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove:
-	.string "Oh{SE_M_DRAGON_RAGE}That'{SE_M_GRASSWHISTLE}it{SE_M_DRAGON_RAGE}That'{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}hones{SE_M_SPIT_UP}to\n"
-	.string "goodnes{SE_M_GRASSWHISTLE}HEAR{SE_M_SWIFT}SCALE!\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}guess{SE_M_SUPERSONIC}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}teach\n"
-	.string "{SE_M_CHARGE}move?$"
+	.string "Oh! That's it! That's an honest to\n"
+	.string "goodness HEART SCALE!\p"
+	.string "Let me guess, you want me to teach\n"
+	.string "a move?$"
 
 BlackthornCity_MoveRelearnersHouse_Text_TutorWhichMon:
-	.string "Whic{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}need{SE_M_GRASSWHISTLE}tutoring?$"
+	.string "Which POKéMON needs tutoring?$"
 
 BlackthornCity_MoveRelearnersHouse_Text_TeachWhichMove:
-	.string "Whic{SE_M_TRI_ATTACK}mov{SE_M_REVERSAL}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}teach?$"
+	.string "Which move should I teach?$"
 
 BlackthornCity_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
 	.string "Sorry…\p"
-	.string "I{SE_M_SPIT_UP}doesn'{SE_M_SPIT_UP}appea{SE_M_SAND_TOMB}a{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}an{SE_M_YAWN}move\n"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}teac{SE_M_TRI_ATTACK}tha{SE_M_SPIT_UP}POKéMON.$"
+	.string "It doesn't appear as if I have any move\n"
+	.string "I can teach that POKéMON.$"
 
 BlackthornCity_MoveRelearnersHouse_Text_HandedOverHeartScale:
-	.string "{PLAYER} hande{SE_M_WATERFALL}ove{SE_M_SAND_TOMB}on{SE_M_REVERSAL}HEAR{SE_M_SWIFT}SCALE\n"
-	.string "i{SE_M_ATTRACT}exchange.$"
+	.string "{PLAYER} handed over one HEART SCALE\n"
+	.string "in exchange.$"
 
 BlackthornCity_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
-	.string "I{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}lear{SE_M_ATTRACT}{SE_M_CHARGE}move,\n"
-	.string "com{SE_M_REVERSAL}bac{SE_M_ENCORE2}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}HEAR{SE_M_SWIFT}SCALE.$"
+	.string "If your POKéMON need to learn a move,\n"
+	.string "come back with a HEART SCALE.$"
 
 BlackthornCity_MoveRelearnersHouse_Text_CantTeachEgg:
-	.string "Hunh{SE_M_SING}Ther{SE_M_REVERSAL}isn'{SE_M_SPIT_UP}{SE_M_CHARGE}singl{SE_M_REVERSAL}mov{SE_M_REVERSAL}that\n"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}teac{SE_M_TRI_ATTACK}a{SE_M_ATTRACT}EGG.$"
+	.string "Hunh? There isn't a single move that\n"
+	.string "I can teach an EGG.$"
 

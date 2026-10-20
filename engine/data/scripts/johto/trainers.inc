@@ -1,4796 +1,4796 @@
 @ Johto (data/text/trainers.inc), as built into the FireRed game.
 
 J_Route102_Text_CalvinIntro:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}you{SE_M_SUPERSONIC}then\n"
-	.string "you'r{SE_M_REVERSAL}a{SE_M_ATTRACT}officia{SE_M_BATON_PASS}POKéMO{SE_M_PSYBEAM2}TRAINER!\l"
-	.string "Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}sa{SE_M_YAWN}n{SE_M_ATTRACT2}t{SE_M_ATTRACT2}m{SE_M_YAWN}challenge!$"
+	.string "If you have POKéMON with you, then\n"
+	.string "you're an official POKéMON TRAINER!\l"
+	.string "You can't say no to my challenge!$"
 
 J_Route102_Text_CalvinDefeated:
-	.string "Arrgh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lost…\n"
-	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}hav{SE_M_REVERSAL}traine{SE_M_WATERFALL}min{SE_M_REVERSAL}more…$"
+	.string "Arrgh, I lost…\n"
+	.string "I should have trained mine more…$"
 
 J_Route102_Text_CalvinPostBattle:
-	.string "Listen{SE_M_SUPERSONIC}you{SE_M_PERISH_SONG}I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}strong,\n"
-	.string "yo{SE_M_DIVE}shoul{SE_M_WATERFALL}hav{SE_M_REVERSAL}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}before!$"
+	.string "Listen, you. If you're strong,\n"
+	.string "you should have told me before!$"
 
 J_Route102_Text_CalvinRegister:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}workin{SE_M_SANDSTORM}har{SE_M_WATERFALL}a{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}since\n"
-	.string "{SE_M_HEAL_BELL}sa{SE_M_TWISTER}yo{SE_M_DIVE}before.\p"
-	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}yo{SE_M_DIVE}again{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}can\n"
-	.string "yo{SE_M_DIVE}registe{SE_M_SAND_TOMB}m{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéNAV?$"
+	.string "I've been working hard at this since\n"
+	.string "I saw you before.\p"
+	.string "I'd like to battle you again, so can\n"
+	.string "you register me in your POKéNAV?$"
 
 J_Route102_Text_CalvinRegisterShort:
-	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}yo{SE_M_DIVE}again{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}can\n"
-	.string "yo{SE_M_DIVE}registe{SE_M_SAND_TOMB}m{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéNAV?$"
+	.string "I'd like to battle you again, so can\n"
+	.string "you register me in your POKéNAV?$"
 
 J_Route102_Text_CalvinRematchIntro:
-	.string "Eve{SE_M_SAND_TOMB}sinc{SE_M_REVERSAL}{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}t{SE_M_ATTRACT2}you{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}desperately\n"
-	.string "traine{SE_M_WATERFALL}m{SE_M_YAWN}POKéMON.\l"
-	.string "Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}sa{SE_M_YAWN}n{SE_M_ATTRACT2}t{SE_M_ATTRACT2}m{SE_M_YAWN}challenge!$"
+	.string "Ever since I lost to you, I desperately\n"
+	.string "trained my POKéMON.\l"
+	.string "You can't say no to my challenge!$"
 
 J_Route102_Text_CalvinRematchDefeated:
-	.string "Arrgh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lost…\n"
-	.string "I{SE_M_GRASSWHISTLE}m{SE_M_YAWN}trainin{SE_M_SANDSTORM}metho{SE_M_WATERFALL}no{SE_M_SPIT_UP}right?$"
+	.string "Arrgh, I lost…\n"
+	.string "Is my training method not right?$"
 
 J_Route102_Text_CalvinRematchPostBattle:
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}stronger,\n"
-	.string "I'l{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}stronger{SE_M_SUPERSONIC}too.$"
+	.string "If you're going to get stronger,\n"
+	.string "I'll get stronger, too.$"
 
 J_Route102_Text_AllenIntro:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}jus{SE_M_SPIT_UP}becom{SE_M_REVERSAL}{SE_M_CHARGE}TRAINER?\n"
-	.string "We'r{SE_M_REVERSAL}bot{SE_M_TRI_ATTACK}beginners!$"
+	.string "Did you just become a TRAINER?\n"
+	.string "We're both beginners!$"
 
 J_Route102_Text_AllenDefeated:
-	.string "{SE_M_HEAL_BELL}calle{SE_M_WATERFALL}yo{SE_M_DIVE}becaus{SE_M_REVERSAL}{SE_M_HEAL_BELL}thought\n"
-	.string "{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}bea{SE_M_SPIT_UP}you…$"
+	.string "I called you because I thought\n"
+	.string "I could beat you…$"
 
 J_Route102_Text_AllenPostBattle:
-	.string "{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}wo{SE_M_ATTRACT}onc{SE_M_REVERSAL}yet…\n"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}wi{SE_M_ATTRACT}soon…$"
+	.string "I haven't won once yet…\n"
+	.string "I wish I would win soon…$"
 
 J_Route102_Text_RickIntro:
-	.string "Hahah{SE_M_DRAGON_RAGE}Ou{SE_M_SAND_TOMB}eye{SE_M_GRASSWHISTLE}met!\n"
-	.string "I'l{SE_M_BATON_PASS}tak{SE_M_REVERSAL}yo{SE_M_DIVE}o{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}BU{SE_M_SWAGGER}POKéMON!$"
+	.string "Hahah! Our eyes met!\n"
+	.string "I'll take you on with my BUG POKéMON!$"
 
 J_Route102_Text_RickDefeated:
-	.string "Ow{SE_M_DRAGON_RAGE}Dow{SE_M_ATTRACT}an{SE_M_WATERFALL}out!$"
+	.string "Ow! Down and out!$"
 
 J_Route102_Text_RickPostBattle:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}loc{SE_M_ENCORE2}eye{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}TRAINER,\n"
-	.string "yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}challenge{SE_M_DRAGON_RAGE}It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}rule!$"
+	.string "If you lock eyes with a TRAINER,\n"
+	.string "you have to challenge! It's a rule!$"
 
 J_Route102_Text_TianaIntro:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}winnin{SE_M_SANDSTORM}an{SE_M_WATERFALL}aim\n"
-	.string "t{SE_M_ATTRACT2}b{SE_M_REVERSAL}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}TRAINER.\p"
-	.string "Hel{SE_M_MORNING_SUN}m{SE_M_REVERSAL}furthe{SE_M_SAND_TOMB}m{SE_M_YAWN}career!$"
+	.string "I'm going to keep winning and aim\n"
+	.string "to be the best TRAINER.\p"
+	.string "Help me further my career!$"
 
 J_Route102_Text_TianaDefeated:
-	.string "{SE_M_HEAL_BELL}ende{SE_M_WATERFALL}u{SE_M_MORNING_SUN}furtherin{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}career…$"
+	.string "I ended up furthering your career…$"
 
 J_Route102_Text_TianaPostBattle:
-	.string "T{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}winnin{SE_M_SANDSTORM}m{SE_M_YAWN}wa{SE_M_YAWN}up{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}that\n"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}catc{SE_M_TRI_ATTACK}mor{SE_M_REVERSAL}POKéMON.$"
+	.string "To keep winning my way up, I see that\n"
+	.string "I have to catch more POKéMON.$"
 
 J_Route103_Text_DaisyIntro:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}fee{SE_M_BATON_PASS}th{SE_M_REVERSAL}tu{SE_M_SANDSTORM}o{SE_M_ACID_ARMOR}our\n"
-	.string "soul-soothin{SE_M_SANDSTORM}fragrance?$"
+	.string "Did you feel the tug of our\n"
+	.string "soul-soothing fragrance?$"
 
 J_Route103_Text_DaisyDefeated:
-	.string "Yo{SE_M_DIVE}weren'{SE_M_SPIT_UP}le{SE_M_WATERFALL}astra{SE_M_YAWN}b{SE_M_YAWN}ou{SE_M_SAND_TOMB}aroma…$"
+	.string "You weren't led astray by our aroma…$"
 
 J_Route103_Text_DaisyPostBattle:
-	.string "Aromatherap{SE_M_YAWN}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}for{SE_M_MILK_DRINK}o{SE_M_ACID_ARMOR}mental\n"
-	.string "healin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}work{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}fragrances.$"
+	.string "Aromatherapy is a form of mental\n"
+	.string "healing that works with fragrances.$"
 
 J_Route103_Text_AmyIntro:
-	.string "AMY{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}AMY.\n"
-	.string "An{SE_M_WATERFALL}thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}littl{SE_M_REVERSAL}siste{SE_M_SAND_TOMB}LIV.\l"
-	.string "W{SE_M_REVERSAL}battl{SE_M_REVERSAL}together!$"
+	.string "AMY: I'm AMY.\n"
+	.string "And this is my little sister LIV.\l"
+	.string "We battle together!$"
 
 J_Route103_Text_AmyDefeated:
-	.string "AMY{SE_M_HEAT_WAVE}Uh-oh{SE_M_SUPERSONIC}w{SE_M_REVERSAL}lost.$"
+	.string "AMY: Uh-oh, we lost.$"
 
 J_Route103_Text_AmyPostBattle:
-	.string "AMY{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}thin{SE_M_ENCORE2}abou{SE_M_SPIT_UP}all\n"
-	.string "kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}thing{SE_M_GRASSWHISTLE}whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}battling\l"
-	.string "agains{SE_M_SPIT_UP}tw{SE_M_ATTRACT2}TRAINERS.$"
+	.string "AMY: You have to think about all\n"
+	.string "kinds of things when you're battling\l"
+	.string "against two TRAINERS.$"
 
 J_Route103_Text_AmyNotEnoughPokemon:
-	.string "AMY{SE_M_HEAT_WAVE}Uh-oh{SE_M_SUPERSONIC}yo{SE_M_DIVE}hav{SE_M_REVERSAL}onl{SE_M_YAWN}one\n"
-	.string "POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}you.\l"
-	.string "Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}battl{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}that.$"
+	.string "AMY: Uh-oh, you have only one\n"
+	.string "POKéMON with you.\l"
+	.string "You can't battle us like that.$"
 
 J_Route103_Text_LivIntro:
-	.string "LIV{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}battl{SE_M_REVERSAL}togethe{SE_M_SAND_TOMB}a{SE_M_GRASSWHISTLE}one\n"
+	.string "LIV: We battle together as one\n"
 	.string "team.$"
 
 J_Route103_Text_LivDefeated:
-	.string "LIV{SE_M_HEAT_WAVE}Oh{SE_M_SUPERSONIC}w{SE_M_REVERSAL}lost{SE_M_SUPERSONIC}bi{SE_M_SANDSTORM}sister…$"
+	.string "LIV: Oh, we lost, big sister…$"
 
 J_Route103_Text_LivPostBattle:
-	.string "LIV{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}wor{SE_M_ENCORE2}perfectl{SE_M_YAWN}together,\n"
-	.string "m{SE_M_REVERSAL}an{SE_M_WATERFALL}m{SE_M_YAWN}bi{SE_M_SANDSTORM}sister…\p"
-	.string "Bu{SE_M_SPIT_UP}w{SE_M_REVERSAL}stil{SE_M_BATON_PASS}lost…$"
+	.string "LIV: We work perfectly together,\n"
+	.string "me and my big sister…\p"
+	.string "But we still lost…$"
 
 J_Route103_Text_AmyLivRegister:
-	.string "LIV{SE_M_HEAT_WAVE}Really{SE_M_SUPERSONIC}we'r{SE_M_REVERSAL}{SE_M_CHARGE}lo{SE_M_SPIT_UP}better…\n"
-	.string "It'{SE_M_GRASSWHISTLE}true{SE_M_DRAGON_RAGE}We'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}nex{SE_M_SPIT_UP}time!$"
+	.string "LIV: Really, we're a lot better…\n"
+	.string "It's true! We'll show you next time!$"
 
 J_Route103_Text_LivNotEnoughPokemon:
-	.string "LIV{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us,\n"
-	.string "yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}POKéMON!\l"
-	.string "It'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}fai{SE_M_SAND_TOMB}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don't!$"
+	.string "LIV: If you want to battle us,\n"
+	.string "you have to have two POKéMON!\l"
+	.string "It's not fair if you don't!$"
 
 J_Route103_Text_AmyRematchIntro:
-	.string "AMY{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}AMY.\n"
-	.string "An{SE_M_WATERFALL}thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}littl{SE_M_REVERSAL}siste{SE_M_SAND_TOMB}LIV.\l"
-	.string "W{SE_M_REVERSAL}battl{SE_M_REVERSAL}together!$"
+	.string "AMY: I'm AMY.\n"
+	.string "And this is my little sister LIV.\l"
+	.string "We battle together!$"
 
 J_Route103_Text_AmyRematchDefeated:
-	.string "AMY{SE_M_HEAT_WAVE}Aww{SE_M_SUPERSONIC}boo!\n"
-	.string "W{SE_M_REVERSAL}couldn'{SE_M_SPIT_UP}wi{SE_M_ATTRACT}again…$"
+	.string "AMY: Aww, boo!\n"
+	.string "We couldn't win again…$"
 
 J_Route103_Text_AmyRematchPostBattle:
-	.string "AMY{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}thin{SE_M_ENCORE2}abou{SE_M_SPIT_UP}all\n"
-	.string "kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}thing{SE_M_GRASSWHISTLE}whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}battling\l"
-	.string "agains{SE_M_SPIT_UP}tw{SE_M_ATTRACT2}TRAINERS.$"
+	.string "AMY: You have to think about all\n"
+	.string "kinds of things when you're battling\l"
+	.string "against two TRAINERS.$"
 
 J_Route103_Text_AmyRematchNotEnoughPokemon:
-	.string "AMY{SE_M_HEAT_WAVE}Uh-oh{SE_M_SUPERSONIC}yo{SE_M_DIVE}hav{SE_M_REVERSAL}onl{SE_M_YAWN}one\n"
-	.string "POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}you.\l"
-	.string "Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}battl{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}that.$"
+	.string "AMY: Uh-oh, you have only one\n"
+	.string "POKéMON with you.\l"
+	.string "You can't battle us like that.$"
 
 J_Route103_Text_LivRematchIntro:
-	.string "LIV{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}battl{SE_M_REVERSAL}togethe{SE_M_SAND_TOMB}a{SE_M_GRASSWHISTLE}one\n"
+	.string "LIV: We battle together as one\n"
 	.string "team.$"
 
 J_Route103_Text_LivRematchDefeated:
-	.string "LIV{SE_M_HEAT_WAVE}Awww{SE_M_SUPERSONIC}w{SE_M_REVERSAL}los{SE_M_SPIT_UP}again…\n"
-	.string "Bi{SE_M_SANDSTORM}sister…$"
+	.string "LIV: Awww, we lost again…\n"
+	.string "Big sister…$"
 
 J_Route103_Text_LivRematchPostBattle:
-	.string "LIV{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}wor{SE_M_ENCORE2}perfectl{SE_M_YAWN}together,\n"
-	.string "m{SE_M_REVERSAL}an{SE_M_WATERFALL}m{SE_M_YAWN}bi{SE_M_SANDSTORM}sister…\p"
-	.string "Bu{SE_M_SPIT_UP}wh{SE_M_YAWN}di{SE_M_WATERFALL}w{SE_M_REVERSAL}los{SE_M_REVERSAL}again?$"
+	.string "LIV: We work perfectly together,\n"
+	.string "me and my big sister…\p"
+	.string "But why did we lose again?$"
 
 J_Route103_Text_LivRematchNotEnoughPokemon:
-	.string "LIV{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us{SE_M_SUPERSONIC}you\n"
-	.string "hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}POKéMON!\l"
-	.string "It'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}fai{SE_M_SAND_TOMB}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don't!$"
+	.string "LIV: If you want to battle us, you\n"
+	.string "have to have two POKéMON!\l"
+	.string "It's not fair if you don't!$"
 
 J_Route103_Text_AndrewIntro:
-	.string "Gah{SE_M_DRAGON_RAGE}M{SE_M_YAWN}fishin{SE_M_SANDSTORM}line'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}snarle{SE_M_WATERFALL}up!\n"
-	.string "I'{SE_M_MILK_DRINK}gettin{SE_M_SANDSTORM}frustrate{SE_M_WATERFALL}an{SE_M_WATERFALL}mean!\l"
-	.string "That'{SE_M_GRASSWHISTLE}it{SE_M_DRAGON_RAGE}Battl{SE_M_REVERSAL}me!$"
+	.string "Gah! My fishing line's all snarled up!\n"
+	.string "I'm getting frustrated and mean!\l"
+	.string "That's it! Battle me!$"
 
 J_Route103_Text_AndrewDefeated:
-	.string "Gah{SE_M_DRAGON_RAGE}Los{SE_M_SPIT_UP}it!\n"
-	.string "I'{SE_M_MILK_DRINK}eve{SE_M_ATTRACT}mor{SE_M_REVERSAL}annoye{SE_M_WATERFALL}now!$"
+	.string "Gah! Lost it!\n"
+	.string "I'm even more annoyed now!$"
 
 J_Route103_Text_AndrewPostBattle:
-	.string "Gah{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}stil{SE_M_BATON_PASS}boilin{SE_M_SANDSTORM}mad…\n"
+	.string "Gah, I'm still boiling mad…\n"
 	.string "Grrrrr…$"
 
 J_Route103_Text_MiguelIntro:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}delightfull{SE_M_YAWN}adorable!\n"
-	.string "Don'{SE_M_SPIT_UP}b{SE_M_REVERSAL}shy--I'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}you!$"
+	.string "My POKéMON is delightfully adorable!\n"
+	.string "Don't be shy--I'll show you!$"
 
 J_Route103_Text_MiguelDefeated:
-	.string "Oh{SE_M_SUPERSONIC}m{SE_M_YAWN}gosh!\n"
-	.string "M{SE_M_YAWN}darlin{SE_M_SANDSTORM}POKéMON!$"
+	.string "Oh, my gosh!\n"
+	.string "My darling POKéMON!$"
 
 J_Route103_Text_MiguelPostBattle:
-	.string "M{SE_M_YAWN}delightfu{SE_M_BATON_PASS}POKéMO{SE_M_PSYBEAM2}look{SE_M_GRASSWHISTLE}darling\n"
-	.string "eve{SE_M_ATTRACT}whe{SE_M_ATTRACT}it'{SE_M_GRASSWHISTLE}fainted!$"
+	.string "My delightful POKéMON looks darling\n"
+	.string "even when it's fainted!$"
 
 J_Route103_Text_MiguelRegister:
-	.string "I'l{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}com{SE_M_REVERSAL}ou{SE_M_SPIT_UP}an{SE_M_WATERFALL}loo{SE_M_ENCORE2}in\n"
-	.string "o{SE_M_ATTRACT}m{SE_M_YAWN}delightfu{SE_M_BATON_PASS}POKéMO{SE_M_PSYBEAM2}again!$"
+	.string "I'll get you to come out and look in\n"
+	.string "on my delightful POKéMON again!$"
 
 J_Route103_Text_MiguelRematchIntro:
-	.string "Hi{SE_M_SUPERSONIC}you{SE_M_DRAGON_RAGE}M{SE_M_YAWN}delightfull{SE_M_YAWN}adorable\n"
-	.string "POKéMO{SE_M_PSYBEAM2}ha{SE_M_GRASSWHISTLE}becom{SE_M_REVERSAL}mor{SE_M_REVERSAL}darling!$"
+	.string "Hi, you! My delightfully adorable\n"
+	.string "POKéMON has become more darling!$"
 
 J_Route103_Text_MiguelRematchDefeated:
 	.string "Oh!\n"
-	.string "M{SE_M_YAWN}darlin{SE_M_SANDSTORM}POKéMON!$"
+	.string "My darling POKéMON!$"
 
 J_Route103_Text_MiguelRematchPostBattle:
-	.string "Th{SE_M_REVERSAL}mor{SE_M_REVERSAL}{SE_M_HEAL_BELL}spen{SE_M_WATERFALL}tim{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}it,\n"
-	.string "th{SE_M_REVERSAL}mor{SE_M_REVERSAL}adorabl{SE_M_REVERSAL}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}becomes.$"
+	.string "The more I spend time with it,\n"
+	.string "the more adorable my POKéMON becomes.$"
 
 J_Route103_Text_PeteIntro:
-	.string "Thi{SE_M_GRASSWHISTLE}sor{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}distance…\n"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}jus{SE_M_SPIT_UP}swi{SE_M_MILK_DRINK}it!$"
+	.string "This sort of distance…\n"
+	.string "You should just swim it!$"
 
 J_Route103_Text_PeteDefeated:
-	.string "Oh{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}goo{SE_M_WATERFALL}going!$"
+	.string "Oh, that's good going!$"
 
 J_Route103_Text_PetePostBattle:
-	.string "Oh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}understan{SE_M_WATERFALL}wher{SE_M_REVERSAL}you'r{SE_M_REVERSAL}coming\n"
-	.string "fro{SE_M_MILK_DRINK}now.\p"
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}trusty,\n"
-	.string "I'{SE_M_WATERFALL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}SUR{SE_M_LEER}o{SE_M_ATTRACT}it{SE_M_SUPERSONIC}too!$"
+	.string "Oh, I understand where you're coming\n"
+	.string "from now.\p"
+	.string "If I had a POKéMON that trusty,\n"
+	.string "I'd want to SURF on it, too!$"
 
 J_Route103_Text_IsabelleIntro:
-	.string "Watc{SE_M_TRI_ATTACK}wher{SE_M_REVERSAL}you'r{SE_M_REVERSAL}going!\n"
-	.string "We'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}crash!$"
+	.string "Watch where you're going!\n"
+	.string "We're going to crash!$"
 
 J_Route103_Text_IsabelleDefeated:
 	.string "Groan…$"
 
 J_Route103_Text_IsabellePostBattle:
-	.string "I'{SE_M_MILK_DRINK}{SE_M_CHARGE}poo{SE_M_SAND_TOMB}swimme{SE_M_SAND_TOMB}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}practicing…\n"
-	.string "Sorr{SE_M_YAWN}fo{SE_M_SAND_TOMB}almos{SE_M_SPIT_UP}crashin{SE_M_SANDSTORM}int{SE_M_ATTRACT2}you.$"
+	.string "I'm a poor swimmer so I was practicing…\n"
+	.string "Sorry for almost crashing into you.$"
 
 J_Route103_Text_RhettIntro:
 	.string "Whoa!\n"
-	.string "How'{SE_M_WATERFALL}yo{SE_M_DIVE}ge{SE_M_SPIT_UP}int{SE_M_ATTRACT2}{SE_M_CHARGE}spac{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}small?$"
+	.string "How'd you get into a space this small?$"
 
 J_Route103_Text_RhettDefeated:
 	.string "Whoa!\n"
-	.string "Th{SE_M_REVERSAL}ki{SE_M_WATERFALL}ca{SE_M_ATTRACT}rock!$"
+	.string "The kid can rock!$"
 
 J_Route103_Text_RhettPostBattle:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}lik{SE_M_REVERSAL}crampe{SE_M_WATERFALL}quarters\n"
-	.string "lik{SE_M_REVERSAL}this?$"
+	.string "Do you like cramped quarters\n"
+	.string "like this?$"
 
 J_Route103_Text_MarcosIntro:
-	.string "Di{SE_M_WATERFALL}m{SE_M_YAWN}guitar'{SE_M_GRASSWHISTLE}wailin{SE_M_SANDSTORM}dra{SE_M_TWISTER}yo{SE_M_DIVE}in?$"
+	.string "Did my guitar's wailing draw you in?$"
 
 J_Route103_Text_MarcosDefeated:
-	.string "M{SE_M_YAWN}one-ma{SE_M_ATTRACT}sho{SE_M_TWISTER}i{SE_M_GRASSWHISTLE}ruined…$"
+	.string "My one-man show is ruined…$"
 
 J_Route103_Text_MarcosPostBattle:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}playin{SE_M_SANDSTORM}m{SE_M_YAWN}guita{SE_M_SAND_TOMB}wher{SE_M_REVERSAL}few\n"
-	.string "peopl{SE_M_REVERSAL}wer{SE_M_REVERSAL}around{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_CHARGE}lo{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}fans\l"
-	.string "hav{SE_M_REVERSAL}gathered.\p"
-	.string "Heh{SE_M_SUPERSONIC}mayb{SE_M_REVERSAL}{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}tur{SE_M_ATTRACT}pro.$"
+	.string "I was playing my guitar where few\n"
+	.string "people were around, but a lot of fans\l"
+	.string "have gathered.\p"
+	.string "Heh, maybe I should turn pro.$"
 
 J_Route104_Text_GinaIntro:
-	.string "GINA{SE_M_HEAT_WAVE}Okay{SE_M_SUPERSONIC}let'{SE_M_GRASSWHISTLE}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}our\n"
+	.string "GINA: Okay, let's battle with our\n"
 	.string "POKéMON!$"
 
 J_Route104_Text_GinaDefeat:
-	.string "GINA{SE_M_HEAT_WAVE}Losin{SE_M_SANDSTORM}upset{SE_M_GRASSWHISTLE}me!$"
+	.string "GINA: Losing upsets me!$"
 
 J_Route104_Text_GinaPostBattle:
-	.string "GINA{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}ar{SE_M_REVERSAL}strong!\n"
-	.string "W{SE_M_REVERSAL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}lot{SE_M_GRASSWHISTLE}more!$"
+	.string "GINA: You are strong!\n"
+	.string "We have to train lots more!$"
 
 J_Route104_Text_GinaNotEnoughMons:
-	.string "GINA{SE_M_HEAT_WAVE}Oh{SE_M_SING}Onl{SE_M_YAWN}on{SE_M_REVERSAL}POKéMON?\n"
-	.string "Then{SE_M_SUPERSONIC}w{SE_M_REVERSAL}don'{SE_M_SPIT_UP}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}you.\p"
-	.string "I{SE_M_ACID_ARMOR}there'{SE_M_GRASSWHISTLE}onl{SE_M_YAWN}on{SE_M_REVERSAL}POKéMON{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}will\n"
-	.string "b{SE_M_REVERSAL}lonesome{SE_M_PERISH_SONG}That'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}nice.$"
+	.string "GINA: Oh? Only one POKéMON?\n"
+	.string "Then, we don't battle with you.\p"
+	.string "If there's only one POKéMON, it will\n"
+	.string "be lonesome. That's not nice.$"
 
 J_Route104_Text_MiaIntro:
-	.string "MIA{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}ar{SE_M_REVERSAL}twins{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}w{SE_M_REVERSAL}battle\n"
-	.string "POKéMO{SE_M_PSYBEAM2}together.$"
+	.string "MIA: We are twins, so we battle\n"
+	.string "POKéMON together.$"
 
 J_Route104_Text_MiaDefeat:
-	.string "MIA{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}battle{SE_M_WATERFALL}together{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}we\n"
-	.string "bot{SE_M_TRI_ATTACK}lost…$"
+	.string "MIA: We battled together, but we\n"
+	.string "both lost…$"
 
 J_Route104_Text_MiaPostBattle:
-	.string "MIA{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}trai{SE_M_ATTRACT}ou{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}more\n"
-	.string "an{SE_M_WATERFALL}b{SE_M_REVERSAL}stron{SE_M_SANDSTORM}lik{SE_M_REVERSAL}you.$"
+	.string "MIA: We will train our POKéMON more\n"
+	.string "and be strong like you.$"
 
 J_Route104_Text_MiaNotEnoughMons:
-	.string "MIA{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}us?\p"
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bi{SE_M_SANDSTORM}no-n{SE_M_ATTRACT2}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}two\n"
-	.string "POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}you.\l"
-	.string "We'r{SE_M_REVERSAL}to{SE_M_ATTRACT2}stron{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you!$"
+	.string "MIA: You want to battle with us?\p"
+	.string "It's a big no-no if you don't have two\n"
+	.string "POKéMON with you.\l"
+	.string "We're too strong for you!$"
 
 J_Route104_Text_IvanIntro:
-	.string "Wh{SE_M_YAWN}kee{SE_M_MORNING_SUN}i{SE_M_SPIT_UP}{SE_M_CHARGE}secret?\n"
-	.string "I'{SE_M_MILK_DRINK}th{SE_M_REVERSAL}WATE{SE_M_MINIMIZE}POKéMO{SE_M_PSYBEAM2}expert!\p"
+	.string "Why keep it a secret?\n"
+	.string "I'm the WATER POKéMON expert!\p"
 	.string "Huh?\n"
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}me?$"
+	.string "You don't know me?$"
 
 J_Route104_Text_IvanDefeat:
-	.string "{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}{SE_M_HEAL_BELL}wasn'{SE_M_SPIT_UP}to{SE_M_ATTRACT2}bad{SE_M_SUPERSONIC}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}may\n"
-	.string "sa{SE_M_YAWN}so{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}not{SE_M_DIZZY_PUNCH}Bleah…$"
+	.string "I thought I wasn't too bad, if I may\n"
+	.string "say so, but I guess not… Bleah…$"
 
 J_Route104_Text_IvanPostBattle:
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}to{SE_M_ATTRACT2}int{SE_M_ATTRACT2}fishing.\n"
-	.string "{SE_M_HEAL_BELL}forgo{SE_M_SPIT_UP}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}t{SE_M_ATTRACT2}rais{SE_M_REVERSAL}m{SE_M_YAWN}POKéMON…$"
+	.string "I got too into fishing.\n"
+	.string "I forgot I had to raise my POKéMON…$"
 
 J_Route104_Text_BillyIntro:
-	.string "Leavin{SE_M_SANDSTORM}footprint{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}th{SE_M_REVERSAL}san{SE_M_WATERFALL}is\n"
-	.string "s{SE_M_ATTRACT2}fun!$"
+	.string "Leaving footprints in the sand is\n"
+	.string "so fun!$"
 
 J_Route104_Text_BillyDefeat:
-	.string "Waah{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}san{SE_M_WATERFALL}i{SE_M_ATTRACT}m{SE_M_YAWN}runners!\n"
-	.string "They'r{SE_M_REVERSAL}al{SE_M_BATON_PASS}gritty!$"
+	.string "Waah! I got sand in my runners!\n"
+	.string "They're all gritty!$"
 
 J_Route104_Text_BillyPostBattle:
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}leav{SE_M_REVERSAL}m{SE_M_YAWN}footprint{SE_M_GRASSWHISTLE}in\n"
-	.string "th{SE_M_REVERSAL}san{SE_M_WATERFALL}everywhere{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}they\l"
-	.string "disappea{SE_M_SAND_TOMB}quickly…$"
+	.string "I want to leave my footprints in\n"
+	.string "the sand everywhere, but they\l"
+	.string "disappear quickly…$"
 
 J_Route104_Text_HaleyIntro:
-	.string "Shoul{SE_M_WATERFALL}I…\n"
-	.string "O{SE_M_SAND_TOMB}shouldn'{SE_M_SPIT_UP}I?\p"
-	.string "Okay{SE_M_SUPERSONIC}sure{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}battle!$"
+	.string "Should I…\n"
+	.string "Or shouldn't I?\p"
+	.string "Okay, sure, I will battle!$"
 
 J_Route104_Text_HaleyDefeat:
-	.string "{SE_M_HEAL_BELL}shouldn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}battled…$"
+	.string "I shouldn't have battled…$"
 
 J_Route104_Text_HaleyPostBattle:
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}face{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}decisio{SE_M_ATTRACT}and\n"
-	.string "yo{SE_M_DIVE}le{SE_M_SPIT_UP}someon{SE_M_REVERSAL}els{SE_M_REVERSAL}choos{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}you,\l"
-	.string "yo{SE_M_DIVE}wil{SE_M_BATON_PASS}regre{SE_M_SPIT_UP}it{SE_M_SUPERSONIC}howeve{SE_M_SAND_TOMB}things\l"
-	.string "tur{SE_M_ATTRACT}out.$"
+	.string "If you're faced with a decision and\n"
+	.string "you let someone else choose for you,\l"
+	.string "you will regret it, however things\l"
+	.string "turn out.$"
 
 J_Route104_Text_HaleyRegister1:
-	.string "You'r{SE_M_REVERSAL}strong{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}register\n"
-	.string "yo{SE_M_DIVE}i{SE_M_ATTRACT}m{SE_M_YAWN}POKéNAV?\l"
-	.string "Mayb{SE_M_REVERSAL}{SE_M_HEAL_BELL}shouldn't…\p"
-	.string "Okay{SE_M_SUPERSONIC}sure{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}registe{SE_M_SAND_TOMB}you!$"
+	.string "You're strong, but should I register\n"
+	.string "you in my POKéNAV?\l"
+	.string "Maybe I shouldn't…\p"
+	.string "Okay, sure, I will register you!$"
 
 J_Route104_Text_HaleyRegister2:
-	.string "You'r{SE_M_REVERSAL}strong{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}register\n"
-	.string "yo{SE_M_DIVE}i{SE_M_ATTRACT}m{SE_M_YAWN}POKéNAV?\l"
-	.string "Mayb{SE_M_REVERSAL}{SE_M_HEAL_BELL}shouldn't…\p"
-	.string "Okay{SE_M_SUPERSONIC}sure{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}registe{SE_M_SAND_TOMB}you!$"
+	.string "You're strong, but should I register\n"
+	.string "you in my POKéNAV?\l"
+	.string "Maybe I shouldn't…\p"
+	.string "Okay, sure, I will register you!$"
 
 J_Route104_Text_HaleyRematchIntro:
-	.string "Com{SE_M_REVERSAL}on{SE_M_SUPERSONIC}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me!$"
+	.string "Come on, battle with me!$"
 
 J_Route104_Text_HaleyRematchDefeat:
 	.string "Ohh…\n"
-	.string "{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}win…$"
+	.string "I thought I could win…$"
 
 J_Route104_Text_HaleyPostRematch:
-	.string "{SE_M_HEAL_BELL}mad{SE_M_REVERSAL}th{SE_M_REVERSAL}decisio{SE_M_ATTRACT}t{SE_M_ATTRACT2}battle{SE_M_SUPERSONIC}so\n"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}accep{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}los{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}grace.\p"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}stil{SE_M_BATON_PASS}upse{SE_M_SPIT_UP}abou{SE_M_SPIT_UP}losing!$"
+	.string "I made the decision to battle, so\n"
+	.string "I can accept this loss with grace.\p"
+	.string "I am still upset about losing!$"
 
 J_Route104_Text_WinstonIntro:
-	.string "Oh{SE_M_SUPERSONIC}sure{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}accep{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}challenge.\n"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}{SE_M_CHARGE}lo{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}money.$"
+	.string "Oh, sure, I'll accept your challenge.\n"
+	.string "I have a lot of money.$"
 
 J_Route104_Text_WinstonDefeat:
-	.string "Wh{SE_M_YAWN}couldn'{SE_M_SPIT_UP}{SE_M_HEAL_BELL}win?$"
+	.string "Why couldn't I win?$"
 
 J_Route104_Text_WinstonPostBattle:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}som{SE_M_REVERSAL}thing{SE_M_GRASSWHISTLE}mone{SE_M_YAWN}can'{SE_M_SPIT_UP}buy.\n"
-	.string "That'{SE_M_GRASSWHISTLE}POKéMON…$"
+	.string "There are some things money can't buy.\n"
+	.string "That's POKéMON…$"
 
 J_Route104_Text_WinstonRegister1:
 	.string "Hm?\n"
-	.string "Ah{SE_M_SUPERSONIC}you'v{SE_M_REVERSAL}obtaine{SE_M_WATERFALL}{SE_M_CHARGE}POKéNAV.\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}gladl{SE_M_YAWN}registe{SE_M_SAND_TOMB}you.\n"
-	.string "Afte{SE_M_SAND_TOMB}all{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}plent{SE_M_YAWN}o{SE_M_ACID_ARMOR}money.$"
+	.string "Ah, you've obtained a POKéNAV.\p"
+	.string "I will gladly register you.\n"
+	.string "After all, I have plenty of money.$"
 
 J_Route104_Text_WinstonRegister2:
 	.string "Hm?\n"
-	.string "Ah{SE_M_SUPERSONIC}you'v{SE_M_REVERSAL}obtaine{SE_M_WATERFALL}{SE_M_CHARGE}POKéNAV.\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}gladl{SE_M_YAWN}registe{SE_M_SAND_TOMB}you.\n"
-	.string "Afte{SE_M_SAND_TOMB}all{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}plent{SE_M_YAWN}o{SE_M_ACID_ARMOR}money.$"
+	.string "Ah, you've obtained a POKéNAV.\p"
+	.string "I will gladly register you.\n"
+	.string "After all, I have plenty of money.$"
 
 J_Route104_Text_WinstonRematchIntro:
-	.string "Afte{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}t{SE_M_ATTRACT2}you{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}learne{SE_M_WATERFALL}{SE_M_CHARGE}bunch\n"
-	.string "o{SE_M_ACID_ARMOR}thing{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}POKéMON.$"
+	.string "After I lost to you, I learned a bunch\n"
+	.string "of things about POKéMON.$"
 
 J_Route104_Text_WinstonRematchDefeat:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}again?\n"
-	.string "Wh{SE_M_YAWN}couldn'{SE_M_SPIT_UP}{SE_M_HEAL_BELL}win?$"
+	.string "I lost again?\n"
+	.string "Why couldn't I win?$"
 
 J_Route104_Text_WinstonPostRematch:
-	.string "I'{SE_M_MILK_DRINK}fabulousl{SE_M_YAWN}wealthy{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}can't\n"
-	.string "see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}wi{SE_M_ATTRACT}a{SE_M_SPIT_UP}POKéMON…\p"
-	.string "It'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}deep{SE_M_SUPERSONIC}th{SE_M_REVERSAL}worl{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}POKéMON…$"
+	.string "I'm fabulously wealthy, but I can't\n"
+	.string "seem to win at POKéMON…\p"
+	.string "It's so deep, the world of POKéMON…$"
 
 J_Route104_Text_CindyIntro:
-	.string "W{SE_M_REVERSAL}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}fate{SE_M_WATERFALL}t{SE_M_ATTRACT2}meet.\n"
-	.string "Ma{SE_M_YAWN}{SE_M_HEAL_BELL}as{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}battle?$"
+	.string "We must have been fated to meet.\n"
+	.string "May I ask you for a battle?$"
 
 J_Route104_Text_CindyDefeat:
-	.string "Oh{SE_M_SUPERSONIC}my!$"
+	.string "Oh, my!$"
 
 J_Route104_Text_CindyPostBattle:
-	.string "“Hello{SE_M_EXPLOSION}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}beginnin{SE_M_SANDSTORM}o{SE_M_ACID_ARMOR}“good-bye.”\n"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}w{SE_M_REVERSAL}mee{SE_M_SPIT_UP}again.$"
+	.string "“Hello” is the beginning of “good-bye.”\n"
+	.string "I hope we meet again.$"
 
 J_Route104_Text_CindyRegister1:
-	.string "Hello{SE_M_SUPERSONIC}w{SE_M_REVERSAL}mee{SE_M_SPIT_UP}again.\p"
-	.string "W{SE_M_REVERSAL}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}draw{SE_M_ATTRACT}together{SE_M_PERISH_SONG}Let's\n"
-	.string "registe{SE_M_SAND_TOMB}eac{SE_M_TRI_ATTACK}othe{SE_M_SAND_TOMB}i{SE_M_ATTRACT}ou{SE_M_SAND_TOMB}POKéNAVS.$"
+	.string "Hello, we meet again.\p"
+	.string "We seem to be drawn together. Let's\n"
+	.string "register each other in our POKéNAVS.$"
 
 J_Route104_Text_CindyRegister2:
-	.string "W{SE_M_REVERSAL}shoul{SE_M_WATERFALL}commemorat{SE_M_REVERSAL}ho{SE_M_TWISTER}w{SE_M_REVERSAL}seem\n"
-	.string "t{SE_M_ATTRACT2}b{SE_M_REVERSAL}draw{SE_M_ATTRACT}t{SE_M_ATTRACT2}eac{SE_M_TRI_ATTACK}other.\p"
-	.string "Let'{SE_M_GRASSWHISTLE}registe{SE_M_SAND_TOMB}eac{SE_M_TRI_ATTACK}othe{SE_M_SAND_TOMB}i{SE_M_ATTRACT}our\n"
+	.string "We should commemorate how we seem\n"
+	.string "to be drawn to each other.\p"
+	.string "Let's register each other in our\n"
 	.string "POKéNAVS.$"
 
 J_Route104_Text_CindyRematchIntro:
-	.string "Hello{SE_M_SUPERSONIC}w{SE_M_REVERSAL}mee{SE_M_SPIT_UP}again.\n"
-	.string "Ma{SE_M_YAWN}{SE_M_HEAL_BELL}as{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}battle?$"
+	.string "Hello, we meet again.\n"
+	.string "May I ask you for a battle?$"
 
 J_Route104_Text_CindyRematchDefeat:
-	.string "Oh{SE_M_SUPERSONIC}my…\n"
-	.string "{SE_M_HEAL_BELL}di{SE_M_WATERFALL}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}could…$"
+	.string "Oh, my…\n"
+	.string "I did the best that I could…$"
 
 J_Route104_Text_CindyPostRematch:
-	.string "“Hello{SE_M_EXPLOSION}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}beginnin{SE_M_SANDSTORM}o{SE_M_ACID_ARMOR}“good-bye.”\n"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}w{SE_M_REVERSAL}mee{SE_M_SPIT_UP}again.$"
+	.string "“Hello” is the beginning of “good-bye.”\n"
+	.string "I hope we meet again.$"
 
 J_Route104_Text_DarianIntro:
-	.string "{SE_M_HEAL_BELL}fishe{SE_M_WATERFALL}u{SE_M_MORNING_SUN}{SE_M_CHARGE}tough-lookin{SE_M_SANDSTORM}POKéMON!\p"
-	.string "I{SE_M_SPIT_UP}ha{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}magica{SE_M_BATON_PASS}qualit{SE_M_YAWN}t{SE_M_ATTRACT2}it!\n"
-	.string "I{SE_M_SPIT_UP}surel{SE_M_YAWN}look{SE_M_GRASSWHISTLE}tough{SE_M_SUPERSONIC}ye{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}does!$"
+	.string "I fished up a tough-looking POKéMON!\p"
+	.string "It has this magical quality to it!\n"
+	.string "It surely looks tough, yes it does!$"
 
 J_Route104_Text_DarianDefeat:
-	.string "Wha{SE_M_SPIT_UP}the…$"
+	.string "What the…$"
 
 J_Route104_Text_DarianPostBattle:
-	.string "Hey{SE_M_SUPERSONIC}MAGIKARP{SE_M_SUPERSONIC}yo{SE_M_DIVE}sur{SE_M_REVERSAL}don'{SE_M_SPIT_UP}liv{SE_M_REVERSAL}up\n"
-	.string "t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}name{SE_M_SUPERSONIC}d{SE_M_ATTRACT2}you?$"
+	.string "Hey, MAGIKARP, you sure don't live up\n"
+	.string "to your name, do you?$"
 
 J_Route105_Text_FosterIntro:
-	.string "There'{SE_M_GRASSWHISTLE}suppose{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}{SE_M_CHARGE}mystical\n"
-	.string "roc{SE_M_ENCORE2}aroun{SE_M_WATERFALL}here.\l"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}anythin{SE_M_SANDSTORM}abou{SE_M_SPIT_UP}it?$"
+	.string "There's supposed to be a mystical\n"
+	.string "rock around here.\l"
+	.string "Do you know anything about it?$"
 
 J_Route105_Text_FosterDefeated:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}thinkin{SE_M_SANDSTORM}to{SE_M_ATTRACT2}muc{SE_M_TRI_ATTACK}abou{SE_M_SPIT_UP}that\n"
-	.string "rock{SE_M_SUPERSONIC}whil{SE_M_REVERSAL}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}remaine{SE_M_WATERFALL}weak…$"
+	.string "I was thinking too much about that\n"
+	.string "rock, while my POKéMON remained weak…$"
 
 J_Route105_Text_FosterPostBattle:
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}spen{SE_M_WATERFALL}hour{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}hour{SE_M_GRASSWHISTLE}staring\n"
-	.string "a{SE_M_SPIT_UP}{SE_M_CHARGE}nic{SE_M_REVERSAL}roc{SE_M_ENCORE2}withou{SE_M_SPIT_UP}growin{SE_M_SANDSTORM}bored.$"
+	.string "I can spend hours and hours staring\n"
+	.string "at a nice rock without growing bored.$"
 
 J_Route105_Text_LuisIntro:
-	.string "Whew{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}worrie{SE_M_WATERFALL}tha{SE_M_SPIT_UP}{SE_M_CHARGE}ki{SE_M_WATERFALL}was\n"
-	.string "drownin{SE_M_SANDSTORM}whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}sa{SE_M_TWISTER}you.\p"
-	.string "Yo{SE_M_DIVE}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}okay{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}wha{SE_M_SPIT_UP}d{SE_M_ATTRACT2}you\n"
-	.string "sa{SE_M_YAWN}t{SE_M_ATTRACT2}{SE_M_CHARGE}battle?$"
+	.string "Whew! I was worried that a kid was\n"
+	.string "drowning when I saw you.\p"
+	.string "You seem to be okay, so what do you\n"
+	.string "say to a battle?$"
 
 J_Route105_Text_LuisDefeated:
-	.string "Glub{SE_M_DIZZY_PUNCH}Glub…$"
+	.string "Glub… Glub…$"
 
 J_Route105_Text_LuisPostBattle:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ar{SE_M_REVERSAL}drowning{SE_M_SUPERSONIC}th{SE_M_REVERSAL}signa{SE_M_BATON_PASS}i{SE_M_GRASSWHISTLE}to\n"
-	.string "wav{SE_M_REVERSAL}on{SE_M_REVERSAL}ar{SE_M_MILK_DRINK}towar{SE_M_WATERFALL}th{SE_M_REVERSAL}beach.$"
+	.string "If you are drowning, the signal is to\n"
+	.string "wave one arm toward the beach.$"
 
 J_Route105_Text_DominikIntro:
-	.string "Swimmin{SE_M_SANDSTORM}th{SE_M_REVERSAL}dee{SE_M_MORNING_SUN}blu{SE_M_REVERSAL}sea…\n"
-	.string "I{SE_M_SPIT_UP}feel{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}greatest!$"
+	.string "Swimming the deep blue sea…\n"
+	.string "It feels the greatest!$"
 
 J_Route105_Text_DominikDefeated:
-	.string "{SE_M_HEAL_BELL}lost…\n"
-	.string "No{SE_M_TWISTER}I'{SE_M_MILK_DRINK}feelin{SE_M_SANDSTORM}blue…$"
+	.string "I lost…\n"
+	.string "Now I'm feeling blue…$"
 
 J_Route105_Text_DominikPostBattle:
-	.string "Wh{SE_M_YAWN}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}se{SE_M_CHARGE}blue?\p"
-	.string "{SE_M_HEAL_BELL}learne{SE_M_WATERFALL}abou{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}MUSEU{SE_M_GIGA_DRAIN}in\n"
-	.string "SLATEPORT{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}forgot.$"
+	.string "Why is the sea blue?\p"
+	.string "I learned about that at the MUSEUM in\n"
+	.string "SLATEPORT, but I forgot.$"
 
 J_Route105_Text_BeverlyIntro:
-	.string "M{SE_M_YAWN}bod{SE_M_YAWN}feel{SE_M_GRASSWHISTLE}lighte{SE_M_SAND_TOMB}i{SE_M_ATTRACT}th{SE_M_REVERSAL}water.\n"
-	.string "It'{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}I'v{SE_M_REVERSAL}gotte{SE_M_ATTRACT}slimmer!$"
+	.string "My body feels lighter in the water.\n"
+	.string "It's as if I've gotten slimmer!$"
 
 J_Route105_Text_BeverlyDefeated:
-	.string "I'{SE_M_MILK_DRINK}floating…$"
+	.string "I'm floating…$"
 
 J_Route105_Text_PostBattle:
-	.string "You{SE_M_SAND_TOMB}bod{SE_M_YAWN}weigh{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}reduce{SE_M_WATERFALL}t{SE_M_ATTRACT2}just\n"
-	.string "on{SE_M_REVERSAL}tent{SE_M_TRI_ATTACK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}water.\p"
-	.string "Tha{SE_M_SPIT_UP}woul{SE_M_WATERFALL}mak{SE_M_REVERSAL}me…\n"
-	.string "Whoops{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}tellin{SE_M_SANDSTORM}yo{SE_M_DIVE}m{SE_M_YAWN}weight!$"
+	.string "Your body weight is reduced to just\n"
+	.string "one tenth in the water.\p"
+	.string "That would make me…\n"
+	.string "Whoops! I'm not telling you my weight!$"
 
 J_Route105_Text_ImaniIntro:
-	.string "Th{SE_M_REVERSAL}blue{SE_M_SUPERSONIC}blu{SE_M_REVERSAL}sky…\n"
-	.string "Th{SE_M_REVERSAL}vas{SE_M_SPIT_UP}sea…\l"
-	.string "It'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}peaceful…$"
+	.string "The blue, blue sky…\n"
+	.string "The vast sea…\l"
+	.string "It's so peaceful…$"
 
 J_Route105_Text_ImaniDefeated:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}whil{SE_M_REVERSAL}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}lounging!$"
+	.string "I lost while I was lounging!$"
 
 J_Route105_Text_ImaniPostBattle:
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}tol{SE_M_WATERFALL}I'{SE_M_MILK_DRINK}relaxin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}be\n"
-	.string "with{SE_M_PERISH_SONG}Giggle.$"
+	.string "I want to be told I'm relaxing to be\n"
+	.string "with. Giggle.$"
 
 J_Route105_Text_AndresIntro:
-	.string "I'{SE_M_MILK_DRINK}convince{SE_M_WATERFALL}tha{SE_M_SPIT_UP}th{SE_M_REVERSAL}se{SE_M_CHARGE}keeps\n"
-	.string "secret{SE_M_GRASSWHISTLE}fro{SE_M_MILK_DRINK}us.$"
+	.string "I'm convinced that the sea keeps\n"
+	.string "secrets from us.$"
 
 J_Route105_Text_AndresDefeated:
 	.string "Yes…\n"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}n{SE_M_ATTRACT2}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}battling…$"
+	.string "I am no good at battling…$"
 
 J_Route105_Text_AndresPostBattle:
-	.string "I'{SE_M_MILK_DRINK}sur{SE_M_REVERSAL}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}man{SE_M_YAWN}secret{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}be\n"
-	.string "discovere{SE_M_WATERFALL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}world'{SE_M_GRASSWHISTLE}seas.\p"
-	.string "{SE_M_HEAL_BELL}mea{SE_M_ATTRACT}t{SE_M_ATTRACT2}fin{SE_M_WATERFALL}the{SE_M_MILK_DRINK}all!$"
+	.string "I'm sure there are many secrets to be\n"
+	.string "discovered in the world's seas.\p"
+	.string "I mean to find them all!$"
 
 J_Route105_Text_AndresRegister:
-	.string "Huh{SE_M_SING}I'{SE_M_MILK_DRINK}s{SE_M_ATTRACT2}weak{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}you'r{SE_M_REVERSAL}willing\n"
-	.string "t{SE_M_ATTRACT2}registe{SE_M_SAND_TOMB}m{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéNAV?$"
+	.string "Huh? I'm so weak, but you're willing\n"
+	.string "to register me in your POKéNAV?$"
 
 J_Route105_Text_AndresRematchIntro:
-	.string "I'v{SE_M_REVERSAL}tol{SE_M_WATERFALL}yo{SE_M_DIVE}tha{SE_M_SPIT_UP}I'{SE_M_MILK_DRINK}weak…\n"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}sur{SE_M_REVERSAL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}this?$"
+	.string "I've told you that I'm weak…\n"
+	.string "Are you sure you want to do this?$"
 
 J_Route105_Text_AndresRematchDefeated:
 	.string "Yes…\n"
-	.string "{SE_M_HEAL_BELL}didn'{SE_M_SPIT_UP}thin{SE_M_ENCORE2}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}win.$"
+	.string "I didn't think I could win.$"
 
 J_Route105_Text_AndresRematchPostBattle:
-	.string "{SE_M_HEAL_BELL}ma{SE_M_YAWN}b{SE_M_REVERSAL}wea{SE_M_ENCORE2}a{SE_M_SPIT_UP}battling{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}my\n"
-	.string "driv{SE_M_REVERSAL}t{SE_M_ATTRACT2}explor{SE_M_REVERSAL}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}bested.\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}trave{SE_M_BATON_PASS}th{SE_M_REVERSAL}sea{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}around\n"
-	.string "th{SE_M_REVERSAL}world!$"
+	.string "I may be weak at battling, but my\n"
+	.string "drive to explore can't be bested.\p"
+	.string "I will travel the seas all around\n"
+	.string "the world!$"
 
 J_Route105_Text_JosueIntro:
-	.string "I'{SE_M_MILK_DRINK}exhauste{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}swimming.\n"
-	.string "I'{SE_M_MILK_DRINK}jus{SE_M_SPIT_UP}no{SE_M_SPIT_UP}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}it.\p"
-	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}{SE_M_CHARGE}battl{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}chang{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}pace!$"
+	.string "I'm exhausted from swimming.\n"
+	.string "I'm just not used to it.\p"
+	.string "I need a battle for a change of pace!$"
 
 J_Route105_Text_JosueDefeated:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}becaus{SE_M_REVERSAL}{SE_M_HEAL_BELL}battle{SE_M_WATERFALL}a{SE_M_SPIT_UP}sea.$"
+	.string "I lost because I battled at sea.$"
 
 J_Route105_Text_JosuePostBattle:
-	.string "Yeah{SE_M_SUPERSONIC}fo{SE_M_SAND_TOMB}me{SE_M_SUPERSONIC}th{SE_M_REVERSAL}sk{SE_M_YAWN}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}muc{SE_M_TRI_ATTACK}better\n"
-	.string "matc{SE_M_TRI_ATTACK}tha{SE_M_ATTRACT}th{SE_M_REVERSAL}sea.$"
+	.string "Yeah, for me, the sky is a much better\n"
+	.string "match than the sea.$"
 
 J_Route106_Text_ElliotIntro:
-	.string "Whic{SE_M_TRI_ATTACK}d{SE_M_ATTRACT2}yo{SE_M_DIVE}prefer{SE_M_SUPERSONIC}fishin{SE_M_SANDSTORM}i{SE_M_ATTRACT}the\n"
-	.string "se{SE_M_CHARGE}o{SE_M_SAND_TOMB}{SE_M_CHARGE}stream?$"
+	.string "Which do you prefer, fishing in the\n"
+	.string "sea or a stream?$"
 
 J_Route106_Text_ElliotDefeated:
-	.string "Lik{SE_M_REVERSAL}i{SE_M_ATTRACT}deep-se{SE_M_CHARGE}fishing{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lost\n"
+	.string "Like in deep-sea fishing, I lost\n"
 	.string "spectacularly!$"
 
 J_Route106_Text_ElliotPostBattle:
-	.string "Fishin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}greates{SE_M_SPIT_UP}whethe{SE_M_SAND_TOMB}it's\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}se{SE_M_CHARGE}o{SE_M_SAND_TOMB}{SE_M_CHARGE}stream.\l"
-	.string "Yo{SE_M_DIVE}agre{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me{SE_M_SUPERSONIC}right?$"
+	.string "Fishing is the greatest whether it's\n"
+	.string "in the sea or a stream.\l"
+	.string "You agree with me, right?$"
 
 J_Route106_Text_ElliotRegister:
-	.string "Fishing'{SE_M_GRASSWHISTLE}great{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}s{SE_M_ATTRACT2}i{SE_M_GRASSWHISTLE}battling.\n"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}mind{SE_M_SUPERSONIC}ca{SE_M_ATTRACT}w{SE_M_REVERSAL}mee{SE_M_SPIT_UP}again?$"
+	.string "Fishing's great, but so is battling.\n"
+	.string "If you don't mind, can we meet again?$"
 
 J_Route106_Text_ElliotRematchIntro:
-	.string "{SE_M_HEAL_BELL}caugh{SE_M_SPIT_UP}{SE_M_CHARGE}bunc{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}fishing.\n"
-	.string "I'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}a{SE_M_ATTRACT}impressiv{SE_M_REVERSAL}battle!$"
+	.string "I caught a bunch of POKéMON fishing.\n"
+	.string "I'll show you an impressive battle!$"
 
 J_Route106_Text_ElliotRematchDefeated:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}agai{SE_M_ATTRACT}spectacularly!$"
+	.string "I lost again spectacularly!$"
 
 J_Route106_Text_ElliotRematchPostBattle:
-	.string "Wi{SE_M_ATTRACT}o{SE_M_SAND_TOMB}lose{SE_M_SUPERSONIC}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}th{SE_M_REVERSAL}greatest!\n"
-	.string "Yo{SE_M_DIVE}agre{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me{SE_M_SUPERSONIC}right?$"
+	.string "Win or lose, POKéMON are the greatest!\n"
+	.string "You agree with me, right?$"
 
 J_Route106_Text_NedIntro:
-	.string "Wha{SE_M_SPIT_UP}d{SE_M_ATTRACT2}peopl{SE_M_REVERSAL}d{SE_M_ATTRACT2}i{SE_M_ACID_ARMOR}the{SE_M_YAWN}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}go\n"
-	.string "t{SE_M_ATTRACT2}{SE_M_CHARGE}washroom?\p"
-	.string "Wha{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}m{SE_M_YAWN}RO{SE_M_FAINT_ATTACK}hook{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bi{SE_M_SANDSTORM}on{SE_M_REVERSAL}while\n"
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}washroom{SE_M_SING}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}can'{SE_M_SPIT_UP}go…$"
+	.string "What do people do if they need to go\n"
+	.string "to a washroom?\p"
+	.string "What if my ROD hooks a big one while\n"
+	.string "I'm in the washroom? I just can't go…$"
 
 J_Route106_Text_NedDefeated:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}becaus{SE_M_REVERSAL}I'{SE_M_MILK_DRINK}tryin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}no{SE_M_SPIT_UP}go\n"
-	.string "t{SE_M_ATTRACT2}th{SE_M_REVERSAL}washroom…$"
+	.string "I lost because I'm trying to not go\n"
+	.string "to the washroom…$"
 
 J_Route106_Text_NedPostBattle:
-	.string "Oh{SE_M_SUPERSONIC}no{SE_M_DRAGON_RAGE}I'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}feelin{SE_M_SANDSTORM}I'l{SE_M_BATON_PASS}hook\n"
-	.string "{SE_M_CHARGE}bi{SE_M_SANDSTORM}one!$"
+	.string "Oh, no! I've got this feeling I'll hook\n"
+	.string "a big one!$"
 
 J_Route106_Text_DouglasIntro:
-	.string "Hahahah{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}{SE_M_CHARGE}lous{SE_M_YAWN}runner{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}in\n"
-	.string "th{SE_M_REVERSAL}wate{SE_M_SAND_TOMB}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}catc{SE_M_TRI_ATTACK}me!$"
+	.string "Hahahah! I'm a lousy runner, but in\n"
+	.string "the water you can't catch me!$"
 
 J_Route106_Text_DouglasDefeated:
-	.string "{SE_M_HEAL_BELL}giv{SE_M_REVERSAL}up!$"
+	.string "I give up!$"
 
 J_Route106_Text_DouglasPostBattle:
-	.string "{SE_M_HEAL_BELL}wouldn'{SE_M_SPIT_UP}los{SE_M_REVERSAL}i{SE_M_ATTRACT}{SE_M_CHARGE}swi{SE_M_MILK_DRINK}race…$"
+	.string "I wouldn't lose in a swim race…$"
 
 J_Route106_Text_KylaIntro:
-	.string "Th{SE_M_REVERSAL}se{SE_M_CHARGE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}backyard{SE_M_PERISH_SONG}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}going\n"
-	.string "t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}eas{SE_M_YAWN}becaus{SE_M_REVERSAL}you'r{SE_M_REVERSAL}{SE_M_CHARGE}kid!$"
+	.string "The sea is my backyard. I'm not going\n"
+	.string "to take it easy because you're a kid!$"
 
 J_Route106_Text_KylaDefeated:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}eas{SE_M_YAWN}o{SE_M_ATTRACT}m{SE_M_REVERSAL}b{SE_M_YAWN}any\n"
+	.string "Did you take it easy on me by any\n"
 	.string "chance?$"
 
 J_Route106_Text_KylaPostBattle:
-	.string "Driftin{SE_M_SANDSTORM}alon{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}waves…\n"
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}it{SE_M_DRAGON_RAGE}Wh{SE_M_YAWN}don'{SE_M_SPIT_UP}yo{SE_M_DIVE}giv{SE_M_REVERSAL}i{SE_M_SPIT_UP}{SE_M_CHARGE}try?$"
+	.string "Drifting along with the waves…\n"
+	.string "I love it! Why don't you give it a try?$"
 
 J_Route107_Text_DarrinIntro:
 	.string "Yawn…\p"
-	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}drifte{SE_M_WATERFALL}of{SE_M_ACID_ARMOR}t{SE_M_ATTRACT2}slee{SE_M_MORNING_SUN}while\n"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}driftin{SE_M_SANDSTORM}i{SE_M_ATTRACT}th{SE_M_REVERSAL}waves.$"
+	.string "I must have drifted off to sleep while\n"
+	.string "I was drifting in the waves.$"
 
 J_Route107_Text_DarrinDefeated:
-	.string "Ahaha{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lost…\n"
-	.string "I'l{SE_M_BATON_PASS}tak{SE_M_REVERSAL}{SE_M_CHARGE}snooze{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}think…$"
+	.string "Ahaha, I lost…\n"
+	.string "I'll take a snooze, I think…$"
 
 J_Route107_Text_DarrinPostBattle:
-	.string "Floatin{SE_M_SANDSTORM}an{SE_M_WATERFALL}bein{SE_M_SANDSTORM}rocke{SE_M_WATERFALL}by\n"
-	.string "th{SE_M_REVERSAL}waves--it'{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}sleepin{SE_M_SANDSTORM}in\l"
-	.string "{SE_M_CHARGE}plush{SE_M_SUPERSONIC}comf{SE_M_YAWN}bed.$"
+	.string "Floating and being rocked by\n"
+	.string "the waves--it's like sleeping in\l"
+	.string "a plush, comfy bed.$"
 
 J_Route107_Text_TonyIntro:
-	.string "Th{SE_M_REVERSAL}se{SE_M_CHARGE}i{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}m{SE_M_YAWN}backyard.\n"
-	.string "Let'{SE_M_GRASSWHISTLE}battle!$"
+	.string "The sea is like my backyard.\n"
+	.string "Let's battle!$"
 
 J_Route107_Text_TonyDefeated:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}o{SE_M_ATTRACT}m{SE_M_YAWN}hom{SE_M_REVERSAL}field…\n"
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}shock!$"
+	.string "I lost on my home field…\n"
+	.string "I'm in shock!$"
 
 J_Route107_Text_TonyPostBattle:
-	.string "{SE_M_HEAL_BELL}swi{SE_M_MILK_DRINK}th{SE_M_REVERSAL}sea{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}hear{SE_M_SPIT_UP}ful{SE_M_BATON_PASS}of\n"
+	.string "I swim the seas with a heart full of\n"
 	.string "dreams…\p"
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}song!\n"
-	.string "Anyways{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}swimmin{SE_M_SANDSTORM}som{SE_M_REVERSAL}more.$"
+	.string "It's a song!\n"
+	.string "Anyways, I'm swimming some more.$"
 
 J_Route107_Text_TonyRegister:
-	.string "You'v{SE_M_REVERSAL}shocke{SE_M_WATERFALL}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}bone!\n"
-	.string "Well{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}yo{SE_M_DIVE}won'{SE_M_SPIT_UP}forge{SE_M_SPIT_UP}me…$"
+	.string "You've shocked me to the bone!\n"
+	.string "Well, so you won't forget me…$"
 
 J_Route107_Text_TonyRematchIntro:
-	.string "Swimmin{SE_M_SANDSTORM}i{SE_M_ATTRACT}th{SE_M_REVERSAL}big{SE_M_SUPERSONIC}wid{SE_M_REVERSAL}sea,\n"
-	.string "m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}ha{SE_M_GRASSWHISTLE}grow{SE_M_ATTRACT}stronger!$"
+	.string "Swimming in the big, wide sea,\n"
+	.string "my POKéMON has grown stronger!$"
 
 J_Route107_Text_TonyRematchDefeated:
-	.string "Wha{SE_M_SPIT_UP}{SE_M_CHARGE}shock!\p"
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}ha{SE_M_GRASSWHISTLE}gotte{SE_M_ATTRACT}stronger{SE_M_SUPERSONIC}but\n"
-	.string "{SE_M_HEAL_BELL}staye{SE_M_WATERFALL}wea{SE_M_ENCORE2}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}TRAINER!$"
+	.string "What a shock!\p"
+	.string "My POKéMON has gotten stronger, but\n"
+	.string "I stayed weak as a TRAINER!$"
 
 J_Route107_Text_TonyRematchPostBattle:
-	.string "Wha{SE_M_SPIT_UP}yo{SE_M_DIVE}lear{SE_M_ATTRACT}i{SE_M_ATTRACT}battl{SE_M_REVERSAL}make{SE_M_GRASSWHISTLE}you\n"
-	.string "{SE_M_CHARGE}stronge{SE_M_SAND_TOMB}TRAINER.\l"
-	.string "Th{SE_M_REVERSAL}wave{SE_M_GRASSWHISTLE}taugh{SE_M_SPIT_UP}m{SE_M_REVERSAL}that.$"
+	.string "What you learn in battle makes you\n"
+	.string "a stronger TRAINER.\l"
+	.string "The waves taught me that.$"
 
 J_Route107_Text_DeniseIntro:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}{SE_M_CHARGE}littl{SE_M_REVERSAL}tow{SE_M_ATTRACT}called\n"
+	.string "Do you know a little town called\n"
 	.string "DEWFORD?$"
 
 J_Route107_Text_DeniseDefeated:
-	.string "{SE_M_HEAL_BELL}hat{SE_M_REVERSAL}this!$"
+	.string "I hate this!$"
 
 J_Route107_Text_DenisePostBattle:
-	.string "{SE_M_BONEMERANG}weir{SE_M_WATERFALL}sayin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}gettin{SE_M_SANDSTORM}really\n"
-	.string "trend{SE_M_YAWN}a{SE_M_SPIT_UP}DEWFOR{SE_M_FAINT_ATTACK}HALL.$"
+	.string "A weird saying is getting really\n"
+	.string "trendy at DEWFORD HALL.$"
 
 J_Route107_Text_BethIntro:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}me?\n"
-	.string "Sure{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}wit{SE_M_TRI_ATTACK}you!$"
+	.string "Did you want to battle me?\n"
+	.string "Sure, I'll go with you!$"
 
 J_Route107_Text_BethDefeated:
-	.string "{SE_M_HEAL_BELL}wasn'{SE_M_SPIT_UP}goo{SE_M_WATERFALL}enoug{SE_M_TRI_ATTACK}fo{SE_M_SAND_TOMB}you.$"
+	.string "I wasn't good enough for you.$"
 
 J_Route107_Text_BethPostBattle:
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}you'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}getting\n"
-	.string "better{SE_M_PERISH_SONG}I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}fo{SE_M_SAND_TOMB}it{SE_M_SUPERSONIC}too!$"
+	.string "I think you're going to keep getting\n"
+	.string "better. I'll go for it, too!$"
 
 J_Route107_Text_LisaIntro:
-	.string "LISA{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}challeng{SE_M_REVERSAL}yo{SE_M_DIVE}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}sister\n"
-	.string "an{SE_M_WATERFALL}brother!$"
+	.string "LISA: We challenge you as a sister\n"
+	.string "and brother!$"
 
 J_Route107_Text_LisaDefeated:
-	.string "LISA{SE_M_HEAT_WAVE}Awesome.\n"
-	.string "You'r{SE_M_REVERSAL}i{SE_M_ATTRACT}{SE_M_CHARGE}differen{SE_M_SPIT_UP}clas{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}tough.$"
+	.string "LISA: Awesome.\n"
+	.string "You're in a different class of tough.$"
 
 J_Route107_Text_LisaPostBattle:
-	.string "LISA{SE_M_HEAT_WAVE}D{SE_M_ATTRACT2}yo{SE_M_DIVE}hav{SE_M_REVERSAL}an{SE_M_YAWN}friend{SE_M_GRASSWHISTLE}who\n"
-	.string "woul{SE_M_WATERFALL}g{SE_M_ATTRACT2}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}beac{SE_M_TRI_ATTACK}wit{SE_M_TRI_ATTACK}you?$"
+	.string "LISA: Do you have any friends who\n"
+	.string "would go to the beach with you?$"
 
 J_Route107_Text_LisaNotEnoughPokemon:
-	.string "LISA{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}us,\n"
-	.string "brin{SE_M_SANDSTORM}mor{SE_M_REVERSAL}POKéMON.$"
+	.string "LISA: If you want to battle with us,\n"
+	.string "bring more POKéMON.$"
 
 J_Route107_Text_RayIntro:
-	.string "RAY{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}alway{SE_M_GRASSWHISTLE}battl{SE_M_REVERSAL}POKéMON,\n"
-	.string "m{SE_M_REVERSAL}an{SE_M_WATERFALL}m{SE_M_YAWN}sister.\p"
-	.string "{SE_M_HEAL_BELL}alway{SE_M_GRASSWHISTLE}lose{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}w{SE_M_REVERSAL}ca{SE_M_ATTRACT}bea{SE_M_SPIT_UP}you\n"
+	.string "RAY: We always battle POKéMON,\n"
+	.string "me and my sister.\p"
+	.string "I always lose, but we can beat you\n"
 	.string "2-on-2!$"
 
 J_Route107_Text_RayDefeated:
-	.string "RAY{SE_M_HEAT_WAVE}Wowee{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}a{SE_M_SPIT_UP}{SE_M_CHARGE}highe{SE_M_SAND_TOMB}level\n"
-	.string "tha{SE_M_ATTRACT}us!$"
+	.string "RAY: Wowee, you're at a higher level\n"
+	.string "than us!$"
 
 J_Route107_Text_RayPostBattle:
-	.string "RAY{SE_M_HEAT_WAVE}M{SE_M_YAWN}siste{SE_M_SAND_TOMB}gav{SE_M_REVERSAL}m{SE_M_REVERSAL}m{SE_M_YAWN}POKéMON.\n"
-	.string "{SE_M_HEAL_BELL}raise{SE_M_WATERFALL}it{SE_M_SUPERSONIC}an{SE_M_WATERFALL}no{SE_M_TWISTER}it'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}important\l"
+	.string "RAY: My sister gave me my POKéMON.\n"
+	.string "I raised it, and now it's my important\l"
 	.string "partner!$"
 
 J_Route107_Text_RayNotEnoughPokemon:
-	.string "RAY{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us,\n"
-	.string "g{SE_M_ATTRACT2}brin{SE_M_SANDSTORM}som{SE_M_REVERSAL}mor{SE_M_REVERSAL}POKéMON!$"
+	.string "RAY: If you want to battle us,\n"
+	.string "go bring some more POKéMON!$"
 
 J_Route107_Text_CamronIntro:
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}middl{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}triathlon,\n"
-	.string "bu{SE_M_SPIT_UP}I'{SE_M_MILK_DRINK}nowher{SE_M_REVERSAL}nea{SE_M_SAND_TOMB}tired!$"
+	.string "I'm in the middle of a triathlon,\n"
+	.string "but I'm nowhere near tired!$"
 
 J_Route107_Text_CamronDefeated:
-	.string "Tha{SE_M_SPIT_UP}exhauste{SE_M_WATERFALL}me…$"
+	.string "That exhausted me…$"
 
 J_Route107_Text_CamronPostBattle:
-	.string "{SE_M_HEAL_BELL}stil{SE_M_BATON_PASS}hav{SE_M_REVERSAL}swimmin{SE_M_SANDSTORM}an{SE_M_WATERFALL}runnin{SE_M_SANDSTORM}left\n"
-	.string "t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}afte{SE_M_SAND_TOMB}this.\p"
-	.string "A{SE_M_MILK_DRINK}{SE_M_HEAL_BELL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}okay?$"
+	.string "I still have swimming and running left\n"
+	.string "to do after this.\p"
+	.string "Am I going to be okay?$"
 
 J_Route108_Text_JeromeIntro:
-	.string "M{SE_M_YAWN}drea{SE_M_MILK_DRINK}i{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}swi{SE_M_MILK_DRINK}th{SE_M_REVERSAL}world'{SE_M_GRASSWHISTLE}seven\n"
+	.string "My dream is to swim the world's seven\n"
 	.string "seas!$"
 
 J_Route108_Text_JeromeDefeated:
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}t{SE_M_ATTRACT2}swi{SE_M_MILK_DRINK}th{SE_M_REVERSAL}seve{SE_M_ATTRACT}seas\n"
-	.string "lik{SE_M_REVERSAL}this…$"
+	.string "I won't be able to swim the seven seas\n"
+	.string "like this…$"
 
 J_Route108_Text_JeromePostBattle:
-	.string "Playin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}marin{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}on{SE_M_REVERSAL}of\n"
-	.string "th{SE_M_REVERSAL}pleasure{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}swimming!$"
+	.string "Playing with marine POKéMON is one of\n"
+	.string "the pleasures of swimming!$"
 
 J_Route108_Text_MatthewIntro:
-	.string "Ahoy{SE_M_SUPERSONIC}there{SE_M_DRAGON_RAGE}Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}ou{SE_M_SPIT_UP}to\n"
-	.string "th{SE_M_REVERSAL}ABANDONE{SE_M_FAINT_ATTACK}SHIP{SE_M_SUPERSONIC}too?$"
+	.string "Ahoy, there! Are you going out to\n"
+	.string "the ABANDONED SHIP, too?$"
 
 J_Route108_Text_MatthewDefeated:
-	.string "I'{SE_M_MILK_DRINK}sinking!\n"
-	.string "Glub{SE_M_DIZZY_PUNCH}Glub…$"
+	.string "I'm sinking!\n"
+	.string "Glub… Glub…$"
 
 J_Route108_Text_MatthewPostBattle:
-	.string "Som{SE_M_REVERSAL}peopl{SE_M_REVERSAL}eve{SE_M_ATTRACT}g{SE_M_ATTRACT2}insid{SE_M_REVERSAL}that\n"
-	.string "ABANDONE{SE_M_FAINT_ATTACK}SHIP.$"
+	.string "Some people even go inside that\n"
+	.string "ABANDONED SHIP.$"
 
 J_Route108_Text_TaraIntro:
-	.string "M{SE_M_YAWN}lia{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}boyfrien{SE_M_WATERFALL}tol{SE_M_WATERFALL}m{SE_M_REVERSAL}that\n"
-	.string "{SE_M_HEAL_BELL}loo{SE_M_ENCORE2}grea{SE_M_SPIT_UP}i{SE_M_ATTRACT}{SE_M_CHARGE}bikini…$"
+	.string "My liar of a boyfriend told me that\n"
+	.string "I look great in a bikini…$"
 
 J_Route108_Text_TaraDefeated:
-	.string "Oh{SE_M_SUPERSONIC}boo!$"
+	.string "Oh, boo!$"
 
 J_Route108_Text_TaraPostBattle:
-	.string "Eve{SE_M_ATTRACT}i{SE_M_ACID_ARMOR}it'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}lie{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}bein{SE_M_SANDSTORM}told\n"
-	.string "{SE_M_HEAL_BELL}loo{SE_M_ENCORE2}great…\l"
-	.string "W{SE_M_REVERSAL}girl{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}s{SE_M_ATTRACT2}complex…$"
+	.string "Even if it's a lie, I love being told\n"
+	.string "I look great…\l"
+	.string "We girls are so complex…$"
 
 J_Route108_Text_MissyIntro:
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}th{SE_M_REVERSAL}sea!\n"
-	.string "{SE_M_HEAL_BELL}forge{SE_M_SPIT_UP}al{SE_M_BATON_PASS}m{SE_M_YAWN}worrie{SE_M_GRASSWHISTLE}whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}swim!$"
+	.string "I love the sea!\n"
+	.string "I forget all my worries when I swim!$"
 
 J_Route108_Text_MissyDefeated:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}los{SE_M_REVERSAL}{SE_M_CHARGE}battle{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}all\n"
-	.string "stresse{SE_M_WATERFALL}out!$"
+	.string "When I lose a battle, I get all\n"
+	.string "stressed out!$"
 
 J_Route108_Text_MissyPostBattle:
-	.string "Wor{SE_M_ENCORE2}of{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}stres{SE_M_GRASSWHISTLE}b{SE_M_YAWN}swimming!\n"
-	.string "It'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}healthy!$"
+	.string "Work off your stress by swimming!\n"
+	.string "It's so healthy!$"
 
 J_Route108_Text_CoryIntro:
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}WATER-typ{SE_M_REVERSAL}POKéMON.\n"
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}othe{SE_M_SAND_TOMB}POKéMON{SE_M_SUPERSONIC}too!$"
+	.string "I love WATER-type POKéMON.\n"
+	.string "I love other POKéMON, too!$"
 
 J_Route108_Text_CoryDefeated:
-	.string "Waaah{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}lost!\n"
-	.string "Waaah{SE_M_DRAGON_RAGE}Waaah!$"
+	.string "Waaah! I lost!\n"
+	.string "Waaah! Waaah!$"
 
 J_Route108_Text_CoryPostBattle:
-	.string "Shoutin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}goo{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}me!\n"
-	.string "I{SE_M_SPIT_UP}uplift{SE_M_GRASSWHISTLE}me!$"
+	.string "Shouting is good for me!\n"
+	.string "It uplifts me!$"
 
 J_Route108_Text_CoryRegister:
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}toug{SE_M_TRI_ATTACK}TRAINERS{SE_M_SUPERSONIC}too!\n"
-	.string "Registe{SE_M_SAND_TOMB}m{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéNAV!$"
+	.string "I love tough TRAINERS, too!\n"
+	.string "Register me in your POKéNAV!$"
 
 J_Route108_Text_CoryRematchIntro:
-	.string "Wi{SE_M_ATTRACT}o{SE_M_SAND_TOMB}lose{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}battlin{SE_M_SANDSTORM}a{SE_M_SPIT_UP}sea!$"
+	.string "Win or lose, I love battling at sea!$"
 
 J_Route108_Text_CoryRematchDefeated:
-	.string "Waaah{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}again!\n"
-	.string "Waaah{SE_M_DRAGON_RAGE}Waaah!$"
+	.string "Waaah! I lost again!\n"
+	.string "Waaah! Waaah!$"
 
 J_Route108_Text_CoryRematchPostBattle:
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}face{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}challenge,\n"
-	.string "tr{SE_M_YAWN}shoutin{SE_M_SANDSTORM}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}sea!$"
+	.string "If you're faced with a challenge,\n"
+	.string "try shouting at the sea!$"
 
 J_Route108_Text_CarolinaIntro:
-	.string "{SE_M_HEAL_BELL}tak{SE_M_REVERSAL}hug{SE_M_REVERSAL}prid{SE_M_REVERSAL}i{SE_M_ATTRACT}m{SE_M_YAWN}POKéMON.\n"
-	.string "We'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}on{SE_M_REVERSAL}speed{SE_M_YAWN}battle!$"
+	.string "I take huge pride in my POKéMON.\n"
+	.string "We'll show you one speedy battle!$"
 
 J_Route108_Text_CarolinaDefeated:
-	.string "Tha{SE_M_SPIT_UP}wasn'{SE_M_SPIT_UP}cut{SE_M_REVERSAL}a{SE_M_SPIT_UP}all.$"
+	.string "That wasn't cute at all.$"
 
 J_Route108_Text_CarolinaPostBattle:
-	.string "Sinc{SE_M_REVERSAL}I'{SE_M_MILK_DRINK}a{SE_M_SPIT_UP}se{SE_M_CHARGE}lik{SE_M_REVERSAL}this{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wouldn't\n"
-	.string "min{SE_M_WATERFALL}puttin{SE_M_SANDSTORM}o{SE_M_ATTRACT}{SE_M_CHARGE}pink{SE_M_SUPERSONIC}frill{SE_M_YAWN}swimsuit…$"
+	.string "Since I'm at sea like this, I wouldn't\n"
+	.string "mind putting on a pink, frilly swimsuit…$"
 
 J_Route109_Text_DavidIntro:
-	.string "Hiyah{SE_M_DRAGON_RAGE}Loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}m{SE_M_YAWN}chisele{SE_M_WATERFALL}abs!\n"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}yo{SE_M_DIVE}cal{SE_M_BATON_PASS}“cut”!$"
+	.string "Hiyah! Look at my chiseled abs!\n"
+	.string "This is what you call “cut”!$"
 
 J_Route109_Text_DavidDefeated:
 	.string "Aiyah!\n"
-	.string "Flubbe{SE_M_WATERFALL}out!$"
+	.string "Flubbed out!$"
 
 J_Route109_Text_DavidPostBattle:
 	.string "Hiyah!\p"
-	.string "M{SE_M_YAWN}sculpte{SE_M_WATERFALL}ab{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}nothin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}do\n"
-	.string "wit{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}battles!$"
+	.string "My sculpted abs have nothing to do\n"
+	.string "with POKéMON battles!$"
 
 J_Route109_Text_AliceIntro:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}properl{SE_M_YAWN}protecte{SE_M_WATERFALL}against\n"
-	.string "th{SE_M_REVERSAL}sun?$"
+	.string "Are you properly protected against\n"
+	.string "the sun?$"
 
 J_Route109_Text_AliceDefeated:
-	.string "Ouch{SE_M_SUPERSONIC}ouch{SE_M_SUPERSONIC}ouch!$"
+	.string "Ouch, ouch, ouch!$"
 
 J_Route109_Text_AlicePostBattle:
-	.string "Cheek{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}th{SE_M_REVERSAL}mos{SE_M_SPIT_UP}pron{SE_M_REVERSAL}t{SE_M_ATTRACT2}burning!$"
+	.string "Cheeks are the most prone to burning!$"
 
 J_Route109_Text_HueyIntro:
-	.string "I'v{SE_M_REVERSAL}lai{SE_M_WATERFALL}ancho{SE_M_SAND_TOMB}i{SE_M_ATTRACT}port{SE_M_GRASSWHISTLE}around\n"
-	.string "th{SE_M_REVERSAL}world{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}SLATEPORT'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}best.$"
+	.string "I've laid anchor in ports around\n"
+	.string "the world, but SLATEPORT's the best.$"
 
 J_Route109_Text_HueyDefeated:
-	.string "You'r{SE_M_REVERSAL}th{SE_M_REVERSAL}best!$"
+	.string "You're the best!$"
 
 J_Route109_Text_HueyPostBattle:
-	.string "I{SE_M_ATTRACT}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}por{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}best\n"
+	.string "In the best port was the best\n"
 	.string "TRAINER…$"
 
 J_Route109_Text_EdmondIntro:
 	.string "Urrrrppp…\n"
-	.string "Battle{SE_M_SING}Wit{SE_M_TRI_ATTACK}me?$"
+	.string "Battle? With me?$"
 
 J_Route109_Text_EdmondDefeated:
-	.string "Urp{SE_M_DIZZY_PUNCH}Ooooooohhhhhh…\n"
+	.string "Urp… Ooooooohhhhhh…\n"
 	.string "Urrrrpppp…$"
 
 J_Route109_Text_EdmondPostBattle:
-	.string "I'{SE_M_MILK_DRINK}usuall{SE_M_YAWN}stronge{SE_M_SAND_TOMB}tha{SE_M_ATTRACT}this!\n"
-	.string "I'{SE_M_MILK_DRINK}jus{SE_M_SPIT_UP}seasic{SE_M_ENCORE2}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}dog!\p"
-	.string "I'{SE_M_MILK_DRINK}{SE_M_CHARGE}SAILOR{SE_M_SUPERSONIC}but…$"
+	.string "I'm usually stronger than this!\n"
+	.string "I'm just seasick as a dog!\p"
+	.string "I'm a SAILOR, but…$"
 
 J_Route109_Text_RickyIntro:
-	.string "I'{SE_M_MILK_DRINK}thirsty{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}g{SE_M_ATTRACT2}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}SOD{SE_M_BONEMERANG}POP\n"
-	.string "a{SE_M_SPIT_UP}th{SE_M_REVERSAL}SEASHOR{SE_M_SWORDS_DANCE}HOUSE…$"
+	.string "I'm thirsty… I could go for a SODA POP\n"
+	.string "at the SEASHORE HOUSE…$"
 
 J_Route109_Text_RickyDefeated:
 	.string "Groan…$"
 
 J_Route109_Text_RickyPostBattle:
-	.string "I'{SE_M_MILK_DRINK}gettin{SE_M_SANDSTORM}famished{SE_M_DIZZY_PUNCH}M{SE_M_YAWN}inne{SE_M_SAND_TOMB}tube\n"
-	.string "look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}{SE_M_CHARGE}gian{SE_M_SPIT_UP}doughnut…$"
+	.string "I'm getting famished… My inner tube\n"
+	.string "looks like a giant doughnut…$"
 
 J_Route109_Text_RickyRegister:
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}hav{SE_M_REVERSAL}anothe{SE_M_SAND_TOMB}matc{SE_M_TRI_ATTACK}wit{SE_M_TRI_ATTACK}me\n"
-	.string "whe{SE_M_ATTRACT}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}al{SE_M_BATON_PASS}thirsty?$"
+	.string "Will you have another match with me\n"
+	.string "when I'm not all thirsty?$"
 
 J_Route109_Text_RickyRematchIntro:
-	.string "I'{SE_M_MILK_DRINK}hungry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}I'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}enoug{SE_M_TRI_ATTACK}pe{SE_M_MORNING_SUN}in\n"
-	.string "m{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}battle!$"
+	.string "I'm hungry, but I've got enough pep in\n"
+	.string "me for a battle!$"
 
 J_Route109_Text_RickyRematchDefeated:
-	.string "{SE_M_HEAL_BELL}lost…\n"
-	.string "It'{SE_M_GRASSWHISTLE}becaus{SE_M_REVERSAL}I'{SE_M_MILK_DRINK}hungry…$"
+	.string "I lost…\n"
+	.string "It's because I'm hungry…$"
 
 J_Route109_Text_RickyRematchPostBattle:
-	.string "Whe{SE_M_ATTRACT}yo{SE_M_DIVE}ea{SE_M_SPIT_UP}o{SE_M_ATTRACT}{SE_M_CHARGE}beach{SE_M_SUPERSONIC}everything\n"
-	.string "seem{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}tast{SE_M_REVERSAL}{SE_M_CHARGE}littl{SE_M_REVERSAL}better.$"
+	.string "When you eat on a beach, everything\n"
+	.string "seems to taste a little better.$"
 
 J_Route109_Text_LolaIntro:
-	.string "Doesn'{SE_M_SPIT_UP}{SE_M_CHARGE}beac{SE_M_TRI_ATTACK}umbrell{SE_M_CHARGE}loo{SE_M_ENCORE2}like\n"
-	.string "{SE_M_CHARGE}gian{SE_M_SPIT_UP}flower?$"
+	.string "Doesn't a beach umbrella look like\n"
+	.string "a giant flower?$"
 
 J_Route109_Text_LolaDefeated:
 	.string "Mommy!$"
 
 J_Route109_Text_LolaPostBattle:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}beac{SE_M_TRI_ATTACK}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}sky,\n"
-	.string "i{SE_M_SPIT_UP}look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}{SE_M_CHARGE}bi{SE_M_SANDSTORM}flowe{SE_M_SAND_TOMB}garden!$"
+	.string "If you look at the beach from the sky,\n"
+	.string "it looks like a big flower garden!$"
 
 J_Route109_Text_LolaRegister:
 	.string "Me?\n"
-	.string "I'{SE_M_MILK_DRINK}her{SE_M_REVERSAL}ever{SE_M_YAWN}day!$"
+	.string "I'm here every day!$"
 
 J_Route109_Text_LolaRematchIntro:
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}losin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}yo{SE_M_DIVE}again!\n"
-	.string "That'{SE_M_GRASSWHISTLE}wh{SE_M_YAWN}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}m{SE_M_YAWN}inne{SE_M_SAND_TOMB}tube!$"
+	.string "I'm not losing to you again!\n"
+	.string "That's why I have my inner tube!$"
 
 J_Route109_Text_LolaRematchDefeated:
 	.string "Mommy!$"
 
 J_Route109_Text_LolaRematchPostBattle:
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}a{SE_M_ATTRACT}inne{SE_M_SAND_TOMB}tube{SE_M_SUPERSONIC}m{SE_M_REVERSAL}an{SE_M_WATERFALL}my\n"
-	.string "POKéMON'{SE_M_GRASSWHISTLE}cutenes{SE_M_GRASSWHISTLE}goe{SE_M_GRASSWHISTLE}wa{SE_M_YAWN}up!$"
+	.string "If I have an inner tube, me and my\n"
+	.string "POKéMON's cuteness goes way up!$"
 
 J_Route109_Text_AustinaIntro:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}swi{SE_M_MILK_DRINK}withou{SE_M_SPIT_UP}m{SE_M_YAWN}inne{SE_M_SAND_TOMB}tube,\n"
-	.string "bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}los{SE_M_REVERSAL}a{SE_M_SPIT_UP}POKéMON!$"
+	.string "I can't swim without my inner tube,\n"
+	.string "but I won't lose at POKéMON!$"
 
 J_Route109_Text_AustinaDefeated:
-	.string "Di{SE_M_WATERFALL}{SE_M_HEAL_BELL}los{SE_M_REVERSAL}becaus{SE_M_REVERSAL}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}a{SE_M_ATTRACT}inner\n"
+	.string "Did I lose because I have an inner\n"
 	.string "tube?$"
 
 J_Route109_Text_AustinaPostBattle:
-	.string "M{SE_M_YAWN}inne{SE_M_SAND_TOMB}tub{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}fashio{SE_M_ATTRACT}item.\n"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}see{SE_M_ATTRACT}withou{SE_M_SPIT_UP}it.$"
+	.string "My inner tube is a fashion item.\n"
+	.string "I can't be seen without it.$"
 
 J_Route109_Text_GwenIntro:
-	.string "Hi{SE_M_SUPERSONIC}bi{SE_M_SANDSTORM}TRAINER.\n"
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?$"
+	.string "Hi, big TRAINER.\n"
+	.string "Will you battle with me?$"
 
 J_Route109_Text_GwenDefeated:
-	.string "Oh{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}strong.$"
+	.string "Oh, you're strong.$"
 
 J_Route109_Text_GwenPostBattle:
-	.string "Ho{SE_M_TWISTER}di{SE_M_WATERFALL}yo{SE_M_DIVE}ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}s{SE_M_ATTRACT2}strong?$"
+	.string "How did you get to be so strong?$"
 
 J_Route109_Text_CarterIntro:
-	.string "Wahahah{SE_M_DRAGON_RAGE}Thi{SE_M_GRASSWHISTLE}dude'{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}catch\n"
-	.string "himsel{SE_M_ACID_ARMOR}{SE_M_CHARGE}bi{SE_M_SANDSTORM}one!$"
+	.string "Wahahah! This dude's going to catch\n"
+	.string "himself a big one!$"
 
 J_Route109_Text_CarterDefeated:
-	.string "Thi{SE_M_GRASSWHISTLE}dud{SE_M_REVERSAL}jus{SE_M_SPIT_UP}los{SE_M_SPIT_UP}one…$"
+	.string "This dude just lost one…$"
 
 J_Route109_Text_CarterPostBattle:
-	.string "Thi{SE_M_GRASSWHISTLE}dud{SE_M_REVERSAL}think{SE_M_GRASSWHISTLE}you'r{SE_M_REVERSAL}{SE_M_CHARGE}bi{SE_M_SANDSTORM}one.\n"
-	.string "No{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}{SE_M_CHARGE}big-one-to-be!$"
+	.string "This dude thinks you're a big one.\n"
+	.string "No, you're a big-one-to-be!$"
 
 J_Route109_Text_PaulIntro:
-	.string "PAUL{SE_M_HEAT_WAVE}Well{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}mood-breaker.\p"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}yo{SE_M_DIVE}wouldn'{SE_M_SPIT_UP}distur{SE_M_STRENGTH}our\n"
-	.string "preciou{SE_M_GRASSWHISTLE}tim{SE_M_REVERSAL}together.$"
+	.string "PAUL: Well, this is a mood-breaker.\p"
+	.string "I wish you wouldn't disturb our\n"
+	.string "precious time together.$"
 
 J_Route109_Text_PaulDefeated:
-	.string "PAUL{SE_M_HEAT_WAVE}Well{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}giv{SE_M_REVERSAL}up.$"
+	.string "PAUL: Well, I give up.$"
 
 J_Route109_Text_PaulPostBattle:
-	.string "PAUL{SE_M_HEAT_WAVE}Well{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}tel{SE_M_BATON_PASS}anyon{SE_M_REVERSAL}that\n"
-	.string "we'r{SE_M_REVERSAL}here.\l"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}ou{SE_M_SAND_TOMB}privat{SE_M_REVERSAL}worl{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}two!$"
+	.string "PAUL: Well, don't tell anyone that\n"
+	.string "we're here.\l"
+	.string "This is just our private world of two!$"
 
 J_Route109_Text_PaulNotEnoughPokemon:
-	.string "PAUL{SE_M_HEAT_WAVE}We'r{SE_M_REVERSAL}totally{SE_M_SUPERSONIC}deepl{SE_M_YAWN}i{SE_M_ATTRACT}love.\n"
-	.string "That'{SE_M_GRASSWHISTLE}wh{SE_M_YAWN}w{SE_M_REVERSAL}mak{SE_M_REVERSAL}ou{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}battle\l"
+	.string "PAUL: We're totally, deeply in love.\n"
+	.string "That's why we make our POKéMON battle\l"
 	.string "together.$"
 
 J_Route109_Text_MelIntro:
-	.string "MEL{SE_M_HEAT_WAVE}We're{SE_M_SUPERSONIC}like{SE_M_SUPERSONIC}totall{SE_M_YAWN}i{SE_M_ATTRACT}love.\n"
-	.string "Ou{SE_M_SAND_TOMB}romanc{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}heatin{SE_M_SANDSTORM}u{SE_M_MORNING_SUN}al{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}HOENN!$"
+	.string "MEL: We're, like, totally in love.\n"
+	.string "Our romance is heating up all of HOENN!$"
 
 J_Route109_Text_MelDefeated:
-	.string "MEL{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}lost{SE_M_SUPERSONIC}an{SE_M_WATERFALL}it'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}fault!\n"
-	.string "PAU{SE_M_BRICK_BREAK}wil{SE_M_BATON_PASS}hat{SE_M_REVERSAL}me!$"
+	.string "MEL: We lost, and it's my fault!\n"
+	.string "PAUL will hate me!$"
 
 J_Route109_Text_MelPostBattle:
-	.string "MEL{SE_M_HEAT_WAVE}Um{SE_M_SUPERSONIC}PAUL{SE_M_SUPERSONIC}ar{SE_M_REVERSAL}yo{SE_M_DIVE}angr{SE_M_YAWN}wit{SE_M_TRI_ATTACK}me?\n"
-	.string "Pleas{SE_M_REVERSAL}don'{SE_M_SPIT_UP}b{SE_M_REVERSAL}angry.$"
+	.string "MEL: Um, PAUL, are you angry with me?\n"
+	.string "Please don't be angry.$"
 
 J_Route109_Text_MelNotEnoughPokemon:
-	.string "MEL{SE_M_HEAT_WAVE}We're{SE_M_SUPERSONIC}like{SE_M_SUPERSONIC}deepl{SE_M_YAWN}an{SE_M_WATERFALL}trul{SE_M_YAWN}i{SE_M_ATTRACT}love.\n"
-	.string "That'{SE_M_GRASSWHISTLE}wh{SE_M_YAWN}w{SE_M_REVERSAL}mak{SE_M_REVERSAL}ou{SE_M_SAND_TOMB}POKéMON\l"
-	.string "battl{SE_M_REVERSAL}together.$"
+	.string "MEL: We're, like, deeply and truly in love.\n"
+	.string "That's why we make our POKéMON\l"
+	.string "battle together.$"
 
 J_Route109_Text_ChandlerIntro:
-	.string "Tadaah{SE_M_DRAGON_RAGE}See?\n"
-	.string "M{SE_M_YAWN}inne{SE_M_SAND_TOMB}tube'{SE_M_GRASSWHISTLE}round!$"
+	.string "Tadaah! See?\n"
+	.string "My inner tube's round!$"
 
 J_Route109_Text_ChandlerDefeated:
-	.string "Oh{SE_M_SUPERSONIC}oh!\n"
-	.string "To{SE_M_ATTRACT2}bad!$"
+	.string "Oh, oh!\n"
+	.string "Too bad!$"
 
 J_Route109_Text_ChandlerPostBattle:
-	.string "Afte{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}showe{SE_M_WATERFALL}yo{SE_M_DIVE}m{SE_M_YAWN}roun{SE_M_WATERFALL}inner\n"
-	.string "tube{SE_M_SUPERSONIC}too…$"
+	.string "After I showed you my round inner\n"
+	.string "tube, too…$"
 
 J_Route109_Text_HaileyIntro:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}swim{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}I'{SE_M_MILK_DRINK}pretending\n"
-	.string "t{SE_M_ATTRACT2}swim.$"
+	.string "I can't swim, so I'm pretending\n"
+	.string "to swim.$"
 
 J_Route109_Text_HaileyDefeated:
-	.string "{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}so!\n"
-	.string "{SE_M_HEAL_BELL}didn'{SE_M_SPIT_UP}thin{SE_M_ENCORE2}w{SE_M_REVERSAL}coul{SE_M_WATERFALL}win.$"
+	.string "I thought so!\n"
+	.string "I didn't think we could win.$"
 
 J_Route109_Text_HaileyPostBattle:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}lear{SE_M_ATTRACT}ho{SE_M_TWISTER}t{SE_M_ATTRACT2}swim{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}think\n"
-	.string "m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}becom{SE_M_REVERSAL}tougher.$"
+	.string "When I learn how to swim, I think\n"
+	.string "my POKéMON will become tougher.$"
 
 J_Route109_Text_ElijahIntro:
-	.string "Fo{SE_M_SAND_TOMB}{SE_M_CHARGE}gu{SE_M_YAWN}a{SE_M_GRASSWHISTLE}mach{SE_M_ATTRACT2}a{SE_M_GRASSWHISTLE}me{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}kind\n"
-	.string "o{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}perfec{SE_M_SPIT_UP}match!$"
+	.string "For a guy as macho as me, this kind\n"
+	.string "of POKéMON is the perfect match!$"
 
 J_Route109_Text_ElijahDefeated:
-	.string "I'{SE_M_MILK_DRINK}coo{SE_M_BATON_PASS}eve{SE_M_ATTRACT}i{SE_M_ATTRACT}defeat{SE_M_SUPERSONIC}hey?$"
+	.string "I'm cool even in defeat, hey?$"
 
 J_Route109_Text_ElijahPostBattle:
-	.string "Fo{SE_M_SAND_TOMB}{SE_M_CHARGE}gu{SE_M_YAWN}a{SE_M_GRASSWHISTLE}mach{SE_M_ATTRACT2}a{SE_M_GRASSWHISTLE}me{SE_M_SUPERSONIC}{SE_M_CHARGE}port\n"
-	.string "i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}perfec{SE_M_SPIT_UP}setting!\p"
-	.string "{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}I'l{SE_M_BATON_PASS}hea{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}SLATEPORT.$"
+	.string "For a guy as macho as me, a port\n"
+	.string "is the perfect setting!\p"
+	.string "I guess I'll head for SLATEPORT.$"
 
 J_Route110_Text_JacobIntro:
-	.string "Whoa{SE_M_DRAGON_RAGE}Watc{SE_M_TRI_ATTACK}it!\n"
-	.string "{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}you'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}BIK{SE_M_SWORDS_DANCE}racing.$"
+	.string "Whoa! Watch it!\n"
+	.string "I guess you're not used to BIKE racing.$"
 
 J_Route110_Text_JacobDefeated:
 	.string "Whoa!\n"
-	.string "M{SE_M_YAWN}brake{SE_M_GRASSWHISTLE}failed!$"
+	.string "My brakes failed!$"
 
 J_Route110_Text_JacobPostBattle:
-	.string "Fla{SE_M_SPIT_UP}tire{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}brak{SE_M_REVERSAL}problem{SE_M_GRASSWHISTLE}can\n"
-	.string "caus{SE_M_REVERSAL}seriou{SE_M_GRASSWHISTLE}injury!\l"
-	.string "Inspec{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}BIK{SE_M_SWORDS_DANCE}fo{SE_M_SAND_TOMB}problems!$"
+	.string "Flat tires and brake problems can\n"
+	.string "cause serious injury!\l"
+	.string "Inspect your BIKE for problems!$"
 
 J_Route110_Text_AnthonyIntro:
-	.string "Yo{SE_M_SUPERSONIC}you!\n"
-	.string "Ca{SE_M_ATTRACT}yo{SE_M_DIVE}kee{SE_M_MORNING_SUN}u{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}speed?$"
+	.string "Yo, you!\n"
+	.string "Can you keep up with my speed?$"
 
 J_Route110_Text_AnthonyDefeated:
-	.string "Cras{SE_M_TRI_ATTACK}an{SE_M_WATERFALL}burn!$"
+	.string "Crash and burn!$"
 
 J_Route110_Text_AnthonyPostBattle:
-	.string "Spee{SE_M_WATERFALL}alon{SE_M_REVERSAL}won'{SE_M_SPIT_UP}le{SE_M_SPIT_UP}m{SE_M_REVERSAL}wi{SE_M_ATTRACT}a{SE_M_SPIT_UP}POKéMON.\n"
-	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}reconside{SE_M_SAND_TOMB}this…$"
+	.string "Speed alone won't let me win at POKéMON.\n"
+	.string "I need to reconsider this…$"
 
 J_Route110_Text_BenjaminIntro:
-	.string "Don'{SE_M_SPIT_UP}pani{SE_M_HYPER_BEAM}i{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}BIKE'{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}fast!$"
+	.string "Don't panic if your BIKE's going fast!$"
 
 J_Route110_Text_BenjaminDefeated:
-	.string "{SE_M_HEAL_BELL}shouldn'{SE_M_SPIT_UP}pani{SE_M_HYPER_BEAM}durin{SE_M_SANDSTORM}POKéMON\n"
+	.string "I shouldn't panic during POKéMON\n"
 	.string "battles…$"
 
 J_Route110_Text_BenjaminPostBattle:
-	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}pani{SE_M_HYPER_BEAM}o{SE_M_SAND_TOMB}stress.\n"
-	.string "Tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}easy{SE_M_PERISH_SONG}There'{SE_M_GRASSWHISTLE}plent{SE_M_YAWN}o{SE_M_ACID_ARMOR}time.$"
+	.string "There's no need to panic or stress.\n"
+	.string "Take it easy. There's plenty of time.$"
 
 J_Route110_Text_BenjaminRegister:
-	.string "I'l{SE_M_BATON_PASS}kee{SE_M_MORNING_SUN}chuggin{SE_M_SANDSTORM}o{SE_M_ATTRACT}withou{SE_M_SPIT_UP}stressing.\n"
-	.string "Giv{SE_M_REVERSAL}m{SE_M_REVERSAL}{SE_M_CHARGE}shou{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}it.$"
+	.string "I'll keep chugging on without stressing.\n"
+	.string "Give me a shout if you're up to it.$"
 
 J_Route110_Text_BenjaminRematchIntro:
-	.string "Aren'{SE_M_SPIT_UP}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}{SE_M_CHARGE}littl{SE_M_REVERSAL}to{SE_M_ATTRACT2}fast?\n"
-	.string "Tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}eas{SE_M_YAWN}an{SE_M_WATERFALL}let'{SE_M_GRASSWHISTLE}battle.$"
+	.string "Aren't you going a little too fast?\n"
+	.string "Take it easy and let's battle.$"
 
 J_Route110_Text_BenjaminRematchDefeated:
-	.string "{SE_M_HEAL_BELL}didn'{SE_M_SPIT_UP}panic{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}stil{SE_M_BATON_PASS}lost…$"
+	.string "I didn't panic, but I still lost…$"
 
 J_Route110_Text_BenjaminRematchPostBattle:
-	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}pani{SE_M_HYPER_BEAM}o{SE_M_SAND_TOMB}stress.\n"
-	.string "Tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}easy{SE_M_PERISH_SONG}There'{SE_M_GRASSWHISTLE}plent{SE_M_YAWN}o{SE_M_ACID_ARMOR}time.$"
+	.string "There's no need to panic or stress.\n"
+	.string "Take it easy. There's plenty of time.$"
 
 J_Route110_Text_AbigailIntro:
-	.string "Th{SE_M_REVERSAL}triathlo{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}har{SE_M_WATERFALL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}extreme.\p"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}complet{SE_M_REVERSAL}th{SE_M_REVERSAL}thre{SE_M_REVERSAL}events\n"
-	.string "o{SE_M_ACID_ARMOR}swimming{SE_M_SUPERSONIC}cycling{SE_M_SUPERSONIC}an{SE_M_WATERFALL}running.$"
+	.string "The triathlon is hard in the extreme.\p"
+	.string "You have to complete the three events\n"
+	.string "of swimming, cycling, and running.$"
 
 J_Route110_Text_AbigailDefeated:
-	.string "POKéMO{SE_M_PSYBEAM2}battle{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}hard{SE_M_SUPERSONIC}too!$"
+	.string "POKéMON battles are hard, too!$"
 
 J_Route110_Text_AbigailPostBattle:
-	.string "I'{SE_M_MILK_DRINK}exhausted{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}{SE_M_CHARGE}break.\n"
-	.string "It'{SE_M_GRASSWHISTLE}importan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}prope{SE_M_SAND_TOMB}rest.$"
+	.string "I'm exhausted, so I need a break.\n"
+	.string "It's important to get proper rest.$"
 
 J_Route110_Text_AbigailRegister:
-	.string "Yo{SE_M_DIVE}know{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}you!\n"
-	.string "Let'{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}{SE_M_CHARGE}rematc{SE_M_TRI_ATTACK}o{SE_M_ATTRACT}CYCLIN{SE_M_SWAGGER}ROAD.$"
+	.string "You know, I like you!\n"
+	.string "Let's have a rematch on CYCLING ROAD.$"
 
 J_Route110_Text_AbigailRematchIntro:
-	.string "Isn'{SE_M_SPIT_UP}i{SE_M_SPIT_UP}nea{SE_M_SPIT_UP}t{SE_M_ATTRACT2}hol{SE_M_WATERFALL}{SE_M_CHARGE}battl{SE_M_REVERSAL}while\n"
+	.string "Isn't it neat to hold a battle while\n"
 	.string "cycling?$"
 
 J_Route110_Text_AbigailRematchDefeated:
 	.string "Wow…\n"
-	.string "Ho{SE_M_TWISTER}coul{SE_M_WATERFALL}yo{SE_M_DIVE}b{SE_M_REVERSAL}s{SE_M_ATTRACT2}strong?$"
+	.string "How could you be so strong?$"
 
 J_Route110_Text_AbigailRematchPostBattle:
-	.string "Wer{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}afte{SE_M_SAND_TOMB}{SE_M_CHARGE}record?\p"
-	.string "I'{SE_M_MILK_DRINK}sorr{SE_M_YAWN}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}hel{SE_M_WATERFALL}yo{SE_M_DIVE}up!$"
+	.string "Were you going after a record?\p"
+	.string "I'm sorry if I held you up!$"
 
 J_Route110_Text_JasmineIntro:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}ridin{SE_M_SANDSTORM}withou{SE_M_SPIT_UP}stopping.\n"
-	.string "M{SE_M_YAWN}thigh{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}lik{SE_M_REVERSAL}rocks!$"
+	.string "I've been riding without stopping.\n"
+	.string "My thighs are like rocks!$"
 
 J_Route110_Text_JasmineDefeated:
-	.string "I'{SE_M_MILK_DRINK}worrie{SE_M_WATERFALL}abou{SE_M_SPIT_UP}muscl{SE_M_REVERSAL}cramps…$"
+	.string "I'm worried about muscle cramps…$"
 
 J_Route110_Text_JasminePostBattle:
-	.string "Oh{SE_M_SUPERSONIC}yo{SE_M_DIVE}hav{SE_M_REVERSAL}som{SE_M_REVERSAL}GY{SE_M_GIGA_DRAIN}BADGES?\n"
-	.string "N{SE_M_ATTRACT2}wonde{SE_M_SAND_TOMB}you'r{SE_M_REVERSAL}s{SE_M_ATTRACT2}strong!$"
+	.string "Oh, you have some GYM BADGES?\n"
+	.string "No wonder you're so strong!$"
 
 J_Route110_Text_EdwardIntro:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}foresee{SE_M_ATTRACT}you{SE_M_SAND_TOMB}intentions!\n"
-	.string "{SE_M_HEAL_BELL}canno{SE_M_SPIT_UP}possibl{SE_M_YAWN}lose!$"
+	.string "I have foreseen your intentions!\n"
+	.string "I cannot possibly lose!$"
 
 J_Route110_Text_EdwardDefeated:
-	.string "{SE_M_HEAL_BELL}faile{SE_M_WATERFALL}t{SE_M_ATTRACT2}prophesiz{SE_M_REVERSAL}m{SE_M_YAWN}ow{SE_M_ATTRACT}demise!$"
+	.string "I failed to prophesize my own demise!$"
 
 J_Route110_Text_EdwardPostBattle:
-	.string "{SE_M_HEAL_BELL}se{SE_M_REVERSAL}you{SE_M_SAND_TOMB}future…\p"
+	.string "I see your future…\p"
 	.string "Hmm…\n"
-	.string "{SE_M_HEAL_BELL}se{SE_M_REVERSAL}{SE_M_CHARGE}shinin{SE_M_SANDSTORM}light…$"
+	.string "I see a shining light…$"
 
 J_Route110_Text_JaclynIntro:
 	.string "Ahahahaha!\n"
-	.string "I'l{SE_M_BATON_PASS}dazzl{SE_M_REVERSAL}yo{SE_M_DIVE}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}wonders!$"
+	.string "I'll dazzle you with my wonders!$"
 
 J_Route110_Text_JaclynDefeated:
-	.string "{SE_M_HEAL_BELL}wondrousl{SE_M_YAWN}lost!$"
+	.string "I wondrously lost!$"
 
 J_Route110_Text_JaclynPostBattle:
-	.string "Yo{SE_M_DIVE}manage{SE_M_WATERFALL}t{SE_M_ATTRACT2}wi{SE_M_ATTRACT}onl{SE_M_YAWN}becaus{SE_M_REVERSAL}i{SE_M_SPIT_UP}was\n"
-	.string "{SE_M_CHARGE}wonder{SE_M_DRAGON_RAGE}Yes{SE_M_SUPERSONIC}{SE_M_CHARGE}wonder!\l"
-	.string "Don'{SE_M_SPIT_UP}thin{SE_M_ENCORE2}yo{SE_M_DIVE}ca{SE_M_ATTRACT}wi{SE_M_ATTRACT}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}time!$"
+	.string "You managed to win only because it was\n"
+	.string "a wonder! Yes, a wonder!\l"
+	.string "Don't think you can win all the time!$"
 
 J_Route110_Text_EdwinIntro:
-	.string "Coul{SE_M_WATERFALL}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMON?\n"
-	.string "Jus{SE_M_SPIT_UP}on{SE_M_REVERSAL}look{SE_M_SUPERSONIC}please?$"
+	.string "Could I see your POKéMON?\n"
+	.string "Just one look, please?$"
 
 J_Route110_Text_EdwinDefeated:
-	.string "{SE_M_HEAL_BELL}wante{SE_M_WATERFALL}t{SE_M_ATTRACT2}complete\n"
-	.string "m{SE_M_YAWN}collection…$"
+	.string "I wanted to complete\n"
+	.string "my collection…$"
 
 J_Route110_Text_EdwinPostBattle:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}know,\n"
-	.string "m{SE_M_YAWN}passio{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}collecto{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}ignited!$"
+	.string "When I see a POKéMON that I don't know,\n"
+	.string "my passion as a collector is ignited!$"
 
 J_Route110_Text_EdwinRegister:
-	.string "{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}collectin{SE_M_SANDSTORM}MATC{SE_M_SWAGGER2}CALL\n"
-	.string "registrations{SE_M_SUPERSONIC}too…$"
+	.string "I like collecting MATCH CALL\n"
+	.string "registrations, too…$"
 
 J_Route110_Text_EdwinRematchIntro:
-	.string "Hi{SE_M_SUPERSONIC}hav{SE_M_REVERSAL}yo{SE_M_DIVE}caugh{SE_M_SPIT_UP}an{SE_M_YAWN}ne{SE_M_TWISTER}POKéMON?\p"
-	.string "Coul{SE_M_WATERFALL}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMON?\n"
-	.string "Jus{SE_M_SPIT_UP}on{SE_M_REVERSAL}look{SE_M_SUPERSONIC}please?$"
+	.string "Hi, have you caught any new POKéMON?\p"
+	.string "Could I see your POKéMON?\n"
+	.string "Just one look, please?$"
 
 J_Route110_Text_EdwinRematchDefeated:
-	.string "You{SE_M_SAND_TOMB}POKéMON…\n"
-	.string "{SE_M_HEAL_BELL}env{SE_M_YAWN}you.$"
+	.string "Your POKéMON…\n"
+	.string "I envy you.$"
 
 J_Route110_Text_EdwinRematchPostBattle:
-	.string "Oh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lon{SE_M_SANDSTORM}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}al{SE_M_BATON_PASS}rar{SE_M_REVERSAL}POKéMON\n"
+	.string "Oh, I long to make all rare POKéMON\n"
 	.string "mine!$"
 
 J_Route110_Text_DaleIntro:
 	.string "Hey!\n"
-	.string "Don'{SE_M_SPIT_UP}snea{SE_M_ENCORE2}u{SE_M_MORNING_SUN}behin{SE_M_WATERFALL}m{SE_M_REVERSAL}lik{SE_M_REVERSAL}that!$"
+	.string "Don't sneak up behind me like that!$"
 
 J_Route110_Text_DaleDefeated:
-	.string "{SE_M_HEAL_BELL}lost!\n"
+	.string "I lost!\n"
 	.string "Drat!$"
 
 J_Route110_Text_DalePostBattle:
-	.string "Fishin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}abou{SE_M_SPIT_UP}concentration.\n"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}focu{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}th{SE_M_REVERSAL}floater.$"
+	.string "Fishing is all about concentration.\n"
+	.string "You have to focus on the floater.$"
 
 J_Route110_Text_IsabelIntro:
-	.string "Ahahaha{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}g{SE_M_ATTRACT2}anywher{SE_M_REVERSAL}t{SE_M_ATTRACT2}show\n"
-	.string "of{SE_M_ACID_ARMOR}m{SE_M_YAWN}delightfu{SE_M_BATON_PASS}POKéMON.$"
+	.string "Ahahaha! I would go anywhere to show\n"
+	.string "off my delightful POKéMON.$"
 
 J_Route110_Text_IsabelDefeated:
-	.string "Oh{SE_M_SUPERSONIC}dear{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}won'{SE_M_SPIT_UP}do.$"
+	.string "Oh, dear, this won't do.$"
 
 J_Route110_Text_IsabelPostBattle:
-	.string "Rathe{SE_M_SAND_TOMB}tha{SE_M_ATTRACT}battling{SE_M_SUPERSONIC}perhap{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}should\n"
-	.string "sho{SE_M_TWISTER}of{SE_M_ACID_ARMOR}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}FA{SE_M_PSYBEAM2}CLUB.$"
+	.string "Rather than battling, perhaps I should\n"
+	.string "show off my POKéMON at the FAN CLUB.$"
 
 J_Route110_Text_IsabelRegister:
-	.string "Tha{SE_M_SPIT_UP}wasn'{SE_M_SPIT_UP}clos{SE_M_REVERSAL}t{SE_M_ATTRACT2}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}could\n"
-	.string "d{SE_M_ATTRACT2}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}of{SE_M_ACID_ARMOR}m{SE_M_YAWN}POKéMON.\p"
-	.string "I'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}yo{SE_M_DIVE}a{SE_M_GRASSWHISTLE}m{SE_M_YAWN}captiv{SE_M_REVERSAL}audience\n"
-	.string "a{SE_M_GRASSWHISTLE}ofte{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}possible!$"
+	.string "That wasn't close to what I could\n"
+	.string "do to show off my POKéMON.\p"
+	.string "I'll have you as my captive audience\n"
+	.string "as often as possible!$"
 
 J_Route110_Text_IsabelRematchIntro:
-	.string "Ahahahaha{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}happ{SE_M_YAWN}t{SE_M_ATTRACT2}show\n"
-	.string "of{SE_M_ACID_ARMOR}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}a{SE_M_GRASSWHISTLE}ofte{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}like!$"
+	.string "Ahahahaha! I would be happy to show\n"
+	.string "off my POKéMON as often as you like!$"
 
 J_Route110_Text_IsabelRematchDefeated:
-	.string "Oh{SE_M_SUPERSONIC}dear{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}won'{SE_M_SPIT_UP}do.$"
+	.string "Oh, dear, this won't do.$"
 
 J_Route110_Text_IsabelRematchPostBattle:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}thin{SE_M_ENCORE2}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}eve{SE_M_SAND_TOMB}stop\n"
-	.string "fro{SE_M_MILK_DRINK}showin{SE_M_SANDSTORM}of{SE_M_ACID_ARMOR}m{SE_M_YAWN}POKéMON.\p"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}battle{SE_M_SUPERSONIC}too!$"
+	.string "I don't think that I could ever stop\n"
+	.string "from showing off my POKéMON.\p"
+	.string "But I like to battle, too!$"
 
 J_Route110_Text_TimmyIntro:
-	.string "{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}som{SE_M_REVERSAL}coo{SE_M_BATON_PASS}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}th{SE_M_REVERSAL}grass\n"
-	.string "aroun{SE_M_WATERFALL}here!$"
+	.string "I found some cool POKéMON in the grass\n"
+	.string "around here!$"
 
 J_Route110_Text_TimmyDefeated:
-	.string "Bein{SE_M_SANDSTORM}coo{SE_M_BATON_PASS}isn'{SE_M_SPIT_UP}enoug{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}win…$"
+	.string "Being cool isn't enough to win…$"
 
 J_Route110_Text_TimmyPostBattle:
-	.string "It'{SE_M_GRASSWHISTLE}har{SE_M_WATERFALL}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}you\n"
-	.string "jus{SE_M_SPIT_UP}caught.$"
+	.string "It's hard to battle with POKéMON you\n"
+	.string "just caught.$"
 
 J_Route110_Text_AlyssaIntro:
-	.string "{SE_M_HEAL_BELL}fel{SE_M_BATON_PASS}of{SE_M_ACID_ARMOR}CYCLIN{SE_M_SWAGGER}ROAD…\p"
-	.string "I'l{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}ove{SE_M_SAND_TOMB}m{SE_M_YAWN}embarrassmen{SE_M_SPIT_UP}by\n"
-	.string "battlin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}you!$"
+	.string "I fell off CYCLING ROAD…\p"
+	.string "I'll get over my embarrassment by\n"
+	.string "battling with you!$"
 
 J_Route110_Text_AlyssaDefeated:
 	.string "Oops!\n"
-	.string "{SE_M_HEAL_BELL}ende{SE_M_WATERFALL}u{SE_M_MORNING_SUN}losing!$"
+	.string "I ended up losing!$"
 
 J_Route110_Text_AlyssaPostBattle:
-	.string "Falling{SE_M_DIZZY_PUNCH}Losing…\n"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}humiliatin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}me!$"
+	.string "Falling… Losing…\n"
+	.string "This is so humiliating for me!$"
 
 J_Route110_Text_JosephIntro:
-	.string "Okay{SE_M_DRAGON_RAGE}Full-throttl{SE_M_REVERSAL}time{SE_M_DRAGON_RAGE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}can't\n"
-	.string "groove{SE_M_SUPERSONIC}yo{SE_M_DIVE}ge{SE_M_SPIT_UP}lef{SE_M_SPIT_UP}behind!$"
+	.string "Okay! Full-throttle time! If you can't\n"
+	.string "groove, you get left behind!$"
 
 J_Route110_Text_JosephDefeated:
-	.string "Yo{SE_M_DIVE}go{SE_M_SPIT_UP}int{SE_M_ATTRACT2}th{SE_M_REVERSAL}groov{SE_M_REVERSAL}al{SE_M_BATON_PASS}right…$"
+	.string "You got into the groove all right…$"
 
 J_Route110_Text_JosephPostBattle:
-	.string "Thi{SE_M_GRASSWHISTLE}isn'{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}brin{SE_M_SANDSTORM}m{SE_M_REVERSAL}down!\n"
-	.string "Losin{SE_M_SANDSTORM}ha{SE_M_GRASSWHISTLE}mad{SE_M_REVERSAL}m{SE_M_REVERSAL}{SE_M_CHARGE}bette{SE_M_SAND_TOMB}man!$"
+	.string "This isn't going to bring me down!\n"
+	.string "Losing has made me a better man!$"
 
 J_Route110_Text_KalebIntro:
-	.string "Whe{SE_M_ATTRACT}cut{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}hel{SE_M_MORNING_SUN}eac{SE_M_TRI_ATTACK}other…\n"
-	.string "Yo{SE_M_DIVE}won'{SE_M_SPIT_UP}se{SE_M_REVERSAL}{SE_M_CHARGE}mor{SE_M_REVERSAL}adorabl{SE_M_REVERSAL}sight!$"
+	.string "When cute POKéMON help each other…\n"
+	.string "You won't see a more adorable sight!$"
 
 J_Route110_Text_KalebDefeated:
-	.string "Hav{SE_M_REVERSAL}yo{SE_M_DIVE}n{SE_M_ATTRACT2}compassio{SE_M_ATTRACT}o{SE_M_SAND_TOMB}pity?$"
+	.string "Have you no compassion or pity?$"
 
 J_Route110_Text_KalebPostBattle:
-	.string "Okay{SE_M_SUPERSONIC}okay{SE_M_SUPERSONIC}you'v{SE_M_REVERSAL}don{SE_M_REVERSAL}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}you\n"
-	.string "could{SE_M_SUPERSONIC}m{SE_M_YAWN}pretties.$"
+	.string "Okay, okay, you've done the best you\n"
+	.string "could, my pretties.$"
 
 J_Route111_Text_DrewIntro:
-	.string "Oh{SE_M_SUPERSONIC}hey{SE_M_DRAGON_RAGE}Thos{SE_M_REVERSAL}GO-GOGGLE{SE_M_SKETCH}sui{SE_M_SPIT_UP}you.\n"
-	.string "Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}the{SE_M_YAWN}loo{SE_M_ENCORE2}bette{SE_M_SAND_TOMB}o{SE_M_ATTRACT}me.\p"
-	.string "Let'{SE_M_GRASSWHISTLE}decid{SE_M_REVERSAL}wh{SE_M_ATTRACT2}the{SE_M_YAWN}loo{SE_M_ENCORE2}bette{SE_M_SAND_TOMB}on\n"
-	.string "wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}battle!$"
+	.string "Oh, hey! Those GO-GOGGLES suit you.\n"
+	.string "But I think they look better on me.\p"
+	.string "Let's decide who they look better on\n"
+	.string "with a battle!$"
 
 J_Route111_Text_DrewDefeat:
-	.string "{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}se{SE_M_REVERSAL}wha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}happenin{SE_M_SANDSTORM}at\n"
-	.string "m{SE_M_YAWN}side{SE_M_GRASSWHISTLE}becaus{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}GO-GOGGLES.$"
+	.string "I couldn't see what was happening at\n"
+	.string "my sides because of the GO-GOGGLES.$"
 
 J_Route111_Text_DrewPostBattle:
-	.string "Th{SE_M_REVERSAL}GO-GOGGLE{SE_M_SKETCH}mak{SE_M_REVERSAL}i{SE_M_SPIT_UP}possibl{SE_M_REVERSAL}to\n"
-	.string "ge{SE_M_SPIT_UP}throug{SE_M_TRI_ATTACK}sandstorms.\l"
-	.string "Tha{SE_M_SPIT_UP}make{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}happy!$"
+	.string "The GO-GOGGLES make it possible to\n"
+	.string "get through sandstorms.\l"
+	.string "That makes me happy!$"
 
 J_Route111_Text_HeidiIntro:
-	.string "I'{SE_M_MILK_DRINK}havin{SE_M_SANDSTORM}{SE_M_CHARGE}picni{SE_M_HYPER_BEAM}i{SE_M_ATTRACT}th{SE_M_REVERSAL}desert.\p"
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}alway{SE_M_GRASSWHISTLE}fin{SE_M_WATERFALL}{SE_M_CHARGE}TRAINER,\n"
-	.string "s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}enjo{SE_M_YAWN}{SE_M_CHARGE}battl{SE_M_REVERSAL}here{SE_M_SUPERSONIC}too!$"
+	.string "I'm having a picnic in the desert.\p"
+	.string "You can always find a TRAINER,\n"
+	.string "so I can enjoy a battle here, too!$"
 
 J_Route111_Text_HeidiDefeat:
-	.string "Ohhh{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}mean!$"
+	.string "Ohhh! You're mean!$"
 
 J_Route111_Text_HeidiPostBattle:
-	.string "Whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}battlin{SE_M_SANDSTORM}i{SE_M_ATTRACT}{SE_M_CHARGE}sandstorm,\n"
-	.string "watc{SE_M_TRI_ATTACK}ou{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}POKéMON'{SE_M_GRASSWHISTLE}HP.\p"
-	.string "I{SE_M_SPIT_UP}ca{SE_M_ATTRACT}fain{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}keep\n"
-	.string "a{SE_M_ATTRACT}ey{SE_M_REVERSAL}o{SE_M_ATTRACT}it!$"
+	.string "When you're battling in a sandstorm,\n"
+	.string "watch out for your POKéMON's HP.\p"
+	.string "It can faint if you don't keep\n"
+	.string "an eye on it!$"
 
 J_Route111_Text_BeauIntro:
-	.string "Wearin{SE_M_SANDSTORM}thes{SE_M_REVERSAL}GO-GOGGLE{SE_M_SKETCH}make{SE_M_GRASSWHISTLE}me\n"
-	.string "fee{SE_M_BATON_PASS}lik{SE_M_REVERSAL}{SE_M_CHARGE}superhero.\l"
-	.string "Righ{SE_M_SPIT_UP}now{SE_M_SUPERSONIC}nobod{SE_M_YAWN}ca{SE_M_ATTRACT}bea{SE_M_SPIT_UP}me!$"
+	.string "Wearing these GO-GOGGLES makes me\n"
+	.string "feel like a superhero.\l"
+	.string "Right now, nobody can beat me!$"
 
 J_Route111_Text_BeauDefeat:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}wi{SE_M_ATTRACT}o{SE_M_ATTRACT}spiri{SE_M_SPIT_UP}alone…$"
+	.string "I can't win on spirit alone…$"
 
 J_Route111_Text_BeauPostBattle:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}{SE_M_CHARGE}rea{SE_M_BATON_PASS}her{SE_M_ATTRACT2}on{SE_M_REVERSAL}day.\n"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}wor{SE_M_ENCORE2}harde{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}me\l"
-	.string "an{SE_M_WATERFALL}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}stronger.$"
+	.string "I'm going to be a real hero one day.\n"
+	.string "I'm going to work harder to make me\l"
+	.string "and my POKéMON stronger.$"
 
 J_Route111_Text_BeckyIntro:
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}fossil{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}found\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}desert{SE_M_PERISH_SONG}Wher{SE_M_REVERSAL}coul{SE_M_WATERFALL}the{SE_M_YAWN}be?$"
+	.string "I heard there are fossils to be found\n"
+	.string "in the desert. Where could they be?$"
 
 J_Route111_Text_BeckyDefeat:
-	.string "{SE_M_HEAL_BELL}cam{SE_M_REVERSAL}u{SE_M_MORNING_SUN}short…$"
+	.string "I came up short…$"
 
 J_Route111_Text_BeckyPostBattle:
-	.string "I{SE_M_ACID_ARMOR}the{SE_M_YAWN}ca{SE_M_ATTRACT}fin{SE_M_WATERFALL}fossil{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}th{SE_M_REVERSAL}desert,\n"
-	.string "i{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}{SE_M_CHARGE}se{SE_M_CHARGE}before.$"
+	.string "If they can find fossils in the desert,\n"
+	.string "it must have been a sea before.$"
 
 J_Route111_Text_DustyIntro:
-	.string "Fo{SE_M_SAND_TOMB}thirt{SE_M_YAWN}year{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}searche{SE_M_WATERFALL}for\n"
-	.string "ancien{SE_M_SPIT_UP}ruins!\l"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}challenged?$"
+	.string "For thirty years I have searched for\n"
+	.string "ancient ruins!\l"
+	.string "I am to be challenged?$"
 
 J_Route111_Text_DustyDefeat:
-	.string "Whil{SE_M_REVERSAL}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}searche{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}ruins,\n"
-	.string "I'v{SE_M_REVERSAL}no{SE_M_SPIT_UP}searche{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}stron{SE_M_SANDSTORM}POKéMON.$"
+	.string "While I have searched for ruins,\n"
+	.string "I've not searched for strong POKéMON.$"
 
 J_Route111_Text_DustyPostBattle:
-	.string "Fo{SE_M_SAND_TOMB}thirt{SE_M_YAWN}year{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}searche{SE_M_WATERFALL}for\n"
-	.string "ancien{SE_M_SPIT_UP}ruins!\p"
-	.string "No{SE_M_SUPERSONIC}wait{SE_M_SUPERSONIC}wa{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}fort{SE_M_YAWN}years?\n"
-	.string "Whic{SE_M_TRI_ATTACK}wa{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}now?$"
+	.string "For thirty years I have searched for\n"
+	.string "ancient ruins!\p"
+	.string "No, wait, was that forty years?\n"
+	.string "Which was it now?$"
 
 J_Route111_Text_DustyRegister:
-	.string "{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}bee{SE_M_ATTRACT}searchin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}any\n"
-	.string "toug{SE_M_TRI_ATTACK}POKéMON.\p"
-	.string "But{SE_M_SUPERSONIC}fo{SE_M_SAND_TOMB}som{SE_M_REVERSAL}reason{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}sur{SE_M_REVERSAL}d{SE_M_ATTRACT2}like\n"
+	.string "I haven't been searching for any\n"
+	.string "tough POKéMON.\p"
+	.string "But, for some reason, I sure do like\n"
 	.string "POKéNAVS.$"
 
 J_Route111_Text_DustyRematchIntro:
-	.string "Fo{SE_M_SAND_TOMB}thirt{SE_M_YAWN}year{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}searche{SE_M_WATERFALL}for\n"
-	.string "ancien{SE_M_SPIT_UP}ruins!\p"
-	.string "No{SE_M_SUPERSONIC}wait{SE_M_SUPERSONIC}wa{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}fort{SE_M_YAWN}years?\n"
-	.string "Anyway{SE_M_SUPERSONIC}a{SE_M_MILK_DRINK}{SE_M_HEAL_BELL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}challenged?$"
+	.string "For thirty years I have searched for\n"
+	.string "ancient ruins!\p"
+	.string "No, wait, was that forty years?\n"
+	.string "Anyway, am I to be challenged?$"
 
 J_Route111_Text_DustyRematchDefeat:
-	.string "I'v{SE_M_REVERSAL}foun{SE_M_WATERFALL}n{SE_M_ATTRACT2}ruins{SE_M_SUPERSONIC}no{SE_M_SAND_TOMB}hav{SE_M_REVERSAL}{SE_M_HEAL_BELL}found\n"
-	.string "an{SE_M_YAWN}stron{SE_M_SANDSTORM}POKéMON…$"
+	.string "I've found no ruins, nor have I found\n"
+	.string "any strong POKéMON…$"
 
 J_Route111_Text_DustyPostRematch:
-	.string "Fo{SE_M_SAND_TOMB}thirt{SE_M_YAWN}year{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}searche{SE_M_WATERFALL}for\n"
-	.string "ancien{SE_M_SPIT_UP}ruins!\p"
-	.string "No{SE_M_SUPERSONIC}wait{SE_M_SUPERSONIC}wa{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}fort{SE_M_YAWN}years\n"
-	.string "I'v{SE_M_REVERSAL}searched?\p"
-	.string "Hmm{SE_M_DIZZY_PUNCH}I{SE_M_SPIT_UP}coul{SE_M_WATERFALL}eve{SE_M_ATTRACT}b{SE_M_REVERSAL}fifty…\n"
-	.string "Ho{SE_M_TWISTER}lon{SE_M_SANDSTORM}hav{SE_M_REVERSAL}{SE_M_HEAL_BELL}bee{SE_M_ATTRACT}a{SE_M_SPIT_UP}this?$"
+	.string "For thirty years I have searched for\n"
+	.string "ancient ruins!\p"
+	.string "No, wait, was that forty years\n"
+	.string "I've searched?\p"
+	.string "Hmm… It could even be fifty…\n"
+	.string "How long have I been at this?$"
 
 J_Route111_Text_TravisIntro:
-	.string "I'{SE_M_MILK_DRINK}ful{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}pep!\n"
-	.string "An{SE_M_WATERFALL}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}peppy{SE_M_SUPERSONIC}too!$"
+	.string "I'm full of pep!\n"
+	.string "And my POKéMON is peppy, too!$"
 
 J_Route111_Text_TravisDefeat:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}los{SE_M_SPIT_UP}it{SE_M_GRASSWHISTLE}pep…$"
+	.string "My POKéMON lost its pep…$"
 
 J_Route111_Text_TravisPostBattle:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}lo{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}pep,\n"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}hel{SE_M_MORNING_SUN}looking.$"
+	.string "When I see a TRAINER with a lot of pep,\n"
+	.string "I can't help looking.$"
 
 J_Route111_Text_IreneIntro:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}wher{SE_M_REVERSAL}you'r{SE_M_REVERSAL}going,\n"
-	.string "bu{SE_M_SPIT_UP}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}battle?$"
+	.string "I don't know where you're going,\n"
+	.string "but would you like to battle?$"
 
 J_Route111_Text_IreneDefeat:
-	.string "Oh{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}disgustingl{SE_M_YAWN}good!$"
+	.string "Oh, you're disgustingly good!$"
 
 J_Route111_Text_IrenePostBattle:
-	.string "I'{SE_M_MILK_DRINK}thinkin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}g{SE_M_ATTRACT2}to\n"
-	.string "MT{SE_M_PERISH_SONG}CHIMNEY{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}th{SE_M_REVERSAL}vie{SE_M_TWISTER}around\l"
-	.string "her{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}ver{SE_M_YAWN}nice{SE_M_SUPERSONIC}too.$"
+	.string "I'm thinking that I should go to\n"
+	.string "MT. CHIMNEY, but the view around\l"
+	.string "here is very nice, too.$"
 
 J_Route111_Text_DaisukeIntro:
-	.string "T{SE_M_ATTRACT2}trai{SE_M_ATTRACT}myself{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}challeng{SE_M_REVERSAL}all\n"
-	.string "who{SE_M_MILK_DRINK}{SE_M_HEAL_BELL}meet!$"
+	.string "To train myself, I challenge all\n"
+	.string "whom I meet!$"
 
 J_Route111_Text_DaisukeDefeat:
-	.string "Uncle{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}giv{SE_M_REVERSAL}up!$"
+	.string "Uncle! I give up!$"
 
 J_Route111_Text_DaisukePostBattle:
-	.string "Al{SE_M_BATON_PASS}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}d{SE_M_ATTRACT2}i{SE_M_GRASSWHISTLE}kee{SE_M_MORNING_SUN}trainin{SE_M_SANDSTORM}until\n"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}defea{SE_M_SPIT_UP}stron{SE_M_SANDSTORM}TRAINER{SE_M_SKETCH}such\l"
-	.string "a{SE_M_GRASSWHISTLE}yourself.$"
+	.string "All I can do is keep training until\n"
+	.string "I can defeat strong TRAINERS such\l"
+	.string "as yourself.$"
 
 J_Route111_Text_WiltonIntro:
-	.string "Sho{SE_M_TWISTER}m{SE_M_REVERSAL}ho{SE_M_TWISTER}muc{SE_M_TRI_ATTACK}you'v{SE_M_REVERSAL}toughened\n"
-	.string "you{SE_M_SAND_TOMB}POKéMON.$"
+	.string "Show me how much you've toughened\n"
+	.string "your POKéMON.$"
 
 J_Route111_Text_WiltonDefeat:
-	.string "{SE_M_HEAL_BELL}see{SE_M_SUPERSONIC}you'v{SE_M_REVERSAL}toughene{SE_M_WATERFALL}them\n"
+	.string "I see, you've toughened them\n"
 	.string "considerably.$"
 
 J_Route111_Text_WiltonPostBattle:
-	.string "POKéMO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}TRAINER{SE_M_SKETCH}lear{SE_M_ATTRACT}much\n"
-	.string "throug{SE_M_TRI_ATTACK}battling.\p"
-	.string "What'{SE_M_GRASSWHISTLE}importan{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}neve{SE_M_SAND_TOMB}giv{SE_M_REVERSAL}up\n"
-	.string "eve{SE_M_ATTRACT}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}lose.$"
+	.string "POKéMON and TRAINERS learn much\n"
+	.string "through battling.\p"
+	.string "What's important is to never give up\n"
+	.string "even if you lose.$"
 
 J_Route111_Text_WiltonRegister:
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}muc{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}learne{SE_M_WATERFALL}from\n"
-	.string "you{SE_M_SAND_TOMB}trainin{SE_M_SANDSTORM}style.\p"
-	.string "{SE_M_HEAL_BELL}reques{SE_M_SPIT_UP}{SE_M_CHARGE}rematc{SE_M_TRI_ATTACK}i{SE_M_ACID_ARMOR}it\n"
-	.string "behoove{SE_M_GRASSWHISTLE}you.$"
+	.string "There is much to be learned from\n"
+	.string "your training style.\p"
+	.string "I request a rematch if it\n"
+	.string "behooves you.$"
 
 J_Route111_Text_WiltonRematchIntro:
-	.string "We'r{SE_M_REVERSAL}trainin{SE_M_SANDSTORM}her{SE_M_REVERSAL}t{SE_M_ATTRACT2}elevat{SE_M_REVERSAL}our\n"
-	.string "gam{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}nex{SE_M_SPIT_UP}level.\l"
-	.string "Sta{SE_M_YAWN}an{SE_M_WATERFALL}trai{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}us!$"
+	.string "We're training here to elevate our\n"
+	.string "game to the next level.\l"
+	.string "Stay and train with us!$"
 
 J_Route111_Text_WiltonRematchDefeat:
-	.string "Ooh{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}decent!$"
+	.string "Ooh, you're decent!$"
 
 J_Route111_Text_WiltonPostRematch:
-	.string "Sinc{SE_M_REVERSAL}you'r{SE_M_REVERSAL}tha{SE_M_SPIT_UP}strong{SE_M_SUPERSONIC}yo{SE_M_DIVE}should\n"
-	.string "ai{SE_M_MILK_DRINK}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}LEAGUE.$"
+	.string "Since you're that strong, you should\n"
+	.string "aim for the POKéMON LEAGUE.$"
 
 J_Route111_Text_BrookeIntro:
-	.string "Oh{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}loo{SE_M_ENCORE2}lik{SE_M_REVERSAL}serious\n"
+	.string "Oh, your POKéMON look like serious\n"
 	.string "actors.\l"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}as{SE_M_ENCORE2}yo{SE_M_DIVE}fo{SE_M_SAND_TOMB}a{SE_M_ATTRACT}engagement.$"
+	.string "I have to ask you for an engagement.$"
 
 J_Route111_Text_BrookeDefeat:
-	.string "The{SE_M_YAWN}didn'{SE_M_SPIT_UP}jus{SE_M_SPIT_UP}loo{SE_M_ENCORE2}strong,\n"
-	.string "the{SE_M_YAWN}ar{SE_M_REVERSAL}strong!$"
+	.string "They didn't just look strong,\n"
+	.string "they are strong!$"
 
 J_Route111_Text_BrookePostBattle:
-	.string "{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}raisin{SE_M_SANDSTORM}m{SE_M_YAWN}POKéMON\n"
-	.string "diligently{SE_M_SUPERSONIC}but{SE_M_SUPERSONIC}o{SE_M_TRI_ATTACK}no{SE_M_SUPERSONIC}ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}still\l"
-	.string "muc{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}done.$"
+	.string "I thought I was raising my POKéMON\n"
+	.string "diligently, but, oh no, there is still\l"
+	.string "much to be done.$"
 
 J_Route111_Text_BrookeRegister:
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}becom{SE_M_REVERSAL}friend{SE_M_GRASSWHISTLE}with\n"
-	.string "mor{SE_M_REVERSAL}stron{SE_M_SANDSTORM}peopl{SE_M_REVERSAL}lik{SE_M_REVERSAL}you!$"
+	.string "I wish I could become friends with\n"
+	.string "more strong people like you!$"
 
 J_Route111_Text_BrookeRematchIntro:
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}mak{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}stronge{SE_M_SAND_TOMB}or\n"
-	.string "weake{SE_M_SAND_TOMB}dependin{SE_M_SANDSTORM}o{SE_M_ATTRACT}th{SE_M_REVERSAL}move{SE_M_GRASSWHISTLE}you\l"
-	.string "teac{SE_M_TRI_ATTACK}them.\p"
-	.string "Wha{SE_M_SPIT_UP}kind{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}move{SE_M_GRASSWHISTLE}d{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}POKéMON\n"
+	.string "You can make POKéMON stronger or\n"
+	.string "weaker depending on the moves you\l"
+	.string "teach them.\p"
+	.string "What kinds of moves do your POKéMON\n"
 	.string "know?$"
 
 J_Route111_Text_BrookeRematchDefeat:
-	.string "You'v{SE_M_REVERSAL}taugh{SE_M_SPIT_UP}the{SE_M_MILK_DRINK}goo{SE_M_WATERFALL}moves!$"
+	.string "You've taught them good moves!$"
 
 J_Route111_Text_BrookePostRematch:
-	.string "Mayb{SE_M_REVERSAL}{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}hav{SE_M_REVERSAL}stoppe{SE_M_WATERFALL}my\n"
-	.string "POKéMO{SE_M_PSYBEAM2}fro{SE_M_MILK_DRINK}evolvin{SE_M_SANDSTORM}unti{SE_M_BATON_PASS}they\l"
-	.string "learne{SE_M_WATERFALL}bette{SE_M_SAND_TOMB}moves…$"
+	.string "Maybe I should have stopped my\n"
+	.string "POKéMON from evolving until they\l"
+	.string "learned better moves…$"
 
 J_Route111_Text_CeliaIntro:
-	.string "{SE_M_HEAL_BELL}shouldn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}com{SE_M_REVERSAL}t{SE_M_ATTRACT2}{SE_M_CHARGE}plac{SE_M_REVERSAL}like\n"
-	.string "thi{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}picnic!$"
+	.string "I shouldn't have come to a place like\n"
+	.string "this for a picnic!$"
 
 J_Route111_Text_CeliaDefeat:
 	.string "Aww!\n"
-	.string "{SE_M_HEAL_BELL}reall{SE_M_YAWN}shouldn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}come!$"
+	.string "I really shouldn't have come!$"
 
 J_Route111_Text_CeliaPostBattle:
-	.string "I{SE_M_ATTRACT}{SE_M_CHARGE}sandstor{SE_M_MILK_DRINK}lik{SE_M_REVERSAL}this{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}set\n"
-	.string "th{SE_M_REVERSAL}place{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}picni{SE_M_HYPER_BEAM}eve{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}my\l"
-	.string "GO-GOGGLE{SE_M_SKETCH}on…$"
+	.string "In a sandstorm like this, I can't set\n"
+	.string "the places for a picnic even with my\l"
+	.string "GO-GOGGLES on…$"
 
 J_Route111_Text_BryanIntro:
-	.string "Ho{SE_M_TWISTER}toug{SE_M_TRI_ATTACK}ar{SE_M_REVERSAL}you?\n"
-	.string "W{SE_M_REVERSAL}shal{SE_M_BATON_PASS}expos{SE_M_REVERSAL}tha{SE_M_SPIT_UP}secret!$"
+	.string "How tough are you?\n"
+	.string "We shall expose that secret!$"
 
 J_Route111_Text_BryanDefeat:
-	.string "Oh{SE_M_DRAGON_RAGE}You{SE_M_SAND_TOMB}strength!\n"
-	.string "I{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}shroude{SE_M_WATERFALL}i{SE_M_ATTRACT}mystery!$"
+	.string "Oh! Your strength!\n"
+	.string "It is shrouded in mystery!$"
 
 J_Route111_Text_BryanPostBattle:
-	.string "Thi{SE_M_GRASSWHISTLE}deser{SE_M_SPIT_UP}hoard{SE_M_GRASSWHISTLE}mysterie{SE_M_GRASSWHISTLE}in\n"
-	.string "it{SE_M_GRASSWHISTLE}shiftin{SE_M_SANDSTORM}sands!$"
+	.string "This desert hoards mysteries in\n"
+	.string "its shifting sands!$"
 
 J_Route111_Text_BrandenIntro:
-	.string "I'l{SE_M_BATON_PASS}giv{SE_M_REVERSAL}yo{SE_M_DIVE}som{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}sandwich\n"
-	.string "i{SE_M_ACID_ARMOR}you'l{SE_M_BATON_PASS}lose.$"
+	.string "I'll give you some of my sandwich\n"
+	.string "if you'll lose.$"
 
 J_Route111_Text_BrandenDefeat:
-	.string "Tch{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}{SE_M_CHARGE}sandwic{SE_M_TRI_ATTACK}woul{SE_M_WATERFALL}be\n"
-	.string "enoug{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}bribe…$"
+	.string "Tch! I thought a sandwich would be\n"
+	.string "enough of a bribe…$"
 
 J_Route111_Text_BrandenPostBattle:
-	.string "M{SE_M_YAWN}SANDSHRE{SE_M_DETECT}love{SE_M_GRASSWHISTLE}eating\n"
-	.string "m{SE_M_YAWN}sandwiches.$"
+	.string "My SANDSHREW loves eating\n"
+	.string "my sandwiches.$"
 
 J_Route111_Text_TyronIntro:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}favorit{SE_M_REVERSAL}kin{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}POKéMON!$"
+	.string "This is my favorite kind of POKéMON!$"
 
 J_Route111_Text_TyronDefeat:
 	.string "Wait!\n"
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}ge{SE_M_SPIT_UP}{SE_M_CHARGE}goo{SE_M_WATERFALL}loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}m{SE_M_YAWN}POKéMON?$"
+	.string "Did you get a good look at my POKéMON?$"
 
 J_Route111_Text_TyronPostBattle:
-	.string "Whe{SE_M_ATTRACT}havin{SE_M_SANDSTORM}{SE_M_CHARGE}battle{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}{SE_M_CHARGE}kic{SE_M_ENCORE2}out\n"
-	.string "o{SE_M_ACID_ARMOR}showin{SE_M_SANDSTORM}of{SE_M_ACID_ARMOR}m{SE_M_YAWN}POKéMON.\p"
-	.string "{SE_M_HEAL_BELL}be{SE_M_SPIT_UP}everyon{SE_M_REVERSAL}feel{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}wa{SE_M_YAWN}when\n"
-	.string "the{SE_M_YAWN}ente{SE_M_SAND_TOMB}{SE_M_CHARGE}battle!$"
+	.string "When having a battle, I get a kick out\n"
+	.string "of showing off my POKéMON.\p"
+	.string "I bet everyone feels that way when\n"
+	.string "they enter a battle!$"
 
 J_Route111_Text_CelinaIntro:
-	.string "Sho{SE_M_TWISTER}m{SE_M_REVERSAL}ho{SE_M_TWISTER}t{SE_M_ATTRACT2}pu{SE_M_SPIT_UP}{SE_M_CHARGE}littl{SE_M_REVERSAL}excitement\n"
-	.string "int{SE_M_ATTRACT2}m{SE_M_YAWN}life.$"
+	.string "Show me how to put a little excitement\n"
+	.string "into my life.$"
 
 J_Route111_Text_CelinaDefeat:
-	.string "Oh{SE_M_DIZZY_PUNCH}My…\n"
-	.string "Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}to{SE_M_ATTRACT2}muc{SE_M_TRI_ATTACK}excitement.$"
+	.string "Oh… My…\n"
+	.string "That was too much excitement.$"
 
 J_Route111_Text_CelinaPostBattle:
-	.string "M{SE_M_YAWN}puls{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}stil{SE_M_BATON_PASS}racing.\n"
-	.string "You'r{SE_M_REVERSAL}on{SE_M_REVERSAL}fabulou{SE_M_GRASSWHISTLE}TRAINER.$"
+	.string "My pulse is still racing.\n"
+	.string "You're one fabulous TRAINER.$"
 
 J_Route111_Text_HaydenIntro:
-	.string "Whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}famishe{SE_M_WATERFALL}a{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}am,\n"
-	.string "ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}roo{SE_M_MILK_DRINK}fo{SE_M_SAND_TOMB}pity!$"
+	.string "When you're as famished as I am,\n"
+	.string "there is no room for pity!$"
 
 J_Route111_Text_HaydenDefeat:
 	.string "Groan…$"
 
 J_Route111_Text_HaydenPostBattle:
-	.string "M{SE_M_YAWN}stomac{SE_M_TRI_ATTACK}i{SE_M_GRASSWHISTLE}grumbling!\n"
-	.string "Mayb{SE_M_REVERSAL}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}gril{SE_M_BATON_PASS}som{SE_M_REVERSAL}BERRIES…$"
+	.string "My stomach is grumbling!\n"
+	.string "Maybe I can grill some BERRIES…$"
 
 J_Route111_Text_BiancaIntro:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}com{SE_M_REVERSAL}fro{SE_M_MILK_DRINK}MAUVILLE?\n"
-	.string "The{SE_M_ATTRACT}yo{SE_M_DIVE}shoul{SE_M_WATERFALL}b{SE_M_REVERSAL}ful{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}energy!$"
+	.string "Did you come from MAUVILLE?\n"
+	.string "Then you should be full of energy!$"
 
 J_Route111_Text_BiancaDefeat:
-	.string "Oo{SE_M_TRI_ATTACK}lala!\n"
-	.string "That'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}lo{SE_M_SPIT_UP}t{SE_M_ATTRACT2}take!$"
+	.string "Ooh lala!\n"
+	.string "That's a lot to take!$"
 
 J_Route111_Text_BiancaPostBattle:
-	.string "Thi{SE_M_GRASSWHISTLE}roa{SE_M_WATERFALL}here…\n"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}quit{SE_M_REVERSAL}{SE_M_CHARGE}way{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}travel.$"
+	.string "This road here…\n"
+	.string "You have quite a ways to travel.$"
 
 J_Route112_Text_BriceIntro:
 	.string "Hahahaha!\n"
-	.string "Ho{SE_M_TWISTER}abou{SE_M_SPIT_UP}w{SE_M_REVERSAL}hav{SE_M_REVERSAL}{SE_M_CHARGE}battle?\l"
-	.string "Yo{SE_M_DIVE}an{SE_M_WATERFALL}me!\l"
+	.string "How about we have a battle?\l"
+	.string "You and me!\l"
 	.string "Hahahaha!$"
 
 J_Route112_Text_BriceDefeat:
-	.string "{SE_M_HEAL_BELL}lost!\n"
+	.string "I lost!\n"
 	.string "Hahahaha!$"
 
 J_Route112_Text_BricePostBattle:
-	.string "Hahahahaha{SE_M_DRAGON_RAGE}Somethin{SE_M_SANDSTORM}fle{SE_M_TWISTER}u{SE_M_MORNING_SUN}m{SE_M_YAWN}nose!\n"
+	.string "Hahahahaha! Something flew up my nose!\n"
 	.string "Hahahaha-hatchoo!$"
 
 J_Route112_Text_TrentIntro:
-	.string "M{SE_M_YAWN}leg{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}soli{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}poundin{SE_M_SANDSTORM}up\n"
-	.string "an{SE_M_WATERFALL}dow{SE_M_ATTRACT}th{SE_M_REVERSAL}mountains.\p"
-	.string "They'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}buckl{SE_M_REVERSAL}easily,\n"
+	.string "My legs are solid from pounding up\n"
+	.string "and down the mountains.\p"
+	.string "They're not going to buckle easily,\n"
 	.string "friend!$"
 
 J_Route112_Text_TrentDefeat:
-	.string "Ouch{SE_M_DRAGON_RAGE}M{SE_M_YAWN}leg{SE_M_GRASSWHISTLE}crampe{SE_M_WATERFALL}up!$"
+	.string "Ouch! My legs cramped up!$"
 
 J_Route112_Text_TrentPostBattle:
-	.string "Tr{SE_M_YAWN}hiking{SE_M_SUPERSONIC}an{SE_M_WATERFALL}{SE_M_HEAL_BELL}mea{SE_M_ATTRACT}really\n"
-	.string "pounding{SE_M_SUPERSONIC}o{SE_M_ATTRACT}thes{SE_M_REVERSAL}mountai{SE_M_ATTRACT}trails\l"
-	.string "wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}heav{SE_M_YAWN}pac{SE_M_ENCORE2}weighin{SE_M_SANDSTORM}dozen{SE_M_GRASSWHISTLE}of\l"
+	.string "Try hiking, and I mean really\n"
+	.string "pounding, on these mountain trails\l"
+	.string "with a heavy pack weighing dozens of\l"
 	.string "pounds.\p"
-	.string "That{SE_M_SUPERSONIC}m{SE_M_YAWN}friend{SE_M_SUPERSONIC}wil{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}body\n"
-	.string "int{SE_M_ATTRACT2}seriou{SE_M_GRASSWHISTLE}shape.$"
+	.string "That, my friend, will get your body\n"
+	.string "into serious shape.$"
 
 J_Route112_Text_TrentRegister:
-	.string "Ow{SE_M_SUPERSONIC}m{SE_M_YAWN}leg{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}crampe{SE_M_WATERFALL}up.\n"
-	.string "Ca{SE_M_ATTRACT}yo{SE_M_DIVE}gra{SE_M_STRENGTH}m{SE_M_REVERSAL}som{SE_M_REVERSAL}bandage{SE_M_GRASSWHISTLE}from\l"
-	.string "m{SE_M_YAWN}backpack?\p"
-	.string "No{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}m{SE_M_YAWN}POKéNAV!\n"
-	.string "Oh{SE_M_SUPERSONIC}fine{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}registe{SE_M_SAND_TOMB}you.$"
+	.string "Ow, my legs have cramped up.\n"
+	.string "Can you grab me some bandages from\l"
+	.string "my backpack?\p"
+	.string "No, that's my POKéNAV!\n"
+	.string "Oh, fine, I'll register you.$"
 
 J_Route112_Text_TrentRematchIntro:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}keepin{SE_M_SANDSTORM}fi{SE_M_SPIT_UP}b{SE_M_YAWN}hiking.\n"
-	.string "Power{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}i{SE_M_ATTRACT}spades!$"
+	.string "I've been keeping fit by hiking.\n"
+	.string "Power, I have in spades!$"
 
 J_Route112_Text_TrentRematchDefeat:
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}trumpe{SE_M_WATERFALL}i{SE_M_ATTRACT}power?$"
+	.string "I got trumped in power?$"
 
 J_Route112_Text_TrentRematchPostBattle:
-	.string "{SE_M_HEAL_BELL}hea{SE_M_SAND_TOMB}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}som{SE_M_REVERSAL}seriousl{SE_M_YAWN}tough\n"
-	.string "TRAINER{SE_M_SKETCH}o{SE_M_ATTRACT}to{SE_M_MORNING_SUN}o{SE_M_ACID_ARMOR}MT{SE_M_PERISH_SONG}CHIMNEY.\p"
-	.string "{SE_M_HEAL_BELL}inten{SE_M_WATERFALL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}u{SE_M_MORNING_SUN}ther{SE_M_REVERSAL}an{SE_M_WATERFALL}giv{SE_M_REVERSAL}them\n"
-	.string "{SE_M_CHARGE}challenge!$"
+	.string "I hear there are some seriously tough\n"
+	.string "TRAINERS on top of MT. CHIMNEY.\p"
+	.string "I intend to get up there and give them\n"
+	.string "a challenge!$"
 
 J_Route112_Text_LarryIntro:
-	.string "I'{SE_M_MILK_DRINK}strong.\n"
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}cr{SE_M_YAWN}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}lose.$"
+	.string "I'm strong.\n"
+	.string "I won't cry if I lose.$"
 
 J_Route112_Text_LarryDefeat:
 	.string "Waaaah!$"
 
 J_Route112_Text_LarryPostBattle:
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}cryin{SE_M_SANDSTORM}becaus{SE_M_REVERSAL}{SE_M_HEAL_BELL}mis{SE_M_GRASSWHISTLE}m{SE_M_YAWN}mommy!\n"
+	.string "I'm not crying because I miss my mommy!\n"
 	.string "Snivel…$"
 
 J_Route112_Text_CarolIntro:
-	.string "Whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}ou{SE_M_SPIT_UP}o{SE_M_ATTRACT}{SE_M_CHARGE}picnic{SE_M_SUPERSONIC}why,\n"
-	.string "yo{SE_M_DIVE}simpl{SE_M_YAWN}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}sing!\l"
-	.string "Com{SE_M_REVERSAL}on{SE_M_SUPERSONIC}sin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}me!$"
+	.string "When you're out on a picnic, why,\n"
+	.string "you simply have to sing!\l"
+	.string "Come on, sing with me!$"
 
 J_Route112_Text_CarolDefeat:
-	.string "Oh{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}s{SE_M_ATTRACT2}strong!$"
+	.string "Oh, you're so strong!$"
 
 J_Route112_Text_CarolPostBattle:
-	.string "I{SE_M_SPIT_UP}doesn'{SE_M_SPIT_UP}matte{SE_M_SAND_TOMB}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}goo{SE_M_WATERFALL}o{SE_M_SAND_TOMB}bad\n"
-	.string "a{SE_M_SPIT_UP}singin{SE_M_SANDSTORM}o{SE_M_SAND_TOMB}POKéMON.\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}th{SE_M_REVERSAL}mos{SE_M_SPIT_UP}fun{SE_M_SUPERSONIC}yo{SE_M_DIVE}win!$"
+	.string "It doesn't matter if you're good or bad\n"
+	.string "at singing or POKéMON.\p"
+	.string "If you have the most fun, you win!$"
 
 J_Route112_Text_BryantIntro:
-	.string "{SE_M_HEAL_BELL}caugh{SE_M_SPIT_UP}ho{SE_M_SPIT_UP}POKéMO{SE_M_PSYBEAM2}i{SE_M_ATTRACT}FIER{SE_M_MOONLIGHT}PATH!\n"
-	.string "Tak{SE_M_REVERSAL}{SE_M_CHARGE}look!$"
+	.string "I caught hot POKéMON in FIERY PATH!\n"
+	.string "Take a look!$"
 
 J_Route112_Text_BryantDefeat:
-	.string "Wha{SE_M_SPIT_UP}{SE_M_CHARGE}bump{SE_M_YAWN}rid{SE_M_REVERSAL}tha{SE_M_SPIT_UP}was!$"
+	.string "What a bumpy ride that was!$"
 
 J_Route112_Text_BryantPostBattle:
-	.string "{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}th{SE_M_REVERSAL}wa{SE_M_YAWN}yo{SE_M_DIVE}battle.\n"
-	.string "I{SE_M_SPIT_UP}ha{SE_M_GRASSWHISTLE}{SE_M_CHARGE}certai{SE_M_ATTRACT}flai{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}it.$"
+	.string "I like the way you battle.\n"
+	.string "It has a certain flair to it.$"
 
 J_Route112_Text_ShaylaIntro:
-	.string "Oh{SE_M_SUPERSONIC}aren'{SE_M_SPIT_UP}yo{SE_M_DIVE}a{SE_M_ATTRACT}adorabl{SE_M_REVERSAL}TRAINER!\n"
-	.string "Please{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}{SE_M_CHARGE}romanti{SE_M_HYPER_BEAM}battle!\l"
-	.string "I'{SE_M_MILK_DRINK}somewha{SE_M_SPIT_UP}decent!$"
+	.string "Oh, aren't you an adorable TRAINER!\n"
+	.string "Please, I need a romantic battle!\l"
+	.string "I'm somewhat decent!$"
 
 J_Route112_Text_ShaylaDefeat:
-	.string "Oh{SE_M_SUPERSONIC}ho{SE_M_TWISTER}stron{SE_M_SANDSTORM}yo{SE_M_DIVE}are!\n"
-	.string "You'v{SE_M_REVERSAL}give{SE_M_ATTRACT}m{SE_M_REVERSAL}quit{SE_M_REVERSAL}{SE_M_CHARGE}shock!$"
+	.string "Oh, how strong you are!\n"
+	.string "You've given me quite a shock!$"
 
 J_Route112_Text_ShaylaPostBattle:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}bus{SE_M_YAWN}righ{SE_M_SPIT_UP}now?\n"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}thinkin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}mayb{SE_M_REVERSAL}w{SE_M_REVERSAL}ca{SE_M_ATTRACT}have\l"
-	.string "{SE_M_CHARGE}rematc{SE_M_TRI_ATTACK}righ{SE_M_SPIT_UP}now…\l"
-	.string "Bu{SE_M_SPIT_UP}it'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}righ{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}busy.$"
+	.string "Are you busy right now?\n"
+	.string "I was thinking that maybe we can have\l"
+	.string "a rematch right now…\l"
+	.string "But it's all right if you're busy.$"
 
 J_Route113_Text_JaylenIntro:
-	.string "Ca{SE_M_ATTRACT}yo{SE_M_DIVE}gues{SE_M_GRASSWHISTLE}wh{SE_M_YAWN}it'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}cool\n"
-	.string "aroun{SE_M_WATERFALL}here?$"
+	.string "Can you guess why it's so cool\n"
+	.string "around here?$"
 
 J_Route113_Text_JaylenDefeat:
 	.string "Peeuuw!\n"
-	.string "Tha{SE_M_SPIT_UP}stinks!$"
+	.string "That stinks!$"
 
 J_Route113_Text_JaylenPostBattle:
-	.string "Th{SE_M_REVERSAL}volcani{SE_M_HYPER_BEAM}as{SE_M_TRI_ATTACK}block{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}sun,\n"
-	.string "s{SE_M_ATTRACT2}i{SE_M_SPIT_UP}doesn'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}ver{SE_M_YAWN}warm.\p"
-	.string "That'{SE_M_GRASSWHISTLE}goo{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}me--{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}stan{SE_M_WATERFALL}heat!$"
+	.string "The volcanic ash blocks the sun,\n"
+	.string "so it doesn't get very warm.\p"
+	.string "That's good for me--I can't stand heat!$"
 
 J_Route113_Text_DillonIntro:
-	.string "Th{SE_M_REVERSAL}volcano'{SE_M_GRASSWHISTLE}eruptio{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}proo{SE_M_ACID_ARMOR}that\n"
-	.string "th{SE_M_REVERSAL}eart{SE_M_TRI_ATTACK}i{SE_M_GRASSWHISTLE}alive.$"
+	.string "The volcano's eruption is proof that\n"
+	.string "the earth is alive.$"
 
 J_Route113_Text_DillonDefeat:
-	.string "You'r{SE_M_REVERSAL}som{SE_M_REVERSAL}kin{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}strong!$"
+	.string "You're some kind of strong!$"
 
 J_Route113_Text_DillonPostBattle:
-	.string "Ouch{SE_M_DRAGON_RAGE}Owww{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}see!\n"
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}ashe{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}m{SE_M_YAWN}eyelashes!\p"
-	.string "Ge{SE_M_SPIT_UP}it{SE_M_SING}Ashe{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}eyelashes?\p"
-	.string "Okay{SE_M_SUPERSONIC}tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}bad{SE_M_SUPERSONIC}sorry…$"
+	.string "Ouch! Owww! I can't see!\n"
+	.string "I got ashes in my eyelashes!\p"
+	.string "Get it? Ashes and eyelashes?\p"
+	.string "Okay, that was bad, sorry…$"
 
 J_Route113_Text_MadelineIntro:
-	.string "{SE_M_HEAL_BELL}us{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}paraso{SE_M_BATON_PASS}t{SE_M_ATTRACT2}war{SE_M_WATERFALL}of{SE_M_ACID_ARMOR}this\n"
-	.string "filthy{SE_M_SUPERSONIC}yuck{SE_M_YAWN}volcani{SE_M_HYPER_BEAM}as{SE_M_TRI_ATTACK}from\l"
-	.string "m{SE_M_YAWN}dea{SE_M_SAND_TOMB}NUMEL.$"
+	.string "I use this parasol to ward off this\n"
+	.string "filthy, yucky volcanic ash from\l"
+	.string "my dear NUMEL.$"
 
 J_Route113_Text_MadelineDefeat:
-	.string "Huff{SE_M_SUPERSONIC}huff…\n"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}exhausted…$"
+	.string "Huff, huff…\n"
+	.string "I am exhausted…$"
 
 J_Route113_Text_MadelinePostBattle:
-	.string "You'r{SE_M_REVERSAL}ver{SE_M_YAWN}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}this.\n"
-	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}sa{SE_M_YAWN}I'{SE_M_MILK_DRINK}impressed!$"
+	.string "You're very good at this.\n"
+	.string "I must say I'm impressed!$"
 
 J_Route113_Text_MadelineRegister:
-	.string "Here{SE_M_SUPERSONIC}slid{SE_M_REVERSAL}unde{SE_M_SAND_TOMB}m{SE_M_YAWN}parasol.\n"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}registe{SE_M_SAND_TOMB}yo{SE_M_DIVE}i{SE_M_ATTRACT}m{SE_M_YAWN}POKéNAV.$"
+	.string "Here, slide under my parasol.\n"
+	.string "Let me register you in my POKéNAV.$"
 
 J_Route113_Text_MadelineRematchIntro:
-	.string "Oh{SE_M_SUPERSONIC}hello{SE_M_SUPERSONIC}hasn'{SE_M_SPIT_UP}i{SE_M_SPIT_UP}bee{SE_M_ATTRACT}{SE_M_CHARGE}while?\n"
-	.string "Ma{SE_M_YAWN}{SE_M_HEAL_BELL}invit{SE_M_REVERSAL}yo{SE_M_DIVE}t{SE_M_ATTRACT2}battle?$"
+	.string "Oh, hello, hasn't it been a while?\n"
+	.string "May I invite you to battle?$"
 
 J_Route113_Text_MadelineRematchDefeat:
-	.string "Oh{SE_M_SUPERSONIC}ho{SE_M_TWISTER}super!$"
+	.string "Oh, how super!$"
 
 J_Route113_Text_MadelinePostRematch:
-	.string "You'v{SE_M_REVERSAL}remaine{SE_M_WATERFALL}ver{SE_M_YAWN}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}this.\n"
-	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}sa{SE_M_YAWN}I'{SE_M_MILK_DRINK}impressed!$"
+	.string "You've remained very good at this.\n"
+	.string "I must say I'm impressed!$"
 
 J_Route113_Text_LaoIntro:
-	.string "Fro{SE_M_MILK_DRINK}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}ashe{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}leap{SE_M_DRAGON_RAGE}Hiyah!\n"
-	.string "{SE_M_HEAL_BELL}challeng{SE_M_REVERSAL}thee!$"
+	.string "From out of the ashes I leap! Hiyah!\n"
+	.string "I challenge thee!$"
 
 J_Route113_Text_LaoDefeat:
-	.string "Wit{SE_M_TRI_ATTACK}hono{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}admi{SE_M_SPIT_UP}defeat!$"
+	.string "With honor I admit defeat!$"
 
 J_Route113_Text_LaoPostBattle:
-	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}refin{SE_M_REVERSAL}th{SE_M_REVERSAL}ar{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}concealment.\n"
-	.string "{SE_M_HEAL_BELL}bi{SE_M_WATERFALL}the{SE_M_REVERSAL}farewell.$"
+	.string "I must refine the art of concealment.\n"
+	.string "I bid thee farewell.$"
 
 J_Route113_Text_LaoRegister:
-	.string "Yiiyaah{SE_M_DRAGON_RAGE}Witnes{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}ancien{SE_M_SPIT_UP}ninja\n"
-	.string "techniqu{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}POKéNA{SE_M_BARRIER}registration!$"
+	.string "Yiiyaah! Witness the ancient ninja\n"
+	.string "technique of POKéNAV registration!$"
 
 J_Route113_Text_LaoRematchIntro:
-	.string "Fro{SE_M_MILK_DRINK}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}ashe{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}leap{SE_M_DRAGON_RAGE}Hiyah!\n"
-	.string "{SE_M_HEAL_BELL}challeng{SE_M_REVERSAL}thee!$"
+	.string "From out of the ashes I leap! Hiyah!\n"
+	.string "I challenge thee!$"
 
 J_Route113_Text_LaoRematchDefeat:
-	.string "Wit{SE_M_TRI_ATTACK}hono{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}admi{SE_M_SPIT_UP}defeat!$"
+	.string "With honor I admit defeat!$"
 
 J_Route113_Text_LaoPostRematch:
-	.string "M{SE_M_YAWN}flawles{SE_M_GRASSWHISTLE}concealmen{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}le{SE_M_SPIT_UP}down\n"
-	.string "b{SE_M_YAWN}m{SE_M_YAWN}immatur{SE_M_REVERSAL}battl{SE_M_REVERSAL}skills…\p"
-	.string "{SE_M_HEAL_BELL}bi{SE_M_WATERFALL}the{SE_M_REVERSAL}farewell.$"
+	.string "My flawless concealment was let down\n"
+	.string "by my immature battle skills…\p"
+	.string "I bid thee farewell.$"
 
 J_Route113_Text_LungIntro:
-	.string "Thank{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}findin{SE_M_SANDSTORM}me!\n"
-	.string "Bu{SE_M_SPIT_UP}w{SE_M_REVERSAL}stil{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}battle!$"
+	.string "Thanks for finding me!\n"
+	.string "But we still have to battle!$"
 
 J_Route113_Text_LungDefeat:
-	.string "I'l{SE_M_BATON_PASS}us{SE_M_REVERSAL}m{SE_M_YAWN}ninjuts{SE_M_DIVE}o{SE_M_ATTRACT}you…\n"
-	.string "“VOLCANI{SE_M_PSYBEAM}AS{SE_M_SWAGGER2}SWIR{SE_M_BRICK_BREAK}CLOAK”!\p"
+	.string "I'll use my ninjutsu on you…\n"
+	.string "“VOLCANIC ASH SWIRL CLOAK”!\p"
 	.string "…What?\n"
-	.string "It'{SE_M_GRASSWHISTLE}alread{SE_M_YAWN}over?$"
+	.string "It's already over?$"
 
 J_Route113_Text_LungPostBattle:
-	.string "Yo{SE_M_DIVE}kno{SE_M_TWISTER}what'{SE_M_GRASSWHISTLE}crumm{SE_M_YAWN}abou{SE_M_SPIT_UP}hiding?\n"
-	.string "It'{SE_M_GRASSWHISTLE}lonel{SE_M_YAWN}i{SE_M_ACID_ARMOR}n{SE_M_ATTRACT2}on{SE_M_REVERSAL}come{SE_M_GRASSWHISTLE}along.$"
+	.string "You know what's crummy about hiding?\n"
+	.string "It's lonely if no one comes along.$"
 
 J_Route113_Text_ToriIntro:
-	.string "TORI{SE_M_HEAT_WAVE}Bot{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}us{SE_M_SUPERSONIC}w{SE_M_REVERSAL}collec{SE_M_SPIT_UP}ashes.\n"
-	.string "W{SE_M_REVERSAL}battl{SE_M_REVERSAL}POKéMON{SE_M_SUPERSONIC}too.$"
+	.string "TORI: Both of us, we collect ashes.\n"
+	.string "We battle POKéMON, too.$"
 
 J_Route113_Text_ToriDefeat:
-	.string "TORI{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}lost{SE_M_DIZZY_PUNCH}It'{SE_M_GRASSWHISTLE}boring{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}I'{SE_M_MILK_DRINK}going\n"
-	.string "t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}som{SE_M_REVERSAL}mor{SE_M_REVERSAL}ashes.$"
+	.string "TORI: We lost… It's boring, so I'm going\n"
+	.string "to get some more ashes.$"
 
 J_Route113_Text_ToriPostBattle:
-	.string "TORI{SE_M_HEAT_WAVE}Ho{SE_M_TWISTER}muc{SE_M_TRI_ATTACK}as{SE_M_TRI_ATTACK}d{SE_M_ATTRACT2}w{SE_M_REVERSAL}have?\n"
-	.string "Enoug{SE_M_TRI_ATTACK}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}WHIT{SE_M_SWORDS_DANCE}FLUTE{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hope.$"
+	.string "TORI: How much ash do we have?\n"
+	.string "Enough for a WHITE FLUTE, I hope.$"
 
 J_Route113_Text_ToriNotEnoughMons:
-	.string "TORI{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}2-on-2.\n"
-	.string "I{SE_M_ACID_ARMOR}w{SE_M_REVERSAL}didn't{SE_M_SUPERSONIC}w{SE_M_REVERSAL}woul{SE_M_WATERFALL}lose!$"
+	.string "TORI: We want to battle 2-on-2.\n"
+	.string "If we didn't, we would lose!$"
 
 J_Route113_Text_TiaIntro:
-	.string "TIA{SE_M_HEAT_WAVE}Bot{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}us{SE_M_SUPERSONIC}w{SE_M_REVERSAL}collec{SE_M_SPIT_UP}ashes.\n"
-	.string "W{SE_M_REVERSAL}battl{SE_M_REVERSAL}POKéMON{SE_M_SUPERSONIC}too.$"
+	.string "TIA: Both of us, we collect ashes.\n"
+	.string "We battle POKéMON, too.$"
 
 J_Route113_Text_TiaDefeat:
-	.string "TIA{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}couldn'{SE_M_SPIT_UP}win{SE_M_DIZZY_PUNCH}It'{SE_M_GRASSWHISTLE}boring,\n"
-	.string "s{SE_M_ATTRACT2}I'{SE_M_MILK_DRINK}gettin{SE_M_SANDSTORM}som{SE_M_REVERSAL}mor{SE_M_REVERSAL}ashes.$"
+	.string "TIA: We couldn't win… It's boring,\n"
+	.string "so I'm getting some more ashes.$"
 
 J_Route113_Text_TiaPostBattle:
-	.string "TIA{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}hav{SE_M_REVERSAL}{SE_M_CHARGE}lo{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}ashes!\n"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}enoug{SE_M_TRI_ATTACK}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}WHIT{SE_M_SWORDS_DANCE}FLUTE!$"
+	.string "TIA: We have a lot of ashes!\n"
+	.string "I think enough for a WHITE FLUTE!$"
 
 J_Route113_Text_TiaNotEnoughMons:
-	.string "TIA{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}2-on-2.\n"
-	.string "I{SE_M_ACID_ARMOR}w{SE_M_REVERSAL}don't{SE_M_SUPERSONIC}w{SE_M_REVERSAL}won'{SE_M_SPIT_UP}win!$"
+	.string "TIA: We want to battle 2-on-2.\n"
+	.string "If we don't, we won't win!$"
 
 J_Route113_Text_CobyIntro:
-	.string "Pfft{SE_M_SUPERSONIC}wit{SE_M_TRI_ATTACK}thes{SE_M_REVERSAL}wing{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}can\n"
-	.string "flic{SE_M_ENCORE2}yo{SE_M_DIVE}away!$"
+	.string "Pfft, with these wings I can\n"
+	.string "flick you away!$"
 
 J_Route113_Text_CobyDefeat:
-	.string "A{SE_M_DIZZY_PUNCH}What?$"
+	.string "A… What?$"
 
 J_Route113_Text_CobyPostBattle:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}wha{SE_M_SPIT_UP}t{SE_M_ATTRACT2}sa{SE_M_YAWN}whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}get\n"
-	.string "beate{SE_M_ATTRACT}s{SE_M_ATTRACT2}easily…$"
+	.string "I don't know what to say when I get\n"
+	.string "beaten so easily…$"
 
 J_Route113_Text_SophieIntro:
-	.string "Th{SE_M_REVERSAL}warmt{SE_M_TRI_ATTACK}her{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}makin{SE_M_SANDSTORM}m{SE_M_REVERSAL}drowsy.\n"
-	.string "Battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}m{SE_M_REVERSAL}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}sta{SE_M_YAWN}awake.$"
+	.string "The warmth here is making me drowsy.\n"
+	.string "Battle with me so I can stay awake.$"
 
 J_Route113_Text_SophieDefeat:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}dream.\n"
-	.string "I'{SE_M_MILK_DRINK}sur{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}it…$"
+	.string "This is a dream.\n"
+	.string "I'm sure of it…$"
 
 J_Route113_Text_SophiePostBattle:
-	.string "Losin{SE_M_SANDSTORM}burn{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}up…\n"
-	.string "I'{SE_M_MILK_DRINK}jus{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}slee{SE_M_MORNING_SUN}righ{SE_M_SPIT_UP}here!\l"
+	.string "Losing burns me up…\n"
+	.string "I'm just going to sleep right here!\l"
 	.string "Zzz!$"
 
 J_Route113_Text_LawrenceIntro:
-	.string "Wer{SE_M_REVERSAL}yo{SE_M_DIVE}mayb{SE_M_REVERSAL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}middle\n"
-	.string "o{SE_M_ACID_ARMOR}gatherin{SE_M_SANDSTORM}volcani{SE_M_HYPER_BEAM}ashes?$"
+	.string "Were you maybe in the middle\n"
+	.string "of gathering volcanic ashes?$"
 
 J_Route113_Text_LawrenceDefeat:
 	.string "Ehehe.\n"
-	.string "W{SE_M_REVERSAL}go{SE_M_SPIT_UP}beate{SE_M_ATTRACT}cleanly.$"
+	.string "We got beaten cleanly.$"
 
 J_Route113_Text_LawrencePostBattle:
-	.string "{SE_M_HEAL_BELL}ough{SE_M_SPIT_UP}t{SE_M_ATTRACT2}hid{SE_M_REVERSAL}unde{SE_M_SAND_TOMB}th{SE_M_REVERSAL}ashes{SE_M_SUPERSONIC}too.$"
+	.string "I ought to hide under the ashes, too.$"
 
 J_Route113_Text_WyattIntro:
-	.string "Y-yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?\n"
-	.string "Eve{SE_M_ATTRACT}thoug{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}caugh{SE_M_SPIT_UP}m{SE_M_YAWN}POKéMON?$"
+	.string "Y-you want to battle with me?\n"
+	.string "Even though I just caught my POKéMON?$"
 
 J_Route113_Text_WyattDefeat:
-	.string "Y-you'r{SE_M_REVERSAL}al{SE_M_BATON_PASS}happ{SE_M_YAWN}t{SE_M_ATTRACT2}win?\n"
-	.string "Eve{SE_M_ATTRACT}thoug{SE_M_TRI_ATTACK}it'{SE_M_GRASSWHISTLE}onl{SE_M_YAWN}me?$"
+	.string "Y-you're all happy to win?\n"
+	.string "Even though it's only me?$"
 
 J_Route113_Text_WyattPostBattle:
-	.string "Oh{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}no{SE_M_TWISTER}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}sa{SE_M_YAWN}{SE_M_CHARGE}wor{SE_M_WATERFALL}to\n"
-	.string "th{SE_M_REVERSAL}loser?\p"
-	.string "Aren'{SE_M_SPIT_UP}yo{SE_M_DIVE}jus{SE_M_SPIT_UP}th{SE_M_REVERSAL}coolest?\n"
+	.string "Oh, so now you want to say a word to\n"
+	.string "the loser?\p"
+	.string "Aren't you just the coolest?\n"
 	.string "Humph!$"
 
 J_Route114_Text_LennyIntro:
 	.string "Yodelayhihoo!\p"
-	.string "{SE_M_DIZZY_PUNCH}…\p"
-	.string "You'r{SE_M_REVERSAL}suppose{SE_M_WATERFALL}t{SE_M_ATTRACT2}shout\n"
-	.string "“yodelayhihoo{SE_M_EXPLOSION}sinc{SE_M_REVERSAL}i{SE_M_SPIT_UP}doesn't\l"
-	.string "ech{SE_M_ATTRACT2}here!$"
+	.string "… …\p"
+	.string "You're supposed to shout\n"
+	.string "“yodelayhihoo” since it doesn't\l"
+	.string "echo here!$"
 
 J_Route114_Text_LennyDefeat:
 	.string "Yodelayhihoo!$"
 
 J_Route114_Text_LennyPostBattle:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}we{SE_M_REVERSAL}tyke{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}believe{SE_M_WATERFALL}there\n"
-	.string "wa{SE_M_GRASSWHISTLE}someon{SE_M_REVERSAL}copyin{SE_M_SANDSTORM}m{SE_M_REVERSAL}an{SE_M_WATERFALL}shouting\l"
-	.string "back{SE_M_SUPERSONIC}“Yodelayhihoo.”$"
+	.string "When I was a wee tyke, I believed there\n"
+	.string "was someone copying me and shouting\l"
+	.string "back, “Yodelayhihoo.”$"
 
 J_Route114_Text_LucasIntro:
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}prepared{SE_M_SUPERSONIC}yo{SE_M_DIVE}shouldn't\n"
-	.string "b{SE_M_REVERSAL}u{SE_M_MORNING_SUN}i{SE_M_ATTRACT}th{SE_M_REVERSAL}mountains!$"
+	.string "If you're not prepared, you shouldn't\n"
+	.string "be up in the mountains!$"
 
 J_Route114_Text_LucasDefeat:
-	.string "Th{SE_M_REVERSAL}mountain{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}unforgiving…$"
+	.string "The mountains are unforgiving…$"
 
 J_Route114_Text_LucasPostBattle:
-	.string "I{SE_M_ATTRACT}th{SE_M_REVERSAL}winter{SE_M_SUPERSONIC}mountain{SE_M_GRASSWHISTLE}tur{SE_M_ATTRACT}deadly\n"
-	.string "wit{SE_M_TRI_ATTACK}blizzard{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}avalanches.$"
+	.string "In the winter, mountains turn deadly\n"
+	.string "with blizzards and avalanches.$"
 
 J_Route114_Text_ShaneIntro:
-	.string "Camping'{SE_M_GRASSWHISTLE}fun{SE_M_DRAGON_RAGE}Yo{SE_M_DIVE}ca{SE_M_ATTRACT}fish{SE_M_SUPERSONIC}roast\n"
-	.string "marshmallows{SE_M_SUPERSONIC}an{SE_M_WATERFALL}tel{SE_M_BATON_PASS}spook{SE_M_YAWN}stories!\p"
-	.string "Bu{SE_M_SPIT_UP}th{SE_M_REVERSAL}bes{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}al{SE_M_BATON_PASS}ar{SE_M_REVERSAL}th{SE_M_REVERSAL}POKéMON\n"
+	.string "Camping's fun! You can fish, roast\n"
+	.string "marshmallows, and tell spooky stories!\p"
+	.string "But the best of all are the POKéMON\n"
 	.string "battles!$"
 
 J_Route114_Text_ShaneDefeat:
-	.string "Wa{SE_M_YAWN}to{SE_M_ATTRACT2}strong!$"
+	.string "Way too strong!$"
 
 J_Route114_Text_ShanePostBattle:
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}it'{SE_M_GRASSWHISTLE}grea{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}go\n"
-	.string "campin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}POKéMON.$"
+	.string "I think it's great that I can go\n"
+	.string "camping with my POKéMON.$"
 
 J_Route114_Text_NancyIntro:
-	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}exercis{SE_M_REVERSAL}afte{SE_M_SAND_TOMB}{SE_M_CHARGE}meal.\n"
-	.string "Let'{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}{SE_M_CHARGE}match!$"
+	.string "I need to exercise after a meal.\n"
+	.string "Let's have a match!$"
 
 J_Route114_Text_NancyDefeat:
-	.string "Oh{SE_M_SUPERSONIC}no!$"
+	.string "Oh, no!$"
 
 J_Route114_Text_NancyPostBattle:
-	.string "{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}ha{SE_M_WATERFALL}{SE_M_CHARGE}tast{SE_M_YAWN}meal.\n"
-	.string "I'{SE_M_MILK_DRINK}gettin{SE_M_SANDSTORM}drowsy…$"
+	.string "I just had a tasty meal.\n"
+	.string "I'm getting drowsy…$"
 
 J_Route114_Text_SteveIntro:
 	.string "Ufufufufufu…\n"
-	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}agains{SE_M_SPIT_UP}m{SE_M_YAWN}POKéMON?$"
+	.string "Want to battle against my POKéMON?$"
 
 J_Route114_Text_SteveDefeat:
-	.string "M-M{SE_M_YAWN}POKéMON…$"
+	.string "M-My POKéMON…$"
 
 J_Route114_Text_StevePostBattle:
-	.string "{SE_M_BONEMERANG}bi{SE_M_SANDSTORM}bod{SE_M_YAWN}that'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}lump{SE_M_YAWN}an{SE_M_WATERFALL}hard,\n"
-	.string "enormou{SE_M_GRASSWHISTLE}horns{SE_M_SUPERSONIC}an{SE_M_WATERFALL}viciou{SE_M_GRASSWHISTLE}fangs…\p"
+	.string "A big body that's all lumpy and hard,\n"
+	.string "enormous horns, and vicious fangs…\p"
 	.string "Ufufufufu…\n"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}lik{SE_M_REVERSAL}that…$"
+	.string "I wish I had a POKéMON like that…$"
 
 J_Route114_Text_SteveRegister:
-	.string "Don'{SE_M_SPIT_UP}forge{SE_M_SPIT_UP}wha{SE_M_SPIT_UP}you'v{SE_M_REVERSAL}don{SE_M_REVERSAL}t{SE_M_ATTRACT2}me!\n"
-	.string "I'l{SE_M_BATON_PASS}mak{SE_M_REVERSAL}i{SE_M_SPIT_UP}s{SE_M_ATTRACT2}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}forget!$"
+	.string "Don't forget what you've done to me!\n"
+	.string "I'll make it so you can't forget!$"
 
 J_Route114_Text_SteveRematchIntro:
 	.string "Ufufufufufu…\n"
-	.string "Com{SE_M_REVERSAL}on{SE_M_SUPERSONIC}battl{SE_M_REVERSAL}m{SE_M_YAWN}POKéMON…$"
+	.string "Come on, battle my POKéMON…$"
 
 J_Route114_Text_SteveRematchDefeat:
-	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}s{SE_M_ATTRACT2}luck{SE_M_YAWN}gettin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}your\n"
+	.string "I feel so lucky getting to see your\n"
 	.string "POKéMON…$"
 
 J_Route114_Text_StevePostRematch:
 	.string "Ufufufufufu…\p"
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}battling{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}all\n"
-	.string "shiver{SE_M_YAWN}an{SE_M_WATERFALL}shaky…$"
+	.string "When I see POKéMON battling, I get all\n"
+	.string "shivery and shaky…$"
 
 J_Route114_Text_BernieIntro:
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}lightin{SE_M_SANDSTORM}{SE_M_CHARGE}campfire,\n"
-	.string "mak{SE_M_REVERSAL}sur{SE_M_REVERSAL}yo{SE_M_DIVE}hav{SE_M_REVERSAL}wate{SE_M_SAND_TOMB}handy.$"
+	.string "If you're lighting a campfire,\n"
+	.string "make sure you have water handy.$"
 
 J_Route114_Text_BernieDefeat:
-	.string "Thank{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}dousin{SE_M_SANDSTORM}m{SE_M_YAWN}fire!$"
+	.string "Thanks for dousing my fire!$"
 
 J_Route114_Text_BerniePostBattle:
-	.string "Yo{SE_M_DIVE}reall{SE_M_YAWN}d{SE_M_ATTRACT2}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}carefu{SE_M_BATON_PASS}with\n"
-	.string "an{SE_M_YAWN}sor{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}fir{SE_M_REVERSAL}i{SE_M_ATTRACT}{SE_M_CHARGE}forest.\p"
-	.string "Don'{SE_M_SPIT_UP}eve{SE_M_SAND_TOMB}underestimat{SE_M_REVERSAL}th{SE_M_REVERSAL}power\n"
-	.string "o{SE_M_ACID_ARMOR}fire.$"
+	.string "You really do have to be careful with\n"
+	.string "any sort of fire in a forest.\p"
+	.string "Don't ever underestimate the power\n"
+	.string "of fire.$"
 
 J_Route114_Text_BernieRegister:
-	.string "Yo{SE_M_DIVE}se{SE_M_SPIT_UP}m{SE_M_YAWN}spiri{SE_M_SPIT_UP}o{SE_M_ATTRACT}fire.\n"
-	.string "Let'{SE_M_GRASSWHISTLE}registe{SE_M_SAND_TOMB}eac{SE_M_TRI_ATTACK}other!$"
+	.string "You set my spirit on fire.\n"
+	.string "Let's register each other!$"
 
 J_Route114_Text_BernieRematchIntro:
-	.string "Hav{SE_M_REVERSAL}yo{SE_M_DIVE}learne{SE_M_WATERFALL}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}wate{SE_M_SAND_TOMB}handy\n"
-	.string "fo{SE_M_SAND_TOMB}campfires?$"
+	.string "Have you learned to keep water handy\n"
+	.string "for campfires?$"
 
 J_Route114_Text_BernieRematchDefeat:
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}hose{SE_M_WATERFALL}dow{SE_M_ATTRACT}befor{SE_M_REVERSAL}{SE_M_HEAL_BELL}could\n"
-	.string "flar{SE_M_REVERSAL}up{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}guess.$"
+	.string "I got hosed down before I could\n"
+	.string "flare up, I guess.$"
 
 J_Route114_Text_BerniePostRematch:
-	.string "Yo{SE_M_DIVE}reall{SE_M_YAWN}d{SE_M_ATTRACT2}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}carefu{SE_M_BATON_PASS}with\n"
-	.string "an{SE_M_YAWN}sor{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}fir{SE_M_REVERSAL}i{SE_M_ATTRACT}{SE_M_CHARGE}forest.\p"
-	.string "Don'{SE_M_SPIT_UP}eve{SE_M_SAND_TOMB}underestimat{SE_M_REVERSAL}th{SE_M_REVERSAL}power\n"
-	.string "o{SE_M_ACID_ARMOR}fire.$"
+	.string "You really do have to be careful with\n"
+	.string "any sort of fire in a forest.\p"
+	.string "Don't ever underestimate the power\n"
+	.string "of fire.$"
 
 J_Route114_Text_ClaudeIntro:
-	.string "I{SE_M_ACID_ARMOR}w{SE_M_REVERSAL}wer{SE_M_REVERSAL}fishing{SE_M_SUPERSONIC}yo{SE_M_DIVE}wouldn'{SE_M_SPIT_UP}stand\n"
-	.string "{SE_M_CHARGE}chanc{SE_M_REVERSAL}agains{SE_M_SPIT_UP}me.\l"
-	.string "So{SE_M_SUPERSONIC}brin{SE_M_SANDSTORM}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéMON!$"
+	.string "If we were fishing, you wouldn't stand\n"
+	.string "a chance against me.\l"
+	.string "So, bring on your POKéMON!$"
 
 J_Route114_Text_ClaudeDefeat:
-	.string "I{SE_M_ACID_ARMOR}w{SE_M_REVERSAL}wer{SE_M_REVERSAL}fishing{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}would'v{SE_M_REVERSAL}won…$"
+	.string "If we were fishing, I would've won…$"
 
 J_Route114_Text_ClaudePostBattle:
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}I'l{SE_M_BATON_PASS}tr{SE_M_YAWN}m{SE_M_YAWN}luc{SE_M_ENCORE2}a{SE_M_SPIT_UP}landing\n"
-	.string "{SE_M_CHARGE}bi{SE_M_SANDSTORM}on{SE_M_REVERSAL}a{SE_M_SPIT_UP}METEO{SE_M_MINIMIZE}FALLS.\p"
-	.string "Ther{SE_M_REVERSAL}ha{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}somethin{SE_M_SANDSTORM}i{SE_M_ATTRACT}there.\n"
-	.string "{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}kno{SE_M_TWISTER}it.$"
+	.string "I think I'll try my luck at landing\n"
+	.string "a big one at METEOR FALLS.\p"
+	.string "There has to be something in there.\n"
+	.string "I just know it.$"
 
 J_Route114_Text_NolanIntro:
-	.string "{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}fish{SE_M_PERISH_SONG}Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}als{SE_M_ATTRACT2}lik{SE_M_REVERSAL}to\n"
+	.string "I like to fish. But I also like to\n"
 	.string "battle!\p"
-	.string "I{SE_M_ACID_ARMOR}anyon{SE_M_REVERSAL}challenge{SE_M_GRASSWHISTLE}me{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}there,\n"
-	.string "eve{SE_M_ATTRACT}i{SE_M_ACID_ARMOR}I'{SE_M_MILK_DRINK}fishing.$"
+	.string "If anyone challenges me, I'm there,\n"
+	.string "even if I'm fishing.$"
 
 J_Route114_Text_NolanDefeat:
-	.string "{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}battle{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}doesn't\n"
-	.string "mea{SE_M_ATTRACT}I'{SE_M_MILK_DRINK}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}it…$"
+	.string "I like to battle, but that doesn't\n"
+	.string "mean I'm good at it…$"
 
 J_Route114_Text_NolanPostBattle:
-	.string "Thi{SE_M_GRASSWHISTLE}tim{SE_M_REVERSAL}I'l{SE_M_BATON_PASS}d{SE_M_ATTRACT2}it!\p"
-	.string "{SE_M_HEAL_BELL}alway{SE_M_GRASSWHISTLE}thin{SE_M_ENCORE2}that{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}walk\n"
-	.string "awa{SE_M_YAWN}fro{SE_M_MILK_DRINK}fishin{SE_M_SANDSTORM}o{SE_M_SAND_TOMB}POKéMON.$"
+	.string "This time I'll do it!\p"
+	.string "I always think that, so I can't walk\n"
+	.string "away from fishing or POKéMON.$"
 
 J_Route114_Text_TyraIntro:
-	.string "TYRA{SE_M_HEAT_WAVE}Well{SE_M_SUPERSONIC}sure.\n"
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}moo{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}it.\l"
-	.string "I'l{SE_M_BATON_PASS}teac{SE_M_TRI_ATTACK}yo{SE_M_DIVE}{SE_M_CHARGE}littl{SE_M_REVERSAL}abou{SE_M_SPIT_UP}POKéMON.$"
+	.string "TYRA: Well, sure.\n"
+	.string "I'm in the mood for it.\l"
+	.string "I'll teach you a little about POKéMON.$"
 
 J_Route114_Text_TyraDefeat:
-	.string "TYRA{SE_M_HEAT_WAVE}Wha{SE_M_SPIT_UP}a{SE_M_ATTRACT}amazin{SE_M_SANDSTORM}battl{SE_M_REVERSAL}style!$"
+	.string "TYRA: What an amazing battle style!$"
 
 J_Route114_Text_TyraPostBattle:
-	.string "TYRA{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}teachin{SE_M_SANDSTORM}m{SE_M_YAWN}junio{SE_M_SAND_TOMB}IVY\n"
-	.string "abou{SE_M_SPIT_UP}POKéMON.$"
+	.string "TYRA: I was teaching my junior IVY\n"
+	.string "about POKéMON.$"
 
 J_Route114_Text_TyraNotEnoughMons:
-	.string "TYRA{SE_M_HEAT_WAVE}Giggle…\n"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}us{SE_M_SUPERSONIC}jus{SE_M_SPIT_UP}one\l"
-	.string "POKéMO{SE_M_PSYBEAM2}isn'{SE_M_SPIT_UP}enough!$"
+	.string "TYRA: Giggle…\n"
+	.string "If you want to battle with us, just one\l"
+	.string "POKéMON isn't enough!$"
 
 J_Route114_Text_IvyIntro:
-	.string "IVY{SE_M_HEAT_WAVE}Wh{SE_M_ATTRACT2}taugh{SE_M_SPIT_UP}yo{SE_M_DIVE}abou{SE_M_SPIT_UP}POKéMON?$"
+	.string "IVY: Who taught you about POKéMON?$"
 
 J_Route114_Text_IvyDefeat:
-	.string "IVY{SE_M_HEAT_WAVE}Wha{SE_M_SPIT_UP}a{SE_M_ATTRACT}amazin{SE_M_SANDSTORM}battl{SE_M_REVERSAL}style!$"
+	.string "IVY: What an amazing battle style!$"
 
 J_Route114_Text_IvyPostBattle:
-	.string "IVY{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}starte{SE_M_WATERFALL}trainin{SE_M_SANDSTORM}POKéMON\n"
-	.string "becaus{SE_M_REVERSAL}TYRA{SE_M_SUPERSONIC}m{SE_M_YAWN}studen{SE_M_SPIT_UP}mentor,\l"
-	.string "taugh{SE_M_SPIT_UP}me!$"
+	.string "IVY: I started training POKéMON\n"
+	.string "because TYRA, my student mentor,\l"
+	.string "taught me!$"
 
 J_Route114_Text_IvyNotEnoughMons:
-	.string "IVY{SE_M_HEAT_WAVE}D{SE_M_ATTRACT2}yo{SE_M_DIVE}onl{SE_M_YAWN}hav{SE_M_REVERSAL}on{SE_M_REVERSAL}POKéMON?\n"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}i{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}fee{SE_M_BATON_PASS}lonesome.$"
+	.string "IVY: Do you only have one POKéMON?\n"
+	.string "I think it must feel lonesome.$"
 
 J_Route114_Text_KaiIntro:
-	.string "{SE_M_HEAL_BELL}lande{SE_M_WATERFALL}{SE_M_CHARGE}bi{SE_M_SANDSTORM}one!\n"
-	.string "{SE_M_BONEMERANG}hug{SE_M_REVERSAL}one{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}tel{SE_M_BATON_PASS}you!$"
+	.string "I landed a big one!\n"
+	.string "A huge one, I tell you!$"
 
 J_Route114_Text_KaiDefeat:
-	.string "Wha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}about?\n"
-	.string "Di{SE_M_WATERFALL}min{SE_M_REVERSAL}los{SE_M_REVERSAL}i{SE_M_ATTRACT}size?$"
+	.string "What was that about?\n"
+	.string "Did mine lose in size?$"
 
 J_Route114_Text_KaiPostBattle:
 	.string "Okay!\n"
-	.string "I'l{SE_M_BATON_PASS}jus{SE_M_SPIT_UP}fis{SE_M_TRI_ATTACK}m{SE_M_REVERSAL}{SE_M_CHARGE}bigge{SE_M_SAND_TOMB}one!$"
+	.string "I'll just fish me a bigger one!$"
 
 J_Route114_Text_CharlotteIntro:
 	.string "Me!\n"
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}jus{SE_M_SPIT_UP}{SE_M_CHARGE}prett{SE_M_YAWN}face!$"
+	.string "I'm not just a pretty face!$"
 
 J_Route114_Text_CharlotteDefeat:
-	.string "Tha{SE_M_SPIT_UP}wasn'{SE_M_SPIT_UP}cut{SE_M_REVERSAL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}least!$"
+	.string "That wasn't cute in the least!$"
 
 J_Route114_Text_CharlottePostBattle:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}wan{SE_M_SPIT_UP}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}that's\n"
-	.string "jus{SE_M_SPIT_UP}cute.\p"
-	.string "{SE_M_HEAL_BELL}ador{SE_M_REVERSAL}cut{SE_M_REVERSAL}one{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}hav{SE_M_REVERSAL}{SE_M_CHARGE}quirk\n"
-	.string "o{SE_M_SAND_TOMB}two!$"
+	.string "I don't want a POKéMON that's\n"
+	.string "just cute.\p"
+	.string "I adore cute ones that have a quirk\n"
+	.string "or two!$"
 
 J_Route114_Text_AngelinaIntro:
-	.string "Hav{SE_M_REVERSAL}yo{SE_M_DIVE}mad{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}evolve\n"
-	.string "ver{SE_M_YAWN}much?$"
+	.string "Have you made your POKéMON evolve\n"
+	.string "very much?$"
 
 J_Route114_Text_AngelinaDefeat:
-	.string "Oh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}see.\n"
-	.string "That'{SE_M_GRASSWHISTLE}goo{SE_M_WATERFALL}t{SE_M_ATTRACT2}know.$"
+	.string "Oh, I see.\n"
+	.string "That's good to know.$"
 
 J_Route114_Text_AngelinaPostBattle:
-	.string "Som{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}chang{SE_M_REVERSAL}s{SE_M_ATTRACT2}muc{SE_M_TRI_ATTACK}when\n"
-	.string "the{SE_M_YAWN}evolve{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}startling!$"
+	.string "Some POKéMON change so much when\n"
+	.string "they evolve, it's startling!$"
 
 J_Route115_Text_TimothyIntro:
 	.string "Hm…\n"
-	.string "Yo{SE_M_DIVE}see{SE_M_MILK_DRINK}rathe{SE_M_SAND_TOMB}capable…\l"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}kee{SE_M_MORNING_SUN}yo{SE_M_DIVE}company!$"
+	.string "You seem rather capable…\l"
+	.string "Let me keep you company!$"
 
 J_Route115_Text_TimothyDefeat:
-	.string "You'r{SE_M_REVERSAL}muc{SE_M_TRI_ATTACK}stronge{SE_M_SAND_TOMB}than\n"
-	.string "I'{SE_M_WATERFALL}imagined!$"
+	.string "You're much stronger than\n"
+	.string "I'd imagined!$"
 
 J_Route115_Text_TimothyPostBattle:
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}suc{SE_M_TRI_ATTACK}thin{SE_M_SANDSTORM}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}bor{SE_M_ATTRACT}genius.\n"
-	.string "I{SE_M_SPIT_UP}al{SE_M_BATON_PASS}depend{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}effort!\l"
-	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}believe…$"
+	.string "There is no such thing as a born genius.\n"
+	.string "It all depends on effort!\l"
+	.string "That is what I believe…$"
 
 J_Route115_Text_TimothyRegister:
-	.string "Hmm{SE_M_DIZZY_PUNCH}{SE_M_BONEMERANG}los{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}thoroug{SE_M_TRI_ATTACK}ha{SE_M_GRASSWHISTLE}been\n"
-	.string "{SE_M_CHARGE}distan{SE_M_SPIT_UP}memory.\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}woul{SE_M_WATERFALL}allo{SE_M_TWISTER}it{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}for\n"
-	.string "anothe{SE_M_SAND_TOMB}opportunit{SE_M_YAWN}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}battle.$"
+	.string "Hmm… A loss this thorough has been\n"
+	.string "a distant memory.\p"
+	.string "If you would allow it, I wish for\n"
+	.string "another opportunity to do battle.$"
 
 J_Route115_Text_TimothyRematchIntro:
-	.string "Hm{SE_M_DIZZY_PUNCH}A{SE_M_GRASSWHISTLE}always{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}agilit{SE_M_YAWN}speaks\n"
-	.string "fo{SE_M_SAND_TOMB}itself.\l"
-	.string "Come{SE_M_SUPERSONIC}kee{SE_M_MORNING_SUN}m{SE_M_REVERSAL}company!$"
+	.string "Hm… As always, your agility speaks\n"
+	.string "for itself.\l"
+	.string "Come, keep me company!$"
 
 J_Route115_Text_TimothyRematchDefeat:
-	.string "A{SE_M_GRASSWHISTLE}stron{SE_M_SANDSTORM}a{SE_M_GRASSWHISTLE}ever!$"
+	.string "As strong as ever!$"
 
 J_Route115_Text_TimothyPostRematch:
-	.string "Al{SE_M_BATON_PASS}i{SE_M_SPIT_UP}take{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}effort!\p"
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}becaus{SE_M_REVERSAL}{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}pu{SE_M_SPIT_UP}i{SE_M_ATTRACT}enough\n"
+	.string "All it takes is effort!\p"
+	.string "I lost because I haven't put in enough\n"
 	.string "effort!$"
 
 J_Route115_Text_KoichiIntro:
 	.string "You!\p"
-	.string "M{SE_M_YAWN}MACHOP!\p"
-	.string "Deman{SE_M_WATERFALL}{SE_M_CHARGE}battle!$"
+	.string "My MACHOP!\p"
+	.string "Demand a battle!$"
 
 J_Route115_Text_KoichiDefeat:
-	.string "Ouch{SE_M_SUPERSONIC}ouch{SE_M_SUPERSONIC}ouch!$"
+	.string "Ouch, ouch, ouch!$"
 
 J_Route115_Text_KoichiPostBattle:
-	.string "M{SE_M_YAWN}MACHO{SE_M_PETAL_DANCE}crew!\p"
-	.string "S{SE_M_ATTRACT2}lon{SE_M_SANDSTORM}a{SE_M_GRASSWHISTLE}the{SE_M_YAWN}see{SE_M_ENCORE2}power{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}will\n"
-	.string "gro{SE_M_TWISTER}stron{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}them!$"
+	.string "My MACHOP crew!\p"
+	.string "So long as they seek power, I will\n"
+	.string "grow strong with them!$"
 
 J_Route115_Text_NobIntro:
-	.string "M{SE_M_YAWN}stronges{SE_M_SPIT_UP}skil{SE_M_BATON_PASS}i{SE_M_GRASSWHISTLE}bustin{SE_M_SANDSTORM}bricks\n"
-	.string "wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}forehead!$"
+	.string "My strongest skill is busting bricks\n"
+	.string "with my forehead!$"
 
 J_Route115_Text_NobDefeat:
 	.string "Ugwaaaah!\n"
-	.string "M{SE_M_YAWN}hea{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}busted!$"
+	.string "My head is busted!$"
 
 J_Route115_Text_NobPostBattle:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}teachin{SE_M_SANDSTORM}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}karate.\p"
-	.string "I{SE_M_SPIT_UP}look{SE_M_GRASSWHISTLE}lik{SE_M_REVERSAL}they'l{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}{SE_M_CHARGE}lo{SE_M_SPIT_UP}better\n"
-	.string "tha{SE_M_ATTRACT}me{SE_M_PERISH_SONG}I'{SE_M_MILK_DRINK}excite{SE_M_WATERFALL}abou{SE_M_SPIT_UP}that.$"
+	.string "I've been teaching my POKéMON karate.\p"
+	.string "It looks like they'll get a lot better\n"
+	.string "than me. I'm excited about that.$"
 
 J_Route115_Text_NobRegister:
-	.string "Yo{SE_M_DIVE}impres{SE_M_GRASSWHISTLE}me{SE_M_DRAGON_RAGE}Giv{SE_M_REVERSAL}m{SE_M_REVERSAL}{SE_M_CHARGE}rematch\n"
-	.string "afte{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}red{SE_M_ATTRACT2}m{SE_M_YAWN}training!$"
+	.string "You impress me! Give me a rematch\n"
+	.string "after I redo my training!$"
 
 J_Route115_Text_NobRematchIntro:
-	.string "Afte{SE_M_SAND_TOMB}yo{SE_M_DIVE}bea{SE_M_SPIT_UP}me{SE_M_SUPERSONIC}w{SE_M_REVERSAL}traine{SE_M_WATERFALL}har{SE_M_WATERFALL}to\n"
-	.string "improv{SE_M_REVERSAL}ou{SE_M_SAND_TOMB}skills.\l"
-	.string "Com{SE_M_REVERSAL}on{SE_M_SUPERSONIC}giv{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}{SE_M_CHARGE}rematch!$"
+	.string "After you beat me, we trained hard to\n"
+	.string "improve our skills.\l"
+	.string "Come on, give us a rematch!$"
 
 J_Route115_Text_NobRematchDefeat:
 	.string "Ugwaaah!\n"
-	.string "W{SE_M_REVERSAL}los{SE_M_SPIT_UP}again!$"
+	.string "We lost again!$"
 
 J_Route115_Text_NobPostRematch:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}gro{SE_M_TWISTER}stronger!\n"
-	.string "I'l{SE_M_BATON_PASS}redoubl{SE_M_REVERSAL}m{SE_M_YAWN}training!$"
+	.string "My POKéMON will grow stronger!\n"
+	.string "I'll redouble my training!$"
 
 J_Route115_Text_CyndyIntro:
-	.string "Thi{SE_M_GRASSWHISTLE}beac{SE_M_TRI_ATTACK}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}secre{SE_M_SPIT_UP}trainin{SE_M_SANDSTORM}spot!\n"
-	.string "Don'{SE_M_SPIT_UP}com{SE_M_REVERSAL}buttin{SE_M_SANDSTORM}in!$"
+	.string "This beach is my secret training spot!\n"
+	.string "Don't come butting in!$"
 
 J_Route115_Text_CyndyDefeat:
-	.string "{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}traine{SE_M_WATERFALL}enough!$"
+	.string "I haven't trained enough!$"
 
 J_Route115_Text_CyndyPostBattle:
-	.string "Th{SE_M_REVERSAL}san{SE_M_WATERFALL}act{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}cushio{SE_M_ATTRACT}t{SE_M_ATTRACT2}reduce\n"
-	.string "impac{SE_M_SPIT_UP}an{SE_M_WATERFALL}preven{SE_M_SPIT_UP}injury.\l"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}perfec{SE_M_SPIT_UP}plac{SE_M_REVERSAL}t{SE_M_ATTRACT2}train.$"
+	.string "The sand acts as a cushion to reduce\n"
+	.string "impact and prevent injury.\l"
+	.string "This is the perfect place to train.$"
 
 J_Route115_Text_CyndyRegister:
-	.string "Okay{SE_M_SUPERSONIC}fine{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}fre{SE_M_REVERSAL}t{SE_M_ATTRACT2}com{SE_M_REVERSAL}here.\n"
-	.string "I{SE_M_ATTRACT}return{SE_M_SUPERSONIC}I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}yo{SE_M_DIVE}again.$"
+	.string "Okay, fine, you're free to come here.\n"
+	.string "In return, I'd like to battle you again.$"
 
 J_Route115_Text_CyndyRematchIntro:
-	.string "Okay{SE_M_SUPERSONIC}let'{SE_M_GRASSWHISTLE}ge{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}battl{SE_M_REVERSAL}on!$"
+	.string "Okay, let's get this battle on!$"
 
 J_Route115_Text_CyndyRematchDefeat:
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}battl{SE_M_REVERSAL}bu{SE_M_SPIT_UP}m{SE_M_YAWN}POKéMON…$"
+	.string "I can battle but my POKéMON…$"
 
 J_Route115_Text_CyndyPostRematch:
-	.string "Eve{SE_M_ATTRACT}whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}lose{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}stil{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}some\n"
-	.string "enjoymen{SE_M_SPIT_UP}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}it.\l"
-	.string "I{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}POKéMON.$"
+	.string "Even when I lose, I still get some\n"
+	.string "enjoyment out of it.\l"
+	.string "It must be that I love POKéMON.$"
 
 J_Route115_Text_HectorIntro:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}{SE_M_CHARGE}rar{SE_M_REVERSAL}POKéMON!\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}sho{SE_M_TWISTER}you?$"
+	.string "I have a rare POKéMON!\n"
+	.string "Would you like me to show you?$"
 
 J_Route115_Text_HectorDefeat:
 	.string "You…\n"
-	.string "Yo{SE_M_DIVE}wan{SE_M_SPIT_UP}m{SE_M_YAWN}POKéMON{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}you?$"
+	.string "You want my POKéMON, don't you?$"
 
 J_Route115_Text_HectorPostBattle:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}rar{SE_M_REVERSAL}POKéMON.\n"
-	.string "It'{SE_M_GRASSWHISTLE}enoug{SE_M_TRI_ATTACK}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}m{SE_M_REVERSAL}satisfied.$"
+	.string "I have this rare POKéMON.\n"
+	.string "It's enough to keep me satisfied.$"
 
 J_Route115_Text_KyraIntro:
-	.string "I'l{SE_M_BATON_PASS}battl{SE_M_REVERSAL}whil{SE_M_REVERSAL}I'{SE_M_MILK_DRINK}running!\n"
-	.string "Tr{SE_M_YAWN}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}u{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}me!$"
+	.string "I'll battle while I'm running!\n"
+	.string "Try to keep up with me!$"
 
 J_Route115_Text_KyraDefeat:
-	.string "Gasp{SE_M_SUPERSONIC}gasp…$"
+	.string "Gasp, gasp…$"
 
 J_Route115_Text_KyraPostBattle:
-	.string "{SE_M_HEAL_BELL}mad{SE_M_REVERSAL}th{SE_M_REVERSAL}mistak{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}tryin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}battle\n"
-	.string "whil{SE_M_REVERSAL}running!\p"
-	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}tak{SE_M_REVERSAL}{SE_M_CHARGE}ru{SE_M_ATTRACT}t{SE_M_ATTRACT2}cal{SE_M_MILK_DRINK}down…$"
+	.string "I made the mistake of trying to battle\n"
+	.string "while running!\p"
+	.string "I should take a run to calm down…$"
 
 J_Route115_Text_JaidenIntro:
-	.string "Tak{SE_M_REVERSAL}that!\n"
-	.string "Ultr{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}ninj{SE_M_CHARGE}attack!$"
+	.string "Take that!\n"
+	.string "Ultra POKéMON ninja attack!$"
 
 J_Route115_Text_JaidenDefeat:
 	.string "Waaah!\n"
-	.string "Ou{SE_M_SAND_TOMB}strateg{SE_M_YAWN}failed!$"
+	.string "Our strategy failed!$"
 
 J_Route115_Text_JaidenPostBattle:
-	.string "Bu{SE_M_SPIT_UP}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}wer{SE_M_REVERSAL}ultra,\n"
-	.string "weren'{SE_M_SPIT_UP}they?$"
+	.string "But my POKéMON were ultra,\n"
+	.string "weren't they?$"
 
 J_Route115_Text_HeleneIntro:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}blac{SE_M_ENCORE2}belt-level\n"
+	.string "My POKéMON have black belt-level\n"
 	.string "strength!$"
 
 J_Route115_Text_HeleneDefeat:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}to{SE_M_ATTRACT2}humiliating!$"
+	.string "This is too humiliating!$"
 
 J_Route115_Text_HelenePostBattle:
-	.string "{SE_M_HEAL_BELL}rarel{SE_M_YAWN}mee{SE_M_SPIT_UP}anyon{SE_M_REVERSAL}who'{SE_M_GRASSWHISTLE}better\n"
-	.string "tha{SE_M_ATTRACT}me…\p"
-	.string "{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}i{SE_M_SPIT_UP}now!\n"
-	.string "You'r{SE_M_REVERSAL}{SE_M_CHARGE}GY{SE_M_GIGA_DRAIN}LEADER{SE_M_SUPERSONIC}aren'{SE_M_SPIT_UP}you?$"
+	.string "I rarely meet anyone who's better\n"
+	.string "than me…\p"
+	.string "I get it now!\n"
+	.string "You're a GYM LEADER, aren't you?$"
 
 J_Route115_Text_AlixIntro:
-	.string "Ou{SE_M_SAND_TOMB}eye{SE_M_GRASSWHISTLE}met!\n"
-	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}gettin{SE_M_SANDSTORM}awa{SE_M_YAWN}now!$"
+	.string "Our eyes met!\n"
+	.string "There's no getting away now!$"
 
 J_Route115_Text_AlixDefeat:
 	.string "Gah!\n"
-	.string "No{SE_M_SPIT_UP}bad!$"
+	.string "Not bad!$"
 
 J_Route115_Text_AlixPostBattle:
-	.string "Oh{SE_M_SUPERSONIC}well.\n"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}TELEPOR{SE_M_SWIFT}home.$"
+	.string "Oh, well.\n"
+	.string "I think I will TELEPORT home.$"
 
 J_Route115_Text_MarleneIntro:
-	.string "You'v{SE_M_REVERSAL}disturbe{SE_M_WATERFALL}m{SE_M_YAWN}meditation…\n"
-	.string "You'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}punishe{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}it.$"
+	.string "You've disturbed my meditation…\n"
+	.string "You'll be punished for it.$"
 
 J_Route115_Text_MarleneDefeat:
-	.string "You'v{SE_M_REVERSAL}broke{SE_M_ATTRACT}m{SE_M_YAWN}concentration!$"
+	.string "You've broken my concentration!$"
 
 J_Route115_Text_MarlenePostBattle:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}meditatin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}POKéMON.\n"
-	.string "Bu{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}plac{SE_M_REVERSAL}isn'{SE_M_SPIT_UP}ver{SE_M_YAWN}peaceful…$"
+	.string "I was meditating with my POKéMON.\n"
+	.string "But this place isn't very peaceful…$"
 
 J_Route116_Text_ClarkIntro:
-	.string "I{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}tunne{SE_M_BATON_PASS}doesn'{SE_M_SPIT_UP}g{SE_M_ATTRACT2}through{SE_M_SUPERSONIC}then\n"
-	.string "I'l{SE_M_BATON_PASS}jus{SE_M_SPIT_UP}g{SE_M_ATTRACT2}ove{SE_M_SAND_TOMB}th{SE_M_REVERSAL}top.$"
+	.string "If the tunnel doesn't go through, then\n"
+	.string "I'll just go over the top.$"
 
 J_Route116_Text_ClarkDefeat:
-	.string "Gasp{SE_M_DIZZY_PUNCH}Gasp…\n"
-	.string "Losin{SE_M_SANDSTORM}mad{SE_M_REVERSAL}m{SE_M_REVERSAL}tired…$"
+	.string "Gasp… Gasp…\n"
+	.string "Losing made me tired…$"
 
 J_Route116_Text_ClarkPostBattle:
-	.string "It'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}bi{SE_M_SANDSTORM}dea{SE_M_BATON_PASS}i{SE_M_ACID_ARMOR}there'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}tunnel.\n"
-	.string "T{SE_M_ATTRACT2}{SE_M_CHARGE}HIKER{SE_M_SUPERSONIC}mountain{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}roads!$"
+	.string "It's no big deal if there's no tunnel.\n"
+	.string "To a HIKER, mountains are roads!$"
 
 J_Route116_Text_JoeyIntro:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}rule!\n"
-	.string "Chec{SE_M_ENCORE2}the{SE_M_MILK_DRINK}out!$"
+	.string "My POKéMON rule!\n"
+	.string "Check them out!$"
 
 J_Route116_Text_JoeyDefeat:
-	.string "Ouch{SE_M_DRAGON_RAGE}{SE_M_BONEMERANG}scrape!\n"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}pu{SE_M_SPIT_UP}o{SE_M_ATTRACT}{SE_M_CHARGE}bandage!$"
+	.string "Ouch! A scrape!\n"
+	.string "I have to put on a bandage!$"
 
 J_Route116_Text_JoeyPostBattle:
-	.string "Bandage{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}sign{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}toughness!\n"
-	.string "I'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}anothe{SE_M_SAND_TOMB}one!$"
+	.string "Bandages are signs of toughness!\n"
+	.string "I've got another one!$"
 
 J_Route116_Text_JoseIntro:
-	.string "M{SE_M_YAWN}BU{SE_M_SWAGGER}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}tough!\n"
-	.string "Let'{SE_M_GRASSWHISTLE}battle!$"
+	.string "My BUG POKéMON are tough!\n"
+	.string "Let's battle!$"
 
 J_Route116_Text_JoseDefeat:
-	.string "{SE_M_HEAL_BELL}lost!\n"
-	.string "{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}you!$"
+	.string "I lost!\n"
+	.string "I thought I had you!$"
 
 J_Route116_Text_JosePostBattle:
-	.string "BU{SE_M_SWAGGER}POKéMO{SE_M_PSYBEAM2}evolv{SE_M_REVERSAL}quickly.\n"
-	.string "S{SE_M_ATTRACT2}the{SE_M_YAWN}ge{SE_M_SPIT_UP}stron{SE_M_SANDSTORM}quickly{SE_M_SUPERSONIC}too.$"
+	.string "BUG POKéMON evolve quickly.\n"
+	.string "So they get strong quickly, too.$"
 
 J_Route116_Text_JaniceIntro:
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}teac{SE_M_TRI_ATTACK}yo{SE_M_DIVE}ho{SE_M_TWISTER}stron{SE_M_SANDSTORM}my\n"
-	.string "adorabl{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}is!$"
+	.string "Let me teach you how strong my\n"
+	.string "adorable POKéMON is!$"
 
 J_Route116_Text_JaniceDefeat:
-	.string "You'r{SE_M_REVERSAL}{SE_M_CHARGE}notc{SE_M_TRI_ATTACK}abov{SE_M_REVERSAL}me…$"
+	.string "You're a notch above me…$"
 
 J_Route116_Text_JanicePostBattle:
-	.string "POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}posses{SE_M_GRASSWHISTLE}cutenes{SE_M_GRASSWHISTLE}and\n"
-	.string "power{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}ideal{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}think.$"
+	.string "POKéMON that possess cuteness and\n"
+	.string "power, that's ideal, I think.$"
 
 J_Route116_Text_JerryIntro:
-	.string "W{SE_M_REVERSAL}lear{SE_M_ATTRACT}al{SE_M_BATON_PASS}sort{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}thing{SE_M_GRASSWHISTLE}a{SE_M_SPIT_UP}the\n"
-	.string "TRAINER'{SE_M_SKETCH}SCHOOL.\p"
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}tes{SE_M_SPIT_UP}thing{SE_M_GRASSWHISTLE}ou{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}real!$"
+	.string "We learn all sorts of things at the\n"
+	.string "TRAINER'S SCHOOL.\p"
+	.string "I want to test things out for real!$"
 
 J_Route116_Text_JerryDefeat:
-	.string "{SE_M_HEAL_BELL}slacke{SE_M_WATERFALL}of{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}school…\n"
-	.string "That'{SE_M_GRASSWHISTLE}wh{SE_M_YAWN}{SE_M_HEAL_BELL}lost.$"
+	.string "I slacked off in school…\n"
+	.string "That's why I lost.$"
 
 J_Route116_Text_JerryPostBattle:
-	.string "I'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}red{SE_M_ATTRACT2}som{SE_M_REVERSAL}course{SE_M_GRASSWHISTLE}at\n"
-	.string "th{SE_M_REVERSAL}TRAINER'{SE_M_SKETCH}SCHOOL.\l"
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}don't{SE_M_SUPERSONIC}ROXANN{SE_M_SWORDS_DANCE}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}steamed.$"
+	.string "I'll have to redo some courses at\n"
+	.string "the TRAINER'S SCHOOL.\l"
+	.string "If I don't, ROXANNE will be steamed.$"
 
 J_Route116_Text_JerryRegister1:
-	.string "{SE_M_HEAL_BELL}learne{SE_M_WATERFALL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}TRAINER'{SE_M_SKETCH}SCHOOL\n"
-	.string "tha{SE_M_SPIT_UP}{SE_M_CHARGE}POKéNA{SE_M_BARRIER}ca{SE_M_ATTRACT}registe{SE_M_SAND_TOMB}TRAINERS.\p"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}reall{SE_M_YAWN}ge{SE_M_SPIT_UP}wha{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}means,\n"
-	.string "s{SE_M_ATTRACT2}ca{SE_M_ATTRACT}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}tr{SE_M_YAWN}it?$"
+	.string "I learned at the TRAINER'S SCHOOL\n"
+	.string "that a POKéNAV can register TRAINERS.\p"
+	.string "I don't really get what that means,\n"
+	.string "so can I just try it?$"
 
 J_Route116_Text_JerryRegister2:
-	.string "{SE_M_HEAL_BELL}learne{SE_M_WATERFALL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}TRAINER'{SE_M_SKETCH}SCHOOL\n"
-	.string "tha{SE_M_SPIT_UP}{SE_M_CHARGE}POKéNA{SE_M_BARRIER}ca{SE_M_ATTRACT}registe{SE_M_SAND_TOMB}TRAINERS.\p"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}reall{SE_M_YAWN}ge{SE_M_SPIT_UP}wha{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}means,\n"
-	.string "s{SE_M_ATTRACT2}ca{SE_M_ATTRACT}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}tr{SE_M_YAWN}it?$"
+	.string "I learned at the TRAINER'S SCHOOL\n"
+	.string "that a POKéNAV can register TRAINERS.\p"
+	.string "I don't really get what that means,\n"
+	.string "so can I just try it?$"
 
 J_Route116_Text_JerryRematchIntro:
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}studyin{SE_M_SANDSTORM}seriousl{SE_M_YAWN}a{SE_M_SPIT_UP}the\n"
-	.string "TRAINER'{SE_M_SKETCH}SCHOOL.\l"
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}los{SE_M_REVERSAL}lik{SE_M_REVERSAL}{SE_M_HEAL_BELL}di{SE_M_WATERFALL}las{SE_M_SPIT_UP}time.$"
+	.string "I've been studying seriously at the\n"
+	.string "TRAINER'S SCHOOL.\l"
+	.string "I won't lose like I did last time.$"
 
 J_Route116_Text_JerryRematchDefeat:
 	.string "Hunh?\n"
-	.string "{SE_M_HEAL_BELL}studie{SE_M_WATERFALL}diligently.$"
+	.string "I studied diligently.$"
 
 J_Route116_Text_JerryPostRematch:
-	.string "I'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}red{SE_M_ATTRACT2}som{SE_M_REVERSAL}course{SE_M_GRASSWHISTLE}at\n"
-	.string "th{SE_M_REVERSAL}TRAINER'{SE_M_SKETCH}SCHOOL.\l"
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}don't{SE_M_SUPERSONIC}ROXANN{SE_M_SWORDS_DANCE}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}steamed.$"
+	.string "I'll have to redo some courses at\n"
+	.string "the TRAINER'S SCHOOL.\l"
+	.string "If I don't, ROXANNE will be steamed.$"
 
 J_Route116_Text_KarenIntro:
-	.string "{SE_M_HEAL_BELL}stud{SE_M_YAWN}a{SE_M_SPIT_UP}school{SE_M_SUPERSONIC}an{SE_M_WATERFALL}{SE_M_HEAL_BELL}stud{SE_M_YAWN}on\n"
-	.string "th{SE_M_REVERSAL}wa{SE_M_YAWN}home{SE_M_SUPERSONIC}too!$"
+	.string "I study at school, and I study on\n"
+	.string "the way home, too!$"
 
 J_Route116_Text_KarenDefeat:
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}shock--{SE_M_HEAL_BELL}lost?$"
+	.string "I'm in shock--I lost?$"
 
 J_Route116_Text_KarenPostBattle:
-	.string "Awww{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}neve{SE_M_SAND_TOMB}becom{SE_M_REVERSAL}a{SE_M_ATTRACT}elegant\n"
-	.string "TRAINE{SE_M_MINIMIZE}lik{SE_M_REVERSAL}ROXANN{SE_M_SWORDS_DANCE}thi{SE_M_GRASSWHISTLE}way!$"
+	.string "Awww, I'll never become an elegant\n"
+	.string "TRAINER like ROXANNE this way!$"
 
 J_Route116_Text_KarenRegister1:
-	.string "Oh{SE_M_SUPERSONIC}wow{SE_M_DRAGON_RAGE}Isn'{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}{SE_M_CHARGE}POKéNAV?\n"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}one{SE_M_SUPERSONIC}too{SE_M_DRAGON_RAGE}Pleas{SE_M_REVERSAL}registe{SE_M_SAND_TOMB}me!$"
+	.string "Oh, wow! Isn't that a POKéNAV?\n"
+	.string "I have one, too! Please register me!$"
 
 J_Route116_Text_KarenRegister2:
-	.string "Oh{SE_M_SUPERSONIC}wow{SE_M_DRAGON_RAGE}Isn'{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}{SE_M_CHARGE}POKéNAV?\n"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}one{SE_M_SUPERSONIC}too{SE_M_DRAGON_RAGE}Pleas{SE_M_REVERSAL}registe{SE_M_SAND_TOMB}me!$"
+	.string "Oh, wow! Isn't that a POKéNAV?\n"
+	.string "I have one, too! Please register me!$"
 
 J_Route116_Text_KarenRematchIntro:
-	.string "{SE_M_HEAL_BELL}studie{SE_M_WATERFALL}{SE_M_CHARGE}whol{SE_M_REVERSAL}lo{SE_M_SPIT_UP}sinc{SE_M_REVERSAL}{SE_M_HEAL_BELL}sa{SE_M_TWISTER}you.\n"
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}se{SE_M_REVERSAL}m{SE_M_YAWN}achievements!$"
+	.string "I studied a whole lot since I saw you.\n"
+	.string "You must see my achievements!$"
 
 J_Route116_Text_KarenRematchDefeat:
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}shock.\n"
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}again?$"
+	.string "I'm in shock.\n"
+	.string "I lost again?$"
 
 J_Route116_Text_KarenPostRematch:
-	.string "You'v{SE_M_REVERSAL}beate{SE_M_ATTRACT}ROXANNE?\n"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}bea{SE_M_SPIT_UP}you{SE_M_SUPERSONIC}then{SE_M_PERISH_SONG}No{SE_M_SPIT_UP}yet.$"
+	.string "You've beaten ROXANNE?\n"
+	.string "I can't beat you, then. Not yet.$"
 
 J_Route116_Text_SarahIntro:
-	.string "Jus{SE_M_SPIT_UP}s{SE_M_ATTRACT2}yo{SE_M_DIVE}know{SE_M_SUPERSONIC}I'v{SE_M_REVERSAL}neve{SE_M_SAND_TOMB}onc{SE_M_REVERSAL}been\n"
-	.string "beste{SE_M_WATERFALL}b{SE_M_YAWN}anyon{SE_M_REVERSAL}a{SE_M_SPIT_UP}anything.$"
+	.string "Just so you know, I've never once been\n"
+	.string "bested by anyone at anything.$"
 
 J_Route116_Text_SarahDefeat:
-	.string "Oh{SE_M_SUPERSONIC}m{SE_M_YAWN}goodness.\n"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}ne{SE_M_TWISTER}experienc{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}me.$"
+	.string "Oh, my goodness.\n"
+	.string "This is a new experience for me.$"
 
 J_Route116_Text_SarahPostBattle:
-	.string "M{SE_M_YAWN}lif{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}luxur{SE_M_YAWN}afford{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}al{SE_M_BATON_PASS}that\n"
-	.string "{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}possibl{SE_M_YAWN}desire.\p"
-	.string "However{SE_M_SUPERSONIC}whe{SE_M_ATTRACT}i{SE_M_SPIT_UP}come{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}POKéMON,\n"
-	.string "m{SE_M_YAWN}wealt{SE_M_TRI_ATTACK}ha{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}meaning.$"
+	.string "My life of luxury affords me all that\n"
+	.string "I could possibly desire.\p"
+	.string "However, when it comes to POKéMON,\n"
+	.string "my wealth has no meaning.$"
 
 J_Route116_Text_DawsonIntro:
-	.string "Whe{SE_M_ATTRACT}yo{SE_M_DIVE}la{SE_M_YAWN}you{SE_M_SAND_TOMB}eye{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}m{SE_M_YAWN}POKéMON's\n"
-	.string "gorgeou{SE_M_GRASSWHISTLE}fur{SE_M_SUPERSONIC}thei{SE_M_SAND_TOMB}beaut{SE_M_YAWN}wil{SE_M_BATON_PASS}render\l"
-	.string "yo{SE_M_DIVE}helpless!$"
+	.string "When you lay your eyes on my POKéMON's\n"
+	.string "gorgeous fur, their beauty will render\l"
+	.string "you helpless!$"
 
 J_Route116_Text_DawsonDefeat:
-	.string "Oh{SE_M_SUPERSONIC}baby{SE_M_SUPERSONIC}sa{SE_M_YAWN}i{SE_M_SPIT_UP}isn'{SE_M_SPIT_UP}so!$"
+	.string "Oh, baby, say it isn't so!$"
 
 J_Route116_Text_DawsonPostBattle:
-	.string "Oh{SE_M_SUPERSONIC}no{SE_M_SUPERSONIC}no{SE_M_SUPERSONIC}no!\n"
-	.string "You'v{SE_M_REVERSAL}musse{SE_M_WATERFALL}u{SE_M_MORNING_SUN}m{SE_M_YAWN}POKéMON'{SE_M_GRASSWHISTLE}fur!\l"
-	.string "You'v{SE_M_REVERSAL}ruine{SE_M_WATERFALL}m{SE_M_YAWN}hairdo{SE_M_SUPERSONIC}too!\l"
-	.string "I'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}cal{SE_M_BATON_PASS}m{SE_M_YAWN}stylis{SE_M_SPIT_UP}now!$"
+	.string "Oh, no, no, no!\n"
+	.string "You've mussed up my POKéMON's fur!\l"
+	.string "You've ruined my hairdo, too!\l"
+	.string "I'll have to call my stylist now!$"
 
 J_Route116_Text_DevanIntro:
-	.string "We'l{SE_M_BATON_PASS}roc{SE_M_ENCORE2}yo{SE_M_DIVE}hard!$"
+	.string "We'll rock you hard!$"
 
 J_Route116_Text_DevanDefeat:
 	.string "Aiyiyi!\n"
-	.string "N{SE_M_ATTRACT2}contes{SE_M_SPIT_UP}a{SE_M_SPIT_UP}all!$"
+	.string "No contest at all!$"
 
 J_Route116_Text_DevanPostBattle:
-	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}tr{SE_M_YAWN}differen{SE_M_SPIT_UP}POKéMON\n"
-	.string "types{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}ough{SE_M_SPIT_UP}t{SE_M_ATTRACT2}do.$"
+	.string "I should try different POKéMON\n"
+	.string "types, that's what I ought to do.$"
 
 J_Route116_Text_JohnsonIntro:
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}dea{SE_M_WATERFALL}en{SE_M_WATERFALL}u{SE_M_MORNING_SUN}here.\n"
-	.string "I'{SE_M_MILK_DRINK}bored{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}ca{SE_M_ATTRACT}w{SE_M_REVERSAL}battle?$"
+	.string "It's a dead end up here.\n"
+	.string "I'm bored, so can we battle?$"
 
 J_Route116_Text_JohnsonDefeat:
-	.string "Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}fu{SE_M_ATTRACT}eve{SE_M_ATTRACT}thoug{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}lost.$"
+	.string "That was fun even though I lost.$"
 
 J_Route116_Text_JohnsonPostBattle:
-	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}sta{SE_M_YAWN}her{SE_M_REVERSAL}an{SE_M_WATERFALL}keep\n"
-	.string "m{SE_M_REVERSAL}company?$"
+	.string "Want to stay here and keep\n"
+	.string "me company?$"
 
 J_Route117_Text_IsaacIntro:
-	.string "Listen{SE_M_SUPERSONIC}coul{SE_M_WATERFALL}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}yo{SE_M_DIVE}t{SE_M_ATTRACT2}battle\n"
-	.string "th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}I'{SE_M_MILK_DRINK}raising?$"
+	.string "Listen, could I get you to battle\n"
+	.string "the POKéMON I'm raising?$"
 
 J_Route117_Text_IsaacDefeat:
-	.string "You'v{SE_M_REVERSAL}raise{SE_M_WATERFALL}your{SE_M_GRASSWHISTLE}superbly…$"
+	.string "You've raised yours superbly…$"
 
 J_Route117_Text_IsaacPostBattle:
-	.string "POKéMO{SE_M_PSYBEAM2}isn'{SE_M_SPIT_UP}al{SE_M_BATON_PASS}abou{SE_M_SPIT_UP}power.\p"
-	.string "Polishin{SE_M_SANDSTORM}{SE_M_CHARGE}uniqu{SE_M_REVERSAL}aspec{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}one's\n"
-	.string "characte{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}anothe{SE_M_SAND_TOMB}wa{SE_M_YAWN}o{SE_M_ACID_ARMOR}enjoying\l"
+	.string "POKéMON isn't all about power.\p"
+	.string "Polishing a unique aspect of one's\n"
+	.string "character is another way of enjoying\l"
 	.string "POKéMON.$"
 
 J_Route117_Text_IsaacRegister:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}redoubl{SE_M_REVERSAL}m{SE_M_YAWN}training.\n"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}com{SE_M_REVERSAL}loo{SE_M_ENCORE2}i{SE_M_ATTRACT}o{SE_M_ATTRACT}us?$"
+	.string "I'm going to redouble my training.\n"
+	.string "Would you come look in on us?$"
 
 J_Route117_Text_IsaacRematchIntro:
-	.string "Th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}raisin{SE_M_SANDSTORM}are\n"
-	.string "lookin{SE_M_SANDSTORM}good{SE_M_SUPERSONIC}jus{SE_M_SPIT_UP}lik{SE_M_REVERSAL}before.$"
+	.string "The POKéMON I've been raising are\n"
+	.string "looking good, just like before.$"
 
 J_Route117_Text_IsaacRematchDefeat:
-	.string "Yo{SE_M_DIVE}kno{SE_M_TWISTER}ho{SE_M_TWISTER}t{SE_M_ATTRACT2}rais{SE_M_REVERSAL}the{SE_M_MILK_DRINK}properly.\n"
-	.string "Yo{SE_M_DIVE}migh{SE_M_SPIT_UP}hav{SE_M_REVERSAL}DA{SE_M_MOONLIGHT}CAR{SE_M_SWORDS_DANCE}skills…$"
+	.string "You know how to raise them properly.\n"
+	.string "You might have DAY CARE skills…$"
 
 J_Route117_Text_IsaacPostRematch:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}growin{SE_M_SANDSTORM}good!\n"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}ente{SE_M_SAND_TOMB}the{SE_M_MILK_DRINK}i{SE_M_ATTRACT}CONTESTS.$"
+	.string "Your POKéMON are growing good!\n"
+	.string "You should enter them in CONTESTS.$"
 
 J_Route117_Text_LydiaIntro:
-	.string "Please{SE_M_SUPERSONIC}allo{SE_M_TWISTER}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}evaluat{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}you\n"
-	.string "hav{SE_M_REVERSAL}raise{SE_M_WATERFALL}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}properly.$"
+	.string "Please, allow me to evaluate if you\n"
+	.string "have raised your POKéMON properly.$"
 
 J_Route117_Text_LydiaDefeat:
-	.string "Yes{SE_M_SUPERSONIC}the{SE_M_YAWN}ar{SE_M_REVERSAL}growin{SE_M_SANDSTORM}properly.$"
+	.string "Yes, they are growing properly.$"
 
 J_Route117_Text_LydiaPostBattle:
-	.string "Tr{SE_M_YAWN}raisin{SE_M_SANDSTORM}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}more\n"
-	.string "attentio{SE_M_ATTRACT}t{SE_M_ATTRACT2}thei{SE_M_SAND_TOMB}characte{SE_M_SAND_TOMB}traits.$"
+	.string "Try raising POKéMON with more\n"
+	.string "attention to their character traits.$"
 
 J_Route117_Text_LydiaRegister:
-	.string "I'{SE_M_MILK_DRINK}gla{SE_M_WATERFALL}{SE_M_HEAL_BELL}me{SE_M_SPIT_UP}{SE_M_CHARGE}super{SE_M_STRENGTH}TRAINE{SE_M_MINIMIZE}i{SE_M_ATTRACT}you.\n"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}yo{SE_M_DIVE}again.$"
+	.string "I'm glad I met a superb TRAINER in you.\n"
+	.string "I hope to see you again.$"
 
 J_Route117_Text_LydiaRematchIntro:
-	.string "Allo{SE_M_TWISTER}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}reevaluat{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}have\n"
-	.string "raise{SE_M_WATERFALL}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}properly.$"
+	.string "Allow me to reevaluate if you have\n"
+	.string "raised your POKéMON properly.$"
 
 J_Route117_Text_LydiaRematchDefeat:
-	.string "The{SE_M_YAWN}ar{SE_M_REVERSAL}growin{SE_M_SANDSTORM}admirably.$"
+	.string "They are growing admirably.$"
 
 J_Route117_Text_LydiaPostRematch:
-	.string "POKéMO{SE_M_PSYBEAM2}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}lik{SE_M_REVERSAL}differen{SE_M_SPIT_UP}kinds\n"
-	.string "o{SE_M_ACID_ARMOR}{POKEBLOCK}S{SE_M_SUPERSONIC}dependin{SE_M_SANDSTORM}o{SE_M_ATTRACT}thei{SE_M_SAND_TOMB}nature.$"
+	.string "POKéMON seem to like different kinds\n"
+	.string "of オカキクケS, depending on their nature.$"
 
 J_Route117_Text_DylanIntro:
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}middl{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}triathlon{SE_M_SUPERSONIC}but,\n"
-	.string "whatever{SE_M_SUPERSONIC}let'{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}{SE_M_CHARGE}battle!$"
+	.string "I'm in the middle of a triathlon, but,\n"
+	.string "whatever, let's have a battle!$"
 
 J_Route117_Text_DylanDefeat:
-	.string "{SE_M_HEAL_BELL}ra{SE_M_ATTRACT}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}energy!$"
+	.string "I ran out of energy!$"
 
 J_Route117_Text_DylanPostBattle:
-	.string "{SE_M_HEAL_BELL}ma{SE_M_YAWN}hav{SE_M_REVERSAL}blow{SE_M_ATTRACT}it…\p"
-	.string "{SE_M_HEAL_BELL}migh{SE_M_SPIT_UP}hav{SE_M_REVERSAL}droppe{SE_M_WATERFALL}t{SE_M_ATTRACT2}las{SE_M_SPIT_UP}during\n"
-	.string "tha{SE_M_SPIT_UP}battle…$"
+	.string "I may have blown it…\p"
+	.string "I might have dropped to last during\n"
+	.string "that battle…$"
 
 J_Route117_Text_DylanRegister:
-	.string "POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}strong{SE_M_SUPERSONIC}too?\n"
-	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}yo{SE_M_DIVE}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}me!$"
+	.string "POKéMON have to be strong, too?\n"
+	.string "I'd like you to train me!$"
 
 J_Route117_Text_DylanRematchIntro:
-	.string "I'{SE_M_MILK_DRINK}smac{SE_M_ENCORE2}i{SE_M_ATTRACT}th{SE_M_REVERSAL}middl{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}triathlon,\n"
-	.string "bu{SE_M_SPIT_UP}I'{SE_M_MILK_DRINK}comfortabl{SE_M_YAWN}ahead.\l"
-	.string "Let'{SE_M_GRASSWHISTLE}mak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}{SE_M_CHARGE}quic{SE_M_ENCORE2}battle!$"
+	.string "I'm smack in the middle of a triathlon,\n"
+	.string "but I'm comfortably ahead.\l"
+	.string "Let's make this a quick battle!$"
 
 J_Route117_Text_DylanRematchDefeat:
-	.string "{SE_M_HEAL_BELL}ra{SE_M_ATTRACT}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}energ{SE_M_YAWN}again!$"
+	.string "I ran out of energy again!$"
 
 J_Route117_Text_DylanPostRematch:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}top{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}swimmin{SE_M_SANDSTORM}an{SE_M_WATERFALL}cycling,\n"
-	.string "bu{SE_M_SPIT_UP}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}quit{SE_M_REVERSAL}tha{SE_M_SPIT_UP}confiden{SE_M_SPIT_UP}with\l"
-	.string "POKéMO{SE_M_PSYBEAM2}yet.$"
+	.string "I was tops in swimming and cycling,\n"
+	.string "but I'm not quite that confident with\l"
+	.string "POKéMON yet.$"
 
 J_Route117_Text_MariaIntro:
-	.string "{SE_M_HEAL_BELL}d{SE_M_ATTRACT2}m{SE_M_YAWN}triathlo{SE_M_ATTRACT}trainin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}POKéMON,\n"
-	.string "s{SE_M_ATTRACT2}I'{SE_M_MILK_DRINK}prett{SE_M_YAWN}confiden{SE_M_SPIT_UP}abou{SE_M_SPIT_UP}m{SE_M_YAWN}speed.$"
+	.string "I do my triathlon training with POKéMON,\n"
+	.string "so I'm pretty confident about my speed.$"
 
 J_Route117_Text_MariaDefeat:
-	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}mor{SE_M_REVERSAL}practice{SE_M_GRASSWHISTLE}in,\n"
-	.string "{SE_M_HEAL_BELL}guess.$"
+	.string "I need to get more practices in,\n"
+	.string "I guess.$"
 
 J_Route117_Text_MariaPostBattle:
-	.string "Trainin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}meaningfu{SE_M_BATON_PASS}onl{SE_M_YAWN}i{SE_M_ACID_ARMOR}you\n"
-	.string "kee{SE_M_MORNING_SUN}i{SE_M_SPIT_UP}u{SE_M_MORNING_SUN}regularly.\p"
-	.string "Okay{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}resum{SE_M_REVERSAL}m{SE_M_YAWN}training!\n"
+	.string "Training is meaningful only if you\n"
+	.string "keep it up regularly.\p"
+	.string "Okay! I'll resume my training!\n"
 	.string "Tomorrow!$"
 
 J_Route117_Text_MariaRegister:
-	.string "Yo{SE_M_DIVE}appea{SE_M_SAND_TOMB}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}trainin{SE_M_SANDSTORM}properly…\n"
-	.string "I{SE_M_ACID_ARMOR}you'{SE_M_WATERFALL}like{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}battl{SE_M_REVERSAL}yo{SE_M_DIVE}later!$"
+	.string "You appear to be training properly…\n"
+	.string "If you'd like, I'll battle you later!$"
 
 J_Route117_Text_MariaRematchIntro:
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}keepin{SE_M_SANDSTORM}u{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}training?\n"
-	.string "{SE_M_HEAL_BELL}sur{SE_M_REVERSAL}am!\l"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}sho{SE_M_TWISTER}yo{SE_M_DIVE}th{SE_M_REVERSAL}evidence!$"
+	.string "Are you keeping up with your training?\n"
+	.string "I sure am!\l"
+	.string "Let me show you the evidence!$"
 
 J_Route117_Text_MariaRematchDefeat:
-	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}mor{SE_M_REVERSAL}practice{SE_M_GRASSWHISTLE}in,\n"
-	.string "{SE_M_HEAL_BELL}guess.$"
+	.string "I need to get more practices in,\n"
+	.string "I guess.$"
 
 J_Route117_Text_MariaPostRematch:
-	.string "I'l{SE_M_BATON_PASS}resum{SE_M_REVERSAL}trainin{SE_M_SANDSTORM}tomorrow.\n"
-	.string "Let'{SE_M_GRASSWHISTLE}battl{SE_M_REVERSAL}agai{SE_M_ATTRACT}sometime!$"
+	.string "I'll resume training tomorrow.\n"
+	.string "Let's battle again sometime!$"
 
 J_Route117_Text_DerekIntro:
-	.string "Onc{SE_M_REVERSAL}{SE_M_CHARGE}BU{SE_M_SWAGGER}CATCHER!\n"
-	.string "An{SE_M_WATERFALL}no{SE_M_TWISTER}{SE_M_CHARGE}BU{SE_M_SWAGGER}MANIAC!\p"
-	.string "Bu{SE_M_SPIT_UP}m{SE_M_YAWN}lov{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}remains\n"
+	.string "Once a BUG CATCHER!\n"
+	.string "And now a BUG MANIAC!\p"
+	.string "But my love for POKéMON remains\n"
 	.string "unchanged!$"
 
 J_Route117_Text_DerekDefeat:
-	.string "M{SE_M_YAWN}ineptitud{SE_M_REVERSAL}als{SE_M_ATTRACT2}remains\n"
+	.string "My ineptitude also remains\n"
 	.string "unchanged…$"
 
 J_Route117_Text_DerekPostBattle:
-	.string "Al{SE_M_BATON_PASS}{SE_M_HEAL_BELL}di{SE_M_WATERFALL}wa{SE_M_GRASSWHISTLE}follo{SE_M_TWISTER}m{SE_M_YAWN}heart{SE_M_SUPERSONIC}an{SE_M_WATERFALL}now\n"
-	.string "the{SE_M_YAWN}cal{SE_M_BATON_PASS}m{SE_M_REVERSAL}{SE_M_CHARGE}BU{SE_M_SWAGGER}MANIAC…\p"
-	.string "Still{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}a{SE_M_ATTRACT}exper{SE_M_SPIT_UP}o{SE_M_ATTRACT}BU{SE_M_SWAGGER}POKéMON,\n"
-	.string "s{SE_M_ATTRACT2}it'{SE_M_GRASSWHISTLE}onl{SE_M_YAWN}natura{SE_M_BATON_PASS}tha{SE_M_SPIT_UP}the{SE_M_YAWN}cal{SE_M_BATON_PASS}me\l"
-	.string "{SE_M_CHARGE}BU{SE_M_SWAGGER}MANIAC.$"
+	.string "All I did was follow my heart, and now\n"
+	.string "they call me a BUG MANIAC…\p"
+	.string "Still, I am an expert on BUG POKéMON,\n"
+	.string "so it's only natural that they call me\l"
+	.string "a BUG MANIAC.$"
 
 J_Route117_Text_AnnaIntro:
-	.string "ANNA{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}prett{SE_M_YAWN}junio{SE_M_SAND_TOMB}student\n"
-	.string "partner{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}good!$"
+	.string "ANNA: I'm with my pretty junior student\n"
+	.string "partner. I have to do good!$"
 
 J_Route117_Text_AnnaDefeat:
-	.string "ANNA{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}prett{SE_M_YAWN}junio{SE_M_SAND_TOMB}student\n"
-	.string "partner{SE_M_DRAGON_RAGE}Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}win!$"
+	.string "ANNA: I'm with my pretty junior student\n"
+	.string "partner! Let me win!$"
 
 J_Route117_Text_AnnaPostBattle:
-	.string "ANNA{SE_M_HEAT_WAVE}You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}som{SE_M_REVERSAL}good\n"
+	.string "ANNA: Your POKéMON have some good\n"
 	.string "combinations.\p"
-	.string "I'{SE_M_WATERFALL}sa{SE_M_YAWN}you'r{SE_M_REVERSAL}secon{SE_M_WATERFALL}onl{SE_M_YAWN}t{SE_M_ATTRACT2}us!$"
+	.string "I'd say you're second only to us!$"
 
 J_Route117_Text_AnnaAndMegRegister:
-	.string "ANNA{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}can'{SE_M_SPIT_UP}tak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}lyin{SE_M_SANDSTORM}down!\n"
-	.string "Yo{SE_M_DIVE}wil{SE_M_BATON_PASS}com{SE_M_REVERSAL}back{SE_M_SUPERSONIC}won'{SE_M_SPIT_UP}you?$"
+	.string "ANNA: We can't take this lying down!\n"
+	.string "You will come back, won't you?$"
 
 J_Route117_Text_AnnaNotEnoughMons:
-	.string "ANNA{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us,\n"
-	.string "brin{SE_M_SANDSTORM}tw{SE_M_ATTRACT2}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}you.$"
+	.string "ANNA: If you want to battle us,\n"
+	.string "bring two POKéMON with you.$"
 
 J_Route117_Text_MegIntro:
-	.string "MEG{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}ta{SE_M_SANDSTORM}u{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}super\n"
-	.string "senio{SE_M_SAND_TOMB}studen{SE_M_SPIT_UP}partne{SE_M_SAND_TOMB}an{SE_M_WATERFALL}bea{SE_M_SPIT_UP}you!$"
+	.string "MEG: I'm going to tag up with my super\n"
+	.string "senior student partner and beat you!$"
 
 J_Route117_Text_MegDefeat:
-	.string "MEG{SE_M_HEAT_WAVE}Oh{SE_M_SUPERSONIC}no!\n"
-	.string "I'{SE_M_MILK_DRINK}sorry{SE_M_SUPERSONIC}ANNA{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}le{SE_M_SPIT_UP}yo{SE_M_DIVE}down…$"
+	.string "MEG: Oh, no!\n"
+	.string "I'm sorry, ANNA! I let you down…$"
 
 J_Route117_Text_MegPostBattle:
-	.string "MEG{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}dragge{SE_M_WATERFALL}ANN{SE_M_BONEMERANG}down…\n"
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}didn't{SE_M_SUPERSONIC}sh{SE_M_REVERSAL}woul{SE_M_WATERFALL}hav{SE_M_REVERSAL}won!$"
+	.string "MEG: I dragged ANNA down…\n"
+	.string "If I didn't, she would have won!$"
 
 J_Route117_Text_MegNotEnoughMons:
-	.string "MEG{SE_M_HEAT_WAVE}D{SE_M_ATTRACT2}yo{SE_M_DIVE}onl{SE_M_YAWN}hav{SE_M_REVERSAL}on{SE_M_REVERSAL}POKéMON?\n"
-	.string "W{SE_M_REVERSAL}can'{SE_M_SPIT_UP}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}you{SE_M_SUPERSONIC}then.\p"
-	.string "W{SE_M_REVERSAL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}{SE_M_CHARGE}2-on-{SE_M_SURF}battle.$"
+	.string "MEG: Do you only have one POKéMON?\n"
+	.string "We can't battle with you, then.\p"
+	.string "We want to have a 2-on-2 battle.$"
 
 J_Route117_Text_AnnaRematchIntro:
-	.string "ANNA{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}kee{SE_M_MORNING_SUN}losin{SE_M_SANDSTORM}i{SE_M_ATTRACT}fron{SE_M_SPIT_UP}of\n"
-	.string "m{SE_M_YAWN}junio{SE_M_SAND_TOMB}partner{SE_M_SUPERSONIC}right?$"
+	.string "ANNA: I can't keep losing in front of\n"
+	.string "my junior partner, right?$"
 
 J_Route117_Text_AnnaRematchDefeat:
-	.string "ANNA{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}ge{SE_M_SPIT_UP}int{SE_M_ATTRACT2}th{SE_M_REVERSAL}groove.$"
+	.string "ANNA: I couldn't get into the groove.$"
 
 J_Route117_Text_AnnaPostRematch:
-	.string "ANNA{SE_M_HEAT_WAVE}You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}som{SE_M_REVERSAL}good\n"
+	.string "ANNA: Your POKéMON have some good\n"
 	.string "combinations.\p"
-	.string "I'{SE_M_WATERFALL}sa{SE_M_YAWN}you'r{SE_M_REVERSAL}secon{SE_M_WATERFALL}onl{SE_M_YAWN}t{SE_M_ATTRACT2}us!$"
+	.string "I'd say you're second only to us!$"
 
 J_Route117_Text_AnnaRematchNotEnoughMons:
-	.string "ANNA{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us,\n"
-	.string "brin{SE_M_SANDSTORM}tw{SE_M_ATTRACT2}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}you.$"
+	.string "ANNA: If you want to battle us,\n"
+	.string "bring two POKéMON with you.$"
 
 J_Route117_Text_MegRematchIntro:
-	.string "MEG{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}ta{SE_M_SANDSTORM}u{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}my\n"
-	.string "senio{SE_M_SAND_TOMB}partne{SE_M_SAND_TOMB}an{SE_M_WATERFALL}wi{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}time!$"
+	.string "MEG: I'm going to tag up with my\n"
+	.string "senior partner and win this time!$"
 
 J_Route117_Text_MegRematchDefeat:
-	.string "MEG{SE_M_HEAT_WAVE}To{SE_M_ATTRACT2}strong!$"
+	.string "MEG: Too strong!$"
 
 J_Route117_Text_MegPostRematch:
-	.string "MEG{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}battle{SE_M_WATERFALL}togethe{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}my\n"
-	.string "senio{SE_M_SAND_TOMB}partner{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}w{SE_M_REVERSAL}lost…\p"
-	.string "That'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}discouraging…$"
+	.string "MEG: I battled together with my\n"
+	.string "senior partner, but we lost…\p"
+	.string "That's so discouraging…$"
 
 J_Route117_Text_MegRematchNotEnoughMons:
-	.string "MEG{SE_M_HEAT_WAVE}D{SE_M_ATTRACT2}yo{SE_M_DIVE}onl{SE_M_YAWN}hav{SE_M_REVERSAL}on{SE_M_REVERSAL}POKéMON?\n"
-	.string "W{SE_M_REVERSAL}can'{SE_M_SPIT_UP}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}you{SE_M_SUPERSONIC}then.\p"
-	.string "W{SE_M_REVERSAL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}{SE_M_CHARGE}2-on-{SE_M_SURF}battle.$"
+	.string "MEG: Do you only have one POKéMON?\n"
+	.string "We can't battle with you, then.\p"
+	.string "We want to have a 2-on-2 battle.$"
 
 J_Route117_Text_MelinaIntro:
-	.string "Isn'{SE_M_SPIT_UP}i{SE_M_SPIT_UP}nice{SE_M_SING}T{SE_M_ATTRACT2}battl{SE_M_REVERSAL}whil{SE_M_REVERSAL}looking\n"
-	.string "a{SE_M_SPIT_UP}prett{SE_M_YAWN}flowers?$"
+	.string "Isn't it nice? To battle while looking\n"
+	.string "at pretty flowers?$"
 
 J_Route117_Text_MelinaDefeat:
-	.string "Oh{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}quit{SE_M_REVERSAL}impressive!$"
+	.string "Oh, that's quite impressive!$"
 
 J_Route117_Text_MelinaPostBattle:
-	.string "I{SE_M_SPIT_UP}feel{SE_M_GRASSWHISTLE}wonderfu{SE_M_BATON_PASS}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}jog\n"
-	.string "whil{SE_M_REVERSAL}lookin{SE_M_SANDSTORM}a{SE_M_SPIT_UP}flowers.$"
+	.string "It feels wonderful to go for a jog\n"
+	.string "while looking at flowers.$"
 
 J_Route117_Text_BrandiIntro:
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}demonstrat{SE_M_REVERSAL}th{SE_M_REVERSAL}power\n"
-	.string "hidde{SE_M_ATTRACT}withi{SE_M_ATTRACT}{SE_M_CHARGE}PSYCHI{SE_M_PSYBEAM}POKéMON!$"
+	.string "Let me demonstrate the power\n"
+	.string "hidden within a PSYCHIC POKéMON!$"
 
 J_Route117_Text_BrandiDefeat:
 	.string "Astonishing!$"
 
 J_Route117_Text_BrandiPostBattle:
-	.string "PSYCHI{SE_M_PSYBEAM}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}complex.\n"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}tr{SE_M_YAWN}catchin{SE_M_SANDSTORM}some.$"
+	.string "PSYCHIC POKéMON are complex.\n"
+	.string "You should try catching some.$"
 
 J_Route117_Text_AishaIntro:
-	.string "Concentrat{SE_M_REVERSAL}o{SE_M_ATTRACT}gettin{SE_M_SANDSTORM}th{SE_M_REVERSAL}win.\n"
-	.string "That'{SE_M_GRASSWHISTLE}ho{SE_M_TWISTER}{SE_M_HEAL_BELL}battle!$"
+	.string "Concentrate on getting the win.\n"
+	.string "That's how I battle!$"
 
 J_Route117_Text_AishaDefeat:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}wast{SE_M_REVERSAL}an{SE_M_YAWN}tim{SE_M_REVERSAL}bein{SE_M_SANDSTORM}angry\n"
-	.string "ove{SE_M_SAND_TOMB}{SE_M_CHARGE}loss--{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}rathe{SE_M_SAND_TOMB}train.$"
+	.string "I don't waste any time being angry\n"
+	.string "over a loss--I would rather train.$"
 
 J_Route117_Text_AishaPostBattle:
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}tha{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}worr{SE_M_YAWN}abou{SE_M_SPIT_UP}losing,\n"
-	.string "you'r{SE_M_REVERSAL}mor{SE_M_REVERSAL}likel{SE_M_YAWN}t{SE_M_ATTRACT2}lose.$"
+	.string "I think that if you worry about losing,\n"
+	.string "you're more likely to lose.$"
 
 J_Route118_Text_RoseIntro:
-	.string "Th{SE_M_REVERSAL}arom{SE_M_CHARGE}o{SE_M_ACID_ARMOR}flower{SE_M_GRASSWHISTLE}ha{SE_M_GRASSWHISTLE}{SE_M_CHARGE}magical\n"
-	.string "power{SE_M_PERISH_SONG}I{SE_M_SPIT_UP}cleanse{SE_M_GRASSWHISTLE}u{SE_M_GRASSWHISTLE}bod{SE_M_YAWN}an{SE_M_WATERFALL}soul.$"
+	.string "The aroma of flowers has a magical\n"
+	.string "power. It cleanses us body and soul.$"
 
 J_Route118_Text_RoseDefeat:
-	.string "Oh{SE_M_SUPERSONIC}dea{SE_M_SAND_TOMB}me.\n"
-	.string "{SE_M_HEAL_BELL}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}lost.$"
+	.string "Oh, dear me.\n"
+	.string "I seem to have lost.$"
 
 J_Route118_Text_RosePostBattle:
-	.string "Flowers{SE_M_SUPERSONIC}POKéMON…\n"
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}whateve{SE_M_SAND_TOMB}smell{SE_M_GRASSWHISTLE}nice.\p"
-	.string "Stink{SE_M_YAWN}things…\n"
-	.string "I'l{SE_M_BATON_PASS}pass.$"
+	.string "Flowers, POKéMON…\n"
+	.string "I love whatever smells nice.\p"
+	.string "Stinky things…\n"
+	.string "I'll pass.$"
 
 J_Route118_Text_RoseRegister:
-	.string "Sniff{SE_M_DIZZY_PUNCH}Tha{SE_M_SPIT_UP}odor--it'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}POKéNAV!\n"
-	.string "W{SE_M_REVERSAL}mus{SE_M_SPIT_UP}registe{SE_M_SAND_TOMB}eac{SE_M_TRI_ATTACK}other!$"
+	.string "Sniff… That odor--it's a POKéNAV!\n"
+	.string "We must register each other!$"
 
 J_Route118_Text_RoseRematchIntro:
-	.string "Wer{SE_M_REVERSAL}yo{SE_M_DIVE}draw{SE_M_ATTRACT}her{SE_M_REVERSAL}b{SE_M_YAWN}th{SE_M_REVERSAL}sweet\n"
+	.string "Were you drawn here by the sweet\n"
 	.string "aroma?$"
 
 J_Route118_Text_RoseRematchDefeat:
-	.string "Th{SE_M_REVERSAL}powe{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}aroma…\n"
-	.string "I{SE_M_SPIT_UP}didn'{SE_M_SPIT_UP}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}much.$"
+	.string "The power of aroma…\n"
+	.string "It didn't seem to do much.$"
 
 J_Route118_Text_RosePostRematch:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}us{SE_M_REVERSAL}{SE_M_CHARGE}swee{SE_M_SPIT_UP}arom{SE_M_CHARGE}properly,\n"
-	.string "POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}attracte{SE_M_WATERFALL}b{SE_M_YAWN}it.$"
+	.string "If you use a sweet aroma properly,\n"
+	.string "POKéMON will be attracted by it.$"
 
 J_Route118_Text_PerryIntro:
-	.string "BIR{SE_M_FAINT_ATTACK}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}FL{SE_M_MOONLIGHT}elegantl{SE_M_YAWN}in\n"
-	.string "th{SE_M_REVERSAL}sky{SE_M_DIZZY_PUNCH}They'r{SE_M_REVERSAL}th{SE_M_REVERSAL}best!$"
+	.string "BIRD POKéMON that FLY elegantly in\n"
+	.string "the sky… They're the best!$"
 
 J_Route118_Text_PerryDefeat:
 	.string "Urgh…\n"
-	.string "{SE_M_HEAL_BELL}crashed…$"
+	.string "I crashed…$"
 
 J_Route118_Text_PerryPostBattle:
-	.string "You'v{SE_M_REVERSAL}go{SE_M_SPIT_UP}grea{SE_M_SPIT_UP}POKéMON.\n"
-	.string "I'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}min{SE_M_REVERSAL}better.$"
+	.string "You've got great POKéMON.\n"
+	.string "I'll have to train mine better.$"
 
 J_Route118_Text_ChesterIntro:
-	.string "Tak{SE_M_REVERSAL}flight!\n"
-	.string "M{SE_M_YAWN}BIR{SE_M_FAINT_ATTACK}POKéMON!$"
+	.string "Take flight!\n"
+	.string "My BIRD POKéMON!$"
 
 J_Route118_Text_ChesterDefeat:
-	.string "The{SE_M_YAWN}di{SE_M_WATERFALL}tak{SE_M_REVERSAL}flight…$"
+	.string "They did take flight…$"
 
 J_Route118_Text_ChesterPostBattle:
-	.string "I{SE_M_ACID_ARMOR}they'{SE_M_WATERFALL}ge{SE_M_SPIT_UP}stronger{SE_M_SUPERSONIC}they'{SE_M_WATERFALL}b{SE_M_REVERSAL}able\n"
-	.string "t{SE_M_ATTRACT2}fl{SE_M_YAWN}mor{SE_M_REVERSAL}freely…$"
+	.string "If they'd get stronger, they'd be able\n"
+	.string "to fly more freely…$"
 
 J_Route118_Text_BarnyIntro:
-	.string "I'{SE_M_MILK_DRINK}{SE_M_CHARGE}FISHERMAN{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}als{SE_M_ATTRACT2}{SE_M_CHARGE}TRAINER.\n"
-	.string "I'{SE_M_MILK_DRINK}raisin{SE_M_SANDSTORM}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}{SE_M_HEAL_BELL}caught.$"
+	.string "I'm a FISHERMAN, but also a TRAINER.\n"
+	.string "I'm raising the POKéMON I caught.$"
 
 J_Route118_Text_BarnyDefeat:
-	.string "{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}doin{SE_M_SANDSTORM}oka{SE_M_YAWN}i{SE_M_ATTRACT}my\n"
+	.string "I thought I was doing okay in my\n"
 	.string "training…$"
 
 J_Route118_Text_BarnyPostBattle:
-	.string "{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}wi{SE_M_ATTRACT}b{SE_M_YAWN}trainin{SE_M_SANDSTORM}POKéMON\n"
-	.string "whil{SE_M_REVERSAL}{SE_M_HEAL_BELL}fished…\p"
-	.string "Wa{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}doin{SE_M_SANDSTORM}thing{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}hal{SE_M_ACID_ARMOR}measures?$"
+	.string "I couldn't win by training POKéMON\n"
+	.string "while I fished…\p"
+	.string "Was I doing things in half measures?$"
 
 J_Route118_Text_WadeIntro:
-	.string "Fo{SE_M_SAND_TOMB}FISHERMEN{SE_M_SUPERSONIC}equipmen{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}key.\p"
-	.string "Bu{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}TRAINERS{SE_M_SUPERSONIC}th{SE_M_REVERSAL}ke{SE_M_YAWN}ingredients\n"
-	.string "ar{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}heart{SE_M_SUPERSONIC}o{SE_M_ACID_ARMOR}course!$"
+	.string "For FISHERMEN, equipment is the key.\p"
+	.string "But for TRAINERS, the key ingredients\n"
+	.string "are POKéMON and heart, of course!$"
 
 J_Route118_Text_WadeDefeat:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}beate{SE_M_ATTRACT}i{SE_M_ATTRACT}heart?$"
+	.string "I was beaten in heart?$"
 
 J_Route118_Text_WadePostBattle:
-	.string "Com{SE_M_REVERSAL}t{SE_M_ATTRACT2}thin{SE_M_ENCORE2}o{SE_M_ACID_ARMOR}it{SE_M_SUPERSONIC}fishin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}battle\n"
-	.string "betwee{SE_M_ATTRACT}{SE_M_CHARGE}FISHERMA{SE_M_PSYBEAM2}an{SE_M_WATERFALL}{SE_M_CHARGE}POKéMON.$"
+	.string "Come to think of it, fishing is a battle\n"
+	.string "between a FISHERMAN and a POKéMON.$"
 
 J_Route118_Text_DaltonIntro:
-	.string "Le{SE_M_SPIT_UP}m{SE_M_YAWN}melod{SE_M_YAWN}roc{SE_M_ENCORE2}you{SE_M_SAND_TOMB}soul!$"
+	.string "Let my melody rock your soul!$"
 
 J_Route118_Text_DaltonDefeat:
 	.string "La-lalala…$"
 
 J_Route118_Text_DaltonPostBattle:
-	.string "A{SE_M_ATTRACT}electri{SE_M_HYPER_BEAM}guita{SE_M_SAND_TOMB}doesn'{SE_M_SPIT_UP}always\n"
-	.string "hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}noisy…\p"
-	.string "I{SE_M_SPIT_UP}ca{SE_M_ATTRACT}b{SE_M_REVERSAL}strumme{SE_M_WATERFALL}t{SE_M_ATTRACT2}squeez{SE_M_REVERSAL}out\n"
-	.string "thi{SE_M_GRASSWHISTLE}heart-stirrin{SE_M_SANDSTORM}melody…$"
+	.string "An electric guitar doesn't always\n"
+	.string "have to be noisy…\p"
+	.string "It can be strummed to squeeze out\n"
+	.string "this heart-stirring melody…$"
 
 J_Route118_Text_DaltonRegister:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}compos{SE_M_REVERSAL}bette{SE_M_SAND_TOMB}melodies,\n"
-	.string "yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}com{SE_M_REVERSAL}listen{SE_M_SUPERSONIC}okay?$"
+	.string "When I compose better melodies,\n"
+	.string "you have to come listen, okay?$"
 
 J_Route118_Text_DaltonRematchIntro:
-	.string "{SE_M_BONEMERANG}melod{SE_M_YAWN}fro{SE_M_MILK_DRINK}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}me…\n"
-	.string "Le{SE_M_SPIT_UP}u{SE_M_GRASSWHISTLE}delive{SE_M_SAND_TOMB}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}soul.$"
+	.string "A melody from my POKéMON and me…\n"
+	.string "Let us deliver it to your soul.$"
 
 J_Route118_Text_DaltonRematchDefeat:
 	.string "La-lalala…$"
 
 J_Route118_Text_DaltonPostRematch:
-	.string "Whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}play{SE_M_SUPERSONIC}m{SE_M_YAWN}emotion{SE_M_GRASSWHISTLE}shoul{SE_M_WATERFALL}reach\n"
-	.string "yo{SE_M_DIVE}throug{SE_M_TRI_ATTACK}m{SE_M_YAWN}electri{SE_M_HYPER_BEAM}guitar…$"
+	.string "When I play, my emotions should reach\n"
+	.string "you through my electric guitar…$"
 
 J_Route118_Text_DeandreIntro:
-	.string "Go{SE_M_SUPERSONIC}go{SE_M_SUPERSONIC}go!\n"
-	.string "POKéMO{SE_M_PSYBEAM2}1{SE_M_SUPERSONIC}2{SE_M_SUPERSONIC}an{SE_M_WATERFALL}3!$"
+	.string "Go, go, go!\n"
+	.string "POKéMON 1, 2, and 3!$"
 
 J_Route118_Text_DeandreDefeat:
-	.string "Com{SE_M_REVERSAL}in{SE_M_SUPERSONIC}POKéMON{SE_M_DRAGON_RAGE}Ar{SE_M_REVERSAL}yo{SE_M_DIVE}okay?\n"
-	.string "POKéMO{SE_M_PSYBEAM2}1{SE_M_SUPERSONIC}2{SE_M_SUPERSONIC}an{SE_M_WATERFALL}3?!$"
+	.string "Come in, POKéMON! Are you okay?\n"
+	.string "POKéMON 1, 2, and 3?!$"
 
 J_Route118_Text_DeandrePostBattle:
-	.string "Isn'{SE_M_SPIT_UP}i{SE_M_SPIT_UP}coo{SE_M_BATON_PASS}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}{SE_M_CHARGE}POKéMON\n"
-	.string "battl{SE_M_REVERSAL}team?\p"
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}cop{SE_M_YAWN}me--{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}mind!$"
+	.string "Isn't it cool that I have a POKéMON\n"
+	.string "battle team?\p"
+	.string "You can copy me--I don't mind!$"
 
 J_Route119_Text_BrentIntro:
-	.string "We'r{SE_M_REVERSAL}th{SE_M_REVERSAL}MIMI{SE_M_PSYBEAM}CIRCLE!\n"
-	.string "W{SE_M_REVERSAL}MIMI{SE_M_PSYBEAM}wha{SE_M_SPIT_UP}yo{SE_M_DIVE}do!$"
+	.string "We're the MIMIC CIRCLE!\n"
+	.string "We MIMIC what you do!$"
 
 J_Route119_Text_BrentDefeat:
 	.string "Whoopsie!\n"
-	.string "{SE_M_HEAL_BELL}lost!$"
+	.string "I lost!$"
 
 J_Route119_Text_BrentPostBattle:
-	.string "What'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}goo{SE_M_WATERFALL}abou{SE_M_SPIT_UP}mimicry?\p"
+	.string "What's so good about mimicry?\p"
 	.string "Fufufu…\n"
-	.string "You'l{SE_M_BATON_PASS}neve{SE_M_SAND_TOMB}understand…$"
+	.string "You'll never understand…$"
 
 J_Route119_Text_DonaldIntro:
-	.string "So{SE_M_SUPERSONIC}w{SE_M_REVERSAL}finall{SE_M_YAWN}meet!\n"
-	.string "M{SE_M_YAWN}BU{SE_M_SWAGGER}POKéMO{SE_M_PSYBEAM2}wil{SE_M_BATON_PASS}kee{SE_M_MORNING_SUN}yo{SE_M_DIVE}company!$"
+	.string "So, we finally meet!\n"
+	.string "My BUG POKéMON will keep you company!$"
 
 J_Route119_Text_DonaldDefeat:
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}we'{SE_M_WATERFALL}neve{SE_M_SAND_TOMB}met…$"
+	.string "I wish we'd never met…$"
 
 J_Route119_Text_DonaldPostBattle:
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}MIMI{SE_M_PSYBEAM}yo{SE_M_DIVE}som{SE_M_REVERSAL}more.\n"
-	.string "Ca{SE_M_ATTRACT}yo{SE_M_DIVE}hurr{SE_M_YAWN}u{SE_M_MORNING_SUN}an{SE_M_WATERFALL}move?$"
+	.string "I want to MIMIC you some more.\n"
+	.string "Can you hurry up and move?$"
 
 J_Route119_Text_TaylorIntro:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ste{SE_M_MORNING_SUN}forward{SE_M_SUPERSONIC}w{SE_M_REVERSAL}ste{SE_M_MORNING_SUN}forward.\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}tur{SE_M_ATTRACT}right{SE_M_SUPERSONIC}w{SE_M_REVERSAL}turn{SE_M_SUPERSONIC}too…$"
+	.string "If you step forward, we step forward.\p"
+	.string "If you turn right, we turn, too…$"
 
 J_Route119_Text_TaylorDefeat:
-	.string "Bu{SE_M_SPIT_UP}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}win{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}lose…$"
+	.string "But if you win, I lose…$"
 
 J_Route119_Text_TaylorPostBattle:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}MIMI{SE_M_PSYBEAM}yo{SE_M_DIVE}winnin{SE_M_SANDSTORM}th{SE_M_REVERSAL}match.\n"
-	.string "That'{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}impossible…\l"
-	.string "It'{SE_M_GRASSWHISTLE}burnin{SE_M_SANDSTORM}m{SE_M_REVERSAL}up…$"
+	.string "I can't MIMIC you winning the match.\n"
+	.string "That's just impossible…\l"
+	.string "It's burning me up…$"
 
 J_Route119_Text_DougIntro:
-	.string "Yep{SE_M_SUPERSONIC}you'v{SE_M_REVERSAL}finall{SE_M_YAWN}caugh{SE_M_SPIT_UP}me!\n"
-	.string "O{SE_M_SAND_TOMB}wer{SE_M_REVERSAL}yo{SE_M_DIVE}tryin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}avoi{SE_M_WATERFALL}me?$"
+	.string "Yep, you've finally caught me!\n"
+	.string "Or were you trying to avoid me?$"
 
 J_Route119_Text_DougDefeat:
-	.string "Whoop{SE_M_SUPERSONIC}tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}grea{SE_M_SPIT_UP}match!$"
+	.string "Whoop, that was a great match!$"
 
 J_Route119_Text_DougPostBattle:
-	.string "We'r{SE_M_REVERSAL}th{SE_M_REVERSAL}MIMI{SE_M_PSYBEAM}CIRCLE!\n"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}yo{SE_M_DIVE}enjoye{SE_M_WATERFALL}ou{SE_M_SAND_TOMB}performance.$"
+	.string "We're the MIMIC CIRCLE!\n"
+	.string "I hope you enjoyed our performance.$"
 
 J_Route119_Text_GregIntro:
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}wh{SE_M_ATTRACT2}{SE_M_HEAL_BELL}am{SE_M_SUPERSONIC}d{SE_M_ATTRACT2}you?\p"
-	.string "But{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}als{SE_M_ATTRACT2}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}you.\n"
-	.string "So{SE_M_SUPERSONIC}we'l{SE_M_BATON_PASS}battle!$"
+	.string "You don't know who I am, do you?\p"
+	.string "But, I also don't know you.\n"
+	.string "So, we'll battle!$"
 
 J_Route119_Text_GregDefeat:
-	.string "You'r{SE_M_REVERSAL}prett{SE_M_YAWN}strong!$"
+	.string "You're pretty strong!$"
 
 J_Route119_Text_GregPostBattle:
-	.string "Unti{SE_M_BATON_PASS}yo{SE_M_DIVE}g{SE_M_ATTRACT2}awa{SE_M_YAWN}somewhere{SE_M_SUPERSONIC}we'll\n"
-	.string "kee{SE_M_MORNING_SUN}o{SE_M_ATTRACT}mimickin{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}ever{SE_M_YAWN}move.$"
+	.string "Until you go away somewhere, we'll\n"
+	.string "keep on mimicking your every move.$"
 
 J_Route119_Text_KentIntro:
-	.string "Th{SE_M_REVERSAL}MIMI{SE_M_PSYBEAM}CIRCL{SE_M_SWORDS_DANCE}wa{SE_M_GRASSWHISTLE}forme{SE_M_WATERFALL}b{SE_M_YAWN}people\n"
-	.string "wh{SE_M_ATTRACT2}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}MIMIC.\p"
-	.string "{SE_M_BONEMERANG}battl{SE_M_REVERSAL}start{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}instan{SE_M_SPIT_UP}w{SE_M_REVERSAL}meet!$"
+	.string "The MIMIC CIRCLE was formed by people\n"
+	.string "who like to MIMIC.\p"
+	.string "A battle starts the instant we meet!$"
 
 J_Route119_Text_KentDefeat:
-	.string "{SE_M_HEAL_BELL}giv{SE_M_REVERSAL}up!$"
+	.string "I give up!$"
 
 J_Route119_Text_KentPostBattle:
-	.string "Won'{SE_M_SPIT_UP}yo{SE_M_DIVE}joi{SE_M_ATTRACT}ou{SE_M_SAND_TOMB}MIMI{SE_M_PSYBEAM}CIRCLE?$"
+	.string "Won't you join our MIMIC CIRCLE?$"
 
 J_Route119_Text_JacksonIntro:
-	.string "Wh{SE_M_ATTRACT2}ha{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}knowledg{SE_M_REVERSAL}and\n"
-	.string "th{SE_M_REVERSAL}techniqu{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}survival?\p"
-	.string "POKéMO{SE_M_PSYBEAM2}RANGERS{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}who!$"
+	.string "Who has the knowledge and\n"
+	.string "the technique for survival?\p"
+	.string "POKéMON RANGERS, that's who!$"
 
 J_Route119_Text_JacksonDefeat:
-	.string "{SE_M_HEAL_BELL}didn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}enoug{SE_M_TRI_ATTACK}POKéMON\n"
+	.string "I didn't have enough POKéMON\n"
 	.string "know-how…$"
 
 J_Route119_Text_JacksonPostBattle:
-	.string "T{SE_M_ATTRACT2}brea{SE_M_ENCORE2}awa{SE_M_YAWN}fro{SE_M_MILK_DRINK}civilizatio{SE_M_ATTRACT}and\n"
-	.string "awake{SE_M_ATTRACT}th{SE_M_REVERSAL}wil{SE_M_WATERFALL}spiri{SE_M_SPIT_UP}within!\p"
-	.string "That'{SE_M_GRASSWHISTLE}ou{SE_M_SAND_TOMB}vision.$"
+	.string "To break away from civilization and\n"
+	.string "awaken the wild spirit within!\p"
+	.string "That's our vision.$"
 
 J_Route119_Text_JacksonRegister:
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}you'l{SE_M_BATON_PASS}giv{SE_M_REVERSAL}m{SE_M_REVERSAL}{SE_M_CHARGE}rematc{SE_M_TRI_ATTACK}without\n"
-	.string "mockin{SE_M_SANDSTORM}m{SE_M_YAWN}lac{SE_M_ENCORE2}o{SE_M_ACID_ARMOR}knowledge.$"
+	.string "I hope you'll give me a rematch without\n"
+	.string "mocking my lack of knowledge.$"
 
 J_Route119_Text_JacksonRematchIntro:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}regai{SE_M_ATTRACT}m{SE_M_YAWN}wil{SE_M_WATERFALL}spiri{SE_M_SPIT_UP}by\n"
-	.string "bein{SE_M_SANDSTORM}togethe{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}POKéMON.$"
+	.string "I'm going to regain my wild spirit by\n"
+	.string "being together with POKéMON.$"
 
 J_Route119_Text_JacksonRematchDefeat:
-	.string "You'v{SE_M_REVERSAL}remaine{SE_M_WATERFALL}strong!$"
+	.string "You've remained strong!$"
 
 J_Route119_Text_JacksonPostRematch:
-	.string "Believ{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéMON.\n"
-	.string "Believ{SE_M_REVERSAL}i{SE_M_ATTRACT}yourself.\p"
-	.string "Th{SE_M_REVERSAL}roa{SE_M_WATERFALL}wil{SE_M_BATON_PASS}revea{SE_M_BATON_PASS}itsel{SE_M_ACID_ARMOR}t{SE_M_ATTRACT2}you.$"
+	.string "Believe in your POKéMON.\n"
+	.string "Believe in yourself.\p"
+	.string "The road will reveal itself to you.$"
 
 J_Route119_Text_CatherineIntro:
-	.string "Oh{SE_M_SING}Loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}you.\p"
-	.string "Fo{SE_M_SAND_TOMB}someon{SE_M_REVERSAL}o{SE_M_ATTRACT}a{SE_M_ATTRACT}adventure,\n"
-	.string "you'r{SE_M_REVERSAL}travelin{SE_M_SANDSTORM}awfull{SE_M_YAWN}light.$"
+	.string "Oh? Look at you.\p"
+	.string "For someone on an adventure,\n"
+	.string "you're traveling awfully light.$"
 
 J_Route119_Text_CatherineDefeat:
-	.string "Accident{SE_M_GRASSWHISTLE}happe{SE_M_ATTRACT}whe{SE_M_ATTRACT}you'r{SE_M_REVERSAL}not\n"
+	.string "Accidents happen when you're not\n"
 	.string "prepared!$"
 
 J_Route119_Text_CatherinePostBattle:
-	.string "You'r{SE_M_REVERSAL}travelin{SE_M_SANDSTORM}ligh{SE_M_SPIT_UP}bu{SE_M_SPIT_UP}yo{SE_M_DIVE}have\n"
-	.string "everythin{SE_M_SANDSTORM}yo{SE_M_DIVE}need.\p"
-	.string "You'r{SE_M_REVERSAL}o{SE_M_ATTRACT}to{SE_M_MORNING_SUN}o{SE_M_ACID_ARMOR}thing{SE_M_GRASSWHISTLE}mentall{SE_M_YAWN}and\n"
-	.string "physically{SE_M_SUPERSONIC}too.$"
+	.string "You're traveling light but you have\n"
+	.string "everything you need.\p"
+	.string "You're on top of things mentally and\n"
+	.string "physically, too.$"
 
 J_Route119_Text_CatherineRegister:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}POKéNAV?\n"
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}must-hav{SE_M_REVERSAL}too{SE_M_BATON_PASS}fo{SE_M_SAND_TOMB}an{SE_M_YAWN}TRAINER.\p"
-	.string "Oh{SE_M_SUPERSONIC}yo{SE_M_DIVE}d{SE_M_ATTRACT2}hav{SE_M_REVERSAL}one!\n"
-	.string "Let'{SE_M_GRASSWHISTLE}registe{SE_M_SAND_TOMB}eac{SE_M_TRI_ATTACK}other{SE_M_SUPERSONIC}then!$"
+	.string "Do you have a POKéNAV?\n"
+	.string "It's a must-have tool for any TRAINER.\p"
+	.string "Oh, you do have one!\n"
+	.string "Let's register each other, then!$"
 
 J_Route119_Text_CatherineRematchIntro:
-	.string "How'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}journe{SE_M_YAWN}wit{SE_M_TRI_ATTACK}POKéMON\n"
+	.string "How's your journey with POKéMON\n"
 	.string "going?$"
 
 J_Route119_Text_CatherineRematchDefeat:
-	.string "I'{SE_M_MILK_DRINK}stil{SE_M_BATON_PASS}missin{SE_M_SANDSTORM}something…$"
+	.string "I'm still missing something…$"
 
 J_Route119_Text_CatherinePostRematch:
-	.string "I{SE_M_ATTRACT}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}wa{SE_M_YAWN}tha{SE_M_SPIT_UP}you{SE_M_SUPERSONIC}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}TRAINER,\n"
-	.string "rel{SE_M_YAWN}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéMON{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}POKéMON\l"
-	.string "rel{SE_M_YAWN}o{SE_M_ATTRACT}you.$"
+	.string "In the same way that you, as a TRAINER,\n"
+	.string "rely on your POKéMON, your POKéMON\l"
+	.string "rely on you.$"
 
 J_Route119_Text_HughIntro:
-	.string "Th{SE_M_REVERSAL}vas{SE_M_SPIT_UP}sk{SE_M_YAWN}hold{SE_M_GRASSWHISTLE}untol{SE_M_WATERFALL}promise!\p"
-	.string "Nothin{SE_M_SANDSTORM}ca{SE_M_ATTRACT}compar{SE_M_REVERSAL}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}sheer\n"
-	.string "exhilaratio{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}flight!$"
+	.string "The vast sky holds untold promise!\p"
+	.string "Nothing can compare to the sheer\n"
+	.string "exhilaration of flight!$"
 
 J_Route119_Text_HughDefeat:
-	.string "Dow{SE_M_ATTRACT}an{SE_M_WATERFALL}out!$"
+	.string "Down and out!$"
 
 J_Route119_Text_HughPostBattle:
-	.string "M{SE_M_YAWN}BIR{SE_M_FAINT_ATTACK}POKéMO{SE_M_PSYBEAM2}mad{SE_M_REVERSAL}m{SE_M_YAWN}dream{SE_M_GRASSWHISTLE}of\n"
-	.string "flyin{SE_M_SANDSTORM}com{SE_M_REVERSAL}true!$"
+	.string "My BIRD POKéMON made my dreams of\n"
+	.string "flying come true!$"
 
 J_Route119_Text_PhilIntro:
-	.string "I'l{SE_M_BATON_PASS}sho{SE_M_TWISTER}yo{SE_M_DIVE}th{SE_M_REVERSAL}tru{SE_M_REVERSAL}potentia{SE_M_BATON_PASS}o{SE_M_ACID_ARMOR}me\n"
-	.string "an{SE_M_WATERFALL}m{SE_M_YAWN}BIR{SE_M_FAINT_ATTACK}POKéMON!$"
+	.string "I'll show you the true potential of me\n"
+	.string "and my BIRD POKéMON!$"
 
 J_Route119_Text_PhilDefeat:
-	.string "W{SE_M_REVERSAL}lacke{SE_M_WATERFALL}potential…$"
+	.string "We lacked potential…$"
 
 J_Route119_Text_PhilPostBattle:
-	.string "Eve{SE_M_SAND_TOMB}sinc{SE_M_REVERSAL}{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}{SE_M_CHARGE}littl{SE_M_REVERSAL}kid{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}always\n"
-	.string "admire{SE_M_WATERFALL}BIR{SE_M_FAINT_ATTACK}POKéMON…$"
+	.string "Ever since I was a little kid, I always\n"
+	.string "admired BIRD POKéMON…$"
 
 J_Route119_Text_YasuIntro:
-	.string "T{SE_M_ATTRACT2}lur{SE_M_ENCORE2}i{SE_M_ATTRACT}shadows{SE_M_SUPERSONIC}an{SE_M_WATERFALL}liv{SE_M_REVERSAL}in\n"
-	.string "darkness{SE_M_DIZZY_PUNCH}Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}destiny.\p"
-	.string "{SE_M_HEAL_BELL}emerg{SE_M_REVERSAL}t{SE_M_ATTRACT2}challeng{SE_M_REVERSAL}you!$"
+	.string "To lurk in shadows, and live in\n"
+	.string "darkness… That is my destiny.\p"
+	.string "I emerge to challenge you!$"
 
 J_Route119_Text_YasuDefeat:
-	.string "{SE_M_HEAL_BELL}admi{SE_M_SPIT_UP}defeat!$"
+	.string "I admit defeat!$"
 
 J_Route119_Text_YasuPostBattle:
-	.string "Thos{SE_M_REVERSAL}defeate{SE_M_WATERFALL}i{SE_M_ATTRACT}battl{SE_M_REVERSAL}withdraw\n"
-	.string "quietl{SE_M_YAWN}bac{SE_M_ENCORE2}int{SE_M_ATTRACT2}th{SE_M_REVERSAL}shadows.\l"
-	.string "That{SE_M_SUPERSONIC}too{SE_M_SUPERSONIC}i{SE_M_GRASSWHISTLE}destiny…$"
+	.string "Those defeated in battle withdraw\n"
+	.string "quietly back into the shadows.\l"
+	.string "That, too, is destiny…$"
 
 J_Route119_Text_TakashiIntro:
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}o{SE_M_ATTRACT}you{SE_M_SAND_TOMB}guard,\n"
-	.string "you'r{SE_M_REVERSAL}i{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}som{SE_M_REVERSAL}pain!$"
+	.string "If you're not on your guard,\n"
+	.string "you're in for some pain!$"
 
 J_Route119_Text_TakashiDefeat:
-	.string "You'r{SE_M_REVERSAL}surprisingl{SE_M_YAWN}good!$"
+	.string "You're surprisingly good!$"
 
 J_Route119_Text_TakashiPostBattle:
-	.string "M{SE_M_YAWN}surpris{SE_M_REVERSAL}attac{SE_M_ENCORE2}ende{SE_M_WATERFALL}in\n"
+	.string "My surprise attack ended in\n"
 	.string "failure…$"
 
 J_Route119_Text_HideoIntro:
-	.string "T{SE_M_ATTRACT2}hid{SE_M_REVERSAL}{SE_M_CHARGE}tree{SE_M_SUPERSONIC}us{SE_M_REVERSAL}{SE_M_CHARGE}forest!$"
+	.string "To hide a tree, use a forest!$"
 
 J_Route119_Text_HideoDefeat:
-	.string "{SE_M_HEAL_BELL}bo{SE_M_TWISTER}t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}superiority.$"
+	.string "I bow to your superiority.$"
 
 J_Route119_Text_HideoPostBattle:
-	.string "T{SE_M_ATTRACT2}hid{SE_M_REVERSAL}{SE_M_CHARGE}tree{SE_M_SUPERSONIC}us{SE_M_REVERSAL}{SE_M_CHARGE}forest!\n"
-	.string "T{SE_M_ATTRACT2}hid{SE_M_REVERSAL}{SE_M_CHARGE}POKéMON{SE_M_SUPERSONIC}us{SE_M_REVERSAL}{SE_M_CHARGE}POKéMON!\p"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}deep{SE_M_SUPERSONIC}hidde{SE_M_ATTRACT}meaning\n"
-	.string "t{SE_M_ATTRACT2}that.$"
+	.string "To hide a tree, use a forest!\n"
+	.string "To hide a POKéMON, use a POKéMON!\p"
+	.string "There is no deep, hidden meaning\n"
+	.string "to that.$"
 
 J_Route119_Text_ChrisIntro:
-	.string "Yo{SE_M_DIVE}spok{SE_M_REVERSAL}t{SE_M_ATTRACT2}me…\n"
-	.string "S{SE_M_ATTRACT2}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}challeng{SE_M_REVERSAL}me!\p"
-	.string "Sure{SE_M_DRAGON_RAGE}I'l{SE_M_BATON_PASS}tr{SE_M_YAWN}ou{SE_M_SPIT_UP}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}{SE_M_HEAL_BELL}caught\n"
-	.string "whil{SE_M_REVERSAL}SURFING!$"
+	.string "You spoke to me…\n"
+	.string "So you want to challenge me!\p"
+	.string "Sure! I'll try out the POKéMON I caught\n"
+	.string "while SURFING!$"
 
 J_Route119_Text_ChrisDefeat:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}{SE_M_CHARGE}clu{SE_M_REVERSAL}abou{SE_M_SPIT_UP}wha{SE_M_SPIT_UP}it\n"
-	.string "take{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}win.$"
+	.string "I don't have a clue about what it\n"
+	.string "takes to win.$"
 
 J_Route119_Text_ChrisPostBattle:
-	.string "G{SE_M_ATTRACT2}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}SUR{SE_M_LEER}o{SE_M_ATTRACT}m{SE_M_YAWN}POKéMON…\p"
-	.string "The{SE_M_ATTRACT}fis{SE_M_TRI_ATTACK}of{SE_M_ACID_ARMOR}it{SE_M_GRASSWHISTLE}back…\p"
-	.string "It'{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}indescribabl{SE_M_YAWN}luxurian{SE_M_SPIT_UP}moment!$"
+	.string "Go for a SURF on my POKéMON…\p"
+	.string "Then fish off its back…\p"
+	.string "It's an indescribably luxuriant moment!$"
 
 J_Route119_Text_FabianIntro:
-	.string "Hi{SE_M_SPIT_UP}m{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}powe{SE_M_SAND_TOMB}chord!\n"
-	.string "Victor{SE_M_YAWN}i{SE_M_GRASSWHISTLE}mine!\l"
-	.string "It'{SE_M_GRASSWHISTLE}ou{SE_M_SAND_TOMB}tim{SE_M_REVERSAL}t{SE_M_ATTRACT2}shine{SE_M_SUPERSONIC}whoa{SE_M_SUPERSONIC}yeah!$"
+	.string "Hit me with a power chord!\n"
+	.string "Victory is mine!\l"
+	.string "It's our time to shine, whoa, yeah!$"
 
 J_Route119_Text_FabianDefeat:
-	.string "Yo{SE_M_DIVE}showe{SE_M_WATERFALL}m{SE_M_REVERSAL}who'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}boss!\n"
-	.string "We'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}th{SE_M_REVERSAL}loss{SE_M_SUPERSONIC}oh{SE_M_SUPERSONIC}no!$"
+	.string "You showed me who's the boss!\n"
+	.string "We'll have to take the loss, oh, no!$"
 
 J_Route119_Text_FabianPostBattle:
-	.string "Hi{SE_M_SPIT_UP}m{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}anothe{SE_M_SAND_TOMB}powe{SE_M_SAND_TOMB}chord!\n"
-	.string "Leav{SE_M_REVERSAL}m{SE_M_REVERSAL}alone!\l"
-	.string "You{SE_M_SAND_TOMB}wi{SE_M_ATTRACT}yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}atone!$"
+	.string "Hit me with another power chord!\n"
+	.string "Leave me alone!\l"
+	.string "Your win you have to atone!$"
 
 J_Route119_Text_DaytonIntro:
 	.string "Hohoho!\n"
-	.string "{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}ki{SE_M_WATERFALL}TRAINERS!\l"
-	.string "Let'{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}{SE_M_CHARGE}goo{SE_M_WATERFALL}one!$"
+	.string "I like kid TRAINERS!\l"
+	.string "Let's have a good one!$"
 
 J_Route119_Text_DaytonDefeat:
-	.string "You'r{SE_M_REVERSAL}prett{SE_M_YAWN}amazing!\n"
+	.string "You're pretty amazing!\n"
 	.string "Hohoho!$"
 
 J_Route119_Text_DaytonPostBattle:
 	.string "Hohoho!\n"
-	.string "I'l{SE_M_BATON_PASS}tr{SE_M_YAWN}emulatin{SE_M_SANDSTORM}th{SE_M_REVERSAL}pe{SE_M_MORNING_SUN}o{SE_M_ACID_ARMOR}kid\l"
-	.string "TRAINER{SE_M_SKETCH}lik{SE_M_REVERSAL}you!$"
+	.string "I'll try emulating the pep of kid\l"
+	.string "TRAINERS like you!$"
 
 J_Route119_Text_RachelIntro:
-	.string "Whereve{SE_M_SAND_TOMB}an{SE_M_WATERFALL}wheneve{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}ma{SE_M_YAWN}be,\n"
-	.string "{SE_M_HEAL_BELL}alway{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}m{SE_M_YAWN}paraso{SE_M_BATON_PASS}i{SE_M_ATTRACT}hand.$"
+	.string "Wherever and whenever I may be,\n"
+	.string "I always have my parasol in hand.$"
 
 J_Route119_Text_RachelDefeat:
-	.string "Oh{SE_M_SUPERSONIC}but…\n"
-	.string "That'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}fair.$"
+	.string "Oh, but…\n"
+	.string "That's not fair.$"
 
 J_Route119_Text_RachelPostBattle:
-	.string "You'r{SE_M_REVERSAL}askin{SE_M_SANDSTORM}i{SE_M_ACID_ARMOR}m{SE_M_YAWN}paraso{SE_M_BATON_PASS}i{SE_M_GRASSWHISTLE}heavy?\n"
-	.string "You{SE_M_SAND_TOMB}BA{SE_M_SWAGGER}i{SE_M_GRASSWHISTLE}fille{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}mor{SE_M_REVERSAL}jun{SE_M_ENCORE2}than\l"
-	.string "{SE_M_HEAL_BELL}eve{SE_M_SAND_TOMB}carr{SE_M_YAWN}around.$"
+	.string "You're asking if my parasol is heavy?\n"
+	.string "Your BAG is filled with more junk than\l"
+	.string "I ever carry around.$"
 
 J_Route120_Text_ColinIntro:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}hav{SE_M_REVERSAL}an{SE_M_YAWN}move{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}ca{SE_M_ATTRACT}strike\n"
-	.string "{SE_M_CHARGE}flyin{SE_M_SANDSTORM}POKéMON?$"
+	.string "Do you have any moves that can strike\n"
+	.string "a flying POKéMON?$"
 
 J_Route120_Text_ColinDefeat:
-	.string "Yo{SE_M_DIVE}soare{SE_M_WATERFALL}abov{SE_M_REVERSAL}me!$"
+	.string "You soared above me!$"
 
 J_Route120_Text_ColinPostBattle:
-	.string "Th{SE_M_REVERSAL}mov{SE_M_REVERSAL}FL{SE_M_MOONLIGHT}i{SE_M_GRASSWHISTLE}convenient,\n"
-	.string "don'{SE_M_SPIT_UP}yo{SE_M_DIVE}think?\p"
-	.string "Whil{SE_M_REVERSAL}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}flying,\n"
-	.string "almos{SE_M_SPIT_UP}n{SE_M_ATTRACT2}move{SE_M_GRASSWHISTLE}ca{SE_M_ATTRACT}strik{SE_M_REVERSAL}it.$"
+	.string "The move FLY is convenient,\n"
+	.string "don't you think?\p"
+	.string "While the POKéMON is flying,\n"
+	.string "almost no moves can strike it.$"
 
 J_Route120_Text_RobertIntro:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}strong!\n"
-	.string "Ho{SE_M_TWISTER}abou{SE_M_SPIT_UP}yours?$"
+	.string "My POKéMON is strong!\n"
+	.string "How about yours?$"
 
 J_Route120_Text_RobertDefeat:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}wer{SE_M_REVERSAL}stronger…$"
+	.string "Your POKéMON were stronger…$"
 
 J_Route120_Text_RobertPostBattle:
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}grow{SE_M_GRASSWHISTLE}steadil{SE_M_YAWN}i{SE_M_GRASSWHISTLE}one\n"
-	.string "yo{SE_M_DIVE}ca{SE_M_ATTRACT}coun{SE_M_SPIT_UP}on.$"
+	.string "A POKéMON that grows steadily is one\n"
+	.string "you can count on.$"
 
 J_Route120_Text_RobertRegister:
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}b{SE_M_REVERSAL}counte{SE_M_WATERFALL}o{SE_M_ATTRACT}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}better.\n"
-	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}registe{SE_M_SAND_TOMB}yo{SE_M_DIVE}i{SE_M_ATTRACT}m{SE_M_YAWN}POKéNAV!$"
+	.string "You can be counted on to get better.\n"
+	.string "I'd like to register you in my POKéNAV!$"
 
 J_Route120_Text_RobertRematchIntro:
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}grow{SE_M_GRASSWHISTLE}steadil{SE_M_YAWN}i{SE_M_GRASSWHISTLE}one\n"
-	.string "yo{SE_M_DIVE}ca{SE_M_ATTRACT}coun{SE_M_SPIT_UP}on.$"
+	.string "A POKéMON that grows steadily is one\n"
+	.string "you can count on.$"
 
 J_Route120_Text_RobertRematchDefeat:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}seriousl{SE_M_YAWN}strong.$"
+	.string "Your POKéMON are seriously strong.$"
 
 J_Route120_Text_RobertPostRematch:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}growin{SE_M_SANDSTORM}stronger.\n"
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}gro{SE_M_TWISTER}stronger{SE_M_SUPERSONIC}too.$"
+	.string "My POKéMON are growing stronger.\n"
+	.string "I have to grow stronger, too.$"
 
 J_Route120_Text_LorenzoIntro:
-	.string "I'l{SE_M_BATON_PASS}chec{SE_M_ENCORE2}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}se{SE_M_REVERSAL}if\n"
-	.string "they'r{SE_M_REVERSAL}fi{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}th{SE_M_REVERSAL}outdoors.$"
+	.string "I'll check your POKéMON and see if\n"
+	.string "they're fit for the outdoors.$"
 
 J_Route120_Text_LorenzoDefeat:
-	.string "Wit{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}strong{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}in\n"
-	.string "n{SE_M_ATTRACT2}dange{SE_M_SAND_TOMB}o{SE_M_ACID_ARMOR}needin{SE_M_SANDSTORM}rescue!$"
+	.string "With POKéMON that strong, you're in\n"
+	.string "no danger of needing rescue!$"
 
 J_Route120_Text_LorenzoPostBattle:
-	.string "T{SE_M_ATTRACT2}trave{SE_M_BATON_PASS}whereve{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}hear{SE_M_SPIT_UP}desires\n"
-	.string "wit{SE_M_TRI_ATTACK}POKéMON…\l"
-	.string "That'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}jo{SE_M_YAWN}o{SE_M_ACID_ARMOR}bein{SE_M_SANDSTORM}{SE_M_CHARGE}TRAINER.$"
+	.string "To travel wherever your heart desires\n"
+	.string "with POKéMON…\l"
+	.string "That's the joy of being a TRAINER.$"
 
 J_Route120_Text_JennaIntro:
-	.string "How'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}physica{SE_M_BATON_PASS}fitness?\n"
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}fit{SE_M_SUPERSONIC}yo{SE_M_DIVE}coul{SE_M_WATERFALL}hav{SE_M_REVERSAL}a\l"
-	.string "roug{SE_M_TRI_ATTACK}tim{SE_M_REVERSAL}i{SE_M_ATTRACT}critica{SE_M_BATON_PASS}situations.$"
+	.string "How's your physical fitness?\n"
+	.string "If you're not fit, you could have a\l"
+	.string "rough time in critical situations.$"
 
 J_Route120_Text_JennaDefeat:
-	.string "I'{SE_M_MILK_DRINK}totall{SE_M_YAWN}fit{SE_M_SUPERSONIC}but…$"
+	.string "I'm totally fit, but…$"
 
 J_Route120_Text_JennaPostBattle:
-	.string "Fitnes{SE_M_GRASSWHISTLE}trainin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}m{SE_M_YAWN}routine.\n"
-	.string "{SE_M_HEAL_BELL}alway{SE_M_GRASSWHISTLE}ru{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}POKéMON.$"
+	.string "Fitness training is in my routine.\n"
+	.string "I always run with my POKéMON.$"
 
 J_Route120_Text_JeffreyIntro:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\l"
-	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battle?$"
+	.string "… … … … … …\n"
+	.string "… … … … … …\l"
+	.string "Want to battle?$"
 
 J_Route120_Text_JeffreyDefeat:
-	.string "Los{SE_M_SPIT_UP}it…$"
+	.string "Lost it…$"
 
 J_Route120_Text_JeffreyPostBattle:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\l"
-	.string "I'l{SE_M_BATON_PASS}tr{SE_M_YAWN}harder…$"
+	.string "… … … … … …\n"
+	.string "… … … … … …\l"
+	.string "I'll try harder…$"
 
 J_Route120_Text_JeffreyRegister:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\l"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}POKéNAV…?$"
+	.string "… … … … … …\n"
+	.string "… … … … … …\l"
+	.string "Do you have a POKéNAV…?$"
 
 J_Route120_Text_JeffreyRematchIntro:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\l"
-	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}again?$"
+	.string "… … … … … …\n"
+	.string "… … … … … …\l"
+	.string "Want to battle again?$"
 
 J_Route120_Text_JeffreyRematchDefeat:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}again…$"
+	.string "… … … … … …\n"
+	.string "I lost again…$"
 
 J_Route120_Text_JeffreyPostRematch:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\l"
-	.string "I'l{SE_M_BATON_PASS}tr{SE_M_YAWN}harder…\l"
-	.string "Fo{SE_M_SAND_TOMB}m{SE_M_YAWN}preciou{SE_M_GRASSWHISTLE}BU{SE_M_SWAGGER}POKéMON…$"
+	.string "… … … … … …\n"
+	.string "… … … … … …\l"
+	.string "I'll try harder…\l"
+	.string "For my precious BUG POKéMON…$"
 
 J_Route120_Text_JenniferIntro:
-	.string "POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}man{SE_M_YAWN}specia{SE_M_BATON_PASS}abilities.\n"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}becom{SE_M_REVERSAL}{SE_M_CHARGE}first-class\l"
-	.string "TRAINER{SE_M_SUPERSONIC}lear{SE_M_ATTRACT}abou{SE_M_SPIT_UP}them.$"
+	.string "POKéMON have many special abilities.\n"
+	.string "If you want to become a first-class\l"
+	.string "TRAINER, learn about them.$"
 
 J_Route120_Text_JenniferDefeat:
-	.string "You'r{SE_M_REVERSAL}obviousl{SE_M_YAWN}thinking.$"
+	.string "You're obviously thinking.$"
 
 J_Route120_Text_JenniferPostBattle:
-	.string "Th{SE_M_REVERSAL}specia{SE_M_BATON_PASS}abilitie{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}POKéMON\n"
-	.string "wil{SE_M_BATON_PASS}mak{SE_M_REVERSAL}battl{SE_M_REVERSAL}style{SE_M_GRASSWHISTLE}change.$"
+	.string "The special abilities of POKéMON\n"
+	.string "will make battle styles change.$"
 
 J_Route120_Text_ChipIntro:
-	.string "Wh{SE_M_ATTRACT2}migh{SE_M_SPIT_UP}yo{SE_M_DIVE}be?\p"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}perhap{SE_M_GRASSWHISTLE}searchin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}ancient\n"
-	.string "ruin{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}ar{SE_M_REVERSAL}rumore{SE_M_WATERFALL}t{SE_M_ATTRACT2}possibly\l"
-	.string "exis{SE_M_SPIT_UP}accordin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}legend?$"
+	.string "Who might you be?\p"
+	.string "Are you perhaps searching for ancient\n"
+	.string "ruins that are rumored to possibly\l"
+	.string "exist according to legend?$"
 
 J_Route120_Text_ChipDefeat:
-	.string "Wha{SE_M_SPIT_UP}{SE_M_CHARGE}disgracefu{SE_M_BATON_PASS}setback…$"
+	.string "What a disgraceful setback…$"
 
 J_Route120_Text_ChipPostBattle:
-	.string "Tha{SE_M_SPIT_UP}gian{SE_M_SPIT_UP}rock{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}lik{SE_M_REVERSAL}to\n"
-	.string "believ{SE_M_REVERSAL}i{SE_M_SPIT_UP}ma{SE_M_YAWN}indee{SE_M_WATERFALL}contai{SE_M_ATTRACT}ancient\l"
-	.string "ruins{SE_M_PERISH_SONG}Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}n{SE_M_ATTRACT2}entrance.$"
+	.string "That giant rock… I would like to\n"
+	.string "believe it may indeed contain ancient\l"
+	.string "ruins. But I see no entrance.$"
 
 J_Route120_Text_ClarissaIntro:
-	.string "Wh{SE_M_YAWN}a{SE_M_MILK_DRINK}{SE_M_HEAL_BELL}carryin{SE_M_SANDSTORM}thi{SE_M_GRASSWHISTLE}parasol?\p"
-	.string "I'l{SE_M_BATON_PASS}tel{SE_M_BATON_PASS}yo{SE_M_DIVE}i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ca{SE_M_ATTRACT}wi{SE_M_ATTRACT}agains{SE_M_SPIT_UP}me.$"
+	.string "Why am I carrying this parasol?\p"
+	.string "I'll tell you if you can win against me.$"
 
 J_Route120_Text_ClarissaDefeat:
-	.string "{SE_M_BONEMERANG}paraso{SE_M_BATON_PASS}can'{SE_M_SPIT_UP}war{SE_M_WATERFALL}of{SE_M_ACID_ARMOR}POKéMON\n"
+	.string "A parasol can't ward off POKéMON\n"
 	.string "attacks…$"
 
 J_Route120_Text_ClarissaPostBattle:
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}thin{SE_M_ENCORE2}stron{SE_M_SANDSTORM}sunligh{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}good\n"
-	.string "fo{SE_M_SAND_TOMB}m{SE_M_YAWN}POKéMON.\l"
-	.string "S{SE_M_ATTRACT2}{SE_M_HEAL_BELL}shiel{SE_M_WATERFALL}the{SE_M_MILK_DRINK}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}parasol.$"
+	.string "I don't think strong sunlight is good\n"
+	.string "for my POKéMON.\l"
+	.string "So I shield them with my parasol.$"
 
 J_Route120_Text_AngelicaIntro:
-	.string "Me{SE_M_SUPERSONIC}POKéMON{SE_M_SUPERSONIC}an{SE_M_WATERFALL}m{SE_M_YAWN}parasol…\p"
-	.string "I{SE_M_ACID_ARMOR}an{SE_M_YAWN}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}the{SE_M_MILK_DRINK}i{SE_M_GRASSWHISTLE}missing,\n"
-	.string "th{SE_M_REVERSAL}pictur{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}beaut{SE_M_YAWN}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}ruined.$"
+	.string "Me, POKéMON, and my parasol…\p"
+	.string "If any one of them is missing,\n"
+	.string "the picture of beauty will be ruined.$"
 
 J_Route120_Text_AngelicaDefeat:
-	.string "You'v{SE_M_REVERSAL}completel{SE_M_YAWN}ruine{SE_M_WATERFALL}m{SE_M_YAWN}beauty…$"
+	.string "You've completely ruined my beauty…$"
 
 J_Route120_Text_AngelicaPostBattle:
-	.string "{SE_M_BONEMERANG}paraso{SE_M_BATON_PASS}wouldn'{SE_M_SPIT_UP}sui{SE_M_SPIT_UP}yo{SE_M_DIVE}a{SE_M_SPIT_UP}all.\p"
-	.string "Why{SE_M_SUPERSONIC}somethin{SE_M_SANDSTORM}lik{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}woul{SE_M_WATERFALL}only\n"
-	.string "ge{SE_M_SPIT_UP}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}way.$"
+	.string "A parasol wouldn't suit you at all.\p"
+	.string "Why, something like this would only\n"
+	.string "get in your way.$"
 
 J_Route120_Text_KeigoIntro:
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}adop{SE_M_SPIT_UP}th{SE_M_REVERSAL}movement{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}POKéMON\n"
-	.string "an{SE_M_WATERFALL}creat{SE_M_REVERSAL}ne{SE_M_TWISTER}ninj{SE_M_CHARGE}techniques.$"
+	.string "I will adopt the movements of POKéMON\n"
+	.string "and create new ninja techniques.$"
 
 J_Route120_Text_KeigoDefeat:
-	.string "Th{SE_M_REVERSAL}creatio{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}ne{SE_M_TWISTER}ninj{SE_M_CHARGE}techniques\n"
-	.string "i{SE_M_GRASSWHISTLE}bu{SE_M_SPIT_UP}{SE_M_CHARGE}distan{SE_M_SPIT_UP}dream…$"
+	.string "The creation of new ninja techniques\n"
+	.string "is but a distant dream…$"
 
 J_Route120_Text_KeigoPostBattle:
-	.string "Perhap{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}ough{SE_M_SPIT_UP}t{SE_M_ATTRACT2}apprentic{SE_M_REVERSAL}under\n"
-	.string "{SE_M_CHARGE}ninj{SE_M_CHARGE}sensei.$"
+	.string "Perhaps I ought to apprentice under\n"
+	.string "a ninja sensei.$"
 
 J_Route120_Text_RileyIntro:
-	.string "W{SE_M_REVERSAL}ninj{SE_M_CHARGE}concea{SE_M_BATON_PASS}ourselve{SE_M_GRASSWHISTLE}unde{SE_M_SAND_TOMB}our\n"
-	.string "camouflag{SE_M_REVERSAL}cloaks.\l"
-	.string "{SE_M_HEAL_BELL}be{SE_M_SPIT_UP}yo{SE_M_DIVE}didn'{SE_M_SPIT_UP}kno{SE_M_TWISTER}wher{SE_M_REVERSAL}{SE_M_HEAL_BELL}was!$"
+	.string "We ninja conceal ourselves under our\n"
+	.string "camouflage cloaks.\l"
+	.string "I bet you didn't know where I was!$"
 
 J_Route120_Text_RileyDefeat:
-	.string "{SE_M_HEAL_BELL}lost!\n"
-	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}camouflag{SE_M_REVERSAL}m{SE_M_YAWN}shame!$"
+	.string "I lost!\n"
+	.string "I should camouflage my shame!$"
 
 J_Route120_Text_RileyPostBattle:
-	.string "Ou{SE_M_SAND_TOMB}camouflag{SE_M_REVERSAL}cloak{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}all\n"
+	.string "Our camouflage cloaks are all\n"
 	.string "handmade.$"
 
 J_Route120_Text_CallieIntro:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}pa{SE_M_YAWN}attention,\n"
-	.string "yo{SE_M_DIVE}coul{SE_M_WATERFALL}ge{SE_M_SPIT_UP}hurt!$"
+	.string "If you don't pay attention,\n"
+	.string "you could get hurt!$"
 
 J_Route120_Text_CallieDefeat:
 	.string "Ouch!\n"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}on{SE_M_REVERSAL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}hurt.$"
+	.string "I was the one to get hurt.$"
 
 J_Route120_Text_CalliePostBattle:
-	.string "{SE_M_HEAL_BELL}wonder{SE_M_DIZZY_PUNCH}Shoul{SE_M_WATERFALL}{SE_M_HEAL_BELL}evolv{SE_M_REVERSAL}m{SE_M_YAWN}POKéMON?\n"
-	.string "They'r{SE_M_REVERSAL}cut{SE_M_REVERSAL}th{SE_M_REVERSAL}wa{SE_M_YAWN}the{SE_M_YAWN}are{SE_M_SUPERSONIC}though.$"
+	.string "I wonder… Should I evolve my POKéMON?\n"
+	.string "They're cute the way they are, though.$"
 
 J_Route120_Text_LeonelIntro:
-	.string "You{SE_M_SAND_TOMB}part{SE_M_YAWN}POKéMON…\n"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}hav{SE_M_REVERSAL}differen{SE_M_SPIT_UP}types?$"
+	.string "Your party POKéMON…\n"
+	.string "Do you have different types?$"
 
 J_Route120_Text_LeonelDefeat:
-	.string "I'v{SE_M_REVERSAL}see{SE_M_ATTRACT}you{SE_M_SAND_TOMB}polic{SE_M_YAWN}i{SE_M_ATTRACT}action!$"
+	.string "I've seen your policy in action!$"
 
 J_Route120_Text_LeonelPostBattle:
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}it'{SE_M_GRASSWHISTLE}awesom{SE_M_REVERSAL}you'r{SE_M_REVERSAL}s{SE_M_ATTRACT2}strong\n"
-	.string "battlin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}favorit{SE_M_REVERSAL}POKéMON.$"
+	.string "I think it's awesome you're so strong\n"
+	.string "battling with your favorite POKéMON.$"
 
 J_Route121_Text_VanessaIntro:
-	.string "Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}pla{SE_M_YAWN}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}delightfully\n"
-	.string "prett{SE_M_YAWN}POKéMON?$"
+	.string "Will you play with my delightfully\n"
+	.string "pretty POKéMON?$"
 
 J_Route121_Text_VanessaDefeat:
-	.string "Thi{SE_M_GRASSWHISTLE}isn'{SE_M_SPIT_UP}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}meant!$"
+	.string "This isn't what I meant!$"
 
 J_Route121_Text_VanessaPostBattle:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}{SE_M_CHARGE}CONTES{SE_M_SWIFT}i{SE_M_ATTRACT}LILYCOVE.\p"
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}shoul{SE_M_WATERFALL}hav{SE_M_REVERSAL}n{SE_M_ATTRACT2}problem\n"
-	.string "sweepin{SE_M_SANDSTORM}th{SE_M_REVERSAL}MASTE{SE_M_MINIMIZE}CLASS.$"
+	.string "I'm going to a CONTEST in LILYCOVE.\p"
+	.string "My POKéMON should have no problem\n"
+	.string "sweeping the MASTER CLASS.$"
 
 J_Route121_Text_WalterIntro:
-	.string "Wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}POKéMON{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}traveled\n"
-	.string "t{SE_M_ATTRACT2}th{SE_M_REVERSAL}world'{SE_M_GRASSWHISTLE}fou{SE_M_SAND_TOMB}corners.\p"
-	.string "Yo{SE_M_DIVE}migh{SE_M_SPIT_UP}sa{SE_M_YAWN}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}som{SE_M_REVERSAL}confidence\n"
-	.string "i{SE_M_ATTRACT}m{SE_M_YAWN}abilities.$"
+	.string "With my POKéMON, I have traveled\n"
+	.string "to the world's four corners.\p"
+	.string "You might say I have some confidence\n"
+	.string "in my abilities.$"
 
 J_Route121_Text_WalterDefeat:
-	.string "Ah{SE_M_SUPERSONIC}wel{SE_M_BATON_PASS}played.$"
+	.string "Ah, well played.$"
 
 J_Route121_Text_WalterPostBattle:
-	.string "{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}circl{SE_M_REVERSAL}th{SE_M_REVERSAL}glob{SE_M_REVERSAL}once\n"
-	.string "agai{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}POKéMON.$"
+	.string "I would like to circle the globe once\n"
+	.string "again with my POKéMON.$"
 
 J_Route121_Text_WalterRegister:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}prowes{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}remarkable.\n"
-	.string "Allo{SE_M_TWISTER}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}registe{SE_M_SAND_TOMB}yo{SE_M_DIVE}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}memento.$"
+	.string "Your POKéMON prowess is remarkable.\n"
+	.string "Allow me to register you as a memento.$"
 
 J_Route121_Text_WalterRematchIntro:
-	.string "Wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}POKéMON{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}traveled\n"
-	.string "t{SE_M_ATTRACT2}th{SE_M_REVERSAL}world'{SE_M_GRASSWHISTLE}fou{SE_M_SAND_TOMB}corners.\p"
-	.string "Yo{SE_M_DIVE}migh{SE_M_SPIT_UP}sa{SE_M_YAWN}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}som{SE_M_REVERSAL}confidence\n"
-	.string "i{SE_M_ATTRACT}m{SE_M_YAWN}abilities.$"
+	.string "With my POKéMON, I have traveled\n"
+	.string "to the world's four corners.\p"
+	.string "You might say I have some confidence\n"
+	.string "in my abilities.$"
 
 J_Route121_Text_WalterRematchDefeat:
-	.string "Ah{SE_M_SUPERSONIC}wel{SE_M_BATON_PASS}played.$"
+	.string "Ah, well played.$"
 
 J_Route121_Text_WalterPostRematch:
-	.string "You{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}an{SE_M_WATERFALL}you…\p"
-	.string "You{SE_M_SAND_TOMB}prowes{SE_M_GRASSWHISTLE}togethe{SE_M_SAND_TOMB}wil{SE_M_BATON_PASS}be\n"
-	.string "considere{SE_M_WATERFALL}strong{SE_M_SUPERSONIC}eve{SE_M_ATTRACT}overseas.$"
+	.string "Your POKéMON and you…\p"
+	.string "Your prowess together will be\n"
+	.string "considered strong, even overseas.$"
 
 J_Route121_Text_TammyIntro:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}power{SE_M_GRASSWHISTLE}beyon{SE_M_WATERFALL}our\n"
-	.string "understandin{SE_M_SANDSTORM}i{SE_M_ATTRACT}th{SE_M_REVERSAL}world…$"
+	.string "There are powers beyond our\n"
+	.string "understanding in the world…$"
 
 J_Route121_Text_TammyDefeat:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}lost…$"
+	.string "I have lost…$"
 
 J_Route121_Text_TammyPostBattle:
-	.string "MT{SE_M_PERISH_SONG}PYRE…\n"
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}mysteriou{SE_M_GRASSWHISTLE}power\l"
-	.string "a{SE_M_SPIT_UP}wor{SE_M_ENCORE2}there…$"
+	.string "MT. PYRE…\n"
+	.string "There is a mysterious power\l"
+	.string "at work there…$"
 
 J_Route121_Text_KateIntro:
-	.string "KATE{SE_M_HEAT_WAVE}Together{SE_M_SUPERSONIC}we'r{SE_M_REVERSAL}fearless!\n"
-	.string "We'l{SE_M_BATON_PASS}demonstrat{SE_M_REVERSAL}ho{SE_M_TWISTER}toug{SE_M_TRI_ATTACK}w{SE_M_REVERSAL}are!$"
+	.string "KATE: Together, we're fearless!\n"
+	.string "We'll demonstrate how tough we are!$"
 
 J_Route121_Text_KateDefeat:
-	.string "KATE{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}ble{SE_M_TWISTER}i{SE_M_SPIT_UP}i{SE_M_ATTRACT}fron{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}junior\n"
-	.string "studen{SE_M_SPIT_UP}partner…$"
+	.string "KATE: I blew it in front of my junior\n"
+	.string "student partner…$"
 
 J_Route121_Text_KatePostBattle:
-	.string "KATE{SE_M_HEAT_WAVE}Whe{SE_M_ATTRACT}someone'{SE_M_GRASSWHISTLE}relyin{SE_M_SANDSTORM}o{SE_M_ATTRACT}me,\n"
-	.string "{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}urg{SE_M_REVERSAL}t{SE_M_ATTRACT2}loo{SE_M_ENCORE2}coo{SE_M_BATON_PASS}i{SE_M_ATTRACT}front\l"
-	.string "o{SE_M_ACID_ARMOR}them…$"
+	.string "KATE: When someone's relying on me,\n"
+	.string "I get this urge to look cool in front\l"
+	.string "of them…$"
 
 J_Route121_Text_KateNotEnoughMons:
-	.string "KATE{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}you'v{SE_M_REVERSAL}onl{SE_M_YAWN}go{SE_M_SPIT_UP}on{SE_M_REVERSAL}POKéMON,\n"
-	.string "w{SE_M_REVERSAL}can'{SE_M_SPIT_UP}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}you.\p"
-	.string "Tha{SE_M_SPIT_UP}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}bullying.$"
+	.string "KATE: If you've only got one POKéMON,\n"
+	.string "we can't battle with you.\p"
+	.string "That would be bullying.$"
 
 J_Route121_Text_JoyIntro:
-	.string "JOY{SE_M_HEAT_WAVE}Together{SE_M_SUPERSONIC}we'r{SE_M_REVERSAL}fearless!\n"
-	.string "We'l{SE_M_BATON_PASS}demonstrat{SE_M_REVERSAL}ho{SE_M_TWISTER}toug{SE_M_TRI_ATTACK}w{SE_M_REVERSAL}are!$"
+	.string "JOY: Together, we're fearless!\n"
+	.string "We'll demonstrate how tough we are!$"
 
 J_Route121_Text_JoyDefeat:
-	.string "JOY{SE_M_HEAT_WAVE}Pleas{SE_M_REVERSAL}forgiv{SE_M_REVERSAL}me{SE_M_SUPERSONIC}KATE!$"
+	.string "JOY: Please forgive me, KATE!$"
 
 J_Route121_Text_JoyPostBattle:
-	.string "JOY{SE_M_HEAT_WAVE}Ehehe{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}KATE,\n"
-	.string "m{SE_M_YAWN}senio{SE_M_SAND_TOMB}studen{SE_M_SPIT_UP}partner{SE_M_SUPERSONIC}again.$"
+	.string "JOY: Ehehe, I'll have to train with KATE,\n"
+	.string "my senior student partner, again.$"
 
 J_Route121_Text_JoyNotEnoughMons:
-	.string "JOY{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}nee{SE_M_WATERFALL}a{SE_M_SPIT_UP}leas{SE_M_SPIT_UP}tw{SE_M_ATTRACT2}POKéMON\n"
-	.string "i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}challeng{SE_M_REVERSAL}us!$"
+	.string "JOY: You need at least two POKéMON\n"
+	.string "if you're going to challenge us!$"
 
 J_Route121_Text_JessicaIntro:
-	.string "Stop{SE_M_DRAGON_RAGE}Hav{SE_M_REVERSAL}{SE_M_CHARGE}goo{SE_M_WATERFALL}loo{SE_M_ENCORE2}a{SE_M_SPIT_UP}m{SE_M_YAWN}precious\n"
+	.string "Stop! Have a good look at my precious\n"
 	.string "POKéMON!$"
 
 J_Route121_Text_JessicaDefeat:
-	.string "Oh{SE_M_SUPERSONIC}ho{SE_M_TWISTER}dar{SE_M_REVERSAL}you!\n"
-	.string "Don'{SE_M_SPIT_UP}tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}s{SE_M_ATTRACT2}seriously!$"
+	.string "Oh, how dare you!\n"
+	.string "Don't take it so seriously!$"
 
 J_Route121_Text_JessicaPostBattle:
-	.string "Mayb{SE_M_REVERSAL}I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}catc{SE_M_TRI_ATTACK}mor{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}at\n"
-	.string "th{SE_M_REVERSAL}SAFARI.$"
+	.string "Maybe I'll go catch more POKéMON at\n"
+	.string "the SAFARI.$"
 
 J_Route121_Text_JessicaRegister:
-	.string "{SE_M_HEAL_BELL}too{SE_M_ENCORE2}i{SE_M_SPIT_UP}eas{SE_M_YAWN}o{SE_M_ATTRACT}yo{SE_M_DIVE}thi{SE_M_GRASSWHISTLE}time!\n"
-	.string "I{SE_M_SPIT_UP}won'{SE_M_SPIT_UP}b{SE_M_REVERSAL}tha{SE_M_SPIT_UP}wa{SE_M_YAWN}th{SE_M_REVERSAL}nex{SE_M_SPIT_UP}time!$"
+	.string "I took it easy on you this time!\n"
+	.string "It won't be that way the next time!$"
 
 J_Route121_Text_JessicaRematchIntro:
-	.string "M{SE_M_YAWN}preciou{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}grew!\n"
-	.string "Hav{SE_M_REVERSAL}{SE_M_CHARGE}goo{SE_M_WATERFALL}look!$"
+	.string "My precious POKéMON grew!\n"
+	.string "Have a good look!$"
 
 J_Route121_Text_JessicaRematchDefeat:
-	.string "Oh{SE_M_SUPERSONIC}ho{SE_M_TWISTER}dar{SE_M_REVERSAL}you!\n"
-	.string "Yo{SE_M_DIVE}stil{SE_M_BATON_PASS}won'{SE_M_SPIT_UP}tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}easy!$"
+	.string "Oh, how dare you!\n"
+	.string "You still won't take it easy!$"
 
 J_Route121_Text_JessicaPostRematch:
-	.string "Mayb{SE_M_REVERSAL}I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}catc{SE_M_TRI_ATTACK}mor{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}at\n"
-	.string "th{SE_M_REVERSAL}SAFARI.$"
+	.string "Maybe I'll go catch more POKéMON at\n"
+	.string "the SAFARI.$"
 
 J_Route121_Text_CristinIntro:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}routine.\n"
-	.string "Defea{SE_M_SPIT_UP}fiv{SE_M_REVERSAL}TRAINER{SE_M_SKETCH}{SE_M_CHARGE}day.\l"
-	.string "Gues{SE_M_GRASSWHISTLE}what{SE_M_SING}You'r{SE_M_REVERSAL}numbe{SE_M_SAND_TOMB}five!$"
+	.string "I have this routine.\n"
+	.string "Defeat five TRAINERS a day.\l"
+	.string "Guess what? You're number five!$"
 
 J_Route121_Text_CristinDefeat:
 	.string "No!\n"
-	.string "You'r{SE_M_REVERSAL}horrid!$"
+	.string "You're horrid!$"
 
 J_Route121_Text_CristinPostBattle:
-	.string "{SE_M_HEAL_BELL}didn'{SE_M_SPIT_UP}expec{SE_M_SPIT_UP}t{SE_M_ATTRACT2}los{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}easily…\n"
-	.string "I'l{SE_M_BATON_PASS}wi{SE_M_ATTRACT}nex{SE_M_SPIT_UP}time!$"
+	.string "I didn't expect to lose this easily…\n"
+	.string "I'll win next time!$"
 
 J_Route121_Text_CristinRegister:
-	.string "Tha{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}tota{SE_M_BATON_PASS}humiliation!\n"
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}forge{SE_M_SPIT_UP}you…\l"
-	.string "Han{SE_M_WATERFALL}ove{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}POKéNAV!$"
+	.string "That was total humiliation!\n"
+	.string "I won't forget you…\l"
+	.string "Hand over your POKéNAV!$"
 
 J_Route121_Text_CristinRematchIntro:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}ne{SE_M_TWISTER}routine.\n"
-	.string "Defea{SE_M_SPIT_UP}te{SE_M_ATTRACT}TRAINER{SE_M_SKETCH}{SE_M_CHARGE}day.\l"
-	.string "Gues{SE_M_GRASSWHISTLE}what{SE_M_SING}You'r{SE_M_REVERSAL}numbe{SE_M_SAND_TOMB}ten!$"
+	.string "I have this new routine.\n"
+	.string "Defeat ten TRAINERS a day.\l"
+	.string "Guess what? You're number ten!$"
 
 J_Route121_Text_CristinRematchDefeat:
-	.string "Wait{SE_M_DRAGON_RAGE}That'{SE_M_GRASSWHISTLE}nasty!\n"
-	.string "{SE_M_HEAL_BELL}deman{SE_M_WATERFALL}{SE_M_CHARGE}rematch!$"
+	.string "Wait! That's nasty!\n"
+	.string "I demand a rematch!$"
 
 J_Route121_Text_CristinPostRematch:
-	.string "A{SE_M_ATTRACT}opponen{SE_M_SPIT_UP}{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}can'{SE_M_SPIT_UP}beat…\n"
+	.string "An opponent I just can't beat…\n"
 	.string "Snivel…\l"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}believ{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}happening…$"
+	.string "I can't believe this is happening…$"
 
 J_Route121_Text_CaleIntro:
-	.string "Can'{SE_M_SPIT_UP}yo{SE_M_DIVE}se{SE_M_REVERSAL}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}al{SE_M_BATON_PASS}this\n"
-	.string "stuf{SE_M_ACID_ARMOR}wit{SE_M_TRI_ATTACK}me?\p"
-	.string "Despit{SE_M_REVERSAL}that{SE_M_SUPERSONIC}yo{SE_M_DIVE}stil{SE_M_BATON_PASS}insis{SE_M_SPIT_UP}that\n"
-	.string "w{SE_M_REVERSAL}battle?$"
+	.string "Can't you see that I have all this\n"
+	.string "stuff with me?\p"
+	.string "Despite that, you still insist that\n"
+	.string "we battle?$"
 
 J_Route121_Text_CaleDefeat:
-	.string "O{SE_M_ACID_ARMOR}cours{SE_M_REVERSAL}{SE_M_HEAL_BELL}lost!\n"
-	.string "I'{SE_M_MILK_DRINK}holdin{SE_M_SANDSTORM}stuf{SE_M_ACID_ARMOR}i{SE_M_ATTRACT}bot{SE_M_TRI_ATTACK}hands!$"
+	.string "Of course I lost!\n"
+	.string "I'm holding stuff in both hands!$"
 
 J_Route121_Text_CalePostBattle:
-	.string "{SE_M_HEAL_BELL}bough{SE_M_SPIT_UP}to{SE_M_ATTRACT2}muc{SE_M_TRI_ATTACK}stuf{SE_M_ACID_ARMOR}at\n"
-	.string "th{SE_M_REVERSAL}LILYCOV{SE_M_SWORDS_DANCE}DEPT{SE_M_PERISH_SONG}STORE.\p"
-	.string "It'{SE_M_GRASSWHISTLE}u{SE_M_MORNING_SUN}th{SE_M_REVERSAL}roa{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}here.\n"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}{SE_M_CHARGE}BA{SE_M_SWAGGER}lik{SE_M_REVERSAL}yours.$"
+	.string "I bought too much stuff at\n"
+	.string "the LILYCOVE DEPT. STORE.\p"
+	.string "It's up the road from here.\n"
+	.string "I wish I had a BAG like yours.$"
 
 J_Route121_Text_MylesIntro:
-	.string "There'{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}mor{SE_M_REVERSAL}than\n"
-	.string "checkin{SE_M_SANDSTORM}ou{SE_M_SPIT_UP}othe{SE_M_SAND_TOMB}people'{SE_M_GRASSWHISTLE}POKéMON!$"
+	.string "There's nothing I love more than\n"
+	.string "checking out other people's POKéMON!$"
 
 J_Route121_Text_MylesDefeat:
-	.string "Supe{SE_M_SAND_TOMB}awesome!$"
+	.string "Super awesome!$"
 
 J_Route121_Text_MylesPostBattle:
-	.string "They'r{SE_M_REVERSAL}great{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}POKéMON!\n"
-	.string "Ho{SE_M_TWISTER}d{SE_M_ATTRACT2}yo{SE_M_DIVE}rais{SE_M_REVERSAL}them?$"
+	.string "They're great, your POKéMON!\n"
+	.string "How do you raise them?$"
 
 J_Route121_Text_PatIntro:
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}everybod{SE_M_YAWN}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}th{SE_M_REVERSAL}POKéMON\n"
-	.string "I'v{SE_M_REVERSAL}raised!$"
+	.string "I want everybody to see the POKéMON\n"
+	.string "I've raised!$"
 
 J_Route121_Text_PatDefeat:
 	.string "Wow!\n"
 	.string "Spectacular!$"
 
 J_Route121_Text_PatPostBattle:
-	.string "{SE_M_HEAL_BELL}rais{SE_M_REVERSAL}ever{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}same\n"
-	.string "lov{SE_M_REVERSAL}an{SE_M_WATERFALL}care--{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}pic{SE_M_ENCORE2}favorites.$"
+	.string "I raise every POKéMON with the same\n"
+	.string "love and care--I don't pick favorites.$"
 
 J_Route121_Text_MarcelIntro:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}neve{SE_M_SAND_TOMB}taste{SE_M_WATERFALL}defeat!\n"
-	.string "O{SE_M_ATTRACT}thei{SE_M_SAND_TOMB}nex{SE_M_SPIT_UP}win{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}enterin{SE_M_SANDSTORM}them\l"
-	.string "i{SE_M_ATTRACT}CONTESTS.$"
+	.string "My POKéMON have never tasted defeat!\n"
+	.string "On their next win, I'm entering them\l"
+	.string "in CONTESTS.$"
 
 J_Route121_Text_MarcelDefeat:
-	.string "Oh{SE_M_SUPERSONIC}no{SE_M_TWISTER}wha{SE_M_SPIT_UP}happene{SE_M_WATERFALL}here?$"
+	.string "Oh, now what happened here?$"
 
 J_Route121_Text_MarcelPostBattle:
-	.string "{SE_M_HEAL_BELL}ma{SE_M_YAWN}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}m{SE_M_YAWN}gan{SE_M_SANDSTORM}som{SE_M_REVERSAL}more\n"
-	.string "befor{SE_M_REVERSAL}enterin{SE_M_SANDSTORM}an{SE_M_YAWN}CONTEST.$"
+	.string "I may have to train my gang some more\n"
+	.string "before entering any CONTEST.$"
 
 J_Route123_Text_WendyIntro:
-	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}determin{SE_M_REVERSAL}ho{SE_M_TWISTER}stron{SE_M_SANDSTORM}yo{SE_M_DIVE}are?\n"
-	.string "I'l{SE_M_BATON_PASS}b{SE_M_REVERSAL}th{SE_M_REVERSAL}test!$"
+	.string "Want to determine how strong you are?\n"
+	.string "I'll be the test!$"
 
 J_Route123_Text_WendyDefeat:
-	.string "Yo{SE_M_DIVE}passe{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}flyin{SE_M_SANDSTORM}colors!$"
+	.string "You passed with flying colors!$"
 
 J_Route123_Text_WendyPostBattle:
-	.string "T{SE_M_ATTRACT2}bes{SE_M_SPIT_UP}eve{SE_M_ATTRACT}me…\n"
-	.string "You{SE_M_SAND_TOMB}strengt{SE_M_TRI_ATTACK}i{SE_M_GRASSWHISTLE}marvelous!$"
+	.string "To best even me…\n"
+	.string "Your strength is marvelous!$"
 
 J_Route123_Text_BraxtonIntro:
-	.string "Yo{SE_M_DIVE}see{SE_M_MILK_DRINK}t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}{SE_M_CHARGE}bi{SE_M_SANDSTORM}collection\n"
-	.string "o{SE_M_ACID_ARMOR}GY{SE_M_GIGA_DRAIN}BADGES.\p"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}se{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}actuall{SE_M_YAWN}worth{SE_M_YAWN}of\n"
-	.string "thos{SE_M_REVERSAL}BADGES!$"
+	.string "You seem to have a big collection\n"
+	.string "of GYM BADGES.\p"
+	.string "Let me see if you're actually worthy of\n"
+	.string "those BADGES!$"
 
 J_Route123_Text_BraxtonDefeat:
-	.string "Oh{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}worthy{SE_M_SUPERSONIC}al{SE_M_BATON_PASS}right!$"
+	.string "Oh, you're worthy, all right!$"
 
 J_Route123_Text_BraxtonPostBattle:
-	.string "Yo{SE_M_DIVE}di{SE_M_WATERFALL}you{SE_M_SAND_TOMB}BADGE{SE_M_SKETCH}prou{SE_M_WATERFALL}i{SE_M_ATTRACT}that\n"
+	.string "You did your BADGES proud in that\n"
 	.string "match!$"
 
 J_Route123_Text_VioletIntro:
-	.string "The{SE_M_YAWN}sa{SE_M_YAWN}tha{SE_M_SPIT_UP}goo{SE_M_WATERFALL}time{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}filled\n"
-	.string "wit{SE_M_TRI_ATTACK}goo{SE_M_WATERFALL}aromas.$"
+	.string "They say that good times are filled\n"
+	.string "with good aromas.$"
 
 J_Route123_Text_VioletDefeat:
 	.string "Oh…\n"
-	.string "{SE_M_HEAL_BELL}smel{SE_M_BATON_PASS}th{SE_M_REVERSAL}bitte{SE_M_SAND_TOMB}scen{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}misery…$"
+	.string "I smell the bitter scent of misery…$"
 
 J_Route123_Text_VioletPostBattle:
-	.string "Th{SE_M_REVERSAL}BERR{SE_M_MOONLIGHT}MASTER'{SE_M_GRASSWHISTLE}garde{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}filled\n"
-	.string "wit{SE_M_TRI_ATTACK}upliftin{SE_M_SANDSTORM}fragrances.$"
+	.string "The BERRY MASTER's garden is filled\n"
+	.string "with uplifting fragrances.$"
 
 J_Route123_Text_CameronIntro:
-	.string "Bein{SE_M_SANDSTORM}{SE_M_CHARGE}psychi{SE_M_HYPER_BEAM}i{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}willpower.\p"
-	.string "I'v{SE_M_REVERSAL}wille{SE_M_WATERFALL}mysel{SE_M_ACID_ARMOR}no{SE_M_SPIT_UP}t{SE_M_ATTRACT2}los{SE_M_REVERSAL}to\n"
-	.string "anyone{SE_M_PERISH_SONG}Tha{SE_M_SPIT_UP}make{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}strong!$"
+	.string "Being a psychic is about willpower.\p"
+	.string "I've willed myself not to lose to\n"
+	.string "anyone. That makes me strong!$"
 
 J_Route123_Text_CameronDefeat:
-	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}sad…$"
+	.string "I feel sad…$"
 
 J_Route123_Text_CameronPostBattle:
-	.string "Bein{SE_M_SANDSTORM}{SE_M_CHARGE}psychi{SE_M_HYPER_BEAM}i{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}willpower.\n"
-	.string "{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}{SE_M_HEAL_BELL}wouldn'{SE_M_SPIT_UP}los{SE_M_REVERSAL}t{SE_M_ATTRACT2}you…$"
+	.string "Being a psychic is about willpower.\n"
+	.string "I thought I wouldn't lose to you…$"
 
 J_Route123_Text_CameronRegister:
-	.string "{SE_M_HEAL_BELL}sens{SE_M_REVERSAL}it!\n"
-	.string "Yo{SE_M_DIVE}an{SE_M_WATERFALL}{SE_M_HEAL_BELL}shal{SE_M_BATON_PASS}battl{SE_M_REVERSAL}again!\l"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}tel{SE_M_BATON_PASS}i{SE_M_ACID_ARMOR}I'l{SE_M_BATON_PASS}win{SE_M_SUPERSONIC}though…\p"
-	.string "Let'{SE_M_GRASSWHISTLE}se{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéNAV.$"
+	.string "I sense it!\n"
+	.string "You and I shall battle again!\l"
+	.string "I can't tell if I'll win, though…\p"
+	.string "Let's see your POKéNAV.$"
 
 J_Route123_Text_CameronRematchIntro:
-	.string "I'v{SE_M_REVERSAL}convince{SE_M_WATERFALL}mysel{SE_M_ACID_ARMOR}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}won't\n"
-	.string "los{SE_M_REVERSAL}anymore{SE_M_PERISH_SONG}Tha{SE_M_SPIT_UP}make{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}strong!$"
+	.string "I've convinced myself that I won't\n"
+	.string "lose anymore. That makes me strong!$"
 
 J_Route123_Text_CameronRematchDefeat:
-	.string "{SE_M_HEAL_BELL}fee{SE_M_BATON_PASS}sad…$"
+	.string "I feel sad…$"
 
 J_Route123_Text_CameronPostRematch:
-	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}trai{SE_M_ATTRACT}a{SE_M_SPIT_UP}MT{SE_M_PERISH_SONG}PYRE…\n"
-	.string "I'l{SE_M_BATON_PASS}neve{SE_M_SAND_TOMB}bea{SE_M_SPIT_UP}yo{SE_M_DIVE}thi{SE_M_GRASSWHISTLE}way…$"
+	.string "I should train at MT. PYRE…\n"
+	.string "I'll never beat you this way…$"
 
 J_Route123_Text_JackiIntro:
-	.string "Don'{SE_M_SPIT_UP}b{SE_M_REVERSAL}to{SE_M_ATTRACT2}happ{SE_M_YAWN}i{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}POKéMON\n"
-	.string "develo{SE_M_MORNING_SUN}psychi{SE_M_HYPER_BEAM}powers.\p"
-	.string "Yo{SE_M_DIVE}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}refin{SE_M_REVERSAL}thos{SE_M_REVERSAL}power{SE_M_GRASSWHISTLE}to\n"
-	.string "mak{SE_M_REVERSAL}the{SE_M_MILK_DRINK}reall{SE_M_YAWN}useful.$"
+	.string "Don't be too happy if your POKéMON\n"
+	.string "develop psychic powers.\p"
+	.string "You need to refine those powers to\n"
+	.string "make them really useful.$"
 
 J_Route123_Text_JackiDefeat:
 	.string "Overwhelmed!$"
 
 J_Route123_Text_JackiPostBattle:
-	.string "W{SE_M_REVERSAL}al{SE_M_BATON_PASS}hav{SE_M_REVERSAL}psychi{SE_M_HYPER_BEAM}powers.\n"
-	.string "We'v{SE_M_REVERSAL}jus{SE_M_SPIT_UP}forgotte{SE_M_ATTRACT}ho{SE_M_TWISTER}t{SE_M_ATTRACT2}us{SE_M_REVERSAL}them.$"
+	.string "We all have psychic powers.\n"
+	.string "We've just forgotten how to use them.$"
 
 J_Route123_Text_JackiRegister:
-	.string "{SE_M_HEAL_BELL}woul{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}fac{SE_M_REVERSAL}yo{SE_M_DIVE}again.\n"
-	.string "I{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}oka{SE_M_YAWN}wit{SE_M_TRI_ATTACK}you?$"
+	.string "I would like to face you again.\n"
+	.string "Is that okay with you?$"
 
 J_Route123_Text_JackiRematchIntro:
-	.string "Hav{SE_M_REVERSAL}yo{SE_M_DIVE}awoke{SE_M_ATTRACT}th{SE_M_REVERSAL}psychi{SE_M_HYPER_BEAM}powers\n"
-	.string "withi{SE_M_ATTRACT}you?$"
+	.string "Have you awoken the psychic powers\n"
+	.string "within you?$"
 
 J_Route123_Text_JackiRematchDefeat:
 	.string "Astounding!$"
 
 J_Route123_Text_JackiPostRematch:
-	.string "You{SE_M_SAND_TOMB}powe{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}POKéMON…\n"
-	.string "Tha{SE_M_SPIT_UP}coul{SE_M_WATERFALL}b{SE_M_REVERSAL}{SE_M_CHARGE}psychi{SE_M_HYPER_BEAM}power{SE_M_SUPERSONIC}too.$"
+	.string "Your power with POKéMON…\n"
+	.string "That could be a psychic power, too.$"
 
 J_Route123_Text_MiuIntro:
-	.string "MIU{SE_M_HEAT_WAVE}Hello{SE_M_SUPERSONIC}TRAINER{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}your\n"
-	.string "POKéMO{SE_M_PSYBEAM2}won'{SE_M_SPIT_UP}cr{SE_M_YAWN}whe{SE_M_ATTRACT}the{SE_M_YAWN}lose.$"
+	.string "MIU: Hello, TRAINER. I hope your\n"
+	.string "POKéMON won't cry when they lose.$"
 
 J_Route123_Text_MiuDefeat:
-	.string "MIU{SE_M_HEAT_WAVE}Uh-oh{SE_M_SUPERSONIC}w{SE_M_REVERSAL}lost.$"
+	.string "MIU: Uh-oh, we lost.$"
 
 J_Route123_Text_MiuPostBattle:
-	.string "MIU{SE_M_HEAT_WAVE}TRAINER{SE_M_SUPERSONIC}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}are\n"
-	.string "stron{SE_M_SANDSTORM}becaus{SE_M_REVERSAL}yo{SE_M_DIVE}ar{SE_M_REVERSAL}friends.$"
+	.string "MIU: TRAINER, your POKéMON are\n"
+	.string "strong because you are friends.$"
 
 J_Route123_Text_MiuNotEnoughMons:
-	.string "MIU{SE_M_HEAT_WAVE}It'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}fu{SE_M_ATTRACT}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}you\n"
-	.string "don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}POKéMON.$"
+	.string "MIU: It's no fun to battle if you\n"
+	.string "don't have two POKéMON.$"
 
 J_Route123_Text_YukiIntro:
-	.string "YUKI{SE_M_HEAT_WAVE}Okay!\n"
-	.string "We'r{SE_M_REVERSAL}beatin{SE_M_SANDSTORM}th{SE_M_REVERSAL}TRAINER'{SE_M_GRASSWHISTLE}POKéMON!$"
+	.string "YUKI: Okay!\n"
+	.string "We're beating the TRAINER's POKéMON!$"
 
 J_Route123_Text_YukiDefeat:
-	.string "YUKI{SE_M_HEAT_WAVE}Uh-oh{SE_M_SUPERSONIC}w{SE_M_REVERSAL}lost.$"
+	.string "YUKI: Uh-oh, we lost.$"
 
 J_Route123_Text_YukiPostBattle:
-	.string "YUKI{SE_M_HEAT_WAVE}Wh{SE_M_YAWN}ar{SE_M_REVERSAL}yo{SE_M_DIVE}s{SE_M_ATTRACT2}strong?\n"
-	.string "We'v{SE_M_REVERSAL}neve{SE_M_SAND_TOMB}los{SE_M_SPIT_UP}before.$"
+	.string "YUKI: Why are you so strong?\n"
+	.string "We've never lost before.$"
 
 J_Route123_Text_YukiNotEnoughMons:
-	.string "YUKI{SE_M_HEAT_WAVE}It'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}fu{SE_M_ATTRACT}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}i{SE_M_ACID_ARMOR}you\n"
-	.string "don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}POKéMON.$"
+	.string "YUKI: It's no fun to battle if you\n"
+	.string "don't have two POKéMON.$"
 
 J_Route123_Text_KindraIntro:
-	.string "MT{SE_M_PERISH_SONG}PYRE…\n"
-	.string "Wher{SE_M_REVERSAL}th{SE_M_REVERSAL}spirit{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}sleep…\l"
-	.string "Wil{SE_M_BATON_PASS}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}sleep?$"
+	.string "MT. PYRE…\n"
+	.string "Where the spirits of POKéMON sleep…\l"
+	.string "Will your POKéMON sleep?$"
 
 J_Route123_Text_KindraDefeat:
-	.string "Overflowin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}vitality…$"
+	.string "Overflowing with vitality…$"
 
 J_Route123_Text_KindraPostBattle:
-	.string "MT{SE_M_PERISH_SONG}PYRE…\n"
-	.string "Wher{SE_M_REVERSAL}th{SE_M_REVERSAL}spirit{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}sleep…\p"
-	.string "I{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}overflo{SE_M_TWISTER}wit{SE_M_TRI_ATTACK}{SE_M_CHARGE}powe{SE_M_SAND_TOMB}that\n"
-	.string "soothe{SE_M_GRASSWHISTLE}spirits…$"
+	.string "MT. PYRE…\n"
+	.string "Where the spirits of POKéMON sleep…\p"
+	.string "It must overflow with a power that\n"
+	.string "soothes spirits…$"
 
 J_Route123_Text_FernandoIntro:
-	.string "I'l{SE_M_BATON_PASS}tur{SE_M_ATTRACT}you{SE_M_SAND_TOMB}light{SE_M_GRASSWHISTLE}ou{SE_M_SPIT_UP}while\n"
-	.string "{SE_M_HEAL_BELL}ri{SE_M_MORNING_SUN}throug{SE_M_TRI_ATTACK}thi{SE_M_GRASSWHISTLE}tune!$"
+	.string "I'll turn your lights out while\n"
+	.string "I rip through this tune!$"
 
 J_Route123_Text_FernandoDefeat:
-	.string "Hey{SE_M_SUPERSONIC}hol{SE_M_WATERFALL}it!\n"
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}stil{SE_M_BATON_PASS}playin{SE_M_SANDSTORM}th{SE_M_REVERSAL}intro!$"
+	.string "Hey, hold it!\n"
+	.string "I was still playing the intro!$"
 
 J_Route123_Text_FernandoPostBattle:
-	.string "You'r{SE_M_REVERSAL}roc{SE_M_ENCORE2}steady.\n"
-	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}writ{SE_M_REVERSAL}{SE_M_CHARGE}tun{SE_M_REVERSAL}abou{SE_M_SPIT_UP}you.$"
+	.string "You're rock steady.\n"
+	.string "I'd like to write a tune about you.$"
 
 J_Route123_Text_FernandoRegister:
-	.string "Th{SE_M_REVERSAL}nex{SE_M_SPIT_UP}time{SE_M_SUPERSONIC}len{SE_M_WATERFALL}you{SE_M_SAND_TOMB}ear{SE_M_GRASSWHISTLE}to\n"
-	.string "th{SE_M_REVERSAL}ful{SE_M_BATON_PASS}tune{SE_M_SUPERSONIC}wil{SE_M_BATON_PASS}you?$"
+	.string "The next time, lend your ears to\n"
+	.string "the full tune, will you?$"
 
 J_Route123_Text_FernandoRematchIntro:
-	.string "Today'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}da{SE_M_YAWN}I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}it!\n"
-	.string "I'l{SE_M_BATON_PASS}tur{SE_M_ATTRACT}ou{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}light{SE_M_GRASSWHISTLE}before\l"
-	.string "{SE_M_HEAL_BELL}finis{SE_M_TRI_ATTACK}singin{SE_M_SANDSTORM}m{SE_M_YAWN}song!$"
+	.string "Today's the day I'm going to do it!\n"
+	.string "I'll turn out your lights before\l"
+	.string "I finish singing my song!$"
 
 J_Route123_Text_FernandoRematchDefeat:
-	.string "Hey{SE_M_SUPERSONIC}hol{SE_M_WATERFALL}it!\n"
-	.string "{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}eve{SE_M_ATTRACT}hi{SE_M_SPIT_UP}th{SE_M_REVERSAL}chorus!$"
+	.string "Hey, hold it!\n"
+	.string "I haven't even hit the chorus!$"
 
 J_Route123_Text_FernandoPostRematch:
-	.string "{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}you'{SE_M_WATERFALL}b{SE_M_REVERSAL}s{SE_M_ATTRACT2}enthralled\n"
-	.string "b{SE_M_YAWN}m{SE_M_YAWN}tune{SE_M_SUPERSONIC}you'{SE_M_WATERFALL}lose.$"
+	.string "I thought you'd be so enthralled\n"
+	.string "by my tune, you'd lose.$"
 
 J_Route123_Text_DavisIntro:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}awesom{SE_M_REVERSAL}BU{SE_M_SWAGGER}POKéMON!\n"
-	.string "M{SE_M_YAWN}bi{SE_M_SANDSTORM}brothe{SE_M_SAND_TOMB}go{SE_M_SPIT_UP}i{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}me.$"
+	.string "This is my awesome BUG POKéMON!\n"
+	.string "My big brother got it for me.$"
 
 J_Route123_Text_DavisDefeat:
 	.string "Waaaah!\n"
-	.string "Yo{SE_M_DIVE}meanie!$"
+	.string "You meanie!$"
 
 J_Route123_Text_DavisPostBattle:
-	.string "Don'{SE_M_SPIT_UP}tel{SE_M_BATON_PASS}m{SE_M_YAWN}brothe{SE_M_SAND_TOMB}{SE_M_HEAL_BELL}lost.\n"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}i{SE_M_SPIT_UP}{SE_M_CHARGE}secret!$"
+	.string "Don't tell my brother I lost.\n"
+	.string "You have to keep it a secret!$"
 
 J_Route123_Text_JazmynIntro:
-	.string "M{SE_M_YAWN}confidenc{SE_M_REVERSAL}wil{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}{SE_M_CHARGE}boos{SE_M_SPIT_UP}by\n"
-	.string "beatin{SE_M_SANDSTORM}someon{SE_M_REVERSAL}obviousl{SE_M_YAWN}strong!$"
+	.string "My confidence will get a boost by\n"
+	.string "beating someone obviously strong!$"
 
 J_Route123_Text_JazmynDefeat:
-	.string "Ther{SE_M_REVERSAL}goe{SE_M_GRASSWHISTLE}m{SE_M_YAWN}confidence…$"
+	.string "There goes my confidence…$"
 
 J_Route123_Text_JazmynPostBattle:
-	.string "The{SE_M_YAWN}sa{SE_M_YAWN}tha{SE_M_SPIT_UP}yo{SE_M_DIVE}can'{SE_M_SPIT_UP}judg{SE_M_REVERSAL}{SE_M_CHARGE}person\n"
-	.string "b{SE_M_YAWN}thei{SE_M_SAND_TOMB}appearance.\p"
-	.string "Bu{SE_M_SPIT_UP}often{SE_M_SUPERSONIC}thei{SE_M_SAND_TOMB}look{SE_M_GRASSWHISTLE}don'{SE_M_SPIT_UP}lie…$"
+	.string "They say that you can't judge a person\n"
+	.string "by their appearance.\p"
+	.string "But often, their looks don't lie…$"
 
 J_Route123_Text_FrederickIntro:
-	.string "Hello{SE_M_SUPERSONIC}child!\n"
-	.string "Ca{SE_M_ATTRACT}yo{SE_M_DIVE}spar{SE_M_REVERSAL}som{SE_M_REVERSAL}time?$"
+	.string "Hello, child!\n"
+	.string "Can you spare some time?$"
 
 J_Route123_Text_FrederickDefeat:
-	.string "Ah{SE_M_SUPERSONIC}{SE_M_CHARGE}might{SE_M_YAWN}capabl{SE_M_REVERSAL}child!\n"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}contribut{SE_M_REVERSAL}t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}allowance.$"
+	.string "Ah, a mighty capable child!\n"
+	.string "Let me contribute to your allowance.$"
 
 J_Route123_Text_FrederickPostBattle:
-	.string "Contribut{SE_M_REVERSAL}t{SE_M_ATTRACT2}you{SE_M_SAND_TOMB}allowance?\n"
-	.string "Wasn'{SE_M_SPIT_UP}th{SE_M_REVERSAL}priz{SE_M_REVERSAL}mone{SE_M_YAWN}enough?$"
+	.string "Contribute to your allowance?\n"
+	.string "Wasn't the prize money enough?$"
 
 J_Route123_Text_AlbertoIntro:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}tel{SE_M_BATON_PASS}you{SE_M_SUPERSONIC}BIR{SE_M_FAINT_ATTACK}POKéMON\n"
-	.string "ar{SE_M_REVERSAL}m{SE_M_YAWN}obsession!\p"
-	.string "Bird{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}cool!\n"
-	.string "They'r{SE_M_REVERSAL}th{SE_M_REVERSAL}best!$"
+	.string "I have to tell you, BIRD POKéMON\n"
+	.string "are my obsession!\p"
+	.string "Birds are cool!\n"
+	.string "They're the best!$"
 
 J_Route123_Text_AlbertoDefeat:
-	.string "Eve{SE_M_ATTRACT}i{SE_M_ATTRACT}defeat{SE_M_SUPERSONIC}BIR{SE_M_FAINT_ATTACK}POKéMO{SE_M_PSYBEAM2}ar{SE_M_REVERSAL}cool!$"
+	.string "Even in defeat, BIRD POKéMON are cool!$"
 
 J_Route123_Text_AlbertoPostBattle:
-	.string "{SE_M_HEAL_BELL}gathe{SE_M_SAND_TOMB}BIR{SE_M_FAINT_ATTACK}POKéMO{SE_M_PSYBEAM2}feather{SE_M_GRASSWHISTLE}that\n"
-	.string "scatte{SE_M_SAND_TOMB}durin{SE_M_SANDSTORM}battles.\p"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}{SE_M_CHARGE}ha{SE_M_SPIT_UP}with\n"
-	.string "BIR{SE_M_FAINT_ATTACK}POKéMO{SE_M_PSYBEAM2}feathers.$"
+	.string "I gather BIRD POKéMON feathers that\n"
+	.string "scatter during battles.\p"
+	.string "I'm going to make a hat with\n"
+	.string "BIRD POKéMON feathers.$"
 
 J_Route123_Text_EdIntro:
-	.string "Whe{SE_M_ATTRACT}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}n{SE_M_ATTRACT2}TRAINER{SE_M_SKETCH}around,\n"
-	.string "{SE_M_HEAL_BELL}le{SE_M_SPIT_UP}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}battl{SE_M_REVERSAL}eac{SE_M_TRI_ATTACK}other.\l"
-	.string "{SE_M_HEAL_BELL}watc{SE_M_TRI_ATTACK}them.$"
+	.string "When there are no TRAINERS around,\n"
+	.string "I let my POKéMON battle each other.\l"
+	.string "I watch them.$"
 
 J_Route123_Text_EdDefeat:
-	.string "{SE_M_HEAL_BELL}kin{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}lik{SE_M_REVERSAL}you{SE_M_SAND_TOMB}POKéMON.$"
+	.string "I kind of like your POKéMON.$"
 
 J_Route123_Text_EdPostBattle:
-	.string "Hehe{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}swipin{SE_M_SANDSTORM}you{SE_M_SAND_TOMB}battlin{SE_M_SANDSTORM}ideas!\n"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}they'l{SE_M_BATON_PASS}mak{SE_M_REVERSAL}m{SE_M_REVERSAL}better.$"
+	.string "Hehe, I'm swiping your battling ideas!\n"
+	.string "I think they'll make me better.$"
 
 J_Route123_Text_JonasIntro:
-	.string "{SE_M_HEAL_BELL}la{SE_M_YAWN}i{SE_M_ATTRACT}ambush{SE_M_SUPERSONIC}an{SE_M_WATERFALL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}has\n"
-	.string "lande{SE_M_WATERFALL}i{SE_M_ATTRACT}m{SE_M_YAWN}trap!$"
+	.string "I lay in ambush, and a TRAINER has\n"
+	.string "landed in my trap!$"
 
 J_Route123_Text_JonasDefeat:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}lose{SE_M_SUPERSONIC}ho{SE_M_TWISTER}a{SE_M_MILK_DRINK}{SE_M_HEAL_BELL}supposed\n"
-	.string "t{SE_M_ATTRACT2}hav{SE_M_REVERSAL}fu{SE_M_ATTRACT}playin{SE_M_SANDSTORM}ninja?$"
+	.string "If you don't lose, how am I supposed\n"
+	.string "to have fun playing ninja?$"
 
 J_Route123_Text_JonasPostBattle:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}ambus{SE_M_TRI_ATTACK}{SE_M_CHARGE}weaker-looking\n"
-	.string "TRAINE{SE_M_MINIMIZE}nex{SE_M_SPIT_UP}time.$"
+	.string "I'm going to ambush a weaker-looking\n"
+	.string "TRAINER next time.$"
 
 J_Route123_Text_KayleyIntro:
-	.string "{SE_M_HEAL_BELL}jus{SE_M_SPIT_UP}bough{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}parasol.\n"
-	.string "M{SE_M_YAWN}cutenes{SE_M_GRASSWHISTLE}shoul{SE_M_WATERFALL}b{SE_M_REVERSAL}u{SE_M_MORNING_SUN}b{SE_M_YAWN}{SE_M_CHARGE}third!$"
+	.string "I just bought this parasol.\n"
+	.string "My cuteness should be up by a third!$"
 
 J_Route123_Text_KayleyDefeat:
-	.string "You'r{SE_M_REVERSAL}bette{SE_M_SAND_TOMB}tha{SE_M_ATTRACT}m{SE_M_REVERSAL}b{SE_M_YAWN}about\n"
-	.string "fiv{SE_M_REVERSAL}times!$"
+	.string "You're better than me by about\n"
+	.string "five times!$"
 
 J_Route123_Text_KayleyPostBattle:
-	.string "Usin{SE_M_SANDSTORM}accessorie{SE_M_GRASSWHISTLE}effectivel{SE_M_YAWN}is\n"
-	.string "th{SE_M_REVERSAL}secre{SE_M_SPIT_UP}behin{SE_M_WATERFALL}fashio{SE_M_ATTRACT}appeal.$"
+	.string "Using accessories effectively is\n"
+	.string "the secret behind fashion appeal.$"
 
 J_Route124_Text_SpencerIntro:
-	.string "Hey{SE_M_SUPERSONIC}ar{SE_M_REVERSAL}yo{SE_M_DIVE}los{SE_M_SPIT_UP}a{SE_M_SPIT_UP}sea?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ca{SE_M_ATTRACT}bea{SE_M_SPIT_UP}m{SE_M_YAWN}POKéMON,\n"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}serv{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}pilot.$"
+	.string "Hey, are you lost at sea?\p"
+	.string "If you can beat my POKéMON,\n"
+	.string "I can serve as your pilot.$"
 
 J_Route124_Text_SpencerDefeat:
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}m{SE_M_YAWN}bearing{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}battle!$"
+	.string "I lost my bearings in battle!$"
 
 J_Route124_Text_SpencerPostBattle:
-	.string "Man{SE_M_YAWN}peopl{SE_M_REVERSAL}los{SE_M_REVERSAL}thei{SE_M_SAND_TOMB}bearing{SE_M_GRASSWHISTLE}a{SE_M_SPIT_UP}sea.\p"
-	.string "I{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}tha{SE_M_SPIT_UP}sort{SE_M_SUPERSONIC}yo{SE_M_DIVE}shoul{SE_M_WATERFALL}refer\n"
-	.string "t{SE_M_ATTRACT2}th{SE_M_REVERSAL}POKéNAV'{SE_M_GRASSWHISTLE}MAP.$"
+	.string "Many people lose their bearings at sea.\p"
+	.string "If you're that sort, you should refer\n"
+	.string "to the POKéNAV's MAP.$"
 
 J_Route124_Text_RolandIntro:
-	.string "Hm{SE_M_DRAGON_RAGE}You'r{SE_M_REVERSAL}ridin{SE_M_SANDSTORM}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}instead\n"
-	.string "o{SE_M_ACID_ARMOR}swimmin{SE_M_SANDSTORM}yourself…\p"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}envious!$"
+	.string "Hm! You're riding a POKéMON instead\n"
+	.string "of swimming yourself…\p"
+	.string "I am envious!$"
 
 J_Route124_Text_RolandDefeat:
 	.string "Oh!\n"
-	.string "{SE_M_HEAL_BELL}can't…$"
+	.string "I can't…$"
 
 J_Route124_Text_RolandPostBattle:
-	.string "I'{SE_M_MILK_DRINK}gettin{SE_M_SANDSTORM}chilled…\n"
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}i{SE_M_ATTRACT}th{SE_M_REVERSAL}wate{SE_M_SAND_TOMB}to{SE_M_ATTRACT2}long…\p"
-	.string "{SE_M_HEAL_BELL}wis{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}coul{SE_M_WATERFALL}rid{SE_M_REVERSAL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}lik{SE_M_REVERSAL}you…$"
+	.string "I'm getting chilled…\n"
+	.string "I've been in the water too long…\p"
+	.string "I wish I could ride a POKéMON like you…$"
 
 J_Route124_Text_JennyIntro:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}jus{SE_M_SPIT_UP}floa{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}se{SE_M_CHARGE}like\n"
-	.string "this{SE_M_SUPERSONIC}POKéMO{SE_M_PSYBEAM2}com{SE_M_REVERSAL}aroun{SE_M_WATERFALL}t{SE_M_ATTRACT2}play.$"
+	.string "If you just float in the sea like\n"
+	.string "this, POKéMON come around to play.$"
 
 J_Route124_Text_JennyDefeat:
-	.string "Oh{SE_M_SUPERSONIC}darn.\n"
-	.string "I'v{SE_M_REVERSAL}gon{SE_M_REVERSAL}an{SE_M_WATERFALL}lost.$"
+	.string "Oh, darn.\n"
+	.string "I've gone and lost.$"
 
 J_Route124_Text_JennyPostBattle:
-	.string "Whil{SE_M_REVERSAL}swimming{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}notice{SE_M_WATERFALL}tha{SE_M_SPIT_UP}some\n"
-	.string "POKéMO{SE_M_PSYBEAM2}attack{SE_M_SUPERSONIC}an{SE_M_WATERFALL}som{SE_M_REVERSAL}jus{SE_M_SPIT_UP}watch.\p"
-	.string "{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}personalities\n"
-	.string "o{SE_M_ACID_ARMOR}thei{SE_M_SAND_TOMB}own.$"
+	.string "While swimming, I noticed that some\n"
+	.string "POKéMON attack, and some just watch.\p"
+	.string "I guess POKéMON have personalities\n"
+	.string "of their own.$"
 
 J_Route124_Text_JennyRegister:
-	.string "It'{SE_M_GRASSWHISTLE}onl{SE_M_YAWN}o{SE_M_ATTRACT}{SE_M_CHARGE}whim{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}mayb{SE_M_REVERSAL}I'l{SE_M_BATON_PASS}get\n"
-	.string "yo{SE_M_DIVE}t{SE_M_ATTRACT2}registe{SE_M_SAND_TOMB}m{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéNAV.$"
+	.string "It's only on a whim, but maybe I'll get\n"
+	.string "you to register me in your POKéNAV.$"
 
 J_Route124_Text_JennyRematchIntro:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}jus{SE_M_SPIT_UP}floa{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}se{SE_M_CHARGE}lik{SE_M_REVERSAL}this,\n"
-	.string "TRAINER{SE_M_SKETCH}challeng{SE_M_REVERSAL}you!$"
+	.string "If you just float in the sea like this,\n"
+	.string "TRAINERS challenge you!$"
 
 J_Route124_Text_JennyRematchDefeat:
-	.string "That'{SE_M_GRASSWHISTLE}strange…\n"
-	.string "{SE_M_HEAL_BELL}los{SE_M_SPIT_UP}again…$"
+	.string "That's strange…\n"
+	.string "I lost again…$"
 
 J_Route124_Text_JennyPostRematch:
-	.string "Thi{SE_M_GRASSWHISTLE}ha{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}wit{SE_M_TRI_ATTACK}anything,\n"
-	.string "bu{SE_M_SPIT_UP}mayb{SE_M_REVERSAL}I'l{SE_M_BATON_PASS}visi{SE_M_SPIT_UP}th{SE_M_REVERSAL}TRIC{SE_M_SNORE}HOUSE.$"
+	.string "This has nothing to do with anything,\n"
+	.string "but maybe I'll visit the TRICK HOUSE.$"
 
 J_Route124_Text_GraceIntro:
-	.string "I'{SE_M_MILK_DRINK}growin{SE_M_SANDSTORM}bore{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}swimming…\n"
-	.string "Ho{SE_M_TWISTER}abou{SE_M_SPIT_UP}{SE_M_CHARGE}battle?$"
+	.string "I'm growing bored of swimming…\n"
+	.string "How about a battle?$"
 
 J_Route124_Text_GraceDefeat:
-	.string "{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}n{SE_M_ATTRACT2}ide{SE_M_CHARGE}tha{SE_M_SPIT_UP}yo{SE_M_DIVE}were\n"
-	.string "thi{SE_M_GRASSWHISTLE}strong!$"
+	.string "I had no idea that you were\n"
+	.string "this strong!$"
 
 J_Route124_Text_GracePostBattle:
-	.string "Al{SE_M_BATON_PASS}th{SE_M_REVERSAL}effor{SE_M_SPIT_UP}yo{SE_M_DIVE}pu{SE_M_SPIT_UP}i{SE_M_ATTRACT}mus{SE_M_SPIT_UP}have\n"
-	.string "mad{SE_M_REVERSAL}yo{SE_M_DIVE}thi{SE_M_GRASSWHISTLE}strong.$"
+	.string "All the effort you put in must have\n"
+	.string "made you this strong.$"
 
 J_Route124_Text_ChadIntro:
-	.string "Fufufufu{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}div{SE_M_REVERSAL}dee{SE_M_MORNING_SUN}underwater\n"
-	.string "t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}dee{SE_M_MORNING_SUN}unde{SE_M_SAND_TOMB}cover.\l"
-	.string "Plumbin{SE_M_SANDSTORM}th{SE_M_REVERSAL}depth{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}wher{SE_M_REVERSAL}{SE_M_HEAL_BELL}excel!$"
+	.string "Fufufufu… I dive deep underwater\n"
+	.string "to go deep under cover.\l"
+	.string "Plumbing the depths is where I excel!$"
 
 J_Route124_Text_ChadDefeat:
-	.string "Glub{SE_M_SUPERSONIC}glub{SE_M_SUPERSONIC}glub…\n"
-	.string "I'{SE_M_MILK_DRINK}sinking…$"
+	.string "Glub, glub, glub…\n"
+	.string "I'm sinking…$"
 
 J_Route124_Text_ChadPostBattle:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}i{SE_M_SPIT_UP}o{SE_M_ATTRACT}goo{SE_M_WATERFALL}authorit{SE_M_YAWN}that\n"
-	.string "there'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}DIV{SE_M_SWORDS_DANCE}spo{SE_M_SPIT_UP}aroun{SE_M_WATERFALL}here.\p"
-	.string "I{SE_M_SPIT_UP}give{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}th{SE_M_REVERSAL}urg{SE_M_REVERSAL}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}deep\n"
+	.string "I have it on good authority that\n"
+	.string "there's a DIVE spot around here.\p"
+	.string "It gives me the urge to go deep\n"
 	.string "again…$"
 
 J_Route124_Text_LilaIntro:
-	.string "LILA{SE_M_HEAT_WAVE}Sigh…\p"
-	.string "Her{SE_M_REVERSAL}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}sea{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}who'{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}me?\n"
-	.string "M{SE_M_YAWN}littl{SE_M_REVERSAL}brother!\p"
-	.string "Let'{SE_M_GRASSWHISTLE}battl{SE_M_REVERSAL}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}dwell\n"
-	.string "o{SE_M_ATTRACT}that!$"
+	.string "LILA: Sigh…\p"
+	.string "Here I am in the sea, but who's with me?\n"
+	.string "My little brother!\p"
+	.string "Let's battle so I won't have to dwell\n"
+	.string "on that!$"
 
 J_Route124_Text_LilaDefeat:
-	.string "LILA{SE_M_HEAT_WAVE}ROY{SE_M_DRAGON_RAGE}It'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}faul{SE_M_SPIT_UP}w{SE_M_REVERSAL}lost!\n"
-	.string "You'r{SE_M_REVERSAL}i{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}i{SE_M_SPIT_UP}later!$"
+	.string "LILA: ROY! It's your fault we lost!\n"
+	.string "You're in for it later!$"
 
 J_Route124_Text_LilaPostBattle:
-	.string "LILA{SE_M_HEAT_WAVE}Sigh…\p"
-	.string "I{SE_M_ACID_ARMOR}onl{SE_M_YAWN}i{SE_M_SPIT_UP}wasn'{SE_M_SPIT_UP}m{SE_M_YAWN}littl{SE_M_REVERSAL}brother\n"
-	.string "nex{SE_M_SPIT_UP}t{SE_M_ATTRACT2}me{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_CHARGE}nic{SE_M_REVERSAL}boyfriend…$"
+	.string "LILA: Sigh…\p"
+	.string "If only it wasn't my little brother\n"
+	.string "next to me, but a nice boyfriend…$"
 
 J_Route124_Text_LilaNotEnoughMons:
-	.string "LILA{SE_M_HEAT_WAVE}You'r{SE_M_REVERSAL}plannin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us?\n"
-	.string "No{SE_M_SPIT_UP}unles{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}POKéMON.$"
+	.string "LILA: You're planning to battle us?\n"
+	.string "Not unless you have two POKéMON.$"
 
 J_Route124_Text_RoyIntro:
-	.string "ROY{SE_M_HEAT_WAVE}M{SE_M_YAWN}bi{SE_M_SANDSTORM}siste{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}toug{SE_M_TRI_ATTACK}a{SE_M_SPIT_UP}POKéMON!\p"
-	.string "Don'{SE_M_SPIT_UP}cr{SE_M_YAWN}whe{SE_M_ATTRACT}yo{SE_M_DIVE}lose!$"
+	.string "ROY: My big sister is tough at POKéMON!\p"
+	.string "Don't cry when you lose!$"
 
 J_Route124_Text_RoyDefeat:
-	.string "ROY{SE_M_HEAT_WAVE}Uh-oh…\n"
-	.string "M{SE_M_YAWN}bi{SE_M_SANDSTORM}siste{SE_M_SAND_TOMB}wil{SE_M_BATON_PASS}che{SE_M_TWISTER}m{SE_M_REVERSAL}out…$"
+	.string "ROY: Uh-oh…\n"
+	.string "My big sister will chew me out…$"
 
 J_Route124_Text_RoyPostBattle:
-	.string "ROY{SE_M_HEAT_WAVE}M{SE_M_YAWN}bi{SE_M_SANDSTORM}siste{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}reall{SE_M_YAWN}scary\n"
-	.string "whe{SE_M_ATTRACT}sh{SE_M_REVERSAL}get{SE_M_GRASSWHISTLE}angry.\p"
-	.string "That'{SE_M_GRASSWHISTLE}wh{SE_M_YAWN}sh{SE_M_REVERSAL}doesn'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}a\n"
+	.string "ROY: My big sister is really scary\n"
+	.string "when she gets angry.\p"
+	.string "That's why she doesn't have a\n"
 	.string "boyfriend.$"
 
 J_Route124_Text_LilaRoyRegister:
-	.string "ROY{SE_M_HEAT_WAVE}Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}u{SE_M_GRASSWHISTLE}again?\n"
-	.string "Bu{SE_M_SPIT_UP}tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}eas{SE_M_YAWN}nex{SE_M_SPIT_UP}time{SE_M_SUPERSONIC}okay?$"
+	.string "ROY: Will you battle with us again?\n"
+	.string "But take it easy next time, okay?$"
 
 J_Route124_Text_RoyNotEnoughMons:
-	.string "ROY{SE_M_HEAT_WAVE}Di{SE_M_WATERFALL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us?\n"
-	.string "Brin{SE_M_SANDSTORM}tw{SE_M_ATTRACT2}POKéMON{SE_M_SUPERSONIC}then.$"
+	.string "ROY: Did you want to battle us?\n"
+	.string "Bring two POKéMON, then.$"
 
 J_Route124_Text_LilaRematchIntro:
-	.string "LILA{SE_M_HEAT_WAVE}Sigh…\p"
-	.string "Her{SE_M_REVERSAL}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}sea{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}who'{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}me?\n"
-	.string "M{SE_M_YAWN}littl{SE_M_REVERSAL}brother!\p"
-	.string "Oh{SE_M_SUPERSONIC}hi{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}{SE_M_CHARGE}while{SE_M_PERISH_SONG}Let'{SE_M_GRASSWHISTLE}battle\n"
-	.string "s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}dwel{SE_M_BATON_PASS}o{SE_M_ATTRACT}things!$"
+	.string "LILA: Sigh…\p"
+	.string "Here I am in the sea, but who's with me?\n"
+	.string "My little brother!\p"
+	.string "Oh, hi, it's been a while. Let's battle\n"
+	.string "so I won't have to dwell on things!$"
 
 J_Route124_Text_LilaRematchDefeat:
-	.string "LILA{SE_M_HEAT_WAVE}ROY!\n"
-	.string "It'{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}faul{SE_M_SPIT_UP}w{SE_M_REVERSAL}los{SE_M_SPIT_UP}again!\p"
-	.string "We'r{SE_M_REVERSAL}havin{SE_M_SANDSTORM}{SE_M_CHARGE}trainin{SE_M_SANDSTORM}sessio{SE_M_ATTRACT}later!$"
+	.string "LILA: ROY!\n"
+	.string "It's your fault we lost again!\p"
+	.string "We're having a training session later!$"
 
 J_Route124_Text_LilaPostRematch:
-	.string "LILA{SE_M_HEAT_WAVE}Sigh…\p"
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}{SE_M_CHARGE}nic{SE_M_REVERSAL}boyfriend{SE_M_SUPERSONIC}we'{SE_M_WATERFALL}beat\n"
-	.string "anyon{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}lovel{SE_M_YAWN}combinations…$"
+	.string "LILA: Sigh…\p"
+	.string "If I had a nice boyfriend, we'd beat\n"
+	.string "anyone with lovely combinations…$"
 
 J_Route124_Text_LilaRematchNotEnoughMons:
-	.string "LILA{SE_M_HEAT_WAVE}You'r{SE_M_REVERSAL}plannin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us?\n"
-	.string "No{SE_M_SPIT_UP}unles{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}POKéMON.$"
+	.string "LILA: You're planning to battle us?\n"
+	.string "Not unless you have two POKéMON.$"
 
 J_Route124_Text_RoyRematchIntro:
-	.string "ROY{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}w{SE_M_REVERSAL}lose{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}catc{SE_M_TRI_ATTACK}heck.\n"
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}totall{SE_M_YAWN}al{SE_M_BATON_PASS}out!$"
+	.string "ROY: If we lose, I'll catch heck.\n"
+	.string "I'm going to go totally all out!$"
 
 J_Route124_Text_RoyRematchDefeat:
-	.string "ROY{SE_M_HEAT_WAVE}Uh-oh…\n"
-	.string "M{SE_M_YAWN}bi{SE_M_SANDSTORM}siste{SE_M_SAND_TOMB}wil{SE_M_BATON_PASS}che{SE_M_TWISTER}m{SE_M_REVERSAL}ou{SE_M_SPIT_UP}again.$"
+	.string "ROY: Uh-oh…\n"
+	.string "My big sister will chew me out again.$"
 
 J_Route124_Text_RoyPostRematch:
-	.string "ROY{SE_M_HEAT_WAVE}M{SE_M_YAWN}bi{SE_M_SANDSTORM}siste{SE_M_SAND_TOMB}i{SE_M_GRASSWHISTLE}reall{SE_M_YAWN}scary\n"
-	.string "whe{SE_M_ATTRACT}sh{SE_M_REVERSAL}get{SE_M_GRASSWHISTLE}angry.\p"
-	.string "She'{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}m{SE_M_REVERSAL}trai{SE_M_ATTRACT}really\n"
-	.string "har{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}later…$"
+	.string "ROY: My big sister is really scary\n"
+	.string "when she gets angry.\p"
+	.string "She's going to make me train really\n"
+	.string "hard with POKéMON later…$"
 
 J_Route124_Text_RoyRematchNotEnoughMons:
-	.string "ROY{SE_M_HEAT_WAVE}Di{SE_M_WATERFALL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}us?\n"
-	.string "Brin{SE_M_SANDSTORM}tw{SE_M_ATTRACT2}POKéMON{SE_M_SUPERSONIC}then.$"
+	.string "ROY: Did you want to battle us?\n"
+	.string "Bring two POKéMON, then.$"
 
 J_Route124_Text_DeclanIntro:
-	.string "Her{SE_M_REVERSAL}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}swimmin{SE_M_SANDSTORM}b{SE_M_YAWN}m{SE_M_YAWN}lonesome\n"
-	.string "o{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}wide{SE_M_SUPERSONIC}beautifu{SE_M_BATON_PASS}sea.\p"
-	.string "There'{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}othe{SE_M_SAND_TOMB}wor{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}it.\n"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}pathetic!$"
+	.string "Here I am swimming by my lonesome\n"
+	.string "on this wide, beautiful sea.\p"
+	.string "There's no other word for it.\n"
+	.string "This is pathetic!$"
 
 J_Route124_Text_DeclanDefeat:
-	.string "I'{SE_M_MILK_DRINK}feelin{SE_M_SANDSTORM}blue.\n"
-	.string "Blu{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}sky…$"
+	.string "I'm feeling blue.\n"
+	.string "Blue as the sky…$"
 
 J_Route124_Text_DeclanPostBattle:
-	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}cha{SE_M_SPIT_UP}u{SE_M_MORNING_SUN}lad{SE_M_YAWN}SWIMMERS\n"
-	.string "an{SE_M_WATERFALL}invit{SE_M_REVERSAL}the{SE_M_MILK_DRINK}o{SE_M_ATTRACT}{SE_M_CHARGE}lon{SE_M_SANDSTORM}swim.$"
+	.string "I should chat up lady SWIMMERS\n"
+	.string "and invite them on a long swim.$"
 
 J_Route124_Text_IsabellaIntro:
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}los{SE_M_REVERSAL}t{SE_M_ATTRACT2}some\n"
-	.string "surfe{SE_M_SAND_TOMB}TRAINER.$"
+	.string "I'm not going to lose to some\n"
+	.string "surfer TRAINER.$"
 
 J_Route124_Text_IsabellaDefeat:
-	.string "I'v{SE_M_REVERSAL}onl{SE_M_YAWN}go{SE_M_SPIT_UP}swea{SE_M_SPIT_UP}i{SE_M_ATTRACT}m{SE_M_YAWN}eyes!\n"
-	.string "{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}crying!$"
+	.string "I've only got sweat in my eyes!\n"
+	.string "I am not crying!$"
 
 J_Route124_Text_IsabellaPostBattle:
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}fin{SE_M_WATERFALL}prett{SE_M_YAWN}colore{SE_M_WATERFALL}shards\n"
-	.string "o{SE_M_ACID_ARMOR}thing{SE_M_GRASSWHISTLE}aroun{SE_M_WATERFALL}here.$"
+	.string "You can find pretty colored shards\n"
+	.string "of things around here.$"
 
 J_Route125_Text_NolenIntro:
-	.string "{SE_M_HEAL_BELL}hear{SE_M_WATERFALL}yo{SE_M_DIVE}approaching{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}hung\n"
-	.string "aroun{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}you!$"
+	.string "I heard you approaching, so I hung\n"
+	.string "around for you!$"
 
 J_Route125_Text_NolenDefeat:
-	.string "{SE_M_HEAL_BELL}surrender!$"
+	.string "I surrender!$"
 
 J_Route125_Text_NolenPostBattle:
-	.string "Soun{SE_M_WATERFALL}travel{SE_M_GRASSWHISTLE}faste{SE_M_SAND_TOMB}i{SE_M_ATTRACT}wate{SE_M_SAND_TOMB}than\n"
-	.string "i{SE_M_SPIT_UP}doe{SE_M_GRASSWHISTLE}throug{SE_M_TRI_ATTACK}air.$"
+	.string "Sound travels faster in water than\n"
+	.string "it does through air.$"
 
 J_Route125_Text_StanIntro:
-	.string "Hey{SE_M_SUPERSONIC}there!\n"
-	.string "Chec{SE_M_ENCORE2}ou{SE_M_SPIT_UP}m{SE_M_YAWN}swee{SE_M_SPIT_UP}POKéMON!$"
+	.string "Hey, there!\n"
+	.string "Check out my sweet POKéMON!$"
 
 J_Route125_Text_StanDefeat:
-	.string "{SE_M_HEAL_BELL}floundered…$"
+	.string "I floundered…$"
 
 J_Route125_Text_StanPostBattle:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}blow{SE_M_ATTRACT}awa{SE_M_YAWN}b{SE_M_YAWN}HORSEA'{SE_M_GRASSWHISTLE}charm,\n"
-	.string "s{SE_M_ATTRACT2}{SE_M_HEAL_BELL}starte{SE_M_WATERFALL}swimming{SE_M_SUPERSONIC}too.$"
+	.string "I was blown away by HORSEA's charm,\n"
+	.string "so I started swimming, too.$"
 
 J_Route125_Text_TanyaIntro:
-	.string "I'{SE_M_MILK_DRINK}tire{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}swimming.\n"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}u{SE_M_MORNING_SUN}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?$"
+	.string "I'm tired of swimming.\n"
+	.string "Are you up for a battle with me?$"
 
 J_Route125_Text_TanyaDefeat:
-	.string "You'r{SE_M_REVERSAL}to{SE_M_ATTRACT2}much!$"
+	.string "You're too much!$"
 
 J_Route125_Text_TanyaPostBattle:
 	.string "Whew…\n"
-	.string "Whic{SE_M_TRI_ATTACK}wa{SE_M_YAWN}i{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}MOSSDEE{SE_M_PETAL_DANCE}CITY?$"
+	.string "Which way is it to MOSSDEEP CITY?$"
 
 J_Route125_Text_SharonIntro:
-	.string "Ho{SE_M_TWISTER}woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}o{SE_M_ATTRACT}the\n"
-	.string "WATER-typ{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}{SE_M_HEAL_BELL}raised?$"
+	.string "How would you like to take on the\n"
+	.string "WATER-type POKéMON I raised?$"
 
 J_Route125_Text_SharonDefeat:
-	.string "Los{SE_M_SPIT_UP}it…$"
+	.string "Lost it…$"
 
 J_Route125_Text_SharonPostBattle:
-	.string "You{SE_M_SAND_TOMB}power{SE_M_DIZZY_PUNCH}You'r{SE_M_REVERSAL}th{SE_M_REVERSAL}rea{SE_M_BATON_PASS}deal.\n"
-	.string "I'{SE_M_MILK_DRINK}amazed!$"
+	.string "Your power… You're the real deal.\n"
+	.string "I'm amazed!$"
 
 J_Route125_Text_ErnestIntro:
-	.string "Ahoy{SE_M_DRAGON_RAGE}I'{SE_M_MILK_DRINK}{SE_M_CHARGE}buff{SE_M_SUPERSONIC}toug{SE_M_TRI_ATTACK}SAILOR!\n"
-	.string "I'v{SE_M_REVERSAL}brave{SE_M_WATERFALL}th{SE_M_REVERSAL}world'{SE_M_GRASSWHISTLE}seas!$"
+	.string "Ahoy! I'm a buff, tough SAILOR!\n"
+	.string "I've braved the world's seas!$"
 
 J_Route125_Text_ErnestDefeat:
 	.string "Gwrroooar!\n"
-	.string "{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}win!$"
+	.string "I couldn't win!$"
 
 J_Route125_Text_ErnestPostBattle:
-	.string "Th{SE_M_REVERSAL}tid{SE_M_REVERSAL}ebb{SE_M_GRASSWHISTLE}an{SE_M_WATERFALL}flow{SE_M_GRASSWHISTLE}insid{SE_M_REVERSAL}the\n"
-	.string "SHOA{SE_M_BRICK_BREAK}CAVE.\p"
-	.string "B{SE_M_YAWN}th{SE_M_REVERSAL}way{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}si{SE_M_SWEET_SCENT}hour{SE_M_GRASSWHISTLE}from\n"
-	.string "hig{SE_M_TRI_ATTACK}tid{SE_M_REVERSAL}t{SE_M_ATTRACT2}lo{SE_M_TWISTER}tide{SE_M_PERISH_SONG}Di{SE_M_WATERFALL}yo{SE_M_DIVE}know?$"
+	.string "The tide ebbs and flows inside the\n"
+	.string "SHOAL CAVE.\p"
+	.string "By the way, it's about six hours from\n"
+	.string "high tide to low tide. Did you know?$"
 
 J_Route125_Text_ErnestRegister:
-	.string "Registe{SE_M_SAND_TOMB}m{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéNAV,\n"
-	.string "an{SE_M_WATERFALL}I'l{SE_M_BATON_PASS}tel{SE_M_BATON_PASS}yo{SE_M_DIVE}somethin{SE_M_SANDSTORM}good.$"
+	.string "Register me in your POKéNAV,\n"
+	.string "and I'll tell you something good.$"
 
 J_Route125_Text_ErnestRematchIntro:
-	.string "It'{SE_M_GRASSWHISTLE}hig{SE_M_TRI_ATTACK}tim{SE_M_REVERSAL}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}m{SE_M_YAWN}payback\n"
-	.string "fro{SE_M_MILK_DRINK}you{SE_M_DRAGON_RAGE}Com{SE_M_REVERSAL}on{SE_M_SUPERSONIC}we'r{SE_M_REVERSAL}battling!$"
+	.string "It's high time I get my payback\n"
+	.string "from you! Come on, we're battling!$"
 
 J_Route125_Text_ErnestRematchDefeat:
-	.string "{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}win!\n"
-	.string "{SE_M_HEAL_BELL}fla{SE_M_SPIT_UP}ou{SE_M_SPIT_UP}couldn'{SE_M_SPIT_UP}win!$"
+	.string "I couldn't win!\n"
+	.string "I flat out couldn't win!$"
 
 J_Route125_Text_ErnestRematchPostBattle:
-	.string "Th{SE_M_REVERSAL}SHOA{SE_M_BRICK_BREAK}CAVE…\p"
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}place{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}ca{SE_M_ATTRACT}an{SE_M_WATERFALL}can't\n"
-	.string "ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}dependin{SE_M_SANDSTORM}o{SE_M_ATTRACT}th{SE_M_REVERSAL}ris{SE_M_REVERSAL}an{SE_M_WATERFALL}fall\l"
-	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}tide.\p"
-	.string "B{SE_M_YAWN}th{SE_M_REVERSAL}way{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}abou{SE_M_SPIT_UP}si{SE_M_SWEET_SCENT}hour{SE_M_GRASSWHISTLE}from\n"
-	.string "hig{SE_M_TRI_ATTACK}tid{SE_M_REVERSAL}t{SE_M_ATTRACT2}lo{SE_M_TWISTER}tide{SE_M_PERISH_SONG}Don'{SE_M_SPIT_UP}forget!$"
+	.string "The SHOAL CAVE…\p"
+	.string "There are places you can and can't\n"
+	.string "get to depending on the rise and fall\l"
+	.string "of the tide.\p"
+	.string "By the way, it's about six hours from\n"
+	.string "high tide to low tide. Don't forget!$"
 
 J_Route125_Text_KimIntro:
-	.string "KIM{SE_M_HEAT_WAVE}{SE_M_BONEMERANG}funn{SE_M_YAWN}ol{SE_M_WATERFALL}ma{SE_M_ATTRACT}live{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}the\n"
-	.string "SHOA{SE_M_BRICK_BREAK}CAVE{SE_M_PERISH_SONG}Someon{SE_M_REVERSAL}tol{SE_M_WATERFALL}me.\l"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}him{SE_M_SUPERSONIC}too?$"
+	.string "KIM: A funny old man lives in the\n"
+	.string "SHOAL CAVE. Someone told me.\l"
+	.string "Are you going to see him, too?$"
 
 J_Route125_Text_KimDefeat:
-	.string "KIM{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}though{SE_M_SPIT_UP}w{SE_M_REVERSAL}woul{SE_M_WATERFALL}win.$"
+	.string "KIM: I thought we would win.$"
 
 J_Route125_Text_KimPostBattle:
-	.string "KIM{SE_M_HEAT_WAVE}{SE_M_BONEMERANG}funn{SE_M_YAWN}ol{SE_M_WATERFALL}ma{SE_M_ATTRACT}live{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}the\n"
-	.string "SHOA{SE_M_BRICK_BREAK}CAVE{SE_M_SUPERSONIC}doesn'{SE_M_SPIT_UP}he?\p"
-	.string "Let'{SE_M_GRASSWHISTLE}g{SE_M_ATTRACT2}se{SE_M_REVERSAL}him{SE_M_SUPERSONIC}IRIS!$"
+	.string "KIM: A funny old man lives in the\n"
+	.string "SHOAL CAVE, doesn't he?\p"
+	.string "Let's go see him, IRIS!$"
 
 J_Route125_Text_KimNotEnoughMons:
-	.string "KIM{SE_M_HEAT_WAVE}No{SE_M_SUPERSONIC}no{SE_M_SUPERSONIC}no{SE_M_DRAGON_RAGE}Yo{SE_M_DIVE}nee{SE_M_WATERFALL}tw{SE_M_ATTRACT2}POKéMON,\n"
-	.string "o{SE_M_SAND_TOMB}it'{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}n{SE_M_ATTRACT2}good!$"
+	.string "KIM: No, no, no! You need two POKéMON,\n"
+	.string "or it's just no good!$"
 
 J_Route125_Text_IrisIntro:
-	.string "IRIS{SE_M_HEAT_WAVE}KIM{SE_M_SUPERSONIC}ca{SE_M_ATTRACT}yo{SE_M_DIVE}tel{SE_M_BATON_PASS}m{SE_M_REVERSAL}wha{SE_M_SPIT_UP}we're\n"
-	.string "lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}ou{SE_M_SPIT_UP}here?$"
+	.string "IRIS: KIM, can you tell me what we're\n"
+	.string "looking for out here?$"
 
 J_Route125_Text_IrisDefeat:
-	.string "IRIS{SE_M_HEAT_WAVE}Oh{SE_M_SUPERSONIC}w{SE_M_REVERSAL}cam{SE_M_REVERSAL}sor{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}close.$"
+	.string "IRIS: Oh, we came sort of close.$"
 
 J_Route125_Text_IrisPostBattle:
-	.string "IRIS{SE_M_HEAT_WAVE}KIM{SE_M_SUPERSONIC}ar{SE_M_REVERSAL}w{SE_M_REVERSAL}reall{SE_M_YAWN}goin{SE_M_SANDSTORM}into\n"
-	.string "th{SE_M_REVERSAL}SHOA{SE_M_BRICK_BREAK}CAVE?\l"
-	.string "We'l{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}al{SE_M_BATON_PASS}wet.$"
+	.string "IRIS: KIM, are we really going into\n"
+	.string "the SHOAL CAVE?\l"
+	.string "We'll get all wet.$"
 
 J_Route125_Text_IrisNotEnoughMons:
-	.string "IRIS{SE_M_HEAT_WAVE}Oh{SE_M_SUPERSONIC}w{SE_M_REVERSAL}coul{SE_M_WATERFALL}never{SE_M_SUPERSONIC}eve{SE_M_SAND_TOMB}do\n"
-	.string "anythin{SE_M_SANDSTORM}lik{SE_M_REVERSAL}{SE_M_CHARGE}2-on-{SE_M_HEADBUTT}battle.$"
+	.string "IRIS: Oh, we could never, ever do\n"
+	.string "anything like a 2-on-1 battle.$"
 
 J_Route125_Text_PresleyIntro:
-	.string "Wh{SE_M_YAWN}woul{SE_M_WATERFALL}{SE_M_CHARGE}BIRDKEEPE{SE_M_MINIMIZE}lik{SE_M_REVERSAL}me\n"
-	.string "com{SE_M_REVERSAL}ou{SE_M_SPIT_UP}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}sea?$"
+	.string "Why would a BIRDKEEPER like me\n"
+	.string "come out to the sea?$"
 
 J_Route125_Text_PresleyDefeat:
 	.string "Okay.\n"
-	.string "I'l{SE_M_BATON_PASS}tel{SE_M_BATON_PASS}yo{SE_M_DIVE}wh{SE_M_YAWN}I'{SE_M_MILK_DRINK}here.$"
+	.string "I'll tell you why I'm here.$"
 
 J_Route125_Text_PresleyPostBattle:
-	.string "{SE_M_HEAL_BELL}pu{SE_M_SPIT_UP}{SE_M_CHARGE}messag{SE_M_REVERSAL}i{SE_M_ATTRACT}{SE_M_CHARGE}bottl{SE_M_REVERSAL}an{SE_M_WATERFALL}put\n"
-	.string "i{SE_M_SPIT_UP}ou{SE_M_SPIT_UP}t{SE_M_ATTRACT2}sea.\p"
-	.string "I'{SE_M_MILK_DRINK}sur{SE_M_REVERSAL}tha{SE_M_SPIT_UP}{SE_M_CHARGE}gir{SE_M_BATON_PASS}SWIMME{SE_M_MINIMIZE}will\n"
-	.string "fin{SE_M_WATERFALL}it!$"
+	.string "I put a message in a bottle and put\n"
+	.string "it out to sea.\p"
+	.string "I'm sure that a girl SWIMMER will\n"
+	.string "find it!$"
 
 J_Route125_Text_AuronIntro:
-	.string "Hey{SE_M_DRAGON_RAGE}Wa{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}yo{SE_M_DIVE}throwin{SE_M_SANDSTORM}garbage\n"
-	.string "int{SE_M_ATTRACT2}th{SE_M_REVERSAL}sea?$"
+	.string "Hey! Was it you throwing garbage\n"
+	.string "into the sea?$"
 
 J_Route125_Text_AuronDefeat:
-	.string "Oh{SE_M_SUPERSONIC}yo{SE_M_DIVE}weren'{SE_M_SPIT_UP}throwin{SE_M_SANDSTORM}tras{SE_M_TRI_ATTACK}into\n"
-	.string "th{SE_M_REVERSAL}sea.$"
+	.string "Oh, you weren't throwing trash into\n"
+	.string "the sea.$"
 
 J_Route125_Text_AuronPostBattle:
-	.string "{SE_M_HEAL_BELL}foun{SE_M_WATERFALL}a{SE_M_ATTRACT}unsightl{SE_M_YAWN}bottl{SE_M_REVERSAL}bobbing\n"
-	.string "i{SE_M_ATTRACT}th{SE_M_REVERSAL}wave{SE_M_GRASSWHISTLE}earlier.\p"
-	.string "I{SE_M_SPIT_UP}anger{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}tha{SE_M_SPIT_UP}someon{SE_M_REVERSAL}would\n"
-	.string "pollut{SE_M_REVERSAL}th{SE_M_REVERSAL}sea!$"
+	.string "I found an unsightly bottle bobbing\n"
+	.string "in the waves earlier.\p"
+	.string "It angers me that someone would\n"
+	.string "pollute the sea!$"
 
 J_Route126_Text_BarryIntro:
-	.string "Swimmin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}full-bod{SE_M_YAWN}workout!\n"
-	.string "Yo{SE_M_DIVE}wil{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}fit!$"
+	.string "Swimming is a full-body workout!\n"
+	.string "You will get fit!$"
 
 J_Route126_Text_BarryDefeat:
-	.string "{SE_M_HEAL_BELL}admi{SE_M_SPIT_UP}it!\n"
-	.string "Yo{SE_M_DIVE}win!$"
+	.string "I admit it!\n"
+	.string "You win!$"
 
 J_Route126_Text_BarryPostBattle:
-	.string "Thank{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}m{SE_M_YAWN}dail{SE_M_YAWN}swimmin{SE_M_SANDSTORM}routine…\n"
-	.string "Look{SE_M_DRAGON_RAGE}Feas{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}eye{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}physique!$"
+	.string "Thanks to my daily swimming routine…\n"
+	.string "Look! Feast your eyes on this physique!$"
 
 J_Route126_Text_DeanIntro:
-	.string "Thi{SE_M_GRASSWHISTLE}towerin{SE_M_SANDSTORM}whit{SE_M_REVERSAL}mountai{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}rock\n"
-	.string "i{SE_M_GRASSWHISTLE}SOOTOPOLI{SE_M_SKETCH}CITY.$"
+	.string "This towering white mountain of rock\n"
+	.string "is SOOTOPOLIS CITY.$"
 
 J_Route126_Text_DeanDefeat:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}don{SE_M_REVERSAL}in?$"
+	.string "I was done in?$"
 
 J_Route126_Text_DeanPostBattle:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}fin{SE_M_WATERFALL}th{SE_M_REVERSAL}entranc{SE_M_REVERSAL}to\n"
-	.string "SOOTOPOLIS{SE_M_PERISH_SONG}Wher{SE_M_REVERSAL}coul{SE_M_WATERFALL}i{SE_M_SPIT_UP}be?$"
+	.string "I can't find the entrance to\n"
+	.string "SOOTOPOLIS. Where could it be?$"
 
 J_Route126_Text_NikkiIntro:
 	.string "Ufufufufu!\n"
-	.string "I'{SE_M_MILK_DRINK}{SE_M_CHARGE}mermaid!$"
+	.string "I'm a mermaid!$"
 
 J_Route126_Text_NikkiDefeat:
-	.string "M{SE_M_YAWN}fantas{SE_M_YAWN}burs{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}i{SE_M_SPIT_UP}wer{SE_M_REVERSAL}{SE_M_CHARGE}bubble!\n"
-	.string "Blub{SE_M_SUPERSONIC}blub{SE_M_SUPERSONIC}blub…$"
+	.string "My fantasy burst as if it were a bubble!\n"
+	.string "Blub, blub, blub…$"
 
 J_Route126_Text_NikkiPostBattle:
-	.string "Yo{SE_M_DIVE}thrashe{SE_M_WATERFALL}me{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}to\n"
-	.string "disappea{SE_M_SAND_TOMB}i{SE_M_ATTRACT}{SE_M_CHARGE}wav{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}despair…$"
+	.string "You thrashed me… I want to\n"
+	.string "disappear in a wave of despair…$"
 
 J_Route126_Text_BrendaIntro:
-	.string "Hello{SE_M_SUPERSONIC}kiddo!\n"
-	.string "Wan{SE_M_SPIT_UP}{SE_M_CHARGE}battl{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}me?$"
+	.string "Hello, kiddo!\n"
+	.string "Want a battle with me?$"
 
 J_Route126_Text_BrendaDefeat:
-	.string "Oh{SE_M_SUPERSONIC}noooooh!$"
+	.string "Oh, noooooh!$"
 
 J_Route126_Text_BrendaPostBattle:
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}frolickin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}POKéMO{SE_M_PSYBEAM2}in\n"
-	.string "th{SE_M_REVERSAL}se{SE_M_CHARGE}lik{SE_M_REVERSAL}this!$"
+	.string "I love frolicking with POKéMON in\n"
+	.string "the sea like this!$"
 
 J_Route126_Text_PabloIntro:
-	.string "Chec{SE_M_ENCORE2}ou{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}sculpte{SE_M_WATERFALL}body!\n"
-	.string "I'{SE_M_MILK_DRINK}mor{SE_M_REVERSAL}cu{SE_M_SPIT_UP}tha{SE_M_ATTRACT}{SE_M_CHARGE}BLAC{SE_M_SNORE}BELT!$"
+	.string "Check out this sculpted body!\n"
+	.string "I'm more cut than a BLACK BELT!$"
 
 J_Route126_Text_PabloDefeat:
-	.string "Whoops{SE_M_DRAGON_RAGE}To{SE_M_ATTRACT2}strong!\n"
-	.string "No{SE_M_SPIT_UP}bad{SE_M_DRAGON_RAGE}No{SE_M_SPIT_UP}ba{SE_M_WATERFALL}a{SE_M_SPIT_UP}all!$"
+	.string "Whoops! Too strong!\n"
+	.string "Not bad! Not bad at all!$"
 
 J_Route126_Text_PabloPostBattle:
-	.string "Losin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}yo{SE_M_DIVE}stimulate{SE_M_WATERFALL}m{SE_M_YAWN}senses!\n"
-	.string "I'l{SE_M_BATON_PASS}trai{SE_M_ATTRACT}mysel{SE_M_ACID_ARMOR}an{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}harder!$"
+	.string "Losing to you stimulated my senses!\n"
+	.string "I'll train myself and POKéMON harder!$"
 
 J_Route126_Text_PabloRegister:
-	.string "Yep{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}no{SE_M_SPIT_UP}ba{SE_M_WATERFALL}a{SE_M_SPIT_UP}all!\n"
-	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}t{SE_M_ATTRACT2}kno{SE_M_TWISTER}yo{SE_M_DIVE}more!$"
+	.string "Yep, you're not bad at all!\n"
+	.string "I'd like to get to know you more!$"
 
 J_Route126_Text_PabloRematchIntro:
-	.string "Chec{SE_M_ENCORE2}ou{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}beautifu{SE_M_BATON_PASS}body!\n"
-	.string "I'{SE_M_MILK_DRINK}mor{SE_M_REVERSAL}shapel{SE_M_YAWN}tha{SE_M_ATTRACT}{SE_M_CHARGE}SWIMMER!$"
+	.string "Check out this beautiful body!\n"
+	.string "I'm more shapely than a SWIMMER!$"
 
 J_Route126_Text_PabloRematchDefeat:
-	.string "Whoops{SE_M_DRAGON_RAGE}Reall{SE_M_YAWN}to{SE_M_ATTRACT2}strong!\n"
-	.string "No{SE_M_SPIT_UP}bad{SE_M_DRAGON_RAGE}No{SE_M_SPIT_UP}ba{SE_M_WATERFALL}a{SE_M_SPIT_UP}all!$"
+	.string "Whoops! Really too strong!\n"
+	.string "Not bad! Not bad at all!$"
 
 J_Route126_Text_PabloPostRematch:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}trai{SE_M_ATTRACT}eve{SE_M_ATTRACT}harder!\n"
-	.string "You'r{SE_M_REVERSAL}{SE_M_CHARGE}grea{SE_M_SPIT_UP}motivator!\l"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}com{SE_M_REVERSAL}bac{SE_M_ENCORE2}again!$"
+	.string "I'm going to train even harder!\n"
+	.string "You're a great motivator!\l"
+	.string "You have to come back again!$"
 
 J_Route126_Text_LeonardoIntro:
-	.string "{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}eve{SE_M_ATTRACT}swi{SE_M_MILK_DRINK}las{SE_M_SPIT_UP}year,\n"
-	.string "bu{SE_M_SPIT_UP}no{SE_M_TWISTER}I'{SE_M_MILK_DRINK}{SE_M_CHARGE}decen{SE_M_SPIT_UP}SWIMMER.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}I'{SE_M_MILK_DRINK}capabl{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}anythin{SE_M_SANDSTORM}now.$"
+	.string "I couldn't even swim last year,\n"
+	.string "but now I'm a decent SWIMMER.\p"
+	.string "I think I'm capable of anything now.$"
 
 J_Route126_Text_LeonardoDefeat:
-	.string "Sheesh{SE_M_SUPERSONIC}gettin{SE_M_SANDSTORM}greed{SE_M_YAWN}didn'{SE_M_SPIT_UP}do\n"
-	.string "{SE_M_CHARGE}thin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}me.$"
+	.string "Sheesh, getting greedy didn't do\n"
+	.string "a thing for me.$"
 
 J_Route126_Text_LeonardoPostBattle:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}practic{SE_M_REVERSAL}a{SE_M_SPIT_UP}something,\n"
-	.string "yo{SE_M_DIVE}wil{SE_M_BATON_PASS}ge{SE_M_SPIT_UP}bette{SE_M_SAND_TOMB}a{SE_M_SPIT_UP}it.\p"
-	.string "You'r{SE_M_REVERSAL}young--don'{SE_M_SPIT_UP}b{SE_M_REVERSAL}afrai{SE_M_WATERFALL}to\n"
-	.string "tr{SE_M_YAWN}al{SE_M_BATON_PASS}sort{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}things!$"
+	.string "If you practice at something,\n"
+	.string "you will get better at it.\p"
+	.string "You're young--don't be afraid to\n"
+	.string "try all sorts of things!$"
 
 J_Route126_Text_IsobelIntro:
-	.string "I{SE_M_ACID_ARMOR}seawate{SE_M_SAND_TOMB}get{SE_M_GRASSWHISTLE}u{SE_M_MORNING_SUN}you{SE_M_SAND_TOMB}nose,\n"
-	.string "doesn'{SE_M_SPIT_UP}i{SE_M_SPIT_UP}fee{SE_M_BATON_PASS}terrible?$"
+	.string "If seawater gets up your nose,\n"
+	.string "doesn't it feel terrible?$"
 
 J_Route126_Text_IsobelDefeat:
-	.string "Ack{SE_M_DRAGON_RAGE}Why{SE_M_SUPERSONIC}you…\n"
+	.string "Ack! Why, you…\n"
 	.string "Glub!$"
 
 J_Route126_Text_IsobelPostBattle:
-	.string "Ooh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}choke{SE_M_WATERFALL}o{SE_M_ATTRACT}som{SE_M_REVERSAL}water!\n"
-	.string "It'{SE_M_GRASSWHISTLE}bitter{SE_M_DRAGON_RAGE}It'{SE_M_GRASSWHISTLE}salty!!$"
+	.string "Ooh, I choked on some water!\n"
+	.string "It's bitter! It's salty!!$"
 
 J_Route126_Text_SiennaIntro:
-	.string "I'{SE_M_MILK_DRINK}throwin{SE_M_SANDSTORM}m{SE_M_YAWN}whol{SE_M_REVERSAL}heart\n"
-	.string "int{SE_M_ATTRACT2}this!$"
+	.string "I'm throwing my whole heart\n"
+	.string "into this!$"
 
 J_Route126_Text_SiennaDefeat:
-	.string "Yo{SE_M_DIVE}ha{SE_M_WATERFALL}mor{SE_M_REVERSAL}heart!$"
+	.string "You had more heart!$"
 
 J_Route126_Text_SiennaPostBattle:
-	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}coo{SE_M_BATON_PASS}dow{SE_M_ATTRACT}now…\n"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}I'l{SE_M_BATON_PASS}g{SE_M_ATTRACT2}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}dive.$"
+	.string "I need to cool down now…\n"
+	.string "I think I'll go for a dive.$"
 
 J_Route127_Text_CamdenIntro:
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}se{SE_M_REVERSAL}i{SE_M_SPIT_UP}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}face.\n"
-	.string "Yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}challeng{SE_M_REVERSAL}me.$"
+	.string "I can see it in your face.\n"
+	.string "You want to challenge me.$"
 
 J_Route127_Text_CamdenDefeat:
 	.string "Awawawawawa…$"
 
 J_Route127_Text_CamdenPostBattle:
-	.string "{SE_M_BONEMERANG}well-playe{SE_M_WATERFALL}matc{SE_M_TRI_ATTACK}leave{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}feeling\n"
-	.string "refreshe{SE_M_WATERFALL}an{SE_M_WATERFALL}serene.$"
+	.string "A well-played match leaves me feeling\n"
+	.string "refreshed and serene.$"
 
 J_Route127_Text_DonnyIntro:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}riva{SE_M_BATON_PASS}who{SE_M_MILK_DRINK}yo{SE_M_DIVE}just\n"
-	.string "hat{SE_M_REVERSAL}t{SE_M_ATTRACT2}los{SE_M_REVERSAL}against?$"
+	.string "Do you have a rival whom you just\n"
+	.string "hate to lose against?$"
 
 J_Route127_Text_DonnyDefeat:
 	.string "Arrrgh!\n"
-	.string "{SE_M_HEAL_BELL}hat{SE_M_REVERSAL}losing!$"
+	.string "I hate losing!$"
 
 J_Route127_Text_DonnyPostBattle:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}rival{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}yo{SE_M_DIVE}ge{SE_M_SPIT_UP}the\n"
-	.string "feelin{SE_M_SANDSTORM}tha{SE_M_SPIT_UP}yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}kee{SE_M_MORNING_SUN}getting\l"
+	.string "If you have a rival, don't you get the\n"
+	.string "feeling that you have to keep getting\l"
 	.string "better?$"
 
 J_Route127_Text_JonahIntro:
-	.string "Throug{SE_M_TRI_ATTACK}fishing{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}attaine{SE_M_WATERFALL}a\n"
-	.string "stat{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}becalme{SE_M_WATERFALL}serenity…\p"
-	.string "Please{SE_M_SUPERSONIC}allo{SE_M_TWISTER}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}demonstrate…$"
+	.string "Through fishing, I have attained a\n"
+	.string "state of becalmed serenity…\p"
+	.string "Please, allow me to demonstrate…$"
 
 J_Route127_Text_JonahDefeat:
-	.string "Thoug{SE_M_TRI_ATTACK}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}lost{SE_M_SUPERSONIC}m{SE_M_YAWN}hear{SE_M_SPIT_UP}remains\n"
+	.string "Though I have lost, my heart remains\n"
 	.string "calm…$"
 
 J_Route127_Text_JonahPostBattle:
-	.string "I{SE_M_SPIT_UP}matter{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}catc{SE_M_TRI_ATTACK}nothing.\n"
-	.string "Th{SE_M_REVERSAL}lin{SE_M_REVERSAL}remain{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}th{SE_M_REVERSAL}water…$"
+	.string "It matters not that I catch nothing.\n"
+	.string "The line remains in the water…$"
 
 J_Route127_Text_HenryIntro:
-	.string "Whoops{SE_M_DRAGON_RAGE}Don'{SE_M_SPIT_UP}tel{SE_M_BATON_PASS}m{SE_M_REVERSAL}{SE_M_HEAL_BELL}snagged\n"
-	.string "{SE_M_CHARGE}SURFIN{SE_M_SWAGGER}POKéMON?$"
+	.string "Whoops! Don't tell me I snagged\n"
+	.string "a SURFING POKéMON?$"
 
 J_Route127_Text_HenryDefeat:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}kee{SE_M_MORNING_SUN}up!$"
+	.string "I can't keep up!$"
 
 J_Route127_Text_HenryPostBattle:
-	.string "It'{SE_M_WATERFALL}b{SE_M_REVERSAL}{SE_M_CHARGE}handfu{SE_M_BATON_PASS}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}hooked\n"
-	.string "you{SE_M_SAND_TOMB}toug{SE_M_TRI_ATTACK}POKéMON!$"
+	.string "It'd be a handful if I hooked\n"
+	.string "your tough POKéMON!$"
 
 J_Route127_Text_RogerIntro:
-	.string "Well{SE_M_SUPERSONIC}hey{SE_M_DRAGON_RAGE}Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}{SE_M_CHARGE}matc{SE_M_TRI_ATTACK}between\n"
-	.string "{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}fa{SE_M_ATTRACT}an{SE_M_WATERFALL}{SE_M_CHARGE}fishin{SE_M_SANDSTORM}buff!$"
+	.string "Well, hey! This is a match between\n"
+	.string "a POKéMON fan and a fishing buff!$"
 
 J_Route127_Text_RogerDefeat:
-	.string "No{SE_M_DRAGON_RAGE}M{SE_M_YAWN}line'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}tangled!\n"
-	.string "Th{SE_M_REVERSAL}party'{SE_M_GRASSWHISTLE}over!$"
+	.string "No! My line's all tangled!\n"
+	.string "The party's over!$"
 
 J_Route127_Text_RogerPostBattle:
-	.string "M{SE_M_YAWN}fishin{SE_M_SANDSTORM}line'{SE_M_GRASSWHISTLE}doin{SE_M_SANDSTORM}{SE_M_CHARGE}dance!\n"
-	.string "Th{SE_M_REVERSAL}tangl{SE_M_REVERSAL}tango{SE_M_DRAGON_RAGE}Hahaha{SE_M_SUPERSONIC}snarl!$"
+	.string "My fishing line's doing a dance!\n"
+	.string "The tangle tango! Hahaha, snarl!$"
 
 J_Route127_Text_AidanIntro:
-	.string "BIR{SE_M_FAINT_ATTACK}POKéMO{SE_M_PSYBEAM2}hav{SE_M_REVERSAL}excellen{SE_M_SPIT_UP}vision.\n"
-	.string "The{SE_M_YAWN}spo{SE_M_SPIT_UP}pre{SE_M_YAWN}fro{SE_M_MILK_DRINK}grea{SE_M_SPIT_UP}heights.$"
+	.string "BIRD POKéMON have excellent vision.\n"
+	.string "They spot prey from great heights.$"
 
 J_Route127_Text_AidanDefeat:
-	.string "Whew{SE_M_DIZZY_PUNCH}{SE_M_HEAL_BELL}giv{SE_M_REVERSAL}up.$"
+	.string "Whew… I give up.$"
 
 J_Route127_Text_AidanPostBattle:
-	.string "There'r{SE_M_REVERSAL}lot{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}divin{SE_M_SANDSTORM}spot{SE_M_GRASSWHISTLE}in\n"
-	.string "th{SE_M_REVERSAL}se{SE_M_CHARGE}aroun{SE_M_WATERFALL}here.\p"
-	.string "Yo{SE_M_DIVE}ca{SE_M_ATTRACT}spo{SE_M_SPIT_UP}the{SE_M_MILK_DRINK}easil{SE_M_YAWN}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}sky\n"
-	.string "becaus{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}thei{SE_M_SAND_TOMB}darke{SE_M_SAND_TOMB}color.$"
+	.string "There're lots of diving spots in\n"
+	.string "the sea around here.\p"
+	.string "You can spot them easily from the sky\n"
+	.string "because of their darker color.$"
 
 J_Route127_Text_KojiIntro:
-	.string "Ru{SE_M_ATTRACT}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}bar{SE_M_REVERSAL}feet.\n"
-	.string "Tha{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}toughe{SE_M_ATTRACT}u{SE_M_MORNING_SUN}you{SE_M_SAND_TOMB}soles!$"
+	.string "Run in your bare feet.\n"
+	.string "That will toughen up your soles!$"
 
 J_Route127_Text_KojiDefeat:
 	.string "Yowch!\n"
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}{SE_M_CHARGE}pebbl{SE_M_REVERSAL}unde{SE_M_SAND_TOMB}{SE_M_CHARGE}toenail!$"
+	.string "I got a pebble under a toenail!$"
 
 J_Route127_Text_KojiPostBattle:
-	.string "Goin{SE_M_SANDSTORM}barefoo{SE_M_SPIT_UP}feel{SE_M_GRASSWHISTLE}great.\n"
-	.string "Bu{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}RUNNIN{SE_M_SWAGGER}SHOE{SE_M_SKETCH}ar{SE_M_REVERSAL}cool{SE_M_SUPERSONIC}too.$"
+	.string "Going barefoot feels great.\n"
+	.string "But your RUNNING SHOES are cool, too.$"
 
 J_Route127_Text_KojiRegister:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}d{SE_M_ATTRACT2}t{SE_M_ATTRACT2}peopl{SE_M_REVERSAL}wh{SE_M_ATTRACT2}bea{SE_M_SPIT_UP}me!\n"
-	.string "{SE_M_HEAL_BELL}hop{SE_M_REVERSAL}w{SE_M_REVERSAL}ca{SE_M_ATTRACT}d{SE_M_ATTRACT2}thi{SE_M_GRASSWHISTLE}again.$"
+	.string "This is what I do to people who beat me!\n"
+	.string "I hope we can do this again.$"
 
 J_Route127_Text_KojiRematchIntro:
-	.string "{SE_M_HEAL_BELL}stil{SE_M_BATON_PASS}ru{SE_M_ATTRACT}i{SE_M_ATTRACT}m{SE_M_YAWN}bar{SE_M_REVERSAL}fee{SE_M_SPIT_UP}daily.\n"
-	.string "M{SE_M_YAWN}sole{SE_M_GRASSWHISTLE}ar{SE_M_REVERSAL}tough!$"
+	.string "I still run in my bare feet daily.\n"
+	.string "My soles are tough!$"
 
 J_Route127_Text_KojiRematchDefeat:
 	.string "Yowch!\n"
-	.string "Pebble{SE_M_GRASSWHISTLE}du{SE_M_SANDSTORM}int{SE_M_ATTRACT2}m{SE_M_YAWN}arches!$"
+	.string "Pebbles dug into my arches!$"
 
 J_Route127_Text_KojiPostRematch:
-	.string "Wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}barefoo{SE_M_SPIT_UP}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}while?\n"
-	.string "S{SE_M_ATTRACT2}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}tr{SE_M_YAWN}you{SE_M_SAND_TOMB}RUNNIN{SE_M_SWAGGER}SHOES?$"
+	.string "Want to go barefoot for a while?\n"
+	.string "So I can try your RUNNING SHOES?$"
 
 J_Route127_Text_AthenaIntro:
-	.string "W{SE_M_REVERSAL}shoul{SE_M_WATERFALL}hav{SE_M_REVERSAL}{SE_M_CHARGE}slo{SE_M_TWISTER}an{SE_M_WATERFALL}methodical\n"
+	.string "We should have a slow and methodical\n"
 	.string "match.$"
 
 J_Route127_Text_AthenaDefeat:
-	.string "Yo{SE_M_DIVE}didn'{SE_M_SPIT_UP}giv{SE_M_REVERSAL}m{SE_M_REVERSAL}th{SE_M_REVERSAL}chanc{SE_M_REVERSAL}to\n"
-	.string "d{SE_M_ATTRACT2}an{SE_M_YAWN}strategizing.$"
+	.string "You didn't give me the chance to\n"
+	.string "do any strategizing.$"
 
 J_Route127_Text_AthenaPostBattle:
-	.string "Whe{SE_M_ATTRACT}I'{SE_M_MILK_DRINK}surrounde{SE_M_WATERFALL}b{SE_M_YAWN}th{SE_M_REVERSAL}blu{SE_M_REVERSAL}sea\n"
-	.string "an{SE_M_WATERFALL}sky{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}feel{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}tim{SE_M_REVERSAL}slow{SE_M_GRASSWHISTLE}down.$"
+	.string "When I'm surrounded by the blue sea\n"
+	.string "and sky, it feels as if time slows down.$"
 
 J_Route128_Text_IsaiahIntro:
-	.string "EVE{SE_M_MINIMIZE}GRAND{SE_M_SWORDS_DANCE}CIT{SE_M_MOONLIGHT}i{SE_M_GRASSWHISTLE}stil{SE_M_BATON_PASS}{SE_M_CHARGE}lon{SE_M_SANDSTORM}ways\n"
+	.string "EVER GRANDE CITY is still a long ways\n"
 	.string "away…$"
 
 J_Route128_Text_IsaiahDefeat:
-	.string "M{SE_M_YAWN}firs{SE_M_SPIT_UP}victor{SE_M_YAWN}seem{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}far\n"
-	.string "away{SE_M_SUPERSONIC}too…$"
+	.string "My first victory seems to be far\n"
+	.string "away, too…$"
 
 J_Route128_Text_IsaiahPostBattle:
-	.string "M{SE_M_YAWN}whol{SE_M_REVERSAL}lif{SE_M_REVERSAL}ha{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}abou{SE_M_SPIT_UP}losing,\n"
-	.string "bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}neve{SE_M_SAND_TOMB}giv{SE_M_REVERSAL}up!$"
+	.string "My whole life has been about losing,\n"
+	.string "but I will never give up!$"
 
 J_Route128_Text_IsaiahRegister:
-	.string "{SE_M_HEAL_BELL}kno{SE_M_TWISTER}I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}goo{SE_M_WATERFALL}now{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}think\n"
-	.string "{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}wi{SE_M_ATTRACT}eventually.\p"
-	.string "Pleas{SE_M_REVERSAL}registe{SE_M_SAND_TOMB}m{SE_M_REVERSAL}i{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéNAV.$"
+	.string "I know I'm not good now, but I think\n"
+	.string "I can win eventually.\p"
+	.string "Please register me in your POKéNAV.$"
 
 J_Route128_Text_IsaiahRematchIntro:
-	.string "I'{SE_M_MILK_DRINK}stil{SE_M_BATON_PASS}feelin{SE_M_SANDSTORM}good{SE_M_PERISH_SONG}I'l{SE_M_BATON_PASS}kee{SE_M_MORNING_SUN}on\n"
-	.string "swimmin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}EVE{SE_M_MINIMIZE}GRAND{SE_M_SWORDS_DANCE}CITY.$"
+	.string "I'm still feeling good. I'll keep on\n"
+	.string "swimming to EVER GRANDE CITY.$"
 
 J_Route128_Text_IsaiahRematchDefeat:
-	.string "I'v{SE_M_REVERSAL}ye{SE_M_SPIT_UP}t{SE_M_ATTRACT2}tast{SE_M_REVERSAL}m{SE_M_YAWN}firs{SE_M_SPIT_UP}victory…$"
+	.string "I've yet to taste my first victory…$"
 
 J_Route128_Text_IsaiahPostRematch:
-	.string "I'l{SE_M_BATON_PASS}eventuall{SE_M_YAWN}reac{SE_M_TRI_ATTACK}EVE{SE_M_MINIMIZE}GRAND{SE_M_SWORDS_DANCE}CITY\n"
-	.string "wher{SE_M_REVERSAL}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}eventuall{SE_M_YAWN}win…$"
+	.string "I'll eventually reach EVER GRANDE CITY\n"
+	.string "where I can eventually win…$"
 
 J_Route128_Text_KatelynIntro:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}swim{SE_M_SUPERSONIC}cycle{SE_M_SUPERSONIC}an{SE_M_WATERFALL}the{SE_M_ATTRACT}run\n"
-	.string "{SE_M_CHARGE}maratho{SE_M_ATTRACT}i{SE_M_ATTRACT}{SE_M_CHARGE}triathlon.\p"
-	.string "It'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}gruelin{SE_M_SANDSTORM}rac{SE_M_REVERSAL}tha{SE_M_SPIT_UP}consists\n"
-	.string "o{SE_M_ACID_ARMOR}thre{SE_M_REVERSAL}events.$"
+	.string "You have to swim, cycle, and then run\n"
+	.string "a marathon in a triathlon.\p"
+	.string "It's a grueling race that consists\n"
+	.string "of three events.$"
 
 J_Route128_Text_KatelynDefeat:
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}battl{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}grueling{SE_M_SUPERSONIC}too…$"
+	.string "A POKéMON battle is grueling, too…$"
 
 J_Route128_Text_KatelynPostBattle:
-	.string "{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}rid{SE_M_REVERSAL}{SE_M_CHARGE}BIK{SE_M_SWORDS_DANCE}next{SE_M_SUPERSONIC}but…\n"
-	.string "I'{SE_M_MILK_DRINK}abou{SE_M_SPIT_UP}t{SE_M_ATTRACT2}thro{SE_M_TWISTER}i{SE_M_ATTRACT}th{SE_M_REVERSAL}towel…$"
+	.string "I have to ride a BIKE next, but…\n"
+	.string "I'm about to throw in the towel…$"
 
 J_Route128_Text_KatelynRegister:
-	.string "Well{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}ma{SE_M_YAWN}a{SE_M_GRASSWHISTLE}wel{SE_M_BATON_PASS}mak{SE_M_REVERSAL}th{SE_M_REVERSAL}best\n"
-	.string "o{SE_M_ACID_ARMOR}this{SE_M_PERISH_SONG}I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}{SE_M_CHARGE}rematc{SE_M_TRI_ATTACK}sometime.$"
+	.string "Well, I may as well make the best\n"
+	.string "of this. I'd like a rematch sometime.$"
 
 J_Route128_Text_KatelynRematchIntro:
-	.string "{SE_M_BONEMERANG}triathlo{SE_M_ATTRACT}i{SE_M_GRASSWHISTLE}long{SE_M_PERISH_SONG}Bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}the\n"
-	.string "roa{SE_M_WATERFALL}t{SE_M_ATTRACT2}becom{SE_M_REVERSAL}th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}CHAMPION\l"
-	.string "i{SE_M_GRASSWHISTLE}als{SE_M_ATTRACT2}{SE_M_CHARGE}lon{SE_M_SANDSTORM}an{SE_M_WATERFALL}gruelin{SE_M_SANDSTORM}one.$"
+	.string "A triathlon is long. But I guess the\n"
+	.string "road to become the POKéMON CHAMPION\l"
+	.string "is also a long and grueling one.$"
 
 J_Route128_Text_KatelynRematchDefeat:
-	.string "{SE_M_BONEMERANG}POKéMO{SE_M_PSYBEAM2}battl{SE_M_REVERSAL}reall{SE_M_YAWN}i{SE_M_GRASSWHISTLE}harsh\n"
-	.string "an{SE_M_WATERFALL}unforgiving…$"
+	.string "A POKéMON battle really is harsh\n"
+	.string "and unforgiving…$"
 
 J_Route128_Text_KatelynPostRematch:
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}giv{SE_M_REVERSAL}seriou{SE_M_GRASSWHISTLE}though{SE_M_SPIT_UP}to\n"
-	.string "challenge{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}VICTOR{SE_M_MOONLIGHT}ROAD.$"
+	.string "You should give serious thought to\n"
+	.string "challenges on VICTORY ROAD.$"
 
 J_Route128_Text_AlexaIntro:
-	.string "We'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}workin{SE_M_SANDSTORM}s{SE_M_ATTRACT2}har{SE_M_WATERFALL}t{SE_M_ATTRACT2}mount\n"
-	.string "{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}LEAGU{SE_M_SWORDS_DANCE}challenge…\p"
-	.string "W{SE_M_REVERSAL}can'{SE_M_SPIT_UP}affor{SE_M_WATERFALL}t{SE_M_ATTRACT2}los{SE_M_REVERSAL}now!$"
+	.string "We've been working so hard to mount\n"
+	.string "a POKéMON LEAGUE challenge…\p"
+	.string "We can't afford to lose now!$"
 
 J_Route128_Text_AlexaDefeat:
 	.string "Oh!\n"
-	.string "Ho{SE_M_TWISTER}coul{SE_M_WATERFALL}thi{SE_M_GRASSWHISTLE}happen?!$"
+	.string "How could this happen?!$"
 
 J_Route128_Text_AlexaPostBattle:
-	.string "Afte{SE_M_SAND_TOMB}al{SE_M_BATON_PASS}I'v{SE_M_REVERSAL}don{SE_M_REVERSAL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}here,\n"
-	.string "{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}giv{SE_M_REVERSAL}u{SE_M_MORNING_SUN}afte{SE_M_SAND_TOMB}on{SE_M_REVERSAL}setback.$"
+	.string "After all I've done to get here,\n"
+	.string "I won't give up after one setback.$"
 
 J_Route128_Text_RubenIntro:
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}stronge{SE_M_SAND_TOMB}TRAINE{SE_M_MINIMIZE}tha{SE_M_ATTRACT}I!$"
+	.string "There is no stronger TRAINER than I!$"
 
 J_Route128_Text_RubenDefeat:
-	.string "Thi{SE_M_GRASSWHISTLE}can'{SE_M_SPIT_UP}be!$"
+	.string "This can't be!$"
 
 J_Route128_Text_RubenPostBattle:
-	.string "Ther{SE_M_REVERSAL}probabl{SE_M_YAWN}i{SE_M_GRASSWHISTLE}n{SE_M_ATTRACT2}stronge{SE_M_SAND_TOMB}TRAINER\n"
-	.string "tha{SE_M_ATTRACT}you!$"
+	.string "There probably is no stronger TRAINER\n"
+	.string "than you!$"
 
 J_Route128_Text_WayneIntro:
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}visi{SE_M_SPIT_UP}EVE{SE_M_MINIMIZE}GRANDE{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}I\n"
-	.string "caugh{SE_M_SPIT_UP}mysel{SE_M_ACID_ARMOR}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}knows\l"
-	.string "th{SE_M_REVERSAL}mov{SE_M_REVERSAL}WATERFAL{SE_M_BRICK_BREAK}t{SE_M_ATTRACT2}cres{SE_M_SPIT_UP}th{SE_M_REVERSAL}falls.$"
+	.string "I want to visit EVER GRANDE, so I\n"
+	.string "caught myself a POKéMON that knows\l"
+	.string "the move WATERFALL to crest the falls.$"
 
 J_Route128_Text_WayneDefeat:
-	.string "I'{SE_M_MILK_DRINK}crestfallen!$"
+	.string "I'm crestfallen!$"
 
 J_Route128_Text_WaynePostBattle:
-	.string "Awww{SE_M_SUPERSONIC}phooey!\p"
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}know{SE_M_GRASSWHISTLE}WATERFALL{SE_M_SUPERSONIC}but\n"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}th{SE_M_REVERSAL}SOOTOPOLI{SE_M_SKETCH}GY{SE_M_GIGA_DRAIN}BADGE!$"
+	.string "Awww, phooey!\p"
+	.string "My POKéMON knows WATERFALL, but\n"
+	.string "I don't have the SOOTOPOLIS GYM BADGE!$"
 
 J_Route128_Text_HarrisonIntro:
-	.string "You'r{SE_M_REVERSAL}lookin{SE_M_SANDSTORM}awfull{SE_M_YAWN}tough.\n"
-	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}win?$"
+	.string "You're looking awfully tough.\n"
+	.string "I wonder if I can win?$"
 
 J_Route128_Text_HarrisonDefeat:
 	.string "Ouch!\n"
-	.string "{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}impossibl{SE_M_REVERSAL}t{SE_M_ATTRACT2}win.$"
+	.string "I guess it was impossible to win.$"
 
 J_Route128_Text_HarrisonPostBattle:
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}toug{SE_M_TRI_ATTACK}TRAINER{SE_M_SKETCH}galore\n"
-	.string "aroun{SE_M_WATERFALL}EVE{SE_M_MINIMIZE}GRANDE.\p"
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}thin{SE_M_ENCORE2}{SE_M_HEAL_BELL}ma{SE_M_YAWN}b{SE_M_REVERSAL}out\n"
-	.string "o{SE_M_ACID_ARMOR}m{SE_M_YAWN}league?$"
+	.string "There are tough TRAINERS galore\n"
+	.string "around EVER GRANDE.\p"
+	.string "Do you think I may be out\n"
+	.string "of my league?$"
 
 J_Route128_Text_CarleeIntro:
-	.string "Th{SE_M_REVERSAL}sunligh{SE_M_SPIT_UP}seem{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}mor{SE_M_REVERSAL}harsh\n"
-	.string "i{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}area.$"
+	.string "The sunlight seems to be more harsh\n"
+	.string "in this area.$"
 
 J_Route128_Text_CarleeDefeat:
-	.string "{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}se{SE_M_REVERSAL}ver{SE_M_YAWN}wel{SE_M_BATON_PASS}becaus{SE_M_REVERSAL}of\n"
-	.string "th{SE_M_REVERSAL}sun'{SE_M_GRASSWHISTLE}glare.$"
+	.string "I couldn't see very well because of\n"
+	.string "the sun's glare.$"
 
 J_Route128_Text_CarleePostBattle:
-	.string "{SE_M_HEAL_BELL}shoul{SE_M_WATERFALL}g{SE_M_ATTRACT2}bac{SE_M_ENCORE2}soon.\n"
-	.string "{SE_M_HEAL_BELL}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}reappl{SE_M_YAWN}m{SE_M_YAWN}sunscreen.$"
+	.string "I should go back soon.\n"
+	.string "I need to reapply my sunscreen.$"
 
 J_Route129_Text_ChaseIntro:
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}m{SE_M_YAWN}firs{SE_M_SPIT_UP}triathlon.\n"
-	.string "I'{SE_M_MILK_DRINK}al{SE_M_BATON_PASS}tens{SE_M_REVERSAL}an{SE_M_WATERFALL}nervous!$"
+	.string "This is my first triathlon.\n"
+	.string "I'm all tense and nervous!$"
 
 J_Route129_Text_ChaseDefeat:
 	.string "Wroooaaar!\n"
-	.string "{SE_M_HEAL_BELL}faile{SE_M_WATERFALL}t{SE_M_ATTRACT2}win!$"
+	.string "I failed to win!$"
 
 J_Route129_Text_ChasePostBattle:
-	.string "I{SE_M_ACID_ARMOR}I'{SE_M_MILK_DRINK}al{SE_M_BATON_PASS}tense{SE_M_WATERFALL}up{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}b{SE_M_REVERSAL}abl{SE_M_REVERSAL}to\n"
-	.string "giv{SE_M_REVERSAL}i{SE_M_SPIT_UP}m{SE_M_YAWN}all.$"
+	.string "If I'm all tensed up, I won't be able to\n"
+	.string "give it my all.$"
 
 J_Route129_Text_AllisonIntro:
-	.string "I'{SE_M_MILK_DRINK}i{SE_M_ATTRACT}th{SE_M_REVERSAL}middl{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}{SE_M_CHARGE}triathlon,\n"
-	.string "but{SE_M_SUPERSONIC}sure{SE_M_SUPERSONIC}wh{SE_M_YAWN}don'{SE_M_SPIT_UP}w{SE_M_REVERSAL}battle?$"
+	.string "I'm in the middle of a triathlon,\n"
+	.string "but, sure, why don't we battle?$"
 
 J_Route129_Text_AllisonDefeat:
-	.string "{SE_M_HEAL_BELL}wa{SE_M_GRASSWHISTLE}sur{SE_M_REVERSAL}I'{SE_M_WATERFALL}win!$"
+	.string "I was sure I'd win!$"
 
 J_Route129_Text_AllisonPostBattle:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}what'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}greates{SE_M_SPIT_UP}thing\n"
-	.string "abou{SE_M_SPIT_UP}triathlons?\p"
-	.string "Testin{SE_M_SANDSTORM}th{SE_M_REVERSAL}limit{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}you{SE_M_SAND_TOMB}own\n"
-	.string "strengt{SE_M_TRI_ATTACK}an{SE_M_WATERFALL}enduranc{SE_M_REVERSAL}against\l"
-	.string "Mothe{SE_M_SAND_TOMB}Nature!$"
+	.string "Do you know what's the greatest thing\n"
+	.string "about triathlons?\p"
+	.string "Testing the limits of your own\n"
+	.string "strength and endurance against\l"
+	.string "Mother Nature!$"
 
 J_Route129_Text_ReedIntro:
-	.string "Sa{SE_M_YAWN}hey{SE_M_SUPERSONIC}hey!\n"
-	.string "Let'{SE_M_GRASSWHISTLE}ge{SE_M_SPIT_UP}o{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}it!$"
+	.string "Say hey, hey!\n"
+	.string "Let's get on with it!$"
 
 J_Route129_Text_ReedDefeat:
-	.string "Beat{SE_M_SUPERSONIC}I'{SE_M_MILK_DRINK}beaten.\n"
-	.string "That'{SE_M_GRASSWHISTLE}it{SE_M_SUPERSONIC}done!$"
+	.string "Beat, I'm beaten.\n"
+	.string "That's it, done!$"
 
 J_Route129_Text_ReedPostBattle:
-	.string "There'{SE_M_GRASSWHISTLE}nothin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}loser.\n"
-	.string "Tim{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}m{SE_M_REVERSAL}t{SE_M_ATTRACT2}bea{SE_M_SPIT_UP}i{SE_M_SPIT_UP}home.$"
+	.string "There's nothing for a loser.\n"
+	.string "Time for me to beat it home.$"
 
 J_Route129_Text_TishaIntro:
-	.string "What'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}hurry?\n"
-	.string "Let'{SE_M_GRASSWHISTLE}tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}slo{SE_M_TWISTER}an{SE_M_WATERFALL}easy.$"
+	.string "What's the hurry?\n"
+	.string "Let's take it slow and easy.$"
 
 J_Route129_Text_TishaDefeat:
-	.string "Oh{SE_M_SUPERSONIC}my.\n"
-	.string "{SE_M_HEAL_BELL}wante{SE_M_WATERFALL}t{SE_M_ATTRACT2}rela{SE_M_SWEET_SCENT}{SE_M_CHARGE}littl{SE_M_REVERSAL}more…$"
+	.string "Oh, my.\n"
+	.string "I wanted to relax a little more…$"
 
 J_Route129_Text_TishaPostBattle:
-	.string "Don'{SE_M_SPIT_UP}yo{SE_M_DIVE}hat{SE_M_REVERSAL}makin{SE_M_SANDSTORM}mistake{SE_M_GRASSWHISTLE}when\n"
-	.string "you'r{SE_M_REVERSAL}i{SE_M_ATTRACT}{SE_M_CHARGE}rush?\p"
-	.string "That'{SE_M_GRASSWHISTLE}wh{SE_M_YAWN}{SE_M_HEAL_BELL}tr{SE_M_YAWN}t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}things\n"
+	.string "Don't you hate making mistakes when\n"
+	.string "you're in a rush?\p"
+	.string "That's why I try to take things\n"
 	.string "slowly.$"
 
 J_Route129_Text_ClarenceIntro:
-	.string "Surfin{SE_M_SANDSTORM}isn'{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}eas{SE_M_YAWN}a{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}seems,\n"
-	.string "isn'{SE_M_SPIT_UP}tha{SE_M_SPIT_UP}right?$"
+	.string "Surfing isn't as easy as it seems,\n"
+	.string "isn't that right?$"
 
 J_Route129_Text_ClarenceDefeat:
-	.string "Winnin{SE_M_SANDSTORM}sur{SE_M_REVERSAL}isn'{SE_M_SPIT_UP}easy.$"
+	.string "Winning sure isn't easy.$"
 
 J_Route129_Text_ClarencePostBattle:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}you{SE_M_SAND_TOMB}sight{SE_M_GRASSWHISTLE}o{SE_M_ATTRACT}th{SE_M_REVERSAL}POKéMON\n"
-	.string "LEAGUE{SE_M_SING}Kee{SE_M_MORNING_SUN}a{SE_M_SPIT_UP}it!$"
+	.string "You have your sights on the POKéMON\n"
+	.string "LEAGUE? Keep at it!$"
 
 J_Route130_Text_RodneyIntro:
-	.string "Wha{SE_M_SPIT_UP}{SE_M_CHARGE}surprise{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}didn'{SE_M_SPIT_UP}expec{SE_M_SPIT_UP}to\n"
-	.string "se{SE_M_REVERSAL}{SE_M_CHARGE}TRAINE{SE_M_MINIMIZE}ou{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}sea.\p"
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}w{SE_M_REVERSAL}shoul{SE_M_WATERFALL}battle!$"
+	.string "What a surprise! I didn't expect to\n"
+	.string "see a TRAINER out in the sea.\p"
+	.string "I think we should battle!$"
 
 J_Route130_Text_RodneyDefeat:
-	.string "Thi{SE_M_GRASSWHISTLE}kid'{SE_M_GRASSWHISTLE}awfull{SE_M_YAWN}tough…$"
+	.string "This kid's awfully tough…$"
 
 J_Route130_Text_RodneyPostBattle:
-	.string "You{SE_M_SAND_TOMB}eye{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}tha{SE_M_SPIT_UP}loo{SE_M_ENCORE2}o{SE_M_ACID_ARMOR}someone\n"
-	.string "who'{SE_M_GRASSWHISTLE}experience{SE_M_WATERFALL}hars{SE_M_TRI_ATTACK}challenges\l"
-	.string "an{SE_M_WATERFALL}won{SE_M_PERISH_SONG}I{SE_M_SPIT_UP}suit{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}well!$"
+	.string "Your eyes have that look of someone\n"
+	.string "who's experienced harsh challenges\l"
+	.string "and won. It suits you well!$"
 
 J_Route130_Text_KatieIntro:
-	.string "I{SE_M_ATTRACT}th{SE_M_REVERSAL}dee{SE_M_MORNING_SUN}blu{SE_M_REVERSAL}sea,\n"
-	.string "m{SE_M_YAWN}shattere{SE_M_WATERFALL}blu{SE_M_REVERSAL}hear{SE_M_SPIT_UP}finds\l"
-	.string "comfor{SE_M_SPIT_UP}amon{SE_M_SANDSTORM}waves.$"
+	.string "In the deep blue sea,\n"
+	.string "my shattered blue heart finds\l"
+	.string "comfort among waves.$"
 
 J_Route130_Text_KatieDefeat:
-	.string "Lik{SE_M_REVERSAL}th{SE_M_REVERSAL}vas{SE_M_SPIT_UP}blu{SE_M_REVERSAL}sea,\n"
-	.string "th{SE_M_REVERSAL}worl{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}POKéMO{SE_M_PSYBEAM2}spans\l"
-	.string "depth{SE_M_GRASSWHISTLE}beyon{SE_M_WATERFALL}belief.$"
+	.string "Like the vast blue sea,\n"
+	.string "the world of POKéMON spans\l"
+	.string "depths beyond belief.$"
 
 J_Route130_Text_KatiePostBattle:
-	.string "Th{SE_M_REVERSAL}world'{SE_M_GRASSWHISTLE}childre{SE_M_ATTRACT}dream\n"
-	.string "o{SE_M_ACID_ARMOR}on{SE_M_REVERSAL}da{SE_M_YAWN}becoming\l"
-	.string "th{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}CHAMPION.$"
+	.string "The world's children dream\n"
+	.string "of one day becoming\l"
+	.string "the POKéMON CHAMPION.$"
 
 J_Route130_Text_SantiagoIntro:
-	.string "Floatin{SE_M_SANDSTORM}o{SE_M_ATTRACT}th{SE_M_REVERSAL}ope{SE_M_ATTRACT}se{SE_M_CHARGE}lik{SE_M_REVERSAL}this…\n"
-	.string "It'{SE_M_GRASSWHISTLE}peaceful.$"
+	.string "Floating on the open sea like this…\n"
+	.string "It's peaceful.$"
 
 J_Route130_Text_SantiagoDefeat:
-	.string "{SE_M_HEAL_BELL}neede{SE_M_WATERFALL}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}{SE_M_CHARGE}littl{SE_M_REVERSAL}les{SE_M_GRASSWHISTLE}peaceful!$"
+	.string "I needed to be a little less peaceful!$"
 
 J_Route130_Text_SantiagoPostBattle:
-	.string "Swimmin{SE_M_SANDSTORM}an{SE_M_WATERFALL}battlin{SE_M_SANDSTORM}lik{SE_M_REVERSAL}this…\n"
-	.string "I'{SE_M_MILK_DRINK}on{SE_M_REVERSAL}happ{SE_M_YAWN}guy…$"
+	.string "Swimming and battling like this…\n"
+	.string "I'm one happy guy…$"
 
 J_Route131_Text_RichardIntro:
-	.string "Th{SE_M_REVERSAL}se{SE_M_CHARGE}i{SE_M_GRASSWHISTLE}teemin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}POKéMON.\n"
-	.string "It'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}eas{SE_M_YAWN}swimming{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}tel{SE_M_BATON_PASS}you.$"
+	.string "The sea is teeming with POKéMON.\n"
+	.string "It's not easy swimming, I tell you.$"
 
 J_Route131_Text_RichardDefeat:
-	.string "POKéMO{SE_M_PSYBEAM2}raise{SE_M_WATERFALL}b{SE_M_YAWN}TRAINER{SE_M_SKETCH}are\n"
-	.string "seriousl{SE_M_YAWN}tough…$"
+	.string "POKéMON raised by TRAINERS are\n"
+	.string "seriously tough…$"
 
 J_Route131_Text_RichardPostBattle:
-	.string "Gasp{SE_M_DIZZY_PUNCH}Gasp…\n"
-	.string "I'{SE_M_MILK_DRINK}wipe{SE_M_WATERFALL}out…\p"
-	.string "Th{SE_M_REVERSAL}going'{SE_M_GRASSWHISTLE}easy{SE_M_PERISH_SONG}It'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}leaving\n"
-	.string "that'{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}har{SE_M_WATERFALL}part.\p"
-	.string "Wil{SE_M_BATON_PASS}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}an{SE_M_YAWN}energ{SE_M_YAWN}lef{SE_M_SPIT_UP}t{SE_M_ATTRACT2}make\n"
-	.string "th{SE_M_REVERSAL}retur{SE_M_ATTRACT}trip?$"
+	.string "Gasp… Gasp…\n"
+	.string "I'm wiped out…\p"
+	.string "The going's easy. It's the leaving\n"
+	.string "that's the hard part.\p"
+	.string "Will I have any energy left to make\n"
+	.string "the return trip?$"
 
 J_Route131_Text_HermanIntro:
-	.string "Th{SE_M_REVERSAL}sea{SE_M_DIZZY_PUNCH}Th{SE_M_REVERSAL}sea{SE_M_DIZZY_PUNCH}Th{SE_M_REVERSAL}sea…\n"
-	.string "Th{SE_M_REVERSAL}se{SE_M_CHARGE}a{SE_M_GRASSWHISTLE}fa{SE_M_SAND_TOMB}a{SE_M_GRASSWHISTLE}thes{SE_M_REVERSAL}eye{SE_M_GRASSWHISTLE}ca{SE_M_ATTRACT}see!\l"
-	.string "I'{SE_M_MILK_DRINK}sic{SE_M_ENCORE2}an{SE_M_WATERFALL}tire{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}sea!$"
+	.string "The sea… The sea… The sea…\n"
+	.string "The sea as far as these eyes can see!\l"
+	.string "I'm sick and tired of the sea!$"
 
 J_Route131_Text_HermanDefeat:
 	.string "Bleah!$"
 
 J_Route131_Text_HermanPostBattle:
-	.string "Bore{SE_M_WATERFALL}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}b{SE_M_YAWN}th{SE_M_REVERSAL}sea{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}swi{SE_M_MILK_DRINK}{SE_M_HEAL_BELL}must.\p"
-	.string "I'{SE_M_MILK_DRINK}{SE_M_CHARGE}bor{SE_M_ATTRACT}swimmer!\n"
-	.string "That'{SE_M_GRASSWHISTLE}wha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}am.$"
+	.string "Bored I am by the sea, but swim I must.\p"
+	.string "I'm a born swimmer!\n"
+	.string "That's what I am.$"
 
 J_Route131_Text_SusieIntro:
-	.string "Hi{SE_M_SUPERSONIC}sweetie{SE_M_SUPERSONIC}wait!\n"
-	.string "W{SE_M_REVERSAL}shoul{SE_M_WATERFALL}battle{SE_M_SUPERSONIC}yo{SE_M_DIVE}an{SE_M_WATERFALL}I!$"
+	.string "Hi, sweetie, wait!\n"
+	.string "We should battle, you and I!$"
 
 J_Route131_Text_SusieDefeat:
-	.string "You'r{SE_M_REVERSAL}toug{SE_M_TRI_ATTACK}i{SE_M_ATTRACT}spit{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}way\n"
-	.string "yo{SE_M_DIVE}look!$"
+	.string "You're tough in spite of the way\n"
+	.string "you look!$"
 
 J_Route131_Text_SusiePostBattle:
-	.string "Di{SE_M_WATERFALL}yo{SE_M_DIVE}se{SE_M_REVERSAL}{SE_M_CHARGE}gu{SE_M_YAWN}ove{SE_M_SAND_TOMB}ther{SE_M_REVERSAL}wh{SE_M_ATTRACT2}whines\n"
-	.string "tha{SE_M_SPIT_UP}he'{SE_M_GRASSWHISTLE}bore{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}sea?\p"
-	.string "That'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}talk.\n"
-	.string "He'{SE_M_GRASSWHISTLE}hopelessl{SE_M_YAWN}i{SE_M_ATTRACT}lov{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}sea!$"
+	.string "Did you see a guy over there who whines\n"
+	.string "that he's bored of the sea?\p"
+	.string "That's all talk.\n"
+	.string "He's hopelessly in love with the sea!$"
 
 J_Route131_Text_KaraIntro:
-	.string "Wh{SE_M_YAWN}d{SE_M_ATTRACT2}me{SE_M_ATTRACT}lov{SE_M_REVERSAL}bathin{SE_M_SANDSTORM}suit{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}much?\p"
-	.string "The{SE_M_YAWN}al{SE_M_BATON_PASS}ogl{SE_M_REVERSAL}me!$"
+	.string "Why do men love bathing suits so much?\p"
+	.string "They all ogle me!$"
 
 J_Route131_Text_KaraDefeat:
-	.string "I'{SE_M_MILK_DRINK}ou{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}depth!$"
+	.string "I'm out of my depth!$"
 
 J_Route131_Text_KaraPostBattle:
-	.string "Mayb{SE_M_REVERSAL}it'{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}m{SE_M_YAWN}bathin{SE_M_SANDSTORM}sui{SE_M_SPIT_UP}that\n"
-	.string "make{SE_M_GRASSWHISTLE}me{SE_M_ATTRACT}look{SE_M_PERISH_SONG}I{SE_M_SPIT_UP}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}m{SE_M_YAWN}beauty!$"
+	.string "Maybe it's not my bathing suit that\n"
+	.string "makes men look. It must be my beauty!$"
 
 J_Route131_Text_ReliIntro:
-	.string "RELI{SE_M_HEAT_WAVE}We'l{SE_M_BATON_PASS}wor{SE_M_ENCORE2}togethe{SE_M_SAND_TOMB}a{SE_M_GRASSWHISTLE}siblings\n"
-	.string "t{SE_M_ATTRACT2}tak{SE_M_REVERSAL}yo{SE_M_DIVE}on!$"
+	.string "RELI: We'll work together as siblings\n"
+	.string "to take you on!$"
 
 J_Route131_Text_ReliDefeat:
-	.string "RELI{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}couldn'{SE_M_SPIT_UP}wi{SE_M_ATTRACT}eve{SE_M_ATTRACT}thoug{SE_M_TRI_ATTACK}we\n"
-	.string "worke{SE_M_WATERFALL}together…$"
+	.string "RELI: We couldn't win even though we\n"
+	.string "worked together…$"
 
 J_Route131_Text_ReliPostBattle:
-	.string "RELI{SE_M_HEAT_WAVE}Th{SE_M_REVERSAL}peopl{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}PACIFIDLO{SE_M_SWAGGER}are\n"
-	.string "togethe{SE_M_SAND_TOMB}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}se{SE_M_CHARGE}an{SE_M_WATERFALL}POKéMO{SE_M_PSYBEAM2}from\l"
-	.string "th{SE_M_REVERSAL}tim{SE_M_REVERSAL}the{SE_M_YAWN}ar{SE_M_REVERSAL}born.$"
+	.string "RELI: The people of PACIFIDLOG are\n"
+	.string "together with the sea and POKéMON from\l"
+	.string "the time they are born.$"
 
 J_Route131_Text_ReliNotEnoughMons:
-	.string "RELI{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}POKéMON?\n"
-	.string "W{SE_M_REVERSAL}can'{SE_M_SPIT_UP}enjo{SE_M_YAWN}{SE_M_CHARGE}battle{SE_M_SUPERSONIC}then.$"
+	.string "RELI: You don't have two POKéMON?\n"
+	.string "We can't enjoy a battle, then.$"
 
 J_Route131_Text_IanIntro:
-	.string "IAN{SE_M_HEAT_WAVE}I'{SE_M_MILK_DRINK}doin{SE_M_SANDSTORM}m{SE_M_YAWN}bes{SE_M_SPIT_UP}togethe{SE_M_SAND_TOMB}with\n"
-	.string "m{SE_M_YAWN}sis!$"
+	.string "IAN: I'm doing my best together with\n"
+	.string "my sis!$"
 
 J_Route131_Text_IanDefeat:
-	.string "IAN{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}di{SE_M_WATERFALL}m{SE_M_YAWN}bes{SE_M_SPIT_UP}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}sis,\n"
-	.string "bu{SE_M_SPIT_UP}w{SE_M_REVERSAL}stil{SE_M_BATON_PASS}couldn'{SE_M_SPIT_UP}win…$"
+	.string "IAN: I did my best with my sis,\n"
+	.string "but we still couldn't win…$"
 
 J_Route131_Text_IanPostBattle:
-	.string "IAN{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}kno{SE_M_TWISTER}ho{SE_M_TWISTER}PACIFIDLO{SE_M_SWAGGER}is\n"
-	.string "{SE_M_CHARGE}floatin{SE_M_SANDSTORM}town?\p"
-	.string "So{SE_M_SUPERSONIC}whereve{SE_M_SAND_TOMB}ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}sea,\n"
-	.string "that'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}par{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}PACIFIDLOG!$"
+	.string "IAN: You know how PACIFIDLOG is\n"
+	.string "a floating town?\p"
+	.string "So, wherever there is the sea,\n"
+	.string "that's a part of PACIFIDLOG!$"
 
 J_Route131_Text_IanNotEnoughMons:
-	.string "IAN{SE_M_HEAT_WAVE}I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}hav{SE_M_REVERSAL}tw{SE_M_ATTRACT2}POKéMON,\n"
-	.string "we'l{SE_M_BATON_PASS}tak{SE_M_REVERSAL}yo{SE_M_DIVE}on!$"
+	.string "IAN: If you have two POKéMON,\n"
+	.string "we'll take you on!$"
 
 J_Route131_Text_TaliaIntro:
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}ca{SE_M_ATTRACT}bea{SE_M_SPIT_UP}me{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}giv{SE_M_REVERSAL}yo{SE_M_DIVE}some\n"
-	.string "grea{SE_M_SPIT_UP}information!$"
+	.string "If you can beat me, I'll give you some\n"
+	.string "great information!$"
 
 J_Route131_Text_TaliaDefeat:
 	.string "Oh?\n"
-	.string "Di{SE_M_WATERFALL}{SE_M_HEAL_BELL}lose?$"
+	.string "Did I lose?$"
 
 J_Route131_Text_TaliaPostBattle:
-	.string "Ther{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}a{SE_M_ATTRACT}od{SE_M_WATERFALL}plac{SE_M_REVERSAL}nearby.\n"
-	.string "There'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}hug{SE_M_REVERSAL}towe{SE_M_SAND_TOMB}there.\l"
-	.string "Wh{SE_M_YAWN}don'{SE_M_SPIT_UP}yo{SE_M_DIVE}g{SE_M_ATTRACT2}tak{SE_M_REVERSAL}{SE_M_CHARGE}look?$"
+	.string "There is an odd place nearby.\n"
+	.string "There's a huge tower there.\l"
+	.string "Why don't you go take a look?$"
 
 J_Route131_Text_KevinIntro:
-	.string "Th{SE_M_REVERSAL}peopl{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}PACIFIDLO{SE_M_SWAGGER}are\n"
-	.string "{SE_M_CHARGE}peacefu{SE_M_BATON_PASS}bunch.\p"
-	.string "The{SE_M_YAWN}neve{SE_M_SAND_TOMB}ge{SE_M_SPIT_UP}angry.\n"
-	.string "Tha{SE_M_SPIT_UP}goe{SE_M_GRASSWHISTLE}fo{SE_M_SAND_TOMB}me{SE_M_SUPERSONIC}too.$"
+	.string "The people of PACIFIDLOG are\n"
+	.string "a peaceful bunch.\p"
+	.string "They never get angry.\n"
+	.string "That goes for me, too.$"
 
 J_Route131_Text_KevinDefeat:
 	.string "Oops!$"
 
 J_Route131_Text_KevinPostBattle:
-	.string "Tch{SE_M_DRAGON_RAGE}…Oh{SE_M_SUPERSONIC}wait.\n"
-	.string "I'{SE_M_MILK_DRINK}no{SE_M_SPIT_UP}angry{SE_M_PERISH_SONG}Honestly!\p"
-	.string "But{SE_M_SUPERSONIC}boy{SE_M_SUPERSONIC}you'r{SE_M_REVERSAL}strong!\n"
+	.string "Tch! …Oh, wait.\n"
+	.string "I'm not angry. Honestly!\p"
+	.string "But, boy, you're strong!\n"
 	.string "Hahaha!$"
 
 J_Route132_Text_GilbertIntro:
-	.string "{SE_M_HEAL_BELL}use{SE_M_WATERFALL}t{SE_M_ATTRACT2}catc{SE_M_TRI_ATTACK}cold{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}tim{SE_M_REVERSAL}as\n"
-	.string "{SE_M_CHARGE}kid{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}becam{SE_M_REVERSAL}totall{SE_M_YAWN}fi{SE_M_SPIT_UP}after\l"
-	.string "{SE_M_HEAL_BELL}starte{SE_M_WATERFALL}swimming.$"
+	.string "I used to catch colds all the time as\n"
+	.string "a kid, but I became totally fit after\l"
+	.string "I started swimming.$"
 
 J_Route132_Text_GilbertDefeat:
-	.string "{SE_M_HEAL_BELL}crav{SE_M_REVERSAL}mor{SE_M_REVERSAL}power…$"
+	.string "I crave more power…$"
 
 J_Route132_Text_GilbertPostBattle:
-	.string "TRAINER{SE_M_SKETCH}trave{SE_M_BATON_PASS}th{SE_M_REVERSAL}field{SE_M_GRASSWHISTLE}and\n"
-	.string "mountains{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}the{SE_M_YAWN}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}fit{SE_M_SUPERSONIC}too.$"
+	.string "TRAINERS travel the fields and\n"
+	.string "mountains, so they must be fit, too.$"
 
 J_Route132_Text_DanaIntro:
-	.string "{SE_M_HEAL_BELL}tr{SE_M_YAWN}no{SE_M_SPIT_UP}t{SE_M_ATTRACT2}swi{SE_M_MILK_DRINK}wher{SE_M_REVERSAL}th{SE_M_REVERSAL}currents\n"
-	.string "ar{SE_M_REVERSAL}to{SE_M_ATTRACT2}strong.$"
+	.string "I try not to swim where the currents\n"
+	.string "are too strong.$"
 
 J_Route132_Text_DanaDefeat:
-	.string "Oh{SE_M_SUPERSONIC}please{SE_M_SUPERSONIC}no!$"
+	.string "Oh, please, no!$"
 
 J_Route132_Text_DanaPostBattle:
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}ge{SE_M_SPIT_UP}swep{SE_M_SPIT_UP}away{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}los{SE_M_REVERSAL}al{SE_M_BATON_PASS}my\n"
-	.string "sens{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}place…$"
+	.string "If I get swept away, I'll lose all my\n"
+	.string "sense of place…$"
 
 J_Route132_Text_RonaldIntro:
-	.string "Wi{SE_M_ATTRACT}o{SE_M_SAND_TOMB}lose{SE_M_SUPERSONIC}you'l{SE_M_BATON_PASS}neve{SE_M_SAND_TOMB}kno{SE_M_TWISTER}until\n"
-	.string "yo{SE_M_DIVE}try!$"
+	.string "Win or lose, you'll never know until\n"
+	.string "you try!$"
 
 J_Route132_Text_RonaldDefeat:
 	.string "Waah!\n"
-	.string "{SE_M_HEAL_BELL}san{SE_M_ENCORE2}i{SE_M_ATTRACT}defeat!$"
+	.string "I sank in defeat!$"
 
 J_Route132_Text_RonaldPostBattle:
-	.string "{SE_M_HEAL_BELL}neve{SE_M_SAND_TOMB}battl{SE_M_REVERSAL}whe{SE_M_ATTRACT}{SE_M_HEAL_BELL}kno{SE_M_TWISTER}I'l{SE_M_BATON_PASS}win.\n"
-	.string "{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}battl{SE_M_REVERSAL}a{SE_M_SPIT_UP}th{SE_M_REVERSAL}razor'{SE_M_GRASSWHISTLE}edg{SE_M_REVERSAL}of\l"
-	.string "victor{SE_M_YAWN}an{SE_M_WATERFALL}defeat!$"
+	.string "I never battle when I know I'll win.\n"
+	.string "I like to battle at the razor's edge of\l"
+	.string "victory and defeat!$"
 
 J_Route132_Text_KiyoIntro:
-	.string "{SE_M_HEAL_BELL}contemplat{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}2{SE_M_WHIRLPOOL}hour{SE_M_GRASSWHISTLE}{SE_M_CHARGE}day.\n"
-	.string "Ho{SE_M_TWISTER}coul{SE_M_WATERFALL}yo{SE_M_DIVE}possibl{SE_M_YAWN}bea{SE_M_SPIT_UP}me?$"
+	.string "I contemplate POKéMON 24 hours a day.\n"
+	.string "How could you possibly beat me?$"
 
 J_Route132_Text_KiyoDefeat:
-	.string "{SE_M_HEAL_BELL}lose.\n"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}conced{SE_M_REVERSAL}defeat.$"
+	.string "I lose.\n"
+	.string "I will concede defeat.$"
 
 J_Route132_Text_KiyoPostBattle:
 	.string "Urggh…\n"
-	.string "You'r{SE_M_REVERSAL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}fanatic{SE_M_SUPERSONIC}aren'{SE_M_SPIT_UP}you?\p"
-	.string "Yo{SE_M_DIVE}mus{SE_M_SPIT_UP}contemplat{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}2{SE_M_WHIRLPOOL}hours\n"
-	.string "{SE_M_CHARGE}day{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}you?$"
+	.string "You're a POKéMON fanatic, aren't you?\p"
+	.string "You must contemplate POKéMON 24 hours\n"
+	.string "a day, don't you?$"
 
 J_Route132_Text_MakaylaIntro:
-	.string "I'{SE_M_MILK_DRINK}alway{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}m{SE_M_YAWN}husband,\n"
-	.string "bu{SE_M_SPIT_UP}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}wi{SE_M_ATTRACT}eve{SE_M_ATTRACT}withou{SE_M_SPIT_UP}him.$"
+	.string "I'm always with my husband,\n"
+	.string "but I can win even without him.$"
 
 J_Route132_Text_MakaylaDefeat:
-	.string "Oh{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}gues{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}wasn'{SE_M_SPIT_UP}goo{SE_M_WATERFALL}enough.$"
+	.string "Oh, I guess I wasn't good enough.$"
 
 J_Route132_Text_MakaylaPostBattle:
-	.string "Tha{SE_M_SPIT_UP}youn{SE_M_SANDSTORM}ma{SE_M_ATTRACT}ove{SE_M_SAND_TOMB}ther{SE_M_REVERSAL}look{SE_M_GRASSWHISTLE}just\n"
-	.string "lik{SE_M_REVERSAL}m{SE_M_YAWN}husban{SE_M_WATERFALL}whe{SE_M_ATTRACT}h{SE_M_REVERSAL}wa{SE_M_GRASSWHISTLE}young.\p"
-	.string "He'{SE_M_GRASSWHISTLE}makin{SE_M_SANDSTORM}m{SE_M_REVERSAL}blush!$"
+	.string "That young man over there looks just\n"
+	.string "like my husband when he was young.\p"
+	.string "He's making me blush!$"
 
 J_Route132_Text_JonathanIntro:
-	.string "Someone'{SE_M_GRASSWHISTLE}bee{SE_M_ATTRACT}watchin{SE_M_SANDSTORM}m{SE_M_REVERSAL}intently.\n"
-	.string "Wa{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}you?$"
+	.string "Someone's been watching me intently.\n"
+	.string "Was it you?$"
 
 J_Route132_Text_JonathanDefeat:
 	.string "Wow!\n"
-	.string "That'{SE_M_GRASSWHISTLE}prett{SE_M_YAWN}strong{SE_M_SUPERSONIC}al{SE_M_BATON_PASS}right!$"
+	.string "That's pretty strong, all right!$"
 
 J_Route132_Text_JonathanPostBattle:
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}shak{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}feelin{SE_M_SANDSTORM}that\n"
-	.string "someone'{SE_M_GRASSWHISTLE}watchin{SE_M_SANDSTORM}me.\p"
-	.string "{SE_M_HEAL_BELL}can'{SE_M_SPIT_UP}concentrate!$"
+	.string "I can't shake this feeling that\n"
+	.string "someone's watching me.\p"
+	.string "I can't concentrate!$"
 
 J_Route132_Text_PaxtonIntro:
-	.string "No{SE_M_TWISTER}wher{SE_M_REVERSAL}coul{SE_M_WATERFALL}m{SE_M_YAWN}wif{SE_M_REVERSAL}hav{SE_M_REVERSAL}gone?\n"
-	.string "I'{SE_M_MILK_DRINK}alway{SE_M_GRASSWHISTLE}wit{SE_M_TRI_ATTACK}her.\l"
-	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}i{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}wi{SE_M_ATTRACT}o{SE_M_ATTRACT}m{SE_M_YAWN}own.$"
+	.string "Now where could my wife have gone?\n"
+	.string "I'm always with her.\l"
+	.string "I wonder if I can win on my own.$"
 
 J_Route132_Text_PaxtonDefeat:
-	.string "Ah{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}se{SE_M_REVERSAL}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}couldn'{SE_M_SPIT_UP}manage\n"
-	.string "t{SE_M_ATTRACT2}wi{SE_M_ATTRACT}o{SE_M_ATTRACT}m{SE_M_YAWN}ow{SE_M_ATTRACT}afte{SE_M_SAND_TOMB}all.$"
+	.string "Ah, I see that I couldn't manage\n"
+	.string "to win on my own after all.$"
 
 J_Route132_Text_PaxtonPostBattle:
-	.string "M{SE_M_YAWN}wif{SE_M_REVERSAL}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}me.\n"
-	.string "I'{SE_M_WATERFALL}bes{SE_M_SPIT_UP}g{SE_M_ATTRACT2}fin{SE_M_WATERFALL}he{SE_M_SAND_TOMB}righ{SE_M_SPIT_UP}away.$"
+	.string "My wife must be looking for me.\n"
+	.string "I'd best go find her right away.$"
 
 J_Route132_Text_DarcyIntro:
-	.string "{SE_M_HEAL_BELL}like{SE_M_WATERFALL}trainin{SE_M_SANDSTORM}her{SE_M_REVERSAL}b{SE_M_YAWN}myself.\n"
-	.string "It'{SE_M_GRASSWHISTLE}awfu{SE_M_BATON_PASS}tha{SE_M_SPIT_UP}al{SE_M_BATON_PASS}thes{SE_M_REVERSAL}peopl{SE_M_REVERSAL}came!$"
+	.string "I liked training here by myself.\n"
+	.string "It's awful that all these people came!$"
 
 J_Route132_Text_DarcyDefeat:
-	.string "Okay{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}won'{SE_M_SPIT_UP}complai{SE_M_ATTRACT}abou{SE_M_SPIT_UP}other\n"
-	.string "peopl{SE_M_REVERSAL}bein{SE_M_SANDSTORM}here.$"
+	.string "Okay! I won't complain about other\n"
+	.string "people being here.$"
 
 J_Route132_Text_DarcyPostBattle:
-	.string "{SE_M_HEAL_BELL}suppos{SE_M_REVERSAL}{SE_M_HEAL_BELL}ca{SE_M_ATTRACT}partne{SE_M_SAND_TOMB}u{SE_M_MORNING_SUN}wit{SE_M_TRI_ATTACK}that\n"
-	.string "ol{SE_M_WATERFALL}ma{SE_M_ATTRACT}an{SE_M_WATERFALL}challeng{SE_M_REVERSAL}tha{SE_M_SPIT_UP}othe{SE_M_SAND_TOMB}team.$"
+	.string "I suppose I can partner up with that\n"
+	.string "old man and challenge that other team.$"
 
 J_Route133_Text_FranklinIntro:
-	.string "Di{SE_M_WATERFALL}th{SE_M_REVERSAL}current{SE_M_GRASSWHISTLE}carr{SE_M_YAWN}yo{SE_M_DIVE}here{SE_M_SUPERSONIC}too?\n"
-	.string "Thi{SE_M_GRASSWHISTLE}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}fated.\l"
-	.string "Let'{SE_M_GRASSWHISTLE}battle!$"
+	.string "Did the currents carry you here, too?\n"
+	.string "This must have been fated.\l"
+	.string "Let's battle!$"
 
 J_Route133_Text_FranklinDefeat:
 	.string "Strong!\n"
-	.string "To{SE_M_ATTRACT2}muc{SE_M_TRI_ATTACK}so!$"
+	.string "Too much so!$"
 
 J_Route133_Text_FranklinPostBattle:
-	.string "It'{SE_M_GRASSWHISTLE}jus{SE_M_SPIT_UP}m{SE_M_YAWN}luc{SE_M_ENCORE2}tha{SE_M_SPIT_UP}{SE_M_CHARGE}toug{SE_M_TRI_ATTACK}TRAINER\n"
-	.string "lik{SE_M_REVERSAL}yo{SE_M_DIVE}woul{SE_M_WATERFALL}drif{SE_M_SPIT_UP}here…\l"
-	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}b{SE_M_REVERSAL}cursed…$"
+	.string "It's just my luck that a tough TRAINER\n"
+	.string "like you would drift here…\l"
+	.string "I must be cursed…$"
 
 J_Route133_Text_DebraIntro:
-	.string "I'v{SE_M_REVERSAL}le{SE_M_WATERFALL}{SE_M_CHARGE}lif{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}wo{SE_M_REVERSAL}an{SE_M_WATERFALL}misery…\n"
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}cas{SE_M_SPIT_UP}away{SE_M_SUPERSONIC}an{SE_M_WATERFALL}thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}where\l"
-	.string "I'v{SE_M_REVERSAL}drifted…$"
+	.string "I've led a life of woe and misery…\n"
+	.string "I've been cast away, and this is where\l"
+	.string "I've drifted…$"
 
 J_Route133_Text_DebraDefeat:
-	.string "Anothe{SE_M_SAND_TOMB}loss…$"
+	.string "Another loss…$"
 
 J_Route133_Text_DebraPostBattle:
-	.string "{SE_M_BONEMERANG}lif{SE_M_REVERSAL}adrift…\n"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}wan{SE_M_SPIT_UP}i{SE_M_SPIT_UP}anymore!$"
+	.string "A life adrift…\n"
+	.string "I don't want it anymore!$"
 
 J_Route133_Text_LindaIntro:
 	.string "Welcome!\n"
-	.string "I'v{SE_M_REVERSAL}bee{SE_M_ATTRACT}expectin{SE_M_SANDSTORM}you!$"
+	.string "I've been expecting you!$"
 
 J_Route133_Text_LindaDefeat:
-	.string "No{SE_M_DRAGON_RAGE}Please!$"
+	.string "No! Please!$"
 
 J_Route133_Text_LindaPostBattle:
-	.string "{SE_M_BONEMERANG}stron{SE_M_SANDSTORM}chil{SE_M_WATERFALL}TRAINER…\n"
-	.string "That'{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}annoying!$"
+	.string "A strong child TRAINER…\n"
+	.string "That's so annoying!$"
 
 J_Route133_Text_WarrenIntro:
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}wi{SE_M_ATTRACT}lik{SE_M_REVERSAL}everyon{SE_M_REVERSAL}else{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}I\n"
-	.string "won'{SE_M_SPIT_UP}rais{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}lik{SE_M_REVERSAL}everyon{SE_M_REVERSAL}else.$"
+	.string "I want to win like everyone else, but I\n"
+	.string "won't raise POKéMON like everyone else.$"
 
 J_Route133_Text_WarrenDefeat:
-	.string "Dar{SE_M_ATTRACT}it!\n"
-	.string "M{SE_M_YAWN}wa{SE_M_YAWN}i{SE_M_GRASSWHISTLE}stil{SE_M_BATON_PASS}to{SE_M_ATTRACT2}slack!$"
+	.string "Darn it!\n"
+	.string "My way is still too slack!$"
 
 J_Route133_Text_WarrenPostBattle:
-	.string "It'{SE_M_GRASSWHISTLE}wa{SE_M_YAWN}mor{SE_M_REVERSAL}fu{SE_M_ATTRACT}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}thing{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}way\n"
-	.string "{SE_M_HEAL_BELL}wan{SE_M_SPIT_UP}tha{SE_M_ATTRACT}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}lik{SE_M_REVERSAL}everybod{SE_M_YAWN}else.\l"
-	.string "{SE_M_HEAL_BELL}mean{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}obvious!$"
+	.string "It's way more fun to do things the way\n"
+	.string "I want than to be like everybody else.\l"
+	.string "I mean, that's obvious!$"
 
 J_Route133_Text_BeckIntro:
-	.string "{SE_M_HEAL_BELL}cam{SE_M_REVERSAL}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}wa{SE_M_YAWN}ou{SE_M_SPIT_UP}her{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}my\n"
-	.string "BIR{SE_M_FAINT_ATTACK}POKéMON.$"
+	.string "I came all the way out here with my\n"
+	.string "BIRD POKéMON.$"
 
 J_Route133_Text_BeckDefeat:
 	.string "You…\n"
-	.string "You'r{SE_M_REVERSAL}stunningl{SE_M_YAWN}cool!$"
+	.string "You're stunningly cool!$"
 
 J_Route133_Text_BeckPostBattle:
-	.string "I'{SE_M_WATERFALL}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}bac{SE_M_ENCORE2}t{SE_M_ATTRACT2}FORTREE,\n"
-	.string "bu{SE_M_SPIT_UP}I'v{SE_M_REVERSAL}grow{SE_M_ATTRACT}t{SE_M_ATTRACT2}lik{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}place{SE_M_SUPERSONIC}too.$"
+	.string "I'd like to go back to FORTREE,\n"
+	.string "but I've grown to like this place, too.$"
 
 J_Route133_Text_MollieIntro:
-	.string "{SE_M_HEAL_BELL}mus{SE_M_SPIT_UP}hav{SE_M_REVERSAL}battle{SE_M_WATERFALL}thousands\n"
-	.string "o{SE_M_ACID_ARMOR}times{SE_M_PERISH_SONG}I'v{SE_M_REVERSAL}los{SE_M_SPIT_UP}count.$"
+	.string "I must have battled thousands\n"
+	.string "of times. I've lost count.$"
 
 J_Route133_Text_MollieDefeat:
-	.string "{SE_M_HEAL_BELL}ma{SE_M_YAWN}hav{SE_M_REVERSAL}los{SE_M_SPIT_UP}thousand{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}times,\n"
-	.string "bu{SE_M_SPIT_UP}{SE_M_CHARGE}los{SE_M_GRASSWHISTLE}stil{SE_M_BATON_PASS}stings.$"
+	.string "I may have lost thousands of times,\n"
+	.string "but a loss still stings.$"
 
 J_Route133_Text_MolliePostBattle:
-	.string "Kee{SE_M_MORNING_SUN}a{SE_M_SPIT_UP}this{SE_M_SUPERSONIC}youngster{SE_M_PERISH_SONG}S{SE_M_ATTRACT2}yo{SE_M_DIVE}can\n"
-	.string "becom{SE_M_REVERSAL}lik{SE_M_REVERSAL}m{SE_M_YAWN}husban{SE_M_WATERFALL}an{SE_M_WATERFALL}me.$"
+	.string "Keep at this, youngster. So you can\n"
+	.string "become like my husband and me.$"
 
 J_Route133_Text_ConorIntro:
-	.string "Youn{SE_M_SANDSTORM}peopl{SE_M_REVERSAL}ar{SE_M_REVERSAL}to{SE_M_ATTRACT2}happ{SE_M_YAWN}t{SE_M_ATTRACT2}g{SE_M_ATTRACT2}with\n"
-	.string "th{SE_M_REVERSAL}flow{SE_M_PERISH_SONG}They'r{SE_M_REVERSAL}withou{SE_M_SPIT_UP}direction.$"
+	.string "Young people are too happy to go with\n"
+	.string "the flow. They're without direction.$"
 
 J_Route133_Text_ConorDefeat:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}fir{SE_M_MILK_DRINK}sens{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}purpose.$"
+	.string "You have a firm sense of purpose.$"
 
 J_Route133_Text_ConorPostBattle:
-	.string "Don'{SE_M_SPIT_UP}le{SE_M_SPIT_UP}other{SE_M_GRASSWHISTLE}lea{SE_M_WATERFALL}yo{SE_M_DIVE}astray.\n"
-	.string "Don'{SE_M_SPIT_UP}los{SE_M_REVERSAL}directio{SE_M_ATTRACT}a{SE_M_GRASSWHISTLE}yo{SE_M_DIVE}gro{SE_M_TWISTER}older.$"
+	.string "Don't let others lead you astray.\n"
+	.string "Don't lose direction as you grow older.$"
 
 J_Route134_Text_JackIntro:
-	.string "Eve{SE_M_ATTRACT}thos{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}tha{SE_M_SPIT_UP}ca{SE_M_ATTRACT}swi{SE_M_MILK_DRINK}are\n"
-	.string "carrie{SE_M_WATERFALL}alon{SE_M_SANDSTORM}b{SE_M_YAWN}th{SE_M_REVERSAL}rapi{SE_M_WATERFALL}currents.$"
+	.string "Even those POKéMON that can swim are\n"
+	.string "carried along by the rapid currents.$"
 
 J_Route134_Text_JackDefeat:
 	.string "Aiyeeeeh!$"
 
 J_Route134_Text_JackPostBattle:
-	.string "{SE_M_HEAL_BELL}thin{SE_M_ENCORE2}POKéMO{SE_M_PSYBEAM2}enjo{SE_M_YAWN}th{SE_M_REVERSAL}fast-running\n"
-	.string "current{SE_M_GRASSWHISTLE}aroun{SE_M_WATERFALL}thes{SE_M_REVERSAL}parts.$"
+	.string "I think POKéMON enjoy the fast-running\n"
+	.string "currents around these parts.$"
 
 J_Route134_Text_LaurelIntro:
-	.string "M{SE_M_YAWN}LUVDIS{SE_M_PSYBEAM}ar{SE_M_REVERSAL}lookin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}fun\n"
-	.string "match{SE_M_PERISH_SONG}Wil{SE_M_BATON_PASS}yo{SE_M_DIVE}joi{SE_M_ATTRACT}us?$"
+	.string "My LUVDISC are looking for a fun\n"
+	.string "match. Will you join us?$"
 
 J_Route134_Text_LaurelDefeat:
 	.string "Oopsie!$"
 
 J_Route134_Text_LaurelPostBattle:
-	.string "There'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}collecto{SE_M_SAND_TOMB}who'{SE_M_GRASSWHISTLE}after\n"
-	.string "th{SE_M_REVERSAL}SCALE{SE_M_SKETCH}o{SE_M_ACID_ARMOR}LUVDISC.$"
+	.string "There's a collector who's after\n"
+	.string "the SCALES of LUVDISC.$"
 
 J_Route134_Text_AlexIntro:
-	.string "Okeydokey{SE_M_DRAGON_RAGE}That'{SE_M_GRASSWHISTLE}enoug{SE_M_TRI_ATTACK}rest{SE_M_SUPERSONIC}gang!\n"
-	.string "It'{SE_M_GRASSWHISTLE}tim{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}match!$"
+	.string "Okeydokey! That's enough rest, gang!\n"
+	.string "It's time for a match!$"
 
 J_Route134_Text_AlexDefeat:
-	.string "Tuckere{SE_M_WATERFALL}ou{SE_M_SPIT_UP}again…$"
+	.string "Tuckered out again…$"
 
 J_Route134_Text_AlexPostBattle:
-	.string "M{SE_M_YAWN}BIR{SE_M_FAINT_ATTACK}POKéMO{SE_M_PSYBEAM2}ge{SE_M_SPIT_UP}tire{SE_M_WATERFALL}quickl{SE_M_YAWN}after\n"
-	.string "{SE_M_CHARGE}lon{SE_M_SANDSTORM}flight…$"
+	.string "My BIRD POKéMON get tired quickly after\n"
+	.string "a long flight…$"
 
 J_Route134_Text_HitoshiIntro:
-	.string "You'r{SE_M_REVERSAL}{SE_M_CHARGE}POKéMO{SE_M_PSYBEAM2}TRAINER.\n"
-	.string "N{SE_M_ATTRACT2}nee{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}words{SE_M_PERISH_SONG}W{SE_M_REVERSAL}battl{SE_M_REVERSAL}now.$"
+	.string "You're a POKéMON TRAINER.\n"
+	.string "No need for words. We battle now.$"
 
 J_Route134_Text_HitoshiDefeat:
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}…$"
+	.string "… … … … … …\n"
+	.string "… … … … … …$"
 
 J_Route134_Text_HitoshiPostBattle:
-	.string "I{SE_M_SPIT_UP}wa{SE_M_GRASSWHISTLE}{SE_M_HEAL_BELL}wh{SE_M_ATTRACT2}challenge{SE_M_WATERFALL}you{SE_M_SUPERSONIC}an{SE_M_WATERFALL}yet\n"
-	.string "{SE_M_HEAL_BELL}lost{SE_M_PERISH_SONG}{SE_M_HEAL_BELL}a{SE_M_MILK_DRINK}deepl{SE_M_YAWN}shamed…$"
+	.string "It was I who challenged you, and yet\n"
+	.string "I lost. I am deeply shamed…$"
 
 J_Route134_Text_AaronIntro:
-	.string "Th{SE_M_REVERSAL}savag{SE_M_REVERSAL}tid{SE_M_REVERSAL}i{SE_M_ATTRACT}thi{SE_M_GRASSWHISTLE}are{SE_M_CHARGE}serve{SE_M_GRASSWHISTLE}to\n"
-	.string "mak{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}stronge{SE_M_SAND_TOMB}tha{SE_M_ATTRACT}ever.$"
+	.string "The savage tide in this area serves to\n"
+	.string "make us stronger than ever.$"
 
 J_Route134_Text_AaronDefeat:
-	.string "{SE_M_HEAL_BELL}willingl{SE_M_YAWN}conced{SE_M_REVERSAL}defeat.$"
+	.string "I willingly concede defeat.$"
 
 J_Route134_Text_AaronPostBattle:
-	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}retur{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}mor{SE_M_REVERSAL}trainin{SE_M_SANDSTORM}at\n"
-	.string "METEO{SE_M_MINIMIZE}FALLS.\p"
-	.string "I{SE_M_ACID_ARMOR}you'{SE_M_WATERFALL}like{SE_M_SUPERSONIC}yo{SE_M_DIVE}shoul{SE_M_WATERFALL}go{SE_M_SUPERSONIC}too.\n"
-	.string "I{SE_M_SPIT_UP}wil{SE_M_BATON_PASS}definitel{SE_M_YAWN}toughe{SE_M_ATTRACT}yo{SE_M_DIVE}up!$"
+	.string "We will return for more training at\n"
+	.string "METEOR FALLS.\p"
+	.string "If you'd like, you should go, too.\n"
+	.string "It will definitely toughen you up!$"
 
 J_Route134_Text_KelvinIntro:
-	.string "O-ou{SE_M_SAND_TOMB}boat!\n"
-	.string "Th{SE_M_REVERSAL}tid{SE_M_REVERSAL}carrie{SE_M_WATERFALL}i{SE_M_SPIT_UP}away!$"
+	.string "O-our boat!\n"
+	.string "The tide carried it away!$"
 
 J_Route134_Text_KelvinDefeat:
 	.string "Awawawawah!\n"
-	.string "Please{SE_M_SUPERSONIC}stop{SE_M_DRAGON_RAGE}Please!$"
+	.string "Please, stop! Please!$"
 
 J_Route134_Text_KelvinPostBattle:
-	.string "I{SE_M_ACID_ARMOR}w{SE_M_REVERSAL}can'{SE_M_SPIT_UP}SURF{SE_M_SUPERSONIC}ho{SE_M_TWISTER}ar{SE_M_REVERSAL}w{SE_M_REVERSAL}supposed\n"
-	.string "t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}home?\p"
-	.string "Actually{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}kno{SE_M_TWISTER}{SE_M_CHARGE}fainte{SE_M_WATERFALL}POKéMON\n"
-	.string "ca{SE_M_ATTRACT}stil{SE_M_BATON_PASS}SURF{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}i{SE_M_SPIT_UP}feel{SE_M_GRASSWHISTLE}wrong.$"
+	.string "If we can't SURF, how are we supposed\n"
+	.string "to get home?\p"
+	.string "Actually, I know a fainted POKéMON\n"
+	.string "can still SURF, but it feels wrong.$"
 
 J_Route134_Text_MarleyIntro:
-	.string "Ca{SE_M_ATTRACT}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}dodg{SE_M_REVERSAL}our\n"
-	.string "lightning-quic{SE_M_ENCORE2}attacks?$"
+	.string "Can your POKéMON dodge our\n"
+	.string "lightning-quick attacks?$"
 
 J_Route134_Text_MarleyDefeat:
-	.string "{SE_M_HEAL_BELL}neve{SE_M_SAND_TOMB}kne{SE_M_TWISTER}suc{SE_M_TRI_ATTACK}{SE_M_CHARGE}techniqu{SE_M_REVERSAL}existed!\n"
-	.string "You'v{SE_M_REVERSAL}defeate{SE_M_WATERFALL}u{SE_M_GRASSWHISTLE}thoroughly.$"
+	.string "I never knew such a technique existed!\n"
+	.string "You've defeated us thoroughly.$"
 
 J_Route134_Text_MarleyPostBattle:
-	.string "{SE_M_HEAL_BELL}haven'{SE_M_SPIT_UP}los{SE_M_SPIT_UP}m{SE_M_YAWN}passio{SE_M_ATTRACT}fo{SE_M_SAND_TOMB}speed.\n"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}tr{SE_M_YAWN}harder.$"
+	.string "I haven't lost my passion for speed.\n"
+	.string "I will try harder.$"
 
 J_Route134_Text_ReynaIntro:
-	.string "M{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}take{SE_M_ATTRACT}down\n"
+	.string "My POKéMON can't be taken down\n"
 	.string "easily!$"
 
 J_Route134_Text_ReynaDefeat:
-	.string "You'r{SE_M_REVERSAL}kidding!\n"
-	.string "Explai{SE_M_ATTRACT}ho{SE_M_TWISTER}{SE_M_HEAL_BELL}lost!$"
+	.string "You're kidding!\n"
+	.string "Explain how I lost!$"
 
 J_Route134_Text_ReynaPostBattle:
 	.string "Haha!\n"
-	.string "Yo{SE_M_DIVE}won{SE_M_SUPERSONIC}al{SE_M_BATON_PASS}right!\p"
-	.string "I'l{SE_M_BATON_PASS}wor{SE_M_ENCORE2}m{SE_M_YAWN}wa{SE_M_YAWN}bac{SE_M_ENCORE2}u{SE_M_MORNING_SUN}b{SE_M_YAWN}takin{SE_M_SANDSTORM}on\n"
-	.string "TRAINER{SE_M_SKETCH}{SE_M_HEAL_BELL}happe{SE_M_ATTRACT}t{SE_M_ATTRACT2}meet!$"
+	.string "You won, all right!\p"
+	.string "I'll work my way back up by taking on\n"
+	.string "TRAINERS I happen to meet!$"
 
 J_Route134_Text_HudsonIntro:
-	.string "Listen{SE_M_SUPERSONIC}hav{SE_M_REVERSAL}yo{SE_M_DIVE}see{SE_M_ATTRACT}anothe{SE_M_SAND_TOMB}SAILOR\n"
-	.string "aroun{SE_M_WATERFALL}here?$"
+	.string "Listen, have you seen another SAILOR\n"
+	.string "around here?$"
 
 J_Route134_Text_HudsonDefeat:
-	.string "Now{SE_M_SUPERSONIC}that'{SE_M_GRASSWHISTLE}something!$"
+	.string "Now, that's something!$"
 
 J_Route134_Text_HudsonPostBattle:
-	.string "Ou{SE_M_SAND_TOMB}boa{SE_M_SPIT_UP}drifte{SE_M_WATERFALL}ou{SE_M_SPIT_UP}t{SE_M_ATTRACT2}sea.\p"
-	.string "M{SE_M_YAWN}buddy'{SE_M_GRASSWHISTLE}{SE_M_CHARGE}timi{SE_M_WATERFALL}fellow{SE_M_SUPERSONIC}s{SE_M_ATTRACT2}I'm\n"
-	.string "worrie{SE_M_WATERFALL}abou{SE_M_SPIT_UP}him.$"
+	.string "Our boat drifted out to sea.\p"
+	.string "My buddy's a timid fellow, so I'm\n"
+	.string "worried about him.$"
 
 J_VSSeeker_Text_BatteryNotChargedNeedXSteps::
-	.string "Th{SE_M_REVERSAL}batter{SE_M_YAWN}isn'{SE_M_SPIT_UP}charge{SE_M_WATERFALL}enough.\p"
-	.string "No{SE_M_PERISH_SONG}o{SE_M_ACID_ARMOR}step{SE_M_GRASSWHISTLE}require{SE_M_WATERFALL}t{SE_M_ATTRACT2}fully\n"
-	.string "charg{SE_M_REVERSAL}th{SE_M_REVERSAL}battery{SE_M_HEAT_WAVE}{STR_VAR_1}{PAUSE_UNTIL_PRESS}$"
+	.string "The battery isn't charged enough.\p"
+	.string "No. of steps required to fully\n"
+	.string "charge the battery: {STR_VAR_1}{PAUSE_UNTIL_PRESS}$"
 
 J_VSSeeker_Text_NoTrainersWithinRange::
-	.string "Ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}n{SE_M_ATTRACT2}Trainer{SE_M_GRASSWHISTLE}withi{SE_M_ATTRACT}range\n"
-	.string "wh{SE_M_ATTRACT2}ca{SE_M_ATTRACT}battle…\p"
-	.string "Th{SE_M_REVERSAL}V{SE_M_SKETCH}Seeke{SE_M_SAND_TOMB}wa{SE_M_GRASSWHISTLE}turne{SE_M_WATERFALL}off.{PAUSE_UNTIL_PRESS}$"
+	.string "There are no Trainers within range\n"
+	.string "who can battle…\p"
+	.string "The VS Seeker was turned off.{PAUSE_UNTIL_PRESS}$"
 
 J_VSSeeker_Text_TrainersNotReady::
 	.byte 0xCE, 0xDC, 0xD9, 0x00, 0xE3, 0xE8, 0xDC, 0xD9, 0xE6, 0x00, 0xCE, 0xE6, 0xD5, 0xDD, 0xE2, 0xD9, 0xE6, 0xE7, 0x00, 0xD8, 0xE3, 0xE2, 0xB4, 0xE8, 0x00, 0xD5, 0xE4, 0xE4, 0xD9, 0xD5, 0xE6, 0xFE

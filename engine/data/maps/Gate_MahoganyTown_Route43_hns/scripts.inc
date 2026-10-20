@@ -13,10 +13,10 @@ Gate_MahoganyTown_Route43_EventScript_CopAfter::
 	end
 
 Route43MahoganyGate_Text_Officer:
-	.string "Onl{SE_M_YAWN}peopl{SE_M_REVERSAL}heade{SE_M_WATERFALL}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}LAK{SE_M_SWORDS_DANCE}OF\n"
-	.string "RAG{SE_M_SWORDS_DANCE}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}throug{SE_M_TRI_ATTACK}her{SE_M_REVERSAL}lately.$"
+	.string "Only people headed up to LAKE OF\n"
+	.string "RAGE have been through here lately.$"
 
 Route43MahoganyGate_Text_Officer_RocketsCleared:
-	.string "Nobod{SE_M_YAWN}goe{SE_M_GRASSWHISTLE}u{SE_M_MORNING_SUN}t{SE_M_ATTRACT2}LAK{SE_M_SWORDS_DANCE}O{SE_M_LEER}RAGE\n"
-	.string "thes{SE_M_REVERSAL}days.$"
+	.string "Nobody goes up to LAKE OF RAGE\n"
+	.string "these days.$"
 

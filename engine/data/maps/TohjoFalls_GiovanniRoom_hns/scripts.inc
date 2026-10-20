@@ -24,8 +24,8 @@ TohjoFalls_GiovanniRoom_EventScript_Radio::
 	end
 
 TohjoFalls_GiovanniRoom_Text_RadioObject::
-	.string "{SE_M_BONEMERANG}radio...\n"
-	.string "Th{SE_M_REVERSAL}batter{SE_M_YAWN}i{SE_M_GRASSWHISTLE}dead...$"
+	.string "A radio...\n"
+	.string "The battery is dead...$"
 
 TohjoFalls_GiovanniRoom_CancelScene::
 	setvar JOHTO_VAR_TOHJO_FALLS_GIOVANNI_STATE, 0
@@ -191,46 +191,46 @@ TohjoFalls_Movement_GiovanniLeave:
 	step_end
 
 TohjoFalls_GiovanniRoom_Text_Radio:
-	.string "RADIO{SE_M_HEAT_WAVE}..{SE_M_PERISH_SONG}...\n"
-	.string "Ahem{SE_M_SUPERSONIC}w{SE_M_REVERSAL}ar{SE_M_REVERSAL}TEA{SE_M_GIGA_DRAIN}ROCKET!\l"
-	.string "Afte{SE_M_SAND_TOMB}thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}preparation,\l"
-	.string "w{SE_M_REVERSAL}hav{SE_M_REVERSAL}rise{SE_M_ATTRACT}agai{SE_M_ATTRACT}fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}ashes!\l"
-	.string "GIOVANNI{SE_M_DRAGON_RAGE}Ca{SE_M_ATTRACT}yo{SE_M_DIVE}hea{SE_M_SAND_TOMB}us?\l"
-	.string "W{SE_M_REVERSAL}di{SE_M_WATERFALL}it!\l"
-	.string "Wher{SE_M_REVERSAL}i{SE_M_GRASSWHISTLE}ou{SE_M_SAND_TOMB}boss?\l"
-	.string "I{SE_M_GRASSWHISTLE}h{SE_M_REVERSAL}listening?$"
+	.string "RADIO: ... ...\n"
+	.string "Ahem, we are TEAM ROCKET!\l"
+	.string "After three years of preparation,\l"
+	.string "we have risen again from the ashes!\l"
+	.string "GIOVANNI! Can you hear us?\l"
+	.string "We did it!\l"
+	.string "Where is our boss?\l"
+	.string "Is he listening?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniIntro:
-	.string "GIOVANNI{SE_M_HEAT_WAVE}...\p"
-	.string "{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}kno{SE_M_TWISTER}wh{SE_M_YAWN}yo{SE_M_DIVE}hav{SE_M_REVERSAL}come\n"
+	.string "GIOVANNI: ...\p"
+	.string "I don't know why you have come\n"
 	.string "here.\p"
-	.string "Anyway{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}war{SE_M_ATTRACT}yo{SE_M_DIVE}that\n"
-	.string "thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}no{SE_M_SPIT_UP}{SE_M_CHARGE}plac{SE_M_REVERSAL}fo{SE_M_SAND_TOMB}kid{SE_M_GRASSWHISTLE}like\l"
+	.string "Anyway, I have to warn you that\n"
+	.string "this is not a place for kids like\l"
 	.string "you.\p"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}{SE_M_CHARGE}certai{SE_M_ATTRACT}look.\n"
-	.string "I{SE_M_SPIT_UP}remind{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}ki{SE_M_WATERFALL}wh{SE_M_ATTRACT2}stood\l"
-	.string "i{SE_M_ATTRACT}fron{SE_M_SPIT_UP}o{SE_M_ACID_ARMOR}m{SE_M_REVERSAL}thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}ago...\p"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}th{SE_M_REVERSAL}sam{SE_M_REVERSAL}eyes...\p"
+	.string "You have a certain look.\n"
+	.string "It reminds me of the kid who stood\l"
+	.string "in front of me three years ago...\p"
+	.string "You have the same eyes...\p"
 	.string "...\p"
-	.string "I'{SE_M_MILK_DRINK}o{SE_M_ATTRACT}m{SE_M_YAWN}wa{SE_M_YAWN}t{SE_M_ATTRACT2}GOLDENRO{SE_M_FAINT_ATTACK}CITY\n"
-	.string "t{SE_M_ATTRACT2}answe{SE_M_SAND_TOMB}th{SE_M_REVERSAL}cal{SE_M_BATON_PASS}an{SE_M_WATERFALL}joi{SE_M_ATTRACT}m{SE_M_YAWN}team.\l"
-	.string "Ar{SE_M_REVERSAL}yo{SE_M_DIVE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}i{SE_M_ATTRACT}m{SE_M_YAWN}way?$"
+	.string "I'm on my way to GOLDENROD CITY\n"
+	.string "to answer the call and join my team.\l"
+	.string "Are you going to get in my way?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniBeforeBattle:
-	.string "M{SE_M_YAWN}ol{SE_M_WATERFALL}associate{SE_M_GRASSWHISTLE}nee{SE_M_WATERFALL}me...\n"
-	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}no{SE_M_SPIT_UP}repea{SE_M_SPIT_UP}th{SE_M_REVERSAL}failur{SE_M_REVERSAL}of\l"
-	.string "thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}ago!$"
+	.string "My old associates need me...\n"
+	.string "We will not repeat the failure of\l"
+	.string "three years ago!$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniDefeat:
-	.string "Wha{SE_M_SPIT_UP}i{SE_M_ATTRACT}th{SE_M_REVERSAL}worl{SE_M_WATERFALL}ar{SE_M_REVERSAL}you?$"
+	.string "What in the world are you?$"
 
 TohjoFalls_GiovanniRoom_Text_GiovanniAfter:
-	.string "GIOVANNI{SE_M_HEAT_WAVE}Ho{SE_M_TWISTER}i{SE_M_GRASSWHISTLE}thi{SE_M_GRASSWHISTLE}possible...?\n"
-	.string "Th{SE_M_REVERSAL}pas{SE_M_SPIT_UP}thre{SE_M_REVERSAL}year{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}bee{SE_M_ATTRACT}a\l"
+	.string "GIOVANNI: How is this possible...?\n"
+	.string "The past three years have been a\l"
 	.string "waste...?\p"
-	.string "Ho{SE_M_TWISTER}ca{SE_M_ATTRACT}{SE_M_CHARGE}ki{SE_M_WATERFALL}lik{SE_M_REVERSAL}yo{SE_M_DIVE}manag{SE_M_REVERSAL}to\n"
-	.string "destro{SE_M_YAWN}m{SE_M_YAWN}drea{SE_M_MILK_DRINK}onc{SE_M_REVERSAL}again?\p"
-	.string "Th{SE_M_REVERSAL}preciou{SE_M_GRASSWHISTLE}drea{SE_M_MILK_DRINK}o{SE_M_ACID_ARMOR}TEA{SE_M_GIGA_DRAIN}ROCKET\n"
-	.string "ha{SE_M_GRASSWHISTLE}becom{SE_M_REVERSAL}littl{SE_M_REVERSAL}mor{SE_M_REVERSAL}tha{SE_M_ATTRACT}an\l"
+	.string "How can a kid like you manage to\n"
+	.string "destroy my dream once again?\p"
+	.string "The precious dream of TEAM ROCKET\n"
+	.string "has become little more than an\l"
 	.string "illusion...$"
 

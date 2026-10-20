@@ -39,16 +39,16 @@ MtMortar_2F_EventScript_Nerd::
 	end
 
 MtMortar_2F_Text_SupernerdHughSeen::
-	.string "Yo{SE_M_DRAGON_RAGE}MARKUS!$"
+	.string "Yo! MARKUS!$"
 
 MtMortar_2F_Text_SupernerdHughBeaten:
-	.string "Sorry{SE_M_SUPERSONIC}m{SE_M_YAWN}mistake.\n"
-	.string "{SE_M_HEAL_BELL}misjudge{SE_M_WATERFALL}you.$"
+	.string "Sorry, my mistake.\n"
+	.string "I misjudged you.$"
 
 MtMortar_2F_Text_SupernerdHughAfter:
-	.string "I'{SE_M_MILK_DRINK}investigatin{SE_M_SANDSTORM}MT.MORTAR,\n"
-	.string "bu{SE_M_SPIT_UP}m{SE_M_YAWN}pal'{SE_M_GRASSWHISTLE}gon{SE_M_REVERSAL}AWOL.\p"
-	.string "Hav{SE_M_REVERSAL}yo{SE_M_DIVE}see{SE_M_ATTRACT}{SE_M_CHARGE}traine{SE_M_SAND_TOMB}who\n"
-	.string "ha{SE_M_GRASSWHISTLE}{SE_M_CHARGE}SLOWPOK{SE_M_SWORDS_DANCE}tha{SE_M_SPIT_UP}ca{SE_M_ATTRACT}use\l"
+	.string "I'm investigating MT.MORTAR,\n"
+	.string "but my pal's gone AWOL.\p"
+	.string "Have you seen a trainer who\n"
+	.string "has a SLOWPOKE that can use\l"
 	.string "STRENGTH?$"
 

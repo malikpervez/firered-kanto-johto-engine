@@ -75,46 +75,46 @@ AzaleaTown_House1_EventScript_Farfetchd::
 	end
 
 CharcoalKiln_Text_Boss1:
-	.string "Al{SE_M_BATON_PASS}th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}hav{SE_M_REVERSAL}disappeared\n"
-	.string "fro{SE_M_MILK_DRINK}th{SE_M_REVERSAL}town.\p"
-	.string "Th{SE_M_REVERSAL}forest'{SE_M_GRASSWHISTLE}protecto{SE_M_SAND_TOMB}ma{SE_M_YAWN}be\n"
-	.string "angr{SE_M_YAWN}wit{SE_M_TRI_ATTACK}us…\p"
-	.string "I{SE_M_SPIT_UP}ma{SE_M_YAWN}b{SE_M_REVERSAL}{SE_M_CHARGE}ba{SE_M_WATERFALL}omen{SE_M_PERISH_SONG}W{SE_M_REVERSAL}should\n"
-	.string "sta{SE_M_YAWN}in.$"
+	.string "All the SLOWPOKE have disappeared\n"
+	.string "from the town.\p"
+	.string "The forest's protector may be\n"
+	.string "angry with us…\p"
+	.string "It may be a bad omen. We should\n"
+	.string "stay in.$"
 
 CharcoalKiln_Text_Boss2:
-	.string "Th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}hav{SE_M_REVERSAL}returned…$"
+	.string "The SLOWPOKE have returned…$"
 
 CharcoalKiln_Text_Boss3:
-	.string "Th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}hav{SE_M_REVERSAL}returned…\p"
-	.string "Bu{SE_M_SPIT_UP}m{SE_M_YAWN}APPRENTIC{SE_M_SWORDS_DANCE}hasn'{SE_M_SPIT_UP}com{SE_M_REVERSAL}back\n"
-	.string "fro{SE_M_MILK_DRINK}ILE{SE_M_LOCK_ON}FOREST.\p"
-	.string "Wher{SE_M_REVERSAL}i{SE_M_ATTRACT}th{SE_M_REVERSAL}worl{SE_M_WATERFALL}i{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}laz{SE_M_YAWN}guy?$"
+	.string "The SLOWPOKE have returned…\p"
+	.string "But my APPRENTICE hasn't come back\n"
+	.string "from ILEX FOREST.\p"
+	.string "Where in the world is that lazy guy?$"
 
 CharcoalKiln_Text_Boss4:
-	.string "Yo{SE_M_DIVE}chase{SE_M_WATERFALL}of{SE_M_ACID_ARMOR}TEA{SE_M_GIGA_DRAIN}ROCKE{SE_M_SWIFT}and\n"
-	.string "wen{SE_M_SPIT_UP}t{SE_M_ATTRACT2}ILE{SE_M_LOCK_ON}FORES{SE_M_SWIFT}alone?\p"
-	.string "Tha{SE_M_SPIT_UP}take{SE_M_GRASSWHISTLE}guts{SE_M_DRAGON_RAGE}{SE_M_HEAL_BELL}lik{SE_M_REVERSAL}that.\n"
-	.string "Com{SE_M_REVERSAL}trai{SE_M_ATTRACT}wit{SE_M_TRI_ATTACK}us.$"
+	.string "You chased off TEAM ROCKET and\n"
+	.string "went to ILEX FOREST alone?\p"
+	.string "That takes guts! I like that.\n"
+	.string "Come train with us.$"
 
 CharcoalKiln_Text_Apprentice1:
-	.string "Wher{SE_M_REVERSAL}hav{SE_M_REVERSAL}al{SE_M_BATON_PASS}th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}gone?\p"
-	.string "Ar{SE_M_REVERSAL}the{SE_M_YAWN}ou{SE_M_SPIT_UP}playin{SE_M_SANDSTORM}somewhere?$"
+	.string "Where have all the SLOWPOKE gone?\p"
+	.string "Are they out playing somewhere?$"
 
 CharcoalKiln_Text_Apprentice2:
-	.string "Th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}cam{SE_M_REVERSAL}back!$"
+	.string "The SLOWPOKE came back!$"
 
 CharcoalKiln_Text_Apprentice3:
-	.string "I'{SE_M_MILK_DRINK}sorry--{SE_M_HEAL_BELL}forgo{SE_M_SPIT_UP}t{SE_M_ATTRACT2}than{SE_M_ENCORE2}you.\p"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}CHARCOA{SE_M_BRICK_BREAK}tha{SE_M_SPIT_UP}{SE_M_HEAL_BELL}made.\p"
-	.string "FIRE-typ{SE_M_REVERSAL}POKéMO{SE_M_PSYBEAM2}woul{SE_M_WATERFALL}b{SE_M_REVERSAL}happy\n"
-	.string "t{SE_M_ATTRACT2}hol{SE_M_WATERFALL}that.$"
+	.string "I'm sorry--I forgot to thank you.\p"
+	.string "This is CHARCOAL that I made.\p"
+	.string "FIRE-type POKéMON would be happy\n"
+	.string "to hold that.$"
 
 CharcoalKiln_Text_Apprentice4:
-	.string "Th{SE_M_REVERSAL}SLOWPOK{SE_M_SWORDS_DANCE}cam{SE_M_REVERSAL}back{SE_M_SUPERSONIC}an{SE_M_WATERFALL}yo{SE_M_DIVE}even\n"
-	.string "foun{SE_M_WATERFALL}FARFETCH'D.\p"
-	.string "You'r{SE_M_REVERSAL}th{SE_M_REVERSAL}coolest{SE_M_SUPERSONIC}man!$"
+	.string "The SLOWPOKE came back, and you even\n"
+	.string "found FARFETCH'D.\p"
+	.string "You're the coolest, man!$"
 
 CharcoalKiln_Text_Farfetchd:
-	.string "FARFETCH'D{SE_M_HEAT_WAVE}Kwaa!$"
+	.string "FARFETCH'D: Kwaa!$"
 

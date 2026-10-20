@@ -90,7 +90,7 @@ J_EventScript_TryDarkenRuins::
 	return
 
 J_Text_MonFlewAway::
-	.string "Th{SE_M_REVERSAL}{STR_VAR_1} fle{SE_M_TWISTER}away!$"
+	.string "The {STR_VAR_1} flew away!$"
 
 J_Text_Gyaoo::
 	.string "Gyaoo!$"

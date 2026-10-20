@@ -72,40 +72,40 @@ Gate_Route43_Rocket_EventScript_Rockets::
 	end
 
 Gate_Route43_Rocket_Text_TollFee:
-	.string "Hol{SE_M_WATERFALL}i{SE_M_SPIT_UP}there{SE_M_SUPERSONIC}kiddo!\p"
-	.string "Th{SE_M_REVERSAL}tol{SE_M_BATON_PASS}i{SE_M_GRASSWHISTLE}¥50{SE_M_BITE}t{SE_M_ATTRACT2}go\n"
+	.string "Hold it there, kiddo!\p"
+	.string "The toll is ¥500 to go\n"
 	.string "through.$"
 
 Gate_Route43_Rocket_Text_ThankYou:
-	.string "Than{SE_M_ENCORE2}yo{SE_M_DIVE}ver{SE_M_YAWN}much!$"
+	.string "Thank you very much!$"
 
 Gate_Route43_Rocket_Text_AllYouGot:
-	.string "The{SE_M_ATTRACT}pa{SE_M_YAWN}wha{SE_M_SPIT_UP}yo{SE_M_DIVE}have{SE_M_SUPERSONIC}please.$"
+	.string "Then pay what you have, please.$"
 
 Gate_Route43_Rocket_Text_KickOut:
 	.string "Wow!\p"
-	.string "You'r{SE_M_REVERSAL}totall{SE_M_YAWN}broke!\p"
-	.string "{SE_M_HEAL_BELL}almos{SE_M_SPIT_UP}fee{SE_M_BATON_PASS}sorr{SE_M_YAWN}fo{SE_M_SAND_TOMB}you.\p"
-	.string "Okay{SE_M_SUPERSONIC}yo{SE_M_DIVE}ca{SE_M_ATTRACT}pass...\p"
-	.string "Jus{SE_M_SPIT_UP}don'{SE_M_SPIT_UP}tel{SE_M_BATON_PASS}th{SE_M_REVERSAL}othe{SE_M_SAND_TOMB}guard,\n"
+	.string "You're totally broke!\p"
+	.string "I almost feel sorry for you.\p"
+	.string "Okay, you can pass...\p"
+	.string "Just don't tell the other guard,\n"
 	.string "okay?$"
 
 Gate_Route43_Rocket_Text_MakingABundle:
-	.string "He-he-he{SE_M_PERISH_SONG}We'r{SE_M_REVERSAL}makin{SE_M_SANDSTORM}{SE_M_CHARGE}bundle.\p"
-	.string "Everyon{SE_M_REVERSAL}want{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}se{SE_M_REVERSAL}what'{SE_M_GRASSWHISTLE}going\n"
-	.string "o{SE_M_ATTRACT}u{SE_M_MORNING_SUN}a{SE_M_SPIT_UP}LAK{SE_M_SWORDS_DANCE}O{SE_M_LEER}RAGE.$"
+	.string "He-he-he. We're making a bundle.\p"
+	.string "Everyone wants to see what's going\n"
+	.string "on up at LAKE OF RAGE.$"
 
 Route43Gate_Text_OfficerFoundTM:
-	.string "{SE_M_HEAL_BELL}go{SE_M_SPIT_UP}chase{SE_M_WATERFALL}fro{SE_M_MILK_DRINK}m{SE_M_YAWN}pos{SE_M_SPIT_UP}b{SE_M_YAWN}these\n"
-	.string "thug{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}black.\p"
-	.string "The{SE_M_YAWN}lef{SE_M_SPIT_UP}thi{SE_M_GRASSWHISTLE}behind.\p"
-	.string "I{SE_M_SPIT_UP}make{SE_M_GRASSWHISTLE}m{SE_M_REVERSAL}uncomfortable{SE_M_PERISH_SONG}Could\n"
-	.string "yo{SE_M_DIVE}tak{SE_M_REVERSAL}i{SE_M_SPIT_UP}away?$"
+	.string "I got chased from my post by these\n"
+	.string "thugs in black.\p"
+	.string "They left this behind.\p"
+	.string "It makes me uncomfortable. Could\n"
+	.string "you take it away?$"
 
 Gate_Route43_Text_ReceivedTM30:
-	.string "{PLAYER} receive{SE_M_WATERFALL}TM36.$"
+	.string "{PLAYER} received TM36.$"
 
 Gate_Route43_Text_OfficerAvoidGrass:
-	.string "Us{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}gat{SE_M_REVERSAL}t{SE_M_ATTRACT2}avoi{SE_M_WATERFALL}walkin{SE_M_SANDSTORM}in\n"
-	.string "th{SE_M_REVERSAL}grass.$"
+	.string "Use this gate to avoid walking in\n"
+	.string "the grass.$"
 

@@ -1,237 +1,237 @@
 @ Johto (data/scripts/berry_blender.inc), as built into the FireRed game.
 
 J_BerryBlender_Text_WantToMakePokeblocks:
-	.string "Oh{SE_M_SING}Di{SE_M_WATERFALL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}som{SE_M_REVERSAL}{POKEBLOCK}S\n"
-	.string "wit{SE_M_TRI_ATTACK}thi{SE_M_GRASSWHISTLE}old-timer?$"
+	.string "Oh? Did you want to make some オカキクケS\n"
+	.string "with this old-timer?$"
 
 J_BerryBlender_Text_Excellent:
 	.string "Excellent!$"
 
 J_BerryBlender_Text_MadeOldTimerSad:
 	.string "Oh…\n"
-	.string "You'v{SE_M_REVERSAL}mad{SE_M_REVERSAL}thi{SE_M_GRASSWHISTLE}old-time{SE_M_SAND_TOMB}sad…$"
+	.string "You've made this old-timer sad…$"
 
 J_BerryBlender_Text_KnowHowToMakePokeblocks:
-	.string "D{SE_M_ATTRACT2}yo{SE_M_DIVE}kno{SE_M_TWISTER}ho{SE_M_TWISTER}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}{SE_M_CHARGE}{POKEBLOCK}?$"
+	.string "Do you know how to make a オカキクケ?$"
 
 J_BerryBlender_Text_LetsBerryBlender:
-	.string "Let'{SE_M_GRASSWHISTLE}ge{SE_M_SPIT_UP}started{SE_M_SUPERSONIC}then!\p"
-	.string "Let'{SE_M_GRASSWHISTLE}BERR{SE_M_MOONLIGHT}BLENDER!$"
+	.string "Let's get started, then!\p"
+	.string "Let's BERRY BLENDER!$"
 
 J_BerryBlender_Text_ExplainBerryBlending:
-	.string "Okay{SE_M_SUPERSONIC}{SE_M_CHARGE}littl{SE_M_REVERSAL}explanation{SE_M_SUPERSONIC}then.\p"
-	.string "Oh{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}worry{SE_M_SUPERSONIC}it'{SE_M_GRASSWHISTLE}quit{SE_M_REVERSAL}simple.\p"
-	.string "Whe{SE_M_ATTRACT}th{SE_M_REVERSAL}BLENDER'{SE_M_GRASSWHISTLE}arro{SE_M_TWISTER}come{SE_M_GRASSWHISTLE}to\n"
-	.string "you{SE_M_SAND_TOMB}marker{SE_M_SUPERSONIC}jus{SE_M_SPIT_UP}pres{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}{SE_M_BONEMERANG}Button.\p"
-	.string "That'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}yo{SE_M_DIVE}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}do.\n"
-	.string "You'l{SE_M_BATON_PASS}se{SE_M_REVERSAL}ho{SE_M_TWISTER}eas{SE_M_YAWN}i{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}whe{SE_M_ATTRACT}yo{SE_M_DIVE}try.$"
+	.string "Okay, a little explanation, then.\p"
+	.string "Oh, don't worry, it's quite simple.\p"
+	.string "When the BLENDER's arrow comes to\n"
+	.string "your marker, just press the A Button.\p"
+	.string "That's all you have to do.\n"
+	.string "You'll see how easy it is when you try.$"
 
 J_BerryBlender_Text_DontHaveAnyBerries:
 	.string "Oh?\n"
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}BERRIES?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}BERRIES,\n"
-	.string "yo{SE_M_DIVE}can'{SE_M_SPIT_UP}mak{SE_M_REVERSAL}an{SE_M_YAWN}{POKEBLOCK}S.$"
+	.string "You don't have any BERRIES?\p"
+	.string "If you don't have any BERRIES,\n"
+	.string "you can't make any オカキクケS.$"
 
 J_BerryBlender_Text_CanHaveOneOfMyBerries:
-	.string "Well{SE_M_SUPERSONIC}tha{SE_M_SPIT_UP}won'{SE_M_SPIT_UP}d{SE_M_ATTRACT2}a{SE_M_SPIT_UP}al{SE_M_BATON_PASS}now{SE_M_SUPERSONIC}wil{SE_M_BATON_PASS}it?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}min{SE_M_WATERFALL}leftovers{SE_M_SUPERSONIC}yo{SE_M_DIVE}can\n"
-	.string "hav{SE_M_REVERSAL}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}BERRIES.\p"
-	.string "Tha{SE_M_SPIT_UP}way{SE_M_SUPERSONIC}w{SE_M_REVERSAL}coul{SE_M_WATERFALL}mak{SE_M_REVERSAL}som{SE_M_REVERSAL}{POKEBLOCK}S\n"
-	.string "togethe{SE_M_SAND_TOMB}usin{SE_M_SANDSTORM}th{SE_M_REVERSAL}BERR{SE_M_MOONLIGHT}BLENDER.$"
+	.string "Well, that won't do at all now, will it?\p"
+	.string "If you don't mind leftovers, you can\n"
+	.string "have one of my BERRIES.\p"
+	.string "That way, we could make some オカキクケS\n"
+	.string "together using the BERRY BLENDER.$"
 
 J_BerryBlender_Text_DontHaveAnyBerriesToSpare:
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}som{SE_M_REVERSAL}BERRIE{SE_M_SKETCH}lef{SE_M_SPIT_UP}over,\n"
-	.string "I'{SE_M_WATERFALL}gladl{SE_M_YAWN}giv{SE_M_REVERSAL}yo{SE_M_DIVE}one…\p"
-	.string "But{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}t{SE_M_ATTRACT2}spar{SE_M_REVERSAL}today.\n"
-	.string "We'l{SE_M_BATON_PASS}hav{SE_M_REVERSAL}t{SE_M_ATTRACT2}d{SE_M_ATTRACT2}thi{SE_M_GRASSWHISTLE}anothe{SE_M_SAND_TOMB}time.$"
+	.string "If I had some BERRIES left over,\n"
+	.string "I'd gladly give you one…\p"
+	.string "But, I don't have any to spare today.\n"
+	.string "We'll have to do this another time.$"
 
 J_BerryBlender_Text_PokeblockCaseIsFull:
-	.string "Bu{SE_M_SPIT_UP}you{SE_M_SAND_TOMB}{POKEBLOCK} CAS{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}full.\p"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}us{SE_M_REVERSAL}som{SE_M_REVERSAL}{POKEBLOCK}{SE_M_SKETCH}before\n"
-	.string "yo{SE_M_DIVE}com{SE_M_REVERSAL}se{SE_M_REVERSAL}m{SE_M_REVERSAL}again.$"
+	.string "But your オカキクケ CASE is full.\p"
+	.string "You should use some オカキクケS before\n"
+	.string "you come see me again.$"
 
 J_BerryBlender_Text_DontHavePokeblockCase:
-	.string "Bu{SE_M_SPIT_UP}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}{SE_M_CHARGE}{POKEBLOCK} CASE.\p"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}ge{SE_M_SPIT_UP}{SE_M_CHARGE}{POKEBLOCK} CAS{SE_M_SWORDS_DANCE}an{SE_M_WATERFALL}then\n"
-	.string "com{SE_M_REVERSAL}se{SE_M_REVERSAL}me.$"
+	.string "But you don't have a オカキクケ CASE.\p"
+	.string "You should get a オカキクケ CASE and then\n"
+	.string "come see me.$"
 
 J_BerryBlender_Text_LetsGetBlendingAlready:
-	.string "Let'{SE_M_GRASSWHISTLE}ge{SE_M_SPIT_UP}blendin{SE_M_SANDSTORM}already!$"
+	.string "Let's get blending already!$"
 
 J_BerryBlender_Text_WhatKindOfPokeblockWillIGet:
-	.string "{SE_M_HEAL_BELL}wonde{SE_M_SAND_TOMB}wha{SE_M_SPIT_UP}kin{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}{POKEBLOCK} I'l{SE_M_BATON_PASS}get?\n"
-	.string "Thi{SE_M_GRASSWHISTLE}i{SE_M_GRASSWHISTLE}s{SE_M_ATTRACT2}exciting!$"
+	.string "I wonder what kind of オカキクケ I'll get?\n"
+	.string "This is so exciting!$"
 
 J_BerryBlender_Text_WantToBlendPokeblocksWithUs:
-	.string "Hi{SE_M_SUPERSONIC}there{SE_M_DRAGON_RAGE}Di{SE_M_WATERFALL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}blen{SE_M_WATERFALL}some\n"
-	.string "{POKEBLOCK}{SE_M_SKETCH}wit{SE_M_TRI_ATTACK}us?$"
+	.string "Hi, there! Did you want to blend some\n"
+	.string "オカキクケS with us?$"
 
 J_BerryBlender_Text_Okay:
 	.string "Okay!$"
 
 J_BerryBlender_Text_ThatsTooBad:
-	.string "That'{SE_M_GRASSWHISTLE}to{SE_M_ATTRACT2}bad…\p"
-	.string "Bu{SE_M_SPIT_UP}we'l{SE_M_BATON_PASS}alway{SE_M_GRASSWHISTLE}b{SE_M_REVERSAL}aroun{SE_M_WATERFALL}whenever\n"
-	.string "yo{SE_M_DIVE}ge{SE_M_SPIT_UP}th{SE_M_REVERSAL}urg{SE_M_REVERSAL}t{SE_M_ATTRACT2}blend!$"
+	.string "That's too bad…\p"
+	.string "But we'll always be around whenever\n"
+	.string "you get the urge to blend!$"
 
 J_BerryBlender_Text_KnowHowToMakePokeblocks2:
-	.string "O{SE_M_ACID_ARMOR}course{SE_M_SUPERSONIC}yo{SE_M_DIVE}d{SE_M_ATTRACT2}kno{SE_M_TWISTER}ho{SE_M_TWISTER}to\n"
-	.string "blen{SE_M_WATERFALL}{POKEBLOCK}S{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}you?$"
+	.string "Of course, you do know how to\n"
+	.string "blend オカキクケS, don't you?$"
 
 J_BerryBlender_Text_LetsBerryBlender2:
-	.string "Let'{SE_M_GRASSWHISTLE}ge{SE_M_SPIT_UP}started{SE_M_SUPERSONIC}then!\p"
-	.string "Let'{SE_M_GRASSWHISTLE}BERR{SE_M_MOONLIGHT}BLENDER!$"
+	.string "Let's get started, then!\p"
+	.string "Let's BERRY BLENDER!$"
 
 J_BerryBlender_Text_ExplainBerryBlending2:
 	.string "Okay!\n"
-	.string "Le{SE_M_SPIT_UP}m{SE_M_REVERSAL}explai{SE_M_ATTRACT}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}you!\p"
-	.string "Whe{SE_M_ATTRACT}th{SE_M_REVERSAL}spinnin{SE_M_SANDSTORM}BLENDER'{SE_M_GRASSWHISTLE}arrow\n"
-	.string "reache{SE_M_GRASSWHISTLE}you{SE_M_SAND_TOMB}marker{SE_M_SUPERSONIC}jus{SE_M_SPIT_UP}press\l"
-	.string "th{SE_M_REVERSAL}{SE_M_BONEMERANG}Button.\p"
-	.string "That'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}i{SE_M_SPIT_UP}takes.\n"
-	.string "Prett{SE_M_YAWN}easy{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}yo{SE_M_DIVE}think?$"
+	.string "Let me explain it to you!\p"
+	.string "When the spinning BLENDER's arrow\n"
+	.string "reaches your marker, just press\l"
+	.string "the A Button.\p"
+	.string "That's all it takes.\n"
+	.string "Pretty easy, don't you think?$"
 
 J_BerryBlender_Text_DontHaveAnyBerries2:
-	.string "Oh{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}wai{SE_M_SPIT_UP}{SE_M_CHARGE}secon{SE_M_WATERFALL}here…\n"
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}BERRIES.\p"
-	.string "Yo{SE_M_DIVE}can'{SE_M_SPIT_UP}mak{SE_M_REVERSAL}an{SE_M_YAWN}{POKEBLOCK}{SE_M_SKETCH}without\n"
+	.string "Oh, but wait a second here…\n"
+	.string "You don't have any BERRIES.\p"
+	.string "You can't make any オカキクケS without\n"
 	.string "BERRIES…\p"
-	.string "We'l{SE_M_BATON_PASS}alway{SE_M_GRASSWHISTLE}b{SE_M_REVERSAL}aroun{SE_M_WATERFALL}wheneve{SE_M_SAND_TOMB}you\n"
-	.string "ge{SE_M_SPIT_UP}hol{SE_M_WATERFALL}o{SE_M_ACID_ARMOR}som{SE_M_REVERSAL}BERRIE{SE_M_SKETCH}t{SE_M_ATTRACT2}blend.$"
+	.string "We'll always be around whenever you\n"
+	.string "get hold of some BERRIES to blend.$"
 
 J_BerryBlender_Text_PokeblockCaseIsFull2:
-	.string "Oh{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}wai{SE_M_SPIT_UP}{SE_M_CHARGE}secon{SE_M_WATERFALL}here…\n"
-	.string "You{SE_M_SAND_TOMB}{POKEBLOCK} CAS{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}full.\p"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}us{SE_M_REVERSAL}som{SE_M_REVERSAL}{POKEBLOCK}{SE_M_SKETCH}and\n"
-	.string "the{SE_M_ATTRACT}com{SE_M_REVERSAL}back.$"
+	.string "Oh, but wait a second here…\n"
+	.string "Your オカキクケ CASE is full.\p"
+	.string "You should use some オカキクケS and\n"
+	.string "then come back.$"
 
 J_BerryBlender_Text_DontHavePokeblockCase2:
-	.string "Oh{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}wai{SE_M_SPIT_UP}{SE_M_CHARGE}secon{SE_M_WATERFALL}here…\n"
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}{SE_M_CHARGE}{POKEBLOCK} CASE.\p"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}ge{SE_M_SPIT_UP}{SE_M_CHARGE}{POKEBLOCK} CAS{SE_M_SWORDS_DANCE}and\n"
-	.string "the{SE_M_ATTRACT}com{SE_M_REVERSAL}back.$"
+	.string "Oh, but wait a second here…\n"
+	.string "You don't have a オカキクケ CASE.\p"
+	.string "You should get a オカキクケ CASE and\n"
+	.string "then come back.$"
 
 J_BerryBlender_Text_MakePokeblocksWithOurGroup:
-	.string "Oh{SE_M_SUPERSONIC}hello{SE_M_DRAGON_RAGE}Di{SE_M_WATERFALL}yo{SE_M_DIVE}wan{SE_M_SPIT_UP}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}some\n"
-	.string "{POKEBLOCK}{SE_M_SKETCH}wit{SE_M_TRI_ATTACK}ou{SE_M_SAND_TOMB}littl{SE_M_REVERSAL}group?$"
+	.string "Oh, hello! Did you want to make some\n"
+	.string "オカキクケS with our little group?$"
 
 J_BerryBlender_Text_OhDear:
-	.string "Oh{SE_M_SUPERSONIC}dear!$"
+	.string "Oh, dear!$"
 
 J_BerryBlender_Text_LeftUsInShock:
-	.string "Oh{SE_M_SUPERSONIC}dea{SE_M_SAND_TOMB}me…\p"
-	.string "You'v{SE_M_REVERSAL}lef{SE_M_SPIT_UP}u{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}shock!$"
+	.string "Oh, dear me…\p"
+	.string "You've left us in shock!$"
 
 J_BerryBlender_Text_KnowHowToMakePokeblocks3:
-	.string "Naturally{SE_M_SUPERSONIC}yo{SE_M_DIVE}kno{SE_M_TWISTER}ho{SE_M_TWISTER}t{SE_M_ATTRACT2}make\n"
-	.string "{POKEBLOCK}S{SE_M_SUPERSONIC}don'{SE_M_SPIT_UP}you?$"
+	.string "Naturally, you know how to make\n"
+	.string "オカキクケS, don't you?$"
 
 J_BerryBlender_Text_LetsBerryBlender3:
-	.string "Okay{SE_M_SUPERSONIC}dear!\n"
-	.string "Let'{SE_M_GRASSWHISTLE}ge{SE_M_SPIT_UP}started!\p"
-	.string "Let'{SE_M_GRASSWHISTLE}BERR{SE_M_MOONLIGHT}BLENDER!$"
+	.string "Okay, dear!\n"
+	.string "Let's get started!\p"
+	.string "Let's BERRY BLENDER!$"
 
 J_BerryBlender_Text_ExplainBerryBlending3:
-	.string "Oh{SE_M_SUPERSONIC}dear!\p"
-	.string "Then{SE_M_SUPERSONIC}I'l{SE_M_BATON_PASS}explai{SE_M_ATTRACT}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}yo{SE_M_DIVE}nicely.\p"
-	.string "Whe{SE_M_ATTRACT}th{SE_M_REVERSAL}BLENDER'{SE_M_GRASSWHISTLE}arro{SE_M_TWISTER}spin{SE_M_GRASSWHISTLE}to\n"
-	.string "you{SE_M_SAND_TOMB}marker{SE_M_SUPERSONIC}pres{SE_M_GRASSWHISTLE}th{SE_M_REVERSAL}{SE_M_BONEMERANG}Button.\p"
-	.string "That'{SE_M_GRASSWHISTLE}al{SE_M_BATON_PASS}i{SE_M_SPIT_UP}takes.\n"
-	.string "Isn'{SE_M_SPIT_UP}i{SE_M_SPIT_UP}simple?$"
+	.string "Oh, dear!\p"
+	.string "Then, I'll explain it to you nicely.\p"
+	.string "When the BLENDER's arrow spins to\n"
+	.string "your marker, press the A Button.\p"
+	.string "That's all it takes.\n"
+	.string "Isn't it simple?$"
 
 J_BerryBlender_Text_DontHaveAnyBerries3:
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}BERRIES,\n"
-	.string "d{SE_M_ATTRACT2}you?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}BERRIES,\n"
-	.string "yo{SE_M_DIVE}can'{SE_M_SPIT_UP}mak{SE_M_REVERSAL}an{SE_M_YAWN}{POKEBLOCK}S.\p"
-	.string "We'l{SE_M_BATON_PASS}alway{SE_M_GRASSWHISTLE}b{SE_M_REVERSAL}makin{SE_M_SANDSTORM}{POKEBLOCK}{SE_M_SKETCH}here,\n"
-	.string "s{SE_M_ATTRACT2}let'{SE_M_GRASSWHISTLE}mak{SE_M_REVERSAL}som{SE_M_REVERSAL}togethe{SE_M_SAND_TOMB}when\l"
-	.string "yo{SE_M_DIVE}ge{SE_M_SPIT_UP}{SE_M_CHARGE}BERR{SE_M_MOONLIGHT}o{SE_M_SAND_TOMB}two.$"
+	.string "You don't have any BERRIES,\n"
+	.string "do you?\p"
+	.string "If you don't have any BERRIES,\n"
+	.string "you can't make any オカキクケS.\p"
+	.string "We'll always be making オカキクケS here,\n"
+	.string "so let's make some together when\l"
+	.string "you get a BERRY or two.$"
 
 J_BerryBlender_Text_PokeblockCaseIsFull3:
-	.string "You{SE_M_SAND_TOMB}{POKEBLOCK} CAS{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}full,\n"
-	.string "i{SE_M_SPIT_UP}look{SE_M_GRASSWHISTLE}like.\p"
-	.string "Yo{SE_M_DIVE}shoul{SE_M_WATERFALL}us{SE_M_REVERSAL}som{SE_M_REVERSAL}{POKEBLOCK}{SE_M_SKETCH}up\n"
-	.string "an{SE_M_WATERFALL}the{SE_M_ATTRACT}com{SE_M_REVERSAL}back.$"
+	.string "Your オカキクケ CASE is full,\n"
+	.string "it looks like.\p"
+	.string "You should use some オカキクケS up\n"
+	.string "and then come back.$"
 
 J_BerryBlender_Text_DontHavePokeblockCase3:
-	.string "Yo{SE_M_DIVE}haven'{SE_M_SPIT_UP}gotte{SE_M_ATTRACT}{SE_M_CHARGE}{POKEBLOCK} CASE\n"
-	.string "yet{SE_M_SUPERSONIC}i{SE_M_SPIT_UP}look{SE_M_GRASSWHISTLE}like.\p"
-	.string "Yo{SE_M_DIVE}nee{SE_M_WATERFALL}t{SE_M_ATTRACT2}ge{SE_M_SPIT_UP}{SE_M_CHARGE}{POKEBLOCK} CAS{SE_M_SWORDS_DANCE}before\n"
-	.string "yo{SE_M_DIVE}com{SE_M_REVERSAL}back.$"
+	.string "You haven't gotten a オカキクケ CASE\n"
+	.string "yet, it looks like.\p"
+	.string "You need to get a オカキクケ CASE before\n"
+	.string "you come back.$"
 
 J_BerryBlender_Text_SetNewBlenderRecord:
-	.string "Okay{SE_M_DRAGON_RAGE}Today'{SE_M_GRASSWHISTLE}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}b{SE_M_REVERSAL}th{SE_M_REVERSAL}da{SE_M_YAWN}that\n"
-	.string "{SE_M_HEAL_BELL}se{SE_M_SPIT_UP}{SE_M_CHARGE}ne{SE_M_TWISTER}BLENDE{SE_M_MINIMIZE}spee{SE_M_WATERFALL}record!$"
+	.string "Okay! Today's going to be the day that\n"
+	.string "I set a new BLENDER speed record!$"
 
 J_BerryBlender_Text_LookGoodAtBlendingJoinUs:
-	.string "Oh{SE_M_SUPERSONIC}dear!\n"
-	.string "Yo{SE_M_DIVE}loo{SE_M_ENCORE2}a{SE_M_GRASSWHISTLE}i{SE_M_ACID_ARMOR}you'r{SE_M_REVERSAL}goo{SE_M_WATERFALL}a{SE_M_SPIT_UP}blending.\l"
-	.string "Woul{SE_M_WATERFALL}yo{SE_M_DIVE}lik{SE_M_REVERSAL}t{SE_M_ATTRACT2}joi{SE_M_ATTRACT}us?$"
+	.string "Oh, dear!\n"
+	.string "You look as if you're good at blending.\l"
+	.string "Would you like to join us?$"
 
 J_BerryBlender_Text_MakeDeliciousPokeblocks:
-	.string "I'{SE_M_MILK_DRINK}goin{SE_M_SANDSTORM}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}deliciou{SE_M_GRASSWHISTLE}{POKEBLOCK}S\n"
-	.string "an{SE_M_WATERFALL}mak{SE_M_REVERSAL}m{SE_M_YAWN}POKéMO{SE_M_PSYBEAM2}cuter.$"
+	.string "I'm going to make delicious オカキクケS\n"
+	.string "and make my POKéMON cuter.$"
 
 J_BerryBlender_Text_SaveGameBeforeBerryBlenderLink:
-	.string "{POKEBLOCK}{SE_M_SKETCH}wil{SE_M_BATON_PASS}b{SE_M_REVERSAL}mad{SE_M_REVERSAL}wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}friend{SE_M_GRASSWHISTLE}\n"
-	.string "fro{SE_M_MILK_DRINK}BERRIE{SE_M_SKETCH}i{SE_M_ATTRACT}th{SE_M_REVERSAL}BERR{SE_M_MOONLIGHT}BLENDER.\p"
-	.string "I{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}oka{SE_M_YAWN}t{SE_M_ATTRACT2}sav{SE_M_REVERSAL}th{SE_M_REVERSAL}gam{SE_M_REVERSAL}before\n"
-	.string "linkin{SE_M_SANDSTORM}wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}friends?$"
+	.string "オカキクケS will be made with your friends \n"
+	.string "from BERRIES in the BERRY BLENDER.\p"
+	.string "Is it okay to save the game before\n"
+	.string "linking with your friends?$"
 
 J_BerryBlender_Text_SearchingForFriends:
-	.string "Searchin{SE_M_SANDSTORM}fo{SE_M_SAND_TOMB}you{SE_M_SAND_TOMB}friends…\n"
-	.string "{SE_M_DIZZY_PUNCH}{SE_M_DIZZY_PUNCH}{SE_M_LICK}Button{SE_M_HEAT_WAVE}Cancel$"
+	.string "Searching for your friends…\n"
+	.string "… … B Button: Cancel$"
 
 J_BerryBlender_Text_Player1Arrived:
 	.string "{STR_VAR_1} arrived.$"
 
 J_BerryBlender_Text_Player1And2Arrived:
-	.string "{STR_VAR_1} an{SE_M_WATERFALL}{STR_VAR_2} arrived.$"
+	.string "{STR_VAR_1} and {STR_VAR_2} arrived.$"
 
 J_BerryBlender_Text_AllPlayersArrived:
-	.string "{STR_VAR_1}{SE_M_SUPERSONIC}{STR_VAR_2}{SE_M_SUPERSONIC}and\n"
+	.string "{STR_VAR_1}, {STR_VAR_2}, and\n"
 	.string "{STR_VAR_3} arrived.$"
 
 J_BerryBlender_Text_NoBerriesLink:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}n{SE_M_ATTRACT2}BERRIES.\n"
-	.string "Th{SE_M_REVERSAL}BERR{SE_M_MOONLIGHT}BLENDE{SE_M_MINIMIZE}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}used.$"
+	.string "You have no BERRIES.\n"
+	.string "The BERRY BLENDER can't be used.$"
 
 J_BerryBlender_Text_PokeblockCaseIsFullLink:
-	.string "You{SE_M_SAND_TOMB}{POKEBLOCK} CAS{SE_M_SWORDS_DANCE}i{SE_M_GRASSWHISTLE}full.\n"
-	.string "Th{SE_M_REVERSAL}BERR{SE_M_MOONLIGHT}BLENDE{SE_M_MINIMIZE}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}used.$"
+	.string "Your オカキクケ CASE is full.\n"
+	.string "The BERRY BLENDER can't be used.$"
 
 J_BerryBlender_Text_DontHavePokeblockCaseLink:
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}{SE_M_CHARGE}{POKEBLOCK} CASE.\n"
-	.string "Th{SE_M_REVERSAL}BERR{SE_M_MOONLIGHT}BLENDE{SE_M_MINIMIZE}can'{SE_M_SPIT_UP}b{SE_M_REVERSAL}used.$"
+	.string "You don't have a オカキクケ CASE.\n"
+	.string "The BERRY BLENDER can't be used.$"
 
 J_BerryBlender_Text_LoveMakingPokeblocks:
-	.string "{SE_M_HEAL_BELL}lov{SE_M_REVERSAL}makin{SE_M_SANDSTORM}{POKEBLOCK}S.\p"
-	.string "{SE_M_HEAL_BELL}alway{SE_M_GRASSWHISTLE}hav{SE_M_REVERSAL}som{SE_M_REVERSAL}BERRIE{SE_M_SKETCH}wit{SE_M_TRI_ATTACK}me.$"
+	.string "I love making オカキクケS.\p"
+	.string "I always have some BERRIES with me.$"
 
 J_BerryBlender_Text_MakePokeblocksUsingBerryBlender:
-	.string "I{SE_M_ACID_ARMOR}you'{SE_M_WATERFALL}like{SE_M_SUPERSONIC}w{SE_M_REVERSAL}coul{SE_M_WATERFALL}mak{SE_M_REVERSAL}some\n"
-	.string "{POKEBLOCK}{SE_M_SKETCH}togethe{SE_M_SAND_TOMB}usin{SE_M_SANDSTORM}the\l"
-	.string "BERR{SE_M_MOONLIGHT}BLENDER.$"
+	.string "If you'd like, we could make some\n"
+	.string "オカキクケS together using the\l"
+	.string "BERRY BLENDER.$"
 
 J_BerryBlender_Text_DontHaveAnyBerriesHaveOne:
 	.string "Oh?\n"
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}BERRIES?\p"
-	.string "Well{SE_M_SUPERSONIC}tha{SE_M_SPIT_UP}won'{SE_M_SPIT_UP}d{SE_M_ATTRACT2}a{SE_M_SPIT_UP}al{SE_M_BATON_PASS}now{SE_M_SUPERSONIC}wil{SE_M_BATON_PASS}it?\p"
-	.string "I{SE_M_ACID_ARMOR}yo{SE_M_DIVE}don'{SE_M_SPIT_UP}min{SE_M_WATERFALL}leftovers{SE_M_SUPERSONIC}yo{SE_M_DIVE}can\n"
-	.string "hav{SE_M_REVERSAL}on{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}m{SE_M_YAWN}BERRIES.$"
+	.string "You don't have any BERRIES?\p"
+	.string "Well, that won't do at all now, will it?\p"
+	.string "If you don't mind leftovers, you can\n"
+	.string "have one of my BERRIES.$"
 
 J_BerryBlender_Text_UseItToMakePokeblocksTogether:
-	.string "We'l{SE_M_BATON_PASS}us{SE_M_REVERSAL}i{SE_M_SPIT_UP}t{SE_M_ATTRACT2}mak{SE_M_REVERSAL}{POKEBLOCK}{SE_M_SKETCH}together\n"
-	.string "usin{SE_M_SANDSTORM}th{SE_M_REVERSAL}BERR{SE_M_MOONLIGHT}BLENDER.$"
+	.string "We'll use it to make オカキクケS together\n"
+	.string "using the BERRY BLENDER.$"
 
 J_BerryBlender_Text_DontHaveAnyBerriesNoneToSpare:
 	.string "Oh?\n"
-	.string "Yo{SE_M_DIVE}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}BERRIES?\p"
-	.string "I{SE_M_ACID_ARMOR}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}som{SE_M_REVERSAL}lef{SE_M_SPIT_UP}over{SE_M_SUPERSONIC}I'{SE_M_WATERFALL}gladly\n"
-	.string "giv{SE_M_REVERSAL}yo{SE_M_DIVE}one…\p"
-	.string "But{SE_M_SUPERSONIC}{SE_M_HEAL_BELL}don'{SE_M_SPIT_UP}hav{SE_M_REVERSAL}an{SE_M_YAWN}t{SE_M_ATTRACT2}spar{SE_M_REVERSAL}today.\n"
-	.string "Sorr{SE_M_YAWN}abou{SE_M_SPIT_UP}that.$"
+	.string "You don't have any BERRIES?\p"
+	.string "If I had some left over, I'd gladly\n"
+	.string "give you one…\p"
+	.string "But, I don't have any to spare today.\n"
+	.string "Sorry about that.$"
 
 J_BerryBlender_EventScript_BerryBlender1::
 	lockall
@@ -257,12 +257,12 @@ J_BerryBlender_EventScript_TooWeakToBlend::
 	end
 
 J_BerryBlender_Text_TooWeakToBlend::
-	.string "BLEN{SE_M_FAINT_ATTACK}MASTER{SE_M_HEAT_WAVE}Hmmm{SE_M_DRAGON_RAGE}So{SE_M_SUPERSONIC}yo{SE_M_DIVE}wis{SE_M_TRI_ATTACK}to\n"
-	.string "se{SE_M_REVERSAL}m{SE_M_YAWN}master{SE_M_YAWN}i{SE_M_ATTRACT}action?\p"
-	.string "Sorry{SE_M_SUPERSONIC}bu{SE_M_SPIT_UP}m{SE_M_YAWN}blendin{SE_M_SANDSTORM}i{SE_M_GRASSWHISTLE}fa{SE_M_SAND_TOMB}too\n"
-	.string "advance{SE_M_WATERFALL}fo{SE_M_SAND_TOMB}{SE_M_CHARGE}rooki{SE_M_REVERSAL}lik{SE_M_REVERSAL}yourself.\p"
-	.string "Com{SE_M_REVERSAL}bac{SE_M_ENCORE2}an{SE_M_WATERFALL}se{SE_M_REVERSAL}m{SE_M_REVERSAL}onc{SE_M_REVERSAL}you've\n"
-	.string "achieve{SE_M_WATERFALL}greatness.$"
+	.string "BLEND MASTER: Hmmm! So, you wish to\n"
+	.string "see my mastery in action?\p"
+	.string "Sorry, but my blending is far too\n"
+	.string "advanced for a rookie like yourself.\p"
+	.string "Come back and see me once you've\n"
+	.string "achieved greatness.$"
 
 J_BerryBlender_EventScript_DeclineBlender1:
 	msgbox J_BerryBlender_Text_MadeOldTimerSad, MSGBOX_DEFAULT

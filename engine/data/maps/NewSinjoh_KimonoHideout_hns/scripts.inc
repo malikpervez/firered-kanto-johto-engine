@@ -90,39 +90,39 @@ NewSinjoh_KimonoHideout_Movement_KimonoWalksUp:
 
 NewSinjoh_KimonoHideout_Text_PlayerMeetsKimonos:
 	.string "{PLAYER}.\p"
-	.string "Please{SE_M_SUPERSONIC}approach.$"
+	.string "Please, approach.$"
 
 NewSinjoh_KimonoHideout_Text_PlayerMeetsMiharu:
-	.string "MIHARU{SE_M_HEAT_WAVE}Welcom{SE_M_REVERSAL}t{SE_M_ATTRACT2}NE{SE_M_DETECT}SINJOH{SE_M_SUPERSONIC}\n"
+	.string "MIHARU: Welcome to NEW SINJOH, \n"
 	.string "{PLAYER}.\p"
-	.string "Fo{SE_M_SAND_TOMB}generations{SE_M_SUPERSONIC}thi{SE_M_GRASSWHISTLE}villag{SE_M_REVERSAL}has\n"
-	.string "peacefull{SE_M_YAWN}coexiste{SE_M_WATERFALL}wit{SE_M_TRI_ATTACK}immensely\l"
-	.string "powerfu{SE_M_BATON_PASS}POKéMON{SE_M_SUPERSONIC}i{SE_M_ATTRACT}isolatio{SE_M_ATTRACT}from\l"
-	.string "th{SE_M_REVERSAL}pryin{SE_M_SANDSTORM}eye{SE_M_GRASSWHISTLE}o{SE_M_ACID_ARMOR}outsiders.\p"
-	.string "Recen{SE_M_SPIT_UP}event{SE_M_GRASSWHISTLE}a{SE_M_SPIT_UP}ou{SE_M_SAND_TOMB}sacre{SE_M_WATERFALL}temple\n"
-	.string "an{SE_M_WATERFALL}{SE_M_CHARGE}subsequen{SE_M_SPIT_UP}influ{SE_M_SWEET_SCENT}o{SE_M_ACID_ARMOR}uninvited\l"
-	.string "guest{SE_M_GRASSWHISTLE}no{SE_M_TWISTER}threate{SE_M_ATTRACT}t{SE_M_ATTRACT2}disrup{SE_M_SPIT_UP}the\l"
-	.string "carefu{SE_M_BATON_PASS}balanc{SE_M_REVERSAL}w{SE_M_REVERSAL}hav{SE_M_REVERSAL}long\l"
+	.string "For generations, this village has\n"
+	.string "peacefully coexisted with immensely\l"
+	.string "powerful POKéMON, in isolation from\l"
+	.string "the prying eyes of outsiders.\p"
+	.string "Recent events at our sacred temple\n"
+	.string "and a subsequent influx of uninvited\l"
+	.string "guests now threaten to disrupt the\l"
+	.string "careful balance we have long\l"
 	.string "protected.$"
 
 NewSinjoh_KimonoHideout_Text_PlayerMeetsShizuko:
-	.string "SHIZUKO{SE_M_HEAT_WAVE}Ou{SE_M_SAND_TOMB}cousin{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}ECRUTEAK\n"
-	.string "CIT{SE_M_MOONLIGHT}mad{SE_M_REVERSAL}u{SE_M_GRASSWHISTLE}awar{SE_M_REVERSAL}o{SE_M_ACID_ARMOR}your\l"
-	.string "connectio{SE_M_ATTRACT}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}LEGENDAR{SE_M_MOONLIGHT}POKéMON\l"
-	.string "o{SE_M_ACID_ARMOR}th{SE_M_REVERSAL}JOHT{SE_M_SOLAR_BEAM}REGION{SE_M_SUPERSONIC}an{SE_M_WATERFALL}your\l"
-	.string "prowes{SE_M_GRASSWHISTLE}a{SE_M_GRASSWHISTLE}{SE_M_CHARGE}trainer.\p"
-	.string "W{SE_M_REVERSAL}believ{SE_M_REVERSAL}yo{SE_M_DIVE}ca{SE_M_ATTRACT}hel{SE_M_MORNING_SUN}u{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}these\n"
-	.string "tryin{SE_M_SANDSTORM}times.$"
+	.string "SHIZUKO: Our cousins in ECRUTEAK\n"
+	.string "CITY made us aware of your\l"
+	.string "connection to the LEGENDARY POKéMON\l"
+	.string "of the JOHTO REGION, and your\l"
+	.string "prowess as a trainer.\p"
+	.string "We believe you can help us in these\n"
+	.string "trying times.$"
 
 NewSinjoh_KimonoHideout_Text_PlayerMeetsYouko:
-	.string "YOUKO{SE_M_HEAT_WAVE}G{SE_M_ATTRACT2}t{SE_M_ATTRACT2}th{SE_M_REVERSAL}SINJO{SE_M_SWAGGER2}RUINS{SE_M_SUPERSONIC}to\n"
-	.string "th{SE_M_REVERSAL}nort{SE_M_TRI_ATTACK}o{SE_M_ACID_ARMOR}ROUT{SE_M_SWORDS_DANCE}50.\p"
-	.string "Mee{SE_M_SPIT_UP}wit{SE_M_TRI_ATTACK}th{SE_M_REVERSAL}scientist{SE_M_GRASSWHISTLE}there{SE_M_SUPERSONIC}and\n"
-	.string "investigat{SE_M_REVERSAL}th{SE_M_REVERSAL}event{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}invoked\l"
-	.string "thei{SE_M_SAND_TOMB}presence.\p"
-	.string "I{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}imperativ{SE_M_REVERSAL}tha{SE_M_SPIT_UP}th{SE_M_REVERSAL}LEGENDARY\n"
-	.string "POKéMO{SE_M_PSYBEAM2}ther{SE_M_REVERSAL}ar{SE_M_REVERSAL}no{SE_M_SPIT_UP}disturbed\l"
-	.string "b{SE_M_YAWN}th{SE_M_REVERSAL}unworthy.$"
+	.string "YOUKO: Go to the SINJOH RUINS, to\n"
+	.string "the north of ROUTE 50.\p"
+	.string "Meet with the scientists there, and\n"
+	.string "investigate the events that invoked\l"
+	.string "their presence.\p"
+	.string "It is imperative that the LEGENDARY\n"
+	.string "POKéMON there are not disturbed\l"
+	.string "by the unworthy.$"
 
 NewSinjoh_KimonoHideout_EventScript_Miharu::
 	lock
@@ -163,25 +163,25 @@ NewSinjoh_KimonoHideout_EventScript_MiharuAfter::
 	end
 
 NewSinjoh_KimonoHideout_Text_MiharuBeforeBattle:
-	.string "MIHARU{SE_M_HEAT_WAVE}Jus{SE_M_SPIT_UP}a{SE_M_GRASSWHISTLE}w{SE_M_REVERSAL}predicted.\p"
-	.string "Th{SE_M_REVERSAL}champio{SE_M_ATTRACT}o{SE_M_ACID_ARMOR}ston{SE_M_REVERSAL}sen{SE_M_SPIT_UP}you\n"
-	.string "t{SE_M_ATTRACT2}collec{SE_M_SPIT_UP}th{SE_M_REVERSAL}PLATES.\p"
-	.string "Ou{SE_M_SAND_TOMB}orde{SE_M_SAND_TOMB}ha{SE_M_GRASSWHISTLE}guarde{SE_M_WATERFALL}these\n"
-	.string "PLATE{SE_M_SKETCH}fo{SE_M_SAND_TOMB}centuries.\p"
-	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}no{SE_M_SPIT_UP}par{SE_M_SPIT_UP}wit{SE_M_TRI_ATTACK}them\n"
+	.string "MIHARU: Just as we predicted.\p"
+	.string "The champion of stone sent you\n"
+	.string "to collect the PLATES.\p"
+	.string "Our order has guarded these\n"
+	.string "PLATES for centuries.\p"
+	.string "We will not part with them\n"
 	.string "readily.$"
 
 NewSinjoh_KimonoHideout_Text_MiharuAfter:
-	.string "MIHARU{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}ar{SE_M_REVERSAL}worthy.$"
+	.string "MIHARU: You are worthy.$"
 
 NewSinjoh_KimonoHideout_EventScript_MiharuFinal::
 	msgbox NewSinjoh_KimonoHideout_Text_MiharuFinal, MSGBOX_AUTOCLOSE
 	end
 
 NewSinjoh_KimonoHideout_Text_MiharuFinal:
-	.string "MIHARU{SE_M_HEAT_WAVE}Yo{SE_M_DIVE}hav{SE_M_REVERSAL}don{SE_M_REVERSAL}ou{SE_M_SAND_TOMB}village\n"
-	.string "{SE_M_CHARGE}grea{SE_M_SPIT_UP}service{SE_M_SUPERSONIC}{PLAYER}.\p"
-	.string "W{SE_M_REVERSAL}wil{SE_M_BATON_PASS}no{SE_M_SPIT_UP}forge{SE_M_SPIT_UP}this.$"
+	.string "MIHARU: You have done our village\n"
+	.string "a great service, {PLAYER}.\p"
+	.string "We will not forget this.$"
 
 NewSinjoh_KimonoHideout_EventScript_Youko::
 	lock
@@ -222,23 +222,23 @@ NewSinjoh_KimonoHideout_EventScript_YoukoAfter::
 	end
 
 NewSinjoh_KimonoHideout_Text_YoukoBeforeBattle:
-	.string "YOUKO{SE_M_HEAT_WAVE}Ou{SE_M_SAND_TOMB}cousin{SE_M_GRASSWHISTLE}spea{SE_M_ENCORE2}so\n"
-	.string "highl{SE_M_YAWN}o{SE_M_ACID_ARMOR}you.\p"
-	.string "I{SE_M_GRASSWHISTLE}i{SE_M_SPIT_UP}true?\p"
-	.string "{SE_M_HEAL_BELL}wil{SE_M_BATON_PASS}fin{SE_M_WATERFALL}out.$"
+	.string "YOUKO: Our cousins speak so\n"
+	.string "highly of you.\p"
+	.string "Is it true?\p"
+	.string "I will find out.$"
 
 NewSinjoh_KimonoHideout_Text_YoukoAfter:
-	.string "YOUKO{SE_M_HEAT_WAVE}Ou{SE_M_SAND_TOMB}cousin{SE_M_GRASSWHISTLE}wer{SE_M_REVERSAL}right\n"
-	.string "abou{SE_M_SPIT_UP}you.$"
+	.string "YOUKO: Our cousins were right\n"
+	.string "about you.$"
 
 NewSinjoh_KimonoHideout_EventScript_YoukoFinal::
 	msgbox NewSinjoh_KimonoHideout_Text_YoukoFinal, MSGBOX_AUTOCLOSE
 	end
 
 NewSinjoh_KimonoHideout_Text_YoukoFinal:
-	.string "YOUKO{SE_M_HEAT_WAVE}{SE_M_HEAL_BELL}ha{SE_M_WATERFALL}m{SE_M_YAWN}doubts{SE_M_SUPERSONIC}a{SE_M_SPIT_UP}first.\p"
-	.string "Bu{SE_M_SPIT_UP}afte{SE_M_SAND_TOMB}wha{SE_M_SPIT_UP}you'v{SE_M_REVERSAL}done{SE_M_SUPERSONIC}it\n"
-	.string "canno{SE_M_SPIT_UP}b{SE_M_REVERSAL}denied.$"
+	.string "YOUKO: I had my doubts, at first.\p"
+	.string "But after what you've done, it\n"
+	.string "cannot be denied.$"
 
 NewSinjoh_KimonoHideout_EventScript_Shizuko::
 	lock
@@ -279,42 +279,42 @@ NewSinjoh_KimonoHideout_EventScript_ShizukoAfter::
 	end
 
 NewSinjoh_KimonoHideout_Text_ShizukoBeforeBattle:
-	.string "SHIZUKO{SE_M_HEAT_WAVE}W{SE_M_REVERSAL}ar{SE_M_REVERSAL}traine{SE_M_WATERFALL}in\n"
-	.string "battl{SE_M_REVERSAL}a{SE_M_GRASSWHISTLE}wel{SE_M_BATON_PASS}a{SE_M_GRASSWHISTLE}dance.\p"
-	.string "Obtainin{SE_M_SANDSTORM}th{SE_M_REVERSAL}PLATE{SE_M_GRASSWHISTLE}will\n"
-	.string "requir{SE_M_REVERSAL}strengt{SE_M_TRI_ATTACK}an{SE_M_WATERFALL}determination.$"
+	.string "SHIZUKO: We are trained in\n"
+	.string "battle as well as dance.\p"
+	.string "Obtaining the PLATEs will\n"
+	.string "require strength and determination.$"
 
 NewSinjoh_KimonoHideout_Text_ShizukoAfter:
-	.string "SHIZUKO{SE_M_HEAT_WAVE}Th{SE_M_REVERSAL}bon{SE_M_WATERFALL}yo{SE_M_DIVE}share\n"
-	.string "wit{SE_M_TRI_ATTACK}you{SE_M_SAND_TOMB}POKéMO{SE_M_PSYBEAM2}i{SE_M_GRASSWHISTLE}quit{SE_M_REVERSAL}strong.\p"
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}earne{SE_M_WATERFALL}thi{SE_M_GRASSWHISTLE}PLATE.$"
+	.string "SHIZUKO: The bond you share\n"
+	.string "with your POKéMON is quite strong.\p"
+	.string "You have earned this PLATE.$"
 
 NewSinjoh_KimonoHideout_EventScript_ShizukoFinal::
 	msgbox NewSinjoh_KimonoHideout_Text_ShizukoFinal, MSGBOX_AUTOCLOSE
 	end
 
 NewSinjoh_KimonoHideout_Text_ShizukoFinal:
-	.string "SHIZUKO{SE_M_HEAT_WAVE}Fe{SE_M_TWISTER}trainer{SE_M_GRASSWHISTLE}i{SE_M_ATTRACT}all\n"
-	.string "o{SE_M_ACID_ARMOR}SINJOH'{SE_M_GRASSWHISTLE}storie{SE_M_WATERFALL}histor{SE_M_YAWN}have\l"
-	.string "manage{SE_M_WATERFALL}wha{SE_M_SPIT_UP}you'v{SE_M_REVERSAL}jus{SE_M_SPIT_UP}done.\p"
-	.string "Quit{SE_M_REVERSAL}impressive{SE_M_SUPERSONIC}{PLAYER}.$"
+	.string "SHIZUKO: Few trainers in all\n"
+	.string "of SINJOH's storied history have\l"
+	.string "managed what you've just done.\p"
+	.string "Quite impressive, {PLAYER}.$"
 
 NewSinjoh_KimonoHideout_EventScript_OldMan::
 	msgbox NewSinjoh_KimonoHideout_Text_OldMan, MSGBOX_NPC
 	end
 
 NewSinjoh_KimonoHideout_Text_OldMan:
-	.string "Th{SE_M_REVERSAL}KIMON{SE_M_SOLAR_BEAM}GIRL{SE_M_SKETCH}hav{SE_M_REVERSAL}watched\n"
-	.string "ove{SE_M_SAND_TOMB}ou{SE_M_SAND_TOMB}villag{SE_M_REVERSAL}sinc{SE_M_REVERSAL}it{SE_M_GRASSWHISTLE}founding.\p"
-	.string "The{SE_M_YAWN}hav{SE_M_REVERSAL}sacrifice{SE_M_WATERFALL}much.\p"
-	.string "Blesse{SE_M_WATERFALL}b{SE_M_YAWN}th{SE_M_REVERSAL}God{SE_M_GRASSWHISTLE}themselves,\n"
-	.string "the{SE_M_YAWN}hav{SE_M_REVERSAL}power{SE_M_GRASSWHISTLE}beyon{SE_M_WATERFALL}that\l"
-	.string "o{SE_M_ACID_ARMOR}an{SE_M_YAWN}norma{SE_M_BATON_PASS}trainer!\p"
-	.string "Tha{SE_M_SPIT_UP}i{SE_M_GRASSWHISTLE}t{SE_M_ATTRACT2}say{SE_M_SUPERSONIC}b{SE_M_REVERSAL}prepared\n"
-	.string "i{SE_M_ACID_ARMOR}yo{SE_M_DIVE}eve{SE_M_SAND_TOMB}figh{SE_M_SPIT_UP}them{SE_M_SUPERSONIC}youn{SE_M_SANDSTORM}one.$"
+	.string "The KIMONO GIRLS have watched\n"
+	.string "over our village since its founding.\p"
+	.string "They have sacrificed much.\p"
+	.string "Blessed by the Gods themselves,\n"
+	.string "they have powers beyond that\l"
+	.string "of any normal trainer!\p"
+	.string "That is to say, be prepared\n"
+	.string "if you ever fight them, young one.$"
 
 NewSinjoh_KimonoHideout_Text_OldManAfter:
-	.string "Yo{SE_M_DIVE}hav{SE_M_REVERSAL}beste{SE_M_WATERFALL}th{SE_M_REVERSAL}champion{SE_M_GRASSWHISTLE}of\n"
-	.string "ou{SE_M_SAND_TOMB}village.\p"
-	.string "Wha{SE_M_SPIT_UP}doe{SE_M_GRASSWHISTLE}tha{SE_M_SPIT_UP}mak{SE_M_REVERSAL}you{SE_M_SUPERSONIC}youn{SE_M_SANDSTORM}one?$"
+	.string "You have bested the champions of\n"
+	.string "our village.\p"
+	.string "What does that make you, young one?$"
 
