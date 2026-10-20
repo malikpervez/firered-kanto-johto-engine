@@ -1185,13 +1185,19 @@ string generate_layout_geometry_text(const Json &layout, const string &layoutNam
     return text.str();
 }
 
+// A layout of a map the game no longer has: it keeps its slot in the table (so other layouts keep their numbers) and
+// its LAYOUT_ constant, but has no data.
+bool layout_removed(const Json &layout) {
+    return layout["removed"].bool_value();
+}
+
 string generate_layout_headers_text(Json layouts_data) {
     ostringstream text;
 
     text << get_generated_warning("data/layouts/layouts.json", true);
 
     for (const auto &layout_data : layouts_data["layouts"].array_items()) {
-        if (layout_data == Json::object()) continue;
+        if (layout_data == Json::object() || layout_removed(layout_data)) continue;
         if (!std::filesystem::exists(json_to_string(layout_data, "border_filepath")))
             continue;
         if (!layout_matches_version(layout_data))
@@ -1215,9 +1221,9 @@ string generate_layouts_table_text(Json layouts_data) {
          << json_to_string(layouts_data, "layouts_table_label") << "::\n";
 
     for (auto &layout : layouts_data["layouts"].array_items()) {
-        if (!std::filesystem::exists(json_to_string(layout, "border_filepath")))
+        if (!layout_removed(layout) && !std::filesystem::exists(json_to_string(layout, "border_filepath")))
             continue;
-        if (!layout_matches_version(layout)) {
+        if (layout_removed(layout) || !layout_matches_version(layout)) {
             text << "\t.4byte NULL\n";
         } else {
             string layout_name = json_to_string(layout, "name", true);
@@ -1282,7 +1288,7 @@ string generate_layouts_constants_text(Json layouts_data) {
 
     int i = 1;
     for (auto &layout : layouts_data["layouts"].array_items()) {
-        if (!std::filesystem::exists(json_to_string(layout, "border_filepath")))
+        if (!layout_removed(layout) && !std::filesystem::exists(json_to_string(layout, "border_filepath")))
             continue;
         if (layout != Json::object())
         {
