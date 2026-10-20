@@ -32,4 +32,5 @@ engine/tools/*/*
 !engine/tools/*/
 
 # pae (the game editor) caches and test results; pae_tests/ itself is committed
-/engine/.pae/
+/engine/.pae/*
+!/engine/.pae/story.json
