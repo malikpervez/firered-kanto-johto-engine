@@ -15,22 +15,22 @@
   "connections": [
     {
       "map": "MAP_ROUTE5",
-      "offset": 0,
+      "offset": 4,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE6",
-      "offset": 12,
+      "offset": -12,
       "direction": "down"
     },
     {
       "map": "MAP_ROUTE7",
-      "offset": 10,
+      "offset": 15,
       "direction": "left"
     },
     {
       "map": "MAP_ROUTE8",
-      "offset": 10,
+      "offset": 6,
       "direction": "right"
     }
   ],
@@ -41,115 +41,87 @@
   "floor_number": 0,
   "game_version": "frlg",
   "region": "REGION_KANTO",
-  "firered_campaign": {
-    "connections": [
+  "firered_geometry": {
+    "width": 66,
+    "height": 55,
+    "primary_tileset": "gTileset_Kanto_General_Hns",
+    "secondary_tileset": "gTileset_SaffronCity_Hns",
+    "border_filepath": "data/layouts/SaffronCity_hns/border.bin",
+    "blockdata_filepath": "data/layouts/SaffronCity_hns/map.bin",
+    "layout_version": "hns",
+    "blockdata_overrides": [
       {
-        "map": "MAP_ROUTE5",
-        "offset": 4,
-        "direction": "up"
+        "x": 17,
+        "y": 14,
+        "expected": 1371,
+        "value": 1723
       },
       {
-        "map": "MAP_ROUTE6",
-        "offset": -12,
-        "direction": "down"
+        "x": 47,
+        "y": 14,
+        "expected": 1804,
+        "value": 2037
       },
       {
-        "map": "MAP_ROUTE7",
-        "offset": 15,
-        "direction": "left"
+        "x": 54,
+        "y": 14,
+        "expected": 1804,
+        "value": 2037
       },
       {
-        "map": "MAP_ROUTE8",
-        "offset": 6,
-        "direction": "right"
+        "x": 20,
+        "y": 15,
+        "expected": 1852,
+        "value": 2035
+      },
+      {
+        "x": 25,
+        "y": 21,
+        "expected": 1697,
+        "value": 1884
+      },
+      {
+        "x": 52,
+        "y": 21,
+        "expected": 1699,
+        "value": 1884
+      },
+      {
+        "x": 54,
+        "y": 22,
+        "expected": 13032,
+        "value": 2035
+      },
+      {
+        "x": 12,
+        "y": 25,
+        "expected": 12929,
+        "value": 2035
+      },
+      {
+        "x": 58,
+        "y": 25,
+        "expected": 1027,
+        "value": 2036
+      },
+      {
+        "x": 13,
+        "y": 31,
+        "expected": 1805,
+        "value": 2039
+      },
+      {
+        "x": 30,
+        "y": 31,
+        "expected": 1876,
+        "value": 2035
+      },
+      {
+        "x": 44,
+        "y": 38,
+        "expected": 1839,
+        "value": 2038
       }
-    ],
-    "firered_geometry": {
-      "width": 66,
-      "height": 55,
-      "primary_tileset": "gTileset_Kanto_General_Hns",
-      "secondary_tileset": "gTileset_SaffronCity_Hns",
-      "border_filepath": "data/layouts/SaffronCity_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SaffronCity_hns/map.bin",
-      "layout_version": "hns",
-      "blockdata_overrides": [
-        {
-          "x": 17,
-          "y": 14,
-          "expected": 1371,
-          "value": 1723
-        },
-        {
-          "x": 47,
-          "y": 14,
-          "expected": 1804,
-          "value": 2037
-        },
-        {
-          "x": 54,
-          "y": 14,
-          "expected": 1804,
-          "value": 2037
-        },
-        {
-          "x": 20,
-          "y": 15,
-          "expected": 1852,
-          "value": 2035
-        },
-        {
-          "x": 25,
-          "y": 21,
-          "expected": 1697,
-          "value": 1884
-        },
-        {
-          "x": 52,
-          "y": 21,
-          "expected": 1699,
-          "value": 1884
-        },
-        {
-          "x": 54,
-          "y": 22,
-          "expected": 13032,
-          "value": 2035
-        },
-        {
-          "x": 12,
-          "y": 25,
-          "expected": 12929,
-          "value": 2035
-        },
-        {
-          "x": 58,
-          "y": 25,
-          "expected": 1027,
-          "value": 2036
-        },
-        {
-          "x": 13,
-          "y": 31,
-          "expected": 1805,
-          "value": 2039
-        },
-        {
-          "x": 30,
-          "y": 31,
-          "expected": 1876,
-          "value": 2035
-        },
-        {
-          "x": 44,
-          "y": 38,
-          "expected": 1839,
-          "value": 2038
-        }
-      ]
-    },
-    "object_events": [],
-    "warp_events": [],
-    "coord_events": [],
-    "bg_events": []
+    ]
   }
 }

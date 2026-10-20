@@ -3,7 +3,7 @@
   "name": "DragonsDen_Cavern_hns",
   "layout": "LAYOUT_DRAGONS_DEN_CAVERN_HNS",
   "music": "MUS_HG_DRAGONS_DEN",
-  "region_map_section": "MAPSEC_DRAGONS_DEN",
+  "region_map_section": "JOHTO_MAPSEC_DRAGONS_DEN",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -78,7 +78,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR"
+      "flag": "JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -91,7 +91,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DragonsDen_Cavern_EventScript_Item_PP_Max",
-      "flag": "FLAG_ITEM_DRAGONSDEN2_PP_MAX"
+      "flag": "JOHTO_FLAG_ITEM_DRAGONSDEN2_PP_MAX"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -104,7 +104,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DragonsDen_Cavern_EventScript_Item_Max_Potion",
-      "flag": "FLAG_ITEM_DRAGONSDEN2_MAX_POTION"
+      "flag": "JOHTO_FLAG_ITEM_DRAGONSDEN2_MAX_POTION"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -117,7 +117,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DragonsDen_Cavern_EventScript_Item_Dragon_Fang",
-      "flag": "FLAG_ITEM_DRAGONSDEN2_DRAGON_FANG"
+      "flag": "JOHTO_FLAG_ITEM_DRAGONSDEN2_DRAGON_FANG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRATINI",
@@ -311,7 +311,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -324,7 +324,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -337,7 +337,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -350,7 +350,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -363,7 +363,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -376,7 +376,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -389,7 +389,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -402,7 +402,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -415,7 +415,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -428,7 +428,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_Whirlpool",
+      "script": "J_EventScript_Whirlpool",
       "flag": "0"
     },
     {
@@ -442,7 +442,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER"
+      "flag": "JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LANCE_HNS",
@@ -455,7 +455,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE"
+      "flag": "JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE"
     },
     {
       "local_id": "LOCALID_DEN_CLAIR",
@@ -469,7 +469,35 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DragonsDen_EventScript_ClairRematch",
-      "flag": "FLAG_HIDE_DEN_CLAIR"
+      "flag": "JOHTO_FLAG_HIDE_DEN_CLAIR"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
+      "x": 27,
+      "y": 40,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CG_SilverDen",
+      "flag": "FLAG_TEMP_1D"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 28,
+      "y": 40,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CG_SilverDen",
+      "flag": "FLAG_TEMP_1D"
     }
   ],
   "warp_events": [
@@ -494,7 +522,7 @@
       "x": 30,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_BLACKTHORN_CITY_STATE",
+      "var": "JOHTO_VAR_BLACKTHORN_CITY_STATE",
       "var_value": "3",
       "script": "DragonsDen_Cavern_Trigger_ClairLeft"
     },
@@ -503,7 +531,7 @@
       "x": 31,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_BLACKTHORN_CITY_STATE",
+      "var": "JOHTO_VAR_BLACKTHORN_CITY_STATE",
       "var_value": "3",
       "script": "DragonsDen_Cavern_Trigger_ClairMid"
     },
@@ -512,7 +540,7 @@
       "x": 32,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_BLACKTHORN_CITY_STATE",
+      "var": "JOHTO_VAR_BLACKTHORN_CITY_STATE",
       "var_value": "3",
       "script": "DragonsDen_Cavern_Trigger_ClairRight"
     }
@@ -572,7 +600,7 @@
       "y": 16,
       "elevation": 0,
       "item": "ITEM_MAX_ELIXIR",
-      "flag": "FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_ELIXIR"
+      "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_ELIXIR"
     },
     {
       "type": "hidden_item",
@@ -580,612 +608,9 @@
       "y": 16,
       "elevation": 0,
       "item": "ITEM_MAX_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_POTION"
+      "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_POTION"
     }
   ],
-  "game_version": "hns",
-  "region": "REGION_JOHTO",
-  "firered_campaign": {
-    "connections": null,
-    "object_events": [
-      {
-        "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M_HNS",
-        "x": 36,
-        "y": 13,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
-        "movement_range_x": 7,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "7",
-        "script": "DragonsDen_Cavern_EventScript_Darin",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_TWIN_HNS",
-        "x": 7,
-        "y": 32,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "DragonsDen_Cavern_EventScript_TwinPia",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_TWIN_HNS",
-        "x": 7,
-        "y": 31,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "DragonsDen_Cavern_EventScript_TwinLea",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F_HNS",
-        "x": 13,
-        "y": 19,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "DragonsDen_Cavern_EventScript_Cara",
-        "flag": "0"
-      },
-      {
-        "local_id": "LOCALID_DRAGONSDEN2_CLAIR",
-        "graphics_id": "OBJ_EVENT_GFX_CLAIR_HNS",
-        "x": 29,
-        "y": 14,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-        "x": 54,
-        "y": 50,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "DragonsDen_Cavern_EventScript_Item_PP_Max",
-        "flag": "JOHTO_FLAG_ITEM_DRAGONSDEN2_PP_MAX"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-        "x": 7,
-        "y": 35,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "DragonsDen_Cavern_EventScript_Item_Max_Potion",
-        "flag": "JOHTO_FLAG_ITEM_DRAGONSDEN2_MAX_POTION"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-        "x": 54,
-        "y": 28,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "DragonsDen_Cavern_EventScript_Item_Dragon_Fang",
-        "flag": "JOHTO_FLAG_ITEM_DRAGONSDEN2_DRAGON_FANG"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRATINI",
-        "x": 22,
-        "y": 10,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRATINI",
-        "x": 10,
-        "y": 16,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRATINI",
-        "x": 4,
-        "y": 8,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
-        "x": 44,
-        "y": 18,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONAIR",
-        "x": 27,
-        "y": 52,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
-        "x": 37,
-        "y": 30,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONAIR",
-        "x": 22,
-        "y": 46,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
-        "x": 39,
-        "y": 24,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONAIR",
-        "x": 18,
-        "y": 32,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_UP",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONAIR",
-        "x": 13,
-        "y": 44,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_UP_AND_DOWN",
-        "movement_range_x": 6,
-        "movement_range_y": 6,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
-        "x": 56,
-        "y": 28,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEADRA",
-        "x": 46,
-        "y": 25,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
-        "x": 44,
-        "y": 16,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
-        "x": 44,
-        "y": 14,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
-        "x": 24,
-        "y": 22,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_TOWER_BEAM",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
-        "x": 15,
-        "y": 39,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_TOWER_BEAM",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
-        "x": 15,
-        "y": 38,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
-        "x": 16,
-        "y": 39,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
-        "x": 15,
-        "y": 39,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
-        "x": 16,
-        "y": 38,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
-        "x": 25,
-        "y": 22,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
-        "x": 24,
-        "y": 22,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
-        "x": 24,
-        "y": 21,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
-        "x": 25,
-        "y": 21,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_INVISIBLE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_Whirlpool",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
-        "x": 26,
-        "y": 40,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_LANCE_HNS",
-        "x": 31,
-        "y": 34,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE"
-      },
-      {
-        "local_id": "LOCALID_DEN_CLAIR",
-        "graphics_id": "OBJ_EVENT_GFX_CLAIR_HNS",
-        "x": 31,
-        "y": 19,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "DragonsDen_EventScript_ClairRematch",
-        "flag": "JOHTO_FLAG_HIDE_DEN_CLAIR"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
-        "x": 27,
-        "y": 40,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CG_SilverDen",
-        "flag": "FLAG_TEMP_1D"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-        "x": 28,
-        "y": 40,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CG_SilverDen",
-        "flag": "FLAG_TEMP_1D"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 31,
-        "y": 3,
-        "elevation": 0,
-        "dest_map": "MAP_DRAGONS_DEN_ENTRANCE_HNS",
-        "dest_warp_id": "3"
-      },
-      {
-        "x": 31,
-        "y": 46,
-        "elevation": 0,
-        "dest_map": "MAP_DRAGONS_DEN_SHRINE_HNS",
-        "dest_warp_id": "0"
-      }
-    ],
-    "coord_events": [
-      {
-        "type": "trigger",
-        "x": 30,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_BLACKTHORN_CITY_STATE",
-        "var_value": "3",
-        "script": "DragonsDen_Cavern_Trigger_ClairLeft"
-      },
-      {
-        "type": "trigger",
-        "x": 31,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_BLACKTHORN_CITY_STATE",
-        "var_value": "3",
-        "script": "DragonsDen_Cavern_Trigger_ClairMid"
-      },
-      {
-        "type": "trigger",
-        "x": 32,
-        "y": 14,
-        "elevation": 0,
-        "var": "JOHTO_VAR_BLACKTHORN_CITY_STATE",
-        "var_value": "3",
-        "script": "DragonsDen_Cavern_Trigger_ClairRight"
-      }
-    ],
-    "bg_events": [
-      {
-        "type": "sign",
-        "x": 27,
-        "y": 46,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
-      },
-      {
-        "type": "sign",
-        "x": 35,
-        "y": 46,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
-      },
-      {
-        "type": "sign",
-        "x": 35,
-        "y": 36,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
-      },
-      {
-        "type": "sign",
-        "x": 27,
-        "y": 36,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
-      },
-      {
-        "type": "sign",
-        "x": 29,
-        "y": 4,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
-      },
-      {
-        "type": "sign",
-        "x": 33,
-        "y": 4,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
-      },
-      {
-        "type": "hidden_item",
-        "x": 15,
-        "y": 16,
-        "elevation": 0,
-        "item": "ITEM_MAX_ELIXIR",
-        "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_ELIXIR"
-      },
-      {
-        "type": "hidden_item",
-        "x": 42,
-        "y": 16,
-        "elevation": 0,
-        "item": "ITEM_MAX_POTION",
-        "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_POTION"
-      }
-    ],
-    "region_map_section": "JOHTO_MAPSEC_DRAGONS_DEN",
-    "region": "REGION_JOHTO"
-  }
+  "game_version": "frlg",
+  "region": "REGION_JOHTO"
 }

@@ -44,17 +44,15 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 11,
-      "height": 9,
-      "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
-      "secondary_tileset": "gTileset_GenericBuilding1",
-      "border_filepath": "data/layouts/House1_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/House1_Frlg/map.bin",
-      "layout_version": "frlg",
-      "border_width": 2,
-      "border_height": 2
-    }
+  "firered_geometry": {
+    "width": 11,
+    "height": 9,
+    "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
+    "secondary_tileset": "gTileset_GenericBuilding1",
+    "border_filepath": "data/layouts/House1_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/House1_Frlg/map.bin",
+    "layout_version": "frlg",
+    "border_width": 2,
+    "border_height": 2
   }
 }

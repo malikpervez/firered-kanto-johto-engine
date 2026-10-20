@@ -20,7 +20,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 4,
+      "x": 7,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -34,21 +34,21 @@
   ],
   "warp_events": [
     {
-      "x": 2,
+      "x": 3,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_ROUTE12",
       "dest_warp_id": "0"
     },
     {
-      "x": 3,
-      "y": 7,
+      "x": 4,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_ROUTE12",
       "dest_warp_id": "0"
     },
     {
-      "x": 4,
+      "x": 5,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_ROUTE12",
@@ -66,54 +66,13 @@
       "script": "Route12_FishingHouse_EventScript_MagikarpRecordSign"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "blockdata_filepath": "data/layouts/Route12_House_hns/map.bin",
-      "border_filepath": "data/layouts/Route12_House_hns/border.bin",
-      "height": 10,
-      "layout_version": "hns",
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_House_Lab_Hns",
-      "width": 13
-    },
-    "object_events": [
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_FISHER",
-        "x": 7,
-        "y": 4,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Route12_FishingHouse_EventScript_FishingGuruBrother",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 3,
-        "y": 8,
-        "elevation": 0,
-        "dest_map": "MAP_ROUTE12",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 4,
-        "y": 8,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE12",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 5,
-        "y": 8,
-        "elevation": 0,
-        "dest_map": "MAP_ROUTE12",
-        "dest_warp_id": "0"
-      }
-    ]
+  "firered_geometry": {
+    "blockdata_filepath": "data/layouts/Route12_House_hns/map.bin",
+    "border_filepath": "data/layouts/Route12_House_hns/border.bin",
+    "height": 10,
+    "layout_version": "hns",
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_House_Lab_Hns",
+    "width": 13
   }
 }

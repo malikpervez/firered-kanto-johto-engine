@@ -107,17 +107,15 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 15,
-      "height": 10,
-      "primary_tileset": "gTileset_Johto_Building_FireRedNative",
-      "secondary_tileset": "gTileset_Kanto_PokemonCenter_FireRedNative",
-      "blockdata_filepath": "data/layouts/PokemonCenter_1F_Frlg/map.bin",
-      "border_filepath": "data/layouts/PokemonCenter_1F_Frlg/border.bin",
-      "layout_version": "frlg",
-      "border_width": 2,
-      "border_height": 2
-    }
+  "firered_geometry": {
+    "width": 15,
+    "height": 10,
+    "primary_tileset": "gTileset_Johto_Building_FireRedNative",
+    "secondary_tileset": "gTileset_Kanto_PokemonCenter_FireRedNative",
+    "blockdata_filepath": "data/layouts/PokemonCenter_1F_Frlg/map.bin",
+    "border_filepath": "data/layouts/PokemonCenter_1F_Frlg/border.bin",
+    "layout_version": "frlg",
+    "border_width": 2,
+    "border_height": 2
   }
 }

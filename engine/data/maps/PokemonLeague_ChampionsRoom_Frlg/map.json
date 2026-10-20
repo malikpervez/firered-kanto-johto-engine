@@ -64,121 +64,119 @@
   "bg_events": [],
   "floor_number": 0,
   "region": "REGION_KANTO",
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 13,
-      "height": 20,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_PokemonLeague",
-      "border_filepath": "data/layouts/PokemonLeague_ChampionsRoom_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_ChampionsRoom_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg",
-      "blockdata_overrides": [
-        {
-          "x": 6,
-          "y": 3,
-          "expected": 13305,
-          "value": 13183
-        },
-        {
-          "x": 1,
-          "y": 4,
-          "expected": 902,
-          "value": 881
-        },
-        {
-          "x": 2,
-          "y": 4,
-          "expected": 928,
-          "value": 885
-        },
-        {
-          "x": 10,
-          "y": 4,
-          "expected": 930,
-          "value": 886
-        },
-        {
-          "x": 11,
-          "y": 4,
-          "expected": 917,
-          "value": 883
-        },
-        {
-          "x": 1,
-          "y": 5,
-          "expected": 910,
-          "value": 882
-        },
-        {
-          "x": 2,
-          "y": 5,
-          "expected": 989,
-          "value": 890
-        },
-        {
-          "x": 10,
-          "y": 5,
-          "expected": 988,
-          "value": 889
-        },
-        {
-          "x": 11,
-          "y": 5,
-          "expected": 925,
-          "value": 884
-        },
-        {
-          "x": 6,
-          "y": 7,
-          "expected": 13287,
-          "value": 13182
-        },
-        {
-          "x": 6,
-          "y": 10,
-          "expected": 13286,
-          "value": 13181
-        },
-        {
-          "x": 2,
-          "y": 11,
-          "expected": 992,
-          "value": 891
-        },
-        {
-          "x": 10,
-          "y": 11,
-          "expected": 995,
-          "value": 892
-        },
-        {
-          "x": 1,
-          "y": 12,
-          "expected": 980,
-          "value": 887
-        },
-        {
-          "x": 2,
-          "y": 12,
-          "expected": 989,
-          "value": 890
-        },
-        {
-          "x": 10,
-          "y": 12,
-          "expected": 988,
-          "value": 889
-        },
-        {
-          "x": 11,
-          "y": 12,
-          "expected": 981,
-          "value": 888
-        }
-      ]
-    }
+  "firered_geometry": {
+    "width": 13,
+    "height": 20,
+    "primary_tileset": "gTileset_BuildingFrlg",
+    "secondary_tileset": "gTileset_PokemonLeague",
+    "border_filepath": "data/layouts/PokemonLeague_ChampionsRoom_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/PokemonLeague_ChampionsRoom_Frlg/map.bin",
+    "border_height": 2,
+    "border_width": 2,
+    "layout_version": "frlg",
+    "blockdata_overrides": [
+      {
+        "x": 6,
+        "y": 3,
+        "expected": 13305,
+        "value": 13183
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "expected": 902,
+        "value": 881
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "expected": 928,
+        "value": 885
+      },
+      {
+        "x": 10,
+        "y": 4,
+        "expected": 930,
+        "value": 886
+      },
+      {
+        "x": 11,
+        "y": 4,
+        "expected": 917,
+        "value": 883
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "expected": 910,
+        "value": 882
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "expected": 989,
+        "value": 890
+      },
+      {
+        "x": 10,
+        "y": 5,
+        "expected": 988,
+        "value": 889
+      },
+      {
+        "x": 11,
+        "y": 5,
+        "expected": 925,
+        "value": 884
+      },
+      {
+        "x": 6,
+        "y": 7,
+        "expected": 13287,
+        "value": 13182
+      },
+      {
+        "x": 6,
+        "y": 10,
+        "expected": 13286,
+        "value": 13181
+      },
+      {
+        "x": 2,
+        "y": 11,
+        "expected": 992,
+        "value": 891
+      },
+      {
+        "x": 10,
+        "y": 11,
+        "expected": 995,
+        "value": 892
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "expected": 980,
+        "value": 887
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "expected": 989,
+        "value": 890
+      },
+      {
+        "x": 10,
+        "y": 12,
+        "expected": 988,
+        "value": 889
+      },
+      {
+        "x": 11,
+        "y": 12,
+        "expected": 981,
+        "value": 888
+      }
+    ]
   }
 }

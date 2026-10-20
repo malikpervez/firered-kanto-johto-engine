@@ -396,23 +396,21 @@
       "script": "SaffronCity_Gym_EventScript_GymStatue"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 29,
-      "height": 25,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_SaffronCity_Gym_Hns",
-      "border_filepath": "data/layouts/SaffronCity_Gym_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SaffronCity_Gym_hns/map.bin",
-      "layout_version": "hns",
-      "blockdata_overrides": [
-        {
-          "x": 10,
-          "y": 15,
-          "expected": 12947,
-          "value": 12929
-        }
-      ]
-    }
+  "firered_geometry": {
+    "width": 29,
+    "height": 25,
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_SaffronCity_Gym_Hns",
+    "border_filepath": "data/layouts/SaffronCity_Gym_hns/border.bin",
+    "blockdata_filepath": "data/layouts/SaffronCity_Gym_hns/map.bin",
+    "layout_version": "hns",
+    "blockdata_overrides": [
+      {
+        "x": 10,
+        "y": 15,
+        "expected": 12947,
+        "value": 12929
+      }
+    ]
   }
 }

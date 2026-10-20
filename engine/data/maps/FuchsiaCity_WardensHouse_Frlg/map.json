@@ -132,17 +132,15 @@
       "script": "FuchsiaCity_WardensHouse_EventScript_DisplaySign2"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 13,
-      "height": 11,
-      "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
-      "secondary_tileset": "gTileset_Museum",
-      "border_filepath": "data/layouts/FuchsiaCity_WardensHouse_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/FuchsiaCity_WardensHouse_Frlg/map.bin",
-      "layout_version": "frlg",
-      "border_width": 2,
-      "border_height": 2
-    }
+  "firered_geometry": {
+    "width": 13,
+    "height": 11,
+    "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
+    "secondary_tileset": "gTileset_Museum",
+    "border_filepath": "data/layouts/FuchsiaCity_WardensHouse_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/FuchsiaCity_WardensHouse_Frlg/map.bin",
+    "layout_version": "frlg",
+    "border_width": 2,
+    "border_height": 2
   }
 }

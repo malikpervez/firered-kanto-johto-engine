@@ -60,17 +60,15 @@
       "script": "Route18_EastEntrance_2F_EventScript_RightBinoculars"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 13,
-      "height": 11,
-      "border_filepath": "data/layouts/Entrance_2F_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Entrance_2F_Frlg/map.bin",
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Kanto_Building_Hns",
-      "secondary_tileset": "gTileset_Gate_Standard_FireRedCampaign",
-      "layout_version": "hns"
-    }
+  "firered_geometry": {
+    "width": 13,
+    "height": 11,
+    "border_filepath": "data/layouts/Entrance_2F_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/Entrance_2F_Frlg/map.bin",
+    "border_width": 2,
+    "border_height": 2,
+    "primary_tileset": "gTileset_Kanto_Building_Hns",
+    "secondary_tileset": "gTileset_Gate_Standard_FireRedCampaign",
+    "layout_version": "hns"
   }
 }

@@ -106,145 +106,53 @@
     }
   ],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 9,
-      "height": 9,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_SafariZoneBuilding",
-      "border_filepath": "data/layouts/FuchsiaCity_SafariZone_Entrance_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/FuchsiaCity_SafariZone_Entrance_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg",
-      "blockdata_overrides": [
-        {
-          "x": 1,
-          "y": 4,
-          "expected": 12962,
-          "value": 13310
-        },
-        {
-          "x": 7,
-          "y": 4,
-          "expected": 12962,
-          "value": 13310
-        },
-        {
-          "x": 1,
-          "y": 5,
-          "expected": 12962,
-          "value": 13310
-        },
-        {
-          "x": 7,
-          "y": 5,
-          "expected": 12962,
-          "value": 13310
-        },
-        {
-          "x": 1,
-          "y": 7,
-          "expected": 12962,
-          "value": 13310
-        },
-        {
-          "x": 7,
-          "y": 7,
-          "expected": 12962,
-          "value": 13310
-        }
-      ]
-    },
-    "object_events": [
+  "firered_geometry": {
+    "width": 9,
+    "height": 9,
+    "primary_tileset": "gTileset_BuildingFrlg",
+    "secondary_tileset": "gTileset_SafariZoneBuilding",
+    "border_filepath": "data/layouts/FuchsiaCity_SafariZone_Entrance_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/FuchsiaCity_SafariZone_Entrance_Frlg/map.bin",
+    "border_height": 2,
+    "border_width": 2,
+    "layout_version": "frlg",
+    "blockdata_overrides": [
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
-        "x": 7,
-        "y": 3,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "0x0",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
         "x": 1,
-        "y": 6,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "FuchsiaCity_SafariZone_Entrance_EventScript_InfoAttendant",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 4,
-        "y": 1,
-        "elevation": 3,
-        "dest_map": "MAP_SAFARI_ZONE_CENTER",
-        "dest_warp_id": "1"
+        "y": 4,
+        "expected": 12962,
+        "value": 13310
       },
       {
-        "x": 5,
+        "x": 7,
+        "y": 4,
+        "expected": 12962,
+        "value": 13310
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "expected": 12962,
+        "value": 13310
+      },
+      {
+        "x": 7,
+        "y": 5,
+        "expected": 12962,
+        "value": 13310
+      },
+      {
+        "x": 1,
         "y": 7,
-        "elevation": 3,
-        "dest_map": "MAP_FUCHSIA_CITY",
-        "dest_warp_id": "0"
+        "expected": 12962,
+        "value": 13310
       },
       {
-        "x": 4,
+        "x": 7,
         "y": 7,
-        "elevation": 3,
-        "dest_map": "MAP_FUCHSIA_CITY",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 3,
-        "y": 7,
-        "elevation": 3,
-        "dest_map": "MAP_FUCHSIA_CITY",
-        "dest_warp_id": "0"
+        "expected": 12962,
+        "value": 13310
       }
-    ],
-    "coord_events": [
-      {
-        "type": "trigger",
-        "x": 4,
-        "y": 3,
-        "elevation": 3,
-        "var": "VAR_TEMP_1",
-        "var_value": "0",
-        "script": "FuchsiaCity_SafariZone_Entrance_EventScript_EntryTriggerMid"
-      },
-      {
-        "type": "trigger",
-        "x": 5,
-        "y": 3,
-        "elevation": 3,
-        "var": "VAR_TEMP_1",
-        "var_value": "0",
-        "script": "FuchsiaCity_SafariZone_Entrance_EventScript_EntryTriggerRight"
-      },
-      {
-        "type": "trigger",
-        "x": 3,
-        "y": 3,
-        "elevation": 3,
-        "var": "VAR_TEMP_1",
-        "var_value": "0",
-        "script": "FuchsiaCity_SafariZone_Entrance_EventScript_EntryTriggerLeft"
-      }
-    ],
-    "bg_events": []
+    ]
   }
 }

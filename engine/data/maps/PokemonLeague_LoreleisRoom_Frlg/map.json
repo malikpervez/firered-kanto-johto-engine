@@ -50,373 +50,371 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_PokemonLeague",
-      "border_filepath": "data/layouts/PokemonLeague_LoreleisRoom_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_LoreleisRoom_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg",
-      "blockdata_overrides": [
-        {
-          "x": 1,
-          "y": 3,
-          "expected": 12969,
-          "value": 13285
-        },
-        {
-          "x": 3,
-          "y": 3,
-          "expected": 12969,
-          "value": 13285
-        },
-        {
-          "x": 4,
-          "y": 3,
-          "expected": 12969,
-          "value": 13285
-        },
-        {
-          "x": 6,
-          "y": 3,
-          "expected": 12969,
-          "value": 13285
-        },
-        {
-          "x": 8,
-          "y": 3,
-          "expected": 12969,
-          "value": 13285
-        },
-        {
-          "x": 9,
-          "y": 3,
-          "expected": 12969,
-          "value": 13285
-        },
-        {
-          "x": 11,
-          "y": 3,
-          "expected": 12969,
-          "value": 13285
-        },
-        {
-          "x": 1,
-          "y": 4,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 3,
-          "y": 4,
-          "expected": 12977,
-          "value": 13286
-        },
-        {
-          "x": 4,
-          "y": 4,
-          "expected": 12979,
-          "value": 13288
-        },
-        {
-          "x": 5,
-          "y": 4,
-          "expected": 12980,
-          "value": 13289
-        },
-        {
-          "x": 7,
-          "y": 4,
-          "expected": 12980,
-          "value": 13289
-        },
-        {
-          "x": 8,
-          "y": 4,
-          "expected": 12981,
-          "value": 13290
-        },
-        {
-          "x": 9,
-          "y": 4,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 11,
-          "y": 4,
-          "expected": 12977,
-          "value": 13286
-        },
-        {
-          "x": 1,
-          "y": 5,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 3,
-          "y": 5,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 4,
-          "y": 5,
-          "expected": 12982,
-          "value": 13291
-        },
-        {
-          "x": 5,
-          "y": 5,
-          "expected": 12984,
-          "value": 13293
-        },
-        {
-          "x": 7,
-          "y": 5,
-          "expected": 12986,
-          "value": 13294
-        },
-        {
-          "x": 8,
-          "y": 5,
-          "expected": 12983,
-          "value": 13292
-        },
-        {
-          "x": 9,
-          "y": 5,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 11,
-          "y": 5,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 1,
-          "y": 6,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 3,
-          "y": 6,
-          "expected": 12977,
-          "value": 13286
-        },
-        {
-          "x": 4,
-          "y": 6,
-          "expected": 12990,
-          "value": 13298
-        },
-        {
-          "x": 5,
-          "y": 6,
-          "expected": 12987,
-          "value": 13295
-        },
-        {
-          "x": 6,
-          "y": 6,
-          "expected": 12988,
-          "value": 13296
-        },
-        {
-          "x": 7,
-          "y": 6,
-          "expected": 12989,
-          "value": 13297
-        },
-        {
-          "x": 8,
-          "y": 6,
-          "expected": 12991,
-          "value": 13299
-        },
-        {
-          "x": 9,
-          "y": 6,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 11,
-          "y": 6,
-          "expected": 12977,
-          "value": 13286
-        },
-        {
-          "x": 1,
-          "y": 7,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 3,
-          "y": 7,
-          "expected": 12978,
-          "value": 13287
-        },
-        {
-          "x": 4,
-          "y": 7,
-          "expected": 12998,
-          "value": 13306
-        },
-        {
-          "x": 5,
-          "y": 7,
-          "expected": 12995,
-          "value": 13303
-        },
-        {
-          "x": 6,
-          "y": 7,
-          "expected": 12996,
-          "value": 13304
-        },
-        {
-          "x": 7,
-          "y": 7,
-          "expected": 12997,
-          "value": 13305
-        },
-        {
-          "x": 8,
-          "y": 7,
-          "expected": 12999,
-          "value": 13307
-        },
-        {
-          "x": 9,
-          "y": 7,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 11,
-          "y": 7,
-          "expected": 12978,
-          "value": 13287
-        },
-        {
-          "x": 1,
-          "y": 8,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 3,
-          "y": 8,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 4,
-          "y": 8,
-          "expected": 12982,
-          "value": 13291
-        },
-        {
-          "x": 5,
-          "y": 8,
-          "expected": 12992,
-          "value": 13300
-        },
-        {
-          "x": 6,
-          "y": 8,
-          "expected": 12993,
-          "value": 13301
-        },
-        {
-          "x": 7,
-          "y": 8,
-          "expected": 12994,
-          "value": 13302
-        },
-        {
-          "x": 8,
-          "y": 8,
-          "expected": 12983,
-          "value": 13292
-        },
-        {
-          "x": 9,
-          "y": 8,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 11,
-          "y": 8,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 1,
-          "y": 9,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 3,
-          "y": 9,
-          "expected": 12977,
-          "value": 13286
-        },
-        {
-          "x": 4,
-          "y": 9,
-          "expected": 13000,
-          "value": 13308
-        },
-        {
-          "x": 5,
-          "y": 9,
-          "expected": 13001,
-          "value": 13309
-        },
-        {
-          "x": 6,
-          "y": 9,
-          "expected": 13001,
-          "value": 13309
-        },
-        {
-          "x": 7,
-          "y": 9,
-          "expected": 13001,
-          "value": 13309
-        },
-        {
-          "x": 8,
-          "y": 9,
-          "expected": 13002,
-          "value": 13310
-        },
-        {
-          "x": 9,
-          "y": 9,
-          "expected": 12968,
-          "value": 13284
-        },
-        {
-          "x": 11,
-          "y": 9,
-          "expected": 12977,
-          "value": 13286
-        }
-      ]
-    }
+  "firered_geometry": {
+    "width": 13,
+    "height": 13,
+    "primary_tileset": "gTileset_BuildingFrlg",
+    "secondary_tileset": "gTileset_PokemonLeague",
+    "border_filepath": "data/layouts/PokemonLeague_LoreleisRoom_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/PokemonLeague_LoreleisRoom_Frlg/map.bin",
+    "border_height": 2,
+    "border_width": 2,
+    "layout_version": "frlg",
+    "blockdata_overrides": [
+      {
+        "x": 1,
+        "y": 3,
+        "expected": 12969,
+        "value": 13285
+      },
+      {
+        "x": 3,
+        "y": 3,
+        "expected": 12969,
+        "value": 13285
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "expected": 12969,
+        "value": 13285
+      },
+      {
+        "x": 6,
+        "y": 3,
+        "expected": 12969,
+        "value": 13285
+      },
+      {
+        "x": 8,
+        "y": 3,
+        "expected": 12969,
+        "value": 13285
+      },
+      {
+        "x": 9,
+        "y": 3,
+        "expected": 12969,
+        "value": 13285
+      },
+      {
+        "x": 11,
+        "y": 3,
+        "expected": 12969,
+        "value": 13285
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "expected": 12977,
+        "value": 13286
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "expected": 12979,
+        "value": 13288
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "expected": 12980,
+        "value": 13289
+      },
+      {
+        "x": 7,
+        "y": 4,
+        "expected": 12980,
+        "value": 13289
+      },
+      {
+        "x": 8,
+        "y": 4,
+        "expected": 12981,
+        "value": 13290
+      },
+      {
+        "x": 9,
+        "y": 4,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 11,
+        "y": 4,
+        "expected": 12977,
+        "value": 13286
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "expected": 12982,
+        "value": 13291
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "expected": 12984,
+        "value": 13293
+      },
+      {
+        "x": 7,
+        "y": 5,
+        "expected": 12986,
+        "value": 13294
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "expected": 12983,
+        "value": 13292
+      },
+      {
+        "x": 9,
+        "y": 5,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 11,
+        "y": 5,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "expected": 12977,
+        "value": 13286
+      },
+      {
+        "x": 4,
+        "y": 6,
+        "expected": 12990,
+        "value": 13298
+      },
+      {
+        "x": 5,
+        "y": 6,
+        "expected": 12987,
+        "value": 13295
+      },
+      {
+        "x": 6,
+        "y": 6,
+        "expected": 12988,
+        "value": 13296
+      },
+      {
+        "x": 7,
+        "y": 6,
+        "expected": 12989,
+        "value": 13297
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "expected": 12991,
+        "value": 13299
+      },
+      {
+        "x": 9,
+        "y": 6,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 11,
+        "y": 6,
+        "expected": 12977,
+        "value": 13286
+      },
+      {
+        "x": 1,
+        "y": 7,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 3,
+        "y": 7,
+        "expected": 12978,
+        "value": 13287
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "expected": 12998,
+        "value": 13306
+      },
+      {
+        "x": 5,
+        "y": 7,
+        "expected": 12995,
+        "value": 13303
+      },
+      {
+        "x": 6,
+        "y": 7,
+        "expected": 12996,
+        "value": 13304
+      },
+      {
+        "x": 7,
+        "y": 7,
+        "expected": 12997,
+        "value": 13305
+      },
+      {
+        "x": 8,
+        "y": 7,
+        "expected": 12999,
+        "value": 13307
+      },
+      {
+        "x": 9,
+        "y": 7,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 11,
+        "y": 7,
+        "expected": 12978,
+        "value": 13287
+      },
+      {
+        "x": 1,
+        "y": 8,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 3,
+        "y": 8,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "expected": 12982,
+        "value": 13291
+      },
+      {
+        "x": 5,
+        "y": 8,
+        "expected": 12992,
+        "value": 13300
+      },
+      {
+        "x": 6,
+        "y": 8,
+        "expected": 12993,
+        "value": 13301
+      },
+      {
+        "x": 7,
+        "y": 8,
+        "expected": 12994,
+        "value": 13302
+      },
+      {
+        "x": 8,
+        "y": 8,
+        "expected": 12983,
+        "value": 13292
+      },
+      {
+        "x": 9,
+        "y": 8,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 11,
+        "y": 8,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 1,
+        "y": 9,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 3,
+        "y": 9,
+        "expected": 12977,
+        "value": 13286
+      },
+      {
+        "x": 4,
+        "y": 9,
+        "expected": 13000,
+        "value": 13308
+      },
+      {
+        "x": 5,
+        "y": 9,
+        "expected": 13001,
+        "value": 13309
+      },
+      {
+        "x": 6,
+        "y": 9,
+        "expected": 13001,
+        "value": 13309
+      },
+      {
+        "x": 7,
+        "y": 9,
+        "expected": 13001,
+        "value": 13309
+      },
+      {
+        "x": 8,
+        "y": 9,
+        "expected": 13002,
+        "value": 13310
+      },
+      {
+        "x": 9,
+        "y": 9,
+        "expected": 12968,
+        "value": 13284
+      },
+      {
+        "x": 11,
+        "y": 9,
+        "expected": 12977,
+        "value": 13286
+      }
+    ]
   }
 }

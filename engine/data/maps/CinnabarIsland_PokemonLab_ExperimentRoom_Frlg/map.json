@@ -57,17 +57,15 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 15,
-      "height": 11,
-      "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
-      "secondary_tileset": "gTileset_Lab_FireRedNative",
-      "layout_version": "frlg",
-      "blockdata_filepath": "data/layouts/CinnabarIsland_PokemonLab_ExperimentRoom_Frlg/map.bin",
-      "border_filepath": "data/layouts/CinnabarIsland_PokemonLab_ExperimentRoom_Frlg/border.bin",
-      "border_width": 2,
-      "border_height": 2
-    }
+  "firered_geometry": {
+    "width": 15,
+    "height": 11,
+    "primary_tileset": "gTileset_Kanto_Building_FireRedNative",
+    "secondary_tileset": "gTileset_Lab_FireRedNative",
+    "layout_version": "frlg",
+    "blockdata_filepath": "data/layouts/CinnabarIsland_PokemonLab_ExperimentRoom_Frlg/map.bin",
+    "border_filepath": "data/layouts/CinnabarIsland_PokemonLab_ExperimentRoom_Frlg/border.bin",
+    "border_width": 2,
+    "border_height": 2
   }
 }

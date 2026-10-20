@@ -50,55 +50,53 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_PokemonLeague",
-      "border_filepath": "data/layouts/PokemonLeague_AgathasRoom_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_AgathasRoom_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg",
-      "blockdata_overrides": [
-        {
-          "x": 5,
-          "y": 7,
-          "expected": 13067,
-          "value": 13308
-        },
-        {
-          "x": 6,
-          "y": 7,
-          "expected": 13068,
-          "value": 13309
-        },
-        {
-          "x": 7,
-          "y": 7,
-          "expected": 13069,
-          "value": 13310
-        },
-        {
-          "x": 5,
-          "y": 8,
-          "expected": 13064,
-          "value": 13305
-        },
-        {
-          "x": 6,
-          "y": 8,
-          "expected": 13065,
-          "value": 13306
-        },
-        {
-          "x": 7,
-          "y": 8,
-          "expected": 13066,
-          "value": 13307
-        }
-      ]
-    }
+  "firered_geometry": {
+    "width": 13,
+    "height": 13,
+    "primary_tileset": "gTileset_BuildingFrlg",
+    "secondary_tileset": "gTileset_PokemonLeague",
+    "border_filepath": "data/layouts/PokemonLeague_AgathasRoom_Frlg/border.bin",
+    "blockdata_filepath": "data/layouts/PokemonLeague_AgathasRoom_Frlg/map.bin",
+    "border_height": 2,
+    "border_width": 2,
+    "layout_version": "frlg",
+    "blockdata_overrides": [
+      {
+        "x": 5,
+        "y": 7,
+        "expected": 13067,
+        "value": 13308
+      },
+      {
+        "x": 6,
+        "y": 7,
+        "expected": 13068,
+        "value": 13309
+      },
+      {
+        "x": 7,
+        "y": 7,
+        "expected": 13069,
+        "value": 13310
+      },
+      {
+        "x": 5,
+        "y": 8,
+        "expected": 13064,
+        "value": 13305
+      },
+      {
+        "x": 6,
+        "y": 8,
+        "expected": 13065,
+        "value": 13306
+      },
+      {
+        "x": 7,
+        "y": 8,
+        "expected": 13066,
+        "value": 13307
+      }
+    ]
   }
 }

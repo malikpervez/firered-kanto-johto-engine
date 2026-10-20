@@ -94,23 +94,21 @@
       "script": "CeladonCity_DepartmentStore_4F_EventScript_FloorSign"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 13,
-      "height": 15,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_DepartmentStore_Hns",
-      "border_filepath": "data/layouts/CeladonCity_DepartmentStore_4F_hns/border.bin",
-      "blockdata_filepath": "data/layouts/CeladonCity_DepartmentStore_4F_hns/map.bin",
-      "layout_version": "hns",
-      "blockdata_overrides": [
-        {
-          "x": 3,
-          "y": 13,
-          "expected": 1754,
-          "value": 13018
-        }
-      ]
-    }
+  "firered_geometry": {
+    "width": 13,
+    "height": 15,
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_DepartmentStore_Hns",
+    "border_filepath": "data/layouts/CeladonCity_DepartmentStore_4F_hns/border.bin",
+    "blockdata_filepath": "data/layouts/CeladonCity_DepartmentStore_4F_hns/map.bin",
+    "layout_version": "hns",
+    "blockdata_overrides": [
+      {
+        "x": 3,
+        "y": 13,
+        "expected": 1754,
+        "value": 13018
+      }
+    ]
   }
 }

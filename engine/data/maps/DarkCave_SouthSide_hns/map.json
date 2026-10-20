@@ -3,7 +3,7 @@
   "name": "DarkCave_SouthSide_hns",
   "layout": "LAYOUT_DARK_CAVE_SOUTH_SIDE_HNS",
   "music": "MUS_HG_ICE_PATH",
-  "region_map_section": "MAPSEC_DARK_CAVE",
+  "region_map_section": "JOHTO_MAPSEC_DARK_CAVE",
   "requires_flash": true,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DarkCave1_EventScript_Item_Potion",
-      "flag": "FLAG_ITEM_DARKCAVE1_POTION"
+      "flag": "JOHTO_FLAG_ITEM_DARKCAVE1_POTION"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
@@ -37,8 +37,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_2"
+      "script": "J_EventScript_RockSmash",
+      "flag": "JOHTO_FLAG_TEMP_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
@@ -50,8 +50,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_1"
+      "script": "J_EventScript_RockSmash",
+      "flag": "JOHTO_FLAG_TEMP_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
@@ -63,8 +63,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_3"
+      "script": "J_EventScript_RockSmash",
+      "flag": "JOHTO_FLAG_TEMP_3"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
@@ -76,8 +76,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_4"
+      "script": "J_EventScript_RockSmash",
+      "flag": "JOHTO_FLAG_TEMP_4"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -90,7 +90,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DarkCave1_EventScript_Item_Revive",
-      "flag": "FLAG_ITEM_DARKCAVE1_REVIVE"
+      "flag": "JOHTO_FLAG_ITEM_DARKCAVE1_REVIVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -103,7 +103,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DarkCave1_EventScript_Item_MaxRevive",
-      "flag": "FLAG_ITEM_DARKCAVE1_MAX_REVIVE"
+      "flag": "JOHTO_FLAG_ITEM_DARKCAVE1_MAX_REVIVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -116,7 +116,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DarkCave1_EventScript_Item_Elixir",
-      "flag": "FLAG_ITEM_DARKCAVE1_ELIXIR"
+      "flag": "JOHTO_FLAG_ITEM_DARKCAVE1_ELIXIR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DUNSPARCE",
@@ -241,7 +241,7 @@
       "y": 18,
       "elevation": 0,
       "item": "ITEM_MAX_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_SS_MAX_ETHER"
+      "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_DARKCAVE_SS_MAX_ETHER"
     },
     {
       "type": "hidden_item",
@@ -249,253 +249,9 @@
       "y": 20,
       "elevation": 0,
       "item": "ITEM_BLACK_FLUTE",
-      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_SS_BLACK_FLUTE"
+      "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_DARKCAVE_SS_BLACK_FLUTE"
     }
   ],
-  "game_version": "hns",
-  "region": "REGION_JOHTO",
-  "firered_campaign": {
-    "connections": null,
-    "object_events": [
-      {
-        "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-        "x": 10,
-        "y": 7,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "DarkCave1_EventScript_Item_Potion",
-        "flag": "JOHTO_FLAG_ITEM_DARKCAVE1_POTION"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-        "x": 23,
-        "y": 19,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_RockSmash",
-        "flag": "JOHTO_FLAG_TEMP_2"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-        "x": 18,
-        "y": 19,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_RockSmash",
-        "flag": "JOHTO_FLAG_TEMP_1"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-        "x": 43,
-        "y": 12,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_RockSmash",
-        "flag": "JOHTO_FLAG_TEMP_3"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
-        "x": 58,
-        "y": 43,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "J_EventScript_RockSmash",
-        "flag": "JOHTO_FLAG_TEMP_4"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-        "x": 45,
-        "y": 8,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "DarkCave1_EventScript_Item_Revive",
-        "flag": "JOHTO_FLAG_ITEM_DARKCAVE1_REVIVE"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-        "x": 51,
-        "y": 41,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "DarkCave1_EventScript_Item_MaxRevive",
-        "flag": "JOHTO_FLAG_ITEM_DARKCAVE1_MAX_REVIVE"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-        "x": 59,
-        "y": 47,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_NONE",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "DarkCave1_EventScript_Item_Elixir",
-        "flag": "JOHTO_FLAG_ITEM_DARKCAVE1_ELIXIR"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DUNSPARCE",
-        "x": 14,
-        "y": 22,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_UP",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ZUBAT",
-        "x": 30,
-        "y": 21,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_UP",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GEODUDE",
-        "x": 39,
-        "y": 6,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TEDDIURSA",
-        "x": 5,
-        "y": 7,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TEDDIURSA",
-        "x": 54,
-        "y": 41,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LARVITAR",
-        "x": 63,
-        "y": 7,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TEDDIURSA",
-        "x": 6,
-        "y": 10,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 14,
-        "y": 20,
-        "elevation": 0,
-        "dest_map": "MAP_ROUTE31_HNS",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 34,
-        "y": 6,
-        "elevation": 0,
-        "dest_map": "MAP_DARK_CAVE_NORTH_SIDE_HNS",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 56,
-        "y": 47,
-        "elevation": 0,
-        "dest_map": "MAP_ROUTE46_HNS",
-        "dest_warp_id": "2"
-      }
-    ],
-    "coord_events": [],
-    "bg_events": [
-      {
-        "type": "hidden_item",
-        "x": 60,
-        "y": 18,
-        "elevation": 0,
-        "item": "ITEM_MAX_ETHER",
-        "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_DARKCAVE_SS_MAX_ETHER"
-      },
-      {
-        "type": "hidden_item",
-        "x": 33,
-        "y": 20,
-        "elevation": 0,
-        "item": "ITEM_BLACK_FLUTE",
-        "flag": "JOHTO_BG_ITEM_FLAG_HIDDEN_ITEM_DARKCAVE_SS_BLACK_FLUTE"
-      }
-    ],
-    "region_map_section": "JOHTO_MAPSEC_DARK_CAVE",
-    "region": "REGION_JOHTO"
-  }
+  "game_version": "frlg",
+  "region": "REGION_JOHTO"
 }

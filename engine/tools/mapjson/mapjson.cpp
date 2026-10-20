@@ -1195,7 +1195,7 @@ string generate_layouts_table_text(Json layouts_data) {
                  || map["layout"].string_value() != id
                  || map["game_version"].string_value() != "frlg"
                  || map["region"].string_value() != "REGION_KANTO"
-                 || !map["firered_campaign"]["firered_geometry"].is_object()
+                 || !map["firered_geometry"].is_object()
                  || selected != owner + "_FireRedGeometry"
                  || layouts_data["firered_global_geometry_aliases"][owner] != Json()
                  || may_alias_current25_interior_descriptor(owner, id, layouts_data))

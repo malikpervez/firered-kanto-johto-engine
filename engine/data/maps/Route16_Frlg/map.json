@@ -23,7 +23,7 @@
     },
     {
       "map": "MAP_CELADON_CITY",
-      "offset": -10,
+      "offset": 5,
       "direction": "right"
     }
   ],
@@ -31,8 +31,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 16,
-      "y": 12,
+      "x": 12,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -46,7 +46,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
       "x": 14,
-      "y": 14,
+      "y": 46,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -59,8 +59,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 12,
-      "y": 12,
+      "x": 16,
+      "y": 44,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -73,8 +73,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 8,
-      "y": 12,
+      "x": 18,
+      "y": 46,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -87,8 +87,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 10,
-      "y": 14,
+      "x": 13,
+      "y": 49,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -101,8 +101,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 6,
-      "y": 14,
+      "x": 17,
+      "y": 49,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -116,8 +116,8 @@
       "local_id": "LOCALID_ROUTE16_CUT_TREE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
-      "x": 41,
-      "y": 11,
+      "x": 49,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -130,8 +130,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY_FRLG",
-      "x": 30,
-      "y": 5,
+      "x": 46,
+      "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -144,8 +144,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "x": 31,
-      "y": 5,
+      "x": 47,
+      "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -158,8 +158,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SNORLAX",
-      "x": 31,
-      "y": 13,
+      "x": 54,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -168,40 +168,92 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route16_EventScript_Snorlax",
       "flag": "FLAG_HIDE_ROUTE_16_SNORLAX"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GRIMER",
+      "x": 25,
+      "y": 35,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MURKROW",
+      "x": 40,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SHUPPET",
+      "x": 41,
+      "y": 22,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "JOHTO_FLAG_NIGHT_POKEMON"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ROSELIA",
+      "x": 16,
+      "y": 10,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "JOHTO_FLAG_DAY_POKEMON"
     }
   ],
   "warp_events": [
     {
-      "x": 10,
-      "y": 5,
+      "x": 32,
+      "y": 30,
       "elevation": 0,
       "dest_map": "MAP_ROUTE16_HOUSE",
       "dest_warp_id": "1"
     },
     {
-      "x": 20,
-      "y": 6,
+      "x": 35,
+      "y": 30,
       "elevation": 3,
       "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 27,
-      "y": 6,
+      "x": 42,
+      "y": 30,
       "elevation": 3,
       "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 20,
-      "y": 13,
+      "x": 36,
+      "y": 42,
       "elevation": 3,
       "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
       "dest_warp_id": "2"
     },
     {
-      "x": 27,
-      "y": 13,
+      "x": 43,
+      "y": 42,
       "elevation": 3,
       "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
       "dest_warp_id": "3"
@@ -211,24 +263,24 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 6,
-      "y": 17,
+      "x": 13,
+      "y": 47,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route16_EventScript_RouteSign"
     },
     {
       "type": "sign",
-      "x": 33,
-      "y": 11,
+      "x": 44,
+      "y": 40,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route16_EventScript_CyclingRoadSign"
     },
     {
       "type": "hidden_item",
-      "x": 31,
-      "y": 13,
+      "x": 54,
+      "y": 36,
       "elevation": 3,
       "item": "ITEM_LEFTOVERS",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE16_LEFTOVERS",
@@ -236,1250 +288,975 @@
       "underfoot": true
     }
   ],
-  "firered_campaign": {
-    "object_events": [
+  "firered_geometry": {
+    "width": 64,
+    "height": 52,
+    "primary_tileset": "gTileset_Kanto_General_Hns",
+    "secondary_tileset": "gTileset_CeladonCity_Hns",
+    "border_filepath": "data/layouts/Route16_hns/border.bin",
+    "blockdata_filepath": "data/layouts/Route16_hns/map.bin",
+    "layout_version": "hns",
+    "blockdata_overrides": [
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BIKER",
-        "x": 12,
-        "y": 45,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "Route16_EventScript_Lao",
-        "flag": "0"
+        "x": 36,
+        "y": 25,
+        "expected": 12479,
+        "value": 1060
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BIKER",
-        "x": 14,
-        "y": 46,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "Route16_EventScript_Koji",
-        "flag": "0"
+        "x": 37,
+        "y": 25,
+        "expected": 1068,
+        "value": 1061
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BIKER",
-        "x": 16,
-        "y": 44,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "Route16_EventScript_Luke",
-        "flag": "0"
+        "x": 38,
+        "y": 25,
+        "expected": 1069,
+        "value": 1060
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BIKER",
-        "x": 18,
-        "y": 46,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "Route16_EventScript_Ruben",
-        "flag": "0"
+        "x": 39,
+        "y": 25,
+        "expected": 1069,
+        "value": 1061
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BIKER",
-        "x": 13,
-        "y": 49,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "Route16_EventScript_Hideo",
-        "flag": "0"
+        "x": 36,
+        "y": 26,
+        "expected": 12487,
+        "value": 1060
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BIKER",
-        "x": 17,
-        "y": 49,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "Route16_EventScript_Camron",
-        "flag": "0"
+        "x": 37,
+        "y": 26,
+        "expected": 1076,
+        "value": 1061
       },
       {
-        "local_id": "LOCALID_ROUTE16_CUT_TREE",
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
+        "x": 38,
+        "y": 26,
+        "expected": 1077,
+        "value": 1060
+      },
+      {
+        "x": 39,
+        "y": 26,
+        "expected": 1078,
+        "value": 1061
+      },
+      {
+        "x": 29,
+        "y": 27,
+        "expected": 1141,
+        "value": 1145
+      },
+      {
+        "x": 30,
+        "y": 27,
+        "expected": 1141,
+        "value": 1145
+      },
+      {
+        "x": 31,
+        "y": 27,
+        "expected": 1141,
+        "value": 1145
+      },
+      {
+        "x": 32,
+        "y": 27,
+        "expected": 1141,
+        "value": 1145
+      },
+      {
+        "x": 33,
+        "y": 27,
+        "expected": 1138,
+        "value": 1145
+      },
+      {
+        "x": 34,
+        "y": 27,
+        "expected": 12493,
+        "value": 1145
+      },
+      {
+        "x": 35,
+        "y": 27,
+        "expected": 12494,
+        "value": 1145
+      },
+      {
+        "x": 36,
+        "y": 27,
+        "expected": 12495,
+        "value": 1092
+      },
+      {
+        "x": 37,
+        "y": 27,
+        "expected": 1084,
+        "value": 16453
+      },
+      {
+        "x": 38,
+        "y": 27,
+        "expected": 1085,
+        "value": 16453
+      },
+      {
+        "x": 39,
+        "y": 27,
+        "expected": 1086,
+        "value": 16453
+      },
+      {
+        "x": 40,
+        "y": 27,
+        "expected": 1087,
+        "value": 16453
+      },
+      {
+        "x": 41,
+        "y": 27,
+        "expected": 12301,
+        "value": 1094
+      },
+      {
+        "x": 42,
+        "y": 27,
+        "expected": 12301,
+        "value": 1148
+      },
+      {
+        "x": 43,
+        "y": 27,
+        "expected": 12301,
+        "value": 1148
+      },
+      {
+        "x": 44,
+        "y": 27,
+        "expected": 12301,
+        "value": 1146
+      },
+      {
+        "x": 45,
+        "y": 27,
+        "expected": 12301,
+        "value": 1202
+      },
+      {
+        "x": 46,
+        "y": 27,
+        "expected": 1042,
+        "value": 1145
+      },
+      {
+        "x": 47,
+        "y": 27,
+        "expected": 1045,
+        "value": 1145
+      },
+      {
+        "x": 48,
+        "y": 27,
+        "expected": 1044,
+        "value": 1145
+      },
+      {
         "x": 49,
-        "y": 34,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "EventScript_CutTree",
-        "flag": "FLAG_TEMP_12"
+        "y": 27,
+        "expected": 1045,
+        "value": 1146
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BEAUTY_FRLG",
+        "x": 29,
+        "y": 28,
+        "expected": 1141,
+        "value": 12288
+      },
+      {
+        "x": 30,
+        "y": 28,
+        "expected": 1141,
+        "value": 12479
+      },
+      {
+        "x": 31,
+        "y": 28,
+        "expected": 1141,
+        "value": 1068
+      },
+      {
+        "x": 32,
+        "y": 28,
+        "expected": 1141,
+        "value": 1069
+      },
+      {
+        "x": 33,
+        "y": 28,
+        "expected": 1138,
+        "value": 1069
+      },
+      {
+        "x": 34,
+        "y": 28,
+        "expected": 12288,
+        "value": 12289
+      },
+      {
+        "x": 35,
+        "y": 28,
+        "expected": 12289,
+        "value": 12910
+      },
+      {
+        "x": 36,
+        "y": 28,
+        "expected": 12288,
+        "value": 1100
+      },
+      {
+        "x": 37,
+        "y": 28,
+        "expected": 12289,
+        "value": 16461
+      },
+      {
+        "x": 38,
+        "y": 28,
+        "expected": 12288,
+        "value": 16461
+      },
+      {
+        "x": 39,
+        "y": 28,
+        "expected": 12289,
+        "value": 16461
+      },
+      {
+        "x": 40,
+        "y": 28,
+        "expected": 12288,
+        "value": 16461
+      },
+      {
+        "x": 41,
+        "y": 28,
+        "expected": 12301,
+        "value": 1102
+      },
+      {
+        "x": 42,
+        "y": 28,
+        "expected": 12301,
+        "value": 12911
+      },
+      {
+        "x": 43,
+        "y": 28,
+        "expected": 12301,
+        "value": 1026
+      },
+      {
+        "x": 44,
+        "y": 28,
+        "expected": 12301,
+        "value": 12289
+      },
+      {
+        "x": 45,
+        "y": 28,
+        "expected": 12301,
+        "value": 1138
+      },
+      {
         "x": 46,
         "y": 28,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "Route16_EventScript_Lea",
-        "flag": "0"
+        "expected": 1050,
+        "value": 12289
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_MAN",
         "x": 47,
         "y": 28,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "Route16_EventScript_Jed",
-        "flag": "0"
+        "expected": 1053,
+        "value": 12288
       },
       {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SNORLAX",
-        "x": 54,
-        "y": 36,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Route16_EventScript_Snorlax",
-        "flag": "FLAG_HIDE_ROUTE_16_SNORLAX"
+        "x": 48,
+        "y": 28,
+        "expected": 1052,
+        "value": 12289
       },
       {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GRIMER",
-        "x": 25,
-        "y": 35,
-        "elevation": 4,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
+        "x": 49,
+        "y": 28,
+        "expected": 1053,
+        "value": 12288
       },
       {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MURKROW",
+        "x": 29,
+        "y": 29,
+        "expected": 1141,
+        "value": 12296
+      },
+      {
+        "x": 30,
+        "y": 29,
+        "expected": 1141,
+        "value": 12487
+      },
+      {
+        "x": 31,
+        "y": 29,
+        "expected": 1141,
+        "value": 1076
+      },
+      {
+        "x": 32,
+        "y": 29,
+        "expected": 1141,
+        "value": 1077
+      },
+      {
+        "x": 33,
+        "y": 29,
+        "expected": 1138,
+        "value": 1078
+      },
+      {
+        "x": 34,
+        "y": 29,
+        "expected": 12297,
+        "value": 12782
+      },
+      {
+        "x": 35,
+        "y": 29,
+        "expected": 12297,
+        "value": 12780
+      },
+      {
+        "x": 36,
+        "y": 29,
+        "expected": 12296,
+        "value": 1411
+      },
+      {
+        "x": 37,
+        "y": 29,
+        "expected": 12297,
+        "value": 1412
+      },
+      {
+        "x": 38,
+        "y": 29,
+        "expected": 12296,
+        "value": 1412
+      },
+      {
+        "x": 39,
+        "y": 29,
+        "expected": 12297,
+        "value": 1412
+      },
+      {
         "x": 40,
-        "y": 40,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "0"
+        "y": 29,
+        "expected": 12296,
+        "value": 1412
       },
       {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SHUPPET",
         "x": 41,
-        "y": 22,
-        "elevation": 4,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "JOHTO_FLAG_NIGHT_POKEMON"
+        "y": 29,
+        "expected": 12301,
+        "value": 1413
       },
       {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ROSELIA",
-        "x": 16,
-        "y": 10,
-        "elevation": 4,
-        "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "NULL",
-        "flag": "JOHTO_FLAG_DAY_POKEMON"
-      }
-    ],
-    "warp_events": [
+        "x": 42,
+        "y": 29,
+        "expected": 12301,
+        "value": 12779
+      },
+      {
+        "x": 43,
+        "y": 29,
+        "expected": 12301,
+        "value": 12782
+      },
+      {
+        "x": 44,
+        "y": 29,
+        "expected": 12301,
+        "value": 12783
+      },
+      {
+        "x": 45,
+        "y": 29,
+        "expected": 12301,
+        "value": 12927
+      },
+      {
+        "x": 46,
+        "y": 29,
+        "expected": 1042,
+        "value": 12297
+      },
+      {
+        "x": 47,
+        "y": 29,
+        "expected": 1045,
+        "value": 12296
+      },
+      {
+        "x": 48,
+        "y": 29,
+        "expected": 1044,
+        "value": 12297
+      },
+      {
+        "x": 49,
+        "y": 29,
+        "expected": 1045,
+        "value": 12296
+      },
+      {
+        "x": 29,
+        "y": 30,
+        "expected": 1141,
+        "value": 12288
+      },
+      {
+        "x": 30,
+        "y": 30,
+        "expected": 1141,
+        "value": 12495
+      },
+      {
+        "x": 31,
+        "y": 30,
+        "expected": 1141,
+        "value": 1084
+      },
       {
         "x": 32,
         "y": 30,
-        "elevation": 0,
-        "dest_map": "MAP_ROUTE16_HOUSE",
-        "dest_warp_id": "1"
+        "expected": 1141,
+        "value": 1085
+      },
+      {
+        "x": 33,
+        "y": 30,
+        "expected": 1138,
+        "value": 1086
+      },
+      {
+        "x": 34,
+        "y": 30,
+        "expected": 12289,
+        "value": 12790
       },
       {
         "x": 35,
         "y": 30,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
-        "dest_warp_id": "0"
+        "expected": 12289,
+        "value": 12788
+      },
+      {
+        "x": 36,
+        "y": 30,
+        "expected": 12288,
+        "value": 1448
+      },
+      {
+        "x": 37,
+        "y": 30,
+        "expected": 12289,
+        "value": 1436
+      },
+      {
+        "x": 38,
+        "y": 30,
+        "expected": 12288,
+        "value": 1436
+      },
+      {
+        "x": 39,
+        "y": 30,
+        "expected": 12289,
+        "value": 1436
+      },
+      {
+        "x": 40,
+        "y": 30,
+        "expected": 12288,
+        "value": 1436
+      },
+      {
+        "x": 41,
+        "y": 30,
+        "expected": 12289,
+        "value": 1449
       },
       {
         "x": 42,
         "y": 30,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 36,
-        "y": 42,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
-        "dest_warp_id": "2"
+        "expected": 12288,
+        "value": 12787
       },
       {
         "x": 43,
-        "y": 42,
-        "elevation": 3,
-        "dest_map": "MAP_ROUTE16_NORTH_ENTRANCE_1F",
-        "dest_warp_id": "3"
-      }
-    ],
-    "coord_events": [],
-    "bg_events": [
+        "y": 30,
+        "expected": 12289,
+        "value": 12790
+      },
       {
-        "type": "sign",
+        "x": 44,
+        "y": 30,
+        "expected": 12288,
+        "value": 12791
+      },
+      {
+        "x": 45,
+        "y": 30,
+        "expected": 12289,
+        "value": 12926
+      },
+      {
+        "x": 46,
+        "y": 30,
+        "expected": 1050,
+        "value": 12477
+      },
+      {
+        "x": 47,
+        "y": 30,
+        "expected": 1053,
+        "value": 12478
+      },
+      {
+        "x": 48,
+        "y": 30,
+        "expected": 1052,
+        "value": 12478
+      },
+      {
+        "x": 49,
+        "y": 30,
+        "expected": 1053,
+        "value": 12478
+      },
+      {
+        "x": 29,
+        "y": 31,
+        "expected": 1141,
+        "value": 12302
+      },
+      {
+        "x": 30,
+        "y": 31,
+        "expected": 1443,
+        "value": 12303
+      },
+      {
+        "x": 31,
+        "y": 31,
+        "expected": 1444,
+        "value": 12302
+      },
+      {
+        "x": 32,
+        "y": 31,
+        "expected": 1443,
+        "value": 12915
+      },
+      {
+        "x": 33,
+        "y": 31,
+        "expected": 1444,
+        "value": 12866
+      },
+      {
+        "x": 34,
+        "y": 31,
+        "expected": 12302,
+        "value": 12867
+      },
+      {
+        "x": 35,
+        "y": 31,
+        "expected": 12303,
+        "value": 12905
+      },
+      {
+        "x": 36,
+        "y": 31,
+        "expected": 12302,
+        "value": 1617
+      },
+      {
+        "x": 37,
+        "y": 31,
+        "expected": 12303,
+        "value": 1628
+      },
+      {
+        "x": 38,
+        "y": 31,
+        "expected": 12296,
+        "value": 1629
+      },
+      {
+        "x": 39,
+        "y": 31,
+        "expected": 12297,
+        "value": 1628
+      },
+      {
+        "x": 40,
+        "y": 31,
+        "expected": 12296,
+        "value": 1629
+      },
+      {
+        "x": 41,
+        "y": 31,
+        "expected": 12297,
+        "value": 1625
+      },
+      {
+        "x": 42,
+        "y": 31,
+        "expected": 12296,
+        "value": 12897
+      },
+      {
+        "x": 43,
+        "y": 31,
+        "expected": 12297,
+        "value": 12798
+      },
+      {
+        "x": 44,
+        "y": 31,
+        "expected": 12296,
+        "value": 12799
+      },
+      {
+        "x": 45,
+        "y": 31,
+        "expected": 12297,
+        "value": 12926
+      },
+      {
+        "x": 46,
+        "y": 31,
+        "expected": 1042,
+        "value": 12485
+      },
+      {
+        "x": 47,
+        "y": 31,
+        "expected": 1045,
+        "value": 12486
+      },
+      {
+        "x": 48,
+        "y": 31,
+        "expected": 1044,
+        "value": 12486
+      },
+      {
+        "x": 49,
+        "y": 31,
+        "expected": 1045,
+        "value": 12486
+      },
+      {
+        "x": 29,
+        "y": 32,
+        "expected": 1141,
+        "value": 1050
+      },
+      {
+        "x": 30,
+        "y": 32,
+        "expected": 1274,
+        "value": 1051
+      },
+      {
+        "x": 31,
+        "y": 32,
+        "expected": 1275,
+        "value": 1050
+      },
+      {
+        "x": 32,
+        "y": 32,
+        "expected": 1274,
+        "value": 1051
+      },
+      {
+        "x": 33,
+        "y": 32,
+        "expected": 1275,
+        "value": 1050
+      },
+      {
+        "x": 34,
+        "y": 32,
+        "expected": 1274,
+        "value": 1051
+      },
+      {
+        "x": 35,
+        "y": 32,
+        "expected": 1275,
+        "value": 1050
+      },
+      {
+        "x": 36,
+        "y": 32,
+        "expected": 1274,
+        "value": 1051
+      },
+      {
+        "x": 37,
+        "y": 32,
+        "expected": 1275,
+        "value": 1050
+      },
+      {
+        "x": 38,
+        "y": 32,
+        "expected": 1639,
+        "value": 1051
+      },
+      {
+        "x": 39,
+        "y": 32,
+        "expected": 1072,
+        "value": 1050
+      },
+      {
+        "x": 40,
+        "y": 32,
+        "expected": 1073,
+        "value": 1051
+      },
+      {
+        "x": 41,
+        "y": 32,
+        "expected": 1506,
+        "value": 1050
+      },
+      {
+        "x": 42,
+        "y": 32,
+        "expected": 1506,
+        "value": 1051
+      },
+      {
+        "x": 43,
+        "y": 32,
+        "expected": 1130,
+        "value": 12297
+      },
+      {
+        "x": 44,
+        "y": 32,
+        "expected": 12288,
+        "value": 12289
+      },
+      {
+        "x": 45,
+        "y": 32,
+        "expected": 12289,
+        "value": 12925
+      },
+      {
+        "x": 46,
+        "y": 32,
+        "expected": 1050,
+        "value": 12493
+      },
+      {
+        "x": 47,
+        "y": 32,
+        "expected": 1053,
+        "value": 12494
+      },
+      {
+        "x": 48,
+        "y": 32,
+        "expected": 1052,
+        "value": 12494
+      },
+      {
+        "x": 49,
+        "y": 32,
+        "expected": 1053,
+        "value": 12494
+      },
+      {
+        "x": 29,
+        "y": 33,
+        "expected": 1141,
+        "value": 1060
+      },
+      {
+        "x": 30,
+        "y": 33,
+        "expected": 1042,
+        "value": 1061
+      },
+      {
+        "x": 31,
+        "y": 33,
+        "expected": 1045,
+        "value": 1060
+      },
+      {
+        "x": 32,
+        "y": 33,
+        "expected": 1044,
+        "value": 1061
+      },
+      {
+        "x": 33,
+        "y": 33,
+        "expected": 1045,
+        "value": 1060
+      },
+      {
+        "x": 34,
+        "y": 33,
+        "expected": 1044,
+        "value": 1061
+      },
+      {
+        "x": 35,
+        "y": 33,
+        "expected": 1045,
+        "value": 1060
+      },
+      {
+        "x": 36,
+        "y": 33,
+        "expected": 1044,
+        "value": 1061
+      },
+      {
+        "x": 37,
+        "y": 33,
+        "expected": 1043,
+        "value": 1060
+      },
+      {
+        "x": 38,
+        "y": 33,
+        "expected": 1141,
+        "value": 1061
+      },
+      {
+        "x": 39,
+        "y": 33,
+        "expected": 1050,
+        "value": 1060
+      },
+      {
+        "x": 40,
+        "y": 33,
+        "expected": 1051,
+        "value": 1061
+      },
+      {
+        "x": 41,
+        "y": 33,
+        "expected": 1141,
+        "value": 1060
+      },
+      {
+        "x": 42,
+        "y": 33,
+        "expected": 1141,
+        "value": 1061
+      },
+      {
+        "x": 43,
+        "y": 33,
+        "expected": 1138,
+        "value": 12289
+      },
+      {
+        "x": 44,
+        "y": 33,
+        "expected": 12296,
+        "value": 12297
+      },
+      {
+        "x": 45,
+        "y": 33,
+        "expected": 12297,
+        "value": 1138
+      },
+      {
+        "x": 46,
+        "y": 33,
+        "expected": 1058,
+        "value": 12297
+      },
+      {
+        "x": 47,
+        "y": 33,
+        "expected": 1061,
+        "value": 12296
+      },
+      {
+        "x": 48,
+        "y": 33,
+        "expected": 1060,
+        "value": 12297
+      },
+      {
+        "x": 49,
+        "y": 33,
+        "expected": 1061,
+        "value": 12289
+      },
+      {
+        "x": 52,
+        "y": 36,
+        "expected": 12297,
+        "value": 1138
+      },
+      {
+        "x": 53,
+        "y": 36,
+        "expected": 12485,
+        "value": 1138
+      },
+      {
+        "x": 55,
+        "y": 36,
+        "expected": 12487,
+        "value": 1138
+      },
+      {
+        "x": 56,
+        "y": 36,
+        "expected": 12297,
+        "value": 1138
+      },
+      {
         "x": 13,
         "y": 47,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "Route16_EventScript_RouteSign"
-      },
-      {
-        "type": "sign",
-        "x": 44,
-        "y": 40,
-        "elevation": 0,
-        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-        "script": "Route16_EventScript_CyclingRoadSign"
-      },
-      {
-        "type": "hidden_item",
-        "x": 54,
-        "y": 36,
-        "elevation": 3,
-        "item": "ITEM_LEFTOVERS",
-        "flag": "FLAG_HIDDEN_ITEM_ROUTE16_LEFTOVERS",
-        "quantity": 1,
-        "underfoot": true
+        "expected": 12513,
+        "value": 1026
       }
-    ],
-    "connections": [
-      {
-        "map": "MAP_ROUTE17",
-        "offset": 0,
-        "direction": "down"
-      },
-      {
-        "map": "MAP_CELADON_CITY",
-        "offset": 5,
-        "direction": "right"
-      }
-    ],
-    "firered_geometry": {
-      "width": 64,
-      "height": 52,
-      "primary_tileset": "gTileset_Kanto_General_Hns",
-      "secondary_tileset": "gTileset_CeladonCity_Hns",
-      "border_filepath": "data/layouts/Route16_hns/border.bin",
-      "blockdata_filepath": "data/layouts/Route16_hns/map.bin",
-      "layout_version": "hns",
-      "blockdata_overrides": [
-        {
-          "x": 36,
-          "y": 25,
-          "expected": 12479,
-          "value": 1060
-        },
-        {
-          "x": 37,
-          "y": 25,
-          "expected": 1068,
-          "value": 1061
-        },
-        {
-          "x": 38,
-          "y": 25,
-          "expected": 1069,
-          "value": 1060
-        },
-        {
-          "x": 39,
-          "y": 25,
-          "expected": 1069,
-          "value": 1061
-        },
-        {
-          "x": 36,
-          "y": 26,
-          "expected": 12487,
-          "value": 1060
-        },
-        {
-          "x": 37,
-          "y": 26,
-          "expected": 1076,
-          "value": 1061
-        },
-        {
-          "x": 38,
-          "y": 26,
-          "expected": 1077,
-          "value": 1060
-        },
-        {
-          "x": 39,
-          "y": 26,
-          "expected": 1078,
-          "value": 1061
-        },
-        {
-          "x": 29,
-          "y": 27,
-          "expected": 1141,
-          "value": 1145
-        },
-        {
-          "x": 30,
-          "y": 27,
-          "expected": 1141,
-          "value": 1145
-        },
-        {
-          "x": 31,
-          "y": 27,
-          "expected": 1141,
-          "value": 1145
-        },
-        {
-          "x": 32,
-          "y": 27,
-          "expected": 1141,
-          "value": 1145
-        },
-        {
-          "x": 33,
-          "y": 27,
-          "expected": 1138,
-          "value": 1145
-        },
-        {
-          "x": 34,
-          "y": 27,
-          "expected": 12493,
-          "value": 1145
-        },
-        {
-          "x": 35,
-          "y": 27,
-          "expected": 12494,
-          "value": 1145
-        },
-        {
-          "x": 36,
-          "y": 27,
-          "expected": 12495,
-          "value": 1092
-        },
-        {
-          "x": 37,
-          "y": 27,
-          "expected": 1084,
-          "value": 16453
-        },
-        {
-          "x": 38,
-          "y": 27,
-          "expected": 1085,
-          "value": 16453
-        },
-        {
-          "x": 39,
-          "y": 27,
-          "expected": 1086,
-          "value": 16453
-        },
-        {
-          "x": 40,
-          "y": 27,
-          "expected": 1087,
-          "value": 16453
-        },
-        {
-          "x": 41,
-          "y": 27,
-          "expected": 12301,
-          "value": 1094
-        },
-        {
-          "x": 42,
-          "y": 27,
-          "expected": 12301,
-          "value": 1148
-        },
-        {
-          "x": 43,
-          "y": 27,
-          "expected": 12301,
-          "value": 1148
-        },
-        {
-          "x": 44,
-          "y": 27,
-          "expected": 12301,
-          "value": 1146
-        },
-        {
-          "x": 45,
-          "y": 27,
-          "expected": 12301,
-          "value": 1202
-        },
-        {
-          "x": 46,
-          "y": 27,
-          "expected": 1042,
-          "value": 1145
-        },
-        {
-          "x": 47,
-          "y": 27,
-          "expected": 1045,
-          "value": 1145
-        },
-        {
-          "x": 48,
-          "y": 27,
-          "expected": 1044,
-          "value": 1145
-        },
-        {
-          "x": 49,
-          "y": 27,
-          "expected": 1045,
-          "value": 1146
-        },
-        {
-          "x": 29,
-          "y": 28,
-          "expected": 1141,
-          "value": 12288
-        },
-        {
-          "x": 30,
-          "y": 28,
-          "expected": 1141,
-          "value": 12479
-        },
-        {
-          "x": 31,
-          "y": 28,
-          "expected": 1141,
-          "value": 1068
-        },
-        {
-          "x": 32,
-          "y": 28,
-          "expected": 1141,
-          "value": 1069
-        },
-        {
-          "x": 33,
-          "y": 28,
-          "expected": 1138,
-          "value": 1069
-        },
-        {
-          "x": 34,
-          "y": 28,
-          "expected": 12288,
-          "value": 12289
-        },
-        {
-          "x": 35,
-          "y": 28,
-          "expected": 12289,
-          "value": 12910
-        },
-        {
-          "x": 36,
-          "y": 28,
-          "expected": 12288,
-          "value": 1100
-        },
-        {
-          "x": 37,
-          "y": 28,
-          "expected": 12289,
-          "value": 16461
-        },
-        {
-          "x": 38,
-          "y": 28,
-          "expected": 12288,
-          "value": 16461
-        },
-        {
-          "x": 39,
-          "y": 28,
-          "expected": 12289,
-          "value": 16461
-        },
-        {
-          "x": 40,
-          "y": 28,
-          "expected": 12288,
-          "value": 16461
-        },
-        {
-          "x": 41,
-          "y": 28,
-          "expected": 12301,
-          "value": 1102
-        },
-        {
-          "x": 42,
-          "y": 28,
-          "expected": 12301,
-          "value": 12911
-        },
-        {
-          "x": 43,
-          "y": 28,
-          "expected": 12301,
-          "value": 1026
-        },
-        {
-          "x": 44,
-          "y": 28,
-          "expected": 12301,
-          "value": 12289
-        },
-        {
-          "x": 45,
-          "y": 28,
-          "expected": 12301,
-          "value": 1138
-        },
-        {
-          "x": 46,
-          "y": 28,
-          "expected": 1050,
-          "value": 12289
-        },
-        {
-          "x": 47,
-          "y": 28,
-          "expected": 1053,
-          "value": 12288
-        },
-        {
-          "x": 48,
-          "y": 28,
-          "expected": 1052,
-          "value": 12289
-        },
-        {
-          "x": 49,
-          "y": 28,
-          "expected": 1053,
-          "value": 12288
-        },
-        {
-          "x": 29,
-          "y": 29,
-          "expected": 1141,
-          "value": 12296
-        },
-        {
-          "x": 30,
-          "y": 29,
-          "expected": 1141,
-          "value": 12487
-        },
-        {
-          "x": 31,
-          "y": 29,
-          "expected": 1141,
-          "value": 1076
-        },
-        {
-          "x": 32,
-          "y": 29,
-          "expected": 1141,
-          "value": 1077
-        },
-        {
-          "x": 33,
-          "y": 29,
-          "expected": 1138,
-          "value": 1078
-        },
-        {
-          "x": 34,
-          "y": 29,
-          "expected": 12297,
-          "value": 12782
-        },
-        {
-          "x": 35,
-          "y": 29,
-          "expected": 12297,
-          "value": 12780
-        },
-        {
-          "x": 36,
-          "y": 29,
-          "expected": 12296,
-          "value": 1411
-        },
-        {
-          "x": 37,
-          "y": 29,
-          "expected": 12297,
-          "value": 1412
-        },
-        {
-          "x": 38,
-          "y": 29,
-          "expected": 12296,
-          "value": 1412
-        },
-        {
-          "x": 39,
-          "y": 29,
-          "expected": 12297,
-          "value": 1412
-        },
-        {
-          "x": 40,
-          "y": 29,
-          "expected": 12296,
-          "value": 1412
-        },
-        {
-          "x": 41,
-          "y": 29,
-          "expected": 12301,
-          "value": 1413
-        },
-        {
-          "x": 42,
-          "y": 29,
-          "expected": 12301,
-          "value": 12779
-        },
-        {
-          "x": 43,
-          "y": 29,
-          "expected": 12301,
-          "value": 12782
-        },
-        {
-          "x": 44,
-          "y": 29,
-          "expected": 12301,
-          "value": 12783
-        },
-        {
-          "x": 45,
-          "y": 29,
-          "expected": 12301,
-          "value": 12927
-        },
-        {
-          "x": 46,
-          "y": 29,
-          "expected": 1042,
-          "value": 12297
-        },
-        {
-          "x": 47,
-          "y": 29,
-          "expected": 1045,
-          "value": 12296
-        },
-        {
-          "x": 48,
-          "y": 29,
-          "expected": 1044,
-          "value": 12297
-        },
-        {
-          "x": 49,
-          "y": 29,
-          "expected": 1045,
-          "value": 12296
-        },
-        {
-          "x": 29,
-          "y": 30,
-          "expected": 1141,
-          "value": 12288
-        },
-        {
-          "x": 30,
-          "y": 30,
-          "expected": 1141,
-          "value": 12495
-        },
-        {
-          "x": 31,
-          "y": 30,
-          "expected": 1141,
-          "value": 1084
-        },
-        {
-          "x": 32,
-          "y": 30,
-          "expected": 1141,
-          "value": 1085
-        },
-        {
-          "x": 33,
-          "y": 30,
-          "expected": 1138,
-          "value": 1086
-        },
-        {
-          "x": 34,
-          "y": 30,
-          "expected": 12289,
-          "value": 12790
-        },
-        {
-          "x": 35,
-          "y": 30,
-          "expected": 12289,
-          "value": 12788
-        },
-        {
-          "x": 36,
-          "y": 30,
-          "expected": 12288,
-          "value": 1448
-        },
-        {
-          "x": 37,
-          "y": 30,
-          "expected": 12289,
-          "value": 1436
-        },
-        {
-          "x": 38,
-          "y": 30,
-          "expected": 12288,
-          "value": 1436
-        },
-        {
-          "x": 39,
-          "y": 30,
-          "expected": 12289,
-          "value": 1436
-        },
-        {
-          "x": 40,
-          "y": 30,
-          "expected": 12288,
-          "value": 1436
-        },
-        {
-          "x": 41,
-          "y": 30,
-          "expected": 12289,
-          "value": 1449
-        },
-        {
-          "x": 42,
-          "y": 30,
-          "expected": 12288,
-          "value": 12787
-        },
-        {
-          "x": 43,
-          "y": 30,
-          "expected": 12289,
-          "value": 12790
-        },
-        {
-          "x": 44,
-          "y": 30,
-          "expected": 12288,
-          "value": 12791
-        },
-        {
-          "x": 45,
-          "y": 30,
-          "expected": 12289,
-          "value": 12926
-        },
-        {
-          "x": 46,
-          "y": 30,
-          "expected": 1050,
-          "value": 12477
-        },
-        {
-          "x": 47,
-          "y": 30,
-          "expected": 1053,
-          "value": 12478
-        },
-        {
-          "x": 48,
-          "y": 30,
-          "expected": 1052,
-          "value": 12478
-        },
-        {
-          "x": 49,
-          "y": 30,
-          "expected": 1053,
-          "value": 12478
-        },
-        {
-          "x": 29,
-          "y": 31,
-          "expected": 1141,
-          "value": 12302
-        },
-        {
-          "x": 30,
-          "y": 31,
-          "expected": 1443,
-          "value": 12303
-        },
-        {
-          "x": 31,
-          "y": 31,
-          "expected": 1444,
-          "value": 12302
-        },
-        {
-          "x": 32,
-          "y": 31,
-          "expected": 1443,
-          "value": 12915
-        },
-        {
-          "x": 33,
-          "y": 31,
-          "expected": 1444,
-          "value": 12866
-        },
-        {
-          "x": 34,
-          "y": 31,
-          "expected": 12302,
-          "value": 12867
-        },
-        {
-          "x": 35,
-          "y": 31,
-          "expected": 12303,
-          "value": 12905
-        },
-        {
-          "x": 36,
-          "y": 31,
-          "expected": 12302,
-          "value": 1617
-        },
-        {
-          "x": 37,
-          "y": 31,
-          "expected": 12303,
-          "value": 1628
-        },
-        {
-          "x": 38,
-          "y": 31,
-          "expected": 12296,
-          "value": 1629
-        },
-        {
-          "x": 39,
-          "y": 31,
-          "expected": 12297,
-          "value": 1628
-        },
-        {
-          "x": 40,
-          "y": 31,
-          "expected": 12296,
-          "value": 1629
-        },
-        {
-          "x": 41,
-          "y": 31,
-          "expected": 12297,
-          "value": 1625
-        },
-        {
-          "x": 42,
-          "y": 31,
-          "expected": 12296,
-          "value": 12897
-        },
-        {
-          "x": 43,
-          "y": 31,
-          "expected": 12297,
-          "value": 12798
-        },
-        {
-          "x": 44,
-          "y": 31,
-          "expected": 12296,
-          "value": 12799
-        },
-        {
-          "x": 45,
-          "y": 31,
-          "expected": 12297,
-          "value": 12926
-        },
-        {
-          "x": 46,
-          "y": 31,
-          "expected": 1042,
-          "value": 12485
-        },
-        {
-          "x": 47,
-          "y": 31,
-          "expected": 1045,
-          "value": 12486
-        },
-        {
-          "x": 48,
-          "y": 31,
-          "expected": 1044,
-          "value": 12486
-        },
-        {
-          "x": 49,
-          "y": 31,
-          "expected": 1045,
-          "value": 12486
-        },
-        {
-          "x": 29,
-          "y": 32,
-          "expected": 1141,
-          "value": 1050
-        },
-        {
-          "x": 30,
-          "y": 32,
-          "expected": 1274,
-          "value": 1051
-        },
-        {
-          "x": 31,
-          "y": 32,
-          "expected": 1275,
-          "value": 1050
-        },
-        {
-          "x": 32,
-          "y": 32,
-          "expected": 1274,
-          "value": 1051
-        },
-        {
-          "x": 33,
-          "y": 32,
-          "expected": 1275,
-          "value": 1050
-        },
-        {
-          "x": 34,
-          "y": 32,
-          "expected": 1274,
-          "value": 1051
-        },
-        {
-          "x": 35,
-          "y": 32,
-          "expected": 1275,
-          "value": 1050
-        },
-        {
-          "x": 36,
-          "y": 32,
-          "expected": 1274,
-          "value": 1051
-        },
-        {
-          "x": 37,
-          "y": 32,
-          "expected": 1275,
-          "value": 1050
-        },
-        {
-          "x": 38,
-          "y": 32,
-          "expected": 1639,
-          "value": 1051
-        },
-        {
-          "x": 39,
-          "y": 32,
-          "expected": 1072,
-          "value": 1050
-        },
-        {
-          "x": 40,
-          "y": 32,
-          "expected": 1073,
-          "value": 1051
-        },
-        {
-          "x": 41,
-          "y": 32,
-          "expected": 1506,
-          "value": 1050
-        },
-        {
-          "x": 42,
-          "y": 32,
-          "expected": 1506,
-          "value": 1051
-        },
-        {
-          "x": 43,
-          "y": 32,
-          "expected": 1130,
-          "value": 12297
-        },
-        {
-          "x": 44,
-          "y": 32,
-          "expected": 12288,
-          "value": 12289
-        },
-        {
-          "x": 45,
-          "y": 32,
-          "expected": 12289,
-          "value": 12925
-        },
-        {
-          "x": 46,
-          "y": 32,
-          "expected": 1050,
-          "value": 12493
-        },
-        {
-          "x": 47,
-          "y": 32,
-          "expected": 1053,
-          "value": 12494
-        },
-        {
-          "x": 48,
-          "y": 32,
-          "expected": 1052,
-          "value": 12494
-        },
-        {
-          "x": 49,
-          "y": 32,
-          "expected": 1053,
-          "value": 12494
-        },
-        {
-          "x": 29,
-          "y": 33,
-          "expected": 1141,
-          "value": 1060
-        },
-        {
-          "x": 30,
-          "y": 33,
-          "expected": 1042,
-          "value": 1061
-        },
-        {
-          "x": 31,
-          "y": 33,
-          "expected": 1045,
-          "value": 1060
-        },
-        {
-          "x": 32,
-          "y": 33,
-          "expected": 1044,
-          "value": 1061
-        },
-        {
-          "x": 33,
-          "y": 33,
-          "expected": 1045,
-          "value": 1060
-        },
-        {
-          "x": 34,
-          "y": 33,
-          "expected": 1044,
-          "value": 1061
-        },
-        {
-          "x": 35,
-          "y": 33,
-          "expected": 1045,
-          "value": 1060
-        },
-        {
-          "x": 36,
-          "y": 33,
-          "expected": 1044,
-          "value": 1061
-        },
-        {
-          "x": 37,
-          "y": 33,
-          "expected": 1043,
-          "value": 1060
-        },
-        {
-          "x": 38,
-          "y": 33,
-          "expected": 1141,
-          "value": 1061
-        },
-        {
-          "x": 39,
-          "y": 33,
-          "expected": 1050,
-          "value": 1060
-        },
-        {
-          "x": 40,
-          "y": 33,
-          "expected": 1051,
-          "value": 1061
-        },
-        {
-          "x": 41,
-          "y": 33,
-          "expected": 1141,
-          "value": 1060
-        },
-        {
-          "x": 42,
-          "y": 33,
-          "expected": 1141,
-          "value": 1061
-        },
-        {
-          "x": 43,
-          "y": 33,
-          "expected": 1138,
-          "value": 12289
-        },
-        {
-          "x": 44,
-          "y": 33,
-          "expected": 12296,
-          "value": 12297
-        },
-        {
-          "x": 45,
-          "y": 33,
-          "expected": 12297,
-          "value": 1138
-        },
-        {
-          "x": 46,
-          "y": 33,
-          "expected": 1058,
-          "value": 12297
-        },
-        {
-          "x": 47,
-          "y": 33,
-          "expected": 1061,
-          "value": 12296
-        },
-        {
-          "x": 48,
-          "y": 33,
-          "expected": 1060,
-          "value": 12297
-        },
-        {
-          "x": 49,
-          "y": 33,
-          "expected": 1061,
-          "value": 12289
-        },
-        {
-          "x": 52,
-          "y": 36,
-          "expected": 12297,
-          "value": 1138
-        },
-        {
-          "x": 53,
-          "y": 36,
-          "expected": 12485,
-          "value": 1138
-        },
-        {
-          "x": 55,
-          "y": 36,
-          "expected": 12487,
-          "value": 1138
-        },
-        {
-          "x": 56,
-          "y": 36,
-          "expected": 12297,
-          "value": 1138
-        },
-        {
-          "x": 13,
-          "y": 47,
-          "expected": 12513,
-          "value": 1026
-        }
-      ]
-    }
+    ]
   }
 }

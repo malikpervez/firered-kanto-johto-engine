@@ -35,7 +35,7 @@
   "warp_events": [
     {
       "x": 4,
-      "y": 7,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_FUCHSIA_CITY",
       "dest_warp_id": "10"
@@ -43,24 +43,13 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "firered_campaign": {
-    "firered_geometry": {
-      "blockdata_filepath": "data/layouts/LavenderTown_House3_hns/map.bin",
-      "border_filepath": "data/layouts/LavenderTown_House3_hns/border.bin",
-      "height": 10,
-      "layout_version": "hns",
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_House_Lab_Hns",
-      "width": 13
-    },
-    "warp_events": [
-      {
-        "x": 4,
-        "y": 8,
-        "elevation": 3,
-        "dest_map": "MAP_FUCHSIA_CITY",
-        "dest_warp_id": "10"
-      }
-    ]
+  "firered_geometry": {
+    "blockdata_filepath": "data/layouts/LavenderTown_House3_hns/map.bin",
+    "border_filepath": "data/layouts/LavenderTown_House3_hns/border.bin",
+    "height": 10,
+    "layout_version": "hns",
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_House_Lab_Hns",
+    "width": 13
   }
 }

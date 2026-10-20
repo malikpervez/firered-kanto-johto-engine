@@ -3,7 +3,7 @@
   "name": "Gate_RuinsOfAlph_Route32_hns",
   "layout": "LAYOUT_GATE_RUINS_OF_ALPH_ROUTE32_HNS",
   "music": "MUS_HG_ROUTE30",
-  "region_map_section": "MAPSEC_ROUTE_32",
+  "region_map_section": "JOHTO_MAPSEC_ROUTE_32",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -46,44 +46,6 @@
   ],
   "coord_events": [],
   "bg_events": [],
-  "game_version": "hns",
-  "region": "REGION_JOHTO",
-  "firered_campaign": {
-    "connections": null,
-    "object_events": [
-      {
-        "graphics_id": "OBJ_EVENT_GFX_BOY_2_HNS",
-        "x": 7,
-        "y": 6,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
-        "movement_range_x": 0,
-        "movement_range_y": 0,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "Gate_RuinsOfAlph_Route32_EventScript_Youngster",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 11,
-        "y": 5,
-        "elevation": 0,
-        "dest_map": "MAP_ROUTE32_HNS",
-        "dest_warp_id": "0"
-      },
-      {
-        "x": 1,
-        "y": 5,
-        "elevation": 0,
-        "dest_map": "MAP_RUINS_OF_ALPH_OUTSIDE_HNS",
-        "dest_warp_id": "0"
-      }
-    ],
-    "coord_events": [],
-    "bg_events": [],
-    "region_map_section": "JOHTO_MAPSEC_ROUTE_32",
-    "region": "REGION_JOHTO"
-  }
+  "game_version": "frlg",
+  "region": "REGION_JOHTO"
 }

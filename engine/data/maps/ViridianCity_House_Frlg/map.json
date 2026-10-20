@@ -20,7 +20,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
-      "x": 7,
+      "x": 6,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -47,7 +47,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SPEAROW",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
       "x": 6,
       "y": 6,
       "elevation": 3,
@@ -58,26 +58,40 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianCity_House_EventScript_Speary",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RATTATA",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 5,
+      "movement_range_y": 5,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KantoAmbient_ViridianCity_House1_EventScript_Rattey",
+      "flag": "0",
+      "type": "object"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_VIRIDIAN_CITY",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 4,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_VIRIDIAN_CITY",
-      "dest_warp_id": "1"
-    },
-    {
       "x": 5,
-      "y": 7,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 7,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_VIRIDIAN_CITY",
       "dest_warp_id": "1"
@@ -94,96 +108,13 @@
       "script": "ViridianCity_House_EventScript_NicknameSign"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "blockdata_filepath": "data/layouts/ViridianCity_House1_hns/map.bin",
-      "border_filepath": "data/layouts/ViridianCity_House1_hns/border.bin",
-      "height": 14,
-      "layout_version": "hns",
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_House_Lab_Hns",
-      "width": 17
-    },
-    "object_events": [
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
-        "x": 6,
-        "y": 4,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "ViridianCity_House_EventScript_BaldingMan",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
-        "x": 2,
-        "y": 5,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 2,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "ViridianCity_House_EventScript_LittleGirl",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
-        "x": 6,
-        "y": 6,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-        "movement_range_x": 4,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "ViridianCity_House_EventScript_Speary",
-        "flag": "0"
-      },
-      {
-        "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RATTATA",
-        "x": 10,
-        "y": 3,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-        "movement_range_x": 5,
-        "movement_range_y": 5,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "KantoAmbient_ViridianCity_House1_EventScript_Rattey",
-        "flag": "0",
-        "type": "object"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 5,
-        "y": 8,
-        "elevation": 0,
-        "dest_map": "MAP_VIRIDIAN_CITY",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 6,
-        "y": 8,
-        "elevation": 0,
-        "dest_map": "MAP_VIRIDIAN_CITY",
-        "dest_warp_id": "1"
-      },
-      {
-        "x": 7,
-        "y": 8,
-        "elevation": 3,
-        "dest_map": "MAP_VIRIDIAN_CITY",
-        "dest_warp_id": "1"
-      }
-    ]
+  "firered_geometry": {
+    "blockdata_filepath": "data/layouts/ViridianCity_House1_hns/map.bin",
+    "border_filepath": "data/layouts/ViridianCity_House1_hns/border.bin",
+    "height": 14,
+    "layout_version": "hns",
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_House_Lab_Hns",
+    "width": 17
   }
 }

@@ -20,8 +20,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "x": 10,
-      "y": 12,
+      "x": 9,
+      "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -76,6 +76,13 @@
   ],
   "warp_events": [
     {
+      "x": 6,
+      "y": 18,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": "4"
+    },
+    {
       "x": 7,
       "y": 18,
       "elevation": 3,
@@ -84,13 +91,6 @@
     },
     {
       "x": 8,
-      "y": 18,
-      "elevation": 3,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 9,
       "y": 18,
       "elevation": 3,
       "dest_map": "MAP_CERULEAN_CITY",
@@ -116,96 +116,13 @@
       "script": "CeruleanCity_Gym_EventScript_GymStatue"
     }
   ],
-  "firered_campaign": {
-    "firered_geometry": {
-      "width": 17,
-      "height": 20,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_CeruleanCity_Gym_Hns",
-      "border_filepath": "data/layouts/CeruleanCity_Gym_hns/border.bin",
-      "blockdata_filepath": "data/layouts/CeruleanCity_Gym_hns/map.bin",
-      "layout_version": "hns"
-    },
-    "object_events": [
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-        "x": 9,
-        "y": 13,
-        "elevation": 0,
-        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "1",
-        "script": "CeruleanCity_Gym_EventScript_Luis",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_PICNICKER_FRLG",
-        "x": 4,
-        "y": 7,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NORMAL",
-        "trainer_sight_or_berry_tree_id": "4",
-        "script": "CeruleanCity_Gym_EventScript_Diana",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_MISTY",
-        "x": 8,
-        "y": 6,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CeruleanCity_Gym_EventScript_Misty",
-        "flag": "0"
-      },
-      {
-        "type": "object",
-        "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
-        "x": 7,
-        "y": 16,
-        "elevation": 3,
-        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-        "movement_range_x": 1,
-        "movement_range_y": 1,
-        "trainer_type": "TRAINER_TYPE_NONE",
-        "trainer_sight_or_berry_tree_id": "0",
-        "script": "CeruleanCity_Gym_EventScript_GymGuy",
-        "flag": "0"
-      }
-    ],
-    "warp_events": [
-      {
-        "x": 6,
-        "y": 18,
-        "elevation": 3,
-        "dest_map": "MAP_CERULEAN_CITY",
-        "dest_warp_id": "4"
-      },
-      {
-        "x": 7,
-        "y": 18,
-        "elevation": 3,
-        "dest_map": "MAP_CERULEAN_CITY",
-        "dest_warp_id": "4"
-      },
-      {
-        "x": 8,
-        "y": 18,
-        "elevation": 3,
-        "dest_map": "MAP_CERULEAN_CITY",
-        "dest_warp_id": "4"
-      }
-    ]
+  "firered_geometry": {
+    "width": 17,
+    "height": 20,
+    "primary_tileset": "gTileset_Johto_Building_Hns",
+    "secondary_tileset": "gTileset_CeruleanCity_Gym_Hns",
+    "border_filepath": "data/layouts/CeruleanCity_Gym_hns/border.bin",
+    "blockdata_filepath": "data/layouts/CeruleanCity_Gym_hns/map.bin",
+    "layout_version": "hns"
   }
 }
