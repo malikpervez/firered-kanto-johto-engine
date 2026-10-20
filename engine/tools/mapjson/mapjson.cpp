@@ -548,6 +548,24 @@ void process_map(string map_filepath, string layouts_filepath, string output_dir
     write_text_file(out_dir + "connections.inc", connections_text);
 }
 
+// Maps that are no longer in the game keep their place in map_groups.json (so other maps keep their numbers) and
+// their MAP_ constant; data/maps/removed_maps.json gives that constant, since their folder is gone.
+Json removed_maps(const string &file_dir) {
+    static bool loaded = false;
+    static Json removed;
+    if (!loaded) {
+        loaded = true;
+        ifstream f(file_dir + "removed_maps.json");
+        if (f.is_open()) {
+            string err;
+            removed = Json::parse(read_text_file(file_dir + "removed_maps.json"), err);
+            if (!err.empty())
+                FATAL_ERROR("Invalid removed_maps.json: %s\n", err.c_str());
+        }
+    }
+    return removed;
+}
+
 void process_event_constants(const vector<string> &map_filepaths, string output_ids_file) {
     string warning = get_generated_warning("data/maps/*/map.json", false);
 
@@ -584,6 +602,20 @@ void process_event_constants(const vector<string> &map_filepaths, string output_
         string temp = map_ids_text.str();
         if (!temp.empty()) {
             ids_file_text << "// " << map_id << "\n" << temp << "\n";
+        }
+    }
+
+    // event constants of the maps that are no longer in the game (see removed_maps)
+    if (!map_filepaths.empty()) {
+        string map_dir = file_parent(map_filepaths[0]);  // data/maps/X/
+        Json removed = removed_maps(file_parent(map_dir.substr(0, map_dir.size() - 1)));
+        for (auto &entry : removed.object_items()) {
+            ostringstream map_ids_text;
+            for (auto &id : entry.second["event_ids"].object_items())
+                map_ids_text << "#define " << id.first << " " << id.second.int_value() << "\n";
+            string temp = map_ids_text.str();
+            if (!temp.empty())
+                ids_file_text << "// " << json_to_string(entry.second, "id") << " (removed)\n" << temp << "\n";
         }
     }
 
@@ -738,11 +770,17 @@ string generate_map_constants_text(string groups_filepath, Json groups_data, vec
 
         for (auto &map_name : groups_data[groupName].array_items()) {
             string map_filepath = file_dir + json_to_string(map_name) + sep + "map.json";
-            string err_str;
-            Json map_data = Json::parse(read_text_file(map_filepath), err_str);
-            if (map_data == Json())
-                FATAL_ERROR("%s: %s\n", map_filepath.c_str(), err_str.c_str());
-            string id = json_to_string(map_data, "id", true);
+            string id;
+            Json removed = removed_maps(file_dir)[json_to_string(map_name)];
+            if (removed.is_object()) {
+                id = json_to_string(removed, "id");
+            } else {
+                string err_str;
+                Json map_data = Json::parse(read_text_file(map_filepath), err_str);
+                if (map_data == Json())
+                    FATAL_ERROR("%s: %s\n", map_filepath.c_str(), err_str.c_str());
+                id = json_to_string(map_data, "id", true);
+            }
             map_ids.push_back(id);
             valid_map_ids.push_back(id);
             if (id.length() > max_length)
@@ -868,6 +906,12 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
 
     if (groups_data == Json())
         FATAL_ERROR("%s\n", err.c_str());
+
+    Json removed = removed_maps(file_parent(groups_filepath));
+    for (auto &group : groups_data["group_order"].array_items())
+        for (auto &map_name : groups_data[json_to_string(group)].array_items())
+            if (removed[json_to_string(map_name)].is_object())
+                invalid_maps.push_back(json_to_string(map_name));
 
     string groups_text = generate_groups_text(groups_data, invalid_maps);
     string connections_text = generate_connections_text(groups_data, invalid_maps, output_asm);
