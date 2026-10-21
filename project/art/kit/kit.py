@@ -27,6 +27,7 @@ from PIL import Image
 
 import fields
 import grass
+import lawn
 import trees
 import water
 
@@ -36,7 +37,10 @@ PRIMARY = "gTileset_PalletConcept_General"
 P0 = [(0, 0, 0), (24, 32, 32), (40, 96, 56), (48, 112, 60), (56, 120, 64), (88, 160, 72), (120, 192, 88),
       (168, 216, 112), (112, 72, 48), (176, 128, 80), (216, 176, 120), (96, 96, 96), (144, 144, 136),
       (192, 192, 176), (72, 48, 40), (240, 240, 224)]
-OUT, G0, G1, GD, GM, GL, GH, SD, SM, SL, KD, KM, KL, TR, CR = range(1, 16)  # six greens (grass.py)
+OUT, G0, G1, GD, GM, GL, GH, SD, SM, SL, KD, KM, KL, TR, CR = range(1, 16)  # six greens
+# the lawn (lawn/<option>/, lawn.py): its six greens take the six green slots
+LAWN = "D_Clover_Glade"
+P0[G0:GH + 1] = lawn.greens(LAWN)
 
 P2 = [(0, 0, 0), (40, 24, 24), (88, 48, 32), (136, 80, 48), (184, 120, 72), (224, 168, 112), (120, 32, 32),
       (176, 56, 48), (224, 96, 72), (248, 152, 120), (40, 56, 96), (96, 144, 200), (176, 216, 240),
@@ -49,10 +53,12 @@ P4 = [(0, 0, 0), (24, 32, 32), (32, 80, 48), (56, 128, 64), (104, 176, 80), (160
 F_OUT, LFD, LFM, LFL, LFH, RED, PINK, YEL, ORG, PUR, BLU, WHT, IRON, GLOW, TRUNK = range(1, 16)
 
 # tall grass (tall_grass/: tiles drawn natively at 16x16, with the grass the game draws over the player's feet):
-# its own palette, whose two ground colours are the lawn's, so a patch sits in the lawn
-PTG = [(255, 0, 255), (120, 192, 88), (88, 160, 72), (184, 232, 144), (136, 200, 104), (64, 144, 56), (40, 112, 48),
+# its own palette, whose two ground colours are the lawn's (its base and base dark), so a patch sits in the lawn
+PTG_PACK = [(255, 0, 255), (120, 192, 88), (88, 160, 72), (184, 232, 144), (136, 200, 104), (64, 144, 56), (40, 112, 48),
        (32, 136, 96), (24, 96, 72), (56, 88, 24), (32, 56, 24), (240, 240, 224), (232, 200, 96), (0, 0, 0), (0, 0, 0),
        (0, 0, 0)]
+PTG = list(PTG_PACK)
+PTG[1:3] = P0[GM], P0[GD]
 BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "tallgrass": 4, "plants": 8}
 PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "tallgrass": PTG, "plants": P4}
 # the two kinds, staggered in a field ("g" in the legend): two fronds (B), and a sprig with flowers (C); each has
@@ -556,7 +562,7 @@ def _tall_grass(fn: str) -> np.ndarray:
     with Image.open(KIT / "tall_grass" / fn) as im:
         a = np.array(im.convert("RGBA"))
     out = np.zeros(a.shape[:2], np.uint8)
-    lut = {c: i for i, c in enumerate(PTG) if i}
+    lut = {c: i for i, c in enumerate(PTG_PACK) if i}  # the pack's colours (its ground is then the lawn's)
     for y in range(a.shape[0]):
         for x in range(a.shape[1]):
             r, g, b, al = (int(v) for v in a[y, x])
@@ -582,10 +588,10 @@ def primary(spec_dir: Path) -> dict:
     spec_mt = []
     # ground
     ground = sheet("ground", "ground")
-    lawn, daisies = grass.field(), grass.field(daisies=True)
-    ground.add("grass", grass.blocks(lawn)[0], tileset="primary")  # the ground under paths and things
-    ground.add("lawn", lawn, tileset="primary")  # the grass, a 4x4 pattern (grass.py)
-    ground.add("lawn_daisies", daisies, tileset="primary")
+    lawns = lawn.tiles(LAWN, P0)
+    ground.add("grass", lawns["lawn_a"], tileset="primary")  # the ground under paths and things
+    for name, t in lawns.items():  # the lawn, scattered ("." in the legend), and with daisies (",")
+        ground.add(name, t, tileset="primary")
     for m in range(16):
         ground.add(f"cobble#{m}", cobble(m), tileset="primary", ground="grass")
     for m in range(16):
@@ -676,8 +682,8 @@ def primary(spec_dir: Path) -> dict:
 # the legend characters every map shares
 LEGEND = {
     "T": {"auto": "forest"},
-    ".": {"tile": "lawn"},
-    ",": {"tile": "lawn_daisies"},
+    ".": {"pick": list(lawn.PLAIN)},
+    ",": "lawn_flowers",
     "=": {"auto": "cobble"}, ":": {"auto": "dirt"},
     "~": {"auto": "pond", "elevation": 1}, "s": {"auto": "sea", "elevation": 1},
     "#": {"auto": "fence"}, "d": {"auto": "dock"},

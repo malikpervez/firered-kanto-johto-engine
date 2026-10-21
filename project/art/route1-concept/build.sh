@@ -21,7 +21,7 @@ pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --bor
 # road (its columns 14-15) the bottom at columns 24-25
 pae map connect $M up ViridianCity_Frlg --align 22,24 $P
 pae map connect $M down PalletTown_Frlg --align 24,14 $P
-pae seam build $M $P
+[ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P  # build_all.sh makes them last, when every map is painted
 
 # events
 pae map place $M object 0 23 20 $P   # the Poké Mart clerk with a sample, by the road
