@@ -45,15 +45,16 @@ def pine_layer(t, owner, cx, base_y, scale=1.0, dark=0, wrap=True, seed=0, tier_
     """Draw one pine into ``t``: tiers whose lower edges are rows of rounded, drooping lobes of needles; each lobe
     lit like a ball from the upper left, stippled between shades. ``owner`` records each pixel's tier (and lobe)."""
     h, w = t.shape
-    rng = random.Random(seed)
     for k in range(len(TIERS) - 1, -1, -1):  # bottom tier first: upper tiers overlap it
         top, bot, hw, lr = TIERS[k]
         top = base_y + (top - 29) * scale
         bot = base_y + (bot - 29) * scale
         hw, lr = hw * scale, lr * scale
         n = max(2, int(round(2 * hw / (1.7 * lr))))
-        lobes = [(cx - hw + lr + i * (2 * hw - 2 * lr) / (n - 1), bot - lr + 0.6 * abs(i - (n - 1) / 2) ** 0.5
-                  + rng.uniform(-0.4, 0.4)) for i in range(n)]
+        mid = (n - 1) / 2
+        # symmetric: the outer lobes a little smaller and lower, the same on both sides
+        lobes = [(cx - hw + lr + i * (2 * hw - 2 * lr) / (n - 1), bot - lr + 0.2 * lr * (abs(i - mid) / mid) ** 2,
+                  lr * (1 - 0.18 * (abs(i - mid) / mid) ** 3)) for i in range(n)]
         for y in range(int(math.floor(top)), int(math.ceil(bot + 1)) + 1):
             for xi in range(int(cx - hw - 2), int(cx + hw + 3)):
                 x = xi % w if wrap else xi
@@ -61,19 +62,19 @@ def pine_layer(t, owner, cx, base_y, scale=1.0, dark=0, wrap=True, seed=0, tier_
                     continue
                 px, py = xi + 0.5, y + 0.5
                 kk = (py - top) / max(1.0, bot - lr - top)
-                body = abs(px - cx) <= hw * (0.15 + 0.85 * min(1.0, kk)) - lr * 0.6 and py <= bot - lr
+                body = abs(px - cx) <= min(hw * (0.15 + 0.85 * min(1.0, kk)) - lr * 0.6, hw - lr) and py <= bot - lr
                 best = None
-                for j, (lx, ly) in enumerate(lobes):
-                    d = ((px - lx) / lr) ** 2 + ((py - ly) / (lr * 0.9)) ** 2
-                    if d <= 1.0 and py >= ly - lr * 0.2 and (best is None or ly > best[2]):
-                        best = (j, d, ly, lx)
+                for j, (lx, ly, r) in enumerate(lobes):
+                    d = ((px - lx) / r) ** 2 + ((py - ly) / (r * 0.9)) ** 2
+                    if d <= 1.0 and py >= ly - r * 0.2 and (best is None or ly > best[2]):
+                        best = (j, d, ly, lx, r)
                 if best is None and not body:
                     continue
                 u = (px - cx) / max(hw, 1)
                 light = 0.60 - 0.30 * u
                 if best is not None:  # a lobe: round shading of its own
-                    j, d, ly, lx = best
-                    nx, ny = (px - lx) / lr, (py - ly) / (lr * 0.9)
+                    j, d, ly, lx, r = best
+                    nx, ny = (px - lx) / r, (py - ly) / (r * 0.9)
                     light += -0.22 * ny - 0.12 * nx + 0.08
                     owner[y, x] = tier_id0 + (k + 1) * 32 + j + 1
                 else:  # the tier's upper part, in the shadow of the tier above
