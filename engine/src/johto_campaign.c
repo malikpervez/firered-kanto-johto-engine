@@ -369,8 +369,8 @@ bool8 JohtoCampaign_Initialize(void)
     // confirmed forward trip; the skipped resident intro cannot set it now.
     if (FlagIndex(0x8F0, &index, &trainer) && !trainer)
         RegionalSave_SetEvent(image, REGIONAL_SAVE_JOHTO, index, TRUE);
-    // The owner-selected Johto research branch is Chikorita. It describes the
-    // regional story without granting a creature or changing Kanto's starter.
+    // Starts on the Chikorita branch; the player's choice in Elm's lab sets
+    // JOHTO_VAR_STARTER_MON (raw 0x4023) again. These two fields grant nothing.
     image[REGIONAL_SAVE_JOHTO_STARTER_STATE_OFFSET] = 1;
     RegionalSave_Write16(image + REGIONAL_SAVE_JOHTO_STARTER_SPECIES_OFFSET, SPECIES_CHIKORITA);
     RegionalSave_SetVar(image, REGIONAL_SAVE_JOHTO, 1 + 0x4023 - JOHTO_CAMPAIGN_RAW_VAR_FIRST, 0);

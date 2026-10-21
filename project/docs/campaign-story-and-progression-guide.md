@@ -251,11 +251,11 @@ Johto initializes once without resetting Kanto. Native Kanto clear is the actual
 
 **Where:** New Bark → Cherrygrove → Mr. Pokémon → Violet.
 
-Elm welcomes Oak’s visiting trainer and gives the adapted research errand without a second starter. The original Johto errand, stolen-partner/rival introduction and early badge journey continue with the same collection. The group reaches New Bark independently.
+Elm welcomes Oak’s visiting trainer and gives the adapted research errand. Before the errand he shows the three Pokémon native to Johto (Chikorita, Cyndaquil, Totodile, level 5) and the player takes one. Gold, a New Bark trainer, comes in for a partner of his own: he takes the one the player’s is strong against and battles the player. The third is the one Silver later steals, the one strong against the player’s. The original Johto errand, stolen-partner/rival introduction and early badge journey continue with the same collection. The group reaches New Bark independently.
 
 **Progression:**
 
-1. Accept Elm’s introduction and follow the native Mr. Pokémon errand and return sequence.
+1. Accept Elm’s introduction, choose a Johto partner, battle Gold, then follow the native Mr. Pokémon errand and return sequence.
 2. Continue through the original Johto rival and Violet/Falkner progression.
 3. Blue’s optional lab research follow-up is available back in Kanto once Elm has been met.
 
@@ -526,7 +526,7 @@ Added bird context surrounds the existing Oak→Indigo western pass→Surf→Elm
 
 ### RB08 — Elm's welcome
 
-**Trigger:** Existing Elm intro owner calls RB_ElmBird. The added line appears only with OPENING_SEEN. Elm original state/briefing owns progression; no Nao prerequisite, second starter or new initializer.
+**Trigger:** Existing Elm intro owner calls RB_ElmBird. The added line appears only with OPENING_SEEN. Elm original state/briefing owns progression; no Nao prerequisite or new initializer (the Johto starter choice comes after this intro).
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 

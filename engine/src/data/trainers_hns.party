@@ -16002,3 +16002,39 @@ Tera Type: Fighting
 - Bulk Up  
 - Throat Chop
 
+=== TRAINER_GOLD_LAB_CHIKORITA_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Chikorita
+Level: 5
+
+=== TRAINER_GOLD_LAB_CYNDAQUIL_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Cyndaquil
+Level: 5
+
+=== TRAINER_GOLD_LAB_TOTODILE_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Totodile
+Level: 5
+

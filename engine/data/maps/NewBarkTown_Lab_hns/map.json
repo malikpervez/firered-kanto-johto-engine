@@ -67,7 +67,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewBarkTown_Lab_EventScript_ChikoritaBall",
-      "flag": "JOHTO_FLAG_HIDE_CHIKORITABALL"
+      "flag": "JOHTO_FLAG_HIDE_CHIKORITABALL",
+      "local_id": "LOCALID_CHIKORITA_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -80,7 +81,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewBarkTown_Lab_EventScript_CyndaquilBall",
-      "flag": "JOHTO_FLAG_HIDE_CYNDAQUILBALL"
+      "flag": "JOHTO_FLAG_HIDE_CYNDAQUILBALL",
+      "local_id": "LOCALID_CYNDAQUIL_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -93,7 +95,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewBarkTown_Lab_EventScript_TotodileBall",
-      "flag": "JOHTO_FLAG_HIDE_TOTODILEBALL"
+      "flag": "JOHTO_FLAG_HIDE_TOTODILEBALL",
+      "local_id": "LOCALID_TOTODILE_BALL"
     },
     {
       "local_id": "LOCALID_COP",
@@ -108,6 +111,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0",
       "flag": "JOHTO_FLAG_HIDE_LAB_POLICEMAN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GOLD_NORMAL_HNS",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0",
+      "flag": "FLAG_TEMP_1",
+      "local_id": "LOCALID_LAB_GOLD"
     }
   ],
   "warp_events": [
