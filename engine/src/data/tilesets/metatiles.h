@@ -1519,3 +1519,9 @@ const u16 gMetatileAttributes_CeruleanCity_Hns[] = INCBIN_U16("data/tilesets/sec
 // HnS's restyled General tileset for the event islands (Birth, Faraway and Southern Island) instead of Emerald's.
 const u16 gMetatiles_General_Hns[] = INCBIN_U16("data/tilesets/primary/general_hns/metatiles.bin");
 const u16 gMetatileAttributes_General_Hns[] = INCBIN_U16("data/tilesets/primary/general_hns/metatile_attributes.bin");
+
+const u16 gMetatiles_PalletScratch_General[] = INCBIN_U16("data/tilesets/primary/pallet_scratch_general/metatiles.bin");
+const u16 gMetatileAttributes_PalletScratch_General[] = INCBIN_U16("data/tilesets/primary/pallet_scratch_general/metatile_attributes.bin");
+
+const u16 gMetatiles_PalletScratch[] = INCBIN_U16("data/tilesets/secondary/pallet_scratch/metatiles.bin");
+const u16 gMetatileAttributes_PalletScratch[] = INCBIN_U16("data/tilesets/secondary/pallet_scratch/metatile_attributes.bin");

@@ -44,6 +44,12 @@ system flags and variables (`VAR_TEMP_0`, `VAR_RESULT`, `FLAG_SYS_*`) are the pl
 `map_event_ids.h`; `src/data/trainers*.h` (from the `.party` files); `src/data/wild_encounters.h`;
 `src/data/pokemon/teachable_learnsets.h`; `src/data/tutor_moves.h`. Committed data that only looks generated:
 `src/data/pokemon/all_learnables.json` (do not regenerate it), `src/data/pokemon/extra_tutor_moves.json`.
+Made by pae from records next to them: `src/data/pae_seams.h` (from `pae_seams.json`, `pae seam build`) and
+`src/data/pae_doors.h` (from `pae_doors.json`, `pae door add`).
+
+**Maps from scratch.** A map can use tilesets drawn from scratch (`pae tileset new`/`build`, `pae map paint`, see
+`project/art/pallet-from-scratch/`). When it does, run `pae seam build MAP` so it and its neighbours still draw
+each other's edge strips (connected maps with different tilesets), and `pae door add` for its doors.
 
 **Placeholders.** Maps and layouts of content the game no longer has keep their numbers: removed maps are listed in
 `data/maps/map_groups.json` and `data/maps/removed_maps.json` (their `MAP_`/`LOCALID_` constants); removed layouts

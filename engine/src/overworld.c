@@ -952,6 +952,8 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
         KantoSeam_LoadResources(gMapHeader.mapLayout, TRUE);
         ApplyWeatherColorMapToPals(0, NUM_PALS_TOTAL);
         InitTilesetAnimations();
+        // The view on screen was drawn with the previous map's tiles; draw it again with these.
+        DrawWholeMapView();
     }
     else
     {

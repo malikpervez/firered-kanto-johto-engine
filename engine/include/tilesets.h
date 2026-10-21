@@ -171,5 +171,7 @@ extern const struct Tileset gTileset_SilphCo_Hns;
 extern const struct Tileset gTileset_SootopolisGym_Hns;
 extern const struct Tileset gTileset_ViridianCity_Hns;
 extern const struct Tileset gTileset_ViridianForest_Hns;
+extern const struct Tileset gTileset_PalletScratch_General;
+extern const struct Tileset gTileset_PalletScratch;
 
 #endif //GUARD_tilesets_H

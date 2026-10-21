@@ -1,0 +1,502 @@
+{
+ "version": "hns",
+ "tilesets": {
+  "primary": "gTileset_PalletScratch_General",
+  "secondary": "gTileset_PalletScratch"
+ },
+ "metatiles": {
+  "grass": {
+   "ids": [
+    0
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "grass2": {
+   "ids": [
+    1
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "grass3": {
+   "ids": [
+    2
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "path#0": {
+   "ids": [
+    3
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#0": {
+   "ids": [
+    4
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#1": {
+   "ids": [
+    5
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#1": {
+   "ids": [
+    6
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#2": {
+   "ids": [
+    7
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#2": {
+   "ids": [
+    8
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#3": {
+   "ids": [
+    9
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#3": {
+   "ids": [
+    10
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#4": {
+   "ids": [
+    11
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#4": {
+   "ids": [
+    12
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#5": {
+   "ids": [
+    13
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#5": {
+   "ids": [
+    14
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#6": {
+   "ids": [
+    15
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#6": {
+   "ids": [
+    16
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#7": {
+   "ids": [
+    17
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#7": {
+   "ids": [
+    18
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#8": {
+   "ids": [
+    19
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#8": {
+   "ids": [
+    20
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#9": {
+   "ids": [
+    21
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#9": {
+   "ids": [
+    22
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#10": {
+   "ids": [
+    23
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#10": {
+   "ids": [
+    24
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#11": {
+   "ids": [
+    25
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#11": {
+   "ids": [
+    26
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#12": {
+   "ids": [
+    27
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#12": {
+   "ids": [
+    28
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#13": {
+   "ids": [
+    29
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#13": {
+   "ids": [
+    30
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#14": {
+   "ids": [
+    31
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#14": {
+   "ids": [
+    32
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "path#15": {
+   "ids": [
+    33
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "water#15": {
+   "ids": [
+    34
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "flowers": {
+   "ids": [
+    35
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "flowers2": {
+   "ids": [
+    36
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "fence": {
+   "ids": [
+    37
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign": {
+   "ids": [
+    38
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "tree": {
+   "ids": [
+    39,
+    40,
+    41,
+    42
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "house": {
+   "ids": [
+    640,
+    641,
+    642,
+    643,
+    644,
+    645,
+    646,
+    647,
+    648,
+    649,
+    650,
+    651,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657,
+    658,
+    659,
+    660,
+    661,
+    662,
+    663,
+    664
+   ],
+   "w": 5,
+   "h": 5,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    21
+   ]
+  },
+  "lab": {
+   "ids": [
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    672,
+    673,
+    674,
+    675,
+    676,
+    677,
+    678,
+    679,
+    680,
+    681,
+    682,
+    683,
+    684,
+    685,
+    686,
+    687,
+    688,
+    689,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697,
+    698,
+    699
+   ],
+   "w": 7,
+   "h": 5,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    31
+   ]
+  }
+ },
+ "tiles": {
+  "primary": 139,
+  "secondary": 105
+ },
+ "metatile_counts": {
+  "primary": 43,
+  "secondary": 60
+ }
+}

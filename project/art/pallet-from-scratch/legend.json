@@ -1,0 +1,29 @@
+{
+ "T": "tree",
+ ".": {
+  "pick": [
+   "grass",
+   "grass",
+   "grass2",
+   "grass3"
+  ]
+ },
+ "=": {
+  "auto": "path"
+ },
+ "w": {
+  "auto": "water",
+  "elevation": 1
+ },
+ "f": {
+  "pick": [
+   "flowers",
+   "flowers2"
+  ]
+ },
+ "F": "fence",
+ "S": "sign",
+ "H": "house",
+ "R": "house",
+ "L": "lab"
+}

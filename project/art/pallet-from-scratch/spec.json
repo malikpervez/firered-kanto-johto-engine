@@ -1,0 +1,382 @@
+{
+ "version": "hns",
+ "primary": "gTileset_PalletScratch_General",
+ "secondary": "gTileset_PalletScratch",
+ "palettes": {
+  "primary": [
+   "palette_a.pal",
+   "palette_b.pal"
+  ],
+  "secondary": [
+   "palette_c.pal"
+  ]
+ },
+ "reserve": {
+  "primary": [
+   [
+    434,
+    441
+   ]
+  ]
+ },
+ "metatiles": [
+  {
+   "name": "grass",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 0,
+   "y": 0
+  },
+  {
+   "name": "grass2",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 16,
+   "y": 0
+  },
+  {
+   "name": "grass3",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 32,
+   "y": 0
+  },
+  {
+   "name": "path#0",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 48,
+   "y": 0
+  },
+  {
+   "name": "water#0",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 64,
+   "y": 0,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#1",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 80,
+   "y": 0
+  },
+  {
+   "name": "water#1",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 96,
+   "y": 0,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#2",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 112,
+   "y": 0
+  },
+  {
+   "name": "water#2",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 128,
+   "y": 0,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#3",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 144,
+   "y": 0
+  },
+  {
+   "name": "water#3",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 160,
+   "y": 0,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#4",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 176,
+   "y": 0
+  },
+  {
+   "name": "water#4",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 192,
+   "y": 0,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#5",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 208,
+   "y": 0
+  },
+  {
+   "name": "water#5",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 224,
+   "y": 0,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#6",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 240,
+   "y": 0
+  },
+  {
+   "name": "water#6",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 0,
+   "y": 16,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#7",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 16,
+   "y": 16
+  },
+  {
+   "name": "water#7",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 32,
+   "y": 16,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#8",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 48,
+   "y": 16
+  },
+  {
+   "name": "water#8",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 64,
+   "y": 16,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#9",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 80,
+   "y": 16
+  },
+  {
+   "name": "water#9",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 96,
+   "y": 16,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#10",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 112,
+   "y": 16
+  },
+  {
+   "name": "water#10",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 128,
+   "y": 16,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#11",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 144,
+   "y": 16
+  },
+  {
+   "name": "water#11",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 160,
+   "y": 16,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#12",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 176,
+   "y": 16
+  },
+  {
+   "name": "water#12",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 192,
+   "y": 16,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#13",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 208,
+   "y": 16
+  },
+  {
+   "name": "water#13",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 224,
+   "y": 16,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#14",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 240,
+   "y": 16
+  },
+  {
+   "name": "water#14",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 0,
+   "y": 32,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "path#15",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 16,
+   "y": 32
+  },
+  {
+   "name": "water#15",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 32,
+   "y": 32,
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "flowers",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 48,
+   "y": 32
+  },
+  {
+   "name": "flowers2",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 64,
+   "y": 32
+  },
+  {
+   "name": "fence",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 80,
+   "y": 32,
+   "solid": true
+  },
+  {
+   "name": "sign",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 96,
+   "y": 32,
+   "solid": true
+  },
+  {
+   "name": "tree",
+   "tileset": "primary",
+   "image": "sheets/ground.png",
+   "x": 0,
+   "y": 48,
+   "w": 2,
+   "h": 2,
+   "solid": true
+  },
+  {
+   "name": "house",
+   "tileset": "secondary",
+   "image": "sheets/house.png",
+   "w": 5,
+   "h": 5,
+   "ground": "grass",
+   "solid": true,
+   "open": [
+    "1,4"
+   ],
+   "behaviors": {
+    "1,4": "MB_ANIMATED_DOOR"
+   },
+   "banks": [
+    0
+   ]
+  },
+  {
+   "name": "lab",
+   "tileset": "secondary",
+   "image": "sheets/lab.png",
+   "w": 7,
+   "h": 5,
+   "ground": "grass",
+   "solid": true,
+   "open": [
+    "3,4"
+   ],
+   "behaviors": {
+    "3,4": "MB_ANIMATED_DOOR"
+   },
+   "banks": [
+    7
+   ],
+   "row_banks": {
+    "4": [
+     1
+    ]
+   }
+  }
+ ]
+}
