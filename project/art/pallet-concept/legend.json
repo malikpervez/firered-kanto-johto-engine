@@ -1,12 +1,6 @@
 {
  "T": {
-  "tile": "forest"
- },
- "t": {
-  "tile": "forest_edge"
- },
- "u": {
-  "tile": "forest_floor"
+  "auto": "forest"
  },
  ".": {
   "pick": [

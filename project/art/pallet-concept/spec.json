@@ -1443,7 +1443,7 @@
    "solid": true
   },
   {
-   "name": "forest",
+   "name": "forest#0",
    "image": "sheets/trees.png",
    "x": 0,
    "y": 0,
@@ -1453,10 +1453,11 @@
     3
    ],
    "tileset": "primary",
-   "solid": true
+   "solid": true,
+   "ground": "grass"
   },
   {
-   "name": "forest_edge",
+   "name": "forest#1",
    "image": "sheets/trees.png",
    "x": 32,
    "y": 0,
@@ -1470,7 +1471,7 @@
    "ground": "grass"
   },
   {
-   "name": "forest_floor",
+   "name": "forest#2",
    "image": "sheets/trees.png",
    "x": 64,
    "y": 0,
@@ -1484,10 +1485,192 @@
    "ground": "grass"
   },
   {
-   "name": "round_tree",
+   "name": "forest#3",
    "image": "sheets/trees.png",
    "x": 96,
    "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#4",
+   "image": "sheets/trees.png",
+   "x": 128,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#5",
+   "image": "sheets/trees.png",
+   "x": 160,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#6",
+   "image": "sheets/trees.png",
+   "x": 192,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#7",
+   "image": "sheets/trees.png",
+   "x": 224,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#8",
+   "image": "sheets/trees.png",
+   "x": 0,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#9",
+   "image": "sheets/trees.png",
+   "x": 32,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#10",
+   "image": "sheets/trees.png",
+   "x": 64,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#11",
+   "image": "sheets/trees.png",
+   "x": 96,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#12",
+   "image": "sheets/trees.png",
+   "x": 128,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#13",
+   "image": "sheets/trees.png",
+   "x": 160,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#14",
+   "image": "sheets/trees.png",
+   "x": 192,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15",
+   "image": "sheets/trees.png",
+   "x": 224,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "round_tree",
+   "image": "sheets/trees.png",
+   "x": 0,
+   "y": 64,
    "w": 2,
    "h": 2,
    "banks": [
@@ -1500,8 +1683,8 @@
   {
    "name": "bush",
    "image": "sheets/trees.png",
-   "x": 128,
-   "y": 0,
+   "x": 32,
+   "y": 64,
    "banks": [
     3
    ],

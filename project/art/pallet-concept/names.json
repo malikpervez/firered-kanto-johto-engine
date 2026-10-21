@@ -1180,7 +1180,7 @@
    "elevation": null,
    "open": []
   },
-  "forest": {
+  "forest#0": {
    "ids": [
     122,
     123,
@@ -1193,7 +1193,7 @@
    "elevation": null,
    "open": []
   },
-  "forest_edge": {
+  "forest#1": {
    "ids": [
     126,
     127,
@@ -1206,7 +1206,7 @@
    "elevation": null,
    "open": []
   },
-  "forest_floor": {
+  "forest#2": {
    "ids": [
     130,
     131,
@@ -1219,7 +1219,7 @@
    "elevation": null,
    "open": []
   },
-  "round_tree": {
+  "forest#3": {
    "ids": [
     134,
     135,
@@ -1232,9 +1232,178 @@
    "elevation": null,
    "open": []
   },
+  "forest#4": {
+   "ids": [
+    138,
+    139,
+    140,
+    141
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#5": {
+   "ids": [
+    142,
+    143,
+    144,
+    145
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#6": {
+   "ids": [
+    146,
+    147,
+    148,
+    149
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#7": {
+   "ids": [
+    150,
+    151,
+    152,
+    153
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#8": {
+   "ids": [
+    154,
+    155,
+    156,
+    157
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#9": {
+   "ids": [
+    158,
+    159,
+    160,
+    161
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#10": {
+   "ids": [
+    162,
+    163,
+    164,
+    165
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#11": {
+   "ids": [
+    166,
+    167,
+    168,
+    169
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#12": {
+   "ids": [
+    170,
+    171,
+    172,
+    173
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#13": {
+   "ids": [
+    174,
+    175,
+    176,
+    177
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#14": {
+   "ids": [
+    178,
+    179,
+    180,
+    181
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15": {
+   "ids": [
+    182,
+    183,
+    184,
+    185
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "round_tree": {
+   "ids": [
+    186,
+    187,
+    188,
+    189
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "bush": {
    "ids": [
-    138
+    190
    ],
    "w": 1,
    "h": 1,
@@ -1375,17 +1544,17 @@
   }
  },
  "tiles": {
-  "primary": 251,
+  "primary": 255,
   "secondary": 215
  },
  "metatile_counts": {
-  "primary": 139,
+  "primary": 191,
   "secondary": 100
  },
  "animations": [
   {
    "name": "PalletConcept_General_Water",
-   "first_tile": 202,
+   "first_tile": 206,
    "tiles": 49,
    "frames": 8,
    "notes": []

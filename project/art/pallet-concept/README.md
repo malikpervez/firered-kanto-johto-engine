@@ -36,6 +36,7 @@ The game's time of day tints these screenshots.
 ![Route 1 seen from Pallet's road north](in_game_route1_seam.png)
 ![The dock](in_game_dock.png)
 ![The forest along the south edge](in_game_south_forest.png)
+![The forest along the west edge](in_game_west_forest.png)
 ![The sea under its cliff](in_game_sea_cliff.png)
 ![Oak's scene](in_game_oak_scene.png)
 ![Surfing to Route 21](in_game_surf_to_route21.png)

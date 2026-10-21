@@ -27,8 +27,8 @@ def _shade(levels, v):
     return levels[int(v * len(levels))]
 
 
-TIERS = [(0, 8, 7.0, 2.6), (3, 14, 11.0, 3.0), (8, 21, 14.5, 3.3), (14, 29, 16.5, 3.6)]
-# (top, bottom, half width, lobe radius) of a 32px pine: wide enough that neighbours touch
+TIERS = [(0, 8, 7.0, 2.6), (3, 14, 10.5, 3.0), (8, 21, 13.2, 3.2), (14, 29, 14.8, 3.5)]
+# (top, bottom, half width, lobe radius) of a 32px pine: neighbours nearly touch, and it stays inside its cell
 BAYER = [[0.0, 0.5], [0.75, 0.25]]
 
 
@@ -87,7 +87,7 @@ def pine_layer(t, owner, cx, base_y, scale=1.0, dark=0, wrap=True, seed=0, tier_
     return t
 
 
-def outline(t, owner, colour=T_OUT, soft=PN1, wrap=False):
+def outline(t, owner, colour=T_OUT, soft=PN1, wrap=False, edges=None):
     """Dark outline on the lower/right sides, a softer one on the upper/left; under each tier the dark rim of the
     tier above's shadow, and a dark crease along the bottom of each lobe (``owner``: tier * 32 + lobe)."""
     h, w = t.shape
@@ -99,10 +99,11 @@ def outline(t, owner, colour=T_OUT, soft=PN1, wrap=False):
             if not inside[y, x]:
                 continue
             xr, xl = ((x + 1) % w, (x - 1) % w) if wrap else (x + 1, x - 1)
-            below = y + 1 >= h or not inside[y + 1, x]
-            right = xr >= w or not inside[y, xr]
-            above = y == 0 or not inside[y - 1, x]
-            left = xl < 0 or not inside[y, xl]
+            e = edges or {}
+            below = (y + 1 >= h and not e.get("s")) or (y + 1 < h and not inside[y + 1, x])
+            right = (xr >= w and not e.get("e")) or (xr < w and not inside[y, xr])
+            above = (y == 0 and not e.get("n")) or (y > 0 and not inside[y - 1, x])
+            left = (xl < 0 and not e.get("w")) or (xl >= 0 and not inside[y, xl])
             if below or right:
                 out[y, x] = colour
             elif above or left:
@@ -141,37 +142,44 @@ def ground_shadow(t, cx, cy, rx, ry):
                 t[y, x] = GSH
 
 
-def pine(dense: bool, floor: bool = False) -> np.ndarray:
-    """A pine filling a 2x2 cell. ``dense``: deep inside the forest (dark all round); otherwise on its edge (grass
-    shows above and between the tops), and with ``floor`` the forest goes on below it (a dark floor under it)."""
+def pine(mask: int = 15) -> np.ndarray:
+    """A pine filling a 2x2 cell of forest. ``mask`` says which way the forest goes on (1 north, 2 east, 4 south,
+    8 west): toward more forest a darker row of pines stands behind it and the gaps are the dark forest floor;
+    toward open ground the gaps stay clear (the grass shows) and the trees show their own outline."""
     t = np.zeros((32, 32), np.uint8)
     owner = np.zeros((32, 32), np.int32)
-    if dense:
-        t[:] = SH0
-        for y in range(32):
-            for x in range(32):
-                if y > 22 and (x + y) % 2 == 0 or y > 27:
-                    t[y, x] = T_OUT
-        # the row behind, half a cell over: darker, partly hidden
-        bo = np.zeros_like(owner)
-        for cx in (0.0, 32.0):
-            pine_layer(t, bo, cx, 17, scale=0.85, dark=2, wrap=True, seed=7)
-    else:
-        if floor:
-            for y in range(20, 32):
-                for x in range(32):
-                    if y > 25 or (x + y) % 2 == 0 or y > 22:
-                        t[y, x] = T_OUT if y > 27 and (x + y) % 2 else SH0
-        else:
-            ground_shadow(t, 16.5, 30.0, 14, 2.2)
-        # the row behind fills the gaps low down, so the forest's edge reads as one wall of trees
-        bo = np.zeros_like(owner)
-        for cx in (0.0, 32.0):
-            pine_layer(t, bo, cx, 26, scale=0.8, dark=1, wrap=True, seed=7)
-        t = np.where(bo > 0, outline(t, bo, wrap=True), t).astype(np.uint8)
-    trunk(t, 16, 28, 32, force=dense or floor)
+    closed = {"n": bool(mask & 1), "e": bool(mask & 2), "s": bool(mask & 4), "w": bool(mask & 8)}
+    bo = np.zeros_like(owner)
+    if closed["w"]:  # the back row: half of a pine between this cell and the next, on each forested side
+        pine_layer(t, bo, 0.0, 26, scale=0.8, dark=1, wrap=False, seed=7)
+    if closed["e"]:
+        pine_layer(t, bo, 32.0, 26, scale=0.8, dark=1, wrap=False, seed=7)
+    t = np.where(bo > 0, outline(t, bo, edges=closed), t).astype(np.uint8)
+    trunk(t, 16, 28, 32, force=True)
     pine_layer(t, owner, 16.0, 29, seed=3)
-    return outline(t, owner)
+    t = outline(t, owner)
+    # the gaps: clear where they open onto open ground, the dark forest floor where trees close them in
+    reach = np.zeros((32, 32), bool)
+    todo = [(y, x) for y in range(32) for x in range(32) if t[y, x] == 0 and (  # near an open side counts as open
+        (y < 3 and not closed["n"]) or (y > 28 and not closed["s"]) or (x < 3 and not closed["w"])
+        or (x > 28 and not closed["e"]))]
+    for y, x in todo:
+        reach[y, x] = True
+    while todo:
+        y, x = todo.pop()
+        for yy, xx in ((y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)):
+            if 0 <= yy < 32 and 0 <= xx < 32 and not reach[yy, xx] and t[yy, xx] == 0:
+                reach[yy, xx] = True
+                todo.append((yy, xx))
+    for y in range(32):
+        for x in range(32):
+            if t[y, x] == 0 and not reach[y, x]:
+                t[y, x] = T_OUT if (y > 26 and (x + y) % 2) or y > 29 else SH0
+    if not closed["s"]:
+        shade = np.zeros_like(t)
+        ground_shadow(shade, 16.5, 30.0, 14, 2.2)
+        t[(t == 0) & (shade > 0)] = GSH
+    return t
 
 
 def _clusters(rng, n, cx, cy, rx, ry, rmin, rmax):

@@ -791,18 +791,6 @@ def layout() -> tuple[list[list[str]], dict]:
              "TownSign": (13, 11), "TrainerTips": (10, 20)}
     for x, y in signs.values():
         put("S", x, y)
-    # forest blocks next to open ground show grass between the pines
-    for y in range(MAP_H):
-        for x in range(MAP_W):
-            if g[y][x] == "T":
-                near = [g[yy][xx] for yy in range(y - 1, y + 2) for xx in range(x - 1, x + 2)
-                        if 0 <= yy < MAP_H and 0 <= xx < MAP_W]
-                if any(c not in "Tt" for c in near):
-                    g[y][x] = "t"
-    for y in range(MAP_H - 1):  # an edge block with more forest below it stands on the forest's dark floor
-        for x in range(MAP_W):
-            if g[y][x] == "t" and g[y + 1][x] in "Ttu":
-                g[y][x] = "u"
     return g, signs
 
 
@@ -892,9 +880,8 @@ def main() -> None:
     plants.add("lamp", lamp(), tileset="primary", ground="grass", solid=True)
     spec_mt += plants.write()
     tree_sheet = Sheet("trees", "trees")
-    tree_sheet.add("forest", trees.pine(True), tileset="primary", solid=True)
-    tree_sheet.add("forest_edge", trees.pine(False), tileset="primary", solid=True, ground="grass")
-    tree_sheet.add("forest_floor", trees.pine(False, floor=True), tileset="primary", solid=True, ground="grass")
+    for m in range(16):  # forest#mask: a 2x2 pine for each way the forest goes on (paint picks it per cell)
+        tree_sheet.add(f"forest#{m}", trees.pine(m), tileset="primary", solid=True, ground="grass")
     tree_sheet.add("round_tree", trees.round_tree(), tileset="primary", ground="grass", solid=True)
     tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
@@ -926,7 +913,7 @@ def main() -> None:
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = {
-        "T": {"tile": "forest"}, "t": {"tile": "forest_edge"}, "u": {"tile": "forest_floor"},
+        "T": {"auto": "forest"},
         ".": {"pick": ["grass", "grass", "grass2", "grass3", "grass", "grass4"]},
         ",": "grass_daisies",
         "=": {"auto": "cobble"}, ":": {"auto": "dirt"},
