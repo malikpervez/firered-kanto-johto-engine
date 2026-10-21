@@ -1961,3 +1961,14 @@ const struct Tileset gTileset_PalletConcept =
     .metatileAttributes = gMetatileAttributes_PalletConcept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route1Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route1Concept,
+    .palettes = gTilesetPalettes_Route1Concept,
+    .metatiles = gMetatiles_Route1Concept,
+    .metatileAttributes = gMetatileAttributes_Route1Concept,
+    .callback = NULL,
+};

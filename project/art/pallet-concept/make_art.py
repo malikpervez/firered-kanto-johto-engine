@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
-"""Pallet Town after the concept art (concept.png, made with image generation): every tile drawn here (the trees in
-trees.py), nothing taken from an existing tileset.
+"""Pallet Town after the concept art (concept.png, made with image generation): every tile drawn from scratch,
+nothing taken from an existing tileset. The pieces every map shares come from the kit (../kit/kit.py); this file
+draws the town's own.
 
 The town is 32x28 blocks: a pine forest around it, two houses with fenced yards (houses.py), cobblestone roads, a windmill
 in a flower garden, Oak's lab with its greenhouse, a pond with a wooden dock (and the way south to Route 21), the sea
 below a cliff in the east, and a stone well.
 
-Six palettes, each made for what uses it:
-  bank 0  ground: grass, pines, dirt, cobblestones, rocks
-  bank 1  water: pond and sea, their banks, cliff rocks (drawn in water.py, animated in eight frames)
-  bank 2  wood: fences, the dock, signs, the windmill, the well, barrels, the boat
-  bank 3  trees: the pines, round trees and bushes (drawn in trees.py)
+Its palettes (banks 0-3 and 8 are the kit's):
+  bank 2  wood (the kit's): the windmill
   bank 7  the lab: metal roof, siding, glass, the greenhouse plants
-  bank 8  plants: flowers, lamps
   bank 9  the houses: plaster, clay roof tiles in red and blue, glass (drawn in houses.py)
 
 Run from the repository root:  python3 project/art/pallet-concept/make_art.py

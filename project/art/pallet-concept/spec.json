@@ -1694,9 +1694,37 @@
    "ground": "grass"
   },
   {
-   "name": "round_tree",
+   "name": "forest#15.4",
    "image": "../kit/sheets/trees.png",
    "x": 96,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.8",
+   "image": "../kit/sheets/trees.png",
+   "x": 128,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "round_tree",
+   "image": "../kit/sheets/trees.png",
+   "x": 160,
    "y": 64,
    "w": 2,
    "h": 2,
@@ -1710,13 +1738,169 @@
   {
    "name": "bush",
    "image": "../kit/sheets/trees.png",
-   "x": 128,
+   "x": 192,
    "y": 64,
    "banks": [
     3
    ],
    "tileset": "primary",
    "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "tall_grass",
+   "image": "../kit/sheets/fields.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "behavior": "MB_TALL_GRASS"
+  },
+  {
+   "name": "tall_grass_b",
+   "image": "../kit/sheets/fields.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "behavior": "MB_TALL_GRASS"
+  },
+  {
+   "name": "tall_grass_c",
+   "image": "../kit/sheets/fields.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "behavior": "MB_TALL_GRASS"
+  },
+  {
+   "name": "ledge#0",
+   "image": "../kit/sheets/fields.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "behavior": "MB_JUMP_SOUTH"
+  },
+  {
+   "name": "ledge#2",
+   "image": "../kit/sheets/fields.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "behavior": "MB_JUMP_SOUTH"
+  },
+  {
+   "name": "ledge#8",
+   "image": "../kit/sheets/fields.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "behavior": "MB_JUMP_SOUTH"
+  },
+  {
+   "name": "ledge#10",
+   "image": "../kit/sheets/fields.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "behavior": "MB_JUMP_SOUTH"
+  },
+  {
+   "name": "steps#0",
+   "image": "../kit/sheets/fields.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#2",
+   "image": "../kit/sheets/fields.png",
+   "x": 128,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#8",
+   "image": "../kit/sheets/fields.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#10",
+   "image": "../kit/sheets/fields.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "pond#15+lily",
+   "image": "../kit/sheets/fields.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15+reeds",
+   "image": "../kit/sheets/fields.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
    "solid": true
   },
   {

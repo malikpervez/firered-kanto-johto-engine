@@ -1,0 +1,115 @@
+{
+ "note": "Route 1's road north meets Viridian City's: walk across, both strips draw right (connection seams, beside Viridian's own for Route 22).",
+ "created": "2026-10-21 16:00",
+ "start": {
+  "map": "Route1_Frlg",
+  "x": 23,
+  "y": 2,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv5",
+   "FLAG_SYS_POKEMON_GET",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "VAR_REPEL_STEP_COUNT=200"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     40
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ViridianCity_Frlg",
+  "x": 25,
+  "y": 48,
+  "in_battle": false
+ },
+ "accepted": "2026-10-21 15:39"
+}

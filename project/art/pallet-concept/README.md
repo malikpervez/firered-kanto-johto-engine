@@ -9,11 +9,13 @@ sprites, Pokémon and story come from the game.
 
 ## Rebuild
 
-From the repository root: `sh project/art/pallet-concept/build.sh`. It runs:
+From the repository root: `sh project/art/build_all.sh` (every map made from the kit: the kit's primary tileset is
+shared, so a change to it means building them all), or `sh project/art/pallet-concept/build.sh` for this one. It
+runs:
 
-1. `make_art.py` (with `grass.py` for the grass, `trees.py` for the pines, round trees and bushes, `water.py` for
-   the pond and sea, and `houses.py` for your house and your rival's): draws the tiles and writes `sheets/`, the seven
-   palettes, `spec.json`, `grid.txt`, `legend.json`.
+1. `make_art.py`: the kit's pieces (`../kit`: grass, paths, water, fences, the forest and the rest every map shares)
+   and the town's own (`houses.py` for your house and your rival's, the windmill, Oak's lab); writes `sheets/`, the
+   town's palettes, `spec.json`, `grid.txt`, `legend.json`.
 2. `pae tileset new` (the first time) and `pae map geometry`: two new tilesets and the map's block files.
 3. `pae tileset build` and `pae map paint`. The water is animated in eight frames: waves drift, foam runs along the
    shores and sparkles flash; open water has three variants so it doesn't repeat every block.

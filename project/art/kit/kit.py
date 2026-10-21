@@ -6,8 +6,9 @@ pieces, so every map's build makes the same primary tileset: a map's secondary t
 tiles, and rebuilding one map never breaks another. Change the kit, then rebuild every map (project/art/build_all.sh).
 
 Banks (palettes):
-  0  ground: grass, dirt, cobblestones, rocks, stumps, tall grass, ledges, steps
-  1  water: pond and sea, their banks, cliff rocks, reeds and lily pads (water.py, animated in eight frames)
+  0  ground: grass, dirt, cobblestones, rocks, stumps; tall grass, ledges, steps, lily pads and reeds (fields.py,
+     the last two drawn over the pond's water), and the tall grass sprite drawn over the player's feet
+  1  water: pond and sea, their banks, cliff rocks (water.py, animated in eight frames)
   2  wood: fences, the dock, signs, barrels, crates, the boat, the well (and buildings drawn in wood)
   3  trees: the pines, round trees and bushes (trees.py)
   8  plants: flowers and lamps. The primary uses it, so every map's secondary tileset has the kit's plants
@@ -20,6 +21,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import fields
 import grass
 import trees
 import water
@@ -411,7 +413,7 @@ def lamp() -> np.ndarray:
 # ---------------------------------------------------------------- forest pieces
 # (mask, corners) of the forest's inside-corner pieces in the kit: every map's together (a map checks its own are
 # here with ``forest_corners``; add new ones here, then rebuild every map)
-FOREST_CORNERS = [(15, 1), (15, 2), (15, 6)]
+FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8)]
 
 
 def forest_corners(g, char: str = "T") -> set[tuple[int, int]]:
@@ -554,11 +556,27 @@ def primary(spec_dir: Path) -> dict:
     tree_sheet = sheet("trees", "trees")
     for m in range(16):  # forest#mask: a 2x2 pine for each way the forest goes on (paint picks it per cell)
         tree_sheet.add(f"forest#{m}", trees.pine(m), tileset="primary", solid=True, ground="grass")
-    for m, c in sorted(FOREST_CORNERS):  # forest#mask.corners: where an inside corner opens onto the map
+    for m, c in FOREST_CORNERS:  # forest#mask.corners: where an inside corner opens onto the map
         tree_sheet.add(f"forest#{m}.{c}", trees.pine(m, c), tileset="primary", solid=True, ground="grass")
     tree_sheet.add("round_tree", trees.round_tree(), tileset="primary", ground="grass", solid=True)
     tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
+    # route pieces (fields.py): tall grass, ledges, steps, lily pads and reeds
+    field = sheet("fields", "ground")
+    for v, name in enumerate(TALL_GRASS):
+        field.add(name, fields.tall_grass(v), tileset="primary", behavior="MB_TALL_GRASS")
+    for m in (0, 2, 8, 10):  # ledges join east-west only
+        field.add(f"ledge#{m}", fields.ledge(m), tileset="primary", ground="grass", solid=True,
+                  behavior="MB_JUMP_SOUTH")
+    for m in (0, 2, 8, 10):
+        field.add(f"steps#{m}", fields.steps(m), tileset="primary", ground="grass")
+    field.add("pond#15+lily", fields.lily(), tileset="primary", ground="pond#15", behavior="MB_POND_WATER",
+              elevation=1)
+    field.add("pond#15+reeds", fields.reeds(), tileset="primary", ground="pond#15", behavior="MB_POND_WATER",
+              elevation=1, solid=True)
+    spec_mt += field.write()
+    (KIT / "sheets").mkdir(exist_ok=True)
+    Image.fromarray(rgba(fields.tall_grass_fx(), P0), "RGBA").save(KIT / "sheets/tall_grass_fx.png")
     for name, pal in PALS.items():
         write_palette(KIT / f"palette_{name}.pal", pal)
     rel = Path(os_relpath(KIT, spec_dir))
@@ -570,6 +588,8 @@ def primary(spec_dir: Path) -> dict:
         "animations": [{"name": "Water", "image": (rel / "sheets/water.png").as_posix(),
                         "frames": [(rel / f"sheets/water_f{k}.png").as_posix() for k in range(1, water.FRAMES)],
                         "speed": 16}],
+        "field_effects": {"tall_grass": {"image": (rel / "sheets/tall_grass_fx.png").as_posix(), "bank": 0,
+                                         "tileset": "primary"}},
     }
 
 
@@ -584,4 +604,9 @@ LEGEND = {
     "*": {"pick": ["flowers1", "flowers2", "flowers3", "flowers4"]},
     "b": "bush", "o": "rock", "k": "stump", "l": "lamp", "S": "sign", "B": "barrel", "c": "crate", "O": "boat",
     "w": "well", "R": "round_tree",
+    "g": {"pick": ["tall_grass", "tall_grass_b", "tall_grass_c"]},
+    "_": {"auto": "ledge"}, "h": {"auto": "steps"},
+    "v": {"auto": "pond", "joins": "~", "with": "lily", "elevation": 1},
+    "r": {"auto": "pond", "joins": "~", "with": "reeds", "elevation": 1},
 }
+TALL_GRASS = ["tall_grass", "tall_grass_b", "tall_grass_c"]
