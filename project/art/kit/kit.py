@@ -8,7 +8,8 @@ tiles, and rebuilding one map never breaks another. Change the kit, then rebuild
 Banks (palettes):
   0  ground: grass, dirt, cobblestones, rocks, stumps; tall grass, ledges, steps, lily pads and reeds (fields.py,
      the last two drawn over the pond's water), and the tall grass sprite drawn over the player's feet
-  1  water: pond and sea, their banks, cliff rocks (water.py, animated in eight frames)
+  1  water: the pond (pond/, a native pixel pack, put together in pond.py) and the sea, its cliff and rocks
+     (water.py), animated in eight frames
   2  wood: fences, the dock, signs, barrels, crates, the boat, the well (and buildings drawn in wood)
   3  trees: the pines, round trees and bushes (trees.py)
   4  tall grass: tall_grass/ (drawn natively at 16x16, made with another AI from a brief) and the sprites over
@@ -25,6 +26,7 @@ from PIL import Image
 
 import fields
 import grass
+import pond
 import trees
 import water
 
@@ -456,6 +458,39 @@ def check_forest(g, char: str = "T") -> None:
                          "add them to kit.FOREST_CORNERS and rebuild every map")
 
 
+# (mask, corners) of the pond's inside-corner pieces in the kit: every map's together (``check_pond``)
+POND_CORNERS = [(11, 8), (13, 8), (14, 2), (14, 4), (15, 1), (15, 4), (15, 8), (15, 2), (15, 10)]
+POND = ("~", "v", "r")  # the legend characters that are pond water (lily pads and reeds join it)
+
+
+def pond_corners(g) -> set[tuple[int, int]]:
+    """(mask, corners) of the pond blocks in grid ``g`` with an inside corner, as pae map paint works them out."""
+    h, w = len(g), len(g[0])
+
+    def water_at(x, y):
+        return not (0 <= y < h and 0 <= x < w) or g[y][x] in POND
+    out = set()
+    for y in range(h):
+        for x in range(w):
+            if g[y][x] not in POND:
+                continue
+            mask = sum(bit for bit, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                       if water_at(x + dx, y + dy))
+            corners = sum(bit for bit, (dx, dy), sides in ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12),
+                                                           (8, (-1, -1), 9))
+                          if mask & sides == sides and not water_at(x + dx, y + dy))
+            if corners and g[y][x] == "~":
+                out.add((mask, corners))
+    return out
+
+
+def check_pond(g) -> None:
+    missing = pond_corners(g) - set(POND_CORNERS)
+    if missing:
+        raise SystemExit(f"the pond needs inside-corner pieces the kit doesn't have: {sorted(missing)}; "
+                         "add them to kit.POND_CORNERS and rebuild every map")
+
+
 # ---------------------------------------------------------------- sheets and spec
 class Sheet:
     """Cells of one palette packed into an image, with spec entries for them. The image goes in ``out``/sheets;
@@ -551,16 +586,20 @@ def primary(spec_dir: Path) -> dict:
     spec_mt += ground.write()
     # water, animated (water.py)
     sheet_w = sheet("water", "water")
-    cells = []  # (name, kind, mask, variant)
+    cells = []  # (name, kind, mask, variant, inside corners)
     for kind in ("pond", "sea"):
         for m in range(16):
-            cells.append((f"{kind}#{m}", kind, m, 0))
-        cells += [(f"{kind}#15~{v}", kind, 15, v) for v in (1, 2)]  # open water with its sparkles elsewhere
-    for name, kind, m, v in cells:
+            cells.append((f"{kind}#{m}", kind, m, 0, 0))
+        cells += [(f"{kind}#15~{v}", kind, 15, v, 0) for v in (1, 2)]  # open water with its sparkles elsewhere
+    cells += [(f"pond#{m}.{c}", "pond", m, 0, c) for m, c in POND_CORNERS]  # inside corners
+
+    def cell(kind, m, f, v, c):  # the pond from the pond pack (pond.py), the sea still drawn (water.py)
+        return pond.piece(m, f, v, c) if kind == "pond" else water.shore(m, f, kind, v)
+    for name, kind, m, v, c in cells:
         extra = {"solid": True} if kind == "sea" else {}
-        sheet_w.add(name, water.shore(m, 0, kind, v), tileset="primary", ground="grass", behavior="MB_POND_WATER",
+        sheet_w.add(name, cell(kind, m, 0, v, c), tileset="primary", ground="grass", behavior="MB_POND_WATER",
                     elevation=1, **extra)
-    frames = [[water.shore(m, f, kind, v) for _, kind, m, v in cells] for f in range(1, water.FRAMES)]
+    frames = [[cell(kind, m, f, v, c) for _, kind, m, v, c in cells] for f in range(1, water.FRAMES)]
     spec_mt += sheet_w.write(frames)
     # wood
     wood = sheet("wood", "wood")
@@ -616,7 +655,7 @@ def primary(spec_dir: Path) -> dict:
         "reserve": [[434, 441]],
         "animations": [{"name": "Water", "image": (rel / "sheets/water.png").as_posix(),
                         "frames": [(rel / f"sheets/water_f{k}.png").as_posix() for k in range(1, water.FRAMES)],
-                        "speed": 16}],
+                        "speed": 10}],  # 10 game frames (about 160 ms) a frame, as the pond pack's
         "field_effects": {"tall_grass": {"image": (rel / "sheets/tall_grass_fx.png").as_posix(), "bank": 4,
                                          "tileset": "primary",
                                          "metatiles": {n: (rel / f"sheets/{n}_fx.png").as_posix()

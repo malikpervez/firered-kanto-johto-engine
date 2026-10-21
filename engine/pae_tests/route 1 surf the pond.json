@@ -1,0 +1,112 @@
+{
+ "note": "Surf onto Route 1's pond by the shelter and across it past the lily pads and reeds (the pond pack's shores, inside corners and animated water).",
+ "created": "2026-10-21 19:02",
+ "start": {
+  "map": "Route1_Frlg",
+  "x": 13,
+  "y": 17,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_LAPRAS lv30 MOVE_SURF",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_BADGE05_GET",
+   "VAR_REPEL_STEP_COUNT=200"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     40
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     40
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route1_Frlg",
+  "x": 17,
+  "y": 14,
+  "in_battle": false
+ }
+}

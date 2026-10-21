@@ -2045,13 +2045,13 @@ const u16 *const gTilesetAnims_PalletConcept_General_Water[] = {
 static void QueueAnimTiles_PalletConcept_General_Water(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_PalletConcept_General_Water);
-    AppendTilesetAnimToBuffer(gTilesetAnims_PalletConcept_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(288)), 49 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_PalletConcept_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(288)), 57 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_PalletConcept_General(u16 timer)
 {
-    if (timer % 16 == 0)
-        QueueAnimTiles_PalletConcept_General_Water(timer / 16);
+    if (timer % 10 == 0)
+        QueueAnimTiles_PalletConcept_General_Water(timer / 10);
 }
 
 void InitTilesetAnim_PalletConcept_General(void)
