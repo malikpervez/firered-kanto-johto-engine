@@ -5,8 +5,8 @@ TT,.#bHHHHHb#.::#JJJJJb#TT..ssss
 TT..#.HHHHH.#,::#JJJJJ.#TT..ssss
 TT..#*HHHHH*#.::#JJJJJ*#TT..ssss
 TT.,#*HHHHH.#.::#JJJJJ*#TT.ossss
-TT..#SHHHHHb#.::#JJJJJS#TT..ssss
-TT..###=#####.::##=#####....ssss
+TT..#*HHHHHb#.::#JJJJJ*#TT..ssss
+TT..##S=#####.::#S=#####....ssss
 TT..l================,..,..bssss
 TTo.l================.......ssss
 TT.WWWWW.....S==RRLLLLLLLLL.ssss

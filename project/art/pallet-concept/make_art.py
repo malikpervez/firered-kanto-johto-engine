@@ -674,8 +674,10 @@ def layout() -> tuple[list[list[str]], dict]:
         put("o", x, y)
     for x, y in ((3, 6), (13, 4), (21, 9), (24, 9), (2, 3), (9, 25), (14, 24), (6, 25)):
         put(",", x, y)
-    # signs (bg events)
-    signs = {"PlayersHouseSign": (5, 7), "RivalsHouseSign": (22, 7), "OaksLabSign": (19, 16),
+    for x, y in ((5, 7), (22, 7)):  # flowers in the yards' corners
+        put("*", x, y)
+    # signs (bg events); the houses' stand in the fence beside the gate, read from the road
+    signs = {"PlayersHouseSign": (6, 8), "RivalsHouseSign": (17, 8), "OaksLabSign": (19, 16),
              "TownSign": (13, 11), "TrainerTips": (10, 20)}
     for x, y in signs.values():
         put("S", x, y)

@@ -1,0 +1,72 @@
+{
+ "note": "Your house's sign stands in the fence by the gate and can be read from the road.",
+ "created": "2026-10-21 14:20",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 6,
+  "y": 9,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv5",
+   "FLAG_SYS_POKEMON_GET",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "VAR_REPEL_STEP_COUNT=200"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     40
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     2
+    ],
+    [
+     0,
+     20
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 6,
+  "y": 9,
+  "in_battle": false,
+  "vars": {
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK": 3
+  }
+ },
+ "accepted": "2026-10-21 14:03"
+}

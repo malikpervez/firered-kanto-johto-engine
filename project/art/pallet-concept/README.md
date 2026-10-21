@@ -46,4 +46,5 @@ The game's time of day tints these screenshots.
 ![Surfing to Route 21](in_game_surf_to_route21.png)
 
 Replay tests: `pallet north to route 1`, `pallet route 1 looks at pallet`, `pallet house door`, `pallet rival house door`,
+`pallet house sign`, `pallet rival house sign`,
 `pallet lab door`, `pallet oak stops you`, `pallet surf to route 21`.
