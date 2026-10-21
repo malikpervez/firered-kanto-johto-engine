@@ -26,7 +26,7 @@ walls, it has:
 - **Stone steps** through a ledge, walkable both ways.
 - **The pond**, from a native pixel pack made with another AI from a brief (`../kit/pond/`, "gentle ripples"): open
   water in three kinds, the shores, outer and inside corners and a one-block pool, each 16×16 in eight frames in the
-  water palette. `../kit/pond.py` puts each block together from them; Pallet's pond and channel use it too.
+  water palette. `../kit/water.py` puts each block together from them; Pallet's pond and channel use it too.
 - **Lily pads and reeds**, drawn over the pond's animated water (`{"auto": "pond", "joins": "~", "with": "lily"}`
   in the legend).
 

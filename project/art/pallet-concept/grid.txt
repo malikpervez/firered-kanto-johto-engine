@@ -3,7 +3,7 @@ TTTTTTTTTTTTTT::TTTTTTTTTTTTTTTT
 TT..#########.::########TT..ssss
 TT,.#bHHHHHb#.::#JJJJJb#TT..ssss
 TT..#.HHHHH.#,::#JJJJJ.#TT..ssss
-TT..#*HHHHH*#.::#JJJJJ*#TT..ssss
+TT..#*HHHHH*#.::#JJJJJ*#TT..ssqs
 TT.,#*HHHHH.#.::#JJJJJ*#TT.ossss
 TT..#*HHHHHb#.::#JJJJJ*#TT..ssss
 TT..##S=#####.::#S=#####....ssss
@@ -11,7 +11,7 @@ TT..l================,..,..bssss
 TTo.l================.......ssss
 TT.WWWWW.....S==RRLLLLLLLLL.ssss
 TT.WWWWW......==RRLLLLLLLLL.ssss
-TT#WWWWW#####.==b.LLLLLLLLLlssss
+TT#WWWWW#####.==b.LLLLLLLLLlsQss
 TT#WWWWW****#.==.lLLLLLLLLLlssss
 TT#WWWWW****#.==.lLLLLLLLLL.ssss
 TT#WWWWW****#.==...Sb=b.....ssss
@@ -19,7 +19,7 @@ TT#**:******#l============::ssss
 TT#**:******#l============::ssss
 TT###:#######.==#####dd####ossss
 TT...:....S...==~~~cddddBB~.ssss
-TTRR::::========~~~ddddddd~.ssss
+TTRR::::========~~~ddddddd~.sssq
 TTRR:ww:========~~~~~dd~~~~bssss
 TT..:ww:.RR.....~~~~~ddOO~~.ssss
 TT.k::::.RR.o.,.~~~~~dd~~~~.ssss

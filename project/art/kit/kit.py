@@ -1,4 +1,5 @@
-"""The kit: the building blocks every rebuilt map shares, drawn here (and in grass.py, trees.py, water.py) and built
+"""The kit: the building blocks every rebuilt map shares, drawn here (and in grass.py, trees.py, fields.py) or taken
+from native pixel packs (water.py, tall_grass/), and built
 into one primary tileset, gTileset_PalletConcept_General.
 
 Each map's make_art.py puts ``primary_entries()`` first in its spec, unchanged, then its own secondary tileset's
@@ -8,8 +9,8 @@ tiles, and rebuilding one map never breaks another. Change the kit, then rebuild
 Banks (palettes):
   0  ground: grass, dirt, cobblestones, rocks, stumps; tall grass, ledges, steps, lily pads and reeds (fields.py,
      the last two drawn over the pond's water), and the tall grass sprite drawn over the player's feet
-  1  water: the pond (pond/, a native pixel pack, put together in pond.py) and the sea, its cliff and rocks
-     (water.py), animated in eight frames
+  1  water: the pond and the sea, its cliff and the sea rocks (native pixel packs in pond/ and sea/, put together
+     in water.py), animated in eight frames
   2  wood: fences, the dock, signs, barrels, crates, the boat, the well (and buildings drawn in wood)
   3  trees: the pines, round trees and bushes (trees.py)
   4  tall grass: tall_grass/ (drawn natively at 16x16, made with another AI from a brief) and the sprites over
@@ -26,7 +27,6 @@ from PIL import Image
 
 import fields
 import grass
-import pond
 import trees
 import water
 
@@ -458,37 +458,46 @@ def check_forest(g, char: str = "T") -> None:
                          "add them to kit.FOREST_CORNERS and rebuild every map")
 
 
-# (mask, corners) of the pond's inside-corner pieces in the kit: every map's together (``check_pond``)
-POND_CORNERS = [(11, 8), (13, 8), (14, 2), (14, 4), (15, 1), (15, 4), (15, 8), (15, 2), (15, 10)]
-POND = ("~", "v", "r")  # the legend characters that are pond water (lily pads and reeds join it)
+# (mask, corners) of the inside-corner pieces of the pond and the sea in the kit: every map's together
+# (``check_water``)
+WATER_CORNERS = {"pond": [(11, 8), (13, 8), (14, 2), (14, 4), (15, 1), (15, 4), (15, 8), (15, 2), (15, 10)],
+                 "sea": []}
+# the legend characters that are each water (lily pads and reeds join the pond, the sea rocks the sea); the first is
+# the plain water, the others are drawn as they are
+WATER = {"pond": ("~", "v", "r"), "sea": ("s", "q", "Q")}
 
 
-def pond_corners(g) -> set[tuple[int, int]]:
-    """(mask, corners) of the pond blocks in grid ``g`` with an inside corner, as pae map paint works them out."""
+def water_corners(g, kind: str) -> set[tuple[int, int]]:
+    """(mask, corners) of the plain ``kind`` water blocks in grid ``g`` with an inside corner, as pae map paint works
+    them out."""
     h, w = len(g), len(g[0])
+    chars = WATER[kind]
 
     def water_at(x, y):
-        return not (0 <= y < h and 0 <= x < w) or g[y][x] in POND
+        return not (0 <= y < h and 0 <= x < w) or g[y][x] in chars
     out = set()
     for y in range(h):
         for x in range(w):
-            if g[y][x] not in POND:
+            if g[y][x] not in chars:
                 continue
             mask = sum(bit for bit, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
                        if water_at(x + dx, y + dy))
             corners = sum(bit for bit, (dx, dy), sides in ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12),
                                                            (8, (-1, -1), 9))
                           if mask & sides == sides and not water_at(x + dx, y + dy))
-            if corners and g[y][x] == "~":
+            if corners and g[y][x] == chars[0]:
                 out.add((mask, corners))
+            if g[y][x] != chars[0] and mask != 15:
+                raise SystemExit(f"({x},{y}): '{g[y][x]}' needs {kind} all round it (it is drawn in open water)")
     return out
 
 
-def check_pond(g) -> None:
-    missing = pond_corners(g) - set(POND_CORNERS)
-    if missing:
-        raise SystemExit(f"the pond needs inside-corner pieces the kit doesn't have: {sorted(missing)}; "
-                         "add them to kit.POND_CORNERS and rebuild every map")
+def check_water(g) -> None:
+    for kind in WATER:
+        missing = water_corners(g, kind) - set(WATER_CORNERS[kind])
+        if missing:
+            raise SystemExit(f"the {kind} needs inside-corner pieces the kit doesn't have: {sorted(missing)}; "
+                             "add them to kit.WATER_CORNERS and rebuild every map")
 
 
 # ---------------------------------------------------------------- sheets and spec
@@ -584,22 +593,23 @@ def primary(spec_dir: Path) -> dict:
     ground.add("rock", rock(1, True), tileset="primary", ground="grass", solid=True)
     ground.add("stump", stump(), tileset="primary", ground="grass", solid=True)
     spec_mt += ground.write()
-    # water, animated (water.py)
+    # water, animated: the pond and the sea from their packs (water.py)
     sheet_w = sheet("water", "water")
-    cells = []  # (name, kind, mask, variant, inside corners)
-    for kind in ("pond", "sea"):
+    cells = []  # (name, kind, the block at frame k)
+    for kind in WATER:
         for m in range(16):
-            cells.append((f"{kind}#{m}", kind, m, 0, 0))
-        cells += [(f"{kind}#15~{v}", kind, 15, v, 0) for v in (1, 2)]  # open water with its sparkles elsewhere
-    cells += [(f"pond#{m}.{c}", "pond", m, 0, c) for m, c in POND_CORNERS]  # inside corners
-
-    def cell(kind, m, f, v, c):  # the pond from the pond pack (pond.py), the sea still drawn (water.py)
-        return pond.piece(m, f, v, c) if kind == "pond" else water.shore(m, f, kind, v)
-    for name, kind, m, v, c in cells:
+            cells.append((f"{kind}#{m}", kind, lambda k, kind=kind, m=m: water.piece(kind, m, k)))
+        for v in (1, 2):  # open water with its sparkles elsewhere
+            cells.append((f"{kind}#15~{v}", kind, lambda k, kind=kind, v=v: water.piece(kind, 15, k, v)))
+        for m, c in WATER_CORNERS[kind]:  # inside corners
+            cells.append((f"{kind}#{m}.{c}", kind, lambda k, kind=kind, m=m, c=c: water.piece(kind, m, k, 0, c)))
+    for piece in ("rock_a", "rock_b"):  # rocks standing in the sea, with surf round them
+        cells.append((f"sea#15+{piece}", "sea", lambda k, piece=piece: water.frame("sea", piece, k)))
+    for name, kind, block in cells:
         extra = {"solid": True} if kind == "sea" else {}
-        sheet_w.add(name, cell(kind, m, 0, v, c), tileset="primary", ground="grass", behavior="MB_POND_WATER",
+        sheet_w.add(name, block(0), tileset="primary", ground="grass", behavior="MB_POND_WATER",
                     elevation=1, **extra)
-    frames = [[cell(kind, m, f, v, c) for _, kind, m, v, c in cells] for f in range(1, water.FRAMES)]
+    frames = [[block(f) for _, _, block in cells] for f in range(1, water.FRAMES)]
     spec_mt += sheet_w.write(frames)
     # wood
     wood = sheet("wood", "wood")
@@ -678,4 +688,6 @@ LEGEND = {
     "_": {"auto": "ledge"}, "h": {"auto": "steps"},
     "v": {"auto": "pond", "joins": "~", "with": "lily", "elevation": 1},
     "r": {"auto": "pond", "joins": "~", "with": "reeds", "elevation": 1},
+    "q": {"auto": "sea", "joins": "s", "with": "rock_a", "elevation": 1},
+    "Q": {"auto": "sea", "joins": "s", "with": "rock_b", "elevation": 1},
 }

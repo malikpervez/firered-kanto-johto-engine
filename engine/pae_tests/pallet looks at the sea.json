@@ -1,0 +1,52 @@
+{
+ "note": "Walk east to the cliff over the sea: it stops you (the sea is solid under its cliff), and shows the sea pack's swells, the stone edge and a sea rock.",
+ "created": "2026-10-21 19:47",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 27,
+  "y": 12,
+  "state": [
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 27,
+  "y": 12,
+  "in_battle": false
+ }
+}

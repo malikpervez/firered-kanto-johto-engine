@@ -1,4 +1,4 @@
-(In the kit: only the 16 strips are kept, as pond/<piece>.png, with this README and palette.gpl. kit/pond.py
+(In the kit: only the 16 strips are kept, as pond/<piece>.png, with this README and palette.gpl. kit/water.py
 puts each pond block together from them.)
 
 OPTION C — GENTLE RIPPLES
