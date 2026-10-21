@@ -136,15 +136,18 @@ static u32 GetPartyMonCount(u32 firstId, u32 lastId, enum BattleSide side, bool3
     return count;
 }
 
+// Trainers past the end of a table (Johto's are numbered from JOHTO_TRAINER_ID_BASE) have no slide messages.
+static const u8* const sNoTrainerSlides[TRAINER_SLIDE_COUNT] = {0};
+
 static const u8* const *GetTrainerSlideArray(enum DifficultyLevel difficulty, u32 trainerId, u32 slideId)
 {
 #if TESTING
     return (FlagGet(TESTING_FLAG_TRAINER_SLIDES) ? sTestTrainerSlides[difficulty][trainerId] : NULL);
 #else
     if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
-        return sFrontierTrainerSlides[difficulty][trainerId];
+        return trainerId < ARRAY_COUNT(sFrontierTrainerSlides[0]) ? sFrontierTrainerSlides[difficulty][trainerId] : sNoTrainerSlides;
     else
-        return sTrainerSlides[difficulty][trainerId];
+        return trainerId < ARRAY_COUNT(sTrainerSlides[0]) ? sTrainerSlides[difficulty][trainerId] : sNoTrainerSlides;
 #endif // TESTING
 }
 
