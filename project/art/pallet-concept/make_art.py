@@ -305,6 +305,7 @@ def layout() -> tuple[list[list[str]], dict]:
 def main() -> None:
     g, signs = layout()
     kit.check_forest(g)
+    kit.check_pond(g)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
 

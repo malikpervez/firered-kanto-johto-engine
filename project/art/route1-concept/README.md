@@ -24,6 +24,9 @@ walls, it has:
   the block you stand in (`pae tileset build`, `"field_effects"` with `"metatiles"`).
 - **Ledges** you hop down going south, which round off at their ends.
 - **Stone steps** through a ledge, walkable both ways.
+- **The pond**, from a native pixel pack made with another AI from a brief (`../kit/pond/`, "gentle ripples"): open
+  water in three kinds, the shores, outer and inside corners and a one-block pool, each 16×16 in eight frames in the
+  water palette. `../kit/pond.py` puts each block together from them; Pallet's pond and channel use it too.
 - **Lily pads and reeds**, drawn over the pond's animated water (`{"auto": "pond", "joins": "~", "with": "lily"}`
   in the legend).
 
@@ -45,11 +48,11 @@ They share the kit's primary tileset, so a change to the kit means building both
 
 ![Walking into the tall grass](in_game_tall_grass.png)
 ![Hopping down a ledge](in_game_ledge.png)
-![The pond by the shelter](pond.png)
+![The pond by the shelter, in game](pond.png)
 ![Under the arch, the road to Pallet](in_game_arch.png)
 ![Viridian's south edge, showing Route 1](in_game_viridian_seam.png)
 ![Pallet's road north, showing Route 1](in_game_pallet_seam.png)
 
 Replay tests: `route 1 tall grass`, `route 1 tall grass plain block`, `route 1 ledge jump`, `route 1 steps up a ledge`,
-`route 1 north to viridian`, `viridian looks at route 1`, `wild battle in grass`, `pallet north to route 1`,
+`route 1 surf the pond`, `route 1 north to viridian`, `viridian looks at route 1`, `wild battle in grass`, `pallet north to route 1`,
 `pallet route 1 looks at pallet`.

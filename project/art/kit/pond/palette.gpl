@@ -1,0 +1,19 @@
+GIMP Palette
+Name: Option C Pond - Supplied Palette
+Columns: 5
+#
+ 16  24  40 Outline / deepest
+ 96  64  40 Bank earth dark
+152 112  72 Bank earth mid
+200 168 112 Bank earth lit
+ 24  48 104 Deep water (unused)
+ 32  72 144 Water dark
+ 48 104 184 Water
+ 72 136 208 Water light
+112 172 228 Wave face
+120 196 212 Shallow water
+208 236 244 Foam
+248 248 248 Sparkle
+ 72  72  88 Spare pebble (unused)
+120 120 128 Spare pebble (unused)
+176 176 168 Spare pebble (unused)

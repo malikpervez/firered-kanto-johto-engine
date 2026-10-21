@@ -36,7 +36,7 @@
     "../kit/sheets/water_f6.png",
     "../kit/sheets/water_f7.png"
    ],
-   "speed": 16
+   "speed": 10
   }
  ],
  "field_effects": {
@@ -945,6 +945,123 @@
    "behavior": "MB_POND_WATER",
    "elevation": 1,
    "solid": true
+  },
+  {
+   "name": "pond#11.8",
+   "image": "../kit/sheets/water.png",
+   "x": 64,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#13.8",
+   "image": "../kit/sheets/water.png",
+   "x": 80,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#14.2",
+   "image": "../kit/sheets/water.png",
+   "x": 96,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#14.4",
+   "image": "../kit/sheets/water.png",
+   "x": 112,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15.1",
+   "image": "../kit/sheets/water.png",
+   "x": 128,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15.4",
+   "image": "../kit/sheets/water.png",
+   "x": 144,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15.8",
+   "image": "../kit/sheets/water.png",
+   "x": 160,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15.2",
+   "image": "../kit/sheets/water.png",
+   "x": 176,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15.10",
+   "image": "../kit/sheets/water.png",
+   "x": 192,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
   },
   {
    "name": "fence#0",
