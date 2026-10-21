@@ -22,7 +22,8 @@ pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --bor
 pae map connect $M up Route1_Frlg --align 14,24 $P
 pae map connect $M down Route21_North_Frlg --align 18,7 $P
 pae seam build $M $P
-pae door add $M 7 7 --panel 3,0,13,14 $P    # the houses' door (both houses share it)
+pae door add $M 7 7 --panel 3,0,13,14 $P    # your house's door
+pae door add $M 18 7 --panel 3,0,13,14 $P   # your rival's
 pae door add $M 21 15 --panel 1,0,15,14 $P  # Oak's lab
 
 # events
@@ -33,8 +34,8 @@ pae map place $M coord 0 14 1 $P             # Oak stops you (left of the road)
 pae map place $M coord 1 15 1 $P             # (right)
 pae map place $M coord 2 15 2 $P             # the sign lady by the road north
 pae map place $M bg 0 19 16 $P               # Oak's lab sign
-pae map place $M bg 1 5 7 $P                 # your house's sign
-pae map place $M bg 2 22 7 $P                # your rival's house's sign
+pae map place $M bg 1 6 8 $P                 # your house's sign (in the fence by the gate)
+pae map place $M bg 2 17 8 $P                # your rival's
 pae map place $M bg 3 13 11 $P               # town sign
 pae map place $M bg 4 10 20 $P               # trainer tips
 pae map place $M object LOCALID_PALLET_SIGN_LADY 13 14 $P

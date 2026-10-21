@@ -11,7 +11,8 @@
   ],
   "secondary": [
    "palette_lab.pal",
-   "palette_plants.pal"
+   "palette_plants.pal",
+   "palette_houses.pal"
   ]
  },
  "reserve": {
@@ -1719,14 +1720,34 @@
    "solid": true
   },
   {
-   "name": "house",
-   "image": "sheets/buildings.png",
+   "name": "house_red",
+   "image": "sheets/houses.png",
    "x": 0,
    "y": 0,
    "w": 5,
    "h": 5,
    "banks": [
-    2
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true,
+   "open": [
+    "1,4"
+   ],
+   "behaviors": {
+    "1,4": "MB_ANIMATED_DOOR"
+   }
+  },
+  {
+   "name": "house_blue",
+   "image": "sheets/houses.png",
+   "x": 80,
+   "y": 0,
+   "w": 5,
+   "h": 5,
+   "banks": [
+    9
    ],
    "tileset": "secondary",
    "ground": "grass",
@@ -1741,7 +1762,7 @@
   {
    "name": "windmill",
    "image": "sheets/buildings.png",
-   "x": 80,
+   "x": 0,
    "y": 0,
    "w": 5,
    "h": 6,
