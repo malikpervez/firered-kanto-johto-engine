@@ -1,18 +1,15 @@
 #!/usr/bin/env python3
-"""Pallet Town after the concept art (concept.png, made with image generation): every tile drawn here (the trees in
-trees.py), nothing taken from an existing tileset.
+"""Pallet Town after the concept art (concept.png, made with image generation): every tile drawn from scratch,
+nothing taken from an existing tileset. The pieces every map shares come from the kit (../kit/kit.py); this file
+draws the town's own.
 
 The town is 32x28 blocks: a pine forest around it, two houses with fenced yards (houses.py), cobblestone roads, a windmill
 in a flower garden, Oak's lab with its greenhouse, a pond with a wooden dock (and the way south to Route 21), the sea
 below a cliff in the east, and a stone well.
 
-Six palettes, each made for what uses it:
-  bank 0  ground: grass, pines, dirt, cobblestones, rocks
-  bank 1  water: pond and sea, their banks, cliff rocks (drawn in water.py, animated in eight frames)
-  bank 2  wood: fences, the dock, signs, the windmill, the well, barrels, the boat
-  bank 3  trees: the pines, round trees and bushes (drawn in trees.py)
+Its palettes (banks 0-3 and 8 are the kit's):
+  bank 2  wood (the kit's): the windmill
   bank 7  the lab: metal roof, siding, glass, the greenhouse plants
-  bank 8  plants: flowers, lamps
   bank 9  the houses: plaster, clay roof tiles in red and blue, glass (drawn in houses.py)
 
 Run from the repository root:  python3 project/art/pallet-concept/make_art.py
@@ -22,358 +19,27 @@ build.sh turns them into the game's tilesets and map with pae.
 import json
 import math
 import random
+import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
 
-import grass
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import houses
-import trees
-import water
+import kit
+from kit import CRM, D_OUT, NWL, NWM, RFD, RFH, RFL, RFM, STG, STL, WOD, WOM, edge_of, ellipse
 
 HERE = Path(__file__).resolve().parent
 MAP_W, MAP_H = 32, 28
 
-# ---------------------------------------------------------------- palettes
-P0 = [(0, 0, 0), (24, 32, 32), (40, 96, 56), (48, 112, 60), (56, 120, 64), (88, 160, 72), (120, 192, 88),
-      (168, 216, 112), (112, 72, 48), (176, 128, 80), (216, 176, 120), (96, 96, 96), (144, 144, 136),
-      (192, 192, 176), (72, 48, 40), (240, 240, 224)]
-OUT, G0, G1, GD, GM, GL, GH, SD, SM, SL, KD, KM, KL, TR, CR = range(1, 16)  # six greens (grass.py)
-
-
-P2 = [(0, 0, 0), (40, 24, 24), (88, 48, 32), (136, 80, 48), (184, 120, 72), (224, 168, 112), (120, 32, 32),
-      (176, 56, 48), (224, 96, 72), (248, 152, 120), (40, 56, 96), (96, 144, 200), (176, 216, 240),
-      (240, 232, 208), (120, 120, 128), (184, 184, 184)]
-D_OUT, WOD, WOM, WOL, WOH, RFD, RFM, RFL, RFH, NWD, NWM, NWL, CRM, STG, STL = range(1, 16)
-
+# ---------------------------------------------------------------- palettes (the town's own; the kit has the rest)
 P3 = [(0, 0, 0), (24, 32, 40), (64, 80, 96), (96, 112, 128), (144, 160, 168), (192, 200, 208), (152, 144, 120),
       (200, 192, 168), (232, 228, 208), (40, 64, 80), (120, 176, 184), (200, 236, 236), (40, 96, 56),
       (88, 152, 72), (72, 120, 88), (248, 248, 240)]
 L_OUT, MTD, MTM, MTL, MTH, SID, SIM, SIL, LWD, GLA, GLH, PLD, PLM, DRG, LWH = range(1, 16)
 
-P4 = [(0, 0, 0), (24, 32, 32), (32, 80, 48), (56, 128, 64), (104, 176, 80), (160, 208, 104), (208, 64, 64),
-      (240, 136, 168), (248, 208, 72), (240, 144, 64), (144, 104, 200), (104, 152, 232), (248, 248, 240),
-      (56, 56, 64), (248, 232, 160), (96, 64, 40)]
-F_OUT, LFD, LFM, LFL, LFH, RED, PINK, YEL, ORG, PUR, BLU, WHT, IRON, GLOW, TRUNK = range(1, 16)
-
-BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "lab": 7, "plants": 8, "houses": 9}
-PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "lab": P3, "plants": P4, "houses": houses.PH}
-
-
-def rgba(idx: np.ndarray, pal) -> np.ndarray:
-    out = np.zeros(idx.shape + (4,), np.uint8)
-    for i, c in enumerate(pal):
-        if i:
-            out[idx == i] = (*c, 255)
-    return out
-
-
-def edge_of(mask: np.ndarray) -> np.ndarray:
-    """Pixels of ``mask`` with a 4-neighbour outside it (the outline)."""
-    p = np.pad(mask, 1)
-    inner = p[:-2, 1:-1] & p[2:, 1:-1] & p[1:-1, :-2] & p[1:-1, 2:]
-    return mask & ~inner
-
-
-def ellipse(h, w, cx, cy, rx, ry) -> np.ndarray:
-    yy, xx = np.mgrid[0:h, 0:w]
-    return ((xx + 0.5 - cx) / rx) ** 2 + ((yy + 0.5 - cy) / ry) ** 2 <= 1.0
-
-
-def wobble(seed: int, n: int = 16, lo: int = 1, hi: int = 3) -> list[int]:
-    """A smooth-ish random edge line (the same for a given seed)."""
-    r = random.Random(seed)
-    v = [r.randint(lo, hi) for _ in range(n)]
-    return [max(lo, min(hi, round((v[i - 1] + 2 * v[i] + v[(i + 1) % n]) / 4))) for i in range(n)]
-
-
-# ---------------------------------------------------------------- ground (bank 0)
-def _torus_cells(seed: int, n: int, size: int = 16):
-    """Voronoi cells on a size x size torus: (cell id, distance to own centre, gap) per pixel."""
-    r = random.Random(seed)
-    pts = []
-    while len(pts) < n:  # spread the stones out
-        p = (r.uniform(0, size), r.uniform(0, size))
-        if all(min(abs(p[0] - q[0]), size - abs(p[0] - q[0])) ** 2 + min(abs(p[1] - q[1]), size - abs(p[1] - q[1])) ** 2
-               > (size / math.sqrt(n) * 0.8) ** 2 for q in pts):
-            pts.append(p)
-    cid = np.zeros((size, size), np.int32)
-    gap = np.zeros((size, size), bool)
-    rel = np.zeros((size, size, 2), np.float32)
-    for y in range(size):
-        for x in range(size):
-            ds = []
-            for i, (px, py) in enumerate(pts):
-                dx = (x + 0.5 - px + size / 2) % size - size / 2
-                dy = (y + 0.5 - py + size / 2) % size - size / 2
-                ds.append((dx * dx + dy * dy, i, dx, dy))
-            ds.sort()
-            cid[y, x] = ds[0][1]
-            rel[y, x] = ds[0][2:]
-            gap[y, x] = math.sqrt(ds[1][0]) - math.sqrt(ds[0][0]) < 1.0
-    return cid, gap, rel
-
-
-COBBLE = _torus_cells(7, 11)
-EDGE_SEED = {1: 101, 2: 202, 4: 303, 8: 404}
-
-
-def _cut(t: np.ndarray, mask: int, seed: int, lip: int, lo: int = 1, hi: int = 3) -> np.ndarray:
-    """Make the sides whose neighbour differs transparent beyond a wobbly line, with a lip colour on the line.
-    The line depends only on the side, so a quadrant looks the same in every variant that cuts the same sides."""
-    t = t.copy()
-    for bit, seed_off in EDGE_SEED.items():
-        if mask & bit:
-            continue
-        wob = wobble(seed + seed_off, 16, lo, hi)
-        for i in range(16):
-            d = wob[i]
-            if bit == 1:
-                t[:d, i] = 0
-                t[d, i] = lip if t[d, i] else 0
-            elif bit == 4:
-                t[16 - d:, i] = 0
-                t[15 - d, i] = lip if t[15 - d, i] else 0
-            elif bit == 8:
-                t[i, :d] = 0
-                t[i, d] = lip if t[i, d] else 0
-            else:
-                t[i, 16 - d:] = 0
-                t[i, 15 - d] = lip if t[i, 15 - d] else 0
-    return t
-
-
-def cobble(mask: int) -> np.ndarray:
-    cid, gap, rel = COBBLE
-    r = random.Random(5)
-    tint = {i: r.random() < 0.3 for i in range(11)}
-    t = np.zeros((16, 16), np.uint8)
-    for y in range(16):
-        for x in range(16):
-            if gap[y, x]:
-                t[y, x] = KD
-                continue
-            dx, dy = rel[y, x]
-            v = -(dx + dy)
-            if v > 1.6:
-                t[y, x] = KL
-            elif v < -1.9:
-                t[y, x] = KD
-            else:
-                t[y, x] = SL if tint[int(cid[y, x])] and v > -0.5 else KM
-    return _cut(t, mask, 11, KD)
-
-
-def dirt(mask: int) -> np.ndarray:
-    r = random.Random(17)
-    t = np.full((16, 16), SM, np.uint8)
-    for _ in range(26):
-        t[r.randrange(16), r.randrange(16)] = SL
-    for _ in range(10):
-        t[r.randrange(16), r.randrange(16)] = SD
-    for _ in range(2):  # pebbles
-        x, y = r.randrange(1, 14), r.randrange(1, 14)
-        t[y, x:x + 2] = KM
-        t[y + 1, x:x + 2] = KD
-        t[y, x] = KL
-    return _cut(t, mask, 23, SD)
-
-
-def rock(seed: int, big: bool) -> np.ndarray:
-    t = np.zeros((16, 16), np.uint8)
-    m = ellipse(16, 16, 8, 9.5 if big else 11, 6.5 if big else 4.5, 5 if big else 3.5)
-    t[m] = KM
-    t[m & ellipse(16, 16, 6, 7.5 if big else 10, 4 if big else 2.5, 3 if big else 2)] = KL
-    t[m & ~ellipse(16, 16, 7, 8.5 if big else 10.5, 6.5 if big else 4.5, 5 if big else 3.5)] = KD
-    t[edge_of(m)] = OUT
-    if big:
-        t[9, 9:12] = KD  # a crack
-        t[10, 11] = KD
-    return t
-
-
-def stump() -> np.ndarray:
-    t = np.zeros((16, 16), np.uint8)
-    side = ellipse(16, 16, 8, 10.5, 6, 4.5)
-    t[side] = TR
-    top = ellipse(16, 16, 8, 8, 6, 3.5)
-    t[top] = SL
-    t[ellipse(16, 16, 8, 8, 3.5, 2)] = SM
-    t[ellipse(16, 16, 8, 8, 1.5, 1)] = SL
-    t[edge_of(side | top)] = OUT
-    t[edge_of(top) & ~edge_of(side | top)] = SD
-    t[11:14, 4] = SD
-    t[12:15, 11] = SD
-    return t
-
-
-# ---------------------------------------------------------------- wood (bank 2)
-def fence(mask: int) -> np.ndarray:
-    """Wooden post-and-rail fence, joined toward the neighbours that are fence (1 N, 2 E, 4 S, 8 W)."""
-    t = np.zeros((16, 16), np.uint8)
-
-    def rail(y0, x0, x1):
-        t[y0, x0:x1] = WOL
-        t[y0 + 1, x0:x1] = WOM
-        t[y0 + 2, x0:x1] = D_OUT
-    if mask & 8:
-        rail(5, 0, 7)
-        rail(10, 0, 7)
-    if mask & 2:
-        rail(5, 9, 16)
-        rail(10, 9, 16)
-    if mask & 1:
-        t[0:4, 7] = WOL
-        t[0:4, 8] = WOD
-    if mask & 4:
-        t[12:16, 7] = WOL
-        t[12:16, 8] = WOD
-    # the post
-    t[3:14, 6:10] = WOM
-    t[3:14, 6] = WOL
-    t[3:14, 9] = WOD
-    t[3:14, 5] = D_OUT
-    t[3:14, 10] = D_OUT
-    t[2, 6:10] = D_OUT
-    t[3, 6:10] = WOH
-    t[14, 6:10] = D_OUT
-    t[8, 7] = WOD  # grain
-    return t
-
-
-def planks(mask: int) -> np.ndarray:
-    """Dock boards (horizontal); dark beams and posts on the sides that face water."""
-    t = np.zeros((16, 16), np.uint8)
-    for y in range(16):
-        row = y % 4
-        t[y, :] = (WOL, WOM, WOM, WOD)[row]
-    for y0, seam in ((0, 5), (4, 12), (8, 2), (12, 9)):
-        t[y0:y0 + 3, seam] = WOD
-        t[y0 + 1, (seam + 3) % 16] = D_OUT  # nails
-    if not mask & 1:
-        t[0, :] = D_OUT
-        t[1, :] = WOH
-    if not mask & 8:
-        t[:, 0] = D_OUT
-        t[:, 1] = WOD
-    if not mask & 2:
-        t[:, 15] = D_OUT
-        t[:, 14] = WOD
-    if not mask & 4:
-        t[12, :] = D_OUT
-        t[13:16, :] = WOD
-        for px in (2, 12):
-            t[13:16, px:px + 2] = WOM
-            t[13:16, px] = WOL
-        t[15, :] = D_OUT
-    return t
-
-
-def sign() -> np.ndarray:
-    t = np.zeros((16, 16), np.uint8)
-    t[9:15, 7:9] = WOM
-    t[9:15, 7] = WOL
-    t[9:15, 6] = D_OUT
-    t[9:15, 9] = D_OUT
-    t[15, 6:10] = D_OUT
-    t[2:10, 1:15] = WOL
-    t[3:9, 2:14] = WOM
-    t[2, 1:15] = D_OUT
-    t[10, 1:15] = D_OUT
-    t[2:11, 0] = D_OUT
-    t[2:11, 15] = D_OUT
-    t[3, 2:14] = WOH
-    for y in (5, 7):
-        t[y, 3:13] = WOD
-        t[y, 3 + (y % 3):13:4] = WOM
-    t[9, 2:14] = WOD
-    return t
-
-
-def barrel() -> np.ndarray:
-    t = np.zeros((16, 16), np.uint8)
-    body = ellipse(16, 16, 8, 9, 6, 6.5)
-    t[body] = WOM
-    yy, xx = np.indices((16, 16))
-    t[body & (xx < 6)] = WOL
-    t[body & (xx > 10)] = WOD
-    t[body & ((yy == 5) | (yy == 12))] = STG
-    t[body & ((yy == 5) | (yy == 12)) & (xx < 6)] = STL
-    top = ellipse(16, 16, 8, 4, 5, 2.2)
-    t[top] = WOD
-    t[ellipse(16, 16, 8, 4, 3.5, 1.2)] = WOM
-    t[edge_of(body | top)] = D_OUT
-    return t
-
-
-def crate() -> np.ndarray:
-    t = np.zeros((16, 16), np.uint8)
-    t[3:15, 2:14] = WOM
-    t[3:5, 2:14] = WOL
-    t[3:15, 2:4] = WOL
-    t[3:15, 12:14] = WOD
-    t[13:15, 2:14] = WOD
-    for i in range(9):  # the cross brace
-        t[5 + i, 4 + i] = WOD
-        t[5 + i, 11 - i] = WOD
-    t[2, 2:14] = D_OUT
-    t[15, 2:14] = D_OUT
-    t[2:16, 1] = D_OUT
-    t[2:16, 14] = D_OUT
-    t[1, 3:13] = WOH
-    return t
-
-
-def boat() -> np.ndarray:
-    t = np.zeros((16, 32), np.uint8)
-    hull = ellipse(16, 32, 16, 8, 14.5, 6.5)
-    t[hull] = WOM
-    inner = ellipse(16, 32, 16, 7.5, 11.5, 4)
-    t[inner] = WOD
-    t[hull & ~ellipse(16, 32, 16, 6.5, 14.5, 6.5)] = WOD
-    t[4:12, 11:13] = WOL  # seats
-    t[4:12, 20:22] = WOL
-    t[edge_of(hull)] = D_OUT
-    t[edge_of(inner)] = D_OUT
-    t[3, 6:26] = WOH * (t[3, 6:26] > 0)
-    t[8, 0:4] = WOL  # an oar
-    t[7:10, 0:2] = WOM
-    return t
-
-
-def well() -> np.ndarray:
-    t = np.zeros((32, 32), np.uint8)
-    ring = ellipse(32, 32, 16, 22, 11, 7.5)
-    hole = ellipse(32, 32, 16, 20.5, 7.5, 4)
-    t[ring] = STG
-    yy, xx = np.indices((32, 32))
-    t[ring & ((yy + (xx // 4) % 2 * 2) % 4 == 0)] = D_OUT * 0 + STL
-    t[ring & ((xx + (yy // 3) * 2) % 5 == 0)] = D_OUT
-    t[hole] = NWD
-    t[ellipse(32, 32, 14, 21.5, 3.5, 1.5)] = NWM
-    t[edge_of(ring)] = D_OUT
-    t[edge_of(hole)] = D_OUT
-    # posts and a little roof
-    for px in (5, 25):
-        t[6:22, px:px + 2] = WOM
-        t[6:22, px] = WOL
-        t[6:22, px - 1] = D_OUT
-        t[6:22, px + 2] = D_OUT
-    for y in range(0, 8):
-        x0, x1 = 8 - y, 24 + y
-        t[y, max(0, x0):min(32, x1)] = RFM if y % 3 else RFD
-        t[y, max(0, x0)] = D_OUT
-        t[y, min(31, x1 - 1)] = D_OUT
-    t[0, 8:24] = D_OUT
-    t[8, 0:32] = D_OUT
-    t[1:3, 10:22] = RFL
-    t[9:11, 7:25] = WOD  # the crossbar and bucket rope
-    t[11:15, 16] = WOD
-    t[14:17, 14:19] = WOM
-    t[14:17, 14] = D_OUT
-    t[14:17, 18] = D_OUT
-    return t
+BANK = {"lab": 7, "plants": 8, "houses": 9}
+PALS = {"lab": P3, "houses": houses.PH}
 
 
 def windmill() -> np.ndarray:
@@ -542,54 +208,6 @@ def lab() -> np.ndarray:
     return t
 
 
-# ---------------------------------------------------------------- plants (bank 8)
-def flowers(seed: int, colours) -> np.ndarray:
-    """A dense flower bed: leafy clumps under round blooms (petals around a bright middle)."""
-    t = np.zeros((16, 16), np.uint8)
-    r = random.Random(seed)
-    for _ in range(7):  # leaves
-        x, y = r.randrange(0, 15), r.randrange(2, 16)
-        t[y, x] = LFM
-        t[y, min(15, x + 1)] = LFD
-        if y > 0:
-            t[y - 1, x] = LFL
-    spots = [(2, 2), (7, 1), (12, 3), (4, 7), (10, 7), (14, 9), (1, 11), (7, 12), (12, 13)]
-    for i, (x, y) in enumerate(spots):
-        x = (x + r.randint(-1, 1)) % 16
-        y = max(1, min(14, y + r.randint(-1, 0)))
-        c = colours[i % len(colours)]
-        t[min(15, y + 2), x] = LFD
-        for dx, dy in ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1), (1, 1)):
-            if 0 <= x + dx < 16 and 0 <= y + dy < 16:
-                t[y + dy, x + dx] = c
-        t[min(15, y + 1), min(15, x + 1)] = LFD if c != PUR else PUR
-        t[y, x] = YEL if c not in (YEL, ORG) else WHT
-    return t
-
-
-def lamp() -> np.ndarray:
-    t = np.zeros((32, 16), np.uint8)
-    t[10:29, 7:9] = IRON
-    t[10:29, 6] = F_OUT
-    t[10:29, 9] = F_OUT
-    t[28:31, 4:12] = IRON
-    t[28, 4:12] = F_OUT
-    t[31, 4:12] = F_OUT
-    t[28:31, 3] = F_OUT
-    t[28:31, 12] = F_OUT
-    # lantern
-    t[3:10, 4:12] = F_OUT
-    t[4:9, 5:11] = GLOW
-    t[4:9, 8] = IRON
-    t[5:7, 6] = WHT
-    t[1:3, 5:11] = IRON
-    t[0, 6:10] = F_OUT
-    t[1, 5] = F_OUT
-    t[1, 10] = F_OUT
-    t[10, 5:11] = IRON
-    return t
-
-
 # ---------------------------------------------------------------- layout
 def layout() -> tuple[list[list[str]], dict]:
     g = [["." for _ in range(MAP_W)] for _ in range(MAP_H)]
@@ -684,129 +302,23 @@ def layout() -> tuple[list[list[str]], dict]:
     return g, signs
 
 
-def inside_corners(g) -> set[tuple[int, int]]:
-    """(mask, corners) of the forest's 2x2 cells with an inside corner (as pae map paint works them out)."""
-    def forest(cx, cy):
-        return all(not (0 <= y < MAP_H and 0 <= x < MAP_W) or g[y][x] == "T"
-                   for y in range(cy, cy + 2) for x in range(cx, cx + 2))
-    out = set()
-    for cy in range(0, MAP_H, 2):
-        for cx in range(0, MAP_W, 2):
-            if not forest(cx, cy):
-                continue
-            mask = sum(bit for bit, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
-                       if forest(cx + 2 * dx, cy + 2 * dy))
-            diagonals = ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12), (8, (-1, -1), 9))
-            corners = sum(bit for bit, (dx, dy), sides in diagonals
-                          if mask & sides == sides and not forest(cx + 2 * dx, cy + 2 * dy))
-            if corners:
-                out.add((mask, corners))
-    return out
-
-
-# ---------------------------------------------------------------- sheets and spec
-class Sheet:
-    """Cells of one palette packed into an image, with spec entries for them."""
-
-    def __init__(self, name: str, pal: str, cols: int = 16):
-        self.name, self.pal, self.cols = name, pal, cols
-        self.cells: list[tuple[str, np.ndarray, dict]] = []
-
-    def add(self, name, idx, **entry):
-        self.cells.append((name, idx, entry))
-
-    def write(self, frames: list[list[np.ndarray]] | None = None) -> list[dict]:
-        # rows of 16 px; bigger cells go on their own rows
-        x = y = rowh = 0
-        place = []
-        width = self.cols * 16
-        for name, idx, entry in self.cells:
-            h, w = idx.shape
-            if x + w > width:
-                x, y, rowh = 0, y + rowh, 0
-            place.append((x, y))
-            x += w
-            rowh = max(rowh, h)
-        total_h = y + rowh
-        out = []
-        for k, im in enumerate([None] + (frames or [])):
-            canvas = np.zeros((total_h, width), np.uint8)
-            for i, ((name, idx, entry), (px, py)) in enumerate(zip(self.cells, place)):
-                cell = idx if im is None else im[i]
-                canvas[py:py + cell.shape[0], px:px + cell.shape[1]] = cell
-            fn = f"sheets/{self.name}.png" if im is None else f"sheets/{self.name}_f{k}.png"
-            Image.fromarray(rgba(canvas, PALS[self.pal]), "RGBA").save(HERE / fn)
-        for (name, idx, entry), (px, py) in zip(self.cells, place):
-            e = {"name": name, "image": f"sheets/{self.name}.png", "x": px, "y": py,
-                 "w": idx.shape[1] // 16, "h": idx.shape[0] // 16, "banks": [BANK[self.pal]]}
-            e.update(entry)
-            out.append(e)
-        return out
-
-
 def main() -> None:
-    (HERE / "sheets").mkdir(exist_ok=True)
-    spec_mt = []
-    # ground (primary)
-    ground = Sheet("ground", "ground")
-    lawn, daisies = grass.field(), grass.field(daisies=True)
-    ground.add("grass", grass.blocks(lawn)[0], tileset="primary")  # the ground under paths and things
-    ground.add("lawn", lawn, tileset="primary")  # the grass, a 4x4 pattern (grass.py)
-    ground.add("lawn_daisies", daisies, tileset="primary")
-    for m in range(16):
-        ground.add(f"cobble#{m}", cobble(m), tileset="primary", ground="grass")
-    for m in range(16):
-        ground.add(f"dirt#{m}", dirt(m), tileset="primary", ground="grass")
-    ground.add("rock", rock(1, True), tileset="primary", ground="grass", solid=True)
-    ground.add("stump", stump(), tileset="primary", ground="grass", solid=True)
-    spec_mt += ground.write()
-    # water (primary), animated (water.py)
-    sheet_w = Sheet("water", "water")
-    cells = []  # (name, kind, mask, variant)
-    for kind in ("pond", "sea"):
-        for m in range(16):
-            cells.append((f"{kind}#{m}", kind, m, 0))
-        cells += [(f"{kind}#15~{v}", kind, 15, v) for v in (1, 2)]  # open water with its sparkles elsewhere
-    for name, kind, m, v in cells:
-        extra = {"solid": True} if kind == "sea" else {}
-        sheet_w.add(name, water.shore(m, 0, kind, v), tileset="primary", ground="grass", behavior="MB_POND_WATER",
-                    elevation=1, **extra)
-    frames = [[water.shore(m, f, kind, v) for _, kind, m, v in cells] for f in range(1, water.FRAMES)]
-    spec_mt += sheet_w.write(frames)
-    # wood (primary: small things; secondary: buildings)
-    wood = Sheet("wood", "wood")
-    for m in range(16):
-        wood.add(f"fence#{m}", fence(m), tileset="primary", ground="grass", solid=True)
-    for m in range(16):
-        wood.add(f"dock#{m}", planks(m), tileset="primary", ground="pond#15")
-    wood.add("sign", sign(), tileset="primary", ground="grass", solid=True)
-    wood.add("barrel", barrel(), tileset="primary", ground="dock#15", solid=True)
-    wood.add("crate", crate(), tileset="primary", ground="dock#15", solid=True)
-    wood.add("boat", boat(), tileset="primary", ground="pond#15", solid=True, elevation=1)
-    wood.add("well", well(), tileset="primary", ground="dirt#15", solid=True)
-    spec_mt += wood.write()
-    plants = Sheet("plants", "plants")
-    for i, cols in enumerate(((RED, PINK, YEL), (PUR, WHT, PINK), (YEL, ORG, RED), (BLU, WHT, PUR))):
-        plants.add(f"flowers{i + 1}", flowers(10 + i, cols), tileset="primary", ground="grass")
-    plants.add("lamp", lamp(), tileset="primary", ground="grass", solid=True)
-    spec_mt += plants.write()
-    tree_sheet = Sheet("trees", "trees")
-    for m in range(16):  # forest#mask: a 2x2 pine for each way the forest goes on (paint picks it per cell)
-        tree_sheet.add(f"forest#{m}", trees.pine(m), tileset="primary", solid=True, ground="grass")
-    for m, c in sorted(inside_corners(layout()[0])):  # forest#mask.corners: where an inside corner opens onto town
-        tree_sheet.add(f"forest#{m}.{c}", trees.pine(m, c), tileset="primary", solid=True, ground="grass")
-    tree_sheet.add("round_tree", trees.round_tree(), tileset="primary", ground="grass", solid=True)
-    tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
-    spec_mt += tree_sheet.write()
-    homes = Sheet("houses", "houses", cols=10)
+    g, signs = layout()
+    kit.check_forest(g)
+    base = kit.primary(HERE)  # the kit: the primary tileset every map shares
+    spec_mt = list(base["metatiles"])
+
+    def sheet(name, pal, cols=16):
+        return kit.Sheet(name, PALS.get(pal) or kit.PALS[pal], BANK.get(pal, kit.BANK.get(pal)), HERE, HERE, cols)
+    homes = sheet("houses", "houses", cols=10)
     for roof in ("red", "blue"):  # your house and your rival's (houses.py)
         homes.add(f"house_{roof}", houses.house(roof), tileset="secondary", ground="grass", solid=True, open=["1,4"],
                   behaviors={"1,4": "MB_ANIMATED_DOOR"})
     spec_mt += homes.write()
-    big = Sheet("buildings", "wood", cols=5)
+    big = sheet("buildings", "wood", cols=5)
     big.add("windmill", windmill(), tileset="secondary", ground="grass", solid=True)
     spec_mt += big.write()
-    labs = Sheet("lab", "lab", cols=9)
+    labs = sheet("lab", "lab", cols=9)
     labs.add("lab", lab(), tileset="secondary", ground="grass", solid=True, open=["3,4"],
              behaviors={"3,4": "MB_ANIMATED_DOOR"})
     spec_mt += labs.write()
@@ -814,31 +326,17 @@ def main() -> None:
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
     for name, pal in PALS.items():
-        with open(HERE / f"palette_{name}.pal", "w") as f:
-            f.write("JASC-PAL\r\n0100\r\n16\r\n" + "".join(f"{r} {g} {b}\r\n" for r, g, b in pal))
-    spec = {"version": "hns", "primary": "gTileset_PalletConcept_General", "secondary": "gTileset_PalletConcept",
-            "palettes": {"primary": ["palette_ground.pal", "palette_water.pal", "palette_wood.pal",
-                                     "palette_trees.pal"],
-                         "secondary": ["palette_lab.pal", "palette_plants.pal", "palette_houses.pal"]},
-            "reserve": {"primary": [[434, 441]]},
-            "animations": [{"name": "Water", "image": "sheets/water.png",
-                            "frames": [f"sheets/water_f{k}.png" for k in range(1, water.FRAMES)], "speed": 16}],
+        kit.write_palette(HERE / f"palette_{name}.pal", pal)
+    spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": "gTileset_PalletConcept",
+            "palettes": {"primary": base["palettes"],
+                         "secondary": ["palette_lab.pal", base["secondary_palettes"][8], "palette_houses.pal"]},
+            "reserve": {"primary": base["reserve"]},
+            "animations": base["animations"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
-    g, signs = layout()
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = {
-        "T": {"auto": "forest"},
-        ".": {"tile": "lawn"},
-        ",": {"tile": "lawn_daisies"},
-        "=": {"auto": "cobble"}, ":": {"auto": "dirt"},
-        "~": {"auto": "pond", "elevation": 1}, "s": {"auto": "sea", "elevation": 1},
-        "#": {"auto": "fence"}, "d": {"auto": "dock"},
-        "*": {"pick": ["flowers1", "flowers2", "flowers3", "flowers4"]},
-        "b": "bush", "o": "rock", "k": "stump", "l": "lamp", "S": "sign", "B": "barrel", "c": "crate", "O": "boat",
-        "w": "well", "R": "round_tree", "H": "house_red", "J": "house_blue", "W": "windmill", "L": "lab",
-    }
+    legend = dict(kit.LEGEND, H="house_red", J="house_blue", W="windmill", L="lab")
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "signs.json").write_text(json.dumps(signs, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")

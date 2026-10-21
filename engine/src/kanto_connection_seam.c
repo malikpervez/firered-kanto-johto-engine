@@ -2111,7 +2111,6 @@ static const u16 sKantoDual_PowerPlant_Frlg_CanonicalMids[] = { 0x02D0 };
 static const u16 sKantoDual_PowerPlant_Frlg_OriginIds[] = { 0x0025 };
 
 static const struct KantoSeam sKantoSeams[] = {
-    PAE_SEAMS
     { &ViridianCity_Frlg_FireRedGeometry, sKantoSeam_ViridianCity_Frlg_Metatiles, sKantoSeam_ViridianCity_Frlg_GlyphRuns, sKantoSeam_ViridianCity_Frlg_Palettes, NULL, 1000, 23, 7, 1, 0, 0 },
     { &CeruleanCity_Frlg_FireRedGeometry, sKantoSeam_CeruleanCity_Frlg_Metatiles, sKantoSeam_CeruleanCity_Frlg_GlyphRuns, sKantoSeam_CeruleanCity_Frlg_Palettes, sKantoSeam_CeruleanCity_Frlg_Animations, 954, 69, 13, 2, 7, 1920 },
     { &VermilionCity_Frlg_FireRedGeometry, sKantoSeam_VermilionCity_Frlg_Metatiles, sKantoSeam_VermilionCity_Frlg_GlyphRuns, sKantoSeam_VermilionCity_Frlg_Palettes, sKantoSeam_VermilionCity_Frlg_Animations, 998, 25, 8, 1, 3, 256 },
@@ -2147,6 +2146,7 @@ static const struct KantoSeam sKantoSeams[] = {
     { &Route25_SeaCottage_Frlg_FireRedGeometry, sKantoDual_Route25_SeaCottage_Frlg_Metatiles, sKantoDual_Route25_SeaCottage_Frlg_GlyphRuns, sKantoDual_Route25_SeaCottage_Frlg_Palettes, NULL, 1012, 11, 4, 5, 0, 0 },
     { &ViridianCity_School_Frlg_FireRedGeometry, sKantoDual_ViridianCity_School_Frlg_Metatiles, sKantoDual_ViridianCity_School_Frlg_GlyphRuns, sKantoDual_ViridianCity_School_Frlg_Palettes, NULL, 1019, 4, 2, 1, 0, 0 },
     { &PowerPlant_Frlg_FireRedGeometry, sKantoDual_PowerPlant_Frlg_Metatiles, NULL, NULL, NULL, 1022, 1, 0, 0, 0, 0 },
+    PAE_SEAMS
 };
 
 struct KantoSeamOrigin
@@ -2204,20 +2204,27 @@ static const struct KantoSeamOrigin *KantoSeam_FindOrigin(const struct MapLayout
     return NULL;
 }
 
-const struct KantoSeam *KantoSeam_Find(const struct MapLayout *layout)
+// A layout may have more than one entry (a hand-made one, then pae's for other neighbours): each covers its own
+// metatile range, glyph and palette slots. KantoSeam_Find gives the first; KantoSeam_FindNext the ones after it.
+static const struct KantoSeam *KantoSeam_FindNext(const struct MapLayout *layout, const struct KantoSeam *after)
 {
-    u32 i;
-    for (i = 0; i < ARRAY_COUNT(sKantoSeams); i++)
+    u32 i = after == NULL ? 0 : (after - sKantoSeams) + 1;
+    for (; i < ARRAY_COUNT(sKantoSeams); i++)
         if (sKantoSeams[i].layout == layout)
             return &sKantoSeams[i];
     return NULL;
 }
 
+const struct KantoSeam *KantoSeam_Find(const struct MapLayout *layout)
+{
+    return KantoSeam_FindNext(layout, NULL);
+}
+
 bool8 KantoSeam_ChangesPrimaryPalette(const struct MapLayout *layout)
 {
-    const struct KantoSeam *seam = KantoSeam_Find(layout);
+    const struct KantoSeam *seam;
     u32 i;
-    if (seam != NULL)
+    for (seam = KantoSeam_Find(layout); seam != NULL; seam = KantoSeam_FindNext(layout, seam))
         for (i = 0; i < seam->paletteCount; i++)
             if (seam->palettes[i].destination < GetNumPalsInPrimary(layout) * 16)
                 return TRUE;
@@ -2226,23 +2233,26 @@ bool8 KantoSeam_ChangesPrimaryPalette(const struct MapLayout *layout)
 
 const struct KantoSeamMetatile *KantoSeam_GetMetatile(const struct MapLayout *layout, u16 mid)
 {
-    const struct KantoSeam *seam = KantoSeam_Find(layout);
-    if (seam != NULL && mid >= seam->firstMid && mid - seam->firstMid < seam->metatileCount)
+    const struct KantoSeam *seam;
+    for (seam = KantoSeam_Find(layout); seam != NULL; seam = KantoSeam_FindNext(layout, seam))
     {
-        const struct KantoSeamMetatile *entry = &seam->metatiles[mid - seam->firstMid];
-        // Explicit NULL slots retain an original live MID between alias ranges.
-        return entry->sourceLayout != NULL ? entry : NULL;
+        if (mid >= seam->firstMid && mid - seam->firstMid < seam->metatileCount)
+        {
+            const struct KantoSeamMetatile *entry = &seam->metatiles[mid - seam->firstMid];
+            // Explicit NULL slots retain an original live MID between alias ranges.
+            return entry->sourceLayout != NULL ? entry : NULL;
+        }
     }
     return NULL;
 }
 
 u16 KantoSeam_TranslateBlock(const struct MapLayout *target, const struct MapLayout *source, u16 block)
 {
-    const struct KantoSeam *seam = KantoSeam_Find(target);
+    const struct KantoSeam *seam;
     u32 i;
     if (block == MAPGRID_UNDEFINED || source == target)
         return block;
-    if (seam != NULL)
+    for (seam = KantoSeam_Find(target); seam != NULL; seam = KantoSeam_FindNext(target, seam))
         for (i = 0; i < seam->metatileCount; i++)
             if (seam->metatiles[i].sourceLayout == source && seam->metatiles[i].sourceMid == (block & MAPGRID_METATILE_ID_MASK))
                 return (block & ~MAPGRID_METATILE_ID_MASK) | (seam->firstMid + i);
@@ -2293,17 +2303,18 @@ u16 KantoSeam_CutResult(const struct MapLayout *layout, u16 previousMid, u16 res
 
 void KantoSeam_LoadResources(const struct MapLayout *layout, bool8 skipFaded)
 {
-    const struct KantoSeam *seam = KantoSeam_Find(layout);
+    const struct KantoSeam *seam;
     u32 i;
-    if (seam == NULL)
-        return;
-    // LoadBgTiles queues after the original full tileset copies; never race a
-    // synchronous VRAM overwrite against a pending original tileset DMA.
-    for (i = 0; i < seam->glyphRunCount; i++)
-        LoadBgTiles(2, seam->glyphRuns[i].pixels, seam->glyphRuns[i].size, seam->glyphRuns[i].destination);
-    for (i = 0; i < seam->paletteCount; i++)
-        if (skipFaded)
-            CpuCopy16(seam->palettes[i].colors, &gPlttBufferUnfaded[seam->palettes[i].destination], PLTT_SIZE_4BPP);
-        else
-            LoadPaletteFast(seam->palettes[i].colors, seam->palettes[i].destination, PLTT_SIZE_4BPP);
+    for (seam = KantoSeam_Find(layout); seam != NULL; seam = KantoSeam_FindNext(layout, seam))
+    {
+        // LoadBgTiles queues after the original full tileset copies; never race a
+        // synchronous VRAM overwrite against a pending original tileset DMA.
+        for (i = 0; i < seam->glyphRunCount; i++)
+            LoadBgTiles(2, seam->glyphRuns[i].pixels, seam->glyphRuns[i].size, seam->glyphRuns[i].destination);
+        for (i = 0; i < seam->paletteCount; i++)
+            if (skipFaded)
+                CpuCopy16(seam->palettes[i].colors, &gPlttBufferUnfaded[seam->palettes[i].destination], PLTT_SIZE_4BPP);
+            else
+                LoadPaletteFast(seam->palettes[i].colors, seam->palettes[i].destination, PLTT_SIZE_4BPP);
+    }
 }

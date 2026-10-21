@@ -16,6 +16,7 @@
 #include "constants/field_effects.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "data/pae_field_effects.h"
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF // duplicate of define in event_object_movement.c
 #define PAL_TAG_REFLECTION_OFFSET 0x2000 // reflection tag value is paletteTag + 0x2000
@@ -432,7 +433,7 @@ u32 FldEff_TallGrass(void)
     const struct SpriteTemplate *template;
     s16 x = gFieldEffectArguments[0];
     s16 y = gFieldEffectArguments[1];
-        template = gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS];
+        template = PaeTallGrassTemplate(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS], x, y);
 
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
     spriteId = CreateSpriteAtEnd(template, x, y, 0);

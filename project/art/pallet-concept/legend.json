@@ -46,6 +46,31 @@
  "O": "boat",
  "w": "well",
  "R": "round_tree",
+ "g": {
+  "pick": [
+   "tall_grass",
+   "tall_grass_flowers"
+  ],
+  "order": "checker"
+ },
+ "_": {
+  "auto": "ledge"
+ },
+ "h": {
+  "auto": "steps"
+ },
+ "v": {
+  "auto": "pond",
+  "joins": "~",
+  "with": "lily",
+  "elevation": 1
+ },
+ "r": {
+  "auto": "pond",
+  "joins": "~",
+  "with": "reeds",
+  "elevation": 1
+ },
  "H": "house_red",
  "J": "house_blue",
  "W": "windmill",

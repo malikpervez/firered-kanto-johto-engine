@@ -1,0 +1,11 @@
+#!/bin/sh
+# Rebuild every map made from the kit (project/art/kit), after a change to the kit or to any of them. The maps
+# share the kit's primary tileset, so each map's build makes it again (the same each time) and the seams between
+# them are made last, when every map is painted. Run from the repository root.
+set -e
+sh project/art/route1-concept/build.sh
+sh project/art/pallet-concept/build.sh
+cd engine
+for m in Route1_Frlg PalletTown_Frlg; do
+    pae seam build $m -p .
+done

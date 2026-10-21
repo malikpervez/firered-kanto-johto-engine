@@ -4,9 +4,13 @@
   "Route21_North_Frlg"
  ],
  "Route1_Frlg": [
-  "PalletTown_Frlg"
+  "PalletTown_Frlg",
+  "ViridianCity_Frlg"
  ],
  "Route21_North_Frlg": [
   "PalletTown_Frlg"
+ ],
+ "ViridianCity_Frlg": [
+  "Route1_Frlg"
  ]
 }

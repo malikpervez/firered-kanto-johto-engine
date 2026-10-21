@@ -1437,7 +1437,7 @@
    "elevation": null,
    "open": []
   },
-  "round_tree": {
+  "forest#15.4": {
    "ids": [
     226,
     227,
@@ -1450,14 +1450,160 @@
    "elevation": null,
    "open": []
   },
+  "forest#15.8": {
+   "ids": [
+    230,
+    231,
+    232,
+    233
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "round_tree": {
+   "ids": [
+    234,
+    235,
+    236,
+    237
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "bush": {
    "ids": [
-    230
+    238
    ],
    "w": 1,
    "h": 1,
    "solid": true,
    "elevation": null,
+   "open": []
+  },
+  "tall_grass": {
+   "ids": [
+    239
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "tall_grass_flowers": {
+   "ids": [
+    240
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "ledge#0": {
+   "ids": [
+    241
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "ledge#2": {
+   "ids": [
+    242
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "ledge#8": {
+   "ids": [
+    243
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "ledge#10": {
+   "ids": [
+    244
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "steps#0": {
+   "ids": [
+    245
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#2": {
+   "ids": [
+    246
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#8": {
+   "ids": [
+    247
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#10": {
+   "ids": [
+    248
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pond#15+lily": {
+   "ids": [
+    249
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15+reeds": {
+   "ids": [
+    250
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
    "open": []
   },
   "house_red": {
@@ -1629,17 +1775,17 @@
   }
  },
  "tiles": {
-  "primary": 305,
+  "primary": 337,
   "secondary": 285
  },
  "metatile_counts": {
-  "primary": 231,
+  "primary": 251,
   "secondary": 125
  },
  "animations": [
   {
    "name": "PalletConcept_General_Water",
-   "first_tile": 256,
+   "first_tile": 288,
    "tiles": 49,
    "frames": 8,
    "notes": []

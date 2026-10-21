@@ -1,0 +1,1941 @@
+{
+ "version": "hns",
+ "primary": "gTileset_PalletConcept_General",
+ "secondary": "gTileset_Route1Concept",
+ "palettes": {
+  "primary": [
+   "../kit/palette_ground.pal",
+   "../kit/palette_water.pal",
+   "../kit/palette_wood.pal",
+   "../kit/palette_trees.pal",
+   "../kit/palette_tallgrass.pal"
+  ],
+  "secondary": [
+   "palette_route.pal",
+   "../kit/palette_plants.pal"
+  ]
+ },
+ "reserve": {
+  "primary": [
+   [
+    434,
+    441
+   ]
+  ]
+ },
+ "animations": [
+  {
+   "name": "Water",
+   "image": "../kit/sheets/water.png",
+   "frames": [
+    "../kit/sheets/water_f1.png",
+    "../kit/sheets/water_f2.png",
+    "../kit/sheets/water_f3.png",
+    "../kit/sheets/water_f4.png",
+    "../kit/sheets/water_f5.png",
+    "../kit/sheets/water_f6.png",
+    "../kit/sheets/water_f7.png"
+   ],
+   "speed": 16
+  }
+ ],
+ "field_effects": {
+  "tall_grass": {
+   "image": "../kit/sheets/tall_grass_fx.png",
+   "bank": 4,
+   "tileset": "primary",
+   "metatiles": {
+    "tall_grass_flowers": "../kit/sheets/tall_grass_flowers_fx.png"
+   }
+  }
+ },
+ "metatiles": [
+  {
+   "name": "grass",
+   "image": "../kit/sheets/ground.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary"
+  },
+  {
+   "name": "lawn",
+   "image": "../kit/sheets/ground.png",
+   "x": 16,
+   "y": 0,
+   "w": 4,
+   "h": 4,
+   "banks": [
+    0
+   ],
+   "tileset": "primary"
+  },
+  {
+   "name": "lawn_daisies",
+   "image": "../kit/sheets/ground.png",
+   "x": 80,
+   "y": 0,
+   "w": 4,
+   "h": 4,
+   "banks": [
+    0
+   ],
+   "tileset": "primary"
+  },
+  {
+   "name": "cobble#0",
+   "image": "../kit/sheets/ground.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#1",
+   "image": "../kit/sheets/ground.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#2",
+   "image": "../kit/sheets/ground.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#3",
+   "image": "../kit/sheets/ground.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#4",
+   "image": "../kit/sheets/ground.png",
+   "x": 208,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#5",
+   "image": "../kit/sheets/ground.png",
+   "x": 224,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#6",
+   "image": "../kit/sheets/ground.png",
+   "x": 240,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#7",
+   "image": "../kit/sheets/ground.png",
+   "x": 0,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#8",
+   "image": "../kit/sheets/ground.png",
+   "x": 16,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#9",
+   "image": "../kit/sheets/ground.png",
+   "x": 32,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#10",
+   "image": "../kit/sheets/ground.png",
+   "x": 48,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#11",
+   "image": "../kit/sheets/ground.png",
+   "x": 64,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#12",
+   "image": "../kit/sheets/ground.png",
+   "x": 80,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#13",
+   "image": "../kit/sheets/ground.png",
+   "x": 96,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#14",
+   "image": "../kit/sheets/ground.png",
+   "x": 112,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "cobble#15",
+   "image": "../kit/sheets/ground.png",
+   "x": 128,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#0",
+   "image": "../kit/sheets/ground.png",
+   "x": 144,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#1",
+   "image": "../kit/sheets/ground.png",
+   "x": 160,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#2",
+   "image": "../kit/sheets/ground.png",
+   "x": 176,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#3",
+   "image": "../kit/sheets/ground.png",
+   "x": 192,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#4",
+   "image": "../kit/sheets/ground.png",
+   "x": 208,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#5",
+   "image": "../kit/sheets/ground.png",
+   "x": 224,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#6",
+   "image": "../kit/sheets/ground.png",
+   "x": 240,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#7",
+   "image": "../kit/sheets/ground.png",
+   "x": 0,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#8",
+   "image": "../kit/sheets/ground.png",
+   "x": 16,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#9",
+   "image": "../kit/sheets/ground.png",
+   "x": 32,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#10",
+   "image": "../kit/sheets/ground.png",
+   "x": 48,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#11",
+   "image": "../kit/sheets/ground.png",
+   "x": 64,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#12",
+   "image": "../kit/sheets/ground.png",
+   "x": 80,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#13",
+   "image": "../kit/sheets/ground.png",
+   "x": 96,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#14",
+   "image": "../kit/sheets/ground.png",
+   "x": 112,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "dirt#15",
+   "image": "../kit/sheets/ground.png",
+   "x": 128,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "rock",
+   "image": "../kit/sheets/ground.png",
+   "x": 144,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "stump",
+   "image": "../kit/sheets/ground.png",
+   "x": 160,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "pond#0",
+   "image": "../kit/sheets/water.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#1",
+   "image": "../kit/sheets/water.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#2",
+   "image": "../kit/sheets/water.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#3",
+   "image": "../kit/sheets/water.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#4",
+   "image": "../kit/sheets/water.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#5",
+   "image": "../kit/sheets/water.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#6",
+   "image": "../kit/sheets/water.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#7",
+   "image": "../kit/sheets/water.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#8",
+   "image": "../kit/sheets/water.png",
+   "x": 128,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#9",
+   "image": "../kit/sheets/water.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#10",
+   "image": "../kit/sheets/water.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#11",
+   "image": "../kit/sheets/water.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#12",
+   "image": "../kit/sheets/water.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#13",
+   "image": "../kit/sheets/water.png",
+   "x": 208,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#14",
+   "image": "../kit/sheets/water.png",
+   "x": 224,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15",
+   "image": "../kit/sheets/water.png",
+   "x": 240,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15~1",
+   "image": "../kit/sheets/water.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15~2",
+   "image": "../kit/sheets/water.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "sea#0",
+   "image": "../kit/sheets/water.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#1",
+   "image": "../kit/sheets/water.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#2",
+   "image": "../kit/sheets/water.png",
+   "x": 64,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#3",
+   "image": "../kit/sheets/water.png",
+   "x": 80,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#4",
+   "image": "../kit/sheets/water.png",
+   "x": 96,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#5",
+   "image": "../kit/sheets/water.png",
+   "x": 112,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#6",
+   "image": "../kit/sheets/water.png",
+   "x": 128,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#7",
+   "image": "../kit/sheets/water.png",
+   "x": 144,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#8",
+   "image": "../kit/sheets/water.png",
+   "x": 160,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#9",
+   "image": "../kit/sheets/water.png",
+   "x": 176,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#10",
+   "image": "../kit/sheets/water.png",
+   "x": 192,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#11",
+   "image": "../kit/sheets/water.png",
+   "x": 208,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#12",
+   "image": "../kit/sheets/water.png",
+   "x": 224,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#13",
+   "image": "../kit/sheets/water.png",
+   "x": 240,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#14",
+   "image": "../kit/sheets/water.png",
+   "x": 0,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#15",
+   "image": "../kit/sheets/water.png",
+   "x": 16,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#15~1",
+   "image": "../kit/sheets/water.png",
+   "x": 32,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#15~2",
+   "image": "../kit/sheets/water.png",
+   "x": 48,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "fence#0",
+   "image": "../kit/sheets/wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#1",
+   "image": "../kit/sheets/wood.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#2",
+   "image": "../kit/sheets/wood.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#3",
+   "image": "../kit/sheets/wood.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#4",
+   "image": "../kit/sheets/wood.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#5",
+   "image": "../kit/sheets/wood.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#6",
+   "image": "../kit/sheets/wood.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#7",
+   "image": "../kit/sheets/wood.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#8",
+   "image": "../kit/sheets/wood.png",
+   "x": 128,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#9",
+   "image": "../kit/sheets/wood.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#10",
+   "image": "../kit/sheets/wood.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#11",
+   "image": "../kit/sheets/wood.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#12",
+   "image": "../kit/sheets/wood.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#13",
+   "image": "../kit/sheets/wood.png",
+   "x": 208,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#14",
+   "image": "../kit/sheets/wood.png",
+   "x": 224,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fence#15",
+   "image": "../kit/sheets/wood.png",
+   "x": 240,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "dock#0",
+   "image": "../kit/sheets/wood.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#1",
+   "image": "../kit/sheets/wood.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#2",
+   "image": "../kit/sheets/wood.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#3",
+   "image": "../kit/sheets/wood.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#4",
+   "image": "../kit/sheets/wood.png",
+   "x": 64,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#5",
+   "image": "../kit/sheets/wood.png",
+   "x": 80,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#6",
+   "image": "../kit/sheets/wood.png",
+   "x": 96,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#7",
+   "image": "../kit/sheets/wood.png",
+   "x": 112,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#8",
+   "image": "../kit/sheets/wood.png",
+   "x": 128,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#9",
+   "image": "../kit/sheets/wood.png",
+   "x": 144,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#10",
+   "image": "../kit/sheets/wood.png",
+   "x": 160,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#11",
+   "image": "../kit/sheets/wood.png",
+   "x": 176,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#12",
+   "image": "../kit/sheets/wood.png",
+   "x": 192,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#13",
+   "image": "../kit/sheets/wood.png",
+   "x": 208,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#14",
+   "image": "../kit/sheets/wood.png",
+   "x": 224,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "dock#15",
+   "image": "../kit/sheets/wood.png",
+   "x": 240,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15"
+  },
+  {
+   "name": "sign",
+   "image": "../kit/sheets/wood.png",
+   "x": 0,
+   "y": 32,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "barrel",
+   "image": "../kit/sheets/wood.png",
+   "x": 16,
+   "y": 32,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "dock#15",
+   "solid": true
+  },
+  {
+   "name": "crate",
+   "image": "../kit/sheets/wood.png",
+   "x": 32,
+   "y": 32,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "dock#15",
+   "solid": true
+  },
+  {
+   "name": "boat",
+   "image": "../kit/sheets/wood.png",
+   "x": 48,
+   "y": 32,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "pond#15",
+   "solid": true,
+   "elevation": 1
+  },
+  {
+   "name": "well",
+   "image": "../kit/sheets/wood.png",
+   "x": 80,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "tileset": "primary",
+   "ground": "dirt#15",
+   "solid": true
+  },
+  {
+   "name": "flowers1",
+   "image": "../kit/sheets/plants.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    8
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "flowers2",
+   "image": "../kit/sheets/plants.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    8
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "flowers3",
+   "image": "../kit/sheets/plants.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    8
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "flowers4",
+   "image": "../kit/sheets/plants.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    8
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "lamp",
+   "image": "../kit/sheets/plants.png",
+   "x": 64,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    8
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "forest#0",
+   "image": "../kit/sheets/trees.png",
+   "x": 0,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#1",
+   "image": "../kit/sheets/trees.png",
+   "x": 32,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#2",
+   "image": "../kit/sheets/trees.png",
+   "x": 64,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#3",
+   "image": "../kit/sheets/trees.png",
+   "x": 96,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#4",
+   "image": "../kit/sheets/trees.png",
+   "x": 128,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#5",
+   "image": "../kit/sheets/trees.png",
+   "x": 160,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#6",
+   "image": "../kit/sheets/trees.png",
+   "x": 192,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#7",
+   "image": "../kit/sheets/trees.png",
+   "x": 224,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#8",
+   "image": "../kit/sheets/trees.png",
+   "x": 0,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#9",
+   "image": "../kit/sheets/trees.png",
+   "x": 32,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#10",
+   "image": "../kit/sheets/trees.png",
+   "x": 64,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#11",
+   "image": "../kit/sheets/trees.png",
+   "x": 96,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#12",
+   "image": "../kit/sheets/trees.png",
+   "x": 128,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#13",
+   "image": "../kit/sheets/trees.png",
+   "x": 160,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#14",
+   "image": "../kit/sheets/trees.png",
+   "x": 192,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15",
+   "image": "../kit/sheets/trees.png",
+   "x": 224,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.1",
+   "image": "../kit/sheets/trees.png",
+   "x": 0,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.2",
+   "image": "../kit/sheets/trees.png",
+   "x": 32,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.6",
+   "image": "../kit/sheets/trees.png",
+   "x": 64,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.4",
+   "image": "../kit/sheets/trees.png",
+   "x": 96,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.8",
+   "image": "../kit/sheets/trees.png",
+   "x": 128,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "round_tree",
+   "image": "../kit/sheets/trees.png",
+   "x": 160,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bush",
+   "image": "../kit/sheets/trees.png",
+   "x": 192,
+   "y": 64,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "tall_grass",
+   "image": "../kit/sheets/tall_grass.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    4
+   ],
+   "tileset": "primary",
+   "behavior": "MB_TALL_GRASS"
+  },
+  {
+   "name": "tall_grass_flowers",
+   "image": "../kit/sheets/tall_grass.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    4
+   ],
+   "tileset": "primary",
+   "behavior": "MB_TALL_GRASS"
+  },
+  {
+   "name": "ledge#0",
+   "image": "../kit/sheets/fields.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "behavior": "MB_JUMP_SOUTH"
+  },
+  {
+   "name": "ledge#2",
+   "image": "../kit/sheets/fields.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "behavior": "MB_JUMP_SOUTH"
+  },
+  {
+   "name": "ledge#8",
+   "image": "../kit/sheets/fields.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "behavior": "MB_JUMP_SOUTH"
+  },
+  {
+   "name": "ledge#10",
+   "image": "../kit/sheets/fields.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "behavior": "MB_JUMP_SOUTH"
+  },
+  {
+   "name": "steps#0",
+   "image": "../kit/sheets/fields.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#2",
+   "image": "../kit/sheets/fields.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#8",
+   "image": "../kit/sheets/fields.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#10",
+   "image": "../kit/sheets/fields.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "pond#15+lily",
+   "image": "../kit/sheets/fields.png",
+   "x": 128,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "pond#15+reeds",
+   "image": "../kit/sheets/fields.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "shelter",
+   "image": "sheets/route.png",
+   "x": 0,
+   "y": 0,
+   "w": 3,
+   "h": 3,
+   "banks": [
+    7
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "arch",
+   "image": "sheets/route_wood.png",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "dirt#15",
+   "solid": true,
+   "open": [
+    "1,0",
+    "2,0",
+    "1,1",
+    "2,1"
+   ],
+   "over_rows": 1
+  }
+ ]
+}
