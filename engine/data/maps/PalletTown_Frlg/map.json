@@ -18,12 +18,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE1",
-      "offset": -12,
+      "offset": -10,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE21_NORTH",
-      "offset": 0,
+      "offset": 11,
       "direction": "down"
     }
   ],
@@ -32,8 +32,8 @@
       "local_id": "LOCALID_PALLET_SIGN_LADY",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
-      "x": 3,
-      "y": 10,
+      "x": 13,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -47,7 +47,7 @@
       "local_id": "LOCALID_PALLET_FAT_MAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_FRLG",
-      "x": 13,
+      "x": 18,
       "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -62,8 +62,8 @@
       "local_id": "LOCALID_PALLET_PROF_OAK",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PROF_OAK",
-      "x": 10,
-      "y": 8,
+      "x": 14,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -78,8 +78,8 @@
       "local_id": "LOCALID_B2_PALLET_GUIDE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_FRLG",
-      "x": 10,
-      "y": 12,
+      "x": 12,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -105,8 +105,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PINECO",
-      "x": 22,
-      "y": 2,
+      "x": 25,
+      "y": 3,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -146,8 +146,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PINECO",
-      "x": 24,
-      "y": 10,
+      "x": 30,
+      "y": 1,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
@@ -159,8 +159,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MR_MIME",
-      "x": 20,
-      "y": 14,
+      "x": 24,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -173,8 +173,8 @@
     {
       "local_id": "LOCALID_FRIENDS_PALLETTOWN_FRLG_BRIAN",
       "graphics_id": "OBJ_EVENT_GFX_FRIEND_BRIAN",
-      "x": 9,
-      "y": 12,
+      "x": 12,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -188,8 +188,8 @@
     {
       "local_id": "LOCALID_FRIENDS_PALLETTOWN_FRLG_HAM",
       "graphics_id": "OBJ_EVENT_GFX_FRIEND_HAM",
-      "x": 11,
-      "y": 12,
+      "x": 14,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -203,8 +203,8 @@
     {
       "local_id": "LOCALID_FRIENDS_PALLETTOWN_FRLG_JON",
       "graphics_id": "OBJ_EVENT_GFX_FRIEND_JON",
-      "x": 7,
-      "y": 12,
+      "x": 10,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -218,8 +218,8 @@
     {
       "local_id": "LOCALID_FRIENDS_PALLETTOWN_FRLG_NICK",
       "graphics_id": "OBJ_EVENT_GFX_FRIEND_NICK",
-      "x": 8,
-      "y": 13,
+      "x": 11,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -233,8 +233,8 @@
     {
       "local_id": "LOCALID_FRIENDS_PALLETTOWN_FRLG_X",
       "graphics_id": "OBJ_EVENT_GFX_FRIEND_X",
-      "x": 10,
-      "y": 13,
+      "x": 13,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -248,8 +248,8 @@
     {
       "local_id": "LOCALID_FRIENDS_PALLETTOWN_FRLG_LB",
       "graphics_id": "OBJ_EVENT_GFX_FRIEND_LB",
-      "x": 8,
-      "y": 10,
+      "x": 11,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -263,8 +263,8 @@
     {
       "local_id": "LOCALID_FRIENDS_PALLETTOWN_FRLG_TIM",
       "graphics_id": "OBJ_EVENT_GFX_FRIEND_TIM",
-      "x": 5,
-      "y": 12,
+      "x": 8,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -278,22 +278,22 @@
   ],
   "warp_events": [
     {
-      "x": 6,
+      "x": 7,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 15,
+      "x": 18,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_RIVALS_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 16,
-      "y": 13,
+      "x": 21,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB",
       "dest_warp_id": "0"
@@ -302,7 +302,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 12,
+      "x": 14,
       "y": 1,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_PALLET_TOWN_OAK",
@@ -311,7 +311,7 @@
     },
     {
       "type": "trigger",
-      "x": 13,
+      "x": 15,
       "y": 1,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_PALLET_TOWN_OAK",
@@ -320,7 +320,7 @@
     },
     {
       "type": "trigger",
-      "x": 13,
+      "x": 15,
       "y": 2,
       "elevation": 3,
       "var": "VAR_TEMP_2",
@@ -331,7 +331,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 16,
+      "x": 19,
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -339,7 +339,7 @@
     },
     {
       "type": "sign",
-      "x": 4,
+      "x": 5,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -347,7 +347,7 @@
     },
     {
       "type": "sign",
-      "x": 13,
+      "x": 22,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -355,7 +355,7 @@
     },
     {
       "type": "sign",
-      "x": 9,
+      "x": 13,
       "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -363,20 +363,20 @@
     },
     {
       "type": "sign",
-      "x": 5,
-      "y": 14,
+      "x": 10,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PalletTown_EventScript_TrainerTips"
     }
   ],
   "firered_geometry": {
-    "width": 24,
-    "height": 20,
-    "primary_tileset": "gTileset_Kanto_General_Hns",
-    "secondary_tileset": "gTileset_PalletTown_Hns",
-    "border_filepath": "data/layouts/PalletTown_hns/border.bin",
-    "blockdata_filepath": "data/layouts/PalletTown_hns/map.bin",
+    "width": 32,
+    "height": 28,
+    "primary_tileset": "gTileset_PalletConcept_General",
+    "secondary_tileset": "gTileset_PalletConcept",
+    "border_filepath": "data/layouts/PalletTown_Concept/border.bin",
+    "blockdata_filepath": "data/layouts/PalletTown_Concept/map.bin",
     "layout_version": "hns"
   }
 }

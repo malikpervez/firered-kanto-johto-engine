@@ -3,6 +3,7 @@
 #include "palette.h"
 #include "fieldmap.h"
 #include "kanto_connection_seam.h"
+#include "data/pae_seams.h"
 
 extern const struct MapLayout CeladonCity_Frlg_FireRedGeometry;
 extern const struct MapLayout CeruleanCity_Frlg_FireRedGeometry;
@@ -2110,6 +2111,7 @@ static const u16 sKantoDual_PowerPlant_Frlg_CanonicalMids[] = { 0x02D0 };
 static const u16 sKantoDual_PowerPlant_Frlg_OriginIds[] = { 0x0025 };
 
 static const struct KantoSeam sKantoSeams[] = {
+    PAE_SEAMS
     { &ViridianCity_Frlg_FireRedGeometry, sKantoSeam_ViridianCity_Frlg_Metatiles, sKantoSeam_ViridianCity_Frlg_GlyphRuns, sKantoSeam_ViridianCity_Frlg_Palettes, NULL, 1000, 23, 7, 1, 0, 0 },
     { &CeruleanCity_Frlg_FireRedGeometry, sKantoSeam_CeruleanCity_Frlg_Metatiles, sKantoSeam_CeruleanCity_Frlg_GlyphRuns, sKantoSeam_CeruleanCity_Frlg_Palettes, sKantoSeam_CeruleanCity_Frlg_Animations, 954, 69, 13, 2, 7, 1920 },
     { &VermilionCity_Frlg_FireRedGeometry, sKantoSeam_VermilionCity_Frlg_Metatiles, sKantoSeam_VermilionCity_Frlg_GlyphRuns, sKantoSeam_VermilionCity_Frlg_Palettes, sKantoSeam_VermilionCity_Frlg_Animations, 998, 25, 8, 1, 3, 256 },

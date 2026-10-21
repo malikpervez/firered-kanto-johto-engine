@@ -53,4 +53,5 @@ void InitTilesetAnim_MtSilverExp(void);
 void InitTilesetAnim_AlolaIslands(void);
 void InitTilesetAnim_MtEmber_Hns(void);
 
+void InitTilesetAnim_PalletConcept_General(void);
 #endif // GUARD_TILESET_ANIMS_H
