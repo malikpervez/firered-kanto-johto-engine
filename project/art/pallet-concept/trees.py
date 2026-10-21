@@ -1,6 +1,8 @@
-"""The concept Pallet's trees, in their own palette (bank 3): pines of drooping, needled tiers lit from the upper
-left (with a darker row of pines behind them in the forest), round leafy trees and bushes built from lit clumps of
-leaves, and soft shadows on the grass under them. make_art.py puts them on the "trees" sheet."""
+"""The concept Pallet's trees, in their own palette (bank 3). Pines fill their 2x2 block, with a darker row behind
+them, so a forest reads as a solid wall like the game's own trees; their tiers end in rows of rounded lobes of
+needles, each lit like a ball from the upper left and stippled between shades. Round leafy trees and bushes are
+built from lit clumps of leaves, with soft shadows on the grass under them. make_art.py puts them on the "trees"
+sheet."""
 import math
 import random
 
@@ -25,71 +27,93 @@ def _shade(levels, v):
     return levels[int(v * len(levels))]
 
 
+TIERS = [(0, 8, 7.0, 2.6), (3, 14, 11.0, 3.0), (8, 21, 14.5, 3.3), (14, 29, 16.5, 3.6)]
+# (top, bottom, half width, lobe radius) of a 32px pine: wide enough that neighbours touch
+BAYER = [[0.0, 0.5], [0.75, 0.25]]
+
+
+def _shade_d(levels, v, x, y):
+    """A shade for ``v`` (0 dark .. 1 light), stippled between two shades the way the game's own trees are."""
+    f = min(max(v, 0.0), 0.999) * len(levels)
+    i = int(f)
+    if f - i > BAYER[y % 2][x % 2] + 0.25 and i + 1 < len(levels):
+        i += 1
+    return levels[i]
+
+
 def pine_layer(t, owner, cx, base_y, scale=1.0, dark=0, wrap=True, seed=0, tier_id0=0):
-    """Draw one pine (tiers of drooping, needled branches) into ``t``; ``owner`` records which tier owns a pixel."""
+    """Draw one pine into ``t``: tiers whose lower edges are rows of rounded, drooping lobes of needles; each lobe
+    lit like a ball from the upper left, stippled between shades. ``owner`` records each pixel's tier (and lobe)."""
     h, w = t.shape
-    tiers = [(1, 8, 4.5), (5, 13, 7.5), (9, 18, 10.5), (14, 23, 13.0), (19, 28, 15.0)]
-    for k in range(len(tiers) - 1, -1, -1):  # bottom tier first: upper tiers overlap it
-        top, bot, hw = tiers[k]
-        top = base_y + (top - 28) * scale
-        bot = base_y + (bot - 28) * scale
-        hw *= scale
-        for y in range(int(math.floor(top)), int(math.ceil(bot + 3 * scale)) + 1):
+    rng = random.Random(seed)
+    for k in range(len(TIERS) - 1, -1, -1):  # bottom tier first: upper tiers overlap it
+        top, bot, hw, lr = TIERS[k]
+        top = base_y + (top - 29) * scale
+        bot = base_y + (bot - 29) * scale
+        hw, lr = hw * scale, lr * scale
+        n = max(2, int(round(2 * hw / (1.7 * lr))))
+        lobes = [(cx - hw + lr + i * (2 * hw - 2 * lr) / (n - 1), bot - lr + 0.6 * abs(i - (n - 1) / 2) ** 0.5
+                  + rng.uniform(-0.4, 0.4)) for i in range(n)]
+        for y in range(int(math.floor(top)), int(math.ceil(bot + 1)) + 1):
             for xi in range(int(cx - hw - 2), int(cx + hw + 3)):
                 x = xi % w if wrap else xi
                 if not (0 <= x < w and 0 <= y < h):
                     continue
-                dx = xi + 0.5 - cx
-                kk = (y + 0.5 - top) / max(1.0, bot - top)
-                half = hw * (0.18 + 0.82 * min(1.0, kk))
-                if abs(dx) > half:
+                px, py = xi + 0.5, y + 0.5
+                kk = (py - top) / max(1.0, bot - lr - top)
+                body = abs(px - cx) <= hw * (0.15 + 0.85 * min(1.0, kk)) - lr * 0.6 and py <= bot - lr
+                best = None
+                for j, (lx, ly) in enumerate(lobes):
+                    d = ((px - lx) / lr) ** 2 + ((py - ly) / (lr * 0.9)) ** 2
+                    if d <= 1.0 and py >= ly - lr * 0.2 and (best is None or ly > best[2]):
+                        best = (j, d, ly, lx)
+                if best is None and not body:
                     continue
-                # the lower edge droops into points (needle bunches)
-                droop = 2.4 * scale * abs(math.sin(math.pi * (dx + 0.7 * k) / (4.2 * scale)))
-                yb = bot + 2.6 * scale - droop - 1.2 * (abs(dx) / max(half, 1)) ** 2
-                if y + 0.5 > yb:
-                    continue
-                u = dx / max(half, 1)
-                v = (y + 0.5 - top) / max(1.0, yb - top)
-                light = 0.47 - 0.40 * u + 0.20 * v
-                if v < 0.28:  # under the tier above
-                    light -= 0.30 * (0.28 - v) / 0.28 + 0.1
-                # needles: strands sloping down and out from the trunk
-                strand = ((int(abs(dx)) + 2 * y + k) % 4)
-                light += (-0.05 if strand == 0 else 0.03 if strand == 2 else 0)
-                light += (_hash(x, y, seed) - 0.5) * 0.14
-                tip = abs(math.sin(math.pi * (dx + 0.7 * k) / (4.2 * scale))) > 0.8
-                if yb - (y + 0.5) < 1.6 and tip and u < 0.5:
-                    light += 0.2  # lit needle tips
-                level = _shade(PINE, light)
+                u = (px - cx) / max(hw, 1)
+                light = 0.60 - 0.30 * u
+                if best is not None:  # a lobe: round shading of its own
+                    j, d, ly, lx = best
+                    nx, ny = (px - lx) / lr, (py - ly) / (lr * 0.9)
+                    light += -0.22 * ny - 0.12 * nx + 0.08
+                    owner[y, x] = tier_id0 + (k + 1) * 32 + j + 1
+                else:  # the tier's upper part, in the shadow of the tier above
+                    light -= 0.22 + 0.10 * (1 - kk)
+                    owner[y, x] = tier_id0 + (k + 1) * 32
+                light += (_hash(x, y, seed + k) - 0.5) * 0.12
+                level = _shade_d(PINE, light, x, y)
                 if dark:
                     level = PINE[max(0, PINE.index(level) - dark)]
                 t[y, x] = level
-                owner[y, x] = tier_id0 + k + 1
     return t
 
 
-def outline(t, owner, colour=T_OUT, soft=PN1):
-    """Dark outline on the lower/right sides, a softer one on the upper/left; dark rims under each tier."""
+def outline(t, owner, colour=T_OUT, soft=PN1, wrap=False):
+    """Dark outline on the lower/right sides, a softer one on the upper/left; under each tier the dark rim of the
+    tier above's shadow, and a dark crease along the bottom of each lobe (``owner``: tier * 32 + lobe)."""
     h, w = t.shape
     inside = owner > 0
+    tier = owner // 32
     out = t.copy()
     for y in range(h):
         for x in range(w):
             if not inside[y, x]:
                 continue
+            xr, xl = ((x + 1) % w, (x - 1) % w) if wrap else (x + 1, x - 1)
             below = y + 1 >= h or not inside[y + 1, x]
-            right = x + 1 >= w or not inside[y, x + 1]
+            right = xr >= w or not inside[y, xr]
             above = y == 0 or not inside[y - 1, x]
-            left = x == 0 or not inside[y, x - 1]
+            left = xl < 0 or not inside[y, xl]
             if below or right:
                 out[y, x] = colour
             elif above or left:
-                out[y, x] = soft if t[y, x] not in (SH0,) else colour
-            elif y > 0 and inside[y - 1, x] and owner[y - 1, x] != owner[y, x]:
-                out[y, x] = T_OUT if owner[y - 1, x] < owner[y, x] else SH0  # under an upper tier: its shadow
-            elif y > 1 and inside[y - 2, x] and owner[y - 2, x] != owner[y, x] and owner[y - 1, x] == owner[y, x]:
+                out[y, x] = soft if t[y, x] != SH0 else colour
+            elif tier[y - 1, x] != tier[y, x] and tier[y - 1, x] < tier[y, x]:
+                out[y, x] = colour  # just under an upper tier
+            elif y > 1 and tier[y - 2, x] < tier[y, x] and tier[y - 1, x] == tier[y, x]:
                 out[y, x] = SH0
+            elif y + 1 < h and tier[y + 1, x] == tier[y, x] and owner[y + 1, x] != owner[y, x] \
+                    and owner[y + 1, x] % 32 == 0:
+                out[y, x] = SH0  # a lobe's lower edge over the shaded tier body behind it
     return out
 
 
@@ -117,7 +141,9 @@ def ground_shadow(t, cx, cy, rx, ry):
                 t[y, x] = GSH
 
 
-def pine(dense: bool) -> np.ndarray:
+def pine(dense: bool, floor: bool = False) -> np.ndarray:
+    """A pine filling a 2x2 cell. ``dense``: deep inside the forest (dark all round); otherwise on its edge (grass
+    shows above and between the tops), and with ``floor`` the forest goes on below it (a dark floor under it)."""
     t = np.zeros((32, 32), np.uint8)
     owner = np.zeros((32, 32), np.int32)
     if dense:
@@ -129,16 +155,23 @@ def pine(dense: bool) -> np.ndarray:
         # the row behind, half a cell over: darker, partly hidden
         bo = np.zeros_like(owner)
         for cx in (0.0, 32.0):
-            pine_layer(t, bo, cx, 16, scale=0.85, dark=2, wrap=True, seed=7)
-        t = outline(t, bo, T_OUT, SH0) if False else t
+            pine_layer(t, bo, cx, 17, scale=0.85, dark=2, wrap=True, seed=7)
     else:
-        ground_shadow(t, 16.5, 29.5, 13, 2.6)
-    trunk(t, 16, 26, 31, force=dense)
-    pine_layer(t, owner, 16.0, 28, seed=3)
-    main = outline(t, owner)
-    if not dense:
-        main[(owner == 0) & (t == 0)] = 0
-    return main
+        if floor:
+            for y in range(20, 32):
+                for x in range(32):
+                    if y > 25 or (x + y) % 2 == 0 or y > 22:
+                        t[y, x] = T_OUT if y > 27 and (x + y) % 2 else SH0
+        else:
+            ground_shadow(t, 16.5, 30.0, 14, 2.2)
+        # the row behind fills the gaps low down, so the forest's edge reads as one wall of trees
+        bo = np.zeros_like(owner)
+        for cx in (0.0, 32.0):
+            pine_layer(t, bo, cx, 26, scale=0.8, dark=1, wrap=True, seed=7)
+        t = np.where(bo > 0, outline(t, bo, wrap=True), t).astype(np.uint8)
+    trunk(t, 16, 28, 32, force=dense or floor)
+    pine_layer(t, owner, 16.0, 29, seed=3)
+    return outline(t, owner)
 
 
 def _clusters(rng, n, cx, cy, rx, ry, rmin, rmax):
@@ -204,13 +237,13 @@ def round_tree() -> np.ndarray:
         t[y, 16 - (22 - y) // 2 - 2] = BK2 if t[y, 16 - (22 - y) // 2 - 2] == 0 else t[y, 16 - (22 - y) // 2 - 2]
     rng = random.Random(5)
     cl = []
-    for row, (y, n, spread, r) in enumerate(((6.0, 4, 8.5, 4.6), (10.5, 5, 11.0, 4.9), (15.0, 5, 11.5, 4.8),
-                                             (18.5, 3, 7.5, 4.2))):
+    for row, (y, n, spread, r) in enumerate(((4.5, 4, 7.0, 3.4), (7.5, 6, 10.0, 3.6), (10.5, 7, 11.5, 3.7),
+                                             (13.5, 7, 12.0, 3.6), (16.5, 6, 10.5, 3.4), (19.0, 4, 7.0, 3.0))):
         for i in range(n):
             x = 16 + (i - (n - 1) / 2) * (2 * spread / max(1, n - 1)) + rng.uniform(-0.8, 0.8)
             cl.append((x, y + rng.uniform(-0.8, 0.8) + 0.9 * abs(i - (n - 1) / 2) ** 1.3 * (row == 0),
                        r + rng.uniform(-0.4, 0.4)))
-    cl.append((16, 3.6, 3.8))
+    cl.append((16, 2.6, 3.0))
     cl.sort(key=lambda c: c[1])
     leafy(t, owner, cl, 11, centre=(16, 12, 13))
     return leaf_outline(t, owner)
@@ -221,6 +254,6 @@ def bush(seed: int = 2) -> np.ndarray:
     owner = np.zeros((16, 16), np.int32)
     ground_shadow(t, 8.5, 14, 7, 1.8)
     rng = random.Random(seed)
-    cl = _clusters(rng, 9, 8, 9, 4.5, 3, 2.6, 3.6)
+    cl = _clusters(rng, 14, 8, 9, 4.8, 3.2, 2.0, 2.8)
     leafy(t, owner, cl, seed, centre=(8, 9, 6))
     return leaf_outline(t, owner)

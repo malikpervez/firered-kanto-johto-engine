@@ -2026,18 +2026,26 @@ const u16 gTilesetAnims_PalletConcept_General_Water_Frame0[] = INCBIN_U16("data/
 const u16 gTilesetAnims_PalletConcept_General_Water_Frame1[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/1.4bpp");
 const u16 gTilesetAnims_PalletConcept_General_Water_Frame2[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/2.4bpp");
 const u16 gTilesetAnims_PalletConcept_General_Water_Frame3[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/3.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame4[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/4.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame5[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/5.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame6[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/6.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame7[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/7.4bpp");
 
 const u16 *const gTilesetAnims_PalletConcept_General_Water[] = {
     gTilesetAnims_PalletConcept_General_Water_Frame0,
     gTilesetAnims_PalletConcept_General_Water_Frame1,
     gTilesetAnims_PalletConcept_General_Water_Frame2,
-    gTilesetAnims_PalletConcept_General_Water_Frame3
+    gTilesetAnims_PalletConcept_General_Water_Frame3,
+    gTilesetAnims_PalletConcept_General_Water_Frame4,
+    gTilesetAnims_PalletConcept_General_Water_Frame5,
+    gTilesetAnims_PalletConcept_General_Water_Frame6,
+    gTilesetAnims_PalletConcept_General_Water_Frame7
 };
 
 static void QueueAnimTiles_PalletConcept_General_Water(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_PalletConcept_General_Water);
-    AppendTilesetAnimToBuffer(gTilesetAnims_PalletConcept_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(194)), 43 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_PalletConcept_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(202)), 49 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_PalletConcept_General(u16 timer)

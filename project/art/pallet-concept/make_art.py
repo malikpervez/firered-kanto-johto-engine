@@ -8,7 +8,7 @@ below a cliff in the east, and a stone well.
 
 Six palettes, each made for what uses it:
   bank 0  ground: grass, pines, dirt, cobblestones, rocks
-  bank 1  water: pond and sea, their banks, cliff rocks (animated in four frames)
+  bank 1  water: pond and sea, their banks, cliff rocks (drawn in water.py, animated in eight frames)
   bank 2  wood and roofs: the houses, fences, the dock, signs, the windmill, the well, barrels, the boat
   bank 3  trees: the pines, round trees and bushes (drawn in trees.py)
   bank 7  the lab: metal roof, siding, glass, the greenhouse plants
@@ -27,6 +27,7 @@ import numpy as np
 from PIL import Image
 
 import trees
+import water
 
 HERE = Path(__file__).resolve().parent
 MAP_W, MAP_H = 32, 28
@@ -37,10 +38,6 @@ P0 = [(0, 0, 0), (24, 32, 32), (24, 64, 56), (40, 96, 64), (56, 120, 64), (88, 1
       (192, 192, 176), (72, 48, 40), (240, 240, 224)]
 OUT, PD, PM, GD, GM, GL, GH, SD, SM, SL, KD, KM, KL, TR, CR = range(1, 16)
 
-P1 = [(0, 0, 0), (24, 32, 32), (112, 72, 48), (176, 128, 80), (216, 176, 120), (32, 64, 128), (48, 96, 168),
-      (80, 136, 208), (144, 192, 240), (232, 240, 248), (88, 88, 96), (136, 136, 136), (184, 184, 176),
-      (96, 64, 48), (144, 104, 72), (224, 208, 152)]
-W_OUT, BD, BM, BL, WD, WA, WL, WH, FO, RD, RM, RL, CD, CM, SA = range(1, 16)
 
 P2 = [(0, 0, 0), (40, 24, 24), (88, 48, 32), (136, 80, 48), (184, 120, 72), (224, 168, 112), (120, 32, 32),
       (176, 56, 48), (224, 96, 72), (248, 152, 120), (40, 56, 96), (96, 144, 200), (176, 216, 240),
@@ -58,7 +55,7 @@ P4 = [(0, 0, 0), (24, 32, 32), (32, 80, 48), (56, 128, 64), (104, 176, 80), (160
 F_OUT, LFD, LFM, LFL, LFH, RED, PINK, YEL, ORG, PUR, BLU, WHT, IRON, GLOW, TRUNK = range(1, 16)
 
 BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "lab": 7, "plants": 8}
-PALS = {"ground": P0, "water": P1, "wood": P2, "trees": trees.PT, "lab": P3, "plants": P4}
+PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "lab": P3, "plants": P4}
 
 
 def rgba(idx: np.ndarray, pal) -> np.ndarray:
@@ -236,92 +233,6 @@ def stump() -> np.ndarray:
     t[edge_of(top) & ~edge_of(side | top)] = SD
     t[11:14, 4] = SD
     t[12:15, 11] = SD
-    return t
-
-
-# ---------------------------------------------------------------- water (bank 1), four frames
-def water_base(frame: int) -> np.ndarray:
-    t = np.full((16, 16), WA, np.uint8)
-    for y in range(16):
-        for x in range(16):
-            ph = (x + 4 * frame + (y // 4) * 5) % 16
-            if y % 4 == 1 and ph in (0, 1, 2):
-                t[y, x] = WL
-            elif y % 4 == 2 and ph in (3, 4):
-                t[y, x] = WL
-            elif y % 4 == 3 and ph in (9, 10, 11):
-                t[y, x] = WD
-    glints = [(3, 2), (11, 9), (6, 13), (14, 5)]
-    gx, gy = glints[frame]
-    t[gy, gx] = WH
-    t[(gy + 7) % 16, (gx + 8) % 16] = WH
-    return t
-
-
-def pond(mask: int, frame: int) -> np.ndarray:
-    """Pond water; an earth bank under a grass lip where the neighbour isn't water (transparent beyond)."""
-    t = water_base(frame)
-    for bit, off in EDGE_SEED.items():
-        if mask & bit:
-            continue
-        wob = wobble(31 + off, 16, 1, 2)
-        for i in range(16):
-            d = wob[i]
-            if bit == 1:  # north shore: we see the bank's face
-                t[:d, i] = 0
-                t[d, i] = BL
-                t[d + 1:d + 4, i] = BM
-                t[d + 3, i] = BD
-                t[d + 4, i] = FO if (i + frame) % 4 else WH
-            elif bit == 4:
-                t[16 - d:, i] = 0
-                t[15 - d, i] = BL
-                t[14 - d, i] = FO if (i + frame) % 3 else WH
-            elif bit == 8:
-                t[i, :d] = 0
-                t[i, d] = BL
-                t[i, d + 1] = BM
-                t[i, d + 2] = FO if (i + frame) % 4 else WH
-            else:
-                t[i, 16 - d:] = 0
-                t[i, 15 - d] = BL
-                t[i, 14 - d] = BM
-                t[i, 13 - d] = FO if (i + frame) % 4 else WH
-    # corners where two banks meet: keep the bank colour continuous
-    return t
-
-
-def sea(mask: int, frame: int) -> np.ndarray:
-    """Sea under a rocky cliff (the cliff on each side whose neighbour isn't sea)."""
-    t = water_base(frame)
-    r = random.Random(77)
-    rocks = [(r.randint(2, 4), r.choice((RM, RL, RM, CD))) for _ in range(16)]
-    for bit, off in EDGE_SEED.items():
-        if mask & bit:
-            continue
-        wob = wobble(57 + off, 16, 4, 6)
-        for i in range(16):
-            d = wob[i]
-            col = rocks[i][1]
-            if bit == 1:
-                t[:d, i] = 0
-                t[d - 1:d + 2, i] = RD
-                t[d - 1, i] = col
-                t[d + 2, i] = FO if (i + frame) % 3 else WH
-            elif bit == 4:
-                t[16 - d:, i] = 0
-                t[15 - d, i] = RD
-                t[14 - d, i] = FO if (i + frame) % 3 else WH
-            elif bit == 8:  # the cliff face: brown rock with lit ledges
-                t[i, :d] = 0
-                t[i, d - 1] = SA if i % 5 == 0 else CM
-                t[i, d] = CD
-                t[i, d + 1] = col if i % 4 else RD
-                t[i, d + 2] = FO if (i + frame) % 4 else WH
-            else:
-                t[i, 16 - d:] = 0
-                t[i, 15 - d] = CD
-                t[i, 14 - d] = FO if (i + frame) % 4 else WH
     return t
 
 
@@ -888,6 +799,10 @@ def layout() -> tuple[list[list[str]], dict]:
                         if 0 <= yy < MAP_H and 0 <= xx < MAP_W]
                 if any(c not in "Tt" for c in near):
                     g[y][x] = "t"
+    for y in range(MAP_H - 1):  # an edge block with more forest below it stands on the forest's dark floor
+        for x in range(MAP_W):
+            if g[y][x] == "t" and g[y + 1][x] in "Ttu":
+                g[y][x] = "u"
     return g, signs
 
 
@@ -946,15 +861,19 @@ def main() -> None:
     ground.add("rock", rock(1, True), tileset="primary", ground="grass", solid=True)
     ground.add("stump", stump(), tileset="primary", ground="grass", solid=True)
     spec_mt += ground.write()
-    # water (primary), animated
-    water = Sheet("water", "water")
-    for m in range(16):
-        water.add(f"pond#{m}", pond(m, 0), tileset="primary", ground="grass", behavior="MB_POND_WATER", elevation=1)
-    for m in range(16):
-        water.add(f"sea#{m}", sea(m, 0), tileset="primary", ground="grass", behavior="MB_POND_WATER", elevation=1,
-                  solid=True)
-    frames = [[pond(m, f) for m in range(16)] + [sea(m, f) for m in range(16)] for f in (1, 2, 3)]
-    spec_mt += water.write(frames)
+    # water (primary), animated (water.py)
+    sheet_w = Sheet("water", "water")
+    cells = []  # (name, kind, mask, variant)
+    for kind in ("pond", "sea"):
+        for m in range(16):
+            cells.append((f"{kind}#{m}", kind, m, 0))
+        cells += [(f"{kind}#15~{v}", kind, 15, v) for v in (1, 2)]  # open water with its sparkles elsewhere
+    for name, kind, m, v in cells:
+        extra = {"solid": True} if kind == "sea" else {}
+        sheet_w.add(name, water.shore(m, 0, kind, v), tileset="primary", ground="grass", behavior="MB_POND_WATER",
+                    elevation=1, **extra)
+    frames = [[water.shore(m, f, kind, v) for _, kind, m, v in cells] for f in range(1, water.FRAMES)]
+    spec_mt += sheet_w.write(frames)
     # wood (primary: small things; secondary: buildings)
     wood = Sheet("wood", "wood")
     for m in range(16):
@@ -975,6 +894,7 @@ def main() -> None:
     tree_sheet = Sheet("trees", "trees")
     tree_sheet.add("forest", trees.pine(True), tileset="primary", solid=True)
     tree_sheet.add("forest_edge", trees.pine(False), tileset="primary", solid=True, ground="grass")
+    tree_sheet.add("forest_floor", trees.pine(False, floor=True), tileset="primary", solid=True, ground="grass")
     tree_sheet.add("round_tree", trees.round_tree(), tileset="primary", ground="grass", solid=True)
     tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
@@ -999,15 +919,14 @@ def main() -> None:
                          "secondary": ["palette_lab.pal", "palette_plants.pal"]},
             "reserve": {"primary": [[434, 441]]},
             "animations": [{"name": "Water", "image": "sheets/water.png",
-                            "frames": ["sheets/water_f1.png", "sheets/water_f2.png", "sheets/water_f3.png"],
-                            "speed": 16}],
+                            "frames": [f"sheets/water_f{k}.png" for k in range(1, water.FRAMES)], "speed": 16}],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     g, signs = layout()
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = {
-        "T": {"tile": "forest"}, "t": {"tile": "forest_edge"},
+        "T": {"tile": "forest"}, "t": {"tile": "forest_edge"}, "u": {"tile": "forest_floor"},
         ".": {"pick": ["grass", "grass", "grass2", "grass3", "grass", "grass4"]},
         ",": "grass_daisies",
         "=": {"auto": "cobble"}, ":": {"auto": "dirt"},

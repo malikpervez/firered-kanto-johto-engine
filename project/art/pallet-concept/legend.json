@@ -5,6 +5,9 @@
  "t": {
   "tile": "forest_edge"
  },
+ "u": {
+  "tile": "forest_floor"
+ },
  ".": {
   "pick": [
    "grass",
