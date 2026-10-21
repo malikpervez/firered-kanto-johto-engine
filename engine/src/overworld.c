@@ -973,6 +973,10 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     ApplyWeatherColorMapToPals(GetNumPalsInPrimary(gMapHeader.mapLayout), NUM_PALS_TOTAL - GetNumPalsInPrimary(gMapHeader.mapLayout)); // palettes [6,12]
 
     InitSecondaryTilesetAnimation();
+    // The rows already on screen were drawn with the previous map's secondary tiles (and its seam's adapters);
+    // with another secondary tileset loaded they would show the wrong tiles: draw them again with these.
+    if (previousLayout->secondaryTileset != gMapHeader.mapLayout->secondaryTileset)
+        DrawWholeMapView();
     }
     UpdateLocationHistoryForRoamer();
     MoveAllRoamers();
