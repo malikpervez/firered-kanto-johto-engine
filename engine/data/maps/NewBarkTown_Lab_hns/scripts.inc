@@ -6,6 +6,7 @@ NewBarkTown_Lab_hns_MapScripts::
 	.byte 0
 
 NewBarkTown_Lab_OnTransition::
+	setflag FLAG_TEMP_1  @ Gold only shows up in the starter scene
 	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 6, NewBarkTown_Lab_EventScript_ElmAtComputer
 	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 2, NewBarkTown_Lab_EventScript_ElmAtComputer
 	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 3, NewBarkTown_Lab_EventScript_ElmAtComputer
@@ -85,7 +86,13 @@ NewBarkTown_Lab_EventScript_Elm_AfterEggCheck:
 	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 2, CopNewBarkTown_Lab_EventScript_ElmState2
 	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 3, CopNewBarkTown_Lab_EventScript_ElmState2
 	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 0, NewBarkTown_Lab_EventScript_ElmIntro
-	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 1, NewBarkTown_Lab_EventScript_ElmChoosePokemon
+	goto_if_eq JOHTO_VAR_NEWBARKTOWN_LABSTATE, 1, NewBarkTown_Lab_EventScript_ElmPickOne
+	end
+
+NewBarkTown_Lab_EventScript_ElmPickOne::
+	msgbox NewBarkTown_Lab_Text_ElmPickOne, MSGBOX_DEFAULT
+	closemessage
+	release
 	end
 
 NewBarkTown_Lab_EventScript_ElmAideIsWaiting::
@@ -135,9 +142,13 @@ NewBarkTown_Lab_EventScript_ElmAccepted::
 	waitmovement 0
 	delay 30
 	msgbox NewBarkTown_Lab_Text_ElmMissionFromMrPokemon, MSGBOX_DEFAULT
-	goto NewBarkTown_Lab_EventScript_ElmChoosePokemon
+	msgbox NewBarkTown_Lab_Text_ElmNativePokemon, MSGBOX_DEFAULT
+	closemessage
+	setvar JOHTO_VAR_NEWBARKTOWN_LABSTATE, 1
+	release
 	end
 
+@ After the starter scene (the ball scripts below, then Gold's scene): the PokéGear and the errand.
 NewBarkTown_Lab_EventScript_ElmChoosePokemon::
 	msgbox NewBarkTown_Lab_Text_ElmChooseAPokemon, MSGBOX_DEFAULT
 	closemessage
@@ -160,20 +171,73 @@ NewBarkTown_Lab_EventScript_ShouldntTouch::
 	release
 	end
 
+@ The starter choice. JOHTO_VAR_STARTER_MON: 0 Chikorita, 1 Cyndaquil, 2 Totodile (the player's). Gold takes the
+@ one the player's is strong against; Silver later steals the one strong against the player's (the police scene).
 NewBarkTown_Lab_EventScript_ChikoritaBall::
-	msgbox NewBarkTown_Lab_Text_ElmPokeBall, MSGBOX_DEFAULT
-	closemessage
-	release
+	lock
+	goto_if_ne JOHTO_VAR_NEWBARKTOWN_LABSTATE, 1, NewBarkTown_Lab_EventScript_ElmsPokeBall
+	showmonpic SPECIES_CHIKORITA, 10, 3
+	msgbox NewBarkTown_Lab_Text_TakeChikorita, MSGBOX_YESNO
+	hidemonpic
+	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_NotThisOne
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHIKORITA
+	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
+	givemon SPECIES_CHIKORITA, 5
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, NewBarkTown_Lab_EventScript_NoRoom
+	removeobject LOCALID_CHIKORITA_BALL
+	setvar JOHTO_VAR_STARTER_MON, 0
+	call J_Common_EventScript_GiftMon
+	goto NewBarkTown_Lab_EventScript_GoldTakesTotodile
 	end
 
 NewBarkTown_Lab_EventScript_CyndaquilBall::
+	lock
+	goto_if_ne JOHTO_VAR_NEWBARKTOWN_LABSTATE, 1, NewBarkTown_Lab_EventScript_ElmsPokeBall
+	showmonpic SPECIES_CYNDAQUIL, 10, 3
+	msgbox NewBarkTown_Lab_Text_TakeCyndaquil, MSGBOX_YESNO
+	hidemonpic
+	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_NotThisOne
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CYNDAQUIL
+	bufferspeciesname STR_VAR_1, SPECIES_CYNDAQUIL
+	givemon SPECIES_CYNDAQUIL, 5
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, NewBarkTown_Lab_EventScript_NoRoom
+	removeobject LOCALID_CYNDAQUIL_BALL
+	setvar JOHTO_VAR_STARTER_MON, 1
+	call J_Common_EventScript_GiftMon
+	goto NewBarkTown_Lab_EventScript_GoldTakesChikorita
+	end
+
+NewBarkTown_Lab_EventScript_TotodileBall::
+	lock
+	goto_if_ne JOHTO_VAR_NEWBARKTOWN_LABSTATE, 1, NewBarkTown_Lab_EventScript_ElmsPokeBall
+	showmonpic SPECIES_TOTODILE, 10, 3
+	msgbox NewBarkTown_Lab_Text_TakeTotodile, MSGBOX_YESNO
+	hidemonpic
+	goto_if_eq VAR_RESULT, NO, NewBarkTown_Lab_EventScript_NotThisOne
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TOTODILE
+	bufferspeciesname STR_VAR_1, SPECIES_TOTODILE
+	givemon SPECIES_TOTODILE, 5
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, NewBarkTown_Lab_EventScript_NoRoom
+	removeobject LOCALID_TOTODILE_BALL
+	setvar JOHTO_VAR_STARTER_MON, 2
+	call J_Common_EventScript_GiftMon
+	goto NewBarkTown_Lab_EventScript_GoldTakesCyndaquil
+	end
+
+NewBarkTown_Lab_EventScript_ElmsPokeBall::
 	msgbox NewBarkTown_Lab_Text_ElmPokeBall, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
-NewBarkTown_Lab_EventScript_TotodileBall::
-	msgbox NewBarkTown_Lab_Text_ElmPokeBall, MSGBOX_DEFAULT
+NewBarkTown_Lab_EventScript_NotThisOne::
+	msgbox NewBarkTown_Lab_Text_ElmThinkItOver, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+NewBarkTown_Lab_EventScript_NoRoom::
+	msgbox NewBarkTown_Lab_Text_ElmNoRoom, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -586,11 +650,48 @@ NewBarkTown_Lab_Text_ElmMissionFromMrPokemon:
 	.string "{PLAYER}, can you go in our\n"
 	.string "place?$"
 
+NewBarkTown_Lab_Text_ElmNativePokemon:
+	.string "Oh, and one more thing!\p"
+	.string "Your team came all the way from\n"
+	.string "KANTO. But JOHTO has its own\l"
+	.string "POKéMON, too.\p"
+	.string "The three POKéMON on that table\n"
+	.string "are native to JOHTO. You won't\l"
+	.string "find them in KANTO.\p"
+	.string "I'd like one of them to travel\n"
+	.string "with you and learn from a\l"
+	.string "CHAMPION. Go ahead, choose one!$"
+
+NewBarkTown_Lab_Text_ElmPickOne:
+	.string "ELM: Go ahead, {PLAYER}!\n"
+	.string "Choose one of the three POKéMON\l"
+	.string "on the table.$"
+
+NewBarkTown_Lab_Text_TakeChikorita:
+	.string "ELM: You'll take CHIKORITA,\n"
+	.string "the grass POKéMON?$"
+
+NewBarkTown_Lab_Text_TakeCyndaquil:
+	.string "ELM: You'll take CYNDAQUIL,\n"
+	.string "the fire POKéMON?$"
+
+NewBarkTown_Lab_Text_TakeTotodile:
+	.string "ELM: You'll take TOTODILE,\n"
+	.string "the water POKéMON?$"
+
+NewBarkTown_Lab_Text_ElmThinkItOver:
+	.string "ELM: Take your time.\n"
+	.string "Each of them is special.$"
+
+NewBarkTown_Lab_Text_ElmNoRoom:
+	.string "ELM: Your team and your PC boxes\n"
+	.string "are full! Make some room first.$"
+
 NewBarkTown_Lab_Text_ElmChooseAPokemon::
-	.string "Your own POKéMON have brought you\n"
-	.string "all the way from KANTO.\p"
-	.string "Please take them with you on this\n"
-	.string "errand. I know I can trust you!\p"
+	.string "ELM: Take good care of your new\n"
+	.string "partner, {PLAYER}.\p"
+	.string "Your KANTO team will help it\n"
+	.string "grow. I know I can trust you!\p"
 	.string "I have arranged a POKéGEAR so we\n"
 	.string "can keep in touch along the way.$"
 
@@ -854,3 +955,276 @@ NewBarkTown_Lab_Text_Elm_CallMe:
 	.string "I'm busy now, but call me sometime\l"
 	.string "and I can check your progress!$"
 
+@ pae-blocks {"label":"NewBarkTown_Lab_EventScript_GoldTakesChikorita","kind":"trigger","blocks":[{"type":"custom","line":"closemessage"},{"type":"custom","line":"clearflag FLAG_TEMP_1"},{"type":"show","who":"LOCALID_LAB_GOLD"},{"type":"sound","se":"SE_EXIT"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["up","up","up","up","up","up","right","right","up","face_up"]},{"type":"say","text":"GOLD: Hi! You must be {PLAYER}, the KANTO CHAMPION!\\pI'm GOLD. I live right here in NEW BARK.\\pPROF.ELM said I could choose a partner, too\u2026\\pThen I'll take CHIKORITA!"},{"type":"hide","who":"LOCALID_CHIKORITA_BALL"},{"type":"custom","line":"playfanfare MUS_OBTAIN_ITEM"},{"type":"say","text":"GOLD received CHIKORITA!"},{"type":"custom","line":"waitfanfare"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["face_player"]},{"type":"say","text":"GOLD: Hey, {PLAYER}! Let's see what our new partners can do. Battle me!"},{"type":"custom","line":"closemessage"},{"type":"custom","line":"trainerbattle_no_intro TRAINER_JOHTO_GOLD_LAB_CHIKORITA_HNS, NewBarkTown_Lab_Text_GoldDefeat"},{"type":"say","text":"GOLD: So that's a CHAMPION! I'm going to train all over JOHTO, too.\\pNext time, I'll win! See you around!"},{"type":"custom","line":"closemessage"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["down","left","left","down","down","down","down","down","down"]},{"type":"sound","se":"SE_EXIT"},{"type":"hide","who":"LOCALID_LAB_GOLD"},{"type":"say","text":"ELM: GOLD has wanted a POK\u00e9MON of his own for a long time.\\pI think you two will push each other to get stronger."},{"type":"custom","line":"goto NewBarkTown_Lab_EventScript_ElmChoosePokemon"}]}
+NewBarkTown_Lab_EventScript_GoldTakesChikorita::
+	lockall
+	closemessage
+	clearflag FLAG_TEMP_1
+	addobject LOCALID_LAB_GOLD
+	playse SE_EXIT
+	waitse
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesChikorita1
+	waitmovement 0
+	msgbox NewBarkTown_Lab_Text_GoldTakesChikorita1, MSGBOX_DEFAULT
+	removeobject LOCALID_CHIKORITA_BALL
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox NewBarkTown_Lab_Text_GoldTakesChikorita2, MSGBOX_DEFAULT
+	waitfanfare
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesChikorita2
+	waitmovement 0
+	msgbox NewBarkTown_Lab_Text_GoldTakesChikorita3, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_LAB_CHIKORITA_HNS, NewBarkTown_Lab_Text_GoldDefeat
+	msgbox NewBarkTown_Lab_Text_GoldTakesChikorita4, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesChikorita3
+	waitmovement 0
+	playse SE_EXIT
+	waitse
+	removeobject LOCALID_LAB_GOLD
+	msgbox NewBarkTown_Lab_Text_GoldTakesChikorita5, MSGBOX_DEFAULT
+	goto NewBarkTown_Lab_EventScript_ElmChoosePokemon
+	releaseall
+	end
+
+NewBarkTown_Lab_Movement_GoldTakesChikorita1:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	face_up
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesChikorita1:
+	.string "GOLD: Hi! You must be {PLAYER}, the\n"
+	.string "KANTO CHAMPION!\p"
+	.string "I'm GOLD. I live right here in NEW BARK.\p"
+	.string "PROF.ELM said I could choose a partner,\n"
+	.string "too…\p"
+	.string "Then I'll take CHIKORITA!$"
+
+NewBarkTown_Lab_Text_GoldTakesChikorita2:
+	.string "GOLD received CHIKORITA!$"
+
+NewBarkTown_Lab_Movement_GoldTakesChikorita2:
+	face_player
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesChikorita3:
+	.string "GOLD: Hey, {PLAYER}! Let's see what our\n"
+	.string "new partners can do. Battle me!$"
+
+NewBarkTown_Lab_Text_GoldTakesChikorita4:
+	.string "GOLD: So that's a CHAMPION! I'm going to\n"
+	.string "train all over JOHTO, too.\p"
+	.string "Next time, I'll win! See you around!$"
+
+NewBarkTown_Lab_Movement_GoldTakesChikorita3:
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesChikorita5:
+	.string "ELM: GOLD has wanted a POKéMON of his\n"
+	.string "own for a long time.\p"
+	.string "I think you two will push each other to\n"
+	.string "get stronger.$"
+@ pae-blocks-end NewBarkTown_Lab_EventScript_GoldTakesChikorita
+
+@ pae-blocks {"label":"NewBarkTown_Lab_EventScript_GoldTakesCyndaquil","kind":"trigger","blocks":[{"type":"custom","line":"closemessage"},{"type":"custom","line":"clearflag FLAG_TEMP_1"},{"type":"show","who":"LOCALID_LAB_GOLD"},{"type":"sound","se":"SE_EXIT"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["up","up","up","up","up","up","right","right","right","up","face_up"]},{"type":"say","text":"GOLD: Hi! You must be {PLAYER}, the KANTO CHAMPION!\\pI'm GOLD. I live right here in NEW BARK.\\pPROF.ELM said I could choose a partner, too\u2026\\pThen I'll take CYNDAQUIL!"},{"type":"hide","who":"LOCALID_CYNDAQUIL_BALL"},{"type":"custom","line":"playfanfare MUS_OBTAIN_ITEM"},{"type":"say","text":"GOLD received CYNDAQUIL!"},{"type":"custom","line":"waitfanfare"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["face_player"]},{"type":"say","text":"GOLD: Hey, {PLAYER}! Let's see what our new partners can do. Battle me!"},{"type":"custom","line":"closemessage"},{"type":"custom","line":"trainerbattle_no_intro TRAINER_JOHTO_GOLD_LAB_CYNDAQUIL_HNS, NewBarkTown_Lab_Text_GoldDefeat"},{"type":"say","text":"GOLD: So that's a CHAMPION! I'm going to train all over JOHTO, too.\\pNext time, I'll win! See you around!"},{"type":"custom","line":"closemessage"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["down","left","left","left","down","down","down","down","down","down"]},{"type":"sound","se":"SE_EXIT"},{"type":"hide","who":"LOCALID_LAB_GOLD"},{"type":"say","text":"ELM: GOLD has wanted a POK\u00e9MON of his own for a long time.\\pI think you two will push each other to get stronger."},{"type":"custom","line":"goto NewBarkTown_Lab_EventScript_ElmChoosePokemon"}]}
+NewBarkTown_Lab_EventScript_GoldTakesCyndaquil::
+	lockall
+	closemessage
+	clearflag FLAG_TEMP_1
+	addobject LOCALID_LAB_GOLD
+	playse SE_EXIT
+	waitse
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesCyndaquil1
+	waitmovement 0
+	msgbox NewBarkTown_Lab_Text_GoldTakesCyndaquil1, MSGBOX_DEFAULT
+	removeobject LOCALID_CYNDAQUIL_BALL
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox NewBarkTown_Lab_Text_GoldTakesCyndaquil2, MSGBOX_DEFAULT
+	waitfanfare
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesCyndaquil2
+	waitmovement 0
+	msgbox NewBarkTown_Lab_Text_GoldTakesCyndaquil3, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_LAB_CYNDAQUIL_HNS, NewBarkTown_Lab_Text_GoldDefeat
+	msgbox NewBarkTown_Lab_Text_GoldTakesCyndaquil4, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesCyndaquil3
+	waitmovement 0
+	playse SE_EXIT
+	waitse
+	removeobject LOCALID_LAB_GOLD
+	msgbox NewBarkTown_Lab_Text_GoldTakesCyndaquil5, MSGBOX_DEFAULT
+	goto NewBarkTown_Lab_EventScript_ElmChoosePokemon
+	releaseall
+	end
+
+NewBarkTown_Lab_Movement_GoldTakesCyndaquil1:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	face_up
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesCyndaquil1:
+	.string "GOLD: Hi! You must be {PLAYER}, the\n"
+	.string "KANTO CHAMPION!\p"
+	.string "I'm GOLD. I live right here in NEW BARK.\p"
+	.string "PROF.ELM said I could choose a partner,\n"
+	.string "too…\p"
+	.string "Then I'll take CYNDAQUIL!$"
+
+NewBarkTown_Lab_Text_GoldTakesCyndaquil2:
+	.string "GOLD received CYNDAQUIL!$"
+
+NewBarkTown_Lab_Movement_GoldTakesCyndaquil2:
+	face_player
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesCyndaquil3:
+	.string "GOLD: Hey, {PLAYER}! Let's see what our\n"
+	.string "new partners can do. Battle me!$"
+
+NewBarkTown_Lab_Text_GoldTakesCyndaquil4:
+	.string "GOLD: So that's a CHAMPION! I'm going to\n"
+	.string "train all over JOHTO, too.\p"
+	.string "Next time, I'll win! See you around!$"
+
+NewBarkTown_Lab_Movement_GoldTakesCyndaquil3:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesCyndaquil5:
+	.string "ELM: GOLD has wanted a POKéMON of his\n"
+	.string "own for a long time.\p"
+	.string "I think you two will push each other to\n"
+	.string "get stronger.$"
+@ pae-blocks-end NewBarkTown_Lab_EventScript_GoldTakesCyndaquil
+
+@ pae-blocks {"label":"NewBarkTown_Lab_EventScript_GoldTakesTotodile","kind":"trigger","blocks":[{"type":"custom","line":"closemessage"},{"type":"custom","line":"clearflag FLAG_TEMP_1"},{"type":"show","who":"LOCALID_LAB_GOLD"},{"type":"sound","se":"SE_EXIT"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["up","up","up","up","up","up","right","right","right","right","up","face_up"]},{"type":"say","text":"GOLD: Hi! You must be {PLAYER}, the KANTO CHAMPION!\\pI'm GOLD. I live right here in NEW BARK.\\pPROF.ELM said I could choose a partner, too\u2026\\pThen I'll take TOTODILE!"},{"type":"hide","who":"LOCALID_TOTODILE_BALL"},{"type":"custom","line":"playfanfare MUS_OBTAIN_ITEM"},{"type":"say","text":"GOLD received TOTODILE!"},{"type":"custom","line":"waitfanfare"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["face_player"]},{"type":"say","text":"GOLD: Hey, {PLAYER}! Let's see what our new partners can do. Battle me!"},{"type":"custom","line":"closemessage"},{"type":"custom","line":"trainerbattle_no_intro TRAINER_JOHTO_GOLD_LAB_TOTODILE_HNS, NewBarkTown_Lab_Text_GoldDefeat"},{"type":"say","text":"GOLD: So that's a CHAMPION! I'm going to train all over JOHTO, too.\\pNext time, I'll win! See you around!"},{"type":"custom","line":"closemessage"},{"type":"move","who":"LOCALID_LAB_GOLD","steps":["down","left","left","left","left","down","down","down","down","down","down"]},{"type":"sound","se":"SE_EXIT"},{"type":"hide","who":"LOCALID_LAB_GOLD"},{"type":"say","text":"ELM: GOLD has wanted a POK\u00e9MON of his own for a long time.\\pI think you two will push each other to get stronger."},{"type":"custom","line":"goto NewBarkTown_Lab_EventScript_ElmChoosePokemon"}]}
+NewBarkTown_Lab_EventScript_GoldTakesTotodile::
+	lockall
+	closemessage
+	clearflag FLAG_TEMP_1
+	addobject LOCALID_LAB_GOLD
+	playse SE_EXIT
+	waitse
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesTotodile1
+	waitmovement 0
+	msgbox NewBarkTown_Lab_Text_GoldTakesTotodile1, MSGBOX_DEFAULT
+	removeobject LOCALID_TOTODILE_BALL
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox NewBarkTown_Lab_Text_GoldTakesTotodile2, MSGBOX_DEFAULT
+	waitfanfare
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesTotodile2
+	waitmovement 0
+	msgbox NewBarkTown_Lab_Text_GoldTakesTotodile3, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_LAB_TOTODILE_HNS, NewBarkTown_Lab_Text_GoldDefeat
+	msgbox NewBarkTown_Lab_Text_GoldTakesTotodile4, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LAB_GOLD, NewBarkTown_Lab_Movement_GoldTakesTotodile3
+	waitmovement 0
+	playse SE_EXIT
+	waitse
+	removeobject LOCALID_LAB_GOLD
+	msgbox NewBarkTown_Lab_Text_GoldTakesTotodile5, MSGBOX_DEFAULT
+	goto NewBarkTown_Lab_EventScript_ElmChoosePokemon
+	releaseall
+	end
+
+NewBarkTown_Lab_Movement_GoldTakesTotodile1:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	face_up
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesTotodile1:
+	.string "GOLD: Hi! You must be {PLAYER}, the\n"
+	.string "KANTO CHAMPION!\p"
+	.string "I'm GOLD. I live right here in NEW BARK.\p"
+	.string "PROF.ELM said I could choose a partner,\n"
+	.string "too…\p"
+	.string "Then I'll take TOTODILE!$"
+
+NewBarkTown_Lab_Text_GoldTakesTotodile2:
+	.string "GOLD received TOTODILE!$"
+
+NewBarkTown_Lab_Movement_GoldTakesTotodile2:
+	face_player
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesTotodile3:
+	.string "GOLD: Hey, {PLAYER}! Let's see what our\n"
+	.string "new partners can do. Battle me!$"
+
+NewBarkTown_Lab_Text_GoldTakesTotodile4:
+	.string "GOLD: So that's a CHAMPION! I'm going to\n"
+	.string "train all over JOHTO, too.\p"
+	.string "Next time, I'll win! See you around!$"
+
+NewBarkTown_Lab_Movement_GoldTakesTotodile3:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+NewBarkTown_Lab_Text_GoldTakesTotodile5:
+	.string "ELM: GOLD has wanted a POKéMON of his\n"
+	.string "own for a long time.\p"
+	.string "I think you two will push each other to\n"
+	.string "get stronger.$"
+@ pae-blocks-end NewBarkTown_Lab_EventScript_GoldTakesTotodile
+
+NewBarkTown_Lab_Text_GoldDefeat:
+	.string "GOLD: Wow…\n"
+	.string "You really are strong!$"
