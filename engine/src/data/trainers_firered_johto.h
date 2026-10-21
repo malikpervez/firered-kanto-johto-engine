@@ -44076,3 +44076,111 @@
             },
         },
     },
+#line 16005
+    [DIFFICULTY_NORMAL][(TRAINER_JOHTO_GOLD_LAB_CHIKORITA_HNS - JOHTO_TRAINER_ID_BASE)] =
+    {
+#line 16006
+        .trainerName = _("GOLD"),
+#line 16007
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1_HNS,
+#line 16008
+        .trainerPic = TRAINER_PIC_FRONT_GOLD_HNS,
+#line 16009
+        .gender = TRAINER_GENDER_MALE,
+#line 16010
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_HG_BOY_1,
+#line 16011
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 16012
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FRONT_GOLD_HNS,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16014
+            .species = SPECIES_CHIKORITA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16016
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16015
+            .lvl = 5,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 16017
+    [DIFFICULTY_NORMAL][(TRAINER_JOHTO_GOLD_LAB_CYNDAQUIL_HNS - JOHTO_TRAINER_ID_BASE)] =
+    {
+#line 16018
+        .trainerName = _("GOLD"),
+#line 16019
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1_HNS,
+#line 16020
+        .trainerPic = TRAINER_PIC_FRONT_GOLD_HNS,
+#line 16021
+        .gender = TRAINER_GENDER_MALE,
+#line 16022
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_HG_BOY_1,
+#line 16023
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 16024
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FRONT_GOLD_HNS,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16026
+            .species = SPECIES_CYNDAQUIL,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16028
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16027
+            .lvl = 5,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 16029
+    [DIFFICULTY_NORMAL][(TRAINER_JOHTO_GOLD_LAB_TOTODILE_HNS - JOHTO_TRAINER_ID_BASE)] =
+    {
+#line 16030
+        .trainerName = _("GOLD"),
+#line 16031
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1_HNS,
+#line 16032
+        .trainerPic = TRAINER_PIC_FRONT_GOLD_HNS,
+#line 16033
+        .gender = TRAINER_GENDER_MALE,
+#line 16034
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_HG_BOY_1,
+#line 16035
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 16036
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FRONT_GOLD_HNS,
+        .partySize = 1,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16038
+            .species = SPECIES_TOTODILE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16040
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16039
+            .lvl = 5,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
