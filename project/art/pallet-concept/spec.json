@@ -7,7 +7,8 @@
    "../kit/palette_ground.pal",
    "../kit/palette_water.pal",
    "../kit/palette_wood.pal",
-   "../kit/palette_trees.pal"
+   "../kit/palette_trees.pal",
+   "../kit/palette_tallgrass.pal"
   ],
   "secondary": [
    "palette_lab.pal",
@@ -1749,33 +1750,22 @@
   },
   {
    "name": "tall_grass",
-   "image": "../kit/sheets/fields.png",
+   "image": "../kit/sheets/tall_grass.png",
    "x": 0,
    "y": 0,
    "banks": [
-    0
+    4
    ],
    "tileset": "primary",
    "behavior": "MB_TALL_GRASS"
   },
   {
-   "name": "tall_grass_b",
-   "image": "../kit/sheets/fields.png",
+   "name": "tall_grass_flowers",
+   "image": "../kit/sheets/tall_grass.png",
    "x": 16,
    "y": 0,
    "banks": [
-    0
-   ],
-   "tileset": "primary",
-   "behavior": "MB_TALL_GRASS"
-  },
-  {
-   "name": "tall_grass_c",
-   "image": "../kit/sheets/fields.png",
-   "x": 32,
-   "y": 0,
-   "banks": [
-    0
+    4
    ],
    "tileset": "primary",
    "behavior": "MB_TALL_GRASS"
@@ -1783,7 +1773,7 @@
   {
    "name": "ledge#0",
    "image": "../kit/sheets/fields.png",
-   "x": 48,
+   "x": 0,
    "y": 0,
    "banks": [
     0
@@ -1796,7 +1786,7 @@
   {
    "name": "ledge#2",
    "image": "../kit/sheets/fields.png",
-   "x": 64,
+   "x": 16,
    "y": 0,
    "banks": [
     0
@@ -1809,7 +1799,7 @@
   {
    "name": "ledge#8",
    "image": "../kit/sheets/fields.png",
-   "x": 80,
+   "x": 32,
    "y": 0,
    "banks": [
     0
@@ -1822,7 +1812,7 @@
   {
    "name": "ledge#10",
    "image": "../kit/sheets/fields.png",
-   "x": 96,
+   "x": 48,
    "y": 0,
    "banks": [
     0
@@ -1835,7 +1825,7 @@
   {
    "name": "steps#0",
    "image": "../kit/sheets/fields.png",
-   "x": 112,
+   "x": 64,
    "y": 0,
    "banks": [
     0
@@ -1846,7 +1836,7 @@
   {
    "name": "steps#2",
    "image": "../kit/sheets/fields.png",
-   "x": 128,
+   "x": 80,
    "y": 0,
    "banks": [
     0
@@ -1857,7 +1847,7 @@
   {
    "name": "steps#8",
    "image": "../kit/sheets/fields.png",
-   "x": 144,
+   "x": 96,
    "y": 0,
    "banks": [
     0
@@ -1868,7 +1858,7 @@
   {
    "name": "steps#10",
    "image": "../kit/sheets/fields.png",
-   "x": 160,
+   "x": 112,
    "y": 0,
    "banks": [
     0
@@ -1879,7 +1869,7 @@
   {
    "name": "pond#15+lily",
    "image": "../kit/sheets/fields.png",
-   "x": 176,
+   "x": 128,
    "y": 0,
    "banks": [
     0
@@ -1892,7 +1882,7 @@
   {
    "name": "pond#15+reeds",
    "image": "../kit/sheets/fields.png",
-   "x": 192,
+   "x": 144,
    "y": 0,
    "banks": [
     0

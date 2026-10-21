@@ -43,6 +43,11 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 Maps built from the kit share the primary tileset, so between them the seams only copy secondary tiles. When both
 neighbours are rebuilt from the kit with the same secondary tileset, the seam isn't needed at all.
 
+A seam needs a palette slot in the viewing map for every palette of the strip it shows (the 7 rows or columns
+beside the join) that the viewing map doesn't have. Old maps have few free: Viridian's hand-made seam for Route 22
+leaves it three. So near a join with a map that isn't rebuilt yet, keep pieces with palettes of their own out of
+those 7 rows: Route 1's tall grass (bank 4) starts at row 7.
+
 ## What else depends on a map's shape
 
 Check these whenever a map is rebuilt, moved or resized:

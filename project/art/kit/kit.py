@@ -11,6 +11,8 @@ Banks (palettes):
   1  water: pond and sea, their banks, cliff rocks (water.py, animated in eight frames)
   2  wood: fences, the dock, signs, barrels, crates, the boat, the well (and buildings drawn in wood)
   3  trees: the pines, round trees and bushes (trees.py)
+  4  tall grass: tall_grass/ (drawn natively at 16x16, made with another AI from a brief) and the sprites over
+     the player's feet in it
   8  plants: flowers and lamps. The primary uses it, so every map's secondary tileset has the kit's plants
      palette at bank 8 (``SECONDARY_BANKS``); banks 7, 9-12 are the map's own.
 """
@@ -44,8 +46,16 @@ P4 = [(0, 0, 0), (24, 32, 32), (32, 80, 48), (56, 128, 64), (104, 176, 80), (160
       (56, 56, 64), (248, 232, 160), (96, 64, 40)]
 F_OUT, LFD, LFM, LFL, LFH, RED, PINK, YEL, ORG, PUR, BLU, WHT, IRON, GLOW, TRUNK = range(1, 16)
 
-BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "plants": 8}
-PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "plants": P4}
+# tall grass (tall_grass/: tiles drawn natively at 16x16, with the grass the game draws over the player's feet):
+# its own palette, whose two ground colours are the lawn's, so a patch sits in the lawn
+PTG = [(255, 0, 255), (120, 192, 88), (88, 160, 72), (184, 232, 144), (136, 200, 104), (64, 144, 56), (40, 112, 48),
+       (32, 136, 96), (24, 96, 72), (56, 88, 24), (32, 56, 24), (240, 240, 224), (232, 200, 96), (0, 0, 0), (0, 0, 0),
+       (0, 0, 0)]
+BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "tallgrass": 4, "plants": 8}
+PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "tallgrass": PTG, "plants": P4}
+# the two kinds, staggered in a field ("g" in the legend): two fronds (B), and a sprig with flowers (C); each has
+# its own sprite over the player's feet, so the leaves over them are always the block's own
+TALL_GRASS = {"tall_grass": "B", "tall_grass_flowers": "C"}
 SECONDARY_BANKS = {8: "plants"}  # banks the primary uses from the secondary tileset
 
 def rgba(idx: np.ndarray, pal) -> np.ndarray:
@@ -497,6 +507,22 @@ def os_relpath(a: Path, b: Path) -> str:
     return os.path.relpath(a, b)
 
 
+def _tall_grass(fn: str) -> np.ndarray:
+    """A picture from tall_grass/ as indices of PTG (its colours must be PTG's; transparent is 0)."""
+    with Image.open(KIT / "tall_grass" / fn) as im:
+        a = np.array(im.convert("RGBA"))
+    out = np.zeros(a.shape[:2], np.uint8)
+    lut = {c: i for i, c in enumerate(PTG) if i}
+    for y in range(a.shape[0]):
+        for x in range(a.shape[1]):
+            r, g, b, al = (int(v) for v in a[y, x])
+            if al:
+                if (r, g, b) not in lut:
+                    raise SystemExit(f"tall_grass/{fn}: ({r},{g},{b}) at {x},{y} is not in the tall grass palette")
+                out[y, x] = lut[(r, g, b)]
+    return out
+
+
 def write_palette(path: Path, pal) -> None:
     with open(path, "w") as f:
         f.write("JASC-PAL\r\n0100\r\n16\r\n" + "".join(f"{r} {g} {b}\r\n" for r, g, b in pal))
@@ -562,9 +588,11 @@ def primary(spec_dir: Path) -> dict:
     tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
     # route pieces (fields.py): tall grass, ledges, steps, lily pads and reeds
+    tall = sheet("tall_grass", "tallgrass")
+    for name, v in TALL_GRASS.items():
+        tall.add(name, _tall_grass(f"{v}_tile_16x16.png"), tileset="primary", behavior="MB_TALL_GRASS")
+    spec_mt += tall.write()
     field = sheet("fields", "ground")
-    for v, name in enumerate(TALL_GRASS):
-        field.add(name, fields.tall_grass(v), tileset="primary", behavior="MB_TALL_GRASS")
     for m in (0, 2, 8, 10):  # ledges join east-west only
         field.add(f"ledge#{m}", fields.ledge(m), tileset="primary", ground="grass", solid=True,
                   behavior="MB_JUMP_SOUTH")
@@ -576,20 +604,23 @@ def primary(spec_dir: Path) -> dict:
               elevation=1, solid=True)
     spec_mt += field.write()
     (KIT / "sheets").mkdir(exist_ok=True)
-    Image.fromarray(rgba(fields.tall_grass_fx(), P0), "RGBA").save(KIT / "sheets/tall_grass_fx.png")
+    for name, v in TALL_GRASS.items():
+        Image.fromarray(rgba(_tall_grass(f"{v}_feet_80x16.png"), PTG), "RGBA").save(KIT / f"sheets/{name}_fx.png")
     for name, pal in PALS.items():
         write_palette(KIT / f"palette_{name}.pal", pal)
     rel = Path(os_relpath(KIT, spec_dir))
     return {
         "metatiles": spec_mt,
-        "palettes": [(rel / f"palette_{n}.pal").as_posix() for n in ("ground", "water", "wood", "trees")],
+        "palettes": [(rel / f"palette_{n}.pal").as_posix() for n in ("ground", "water", "wood", "trees", "tallgrass")],
         "secondary_palettes": {b: (rel / f"palette_{n}.pal").as_posix() for b, n in SECONDARY_BANKS.items()},
         "reserve": [[434, 441]],
         "animations": [{"name": "Water", "image": (rel / "sheets/water.png").as_posix(),
                         "frames": [(rel / f"sheets/water_f{k}.png").as_posix() for k in range(1, water.FRAMES)],
                         "speed": 16}],
-        "field_effects": {"tall_grass": {"image": (rel / "sheets/tall_grass_fx.png").as_posix(), "bank": 0,
-                                         "tileset": "primary"}},
+        "field_effects": {"tall_grass": {"image": (rel / "sheets/tall_grass_fx.png").as_posix(), "bank": 4,
+                                         "tileset": "primary",
+                                         "metatiles": {n: (rel / f"sheets/{n}_fx.png").as_posix()
+                                                       for n in TALL_GRASS if n != "tall_grass"}}},
     }
 
 
@@ -604,9 +635,8 @@ LEGEND = {
     "*": {"pick": ["flowers1", "flowers2", "flowers3", "flowers4"]},
     "b": "bush", "o": "rock", "k": "stump", "l": "lamp", "S": "sign", "B": "barrel", "c": "crate", "O": "boat",
     "w": "well", "R": "round_tree",
-    "g": {"pick": ["tall_grass", "tall_grass_b", "tall_grass_c"]},
+    "g": {"pick": ["tall_grass", "tall_grass_flowers"], "order": "checker"},
     "_": {"auto": "ledge"}, "h": {"auto": "steps"},
     "v": {"auto": "pond", "joins": "~", "with": "lily", "elevation": 1},
     "r": {"auto": "pond", "joins": "~", "with": "reeds", "elevation": 1},
 }
-TALL_GRASS = ["tall_grass", "tall_grass_b", "tall_grass_c"]

@@ -433,7 +433,7 @@ u32 FldEff_TallGrass(void)
     const struct SpriteTemplate *template;
     s16 x = gFieldEffectArguments[0];
     s16 y = gFieldEffectArguments[1];
-        template = PaeTallGrassTemplate(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS]);
+        template = PaeTallGrassTemplate(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS], x, y);
 
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
     spriteId = CreateSpriteAtEnd(template, x, y, 0);

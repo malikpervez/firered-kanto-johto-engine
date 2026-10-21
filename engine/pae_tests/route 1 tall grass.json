@@ -1,5 +1,5 @@
 {
- "note": "Route 1 after the concept art: walking into its tall grass, the grass sprite over the player's feet is the route's own (it blends into the tiles).",
+ "note": "Route 1's tall grass: two kinds staggered (fronds, and a sprig with flowers). One step in stands on a flowered block: its own grass over the player's feet.",
  "created": "2026-10-21 16:00",
  "start": {
   "map": "Route1_Frlg",
@@ -63,5 +63,5 @@
   "y": 22,
   "in_battle": false
  },
- "accepted": "2026-10-21 15:39"
+ "accepted": "2026-10-21 17:49"
 }

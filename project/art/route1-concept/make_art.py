@@ -187,8 +187,9 @@ def layout() -> tuple[list[list[str]], dict]:
     for y in (9, 17, 26):
         put("h", 24, y, 2, 1)
     # tall grass (never right under a ledge: you land on lawn)
-    put("g", 11, 5, 9, 3)
-    put("g", 29, 5, 10, 3)
+    # (rows 0-6 are what Viridian shows across the join: no tall grass there, its palette has no slot in Viridian)
+    put("g", 11, 7, 9, 2)
+    put("g", 29, 7, 10, 2)
     put("g", 27, 11, 12, 5)
     put("g", 27, 19, 12, 7)
     put("g", 28, 28, 11, 5)

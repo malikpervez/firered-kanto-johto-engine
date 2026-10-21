@@ -18,8 +18,10 @@ walls, it has:
 
 ## New in the kit for this route
 
-- **Tall grass** in three variants. The game draws a sprite over your feet in tall grass; it's this grass's own,
-  so it blends into the tiles (`pae tileset build`, `"field_effects"`).
+- **Tall grass** in two kinds, staggered in a checkerboard: two fronds, and a sprig with cream flowers. They were
+  drawn natively at 16×16, with their grass over the player's feet (`../kit/tall_grass/`), in their own palette
+  (primary bank 4) whose ground is the lawn's two colours. Each kind has its own sprite over your feet, picked by
+  the block you stand in (`pae tileset build`, `"field_effects"` with `"metatiles"`).
 - **Ledges** you hop down going south, which round off at their ends.
 - **Stone steps** through a ledge, walkable both ways.
 - **Lily pads and reeds**, drawn over the pond's animated water (`{"auto": "pond", "joins": "~", "with": "lily"}`
@@ -48,6 +50,6 @@ They share the kit's primary tileset, so a change to the kit means building both
 ![Viridian's south edge, showing Route 1](in_game_viridian_seam.png)
 ![Pallet's road north, showing Route 1](in_game_pallet_seam.png)
 
-Replay tests: `route 1 tall grass`, `route 1 ledge jump`, `route 1 steps up a ledge`,
+Replay tests: `route 1 tall grass`, `route 1 tall grass plain block`, `route 1 ledge jump`, `route 1 steps up a ledge`,
 `route 1 north to viridian`, `viridian looks at route 1`, `wild battle in grass`, `pallet north to route 1`,
 `pallet route 1 looks at pallet`.

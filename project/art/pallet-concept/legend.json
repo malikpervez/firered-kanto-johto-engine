@@ -49,9 +49,9 @@
  "g": {
   "pick": [
    "tall_grass",
-   "tall_grass_b",
-   "tall_grass_c"
-  ]
+   "tall_grass_flowers"
+  ],
+  "order": "checker"
  },
  "_": {
   "auto": "ledge"
