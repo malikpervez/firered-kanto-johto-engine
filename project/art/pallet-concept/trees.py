@@ -157,9 +157,14 @@ def pine(mask: int = 15, corners: int = 0) -> np.ndarray:
     if closed["e"]:
         pine_layer(t, bo, 32.0, 26, scale=0.8, dark=1, wrap=False, seed=7)
     t = np.where(bo > 0, outline(t, bo, edges=closed), t).astype(np.uint8)
-    trunk(t, 16, 28, 32, force=True)
-    pine_layer(t, owner, 16.0, 29, seed=3)
-    t = outline(t, owner)
+    main = np.zeros_like(t)
+    trunk(main, 16, 28, 32, force=True)
+    pine_layer(main, owner, 16.0, 29, seed=3)
+    main = outline(main, owner)
+    # the right half is the left half mirrored, so the tree is symmetric
+    main[:, 16:] = main[:, 15::-1]
+    owner[:, 16:] = owner[:, 15::-1]
+    t = np.where(main > 0, main, t).astype(np.uint8)
     # the gaps: clear where they open onto open ground, the dark forest floor where trees close them in
     reach = np.zeros((32, 32), bool)
     todo = [(y, x) for y in range(32) for x in range(32) if t[y, x] == 0 and (  # near an open side counts as open
@@ -180,7 +185,8 @@ def pine(mask: int = 15, corners: int = 0) -> np.ndarray:
                 t[y, x] = T_OUT if (y > 26 and (x + y) % 2) or y > 29 else SH0
     if not closed["s"]:
         shade = np.zeros_like(t)
-        ground_shadow(shade, 16.5, 30.0, 14, 2.2)
+        ground_shadow(shade, 16.0, 30.0, 14, 2.2)
+        shade[:, 16:] = shade[:, 15::-1]
         t[(t == 0) & (shade > 0)] = GSH
     return t
 
