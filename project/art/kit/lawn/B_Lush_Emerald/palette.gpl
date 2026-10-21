@@ -1,0 +1,19 @@
+GIMP Palette
+Name: Lush Emerald
+Columns: 5
+# 15 opaque colours. Every channel is a multiple of 8.
+ 24  88  56	Dark shade
+ 40 120  72	Shade
+ 56 152  80	Base dark
+ 80 184  96	Base
+112 200 120	Light
+152 224 144	Highlight
+ 24  32  32	Outline
+112  72  48	Soil dark
+176 128  80	Soil mid
+216 176 120	Soil light
+ 96  96  96	Stone dark
+144 144 136	Stone mid
+192 192 176	Stone light
+ 72  48  40	Bark
+240 240 224	Cream
