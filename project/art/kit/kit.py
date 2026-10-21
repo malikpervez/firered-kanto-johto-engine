@@ -1,5 +1,5 @@
-"""The kit: the building blocks every rebuilt map shares, drawn here (and in grass.py, trees.py, fields.py) or taken
-from native pixel packs (water.py, tall_grass/), and built
+"""The kit: the building blocks every rebuilt map shares, drawn here (and in trees.py, fields.py) or taken from
+native pixel packs (lawn.py, water.py, tall_grass/), and built
 into one primary tileset, gTileset_PalletConcept_General.
 
 Each map's make_art.py puts ``primary_entries()`` first in its spec, unchanged, then its own secondary tileset's
@@ -26,7 +26,6 @@ import numpy as np
 from PIL import Image
 
 import fields
-import grass
 import lawn
 import trees
 import water
@@ -39,7 +38,7 @@ P0 = [(0, 0, 0), (24, 32, 32), (40, 96, 56), (48, 112, 60), (56, 120, 64), (88, 
       (192, 192, 176), (72, 48, 40), (240, 240, 224)]
 OUT, G0, G1, GD, GM, GL, GH, SD, SM, SL, KD, KM, KL, TR, CR = range(1, 16)  # six greens
 # the lawn (lawn/<option>/, lawn.py): its six greens take the six green slots
-LAWN = "D_Clover_Glade"
+LAWN = "B_Lush_Emerald"
 P0[G0:GH + 1] = lawn.greens(LAWN)
 
 P2 = [(0, 0, 0), (40, 24, 24), (88, 48, 32), (136, 80, 48), (184, 120, 72), (224, 168, 112), (120, 32, 32),
@@ -53,17 +52,21 @@ P4 = [(0, 0, 0), (24, 32, 32), (32, 80, 48), (56, 128, 64), (104, 176, 80), (160
 F_OUT, LFD, LFM, LFL, LFH, RED, PINK, YEL, ORG, PUR, BLU, WHT, IRON, GLOW, TRUNK = range(1, 16)
 
 # tall grass (tall_grass/: tiles drawn natively at 16x16, with the grass the game draws over the player's feet):
-# its own palette, whose two ground colours are the lawn's (its base and base dark), so a patch sits in the lawn
+# its own palette. Its ground (the pack's two ground colours) shows the lawn's own texture instead, so a patch sits in
+# the lawn: the lawn's greens take those two slots and the three free ones (the darkest folds into the next)
 PTG_PACK = [(255, 0, 255), (120, 192, 88), (88, 160, 72), (184, 232, 144), (136, 200, 104), (64, 144, 56), (40, 112, 48),
        (32, 136, 96), (24, 96, 72), (56, 88, 24), (32, 56, 24), (240, 240, 224), (232, 200, 96), (0, 0, 0), (0, 0, 0),
        (0, 0, 0)]
+LAWN_IN_PTG = {G0: 1, G1: 1, GD: 2, GM: 13, GL: 14, GH: 15}
 PTG = list(PTG_PACK)
-PTG[1:3] = P0[GM], P0[GD]
+for _g, _slot in LAWN_IN_PTG.items():
+    PTG[_slot] = P0[_g]
 BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "tallgrass": 4, "plants": 8}
 PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "tallgrass": PTG, "plants": P4}
 # the two kinds, staggered in a field ("g" in the legend): two fronds (B), and a sprig with flowers (C); each has
 # its own sprite over the player's feet, so the leaves over them are always the block's own
 TALL_GRASS = {"tall_grass": "B", "tall_grass_flowers": "C"}
+TALL_GRASS_FLOOR = {"B": "lawn_a", "C": "lawn_b"}  # the lawn tile each kind's ground shows
 SECONDARY_BANKS = {8: "plants"}  # banks the primary uses from the secondary tileset
 
 def rgba(idx: np.ndarray, pal) -> np.ndarray:
@@ -558,7 +561,8 @@ def os_relpath(a: Path, b: Path) -> str:
 
 
 def _tall_grass(fn: str) -> np.ndarray:
-    """A picture from tall_grass/ as indices of PTG (its colours must be PTG's; transparent is 0)."""
+    """A picture from tall_grass/ as indices of PTG (its colours must be the pack's; transparent is 0), its ground
+    showing the lawn tile under it (in each 16-pixel frame, so the sprite over the player's feet matches the block)."""
     with Image.open(KIT / "tall_grass" / fn) as im:
         a = np.array(im.convert("RGBA"))
     out = np.zeros(a.shape[:2], np.uint8)
@@ -570,6 +574,10 @@ def _tall_grass(fn: str) -> np.ndarray:
                 if (r, g, b) not in lut:
                     raise SystemExit(f"tall_grass/{fn}: ({r},{g},{b}) at {x},{y} is not in the tall grass palette")
                 out[y, x] = lut[(r, g, b)]
+    floor = lawn.tiles(LAWN, P0)[TALL_GRASS_FLOOR[fn[0]]]
+    floor = np.vectorize(lambda i: LAWN_IN_PTG.get(i, 0))(np.tile(floor, (1, out.shape[1] // 16)))
+    ground = (out == 1) | (out == 2)  # the pack's two ground colours
+    out[ground] = floor[ground]
     return out
 
 

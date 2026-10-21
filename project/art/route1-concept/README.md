@@ -20,7 +20,8 @@ walls, it has:
 
 - **Tall grass** in two kinds, staggered in a checkerboard: two fronds, and a sprig with cream flowers. They were
   drawn natively at 16×16, with their grass over the player's feet (`../kit/tall_grass/`), in their own palette
-  (primary bank 4) whose ground is the lawn's two colours. Each kind has its own sprite over your feet, picked by
+  (primary bank 4). Their ground shows the lawn's own texture (the lawn's greens take the palette's ground and free
+  slots), so a patch sits in the lawn without a flat floor. Each kind has its own sprite over your feet, picked by
   the block you stand in (`pae tileset build`, `"field_effects"` with `"metatiles"`).
 - **Ledges** you hop down going south, which round off at their ends.
 - **Stone steps** through a ledge, walkable both ways.
