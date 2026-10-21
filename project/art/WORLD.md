@@ -48,6 +48,13 @@ beside the join) that the viewing map doesn't have. Old maps have few free: Viri
 leaves it three. So near a join with a map that isn't rebuilt yet, keep pieces with palettes of their own out of
 those 7 rows: Route 1's tall grass (bank 4) starts at row 7.
 
+## Planned
+
+- **Pallet's sea → Cinnabar.** The sea east of Pallet will lead to Cinnabar Island (the old Route 21 ran south of
+  Pallet), so it becomes surfable then: the kit's sea is solid for now (scenery under the cliff), and its rocks stay
+  solid. That needs a join off Pallet's east edge (or the sea to meet Route 21's water) and the sea's surf rules
+  checked in game (surfing off the cliff top, into a rock).
+
 ## What else depends on a map's shape
 
 Check these whenever a map is rebuilt, moved or resized:
