@@ -287,7 +287,7 @@ B2_NewBark_EventScript_ReturnToKanto::
 	msgbox B2_NewBark_Text_ReturnToKanto, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, B2_NewBark_EventScript_DeclineTravel
 	closemessage
-	warp MAP_PALLET_TOWN, 10, 13
+	warp MAP_PALLET_TOWN, 12, 11
 	waitstate
 	releaseall
 	end

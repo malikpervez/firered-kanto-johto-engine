@@ -1,0 +1,12 @@
+{
+ "PalletTown_Frlg": [
+  "Route1_Frlg",
+  "Route21_North_Frlg"
+ ],
+ "Route1_Frlg": [
+  "PalletTown_Frlg"
+ ],
+ "Route21_North_Frlg": [
+  "PalletTown_Frlg"
+ ]
+}

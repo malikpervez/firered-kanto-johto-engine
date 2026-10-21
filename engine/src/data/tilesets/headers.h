@@ -1939,3 +1939,25 @@ const struct Tileset gTileset_General_Hns =
     .metatileAttributes = gMetatileAttributes_General_Hns,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PalletConcept_General =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PalletConcept_General,
+    .palettes = gTilesetPalettes_PalletConcept_General,
+    .metatiles = gMetatiles_PalletConcept_General,
+    .metatileAttributes = gMetatileAttributes_PalletConcept_General,
+    .callback = InitTilesetAnim_PalletConcept_General,
+};
+
+const struct Tileset gTileset_PalletConcept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PalletConcept,
+    .palettes = gTilesetPalettes_PalletConcept,
+    .metatiles = gMetatiles_PalletConcept,
+    .metatileAttributes = gMetatileAttributes_PalletConcept,
+    .callback = NULL,
+};

@@ -1,0 +1,52 @@
+{
+ "T": {
+  "auto": "forest"
+ },
+ ".": {
+  "tile": "lawn"
+ },
+ ",": {
+  "tile": "lawn_daisies"
+ },
+ "=": {
+  "auto": "cobble"
+ },
+ ":": {
+  "auto": "dirt"
+ },
+ "~": {
+  "auto": "pond",
+  "elevation": 1
+ },
+ "s": {
+  "auto": "sea",
+  "elevation": 1
+ },
+ "#": {
+  "auto": "fence"
+ },
+ "d": {
+  "auto": "dock"
+ },
+ "*": {
+  "pick": [
+   "flowers1",
+   "flowers2",
+   "flowers3",
+   "flowers4"
+  ]
+ },
+ "b": "bush",
+ "o": "rock",
+ "k": "stump",
+ "l": "lamp",
+ "S": "sign",
+ "B": "barrel",
+ "c": "crate",
+ "O": "boat",
+ "w": "well",
+ "R": "round_tree",
+ "H": "house",
+ "W": "windmill",
+ "L": "lab"
+}

@@ -1846,6 +1846,8 @@ static void QueueAnimTiles_AlolaIslands_Flower(u16);
 static void QueueAnimTiles_AlolaIslands_Water(u16);
 static void QueueAnimTiles_AlolaIslands_SandWaterEdge(u16);
 
+static void QueueAnimTiles_PalletConcept_General_Water(u16);
+static void TilesetAnim_PalletConcept_General(u16);
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/1.4bpp");
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/0.4bpp");
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/2.4bpp");
@@ -2018,4 +2020,43 @@ static void TilesetAnim_KantoSeam(u16 timer)
             AppendTilesetAnimToBuffer(animation->frames[(sourceTimer / animation->divisor) % animation->frameCount],
                 (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(animation->destination)), animation->size);
     }
+}
+
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame0[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/0.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame1[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/1.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame2[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/2.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame3[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/3.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame4[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/4.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame5[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/5.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame6[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/6.4bpp");
+const u16 gTilesetAnims_PalletConcept_General_Water_Frame7[] = INCBIN_U16("data/tilesets/primary/pallet_concept_general/anim/water/7.4bpp");
+
+const u16 *const gTilesetAnims_PalletConcept_General_Water[] = {
+    gTilesetAnims_PalletConcept_General_Water_Frame0,
+    gTilesetAnims_PalletConcept_General_Water_Frame1,
+    gTilesetAnims_PalletConcept_General_Water_Frame2,
+    gTilesetAnims_PalletConcept_General_Water_Frame3,
+    gTilesetAnims_PalletConcept_General_Water_Frame4,
+    gTilesetAnims_PalletConcept_General_Water_Frame5,
+    gTilesetAnims_PalletConcept_General_Water_Frame6,
+    gTilesetAnims_PalletConcept_General_Water_Frame7
+};
+
+static void QueueAnimTiles_PalletConcept_General_Water(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_PalletConcept_General_Water);
+    AppendTilesetAnimToBuffer(gTilesetAnims_PalletConcept_General_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(256)), 49 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_PalletConcept_General(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_PalletConcept_General_Water(timer / 16);
+}
+
+void InitTilesetAnim_PalletConcept_General(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_PalletConcept_General;
 }

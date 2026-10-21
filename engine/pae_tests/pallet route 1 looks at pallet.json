@@ -1,0 +1,107 @@
+{
+ "note": "Route 1's south edge shows Pallet's pines and log houses (Route 1's seam for Pallet).",
+ "created": "2026-10-21 03:11",
+ "start": {
+  "map": "Route1_Frlg",
+  "x": 24,
+  "y": 35,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv5",
+   "FLAG_SYS_POKEMON_GET",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "VAR_REPEL_STEP_COUNT=200"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     40
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route1_Frlg",
+  "x": 24,
+  "y": 39,
+  "in_battle": false,
+  "vars": {
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK": 3
+  }
+ },
+ "accepted": "2026-10-21 13:33"
+}

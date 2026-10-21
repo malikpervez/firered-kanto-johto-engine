@@ -1,0 +1,113 @@
+{
+ "note": "A new game in Pallet: walking out north starts Oak's scene (he comes up the road from the town).",
+ "created": "2026-10-21 03:11",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 14,
+  "y": 3,
+  "state": [
+   "CLEAR_TEAM"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     40
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 14,
+  "y": 1,
+  "in_battle": false,
+  "vars": {
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK": 0
+  }
+ },
+ "accepted": "2026-10-21 13:33"
+}

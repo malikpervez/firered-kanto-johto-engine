@@ -1,6 +1,6 @@
 {
  "note": "Route 1 tall grass with the new battle backgrounds (the default): the battle must start, not run out of memory loading the background.",
- "created": "2026-10-21 00:16",
+ "created": "2026-10-21 12:35",
  "start": {
   "map": "Route1_Frlg",
   "x": 26,
@@ -68,6 +68,279 @@
    "op": "press",
    "inputs": [
     [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
      0,
      300
     ]
@@ -85,5 +358,6 @@
   "x": 26,
   "y": 25,
   "in_battle": true
- }
+ },
+ "accepted": "2026-10-21 13:33"
 }
