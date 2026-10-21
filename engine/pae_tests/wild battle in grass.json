@@ -1,5 +1,5 @@
 {
- "note": "Route 1 tall grass with the new battle backgrounds (the default): the battle must start, not run out of memory loading the background.",
+ "note": "Route 1 tall grass with the new battle backgrounds (the default): the battle must start, not run out of memory loading the background. It walks back and forth long enough that an encounter comes whatever the random state (after it starts, the extra steps only move the battle menu's cursor).",
  "created": "2026-10-21 12:35",
  "start": {
   "map": "Route1_Frlg",
@@ -341,6 +341,461 @@
    "op": "press",
    "inputs": [
     [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
      0,
      300
     ]
@@ -359,5 +814,5 @@
   "y": 25,
   "in_battle": true
  },
- "accepted": "2026-10-21 13:33"
+ "accepted": "2026-10-21 13:54"
 }

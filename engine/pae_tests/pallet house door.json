@@ -1,5 +1,5 @@
 {
- "note": "The player's log house door opens with its animation and leads inside.",
+ "note": "The player's house (red roof) door opens with its animation and leads inside.",
  "created": "2026-10-21 03:11",
  "start": {
   "map": "PalletTown_Frlg",

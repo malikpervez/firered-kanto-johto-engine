@@ -1,11 +1,11 @@
 TTTTTTTTTTTTTT::TTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTT::TTTTTTTTTTTTTTTT
 TT..#########.::########TT..ssss
-TT,.#bHHHHHb#.::#HHHHHb#TT..ssss
-TT..#.HHHHH.#,::#HHHHH.#TT..ssss
-TT..#*HHHHH*#.::#HHHHH*#TT..ssss
-TT.,#*HHHHH.#.::#HHHHH*#TT.ossss
-TT..#SHHHHHb#.::#HHHHHS#TT..ssss
+TT,.#bHHHHHb#.::#JJJJJb#TT..ssss
+TT..#.HHHHH.#,::#JJJJJ.#TT..ssss
+TT..#*HHHHH*#.::#JJJJJ*#TT..ssss
+TT.,#*HHHHH.#.::#JJJJJ*#TT.ossss
+TT..#SHHHHHb#.::#JJJJJS#TT..ssss
 TT..###=#####.::##=#####....ssss
 TT..l================,..,..bssss
 TTo.l================.......ssss

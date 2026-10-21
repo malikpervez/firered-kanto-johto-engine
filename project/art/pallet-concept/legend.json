@@ -46,7 +46,8 @@
  "O": "boat",
  "w": "well",
  "R": "round_tree",
- "H": "house",
+ "H": "house_red",
+ "J": "house_blue",
  "W": "windmill",
  "L": "lab"
 }

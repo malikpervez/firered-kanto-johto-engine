@@ -22,7 +22,8 @@ pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --bor
 pae map connect $M up Route1_Frlg --align 14,24 $P
 pae map connect $M down Route21_North_Frlg --align 18,7 $P
 pae seam build $M $P
-pae door add $M 7 7 --panel 3,0,13,14 $P    # the houses' door (both houses share it)
+pae door add $M 7 7 --panel 3,0,13,14 $P    # your house's door
+pae door add $M 18 7 --panel 3,0,13,14 $P   # your rival's
 pae door add $M 21 15 --panel 1,0,15,14 $P  # Oak's lab
 
 # events

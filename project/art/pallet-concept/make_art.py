@@ -2,17 +2,18 @@
 """Pallet Town after the concept art (concept.png, made with image generation): every tile drawn here (the trees in
 trees.py), nothing taken from an existing tileset.
 
-The town is 32x28 blocks: a pine forest around it, two log houses with fenced yards, cobblestone roads, a windmill
+The town is 32x28 blocks: a pine forest around it, two houses with fenced yards (houses.py), cobblestone roads, a windmill
 in a flower garden, Oak's lab with its greenhouse, a pond with a wooden dock (and the way south to Route 21), the sea
 below a cliff in the east, and a stone well.
 
 Six palettes, each made for what uses it:
   bank 0  ground: grass, pines, dirt, cobblestones, rocks
   bank 1  water: pond and sea, their banks, cliff rocks (drawn in water.py, animated in eight frames)
-  bank 2  wood and roofs: the houses, fences, the dock, signs, the windmill, the well, barrels, the boat
+  bank 2  wood: fences, the dock, signs, the windmill, the well, barrels, the boat
   bank 3  trees: the pines, round trees and bushes (drawn in trees.py)
   bank 7  the lab: metal roof, siding, glass, the greenhouse plants
   bank 8  plants: flowers, lamps
+  bank 9  the houses: plaster, clay roof tiles in red and blue, glass (drawn in houses.py)
 
 Run from the repository root:  python3 project/art/pallet-concept/make_art.py
 It writes sheets/*.png, the palettes, spec.json, grid.txt, border.txt, legend.json and events.json next to itself;
@@ -27,6 +28,7 @@ import numpy as np
 from PIL import Image
 
 import grass
+import houses
 import trees
 import water
 
@@ -55,8 +57,8 @@ P4 = [(0, 0, 0), (24, 32, 32), (32, 80, 48), (56, 128, 64), (104, 176, 80), (160
       (56, 56, 64), (248, 232, 160), (96, 64, 40)]
 F_OUT, LFD, LFM, LFL, LFH, RED, PINK, YEL, ORG, PUR, BLU, WHT, IRON, GLOW, TRUNK = range(1, 16)
 
-BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "lab": 7, "plants": 8}
-PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "lab": P3, "plants": P4}
+BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "lab": 7, "plants": 8, "houses": 9}
+PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "lab": P3, "plants": P4, "houses": houses.PH}
 
 
 def rgba(idx: np.ndarray, pal) -> np.ndarray:
@@ -374,90 +376,6 @@ def well() -> np.ndarray:
     return t
 
 
-def house() -> np.ndarray:
-    """A log house with a red roof, 5x5 blocks; the door is block (1, 4)."""
-    t = np.zeros((80, 80), np.uint8)
-    yy, xx = np.indices((80, 80))
-    # roof: front slope with standing seams, overhanging the walls, gables at the sides
-    for y in range(4, 40):
-        inset = max(0, 9 - (y - 4)) // 1
-        x0, x1 = 2 + inset, 78 - inset
-        t[y, x0:x1] = RFM
-        for x in range(x0, x1):
-            if (x - 2) % 6 == 0:
-                t[y, x] = RFD
-            elif (x - 2) % 6 == 1:
-                t[y, x] = RFL
-        t[y, x0] = D_OUT
-        t[y, x1 - 1] = D_OUT
-    t[4, 11:69] = D_OUT
-    t[5, 11:69] = RFH
-    t[6, 10:70] = RFL
-    for y in range(26, 40):  # the lower roof catches less light
-        t[y, 3:77][t[y, 3:77] == RFL] = RFM
-    t[38, 2:78] = RFD
-    t[39, 1:79] = D_OUT
-    t[40, 3:77] = WOD  # eave shadow
-    # chimney
-    t[0:18, 58:67] = STG
-    t[0:18, 58] = D_OUT
-    t[0:18, 66] = D_OUT
-    t[0, 58:67] = D_OUT
-    t[1:3, 59:66] = STL
-    for y in range(4, 18, 4):
-        t[y, 59:66] = D_OUT
-        t[y + 1:y + 3, 59 + (y // 4) % 2 * 3] = D_OUT
-    # walls: stacked logs
-    t[41:76, 4:76] = WOM
-    for y in range(41, 76):
-        k = (y - 41) % 5
-        if k == 0:
-            t[y, 4:76] = WOH
-        elif k == 1:
-            t[y, 4:76] = WOL
-        elif k == 4:
-            t[y, 4:76] = WOD
-    for y in range(41, 76, 5):  # log ends at the corners
-        for cx in (5, 74):
-            t[y:y + 4, cx - 1:cx + 2] = WOL
-            t[y + 1:y + 3, cx] = WOD
-    t[41:76, 3] = D_OUT
-    t[41:76, 76] = D_OUT
-    # windows with cream frames and shutters
-    for wx in (40, 58):
-        t[46:62, wx - 1:wx + 15] = D_OUT
-        t[47:61, wx:wx + 14] = CRM
-        t[48:60, wx + 2:wx + 12] = NWM
-        t[48:52, wx + 2:wx + 12] = NWL
-        t[48:60, wx + 6:wx + 8] = CRM
-        t[53:55, wx + 2:wx + 12] = CRM
-        t[56:59, wx + 3:wx + 5] = NWD
-        t[61:63, wx - 1:wx + 15] = WOD
-        t[62, wx:wx + 14] = RFL  # flower box
-        t[61, wx + 1:wx + 13:3] = RFH
-    # door at block (1, 4): x 16-31, y 64-79; a small porch roof over it
-    t[57:60, 14:34] = RFM
-    t[57, 14:34] = D_OUT
-    t[60, 14:34] = D_OUT
-    t[58, 15:33] = RFL
-    t[61:78, 18:30] = D_OUT
-    t[62:78, 19:29] = WOD
-    t[62:78, 23:25] = D_OUT
-    for y in range(64, 78, 4):
-        t[y, 19:23] = WOM
-        t[y, 25:29] = WOM
-    t[70:72, 26:28] = STL
-    # foundation stones
-    t[75:79, 3:77] = STG
-    for x in range(3, 77, 6):
-        t[75:79, x] = D_OUT
-    t[75, 3:77] = STL
-    t[79, 3:77] = D_OUT
-    t[75:80, 17:31] = STL  # doorstep
-    t[79, 17:31] = D_OUT
-    return t
-
-
 def windmill() -> np.ndarray:
     """5x6 blocks: a white tower with a red cap and four sails; the door is block (2, 5)."""
     t = np.zeros((96, 80), np.uint8)
@@ -703,7 +621,7 @@ def layout() -> tuple[list[list[str]], dict]:
     rect_fence(4, 2, 12, 8, gaps={(7, 8)})
     rect_fence(16, 2, 23, 8, gaps={(18, 8)})
     put("H", 6, 3, 5, 5)
-    put("H", 17, 3, 5, 5)
+    put("J", 17, 3, 5, 5)
     for x, y in ((5, 3), (11, 3), (22, 3), (11, 7)):
         put("b", x, y)
     for x, y in ((5, 5), (5, 6), (11, 5), (22, 5), (22, 6)):
@@ -878,9 +796,12 @@ def main() -> None:
     tree_sheet.add("round_tree", trees.round_tree(), tileset="primary", ground="grass", solid=True)
     tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
-    big = Sheet("buildings", "wood", cols=10)
-    big.add("house", house(), tileset="secondary", ground="grass", solid=True, open=["1,4"],
-            behaviors={"1,4": "MB_ANIMATED_DOOR"})
+    homes = Sheet("houses", "houses", cols=10)
+    for roof in ("red", "blue"):  # your house and your rival's (houses.py)
+        homes.add(f"house_{roof}", houses.house(roof), tileset="secondary", ground="grass", solid=True, open=["1,4"],
+                  behaviors={"1,4": "MB_ANIMATED_DOOR"})
+    spec_mt += homes.write()
+    big = Sheet("buildings", "wood", cols=5)
     big.add("windmill", windmill(), tileset="secondary", ground="grass", solid=True)
     spec_mt += big.write()
     labs = Sheet("lab", "lab", cols=9)
@@ -896,7 +817,7 @@ def main() -> None:
     spec = {"version": "hns", "primary": "gTileset_PalletConcept_General", "secondary": "gTileset_PalletConcept",
             "palettes": {"primary": ["palette_ground.pal", "palette_water.pal", "palette_wood.pal",
                                      "palette_trees.pal"],
-                         "secondary": ["palette_lab.pal", "palette_plants.pal"]},
+                         "secondary": ["palette_lab.pal", "palette_plants.pal", "palette_houses.pal"]},
             "reserve": {"primary": [[434, 441]]},
             "animations": [{"name": "Water", "image": "sheets/water.png",
                             "frames": [f"sheets/water_f{k}.png" for k in range(1, water.FRAMES)], "speed": 16}],
@@ -914,7 +835,7 @@ def main() -> None:
         "#": {"auto": "fence"}, "d": {"auto": "dock"},
         "*": {"pick": ["flowers1", "flowers2", "flowers3", "flowers4"]},
         "b": "bush", "o": "rock", "k": "stump", "l": "lamp", "S": "sign", "B": "barrel", "c": "crate", "O": "boat",
-        "w": "well", "R": "round_tree", "H": "house", "W": "windmill", "L": "lab",
+        "w": "well", "R": "round_tree", "H": "house_red", "J": "house_blue", "W": "windmill", "L": "lab",
     }
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "signs.json").write_text(json.dumps(signs, indent=1) + "\n")

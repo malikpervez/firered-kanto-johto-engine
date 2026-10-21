@@ -1,5 +1,5 @@
 {
- "note": "Route 1's south edge shows Pallet's pines and log houses (Route 1's seam for Pallet).",
+ "note": "Route 1's south edge shows Pallet's pines and houses (Route 1's seam for Pallet).",
  "created": "2026-10-21 03:11",
  "start": {
   "map": "Route1_Frlg",
@@ -103,5 +103,5 @@
    "VAR_MAP_SCENE_PALLET_TOWN_OAK": 3
   }
  },
- "accepted": "2026-10-21 13:33"
+ "accepted": "2026-10-21 13:54"
 }
