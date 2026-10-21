@@ -1,0 +1,65 @@
+{
+ "note": "Pallet Town's new windmill (art made with image generation, imported with pae): it is drawn, and walking left into it stops at x 5.",
+ "created": "2026-10-21 01:44",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 6,
+  "y": 16,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv5"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     30
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 5,
+  "y": 16,
+  "in_battle": false
+ }
+}
