@@ -1667,9 +1667,51 @@
    "ground": "grass"
   },
   {
-   "name": "round_tree",
+   "name": "forest#15.1",
    "image": "sheets/trees.png",
    "x": 0,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.2",
+   "image": "sheets/trees.png",
+   "x": 32,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.6",
+   "image": "sheets/trees.png",
+   "x": 64,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "round_tree",
+   "image": "sheets/trees.png",
+   "x": 96,
    "y": 64,
    "w": 2,
    "h": 2,
@@ -1683,7 +1725,7 @@
   {
    "name": "bush",
    "image": "sheets/trees.png",
-   "x": 32,
+   "x": 128,
    "y": 64,
    "banks": [
     3

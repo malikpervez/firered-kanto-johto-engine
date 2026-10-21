@@ -1388,7 +1388,7 @@
    "elevation": null,
    "open": []
   },
-  "round_tree": {
+  "forest#15.1": {
    "ids": [
     186,
     187,
@@ -1401,9 +1401,48 @@
    "elevation": null,
    "open": []
   },
+  "forest#15.2": {
+   "ids": [
+    190,
+    191,
+    192,
+    193
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.6": {
+   "ids": [
+    194,
+    195,
+    196,
+    197
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "round_tree": {
+   "ids": [
+    198,
+    199,
+    200,
+    201
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "bush": {
    "ids": [
-    190
+    202
    ],
    "w": 1,
    "h": 1,
@@ -1544,17 +1583,17 @@
   }
  },
  "tiles": {
-  "primary": 257,
+  "primary": 259,
   "secondary": 215
  },
  "metatile_counts": {
-  "primary": 191,
+  "primary": 203,
   "secondary": 100
  },
  "animations": [
   {
    "name": "PalletConcept_General_Water",
-   "first_tile": 208,
+   "first_tile": 210,
    "tiles": 49,
    "frames": 8,
    "notes": []

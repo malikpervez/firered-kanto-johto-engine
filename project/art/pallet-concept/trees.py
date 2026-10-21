@@ -143,10 +143,11 @@ def ground_shadow(t, cx, cy, rx, ry):
                 t[y, x] = GSH
 
 
-def pine(mask: int = 15) -> np.ndarray:
+def pine(mask: int = 15, corners: int = 0) -> np.ndarray:
     """A pine filling a 2x2 cell of forest. ``mask`` says which way the forest goes on (1 north, 2 east, 4 south,
     8 west): toward more forest a darker row of pines stands behind it and the gaps are the dark forest floor;
-    toward open ground the gaps stay clear (the grass shows) and the trees show their own outline."""
+    toward open ground the gaps stay clear (the grass shows) and the trees show their own outline. ``corners``:
+    inside corners open onto the town (1 NE, 2 SE, 4 SW, 8 NW), kept clear too."""
     t = np.zeros((32, 32), np.uint8)
     owner = np.zeros((32, 32), np.int32)
     closed = {"n": bool(mask & 1), "e": bool(mask & 2), "s": bool(mask & 4), "w": bool(mask & 8)}
@@ -163,7 +164,8 @@ def pine(mask: int = 15) -> np.ndarray:
     reach = np.zeros((32, 32), bool)
     todo = [(y, x) for y in range(32) for x in range(32) if t[y, x] == 0 and (  # near an open side counts as open
         (y < 3 and not closed["n"]) or (y > 28 and not closed["s"]) or (x < 3 and not closed["w"])
-        or (x > 28 and not closed["e"]))]
+        or (x > 28 and not closed["e"]) or (corners & 1 and x > 25 and y < 6) or (corners & 2 and x > 25 and y > 25)
+        or (corners & 4 and x < 6 and y > 25) or (corners & 8 and x < 6 and y < 6))]
     for y, x in todo:
         reach[y, x] = True
     while todo:

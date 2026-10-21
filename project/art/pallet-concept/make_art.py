@@ -794,6 +794,26 @@ def layout() -> tuple[list[list[str]], dict]:
     return g, signs
 
 
+def inside_corners(g) -> set[tuple[int, int]]:
+    """(mask, corners) of the forest's 2x2 cells with an inside corner (as pae map paint works them out)."""
+    def forest(cx, cy):
+        return all(not (0 <= y < MAP_H and 0 <= x < MAP_W) or g[y][x] == "T"
+                   for y in range(cy, cy + 2) for x in range(cx, cx + 2))
+    out = set()
+    for cy in range(0, MAP_H, 2):
+        for cx in range(0, MAP_W, 2):
+            if not forest(cx, cy):
+                continue
+            mask = sum(bit for bit, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                       if forest(cx + 2 * dx, cy + 2 * dy))
+            diagonals = ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12), (8, (-1, -1), 9))
+            corners = sum(bit for bit, (dx, dy), sides in diagonals
+                          if mask & sides == sides and not forest(cx + 2 * dx, cy + 2 * dy))
+            if corners:
+                out.add((mask, corners))
+    return out
+
+
 # ---------------------------------------------------------------- sheets and spec
 class Sheet:
     """Cells of one palette packed into an image, with spec entries for them."""
@@ -882,6 +902,8 @@ def main() -> None:
     tree_sheet = Sheet("trees", "trees")
     for m in range(16):  # forest#mask: a 2x2 pine for each way the forest goes on (paint picks it per cell)
         tree_sheet.add(f"forest#{m}", trees.pine(m), tileset="primary", solid=True, ground="grass")
+    for m, c in sorted(inside_corners(layout()[0])):  # forest#mask.corners: where an inside corner opens onto town
+        tree_sheet.add(f"forest#{m}.{c}", trees.pine(m, c), tileset="primary", solid=True, ground="grass")
     tree_sheet.add("round_tree", trees.round_tree(), tileset="primary", ground="grass", solid=True)
     tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
