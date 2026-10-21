@@ -71,6 +71,18 @@
   "with": "reeds",
   "elevation": 1
  },
+ "q": {
+  "auto": "sea",
+  "joins": "s",
+  "with": "rock_a",
+  "elevation": 1
+ },
+ "Q": {
+  "auto": "sea",
+  "joins": "s",
+  "with": "rock_b",
+  "elevation": 1
+ },
  "H": "house_red",
  "J": "house_blue",
  "W": "windmill",

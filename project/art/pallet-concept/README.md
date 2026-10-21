@@ -19,7 +19,8 @@ runs:
 2. `pae tileset new` (the first time) and `pae map geometry`: two new tilesets and the map's block files.
 3. `pae tileset build` and `pae map paint`. The water is animated in eight frames. The pond and the channel come from
    a native pixel pack (`../kit/pond/`): gentle ripples, an earth bank and inside corners, with three kinds of open
-   water so it doesn't repeat every block. The sea under the cliff is still drawn by the kit.
+   water so it doesn't repeat every block. The sea comes from a second pack (`../kit/sea/`): broad swells, a rocky
+   cliff with surf at its foot, and sea rocks (`q` and `Q` in the grid, three of them off the cliff).
 4. `pae map connect`: the road north meets Route 1's, and the channel south meets Route 21's water.
 5. `pae seam build` and `pae door add`: the edge strips across tilesets, and the three door animations (each house's and the lab's).
 6. `pae map place`: the events.
@@ -48,6 +49,7 @@ The game's time of day tints these screenshots.
 ![Oak's scene](in_game_oak_scene.png)
 ![Surfing to Route 21](in_game_surf_to_route21.png)
 
-Replay tests: `pallet north to route 1`, `pallet route 1 looks at pallet`, `pallet house door`, `pallet rival house door`,
+Replay tests: `pallet looks at the sea`, `pallet north to route 1`, `pallet route 1 looks at pallet`,
+`pallet house door`, `pallet rival house door`,
 `pallet house sign`, `pallet rival house sign`,
 `pallet lab door`, `pallet oak stops you`, `pallet surf to route 21`.

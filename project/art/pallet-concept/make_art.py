@@ -233,6 +233,8 @@ def layout() -> tuple[list[list[str]], dict]:
     put("T", 24, 2, 2, 6)
     # the sea under the cliff
     put("s", 28, 2, 4, 24)
+    for x, y, rock in ((30, 5, "q"), (29, 13, "Q"), (31, 21, "q")):  # rocks standing in it
+        put(rock, x, y)
     # the way north (Route 1)
     put(":", 14, 0, 2, 9)
     # yards and houses
@@ -305,7 +307,7 @@ def layout() -> tuple[list[list[str]], dict]:
 def main() -> None:
     g, signs = layout()
     kit.check_forest(g)
-    kit.check_pond(g)
+    kit.check_water(g)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
 

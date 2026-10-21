@@ -1,0 +1,20 @@
+GIMP Palette
+Name: B Staggered Swells
+Columns: 4
+# Index 0 is transparent in the PNGs; GPL has no alpha channel.
+ 16  24  40	0 Transparent index 0
+ 16  24  40	1 Darkest outline / waterline
+ 96  64  40	2 Earth dark
+152 112  72	3 Earth mid
+200 168 112	4 Earth light
+ 24  48 104	5 Deepest water
+ 32  72 144	6 Deep water
+ 48 104 184	7 Base water
+ 72 136 208	8 Light water
+112 172 228	9 Crest highlight
+120 196 212	10 Cyan shallows
+208 236 244	11 Foam
+248 248 248	12 Sparkle / spray
+ 72  72  88	13 Rock dark
+120 120 128	14 Rock mid
+176 176 168	15 Rock light
