@@ -4,14 +4,14 @@
  "secondary": "gTileset_PalletConcept",
  "palettes": {
   "primary": [
-   "palette_ground.pal",
-   "palette_water.pal",
-   "palette_wood.pal",
-   "palette_trees.pal"
+   "../kit/palette_ground.pal",
+   "../kit/palette_water.pal",
+   "../kit/palette_wood.pal",
+   "../kit/palette_trees.pal"
   ],
   "secondary": [
    "palette_lab.pal",
-   "palette_plants.pal",
+   "../kit/palette_plants.pal",
    "palette_houses.pal"
   ]
  },
@@ -26,15 +26,15 @@
  "animations": [
   {
    "name": "Water",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "frames": [
-    "sheets/water_f1.png",
-    "sheets/water_f2.png",
-    "sheets/water_f3.png",
-    "sheets/water_f4.png",
-    "sheets/water_f5.png",
-    "sheets/water_f6.png",
-    "sheets/water_f7.png"
+    "../kit/sheets/water_f1.png",
+    "../kit/sheets/water_f2.png",
+    "../kit/sheets/water_f3.png",
+    "../kit/sheets/water_f4.png",
+    "../kit/sheets/water_f5.png",
+    "../kit/sheets/water_f6.png",
+    "../kit/sheets/water_f7.png"
    ],
    "speed": 16
   }
@@ -42,7 +42,7 @@
  "metatiles": [
   {
    "name": "grass",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 0,
    "y": 0,
    "banks": [
@@ -52,7 +52,7 @@
   },
   {
    "name": "lawn",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 16,
    "y": 0,
    "w": 4,
@@ -64,7 +64,7 @@
   },
   {
    "name": "lawn_daisies",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 80,
    "y": 0,
    "w": 4,
@@ -76,7 +76,7 @@
   },
   {
    "name": "cobble#0",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 144,
    "y": 0,
    "banks": [
@@ -87,7 +87,7 @@
   },
   {
    "name": "cobble#1",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 160,
    "y": 0,
    "banks": [
@@ -98,7 +98,7 @@
   },
   {
    "name": "cobble#2",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 176,
    "y": 0,
    "banks": [
@@ -109,7 +109,7 @@
   },
   {
    "name": "cobble#3",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 192,
    "y": 0,
    "banks": [
@@ -120,7 +120,7 @@
   },
   {
    "name": "cobble#4",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 208,
    "y": 0,
    "banks": [
@@ -131,7 +131,7 @@
   },
   {
    "name": "cobble#5",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 224,
    "y": 0,
    "banks": [
@@ -142,7 +142,7 @@
   },
   {
    "name": "cobble#6",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 240,
    "y": 0,
    "banks": [
@@ -153,7 +153,7 @@
   },
   {
    "name": "cobble#7",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 0,
    "y": 64,
    "banks": [
@@ -164,7 +164,7 @@
   },
   {
    "name": "cobble#8",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 16,
    "y": 64,
    "banks": [
@@ -175,7 +175,7 @@
   },
   {
    "name": "cobble#9",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 32,
    "y": 64,
    "banks": [
@@ -186,7 +186,7 @@
   },
   {
    "name": "cobble#10",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 48,
    "y": 64,
    "banks": [
@@ -197,7 +197,7 @@
   },
   {
    "name": "cobble#11",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 64,
    "y": 64,
    "banks": [
@@ -208,7 +208,7 @@
   },
   {
    "name": "cobble#12",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 80,
    "y": 64,
    "banks": [
@@ -219,7 +219,7 @@
   },
   {
    "name": "cobble#13",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 96,
    "y": 64,
    "banks": [
@@ -230,7 +230,7 @@
   },
   {
    "name": "cobble#14",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 112,
    "y": 64,
    "banks": [
@@ -241,7 +241,7 @@
   },
   {
    "name": "cobble#15",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 128,
    "y": 64,
    "banks": [
@@ -252,7 +252,7 @@
   },
   {
    "name": "dirt#0",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 144,
    "y": 64,
    "banks": [
@@ -263,7 +263,7 @@
   },
   {
    "name": "dirt#1",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 160,
    "y": 64,
    "banks": [
@@ -274,7 +274,7 @@
   },
   {
    "name": "dirt#2",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 176,
    "y": 64,
    "banks": [
@@ -285,7 +285,7 @@
   },
   {
    "name": "dirt#3",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 192,
    "y": 64,
    "banks": [
@@ -296,7 +296,7 @@
   },
   {
    "name": "dirt#4",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 208,
    "y": 64,
    "banks": [
@@ -307,7 +307,7 @@
   },
   {
    "name": "dirt#5",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 224,
    "y": 64,
    "banks": [
@@ -318,7 +318,7 @@
   },
   {
    "name": "dirt#6",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 240,
    "y": 64,
    "banks": [
@@ -329,7 +329,7 @@
   },
   {
    "name": "dirt#7",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 0,
    "y": 80,
    "banks": [
@@ -340,7 +340,7 @@
   },
   {
    "name": "dirt#8",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 16,
    "y": 80,
    "banks": [
@@ -351,7 +351,7 @@
   },
   {
    "name": "dirt#9",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 32,
    "y": 80,
    "banks": [
@@ -362,7 +362,7 @@
   },
   {
    "name": "dirt#10",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 48,
    "y": 80,
    "banks": [
@@ -373,7 +373,7 @@
   },
   {
    "name": "dirt#11",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 64,
    "y": 80,
    "banks": [
@@ -384,7 +384,7 @@
   },
   {
    "name": "dirt#12",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 80,
    "y": 80,
    "banks": [
@@ -395,7 +395,7 @@
   },
   {
    "name": "dirt#13",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 96,
    "y": 80,
    "banks": [
@@ -406,7 +406,7 @@
   },
   {
    "name": "dirt#14",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 112,
    "y": 80,
    "banks": [
@@ -417,7 +417,7 @@
   },
   {
    "name": "dirt#15",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 128,
    "y": 80,
    "banks": [
@@ -428,7 +428,7 @@
   },
   {
    "name": "rock",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 144,
    "y": 80,
    "banks": [
@@ -440,7 +440,7 @@
   },
   {
    "name": "stump",
-   "image": "sheets/ground.png",
+   "image": "../kit/sheets/ground.png",
    "x": 160,
    "y": 80,
    "banks": [
@@ -452,7 +452,7 @@
   },
   {
    "name": "pond#0",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 0,
    "y": 0,
    "banks": [
@@ -465,7 +465,7 @@
   },
   {
    "name": "pond#1",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 16,
    "y": 0,
    "banks": [
@@ -478,7 +478,7 @@
   },
   {
    "name": "pond#2",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 32,
    "y": 0,
    "banks": [
@@ -491,7 +491,7 @@
   },
   {
    "name": "pond#3",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 48,
    "y": 0,
    "banks": [
@@ -504,7 +504,7 @@
   },
   {
    "name": "pond#4",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 64,
    "y": 0,
    "banks": [
@@ -517,7 +517,7 @@
   },
   {
    "name": "pond#5",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 80,
    "y": 0,
    "banks": [
@@ -530,7 +530,7 @@
   },
   {
    "name": "pond#6",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 96,
    "y": 0,
    "banks": [
@@ -543,7 +543,7 @@
   },
   {
    "name": "pond#7",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 112,
    "y": 0,
    "banks": [
@@ -556,7 +556,7 @@
   },
   {
    "name": "pond#8",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 128,
    "y": 0,
    "banks": [
@@ -569,7 +569,7 @@
   },
   {
    "name": "pond#9",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 144,
    "y": 0,
    "banks": [
@@ -582,7 +582,7 @@
   },
   {
    "name": "pond#10",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 160,
    "y": 0,
    "banks": [
@@ -595,7 +595,7 @@
   },
   {
    "name": "pond#11",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 176,
    "y": 0,
    "banks": [
@@ -608,7 +608,7 @@
   },
   {
    "name": "pond#12",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 192,
    "y": 0,
    "banks": [
@@ -621,7 +621,7 @@
   },
   {
    "name": "pond#13",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 208,
    "y": 0,
    "banks": [
@@ -634,7 +634,7 @@
   },
   {
    "name": "pond#14",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 224,
    "y": 0,
    "banks": [
@@ -647,7 +647,7 @@
   },
   {
    "name": "pond#15",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 240,
    "y": 0,
    "banks": [
@@ -660,7 +660,7 @@
   },
   {
    "name": "pond#15~1",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 0,
    "y": 16,
    "banks": [
@@ -673,7 +673,7 @@
   },
   {
    "name": "pond#15~2",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 16,
    "y": 16,
    "banks": [
@@ -686,7 +686,7 @@
   },
   {
    "name": "sea#0",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 32,
    "y": 16,
    "banks": [
@@ -700,7 +700,7 @@
   },
   {
    "name": "sea#1",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 48,
    "y": 16,
    "banks": [
@@ -714,7 +714,7 @@
   },
   {
    "name": "sea#2",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 64,
    "y": 16,
    "banks": [
@@ -728,7 +728,7 @@
   },
   {
    "name": "sea#3",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 80,
    "y": 16,
    "banks": [
@@ -742,7 +742,7 @@
   },
   {
    "name": "sea#4",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 96,
    "y": 16,
    "banks": [
@@ -756,7 +756,7 @@
   },
   {
    "name": "sea#5",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 112,
    "y": 16,
    "banks": [
@@ -770,7 +770,7 @@
   },
   {
    "name": "sea#6",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 128,
    "y": 16,
    "banks": [
@@ -784,7 +784,7 @@
   },
   {
    "name": "sea#7",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 144,
    "y": 16,
    "banks": [
@@ -798,7 +798,7 @@
   },
   {
    "name": "sea#8",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 160,
    "y": 16,
    "banks": [
@@ -812,7 +812,7 @@
   },
   {
    "name": "sea#9",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 176,
    "y": 16,
    "banks": [
@@ -826,7 +826,7 @@
   },
   {
    "name": "sea#10",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 192,
    "y": 16,
    "banks": [
@@ -840,7 +840,7 @@
   },
   {
    "name": "sea#11",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 208,
    "y": 16,
    "banks": [
@@ -854,7 +854,7 @@
   },
   {
    "name": "sea#12",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 224,
    "y": 16,
    "banks": [
@@ -868,7 +868,7 @@
   },
   {
    "name": "sea#13",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 240,
    "y": 16,
    "banks": [
@@ -882,7 +882,7 @@
   },
   {
    "name": "sea#14",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 0,
    "y": 32,
    "banks": [
@@ -896,7 +896,7 @@
   },
   {
    "name": "sea#15",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 16,
    "y": 32,
    "banks": [
@@ -910,7 +910,7 @@
   },
   {
    "name": "sea#15~1",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 32,
    "y": 32,
    "banks": [
@@ -924,7 +924,7 @@
   },
   {
    "name": "sea#15~2",
-   "image": "sheets/water.png",
+   "image": "../kit/sheets/water.png",
    "x": 48,
    "y": 32,
    "banks": [
@@ -938,7 +938,7 @@
   },
   {
    "name": "fence#0",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 0,
    "y": 0,
    "banks": [
@@ -950,7 +950,7 @@
   },
   {
    "name": "fence#1",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 16,
    "y": 0,
    "banks": [
@@ -962,7 +962,7 @@
   },
   {
    "name": "fence#2",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 32,
    "y": 0,
    "banks": [
@@ -974,7 +974,7 @@
   },
   {
    "name": "fence#3",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 48,
    "y": 0,
    "banks": [
@@ -986,7 +986,7 @@
   },
   {
    "name": "fence#4",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 64,
    "y": 0,
    "banks": [
@@ -998,7 +998,7 @@
   },
   {
    "name": "fence#5",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 80,
    "y": 0,
    "banks": [
@@ -1010,7 +1010,7 @@
   },
   {
    "name": "fence#6",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 96,
    "y": 0,
    "banks": [
@@ -1022,7 +1022,7 @@
   },
   {
    "name": "fence#7",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 112,
    "y": 0,
    "banks": [
@@ -1034,7 +1034,7 @@
   },
   {
    "name": "fence#8",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 128,
    "y": 0,
    "banks": [
@@ -1046,7 +1046,7 @@
   },
   {
    "name": "fence#9",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 144,
    "y": 0,
    "banks": [
@@ -1058,7 +1058,7 @@
   },
   {
    "name": "fence#10",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 160,
    "y": 0,
    "banks": [
@@ -1070,7 +1070,7 @@
   },
   {
    "name": "fence#11",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 176,
    "y": 0,
    "banks": [
@@ -1082,7 +1082,7 @@
   },
   {
    "name": "fence#12",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 192,
    "y": 0,
    "banks": [
@@ -1094,7 +1094,7 @@
   },
   {
    "name": "fence#13",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 208,
    "y": 0,
    "banks": [
@@ -1106,7 +1106,7 @@
   },
   {
    "name": "fence#14",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 224,
    "y": 0,
    "banks": [
@@ -1118,7 +1118,7 @@
   },
   {
    "name": "fence#15",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 240,
    "y": 0,
    "banks": [
@@ -1130,7 +1130,7 @@
   },
   {
    "name": "dock#0",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 0,
    "y": 16,
    "banks": [
@@ -1141,7 +1141,7 @@
   },
   {
    "name": "dock#1",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 16,
    "y": 16,
    "banks": [
@@ -1152,7 +1152,7 @@
   },
   {
    "name": "dock#2",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 32,
    "y": 16,
    "banks": [
@@ -1163,7 +1163,7 @@
   },
   {
    "name": "dock#3",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 48,
    "y": 16,
    "banks": [
@@ -1174,7 +1174,7 @@
   },
   {
    "name": "dock#4",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 64,
    "y": 16,
    "banks": [
@@ -1185,7 +1185,7 @@
   },
   {
    "name": "dock#5",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 80,
    "y": 16,
    "banks": [
@@ -1196,7 +1196,7 @@
   },
   {
    "name": "dock#6",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 96,
    "y": 16,
    "banks": [
@@ -1207,7 +1207,7 @@
   },
   {
    "name": "dock#7",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 112,
    "y": 16,
    "banks": [
@@ -1218,7 +1218,7 @@
   },
   {
    "name": "dock#8",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 128,
    "y": 16,
    "banks": [
@@ -1229,7 +1229,7 @@
   },
   {
    "name": "dock#9",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 144,
    "y": 16,
    "banks": [
@@ -1240,7 +1240,7 @@
   },
   {
    "name": "dock#10",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 160,
    "y": 16,
    "banks": [
@@ -1251,7 +1251,7 @@
   },
   {
    "name": "dock#11",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 176,
    "y": 16,
    "banks": [
@@ -1262,7 +1262,7 @@
   },
   {
    "name": "dock#12",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 192,
    "y": 16,
    "banks": [
@@ -1273,7 +1273,7 @@
   },
   {
    "name": "dock#13",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 208,
    "y": 16,
    "banks": [
@@ -1284,7 +1284,7 @@
   },
   {
    "name": "dock#14",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 224,
    "y": 16,
    "banks": [
@@ -1295,7 +1295,7 @@
   },
   {
    "name": "dock#15",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 240,
    "y": 16,
    "banks": [
@@ -1306,7 +1306,7 @@
   },
   {
    "name": "sign",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 0,
    "y": 32,
    "banks": [
@@ -1318,7 +1318,7 @@
   },
   {
    "name": "barrel",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 16,
    "y": 32,
    "banks": [
@@ -1330,7 +1330,7 @@
   },
   {
    "name": "crate",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 32,
    "y": 32,
    "banks": [
@@ -1342,7 +1342,7 @@
   },
   {
    "name": "boat",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 48,
    "y": 32,
    "w": 2,
@@ -1357,7 +1357,7 @@
   },
   {
    "name": "well",
-   "image": "sheets/wood.png",
+   "image": "../kit/sheets/wood.png",
    "x": 80,
    "y": 32,
    "w": 2,
@@ -1371,7 +1371,7 @@
   },
   {
    "name": "flowers1",
-   "image": "sheets/plants.png",
+   "image": "../kit/sheets/plants.png",
    "x": 0,
    "y": 0,
    "banks": [
@@ -1382,7 +1382,7 @@
   },
   {
    "name": "flowers2",
-   "image": "sheets/plants.png",
+   "image": "../kit/sheets/plants.png",
    "x": 16,
    "y": 0,
    "banks": [
@@ -1393,7 +1393,7 @@
   },
   {
    "name": "flowers3",
-   "image": "sheets/plants.png",
+   "image": "../kit/sheets/plants.png",
    "x": 32,
    "y": 0,
    "banks": [
@@ -1404,7 +1404,7 @@
   },
   {
    "name": "flowers4",
-   "image": "sheets/plants.png",
+   "image": "../kit/sheets/plants.png",
    "x": 48,
    "y": 0,
    "banks": [
@@ -1415,7 +1415,7 @@
   },
   {
    "name": "lamp",
-   "image": "sheets/plants.png",
+   "image": "../kit/sheets/plants.png",
    "x": 64,
    "y": 0,
    "w": 1,
@@ -1429,7 +1429,7 @@
   },
   {
    "name": "forest#0",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 0,
    "y": 0,
    "w": 2,
@@ -1443,7 +1443,7 @@
   },
   {
    "name": "forest#1",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 32,
    "y": 0,
    "w": 2,
@@ -1457,7 +1457,7 @@
   },
   {
    "name": "forest#2",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 64,
    "y": 0,
    "w": 2,
@@ -1471,7 +1471,7 @@
   },
   {
    "name": "forest#3",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 96,
    "y": 0,
    "w": 2,
@@ -1485,7 +1485,7 @@
   },
   {
    "name": "forest#4",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 128,
    "y": 0,
    "w": 2,
@@ -1499,7 +1499,7 @@
   },
   {
    "name": "forest#5",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 160,
    "y": 0,
    "w": 2,
@@ -1513,7 +1513,7 @@
   },
   {
    "name": "forest#6",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 192,
    "y": 0,
    "w": 2,
@@ -1527,7 +1527,7 @@
   },
   {
    "name": "forest#7",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 224,
    "y": 0,
    "w": 2,
@@ -1541,7 +1541,7 @@
   },
   {
    "name": "forest#8",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 0,
    "y": 32,
    "w": 2,
@@ -1555,7 +1555,7 @@
   },
   {
    "name": "forest#9",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 32,
    "y": 32,
    "w": 2,
@@ -1569,7 +1569,7 @@
   },
   {
    "name": "forest#10",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 64,
    "y": 32,
    "w": 2,
@@ -1583,7 +1583,7 @@
   },
   {
    "name": "forest#11",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 96,
    "y": 32,
    "w": 2,
@@ -1597,7 +1597,7 @@
   },
   {
    "name": "forest#12",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 128,
    "y": 32,
    "w": 2,
@@ -1611,7 +1611,7 @@
   },
   {
    "name": "forest#13",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 160,
    "y": 32,
    "w": 2,
@@ -1625,7 +1625,7 @@
   },
   {
    "name": "forest#14",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 192,
    "y": 32,
    "w": 2,
@@ -1639,7 +1639,7 @@
   },
   {
    "name": "forest#15",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 224,
    "y": 32,
    "w": 2,
@@ -1653,7 +1653,7 @@
   },
   {
    "name": "forest#15.1",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 0,
    "y": 64,
    "w": 2,
@@ -1667,7 +1667,7 @@
   },
   {
    "name": "forest#15.2",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 32,
    "y": 64,
    "w": 2,
@@ -1681,7 +1681,7 @@
   },
   {
    "name": "forest#15.6",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 64,
    "y": 64,
    "w": 2,
@@ -1695,7 +1695,7 @@
   },
   {
    "name": "round_tree",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 96,
    "y": 64,
    "w": 2,
@@ -1709,7 +1709,7 @@
   },
   {
    "name": "bush",
-   "image": "sheets/trees.png",
+   "image": "../kit/sheets/trees.png",
    "x": 128,
    "y": 64,
    "banks": [
