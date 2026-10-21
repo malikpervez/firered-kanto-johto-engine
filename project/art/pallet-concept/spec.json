@@ -6,7 +6,8 @@
   "primary": [
    "palette_ground.pal",
    "palette_water.pal",
-   "palette_wood.pal"
+   "palette_wood.pal",
+   "palette_trees.pal"
   ],
   "secondary": [
    "palette_lab.pal",
@@ -437,36 +438,9 @@
    "ground": "grass"
   },
   {
-   "name": "forest",
-   "image": "sheets/ground.png",
-   "x": 80,
-   "y": 32,
-   "w": 2,
-   "h": 2,
-   "banks": [
-    0
-   ],
-   "tileset": "primary",
-   "solid": true
-  },
-  {
-   "name": "forest_edge",
-   "image": "sheets/ground.png",
-   "x": 112,
-   "y": 32,
-   "w": 2,
-   "h": 2,
-   "banks": [
-    0
-   ],
-   "tileset": "primary",
-   "solid": true,
-   "ground": "grass"
-  },
-  {
    "name": "rock",
    "image": "sheets/ground.png",
-   "x": 144,
+   "x": 80,
    "y": 32,
    "banks": [
     0
@@ -478,7 +452,7 @@
   {
    "name": "stump",
    "image": "sheets/ground.png",
-   "x": 160,
+   "x": 96,
    "y": 32,
    "banks": [
     0
@@ -1353,21 +1327,9 @@
    "solid": true
   },
   {
-   "name": "bush",
-   "image": "sheets/plants.png",
-   "x": 0,
-   "y": 0,
-   "banks": [
-    8
-   ],
-   "tileset": "primary",
-   "ground": "grass",
-   "solid": true
-  },
-  {
    "name": "flowers1",
    "image": "sheets/plants.png",
-   "x": 16,
+   "x": 0,
    "y": 0,
    "banks": [
     8
@@ -1378,7 +1340,7 @@
   {
    "name": "flowers2",
    "image": "sheets/plants.png",
-   "x": 32,
+   "x": 16,
    "y": 0,
    "banks": [
     8
@@ -1389,7 +1351,7 @@
   {
    "name": "flowers3",
    "image": "sheets/plants.png",
-   "x": 48,
+   "x": 32,
    "y": 0,
    "banks": [
     8
@@ -1400,7 +1362,7 @@
   {
    "name": "flowers4",
    "image": "sheets/plants.png",
-   "x": 64,
+   "x": 48,
    "y": 0,
    "banks": [
     8
@@ -1411,7 +1373,7 @@
   {
    "name": "lamp",
    "image": "sheets/plants.png",
-   "x": 80,
+   "x": 64,
    "y": 0,
    "w": 1,
    "h": 2,
@@ -1423,14 +1385,53 @@
    "solid": true
   },
   {
-   "name": "round_tree",
-   "image": "sheets/plants.png",
-   "x": 96,
+   "name": "forest",
+   "image": "sheets/trees.png",
+   "x": 0,
    "y": 0,
    "w": 2,
    "h": 2,
    "banks": [
-    8
+    3
+   ],
+   "tileset": "primary",
+   "solid": true
+  },
+  {
+   "name": "forest_edge",
+   "image": "sheets/trees.png",
+   "x": 32,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "round_tree",
+   "image": "sheets/trees.png",
+   "x": 64,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bush",
+   "image": "sheets/trees.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    3
    ],
    "tileset": "primary",
    "ground": "grass",

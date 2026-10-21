@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""Pallet Town after the concept art (concept.png, made with image generation): every tile drawn here, nothing taken from
-an existing tileset.
+"""Pallet Town after the concept art (concept.png, made with image generation): every tile drawn here (the trees in
+trees.py), nothing taken from an existing tileset.
 
 The town is 32x28 blocks: a pine forest around it, two log houses with fenced yards, cobblestone roads, a windmill
 in a flower garden, Oak's lab with its greenhouse, a pond with a wooden dock (and the way south to Route 21), the sea
 below a cliff in the east, and a stone well.
 
-Five palettes, each made for what uses it:
+Six palettes, each made for what uses it:
   bank 0  ground: grass, pines, dirt, cobblestones, rocks
   bank 1  water: pond and sea, their banks, cliff rocks (animated in four frames)
   bank 2  wood and roofs: the houses, fences, the dock, signs, the windmill, the well, barrels, the boat
+  bank 3  trees: the pines, round trees and bushes (drawn in trees.py)
   bank 7  the lab: metal roof, siding, glass, the greenhouse plants
-  bank 8  plants: flowers, bushes, the round trees, lamps
+  bank 8  plants: flowers, lamps
 
 Run from the repository root:  python3 project/art/pallet-concept/make_art.py
 It writes sheets/*.png, the palettes, spec.json, grid.txt, border.txt, legend.json and events.json next to itself;
@@ -24,6 +25,8 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+
+import trees
 
 HERE = Path(__file__).resolve().parent
 MAP_W, MAP_H = 32, 28
@@ -54,8 +57,8 @@ P4 = [(0, 0, 0), (24, 32, 32), (32, 80, 48), (56, 128, 64), (104, 176, 80), (160
       (56, 56, 64), (248, 232, 160), (96, 64, 40)]
 F_OUT, LFD, LFM, LFL, LFH, RED, PINK, YEL, ORG, PUR, BLU, WHT, IRON, GLOW, TRUNK = range(1, 16)
 
-BANK = {"ground": 0, "water": 1, "wood": 2, "lab": 7, "plants": 8}
-PALS = {"ground": P0, "water": P1, "wood": P2, "lab": P3, "plants": P4}
+BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "lab": 7, "plants": 8}
+PALS = {"ground": P0, "water": P1, "wood": P2, "trees": trees.PT, "lab": P3, "plants": P4}
 
 
 def rgba(idx: np.ndarray, pal) -> np.ndarray:
@@ -206,46 +209,6 @@ def dirt(mask: int) -> np.ndarray:
         t[y + 1, x:x + 2] = KD
         t[y, x] = KL
     return _cut(t, mask, 23, SD)
-
-
-def pine(background: bool) -> np.ndarray:
-    """One pine in a 2x2 block cell, drawn to tile with its neighbours: tiers of drooping branches."""
-    t = np.full((32, 32), PD if background else 0, np.uint8)
-    if background:  # the forest floor in deep shade, darker low down
-        yy0, xx0 = np.indices((32, 32))
-        t[(yy0 > 20) & ((xx0 + yy0) % 2 == 0)] = OUT
-        t[yy0 > 26] = OUT
-    tiers = [(1, 10, 7), (7, 13, 8), (13, 15, 8), (19, 16, 9)]  # (top y, half width at the bottom, height)
-    body = np.zeros((32, 32), bool)
-    shade = np.zeros((32, 32), bool)
-    light = np.zeros((32, 32), bool)
-    for top, half, h in tiers:
-        for y in range(top, min(32, top + h)):
-            k = (y - top + 1) / h
-            hw = half * k
-            for x in range(32):
-                dx = x + 0.5 - 16
-                if abs(dx) <= hw - (0 if y < top + h - 1 else abs(dx) % 3 == 0):
-                    body[y, x] = True
-                    if dx > hw * 0.25 or y >= top + h - 2:
-                        shade[y, x] = True
-                    if dx < -hw * 0.35 and y < top + h - 2:
-                        light[y, x] = True
-    t[body] = PM
-    t[shade & body] = PD
-    t[light & body] = GD
-    yy, xx = np.indices((32, 32))
-    t[body & light & ((xx + yy) % 3 == 0)] = GM
-    t[edge_of(body)] = OUT
-    for top, half, h in tiers[1:]:  # the tier above casts a dark rim on the one below
-        t[top, 16 - int(half * 0.3):16 + int(half * 0.3)] = OUT
-    t[27:31, 14:18] = TR  # trunk
-    t[27:31, 14] = OUT
-    t[27:31, 17] = OUT
-    t[28:31, 16] = SD
-    t[30, 13:19] = OUT if background else t[30, 13:19]
-    t[2, 15:17] = GM  # a lit tip
-    return t
 
 
 def rock(seed: int, big: bool) -> np.ndarray:
@@ -781,50 +744,6 @@ def lab() -> np.ndarray:
 
 
 # ---------------------------------------------------------------- plants (bank 8)
-def bush(seed: int) -> np.ndarray:
-    t = np.zeros((16, 16), np.uint8)
-    r = random.Random(seed)
-    body = ellipse(16, 16, 8, 9, 7, 6)
-    for _ in range(5):
-        body |= ellipse(16, 16, r.uniform(4, 12), r.uniform(5, 11), 3, 3)
-    body &= ellipse(16, 16, 8, 9, 7.5, 6.5)
-    t[body] = LFM
-    yy, xx = np.indices((16, 16))
-    t[body & (yy + xx > 19)] = LFD
-    for _ in range(6):
-        cx, cy = r.uniform(3, 10), r.uniform(4, 9)
-        t[body & ellipse(16, 16, cx, cy, 1.6, 1.2)] = LFL
-    t[body & ellipse(16, 16, 5.5, 6, 1.2, 1)] = LFH
-    t[edge_of(body)] = F_OUT
-    return t
-
-
-def round_tree() -> np.ndarray:
-    t = np.zeros((32, 32), np.uint8)
-    r = random.Random(4)
-    crown = ellipse(32, 32, 16, 13, 14.5, 12)
-    for _ in range(9):
-        a = r.uniform(0, 2 * math.pi)
-        crown |= ellipse(32, 32, 16 + 12 * math.cos(a), 13 + 10 * math.sin(a), 4, 3.5)
-    crown &= ellipse(32, 32, 16, 13, 15.5, 13)
-    yy, xx = np.indices((32, 32))
-    t[crown] = LFM
-    t[crown & (yy > 15) & (xx + yy > 30)] = LFD
-    for _ in range(12):  # leaf clumps with a lit top
-        cx, cy = r.uniform(5, 26), r.uniform(4, 22)
-        c = crown & ellipse(32, 32, cx, cy, 3, 2.5)
-        t[c] = LFL if cy < 14 else LFM
-        t[c & ~ellipse(32, 32, cx, cy + 1, 3, 2.5)] = LFH if cy < 12 else LFL
-        t[crown & edge_of(ellipse(32, 32, cx, cy + 0.5, 3.2, 2.7)) & (yy > cy + 1)] = LFD
-    t[edge_of(crown)] = F_OUT
-    t[24:31, 13:19] = TRUNK
-    t[24:31, 13] = F_OUT
-    t[24:31, 18] = F_OUT
-    t[30, 12:20] = F_OUT
-    t[24, 13:19] = LFD
-    return t
-
-
 def flowers(seed: int, colours) -> np.ndarray:
     """A dense flower bed: leafy clumps under round blooms (petals around a bright middle)."""
     t = np.zeros((16, 16), np.uint8)
@@ -1024,8 +943,6 @@ def main() -> None:
         ground.add(f"cobble#{m}", cobble(m), tileset="primary", ground="grass")
     for m in range(16):
         ground.add(f"dirt#{m}", dirt(m), tileset="primary", ground="grass")
-    ground.add("forest", pine(True), tileset="primary", solid=True)
-    ground.add("forest_edge", pine(False), tileset="primary", solid=True, ground="grass")
     ground.add("rock", rock(1, True), tileset="primary", ground="grass", solid=True)
     ground.add("stump", stump(), tileset="primary", ground="grass", solid=True)
     spec_mt += ground.write()
@@ -1051,12 +968,16 @@ def main() -> None:
     wood.add("well", well(), tileset="primary", ground="dirt#15", solid=True)
     spec_mt += wood.write()
     plants = Sheet("plants", "plants")
-    plants.add("bush", bush(2), tileset="primary", ground="grass", solid=True)
     for i, cols in enumerate(((RED, PINK, YEL), (PUR, WHT, PINK), (YEL, ORG, RED), (BLU, WHT, PUR))):
         plants.add(f"flowers{i + 1}", flowers(10 + i, cols), tileset="primary", ground="grass")
     plants.add("lamp", lamp(), tileset="primary", ground="grass", solid=True)
-    plants.add("round_tree", round_tree(), tileset="primary", ground="grass", solid=True)
     spec_mt += plants.write()
+    tree_sheet = Sheet("trees", "trees")
+    tree_sheet.add("forest", trees.pine(True), tileset="primary", solid=True)
+    tree_sheet.add("forest_edge", trees.pine(False), tileset="primary", solid=True, ground="grass")
+    tree_sheet.add("round_tree", trees.round_tree(), tileset="primary", ground="grass", solid=True)
+    tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
+    spec_mt += tree_sheet.write()
     big = Sheet("buildings", "wood", cols=10)
     big.add("house", house(), tileset="secondary", ground="grass", solid=True, open=["1,4"],
             behaviors={"1,4": "MB_ANIMATED_DOOR"})
@@ -1073,7 +994,8 @@ def main() -> None:
         with open(HERE / f"palette_{name}.pal", "w") as f:
             f.write("JASC-PAL\r\n0100\r\n16\r\n" + "".join(f"{r} {g} {b}\r\n" for r, g, b in pal))
     spec = {"version": "hns", "primary": "gTileset_PalletConcept_General", "secondary": "gTileset_PalletConcept",
-            "palettes": {"primary": ["palette_ground.pal", "palette_water.pal", "palette_wood.pal"],
+            "palettes": {"primary": ["palette_ground.pal", "palette_water.pal", "palette_wood.pal",
+                                     "palette_trees.pal"],
                          "secondary": ["palette_lab.pal", "palette_plants.pal"]},
             "reserve": {"primary": [[434, 441]]},
             "animations": [{"name": "Water", "image": "sheets/water.png",

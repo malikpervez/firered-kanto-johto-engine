@@ -11,7 +11,7 @@ sprites, Pokémon and story come from the game.
 
 From the repository root: `sh project/art/pallet-concept/build.sh`. It runs:
 
-1. `make_art.py`: draws the tiles and writes `sheets/`, the five palettes, `spec.json`, `grid.txt`, `legend.json`.
+1. `make_art.py`: draws the tiles and writes `sheets/`, the six palettes, `spec.json`, `grid.txt`, `legend.json`.
 2. `pae tileset new` (the first time) and `pae map geometry`: two new tilesets and the map's block files.
 3. `pae tileset build` and `pae map paint`. The water is animated (four frames).
 4. `pae map connect`: the road north meets Route 1's, and the channel south meets Route 21's water.
