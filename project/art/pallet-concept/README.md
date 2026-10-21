@@ -11,7 +11,8 @@ sprites, Pokémon and story come from the game.
 
 From the repository root: `sh project/art/pallet-concept/build.sh`. It runs:
 
-1. `make_art.py` (with `trees.py` for the pines, round trees and bushes, and `water.py` for the pond and sea): draws
+1. `make_art.py` (with `grass.py` for the grass, `trees.py` for the pines, round trees and bushes, and `water.py`
+   for the pond and sea): draws
    the tiles and writes `sheets/`, the six palettes, `spec.json`, `grid.txt`, `legend.json`.
 2. `pae tileset new` (the first time) and `pae map geometry`: two new tilesets and the map's block files.
 3. `pae tileset build` and `pae map paint`. The water is animated in eight frames: waves drift, foam runs along the
@@ -33,6 +34,7 @@ A few coordinates in scripts were changed by hand:
 
 The game's time of day tints these screenshots.
 
+![The grass by the town sign](in_game_grass.png)
 ![Route 1 seen from Pallet's road north](in_game_route1_seam.png)
 ![The dock](in_game_dock.png)
 ![The forest along the south edge](in_game_south_forest.png)

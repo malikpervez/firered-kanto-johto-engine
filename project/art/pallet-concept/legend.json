@@ -3,16 +3,11 @@
   "auto": "forest"
  },
  ".": {
-  "pick": [
-   "grass",
-   "grass",
-   "grass2",
-   "grass3",
-   "grass",
-   "grass4"
-  ]
+  "tile": "lawn"
  },
- ",": "grass_daisies",
+ ",": {
+  "tile": "lawn_daisies"
+ },
  "=": {
   "auto": "cobble"
  },

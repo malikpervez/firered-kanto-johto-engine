@@ -26,6 +26,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import grass
 import trees
 import water
 
@@ -33,10 +34,10 @@ HERE = Path(__file__).resolve().parent
 MAP_W, MAP_H = 32, 28
 
 # ---------------------------------------------------------------- palettes
-P0 = [(0, 0, 0), (24, 32, 32), (24, 64, 56), (40, 96, 64), (56, 120, 64), (88, 160, 72), (120, 192, 88),
+P0 = [(0, 0, 0), (24, 32, 32), (40, 96, 56), (48, 112, 60), (56, 120, 64), (88, 160, 72), (120, 192, 88),
       (168, 216, 112), (112, 72, 48), (176, 128, 80), (216, 176, 120), (96, 96, 96), (144, 144, 136),
       (192, 192, 176), (72, 48, 40), (240, 240, 224)]
-OUT, PD, PM, GD, GM, GL, GH, SD, SM, SL, KD, KM, KL, TR, CR = range(1, 16)
+OUT, G0, G1, GD, GM, GL, GH, SD, SM, SL, KD, KM, KL, TR, CR = range(1, 16)  # six greens (grass.py)
 
 
 P2 = [(0, 0, 0), (40, 24, 24), (88, 48, 32), (136, 80, 48), (184, 120, 72), (224, 168, 112), (120, 32, 32),
@@ -86,37 +87,6 @@ def wobble(seed: int, n: int = 16, lo: int = 1, hi: int = 3) -> list[int]:
 
 
 # ---------------------------------------------------------------- ground (bank 0)
-def grass(seed: int, daisies: int = 0, clover: bool = False) -> np.ndarray:
-    r = random.Random(seed)
-    t = np.full((16, 16), GL, np.uint8)
-    for _ in range(18):  # fine texture
-        t[r.randrange(16), r.randrange(16)] = GM
-    for _ in range(5):
-        t[r.randrange(16), r.randrange(16)] = GH
-    for _ in range(4):  # tufts: two dark blades under a lit tip
-        x, y = r.randrange(1, 14), r.randrange(2, 15)
-        t[y, x] = GD
-        t[y, x + 2] = GD
-        t[y - 1, x] = GM
-        t[y - 1, x + 1] = GH
-        t[y - 1, x + 2] = GM
-        t[y - 2, x + 1] = GH
-    if clover:
-        for _ in range(2):
-            x, y = r.randrange(2, 13), r.randrange(2, 13)
-            for dx, dy in ((0, 0), (1, 0), (0, 1), (1, 1), (-1, 0), (0, -1)):
-                t[y + dy, x + dx] = GM
-            t[y, x] = GH
-            t[y + 2, x + 1] = GD
-    for _ in range(daisies):
-        x, y = r.randrange(2, 14), r.randrange(2, 14)
-        t[y, x] = SL
-        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-            t[y + dy, x + dx] = CR
-        t[y + 2, x] = GD
-    return t
-
-
 def _torus_cells(seed: int, n: int, size: int = 16):
     """Voronoi cells on a size x size torus: (cell id, distance to own centre, gap) per pixel."""
     r = random.Random(seed)
@@ -859,9 +829,10 @@ def main() -> None:
     spec_mt = []
     # ground (primary)
     ground = Sheet("ground", "ground")
-    for i, kw in enumerate(({}, {"clover": True}, {}, {"daisies": 2})):
-        ground.add("grass" if i == 0 else f"grass{i + 1}", grass(3 + i * 11, **kw), tileset="primary")
-    ground.add("grass_daisies", grass(61, daisies=4), tileset="primary")
+    lawn, daisies = grass.field(), grass.field(daisies=True)
+    ground.add("grass", grass.blocks(lawn)[0], tileset="primary")  # the ground under paths and things
+    ground.add("lawn", lawn, tileset="primary")  # the grass, a 4x4 pattern (grass.py)
+    ground.add("lawn_daisies", daisies, tileset="primary")
     for m in range(16):
         ground.add(f"cobble#{m}", cobble(m), tileset="primary", ground="grass")
     for m in range(16):
@@ -936,8 +907,8 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = {
         "T": {"auto": "forest"},
-        ".": {"pick": ["grass", "grass", "grass2", "grass3", "grass", "grass4"]},
-        ",": "grass_daisies",
+        ".": {"tile": "lawn"},
+        ",": {"tile": "lawn_daisies"},
         "=": {"auto": "cobble"}, ":": {"auto": "dirt"},
         "~": {"auto": "pond", "elevation": 1}, "s": {"auto": "sea", "elevation": 1},
         "#": {"auto": "fence"}, "d": {"auto": "dock"},
