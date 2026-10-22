@@ -1,0 +1,20 @@
+GIMP Palette
+Name: Viridian viridian_1
+Columns: 8
+# Index 0 is transparent. GPL cannot encode alpha; PNG tRNS and JSON define it.
+  0   0   0	00 Transparent
+ 32  40  40	01 Outline
+ 56  64  72	02 Recess
+ 56  72  80	03 Slate shadow
+ 88 104 112	04 Slate
+136 152 152	05 Slate highlight
+152 112  56	06 Ochre shadow
+200 152  80	07 Ochre / brass
+232 200 120	08 Ochre / brass light
+104 120 120	09 Stone dark
+168 176 160	10 Stone / plaster shade
+216 216 192	11 Pale plaster / stone
+240 240 216	12 Plaster / glass glint
+136  88  64	13 Timber
+ 56  96 128	14 Glass shadow
+144 200 208	15 Glass light

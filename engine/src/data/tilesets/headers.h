@@ -1972,3 +1972,14 @@ const struct Tileset gTileset_Route1Concept =
     .metatileAttributes = gMetatileAttributes_Route1Concept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ViridianConcept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ViridianConcept,
+    .palettes = gTilesetPalettes_ViridianConcept,
+    .metatiles = gMetatiles_ViridianConcept,
+    .metatileAttributes = gMetatileAttributes_ViridianConcept,
+    .callback = NULL,
+};

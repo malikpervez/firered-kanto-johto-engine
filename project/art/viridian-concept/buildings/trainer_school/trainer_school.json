@@ -1,0 +1,175 @@
+{
+  "schema_version": 2,
+  "id": "trainer_school",
+  "type": "building",
+  "image": "trainer_school.png",
+  "image_size_px": [
+    80,
+    64
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 5,
+    "height": 4
+  },
+  "palette": "viridian_1",
+  "palette_file": "../palettes/viridian_1.gpl",
+  "transparent_index": 0,
+  "door_block": [
+    2,
+    3
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      3
+    ]
+  ],
+  "collision_rows": [
+    "#####",
+    "#####",
+    "#####",
+    "##D##"
+  ],
+  "stage1_placement": {
+    "top_left_block": [
+      10,
+      35
+    ],
+    "door_map_block": [
+      12,
+      38
+    ]
+  },
+  "door": {
+    "image": "trainer_school_door.png",
+    "sheet_size_px": [
+      48,
+      32
+    ],
+    "frame_size_px": [
+      16,
+      32
+    ],
+    "frame_count": 3,
+    "frame_order": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "anchor_top_left_px": [
+      32,
+      32
+    ],
+    "anchor_top_left_block": [
+      2,
+      2
+    ],
+    "opening_rect_in_frame_px": {
+      "x": 2,
+      "y": 11,
+      "width": 12,
+      "height": 20
+    },
+    "threshold_row_in_frame": 31,
+    "recommended_frame_ms": 100,
+    "loop": false,
+    "composition": "Replace the entire 16x32 door rectangle at its anchor; retain the frame alpha.",
+    "closed_frame_matches_building_crop": true,
+    "story_lock": null
+  },
+  "tile_economy": {
+    "tile_size_px": [
+      8,
+      8
+    ],
+    "unique_static_no_flips": 54,
+    "unique_static_plus_door_frames_no_flips": 63,
+    "includes_transparent_tile": true,
+    "shared_pool": "../tile_pools/viridian_1.json"
+  },
+  "notes": [
+    "All footprint blocks except the door are solid, including blocks with some transparent pixels.",
+    "No lawn or ground pixels are included.",
+    "Every RGB channel is a multiple of 8; alpha is 0 or 255."
+  ],
+  "design": "Warm ochre hip roof with a raised ridge, lit left plane and shaded right return; raised clock gable, timber school sign with an open-book mark, paired classroom window bands and siding.",
+  "body_bounds_px": {
+    "x": 2,
+    "y": 32,
+    "width": 76,
+    "height": 32
+  }
+}

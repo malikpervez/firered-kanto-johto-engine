@@ -8,7 +8,9 @@
    "../kit/palette_water.pal",
    "../kit/palette_wood.pal",
    "../kit/palette_trees.pal",
-   "../kit/palette_tallgrass.pal"
+   "../kit/palette_tallgrass.pal",
+   "../kit/palette_center.pal",
+   "../kit/palette_mart.pal"
   ],
   "secondary": [
    "palette_lab.pal",
@@ -1894,10 +1896,52 @@
    "ground": "grass"
   },
   {
-   "name": "round_tree",
+   "name": "forest#7.1",
    "image": "../kit/sheets/trees.png",
    "x": 160,
    "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#7.2",
+   "image": "../kit/sheets/trees.png",
+   "x": 192,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#13.4",
+   "image": "../kit/sheets/trees.png",
+   "x": 224,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "round_tree",
+   "image": "../kit/sheets/trees.png",
+   "x": 0,
+   "y": 96,
    "w": 2,
    "h": 2,
    "banks": [
@@ -1910,8 +1954,8 @@
   {
    "name": "bush",
    "image": "../kit/sheets/trees.png",
-   "x": 192,
-   "y": 64,
+   "x": 32,
+   "y": 96,
    "banks": [
     3
    ],
@@ -2063,6 +2107,46 @@
    "behavior": "MB_POND_WATER",
    "elevation": 1,
    "solid": true
+  },
+  {
+   "name": "pokemon_center",
+   "image": "../kit/sheets/pokemon_center.png",
+   "x": 0,
+   "y": 0,
+   "w": 5,
+   "h": 4,
+   "banks": [
+    5
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "open": [
+    "2,3"
+   ],
+   "behaviors": {
+    "2,3": "MB_ANIMATED_DOOR"
+   }
+  },
+  {
+   "name": "poke_mart",
+   "image": "../kit/sheets/poke_mart.png",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "h": 4,
+   "banks": [
+    6
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true,
+   "open": [
+    "1,3"
+   ],
+   "behaviors": {
+    "1,3": "MB_ANIMATED_DOOR"
+   }
   },
   {
    "name": "house_red",

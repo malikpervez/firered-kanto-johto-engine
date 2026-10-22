@@ -1,0 +1,60 @@
+{
+ "note": "After the parcel he stands by the road north: stepping up beside him, he turns to show you how to catch Pok\u00e9mon.",
+ "created": "2026-10-22 02:32",
+ "start": {
+  "map": "ViridianCity_Frlg",
+  "x": 25,
+  "y": 16,
+  "state": [
+   "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN=1"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     150
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ViridianCity_Frlg",
+  "x": 25,
+  "y": 13,
+  "in_battle": false
+ }
+}

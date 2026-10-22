@@ -17,13 +17,13 @@ ViridianCity_EventScript_SetOldManNormal::
 
 ViridianCity_EventScript_SetOldManStandingByRoad::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1
-	setobjectxyperm LOCALID_TUTORIAL_MAN, 24, 18
+	setobjectxyperm LOCALID_TUTORIAL_MAN, 24, 13
 	setobjectmovementtype LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_LOOK_AROUND
 	return
 
 ViridianCity_EventScript_SetOldManBlockingRoad::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN
-	setobjectxyperm LOCALID_TUTORIAL_MAN, 25, 18
+	setobjectxyperm LOCALID_TUTORIAL_MAN, 25, 11
 	setobjectmovementtype LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_FACE_DOWN
 	return
 
@@ -45,14 +45,10 @@ ViridianCity_EventScript_GymDoorLocked::
 	delay 20
 	msgbox ViridianCity_Text_GymDoorsAreLocked
 	closemessage
-	applymovement LOCALID_PLAYER, ViridianCity_Movement_JumpDownLedge
+	applymovement LOCALID_PLAYER, ViridianCity_Movement_WalkDown
 	waitmovement 0
 	releaseall
 	end
-
-ViridianCity_Movement_JumpDownLedge::
-	jump_2_down
-	step_end
 
 ViridianCity_EventScript_CitySign::
 	msgbox ViridianCity_Text_CitySign, MSGBOX_SIGN
@@ -72,6 +68,10 @@ ViridianCity_EventScript_GymSign::
 
 ViridianCity_EventScript_GymDoor::
 	msgbox ViridianCity_Text_GymDoorsAreLocked, MSGBOX_SIGN
+	end
+
+ViridianCity_EventScript_HouseLocked::
+	msgbox ViridianCity_Text_HouseLocked, MSGBOX_SIGN
 	end
 
 ViridianCity_EventScript_Boy::
@@ -354,6 +354,9 @@ ViridianCity_Text_MovesLimitedByPP::
 
 ViridianCity_Text_GymSign::
 	.string "VIRIDIAN CITY POKéMON GYM$"
+
+ViridianCity_Text_HouseLocked::
+	.string "The door is locked.$"
 
 ViridianCity_Text_GymDoorsAreLocked::
 	.string "VIRIDIAN GYM's doors are locked…$"
