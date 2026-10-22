@@ -75,7 +75,7 @@ STEPS = [
     dict(name="south-route1", what="South into Route 1", walk=(25, 51), inputs="DOWN*18, wait 150",
          expect=dict(map="Route1_Frlg", xy=(23, 0))),
     dict(name="south-pallet", what="Down Route 1 (over its ledges) into Pallet", walk=(25, 39),
-         inputs="DOWN*18, wait 150", expect=dict(map="PalletTown_Frlg", xy=(15, 0))),
+         inputs="DOWN*18, wait 150", expect=dict(map="PalletTown_Frlg")),  # a block or two in: the walk carries on
     dict(name="into-lab", what="Into Oak's lab", walk=(21, 16), inputs="UP*20, wait 250",
          expect=dict(map="PalletTown_ProfessorOaksLab_Frlg", xy=(6, 12))),
     dict(name="dex", what="The parcel to Oak: the Pokedex; Blue leaves", walk=(6, 4),

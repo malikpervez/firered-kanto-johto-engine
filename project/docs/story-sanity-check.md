@@ -67,7 +67,7 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 8 | `parcel` | Viridian's Poké Mart: the clerk gives Oak's Parcel | Viridian Mart 4,3 | `VAR_MAP_SCENE_VIRIDIAN_CITY_MART` 1, `VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB` 5 |
 | 9 | `leave-mart` | Out of the Mart | Viridian City 31,28 | |
 | 10 | `south-route1` | South into Route 1 | Route 1 23,0 | |
-| 11 | `south-pallet` | Down Route 1, over its ledges, into Pallet | Pallet Town 15,0 | |
+| 11 | `south-pallet` | Down Route 1, over its ledges, into Pallet | Pallet Town (the walk carries on a block or two) | |
 | 12 | `into-lab` | Into Oak's lab | Oak's lab 6,12 | |
 | 13 | `dex` | The parcel to Oak: the Pokédex; Blue leaves | Oak's lab 6,4 | `FLAG_SYS_POKEDEX_GET` set; `VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB` 6, `…_VIRIDIAN_CITY_OLD_MAN` 1, `…_ROUTE22` 1, `…_PALLET_TOWN_RIVALS_HOUSE` 1, `…_VIRIDIAN_CITY_MART` 2 |
 | 14 | `leave-lab-2` | Out of the lab | Pallet Town 21,16 | |
