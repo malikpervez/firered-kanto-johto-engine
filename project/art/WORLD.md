@@ -58,8 +58,8 @@ Viridian's palettes and needs none.
 **Route 22 can't show the new Viridian.** It's still FireRed's map, on the old Viridian's tilesets (so it never needed
 a seam for Viridian), and it has no room for one: its tileset is full and its last block numbers (912–1022) are
 hand-made pieces its own map uses. So Viridian's builds skip it (`pae seam build ViridianCity_Frlg --skip
-Route22_Frlg`), and near the join Route 22 shows Viridian's edge in the wrong tiles. Route 22 is rebuilt from the kit
-next, and Viridian waits for it on `v2-main`.
+Route22_Frlg`), and near the join Route 22 shows Viridian's edge in the wrong tiles. Known until Route 22 is rebuilt
+from the kit, which is next (its concept is with the other AI).
 
 ## Planned
 
