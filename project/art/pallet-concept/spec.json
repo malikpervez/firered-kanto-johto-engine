@@ -797,7 +797,7 @@
    "ground": "grass"
   },
   {
-   "name": "rock",
+   "name": "field_rock_a",
    "image": "../kit/sheets/ground.png",
    "x": 80,
    "y": 64,
@@ -809,9 +809,33 @@
    "solid": true
   },
   {
-   "name": "stump",
+   "name": "field_rock_b",
    "image": "../kit/sheets/ground.png",
    "x": 96,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "field_rock_c",
+   "image": "../kit/sheets/ground.png",
+   "x": 112,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "stump",
+   "image": "../kit/sheets/ground.png",
+   "x": 128,
    "y": 64,
    "banks": [
     0
