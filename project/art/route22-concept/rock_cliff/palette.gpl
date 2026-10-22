@@ -1,0 +1,20 @@
+GIMP Palette
+Name: Rock and cliff / warm grey
+Columns: 8
+# Index 0 transparent; remaining 15 entries opaque.
+  0   0   0	0 Transparent
+ 48  40  48	1 Deep foot / fissure
+ 80  64  56	2 Warm contact shadow
+104  88  80	3 Lower cliff shade
+136 112  96	4 Upper cliff shade
+160 136 112	5 Warm stone mid
+176 160 136	6 Warm grey cliff top
+200 184 152	7 Lit cliff plane
+216 200 168	8 Sunlit cliff facet
+ 88  88  72	9 Grey rock / stair deep shade
+112 112  96	10 Grey rock / stair shade
+144 144 128	11 Grey rock / stair mid
+184 184 160	12 Grey rock / stair lit face
+208 200 176	13 Grey rock / stair highlight
+ 80 104  64	14 Moss shade
+120 144  80	15 Moss light

@@ -24,8 +24,7 @@ pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --bor
 pae map connect $M up Route2_Frlg --offset 16 $P
 pae map connect $M left Route22_Frlg --offset 22 $P
 pae map connect $M down Route1_Frlg --offset 2 $P
-# (Route 22, not rebuilt yet, has no room for Viridian's strip: it gets its seams when it's rebuilt from the kit)
-[ -n "$KIT_BUILD_ALL" ] || pae seam build $M --skip Route22_Frlg $P  # build_all.sh makes them last
+[ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P  # build_all.sh makes them last, when every map is painted
 
 # doors, drawn in their packs: two blocks tall (the door and the block above it)
 pae door add $M 20 27 --frames ../$K/pokemon_center/pokemon_center_door.png --sound sliding $P

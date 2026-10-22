@@ -1,0 +1,29 @@
+{
+  "name": "big_boulder",
+  "image": "big_boulder.png",
+  "palette": "rock_cliff",
+  "footprint_blocks": [
+    2,
+    2
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "transparent_index": 0,
+  "interaction": null
+}

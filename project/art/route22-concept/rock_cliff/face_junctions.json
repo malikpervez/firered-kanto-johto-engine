@@ -1,0 +1,761 @@
+{
+  "revision": "3.2",
+  "palette": "rock_cliff",
+  "phase_origin": "Use the same global 3x3 phase origin as all other top pieces.",
+  "bands_px": 6,
+  "corner_square_px": 6,
+  "names": [
+    "side_W_face",
+    "side_E_face",
+    "side_W_face_start",
+    "side_E_face_start",
+    "in_SW_face",
+    "in_SE_face"
+  ],
+  "phases": {
+    "1": {
+      "side_W_face": {
+        "image": "phases/1/side_W_face.png",
+        "tiles_8x8": [
+          [
+            194,
+            1
+          ],
+          [
+            195,
+            3
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/1/side_E_face.png",
+        "tiles_8x8": [
+          [
+            0,
+            196
+          ],
+          [
+            2,
+            197
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/1/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            198,
+            1
+          ],
+          [
+            195,
+            3
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/1/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            0,
+            199
+          ],
+          [
+            2,
+            197
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/1/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            0,
+            1
+          ],
+          [
+            200,
+            3
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/1/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            201
+          ]
+        ]
+      }
+    },
+    "2": {
+      "side_W_face": {
+        "image": "phases/2/side_W_face.png",
+        "tiles_8x8": [
+          [
+            202,
+            5
+          ],
+          [
+            203,
+            7
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/2/side_E_face.png",
+        "tiles_8x8": [
+          [
+            4,
+            204
+          ],
+          [
+            6,
+            205
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/2/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            206,
+            5
+          ],
+          [
+            203,
+            7
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/2/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            4,
+            207
+          ],
+          [
+            6,
+            205
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/2/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            4,
+            5
+          ],
+          [
+            208,
+            7
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/2/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            209
+          ]
+        ]
+      }
+    },
+    "3": {
+      "side_W_face": {
+        "image": "phases/3/side_W_face.png",
+        "tiles_8x8": [
+          [
+            210,
+            9
+          ],
+          [
+            211,
+            11
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/3/side_E_face.png",
+        "tiles_8x8": [
+          [
+            8,
+            212
+          ],
+          [
+            10,
+            213
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/3/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            214,
+            9
+          ],
+          [
+            211,
+            11
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/3/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            8,
+            215
+          ],
+          [
+            10,
+            213
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/3/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            8,
+            9
+          ],
+          [
+            216,
+            11
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/3/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            8,
+            9
+          ],
+          [
+            10,
+            217
+          ]
+        ]
+      }
+    },
+    "4": {
+      "side_W_face": {
+        "image": "phases/4/side_W_face.png",
+        "tiles_8x8": [
+          [
+            218,
+            13
+          ],
+          [
+            219,
+            15
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/4/side_E_face.png",
+        "tiles_8x8": [
+          [
+            12,
+            220
+          ],
+          [
+            14,
+            221
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/4/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            222,
+            13
+          ],
+          [
+            219,
+            15
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/4/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            12,
+            223
+          ],
+          [
+            14,
+            221
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/4/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            12,
+            13
+          ],
+          [
+            224,
+            15
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/4/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            12,
+            13
+          ],
+          [
+            14,
+            225
+          ]
+        ]
+      }
+    },
+    "5": {
+      "side_W_face": {
+        "image": "phases/5/side_W_face.png",
+        "tiles_8x8": [
+          [
+            226,
+            17
+          ],
+          [
+            227,
+            19
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/5/side_E_face.png",
+        "tiles_8x8": [
+          [
+            16,
+            228
+          ],
+          [
+            18,
+            229
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/5/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            230,
+            17
+          ],
+          [
+            227,
+            19
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/5/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            16,
+            231
+          ],
+          [
+            18,
+            229
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/5/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            16,
+            17
+          ],
+          [
+            232,
+            19
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/5/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            16,
+            17
+          ],
+          [
+            18,
+            233
+          ]
+        ]
+      }
+    },
+    "6": {
+      "side_W_face": {
+        "image": "phases/6/side_W_face.png",
+        "tiles_8x8": [
+          [
+            234,
+            21
+          ],
+          [
+            235,
+            23
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/6/side_E_face.png",
+        "tiles_8x8": [
+          [
+            20,
+            236
+          ],
+          [
+            22,
+            237
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/6/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            238,
+            21
+          ],
+          [
+            235,
+            23
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/6/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            20,
+            239
+          ],
+          [
+            22,
+            237
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/6/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            20,
+            21
+          ],
+          [
+            240,
+            23
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/6/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            20,
+            21
+          ],
+          [
+            22,
+            241
+          ]
+        ]
+      }
+    },
+    "7": {
+      "side_W_face": {
+        "image": "phases/7/side_W_face.png",
+        "tiles_8x8": [
+          [
+            242,
+            25
+          ],
+          [
+            243,
+            27
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/7/side_E_face.png",
+        "tiles_8x8": [
+          [
+            24,
+            244
+          ],
+          [
+            26,
+            245
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/7/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            246,
+            25
+          ],
+          [
+            243,
+            27
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/7/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            24,
+            247
+          ],
+          [
+            26,
+            245
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/7/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            24,
+            25
+          ],
+          [
+            248,
+            27
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/7/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            24,
+            25
+          ],
+          [
+            26,
+            249
+          ]
+        ]
+      }
+    },
+    "8": {
+      "side_W_face": {
+        "image": "phases/8/side_W_face.png",
+        "tiles_8x8": [
+          [
+            250,
+            29
+          ],
+          [
+            251,
+            31
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/8/side_E_face.png",
+        "tiles_8x8": [
+          [
+            28,
+            252
+          ],
+          [
+            30,
+            253
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/8/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            254,
+            29
+          ],
+          [
+            251,
+            31
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/8/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            28,
+            255
+          ],
+          [
+            30,
+            253
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/8/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            28,
+            29
+          ],
+          [
+            256,
+            31
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/8/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            28,
+            29
+          ],
+          [
+            30,
+            257
+          ]
+        ]
+      }
+    },
+    "9": {
+      "side_W_face": {
+        "image": "phases/9/side_W_face.png",
+        "tiles_8x8": [
+          [
+            258,
+            33
+          ],
+          [
+            259,
+            35
+          ]
+        ]
+      },
+      "side_E_face": {
+        "image": "phases/9/side_E_face.png",
+        "tiles_8x8": [
+          [
+            32,
+            260
+          ],
+          [
+            34,
+            261
+          ]
+        ]
+      },
+      "side_W_face_start": {
+        "image": "phases/9/side_W_face_start.png",
+        "tiles_8x8": [
+          [
+            262,
+            33
+          ],
+          [
+            259,
+            35
+          ]
+        ]
+      },
+      "side_E_face_start": {
+        "image": "phases/9/side_E_face_start.png",
+        "tiles_8x8": [
+          [
+            32,
+            263
+          ],
+          [
+            34,
+            261
+          ]
+        ]
+      },
+      "in_SW_face": {
+        "image": "phases/9/in_SW_face.png",
+        "tiles_8x8": [
+          [
+            32,
+            33
+          ],
+          [
+            264,
+            35
+          ]
+        ]
+      },
+      "in_SE_face": {
+        "image": "phases/9/in_SE_face.png",
+        "tiles_8x8": [
+          [
+            32,
+            33
+          ],
+          [
+            34,
+            265
+          ]
+        ]
+      }
+    }
+  },
+  "placement": {
+    "west": {
+      "adjacent_column": "inner_E",
+      "upper_top": "side_W_face_start",
+      "lower_top": "side_W_face",
+      "corner_above": "in_SW_face"
+    },
+    "east": {
+      "adjacent_column": "inner_W",
+      "upper_top": "side_E_face_start",
+      "lower_top": "side_E_face",
+      "corner_above": "in_SE_face"
+    },
+    "outer": {
+      "SW": "outer_W",
+      "SE": "outer_E"
+    }
+  },
+  "rules": [
+    "Use side_*_face_start beside the upper block of the adjacent face; side_*_face beside its lower block or a continuing side contact.",
+    "In the top tile immediately above that side start, replace a normal lawn in_SW/in_SE notch with in_SW_face/in_SE_face. For mixed borders, copy only the relevant 8x8 quadrant.",
+    "These are explicit face-adjacency overrides, not lawn/outside mask bits. Do not select the standard W/E lawn lip at a face contact.",
+    "W/E artworks have separate directional shading; never mirror them."
+  ]
+}

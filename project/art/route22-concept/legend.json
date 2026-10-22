@@ -1,0 +1,205 @@
+{
+ "T": {
+  "auto": "forest"
+ },
+ ".": {
+  "pick": [
+   "lawn_a",
+   "lawn_b",
+   "lawn_c",
+   "lawn_d"
+  ]
+ },
+ ",": "lawn_flowers",
+ "=": {
+  "auto": "cobble"
+ },
+ ":": {
+  "auto": "dirt"
+ },
+ "~": {
+  "auto": "pond",
+  "elevation": 1
+ },
+ "s": {
+  "auto": "sea",
+  "elevation": 1
+ },
+ "#": {
+  "auto": "fence"
+ },
+ "d": {
+  "auto": "dock"
+ },
+ "*": {
+  "pick": [
+   "flowers1",
+   "flowers2",
+   "flowers3",
+   "flowers4"
+  ]
+ },
+ "b": "bush",
+ "o": "small_rock",
+ "k": "stump",
+ "l": "lamp",
+ "S": "sign",
+ "B": "barrel",
+ "c": "crate",
+ "O": "boat",
+ "w": "well",
+ "R": "round_tree",
+ "g": {
+  "pick": [
+   "tall_grass",
+   "tall_grass_flowers"
+  ],
+  "order": "checker"
+ },
+ "_": {
+  "auto": "ledge"
+ },
+ "h": {
+  "auto": "steps"
+ },
+ "v": {
+  "auto": "pond",
+  "joins": "~",
+  "with": "lily",
+  "elevation": 1
+ },
+ "r": {
+  "auto": "pond",
+  "joins": "~",
+  "with": "reeds",
+  "elevation": 1
+ },
+ "p": {
+  "auto": "paving"
+ },
+ "q": {
+  "auto": "sea",
+  "joins": "s",
+  "with": "rock_a",
+  "elevation": 1
+ },
+ "Q": {
+  "auto": "sea",
+  "joins": "s",
+  "with": "rock_b",
+  "elevation": 1
+ },
+ "U": {
+  "name": "league_gate_top",
+  "joins": "C"
+ },
+ "L": "league_gate_front",
+ "n": {
+  "name": "paving_to_cobble_N",
+  "joins": "p"
+ },
+ "H": {
+  "name": "rock_stairs",
+  "joins": "p"
+ },
+ "X": "big_boulder",
+ "A": {
+  "auto": "top1",
+  "joins": "C"
+ },
+ "D": {
+  "auto": "top2",
+  "joins": "C"
+ },
+ "E": {
+  "auto": "top3",
+  "joins": "C"
+ },
+ "F": {
+  "auto": "top4",
+  "joins": "C"
+ },
+ "G": {
+  "auto": "top5",
+  "joins": "C"
+ },
+ "I": {
+  "auto": "top6",
+  "joins": "C"
+ },
+ "J": {
+  "auto": "top7",
+  "joins": "C"
+ },
+ "K": {
+  "auto": "top8",
+  "joins": "C"
+ },
+ "V": {
+  "auto": "top9",
+  "joins": "C"
+ },
+ "[": "face_outer_W",
+ "{": "face_inner_W",
+ "M": "face_middle_1",
+ "N": "face_middle_2",
+ "P": "face_middle_3",
+ "}": "face_inner_E",
+ "]": "face_outer_E",
+ "a": {
+  "name": "top1#13+Eon",
+  "joins": "C"
+ },
+ "e": {
+  "name": "top1#15.2+in_SE_face",
+  "joins": "C"
+ },
+ "f": {
+  "name": "top1#7+Won",
+  "joins": "C"
+ },
+ "i": {
+  "name": "top2#13+Eon",
+  "joins": "C"
+ },
+ "j": {
+  "name": "top4#13+Estart",
+  "joins": "C"
+ },
+ "m": {
+  "name": "top4#14.2+in_SE_face",
+  "joins": "C"
+ },
+ "t": {
+  "name": "top4#14.4+in_SW_face",
+  "joins": "C"
+ },
+ "u": {
+  "name": "top5#14.2+in_SE_face",
+  "joins": "C"
+ },
+ "x": {
+  "name": "top7#13+Eon",
+  "joins": "C"
+ },
+ "y": {
+  "name": "top7#13+Estart",
+  "joins": "C"
+ },
+ "z": {
+  "name": "top7#7+Wstart",
+  "joins": "C"
+ },
+ "<": {
+  "name": "top8#13+Estart",
+  "joins": "C"
+ },
+ "7": {
+  "name": "cobble#7",
+  "joins": "="
+ },
+ ")": {
+  "name": "cobble#15",
+  "joins": "="
+ }
+}

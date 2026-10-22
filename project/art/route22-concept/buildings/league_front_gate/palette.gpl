@@ -1,0 +1,20 @@
+GIMP Palette
+Name: league_gate
+Columns: 8
+# Index 0 transparent; indices 1-15 opaque.
+  0   0   0	 0 Transparent
+ 24  32  40	 1 Deep recess / outline
+ 56  64  72	 2 Slate outline
+ 64  88 104	 3 Slate shadow / glass dark
+ 88 112 128	 4 Slate face
+128 152 168	 5 Slate light
+176 200 200	 6 Ridge / glass glint
+104 104  96	 7 Stone deep shadow
+144 144 128	 8 Stone shade
+184 184 160	 9 Stone mid
+216 208 184	10 Limestone face
+240 232 208	11 Limestone sunlit edge
+136 104  56	12 Gold relief shadow
+192 152  72	13 Gold
+232 200 120	14 Gold highlight
+ 72 112 128	15 Blue glass / door

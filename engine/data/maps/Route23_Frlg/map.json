@@ -17,11 +17,6 @@
       "map": "MAP_INDIGO_PLATEAU_EXTERIOR",
       "offset": 0,
       "direction": "up"
-    },
-    {
-      "map": "MAP_ROUTE22",
-      "offset": 0,
-      "direction": "down"
     }
   ],
   "object_events": [
