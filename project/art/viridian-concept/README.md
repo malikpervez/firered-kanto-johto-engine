@@ -22,7 +22,7 @@ columns 24–27. It has:
 ## From the plan to the map
 
 `make_art.py` reads the plan and makes it something the kit can build (`fit`):
-- the pine forest is drawn in 2×2-block trees on an even grid: where the plan has a 2×2 cell partly forest, it's all
+- the forest is drawn in 2×2-block trees on an even grid: where the plan has a 2×2 cell partly forest, it's all
   forest if the rest is lawn, else its forest blocks become bushes (so the old man's road stays one block wide and
   the grove stays closed);
 - round trees and the well are 2×2 and lamps 1×2: the plan's one-block ones grow where there's lawn;

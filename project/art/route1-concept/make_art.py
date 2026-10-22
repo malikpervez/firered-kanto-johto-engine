@@ -3,7 +3,7 @@
 Town toward Viridian City, built from the kit (project/art/kit) and a few pieces of its own.
 
 The route is 50x40 blocks, as before, so its joins stay where they were: Viridian's road meets the top at columns
-22-25, Pallet's road the bottom at columns 24-25. Between pine forest walls: a dirt road through three ledges (with
+22-25, Pallet's road the bottom at columns 24-25. Between forest walls: a dirt road through three ledges (with
 stone steps where the road goes down them), tall grass on both sides, a rest shelter by a pond with lily pads and
 reeds, a stream crossed by a little bridge on a side path, and a wooden arch where the road leaves Pallet.
 

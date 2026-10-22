@@ -52,7 +52,7 @@ def fit(g: list[list[str]]) -> list[list[str]]:
 
     - the events' cells (the old man ``n``, the tree to cut ``x``) are the dirt road under them;
     - the pond keeper's cottage is ``Y`` (``Q`` is the kit's sea rock), and each door ``@`` is its building's letter;
-    - the pine forest is drawn in 2x2-block trees on an even grid: a 2x2 cell the plan has partly forest becomes all
+    - the forest is drawn in 2x2-block trees on an even grid: a 2x2 cell the plan has partly forest becomes all
       forest where the rest is plain lawn, else its forest blocks become bushes (still solid, so the old man's
       one-block road and the grove stay closed);
     - round trees and the well are 2x2, lamps 1x2 (the lamp above its foot): the plan's one-block ones grow where

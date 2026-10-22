@@ -8,7 +8,7 @@ plus two pieces of its own. Only the character sprites, Pokémon and story come 
 ![The map](map.png)
 
 The route is 50×40 blocks, the same size as before, so its joins stay where they were. Viridian's road meets the
-top at columns 22–25, and Pallet's road meets the bottom at columns 24–25 (see `../WORLD.md`). Between pine forest
+top at columns 22–25, and Pallet's road meets the bottom at columns 24–25 (see `../WORLD.md`). Between forest
 walls, it has:
 - a dirt road down through three ledges, with stone steps where the road goes down them;
 - tall grass on both sides;

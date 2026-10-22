@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Route 22 after the concept (plan_stage1.txt and the packs, made with another AI from a brief): the hilly route
-west of Viridian City to the Pokémon League Front Gate, between rocky cliffs and pine forest, with tall grass, a
+west of Viridian City to the Pokémon League Front Gate, between rocky cliffs and forest, with tall grass, a
 pond, ledges and a dressed-stone approach up the stairs to the gate.
 
 The route is 52x28 blocks, as before. Its road from Viridian leaves the right edge at rows 6-9 (Viridian's rows

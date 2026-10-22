@@ -1,0 +1,20 @@
+GIMP Palette
+Name: Sunlit Broadleaf v0.4
+Columns: 8
+# 0 transparent; 1-15 opaque
+  0   0   0	0 Transparent
+ 16  40  32	1 Canopy deepest crease
+ 24  56  48	2 Canopy underside
+ 32  80  56	3 Forest shadow
+ 48 104  64	4 Leaf shade
+ 64 128  64	5 Leaf lower mid
+ 80 152  72	6 Leaf base
+112 184  72	7 Leaf upper mid
+144 208  80	8 Sunlit leaf
+176 224 104	9 Leaf tip highlight
+208 232 136	10 Rare crown glint
+ 56  40  32	11 Bark outline
+ 96  64  40	12 Bark shade
+136  96  56	13 Bark mid
+176 128  72	14 Bark light
+ 56  72  40	15 Ground contact shadow

@@ -13,7 +13,7 @@ Banks (palettes):
   1  water: the pond and the sea, its cliff and the sea rocks (native pixel packs in pond/ and sea/, put together
      in water.py), animated in eight frames
   2  wood: fences, the dock, signs, barrels, crates, the boat, the well (and buildings drawn in wood)
-  3  trees: the pines, round trees and bushes (trees.py)
+  3  trees: the forest and the standalone trees (broadleaf/, a native pixel pack) and the bushes (trees.py)
   4  tall grass: tall_grass/ (drawn natively at 16x16, made with another AI from a brief) and the sprites over
      the player's feet in it
   5  the Pokémon Center, 6  the Poké Mart: buildings every town shares (buildings/, native pixel packs; buildings.py),
@@ -443,6 +443,9 @@ def lamp() -> np.ndarray:
 # (mask, corners) of the forest's inside-corner pieces in the kit: every map's together (a map checks its own are
 # here with ``forest_corners``; add new ones here, then rebuild every map)
 FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8), (7, 1), (7, 2), (13, 4), (14, 4)]
+# the forest's middle and its straight edges in all three of the pack's crowns, mixed by position (the rest in
+# the first): most of a forest is these, and the tiles for every piece in all three wouldn't fit beside the rest
+FOREST_VARIED = (15, 14, 13, 11, 7)
 
 
 def forest_corners(g, char: str = "T") -> set[tuple[int, int]]:
@@ -684,11 +687,16 @@ def primary(spec_dir: Path) -> dict:
     plants.add("lamp", lamp(), tileset="primary", ground="grass", solid=True)
     spec_mt += plants.write()
     tree_sheet = sheet("trees", "trees")
-    for m in range(16):  # forest#mask: a 2x2 pine for each way the forest goes on (paint picks it per cell)
-        tree_sheet.add(f"forest#{m}", trees.pine(m), tileset="primary", solid=True, ground="grass")
+    for m in range(16):  # forest#mask: a forest cell for each way the forest goes on (paint picks it per cell)
+        tree_sheet.add(f"forest#{m}", trees.forest(m), tileset="primary", solid=True, ground="grass")
+        if m in FOREST_VARIED:  # forest#mask~1, ~2: the other crowns (paint draws each cell from one)
+            for k, v in enumerate(trees.VARIANTS[1:], 1):
+                tree_sheet.add(f"forest#{m}~{k}", trees.forest(m, 0, v), tileset="primary", solid=True,
+                               ground="grass")
     for m, c in FOREST_CORNERS:  # forest#mask.corners: where an inside corner opens onto the map
-        tree_sheet.add(f"forest#{m}.{c}", trees.pine(m, c), tileset="primary", solid=True, ground="grass")
-    tree_sheet.add("round_tree", trees.round_tree(), tileset="primary", ground="grass", solid=True)
+        tree_sheet.add(f"forest#{m}.{c}", trees.forest(m, c), tileset="primary", solid=True, ground="grass")
+    for name in trees.STANDALONE:  # the standalone trees ("R" picks one by position)
+        tree_sheet.add(name, trees.tree(name), tileset="primary", ground="grass", solid=True)
     tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
     # route pieces (fields.py): tall grass, ledges, steps, lily pads and reeds
@@ -743,7 +751,7 @@ LEGEND = {
     "#": {"auto": "fence"}, "d": {"auto": "dock"},
     "*": {"pick": ["flowers1", "flowers2", "flowers3", "flowers4"]},
     "b": "bush", "o": "rock", "k": "stump", "l": "lamp", "S": "sign", "B": "barrel", "c": "crate", "O": "boat",
-    "w": "well", "R": "round_tree",
+    "w": "well", "R": {"pick": list(trees.STANDALONE)},
     "g": {"pick": ["tall_grass", "tall_grass_flowers"], "order": "checker"},
     "_": {"auto": "ledge"}, "h": {"auto": "steps"},
     "v": {"auto": "pond", "joins": "~", "with": "lily", "elevation": 1},

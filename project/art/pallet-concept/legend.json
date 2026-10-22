@@ -48,7 +48,13 @@
  "c": "crate",
  "O": "boat",
  "w": "well",
- "R": "round_tree",
+ "R": {
+  "pick": [
+   "round_tree",
+   "offset_tree",
+   "broad_tree"
+  ]
+ },
  "g": {
   "pick": [
    "tall_grass",

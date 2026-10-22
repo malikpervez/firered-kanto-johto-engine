@@ -12,7 +12,7 @@ The route is 52×28 blocks, as before. The road from Viridian leaves the right e
 28–31), and Blue meets you on its straight stretch. It has:
 - the League Front Gate (15×10 blocks, two storeys) in the northwest, set into the cliff, on a stone forecourt up a
   flight of stairs in the cliff;
-- rocky cliffs and terraces between pine forest walls;
+- rocky cliffs and terraces between forest walls;
 - a dressed-stone approach from the road down to the gate, where it meets the cobblestones through joins;
 - tall grass on both sides, a pond with lily pads and reeds, a ledge with steps, round trees and rocks.
 
