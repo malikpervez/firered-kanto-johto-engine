@@ -39,7 +39,13 @@
    "flowers4"
   ]
  },
- "b": "bush",
+ "b": {
+  "pick": [
+   "bush_a",
+   "bush_b",
+   "bush_c"
+  ]
+ },
  "o": "rock",
  "k": "stump",
  "l": "lamp",

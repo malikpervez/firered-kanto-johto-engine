@@ -2500,9 +2500,33 @@
    "over_rows": 1
   },
   {
-   "name": "bush",
+   "name": "bush_a",
    "image": "../kit/sheets/trees.png",
    "x": 192,
+   "y": 128,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bush_b",
+   "image": "../kit/sheets/trees.png",
+   "x": 208,
+   "y": 128,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bush_c",
+   "image": "../kit/sheets/trees.png",
+   "x": 224,
    "y": 128,
    "banks": [
     3

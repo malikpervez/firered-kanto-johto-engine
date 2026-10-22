@@ -12,8 +12,8 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-22 |
-| Game | `v2-main` at `b30c4d9e` (the broadleaf trees, PR #23) with the trees' crowns walkable (branch `claude/tree-canopy`) |
-| ROM | `make -j4` with the default settings. SHA-1 `3e625b42cce459635c63a6452725a76119b2c679`, SHA-256 `458ad45019e1c42e16fbfe09058467e79a18cf298e2b1941ff8572e521876739` |
+| Game | `v2-main` at `b30c4d9e` (the broadleaf trees, PR #23), with the trees' crowns walkable (PR #24) and the broadleaf bushes (branch `claude/broadleaf-bushes`) |
+| ROM | `make -j4` with the default settings. SHA-1 `625d495225d6aa61a3ccff4ab255b79815616fee`, SHA-256 `f99162cea5c7b65e655595b5d860e30adbb3c4488cec28eb4147ffb2757b91bd` |
 | pae | `2805726` (`main` after pae PR #18) |
 | Last step passed | 29 `league-gate`: up Route 22's cliff stairs and into the Pokémon League Front Gate |
 | Replay tests | 45 of 45 pass |
@@ -125,3 +125,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-22 | `v2-main` `a74a9989` | **All 29 steps pass**, first by hand with the same inputs, then with `story_check.py`: from the top in one run (19 minutes), and resumed `--from south-pallet`. |
 | 2026-10-22 | the broadleaf trees on every kit map | **All 29 steps pass** from the top (1098 s). |
 | 2026-10-22 | the standalone trees' crowns walkable | **All 29 steps pass**: 1–11 from the top, then (after the machine restarted) `--from into-lab` (705 s). |
+| 2026-10-22 | the broadleaf bushes | **All 29 steps pass** from the top (1089 s). |
