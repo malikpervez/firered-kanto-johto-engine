@@ -7,9 +7,9 @@ pieces, so every map's build makes the same primary tileset: a map's secondary t
 tiles, and rebuilding one map never breaks another. Change the kit, then rebuild every map (project/art/build_all.sh).
 
 Banks (palettes):
-  0  ground: grass, dirt, cobblestones, dressed-stone paving (paving/, a native pixel pack), rocks, stumps; ledges,
-     steps, lily pads and reeds (fields.py,
-     the last two drawn over the pond's water), and the tall grass sprite drawn over the player's feet
+  0  ground: grass, dirt, cobblestones, dressed-stone paving (paving/, a native pixel pack), the field rocks
+     (field_rocks/, a native pixel pack), stumps; ledges, steps, lily pads and reeds (fields.py, the last two drawn
+     over the pond's water), and the tall grass sprite drawn over the player's feet
   1  water: the pond and the sea, its cliff and the sea rocks (native pixel packs in pond/ and sea/, put together
      in water.py), animated in eight frames
   2  wood: fences, the dock, signs, barrels, crates, the boat, the well (and buildings drawn in wood)
@@ -196,17 +196,12 @@ def dirt(mask: int) -> np.ndarray:
     return _cut(t, mask, 23, SD)
 
 
-def rock(seed: int, big: bool) -> np.ndarray:
-    t = np.zeros((16, 16), np.uint8)
-    m = ellipse(16, 16, 8, 9.5 if big else 11, 6.5 if big else 4.5, 5 if big else 3.5)
-    t[m] = KM
-    t[m & ellipse(16, 16, 6, 7.5 if big else 10, 4 if big else 2.5, 3 if big else 2)] = KL
-    t[m & ~ellipse(16, 16, 7, 8.5 if big else 10.5, 6.5 if big else 4.5, 5 if big else 3.5)] = KD
-    t[edge_of(m)] = OUT
-    if big:
-        t[9, 9:12] = KD  # a crack
-        t[10, 11] = KD
-    return t
+# the field rocks: a native pixel pack (field_rocks/, Sunlit Field Rock Pack v0.1), drawn in the ground palette
+ROCKS = ("field_rock_a", "field_rock_b", "field_rock_c")
+
+
+def field_rock(name: str) -> np.ndarray:
+    return autotile.load(KIT / "field_rocks" / f"{name.removeprefix('field_')}.png", P0)
 
 
 def stump() -> np.ndarray:
@@ -648,7 +643,8 @@ def primary(spec_dir: Path) -> dict:
         ground.add(f"paving#{m}.{c}", autotile.compose(paving_piece, m, 0, c), tileset="primary", ground="grass")
     for name in PAVING_JOINS:
         ground.add(f"paving_{name}", paving_piece(name), tileset="primary", ground="grass")
-    ground.add("rock", rock(1, True), tileset="primary", ground="grass", solid=True)
+    for name in ROCKS:  # the field rocks ("o" picks one by position)
+        ground.add(name, field_rock(name), tileset="primary", ground="grass", solid=True)
     ground.add("stump", stump(), tileset="primary", ground="grass", solid=True)
     spec_mt += ground.write()
     # water, animated: the pond and the sea from their packs (water.py)
@@ -753,7 +749,8 @@ LEGEND = {
     "~": {"auto": "pond", "elevation": 1}, "s": {"auto": "sea", "elevation": 1},
     "#": {"auto": "fence"}, "d": {"auto": "dock"},
     "*": {"pick": ["flowers1", "flowers2", "flowers3", "flowers4"]},
-    "b": {"pick": list(trees.BUSHES)}, "o": "rock", "k": "stump", "l": "lamp", "S": "sign", "B": "barrel", "c": "crate", "O": "boat",
+    "b": {"pick": list(trees.BUSHES)}, "o": {"pick": list(ROCKS)}, "k": "stump", "l": "lamp", "S": "sign",
+    "B": "barrel", "c": "crate", "O": "boat",
     "w": "well", "R": {"pick": list(trees.STANDALONE)},
     "g": {"pick": ["tall_grass", "tall_grass_flowers"], "order": "checker"},
     "_": {"auto": "ledge"}, "h": {"auto": "steps"},

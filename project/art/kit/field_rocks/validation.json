@@ -1,0 +1,280 @@
+{
+  "pack": "Sunlit Field Rock Pack",
+  "version": "0.1",
+  "design_status": "draft_pending_user_approval",
+  "status": "PASS",
+  "native_pixel_authoring": true,
+  "downscaling_used": false,
+  "palette_exact": true,
+  "palette_rgb": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      24,
+      32,
+      32
+    ],
+    [
+      24,
+      88,
+      56
+    ],
+    [
+      40,
+      120,
+      72
+    ],
+    [
+      56,
+      152,
+      80
+    ],
+    [
+      80,
+      184,
+      96
+    ],
+    [
+      112,
+      200,
+      120
+    ],
+    [
+      152,
+      224,
+      144
+    ],
+    [
+      112,
+      72,
+      48
+    ],
+    [
+      176,
+      128,
+      80
+    ],
+    [
+      216,
+      176,
+      120
+    ],
+    [
+      96,
+      96,
+      96
+    ],
+    [
+      144,
+      144,
+      136
+    ],
+    [
+      192,
+      192,
+      176
+    ],
+    [
+      72,
+      48,
+      40
+    ],
+    [
+      240,
+      240,
+      224
+    ]
+  ],
+  "transparent_index": 0,
+  "alpha_values": [
+    0,
+    255
+  ],
+  "assets": {
+    "rock_a": {
+      "size_px": [
+        16,
+        16
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "used_palette_indices": [
+        0,
+        1,
+        2,
+        3,
+        11,
+        12,
+        13,
+        15
+      ],
+      "all_pixels_in_assigned_palette": true,
+      "all_rgb_multiples_of_8": true,
+      "review_px": [
+        64,
+        64
+      ],
+      "unique_8x8_tiles": 4,
+      "opaque_bounds": {
+        "x": 1,
+        "y": 6,
+        "width": 14,
+        "height": 10
+      },
+      "stone_base_row": 14,
+      "contact_shadow_row": 15,
+      "cream_pixels": 2,
+      "sha256": "41abbc14dfb8e9f9e02b65d3f71ac3b09953a0651034823da286aceda03d9738"
+    },
+    "rock_b": {
+      "size_px": [
+        16,
+        16
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "used_palette_indices": [
+        0,
+        1,
+        2,
+        8,
+        11,
+        12,
+        13,
+        15
+      ],
+      "all_pixels_in_assigned_palette": true,
+      "all_rgb_multiples_of_8": true,
+      "review_px": [
+        64,
+        64
+      ],
+      "unique_8x8_tiles": 4,
+      "opaque_bounds": {
+        "x": 2,
+        "y": 4,
+        "width": 13,
+        "height": 12
+      },
+      "stone_base_row": 14,
+      "contact_shadow_row": 15,
+      "cream_pixels": 1,
+      "sha256": "68e73e4110eed3adceb2c2d350bcbf5c08ca1e2b17616d03eb1f5b540b3eda17"
+    },
+    "rock_c": {
+      "size_px": [
+        16,
+        16
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "used_palette_indices": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        11,
+        12,
+        13,
+        15
+      ],
+      "all_pixels_in_assigned_palette": true,
+      "all_rgb_multiples_of_8": true,
+      "review_px": [
+        64,
+        64
+      ],
+      "unique_8x8_tiles": 4,
+      "opaque_bounds": {
+        "x": 1,
+        "y": 5,
+        "width": 14,
+        "height": 11
+      },
+      "stone_base_row": 14,
+      "contact_shadow_row": 15,
+      "cream_pixels": 1,
+      "sha256": "3bc4acaa5e9a18fb98fe870acd56ac44ce62e29f88eb7f3111023208ea6dc260"
+    }
+  },
+  "unique_8x8_tiles_total": 12,
+  "checks": [
+    {
+      "name": "All palette RGB channels are multiples of 8",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_a: exact 16-entry palette order, binary alpha and indexed 4-bit native/4x PNG",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_a: footprint, shared baseline, 1–3 cream pixels, stone colours and tile budget",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_b: exact 16-entry palette order, binary alpha and indexed 4-bit native/4x PNG",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_b: footprint, shared baseline, 1–3 cream pixels, stone colours and tile budget",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_c: exact 16-entry palette order, binary alpha and indexed 4-bit native/4x PNG",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_c: footprint, shared baseline, 1–3 cream pixels, stone colours and tile budget",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_a_scale: exact nearest-neighbour 4x preview",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_b_scale: exact nearest-neighbour 4x preview",
+      "result": "PASS"
+    },
+    {
+      "name": "rock_c_scale: exact nearest-neighbour 4x preview",
+      "result": "PASS"
+    },
+    {
+      "name": "two_rocks: exact nearest-neighbour 4x preview",
+      "result": "PASS"
+    },
+    {
+      "name": "pathside: exact nearest-neighbour 4x preview",
+      "result": "PASS"
+    },
+    {
+      "name": "three_shapes: exact nearest-neighbour 4x preview",
+      "result": "PASS"
+    },
+    {
+      "name": "Player is 16x26; rock/bush/player share baseline in scale previews",
+      "result": "PASS"
+    },
+    {
+      "name": "Three distinct, non-mirrored native drawings",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Import PNGs and preview scaling validated. Preview context uses approved bush v0.2 and the 16x26 player, with their own palettes. No game runtime test."
+}

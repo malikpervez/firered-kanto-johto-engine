@@ -46,7 +46,13 @@
    "bush_c"
   ]
  },
- "o": "rock",
+ "o": {
+  "pick": [
+   "field_rock_a",
+   "field_rock_b",
+   "field_rock_c"
+  ]
+ },
  "k": "stump",
  "l": "lamp",
  "S": "sign",
