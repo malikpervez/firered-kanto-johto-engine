@@ -29,7 +29,8 @@ project/scripts/story_check.py --from route22   # carry on from a step
 project/scripts/story_check.py --to dex         # stop after a step
 ```
 
-The script needs pae with `pae play --show-flag` (pae PR #17).
+The script needs pae with `pae play --show-flag` (pae PR #17). A run from the top takes about 20 minutes; a
+run `--from` a later step takes less.
 
 * Each step saves a checkpoint, `story-NN-name`, in `engine/.pae/checkpoints/`. The next step starts from it.
   `--from STEP` needs the checkpoint of the step before it. A fresh clone has no checkpoints, so start from the
@@ -121,4 +122,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | Date | Game | Result |
 |---|---|---|
 | 2026-10-22 | `v2-main` after PR #19 | **Stopped at step 3.** The lab battle reset the game, and so did the old man's demonstration. Fixed in PR #21 (a larger heap). |
-| 2026-10-22 | `v2-main` `a74a9989` | **All 29 steps pass**, first by hand with the same inputs, then with `story_check.py`. |
+| 2026-10-22 | `v2-main` `a74a9989` | **All 29 steps pass**, first by hand with the same inputs, then with `story_check.py`: from the top in one run (19 minutes), and resumed `--from south-pallet`. |
