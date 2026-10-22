@@ -30,7 +30,10 @@ went), its lamps stand at its ends, and a big boulder stands east of it.
     lawn or forest, an inner end where it meets a cliff top or the stairs reaching further south, and the three
     middles mixed between;
   - the rest is its **top**: the pack's texture repeats every three blocks from the map's corner (its nine phases),
-    each block with the edges its neighbours call for (the pack's recipes). The cliff is solid, top and face;
+    each block with the edges its neighbours call for (the pack's recipes). Where a top's side meets a face (a
+    ridge between terraces) it takes the pack's face joins instead of its lawn edge (revision 3.2: the side starting
+    beside the face's upper block and running on beside its lower one, the corner above it); the corner tops sit
+    flush on the face's outer ends. The cliff is solid, top and face;
   - the **stairs** (`H`, 2×2) are in the face below the forecourt; the forecourt and the road open onto them;
   - its **rocks**: the small one stands for the kit's rock here (`o`), the big boulder (`X`) east of the forecourt.
     The pack's breakable rock isn't used yet (nothing on the route breaks rocks).
@@ -57,6 +60,7 @@ until Route 23 is rebuilt (`../WORLD.md`).
 ## In game
 
 ![The stairs up the cliff to the gate's forecourt](in_game_gate.png)
+![The ridge between the terraces: its top meets the faces flush](in_game_ridge.png)
 ![The stone approach from the road](in_game_approach.png)
 ![The pond and the tall grass](in_game_pond.png)
 ![Blue meets you on the road from Viridian](in_game_blue.png)

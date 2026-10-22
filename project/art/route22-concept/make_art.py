@@ -181,23 +181,42 @@ _recipes = {(r["phase"], r["mask"]): r["tiles_8x8"]
             for r in json.loads((ROCK / "autotile_recipes.json").read_text())["recipes"]}
 
 
+_junctions = json.loads((ROCK / "face_junctions.json").read_text())["phases"]
+JUNCTION_CHARS = "aefijmtuxyz<>?;^|"  # tops beside a face, one character for each piece
+
+
+def tile(t: int) -> np.ndarray:
+    return _atlas[8 * (t // 16):8 * (t // 16) + 8, 8 * (t % 16):8 * (t % 16) + 8]
+
+
+def quads(tiles) -> list[list[np.ndarray]]:
+    return [[tile(t) for t in row] for row in tiles]
+
+
+def join(q) -> np.ndarray:
+    return np.vstack([np.hstack(row) for row in q])
+
+
+def outside_of(mask: int, corners: int) -> int:
+    """pae's mask (the sides that are top) and inside corners as the pack's bits of what isn't top (1 N, 2 E, 4 S,
+    8 W, 16 NE, 32 SE, 64 SW, 128 NW)."""
+    return (15 & ~mask) | sum(16 << i for i in range(4) if corners & 1 << i)
+
+
 def top(k: int, outside: int) -> np.ndarray:
-    """The cliff top of phase ``k`` whose neighbours ``outside`` aren't cliff top (the pack's bits: 1 N, 2 E, 4 S,
-    8 W, 16 NE, 32 SE, 64 SW, 128 NW), from its recipe: four tiles of its atlas."""
-    out = np.zeros((16, 16), np.uint8)
-    for j, row in enumerate(_recipes[k, outside]):
-        for i, t in enumerate(row):
-            out[8 * j:8 * j + 8, 8 * i:8 * i + 8] = _atlas[8 * (t // 16):8 * (t // 16) + 8, 8 * (t % 16):8 * (t % 16) + 8]
-    return out
+    """The cliff top of phase ``k`` whose neighbours ``outside`` aren't cliff top, from its recipe: four tiles of
+    the pack's atlas."""
+    return join(quads(_recipes[k, outside]))
 
 
-def tops_in(g) -> set[tuple[int, int, int]]:
-    """The cliff tops the grid has, as pae paints them: (phase, mask of the sides that are top, inside corners)."""
+def tops_in(g) -> dict[tuple[int, int], tuple[int, int, int]]:
+    """The cliff tops of the grid, as pae paints them: block -> (phase, mask of the sides that are top, inside
+    corners)."""
     h, w = len(g), len(g[0])
 
     def same(x, y):  # the map's edges count as the same, as in pae
         return not (0 <= x < w and 0 <= y < h) or g[y][x] in TOP + "U"
-    used = set()
+    out = {}
     for y in range(h):
         for x in range(w):
             if g[y][x] in TOP:
@@ -206,8 +225,51 @@ def tops_in(g) -> set[tuple[int, int, int]]:
                 corners = sum(b for b, (dx, dy), sides in ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12),
                                                            (8, (-1, -1), 9))
                               if mask & sides == sides and not same(x + dx, y + dy))
-                used.add((TOP.index(g[y][x]) + 1, mask, corners))
-    return used
+                out[x, y] = (TOP.index(g[y][x]) + 1, mask, corners)
+    return out
+
+
+def junctions(g, tops) -> dict[tuple[int, int], tuple[str, np.ndarray]]:
+    """The tops that meet a face (the pack's 3.2 pieces, not its lawn edges): beside a face's upper block its side
+    starts (``side_W_face_start``), beside its lower block it runs on (``side_W_face``); a top whose inside corner
+    is a face's upper block has the face's corner (``in_SW_face``). Where the top's own edge (lawn north or south of
+    it) meets that side, the quarter keeps its lawn edge."""
+    h, w = len(g), len(g[0])
+
+    def face_at(x, y):  # None, "start" (a face's upper block) or "on" (its lower block)
+        if not (0 <= x < w and 0 <= y < h) or g[y][x] not in FACE:
+            return None
+        return "on" if 0 < y and g[y - 1][x] == g[y][x] and (y < 2 or g[y - 2][x] != g[y][x]) else "start"
+    out = {}
+    for (x, y), (k, mask, corners) in tops.items():
+        j = _junctions[str(k)]
+        sides = {"W": face_at(x - 1, y), "E": face_at(x + 1, y)}
+        assert not (sides["W"] and sides["E"]), f"({x},{y}): a cliff top between two faces"
+        lawn = quads(_recipes[k, outside_of(mask, corners)])
+        inner = dict(mask=mask | (8 if sides["W"] else 0) | (2 if sides["E"] else 0))
+        q = quads(_recipes[k, outside_of(inner["mask"], 0)])
+        tags = []
+        for side, col, bit in (("W", 0, 8), ("E", 1, 2)):
+            if sides[side]:
+                piece = quads(j[f"side_{side}_face" + ("_start" if sides[side] == "start" else "")]["tiles_8x8"])
+                for row, edge in ((0, 1), (1, 4)):  # the top's own north/south edge keeps its lawn quarter
+                    q[row][col] = lawn[row][col] if not mask & edge else piece[row][col]
+                tags.append(f"{side}{sides[side]}")
+        for bit, (dx, dy), name, col in ((4, (-1, 1), "in_SW_face", 0), (2, (1, 1), "in_SE_face", 1)):
+            if corners & bit and face_at(x + dx, y + dy) == "start":
+                q[1][col] = quads(j[name]["tiles_8x8"])[1][col]
+                tags.append(name)
+        for bit, (dx, dy) in ((1, (1, -1)), (8, (-1, -1))):
+            assert not (corners & bit and face_at(x + dx, y + dy)), f"({x},{y}): a face north of a top's corner"
+        if tags:
+            # the rest as pae would draw it (the inside corners that aren't the face's)
+            for row in (0, 1):
+                for col in (0, 1):
+                    if not ((col == 0 and sides["W"]) or (col == 1 and sides["E"])) and \
+                            not (row == 1 and f"in_S{'W' if col == 0 else 'E'}_face" in tags):
+                        q[row][col] = lawn[row][col]
+            out[x, y] = (f"{top_name(k, mask, corners)}+{'+'.join(tags)}", join(q))
+    return out
 
 
 def top_name(k: int, mask: int, corners: int) -> str:
@@ -230,9 +292,19 @@ def main() -> None:
     rock = kit.Sheet("rock_cliff", CLIFF_PAL, CLIFF_BANK, HERE, HERE)
     gw = gate.idx.shape[1] // 16
     under_roof = [phase(gate_at[0] + i, gate_at[1] + j) for j in range(GATE_TOP) for i in range(gw)]
-    for k, mask, corners in sorted(tops_in(g) | {(k, 15, 0) for k in under_roof}):
-        outside = (15 & ~mask) | sum(16 << i for i in range(4) if corners & 1 << i)
-        rock.add(top_name(k, mask, corners), top(k, outside), tileset="secondary", ground="grass", solid=True)
+    tops = tops_in(g)
+    beside = junctions(g, tops)
+    for k, mask, corners in sorted({v for b, v in tops.items() if b not in beside} | {(k, 15, 0) for k in under_roof}):
+        rock.add(top_name(k, mask, corners), top(k, outside_of(mask, corners)), tileset="secondary", ground="grass",
+                 solid=True)
+    pieces = sorted({name: idx for name, idx in beside.values()}.items())
+    assert len(pieces) <= len(JUNCTION_CHARS), "more tops beside faces than characters for them"
+    char_of = {}
+    for (name, idx), ch in zip(pieces, JUNCTION_CHARS):
+        rock.add(name, idx, tileset="secondary", ground="grass", solid=True)
+        char_of[name] = ch
+    for (x, y), (name, _) in beside.items():
+        g[y][x] = char_of[name]
     for c in sorted(set(FACE[ch] for r in g for ch in r if ch in FACE)):
         rock.add(f"face_{c}", pack(f"face/{c}.png"), tileset="secondary", ground="grass", solid=True)
     rock.add("rock_stairs", pack("face/stairs.png"), tileset="secondary")
@@ -271,6 +343,8 @@ def main() -> None:
         legend[ch] = {"auto": f"top{k}", "joins": "C"}
     for ch, col in FACE.items():
         legend[ch] = f"face_{col}"
+    for name, ch in char_of.items():  # the tops beside a face (part of the cliff for their neighbours' edges)
+        legend[ch] = {"name": name, "joins": "C"}
     for mask, ch in joins.items():  # the cobble over the joins: open to the south
         legend[ch] = {"name": f"cobble#{mask}", "joins": "="}
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")

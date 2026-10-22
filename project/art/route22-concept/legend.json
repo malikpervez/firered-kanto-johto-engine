@@ -146,6 +146,62 @@
  "P": "face_middle_3",
  "}": "face_inner_E",
  "]": "face_outer_E",
+ "a": {
+  "name": "top1#13+Eon",
+  "joins": "C"
+ },
+ "e": {
+  "name": "top1#15.2+in_SE_face",
+  "joins": "C"
+ },
+ "f": {
+  "name": "top1#7+Won",
+  "joins": "C"
+ },
+ "i": {
+  "name": "top2#13+Eon",
+  "joins": "C"
+ },
+ "j": {
+  "name": "top3#9+Eon",
+  "joins": "C"
+ },
+ "m": {
+  "name": "top4#13+Estart",
+  "joins": "C"
+ },
+ "t": {
+  "name": "top4#14.2+in_SE_face",
+  "joins": "C"
+ },
+ "u": {
+  "name": "top4#14.4+in_SW_face",
+  "joins": "C"
+ },
+ "x": {
+  "name": "top5#14.2+in_SE_face",
+  "joins": "C"
+ },
+ "y": {
+  "name": "top7#13+Eon",
+  "joins": "C"
+ },
+ "z": {
+  "name": "top7#13+Estart",
+  "joins": "C"
+ },
+ "<": {
+  "name": "top7#7+Wstart",
+  "joins": "C"
+ },
+ ">": {
+  "name": "top8#13+Estart",
+  "joins": "C"
+ },
+ "?": {
+  "name": "top9#12+Estart",
+  "joins": "C"
+ },
  "7": {
   "name": "cobble#7",
   "joins": "="
