@@ -2454,7 +2454,12 @@
    ],
    "tileset": "primary",
    "ground": "grass",
-   "solid": true
+   "solid": true,
+   "open": [
+    "0,0",
+    "1,0"
+   ],
+   "over_rows": 1
   },
   {
    "name": "offset_tree",
@@ -2468,7 +2473,12 @@
    ],
    "tileset": "primary",
    "ground": "grass",
-   "solid": true
+   "solid": true,
+   "open": [
+    "0,0",
+    "1,0"
+   ],
+   "over_rows": 1
   },
   {
    "name": "broad_tree",
@@ -2482,7 +2492,12 @@
    ],
    "tileset": "primary",
    "ground": "grass",
-   "solid": true
+   "solid": true,
+   "open": [
+    "0,0",
+    "1,0"
+   ],
+   "over_rows": 1
   },
   {
    "name": "bush",
