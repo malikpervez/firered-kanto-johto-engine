@@ -1,0 +1,50 @@
+{
+ "note": "Walk up to the new Pok\u00e9mon Center's door: it slides open (drawn frames, two blocks tall) and you go in.",
+ "created": "2026-10-22 02:31",
+ "start": {
+  "map": "ViridianCity_Frlg",
+  "x": 20,
+  "y": 29,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ViridianCity_PokemonCenter_1F_Frlg",
+  "x": 7,
+  "y": 8,
+  "in_battle": false
+ }
+}

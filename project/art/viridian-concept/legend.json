@@ -1,0 +1,96 @@
+{
+ "T": {
+  "auto": "forest"
+ },
+ ".": {
+  "pick": [
+   "lawn_a",
+   "lawn_b",
+   "lawn_c",
+   "lawn_d"
+  ]
+ },
+ ",": "lawn_flowers",
+ "=": {
+  "auto": "cobble"
+ },
+ ":": {
+  "auto": "dirt"
+ },
+ "~": {
+  "auto": "pond",
+  "elevation": 1
+ },
+ "s": {
+  "auto": "sea",
+  "elevation": 1
+ },
+ "#": {
+  "auto": "fence"
+ },
+ "d": {
+  "auto": "dock"
+ },
+ "*": {
+  "pick": [
+   "flowers1",
+   "flowers2",
+   "flowers3",
+   "flowers4"
+  ]
+ },
+ "b": "bush",
+ "o": "rock",
+ "k": "stump",
+ "l": "lamp",
+ "S": "sign",
+ "B": "barrel",
+ "c": "crate",
+ "O": "boat",
+ "w": "well",
+ "R": "round_tree",
+ "g": {
+  "pick": [
+   "tall_grass",
+   "tall_grass_flowers"
+  ],
+  "order": "checker"
+ },
+ "_": {
+  "auto": "ledge"
+ },
+ "h": {
+  "auto": "steps"
+ },
+ "v": {
+  "auto": "pond",
+  "joins": "~",
+  "with": "lily",
+  "elevation": 1
+ },
+ "r": {
+  "auto": "pond",
+  "joins": "~",
+  "with": "reeds",
+  "elevation": 1
+ },
+ "q": {
+  "auto": "sea",
+  "joins": "s",
+  "with": "rock_a",
+  "elevation": 1
+ },
+ "Q": {
+  "auto": "sea",
+  "joins": "s",
+  "with": "rock_b",
+  "elevation": 1
+ },
+ "P": "pokemon_center",
+ "M": "poke_mart",
+ "G": "viridian_gym",
+ "K": "trainer_school",
+ "H": "house_gardener",
+ "J": "house_family",
+ "Y": "house_pond_keeper"
+}

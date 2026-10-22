@@ -1,0 +1,50 @@
+{
+ "note": "The gardener's house (no inside yet): its door is locked.",
+ "created": "2026-10-22 02:32",
+ "start": {
+  "map": "ViridianCity_Frlg",
+  "x": 36,
+  "y": 41,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ViridianCity_Frlg",
+  "x": 36,
+  "y": 41,
+  "in_battle": false
+ }
+}

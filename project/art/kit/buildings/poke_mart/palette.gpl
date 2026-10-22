@@ -1,0 +1,20 @@
+GIMP Palette
+Name: Viridian global_b
+Columns: 8
+# Index 0 is transparent. GPL cannot encode alpha; PNG tRNS and JSON define it.
+  0   0   0	00 Transparent
+ 24  32  40	01 Outline
+ 40  56  72	02 Door recess
+ 96 120 136	03 Foundation shadow
+152 168 176	04 Stone / plaster shade
+216 224 216	05 White plaster
+240 240 224	06 Plaster light / glass glint
+ 32  56  96	07 Blue roof deepest
+ 40  88 152	08 Blue roof shade
+ 64 128 192	09 Blue tile
+120 176 224	10 Sunlit blue tile
+ 40  72  88	11 Glass shadow
+ 56 120 136	12 Shop glass
+136 200 208	13 Glass light
+208 176 120	14 Brass / sign trim
+176 192 192	15 Plaster corner shade

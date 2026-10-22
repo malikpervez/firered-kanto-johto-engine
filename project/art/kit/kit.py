@@ -15,6 +15,8 @@ Banks (palettes):
   3  trees: the pines, round trees and bushes (trees.py)
   4  tall grass: tall_grass/ (drawn natively at 16x16, made with another AI from a brief) and the sprites over
      the player's feet in it
+  5  the Pokémon Center, 6  the Poké Mart: buildings every town shares (buildings/, native pixel packs; buildings.py),
+     each in its own palette, with drawn door frames
   8  plants: flowers and lamps. The primary uses it, so every map's secondary tileset has the kit's plants
      palette at bank 8 (``SECONDARY_BANKS``); banks 7, 9-12 are the map's own.
 """
@@ -25,6 +27,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import buildings
 import fields
 import lawn
 import trees
@@ -61,8 +64,11 @@ LAWN_IN_PTG = {G0: 1, G1: 1, GD: 2, GM: 13, GL: 14, GH: 15}
 PTG = list(PTG_PACK)
 for _g, _slot in LAWN_IN_PTG.items():
     PTG[_slot] = P0[_g]
-BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "tallgrass": 4, "plants": 8}
-PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "tallgrass": PTG, "plants": P4}
+BANK = {"ground": 0, "water": 1, "wood": 2, "trees": 3, "tallgrass": 4, "center": 5, "mart": 6, "plants": 8}
+PALS = {"ground": P0, "water": water.PW, "wood": P2, "trees": trees.PT, "tallgrass": PTG,
+        "center": buildings.CENTER.palette, "mart": buildings.MART.palette, "plants": P4}
+# the shared buildings, by their names in the spec; a map animates their doors with ``pae door add --frames``
+SHARED_BUILDINGS = {"pokemon_center": (buildings.CENTER, "center"), "poke_mart": (buildings.MART, "mart")}
 # the two kinds, staggered in a field ("g" in the legend): two fronds (B), and a sprig with flowers (C); each has
 # its own sprite over the player's feet, so the leaves over them are always the block's own
 TALL_GRASS = {"tall_grass": "B", "tall_grass_flowers": "C"}
@@ -434,7 +440,7 @@ def lamp() -> np.ndarray:
 # ---------------------------------------------------------------- forest pieces
 # (mask, corners) of the forest's inside-corner pieces in the kit: every map's together (a map checks its own are
 # here with ``forest_corners``; add new ones here, then rebuild every map)
-FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8)]
+FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8), (7, 1), (7, 2), (13, 4)]
 
 
 def forest_corners(g, char: str = "T") -> set[tuple[int, int]]:
@@ -666,6 +672,10 @@ def primary(spec_dir: Path) -> dict:
     field.add("pond#15+reeds", fields.reeds(), tileset="primary", ground="pond#15", behavior="MB_POND_WATER",
               elevation=1, solid=True)
     spec_mt += field.write()
+    for name, (b, pal) in SHARED_BUILDINGS.items():  # the Pokémon Center and the Poké Mart
+        sh = sheet(name, pal, cols=b.idx.shape[1] // 16)
+        sh.add(name, b.idx, tileset="primary", **b.entry())
+        spec_mt += sh.write()
     (KIT / "sheets").mkdir(exist_ok=True)
     for name, v in TALL_GRASS.items():
         Image.fromarray(rgba(_tall_grass(f"{v}_feet_80x16.png"), PTG), "RGBA").save(KIT / f"sheets/{name}_fx.png")
@@ -674,7 +684,8 @@ def primary(spec_dir: Path) -> dict:
     rel = Path(os_relpath(KIT, spec_dir))
     return {
         "metatiles": spec_mt,
-        "palettes": [(rel / f"palette_{n}.pal").as_posix() for n in ("ground", "water", "wood", "trees", "tallgrass")],
+        "palettes": [(rel / f"palette_{n}.pal").as_posix()
+                     for n in ("ground", "water", "wood", "trees", "tallgrass", "center", "mart")],
         "secondary_palettes": {b: (rel / f"palette_{n}.pal").as_posix() for b, n in SECONDARY_BANKS.items()},
         "reserve": [[434, 441]],
         "animations": [{"name": "Water", "image": (rel / "sheets/water.png").as_posix(),

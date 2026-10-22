@@ -1,0 +1,176 @@
+{
+ "note": "With the old man up, walk the one-block road north out of town into Route 2 (Route 2 shows Viridian's edge across the join: pae's seam).",
+ "created": "2026-10-22 02:39",
+ "start": {
+  "map": "ViridianCity_Frlg",
+  "x": 25,
+  "y": 14,
+  "state": [
+   "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN=2"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route2_Frlg",
+  "x": 9,
+  "y": 77,
+  "in_battle": false
+ }
+}
