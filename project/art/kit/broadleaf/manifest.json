@@ -1,0 +1,1710 @@
+{
+  "name": "Sunlit Broadleaf",
+  "version": "0.4",
+  "status": "design_approved",
+  "native_pixels": true,
+  "palette": "palettes/sunlit_broadleaf.gpl",
+  "forest_canonical_shapes": 47,
+  "forest_variants": 3,
+  "standalone_trees": 3,
+  "unique_8x8": {
+    "trees": 46,
+    "forest": 85,
+    "total": 128
+  },
+  "packed_bytes": 4096,
+  "native_files": [
+    {
+      "file": "trees/round_crown/round_crown.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "trees/round_crown/round_crown_4x.png"
+    },
+    {
+      "file": "trees/round_crown/tile_0_0.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/round_crown/tile_0_0_4x.png"
+    },
+    {
+      "file": "trees/round_crown/tile_1_0.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/round_crown/tile_1_0_4x.png"
+    },
+    {
+      "file": "trees/round_crown/tile_0_1.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/round_crown/tile_0_1_4x.png"
+    },
+    {
+      "file": "trees/round_crown/tile_1_1.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/round_crown/tile_1_1_4x.png"
+    },
+    {
+      "file": "trees/offset_crown/offset_crown.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "trees/offset_crown/offset_crown_4x.png"
+    },
+    {
+      "file": "trees/offset_crown/tile_0_0.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/offset_crown/tile_0_0_4x.png"
+    },
+    {
+      "file": "trees/offset_crown/tile_1_0.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/offset_crown/tile_1_0_4x.png"
+    },
+    {
+      "file": "trees/offset_crown/tile_0_1.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/offset_crown/tile_0_1_4x.png"
+    },
+    {
+      "file": "trees/offset_crown/tile_1_1.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/offset_crown/tile_1_1_4x.png"
+    },
+    {
+      "file": "trees/broad_crown/broad_crown.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "trees/broad_crown/broad_crown_4x.png"
+    },
+    {
+      "file": "trees/broad_crown/tile_0_0.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/broad_crown/tile_0_0_4x.png"
+    },
+    {
+      "file": "trees/broad_crown/tile_1_0.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/broad_crown/tile_1_0_4x.png"
+    },
+    {
+      "file": "trees/broad_crown/tile_0_1.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/broad_crown/tile_0_1_4x.png"
+    },
+    {
+      "file": "trees/broad_crown/tile_1_1.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "review": "trees/broad_crown/tile_1_1_4x.png"
+    },
+    {
+      "file": "forest/variants/a/center.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/center_4x.png"
+    },
+    {
+      "file": "forest/variants/a/N.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/N_4x.png"
+    },
+    {
+      "file": "forest/variants/a/NE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/NE_4x.png"
+    },
+    {
+      "file": "forest/variants/a/E.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/E_4x.png"
+    },
+    {
+      "file": "forest/variants/a/SE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/SE_4x.png"
+    },
+    {
+      "file": "forest/variants/a/S.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/S_4x.png"
+    },
+    {
+      "file": "forest/variants/a/SW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/SW_4x.png"
+    },
+    {
+      "file": "forest/variants/a/W.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/W_4x.png"
+    },
+    {
+      "file": "forest/variants/a/NW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/NW_4x.png"
+    },
+    {
+      "file": "forest/variants/a/in_NE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/in_NE_4x.png"
+    },
+    {
+      "file": "forest/variants/a/in_SE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/in_SE_4x.png"
+    },
+    {
+      "file": "forest/variants/a/in_SW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/in_SW_4x.png"
+    },
+    {
+      "file": "forest/variants/a/in_NW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/in_NW_4x.png"
+    },
+    {
+      "file": "forest/variants/a/NS.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/NS_4x.png"
+    },
+    {
+      "file": "forest/variants/a/EW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/EW_4x.png"
+    },
+    {
+      "file": "forest/variants/a/single.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/a/single_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_000.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_000_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_001.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_001_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_002.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_002_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_003.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_003_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_004.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_004_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_005.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_005_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_006.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_006_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_007.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_007_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_008.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_008_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_009.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_009_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_010.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_010_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_011.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_011_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_012.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_012_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_013.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_013_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_014.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_014_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_015.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_015_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_016.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_016_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_020.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_020_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_024.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_024_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_028.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_028_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_032.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_032_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_033.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_033_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_040.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_040_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_041.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_041_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_048.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_048_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_056.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_056_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_064.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_064_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_065.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_065_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_066.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_066_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_067.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_067_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_080.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_080_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_096.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_096_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_097.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_097_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_112.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_112_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_128.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_128_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_130.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_130_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_132.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_132_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_134.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_134_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_144.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_144_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_148.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_148_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_160.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_160_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_176.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_176_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_192.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_192_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_194.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_194_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_208.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_208_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_224.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_224_4x.png"
+    },
+    {
+      "file": "forest/autotiles/a/mask_240.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/a/mask_240_4x.png"
+    },
+    {
+      "file": "forest/forest_a_sheet.png",
+      "size_px": [
+        256,
+        192
+      ],
+      "review": "forest/forest_a_sheet_4x.png"
+    },
+    {
+      "file": "forest/variants/b/center.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/center_4x.png"
+    },
+    {
+      "file": "forest/variants/b/N.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/N_4x.png"
+    },
+    {
+      "file": "forest/variants/b/NE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/NE_4x.png"
+    },
+    {
+      "file": "forest/variants/b/E.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/E_4x.png"
+    },
+    {
+      "file": "forest/variants/b/SE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/SE_4x.png"
+    },
+    {
+      "file": "forest/variants/b/S.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/S_4x.png"
+    },
+    {
+      "file": "forest/variants/b/SW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/SW_4x.png"
+    },
+    {
+      "file": "forest/variants/b/W.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/W_4x.png"
+    },
+    {
+      "file": "forest/variants/b/NW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/NW_4x.png"
+    },
+    {
+      "file": "forest/variants/b/in_NE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/in_NE_4x.png"
+    },
+    {
+      "file": "forest/variants/b/in_SE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/in_SE_4x.png"
+    },
+    {
+      "file": "forest/variants/b/in_SW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/in_SW_4x.png"
+    },
+    {
+      "file": "forest/variants/b/in_NW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/in_NW_4x.png"
+    },
+    {
+      "file": "forest/variants/b/NS.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/NS_4x.png"
+    },
+    {
+      "file": "forest/variants/b/EW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/EW_4x.png"
+    },
+    {
+      "file": "forest/variants/b/single.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/b/single_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_000.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_000_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_001.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_001_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_002.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_002_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_003.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_003_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_004.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_004_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_005.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_005_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_006.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_006_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_007.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_007_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_008.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_008_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_009.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_009_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_010.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_010_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_011.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_011_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_012.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_012_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_013.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_013_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_014.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_014_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_015.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_015_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_016.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_016_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_020.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_020_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_024.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_024_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_028.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_028_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_032.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_032_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_033.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_033_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_040.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_040_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_041.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_041_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_048.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_048_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_056.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_056_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_064.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_064_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_065.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_065_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_066.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_066_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_067.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_067_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_080.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_080_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_096.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_096_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_097.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_097_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_112.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_112_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_128.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_128_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_130.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_130_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_132.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_132_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_134.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_134_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_144.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_144_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_148.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_148_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_160.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_160_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_176.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_176_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_192.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_192_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_194.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_194_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_208.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_208_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_224.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_224_4x.png"
+    },
+    {
+      "file": "forest/autotiles/b/mask_240.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/b/mask_240_4x.png"
+    },
+    {
+      "file": "forest/forest_b_sheet.png",
+      "size_px": [
+        256,
+        192
+      ],
+      "review": "forest/forest_b_sheet_4x.png"
+    },
+    {
+      "file": "forest/variants/c/center.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/center_4x.png"
+    },
+    {
+      "file": "forest/variants/c/N.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/N_4x.png"
+    },
+    {
+      "file": "forest/variants/c/NE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/NE_4x.png"
+    },
+    {
+      "file": "forest/variants/c/E.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/E_4x.png"
+    },
+    {
+      "file": "forest/variants/c/SE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/SE_4x.png"
+    },
+    {
+      "file": "forest/variants/c/S.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/S_4x.png"
+    },
+    {
+      "file": "forest/variants/c/SW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/SW_4x.png"
+    },
+    {
+      "file": "forest/variants/c/W.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/W_4x.png"
+    },
+    {
+      "file": "forest/variants/c/NW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/NW_4x.png"
+    },
+    {
+      "file": "forest/variants/c/in_NE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/in_NE_4x.png"
+    },
+    {
+      "file": "forest/variants/c/in_SE.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/in_SE_4x.png"
+    },
+    {
+      "file": "forest/variants/c/in_SW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/in_SW_4x.png"
+    },
+    {
+      "file": "forest/variants/c/in_NW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/in_NW_4x.png"
+    },
+    {
+      "file": "forest/variants/c/NS.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/NS_4x.png"
+    },
+    {
+      "file": "forest/variants/c/EW.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/EW_4x.png"
+    },
+    {
+      "file": "forest/variants/c/single.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/variants/c/single_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_000.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_000_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_001.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_001_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_002.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_002_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_003.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_003_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_004.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_004_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_005.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_005_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_006.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_006_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_007.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_007_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_008.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_008_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_009.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_009_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_010.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_010_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_011.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_011_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_012.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_012_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_013.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_013_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_014.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_014_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_015.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_015_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_016.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_016_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_020.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_020_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_024.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_024_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_028.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_028_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_032.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_032_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_033.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_033_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_040.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_040_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_041.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_041_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_048.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_048_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_056.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_056_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_064.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_064_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_065.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_065_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_066.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_066_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_067.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_067_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_080.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_080_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_096.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_096_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_097.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_097_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_112.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_112_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_128.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_128_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_130.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_130_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_132.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_132_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_134.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_134_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_144.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_144_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_148.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_148_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_160.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_160_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_176.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_176_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_192.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_192_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_194.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_194_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_208.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_208_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_224.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_224_4x.png"
+    },
+    {
+      "file": "forest/autotiles/c/mask_240.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "review": "forest/autotiles/c/mask_240_4x.png"
+    },
+    {
+      "file": "forest/forest_c_sheet.png",
+      "size_px": [
+        256,
+        192
+      ],
+      "review": "forest/forest_c_sheet_4x.png"
+    },
+    {
+      "file": "trees/tree_sheet.png",
+      "size_px": [
+        96,
+        32
+      ],
+      "review": "trees/tree_sheet_4x.png"
+    },
+    {
+      "file": "integration/tileset_8x8.png",
+      "size_px": [
+        128,
+        64
+      ],
+      "review": "integration/tileset_8x8_4x.png"
+    },
+    {
+      "file": "previews/forest_repeat_6x6.png",
+      "size_px": [
+        192,
+        192
+      ],
+      "review": "previews/forest_repeat_6x6_4x.png"
+    }
+  ],
+  "drive_upload": "Authorized by Malik on 2026-10-22 for this v0.4 release.",
+  "approval": {
+    "design_status": "approved",
+    "approved_by": "Malik",
+    "approved_on": "2026-10-22",
+    "selected_version": "0.4",
+    "instruction": "I like .4 better let\u2019s upload that",
+    "upload_authorized": true,
+    "destination": "Pokemon Assets",
+    "artwork_changed_since_review": false,
+    "runtime_tested": false
+  }
+}

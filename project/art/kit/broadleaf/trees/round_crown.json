@@ -1,0 +1,51 @@
+{
+  "name": "round_crown",
+  "version": "0.4",
+  "status": "design_approved",
+  "palette": "sunlit_broadleaf",
+  "image": "round_crown.png",
+  "size_px": [
+    32,
+    32
+  ],
+  "footprint_blocks": [
+    2,
+    2
+  ],
+  "door": null,
+  "solid_blocks": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "canopy_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "draw_anchor_px": [
+    16,
+    31
+  ],
+  "placement": "Snap top-left to an even 16px block column and row. Use the engine existing tree elevation/priority handling; upper canopy can overlap a player behind the trunk.",
+  "tiles_16x16": [
+    [
+      "tile_0_0.png",
+      "tile_1_0.png"
+    ],
+    [
+      "tile_0_1.png",
+      "tile_1_1.png"
+    ]
+  ]
+}
