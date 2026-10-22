@@ -41,7 +41,10 @@ struct MemBlock
     u8 data[0];
 };
 
-#define HEAP_SIZE 0x1C500
+// 4 KB more than the expansion's: FireRed's tutorial battles (Oak's lab, the old man's catching demonstration)
+// keep Oak's message windows (3.3 KB) on top of a battle's, which otherwise leaves too little to load the
+// healthboxes. EWRAM still has about 3 KB to spare.
+#define HEAP_SIZE 0x1D500
 extern u8 gHeap[HEAP_SIZE];
 
 #if TESTING || !defined(NDEBUG)
