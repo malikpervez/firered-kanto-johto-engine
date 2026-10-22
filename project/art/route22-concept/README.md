@@ -10,15 +10,16 @@ redone after the first cliffs, a rock and cliff pack (`rock_cliff/`). This folde
 
 The route is 52×28 blocks, as before. The road from Viridian leaves the right edge at rows 6–9 (Viridian's rows
 28–31), and Blue meets you on its straight stretch. It has:
-- the League Front Gate (15×7 blocks) in the northwest, its roof against the cliff behind it, on a stone forecourt
-  up a flight of stairs in the cliff;
+- the League Front Gate (15×10 blocks, two storeys) in the northwest, set into the cliff, on a stone forecourt up a
+  flight of stairs in the cliff;
 - rocky cliffs and terraces between pine forest walls;
 - a dressed-stone approach from the road down to the gate, where it meets the cobblestones through joins;
 - tall grass on both sides, a pond with lily pads and reeds, a ledge with steps, round trees and rocks.
 
 `plan.txt` is the stage 1 plan (`plan_stage1.txt`) with the cliffs' faces two blocks tall, as the pack draws them:
 the forecourt's edge is a face now, with the pack's stairs (its old steps' rows are forecourt; a round tree below it
-went), its lamps stand at its ends, and a big boulder stands east of it.
+went), its lamps stand at its ends, and a big boulder stands east of it. The gate is a storey taller, filling the cliff
+behind its old roof, and the terrace east of it ends square with the ridge beside it.
 
 ## New pieces
 
@@ -37,7 +38,9 @@ went), its lamps stand at its ends, and a big boulder stands east of it.
   - the **stairs** (`H`, 2×2) are in the face below the forecourt; the forecourt and the road open onto them;
   - its **rocks**: the small one stands for the kit's rock here (`o`), the big boulder (`X`) east of the forecourt.
     The pack's breakable rock isn't used yet (nothing on the route breaks rocks).
-- **The League Front Gate** (`buildings/`, bank 7): its top four rows stand against the cliff (`U` in the grid,
+- **The League Front Gate** (`buildings/`, bank 7), two storeys: `make_art.py` adds the upper one from the pack's
+  own pixels (the ground floor's wall and windows again, a window over the door, the plinth's stones as a band
+  course between the floors). Its top four rows (the roof) stand against the cliff (`U` in the grid,
   joined to the cliff so it shows no edge there; the cliff's top shows under its roof, by phase: pae's ground for
   each block), its front over the lawn (`L`). Its door animates from its drawn frames (`pae door add --frames`).
 

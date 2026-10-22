@@ -27,7 +27,7 @@ static const u8 sPaeDoorPalettes_8[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
     { 759, &gTileset_PalletConcept, DOOR_SOUND_NORMAL, 1, sPaeDoorTiles_2, sPaeDoorPalettes_2 }, \
     { 311, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_3, sPaeDoorPalettes_3 }, \
     { 327, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_4, sPaeDoorPalettes_4 }, \
-    { 823, &gTileset_Route22Concept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_5, sPaeDoorPalettes_5 }, \
+    { 865, &gTileset_Route22Concept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_5, sPaeDoorPalettes_5 }, \
     { 671, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_6, sPaeDoorPalettes_6 }, \
     { 692, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_7, sPaeDoorPalettes_7 }, \
     { 728, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_8, sPaeDoorPalettes_8 }, \

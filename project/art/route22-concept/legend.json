@@ -163,43 +163,35 @@
   "joins": "C"
  },
  "j": {
-  "name": "top3#9+Eon",
-  "joins": "C"
- },
- "m": {
   "name": "top4#13+Estart",
   "joins": "C"
  },
- "t": {
+ "m": {
   "name": "top4#14.2+in_SE_face",
   "joins": "C"
  },
- "u": {
+ "t": {
   "name": "top4#14.4+in_SW_face",
   "joins": "C"
  },
- "x": {
+ "u": {
   "name": "top5#14.2+in_SE_face",
   "joins": "C"
  },
- "y": {
+ "x": {
   "name": "top7#13+Eon",
   "joins": "C"
  },
- "z": {
+ "y": {
   "name": "top7#13+Estart",
   "joins": "C"
  },
- "<": {
+ "z": {
   "name": "top7#7+Wstart",
   "joins": "C"
  },
- ">": {
+ "<": {
   "name": "top8#13+Estart",
-  "joins": "C"
- },
- "?": {
-  "name": "top9#12+Estart",
   "joins": "C"
  },
  "7": {

@@ -2742,7 +2742,7 @@
    "solid": true
   },
   {
-   "name": "top2#11",
+   "name": "top2#9",
    "image": "sheets/rock_cliff.png",
    "x": 128,
    "y": 0,
@@ -2754,7 +2754,7 @@
    "solid": true
   },
   {
-   "name": "top2#13",
+   "name": "top2#11",
    "image": "sheets/rock_cliff.png",
    "x": 144,
    "y": 0,
@@ -2766,7 +2766,7 @@
    "solid": true
   },
   {
-   "name": "top2#15",
+   "name": "top2#13",
    "image": "sheets/rock_cliff.png",
    "x": 160,
    "y": 0,
@@ -2778,7 +2778,7 @@
    "solid": true
   },
   {
-   "name": "top3#3",
+   "name": "top2#15",
    "image": "sheets/rock_cliff.png",
    "x": 176,
    "y": 0,
@@ -2790,7 +2790,7 @@
    "solid": true
   },
   {
-   "name": "top3#7",
+   "name": "top3#3",
    "image": "sheets/rock_cliff.png",
    "x": 192,
    "y": 0,
@@ -2802,7 +2802,7 @@
    "solid": true
   },
   {
-   "name": "top3#11",
+   "name": "top3#7",
    "image": "sheets/rock_cliff.png",
    "x": 208,
    "y": 0,
@@ -2814,7 +2814,7 @@
    "solid": true
   },
   {
-   "name": "top3#15",
+   "name": "top3#11",
    "image": "sheets/rock_cliff.png",
    "x": 224,
    "y": 0,
@@ -2826,7 +2826,7 @@
    "solid": true
   },
   {
-   "name": "top4#3",
+   "name": "top3#15",
    "image": "sheets/rock_cliff.png",
    "x": 240,
    "y": 0,
@@ -2934,33 +2934,9 @@
    "solid": true
   },
   {
-   "name": "top5#7",
-   "image": "sheets/rock_cliff.png",
-   "x": 128,
-   "y": 16,
-   "banks": [
-    9
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "solid": true
-  },
-  {
    "name": "top5#7.2",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
-   "y": 16,
-   "banks": [
-    9
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "top5#9",
-   "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 128,
    "y": 16,
    "banks": [
     9
@@ -2972,7 +2948,7 @@
   {
    "name": "top5#10",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 144,
    "y": 16,
    "banks": [
     9
@@ -2984,7 +2960,7 @@
   {
    "name": "top5#13",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 160,
    "y": 16,
    "banks": [
     9
@@ -2996,7 +2972,7 @@
   {
    "name": "top5#14",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 176,
    "y": 16,
    "banks": [
     9
@@ -3008,7 +2984,7 @@
   {
    "name": "top5#15",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 192,
    "y": 16,
    "banks": [
     9
@@ -3020,7 +2996,7 @@
   {
    "name": "top6#7",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 208,
    "y": 16,
    "banks": [
     9
@@ -3032,8 +3008,8 @@
   {
    "name": "top6#10",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 32,
+   "x": 224,
+   "y": 16,
    "banks": [
     9
    ],
@@ -3044,8 +3020,8 @@
   {
    "name": "top6#14",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
-   "y": 32,
+   "x": 240,
+   "y": 16,
    "banks": [
     9
    ],
@@ -3056,7 +3032,7 @@
   {
    "name": "top6#15",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 0,
    "y": 32,
    "banks": [
     9
@@ -3068,7 +3044,7 @@
   {
    "name": "top6#15.4",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 16,
    "y": 32,
    "banks": [
     9
@@ -3080,7 +3056,7 @@
   {
    "name": "top7#7",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 32,
    "y": 32,
    "banks": [
     9
@@ -3092,7 +3068,7 @@
   {
    "name": "top7#13",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 48,
    "y": 32,
    "banks": [
     9
@@ -3104,7 +3080,7 @@
   {
    "name": "top7#14",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 64,
    "y": 32,
    "banks": [
     9
@@ -3116,7 +3092,7 @@
   {
    "name": "top7#15",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 80,
    "y": 32,
    "banks": [
     9
@@ -3128,7 +3104,19 @@
   {
    "name": "top7#15.1",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 96,
+   "y": 32,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "top7#15.8",
+   "image": "sheets/rock_cliff.png",
+   "x": 112,
    "y": 32,
    "banks": [
     9
@@ -3140,7 +3128,7 @@
   {
    "name": "top8#5",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 128,
    "y": 32,
    "banks": [
     9
@@ -3152,7 +3140,7 @@
   {
    "name": "top8#7",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 144,
    "y": 32,
    "banks": [
     9
@@ -3164,7 +3152,7 @@
   {
    "name": "top8#13",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 160,
    "y": 32,
    "banks": [
     9
@@ -3176,7 +3164,7 @@
   {
    "name": "top8#14",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 176,
    "y": 32,
    "banks": [
     9
@@ -3188,7 +3176,7 @@
   {
    "name": "top8#15",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 192,
    "y": 32,
    "banks": [
     9
@@ -3200,7 +3188,7 @@
   {
    "name": "top9#7",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 208,
    "y": 32,
    "banks": [
     9
@@ -3212,7 +3200,7 @@
   {
    "name": "top9#14",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 224,
    "y": 32,
    "banks": [
     9
@@ -3224,8 +3212,8 @@
   {
    "name": "top9#15",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 48,
+   "x": 240,
+   "y": 32,
    "banks": [
     9
    ],
@@ -3236,7 +3224,7 @@
   {
    "name": "top1#13+Eon",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
+   "x": 0,
    "y": 48,
    "banks": [
     9
@@ -3248,7 +3236,7 @@
   {
    "name": "top1#15.2+in_SE_face",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 16,
    "y": 48,
    "banks": [
     9
@@ -3260,7 +3248,7 @@
   {
    "name": "top1#7+Won",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 32,
    "y": 48,
    "banks": [
     9
@@ -3272,19 +3260,7 @@
   {
    "name": "top2#13+Eon",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
-   "y": 48,
-   "banks": [
-    9
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "top3#9+Eon",
-   "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 48,
    "y": 48,
    "banks": [
     9
@@ -3296,7 +3272,7 @@
   {
    "name": "top4#13+Estart",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 64,
    "y": 48,
    "banks": [
     9
@@ -3308,7 +3284,7 @@
   {
    "name": "top4#14.2+in_SE_face",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 80,
    "y": 48,
    "banks": [
     9
@@ -3320,7 +3296,7 @@
   {
    "name": "top4#14.4+in_SW_face",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 96,
    "y": 48,
    "banks": [
     9
@@ -3332,7 +3308,7 @@
   {
    "name": "top5#14.2+in_SE_face",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 112,
    "y": 48,
    "banks": [
     9
@@ -3344,7 +3320,7 @@
   {
    "name": "top7#13+Eon",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 128,
    "y": 48,
    "banks": [
     9
@@ -3356,7 +3332,7 @@
   {
    "name": "top7#13+Estart",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 144,
    "y": 48,
    "banks": [
     9
@@ -3368,7 +3344,7 @@
   {
    "name": "top7#7+Wstart",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 160,
    "y": 48,
    "banks": [
     9
@@ -3380,19 +3356,7 @@
   {
    "name": "top8#13+Estart",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
-   "y": 48,
-   "banks": [
-    9
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "top9#12+Estart",
-   "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 176,
    "y": 48,
    "banks": [
     9
@@ -3404,7 +3368,7 @@
   {
    "name": "face_inner_E",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 192,
    "y": 48,
    "w": 1,
    "h": 2,
@@ -3418,8 +3382,8 @@
   {
    "name": "face_inner_W",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 80,
+   "x": 208,
+   "y": 48,
    "w": 1,
    "h": 2,
    "banks": [
@@ -3432,8 +3396,8 @@
   {
    "name": "face_middle_1",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
-   "y": 80,
+   "x": 224,
+   "y": 48,
    "w": 1,
    "h": 2,
    "banks": [
@@ -3446,8 +3410,8 @@
   {
    "name": "face_middle_2",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
-   "y": 80,
+   "x": 240,
+   "y": 48,
    "w": 1,
    "h": 2,
    "banks": [
@@ -3460,7 +3424,7 @@
   {
    "name": "face_middle_3",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 0,
    "y": 80,
    "w": 1,
    "h": 2,
@@ -3474,7 +3438,7 @@
   {
    "name": "face_outer_E",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 16,
    "y": 80,
    "w": 1,
    "h": 2,
@@ -3488,7 +3452,7 @@
   {
    "name": "face_outer_W",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 32,
    "y": 80,
    "w": 1,
    "h": 2,
@@ -3502,7 +3466,7 @@
   {
    "name": "rock_stairs",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 48,
    "y": 80,
    "w": 2,
    "h": 2,
@@ -3514,7 +3478,7 @@
   {
    "name": "small_rock",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 80,
    "y": 80,
    "banks": [
     9
@@ -3526,7 +3490,7 @@
   {
    "name": "big_boulder",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 96,
    "y": 80,
    "w": 2,
    "h": 2,
@@ -3549,21 +3513,21 @@
    ],
    "tileset": "secondary",
    "ground": [
-    "top6#15",
-    "top4#15",
-    "top5#15",
-    "top6#15",
-    "top4#15",
-    "top5#15",
-    "top6#15",
-    "top4#15",
-    "top5#15",
-    "top6#15",
-    "top4#15",
-    "top5#15",
-    "top6#15",
-    "top4#15",
-    "top5#15",
+    "top6#14",
+    "top4#14",
+    "top5#14",
+    "top6#14",
+    "top4#14",
+    "top5#14",
+    "top6#14",
+    "top4#14",
+    "top5#14",
+    "top6#14",
+    "top4#14",
+    "top5#14",
+    "top6#14",
+    "top4#14",
+    "top5#14",
     "top9#15",
     "top7#15",
     "top8#15",
@@ -3618,7 +3582,7 @@
    "x": 0,
    "y": 64,
    "w": 15,
-   "h": 3,
+   "h": 6,
    "banks": [
     7
    ],
@@ -3626,10 +3590,10 @@
    "ground": "grass",
    "solid": true,
    "open": [
-    "7,2"
+    "7,5"
    ],
    "behaviors": {
-    "7,2": "MB_ANIMATED_DOOR"
+    "7,5": "MB_ANIMATED_DOOR"
    }
   }
  ]

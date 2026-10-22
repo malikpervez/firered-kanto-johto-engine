@@ -26,6 +26,7 @@ import json
 import random
 import sys
 from collections import deque
+from dataclasses import replace
 from pathlib import Path
 
 import numpy as np
@@ -276,10 +277,24 @@ def top_name(k: int, mask: int, corners: int) -> str:
     return f"top{k}#{mask}" + (f".{corners}" if corners else "")
 
 
+def two_storeys(gate: buildings.Building) -> buildings.Building:
+    """The League Front Gate a storey taller (three blocks, between its roof and its ground floor), from the pack's
+    own pixels: the ground floor's wall and windows again, a window where the door is below, and its plinth's
+    stones run on as a band course between the floors. The door and its drawn frames stay as they are."""
+    a = gate.idx
+    roof, ground = a[:GATE_TOP * 16], a[GATE_TOP * 16:]
+    upper = ground[:40].copy()
+    upper[:, 112:128] = ground[:40, 110:111]  # where the door is below: the pavilion's plain wall
+    upper[9:31, 113:128] = ground[9:31, 17:32]  # and a window, the side ones' own
+    course = ground[40:48].copy()
+    course[:, 112:128] = ground[40:48, 80:96]  # the plinth's stones repeat every 16 pixels
+    return replace(gate, idx=np.vstack([roof, upper, course, ground]), door=(gate.door[0], gate.door[1] + 3))
+
+
 # ---------------------------------------------------------------- sheets and spec
 def main() -> None:
     g, gate_at, joins = fit(plan())
-    gate = buildings.load(HERE / "buildings" / "league_front_gate")
+    gate = two_storeys(buildings.load(HERE / "buildings" / "league_front_gate"))
     door = (gate_at[0] + gate.door[0], gate_at[1] + gate.door[1])
     kit.check_forest(g)
     kit.check_water(g)
@@ -291,10 +306,12 @@ def main() -> None:
     # corners; the pack's recipes count the sides and corners that aren't), the face's columns, the stairs, the rocks
     rock = kit.Sheet("rock_cliff", CLIFF_PAL, CLIFF_BANK, HERE, HERE)
     gw = gate.idx.shape[1] // 16
-    under_roof = [phase(gate_at[0] + i, gate_at[1] + j) for j in range(GATE_TOP) for i in range(gw)]
+    # under the roof: the cliff's top, by phase (its north edge along the forest)
+    under_roof = [(phase(gate_at[0] + i, gate_at[1] + j), 14 if j == 0 else 15, 0)
+                  for j in range(GATE_TOP) for i in range(gw)]
     tops = tops_in(g)
     beside = junctions(g, tops)
-    for k, mask, corners in sorted({v for b, v in tops.items() if b not in beside} | {(k, 15, 0) for k in under_roof}):
+    for k, mask, corners in sorted({v for b, v in tops.items() if b not in beside} | set(under_roof)):
         rock.add(top_name(k, mask, corners), top(k, outside_of(mask, corners)), tileset="secondary", ground="grass",
                  solid=True)
     pieces = sorted({name: idx for name, idx in beside.values()}.items())
@@ -315,7 +332,7 @@ def main() -> None:
     # door animates (build.sh)
     sh = kit.Sheet("league_front_gate", gate.palette, GATE_BANK, HERE, HERE, cols=gw)
     sh.add("league_gate_top", gate.idx[:GATE_TOP * 16], tileset="secondary",
-           ground=[top_name(k, 15, 0) for k in under_roof], solid=True)
+           ground=[top_name(*t) for t in under_roof], solid=True)
     front = gate.entry()
     d = f"{gate.door[0]},{gate.door[1] - GATE_TOP}"
     front.update(open=[d], behaviors={d: "MB_ANIMATED_DOOR"})
