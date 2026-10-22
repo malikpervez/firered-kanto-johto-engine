@@ -1,0 +1,538 @@
+{
+  "pack": "Sunlit Broadleaf Bush Pack",
+  "version": "0.2",
+  "status": "PASS",
+  "reference_tree_pack": "Sunlit Broadleaf Tree Pack v0.4",
+  "native_pixel_authoring": true,
+  "downscaling_used": false,
+  "palette": {
+    "exact_requested_order": true,
+    "transparent_index": 0,
+    "index_0_rgb": [
+      0,
+      0,
+      0
+    ],
+    "rgb": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        16,
+        40,
+        32
+      ],
+      [
+        24,
+        56,
+        48
+      ],
+      [
+        32,
+        80,
+        56
+      ],
+      [
+        48,
+        104,
+        64
+      ],
+      [
+        64,
+        128,
+        64
+      ],
+      [
+        80,
+        152,
+        72
+      ],
+      [
+        112,
+        184,
+        72
+      ],
+      [
+        144,
+        208,
+        80
+      ],
+      [
+        176,
+        224,
+        104
+      ],
+      [
+        208,
+        232,
+        136
+      ],
+      [
+        56,
+        40,
+        32
+      ],
+      [
+        96,
+        64,
+        40
+      ],
+      [
+        136,
+        96,
+        56
+      ],
+      [
+        176,
+        128,
+        72
+      ],
+      [
+        56,
+        72,
+        40
+      ]
+    ],
+    "gpl_sha256": "08977d95c22cd57699956e0e08169bf7dad7fcf78fa4e009bbc6e185e22320fb"
+  },
+  "assets": {
+    "bush_a": {
+      "size_px": [
+        16,
+        16
+      ],
+      "review_px": [
+        64,
+        64
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "unique_8x8_tiles": 4,
+      "foliage_bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 15,
+        "pixels": 204
+      },
+      "opaque_bounds_including_shadow": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "pixels": 210
+      },
+      "used_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        15
+      ],
+      "glint_pixels": 1,
+      "sha256": "613634e47075ee8ba179a5dacbd72f9ed5d7bef7be8d3219e968f7e3604ac56e"
+    },
+    "bush_b": {
+      "size_px": [
+        16,
+        16
+      ],
+      "review_px": [
+        64,
+        64
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "unique_8x8_tiles": 4,
+      "foliage_bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 15,
+        "pixels": 204
+      },
+      "opaque_bounds_including_shadow": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "pixels": 210
+      },
+      "used_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        15
+      ],
+      "glint_pixels": 1,
+      "sha256": "aa6df10df3015d6e0c5a8033dbc8ef67284f6dde34bec88ab531aaf24661c284"
+    },
+    "bush_c": {
+      "size_px": [
+        16,
+        16
+      ],
+      "review_px": [
+        64,
+        64
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "unique_8x8_tiles": 4,
+      "foliage_bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 15,
+        "pixels": 204
+      },
+      "opaque_bounds_including_shadow": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 16,
+        "pixels": 210
+      },
+      "used_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        15
+      ],
+      "glint_pixels": 1,
+      "sha256": "5cd10f8420c734c7fdfc615e276fbba0f3904e45f75183870d587c0af59cde3d"
+    }
+  },
+  "unique_8x8_tiles_total": 11,
+  "neighbour_pairs": [
+    {
+      "a": "bush_a",
+      "b": "bush_a",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "a": "bush_a",
+      "b": "bush_b",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "a": "bush_a",
+      "b": "bush_c",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "a": "bush_b",
+      "b": "bush_a",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "a": "bush_b",
+      "b": "bush_b",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "a": "bush_b",
+      "b": "bush_c",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "a": "bush_c",
+      "b": "bush_a",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "a": "bush_c",
+      "b": "bush_b",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "a": "bush_c",
+      "b": "bush_c",
+      "horizontal_contact_rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "vertical_contact_columns": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Palette matches all 16 requested indices exactly; RGB channels are multiples of 8",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_a: native 16x16, indexed 4-bit PNG, exact palette and binary alpha",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_a: review is indexed 4-bit and exact nearest-neighbour 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_a: bounded, connected shrub with no lawn colours, at most two glints and four unique 8x8 tiles",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_b: native 16x16, indexed 4-bit PNG, exact palette and binary alpha",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_b: review is indexed 4-bit and exact nearest-neighbour 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_b: bounded, connected shrub with no lawn colours, at most two glints and four unique 8x8 tiles",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_c: native 16x16, indexed 4-bit PNG, exact palette and binary alpha",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_c: review is indexed 4-bit and exact nearest-neighbour 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "bush_c: bounded, connected shrub with no lawn colours, at most two glints and four unique 8x8 tiles",
+      "result": "PASS"
+    },
+    {
+      "name": "Three independently drawn variants: shared silhouette and boundary pixels, no mirrors",
+      "result": "PASS"
+    },
+    {
+      "name": "All nine ordered neighbour pairs touch horizontally and vertically without an empty seam",
+      "result": "PASS"
+    },
+    {
+      "name": "GPL retains all 16 colours in the requested order",
+      "result": "PASS"
+    },
+    {
+      "name": "All six native lawn previews have exact nearest-neighbour 4x copies",
+      "result": "PASS"
+    },
+    {
+      "name": "Required row/column/L/scale layouts use touching 16px placements and the 16x26 player",
+      "result": "PASS"
+    },
+    {
+      "name": "GPL is byte-identical to approved v0.4 archive; retained preview tree is unchanged",
+      "result": "PASS"
+    }
+  ],
+  "preview_lawn_rgb": [
+    [
+      56,
+      152,
+      80
+    ],
+    [
+      80,
+      184,
+      96
+    ],
+    [
+      112,
+      200,
+      120
+    ]
+  ],
+  "size_note": "Foliage is 16px wide and 15px high; the short contact shadow occupies row 15. The full opaque footprint including the contact shadow is 16x16, enabling vertical contact.",
+  "scope": "Import PNGs validated. Preview scenes also contain tree, player, fence and lawn colours. No game engine supplied; shrubs should be marked solid.",
+  "design_status": "approved",
+  "reference_match": {
+    "reference_archive": "Sunlit_Broadleaf_Tree_Pack_v0.4.zip",
+    "reference_drive_id": "1h_HQnN2t06FrHvDFMDLu9cPt8VVJET7c",
+    "gpl_byte_identical_to_approved_v04": true,
+    "gpl_sha256": "08977d95c22cd57699956e0e08169bf7dad7fcf78fa4e009bbc6e185e22320fb",
+    "reference_tree_pixels_identical_to_approved_v04": true
+  },
+  "approval": {
+    "pack": "Sunlit Broadleaf Bush Pack",
+    "version": "0.2",
+    "design_status": "approved",
+    "approved_by": "Malik",
+    "approval_message": "That works",
+    "approval_date": "2026-10-22",
+    "reference_tree_pack": "Sunlit Broadleaf Tree Pack v0.4",
+    "art_changes_since_review": false
+  }
+}

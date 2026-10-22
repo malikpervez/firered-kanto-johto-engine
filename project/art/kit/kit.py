@@ -13,7 +13,7 @@ Banks (palettes):
   1  water: the pond and the sea, its cliff and the sea rocks (native pixel packs in pond/ and sea/, put together
      in water.py), animated in eight frames
   2  wood: fences, the dock, signs, barrels, crates, the boat, the well (and buildings drawn in wood)
-  3  trees: the forest and the standalone trees (broadleaf/, a native pixel pack) and the bushes (trees.py)
+  3  trees: the forest, the standalone trees and the bushes (broadleaf/, native pixel packs; trees.py)
   4  tall grass: tall_grass/ (drawn natively at 16x16, made with another AI from a brief) and the sprites over
      the player's feet in it
   5  the Pokémon Center, 6  the Poké Mart: buildings every town shares (buildings/, native pixel packs; buildings.py),
@@ -699,7 +699,8 @@ def primary(spec_dir: Path) -> dict:
         # the crown's row above it is drawn over the player, who can walk behind it
         tree_sheet.add(name, trees.tree(name), tileset="primary", ground="grass", solid=True, open=["0,0", "1,0"],
                        over_rows=1)
-    tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
+    for name in trees.BUSHES:  # the bushes ("b" picks one by position)
+        tree_sheet.add(name, trees.bush(name), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
     # route pieces (fields.py): tall grass, ledges, steps, lily pads and reeds
     tall = sheet("tall_grass", "tallgrass")
@@ -752,7 +753,7 @@ LEGEND = {
     "~": {"auto": "pond", "elevation": 1}, "s": {"auto": "sea", "elevation": 1},
     "#": {"auto": "fence"}, "d": {"auto": "dock"},
     "*": {"pick": ["flowers1", "flowers2", "flowers3", "flowers4"]},
-    "b": "bush", "o": "rock", "k": "stump", "l": "lamp", "S": "sign", "B": "barrel", "c": "crate", "O": "boat",
+    "b": {"pick": list(trees.BUSHES)}, "o": "rock", "k": "stump", "l": "lamp", "S": "sign", "B": "barrel", "c": "crate", "O": "boat",
     "w": "well", "R": {"pick": list(trees.STANDALONE)},
     "g": {"pick": ["tall_grass", "tall_grass_flowers"], "order": "checker"},
     "_": {"auto": "ledge"}, "h": {"auto": "steps"},
