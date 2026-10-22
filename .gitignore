@@ -34,3 +34,25 @@ engine/tools/*/*
 # pae (the game editor) caches and test results; pae_tests/ itself is committed
 /engine/.pae/*
 !/engine/.pae/story.json
+
+# engine build outputs: make writes them next to their sources (graphics, fonts, generated headers)
+engine/**/*.1bpp
+engine/**/*.4bpp
+engine/**/*.8bpp
+engine/**/*.gbapal
+engine/**/*.lz
+engine/**/*.smol
+engine/**/*.smolTM
+engine/**/*.latfont
+engine/**/*.fwjpnfont
+engine/**/*.hwjpnfont
+engine/.map_version
+engine/include/constants/script_commands.h
+engine/src/data/battle_partners.h
+engine/src/data/debug_trainers.h
+engine/src/data/map_group_count.h
+engine/src/data/trainers.h
+engine/src/data/trainers_frlg.h
+engine/src/data/trainers_hns.h
+engine/test/battle/partner_control.h
+engine/test/battle/trainer_control.h
