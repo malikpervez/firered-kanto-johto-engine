@@ -2076,7 +2076,10 @@
    "h": 2,
    "solid": true,
    "elevation": null,
-   "open": []
+   "open": [
+    0,
+    1
+   ]
   },
   "offset_tree": {
    "ids": [
@@ -2089,7 +2092,10 @@
    "h": 2,
    "solid": true,
    "elevation": null,
-   "open": []
+   "open": [
+    0,
+    1
+   ]
   },
   "broad_tree": {
    "ids": [
@@ -2102,7 +2108,10 @@
    "h": 2,
    "solid": true,
    "elevation": null,
-   "open": []
+   "open": [
+    0,
+    1
+   ]
   },
   "bush": {
    "ids": [

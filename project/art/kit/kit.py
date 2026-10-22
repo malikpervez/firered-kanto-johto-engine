@@ -695,8 +695,10 @@ def primary(spec_dir: Path) -> dict:
                                ground="grass")
     for m, c in FOREST_CORNERS:  # forest#mask.corners: where an inside corner opens onto the map
         tree_sheet.add(f"forest#{m}.{c}", trees.forest(m, c), tileset="primary", solid=True, ground="grass")
-    for name in trees.STANDALONE:  # the standalone trees ("R" picks one by position)
-        tree_sheet.add(name, trees.tree(name), tileset="primary", ground="grass", solid=True)
+    for name in trees.STANDALONE:  # the standalone trees ("R" picks one by position): the trunk's row is solid,
+        # the crown's row above it is drawn over the player, who can walk behind it
+        tree_sheet.add(name, trees.tree(name), tileset="primary", ground="grass", solid=True, open=["0,0", "1,0"],
+                       over_rows=1)
     tree_sheet.add("bush", trees.bush(2), tileset="primary", ground="grass", solid=True)
     spec_mt += tree_sheet.write()
     # route pieces (fields.py): tall grass, ledges, steps, lily pads and reeds
