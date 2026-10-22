@@ -95,3 +95,5 @@ Check these whenever a map is rebuilt, moved or resized:
   no longer joined to Route 23 (above).
 - Route 22's cliffs redone from a rock and cliff pack (tops in nine phases, two-block faces, stairs, rocks): its
   forecourt's edge is a face with stairs now, the rest of the route (and its joins) as it was.
+- The kit's trees are the Sunlit Broadleaf pack's (broadleaf trees instead of pines) on every kit map. The forest
+  keeps its cells, so no map's layout, walls or joins changed.

@@ -1,8 +1,9 @@
 """The kit's trees, in their own palette (bank 3): the Sunlit Broadleaf pack (broadleaf/, native pixel art made
-with another AI from a brief, v0.4). Every tree is 32x32, a 2x2 block cell on the even grid: forest cells in 47
-shapes, each in three crown variants that can be mixed (their outer five pixels are the same), and three
-standalone trees. Transparent pixels show the ground under them. The bushes are drawn here, in the pack's colours.
-make_art.py puts them on the "trees" sheet."""
+with another AI from a brief, v0.4; the kit keeps its trees, forest cells, palette and notes, not its previews and
+sources). Every tree is 32x32, a 2x2 block cell on the even grid: forest cells in 47 shapes, each in three crown
+variants that can be mixed (their outer five pixels are the same), and three standalone trees. Transparent pixels
+show the ground under them. The pack has no bush: the bushes are drawn here, in the pack's colours. make_art.py
+puts them on the "trees" sheet."""
 import math
 import random
 from pathlib import Path

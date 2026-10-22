@@ -3,7 +3,7 @@
 nothing taken from an existing tileset. The pieces every map shares come from the kit (../kit/kit.py); this file
 draws the town's own.
 
-The town is 32x28 blocks: a pine forest around it, two houses with fenced yards (houses.py), cobblestone roads, a windmill
+The town is 32x28 blocks: a forest around it, two houses with fenced yards (houses.py), cobblestone roads, a windmill
 in a flower garden, Oak's lab with its greenhouse, a pond with a wooden dock (and the way south to Route 21), the sea
 below a cliff in the east, and a stone well.
 
@@ -226,7 +226,7 @@ def layout() -> tuple[list[list[str]], dict]:
             for x in (x0, x1):
                 if (x, y) not in gaps:
                     g[y][x] = "#"
-    # forest: top, bottom, west; pines down the east side of the yards
+    # forest: top, bottom, west; trees down the east side of the yards
     put("T", 0, 0, MAP_W, 2)
     put("T", 0, 26, MAP_W, 2)
     put("T", 0, 0, 2, MAP_H)
