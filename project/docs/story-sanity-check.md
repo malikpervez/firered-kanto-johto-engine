@@ -12,8 +12,8 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-22 |
-| Game | `v2-main` at `b30c4d9e` (the broadleaf trees, PR #23), with the trees' crowns walkable (PR #24) and the broadleaf bushes (branch `claude/broadleaf-bushes`) |
-| ROM | `make -j4` with the default settings. SHA-1 `625d495225d6aa61a3ccff4ab255b79815616fee`, SHA-256 `f99162cea5c7b65e655595b5d860e30adbb3c4488cec28eb4147ffb2757b91bd` |
+| Game | `v2-main` at `ca955d5e` (the broadleaf trees, bushes and walkable crowns: PRs #23–#25) with the field rocks (branch `claude/field-rocks`) |
+| ROM | `make -j4` with the default settings. SHA-1 `fcddf4fed348489ea468420caf804ef6986a5db0`, SHA-256 `dc1d5bba57dfa132db47edf24850d90c35fd449499f64f14a968540f5493d7e8` |
 | pae | `2805726` (`main` after pae PR #18) |
 | Last step passed | 29 `league-gate`: up Route 22's cliff stairs and into the Pokémon League Front Gate |
 | Replay tests | 45 of 45 pass |
@@ -126,3 +126,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-22 | the broadleaf trees on every kit map | **All 29 steps pass** from the top (1098 s). |
 | 2026-10-22 | the standalone trees' crowns walkable | **All 29 steps pass**: 1–11 from the top, then (after the machine restarted) `--from into-lab` (705 s). |
 | 2026-10-22 | the broadleaf bushes | **All 29 steps pass** from the top (1089 s). |
+| 2026-10-22 | the field rocks | **All 29 steps pass** from the top (1081 s). |
