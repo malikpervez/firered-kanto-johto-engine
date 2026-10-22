@@ -33,6 +33,7 @@ snapshot is history (`provenance/`, `project/` records).
 | Kanto trainers / Johto trainers | `engine/src/data/trainers_frlg.party` / `engine/src/data/trainers_hns.party` |
 | Wild Pokémon | `engine/src/data/wild_encounters.json` |
 | Replay tests | `engine/pae_tests/` |
+| Story check (new game to the end of the rebuilt maps); small fixes for later | `project/scripts/story_check.py`, `project/docs/story-sanity-check.md`; `project/docs/quality-of-life-backlog.md` |
 
 **Johto's IDs.** Johto keeps its own story progress (badges, events) apart from Kanto's: its flags and variables are
 `JOHTO_FLAG_*` / `JOHTO_VAR_*` (`engine/include/constants/johto_ids.h`) and its trainers `TRAINER_JOHTO_*`
@@ -60,6 +61,8 @@ are `{"id", "name", "removed": true}` entries in `layouts.json`. Leave them. New
      `__LINE__` defined as 0.
    * **Content changes**: `pae test run` must pass; add a replay test for every new or changed event (start it from
      story state in the test, not a save file); look at the changed maps in pae's test window.
+   * **Route and town changes**: also run the story check from the first step the change affects, and update its
+     last validated point (`project/docs/story-sanity-check.md`).
    * Say plainly what was not tested (a playthrough past the tests, a real device, Delta).
 3. **Report real results**: the commands, their exit codes, ROM hashes and sizes. A build is not a playtest.
 

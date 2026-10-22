@@ -25,6 +25,9 @@ pae test run -p engine    # build, then replay every test in engine/pae_tests/
 ## Where to look
 
 * [Story guide](project/docs/campaign-story-and-progression-guide.md): 19 chapters, start to finish.
+* [Story sanity check](project/docs/story-sanity-check.md): the story played from a new game through the rebuilt
+  maps, and the last point that passed.
+* [Quality-of-life backlog](project/docs/quality-of-life-backlog.md): small things to fix later.
 * [AGENTS.md](AGENTS.md): how the source is organised, how to make and prove a change, and what not to touch.
 * [Attribution](ATTRIBUTION.md). Upstream base: PokemonHnS-Development/pokehns-expansion commit
   `167aa6d537b109bb229c231ddce4616974c4da71` (pret pokeemerald → RHH pokeemerald-expansion → HnS).
