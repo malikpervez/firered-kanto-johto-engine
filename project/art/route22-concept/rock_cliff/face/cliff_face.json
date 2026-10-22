@@ -1,0 +1,290 @@
+{
+  "name": "south_cliff_face",
+  "palette": "rock_cliff",
+  "height_blocks": 2,
+  "height_px": 32,
+  "visible_height_px": 31,
+  "columns": [
+    {
+      "name": "left",
+      "image": "columns/left.png",
+      "top": "tiles/left_top.png",
+      "bottom": "tiles/left_bottom.png",
+      "tiles_8x8": [
+        [
+          180,
+          181
+        ],
+        [
+          182,
+          183
+        ],
+        [
+          184,
+          185
+        ],
+        [
+          186,
+          187
+        ]
+      ]
+    },
+    {
+      "name": "middle_1",
+      "image": "columns/middle_1.png",
+      "top": "tiles/middle_1_top.png",
+      "bottom": "tiles/middle_1_bottom.png",
+      "tiles_8x8": [
+        [
+          188,
+          189
+        ],
+        [
+          190,
+          191
+        ],
+        [
+          192,
+          193
+        ],
+        [
+          194,
+          195
+        ]
+      ]
+    },
+    {
+      "name": "middle_2",
+      "image": "columns/middle_2.png",
+      "top": "tiles/middle_2_top.png",
+      "bottom": "tiles/middle_2_bottom.png",
+      "tiles_8x8": [
+        [
+          196,
+          181
+        ],
+        [
+          197,
+          183
+        ],
+        [
+          198,
+          185
+        ],
+        [
+          199,
+          187
+        ]
+      ]
+    },
+    {
+      "name": "middle_3",
+      "image": "columns/middle_3.png",
+      "top": "tiles/middle_3_top.png",
+      "bottom": "tiles/middle_3_bottom.png",
+      "tiles_8x8": [
+        [
+          200,
+          201
+        ],
+        [
+          202,
+          203
+        ],
+        [
+          204,
+          205
+        ],
+        [
+          206,
+          207
+        ]
+      ]
+    },
+    {
+      "name": "right",
+      "image": "columns/right.png",
+      "top": "tiles/right_top.png",
+      "bottom": "tiles/right_bottom.png",
+      "tiles_8x8": [
+        [
+          188,
+          208
+        ],
+        [
+          190,
+          209
+        ],
+        [
+          192,
+          210
+        ],
+        [
+          194,
+          211
+        ]
+      ]
+    },
+    {
+      "name": "outer_W",
+      "image": "columns/outer_W.png",
+      "top": "tiles/outer_W_top.png",
+      "bottom": "tiles/outer_W_bottom.png",
+      "tiles_8x8": [
+        [
+          180,
+          181
+        ],
+        [
+          182,
+          183
+        ],
+        [
+          184,
+          185
+        ],
+        [
+          186,
+          187
+        ]
+      ]
+    },
+    {
+      "name": "outer_E",
+      "image": "columns/outer_E.png",
+      "top": "tiles/outer_E_top.png",
+      "bottom": "tiles/outer_E_bottom.png",
+      "tiles_8x8": [
+        [
+          188,
+          208
+        ],
+        [
+          190,
+          209
+        ],
+        [
+          192,
+          210
+        ],
+        [
+          194,
+          211
+        ]
+      ]
+    },
+    {
+      "name": "inner_W",
+      "image": "columns/inner_W.png",
+      "top": "tiles/inner_W_top.png",
+      "bottom": "tiles/inner_W_bottom.png",
+      "tiles_8x8": [
+        [
+          212,
+          201
+        ],
+        [
+          213,
+          203
+        ],
+        [
+          214,
+          205
+        ],
+        [
+          215,
+          207
+        ]
+      ]
+    },
+    {
+      "name": "inner_E",
+      "image": "columns/inner_E.png",
+      "top": "tiles/inner_E_top.png",
+      "bottom": "tiles/inner_E_bottom.png",
+      "tiles_8x8": [
+        [
+          196,
+          216
+        ],
+        [
+          197,
+          217
+        ],
+        [
+          198,
+          218
+        ],
+        [
+          199,
+          219
+        ]
+      ]
+    }
+  ],
+  "middle_variants": [
+    "middle_1",
+    "middle_2",
+    "middle_3"
+  ],
+  "shared_interfaces": {
+    "columns": [
+      0,
+      1,
+      14,
+      15
+    ],
+    "height": 32
+  },
+  "corners": {
+    "outer_W": "convex turn meeting the west side lip",
+    "outer_E": "convex turn meeting the east side lip",
+    "inner_W": "concave return on the west",
+    "inner_E": "concave return on the east"
+  },
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "stairs": {
+    "image": "stairs/stairs_32x32.png",
+    "footprint_blocks": [
+      2,
+      2
+    ],
+    "walkable": true,
+    "tiles_8x8": [
+      [
+        220,
+        221,
+        223,
+        224
+      ],
+      [
+        222,
+        221,
+        223,
+        225
+      ],
+      [
+        226,
+        221,
+        223,
+        228
+      ],
+      [
+        227,
+        221,
+        223,
+        229
+      ]
+    ]
+  },
+  "note": "The top 6px edge rule applies to cliff tops only. These full-height wall tiles use the full 16x32 column."
+}

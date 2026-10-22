@@ -663,7 +663,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving#14.2",
+   "name": "paving#11.1",
    "image": "../kit/sheets/ground.png",
    "x": 128,
    "y": 48,
@@ -674,7 +674,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving#15.8",
+   "name": "paving#11.8",
    "image": "../kit/sheets/ground.png",
    "x": 144,
    "y": 48,
@@ -685,7 +685,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving_to_cobble_N",
+   "name": "paving#15.3",
    "image": "../kit/sheets/ground.png",
    "x": 160,
    "y": 48,
@@ -696,7 +696,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving_to_cobble_E",
+   "name": "paving#15.4",
    "image": "../kit/sheets/ground.png",
    "x": 176,
    "y": 48,
@@ -707,7 +707,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving_to_cobble_S",
+   "name": "paving#15.8",
    "image": "../kit/sheets/ground.png",
    "x": 192,
    "y": 48,
@@ -718,7 +718,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving_to_cobble_W",
+   "name": "paving_to_cobble_N",
    "image": "../kit/sheets/ground.png",
    "x": 208,
    "y": 48,
@@ -729,7 +729,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving_to_dirt_N",
+   "name": "paving_to_cobble_E",
    "image": "../kit/sheets/ground.png",
    "x": 224,
    "y": 48,
@@ -740,7 +740,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving_to_dirt_E",
+   "name": "paving_to_cobble_S",
    "image": "../kit/sheets/ground.png",
    "x": 240,
    "y": 48,
@@ -751,7 +751,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving_to_dirt_S",
+   "name": "paving_to_cobble_W",
    "image": "../kit/sheets/ground.png",
    "x": 0,
    "y": 64,
@@ -762,7 +762,7 @@
    "ground": "grass"
   },
   {
-   "name": "paving_to_dirt_W",
+   "name": "paving_to_dirt_N",
    "image": "../kit/sheets/ground.png",
    "x": 16,
    "y": 64,
@@ -773,9 +773,42 @@
    "ground": "grass"
   },
   {
-   "name": "rock",
+   "name": "paving_to_dirt_E",
    "image": "../kit/sheets/ground.png",
    "x": 32,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_dirt_S",
+   "image": "../kit/sheets/ground.png",
+   "x": 48,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_dirt_W",
+   "image": "../kit/sheets/ground.png",
+   "x": 64,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "rock",
+   "image": "../kit/sheets/ground.png",
+   "x": 80,
    "y": 64,
    "banks": [
     0
@@ -787,7 +820,7 @@
   {
    "name": "stump",
    "image": "../kit/sheets/ground.png",
-   "x": 48,
+   "x": 96,
    "y": 64,
    "banks": [
     0

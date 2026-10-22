@@ -93,3 +93,5 @@ Check these whenever a map is rebuilt, moved or resized:
 - Route 22 rebuilt at the same size, so Viridian's join didn't change; now both are from the kit, they show each other
   (Route 22's strip was missing while it was the old map). Its hand-made seam and Route 23's pieces for it went; it's
   no longer joined to Route 23 (above).
+- Route 22's cliffs redone from a rock and cliff pack (tops in nine phases, two-block faces, stairs, rocks): its
+  forecourt's edge is a face with stairs now, the rest of the route (and its joins) as it was.

@@ -25,9 +25,9 @@ static const u8 sPaeDoorPalettes_8[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
     { 661, &gTileset_PalletConcept, DOOR_SOUND_NORMAL, 1, sPaeDoorTiles_0, sPaeDoorPalettes_0 }, \
     { 686, &gTileset_PalletConcept, DOOR_SOUND_NORMAL, 1, sPaeDoorTiles_1, sPaeDoorPalettes_1 }, \
     { 759, &gTileset_PalletConcept, DOOR_SOUND_NORMAL, 1, sPaeDoorTiles_2, sPaeDoorPalettes_2 }, \
-    { 308, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_3, sPaeDoorPalettes_3 }, \
-    { 324, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_4, sPaeDoorPalettes_4 }, \
-    { 761, &gTileset_Route22Concept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_5, sPaeDoorPalettes_5 }, \
+    { 311, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_3, sPaeDoorPalettes_3 }, \
+    { 327, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_4, sPaeDoorPalettes_4 }, \
+    { 815, &gTileset_Route22Concept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_5, sPaeDoorPalettes_5 }, \
     { 671, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_6, sPaeDoorPalettes_6 }, \
     { 692, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_7, sPaeDoorPalettes_7 }, \
     { 728, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_8, sPaeDoorPalettes_8 }, \

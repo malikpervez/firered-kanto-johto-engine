@@ -40,7 +40,7 @@
   ]
  },
  "b": "bush",
- "o": "rock",
+ "o": "small_rock",
  "k": "stump",
  "l": "lamp",
  "S": "sign",
@@ -89,9 +89,6 @@
   "with": "rock_b",
   "elevation": 1
  },
- "C": {
-  "auto": "cliff"
- },
  "U": {
   "name": "league_gate_top",
   "joins": "C"
@@ -101,6 +98,54 @@
   "name": "paving_to_cobble_N",
   "joins": "p"
  },
+ "H": {
+  "name": "rock_stairs",
+  "joins": "p"
+ },
+ "X": "big_boulder",
+ "A": {
+  "auto": "top1",
+  "joins": "C"
+ },
+ "D": {
+  "auto": "top2",
+  "joins": "C"
+ },
+ "E": {
+  "auto": "top3",
+  "joins": "C"
+ },
+ "F": {
+  "auto": "top4",
+  "joins": "C"
+ },
+ "G": {
+  "auto": "top5",
+  "joins": "C"
+ },
+ "I": {
+  "auto": "top6",
+  "joins": "C"
+ },
+ "J": {
+  "auto": "top7",
+  "joins": "C"
+ },
+ "K": {
+  "auto": "top8",
+  "joins": "C"
+ },
+ "V": {
+  "auto": "top9",
+  "joins": "C"
+ },
+ "[": "face_outer_W",
+ "{": "face_inner_W",
+ "M": "face_middle_1",
+ "N": "face_middle_2",
+ "P": "face_middle_3",
+ "}": "face_inner_E",
+ "]": "face_outer_E",
  "7": {
   "name": "cobble#7",
   "joins": "="

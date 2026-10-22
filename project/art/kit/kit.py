@@ -513,7 +513,7 @@ def water_corners(g, kind: str) -> set[tuple[int, int]]:
 # the kit (every map's together: ``check_paving``) and its pieces that meet other roads ("to_cobble_N": cobble on the
 # north half, paving on the south)
 PAVING = KIT / "paving"
-PAVING_CORNERS = [(14, 2), (15, 8)]
+PAVING_CORNERS = [(11, 1), (11, 8), (15, 3), (15, 4), (15, 8)]
 PAVING_CHARS = ("p", "n")  # the legend characters that are paving (the plain stone, and a map's joins to cobble)
 PAVING_JOINS = [f"to_{m}_{d}" for m in ("cobble", "dirt") for d in "NESW"]
 _paving: dict[str, np.ndarray] = {}
@@ -525,8 +525,10 @@ def paving_piece(name: str) -> np.ndarray:
     return _paving[name]
 
 
-def check_paving(g) -> None:
-    missing = autotile.corners_in(g, PAVING_CHARS) - set(PAVING_CORNERS)
+def check_paving(g, joins: str = "") -> None:
+    """The paving's inside corners in ``g`` are the kit's; ``joins``: a map's characters that count as paving for
+    their neighbours (e.g. stairs it opens onto)."""
+    missing = autotile.corners_in(g, PAVING_CHARS + tuple(joins), "p") - set(PAVING_CORNERS)
     if missing:
         raise SystemExit(f"the paving needs inside-corner pieces the kit doesn't have: {sorted(missing)}; "
                          "add them to kit.PAVING_CORNERS and rebuild every map")

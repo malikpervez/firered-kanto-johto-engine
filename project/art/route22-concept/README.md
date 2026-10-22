@@ -1,37 +1,48 @@
 # Route 22 after the concept
 
 The hilly route west of Viridian City to the Pokémon League Front Gate. The plan and the packs were made with
-another AI from a brief, in two stages: a concept and block plan, then native pixel packs for what's new: the League
-Front Gate, rocky cliffs and a dressed-stone paving for the League approach (`concept_comparison.png` puts the
-approved concept beside the packs). This folder builds the route from the kit (`../kit`) and those packs.
+another AI from a brief: a concept and block plan, then native pixel packs for what's new: the League Front Gate,
+a dressed-stone paving for the League approach (`concept_comparison.png` puts the approved concept beside them) and,
+redone after the first cliffs, a rock and cliff pack (`rock_cliff/`). This folder builds the route from the kit
+(`../kit`) and those packs.
 
 ![The map](map.png)
 
 The route is 52×28 blocks, as before. The road from Viridian leaves the right edge at rows 6–9 (Viridian's rows
 28–31), and Blue meets you on its straight stretch. It has:
-- the League Front Gate (15×7 blocks) in the northwest, its roof against the cliff behind it, up a stone forecourt
-  and a flight of stairs;
+- the League Front Gate (15×7 blocks) in the northwest, its roof against the cliff behind it, on a stone forecourt
+  up a flight of stairs in the cliff;
 - rocky cliffs and terraces between pine forest walls;
 - a dressed-stone approach from the road down to the gate, where it meets the cobblestones through joins;
 - tall grass on both sides, a pond with lily pads and reeds, a ledge with steps, round trees and rocks.
+
+`plan.txt` is the stage 1 plan (`plan_stage1.txt`) with the cliffs' faces two blocks tall, as the pack draws them:
+the forecourt's edge is a face now, with the pack's stairs (its old steps' rows are forecourt; a round tree below it
+went), its lamps stand at its ends, and a big boulder stands east of it.
 
 ## New pieces
 
 - **The dressed-stone paving** (`../kit/paving/`) is in the kit's ground palette (its colours are the kit's), so every
   map can use it: `p` in a grid, with joins to cobblestones and dirt (`paving_to_cobble_N` and the like).
-- **The rocky cliffs** (`cliff/`, `C` in the grid) are a 16-piece pack like the water's: the pieces are put together
-  for each block by the cliff around it (`../kit/autotile.py`). They're meant for every route, but the kit has no
-  palette slot left, so for now they're Route 22's own (bank 9).
-- **The League Front Gate** (`buildings/`, bank 7): its top four rows stand against the cliff (cliff under them, `U`
-  in the grid, joined to the cliff so it shows no edge there), its front over the lawn (`L`). Its door animates from
-  its drawn frames (`pae door add --frames`).
-- Stairs more than a row tall: the kit's steps go any way now (drawn by their neighbours east and west).
+- **The rock and cliff pack** (`rock_cliff/`, its `README.md`; bank 9). It's meant for every route, but the kit has no
+  palette slot left, so for now it's Route 22's own. `C` in the plan is a cliff's whole footprint:
+  - the bottom two blocks of each column of it are its **face**, the pack's 16×32 columns: an outer end beside the
+    lawn or forest, an inner end where it meets a cliff top or the stairs reaching further south, and the three
+    middles mixed between;
+  - the rest is its **top**: the pack's texture repeats every three blocks from the map's corner (its nine phases),
+    each block with the edges its neighbours call for (the pack's recipes). The cliff is solid, top and face;
+  - the **stairs** (`H`, 2×2) are in the face below the forecourt; the forecourt and the road open onto them;
+  - its **rocks**: the small one stands for the kit's rock here (`o`), the big boulder (`X`) east of the forecourt.
+    The pack's breakable rock isn't used yet (nothing on the route breaks rocks).
+- **The League Front Gate** (`buildings/`, bank 7): its top four rows stand against the cliff (`U` in the grid,
+  joined to the cliff so it shows no edge there; the cliff's top shows under its roof, by phase: pae's ground for
+  each block), its front over the lawn (`L`). Its door animates from its drawn frames (`pae door add --frames`).
 
 ## Rebuild
 
 From the repository root: `sh project/art/build_all.sh` rebuilds every map made from the kit.
 `sh project/art/route22-concept/build.sh` alone runs `make_art.py` (which checks the road to Viridian is open, the
-gate's door and the tall grass are reachable, Blue's road is clear and the top rows are only forest and cliff),
+gate's door and the tall grass are reachable, Blue's road is clear and every cliff has room for its face),
 `pae tileset new` (the first time), `pae map geometry`, `pae tileset build`, `pae map paint`, `pae map connect`
 (Viridian), `pae seam build`, `pae door add` and `pae map place` for the events.
 
@@ -45,10 +56,10 @@ until Route 23 is rebuilt (`../WORLD.md`).
 
 ## In game
 
-![The gate, up the stairs](in_game_gate.png)
+![The stairs up the cliff to the gate's forecourt](in_game_gate.png)
 ![The stone approach from the road](in_game_approach.png)
 ![The pond and the tall grass](in_game_pond.png)
 ![Blue meets you on the road from Viridian](in_game_blue.png)
 
 Replay tests: `viridian west to route 22`, `route 22 looks at viridian`, `route 22 enter the league gate`,
-`route 22 blue on row 7`, `route 22 blue on row 9`.
+`route 22 up the stairs to the gate`, `route 22 blue on row 7`, `route 22 blue on row 9`.

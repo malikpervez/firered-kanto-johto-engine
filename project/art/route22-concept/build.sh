@@ -33,7 +33,7 @@ pae map place $M warp 1 12 13 $P
 for i in 0 1 2 3 4 5 6 7; do                  # Blue meets you on the road from Viridian: one trigger a row (6-9),
     pae map place $M coord $i 44 $((6 + i % 4)) $P  # early (0-3) and late (4-7); he comes from the west
 done
-pae map place $M bg 0 19 14 $P                # the gate's sign, at the top of the stairs
+pae map place $M bg 0 18 14 $P                # the gate's sign, at the top of the stairs
 pae map place $M bg 1 38 12 $P                # and where the stone approach leaves the road
 pae map place $M object LOCALID_ROUTE22_RIVAL 36 7 $P  # (his script puts him in your row)
 pae map place $M object 1 24 8 $P             # Fearow, Spearow, Ponyta, Doduo and Taillow about the route

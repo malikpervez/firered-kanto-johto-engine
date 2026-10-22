@@ -1,0 +1,20 @@
+{
+  "name": "breakable_rock",
+  "image": "breakable_rock.png",
+  "palette": "rock_cliff",
+  "footprint_blocks": [
+    1,
+    1
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "transparent_index": 0,
+  "interaction": {
+    "ability": "Rock Smash",
+    "implementation": "art only; reuse the game event and restore the ground beneath after removal"
+  }
+}
