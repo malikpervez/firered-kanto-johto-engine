@@ -465,10 +465,318 @@
    "ground": "grass"
   },
   {
-   "name": "rock",
+   "name": "paving#0",
    "image": "../kit/sheets/ground.png",
    "x": 96,
    "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#1",
+   "image": "../kit/sheets/ground.png",
+   "x": 112,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#2",
+   "image": "../kit/sheets/ground.png",
+   "x": 128,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#3",
+   "image": "../kit/sheets/ground.png",
+   "x": 144,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#4",
+   "image": "../kit/sheets/ground.png",
+   "x": 160,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#5",
+   "image": "../kit/sheets/ground.png",
+   "x": 176,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#6",
+   "image": "../kit/sheets/ground.png",
+   "x": 192,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#7",
+   "image": "../kit/sheets/ground.png",
+   "x": 208,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#8",
+   "image": "../kit/sheets/ground.png",
+   "x": 224,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#9",
+   "image": "../kit/sheets/ground.png",
+   "x": 240,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#10",
+   "image": "../kit/sheets/ground.png",
+   "x": 0,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#11",
+   "image": "../kit/sheets/ground.png",
+   "x": 16,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#12",
+   "image": "../kit/sheets/ground.png",
+   "x": 32,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#13",
+   "image": "../kit/sheets/ground.png",
+   "x": 48,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#14",
+   "image": "../kit/sheets/ground.png",
+   "x": 64,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#15",
+   "image": "../kit/sheets/ground.png",
+   "x": 80,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#15~1",
+   "image": "../kit/sheets/ground.png",
+   "x": 96,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#15~2",
+   "image": "../kit/sheets/ground.png",
+   "x": 112,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#14.2",
+   "image": "../kit/sheets/ground.png",
+   "x": 128,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving#15.8",
+   "image": "../kit/sheets/ground.png",
+   "x": 144,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_cobble_N",
+   "image": "../kit/sheets/ground.png",
+   "x": 160,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_cobble_E",
+   "image": "../kit/sheets/ground.png",
+   "x": 176,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_cobble_S",
+   "image": "../kit/sheets/ground.png",
+   "x": 192,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_cobble_W",
+   "image": "../kit/sheets/ground.png",
+   "x": 208,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_dirt_N",
+   "image": "../kit/sheets/ground.png",
+   "x": 224,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_dirt_E",
+   "image": "../kit/sheets/ground.png",
+   "x": 240,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_dirt_S",
+   "image": "../kit/sheets/ground.png",
+   "x": 0,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "paving_to_dirt_W",
+   "image": "../kit/sheets/ground.png",
+   "x": 16,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "rock",
+   "image": "../kit/sheets/ground.png",
+   "x": 32,
+   "y": 64,
    "banks": [
     0
    ],
@@ -479,8 +787,8 @@
   {
    "name": "stump",
    "image": "../kit/sheets/ground.png",
-   "x": 112,
-   "y": 32,
+   "x": 48,
+   "y": 64,
    "banks": [
     0
    ],
@@ -1947,9 +2255,23 @@
    "ground": "grass"
   },
   {
-   "name": "round_tree",
+   "name": "forest#14.4",
    "image": "../kit/sheets/trees.png",
    "x": 0,
+   "y": 96,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "round_tree",
+   "image": "../kit/sheets/trees.png",
+   "x": 32,
    "y": 96,
    "w": 2,
    "h": 2,
@@ -1963,7 +2285,7 @@
   {
    "name": "bush",
    "image": "../kit/sheets/trees.png",
-   "x": 32,
+   "x": 64,
    "y": 96,
    "banks": [
     3
@@ -2058,7 +2380,7 @@
    "ground": "grass"
   },
   {
-   "name": "steps#2",
+   "name": "steps#1",
    "image": "../kit/sheets/fields.png",
    "x": 80,
    "y": 0,
@@ -2069,7 +2391,7 @@
    "ground": "grass"
   },
   {
-   "name": "steps#8",
+   "name": "steps#2",
    "image": "../kit/sheets/fields.png",
    "x": 96,
    "y": 0,
@@ -2080,7 +2402,7 @@
    "ground": "grass"
   },
   {
-   "name": "steps#10",
+   "name": "steps#3",
    "image": "../kit/sheets/fields.png",
    "x": 112,
    "y": 0,
@@ -2091,10 +2413,142 @@
    "ground": "grass"
   },
   {
-   "name": "pond#15+lily",
+   "name": "steps#4",
    "image": "../kit/sheets/fields.png",
    "x": 128,
    "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#5",
+   "image": "../kit/sheets/fields.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#6",
+   "image": "../kit/sheets/fields.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#7",
+   "image": "../kit/sheets/fields.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#8",
+   "image": "../kit/sheets/fields.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#9",
+   "image": "../kit/sheets/fields.png",
+   "x": 208,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#10",
+   "image": "../kit/sheets/fields.png",
+   "x": 224,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#11",
+   "image": "../kit/sheets/fields.png",
+   "x": 240,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#12",
+   "image": "../kit/sheets/fields.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#13",
+   "image": "../kit/sheets/fields.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#14",
+   "image": "../kit/sheets/fields.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "steps#15",
+   "image": "../kit/sheets/fields.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "ground": "grass"
+  },
+  {
+   "name": "pond#15+lily",
+   "image": "../kit/sheets/fields.png",
+   "x": 64,
+   "y": 16,
    "banks": [
     0
    ],
@@ -2106,8 +2560,8 @@
   {
    "name": "pond#15+reeds",
    "image": "../kit/sheets/fields.png",
-   "x": 144,
-   "y": 0,
+   "x": 80,
+   "y": 16,
    "banks": [
     0
    ],

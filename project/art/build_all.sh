@@ -7,9 +7,8 @@ export KIT_BUILD_ALL=1  # the maps' own builds leave the seams to the end
 sh project/art/route1-concept/build.sh
 sh project/art/pallet-concept/build.sh
 sh project/art/viridian-concept/build.sh
+sh project/art/route22-concept/build.sh
 cd engine
-for m in Route1_Frlg PalletTown_Frlg; do
+for m in Route1_Frlg PalletTown_Frlg ViridianCity_Frlg Route22_Frlg; do
     pae seam build $m -p .
 done
-# Route 22 (not rebuilt yet) has no room for Viridian's strip: it gets its seams when it's rebuilt from the kit
-pae seam build ViridianCity_Frlg -p . --skip Route22_Frlg

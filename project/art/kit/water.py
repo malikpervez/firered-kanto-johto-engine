@@ -4,13 +4,14 @@ a rocky cliff, and two sea rocks). Each has open water in three variants, the sh
 four inside corners and a one-block pool, each 16x16 in eight frames. Land is transparent: the grass shows.
 
 Each shore keeps to the outer 6 pixels of its side and the rest is the open water, so any block of a pond or the
-sea is put together from them: open water, then the band of each side that has land (its outer corners from the
-corner pieces where two sides meet land), then an inside corner where both sides are water but the diagonal isn't.
+sea is put together from them, as autotile.py does for every such pack.
 """
 from pathlib import Path
 
 import numpy as np
 from PIL import Image
+
+import autotile
 
 HERE = Path(__file__).resolve().parent
 PW = [(0, 0, 0), (16, 24, 40), (96, 64, 40), (152, 112, 72), (200, 168, 112), (24, 48, 104), (32, 72, 144),
@@ -43,26 +44,8 @@ def frame(pack: str, name: str, k: int) -> np.ndarray:
     return _strip(pack, name)[:, 16 * k:16 * k + 16].copy()
 
 
-SIDES = {1: ("N", np.s_[0:6, :]), 2: ("E", np.s_[:, 10:16]), 4: ("S", np.s_[10:16, :]), 8: ("W", np.s_[:, 0:6])}
-OUTER = {(1, 2): ("NE", np.s_[0:6, 10:16]), (4, 2): ("SE", np.s_[10:16, 10:16]),
-         (4, 8): ("SW", np.s_[10:16, 0:6]), (1, 8): ("NW", np.s_[0:6, 0:6])}
-INNER = {1: ("in_NE", np.s_[0:6, 10:16]), 2: ("in_SE", np.s_[10:16, 10:16]),
-         4: ("in_SW", np.s_[10:16, 0:6]), 8: ("in_NW", np.s_[0:6, 0:6])}
-
-
 def piece(pack: str, mask: int, k: int, variant: int = 0, corners: int = 0) -> np.ndarray:
     """The block of ``pack`` ("pond" or "sea") whose water neighbours are ``mask`` (1 N, 2 E, 4 S, 8 W), with inside
-    corners ``corners`` (1 NE, 2 SE, 4 SW, 8 NW: both sides water, the diagonal land), at frame ``k``."""
-    if mask == 0:
-        return frame(pack, "single", k)
-    t = frame(pack, ("center", "center_b", "center_c")[variant % 3], k)
-    for bit, (name, region) in SIDES.items():
-        if not mask & bit:
-            t[region] = frame(pack, name, k)[region]
-    for (a, b), (name, region) in OUTER.items():
-        if not mask & a and not mask & b:
-            t[region] = frame(pack, name, k)[region]
-    for bit, (name, region) in INNER.items():
-        if corners & bit:
-            t[region] = frame(pack, name, k)[region]
-    return t
+    corners ``corners`` (1 NE, 2 SE, 4 SW, 8 NW: both sides water, the diagonal land), at frame ``k``
+    (autotile.py)."""
+    return autotile.compose(lambda name: frame(pack, name, k), mask, variant, corners)

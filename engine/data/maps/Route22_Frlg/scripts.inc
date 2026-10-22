@@ -5,20 +5,21 @@ Route22_Frlg_MapScripts::
 Route22_EventScript_EarlyRivalTriggerTop::
 	lockall
 	setvar VAR_TEMP_1, 0
+	call Route22_EventScript_RivalInPlayersRow
 	goto Route22_EventScript_EarlyRival
 	end
 
 Route22_EventScript_EarlyRivalTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
+	call Route22_EventScript_RivalInPlayersRow
 	goto Route22_EventScript_EarlyRival
 	end
 
 Route22_EventScript_EarlyRivalTriggerBottom::
 	lockall
 	setvar VAR_TEMP_1, 2
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
+	call Route22_EventScript_RivalInPlayersRow
 	goto Route22_EventScript_EarlyRival
 	end
 
@@ -46,6 +47,11 @@ Route22_EventScript_EarlyRival::
 	setvar VAR_MAP_SCENE_ROUTE22, 2
 	releaseall
 	end
+
+Route22_EventScript_RivalInPlayersRow::
+	getplayerxy VAR_TEMP_2, VAR_TEMP_3
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 36, VAR_TEMP_3
+	return
 
 Route22_EventScript_EarlyRivalApproach::
 	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalApproach
@@ -97,26 +103,21 @@ Route22_Movement_EarlyRivalExit::
 	walk_right
 	walk_right
 	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 Route22_Movement_EarlyRivalExitBottom::
+	walk_up
 	walk_right
 	walk_right
 	walk_right
 	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 Route22_Movement_RivalApproach::
@@ -137,8 +138,6 @@ Route22_Movement_RivalApproachBottom::
 	walk_right
 	walk_right
 	walk_right
-	walk_right
-	walk_in_place_faster_down
 	step_end
 
 Route22_Movement_PlayerFaceRival::
@@ -150,26 +149,27 @@ Route22_Movement_PlayerFaceRival::
 	delay_16
 	delay_16
 	delay_8
-	walk_in_place_faster_up
+	walk_in_place_faster_left
 	step_end
 
 Route22_EventScript_LateRivalTriggerTop::
 	lockall
 	setvar VAR_TEMP_1, 0
+	call Route22_EventScript_RivalInPlayersRow
 	goto Route22_EventScript_LateRival
 	end
 
 Route22_EventScript_LateRivalTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
+	call Route22_EventScript_RivalInPlayersRow
 	goto Route22_EventScript_LateRival
 	end
 
 Route22_EventScript_LateRivalTriggerBottom::
 	lockall
 	setvar VAR_TEMP_1, 2
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
+	call Route22_EventScript_RivalInPlayersRow
 	goto Route22_EventScript_LateRival
 	end
 

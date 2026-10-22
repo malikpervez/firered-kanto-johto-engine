@@ -1,0 +1,20 @@
+GIMP Palette
+Name: rock_cliff
+Columns: 8
+# Index 0 transparent; indices 1-15 opaque.
+  0   0   0	 0 Transparent lawn cutout
+ 48  40  40	 1 Crevice deepest
+ 80  72  56	 2 Crevice
+104  88  72	 3 Rock dark
+128 112  88	 4 Rock shade
+152 136 104	 5 Rock mid
+176 160 136	 6 Rock light
+200 184 160	 7 Sunlit facet
+224 208 184	 8 Facet tip
+160 120  72	 9 Ochre seam
+192 152  88	10 Ochre light
+120 104  64	11 Weathered moss shade
+ 64  80  56	12 Moss deep
+ 88 112  72	13 Moss
+120 144  88	14 Moss light
+152 168 120	15 Moss tip

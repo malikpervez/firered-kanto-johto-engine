@@ -16,6 +16,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Pallet Town | 32×28 | 24×20 | kit + `gTileset_PalletConcept` | up: Route 1 (offset −10), down: Route 21 North (offset 11) |
 | Route 1 | 50×40 | 50×40 | kit + `gTileset_Route1Concept` | up: Viridian City (offset −2), down: Pallet Town (offset 10) |
 | Viridian City | 60×52 | 56×50 | kit + `gTileset_ViridianConcept` | up: Route 2 (offset 16), left: Route 22 (offset 22), down: Route 1 (offset 2) |
+| Route 22 | 52×28 | 52×28 | kit + `gTileset_Route22Concept` | right: Viridian City (offset −22); not joined to Route 23 (below) |
 
 ## Where the roads meet
 
@@ -40,10 +41,11 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 |---|---|---|
 | Pallet Town | Route 1, Route 21 North | pae |
 | Route 1 | Pallet Town, Viridian City | pae |
-| Viridian City | Route 1, Route 2 | pae (its hand-made seam for the old Viridian is gone) |
+| Viridian City | Route 1, Route 2, Route 22 | pae (its hand-made seam for the old Viridian is gone) |
 | Route 2 | Viridian City | pae |
 | Route 21 North | Pallet Town | pae |
-| Route 22 | Viridian City: **none yet** | no room (below) |
+| Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
+| Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
 
 Maps built from the kit share the primary tileset, so between them the seams only copy secondary tiles. When both
 neighbours are rebuilt from the kit with the same secondary tileset, the seam isn't needed at all.
@@ -52,14 +54,12 @@ A seam needs a palette slot in the viewing map for every palette of the strip it
 beside the join) that the viewing map doesn't have. Old maps have few free: Viridian's hand-made seam for Route 22
 leaves it three. So near a join with a map that isn't rebuilt yet, keep pieces with palettes of their own out of
 those 7 rows: Route 1's tall grass (bank 4) starts at row 7. Viridian has three free slots (10–12), and Route 2's strip
-takes all three: Route 22's old strip couldn't have fitted too, but once Route 22 is rebuilt from the kit it shares
-Viridian's palettes and needs none.
+takes all three; Route 22, from the kit, shares Viridian's palettes and needs none.
 
-**Route 22 can't show the new Viridian.** It's still FireRed's map, on the old Viridian's tilesets (so it never needed
-a seam for Viridian), and it has no room for one: its tileset is full and its last block numbers (912–1022) are
-hand-made pieces its own map uses. So Viridian's builds skip it (`pae seam build ViridianCity_Frlg --skip
-Route22_Frlg`), and near the join Route 22 shows Viridian's edge in the wrong tiles. Known until Route 22 is rebuilt
-from the kit, which is next (its concept is with the other AI).
+**Route 23 isn't joined to Route 22.** The join was only seen across Route 22's top (both edges are solid: you go
+through the League gate), and Route 23's strip needs seven palettes, more than Route 22 has free. So each shows its
+own border there. Join them again (`pae map connect Route22_Frlg up Route23_Frlg --offset 0`) when Route 23 is
+rebuilt from the kit.
 
 ## Planned
 
@@ -90,3 +90,6 @@ Check these whenever a map is rebuilt, moved or resized:
 - Viridian City rebuilt larger: 60×52 instead of 56×50 (four columns east, two rows south). Its exits kept their
   columns and rows, so no join's offset changed; Route 1 now enters it at row 51. Its heal spot, the Friends camp and
   Route 2's copy of its old tree to cut moved or went; its hand-made seam went too.
+- Route 22 rebuilt at the same size, so Viridian's join didn't change; now both are from the kit, they show each other
+  (Route 22's strip was missing while it was the old map). Its hand-made seam and Route 23's pieces for it went; it's
+  no longer joined to Route 23 (above).

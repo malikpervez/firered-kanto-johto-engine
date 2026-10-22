@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "id": "cliff_terrain",
+  "type": "static_terrain",
+  "block_size_px": 16,
+  "palette": "rock_cliff",
+  "palette_file": "../palettes/rock_cliff.gpl",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "piece_names": [
+    "center",
+    "center_b",
+    "center_c",
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "in_NE",
+    "in_SE",
+    "in_SW",
+    "in_NW",
+    "single"
+  ],
+  "naming": "N means outside ground / lawn to the north, likewise other compass directions; in_NE means diagonal lawn with both cardinal neighbours still material.",
+  "solid": true,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "door_block": null,
+  "inner_center_square": [
+    6,
+    6,
+    4,
+    4
+  ],
+  "edge_band_px": 6,
+  "inner_corner_square_px": 6,
+  "variant_border_policy": "All three center variants preserve their shared outer pixel border and common inner 4x4.",
+  "tiles": [
+    {
+      "name": "center",
+      "image": "tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "center_b",
+      "image": "tiles/center_b.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "center_c",
+      "image": "tiles/center_c.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          6,
+          1
+        ],
+        [
+          2,
+          7
+        ]
+      ]
+    },
+    {
+      "name": "N",
+      "image": "tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          8,
+          9
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "NE",
+      "image": "tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          8,
+          10
+        ],
+        [
+          2,
+          11
+        ]
+      ]
+    },
+    {
+      "name": "E",
+      "image": "tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          12
+        ],
+        [
+          2,
+          11
+        ]
+      ]
+    },
+    {
+      "name": "SE",
+      "image": "tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          12
+        ],
+        [
+          13,
+          14
+        ]
+      ]
+    },
+    {
+      "name": "S",
+      "image": "tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          13,
+          15
+        ]
+      ]
+    },
+    {
+      "name": "SW",
+      "image": "tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          16,
+          1
+        ],
+        [
+          17,
+          15
+        ]
+      ]
+    },
+    {
+      "name": "W",
+      "image": "tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          16,
+          1
+        ],
+        [
+          18,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "NW",
+      "image": "tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          19,
+          9
+        ],
+        [
+          18,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "in_NE",
+      "image": "tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          20
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "in_SE",
+      "image": "tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          21
+        ]
+      ]
+    },
+    {
+      "name": "in_SW",
+      "image": "tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          22,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "in_NW",
+      "image": "tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          23,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "single",
+      "image": "tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          19,
+          10
+        ],
+        [
+          17,
+          24
+        ]
+      ]
+    }
+  ],
+  "autotile": {
+    "mask_bits": {
+      "N": 1,
+      "E": 2,
+      "S": 4,
+      "W": 8,
+      "NE": 16,
+      "SE": 32,
+      "SW": 64,
+      "NW": 128
+    },
+    "bit_meaning": "1 = neighbour is outside this material",
+    "quadrants": "NW, NE, SW, SE; copy the indicated native 8x8 quadrant. Supports opposite sides, three sides, and concave notches without inventing extra tiles.",
+    "recipes_file": "autotile_recipes.json"
+  },
+  "unique_8x8_tiles": 25
+}

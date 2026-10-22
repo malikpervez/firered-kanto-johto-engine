@@ -74,6 +74,9 @@
   "with": "reeds",
   "elevation": 1
  },
+ "p": {
+  "auto": "paving"
+ },
  "q": {
   "auto": "sea",
   "joins": "s",

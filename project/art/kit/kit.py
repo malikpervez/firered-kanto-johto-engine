@@ -7,7 +7,8 @@ pieces, so every map's build makes the same primary tileset: a map's secondary t
 tiles, and rebuilding one map never breaks another. Change the kit, then rebuild every map (project/art/build_all.sh).
 
 Banks (palettes):
-  0  ground: grass, dirt, cobblestones, rocks, stumps; tall grass, ledges, steps, lily pads and reeds (fields.py,
+  0  ground: grass, dirt, cobblestones, dressed-stone paving (paving/, a native pixel pack), rocks, stumps; ledges,
+     steps, lily pads and reeds (fields.py,
      the last two drawn over the pond's water), and the tall grass sprite drawn over the player's feet
   1  water: the pond and the sea, its cliff and the sea rocks (native pixel packs in pond/ and sea/, put together
      in water.py), animated in eight frames
@@ -27,6 +28,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import autotile
 import buildings
 import fields
 import lawn
@@ -440,7 +442,7 @@ def lamp() -> np.ndarray:
 # ---------------------------------------------------------------- forest pieces
 # (mask, corners) of the forest's inside-corner pieces in the kit: every map's together (a map checks its own are
 # here with ``forest_corners``; add new ones here, then rebuild every map)
-FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8), (7, 1), (7, 2), (13, 4)]
+FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8), (7, 1), (7, 2), (13, 4), (14, 4)]
 
 
 def forest_corners(g, char: str = "T") -> set[tuple[int, int]]:
@@ -505,6 +507,29 @@ def water_corners(g, kind: str) -> set[tuple[int, int]]:
             if g[y][x] != chars[0] and mask != 15:
                 raise SystemExit(f"({x},{y}): '{g[y][x]}' needs {kind} all round it (it is drawn in open water)")
     return out
+
+
+# the dressed-stone paving (paving/, a native pixel pack in the ground palette: autotile.py), its inside corners in
+# the kit (every map's together: ``check_paving``) and its pieces that meet other roads ("to_cobble_N": cobble on the
+# north half, paving on the south)
+PAVING = KIT / "paving"
+PAVING_CORNERS = [(14, 2), (15, 8)]
+PAVING_CHARS = ("p", "n")  # the legend characters that are paving (the plain stone, and a map's joins to cobble)
+PAVING_JOINS = [f"to_{m}_{d}" for m in ("cobble", "dirt") for d in "NESW"]
+_paving: dict[str, np.ndarray] = {}
+
+
+def paving_piece(name: str) -> np.ndarray:
+    if name not in _paving:
+        _paving[name] = autotile.load(PAVING / f"{name}.png", P0)
+    return _paving[name]
+
+
+def check_paving(g) -> None:
+    missing = autotile.corners_in(g, PAVING_CHARS) - set(PAVING_CORNERS)
+    if missing:
+        raise SystemExit(f"the paving needs inside-corner pieces the kit doesn't have: {sorted(missing)}; "
+                         "add them to kit.PAVING_CORNERS and rebuild every map")
 
 
 def check_water(g) -> None:
@@ -610,6 +635,14 @@ def primary(spec_dir: Path) -> dict:
         ground.add(f"cobble#{m}", cobble(m), tileset="primary", ground="grass")
     for m in range(16):
         ground.add(f"dirt#{m}", dirt(m), tileset="primary", ground="grass")
+    for m in range(16):  # the dressed-stone paving (paving/)
+        ground.add(f"paving#{m}", autotile.compose(paving_piece, m), tileset="primary", ground="grass")
+    for v in (1, 2):
+        ground.add(f"paving#15~{v}", autotile.compose(paving_piece, 15, v), tileset="primary", ground="grass")
+    for m, c in PAVING_CORNERS:
+        ground.add(f"paving#{m}.{c}", autotile.compose(paving_piece, m, 0, c), tileset="primary", ground="grass")
+    for name in PAVING_JOINS:
+        ground.add(f"paving_{name}", paving_piece(name), tileset="primary", ground="grass")
     ground.add("rock", rock(1, True), tileset="primary", ground="grass", solid=True)
     ground.add("stump", stump(), tileset="primary", ground="grass", solid=True)
     spec_mt += ground.write()
@@ -665,8 +698,8 @@ def primary(spec_dir: Path) -> dict:
     for m in (0, 2, 8, 10):  # ledges join east-west only
         field.add(f"ledge#{m}", fields.ledge(m), tileset="primary", ground="grass", solid=True,
                   behavior="MB_JUMP_SOUTH")
-    for m in (0, 2, 8, 10):
-        field.add(f"steps#{m}", fields.steps(m), tileset="primary", ground="grass")
+    for m in range(16):  # steps by their neighbours east and west (stairs more than a row tall: the same steps)
+        field.add(f"steps#{m}", fields.steps(m & 10), tileset="primary", ground="grass")
     field.add("pond#15+lily", fields.lily(), tileset="primary", ground="pond#15", behavior="MB_POND_WATER",
               elevation=1)
     field.add("pond#15+reeds", fields.reeds(), tileset="primary", ground="pond#15", behavior="MB_POND_WATER",
@@ -713,6 +746,7 @@ LEGEND = {
     "_": {"auto": "ledge"}, "h": {"auto": "steps"},
     "v": {"auto": "pond", "joins": "~", "with": "lily", "elevation": 1},
     "r": {"auto": "pond", "joins": "~", "with": "reeds", "elevation": 1},
+    "p": {"auto": "paving"},
     "q": {"auto": "sea", "joins": "s", "with": "rock_a", "elevation": 1},
     "Q": {"auto": "sea", "joins": "s", "with": "rock_b", "elevation": 1},
 }

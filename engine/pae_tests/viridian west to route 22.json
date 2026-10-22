@@ -1,0 +1,62 @@
+{
+ "note": "Walk west out of Viridian onto Route 22's road (Route 22 and Viridian both from the kit: their seams copy only each other's own tiles).",
+ "created": "2026-10-22 05:06",
+ "start": {
+  "map": "ViridianCity_Frlg",
+  "x": 2,
+  "y": 29,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     32,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route22_Frlg",
+  "x": 51,
+  "y": 7,
+  "in_battle": false
+ }
+}
