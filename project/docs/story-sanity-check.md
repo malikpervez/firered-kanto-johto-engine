@@ -12,8 +12,8 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-22 |
-| Game | `v2-main` at `a7719c53` (the broadleaf trees, bushes, walkable crowns and field rocks: PRs #23–#26) with Pallet's new houses (branch `claude/pallet-houses-pack`) |
-| ROM | `make -j4` with the default settings. SHA-1 `681a976c9f2d39876096986778a4089cace0224d`, SHA-256 `fc37be7bd5e5050a77f18b669cef8c8569ef0694c8aafd3abe31b686833f5c00` |
+| Game | `v2-main` at `a7719c53` (PRs #23–#26) with Pallet's new houses (PR #27) and the new Pokémon Center and Poké Mart (branch `claude/center-mart-pack`) |
+| ROM | `make -j4` with the default settings. SHA-1 `b445baca90b60f90eb028807e27f788186c40a58`, SHA-256 `120ffed113b8602e1fa6bbd48c9eb609949a590626d2342295ce1e1b0814f4c6` |
 | pae | `2805726` (`main` after pae PR #18) |
 | Last step passed | 29 `league-gate`: up Route 22's cliff stairs and into the Pokémon League Front Gate |
 | Replay tests | 45 of 45 pass |
@@ -128,3 +128,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-22 | the broadleaf bushes | **All 29 steps pass** from the top (1089 s). |
 | 2026-10-22 | the field rocks | **All 29 steps pass** from the top (1081 s). |
 | 2026-10-23 | Pallet's new houses | **All 29 steps pass** from the top (1078 s). |
+| 2026-10-23 | the new Pokémon Center and Poké Mart | **All 29 steps pass** from the top (1078 s). |
