@@ -1,0 +1,736 @@
+{
+  "schema_version": 1,
+  "pack": "Viridian_Houses_Roofs_v0.1",
+  "passed": true,
+  "authoring": {
+    "native_1x_palette_index_arrays": true,
+    "downscaling_used": false,
+    "quantization_used": false,
+    "source": "Viridian_City_Stage_2 / viridian-stage2/source/native_pixels.json",
+    "style_references": [
+      "Pallet_Houses_Pack_v0.5",
+      "Pokemon_Center_Pack_v0.1",
+      "Poke_Mart_Pack_v0.1"
+    ]
+  },
+  "palette": {
+    "entries": 16,
+    "opaque_colours": 15,
+    "transparent_index": 0,
+    "rgb": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        32,
+        40,
+        40
+      ],
+      [
+        88,
+        64,
+        56
+      ],
+      [
+        56,
+        88,
+        72
+      ],
+      [
+        192,
+        88,
+        64
+      ],
+      [
+        232,
+        136,
+        96
+      ],
+      [
+        72,
+        120,
+        72
+      ],
+      [
+        176,
+        144,
+        88
+      ],
+      [
+        128,
+        176,
+        88
+      ],
+      [
+        104,
+        120,
+        104
+      ],
+      [
+        168,
+        176,
+        152
+      ],
+      [
+        216,
+        216,
+        192
+      ],
+      [
+        240,
+        240,
+        216
+      ],
+      [
+        136,
+        88,
+        64
+      ],
+      [
+        56,
+        96,
+        128
+      ],
+      [
+        144,
+        200,
+        208
+      ]
+    ],
+    "unchanged_from_original": true,
+    "all_rgb_channels_multiple_of_8": true,
+    "shared_by_all_houses_and_door_strips": true
+  },
+  "assets": {
+    "house_family": {
+      "passed": true,
+      "files": {
+        "house_family.png": {
+          "size_px": [
+            80,
+            64
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            0,
+            255
+          ],
+          "used_palette_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_family_door.png": {
+          "size_px": [
+            48,
+            32
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            255
+          ],
+          "used_palette_indices": [
+            1,
+            2,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_family_4x.png": {
+          "size_px": [
+            320,
+            256
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            0,
+            255
+          ],
+          "used_palette_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_family_door_4x.png": {
+          "size_px": [
+            192,
+            128
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            255
+          ],
+          "used_palette_indices": [
+            1,
+            2,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        }
+      },
+      "footprint_blocks": {
+        "width": 5,
+        "height": 4
+      },
+      "door_block": [
+        2,
+        3
+      ],
+      "solid_block_count": 19,
+      "all_non_door_blocks_solid": true,
+      "changed_pixels": 999,
+      "changed_bounds_inclusive": [
+        0,
+        0,
+        79,
+        27
+      ],
+      "changed_pixels_outside_roof": 0,
+      "facade_pixels_identical": true,
+      "eave_shadow_identical": true,
+      "facade_sha256_before": "6bcce1257c82ca6f706b2e4d33d340937e21ca7b57e1b13a68b541e4504d3ecb",
+      "facade_sha256_after": "6bcce1257c82ca6f706b2e4d33d340937e21ca7b57e1b13a68b541e4504d3ecb",
+      "door_strip_size_px": [
+        48,
+        32
+      ],
+      "door_frame_size_px": [
+        16,
+        32
+      ],
+      "closed_frame_matches_house_crop": true,
+      "non_door_pixels_changed_between_frames": 0,
+      "all_door_frames_identical_to_original": true,
+      "door_frame_crop_origin": [
+        32,
+        32
+      ],
+      "doorway_only_animation_rect": [
+        2,
+        11,
+        12,
+        20
+      ],
+      "roof_geometry": {
+        "ridge_ends": [
+          [
+            21,
+            9
+          ],
+          [
+            58,
+            9
+          ]
+        ],
+        "eave_corners": [
+          [
+            0,
+            28
+          ],
+          [
+            79,
+            28
+          ]
+        ],
+        "hip_edges_join_real_eave_corners": true
+      },
+      "unique_8x8_tiles_including_door_frames": 76,
+      "tile_limit": 80,
+      "within_tile_limit": true
+    },
+    "house_gardener": {
+      "passed": true,
+      "files": {
+        "house_gardener.png": {
+          "size_px": [
+            64,
+            64
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            0,
+            255
+          ],
+          "used_palette_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_gardener_door.png": {
+          "size_px": [
+            48,
+            32
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            255
+          ],
+          "used_palette_indices": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_gardener_4x.png": {
+          "size_px": [
+            256,
+            256
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            0,
+            255
+          ],
+          "used_palette_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_gardener_door_4x.png": {
+          "size_px": [
+            192,
+            128
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            255
+          ],
+          "used_palette_indices": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        }
+      },
+      "footprint_blocks": {
+        "width": 4,
+        "height": 4
+      },
+      "door_block": [
+        1,
+        3
+      ],
+      "solid_block_count": 15,
+      "all_non_door_blocks_solid": true,
+      "changed_pixels": 736,
+      "changed_bounds_inclusive": [
+        0,
+        5,
+        63,
+        27
+      ],
+      "changed_pixels_outside_roof": 0,
+      "facade_pixels_identical": true,
+      "eave_shadow_identical": true,
+      "facade_sha256_before": "f5e2fc97dcdef52633c7afea770ac764e7504f4e0428b9bda2bf0eed26318a86",
+      "facade_sha256_after": "f5e2fc97dcdef52633c7afea770ac764e7504f4e0428b9bda2bf0eed26318a86",
+      "door_strip_size_px": [
+        48,
+        32
+      ],
+      "door_frame_size_px": [
+        16,
+        32
+      ],
+      "closed_frame_matches_house_crop": true,
+      "non_door_pixels_changed_between_frames": 0,
+      "all_door_frames_identical_to_original": true,
+      "door_frame_crop_origin": [
+        16,
+        32
+      ],
+      "doorway_only_animation_rect": [
+        2,
+        11,
+        12,
+        20
+      ],
+      "roof_geometry": {
+        "ridge_ends": [
+          [
+            16,
+            9
+          ],
+          [
+            47,
+            9
+          ]
+        ],
+        "eave_corners": [
+          [
+            0,
+            28
+          ],
+          [
+            63,
+            28
+          ]
+        ],
+        "hip_edges_join_real_eave_corners": true
+      },
+      "unique_8x8_tiles_including_door_frames": 64,
+      "tile_limit": 64,
+      "within_tile_limit": true
+    },
+    "house_pond_keeper": {
+      "passed": true,
+      "files": {
+        "house_pond_keeper.png": {
+          "size_px": [
+            64,
+            64
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            0,
+            255
+          ],
+          "used_palette_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_pond_keeper_door.png": {
+          "size_px": [
+            48,
+            32
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            255
+          ],
+          "used_palette_indices": [
+            1,
+            2,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_pond_keeper_4x.png": {
+          "size_px": [
+            256,
+            256
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            0,
+            255
+          ],
+          "used_palette_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        },
+        "house_pond_keeper_door_4x.png": {
+          "size_px": [
+            192,
+            128
+          ],
+          "png_color_type": "indexed",
+          "bit_depth": 4,
+          "alpha_values": [
+            255
+          ],
+          "used_palette_indices": [
+            1,
+            2,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "all_pixels_in_assigned_palette": true,
+          "all_rgb_multiples_of_8": true
+        }
+      },
+      "footprint_blocks": {
+        "width": 4,
+        "height": 4
+      },
+      "door_block": [
+        1,
+        3
+      ],
+      "solid_block_count": 15,
+      "all_non_door_blocks_solid": true,
+      "changed_pixels": 1026,
+      "changed_bounds_inclusive": [
+        0,
+        0,
+        63,
+        27
+      ],
+      "changed_pixels_outside_roof": 0,
+      "facade_pixels_identical": true,
+      "eave_shadow_identical": true,
+      "facade_sha256_before": "c9932cad9199ff9f9e574a48f6e389cf5feae8e9b25abcbc7d30fc94b41503ef",
+      "facade_sha256_after": "c9932cad9199ff9f9e574a48f6e389cf5feae8e9b25abcbc7d30fc94b41503ef",
+      "door_strip_size_px": [
+        48,
+        32
+      ],
+      "door_frame_size_px": [
+        16,
+        32
+      ],
+      "closed_frame_matches_house_crop": true,
+      "non_door_pixels_changed_between_frames": 0,
+      "all_door_frames_identical_to_original": true,
+      "door_frame_crop_origin": [
+        16,
+        32
+      ],
+      "doorway_only_animation_rect": [
+        2,
+        11,
+        12,
+        20
+      ],
+      "roof_geometry": {
+        "ridge_ends": [
+          [
+            16,
+            9
+          ],
+          [
+            47,
+            9
+          ]
+        ],
+        "eave_corners": [
+          [
+            0,
+            28
+          ],
+          [
+            63,
+            28
+          ]
+        ],
+        "hip_edges_join_real_eave_corners": true
+      },
+      "unique_8x8_tiles_including_door_frames": 64,
+      "tile_limit": 64,
+      "within_tile_limit": true
+    }
+  },
+  "combined_tiles": {
+    "unique_8x8_tiles_including_all_door_frames": 157,
+    "limit": 180,
+    "passed": true,
+    "flip_deduplication": false,
+    "rotation_deduplication": false,
+    "includes_transparent_tile": true
+  },
+  "previews": {
+    "before_after_1x": "previews/before_after_1x.png",
+    "before_after_4x": "previews/before_after_4x.png",
+    "town_lineup_1x": "previews/town_lineup_1x.png",
+    "town_lineup_4x": "previews/town_lineup_4x.png",
+    "nearest_neighbour_4x": true,
+    "player_dimensions_px": [
+      16,
+      26
+    ],
+    "player_at_door": "house_family",
+    "background": "Approved lawn tiles; preview-only, never in the sprites.",
+    "preview_palettes": "Combined reference colours, 8-bit indexed. Production sprites remain shared 4-bit."
+  },
+  "independent_png_audit": {
+    "passed": true,
+    "method": "Independent Pillow decoding and direct PNG IHDR/PLTE/tRNS inspection",
+    "assets": {
+      "house_family": {
+        "passed": true,
+        "unique_8x8_tiles_including_doors": 76,
+        "exact_original_facade_rgba_match": true,
+        "closed_door_exact_match": true,
+        "animation_changes_only_doorway": true,
+        "shared_original_palette_exact_match": true,
+        "nearest_neighbour_4x_exact_match": true,
+        "collision_blocks_exact_match": true,
+        "original_png_sha256": "e32789aa9b2b985628b76a3c65f814570e4c4f5f6090a94b2004c7d8d1080fff",
+        "house_png_sha256": "bf0008e3964153568519e70b6c17fdeaee3155ac43c8e5bd2eddb98fd7fb5188",
+        "door_png_sha256": "f58adb97be6fc3225ace27ee6ebf486aca932b800b8dc5d8a82140ed917a5098"
+      },
+      "house_gardener": {
+        "passed": true,
+        "unique_8x8_tiles_including_doors": 64,
+        "exact_original_facade_rgba_match": true,
+        "closed_door_exact_match": true,
+        "animation_changes_only_doorway": true,
+        "shared_original_palette_exact_match": true,
+        "nearest_neighbour_4x_exact_match": true,
+        "collision_blocks_exact_match": true,
+        "original_png_sha256": "9344600fe1e6baca6f08ed425f2eff7e3a99f9828c6e9413d118b44a9181985b",
+        "house_png_sha256": "ff63038b7ccb83d5b8d143597e4a1ad8771f67ac5374c5cc4b849615be778b62",
+        "door_png_sha256": "b41af9441272b9ec3454f200d4bcf429e79f8565611adee21811f0dd44adb6b3"
+      },
+      "house_pond_keeper": {
+        "passed": true,
+        "unique_8x8_tiles_including_doors": 64,
+        "exact_original_facade_rgba_match": true,
+        "closed_door_exact_match": true,
+        "animation_changes_only_doorway": true,
+        "shared_original_palette_exact_match": true,
+        "nearest_neighbour_4x_exact_match": true,
+        "collision_blocks_exact_match": true,
+        "original_png_sha256": "6b81a4e5ff137e3113641c9b0fbb4c6d66cdad23155ab04330edda464b747ac4",
+        "house_png_sha256": "4214d49ea9a1fc55c42da9b17dfba17864b2449f24502d7978d45a171762f58f",
+        "door_png_sha256": "1d1b9e874b8652bae31e57d2754094e81dd6e9ed1d3ac79e73c154497f7ab6f1"
+      }
+    },
+    "combined_unique_8x8_tiles": 157,
+    "all_preview_enlargements_exact": true,
+    "player_size_exact": true
+  }
+}

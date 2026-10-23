@@ -12,8 +12,8 @@
     "width": 4,
     "height": 4
   },
-  "palette": "viridian_2",
-  "palette_file": "../palettes/viridian_2.gpl",
+  "palette": "viridian_houses_shared",
+  "palette_file": "../palette.gpl",
   "transparent_index": 0,
   "door_block": [
     1,
@@ -132,28 +132,47 @@
     "loop": false,
     "composition": "Replace the entire 16x32 door rectangle at its anchor; retain the frame alpha.",
     "closed_frame_matches_building_crop": true,
-    "story_lock": null
+    "story_lock": "Locked for now; retain the existing game event lock.",
+    "preview_4x": "house_pond_keeper_door_4x.png",
+    "locked": true
   },
   "tile_economy": {
     "tile_size_px": [
       8,
       8
     ],
-    "unique_static_no_flips": 52,
-    "unique_static_plus_door_frames_no_flips": 61,
+    "unique_static_no_flips": 55,
+    "unique_static_plus_door_frames_no_flips": 64,
+    "limit": 64,
     "includes_transparent_tile": true,
-    "shared_pool": "../tile_pools/viridian_2.json"
+    "shared_pool": "../tile_pool/shared_8x8.json"
   },
   "notes": [
     "All footprint blocks except the door are solid, including blocks with some transparent pixels.",
     "No lawn or ground pixels are included.",
     "Every RGB channel is a multiple of 8; alpha is 0 or 255."
   ],
-  "design": "Green tiled hip roof with a lit ridge, shaded side planes and a left chimney and small right dormer, wooden porch posts, shutters and horizontal siding.",
+  "design": "Roof-only revision matching the approved Pallet v0.5 planes, raised ridge, receding courses and thick eaves. Original facade and eave shadow retained exactly.",
   "body_bounds_px": {
     "x": 2,
     "y": 32,
     "width": 60,
     "height": 32
+  },
+  "preview_4x": "house_pond_keeper_4x.png",
+  "edit_scope": {
+    "editable_rectangle_px": [
+      0,
+      0,
+      64,
+      32
+    ],
+    "preserved_rectangle_px": [
+      0,
+      32,
+      64,
+      32
+    ],
+    "eave_shadow_preserved": true
   }
 }
