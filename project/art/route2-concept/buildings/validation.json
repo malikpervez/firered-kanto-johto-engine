@@ -1,0 +1,188 @@
+{
+  "passed": true,
+  "version": "0.3",
+  "production_native_pngs": 13,
+  "production_format": {
+    "indexed_bit_depth": 4,
+    "color_type": 3,
+    "alpha_values": [
+      0,
+      255
+    ],
+    "rgb_multiple_of_8": true,
+    "exact_palette_order": true
+  },
+  "assets": [
+    {
+      "name": "forest_gate_south",
+      "size_px": [
+        128,
+        96
+      ],
+      "before_including_blank": 149,
+      "after_including_blank": 116,
+      "alpha_mask_identical": true,
+      "footprint_collision_doors_preserved": true
+    },
+    {
+      "name": "forest_gate_north",
+      "size_px": [
+        128,
+        96
+      ],
+      "before_including_blank": 147,
+      "after_including_blank": 96,
+      "alpha_mask_identical": true,
+      "footprint_collision_doors_preserved": true
+    },
+    {
+      "name": "east_gatehouse",
+      "size_px": [
+        64,
+        64
+      ],
+      "before_including_blank": 41,
+      "after_including_blank": 41,
+      "alpha_mask_identical": true,
+      "footprint_collision_doors_preserved": true
+    },
+    {
+      "name": "diglett_cave",
+      "size_px": [
+        96,
+        80
+      ],
+      "before_including_blank": 87,
+      "after_including_blank": 59,
+      "alpha_mask_identical": true,
+      "footprint_collision_doors_preserved": true
+    },
+    {
+      "name": "cave_mouth_overlay",
+      "size_px": [
+        48,
+        32
+      ],
+      "before_including_blank": 14,
+      "after_including_blank": 14,
+      "alpha_mask_identical": true,
+      "footprint_collision_doors_preserved": true
+    }
+  ],
+  "doors": [
+    {
+      "asset": "forest_gate_south",
+      "door": "south",
+      "all_frames_unchanged": true,
+      "default_frame_exact_match": true,
+      "base_frame": 0
+    },
+    {
+      "asset": "forest_gate_north",
+      "door": "north",
+      "all_frames_unchanged": true,
+      "default_frame_exact_match": true,
+      "base_frame": 0
+    },
+    {
+      "asset": "east_gatehouse",
+      "door": "south",
+      "all_frames_unchanged": true,
+      "default_frame_exact_match": true,
+      "base_frame": 2
+    },
+    {
+      "asset": "east_gatehouse",
+      "door": "north",
+      "all_frames_unchanged": true,
+      "default_frame_exact_match": true,
+      "base_frame": 0
+    },
+    {
+      "asset": "diglett_cave",
+      "door": "mouth",
+      "all_frames_unchanged": true,
+      "default_frame_exact_match": true,
+      "base_frame": 0
+    }
+  ],
+  "base_tiles_before": 305,
+  "base_tiles_after": 220,
+  "user_targets": {
+    "forest_gates_combined": 120,
+    "diglett_cave": 59,
+    "east_gatehouse": 41
+  },
+  "targets_passed": true,
+  "other_tiles_allowance": 160,
+  "estimated_total": 380,
+  "tileset_limit": 384,
+  "estimated_remaining": 4,
+  "flips_merged": true,
+  "all_binary_flip_maps_round_trip": true,
+  "fixed_file_hashes_verified": 25,
+  "cliff_texture_exact_source_reuse": true,
+  "cave_opening_and_lip_preserved": true,
+  "trade_house_included": false,
+  "route_plan_unchanged": true,
+  "route_scenarios_passed": 8,
+  "previews": [
+    {
+      "file": "previews/before_after_1x.png",
+      "size_px": [
+        456,
+        272
+      ],
+      "nearest_neighbour_4x": true
+    },
+    {
+      "file": "previews/diglett_cave_comparison_1x.png",
+      "size_px": [
+        216,
+        120
+      ],
+      "nearest_neighbour_4x": true
+    },
+    {
+      "file": "previews/door_frames_1x.png",
+      "size_px": [
+        200,
+        262
+      ],
+      "nearest_neighbour_4x": true
+    },
+    {
+      "file": "previews/east_gatehouse_comparison_1x.png",
+      "size_px": [
+        152,
+        104
+      ],
+      "nearest_neighbour_4x": true
+    },
+    {
+      "file": "previews/forest_gate_north_comparison_1x.png",
+      "size_px": [
+        280,
+        136
+      ],
+      "nearest_neighbour_4x": true
+    },
+    {
+      "file": "previews/forest_gate_south_comparison_1x.png",
+      "size_px": [
+        280,
+        136
+      ],
+      "nearest_neighbour_4x": true
+    },
+    {
+      "file": "previews/overview_1x.png",
+      "size_px": [
+        456,
+        136
+      ],
+      "nearest_neighbour_4x": true
+    }
+  ],
+  "engine_runtime_tested": false
+}

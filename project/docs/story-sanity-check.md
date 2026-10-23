@@ -87,6 +87,15 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 27 | `blue-lose` | Blue meets you on the road and wins: you wake in Viridian's Center | Viridian Center 7,4 | `VAR_MAP_SCENE_ROUTE22` 1 |
 | 28 | `blue-win` | The same, from step 26, with a stronger Pikachu: Blue loses and leaves east | Route 22 44,7 | `VAR_MAP_SCENE_ROUTE22` 2 |
 | 29 | `league-gate` | Up the stairs in the cliff, across the forecourt, into the League Front Gate | League Front Gate 7,10 | |
+| 30 | `leave-league-gate` | Back out of the League Front Gate | Route 22 12,14 | |
+| 31 | `east-viridian` | Down the stairs and east along the road into Viridian | Viridian City 0,29 | |
+| 32 | `north-route2` | North out of Viridian into Route 2 | Route 2 9,79 | |
+| 33 | `forest-gate` | Up Route 2's south meadow into Viridian Forest's south gate (its double door) | the south gatehouse 7,9 | |
+| 34 | `forest` | Through the gatehouse into Viridian Forest | Viridian Forest 39,72 | |
+| 35 | `forest-stairs` | Up the forest, round its trainers' lines of sight (`via`), and west down its sideways stairs | Viridian Forest 37,16 | |
+| 36 | `forest-north` | On through the forest, round Sammy's line of sight, to its north gate | the north gatehouse 7,9 | |
+| 37 | `route2-north` | Out of the forest's north gate onto Route 2 (its doorway in the roof, walking north) | Route 2 7,20 | |
+| 38 | `pewter` | Up Route 2's north meadow into Pewter City | Pewter City 23,43 | |
 
 ## What it doesn't cover
 
@@ -97,8 +106,10 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 * **People.** Only the story's people are checked. The second run of 2026-10-22 also talked to ten others on
   Pallet, Route 1, Viridian and Route 22. Nine answered; the tenth is hidden in the game on purpose. The script
   doesn't do that.
-* **Places off the story's path**: houses, the Trainer School, the Gym (locked), Route 2 past its first block,
-  surfing, cutting.
+* **Places off the story's path**: houses, the Trainer School, the Gym (locked), Route 2's eastern detour (it needs
+  Cut: the replay tests cut a tree and go through its buildings' doors), surfing.
+* **Viridian Forest's trainers.** The walk goes round their lines of sight, so their battles aren't played. The
+  forest isn't rebuilt.
 * **The menus** (bag, Pokédex, Town Map, saving): only opened where the story opens them.
 * **Real play**: sound, real-time play, real hardware.
 
@@ -110,6 +121,9 @@ Checkpoints are game saves, so they still load after a map change, as long as th
    * `pae map events MAP` lists the triggers and people.
    * The map's `scripts.inc` shows which flags and variables a scene sets.
    * `pae play --from CHECKPOINT --inputs ... --show-flag F --show-var V` tries a step out before you add it.
+   * A walk that must keep off some blocks (a trainer's line of sight) gives them `via`: blocks to walk to first, in
+     order. `pae map path` keeps off sideways stairs (they move you diagonally), so a step that crosses them walks
+     to their foot and crosses them in its inputs (`forest-stairs`).
    * In inputs, text advances with B (A talks to the person again). Leaving through a door mat needs one more press
      toward the exit while standing on it.
 3. When every step passes, update "Last validated point" and the step table on this page. Do it in the same pull

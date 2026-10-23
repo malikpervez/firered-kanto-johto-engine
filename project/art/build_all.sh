@@ -8,7 +8,8 @@ sh project/art/route1-concept/build.sh
 sh project/art/pallet-concept/build.sh
 sh project/art/viridian-concept/build.sh
 sh project/art/route22-concept/build.sh
+sh project/art/route2-concept/build.sh
 cd engine
-for m in Route1_Frlg PalletTown_Frlg ViridianCity_Frlg Route22_Frlg; do
+for m in Route1_Frlg PalletTown_Frlg ViridianCity_Frlg Route22_Frlg Route2_Frlg; do
     pae seam build $m -p .
 done

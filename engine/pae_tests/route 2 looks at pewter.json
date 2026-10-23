@@ -1,0 +1,52 @@
+{
+ "note": "Walk up Route 2 to the join with Pewter: Pewter's old tiles show across it (pae's seam, its colours packed into two palette slots).",
+ "created": "2026-10-23 14:43",
+ "start": {
+  "map": "Route2_Frlg",
+  "x": 9,
+  "y": 3,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route2_Frlg",
+  "x": 9,
+  "y": 1,
+  "in_battle": false
+ }
+}

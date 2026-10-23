@@ -1,0 +1,20 @@
+GIMP Palette
+Name: forest_gate
+Columns: 8
+# Index 0 transparent; entries 1-15 opaque.
+  0   0   0	0 Transparent
+ 32  40  48	1 Outline
+ 48  56  72	2 Recess / soffit
+ 56  80 112	3 Roof shade / door frame
+ 88 120 160	4 Roof main
+112 152 192	5 Roof highlight
+144 184 216	6 Lit hip / glass highlight
+184 152  88	7 Buff shade / brass
+200 168  96	8 Buff masonry
+232 208 144	9 Mortar / brass light
+120 120 112	10 Stone deep
+152 152 136	11 Stone shade
+192 192 176	12 Stone
+224 224 208	13 Stone light
+ 88 152 200	14 Glass
+184 216 240	15 Ridge / glass glint

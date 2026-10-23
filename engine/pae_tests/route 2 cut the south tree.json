@@ -1,0 +1,103 @@
+{
+ "note": "With the Cascade Badge and a Pok\u00e9mon that knows Cut, cut the tree into the eastern detour and walk through.",
+ "created": "2026-10-23 14:43",
+ "start": {
+  "map": "Route2_Frlg",
+  "x": 15,
+  "y": 68,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BULBASAUR lv12 MOVE_CUT MOVE_TACKLE",
+   "FLAG_BADGE02_GET",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     2
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     30
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route2_Frlg",
+  "x": 17,
+  "y": 68,
+  "in_battle": false
+ }
+}

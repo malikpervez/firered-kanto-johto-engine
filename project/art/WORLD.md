@@ -17,6 +17,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 1 | 50×40 | 50×40 | kit + `gTileset_Route1Concept` | up: Viridian City (offset −2), down: Pallet Town (offset 10) |
 | Viridian City | 60×52 | 56×50 | kit + `gTileset_ViridianConcept` | up: Route 2 (offset 16), left: Route 22 (offset 22), down: Route 1 (offset 2) |
 | Route 22 | 52×28 | 52×28 | kit + `gTileset_Route22Concept` | right: Viridian City (offset −22); not joined to Route 23 (below) |
+| Route 2 | 30×80 | 30×80 | kit + `gTileset_Route2Concept` | up: Pewter City (offset −14), down: Viridian City (offset −16) |
 
 ## Where the roads meet
 
@@ -29,6 +30,7 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Pallet ↔ Route 21 North | Pallet 18–21 = Route 21 7–10 | the water channel south (surf) |
 | Viridian ↔ Route 2 | Viridian 22–27 = Route 2 6–11 | Viridian's one-block road north (the old man's) widens at the edge to meet Route 2's path |
 | Viridian ↔ Route 22 | Viridian rows 28–31 = Route 22 rows 6–9 | the road west |
+| Route 2 ↔ Pewter | Route 2 8–11 = Pewter 22–25 | the road north into Pewter's (Pewter isn't rebuilt) |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -42,7 +44,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Pallet Town | Route 1, Route 21 North | pae |
 | Route 1 | Pallet Town, Viridian City | pae |
 | Viridian City | Route 1, Route 2, Route 22 | pae (its hand-made seam for the old Viridian is gone) |
-| Route 2 | Viridian City | pae |
+| Route 2 | Viridian City, Pewter City | pae |
+| Pewter City | Route 2 | pae |
 | Route 21 North | Pallet Town | pae |
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
@@ -53,8 +56,10 @@ neighbours are rebuilt from the kit with the same secondary tileset, the seam is
 A seam needs a palette slot in the viewing map for every palette of the strip it shows (the 7 rows or columns
 beside the join) that the viewing map doesn't have. Old maps have few free: Viridian's hand-made seam for Route 22
 leaves it three. So near a join with a map that isn't rebuilt yet, keep pieces with palettes of their own out of
-those 7 rows: Route 1's tall grass (bank 4) starts at row 7. Viridian has three free slots (10–12), and Route 2's strip
-takes all three; Route 22, from the kit, shares Viridian's palettes and needs none.
+those 7 rows: Route 1's tall grass (bank 4) starts at row 7. Between maps from the kit, the seams use each other's
+palettes and need no slots. A strip of an old map takes slots: its tiles are copied, so pae packs their colours into
+as few slots as they fit. Old Pewter's strip uses three of its palettes (23 colours), and it takes two slots of
+Route 2 (11–12, the two Route 2 keeps free for it).
 
 **Route 23 isn't joined to Route 22.** The join was only seen across Route 22's top (both edges are solid: you go
 through the League gate), and Route 23's strip needs seven palettes, more than Route 22 has free. So each shows its
@@ -97,3 +102,8 @@ Check these whenever a map is rebuilt, moved or resized:
   forecourt's edge is a face with stairs now, the rest of the route (and its joins) as it was.
 - The kit's trees are the Sunlit Broadleaf pack's (broadleaf trees instead of pines) on every kit map. The forest
   keeps its cells, so no map's layout, walls or joins changed.
+- Route 2 rebuilt at the same size, so Viridian's and Pewter's joins didn't change. Its warps (the forest's gates,
+  the east building, the trade house, Diglett's Cave), the trees to cut (three now), items, signs and the Friends
+  camp moved; the camp's anchor and first local id in `src/data/friends_scene_locations.h` changed with it. Pewter
+  got a pae seam for it. The kit reserves tiles 434–449 for doors now (double doors' frames), and gained three
+  forest corners.

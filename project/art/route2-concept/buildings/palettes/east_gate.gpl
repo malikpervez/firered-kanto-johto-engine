@@ -1,0 +1,20 @@
+GIMP Palette
+Name: east_gate
+Columns: 8
+# Index 0 transparent; entries 1-15 opaque.
+  0   0   0	0 Transparent
+ 32  40  40	1 Outline
+ 56  72  56	2 Open passage
+ 88  64  56	3 Timber deep
+136  88  64	4 Timber / roof shade
+176 144  88	5 Roof main / wood light
+216 176 120	6 Roof light
+104 120 104	7 Stone dark
+168 176 152	8 Stone
+216 216 192	9 Plaster
+240 240 216	10 Plaster light
+ 56  96 128	11 Glass shade
+144 200 208	12 Glass light
+192  88  64	13 Reserved warm accent
+232 136  96	14 Reserved warm light
+ 72 120  72	15 Reserved green

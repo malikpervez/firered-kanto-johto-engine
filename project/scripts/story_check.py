@@ -36,7 +36,8 @@ def B(n, wait=90):
 
 # Each step: what it checks; where it starts (a new game's map/x/y/state, or the checkpoint of the step named in
 # "after", by default the one before); "walk" to a block on the current map (planned with pae map path, re-planned
-# if someone was in the way), then "inputs"; extra "state" (e.g. a team); what it must end with.
+# if someone was in the way; "via" blocks on the way first, e.g. round a trainer's line of sight), then "inputs";
+# extra "state" (e.g. a team); what it must end with.
 STEPS = [
     dict(name="oak", what="A new game: out of the house; Oak stops you at the north exit and walks you to his lab",
          map="PalletTown_PlayersHouse_1F_Frlg", xy=(9, 8), state=["CLEAR_TEAM"],
@@ -125,6 +126,32 @@ STEPS = [
          walk=(16, 18), inputs="wait 20, UP*72, wait 10, LEFT*60, wait 8, UP*16, wait 8, UP*16, wait 300, " + B(6)
                                + "wait 100",
          expect=dict(map="Route22_NorthEntrance_Frlg", xy=(7, 10))),
+    dict(name="leave-league-gate", what="Back out of the League Front Gate", inputs="wait 30, DOWN*20, wait 250",
+         expect=dict(map="Route22_Frlg", xy=(12, 14))),
+    dict(name="east-viridian", what="Down the stairs and east along the road into Viridian", walk=(51, 7),
+         inputs="RIGHT*18, wait 200", expect=dict(map="ViridianCity_Frlg", xy=(0, 29))),
+    dict(name="north-route2", what="North out of Viridian into Route 2", walk=(25, 0), inputs="UP*18, wait 200",
+         expect=dict(map="Route2_Frlg", xy=(9, 79))),
+    dict(name="forest-gate", what="Up Route 2's south meadow into Viridian Forest's south gate (its double door)",
+         walk=(8, 52), inputs="UP*20, wait 300", expect=dict(map="Route2_ViridianForest_SouthEntrance_Frlg",
+                                                             xy=(7, 9))),
+    dict(name="forest", what="Through the gatehouse into Viridian Forest", walk=(7, 2), inputs="UP*20, wait 300",
+         expect=dict(map="ViridianForest_Frlg", xy=(39, 72))),
+    dict(name="forest-stairs", what="Up the forest, round its trainers' lines of sight, and west down its sideways "
+                                    "stairs (they move you diagonally: off the planned walk)",
+         via=[(39, 60), (41, 60), (41, 59), (46, 59), (46, 46), (48, 46), (48, 44), (47, 44), (47, 30), (48, 30),
+              (48, 24), (47, 24), (47, 15)],
+         walk=(39, 15), inputs="LEFT*16, wait 8, LEFT*16, wait 40", expect=dict(map="ViridianForest_Frlg",
+                                                                                 xy=(37, 16))),
+    dict(name="forest-north", what="On through the forest, round Sammy's line of sight, to its north gate",
+         via=[(30, 16), (30, 23), (28, 23), (28, 25), (21, 25), (21, 23), (18, 23), (18, 14), (17, 14), (17, 11),
+              (16, 11)],
+         walk=(15, 10), inputs="UP*20, wait 300", expect=dict(map="Route2_ViridianForest_NorthEntrance_Frlg",
+                                                              xy=(7, 9))),
+    dict(name="route2-north", what="Out of the forest's north gate onto Route 2 (its doorway, walking north)",
+         walk=(7, 2), inputs="UP*20, wait 300", expect=dict(map="Route2_Frlg", xy=(7, 20))),
+    dict(name="pewter", what="Up Route 2's north meadow into Pewter City", walk=(9, 0), inputs="UP*18, wait 200",
+         expect=dict(map="PewterCity_Frlg", xy=(23, 43))),
 ]
 
 
@@ -209,7 +236,10 @@ class Runner:
                              inputs=self.inputs(step["inputs"], step["map"]), save=cp)
         else:
             if "walk" in step:
-                here, src = self.walk(cp, prev_cp, cp, step["walk"], state)
+                src = prev_cp
+                for j, via in enumerate(step.get("via", [])):
+                    _, src = self.walk(f"{cp}-via{j}", src, cp, via, state)
+                here, src = self.walk(cp, src, cp, step["walk"], state)
             else:
                 here, src = self.play(f"{cp}-from", cp=prev_cp), prev_cp
             self.play(cp, cp=src, state=state, inputs=self.inputs(step["inputs"], here["map"]), save=cp)

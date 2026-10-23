@@ -1,6 +1,6 @@
 {
- "note": "Surf from the end of Pallet's dock down the channel through the forest into Route 21 (its seam, and Pallet's animated water).",
- "created": "2026-10-21 03:11",
+ "note": "Surf from the end of Pallet's dock down the channel through the forest into Route 21 (its seam, and Pallet's animated water). Each press waits for the move before it to end, so a frame's difference at the crossing doesn't change where it ends.",
+ "created": "2026-10-23 15:17",
  "start": {
   "map": "PalletTown_Frlg",
   "x": 21,
@@ -22,12 +22,7 @@
     [
      0,
      40
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+    ],
     [
      128,
      16
@@ -35,226 +30,111 @@
     [
      0,
      8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+    ],
     [
      1,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
-    [
-     0,
-     60
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     68
+    ],
     [
      1,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
-    [
-     0,
-     60
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     68
+    ],
     [
      1,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
-    [
-     0,
-     60
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
-    [
-     0,
-     60
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
-    [
-     0,
-     60
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     188
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      128,
      16
     ],
     [
      0,
-     8
-    ]
-   ]
-  },
-  {
-   "op": "press",
-   "inputs": [
+     16
+    ],
     [
      0,
      60
@@ -278,6 +158,5 @@
   "vars": {
    "VAR_MAP_SCENE_PALLET_TOWN_OAK": 3
   }
- },
- "accepted": "2026-10-21 21:52"
+ }
 }

@@ -1,0 +1,44 @@
+{
+ "note": "Walk north into the cave mouth: the north entrance of Diglett's Cave.",
+ "created": "2026-10-23 14:43",
+ "start": {
+  "map": "Route2_Frlg",
+  "x": 22,
+  "y": 15,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     48
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "DiglettsCave_NorthEntrance_Frlg",
+  "x": 3,
+  "y": 5,
+  "in_battle": false
+ }
+}

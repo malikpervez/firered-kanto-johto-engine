@@ -437,7 +437,8 @@ def lamp() -> np.ndarray:
 # ---------------------------------------------------------------- forest pieces
 # (mask, corners) of the forest's inside-corner pieces in the kit: every map's together (a map checks its own are
 # here with ``forest_corners``; add new ones here, then rebuild every map)
-FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8), (7, 1), (7, 2), (13, 4), (14, 4)]
+FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8), (7, 1), (7, 2), (13, 4), (14, 4),
+                  (11, 1), (15, 3), (15, 12)]  # the last three for Route 2
 # the forest's middle and its straight edges in all three of the pack's crowns, mixed by position (the rest in
 # the first): most of a forest is these, and the tiles for every piece in all three wouldn't fit beside the rest
 FOREST_VARIED = (15, 14, 13, 11, 7)
@@ -729,7 +730,8 @@ def primary(spec_dir: Path) -> dict:
         "palettes": [(rel / f"palette_{n}.pal").as_posix()
                      for n in ("ground", "water", "wood", "trees", "tallgrass", "center", "mart")],
         "secondary_palettes": {b: (rel / f"palette_{n}.pal").as_posix() for b, n in SECONDARY_BANKS.items()},
-        "reserve": [[434, 441]],
+        # where the game copies a door's frames as it opens (HnS layouts): 8 tiles, 16 for a wide (double) door
+        "reserve": [[434, 449]],
         "animations": [{"name": "Water", "image": (rel / "sheets/water.png").as_posix(),
                         "frames": [(rel / f"sheets/water_f{k}.png").as_posix() for k in range(1, water.FRAMES)],
                         "speed": 10}],  # 10 game frames (about 160 ms) a frame, as the pond pack's
