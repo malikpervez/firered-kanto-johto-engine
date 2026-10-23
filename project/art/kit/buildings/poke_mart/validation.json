@@ -1,0 +1,326 @@
+{
+  "pack": "Poke Mart Pack",
+  "version": "0.1",
+  "design_status": "approved",
+  "status": "PASS",
+  "authoring": "Direct integer palette-index pixels at native resolution. No raster reduction, antialiasing, quantization, blur or alpha blending.",
+  "files": {
+    "poke_mart.png": {
+      "size_px": [
+        64,
+        64
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "used_palette_indices": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "all_pixels_in_assigned_palette": true,
+      "all_rgb_multiples_of_8": true
+    },
+    "poke_mart_4x.png": {
+      "size_px": [
+        256,
+        256
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        0,
+        255
+      ],
+      "used_palette_indices": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "all_pixels_in_assigned_palette": true,
+      "all_rgb_multiples_of_8": true
+    },
+    "poke_mart_door.png": {
+      "size_px": [
+        48,
+        32
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        255
+      ],
+      "used_palette_indices": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "all_pixels_in_assigned_palette": true,
+      "all_rgb_multiples_of_8": true
+    },
+    "poke_mart_door_4x.png": {
+      "size_px": [
+        192,
+        128
+      ],
+      "png_color_type": "indexed",
+      "bit_depth": 4,
+      "alpha_values": [
+        255
+      ],
+      "used_palette_indices": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "all_pixels_in_assigned_palette": true,
+      "all_rgb_multiples_of_8": true
+    }
+  },
+  "palette_rgb": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      24,
+      32,
+      40
+    ],
+    [
+      48,
+      64,
+      72
+    ],
+    [
+      96,
+      112,
+      112
+    ],
+    [
+      160,
+      168,
+      152
+    ],
+    [
+      216,
+      216,
+      200
+    ],
+    [
+      240,
+      240,
+      224
+    ],
+    [
+      32,
+      56,
+      88
+    ],
+    [
+      40,
+      72,
+      104
+    ],
+    [
+      64,
+      120,
+      168
+    ],
+    [
+      120,
+      168,
+      200
+    ],
+    [
+      32,
+      64,
+      80
+    ],
+    [
+      72,
+      120,
+      144
+    ],
+    [
+      184,
+      216,
+      216
+    ],
+    [
+      176,
+      128,
+      72
+    ],
+    [
+      160,
+      176,
+      168
+    ]
+  ],
+  "palette_roles": [
+    "Transparent",
+    "Outline / door void",
+    "Recess / soffit",
+    "Stone dark",
+    "Plaster / stone shade",
+    "White plaster",
+    "Cream trim / glass glint",
+    "Roof deepest",
+    "Roof shaded plane",
+    "Roof main plane",
+    "Roof sunlit plane",
+    "Glass deepest",
+    "Glass / steel blue",
+    "Glass reflection",
+    "Warm brass / merchandise",
+    "Stone light / silver"
+  ],
+  "palette_count": 1,
+  "opaque_colours": 15,
+  "transparent_index": 0,
+  "alpha_values": [
+    0,
+    255
+  ],
+  "rgb_channels_multiple_of_8": true,
+  "footprint_blocks": {
+    "width": 4,
+    "height": 4
+  },
+  "door_block": [
+    1,
+    3
+  ],
+  "solid_block_count": 15,
+  "unique_8x8_static": 58,
+  "unique_8x8_including_doors": 70,
+  "tile_limit": 72,
+  "tile_limit_source": "User-specified 72-tile maximum.",
+  "count_method": "Exact 8x8 palette-index tiles including transparency and every door frame; no flip or rotation reuse.",
+  "checks": [
+    {
+      "name": "poke_mart.png: exact ordered PLTE and binary tRNS",
+      "result": "PASS"
+    },
+    {
+      "name": "poke_mart_4x.png: exact ordered PLTE and binary tRNS",
+      "result": "PASS"
+    },
+    {
+      "name": "poke_mart_door.png: exact ordered PLTE and binary tRNS",
+      "result": "PASS"
+    },
+    {
+      "name": "poke_mart_door_4x.png: exact ordered PLTE and binary tRNS",
+      "result": "PASS"
+    },
+    {
+      "name": "Native dimensions, footprint and door patch",
+      "result": "PASS"
+    },
+    {
+      "name": "Only the 12x20 door opening animates; open frame is dark",
+      "result": "PASS"
+    },
+    {
+      "name": "15 opaque colours plus transparent, all RGB channels multiples of 8",
+      "result": "PASS"
+    },
+    {
+      "name": "Unique 8x8 count includes all 3 door frames, no flip reuse",
+      "result": "PASS"
+    },
+    {
+      "name": "Tile atlas reconstructs building and door strip exactly",
+      "result": "PASS"
+    },
+    {
+      "name": "All footprint blocks except the fixed door block are solid",
+      "result": "PASS"
+    },
+    {
+      "name": "All preview 4x copies are exact nearest-neighbour expansions",
+      "result": "PASS"
+    },
+    {
+      "name": "Reference Center retained at its existing native 80x64 size",
+      "result": "PASS"
+    },
+    {
+      "name": "GIFs: 3 distinct frames, 1x and exact 4x, unchanged scenery, frame 0 matches PNG",
+      "result": "PASS"
+    },
+    {
+      "name": "Preview reference Center and Mart arrays match their existing exported native PNGs exactly",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Saved PNGs, source arrays, metadata, tile atlas and PNG previews. No game engine or emulator provided.",
+  "door_gif": {
+    "frames": 3,
+    "durations_ms": [
+      600,
+      180,
+      600
+    ],
+    "native_size_px": [
+      240,
+      128
+    ],
+    "review_size_px": [
+      960,
+      512
+    ]
+  },
+  "approval": {
+    "user": "Malik",
+    "message": "Looks good",
+    "approved_version": "0.1",
+    "art_changed_after_approval": false
+  }
+}
