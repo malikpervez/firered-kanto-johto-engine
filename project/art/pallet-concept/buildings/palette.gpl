@@ -1,0 +1,20 @@
+GIMP Palette
+Name: Pallet Houses v0.5 — shared red and blue
+Columns: 16
+# Index 0 transparent; all remaining entries opaque.
+  0   0   0	00 Transparent
+ 24  32  40	01 Outline / doorway
+ 80  56  48	02 Dark timber / warm shadow
+152 112  72	03 Timber / brass
+160 152 128	04 Plaster shade / warm trim
+216 208 184	05 Plaster / pale stone
+240 232 208	06 Cream plaster / glint
+136  56  48	07 Roof red shade
+192  80  64	08 Roof terracotta
+232 128  96	09 Roof red sunlit edge
+ 40  72 104	10 Roof blue shade / deep glass
+ 64 120 168	11 Roof blue
+120 168 200	12 Roof blue sunlit edge
+184 216 216	13 Window reflection
+ 96 104 112	14 Foundation / stone dark
+152 152 136	15 Foundation / stone mid

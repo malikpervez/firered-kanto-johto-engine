@@ -15,7 +15,8 @@ runs:
 
 1. `make_art.py`: the kit's pieces (`../kit`: grass, paths, water, fences, the forest and the rest every map shares;
    the lawn is a native pixel pack, `../kit/lawn/B_Lush_Emerald/`, four tiles and one with daisies, scattered)
-   and the town's own (`houses.py` for your house and your rival's, the windmill, Oak's lab); writes `sheets/`, the
+   and the town's own (your house and your rival's from a native pixel pack, `buildings/`, Pallet Houses Pack v0.5;
+   the windmill, Oak's lab); writes `sheets/`, the
    town's palettes, `spec.json`, `grid.txt`, `legend.json`.
 2. `pae tileset new` (the first time) and `pae map geometry`: two new tilesets and the map's block files.
 3. `pae tileset build` and `pae map paint`. The water is animated in eight frames. The pond and the channel come from

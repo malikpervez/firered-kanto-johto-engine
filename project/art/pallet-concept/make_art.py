@@ -3,14 +3,14 @@
 nothing taken from an existing tileset. The pieces every map shares come from the kit (../kit/kit.py); this file
 draws the town's own.
 
-The town is 32x28 blocks: a forest around it, two houses with fenced yards (houses.py), cobblestone roads, a windmill
+The town is 32x28 blocks: a forest around it, two houses with fenced yards (buildings/), cobblestone roads, a windmill
 in a flower garden, Oak's lab with its greenhouse, a pond with a wooden dock (and the way south to Route 21), the sea
 below a cliff in the east, and a stone well.
 
 Its palettes (banks 0-3 and 8 are the kit's):
   bank 2  wood (the kit's): the windmill
   bank 7  the lab: metal roof, siding, glass, the greenhouse plants
-  bank 9  the houses: plaster, clay roof tiles in red and blue, glass (drawn in houses.py)
+  bank 9  the houses: one palette for both (buildings/, Pallet Houses Pack v0.5, a native pixel pack)
 
 Run from the repository root:  python3 project/art/pallet-concept/make_art.py
 It writes sheets/*.png, the palettes, spec.json, grid.txt, border.txt, legend.json and events.json next to itself;
@@ -25,7 +25,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-import houses
+import buildings
 import kit
 from kit import CRM, D_OUT, NWL, NWM, RFD, RFH, RFL, RFM, STG, STL, WOD, WOM, edge_of, ellipse
 
@@ -39,7 +39,10 @@ P3 = [(0, 0, 0), (24, 32, 40), (64, 80, 96), (96, 112, 128), (144, 160, 168), (1
 L_OUT, MTD, MTM, MTL, MTH, SID, SIM, SIL, LWD, GLA, GLH, PLD, PLM, DRG, LWH = range(1, 16)
 
 BANK = {"lab": 7, "plants": 8, "houses": 9}
-PALS = {"lab": P3, "houses": houses.PH}
+# the two houses, from a native pixel pack: one palette for both (the town has one palette slot for them)
+HOUSES = {roof: buildings.load(HERE / "buildings" / f"{roof}_house") for roof in ("red", "blue")}
+assert HOUSES["red"].palette == HOUSES["blue"].palette, "the two houses must share one palette"
+PALS = {"lab": P3, "houses": HOUSES["red"].palette}
 
 
 def windmill() -> np.ndarray:
@@ -314,9 +317,8 @@ def main() -> None:
     def sheet(name, pal, cols=16):
         return kit.Sheet(name, PALS.get(pal) or kit.PALS[pal], BANK.get(pal, kit.BANK.get(pal)), HERE, HERE, cols)
     homes = sheet("houses", "houses", cols=10)
-    for roof in ("red", "blue"):  # your house and your rival's (houses.py)
-        homes.add(f"house_{roof}", houses.house(roof), tileset="secondary", ground="grass", solid=True, open=["1,4"],
-                  behaviors={"1,4": "MB_ANIMATED_DOOR"})
+    for roof, b in HOUSES.items():  # your house and your rival's (buildings/): solid but the door, which animates
+        homes.add(f"house_{roof}", b.idx, tileset="secondary", **b.entry())
     spec_mt += homes.write()
     big = sheet("buildings", "wood", cols=5)
     big.add("windmill", windmill(), tileset="secondary", ground="grass", solid=True)
