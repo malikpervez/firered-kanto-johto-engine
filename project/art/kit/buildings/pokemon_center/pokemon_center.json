@@ -1,20 +1,10 @@
 {
-  "schema_version": 2,
-  "id": "pokemon_center",
-  "type": "building",
-  "image": "pokemon_center.png",
-  "image_size_px": [
-    80,
-    64
-  ],
-  "block_size_px": 16,
+  "asset": "pokemon_center",
+  "version": "0.1",
   "footprint_blocks": {
     "width": 5,
     "height": 4
   },
-  "palette": "global_a",
-  "palette_file": "../palettes/global_a.gpl",
-  "transparent_index": 0,
   "door_block": [
     2,
     3
@@ -97,79 +87,41 @@
       3
     ]
   ],
-  "collision_rows": [
-    "#####",
-    "#####",
-    "#####",
-    "##D##"
+  "image_size_px": [
+    80,
+    64
   ],
-  "stage1_placement": {
-    "top_left_block": [
-      18,
-      24
-    ],
-    "door_map_block": [
-      20,
-      27
-    ]
-  },
-  "door": {
-    "image": "pokemon_center_door.png",
-    "sheet_size_px": [
-      48,
-      32
-    ],
+  "palette": "palette.gpl",
+  "transparent_index": 0,
+  "door_animation": {
+    "file": "pokemon_center_door.png",
     "frame_size_px": [
       16,
       32
     ],
-    "frame_count": 3,
-    "frame_order": [
+    "frames": [
       "closed",
       "half_open",
       "open"
     ],
-    "anchor_top_left_px": [
+    "patch_origin_px": [
       32,
       32
     ],
-    "anchor_top_left_block": [
+    "patch_origin_blocks": [
       2,
       2
     ],
-    "opening_rect_in_frame_px": {
-      "x": 2,
-      "y": 11,
+    "opening_rect_px": {
+      "x": 34,
+      "y": 42,
       "width": 12,
       "height": 20
     },
-    "threshold_row_in_frame": 31,
-    "recommended_frame_ms": 100,
-    "loop": false,
-    "composition": "Replace the entire 16x32 door rectangle at its anchor; retain the frame alpha.",
-    "closed_frame_matches_building_crop": true,
-    "story_lock": null
+    "closed_frame_matches_building": true,
+    "playback": "One-shot; reverse to close"
   },
-  "tile_economy": {
-    "tile_size_px": [
-      8,
-      8
-    ],
-    "unique_static_no_flips": 73,
-    "unique_static_plus_door_frames_no_flips": 85,
-    "includes_transparent_tile": true,
-    "shared_pool": "../tile_pools/global_a.json"
-  },
-  "notes": [
-    "All footprint blocks except the door are solid, including blocks with some transparent pixels.",
-    "No lawn or ground pixels are included.",
-    "Every RGB channel is a multiple of 8; alpha is 0 or 255."
-  ],
-  "design": "Red hip roof with a raised ridge, distinct lit and shaded side planes, perspective-scaled shingle courses and thick eaves and a raised central white entrance bay with an 18px Poké Ball emblem; dark paired doors and side window bands.",
-  "body_bounds_px": {
-    "x": 2,
-    "y": 32,
-    "width": 76,
-    "height": 32
-  }
+  "unique_8x8_static": 68,
+  "unique_8x8_including_doors": 80,
+  "design": "Pallet v0.5-style terracotta hip roof; raised ridge, clean shaded return, thick eaves; front-facing pale entrance bay, large Poké Ball emblem, paired window bands and stone plinth."
 }

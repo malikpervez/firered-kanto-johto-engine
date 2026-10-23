@@ -2503,7 +2503,7 @@
   }
  },
  "tiles": {
-  "primary": 535,
+  "primary": 526,
   "secondary": 52
  },
  "metatile_counts": {
@@ -2513,7 +2513,7 @@
  "animations": [
   {
    "name": "PalletConcept_General_Water",
-   "first_tile": 478,
+   "first_tile": 469,
    "tiles": 57,
    "frames": 8,
    "notes": []
