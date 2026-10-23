@@ -1,0 +1,317 @@
+{
+  "pack": "Pallet Houses Pack",
+  "version": "0.5",
+  "design_status": "approved",
+  "status": "PASS",
+  "authoring": "Native integer palette-index pixels. No downscaling, antialiasing, blur or alpha blending.",
+  "shared_palette": true,
+  "palette_rgb": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      24,
+      32,
+      40
+    ],
+    [
+      80,
+      56,
+      48
+    ],
+    [
+      152,
+      112,
+      72
+    ],
+    [
+      160,
+      152,
+      128
+    ],
+    [
+      216,
+      208,
+      184
+    ],
+    [
+      240,
+      232,
+      208
+    ],
+    [
+      136,
+      56,
+      48
+    ],
+    [
+      192,
+      80,
+      64
+    ],
+    [
+      232,
+      128,
+      96
+    ],
+    [
+      40,
+      72,
+      104
+    ],
+    [
+      64,
+      120,
+      168
+    ],
+    [
+      120,
+      168,
+      200
+    ],
+    [
+      184,
+      216,
+      216
+    ],
+    [
+      96,
+      104,
+      112
+    ],
+    [
+      152,
+      152,
+      136
+    ]
+  ],
+  "palette_roles": [
+    "Transparent",
+    "Outline / doorway",
+    "Dark timber / warm shadow",
+    "Timber / brass",
+    "Plaster shade / warm trim",
+    "Plaster / pale stone",
+    "Cream plaster / glint",
+    "Roof red shade",
+    "Roof terracotta",
+    "Roof red sunlit edge",
+    "Roof blue shade / deep glass",
+    "Roof blue",
+    "Roof blue sunlit edge",
+    "Window reflection",
+    "Foundation / stone dark",
+    "Foundation / stone mid"
+  ],
+  "palette_count": 1,
+  "opaque_colours": 15,
+  "transparent_index": 0,
+  "alpha_values": [
+    0,
+    255
+  ],
+  "rgb_channels_multiple_of_8": true,
+  "assets": [
+    {
+      "name": "red_house",
+      "footprint_blocks": [
+        5,
+        5
+      ],
+      "size_px": [
+        80,
+        80
+      ],
+      "door_block": [
+        1,
+        4
+      ],
+      "solid_block_count": 24,
+      "door_size_px": [
+        48,
+        32
+      ],
+      "door_frames": 3,
+      "door_opening_px": [
+        12,
+        20
+      ],
+      "unique_8x8_static": 87,
+      "unique_8x8_including_doors": 94,
+      "limit": 100
+    },
+    {
+      "name": "blue_house",
+      "footprint_blocks": [
+        5,
+        5
+      ],
+      "size_px": [
+        80,
+        80
+      ],
+      "door_block": [
+        1,
+        4
+      ],
+      "solid_block_count": 24,
+      "door_size_px": [
+        48,
+        32
+      ],
+      "door_frames": 3,
+      "door_opening_px": [
+        12,
+        20
+      ],
+      "unique_8x8_static": 89,
+      "unique_8x8_including_doors": 96,
+      "limit": 100
+    }
+  ],
+  "unique_8x8_combined": 166,
+  "combined_limit": 170,
+  "count_method": "Exact palette-index 8x8 tiles, counting transparent tiles and all 3 door frames; no mirror or rotation reuse.",
+  "checks": [
+    {
+      "name": "red_house.png: indexed 4-bit, exact shared palette, binary alpha, native pixels or exact 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "red_house_4x.png: indexed 4-bit, exact shared palette, binary alpha, native pixels or exact 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "red_house_door.png: indexed 4-bit, exact shared palette, binary alpha, native pixels or exact 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "red_house_door_4x.png: indexed 4-bit, exact shared palette, binary alpha, native pixels or exact 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "red_house: closed frame matches blocks (1,3)/(1,4) and animation changes only opening",
+      "result": "PASS"
+    },
+    {
+      "name": "red_house: fixed 5x5 footprint, one door block, 24 solid blocks, budget",
+      "result": "PASS"
+    },
+    {
+      "name": "blue_house.png: indexed 4-bit, exact shared palette, binary alpha, native pixels or exact 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "blue_house_4x.png: indexed 4-bit, exact shared palette, binary alpha, native pixels or exact 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "blue_house_door.png: indexed 4-bit, exact shared palette, binary alpha, native pixels or exact 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "blue_house_door_4x.png: indexed 4-bit, exact shared palette, binary alpha, native pixels or exact 4x",
+      "result": "PASS"
+    },
+    {
+      "name": "blue_house: closed frame matches blocks (1,3)/(1,4) and animation changes only opening",
+      "result": "PASS"
+    },
+    {
+      "name": "blue_house: fixed 5x5 footprint, one door block, 24 solid blocks, budget",
+      "result": "PASS"
+    },
+    {
+      "name": "Single shared palette, 15 opaque colours, RGB multiples of 8, GPL agreement",
+      "result": "PASS"
+    },
+    {
+      "name": "Combined native tile budget includes all door frames, no flip reuse",
+      "result": "PASS"
+    },
+    {
+      "name": "Shared tile atlas reconstructs both houses and door strips exactly",
+      "result": "PASS"
+    },
+    {
+      "name": "yards: 1x and exact nearest-neighbour 4x preview validated",
+      "result": "PASS"
+    },
+    {
+      "name": "door_frames: 1x and exact nearest-neighbour 4x preview validated",
+      "result": "PASS"
+    },
+    {
+      "name": "Player is 16x26; no lawn pixels are embedded in house sources",
+      "result": "PASS"
+    },
+    {
+      "name": "v0.5: ordered palette unchanged from v0.4",
+      "result": "PASS"
+    },
+    {
+      "name": "v0.5: only main roof region changed; lower facades and door strips identical to v0.4",
+      "result": "PASS"
+    },
+    {
+      "name": "v0.5: accepted front-facing upper window and porch drawing code unchanged",
+      "result": "PASS"
+    },
+    {
+      "name": "Door preview GIFs: three states, exact 4x scale, frame 0 matches yard PNG, changes confined to door openings",
+      "result": "PASS"
+    }
+  ],
+  "scope": "PNG bytes, animation patches, tile atlas, metadata and PNG previews verified. No emulator or game engine provided.",
+  "revision_comparison": {
+    "previous_version": "0.4",
+    "assets": {
+      "red_house": {
+        "changed_pixels": 356,
+        "changed_pixel_bounds": [
+          1,
+          6,
+          78,
+          44
+        ],
+        "all_pixels_from_row_48_unchanged": true,
+        "door_strips_byte_identical_to_v0_4": true
+      },
+      "blue_house": {
+        "changed_pixels": 438,
+        "changed_pixel_bounds": [
+          1,
+          6,
+          78,
+          44
+        ],
+        "all_pixels_from_row_48_unchanged": true,
+        "door_strips_byte_identical_to_v0_4": true
+      }
+    }
+  },
+  "door_preview_gif": {
+    "frames": 3,
+    "durations_ms": [
+      600,
+      180,
+      600
+    ],
+    "native_size": [
+      288,
+      160
+    ],
+    "scale_4x_size": [
+      1152,
+      640
+    ]
+  },
+  "approval": {
+    "user": "Malik",
+    "message": "This looks good",
+    "approved_version": "0.5",
+    "art_changed_after_approval": false
+  }
+}

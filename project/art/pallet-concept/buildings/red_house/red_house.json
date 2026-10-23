@@ -1,0 +1,139 @@
+{
+  "asset": "red_house",
+  "version": "0.5",
+  "footprint_blocks": {
+    "width": 5,
+    "height": 5
+  },
+  "door_block": [
+    1,
+    4
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "palette": "palette.gpl",
+  "image_size_px": [
+    80,
+    80
+  ],
+  "door_animation": {
+    "file": "red_house_door.png",
+    "frame_size_px": [
+      16,
+      32
+    ],
+    "frames": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "patch_origin_px": [
+      16,
+      48
+    ],
+    "opening_px": {
+      "x": 18,
+      "y": 56,
+      "width": 12,
+      "height": 20
+    },
+    "closed_frame_matches_building": true
+  },
+  "design": "Terracotta roof with raised ridge, receding shingle courses, front-facing upper window with a centred gable and level sill, capped brick chimney with flashing, plaster facade and wood shutters."
+}
