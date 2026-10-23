@@ -11,12 +11,12 @@ plays the events one after another, each starting where the last one left the ga
 
 | | |
 |---|---|
-| Date | 2026-10-22 |
-| Game | `v2-main` at `634c7234` (PRs #23–#28: the broadleaf trees, bushes, rocks, Pallet's houses, the Center and Mart) with Viridian's new roofs (branch `claude/viridian-roofs`) |
-| ROM | `make -j4` with the default settings. SHA-1 `915fcb670b71d587e2aa2c60b1b27126bdf90861`, SHA-256 `5aaf0f322723392692fed7d8fdb710e4ed2adc0ecc5d9a83c448e284df1ce069` |
-| pae | `2805726` (`main` after pae PR #18) |
-| Last step passed | 29 `league-gate`: up Route 22's cliff stairs and into the Pokémon League Front Gate |
-| Replay tests | 45 of 45 pass |
+| Date | 2026-10-23 |
+| Game | `v2-main` at `7ddde8df` (after PR #29, Viridian's roofs) with Route 2 rebuilt (branch `claude/route2`, `b624ca63`) |
+| ROM | `make -j4` with the default settings. SHA-1 `a7a6d042638b60f1a1d9216303b77e4842eb2aaf`, SHA-256 `1f631d7e19505e85c1198b85a115820dc4d6464b175e95c1b1f72c83c1ce212c` |
+| pae | `14af623` (pae PR #19: seams pack colours, double doors, walks keep off sideways stairs) |
+| Last step passed | 38 `pewter`: through Viridian Forest, out of its north gate onto Route 2, and into Pewter City |
+| Replay tests | 57 of 57 pass |
 
 ## How to run it
 
@@ -29,8 +29,8 @@ project/scripts/story_check.py --from route22   # carry on from a step
 project/scripts/story_check.py --to dex         # stop after a step
 ```
 
-The script needs pae with `pae play --show-flag` (pae PR #17). A run from the top takes about 20 minutes; a
-run `--from` a later step takes less.
+The script needs pae with `pae play --show-flag` (pae PR #17), and pae PR #19 for the forest (its walks keep off
+sideways stairs). A run from the top takes about 35 minutes; a run `--from` a later step takes less.
 
 * Each step saves a checkpoint, `story-NN-name`, in `engine/.pae/checkpoints/`. The next step starts from it.
   `--from STEP` needs the checkpoint of the step before it. A fresh clone has no checkpoints, so start from the
@@ -87,6 +87,15 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 27 | `blue-lose` | Blue meets you on the road and wins: you wake in Viridian's Center | Viridian Center 7,4 | `VAR_MAP_SCENE_ROUTE22` 1 |
 | 28 | `blue-win` | The same, from step 26, with a stronger Pikachu: Blue loses and leaves east | Route 22 44,7 | `VAR_MAP_SCENE_ROUTE22` 2 |
 | 29 | `league-gate` | Up the stairs in the cliff, across the forecourt, into the League Front Gate | League Front Gate 7,10 | |
+| 30 | `leave-league-gate` | Back out of the League Front Gate | Route 22 12,14 | |
+| 31 | `east-viridian` | Down the stairs and east along the road into Viridian | Viridian City 0,29 | |
+| 32 | `north-route2` | North out of Viridian into Route 2 | Route 2 9,79 | |
+| 33 | `forest-gate` | Up Route 2's south meadow into Viridian Forest's south gate (its double door) | the south gatehouse 7,9 | |
+| 34 | `forest` | Through the gatehouse into Viridian Forest | Viridian Forest 39,72 | |
+| 35 | `forest-stairs` | Up the forest, round its trainers' lines of sight (`via`), and west down its sideways stairs | Viridian Forest 37,16 | |
+| 36 | `forest-north` | On through the forest, round Sammy's line of sight, to its north gate | the north gatehouse 7,9 | |
+| 37 | `route2-north` | Out of the forest's north gate onto Route 2 (its doorway in the roof, walking north) | Route 2 7,20 | |
+| 38 | `pewter` | Up Route 2's north meadow into Pewter City | Pewter City 23,43 | |
 
 ## What it doesn't cover
 
@@ -97,8 +106,10 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 * **People.** Only the story's people are checked. The second run of 2026-10-22 also talked to ten others on
   Pallet, Route 1, Viridian and Route 22. Nine answered; the tenth is hidden in the game on purpose. The script
   doesn't do that.
-* **Places off the story's path**: houses, the Trainer School, the Gym (locked), Route 2 past its first block,
-  surfing, cutting.
+* **Places off the story's path**: houses, the Trainer School, the Gym (locked), Route 2's eastern detour (it needs
+  Cut: the replay tests cut a tree and go through its buildings' doors), surfing.
+* **Viridian Forest's trainers.** The walk goes round their lines of sight, so their battles aren't played. The
+  forest isn't rebuilt.
 * **The menus** (bag, Pokédex, Town Map, saving): only opened where the story opens them.
 * **Real play**: sound, real-time play, real hardware.
 
@@ -110,6 +121,9 @@ Checkpoints are game saves, so they still load after a map change, as long as th
    * `pae map events MAP` lists the triggers and people.
    * The map's `scripts.inc` shows which flags and variables a scene sets.
    * `pae play --from CHECKPOINT --inputs ... --show-flag F --show-var V` tries a step out before you add it.
+   * A walk that must keep off some blocks (a trainer's line of sight) gives them `via`: blocks to walk to first, in
+     order. `pae map path` keeps off sideways stairs (they move you diagonally), so a step that crosses them walks
+     to their foot and crosses them in its inputs (`forest-stairs`).
    * In inputs, text advances with B (A talks to the person again). Leaving through a door mat needs one more press
      toward the exit while standing on it.
 3. When every step passes, update "Last validated point" and the step table on this page. Do it in the same pull
@@ -130,3 +144,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-23 | Pallet's new houses | **All 29 steps pass** from the top (1078 s). |
 | 2026-10-23 | the new Pokémon Center and Poké Mart | **All 29 steps pass** from the top (1078 s). |
 | 2026-10-23 | Viridian's houses' new roofs | **All 29 steps pass** from the top (1073 s). |
+| 2026-10-23 | Route 2 rebuilt; nine new steps through it and Viridian Forest to Pewter | **All 38 steps pass** from the top (2068 s). The first try of the forest stopped at its sideways stairs: pae's walks crossed them, and the game doesn't (fixed in pae PR #19; the step crosses them in its inputs). |

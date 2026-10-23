@@ -1,0 +1,44 @@
+{
+ "note": "Walk up the south meadow's road into the forest's south gate (its right door block): both leaves of its double door open together (frames from the pack, two blocks wide).",
+ "created": "2026-10-23 14:42",
+ "start": {
+  "map": "Route2_Frlg",
+  "x": 8,
+  "y": 54,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     48
+    ],
+    [
+     0,
+     14
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route2_Frlg",
+  "x": 8,
+  "y": 52,
+  "in_battle": false
+ }
+}

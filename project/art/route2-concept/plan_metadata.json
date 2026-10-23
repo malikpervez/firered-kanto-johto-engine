@@ -1,0 +1,309 @@
+{
+  "width_blocks": 30,
+  "height_blocks": 80,
+  "block_size_px": 16,
+  "buildings": [
+    {
+      "id": "forest_south",
+      "letter": "F",
+      "name": "Grand forest gateway — south-facing",
+      "asset_key": "global.forest_gateway",
+      "orientation": "south",
+      "x": 4,
+      "y": 46,
+      "w": 8,
+      "h": 6,
+      "doors": [
+        {
+          "x": 7,
+          "y": 51,
+          "facing": "south",
+          "front": [
+            7,
+            52
+          ],
+          "portal_group": "forest_south"
+        },
+        {
+          "x": 8,
+          "y": 51,
+          "facing": "south",
+          "front": [
+            8,
+            52
+          ],
+          "portal_group": "forest_south"
+        }
+      ]
+    },
+    {
+      "id": "forest_north",
+      "letter": "N",
+      "name": "Grand forest gateway — north-facing",
+      "asset_key": "global.forest_gateway",
+      "orientation": "north",
+      "x": 4,
+      "y": 20,
+      "w": 8,
+      "h": 6,
+      "doors": [
+        {
+          "x": 7,
+          "y": 20,
+          "facing": "north",
+          "front": [
+            7,
+            19
+          ],
+          "portal_group": "forest_north"
+        },
+        {
+          "x": 8,
+          "y": 20,
+          "facing": "north",
+          "front": [
+            8,
+            19
+          ],
+          "portal_group": "forest_north"
+        }
+      ]
+    },
+    {
+      "id": "east_gate",
+      "letter": "E",
+      "name": "East pass-through gatehouse",
+      "x": 20,
+      "y": 44,
+      "w": 4,
+      "h": 4,
+      "doors": [
+        {
+          "x": 21,
+          "y": 44,
+          "facing": "north",
+          "front": [
+            21,
+            43
+          ]
+        },
+        {
+          "x": 21,
+          "y": 47,
+          "facing": "south",
+          "front": [
+            21,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trade_house",
+      "letter": "U",
+      "name": "Trade cottage",
+      "x": 20,
+      "y": 21,
+      "w": 5,
+      "h": 4,
+      "doors": [
+        {
+          "x": 22,
+          "y": 24,
+          "facing": "south",
+          "front": [
+            22,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diglett_cave",
+      "letter": "D",
+      "name": "Cliff cave entrance",
+      "asset_key": "global.cliff_cave_entrance",
+      "base_asset": "Route_22_Rock_Cliff_Pack_v3.2",
+      "x": 20,
+      "y": 8,
+      "w": 6,
+      "h": 5,
+      "doors": [
+        {
+          "x": 22,
+          "y": 12,
+          "facing": "south",
+          "front": [
+            22,
+            13
+          ]
+        }
+      ]
+    }
+  ],
+  "standalone_trees": [
+    {
+      "x": 4,
+      "y": 2,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 2,
+      "y": 18,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 18,
+      "y": 26,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 26,
+      "y": 16,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 18,
+      "y": 40,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 24,
+      "y": 56,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 24,
+      "y": 70,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 6,
+      "y": 66,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 12,
+      "y": 50,
+      "width": 2,
+      "height": 2
+    },
+    {
+      "x": 4,
+      "y": 76,
+      "width": 2,
+      "height": 2
+    }
+  ],
+  "camp": {
+    "x": 2,
+    "y": 60,
+    "width": 6,
+    "height": 4
+  },
+  "joins": {
+    "pewter": {
+      "row": 0,
+      "columns": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    "viridian": {
+      "row": 79,
+      "columns": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  "cut_gates": [
+    {
+      "id": "south",
+      "at": [
+        16,
+        68
+      ],
+      "connects": [
+        "south",
+        "south_east"
+      ]
+    },
+    {
+      "id": "middle",
+      "at": [
+        21,
+        30
+      ],
+      "connects": [
+        "middle_east",
+        "north_east"
+      ]
+    },
+    {
+      "id": "north",
+      "at": [
+        16,
+        14
+      ],
+      "connects": [
+        "north_east",
+        "north"
+      ]
+    }
+  ],
+  "east_interior_portal": [
+    [
+      21,
+      47
+    ],
+    [
+      21,
+      44
+    ]
+  ],
+  "ledge": {
+    "row": 38,
+    "columns": [
+      18,
+      19,
+      20,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "direction": "south_only",
+    "stairs": [
+      [
+        21,
+        38
+      ],
+      [
+        22,
+        38
+      ]
+    ]
+  }
+}

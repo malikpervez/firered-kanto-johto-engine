@@ -1,0 +1,44 @@
+{
+ "note": "Walk north into the east gatehouse's open south door: into the east building.",
+ "created": "2026-10-23 14:42",
+ "start": {
+  "map": "Route2_Frlg",
+  "x": 21,
+  "y": 50,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     44
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route2_EastBuilding_Frlg",
+  "x": 7,
+  "y": 9,
+  "in_battle": false
+ }
+}

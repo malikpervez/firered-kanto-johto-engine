@@ -23,6 +23,14 @@ struct DoorGraphics
     const void *palettes;
 };
 
+// A door's size: 1 one block, 2 two blocks tall (the door and the block above it), or (FRLG/HnS layouts) a wide one,
+// two door blocks side by side and the two above them, which open together whichever of them you walk into: each of
+// its two door metatiles has an entry, DOOR_WIDE_LEFT or DOOR_WIDE_RIGHT, with the same frames (16 tiles each: the
+// left column, then the right, each the block above, then the door)
+#define DOOR_WIDE_LEFT  3
+#define DOOR_WIDE_RIGHT 4
+#define IS_WIDE_DOOR(gfx) ((gfx)->size == DOOR_WIDE_LEFT || (gfx)->size == DOOR_WIDE_RIGHT)
+
 struct DoorAnimFrame
 {
     u8 time;
@@ -273,6 +281,22 @@ static const struct DoorAnimFrame sDoorAnimFrames_CloseLargeFrlg[] = {
     {}
 };
 
+static const struct DoorAnimFrame sDoorAnimFrames_OpenWide[] = {
+    {4, -1},
+    {4, 0 * TILE_SIZE_4BPP},
+    {4, 16 * TILE_SIZE_4BPP},
+    {4, 32 * TILE_SIZE_4BPP},
+    {}
+};
+
+static const struct DoorAnimFrame sDoorAnimFrames_CloseWide[] = {
+    {4, 32 * TILE_SIZE_4BPP},
+    {4, 16 * TILE_SIZE_4BPP},
+    {4, 0 * TILE_SIZE_4BPP},
+    {4, -1},
+    {}
+};
+
 static const struct DoorAnimFrame sDoorAnimFrames_OpenSmallHns[] = {
     {4, -1},
     {4, 0 * TILE_SIZE_4BPP},
@@ -469,7 +493,9 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 
 static void CopyDoorTilesToVram(const struct DoorGraphics *gfx, const struct DoorAnimFrame *frame)
 {
-    if (gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_HNS)
+    if (IS_WIDE_DOOR(gfx))
+        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_HNS ? DOOR_TILE_START_HNS : DOOR_TILE_START_SIZE2)), 16 * TILE_SIZE_4BPP);
+    else if (gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_HNS)
         CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_HNS)), 8 * TILE_SIZE_4BPP);
     else if (gfx->size == 2 && !LAYOUT_USES_FRLG_DOORS(gMapHeader.mapLayout->layoutVersion))
         CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE2)), 16 * TILE_SIZE_4BPP);
@@ -501,6 +527,21 @@ static void DrawCurrentDoorAnimFrameFrlg(const struct DoorGraphics *gfx, int x, 
 {
     u16 tiles[8];
     u16 tileStart = (gMapHeader.mapLayout->layoutVersion == LAYOUT_VERSION_HNS) ? DOOR_TILE_START_HNS : DOOR_TILE_START_SIZE1;
+    if (IS_WIDE_DOOR(gfx))
+    {
+        int i;
+
+        if (gMapHeader.mapLayout->layoutVersion != LAYOUT_VERSION_HNS)
+            tileStart = DOOR_TILE_START_SIZE2;
+        if (gfx->size == DOOR_WIDE_RIGHT)
+            x--;
+        for (i = 0; i < 4; i++)
+        {
+            BuildDoorTiles(tiles, tileStart + 4 * i, &paletteNums[4 * i]);
+            DrawDoorMetatileAt(x + i / 2, y - 1 + i % 2, tiles);
+        }
+        return;
+    }
     if (gfx->size == 1)
         BuildDoorTiles(tiles, tileStart, paletteNums);
     else
@@ -555,7 +596,16 @@ static void DrawCurrentDoorAnimFrame(const struct DoorGraphics *gfx, u32 x, u32 
 
 static void DrawClosedDoorTilesFrlg(const struct DoorGraphics *gfx, int x, int y)
 {
-    if (gfx->size == 1)
+    if (IS_WIDE_DOOR(gfx))
+    {
+        if (gfx->size == DOOR_WIDE_RIGHT)
+            x--;
+        CurrentMapDrawMetatileAt(x, y);
+        CurrentMapDrawMetatileAt(x, y - 1);
+        CurrentMapDrawMetatileAt(x + 1, y);
+        CurrentMapDrawMetatileAt(x + 1, y - 1);
+    }
+    else if (gfx->size == 1)
         CurrentMapDrawMetatileAt(x, y);
     else
     {
@@ -699,6 +749,8 @@ static void DrawOpenedDoor(const struct DoorGraphics *gfx, u32 x, u32 y)
 {
     const struct DoorAnimFrame *doorAnimFrames = GetDoorAnimFrames(sDoorOpenAnimFrames, sDoorAnimFrames_OpenSmallFrlg, sDoorAnimFrames_OpenSmallHns);
     gfx = GetDoorGraphics(gfx, MapGridGetMetatileIdAt(x, y));
+    if (gfx != NULL && IS_WIDE_DOOR(gfx))
+        doorAnimFrames = sDoorAnimFrames_OpenWide;
     if (gfx != NULL)
         DrawDoor(gfx, GetLastDoorFrame(doorAnimFrames, doorAnimFrames), x, y);
 }
@@ -712,6 +764,8 @@ static s8 StartDoorOpenAnimation(const struct DoorGraphics *gfx, u32 x, u32 y)
     }
     else
     {
+        if (IS_WIDE_DOOR(gfx))
+            return StartDoorAnimationTask(gfx, sDoorAnimFrames_OpenWide, x, y);
         if (gfx->size == 2)
             return StartDoorAnimationTask(gfx, GetDoorAnimFrames(sBigDoorOpenAnimFrames, sDoorAnimFrames_OpenLargeFrlg, sDoorAnimFrames_OpenLargeHns), x, y);
         else
@@ -724,6 +778,8 @@ static s8 StartDoorCloseAnimation(const struct DoorGraphics *gfx, u32 x, u32 y)
     gfx = GetDoorGraphics(gfx, MapGridGetMetatileIdAt(x, y));
     if (gfx == NULL)
         return -1;
+    else if (IS_WIDE_DOOR(gfx))
+        return StartDoorAnimationTask(gfx, sDoorAnimFrames_CloseWide, x, y);
     else if (gfx->size != 1 && gMapHeader.mapLayout->layoutVersion != LAYOUT_VERSION_EMERALD)
         return StartDoorAnimationTask(gfx, GetDoorAnimFrames(NULL, sDoorAnimFrames_CloseLargeFrlg, sDoorAnimFrames_CloseLargeHns), x, y);
     else

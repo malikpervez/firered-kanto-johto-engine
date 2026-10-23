@@ -1,0 +1,44 @@
+{
+ "forest_gate_south": [
+  [
+   7,
+   51
+  ],
+  [
+   8,
+   51
+  ]
+ ],
+ "forest_gate_north": [
+  [
+   7,
+   20
+  ],
+  [
+   8,
+   20
+  ]
+ ],
+ "east_gatehouse": [
+  [
+   21,
+   47
+  ],
+  [
+   21,
+   44
+  ]
+ ],
+ "house_family": [
+  [
+   22,
+   24
+  ]
+ ],
+ "diglett_cave": [
+  [
+   22,
+   12
+  ]
+ ]
+}

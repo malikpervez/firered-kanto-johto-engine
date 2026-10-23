@@ -1,0 +1,44 @@
+{
+ "note": "Leave the east building by its north side: onto the gatehouse's north doorway on Route 2.",
+ "created": "2026-10-23 14:42",
+ "start": {
+  "map": "Route2_EastBuilding_Frlg",
+  "x": 7,
+  "y": 3,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     40
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route2_Frlg",
+  "x": 21,
+  "y": 44,
+  "in_battle": false
+ }
+}
