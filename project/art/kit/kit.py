@@ -438,7 +438,8 @@ def lamp() -> np.ndarray:
 # (mask, corners) of the forest's inside-corner pieces in the kit: every map's together (a map checks its own are
 # here with ``forest_corners``; add new ones here, then rebuild every map)
 FOREST_CORNERS = [(15, 1), (15, 2), (15, 6), (15, 4), (15, 8), (7, 1), (7, 2), (13, 4), (14, 4),
-                  (11, 1), (15, 3), (15, 12)]  # the last three for Route 2
+                  (11, 1), (15, 3), (15, 12),  # these three for Route 2
+                  (14, 2), (15, 5), (15, 10)]  # these for Viridian Forest
 # the forest's middle and its straight edges in all three of the pack's crowns, mixed by position (the rest in
 # the first): most of a forest is these, and the tiles for every piece in all three wouldn't fit beside the rest
 FOREST_VARIED = (15, 14, 13, 11, 7)

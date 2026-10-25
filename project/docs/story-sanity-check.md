@@ -91,11 +91,12 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 31 | `east-viridian` | Down the stairs and east along the road into Viridian | Viridian City 0,29 | |
 | 32 | `north-route2` | North out of Viridian into Route 2 | Route 2 9,79 | |
 | 33 | `forest-gate` | Up Route 2's south meadow into Viridian Forest's south gate (its double door) | the south gatehouse 7,9 | |
-| 34 | `forest` | Through the gatehouse into Viridian Forest | Viridian Forest 39,72 | |
-| 35 | `forest-stairs` | Up the forest, round its trainers' lines of sight (`via`), and west down its sideways stairs | Viridian Forest 37,16 | |
-| 36 | `forest-north` | On through the forest, round Sammy's line of sight, to its north gate | the north gatehouse 7,9 | |
-| 37 | `route2-north` | Out of the forest's north gate onto Route 2 (its doorway in the roof, walking north) | Route 2 7,20 | |
-| 38 | `pewter` | Up Route 2's north meadow into Pewter City | Pewter City 23,43 | |
+| 34 | `forest` | Through the gatehouse into Viridian Forest (its south exit) | Viridian Forest 23,59 | |
+| 35 | `forest-rick` | Up the trail and west: Rick sees you across it and battles (you can't walk round him) | Viridian Forest 20,50 | |
+| 36 | `forest-doug` | West through the tall grass, north, east, then north: Doug sees you across the trail and battles | Viridian Forest 31,29 | |
+| 37 | `forest-north` | On north through the last tall grass to the forest's north exit and its gate | the north gatehouse 7,9 | |
+| 38 | `route2-north` | Out of the forest's north gate onto Route 2 (its doorway in the roof, walking north) | Route 2 7,20 | |
+| 39 | `pewter` | Up Route 2's north meadow into Pewter City | Pewter City 23,43 | |
 
 ## What it doesn't cover
 
@@ -108,8 +109,8 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   doesn't do that.
 * **Places off the story's path**: houses, the Trainer School, the Gym (locked), Route 2's eastern detour (it needs
   Cut: the replay tests cut a tree and go through its buildings' doors), surfing.
-* **Viridian Forest's trainers.** The walk goes round their lines of sight, so their battles aren't played. The
-  forest isn't rebuilt.
+* **Viridian Forest's other trainers.** Rick and Doug can't be walked round, so their battles are played (with the
+  Pikachu from `blue-win`); Sammy, Anthony and Charlie are on the item branches, which the walk doesn't take.
 * **The menus** (bag, Pokédex, Town Map, saving): only opened where the story opens them.
 * **Real play**: sound, real-time play, real hardware.
 
@@ -123,7 +124,10 @@ Checkpoints are game saves, so they still load after a map change, as long as th
    * `pae play --from CHECKPOINT --inputs ... --show-flag F --show-var V` tries a step out before you add it.
    * A walk that must keep off some blocks (a trainer's line of sight) gives them `via`: blocks to walk to first, in
      order. `pae map path` keeps off sideways stairs (they move you diagonally), so a step that crosses them walks
-     to their foot and crosses them in its inputs (`forest-stairs`).
+     to their foot and crosses them in its inputs.
+   * A trainer you can't walk round: walk to the block before their line of sight, then step in and fight in the
+     inputs (A through the battle, then B to close the trainer's words if an A talked to them again:
+     `forest-rick`).
    * In inputs, text advances with B (A talks to the person again). Leaving through a door mat needs one more press
      toward the exit while standing on it.
 3. When every step passes, update "Last validated point" and the step table on this page. Do it in the same pull

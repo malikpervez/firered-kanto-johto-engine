@@ -18,6 +18,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Viridian City | 60×52 | 56×50 | kit + `gTileset_ViridianConcept` | up: Route 2 (offset 16), left: Route 22 (offset 22), down: Route 1 (offset 2) |
 | Route 22 | 52×28 | 52×28 | kit + `gTileset_Route22Concept` | right: Viridian City (offset −22); not joined to Route 23 (below) |
 | Route 2 | 30×80 | 30×80 | kit + `gTileset_Route2Concept` | up: Pewter City (offset −14), down: Viridian City (offset −16) |
+| Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
 
@@ -107,3 +108,8 @@ Check these whenever a map is rebuilt, moved or resized:
   camp moved; the camp's anchor and first local id in `src/data/friends_scene_locations.h` changed with it. Pewter
   got a pae seam for it. The kit reserves tiles 434–449 for doors now (double doors' frames), and gained three
   forest corners.
+- Viridian Forest rebuilt smaller: 48×60 instead of 74×79. It joins nothing (its exits are warps to Route 2's gates,
+  which keep their numbers), so no other map changed. Its trainers, people, items, signs, hidden items and Pokémon
+  moved; Rick, Sammy, Anthony and Charlie face another way, every trainer but Charlie sees a different distance, and
+  four of its Pokémon are other species.
+  The kit gained three forest corners, so every kit map was rebuilt (no layout, wall or join changed).

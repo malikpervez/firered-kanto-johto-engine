@@ -51,11 +51,11 @@
       "x": 47,
       "y": 45,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "ViridianForest_EventScript_Rick",
       "flag": "0"
     },
@@ -69,7 +69,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "ViridianForest_EventScript_Doug",
       "flag": "0"
     },
@@ -79,11 +79,11 @@
       "x": 16,
       "y": 22,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "ViridianForest_EventScript_Sammy",
       "flag": "0"
     },
@@ -135,11 +135,11 @@
       "x": 43,
       "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "ViridianForest_EventScript_Anthony",
       "flag": "0"
     },
@@ -149,7 +149,7 @@
       "x": 34,
       "y": 5,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -172,7 +172,7 @@
       "flag": "FLAG_HIDE_VIRIDIAN_FOREST_POTION_2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_WURMPLE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CATERPIE",
       "x": 35,
       "y": 34,
       "elevation": 4,
@@ -198,7 +198,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIKACHU",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_WEEDLE",
       "x": 65,
       "y": 59,
       "elevation": 3,
@@ -276,7 +276,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIKACHU",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CATERPIE",
       "x": 7,
       "y": 23,
       "elevation": 3,
@@ -289,7 +289,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIKACHU",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BUTTERFREE",
       "x": 68,
       "y": 60,
       "elevation": 3,
@@ -424,50 +424,6 @@
     "secondary_tileset": "gTileset_ViridianForest_Hns",
     "border_filepath": "data/layouts/ViridianForest_hns/border.bin",
     "blockdata_filepath": "data/layouts/ViridianForest_hns/map.bin",
-    "layout_version": "hns",
-    "blockdata_overrides": [
-      {
-        "x": 41,
-        "y": 72,
-        "expected": 13042,
-        "value": 12951
-      },
-      {
-        "x": 39,
-        "y": 59,
-        "expected": 1741,
-        "value": 1026
-      },
-      {
-        "x": 44,
-        "y": 26,
-        "expected": 1682,
-        "value": 1026
-      },
-      {
-        "x": 17,
-        "y": 29,
-        "expected": 1754,
-        "value": 1026
-      },
-      {
-        "x": 13,
-        "y": 12,
-        "expected": 1736,
-        "value": 1026
-      },
-      {
-        "x": 27,
-        "y": 44,
-        "expected": 1725,
-        "value": 1026
-      },
-      {
-        "x": 31,
-        "y": 62,
-        "expected": 1673,
-        "value": 1026
-      }
-    ]
+    "layout_version": "hns"
   }
 }
