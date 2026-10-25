@@ -1,9 +1,14 @@
 ViridianCity_Frlg_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ViridianCity_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ViridianCity_OnFrame
 	.byte 0
 
+ViridianCity_OnFrame::
+	map_script_2 VAR_TEMP_D, 1, FG01_Arrival
+	.2byte 0
+
 ViridianCity_OnTransition::
-	call MW01_Visibility
+	call FG01_ArrivalCheck
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_CITY
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_SetOldManBlockingRoad
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1, ViridianCity_EventScript_SetOldManStandingByRoad

@@ -296,6 +296,14 @@ void Special_FriendsStoryBegin(void)
     gSpecialVar_Result = Here(scene) ? (Seen(scene) ? 2 : 1) : 0;
 }
 
+// Viridian's arrival (FG01) plays by itself on entering the town, the first time after the Pokédex.
+void Special_FriendsStoryArrivalPending(void)
+{
+    Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
+    FriendsStory_OnMapLoad();
+    gSpecialVar_Result = Here(1) && !Seen(1);
+}
+
 void Special_FriendsStoryMarkSeen(void)
 {
     u16 scene = gSpecialVar_0x8004;
