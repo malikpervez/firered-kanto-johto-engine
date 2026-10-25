@@ -22,6 +22,10 @@ The forest is 48×60 blocks (it was 74×79). It has:
 - the five trainer tips and the exit sign, each read from the block below it, and the two hidden items (the
   Antidote in the glade, the Potion in the tall grass west of the trail).
 
+The old forest's layout had block fixes of its own (`blockdata_overrides` in `layouts.json`); the map's
+`firered_geometry` inherits what it doesn't set, so it clears them (`"blockdata_overrides": null`): they point at the
+old block file. pae's `map geometry` doesn't do that yet.
+
 The kit's forest is drawn in whole 2×2 cells, so the one-block strip the concept leaves east of each exit
 (column 25) is bushes here. The forest needs three inside corners the kit didn't have (`kit.FOREST_CORNERS`), so
 adding it rebuilt every map made from the kit.

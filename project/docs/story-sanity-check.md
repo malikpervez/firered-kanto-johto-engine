@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-25 |
-| Game | `v2-main` at `de703e76` (after PR #31) with the faster map crossings and their one-frame graphics switch (branch `claude/clean-map-crossings`) |
-| ROM | `make -j4` with the default settings. SHA-1 `f528a65248ebbfecc0b4f65c6fc1d587a3489aaa`, SHA-256 `037b686d170c593f854675db72d86689b4f295701e1d415e6239f51ee6f1a631` |
+| Game | branch `claude/viridian-forest-concept` (Viridian Forest rebuilt from the concept, on `v2-main` at `45d5bbe1`) |
+| ROM | `make -j4` with the default settings. SHA-1 `3d190d66e41ea9437a09460cbb347bbd34a6e103`, SHA-256 `61b5785c2d254e890d958302d621333caad32bbf9d859994bdffaa9ad6115720` |
 | pae | `1b011f0` (pae PR #20) |
-| Last step passed | 38 `pewter`: through Viridian Forest, out of its north gate onto Route 2, and into Pewter City |
-| Replay tests | 61 of 61 pass |
+| Last step passed | 39 `pewter`: through Viridian Forest (battling Rick and Doug), out of its north gate onto Route 2, and into Pewter City. Steps 34–39 were run on this build, from step 33's checkpoint of the build before |
+| Replay tests | 71 of 71 pass |
 
 ## How to run it
 
@@ -152,3 +152,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-25 | the Viridian stranger fix (`4f402853`) | **Steps 7–38 pass** `--from viridian`, resumed from step 6's checkpoint (1800 s); steps 1–6 don't reach Viridian. |
 | 2026-10-25 | the faster map crossings (seam lookups by table) | First run from the top: steps 1–21 passed, step 22 walked a block too far. With crossings no longer freezing and no frame lost per block, the old holds (`16 * n + 2` frames) walked one block more; `story_check.py` now holds `16 * (n - 1) + 12`. With step 22's hold fixed, **steps 22–38 pass** `--from back-viridian` (1136 s; steps 1–21 took 836 s). |
 | 2026-10-25 | the one-frame graphics switch at crossings | **All 38 steps pass** from the top (1914 s). |
+| 2026-10-25 | Viridian Forest rebuilt from the concept (48×60); the forest's three steps become four | **Steps 34–39 pass** `--from forest`, resumed from step 33's checkpoint (395 s). Rick and Doug can't be walked round now, so the walk battles them. Steps 1–33 weren't run on this build (the kit maps were rebuilt with the same blocks; their replay tests pass). |

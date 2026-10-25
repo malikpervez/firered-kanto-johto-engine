@@ -426,6 +426,7 @@
     "blockdata_filepath": "data/layouts/ViridianForest_Concept/map.bin",
     "layout_version": "hns",
     "border_width": 2,
-    "border_height": 2
+    "border_height": 2,
+    "blockdata_overrides": null
   }
 }
