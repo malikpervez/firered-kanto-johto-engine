@@ -11,12 +11,12 @@ plays the events one after another, each starting where the last one left the ga
 
 | | |
 |---|---|
-| Date | 2026-10-23 |
-| Game | `v2-main` at `7ddde8df` (after PR #29, Viridian's roofs) with Route 2 rebuilt (branch `claude/route2`, `b624ca63`) |
-| ROM | `make -j4` with the default settings. SHA-1 `a7a6d042638b60f1a1d9216303b77e4842eb2aaf`, SHA-256 `1f631d7e19505e85c1198b85a115820dc4d6464b175e95c1b1f72c83c1ce212c` |
-| pae | `14af623` (pae PR #19: seams pack colours, double doors, walks keep off sideways stairs) |
+| Date | 2026-10-25 |
+| Game | `v2-main` at `5f501aa1` (after PR #30, Route 2) with the Viridian stranger fix (branch `claude/viridian-stranger`, `4f402853`) |
+| ROM | `make -j4` with the default settings. SHA-1 `06355cc59e1b5122084b4041a2e87641b91d3992`, SHA-256 `66ceae0c1cf5a773d5f9bfc5f5876e1bc005a50e3a50276822b84a6a6b6a954c` |
+| pae | `1594903` (pae PR #19) |
 | Last step passed | 38 `pewter`: through Viridian Forest, out of its north gate onto Route 2, and into Pewter City |
-| Replay tests | 57 of 57 pass |
+| Replay tests | 59 of 59 pass |
 
 ## How to run it
 
@@ -145,3 +145,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-23 | the new Pokémon Center and Poké Mart | **All 29 steps pass** from the top (1078 s). |
 | 2026-10-23 | Viridian's houses' new roofs | **All 29 steps pass** from the top (1073 s). |
 | 2026-10-23 | Route 2 rebuilt; nine new steps through it and Viridian Forest to Pewter | **All 38 steps pass** from the top (2068 s). The first try of the forest stopped at its sideways stairs: pae's walks crossed them, and the game doesn't (fixed in pae PR #19; the step crosses them in its inputs). |
+| 2026-10-25 | the Viridian stranger fix (`4f402853`) | **Steps 7–38 pass** `--from viridian`, resumed from step 6's checkpoint (1800 s); steps 1–6 don't reach Viridian. |
