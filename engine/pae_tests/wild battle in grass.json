@@ -1,9 +1,9 @@
 {
- "note": "Route 1 tall grass with the new battle backgrounds (the default): the battle must start, not run out of memory loading the background. It walks back and forth long enough that an encounter comes whatever the random state (after it starts, the extra steps only move the battle menu's cursor).",
+ "note": "Route 1 tall grass with the new battle backgrounds (the default): the battle must start, not run out of memory loading the background. It walks back and forth between two tall-grass blocks, (27,25) and (28,25), long enough that an encounter is all but certain whatever the random state (60 grass steps: a miss is under 0.1%; after it starts, the extra steps only move the battle menu's cursor).",
  "created": "2026-10-21 12:35",
  "start": {
   "map": "Route1_Frlg",
-  "x": 26,
+  "x": 27,
   "y": 25,
   "state": [
    "CLEAR_TEAM",
@@ -810,9 +810,9 @@
  "threshold": 0.01,
  "expect": {
   "map": "Route1_Frlg",
-  "x": 27,
+  "x": 28,
   "y": 25,
   "in_battle": true
  },
- "accepted": "2026-10-22 02:40"
+ "accepted": "2026-10-25 17:00"
 }

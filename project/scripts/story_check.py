@@ -26,6 +26,14 @@ REPEL = "VAR_REPEL_STEP_COUNT=250"
 DIRS = {"up": "UP", "down": "DOWN", "left": "LEFT", "right": "RIGHT"}
 
 
+def hold(n):
+    """Frames to hold a direction to walk n blocks: a step takes 16 frames and, once started, finishes when the key
+    is let go, so letting go 12 frames into the last step walks exactly n blocks, whether or not the game drops a
+    frame now and then or stands still for a few at a crossing. (Holding 16 * n + 2 only worked while every step took
+    17 frames.) A walk that comes up short is planned again from where it stopped."""
+    return 16 * (n - 1) + 12
+
+
 def A(n, wait=60):
     return "".join(f"A*4, wait {wait}, " for _ in range(n))
 
@@ -65,7 +73,7 @@ STEPS = [
     dict(name="potion", what="Route 1's Mart clerk gives a Potion", walk=(23, 21),
          inputs="UP*4, wait 20, A*4, wait 80, " + B(8) + "wait 60",
          expect=dict(map="Route1_Frlg", xy=(23, 21), flags={"FLAG_GOT_POTION_ON_ROUTE_1": True})),
-    dict(name="viridian", what="North into Viridian", walk=(23, 0), inputs="UP*18, wait 150",
+    dict(name="viridian", what="North into Viridian", walk=(23, 0), inputs="UP*12, wait 150",
          expect=dict(map="ViridianCity_Frlg", xy=(25, 51))),
     dict(name="parcel", what="Viridian's Poke Mart: the clerk gives Oak's Parcel", walk=(31, 28),
          inputs="UP*20, wait 250, " + B(10) + "wait 200",
@@ -73,10 +81,10 @@ STEPS = [
                      vars={"VAR_MAP_SCENE_VIRIDIAN_CITY_MART": 1, "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB": 5})),
     dict(name="leave-mart", what="Out of the Mart", inputs="wait 30, DOWN*80, wait 30, DOWN*20, wait 200",
          expect=dict(map="ViridianCity_Frlg", xy=(31, 28))),
-    dict(name="south-route1", what="South into Route 1", walk=(25, 51), inputs="DOWN*18, wait 150",
+    dict(name="south-route1", what="South into Route 1", walk=(25, 51), inputs="DOWN*12, wait 150",
          expect=dict(map="Route1_Frlg", xy=(23, 0))),
     dict(name="south-pallet", what="Down Route 1 (over its ledges) into Pallet", walk=(25, 39),
-         inputs="DOWN*18, wait 150", expect=dict(map="PalletTown_Frlg")),  # a block or two in: the walk carries on
+         inputs="DOWN*12, wait 150", expect=dict(map="PalletTown_Frlg")),  # a block or two in: the walk carries on
     dict(name="into-lab", what="Into Oak's lab", walk=(21, 16), inputs="UP*20, wait 250",
          expect=dict(map="PalletTown_ProfessorOaksLab_Frlg", xy=(6, 12))),
     dict(name="dex", what="The parcel to Oak: the Pokedex; Blue leaves", walk=(6, 4),
@@ -90,20 +98,20 @@ STEPS = [
     dict(name="rivals-house", what="Into Blue's house", walk=(18, 8), inputs="UP*20, wait 250",
          expect=dict(map="PalletTown_RivalsHouse_Frlg", xy=(4, 8))),
     dict(name="town-map", what="Daisy gives the Town Map",
-         inputs="wait 30, UP*66, wait 30, RIGHT*4, wait 20, A*4, wait 90, " + B(12) + "wait 200",
+         inputs="wait 30, UP*60, wait 30, RIGHT*4, wait 20, A*4, wait 90, " + B(12) + "wait 200",
          expect=dict(map="PalletTown_RivalsHouse_Frlg", xy=(4, 4), vars={"VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE": 2})),
     dict(name="leave-rivals-house", what="Out of Blue's house", inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 200",
          expect=dict(map="PalletTown_Frlg", xy=(18, 8))),
-    dict(name="north-route1", what="North into Route 1", walk=(15, 0), inputs="UP*18, wait 150",
+    dict(name="north-route1", what="North into Route 1", walk=(15, 0), inputs="UP*12, wait 150",
          expect=dict(map="Route1_Frlg", xy=(25, 39))),
-    dict(name="north-viridian", what="Up Route 1 into Viridian", walk=(23, 0), inputs="UP*18, wait 150",
+    dict(name="north-viridian", what="Up Route 1 into Viridian", walk=(23, 0), inputs="UP*12, wait 150",
          expect=dict(map="ViridianCity_Frlg", xy=(25, 51))),
     dict(name="old-man", what="The old man's catching demonstration (the second tutorial battle)",
          walk=(25, 16), inputs="wait 20, UP*16, wait 8, UP*16, wait 8, UP*16, wait 200, " + B(60) + "wait 600",
          expect=dict(map="ViridianCity_Frlg", xy=(25, 13), vars={"VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN": 2})),
-    dict(name="route2", what="The road north is open: into Route 2", walk=(25, 0), inputs="UP*18, wait 200",
+    dict(name="route2", what="The road north is open: into Route 2", walk=(25, 0), inputs="UP*12, wait 200",
          expect=dict(map="Route2_Frlg", xy=(9, 79))),
-    dict(name="back-viridian", what="Back into Viridian", inputs="wait 30, DOWN*34, wait 200",
+    dict(name="back-viridian", what="Back into Viridian", inputs="wait 30, DOWN*12, wait 200",
          expect=dict(map="ViridianCity_Frlg", xy=(25, 0))),
     dict(name="center", what="Into Viridian's Pokemon Center", walk=(20, 28), inputs="UP*20, wait 250",
          expect=dict(map="ViridianCity_PokemonCenter_1F_Frlg", xy=(7, 8))),
@@ -113,7 +121,7 @@ STEPS = [
          expect=dict(map="ViridianCity_PokemonCenter_1F_Frlg", xy=(7, 4))),
     dict(name="leave-center", what="Out of the Center", inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250",
          expect=dict(map="ViridianCity_Frlg", xy=(20, 28))),
-    dict(name="route22", what="West into Route 22", walk=(0, 29), inputs="LEFT*18, wait 200",
+    dict(name="route22", what="West into Route 22", walk=(0, 29), inputs="LEFT*12, wait 200",
          expect=dict(map="Route22_Frlg", xy=(51, 7))),
     dict(name="blue-lose", what="Blue meets you on the road and wins: you wake in Viridian's Center",
          inputs="wait 30, path 51,7 40,7, wait 300, " + A(120) + "wait 600",
@@ -129,8 +137,8 @@ STEPS = [
     dict(name="leave-league-gate", what="Back out of the League Front Gate", inputs="wait 30, DOWN*20, wait 250",
          expect=dict(map="Route22_Frlg", xy=(12, 14))),
     dict(name="east-viridian", what="Down the stairs and east along the road into Viridian", walk=(51, 7),
-         inputs="RIGHT*18, wait 200", expect=dict(map="ViridianCity_Frlg", xy=(0, 29))),
-    dict(name="north-route2", what="North out of Viridian into Route 2", walk=(25, 0), inputs="UP*18, wait 200",
+         inputs="RIGHT*12, wait 200", expect=dict(map="ViridianCity_Frlg", xy=(0, 29))),
+    dict(name="north-route2", what="North out of Viridian into Route 2", walk=(25, 0), inputs="UP*12, wait 200",
          expect=dict(map="Route2_Frlg", xy=(9, 79))),
     dict(name="forest-gate", what="Up Route 2's south meadow into Viridian Forest's south gate (its double door)",
          walk=(8, 52), inputs="UP*20, wait 300", expect=dict(map="Route2_ViridianForest_SouthEntrance_Frlg",
@@ -150,7 +158,7 @@ STEPS = [
                                                               xy=(7, 9))),
     dict(name="route2-north", what="Out of the forest's north gate onto Route 2 (its doorway, walking north)",
          walk=(7, 2), inputs="UP*20, wait 300", expect=dict(map="Route2_Frlg", xy=(7, 20))),
-    dict(name="pewter", what="Up Route 2's north meadow into Pewter City", walk=(9, 0), inputs="UP*18, wait 200",
+    dict(name="pewter", what="Up Route 2's north meadow into Pewter City", walk=(9, 0), inputs="UP*12, wait 200",
          expect=dict(map="PewterCity_Frlg", xy=(23, 43))),
 ]
 
@@ -166,7 +174,7 @@ class Runner:
         return r.returncode, r.stdout + r.stderr
 
     def path(self, map_, a, b):
-        """pae map path's walk as inputs: each straight run held for its steps."""
+        """pae map path's walk as inputs: each straight run held for its steps (see hold())."""
         code, out = self.pae("map", "path", map_, f"{a[0]},{a[1]}", f"{b[0]},{b[1]}")
         steps = [line.split("_")[1] for line in out.splitlines() if line.startswith("walk_")]
         if code or (not steps and tuple(a) != tuple(b)):
@@ -177,7 +185,7 @@ class Runner:
                 runs[-1][1] += 1
             else:
                 runs.append([s, 1])
-        return ", ".join(f"{DIRS[d]}*{16 * n + 2}, wait 6" for d, n in runs)
+        return ", ".join(f"{DIRS[d]}*{hold(n)}, wait 6" for d, n in runs)
 
     def inputs(self, text, map_):
         """'path X,Y X,Y' in a step's inputs becomes the planned walk on ``map_``."""

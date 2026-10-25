@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-25 |
-| Game | `v2-main` at `5f501aa1` (after PR #30, Route 2) with the Viridian stranger fix (branch `claude/viridian-stranger`, `4f402853`) |
-| ROM | `make -j4` with the default settings. SHA-1 `06355cc59e1b5122084b4041a2e87641b91d3992`, SHA-256 `66ceae0c1cf5a773d5f9bfc5f5876e1bc005a50e3a50276822b84a6a6b6a954c` |
-| pae | `1594903` (pae PR #19) |
+| Game | `v2-main` at `de703e76` (after PR #31) with the faster map crossings (branch `claude/faster-map-crossings`) |
+| ROM | `make -j4` with the default settings. SHA-1 `d98ab42be6f883ea53c56239395c40826dadce20`, SHA-256 `b217679a517a7fab2a8d81fd309072c83a7dcae4198fd30dd2f5dc17fc02dc2c` |
+| pae | `1b011f0` (pae PR #20) |
 | Last step passed | 38 `pewter`: through Viridian Forest, out of its north gate onto Route 2, and into Pewter City |
-| Replay tests | 59 of 59 pass |
+| Replay tests | 60 of 60 pass |
 
 ## How to run it
 
@@ -146,3 +146,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-23 | Viridian's houses' new roofs | **All 29 steps pass** from the top (1073 s). |
 | 2026-10-23 | Route 2 rebuilt; nine new steps through it and Viridian Forest to Pewter | **All 38 steps pass** from the top (2068 s). The first try of the forest stopped at its sideways stairs: pae's walks crossed them, and the game doesn't (fixed in pae PR #19; the step crosses them in its inputs). |
 | 2026-10-25 | the Viridian stranger fix (`4f402853`) | **Steps 7–38 pass** `--from viridian`, resumed from step 6's checkpoint (1800 s); steps 1–6 don't reach Viridian. |
+| 2026-10-25 | the faster map crossings (seam lookups by table) | First run from the top: steps 1–21 passed, step 22 walked a block too far. With crossings no longer freezing and no frame lost per block, the old holds (`16 * n + 2` frames) walked one block more; `story_check.py` now holds `16 * (n - 1) + 12`. With step 22's hold fixed, **steps 22–38 pass** `--from back-viridian` (1136 s; steps 1–21 took 836 s). |

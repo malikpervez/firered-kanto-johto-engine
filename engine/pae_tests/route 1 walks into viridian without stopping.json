@@ -1,0 +1,48 @@
+{
+ "note": "Route 1's road north into Viridian City with UP held the whole way (the owner's note: you had to pause for a second before it went into the next town). The walk must not stop at the crossing: 102 frames of UP from (24,2) reach Viridian's road four tiles in, at (26,48). While the crossing froze the game (36 frames) the same hold only got to (26,50).",
+ "created": "2026-10-25 16:59",
+ "start": {
+  "map": "Route1_Frlg",
+  "x": 24,
+  "y": 2,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv5",
+   "FLAG_SYS_POKEMON_GET",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "VAR_REPEL_STEP_COUNT=200"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     40
+    ],
+    [
+     64,
+     102
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ViridianCity_Frlg",
+  "x": 26,
+  "y": 48,
+  "in_battle": false
+ }
+}

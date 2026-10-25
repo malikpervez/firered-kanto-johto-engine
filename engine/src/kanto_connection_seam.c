@@ -1991,6 +1991,46 @@ const struct KantoSeam *KantoSeam_Find(const struct MapLayout *layout)
     return KantoSeam_FindNext(layout, NULL);
 }
 
+// The seams of the last two layouts looked up (the current map, and the previous one while crossing). The seam
+// table is in ROM, so an entry never goes stale. Per-block lookups (drawing, attributes) use this instead of
+// scanning the whole table each time.
+#define SEAM_CACHE_SEAMS 4
+#define SEAM_CACHE_TOO_MANY 0xFF
+struct KantoSeamLayoutCache
+{
+    const struct MapLayout *layout;
+    const struct KantoSeam *seams[SEAM_CACHE_SEAMS];
+    u8 count;
+    u8 valid;
+};
+EWRAM_DATA static struct KantoSeamLayoutCache sKantoSeamCache[2] = {0};
+EWRAM_DATA static u8 sKantoSeamCacheNext = 0;
+
+static const struct KantoSeamLayoutCache *KantoSeam_SeamsOf(const struct MapLayout *layout)
+{
+    struct KantoSeamLayoutCache *cache;
+    const struct KantoSeam *seam;
+    if (sKantoSeamCache[0].valid && sKantoSeamCache[0].layout == layout)
+        return &sKantoSeamCache[0];
+    if (sKantoSeamCache[1].valid && sKantoSeamCache[1].layout == layout)
+        return &sKantoSeamCache[1];
+    cache = &sKantoSeamCache[sKantoSeamCacheNext];
+    sKantoSeamCacheNext ^= 1;
+    cache->layout = layout;
+    cache->count = 0;
+    cache->valid = TRUE;
+    for (seam = KantoSeam_Find(layout); seam != NULL; seam = KantoSeam_FindNext(layout, seam))
+    {
+        if (cache->count == SEAM_CACHE_SEAMS)
+        {
+            cache->count = SEAM_CACHE_TOO_MANY;
+            break;
+        }
+        cache->seams[cache->count++] = seam;
+    }
+    return cache;
+}
+
 bool8 KantoSeam_ChangesPrimaryPalette(const struct MapLayout *layout)
 {
     const struct KantoSeam *seam;
@@ -2005,6 +2045,21 @@ bool8 KantoSeam_ChangesPrimaryPalette(const struct MapLayout *layout)
 const struct KantoSeamMetatile *KantoSeam_GetMetatile(const struct MapLayout *layout, u16 mid)
 {
     const struct KantoSeam *seam;
+    const struct KantoSeamLayoutCache *cache = KantoSeam_SeamsOf(layout);
+    if (cache->count != SEAM_CACHE_TOO_MANY)
+    {
+        u32 i;
+        for (i = 0; i < cache->count; i++)
+        {
+            seam = cache->seams[i];
+            if (mid >= seam->firstMid && mid - seam->firstMid < seam->metatileCount)
+            {
+                const struct KantoSeamMetatile *entry = &seam->metatiles[mid - seam->firstMid];
+                return entry->sourceLayout != NULL ? entry : NULL;
+            }
+        }
+        return NULL;
+    }
     for (seam = KantoSeam_Find(layout); seam != NULL; seam = KantoSeam_FindNext(layout, seam))
     {
         if (mid >= seam->firstMid && mid - seam->firstMid < seam->metatileCount)
@@ -2023,12 +2078,61 @@ u16 KantoSeam_TranslateBlock(const struct MapLayout *target, const struct MapLay
     u32 i;
     if (block == MAPGRID_UNDEFINED || source == target)
         return block;
+    {
+        const struct KantoSeamLayoutCache *cache = KantoSeam_SeamsOf(target);
+        if (cache->count == 0)
+            return block;
+    }
     for (seam = KantoSeam_Find(target); seam != NULL; seam = KantoSeam_FindNext(target, seam))
         for (i = 0; i < seam->metatileCount; i++)
             if (seam->metatiles[i].sourceLayout == source && seam->metatiles[i].sourceMid == (block & MAPGRID_METATILE_ID_MASK))
                 return (block & ~MAPGRID_METATILE_ID_MASK) | (seam->firstMid + i);
     // Only unadapted, source-qualified identity entries reach this path.
     return block;
+}
+
+bool8 KantoSeam_BuildTranslation(u16 *table, const struct MapLayout *target, const struct MapLayout *source)
+{
+    const struct KantoSeam *seam;
+    bool8 any = FALSE;
+    u32 i;
+    CpuFill16(KANTO_SEAM_KEEP, table, KANTO_SEAM_TRANSLATION_SIZE);
+    if (source == target)
+        return FALSE;
+    for (seam = KantoSeam_Find(target); seam != NULL; seam = KantoSeam_FindNext(target, seam))
+    {
+        for (i = 0; i < seam->metatileCount; i++)
+        {
+            const struct KantoSeamMetatile *entry = &seam->metatiles[i];
+            // The first matching entry wins, as in KantoSeam_TranslateBlock; ids outside the id bits never match.
+            if (entry->sourceLayout == source && entry->sourceMid <= MAPGRID_METATILE_ID_MASK
+             && table[entry->sourceMid] == KANTO_SEAM_KEEP)
+            {
+                table[entry->sourceMid] = seam->firstMid + i;
+                any = TRUE;
+            }
+        }
+    }
+    return any;
+}
+
+// KantoSeam_ReencodeCacheBlock with the translation from the previous map looked up in a table: most blocks of the
+// view are the previous map's own; adapters it borrowed from another map still go through KantoSeam_TranslateBlock.
+u16 KantoSeam_ReencodeCacheBlockWith(const u16 *table, const struct MapLayout *previous, const struct MapLayout *current, u16 block)
+{
+    const struct KantoSeamMetatile *entry;
+    const struct MapLayout *owner = previous;
+    if (block == MAPGRID_UNDEFINED)
+        return block;
+    entry = KantoSeam_GetMetatile(previous, block & MAPGRID_METATILE_ID_MASK);
+    if (entry != NULL)
+    {
+        owner = entry->sourceLayout;
+        block = (block & ~MAPGRID_METATILE_ID_MASK) | entry->sourceMid;
+    }
+    if (owner == previous)
+        return KantoSeam_Translate(table, block);
+    return KantoSeam_TranslateBlock(current, owner, block);
 }
 
 u16 KantoSeam_ReencodeCacheBlock(const struct MapLayout *previous, const struct MapLayout *current, u16 block)

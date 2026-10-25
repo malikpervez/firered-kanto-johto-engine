@@ -8,6 +8,7 @@
 #include "fldeff_misc.h"
 #include "frontier_util.h"
 #include "menu.h"
+#include "malloc.h"
 #include "mirage_tower.h"
 #include "overworld.h"
 #include "palette.h"
@@ -40,10 +41,10 @@ static const struct ConnectionFlags sDummyConnectionFlags = {0};
 
 static void InitMapLayoutData(struct MapHeader *mapHeader);
 static void InitBackupMapLayoutData(const u16 *map, u16 width, u16 height);
-static void FillSouthConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset);
-static void FillNorthConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset);
-static void FillWestConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset);
-static void FillEastConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset);
+static void FillSouthConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset, u16 *table);
+static void FillNorthConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset, u16 *table);
+static void FillWestConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset, u16 *table);
+static void FillEastConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset, u16 *table);
 static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader);
 static void LoadSavedMapView(void);
 static bool8 SkipCopyingMetatileFromSavedMap(u16 *mapBlock, u16 mapWidth, u8 yMode);
@@ -200,9 +201,12 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
     int count;
     const struct MapConnection *connection;
     int i;
+    u16 *table;
 
     if (mapHeader->connections)
     {
+        // One translation table, rebuilt for each connected map (NULL: translate block by block).
+        table = Alloc(KANTO_SEAM_TRANSLATION_SIZE);
         count = mapHeader->connections->count;
         connection = mapHeader->connections->connections;
         sMapConnectionFlags = sDummyConnectionFlags;
@@ -213,48 +217,69 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
             switch (connection->direction)
             {
             case CONNECTION_SOUTH:
-                FillSouthConnection(mapHeader, cMap, offset);
+                FillSouthConnection(mapHeader, cMap, offset, table);
                 sMapConnectionFlags.south = TRUE;
                 break;
             case CONNECTION_NORTH:
-                FillNorthConnection(mapHeader, cMap, offset);
+                FillNorthConnection(mapHeader, cMap, offset, table);
                 sMapConnectionFlags.north = TRUE;
                 break;
             case CONNECTION_WEST:
-                FillWestConnection(mapHeader, cMap, offset);
+                FillWestConnection(mapHeader, cMap, offset, table);
                 sMapConnectionFlags.west = TRUE;
                 break;
             case CONNECTION_EAST:
-                FillEastConnection(mapHeader, cMap, offset);
+                FillEastConnection(mapHeader, cMap, offset, table);
                 sMapConnectionFlags.east = TRUE;
                 break;
             }
         }
+        if (table != NULL)
+            Free(table);
     }
 }
 
-static void FillConnection(int x, int y, struct MapHeader const *connectedMapHeader, int x2, int y2, int width, int height)
+static void FillConnection(int x, int y, struct MapHeader const *connectedMapHeader, int x2, int y2, int width, int height, u16 *table)
 {
     int i;
     const u16 *src;
     u16 *dest;
     int mapWidth;
+    const struct MapLayout *source = connectedMapHeader->mapLayout;
+    bool8 translate = (source != gMapHeader.mapLayout);
 
     mapWidth = connectedMapHeader->mapLayout->width;
     src = &connectedMapHeader->mapLayout->map[mapWidth * y2 + x2];
     dest = &gBackupMapLayout.map[gBackupMapLayout.width * y + x];
+    // A table built once replaces a search of the seam entries for every block; FALSE: no entry of this map's
+    // seams comes from the connected map, every block is kept as it is.
+    if (translate && table != NULL)
+        translate = KantoSeam_BuildTranslation(table, gMapHeader.mapLayout, source);
 
     for (i = 0; i < height; i++)
     {
         int j;
-        for (j = 0; j < width; j++)
-            dest[j] = KantoSeam_TranslateBlock(gMapHeader.mapLayout, connectedMapHeader->mapLayout, src[j]);
+        if (!translate)
+        {
+            for (j = 0; j < width; j++)
+                dest[j] = src[j];
+        }
+        else if (table != NULL)
+        {
+            for (j = 0; j < width; j++)
+                dest[j] = KantoSeam_Translate(table, src[j]);
+        }
+        else
+        {
+            for (j = 0; j < width; j++)
+                dest[j] = KantoSeam_TranslateBlock(gMapHeader.mapLayout, source, src[j]);
+        }
         dest += gBackupMapLayout.width;
         src += mapWidth;
     }
 }
 
-static void FillSouthConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset)
+static void FillSouthConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset, u16 *table)
 {
     int x, y;
     int x2;
@@ -289,11 +314,11 @@ static void FillSouthConnection(struct MapHeader const *mapHeader, struct MapHea
             x, y,
             connectedMapHeader,
             x2, /*y2*/ 0,
-            width, /*height*/ MAP_OFFSET);
+            width, /*height*/ MAP_OFFSET, table);
     }
 }
 
-static void FillNorthConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset)
+static void FillNorthConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset, u16 *table)
 {
     int x;
     int x2, y2;
@@ -329,12 +354,12 @@ static void FillNorthConnection(struct MapHeader const *mapHeader, struct MapHea
             x, /*y*/ 0,
             connectedMapHeader,
             x2, y2,
-            width, /*height*/ MAP_OFFSET);
+            width, /*height*/ MAP_OFFSET, table);
 
     }
 }
 
-static void FillWestConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset)
+static void FillWestConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset, u16 *table)
 {
     int y;
     int x2, y2;
@@ -368,11 +393,11 @@ static void FillWestConnection(struct MapHeader const *mapHeader, struct MapHead
             /*x*/ 0, y,
             connectedMapHeader,
             x2, y2,
-            /*width*/ MAP_OFFSET, height);
+            /*width*/ MAP_OFFSET, height, table);
     }
 }
 
-static void FillEastConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset)
+static void FillEastConnection(struct MapHeader const *mapHeader, struct MapHeader const *connectedMapHeader, s32 offset, u16 *table)
 {
     int x, y;
     int y2;
@@ -405,7 +430,7 @@ static void FillEastConnection(struct MapHeader const *mapHeader, struct MapHead
             x, y,
             connectedMapHeader,
             /*x2*/ 0, y2,
-            /*width*/ MAP_OFFSET + 1, height);
+            /*width*/ MAP_OFFSET + 1, height, table);
     }
 }
 
@@ -667,6 +692,9 @@ static void MoveMapViewToBackup(enum Connection direction
     int r9, r8;
     int x, y;
     int i, j;
+    u16 *table = Alloc(KANTO_SEAM_TRANSLATION_SIZE);
+    if (table != NULL)
+        KantoSeam_BuildTranslation(table, gMapHeader.mapLayout, previousLayout);
     mapView = gSaveBlock1Ptr->mapView;
     width = gBackupMapLayout.width;
     r9 = 0;
@@ -708,11 +736,16 @@ static void MoveMapViewToBackup(enum Connection direction
             srci = (y + r8) * MAP_OFFSET_W + r9;
             src = &mapView[srci + i];
             dest = &sBackupMapData[x0 + desti + j];
-            *dest = KantoSeam_ReencodeCacheBlock(previousLayout, gMapHeader.mapLayout, *src);
+            if (table != NULL)
+                *dest = KantoSeam_ReencodeCacheBlockWith(table, previousLayout, gMapHeader.mapLayout, *src);
+            else
+                *dest = KantoSeam_ReencodeCacheBlock(previousLayout, gMapHeader.mapLayout, *src);
             i++;
             j++;
         }
     }
+    if (table != NULL)
+        Free(table);
 
     ClearSavedMapView();
 }

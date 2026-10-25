@@ -1,5 +1,5 @@
 {
- "note": "Surf from the end of Pallet's dock down the channel through the forest into Route 21 (its seam, and Pallet's animated water). Each press waits for the move before it to end, so a frame's difference at the crossing doesn't change where it ends.",
+ "note": "Surf from the end of Pallet's dock down the channel through the forest into Route 21 (its seam, and Pallet's animated water). Each press waits for the move before it to end. A press made while the game is still busy with the crossing is lost, so a crossing that freezes the game ends the surf a tile short.",
  "created": "2026-10-23 15:17",
  "start": {
   "map": "PalletTown_Frlg",
@@ -153,10 +153,11 @@
  "expect": {
   "map": "Route21_North_Frlg",
   "x": 10,
-  "y": 16,
+  "y": 17,
   "in_battle": false,
   "vars": {
    "VAR_MAP_SCENE_PALLET_TOWN_OAK": 3
   }
- }
+ },
+ "accepted": "2026-10-25 16:56"
 }
