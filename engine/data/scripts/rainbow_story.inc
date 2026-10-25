@@ -31,6 +31,7 @@ RB_Flyby::
 RB_Route1Transition::
 	setvar VAR_TEMP_E, 0
 	setflag FLAG_TEMP_1E
+	setflag FLAG_TEMP_1C
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Return
 	call_if_set FLAG_RB_FRESH_COHORT, RB_TryOpening
@@ -38,8 +39,7 @@ RB_Route1Transition::
 	return
 RB_TryOpening::
 	goto_if_set FLAG_RB_OPENING_SEEN, RB_Return
-	goto_if_lt VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, RB_Return
-	goto_if_set FLAG_SYS_POKEDEX_GET, RB_Return
+	goto_if_unset FLAG_SYS_POKEDEX_GET, RB_Return
 	setvar VAR_TEMP_E, 1
 	clearflag FLAG_TEMP_1E
 	return
@@ -69,6 +69,7 @@ RB_Route1Frame::
 	setflag FLAG_RB_OPENING_SEEN
 	setflag FLAG_TEMP_1E
 	removeobject 9
+	call MW01_Route1Scene
 	releaseall
 	end
 RB_OpeningRetry::
@@ -131,7 +132,7 @@ RB_OakLetter::
 	setflag FLAG_RB_LETTER_READ
 	return
 RB_Text_OakBird::
-	.string "OAK: Feathers like a rainbow?\nI cannot identify it from words.\pI will write down your sighting.\nKeep looking up, {PLAYER}!$"
+	.string "OAK: Feathers like a rainbow, and no\nentry in the POKéDEX?\pThen nobody has recorded it yet.\nI will write down your sighting.\pKeep looking up, {PLAYER}!$"
 RB_Text_OakWest::
 	.string "OAK: That bird flew west. ELM\nmay help you understand why.\pYour LEAGUE victory has opened\na new road for both of you.$"
 RB_Text_OakResearch::
@@ -386,36 +387,57 @@ RB_Text_AmphyYes::
 	.string "NAO: Perhaps. But I should make\na home worth returning to first.$"
 RB_Text_AmphyNo::
 	.string "NAO: Then we can still care\nfor the POKéMON already here.$"
-MW01_Visibility::
-	setflag FLAG_TEMP_1E
+@ The stranger comes down the road right after the flyby and sends the player to the new POKeDEX.
+MW01_Route1Scene::
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
 	goto_if_set FLAG_MW06_SEEN, RB_Return
-	special Special_RainbowStoryAdopt
-	goto_if_eq VAR_RESULT, FALSE, RB_Return
-goto_if_set FLAG_MW01_SEEN, RB_Return
-goto_if_unset FLAG_SYS_POKEDEX_GET, RB_Return
-clearflag FLAG_TEMP_1E
-	return
-MW01_Talk::
-	lock
-	faceplayer
-	special Special_RainbowStoryAdopt
-	goto_if_eq VAR_RESULT, FALSE, RB_Release
-goto_if_set FLAG_MW01_SEEN, RB_Repeat
-goto_if_unset FLAG_RB_OPENING_SEEN, MW01_NoMemory
-	msgbox MW01_Text_Bird
-	goto MW01_Answer
-MW01_NoMemory::
-	msgbox MW01_Text_Generic
-MW01_Answer::
+	goto_if_set FLAG_MW01_SEEN, RB_Return
+	getplayerxy VAR_0x8000, VAR_0x8001
+	goto_if_lt VAR_0x8001, 37, RB_Return
+	subvar VAR_0x8001, 4
+	setobjectxyperm LOCALID_ROUTE1_STRANGER, VAR_0x8000, VAR_0x8001
+	clearflag FLAG_TEMP_1C
+	addobject LOCALID_ROUTE1_STRANGER
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_ROUTE1_STRANGER, MW01_Movement_Approach
+	waitmovement LOCALID_ROUTE1_STRANGER
+	msgbox MW01_Text_SawIt
+	msgbox MW01_Text_LookItUp
+	playse SE_SELECT
+	msgbox MW01_Text_NoEntry
+	msgbox MW01_Text_NotThere
 	msgbox MW01_Text_Question, MSGBOX_YESNO
-	msgbox MW01_Text_Answer
+	call_if_eq VAR_RESULT, YES, MW01_ReasonEnough
+	call_if_eq VAR_RESULT, NO, MW01_NotThought
+	msgbox MW01_Text_Goodbye
+	closemessage
 	call RB_MewGlimpse
-	setflag FLAG_TEMP_1E
-	removeobject LOCALID_VIRIDIAN_STRANGER
-setflag FLAG_MW01_SEEN
-release
-	end
+	applymovement LOCALID_ROUTE1_STRANGER, MW01_Movement_Leave
+	waitmovement LOCALID_ROUTE1_STRANGER
+	removeobject LOCALID_ROUTE1_STRANGER
+	setflag FLAG_TEMP_1C
+	setflag FLAG_MW01_SEEN
+	return
+MW01_ReasonEnough::
+	msgbox MW01_Text_ReasonEnough
+	return
+MW01_NotThought::
+	msgbox MW01_Text_NotThought
+	return
+MW01_Movement_Approach::
+	walk_down
+	walk_down
+	walk_down
+	step_end
+MW01_Movement_Leave::
+	face_up
+	delay_16
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 MW02_Visibility::
 	setflag FLAG_TEMP_1E
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
@@ -573,14 +595,22 @@ RB_Movement_Psychic::
 	delay_16
 	stop_levitate
 	step_end
-MW01_Text_Bird::
-	.string "STRANGER: You helped that bird.\nYou did not catch it.\pWhat did you gain?$"
-MW01_Text_Generic::
-	.string "STRANGER: Why do you want\nto travel with POKéMON?$"
+MW01_Text_SawIt::
+	.string "STRANGER: You saw it too.\pRed and gold, over the trees, going\nwest. Most people never look up in\ltime.$"
+MW01_Text_LookItUp::
+	.string "STRANGER: The professor gave you a\nmachine that knows every POKéMON.\pLook for it.$"
+MW01_Text_NoEntry::
+	.string "{PLAYER} searches the POKéDEX for\nthe rainbow bird…\pNo entry. Not even an empty number\nwhere a bird like that should be.$"
+MW01_Text_NotThere::
+	.string "STRANGER: It isn't there.\pWhoever built that machine decided\nwhat counts as known.\pYou sheltered the PIDGEY. You didn't\nchase the bird. You didn't try to\lcatch it. What did you gain?$"
 MW01_Text_Question::
 	.string "Was helping reason enough?\nOr had you not thought about it?$"
-MW01_Text_Answer::
-	.string "STRANGER: I see.$"
+MW01_Text_ReasonEnough::
+	.string "STRANGER: Reason enough…\pThen you are rarer than that bird.$"
+MW01_Text_NotThought::
+	.string "STRANGER: Honest. Most people decide\nwhy afterward.$"
+MW01_Text_Goodbye::
+	.string "STRANGER: We will see what you do\nwhen a POKéMON doesn't need you.$"
 MW02_Text_Question::
 	.string "STRANGER: A fossil restored by\nhuman hands... Who decides\lwhat that life becomes?\pThe POKéMON? Or must both\nlearn together?$"
 MW02_Text_Answer::

@@ -90,36 +90,79 @@ FG_Release::
 	closemessage
 	releaseall
 	end
+@ Viridian's arrival (FG01) plays by itself the first time the player enters the town after the Pokédex:
+@ Giratina tears the sky over the south road, drops the seven onto it and leaves them there.
+FG01_ArrivalCheck::
+	setvar VAR_TEMP_D, 0
+	callnative Special_FriendsStoryArrivalPending, requests_effects=1
+	goto_if_eq VAR_RESULT, FALSE, FG01_ArrivalCheckDone
+	setvar VAR_TEMP_D, 1
+FG01_ArrivalCheckDone::
+	return
 FG01_Interact::
+FG01_Arrival::
 	lockall
-	faceplayer
+	setvar VAR_TEMP_D, 0
 	setvar VAR_0x8004, 1
 	callnative Special_FriendsStoryBegin, requests_effects=1
-	goto_if_eq VAR_RESULT, 0, FG_Release
+	goto_if_ne VAR_RESULT, 1, FG_Release
 	copyvar VAR_0x8008, VAR_RESULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	playmoncry SPECIES_GIRATINA_ALTERED, CRY_MODE_ENCOUNTER
+	setvar VAR_0x8004, 0
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeCamera
+	waitstate
+	setvar VAR_0x8004, 24
+	callnative Special_FriendsDistortionFlash, requests_effects=1
+	call_if_eq VAR_RESULT, TRUE, FG01_WaitEffect
+	waitmoncry
+	msgbox FG01_Text_Tear
 	call FG_FrameCamera
-	callnative Special_FriendsStoryGetPendingLoss, requests_effects=1
-	goto_if_eq VAR_RESULT, 1, FG_Loss01
-	goto_if_eq VAR_RESULT, 2, FG_Loss02
-	goto_if_eq VAR_RESULT, 3, FG_Loss03
-	goto_if_eq VAR_RESULT, 4, FG_Loss04
-	goto_if_eq VAR_RESULT, 5, FG_Loss05
-	goto_if_eq VAR_RESULT, 6, FG_Loss06
-	goto_if_eq VAR_RESULT, 7, FG_Loss07
-	goto_if_eq VAR_RESULT, 8, FG_Loss08
-	goto_if_eq VAR_RESULT, 9, FG_Loss09
-	goto_if_eq VAR_RESULT, 10, FG_Loss10
-	goto_if_eq VAR_RESULT, 11, FG_Loss11
-	goto_if_eq VAR_RESULT, 12, FG_Loss12
-	goto_if_eq VAR_RESULT, 13, FG_Loss13
-	goto_if_eq VAR_RESULT, 14, FG_Loss14
-	goto_if_eq VAR_0x8008, 2, FG01_Repeat
 	setvar VAR_0x8004, 1
 	setvar VAR_0x8005, 0
-	closemessage
 	callnative Special_FriendsStoryStage, requests_effects=1
 	call FG_WaitSceneMovement
-	delay 30
+	playmoncry SPECIES_GIRATINA_ALTERED, CRY_MODE_ENCOUNTER
+	setvar VAR_0x8004, 40
+	callnative Special_FriendsDistortionFlash, requests_effects=1
+	call_if_eq VAR_RESULT, TRUE, FG01_WaitEffect
+	waitmoncry
+	callnative Special_FriendsStoryLand, requests_effects=1
+	setobjectxyperm LOCALID_FRIENDS_VIRIDIANCITY_FRLG_JON, 25, 43
+	addobject LOCALID_FRIENDS_VIRIDIANCITY_FRLG_JON
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_JON, FG01_Movement_Drop
+	delay 6
+	setobjectxyperm LOCALID_FRIENDS_VIRIDIANCITY_FRLG_BRIAN, 26, 44
+	addobject LOCALID_FRIENDS_VIRIDIANCITY_FRLG_BRIAN
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_BRIAN, FG01_Movement_Drop
+	delay 4
+	setobjectxyperm LOCALID_FRIENDS_VIRIDIANCITY_FRLG_NICK, 27, 45
+	addobject LOCALID_FRIENDS_VIRIDIANCITY_FRLG_NICK
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_NICK, FG01_Movement_Drop
+	delay 6
+	setobjectxyperm LOCALID_FRIENDS_VIRIDIANCITY_FRLG_TIM, 27, 43
+	addobject LOCALID_FRIENDS_VIRIDIANCITY_FRLG_TIM
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_TIM, FG01_Movement_Drop
+	delay 3
+	setobjectxyperm LOCALID_FRIENDS_VIRIDIANCITY_FRLG_X, 25, 45
+	addobject LOCALID_FRIENDS_VIRIDIANCITY_FRLG_X
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_X, FG01_Movement_Drop
+	delay 5
+	setobjectxyperm LOCALID_FRIENDS_VIRIDIANCITY_FRLG_LB, 23, 45
+	addobject LOCALID_FRIENDS_VIRIDIANCITY_FRLG_LB
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_LB, FG01_Movement_Drop
+	delay 12
+	setobjectxyperm LOCALID_FRIENDS_VIRIDIANCITY_FRLG_HAM, 24, 44
+	addobject LOCALID_FRIENDS_VIRIDIANCITY_FRLG_HAM
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_HAM, FG01_Movement_DropFlat
+	waitmovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_HAM
+	playse SE_M_STRENGTH
+	delay 40
+	fg_react 2, FG_Move_Startled
 	fg_focus 2
 	msgbox FG01_Text_Main01
 	fg_focus 0
@@ -132,84 +175,122 @@ FG01_Interact::
 	msgbox FG01_Text_Main05
 	fg_focus 0
 	msgbox FG01_Text_Main06
-	fg_focus 3
+	fg_focus 2
 	msgbox FG01_Text_Main07
-	fg_focus 0
-	msgbox FG01_Text_Main08
-	fg_focus 3
-	msgbox FG01_Text_Main09
-	fg_focus 0
-	msgbox FG01_Text_Main10
 	fg_focus 6
+	msgbox FG01_Text_Main08
+	fg_focus 2
+	msgbox FG01_Text_Main09
+	fg_focus 6
+	msgbox FG01_Text_Main10
+	fg_focus 4
 	msgbox FG01_Text_Main11
-	fg_react 2, FG_Move_Startled
 	fg_focus 2
 	msgbox FG01_Text_Main12
-	fg_focus 6
+	fg_focus 4
 	msgbox FG01_Text_Main13
-	fg_focus 4
-	msgbox FG01_Text_Main14
-	fg_focus 2
-	msgbox FG01_Text_Main15
-	fg_focus 4
-	msgbox FG01_Text_Main16
 	fg_focus 5
-	msgbox FG01_Text_Main17
+	msgbox FG01_Text_Main14
+	fg_focus 3
+	msgbox FG01_Text_Main15
+	closemessage
+	playmoncry SPECIES_GIRATINA_ALTERED, CRY_MODE_FAINT
+	setvar VAR_0x8004, 32
+	callnative Special_FriendsDistortionFlash, requests_effects=1
+	call_if_eq VAR_RESULT, TRUE, FG01_WaitEffect
+	removeobject 230
+	waitmoncry
 	fg_focus 0
+	msgbox FG01_Text_Main16
+	fg_focus 2
+	msgbox FG01_Text_Main17
+	fg_focus 3
 	msgbox FG01_Text_Main18
 	fg_focus 4
 	msgbox FG01_Text_Main19
-	setvar VAR_0x8004, 1
-	setvar VAR_0x8005, 19
-	closemessage
-	callnative Special_FriendsStoryStage, requests_effects=1
-	call FG_WaitSceneMovement
-	delay 30
+	fg_react 1, FG_Move_Startled
 	fg_focus 1
 	msgbox FG01_Text_Main20
 	fg_focus 3
 	msgbox FG01_Text_Main21
-	fg_focus 4
+	fg_focus 5
 	msgbox FG01_Text_Main22
 	fg_focus 0
 	msgbox FG01_Text_Main23
-	fg_focus 3
+	fg_focus 6
 	msgbox FG01_Text_Main24
-	fg_focus 4
+	fg_focus 3
 	msgbox FG01_Text_Main25
-	fg_focus 0
+	fg_focus 2
 	msgbox FG01_Text_Main26
+	fg_focus 0
+	msgbox FG01_Text_Main27
+	fg_focus 4
+	msgbox FG01_Text_Main28
+	fg_focus 3
+	msgbox FG01_Text_Main29
+	fg_focus 5
+	msgbox FG01_Text_Main30
+	fg_focus 0
+	msgbox FG01_Text_Main31
+	fg_focus 5
+	msgbox FG01_Text_Main32
+	fg_focus 6
+	msgbox FG01_Text_Main33
+	fg_focus 0
+	msgbox FG01_Text_Main34
+	fg_focus 2
+	msgbox FG01_Text_Main35
+	fg_focus 1
+	msgbox FG01_Text_Main36
+	fg_focus 3
+	msgbox FG01_Text_Main37
+	fg_focus 1
+	msgbox FG01_Text_Main38
+	fg_focus 4
+	msgbox FG01_Text_Main39
+	fg_focus 0
+	msgbox FG01_Text_Main40
+	fg_focus 3
+	msgbox FG01_Text_Main41
+	fg_focus 2
+	msgbox FG01_Text_Main42
+	call FG_ReturnCamera
+FG01_Approach::
+	getplayerxy VAR_0x8000, VAR_0x8001
+	goto_if_le VAR_0x8001, 48, FG01_Approached
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	goto FG01_Approach
+FG01_Approached::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	fg_focus 4
+	msgbox FG01_Text_Main43
+	fg_focus 0
+	msgbox FG01_Text_Main44
 	setvar VAR_0x8004, 1
 	callnative Special_FriendsStoryMarkSeen, requests_effects=1
 FG01_Repeat::
-	goto FG01_Menu
 FG01_Menu::
 	call FG_WaitSceneMovement
 	closemessage
 	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
-	multichoice 0, 0, MULTI_FG01, FALSE
-	goto_if_eq VAR_RESULT, 0, FG01_Choice0
+	multichoice 0, 0, MULTI_FG01, TRUE
 	goto_if_eq VAR_RESULT, 1, FG01_Choice1
-	goto FG_Release
 FG01_Choice0::
-	call FG_FrameCamera
 	fg_focus 3
 	msgbox FG01_Text_Choice0_01
 	fg_focus 4
 	msgbox FG01_Text_Choice0_02
-	fg_focus 3
+	fg_focus 6
 	msgbox FG01_Text_Choice0_03
-	fg_focus 0
+	fg_focus 3
 	msgbox FG01_Text_Choice0_04
-	setvar VAR_0x8004, 1
-	setvar VAR_0x8005, 90
-	closemessage
-	callnative Special_FriendsStoryStage, requests_effects=1
-	call FG_WaitSceneMovement
-	delay 30
-	goto FG_Release
+	fg_focus 0
+	msgbox FG01_Text_Choice0_05
+	goto FG01_Leave
 FG01_Choice1::
-	call FG_FrameCamera
 	fg_focus 0
 	msgbox FG01_Text_Choice1_01
 	fg_focus 3
@@ -218,13 +299,65 @@ FG01_Choice1::
 	msgbox FG01_Text_Choice1_03
 	fg_focus 4
 	msgbox FG01_Text_Choice1_04
+FG01_Leave::
+	fg_focus 2
+	msgbox FG01_Text_Leave01
+	fg_focus 4
+	msgbox FG01_Text_Leave02
+	closemessage
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_X, FG01_Movement_HeadNorth
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_NICK, FG01_Movement_HeadNorth
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_LB, FG01_Movement_HeadNorth
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_BRIAN, FG01_Movement_HeadNorthSlowly
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_TIM, FG01_Movement_HeadNorth
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_HAM, FG01_Movement_HeadNorth
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_JON, FG01_Movement_HeadNorthAngrily
+	waitmovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_BRIAN
 	setvar VAR_0x8004, 1
 	setvar VAR_0x8005, 90
-	closemessage
 	callnative Special_FriendsStoryStage, requests_effects=1
 	call FG_WaitSceneMovement
-	delay 30
 	goto FG_Release
+FG01_WaitEffect::
+	waitstate
+	return
+FG01_Movement_Drop::
+	jump_2_down
+	step_end
+FG01_Movement_DropFlat::
+	jump_2_down
+	face_up
+	delay_16
+	face_down
+	step_end
+FG01_Movement_HeadNorth::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+FG01_Movement_HeadNorthSlowly::
+	delay_16
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	step_end
+FG01_Movement_HeadNorthAngrily::
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
 FG02_Interact::
 	lockall
 	faceplayer
@@ -3665,74 +3798,118 @@ FG20_Text_LatePartners1::
 	.string "NICK: We have been training on the way\nhere. Some partners evolved; all\pfourteen stayed with us.$"
 FG20_Text_LatePartners2::
 	.string "NICK: Those were our own practice\nmatches. You do not owe us the early\pones you missed.$"
+FG01_Text_Tear::
+	.string "The air over the road bends like a\nbad signal.\pSomething huge is pushing through.$"
 FG01_Text_Main01::
-	.string "JON: WHY THE FUCK DID IT KEEP THE CUP\nAND LOSE MY SHOES?$"
+	.string "JON: I WAS ON A COUCH. I WAS ON A\nCOUCH FIVE SECONDS AGO!$"
 FG01_Text_Main02::
-	.string "BRIAN: Nobody touch that cable. That's\nthe one that actually works.$"
+	.string "BRIAN: Nobody move. Nobody step on\nanything. I still have the cable.$"
 FG01_Text_Main03::
-	.string "NICK: Brian. Giant ghost dragon.$"
+	.string "NICK: Brian. There's a giant ghost\ndragon looking at us.$"
 FG01_Text_Main04::
-	.string "BRIAN: I can see it. I'm trying to save\nus twenty dollars.$"
+	.string "BRIAN: I can see it. I'm prioritizing.\nThis is the HDMI that actually works.\pDo you know what those cost?$"
 FG01_Text_Main05::
-	.string "NICK: What are you planning to plug it\ninto?$"
+	.string "NICK: What are you going to plug it\ninto? We're on a road.$"
 FG01_Text_Main06::
-	.string "BRIAN: My television, when we get back.\nI'm not replacing it because a dragon\pdidn't respect the setup.$"
+	.string "BRIAN: My TV. When we get back. I'm\nnot buying a new one because a dragon\pdidn't respect the setup.$"
 FG01_Text_Main07::
-	.string "NICK: Okay. Keep the cable. What do you\nremember before we landed?$"
+	.string "JON: WHERE ARE MY SHOES? IT TOOK MY\nFUCKING SHOES AND LEFT ME THE CUP?$"
 FG01_Text_Main08::
-	.string "BRIAN: You were about to lose in 2K.\nThe screen went weird. Then my entire\pliving room stopped being indoors.$"
+	.string "TIM: Okay. Nobody panic. But was that\nthe Thailand tab? I had a video going\pon the other screen.$"
 FG01_Text_Main09::
-	.string "NICK: I was up six.$"
+	.string "JON: YOU THINK A DRAGON CAME OUT OF\nA FUCKING POP-UP?$"
 FG01_Text_Main10::
-	.string "BRIAN: There was time on the clock.\nWe're not calling that a win because\pyou found an interdimensional\ndisconnect.$"
+	.string "TIM: I'm saying we work out which tab\ndid it before anybody refreshes\panything.$"
 FG01_Text_Main11::
-	.string "TIM: Was that the Thailand tab? I had\na video open on the other screen.$"
+	.string "XAVIER: Nobody is refreshing anything.\nEverybody breathe. Ground your energy.$"
 FG01_Text_Main12::
-	.string "JON: YOU THINK A FUCKING DRAGON WAS A\nPOP-UP?$"
+	.string "JON: MY ENERGY IS GROUNDED, X. MY BARE\nFUCKING FEET ARE ON THE GROUND.$"
 FG01_Text_Main13::
-	.string "TIM: I didn't click it. I'm saying we\nshould establish which tab did this\pbefore anybody refreshes anything.$"
+	.string "XAVIER: Then you're the most grounded\nperson here. Step one, headcount.\pStep two, nobody touches the dragon.\nStep three, a roof.$"
 FG01_Text_Main14::
-	.string "XAVIER: Nobody is refreshing anything.\nWe need to ground our energy. Check\pfor injuries, count everyone, then\nfind shelter.$"
+	.string "LB: It's still staring. Why is it\nstill staring at us?$"
 FG01_Text_Main15::
-	.string "JON: My energy is grounded. My bare\nfucking feet are touching it.$"
+	.string "NICK: Don't make eye contact. It's\nlike a dog. Or a landlord.$"
 FG01_Text_Main16::
-	.string "XAVIER: Then you stay on the grass\nwhile we find something for your feet.\pThat's an actual problem we can solve.$"
+	.string "BRIAN: It's leaving. It's actually\nleaving! Hey! Our stuff is still in\pthe living room!$"
 FG01_Text_Main17::
-	.string "LB: None of our phones have service.\nMine still thinks we're at Brian's.$"
+	.string "JON: GET BACK HERE, YOU FLOATING\nPIECE OF SHIT! TAKE US HOME!$"
 FG01_Text_Main18::
-	.string "BRIAN: Emotionally, it's correct.$"
+	.string "NICK: …It didn't take us home.$"
 FG01_Text_Main19::
-	.string "XAVIER: Put them away. Save the\nbatteries. Brian, Nick, Tim, LB, Jon,\pHam…where's Ham?$"
+	.string "XAVIER: Headcount. Brian, Nick, Tim,\nLB, Jon… Where's Ham?$"
 FG01_Text_Main20::
-	.string "HAM: ...cock.$"
+	.string "HAM: …cock.$"
 FG01_Text_Main21::
-	.string "NICK: Seven. Everyone's here. Let's\nkeep that part simple.$"
+	.string "NICK: Seven. Everyone's here. That's\nthe part that matters right now.$"
 FG01_Text_Main22::
-	.string "XAVIER: Agreed. One group, one\ndirection. We can argue about the\puniverse once we're somewhere with a\nroof.$"
+	.string "LB: None of our phones have service.\nMine still thinks we're at Brian's.$"
 FG01_Text_Main23::
-	.string "BRIAN: Preferably a roof over a room.\nPeople keep describing trees as\pshelter and I need us to have\nstandards.$"
+	.string "BRIAN: Emotionally, it's correct.$"
 FG01_Text_Main24::
-	.string "NICK: There's someone on the path.\nLet's start with where we are.$"
+	.string "TIM: Is anybody else seeing a box\nunder everything we say?$"
 FG01_Text_Main25::
-	.string "XAVIER: Sorry. Strange morning. We\ndon't know this area. Can you point us\ptoward town?$"
+	.string "NICK: Don't look at the box, Tim.$"
 FG01_Text_Main26::
-	.string "BRIAN: And if town has somewhere to\nsit, that's useful information too.$"
+	.string "JON: AND WHY IS MY NAME IN CAPITALS?\nWHO DID THAT?$"
+FG01_Text_Main27::
+	.string "BRIAN: That's just how you talk, Jon.$"
+FG01_Text_Main28::
+	.string "XAVIER: Look at the trees. They're all\nthe same tree. The grass is on a grid.\pWe're somewhere very… tidy.$"
+FG01_Text_Main29::
+	.string "NICK: Okay. New place, same us. It's\nlike any trip. Food, somewhere to\psleep, then a plan.$"
+FG01_Text_Main30::
+	.string "LB: Same? Nick. Look around.\pFirst of all, NOTHING WAS THE SAME.$"
+FG01_Text_Main31::
+	.string "BRIAN: He's been waiting his whole life\nto say that, and it had to be here.$"
+FG01_Text_Main32::
+	.string "LB: It's the album. It fits the\nsituation. I stand by it.$"
+FG01_Text_Main33::
+	.string "TIM: If it isn't Thailand, is it at\nleast near Thailand? It's giving\pThailand a little.$"
+FG01_Text_Main34::
+	.string "BRIAN: Nothing here has a corner that\nisn't ninety degrees, Tim.$"
+FG01_Text_Main35::
+	.string "JON: AND WHO SCREAMED ON THE WAY\nDOWN? SOMEBODY WENT OFF LIKE A KETTLE.$"
+FG01_Text_Main36::
+	.string "HAM: I'm not a bitch.$"
+FG01_Text_Main37::
+	.string "NICK: Nobody said you were, Ham.$"
+FG01_Text_Main38::
+	.string "HAM: Pre-emptively.$"
+FG01_Text_Main39::
+	.string "XAVIER: Okay. Shelter. Brian, you're\nthe expert. What do we need?$"
+FG01_Text_Main40::
+	.string "BRIAN: A roof over a room. With a\ncouch. People keep calling trees\pshelter and I need us to have\nstandards.$"
+FG01_Text_Main41::
+	.string "NICK: There's a kid on the road.\nEverybody act normal.$"
+FG01_Text_Main42::
+	.string "JON: I HAVE NO SHOES, NICK.$"
+FG01_Text_Main43::
+	.string "XAVIER: Hi. Sorry. Strange morning.\nWe're not from… here. Where is here,\pexactly?$"
+FG01_Text_Main44::
+	.string "BRIAN: And does here have somewhere\nto sit?$"
 FG01_Text_Choice0_01::
 	.string "NICK: Right. Follow-up question. What\nthe fuck is a Kanto?$"
 FG01_Text_Choice0_02::
-	.string "XAVIER: A place with a name. That's\nmore than we had a minute ago.$"
+	.string "XAVIER: It's a place with a name.\nThat's more than we had a minute ago.$"
 FG01_Text_Choice0_03::
-	.string "NICK: Fair. We'll find somebody in town\nwho can explain the rest.$"
+	.string "TIM: Does Kanto have nightlife?\nAsking for the group.$"
 FG01_Text_Choice0_04::
-	.string "BRIAN: Ask about rooms before\ncurrency. I want a reason to care what\pthe money's called.$"
+	.string "NICK: The group isn't asking, Tim.$"
+FG01_Text_Choice0_05::
+	.string "BRIAN: Ask about rooms before money.\nI want a reason to care what the\pmoney's called.$"
 FG01_Text_Choice1_01::
 	.string "BRIAN: A building. Finally, somebody\nwith a plan.$"
 FG01_Text_Choice1_02::
 	.string "NICK: They gave us a direction, Brian.\nWe still have to walk there.$"
 FG01_Text_Choice1_03::
-	.string "BRIAN: A plan can have flaws and still\nbe better than this.$"
+	.string "BRIAN: Walking is how this started. I\nwas sitting down.$"
 FG01_Text_Choice1_04::
-	.string "XAVIER: Thank you. We'll ask there\nbefore making any more decisions.$"
+	.string "XAVIER: Thank you. We'll ask there\nbefore we decide anything else.$"
+FG01_Text_Leave01::
+	.string "JON: IF ANYBODY SEES SHOES, THEY'RE\nMINE. I DON'T CARE WHOSE THEY ARE.$"
+FG01_Text_Leave02::
+	.string "XAVIER: One group, one direction.\nLet's go.$"
 FG02_Text_Main01::
 	.string "BRIAN: Nick. There's a rat in my\nbedroom.$"
 FG02_Text_Main02::

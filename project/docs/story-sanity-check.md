@@ -62,7 +62,7 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2 | `pikachu` | Pikachu joins you; Blue takes his starter | Oak's lab 7,4 | `FLAG_SYS_POKEMON_GET` set, `VAR_STARTER_MON` 0 |
 | 3 | `lab-battle` | Blue's first battle, with Oak's lessons (the first tutorial battle); Blue leaves | Oak's lab 7,8 | `FLAG_BEAT_RIVAL_IN_OAKS_LAB` set, `VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB` 4 |
 | 4 | `leave-lab` | Out of the lab, from the middle of its mat | Pallet Town 21,16 | |
-| 5 | `route1` | The sign lady's trainer tips at the route entrance; Route 1's opening scene | Route 1 25,39 | `FLAG_OPENED_START_MENU`, `FLAG_RB_OPENING_SEEN` set, `VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY` 1 |
+| 5 | `route1` | The sign lady's trainer tips at the route entrance, then into Route 1 (Ho-Oh waits for the Pokédex) | Route 1 25,39 | `FLAG_OPENED_START_MENU` set, `FLAG_RB_OPENING_SEEN` not set, `VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY` 1 |
 | 6 | `potion` | Route 1's Mart clerk gives a Potion | Route 1 23,21 | `FLAG_GOT_POTION_ON_ROUTE_1` set |
 | 7 | `viridian` | North into Viridian | Viridian City 25,51 | |
 | 8 | `parcel` | Viridian's Poké Mart: the clerk gives Oak's Parcel | Viridian Mart 4,3 | `VAR_MAP_SCENE_VIRIDIAN_CITY_MART` 1, `VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB` 5 |
@@ -75,8 +75,8 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 15 | `rivals-house` | Into Blue's house | Blue's house 4,8 | |
 | 16 | `town-map` | Daisy gives the Town Map | Blue's house 4,4 | `VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE` 2 |
 | 17 | `leave-rivals-house` | Out of Blue's house | Pallet Town 18,8 | |
-| 18 | `north-route1` | North into Route 1 | Route 1 25,39 | |
-| 19 | `north-viridian` | Up Route 1 into Viridian | Viridian City 25,51 | |
+| 18 | `north-route1` | North into Route 1: Ho-Oh flies over, then the stranger and the Pokédex with no entry | Route 1 25,39 | `FLAG_RB_OPENING_SEEN`, `FLAG_MW01_SEEN` set |
+| 19 | `north-viridian` | Up Route 1 into Viridian: Giratina drops the Friends on the road | Viridian City 25,48 | `FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN` set |
 | 20 | `old-man` | The old man's catching demonstration (the second tutorial battle) | Viridian City 25,13 | `VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN` 2 |
 | 21 | `route2` | The road north is open: into Route 2 | Route 2 9,79 | |
 | 22 | `back-viridian` | Back into Viridian | Viridian City 25,0 | |

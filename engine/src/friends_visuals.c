@@ -6,6 +6,9 @@
 #include "malloc.h"
 #include "menu.h"
 #include "palette.h"
+#include "event_data.h"
+#include "field_weather.h"
+#include "script.h"
 #include "task.h"
 #include "tilesets.h"
 #include "window.h"
@@ -303,3 +306,43 @@ bool8 FriendsVisuals_IsShowing(void)
 {
     return sHomeView != NULL;
 }
+
+// Giratina's crossing: the colours twist toward its world's violet and flash white, then come back as they were
+// (weather and time of day included). VAR_0x8004: frames. VAR_RESULT is TRUE when it started; then waitstate.
+#define tTimer  data[0]
+#define tLength data[1]
+
+static void Task_Distortion(u8 taskId)
+{
+    struct Task *task = &gTasks[taskId];
+    u32 t = task->tTimer++;
+    if (t >= (u16)task->tLength)
+    {
+        ApplyWeatherColorMapToPals(0, 32);
+        DestroyTask(taskId);
+        ScriptContext_Enable();
+        return;
+    }
+    if ((t & 7) < 2)
+        BlendPalettesFine(PALETTES_MAP | PALETTES_OBJECTS, gPlttBufferUnfaded, gPlttBufferFaded, 12, RGB_WHITE);
+    else
+        BlendPalettesFine(PALETTES_MAP | PALETTES_OBJECTS, gPlttBufferUnfaded, gPlttBufferFaded,
+                          (t & 1) ? 11 : 6, (t & 2) ? RGB(14, 2, 20) : RGB(3, 0, 7));
+}
+
+void Special_FriendsDistortionFlash(void)
+{
+    u8 taskId;
+    Script_RequestEffects(SCREFF_V1 | SCREFF_HARDWARE);
+    gSpecialVar_Result = FALSE;
+    for (taskId = 0; taskId < NUM_TASKS && gTasks[taskId].isActive; taskId++)
+        ;
+    if (taskId == NUM_TASKS || FuncIsActiveTask(Task_Distortion))
+        return;
+    taskId = CreateTask(Task_Distortion, 80);
+    gTasks[taskId].tLength = gSpecialVar_0x8004;
+    gSpecialVar_Result = TRUE;
+}
+
+#undef tTimer
+#undef tLength

@@ -39,6 +39,8 @@ static const u16 sFinalPartners[][2] = {
 };
 static const u8 sDepartureOrder[] = {0, 4, 6, 5, 3, 2, 1};
 static EWRAM_DATA bool8 sAllowTransient = FALSE;
+// The arrival's seven stay out of sight until Giratina drops them (FG01_Arrival).
+static EWRAM_DATA bool8 sArrivalLanded = FALSE;
 static EWRAM_DATA u16 sMovementFault = 0;
 // EWRAM .sbss requires zero initialization. Actual map setup resets the
 // private speaker sentinel to0xFF before any optional Friends interaction.
@@ -288,6 +290,8 @@ bool8 FriendsScene_ShouldSpawn(u8 localId, u8 mapNum, u8 mapGroup)
     scene = FriendsStory_GetMapScene();
     if (scene == 1 && FlagGet(FRIENDS_STORY_SEEN_FIRST))
         return FALSE; // A completed arrival never respawns after the exit beat.
+    if (scene == 1 && !sArrivalLanded)
+        return FALSE;
     return FriendsStory_IsReady() && scene == FriendsStory_GetStage()
         && FriendsStory_GetGate(scene) && scene > 0 && scene < ARRAY_COUNT(sForeground)
         && (sForeground[scene] & (1 << (localId - camp->firstLocalId)));
@@ -678,6 +682,7 @@ void FriendsScene_OnMapLoad(void)
     // scene/menu/battle branches restore framing through the script helper.
     FriendsCamera_OnMapLoad();
     sAllowTransient = FALSE;
+    sArrivalLanded = FALSE;
     sMovementFault = 0;
     sPreviousSpeaker = 0xFF;
     sPreviousCrossing = 0;
@@ -708,6 +713,12 @@ void FriendsScene_OnMapLoad(void)
          && !FriendsScene_ShouldSpawn(o->localId, o->mapNum, o->mapGroup))
             RemoveObjectEventByLocalIdAndMap(o->localId, o->mapNum, o->mapGroup);
     }
+}
+
+void Special_FriendsStoryLand(void)
+{
+    Script_RequestEffects(SCREFF_V1);
+    sArrivalLanded = TRUE;
 }
 
 static void ShowHome(void)

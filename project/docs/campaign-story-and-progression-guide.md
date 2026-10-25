@@ -30,13 +30,13 @@ Full implemented textboxes and images stay in their linked event reviews. This s
 
 **Where:** Pallet Town → Route 1.
 
-Trail begins as the same Kanto trainer who will eventually reach Johto. Eligible ordinary new games receive Pikachu in Oak’s lab. Blue receives Eevee. After their opening battle, the Route 1 rescue leads into the Ho-Oh flyby.
+Trail begins as the same Kanto trainer who will eventually reach Johto. Eligible ordinary new games receive Pikachu in Oak’s lab. Blue receives Eevee. After the Parcel and the Pokédex, the first walk north onto Route 1 brings the Pidgey rescue and the Ho-Oh flyby; the Stranger comes down the road straight after it, sends the player to the new Pokédex (it has no entry for the bird) and asks his question.
 
 **Progression:**
 
 1. Complete the native starter grant and naming, then the opening rival sequence. Both win and loss paths retain recovery and lab exit.
-2. Help shelter the Pidgey on the first eligible Route 1 arrival, before receiving the Pokédex.
-3. Collect Oak’s Parcel in Viridian and return it for the original Pokédex ceremony.
+2. Collect Oak’s Parcel in Viridian and return it for the original Pokédex ceremony.
+3. Walking north again, help shelter the Pidgey on Route 1; Ho-Oh flies over and the Stranger follows (both play by themselves).
 
 **Connected events:**
 
@@ -52,12 +52,12 @@ Existing saves retain their real starter and history. The flyby is a fresh-cohor
 
 **Where:** Viridian → Route 2 → Viridian Forest → Pewter.
 
-The first badge journey runs alongside the strangers’ arrival. Seven adult friends appear in Viridian, Giratina leaves them stranded, and their first campsite begins taking shape. Nao introduces her bell and her search for the rainbow bird.
+The first badge journey runs alongside the strangers’ arrival. The first time the player enters Viridian after the Pokédex, distorted flashes tear the sky over the south road, Giratina drops seven adult friends onto it and leaves them stranded; they argue it out, ask the player where they are and head into town. Their first campsite begins taking shape on Route 2. Nao introduces her bell and her search for the rainbow bird.
 
 **Progression:**
 
 1. Travel north through Viridian Forest and earn Brock’s Boulder Badge.
-2. The campaign does not require meeting Nao, the Stranger, or the friends.
+2. The Stranger's first meeting (Route 1) and the friends' arrival (Viridian) play by themselves; their later scenes, and Nao, stay optional.
 
 **Connected events:**
 
@@ -456,7 +456,7 @@ These entries were reconciled to actual 37C labels. They describe implemented so
 
 ### RB01 — Opening sky
 
-**Trigger:** Route1 map transition adopts supported state; FRESH_COHORT true, OPENING_SEEN false, original Oak-lab scene >=4, Dex not yet received. Sets VAR_TEMP_E1 for the frame table. Completion requires successful renderer; failed start retains retry.
+**Trigger:** Route1 map transition adopts supported state; FRESH_COHORT true, OPENING_SEEN false, Pokédex received (moved from before the Pokédex on 2026-10-25). Sets VAR_TEMP_E1 for the frame table. Completion requires successful renderer; failed start retains retry. MW01 follows in the same scene.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
@@ -596,7 +596,7 @@ Optional Oak letter, then optional Pidgey epilogue on Route1.
 
 ### MW01 — Viridian stranger
 
-**Trigger:** Dex receipt; own scene unseen; no full reveal/native Mewtwo closure. OPENING_SEEN selects bird-specific versus generic wording.
+**Trigger:** Right after RB01's flyby on Route 1 (`MW01_Route1Scene`, called by `RB_Route1Frame`), when the player entered from Pallet's edge; own scene unseen; no full reveal/native Mewtwo closure. He walks down to the player, has them search the Pokédex for the bird (no entry), asks YES/NO, and leaves after Mew's glimpse. Until 2026-10-25 he waited east of Viridian's square after the Pokédex.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
@@ -906,7 +906,7 @@ Willing partner responds to Silver in Dragon’s Den.
 
 ### FG01 — Seven people and one HDMI cable
 
-**Trigger:** Native Pokédex obtained; before first Kanto Hall of Fame; current group stage is FG01.
+**Trigger:** Native Pokédex obtained; before first Kanto Hall of Fame; current group stage is FG01. Since 2026-10-25 it plays by itself on entering Viridian (`FG01_Arrival`, from the town's frame table): distorted flashes, Giratina over the south road, the seven thrown down onto it, the camera framed on them; the player then walks up, answers (a choice that can't be cancelled) and the group walks north into town. The dialogue was rewritten in the same voices.
 
 **Status:** IMPLEMENTED. 22 primary conversations / 51 choices / 28 battle outcomes in bounded native 36-series checks. See this event’s original build and staged scope.
 

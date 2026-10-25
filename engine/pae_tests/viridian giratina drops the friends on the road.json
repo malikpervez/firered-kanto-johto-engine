@@ -1,0 +1,61 @@
+{
+ "note": "The Friends' arrival right after the landing: Giratina still over the south road, all seven of them on it, and Jon's first line.",
+ "created": "2026-10-25 21:59",
+ "start": {
+  "map": "ViridianCity_Frlg",
+  "x": 25,
+  "y": 51,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv5",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_RB_OPENING_SEEN",
+   "FLAG_MW01_SEEN",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=6",
+   "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN=1",
+   "VAR_REPEL_STEP_COUNT=200"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     150
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     420
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ViridianCity_Frlg",
+  "x": 26,
+  "y": 47,
+  "in_battle": false
+ }
+}
