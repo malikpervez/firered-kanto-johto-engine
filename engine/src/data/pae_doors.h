@@ -29,8 +29,8 @@ static const u8 sPaeDoorPalettes_11[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
     { 661, &gTileset_PalletConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_0, sPaeDoorPalettes_0 }, \
     { 686, &gTileset_PalletConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_1, sPaeDoorPalettes_1 }, \
     { 759, &gTileset_PalletConcept, DOOR_SOUND_NORMAL, 1, sPaeDoorTiles_2, sPaeDoorPalettes_2 }, \
-    { 375, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_3, sPaeDoorPalettes_3 }, \
-    { 391, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_4, sPaeDoorPalettes_4 }, \
+    { 387, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_3, sPaeDoorPalettes_3 }, \
+    { 403, &gTileset_PalletConcept_General, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_4, sPaeDoorPalettes_4 }, \
     { 865, &gTileset_Route22Concept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_5, sPaeDoorPalettes_5 }, \
     { 683, &gTileset_Route2Concept, DOOR_SOUND_NORMAL, 3, sPaeDoorTiles_6, sPaeDoorPalettes_6 }, \
     { 684, &gTileset_Route2Concept, DOOR_SOUND_NORMAL, 4, sPaeDoorTiles_6, sPaeDoorPalettes_7 }, \

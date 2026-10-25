@@ -2508,10 +2508,52 @@
    "ground": "grass"
   },
   {
-   "name": "round_tree",
+   "name": "forest#14.2",
    "image": "../kit/sheets/trees.png",
    "x": 192,
    "y": 128,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.5",
+   "image": "../kit/sheets/trees.png",
+   "x": 224,
+   "y": 128,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "forest#15.10",
+   "image": "../kit/sheets/trees.png",
+   "x": 0,
+   "y": 160,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "primary",
+   "solid": true,
+   "ground": "grass"
+  },
+  {
+   "name": "round_tree",
+   "image": "../kit/sheets/trees.png",
+   "x": 32,
+   "y": 160,
    "w": 2,
    "h": 2,
    "banks": [
@@ -2529,8 +2571,8 @@
   {
    "name": "offset_tree",
    "image": "../kit/sheets/trees.png",
-   "x": 224,
-   "y": 128,
+   "x": 64,
+   "y": 160,
    "w": 2,
    "h": 2,
    "banks": [
@@ -2548,7 +2590,7 @@
   {
    "name": "broad_tree",
    "image": "../kit/sheets/trees.png",
-   "x": 0,
+   "x": 96,
    "y": 160,
    "w": 2,
    "h": 2,
@@ -2567,7 +2609,7 @@
   {
    "name": "bush_a",
    "image": "../kit/sheets/trees.png",
-   "x": 32,
+   "x": 128,
    "y": 160,
    "banks": [
     3
@@ -2579,7 +2621,7 @@
   {
    "name": "bush_b",
    "image": "../kit/sheets/trees.png",
-   "x": 48,
+   "x": 144,
    "y": 160,
    "banks": [
     3
@@ -2591,7 +2633,7 @@
   {
    "name": "bush_c",
    "image": "../kit/sheets/trees.png",
-   "x": 64,
+   "x": 160,
    "y": 160,
    "banks": [
     3

@@ -2005,3 +2005,14 @@ const struct Tileset gTileset_Route2Concept =
     .metatileAttributes = gMetatileAttributes_Route2Concept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ViridianForestConcept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ViridianForestConcept,
+    .palettes = gTilesetPalettes_ViridianForestConcept,
+    .metatiles = gMetatiles_ViridianForestConcept,
+    .metatileAttributes = gMetatileAttributes_ViridianForestConcept,
+    .callback = NULL,
+};
