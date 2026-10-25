@@ -995,6 +995,15 @@
      2
     ]
    ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
   }
  ],
  "watch": {
@@ -1008,11 +1017,11 @@
  "expect": {
   "map": "Route27_hns",
   "x": 18,
-  "y": 0,
+  "y": 1,
   "in_battle": false,
   "flags": {
    "FLAG_SYS_GAME_CLEAR": true
   }
  },
- "accepted": "2026-10-21 15:39"
+ "accepted": "2026-10-25 17:04"
 }
