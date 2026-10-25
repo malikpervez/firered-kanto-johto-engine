@@ -1,0 +1,157 @@
+{
+ "note": "After the Pok\u00e9dex the stranger (MW01) waits east of Viridian's square. Talking to him plays his question and Mew's glimpse, then he leaves: you can step onto the block where he stood.",
+ "created": "2026-10-25 03:06",
+ "start": {
+  "map": "ViridianCity_Frlg",
+  "x": 37,
+  "y": 30,
+  "state": [
+   "FLAG_SYS_POKEDEX_GET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     40
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW01_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ViridianCity_Frlg",
+  "x": 37,
+  "y": 29,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW01_SEEN": true
+  }
+ }
+}

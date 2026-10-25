@@ -412,7 +412,7 @@ MW01_Answer::
 	msgbox MW01_Text_Answer
 	call RB_MewGlimpse
 	setflag FLAG_TEMP_1E
-	removeobject 11
+	removeobject LOCALID_VIRIDIAN_STRANGER
 setflag FLAG_MW01_SEEN
 release
 	end
