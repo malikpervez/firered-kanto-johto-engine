@@ -3,6 +3,7 @@
 #include "save.h"
 #include "battle_pyramid.h"
 #include "bg.h"
+#include "decompress.h"
 #include "fieldmap.h"
 #include "fldeff.h"
 #include "fldeff_misc.h"
@@ -1059,7 +1060,9 @@ static void CopyTilesetToVramUsingHeap(struct Tileset const *tileset, u16 numTil
         if (!tileset->isCompressed)
             LoadBgTiles(2, tileset->tiles, numTiles * 32, offset);
         else
-            DecompressAndLoadBgGfxUsingHeap(2, tileset->tiles, numTiles * 32, offset, 0);
+            // Only the tiles the tileset has: past them the heap buffer holds other data, and a crossing's copies
+            // should go out in one VBlank (see LoadMapFromCameraTransition), so the less the better.
+            DecompressAndLoadBgGfxUsingHeap(2, tileset->tiles, min(GetDecompressedDataSize(tileset->tiles), numTiles * 32), offset, 0);
     }
 }
 

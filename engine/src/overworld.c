@@ -15,6 +15,7 @@
 #include "credits_frlg.h"
 #include "clock.h"
 #include "dexnav.h"
+#include "dma3.h"
 #include "event_data.h"
 #include "event_object_movement.h"
 #include "event_scripts.h"
@@ -909,6 +910,33 @@ bool8 SetDiveWarpDive(u16 x, u16 y)
     return SetDiveWarp(CONNECTION_DIVE, x, y);
 }
 
+// A crossing's new tiles, seam glyphs and palettes, and the view redrawn with them, must reach the screen in the
+// same VBlank, but the main-loop pass that loads the map can take a few frames: the copies queued during it (and the
+// palette transfer) are held until the overworld loop has queued the view too.
+static bool8 sCameraTransitionGfxHeld, sCameraTransitionPalTransferWasDisabled;
+
+static void HoldGfxForCameraTransition(void)
+{
+    sCameraTransitionGfxHeld = TRUE;
+    sCameraTransitionPalTransferWasDisabled = gPaletteFade.bufferTransferDisabled;
+    gPaletteFade.bufferTransferDisabled = TRUE;
+    HoldDma3Requests(TRUE);
+}
+
+// Called by the overworld loops right after they queue their tilemap copies.
+static void ReleaseGfxForCameraTransition(void)
+{
+    u16 ime;
+    if (!sCameraTransitionGfxHeld)
+        return;
+    sCameraTransitionGfxHeld = FALSE;
+    ime = REG_IME;
+    REG_IME = 0; // both or neither in the next VBlank
+    gPaletteFade.bufferTransferDisabled = sCameraTransitionPalTransferWasDisabled;
+    HoldDma3Requests(FALSE);
+    REG_IME = ime;
+}
+
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
 {
     const struct MapLayout *previousLayout = gMapHeader.mapLayout;
@@ -940,6 +968,7 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     Overworld_ClearSavedMusic();
     RunOnTransitionMapScript();
     InitMap();
+    HoldGfxForCameraTransition();
     if (previousLayout->primaryTileset != gMapHeader.mapLayout->primaryTileset
      || GetNumTilesInPrimary(previousLayout) != GetNumTilesInPrimary(gMapHeader.mapLayout)
      || GetNumPalsInPrimary(previousLayout) != GetNumPalsInPrimary(gMapHeader.mapLayout))
@@ -1926,6 +1955,7 @@ static void OverworldBasic(void)
     UpdatePaletteFade();
     UpdateTilesetAnimations();
     DoScheduledBgTilemapCopiesToVram();
+    ReleaseGfxForCameraTransition();
     // Every minute if no palette fade is active, update TOD blending as needed
     if (!gPaletteFade.active && --gTimeUpdateCounter <= 0)
     {
@@ -4011,6 +4041,7 @@ void Overworld_CreditsMainCB(void)
     UpdatePaletteFade();
     UpdateTilesetAnimations();
     DoScheduledBgTilemapCopiesToVram();
+    ReleaseGfxForCameraTransition();
     if (fading)
         SetFieldVBlankCallback();
 }
