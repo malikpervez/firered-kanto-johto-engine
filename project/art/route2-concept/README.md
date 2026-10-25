@@ -11,7 +11,8 @@ The route is 30×80 blocks, as before, and joins its neighbours where it did: Pe
 8–11, Viridian's the bottom at columns 6–11. It has:
 - **the south meadow**, from Viridian: the road, tall grass, the Friends' camp (a lawn west of the road, columns
   2–7, rows 60–63) and the forest's south gate. Without Cut that gate is the only way on;
-- **Viridian Forest** (a map of its own, not rebuilt yet) between the gates. Nothing outside joins the two meadows;
+- **Viridian Forest** (a map of its own, `../viridianforest-concept`) between the gates. Nothing outside joins the
+  two meadows;
 - **the north meadow**, from the forest's north gate: tall grass and the road to Pewter;
 - **the eastern detour**, with Cut, one tree at a time: two items on short spurs; the small east gatehouse (in at
   its south door, out at its north one; it can't be walked round); a ledge with stairs; the north enclave with the

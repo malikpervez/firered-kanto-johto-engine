@@ -29,8 +29,8 @@ project/scripts/story_check.py --from route22   # carry on from a step
 project/scripts/story_check.py --to dex         # stop after a step
 ```
 
-The script needs pae with `pae play --show-flag` (pae PR #17), and pae PR #19 for the forest (its walks keep off
-sideways stairs). A run from the top takes about 35 minutes; a run `--from` a later step takes less.
+The script needs pae with `pae play --show-flag` (pae PR #17), and pae PR #19 (its walks keep off sideways stairs,
+which the old Viridian Forest had). A run from the top takes about 35 minutes; a run `--from` a later step takes less.
 
 * Each step saves a checkpoint, `story-NN-name`, in `engine/.pae/checkpoints/`. The next step starts from it.
   `--from STEP` needs the checkpoint of the step before it. A fresh clone has no checkpoints, so start from the
