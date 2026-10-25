@@ -1,0 +1,64 @@
+{
+ "note": "Pallet Town and Route 1, back and forth (the owner's note: glitches when moving back and forth between Pallet and Route 1). Run north from (14,2) into Route 1, straight back into Pallet and north again, and stop 3 frames into the third crossing, while the game is still switching to Route 1: the screen must still show Pallet's view drawn right, both house roofs along the bottom. For 2-3 frames of each crossing Pallet's view used to be drawn with Route 1's tiles and colours (on this frame the red roof is garbled: 7% of the screen); on this frame the build without the faster crossings is still in its long first crossing and garbles both roofs (16%).",
+ "created": "2026-10-25 17:28",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 14,
+  "y": 2,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv5",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_B_DASH",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "VAR_REPEL_STEP_COUNT=200"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     150
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     66,
+     33
+    ],
+    [
+     130,
+     12
+    ],
+    [
+     66,
+     7
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route1_Frlg",
+  "x": 24,
+  "y": 40,
+  "in_battle": false,
+  "vars": {
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK": 3
+  }
+ },
+ "accepted": "2026-10-25 17:28"
+}

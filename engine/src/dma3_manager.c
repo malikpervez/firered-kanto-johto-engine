@@ -21,6 +21,10 @@ static struct Dma3Request sDma3Requests[MAX_DMA_REQUESTS];
 
 static vbool8 sDma3ManagerLocked;
 static u8 sDma3RequestCursor;
+// VBlanks left to hold the queue (HoldDma3Requests): copies that must reach VRAM in the same VBlank are queued over
+// a few frames. A hold that isn't released lapses, so the queue can't stop for good.
+#define DMA3_HOLD_FRAMES 30
+static u8 sDma3HoldFrames;
 
 void ClearDma3Requests(void)
 {
@@ -45,6 +49,11 @@ void ProcessDma3Requests(void)
 
     if (sDma3ManagerLocked)
         return;
+    if (sDma3HoldFrames != 0)
+    {
+        sDma3HoldFrames--;
+        return;
+    }
 
     bytesTransferred = 0;
 
@@ -156,6 +165,11 @@ s16 RequestDma3Fill(s32 value, void *dest, u16 size, u32 mode)
     }
     sDma3ManagerLocked = FALSE;
     return -1;  // no free DMA request was found
+}
+
+void HoldDma3Requests(bool8 hold)
+{
+    sDma3HoldFrames = hold ? DMA3_HOLD_FRAMES : 0;
 }
 
 s16 CheckForSpaceForDma3Request(s16 index)
