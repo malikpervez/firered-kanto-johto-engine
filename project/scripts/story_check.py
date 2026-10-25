@@ -111,7 +111,7 @@ STEPS = [
          expect=dict(map="ViridianCity_Frlg", xy=(25, 13), vars={"VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN": 2})),
     dict(name="route2", what="The road north is open: into Route 2", walk=(25, 0), inputs="UP*12, wait 200",
          expect=dict(map="Route2_Frlg", xy=(9, 79))),
-    dict(name="back-viridian", what="Back into Viridian", inputs="wait 30, DOWN*28, wait 200",
+    dict(name="back-viridian", what="Back into Viridian", inputs="wait 30, DOWN*12, wait 200",
          expect=dict(map="ViridianCity_Frlg", xy=(25, 0))),
     dict(name="center", what="Into Viridian's Pokemon Center", walk=(20, 28), inputs="UP*20, wait 250",
          expect=dict(map="ViridianCity_PokemonCenter_1F_Frlg", xy=(7, 8))),
