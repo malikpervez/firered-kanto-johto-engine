@@ -1,0 +1,165 @@
+{
+ "note": "The stranger's scene removes only him: you can walk through where he stood, and Brian of the Friends still stands at the camp east of the square (the scene used to remove object number 11, which is Brian since the rebuild).",
+ "created": "2026-10-25 03:05",
+ "start": {
+  "map": "ViridianCity_Frlg",
+  "x": 37,
+  "y": 30,
+  "state": [
+   "FLAG_SYS_POKEDEX_GET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     64,
+     32
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     16,
+     144
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW01_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ViridianCity_Frlg",
+  "x": 45,
+  "y": 28,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW01_SEEN": true
+  }
+ }
+}
