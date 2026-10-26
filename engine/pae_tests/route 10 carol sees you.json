@@ -1,0 +1,70 @@
+{
+ "note": "West along the valley next to Carol: she sees you (or you talk to her).",
+ "created": "2026-10-26 08:22",
+ "start": {
+  "map": "Route10_Frlg",
+  "x": 31,
+  "y": 50,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_WARTORTLE lv40 MOVE_WATER_GUN",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     28
+    ],
+    [
+     0,
+     250
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route10_Frlg",
+  "x": 29,
+  "y": 50,
+  "in_battle": true
+ }
+}

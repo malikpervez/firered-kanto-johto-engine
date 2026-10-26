@@ -1,0 +1,40 @@
+{
+ "note": "Into the Power Plant from its island.",
+ "created": "2026-10-26 08:22",
+ "start": {
+  "map": "Route10_Frlg",
+  "x": 29,
+  "y": 41,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PowerPlant_Frlg",
+  "x": 5,
+  "y": 38,
+  "in_battle": false
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "note": "Cut the tree in the neck and walk on into the gorge.",
+ "created": "2026-10-26 08:28",
+ "start": {
+  "map": "Route9_Frlg",
+  "x": 8,
+  "y": 9,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BULBASAUR lv20 MOVE_CUT",
+   "FLAG_BADGE02_GET",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     300
+    ],
+    [
+     16,
+     28
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route9_Frlg",
+  "x": 10,
+  "y": 9,
+  "in_battle": false
+ }
+}

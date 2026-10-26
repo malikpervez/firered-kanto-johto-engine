@@ -21,12 +21,12 @@ pae tileset build ../$A/spec.json $P
 pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --border ../$A/border.txt $P
 
 # the joins stay where they were: Nugget Bridge (Route 24's columns 16-19) meets the top at columns 41-44, Route 4's
-# road (its rows 10-13) the left edge at rows 17-20, Route 9's (its rows 34-36) the right edge at rows 28-30, Route
-# 5's (its columns 29-32) the bottom at columns 21-24
+# road (its rows 10-13) the left edge at rows 17-20, Route 9's (its rows 8-10 since its rebuild) the right edge at
+# rows 28-30, Route 5's (its columns 29-32) the bottom at columns 21-24
 pae map connect $M up Route24_Frlg --offset 25 $P
 pae map connect $M down Route5_Frlg --offset -8 $P
 pae map connect $M left Route4_Frlg --offset 7 $P
-pae map connect $M right Route9_Frlg --offset -6 $P
+pae map connect $M right Route9_Frlg --offset 20 $P
 [ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P  # build_all.sh makes them last, when every map is painted
 
 # doors, drawn in their packs (one for each kind of building: the frames go with its door's metatile)

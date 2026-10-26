@@ -1,0 +1,85 @@
+{
+ "note": "Find the Super Potion hidden in the clearing's corner.",
+ "created": "2026-10-26 08:22",
+ "start": {
+  "map": "Route10_Frlg",
+  "x": 3,
+  "y": 11,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route10_Frlg",
+  "x": 3,
+  "y": 11,
+  "in_battle": false,
+  "flags": {
+   "FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION": true
+  }
+ }
+}

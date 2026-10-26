@@ -188,5 +188,7 @@ extern const struct Tileset gTileset_Route5Concept;
 extern const struct Tileset gTileset_Route6Concept;
 extern const struct Tileset gTileset_VermilionConcept;
 extern const struct Tileset gTileset_Route11Concept;
+extern const struct Tileset gTileset_Route9Concept;
+extern const struct Tileset gTileset_Route10Concept;
 
 #endif //GUARD_tilesets_H

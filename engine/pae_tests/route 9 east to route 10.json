@@ -1,0 +1,40 @@
+{
+ "note": "East along the road out onto Route 10.",
+ "created": "2026-10-26 08:28",
+ "start": {
+  "map": "Route9_Frlg",
+  "x": 57,
+  "y": 18,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     44
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route10_Frlg",
+  "x": 0,
+  "y": 18,
+  "in_battle": false
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "note": "Read the route sign by the way in.",
+ "created": "2026-10-26 08:28",
+ "start": {
+  "map": "Route9_Frlg",
+  "x": 11,
+  "y": 7,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route9_Frlg",
+  "x": 11,
+  "y": 7,
+  "in_battle": false
+ }
+}

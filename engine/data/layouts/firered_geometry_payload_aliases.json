@@ -3040,13 +3040,6 @@
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
     },
-    "Route10_Layout_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route10_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
     "Route22_Layout_Border": {
       "owner": "BlackthornCity_hns_Layout_Border",
       "source_filepath": "data/layouts/Route22_Frlg/border.bin",
@@ -3117,13 +3110,6 @@
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
     },
-    "Route9_Layout_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route9_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
     "SevenIsland_SevaultCanyon_Layout_Border": {
       "owner": "BlackthornCity_hns_Layout_Border",
       "source_filepath": "data/layouts/SevenIsland_SevaultCanyon_Frlg/border.bin",
@@ -3152,23 +3138,9 @@
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
     },
-    "Route10_Frlg_FireRedGeometry_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route10_hns/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
     "Route16_Frlg_FireRedGeometry_Border": {
       "owner": "BlackthornCity_hns_Layout_Border",
       "source_filepath": "data/layouts/Route16_hns/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
-    "Route9_Frlg_FireRedGeometry_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route9_hns/border.bin",
       "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"

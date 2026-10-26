@@ -33,7 +33,7 @@
     },
     {
       "map": "MAP_ROUTE9",
-      "offset": -6,
+      "offset": 20,
       "direction": "right"
     }
   ],
@@ -172,8 +172,8 @@
     {
       "type": "clone",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
-      "x": 60,
-      "y": 28,
+      "x": 67,
+      "y": 29,
       "target_local_id": "LOCALID_ROUTE9_CUT_TREE",
       "target_map": "MAP_ROUTE9"
     },
