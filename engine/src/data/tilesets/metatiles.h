@@ -1606,3 +1606,6 @@ const u16 gMetatileAttributes_FuchsiaConcept[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_Route15Concept[] = INCBIN_U16("data/tilesets/secondary/route15_concept/metatiles.bin");
 const u16 gMetatileAttributes_Route15Concept[] = INCBIN_U16("data/tilesets/secondary/route15_concept/metatile_attributes.bin");
+
+const u16 gMetatiles_Route14Concept[] = INCBIN_U16("data/tilesets/secondary/route14_concept/metatiles.bin");
+const u16 gMetatileAttributes_Route14Concept[] = INCBIN_U16("data/tilesets/secondary/route14_concept/metatile_attributes.bin");

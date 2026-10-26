@@ -4,7 +4,7 @@
  "start": {
   "map": "Route14_Frlg",
   "x": 2,
-  "y": 52,
+  "y": 51,
   "state": [],
   "script": null
  },
@@ -35,5 +35,5 @@
   "y": 15,
   "in_battle": false
  },
- "accepted": "2026-10-26 19:28"
+ "accepted": "2026-10-26 19:54"
 }

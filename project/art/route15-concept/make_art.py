@@ -2,7 +2,7 @@
 """Route 15 after its concept (draw_plan.py and plan_stage1.txt): the way east out of Fuchsia, two roads through the
 woods to Route 14 (see draw_plan.py). It is 80x24 blocks (old Route 15 was 96x32); its joins: Fuchsia's main street
 (its rows 20-23) at the left edge, rows 4-7 (offset -16, was -15: the road moved a row up), and Route 14's road (its
-rows 51-54) at the right edge, rows 14-17 (offset -37, as before).
+rows 50-53) at the right edge, rows 14-17 (offset -36: Route 14, rebuilt, moved its road up a row).
 
 The pieces: the kit's, and Route 16's Cycling Road gatehouse (route16-concept/route16_buildings.py) in Saffron's
 buildings' palette (bank 7 here). Bank 8 is the kit's plants palette; 9-12 stay free for the seam to old Route 14,

@@ -2258,3 +2258,14 @@ const struct Tileset gTileset_Route15Concept =
     .metatileAttributes = gMetatileAttributes_Route15Concept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route14Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route14Concept,
+    .palettes = gTilesetPalettes_Route14Concept,
+    .metatiles = gMetatiles_Route14Concept,
+    .metatileAttributes = gMetatileAttributes_Route14Concept,
+    .callback = NULL,
+};
