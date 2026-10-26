@@ -1,0 +1,38 @@
+{
+ "note": "Into the Pok\u00e9mon Center from the plaza.",
+ "created": "2026-10-26 07:06",
+ "start": {
+  "map": "VermilionCity_Frlg",
+  "x": 28,
+  "y": 8,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_PokemonCenter_1F_Frlg",
+  "x": 7,
+  "y": 8,
+  "in_battle": false
+ }
+}

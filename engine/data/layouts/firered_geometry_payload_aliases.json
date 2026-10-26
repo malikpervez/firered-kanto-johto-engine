@@ -3369,13 +3369,6 @@
       "bytes": 8,
       "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"
     },
-    "VermilionCity_Layout_Border": {
-      "owner": "CinnabarIsland_Layout_Border",
-      "source_filepath": "data/layouts/VermilionCity_Frlg/border.bin",
-      "owner_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
-      "bytes": 8,
-      "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"
-    },
     "CinnabarIsland_Frlg_FireRedGeometry_Border": {
       "owner": "CinnabarIsland_Layout_Border",
       "source_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
@@ -5458,13 +5451,6 @@
     "Route21_South_Frlg_FireRedGeometry_Border": {
       "owner": "CianwoodCity_hns_Layout_Border",
       "source_filepath": "data/layouts/Route21_hns/border.bin",
-      "owner_filepath": "data/layouts/CianwoodCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "a99112d532b404a0dbf8a92a6857bcff981021db103446ee87fd658f31a7d218"
-    },
-    "VermilionCity_Frlg_FireRedGeometry_Border": {
-      "owner": "CianwoodCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/VermilionCity_hns/border.bin",
       "owner_filepath": "data/layouts/CianwoodCity_hns/border.bin",
       "bytes": 8,
       "sha256": "a99112d532b404a0dbf8a92a6857bcff981021db103446ee87fd658f31a7d218"

@@ -291,6 +291,16 @@ STEPS = [
          inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route6_Frlg", xy=(46, 12))),
     dict(name="vermilion", what="Down Route 6's road (in no trainer's sight) to Vermilion's stairs", walk=(41, 31),
          inputs=f"DOWN*{hold(1)}, wait 200", expect=dict(map="VermilionCity_Frlg", xy=(33, 0))),
+    dict(name="vermilion-center", what="Down the road into Vermilion's Pokémon Center", walk=(28, 7),
+         inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="VermilionCity_PokemonCenter_1F_Frlg", xy=(7, 8))),
+    dict(name="vermilion-heal", what="The nurse heals the team (Vermilion's Center becomes where you wake after a "
+         "blackout)", inputs="wait 30, UP*50, wait 20, UP*4, wait 20, A*4, wait 100, A*4, wait 100, A*4, wait 400, "
+         + B(6) + "wait 100", expect=dict(map="VermilionCity_PokemonCenter_1F_Frlg", xy=(7, 4))),
+    dict(name="vermilion-leave-center", what="Back out to the plaza",
+         inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250", expect=dict(map="VermilionCity_Frlg", xy=(28, 7))),
+    dict(name="ss-anne", what="Down the pier: the ferry sailor checks the S.S. Ticket, and onto the S.S. Anne's "
+         "gangway", walk=(37, 39), inputs=f"DOWN*{hold(1)}, wait 30, " + A(6) + f"DOWN*{hold(1)}, wait 250",
+         expect=dict(map="SSAnne_Exterior_Frlg", xy=(32, 5))),
 ]
 
 

@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-route6` (Route 6 rebuilt, on `v2-main` at `8e74b57c`) |
-| ROM | `make -j4` with the default settings. SHA-1 `e55dcc6e95b801892a8233d9dd66c46c509323e4`, SHA-256 `d688407d085526a241c50081af99ef243b56e26df1731745817fdff3d5efdec1` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–84 and the replay tests |
-| Last step passed | 84 `vermilion`: back from Bill's cottage over Nugget Bridge, through Cerulean's neck and down Route 5, through the Underground Path and down Route 6 into Vermilion. Steps 81–84 were run on this build, from step 80's checkpoint of the build before (77–80 on Route 5's) |
-| Replay tests | 175 of 175 pass |
+| Game | branch `claude/kanto-vermilion` (Vermilion rebuilt, on `v2-main` at `0ea10917`) |
+| ROM | `make -j4` with the default settings. SHA-1 `3df8798e8f46a8c4a1df1502c0ca711d8bb8ac93`, SHA-256 `e7ef058b75966d6fbae8ff3db2e1c0c0e636d517d704ee65ab202a9db4dc5731` |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–88 and the replay tests |
+| Last step passed | 88 `ss-anne`: through the Underground Path and Route 6 into Vermilion, a heal in its Center, and down the pier past the ticket check onto the S.S. Anne. Steps 85–88 were run on this build, from step 84's checkpoint of the build before |
+| Replay tests | 196 of 196 pass |
 
 ## How to run it
 
@@ -141,7 +141,11 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 81 | `tunnel` | Down the hut's stairs (stand on them, walk east) into the tunnel | Underground Path tunnel 3,4 | |
 | 82 | `tunnel-south` | Along the tunnel and up its south stairs | Underground Path south entrance 14,8 | |
 | 83 | `route6` | Out of the south hut onto Route 6 | Route 6 46,12 | |
-| 84 | `vermilion` | Down Route 6's road (in no trainer's sight) onto Vermilion's stairs | Vermilion City 33,0 | |
+| 84 | `vermilion` | Down Route 6's road (in no trainer's sight) into Vermilion | Vermilion City 33,0 | |
+| 85 | `vermilion-center` | Down the road into Vermilion's Pokémon Center | Vermilion Center 7,8 | |
+| 86 | `vermilion-heal` | Up to the counter and heal | Vermilion Center 7,4 | |
+| 87 | `vermilion-leave-center` | Back out to the plaza | Vermilion City 28,7 | |
+| 88 | `ss-anne` | Down the pier: the ferry sailor checks the S.S. Ticket; onto the gangway | S.S. Anne outside 32,5 | |
 
 ## What it doesn't cover
 
@@ -169,6 +173,9 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 * **Route 5's Day Care and Saffron's gate**: the walk goes past them; the replay tests go in at their doors. The
   gate's guard wants a drink, which comes later in the story.
 * **Route 6's trainers**: the road is in no one's sight; their battles are in the replay tests.
+* **Vermilion's other events**: the Gym behind its tree to cut, the Fan Club, the houses, the signs, Officer Jenny and
+  the Squirtles, the old man's Machop, Oak's aide, the hidden Max Ether, the ticket check without a ticket: the
+  replay tests play them. The Friends' camp (30,19) isn't played (see KR-6). The S.S. Anne itself is next.
 * **Route 3's trainers.** The walk keeps below their lines of sight (they're optional); their battles are in the replay
   tests.
 * **Viridian Forest's other trainers.** Rick and Doug can't be walked round, so their battles are played (with the
@@ -222,3 +229,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | Route 25 rebuilt (its own concept); six new steps: Joey's and Wayne's necks, the Sea Cottage, Bill and his PC, the S.S. Ticket, out again | **Steps 70–76 pass**, `--from route25` on the final build. First tries stopped: pae couldn't plan a walk in the cottage (its block fixes use metatiles the game makes itself: pae PR #27), the checkpoint between helping Bill and his PC forgot that he was in his teleporter (a temporary flag: the two are one step now), Bill stands at 7,5 after a checkpoint (the step talks to him from below), and the cottage's mat needs a second press to leave. |
 | 2026-10-26 | Route 5 rebuilt (its own concept); four new steps: back from Bill over the bridge, through Cerulean's neck, down Route 5 into the Underground Path's hut | **Steps 77–80 pass**, `--from back-to-bridge` on this build. The first try stopped on Route 25: going back along the road, Nob saw the walk (the walk now goes round the north of his and Flint's sight, as it came). |
 | 2026-10-26 | Route 6 rebuilt (its own concept); four new steps: the Underground Path's tunnel, Route 6, Vermilion | **Steps 81–84 pass**, `--from tunnel` on this build. The first try stood on the hut's stairs without going down: they are arrow warps you walk east off (the steps do now, and at the tunnel's south end). |
+| 2026-10-26 | Vermilion City rebuilt (its own concept); four new steps: its Center (in, heal, out) and the pier onto the S.S. Anne | **Steps 85–88 pass**, `--from vermilion-center` on this build, first try. |

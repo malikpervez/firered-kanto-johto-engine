@@ -2104,3 +2104,14 @@ const struct Tileset gTileset_Route6Concept =
     .metatileAttributes = gMetatileAttributes_Route6Concept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_VermilionConcept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_VermilionConcept,
+    .palettes = gTilesetPalettes_VermilionConcept,
+    .metatiles = gMetatiles_VermilionConcept,
+    .metatileAttributes = gMetatileAttributes_VermilionConcept,
+    .callback = NULL,
+};

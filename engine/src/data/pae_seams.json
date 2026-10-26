@@ -13,6 +13,9 @@
   "Route2_Frlg",
   "Route3_Frlg"
  ],
+ "Route11_Frlg": [
+  "VermilionCity_Frlg"
+ ],
  "Route1_Frlg": [
   "PalletTown_Frlg",
   "ViridianCity_Frlg"
@@ -52,7 +55,8 @@
   "CeruleanCity_Frlg"
  ],
  "VermilionCity_Frlg": [
-  "Route6_Frlg"
+  "Route6_Frlg",
+  "Route11_Frlg"
  ],
  "ViridianCity_Frlg": [
   "Route1_Frlg",
