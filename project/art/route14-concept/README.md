@@ -24,7 +24,8 @@ It has:
 - **the Shroomish's dell** by the shore, behind a hedge, a tree to cut its way in;
 - **the crossroads** at the bottom: the road west to Route 15, Malik looking east to the short pier, Jan and Kiri
   (who battle together) above it;
-- **the berry garden** under the woods south of the road, behind the tree to cut that Route 15 sees across the join;
+- **the berry garden** under the woods south of the road, behind a tree to cut (at 12,54: more than 8 blocks in
+  from Route 15's edge, or the game would hide it, KR-69);
   the Pinap Berry is hidden in it. The Zinc is hidden by the shore at the maze's start.
 
 The sea runs down the whole east side beyond a strip of shore: the kit's sea, solid scenery (KR-68).
@@ -35,18 +36,18 @@ has no warps.
 The pieces are all the kit's: the route has nothing of its own (its secondary tileset is empty).
 
 The seams are pae's:
-- with Route 15, both are the kit's, so there is no seam;
-- old Route 13 is drawn here with 31 pieces (69 tiles), in banks 7, 9 and 10;
-- old Route 13 draws this route's top seven rows (forest and dirt only) with 45 pieces, in its slots 8–9.
+- with Route 15 and with Route 13 (rebuilt after it), both are the kit's, so there is no seam. While Route 13 was
+  old, it was drawn here with 31 pieces in banks 7, 9 and 10, and it drew this route's top seven rows with 45.
 
 `make_art.py` checks the route's rules on the map it builds:
 - only Route 13's path and Route 15's road open onto the edges;
 - everything walkable is reached from Route 13's side;
+- the trees stand more than 8 blocks from the edges you come in by (KR-45);
 - without cutting, Route 15's road is still reached (the maze's short cut is only a short cut), but the dell and the
   berry garden aren't;
 - every trainer, Pokémon and tree stands on open ground, no two on one block, and each trainer sees some of the way;
 - the sign can be read, and the hidden items are on open ground;
-- the strip old Route 13 draws is forest and dirt only.
+- the top seven rows, which old Route 13 drew, are forest and dirt only (kept from then).
 
 Build it from the repository root with `sh project/art/route14-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).

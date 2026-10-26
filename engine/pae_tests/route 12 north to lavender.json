@@ -1,0 +1,38 @@
+{
+ "note": "Up the way from the gatehouse's back onto Lavender's road south.",
+ "created": "2026-10-27 11:00",
+ "start": {
+  "map": "Route12_Frlg",
+  "x": 12,
+  "y": 2,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 14,
+  "y": 31,
+  "in_battle": false
+ }
+}

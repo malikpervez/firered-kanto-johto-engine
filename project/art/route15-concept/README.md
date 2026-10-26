@@ -26,7 +26,7 @@ It has:
 
 The gatehouse's warps keep their numbers: the west doorway (0) and the east one (1). The trainers, the TM, the
 Pokémon about and the sign keep their order. Route 14's tree to cut, shown across the join, is where it stands on the
-rebuilt Route 14, at its berry garden (86,18).
+rebuilt Route 14, at its berry garden (92,18).
 
 The pieces are the kit's and the gatehouse (bank 7). The route takes 26 of its 384 tiles.
 

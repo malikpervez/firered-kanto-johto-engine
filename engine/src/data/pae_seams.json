@@ -37,10 +37,12 @@
  ],
  "Route12_Frlg": [
   "Route11_Frlg",
-  "LavenderTown_Frlg"
+  "LavenderTown_Frlg",
+  "Route13_Frlg"
  ],
  "Route13_Frlg": [
-  "Route14_Frlg"
+  "Route14_Frlg",
+  "Route12_Frlg"
  ],
  "Route14_Frlg": [
   "Route15_Frlg",

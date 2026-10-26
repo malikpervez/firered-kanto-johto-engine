@@ -40,6 +40,8 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Fuchsia City | 48×40 | 48×40 | kit + `gTileset_FuchsiaConcept` | left: Route 18 (offset 10), right: Route 15 (offset 16), down: Route 19 (offset 12) |
 | Route 15 | 80×24 | 96×32 | kit + `gTileset_Route15Concept` | left: Fuchsia City (offset −16), right: Route 14 (offset −36) |
 | Route 14 | 26×62 | 26×62 | kit (and an empty `gTileset_Route14Concept`) | up: Route 13 (offset −4), left: Route 15 (offset 36) |
+| Route 13 | 104×32 | 104×32 | kit (and an empty `gTileset_Route13Concept`) | up: Route 12 (offset 65), down: Route 14 (offset 4) |
+| Route 12 | 38×80 | 38×90 | kit + `gTileset_Route12Concept` | up: Lavender Town (offset −2), left: Route 11 (offset 27), down: Route 13 (offset −65) |
 | Saffron City | 60×48 | 66×55 | kit + `gTileset_SaffronConcept` | none compiled (KR-53): Routes 5, 6, 7 and 8 join its twin `SaffronCity_Connection`, still the old layout (KR-59); its four gatehouses are the ways out |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
@@ -72,17 +74,18 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 18 ↔ Fuchsia | Route 18 rows 8–10 = Fuchsia rows 18–20 | the road east out of the woods onto Fuchsia's main street |
 | Fuchsia ↔ Route 15 | Fuchsia rows 20–23 = Route 15 rows 4–7 | the main street east to Route 15's gatehouse |
 | Route 15 ↔ Route 14 | Route 15 rows 14–17 = Route 14 rows 50–53 | the low road east onto Route 14's crossroads |
-| Route 14 ↔ Route 13 | Route 14 16–19 = Route 13 20–23 | the way in down through the woods from Route 13's path (Route 13 isn't rebuilt) |
+| Route 14 ↔ Route 13 | Route 14 16–19 = Route 13 20–23 | the way in down through the woods from Route 13's coast road |
+| Route 13 ↔ Route 12 | Route 13 86–89 = Route 12 21–24 | Silence Bridge's boardwalk over the bay, down onto Route 13's landing |
 | Fuchsia ↔ Route 19 | Fuchsia 19–28 = Route 19 7–16 | the beach path down onto Route 19's beach (Route 19 isn't rebuilt) |
 | Saffron's gates | not joins: warps | each avenue ends at a gatehouse whose door is a warp into the gatehouse between Saffron and its route: north (29–30,2) to Route 5's, west (2–3,21) to Route 7's, east (56–57,21) to Route 8's, south (29–30,45, entered walking south) to Route 6's |
 | Route 7 ↔ Saffron | Route 7 row 9 = Saffron row 27 | not walked across: the gate's doors on Route 7 (18–19,9) lead through the gatehouse to Saffron's own west gate door |
-| Lavender ↔ Route 12 | Lavender 13–15 = Route 12 11–13 | the road south from the square onto Route 12's sandy path (Route 12 isn't rebuilt; KR-50, KR-51) |
+| Lavender ↔ Route 12 | Lavender 13–15 = Route 12 11–13 | the road south from the square down through the woods to Route 12's north gatehouse (KR-50) |
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck |
 | Route 5 ↔ Saffron | Route 5 24–25 = Saffron 28–29 | not walked across: the gate's top door on Route 5 (24–25,30) leads through the gatehouse to Saffron's own gate door below it (28–29,5). Old Saffron draws its own copy of the gatehouse at its top |
 | Saffron ↔ Route 6 | Saffron 28–29 = Route 6 40–41 | not walked across: Saffron's south gate door (28–29,46) leads through the gatehouse to its door on Route 6 (40–41,5) |
 | Route 6 ↔ Vermilion | Route 6 40–42 = Vermilion 32–34 | the road down into Vermilion's plaza |
 | Vermilion ↔ Route 11 | Vermilion rows 11–14 = Route 11 rows 14–17 | the main street east onto Route 11's road |
-| Route 11 ↔ Route 12 | Route 11 rows 17–19 = Route 12 rows 44–46 | the road east past the gatehouse (Route 12 isn't rebuilt; Snorlax sleeps on its side, reached through the gatehouse) |
+| Route 11 ↔ Route 12 | Route 11 rows 17–19 = Route 12 rows 44–46 | the road east past Route 11's gatehouse onto Silence Bridge's fishers' deck; Snorlax sleeps in the neck south of it |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -104,10 +107,10 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 5 | Cerulean City | pae (both from the kit: no palettes). None with old Saffron: it has no tile slot left for Route 5's strip, and neither can see the other (`--skip`, KR-34). Its hand-made seam is gone |
 | Route 6 | Vermilion City | pae (both from the kit: Vermilion's own palettes fit in Route 6's banks 10–12, exactly). None with old Saffron (KR-34) |
 | Vermilion City | Route 6, Route 11 | pae (both from the kit: their seams fit exactly). Old Vermilion's hand-made seam is gone |
-| Route 11 | Vermilion City, Route 12 | pae: Route 12's palettes fit in banks 10–11. Old Route 12 has no room for two of Route 11's palettes and draws them in its nearest colours (KR-39). Old Route 11's hand-made seam is gone |
+| Route 11 | Vermilion City, Route 12 | pae (all three from the kit: none with Route 12; KR-39 went with old Route 12). Old Route 11's hand-made seam is gone |
 | Route 9 | Cerulean City, Route 10 | pae (all three from the kit: only each other's own tiles, no palettes). Old Route 9's hand-made seam is gone |
 | Route 10 | Route 9, Lavender Town | pae (all three from the kit: their seams fit exactly) |
-| Lavender Town | Route 10, Route 8, Route 12 | pae: old Route 12's palettes fit in banks 10–12 (Routes 10 and 8 are the kit's) |
+| Lavender Town | Route 10, Route 8, Route 12 | pae (all four from the kit: 4 pieces for Routes 10's and 8's own metatiles, none for Route 12) |
 | Route 8 | Lavender Town | pae (both from the kit: no palettes). None with old Saffron, as for Routes 5 and 6 (KR-34): no block of Route 8 is in view of it, and old Saffron draws no neighbour (KR-53) |
 | Route 7 | Celadon City | pae (both from the kit: only each other's own tiles, no palettes; KR-54 is gone with old Celadon). None with old Saffron (KR-34, KR-53). Old Route 7's hand-made seam is gone |
 | Saffron City | none | no compiled joins (KR-53), so no seams; the routes skip their seam with its twin (KR-34) |
@@ -117,7 +120,9 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 18 | Route 17, Fuchsia City | pae (all three from the kit: 37 pieces for Fuchsia's own metatiles in its strip, the Gym's, in bank 9; none for Route 17) |
 | Fuchsia City | Route 18, Route 15, Route 19 | pae: old Route 19's palettes in banks 10–11 (17 pieces); it draws Fuchsia's bottom seven rows (forest, lawn, road, dirt and hedges only), 63 pieces. None with Route 15 (both the kit's) |
 | Route 15 | Fuchsia City, Route 14 | pae (all three from the kit: no seam with either) |
-| Route 14 | Route 13, Route 15 | pae: old Route 13's palettes in banks 7, 9 and 10 (31 pieces); it draws Route 14's top seven rows (forest and dirt only) in its slots 8–9 (45 pieces). None with Route 15 |
+| Route 14 | Route 13, Route 15 | pae (all three from the kit: no seam with either) |
+| Route 13 | Route 12, Route 14 | pae (all three from the kit: no seam with either) |
+| Route 12 | Lavender Town, Route 11, Route 13 | pae (all from the kit: 30 pieces for Route 11's own metatiles in its strip, in bank 10). Old Route 12's hand-made seam is gone (Route 21 South's seam kept the water frames it shared with it) |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town | pae |
@@ -304,3 +309,15 @@ Check these whenever a map is rebuilt, moved or resized:
   Route 15's offset is −36 and its clone of Route 14's tree to cut moved to the tree's new place (86,18). Route 14
   has no warps; its trainers, trees to cut, twins, Shroomish, sign and hidden items moved (they keep their order).
   Route 15's seam for old Route 14 is gone (both are the kit's now); old Route 13 got a pae seam for it.
+- Routes 13 and 12 rebuilt together: old Route 12 had no tile slot left for a seam to a new Route 13. Route 13 at its
+  old size (104×32), its joins where they were (Route 12's boardwalk at columns 86–89, offset 65; Route 14's way in
+  at 20–23, offset 4); no warps, its trainers, tree to cut, Pokémon, signs and hidden item moved (they keep their
+  order). Route 12 smaller (38×80, was 38×90) with its joins where they were (Lavender's road at columns 10–13,
+  offset −2; Route 11's road at rows 44–47, offset 27; Route 13's boardwalk at 21–24, offset −65). Its warps kept
+  their numbers: the fishing house (0), the north gatehouse's back doorway (1, 2) and front door (3); warp 4 is new,
+  the front door's right half (to the gatehouse's other south door). Its people, items and hidden items moved (they
+  keep their order). Old Route 12's hand-made seam was removed from `kanto_connection_seam.c` (Route 21 South's
+  water frames, which it shared by alias, are now Route 21 South's own); Lavender's, Route 11's and Route 14's pae
+  seams for the old routes are gone (all are the kit's now).
+- Route 14's berry garden moved east (its tree to cut at 12,54, was 6,54): the game hid the tree for anyone coming
+  from Route 15 (KR-45, KR-69). Route 15's clone of it moved with it (92,18).

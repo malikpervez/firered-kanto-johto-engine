@@ -37,13 +37,13 @@ pae map place $M object 8 5 44 $P    # Lukas, riding up and down the bikers' roa
 pae map place $M object 9 13 45 $P   # Benny, wandering in the lower meadow
 pae map place $M object 10 19 16 $P  # the tree to cut in the maze's third fence: the short cut
 pae map place $M object 11 15 42 $P  # the tree to cut in the dell's hedge
-pae map place $M object 12 6 54 $P   # the tree to cut at the berry garden's gap (Route 15 sees it across the join)
+pae map place $M object 12 12 54 $P  # the tree to cut at the berry garden's gap
 pae map place $M object 13 12 49 $P  # Jan and Kiri, who battle together, above the crossroads
 pae map place $M object 14 13 49 $P
 pae map place $M object 15 18 42 $P  # the Shroomish, in the dell
 pae map place $M bg 0 15 8 $P        # the route sign, at the foot of the way in from Route 13
 pae map place $M bg 1 21 9 $P        # the Zinc, hidden by the shore at the maze's start
-pae map place $M bg 2 9 56 $P        # the Pinap Berry, hidden in the berry garden
+pae map place $M bg 2 15 56 $P       # the Pinap Berry, hidden in the berry garden
 # everyone stands at the ground's elevation
 python3 - <<'PY'
 import json

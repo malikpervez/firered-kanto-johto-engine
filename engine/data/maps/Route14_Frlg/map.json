@@ -184,7 +184,7 @@
     {
       "local_id": "LOCALID_ROUTE14_BORDER_TREE",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
-      "x": 6,
+      "x": 12,
       "y": 54,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -259,7 +259,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 9,
+      "x": 15,
       "y": 56,
       "elevation": 3,
       "item": "ITEM_PINAP_BERRY",

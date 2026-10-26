@@ -2858,13 +2858,6 @@
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
     },
-    "Route12_Frlg_FireRedGeometry_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route12_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
     "SaffronCity_Connection_Frlg_FireRedGeometry_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/SaffronCity_hns/border.bin",
@@ -3029,20 +3022,6 @@
     "OneIsland_TreasureBeach_Layout_Border": {
       "owner": "CinnabarIsland_Layout_Border",
       "source_filepath": "data/layouts/OneIsland_TreasureBeach_Frlg/border.bin",
-      "owner_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
-      "bytes": 8,
-      "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"
-    },
-    "Route12_Layout_Border": {
-      "owner": "CinnabarIsland_Layout_Border",
-      "source_filepath": "data/layouts/Route12_Frlg/border.bin",
-      "owner_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
-      "bytes": 8,
-      "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"
-    },
-    "Route13_Layout_Border": {
-      "owner": "CinnabarIsland_Layout_Border",
-      "source_filepath": "data/layouts/Route13_Frlg/border.bin",
       "owner_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
       "bytes": 8,
       "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"
@@ -5143,13 +5122,6 @@
     "WhirlIslands_Descent_hns_Layout_Border": {
       "owner": "CianwoodCity_hns_Layout_Border",
       "source_filepath": "data/layouts/WhirlIslands_Descent_hns/border.bin",
-      "owner_filepath": "data/layouts/CianwoodCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "a99112d532b404a0dbf8a92a6857bcff981021db103446ee87fd658f31a7d218"
-    },
-    "Route13_Frlg_FireRedGeometry_Border": {
-      "owner": "CianwoodCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route13_hns/border.bin",
       "owner_filepath": "data/layouts/CianwoodCity_hns/border.bin",
       "bytes": 8,
       "sha256": "a99112d532b404a0dbf8a92a6857bcff981021db103446ee87fd658f31a7d218"
