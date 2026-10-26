@@ -45,8 +45,14 @@
  "Route5_Frlg": [
   "CeruleanCity_Frlg"
  ],
+ "Route6_Frlg": [
+  "VermilionCity_Frlg"
+ ],
  "Route9_Frlg": [
   "CeruleanCity_Frlg"
+ ],
+ "VermilionCity_Frlg": [
+  "Route6_Frlg"
  ],
  "ViridianCity_Frlg": [
   "Route1_Frlg",

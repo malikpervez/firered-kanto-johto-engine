@@ -18,9 +18,12 @@ sh project/art/cerulean-concept/build.sh
 sh project/art/route24-concept/build.sh
 sh project/art/route25-concept/build.sh
 sh project/art/route5-concept/build.sh
+sh project/art/route6-concept/build.sh
 cd engine
 for m in Route1_Frlg PalletTown_Frlg ViridianCity_Frlg Route22_Frlg Route2_Frlg PewterCity_Frlg Route3_Frlg Route4_Frlg \
         CeruleanCity_Frlg Route24_Frlg Route25_Frlg; do
     pae seam build $m -p .
 done
-pae seam build Route5_Frlg --skip SaffronCity_Connection_Frlg -p .  # (no room in old Saffron: see its build.sh)
+for m in Route5_Frlg Route6_Frlg; do  # (no room in old Saffron: see their build.sh)
+    pae seam build $m --skip SaffronCity_Connection_Frlg -p .
+done

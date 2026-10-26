@@ -33,8 +33,8 @@ outdoor art. They stay the old maps; their doors and warps keep working.
 | 4 | Cerulean City | 58×51 | 58×51 | #40 | The lake town: the bridge road, the cave's island, the robbed house's backyard, the neck south. With Route 4: old Cerulean had no room for the seam between them. |
 | 5 | Route 24 | 30×22 | 30×22 | #41 | Nugget Bridge: five trainers across it that can't be passed unseen, the Rocket at its end, a shore and a meadow off Route 25. |
 | 6 | Route 25 | 112×35 | 70×24 | #42 | Cerulean's cape: the road under a ridge through two necks a trainer holds each, the garden behind the tree to cut, the trail below, Bill's cottage on the headland. |
-| 7 | Route 5 | 68×46 | 50×36 | this PR | The garden road: the lane out of Cerulean's neck, the Day Care and its paddock, the Underground Path's hut, Saffron's north gate. |
-| 8 | Route 6 | 63×36 | | | |
+| 7 | Route 5 | 68×46 | 50×36 | #43 | The garden road: the lane out of Cerulean's neck, the Day Care and its paddock, the Underground Path's hut, Saffron's north gate. |
+| 8 | Route 6 | 63×36 | 56×32 | this PR | The park south of Saffron: its south gate, the road to Vermilion in no trainer's sight, the Underground Path's hut, the pond with the couple on its shore. |
 | 9 | Vermilion City | 71×78 | | | Harbour (the S.S. Anne), Fan Club, Cut tree to the Gym. |
 | 10 | Route 11 | 72×40 | | | Diglett's Cave's south mouth, the east gate. |
 | 11 | Route 9 | 65×60 | | | |
@@ -111,3 +111,4 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-27 | At Cerulean's joins the new and old roads didn't match: Nugget Bridge's last span (the kit's brown dock) met old Route 24's yellow planks, and Route 4's dirt meets Cerulean's cobbles with a hard line (as KR-10). | Cerulean | the bridge fixed by Route 24's rebuild, and its join with Route 25 by Route 25's (KR-29). The dirt and cobbles: cosmetic, open |
 | KR-29 | Old Route 25 has two palette banks free for the new Route 24's strip, so four of its palettes are drawn in their nearest colours (at most 80 RGB steps off), and the bridge's brown planks meet Route 25's yellow ones. | Route 24 | fixed by Route 25's rebuild (both from the kit: the seam needs no palettes) |
 | KR-33 | The kit's sea is solid (drawn with a rocky shore, to be looked at): Route 25's sea can't be surfed, and its two Luvdisc, which should swim in a pattern, stay where they are (seen over 13 s). Route 25's water Pokémon are in the lake's channel by the bridge. | Route 25 | decided: keep (a sea to surf would need the sea without its rocky shore) |
+| KR-35 | Old Vermilion has no palette slot for the new Route 6's strip: walking north out of Vermilion, Route 6's forest, grass and ground are drawn in Vermilion's nearest colours (a little teal and grey, at most 82 RGB steps off); Route 6 shows three of Vermilion's palettes a little off (at most 50). | Route 6 | cosmetic, open (Vermilion is next) |

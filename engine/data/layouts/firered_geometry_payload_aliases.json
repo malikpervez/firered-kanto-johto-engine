@@ -2858,13 +2858,6 @@
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
     },
-    "Route6_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route6_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
     "Route7_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/Route7_Frlg/border.bin",

@@ -283,6 +283,14 @@ STEPS = [
          expect=dict(map="Route5_Frlg", xy=(30, 0))),
     dict(name="underground-path", what="Down Route 5's road and into the Underground Path's hut", walk=(35, 25),
          inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="UndergroundPath_NorthEntrance_Frlg", xy=(13, 12))),
+    dict(name="tunnel", what="Down the hut's stairs into the Underground Path (stand on them and walk east)",
+         walk=(12, 9), inputs=f"UP*{hold(1)}, wait 20, RIGHT*20, wait 250", expect=dict(map="UndergroundPath_NorthSouthTunnel_Frlg", xy=(3, 4))),
+    dict(name="tunnel-south", what="Along the tunnel under Saffron and up the stairs at its south end (east off them)",
+         walk=(2, 37), inputs=f"DOWN*{hold(1)}, wait 20, RIGHT*20, wait 250", expect=dict(map="UndergroundPath_SouthEntrance_Frlg", xy=(14, 8))),
+    dict(name="route6", what="Out of the south hut onto Route 6", walk=(13, 11),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route6_Frlg", xy=(46, 12))),
+    dict(name="vermilion", what="Down Route 6's road (in no trainer's sight) to Vermilion's stairs", walk=(41, 31),
+         inputs=f"DOWN*{hold(1)}, wait 200", expect=dict(map="VermilionCity_Frlg", xy=(33, 0))),
 ]
 
 
