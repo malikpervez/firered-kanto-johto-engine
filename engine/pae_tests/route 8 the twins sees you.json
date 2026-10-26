@@ -1,0 +1,72 @@
+{
+ "note": "Walk into the twins Eli and Anne's line: they see you and battle.",
+ "created": "2026-10-26 13:00",
+ "start": {
+  "map": "Route8_Frlg",
+  "x": 51,
+  "y": 12,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_WARTORTLE lv40 MOVE_WATER_GUN",
+   "SPECIES_PIKACHU lv40 MOVE_THUNDERBOLT",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route8_Frlg",
+  "x": 51,
+  "y": 10,
+  "in_battle": true
+ },
+ "accepted": "2026-10-26 12:38"
+}

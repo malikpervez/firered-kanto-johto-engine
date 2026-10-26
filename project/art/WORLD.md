@@ -30,7 +30,8 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 11 | 60×32 | 72×40 | kit + `gTileset_Route11Concept` | left: Vermilion City (offset 3), right: Route 12 (offset −27) |
 | Route 9 | 60×28 | 65×60 | kit + `gTileset_Route9Concept` | left: Cerulean City (offset −20), right: Route 10 (offset 0) |
 | Route 10 | 38×60 | 38×90 | kit + `gTileset_Route10Concept` | left: Route 9 (offset 0), down: Lavender Town (offset 4) |
-| Lavender Town | 38×32 | 38×31 | kit + `gTileset_LavenderConcept` | up: Route 10 (offset −4), left: Route 8 (offset −10), down: Route 12 (offset 2) |
+| Lavender Town | 38×32 | 38×31 | kit + `gTileset_LavenderConcept` | up: Route 10 (offset −4), left: Route 8 (offset −4), down: Route 12 (offset 2) |
+| Route 8 | 60×30 | 68×40 | kit + `gTileset_Route8Concept` | left: Saffron City's twin `SaffronCity_Connection` (offset −15), right: Lavender Town (offset 4) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -53,7 +54,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 8–10 | the road east into Route 9's forest neck |
 | Route 9 ↔ Route 10 | Route 9 rows 17–19 = Route 10 rows 17–19 | the road out into Route 10's clearing |
 | Route 10 ↔ Lavender | Route 10 16–20 = Lavender 12–16 | the valley road down into Lavender's north road |
-| Lavender ↔ Route 8 | Lavender rows 9–11 = Route 8 rows 19–21 | the street west (Route 8 isn't rebuilt) |
+| Lavender ↔ Route 8 | Lavender rows 9–11 = Route 8 rows 13–15 | the street west onto Route 8's road |
+| Route 8 ↔ Saffron | Route 8 row 12 = Saffron row 27 | not walked across: the gate's doors on Route 8 (10–11,12) lead through the gatehouse to Saffron's own east gate door (62,27). Old Saffron draws its own half of the gatehouse, and no neighbour (KR-53) |
 | Lavender ↔ Route 12 | Lavender 13–15 = Route 12 11–13 | the road south from the square onto Route 12's sandy path (Route 12 isn't rebuilt; KR-50, KR-51) |
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck |
 | Route 5 ↔ Saffron | Route 5 24–25 = Saffron 28–29 | not walked across: the gate's top door on Route 5 (24–25,30) leads through the gatehouse to Saffron's own gate door below it (28–29,5). Old Saffron draws its own copy of the gatehouse at its top |
@@ -85,7 +87,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 11 | Vermilion City, Route 12 | pae: Route 12's palettes fit in banks 10–11. Old Route 12 has no room for two of Route 11's palettes and draws them in its nearest colours (KR-39). Old Route 11's hand-made seam is gone |
 | Route 9 | Cerulean City, Route 10 | pae (all three from the kit: only each other's own tiles, no palettes). Old Route 9's hand-made seam is gone |
 | Route 10 | Route 9, Lavender Town | pae (all three from the kit: their seams fit exactly) |
-| Lavender Town | Route 10, Route 8, Route 12 | pae: old Route 8's and old Route 12's palettes fit in banks 10–12 |
+| Lavender Town | Route 10, Route 8, Route 12 | pae: old Route 12's palettes fit in banks 10–12 (Routes 10 and 8 are the kit's) |
+| Route 8 | Lavender Town | pae (both from the kit: no palettes). None with old Saffron, as for Routes 5 and 6 (KR-34): no block of Route 8 is in view of it, and old Saffron draws no neighbour (KR-53) |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town | pae |
@@ -211,3 +214,9 @@ Check these whenever a map is rebuilt, moved or resized:
   their places. The heal spot
   moved with the Center (7,7, its old-map override dropped); the Friends' camp stayed round 13,13. Old Lavender had
   no hand-made seam.
+- Route 8 rebuilt smaller (60×30, was 68×40, half of it mountain) and its rows moved: Lavender's street meets it at
+  rows 13–15 (Lavender's offset −4, was −10), and its gate door is at row 12, level with Saffron's own east gate door
+  as before (offset −15, was −6; old Saffron's offset to it set to match, though Saffron's joins aren't compiled:
+  KR-53). Every warp kept its number: the Underground Path's hut (18,12) and the gate (10,12), whose right door block
+  is a new warp 2 to the same door inside (KR-52). The trainers, trees, Pokémon, sign and hidden berries moved;
+  Rich turned to the track and the bikers ride its loop (`build.sh`). Old Route 8 had no hand-made seam.

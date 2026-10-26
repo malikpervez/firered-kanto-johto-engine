@@ -33,9 +33,9 @@
  "threshold": 0.01,
  "expect": {
   "map": "Route8_Frlg",
-  "x": 67,
-  "y": 20,
+  "x": 59,
+  "y": 14,
   "in_battle": false
  },
- "accepted": "2026-10-26 09:50"
+ "accepted": "2026-10-26 12:37"
 }

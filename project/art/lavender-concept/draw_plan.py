@@ -4,8 +4,8 @@ make_art.py builds the map from the plan. Run from the repository root:
 python3 project/art/lavender-concept/draw_plan.py
 
 Lavender is the quiet town in a hollow of the hills, where people come to remember their Pokémon. It is 38x32 blocks
-(old Lavender was 38x31), as wide as before. Route 10's road meets the top at columns 12-16 and Route 8's the left
-edge at rows 9-11, where they met the old town; Route 12's road meets the bottom at columns 13-15, under the square
+(old Lavender was 38x31), as wide as before. Route 10's road meets the top at columns 12-16, where it met the old
+town, and Route 8's the left edge at rows 9-11; Route 12's road meets the bottom at columns 13-15, under the square
 (Route 12 moves 4 blocks east under the town to meet it). It has:
 - **the square**, where the three roads meet: the Pokémon Center and the Poké Mart on its north side either side of
   the road from Route 10, the town sign, the Friends' camp (round 13,13, as before);
