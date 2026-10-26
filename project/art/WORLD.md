@@ -105,8 +105,10 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
 
-Maps built from the kit share the primary tileset, so between them the seams only copy secondary tiles. When both
-neighbours are rebuilt from the kit with the same secondary tileset, the seam isn't needed at all.
+Maps built from the kit share the primary tileset, so between them a seam only has pieces for the neighbour's own
+(secondary) metatiles in its strip: a block of the kit's own is drawn as the map's own metatile, the same one, and
+needs none (pae PR #30; before it, every block of the strip had a piece, and Celadon ran out of metatile ids for
+them). When a strip holds only the kit's metatiles, there is no seam at all.
 
 A seam needs a palette slot in the viewing map for every palette of the strip it shows (the 7 rows or columns
 beside the join) that the viewing map doesn't have. Old maps have few free: Viridian's hand-made seam for Route 22
