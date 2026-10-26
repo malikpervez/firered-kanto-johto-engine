@@ -1,0 +1,40 @@
+{
+ "note": "Up into Diglett's Cave's mouth in the ridge.",
+ "created": "2026-10-26 07:21",
+ "start": {
+  "map": "Route11_Frlg",
+  "x": 16,
+  "y": 8,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "DiglettsCave_SouthEntrance_Frlg",
+  "x": 3,
+  "y": 5,
+  "in_battle": false
+ }
+}

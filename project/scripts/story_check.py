@@ -298,6 +298,16 @@ STEPS = [
          + B(6) + "wait 100", expect=dict(map="VermilionCity_PokemonCenter_1F_Frlg", xy=(7, 4))),
     dict(name="vermilion-leave-center", what="Back out to the plaza",
          inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250", expect=dict(map="VermilionCity_Frlg", xy=(28, 7))),
+    dict(name="route11", what="East along Vermilion's main street onto Route 11", walk=(59, 12),
+         inputs=f"RIGHT*{hold(1)}, wait 200", expect=dict(map="Route11_Frlg", xy=(0, 15))),
+    dict(name="route11-gatehouse", what="Along Route 11's road (in no trainer's sight) into the gatehouse before "
+         "Route 12", walk=(53, 16), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="Route11_EastEntrance_1F_Frlg", xy=(1, 6))),
+    dict(name="route11-leave-gatehouse", what="Back out of the gatehouse by its west door (stand on it and walk "
+         "west); Snorlax sleeps on Route 12's road", inputs="wait 30, LEFT*20, wait 250",
+         expect=dict(map="Route11_Frlg", xy=(53, 16))),
+    dict(name="back-to-vermilion", what="Back west along the road into Vermilion", walk=(0, 15),
+         inputs=f"LEFT*{hold(1)}, wait 200", expect=dict(map="VermilionCity_Frlg", xy=(59, 12))),
     dict(name="ss-anne", what="Down the pier: the ferry sailor checks the S.S. Ticket, and onto the S.S. Anne's "
          "gangway", walk=(37, 39), inputs=f"DOWN*{hold(1)}, wait 30, " + A(6) + f"DOWN*{hold(1)}, wait 250",
          expect=dict(map="SSAnne_Exterior_Frlg", xy=(32, 5))),

@@ -35,8 +35,8 @@ outdoor art. They stay the old maps; their doors and warps keep working.
 | 6 | Route 25 | 112×35 | 70×24 | #42 | Cerulean's cape: the road under a ridge through two necks a trainer holds each, the garden behind the tree to cut, the trail below, Bill's cottage on the headland. |
 | 7 | Route 5 | 68×46 | 50×36 | #43 | The garden road: the lane out of Cerulean's neck, the Day Care and its paddock, the Underground Path's hut, Saffron's north gate. |
 | 8 | Route 6 | 63×36 | 56×32 | #44 | The park south of Saffron: its south gate, the road to Vermilion in no trainer's sight, the Underground Path's hut, the pond with the couple on its shore. |
-| 9 | Vermilion City | 71×78 | 60×42 | this PR | The harbour city: the plaza with the Center and Mart, the Machop's lot, the Gym behind its tree to cut, the Friends' park, the quay, the long pier to the S.S. Anne's gangway. |
-| 10 | Route 11 | 72×40 | | | Diglett's Cave's south mouth, the east gate. |
+| 9 | Vermilion City | 71×78 | 60×42 | #45 | The harbour city: the plaza with the Center and Mart, the Machop's lot, the Gym behind its tree to cut, the Friends' park, the quay, the long pier to the S.S. Anne's gangway. |
+| 10 | Route 11 | 72×40 | 60×32 | this PR | The road east out of Vermilion between two fields of grass: Diglett's Cave's mouth in the ridge to the north with the Friends' clearing below it, the pond to the south, the gatehouse before Route 12 (Snorlax). Ten trainers, none of them in sight of the road. |
 | 11 | Route 9 | 65×60 | | | |
 | 12 | Route 10 | 38×90 | | | Rock Tunnel's mouths, the Power Plant by water. |
 | 13 | Lavender Town | 38×31 | | | Pokémon Tower. |
@@ -115,3 +115,5 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-36 | The boats on the kit's pond show a faint square of lighter water round them (the boat's own water doesn't quite match the pond's). | Vermilion | cosmetic, open |
 | KR-37 | At the pier's end people show a faint reflection on the gangway: the reflection looks at the blocks below them, and below the gangway is the map's border, which is water. | Vermilion | cosmetic, open |
 | KR-38 | The towns share the same few buildings (Viridian's Gym and Trainer School, its three houses): Vermilion's Gym, Fan Club and houses are Cerulean's. FireRed's Gyms look alike too, but new packs for the other buildings would set the towns apart. | Vermilion | open (an idea: more building packs) |
+| KR-39 | Old Route 12 has no palette slot for two of the new Route 11's palettes: at Route 12's west end, Route 11's strip has its plants drawn in Route 12's nearest colours (at most 104 RGB steps off) and its ground in them (at most 74). Route 11 shows Route 12 with Route 12's own colours. The new dirt road also meets old Route 12's sandy path with no edge between them. | Route 11 | cosmetic, open (goes when Route 12 is rebuilt) |
+| KR-40 | Route 11's gatehouse no longer stands across the road (the road passes south of it, as Route 2's gate pack has its doors only at the bottom), but its inside still has a west and an east door: in by the left half of its double door you come in at the west door, by the right half at the east one, and each leads back out by its half. A gate pack with a door at each end, set across a road, would match the inside. | Route 11 | cosmetic, open (an idea: an east-west gate pack) |

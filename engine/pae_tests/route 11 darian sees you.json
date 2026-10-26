@@ -1,0 +1,70 @@
+{
+ "note": "Down into the north grass next to Darian: he sees you.",
+ "created": "2026-10-26 07:21",
+ "start": {
+  "map": "Route11_Frlg",
+  "x": 44,
+  "y": 3,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_WARTORTLE lv40 MOVE_WATER_GUN",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     28
+    ],
+    [
+     0,
+     250
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route11_Frlg",
+  "x": 44,
+  "y": 5,
+  "in_battle": true
+ }
+}

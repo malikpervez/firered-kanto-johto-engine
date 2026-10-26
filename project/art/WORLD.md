@@ -27,6 +27,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 5 | 50×36 | 68×46 | kit + `gTileset_Route5Concept` | up: Cerulean City (offset 8), down: Saffron City's twin `SaffronCity_Connection` (offset −4) |
 | Route 6 | 56×32 | 63×36 | kit + `gTileset_Route6Concept` | up: `SaffronCity_Connection` (offset 12), down: Vermilion City (offset 8) |
 | Vermilion City | 60×42 | 71×78 | kit + `gTileset_VermilionConcept` | up: Route 6 (offset −8), right: Route 11 (offset −3) |
+| Route 11 | 60×32 | 72×40 | kit + `gTileset_Route11Concept` | left: Vermilion City (offset 3), right: Route 12 (offset −27) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -51,7 +52,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 5 ↔ Saffron | Route 5 24–25 = Saffron 28–29 | not walked across: the gate's top door on Route 5 (24–25,30) leads through the gatehouse to Saffron's own gate door below it (28–29,5). Old Saffron draws its own copy of the gatehouse at its top |
 | Saffron ↔ Route 6 | Saffron 28–29 = Route 6 40–41 | not walked across: Saffron's south gate door (28–29,46) leads through the gatehouse to its door on Route 6 (40–41,5) |
 | Route 6 ↔ Vermilion | Route 6 40–42 = Vermilion 32–34 | the road down into Vermilion's plaza |
-| Vermilion ↔ Route 11 | Vermilion rows 11–14 = Route 11 rows 14–17 | the main street east (Route 11 isn't rebuilt) |
+| Vermilion ↔ Route 11 | Vermilion rows 11–14 = Route 11 rows 14–17 | the main street east onto Route 11's road |
+| Route 11 ↔ Route 12 | Route 11 rows 17–19 = Route 12 rows 44–46 | the road east past the gatehouse (Route 12 isn't rebuilt; Snorlax sleeps on its side, reached through the gatehouse) |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -72,7 +74,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Cerulean City | Route 4, Route 5, Route 9, Route 24 | pae: 137 adapters, palette slots 10, 11, 12 (since Route 24 is from the kit, every colour fits). Its hand-made seam for the old Cerulean is gone |
 | Route 5 | Cerulean City | pae (both from the kit: no palettes). None with old Saffron: it has no tile slot left for Route 5's strip, and neither can see the other (`--skip`, KR-34). Its hand-made seam is gone |
 | Route 6 | Vermilion City | pae (both from the kit: Vermilion's own palettes fit in Route 6's banks 10–12, exactly). None with old Saffron (KR-34) |
-| Vermilion City | Route 6, Route 11 | pae: old Route 11's palettes fit in banks 10–12, exactly; Route 11 shows the new town with its own banks 4, 6, 7, beside its hand-made seam. Old Vermilion's hand-made seam is gone |
+| Vermilion City | Route 6, Route 11 | pae (both from the kit: their seams fit exactly). Old Vermilion's hand-made seam is gone |
+| Route 11 | Vermilion City, Route 12 | pae: Route 12's palettes fit in banks 10–11. Old Route 12 has no room for two of Route 11's palettes and draws them in its nearest colours (KR-39). Old Route 11's hand-made seam is gone |
 | Route 9 | Cerulean City | pae (the old map), beside its hand-made seam |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
@@ -178,3 +181,9 @@ Check these whenever a map is rebuilt, moved or resized:
   relative to it. The heal spot moved with the Center (28,7, `src/data/heal_locations.json`, its old-map override
   dropped); the Friends' camp stayed at 30,19. Old Vermilion's hand-made seam was removed from
   `kanto_connection_seam.c`; Route 11 (still the old map) got a pae seam for it.
+- Route 11 rebuilt smaller (60×32, was 72×40) with its joins where they were (Vermilion's main street in at
+  rows 14–17, Route 12's road out at 17–19). Every warp kept its number: Diglett's Cave's mouth (16,6) and the
+  gatehouse's two doors (53–54,15). Its trainers, items, Pokémon, sign and hidden item moved; the trainers keep
+  their facings and sights, and the walkers keep near their places (`build.sh`). The Friends' clearing stayed
+  round 25,7. Old Route 11's hand-made seam was removed from `kanto_connection_seam.c`; old Route 12 got a pae
+  seam for it, two of its palettes nearest-matched (KR-39).

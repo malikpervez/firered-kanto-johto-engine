@@ -1567,3 +1567,6 @@ const u16 gMetatileAttributes_Route6Concept[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_VermilionConcept[] = INCBIN_U16("data/tilesets/secondary/vermilion_concept/metatiles.bin");
 const u16 gMetatileAttributes_VermilionConcept[] = INCBIN_U16("data/tilesets/secondary/vermilion_concept/metatile_attributes.bin");
+
+const u16 gMetatiles_Route11Concept[] = INCBIN_U16("data/tilesets/secondary/route11_concept/metatiles.bin");
+const u16 gMetatileAttributes_Route11Concept[] = INCBIN_U16("data/tilesets/secondary/route11_concept/metatile_attributes.bin");
