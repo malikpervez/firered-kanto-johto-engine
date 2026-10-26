@@ -9,7 +9,7 @@ are where they are.
 The route is 80×24 blocks (old Route 15 was 96×32, its south half solid forest). Its joins:
 - Fuchsia's main street (its rows 20–23) comes in at the left edge, rows 4–7 (offset −16, was −15: the road moved up a
   row to sit on the forest's grid);
-- Route 14's road (its rows 51–54) meets the right edge at rows 14–17 (offset −37, as before).
+- Route 14's road (its rows 50–53) meets the right edge at rows 14–17 (offset −36, was −37: Route 14, rebuilt, moved its road up a row).
 
 It has:
 - **the gatehouse** at Fuchsia's edge, across the road: Route 16's Cycling Road gatehouse, with its doorways at its
@@ -25,16 +25,14 @@ It has:
 - **the lookout** at the high road's east end, where TM18 lies.
 
 The gatehouse's warps keep their numbers: the west doorway (0) and the east one (1). The trainers, the TM, the
-Pokémon about and the sign keep their order. Route 14's tree to cut, shown across the join, moved with the route's
-new width (81,13).
+Pokémon about and the sign keep their order. Route 14's tree to cut, shown across the join, is where it stands on the
+rebuilt Route 14, at its berry garden (86,18).
 
 The pieces are the kit's and the gatehouse (bank 7). The route takes 26 of its 384 tiles.
 
 The seams are pae's:
-- with Fuchsia, both are the kit's, so there is no seam;
-- old Route 14 is drawn here with 25 pieces (39 tiles), in banks 9–10;
-- old Route 14 draws this route's right seven columns (forest, lawn, dirt and a tree only) with 64 pieces, in its
-  slots 7–8.
+- with Fuchsia and with Route 14 (rebuilt after it), both are the kit's, so there is no seam. While Route 14 was
+  old, it was drawn here with 25 pieces in banks 9–10, and it drew this route's right seven columns with 64.
 
 `make_art.py` checks the route's rules on the map it builds:
 - only Fuchsia's road and Route 14's open onto the edges;
@@ -42,7 +40,7 @@ The seams are pae's:
 - without it, Route 14's side doesn't reach Fuchsia's: the gatehouse is the only way;
 - the high road is reached from the low road without the ledges;
 - every trainer, Pokémon and the TM is on open ground, both doorways can be walked into and the sign read;
-- the strip old Route 14 draws is forest, lawn, dirt and trees only.
+- the right seven columns, which old Route 14 drew, are forest, lawn, dirt and trees only (kept from then).
 
 Build it from the repository root with `sh project/art/route15-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).

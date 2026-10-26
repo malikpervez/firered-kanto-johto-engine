@@ -18,10 +18,10 @@ pae map geometry $M --primary gTileset_PalletConcept_General --secondary gTilese
 pae tileset build ../$A/spec.json $P
 pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --border ../$A/border.txt $P
 
-# the joins: Fuchsia's main street (its rows 20-23) at the left edge, rows 4-7; Route 14's road (its rows 51-54) at
+# the joins: Fuchsia's main street (its rows 20-23) at the left edge, rows 4-7; Route 14's road (its rows 50-53) at
 # the right edge, rows 14-17
 pae map connect $M left FuchsiaCity_Frlg --offset -16 $P
-pae map connect $M right Route14_Frlg --offset -37 $P
+pae map connect $M right Route14_Frlg --offset -36 $P
 [ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P
 
 # events: the gatehouse's doorways keep their warps (0 west, 1 east: arrow warps, no door to animate)
@@ -51,7 +51,7 @@ pae map place $M object 21 65 19 $P  # Chansey, in the south meadow
 pae map place $M object 22 17 3 $P   # Pidgeotto, by the gatehouse
 pae map place $M object 23 44 13 $P  # Illumise, by night
 pae map place $M bg 0 20 2 $P        # the route sign, by the gatehouse's east doorway
-# Route 14's tree to cut is shown across the join where it stands on Route 14 (its 1,50: x 80 + 1, y 50 - 37);
+# Route 14's tree to cut is shown across the join where it stands on Route 14 (its 6,54: x 80 + 6, y 54 - 36);
 # everyone stands at the ground's elevation
 python3 - <<'PY'
 import json
@@ -60,7 +60,7 @@ m = json.load(open(p))
 o = m["object_events"]
 clone = [e for e in o if e.get("type") == "clone"]
 assert len(clone) == 1
-clone[0]["x"], clone[0]["y"] = 81, 13
+clone[0]["x"], clone[0]["y"] = 86, 18
 for e in o:
     if e.get("type") != "clone" and "elevation" in e:
         e["elevation"] = 3

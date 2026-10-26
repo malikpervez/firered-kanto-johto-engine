@@ -5,7 +5,8 @@ python3 project/art/route15-concept/draw_plan.py
 
 Route 15 is the way east out of Fuchsia: two roads through the woods to Route 14. It is 80x24 blocks (old Route 15
 was 96x32, its south half forest). Fuchsia's main street (its rows 20-23) comes in at the left edge, rows 4-7; Route
-14's road (its rows 51-54) meets the right edge at rows 14-17 (offset -37, as before). It has:
+14's road (its rows 50-53) meets the right edge at rows 14-17 (offset -36: Route 14, rebuilt, moved its road up a
+row). It has:
 - **the gatehouse** at Fuchsia's edge, across the road (Route 16's Cycling Road gatehouse: its doorways at its ends);
 - **the high road** east from it along the woods' edge, flowers on its verge: the quick way, with trainers on it;
 - **the ledges** along its south side, down into the meadow (one way: there's no climbing back);

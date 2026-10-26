@@ -147,7 +147,8 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 17 | 37 | 0 | 25 |
 | Route 18 | 26 | 30 (for Fuchsia's own pieces) | 32 |
 | Fuchsia | 207 | 47 (for old Route 19) | 138 |
-| Route 15 | 26 | 39 (for old Route 14) | 32 |
+| Route 15 | 26 | 0 | 32 |
+| Route 14 | 1 (nothing of its own) | 69 (for old Route 13) | 0 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.
