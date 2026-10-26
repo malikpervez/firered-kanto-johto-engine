@@ -1,0 +1,39 @@
+{
+ "note": "Into the safari zone gate from the street.",
+ "created": "2026-10-27 05:00",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 23,
+  "y": 7,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_SafariZone_Entrance_Frlg",
+  "x": 4,
+  "y": 7,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 19:11"
+}

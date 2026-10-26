@@ -1,0 +1,84 @@
+{
+ "note": "Find the hidden Max Revive in the pond garden.",
+ "created": "2026-10-27 05:00",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 36,
+  "y": 26,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_HIDDEN_ITEM_FUCHSIA_CITY_MAX_REVIVE"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 36,
+  "y": 26,
+  "in_battle": false,
+  "flags": {
+   "FLAG_HIDDEN_ITEM_FUCHSIA_CITY_MAX_REVIVE": true
+  }
+ },
+ "accepted": "2026-10-26 19:11"
+}

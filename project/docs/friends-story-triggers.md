@@ -43,7 +43,7 @@ at again when the scene is next played there.
 | 6 | Two very different coaching styles | Route 11 (25,7) | Pokédex received | Talk | Brian, Nick, LB | Nick (B03) or LB (B04), optional | |
 | 7 | Manifesting a room | Celadon City (25,34) | Rocket Hideout cleared (`FLAG_HIDE_CELADON_ROCKETS`) | Talk | Brian, X, LB | X (B05), optional | Rebuilt map: the camp is in the pond garden south of Lucky Lane. Skipped if the player reaches a later scene's map first (see above). |
 | 8 | Quiet outside Lavender | Lavender Town (13,13), then Mr. Fuji's house (3,6) | Poké Flute received | Talk | Ham, Jon, Nick | | The conversation moves into Fuji's house and back out. |
-| 9 | The group gets actual responsibilities | Fuchsia City (19,21) | Pokédex received | Talk | Brian, Nick, Tim | Tim (B06), optional | Reachable early by Cycling Road, which skips 7 and 8. |
+| 9 | The group gets actual responsibilities | Fuchsia City (8,24) | Pokédex received | Talk | Brian, Nick, Tim | Tim (B06), optional | Reachable early by Cycling Road, which skips 7 and 8. Rebuilt map: the camp is in the park south of the main street. |
 | 10 | A very bad job interview | Saffron City (50,8) | Silph Co. cleared (`FLAG_HIDE_SAFFRON_ROCKETS` and the Master Ball) | Talk | Brian, X, Tim | | Rebuilt map: the camp is in the garden behind Silph Co. |
 | 11 | The television in the water | Cinnabar Island (46,20) | The Mansion's Secret Key found (`FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY`) | Talk | Brian, Nick, X | | Shows Brian's living room in the water. |
 | 12 | Seven terrible spectators | Pallet Town (12,22) | Kanto Hall of Fame, and Oak's Pallet scene done (`VAR_MAP_SCENE_PALLET_TOWN_OAK` ≥ 3) | Talk | Brian, Nick, Tim | | Rebuilt map. Not played since the rebuild. |

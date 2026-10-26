@@ -734,7 +734,7 @@ static const struct CreditsOverworldCmd sOverworldCmd_Route17[] = {
 };
 
 static const struct CreditsOverworldCmd sOverworldCmd_FuchsiaCity[] = {
-    CREDITSOVWLDLOADMAP(MAP_FUCHSIA_CITY, 28, 5, 1),
+    CREDITSOVWLDLOADMAP(MAP_FUCHSIA_CITY, 23, 10, 1),
     CREDITSOVWLDSCROLL(0, 1, 0x0500), // Scroll down
     CREDITSOVWLDEND
 };

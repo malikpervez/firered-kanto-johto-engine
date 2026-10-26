@@ -1,0 +1,39 @@
+{
+ "note": "Into the safari zone office from the street.",
+ "created": "2026-10-27 05:00",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 29,
+  "y": 17,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_SafariZone_Office_Frlg",
+  "x": 6,
+  "y": 9,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 19:11"
+}

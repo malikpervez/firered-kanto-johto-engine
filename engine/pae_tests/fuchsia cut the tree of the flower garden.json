@@ -1,0 +1,83 @@
+{
+ "note": "Cut the tree of the flower garden and walk through.",
+ "created": "2026-10-27 05:00",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 17,
+  "y": 27,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BULBASAUR lv20 MOVE_CUT",
+   "FLAG_BADGE02_GET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     300
+    ],
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 17,
+  "y": 25,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 19:10"
+}

@@ -2690,13 +2690,6 @@
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
     },
-    "FuchsiaCity_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/FuchsiaCity_Frlg/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
     "IndigoPlateau_Exterior_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/IndigoPlateau_Exterior_Frlg/border.bin",
@@ -2861,13 +2854,6 @@
     "VioletCity_hns_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/VioletCity_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
-    "FuchsiaCity_Frlg_FireRedGeometry_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/FuchsiaCity_hns/border.bin",
       "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
