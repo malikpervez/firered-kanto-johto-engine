@@ -1,0 +1,38 @@
+{
+ "note": "East along the road onto Route 9.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 53,
+  "y": 29,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     100
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route9_Frlg",
+  "x": 1,
+  "y": 35,
+  "in_battle": false
+ }
+}

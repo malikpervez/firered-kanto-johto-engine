@@ -1,0 +1,38 @@
+{
+ "note": "From the backyard through the hole in the robbed house's back wall.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 35,
+  "y": 18,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     20
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_House2_Frlg",
+  "x": 4,
+  "y": 2,
+  "in_battle": false
+ }
+}

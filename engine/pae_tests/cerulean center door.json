@@ -1,0 +1,38 @@
+{
+ "note": "Into Cerulean's Pok\u00e9mon Center from its heal spot.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 28,
+  "y": 29,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     20
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_PokemonCenter_1F_Frlg",
+  "x": 7,
+  "y": 8,
+  "in_battle": false
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "note": "On the island, into Cerulean Cave once its guard is gone.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 6,
+  "y": 7,
+  "state": [
+   "FLAG_HIDE_CERULEAN_CAVE_GUARD"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     20
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCave_1F_Frlg",
+  "x": 35,
+  "y": 23,
+  "in_battle": false
+ }
+}

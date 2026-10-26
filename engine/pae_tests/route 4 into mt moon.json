@@ -1,0 +1,38 @@
+{
+ "note": "Into Mt. Moon's near mouth, at the foot of the mountain.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "Route4_Frlg",
+  "x": 19,
+  "y": 15,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     20
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "MtMoon_1F_Frlg",
+  "x": 18,
+  "y": 37,
+  "in_battle": false
+ }
+}

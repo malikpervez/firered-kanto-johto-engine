@@ -1,0 +1,40 @@
+{
+ "note": "With the S.S. Ticket the policeman stands aside: into the robbed house.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 35,
+  "y": 23,
+  "state": [
+   "FLAG_GOT_SS_TICKET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     20
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_House2_Frlg",
+  "x": 3,
+  "y": 7,
+  "in_battle": false
+ }
+}

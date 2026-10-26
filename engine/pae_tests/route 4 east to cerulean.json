@@ -1,0 +1,38 @@
+{
+ "note": "East along the road off Route 4 into Cerulean City.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "Route4_Frlg",
+  "x": 102,
+  "y": 11,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     100
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_Frlg",
+  "x": 0,
+  "y": 18,
+  "in_battle": false
+ }
+}

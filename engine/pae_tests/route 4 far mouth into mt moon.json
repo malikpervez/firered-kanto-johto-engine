@@ -1,0 +1,38 @@
+{
+ "note": "Back into Mt. Moon by its far mouth, on the high shelf.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "Route4_Frlg",
+  "x": 36,
+  "y": 7,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     20
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "MtMoon_B1F_Frlg",
+  "x": 45,
+  "y": 4,
+  "in_battle": false
+ }
+}
