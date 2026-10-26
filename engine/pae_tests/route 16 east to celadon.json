@@ -1,0 +1,39 @@
+{
+ "note": "East along the road onto Celadon's boulevard.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 52,
+  "y": 23,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Frlg",
+  "x": 0,
+  "y": 21,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

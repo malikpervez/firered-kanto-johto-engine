@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Celadon City after its concept (draw_plan.py and plan_stage1.txt): Kanto's garden city (see draw_plan.py). It is
 60x40 blocks, as old Celadon was; its joins: the boulevard's two ends, rows 20-23, meet Route 16's road (its rows
-27-30, offset -7) at the left edge and Route 7's (its rows 10-13, offset 10) at the right.
+22-25, offset -2) at the left edge and Route 7's (its rows 10-13, offset 10) at the right.
 
 The pieces: the kit's and its Pokémon Center; the Department Store, the Mansion, the hotel, the Game Corner and
 Erika's Gym, drawn here (celadon_buildings.py) in one palette (bank 9); Viridian's houses (the pond keeper's for the
 Prize Room and a house, the family's for the restaurant) in theirs (bank 7). The town's own tileset holds 384 tiles:
-the buildings are drawn on the 16-pixel grid so their tiles repeat, and room is left for old Route 16's strip. Bank 8 is the kit's plants palette; 10-12 stay free for the seam to old
-Route 16.
+the buildings are drawn on the 16-pixel grid so their tiles repeat. Bank 8 is the kit's plants palette; 10-12 stay free for seams to old maps (Route 16 is
+from the kit now: their seam needs none).
 
 Run from the repository root:  python3 project/art/celadon-concept/make_art.py
 It writes buildings/, sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
@@ -103,13 +103,11 @@ def reachable(g, starts, blocked=frozenset()) -> set[tuple[int, int]]:
 
 
 def check(g, d) -> None:
-    """The city's rules: only the boulevard's two ends open onto the edges; the west seven columns are forest and road
-    only (old Route 16 draws them); the trees close the walled garden and the Gym garden, stand more than 8 blocks from
+    """The city's rules: only the boulevard's two ends open onto the edges; the trees close the walled garden and the Gym garden, stand more than 8 blocks from
     either edge, and with them cut everything walkable is reached; every door can be walked into (the Mansion's back
     door from above), every sign read; the Friends' camp is open ground and the little girl's walk is clear."""
     edge = {(x, y) for y in range(MAP_H) for x in range(MAP_W) if x in (0, MAP_W - 1) or y in (0, MAP_H - 1)}
     assert {xy for xy in edge if g[xy[1]][xy[0]] not in SOLID} == set(WEST + EAST), "only the boulevard opens"
-    assert {g[y][x] for y in range(MAP_H) for x in range(7)} == {"T", "="}, "Route 16's strip: forest and road only"
     walk = {(x, y) for y in range(MAP_H) for x in range(MAP_W) if g[y][x] not in SOLID}
     closed = reachable(g, EAST, set(TREES))
     assert not closed & (GARDEN | GYM_GARDEN), "the trees must close the two gardens"

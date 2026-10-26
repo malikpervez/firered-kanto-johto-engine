@@ -6,7 +6,7 @@ Kanto's garden city, the city of rainbow dreams, rebuilt from the kit (`../kit`)
 ![The map](map.png)
 
 The city is 60×40 blocks, as old Celadon was. Its boulevard (rows 20–23) runs right through it: Route 16's road (its
-rows 27–30) meets it at the left edge (offset −7, was −5) and Route 7's (its rows 10–13) at the right (offset 10, was
+rows 22–25) meets it at the left edge (offset −2; −5 with old Route 16) and Route 7's (its rows 10–13) at the right (offset 10, was
 8). It has:
 - **the boulevard**, four blocks of road between broad pavements, with the town sign by the east entrance;
 - **the Department Store** on its north side, its two doors onto the pavement and its sign;
@@ -29,7 +29,7 @@ moved. Other fixed spots moved too:
 - the Friends' camp moved to `src/data/friends_scene_locations.h`'s 25,34;
 - the credits' view moved onto the boulevard (49,21, `src/credits_frlg.c`).
 
-Route 16's tree is still shown across the join where it stands on Route 16's grid (the clone, now at −15,27). Route
+Route 16's tree is still shown across the join where it stands on Route 16's grid (the clone, now at −10,19). Route
 7's clone of the town's border tree moved with its join (−10,3).
 
 The pieces:
@@ -46,9 +46,9 @@ how to replace one.
 
 The seams are pae's:
 - with Route 7, both maps are the kit's (KR-54 went with old Celadon);
-- with old Route 16, its palettes fit in banks 10–11 here, and this city's in Route 16's free slots 7–8.
+- with Route 16, both maps are the kit's too (with old Route 16, its palettes took banks 10–11 here).
 
-The west seven columns are forest and road only, so Route 16's share of the strip stays small. Old Celadon had no
+The west seven columns are forest and road only, as old Route 16 needed. Old Celadon had no
 hand-made seam.
 
 `make_art.py` checks the city's rules on the map it builds:

@@ -3075,13 +3075,6 @@
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
     },
-    "Route16_Frlg_FireRedGeometry_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route16_hns/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
     "FiveIsland_Layout_Border": {
       "owner": "CinnabarIsland_Layout_Border",
       "source_filepath": "data/layouts/FiveIsland_Frlg/border.bin",
@@ -3162,13 +3155,6 @@
     "Route14_Layout_Border": {
       "owner": "CinnabarIsland_Layout_Border",
       "source_filepath": "data/layouts/Route14_Frlg/border.bin",
-      "owner_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
-      "bytes": 8,
-      "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"
-    },
-    "Route16_Layout_Border": {
-      "owner": "CinnabarIsland_Layout_Border",
-      "source_filepath": "data/layouts/Route16_Frlg/border.bin",
       "owner_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
       "bytes": 8,
       "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"

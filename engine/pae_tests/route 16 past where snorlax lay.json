@@ -1,0 +1,41 @@
+{
+ "note": "With Snorlax gone, west along the road to the gatehouse.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 47,
+  "y": 24,
+  "state": [
+   "FLAG_HIDE_ROUTE_16_SNORLAX"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     180
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_Frlg",
+  "x": 36,
+  "y": 24,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

@@ -40,7 +40,7 @@ The packs reused for buildings they weren't drawn for:
 |---|---|
 | `house_family` | houses in Viridian, Pewter (three, one pack), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Celadon's restaurant; Saffron's Copycat's house |
 | `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender; Route 5's Underground Path hut |
-| `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room and its house on Lucky Lane (one pack for both); Saffron's house and Mr. Psychic's house |
+| `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room and its house on Lucky Lane (one pack for both); Saffron's house and Mr. Psychic's house; Route 16's house in the woods |
 | `forest_gate_south` | Viridian Forest's south gate (Route 2); Saffron's south, west and east gates on Routes 6, 7 and 8 (KR-40, KR-52; Saffron's own side has its drawn gatehouses); Route 11's gatehouse to Route 12 |
 | `forest_gate_north` | Viridian Forest's north gate (Route 2); Saffron's north gate (Route 5) |
 | `east_gatehouse` | Route 2's east gatehouse |
@@ -76,6 +76,7 @@ plant (KR-47), a prize hall and a restaurant for Celadon (KR-57).
 | The gatehouse | `saffron_buildings.py` `gate()` (folder `saffron_gate`) | 4×3, a double door at (1,2)-(2,2) | the same | Saffron (its north, west and east gates) | its door frames are drawn here: one wide door, 96×32 |
 | The gatehouse's back | `saffron_buildings.py` `gate_back()` (folder `saffron_gate_back`) | 4×3, a doorway at (1,0)-(2,0) | the same | Saffron (its south gate) | the doorway is `MB_SOUTH_ARROW_WARP`: entered walking south, no animation |
 | The Magnet Train station | `saffron_buildings.py` `station()` (folder `magnet_train_station`) | 8×4, no door | the same | Saffron | its entrance is shuttered: the attendant outside arranges the journey |
+| The Cycling Road gatehouse | `route16-concept/route16_buildings.py` `gate()` (folder `cycling_gate`) | 8×4, doorways at (0,3) and (7,3) | Saffron's buildings palette (bank 9) | Route 16 (twice: its upper and lower halls) | an east-west gatehouse: the left doorway is `MB_EAST_ARROW_WARP` (entered walking east), the right `MB_WEST_ARROW_WARP`; no door frames. The pack the other east-west gates could use (KR-40, KR-52, KR-60) |
 
 How each drawn building is switched off for a replacement:
 - Pewter's Gym: remove the `pewter_gym()` call in `pewter-concept/make_art.py`'s `main()`;
@@ -83,7 +84,8 @@ How each drawn building is switched off for a replacement:
   maps load a pack);
 - Pokémon Tower: remove the `pokemon_tower()` call in `lavender-concept/make_art.py`;
 - Celadon's buildings: remove the building's function from `ALL` in `celadon_buildings.py`;
-- Saffron's buildings: remove the building's function from `ALL` in `saffron_buildings.py`.
+- Saffron's buildings: remove the building's function from `ALL` in `saffron_buildings.py`;
+- Route 16's gatehouse: remove `gate` from `ALL` in `route16_buildings.py`.
 
 The Power Plant, Pokémon Tower, Celadon's buildings and Saffron's (but its gatehouse) take their door frames from Pewter's Gym's
 (`pewter-concept/buildings/pewter_gym/pewter_gym_door.png`), by palette index. Celadon's `PAL` keeps Pewter Gym's
@@ -135,8 +137,9 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Lavender | 199 | 74 | 87 |
 | Route 8 | 170 | 93 | 64 |
 | Route 7 | 170 | 0 | 64 |
-| Celadon | 231 | 44 | 280 |
+| Celadon | 231 | 0 | 280 |
 | Saffron | 307 | none (no compiled joins) | 290 |
+| Route 16 | 81 | 93 (for old Route 17) | 48 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.

@@ -1,0 +1,39 @@
+{
+ "note": "From the glade, east into the upper hall.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 26,
+  "y": 12,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     60
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_NorthEntrance_1F_Frlg",
+  "x": 1,
+  "y": 3,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

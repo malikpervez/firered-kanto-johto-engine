@@ -1,0 +1,41 @@
+{
+ "note": "West along the road into the gatehouse's lower hall by its east doorway.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 37,
+  "y": 24,
+  "state": [
+   "FLAG_HIDE_ROUTE_16_SNORLAX"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     60
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_NorthEntrance_1F_Frlg",
+  "x": 11,
+  "y": 12,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

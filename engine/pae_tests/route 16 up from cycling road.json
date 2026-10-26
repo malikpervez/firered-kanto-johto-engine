@@ -1,0 +1,39 @@
+{
+ "note": "Up Cycling Road's top onto Route 16.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route17_Frlg",
+  "x": 14,
+  "y": 3,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     100
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_Frlg",
+  "x": 14,
+  "y": 41,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:58"
+}

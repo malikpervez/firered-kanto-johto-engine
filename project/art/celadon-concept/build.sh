@@ -22,9 +22,9 @@ pae map geometry $M --primary gTileset_PalletConcept_General --secondary gTilese
 pae tileset build ../$A/spec.json $P
 pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --border ../$A/border.txt $P
 
-# the joins: the boulevard's two ends (rows 20-23) meet Route 16's road (its rows 27-30) at the left edge and Route 7's
+# the joins: the boulevard's two ends (rows 20-23) meet Route 16's road (its rows 22-25) at the left edge and Route 7's
 # (its rows 10-13) at the right
-pae map connect $M left Route16_Frlg --offset -7 $P
+pae map connect $M left Route16_Frlg --offset -2 $P
 pae map connect $M right Route7_Frlg --offset 10 $P
 [ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P
 
@@ -93,7 +93,7 @@ pae map place $M bg 6 18 18 $P        # the Department Store's sign
 pae map place $M bg 7 14 35 $P        # the Gym's sign, in its garden
 pae map place $M bg 8 54 10 $P        # the hidden PP Up, in the walled garden
 # the girl walks round her square, the woman keeps to the boulevard; Route 16's tree is shown across the join where it
-# stands on Route 16's grid (its 49,34: x 49 - 64, y 34 - 7); everyone stands at the ground's elevation
+# stands on Route 16's grid (its 46,21: x 46 - 56, y 21 - 2); everyone stands at the ground's elevation
 python3 - <<'PY'
 import json
 p = "data/maps/CeladonCity_Frlg/map.json"
@@ -103,7 +103,7 @@ o[3]["movement_range_x"], o[3]["movement_range_y"] = 4, 4
 o[4]["movement_range_x"], o[4]["movement_range_y"] = 3, 1
 clone = [e for e in o if e.get("type") == "clone" and e.get("target_map") == "MAP_ROUTE16"]
 assert len(clone) == 1
-clone[0]["x"], clone[0]["y"] = -15, 27
+clone[0]["x"], clone[0]["y"] = -10, 19
 for e in o:
     if e.get("type") != "clone" and "elevation" in e:
         e["elevation"] = 3

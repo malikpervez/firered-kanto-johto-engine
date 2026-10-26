@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE16",
-      "offset": -7,
+      "offset": -2,
       "direction": "left"
     },
     {
@@ -187,8 +187,8 @@
     {
       "type": "clone",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
-      "x": -15,
-      "y": 27,
+      "x": -10,
+      "y": 19,
       "target_local_id": "LOCALID_ROUTE16_CUT_TREE",
       "target_map": "MAP_ROUTE16"
     },

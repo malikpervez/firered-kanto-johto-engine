@@ -35,7 +35,11 @@
   "LavenderTown_Frlg"
  ],
  "Route16_Frlg": [
-  "CeladonCity_Frlg"
+  "CeladonCity_Frlg",
+  "Route17_Frlg"
+ ],
+ "Route17_Frlg": [
+  "Route16_Frlg"
  ],
  "Route1_Frlg": [
   "PalletTown_Frlg",
