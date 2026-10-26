@@ -1,0 +1,38 @@
+{
+ "note": "Up the road into Saffron's south gatehouse.",
+ "created": "2026-10-26 06:47",
+ "start": {
+  "map": "Route6_Frlg",
+  "x": 40,
+  "y": 7,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     44
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route6_NorthEntrance_Frlg",
+  "x": 4,
+  "y": 9,
+  "in_battle": false
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "note": "Down Route 6's road onto Vermilion's stairs.",
+ "created": "2026-10-26 06:47",
+ "start": {
+  "map": "Route6_Frlg",
+  "x": 41,
+  "y": 29,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     44
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 33,
+  "y": 0,
+  "in_battle": false
+ }
+}

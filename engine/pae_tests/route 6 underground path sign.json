@@ -1,0 +1,46 @@
+{
+ "note": "Read the Underground Path's sign by the hut.",
+ "created": "2026-10-26 06:47",
+ "start": {
+  "map": "Route6_Frlg",
+  "x": 44,
+  "y": 12,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route6_Frlg",
+  "x": 44,
+  "y": 12,
+  "in_battle": false
+ }
+}

@@ -25,6 +25,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 24 | 30×22 | 30×22 | kit (and an empty `gTileset_Route24Concept`) | down: Cerulean City (offset −25), up: Route 25 (offset 0) |
 | Route 25 | 70×24 | 112×35 | kit + `gTileset_Route25Concept` | down: Route 24 (offset 0) |
 | Route 5 | 50×36 | 68×46 | kit + `gTileset_Route5Concept` | up: Cerulean City (offset 8), down: Saffron City's twin `SaffronCity_Connection` (offset −4) |
+| Route 6 | 56×32 | 63×36 | kit + `gTileset_Route6Concept` | up: `SaffronCity_Connection` (offset 12), down: Vermilion City (offset 8) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -47,6 +48,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 34–36 | the road east (Route 9 isn't rebuilt; its edge opens on those three rows only) |
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck |
 | Route 5 ↔ Saffron | Route 5 24–25 = Saffron 28–29 | not walked across: the gate's top door on Route 5 (24–25,30) leads through the gatehouse to Saffron's own gate door below it (28–29,5). Old Saffron draws its own copy of the gatehouse at its top |
+| Saffron ↔ Route 6 | Saffron 28–29 = Route 6 40–41 | not walked across: Saffron's south gate door (28–29,46) leads through the gatehouse to its door on Route 6 (40–41,5) |
+| Route 6 ↔ Vermilion | Route 6 40–42 = Vermilion 32–34 | the road down onto Vermilion's stairs |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -66,6 +69,7 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 4 | Route 3, Cerulean City | pae |
 | Cerulean City | Route 4, Route 5, Route 9, Route 24 | pae: 137 adapters, palette slots 10, 11, 12 (since Route 24 is from the kit, every colour fits). Its hand-made seam for the old Cerulean is gone |
 | Route 5 | Cerulean City | pae (both from the kit: no palettes). None with old Saffron: it has no tile slot left for Route 5's strip, and neither can see the other (`--skip`, KR-34). Its hand-made seam is gone |
+| Route 6 | Vermilion City | pae: old Vermilion has no palette slot for Route 6's strip, so from Vermilion its forest, grass and ground are drawn in Vermilion's nearest colours (at most 82 RGB steps off), and three of Vermilion's palettes a little off from Route 6 (at most 50; KR-35). None with old Saffron (KR-34) |
 | Route 9 | Cerulean City | pae (the old map), beside its hand-made seam |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
@@ -161,3 +165,7 @@ Check these whenever a map is rebuilt, moved or resized:
   number: the gate's four (2–5) are on its two door blocks. Its mons and sign moved; Spinda is at the ground's
   elevation. Old Route 5's hand-made seam was removed from `kanto_connection_seam.c`; old Saffron gets no seam for
   it yet (KR-34).
+- Route 6 rebuilt smaller (56×32, was 63×36) with its x the same, so Saffron's and Vermilion's offsets didn't
+  change (its gate's door, 40–41, under Saffron's south gate door; its road onto Vermilion's stairs at 40–42). Every
+  warp kept its number; its trainers, Pokémon, sign and hidden items moved (`build.sh` sets the trainers' facings
+  and sights). Old Vermilion got a pae seam for it, its colours nearest-matched (KR-35).
