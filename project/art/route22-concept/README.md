@@ -3,7 +3,7 @@
 The hilly route west of Viridian City to the Pokémon League Front Gate. The plan and the packs were made with
 another AI from a brief: a concept and block plan, then native pixel packs for what's new: the League Front Gate,
 a dressed-stone paving for the League approach (`concept_comparison.png` puts the approved concept beside them) and,
-redone after the first cliffs, a rock and cliff pack (`rock_cliff/`). This folder builds the route from the kit
+redone after the first cliffs, a rock and cliff pack (now the kit's, `../kit/rock_cliff/`). This folder builds the route from the kit
 (`../kit`) and those packs.
 
 ![The map](map.png)
@@ -25,8 +25,9 @@ behind its old roof, and the terrace east of it ends square with the ridge besid
 
 - **The dressed-stone paving** (`../kit/paving/`) is in the kit's ground palette (its colours are the kit's), so every
   map can use it: `p` in a grid, with joins to cobblestones and dirt (`paving_to_cobble_N` and the like).
-- **The rock and cliff pack** (`rock_cliff/`, its `README.md`; bank 9). It's meant for every route, but the kit has no
-  palette slot left, so for now it's Route 22's own. `C` in the plan is a cliff's whole footprint:
+- **The rock and cliff pack** (`../kit/rock_cliff/`, its `README.md`, drawn by the kit's `cliffs.py`; bank 9). Every
+  map can use it, but the kit has no palette slot left, so each map gives it a bank of its own tileset. `C` in the
+  plan is a cliff's whole footprint:
   - the bottom two blocks of each column of it are its **face**, the pack's 16×32 columns: an outer end beside the
     lawn or forest, an inner end where it meets a cliff top or the stairs reaching further south, and the three
     middles mixed between;

@@ -23,17 +23,16 @@ It writes sheets/, the palettes, spec.json, grid.txt, border.txt and legend.json
 into the game's tileset and map with pae.
 """
 import json
-import random
 import sys
 from collections import deque
 from dataclasses import replace
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
+import cliffs
 import kit
 
 HERE = Path(__file__).resolve().parent
@@ -41,11 +40,7 @@ SECONDARY = "gTileset_Route22Concept"
 MAP_W, MAP_H = 52, 28
 GATE_BANK, CLIFF_BANK = 7, 9
 GATE_TOP = 4  # the gate's top rows (its roof) stand against the cliff: the cliff's top under them, not lawn
-ROCK = HERE / "rock_cliff"
-TOP = "ADEFGIJKV"  # the cliff's top, by its phase (1-9); the gate's top joins it (no edge between them)
-FACE = {"[": "outer_W", "{": "inner_W", "M": "middle_1", "N": "middle_2", "P": "middle_3", "}": "inner_E",
-        "]": "outer_E"}  # the face's columns (two blocks tall)
-MIDDLES = "MNP"
+TOP, FACE = cliffs.TOP, cliffs.FACE  # the rock and cliff pack's (the kit's cliffs.py); the gate's top joins it
 SOLID = set("T#bRoklSBcw_~vrULX" + TOP + "".join(FACE))  # what you can't walk onto (ledges: going south only)
 RIVAL_ROWS = range(6, 10)  # the road from Viridian, where Blue meets you
 JOINS = "0123456789!$%&()"  # the cobble blocks over the stone approach's joins, by their cobble piece's mask
@@ -58,11 +53,6 @@ def plan() -> list[list[str]]:
     return g
 
 
-def phase(x: int, y: int) -> int:
-    """The cliff top's phase at block (x, y): its texture repeats every three blocks from the map's corner."""
-    return 1 + 3 * (y % 3) + x % 3
-
-
 def fit(g):
     """The plan as the kit builds it: the gate's door is part of it, its top rows (against the cliff) are ``U``;
     where the stone approach meets the cobblestone road (the four blocks under it, as the pack says), the stone
@@ -73,7 +63,7 @@ def fit(g):
     x0, y0 = min(x for x, _ in cells), min(y for _, y in cells)
     for x, y in cells:
         g[y][x] = "U" if y < y0 + GATE_TOP else "L"
-    cliffs(g)
+    cliffs.layout(g, roof="U", stairs="H")
     joins = {}
     for y in range(1, h):
         for x in range(w):
@@ -87,47 +77,6 @@ def fit(g):
                 joins[mask] = JOINS[mask]  # one character per piece used
                 g[y][x] = joins[mask]
     return g, (x0, y0), joins
-
-
-def cliffs(g) -> None:
-    """``C`` (a cliff's footprint) as its top and its face: the bottom two blocks of each column of it are the face,
-    the rest the top (none over the gate's roof: it stands against the top). A face's ends are outer beside the lawn,
-    inner beside a top or the stairs."""
-    h, w = len(g), len(g[0])
-    face = {}  # (x, y of its upper block) -> column
-    for x in range(w):
-        y = 0
-        while y < h:
-            if g[y][x] != "C":
-                y += 1
-                continue
-            y1 = y
-            while y1 + 1 < h and g[y1 + 1][x] == "C":
-                y1 += 1
-            if y1 + 1 < h and g[y1 + 1][x] != "U":
-                assert y1 > y, f"({x},{y}): a cliff needs two blocks for its face"
-                face[x, y1 - 1] = None
-            y = y1 + 1
-
-    def end(x: int, y: int) -> str | None:  # what's beside a face: None (more face), "inner" or "outer"
-        if (x, y) in face:
-            return None
-        assert (x, y + 1) not in face and (x, y - 1) not in face, f"({x},{y}): faces beside each other must line up"
-        return "inner" if 0 <= x < w and g[y][x] in "CUH" and (x, y) not in face else "outer"
-    for x, y in sorted(face, key=lambda c: (c[1], c[0])):  # west to east, the middles mixed (never one twice)
-        west, east = end(x - 1, y), end(x + 1, y)
-        assert not (west and east), f"({x},{y}): a face needs two columns at least"
-        if west or east:
-            face[x, y] = next(c for c, n in FACE.items() if n == (f"{west}_W" if west else f"{east}_E"))
-        else:
-            options = [c for c in MIDDLES if c != face.get((x - 1, y))]
-            face[x, y] = options[random.Random(x * 1000 + y).randrange(len(options))]
-    for y in range(h):
-        for x in range(w):
-            if g[y][x] == "C":
-                g[y][x] = TOP[phase(x, y) - 1]
-    for (x, y), c in face.items():
-        g[y][x] = g[y + 1][x] = c
 
 
 def reachable(g, start) -> set[tuple[int, int]]:
@@ -167,116 +116,6 @@ def check(g, door) -> None:
     assert "C" not in "".join("".join(r) for r in g), "every cliff block is its top or its face"
 
 
-def pack(rel: str) -> np.ndarray:
-    """A picture of the rock and cliff pack as its palette's indices (0 transparent)."""
-    with Image.open(ROCK / rel) as im:
-        assert im.mode == "P" and im.getpalette()[:48] == _flat, f"{rel}: not in the pack's palette"
-        return np.array(im)
-
-
-with Image.open(ROCK / "tileset_8x8.png") as _im:  # the pack's palette, in its PNGs
-    _flat = _im.getpalette()[:48]
-CLIFF_PAL = [tuple(_flat[i:i + 3]) for i in range(0, 48, 3)]
-_atlas = pack("tileset_8x8.png")
-_recipes = {(r["phase"], r["mask"]): r["tiles_8x8"]
-            for r in json.loads((ROCK / "autotile_recipes.json").read_text())["recipes"]}
-
-
-_junctions = json.loads((ROCK / "face_junctions.json").read_text())["phases"]
-JUNCTION_CHARS = "aefijmtuxyz<>?;^|"  # tops beside a face, one character for each piece
-
-
-def tile(t: int) -> np.ndarray:
-    return _atlas[8 * (t // 16):8 * (t // 16) + 8, 8 * (t % 16):8 * (t % 16) + 8]
-
-
-def quads(tiles) -> list[list[np.ndarray]]:
-    return [[tile(t) for t in row] for row in tiles]
-
-
-def join(q) -> np.ndarray:
-    return np.vstack([np.hstack(row) for row in q])
-
-
-def outside_of(mask: int, corners: int) -> int:
-    """pae's mask (the sides that are top) and inside corners as the pack's bits of what isn't top (1 N, 2 E, 4 S,
-    8 W, 16 NE, 32 SE, 64 SW, 128 NW)."""
-    return (15 & ~mask) | sum(16 << i for i in range(4) if corners & 1 << i)
-
-
-def top(k: int, outside: int) -> np.ndarray:
-    """The cliff top of phase ``k`` whose neighbours ``outside`` aren't cliff top, from its recipe: four tiles of
-    the pack's atlas."""
-    return join(quads(_recipes[k, outside]))
-
-
-def tops_in(g) -> dict[tuple[int, int], tuple[int, int, int]]:
-    """The cliff tops of the grid, as pae paints them: block -> (phase, mask of the sides that are top, inside
-    corners)."""
-    h, w = len(g), len(g[0])
-
-    def same(x, y):  # the map's edges count as the same, as in pae
-        return not (0 <= x < w and 0 <= y < h) or g[y][x] in TOP + "U"
-    out = {}
-    for y in range(h):
-        for x in range(w):
-            if g[y][x] in TOP:
-                mask = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
-                           if same(x + dx, y + dy))
-                corners = sum(b for b, (dx, dy), sides in ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12),
-                                                           (8, (-1, -1), 9))
-                              if mask & sides == sides and not same(x + dx, y + dy))
-                out[x, y] = (TOP.index(g[y][x]) + 1, mask, corners)
-    return out
-
-
-def junctions(g, tops) -> dict[tuple[int, int], tuple[str, np.ndarray]]:
-    """The tops that meet a face (the pack's 3.2 pieces, not its lawn edges): beside a face's upper block its side
-    starts (``side_W_face_start``), beside its lower block it runs on (``side_W_face``); a top whose inside corner
-    is a face's upper block has the face's corner (``in_SW_face``). Where the top's own edge (lawn north or south of
-    it) meets that side, the quarter keeps its lawn edge."""
-    h, w = len(g), len(g[0])
-
-    def face_at(x, y):  # None, "start" (a face's upper block) or "on" (its lower block)
-        if not (0 <= x < w and 0 <= y < h) or g[y][x] not in FACE:
-            return None
-        return "on" if 0 < y and g[y - 1][x] == g[y][x] and (y < 2 or g[y - 2][x] != g[y][x]) else "start"
-    out = {}
-    for (x, y), (k, mask, corners) in tops.items():
-        j = _junctions[str(k)]
-        sides = {"W": face_at(x - 1, y), "E": face_at(x + 1, y)}
-        assert not (sides["W"] and sides["E"]), f"({x},{y}): a cliff top between two faces"
-        lawn = quads(_recipes[k, outside_of(mask, corners)])
-        inner = dict(mask=mask | (8 if sides["W"] else 0) | (2 if sides["E"] else 0))
-        q = quads(_recipes[k, outside_of(inner["mask"], 0)])
-        tags = []
-        for side, col, bit in (("W", 0, 8), ("E", 1, 2)):
-            if sides[side]:
-                piece = quads(j[f"side_{side}_face" + ("_start" if sides[side] == "start" else "")]["tiles_8x8"])
-                for row, edge in ((0, 1), (1, 4)):  # the top's own north/south edge keeps its lawn quarter
-                    q[row][col] = lawn[row][col] if not mask & edge else piece[row][col]
-                tags.append(f"{side}{sides[side]}")
-        for bit, (dx, dy), name, col in ((4, (-1, 1), "in_SW_face", 0), (2, (1, 1), "in_SE_face", 1)):
-            if corners & bit and face_at(x + dx, y + dy) == "start":
-                q[1][col] = quads(j[name]["tiles_8x8"])[1][col]
-                tags.append(name)
-        for bit, (dx, dy) in ((1, (1, -1)), (8, (-1, -1))):
-            assert not (corners & bit and face_at(x + dx, y + dy)), f"({x},{y}): a face north of a top's corner"
-        if tags:
-            # the rest as pae would draw it (the inside corners that aren't the face's)
-            for row in (0, 1):
-                for col in (0, 1):
-                    if not ((col == 0 and sides["W"]) or (col == 1 and sides["E"])) and \
-                            not (row == 1 and f"in_S{'W' if col == 0 else 'E'}_face" in tags):
-                        q[row][col] = lawn[row][col]
-            out[x, y] = (f"{top_name(k, mask, corners)}+{'+'.join(tags)}", join(q))
-    return out
-
-
-def top_name(k: int, mask: int, corners: int) -> str:
-    return f"top{k}#{mask}" + (f".{corners}" if corners else "")
-
-
 def two_storeys(gate: buildings.Building) -> buildings.Building:
     """The League Front Gate a storey taller (three blocks, between its roof and its ground floor), from the pack's
     own pixels: the ground floor's wall and windows again, a window where the door is below, and its plinth's
@@ -304,35 +143,18 @@ def main() -> None:
     spec_mt = list(base["metatiles"])
     # the rock and cliff pack (bank 9): the tops this route has (by phase, the sides that are top and the inside
     # corners; the pack's recipes count the sides and corners that aren't), the face's columns, the stairs, the rocks
-    rock = kit.Sheet("rock_cliff", CLIFF_PAL, CLIFF_BANK, HERE, HERE)
+    rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
     gw = gate.idx.shape[1] // 16
     # under the roof: the cliff's top, by phase (its north edge along the forest)
-    under_roof = [(phase(gate_at[0] + i, gate_at[1] + j), 14 if j == 0 else 15, 0)
+    under_roof = [(cliffs.phase(gate_at[0] + i, gate_at[1] + j), 14 if j == 0 else 15, 0)
                   for j in range(GATE_TOP) for i in range(gw)]
-    tops = tops_in(g)
-    beside = junctions(g, tops)
-    for k, mask, corners in sorted({v for b, v in tops.items() if b not in beside} | set(under_roof)):
-        rock.add(top_name(k, mask, corners), top(k, outside_of(mask, corners)), tileset="secondary", ground="grass",
-                 solid=True)
-    pieces = sorted({name: idx for name, idx in beside.values()}.items())
-    assert len(pieces) <= len(JUNCTION_CHARS), "more tops beside faces than characters for them"
-    char_of = {}
-    for (name, idx), ch in zip(pieces, JUNCTION_CHARS):
-        rock.add(name, idx, tileset="secondary", ground="grass", solid=True)
-        char_of[name] = ch
-    for (x, y), (name, _) in beside.items():
-        g[y][x] = char_of[name]
-    for c in sorted(set(FACE[ch] for r in g for ch in r if ch in FACE)):
-        rock.add(f"face_{c}", pack(f"face/{c}.png"), tileset="secondary", ground="grass", solid=True)
-    rock.add("rock_stairs", pack("face/stairs.png"), tileset="secondary")
-    rock.add("small_rock", pack("rocks/small_rock.png"), tileset="secondary", ground="grass", solid=True)
-    rock.add("big_boulder", pack("rocks/big_boulder.png"), tileset="secondary", ground="grass", solid=True)
+    char_of = cliffs.add(rock, g, roof="U", extra_tops=under_roof)
     spec_mt += rock.write()
     # the gate (bank 7): its roof against the cliff's top (drawn under it, by phase), its front over the lawn; its
     # door animates (build.sh)
     sh = kit.Sheet("league_front_gate", gate.palette, GATE_BANK, HERE, HERE, cols=gw)
     sh.add("league_gate_top", gate.idx[:GATE_TOP * 16], tileset="secondary",
-           ground=[top_name(*t) for t in under_roof], solid=True)
+           ground=[cliffs.top_name(*t) for t in under_roof], solid=True)
     front = gate.entry()
     d = f"{gate.door[0]},{gate.door[1] - GATE_TOP}"
     front.update(open=[d], behaviors={d: "MB_ANIMATED_DOOR"})
@@ -342,7 +164,7 @@ def main() -> None:
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
     kit.write_palette(HERE / f"palette_{GATE_BANK}.pal", gate.palette)
-    kit.write_palette(HERE / f"palette_{CLIFF_BANK}.pal", CLIFF_PAL)
+    kit.write_palette(HERE / f"palette_{CLIFF_BANK}.pal", cliffs.PAL)
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{GATE_BANK}.pal", base["secondary_palettes"][8],
@@ -356,12 +178,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, U={"name": "league_gate_top", "joins": "C"}, L="league_gate_front",
                   n={"name": "paving_to_cobble_N", "joins": "p"}, H={"name": "rock_stairs", "joins": "p"}, o="small_rock", X="big_boulder")
-    for k, ch in enumerate(TOP, 1):  # the tops by phase, all one cliff (with the gate's top) for their edges
-        legend[ch] = {"auto": f"top{k}", "joins": "C"}
-    for ch, col in FACE.items():
-        legend[ch] = f"face_{col}"
-    for name, ch in char_of.items():  # the tops beside a face (part of the cliff for their neighbours' edges)
-        legend[ch] = {"name": name, "joins": "C"}
+    legend.update(cliffs.legend(char_of))
     for mask, ch in joins.items():  # the cobble over the joins: open to the south
         legend[ch] = {"name": f"cobble#{mask}", "joins": "="}
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
