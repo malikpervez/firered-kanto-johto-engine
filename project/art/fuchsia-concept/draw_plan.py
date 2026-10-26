@@ -4,7 +4,7 @@ make_art.py builds the map from the plan. Run from the repository root:
 python3 project/art/fuchsia-concept/draw_plan.py
 
 Fuchsia is Kanto's town of the Safari Zone, by the southern sea. It is 48x40 blocks, as before, and its joins stay
-where they were: Route 18's road (its rows 8-10) at the left edge, rows 18-20; Route 15's (its rows 5-8) at the right
+where they were: Route 18's road (its rows 8-10) at the left edge, rows 18-20; Route 15's (its rows 4-7) at the right
 edge, rows 20-23; Route 19's beach path (its columns 7-16) below the bottom edge, columns 19-28. It has:
 - **the Safari plaza** at the top, under the woods: the Safari Zone's gate lodge, its game's notices;
 - **the zoo** either side of the plaza, the pens of the Pokémon from the Safari Zone along two walks: the fossil

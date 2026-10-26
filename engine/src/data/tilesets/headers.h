@@ -2247,3 +2247,14 @@ const struct Tileset gTileset_FuchsiaConcept =
     .metatileAttributes = gMetatileAttributes_FuchsiaConcept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route15Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route15Concept,
+    .palettes = gTilesetPalettes_Route15Concept,
+    .metatiles = gMetatiles_Route15Concept,
+    .metatileAttributes = gMetatileAttributes_Route15Concept,
+    .callback = NULL,
+};

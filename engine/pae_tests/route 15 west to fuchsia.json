@@ -1,0 +1,39 @@
+{
+ "note": "West along the street into Fuchsia.",
+ "created": "2026-10-27 07:00",
+ "start": {
+  "map": "Route15_Frlg",
+  "x": 4,
+  "y": 5,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 47,
+  "y": 21,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 19:28"
+}
