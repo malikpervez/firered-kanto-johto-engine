@@ -22,11 +22,11 @@ pae map geometry $M --primary gTileset_PalletConcept_General --secondary gTilese
 pae tileset build ../$A/spec.json $P
 pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --border ../$A/border.txt $P
 
-# the joins: Route 10's road south (its columns 16-20) meets the top at columns 12-16 and Route 8's road (its rows
-# 19-21) the left edge at rows 9-11, as before; Route 12's (its columns 11-13) the bottom at columns 13-15, so Route 12
-# sits 4 blocks further east under the new town than under the old (offset 2, was -2)
+# the joins: Route 10's road south (its columns 16-20) meets the top at columns 12-16, as before; the new Route 8's road
+# (its rows 13-15) the left edge at rows 9-11 (offset -4, was -10); Route 12's (its columns 11-13) the bottom at columns
+# 13-15, so Route 12 sits 4 blocks further east under the new town than under the old (offset 2, was -2)
 pae map connect $M up Route10_Frlg --offset -4 $P
-pae map connect $M left Route8_Frlg --offset -10 $P
+pae map connect $M left Route8_Frlg --offset -4 $P
 pae map connect $M down Route12_Frlg --offset 2 $P
 [ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P
 

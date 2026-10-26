@@ -1,0 +1,75 @@
+{
+ "note": "Talk to Stan over the stands' rail: they battle.",
+ "created": "2026-10-26 13:00",
+ "start": {
+  "map": "Route8_Frlg",
+  "x": 22,
+  "y": 8,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_WARTORTLE lv40 MOVE_WATER_GUN",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route8_Frlg",
+  "x": 22,
+  "y": 8,
+  "in_battle": true
+ },
+ "accepted": "2026-10-26 12:38"
+}

@@ -442,7 +442,18 @@ STEPS = [
          inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250", expect=dict(map="LavenderTown_Frlg", xy=(7, 7))),
     dict(name="route8", what="West along Lavender's street onto Route 8 (Saffron's gates are shut: the way on is "
          "Route 8's underground path to Celadon)", walk=(0, 10), inputs=f"LEFT*{hold(1)}, wait 200",
-         expect=dict(map="Route8_Frlg", xy=(67, 20))),
+         expect=dict(map="Route8_Frlg", xy=(59, 14))),
+    dict(name="route8-underground", what="West along Route 8's road (in no trainer's sight) into the Underground "
+         "Path's hut", walk=(18, 13), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="UndergroundPath_EastEntrance_Frlg", xy=(13, 12))),
+    dict(name="ew-tunnel", what="Down the hut's stairs into the Underground Path west (stand on them and walk west)",
+         walk=(14, 9), inputs=f"UP*{hold(1)}, wait 20, LEFT*20, wait 250",
+         expect=dict(map="UndergroundPath_EastWestTunnel_Frlg", xy=(76, 4))),
+    dict(name="ew-tunnel-west", what="Along the tunnel under Saffron and up the stairs at its west end (west off them)",
+         walk=(3, 5), inputs=f"UP*{hold(1)}, wait 20, LEFT*20, wait 250",
+         expect=dict(map="UndergroundPath_WestEntrance_Frlg", xy=(12, 8))),
+    dict(name="route7", what="Out of the west hut onto Route 7", walk=(13, 11),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route7_Frlg", xy=(7, 17))),
 ]
 
 

@@ -2,7 +2,7 @@
 """Lavender Town after its concept (draw_plan.py and plan_stage1.txt): the quiet town in a hollow of the hills (see
 draw_plan.py). It is 38x32 blocks (old Lavender was 38x31), as wide as before; its joins stay where its neighbours meet
 it: Route 10's road the top at columns 12-16 (Route 10's 16-20, offset -4), Route 8's the left edge at rows 9-11 (Route
-8's 19-21, offset -10), Route 12's the bottom at columns 13-15 (Route 12's 11-13, offset 2; it was -2, the old town
+8's 13-15, offset -4), Route 12's the bottom at columns 13-15 (Route 12's 11-13, offset 2; it was -2, the old town
 sitting 4 blocks further east over Route 12).
 
 The pieces: the kit's, the Pokémon Center and the Mart (the kit's), Viridian's three houses in their palette (bank 7),

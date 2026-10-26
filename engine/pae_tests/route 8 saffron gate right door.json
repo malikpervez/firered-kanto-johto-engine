@@ -1,0 +1,39 @@
+{
+ "note": "Into Saffron's east gate by its right door block (a second warp to the same door inside).",
+ "created": "2026-10-26 13:00",
+ "start": {
+  "map": "Route8_Frlg",
+  "x": 11,
+  "y": 14,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route8_WestEntrance_Frlg",
+  "x": 11,
+  "y": 5,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 12:38"
+}
