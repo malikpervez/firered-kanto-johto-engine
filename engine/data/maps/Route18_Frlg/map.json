@@ -31,8 +31,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKER",
-      "x": 46,
-      "y": 14,
+      "x": 38,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -45,8 +45,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKER",
-      "x": 41,
-      "y": 15,
+      "x": 31,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -59,7 +59,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKER",
-      "x": 39,
+      "x": 23,
       "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -72,9 +72,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KECLEON",
-      "x": 37,
+      "x": 31,
       "y": 6,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -85,11 +85,11 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODRIO",
-      "x": 43,
+      "x": 33,
       "y": 7,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
-      "movement_range_x": 5,
+      "movement_range_x": 2,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
@@ -98,11 +98,11 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODRIO",
-      "x": 46,
+      "x": 36,
       "y": 7,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
-      "movement_range_x": 5,
+      "movement_range_x": 2,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
@@ -111,9 +111,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KECLEON",
-      "x": 40,
+      "x": 39,
       "y": 6,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -143,7 +143,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 37,
+      "x": 38,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -161,18 +161,11 @@
   "firered_geometry": {
     "width": 60,
     "height": 20,
-    "primary_tileset": "gTileset_Kanto_General_Hns",
-    "secondary_tileset": "gTileset_Fuchsia_Hns",
-    "border_filepath": "data/layouts/Route18_hns/border.bin",
-    "blockdata_filepath": "data/layouts/Route18_hns/map.bin",
+    "primary_tileset": "gTileset_PalletConcept_General",
+    "secondary_tileset": "gTileset_Route18Concept",
+    "border_filepath": "data/layouts/Route18_Concept/border.bin",
+    "blockdata_filepath": "data/layouts/Route18_Concept/map.bin",
     "layout_version": "hns",
-    "blockdata_overrides": [
-      {
-        "x": 37,
-        "y": 7,
-        "expected": 1255,
-        "value": 1026
-      }
-    ]
+    "blockdata_overrides": null
   }
 }

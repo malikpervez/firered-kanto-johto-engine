@@ -9,6 +9,9 @@
   "Route5_Frlg",
   "Route9_Frlg"
  ],
+ "FuchsiaCity_Frlg": [
+  "Route18_Frlg"
+ ],
  "LavenderTown_Frlg": [
   "Route10_Frlg",
   "Route12_Frlg",
@@ -43,7 +46,8 @@
   "Route18_Frlg"
  ],
  "Route18_Frlg": [
-  "Route17_Frlg"
+  "Route17_Frlg",
+  "FuchsiaCity_Frlg"
  ],
  "Route1_Frlg": [
   "PalletTown_Frlg",
