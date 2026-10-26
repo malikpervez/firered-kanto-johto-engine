@@ -50,7 +50,7 @@ PLANT_DIR = HERE / "buildings/power_plant"
 
 def power_plant() -> buildings.Building:
     """The Power Plant: Pewter's Gym with its Gym plaque blank and a lightning bolt on its emblem for the Boulder
-    Badge's leaf (written to buildings/power_plant/, with the Gym's door)."""
+    Badge's leaf (written to buildings/power_plant/, with the Gym's door frames, their plaque blank too)."""
     PLANT_DIR.mkdir(parents=True, exist_ok=True)
     with Image.open(GYM / "pewter_gym.png") as im:
         idx, pal = np.array(im, np.uint8), im.getpalette()[:48]
@@ -67,7 +67,12 @@ def power_plant() -> buildings.Building:
     meta = json.loads((GYM / "pewter_gym.json").read_text())
     (PLANT_DIR / "power_plant.json").write_text(json.dumps(dict(meta, id="power_plant", image="power_plant.png"),
                                                             indent=2) + "\n")
-    (PLANT_DIR / "power_plant_door.png").write_bytes((GYM / "pewter_gym_door.png").read_bytes())
+    # the Gym's door frames, with the board over the door blank too
+    frames = np.array(Image.open(GYM / "pewter_gym_door.png").convert("RGBA"))
+    rgb = [tuple(pal[i:i + 3]) for i in range(0, 48, 3)]
+    letters = (frames[2:9] == np.array([*rgb[2], 255], np.uint8)).all(axis=2)
+    frames[2:9][letters] = [*rgb[10], 255]
+    Image.fromarray(frames, "RGBA").save(PLANT_DIR / "power_plant_door.png")
     return buildings.load(PLANT_DIR)
 
 
