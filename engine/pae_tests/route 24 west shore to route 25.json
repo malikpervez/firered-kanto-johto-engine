@@ -1,0 +1,38 @@
+{
+ "note": "Up the west shore's path onto Route 25.",
+ "created": "2026-10-26 05:29",
+ "start": {
+  "map": "Route24_Frlg",
+  "x": 8,
+  "y": 2,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route25_Frlg",
+  "x": 8,
+  "y": 34,
+  "in_battle": false
+ }
+}

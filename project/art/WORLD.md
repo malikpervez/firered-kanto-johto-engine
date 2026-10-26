@@ -22,6 +22,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 3 | 84×20 | 84×20 | kit + `gTileset_Route3Concept` | left: Pewter City (offset −15), up: Route 4 (offset 60) |
 | Route 4 | 108×20 | 108×20 | kit + `gTileset_Route4Concept` | down: Route 3 (offset −60), right: Cerulean City (offset −7) |
 | Cerulean City | 58×51 | 58×51 | kit + `gTileset_CeruleanConcept` | up: Route 24 (offset 25), down: Route 5 (offset −8), left: Route 4 (offset 7), right: Route 9 (offset −6) |
+| Route 24 | 30×22 | 30×22 | kit (and an empty `gTileset_Route24Concept`) | down: Cerulean City (offset −25), up: Route 25 (offset 0) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -39,7 +40,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Pewter ↔ Route 3 | Pewter rows 24–27 = Route 3 rows 9–12 | the road east |
 | Route 3 ↔ Route 4 | Route 3 68–75 = Route 4 8–15 | the pass north becomes the road up to Mt. Moon |
 | Route 4 ↔ Cerulean | Route 4 rows 10–13 = Cerulean rows 17–20 | the road east into town |
-| Cerulean ↔ Route 24 | Cerulean 41–44 = Route 24 16–19 | Nugget Bridge's last span (Route 24 isn't rebuilt) |
+| Cerulean ↔ Route 24 | Cerulean 41–44 = Route 24 16–19 | Nugget Bridge |
+| Route 24 ↔ Route 25 | Route 24 7–10, 16–19, 24–25 = Route 25 the same | the west path, the bridge and the east path (Route 25 isn't rebuilt) |
 | Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 34–36 | the road east (Route 9 isn't rebuilt; its edge opens on those three rows only) |
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck (Route 5 isn't rebuilt) |
 
@@ -59,9 +61,10 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Pewter City | Route 2, Route 3 | pae |
 | Route 3 | Pewter City, Route 4 | pae |
 | Route 4 | Route 3, Cerulean City | pae |
-| Cerulean City | Route 4, Route 5, Route 9, Route 24 | pae: 131 adapters, palette slots 4 (a primary bank it never shows), 10, 11, 12; Route 5's palette 5 drawn in its nearest colours (at most 54 RGB steps off). Its hand-made seam for the old Cerulean is gone |
+| Cerulean City | Route 4, Route 5, Route 9, Route 24 | pae: 137 adapters, palette slots 10, 11, 12 (since Route 24 is from the kit, every colour fits). Its hand-made seam for the old Cerulean is gone |
 | Route 5, Route 9 | Cerulean City | pae (the old maps), beside their hand-made seams |
-| Route 24 | Cerulean City | pae (the old map): its tilesets fill every metatile id, so its 63 adapters take the top ids it never shows |
+| Route 24 | Cerulean City, Route 25 | pae |
+| Route 25 | Route 24 | pae (the old map): two banks free, so four of Route 24's palettes are drawn in their nearest colours |
 | Route 21 North | Pallet Town | pae |
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
@@ -142,3 +145,6 @@ Check these whenever a map is rebuilt, moved or resized:
   Slowbro's place in the neck to 22–23,45 (`CeruleanCity_EventScript_BlockExits`), and Route 4's copy of Cerulean
   Cave's guard to 114,0. Old Cerulean's hand-made seam was removed from `kanto_connection_seam.c`. Routes 5, 9 and 24
   (still old) got pae seams for the new town.
+- Route 24 rebuilt at the same size, so Cerulean's and Route 25's joins didn't change. Its people moved (the bridge's
+  five trainers now see three blocks: `build.sh` sets it); the Rocket and his triggers stayed. Old Route 24's border
+  entry was removed from `firered_geometry_payload_aliases.json`. Route 25 (still the old map) got a pae seam for it.

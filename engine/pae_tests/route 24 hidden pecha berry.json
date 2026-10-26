@@ -1,0 +1,103 @@
+{
+ "note": "Find the Pecha Berry hidden on the west shore.",
+ "created": "2026-10-26 05:30",
+ "start": {
+  "map": "Route24_Frlg",
+  "x": 10,
+  "y": 5,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_HIDDEN_ITEM_ROUTE24_PECHA_BERRY"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route24_Frlg",
+  "x": 10,
+  "y": 5,
+  "in_battle": false,
+  "flags": {
+   "FLAG_HIDDEN_ITEM_ROUTE24_PECHA_BERRY": true
+  }
+ }
+}

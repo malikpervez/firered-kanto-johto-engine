@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-route4` (Route 4 and Cerulean City rebuilt, on `v2-main` at `ed1a5da0`) |
-| ROM | `make -j4` with the default settings. SHA-1 `c56e497da5c570b323af3581e31aef17b4afc435`, SHA-256 `a9274c0eab3e1e826159fc941ba4020ed88cea2247a79a1b6abdb7b464127517` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59 |
-| Last step passed | 59 `cerulean-rival`: through Mt. Moon (two Rockets, Miguel, the Helix Fossil), down Route 4 into Cerulean, Blue beaten on the bridge road. Steps 47–59 were run on this build, from step 46's checkpoint of the build before |
-| Replay tests | 123 of 123 pass |
+| Game | branch `claude/kanto-route24` (Route 24 rebuilt, on `v2-main` at `ae745ec6`) |
+| ROM | `make -j4` with the default settings. SHA-1 `6b3e17ef5369567202432fd0cac01abcce27ec2e`, SHA-256 `46acbfb42692aa7764b60b20ec7101c79d478fcf5db1b1418f2431c4eb79d5b5` |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for the replay tests and steps 60–70 |
+| Last step passed | 70 `route25`: healed in Cerulean's Center, over Nugget Bridge past its five trainers and the Rocket, onto Route 25. Steps 60–70 were run on this build, from step 59's checkpoint of the build before |
+| Replay tests | 137 of 137 pass |
 
 ## How to run it
 
@@ -117,13 +117,24 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 57 | `route4-ledge` | East along the shelf and down its ledge (one way) | Route 4 50,10 | |
 | 58 | `cerulean` | East along Route 4's road into Cerulean City | Cerulean City 0,18 | |
 | 59 | `cerulean-rival` | Along the street past the robbed house (its policeman in the door) and up the bridge road: Blue comes down off Nugget Bridge; beat him | Cerulean City 42,7 | `VAR_MAP_SCENE_CERULEAN_CITY_RIVAL` 1 |
+| 60 | `cerulean-center` | Into Cerulean's Pokémon Center | Cerulean Center 7,8 | |
+| 61 | `cerulean-heal` | Up to the counter and heal | Cerulean Center 7,4 | |
+| 62 | `cerulean-leave-center` | Back out to the street | Cerulean City 28,29 | |
+| 63 | `nugget-bridge` | Up the bridge road onto Nugget Bridge (Route 24) | Route 24 17,21 | |
+| 64 | `bridge-cale` | Up the bridge to its first trainer; beat him | Route 24 17,19 | |
+| 65 | `bridge-ali` | The second | Route 24 17,17 | |
+| 66 | `bridge-timmy` | The third | Route 24 17,15 | |
+| 67 | `bridge-reli` | The fourth | Route 24 17,13 | |
+| 68 | `bridge-ethan` | The fifth | Route 24 17,11 | |
+| 69 | `bridge-rocket` | At the north end the Rocket steps over, gives you the Nugget and battles (the Wartortle evolves) | Route 24 17,8 | `VAR_MAP_SCENE_ROUTE24` 1 |
+| 70 | `route25` | Off the bridge's north end onto Route 25 | Route 25 17,34 | |
 
 ## What it doesn't cover
 
 * **Two things are set up, not played.** Every play has a Repel on. For step 28 the team is replaced with a
   level 40 Pikachu that knows Thunderbolt, so Blue can be beaten without training first.
-* **Battles other than the story ones.** There are no wild battles (the Repel), and the routes so far have no
-  trainers.
+* **Battles other than the story ones.** There are no wild battles (the Repel), and trainers the walk can go round
+  aren't fought.
 * **People.** Only the story's people are checked. The second run of 2026-10-22 also talked to ten others on
   Pallet, Route 1, Viridian and Route 22. Nine answered; the tenth is hidden in the game on purpose. The script
   doesn't do that.
@@ -134,7 +145,10 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   ladders aren't played.
 * **Cerulean's other events**: the Rocket in the robbed house's backyard, its hole, the badge house, the Bike Shop,
   the Gym, the lass and her Slowbro in the neck, the tree to cut, the cave on its island: the replay tests play them.
-  The walk stops at Blue; Nugget Bridge (Route 24) is next.
+  The walk heals in the Center and goes on up Nugget Bridge.
+* **Route 24 off the bridge**: the west shore (the TM, the hidden berry, Shane, the Abra grass) and the east meadow
+  (the shelter's traveler and his Charmander) are reached from Route 25; the replay tests play them. The traveler's
+  gift isn't checked: it needs the Friends' story state.
 * **Route 3's trainers.** The walk keeps below their lines of sight (they're optional); their battles are in the replay
   tests.
 * **Viridian Forest's other trainers.** Rick and Doug can't be walked round, so their battles are played (with the
@@ -184,3 +198,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | Pewter City rebuilt (its own concept); two new steps, the Gym guide's walk to the Gym and into it | **Steps 39–41 pass** `--from pewter`, resumed from step 38's checkpoint (26 s). Steps 1–38 weren't run on this build (Pewter changes nothing before step 39). |
 | 2026-10-26 | Route 3 rebuilt (its own concept); six new steps: Liam and Brock in Pewter's Gym, the Running Shoes, across Route 3 to Route 4 | **Steps 41–47 pass** `--from pewter-gym`, resumed from step 40's checkpoint (about 2 min). The first try stopped in the Gym: Liam saw the walk up its middle; the steps now fight him, then Brock, with a Wartortle given on entering the Gym (Pikachu's Thunderbolt doesn't touch rock types). |
 | 2026-10-26 | Route 4 and Cerulean City rebuilt (their own concepts); twelve new steps: Mt. Moon's three floors, out onto Route 4's shelf, down into Cerulean, Blue | **Steps 47–59 pass**, `--from route3-north` and resumed from each failed step's predecessor (about 12 min in all). First tries stopped: on Mt. Moon 1F a lass saw the walk (the walk now goes round every line of sight, by via blocks worked out on the map), it stepped over another ladder, and the checkpoint was saved before a ladder's fade (the steps now walk to the block before the ladder and step on); on B2F pae read the map without its block fixes and planned through rock and up a one-way edge (pae PR #24 fixes both), two Rockets can't be walked round (the steps fight them), Miguel's and Blue's battles needed more presses, and the policeman stood in the street's top row (the walk takes the other). |
+| 2026-10-26 | Route 24 rebuilt (its own concept); eleven new steps: a heal in Cerulean's Center, Nugget Bridge's five trainers and the Rocket, Route 25 | **Steps 60–70 pass**, `--from cerulean-rival` and resumed from each failed step's predecessor. First tries stopped: the trainers' battles needed more presses, the Wartortle blacked out against the fifth (the steps now heal in Cerulean first), and the Rocket's battle ends with the Wartortle evolving, which the step now waits out before his last message sets the scene. |
