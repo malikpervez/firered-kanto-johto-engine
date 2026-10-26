@@ -21,9 +21,9 @@ pae map geometry $M --primary gTileset_PalletConcept_General --secondary gTilese
 pae tileset build ../$A/spec.json $P
 pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --border ../$A/border.txt $P
 
-# the joins: Celadon's east street (its rows 12-15) meets the left edge at rows 10-13; Saffron lies beyond the right
+# the joins: Celadon's boulevard (its rows 20-23) meets the left edge at rows 10-13; Saffron lies beyond the right
 # edge, its own west gate door (its row 27) level with the gate's here (row 9), as with the old route
-pae map connect $M left CeladonCity_Frlg --offset -2 $P
+pae map connect $M left CeladonCity_Frlg --offset -10 $P
 pae map connect $M right SaffronCity_Connection_Frlg --offset -18 $P
 # no seam with Saffron's twin (as Routes 5, 6 and 8's, KR-34): no block of this route is in view of it, and old
 # Saffron itself draws no neighbour (KR-53)
@@ -52,7 +52,7 @@ pae map place $M object 2 12 17 $P
 pae map place $M bg 0 12 9 $P       # the Underground Path's sign, by the hut
 pae map place $M bg 1 22 21 $P     # the hidden Wepear Berry, in the garden's corner
 # the Pokémon stand at the ground's elevation; Celadon's border tree is shown across the join where it stands on
-# Celadon's grid (its 53,21: x 53 - 60, y 21 - 2)
+# Celadon's grid (its 50,13: x 50 - 60, y 13 - 10)
 python3 - <<'PY'
 import json
 p = "data/maps/Route7_Frlg/map.json"
@@ -62,6 +62,6 @@ for i in (1, 2):
     o[i]["elevation"] = 3
 clone = [e for e in o if e.get("type") == "clone" and e.get("target_map") == "MAP_CELADON_CITY"]
 assert len(clone) == 1
-clone[0]["x"], clone[0]["y"] = -7, 19
+clone[0]["x"], clone[0]["y"] = -10, 3
 open(p, "w").write(json.dumps(m, indent=2) + "\n")
 PY

@@ -3,18 +3,18 @@
 make_art.py builds the map from the plan. Run from the repository root:
 python3 project/art/route7-concept/draw_plan.py
 
-Route 7 is the short park road from Celadon's east street to Saffron's west gate. It is 30x24 blocks (old Route 7
-was 20x28). Celadon's street (its rows 12-15) meets the left edge at rows 10-13; Saffron lies beyond the right edge,
+Route 7 is the short park road from Celadon's boulevard to Saffron's west gate. It is 30x24 blocks (old Route 7
+was 20x28). Celadon's boulevard (its rows 20-23) meets the left edge at rows 10-13; Saffron lies beyond the right edge,
 reached only through the gate (its door 18-19,9). It has:
-- **the road** of cobbles, four blocks wide as Celadon's street is, out of the trees at Celadon's edge to the gate;
+- **the road** of cobbles, four blocks wide as Celadon's boulevard is, out of the trees at Celadon's edge to the gate;
 - **Saffron's west gate** (Route 2's south forest gate, as on Routes 6 and 8) at the road's east end, its doors
   onto the road;
 - **the Underground Path's hut** north of the road with its sign: the way under Saffron to Route 8 and Lavender;
 - **the singing garden** south of the road, a bed of flowers where the Jigglypuff sings to the Ralts, by a little
   pond, with tall grass along its south side (Route 7's wild Pokémon) and the Wepear Berry hidden in its corner.
 
-The west seven columns are forest and road only: old Celadon has no free slot left, only 106 tile slots it never
-shows, for this strip (KR-54). Every block is at least 7 in from the right edge, so the camera never shows old Saffron
+The west seven columns are forest and road only, as old Celadon needed (it had no room for more of this strip:
+KR-54, gone with Celadon's rebuild). Every block is at least 7 in from the right edge, so the camera never shows old Saffron
 across it (no seam: KR-34).
 
 Letters: the kit's legend (T forest, . lawn, = cobble, g grass, * flowers, ~ pond, o rocks, b bushes, R trees, S signs),
@@ -36,7 +36,7 @@ def at(x, y, c):
     g[y][x] = c
 
 
-# the frame: forest, open at Celadon's street, the west band forest and road only; the east deep, so old Saffron is
+# the frame: forest, open at Celadon's boulevard, the west band forest and road only; the east deep, so old Saffron is
 # never in view
 rect(0, 0, 29, 1, "T")
 rect(0, 22, 29, 23, "T")
@@ -45,7 +45,7 @@ rect(0, 14, 6, 23, "T")
 rect(23, 0, 29, 23, "T")
 rect(14, 2, 22, 3, "T")                        # the forest over the gate
 
-# the road, Celadon's street (rows 10-13) to the gate
+# the road, Celadon's boulevard (rows 10-13) to the gate
 rect(0, 10, 22, 13, "=")
 rect(15, 4, 22, 9, "F")                        # Saffron's west gate, doors 18-19,9
 

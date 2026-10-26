@@ -41,7 +41,7 @@ at again when the scene is next played there.
 | 4 | Everybody has a partner now | Cerulean City (26,23) | Pokédex received | Talk | Ham, X, Tim | | Entering Cerulean before Route 4 with the fossil skips scene 3. |
 | 5 | Tim discovers the ferry schedule | Vermilion City (30,19) | Pokédex received | Talk | Jon, Nick, Tim | | |
 | 6 | Two very different coaching styles | Route 11 (25,7) | Pokédex received | Talk | Brian, Nick, LB | Nick (B03) or LB (B04), optional | |
-| 7 | Manifesting a room | Celadon City (27,31) | Rocket Hideout cleared (`FLAG_HIDE_CELADON_ROCKETS`) | Talk | Brian, X, LB | X (B05), optional | Skipped if the player reaches a later scene's map first (see above). |
+| 7 | Manifesting a room | Celadon City (25,34) | Rocket Hideout cleared (`FLAG_HIDE_CELADON_ROCKETS`) | Talk | Brian, X, LB | X (B05), optional | Rebuilt map: the camp is in the pond garden south of Lucky Lane. Skipped if the player reaches a later scene's map first (see above). |
 | 8 | Quiet outside Lavender | Lavender Town (13,13), then Mr. Fuji's house (3,6) | Poké Flute received | Talk | Ham, Jon, Nick | | The conversation moves into Fuji's house and back out. |
 | 9 | The group gets actual responsibilities | Fuchsia City (19,21) | Pokédex received | Talk | Brian, Nick, Tim | Tim (B06), optional | Reachable early by Cycling Road, which skips 7 and 8. |
 | 10 | A very bad job interview | Saffron City (33,15) | Silph Co. cleared (`FLAG_HIDE_SAFFRON_ROCKETS` and the Master Ball) | Talk | Brian, X, Tim | | |

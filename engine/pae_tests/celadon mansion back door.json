@@ -1,0 +1,47 @@
+{
+ "note": "Up the path beside the Mansion to its back door, and in (walk south onto it, then south again): the game walks you one step in from the back door.",
+ "created": "2026-10-26 17:00",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 25,
+  "y": 9,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     16
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     20
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Condominiums_1F_Frlg",
+  "x": 2,
+  "y": 2,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 13:51"
+}

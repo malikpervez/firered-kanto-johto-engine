@@ -2181,3 +2181,14 @@ const struct Tileset gTileset_Route7Concept =
     .metatileAttributes = gMetatileAttributes_Route7Concept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_CeladonConcept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeladonConcept,
+    .palettes = gTilesetPalettes_CeladonConcept,
+    .metatiles = gMetatiles_CeladonConcept,
+    .metatileAttributes = gMetatileAttributes_CeladonConcept,
+    .callback = NULL,
+};

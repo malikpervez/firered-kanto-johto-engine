@@ -1,10 +1,10 @@
 {
- "note": "East along Celadon's street onto Route 7 (Celadon shows Route 7's strip on the way).",
- "created": "2026-10-26 15:00",
+ "note": "East along the boulevard onto Route 7.",
+ "created": "2026-10-26 17:00",
  "start": {
   "map": "CeladonCity_Frlg",
   "x": 56,
-  "y": 13,
+  "y": 21,
   "state": [],
   "script": null
  },
@@ -35,5 +35,5 @@
   "y": 11,
   "in_battle": false
  },
- "accepted": "2026-10-26 13:15"
+ "accepted": "2026-10-26 13:51"
 }
