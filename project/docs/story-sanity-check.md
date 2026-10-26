@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-route11` (Route 11 rebuilt, on `v2-main` at `a0908a47`) |
-| ROM | `make -j8` with the default settings. SHA-1 `757bd08564ab747eea8ba03e66f59f25e0b1445f`, SHA-256 `fda328b6def027bda6bda1fa81a9a7b8c9f0f7090dc2e6eb10764b9254cf618e` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–92 and the replay tests |
-| Last step passed | 92 `ss-anne`: through the Underground Path and Route 6 into Vermilion, a heal in its Center, east along Route 11 into its gatehouse and back, and down the pier past the ticket check onto the S.S. Anne. Steps 88–92 were run on this build, from step 87's checkpoint of the build before |
-| Replay tests | 216 of 216 pass (three Vermilion tests that look across its east edge now show the new Route 11, and were accepted after looking at them) |
+| Game | branch `claude/story-ss-anne-misty` (story check only, on `v2-main` at `03dc1a9d`) |
+| ROM | `make -j8` with the default settings. SHA-1 `473af5ff345ea3ea9dc878a3c2999c957b2e2723`, SHA-256 `f55f676aafbb9963ba897f223202f86a0edb4d3f8277b2e47aa15b24cd2f1a53` |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110 and the replay tests |
+| Last step passed | 110 `leave-cerulean-gym`: on through the S.S. Anne (Blue, the captain's HM01), off the ship as it sails, back through the Underground Path to Cerulean, and Misty's Gym (Diana, then Misty: the Cascade Badge). Steps 98–110 were run on this build, from step 97's checkpoint; steps 93–97 on the Route 11 build (SHA-1 `757bd085…`), from step 92's checkpoint. #47 changed none of what 93–97 play; the ship's landing it fixed is step 100, run on this build |
+| Replay tests | 219 of 219 pass (on this ROM, for #47; this change adds none) |
 
 ## How to run it
 
@@ -150,6 +150,24 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 90 | `route11-leave-gatehouse` | Out by its west door (stand on it, walk west) | Route 11 53,16 | |
 | 91 | `back-to-vermilion` | Back west along the road into Vermilion | Vermilion City 59,12 | |
 | 92 | `ss-anne` | Down the pier: the ferry sailor checks the S.S. Ticket; onto the gangway | S.S. Anne outside 32,5 | |
+| 93 | `ss-anne-board` | Down the gangway into the ship (its end is an arrow: press down on it) | S.S. Anne 1F 19,2 | |
+| 94 | `ss-anne-2f` | West along the corridor, round the worker and off the cabin doors, up the stairs (walk west onto them) | S.S. Anne 2F 2,2 | |
+| 95 | `ss-anne-rival` | East along 2F, off the stairs to 3F and the cabin doors, towards the captain's door: Blue battles | S.S. Anne 2F 31,6 | |
+| 96 | `captains-office` | Up the stairs to the captain's office (walk east off their foot) | Captain's office 3,7 | |
+| 97 | `hm01` | Rub the seasick captain's back: HM01 (Cut) | Captain's office 5,5 | |
+| 98 | `leave-office` | Back down the office's stairs (walk west onto them) | S.S. Anne 2F 30,2 | |
+| 99 | `ss-anne-down` | Back west along 2F (up the passage's east side, away from the sailor) and down the stairs (east off them) | S.S. Anne 1F 3,8 | |
+| 100 | `leave-ss-anne` | East along 1F and out: the ship sails, and you walk onto Vermilion's pier | Vermilion City 38,38 | |
+| 101 | `back-to-route6` | Up the pier and the plaza's middle onto Route 6 | Route 6 41,31 | |
+| 102 | `route6-hut` | Up Route 6's road into the Underground Path's hut | Underground Path south entrance 13,12 | |
+| 103 | `tunnel-back` | Down the hut's stairs (walk west off them) | Underground Path tunnel 2,38 | |
+| 104 | `tunnel-north` | Along the tunnel and up its north stairs (west off them) | Underground Path north entrance 12,8 | |
+| 105 | `route5-back` | Out of the north hut onto Route 5 | Route 5 35,25 | |
+| 106 | `cerulean-back` | Up Route 5 through the neck into Cerulean | Cerulean City 22,50 | |
+| 107 | `cerulean-gym` | Into Misty's Gym | Cerulean Gym 7,18 | |
+| 108 | `gym-diana` | Round the Gym guy and Luis's sight, round the walkways into Diana's line: she battles | Cerulean Gym 8,7 | |
+| 109 | `misty` | Face Misty and beat her: the Cascade Badge | Cerulean Gym 8,7 | |
+| 110 | `leave-cerulean-gym` | Back out of the Gym (its mat: press down on it) | Cerulean City 47,37 | |
 
 ## What it doesn't cover
 
@@ -235,3 +253,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | Route 6 rebuilt (its own concept); four new steps: the Underground Path's tunnel, Route 6, Vermilion | **Steps 81–84 pass**, `--from tunnel` on this build. The first try stood on the hut's stairs without going down: they are arrow warps you walk east off (the steps do now, and at the tunnel's south end). |
 | 2026-10-26 | Vermilion City rebuilt (its own concept); four new steps: its Center (in, heal, out) and the pier onto the S.S. Anne | **Steps 85–88 pass**, `--from vermilion-center` on this build, first try. |
 | 2026-10-26 | Route 11 rebuilt (its own concept); four new steps before the S.S. Anne: east onto Route 11, into its gatehouse, out again, back to Vermilion | **Steps 88–92 pass**, `--from route11` and resumed from the failed step's predecessor. The first try stood inside the gatehouse: its doors inside are on its west and east walls, which you walk west or east off (the step now walks west). |
+| 2026-10-26 | No map changes: eighteen new steps through the S.S. Anne (Blue, HM01), off the ship, back to Cerulean and through Misty's Gym, so the check can reach Route 9 with Cut | **Steps 93–110 pass**, `--from ss-anne-board` and resumed from each failed step's predecessor (93–97 on the Route 11 build, 98–110 on #47's). First tries stopped: on arrow warps and stairs entered by the wrong key (the gangway's end, the office's stairs, both ends of the ship's and the tunnel's stairs, the Gym's mat); in the ship's corridors, where a worker and a wandering sailor stood in the walk (vias go round them); in Vermilion, where the walk went into the Mart (pae plans across door blocks: KR-43; a via keeps to the plaza's middle); after Misty, before her scenes had finished (more presses). The ship's sailing landed you below the map until #47 fixed it. |
