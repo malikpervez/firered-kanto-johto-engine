@@ -20,6 +20,8 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 2 | 30×80 | 30×80 | kit + `gTileset_Route2Concept` | up: Pewter City (offset −14), down: Viridian City (offset −16) |
 | Pewter City | 52×44 | 52×44 | kit + `gTileset_PewterConcept` | down: Route 2 (offset 14), right: Route 3 (offset 15) |
 | Route 3 | 84×20 | 84×20 | kit + `gTileset_Route3Concept` | left: Pewter City (offset −15), up: Route 4 (offset 60) |
+| Route 4 | 108×20 | 108×20 | kit + `gTileset_Route4Concept` | down: Route 3 (offset −60), right: Cerulean City (offset −7) |
+| Cerulean City | 58×51 | 58×51 | kit + `gTileset_CeruleanConcept` | up: Route 24 (offset 25), down: Route 5 (offset −8), left: Route 4 (offset 7), right: Route 9 (offset −6) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -35,7 +37,11 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Viridian ↔ Route 22 | Viridian rows 28–31 = Route 22 rows 6–9 | the road west |
 | Route 2 ↔ Pewter | Route 2 8–11 = Pewter 22–25 | the road north becomes Pewter's main street |
 | Pewter ↔ Route 3 | Pewter rows 24–27 = Route 3 rows 9–12 | the road east |
-| Route 3 ↔ Route 4 | Route 3 68–75 = Route 4 8–15 | the pass north (Route 4 isn't rebuilt) |
+| Route 3 ↔ Route 4 | Route 3 68–75 = Route 4 8–15 | the pass north becomes the road up to Mt. Moon |
+| Route 4 ↔ Cerulean | Route 4 rows 10–13 = Cerulean rows 17–20 | the road east into town |
+| Cerulean ↔ Route 24 | Cerulean 41–44 = Route 24 16–19 | Nugget Bridge's last span (Route 24 isn't rebuilt) |
+| Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 34–36 | the road east (Route 9 isn't rebuilt; its edge opens on those three rows only) |
+| Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck (Route 5 isn't rebuilt) |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -51,8 +57,11 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Viridian City | Route 1, Route 2, Route 22 | pae (its hand-made seam for the old Viridian is gone) |
 | Route 2 | Viridian City, Pewter City | pae |
 | Pewter City | Route 2, Route 3 | pae |
-| Route 3 | Pewter City, Route 4 | pae (Route 4's strip: 112 tiles, palette slot 9) |
-| Route 4 | Route 3 | pae (the old map) |
+| Route 3 | Pewter City, Route 4 | pae |
+| Route 4 | Route 3, Cerulean City | pae |
+| Cerulean City | Route 4, Route 5, Route 9, Route 24 | pae: 131 adapters, palette slots 4 (a primary bank it never shows), 10, 11, 12; Route 5's palette 5 drawn in its nearest colours (at most 54 RGB steps off). Its hand-made seam for the old Cerulean is gone |
+| Route 5, Route 9 | Cerulean City | pae (the old maps), beside their hand-made seams |
+| Route 24 | Cerulean City | pae (the old map): its tilesets fill every metatile id, so its 63 adapters take the top ids it never shows |
 | Route 21 North | Pallet Town | pae |
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
@@ -126,3 +135,10 @@ Check these whenever a map is rebuilt, moved or resized:
 - Route 3 rebuilt at the same size, so Pewter's and Route 4's joins didn't change. Its trainers, Pokémon, sign and
   hidden item moved (the trainers keep their scripts and the way they face). Route 4 (still the old map) got a pae
   seam for it.
+- Route 4 and Cerulean City rebuilt at the same sizes, so none of their joins moved (Cerulean's east road is three
+  rows, as Route 9's edge opens). One pull request: old Cerulean had no room for a seam to the new Route 4. Every
+  warp kept its number; people, signs and hidden items moved, the heal spots moved to the new Centers (Route 4 6,9;
+  Cerulean 28,29), the Friends' Cerulean camp to 34,32 (`src/data/friends_scene_locations.h`), the lass and her
+  Slowbro's place in the neck to 22–23,45 (`CeruleanCity_EventScript_BlockExits`), and Route 4's copy of Cerulean
+  Cave's guard to 114,0. Old Cerulean's hand-made seam was removed from `kanto_connection_seam.c`. Routes 5, 9 and 24
+  (still old) got pae seams for the new town.
