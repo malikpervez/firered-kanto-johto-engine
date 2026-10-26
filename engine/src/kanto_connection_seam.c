@@ -439,21 +439,6 @@ static const struct KantoSeamPalette ALIGNED(4) sKantoSeam_IndigoPlateau_Exterio
 static const u16 sKantoSeam_IndigoPlateau_Exterior_Frlg_CanonicalMids[] = { 0x0014, 0x0015, 0x0016, 0x0017, 0x001C, 0x001D, 0x001E, 0x001F, 0x0071, 0x0078, 0x0079, 0x007A, 0x00B2, 0x00B3, 0x00B4, 0x00B5, 0x0281, 0x0282, 0x0283, 0x0289, 0x028A, 0x028C, 0x028D, 0x028E, 0x02C0, 0x02C1, 0x02C2, 0x02C3, 0x02C6, 0x02D3, 0x02D4, 0x02D8, 0x02DB, 0x02DC, 0x02E0, 0x02E8, 0x02E9, 0x02EA, 0x02EB, 0x031C };
 static const u16 sKantoSeam_IndigoPlateau_Exterior_Frlg_OriginIds[] = { 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D, 0x000D };
 
-static const struct KantoSeamMetatile sKantoSeam_Route7_Frlg_Metatiles[] = {
-    { .sourceLayout = &SaffronCity_Connection_Frlg_FireRedGeometry, .attributes = 0x00000000u, .sourceMid = 848, .tiles = { 0x1280, 0x1281, 0x1282, 0x1282, 0x0000, 0x0000, 0x0000, 0x0000 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &SaffronCity_Connection_Frlg_FireRedGeometry, .attributes = 0x00000000u, .sourceMid = 856, .tiles = { 0x1283, 0x1283, 0x1283, 0x1283, 0x0000, 0x0000, 0x0000, 0x0000 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &SaffronCity_Connection_Frlg_FireRedGeometry, .attributes = 0x00000000u, .sourceMid = 864, .tiles = { 0x1284, 0x1284, 0x026D, 0x019B, 0x0000, 0x0000, 0x0000, 0x0000 }, .layoutVersion = LAYOUT_VERSION_HNS },
-};
-static const u16 ALIGNED(4) sKantoSeam_Route7_Frlg_GlyphRun0[] = { 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFF77, 0x7FFF, 0x7777, 0x7777, 0x7777, 0x7777, 0x4444, 0x4444, 0x5555, 0x5555, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFF77, 0x77FF, 0x7777, 0x7777, 0x2772, 0x7772, 0x4444, 0x4444, 0x5555, 0x5555, 0x5333, 0x3343, 0x5411, 0x1113, 0x5433, 0x3313, 0x5433, 0x3313, 0x5422, 0x2213, 0x5433, 0x3313, 0x5422, 0x2213, 0x5433, 0x3313, 0x5422, 0x2213, 0x5433, 0x3313, 0x5422, 0x2213, 0x5433, 0x3313, 0x5422, 0x2213, 0x5433, 0x3313, 0x5422, 0x2213, 0x5433, 0x3313, 0x5444, 0x4414, 0x5555, 0x5555, 0x3333, 0x3333, 0x1111, 0x1111, 0x2772, 0x2772, 0x7777, 0x7777, 0xFF77, 0x77FF, 0xFFFF, 0xFFFF };
-static const struct KantoSeamGlyphRun sKantoSeam_Route7_Frlg_GlyphRuns[] = {
-    { sKantoSeam_Route7_Frlg_GlyphRun0, 640, 160 },
-};
-static const struct KantoSeamPalette ALIGNED(4) sKantoSeam_Route7_Frlg_Palettes[] = {
-    { { 0x0000, 0x396B, 0x6B38, 0x66F5, 0x41EF, 0x739B, 0x77BC, 0x46EB, 0x396B, 0x635D, 0x531B, 0x4657, 0x35B2, 0x252F, 0x20EB, 0x532E }, 16 },
-};
-static const u16 sKantoSeam_Route7_Frlg_CanonicalMids[] = { 0x0350, 0x0358, 0x0360 };
-static const u16 sKantoSeam_Route7_Frlg_OriginIds[] = { 0x0011, 0x0011, 0x0011 };
-
 static const struct KantoSeamMetatile sKantoSeam_Route12_Frlg_Metatiles[] = {
     { .sourceLayout = &Route12_Frlg_FireRedGeometry, .attributes = 0x2000001Du, .sourceMid = 906, .tiles = { 0x0001, 0x0001, 0x0001, 0x0001, 0x22BA, 0x22BB, 0x22BC, 0x22BD }, .layoutVersion = LAYOUT_VERSION_FRLG },
     { .sourceLayout = &Route12_Frlg_FireRedGeometry, .attributes = 0x00000000u, .sourceMid = 907, .tiles = { 0x01D4, 0x01D5, 0x0001, 0x024D, 0x3000, 0x3000, 0x3000, 0x3000 }, .layoutVersion = LAYOUT_VERSION_FRLG },
@@ -1496,7 +1481,6 @@ static const struct KantoSeam sKantoSeams[] = {
     { &SaffronCity_Connection_Frlg_FireRedGeometry, sKantoSeam_SaffronCity_Connection_Frlg_Metatiles, sKantoSeam_SaffronCity_Connection_Frlg_GlyphRuns, sKantoSeam_SaffronCity_Connection_Frlg_Palettes, NULL, 1011, 12, 23, 3, 0, 0 },
     { &CinnabarIsland_Frlg_FireRedGeometry, sKantoSeam_CinnabarIsland_Frlg_Metatiles, sKantoSeam_CinnabarIsland_Frlg_GlyphRuns, sKantoSeam_CinnabarIsland_Frlg_Palettes, sKantoSeam_CinnabarIsland_Frlg_Animations, 906, 117, 6, 5, 4, 256 },
     { &IndigoPlateau_Exterior_Frlg_FireRedGeometry, sKantoSeam_IndigoPlateau_Exterior_Frlg_Metatiles, sKantoSeam_IndigoPlateau_Exterior_Frlg_GlyphRuns, sKantoSeam_IndigoPlateau_Exterior_Frlg_Palettes, NULL, 983, 40, 12, 2, 0, 0 },
-    { &Route7_Frlg_FireRedGeometry, sKantoSeam_Route7_Frlg_Metatiles, sKantoSeam_Route7_Frlg_GlyphRuns, sKantoSeam_Route7_Frlg_Palettes, NULL, 1020, 3, 1, 1, 0, 0 },
     { &Route12_Frlg_FireRedGeometry, sKantoSeam_Route12_Frlg_Metatiles, sKantoSeam_Route12_Frlg_GlyphRuns, sKantoSeam_Route12_Frlg_Palettes, sKantoSeam_Route12_Frlg_Animations, 906, 86, 1, 4, 1, 640 },
     { &Route16_Frlg_FireRedGeometry, sKantoSeam_Route16_Frlg_Metatiles, NULL, NULL, NULL, 1022, 1, 0, 0, 0, 0 },
     { &Route20_Frlg_FireRedGeometry, sKantoSeam_Route20_Frlg_Metatiles, NULL, NULL, NULL, 1004, 19, 0, 0, 0, 0 },
@@ -1536,7 +1520,6 @@ static const struct KantoSeamOrigin sKantoSeamOrigins[] = {
     { &SaffronCity_Connection_Frlg_FireRedGeometry, sKantoSeam_SaffronCity_Connection_Frlg_CanonicalMids, sKantoSeam_SaffronCity_Connection_Frlg_OriginIds, 1011, 12 },
     { &CinnabarIsland_Frlg_FireRedGeometry, sKantoSeam_CinnabarIsland_Frlg_CanonicalMids, sKantoSeam_CinnabarIsland_Frlg_OriginIds, 906, 117 },
     { &IndigoPlateau_Exterior_Frlg_FireRedGeometry, sKantoSeam_IndigoPlateau_Exterior_Frlg_CanonicalMids, sKantoSeam_IndigoPlateau_Exterior_Frlg_OriginIds, 983, 40 },
-    { &Route7_Frlg_FireRedGeometry, sKantoSeam_Route7_Frlg_CanonicalMids, sKantoSeam_Route7_Frlg_OriginIds, 1020, 3 },
     { &Route12_Frlg_FireRedGeometry, sKantoSeam_Route12_Frlg_CanonicalMids, sKantoSeam_Route12_Frlg_OriginIds, 906, 86 },
     { &Route16_Frlg_FireRedGeometry, sKantoSeam_Route16_Frlg_CanonicalMids, sKantoSeam_Route16_Frlg_OriginIds, 1022, 1 },
     { &Route20_Frlg_FireRedGeometry, sKantoSeam_Route20_Frlg_CanonicalMids, sKantoSeam_Route20_Frlg_OriginIds, 1004, 19 },

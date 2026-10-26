@@ -453,7 +453,9 @@ STEPS = [
          walk=(3, 5), inputs=f"UP*{hold(1)}, wait 20, LEFT*20, wait 250",
          expect=dict(map="UndergroundPath_WestEntrance_Frlg", xy=(12, 8))),
     dict(name="route7", what="Out of the west hut onto Route 7", walk=(13, 11),
-         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route7_Frlg", xy=(7, 17))),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route7_Frlg", xy=(9, 10))),
+    dict(name="celadon", what="West along Route 7's road into Celadon", walk=(0, 11), inputs=f"LEFT*{hold(1)}, wait 200",
+         expect=dict(map="CeladonCity_Frlg", xy=(59, 13))),
 ]
 
 

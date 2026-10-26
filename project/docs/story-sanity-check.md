@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-route8` (Route 8 rebuilt, on `v2-main` at `d0caad19`) |
-| ROM | `make -j8` with the default settings. SHA-1 `6257e17d2ca61f59eae09ce225224b9e88813087`, SHA-256 `4d78bbcbc9393444a7471b0b0bbd1e00e590d01954bd455c7ec3a643963d0600` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110; `22cc6f9` (pae `main` after PR #28) for steps 111–141 and the replay tests |
-| Last step passed | 141 `route7`: onto Route 9 and through it (the team now one Kingler, level 65, with Surf and Cut), Route 10's Center, Rock Tunnel's two floors (nine trainers whose lines can't be gone round), out of its south mouth, down Route 10 into Lavender, its Center (in, heal, out), west along Route 8 into the Underground Path, along its tunnel under Saffron and out onto Route 7. Steps 137–141 were run on this build, from step 136's checkpoint |
-| Replay tests | 298 of 298 pass (on this ROM; this change adds 22) |
+| Game | branch `claude/kanto-route7` (Route 7 rebuilt, on `v2-main` at `39dbcefd`) |
+| ROM | `make -j8` with the default settings. SHA-1 `632d176d7622d7a44aa51ff410f5a08354fdad69`, SHA-256 `634c4f9271b489569deeb96925518796e16e72772a08b125fdfd5c2748b2f1b9` |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110; `22cc6f9` (pae `main` after PR #28) for steps 111–142 and the replay tests |
+| Last step passed | 142 `celadon`: onto Route 9 and through it (the team now one Kingler, level 65, with Surf and Cut), Route 10's Center, Rock Tunnel's two floors (nine trainers whose lines can't be gone round), out of its south mouth, down Route 10 into Lavender, its Center (in, heal, out), west along Route 8 into the Underground Path, along its tunnel under Saffron, out onto Route 7 and west into Celadon. Steps 141–142 were run on this build, from step 140's checkpoint |
+| Replay tests | 306 of 306 pass (on this ROM; this change adds 8) |
 
 ## How to run it
 
@@ -198,7 +198,8 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 138 | `route8-underground` | West along Route 8's road (in no trainer's sight) into the Underground Path's hut | Underground Path east hut 13,12 | |
 | 139 | `ew-tunnel` | Down the hut's stairs (walk west off them) | Underground Path tunnel 76,4 | |
 | 140 | `ew-tunnel-west` | Along the tunnel under Saffron and up its west stairs (west off them) | Underground Path west hut 12,8 | |
-| 141 | `route7` | Out of the west hut onto Route 7 | Route 7 7,17 | |
+| 141 | `route7` | Out of the west hut onto Route 7 | Route 7 9,10 | |
+| 142 | `celadon` | West along Route 7's road into Celadon | Celadon City 59,13 | |
 
 ## What it doesn't cover
 
@@ -289,3 +290,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | No map changes: fifteen new steps through Rock Tunnel (its two floors, nine trainers) and down Route 10 into Lavender, so Lavender's rebuild can carry on from it | **Steps 112–133 pass**, `--from route9-alicia` and resumed from each failed step's predecessor. First tries stopped in battles that never ended: a Slowpoke Disabled the Kingler's only attack (A presses then go round the move menu; the Kingler is now level 65, so it knocks out what it meets first), and Surf's 15 PP ran out twice in the tunnel, which has no Center (the Kingler is given again at its two ladders up). The tunnel's walks were planned with the fewest battles their trainers' lines allow (KR-48). |
 | 2026-10-26 | Lavender Town rebuilt (its own concept); four new steps: its Center (in, heal, out) and west onto Route 8 | **Steps 133–137 pass**, `--from lavender` on this build, first try. |
 | 2026-10-26 | Route 8 rebuilt (its own concept); step 137 lands at its new edge, and four new steps: its road into the Underground Path's hut, the tunnel under Saffron, out onto Route 7 | **Steps 137–141 pass**, `--from route8` on this build. First tries stood on the tunnel's stairs: both are walked west off (the north-south tunnel's are walked east off). |
+| 2026-10-26 | Route 7 rebuilt (its own concept); step 141 lands at the hut's door on the new map, and one new step west into Celadon | **Steps 141–142 pass**, `--from route7` on this build, first try. |
