@@ -1,0 +1,38 @@
+{
+ "note": "Into the Pok\u00e9mon Fan Club.",
+ "created": "2026-10-26 07:06",
+ "start": {
+  "map": "VermilionCity_Frlg",
+  "x": 16,
+  "y": 11,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_PokemonFanClub_Frlg",
+  "x": 5,
+  "y": 10,
+  "in_battle": false
+ }
+}

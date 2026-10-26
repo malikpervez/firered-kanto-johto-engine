@@ -26,6 +26,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 25 | 70×24 | 112×35 | kit + `gTileset_Route25Concept` | down: Route 24 (offset 0) |
 | Route 5 | 50×36 | 68×46 | kit + `gTileset_Route5Concept` | up: Cerulean City (offset 8), down: Saffron City's twin `SaffronCity_Connection` (offset −4) |
 | Route 6 | 56×32 | 63×36 | kit + `gTileset_Route6Concept` | up: `SaffronCity_Connection` (offset 12), down: Vermilion City (offset 8) |
+| Vermilion City | 60×42 | 71×78 | kit + `gTileset_VermilionConcept` | up: Route 6 (offset −8), right: Route 11 (offset −3) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -49,7 +50,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck |
 | Route 5 ↔ Saffron | Route 5 24–25 = Saffron 28–29 | not walked across: the gate's top door on Route 5 (24–25,30) leads through the gatehouse to Saffron's own gate door below it (28–29,5). Old Saffron draws its own copy of the gatehouse at its top |
 | Saffron ↔ Route 6 | Saffron 28–29 = Route 6 40–41 | not walked across: Saffron's south gate door (28–29,46) leads through the gatehouse to its door on Route 6 (40–41,5) |
-| Route 6 ↔ Vermilion | Route 6 40–42 = Vermilion 32–34 | the road down onto Vermilion's stairs |
+| Route 6 ↔ Vermilion | Route 6 40–42 = Vermilion 32–34 | the road down into Vermilion's plaza |
+| Vermilion ↔ Route 11 | Vermilion rows 11–14 = Route 11 rows 14–17 | the main street east (Route 11 isn't rebuilt) |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -69,7 +71,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 4 | Route 3, Cerulean City | pae |
 | Cerulean City | Route 4, Route 5, Route 9, Route 24 | pae: 137 adapters, palette slots 10, 11, 12 (since Route 24 is from the kit, every colour fits). Its hand-made seam for the old Cerulean is gone |
 | Route 5 | Cerulean City | pae (both from the kit: no palettes). None with old Saffron: it has no tile slot left for Route 5's strip, and neither can see the other (`--skip`, KR-34). Its hand-made seam is gone |
-| Route 6 | Vermilion City | pae: old Vermilion has no palette slot for Route 6's strip, so from Vermilion its forest, grass and ground are drawn in Vermilion's nearest colours (at most 82 RGB steps off), and three of Vermilion's palettes a little off from Route 6 (at most 50; KR-35). None with old Saffron (KR-34) |
+| Route 6 | Vermilion City | pae (both from the kit: Vermilion's own palettes fit in Route 6's banks 10–12, exactly). None with old Saffron (KR-34) |
+| Vermilion City | Route 6, Route 11 | pae: old Route 11's palettes fit in banks 10–12, exactly; Route 11 shows the new town with its own banks 4, 6, 7, beside its hand-made seam. Old Vermilion's hand-made seam is gone |
 | Route 9 | Cerulean City | pae (the old map), beside its hand-made seam |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
@@ -169,3 +172,9 @@ Check these whenever a map is rebuilt, moved or resized:
   change (its gate's door, 40–41, under Saffron's south gate door; its road onto Vermilion's stairs at 40–42). Every
   warp kept its number; its trainers, Pokémon, sign and hidden items moved (`build.sh` sets the trainers' facings
   and sights). Old Vermilion got a pae seam for it, its colours nearest-matched (KR-35).
+- Vermilion rebuilt smaller (60×42, was 71×78) with its joins where they were (Route 6's road in at 32–34, Route
+  11's at rows 11–14). Every warp kept its number: the S.S. Anne's three are its gangway at the pier's end, which
+  warps you as you step on it (`MB_DEEP_SOUTH_WARP`), with the ferry sailor and his ticket check where they were
+  relative to it. The heal spot moved with the Center (28,7, `src/data/heal_locations.json`, its old-map override
+  dropped); the Friends' camp stayed at 30,19. Old Vermilion's hand-made seam was removed from
+  `kanto_connection_seam.c`; Route 11 (still the old map) got a pae seam for it.

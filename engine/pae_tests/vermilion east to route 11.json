@@ -1,0 +1,38 @@
+{
+ "note": "East along the main street onto Route 11.",
+ "created": "2026-10-26 07:06",
+ "start": {
+  "map": "VermilionCity_Frlg",
+  "x": 57,
+  "y": 12,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     44
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route11_Frlg",
+  "x": 0,
+  "y": 15,
+  "in_battle": false
+ }
+}

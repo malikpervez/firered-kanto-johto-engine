@@ -1,0 +1,90 @@
+{
+ "note": "Down the pier into the ferry sailor's ticket check with no S.S. Ticket: he sends you back.",
+ "created": "2026-10-26 07:06",
+ "start": {
+  "map": "VermilionCity_Frlg",
+  "x": 37,
+  "y": 38,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     28
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 37,
+  "y": 39,
+  "in_battle": false
+ }
+}

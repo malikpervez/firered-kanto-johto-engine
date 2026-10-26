@@ -40,6 +40,11 @@ static const u8 sPaeDoorPalettes_21[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
 static const u8 sPaeDoorPalettes_22[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 static const u8 sPaeDoorPalettes_23[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 static const u8 sPaeDoorPalettes_24[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+static const u8 sPaeDoorPalettes_25[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+static const u8 sPaeDoorPalettes_26[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+static const u8 sPaeDoorPalettes_27[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+static const u8 sPaeDoorPalettes_28[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+static const u8 sPaeDoorPalettes_29[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
 
 #define PAE_DOORS \
     { 671, &gTileset_CeruleanConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_0, sPaeDoorPalettes_0 }, \
@@ -64,8 +69,13 @@ static const u8 sPaeDoorPalettes_24[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
     { 653, &gTileset_Route6Concept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_13, sPaeDoorPalettes_19 }, \
     { 699, &gTileset_Route6Concept, DOOR_SOUND_NORMAL, 3, sPaeDoorTiles_14, sPaeDoorPalettes_20 }, \
     { 700, &gTileset_Route6Concept, DOOR_SOUND_NORMAL, 4, sPaeDoorTiles_14, sPaeDoorPalettes_21 }, \
-    { 671, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_0, sPaeDoorPalettes_22 }, \
-    { 692, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_1, sPaeDoorPalettes_23 }, \
-    { 728, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_2, sPaeDoorPalettes_24 }, \
+    { 657, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_1, sPaeDoorPalettes_22 }, \
+    { 691, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_0, sPaeDoorPalettes_23 }, \
+    { 708, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_3, sPaeDoorPalettes_24 }, \
+    { 728, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_2, sPaeDoorPalettes_25 }, \
+    { 744, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_13, sPaeDoorPalettes_26 }, \
+    { 671, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_0, sPaeDoorPalettes_27 }, \
+    { 692, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_1, sPaeDoorPalettes_28 }, \
+    { 728, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_2, sPaeDoorPalettes_29 }, \
 
 #endif // GUARD_PAE_DOORS_H
