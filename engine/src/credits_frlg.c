@@ -710,7 +710,7 @@ static const struct CreditsOverworldCmd sOverworldCmd_VermilionCity[] = {
 };
 
 static const struct CreditsOverworldCmd sOverworldCmd_Route10[] = {
-    CREDITSOVWLDLOADMAP(MAP_ROUTE10, 11, 68, 1),
+    CREDITSOVWLDLOADMAP(MAP_ROUTE10, 18, 46, 1),
     CREDITSOVWLDSCROLL(0, 1, 0x0500), // Scroll down
     CREDITSOVWLDEND
 };
