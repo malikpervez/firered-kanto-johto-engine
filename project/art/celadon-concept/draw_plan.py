@@ -5,7 +5,7 @@ python3 project/art/celadon-concept/draw_plan.py
 
 Celadon is Kanto's garden city, the city of rainbow dreams: a broad boulevard through it from Route 16 in the west to
 Route 7 in the east, its grand buildings along it, and gardens behind them. It is 60x40 blocks, as old Celadon was.
-Route 16's road (its rows 27-30) and Route 7's (its rows 10-13) meet the boulevard at rows 20-23. It has:
+Route 16's road (its rows 22-25) and Route 7's (its rows 10-13) meet the boulevard at rows 20-23. It has:
 - **the boulevard**, four blocks of road between broad pavements (rows 19-24), the town sign by the east entrance;
 - **the Department Store** on its north side, tall, with its two doors onto the pavement and its sign;
 - **the Celadon Mansion** beside it, its back door onto the garden behind it (reached up the path beside it), the
@@ -17,7 +17,8 @@ Route 16's road (its rows 27-30) and Route 7's (its rows 10-13) meet the bouleva
 - **Erika's Gym** in the south-west, a glasshouse in a walled flower garden, behind the second tree to cut;
 - **the pond garden** south of Lucky Lane, where the Friends camp and the researchers come with their Meowth.
 
-The west seven columns are forest and road only (old Route 16 shows them: it may have little room for them).
+The west seven columns are forest and road only, as old Route 16 needed (it had little room for more of this strip;
+Route 16 is from the kit now).
 
 Letters: the kit's legend (T forest, . lawn, = cobble, * flowers, ~ pond, b bushes, R trees, S signs), D the
 Department Store, M the Mansion, O the hotel, C the Pokémon Center, G the Game Corner, P its Prize Room, E the
