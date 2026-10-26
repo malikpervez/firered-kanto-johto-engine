@@ -1,0 +1,40 @@
+{
+ "note": "The Power Plant's door opening: the board over it is plain (no Gym letters).",
+ "created": "2026-10-26 09:30",
+ "start": {
+  "map": "Route10_Frlg",
+  "x": 29,
+  "y": 40,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     6
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route10_Frlg",
+  "x": 29,
+  "y": 40,
+  "in_battle": false
+ }
+}
