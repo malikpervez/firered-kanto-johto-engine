@@ -1,0 +1,38 @@
+{
+ "note": "Up the path into the Day Care.",
+ "created": "2026-10-26 06:37",
+ "start": {
+  "map": "Route5_Frlg",
+  "x": 16,
+  "y": 12,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route5_PokemonDayCare_Frlg",
+  "x": 3,
+  "y": 9,
+  "in_battle": false
+ }
+}

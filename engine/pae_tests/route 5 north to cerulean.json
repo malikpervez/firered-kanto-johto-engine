@@ -1,0 +1,38 @@
+{
+ "note": "Up the lane out of Route 5 into Cerulean's neck.",
+ "created": "2026-10-26 06:37",
+ "start": {
+  "map": "Route5_Frlg",
+  "x": 30,
+  "y": 2,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     44
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_Frlg",
+  "x": 22,
+  "y": 50,
+  "in_battle": false
+ }
+}

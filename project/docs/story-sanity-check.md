@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-route25` (Route 25 rebuilt, on `v2-main` at `eded4375`) |
-| ROM | `make -j4` with the default settings. SHA-1 `5e0d89c51e64517e08ff78e071163ffb3e18f677`, SHA-256 `df71fba3498b57eddca469cd9533711e591190620bb8394c7d4413960b798ff7` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for the replay tests and steps 70–76 |
-| Last step passed | 76 `leave-cottage`: along Route 25 past Joey and Wayne to Bill's Sea Cottage, Bill helped, the S.S. Ticket, back out. Steps 70–76 were run on this build, from step 69's checkpoint of the build before |
-| Replay tests | 158 of 158 pass |
+| Game | branch `claude/kanto-route5` (Route 5 rebuilt, on `v2-main` at `a0f781c1`) |
+| ROM | `make -j4` with the default settings. SHA-1 `43cd16b29e9ec34a0079f683719d0125ab53bbf9`, SHA-256 `943b008f35fd55d41d3b23d73c697c73f6157e50b4a43a24cdd50dfaa8f6c47b` |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for the replay tests and steps 77–80 |
+| Last step passed | 80 `underground-path`: back from Bill's cottage over Nugget Bridge, through Cerulean and its neck (open with the S.S. Ticket) and down Route 5 into the Underground Path's hut. Steps 77–80 were run on this build, from step 76's checkpoint of the build before |
+| Replay tests | 163 of 163 pass |
 
 ## How to run it
 
@@ -134,6 +134,10 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 74 | `bill` | Help the Clefairy (Bill) into his teleporter, then run the cell separator on his PC (one step: see below) | Sea Cottage 4,6 | `FLAG_HELPED_BILL_IN_SEA_COTTAGE` set |
 | 75 | `ss-ticket` | Talk to Bill: the S.S. Ticket | Sea Cottage 7,6 | `FLAG_GOT_SS_TICKET` set |
 | 76 | `leave-cottage` | Back out onto the headland | Route 25 51,8 | |
+| 77 | `back-to-bridge` | Back west along the cape road, round the north of Nob's and Flint's sight, onto the bridge | Route 24 17,0 | |
+| 78 | `back-over-bridge` | Back over Nugget Bridge into Cerulean | Cerulean City 42,0 | |
+| 79 | `route5` | Through Cerulean and its neck (the lass and her Slowbro gone) onto Route 5 | Route 5 30,0 | |
+| 80 | `underground-path` | Down Route 5 into the Underground Path's hut | Underground Path north entrance 13,12 | |
 
 ## What it doesn't cover
 
@@ -157,7 +161,9 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   gift isn't checked: it needs the Friends' story state.
 * **Route 25 off the road**: its seven other trainers (the walk keeps out of their sight), the garden behind the tree
   to cut (TM43, the hidden Ether), the trail below and its ledges, the lookout, the other hidden items: the replay
-  tests play them. The walk back to Cerulean (the S.S. Ticket opens its neck south) comes with Route 5.
+  tests play them.
+* **Route 5's Day Care and Saffron's gate**: the walk goes past them; the replay tests go in at their doors. The
+  gate's guard wants a drink, which comes later in the story.
 * **Route 3's trainers.** The walk keeps below their lines of sight (they're optional); their battles are in the replay
   tests.
 * **Viridian Forest's other trainers.** Rick and Doug can't be walked round, so their battles are played (with the
@@ -209,3 +215,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | Route 4 and Cerulean City rebuilt (their own concepts); twelve new steps: Mt. Moon's three floors, out onto Route 4's shelf, down into Cerulean, Blue | **Steps 47–59 pass**, `--from route3-north` and resumed from each failed step's predecessor (about 12 min in all). First tries stopped: on Mt. Moon 1F a lass saw the walk (the walk now goes round every line of sight, by via blocks worked out on the map), it stepped over another ladder, and the checkpoint was saved before a ladder's fade (the steps now walk to the block before the ladder and step on); on B2F pae read the map without its block fixes and planned through rock and up a one-way edge (pae PR #24 fixes both), two Rockets can't be walked round (the steps fight them), Miguel's and Blue's battles needed more presses, and the policeman stood in the street's top row (the walk takes the other). |
 | 2026-10-26 | Route 24 rebuilt (its own concept); eleven new steps: a heal in Cerulean's Center, Nugget Bridge's five trainers and the Rocket, Route 25 | **Steps 60–70 pass**, `--from cerulean-rival` and resumed from each failed step's predecessor. First tries stopped: the trainers' battles needed more presses, the Wartortle blacked out against the fifth (the steps now heal in Cerulean first), and the Rocket's battle ends with the Wartortle evolving, which the step now waits out before his last message sets the scene. |
 | 2026-10-26 | Route 25 rebuilt (its own concept); six new steps: Joey's and Wayne's necks, the Sea Cottage, Bill and his PC, the S.S. Ticket, out again | **Steps 70–76 pass**, `--from route25` on the final build. First tries stopped: pae couldn't plan a walk in the cottage (its block fixes use metatiles the game makes itself: pae PR #27), the checkpoint between helping Bill and his PC forgot that he was in his teleporter (a temporary flag: the two are one step now), Bill stands at 7,5 after a checkpoint (the step talks to him from below), and the cottage's mat needs a second press to leave. |
+| 2026-10-26 | Route 5 rebuilt (its own concept); four new steps: back from Bill over the bridge, through Cerulean's neck, down Route 5 into the Underground Path's hut | **Steps 77–80 pass**, `--from back-to-bridge` on this build. The first try stopped on Route 25: going back along the road, Nob saw the walk (the walk now goes round the north of his and Flint's sight, as it came). |
