@@ -311,6 +311,57 @@ STEPS = [
     dict(name="ss-anne", what="Down the pier: the ferry sailor checks the S.S. Ticket, and onto the S.S. Anne's "
          "gangway", walk=(37, 39), inputs=f"DOWN*{hold(1)}, wait 30, " + A(6) + f"DOWN*{hold(1)}, wait 250",
          expect=dict(map="SSAnne_Exterior_Frlg", xy=(32, 5))),
+    dict(name="ss-anne-board", what="Down the gangway into the ship's first-floor corridor (its end is an arrow: press down on it)", walk=(32, 13),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="SSAnne_1F_Corridor_Frlg", xy=(19, 2))),
+    dict(name="ss-anne-2f", what="West along the corridor (round the worker, off the row of cabin doors) and up the "
+         "stairs at its end to the second floor (walk west onto them)", via=[(19, 9), (13, 9), (13, 8)], walk=(4, 8),
+         inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250", expect=dict(map="SSAnne_2F_Corridor_Frlg", xy=(2, 2))),
+    dict(name="ss-anne-rival", what="Down past the sailor, east along the corridor (off the stairs to 3F and the cabin "
+         "doors) and up towards the captain's door: Blue comes out and battles", via=[(4, 11), (4, 13), (31, 13)],
+         walk=(31, 7), inputs=f"UP*{hold(1)}, wait 300, " + A(110) + B(10) + "wait 300",
+         expect=dict(map="SSAnne_2F_Corridor_Frlg", xy=(31, 6), vars={"VAR_MAP_SCENE_S_S_ANNE_2F_CORRIDOR": 1})),
+    dict(name="captains-office", what="Up the stairs to the captain's office (stand at their foot and walk east)",
+         walk=(30, 3), inputs=f"UP*{hold(1)}, wait 20, RIGHT*20, wait 250",
+         expect=dict(map="SSAnne_CaptainsOffice_Frlg", xy=(3, 7))),
+    dict(name="hm01", what="Talk to the seasick captain: rub his back, and he gives you HM01 (Cut)", walk=(5, 5),
+         inputs="UP*4, wait 20, " + A(30, 90) + B(6) + "wait 200",
+         expect=dict(map="SSAnne_CaptainsOffice_Frlg", xy=(5, 5), flags={"FLAG_GOT_HM01": True},
+                     vars={"VAR_MAP_SCENE_VERMILION_CITY": 1})),
+    dict(name="leave-office", what="Back down the office's stairs (walk west onto them)", walk=(4, 7),
+         inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250", expect=dict(map="SSAnne_2F_Corridor_Frlg", xy=(30, 2))),
+    dict(name="ss-anne-down", what="Back west along the second floor (off the cabin doors and the stairs to 3F) and "
+         "down the stairs to the first (up the passage's east side, away from the sailor; walk east off their head)", via=[(31, 13), (4, 13), (4, 4)], walk=(2, 3),
+         inputs=f"UP*{hold(1)}, wait 20, RIGHT*20, wait 250", expect=dict(map="SSAnne_1F_Corridor_Frlg", xy=(3, 8))),
+    dict(name="leave-ss-anne", what="East along the corridor (round the worker and the sailor) and out of the ship: it "
+         "sails, and you walk up the gangway onto Vermilion's pier", via=[(13, 8), (13, 9), (19, 9)], walk=(19, 2),
+         inputs=f"UP*{hold(1)}, wait 20, UP*20, wait 3000",
+         expect=dict(map="VermilionCity_Frlg", xy=(38, 38), vars={"VAR_MAP_SCENE_VERMILION_CITY": 3})),
+    dict(name="back-to-route6", what="Up the pier and the road through Vermilion (up the plaza's middle, between the "
+         "Center's and the Mart's doors) onto Route 6", via=[(38, 23), (33, 12)], walk=(33, 0),
+         inputs=f"UP*{hold(1)}, wait 200", expect=dict(map="Route6_Frlg", xy=(41, 31))),
+    dict(name="route6-hut", what="Up Route 6's road (in no trainer's sight) into the Underground Path's hut",
+         walk=(46, 12), inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="UndergroundPath_SouthEntrance_Frlg", xy=(13, 12))),
+    dict(name="tunnel-back", what="Down the hut's stairs (stand on them and walk west) into the tunnel", walk=(14, 9),
+         inputs=f"UP*{hold(1)}, wait 20, LEFT*20, wait 250", expect=dict(map="UndergroundPath_NorthSouthTunnel_Frlg", xy=(2, 38))),
+    dict(name="tunnel-north", what="Back along the tunnel and up its north stairs (west off them)", walk=(3, 5),
+         inputs=f"UP*{hold(1)}, wait 20, LEFT*20, wait 250", expect=dict(map="UndergroundPath_NorthEntrance_Frlg", xy=(12, 8))),
+    dict(name="route5-back", what="Out of the north hut onto Route 5", walk=(13, 11),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route5_Frlg", xy=(35, 25))),
+    dict(name="cerulean-back", what="Up Route 5's road and through the neck into Cerulean", walk=(30, 0),
+         inputs=f"UP*{hold(1)}, wait 200", expect=dict(map="CeruleanCity_Frlg", xy=(22, 50))),
+    dict(name="cerulean-gym", what="Through Cerulean and into Misty's Gym", walk=(47, 37), inputs=f"UP*{hold(1)}, wait 300",
+         expect=dict(map="CeruleanCity_Gym_Frlg", xy=(7, 18))),
+    dict(name="gym-diana", what="Round the Gym guy, past the swimmer Luis's one block of sight and round the pool's "
+         "west walkway to the east one; west towards Misty into the picnicker Diana's line: she battles",
+         via=[(6, 18), (6, 15), (7, 14), (7, 13), (5, 13), (5, 10), (10, 10), (10, 8)], walk=(9, 7),
+         inputs=f"LEFT*{hold(1)}, wait 300, " + A(80) + B(8) + "wait 300",
+         expect=dict(map="CeruleanCity_Gym_Frlg", xy=(8, 7))),
+    dict(name="misty", what="Face Misty and beat her: the Cascade Badge (Cut can be used outside battle)",
+         inputs="UP*4, wait 20, " + A(160) + B(12) + "wait 300",
+         expect=dict(map="CeruleanCity_Gym_Frlg", xy=(8, 7), flags={"FLAG_BADGE02_GET": True})),
+    dict(name="leave-cerulean-gym", what="Back out of the Gym the way you came (its mat: press down on it)", via=[(10, 8), (10, 10), (5, 10),
+         (5, 13), (7, 13), (7, 14), (6, 15), (6, 17)], walk=(7, 17), inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 300",
+         expect=dict(map="CeruleanCity_Frlg", xy=(47, 37))),
 ]
 
 
