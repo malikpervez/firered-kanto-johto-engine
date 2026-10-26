@@ -5,7 +5,7 @@ turns west for Fuchsia (see draw_plan.py). It is 26x62 blocks, as before; its jo
 edge, rows 50-53 (offset 36, was 37: the road moved a row up to sit on the forest's grid).
 
 The pieces are all the kit's: the route has nothing of its own. Bank 7 is left empty and 9-12 free for the seam to
-old Route 13, whose strip in this route (the top seven rows) is forest and dirt only.
+old Route 13, whose strip in this route (the top seven rows) was forest and dirt only (Route 13 is the kit's now).
 
 Run from the repository root:  python3 project/art/route14-concept/make_art.py
 It writes the palette, spec.json, grid.txt, border.txt and legend.json next to itself; build.sh turns them into the
@@ -31,12 +31,11 @@ ROUND = ("NESW", 1)
 TRAINERS = [(4, 28, ("E", 2)), (15, 31, ROUND), (2, 17, ("E", 4)), (19, 23, ("N", 3)), (4, 38, ("E", 2)),
             (14, 52, ("E", 2)), (16, 15, ("EW", 1)), (2, 12, ("E", 1)), (5, 44, ("NS", 1)), (13, 45, ROUND),
             (12, 49, ("S", 1)), (13, 49, ("S", 1))]
-# the trees to cut (local ids 11-13): the maze's short cut, the dell's way in, the berry garden's way in (the one
-# Route 15 sees across the join)
-CUT = [(19, 16), (15, 42), (6, 54)]
+# the trees to cut (local ids 11-13): the maze's short cut, the dell's way in, the berry garden's way in
+CUT = [(19, 16), (15, 42), (12, 54)]
 MONS = [(18, 42)]           # the Shroomish, in the dell
 SIGNS = [(15, 8)]
-HIDDEN = [(21, 9), (9, 56)]  # the Zinc by the shore at the maze's start, the Pinap Berry in the berry garden
+HIDDEN = [(21, 9), (15, 56)]  # the Zinc by the shore at the maze's start, the Pinap Berry in the berry garden
 STRIP = 7                   # the rows of this route old Route 13 draws
 
 
@@ -78,9 +77,10 @@ def sight(g, x, y, dirs, n) -> set[tuple[int, int]]:
 def check(g) -> None:
     """The route's rules: only Route 13's path and Route 15's road open onto the edges; everything walkable is
     reached from Route 13's side; without cutting, Route 15's road is still reached (the maze's short cut is only a
-    short cut), but the dell and the berry garden aren't; every trainer, Pokémon and tree stands on open ground and
-    each trainer sees some of the way; the signs can be read and the hidden items are on open ground; the strip old
-    Route 13 draws is forest and dirt only."""
+    short cut), but the dell and the berry garden aren't; the trees stand more than 8 blocks from the edges you come
+    in by (KR-45: Route 13's at the top, Route 15's at the left); every trainer, Pokémon and tree stands on open
+    ground and each trainer sees some of the way; the signs can be read and the hidden items are on open ground; the
+    top seven rows, which old Route 13 drew, are forest and dirt only (kept from then)."""
     edge = {(x, y) for y in range(MAP_H) for x in range(MAP_W) if x in (0, MAP_W - 1) or y in (0, MAP_H - 1)}
     assert {xy for xy in edge if g[xy[1]][xy[0]] not in SOLID} == set(NORTH + WEST), "only the two roads open"
     walk = {(x, y) for y in range(MAP_H) for x in range(MAP_W) if g[y][x] not in SOLID}
@@ -88,8 +88,10 @@ def check(g) -> None:
     assert walk <= every and set(WEST) <= every, f"blocks you can't reach: {sorted(walk - every)[:8]}"
     uncut = reachable(g, NORTH, cut=False)
     assert set(WEST) <= uncut, "the way south needs no tree cut"
-    assert (18, 42) not in uncut and (6, 57) not in uncut, "the dell and the garden are behind their trees"
+    assert (18, 42) not in uncut and (12, 57) not in uncut, "the dell and the garden are behind their trees"
     assert (19, 17) in uncut, "the maze's short cut is only a short cut"
+    for x, y in CUT:
+        assert x > 8 and y > 6, f"the game would hide the tree at ({x},{y}) (KR-45)"
     people = [(x, y) for x, y, _ in TRAINERS] + MONS
     assert len(set(people + CUT)) == len(people + CUT), "two events on one block"
     for x, y, look in TRAINERS:

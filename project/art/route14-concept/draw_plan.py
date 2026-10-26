@@ -15,7 +15,8 @@ It has:
 - **the bikers' road** down the meadows' west side, from the maze to the crossroads;
 - **the Shroomish's dell** by the shore, behind a hedge, a tree to cut its way in;
 - **the crossroads** at the bottom, the road west to Route 15, a short pier out over the sea;
-- **the berry garden** under the woods south of the road, behind the tree to cut that Route 15 sees across the join.
+- **the berry garden** under the woods south of the road, behind a tree to cut (more than 8 blocks in from the edge
+  Route 15 joins, or the game would hide it: KR-45).
 The sea runs down the whole east side, beyond a strip of shore.
 
 Letters: the kit's legend (T forest, . lawn, : dirt, g grass, * flowers, ~ pond, v lily pads, s the sea, d the
@@ -97,10 +98,10 @@ rect(19, 44, 20, 45, "*")
 rect(0, 50, 21, 53, ":")
 rect(22, 50, 24, 51, "d")
 
-# the berry garden south of the road, behind the tree to cut at 6,54
-rect(6, 54, 7, 55, ".")
-at(7, 54, "b")
-rect(4, 56, 9, 59, ".")
-rect(4, 58, 6, 59, "*")
+# the berry garden south of the road, behind the tree to cut at 12,54
+rect(12, 54, 13, 55, ".")
+at(13, 54, "b")
+rect(10, 56, 15, 59, ".")
+rect(10, 58, 12, 59, "*")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

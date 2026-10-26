@@ -51,7 +51,7 @@ pae map place $M object 21 65 19 $P  # Chansey, in the south meadow
 pae map place $M object 22 17 3 $P   # Pidgeotto, by the gatehouse
 pae map place $M object 23 44 13 $P  # Illumise, by night
 pae map place $M bg 0 20 2 $P        # the route sign, by the gatehouse's east doorway
-# Route 14's tree to cut is shown across the join where it stands on Route 14 (its 6,54: x 80 + 6, y 54 - 36);
+# Route 14's tree to cut is placed across the join where it stands on Route 14 (its 12,54: x 80 + 12, y 54 - 36);
 # everyone stands at the ground's elevation
 python3 - <<'PY'
 import json
@@ -60,7 +60,7 @@ m = json.load(open(p))
 o = m["object_events"]
 clone = [e for e in o if e.get("type") == "clone"]
 assert len(clone) == 1
-clone[0]["x"], clone[0]["y"] = 86, 18
+clone[0]["x"], clone[0]["y"] = 92, 18
 for e in o:
     if e.get("type") != "clone" and "elevation" in e:
         e["elevation"] = 3

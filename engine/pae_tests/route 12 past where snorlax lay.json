@@ -1,0 +1,41 @@
+{
+ "note": "With Snorlax gone, down the bridge south to the fishing house's islet.",
+ "created": "2026-10-27 11:00",
+ "start": {
+  "map": "Route12_Frlg",
+  "x": 17,
+  "y": 45,
+  "state": [
+   "FLAG_HIDE_ROUTE_12_SNORLAX"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     200
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route12_Frlg",
+  "x": 17,
+  "y": 58,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 22:27"
+}

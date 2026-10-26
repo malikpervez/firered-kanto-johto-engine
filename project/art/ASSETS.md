@@ -39,7 +39,7 @@ The packs reused for buildings they weren't drawn for:
 | Pack | Stands for |
 |---|---|
 | `house_family` | houses in Viridian, Pewter (three, one pack), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Celadon's restaurant; Saffron's Copycat's house; Fuchsia's Warden's house |
-| `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender, Fuchsia; Route 5's Underground Path hut; Fuchsia's Safari Zone office |
+| `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender, Fuchsia; Route 5's Underground Path hut; Fuchsia's Safari Zone office; Route 12's fishing house |
 | `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room and its house on Lucky Lane (one pack for both); Saffron's house and Mr. Psychic's house; Route 16's house in the woods; a house in Fuchsia, and (with a back door drawn in) Fuchsia's house with the pond garden |
 | `forest_gate_south` | Viridian Forest's south gate (Route 2); Saffron's south, west and east gates on Routes 6, 7 and 8 (KR-40, KR-52; Saffron's own side has its drawn gatehouses); Route 11's gatehouse to Route 12 |
 | `forest_gate_north` | Viridian Forest's north gate (Route 2); Saffron's north gate (Route 5) |
@@ -75,6 +75,7 @@ plant (KR-47), a prize hall and a restaurant for Celadon (KR-57).
 | The Fighting Dojo | `saffron_buildings.py` `dojo()` (folder `fighting_dojo`) | 7×5, door (3,4) | the same | Saffron | white plaster in a dark wooden frame under a broad slate roof |
 | The gatehouse | `saffron_buildings.py` `gate()` (folder `saffron_gate`) | 4×3, a double door at (1,2)-(2,2) | the same | Saffron (its north, west and east gates) | its door frames are drawn here: one wide door, 96×32 |
 | The gatehouse's back | `saffron_buildings.py` `gate_back()` (folder `saffron_gate_back`) | 4×3, a doorway at (1,0)-(2,0) | the same | Saffron (its south gate) | the doorway is `MB_SOUTH_ARROW_WARP`: entered walking south, no animation |
+| Route 12's north gatehouse | `route12-concept/route12_buildings.py` `gate()` (folder `route12_gate`) | 4×4: a doorway at (1,0)-(2,0), a double door at (1,3)-(2,3) | Saffron's buildings palette (bank 7) | Route 12 | the back's top two rows over the gatehouse's bottom two: walked through from north to south; the door frames are `saffron_gate`'s |
 | The Magnet Train station | `saffron_buildings.py` `station()` (folder `magnet_train_station`) | 8×4, no door | the same | Saffron | its entrance is shuttered: the attendant outside arranges the journey |
 | The Cycling Road gatehouse | `route16-concept/route16_buildings.py` `gate()` (folder `cycling_gate`) | 8×4, doorways at (0,3) and (7,3) | Saffron's buildings palette (bank 9) | Route 16 (twice: its upper and lower halls), Routes 18 and 15 (in bank 7 there) | an east-west gatehouse: the left doorway is `MB_EAST_ARROW_WARP` (entered walking east), the right `MB_WEST_ARROW_WARP`; no door frames. The pack the other east-west gates could use (KR-40, KR-52, KR-60) |
 | The cycle track (Cycling Road's surface) | `route17-concept/route17_track.py` `piece()` | 1×1: 16 pieces by neighbours, inside corners, and paint (a lane line `+line`, an arrow downhill `+arrow`, a chequered line `+check`) where the plan has them | its own (`PAL`, bank 7): tarmac, a stone kerb, paint | Route 17 (`t`, `i`, `a`, `x`) | every piece is `MB_CYCLING_ROAD_PULL_DOWN` (the slope carries a rider down); a kerb wherever it meets anything but itself or the kit's cobbles |
@@ -148,7 +149,9 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 18 | 26 | 30 (for Fuchsia's own pieces) | 32 |
 | Fuchsia | 207 | 47 (for old Route 19) | 138 |
 | Route 15 | 26 | 0 | 32 |
-| Route 14 | 1 (nothing of its own) | 69 (for old Route 13) | 0 |
+| Route 14 | 1 (nothing of its own) | 0 | 0 |
+| Route 13 | 1 (nothing of its own) | 0 | 0 |
+| Route 12 | 91 | 79 (for Route 11's own pieces) | 32 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.

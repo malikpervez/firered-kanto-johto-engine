@@ -1,0 +1,84 @@
+{
+ "note": "Cut the first tree into the pocket off the islet and walk in.",
+ "created": "2026-10-27 11:00",
+ "start": {
+  "map": "Route12_Frlg",
+  "x": 25,
+  "y": 63,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BULBASAUR lv20 MOVE_CUT",
+   "FLAG_BADGE02_GET",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     300
+    ],
+    [
+     16,
+     28
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route12_Frlg",
+  "x": 27,
+  "y": 63,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 22:26"
+}
