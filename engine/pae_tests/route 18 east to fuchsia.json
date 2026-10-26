@@ -1,0 +1,39 @@
+{
+ "note": "Along the road out of the woods into Fuchsia.",
+ "created": "2026-10-27 03:00",
+ "start": {
+  "map": "Route18_Frlg",
+  "x": 55,
+  "y": 9,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 0,
+  "y": 19,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 18:50"
+}

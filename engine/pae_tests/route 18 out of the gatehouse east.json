@@ -1,0 +1,43 @@
+{
+ "note": "Out of the gatehouse's east door onto the road to Fuchsia.",
+ "created": "2026-10-27 03:00",
+ "start": {
+  "map": "Route18_EastEntrance_1F_Frlg",
+  "x": 10,
+  "y": 6,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route18_Frlg",
+  "x": 48,
+  "y": 9,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 18:50"
+}
