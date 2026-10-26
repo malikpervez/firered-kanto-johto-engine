@@ -245,11 +245,32 @@ STEPS = [
          inputs=f"UP*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300", expect=dict(map="Route24_Frlg", xy=(17, 13))),
     dict(name="bridge-ethan", what="Up the bridge: Ethan sees you across it and battles", walk=(17, 12),
          inputs=f"UP*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300", expect=dict(map="Route24_Frlg", xy=(17, 11))),
-    dict(name="bridge-rocket", what="At the bridge's north end the Rocket steps over, gives you the Nugget and battles (Wartortle evolves)",
+    dict(name="bridge-rocket",
+         what="At the bridge's north end the Rocket steps over, gives you the Nugget and battles (Wartortle evolves)",
          walk=(17, 9), inputs=f"UP*{hold(1)}, wait 300, " + A(80) + "wait 900, " + A(30) + "wait 300",
          expect=dict(map="Route24_Frlg", xy=(17, 8), vars={"VAR_MAP_SCENE_ROUTE24": 1})),
     dict(name="route25", what="Off the bridge's north end onto Route 25", walk=(17, 0), inputs=f"UP*{hold(1)}, wait 200",
-         expect=dict(map="Route25_Frlg", xy=(17, 34))),
+         expect=dict(map="Route25_Frlg", xy=(17, 23))),
+    dict(name="route25-joey", what="Up off the bridge and east along the cape road into the first neck: Joey sees you; "
+         "beat him", via=[(17, 9)], walk=(27, 9), inputs=f"RIGHT*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300",
+         expect=dict(map="Route25_Frlg", xy=(28, 9))),
+    dict(name="route25-wayne", what="On past the couple and Nob (round the north of their sight) into the second neck: "
+         "Wayne sees you; beat him", via=[(40, 9), (40, 7), (46, 7)], walk=(46, 9),
+         inputs=f"RIGHT*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300", expect=dict(map="Route25_Frlg", xy=(47, 9))),
+    dict(name="sea-cottage", what="Along the headland and up the path into Bill's Sea Cottage", via=[(51, 9)],
+         walk=(51, 8), inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="Route25_SeaCottage_Frlg", xy=(7, 9))),
+    # one step: that Bill is in his teleporter is a temporary flag, which a checkpoint (the map loaded again) forgets
+    dict(name="bill", what="Talk to the Clefairy (Bill): help him, and he goes into his teleporter; run the cell "
+         "separator on his PC, and he comes out of the other", walk=(10, 7),
+         inputs="UP*4, wait 30, " + A(12) + f"wait 300, LEFT*{hold(6)}, wait 20, UP*{hold(1)}, wait 20, " + A(4)
+         + "wait 1200",
+         expect=dict(map="Route25_SeaCottage_Frlg", xy=(4, 6), flags={"FLAG_HELPED_BILL_IN_SEA_COTTAGE": True})),
+    dict(name="ss-ticket", what="Talk to Bill (back where he stands, 7,5): he gives you the S.S. Ticket", walk=(7, 6),
+         inputs="UP*4, wait 30, " + A(12) + "wait 200",
+         expect=dict(map="Route25_SeaCottage_Frlg", xy=(7, 6), flags={"FLAG_GOT_SS_TICKET": True})),
+    dict(name="leave-cottage", what="Out of the cottage onto the headland", walk=(7, 8),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250",
+         expect=dict(map="Route25_Frlg", xy=(51, 8))),
 ]
 
 

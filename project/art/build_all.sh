@@ -16,8 +16,9 @@ sh project/art/route3-concept/build.sh
 sh project/art/route4-concept/build.sh
 sh project/art/cerulean-concept/build.sh
 sh project/art/route24-concept/build.sh
+sh project/art/route25-concept/build.sh
 cd engine
 for m in Route1_Frlg PalletTown_Frlg ViridianCity_Frlg Route22_Frlg Route2_Frlg PewterCity_Frlg Route3_Frlg Route4_Frlg \
-        CeruleanCity_Frlg Route24_Frlg; do
+        CeruleanCity_Frlg Route24_Frlg Route25_Frlg; do
     pae seam build $m -p .
 done

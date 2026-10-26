@@ -32,7 +32,8 @@
  "expect": {
   "map": "Route25_Frlg",
   "x": 24,
-  "y": 34,
+  "y": 23,
   "in_battle": false
- }
+ },
+ "accepted": "2026-10-26 06:16"
 }
