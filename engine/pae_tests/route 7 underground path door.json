@@ -1,0 +1,39 @@
+{
+ "note": "Into the Underground Path's hut north of the road.",
+ "created": "2026-10-26 15:00",
+ "start": {
+  "map": "Route7_Frlg",
+  "x": 9,
+  "y": 11,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "UndergroundPath_WestEntrance_Frlg",
+  "x": 13,
+  "y": 12,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 13:15"
+}

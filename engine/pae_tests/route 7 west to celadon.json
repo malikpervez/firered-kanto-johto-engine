@@ -1,0 +1,39 @@
+{
+ "note": "West along the road out of the trees into Celadon's east street.",
+ "created": "2026-10-26 15:00",
+ "start": {
+  "map": "Route7_Frlg",
+  "x": 3,
+  "y": 11,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Frlg",
+  "x": 59,
+  "y": 13,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 13:15"
+}
