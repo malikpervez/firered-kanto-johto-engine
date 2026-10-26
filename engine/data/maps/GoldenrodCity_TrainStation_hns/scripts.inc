@@ -59,7 +59,7 @@ GoldenrodCity_TrainStation_EventScript_BoardTrain::
 	special RemoveCameraObject
 	setvar JOHTO_VAR_TRAIN, 0
 	delay 60
-	warp MAP_SAFFRON_CITY, 22, 15
+	warp MAP_SAFFRON_CITY, 49, 18
 	waitstate
 	releaseall
 	end

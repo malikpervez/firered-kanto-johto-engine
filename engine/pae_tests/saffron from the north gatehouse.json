@@ -1,0 +1,45 @@
+{
+ "note": "Out of the north gatehouse's south door into Saffron.",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "Route5_SouthEntrance_Frlg",
+  "x": 4,
+  "y": 8,
+  "state": [
+   "VAR_MAP_SCENE_ROUTE5_ROUTE6_ROUTE7_ROUTE8_GATES=1"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     28
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SaffronCity_Frlg",
+  "x": 29,
+  "y": 3,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}

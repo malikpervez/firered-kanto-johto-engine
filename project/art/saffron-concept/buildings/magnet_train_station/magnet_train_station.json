@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "id": "magnet_train_station",
+  "type": "building",
+  "image": "magnet_train_station.png",
+  "image_size_px": [
+    128,
+    64
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 8,
+    "height": 4
+  },
+  "transparent_index": 0,
+  "door_blocks": [],
+  "name": "magnet_train_station",
+  "source": "drawn by saffron-concept/saffron_buildings.py; no door: its entrance is shuttered (the attendant outside arranges the journey)"
+}

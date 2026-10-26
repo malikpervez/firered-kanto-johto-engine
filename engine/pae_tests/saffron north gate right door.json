@@ -1,0 +1,41 @@
+{
+ "note": "Into the north gatehouse by its right door.",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "SaffronCity_Frlg",
+  "x": 30,
+  "y": 4,
+  "state": [
+   "FLAG_HIDE_SAFFRON_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route5_SouthEntrance_Frlg",
+  "x": 4,
+  "y": 9,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}

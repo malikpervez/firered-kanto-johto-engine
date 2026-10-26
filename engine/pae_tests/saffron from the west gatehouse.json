@@ -1,0 +1,45 @@
+{
+ "note": "Out of the west gatehouse's east door into Saffron.",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "Route7_EastEntrance_Frlg",
+  "x": 10,
+  "y": 5,
+  "state": [
+   "VAR_MAP_SCENE_ROUTE5_ROUTE6_ROUTE7_ROUTE8_GATES=1"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     28
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SaffronCity_Frlg",
+  "x": 2,
+  "y": 22,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}

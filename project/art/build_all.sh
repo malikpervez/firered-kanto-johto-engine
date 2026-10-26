@@ -27,6 +27,7 @@ sh project/art/lavender-concept/build.sh
 sh project/art/route8-concept/build.sh
 sh project/art/route7-concept/build.sh
 sh project/art/celadon-concept/build.sh
+sh project/art/saffron-concept/build.sh  # no compiled joins, so no seams
 cd engine
 for m in Route1_Frlg PalletTown_Frlg ViridianCity_Frlg Route22_Frlg Route2_Frlg PewterCity_Frlg Route3_Frlg Route4_Frlg \
         CeruleanCity_Frlg Route24_Frlg Route25_Frlg VermilionCity_Frlg Route11_Frlg \

@@ -1,0 +1,58 @@
+{
+ "note": "Talk to the man looking up at Silph Co.",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "SaffronCity_Frlg",
+  "x": 35,
+  "y": 21,
+  "state": [
+   "FLAG_HIDE_SAFFRON_ROCKETS",
+   "!FLAG_HIDE_SAFFRON_CIVILIANS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SaffronCity_Frlg",
+  "x": 35,
+  "y": 21,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}

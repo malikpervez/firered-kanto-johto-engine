@@ -26,11 +26,11 @@ There are two kinds of art:
 | Pond water, "Gentle ripples" | `kit/pond/` | option C | ponds (`~`, with lily pads `v` and reeds `r` drawn over it) |
 | Sea, "Staggered swells, reworked rocks" | `kit/sea/` | option B | the sea (`s`) and sea rocks (`q`, `Q`): Pallet, Route 25 |
 | Tall grass | `kit/tall_grass/` | variants B and C (made with another AI from a brief) | tall grass (`g`) |
-| Pokémon Center | `kit/buildings/pokemon_center/` | v0.1, approved | every town with a Center: Viridian, Pewter, Route 4, Cerulean, Vermilion, Route 10, Lavender, Celadon |
-| Poké Mart | `kit/buildings/poke_mart/` | v0.1, approved | Viridian, Pewter, Cerulean, Vermilion, Lavender |
+| Pokémon Center | `kit/buildings/pokemon_center/` | v0.1, approved | every town with a Center: Viridian, Pewter, Route 4, Cerulean, Vermilion, Route 10, Lavender, Celadon, Saffron |
+| Poké Mart | `kit/buildings/poke_mart/` | v0.1, approved | Viridian, Pewter, Cerulean, Vermilion, Lavender, Saffron |
 | Pallet houses (Red's, Blue's) | `pallet-concept/buildings/` | v0.5, approved | Pallet |
 | Viridian houses (roofs) | `viridian-concept/buildings/` | v0.1 (roof revision of the Stage 2 houses) | see below: these three houses stand for most of Kanto's buildings |
-| Viridian Gym, trainer school | `viridian-concept/buildings/` | Stage 2 | the Gym: Viridian, Cerulean, Vermilion (and recoloured as Pewter's Gym). The school: Viridian, Cerulean, Vermilion |
+| Viridian Gym, trainer school | `viridian-concept/buildings/` | Stage 2 | the Gym: Viridian, Cerulean, Vermilion (and recoloured as Pewter's Gym). The school: Viridian, Cerulean, Vermilion, and Saffron's Pokémon Trainer Fan Club |
 | Route 2 Stage 2 assets | `route2-concept/buildings/` | v0.3 (the tile-budget export of the approved v0.2) | see below |
 | League Front Gate | `route22-concept/buildings/league_front_gate/` | | Route 22 (a storey taller, drawn in code), Pewter's Museum |
 
@@ -38,10 +38,10 @@ The packs reused for buildings they weren't drawn for:
 
 | Pack | Stands for |
 |---|---|
-| `house_family` | houses in Viridian, Pewter (three, one pack), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Celadon's restaurant |
+| `house_family` | houses in Viridian, Pewter (three, one pack), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Celadon's restaurant; Saffron's Copycat's house |
 | `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender; Route 5's Underground Path hut |
-| `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room and its house on Lucky Lane (one pack for both) |
-| `forest_gate_south` | Viridian Forest's south gate (Route 2); Saffron's south, west and east gates (Routes 6, 7, 8: KR-40, KR-52); Route 11's gatehouse to Route 12 |
+| `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room and its house on Lucky Lane (one pack for both); Saffron's house and Mr. Psychic's house |
+| `forest_gate_south` | Viridian Forest's south gate (Route 2); Saffron's south, west and east gates on Routes 6, 7 and 8 (KR-40, KR-52; Saffron's own side has its drawn gatehouses); Route 11's gatehouse to Route 12 |
 | `forest_gate_north` | Viridian Forest's north gate (Route 2); Saffron's north gate (Route 5) |
 | `east_gatehouse` | Route 2's east gatehouse |
 | `diglett_cave` | the cave mouths: Diglett's Cave (Routes 2 and 11), Mt. Moon (Route 4), Cerulean Cave (recoloured, below), Rock Tunnel's two mouths (Route 10, in the cliffs' palette) |
@@ -70,15 +70,22 @@ plant (KR-47), a prize hall and a restaurant for Celadon (KR-57).
 | The hotel | `celadon_buildings.py` `hotel()` | 6×5, door (2,4) | the same | Celadon | |
 | The Game Corner | `celadon_buildings.py` `game_corner()` | 9×5, door (4,4) | the same | Celadon | |
 | Erika's Gym | `celadon_buildings.py` `gym()` (folder `celadon_gym`) | 7×5, door (3,4) | the same | Celadon | a glasshouse; keeps the "GYM" board over its door |
+| Silph Co. | `saffron-concept/saffron_buildings.py` `silph_co()` | 9×12, door (4,11) | Saffron's buildings palette (`PAL`, bank 9) | Saffron | a tower: a gold crown band with the company's emblem, seven storeys of glass, a glass lobby |
+| Sabrina's Gym | `saffron_buildings.py` `gym()` (folder `saffron_gym`) | 7×5, door (3,4) | the same | Saffron | lilac walls, a violet roof with a crystal orb; keeps the "GYM" board |
+| The Fighting Dojo | `saffron_buildings.py` `dojo()` (folder `fighting_dojo`) | 7×5, door (3,4) | the same | Saffron | white plaster in a dark wooden frame under a broad slate roof |
+| The gatehouse | `saffron_buildings.py` `gate()` (folder `saffron_gate`) | 4×3, a double door at (1,2)-(2,2) | the same | Saffron (its north, west and east gates) | its door frames are drawn here: one wide door, 96×32 |
+| The gatehouse's back | `saffron_buildings.py` `gate_back()` (folder `saffron_gate_back`) | 4×3, a doorway at (1,0)-(2,0) | the same | Saffron (its south gate) | the doorway is `MB_SOUTH_ARROW_WARP`: entered walking south, no animation |
+| The Magnet Train station | `saffron_buildings.py` `station()` (folder `magnet_train_station`) | 8×4, no door | the same | Saffron | its entrance is shuttered: the attendant outside arranges the journey |
 
 How each drawn building is switched off for a replacement:
 - Pewter's Gym: remove the `pewter_gym()` call in `pewter-concept/make_art.py`'s `main()`;
 - the Power Plant: in `route10-concept/make_art.py`, change `PLANT = power_plant()` to load the folder (as the other
   maps load a pack);
 - Pokémon Tower: remove the `pokemon_tower()` call in `lavender-concept/make_art.py`;
-- Celadon's buildings: remove the building's function from `ALL` in `celadon_buildings.py`.
+- Celadon's buildings: remove the building's function from `ALL` in `celadon_buildings.py`;
+- Saffron's buildings: remove the building's function from `ALL` in `saffron_buildings.py`.
 
-The Power Plant, Pokémon Tower and Celadon's buildings take their door frames from Pewter's Gym's
+The Power Plant, Pokémon Tower, Celadon's buildings and Saffron's (but its gatehouse) take their door frames from Pewter's Gym's
 (`pewter-concept/buildings/pewter_gym/pewter_gym_door.png`), by palette index. Celadon's `PAL` keeps Pewter Gym's
 colours at the indices the frames use (1, 2, 4, 9–13). A new Pewter Gym changes all their doors at the next build;
 give them door frames of their own first.
@@ -129,6 +136,7 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 8 | 170 | 93 | 64 |
 | Route 7 | 170 | 0 | 64 |
 | Celadon | 231 | 44 | 280 |
+| Saffron | 307 | none (no compiled joins) | 290 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.

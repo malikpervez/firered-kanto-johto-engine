@@ -1,0 +1,41 @@
+{
+ "note": "Into the east gatehouse (to Route 8) by its left door.",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "SaffronCity_Frlg",
+  "x": 56,
+  "y": 23,
+  "state": [
+   "FLAG_HIDE_SAFFRON_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route8_WestEntrance_Frlg",
+  "x": 1,
+  "y": 5,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}
