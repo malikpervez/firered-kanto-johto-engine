@@ -1591,3 +1591,6 @@ const u16 gMetatileAttributes_CeladonConcept[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_SaffronConcept[] = INCBIN_U16("data/tilesets/secondary/saffron_concept/metatiles.bin");
 const u16 gMetatileAttributes_SaffronConcept[] = INCBIN_U16("data/tilesets/secondary/saffron_concept/metatile_attributes.bin");
+
+const u16 gMetatiles_Route16Concept[] = INCBIN_U16("data/tilesets/secondary/route16_concept/metatiles.bin");
+const u16 gMetatileAttributes_Route16Concept[] = INCBIN_U16("data/tilesets/secondary/route16_concept/metatile_attributes.bin");

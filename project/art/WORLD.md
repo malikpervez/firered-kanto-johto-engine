@@ -33,7 +33,8 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Lavender Town | 38×32 | 38×31 | kit + `gTileset_LavenderConcept` | up: Route 10 (offset −4), left: Route 8 (offset −4), down: Route 12 (offset 2) |
 | Route 8 | 60×30 | 68×40 | kit + `gTileset_Route8Concept` | left: Saffron City's twin `SaffronCity_Connection` (offset −15), right: Lavender Town (offset 4) |
 | Route 7 | 30×24 | 20×28 | kit + `gTileset_Route7Concept` | left: Celadon City (offset −10), right: Saffron City's twin `SaffronCity_Connection` (offset −18) |
-| Celadon City | 60×40 | 60×40 | kit + `gTileset_CeladonConcept` | left: Route 16 (offset −7), right: Route 7 (offset 10) |
+| Celadon City | 60×40 | 60×40 | kit + `gTileset_CeladonConcept` | left: Route 16 (offset −2), right: Route 7 (offset 10) |
+| Route 16 | 56×44 | 64×52 | kit + `gTileset_Route16Concept` | right: Celadon City (offset 2), down: Route 17 (offset 0) |
 | Saffron City | 60×48 | 66×55 | kit + `gTileset_SaffronConcept` | none compiled (KR-53): Routes 5, 6, 7 and 8 join its twin `SaffronCity_Connection`, still the old layout (KR-59); its four gatehouses are the ways out |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
@@ -60,7 +61,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Lavender ↔ Route 8 | Lavender rows 9–11 = Route 8 rows 13–15 | the street west onto Route 8's road |
 | Route 8 ↔ Saffron | Route 8 row 12 = Saffron row 27 | not walked across: the gate's doors on Route 8 (10–11,12) lead through the gatehouse to Saffron's own east gate door (62,27). Old Saffron draws its own half of the gatehouse, and no neighbour (KR-53) |
 | Route 7 ↔ Celadon | Route 7 rows 10–13 = Celadon rows 20–23 | the road west out of the trees onto Celadon's boulevard |
-| Celadon ↔ Route 16 | Celadon rows 20–23 = Route 16 rows 27–30 | the boulevard west onto Route 16's path (Route 16 isn't rebuilt; KR-56) |
+| Celadon ↔ Route 16 | Celadon rows 20–23 = Route 16 rows 22–25 | the boulevard west onto Route 16's road |
+| Route 16 ↔ Route 17 | Route 16 12–17 = Route 17 12–17 | the road down from the plaza onto Cycling Road (Route 17 isn't rebuilt) |
 | Saffron's gates | not joins: warps | each avenue ends at a gatehouse whose door is a warp into the gatehouse between Saffron and its route: north (29–30,2) to Route 5's, west (2–3,21) to Route 7's, east (56–57,21) to Route 8's, south (29–30,45, entered walking south) to Route 6's |
 | Route 7 ↔ Saffron | Route 7 row 9 = Saffron row 27 | not walked across: the gate's doors on Route 7 (18–19,9) lead through the gatehouse to Saffron's own west gate door |
 | Lavender ↔ Route 12 | Lavender 13–15 = Route 12 11–13 | the road south from the square onto Route 12's sandy path (Route 12 isn't rebuilt; KR-50, KR-51) |
@@ -98,7 +100,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 8 | Lavender Town | pae (both from the kit: no palettes). None with old Saffron, as for Routes 5 and 6 (KR-34): no block of Route 8 is in view of it, and old Saffron draws no neighbour (KR-53) |
 | Route 7 | Celadon City | pae (both from the kit: only each other's own tiles, no palettes; KR-54 is gone with old Celadon). None with old Saffron (KR-34, KR-53). Old Route 7's hand-made seam is gone |
 | Saffron City | none | no compiled joins (KR-53), so no seams; the routes skip their seam with its twin (KR-34) |
-| Celadon City | Route 16, Route 7 | pae: old Route 16's palettes fit in Celadon's banks 10–11, and Celadon's in old Route 16's free slots 7–8, exactly (Route 16's hand-made piece for Route 17, id 1022, is kept: pae's adapters there take 959–1021). Celadon's west seven columns are forest and road, so its strip in Route 16 is small |
+| Celadon City | Route 16, Route 7 | pae (all three from the kit: 2 pieces for Route 16's strip, none for Route 7's; pae PR #30) |
+| Route 16 | Celadon City, Route 17 | pae: old Route 17's palettes fit in Route 16's banks 10–12, and Route 16's in old Route 17's free slots 7–8, exactly; Route 16's bottom seven rows (Route 17's strip of it) are forest and road only. Old Route 16's hand-made piece for Route 17 is gone |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town | pae |
@@ -255,3 +258,8 @@ Check these whenever a map is rebuilt, moved or resized:
   Friends' camp to the garden behind Silph Co. (round 50,8), the credits' view to 38,4, the Magnet Train's stop to
   49,18 (Goldenrod's station script) and the Silph guard's post to 38,18 (the city's map script). Old Saffron had no
   hand-made seam.
+- Route 16 rebuilt smaller (56×44, was 64×52) and its road moved: Celadon's boulevard meets it at rows 22–25
+  (Celadon's offset −2, was −7); Cycling Road still joins below at columns 12–17 (offset 0). Every warp kept its
+  number: the house (0) and the Cycling Road gatehouse's upper and lower halls' doorways (1–4), now at the two ends
+  of the gatehouse drawn for it. The people kept their order; Celadon's clone of the tree to cut moved with it
+  (−10,19). Old Route 16's hand-made seam piece for Route 17 was removed from `kanto_connection_seam.c`.

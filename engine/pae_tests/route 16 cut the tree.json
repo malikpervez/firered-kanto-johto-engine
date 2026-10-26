@@ -1,0 +1,83 @@
+{
+ "note": "Cut the tree in the hedge north of the road and walk onto the woodland path.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 46,
+  "y": 22,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BULBASAUR lv20 MOVE_CUT",
+   "FLAG_BADGE02_GET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     300
+    ],
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_Frlg",
+  "x": 46,
+  "y": 20,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

@@ -1,0 +1,39 @@
+{
+ "note": "Into the house in the woods.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 17,
+  "y": 13,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_House_Frlg",
+  "x": 4,
+  "y": 8,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

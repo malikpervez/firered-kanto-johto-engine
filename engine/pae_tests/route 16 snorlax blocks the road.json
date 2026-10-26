@@ -1,0 +1,55 @@
+{
+ "note": "West from Celadon: Snorlax sleeps in the gap between the rocks. Without the Pok\u00e9 Flute he doesn't wake.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 47,
+  "y": 24,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     40
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_Frlg",
+  "x": 45,
+  "y": 24,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

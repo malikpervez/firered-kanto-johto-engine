@@ -1,0 +1,39 @@
+{
+ "note": "Down the road from the plaza onto Cycling Road.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 14,
+  "y": 38,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     100
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route17_Frlg",
+  "x": 14,
+  "y": 0,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

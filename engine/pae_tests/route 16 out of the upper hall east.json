@@ -1,0 +1,43 @@
+{
+ "note": "Out of the upper hall's east door onto the woodland path.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_NorthEntrance_1F_Frlg",
+  "x": 10,
+  "y": 3,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_Frlg",
+  "x": 35,
+  "y": 12,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:57"
+}

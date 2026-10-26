@@ -1,0 +1,144 @@
+{
+ "note": "With the Pok\u00e9 Flute: play it (yes), and Snorlax wakes to battle.",
+ "created": "2026-10-26 21:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 45,
+  "y": 24,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_CHARIZARD lv50",
+   "SPECIES_BLASTOISE lv50",
+   "FLAG_GOT_POKE_FLUTE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route16_Frlg",
+  "x": 45,
+  "y": 24,
+  "in_battle": true
+ },
+ "accepted": "2026-10-26 14:57"
+}
