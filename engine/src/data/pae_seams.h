@@ -3081,7 +3081,7 @@ static const struct KantoSeamPalette ALIGNED(4) sPaeSeam_ViridianCity_Frlg_Palet
     { &Route4_Frlg_FireRedGeometry, sPaeSeam_Route4_Frlg_Metatiles, sPaeSeam_Route4_Frlg_GlyphRuns, sPaeSeam_Route4_Frlg_Palettes, NULL, 912, 112, 1, 1, 0, 0 }, \
     { &Route5_Frlg_FireRedGeometry, sPaeSeam_Route5_Frlg_Metatiles, sPaeSeam_Route5_Frlg_GlyphRuns, sPaeSeam_Route5_Frlg_Palettes, NULL, 972, 52, 0, 0, 0, 0 }, \
     { &Route6_Frlg_FireRedGeometry, sPaeSeam_Route6_Frlg_Metatiles, sPaeSeam_Route6_Frlg_GlyphRuns, sPaeSeam_Route6_Frlg_Palettes, NULL, 908, 116, 1, 3, 0, 0 }, \
-    { &Route7_Frlg_FireRedGeometry, sPaeSeam_Route7_Frlg_Metatiles, sPaeSeam_Route7_Frlg_GlyphRuns, sPaeSeam_Route7_Frlg_Palettes, NULL, 987, 33, 1, 2, 0, 0 }, \
+    { &Route7_Frlg_FireRedGeometry, sPaeSeam_Route7_Frlg_Metatiles, sPaeSeam_Route7_Frlg_GlyphRuns, sPaeSeam_Route7_Frlg_Palettes, NULL, 991, 33, 1, 2, 0, 0 }, \
     { &Route8_Frlg_FireRedGeometry, sPaeSeam_Route8_Frlg_Metatiles, sPaeSeam_Route8_Frlg_GlyphRuns, sPaeSeam_Route8_Frlg_Palettes, NULL, 922, 102, 1, 1, 0, 0 }, \
     { &Route9_Frlg_FireRedGeometry, sPaeSeam_Route9_Frlg_Metatiles, sPaeSeam_Route9_Frlg_GlyphRuns, sPaeSeam_Route9_Frlg_Palettes, NULL, 876, 148, 1, 0, 0, 0 }, \
     { &VermilionCity_Frlg_FireRedGeometry, sPaeSeam_VermilionCity_Frlg_Metatiles, sPaeSeam_VermilionCity_Frlg_GlyphRuns, sPaeSeam_VermilionCity_Frlg_Palettes, NULL, 870, 154, 1, 2, 0, 0 }, \

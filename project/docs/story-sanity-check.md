@@ -13,10 +13,10 @@ plays the events one after another, each starting where the last one left the ga
 |---|---|
 | Date | 2026-10-26 |
 | Game | branch `claude/kanto-route7` (Route 7 rebuilt, on `v2-main` at `39dbcefd`) |
-| ROM | `make -j8` with the default settings. SHA-1 `2a75fba9b8730408eaf61110ab71efee08660e4b`, SHA-256 `aa041bd503844afcd66a991ec07243d0a8eed91e87be59dd4fae4e7629576755` |
+| ROM | `make -j8` with the default settings. SHA-1 `632d176d7622d7a44aa51ff410f5a08354fdad69`, SHA-256 `634c4f9271b489569deeb96925518796e16e72772a08b125fdfd5c2748b2f1b9` |
 | pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110; `22cc6f9` (pae `main` after PR #28) for steps 111–142 and the replay tests |
 | Last step passed | 142 `celadon`: onto Route 9 and through it (the team now one Kingler, level 65, with Surf and Cut), Route 10's Center, Rock Tunnel's two floors (nine trainers whose lines can't be gone round), out of its south mouth, down Route 10 into Lavender, its Center (in, heal, out), west along Route 8 into the Underground Path, along its tunnel under Saffron, out onto Route 7 and west into Celadon. Steps 141–142 were run on this build, from step 140's checkpoint |
-| Replay tests | 305 of 305 pass (on this ROM; this change adds 7) |
+| Replay tests | 306 of 306 pass (on this ROM; this change adds 8) |
 
 ## How to run it
 

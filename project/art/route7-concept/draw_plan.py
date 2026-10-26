@@ -11,13 +11,13 @@ reached only through the gate (its door 18-19,9). It has:
   onto the road;
 - **the Underground Path's hut** north of the road with its sign: the way under Saffron to Route 8 and Lavender;
 - **the singing garden** south of the road, a bed of flowers where the Jigglypuff sings to the Ralts, by a little
-  pond, the Wepear Berry hidden in its corner.
+  pond, with tall grass along its south side (Route 7's wild Pokémon) and the Wepear Berry hidden in its corner.
 
 The west seven columns are forest and road only: old Celadon has no free slot left, only 106 tile slots it never
 shows, for this strip (KR-54). Every block is at least 7 in from the right edge, so the camera never shows old Saffron
 across it (no seam: KR-34).
 
-Letters: the kit's legend (T forest, . lawn, = cobble, * flowers, ~ pond, o rocks, b bushes, R trees, S signs),
+Letters: the kit's legend (T forest, . lawn, = cobble, g grass, * flowers, ~ pond, o rocks, b bushes, R trees, S signs),
 F Saffron's west gate (Route 2's south forest gate), U the Underground Path's hut (Viridian's pond keeper's house).
 """
 from pathlib import Path
@@ -54,10 +54,12 @@ rect(8, 6, 11, 9, "U")                         # the hut, door 9,9
 at(12, 9, "S")                                 # its sign, read from 12,10
 rect(7, 2, 8, 3, "R"); rect(12, 3, 13, 4, "R")
 
-# the singing garden south of the road: flowers, the little pond, trees round it
+# the singing garden south of the road: flowers, the little pond, a tree and a rock by it; tall grass along its
+# south side (Route 7's wild Pokémon live there)
 rect(8, 15, 14, 19, "*")
 rect(16, 15, 19, 17, "~")
-rect(21, 15, 22, 16, "R"); rect(16, 19, 17, 20, "R"); at(20, 19, "o")
+rect(21, 15, 22, 16, "R"); at(20, 18, "o")
+rect(8, 20, 22, 21, "g")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x % 10) for x in range(W)))

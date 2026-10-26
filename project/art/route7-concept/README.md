@@ -15,7 +15,8 @@ own west gate door (its row 27) is level with this gate's (row 9), as with the o
 - **the Underground Path's hut** (Viridian's pond keeper's house) north of the road with its sign: the way under
   Saffron to Route 8 and Lavender;
 - **the singing garden** south of the road, a bed of flowers where the Jigglypuff sings to the Ralts, by a little
-  pond, the Wepear Berry hidden in its corner.
+  pond, with tall grass along its south side, where Route 7's wild Pokémon live, and the Wepear Berry hidden in its
+  corner.
 
 Every warp keeps its number and the Pokémon their order; they stand at the ground's elevation. Celadon's border tree
 is still shown across the join where it stands on Celadon's grid (the clone, now at −7,19). The pieces are the kit's,
