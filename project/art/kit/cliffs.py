@@ -181,11 +181,15 @@ def junctions(g, tops) -> dict[tuple[int, int], tuple[str, np.ndarray]]:
     return out
 
 
-def add(sheet, g, roof: str = "", extra_tops=()) -> dict[str, str]:
+EXTRAS = ("rock_stairs", "small_rock", "big_boulder")  # the pack's other pieces
+
+
+def add(sheet, g, roof: str = "", extra_tops=(), extras=EXTRAS) -> dict[str, str]:
     """Put the pieces the grid's cliffs use on ``sheet`` (in the pack's palette): its tops (by phase, the sides that
     are top and the inside corners), the tops beside a face, the face's columns, then the pack's stairs and its two
     rocks. ``extra_tops`` are tops the map draws under something else ((phase, mask, corners)). The tops beside a
-    face get a character each in the grid; returns them (piece name -> character) for ``legend``."""
+    face get a character each in the grid; returns them (piece name -> character) for ``legend``. ``extras``: which
+    of the pack's other pieces the map uses (each costs tiles)."""
     tops = tops_in(g, roof)
     beside = junctions(g, tops)
     for k, mask, corners in sorted({v for b, v in tops.items() if b not in beside} | set(extra_tops)):
@@ -201,9 +205,12 @@ def add(sheet, g, roof: str = "", extra_tops=()) -> dict[str, str]:
         g[y][x] = char_of[name]
     for c in sorted(set(FACE[ch] for r in g for ch in r if ch in FACE)):
         sheet.add(f"face_{c}", pack(f"face/{c}.png"), tileset="secondary", ground="grass", solid=True)
-    sheet.add("rock_stairs", pack("face/stairs.png"), tileset="secondary")
-    sheet.add("small_rock", pack("rocks/small_rock.png"), tileset="secondary", ground="grass", solid=True)
-    sheet.add("big_boulder", pack("rocks/big_boulder.png"), tileset="secondary", ground="grass", solid=True)
+    if "rock_stairs" in extras:
+        sheet.add("rock_stairs", pack("face/stairs.png"), tileset="secondary")
+    if "small_rock" in extras:
+        sheet.add("small_rock", pack("rocks/small_rock.png"), tileset="secondary", ground="grass", solid=True)
+    if "big_boulder" in extras:
+        sheet.add("big_boulder", pack("rocks/big_boulder.png"), tileset="secondary", ground="grass", solid=True)
     return char_of
 
 

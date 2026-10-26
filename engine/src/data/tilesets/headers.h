@@ -2016,3 +2016,14 @@ const struct Tileset gTileset_ViridianForestConcept =
     .metatileAttributes = gMetatileAttributes_ViridianForestConcept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PewterConcept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PewterConcept,
+    .palettes = gTilesetPalettes_PewterConcept,
+    .metatiles = gMetatiles_PewterConcept,
+    .metatileAttributes = gMetatileAttributes_PewterConcept,
+    .callback = NULL,
+};

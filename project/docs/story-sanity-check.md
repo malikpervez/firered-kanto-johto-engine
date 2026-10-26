@@ -11,12 +11,12 @@ plays the events one after another, each starting where the last one left the ga
 
 | | |
 |---|---|
-| Date | 2026-10-25 |
-| Game | branch `claude/viridian-forest-concept` (Viridian Forest rebuilt from the concept, on `v2-main` at `45d5bbe1`) |
-| ROM | `make -j4` with the default settings. SHA-1 `3d190d66e41ea9437a09460cbb347bbd34a6e103`, SHA-256 `61b5785c2d254e890d958302d621333caad32bbf9d859994bdffaa9ad6115720` |
-| pae | `1b011f0` (pae PR #20) |
-| Last step passed | 39 `pewter`: through Viridian Forest (battling Rick and Doug), out of its north gate onto Route 2, and into Pewter City. Steps 34–39 were run on this build, from step 33's checkpoint of the build before |
-| Replay tests | 71 of 71 pass |
+| Date | 2026-10-26 |
+| Game | branch `claude/kanto-pewter` (Pewter City rebuilt, on `v2-main` at `4d036e13`) |
+| ROM | `make -j4` with the default settings. SHA-1 `252a80b759b0b35c917fe4eb3fa45add8ff3cf7a`, SHA-256 `0a4f809f8abbd4fe8137dc68c860ba392115f9895c471ba0c2afcb2455ce67dd` |
+| pae | `fc6d290` (pae PR #21) |
+| Last step passed | 41 `pewter-gym`: the Gym guide walks you to Pewter's Gym, and into it. Steps 39–41 were run on this build, from step 38's checkpoint of the build before |
+| Replay tests | 84 of 84 pass |
 
 ## How to run it
 
@@ -97,6 +97,8 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 37 | `forest-north` | On north through the last tall grass to the forest's north exit and its gate | the north gatehouse 7,9 | |
 | 38 | `route2-north` | Out of the forest's north gate onto Route 2 (its doorway in the roof, walking north) | Route 2 7,20 | |
 | 39 | `pewter` | Up Route 2's north meadow into Pewter City | Pewter City 23,43 | |
+| 40 | `pewter-guide` | Up Pewter's main street and east along the road out: the Gym guide stops you and walks you to the Gym | Pewter City 9,21 | |
+| 41 | `pewter-gym` | Into Pewter's Gym | Pewter Gym 6,14 | |
 
 ## What it doesn't cover
 
@@ -153,3 +155,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-25 | the faster map crossings (seam lookups by table) | First run from the top: steps 1–21 passed, step 22 walked a block too far. With crossings no longer freezing and no frame lost per block, the old holds (`16 * n + 2` frames) walked one block more; `story_check.py` now holds `16 * (n - 1) + 12`. With step 22's hold fixed, **steps 22–38 pass** `--from back-viridian` (1136 s; steps 1–21 took 836 s). |
 | 2026-10-25 | the one-frame graphics switch at crossings | **All 38 steps pass** from the top (1914 s). |
 | 2026-10-25 | Viridian Forest rebuilt from the concept (48×60); the forest's three steps become four | **Steps 34–39 pass** `--from forest`, resumed from step 33's checkpoint (395 s). Rick and Doug can't be walked round now, so the walk battles them. Steps 1–33 weren't run on this build (the kit maps were rebuilt with the same blocks; their replay tests pass). |
+| 2026-10-26 | Pewter City rebuilt (its own concept); two new steps, the Gym guide's walk to the Gym and into it | **Steps 39–41 pass** `--from pewter`, resumed from step 38's checkpoint (26 s). Steps 1–38 weren't run on this build (Pewter changes nothing before step 39). |

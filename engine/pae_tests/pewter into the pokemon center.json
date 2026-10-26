@@ -1,0 +1,44 @@
+{
+ "note": "Walk up into the Pok\u00e9mon Center.",
+ "created": "2026-10-26 02:45",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 29,
+  "y": 33,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     24
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_PokemonCenter_1F_Frlg",
+  "x": 7,
+  "y": 8,
+  "in_battle": false
+ }
+}

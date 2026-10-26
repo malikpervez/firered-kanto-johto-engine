@@ -1,0 +1,109 @@
+{
+ "note": "Talk to the Museum guide from below and say you haven't been: he walks you to the Museum's door (24,13).",
+ "created": "2026-10-26 02:44",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 39,
+  "y": 18,
+  "state": [
+   "!FLAG_HIDE_PEWTER_MUSEUM_GUIDE",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     700
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Frlg",
+  "x": 24,
+  "y": 13,
+  "in_battle": false
+ }
+}

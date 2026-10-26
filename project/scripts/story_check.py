@@ -162,6 +162,12 @@ STEPS = [
          walk=(7, 2), inputs="UP*20, wait 300", expect=dict(map="Route2_Frlg", xy=(7, 20))),
     dict(name="pewter", what="Up Route 2's north meadow into Pewter City", walk=(9, 0), inputs="UP*12, wait 200",
          expect=dict(map="PewterCity_Frlg", xy=(23, 43))),
+    dict(name="pewter-guide", what="Up Pewter's main street and east along the road out: the Gym guide stops you and "
+                                   "walks you to the Gym",
+         walk=(40, 26), inputs="RIGHT*60, wait 60, " + A(3) + "wait 900, " + A(3) + "wait 400",
+         expect=dict(map="PewterCity_Frlg", xy=(9, 21))),
+    dict(name="pewter-gym", what="Into Pewter's Gym", inputs="UP*20, wait 300",
+         expect=dict(map="PewterCity_Gym_Frlg", xy=(6, 14))),
 ]
 
 

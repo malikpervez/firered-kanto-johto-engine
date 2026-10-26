@@ -209,14 +209,10 @@
     {
       "id": "HEAL_LOCATION_PEWTER_CITY",
       "map": "MAP_PEWTER_CITY",
-      "x": 17,
-      "y": 26,
+      "x": 29,
+      "y": 33,
       "respawn_map": "MAP_PEWTER_CITY_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_PEWTER_NURSE",
-      "firered_campaign": {
-        "x": 19,
-        "y": 30
-      }
+      "respawn_npc": "LOCALID_PEWTER_NURSE"
     },
     {
       "id": "HEAL_LOCATION_CERULEAN_CITY",

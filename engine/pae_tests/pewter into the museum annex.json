@@ -1,0 +1,44 @@
+{
+ "note": "Walk up into the Museum's annex, in its yard.",
+ "created": "2026-10-26 02:45",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 37,
+  "y": 11,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     24
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Museum_1F_Frlg",
+  "x": 21,
+  "y": 9,
+  "in_battle": false
+ }
+}
