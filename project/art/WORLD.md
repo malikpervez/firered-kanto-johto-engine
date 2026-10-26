@@ -19,6 +19,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 22 | 52×28 | 52×28 | kit + `gTileset_Route22Concept` | right: Viridian City (offset −22); not joined to Route 23 (below) |
 | Route 2 | 30×80 | 30×80 | kit + `gTileset_Route2Concept` | up: Pewter City (offset −14), down: Viridian City (offset −16) |
 | Pewter City | 52×44 | 52×44 | kit + `gTileset_PewterConcept` | down: Route 2 (offset 14), right: Route 3 (offset 15) |
+| Route 3 | 84×20 | 84×20 | kit + `gTileset_Route3Concept` | left: Pewter City (offset −15), up: Route 4 (offset 60) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -33,7 +34,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Viridian ↔ Route 2 | Viridian 22–27 = Route 2 6–11 | Viridian's one-block road north (the old man's) widens at the edge to meet Route 2's path |
 | Viridian ↔ Route 22 | Viridian rows 28–31 = Route 22 rows 6–9 | the road west |
 | Route 2 ↔ Pewter | Route 2 8–11 = Pewter 22–25 | the road north becomes Pewter's main street |
-| Pewter ↔ Route 3 | Pewter rows 24–27 = Route 3 rows 9–12 | the road east (Route 3 isn't rebuilt) |
+| Pewter ↔ Route 3 | Pewter rows 24–27 = Route 3 rows 9–12 | the road east |
+| Route 3 ↔ Route 4 | Route 3 68–75 = Route 4 8–15 | the pass north (Route 4 isn't rebuilt) |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -48,8 +50,9 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 1 | Pallet Town, Viridian City | pae |
 | Viridian City | Route 1, Route 2, Route 22 | pae (its hand-made seam for the old Viridian is gone) |
 | Route 2 | Viridian City, Pewter City | pae |
-| Pewter City | Route 2, Route 3 | pae (Route 3's strip: 39 tiles, palette slot 11) |
-| Route 3 | Pewter City | pae (the old map) |
+| Pewter City | Route 2, Route 3 | pae |
+| Route 3 | Pewter City, Route 4 | pae (Route 4's strip: 112 tiles, palette slot 9) |
+| Route 4 | Route 3 | pae (the old map) |
 | Route 21 North | Pallet Town | pae |
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
@@ -120,3 +123,6 @@ Check these whenever a map is rebuilt, moved or resized:
   `src/data/heal_locations.json`). The Gym guide's and the Museum guide's walks were worked out again for the new
   town (`pewter-concept/escort.py`). Route 3 (still the old map) got a pae seam for it. The kit gained cliffs for
   every map (`kit/cliffs.py`).
+- Route 3 rebuilt at the same size, so Pewter's and Route 4's joins didn't change. Its trainers, Pokémon, sign and
+  hidden item moved (the trainers keep their scripts and the way they face). Route 4 (still the old map) got a pae
+  seam for it.

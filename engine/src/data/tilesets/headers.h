@@ -2027,3 +2027,14 @@ const struct Tileset gTileset_PewterConcept =
     .metatileAttributes = gMetatileAttributes_PewterConcept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route3Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route3Concept,
+    .palettes = gTilesetPalettes_Route3Concept,
+    .metatiles = gMetatiles_Route3Concept,
+    .metatileAttributes = gMetatileAttributes_Route3Concept,
+    .callback = NULL,
+};

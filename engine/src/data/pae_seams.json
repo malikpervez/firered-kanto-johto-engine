@@ -22,7 +22,11 @@
   "PewterCity_Frlg"
  ],
  "Route3_Frlg": [
-  "PewterCity_Frlg"
+  "PewterCity_Frlg",
+  "Route4_Frlg"
+ ],
+ "Route4_Frlg": [
+  "Route3_Frlg"
  ],
  "ViridianCity_Frlg": [
   "Route1_Frlg",

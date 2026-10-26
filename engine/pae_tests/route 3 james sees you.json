@@ -1,0 +1,70 @@
+{
+ "note": "Step down at the top of the lane: James sees you and battles.",
+ "created": "2026-10-26 02:57",
+ "start": {
+  "map": "Route3_Frlg",
+  "x": 18,
+  "y": 6,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv40 MOVE_THUNDERBOLT",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     24
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     500
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route3_Frlg",
+  "x": 18,
+  "y": 7,
+  "in_battle": true
+ }
+}

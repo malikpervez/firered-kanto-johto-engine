@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-pewter` (Pewter City rebuilt, on `v2-main` at `4d036e13`) |
-| ROM | `make -j4` with the default settings. SHA-1 `252a80b759b0b35c917fe4eb3fa45add8ff3cf7a`, SHA-256 `0a4f809f8abbd4fe8137dc68c860ba392115f9895c471ba0c2afcb2455ce67dd` |
+| Game | branch `claude/kanto-route3` (Route 3 rebuilt, on `v2-main` at `36aaa2f2`) |
+| ROM | `make -j4` with the default settings. SHA-1 `14b9f51c217db5ff20fe79ad119bfa693e8e41ba`, SHA-256 `bc4ce7cd7da2cfcd0eb9feaa5487d568df0dcd135334f029cad061e599bec699` |
 | pae | `fc6d290` (pae PR #21) |
-| Last step passed | 41 `pewter-gym`: the Gym guide walks you to Pewter's Gym, and into it. Steps 39–41 were run on this build, from step 38's checkpoint of the build before |
-| Replay tests | 85 of 85 pass |
+| Last step passed | 47 `route3-north`: Brock beaten, the Running Shoes, across Route 3 onto Route 4. Steps 41–47 were run on this build, from step 40's checkpoint of the build before |
+| Replay tests | 96 of 96 pass |
 
 ## How to run it
 
@@ -98,7 +98,13 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 38 | `route2-north` | Out of the forest's north gate onto Route 2 (its doorway in the roof, walking north) | Route 2 7,20 | |
 | 39 | `pewter` | Up Route 2's north meadow into Pewter City | Pewter City 23,43 | |
 | 40 | `pewter-guide` | Up Pewter's main street and east along the road out: the Gym guide stops you and walks you to the Gym | Pewter City 9,21 | |
-| 41 | `pewter-gym` | Into Pewter's Gym | Pewter Gym 6,14 | |
+| 41 | `pewter-gym` | Into Pewter's Gym (a Wartortle now, for its rock types) | Pewter Gym 6,14 | |
+| 42 | `gym-liam` | Up the Gym: the camper Liam sees you across it and battles | Pewter Gym 6,8 | |
+| 43 | `brock` | On up to Brock and beat him: the Boulder Badge | Pewter Gym 6,6 | `FLAG_BADGE01_GET`, `VAR_MAP_SCENE_PEWTER_CITY` 1 |
+| 44 | `leave-gym` | Back out of Pewter's Gym | Pewter City 9,21 | |
+| 45 | `running-shoes` | East along the road out: Oak's aide stops you and gives you the Running Shoes | Pewter City 47,26 | `FLAG_SYS_B_DASH`, `VAR_MAP_SCENE_PEWTER_CITY` 2 |
+| 46 | `route3` | On east out of Pewter onto Route 3 | Route 3 0,10 | |
+| 47 | `route3-north` | Across Route 3 (below the trainers' lines of sight) and up the pass onto Route 4 | Route 4 11,19 | |
 
 ## What it doesn't cover
 
@@ -111,6 +117,8 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   doesn't do that.
 * **Places off the story's path**: houses, the Trainer School, the Gym (locked), Route 2's eastern detour (it needs
   Cut: the replay tests cut a tree and go through its buildings' doors), surfing.
+* **Route 3's trainers.** The walk keeps below their lines of sight (they're optional); their battles are in the replay
+  tests.
 * **Viridian Forest's other trainers.** Rick and Doug can't be walked round, so their battles are played (with the
   Pikachu from `blue-win`); Sammy, Anthony and Charlie are on the item branches, which the walk doesn't take.
 * **The menus** (bag, Pokédex, Town Map, saving): only opened where the story opens them.
@@ -156,3 +164,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-25 | the one-frame graphics switch at crossings | **All 38 steps pass** from the top (1914 s). |
 | 2026-10-25 | Viridian Forest rebuilt from the concept (48×60); the forest's three steps become four | **Steps 34–39 pass** `--from forest`, resumed from step 33's checkpoint (395 s). Rick and Doug can't be walked round now, so the walk battles them. Steps 1–33 weren't run on this build (the kit maps were rebuilt with the same blocks; their replay tests pass). |
 | 2026-10-26 | Pewter City rebuilt (its own concept); two new steps, the Gym guide's walk to the Gym and into it | **Steps 39–41 pass** `--from pewter`, resumed from step 38's checkpoint (26 s). Steps 1–38 weren't run on this build (Pewter changes nothing before step 39). |
+| 2026-10-26 | Route 3 rebuilt (its own concept); six new steps: Liam and Brock in Pewter's Gym, the Running Shoes, across Route 3 to Route 4 | **Steps 41–47 pass** `--from pewter-gym`, resumed from step 40's checkpoint (about 2 min). The first try stopped in the Gym: Liam saw the walk up its middle; the steps now fight him, then Brock, with a Wartortle given on entering the Gym (Pikachu's Thunderbolt doesn't touch rock types). |

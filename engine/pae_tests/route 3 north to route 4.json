@@ -1,0 +1,44 @@
+{
+ "note": "Walk north up the pass off Route 3 onto Route 4.",
+ "created": "2026-10-26 02:57",
+ "start": {
+  "map": "Route3_Frlg",
+  "x": 71,
+  "y": 2,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route4_Frlg",
+  "x": 11,
+  "y": 19,
+  "in_battle": false
+ }
+}
