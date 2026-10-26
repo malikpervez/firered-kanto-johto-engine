@@ -41,7 +41,8 @@ The pieces:
   the restaurant.
 
 The town's own tileset holds 384 tiles. The buildings first came to 428, so they are drawn on the 16-pixel grid
-(their tiles repeat) and two houses share a pack: the city takes 231 (KR-8).
+(their tiles repeat) and two houses share a pack: the city takes 231 (KR-8). See `../ASSETS.md` for every pack and
+how to replace one.
 
 The seams are pae's:
 - with Route 7, both maps are the kit's (KR-54 went with old Celadon);
