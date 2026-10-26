@@ -31,8 +31,8 @@ outdoor art. They stay the old maps; their doors and warps keep working.
 | 2 | Route 3 | 84×20 | 84×20 | #39 | The mountain road: a high path with a ledge, a field of grass you can't walk round, the pass north. |
 | 3 | Route 4 | 108×20 | 108×20 | #40 | Round Mt. Moon: the foot of the mountain with the Center, the high shelf where the cave comes out, its ledge down to the road to Cerulean. |
 | 4 | Cerulean City | 58×51 | 58×51 | #40 | The lake town: the bridge road, the cave's island, the robbed house's backyard, the neck south. With Route 4: old Cerulean had no room for the seam between them. |
-| 5 | Route 24 | 30×22 | 30×22 | this PR | Nugget Bridge: five trainers across it that can't be passed unseen, the Rocket at its end, a shore and a meadow off Route 25. |
-| 6 | Route 25 | 112×35 | | | Bill's cottage. |
+| 5 | Route 24 | 30×22 | 30×22 | #41 | Nugget Bridge: five trainers across it that can't be passed unseen, the Rocket at its end, a shore and a meadow off Route 25. |
+| 6 | Route 25 | 112×35 | 70×24 | this PR | Cerulean's cape: the road under a ridge through two necks a trainer holds each, the garden behind the tree to cut, the trail below, Bill's cottage on the headland. |
 | 7 | Route 5 | 68×46 | | | Day Care, the Underground Path's gate. |
 | 8 | Route 6 | 63×36 | | | |
 | 9 | Vermilion City | 71×78 | | | Harbour (the S.S. Anne), Fan Club, Cut tree to the Gym. |
@@ -75,6 +75,7 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-24 | `pae map path` ignored heights and one-way edges, so planned walks went between elevations and up rock edges the game doesn't let you climb (Mt. Moon B2F). | Mt. Moon (story check) | fixed in pae PR #24 (walks keep the game's step rules) |
 | KR-25 | Once pae read block fixes, `pae seam build` stopped on old Route 9: its fixes put 12 of its own hand-made seam's adapters (ids 1005–1017) on the map. | Cerulean | fixed in pae PR #25 (left out, with a note); those 12 blocks of Route 9 still show wrong from Cerulean until Route 9 is rebuilt |
 | KR-28 | The game's build keeps a list of block and border files that are byte-for-byte others (`firered_geometry_payload_aliases.json`); an entry whose file a rebuild changed stops it ("Stale or unequal FireRed geometry alias"). Cerulean's and Route 24's old borders had entries, removed by hand. | Cerulean, Route 24 | fixed in pae PR #26 (pae drops the entries a change makes stale) |
+| KR-30 | pae's walks stopped on blocks whose metatiles the game makes itself (ids above the map's tilesets': seam adapters, and the dual layouts' metatiles in `kanto_connection_seam.c` that block fixes use: Bill's Sea Cottage, 1012–1022): `metatile 0x3FA does not exist`. | Route 25 (story check) | fixed in pae PR #27 (walks read them from the game's seam rows) |
 
 ### Build and process
 
@@ -87,6 +88,8 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-13 | After `CLEAR_TEAM` and a new Pokémon in a test's or step's state, the Pokémon following you stays the old one (a Pikachu followed a team of one Wartortle). Harmless for the tests; a player can't do it. | Route 3 (Pewter's Gym) | watch |
 | KR-4 | Adding a forest corner (or any kit piece) renumbers the kit's later metatiles, so every kit map is rebuilt and repainted. Nothing broke so far (the review checked the blocks are the same), but scripts that set metatiles by number on kit maps would break. | Viridian Forest | watch |
 | KR-18 | Old Cerulean had a hand-made seam in `kanto_connection_seam.c` (a fix for its two tilesets) that took two palette banks and ids 954–1022 on the new town; it is removed. Route 5's and Route 9's hand-made seams still have 17 entries for old Cerulean's ids, which the new town never uses (dead data, harmless). | Cerulean | Cerulean's removed; the others go when Routes 5 and 9 are rebuilt |
+| KR-31 | The credits show each town from a fixed block (`src/credits_frlg.c`, `CREDITSOVWLDLOADMAP`): Viridian 30,34, Pewter 20,26, Cerulean 8,6 and Route 25 25,6 were placed for the old maps and haven't been looked at on the rebuilt ones. | Route 25 | open |
+| KR-32 | A story-check checkpoint loads the map again, so a scene held by a temporary flag is forgotten between steps: Bill in his teleporter (`FLAG_TEMP_2`) came out a Clefairy again before the PC. Such a scene goes in one step. | Route 25 (story check) | done for Bill; watch |
 
 ### Story and gameplay
 
@@ -104,5 +107,6 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-21 | Cerulean's Friends' camp moved to 34,32 (their fourth scene) and Route 4's stayed; neither scene has been played since (see KR-6). Cerulean's heal spot (28,29) was not played either (as KR-11); the story check now heals in its Center (steps 60–62), but a blackout back to it hasn't been played. | Cerulean | open |
 | KR-22 | The tree to cut in Cerulean now closes a fenced garden with nothing in it yet; the old one stood by the lass and her Slowbro. Something to find in the garden would make cutting it worth it. | Cerulean | open (an idea) |
 | KR-26 | Mt. Moon's ladders aren't drawn: on 1F and B1F (its native floors) the ladder warps are plain cave floor, so a player can't see where they are. An old map, not part of the rebuild. | Mt. Moon (story check) | open |
-| KR-27 | At Cerulean's joins the new and old roads didn't match: Nugget Bridge's last span (the kit's brown dock) met old Route 24's yellow planks, and Route 4's dirt meets Cerulean's cobbles with a hard line (as KR-10). | Cerulean | the bridge fixed by Route 24's rebuild; it moves to the join with old Route 25 (KR-29). The dirt and cobbles: cosmetic, open |
-| KR-29 | Old Route 25 has two palette banks free for the new Route 24's strip, so four of its palettes are drawn in their nearest colours (at most 80 RGB steps off), and the bridge's brown planks meet Route 25's yellow ones. | Route 24 | cosmetic, open (Route 25 is next) |
+| KR-27 | At Cerulean's joins the new and old roads didn't match: Nugget Bridge's last span (the kit's brown dock) met old Route 24's yellow planks, and Route 4's dirt meets Cerulean's cobbles with a hard line (as KR-10). | Cerulean | the bridge fixed by Route 24's rebuild, and its join with Route 25 by Route 25's (KR-29). The dirt and cobbles: cosmetic, open |
+| KR-29 | Old Route 25 has two palette banks free for the new Route 24's strip, so four of its palettes are drawn in their nearest colours (at most 80 RGB steps off), and the bridge's brown planks meet Route 25's yellow ones. | Route 24 | fixed by Route 25's rebuild (both from the kit: the seam needs no palettes) |
+| KR-33 | The kit's sea is solid (drawn with a rocky shore, to be looked at): Route 25's sea can't be surfed, and its two Luvdisc, which should swim in a pattern, stay where they are (seen over 13 s). Route 25's water Pokémon are in the lake's channel by the bridge. | Route 25 | decided: keep (a sea to surf would need the sea without its rocky shore) |

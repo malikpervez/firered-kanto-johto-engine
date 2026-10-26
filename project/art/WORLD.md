@@ -23,6 +23,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 4 | 108×20 | 108×20 | kit + `gTileset_Route4Concept` | down: Route 3 (offset −60), right: Cerulean City (offset −7) |
 | Cerulean City | 58×51 | 58×51 | kit + `gTileset_CeruleanConcept` | up: Route 24 (offset 25), down: Route 5 (offset −8), left: Route 4 (offset 7), right: Route 9 (offset −6) |
 | Route 24 | 30×22 | 30×22 | kit (and an empty `gTileset_Route24Concept`) | down: Cerulean City (offset −25), up: Route 25 (offset 0) |
+| Route 25 | 70×24 | 112×35 | kit + `gTileset_Route25Concept` | down: Route 24 (offset 0) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -41,7 +42,7 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 3 ↔ Route 4 | Route 3 68–75 = Route 4 8–15 | the pass north becomes the road up to Mt. Moon |
 | Route 4 ↔ Cerulean | Route 4 rows 10–13 = Cerulean rows 17–20 | the road east into town |
 | Cerulean ↔ Route 24 | Cerulean 41–44 = Route 24 16–19 | Nugget Bridge |
-| Route 24 ↔ Route 25 | Route 24 7–10, 16–19, 24–25 = Route 25 the same | the west path, the bridge and the east path (Route 25 isn't rebuilt) |
+| Route 24 ↔ Route 25 | Route 24 7–10, 16–19, 24–25 = Route 25 the same | the west path, the bridge and the east path (Route 25's bottom row, 23) |
 | Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 34–36 | the road east (Route 9 isn't rebuilt; its edge opens on those three rows only) |
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck (Route 5 isn't rebuilt) |
 
@@ -64,7 +65,7 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Cerulean City | Route 4, Route 5, Route 9, Route 24 | pae: 137 adapters, palette slots 10, 11, 12 (since Route 24 is from the kit, every colour fits). Its hand-made seam for the old Cerulean is gone |
 | Route 5, Route 9 | Cerulean City | pae (the old maps), beside their hand-made seams |
 | Route 24 | Cerulean City, Route 25 | pae |
-| Route 25 | Route 24 | pae (the old map): two banks free, so four of Route 24's palettes are drawn in their nearest colours |
+| Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town | pae |
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
@@ -148,3 +149,7 @@ Check these whenever a map is rebuilt, moved or resized:
 - Route 24 rebuilt at the same size, so Cerulean's and Route 25's joins didn't change. Its people moved (the bridge's
   five trainers now see three blocks: `build.sh` sets it); the Rocket and his triggers stayed. Old Route 24's border
   entry was removed from `firered_geometry_payload_aliases.json`. Route 25 (still the old map) got a pae seam for it.
+- Route 25 rebuilt smaller (70×24, was 112×35); its join with Route 24 stayed (offset 0: Route 24's three ways in
+  meet its bottom at the same columns). Its one warp (the Sea Cottage's door) kept its number; people, the sign and
+  the hidden items moved; Wayne faces down and Chad walks left and right (`build.sh` sets them). Nothing else in the
+  game uses its coordinates but the credits' view of it (25,6), which hasn't been looked at (KR-31).

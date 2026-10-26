@@ -1,0 +1,38 @@
+{
+ "note": "Down the landing's west path to Route 24's west shore.",
+ "created": "2026-10-26 06:01",
+ "start": {
+  "map": "Route25_Frlg",
+  "x": 8,
+  "y": 21,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     44
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route24_Frlg",
+  "x": 8,
+  "y": 0,
+  "in_battle": false
+ }
+}
