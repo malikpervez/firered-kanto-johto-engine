@@ -30,6 +30,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 11 | 60×32 | 72×40 | kit + `gTileset_Route11Concept` | left: Vermilion City (offset 3), right: Route 12 (offset −27) |
 | Route 9 | 60×28 | 65×60 | kit + `gTileset_Route9Concept` | left: Cerulean City (offset −20), right: Route 10 (offset 0) |
 | Route 10 | 38×60 | 38×90 | kit + `gTileset_Route10Concept` | left: Route 9 (offset 0), down: Lavender Town (offset 4) |
+| Lavender Town | 38×32 | 38×31 | kit + `gTileset_LavenderConcept` | up: Route 10 (offset −4), left: Route 8 (offset −10), down: Route 12 (offset 2) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -51,7 +52,9 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 24 ↔ Route 25 | Route 24 7–10, 16–19, 24–25 = Route 25 the same | the west path, the bridge and the east path (Route 25's bottom row, 23) |
 | Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 8–10 | the road east into Route 9's forest neck |
 | Route 9 ↔ Route 10 | Route 9 rows 17–19 = Route 10 rows 17–19 | the road out into Route 10's clearing |
-| Route 10 ↔ Lavender | Route 10 16–20 = Lavender 12–16 | the valley road down into Lavender (Lavender isn't rebuilt) |
+| Route 10 ↔ Lavender | Route 10 16–20 = Lavender 12–16 | the valley road down into Lavender's north road |
+| Lavender ↔ Route 8 | Lavender rows 9–11 = Route 8 rows 19–21 | the street west (Route 8 isn't rebuilt) |
+| Lavender ↔ Route 12 | Lavender 13–15 = Route 12 11–13 | the road south from the square onto Route 12's sandy path (Route 12 isn't rebuilt; KR-50, KR-51) |
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck |
 | Route 5 ↔ Saffron | Route 5 24–25 = Saffron 28–29 | not walked across: the gate's top door on Route 5 (24–25,30) leads through the gatehouse to Saffron's own gate door below it (28–29,5). Old Saffron draws its own copy of the gatehouse at its top |
 | Saffron ↔ Route 6 | Saffron 28–29 = Route 6 40–41 | not walked across: Saffron's south gate door (28–29,46) leads through the gatehouse to its door on Route 6 (40–41,5) |
@@ -81,7 +84,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Vermilion City | Route 6, Route 11 | pae (both from the kit: their seams fit exactly). Old Vermilion's hand-made seam is gone |
 | Route 11 | Vermilion City, Route 12 | pae: Route 12's palettes fit in banks 10–11. Old Route 12 has no room for two of Route 11's palettes and draws them in its nearest colours (KR-39). Old Route 11's hand-made seam is gone |
 | Route 9 | Cerulean City, Route 10 | pae (all three from the kit: only each other's own tiles, no palettes). Old Route 9's hand-made seam is gone |
-| Route 10 | Route 9, Lavender Town | pae: old Lavender's palettes fit in banks 10–12 but one, drawn in its nearest colours (KR-44) |
+| Route 10 | Route 9, Lavender Town | pae (all three from the kit: their seams fit exactly) |
+| Lavender Town | Route 10, Route 8, Route 12 | pae: old Route 8's and old Route 12's palettes fit in banks 10–12 |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town | pae |
@@ -199,3 +203,11 @@ Check these whenever a map is rebuilt, moved or resized:
   didn't change. Every warp kept its number: Rock Tunnel's two mouths, the Center, the Power Plant's door; its back
   door's way out is on the island (KR-46). Route 10's heal spot moved with its Center (14,16, its old-map override
   dropped). Old Route 9's hand-made seam was removed from `kanto_connection_seam.c` (Route 10 had none).
+- Lavender Town rebuilt (38×32, was 38×31) round a square where its three roads meet. Route 10's join (offset −4) and
+  Route 8's (−10) stayed; its road south leaves from under the square, so Route 12 moved 4 blocks east under it
+  (offset 2, was −2; KR-50). Every warp kept its number: Pokémon Tower, the Center, the Volunteer House, the two
+  houses, the Mart. The people kept their order (the stranger by the Volunteer House is removed by local id): the
+  girl, the worker, the boy (his old spot is inside a house now) and four of the night ghosts moved, the rest kept
+  their places. The heal spot
+  moved with the Center (7,7, its old-map override dropped); the Friends' camp stayed round 13,13. Old Lavender had
+  no hand-made seam.

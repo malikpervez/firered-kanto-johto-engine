@@ -36,8 +36,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
-      "x": 12,
-      "y": 10,
+      "x": 27,
+      "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -50,8 +50,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
-      "x": 15,
-      "y": 17,
+      "x": 20,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -64,8 +64,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
-      "x": 8,
-      "y": 21,
+      "x": 25,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -77,9 +77,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
-      "x": 19,
+      "x": 32,
       "y": 4,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -91,9 +91,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MISDREAVUS",
-      "x": 23,
-      "y": 4,
-      "elevation": 0,
+      "x": 33,
+      "y": 5,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -105,9 +105,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
-      "x": 25,
+      "x": 34,
       "y": 4,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -121,7 +121,7 @@
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HAUNTER",
       "x": 21,
       "y": 15,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT",
       "movement_range_x": 2,
       "movement_range_y": 2,
@@ -135,7 +135,7 @@
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HAUNTER",
       "x": 23,
       "y": 17,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT",
       "movement_range_x": 2,
       "movement_range_y": 2,
@@ -149,7 +149,7 @@
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GENGAR",
       "x": 35,
       "y": 26,
-      "elevation": 4,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -161,9 +161,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
-      "x": 0,
-      "y": 3,
-      "elevation": 4,
+      "x": 3,
+      "y": 8,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -177,7 +177,7 @@
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
       "x": 7,
       "y": 17,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -191,7 +191,7 @@
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GASTLY",
       "x": 22,
       "y": 16,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -323,42 +323,42 @@
   ],
   "warp_events": [
     {
-      "x": 22,
-      "y": 6,
+      "x": 29,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_POKEMON_TOWER_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 9,
+      "x": 7,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_LAVENDER_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 8,
-      "y": 13,
+      "x": 5,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE",
       "dest_warp_id": "1"
     },
     {
-      "x": 5,
-      "y": 19,
+      "x": 4,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_LAVENDER_TOWN_HOUSE1",
       "dest_warp_id": "1"
     },
     {
-      "x": 10,
-      "y": 19,
+      "x": 9,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_LAVENDER_TOWN_HOUSE2",
       "dest_warp_id": "1"
     },
     {
-      "x": 4,
+      "x": 19,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_LAVENDER_TOWN_MART",
@@ -369,32 +369,32 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 19,
-      "y": 18,
+      "x": 23,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LavenderTown_EventScript_SilphScopeNotice"
     },
     {
       "type": "sign",
-      "x": 16,
-      "y": 4,
+      "x": 11,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LavenderTown_EventScript_TownSign"
     },
     {
       "type": "sign",
-      "x": 19,
-      "y": 7,
+      "x": 26,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LavenderTown_EventScript_PokemonTowerSign"
     },
     {
       "type": "sign",
-      "x": 12,
-      "y": 13,
+      "x": 8,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LavenderTown_EventScript_VolunteerHouseSign"
@@ -402,19 +402,12 @@
   ],
   "firered_geometry": {
     "width": 38,
-    "height": 31,
-    "primary_tileset": "gTileset_Kanto_General_Hns",
-    "secondary_tileset": "gTileset_LavenderTown_Hns",
-    "border_filepath": "data/layouts/LavenderTown_hns/border.bin",
-    "blockdata_filepath": "data/layouts/LavenderTown_hns/map.bin",
+    "height": 32,
+    "primary_tileset": "gTileset_PalletConcept_General",
+    "secondary_tileset": "gTileset_LavenderConcept",
+    "border_filepath": "data/layouts/LavenderTown_Concept/border.bin",
+    "blockdata_filepath": "data/layouts/LavenderTown_Concept/map.bin",
     "layout_version": "hns",
-    "blockdata_overrides": [
-      {
-        "x": 22,
-        "y": 19,
-        "expected": 1772,
-        "value": 1697
-      }
-    ]
+    "blockdata_overrides": null
   }
 }

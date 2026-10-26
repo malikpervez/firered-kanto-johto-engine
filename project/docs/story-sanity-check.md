@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/story-rock-tunnel` (story check only, on `v2-main` at `e469f9da`) |
-| ROM | `make -j8` with the default settings. SHA-1 `8210fc6d2fdab50cb0859e92474f6ad2bfec8e6e`, SHA-256 `e558f6e0fb8e9547563014f41359469193055b0c5cf41220f82cc217f49ed848` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110; `22cc6f9` (pae `main` after PR #28) for steps 111–133 and the replay tests |
-| Last step passed | 133 `lavender`: onto Route 9 and through it (the team now one Kingler, level 65, with Surf and Cut), Route 10's Center, Rock Tunnel's two floors (nine trainers whose lines can't be gone round), out of its south mouth and down Route 10 into Lavender. Steps 112–133 were run on this build (#49's), from step 111's checkpoint |
-| Replay tests | 259 of 259 pass (on this ROM, for #49; this change adds none) |
+| Game | branch `claude/kanto-lavender` (Lavender Town rebuilt, on `v2-main` at `792f2098`) |
+| ROM | `make -j8` with the default settings. SHA-1 `5ce48c7aefcc3e5ee9a8ea2becb1dfe2b171ba5d`, SHA-256 `1ee174863e9529e4f401196ad6eb55b632748e0512f339b82aaf0c94827cb891` |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110; `22cc6f9` (pae `main` after PR #28) for steps 111–137 and the replay tests |
+| Last step passed | 137 `route8`: onto Route 9 and through it (the team now one Kingler, level 65, with Surf and Cut), Route 10's Center, Rock Tunnel's two floors (nine trainers whose lines can't be gone round), out of its south mouth, down Route 10 into Lavender, its Center (in, heal, out) and west onto Route 8. Steps 133–137 were run on this build, from step 132's checkpoint |
+| Replay tests | 276 of 276 pass (on this ROM; this change adds 16) |
 
 ## How to run it
 
@@ -191,6 +191,10 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 131 | `rt-dana` | Round the east part and west along the south passage: Dana battles | Rock Tunnel 1F 26,31 | |
 | 132 | `rt-out` | Out of the south mouth onto Route 10 | Route 10 10,46 | |
 | 133 | `lavender` | Down Route 10's valley road into Lavender | Lavender Town 14,0 | |
+| 134 | `lavender-center` | Down the north road into Lavender's Pokémon Center | Lavender Center 1F 7,8 | |
+| 135 | `lavender-heal` | The nurse heals the team | Lavender Center 1F 7,4 | |
+| 136 | `lavender-leave-center` | Back out to the street | Lavender Town 7,7 | |
+| 137 | `route8` | West along Lavender's street onto Route 8 (the way on is its underground path to Celadon) | Route 8 67,20 | |
 
 ## What it doesn't cover
 
@@ -279,3 +283,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | No map changes: eighteen new steps through the S.S. Anne (Blue, HM01), off the ship, back to Cerulean and through Misty's Gym, so the check can reach Route 9 with Cut | **Steps 93–110 pass**, `--from ss-anne-board` and resumed from each failed step's predecessor (93–97 on the Route 11 build, 98–110 on #47's). First tries stopped: on arrow warps and stairs entered by the wrong key (the gangway's end, the office's stairs, both ends of the ship's and the tunnel's stairs, the Gym's mat); in the ship's corridors, where a worker and a wandering sailor stood in the walk (vias go round them); in Vermilion, where the walk went into the Mart (pae plans across door blocks: KR-43; a via keeps to the plaza's middle); after Misty, before her scenes had finished (more presses). The ship's sailing landed you below the map until #47 fixed it. |
 | 2026-10-26 | Routes 9 and 10 rebuilt (their own concepts); eight new steps: onto Route 9, the tree cut and the gorge's two trainers, Route 10, its Center, into Rock Tunnel | **Steps 111–118 pass**, `--from route9` and resumed from the failed step's predecessor. First tries stopped on Route 9: the tree to cut was gone (the game hides one within 8 blocks of the edge you come in by: KR-45, so it moved further in), then Alicia's battle never ended: the Blastoise's Water Gun had run down, and with the Bulbasaur given for Cut, A presses answered YES to "change Pokémon?" and went round the party menu (KR-48; one Kingler with Surf and Cut is the team now). |
 | 2026-10-26 | No map changes: fifteen new steps through Rock Tunnel (its two floors, nine trainers) and down Route 10 into Lavender, so Lavender's rebuild can carry on from it | **Steps 112–133 pass**, `--from route9-alicia` and resumed from each failed step's predecessor. First tries stopped in battles that never ended: a Slowpoke Disabled the Kingler's only attack (A presses then go round the move menu; the Kingler is now level 65, so it knocks out what it meets first), and Surf's 15 PP ran out twice in the tunnel, which has no Center (the Kingler is given again at its two ladders up). The tunnel's walks were planned with the fewest battles their trainers' lines allow (KR-48). |
+| 2026-10-26 | Lavender Town rebuilt (its own concept); four new steps: its Center (in, heal, out) and west onto Route 8 | **Steps 133–137 pass**, `--from lavender` on this build, first try. |
