@@ -11,12 +11,12 @@ plays the events one after another, each starting where the last one left the ga
 
 | | |
 |---|---|
-| Date | 2026-10-26 |
-| Game | branch `claude/kanto-celadon` (Celadon rebuilt, on `v2-main` at `1c26f000`) |
-| ROM | `make -j8` with the default settings. SHA-1 `725c9cfbb724568d5dcc5a41638b3a535076fd29`, SHA-256 `c094050d0ab564d071944a25d754cb0fdfd6ecd7f79b16522ccbe254c4a199c7` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110; `22cc6f9` (pae `main` after PR #28) for steps 111–145 and the replay tests |
-| Last step passed | 145 `celadon-leave-center`: onto Route 9 and through it (the team now one Kingler, level 65, with Surf and Cut), Route 10's Center, Rock Tunnel's two floors (nine trainers whose lines can't be gone round), out of its south mouth, down Route 10 into Lavender, its Center (in, heal, out), west along Route 8 into the Underground Path, along its tunnel under Saffron, out onto Route 7, west into Celadon and its Center (in, heal, out). Steps 142–145 were run on this build, from step 141's checkpoint |
-| Replay tests | 306 of 306 pass (on this ROM; this change adds 8) |
+| Date | 2026-10-27 |
+| Game | branch `claude/kanto-route17` (Route 17 rebuilt and the kit's sea corners added, so every kit map rebuilt; on `v2-main` at `f9bd8749`) |
+| ROM | `make -j4` with the default settings. SHA-1 `7b118ee466b7bfbfce63a3bdb23c486a0ad96ce5`, SHA-256 `765c5ba1666abab3ae01049d1abe2354970a0b8cc402f1b230aef24f9b05c043` |
+| pae | `0795119` (pae `main` after PR #30) for every step and the replay tests |
+| Last step passed | 145 `celadon-leave-center`, run from the top on this build (every kit map changed). Two steps' timing had drifted on `v2-main` (it fails step 5 the same way, checked on its own build `bdb1e505`): step 5 `route1` now ends at Route 1 25,38, a block further north, and step 18 `north-route1` takes 40 A presses for the stranger's scene. Run in three parts from the checkpoints: 1–4, 5–17, 18–145. The story check doesn't reach Route 17 yet (Cycling Road needs the bike and the Poké Flute) |
+| Replay tests | 413 of 413 pass (on this ROM; this change adds 16) |
 
 ## How to run it
 
