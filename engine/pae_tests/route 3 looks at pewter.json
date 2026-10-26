@@ -1,0 +1,36 @@
+{
+ "note": "Route 3 shows Pewter's road east across the join (the seam).",
+ "created": "2026-10-26 02:57",
+ "start": {
+  "map": "Route3_Frlg",
+  "x": 3,
+  "y": 10,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route3_Frlg",
+  "x": 3,
+  "y": 10,
+  "in_battle": false
+ }
+}

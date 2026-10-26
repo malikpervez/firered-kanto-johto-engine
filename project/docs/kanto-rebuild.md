@@ -27,8 +27,8 @@ outdoor art. They stay the old maps; their doors and warps keep working.
 | # | Map | Was (blocks) | Now | Pull request | Notes |
 |---|---|---|---|---|---|
 | – | Pallet Town, Route 1, Viridian City, Route 22, Route 2, Viridian Forest | | done | #(earlier), #36 | Rebuilt before this plan. |
-| 1 | Pewter City | 52×44 | 52×44 | this PR | The grey-stone town under the mountains; the guides' walks worked out on the map (`escort.py`). |
-| 2 | Route 3 | 84×20 | | | Mt. Moon's mouth (the cave stays the old map). |
+| 1 | Pewter City | 52×44 | 52×44 | #38 | The grey-stone town under the mountains; the guides' walks worked out on the map (`escort.py`). |
+| 2 | Route 3 | 84×20 | 84×20 | this PR | The mountain road: a high path with a ledge, a field of grass you can't walk round, the pass north. |
 | 3 | Route 4 | 108×20 | | | One-way ledges from Mt. Moon to Cerulean. |
 | 4 | Cerulean City | 58×51 | | | Four joins (Routes 4, 5, 9, 24); the rival on the bridge. |
 | 5 | Route 24 | 30×22 | | | Nugget Bridge. |
@@ -77,6 +77,8 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-3 | A map's `build.sh` can drift from its `map.json`: Viridian's still placed the Friends at their old camp after PR #34 moved them, so a rebuild undid it. | Viridian Forest | fixed in #36; check each map's build script against its events when a scene moves people |
 | KR-8 | A map's own tileset holds 384 tiles, and big buildings take most of it (Pewter's Museum 98, its Gym 66, the cliffs about 90, the seam to an old neighbour 39): Pewter's three houses had to be one kind. Towns with several big buildings (Celadon, Saffron) will need fewer kinds or smaller buildings. | Pewter | watch |
 | KR-9 | Scenes that walk people round a town by fixed steps (Pewter's guides) break when the town is rebuilt. Pewter's are worked out on the built map by `pewter-concept/escort.py`; other towns' (Vermilion's, Celadon's) will need the same. | Pewter | done for Pewter |
+| KR-12 | When a story-check walk is stopped by a trainer who sees you, pae reports "the map did not finish loading" or that checkpoints can only be saved in the overworld, not that a trainer started a battle. | Route 3 (Pewter's Gym) | open |
+| KR-13 | After `CLEAR_TEAM` and a new Pokémon in a test's or step's state, the Pokémon following you stays the old one (a Pikachu followed a team of one Wartortle). Harmless for the tests; a player can't do it. | Route 3 (Pewter's Gym) | watch |
 | KR-4 | Adding a forest corner (or any kit piece) renumbers the kit's later metatiles, so every kit map is rebuilt and repainted. Nothing broke so far (the review checked the blocks are the same), but scripts that set metatiles by number on kit maps would break. | Viridian Forest | watch |
 
 ### Story and gameplay
@@ -87,4 +89,6 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-5 | The story check's steps 1–33 haven't been run since the kit maps were rebuilt for the forest (their replay tests pass). | Viridian Forest | open |
 | KR-6 | The Friends' scenes 2 (Route 2) and 12 (Pallet) are on rebuilt maps and haven't been played since (see `friends-story-triggers.md`). | before this plan | open |
 | KR-7 | The forest's pond (like every kit pond) can be surfed and fished once you have Surf; the concept wanted it for looking at only. Harmless (it leads nowhere). | Viridian Forest | decided: keep |
+| KR-14 | The kit's cliff tops are wide plain stretches on mountain maps (Pewter, Route 3): the pack's texture repeats every three blocks with nothing on it. Rocks or a second texture on the tops would break it up. | Route 3 | cosmetic, open |
+| KR-15 | Route 3's Robin wanders, so her line of sight has no replay test (the seven other trainers have one each). | Route 3 | open |
 | KR-11 | Pewter's heal spot moved with its Center (29,33); flying there and blacking out were not played. | Pewter | open |

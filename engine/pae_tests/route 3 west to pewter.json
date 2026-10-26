@@ -1,0 +1,44 @@
+{
+ "note": "Walk west off Route 3 into Pewter's road east.",
+ "created": "2026-10-26 02:57",
+ "start": {
+  "map": "Route3_Frlg",
+  "x": 2,
+  "y": 10,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Frlg",
+  "x": 51,
+  "y": 25,
+  "in_battle": false
+ }
+}

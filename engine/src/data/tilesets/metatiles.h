@@ -1543,3 +1543,6 @@ const u16 gMetatileAttributes_ViridianForestConcept[] = INCBIN_U16("data/tileset
 
 const u16 gMetatiles_PewterConcept[] = INCBIN_U16("data/tilesets/secondary/pewter_concept/metatiles.bin");
 const u16 gMetatileAttributes_PewterConcept[] = INCBIN_U16("data/tilesets/secondary/pewter_concept/metatile_attributes.bin");
+
+const u16 gMetatiles_Route3Concept[] = INCBIN_U16("data/tilesets/secondary/route3_concept/metatiles.bin");
+const u16 gMetatileAttributes_Route3Concept[] = INCBIN_U16("data/tilesets/secondary/route3_concept/metatile_attributes.bin");
