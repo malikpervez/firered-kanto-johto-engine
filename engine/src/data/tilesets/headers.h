@@ -2115,3 +2115,14 @@ const struct Tileset gTileset_VermilionConcept =
     .metatileAttributes = gMetatileAttributes_VermilionConcept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route11Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route11Concept,
+    .palettes = gTilesetPalettes_Route11Concept,
+    .metatiles = gMetatiles_Route11Concept,
+    .metatileAttributes = gMetatileAttributes_Route11Concept,
+    .callback = NULL,
+};

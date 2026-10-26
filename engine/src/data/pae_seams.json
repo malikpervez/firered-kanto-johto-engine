@@ -14,7 +14,11 @@
   "Route3_Frlg"
  ],
  "Route11_Frlg": [
-  "VermilionCity_Frlg"
+  "VermilionCity_Frlg",
+  "Route12_Frlg"
+ ],
+ "Route12_Frlg": [
+  "Route11_Frlg"
  ],
  "Route1_Frlg": [
   "PalletTown_Frlg",

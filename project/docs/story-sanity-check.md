@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-vermilion` (Vermilion rebuilt, on `v2-main` at `0ea10917`) |
-| ROM | `make -j4` with the default settings. SHA-1 `3df8798e8f46a8c4a1df1502c0ca711d8bb8ac93`, SHA-256 `e7ef058b75966d6fbae8ff3db2e1c0c0e636d517d704ee65ab202a9db4dc5731` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–88 and the replay tests |
-| Last step passed | 88 `ss-anne`: through the Underground Path and Route 6 into Vermilion, a heal in its Center, and down the pier past the ticket check onto the S.S. Anne. Steps 85–88 were run on this build, from step 84's checkpoint of the build before |
-| Replay tests | 196 of 196 pass |
+| Game | branch `claude/kanto-route11` (Route 11 rebuilt, on `v2-main` at `a0908a47`) |
+| ROM | `make -j8` with the default settings. SHA-1 `757bd08564ab747eea8ba03e66f59f25e0b1445f`, SHA-256 `fda328b6def027bda6bda1fa81a9a7b8c9f0f7090dc2e6eb10764b9254cf618e` |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–92 and the replay tests |
+| Last step passed | 92 `ss-anne`: through the Underground Path and Route 6 into Vermilion, a heal in its Center, east along Route 11 into its gatehouse and back, and down the pier past the ticket check onto the S.S. Anne. Steps 88–92 were run on this build, from step 87's checkpoint of the build before |
+| Replay tests | 216 of 216 pass (three Vermilion tests that look across its east edge now show the new Route 11, and were accepted after looking at them) |
 
 ## How to run it
 
@@ -145,7 +145,11 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 85 | `vermilion-center` | Down the road into Vermilion's Pokémon Center | Vermilion Center 7,8 | |
 | 86 | `vermilion-heal` | Up to the counter and heal | Vermilion Center 7,4 | |
 | 87 | `vermilion-leave-center` | Back out to the plaza | Vermilion City 28,7 | |
-| 88 | `ss-anne` | Down the pier: the ferry sailor checks the S.S. Ticket; onto the gangway | S.S. Anne outside 32,5 | |
+| 88 | `route11` | East along Vermilion's main street onto Route 11 | Route 11 0,15 | |
+| 89 | `route11-gatehouse` | Along Route 11's road (in no trainer's sight) into the gatehouse | Route 11 gatehouse 1,6 | |
+| 90 | `route11-leave-gatehouse` | Out by its west door (stand on it, walk west) | Route 11 53,16 | |
+| 91 | `back-to-vermilion` | Back west along the road into Vermilion | Vermilion City 59,12 | |
+| 92 | `ss-anne` | Down the pier: the ferry sailor checks the S.S. Ticket; onto the gangway | S.S. Anne outside 32,5 | |
 
 ## What it doesn't cover
 
@@ -230,3 +234,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | Route 5 rebuilt (its own concept); four new steps: back from Bill over the bridge, through Cerulean's neck, down Route 5 into the Underground Path's hut | **Steps 77–80 pass**, `--from back-to-bridge` on this build. The first try stopped on Route 25: going back along the road, Nob saw the walk (the walk now goes round the north of his and Flint's sight, as it came). |
 | 2026-10-26 | Route 6 rebuilt (its own concept); four new steps: the Underground Path's tunnel, Route 6, Vermilion | **Steps 81–84 pass**, `--from tunnel` on this build. The first try stood on the hut's stairs without going down: they are arrow warps you walk east off (the steps do now, and at the tunnel's south end). |
 | 2026-10-26 | Vermilion City rebuilt (its own concept); four new steps: its Center (in, heal, out) and the pier onto the S.S. Anne | **Steps 85–88 pass**, `--from vermilion-center` on this build, first try. |
+| 2026-10-26 | Route 11 rebuilt (its own concept); four new steps before the S.S. Anne: east onto Route 11, into its gatehouse, out again, back to Vermilion | **Steps 88–92 pass**, `--from route11` and resumed from the failed step's predecessor. The first try stood inside the gatehouse: its doors inside are on its west and east walls, which you walk west or east off (the step now walks west). |
