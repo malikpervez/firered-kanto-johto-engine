@@ -14,6 +14,8 @@ outdoor art. They stay the old maps; their doors and warps keep working.
    map is for, what changed from the old one and why. Keep the old map's joins where its neighbours meet it, or move
    them and fix the neighbour's offset; keep every warp's number (the maps behind it point at it).
 2. **Art**: the kit, the kit's buildings, and buildings from earlier maps, recoloured where a town should look its own.
+   Every piece is listed in `project/art/ASSETS.md` (where it came from, where it's used, how to replace it): add
+   new ones there.
 3. **Build**: `make_art.py` (checks the plan's rules on the map it builds) and `build.sh`, added to
    `project/art/build_all.sh`.
 4. **Events and scripts**: every event placed; scripts that walk people round the map by fixed steps redone for the
