@@ -1,0 +1,46 @@
+{
+ "note": "Down the road onto the gate's top door and into Saffron's north gatehouse.",
+ "created": "2026-10-26 06:37",
+ "start": {
+  "map": "Route5_Frlg",
+  "x": 24,
+  "y": 27,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     44
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     128,
+     20
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route5_SouthEntrance_Frlg",
+  "x": 4,
+  "y": 2,
+  "in_battle": false
+ }
+}

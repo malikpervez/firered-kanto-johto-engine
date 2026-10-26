@@ -271,6 +271,18 @@ STEPS = [
     dict(name="leave-cottage", what="Out of the cottage onto the headland", walk=(7, 8),
          inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250",
          expect=dict(map="Route25_Frlg", xy=(51, 8))),
+    dict(name="back-to-bridge", what="Back west along the cape road, round the north of Nob's and Flint's sight and "
+         "through Joey's neck (not down the ledges), onto the bridge",
+         via=[(51, 9), (45, 9), (45, 7), (40, 7), (40, 9), (27, 9), (17, 9)], walk=(17, 23),
+         inputs=f"DOWN*{hold(1)}, wait 200",
+         expect=dict(map="Route24_Frlg", xy=(17, 0))),
+    dict(name="back-over-bridge", what="Back over Nugget Bridge (its trainers beaten, the Rocket gone) into Cerulean",
+         walk=(17, 21), inputs=f"DOWN*{hold(1)}, wait 200", expect=dict(map="CeruleanCity_Frlg", xy=(42, 0))),
+    dict(name="route5", what="Through Cerulean and south through the neck (the lass and her Slowbro gone with the "
+         "S.S. Ticket) onto Route 5", walk=(22, 50), inputs=f"DOWN*{hold(1)}, wait 200",
+         expect=dict(map="Route5_Frlg", xy=(30, 0))),
+    dict(name="underground-path", what="Down Route 5's road and into the Underground Path's hut", walk=(35, 25),
+         inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="UndergroundPath_NorthEntrance_Frlg", xy=(13, 12))),
 ]
 
 

@@ -1,0 +1,38 @@
+{
+ "note": "Up to the Underground Path's hut and in.",
+ "created": "2026-10-26 06:37",
+ "start": {
+  "map": "Route5_Frlg",
+  "x": 35,
+  "y": 27,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     44
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "UndergroundPath_NorthEntrance_Frlg",
+  "x": 13,
+  "y": 12,
+  "in_battle": false
+ }
+}

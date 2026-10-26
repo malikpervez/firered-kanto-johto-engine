@@ -1558,3 +1558,6 @@ const u16 gMetatileAttributes_Route24Concept[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_Route25Concept[] = INCBIN_U16("data/tilesets/secondary/route25_concept/metatiles.bin");
 const u16 gMetatileAttributes_Route25Concept[] = INCBIN_U16("data/tilesets/secondary/route25_concept/metatile_attributes.bin");
+
+const u16 gMetatiles_Route5Concept[] = INCBIN_U16("data/tilesets/secondary/route5_concept/metatiles.bin");
+const u16 gMetatileAttributes_Route5Concept[] = INCBIN_U16("data/tilesets/secondary/route5_concept/metatile_attributes.bin");

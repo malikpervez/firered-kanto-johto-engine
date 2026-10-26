@@ -24,6 +24,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Cerulean City | 58×51 | 58×51 | kit + `gTileset_CeruleanConcept` | up: Route 24 (offset 25), down: Route 5 (offset −8), left: Route 4 (offset 7), right: Route 9 (offset −6) |
 | Route 24 | 30×22 | 30×22 | kit (and an empty `gTileset_Route24Concept`) | down: Cerulean City (offset −25), up: Route 25 (offset 0) |
 | Route 25 | 70×24 | 112×35 | kit + `gTileset_Route25Concept` | down: Route 24 (offset 0) |
+| Route 5 | 50×36 | 68×46 | kit + `gTileset_Route5Concept` | up: Cerulean City (offset 8), down: Saffron City's twin `SaffronCity_Connection` (offset −4) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -44,7 +45,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Cerulean ↔ Route 24 | Cerulean 41–44 = Route 24 16–19 | Nugget Bridge |
 | Route 24 ↔ Route 25 | Route 24 7–10, 16–19, 24–25 = Route 25 the same | the west path, the bridge and the east path (Route 25's bottom row, 23) |
 | Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 34–36 | the road east (Route 9 isn't rebuilt; its edge opens on those three rows only) |
-| Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck (Route 5 isn't rebuilt) |
+| Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck |
+| Route 5 ↔ Saffron | Route 5 24–25 = Saffron 28–29 | not walked across: the gate's top door on Route 5 (24–25,30) leads through the gatehouse to Saffron's own gate door below it (28–29,5). Old Saffron draws its own copy of the gatehouse at its top |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -63,7 +65,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 3 | Pewter City, Route 4 | pae |
 | Route 4 | Route 3, Cerulean City | pae |
 | Cerulean City | Route 4, Route 5, Route 9, Route 24 | pae: 137 adapters, palette slots 10, 11, 12 (since Route 24 is from the kit, every colour fits). Its hand-made seam for the old Cerulean is gone |
-| Route 5, Route 9 | Cerulean City | pae (the old maps), beside their hand-made seams |
+| Route 5 | Cerulean City | pae (both from the kit: no palettes). None with old Saffron: it has no tile slot left for Route 5's strip, and neither can see the other (`--skip`, KR-34). Its hand-made seam is gone |
+| Route 9 | Cerulean City | pae (the old map), beside its hand-made seam |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town | pae |
@@ -153,3 +156,8 @@ Check these whenever a map is rebuilt, moved or resized:
   meet its bottom at the same columns). Its one warp (the Sea Cottage's door) kept its number; people, the sign and
   the hidden items moved; Wayne faces down and Chad walks left and right (`build.sh` sets them). Nothing else in the
   game uses its coordinates but the credits' view of it (25,6), which hasn't been looked at (KR-31).
+- Route 5 rebuilt smaller (50×36, was 68×46) with its x the same, so Cerulean's and Saffron's offsets didn't change
+  (Cerulean's neck meets it at 29–32; its gate's top door, 24–25, is over Saffron's gate door). Every warp kept its
+  number: the gate's four (2–5) are on its two door blocks. Its mons and sign moved; Spinda is at the ground's
+  elevation. Old Route 5's hand-made seam was removed from `kanto_connection_seam.c`; old Saffron gets no seam for
+  it yet (KR-34).

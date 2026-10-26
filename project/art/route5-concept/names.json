@@ -1,0 +1,2678 @@
+{
+ "version": "hns",
+ "tilesets": {
+  "primary": "gTileset_PalletConcept_General",
+  "secondary": "gTileset_Route5Concept"
+ },
+ "metatiles": {
+  "grass": {
+   "ids": [
+    0
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "lawn_a": {
+   "ids": [
+    1
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "lawn_b": {
+   "ids": [
+    2
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "lawn_c": {
+   "ids": [
+    3
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "lawn_d": {
+   "ids": [
+    4
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "lawn_flowers": {
+   "ids": [
+    5
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#0": {
+   "ids": [
+    6
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#1": {
+   "ids": [
+    7
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#2": {
+   "ids": [
+    8
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#3": {
+   "ids": [
+    9
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#4": {
+   "ids": [
+    10
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#5": {
+   "ids": [
+    11
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#6": {
+   "ids": [
+    12
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#7": {
+   "ids": [
+    13
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#8": {
+   "ids": [
+    14
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#9": {
+   "ids": [
+    15
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#10": {
+   "ids": [
+    16
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#11": {
+   "ids": [
+    17
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#12": {
+   "ids": [
+    18
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#13": {
+   "ids": [
+    19
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#14": {
+   "ids": [
+    20
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cobble#15": {
+   "ids": [
+    21
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#0": {
+   "ids": [
+    22
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#1": {
+   "ids": [
+    23
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#2": {
+   "ids": [
+    24
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#3": {
+   "ids": [
+    25
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#4": {
+   "ids": [
+    26
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#5": {
+   "ids": [
+    27
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#6": {
+   "ids": [
+    28
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#7": {
+   "ids": [
+    29
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#8": {
+   "ids": [
+    30
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#9": {
+   "ids": [
+    31
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#10": {
+   "ids": [
+    32
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#11": {
+   "ids": [
+    33
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#12": {
+   "ids": [
+    34
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#13": {
+   "ids": [
+    35
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#14": {
+   "ids": [
+    36
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dirt#15": {
+   "ids": [
+    37
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#0": {
+   "ids": [
+    38
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#1": {
+   "ids": [
+    39
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#2": {
+   "ids": [
+    40
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#3": {
+   "ids": [
+    41
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#4": {
+   "ids": [
+    42
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#5": {
+   "ids": [
+    43
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#6": {
+   "ids": [
+    44
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#7": {
+   "ids": [
+    45
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#8": {
+   "ids": [
+    46
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#9": {
+   "ids": [
+    47
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#10": {
+   "ids": [
+    48
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#11": {
+   "ids": [
+    49
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#12": {
+   "ids": [
+    50
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#13": {
+   "ids": [
+    51
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#14": {
+   "ids": [
+    52
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#15": {
+   "ids": [
+    53
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#15~1": {
+   "ids": [
+    54
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#15~2": {
+   "ids": [
+    55
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#11.1": {
+   "ids": [
+    56
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#11.8": {
+   "ids": [
+    57
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#15.3": {
+   "ids": [
+    58
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#15.4": {
+   "ids": [
+    59
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving#15.8": {
+   "ids": [
+    60
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving_to_cobble_N": {
+   "ids": [
+    61
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving_to_cobble_E": {
+   "ids": [
+    62
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving_to_cobble_S": {
+   "ids": [
+    63
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving_to_cobble_W": {
+   "ids": [
+    64
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving_to_dirt_N": {
+   "ids": [
+    65
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving_to_dirt_E": {
+   "ids": [
+    66
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving_to_dirt_S": {
+   "ids": [
+    67
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "paving_to_dirt_W": {
+   "ids": [
+    68
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_a": {
+   "ids": [
+    69
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_b": {
+   "ids": [
+    70
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_c": {
+   "ids": [
+    71
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "stump": {
+   "ids": [
+    72
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "pond#0": {
+   "ids": [
+    73
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#1": {
+   "ids": [
+    74
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#2": {
+   "ids": [
+    75
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#3": {
+   "ids": [
+    76
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#4": {
+   "ids": [
+    77
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#5": {
+   "ids": [
+    78
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#6": {
+   "ids": [
+    79
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#7": {
+   "ids": [
+    80
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#8": {
+   "ids": [
+    81
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#9": {
+   "ids": [
+    82
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#10": {
+   "ids": [
+    83
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#11": {
+   "ids": [
+    84
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#12": {
+   "ids": [
+    85
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#13": {
+   "ids": [
+    86
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#14": {
+   "ids": [
+    87
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15": {
+   "ids": [
+    88
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15~1": {
+   "ids": [
+    89
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15~2": {
+   "ids": [
+    90
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#11.8": {
+   "ids": [
+    91
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#13.8": {
+   "ids": [
+    92
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#14.2": {
+   "ids": [
+    93
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#14.4": {
+   "ids": [
+    94
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15.1": {
+   "ids": [
+    95
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15.4": {
+   "ids": [
+    96
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15.8": {
+   "ids": [
+    97
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15.2": {
+   "ids": [
+    98
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15.10": {
+   "ids": [
+    99
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#0": {
+   "ids": [
+    100
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#1": {
+   "ids": [
+    101
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#2": {
+   "ids": [
+    102
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#3": {
+   "ids": [
+    103
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#4": {
+   "ids": [
+    104
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#5": {
+   "ids": [
+    105
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#6": {
+   "ids": [
+    106
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#7": {
+   "ids": [
+    107
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#8": {
+   "ids": [
+    108
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#9": {
+   "ids": [
+    109
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#10": {
+   "ids": [
+    110
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#11": {
+   "ids": [
+    111
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#12": {
+   "ids": [
+    112
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#13": {
+   "ids": [
+    113
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#14": {
+   "ids": [
+    114
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#15": {
+   "ids": [
+    115
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#15~1": {
+   "ids": [
+    116
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#15~2": {
+   "ids": [
+    117
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#15+rock_a": {
+   "ids": [
+    118
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "sea#15+rock_b": {
+   "ids": [
+    119
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "fence#0": {
+   "ids": [
+    120
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#1": {
+   "ids": [
+    121
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#2": {
+   "ids": [
+    122
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#3": {
+   "ids": [
+    123
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#4": {
+   "ids": [
+    124
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#5": {
+   "ids": [
+    125
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#6": {
+   "ids": [
+    126
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#7": {
+   "ids": [
+    127
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#8": {
+   "ids": [
+    128
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#9": {
+   "ids": [
+    129
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#10": {
+   "ids": [
+    130
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#11": {
+   "ids": [
+    131
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#12": {
+   "ids": [
+    132
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#13": {
+   "ids": [
+    133
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#14": {
+   "ids": [
+    134
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#15": {
+   "ids": [
+    135
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "dock#0": {
+   "ids": [
+    136
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#1": {
+   "ids": [
+    137
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#2": {
+   "ids": [
+    138
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#3": {
+   "ids": [
+    139
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#4": {
+   "ids": [
+    140
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#5": {
+   "ids": [
+    141
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#6": {
+   "ids": [
+    142
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#7": {
+   "ids": [
+    143
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#8": {
+   "ids": [
+    144
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#9": {
+   "ids": [
+    145
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#10": {
+   "ids": [
+    146
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#11": {
+   "ids": [
+    147
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#12": {
+   "ids": [
+    148
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#13": {
+   "ids": [
+    149
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#14": {
+   "ids": [
+    150
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#15": {
+   "ids": [
+    151
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sign": {
+   "ids": [
+    152
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "barrel": {
+   "ids": [
+    153
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "crate": {
+   "ids": [
+    154
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "boat": {
+   "ids": [
+    155,
+    156
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "well": {
+   "ids": [
+    157,
+    158,
+    159,
+    160
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "flowers1": {
+   "ids": [
+    161
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "flowers2": {
+   "ids": [
+    162
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "flowers3": {
+   "ids": [
+    163
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "flowers4": {
+   "ids": [
+    164
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "lamp": {
+   "ids": [
+    165,
+    166
+   ],
+   "w": 1,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#0": {
+   "ids": [
+    167,
+    168,
+    169,
+    170
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#1": {
+   "ids": [
+    171,
+    172,
+    173,
+    174
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#2": {
+   "ids": [
+    175,
+    176,
+    177,
+    178
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#3": {
+   "ids": [
+    179,
+    180,
+    181,
+    182
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#4": {
+   "ids": [
+    183,
+    184,
+    185,
+    186
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#5": {
+   "ids": [
+    187,
+    188,
+    189,
+    190
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#6": {
+   "ids": [
+    191,
+    192,
+    193,
+    194
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#7": {
+   "ids": [
+    195,
+    196,
+    197,
+    198
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#7~1": {
+   "ids": [
+    199,
+    200,
+    201,
+    202
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#7~2": {
+   "ids": [
+    203,
+    204,
+    205,
+    206
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#8": {
+   "ids": [
+    207,
+    208,
+    209,
+    210
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#9": {
+   "ids": [
+    211,
+    212,
+    213,
+    214
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#10": {
+   "ids": [
+    215,
+    216,
+    217,
+    218
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#11": {
+   "ids": [
+    219,
+    220,
+    221,
+    222
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#11~1": {
+   "ids": [
+    223,
+    224,
+    225,
+    226
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#11~2": {
+   "ids": [
+    227,
+    228,
+    229,
+    230
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#12": {
+   "ids": [
+    231,
+    232,
+    233,
+    234
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#13": {
+   "ids": [
+    235,
+    236,
+    237,
+    238
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#13~1": {
+   "ids": [
+    239,
+    240,
+    241,
+    242
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#13~2": {
+   "ids": [
+    243,
+    244,
+    245,
+    246
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#14": {
+   "ids": [
+    247,
+    248,
+    249,
+    250
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#14~1": {
+   "ids": [
+    251,
+    252,
+    253,
+    254
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#14~2": {
+   "ids": [
+    255,
+    256,
+    257,
+    258
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15": {
+   "ids": [
+    259,
+    260,
+    261,
+    262
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15~1": {
+   "ids": [
+    263,
+    264,
+    265,
+    266
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15~2": {
+   "ids": [
+    267,
+    268,
+    269,
+    270
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.1": {
+   "ids": [
+    271,
+    272,
+    273,
+    274
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.2": {
+   "ids": [
+    275,
+    276,
+    277,
+    278
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.6": {
+   "ids": [
+    279,
+    280,
+    281,
+    282
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.4": {
+   "ids": [
+    283,
+    284,
+    285,
+    286
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.8": {
+   "ids": [
+    287,
+    288,
+    289,
+    290
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#7.1": {
+   "ids": [
+    291,
+    292,
+    293,
+    294
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#7.2": {
+   "ids": [
+    295,
+    296,
+    297,
+    298
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#13.4": {
+   "ids": [
+    299,
+    300,
+    301,
+    302
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#14.4": {
+   "ids": [
+    303,
+    304,
+    305,
+    306
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#11.1": {
+   "ids": [
+    307,
+    308,
+    309,
+    310
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.3": {
+   "ids": [
+    311,
+    312,
+    313,
+    314
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.12": {
+   "ids": [
+    315,
+    316,
+    317,
+    318
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#14.2": {
+   "ids": [
+    319,
+    320,
+    321,
+    322
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.5": {
+   "ids": [
+    323,
+    324,
+    325,
+    326
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "forest#15.10": {
+   "ids": [
+    327,
+    328,
+    329,
+    330
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "round_tree": {
+   "ids": [
+    331,
+    332,
+    333,
+    334
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    0,
+    1
+   ]
+  },
+  "offset_tree": {
+   "ids": [
+    335,
+    336,
+    337,
+    338
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    0,
+    1
+   ]
+  },
+  "broad_tree": {
+   "ids": [
+    339,
+    340,
+    341,
+    342
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    0,
+    1
+   ]
+  },
+  "bush_a": {
+   "ids": [
+    343
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bush_b": {
+   "ids": [
+    344
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bush_c": {
+   "ids": [
+    345
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "tall_grass": {
+   "ids": [
+    346
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "tall_grass_flowers": {
+   "ids": [
+    347
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "ledge#0": {
+   "ids": [
+    348
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "ledge#2": {
+   "ids": [
+    349
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "ledge#8": {
+   "ids": [
+    350
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "ledge#10": {
+   "ids": [
+    351
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "steps#0": {
+   "ids": [
+    352
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#1": {
+   "ids": [
+    353
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#2": {
+   "ids": [
+    354
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#3": {
+   "ids": [
+    355
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#4": {
+   "ids": [
+    356
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#5": {
+   "ids": [
+    357
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#6": {
+   "ids": [
+    358
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#7": {
+   "ids": [
+    359
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#8": {
+   "ids": [
+    360
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#9": {
+   "ids": [
+    361
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#10": {
+   "ids": [
+    362
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#11": {
+   "ids": [
+    363
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#12": {
+   "ids": [
+    364
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#13": {
+   "ids": [
+    365
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#14": {
+   "ids": [
+    366
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps#15": {
+   "ids": [
+    367
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pond#15+lily": {
+   "ids": [
+    368
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "pond#15+reeds": {
+   "ids": [
+    369
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
+  "pokemon_center": {
+   "ids": [
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389
+   ],
+   "w": 5,
+   "h": 4,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    17
+   ]
+  },
+  "poke_mart": {
+   "ids": [
+    390,
+    391,
+    392,
+    393,
+    394,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405
+   ],
+   "w": 4,
+   "h": 4,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    13
+   ]
+  },
+  "house_family": {
+   "ids": [
+    640,
+    641,
+    642,
+    643,
+    644,
+    645,
+    646,
+    647,
+    648,
+    649,
+    650,
+    651,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657,
+    658,
+    659
+   ],
+   "w": 5,
+   "h": 4,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    17
+   ]
+  },
+  "house_gardener": {
+   "ids": [
+    660,
+    661,
+    662,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    672,
+    673,
+    674,
+    675
+   ],
+   "w": 4,
+   "h": 4,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    13
+   ]
+  },
+  "forest_gate_north": {
+   "ids": [
+    676,
+    677,
+    678,
+    679,
+    680,
+    681,
+    682,
+    683,
+    684,
+    685,
+    686,
+    687,
+    688,
+    689,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697,
+    698,
+    699,
+    700,
+    701,
+    702,
+    703,
+    704,
+    705,
+    706,
+    707,
+    708,
+    709,
+    710,
+    711,
+    712,
+    713,
+    714,
+    715,
+    716,
+    717,
+    718,
+    719,
+    720,
+    721,
+    722,
+    723
+   ],
+   "w": 8,
+   "h": 6,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    3,
+    4
+   ]
+  }
+ },
+ "tiles": {
+  "primary": 534,
+  "secondary": 200
+ },
+ "metatile_counts": {
+  "primary": 406,
+  "secondary": 84
+ },
+ "animations": [
+  {
+   "name": "PalletConcept_General_Water",
+   "first_tile": 477,
+   "tiles": 57,
+   "frames": 8,
+   "notes": []
+  }
+ ]
+}
