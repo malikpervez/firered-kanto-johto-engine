@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-route9` (Routes 9 and 10 rebuilt, on `v2-main` at `6b2be168`) |
+| Game | branch `claude/story-rock-tunnel` (story check only, on `v2-main` at `e469f9da`) |
 | ROM | `make -j8` with the default settings. SHA-1 `8210fc6d2fdab50cb0859e92474f6ad2bfec8e6e`, SHA-256 `e558f6e0fb8e9547563014f41359469193055b0c5cf41220f82cc217f49ed848` |
-| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110; `22cc6f9` (pae `main` after PR #28) for steps 111–118 and the replay tests |
-| Last step passed | 118 `rock-tunnel`: east out of Cerulean onto Route 9, the tree cut, the gorge's Alicia and Chris, along Route 9 to Route 10, a heal in its Pokémon Center, and into Rock Tunnel's north mouth. Steps 111–118 were run on this build, from step 110's checkpoint of #48's build |
-| Replay tests | 259 of 259 pass (one Cerulean test that walks onto Route 9 arrives at its new rows, and was accepted after looking at it) |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59; `95025b1` (pae PR #26) for steps 60–69; `fe38af0` (pae PR #27: walks know the metatiles the game makes) for steps 70–76; `77c66ac` (pae `main` after PR #27) for steps 77–110; `22cc6f9` (pae `main` after PR #28) for steps 111–133 and the replay tests |
+| Last step passed | 133 `lavender`: onto Route 9 and through it (the team now one Kingler, level 65, with Surf and Cut), Route 10's Center, Rock Tunnel's two floors (nine trainers whose lines can't be gone round), out of its south mouth and down Route 10 into Lavender. Steps 112–133 were run on this build (#49's), from step 111's checkpoint |
+| Replay tests | 259 of 259 pass (on this ROM, for #49; this change adds none) |
 
 ## How to run it
 
@@ -169,13 +169,28 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 109 | `misty` | Face Misty and beat her: the Cascade Badge | Cerulean Gym 8,7 | |
 | 110 | `leave-cerulean-gym` | Back out of the Gym (its mat: press down on it) | Cerulean City 47,37 | |
 | 111 | `route9` | East out of Cerulean onto Route 9 | Route 9 0,9 | |
-| 112 | `route9-alicia` | Cut the tree in the neck (a Kingler with Surf and Cut is the team from here) and on along the gorge: Alicia battles | Route 9 13,9 | |
+| 112 | `route9-alicia` | Cut the tree in the neck (one Kingler at level 65 with Surf and Cut is the team from here) and on along the gorge: Alicia battles | Route 9 13,9 | |
 | 113 | `route9-chris` | On along the gorge: Chris battles | Route 9 19,9 | |
 | 114 | `route10` | Along Route 9's road round the outcrop onto Route 10 | Route 10 0,18 | |
 | 115 | `route10-center` | Up to Route 10's Pokémon Center | Route 10 Center 7,8 | |
 | 116 | `route10-heal` | Up to the counter and heal | Route 10 Center 7,4 | |
 | 117 | `route10-leave-center` | Back out to the clearing | Route 10 14,16 | |
 | 118 | `rock-tunnel` | Into Rock Tunnel's north mouth | Rock Tunnel 1F 17,2 | |
+| 119 | `rt-ashton` | Rock Tunnel 1F, dark: Ashton's line can't be gone round; he battles | Rock Tunnel 1F 24,10 | |
+| 120 | `rt-b1f` | Along the south passage to the ladder down | Rock Tunnel B1F 38,38 | |
+| 121 | `rt-winston` | Down B1F's east side and west: Winston battles | Rock Tunnel B1F 29,46 | |
+| 122 | `rt-martha` | On west and north: Martha battles | Rock Tunnel B1F 17,43 | |
+| 123 | `rt-allen` | Round B1F's middle to the hall below the ladder: Allen battles | Rock Tunnel B1F 36,24 | |
+| 124 | `rt-1f-west` | Up the ladder to 1F's west side (the Kingler given again, its Surf full) | Rock Tunnel 1F 4,2 | |
+| 125 | `rt-lenny` | Down the west side: Lenny battles | Rock Tunnel 1F 7,9 | |
+| 126 | `rt-b1f-west` | To the ladder down to B1F's west part | Rock Tunnel B1F 27,22 | |
+| 127 | `rt-sofia` | West along B1F's middle: Sofia battles | Rock Tunnel B1F 11,26 | |
+| 128 | `rt-dudley` | On west: Dudley battles | Rock Tunnel B1F 5,25 | |
+| 129 | `rt-cooper` | North to Cooper, who looks about: face him and battle | Rock Tunnel B1F 3,16 | |
+| 130 | `rt-1f-east` | Up the ladder to 1F's east part (the Kingler given again) | Rock Tunnel 1F 45,21 | |
+| 131 | `rt-dana` | Round the east part and west along the south passage: Dana battles | Rock Tunnel 1F 26,31 | |
+| 132 | `rt-out` | Out of the south mouth onto Route 10 | Route 10 10,46 | |
+| 133 | `lavender` | Down Route 10's valley road into Lavender | Lavender Town 14,0 | |
 
 ## What it doesn't cover
 
@@ -263,3 +278,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | Route 11 rebuilt (its own concept); four new steps before the S.S. Anne: east onto Route 11, into its gatehouse, out again, back to Vermilion | **Steps 88–92 pass**, `--from route11` and resumed from the failed step's predecessor. The first try stood inside the gatehouse: its doors inside are on its west and east walls, which you walk west or east off (the step now walks west). |
 | 2026-10-26 | No map changes: eighteen new steps through the S.S. Anne (Blue, HM01), off the ship, back to Cerulean and through Misty's Gym, so the check can reach Route 9 with Cut | **Steps 93–110 pass**, `--from ss-anne-board` and resumed from each failed step's predecessor (93–97 on the Route 11 build, 98–110 on #47's). First tries stopped: on arrow warps and stairs entered by the wrong key (the gangway's end, the office's stairs, both ends of the ship's and the tunnel's stairs, the Gym's mat); in the ship's corridors, where a worker and a wandering sailor stood in the walk (vias go round them); in Vermilion, where the walk went into the Mart (pae plans across door blocks: KR-43; a via keeps to the plaza's middle); after Misty, before her scenes had finished (more presses). The ship's sailing landed you below the map until #47 fixed it. |
 | 2026-10-26 | Routes 9 and 10 rebuilt (their own concepts); eight new steps: onto Route 9, the tree cut and the gorge's two trainers, Route 10, its Center, into Rock Tunnel | **Steps 111–118 pass**, `--from route9` and resumed from the failed step's predecessor. First tries stopped on Route 9: the tree to cut was gone (the game hides one within 8 blocks of the edge you come in by: KR-45, so it moved further in), then Alicia's battle never ended: the Blastoise's Water Gun had run down, and with the Bulbasaur given for Cut, A presses answered YES to "change Pokémon?" and went round the party menu (KR-48; one Kingler with Surf and Cut is the team now). |
+| 2026-10-26 | No map changes: fifteen new steps through Rock Tunnel (its two floors, nine trainers) and down Route 10 into Lavender, so Lavender's rebuild can carry on from it | **Steps 112–133 pass**, `--from route9-alicia` and resumed from each failed step's predecessor. First tries stopped in battles that never ended: a Slowpoke Disabled the Kingler's only attack (A presses then go round the move menu; the Kingler is now level 65, so it knocks out what it meets first), and Surf's 15 PP ran out twice in the tunnel, which has no Center (the Kingler is given again at its two ladders up). The tunnel's walks were planned with the fewest battles their trainers' lines allow (KR-48). |

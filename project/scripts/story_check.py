@@ -366,9 +366,10 @@ STEPS = [
          expect=dict(map="Route9_Frlg", xy=(0, 9))),
     dict(name="route9-alicia", what="Cut the tree in the neck and on along the gorge into the picnicker Alicia's line: "
          "she battles (in one step: a checkpoint's reload would bring the tree back). The team is set here: one Kingler "
-         "at level 50 that knows Surf and Cut (the captain's HM01 isn't taught in the steps; the Blastoise's Water Gun "
-         "had run down; one Pokémon, so no battle asks whether to change Pokémon)",
-         state=["CLEAR_TEAM", "SPECIES_KINGLER lv50 MOVE_SURF MOVE_CUT"], walk=(8, 9),
+         "at level 65 that knows Surf and Cut (the captain's HM01 isn't taught in the steps; the Blastoise's Water Gun "
+         "had run down). One Pokémon, so no battle asks whether to change Pokémon, strong enough to knock out what it "
+         "meets before a Slowpoke can Disable its Surf",
+         state=["CLEAR_TEAM", "SPECIES_KINGLER lv65 MOVE_SURF MOVE_CUT"], walk=(8, 9),
          inputs="RIGHT*4, wait 30, " + A(4, 130) + "wait 300, " + f"RIGHT*{hold(5)}, wait 300, " + A(160) + B(12)
                 + "wait 300", expect=dict(map="Route9_Frlg", xy=(13, 9))),
     dict(name="route9-chris", what="On along the gorge into the camper Chris's line: he battles", walk=(18, 9),
@@ -384,6 +385,54 @@ STEPS = [
          inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250", expect=dict(map="Route10_Frlg", xy=(14, 16))),
     dict(name="rock-tunnel", what="Into Rock Tunnel's north mouth", walk=(8, 9), inputs=f"UP*{hold(1)}, wait 250",
          expect=dict(map="RockTunnel_1F_Frlg", xy=(17, 2))),
+    dict(name="rt-ashton", what="Into Rock Tunnel's dark first floor (no Flash): the hiker Ashton's line can't be gone "
+         "round on the way to the ladder down; he battles", via=[(17, 8), (24, 8)], walk=(24, 9),
+         inputs=f"DOWN*{hold(1)}, wait 300, " + A(160) + B(12) + "wait 300",
+         expect=dict(map="RockTunnel_1F_Frlg", xy=(24, 10))),
+    dict(name="rt-b1f", what="On east along the floor's south passage and up to the ladder down to B1F",
+         via=[(24, 12), (45, 12)], walk=(45, 3), inputs=f"UP*{hold(1)}, wait 20, UP*20, wait 300",
+         expect=dict(map="RockTunnel_B1F_Frlg", xy=(38, 38))),
+    dict(name="rt-winston", what="Down B1F's east side and west along its bottom passage: the hiker Winston's line "
+         "crosses it; he battles", via=[(37, 37), (37, 46)], walk=(30, 46),
+         inputs=f"LEFT*{hold(1)}, wait 300, " + A(160) + B(12) + "wait 300", expect=dict(map="RockTunnel_B1F_Frlg", xy=(29, 46))),
+    dict(name="rt-martha", what="On west and up the passage north: the picnicker Martha battles", via=[(17, 46)],
+         walk=(17, 44), inputs=f"UP*{hold(1)}, wait 300, " + A(160) + B(12) + "wait 300",
+         expect=dict(map="RockTunnel_B1F_Frlg", xy=(17, 43))),
+    dict(name="rt-allen", what="North and east round the middle of B1F to the hall below the ladder: the hiker "
+         "Allen battles", via=[(17, 41), (29, 41), (29, 31), (38, 31)], walk=(38, 24),
+         inputs=f"LEFT*{hold(2)}, wait 300, " + A(160) + B(12) + "wait 300", expect=dict(map="RockTunnel_B1F_Frlg", xy=(36, 24))),
+    dict(name="rt-1f-west", what="Up the ladder to the first floor's west side (the Kingler is given again here, its "
+         "Surf full: the tunnel has no Center, and one Surf's 15 PP don't last its trainers)",
+         state=["CLEAR_TEAM", "SPECIES_KINGLER lv65 MOVE_SURF MOVE_CUT"], via=[(33, 24)], walk=(33, 14),
+         inputs=f"UP*{hold(1)}, wait 20, UP*20, wait 300", expect=dict(map="RockTunnel_1F_Frlg", xy=(4, 2))),
+    dict(name="rt-lenny", what="Down the floor's west side into the PokéManiac Lenny's line: he battles",
+         via=[(4, 9)], walk=(6, 9), inputs=f"RIGHT*{hold(1)}, wait 300, " + A(160) + B(12) + "wait 300",
+         expect=dict(map="RockTunnel_1F_Frlg", xy=(7, 9))),
+    dict(name="rt-b1f-west", what="East and south to the ladder down to B1F's west part",
+         via=[(10, 9), (10, 16), (20, 16)], walk=(20, 14), inputs=f"UP*{hold(1)}, wait 20, UP*20, wait 300",
+         expect=dict(map="RockTunnel_B1F_Frlg", xy=(27, 22))),
+    dict(name="rt-sofia", what="West along B1F's middle into the picnicker Sofia's line: she battles",
+         via=[(19, 23), (19, 26)], walk=(12, 26), inputs=f"LEFT*{hold(1)}, wait 300, " + A(160) + B(12) + "wait 300",
+         expect=dict(map="RockTunnel_B1F_Frlg", xy=(11, 26))),
+    dict(name="rt-dudley", what="On west into the hiker Dudley's line: he battles", via=[(8, 26), (8, 25)],
+         walk=(6, 25), inputs=f"LEFT*{hold(1)}, wait 300, " + A(160) + B(12) + "wait 300",
+         expect=dict(map="RockTunnel_B1F_Frlg", xy=(5, 25))),
+    dict(name="rt-cooper", what="North up the west passage to the PokéManiac Cooper, who looks about: face him and "
+         "battle (he may see you first)", via=[(3, 25)], walk=(3, 17),
+         inputs=f"UP*{hold(1)}, wait 300, LEFT*4, wait 20, " + A(160) + B(12) + "wait 300",
+         expect=dict(map="RockTunnel_B1F_Frlg", xy=(3, 16))),
+    dict(name="rt-1f-east", what="On up to the ladder to the first floor's east part (the Kingler given again, its "
+         "Surf full)", state=["CLEAR_TEAM", "SPECIES_KINGLER lv65 MOVE_SURF MOVE_CUT"], walk=(2, 14),
+         inputs=f"UP*{hold(1)}, wait 20, UP*20, wait 300", expect=dict(map="RockTunnel_1F_Frlg", xy=(45, 21))),
+    dict(name="rt-dana", what="Down and round the floor's east part and west along its south passage: the "
+         "picnicker Dana's line crosses it; she battles",
+         via=[(39, 22), (39, 26), (44, 26), (44, 30), (42, 30), (42, 32), (31, 32), (31, 31)], walk=(27, 31),
+         inputs=f"LEFT*{hold(1)}, wait 300, " + A(160) + B(12) + "wait 300", expect=dict(map="RockTunnel_1F_Frlg", xy=(26, 31))),
+    dict(name="rt-out", what="On west and down out of Rock Tunnel's south mouth onto Route 10", via=[(18, 31)],
+         walk=(18, 36), inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 300",
+         expect=dict(map="Route10_Frlg", xy=(10, 46))),
+    dict(name="lavender", what="Down Route 10's valley road (in no trainer's sight) into Lavender", walk=(18, 59),
+         inputs=f"DOWN*{hold(1)}, wait 200", expect=dict(map="LavenderTown_Frlg", xy=(14, 0))),
 ]
 
 
