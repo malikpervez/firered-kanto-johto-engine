@@ -2060,3 +2060,14 @@ const struct Tileset gTileset_CeruleanConcept =
     .metatileAttributes = gMetatileAttributes_CeruleanConcept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route24Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route24Concept,
+    .palettes = gTilesetPalettes_Route24Concept,
+    .metatiles = gMetatiles_Route24Concept,
+    .metatileAttributes = gMetatileAttributes_Route24Concept,
+    .callback = NULL,
+};

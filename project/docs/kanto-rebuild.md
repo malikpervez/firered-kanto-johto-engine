@@ -29,9 +29,9 @@ outdoor art. They stay the old maps; their doors and warps keep working.
 | – | Pallet Town, Route 1, Viridian City, Route 22, Route 2, Viridian Forest | | done | #(earlier), #36 | Rebuilt before this plan. |
 | 1 | Pewter City | 52×44 | 52×44 | #38 | The grey-stone town under the mountains; the guides' walks worked out on the map (`escort.py`). |
 | 2 | Route 3 | 84×20 | 84×20 | #39 | The mountain road: a high path with a ledge, a field of grass you can't walk round, the pass north. |
-| 3 | Route 4 | 108×20 | 108×20 | this PR | Round Mt. Moon: the foot of the mountain with the Center, the high shelf where the cave comes out, its ledge down to the road to Cerulean. |
-| 4 | Cerulean City | 58×51 | 58×51 | this PR | The lake town: the bridge road, the cave's island, the robbed house's backyard, the neck south. With Route 4: old Cerulean had no room for the seam between them. |
-| 5 | Route 24 | 30×22 | | | Nugget Bridge. |
+| 3 | Route 4 | 108×20 | 108×20 | #40 | Round Mt. Moon: the foot of the mountain with the Center, the high shelf where the cave comes out, its ledge down to the road to Cerulean. |
+| 4 | Cerulean City | 58×51 | 58×51 | #40 | The lake town: the bridge road, the cave's island, the robbed house's backyard, the neck south. With Route 4: old Cerulean had no room for the seam between them. |
+| 5 | Route 24 | 30×22 | 30×22 | this PR | Nugget Bridge: five trainers across it that can't be passed unseen, the Rocket at its end, a shore and a meadow off Route 25. |
 | 6 | Route 25 | 112×35 | | | Bill's cottage. |
 | 7 | Route 5 | 68×46 | | | Day Care, the Underground Path's gate. |
 | 8 | Route 6 | 63×36 | | | |
@@ -74,6 +74,7 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-23 | pae read a map's block file without the layout's block fixes (`blockdata_overrides`, `blockdata_composition`), which the game's build applies: renders, walks and seams of maps with them were wrong (Mt. Moon B2F's rock ridges were floor). | Mt. Moon (story check) | fixed in pae PR #24 (blocks are read as the game builds them; a write bakes the fixes in) |
 | KR-24 | `pae map path` ignored heights and one-way edges, so planned walks went between elevations and up rock edges the game doesn't let you climb (Mt. Moon B2F). | Mt. Moon (story check) | fixed in pae PR #24 (walks keep the game's step rules) |
 | KR-25 | Once pae read block fixes, `pae seam build` stopped on old Route 9: its fixes put 12 of its own hand-made seam's adapters (ids 1005–1017) on the map. | Cerulean | fixed in pae PR #25 (left out, with a note); those 12 blocks of Route 9 still show wrong from Cerulean until Route 9 is rebuilt |
+| KR-28 | The game's build keeps a list of block and border files that are byte-for-byte others (`firered_geometry_payload_aliases.json`); an entry whose file a rebuild changed stops it ("Stale or unequal FireRed geometry alias"). Cerulean's and Route 24's old borders had entries, removed by hand. | Cerulean, Route 24 | fixed in pae PR #26 (pae drops the entries a change makes stale) |
 
 ### Build and process
 
@@ -103,4 +104,5 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-21 | Cerulean's Friends' camp moved to 34,32 (their fourth scene) and Route 4's stayed; neither scene has been played since (see KR-6). Cerulean's heal spot (28,29) was not played either (as KR-11). | Cerulean | open |
 | KR-22 | The tree to cut in Cerulean now closes a fenced garden with nothing in it yet; the old one stood by the lass and her Slowbro. Something to find in the garden would make cutting it worth it. | Cerulean | open (an idea) |
 | KR-26 | Mt. Moon's ladders aren't drawn: on 1F and B1F (its native floors) the ladder warps are plain cave floor, so a player can't see where they are. An old map, not part of the rebuild. | Mt. Moon (story check) | open |
-| KR-27 | At Cerulean's joins the new and old roads don't match yet: Nugget Bridge's last span (the kit's brown dock) meets old Route 24's yellow planks, and Route 4's dirt meets Cerulean's cobbles with a hard line (as KR-10). | Cerulean | cosmetic, open (Route 24 is next) |
+| KR-27 | At Cerulean's joins the new and old roads didn't match: Nugget Bridge's last span (the kit's brown dock) met old Route 24's yellow planks, and Route 4's dirt meets Cerulean's cobbles with a hard line (as KR-10). | Cerulean | the bridge fixed by Route 24's rebuild; it moves to the join with old Route 25 (KR-29). The dirt and cobbles: cosmetic, open |
+| KR-29 | Old Route 25 has two palette banks free for the new Route 24's strip, so four of its palettes are drawn in their nearest colours (at most 80 RGB steps off), and the bridge's brown planks meet Route 25's yellow ones. | Route 24 | cosmetic, open (Route 25 is next) |

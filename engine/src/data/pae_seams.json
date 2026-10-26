@@ -24,7 +24,11 @@
   "ViridianCity_Frlg"
  ],
  "Route24_Frlg": [
-  "CeruleanCity_Frlg"
+  "CeruleanCity_Frlg",
+  "Route25_Frlg"
+ ],
+ "Route25_Frlg": [
+  "Route24_Frlg"
  ],
  "Route2_Frlg": [
   "ViridianCity_Frlg",

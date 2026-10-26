@@ -225,6 +225,23 @@ STEPS = [
          via=[(30, 24), (41, 24)], walk=(42, 8),
          inputs=f"UP*{hold(1)}, wait 300, " + A(110) + B(10) + "wait 300",
          expect=dict(map="CeruleanCity_Frlg", xy=(42, 7), vars={"VAR_MAP_SCENE_CERULEAN_CITY_RIVAL": 1})),
+    dict(name="nugget-bridge", what="Up the bridge road onto Nugget Bridge (Route 24)", walk=(42, 0),
+         inputs=f"UP*{hold(1)}, wait 200", expect=dict(map="Route24_Frlg", xy=(17, 21))),
+    dict(name="bridge-cale", what="Up the bridge: Cale sees you across it and battles", walk=(17, 20),
+         inputs=f"UP*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300", expect=dict(map="Route24_Frlg", xy=(17, 19))),
+    dict(name="bridge-ali", what="Up the bridge: Ali sees you across it and battles", walk=(17, 18),
+         inputs=f"UP*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300", expect=dict(map="Route24_Frlg", xy=(17, 17))),
+    dict(name="bridge-timmy", what="Up the bridge: Timmy sees you across it and battles", walk=(17, 16),
+         inputs=f"UP*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300", expect=dict(map="Route24_Frlg", xy=(17, 15))),
+    dict(name="bridge-reli", what="Up the bridge: Reli sees you across it and battles", walk=(17, 14),
+         inputs=f"UP*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300", expect=dict(map="Route24_Frlg", xy=(17, 13))),
+    dict(name="bridge-ethan", what="Up the bridge: Ethan sees you across it and battles", walk=(17, 12),
+         inputs=f"UP*{hold(1)}, wait 200, " + A(80) + B(8) + "wait 300", expect=dict(map="Route24_Frlg", xy=(17, 11))),
+    dict(name="bridge-rocket", what="At the bridge's north end the Rocket steps over, battles and gives you the Nugget",
+         walk=(17, 9), inputs=f"UP*{hold(1)}, wait 300, " + A(80) + B(8) + "wait 300",
+         expect=dict(map="Route24_Frlg", xy=(17, 8), vars={"VAR_MAP_SCENE_ROUTE24": 1})),
+    dict(name="route25", what="Off the bridge's north end onto Route 25", walk=(17, 0), inputs=f"UP*{hold(1)}, wait 200",
+         expect=dict(map="Route25_Frlg", xy=(17, 34))),
 ]
 
 

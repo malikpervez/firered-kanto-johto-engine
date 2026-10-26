@@ -3516,3 +3516,25 @@ const u16 gTilesetPalettes_CeruleanConcept[][16] =
     INCBIN_U16("data/tilesets/secondary/cerulean_concept/palettes/14.gbapal"),
     INCBIN_U16("data/tilesets/secondary/cerulean_concept/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_Route24Concept[] = INCBIN_U32("data/tilesets/secondary/route24_concept/tiles.4bpp.fastSmol");
+
+const u16 gTilesetPalettes_Route24Concept[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/route24_concept/palettes/15.gbapal"),
+};

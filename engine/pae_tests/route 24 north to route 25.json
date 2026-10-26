@@ -1,0 +1,38 @@
+{
+ "note": "North off the bridge onto Route 25 (past the Rocket's row).",
+ "created": "2026-10-26 05:29",
+ "start": {
+  "map": "Route24_Frlg",
+  "x": 17,
+  "y": 3,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route25_Frlg",
+  "x": 17,
+  "y": 33,
+  "in_battle": false
+ }
+}

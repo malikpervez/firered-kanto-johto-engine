@@ -46,14 +46,14 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER_FRLG",
-      "x": 18,
+      "x": 19,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Route24_EventScript_Ethan",
       "flag": "0"
     },
@@ -67,21 +67,21 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Route24_EventScript_Reli",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
-      "x": 18,
+      "x": 19,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Route24_EventScript_Timmy",
       "flag": "0"
     },
@@ -95,28 +95,28 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Route24_EventScript_Ali",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_FRLG",
-      "x": 18,
+      "x": 19,
       "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "Route24_EventScript_Cale",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER_FRLG",
-      "x": 9,
+      "x": 8,
       "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -130,8 +130,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 8,
-      "y": 2,
+      "x": 5,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -143,8 +143,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABRA",
-      "x": 2,
-      "y": 12,
+      "x": 5,
+      "y": 7,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -157,7 +157,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SURSKIT",
       "x": 21,
-      "y": -3,
+      "y": 3,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
       "movement_range_x": 0,
@@ -169,8 +169,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPOINK",
-      "x": 5,
-      "y": 18,
+      "x": 9,
+      "y": 5,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
       "movement_range_x": 0,
@@ -183,8 +183,8 @@
     {
       "local_id": "ST03_TRAVELER",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "x": 17,
-      "y": 4,
+      "x": 24,
+      "y": 10,
       "script": "ST03_Traveler",
       "flag": "0",
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -198,8 +198,8 @@
     {
       "local_id": "ST03_CHARMANDER",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHARMANDER",
-      "x": 18,
-      "y": 3,
+      "x": 25,
+      "y": 10,
       "script": "NULL",
       "flag": "FLAG_ST03_GIVEN",
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -213,8 +213,8 @@
     {
       "local_id": "ST03_SHELTER",
       "graphics_id": "OBJ_EVENT_GFX_MOVING_BOX",
-      "x": 17,
-      "y": 2,
+      "x": 24,
+      "y": 9,
       "script": "NULL",
       "flag": "0",
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -259,8 +259,8 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 9,
-      "y": 3,
+      "x": 10,
+      "y": 4,
       "elevation": 3,
       "item": "ITEM_PECHA_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE24_PECHA_BERRY",
@@ -271,30 +271,11 @@
   "firered_geometry": {
     "width": 30,
     "height": 22,
-    "primary_tileset": "gTileset_Kanto_General_Hns",
-    "secondary_tileset": "gTileset_CeruleanCity_Hns",
-    "border_filepath": "data/layouts/Route24_hns/border.bin",
-    "blockdata_filepath": "data/layouts/Route24_hns/map.bin",
+    "primary_tileset": "gTileset_PalletConcept_General",
+    "secondary_tileset": "gTileset_Route24Concept",
+    "border_filepath": "data/layouts/Route24_Concept/border.bin",
+    "blockdata_filepath": "data/layouts/Route24_Concept/map.bin",
     "layout_version": "hns",
-    "blockdata_overrides": [
-      {
-        "x": 24,
-        "y": 21,
-        "expected": 12288,
-        "value": 1931
-      },
-      {
-        "x": 25,
-        "y": 21,
-        "expected": 12289,
-        "value": 1931
-      },
-      {
-        "x": 26,
-        "y": 21,
-        "expected": 12288,
-        "value": 1931
-      }
-    ]
+    "blockdata_overrides": null
   }
 }

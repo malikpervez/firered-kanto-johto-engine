@@ -1,0 +1,50 @@
+{
+ "note": "On the east meadow the shelter's traveler talks to you (until the bridge is crossed he asks you to cross it first).",
+ "created": "2026-10-26 05:30",
+ "start": {
+  "map": "Route24_Frlg",
+  "x": 24,
+  "y": 11,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     150
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route24_Frlg",
+  "x": 24,
+  "y": 11,
+  "in_battle": false
+ }
+}
