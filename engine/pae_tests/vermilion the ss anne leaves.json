@@ -1,0 +1,54 @@
+{
+ "note": "Out of the S.S. Anne with HM01: the ship sails, you walk up the gangway onto Vermilion's pier and two steps up it, past the ticket check.",
+ "created": "2026-10-26 07:46",
+ "start": {
+  "map": "SSAnne_1F_Corridor_Frlg",
+  "x": 19,
+  "y": 2,
+  "state": [
+   "FLAG_GOT_HM01",
+   "VAR_MAP_SCENE_VERMILION_CITY=1"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     12
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     64,
+     20
+    ],
+    [
+     0,
+     3000
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "VAR_MAP_SCENE_VERMILION_CITY"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 38,
+  "y": 38,
+  "in_battle": false,
+  "vars": {
+   "VAR_MAP_SCENE_VERMILION_CITY": 3
+  }
+ }
+}

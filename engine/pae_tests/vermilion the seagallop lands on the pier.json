@@ -1,0 +1,54 @@
+{
+ "note": "The Seagallop sails to Vermilion: you land on the pier past the ticket check.",
+ "created": "2026-10-26 07:45",
+ "start": {
+  "map": "OneIsland_Harbor_Frlg",
+  "x": 8,
+  "y": 5,
+  "state": [],
+  "script": "EventScript_SailToVermilion2"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     0,
+     1500
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 38,
+  "y": 39,
+  "in_battle": false
+ }
+}
