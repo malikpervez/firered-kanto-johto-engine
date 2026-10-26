@@ -21,7 +21,8 @@ meets the top at columns 32–34, and Route 11's the right edge at rows 11–14.
   the kit's pond: it can be surfed and fished, as Vermilion's could.
 
 Every warp keeps its number and the people keep their order. The heal spot moved with the Center (28,7,
-`src/data/heal_locations.json`), and old Vermilion's hand-made seam was removed from `kanto_connection_seam.c`. The
+`src/data/heal_locations.json`); the ships land on the pier (off the S.S. Anne on its gangway, the Seagallop past the ticket
+check, the S.S. Aqua from Olivine a little further up: KR-41); and old Vermilion's hand-made seam was removed from `kanto_connection_seam.c`. The
 pieces are the kit's, the Gym and the Fan Club in Viridian's buildings' palette (bank 7), and the three houses in
 its houses' palette (bank 9). The seams are pae's: with Route 6 both maps are the kit's, and old Route 11's colours
 fit in banks 10–12.

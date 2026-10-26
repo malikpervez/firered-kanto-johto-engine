@@ -1,0 +1,34 @@
+{
+ "note": "Off the S.S. Aqua from Olivine: you land on Vermilion's pier.",
+ "created": "2026-10-26 07:45",
+ "start": {
+  "map": "SSAqua_1F_hns",
+  "x": 5,
+  "y": 5,
+  "state": [],
+  "script": "SSAqua_1F_EventScript_LeaveBoat"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     400
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 38,
+  "y": 36,
+  "in_battle": false
+ }
+}

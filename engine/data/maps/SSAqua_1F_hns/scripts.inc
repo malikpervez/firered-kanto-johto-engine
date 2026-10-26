@@ -47,7 +47,7 @@ SSAqua_1F_EventScript_LeaveBoat::
 	clearflag JOHTO_FLAG_HIDE_LAKE_PRYCE
 	clearflag JOHTO_FLAG_HIDE_DEN_CLAIR
 	setvar JOHTO_VAR_SSAQUA_STATE, 7
-	warp MAP_VERMILION_CITY, 13, 26
+	warp MAP_VERMILION_CITY, 38, 36
 	waitstate
 	release
 	end

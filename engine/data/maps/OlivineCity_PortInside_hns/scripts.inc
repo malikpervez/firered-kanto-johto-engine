@@ -120,7 +120,7 @@ OlivinePort_EventScript_ChoseVermilion::
 	bufferitemname STR_VAR_1, ITEM_SS_TICKET
 	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_NoCredentials
 	call OlivinePort_EventScript_EnterShip
-	warpsilent MAP_VERMILION_CITY, 13, 26
+	warpsilent MAP_VERMILION_CITY, 38, 36
 	waitstate
 	release
 	end

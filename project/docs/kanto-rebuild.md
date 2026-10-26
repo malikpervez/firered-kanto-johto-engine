@@ -17,7 +17,9 @@ outdoor art. They stay the old maps; their doors and warps keep working.
 3. **Build**: `make_art.py` (checks the plan's rules on the map it builds) and `build.sh`, added to
    `project/art/build_all.sh`.
 4. **Events and scripts**: every event placed; scripts that walk people round the map by fixed steps redone for the
-   new map (`pae map path` writes the steps).
+   new map (`pae map path` writes the steps); and every fixed spot on the map that scripts or code name — warps to a
+   block (`warp MAP_X, x, y`), the ships' and the Seagallop's landings (`src/seagallop.c`), the Friends' camps, the
+   heal spot, the credits' view — moved to its place on the new map (search for `MAP_X, ` with a number after it).
 5. **Tests**: `pae test run`, a replay test for every new or changed event; the story check from the first step the map
    changes, and new steps through it.
 6. **Pull request**, then merge once its tests pass; the next map starts from it.
@@ -117,3 +119,5 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-38 | The towns share the same few buildings (Viridian's Gym and Trainer School, its three houses): Vermilion's Gym, Fan Club and houses are Cerulean's. FireRed's Gyms look alike too, but new packs for the other buildings would set the towns apart. | Vermilion | open (an idea: more building packs) |
 | KR-39 | Old Route 12 has no palette slot for two of the new Route 11's palettes: at Route 12's west end, Route 11's strip has its plants drawn in Route 12's nearest colours (at most 104 RGB steps off) and its ground in them (at most 74). Route 11 shows Route 12 with Route 12's own colours. The new dirt road also meets old Route 12's sandy path with no edge between them. | Route 11 | cosmetic, open (goes when Route 12 is rebuilt) |
 | KR-40 | Route 11's gatehouse no longer stands across the road (the road passes south of it, as Route 2's gate pack has its doors only at the bottom), but its inside still has a west and an east door: in by the left half of its double door you come in at the west door, by the right half at the east one, and each leads back out by its half. A gate pack with a door at each end, set across a road, would match the inside. | Route 11 | cosmetic, open (an idea: an east-west gate pack) |
+| KR-41 | Vermilion's rebuild (#45) left three landings at the old town's blocks: coming off the S.S. Anne with Cut put you at 38,65 (below the new map), the S.S. Aqua from Olivine at 13,26 (the harbour's water now) and the Seagallop at 38,63 (below the map). They are on the new pier now: the S.S. Anne's exit on its gangway (38,41, as the old one was on its), the Seagallop past the ticket check (38,39, as before) and the S.S. Aqua on the pier (38,36). Map rebuilds now check every fixed spot scripts and code name ("How each map is done", step 4). | Vermilion | fixed (replay tests for all three) |
+| KR-42 | pae counts `MB_DEEP_SOUTH_WARP` blocks (Vermilion's gangway) as water, as its water pattern matches "DEEP": its walks won't plan across them, and its walkable map shows them as water. The game walks on them. | Vermilion | open (pae) |
