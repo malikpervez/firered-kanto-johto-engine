@@ -29,10 +29,11 @@ sh project/art/route7-concept/build.sh
 sh project/art/celadon-concept/build.sh
 sh project/art/saffron-concept/build.sh  # no compiled joins, so no seams
 sh project/art/route16-concept/build.sh
+sh project/art/route17-concept/build.sh
 cd engine
 for m in Route1_Frlg PalletTown_Frlg ViridianCity_Frlg Route22_Frlg Route2_Frlg PewterCity_Frlg Route3_Frlg Route4_Frlg \
         CeruleanCity_Frlg Route24_Frlg Route25_Frlg VermilionCity_Frlg Route11_Frlg \
-        Route9_Frlg Route10_Frlg LavenderTown_Frlg CeladonCity_Frlg Route16_Frlg; do
+        Route9_Frlg Route10_Frlg LavenderTown_Frlg CeladonCity_Frlg Route16_Frlg Route17_Frlg; do
     pae seam build $m -p .
 done
 for m in Route5_Frlg Route6_Frlg Route8_Frlg Route7_Frlg; do  # (no room in old Saffron: see their build.sh)

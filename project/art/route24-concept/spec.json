@@ -1457,7 +1457,7 @@
    "solid": true
   },
   {
-   "name": "sea#15+rock_a",
+   "name": "sea#15.1",
    "image": "../kit/sheets/water.png",
    "x": 208,
    "y": 32,
@@ -1471,10 +1471,66 @@
    "solid": true
   },
   {
-   "name": "sea#15+rock_b",
+   "name": "sea#15.2",
    "image": "../kit/sheets/water.png",
    "x": 224,
    "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#15.4",
+   "image": "../kit/sheets/water.png",
+   "x": 240,
+   "y": 32,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#15.8",
+   "image": "../kit/sheets/water.png",
+   "x": 0,
+   "y": 48,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#15+rock_a",
+   "image": "../kit/sheets/water.png",
+   "x": 16,
+   "y": 48,
+   "banks": [
+    1
+   ],
+   "tileset": "primary",
+   "ground": "grass",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1,
+   "solid": true
+  },
+  {
+   "name": "sea#15+rock_b",
+   "image": "../kit/sheets/water.png",
+   "x": 32,
+   "y": 48,
    "banks": [
     1
    ],

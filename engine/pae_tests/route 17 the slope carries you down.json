@@ -1,0 +1,41 @@
+{
+ "note": "By bike from Route 16's road onto Cycling Road, down the middle lane: past the start line the slope carries you on by itself, no biker in sight, to the lagoon's fence.",
+ "created": "2026-10-27 01:00",
+ "start": {
+  "map": "Route16_Frlg",
+  "x": 17,
+  "y": 40,
+  "state": [
+   "VAR_MAP_SCENE_ROUTE16=1"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     200
+    ],
+    [
+     0,
+     800
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route17_Frlg",
+  "x": 17,
+  "y": 61,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 15:46"
+}
