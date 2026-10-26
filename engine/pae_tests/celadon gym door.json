@@ -1,0 +1,39 @@
+{
+ "note": "Into Erika's Gym from its garden.",
+ "created": "2026-10-26 17:00",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 12,
+  "y": 36,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Gym_Frlg",
+  "x": 6,
+  "y": 18,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 13:51"
+}

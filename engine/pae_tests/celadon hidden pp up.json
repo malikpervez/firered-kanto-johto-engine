@@ -1,0 +1,84 @@
+{
+ "note": "Find the hidden PP Up in the walled garden's corner.",
+ "created": "2026-10-26 17:00",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 54,
+  "y": 11,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_HIDDEN_ITEM_CELADON_CITY_PP_UP"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Frlg",
+  "x": 54,
+  "y": 11,
+  "in_battle": false,
+  "flags": {
+   "FLAG_HIDDEN_ITEM_CELADON_CITY_PP_UP": true
+  }
+ },
+ "accepted": "2026-10-26 13:51"
+}

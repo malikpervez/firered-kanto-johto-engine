@@ -716,7 +716,7 @@ static const struct CreditsOverworldCmd sOverworldCmd_Route10[] = {
 };
 
 static const struct CreditsOverworldCmd sOverworldCmd_CeladonCity[] = {
-    CREDITSOVWLDLOADMAP(MAP_CELADON_CITY, 48, 16, 1),
+    CREDITSOVWLDLOADMAP(MAP_CELADON_CITY, 49, 21, 1),
     CREDITSOVWLDSCROLL(-1, 0, 0x0500), // Scroll left
     CREDITSOVWLDEND
 };

@@ -2683,13 +2683,6 @@
       "bytes": 8,
       "sha256": "0c2871e576a63043efd779a5664d84741cc6512c07b03ae39e8deb07b064d3a4"
     },
-    "CeladonCity_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/CeladonCity_Frlg/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
     "EcruteakCity_hns_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/EcruteakCity_hns/border.bin",
@@ -2910,13 +2903,6 @@
     "ViridianForest_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/ViridianForest_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
-    "CeladonCity_Frlg_FireRedGeometry_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/CeladonCity_hns/border.bin",
       "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"

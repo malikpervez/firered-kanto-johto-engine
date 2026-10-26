@@ -455,7 +455,14 @@ STEPS = [
     dict(name="route7", what="Out of the west hut onto Route 7", walk=(13, 11),
          inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route7_Frlg", xy=(9, 10))),
     dict(name="celadon", what="West along Route 7's road into Celadon", walk=(0, 11), inputs=f"LEFT*{hold(1)}, wait 200",
-         expect=dict(map="CeladonCity_Frlg", xy=(59, 13))),
+         expect=dict(map="CeladonCity_Frlg", xy=(59, 21))),
+    dict(name="celadon-center", what="West along the boulevard into Celadon's Pokémon Center", walk=(49, 19),
+         inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="CeladonCity_PokemonCenter_1F_Frlg", xy=(7, 8))),
+    dict(name="celadon-heal", what="The nurse heals the team (Celadon's Center becomes where you wake after a "
+         "blackout)", inputs="wait 30, UP*50, wait 20, UP*4, wait 20, A*4, wait 100, A*4, wait 100, A*4, wait 400, "
+         + B(6) + "wait 100", expect=dict(map="CeladonCity_PokemonCenter_1F_Frlg", xy=(7, 4))),
+    dict(name="celadon-leave-center", what="Back out to the boulevard",
+         inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250", expect=dict(map="CeladonCity_Frlg", xy=(49, 19))),
 ]
 
 

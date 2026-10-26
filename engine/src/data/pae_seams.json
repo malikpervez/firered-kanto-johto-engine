@@ -1,6 +1,7 @@
 {
  "CeladonCity_Frlg": [
-  "Route7_Frlg"
+  "Route7_Frlg",
+  "Route16_Frlg"
  ],
  "CeruleanCity_Frlg": [
   "Route4_Frlg",
@@ -32,6 +33,9 @@
  "Route12_Frlg": [
   "Route11_Frlg",
   "LavenderTown_Frlg"
+ ],
+ "Route16_Frlg": [
+  "CeladonCity_Frlg"
  ],
  "Route1_Frlg": [
   "PalletTown_Frlg",

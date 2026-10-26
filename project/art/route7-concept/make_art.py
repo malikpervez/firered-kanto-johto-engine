@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""Route 7 after its concept (draw_plan.py and plan_stage1.txt): the short park road from Celadon's east street to
-Saffron's west gate (see draw_plan.py). It is 30x24 blocks (old Route 7 was 20x28); its joins: Celadon's street the
-left edge at rows 10-13 (Celadon's 12-15, offset -2), Saffron beyond the right edge (offset -18), whose gate door
+"""Route 7 after its concept (draw_plan.py and plan_stage1.txt): the short park road from Celadon's boulevard to
+Saffron's west gate (see draw_plan.py). It is 30x24 blocks (old Route 7 was 20x28); its joins: Celadon's boulevard
+the left edge at rows 10-13 (Celadon's 20-23, offset -10), Saffron beyond the right edge (offset -18), whose gate door
 (Saffron row 27) is level with the gate's door here (row 9), as it was with the old route's (row 12, offset -15).
 
 The pieces: the kit's, Viridian's pond keeper's house (the Underground Path's hut) in Viridian's houses' palette
 (bank 9), and Route 2's south forest gate (Saffron's gate) in its own palette (bank 7). Bank 8 is the kit's plants
-palette; 10-12 stay free for the seam to old Celadon. Old Celadon has no free slot for this route's strip, only tile
-slots it never shows (106), so the strip it shows (the west seven columns) is forest and road only (KR-54).
+palette; 10-12 stay free for seams to old maps (Celadon is from the kit now: their seam needs none).
 
 Run from the repository root:  python3 project/art/route7-concept/make_art.py
 It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to itself;
@@ -38,7 +37,6 @@ BUILDINGS = {"U": (ART / "viridian-concept/buildings/house_pond_keeper", HOUSE_B
              "F": (ART / "route2-concept/buildings/forest_gate_south", GATE_BANK,
                    ["MB_ANIMATED_DOOR", "MB_ANIMATED_DOOR"])}
 ROAD = {(x, y) for y in range(10, 14) for x in range(0, 23)}
-CELADON_STRIP = 7  # the columns old Celadon draws of this route
 
 
 def load(letter: str) -> tuple[buildings.Building, list[tuple[int, int]]]:
@@ -86,18 +84,17 @@ def reachable(g, starts, blocked=frozenset()) -> set[tuple[int, int]]:
 
 
 def check(g, d) -> None:
-    """The route's rules: only Celadon's street opens onto the edges (the gate is a building, Saffron reached through
+    """The route's rules: only Celadon's boulevard opens onto the edges (the gate is a building, Saffron reached through
     it); no block you can walk to is within 7 of the right edge (the camera would show old Saffron, which has no seam);
-    everything walkable is reached from Celadon; the road to the gate is all cobbles; the strip old Celadon draws is
-    forest and road only (it has room for little); every door can be walked into from below, the sign read."""
+    everything walkable is reached from Celadon; the road to the gate is all cobbles; every door can be walked into
+    from below, the sign read."""
     edge = {(x, y) for y in range(MAP_H) for x in range(MAP_W) if x in (0, MAP_W - 1) or y in (0, MAP_H - 1)}
-    assert {xy for xy in edge if g[xy[1]][xy[0]] not in SOLID} == set(WEST), "only Celadon's street opens"
+    assert {xy for xy in edge if g[xy[1]][xy[0]] not in SOLID} == set(WEST), "only Celadon's boulevard opens"
     walk = {(x, y) for y in range(MAP_H) for x in range(MAP_W) if g[y][x] not in SOLID}
     assert max(x for x, _ in walk) <= MAP_W - 8, "a block within 7 of the right edge: old Saffron would show"
     every = reachable(g, WEST)
     assert walk <= every, f"blocks you can't reach: {sorted(walk - every)[:8]}"
     assert all(g[y][x] == "=" for x, y in ROAD), "the road isn't all cobbles"
-    assert {g[y][x] for y in range(MAP_H) for x in range(CELADON_STRIP)} == {"T", "="}, "Celadon's strip: forest, road"
     for letter in BUILDINGS:
         for x, y in d[letter]:
             assert (x, y + 1) in every, f"the door of {letter} at ({x},{y}) can't be walked into"

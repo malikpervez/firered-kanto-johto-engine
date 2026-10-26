@@ -1,0 +1,84 @@
+{
+ "note": "Pick up the Ether in the walled garden.",
+ "created": "2026-10-26 17:00",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 51,
+  "y": 9,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_HIDE_CELADON_CITY_ETHER"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Frlg",
+  "x": 51,
+  "y": 9,
+  "in_battle": false,
+  "flags": {
+   "FLAG_HIDE_CELADON_CITY_ETHER": true
+  }
+ },
+ "accepted": "2026-10-26 13:51"
+}

@@ -1,0 +1,39 @@
+{
+ "note": "Into the Department Store by its west door.",
+ "created": "2026-10-26 17:00",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 10,
+  "y": 20,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_DepartmentStore_1F_Frlg",
+  "x": 2,
+  "y": 14,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 13:51"
+}
