@@ -1,0 +1,70 @@
+{
+ "note": "East through the west field's grass into Brent's line: he sees you.",
+ "created": "2026-10-26 08:28",
+ "start": {
+  "map": "Route9_Frlg",
+  "x": 11,
+  "y": 19,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_WARTORTLE lv40 MOVE_WATER_GUN",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     44
+    ],
+    [
+     0,
+     250
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route9_Frlg",
+  "x": 13,
+  "y": 19,
+  "in_battle": true
+ }
+}

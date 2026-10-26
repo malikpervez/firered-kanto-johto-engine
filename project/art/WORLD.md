@@ -21,13 +21,15 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Pewter City | 52×44 | 52×44 | kit + `gTileset_PewterConcept` | down: Route 2 (offset 14), right: Route 3 (offset 15) |
 | Route 3 | 84×20 | 84×20 | kit + `gTileset_Route3Concept` | left: Pewter City (offset −15), up: Route 4 (offset 60) |
 | Route 4 | 108×20 | 108×20 | kit + `gTileset_Route4Concept` | down: Route 3 (offset −60), right: Cerulean City (offset −7) |
-| Cerulean City | 58×51 | 58×51 | kit + `gTileset_CeruleanConcept` | up: Route 24 (offset 25), down: Route 5 (offset −8), left: Route 4 (offset 7), right: Route 9 (offset −6) |
+| Cerulean City | 58×51 | 58×51 | kit + `gTileset_CeruleanConcept` | up: Route 24 (offset 25), down: Route 5 (offset −8), left: Route 4 (offset 7), right: Route 9 (offset 20) |
 | Route 24 | 30×22 | 30×22 | kit (and an empty `gTileset_Route24Concept`) | down: Cerulean City (offset −25), up: Route 25 (offset 0) |
 | Route 25 | 70×24 | 112×35 | kit + `gTileset_Route25Concept` | down: Route 24 (offset 0) |
 | Route 5 | 50×36 | 68×46 | kit + `gTileset_Route5Concept` | up: Cerulean City (offset 8), down: Saffron City's twin `SaffronCity_Connection` (offset −4) |
 | Route 6 | 56×32 | 63×36 | kit + `gTileset_Route6Concept` | up: `SaffronCity_Connection` (offset 12), down: Vermilion City (offset 8) |
 | Vermilion City | 60×42 | 71×78 | kit + `gTileset_VermilionConcept` | up: Route 6 (offset −8), right: Route 11 (offset −3) |
 | Route 11 | 60×32 | 72×40 | kit + `gTileset_Route11Concept` | left: Vermilion City (offset 3), right: Route 12 (offset −27) |
+| Route 9 | 60×28 | 65×60 | kit + `gTileset_Route9Concept` | left: Cerulean City (offset −20), right: Route 10 (offset 0) |
+| Route 10 | 38×60 | 38×90 | kit + `gTileset_Route10Concept` | left: Route 9 (offset 0), down: Lavender Town (offset 4) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -47,7 +49,9 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 4 ↔ Cerulean | Route 4 rows 10–13 = Cerulean rows 17–20 | the road east into town |
 | Cerulean ↔ Route 24 | Cerulean 41–44 = Route 24 16–19 | Nugget Bridge |
 | Route 24 ↔ Route 25 | Route 24 7–10, 16–19, 24–25 = Route 25 the same | the west path, the bridge and the east path (Route 25's bottom row, 23) |
-| Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 34–36 | the road east (Route 9 isn't rebuilt; its edge opens on those three rows only) |
+| Cerulean ↔ Route 9 | Cerulean rows 28–30 = Route 9 rows 8–10 | the road east into Route 9's forest neck |
+| Route 9 ↔ Route 10 | Route 9 rows 17–19 = Route 10 rows 17–19 | the road out into Route 10's clearing |
+| Route 10 ↔ Lavender | Route 10 16–20 = Lavender 12–16 | the valley road down into Lavender (Lavender isn't rebuilt) |
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck |
 | Route 5 ↔ Saffron | Route 5 24–25 = Saffron 28–29 | not walked across: the gate's top door on Route 5 (24–25,30) leads through the gatehouse to Saffron's own gate door below it (28–29,5). Old Saffron draws its own copy of the gatehouse at its top |
 | Saffron ↔ Route 6 | Saffron 28–29 = Route 6 40–41 | not walked across: Saffron's south gate door (28–29,46) leads through the gatehouse to its door on Route 6 (40–41,5) |
@@ -76,7 +80,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 6 | Vermilion City | pae (both from the kit: Vermilion's own palettes fit in Route 6's banks 10–12, exactly). None with old Saffron (KR-34) |
 | Vermilion City | Route 6, Route 11 | pae (both from the kit: their seams fit exactly). Old Vermilion's hand-made seam is gone |
 | Route 11 | Vermilion City, Route 12 | pae: Route 12's palettes fit in banks 10–11. Old Route 12 has no room for two of Route 11's palettes and draws them in its nearest colours (KR-39). Old Route 11's hand-made seam is gone |
-| Route 9 | Cerulean City | pae (the old map), beside its hand-made seam |
+| Route 9 | Cerulean City, Route 10 | pae (all three from the kit: only each other's own tiles, no palettes). Old Route 9's hand-made seam is gone |
+| Route 10 | Route 9, Lavender Town | pae: old Lavender's palettes fit in banks 10–12 but one, drawn in its nearest colours (KR-44) |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town | pae |
@@ -187,3 +192,10 @@ Check these whenever a map is rebuilt, moved or resized:
   their facings and sights, and the walkers keep near their places (`build.sh`). The Friends' clearing stayed
   round 25,7. Old Route 11's hand-made seam was removed from `kanto_connection_seam.c`; old Route 12 got a pae
   seam for it, two of its palettes nearest-matched (KR-39).
+- Routes 9 and 10 rebuilt together (old Route 10 had no tile slot for a seam to the new Route 9). Route 9 is smaller
+  (60×28, was 65×60, its top half mountain) and its rows moved: Cerulean's offset to it is now 20 (was −6), and the
+  road out at rows 17–19 meets Route 10's 17–19 (offset 0, was 26). Its tree to cut moved 9 blocks in (KR-45), and
+  Cerulean's clone of it with it (67,29). Route 10 is shorter (38×60, was 38×90), as wide, so Lavender's offset (4)
+  didn't change. Every warp kept its number: Rock Tunnel's two mouths, the Center, the Power Plant's door; its back
+  door's way out is on the island (KR-46). Route 10's heal spot moved with its Center (14,16, its old-map override
+  dropped). Old Route 9's hand-made seam was removed from `kanto_connection_seam.c` (Route 10 had none).

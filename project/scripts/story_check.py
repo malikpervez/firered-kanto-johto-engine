@@ -362,6 +362,28 @@ STEPS = [
     dict(name="leave-cerulean-gym", what="Back out of the Gym the way you came (its mat: press down on it)", via=[(10, 8), (10, 10), (5, 10),
          (5, 13), (7, 13), (7, 14), (6, 15), (6, 17)], walk=(7, 17), inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 300",
          expect=dict(map="CeruleanCity_Frlg", xy=(47, 37))),
+    dict(name="route9", what="East out of Cerulean onto Route 9", walk=(57, 29), inputs=f"RIGHT*{hold(1)}, wait 200",
+         expect=dict(map="Route9_Frlg", xy=(0, 9))),
+    dict(name="route9-alicia", what="Cut the tree in the neck and on along the gorge into the picnicker Alicia's line: "
+         "she battles (in one step: a checkpoint's reload would bring the tree back). The team is set here: one Kingler "
+         "at level 50 that knows Surf and Cut (the captain's HM01 isn't taught in the steps; the Blastoise's Water Gun "
+         "had run down; one Pokémon, so no battle asks whether to change Pokémon)",
+         state=["CLEAR_TEAM", "SPECIES_KINGLER lv50 MOVE_SURF MOVE_CUT"], walk=(8, 9),
+         inputs="RIGHT*4, wait 30, " + A(4, 130) + "wait 300, " + f"RIGHT*{hold(5)}, wait 300, " + A(160) + B(12)
+                + "wait 300", expect=dict(map="Route9_Frlg", xy=(13, 9))),
+    dict(name="route9-chris", what="On along the gorge into the camper Chris's line: he battles", walk=(18, 9),
+         inputs=f"RIGHT*{hold(1)}, wait 300, " + A(160) + B(12) + "wait 300", expect=dict(map="Route9_Frlg", xy=(19, 9))),
+    dict(name="route10", what="Along Route 9's road round the outcrop (in no other trainer's sight) onto Route 10",
+         walk=(59, 18), inputs=f"RIGHT*{hold(1)}, wait 200", expect=dict(map="Route10_Frlg", xy=(0, 18))),
+    dict(name="route10-center", what="Up to Route 10's Pokémon Center", walk=(14, 16), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="Route10_PokemonCenter_1F_Frlg", xy=(7, 8))),
+    dict(name="route10-heal", what="The nurse heals the team (Route 10's Center becomes where you wake after a "
+         "blackout)", inputs="wait 30, UP*50, wait 20, UP*4, wait 20, A*4, wait 100, A*4, wait 100, A*4, wait 400, "
+         + B(6) + "wait 100", expect=dict(map="Route10_PokemonCenter_1F_Frlg", xy=(7, 4))),
+    dict(name="route10-leave-center", what="Back out to the clearing",
+         inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250", expect=dict(map="Route10_Frlg", xy=(14, 16))),
+    dict(name="rock-tunnel", what="Into Rock Tunnel's north mouth", walk=(8, 9), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="RockTunnel_1F_Frlg", xy=(17, 2))),
 ]
 
 

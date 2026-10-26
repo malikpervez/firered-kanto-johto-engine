@@ -1,0 +1,85 @@
+{
+ "note": "Find the Ether hidden in the west field.",
+ "created": "2026-10-26 08:28",
+ "start": {
+  "map": "Route9_Frlg",
+  "x": 18,
+  "y": 24,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_HIDDEN_ITEM_ROUTE9_ETHER"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route9_Frlg",
+  "x": 18,
+  "y": 24,
+  "in_battle": false,
+  "flags": {
+   "FLAG_HIDDEN_ITEM_ROUTE9_ETHER": true
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "note": "Up into Rock Tunnel's south mouth at the mountains' foot.",
+ "created": "2026-10-26 08:22",
+ "start": {
+  "map": "Route10_Frlg",
+  "x": 10,
+  "y": 47,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "RockTunnel_1F_Frlg",
+  "x": 18,
+  "y": 37,
+  "in_battle": false
+ }
+}

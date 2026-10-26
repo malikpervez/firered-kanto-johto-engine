@@ -1,0 +1,40 @@
+{
+ "note": "Out of the Power Plant's back door onto its island's west shore.",
+ "created": "2026-10-26 08:22",
+ "start": {
+  "map": "PowerPlant_Frlg",
+  "x": 2,
+  "y": 11,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route10_Frlg",
+  "x": 25,
+  "y": 37,
+  "in_battle": false
+ }
+}
