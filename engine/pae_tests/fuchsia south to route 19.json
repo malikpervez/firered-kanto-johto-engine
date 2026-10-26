@@ -1,0 +1,39 @@
+{
+ "note": "Down the beach path onto Route 19.",
+ "created": "2026-10-27 05:00",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 23,
+  "y": 36,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route19_Frlg",
+  "x": 11,
+  "y": 1,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 19:11"
+}

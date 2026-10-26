@@ -1,0 +1,39 @@
+{
+ "note": "Into the house on the shore street from the street.",
+ "created": "2026-10-27 05:00",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 12,
+  "y": 32,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_House1_Frlg",
+  "x": 4,
+  "y": 8,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 19:11"
+}

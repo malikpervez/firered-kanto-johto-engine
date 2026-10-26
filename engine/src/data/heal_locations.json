@@ -249,7 +249,7 @@
     {
       "id": "HEAL_LOCATION_FUCHSIA_CITY",
       "map": "MAP_FUCHSIA_CITY",
-      "x": 25,
+      "x": 19,
       "y": 32,
       "respawn_map": "MAP_FUCHSIA_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_FUCHSIA_NURSE"

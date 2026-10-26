@@ -10,7 +10,9 @@
   "Route9_Frlg"
  ],
  "FuchsiaCity_Frlg": [
-  "Route18_Frlg"
+  "Route18_Frlg",
+  "Route19_Frlg",
+  "Route15_Frlg"
  ],
  "LavenderTown_Frlg": [
   "Route10_Frlg",
@@ -37,6 +39,9 @@
   "Route11_Frlg",
   "LavenderTown_Frlg"
  ],
+ "Route15_Frlg": [
+  "FuchsiaCity_Frlg"
+ ],
  "Route16_Frlg": [
   "CeladonCity_Frlg",
   "Route17_Frlg"
@@ -47,6 +52,9 @@
  ],
  "Route18_Frlg": [
   "Route17_Frlg",
+  "FuchsiaCity_Frlg"
+ ],
+ "Route19_Frlg": [
   "FuchsiaCity_Frlg"
  ],
  "Route1_Frlg": [

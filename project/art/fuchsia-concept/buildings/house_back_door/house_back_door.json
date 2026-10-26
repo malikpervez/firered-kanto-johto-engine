@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "id": "house_back_door",
+  "type": "building",
+  "image": "house_back_door.png",
+  "image_size_px": [
+    64,
+    64
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 4,
+    "height": 4
+  },
+  "palette": "viridian_houses_shared",
+  "palette_file": "../palette.gpl",
+  "transparent_index": 0,
+  "door_block": [
+    1,
+    3
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "collision_rows": [
+    "####",
+    "####",
+    "####",
+    "#D##"
+  ],
+  "stage1_placement": {
+    "top_left_block": [
+      8,
+      14
+    ],
+    "door_map_block": [
+      9,
+      17
+    ]
+  },
+  "door": {
+    "image": "house_back_door_door.png",
+    "sheet_size_px": [
+      48,
+      32
+    ],
+    "frame_size_px": [
+      16,
+      32
+    ],
+    "frame_count": 3,
+    "frame_order": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "anchor_top_left_px": [
+      16,
+      32
+    ],
+    "anchor_top_left_block": [
+      1,
+      2
+    ],
+    "opening_rect_in_frame_px": {
+      "x": 2,
+      "y": 11,
+      "width": 12,
+      "height": 20
+    },
+    "threshold_row_in_frame": 31,
+    "recommended_frame_ms": 100,
+    "loop": false,
+    "composition": "Replace the entire 16x32 door rectangle at its anchor; retain the frame alpha.",
+    "closed_frame_matches_building_crop": true,
+    "story_lock": "Locked for now; retain the existing game event lock.",
+    "preview_4x": "house_pond_keeper_door_4x.png",
+    "locked": true
+  },
+  "tile_economy": {
+    "tile_size_px": [
+      8,
+      8
+    ],
+    "unique_static_no_flips": 55,
+    "unique_static_plus_door_frames_no_flips": 64,
+    "limit": 64,
+    "includes_transparent_tile": true,
+    "shared_pool": "../tile_pool/shared_8x8.json"
+  },
+  "notes": [
+    "All footprint blocks except the door are solid, including blocks with some transparent pixels.",
+    "No lawn or ground pixels are included.",
+    "Every RGB channel is a multiple of 8; alpha is 0 or 255."
+  ],
+  "design": "Roof-only revision matching the approved Pallet v0.5 planes, raised ridge, receding courses and thick eaves. Original facade and eave shadow retained exactly.",
+  "body_bounds_px": {
+    "x": 2,
+    "y": 32,
+    "width": 60,
+    "height": 32
+  },
+  "preview_4x": "house_pond_keeper_4x.png",
+  "edit_scope": {
+    "editable_rectangle_px": [
+      0,
+      0,
+      64,
+      32
+    ],
+    "preserved_rectangle_px": [
+      0,
+      32,
+      64,
+      32
+    ],
+    "eave_shadow_preserved": true
+  },
+  "name": "house_back_door",
+  "door_blocks": [
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "source": "Viridian's house_pond_keeper (approved pack), a dormer door added in its roof's back slope by fuchsia-concept/fuchsia_buildings.py: the back door, block (1,0), entered walking south"
+}

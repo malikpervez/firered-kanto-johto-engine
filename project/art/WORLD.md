@@ -37,6 +37,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 16 | 56×44 | 64×52 | kit + `gTileset_Route16Concept` | right: Celadon City (offset 2), down: Route 17 (offset 0) |
 | Route 17 | 36×120 | 33×158 | kit + `gTileset_Route17Concept` | up: Route 16 (offset 0), down: Route 18 (offset 6) |
 | Route 18 | 60×20 | 60×20 | kit + `gTileset_Route18Concept` | up: Route 17 (offset −6), right: Fuchsia City (offset −10) |
+| Fuchsia City | 48×40 | 48×40 | kit + `gTileset_FuchsiaConcept` | left: Route 18 (offset 10), right: Route 15 (offset 15), down: Route 19 (offset 12) |
 | Saffron City | 60×48 | 66×55 | kit + `gTileset_SaffronConcept` | none compiled (KR-53): Routes 5, 6, 7 and 8 join its twin `SaffronCity_Connection`, still the old layout (KR-59); its four gatehouses are the ways out |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
@@ -66,7 +67,9 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Celadon ↔ Route 16 | Celadon rows 20–23 = Route 16 rows 22–25 | the boulevard west onto Route 16's road |
 | Route 16 ↔ Route 17 | Route 16 12–17 = Route 17 12–17 | the road down from the plaza onto Cycling Road's start |
 | Route 17 ↔ Route 18 | Route 17 14–22 = Route 18 8–16 | the road from Cycling Road's finish down to Route 18's shore, between the same fences |
-| Route 18 ↔ Fuchsia | Route 18 rows 8–10 = Fuchsia rows 18–20 | the road east out of the woods into Fuchsia (Fuchsia isn't rebuilt) |
+| Route 18 ↔ Fuchsia | Route 18 rows 8–10 = Fuchsia rows 18–20 | the road east out of the woods onto Fuchsia's main street |
+| Fuchsia ↔ Route 15 | Fuchsia rows 20–23 = Route 15 rows 5–8 | the main street east onto Route 15's road (Route 15 isn't rebuilt) |
+| Fuchsia ↔ Route 19 | Fuchsia 19–28 = Route 19 7–16 | the beach path down onto Route 19's beach (Route 19 isn't rebuilt) |
 | Saffron's gates | not joins: warps | each avenue ends at a gatehouse whose door is a warp into the gatehouse between Saffron and its route: north (29–30,2) to Route 5's, west (2–3,21) to Route 7's, east (56–57,21) to Route 8's, south (29–30,45, entered walking south) to Route 6's |
 | Route 7 ↔ Saffron | Route 7 row 9 = Saffron row 27 | not walked across: the gate's doors on Route 7 (18–19,9) lead through the gatehouse to Saffron's own west gate door |
 | Lavender ↔ Route 12 | Lavender 13–15 = Route 12 11–13 | the road south from the square onto Route 12's sandy path (Route 12 isn't rebuilt; KR-50, KR-51) |
@@ -107,7 +110,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Celadon City | Route 16, Route 7 | pae (all three from the kit: 2 pieces for Route 16's strip, none for Route 7's; pae PR #30) |
 | Route 16 | Celadon City, Route 17 | pae (all three from the kit; with Route 17 each strip is the kit's own forest and road, so no seam at all). Old Route 16's hand-made piece for Route 17 is gone |
 | Route 17 | Route 16, Route 18 | pae (all three from the kit: each strip is the kit's own ground, so no seam at all) |
-| Route 18 | Route 17, Fuchsia City | pae: old Fuchsia's colours packed into slots 5 and 9–12 (72 pieces); old Fuchsia draws Route 18's right seven columns (forest, lawn, road and hedges only) in its slots 4 and 11 (43 pieces) |
+| Route 18 | Route 17, Fuchsia City | pae (all three from the kit: 37 pieces for Fuchsia's own metatiles in its strip, the Gym's, in bank 9; none for Route 17) |
+| Fuchsia City | Route 18, Route 15, Route 19 | pae: old Routes 15's and 19's palettes in banks 10–12 (33 pieces); they draw Fuchsia's right seven columns and bottom seven rows (forest, lawn, road, dirt and hedges only), 63 pieces each |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town | pae |
@@ -279,3 +283,9 @@ Check these whenever a map is rebuilt, moved or resized:
   gatehouse's west doorway (0) and east one (1), now Route 16's Cycling Road gatehouse. Its rockers, Pokémon and
   signs moved (the people keep their order). Route 17's seam for old Route 18 is gone (both are the kit's now); old
   Fuchsia got a pae seam for it.
+- Fuchsia rebuilt at its old size (48×40) with its joins where they were: Route 18's road at rows 18–20, Route 15's at
+  rows 20–23, Route 19's beach path at columns 19–28. Every warp kept its number: the Safari Zone's gate lodge (0), the
+  Warden's house (1), the Mart (2), the Safari Zone's office (3), the Gym (4), the houses (5, 10), the Center (6) and
+  the house with the pond garden (7, and its back door 8 and 9, one block). The people and Pokémon kept their order;
+  all of them moved. The heal spot moved with the Center (19,32), the Friends' camp to the park (round 8,24) and the
+  credits' view to the plaza (23,10). Old Fuchsia had no hand-made seam; old Routes 15 and 19 got pae seams for it.

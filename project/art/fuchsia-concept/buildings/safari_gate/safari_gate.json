@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "id": "safari_gate",
+  "type": "building",
+  "image": "safari_gate.png",
+  "image_size_px": [
+    112,
+    80
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 7,
+    "height": 5
+  },
+  "transparent_index": 0,
+  "door_blocks": [
+    [
+      3,
+      4
+    ]
+  ],
+  "door": {
+    "image": "safari_gate_door.png",
+    "sheet_size_px": [
+      48,
+      32
+    ],
+    "frame_size_px": [
+      16,
+      32
+    ],
+    "frame_count": 3,
+    "frame_order": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "closed_frame_matches_building_crop": true
+  },
+  "name": "safari_gate",
+  "source": "drawn by fuchsia-concept/fuchsia_buildings.py"
+}

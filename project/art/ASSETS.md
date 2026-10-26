@@ -26,8 +26,8 @@ There are two kinds of art:
 | Pond water, "Gentle ripples" | `kit/pond/` | option C | ponds (`~`, with lily pads `v` and reeds `r` drawn over it) |
 | Sea, "Staggered swells, reworked rocks" | `kit/sea/` | option B | the sea (`s`) and sea rocks (`q`, `Q`): Pallet, Route 25, Route 17 (its inside corners, the pack's `in_*` pieces, in the kit since Route 17) |
 | Tall grass | `kit/tall_grass/` | variants B and C (made with another AI from a brief) | tall grass (`g`) |
-| Pokémon Center | `kit/buildings/pokemon_center/` | v0.1, approved | every town with a Center: Viridian, Pewter, Route 4, Cerulean, Vermilion, Route 10, Lavender, Celadon, Saffron |
-| Poké Mart | `kit/buildings/poke_mart/` | v0.1, approved | Viridian, Pewter, Cerulean, Vermilion, Lavender, Saffron |
+| Pokémon Center | `kit/buildings/pokemon_center/` | v0.1, approved | every town with a Center: Viridian, Pewter, Route 4, Cerulean, Vermilion, Route 10, Lavender, Celadon, Saffron, Fuchsia |
+| Poké Mart | `kit/buildings/poke_mart/` | v0.1, approved | Viridian, Pewter, Cerulean, Vermilion, Lavender, Saffron, Fuchsia |
 | Pallet houses (Red's, Blue's) | `pallet-concept/buildings/` | v0.5, approved | Pallet |
 | Viridian houses (roofs) | `viridian-concept/buildings/` | v0.1 (roof revision of the Stage 2 houses) | see below: these three houses stand for most of Kanto's buildings |
 | Viridian Gym, trainer school | `viridian-concept/buildings/` | Stage 2 | the Gym: Viridian, Cerulean, Vermilion (and recoloured as Pewter's Gym). The school: Viridian, Cerulean, Vermilion, and Saffron's Pokémon Trainer Fan Club |
@@ -38,9 +38,9 @@ The packs reused for buildings they weren't drawn for:
 
 | Pack | Stands for |
 |---|---|
-| `house_family` | houses in Viridian, Pewter (three, one pack), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Celadon's restaurant; Saffron's Copycat's house |
-| `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender; Route 5's Underground Path hut |
-| `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room and its house on Lucky Lane (one pack for both); Saffron's house and Mr. Psychic's house; Route 16's house in the woods |
+| `house_family` | houses in Viridian, Pewter (three, one pack), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Celadon's restaurant; Saffron's Copycat's house; Fuchsia's Warden's house |
+| `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender, Fuchsia; Route 5's Underground Path hut; Fuchsia's Safari Zone office |
+| `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room and its house on Lucky Lane (one pack for both); Saffron's house and Mr. Psychic's house; Route 16's house in the woods; a house in Fuchsia, and (with a back door drawn in) Fuchsia's house with the pond garden |
 | `forest_gate_south` | Viridian Forest's south gate (Route 2); Saffron's south, west and east gates on Routes 6, 7 and 8 (KR-40, KR-52; Saffron's own side has its drawn gatehouses); Route 11's gatehouse to Route 12 |
 | `forest_gate_north` | Viridian Forest's north gate (Route 2); Saffron's north gate (Route 5) |
 | `east_gatehouse` | Route 2's east gatehouse |
@@ -78,6 +78,9 @@ plant (KR-47), a prize hall and a restaurant for Celadon (KR-57).
 | The Magnet Train station | `saffron_buildings.py` `station()` (folder `magnet_train_station`) | 8×4, no door | the same | Saffron | its entrance is shuttered: the attendant outside arranges the journey |
 | The Cycling Road gatehouse | `route16-concept/route16_buildings.py` `gate()` (folder `cycling_gate`) | 8×4, doorways at (0,3) and (7,3) | Saffron's buildings palette (bank 9) | Route 16 (twice: its upper and lower halls), Route 18 (in bank 7 there) | an east-west gatehouse: the left doorway is `MB_EAST_ARROW_WARP` (entered walking east), the right `MB_WEST_ARROW_WARP`; no door frames. The pack the other east-west gates could use (KR-40, KR-52, KR-60) |
 | The cycle track (Cycling Road's surface) | `route17-concept/route17_track.py` `piece()` | 1×1: 16 pieces by neighbours, inside corners, and paint (a lane line `+line`, an arrow downhill `+arrow`, a chequered line `+check`) where the plan has them | its own (`PAL`, bank 7): tarmac, a stone kerb, paint | Route 17 (`t`, `i`, `a`, `x`) | every piece is `MB_CYCLING_ROAD_PULL_DOWN` (the slope carries a rider down); a kerb wherever it meets anything but itself or the kit's cobbles |
+| The Safari Zone's gate lodge | `fuchsia-concept/fuchsia_buildings.py` `safari_gate()` | 7×5, door (3,4) | Saffron's buildings palette (bank 9) | Fuchsia | a deep thatched roof (the palette's bronze and gold), a gold-lettered signboard, log walls; Pewter Gym's door frames, the board painted out |
+| Koga's Gym | `fuchsia_buildings.py` `gym()` (folder `fuchsia_gym`) | 7×5, door (3,4) | the same | Fuchsia | a ninja house: a violet roof in two tiers, dark timber, paper screens; keeps the "GYM" board |
+| The house with the pond garden | `fuchsia_buildings.py` `house_back_door()` | 4×4, front door (1,3), back door (1,0) | Viridian's houses' (bank 7) | Fuchsia | Viridian's `house_pond_keeper` with a dormer door added in its roof's back slope, beside the chimney: the back door (`MB_SOUTH_ARROW_WARP`, entered walking south, no animation); the front door keeps the pack's frames |
 
 How each drawn building is switched off for a replacement:
 - Pewter's Gym: remove the `pewter_gym()` call in `pewter-concept/make_art.py`'s `main()`;
@@ -142,7 +145,8 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Saffron | 307 | none (no compiled joins) | 290 |
 | Route 16 | 81 | 0 | 48 |
 | Route 17 | 37 | 0 | 25 |
-| Route 18 | 26 | 148 (for old Fuchsia) | 32 |
+| Route 18 | 26 | 30 (for Fuchsia's own pieces) | 32 |
+| Fuchsia | 207 | 75 (for old Routes 15 and 19) | 138 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.
