@@ -220,8 +220,10 @@ STEPS = [
          inputs=f"DOWN*{hold(2)}, wait 120", expect=dict(map="Route4_Frlg", xy=(50, 10))),
     dict(name="cerulean", what="East along Route 4's road into Cerulean City", walk=(107, 11),
          inputs="RIGHT*20, wait 200", expect=dict(map="CeruleanCity_Frlg", xy=(0, 18))),
-    dict(name="cerulean-rival", what="Up the bridge road: Blue comes down off Nugget Bridge and battles", walk=(42, 8),
-         inputs=f"UP*{hold(1)}, wait 300, " + A(60) + B(6) + "wait 300",
+    dict(name="cerulean-rival", what="Along the street past the robbed house (its policeman in the door) and up the bridge "
+                                     "road: Blue comes down off Nugget Bridge and battles",
+         via=[(30, 24), (41, 24)], walk=(42, 8),
+         inputs=f"UP*{hold(1)}, wait 300, " + A(110) + B(10) + "wait 300",
          expect=dict(map="CeruleanCity_Frlg", xy=(42, 7), vars={"VAR_MAP_SCENE_CERULEAN_CITY_RIVAL": 1})),
 ]
 

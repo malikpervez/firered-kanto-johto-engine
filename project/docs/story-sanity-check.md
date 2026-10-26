@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-26 |
-| Game | branch `claude/kanto-route3` (Route 3 rebuilt, on `v2-main` at `36aaa2f2`) |
-| ROM | `make -j4` with the default settings. SHA-1 `14b9f51c217db5ff20fe79ad119bfa693e8e41ba`, SHA-256 `bc4ce7cd7da2cfcd0eb9feaa5487d568df0dcd135334f029cad061e599bec699` |
-| pae | `fc6d290` (pae PR #21) |
-| Last step passed | 47 `route3-north`: Brock beaten, the Running Shoes, across Route 3 onto Route 4. Steps 41–47 were run on this build, from step 40's checkpoint of the build before |
-| Replay tests | 96 of 96 pass |
+| Game | branch `claude/kanto-route4` (Route 4 and Cerulean City rebuilt, on `v2-main` at `ed1a5da0`) |
+| ROM | `make -j4` with the default settings. SHA-1 `c56e497da5c570b323af3581e31aef17b4afc435`, SHA-256 `a9274c0eab3e1e826159fc941ba4020ed88cea2247a79a1b6abdb7b464127517` |
+| pae | `69213f1` (pae PR #23) for the replay tests and steps 47–50; `06115c8` (pae PR #24: blocks and walks as the game has them) for steps 51–59 |
+| Last step passed | 59 `cerulean-rival`: through Mt. Moon (two Rockets, Miguel, the Helix Fossil), down Route 4 into Cerulean, Blue beaten on the bridge road. Steps 47–59 were run on this build, from step 46's checkpoint of the build before |
+| Replay tests | 123 of 123 pass |
 
 ## How to run it
 
@@ -105,6 +105,18 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 45 | `running-shoes` | East along the road out: Oak's aide stops you and gives you the Running Shoes | Pewter City 47,26 | `FLAG_SYS_B_DASH`, `VAR_MAP_SCENE_PEWTER_CITY` 2 |
 | 46 | `route3` | On east out of Pewter onto Route 3 | Route 3 0,10 | |
 | 47 | `route3-north` | Across Route 3 (below the trainers' lines of sight) and up the pass onto Route 4 | Route 4 11,19 | |
+| 48 | `mt-moon` | Up Route 4's road past the Pokémon Center into Mt. Moon's near mouth | Mt. Moon 1F 18,37 | |
+| 49 | `mt-moon-1f` | Across the first floor, round its trainers' lines of sight and its other ladders, down the north-west ladder | Mt. Moon B1F 3,3 | |
+| 50 | `mt-moon-b1f` | Along the first basement's passage and down to the second | Mt. Moon B2F 25,21 | |
+| 51 | `mt-moon-grunt4` | The Rocket who looks about the east passage is in the way: step beside him and beat him | Mt. Moon B2F 36,21 | |
+| 52 | `mt-moon-grunt1` | Round the rest of the basement to the Rocket in the way north; step into his line of sight and beat him | Mt. Moon B2F 12,22 | |
+| 53 | `mt-moon-miguel` | On north to the fossils: Miguel stops you and battles | Mt. Moon B2F 14,11 | `VAR_MAP_SCENE_MT_MOON_B2F` 1 |
+| 54 | `mt-moon-fossil` | Take the Helix Fossil; Miguel takes the Dome Fossil and steps aside | Mt. Moon B2F 14,8 | `FLAG_GOT_HELIX_FOSSIL` |
+| 55 | `mt-moon-b2f` | North past the fossils and round to the ladder up | Mt. Moon B1F 39,4 | |
+| 56 | `mt-moon-out` | Out of Mt. Moon's far mouth onto Route 4's high shelf | Route 4 36,7 | |
+| 57 | `route4-ledge` | East along the shelf and down its ledge (one way) | Route 4 50,10 | |
+| 58 | `cerulean` | East along Route 4's road into Cerulean City | Cerulean City 0,18 | |
+| 59 | `cerulean-rival` | Along the street past the robbed house (its policeman in the door) and up the bridge road: Blue comes down off Nugget Bridge; beat him | Cerulean City 42,7 | `VAR_MAP_SCENE_CERULEAN_CITY_RIVAL` 1 |
 
 ## What it doesn't cover
 
@@ -117,6 +129,12 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   doesn't do that.
 * **Places off the story's path**: houses, the Trainer School, the Gym (locked), Route 2's eastern detour (it needs
   Cut: the replay tests cut a tree and go through its buildings' doors), surfing.
+* **Mt. Moon's other trainers**: the walk goes round the first floor's seven and two of the second basement's Rockets
+  (it fights the two in its way, and Miguel). The Dome Fossil (it takes the Helix), the items and Mt. Moon's other
+  ladders aren't played.
+* **Cerulean's other events**: the Rocket in the robbed house's backyard, its hole, the badge house, the Bike Shop,
+  the Gym, the lass and her Slowbro in the neck, the tree to cut, the cave on its island: the replay tests play them.
+  The walk stops at Blue; Nugget Bridge (Route 24) is next.
 * **Route 3's trainers.** The walk keeps below their lines of sight (they're optional); their battles are in the replay
   tests.
 * **Viridian Forest's other trainers.** Rick and Doug can't be walked round, so their battles are played (with the
@@ -165,3 +183,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-25 | Viridian Forest rebuilt from the concept (48×60); the forest's three steps become four | **Steps 34–39 pass** `--from forest`, resumed from step 33's checkpoint (395 s). Rick and Doug can't be walked round now, so the walk battles them. Steps 1–33 weren't run on this build (the kit maps were rebuilt with the same blocks; their replay tests pass). |
 | 2026-10-26 | Pewter City rebuilt (its own concept); two new steps, the Gym guide's walk to the Gym and into it | **Steps 39–41 pass** `--from pewter`, resumed from step 38's checkpoint (26 s). Steps 1–38 weren't run on this build (Pewter changes nothing before step 39). |
 | 2026-10-26 | Route 3 rebuilt (its own concept); six new steps: Liam and Brock in Pewter's Gym, the Running Shoes, across Route 3 to Route 4 | **Steps 41–47 pass** `--from pewter-gym`, resumed from step 40's checkpoint (about 2 min). The first try stopped in the Gym: Liam saw the walk up its middle; the steps now fight him, then Brock, with a Wartortle given on entering the Gym (Pikachu's Thunderbolt doesn't touch rock types). |
+| 2026-10-26 | Route 4 and Cerulean City rebuilt (their own concepts); twelve new steps: Mt. Moon's three floors, out onto Route 4's shelf, down into Cerulean, Blue | **Steps 47–59 pass**, `--from route3-north` and resumed from each failed step's predecessor (about 12 min in all). First tries stopped: on Mt. Moon 1F a lass saw the walk (the walk now goes round every line of sight, by via blocks worked out on the map), it stepped over another ladder, and the checkpoint was saved before a ladder's fade (the steps now walk to the block before the ladder and step on); on B2F pae read the map without its block fixes and planned through rock and up a one-way edge (pae PR #24 fixes both), two Rockets can't be walked round (the steps fight them), Miguel's and Blue's battles needed more presses, and the policeman stood in the street's top row (the walk takes the other). |
