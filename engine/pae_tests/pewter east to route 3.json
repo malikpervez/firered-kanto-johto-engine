@@ -1,0 +1,45 @@
+{
+ "note": "After the Running Shoes, walk east out of town onto Route 3.",
+ "created": "2026-10-26 02:45",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 48,
+  "y": 25,
+  "state": [
+   "VAR_MAP_SCENE_PEWTER_CITY=2",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     80
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route3_Frlg",
+  "x": 1,
+  "y": 10,
+  "in_battle": false
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "note": "Talk to the Gym guide from the west (facing east): he walks you to the Gym's door (9,21).",
+ "created": "2026-10-26 02:49",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 42,
+  "y": 24,
+  "state": [
+   "VAR_MAP_SCENE_PEWTER_CITY=0",
+   "!FLAG_HIDE_PEWTER_CITY_GYM_GUIDE",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     900
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     400
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Frlg",
+  "x": 9,
+  "y": 21,
+  "in_battle": false
+ }
+}

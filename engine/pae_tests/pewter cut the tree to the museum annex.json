@@ -1,0 +1,103 @@
+{
+ "note": "Cut the tree in the gap into the Museum annex's yard and walk in.",
+ "created": "2026-10-26 02:45",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 32,
+  "y": 13,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BULBASAUR lv12 MOVE_CUT MOVE_TACKLE",
+   "FLAG_BADGE02_GET",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     2
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     30
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Frlg",
+  "x": 32,
+  "y": 11,
+  "in_battle": false
+ }
+}

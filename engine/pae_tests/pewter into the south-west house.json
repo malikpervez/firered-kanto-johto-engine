@@ -1,0 +1,44 @@
+{
+ "note": "Walk up into the house in the south-west.",
+ "created": "2026-10-26 02:45",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 10,
+  "y": 34,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     24
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_House2_Frlg",
+  "x": 4,
+  "y": 8,
+  "in_battle": false
+ }
+}

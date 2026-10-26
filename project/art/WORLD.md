@@ -18,6 +18,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Viridian City | 60×52 | 56×50 | kit + `gTileset_ViridianConcept` | up: Route 2 (offset 16), left: Route 22 (offset 22), down: Route 1 (offset 2) |
 | Route 22 | 52×28 | 52×28 | kit + `gTileset_Route22Concept` | right: Viridian City (offset −22); not joined to Route 23 (below) |
 | Route 2 | 30×80 | 30×80 | kit + `gTileset_Route2Concept` | up: Pewter City (offset −14), down: Viridian City (offset −16) |
+| Pewter City | 52×44 | 52×44 | kit + `gTileset_PewterConcept` | down: Route 2 (offset 14), right: Route 3 (offset 15) |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -31,7 +32,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Pallet ↔ Route 21 North | Pallet 18–21 = Route 21 7–10 | the water channel south (surf) |
 | Viridian ↔ Route 2 | Viridian 22–27 = Route 2 6–11 | Viridian's one-block road north (the old man's) widens at the edge to meet Route 2's path |
 | Viridian ↔ Route 22 | Viridian rows 28–31 = Route 22 rows 6–9 | the road west |
-| Route 2 ↔ Pewter | Route 2 8–11 = Pewter 22–25 | the road north into Pewter's (Pewter isn't rebuilt) |
+| Route 2 ↔ Pewter | Route 2 8–11 = Pewter 22–25 | the road north becomes Pewter's main street |
+| Pewter ↔ Route 3 | Pewter rows 24–27 = Route 3 rows 9–12 | the road east (Route 3 isn't rebuilt) |
 
 When a map changes size, keep these columns where they meet (move the map's road, or change the offset), and if a
 map grows to the left or top, its neighbours' offsets change with it.
@@ -46,7 +48,8 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 1 | Pallet Town, Viridian City | pae |
 | Viridian City | Route 1, Route 2, Route 22 | pae (its hand-made seam for the old Viridian is gone) |
 | Route 2 | Viridian City, Pewter City | pae |
-| Pewter City | Route 2 | pae |
+| Pewter City | Route 2, Route 3 | pae (Route 3's strip: 39 tiles, palette slot 11) |
+| Route 3 | Pewter City | pae (the old map) |
 | Route 21 North | Pallet Town | pae |
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
@@ -59,8 +62,7 @@ beside the join) that the viewing map doesn't have. Old maps have few free: Viri
 leaves it three. So near a join with a map that isn't rebuilt yet, keep pieces with palettes of their own out of
 those 7 rows: Route 1's tall grass (bank 4) starts at row 7. Between maps from the kit, the seams use each other's
 palettes and need no slots. A strip of an old map takes slots: its tiles are copied, so pae packs their colours into
-as few slots as they fit. Old Pewter's strip uses three of its palettes (23 colours), and it takes two slots of
-Route 2 (11–12, the two Route 2 keeps free for it).
+as few slots as they fit. Old Route 3's strip takes one slot of Pewter (11, of the two it keeps free).
 
 **Route 23 isn't joined to Route 22.** The join was only seen across Route 22's top (both edges are solid: you go
 through the League gate), and Route 23's strip needs seven palettes, more than Route 22 has free. So each shows its
@@ -113,3 +115,8 @@ Check these whenever a map is rebuilt, moved or resized:
   moved; Rick, Sammy, Anthony and Charlie face another way, every trainer but Charlie sees a different distance, and
   four of its Pokémon are other species.
   The kit gained three forest corners, so every kit map was rebuilt (no layout, wall or join changed).
+- Pewter City rebuilt at the same size, so Route 2's and Route 3's joins didn't change. Its warps, people, signs and
+  hidden item moved (each warp kept its number); the heal spot moved to the new Center (29,33,
+  `src/data/heal_locations.json`). The Gym guide's and the Museum guide's walks were worked out again for the new
+  town (`pewter-concept/escort.py`). Route 3 (still the old map) got a pae seam for it. The kit gained cliffs for
+  every map (`kit/cliffs.py`).

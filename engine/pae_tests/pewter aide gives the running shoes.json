@@ -1,0 +1,231 @@
+{
+ "note": "After Brock, walk east along the road: Oak's aide stops you at his triggers and gives you the Running Shoes.",
+ "created": "2026-10-26 02:45",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 44,
+  "y": 26,
+  "state": [
+   "VAR_MAP_SCENE_PEWTER_CITY=1",
+   "!FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     60
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_SYS_B_DASH"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Frlg",
+  "x": 47,
+  "y": 26,
+  "in_battle": false,
+  "flags": {
+   "FLAG_SYS_B_DASH": true
+  }
+ }
+}

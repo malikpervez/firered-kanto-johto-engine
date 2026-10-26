@@ -1,0 +1,94 @@
+{
+ "note": "Walk east along the road out of town before beating Brock: the Gym guide stops you at his triggers and walks you to the Gym's door (9,21).",
+ "created": "2026-10-26 02:44",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 40,
+  "y": 26,
+  "state": [
+   "VAR_MAP_SCENE_PEWTER_CITY=0",
+   "!FLAG_HIDE_PEWTER_CITY_GYM_GUIDE",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     60
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     900
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     400
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Frlg",
+  "x": 9,
+  "y": 21,
+  "in_battle": false
+ }
+}
