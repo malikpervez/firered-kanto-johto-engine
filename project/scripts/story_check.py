@@ -188,6 +188,43 @@ STEPS = [
                                    "sight) and up the pass onto Route 4",
          via=[(14, 15), (43, 15), (50, 13), (71, 12)], walk=(71, 0), inputs="UP*12, wait 200",
          expect=dict(map="Route4_Frlg", xy=(11, 19))),
+    dict(name="mt-moon", what="Up Route 4's road past the Pokémon Center into Mt. Moon's near mouth", walk=(19, 15),
+         inputs="UP*20, wait 300", expect=dict(map="MtMoon_1F_Frlg", xy=(18, 37))),
+    dict(name="mt-moon-1f", what="Across Mt. Moon's first floor, round its trainers' lines of sight and its other "
+                                  "ladders, to the ladder down in its north-west",
+         via=[(18, 25), (26, 25), (26, 15), (35, 15), (35, 9), (18, 9), (18, 18), (11, 18), (11, 6)], walk=(6, 6),
+         inputs="LEFT*20, wait 300", expect=dict(map="MtMoon_B1F_Frlg", xy=(3, 3))),
+    dict(name="mt-moon-b1f", what="Along the first basement's passage to the ladder down to the second",
+         via=[(3, 17)], walk=(22, 17), inputs="DOWN*20, wait 300", expect=dict(map="MtMoon_B2F_Frlg", xy=(25, 21))),
+    dict(name="mt-moon-grunt4", what="Into the second basement: the Rocket who looks about the east passage is in the "
+                                     "way; step beside him and battle",
+         via=[(25, 17), (31, 17), (31, 20)], walk=(36, 20),
+         inputs=f"DOWN*{hold(1)}, wait 60, RIGHT*4, wait 20, " + A(40) + B(6) + "wait 300",
+         expect=dict(map="MtMoon_B2F_Frlg", xy=(36, 21))),
+    dict(name="mt-moon-grunt1", what="Round the rest of the basement to the Rocket in the way north; step into his line "
+                                     "of sight and beat him",
+         via=[(36, 20), (39, 20), (39, 17), (43, 17), (43, 28), (39, 28), (39, 38), (12, 38)],
+         walk=(12, 23), inputs=f"UP*{hold(1)}, wait 200, " + A(40) + B(6) + "wait 300",
+         expect=dict(map="MtMoon_B2F_Frlg", xy=(12, 22))),
+    dict(name="mt-moon-miguel", what="On north to the fossils: Miguel stops you and battles", via=[(14, 22)],
+         walk=(14, 12), inputs=f"UP*{hold(1)}, wait 200, " + A(90) + B(8) + "wait 300",
+         expect=dict(map="MtMoon_B2F_Frlg", xy=(14, 11), vars={"VAR_MAP_SCENE_MT_MOON_B2F": 1})),
+    dict(name="mt-moon-fossil", what="Take the Helix Fossil; Miguel takes the Dome Fossil (and steps out of the way)",
+         walk=(14, 8), inputs="UP*4, wait 30, " + A(10, 90) + "wait 300",
+         expect=dict(map="MtMoon_B2F_Frlg", xy=(14, 8), flags={"FLAG_GOT_HELIX_FOSSIL": True})),
+    dict(name="mt-moon-b2f", what="North past the fossils and round to the ladder up", via=[(14, 6), (4, 6), (4, 11)],
+         walk=(5, 11), inputs="UP*20, wait 300", expect=dict(map="MtMoon_B1F_Frlg", xy=(39, 4))),
+    dict(name="mt-moon-out", what="Up the ladder's passage and out of Mt. Moon's far mouth onto Route 4's high shelf",
+         walk=(44, 4), inputs="RIGHT*20, wait 400", expect=dict(map="Route4_Frlg", xy=(36, 7))),
+    dict(name="route4-ledge", what="East along the shelf and down its ledge to the road (one way)", walk=(50, 8),
+         inputs=f"DOWN*{hold(2)}, wait 120", expect=dict(map="Route4_Frlg", xy=(50, 10))),
+    dict(name="cerulean", what="East along Route 4's road into Cerulean City", walk=(107, 11),
+         inputs="RIGHT*20, wait 200", expect=dict(map="CeruleanCity_Frlg", xy=(0, 18))),
+    dict(name="cerulean-rival", what="Along the street past the robbed house (its policeman in the door) and up the bridge "
+                                     "road: Blue comes down off Nugget Bridge and battles",
+         via=[(30, 24), (41, 24)], walk=(42, 8),
+         inputs=f"UP*{hold(1)}, wait 300, " + A(110) + B(10) + "wait 300",
+         expect=dict(map="CeruleanCity_Frlg", xy=(42, 7), vars={"VAR_MAP_SCENE_CERULEAN_CITY_RIVAL": 1})),
 ]
 
 

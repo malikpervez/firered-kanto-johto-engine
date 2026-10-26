@@ -1,0 +1,38 @@
+{
+ "note": "Before the S.S. Ticket the policeman stands in the robbed house's door.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 35,
+  "y": 24,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     40
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_Frlg",
+  "x": 35,
+  "y": 24,
+  "in_battle": false
+ }
+}

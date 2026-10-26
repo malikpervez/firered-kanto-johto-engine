@@ -1,0 +1,82 @@
+{
+ "note": "Up the backyard's way out: the Rocket's trigger starts his battle.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 38,
+  "y": 22,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_WARTORTLE lv40 MOVE_WATER_GUN",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     64
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     500
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_Frlg",
+  "x": 38,
+  "y": 18,
+  "in_battle": true
+ }
+}

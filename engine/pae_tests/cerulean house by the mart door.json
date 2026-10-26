@@ -1,0 +1,38 @@
+{
+ "note": "Into the small house by the Mart.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 32,
+  "y": 42,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     20
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_House4_Frlg",
+  "x": 4,
+  "y": 7,
+  "in_battle": false
+ }
+}

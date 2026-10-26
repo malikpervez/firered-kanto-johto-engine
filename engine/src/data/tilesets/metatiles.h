@@ -1546,3 +1546,9 @@ const u16 gMetatileAttributes_PewterConcept[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_Route3Concept[] = INCBIN_U16("data/tilesets/secondary/route3_concept/metatiles.bin");
 const u16 gMetatileAttributes_Route3Concept[] = INCBIN_U16("data/tilesets/secondary/route3_concept/metatile_attributes.bin");
+
+const u16 gMetatiles_Route4Concept[] = INCBIN_U16("data/tilesets/secondary/route4_concept/metatiles.bin");
+const u16 gMetatileAttributes_Route4Concept[] = INCBIN_U16("data/tilesets/secondary/route4_concept/metatile_attributes.bin");
+
+const u16 gMetatiles_CeruleanConcept[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/metatiles.bin");
+const u16 gMetatileAttributes_CeruleanConcept[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/metatile_attributes.bin");

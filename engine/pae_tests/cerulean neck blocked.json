@@ -1,0 +1,38 @@
+{
+ "note": "Before the S.S. Ticket the lass and her Slowbro stand in the neck south.",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 22,
+  "y": 43,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     60
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_Frlg",
+  "x": 22,
+  "y": 44,
+  "in_battle": false
+ }
+}

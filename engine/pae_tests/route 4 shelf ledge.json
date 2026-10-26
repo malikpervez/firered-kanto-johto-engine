@@ -1,0 +1,38 @@
+{
+ "note": "Down the shelf's ledge to the road below (one way).",
+ "created": "2026-10-26 04:22",
+ "start": {
+  "map": "Route4_Frlg",
+  "x": 50,
+  "y": 8,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     40
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route4_Frlg",
+  "x": 50,
+  "y": 11,
+  "in_battle": false
+ }
+}

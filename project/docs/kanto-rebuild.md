@@ -28,9 +28,9 @@ outdoor art. They stay the old maps; their doors and warps keep working.
 |---|---|---|---|---|---|
 | – | Pallet Town, Route 1, Viridian City, Route 22, Route 2, Viridian Forest | | done | #(earlier), #36 | Rebuilt before this plan. |
 | 1 | Pewter City | 52×44 | 52×44 | #38 | The grey-stone town under the mountains; the guides' walks worked out on the map (`escort.py`). |
-| 2 | Route 3 | 84×20 | 84×20 | this PR | The mountain road: a high path with a ledge, a field of grass you can't walk round, the pass north. |
-| 3 | Route 4 | 108×20 | | | One-way ledges from Mt. Moon to Cerulean. |
-| 4 | Cerulean City | 58×51 | | | Four joins (Routes 4, 5, 9, 24); the rival on the bridge. |
+| 2 | Route 3 | 84×20 | 84×20 | #39 | The mountain road: a high path with a ledge, a field of grass you can't walk round, the pass north. |
+| 3 | Route 4 | 108×20 | 108×20 | this PR | Round Mt. Moon: the foot of the mountain with the Center, the high shelf where the cave comes out, its ledge down to the road to Cerulean. |
+| 4 | Cerulean City | 58×51 | 58×51 | this PR | The lake town: the bridge road, the cave's island, the robbed house's backyard, the neck south. With Route 4: old Cerulean had no room for the seam between them. |
 | 5 | Route 24 | 30×22 | | | Nugget Bridge. |
 | 6 | Route 25 | 112×35 | | | Bill's cottage. |
 | 7 | Route 5 | 68×46 | | | Day Care, the Underground Path's gate. |
@@ -67,8 +67,13 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 
 | Id | Issue | Seen | State |
 |---|---|---|---|
-| KR-1 | `pae map geometry --blockdata` keeps the layout's `blockdata_overrides`, which point at the old block file; a map that had them fails to build (`Sparse blockdata edit is outside its geometry/word bounds`). Viridian Forest clears them by hand (`"blockdata_overrides": null`). | Viridian Forest | open |
+| KR-1 | `pae map geometry --blockdata` keeps the layout's `blockdata_overrides`, which point at the old block file; a map that had them fails to build (`Sparse blockdata edit is outside its geometry/word bounds`). Viridian Forest clears them by hand (`"blockdata_overrides": null`). | Viridian Forest | fixed in pae PR #22 (a new block file drops them) |
 | KR-2 | Every pae command indexed the whole project on start (6 s), so a map's build took minutes and rebuilding every kit map 22 minutes. | Viridian Forest | fixed in pae PR #21 (the index is made when first needed) |
+| KR-16 | A seam took a neighbour's colours only exactly, so a town between three old routes (Cerulean: Routes 5, 9, 24) ran out of palette banks. | Cerulean | fixed in pae PR #23: a palette with no room is drawn in its nearest colours, and `pae seam build` says so (Route 5's strip in Cerulean: 5 colours, at most 54 RGB steps off, until Route 5 is rebuilt) |
+| KR-17 | Old maps whose tilesets fill all 1024 metatile ids (old Cerulean, Route 24) had no room for a seam's adapters, so a new neighbour couldn't be joined to them. | Route 4, Cerulean | fixed in pae PR #23: adapters take the top ids the map never shows (its blocks, border, scripts, and same-tileset neighbours' strips) |
+| KR-23 | pae read a map's block file without the layout's block fixes (`blockdata_overrides`, `blockdata_composition`), which the game's build applies: renders, walks and seams of maps with them were wrong (Mt. Moon B2F's rock ridges were floor). | Mt. Moon (story check) | fixed in pae PR #24 (blocks are read as the game builds them; a write bakes the fixes in) |
+| KR-24 | `pae map path` ignored heights and one-way edges, so planned walks went between elevations and up rock edges the game doesn't let you climb (Mt. Moon B2F). | Mt. Moon (story check) | fixed in pae PR #24 (walks keep the game's step rules) |
+| KR-25 | Once pae read block fixes, `pae seam build` stopped on old Route 9: its fixes put 12 of its own hand-made seam's adapters (ids 1005–1017) on the map. | Cerulean | fixed in pae PR #25 (left out, with a note); those 12 blocks of Route 9 still show wrong from Cerulean until Route 9 is rebuilt |
 
 ### Build and process
 
@@ -77,9 +82,10 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-3 | A map's `build.sh` can drift from its `map.json`: Viridian's still placed the Friends at their old camp after PR #34 moved them, so a rebuild undid it. | Viridian Forest | fixed in #36; check each map's build script against its events when a scene moves people |
 | KR-8 | A map's own tileset holds 384 tiles, and big buildings take most of it (Pewter's Museum 98, its Gym 66, the cliffs about 90, the seam to an old neighbour 39): Pewter's three houses had to be one kind. Towns with several big buildings (Celadon, Saffron) will need fewer kinds or smaller buildings. | Pewter | watch |
 | KR-9 | Scenes that walk people round a town by fixed steps (Pewter's guides) break when the town is rebuilt. Pewter's are worked out on the built map by `pewter-concept/escort.py`; other towns' (Vermilion's, Celadon's) will need the same. | Pewter | done for Pewter |
-| KR-12 | When a story-check walk is stopped by a trainer who sees you, pae reports "the map did not finish loading" or that checkpoints can only be saved in the overworld, not that a trainer started a battle. | Route 3 (Pewter's Gym) | open |
+| KR-12 | When a story-check walk is stopped by a trainer who sees you, pae reports "the map did not finish loading" or that checkpoints can only be saved in the overworld, not that a trainer started a battle. | Route 3 (Pewter's Gym); again on Mt. Moon 1F (a lass saw the walk) | open |
 | KR-13 | After `CLEAR_TEAM` and a new Pokémon in a test's or step's state, the Pokémon following you stays the old one (a Pikachu followed a team of one Wartortle). Harmless for the tests; a player can't do it. | Route 3 (Pewter's Gym) | watch |
 | KR-4 | Adding a forest corner (or any kit piece) renumbers the kit's later metatiles, so every kit map is rebuilt and repainted. Nothing broke so far (the review checked the blocks are the same), but scripts that set metatiles by number on kit maps would break. | Viridian Forest | watch |
+| KR-18 | Old Cerulean had a hand-made seam in `kanto_connection_seam.c` (a fix for its two tilesets) that took two palette banks and ids 954–1022 on the new town; it is removed. Route 5's and Route 9's hand-made seams still have 17 entries for old Cerulean's ids, which the new town never uses (dead data, harmless). | Cerulean | Cerulean's removed; the others go when Routes 5 and 9 are rebuilt |
 
 ### Story and gameplay
 
@@ -92,3 +98,9 @@ Found while rebuilding; nothing here is fixed unless it says so. Newest last wit
 | KR-14 | The kit's cliff tops are wide plain stretches on mountain maps (Pewter, Route 3): the pack's texture repeats every three blocks with nothing on it. Rocks or a second texture on the tops would break it up. | Route 3 | cosmetic, open |
 | KR-15 | Route 3's Robin wanders, so her line of sight has no replay test (the seven other trainers have one each). | Route 3 | open |
 | KR-11 | Pewter's heal spot moved with its Center (29,33); flying there and blacking out were not played. | Pewter | open |
+| KR-19 | Cerulean's robbed house has no hole drawn in its back wall, and the badge house no back door: both are lawn you stand on and walk south from into the house (an arrow warp). A drawn hole and door would say where they are. | Cerulean | cosmetic, open |
+| KR-20 | Cerulean Cave's mouth is Route 2's, drawn in the houses' palette (the two colours they don't use are its own, the rest each the nearest): its rock is a little greener and greyer than Route 2's. | Cerulean | cosmetic, open |
+| KR-21 | Cerulean's Friends' camp moved to 34,32 (their fourth scene) and Route 4's stayed; neither scene has been played since (see KR-6). Cerulean's heal spot (28,29) was not played either (as KR-11). | Cerulean | open |
+| KR-22 | The tree to cut in Cerulean now closes a fenced garden with nothing in it yet; the old one stood by the lass and her Slowbro. Something to find in the garden would make cutting it worth it. | Cerulean | open (an idea) |
+| KR-26 | Mt. Moon's ladders aren't drawn: on 1F and B1F (its native floors) the ladder warps are plain cave floor, so a player can't see where they are. An old map, not part of the rebuild. | Mt. Moon (story check) | open |
+| KR-27 | At Cerulean's joins the new and old roads don't match yet: Nugget Bridge's last span (the kit's brown dock) meets old Route 24's yellow planks, and Route 4's dirt meets Cerulean's cobbles with a hard line (as KR-10). | Cerulean | cosmetic, open (Route 24 is next) |

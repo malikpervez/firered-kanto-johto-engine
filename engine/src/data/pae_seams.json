@@ -1,4 +1,10 @@
 {
+ "CeruleanCity_Frlg": [
+  "Route4_Frlg",
+  "Route24_Frlg",
+  "Route5_Frlg",
+  "Route9_Frlg"
+ ],
  "PalletTown_Frlg": [
   "Route1_Frlg",
   "Route21_North_Frlg"
@@ -17,6 +23,9 @@
  "Route22_Frlg": [
   "ViridianCity_Frlg"
  ],
+ "Route24_Frlg": [
+  "CeruleanCity_Frlg"
+ ],
  "Route2_Frlg": [
   "ViridianCity_Frlg",
   "PewterCity_Frlg"
@@ -26,7 +35,14 @@
   "Route4_Frlg"
  ],
  "Route4_Frlg": [
-  "Route3_Frlg"
+  "Route3_Frlg",
+  "CeruleanCity_Frlg"
+ ],
+ "Route5_Frlg": [
+  "CeruleanCity_Frlg"
+ ],
+ "Route9_Frlg": [
+  "CeruleanCity_Frlg"
  ],
  "ViridianCity_Frlg": [
   "Route1_Frlg",
