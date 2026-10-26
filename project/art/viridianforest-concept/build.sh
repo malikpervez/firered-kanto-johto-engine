@@ -37,7 +37,7 @@ pae map place $M object 7 3 43 $P    # the Potion, at the end of the west branch
 pae map place $M object 5 41 43 $P   # the Poké Ball, at the end of the south-east branch
 pae map place $M object 6 41 13 $P   # the Antidote, at the end of the north-east branch
 pae map place $M object 10 5 11 $P   # the second Potion, at the end of the north-west branch
-pae map place $M object 11 38 45 --elevation 3 $P  # the forest's Pokémon, each with a 3x3 lawn round it: Caterpie,
+pae map place $M object 11 38 45 --elevation 3 $P  # the forest's Pokémon, each with walkable ground round it: Caterpie,
 pae map place $M object 18 35 55 --elevation 3 $P  # Weedle,
 pae map place $M object 14 4 45 $P   # Paras,
 pae map place $M object 12 12 30 $P  # Pikachu,

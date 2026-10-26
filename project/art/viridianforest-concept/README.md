@@ -17,8 +17,9 @@ The forest is 48×60 blocks (it was 74×79). It has:
 - **three item branches**, each with its trainer: Sammy (7,43) and the Potion on the west one, Anthony (42,20) and
   the Antidote on the north-east one, Charlie (11,18) and the second Potion on the north-west one. The Poké Ball is
   at the end of the south-east branch, by the glade;
-- **the pond** (columns 4–9, rows 26–29, not for surfing) with a lawn beside it, the south-east glade, and ten
-  Pokémon about the forest, each with a 3×3 lawn round it;
+- **the pond** (columns 4–9, rows 26–29) with a lawn beside it, the south-east glade, and ten Pokémon about the
+  forest, each with walkable ground all round it (3×3). The pond is the kit's, so it can be surfed and fished later,
+  like Route 1's; it leads nowhere, so the concept's "no Surf route" holds;
 - the five trainer tips and the exit sign, each read from the block below it, and the two hidden items (the
   Antidote in the glade, the Potion in the tall grass west of the trail).
 
