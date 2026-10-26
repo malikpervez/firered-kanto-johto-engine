@@ -2732,23 +2732,9 @@
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
     },
-    "PalletTown_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/PalletTown_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
     "Route15_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/Route15_Frlg/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
-    "Route1_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route1_hns/border.bin",
       "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
@@ -2770,13 +2756,6 @@
     "Route29_hns_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/Route29_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
-    "Route2_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route2_hns/border.bin",
       "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
@@ -2886,20 +2865,6 @@
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
     },
-    "ViridianCity_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/ViridianCity_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
-    "ViridianForest_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/ViridianForest_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
     "FuchsiaCity_Frlg_FireRedGeometry_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/FuchsiaCity_hns/border.bin",
@@ -2934,13 +2899,6 @@
       "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
-    "CeruleanCity_Layout_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/CeruleanCity_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
     },
     "IlexForest_hns_Layout_Border": {
       "owner": "BlackthornCity_hns_Layout_Border",
@@ -2984,20 +2942,6 @@
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
     },
-    "PewterCity_Layout_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/PewterCity_hns/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
-    "Route22_Layout_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route22_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
     "Route22_hns_Layout_Border": {
       "owner": "BlackthornCity_hns_Layout_Border",
       "source_filepath": "data/layouts/Route22_hns/border.bin",
@@ -3005,23 +2949,9 @@
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
     },
-    "Route24_Layout_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route24_Frlg/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
     "Route28_hns_Layout_Border": {
       "owner": "BlackthornCity_hns_Layout_Border",
       "source_filepath": "data/layouts/Route28_hns/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
-    "Route3_Layout_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route3_hns/border.bin",
       "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
@@ -3043,13 +2973,6 @@
     "Route45_hns_Layout_Border": {
       "owner": "BlackthornCity_hns_Layout_Border",
       "source_filepath": "data/layouts/Route45_hns/border.bin",
-      "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
-    },
-    "Route4_Layout_Border": {
-      "owner": "BlackthornCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route4_hns/border.bin",
       "owner_filepath": "data/layouts/BlackthornCity_hns/border.bin",
       "bytes": 8,
       "sha256": "b17588a0759ba33914dd907b908b7070de1672ebf7efb8b36156c9b4d93d47dc"
@@ -3155,13 +3078,6 @@
     "Route14_Layout_Border": {
       "owner": "CinnabarIsland_Layout_Border",
       "source_filepath": "data/layouts/Route14_Frlg/border.bin",
-      "owner_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
-      "bytes": 8,
-      "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"
-    },
-    "Route17_Layout_Border": {
-      "owner": "CinnabarIsland_Layout_Border",
-      "source_filepath": "data/layouts/Route17_Frlg/border.bin",
       "owner_filepath": "data/layouts/CinnabarIsland_Frlg/border.bin",
       "bytes": 8,
       "sha256": "cba446b7fabf3b13007a0e5d721f52dc5a35423464f23cbfaf7d379b6187d2ce"
@@ -5283,13 +5199,6 @@
     "Route14_Frlg_FireRedGeometry_Border": {
       "owner": "CianwoodCity_hns_Layout_Border",
       "source_filepath": "data/layouts/Route14_hns/border.bin",
-      "owner_filepath": "data/layouts/CianwoodCity_hns/border.bin",
-      "bytes": 8,
-      "sha256": "a99112d532b404a0dbf8a92a6857bcff981021db103446ee87fd658f31a7d218"
-    },
-    "Route17_Frlg_FireRedGeometry_Border": {
-      "owner": "CianwoodCity_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route17_hns/border.bin",
       "owner_filepath": "data/layouts/CianwoodCity_hns/border.bin",
       "bytes": 8,
       "sha256": "a99112d532b404a0dbf8a92a6857bcff981021db103446ee87fd658f31a7d218"

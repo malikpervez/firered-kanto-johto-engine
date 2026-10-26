@@ -39,7 +39,11 @@
   "Route17_Frlg"
  ],
  "Route17_Frlg": [
-  "Route16_Frlg"
+  "Route16_Frlg",
+  "Route18_Frlg"
+ ],
+ "Route18_Frlg": [
+  "Route17_Frlg"
  ],
  "Route1_Frlg": [
   "PalletTown_Frlg",

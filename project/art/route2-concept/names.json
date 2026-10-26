@@ -1185,7 +1185,7 @@
    "elevation": 1,
    "open": []
   },
-  "sea#15+rock_a": {
+  "sea#15.1": {
    "ids": [
     118
    ],
@@ -1195,7 +1195,7 @@
    "elevation": 1,
    "open": []
   },
-  "sea#15+rock_b": {
+  "sea#15.2": {
    "ids": [
     119
    ],
@@ -1205,47 +1205,47 @@
    "elevation": 1,
    "open": []
   },
-  "fence#0": {
+  "sea#15.4": {
    "ids": [
     120
    ],
    "w": 1,
    "h": 1,
    "solid": true,
-   "elevation": null,
+   "elevation": 1,
    "open": []
   },
-  "fence#1": {
+  "sea#15.8": {
    "ids": [
     121
    ],
    "w": 1,
    "h": 1,
    "solid": true,
-   "elevation": null,
+   "elevation": 1,
    "open": []
   },
-  "fence#2": {
+  "sea#15+rock_a": {
    "ids": [
     122
    ],
    "w": 1,
    "h": 1,
    "solid": true,
-   "elevation": null,
+   "elevation": 1,
    "open": []
   },
-  "fence#3": {
+  "sea#15+rock_b": {
    "ids": [
     123
    ],
    "w": 1,
    "h": 1,
    "solid": true,
-   "elevation": null,
+   "elevation": 1,
    "open": []
   },
-  "fence#4": {
+  "fence#0": {
    "ids": [
     124
    ],
@@ -1255,7 +1255,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#5": {
+  "fence#1": {
    "ids": [
     125
    ],
@@ -1265,7 +1265,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#6": {
+  "fence#2": {
    "ids": [
     126
    ],
@@ -1275,7 +1275,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#7": {
+  "fence#3": {
    "ids": [
     127
    ],
@@ -1285,7 +1285,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#8": {
+  "fence#4": {
    "ids": [
     128
    ],
@@ -1295,7 +1295,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#9": {
+  "fence#5": {
    "ids": [
     129
    ],
@@ -1305,7 +1305,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#10": {
+  "fence#6": {
    "ids": [
     130
    ],
@@ -1315,7 +1315,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#11": {
+  "fence#7": {
    "ids": [
     131
    ],
@@ -1325,7 +1325,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#12": {
+  "fence#8": {
    "ids": [
     132
    ],
@@ -1335,7 +1335,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#13": {
+  "fence#9": {
    "ids": [
     133
    ],
@@ -1345,7 +1345,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#14": {
+  "fence#10": {
    "ids": [
     134
    ],
@@ -1355,7 +1355,7 @@
    "elevation": null,
    "open": []
   },
-  "fence#15": {
+  "fence#11": {
    "ids": [
     135
    ],
@@ -1365,47 +1365,47 @@
    "elevation": null,
    "open": []
   },
-  "dock#0": {
+  "fence#12": {
    "ids": [
     136
    ],
    "w": 1,
    "h": 1,
-   "solid": false,
+   "solid": true,
    "elevation": null,
    "open": []
   },
-  "dock#1": {
+  "fence#13": {
    "ids": [
     137
    ],
    "w": 1,
    "h": 1,
-   "solid": false,
+   "solid": true,
    "elevation": null,
    "open": []
   },
-  "dock#2": {
+  "fence#14": {
    "ids": [
     138
    ],
    "w": 1,
    "h": 1,
-   "solid": false,
+   "solid": true,
    "elevation": null,
    "open": []
   },
-  "dock#3": {
+  "fence#15": {
    "ids": [
     139
    ],
    "w": 1,
    "h": 1,
-   "solid": false,
+   "solid": true,
    "elevation": null,
    "open": []
   },
-  "dock#4": {
+  "dock#0": {
    "ids": [
     140
    ],
@@ -1415,7 +1415,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#5": {
+  "dock#1": {
    "ids": [
     141
    ],
@@ -1425,7 +1425,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#6": {
+  "dock#2": {
    "ids": [
     142
    ],
@@ -1435,7 +1435,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#7": {
+  "dock#3": {
    "ids": [
     143
    ],
@@ -1445,7 +1445,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#8": {
+  "dock#4": {
    "ids": [
     144
    ],
@@ -1455,7 +1455,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#9": {
+  "dock#5": {
    "ids": [
     145
    ],
@@ -1465,7 +1465,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#10": {
+  "dock#6": {
    "ids": [
     146
    ],
@@ -1475,7 +1475,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#11": {
+  "dock#7": {
    "ids": [
     147
    ],
@@ -1485,7 +1485,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#12": {
+  "dock#8": {
    "ids": [
     148
    ],
@@ -1495,7 +1495,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#13": {
+  "dock#9": {
    "ids": [
     149
    ],
@@ -1505,7 +1505,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#14": {
+  "dock#10": {
    "ids": [
     150
    ],
@@ -1515,7 +1515,7 @@
    "elevation": null,
    "open": []
   },
-  "dock#15": {
+  "dock#11": {
    "ids": [
     151
    ],
@@ -1525,9 +1525,49 @@
    "elevation": null,
    "open": []
   },
-  "sign": {
+  "dock#12": {
    "ids": [
     152
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#13": {
+   "ids": [
+    153
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#14": {
+   "ids": [
+    154
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#15": {
+   "ids": [
+    155
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sign": {
+   "ids": [
+    156
    ],
    "w": 1,
    "h": 1,
@@ -1537,7 +1577,7 @@
   },
   "barrel": {
    "ids": [
-    153
+    157
    ],
    "w": 1,
    "h": 1,
@@ -1547,7 +1587,7 @@
   },
   "crate": {
    "ids": [
-    154
+    158
    ],
    "w": 1,
    "h": 1,
@@ -1557,8 +1597,8 @@
   },
   "boat": {
    "ids": [
-    155,
-    156
+    159,
+    160
    ],
    "w": 2,
    "h": 1,
@@ -1568,10 +1608,10 @@
   },
   "well": {
    "ids": [
-    157,
-    158,
-    159,
-    160
+    161,
+    162,
+    163,
+    164
    ],
    "w": 2,
    "h": 2,
@@ -1581,7 +1621,7 @@
   },
   "flowers1": {
    "ids": [
-    161
+    165
    ],
    "w": 1,
    "h": 1,
@@ -1591,7 +1631,7 @@
   },
   "flowers2": {
    "ids": [
-    162
+    166
    ],
    "w": 1,
    "h": 1,
@@ -1601,7 +1641,7 @@
   },
   "flowers3": {
    "ids": [
-    163
+    167
    ],
    "w": 1,
    "h": 1,
@@ -1611,7 +1651,7 @@
   },
   "flowers4": {
    "ids": [
-    164
+    168
    ],
    "w": 1,
    "h": 1,
@@ -1621,8 +1661,8 @@
   },
   "lamp": {
    "ids": [
-    165,
-    166
+    169,
+    170
    ],
    "w": 1,
    "h": 2,
@@ -1631,19 +1671,6 @@
    "open": []
   },
   "forest#0": {
-   "ids": [
-    167,
-    168,
-    169,
-    170
-   ],
-   "w": 2,
-   "h": 2,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "forest#1": {
    "ids": [
     171,
     172,
@@ -1656,7 +1683,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#2": {
+  "forest#1": {
    "ids": [
     175,
     176,
@@ -1669,7 +1696,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#3": {
+  "forest#2": {
    "ids": [
     179,
     180,
@@ -1682,7 +1709,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#4": {
+  "forest#3": {
    "ids": [
     183,
     184,
@@ -1695,7 +1722,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#5": {
+  "forest#4": {
    "ids": [
     187,
     188,
@@ -1708,7 +1735,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#6": {
+  "forest#5": {
    "ids": [
     191,
     192,
@@ -1721,7 +1748,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#7": {
+  "forest#6": {
    "ids": [
     195,
     196,
@@ -1734,7 +1761,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#7~1": {
+  "forest#7": {
    "ids": [
     199,
     200,
@@ -1747,7 +1774,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#7~2": {
+  "forest#7~1": {
    "ids": [
     203,
     204,
@@ -1760,7 +1787,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#8": {
+  "forest#7~2": {
    "ids": [
     207,
     208,
@@ -1773,7 +1800,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#9": {
+  "forest#8": {
    "ids": [
     211,
     212,
@@ -1786,7 +1813,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#10": {
+  "forest#9": {
    "ids": [
     215,
     216,
@@ -1799,7 +1826,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#11": {
+  "forest#10": {
    "ids": [
     219,
     220,
@@ -1812,7 +1839,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#11~1": {
+  "forest#11": {
    "ids": [
     223,
     224,
@@ -1825,7 +1852,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#11~2": {
+  "forest#11~1": {
    "ids": [
     227,
     228,
@@ -1838,7 +1865,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#12": {
+  "forest#11~2": {
    "ids": [
     231,
     232,
@@ -1851,7 +1878,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#13": {
+  "forest#12": {
    "ids": [
     235,
     236,
@@ -1864,7 +1891,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#13~1": {
+  "forest#13": {
    "ids": [
     239,
     240,
@@ -1877,7 +1904,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#13~2": {
+  "forest#13~1": {
    "ids": [
     243,
     244,
@@ -1890,7 +1917,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#14": {
+  "forest#13~2": {
    "ids": [
     247,
     248,
@@ -1903,7 +1930,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#14~1": {
+  "forest#14": {
    "ids": [
     251,
     252,
@@ -1916,7 +1943,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#14~2": {
+  "forest#14~1": {
    "ids": [
     255,
     256,
@@ -1929,7 +1956,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15": {
+  "forest#14~2": {
    "ids": [
     259,
     260,
@@ -1942,7 +1969,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15~1": {
+  "forest#15": {
    "ids": [
     263,
     264,
@@ -1955,7 +1982,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15~2": {
+  "forest#15~1": {
    "ids": [
     267,
     268,
@@ -1968,7 +1995,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.1": {
+  "forest#15~2": {
    "ids": [
     271,
     272,
@@ -1981,7 +2008,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.2": {
+  "forest#15.1": {
    "ids": [
     275,
     276,
@@ -1994,7 +2021,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.6": {
+  "forest#15.2": {
    "ids": [
     279,
     280,
@@ -2007,7 +2034,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.4": {
+  "forest#15.6": {
    "ids": [
     283,
     284,
@@ -2020,7 +2047,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.8": {
+  "forest#15.4": {
    "ids": [
     287,
     288,
@@ -2033,7 +2060,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#7.1": {
+  "forest#15.8": {
    "ids": [
     291,
     292,
@@ -2046,7 +2073,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#7.2": {
+  "forest#7.1": {
    "ids": [
     295,
     296,
@@ -2059,7 +2086,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#13.4": {
+  "forest#7.2": {
    "ids": [
     299,
     300,
@@ -2072,7 +2099,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#14.4": {
+  "forest#13.4": {
    "ids": [
     303,
     304,
@@ -2085,7 +2112,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#11.1": {
+  "forest#14.4": {
    "ids": [
     307,
     308,
@@ -2098,7 +2125,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.3": {
+  "forest#11.1": {
    "ids": [
     311,
     312,
@@ -2111,7 +2138,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.12": {
+  "forest#15.3": {
    "ids": [
     315,
     316,
@@ -2124,7 +2151,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#14.2": {
+  "forest#15.12": {
    "ids": [
     319,
     320,
@@ -2137,7 +2164,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.5": {
+  "forest#14.2": {
    "ids": [
     323,
     324,
@@ -2150,7 +2177,7 @@
    "elevation": null,
    "open": []
   },
-  "forest#15.10": {
+  "forest#15.5": {
    "ids": [
     327,
     328,
@@ -2163,7 +2190,7 @@
    "elevation": null,
    "open": []
   },
-  "round_tree": {
+  "forest#15.10": {
    "ids": [
     331,
     332,
@@ -2174,12 +2201,9 @@
    "h": 2,
    "solid": true,
    "elevation": null,
-   "open": [
-    0,
-    1
-   ]
+   "open": []
   },
-  "offset_tree": {
+  "round_tree": {
    "ids": [
     335,
     336,
@@ -2195,7 +2219,7 @@
     1
    ]
   },
-  "broad_tree": {
+  "offset_tree": {
    "ids": [
     339,
     340,
@@ -2211,9 +2235,25 @@
     1
    ]
   },
+  "broad_tree": {
+   "ids": [
+    343,
+    344,
+    345,
+    346
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    0,
+    1
+   ]
+  },
   "bush_a": {
    "ids": [
-    343
+    347
    ],
    "w": 1,
    "h": 1,
@@ -2223,7 +2263,7 @@
   },
   "bush_b": {
    "ids": [
-    344
+    348
    ],
    "w": 1,
    "h": 1,
@@ -2233,7 +2273,7 @@
   },
   "bush_c": {
    "ids": [
-    345
+    349
    ],
    "w": 1,
    "h": 1,
@@ -2243,7 +2283,7 @@
   },
   "tall_grass": {
    "ids": [
-    346
+    350
    ],
    "w": 1,
    "h": 1,
@@ -2253,7 +2293,7 @@
   },
   "tall_grass_flowers": {
    "ids": [
-    347
+    351
    ],
    "w": 1,
    "h": 1,
@@ -2263,7 +2303,7 @@
   },
   "ledge#0": {
    "ids": [
-    348
+    352
    ],
    "w": 1,
    "h": 1,
@@ -2273,7 +2313,7 @@
   },
   "ledge#2": {
    "ids": [
-    349
+    353
    ],
    "w": 1,
    "h": 1,
@@ -2283,7 +2323,7 @@
   },
   "ledge#8": {
    "ids": [
-    350
+    354
    ],
    "w": 1,
    "h": 1,
@@ -2293,7 +2333,7 @@
   },
   "ledge#10": {
    "ids": [
-    351
+    355
    ],
    "w": 1,
    "h": 1,
@@ -2303,7 +2343,7 @@
   },
   "steps#0": {
    "ids": [
-    352
+    356
    ],
    "w": 1,
    "h": 1,
@@ -2313,7 +2353,7 @@
   },
   "steps#1": {
    "ids": [
-    353
+    357
    ],
    "w": 1,
    "h": 1,
@@ -2323,7 +2363,7 @@
   },
   "steps#2": {
    "ids": [
-    354
+    358
    ],
    "w": 1,
    "h": 1,
@@ -2333,7 +2373,7 @@
   },
   "steps#3": {
    "ids": [
-    355
+    359
    ],
    "w": 1,
    "h": 1,
@@ -2343,7 +2383,7 @@
   },
   "steps#4": {
    "ids": [
-    356
+    360
    ],
    "w": 1,
    "h": 1,
@@ -2353,7 +2393,7 @@
   },
   "steps#5": {
    "ids": [
-    357
+    361
    ],
    "w": 1,
    "h": 1,
@@ -2363,7 +2403,7 @@
   },
   "steps#6": {
    "ids": [
-    358
+    362
    ],
    "w": 1,
    "h": 1,
@@ -2373,7 +2413,7 @@
   },
   "steps#7": {
    "ids": [
-    359
+    363
    ],
    "w": 1,
    "h": 1,
@@ -2383,7 +2423,7 @@
   },
   "steps#8": {
    "ids": [
-    360
+    364
    ],
    "w": 1,
    "h": 1,
@@ -2393,7 +2433,7 @@
   },
   "steps#9": {
    "ids": [
-    361
+    365
    ],
    "w": 1,
    "h": 1,
@@ -2403,7 +2443,7 @@
   },
   "steps#10": {
    "ids": [
-    362
+    366
    ],
    "w": 1,
    "h": 1,
@@ -2413,7 +2453,7 @@
   },
   "steps#11": {
    "ids": [
-    363
+    367
    ],
    "w": 1,
    "h": 1,
@@ -2423,7 +2463,7 @@
   },
   "steps#12": {
    "ids": [
-    364
+    368
    ],
    "w": 1,
    "h": 1,
@@ -2433,7 +2473,7 @@
   },
   "steps#13": {
    "ids": [
-    365
+    369
    ],
    "w": 1,
    "h": 1,
@@ -2443,7 +2483,7 @@
   },
   "steps#14": {
    "ids": [
-    366
+    370
    ],
    "w": 1,
    "h": 1,
@@ -2453,7 +2493,7 @@
   },
   "steps#15": {
    "ids": [
-    367
+    371
    ],
    "w": 1,
    "h": 1,
@@ -2463,7 +2503,7 @@
   },
   "pond#15+lily": {
    "ids": [
-    368
+    372
    ],
    "w": 1,
    "h": 1,
@@ -2473,7 +2513,7 @@
   },
   "pond#15+reeds": {
    "ids": [
-    369
+    373
    ],
    "w": 1,
    "h": 1,
@@ -2483,10 +2523,6 @@
   },
   "pokemon_center": {
    "ids": [
-    370,
-    371,
-    372,
-    373,
     374,
     375,
     376,
@@ -2502,7 +2538,11 @@
     386,
     387,
     388,
-    389
+    389,
+    390,
+    391,
+    392,
+    393
    ],
    "w": 5,
    "h": 4,
@@ -2514,10 +2554,6 @@
   },
   "poke_mart": {
    "ids": [
-    390,
-    391,
-    392,
-    393,
     394,
     395,
     396,
@@ -2529,7 +2565,11 @@
     402,
     403,
     404,
-    405
+    405,
+    406,
+    407,
+    408,
+    409
    ],
    "w": 4,
    "h": 4,
@@ -2761,18 +2801,18 @@
   }
  },
  "tiles": {
-  "primary": 534,
+  "primary": 538,
   "secondary": 285
  },
  "metatile_counts": {
-  "primary": 406,
+  "primary": 410,
   "secondary": 162
  },
  "animations": [
   {
    "name": "PalletConcept_General_Water",
    "first_tile": 477,
-   "tiles": 57,
+   "tiles": 61,
    "frames": 8,
    "notes": []
   }

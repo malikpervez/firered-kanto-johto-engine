@@ -478,7 +478,7 @@ def check_forest(g, char: str = "T") -> None:
 # (mask, corners) of the inside-corner pieces of the pond and the sea in the kit: every map's together
 # (``check_water``)
 WATER_CORNERS = {"pond": [(11, 8), (13, 8), (14, 2), (14, 4), (15, 1), (15, 4), (15, 8), (15, 2), (15, 10)],
-                 "sea": []}
+                 "sea": [(15, 1), (15, 2), (15, 4), (15, 8)]}
 # the legend characters that are each water (lily pads and reeds join the pond, the sea rocks the sea); the first is
 # the plain water, the others are drawn as they are
 WATER = {"pond": ("~", "v", "r"), "sea": ("s", "q", "Q")}

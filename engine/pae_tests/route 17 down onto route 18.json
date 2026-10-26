@@ -1,0 +1,39 @@
+{
+ "note": "Along the road from the finish onto Route 18.",
+ "created": "2026-10-27 01:00",
+ "start": {
+  "map": "Route17_Frlg",
+  "x": 18,
+  "y": 116,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route18_Frlg",
+  "x": 12,
+  "y": 0,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 15:46"
+}
