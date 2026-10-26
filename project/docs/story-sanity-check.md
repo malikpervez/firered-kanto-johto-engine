@@ -16,7 +16,7 @@ plays the events one after another, each starting where the last one left the ga
 | ROM | `make -j4` with the default settings. SHA-1 `252a80b759b0b35c917fe4eb3fa45add8ff3cf7a`, SHA-256 `0a4f809f8abbd4fe8137dc68c860ba392115f9895c471ba0c2afcb2455ce67dd` |
 | pae | `fc6d290` (pae PR #21) |
 | Last step passed | 41 `pewter-gym`: the Gym guide walks you to Pewter's Gym, and into it. Steps 39–41 were run on this build, from step 38's checkpoint of the build before |
-| Replay tests | 84 of 84 pass |
+| Replay tests | 85 of 85 pass |
 
 ## How to run it
 
