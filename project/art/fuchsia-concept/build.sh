@@ -22,10 +22,10 @@ pae map geometry $M --primary gTileset_PalletConcept_General --secondary gTilese
 pae tileset build ../$A/spec.json $P
 pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --border ../$A/border.txt $P
 
-# the joins, where they were: Route 18's road (its rows 8-10) at the left edge, rows 18-20; Route 15's (its rows
-# 5-8) at the right, rows 20-23; Route 19's beach path (its columns 7-16) below, columns 19-28
+# the joins: Route 18's road (its rows 8-10) at the left edge, rows 18-20; Route 15's (its rows 4-7) at the right,
+# rows 20-23; Route 19's beach path (its columns 7-16) below, columns 19-28
 pae map connect $M left Route18_Frlg --offset 10 $P
-pae map connect $M right Route15_Frlg --offset 15 $P
+pae map connect $M right Route15_Frlg --offset 16 $P
 pae map connect $M down Route19_Frlg --offset 12 $P
 [ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P
 

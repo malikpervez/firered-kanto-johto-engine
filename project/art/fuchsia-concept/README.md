@@ -7,7 +7,7 @@ own: `draw_plan.py` draws the block plan (`plan_stage1.txt`) from shapes and say
 
 The town is 48×40 blocks, as before, and its joins stay where they were:
 - Route 18's road (its rows 8–10) meets the left edge at rows 18–20 (offset 10);
-- Route 15's road (its rows 5–8) meets the right edge at rows 20–23 (offset 15);
+- Route 15's road (its rows 4–7) meets the right edge at rows 20–23 (offset 16; it was 15 before Route 15 was rebuilt);
 - Route 19's beach path (its columns 7–16) runs on below the bottom edge from columns 19–28 (offset 12).
 
 It has:
@@ -76,9 +76,10 @@ The pieces are the kit's, the two drawn buildings and Viridian's houses. The tow
 The seams are pae's:
 - **Route 18**: both maps are the kit's, so Route 18 needs pieces only for the Gym and the town's own metatiles in its
   view: 37 pieces, 30 tiles.
-- **Old Routes 15 and 19 drawn here**: 33 pieces, 75 tiles, their palettes in banks 10–12.
-- **This town drawn by them**: old Route 15 draws its right seven columns (63 pieces) and old Route 19 its bottom
-  seven rows (63 pieces). Those strips are only forest, lawn, road, dirt and hedges.
+- **Old Route 19 drawn here**: 17 pieces, 47 tiles, its palettes in banks 10–11 (Route 15 is the kit's since it
+  was rebuilt: no seam).
+- **This town drawn by old Route 19**: its bottom seven rows (63 pieces). The strips are only forest, lawn, road,
+  dirt and hedges.
 
 ## The rules
 

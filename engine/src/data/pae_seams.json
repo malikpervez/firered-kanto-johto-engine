@@ -39,8 +39,12 @@
   "Route11_Frlg",
   "LavenderTown_Frlg"
  ],
+ "Route14_Frlg": [
+  "Route15_Frlg"
+ ],
  "Route15_Frlg": [
-  "FuchsiaCity_Frlg"
+  "FuchsiaCity_Frlg",
+  "Route14_Frlg"
  ],
  "Route16_Frlg": [
   "CeladonCity_Frlg",

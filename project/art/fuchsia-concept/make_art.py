@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fuchsia City after its concept (draw_plan.py and plan_stage1.txt): Kanto's town of the Safari Zone, by the southern
 sea (see draw_plan.py). It is 48x40 blocks, as before, and its joins stay where they were: Route 18 at the left edge
-(rows 18-20, offset 10), Route 15 at the right (rows 20-23, offset 15), Route 19 below the bottom edge (columns
+(rows 18-20, offset 10), Route 15 at the right (rows 20-23, offset 16), Route 19 below the bottom edge (columns
 19-28, offset 12).
 
 The pieces: the kit's and its Pokémon Center and Mart; the Safari Zone's gate lodge and Koga's Gym, drawn here
