@@ -1,0 +1,39 @@
+{
+ "note": "Up the north road onto Route 10's valley.",
+ "created": "2026-10-26 12:00",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 14,
+  "y": 2,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route10_Frlg",
+  "x": 18,
+  "y": 59,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 09:50"
+}

@@ -1,0 +1,162 @@
+{
+ "note": "With the Poke Flute got, the stranger waits by the Volunteer House; talk to him to see his scene with Mr. Fuji, and he goes.",
+ "created": "2026-10-26 12:00",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 10,
+  "y": 17,
+  "state": [
+   "FLAG_GOT_POKE_FLUTE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     0,
+     400
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW03_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 10,
+  "y": 17,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW03_SEEN": true
+  }
+ },
+ "accepted": "2026-10-26 09:50"
+}

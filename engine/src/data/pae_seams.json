@@ -6,7 +6,9 @@
   "Route9_Frlg"
  ],
  "LavenderTown_Frlg": [
-  "Route10_Frlg"
+  "Route10_Frlg",
+  "Route12_Frlg",
+  "Route8_Frlg"
  ],
  "PalletTown_Frlg": [
   "Route1_Frlg",
@@ -25,7 +27,8 @@
   "Route12_Frlg"
  ],
  "Route12_Frlg": [
-  "Route11_Frlg"
+  "Route11_Frlg",
+  "LavenderTown_Frlg"
  ],
  "Route1_Frlg": [
   "PalletTown_Frlg",
@@ -61,6 +64,9 @@
  ],
  "Route6_Frlg": [
   "VermilionCity_Frlg"
+ ],
+ "Route8_Frlg": [
+  "LavenderTown_Frlg"
  ],
  "Route9_Frlg": [
   "CeruleanCity_Frlg",

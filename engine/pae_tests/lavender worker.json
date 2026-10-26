@@ -1,0 +1,47 @@
+{
+ "note": "Talk to the worker by the stone garden.",
+ "created": "2026-10-26 12:00",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 20,
+  "y": 17,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 20,
+  "y": 17,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 09:50"
+}

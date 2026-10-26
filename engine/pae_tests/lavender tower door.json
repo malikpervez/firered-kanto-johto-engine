@@ -1,0 +1,39 @@
+{
+ "note": "Into the Pok\u00e9mon Tower at the east end of the street.",
+ "created": "2026-10-26 12:00",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 29,
+  "y": 10,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PokemonTower_1F_Frlg",
+  "x": 11,
+  "y": 18,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 09:50"
+}

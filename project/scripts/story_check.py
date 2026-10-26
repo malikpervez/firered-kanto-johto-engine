@@ -433,6 +433,16 @@ STEPS = [
          expect=dict(map="Route10_Frlg", xy=(10, 46))),
     dict(name="lavender", what="Down Route 10's valley road (in no trainer's sight) into Lavender", walk=(18, 59),
          inputs=f"DOWN*{hold(1)}, wait 200", expect=dict(map="LavenderTown_Frlg", xy=(14, 0))),
+    dict(name="lavender-center", what="Down the north road into Lavender's Pokémon Center", walk=(7, 7),
+         inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="LavenderTown_PokemonCenter_1F_Frlg", xy=(7, 8))),
+    dict(name="lavender-heal", what="The nurse heals the team (Lavender's Center becomes where you wake after a "
+         "blackout)", inputs="wait 30, UP*50, wait 20, UP*4, wait 20, A*4, wait 100, A*4, wait 100, A*4, wait 400, "
+         + B(6) + "wait 100", expect=dict(map="LavenderTown_PokemonCenter_1F_Frlg", xy=(7, 4))),
+    dict(name="lavender-leave-center", what="Back out to the street",
+         inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250", expect=dict(map="LavenderTown_Frlg", xy=(7, 7))),
+    dict(name="route8", what="West along Lavender's street onto Route 8 (Saffron's gates are shut: the way on is "
+         "Route 8's underground path to Celadon)", walk=(0, 10), inputs=f"LEFT*{hold(1)}, wait 200",
+         expect=dict(map="Route8_Frlg", xy=(67, 20))),
 ]
 
 
