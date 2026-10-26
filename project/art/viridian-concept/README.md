@@ -59,8 +59,8 @@ From the repository root: `sh project/art/build_all.sh` rebuilds every map made 
 
 The scripts with coordinates (`data/maps/ViridianCity_Frlg/scripts.inc`) put the old man across the road at (25,11)
 and by it at (24,13); one trigger each takes their place (the road is one block wide now). The Gym's lock steps you
-back down its court. The heal spot is in front of the Center (20,28), and the Friends story's group meets on the lawn
-east of the square (its anchor in `src/data/friends_scene_locations.h`).
+back down its court. The heal spot is in front of the Center (20,28), and the Friends story's group lands on the south
+road, where Giratina drops them (its anchor in `src/data/friends_scene_locations.h`).
 
 ## In game
 

@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-25 |
-| Game | `v2-main` at `de703e76` (after PR #31) with the faster map crossings and their one-frame graphics switch (branch `claude/clean-map-crossings`) |
-| ROM | `make -j4` with the default settings. SHA-1 `f528a65248ebbfecc0b4f65c6fc1d587a3489aaa`, SHA-256 `037b686d170c593f854675db72d86689b4f295701e1d415e6239f51ee6f1a631` |
+| Game | branch `claude/viridian-forest-concept` (Viridian Forest rebuilt from the concept, on `v2-main` at `45d5bbe1`) |
+| ROM | `make -j4` with the default settings. SHA-1 `3d190d66e41ea9437a09460cbb347bbd34a6e103`, SHA-256 `61b5785c2d254e890d958302d621333caad32bbf9d859994bdffaa9ad6115720` |
 | pae | `1b011f0` (pae PR #20) |
-| Last step passed | 38 `pewter`: through Viridian Forest, out of its north gate onto Route 2, and into Pewter City |
-| Replay tests | 61 of 61 pass |
+| Last step passed | 39 `pewter`: through Viridian Forest (battling Rick and Doug), out of its north gate onto Route 2, and into Pewter City. Steps 34–39 were run on this build, from step 33's checkpoint of the build before |
+| Replay tests | 71 of 71 pass |
 
 ## How to run it
 
@@ -29,8 +29,8 @@ project/scripts/story_check.py --from route22   # carry on from a step
 project/scripts/story_check.py --to dex         # stop after a step
 ```
 
-The script needs pae with `pae play --show-flag` (pae PR #17), and pae PR #19 for the forest (its walks keep off
-sideways stairs). A run from the top takes about 35 minutes; a run `--from` a later step takes less.
+The script needs pae with `pae play --show-flag` (pae PR #17), and pae PR #19 (its walks keep off sideways stairs,
+which the old Viridian Forest had). A run from the top takes about 35 minutes; a run `--from` a later step takes less.
 
 * Each step saves a checkpoint, `story-NN-name`, in `engine/.pae/checkpoints/`. The next step starts from it.
   `--from STEP` needs the checkpoint of the step before it. A fresh clone has no checkpoints, so start from the
@@ -91,11 +91,12 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 31 | `east-viridian` | Down the stairs and east along the road into Viridian | Viridian City 0,29 | |
 | 32 | `north-route2` | North out of Viridian into Route 2 | Route 2 9,79 | |
 | 33 | `forest-gate` | Up Route 2's south meadow into Viridian Forest's south gate (its double door) | the south gatehouse 7,9 | |
-| 34 | `forest` | Through the gatehouse into Viridian Forest | Viridian Forest 39,72 | |
-| 35 | `forest-stairs` | Up the forest, round its trainers' lines of sight (`via`), and west down its sideways stairs | Viridian Forest 37,16 | |
-| 36 | `forest-north` | On through the forest, round Sammy's line of sight, to its north gate | the north gatehouse 7,9 | |
-| 37 | `route2-north` | Out of the forest's north gate onto Route 2 (its doorway in the roof, walking north) | Route 2 7,20 | |
-| 38 | `pewter` | Up Route 2's north meadow into Pewter City | Pewter City 23,43 | |
+| 34 | `forest` | Through the gatehouse into Viridian Forest (its south exit) | Viridian Forest 23,59 | |
+| 35 | `forest-rick` | Up the trail and west: Rick sees you across it and battles (you can't walk round him) | Viridian Forest 20,50 | |
+| 36 | `forest-doug` | West through the tall grass, north, east, then north: Doug sees you across the trail and battles | Viridian Forest 31,29 | |
+| 37 | `forest-north` | On north through the last tall grass to the forest's north exit and its gate | the north gatehouse 7,9 | |
+| 38 | `route2-north` | Out of the forest's north gate onto Route 2 (its doorway in the roof, walking north) | Route 2 7,20 | |
+| 39 | `pewter` | Up Route 2's north meadow into Pewter City | Pewter City 23,43 | |
 
 ## What it doesn't cover
 
@@ -108,8 +109,8 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   doesn't do that.
 * **Places off the story's path**: houses, the Trainer School, the Gym (locked), Route 2's eastern detour (it needs
   Cut: the replay tests cut a tree and go through its buildings' doors), surfing.
-* **Viridian Forest's trainers.** The walk goes round their lines of sight, so their battles aren't played. The
-  forest isn't rebuilt.
+* **Viridian Forest's other trainers.** Rick and Doug can't be walked round, so their battles are played (with the
+  Pikachu from `blue-win`); Sammy, Anthony and Charlie are on the item branches, which the walk doesn't take.
 * **The menus** (bag, Pokédex, Town Map, saving): only opened where the story opens them.
 * **Real play**: sound, real-time play, real hardware.
 
@@ -123,7 +124,10 @@ Checkpoints are game saves, so they still load after a map change, as long as th
    * `pae play --from CHECKPOINT --inputs ... --show-flag F --show-var V` tries a step out before you add it.
    * A walk that must keep off some blocks (a trainer's line of sight) gives them `via`: blocks to walk to first, in
      order. `pae map path` keeps off sideways stairs (they move you diagonally), so a step that crosses them walks
-     to their foot and crosses them in its inputs (`forest-stairs`).
+     to their foot and crosses them in its inputs.
+   * A trainer you can't walk round: walk to the block before their line of sight, then step in and fight in the
+     inputs (A through the battle, then B to close the trainer's words if an A talked to them again:
+     `forest-rick`).
    * In inputs, text advances with B (A talks to the person again). Leaving through a door mat needs one more press
      toward the exit while standing on it.
 3. When every step passes, update "Last validated point" and the step table on this page. Do it in the same pull
@@ -148,3 +152,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-25 | the Viridian stranger fix (`4f402853`) | **Steps 7–38 pass** `--from viridian`, resumed from step 6's checkpoint (1800 s); steps 1–6 don't reach Viridian. |
 | 2026-10-25 | the faster map crossings (seam lookups by table) | First run from the top: steps 1–21 passed, step 22 walked a block too far. With crossings no longer freezing and no frame lost per block, the old holds (`16 * n + 2` frames) walked one block more; `story_check.py` now holds `16 * (n - 1) + 12`. With step 22's hold fixed, **steps 22–38 pass** `--from back-viridian` (1136 s; steps 1–21 took 836 s). |
 | 2026-10-25 | the one-frame graphics switch at crossings | **All 38 steps pass** from the top (1914 s). |
+| 2026-10-25 | Viridian Forest rebuilt from the concept (48×60); the forest's three steps become four | **Steps 34–39 pass** `--from forest`, resumed from step 33's checkpoint (395 s). Rick and Doug can't be walked round now, so the walk battles them. Steps 1–33 weren't run on this build (the kit maps were rebuilt with the same blocks; their replay tests pass). |

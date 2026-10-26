@@ -1,0 +1,44 @@
+{
+ "note": "Walk north onto the forest's north exit: into the north gate.",
+ "created": "2026-10-25 23:40",
+ "start": {
+  "map": "ViridianForest_Frlg",
+  "x": 23,
+  "y": 1,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     48
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route2_ViridianForest_NorthEntrance_Frlg",
+  "x": 7,
+  "y": 9,
+  "in_battle": false
+ }
+}

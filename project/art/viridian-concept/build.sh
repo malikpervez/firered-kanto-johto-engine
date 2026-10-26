@@ -60,9 +60,9 @@ pae map place $M object 7 53 44 $P            # a Potion in the grove
 pae map place $M object 8 5 20 $P             # a Pidgey by the pond
 pae map place $M object 9 37 29 $P            # the gentleman
 
-# the Friends story's group (the same shape, on the lawn east of the square; its anchor is in
+# the Friends story's group, on the south road where Giratina drops them (scene 1; its anchor is in
 # src/data/friends_scene_locations.h)
-for who in BRIAN:50,28 HAM:48,28 JON:49,27 NICK:51,29 X:49,29 LB:47,29 TIM:51,27; do
+for who in BRIAN:26,46 HAM:24,46 JON:25,45 NICK:27,47 X:25,47 LB:23,47 TIM:27,45; do
     n=${who%%:*}; xy=${who#*:}
     pae map place $M object LOCALID_FRIENDS_VIRIDIANCITY_FRLG_$n ${xy%,*} ${xy#*,} $P
 done
