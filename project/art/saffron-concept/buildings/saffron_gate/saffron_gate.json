@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "id": "saffron_gate",
+  "type": "building",
+  "image": "saffron_gate.png",
+  "image_size_px": [
+    64,
+    48
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 4,
+    "height": 3
+  },
+  "transparent_index": 0,
+  "door_blocks": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "door": {
+    "image": "saffron_gate_door.png",
+    "sheet_size_px": [
+      96,
+      32
+    ],
+    "frame_size_px": [
+      32,
+      32
+    ],
+    "frame_count": 3,
+    "frame_order": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "closed_frame_matches_building_crop": true
+  },
+  "name": "saffron_gate",
+  "source": "drawn by saffron-concept/saffron_buildings.py; its double door (blocks 1 and 2 of the bottom row) is one wide door, 32 px"
+}

@@ -1,0 +1,41 @@
+{
+ "note": "Into Copycat's house from the lane.",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "SaffronCity_Frlg",
+  "x": 6,
+  "y": 10,
+  "state": [
+   "FLAG_HIDE_SAFFRON_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SaffronCity_CopycatsHouse_1F_Frlg",
+  "x": 4,
+  "y": 8,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}

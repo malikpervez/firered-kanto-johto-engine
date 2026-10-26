@@ -34,6 +34,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 8 | 60×30 | 68×40 | kit + `gTileset_Route8Concept` | left: Saffron City's twin `SaffronCity_Connection` (offset −15), right: Lavender Town (offset 4) |
 | Route 7 | 30×24 | 20×28 | kit + `gTileset_Route7Concept` | left: Celadon City (offset −10), right: Saffron City's twin `SaffronCity_Connection` (offset −18) |
 | Celadon City | 60×40 | 60×40 | kit + `gTileset_CeladonConcept` | left: Route 16 (offset −7), right: Route 7 (offset 10) |
+| Saffron City | 60×48 | 66×55 | kit + `gTileset_SaffronConcept` | none compiled (KR-53): Routes 5, 6, 7 and 8 join its twin `SaffronCity_Connection`, still the old layout (KR-59); its four gatehouses are the ways out |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
 ## Where the roads meet
@@ -60,6 +61,7 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 8 ↔ Saffron | Route 8 row 12 = Saffron row 27 | not walked across: the gate's doors on Route 8 (10–11,12) lead through the gatehouse to Saffron's own east gate door (62,27). Old Saffron draws its own half of the gatehouse, and no neighbour (KR-53) |
 | Route 7 ↔ Celadon | Route 7 rows 10–13 = Celadon rows 20–23 | the road west out of the trees onto Celadon's boulevard |
 | Celadon ↔ Route 16 | Celadon rows 20–23 = Route 16 rows 27–30 | the boulevard west onto Route 16's path (Route 16 isn't rebuilt; KR-56) |
+| Saffron's gates | not joins: warps | each avenue ends at a gatehouse whose door is a warp into the gatehouse between Saffron and its route: north (29–30,2) to Route 5's, west (2–3,21) to Route 7's, east (56–57,21) to Route 8's, south (29–30,45, entered walking south) to Route 6's |
 | Route 7 ↔ Saffron | Route 7 row 9 = Saffron row 27 | not walked across: the gate's doors on Route 7 (18–19,9) lead through the gatehouse to Saffron's own west gate door |
 | Lavender ↔ Route 12 | Lavender 13–15 = Route 12 11–13 | the road south from the square onto Route 12's sandy path (Route 12 isn't rebuilt; KR-50, KR-51) |
 | Cerulean ↔ Route 5 | Cerulean 21–24 = Route 5 29–32 | the road south, past the neck |
@@ -95,6 +97,7 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Lavender Town | Route 10, Route 8, Route 12 | pae: old Route 12's palettes fit in banks 10–12 (Routes 10 and 8 are the kit's) |
 | Route 8 | Lavender Town | pae (both from the kit: no palettes). None with old Saffron, as for Routes 5 and 6 (KR-34): no block of Route 8 is in view of it, and old Saffron draws no neighbour (KR-53) |
 | Route 7 | Celadon City | pae (both from the kit: only each other's own tiles, no palettes; KR-54 is gone with old Celadon). None with old Saffron (KR-34, KR-53). Old Route 7's hand-made seam is gone |
+| Saffron City | none | no compiled joins (KR-53), so no seams; the routes skip their seam with its twin (KR-34) |
 | Celadon City | Route 16, Route 7 | pae: old Route 16's palettes fit in Celadon's banks 10–11, and Celadon's in old Route 16's free slots 7–8, exactly (Route 16's hand-made piece for Route 17, id 1022, is kept: pae's adapters there take 959–1021). Celadon's west seven columns are forest and road, so its strip in Route 16 is small |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
@@ -241,3 +244,12 @@ Check these whenever a map is rebuilt, moved or resized:
   and the researchers' scenes remove them by local id); all of them moved. The heal spot moved with the Center
   (49,19), the Friends' camp to the pond garden (round 25,34) and the credits' view to the boulevard (49,21). Old
   Celadon had no hand-made seam.
+- Saffron rebuilt smaller (60×48, was 66×55). Its joins aren't compiled, so no neighbour moved: the routes join its
+  twin `SaffronCity_Connection`, left as it was (KR-59). Every warp kept its number: Silph Co. (0), Copycat's house (1),
+  the Dojo (2), the Gym (3), the house (4), the Mart (5), the Center (6), Mr. Psychic's house (7), the Fan Club (14),
+  and the gatehouses: west (8, with a new 15 for its door's right block), north (9 and 13), east (10, with a new 16)
+  and south (11 and 12). The people kept their order; all of them moved, and the worker who arranges the Magnet
+  Train stands by the new station now. The heal spot moved with the Center (6,31, its old-map override dropped), the
+  Friends' camp to the garden behind Silph Co. (round 50,8), the credits' view to 38,4, the Magnet Train's stop to
+  49,18 (Goldenrod's station script) and the Silph guard's post to 38,18 (the city's map script). Old Saffron had no
+  hand-made seam.

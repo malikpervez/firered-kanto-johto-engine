@@ -1,0 +1,41 @@
+{
+ "note": "Into the Pok\u00e9mon Trainer Fan Club.",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "SaffronCity_Frlg",
+  "x": 36,
+  "y": 32,
+  "state": [
+   "FLAG_HIDE_SAFFRON_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     28
+    ],
+    [
+     0,
+     250
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SaffronCity_PokemonTrainerFanClub_Frlg",
+  "x": 5,
+  "y": 15,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}

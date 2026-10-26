@@ -1,0 +1,45 @@
+{
+ "note": "Down the avenue onto the south gatehouse's doorway and on: into it (to Route 6).",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "SaffronCity_Frlg",
+  "x": 29,
+  "y": 43,
+  "state": [
+   "FLAG_HIDE_SAFFRON_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     60
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route6_NorthEntrance_Frlg",
+  "x": 4,
+  "y": 2,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}

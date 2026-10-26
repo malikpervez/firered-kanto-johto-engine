@@ -2192,3 +2192,14 @@ const struct Tileset gTileset_CeladonConcept =
     .metatileAttributes = gMetatileAttributes_CeladonConcept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_SaffronConcept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SaffronConcept,
+    .palettes = gTilesetPalettes_SaffronConcept,
+    .metatiles = gMetatiles_SaffronConcept,
+    .metatileAttributes = gMetatileAttributes_SaffronConcept,
+    .callback = NULL,
+};

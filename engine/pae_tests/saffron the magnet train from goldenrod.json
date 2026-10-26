@@ -1,0 +1,81 @@
+{
+ "note": "From Goldenrod, with the Pass: the train comes in at Saffron's station.",
+ "created": "2026-10-26 19:00",
+ "start": {
+  "map": "GoldenrodCity_TrainStation_hns",
+  "x": 16,
+  "y": 21,
+  "state": [
+   "FLAG_HIDE_SAFFRON_ROCKETS",
+   "!FLAG_HIDE_SAFFRON_CIVILIANS",
+   "FLAG_SYS_GAME_CLEAR",
+   "JOHTO_FLAG_SYS_GAME_CLEAR",
+   "ITEM_PASS*1"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     0,
+     1500
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SaffronCity_Frlg",
+  "x": 49,
+  "y": 18,
+  "in_battle": false
+ },
+ "accepted": "2026-10-26 14:31"
+}
