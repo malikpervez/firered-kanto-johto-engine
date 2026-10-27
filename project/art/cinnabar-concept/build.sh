@@ -6,6 +6,7 @@
 set -e
 A=project/art/cinnabar-concept
 B=project/art/cinnabar-concept/buildings
+R=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the Gym and the Lab
 K=project/art/kit/buildings
 python3 $A/make_art.py
 cd engine
@@ -27,12 +28,12 @@ pae map connect $M up Route21_South_Frlg --offset 0 $P
 pae map connect $M right Route20_Frlg --offset 0 $P
 [ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P
 
-# doors, drawn in their packs (the Lab's is Pallet's lab's door, its panel moved by pae)
+# doors, drawn in their packs
 pae door add $M 14 11 --frames ../$K/pokemon_center/pokemon_center_door.png --sound sliding $P
 pae door add $M 18 11 --frames ../$K/poke_mart/poke_mart_door.png --sound sliding $P
-pae door add $M 20 4 --frames ../$B/cinnabar_gym/cinnabar_gym_door.png $P
+pae door add $M 20 4 --frames ../$R/cinnabar_gym/cinnabar_gym_door.png $P
 pae door add $M 6 4 --frames ../$B/pokemon_mansion/pokemon_mansion_door.png $P
-pae door add $M 6 11 --panel 1,0,15,14 $P
+pae door add $M 6 11 --frames ../$R/pokemon_lab/pokemon_lab_door.png $P
 
 # events: every warp keeps its number (the buildings behind them point at it)
 pae map place $M warp 0 6 4 $P      # the burned Mansion

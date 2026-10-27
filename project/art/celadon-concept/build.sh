@@ -1,11 +1,11 @@
 #!/bin/sh
-# Rebuild Celadon City from its concept with pae: draw its buildings, lay out the plan, build the tileset (the kit's
+# Rebuild Celadon City from its concept with pae: lay out the plan, build the tileset (the kit's
 # primary, the city's own buildings and Viridian's houses), paint the map, keep its joins to Route 16 and Route 7, make
 # the seams and the doors, put the events where the new city has them. Run from the repository root
 # (project/art/build_all.sh rebuilds every map).
 set -e
 A=project/art/celadon-concept
-B=project/art/celadon-concept/buildings
+B=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the city's own buildings
 K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
 python3 $A/make_art.py
@@ -32,12 +32,12 @@ pae map connect $M right Route7_Frlg --offset 10 $P
 pae door add $M 49 18 --frames ../$K/pokemon_center/pokemon_center_door.png --sound sliding $P
 pae door add $M 10 18 --frames ../$B/department_store/department_store_door.png --sound sliding $P
 pae door add $M 15 18 --frames ../$B/department_store/department_store_door.png --sound sliding $P
-pae door add $M 25 18 --frames ../$B/mansion/mansion_door.png $P
-pae door add $M 35 18 --frames ../$B/hotel/hotel_door.png $P
+pae door add $M 25 18 --frames ../$B/celadon_mansion/celadon_mansion_door.png $P
+pae door add $M 35 18 --frames ../$B/celadon_hotel/celadon_hotel_door.png $P
 pae door add $M 28 29 --frames ../$B/game_corner/game_corner_door.png --sound sliding $P
 pae door add $M 12 34 --frames ../$B/celadon_gym/celadon_gym_door.png $P
 pae door add $M 35 29 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P
-pae door add $M 41 29 --frames ../$V/house_family/house_family_door.png $P
+pae door add $M 41 29 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P
 pae door add $M 46 29 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P  # (the Prize Room's pack)
 
 # events: every warp keeps its number (the buildings behind them point at it)

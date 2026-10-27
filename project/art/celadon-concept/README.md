@@ -34,14 +34,13 @@ Route 16's tree is still shown across the join where it stands on Route 16's gri
 
 The pieces:
 - the kit's ground, plants and Pokémon Center;
-- five buildings drawn for the city by `celadon_buildings.py` in one palette (bank 9): the Department Store, the
-  Mansion, the hotel, the Game Corner and the Gym. Their doors are Pewter Gym's frames recoloured, and every board
-  but the Gym's is painted plain;
+- five buildings from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`), in one palette (bank 9): the Department Store, the
+  Mansion, the hotel, the Game Corner and Erika's glasshouse Gym, each with its own door frames;
 - Viridian's houses in their palette (bank 7): the pond keeper's for the Prize Room and the house, the family's for
   the restaurant.
 
-The town's own tileset holds 384 tiles. The buildings first came to 428, so they are drawn on the 16-pixel grid
-(their tiles repeat) and two houses share a pack: the city takes 231 (KR-8). See `../ASSETS.md` for every pack and
+The town's own tileset holds 384 tiles. The first stand-ins came to 428, so buildings here are drawn on the 16-pixel
+grid (their tiles repeat) and two houses share a pack (KR-8). See `../ASSETS.md` for every pack and
 how to replace one.
 
 The seams are pae's:

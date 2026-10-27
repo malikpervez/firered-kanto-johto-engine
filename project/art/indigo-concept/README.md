@@ -18,8 +18,8 @@ It has:
   the game is won, as before.
 
 The warp keeps its number; the people keep their order (the credits' rival and Oak stand at the door, hidden till
-then, as before). The League's tower is Silph Co.'s from Saffron, its golden bands turned crimson and a Poké Ball in
-place of the company's badge (`indigo_buildings.py`), in its own palette (bank 7). The old mountaintop's layout was in
+then, as before). The Pokémon League is from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`): a
+grand limestone hall with roof terraces, crimson banners and a Poké Ball relief, in its own palette (bank 7). The old mountaintop's layout was in
 FireRed's metatile format; its build sets the kit's.
 
 `make_art.py` checks the mountaintop's rules on the map it builds:

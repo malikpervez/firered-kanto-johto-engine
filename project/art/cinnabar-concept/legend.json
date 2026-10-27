@@ -111,7 +111,7 @@
  "L": "poke_mart",
  "H": "cinnabar_gym",
  "U": "pokemon_mansion",
- "X": "cinnabar_lab",
+ "X": "pokemon_lab",
  "A": {
   "auto": "top1",
   "joins": "C"

@@ -61,7 +61,8 @@ rect(55, 18, 58, 18, "b")
 
 # the north-west: a lane with Copycat's house and a house; the Dojo and the Gym on the Gym square
 rect(2, 9, 27, 10, "=")                        # the lane, off the avenue
-rect(4, 5, 8, 8, "Y")                          # Copycat's house, door 6,8
+rect(4, 5, 4, 8, ".")                          # (a lawn beside Copycat's house)
+rect(5, 5, 8, 8, "Y")                          # Copycat's house, door 6,8
 rect(12, 5, 15, 8, "H")                        # the house, door 13,8
 rect(18, 4, 24, 6, "*")
 tree(3, 2); tree(10, 2); tree(25, 5); tree(19, 7)
@@ -95,7 +96,8 @@ at(9, 30, "S")                                 # trainer tips
 rect(11, 27, 14, 30, "L")                      # the Mart, door 12,30
 rect(18, 27, 21, 30, "P")                      # Mr. Psychic's house, door 19,30
 at(22, 30, "S")                                # its sign
-rect(34, 27, 38, 30, "K")                      # the Trainer Fan Club, door 36,30
+rect(34, 27, 34, 30, ".")                      # (a lawn beside the Fan Club)
+rect(35, 27, 38, 30, "K")                      # the Trainer Fan Club, door 36,30
 at(39, 30, "S")                                # its sign
 at(53, 26, "S")                                # trainer tips, by the east gate
 rect(42, 27, 50, 28, "*")

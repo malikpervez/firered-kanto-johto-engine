@@ -5,7 +5,7 @@
 # (project/art/build_all.sh rebuilds every map).
 set -e
 A=project/art/fuchsia-concept
-B=project/art/fuchsia-concept/buildings
+B=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the town's own buildings
 K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
 python3 $A/make_art.py
@@ -38,7 +38,7 @@ pae door add $M 29 16 --frames ../$V/house_gardener/house_gardener_door.png $P
 pae door add $M 12 31 --frames ../$V/house_gardener/house_gardener_door.png $P
 pae door add $M 31 31 --frames ../$V/house_family/house_family_door.png $P
 pae door add $M 25 31 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P
-pae door add $M 37 31 --frames ../$B/house_back_door/house_back_door_door.png $P
+pae door add $M 37 31 --frames ../$B/house_pond_garden/house_pond_garden_door.png $P
 
 # events: every warp keeps its number (the buildings behind them point at it)
 pae map place $M warp 0 23 6 $P     # the Safari Zone's gate lodge

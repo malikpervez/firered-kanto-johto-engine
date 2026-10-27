@@ -82,7 +82,8 @@ rect(24, 25, 32, 29, "G")                      # the Game Corner, door 28,29
 at(33, 29, "S")                                # its sign
 rect(34, 26, 37, 29, "P")                      # the Prize Room, door 35,29
 at(38, 29, "S")                                # the prize exchange sign
-rect(39, 26, 43, 29, "E")                      # the restaurant, door 41,29
+rect(39, 26, 39, 29, ".")                      # (a lawn beside the restaurant)
+rect(40, 26, 43, 29, "E")                      # the restaurant, door 41,29
 rect(45, 26, 48, 29, "H")                      # a house, door 46,29
 at(52, 29, "S")                                # trainer tips
 rect(22, 25, 23, 26, "R"); rect(50, 26, 51, 27, "R")

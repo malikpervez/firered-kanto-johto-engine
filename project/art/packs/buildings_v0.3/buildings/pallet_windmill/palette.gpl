@@ -1,0 +1,20 @@
+GIMP Palette
+Name: houses
+Columns: 16
+#
+  0   0   0	index 0 transparent
+ 32  40  40	index 1
+ 88  64  56	index 2
+ 56  88  72	index 3
+192  88  64	index 4
+232 136  96	index 5
+ 72 120  72	index 6
+176 144  88	index 7
+128 176  88	index 8
+104 120 104	index 9
+168 176 152	index 10
+216 216 192	index 11
+240 240 216	index 12
+136  88  64	index 13
+ 56  96 128	index 14
+144 200 208	index 15

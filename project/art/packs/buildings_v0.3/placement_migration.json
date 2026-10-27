@@ -1,0 +1,97 @@
+{
+  "version": "v0.3",
+  "status": "placement_candidates_only",
+  "map_edits_performed": false,
+  "coordinate_system": "zero-based blocks; 16 pixels per block",
+  "origin_formula": "new_origin = old_origin + old_local_door - new_local_door",
+  "assets": {
+    "pokemon_mansion": {
+      "old_footprint_blocks": {
+        "width": 6,
+        "height": 5
+      },
+      "new_footprint_blocks": {
+        "width": 13,
+        "height": 9
+      },
+      "old_local_door": [
+        2,
+        4
+      ],
+      "new_local_door": [
+        6,
+        8
+      ],
+      "required_approach_local": [
+        6,
+        9
+      ],
+      "old_origin_hint_blocks": [
+        4,
+        0
+      ],
+      "hint_source": "Historical original brief found_on_map.pixel_xy / 16; not authoritative current game-project coordinates",
+      "old_world_door_hint": [
+        6,
+        4
+      ],
+      "keep_world_door_origin_delta": [
+        -4,
+        -4
+      ],
+      "keep_world_door_candidate": [
+        0,
+        -4
+      ],
+      "candidate_within_nonnegative_coordinates": false,
+      "terrain_collision_checked": false,
+      "map_warp_edit_performed": false,
+      "palettes_unchanged_from_v02": true,
+      "warning": "Preserving the historical doorway yields a negative origin row. Requires northern map expansion or relocating the site and exterior warp; original Lab/street space also needs re-layout."
+    },
+    "power_plant": {
+      "old_footprint_blocks": {
+        "width": 7,
+        "height": 5
+      },
+      "new_footprint_blocks": {
+        "width": 15,
+        "height": 8
+      },
+      "old_local_door": [
+        3,
+        4
+      ],
+      "new_local_door": [
+        7,
+        7
+      ],
+      "required_approach_local": [
+        7,
+        8
+      ],
+      "old_origin_hint_blocks": [
+        26,
+        35
+      ],
+      "hint_source": "Historical original brief found_on_map.pixel_xy / 16; not authoritative current game-project coordinates",
+      "old_world_door_hint": [
+        29,
+        39
+      ],
+      "keep_world_door_origin_delta": [
+        -4,
+        -3
+      ],
+      "keep_world_door_candidate": [
+        22,
+        32
+      ],
+      "candidate_within_nonnegative_coordinates": true,
+      "terrain_collision_checked": false,
+      "map_warp_edit_performed": false,
+      "palettes_unchanged_from_v02": true,
+      "warning": "Candidate needs shoreline, land, path and neighboring-object checks. Do not place into the old land rectangle. Loading shutter is sealed scenery, not a warp."
+    }
+  }
+}

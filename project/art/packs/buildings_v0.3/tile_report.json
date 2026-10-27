@@ -1,0 +1,315 @@
+{
+  "buildings": {
+    "pewter_gym": {
+      "static": 77,
+      "with_all_door_frames": 84,
+      "palette": "pewter_stone"
+    },
+    "saffron_gym": {
+      "static": 82,
+      "with_all_door_frames": 89,
+      "palette": "saffron"
+    },
+    "fuchsia_gym": {
+      "static": 82,
+      "with_all_door_frames": 89,
+      "palette": "saffron"
+    },
+    "cinnabar_gym": {
+      "static": 83,
+      "with_all_door_frames": 90,
+      "palette": "cinnabar"
+    },
+    "pokemon_league": {
+      "static": 168,
+      "with_all_door_frames": 175,
+      "palette": "league"
+    },
+    "fighting_dojo": {
+      "static": 80,
+      "with_all_door_frames": 87,
+      "palette": "saffron"
+    },
+    "safari_gate": {
+      "static": 87,
+      "with_all_door_frames": 94,
+      "palette": "saffron"
+    },
+    "pokemon_tower": {
+      "static": 75,
+      "with_all_door_frames": 81,
+      "palette": "lavender"
+    },
+    "celadon_gym": {
+      "static": 70,
+      "with_all_door_frames": 77,
+      "palette": "celadon"
+    },
+    "department_store": {
+      "static": 72,
+      "with_all_door_frames": 79,
+      "palette": "celadon"
+    },
+    "celadon_mansion": {
+      "static": 79,
+      "with_all_door_frames": 86,
+      "palette": "celadon"
+    },
+    "celadon_hotel": {
+      "static": 63,
+      "with_all_door_frames": 70,
+      "palette": "celadon"
+    },
+    "game_corner": {
+      "static": 78,
+      "with_all_door_frames": 85,
+      "palette": "celadon"
+    },
+    "silph_co": {
+      "static": 82,
+      "with_all_door_frames": 89,
+      "palette": "saffron"
+    },
+    "saffron_gate": {
+      "static": 42,
+      "with_all_door_frames": 53,
+      "palette": "saffron"
+    },
+    "saffron_gate_back": {
+      "static": 31,
+      "with_all_door_frames": 31,
+      "palette": "saffron"
+    },
+    "route12_gate": {
+      "static": 53,
+      "with_all_door_frames": 64,
+      "palette": "saffron"
+    },
+    "cycling_gate": {
+      "static": 55,
+      "with_all_door_frames": 55,
+      "palette": "saffron"
+    },
+    "magnet_train_station": {
+      "static": 62,
+      "with_all_door_frames": 62,
+      "palette": "saffron"
+    },
+    "pokemon_lab": {
+      "static": 91,
+      "with_all_door_frames": 98,
+      "palette": "lab"
+    },
+    "pallet_windmill": {
+      "static": 56,
+      "with_all_door_frames": 56,
+      "palette": "houses"
+    },
+    "route1_rest_shelter": {
+      "static": 26,
+      "with_all_door_frames": 26,
+      "palette": "houses"
+    },
+    "route1_arch": {
+      "static": 21,
+      "with_all_door_frames": 21,
+      "palette": "houses"
+    },
+    "pokemon_mansion": {
+      "static": 132,
+      "with_all_door_frames": 139,
+      "palette": "cinnabar"
+    },
+    "power_plant": {
+      "static": 141,
+      "with_all_door_frames": 148,
+      "palette": "pewter_stone"
+    },
+    "league_front_gate_tall": {
+      "static": 150,
+      "with_all_door_frames": 162,
+      "palette": "pewter_stone"
+    },
+    "house_pond_garden": {
+      "static": 55,
+      "with_all_door_frames": 62,
+      "palette": "houses"
+    }
+  },
+  "maps": {
+    "pallet": {
+      "buildings": [
+        "pallet_windmill",
+        "pokemon_lab"
+      ],
+      "unique_graphics_with_flips_merged": 153,
+      "conservative_sum": 154,
+      "building_allowance": 170,
+      "within_allowance": true,
+      "palette_groups": [
+        "houses",
+        "lab"
+      ]
+    },
+    "route1": {
+      "buildings": [
+        "route1_rest_shelter",
+        "route1_arch"
+      ],
+      "unique_graphics_with_flips_merged": 45,
+      "conservative_sum": 47,
+      "building_allowance": 250,
+      "within_allowance": true,
+      "palette_groups": [
+        "houses"
+      ]
+    },
+    "celadon": {
+      "buildings": [
+        "department_store",
+        "celadon_mansion",
+        "celadon_hotel",
+        "game_corner",
+        "celadon_gym"
+      ],
+      "unique_graphics_with_flips_merged": 307,
+      "conservative_sum": 397,
+      "building_allowance": 384,
+      "within_allowance": true,
+      "palette_groups": [
+        "celadon"
+      ]
+    },
+    "saffron": {
+      "buildings": [
+        "silph_co",
+        "saffron_gym",
+        "fighting_dojo",
+        "saffron_gate",
+        "saffron_gate_back",
+        "magnet_train_station"
+      ],
+      "unique_graphics_with_flips_merged": 319,
+      "conservative_sum": 411,
+      "building_allowance": 344,
+      "within_allowance": true,
+      "palette_groups": [
+        "saffron"
+      ]
+    },
+    "fuchsia": {
+      "buildings": [
+        "safari_gate",
+        "fuchsia_gym",
+        "house_pond_garden"
+      ],
+      "unique_graphics_with_flips_merged": 233,
+      "conservative_sum": 245,
+      "building_allowance": 310,
+      "within_allowance": true,
+      "palette_groups": [
+        "houses",
+        "saffron"
+      ]
+    },
+    "lavender": {
+      "buildings": [
+        "pokemon_tower"
+      ],
+      "unique_graphics_with_flips_merged": 81,
+      "conservative_sum": 81,
+      "building_allowance": 189,
+      "within_allowance": true,
+      "palette_groups": [
+        "lavender"
+      ]
+    },
+    "cinnabar": {
+      "buildings": [
+        "pokemon_lab",
+        "pokemon_mansion",
+        "cinnabar_gym"
+      ],
+      "unique_graphics_with_flips_merged": 288,
+      "conservative_sum": 327,
+      "building_allowance": 290,
+      "within_allowance": true,
+      "palette_groups": [
+        "cinnabar",
+        "lab"
+      ]
+    },
+    "indigo": {
+      "buildings": [
+        "pokemon_league"
+      ],
+      "unique_graphics_with_flips_merged": 175,
+      "conservative_sum": 175,
+      "building_allowance": 373,
+      "within_allowance": true,
+      "palette_groups": [
+        "league"
+      ]
+    },
+    "pewter": {
+      "buildings": [
+        "pewter_gym"
+      ],
+      "unique_graphics_with_flips_merged": 84,
+      "conservative_sum": 84,
+      "building_allowance": 86,
+      "within_allowance": true,
+      "palette_groups": [
+        "pewter_stone"
+      ]
+    },
+    "route10": {
+      "buildings": [
+        "power_plant"
+      ],
+      "unique_graphics_with_flips_merged": 148,
+      "conservative_sum": 148,
+      "building_allowance": 149,
+      "within_allowance": true,
+      "palette_groups": [
+        "pewter_stone"
+      ]
+    },
+    "route22": {
+      "buildings": [
+        "league_front_gate_tall"
+      ],
+      "unique_graphics_with_flips_merged": 162,
+      "conservative_sum": 162,
+      "building_allowance": 197,
+      "within_allowance": true,
+      "palette_groups": [
+        "pewter_stone"
+      ]
+    },
+    "route12_route23": {
+      "buildings": [
+        "route12_gate"
+      ],
+      "unique_graphics_with_flips_merged": 64,
+      "conservative_sum": 64,
+      "building_allowance": 137,
+      "within_allowance": true,
+      "palette_groups": [
+        "saffron"
+      ]
+    },
+    "route16_route18_route15": {
+      "buildings": [
+        "cycling_gate"
+      ],
+      "unique_graphics_with_flips_merged": 55,
+      "conservative_sum": 55,
+      "building_allowance": 300,
+      "within_allowance": true,
+      "palette_groups": [
+        "saffron"
+      ]
+    }
+  }
+}

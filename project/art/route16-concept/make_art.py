@@ -4,7 +4,7 @@ valley and Cycling Road begins (see draw_plan.py). It is 56x44 blocks (old Route
 boulevard (its rows 20-23) at the right edge, rows 22-25 (offset 2), and Cycling Road (Route 17) below the bottom edge,
 its road at columns 12-17 (offset 0).
 
-The pieces: the kit's, the Cycling Road gatehouse drawn here (route16_buildings.py) in Saffron's buildings' palette
+The pieces: the kit's, the Cycling Road gatehouse (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3) in Saffron's buildings' palette
 (bank 9), and Viridian's pond keeper's house (bank 7). Bank 8 is the kit's plants palette; 10-12 stay free for the
 seam to old Route 17, whose strip in this route (the bottom seven rows) is forest and road only.
 
@@ -21,10 +21,8 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 import buildings
 import kit
-import route16_buildings
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -38,7 +36,7 @@ SOLID = set("T#bRoklSBcw_~vrCY")
 DOOR, IN_EAST, IN_WEST = "MB_ANIMATED_DOOR", "MB_EAST_ARROW_WARP", "MB_WEST_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the
 # gatehouse's doorways: the left one entered walking east, the right one walking west)
-BUILDINGS = {"C": (route16_buildings.OUT / "cycling_gate", GATE_BANK, [IN_EAST, IN_WEST]),
+BUILDINGS = {"C": (buildings.REMAKES / "cycling_gate", GATE_BANK, [IN_EAST, IN_WEST]),
              "Y": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR])}
 SNORLAX = (44, 24)       # asleep in the gap between the outcrops
 TREES = [(46, 21)]       # the tree to cut, in the hedge north of the road: the woodland path behind it
@@ -146,8 +144,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    for draw in route16_buildings.ALL:
-        draw()
     g = plan()
     d = doors(g)
     kit.check_forest(g)

@@ -24,10 +24,10 @@ the Gym's at 20,4 (its lock at 20,5). Bill and the player still walk the harbour
 (column 21) to the boat, which comes in from the east on rows 8 and 12. The Mansion's, the Lab's and the Mart's doors
 moved (6,4; 6,11; 18,11); every warp keeps its number, so the buildings behind them still point at it.
 
-The pieces: the kit's and its Pokémon Center and Mart; the island's own buildings (`cinnabar_buildings.py`), each
-made from a pack drawn for another town and in its own palette: Blaine's Gym (Pewter's, its hues turned to the
-volcano's reds), the burned Mansion (Celadon's hotel, greyed, darkened and streaked with soot), the Pokémon Lab
-(Oak's lab as Pallet draws it, its door pae's panel door); the kit's cliffs for the volcano's rock.
+The pieces: the kit's and its Pokémon Center and Mart; the island's own buildings, each in its own palette: Blaine's
+Gym and the Pokémon Lab (Oak's, as Pallet has it) from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`); the burned Mansion
+(`buildings/pokemon_mansion`: Celadon's old hotel, greyed, darkened and streaked with soot, until the remakes' larger
+Mansion moves in); the kit's cliffs for the volcano's rock.
 
 It was rebuilt with Route 21, in one pull request, so that every join between them is between kit maps. Old
 Route 20 still needs a seam (KR-78). The old island's layout was in FireRed's metatile format, so its build sets the

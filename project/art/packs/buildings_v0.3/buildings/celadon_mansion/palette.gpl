@@ -1,0 +1,20 @@
+GIMP Palette
+Name: celadon
+Columns: 16
+#
+  0   0   0	index 0 transparent
+ 24  24  40	index 1
+ 56  56  72	index 2
+120  40  56	index 3
+ 88 104 128	index 4
+184  64  72	index 5
+232 128 136	index 6
+ 48  96 112	index 7
+120 192 192	index 8
+184 176 160	index 9
+216 208 184	index 10
+240 232 208	index 11
+136 104  56	index 12
+200 160  72	index 13
+240 208 128	index 14
+ 80 144  88	index 15

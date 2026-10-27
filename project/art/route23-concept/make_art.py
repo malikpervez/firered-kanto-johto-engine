@@ -32,7 +32,7 @@ CLIFF_BANK, GATE_BANK = 7, 9
 WATER = "~"
 SOLID = set("T#bRoklSBcw_~vrsqQYH") | cliffs.SOLID
 TOP = [(x, 0) for x in range(10, 14)]           # Indigo Plateau's road
-GATE_FOLDER = ART / "route12-concept/buildings/route12_gate"
+GATE_FOLDER = buildings.REMAKES / "route12_gate"  # the League gate's back: Route 12's north gatehouse
 # the badge gates, south first: (west column, top row) of each pass; the guard in its east column on the pass's third
 # row, the triggers across the three blocks beside him on that row and the next
 GATES = [(8, 138), (8, 120), (8, 102), (8, 84), (8, 56), (8, 46), (4, 36)]

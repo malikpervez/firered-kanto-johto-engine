@@ -5,7 +5,7 @@
 # (project/art/build_all.sh rebuilds every map).
 set -e
 A=project/art/route12-concept
-B=project/art/route12-concept/buildings
+B=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the gatehouse
 V=project/art/viridian-concept/buildings
 python3 $A/make_art.py
 cd engine

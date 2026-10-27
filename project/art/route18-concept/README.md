@@ -22,8 +22,8 @@ It has:
 - **the gatehouse** across the road, the only way between Cycling Road and Fuchsia, with woods north and south of it;
 - **the road on to Fuchsia** beyond it, out of the woods.
 
-The gatehouse is Route 16's Cycling Road gatehouse (`../route16-concept/route16_buildings.py`, `cycling_gate`), here
-in bank 7. Its two doorways are arrow warps: the left one entered walking east, the right one walking west. They
+The gatehouse is Route 16's Cycling Road gatehouse (`../packs/buildings_v0.3/buildings/cycling_gate/`), here in
+bank 7. Its two doorways are arrow warps: the left one entered walking east, the right one walking west. They
 match the inside's doors, which are on its west and east walls. Its warps keep their numbers: the west doorway (0) and
 the east one (1).
 

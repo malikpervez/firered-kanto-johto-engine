@@ -1,0 +1,20 @@
+GIMP Palette
+Name: cinnabar
+Columns: 16
+#
+  0   0   0	index 0 transparent
+ 24  24  32	index 1
+ 48  48  56	index 2
+ 64  64  72	index 3
+ 88  88  96	index 4
+136 136 144	index 5
+192 184 176	index 6
+ 88  80  72	index 7
+128 120 112	index 8
+168 160 144	index 9
+208 200 176	index 10
+240 232 208	index 11
+120  40  32	index 12
+192  72  40	index 13
+240 144  72	index 14
+ 64 104 120	index 15

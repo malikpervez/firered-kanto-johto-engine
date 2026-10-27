@@ -13,8 +13,8 @@ The route is 38×80 blocks (old Route 12 was 38×90). Its joins stay where they 
 
 It has:
 - **the north gatehouse** across the way down from Lavender between the woods: you walk in at its back doorway and
-  out of its front door onto the cliff top. It is the only way down. Drawn for it from Saffron's two gatehouse packs
-  (`route12_buildings.py`: the back's top two rows over the front's bottom two);
+  out of its front door onto the cliff top. It is the only way down. From Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`)
+  (`route12_gate`);
 - **the cliff top**, a lookout over the sea, its tall grass (the Hyper Potion hidden in it), the route sign;
 - **Silence Bridge**, the boardwalk south over the sea, Ned, Chip, Hank and Elliot fishing off it, a Carvanha in the
   water by it;

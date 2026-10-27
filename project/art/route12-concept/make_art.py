@@ -4,7 +4,7 @@ Route 13 (see draw_plan.py). It is 38x80 blocks (old Route 12 was 38x90); its jo
 road south (its columns 13-15) at the top edge, columns 10-13 (offset -2); Route 11's road (its rows 17-19) at the left
 edge, rows 44-47 (offset 27); Route 13's boardwalk (its columns 86-89) at the bottom edge, columns 21-24 (offset -65).
 
-The pieces: the kit's; the north gatehouse (route12_buildings.py, from Saffron's two gatehouse packs) in Saffron's
+The pieces: the kit's; the north gatehouse (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3) in Saffron's
 buildings' palette (bank 7); the fishing house, Viridian's gardener's house, in Viridian's houses' palette (bank 9).
 Every neighbour is from the kit, so no strip has to keep to few palettes.
 
@@ -21,10 +21,8 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 import buildings
 import kit
-import route12_buildings
 
 HERE = Path(__file__).resolve().parent
 VB = HERE.parent / "viridian-concept/buildings"
@@ -38,7 +36,7 @@ SOLID = set("T#bRoklSBcw_~vrsqQNF")
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, what each of their doors does (the gatehouse:
 # its front double door, then the doorway in its back, entered walking south)
-BUILDINGS = {"N": (route12_buildings.OUT / "route12_gate", GATE_BANK, [DOOR, DOOR, BACK, BACK]),
+BUILDINGS = {"N": (buildings.REMAKES / "route12_gate", GATE_BANK, [DOOR, DOOR, BACK, BACK]),
              "F": (VB / "house_gardener", HOUSE_BANK, [DOOR])}
 SNORLAX = (17, 48)       # asleep in the neck south of the fishers' deck, the Leftovers under him
 CUT = [(26, 63), (26, 64)]  # the trees to cut: the pocket's way in
@@ -155,7 +153,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    route12_buildings.gate()
     g = plan()
     d = doors(g)
     kit.check_forest(g)

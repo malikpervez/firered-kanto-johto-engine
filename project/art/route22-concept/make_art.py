@@ -9,8 +9,9 @@ The route is 52x28 blocks, as before. Its road from Viridian leaves the right ed
 east of it.
 
 The pieces: the kit's (and its dressed-stone paving, a pack in the ground palette), the League Front Gate (a native
-pixel pack, bank 7) and the rock and cliff pack (rock_cliff/, bank 9: meant for every route, but the kit has no
-palette slot left, so it's Route 22's own for now). Bank 8 is the kit's plants palette.
+pixel pack, bank 7; two storeys tall, from Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3) and the rock and
+cliff pack (rock_cliff/, bank 9: meant for every route, but the kit has no palette slot left, so it's Route 22's own
+for now). Bank 8 is the kit's plants palette.
 
 The cliffs: ``C`` in the plan is a cliff's whole footprint. The bottom two blocks of each column of it are the face
 (the pack's columns: an outer end beside the lawn, an inner one where it meets a cliff top or the stairs coming
@@ -25,10 +26,7 @@ into the game's tileset and map with pae.
 import json
 import sys
 from collections import deque
-from dataclasses import replace
 from pathlib import Path
-
-import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
@@ -116,24 +114,10 @@ def check(g, door) -> None:
     assert "C" not in "".join("".join(r) for r in g), "every cliff block is its top or its face"
 
 
-def two_storeys(gate: buildings.Building) -> buildings.Building:
-    """The League Front Gate a storey taller (three blocks, between its roof and its ground floor), from the pack's
-    own pixels: the ground floor's wall and windows again, a window where the door is below, and its plinth's
-    stones run on as a band course between the floors. The door and its drawn frames stay as they are."""
-    a = gate.idx
-    roof, ground = a[:GATE_TOP * 16], a[GATE_TOP * 16:]
-    upper = ground[:40].copy()
-    upper[:, 112:128] = ground[:40, 110:111]  # where the door is below: the pavilion's plain wall
-    upper[9:31, 113:128] = ground[9:31, 17:32]  # and a window, the side ones' own
-    course = ground[40:48].copy()
-    course[:, 112:128] = ground[40:48, 80:96]  # the plinth's stones repeat every 16 pixels
-    return replace(gate, idx=np.vstack([roof, upper, course, ground]), door=(gate.door[0], gate.door[1] + 3))
-
-
 # ---------------------------------------------------------------- sheets and spec
 def main() -> None:
     g, gate_at, joins = fit(plan())
-    gate = two_storeys(buildings.load(HERE / "buildings" / "league_front_gate"))
+    gate = buildings.load(buildings.REMAKES / "league_front_gate_tall")
     door = (gate_at[0] + gate.door[0], gate_at[1] + gate.door[1])
     kit.check_forest(g)
     kit.check_water(g)

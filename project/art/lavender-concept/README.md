@@ -13,9 +13,8 @@ where it met the old town, and Route 8's the left edge at rows 9–11 (the new R
 - **the square**, where the three roads meet: the Pokémon Center and the Poké Mart on its north side either side of
   the road from Route 10, the town sign, and the Friends' camp (round 13,13, as before);
 - **Pokémon Tower** at the east end of the street, the tallest building in the east of Kanto, with its sign and the
-  Silph Scope notice on the way up to it and a garden of flowers by it. It is drawn here (`buildings/pokemon_tower`,
-  written by `make_art.py`): three storeys of violet stone with candles in the windows, a violet roof, and Pewter
-  Gym's door frames recoloured with the board over the door left blank;
+  Silph Scope notice on the way up to it and a garden of flowers by it. It is from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`): a solemn lavender memorial tower with three layered roofs, quiet stone
+  courses, narrow recessed windows and a dark framed entrance;
 - **the stone garden** south of the street, flowers with four grave stones, where the worker stands and the Haunters
   go round at night;
 - **Mr. Fuji's Volunteer Pokémon House** west of the square with its sign (the stranger waits by it once you have the

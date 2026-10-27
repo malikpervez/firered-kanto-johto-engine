@@ -3,11 +3,12 @@
 draw_plan.py). It is 24x20 blocks, as before; Route 23's road leaves the bottom edge (columns 10-13, offset 0) and
 League West Pass's road meets the left edge (rows 9-11, offset 0).
 
-The pieces: the kit's; the League's tower (indigo_buildings.py: Silph Co.'s, recoloured) in its own palette (bank 7).
+The pieces: the kit's; the Pokémon League (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3) in its own palette
+(bank 7).
 Bank 8 is the kit's plants palette; 9-12 stay free for the seam to old League West Pass.
 
 Run from the repository root:  python3 project/art/indigo-concept/make_art.py
-It writes buildings/, sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
+It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
 itself; build.sh turns them into the game's tileset and map with pae.
 """
 import json
@@ -19,9 +20,7 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 import buildings
-import indigo_buildings
 import kit
 
 HERE = Path(__file__).resolve().parent
@@ -36,7 +35,7 @@ CREDITS = (11, 12)                     # where the credits' rival and Oak stand,
 
 
 def league() -> buildings.Building:
-    folder = indigo_buildings.OUT / "pokemon_league"
+    folder = buildings.REMAKES / "pokemon_league"
     meta = json.loads((folder / "pokemon_league.json").read_text())
     with Image.open(folder / "pokemon_league.png") as im:
         idx, flat = np.array(im, np.uint8), im.getpalette()[:48]
@@ -90,8 +89,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    for draw in indigo_buildings.ALL:
-        draw()
     b = league()
     g = plan()
     d = door(g, b)

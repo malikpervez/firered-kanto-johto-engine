@@ -15,7 +15,8 @@
   "secondary": [
    "palette_lab.pal",
    "../kit/palette_plants.pal",
-   "palette_houses.pal"
+   "palette_houses.pal",
+   "palette_windmill.pal"
   ]
  },
  "reserve": {
@@ -3032,7 +3033,7 @@
    "w": 5,
    "h": 6,
    "banks": [
-    2
+    10
    ],
    "tileset": "secondary",
    "ground": "grass",

@@ -1,214 +1,42 @@
 #!/usr/bin/env python3
 """Pallet Town after the concept art (concept.png, made with image generation): every tile drawn from scratch,
 nothing taken from an existing tileset. The pieces every map shares come from the kit (../kit/kit.py); this file
-draws the town's own.
+draws the town's own ground and lays it out.
 
 The town is 32x28 blocks: a forest around it, two houses with fenced yards (buildings/), cobblestone roads, a windmill
 in a flower garden, Oak's lab with its greenhouse, a pond with a wooden dock (and the way south to Route 21), the sea
 below a cliff in the east, and a stone well.
 
 Its palettes (banks 0-3 and 8 are the kit's):
-  bank 2  wood (the kit's): the windmill
-  bank 7  the lab: metal roof, siding, glass, the greenhouse plants
+  bank 7  Oak's lab (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3): metal roof, siding, glass, the greenhouse
   bank 9  the houses: one palette for both (buildings/, Pallet Houses Pack v0.5, a native pixel pack)
+  bank 10 the windmill (the same remakes pack), in Viridian's houses' palette
 
 Run from the repository root:  python3 project/art/pallet-concept/make_art.py
 It writes sheets/*.png, the palettes, spec.json, grid.txt, border.txt, legend.json and events.json next to itself;
 build.sh turns them into the game's tilesets and map with pae.
 """
 import json
-import math
-import random
 import sys
 from pathlib import Path
-
-import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
-from kit import CRM, D_OUT, NWL, NWM, RFD, RFH, RFL, RFM, STG, STL, WOD, WOM, edge_of, ellipse
 
 HERE = Path(__file__).resolve().parent
 MAP_W, MAP_H = 32, 28
 
-# ---------------------------------------------------------------- palettes (the town's own; the kit has the rest)
-P3 = [(0, 0, 0), (24, 32, 40), (64, 80, 96), (96, 112, 128), (144, 160, 168), (192, 200, 208), (152, 144, 120),
-      (200, 192, 168), (232, 228, 208), (40, 64, 80), (120, 176, 184), (200, 236, 236), (40, 96, 56),
-      (88, 152, 72), (72, 120, 88), (248, 248, 240)]
-L_OUT, MTD, MTM, MTL, MTH, SID, SIM, SIL, LWD, GLA, GLH, PLD, PLM, DRG, LWH = range(1, 16)
-
-BANK = {"lab": 7, "plants": 8, "houses": 9}
+# ---------------------------------------------------------------- palettes and buildings (the kit has the rest)
+BANK = {"lab": 7, "plants": 8, "houses": 9, "windmill": 10}
 # the two houses, from a native pixel pack: one palette for both (the town has one palette slot for them)
 HOUSES = {roof: buildings.load(HERE / "buildings" / f"{roof}_house") for roof in ("red", "blue")}
 assert HOUSES["red"].palette == HOUSES["blue"].palette, "the two houses must share one palette"
-PALS = {"lab": P3, "houses": HOUSES["red"].palette}
-
-
-def windmill() -> np.ndarray:
-    """5x6 blocks: a white tower with a red cap and four sails; the door is block (2, 5)."""
-    t = np.zeros((96, 80), np.uint8)
-    yy, xx = np.indices((96, 80))
-    # tower: tapering, white boards
-    top_y, bot_y = 34, 92
-    body = np.zeros((96, 80), bool)
-    for y in range(top_y, bot_y):
-        k = (y - top_y) / (bot_y - top_y)
-        half = 13 + 8 * k
-        body[y, int(40 - half):int(40 + half)] = True
-    t[body] = CRM
-    t[body & (xx > 46)] = STL
-    t[body & (xx > 53)] = STG
-    t[body & (xx < 32)] = STL * 0 + CRM
-    t[body & ((yy - top_y) % 6 == 5)] = STL
-    t[body & ((yy - top_y) % 6 == 5) & (xx > 50)] = STG
-    t[edge_of(body)] = D_OUT
-    # stone base
-    t[86:92, 17:63] = STG
-    t[86, 17:63] = STL
-    for x in range(17, 63, 5):
-        t[86:92, x] = D_OUT
-    t[92, 17:63] = D_OUT
-    # window and door
-    t[46:56, 36:44] = D_OUT
-    t[47:55, 37:43] = NWM
-    t[47:50, 37:43] = NWL
-    t[51, 37:43] = D_OUT
-    t[78:93, 33:47] = D_OUT
-    t[79:93, 34:46] = WOD
-    t[79:93, 39:41] = D_OUT
-    t[78, 35:45] = WOM
-    # cap: red dome
-    cap = ellipse(96, 80, 40, 36, 17, 13) & (yy < 38)
-    t[cap] = RFM
-    t[cap & (xx < 36) & (yy < 31)] = RFL
-    t[cap & (xx < 30) & (yy < 28)] = RFH
-    t[cap & (xx > 46)] = RFD
-    t[edge_of(cap)] = D_OUT
-    t[37:39, 22:58] = D_OUT
-    t[36, 24:56] = RFD
-    # sails: an X of lattice blades around the hub (each pixel asks which blade it lies on)
-    hx, hy = 40, 30
-    for ang in (45, 135, 225, 315):
-        a = math.radians(ang)
-        ux, uy = math.cos(a), math.sin(a)
-        rx_, ry_ = xx + 0.5 - hx, yy + 0.5 - hy
-        s_ = rx_ * ux + ry_ * uy
-        w_ = -rx_ * uy + ry_ * ux
-        on = (s_ >= 5) & (s_ <= 38)
-        spar = on & (np.abs(w_) <= 1.0)
-        sail = on & (w_ > 1.0) & (w_ <= 7.5) & (s_ >= 11)
-        rim = sail & ((w_ > 6.5) | (s_ > 37) | (s_ < 12))
-        lattice = sail & ~rim & ((np.abs((s_ % 6.5) - 3.25) > 2.6) | (np.abs(w_ - 4.2) < 0.55))
-        t[sail] = np.where(w_[sail] < 4.5, CRM, STL)
-        t[lattice] = WOM
-        t[rim] = D_OUT
-        t[spar] = WOD
-        t[spar & (np.abs(w_) > 0.5)] = D_OUT
-    hub = ellipse(96, 80, hx, hy, 4, 4)
-    t[hub] = RFM
-    t[ellipse(96, 80, hx - 1, hy - 1, 2, 2)] = RFH
-    t[edge_of(hub)] = D_OUT
-    return t
-
-
-def lab() -> np.ndarray:
-    """Oak's lab, 9x5 blocks: a 6-block house with a grey metal roof and a 3-block greenhouse; door at (3, 4)."""
-    t = np.zeros((80, 144), np.uint8)
-    yy, xx = np.indices((80, 144))
-    # main roof
-    for y in range(4, 36):
-        inset = max(0, 8 - (y - 4))
-        x0, x1 = 1 + inset, 97 - inset
-        t[y, x0:x1] = MTM
-        for x in range(x0, x1):
-            if (x - 1) % 8 == 0:
-                t[y, x] = MTD
-            elif (x - 1) % 8 == 1:
-                t[y, x] = MTL
-        t[y, x0] = L_OUT
-        t[y, x1 - 1] = L_OUT
-    t[4, 9:89] = L_OUT
-    t[5, 9:89] = MTH
-    t[6:8, 8:90] = MTL
-    t[34, 1:97] = MTD
-    t[35, 0:98] = L_OUT
-    # vent chimney
-    t[0:14, 78:86] = MTD
-    t[0, 77:87] = L_OUT
-    t[1:3, 78:86] = MTH
-    t[0:14, 77] = L_OUT
-    t[0:14, 86] = L_OUT
-    # walls: white siding
-    t[36:76, 2:96] = SIL
-    for y in range(36, 76):
-        if (y - 36) % 4 == 3:
-            t[y, 2:96] = SIM
-    t[36:38, 2:96] = SID
-    t[36:76, 1] = L_OUT
-    t[36:76, 96] = L_OUT
-    # upper windows
-    for wx in (6, 20, 68, 82):
-        t[40:52, wx - 1:wx + 9] = L_OUT
-        t[41:51, wx:wx + 8] = GLA
-        t[41:44, wx:wx + 8] = GLH
-        t[41:51, wx + 3:wx + 5] = LWD
-        t[52, wx - 2:wx + 10] = SID
-    # lower windows
-    for wx in (6, 24, 70, 84):
-        t[57:70, wx - 1:wx + 11] = L_OUT
-        t[58:69, wx:wx + 10] = GLA
-        t[58:61, wx:wx + 10] = GLH
-        t[63, wx:wx + 10] = L_OUT
-        t[58:69, wx + 4:wx + 6] = L_OUT
-        t[70, wx - 2:wx + 12] = SID
-    # sign over the door
-    t[40:50, 34:62] = L_OUT
-    t[41:49, 35:61] = LWH
-    for x in range(38, 58, 3):
-        t[43:47, x:x + 2] = MTD
-    # double glass door at block (3, 4): x 48-63
-    t[56:78, 46:66] = L_OUT
-    t[57:78, 47:65] = DRG
-    t[58:76, 49:55] = GLA
-    t[58:76, 57:63] = GLA
-    t[58:62, 49:55] = GLH
-    t[58:62, 57:63] = GLH
-    t[57:78, 55:57] = L_OUT
-    t[66, 53:55] = MTH
-    t[66, 57:59] = MTH
-    # foundation
-    t[75:79, 1:97] = MTM
-    t[75, 1:97] = MTL
-    t[79, 1:97] = L_OUT
-    t[76:80, 46:66] = SIM  # the step
-    t[79, 46:66] = L_OUT
-    # greenhouse: glass panes in white frames, plants inside
-    gx0, gx1 = 97, 143
-    t[14:79, gx0:gx1] = GLA
-    for y in range(14, 30):  # sloped glass roof
-        t[y, gx0:gx1] = GLH if (y // 2) % 3 else GLA
-    plant = np.zeros((80, 144), bool)
-    r = random.Random(9)
-    for _ in range(26):
-        cx, cy = r.uniform(gx0 + 3, gx1 - 3), r.uniform(42, 74)
-        plant |= ellipse(80, 144, cx, cy, r.uniform(2.5, 4.5), r.uniform(2.5, 4))
-    plant &= (yy > 36) & (xx > gx0) & (xx < gx1)
-    t[plant] = PLM
-    t[plant & ((xx + yy) % 4 == 0)] = PLD
-    t[edge_of(plant)] = PLD
-    for y in (30, 46, 62):  # frame
-        t[y:y + 2, gx0:gx1] = LWH
-    for x in range(gx0, gx1, 11):
-        t[14:79, x:x + 2] = LWH
-    t[76:79, gx0:gx1] = MTM  # planter wall
-    t[76, gx0:gx1] = MTL
-    t[13, gx0:gx1] = L_OUT
-    t[14:80, gx1] = L_OUT
-    t[79, gx0:gx1 + 1] = L_OUT
-    for y in range(14, 30):
-        t[y, gx1 - 1] = L_OUT
-    return t
+# Oak's lab and the windmill, from the remakes pack (buildings.REMAKES): the lab in its own palette, the windmill in
+# Viridian's houses' (Route 1's shelter and arch have it too, so the join to Route 1 shows them in it)
+LAB = buildings.load(buildings.REMAKES / "pokemon_lab")
+WINDMILL = buildings.load(buildings.REMAKES / "pallet_windmill")
+PALS = {"lab": LAB.palette, "houses": HOUSES["red"].palette, "windmill": WINDMILL.palette}
 
 
 # ---------------------------------------------------------------- layout
@@ -320,12 +148,11 @@ def main() -> None:
     for roof, b in HOUSES.items():  # your house and your rival's (buildings/): solid but the door, which animates
         homes.add(f"house_{roof}", b.idx, tileset="secondary", **b.entry())
     spec_mt += homes.write()
-    big = sheet("buildings", "wood", cols=5)
-    big.add("windmill", windmill(), tileset="secondary", ground="grass", solid=True)
+    big = sheet("buildings", "windmill", cols=5)
+    big.add("windmill", WINDMILL.idx, tileset="secondary", ground="grass", solid=True)
     spec_mt += big.write()
     labs = sheet("lab", "lab", cols=9)
-    labs.add("lab", lab(), tileset="secondary", ground="grass", solid=True, open=["3,4"],
-             behaviors={"3,4": "MB_ANIMATED_DOOR"})
+    labs.add("lab", LAB.idx, tileset="secondary", **LAB.entry())
     spec_mt += labs.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
@@ -334,7 +161,8 @@ def main() -> None:
         kit.write_palette(HERE / f"palette_{name}.pal", pal)
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": "gTileset_PalletConcept",
             "palettes": {"primary": base["palettes"],
-                         "secondary": ["palette_lab.pal", base["secondary_palettes"][8], "palette_houses.pal"]},
+                         "secondary": ["palette_lab.pal", base["secondary_palettes"][8], "palette_houses.pal",
+                                       "palette_windmill.pal"]},
             "reserve": {"primary": base["reserve"]},
             "animations": base["animations"],
             "metatiles": spec_mt}

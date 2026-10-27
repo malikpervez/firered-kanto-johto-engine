@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "id": "route1_rest_shelter",
+  "type": "scenery",
+  "image": "route1_rest_shelter.png",
+  "image_size_px": [
+    48,
+    48
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 3,
+    "height": 3
+  },
+  "transparent_index": 0,
+  "door_blocks": [],
+  "door_block": null,
+  "door": null,
+  "door_instances": [],
+  "palette": "houses",
+  "palette_file": "palette.gpl",
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "collision_rows": [
+    "###",
+    "###",
+    "###"
+  ],
+  "preview_4x": "route1_rest_shelter_4x.png",
+  "maps": [
+    "route1"
+  ],
+  "design": "Open timber rest shelter with a deep shingled hip, projecting front eave, four grounded post edges and a shaded bench; transparent openings.",
+  "tile_economy": {
+    "tile_size_px": [
+      8,
+      8
+    ],
+    "mirrors_folded": true,
+    "includes_transparent_tile": true,
+    "includes_all_door_frames": true,
+    "unique_static": 26,
+    "unique_static_and_frames": 26
+  },
+  "status": "scale revision v0.3; awaiting visual review",
+  "story_events": "Keep all original map warps, trainer/event data and unlock flags. Art metadata does not introduce gameplay changes.",
+  "unanimated_doorways": []
+}

@@ -3,7 +3,9 @@
 the door block and the block above it) and <name>.json (footprint, door block, solid blocks).
 
 The kit's own are in buildings/: the Pokémon Center and the Poké Mart, which every town shares. A town's own
-buildings are in its folder and load the same way.
+buildings are in its folder and load the same way. The remakes of the buildings Claude first drew in code (the Gyms,
+the League, Celadon's and Saffron's buildings, the gates...) are one pack, ../packs/buildings_v0.3 (REMAKES); scenery
+without a door (the windmill, Route 1's shelter and arch, the Magnet Train station) has no door block.
 """
 import json
 from dataclasses import dataclass
@@ -13,6 +15,7 @@ import numpy as np
 from PIL import Image
 
 HERE = Path(__file__).resolve().parent / "buildings"
+REMAKES = HERE.parents[1] / "packs/buildings_v0.3/buildings"
 
 
 @dataclass
@@ -20,7 +23,7 @@ class Building:
     name: str
     idx: np.ndarray  # palette indices, 16 px a block
     palette: list[tuple[int, int, int]]  # 16 colours, index 0 transparent
-    door: tuple[int, int]  # the door block, in blocks from the building's top-left
+    door: tuple[int, int] | None  # the door block, in blocks from the building's top-left (None: no door)
     door_frames: Path
 
     def entry(self) -> dict:
@@ -42,7 +45,8 @@ def load(folder: Path) -> Building:
     fp = meta["footprint_blocks"]
     if idx.shape != (fp["height"] * 16, fp["width"] * 16):
         raise SystemExit(f"{name}: the picture is not its footprint ({fp['width']}x{fp['height']} blocks)")
-    return Building(name, idx, pal, tuple(meta["door_block"]), folder / f"{name}_door.png")
+    door = tuple(meta["door_block"]) if meta.get("door_block") else None
+    return Building(name, idx, pal, door, folder / f"{name}_door.png")
 
 
 CENTER = load(HERE / "pokemon_center")

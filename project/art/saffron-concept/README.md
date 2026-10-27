@@ -37,9 +37,9 @@ The attendant (the worker, who used to wander) now stands by the station.
 
 The pieces:
 - the kit's ground and plants, and its Pokémon Center and Mart;
-- six buildings drawn for the city by `saffron_buildings.py` in one palette (bank 9): Silph Co., Sabrina's Gym, the
-  Fighting Dojo, the two gatehouses and the station. The Gym's and Dojo's doors are Pewter Gym's frames recoloured; the
-  gatehouse's double door is drawn there too;
+- six buildings from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`), in one palette (bank 9): Silph Co., Sabrina's Gym, the
+  Fighting Dojo, the gatehouse (front and back) and the Magnet Train station, each with its own door frames (the
+  gatehouse's is one wide double door);
 - Viridian's houses in their palette (bank 7): the family's for Copycat's house, the pond keeper's for the house and
   Mr. Psychic's;
 - Viridian's trainer school in its own (bank 10) for the Fan Club.
