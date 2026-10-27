@@ -12,10 +12,10 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-27 |
-| Game | `v2-main` at `c13b5ab1` (every Kanto town and route rebuilt; no map changes here) |
+| Game | `v2-main` at `87d5db02` (every Kanto town and route rebuilt; no map changes here) |
 | ROM | `make -j8` with the default settings. SHA-1 `cc62fa5ae6856ea3f75cdfa845c0b312777bb051` |
-| pae | `ea6b4bb` (pae `main` after PR #32: pae reads FireRed's own tile behaviours); the last steps with `b799b1c` (after PR #33, which changes only play sessions' scratch saves) |
-| Last step passed | 247 `saffron`. Steps 1–196 ran from the top in one go (3323 s); with the Tea added in Celadon (steps 172–174), 172–247 ran on from step 171's checkpoint, resumed after a full disk and once after the walk past Luca on Route 12 changed. The story check stops at Saffron's east gate; Silph Co. is next |
+| pae | `b799b1c` (pae `main` after PRs #32 and #33: FireRed's own tile behaviours, and each play session its own scratch save) |
+| Last step passed | 289 `leave-saffron-gym`. Steps 248–289 (Silph Co., Giovanni, Sabrina) ran on from step 247's checkpoint, in parts as they were added; the check stops at Sabrina's Gym's door, and Cinnabar is next |
 | Replay tests | not run for this change: it changes only the story check and the docs, no game files |
 
 ## How to run it
@@ -305,6 +305,48 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 245 | `route8-gate` | West along Route 8 to Saffron's east gate | Route 8 West Entrance |  |
 | 246 | `saffron-guard` | Past the guard: he's thirsty; give him the Tea and he lets you by | Route 8 West Entrance | `VAR_MAP_SCENE_ROUTE5_ROUTE6_ROUTE7_ROUTE8_GATES` 1 |
 | 247 | `saffron` | On through the gate into Saffron (its exit mat's lower half) | Saffron City |  |
+| 248 | `silph-co` | Across Saffron (the Rocket at Silph's door is asleep now Mr. Fuji is safe) into Silph Co. | Silph Co 1F |  |
+| 249 | `silph-2f` | Up the hall to the stairs and up to 2F | Silph Co 2F 30,2 |  |
+| 250 | `silph-3f` | Along to the next stairs and up to 3F | Silph Co 3F 28,2 |  |
+| 251 | `silph-4f` | And up to 4F | Silph Co 4F 30,2 |  |
+| 252 | `silph-5f` | And up to 5F | Silph Co 5F 28,2 |  |
+| 253 | `silph-beau` | West along 5F's north hall past the scientist Beau, who walks about there (a door shuts the middle way and a Rocket the east one): if he sees you he battles | Silph Co 5F |  |
+| 254 | `silph-9f-pad` | Down the west rooms to the pad by the bottom hall's door: it takes you up to 9F (a walk must never end on a pad: its checkpoint is saved before the pad takes you) | Silph Co 9F 22,18 |  |
+| 255 | `silph-5f-grunt` | Off the pad and back on: it brings you down into 5F's bottom hall; step on into the Rocket's line by its door: he battles | Silph Co 5F 10,21 |  |
+| 256 | `card-key` | East along the bottom hall to the Card Key | Silph Co 5F 21,21 | `FLAG_HIDE_SILPH_CO_5F_CARD_KEY` set |
+| 257 | `silph-back-9f` | Back along the hall and up the pad to 9F | Silph Co 9F 22,18 |  |
+| 258 | `silph-9f-door4` | Up to 9F's first locked door; the Card Key opens it | Silph Co 9F | `FLAG_SILPH_9F_DOOR_4` set |
+| 259 | `silph-9f-door3` | Through it and up to the next; the Card Key opens it too | Silph Co 9F | `FLAG_SILPH_9F_DOOR_3` set |
+| 260 | `silph-9f-grunt` | Round the north hall and down the west corridor into a Rocket's line: he battles | Silph Co 9F 15,15 |  |
+| 261 | `silph-9f-door2` | The door to the west rooms: the Card Key opens it | Silph Co 9F | `FLAG_SILPH_9F_DOOR_2` set |
+| 262 | `silph-9f-door1` | Through the west rooms to the last door: the Card Key opens it | Silph Co 9F | `FLAG_SILPH_9F_DOOR_1` set |
+| 263 | `silph-9f-grunt2` | Through it into the line of the Rocket guarding the pad: he battles | Silph Co 9F |  |
+| 264 | `silph-3f-pad` | Up the west side to the pad in the corner: it takes you down to 3F | Silph Co 3F 2,14 |  |
+| 265 | `silph-3f-door` | East to 3F's locked door; the Card Key opens it | Silph Co 3F | `FLAG_SILPH_3F_DOOR_1` set |
+| 266 | `silph-7f` | Through it to the pad in the middle room: it takes you up to 7F | Silph Co 7F 5,4 |  |
+| 267 | `silph-rival` | West off the pad: the rival is waiting there; he battles, then leaves | Silph Co 7F 2,4 | `VAR_MAP_SCENE_SILPH_CO_7F` 1 |
+| 268 | `silph-11f` | Round to the other pad: it takes you up to 11F | Silph Co 11F 2,5 |  |
+| 269 | `silph-11f-grunt` | Down 11F's west side and east into the line of the Rocket at its foot: he battles | Silph Co 11F 2,18 |  |
+| 270 | `silph-11f-door` | East to the locked door below the boardroom; the Card Key opens it | Silph Co 11F | `FLAG_SILPH_11F_DOOR` set |
+| 271 | `giovanni-silph` | Up through it to Giovanni, who stops you: he battles, and Team Rocket leaves Silph Co. | Silph Co 11F 5,15 | `FLAG_HIDE_SAFFRON_ROCKETS` set, `VAR_MAP_SCENE_SILPH_CO_11F` 1 |
+| 272 | `silph-back-7f` | Back up the west side to the pad: down to 7F (the boardroom side of 11F has no other way out) | Silph Co 7F 5,8 |  |
+| 273 | `silph-back-3f` | Over to the other pad: down to 3F | Silph Co 3F 13,14 |  |
+| 274 | `silph-3f-door2` | East to 3F's other locked door; the Card Key opens it | Silph Co 3F | `FLAG_SILPH_3F_DOOR_2` set |
+| 275 | `silph-3f-grunt` | Through it and up the corridor into the line of the Rocket across it: he battles | Silph Co 3F 22,9 |  |
+| 276 | `silph-down-2f` | Up to the north hall and down the stairs to 2F | Silph Co 2F |  |
+| 277 | `silph-down-1f` | Down again to the lobby | Silph Co 1F |  |
+| 278 | `silph-out` | Out of Silph Co. into Saffron, free of Rockets now | Saffron City |  |
+| 279 | `saffron-gym` | Across Saffron to Sabrina's Gym | Saffron City Gym 14,23 |  |
+| 280 | `gym-pad-se` | The Gym is nine rooms joined by teleport pads. The entrance room's pad goes to the south-east room | Saffron City Gym 28,23 |  |
+| 281 | `gym-pad-ne` | Under the psychic's line to the room's west pad: to the north-east room | Saffron City Gym 28,4 |  |
+| 282 | `gym-pad-nw` | Under that room's psychic to its south-west pad: to the north-west room | Saffron City Gym 0,4 |  |
+| 283 | `gym-pad-centre` | Down the west wall to that room's south-west pad: into Sabrina's room | Saffron City Gym 18,15 |  |
+| 284 | `sabrina` | Face Sabrina and beat her: the Marsh Badge and TM04 | Saffron City Gym 14,12 | `FLAG_BADGE06_GET` set, `FLAG_GOT_TM04_FROM_SABRINA` set |
+| 285 | `gym-back-nw` | The pads back out: Sabrina's room's pad to the north-west room | Saffron City Gym 0,7 |  |
+| 286 | `gym-back-ne` | Its north-west pad: to the north-east room | Saffron City Gym 20,7 |  |
+| 287 | `gym-back-se` | Along under the psychic to the north-east pad: to the south-east room | Saffron City Gym 20,20 |  |
+| 288 | `gym-back-entrance` | Under the psychic to the south-east pad: back to the entrance | Saffron City Gym 18,20 |  |
+| 289 | `leave-saffron-gym` | Out of the Gym | Saffron City 17,18 |  |
 
 ## What it doesn't cover
 
@@ -353,6 +395,11 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   grunts where the walk goes round them; Route 12's fishing house and the trees to cut beside it; Routes 13–15's
   trainers (the walks keep out of their sight); Fuchsia's houses, the Safari Zone's Rest Houses and items (but the
   Gold Teeth); the Warden's boulder.
+* **Silph Co. off the story's path**: the walk takes the floors the Card Key and the pads need (1F–5F by the stairs,
+  then 9F, 3F, 7F and 11F by pads). Its other floors (6F, 8F, 10F), the lift, the Lapras on 7F, the items, the
+  Master Ball from the president and the trainers the walk goes round aren't played. Saffron's Dojo isn't played.
+* **Sabrina's Gym's trainers**: the walk takes the four pads that lead to Sabrina and back, under every psychic's
+  line of sight.
 * **The menus** (bag, Pokédex, Town Map, saving): only opened where the story opens them.
 * **Real play**: sound, real-time play, real hardware.
 
@@ -372,6 +419,9 @@ Checkpoints are game saves, so they still load after a map change, as long as th
      `forest-rick`).
    * In inputs, text advances with B (A talks to the person again). Leaving through a door mat needs one more press
      toward the exit while standing on it.
+   * A walk must never end on a warp pad, stairs or a door: the checkpoint is saved before the warp fires, so the next
+     step would start somewhere the game never puts you. Walk to the block before it and step on in the inputs.
+     Stairs inside buildings need one more press sideways (Silph Co.: 1F and 3F up are RIGHT, 2F and 4F up LEFT).
 3. When every step passes, update "Last validated point" and the step table on this page. Do it in the same pull
    request as the map change.
 4. A failed step is a finding. Fix it if it stops the story. If it doesn't, add it to
@@ -412,3 +462,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | Route 7 rebuilt (its own concept); step 141 lands at the hut's door on the new map, and one new step west into Celadon | **Steps 141–142 pass**, `--from route7` on this build, first try. |
 | 2026-10-26 | Celadon rebuilt (its own concept); step 142 lands on the new boulevard, and three new steps: its Center (in, heal, out) | **Steps 142–145 pass**, `--from celadon` on this build, first try. |
 | 2026-10-27 | `v2-main` `c13b5ab1`, every Kanto map rebuilt; no map changes: a hundred and two new steps from Celadon to Saffron's gate (Erika, the Game Corner and the Rocket Hideout, Giovanni and the Silph Scope, the Pokémon Tower and Mr. Fuji, the Poké Flute, the Tea, Snorlax, Routes 12–15, Fuchsia and Koga, the Safari Zone and HM03, the Warden and HM04, back north the long way to Saffron's east gate) | Steps 1–145 pass from the top (2756 s, pae `2838353`); **steps 1–196 pass from the top** on pae `ea6b4bb` (3323 s), and 172–247 on from there. First tries stopped where the walks met FireRed's own interiors: pae read their tiles as having no behaviour, so its walks crossed the Hideout's spin tiles (pae PR #32); a `pae play` beside the running check loaded its scratch save (pae PR #33); Psychic's PP ran out in the Hideout (the team is set again before each battle); stairs, gate and lift mats that leave from one block only, or by a key sideways (backlog #6); a Hoppip and the Volbeat on Route 15's road (backlog #4: range-0 wanderers); Luca's walk on Route 12; a full disk. |
+| 2026-10-27 | `v2-main` `87d5db02`; no map changes: forty-two new steps, Silph Co. (the Card Key, the pads, the rival, Giovanni), out through 3F's other door, and Sabrina's Gym's pads | **Steps 248–289 pass**, from step 247's checkpoint in parts as they were added. A first try ended a walk on 5F's pad, which a checkpoint can't hold: the steps go round by 9F's pad instead. The way out of 11F is back by the pads (7F's west side has no other way out) and 3F's second door. |
