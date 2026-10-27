@@ -465,6 +465,19 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   other line of sight.
 * **Blaine's Gym's trainers**: every quiz is answered right, so none of them battles.
 * **The Sevii Islands.** Bill asks you to come to One Island; the check says no.
+* **Lt. Surge on the way back.** The check first leaves Vermilion on the S.S. Anne's errand and comes back for the
+  Thunder Badge after Saffron (Viridian's Gym door wants all seven). The Fan Club's other members, the Bike Shop's
+  others and the Vermilion Gym's trainers other than Baily and Tucker (in the walk's way) aren't played.
+* **Back to Fuchsia by Cycling Road**: the check takes the Bicycle from Cerulean and rides Routes 16 to 18. Route 16's
+  house (HM02 Fly: the check never flies) and north side, and Routes 17's and 18's trainers but Jamal (he sees the
+  ride) aren't played. Routes 11–15 are played once, on the way to Fuchsia the first time.
+* **The Viridian Gym's other trainers**: the walk takes the arrow tiles to Warren and Takashi, who are in its way, and
+  Giovanni. Route 22's second rival battle is played.
+* **Victory Road off the story's path**: its trainers (the walks keep off their lines), items, the Double-Edge tutor
+  and its boulders the switches don't need. Its four floor switches are played (1F, 2F's two, 3F's: the 3F one opens
+  the way to the boulder that drops through to 2F).
+* **The League.** The check ends in the Indigo Plateau's Pokémon Center: the Elite Four's rooms are FireRed's own
+  and aren't part of the rebuild. League West Pass (Johto's way) isn't played.
 * **The menus** (bag, Pokédex, Town Map, saving): only opened where the story opens them.
 * **Real play**: sound, real-time play, real hardware.
 
@@ -493,6 +506,28 @@ Checkpoints are game saves, so they still load after a map change, as long as th
    * `pae map path` plans on a map as it was built. Where a script has opened a way since (the Mansion's switch, the
      Cinnabar Gym's doors), walk inside the open part and hold the keys through the opened blocks in the inputs.
    * Step names must differ: `--from` and the checkpoints go by name, and the script stops if two are the same.
+   * A walk must never end on a coord trigger (a scene's block) either: the checkpoint is saved as the scene starts
+     and its reload drops the scene, so the next step plays on as if it never happened (a walk that ended on the
+     Viridian Gym's lock walked straight past it). Walk to the block before and step on in the inputs.
+   * A checkpoint's reload is like flying in: you face down, and it drops temporary flags, Strength, scripts under way
+     and the Bicycle (indoors, or when the step sets any `state`); cut trees and Strength boulders are back where the
+     map puts them (a boulder on a floor switch too: the switch stays down). So cutting and walking through, getting on
+     the Bicycle and riding, and a whole boulder puzzle are each one step. Ridden steps set `repel=False` (no state at
+     all, not even the Repel) and `bike=True` (6 frames a block). Cycling Road slopes down: idle on it, you slide
+     south; and a key held when a battle starts moves the battle menu's cursor, so the ride presses only A.
+   * The Vermilion Gym's trash cans are shuffled each time the Gym loads (a reload, and each `state` reloads it
+     again), so its step has no walk: it plays from its own checkpoint with its own state, and the cans it opens
+     (6, then 1) are the ones that shuffle gives.
+   * A trainer who wanders can see a walk and battle: the game can't be saved in a battle, so the walk is played on
+     through it (A, then B) and planned again from where it left you.
+   * Strength: `pushes("D! D L ...", waits)` turns a plan into inputs (`!` is a push; a push moves only the boulder,
+     you stay where you are). It uses Strength before the first push. Plan the moves on the map (each push needs the
+     block beyond the boulder free and off every trainer's line). Pokémon that wander can stand in the way:
+     `project/scripts/strength_waits.py` plays the plan from the step's checkpoint a move at a time and finds the
+     waits it needs, `{move number: frames}`. They depend on the checkpoint: after a change to any earlier step, run
+     it again for each boulder step.
+   * `pae map path` plans through people and boulders (it doesn't know where they are). Where a walk goes past one,
+     give it vias round them; a boulder is back where the map puts it after a reload.
 3. When every step passes, update "Last validated point" and the step table on this page. Do it in the same pull
    request as the map change.
 4. A failed step is a finding. Fix it if it stops the story. If it doesn't, add it to
