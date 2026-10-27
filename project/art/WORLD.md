@@ -45,6 +45,8 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 21 North | 24×50 | 24×50 | kit (and an empty `gTileset_Route21Concept`, shared with Route 21 South) | up: Pallet Town (offset −11), down: Route 21 South (offset 0) |
 | Route 21 South | 24×50 | 24×50 | kit (and the same empty `gTileset_Route21Concept`) | up: Route 21 North (offset 0), down: Cinnabar Island (offset 0) |
 | Cinnabar Island | 96×44 | 96×44 | kit + `gTileset_CinnabarConcept` | up: Route 21 South (offset 0), right: Route 20 (offset 0) |
+| Route 20 | 120×20 | 120×20 | kit + `gTileset_Route20Concept` | left: Cinnabar Island (offset 0), right: Route 19 (offset −41) |
+| Route 19 | 24×60 | 24×60 | kit (and an empty `gTileset_Route19Concept`) | up: Fuchsia City (offset −12), left: Route 20 (offset 41) |
 | Saffron City | 60×48 | 66×55 | kit + `gTileset_SaffronConcept` | none compiled (KR-53): Routes 5, 6, 7 and 8 join its twin `SaffronCity_Connection`, still the old layout (KR-59); its four gatehouses are the ways out |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
@@ -73,6 +75,8 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 21 North ↔ Route 21 South | the whole width | open sea |
 | Route 21 South ↔ Cinnabar | Route 21 0–3 = Cinnabar 0–3 | the sea lane down the island's west side; Route 21's woods (4–23) stand behind the town |
 | Cinnabar ↔ Route 20 | Cinnabar rows 0–19 = Route 20 rows 0–19 | open sea |
+| Route 20 ↔ Route 19 | Route 20 rows 0–18 = Route 19 rows 41–59 | open sea |
+| Fuchsia ↔ Route 19 | Fuchsia 18–29 = Route 19 6–17 | the beach path down from Fuchsia's shore street |
 | Route 7 ↔ Celadon | Route 7 rows 10–13 = Celadon rows 20–23 | the road west out of the trees onto Celadon's boulevard |
 | Celadon ↔ Route 16 | Celadon rows 20–23 = Route 16 rows 22–25 | the boulevard west onto Route 16's road |
 | Route 16 ↔ Route 17 | Route 16 12–17 = Route 17 12–17 | the road down from the plaza onto Cycling Road's start |
@@ -124,7 +128,7 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 16 | Celadon City, Route 17 | pae (all three from the kit; with Route 17 each strip is the kit's own forest and road, so no seam at all). Old Route 16's hand-made piece for Route 17 is gone |
 | Route 17 | Route 16, Route 18 | pae (all three from the kit: each strip is the kit's own ground, so no seam at all) |
 | Route 18 | Route 17, Fuchsia City | pae (all three from the kit: 37 pieces for Fuchsia's own metatiles in its strip, the Gym's, in bank 9; none for Route 17) |
-| Fuchsia City | Route 18, Route 15, Route 19 | pae: old Route 19's palettes in banks 10–11 (17 pieces); it draws Fuchsia's bottom seven rows (forest, lawn, road, dirt and hedges only), 63 pieces. None with Route 15 (both the kit's) |
+| Fuchsia City | Route 18, Route 15, Route 19 | pae (all four from the kit: no seam with any; old Route 19's is gone) |
 | Route 15 | Fuchsia City, Route 14 | pae (all three from the kit: no seam with either) |
 | Route 14 | Route 13, Route 15 | pae (all three from the kit: no seam with either) |
 | Route 13 | Route 12, Route 14 | pae (all three from the kit: no seam with either) |
@@ -132,8 +136,10 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
 | Route 21 North | Pallet Town, Route 21 South | pae (all three from the kit: no seam with either) |
+| Route 20 | Cinnabar Island, Route 19 | pae (all three from the kit: no seam with either). Its hand-made seam is gone |
+| Route 19 | Fuchsia City, Route 20 | pae (all three from the kit: no seam with either) |
 | Route 21 South | Route 21 North, Cinnabar Island | pae (all from the kit: 65 pieces for Cinnabar's own metatiles in its strip, the Mansion's and the Gym's, in banks 7 and 9). Old Route 21 South's hand-made seam is gone |
-| Cinnabar Island | Route 21 South, Route 20 | pae: old Route 20's palettes in banks 4 and 12 (17 pieces; one palette in its nearest colours, KR-78); none for Route 21 South (its strip is the kit's own, in the primary's palettes, KR-76). Old Cinnabar's hand-made seam is gone; old Route 20's for it too, now a pae seam (4 pieces) |
+| Cinnabar Island | Route 21 South, Route 20 | pae (all from the kit: no seam with either; KR-76). Old Cinnabar's hand-made seam is gone, and old Route 20's for it |
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
 
@@ -336,3 +342,8 @@ Check these whenever a map is rebuilt, moved or resized:
   on the volcano island now. Its layout is in HnS's metatile format now (KR-74). Route 21's maps at their old size
   (24×50 each), joins where they were (Pallet's river at the north map's columns 7–10, offset −11). The hand-made
   seams of old Cinnabar, old Route 20 and old Route 21 South were removed from `kanto_connection_seam.c` (KR-75).
+- Routes 20 and 19 rebuilt together, after Cinnabar, at their old sizes (120×20, 24×60), their joins where they were
+  (Route 20: Cinnabar's sea, offset 0, and Route 19's, offset −41; Route 19: Fuchsia's beach path at columns 6–17,
+  offset −12). Route 20's two warps kept their numbers: Seafoam's west mouth (0, 58,10) and east mouth (1, 78,12).
+  The swimmers, people, Pokémon, signs and the Stardust kept their order and moved. Fuchsia's and Cinnabar's pae seams
+  for the old routes are gone: every join on the sea route is between kit maps.
