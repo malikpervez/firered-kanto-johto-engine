@@ -23,6 +23,8 @@ import time
 from pathlib import Path
 
 REPEL = "VAR_REPEL_STEP_COUNT=250"
+TEAM = "SPECIES_ALAKAZAM lv100 MOVE_PSYCHIC MOVE_SURF MOVE_CUT MOVE_STRENGTH"
+FRESH = ["CLEAR_TEAM", TEAM]  # the same team again, healed and its moves' PP back, before a battle
 DIRS = {"up": "UP", "down": "DOWN", "left": "LEFT", "right": "RIGHT"}
 
 
@@ -463,6 +465,319 @@ STEPS = [
          + B(6) + "wait 100", expect=dict(map="CeladonCity_PokemonCenter_1F_Frlg", xy=(7, 4))),
     dict(name="celadon-leave-center", what="Back out to the boulevard",
          inputs="wait 30, DOWN*66, wait 20, DOWN*20, wait 250", expect=dict(map="CeladonCity_Frlg", xy=(49, 19))),
+    # Past Celadon (the rest of Kanto's story, added once every Kanto town and route was rebuilt). From here the
+    # team is one Pokémon at level 100 that knows Psychic and the field moves the story needs (Surf, Cut, Strength):
+    # the story check is about the maps and the scenes, not the battles, and one Pokémon never asks to switch
+    dict(name="celadon-gym-tree", what="Cut the tree in the hedge round Erika's garden and walk through to the Gym's "
+         "door. The team is set here: one Alakazam at level 100 that knows Psychic, Surf, Cut and Strength", state=["CLEAR_TEAM", TEAM], walk=(12, 24),
+         inputs="DOWN*4, wait 30, " + A(4, 130) + "wait 300, path 12,24 12,35, " + f"UP*{hold(1)}, wait 300",
+         expect=dict(map="CeladonCity_Gym_Frlg", xy=(6, 18))),
+    dict(name="erika", what="Cut the middle tree of the Gym's hedge and walk up the middle of the garden (in nobody's "
+         "line of sight) to Erika; face her and beat her: the Rainbow Badge", walk=(6, 15),
+         inputs="UP*4, wait 30, " + A(4, 130) + "wait 300, path 6,15 6,5, UP*4, wait 20, " + A(160) + B(12) + "wait 300",
+         expect=dict(map="CeladonCity_Gym_Frlg", xy=(6, 5), flags={"FLAG_BADGE04_GET": True})),
+    dict(name="leave-celadon-gym", what="Back down the garden, cut the tree again (it grew back) and out of the Gym",
+         walk=(6, 13), inputs="DOWN*4, wait 30, " + A(4, 130) + "wait 300, path 6,13 6,18, DOWN*20, wait 300",
+         expect=dict(map="CeladonCity_Frlg", xy=(12, 35))),
+    dict(name="celadon-garden-out", what="Out of Erika's garden: cut the tree in the hedge again (it grew back) and "
+         "walk through", walk=(12, 26), inputs="UP*4, wait 30, " + A(4, 130) + f"wait 300, UP*{hold(2)}, wait 30",
+         expect=dict(map="CeladonCity_Frlg", xy=(12, 24))),
+    dict(name="game-corner", what="Across Celadon (round the old man by the hedge) into the Game Corner",
+         via=[(12, 22)], walk=(28, 30), inputs=f"UP*{hold(1)}, wait 300",
+         expect=dict(map="CeladonCity_GameCorner_Frlg")),
+    dict(name="game-corner-grunt", state=FRESH, what="Up to the Rocket grunt standing at the poster at the back; talk to him and "
+         "beat him (he runs off)", via=[(9, 11), (9, 4)], walk=(11, 3), inputs="UP*4, wait 20, " + A(60) + B(8) + "wait 300",
+         expect=dict(map="CeladonCity_GameCorner_Frlg", xy=(11, 3))),
+    dict(name="rocket-hideout", what="Press the switch behind the poster (stairs open in the corner) and take them "
+         "down into the Rocket Hideout", inputs=f"UP*{hold(1)}, wait 20, UP*4, wait 20, " + A(4) + B(2) +
+         "path 11,2 14,2, " + f"RIGHT*{hold(1)}, wait 20, RIGHT*30, wait 300",
+         expect=dict(map="RocketHideout_B1F_Frlg", flags={"FLAG_OPENED_ROCKET_HIDEOUT": True})),
+    # The Hideout's floors below are FireRed's own. Walks over its spin tiles (you slide until a stop tile or
+    # something solid) were planned on the tiles, off every trainer's line of sight, one key at a time
+    dict(name="hideout-b2f", what="Along B1F's top corridor and down its stairs to B2F", walk=(16, 2),
+         inputs="RIGHT*12, wait 20, RIGHT*30, wait 300", expect=dict(map="RocketHideout_B2F_Frlg", xy=(28, 2))),
+    dict(name="hideout-b3f", what="Round B2F's east rooms (out of the grunt's sight) and down the stairs to B3F",
+         inputs="DOWN*60, wait 6, LEFT*44, wait 6, UP*12, wait 6, LEFT*28, wait 6, UP*12, wait 6, LEFT*28, wait 6, "
+         "UP*28, wait 20, RIGHT*30, wait 300", expect=dict(map="RocketHideout_B3F_Frlg", xy=(18, 2))),
+    dict(name="hideout-b4f", what="Across B3F's spin tiles (three slides) and down the stairs to B4F",
+         inputs="DOWN*28, wait 6, LEFT*92, wait 6, DOWN*44, wait 6, LEFT*92, wait 6, DOWN*12, wait 6, LEFT*12, wait 6, "
+         "DOWN*12, wait 6, LEFT*12, wait 76, DOWN*12, wait 6, DOWN*12, wait 100, LEFT*28, wait 6, DOWN*44, wait 6, "
+         "LEFT*44, wait 6, DOWN*28, wait 6, RIGHT*12, wait 6, RIGHT*12, wait 148, LEFT*28, wait 6, DOWN*76, wait 6, "
+         "RIGHT*76, wait 6, UP*76, wait 6, RIGHT*76, wait 6, UP*28, wait 20, LEFT*30, wait 300",
+         expect=dict(map="RocketHideout_B4F_Frlg", xy=(11, 15))),
+    dict(name="hideout-lift-key-grunt", state=FRESH, what="Up B4F's west rooms to the grunt by the Lift Key; talk to him from the side "
+         "and beat him (he drops the key)", walk=(5, 2), inputs="LEFT*4, wait 20, " + A(60) + B(8) + "wait 300",
+         expect=dict(map="RocketHideout_B4F_Frlg", xy=(5, 2))),
+    dict(name="hideout-lift-key", what="Round him and pick up the Lift Key", inputs="DOWN*12, wait 30, LEFT*12, wait 30, LEFT*12, wait 30, UP*4, wait 20, " + A(4) + B(2),
+         expect=dict(map="RocketHideout_B4F_Frlg", xy=(3, 3), flags={"FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT": True})),
+    dict(name="hideout-back-b3f", what="Back down the rooms and up the stairs to B3F",
+         inputs="RIGHT*28, wait 6, DOWN*60, wait 6, RIGHT*60, wait 6, DOWN*124, wait 6, RIGHT*28, wait 20, RIGHT*30, wait 300",
+         expect=dict(map="RocketHideout_B3F_Frlg")),
+    dict(name="hideout-back-b2f", what="Back across B3F (two slides) and up its stairs to B2F",
+         inputs="DOWN*28, wait 6, LEFT*44, wait 6, UP*60, wait 6, LEFT*28, wait 6, UP*12, wait 6, UP*12, wait 64, "
+         "LEFT*12, wait 6, UP*28, wait 6, LEFT*12, wait 76, RIGHT*60, wait 6, UP*108, wait 6, RIGHT*92, wait 20, "
+         "RIGHT*30, wait 300", expect=dict(map="RocketHideout_B2F_Frlg", xy=(21, 2))),
+    dict(name="hideout-moon-stone", what="Slide along B2F's top row (out of the grunt's sight) to its west end and pick "
+         "up the Moon Stone that blocks the way down",
+         inputs="DOWN*12, wait 6, LEFT*28, wait 6, DOWN*28, wait 6, LEFT*28, wait 6, DOWN*12, wait 6, LEFT*12, wait 256, "
+         "RIGHT*12, wait 30, DOWN*3, wait 20, " + A(3) + B(2),
+         expect=dict(map="RocketHideout_B2F_Frlg", xy=(2, 4))),
+    dict(name="hideout-elevator", what="Down through B2F's spin maze (five slides) to the lift and into it",
+         inputs="DOWN*60, wait 6, RIGHT*12, wait 6, DOWN*12, wait 6, RIGHT*12, wait 124, RIGHT*12, wait 6, RIGHT*12, "
+         "wait 124, LEFT*12, wait 6, LEFT*12, wait 100, RIGHT*44, wait 6, DOWN*28, wait 6, LEFT*12, wait 124, RIGHT*12, "
+         "wait 6, DOWN*12, wait 100, RIGHT*28, wait 6, UP*44, wait 6, RIGHT*204, wait 6, UP*12, wait 300",
+         expect=dict(map="RocketHideout_Elevator_Frlg")),
+    dict(name="hideout-lift-b4f", what="Up to the lift's panel, choose B4F (the Lift Key works it) and walk out "
+         "(the mat's east half)",
+         inputs="UP*12, wait 30, LEFT*12, wait 30, LEFT*12, wait 30, UP*12, wait 30, A*4, wait 90, DOWN*4, wait 30, "
+         "A*4, wait 400, RIGHT*12, wait 30, RIGHT*12, wait 30, DOWN*12, wait 30, DOWN*12, wait 30, DOWN*30, wait 300",
+         expect=dict(map="RocketHideout_B4F_Frlg")),
+    dict(name="hideout-door-grunt-west", state=FRESH, what="Talk to the west grunt guarding Giovanni's door and beat him",
+         walk=(16, 15), inputs="UP*4, wait 20, " + A(60) + B(8) + "wait 300",
+         expect=dict(map="RocketHideout_B4F_Frlg", xy=(16, 15))),
+    dict(name="hideout-door-grunt-east", state=FRESH, what="Then the east one: with both beaten the barrier between them goes",
+         walk=(19, 15), inputs="UP*4, wait 20, " + A(60) + B(8) + "wait 300",
+         expect=dict(map="RocketHideout_B4F_Frlg", xy=(19, 15))),
+    dict(name="giovanni-hideout", state=FRESH, what="Through the open door up to Giovanni; face him and beat him (he leaves the "
+         "Silph Scope behind)", via=[(18, 12)], walk=(19, 5), inputs="UP*4, wait 20, " + A(100) + B(12) + "wait 300",
+         expect=dict(map="RocketHideout_B4F_Frlg", xy=(19, 5), flags={"FLAG_HIDE_CELADON_ROCKETS": True})),
+    dict(name="silph-scope", what="Pick up the Silph Scope beside where he stood", inputs="RIGHT*4, wait 20, " + A(4) + B(2),
+         expect=dict(map="RocketHideout_B4F_Frlg", xy=(19, 5), flags={"FLAG_HIDE_SILPH_SCOPE": True})),
+    dict(name="hideout-lift-up", what="Back down to the lift and up to B1F", walk=(20, 24),
+         inputs=f"UP*{hold(1)}, wait 300, UP*12, wait 30, LEFT*12, wait 30, LEFT*12, wait 30, UP*12, wait 30, A*4, wait 90, "
+         "UP*4, wait 30, UP*4, wait 30, A*4, wait 400, RIGHT*12, wait 30, RIGHT*12, wait 30, DOWN*12, wait 30, "
+         "DOWN*12, wait 30, DOWN*30, wait 300", expect=dict(map="RocketHideout_B1F_Frlg")),
+    dict(name="hideout-b1f-grunt-lift", state=FRESH, what="West from the lift into the line of the grunt who watches "
+         "it: he battles", walk=(22, 26), inputs=f"LEFT*{hold(1)}, wait 200, " + A(60) + B(8) + "wait 300",
+         expect=dict(map="RocketHideout_B1F_Frlg", xy=(21, 26))),
+    dict(name="hideout-b1f-grunt-east", state=FRESH, what="Up the corridor to the east room and into the line of the "
+         "grunt at its door: he battles", walk=(22, 13), inputs=f"UP*{hold(1)}, wait 200, " + A(60) + B(8) + "wait 300",
+         expect=dict(map="RocketHideout_B1F_Frlg", xy=(22, 12))),
+    dict(name="hideout-out", what="Up through the middle room and the stairs back up into the Game Corner",
+         walk=(13, 2), inputs="LEFT*12, wait 20, LEFT*30, wait 300", expect=dict(map="CeladonCity_GameCorner_Frlg")),
+    dict(name="game-corner-out", what="Down past the slot machines and out to Celadon", via=[(13, 4), (14, 5), (14, 11)],
+         walk=(9, 13), inputs="DOWN*20, wait 300", expect=dict(map="CeladonCity_Frlg", xy=(28, 30))),
+    dict(name="celadon-mansion", what="Into Celadon Mansion", walk=(25, 19), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="CeladonCity_Condominiums_1F_Frlg")),
+    dict(name="tea", what="Up to the old woman with the Meowth: she gives you Tea (Saffron's thirsty guards will let "
+         "you by for it)", walk=(2, 8), inputs="DOWN*4, wait 20, " + A(10) + B(4),
+         expect=dict(map="CeladonCity_Condominiums_1F_Frlg", flags={"FLAG_GOT_TEA": True})),
+    dict(name="celadon-mansion-out", what="Back out to the boulevard", walk=(12, 17),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="CeladonCity_Frlg")),
+    dict(name="route7-back", what="East along the boulevard onto Route 7", walk=(59, 21), inputs=f"RIGHT*{hold(1)}, wait 200",
+         expect=dict(map="Route7_Frlg")),
+    dict(name="route7-hut", what="Into the Underground Path's west hut", walk=(9, 10), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="UndergroundPath_WestEntrance_Frlg")),
+    dict(name="ew-tunnel-back", what="Down the hut's stairs into the tunnel", walk=(12, 9),
+         inputs=f"UP*{hold(1)}, wait 20, RIGHT*20, wait 250", expect=dict(map="UndergroundPath_EastWestTunnel_Frlg")),
+    dict(name="ew-tunnel-east", what="Along the tunnel to its east stairs and up into the east hut", walk=(76, 5),
+         inputs=f"UP*{hold(1)}, wait 20, RIGHT*20, wait 250", expect=dict(map="UndergroundPath_EastEntrance_Frlg")),
+    dict(name="route8-back", what="Out of the east hut onto Route 8", walk=(13, 11),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route8_Frlg", xy=(18, 13))),
+    dict(name="lavender-back", what="East along Route 8's road into Lavender", walk=(59, 14),
+         inputs=f"RIGHT*{hold(1)}, wait 200", expect=dict(map="LavenderTown_Frlg", xy=(0, 10))),
+    dict(name="pokemon-tower", what="Across Lavender into the Pokémon Tower", walk=(29, 9), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="PokemonTower_1F_Frlg")),
+    dict(name="tower-2f", what="Up the hall to the stairs and up to 2F", walk=(17, 9),
+         inputs=f"RIGHT*{hold(1)}, wait 20, RIGHT*30, wait 300", expect=dict(map="PokemonTower_2F_Frlg", xy=(18, 10))),
+    dict(name="tower-rival", state=FRESH, what="Up 2F's east side and west under the rival: he turns, battles, and "
+         "leaves", walk=(17, 6), inputs=f"LEFT*{hold(1)}, wait 200, " + A(160) + B(12) + "wait 400",
+         expect=dict(map="PokemonTower_2F_Frlg", xy=(16, 6), vars={"VAR_MAP_SCENE_POKEMON_TOWER_2F": 1})),
+    dict(name="tower-3f", what="West along 2F's north hall and down to the stairs up to 3F",
+         inputs="LEFT*156, wait 6, DOWN*28, wait 6, LEFT*28, wait 6, DOWN*12, wait 20, DOWN*12, wait 20, LEFT*30, wait 300",
+         expect=dict(map="PokemonTower_3F_Frlg", xy=(4, 10))),
+    dict(name="tower-4f", what="Round 3F's west room, up its middle and east along the north hall (in no channeler's "
+         "sight) to the stairs up to 4F",
+         inputs="DOWN*60, wait 6, RIGHT*44, wait 6, UP*108, wait 6, RIGHT*172, wait 6, DOWN*28, wait 20, DOWN*12, wait 20, "
+         "RIGHT*30, wait 300", expect=dict(map="PokemonTower_4F_Frlg", xy=(18, 10))),
+    dict(name="tower-5f", what="Through 4F's rooms (in no channeler's sight) to the stairs up to 5F",
+         inputs="DOWN*12, wait 6, LEFT*28, wait 6, UP*60, wait 6, LEFT*12, wait 6, UP*12, wait 6, LEFT*60, wait 6, "
+         "UP*44, wait 6, LEFT*28, wait 6, DOWN*92, wait 6, LEFT*44, wait 6, DOWN*12, wait 6, LEFT*12, wait 20, LEFT*12, "
+         "wait 20, LEFT*30, wait 300", expect=dict(map="PokemonTower_5F_Frlg", xy=(4, 10))),
+    dict(name="tower-ruth", state=FRESH, what="Up 5F's west side and east along its north hall into the channeler Ruth's "
+         "line (every way east crosses it): she battles", inputs=f"UP*60, wait 6, RIGHT*92, wait 20, RIGHT*{hold(1)}, "
+         "wait 200, " + A(60) + B(8) + "wait 300", expect=dict(map="PokemonTower_5F_Frlg", xy=(11, 6))),
+    dict(name="tower-purified", what="Down into the middle room's purified zone: the team is healed",
+         walk=(13, 9), inputs=f"LEFT*{hold(1)}, wait 150, " + B(3),
+         expect=dict(map="PokemonTower_5F_Frlg", xy=(12, 9))),
+    dict(name="tower-karina", state=FRESH, what="West out of the zone and down into the channeler Karina's line (the way "
+         "to the east stairs runs past her): she battles", walk=(8, 11),
+         inputs=f"DOWN*{hold(1)}, wait 200, " + A(60) + B(8) + "wait 300", expect=dict(map="PokemonTower_5F_Frlg", xy=(8, 12))),
+    dict(name="tower-6f", what="East along 5F's south rooms (in no channeler's sight) to the stairs up to 6F",
+         inputs="DOWN*12, wait 6, RIGHT*76, wait 6, UP*12, wait 6, RIGHT*28, wait 6, UP*12, wait 6, RIGHT*44, wait 6, "
+         "UP*12, wait 20, RIGHT*30, wait 300", expect=dict(map="PokemonTower_6F_Frlg", xy=(18, 10))),
+    dict(name="tower-jennifer", state=FRESH, what="Up 6F's east side into the channeler Jennifer's line (the way west "
+         "crosses it): she battles", inputs=f"UP*28, wait 6, LEFT*28, wait 6, UP*12, wait 20, UP*{hold(1)}, wait 200, "
+         + A(60) + B(8) + "wait 300", expect=dict(map="PokemonTower_6F_Frlg", xy=(16, 6))),
+    dict(name="tower-emilia", state=FRESH, what="Round the north hall and down the middle room into the channeler "
+         "Emilia's line (the way on to the west rooms crosses it): she battles",
+         inputs=f"UP*28, wait 6, LEFT*60, wait 6, DOWN*44, wait 6, LEFT*28, wait 20, LEFT*{hold(1)}, wait 200, "
+         + A(60) + B(8) + "wait 300", expect=dict(map="PokemonTower_6F_Frlg", xy=(9, 7))),
+    dict(name="marowak-ghost", state=FRESH, what="Round the west rooms to the stairs up; the ghost blocks them: with the "
+         "Silph Scope it's Cubone's mother, Marowak; beat it and its spirit is calmed",
+         inputs=f"DOWN*12, wait 6, LEFT*44, wait 6, DOWN*60, wait 6, RIGHT*76, wait 6, DOWN*28, wait 20, DOWN*{hold(1)}, "
+         "wait 200, " + A(60) + B(10) + "wait 300",
+         expect=dict(map="PokemonTower_6F_Frlg", xy=(11, 15), vars={"VAR_MAP_SCENE_POKEMON_TOWER_6F": 1})),
+    dict(name="tower-7f", what="Up the stairs to the top floor", inputs="DOWN*12, wait 30, LEFT*30, wait 300",
+         expect=dict(map="PokemonTower_7F_Frlg", xy=(11, 16))),
+    dict(name="tower-grunt1", state=FRESH, what="Up the hall into the first Rocket's line: he battles, then runs off",
+         inputs=f"UP*{hold(5)}, wait 20, UP*{hold(1)}, wait 200, " + A(60) + B(8) + "wait 400",
+         expect=dict(map="PokemonTower_7F_Frlg", xy=(11, 10))),
+    dict(name="tower-grunt2", state=FRESH, what="On up into the second one's: he battles, then runs off",
+         inputs=f"UP*{hold(1)}, wait 20, UP*{hold(1)}, wait 200, " + A(60) + B(8) + "wait 400",
+         expect=dict(map="PokemonTower_7F_Frlg", xy=(11, 8))),
+    dict(name="tower-grunt3", state=FRESH, what="And the third one's: he battles, then runs off",
+         inputs=f"UP*{hold(1)}, wait 20, UP*{hold(1)}, wait 200, " + A(60) + B(8) + "wait 400",
+         expect=dict(map="PokemonTower_7F_Frlg", xy=(11, 6))),
+    dict(name="mr-fuji", what="Up to Mr. Fuji: he thanks you and goes home, and you with him",
+         inputs=f"UP*{hold(1)}, wait 20, UP*4, wait 20, " + A(12) + "wait 400",
+         expect=dict(map="LavenderTown_VolunteerPokemonHouse_Frlg", flags={"FLAG_RESCUED_MR_FUJI": True})),
+    dict(name="poke-flute", what="Up to Mr. Fuji in his house: he gives you the Poké Flute", walk=(3, 4),
+         inputs="UP*4, wait 20, " + A(10) + B(4),
+         expect=dict(map="LavenderTown_VolunteerPokemonHouse_Frlg", flags={"FLAG_GOT_POKE_FLUTE": True})),
+    # Snorlax, Routes 12 to 15 and Fuchsia
+    dict(name="fuji-house-out", what="Out of Mr. Fuji's house", walk=(4, 6), inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250",
+         expect=dict(map="LavenderTown_Frlg")),
+    dict(name="route12", what="Down Lavender's south road onto Route 12", walk=(13, 31), inputs=f"DOWN*{hold(1)}, wait 200",
+         expect=dict(map="Route12_Frlg")),
+    dict(name="route12-gate", what="Down Route 12's lane into its gatehouse", walk=(11, 9),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250",
+         expect=dict(map="Route12_NorthEntrance_1F_Frlg", xy=(5, 2))),
+    dict(name="route12-bridge", what="Through the gatehouse and out of its south door onto the bridge", walk=(5, 10),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route12_Frlg", xy=(11, 14))),
+    dict(name="snorlax", state=FRESH, what="Down the Silence Bridge (its middle lane, past the fishers' lines) to the "
+         "sleeping Snorlax; play the Poké Flute: it wakes and battles, and is gone", via=[(13, 15), (13, 39)],
+         walk=(17, 47), inputs="DOWN*4, wait 20, " + A(80) + B(10) + "wait 300",
+         expect=dict(map="Route12_Frlg", xy=(17, 47), flags={"FLAG_WOKE_UP_ROUTE_12_SNORLAX": True})),
+    # Routes 12 to 15 are long and full of trainers: their walks were planned on the maps off every trainer's line of
+    # sight (and off anywhere a wandering one can stand and see), hopping the ledges, one key at a time
+    dict(name="route13", what="On down Route 12 (past where Snorlax slept, by the fishing house) onto Route 13",
+         inputs="DOWN*316, wait 6, RIGHT*60, wait 6, DOWN*92, wait 6, RIGHT*44, wait 6, DOWN*92, wait 20, "
+         "DOWN*30, wait 200", expect=dict(map="Route13_Frlg", xy=(89, 1))),
+    dict(name="route14", what="Down Route 13's coast road and west along it (round the birdkeepers and the beauties) "
+         "onto Route 14",
+         inputs="DOWN*268, wait 6, LEFT*140, wait 6, DOWN*12, wait 6, LEFT*76, wait 6, DOWN*12, wait 6, LEFT*188, "
+         "wait 6, DOWN*76, wait 6, LEFT*636, wait 6, DOWN*92, wait 6, LEFT*12, wait 20, DOWN*30, wait 200",
+         expect=dict(map="Route14_Frlg", xy=(18, 1))),
+    dict(name="route14-tree", what="Down Route 14 to the tree across its east lane; cut it and walk through",
+         via=[(18, 9), (5, 9), (5, 12), (19, 12)], walk=(19, 15),
+         inputs="DOWN*4, wait 30, " + A(4, 130) + f"wait 300, DOWN*{hold(2)}, wait 30",
+         expect=dict(map="Route14_Frlg", xy=(19, 17))),
+    dict(name="route14-ledge", what="On down the lane and west to the long ledge; hop it",
+         via=[(19, 19), (18, 19), (18, 23), (11, 23)], walk=(11, 32), inputs=f"DOWN*{hold(1)}, wait 60",
+         expect=dict(map="Route14_Frlg", xy=(11, 34))),
+    dict(name="route15", what="Down Route 14's south fields and west onto Route 15",
+         via=[(11, 40), (10, 40), (10, 41), (9, 41), (9, 51)], walk=(0, 51), inputs="LEFT*30, wait 200",
+         expect=dict(map="Route15_Frlg", xy=(78, 15))),
+    dict(name="route15-gate", what="West along Route 15 (round the bikers' and beauties' lines) into its west "
+         "gatehouse (along the south lane: the road's Volbeat and Illumise patrol it, and its Hoppip wander anywhere)",
+         via=[(78, 17), (21, 17), (21, 8), (19, 8), (19, 5)], walk=(17, 5), inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250",
+         expect=dict(map="Route15_WestEntrance_1F_Frlg")),
+    dict(name="route15-gate-out", what="Through the gatehouse and out of its west door", walk=(2, 6),
+         inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250", expect=dict(map="Route15_Frlg", xy=(9, 5))),
+    dict(name="fuchsia", what="West along the lane into Fuchsia", walk=(0, 5), inputs="LEFT*30, wait 200",
+         expect=dict(map="FuchsiaCity_Frlg", xy=(46, 21))),
+    dict(name="fuchsia-gym", what="Across Fuchsia into Koga's Gym", walk=(5, 32), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="FuchsiaCity_Gym_Frlg")),
+    dict(name="koga", state=FRESH, what="Up the middle of the Gym (between the two jugglers' lines, along the invisible "
+         "walls) into Koga's room; face him and beat him: the Soul Badge (Surf can be used outside battle)",
+         via=[(8, 16)], walk=(7, 14), inputs="UP*4, wait 20, " + A(120) + B(12) + "wait 300",
+         expect=dict(map="FuchsiaCity_Gym_Frlg", xy=(7, 14), flags={"FLAG_BADGE05_GET": True})),
+    dict(name="leave-fuchsia-gym", what="Back down and out of the Gym", via=[(8, 16)], walk=(7, 21),
+         inputs="DOWN*20, wait 300", expect=dict(map="FuchsiaCity_Frlg", xy=(5, 32))),
+    # The Safari Zone (FireRed's own areas): Centre, then East, North and West in turn (the Centre's west half and the
+    # North are only reached that way round). A checkpoint's reload ends Safari mode, as loading a save does (the game
+    # clears it then), so past the gate these steps check the paths, not the 600-step ticket: the walk is about 270
+    # steps, inside one
+    dict(name="safari-entrance", what="Up Fuchsia's west lane (a tree to cut closes the middle one) and into the "
+         "Safari Zone's gate", via=[(10, 32), (10, 20)], walk=(23, 7),
+         inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="FuchsiaCity_SafariZone_Entrance_Frlg")),
+    dict(name="safari-zone", what="Up to the counter: pay ₽500 for 30 Safari Balls and go in",
+         walk=(4, 4), inputs=f"UP*{hold(1)}, wait 60, " + A(10) + "wait 300",
+         expect=dict(map="SafariZone_Center_Frlg", xy=(26, 30))),
+    dict(name="safari-east", what="Up the Centre's east side and out of its east gate into the East area",
+         via=[(26, 21), (32, 21), (32, 19), (34, 19), (34, 16)], walk=(42, 16), inputs="RIGHT*30, wait 250",
+         expect=dict(map="SafariZone_East_Frlg", xy=(8, 27))),
+    dict(name="safari-north", what="Round the East area's meadows and out of its north-west gate into the North area",
+         via=[(14, 27), (14, 28), (33, 28), (33, 26), (36, 26), (36, 24), (30, 24), (30, 26), (24, 26), (24, 11),
+              (31, 11), (31, 13), (35, 13), (35, 7), (27, 7), (27, 8), (21, 8), (21, 10)], walk=(9, 10),
+         inputs="LEFT*30, wait 250", expect=dict(map="SafariZone_North_Frlg")),
+    dict(name="safari-west", what="Across the North area (round its ponds) and down its south-west gate into the West "
+         "area", walk=(11, 33), inputs="DOWN*30, wait 250", expect=dict(map="SafariZone_West_Frlg")),
+    dict(name="gold-teeth", what="Down the West area to the item by the rocks: the Warden's Gold Teeth", walk=(28, 15),
+         inputs="UP*4, wait 20, " + A(4) + B(2),
+         expect=dict(map="SafariZone_West_Frlg", xy=(28, 15), flags={"FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH": True})),
+    dict(name="secret-house", what="West to the secret house in the corner", walk=(12, 8), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="SafariZone_SecretHouse_Frlg")),
+    dict(name="hm03", what="Up to the man inside: for reaching it, HM03 (Surf)", walk=(6, 6),
+         inputs="UP*4, wait 20, " + A(16) + B(4), expect=dict(map="SafariZone_SecretHouse_Frlg", flags={"FLAG_GOT_HM03": True})),
+    dict(name="secret-house-out", what="Out of the secret house", walk=(4, 8), inputs="DOWN*20, wait 250",
+         expect=dict(map="SafariZone_West_Frlg")),
+    dict(name="safari-back-north", what="Back up the West area and out of its north gate into the North area",
+         via=[(12, 10), (19, 10), (19, 7), (29, 7), (29, 6)], walk=(31, 6), inputs="UP*30, wait 250",
+         expect=dict(map="SafariZone_North_Frlg")),
+    dict(name="safari-back-east", what="Across the North area to its east gate and into the East area",
+         via=[(11, 16), (12, 16), (12, 7), (34, 7), (34, 12), (24, 12), (24, 20), (22, 20), (22, 28), (24, 28), (24, 23),
+              (30, 23), (30, 32)], walk=(47, 32), inputs="RIGHT*30, wait 250", expect=dict(map="SafariZone_East_Frlg")),
+    dict(name="safari-back-centre", what="Round the East area to its south-west gate and back into the Centre",
+         via=[(9, 9), (18, 9), (18, 7), (29, 7), (29, 8), (35, 8), (35, 13), (32, 13), (32, 11), (25, 11), (25, 22),
+              (24, 22), (24, 26), (29, 26), (29, 24), (36, 24), (36, 28), (17, 28), (17, 27)], walk=(9, 27),
+         inputs="LEFT*30, wait 250", expect=dict(map="SafariZone_Center_Frlg")),
+    dict(name="safari-out", what="Down the Centre and out to the gate", via=[(42, 29)], walk=(26, 29),
+         inputs="DOWN*30, wait 250", expect=dict(map="FuchsiaCity_SafariZone_Entrance_Frlg")),
+    dict(name="safari-gate-out", what="Down past the counter and out to Fuchsia (a reload in the Zone ended Safari "
+         "mode, so the counter thinks you're coming in and asks again: no thanks)",
+         inputs="DOWN*12, wait 60, " + A(3, 120) + "DOWN*4, wait 30, A*4, wait 120, " + A(2, 120) + "wait 60, "
+         "DOWN*12, wait 30, DOWN*12, wait 30, DOWN*12, wait 30, DOWN*30, wait 250",
+         expect=dict(map="FuchsiaCity_Frlg", xy=(23, 7))),
+    dict(name="wardens-house", what="Down Fuchsia's west lane and along the south road into the Warden's house",
+         via=[(10, 20), (10, 32)], walk=(31, 32), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="FuchsiaCity_WardensHouse_Frlg")),
+    dict(name="hm04", what="Give the Warden his Gold Teeth: he can talk again, and gives HM04 (Strength)", walk=(3, 6),
+         inputs="UP*4, wait 20, " + A(20) + B(4), expect=dict(map="FuchsiaCity_WardensHouse_Frlg", flags={"FLAG_GOT_HM04": True})),
+    dict(name="wardens-house-out", what="Out of the Warden's house", walk=(6, 8), inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250",
+         expect=dict(map="FuchsiaCity_Frlg", xy=(31, 32))),
+    # Saffron: back north the long way (Routes 15 to 12 and Lavender; Cycling Road needs a bike) to Route 8's gate,
+    # whose guard lets you by for the Tea
+    dict(name="fuchsia-east", what="Up Fuchsia's east lane onto Route 15", via=[(40, 32), (40, 28), (41, 28), (41, 20)],
+         walk=(47, 20), inputs="RIGHT*30, wait 200", expect=dict(map="Route15_Frlg")),
+    dict(name="route15-gate-east", what="Into Route 15's west gatehouse", walk=(8, 5), inputs=f"RIGHT*{hold(1)}, wait 20, "
+         "RIGHT*20, wait 250", expect=dict(map="Route15_WestEntrance_1F_Frlg")),
+    dict(name="route15-east", what="Through it and out of its east door", walk=(10, 6),
+         inputs=f"RIGHT*{hold(1)}, wait 20, RIGHT*20, wait 250", expect=dict(map="Route15_Frlg")),
+    dict(name="route14-back", what="East along Route 15's south lane (off the road the Volbeat and Illumise patrol) "
+         "onto Route 14", via=[(19, 5), (19, 8), (21, 8), (21, 17), (78, 17)], walk=(79, 15), inputs="RIGHT*30, wait 200",
+         expect=dict(map="Route14_Frlg")),
+    dict(name="route14-tree-back", what="Up Route 14's fields (round the ledges) to the tree on the east lane; cut it "
+         "and walk through", via=[(1, 50), (2, 50), (2, 32), (4, 32), (4, 29), (7, 29), (7, 20), (18, 20), (18, 18),
+         (19, 18)], walk=(19, 17), inputs="UP*4, wait 30, " + A(4, 130) + f"wait 300, UP*{hold(2)}, wait 30",
+         expect=dict(map="Route14_Frlg", xy=(19, 15))),
+    dict(name="route13-back", what="On up Route 14 onto Route 13", via=[(19, 11), (5, 11), (5, 9), (16, 9), (16, 0)],
+         walk=(18, 0), inputs="UP*30, wait 200", expect=dict(map="Route13_Frlg")),
+    dict(name="route12-back", what="East along Route 13 (off every trainer's line) and up onto Route 12",
+         via=[(22, 21), (31, 21), (31, 20), (32, 20), (32, 19), (63, 19), (63, 16), (68, 16), (68, 14), (86, 14), (86, 0)],
+         walk=(89, 0), inputs="UP*30, wait 200", expect=dict(map="Route12_Frlg")),
+    dict(name="route12-snorlax-spot", state=FRESH, what="Up Route 12 to where Snorlax slept, through it and west "
+         "along the bank (the rocker Luca walks round there and may see you: then he battles)",
+         via=[(24, 64), (18, 64), (18, 50)], walk=(17, 49),
+         inputs=f"UP*{hold(2)}, wait 30, LEFT*{hold(5)}, wait 60, " + A(40) + B(8) + "wait 100",
+         expect=dict(map="Route12_Frlg")),
+    dict(name="route12-north", what="Up the Silence Bridge (its middle lane) to the gatehouse",
+         via=[(12, 44), (13, 40), (13, 14)], walk=(12, 14), inputs="UP*30, wait 250",
+         expect=dict(map="Route12_NorthEntrance_1F_Frlg")),
+    dict(name="route12-gate-back", what="Through the gatehouse and out of its north door", walk=(5, 2),
+         inputs=f"UP*{hold(1)}, wait 20, UP*20, wait 250", expect=dict(map="Route12_Frlg")),
+    dict(name="lavender-again", what="Up the lane into Lavender", walk=(13, 0), inputs="UP*30, wait 200",
+         expect=dict(map="LavenderTown_Frlg")),
+    dict(name="route8-again", what="West along Lavender's street onto Route 8", via=[(13, 10)], walk=(0, 10),
+         inputs="LEFT*30, wait 200", expect=dict(map="Route8_Frlg")),
+    dict(name="route8-gate", what="West along Route 8 to Saffron's east gate", walk=(11, 13), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="Route8_WestEntrance_Frlg")),
+    dict(name="saffron-guard", what="Past the guard: he's thirsty; give him the Tea and he lets you by",
+         inputs=f"LEFT*{hold(5)}, wait 100, " + A(12) + B(4) + "wait 100",
+         expect=dict(map="Route8_WestEntrance_Frlg", vars={"VAR_MAP_SCENE_ROUTE5_ROUTE6_ROUTE7_ROUTE8_GATES": 1})),
+    dict(name="saffron", what="On through the gate into Saffron (its exit mat's lower half)", walk=(2, 5), inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250",
+         expect=dict(map="SaffronCity_Frlg")),
 ]
 
 

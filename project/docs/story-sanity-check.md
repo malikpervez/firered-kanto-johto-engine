@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-27 |
-| Game | branch `claude/kanto-sea` (the kit's sea made surfable, so every kit map rebuilt; on `v2-main` at `2f5c1cfb`) |
-| ROM | `make -j8` with the default settings. SHA-1 `5798cba3a91237d4f905f92f58ee4cd1decc975a`, SHA-256 `6db404fb1ef6ba54c214f1459499f9bdcf515c69edb26165c8820946668979a4` |
-| pae | maps built with `0795119`; every step and the replay tests run with `08dfca3` (pae `main` after PR #31, which changes only seam building) |
-| Last step passed | 145 `celadon-leave-center`, run from the top in one go on this build (every kit map changed). The story check doesn't reach the routes past Celadon yet |
-| Replay tests | 507 of 507 pass (on this ROM; this change adds 2) |
+| Game | `v2-main` at `c13b5ab1` (every Kanto town and route rebuilt; no map changes here) |
+| ROM | `make -j8` with the default settings. SHA-1 `cc62fa5ae6856ea3f75cdfa845c0b312777bb051` |
+| pae | `ea6b4bb` (pae `main` after PR #32: pae reads FireRed's own tile behaviours); the last steps with `b799b1c` (after PR #33, which changes only play sessions' scratch saves) |
+| Last step passed | 247 `saffron`. Steps 1–196 ran from the top in one go (3323 s); with the Tea added in Celadon (steps 172–174), 172–247 ran on from step 171's checkpoint, resumed after a full disk and once after the walk past Luca on Route 12 changed. The story check stops at Saffron's east gate; Silph Co. is next |
+| Replay tests | not run for this change: it changes only the story check and the docs, no game files |
 
 ## How to run it
 
@@ -30,7 +30,7 @@ project/scripts/story_check.py --to dex         # stop after a step
 ```
 
 The script needs pae with `pae play --show-flag` (pae PR #17), and pae PR #19 (its walks keep off sideways stairs,
-which the old Viridian Forest had). A run from the top takes about 35 minutes; a run `--from` a later step takes less.
+which the old Viridian Forest had). Past Celadon it needs pae PR #32 (pae reads FireRed's own tile behaviours, so its walks keep off water, one-way edges and the Rocket Hideout's spin tiles), and to run a `pae play` beside it in the same project, pae PR #33 (each play has its own scratch save). A run from the top takes about 75 minutes; a run `--from` a later step takes less.
 
 * Each step saves a checkpoint, `story-NN-name`, in `engine/.pae/checkpoints/`. The next step starts from it.
   `--from STEP` needs the checkpoint of the step before it. A fresh clone has no checkpoints, so start from the
@@ -203,6 +203,108 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 143 | `celadon-center` | West along the boulevard into Celadon's Pokémon Center | Celadon Center 1F 7,8 | |
 | 144 | `celadon-heal` | The nurse heals the team | Celadon Center 1F 7,4 | |
 | 145 | `celadon-leave-center` | Back out to the boulevard | Celadon City 49,19 | |
+| 146 | `celadon-gym-tree` | Cut the tree in the hedge round Erika's garden and walk through to the Gym's door. The team is set here: one Alakazam at level 100 that knows Psychic, Surf, Cut and Strength | Celadon City Gym 6,18 |  |
+| 147 | `erika` | Cut the middle tree of the Gym's hedge and walk up the middle of the garden (in nobody's line of sight) to Erika; face her and beat her: the Rainbow Badge | Celadon City Gym 6,5 | `FLAG_BADGE04_GET` set |
+| 148 | `leave-celadon-gym` | Back down the garden, cut the tree again (it grew back) and out of the Gym | Celadon City 12,35 |  |
+| 149 | `celadon-garden-out` | Out of Erika's garden: cut the tree in the hedge again (it grew back) and walk through | Celadon City 12,24 |  |
+| 150 | `game-corner` | Across Celadon (round the old man by the hedge) into the Game Corner | Celadon City Game Corner |  |
+| 151 | `game-corner-grunt` | Up to the Rocket grunt standing at the poster at the back; talk to him and beat him (he runs off) | Celadon City Game Corner 11,3 |  |
+| 152 | `rocket-hideout` | Press the switch behind the poster (stairs open in the corner) and take them down into the Rocket Hideout | Rocket Hideout B1F | `FLAG_OPENED_ROCKET_HIDEOUT` set |
+| 153 | `hideout-b2f` | Along B1F's top corridor and down its stairs to B2F | Rocket Hideout B2F 28,2 |  |
+| 154 | `hideout-b3f` | Round B2F's east rooms (out of the grunt's sight) and down the stairs to B3F | Rocket Hideout B3F 18,2 |  |
+| 155 | `hideout-b4f` | Across B3F's spin tiles (three slides) and down the stairs to B4F | Rocket Hideout B4F 11,15 |  |
+| 156 | `hideout-lift-key-grunt` | Up B4F's west rooms to the grunt by the Lift Key; talk to him from the side and beat him (he drops the key) | Rocket Hideout B4F 5,2 |  |
+| 157 | `hideout-lift-key` | Round him and pick up the Lift Key | Rocket Hideout B4F 3,3 | `FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT` set |
+| 158 | `hideout-back-b3f` | Back down the rooms and up the stairs to B3F | Rocket Hideout B3F |  |
+| 159 | `hideout-back-b2f` | Back across B3F (two slides) and up its stairs to B2F | Rocket Hideout B2F 21,2 |  |
+| 160 | `hideout-moon-stone` | Slide along B2F's top row (out of the grunt's sight) to its west end and pick up the Moon Stone that blocks the way down | Rocket Hideout B2F 2,4 |  |
+| 161 | `hideout-elevator` | Down through B2F's spin maze (five slides) to the lift and into it | Rocket Hideout Elevator |  |
+| 162 | `hideout-lift-b4f` | Up to the lift's panel, choose B4F (the Lift Key works it) and walk out (the mat's east half) | Rocket Hideout B4F |  |
+| 163 | `hideout-door-grunt-west` | Talk to the west grunt guarding Giovanni's door and beat him | Rocket Hideout B4F 16,15 |  |
+| 164 | `hideout-door-grunt-east` | Then the east one: with both beaten the barrier between them goes | Rocket Hideout B4F 19,15 |  |
+| 165 | `giovanni-hideout` | Through the open door up to Giovanni; face him and beat him (he leaves the Silph Scope behind) | Rocket Hideout B4F 19,5 | `FLAG_HIDE_CELADON_ROCKETS` set |
+| 166 | `silph-scope` | Pick up the Silph Scope beside where he stood | Rocket Hideout B4F 19,5 | `FLAG_HIDE_SILPH_SCOPE` set |
+| 167 | `hideout-lift-up` | Back down to the lift and up to B1F | Rocket Hideout B1F |  |
+| 168 | `hideout-b1f-grunt-lift` | West from the lift into the line of the grunt who watches it: he battles | Rocket Hideout B1F 21,26 |  |
+| 169 | `hideout-b1f-grunt-east` | Up the corridor to the east room and into the line of the grunt at its door: he battles | Rocket Hideout B1F 22,12 |  |
+| 170 | `hideout-out` | Up through the middle room and the stairs back up into the Game Corner | Celadon City Game Corner |  |
+| 171 | `game-corner-out` | Down past the slot machines and out to Celadon | Celadon City 28,30 |  |
+| 172 | `celadon-mansion` | Into Celadon Mansion | Celadon City Condominiums 1F |  |
+| 173 | `tea` | Up to the old woman with the Meowth: she gives you Tea (Saffron's thirsty guards will let you by for it) | Celadon City Condominiums 1F | `FLAG_GOT_TEA` set |
+| 174 | `celadon-mansion-out` | Back out to the boulevard | Celadon City |  |
+| 175 | `route7-back` | East along the boulevard onto Route 7 | Route 7 |  |
+| 176 | `route7-hut` | Into the Underground Path's west hut | Underground Path West Entrance |  |
+| 177 | `ew-tunnel-back` | Down the hut's stairs into the tunnel | Underground Path East West Tunnel |  |
+| 178 | `ew-tunnel-east` | Along the tunnel to its east stairs and up into the east hut | Underground Path East Entrance |  |
+| 179 | `route8-back` | Out of the east hut onto Route 8 | Route 8 18,13 |  |
+| 180 | `lavender-back` | East along Route 8's road into Lavender | Lavender Town 0,10 |  |
+| 181 | `pokemon-tower` | Across Lavender into the Pokémon Tower | Pokémon Tower 1F |  |
+| 182 | `tower-2f` | Up the hall to the stairs and up to 2F | Pokémon Tower 2F 18,10 |  |
+| 183 | `tower-rival` | Up 2F's east side and west under the rival: he turns, battles, and leaves | Pokémon Tower 2F 16,6 | `VAR_MAP_SCENE_POKEMON_TOWER_2F` 1 |
+| 184 | `tower-3f` | West along 2F's north hall and down to the stairs up to 3F | Pokémon Tower 3F 4,10 |  |
+| 185 | `tower-4f` | Round 3F's west room, up its middle and east along the north hall (in no channeler's sight) to the stairs up to 4F | Pokémon Tower 4F 18,10 |  |
+| 186 | `tower-5f` | Through 4F's rooms (in no channeler's sight) to the stairs up to 5F | Pokémon Tower 5F 4,10 |  |
+| 187 | `tower-ruth` | Up 5F's west side and east along its north hall into the channeler Ruth's line (every way east crosses it): she battles | Pokémon Tower 5F 11,6 |  |
+| 188 | `tower-purified` | Down into the middle room's purified zone: the team is healed | Pokémon Tower 5F 12,9 |  |
+| 189 | `tower-karina` | West out of the zone and down into the channeler Karina's line (the way to the east stairs runs past her): she battles | Pokémon Tower 5F 8,12 |  |
+| 190 | `tower-6f` | East along 5F's south rooms (in no channeler's sight) to the stairs up to 6F | Pokémon Tower 6F 18,10 |  |
+| 191 | `tower-jennifer` | Up 6F's east side into the channeler Jennifer's line (the way west crosses it): she battles | Pokémon Tower 6F 16,6 |  |
+| 192 | `tower-emilia` | Round the north hall and down the middle room into the channeler Emilia's line (the way on to the west rooms crosses it): she battles | Pokémon Tower 6F 9,7 |  |
+| 193 | `marowak-ghost` | Round the west rooms to the stairs up; the ghost blocks them: with the Silph Scope it's Cubone's mother, Marowak; beat it and its spirit is calmed | Pokémon Tower 6F 11,15 | `VAR_MAP_SCENE_POKEMON_TOWER_6F` 1 |
+| 194 | `tower-7f` | Up the stairs to the top floor | Pokémon Tower 7F 11,16 |  |
+| 195 | `tower-grunt1` | Up the hall into the first Rocket's line: he battles, then runs off | Pokémon Tower 7F 11,10 |  |
+| 196 | `tower-grunt2` | On up into the second one's: he battles, then runs off | Pokémon Tower 7F 11,8 |  |
+| 197 | `tower-grunt3` | And the third one's: he battles, then runs off | Pokémon Tower 7F 11,6 |  |
+| 198 | `mr-fuji` | Up to Mr. Fuji: he thanks you and goes home, and you with him | Lavender Town Volunteer Pokémon House | `FLAG_RESCUED_MR_FUJI` set |
+| 199 | `poke-flute` | Up to Mr. Fuji in his house: he gives you the Poké Flute | Lavender Town Volunteer Pokémon House | `FLAG_GOT_POKE_FLUTE` set |
+| 200 | `fuji-house-out` | Out of Mr. Fuji's house | Lavender Town |  |
+| 201 | `route12` | Down Lavender's south road onto Route 12 | Route 12 |  |
+| 202 | `route12-gate` | Down Route 12's lane into its gatehouse | Route 12 North Entrance 1F 5,2 |  |
+| 203 | `route12-bridge` | Through the gatehouse and out of its south door onto the bridge | Route 12 11,14 |  |
+| 204 | `snorlax` | Down the Silence Bridge (its middle lane, past the fishers' lines) to the sleeping Snorlax; play the Poké Flute: it wakes and battles, and is gone | Route 12 17,47 | `FLAG_WOKE_UP_ROUTE_12_SNORLAX` set |
+| 205 | `route13` | On down Route 12 (past where Snorlax slept, by the fishing house) onto Route 13 | Route 13 89,1 |  |
+| 206 | `route14` | Down Route 13's coast road and west along it (round the birdkeepers and the beauties) onto Route 14 | Route 14 18,1 |  |
+| 207 | `route14-tree` | Down Route 14 to the tree across its east lane; cut it and walk through | Route 14 19,17 |  |
+| 208 | `route14-ledge` | On down the lane and west to the long ledge; hop it | Route 14 11,34 |  |
+| 209 | `route15` | Down Route 14's south fields and west onto Route 15 | Route 15 78,15 |  |
+| 210 | `route15-gate` | West along Route 15 (round the bikers' and beauties' lines) into its west gatehouse (along the south lane: the road's Volbeat and Illumise patrol it, and its Hoppip wander anywhere) | Route 15 West Entrance 1F |  |
+| 211 | `route15-gate-out` | Through the gatehouse and out of its west door | Route 15 9,5 |  |
+| 212 | `fuchsia` | West along the lane into Fuchsia | Fuchsia City 46,21 |  |
+| 213 | `fuchsia-gym` | Across Fuchsia into Koga's Gym | Fuchsia City Gym |  |
+| 214 | `koga` | Up the middle of the Gym (between the two jugglers' lines, along the invisible walls) into Koga's room; face him and beat him: the Soul Badge (Surf can be used outside battle) | Fuchsia City Gym 7,14 | `FLAG_BADGE05_GET` set |
+| 215 | `leave-fuchsia-gym` | Back down and out of the Gym | Fuchsia City 5,32 |  |
+| 216 | `safari-entrance` | Up Fuchsia's west lane (a tree to cut closes the middle one) and into the Safari Zone's gate | Fuchsia City Safari Zone Entrance |  |
+| 217 | `safari-zone` | Up to the counter: pay ₽500 for 30 Safari Balls and go in | Safari Zone Center 26,30 |  |
+| 218 | `safari-east` | Up the Centre's east side and out of its east gate into the East area | Safari Zone East 8,27 |  |
+| 219 | `safari-north` | Round the East area's meadows and out of its north-west gate into the North area | Safari Zone North |  |
+| 220 | `safari-west` | Across the North area (round its ponds) and down its south-west gate into the West area | Safari Zone West |  |
+| 221 | `gold-teeth` | Down the West area to the item by the rocks: the Warden's Gold Teeth | Safari Zone West 28,15 | `FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH` set |
+| 222 | `secret-house` | West to the secret house in the corner | Safari Zone Secret House |  |
+| 223 | `hm03` | Up to the man inside: for reaching it, HM03 (Surf) | Safari Zone Secret House | `FLAG_GOT_HM03` set |
+| 224 | `secret-house-out` | Out of the secret house | Safari Zone West |  |
+| 225 | `safari-back-north` | Back up the West area and out of its north gate into the North area | Safari Zone North |  |
+| 226 | `safari-back-east` | Across the North area to its east gate and into the East area | Safari Zone East |  |
+| 227 | `safari-back-centre` | Round the East area to its south-west gate and back into the Centre | Safari Zone Center |  |
+| 228 | `safari-out` | Down the Centre and out to the gate | Fuchsia City Safari Zone Entrance |  |
+| 229 | `safari-gate-out` | Down past the counter and out to Fuchsia (a reload in the Zone ended Safari mode, so the counter thinks you're coming in and asks again: no thanks) | Fuchsia City 23,7 |  |
+| 230 | `wardens-house` | Down Fuchsia's west lane and along the south road into the Warden's house | Fuchsia City Wardens House |  |
+| 231 | `hm04` | Give the Warden his Gold Teeth: he can talk again, and gives HM04 (Strength) | Fuchsia City Wardens House | `FLAG_GOT_HM04` set |
+| 232 | `wardens-house-out` | Out of the Warden's house | Fuchsia City 31,32 |  |
+| 233 | `fuchsia-east` | Up Fuchsia's east lane onto Route 15 | Route 15 |  |
+| 234 | `route15-gate-east` | Into Route 15's west gatehouse | Route 15 West Entrance 1F |  |
+| 235 | `route15-east` | Through it and out of its east door | Route 15 |  |
+| 236 | `route14-back` | East along Route 15's south lane (off the road the Volbeat and Illumise patrol) onto Route 14 | Route 14 |  |
+| 237 | `route14-tree-back` | Up Route 14's fields (round the ledges) to the tree on the east lane; cut it and walk through | Route 14 19,15 |  |
+| 238 | `route13-back` | On up Route 14 onto Route 13 | Route 13 |  |
+| 239 | `route12-back` | East along Route 13 (off every trainer's line) and up onto Route 12 | Route 12 |  |
+| 240 | `route12-snorlax-spot` | Up Route 12 to where Snorlax slept, through it and west along the bank (the rocker Luca walks round there and may see you: then he battles) | Route 12 |  |
+| 241 | `route12-north` | Up the Silence Bridge (its middle lane) to the gatehouse | Route 12 North Entrance 1F |  |
+| 242 | `route12-gate-back` | Through the gatehouse and out of its north door | Route 12 |  |
+| 243 | `lavender-again` | Up the lane into Lavender | Lavender Town |  |
+| 244 | `route8-again` | West along Lavender's street onto Route 8 | Route 8 |  |
+| 245 | `route8-gate` | West along Route 8 to Saffron's east gate | Route 8 West Entrance |  |
+| 246 | `saffron-guard` | Past the guard: he's thirsty; give him the Tea and he lets you by | Route 8 West Entrance | `VAR_MAP_SCENE_ROUTE5_ROUTE6_ROUTE7_ROUTE8_GATES` 1 |
+| 247 | `saffron` | On through the gate into Saffron (its exit mat's lower half) | Saffron City |  |
 
 ## What it doesn't cover
 
@@ -237,6 +339,20 @@ Checkpoints are game saves, so they still load after a map change, as long as th
   tests.
 * **Viridian Forest's other trainers.** Rick and Doug can't be walked round, so their battles are played (with the
   Pikachu from `blue-win`); Sammy, Anthony and Charlie are on the item branches, which the walk doesn't take.
+* **Past Celadon the team is set again, not trained.** From `celadon-gym-tree` it is one Alakazam at level 100 that
+  knows Psychic, Surf, Cut and Strength, and every step with a battle sets it again first (healed, its moves' PP
+  back: Psychic's ten ran out in the Rocket Hideout). The check past Celadon is about the maps and the scenes. The
+  walks there were planned on the maps, off every trainer's line of sight and off anywhere a wandering one can
+  stand and see, sliding on the Hideout's spin tiles and hopping ledges; trainers who can't be walked round are
+  fought (the Hideout's grunts in the way, the Tower's channelers in the way and its 7F Rockets).
+* **The Safari Zone's ticket.** A checkpoint's reload ends Safari mode, as loading a save does (the game clears it
+  then), so past the gate the steps check the paths, not the 600 steps or the balls (the walk is about 270 steps,
+  inside one ticket). On the way out the counter thinks you're coming in and asks again; the step says no.
+* **Off the story's path past Celadon**: the Celadon Department Store and the other houses; the Hideout's and the
+  Tower's items (but the Hideout's Moon Stone, which stands in the way down to the lift); the Hideout's other
+  grunts where the walk goes round them; Route 12's fishing house and the trees to cut beside it; Routes 13–15's
+  trainers (the walks keep out of their sight); Fuchsia's houses, the Safari Zone's Rest Houses and items (but the
+  Gold Teeth); the Warden's boulder.
 * **The menus** (bag, Pokédex, Town Map, saving): only opened where the story opens them.
 * **Real play**: sound, real-time play, real hardware.
 
@@ -295,3 +411,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-26 | Route 8 rebuilt (its own concept); step 137 lands at its new edge, and four new steps: its road into the Underground Path's hut, the tunnel under Saffron, out onto Route 7 | **Steps 137–141 pass**, `--from route8` on this build. First tries stood on the tunnel's stairs: both are walked west off (the north-south tunnel's are walked east off). |
 | 2026-10-26 | Route 7 rebuilt (its own concept); step 141 lands at the hut's door on the new map, and one new step west into Celadon | **Steps 141–142 pass**, `--from route7` on this build, first try. |
 | 2026-10-26 | Celadon rebuilt (its own concept); step 142 lands on the new boulevard, and three new steps: its Center (in, heal, out) | **Steps 142–145 pass**, `--from celadon` on this build, first try. |
+| 2026-10-27 | `v2-main` `c13b5ab1`, every Kanto map rebuilt; no map changes: a hundred and two new steps from Celadon to Saffron's gate (Erika, the Game Corner and the Rocket Hideout, Giovanni and the Silph Scope, the Pokémon Tower and Mr. Fuji, the Poké Flute, the Tea, Snorlax, Routes 12–15, Fuchsia and Koga, the Safari Zone and HM03, the Warden and HM04, back north the long way to Saffron's east gate) | Steps 1–145 pass from the top (2756 s, pae `2838353`); **steps 1–196 pass from the top** on pae `ea6b4bb` (3323 s), and 172–247 on from there. First tries stopped where the walks met FireRed's own interiors: pae read their tiles as having no behaviour, so its walks crossed the Hideout's spin tiles (pae PR #32); a `pae play` beside the running check loaded its scratch save (pae PR #33); Psychic's PP ran out in the Hideout (the team is set again before each battle); stairs, gate and lift mats that leave from one block only, or by a key sideways (backlog #6); a Hoppip and the Volbeat on Route 15's road (backlog #4: range-0 wanderers); Luca's walk on Route 12; a full disk. |
