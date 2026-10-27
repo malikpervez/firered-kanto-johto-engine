@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-27 |
-| Game | `v2-main` at `a550f77f` (no game changes since `1ca40047`, whose ROM this is) |
-| ROM | `make -j8` with the default settings. SHA-1 `cc62fa5ae6856ea3f75cdfa845c0b312777bb051` |
-| pae | `a772d1e` (pae `main` after PR #34) |
-| Last step passed | 399 `indigo-center`, the end of the check: the Indigo Plateau's Pokémon Center, at the League's doors. **All 399 steps pass from the top in one run** (7991 s), through every rebuilt Kanto map |
-| Replay tests | not run for this change: it changes only the story check and the docs, no game files |
+| Game | branch `claude/buildings-v0.3` at `d748d93f` (Kanto Buildings Remakes v0.3, and old Saffron's seam removed: KR-86) |
+| ROM | `make -j4` with the default settings. SHA-1 `b239476c44d43285b30eb348caba0e84b02f0d4a` |
+| pae | `b73c7e6` (pae `main` after PR #35) |
+| Last step passed | 399 `indigo-center`, the end of the check: the Indigo Plateau's Pokémon Center, at the League's doors. **All 399 steps pass from the top in one run** (8481 s), through every rebuilt Kanto map |
+| Replay tests | `pae test run`: 550 tests; the 84 whose screen changed (the new buildings, Saffron's colours) looked at and accepted |
 
 ## How to run it
 
