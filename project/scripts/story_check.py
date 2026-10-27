@@ -907,6 +907,38 @@ STEPS = [
          expect=dict(map="Route6_Frlg")),
     dict(name="vermilion-again", what="Down Route 6 into Vermilion", walk=(40, 31), inputs="DOWN*30, wait 200",
          expect=dict(map="VermilionCity_Frlg")),
+    # Lt. Surge's Gym is behind a tree to cut, and Cut works outside battle from Misty's badge on: the walk past
+    # Vermilion after the S.S. Anne came before that, so his badge is won here, on the way back through
+    dict(name="vermilion-tree", what="Across Vermilion to the tree in front of the Gym's yard; cut it and walk through "
+         "(in one step: a checkpoint's reload brings a cut tree back)",
+         walk=(15, 14), inputs="DOWN*4, wait 30, " + A(4, 130) + f"wait 300, DOWN*{hold(2)}, wait 30",
+         expect=dict(map="VermilionCity_Frlg", xy=(15, 16))),
+    dict(name="vermilion-gym", what="Through the yard into Lt. Surge's Gym", via=[(14, 16), (14, 21)],
+         walk=(10, 21), inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="VermilionCity_Gym_Frlg")),
+    # The switches are under two trash cans the game picks at random as the Gym loads (the second next to the first).
+    # The check's play is the same every time, so they are too: loaded from the step before's checkpoint with this
+    # step's state (the Repel and the team: setting state loads the map again) they are cans 6 and 1 (pae play --from
+    # it with those --state and --show-var VAR_TEMP_0 --show-var VAR_TEMP_1). A walk would save a checkpoint and load
+    # it again, picking others, so the step walks in its inputs, and both switches are in its one play (the first is
+    # forgotten when the map loads). If a change before here moves them, read them again
+    dict(name="surge-switches", state=FRESH, what="Along the bottom and up the west wall to trash can 6: the first "
+         "switch. Up into Baily's line (he battles) to can 1: the second; the electric locks open",
+         inputs=f"UP*{hold(4)}, wait 6, LEFT*{hold(5)}, wait 6, UP*{hold(2)}, wait 6, RIGHT*{hold(1)}, wait 20, "
+         "UP*4, wait 20, A*4, wait 60, " + B(4) + f"LEFT*{hold(1)}, wait 6, UP*{hold(2)}, wait 120, " + A(40) + B(8) +
+         f"wait 200, UP*{hold(1)}, wait 30, RIGHT*4, wait 20, A*4, wait 60, " + B(5),
+         expect=dict(map="VermilionCity_Gym_Frlg", xy=(0, 10),
+                     flags={"FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES": True})),
+    dict(name="lt-surge", state=FRESH, what="Along the top row into Tucker's line (he battles) and up through the "
+         "opened beams to Lt. Surge; beat him: the Thunder Badge",
+         inputs=f"UP*{hold(1)}, wait 6, RIGHT*{hold(3)}, wait 6, UP*{hold(1)}, wait 6, RIGHT*{hold(1)}, wait 120, " +
+         A(40) + B(8) + f"wait 200, UP*{hold(5)}, wait 6, RIGHT*{hold(1)}, wait 20, UP*4, wait 20, " + A(120) +
+         B(16) + "wait 300", expect=dict(map="VermilionCity_Gym_Frlg", xy=(5, 3), flags={"FLAG_BADGE03_GET": True})),
+    dict(name="leave-vermilion-gym", what="Back down through the beams and the west aisle and out of the Gym",
+         inputs=f"LEFT*{hold(1)}, wait 6, DOWN*{hold(12)}, wait 6, RIGHT*{hold(1)}, wait 6, DOWN*{hold(3)}, wait 20, "
+         f"DOWN*{hold(2)}, wait 250", expect=dict(map="VermilionCity_Frlg", xy=(10, 21))),
+    dict(name="vermilion-tree-out", what="Round the yard to the tree (grown back); cut it and walk out",
+         via=[(14, 21), (14, 16)], walk=(15, 16), inputs="UP*4, wait 30, " + A(4, 130) + f"wait 300, UP*{hold(2)}, wait 30",
+         expect=dict(map="VermilionCity_Frlg", xy=(15, 14))),
     dict(name="route11-again", what="Across Vermilion and east onto Route 11", via=[(33, 11)], walk=(59, 12),
          inputs="RIGHT*30, wait 200", expect=dict(map="Route11_Frlg")),
     dict(name="route12-west", what="East along Route 11 (below the trainers' lines) onto Route 12",
@@ -1087,6 +1119,13 @@ STEPS = [
          expect=dict(map="PalletTown_Frlg")),
     dict(name="pallet-shore", what="Up Pallet's pond and ashore by the lab", surf=True, walk=(16, 20),
          inputs="LEFT*2, wait 12, LEFT*4, wait 100", expect=dict(map="PalletTown_Frlg", xy=(15, 20))),
+    dict(name="route1-again", what="Up through Pallet onto Route 1", via=[(15, 0)], walk=(14, 0), inputs="UP*30, wait 200",
+         expect=dict(map="Route1_Frlg")),
+    dict(name="viridian-again", what="Up Route 1 into Viridian", walk=(23, 0), inputs="UP*12, wait 200",
+         expect=dict(map="ViridianCity_Frlg")),
+    dict(name="viridian-gym", what="Across Viridian to the Gym: with seven badges its door is open now (the walk stops a "
+         "block short: the block before the door runs the locked-door scene, which a checkpoint would cut off)",
+         walk=(44, 22), inputs=f"UP*{hold(2)}, wait 250", expect=dict(map="ViridianCity_Gym_Frlg", vars={"VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR": 1})),
 
 ]
 
