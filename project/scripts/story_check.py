@@ -43,12 +43,44 @@ def surf_hold(n):
     return 8 * n - 4
 
 
+def bike_hold(n):
+    """The same on the Bicycle: 6 frames a block, the first press already moving you whichever way you faced."""
+    return 6 * n - 2
+
+
 def A(n, wait=60):
     return "".join(f"A*4, wait {wait}, " for _ in range(n))
 
 
 def B(n, wait=90):
     return "".join(f"B*4, wait {wait}, " for _ in range(n))
+
+
+def pushes(plan, waits=None):
+    """A Strength boulder plan as inputs: moves like "D! D L", one block each, "!" a push. A push moves only the
+    boulder: you stay where you are. Before the first push: face the boulder and use Strength (on until the map
+    loads again). ``waits`` {move number: frames} waits first for a wandering mon to get out of the way (its spot
+    stays the same each run from the same checkpoint)."""
+    out, first = [], True
+    for k, mv in enumerate(plan.split()):
+        dn = {"U": "UP", "D": "DOWN", "L": "LEFT", "R": "RIGHT"}[mv[0]]
+        w = (waits or {}).get(k)
+        pre = f"wait {w}, " if w else ""
+        if mv.endswith("!") and first:
+            pre += f"wait 20, {dn}*2, wait 20, " + A(5) + B(4)
+            first = False
+        out.append(f"{pre}{dn}*12, wait {40 if mv.endswith('!') else 6}")
+    return ", ".join(out)
+
+
+# Victory Road's Strength boulders, planned (each push moves the boulder a block; you stay put), with the waits a
+# wandering mon made needed: {move number: frames}
+VR1F = ("D! D L D R! R R! R R! R R! R R! D R R U! U U! U L U R! R R! R R! R R! R R! R R! R R! D R R U! U U! L L U U R R! "
+        "U R R D!", {0: 1065})
+VR2F = ("R D D D D R D D R R R D! D R D L! L L! U L L D! D R D L! L L!", {})
+VR2F_2 = (" ".join(["L!", "L"] * 18 + ["L!"]), {0: 60, 22: 105, 24: 195})
+VR3F = ("L U U U U L U! U U! U R U L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! "
+        "L L! L L! L L! L L! L L! L L! U L L D! D R D L! L L! L L! L L! L L! L U L D! D D! D D! D L D R!", {})
 
 
 def quiz(yes):
@@ -60,8 +92,9 @@ def quiz(yes):
 # Each step: what it checks; where it starts (a new game's map/x/y/state, or the checkpoint of the step named in
 # "after", by default the one before); "walk" to a block on the current map (planned with pae map path, re-planned
 # if someone was in the way; "via" blocks on the way first, e.g. round a trainer's line of sight; on water with
-# "surf"), then "inputs";
-# extra "state" (e.g. a team); what it must end with.
+# "surf", riding with "bike"), then "inputs";
+# extra "state" (e.g. a team; "repel": False for none at all, not even the Repel: setting state loads the map
+# again, which gets you off the Bicycle); what it must end with.
 STEPS = [
     dict(name="oak", what="A new game: out of the house; Oak stops you at the north exit and walks you to his lab",
          map="PalletTown_PlayersHouse_1F_Frlg", xy=(9, 8), state=["CLEAR_TEAM"],
@@ -907,41 +940,108 @@ STEPS = [
          expect=dict(map="Route6_Frlg")),
     dict(name="vermilion-again", what="Down Route 6 into Vermilion", walk=(40, 31), inputs="DOWN*30, wait 200",
          expect=dict(map="VermilionCity_Frlg")),
-    dict(name="route11-again", what="Across Vermilion and east onto Route 11", via=[(33, 11)], walk=(59, 12),
-         inputs="RIGHT*30, wait 200", expect=dict(map="Route11_Frlg")),
-    dict(name="route12-west", what="East along Route 11 (below the trainers' lines) onto Route 12",
-         via=[(0, 17), (41, 17), (41, 18)], walk=(59, 18), inputs="RIGHT*30, wait 200",
-         expect=dict(map="Route12_Frlg")),
-    dict(name="route13-again", what="Along the bank and down Route 12 the way Snorlax blocked, onto Route 13",
-         via=[(0, 47), (17, 47), (17, 67), (21, 67), (21, 73), (24, 73)], walk=(24, 79), inputs="DOWN*30, wait 200",
-         expect=dict(map="Route13_Frlg", xy=(89, 1))),
-    dict(name="route14-again",
-         what="Down Route 13's coast road and west along it (round the birdkeepers and the beauties) "
-         "onto Route 14",
-         inputs="DOWN*268, wait 6, LEFT*140, wait 6, DOWN*12, wait 6, LEFT*76, wait 6, DOWN*12, wait 6, LEFT*188, "
-         "wait 6, DOWN*76, wait 6, LEFT*636, wait 6, DOWN*92, wait 6, LEFT*12, wait 20, DOWN*30, wait 200",
-         expect=dict(map="Route14_Frlg", xy=(18, 1))),
-    dict(name="route14-tree-again",
-         what="Down Route 14 to the tree across its east lane (it grew back: cut it again) and walk through",
-         via=[(18, 9), (5, 9), (5, 12), (19, 12)], walk=(19, 15),
-         inputs="DOWN*4, wait 30, " + A(4, 130) + f"wait 300, DOWN*{hold(2)}, wait 30",
-         expect=dict(map="Route14_Frlg", xy=(19, 17))),
-    dict(name="route14-ledge-again", what="On down the lane and west to the long ledge; hop it",
-         via=[(19, 19), (18, 19), (18, 23), (11, 23)], walk=(11, 32), inputs=f"DOWN*{hold(1)}, wait 60",
-         expect=dict(map="Route14_Frlg", xy=(11, 34))),
-    dict(name="route15-again", what="Down Route 14's south fields and west onto Route 15",
-         via=[(11, 40), (10, 40), (10, 41), (9, 41), (9, 51)], walk=(0, 51), inputs="LEFT*30, wait 200",
-         expect=dict(map="Route15_Frlg", xy=(78, 15))),
-    dict(name="route15-gate-again", what="West along Route 15 (round the bikers' and beauties' lines) into its west "
-         "gatehouse (along the south lane: the road's Volbeat and Illumise patrol it, and its Hoppip wander anywhere)",
-         via=[(78, 17), (21, 17), (21, 8), (19, 8), (19, 5)], walk=(17, 5),
-         inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250",
-         expect=dict(map="Route15_WestEntrance_1F_Frlg")),
-    dict(name="route15-gate-out-again", what="Through the gatehouse and out of its west door", walk=(2, 6),
-         inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250", expect=dict(map="Route15_Frlg", xy=(9, 5))),
-    dict(name="fuchsia-again", what="West along the lane into Fuchsia", walk=(0, 5), inputs="LEFT*30, wait 200",
-         expect=dict(map="FuchsiaCity_Frlg", xy=(46, 21))),
-    dict(name="route19", what="Down Fuchsia's south road onto Route 19", walk=(24, 39), inputs="DOWN*30, wait 200",
+    # Routes 16-18 (Cycling Road) need the Bicycle: the Bike Voucher from the Fan Club's chairman here, the bike
+    # from Cerulean's Bike Shop
+    dict(name="fan-club", what="Up Vermilion's street into the Pokémon Fan Club", via=[(32, 10)], walk=(16, 10),
+         inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="VermilionCity_PokemonFanClub_Frlg")),
+    dict(name="bike-voucher", what="Round the table to the chairman; yes, you'd like to hear about his Pokémon: the "
+         "Bike Voucher (he's talked to from his side: his chair is at another height from the floor behind him, so from "
+         "above he doesn't answer)", via=[(3, 9), (3, 4)], walk=(4, 4),
+         inputs="RIGHT*4, wait 20, " + A(16) + B(10),
+         expect=dict(map="VermilionCity_PokemonFanClub_Frlg", flags={"FLAG_GOT_BIKE_VOUCHER": True})),
+    dict(name="leave-fan-club", what="Back out of the Fan Club", via=[(3, 4), (3, 9)], walk=(5, 9),
+         inputs=f"DOWN*{hold(2)}, wait 250", expect=dict(map="VermilionCity_Frlg", xy=(16, 10))),
+    # Lt. Surge's Gym is behind a tree to cut, and Cut works outside battle from Misty's badge on: the walk past
+    # Vermilion after the S.S. Anne came before that, so his badge is won here, on the way back through
+    dict(name="vermilion-tree", what="Across Vermilion to the tree in front of the Gym's yard; cut it and walk through "
+         "(in one step: a checkpoint's reload brings a cut tree back)",
+         walk=(15, 14), inputs="DOWN*4, wait 30, " + A(4, 130) + f"wait 300, DOWN*{hold(2)}, wait 30",
+         expect=dict(map="VermilionCity_Frlg", xy=(15, 16))),
+    dict(name="vermilion-gym", what="Through the yard into Lt. Surge's Gym", via=[(14, 16), (14, 21)],
+         walk=(10, 21), inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="VermilionCity_Gym_Frlg")),
+    # The switches are under two trash cans the game picks at random as the Gym loads (the second next to the first).
+    # The check's play is the same every time, so they are too: loaded from the step before's checkpoint with this
+    # step's state (the Repel and the team: setting state loads the map again) they are cans 6 and 1 (pae play --from
+    # it with those --state and --show-var VAR_TEMP_0 --show-var VAR_TEMP_1). A walk would save a checkpoint and load
+    # it again, picking others, so the step walks in its inputs, and both switches are in its one play (the first is
+    # forgotten when the map loads). If a change before here moves them, read them again
+    dict(name="surge-switches", state=FRESH, what="Along the bottom and up the west wall to trash can 6: the first "
+         "switch. Up into Baily's line (he battles) to can 1: the second; the electric locks open",
+         inputs=f"UP*{hold(4)}, wait 6, LEFT*{hold(5)}, wait 6, UP*{hold(2)}, wait 6, RIGHT*{hold(1)}, wait 20, "
+         "UP*4, wait 20, A*4, wait 60, " + B(4) + f"LEFT*{hold(1)}, wait 6, UP*{hold(2)}, wait 120, " + A(40) + B(8) +
+         f"wait 200, UP*{hold(1)}, wait 30, RIGHT*4, wait 20, A*4, wait 60, " + B(5),
+         expect=dict(map="VermilionCity_Gym_Frlg", xy=(0, 10),
+                     flags={"FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES": True})),
+    dict(name="lt-surge", state=FRESH, what="Along the top row into Tucker's line (he battles) and up through the "
+         "opened beams to Lt. Surge; beat him: the Thunder Badge",
+         inputs=f"UP*{hold(1)}, wait 6, RIGHT*{hold(3)}, wait 6, UP*{hold(1)}, wait 6, RIGHT*{hold(1)}, wait 120, " +
+         A(40) + B(8) + f"wait 200, UP*{hold(5)}, wait 6, RIGHT*{hold(1)}, wait 20, UP*4, wait 20, " + A(120) +
+         B(16) + "wait 300", expect=dict(map="VermilionCity_Gym_Frlg", xy=(5, 3), flags={"FLAG_BADGE03_GET": True})),
+    dict(name="leave-vermilion-gym", what="Back down through the beams and the west aisle and out of the Gym",
+         inputs=f"LEFT*{hold(1)}, wait 6, DOWN*{hold(12)}, wait 6, RIGHT*{hold(1)}, wait 6, DOWN*{hold(3)}, wait 20, "
+         f"DOWN*{hold(2)}, wait 250", expect=dict(map="VermilionCity_Frlg", xy=(10, 21))),
+    dict(name="vermilion-tree-out", what="Round the yard to the tree (grown back); cut it and walk out",
+         via=[(14, 21), (14, 16)], walk=(15, 16), inputs="UP*4, wait 30, " + A(4, 130) + f"wait 300, UP*{hold(2)}, wait 30",
+         expect=dict(map="VermilionCity_Frlg", xy=(15, 14))),
+    dict(name="route6-north", what="Up Vermilion's plaza onto Route 6", via=[(33, 12)], walk=(33, 0),
+         inputs=f"UP*{hold(1)}, wait 200", expect=dict(map="Route6_Frlg", xy=(41, 31))),
+    dict(name="route6-hut-again", what="Up Route 6's road into the Underground Path's hut", walk=(46, 12),
+         inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="UndergroundPath_SouthEntrance_Frlg", xy=(13, 12))),
+    dict(name="tunnel-again", what="Down the hut's stairs into the tunnel", walk=(14, 9),
+         inputs=f"UP*{hold(1)}, wait 20, LEFT*20, wait 250",
+         expect=dict(map="UndergroundPath_NorthSouthTunnel_Frlg", xy=(2, 38))),
+    dict(name="tunnel-north-again", what="Along the tunnel and up its north stairs", walk=(3, 5),
+         inputs=f"UP*{hold(1)}, wait 20, LEFT*20, wait 250", expect=dict(map="UndergroundPath_NorthEntrance_Frlg", xy=(12, 8))),
+    dict(name="route5-again", what="Out of the north hut onto Route 5", walk=(13, 11),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250", expect=dict(map="Route5_Frlg", xy=(35, 25))),
+    dict(name="cerulean-again", what="Up Route 5's road and through the neck into Cerulean", walk=(30, 0),
+         inputs=f"UP*{hold(1)}, wait 200", expect=dict(map="CeruleanCity_Frlg", xy=(22, 50))),
+    dict(name="bike-shop", what="Into the Bike Shop", walk=(10, 42), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="CeruleanCity_BikeShop_Frlg")),
+    dict(name="bicycle", what="Up to the counter: the clerk takes the Bike Voucher for a Bicycle", walk=(7, 3),
+         inputs="RIGHT*4, wait 20, " + A(10) + B(8),
+         expect=dict(map="CeruleanCity_BikeShop_Frlg", flags={"FLAG_GOT_BICYCLE": True})),
+    dict(name="leave-bike-shop", what="Back out of the Bike Shop (round the woman)", via=[(7, 7)], walk=(5, 7), inputs=f"DOWN*{hold(2)}, wait 250",
+         expect=dict(map="CeruleanCity_Frlg")),
+    dict(name="route5-south", what="Back down through Cerulean's neck onto Route 5", walk=(22, 50),
+         inputs="DOWN*30, wait 200", expect=dict(map="Route5_Frlg")),
+    dict(name="saffron-north-gate", what="Down Route 5's road into Saffron's north gate", via=[(30, 27), (26, 27), (26, 29)],
+         walk=(24, 29), inputs=f"DOWN*{hold(2)}, wait 250", expect=dict(map="Route5_SouthEntrance_Frlg")),
+    dict(name="saffron-from-north", what="Through the gate into Saffron (its mat's east half: backlog #6)", walk=(4, 8), inputs=f"DOWN*{hold(2)}, wait 250",
+         expect=dict(map="SaffronCity_Frlg")),
+    dict(name="saffron-west-gate", what="Down Saffron's avenue and up into its west gate (its doors face south)", via=[(29, 21)], walk=(2, 22),
+         inputs=f"UP*{hold(2)}, wait 250", expect=dict(map="Route7_EastEntrance_Frlg")),
+    dict(name="route7-west", what="Through the gate onto Route 7", walk=(2, 5), inputs=f"LEFT*{hold(2)}, wait 250",
+         expect=dict(map="Route7_Frlg")),
+    dict(name="celadon-west", what="West along Route 7 into Celadon", walk=(0, 10), inputs="LEFT*30, wait 200",
+         expect=dict(map="CeladonCity_Frlg")),
+    dict(name="route16", what="West along Celadon's boulevard onto Route 16", via=[(39, 20), (39, 21)], walk=(0, 21),
+         inputs="LEFT*30, wait 200", expect=dict(map="Route16_Frlg")),
+    dict(name="route16-snorlax", state=FRESH, what="West to the sleeping Snorlax in the gap; play the Poké Flute: it "
+         "wakes and battles, and is gone", via=[(55, 24)], walk=(45, 24), inputs="LEFT*4, wait 20, " + A(80) + B(10) +
+         "wait 300", expect=dict(map="Route16_Frlg", xy=(45, 24), flags={"FLAG_HIDE_ROUTE_16_SNORLAX": True})),
+    # Cycling Road is by bike only. Getting on is the bag's Key Items (one pocket left of Items), the Bike two up
+    # from the top (the last item: the list wraps round), Use. Riding goes 6 frames a block ("bike" walks)
+    dict(name="cycling-road", what="Get on the Bicycle, ride west through the Cycling Road gatehouse's lower hall (the "
+         "guard lets bikes by) and out of its west door onto Cycling Road (in one step: indoors, a checkpoint's reload "
+         "puts you back on foot)",
+         inputs="wait 20, START*4, wait 60, DOWN*4, wait 20, DOWN*4, wait 20, A*4, wait 120, LEFT*4, wait 60, "
+         "UP*4, wait 30, UP*4, wait 30, A*4, wait 60, A*4, wait 200, LEFT*90, wait 300, LEFT*60, wait 300, LEFT*20, "
+         "wait 300", expect=dict(map="Route16_Frlg", xy=(28, 24), vars={"VAR_MAP_SCENE_ROUTE16": 1})),
+    dict(name="route17", what="Down Route 16's west side between the bikers' lines onto Route 17", bike=True,
+         via=[(27, 24), (27, 27), (17, 27), (17, 28), (16, 28), (16, 43)], walk=(14, 43), inputs="DOWN*10, wait 200",
+         expect=dict(map="Route17_Frlg")),
+    dict(name="route18", what="Down the whole of Cycling Road onto Route 18: its slope carries you down; Jamal sees "
+         "you on the way and battles (only A while you ride: a key held when a battle starts moves its menu)",
+         repel=False, inputs="wait 30, DOWN*120, wait 30, " + A(80) + B(10) + "wait 600, DOWN*200, wait 250",
+         expect=dict(map="Route18_Frlg")),
+    dict(name="route18-gate", what="Ride up the shore and east along Route 18's road into its gatehouse, through it "
+         "and out of its east door, and on into Fuchsia", repel=False,
+         inputs=f"UP*{bike_hold(6)}, wait 20, RIGHT*{bike_hold(33)}, wait 30, RIGHT*20, wait 300, RIGHT*80, wait 300, "
+         "RIGHT*20, wait 300, RIGHT*100, wait 250", expect=dict(map="FuchsiaCity_Frlg")),
+    dict(name="route19", what="Down through Fuchsia's west walks and south road onto Route 19",
+         via=[(6, 23), (7, 23), (7, 25), (8, 25), (8, 26), (9, 26), (9, 29), (10, 29), (10, 33), (19, 33), (19, 39)],
+         walk=(24, 39), inputs="DOWN*30, wait 200",
          expect=dict(map="Route19_Frlg", xy=(12, 1))),
     dict(name="route19-surf", what="Down between the swimmers' lines to the beach; Surf from it (the Soul Badge lets "
          "Surf be used outside battle)", via=[(12, 9), (11, 9)], walk=(11, 15), inputs="DOWN*4, wait 30, " + A(3, 80) +
@@ -981,7 +1081,7 @@ STEPS = [
     dict(name="mansion-lewis", state=FRESH, what="Up B1F's east side and west along the north hall, then down through "
          "the way the switch opened, where the burglar Lewis wanders: if he sees you he battles",
          via=[(32, 29), (32, 22), (29, 22), (29, 20)], walk=(22, 20),
-         inputs=f"DOWN*{hold(6)}, wait 100, " + A(60) + B(8) + "wait 200", expect=dict(map="PokemonMansion_B1F_Frlg")),
+         inputs=f"DOWN*{hold(6)}, wait 100, " + A(120) + B(12) + "wait 200", expect=dict(map="PokemonMansion_B1F_Frlg")),
     dict(name="mansion-b1f-statue", what="Round the table to the statue below it; press its switch: back as it was",
          via=[(23, 26)], walk=(23, 30), inputs=f"RIGHT*{hold(1)}, wait 20, UP*4, wait 20, " + A(3) + B(2),
          expect=dict(map="PokemonMansion_B1F_Frlg", xy=(24, 30), flags={"FLAG_POKEMON_MANSION_SWITCH_STATE": False})),
@@ -1008,7 +1108,7 @@ STEPS = [
          expect=dict(map="PokemonMansion_B1F_Frlg", xy=(24, 30), flags={"FLAG_POKEMON_MANSION_SWITCH_STATE": True})),
     dict(name="mansion-out-lewis", state=FRESH, what="Up past the table and through the opened way, where Lewis "
          "wanders: if he sees you he battles", via=[(23, 30)], walk=(23, 24),
-         inputs=f"LEFT*{hold(1)}, wait 6, UP*{hold(4)}, wait 100, " + A(60) + B(8) + "wait 200",
+         inputs=f"LEFT*{hold(1)}, wait 6, UP*{hold(4)}, wait 100, " + A(120) + B(12) + "wait 200",
          expect=dict(map="PokemonMansion_B1F_Frlg")),
     dict(name="mansion-up", what="East along the north hall and down to the stairs; up to 1F", via=[(27, 20), (27, 29)],
          walk=(33, 29), inputs="RIGHT*12, wait 30, RIGHT*30, wait 250", expect=dict(map="PokemonMansion_1F_Frlg")),
@@ -1087,7 +1187,124 @@ STEPS = [
          expect=dict(map="PalletTown_Frlg")),
     dict(name="pallet-shore", what="Up Pallet's pond and ashore by the lab", surf=True, walk=(16, 20),
          inputs="LEFT*2, wait 12, LEFT*4, wait 100", expect=dict(map="PalletTown_Frlg", xy=(15, 20))),
-
+    dict(name="route1-again", what="Up through Pallet onto Route 1", via=[(15, 0)], walk=(14, 0), inputs="UP*30, wait 200",
+         expect=dict(map="Route1_Frlg")),
+    dict(name="viridian-again", what="Up Route 1 into Viridian", walk=(23, 0), inputs="UP*12, wait 200",
+         expect=dict(map="ViridianCity_Frlg")),
+    dict(name="viridian-gym", what="Across Viridian to the Gym: with seven badges its door is open now (the walk stops a "
+         "block short: the block before the door runs the locked-door scene, which a checkpoint would cut off)",
+         walk=(44, 22), inputs=f"UP*{hold(2)}, wait 250", expect=dict(map="ViridianCity_Gym_Frlg", vars={"VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR": 1})),
+    # Giovanni's Gym: spin tiles, planned on the tiles (scratchpad spin.py) like the Rocket Hideout's. Giovanni's
+    # corner opens only past Warren's and Takashi's lines, so both battle
+    dict(name="viridian-gym-warren", state=FRESH, what="Across the spin tiles to the north-east and up into Warren's "
+         "line: he battles",
+         inputs="UP*2, wait 10, UP*108, wait 10, LEFT*2, wait 10, LEFT*12, wait 52, LEFT*2, wait 10, LEFT*28, "
+         "wait 10, UP*2, wait 10, UP*28, wait 10, LEFT*2, wait 10, LEFT*12, wait 10, UP*2, wait 10, UP*44, "
+         "wait 10, RIGHT*2, wait 10, RIGHT*28, wait 10, UP*2, wait 10, UP*28, wait 10, wait 20, UP*12, "
+         "wait 120, " + A(120) + B(12) + "wait 200",
+         expect=dict(map="ViridianCity_Gym_Frlg", xy=(15, 7))),
+    dict(name="viridian-gym-takashi", state=FRESH, what="Round Warren and west along the hall into Takashi's line: he "
+         "battles", inputs="UP*2, wait 10, UP*12, wait 10, LEFT*2, wait 10, LEFT*44, wait 10, DOWN*2, wait 10, DOWN*12, "
+         "wait 10, LEFT*2, wait 10, LEFT*28, wait 10, UP*2, wait 10, UP*12, wait 10, wait 20, UP*12, "
+         "wait 120, " + A(120) + B(12) + "wait 200",
+         expect=dict(map="ViridianCity_Gym_Frlg", xy=(10, 5))),
+    dict(name="giovanni", state=FRESH, what="Round to Giovanni in the north-west room; beat him: the Earth Badge, and "
+         "Team Rocket is finished", inputs="UP*2, wait 10, UP*28, wait 10, LEFT*2, wait 10, LEFT*44, wait 10, DOWN*2, wait 10, DOWN*44, "
+         "wait 10, LEFT*2, wait 10, LEFT*60, wait 10, UP*2, wait 10, UP*44, wait 10, LEFT*2, wait 10, "
+         "LEFT*12, wait 10, wait 20, UP*4, wait 20, " + A(120) + B(16) + "wait 300",
+         expect=dict(map="ViridianCity_Gym_Frlg", xy=(2, 3), flags={"FLAG_BADGE08_GET": True},
+                     vars={"VAR_MAP_SCENE_ROUTE22": 3})),
+    dict(name="leave-viridian-gym", what="Back across the spin tiles and out of the Gym (no tap to turn first: a "
+         "checkpoint's reload leaves you facing down already, and a tap that way is a step)",
+         inputs="DOWN*44, wait 10, RIGHT*2, wait 10, RIGHT*76, wait 10, UP*2, wait 10, UP*44, "
+         "wait 10, RIGHT*2, wait 10, RIGHT*44, wait 10, RIGHT*2, wait 10, RIGHT*12, wait 124, RIGHT*2, "
+         "wait 10, RIGHT*12, wait 184, DOWN*2, wait 10, DOWN*108, wait 10, LEFT*2, wait 10, LEFT*12, "
+         "wait 10, wait 20, DOWN*28, wait 300", expect=dict(map="ViridianCity_Frlg", xy=(44, 21))),
+    # The road to the League
+    dict(name="route22-again", what="West along Viridian's street onto Route 22", via=[(44, 29)], walk=(0, 29),
+         inputs="LEFT*12, wait 200", expect=dict(map="Route22_Frlg", xy=(51, 7))),
+    dict(name="route22-rival", state=FRESH, what="West along the road: the rival comes after you for one last battle "
+         "before the League", walk=(45, 7), inputs=f"LEFT*{hold(1)}, wait 200, " + A(120) + B(16) + "wait 400",
+         expect=dict(map="Route22_Frlg", vars={"VAR_MAP_SCENE_ROUTE22": 4})),
+    dict(name="league-gate-again", what="Round Route 22's ponds to the League Front Gate", via=[(45, 9), (37, 9), (37, 18),
+         (17, 18), (17, 14)], walk=(12, 14), inputs=f"UP*{hold(2)}, wait 300", expect=dict(map="Route22_NorthEntrance_Frlg")),
+    dict(name="boulder-badge-gate", what="Up the gatehouse: the guard checks the Boulder Badge; on out of its north door "
+         "onto Route 23", walk=(7, 3), inputs=f"UP*{hold(1)}, wait 200, " + B(4) + f"wait 60, UP*{hold(2)}, wait 300",
+         expect=dict(map="Route23_Frlg", vars={"VAR_MAP_SCENE_ROUTE23": 1})),
+    # Route 23's badge gates: each guard stops you on the row before him (a walk ends a block short: the trigger row
+    # runs his scene, which a checkpoint would cut off)
+    dict(name="cascade-badge-gate", what="Up the road to the Cascade Badge's gate: the guard checks it and lets you by",
+         walk=(9, 142), inputs=f"UP*{hold(1)}, wait 200, " + B(4) + "wait 60",
+         expect=dict(map="Route23_Frlg", vars={"VAR_MAP_SCENE_ROUTE23": 2})),
+    dict(name="thunder-badge-gate", what="Up the road to the Thunder Badge's gate: the guard checks it and lets you by",
+         walk=(9, 124), inputs=f"UP*{hold(1)}, wait 200, " + B(4) + "wait 60",
+         expect=dict(map="Route23_Frlg", vars={"VAR_MAP_SCENE_ROUTE23": 3})),
+    dict(name="rainbow-badge-gate", what="Up the road to the Rainbow Badge's gate: the guard checks it and lets you by",
+         walk=(9, 106), inputs=f"UP*{hold(1)}, wait 200, " + B(4) + "wait 60",
+         expect=dict(map="Route23_Frlg", vars={"VAR_MAP_SCENE_ROUTE23": 4})),
+    dict(name="soul-badge-gate", what="Up the road to the Soul Badge's gate: the guard checks it and lets you by",
+         walk=(9, 88), inputs=f"UP*{hold(1)}, wait 200, " + B(4) + "wait 60",
+         expect=dict(map="Route23_Frlg", vars={"VAR_MAP_SCENE_ROUTE23": 5})),
+    dict(name="route23-lake", what="Up to the lake's shore; Surf", walk=(9, 80),
+         inputs="UP*4, wait 30, " + A(3, 80) + "wait 200", expect=dict(map="Route23_Frlg", xy=(9, 79))),
+    dict(name="route23-lake-north", what="Across the lake and ashore", surf=True, walk=(9, 66),
+         inputs="UP*2, wait 12, UP*4, wait 100", expect=dict(map="Route23_Frlg", xy=(9, 65))),
+    dict(name="marsh-badge-gate", what="Up the road to the Marsh Badge's gate: the guard checks it and lets you by",
+         walk=(9, 60), inputs=f"UP*{hold(1)}, wait 200, " + B(4) + "wait 60",
+         expect=dict(map="Route23_Frlg", vars={"VAR_MAP_SCENE_ROUTE23": 6})),
+    dict(name="volcano-badge-gate", what="Up the road to the Volcano Badge's gate: the guard checks it and lets you by",
+         walk=(9, 50), inputs=f"UP*{hold(1)}, wait 200, " + B(4) + "wait 60",
+         expect=dict(map="Route23_Frlg", vars={"VAR_MAP_SCENE_ROUTE23": 7})),
+    dict(name="earth-badge-gate", what="Up the road to the Earth Badge's gate: the guard checks it and lets you by",
+         walk=(5, 40), inputs=f"UP*{hold(1)}, wait 200, " + B(4) + "wait 60",
+         expect=dict(map="Route23_Frlg", vars={"VAR_MAP_SCENE_ROUTE23": 8})),
+    dict(name="victory-road", what="Into the yard under the cliff and into Victory Road", walk=(6, 30),
+         inputs=f"UP*{hold(1)}, wait 300", expect=dict(map="VictoryRoad_1F_Frlg")),
+    dict(name="vr1f-boulder", what="Victory Road 1F: round the first boulder to stand above it", via=[(6, 18)],
+         walk=(7, 17),
+         inputs="wait 5", expect=dict(map="VictoryRoad_1F_Frlg", xy=(7, 17))),
+    dict(name="vr1f-switch", what="Strength: the boulder down, along and up onto the floor switch; the rock barrier "
+         "opens", inputs=pushes(*VR1F) + ", wait 120",
+         expect=dict(map="VictoryRoad_1F_Frlg", vars={"VAR_MAP_SCENE_VICTORY_ROAD_1F": 100})),
+    dict(name="vr2f", what="Round the boulder (back where it started: the switch stays down) and through the opened "
+         "barrier, under Naomi's and Rolando's lines and up the ladder",
+         via=[(6, 18), (6, 17), (7, 16), (13, 14), (15, 11), (15, 5), (13, 8), (5, 10), (4, 7)],
+         walk=(4, 2), inputs=f"LEFT*{hold(1)}, wait 200, DOWN*{hold(1)}, wait 20",
+         expect=dict(map="VictoryRoad_2F_Frlg", xy=(1, 10))),
+    dict(name="vr2f-switch", what="2F: Strength, the boulder down onto the west floor switch; its barrier opens",
+         inputs=pushes(*VR2F) + ", wait 120",
+         expect=dict(map="VictoryRoad_2F_Frlg", vars={"VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER1": 100})),
+    dict(name="vr3f", what="Round the boulder (back where it started) through the barrier, east across 2F under Daisuke "
+         "and behind Nelson, and up the ladder to 3F", via=[(4, 13), (9, 13), (9, 10), (21, 10), (21, 17), (31, 20), (40, 19),
+         (34, 14)], walk=(34, 10),
+         inputs=f"UP*{hold(1)}, wait 200, DOWN*{hold(1)}, wait 20", expect=dict(map="VictoryRoad_3F_Frlg", xy=(34, 10))),
+    dict(name="vr3f-switch", what="3F: Strength, the north boulder up, west along the top and down onto the floor "
+         "switch; the barrier on the west side opens", inputs=pushes(*VR3F) + ", wait 120",
+         expect=dict(map="VictoryRoad_3F_Frlg", vars={"VAR_MAP_SCENE_VICTORY_ROAD_3F": 100})),
+    dict(name="vr3f-hole", what="Round the top and the west side through the opened barrier, east along the south "
+         "(under Colby's and Caroline's lines) to the boulder by the hole; Strength, and it falls in, to 2F",
+         via=[(10, 4), (10, 2), (23, 2), (23, 3), (29, 3), (29, 8), (25, 8), (25, 6), (16, 6), (16, 12), (4, 11),
+              (4, 15), (17, 15), (17, 19), (21, 19)], walk=(32, 18), inputs=pushes("R!") + ", wait 120",
+         expect=dict(map="VictoryRoad_3F_Frlg", flags={"FLAG_HIDE_VICTORY_ROAD_2F_BOULDER": False,
+                                                       "FLAG_HIDE_VICTORY_ROAD_3F_BOULDER": True})),
+    dict(name="vr2f-switch2", what="Down the hole after it, then Strength and the boulder 19 blocks west onto the "
+         "second switch; the barrier by the east ladder opens",
+         inputs=f"RIGHT*{hold(2)}, wait 200, " + pushes(*VR2F_2) + ", wait 120",
+         expect=dict(map="VictoryRoad_2F_Frlg", vars={"VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2": 100})),
+    dict(name="vr3f-east", what="Round the wandering Pokémon and the boulder (back by the hole's foot), through the "
+         "second barrier behind Nelson and up the east ladder to 3F",
+         via=[(18, 19), (18, 20), (24, 20), (24, 19), (31, 19), (31, 17)], walk=(35, 17),
+         inputs=f"RIGHT*{hold(1)}, wait 200, UP*{hold(1)}, wait 20", expect=dict(map="VictoryRoad_3F_Frlg", xy=(39, 16))),
+    dict(name="vr2f-east", what="Across 3F's east side under Tyra's line and down the ladder to 2F's far side",
+         via=[(39, 15), (37, 15), (37, 14), (36, 14), (36, 11)], walk=(37, 11),
+         inputs=f"UP*{hold(1)}, wait 200, DOWN*{hold(1)}, wait 20", expect=dict(map="VictoryRoad_2F_Frlg", xy=(38, 10))),
+    dict(name="victory-road-out", what="Out of Victory Road onto Route 23's top yard", via=[(38, 11)], walk=(48, 11),
+         inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 300", expect=dict(map="Route23_Frlg")),
+    dict(name="indigo-plateau", what="Up Route 23's last stretch to the Indigo Plateau", walk=(11, 0),
+         inputs=f"UP*{hold(2)}, wait 60", expect=dict(map="IndigoPlateau_Exterior_Frlg")),
+    dict(name="indigo-center", what="Into the Indigo Plateau's Pokémon Center (the League's doors: the end of the "
+         "check)", walk=(11, 12), inputs=f"UP*{hold(1)}, wait 300",
+         expect=dict(map="IndigoPlateau_PokemonCenter_1F_Frlg")),
 ]
 
 
@@ -1101,8 +1318,9 @@ class Runner:
         r = subprocess.run(["pae", *args, "-p", str(self.project)], capture_output=True, text=True)
         return r.returncode, r.stdout + r.stderr
 
-    def path(self, map_, a, b, surf=False):
-        """pae map path's walk as inputs: each straight run held for its steps (see hold()); on water with ``surf``."""
+    def path(self, map_, a, b, surf=False, bike=False):
+        """pae map path's walk as inputs: each straight run held for its steps (see hold()); on water with ``surf``,
+        riding with ``bike``."""
         code, out = self.pae("map", "path", map_, f"{a[0]},{a[1]}", f"{b[0]},{b[1]}", *(["--surf"] if surf else []))
         steps = [line.split("_")[1] for line in out.splitlines() if line.startswith("walk_")]
         if code or (not steps and tuple(a) != tuple(b)):
@@ -1117,6 +1335,8 @@ class Runner:
             # facing down, as a loaded game does)
             taps = ["" if k == 0 and d == "down" else f"{DIRS[d]}*2, wait 12, " for k, (d, _) in enumerate(runs)]
             return ", ".join(f"{t}{DIRS[d]}*{surf_hold(n)}, wait 6" for t, (d, n) in zip(taps, runs))
+        if bike:
+            return ", ".join(f"{DIRS[d]}*{bike_hold(n)}, wait 6" for d, n in runs)
         return ", ".join(f"{DIRS[d]}*{hold(n)}, wait 6" for d, n in runs)
 
     def inputs(self, text, map_):
@@ -1129,11 +1349,12 @@ class Runner:
             parts.append(part)
         return ", ".join(parts)
 
-    def play(self, shot, cp=None, map_=None, xy=None, state=(), inputs="wait 5", save=None, flags=(), vars_=()):
+    def play(self, shot, cp=None, map_=None, xy=None, state=(), inputs="wait 5", save=None, flags=(), vars_=(),
+             repel=True):
         args = ["play"] + ([map_] if map_ else []) + (["--from", cp] if cp else [])
         if xy:
             args += ["--x", str(xy[0]), "--y", str(xy[1])]
-        for s in [REPEL, *state]:
+        for s in ([REPEL] if repel else []) + list(state):
             args += ["--state", s]
         for f in flags:
             args += ["--show-flag", f]
@@ -1153,7 +1374,7 @@ class Runner:
                 got[name] = value == "True" if kind == "flag" else int(value)
         return got
 
-    def walk(self, shot, cp, save, target, state, tries=6, surf=False):
+    def walk(self, shot, cp, save, target, state, tries=6, surf=False, bike=False):
         """From ``cp`` to ``target`` on its map, re-planned from wherever the player stopped (people walk about:
         each try waits a little longer first). Stops early if the walk crossed onto another map."""
         here = self.play(f"{shot}-at", cp=cp)
@@ -1163,9 +1384,17 @@ class Runner:
                 return here, cur
             if k == tries:
                 raise RuntimeError(f"couldn't walk to {target}: stuck at {here['map']} {here['xy']}")
-            walk = self.path(here["map"], here["xy"], target, surf)
-            here = self.play(f"{shot}-walk{k}", cp=cur, inputs=f"wait {20 + 70 * k}, {walk}, wait 20", save=save,
-                             state=state)
+            walk = self.path(here["map"], here["xy"], target, surf, bike)
+            inputs = f"wait {20 + 70 * k}, {walk}, wait 20"
+            try:
+                here = self.play(f"{shot}-walk{k}", cp=cur, inputs=inputs, save=save, state=state)
+            except RuntimeError as e:
+                if "only be saved" not in str(e):
+                    raise
+                # a trainer who wanders saw the walk and battles (the game can't be saved mid-battle): play the
+                # same walk on through the battle, then plan again from wherever it left you
+                here = self.play(f"{shot}-walk{k}-battle", cp=cur, inputs=inputs + ", " + A(120) + B(12) + "wait 100",
+                                 save=save, state=state)
             cur = save
 
     def run_step(self, i, step, prev_cp):
@@ -1178,11 +1407,14 @@ class Runner:
             if "walk" in step:
                 src = prev_cp
                 for j, via in enumerate(step.get("via", [])):
-                    _, src = self.walk(f"{cp}-via{j}", src, cp, via, state, surf=step.get("surf", False))
-                here, src = self.walk(cp, src, cp, step["walk"], state, surf=step.get("surf", False))
+                    _, src = self.walk(f"{cp}-via{j}", src, cp, via, state, surf=step.get("surf", False),
+                                       bike=step.get("bike", False))
+                here, src = self.walk(cp, src, cp, step["walk"], state, surf=step.get("surf", False),
+                                      bike=step.get("bike", False))
             else:
                 here, src = self.play(f"{cp}-from", cp=prev_cp), prev_cp
-            self.play(cp, cp=src, state=state, inputs=self.inputs(step["inputs"], here["map"]), save=cp)
+            self.play(cp, cp=src, state=state, inputs=self.inputs(step["inputs"], here["map"]), save=cp,
+                      repel=step.get("repel", True))
         e = step["expect"]
         got = self.play(f"{cp}-check", cp=cp, flags=list(e.get("flags", {})), vars_=list(e.get("vars", {})))
         want = {"map": e["map"], **({"xy": tuple(e["xy"])} if "xy" in e else {}), **e.get("flags", {}),
