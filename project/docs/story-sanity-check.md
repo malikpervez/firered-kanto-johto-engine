@@ -12,10 +12,10 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-27 |
-| Game | `v2-main` at `1ca40047` (every Kanto town and route rebuilt; no map changes here) |
+| Game | `v2-main` at `a550f77f` (no game changes since `1ca40047`, whose ROM this is) |
 | ROM | `make -j8` with the default settings. SHA-1 `cc62fa5ae6856ea3f75cdfa845c0b312777bb051` |
-| pae | `b799b1c` (pae `main` after PRs #32 and #33: FireRed's own tile behaviours, and each play session its own scratch save) |
-| Last step passed | 345 `pallet-shore`. Steps 290–345 (back to Fuchsia, Surf to Cinnabar, the Pokémon Mansion and the Secret Key, Blaine, Route 21 to Pallet) ran on from step 289's checkpoint, in parts as they were added; the check stops on Pallet's shore, and Viridian's Gym is next |
+| pae | `a772d1e` (pae `main` after PR #34) |
+| Last step passed | 399 `indigo-center`, the end of the check: the Indigo Plateau's Pokémon Center, at the League's doors. **All 399 steps pass from the top in one run** (7991 s), through every rebuilt Kanto map |
 | Replay tests | not run for this change: it changes only the story check and the docs, no game files |
 
 ## How to run it
@@ -30,7 +30,7 @@ project/scripts/story_check.py --to dex         # stop after a step
 ```
 
 The script needs pae with `pae play --show-flag` (pae PR #17), and pae PR #19 (its walks keep off sideways stairs,
-which the old Viridian Forest had). Past Celadon it needs pae PR #32 (pae reads FireRed's own tile behaviours, so its walks keep off water, one-way edges and the Rocket Hideout's spin tiles), and to run a `pae play` beside it in the same project, pae PR #33 (each play has its own scratch save). A run from the top takes about 75 minutes; a run `--from` a later step takes less.
+which the old Viridian Forest had). Past Celadon it needs pae PR #32 (pae reads FireRed's own tile behaviours, so its walks keep off water, one-way edges and the Rocket Hideout's spin tiles), and to run a `pae play` beside it in the same project, pae PR #33 (each play has its own scratch save). A run from the top takes about 135 minutes; a run `--from` a later step takes less.
 
 * Each step saves a checkpoint, `story-NN-name`, in `engine/.pae/checkpoints/`. The next step starts from it.
   `--from STEP` needs the checkpoint of the step before it. A fresh clone has no checkpoints, so start from the
@@ -350,59 +350,113 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 290 | `saffron-south` | Down Saffron to its south gate (its guard drank the Tea too) | Route 6 North Entrance |  |
 | 291 | `route6-again` | Through the gate and out onto Route 6 | Route 6 |  |
 | 292 | `vermilion-again` | Down Route 6 into Vermilion | Vermilion City |  |
-| 293 | `route11-again` | Across Vermilion and east onto Route 11 | Route 11 |  |
-| 294 | `route12-west` | East along Route 11 (below the trainers' lines) onto Route 12 | Route 12 |  |
-| 295 | `route13-again` | Along the bank and down Route 12 the way Snorlax blocked, onto Route 13 | Route 13 89,1 |  |
-| 296 | `route14-again` | Down Route 13's coast road and west along it (round the birdkeepers and the beauties) onto Route 14 | Route 14 18,1 |  |
-| 297 | `route14-tree-again` | Down Route 14 to the tree across its east lane (it grew back: cut it again) and walk through | Route 14 19,17 |  |
-| 298 | `route14-ledge-again` | On down the lane and west to the long ledge; hop it | Route 14 11,34 |  |
-| 299 | `route15-again` | Down Route 14's south fields and west onto Route 15 | Route 15 78,15 |  |
-| 300 | `route15-gate-again` | West along Route 15 (round the bikers' and beauties' lines) into its west gatehouse (along the south lane: the road's Volbeat and Illumise patrol it, and its Hoppip wander anywhere) | Route 15 West Entrance 1F |  |
-| 301 | `route15-gate-out-again` | Through the gatehouse and out of its west door | Route 15 9,5 |  |
-| 302 | `fuchsia-again` | West along the lane into Fuchsia | Fuchsia City 46,21 |  |
-| 303 | `route19` | Down Fuchsia's south road onto Route 19 | Route 19 12,1 |  |
-| 304 | `route19-surf` | Down between the swimmers' lines to the beach; Surf from it (the Soul Badge lets Surf be used outside battle) | Route 19 11,16 |  |
-| 305 | `route20` | Surf south-west round the swimmers' lines onto Route 20 | Route 20 |  |
-| 306 | `cinnabar` | West along Route 20, over the top of the Seafoam Islands, to Cinnabar Island | Cinnabar Island |  |
-| 307 | `cinnabar-shore` | Round the north of the island's east half to the town's shore, and ashore | Cinnabar Island 22,6 |  |
-| 308 | `mansion` | Along the top street into the Pokémon Mansion (the Gym next door is locked) | Pokémon Mansion 1F |  |
-| 309 | `mansion-2f` | Up the hall to the stairs and up to 2F | Pokémon Mansion 2F 6,14 |  |
-| 310 | `mansion-3f` | Round 2F's halls (off Arnie's line) to the north stairs and up to 3F | Pokémon Mansion 3F 8,3 |  |
-| 311 | `mansion-3f-statue` | Down to the statue in 3F's west room; press its secret switch: the barriers change on every floor | Pokémon Mansion 3F | `FLAG_POKEMON_MANSION_SWITCH_STATE` set |
-| 312 | `mansion-hole` | Through the opened way east and down through the hole in the floor to 1F | Pokémon Mansion 1F |  |
-| 313 | `mansion-b1f` | Round 1F's south rooms to the stairs down to the basement | Pokémon Mansion B1F 34,29 |  |
-| 314 | `mansion-lewis` | Up B1F's east side and west along the north hall, then down through the way the switch opened, where the burglar Lewis wanders: if he sees you he battles | Pokémon Mansion B1F |  |
-| 315 | `mansion-b1f-statue` | Round the table to the statue below it; press its switch: back as it was | Pokémon Mansion B1F 24,30 | `FLAG_POKEMON_MANSION_SWITCH_STATE` not set |
-| 316 | `mansion-b1f-statue2` | West, up the west hall, east along the middle and up the east side to the statue in the north-east room; press its switch again | Pokémon Mansion B1F 27,6 | `FLAG_POKEMON_MANSION_SWITCH_STATE` set |
-| 317 | `secret-key` | Back along the middle hall and through the opened way into the west room: the Secret Key | Pokémon Mansion B1F 5,6 | `FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY` set |
-| 318 | `mansion-west-out` | Out of the west room the way you came | Pokémon Mansion B1F 13,10 |  |
-| 319 | `mansion-out-statue` | Back to the north-east statue; press the switch | Pokémon Mansion B1F | `FLAG_POKEMON_MANSION_SWITCH_STATE` not set |
-| 320 | `mansion-out-statue2` | Down the east side (beside Ivan's line) and round to the statue below the table; press it again | Pokémon Mansion B1F 24,30 | `FLAG_POKEMON_MANSION_SWITCH_STATE` set |
-| 321 | `mansion-out-lewis` | Up past the table and through the opened way, where Lewis wanders: if he sees you he battles | Pokémon Mansion B1F |  |
-| 322 | `mansion-up` | East along the north hall and down to the stairs; up to 1F | Pokémon Mansion 1F |  |
-| 323 | `mansion-out` | Through 1F's east rooms (the switch has their barriers open) and out of the back door | Cinnabar Island |  |
-| 324 | `cinnabar-gym` | Along to the Gym: the Secret Key opens its door | Cinnabar Island Gym |  |
-| 325 | `gym-quiz1` | Up into the east room to its quiz machine: Caterpie evolves into Metapod? Yes | Cinnabar Island Gym 22,11 | `FLAG_CINNABAR_GYM_QUIZ_1` set |
-| 326 | `gym-door1` | Round Quinn and up through the opened door into the north-east room | Cinnabar Island Gym 26,7 |  |
-| 327 | `gym-quiz2` | Along the room's north side to its machine: there are nine certified League Badges? No | Cinnabar Island Gym 15,3 | `FLAG_CINNABAR_GYM_QUIZ_2` set |
-| 328 | `gym-door2` | Down past Avery and through the door into the middle room | Cinnabar Island Gym 17,11 |  |
-| 329 | `gym-quiz3` | Round Ramon to the room's machine: Poliwag evolves three times? No | Cinnabar Island Gym 13,11 | `FLAG_CINNABAR_GYM_QUIZ_3` set |
-| 330 | `gym-door3` | Through the door south into the south room | Cinnabar Island Gym 17,18 |  |
-| 331 | `gym-quiz4` | Round Derek to the machine: are electric moves effective against ground types? No | Cinnabar Island Gym 14,18 | `FLAG_CINNABAR_GYM_QUIZ_4` set |
-| 332 | `gym-door4` | Through the door west into the south-west room | Cinnabar Island Gym 10,22 |  |
-| 333 | `gym-quiz5` | Round Dusty to the machine: Pokémon of the same kind and level are not identical? Yes | Cinnabar Island Gym 2,19 | `FLAG_CINNABAR_GYM_QUIZ_5` set |
-| 334 | `gym-door5` | Below Dusty and up through the door into the west room | Cinnabar Island Gym 5,15 |  |
-| 335 | `gym-quiz6` | Up the room's west side to the machine: TM28 contains Tombstony? No | Cinnabar Island Gym 2,11 | `FLAG_CINNABAR_GYM_QUIZ_6` set |
-| 336 | `gym-door6` | Below Zac and up through the last door into Blaine's room | Cinnabar Island Gym 5,7 |  |
-| 337 | `blaine` | Up to Blaine; beat him: the Volcano Badge and TM38 | Cinnabar Island Gym 5,5 | `FLAG_BADGE07_GET` set, `FLAG_GOT_TM38_FROM_BLAINE` set |
-| 338 | `gym-out` | Back out through the opened doors: down the west side and east along the south rooms, then up the middle (past Derek and Ramon) into the north room | Cinnabar Island Gym 17,7 |  |
-| 339 | `gym-out2` | Round Avery and Erik and down the east side through the first door to the entrance | Cinnabar Island Gym 26,22 |  |
-| 340 | `bill-cinnabar` | Out of the Gym: Bill is waiting and asks you to come to One Island with him. Say no (the Sevii Islands aren't part of this check): he waits in the Pokémon Center | Cinnabar Island | `VAR_MAP_SCENE_CINNABAR_ISLAND` 2 |
-| 341 | `cinnabar-surf` | West along the top street to the shore; Surf | Cinnabar Island 2,5 |  |
-| 342 | `route21-south` | North up the island's west side onto Route 21 | Route 21 South |  |
-| 343 | `route21-north` | Straight up the west side of Route 21 (off the swimmers' lines) | Route 21 North |  |
-| 344 | `pallet-again` | On up, then east into the channel between the fields and up it into Pallet Town | Pallet Town |  |
-| 345 | `pallet-shore` | Up Pallet's pond and ashore by the lab | Pallet Town 15,20 |  |
+| 293 | `fan-club` | Up Vermilion's street into the Pokémon Fan Club | Vermilion City Pokémon Fan Club |  |
+| 294 | `bike-voucher` | Round the table to the chairman; yes, you'd like to hear about his Pokémon: the Bike Voucher (he's talked to from his side: his chair is at another height from the floor behind him, so from above he doesn't answer) | Vermilion City Pokémon Fan Club | `FLAG_GOT_BIKE_VOUCHER` set |
+| 295 | `leave-fan-club` | Back out of the Fan Club | Vermilion City 16,10 |  |
+| 296 | `vermilion-tree` | Across Vermilion to the tree in front of the Gym's yard; cut it and walk through (in one step: a checkpoint's reload brings a cut tree back) | Vermilion City 15,16 |  |
+| 297 | `vermilion-gym` | Through the yard into Lt. Surge's Gym | Vermilion City Gym |  |
+| 298 | `surge-switches` | Along the bottom and up the west wall to trash can 6: the first switch. Up into Baily's line (he battles) to can 1: the second; the electric locks open | Vermilion City Gym 0,10 | `FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES` set |
+| 299 | `lt-surge` | Along the top row into Tucker's line (he battles) and up through the opened beams to Lt. Surge; beat him: the Thunder Badge | Vermilion City Gym 5,3 | `FLAG_BADGE03_GET` set |
+| 300 | `leave-vermilion-gym` | Back down through the beams and the west aisle and out of the Gym | Vermilion City 10,21 |  |
+| 301 | `vermilion-tree-out` | Round the yard to the tree (grown back); cut it and walk out | Vermilion City 15,14 |  |
+| 302 | `route6-north` | Up Vermilion's plaza onto Route 6 | Route 6 41,31 |  |
+| 303 | `route6-hut-again` | Up Route 6's road into the Underground Path's hut | Underground Path South Entrance 13,12 |  |
+| 304 | `tunnel-again` | Down the hut's stairs into the tunnel | Underground Path North South Tunnel 2,38 |  |
+| 305 | `tunnel-north-again` | Along the tunnel and up its north stairs | Underground Path North Entrance 12,8 |  |
+| 306 | `route5-again` | Out of the north hut onto Route 5 | Route 5 35,25 |  |
+| 307 | `cerulean-again` | Up Route 5's road and through the neck into Cerulean | Cerulean City 22,50 |  |
+| 308 | `bike-shop` | Into the Bike Shop | Cerulean City Bike Shop |  |
+| 309 | `bicycle` | Up to the counter: the clerk takes the Bike Voucher for a Bicycle | Cerulean City Bike Shop | `FLAG_GOT_BICYCLE` set |
+| 310 | `leave-bike-shop` | Back out of the Bike Shop (round the woman) | Cerulean City |  |
+| 311 | `route5-south` | Back down through Cerulean's neck onto Route 5 | Route 5 |  |
+| 312 | `saffron-north-gate` | Down Route 5's road into Saffron's north gate | Route 5 South Entrance |  |
+| 313 | `saffron-from-north` | Through the gate into Saffron (its mat's east half: backlog #6) | Saffron City |  |
+| 314 | `saffron-west-gate` | Down Saffron's avenue and up into its west gate (its doors face south) | Route 7 East Entrance |  |
+| 315 | `route7-west` | Through the gate onto Route 7 | Route 7 |  |
+| 316 | `celadon-west` | West along Route 7 into Celadon | Celadon City |  |
+| 317 | `route16` | West along Celadon's boulevard onto Route 16 | Route 16 |  |
+| 318 | `route16-snorlax` | West to the sleeping Snorlax in the gap; play the Poké Flute: it wakes and battles, and is gone | Route 16 45,24 | `FLAG_HIDE_ROUTE_16_SNORLAX` set |
+| 319 | `cycling-road` | Get on the Bicycle, ride west through the Cycling Road gatehouse's lower hall (the guard lets bikes by) and out of its west door onto Cycling Road (in one step: indoors, a checkpoint's reload puts you back on foot) | Route 16 28,24 | `VAR_MAP_SCENE_ROUTE16` 1 |
+| 320 | `route17` | Down Route 16's west side between the bikers' lines onto Route 17 | Route 17 |  |
+| 321 | `route18` | Down the whole of Cycling Road onto Route 18: its slope carries you down; Jamal sees you on the way and battles (only A while you ride: a key held when a battle starts moves its menu) | Route 18 |  |
+| 322 | `route18-gate` | Ride up the shore and east along Route 18's road into its gatehouse, through it and out of its east door, and on into Fuchsia | Fuchsia City |  |
+| 323 | `route19` | Down through Fuchsia's west walks and south road onto Route 19 | Route 19 12,1 |  |
+| 324 | `route19-surf` | Down between the swimmers' lines to the beach; Surf from it (the Soul Badge lets Surf be used outside battle) | Route 19 11,16 |  |
+| 325 | `route20` | Surf south-west round the swimmers' lines onto Route 20 | Route 20 |  |
+| 326 | `cinnabar` | West along Route 20, over the top of the Seafoam Islands, to Cinnabar Island | Cinnabar Island |  |
+| 327 | `cinnabar-shore` | Round the north of the island's east half to the town's shore, and ashore | Cinnabar Island 22,6 |  |
+| 328 | `mansion` | Along the top street into the Pokémon Mansion (the Gym next door is locked) | Pokémon Mansion 1F |  |
+| 329 | `mansion-2f` | Up the hall to the stairs and up to 2F | Pokémon Mansion 2F 6,14 |  |
+| 330 | `mansion-3f` | Round 2F's halls (off Arnie's line) to the north stairs and up to 3F | Pokémon Mansion 3F 8,3 |  |
+| 331 | `mansion-3f-statue` | Down to the statue in 3F's west room; press its secret switch: the barriers change on every floor | Pokémon Mansion 3F | `FLAG_POKEMON_MANSION_SWITCH_STATE` set |
+| 332 | `mansion-hole` | Through the opened way east and down through the hole in the floor to 1F | Pokémon Mansion 1F |  |
+| 333 | `mansion-b1f` | Round 1F's south rooms to the stairs down to the basement | Pokémon Mansion B1F 34,29 |  |
+| 334 | `mansion-lewis` | Up B1F's east side and west along the north hall, then down through the way the switch opened, where the burglar Lewis wanders: if he sees you he battles | Pokémon Mansion B1F |  |
+| 335 | `mansion-b1f-statue` | Round the table to the statue below it; press its switch: back as it was | Pokémon Mansion B1F 24,30 | `FLAG_POKEMON_MANSION_SWITCH_STATE` not set |
+| 336 | `mansion-b1f-statue2` | West, up the west hall, east along the middle and up the east side to the statue in the north-east room; press its switch again | Pokémon Mansion B1F 27,6 | `FLAG_POKEMON_MANSION_SWITCH_STATE` set |
+| 337 | `secret-key` | Back along the middle hall and through the opened way into the west room: the Secret Key | Pokémon Mansion B1F 5,6 | `FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY` set |
+| 338 | `mansion-west-out` | Out of the west room the way you came | Pokémon Mansion B1F 13,10 |  |
+| 339 | `mansion-out-statue` | Back to the north-east statue; press the switch | Pokémon Mansion B1F | `FLAG_POKEMON_MANSION_SWITCH_STATE` not set |
+| 340 | `mansion-out-statue2` | Down the east side (beside Ivan's line) and round to the statue below the table; press it again | Pokémon Mansion B1F 24,30 | `FLAG_POKEMON_MANSION_SWITCH_STATE` set |
+| 341 | `mansion-out-lewis` | Up past the table and through the opened way, where Lewis wanders: if he sees you he battles | Pokémon Mansion B1F |  |
+| 342 | `mansion-up` | East along the north hall and down to the stairs; up to 1F | Pokémon Mansion 1F |  |
+| 343 | `mansion-out` | Through 1F's east rooms (the switch has their barriers open) and out of the back door | Cinnabar Island |  |
+| 344 | `cinnabar-gym` | Along to the Gym: the Secret Key opens its door | Cinnabar Island Gym |  |
+| 345 | `gym-quiz1` | Up into the east room to its quiz machine: Caterpie evolves into Metapod? Yes | Cinnabar Island Gym 22,11 | `FLAG_CINNABAR_GYM_QUIZ_1` set |
+| 346 | `gym-door1` | Round Quinn and up through the opened door into the north-east room | Cinnabar Island Gym 26,7 |  |
+| 347 | `gym-quiz2` | Along the room's north side to its machine: there are nine certified League Badges? No | Cinnabar Island Gym 15,3 | `FLAG_CINNABAR_GYM_QUIZ_2` set |
+| 348 | `gym-door2` | Down past Avery and through the door into the middle room | Cinnabar Island Gym 17,11 |  |
+| 349 | `gym-quiz3` | Round Ramon to the room's machine: Poliwag evolves three times? No | Cinnabar Island Gym 13,11 | `FLAG_CINNABAR_GYM_QUIZ_3` set |
+| 350 | `gym-door3` | Through the door south into the south room | Cinnabar Island Gym 17,18 |  |
+| 351 | `gym-quiz4` | Round Derek to the machine: are electric moves effective against ground types? No | Cinnabar Island Gym 14,18 | `FLAG_CINNABAR_GYM_QUIZ_4` set |
+| 352 | `gym-door4` | Through the door west into the south-west room | Cinnabar Island Gym 10,22 |  |
+| 353 | `gym-quiz5` | Round Dusty to the machine: Pokémon of the same kind and level are not identical? Yes | Cinnabar Island Gym 2,19 | `FLAG_CINNABAR_GYM_QUIZ_5` set |
+| 354 | `gym-door5` | Below Dusty and up through the door into the west room | Cinnabar Island Gym 5,15 |  |
+| 355 | `gym-quiz6` | Up the room's west side to the machine: TM28 contains Tombstony? No | Cinnabar Island Gym 2,11 | `FLAG_CINNABAR_GYM_QUIZ_6` set |
+| 356 | `gym-door6` | Below Zac and up through the last door into Blaine's room | Cinnabar Island Gym 5,7 |  |
+| 357 | `blaine` | Up to Blaine; beat him: the Volcano Badge and TM38 | Cinnabar Island Gym 5,5 | `FLAG_BADGE07_GET` set, `FLAG_GOT_TM38_FROM_BLAINE` set |
+| 358 | `gym-out` | Back out through the opened doors: down the west side and east along the south rooms, then up the middle (past Derek and Ramon) into the north room | Cinnabar Island Gym 17,7 |  |
+| 359 | `gym-out2` | Round Avery and Erik and down the east side through the first door to the entrance | Cinnabar Island Gym 26,22 |  |
+| 360 | `bill-cinnabar` | Out of the Gym: Bill is waiting and asks you to come to One Island with him. Say no (the Sevii Islands aren't part of this check): he waits in the Pokémon Center | Cinnabar Island | `VAR_MAP_SCENE_CINNABAR_ISLAND` 2 |
+| 361 | `cinnabar-surf` | West along the top street to the shore; Surf | Cinnabar Island 2,5 |  |
+| 362 | `route21-south` | North up the island's west side onto Route 21 | Route 21 South |  |
+| 363 | `route21-north` | Straight up the west side of Route 21 (off the swimmers' lines) | Route 21 North |  |
+| 364 | `pallet-again` | On up, then east into the channel between the fields and up it into Pallet Town | Pallet Town |  |
+| 365 | `pallet-shore` | Up Pallet's pond and ashore by the lab | Pallet Town 15,20 |  |
+| 366 | `route1-again` | Up through Pallet onto Route 1 | Route 1 |  |
+| 367 | `viridian-again` | Up Route 1 into Viridian | Viridian City |  |
+| 368 | `viridian-gym` | Across Viridian to the Gym: with seven badges its door is open now (the walk stops a block short: the block before the door runs the locked-door scene, which a checkpoint would cut off) | Viridian City Gym | `VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR` 1 |
+| 369 | `viridian-gym-warren` | Across the spin tiles to the north-east and up into Warren's line: he battles | Viridian City Gym 15,7 |  |
+| 370 | `viridian-gym-takashi` | Round Warren and west along the hall into Takashi's line: he battles | Viridian City Gym 10,5 |  |
+| 371 | `giovanni` | Round to Giovanni in the north-west room; beat him: the Earth Badge, and Team Rocket is finished | Viridian City Gym 2,3 | `FLAG_BADGE08_GET` set, `VAR_MAP_SCENE_ROUTE22` 3 |
+| 372 | `leave-viridian-gym` | Back across the spin tiles and out of the Gym (no tap to turn first: a checkpoint's reload leaves you facing down already, and a tap that way is a step) | Viridian City 44,21 |  |
+| 373 | `route22-again` | West along Viridian's street onto Route 22 | Route 22 51,7 |  |
+| 374 | `route22-rival` | West along the road: the rival comes after you for one last battle before the League | Route 22 | `VAR_MAP_SCENE_ROUTE22` 4 |
+| 375 | `league-gate-again` | Round Route 22's ponds to the League Front Gate | Route 22 North Entrance |  |
+| 376 | `boulder-badge-gate` | Up the gatehouse: the guard checks the Boulder Badge; on out of its north door onto Route 23 | Route 23 | `VAR_MAP_SCENE_ROUTE23` 1 |
+| 377 | `cascade-badge-gate` | Up the road to the Cascade Badge's gate: the guard checks it and lets you by | Route 23 | `VAR_MAP_SCENE_ROUTE23` 2 |
+| 378 | `thunder-badge-gate` | Up the road to the Thunder Badge's gate: the guard checks it and lets you by | Route 23 | `VAR_MAP_SCENE_ROUTE23` 3 |
+| 379 | `rainbow-badge-gate` | Up the road to the Rainbow Badge's gate: the guard checks it and lets you by | Route 23 | `VAR_MAP_SCENE_ROUTE23` 4 |
+| 380 | `soul-badge-gate` | Up the road to the Soul Badge's gate: the guard checks it and lets you by | Route 23 | `VAR_MAP_SCENE_ROUTE23` 5 |
+| 381 | `route23-lake` | Up to the lake's shore; Surf | Route 23 9,79 |  |
+| 382 | `route23-lake-north` | Across the lake and ashore | Route 23 9,65 |  |
+| 383 | `marsh-badge-gate` | Up the road to the Marsh Badge's gate: the guard checks it and lets you by | Route 23 | `VAR_MAP_SCENE_ROUTE23` 6 |
+| 384 | `volcano-badge-gate` | Up the road to the Volcano Badge's gate: the guard checks it and lets you by | Route 23 | `VAR_MAP_SCENE_ROUTE23` 7 |
+| 385 | `earth-badge-gate` | Up the road to the Earth Badge's gate: the guard checks it and lets you by | Route 23 | `VAR_MAP_SCENE_ROUTE23` 8 |
+| 386 | `victory-road` | Into the yard under the cliff and into Victory Road | Victory Road 1F |  |
+| 387 | `vr1f-boulder` | Victory Road 1F: round the first boulder to stand above it | Victory Road 1F 7,17 |  |
+| 388 | `vr1f-switch` | Strength: the boulder down, along and up onto the floor switch; the rock barrier opens | Victory Road 1F | `VAR_MAP_SCENE_VICTORY_ROAD_1F` 100 |
+| 389 | `vr2f` | Round the boulder (back where it started: the switch stays down) and through the opened barrier, under Naomi's and Rolando's lines and up the ladder | Victory Road 2F 1,10 |  |
+| 390 | `vr2f-switch` | 2F: Strength, the boulder down onto the west floor switch; its barrier opens | Victory Road 2F | `VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER1` 100 |
+| 391 | `vr3f` | Round the boulder (back where it started) through the barrier, east across 2F under Daisuke and behind Nelson, and up the ladder to 3F | Victory Road 3F 34,10 |  |
+| 392 | `vr3f-switch` | 3F: Strength, the north boulder up, west along the top and down onto the floor switch; the barrier on the west side opens | Victory Road 3F | `VAR_MAP_SCENE_VICTORY_ROAD_3F` 100 |
+| 393 | `vr3f-hole` | Round the top and the west side through the opened barrier, east along the south (under Colby's and Caroline's lines) to the boulder by the hole; Strength, and it falls in, to 2F | Victory Road 3F | `FLAG_HIDE_VICTORY_ROAD_2F_BOULDER` not set, `FLAG_HIDE_VICTORY_ROAD_3F_BOULDER` set |
+| 394 | `vr2f-switch2` | Down the hole after it, then Strength and the boulder 19 blocks west onto the second switch; the barrier by the east ladder opens | Victory Road 2F | `VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2` 100 |
+| 395 | `vr3f-east` | Round the wandering Pokémon and the boulder (back by the hole's foot), through the second barrier behind Nelson and up the east ladder to 3F | Victory Road 3F 39,16 |  |
+| 396 | `vr2f-east` | Across 3F's east side under Tyra's line and down the ladder to 2F's far side | Victory Road 2F 38,10 |  |
+| 397 | `victory-road-out` | Out of Victory Road onto Route 23's top yard | Route 23 |  |
+| 398 | `indigo-plateau` | Up Route 23's last stretch to the Indigo Plateau | Indigo Plateau Exterior |  |
+| 399 | `indigo-center` | Into the Indigo Plateau's Pokémon Center (the League's doors: the end of the check) | Indigo Plateau Pokémon Center 1F |  |
 
 ## What it doesn't cover
 
@@ -526,8 +580,10 @@ Checkpoints are game saves, so they still load after a map change, as long as th
      `project/scripts/strength_waits.py` plays the plan from the step's checkpoint a move at a time and finds the
      waits it needs, `{move number: frames}`. They depend on the checkpoint: after a change to any earlier step, run
      it again for each boulder step.
-   * `pae map path` plans through people and boulders (it doesn't know where they are). Where a walk goes past one,
-     give it vias round them; a boulder is back where the map puts it after a reload.
+   * The script's walks plan with plain `pae map path`, which goes through people, boulders and trainers' lines of
+     sight. Where a walk goes past one, give it vias round them (a boulder is back where the map puts it after a
+     reload). To find the vias, `pae map path MAP X,Y X,Y --avoid-objects --avoid-sight` (pae PR #35) plans round
+     them all; its turns are the vias.
 3. When every step passes, update "Last validated point" and the step table on this page. Do it in the same pull
    request as the map change.
 4. A failed step is a finding. Fix it if it stops the story. If it doesn't, add it to
@@ -570,3 +626,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-27 | `v2-main` `c13b5ab1`, every Kanto map rebuilt; no map changes: a hundred and two new steps from Celadon to Saffron's gate (Erika, the Game Corner and the Rocket Hideout, Giovanni and the Silph Scope, the Pokémon Tower and Mr. Fuji, the Poké Flute, the Tea, Snorlax, Routes 12–15, Fuchsia and Koga, the Safari Zone and HM03, the Warden and HM04, back north the long way to Saffron's east gate) | Steps 1–145 pass from the top (2756 s, pae `2838353`); **steps 1–196 pass from the top** on pae `ea6b4bb` (3323 s), and 172–247 on from there. First tries stopped where the walks met FireRed's own interiors: pae read their tiles as having no behaviour, so its walks crossed the Hideout's spin tiles (pae PR #32); a `pae play` beside the running check loaded its scratch save (pae PR #33); Psychic's PP ran out in the Hideout (the team is set again before each battle); stairs, gate and lift mats that leave from one block only, or by a key sideways (backlog #6); a Hoppip and the Volbeat on Route 15's road (backlog #4: range-0 wanderers); Luca's walk on Route 12; a full disk. |
 | 2026-10-27 | `v2-main` `87d5db02`; no map changes: forty-two new steps, Silph Co. (the Card Key, the pads, the rival, Giovanni), out through 3F's other door, and Sabrina's Gym's pads | **Steps 248–289 pass**, from step 247's checkpoint in parts as they were added. A first try ended a walk on 5F's pad, which a checkpoint can't hold: the steps go round by 9F's pad instead. The way out of 11F is back by the pads (7F's west side has no other way out) and 3F's second door. |
 | 2026-10-27 | `v2-main` `1ca40047`; no map changes: fifty-six new steps, back to Fuchsia by Routes 6, 11 and 12, Surf down Routes 19 and 20 to Cinnabar, the Pokémon Mansion's switches and the Secret Key, Blaine's quiz, and up Route 21 to Pallet | **Steps 290–345 pass**, from step 289's checkpoint in parts as they were added. First tries: the walks couldn't surf (the script's walks gained `surf`, with surfing's 8-frame blocks and the turn a short press makes); a surf walk overshot into a swimmer's line; the Mansion's holes land on plain floor (my planner first took them for ways back up); its stairs and Saffron's south gate need one more press; pae plans with the Mansion's barriers and the Gym's doors as built, so walks through them are held in the inputs; the statue's and Bill's words needed more presses. Two step names were the same (`route11`): the script now stops on that. A `pae play --show-flag` with a trainer's name read some other flag: pae fix to come. |
+| 2026-10-27 | `v2-main` `a550f77f`; no map changes: the check reaches the Indigo Plateau. Lt. Surge, the Fan Club's Bike Voucher and the Bicycle, Route 16's Snorlax and Cycling Road back to Fuchsia (instead of Routes 11–15 again), Giovanni's Gym, Route 22's last rival battle, Route 23's badge gates, Victory Road's four Strength switches, the Indigo Plateau's Center | **All 399 steps pass from the top** in one run (7991 s). First tries: a walk ended on the Viridian Gym's door trigger, so the checkpoint dropped the lock's scene and the walk went into the Gym without the Thunder Badge (Lt. Surge had been skipped: he is played now); the Vermilion Gym's trash cans are shuffled each time the Gym loads (its step plays from its own checkpoint); a reload indoors or with a `state` drops the Bicycle, so the mount and the ride are one step with no state; on Cycling Road a held key moved the battle menu; a cut tree grows back on reload; Lewis's battle outran the presses (a walk that meets a battle now plays through it). In Victory Road: a push moves only the boulder (the plans first moved the player too); boulders go back on a reload (the walks go round them); the 3F switch is needed to reach the hole; wandering Pokémon stood in the pushes, and the Golem on 1F stays boxed in by the switch, so waiting there never helps: `strength_waits.py` finds the waits, starting earlier when a Pokémon is stuck (backlog #4). `pae map path` walked through trainers' lines (pae PR #35 adds `--avoid-sight` to plan the vias). Cerulean's Bike Shop door has three warps (backlog #7). |
