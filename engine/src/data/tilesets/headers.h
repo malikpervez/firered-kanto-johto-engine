@@ -2335,3 +2335,25 @@ const struct Tileset gTileset_Route20Concept =
     .metatileAttributes = gMetatileAttributes_Route20Concept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route23Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route23Concept,
+    .palettes = gTilesetPalettes_Route23Concept,
+    .metatiles = gMetatiles_Route23Concept,
+    .metatileAttributes = gMetatileAttributes_Route23Concept,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_IndigoConcept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_IndigoConcept,
+    .palettes = gTilesetPalettes_IndigoConcept,
+    .metatiles = gMetatiles_IndigoConcept,
+    .metatileAttributes = gMetatileAttributes_IndigoConcept,
+    .callback = NULL,
+};

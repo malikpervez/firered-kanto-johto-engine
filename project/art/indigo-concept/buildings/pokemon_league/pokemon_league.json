@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "id": "pokemon_league",
+  "type": "building",
+  "image": "pokemon_league.png",
+  "image_size_px": [
+    144,
+    192
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 9,
+    "height": 12
+  },
+  "transparent_index": 0,
+  "door_blocks": [
+    [
+      4,
+      11
+    ]
+  ],
+  "door": {
+    "image": "pokemon_league_door.png",
+    "sheet_size_px": [
+      48,
+      32
+    ],
+    "frame_size_px": [
+      16,
+      32
+    ],
+    "frame_count": 3,
+    "frame_order": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "closed_frame_matches_building_crop": true
+  },
+  "name": "pokemon_league",
+  "source": "indigo-concept/indigo_buildings.py: Silph Co.'s tower, its golds turned crimson, a Pok\u00e9 Ball for its badge"
+}

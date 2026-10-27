@@ -75,7 +75,8 @@ plant (KR-47), a prize hall and a restaurant for Celadon (KR-57).
 | The Fighting Dojo | `saffron_buildings.py` `dojo()` (folder `fighting_dojo`) | 7×5, door (3,4) | the same | Saffron | white plaster in a dark wooden frame under a broad slate roof |
 | The gatehouse | `saffron_buildings.py` `gate()` (folder `saffron_gate`) | 4×3, a double door at (1,2)-(2,2) | the same | Saffron (its north, west and east gates) | its door frames are drawn here: one wide door, 96×32 |
 | The gatehouse's back | `saffron_buildings.py` `gate_back()` (folder `saffron_gate_back`) | 4×3, a doorway at (1,0)-(2,0) | the same | Saffron (its south gate) | the doorway is `MB_SOUTH_ARROW_WARP`: entered walking south, no animation |
-| Route 12's north gatehouse | `route12-concept/route12_buildings.py` `gate()` (folder `route12_gate`) | 4×4: a doorway at (1,0)-(2,0), a double door at (1,3)-(2,3) | Saffron's buildings palette (bank 7) | Route 12 | the back's top two rows over the gatehouse's bottom two: walked through from north to south; the door frames are `saffron_gate`'s |
+| Route 12's north gatehouse | `route12-concept/route12_buildings.py` `gate()` (folder `route12_gate`) | 4×4: a doorway at (1,0)-(2,0), a double door at (1,3)-(2,3) | Saffron's buildings palette (bank 7) | Route 12; Route 23 (the League gate's back: its doorway only, the double door shut at the map's edge) | the back's top two rows over the gatehouse's bottom two: walked through from north to south; the door frames are `saffron_gate`'s |
+| The Pokémon League | `indigo-concept/indigo_buildings.py` `league()` (folder `pokemon_league`) | 9×12, door (4,11) | its own (bank 7) | Indigo Plateau | Silph Co.'s tower: its golds and ochres turned crimson, a Poké Ball ringed in white where the company's badge was; its door frames recoloured the same |
 | Blaine's Gym | `cinnabar-concept/cinnabar_buildings.py` `gym()` (folder `cinnabar_gym`) | 7×5, door (3,4) | its own (bank 7) | Cinnabar | Pewter's Gym recoloured: every hue turned to the volcano's reds and ochres, the greys warmed; its door frames recoloured the same |
 | The burned Pokémon Mansion | `cinnabar_buildings.py` `mansion()` (folder `pokemon_mansion`) | 6×5, door (2,4) | its own (bank 9) | Cinnabar | Celadon's hotel charred: its colours greyed and darkened, soot streaked up the walls from the windows; its door frames charred the same |
 | The Pokémon Lab | `cinnabar_buildings.py` `lab()` (folder `cinnabar_lab`) | 9×5, door (3,4) | Pallet's lab palette (bank 10) | Cinnabar | Oak's lab as `pallet-concept/make_art.py` `lab()` draws it, greenhouse and all; its door is pae's panel door, as Pallet's is |
@@ -159,6 +160,8 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Cinnabar | 353 | 0 | 169 |
 | Route 20 | 157 | 0 | 82 |
 | Route 19 | 1 (nothing of its own) | 0 | 0 |
+| Route 23 | 158 | 149 (for Route 22's gate) | 79 |
+| Indigo Plateau | 31 | 29 (for old League West Pass) | 108 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.

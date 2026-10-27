@@ -1,0 +1,111 @@
+{
+ "T": {
+  "auto": "forest"
+ },
+ ".": {
+  "pick": [
+   "lawn_a",
+   "lawn_b",
+   "lawn_c",
+   "lawn_d"
+  ]
+ },
+ ",": "lawn_flowers",
+ "=": {
+  "auto": "cobble"
+ },
+ ":": {
+  "auto": "dirt"
+ },
+ "~": {
+  "auto": "pond",
+  "elevation": 1
+ },
+ "s": {
+  "auto": "sea",
+  "elevation": 1
+ },
+ "#": {
+  "auto": "fence"
+ },
+ "d": {
+  "auto": "dock"
+ },
+ "*": {
+  "pick": [
+   "flowers1",
+   "flowers2",
+   "flowers3",
+   "flowers4"
+  ]
+ },
+ "b": {
+  "pick": [
+   "bush_a",
+   "bush_b",
+   "bush_c"
+  ]
+ },
+ "o": {
+  "pick": [
+   "field_rock_a",
+   "field_rock_b",
+   "field_rock_c"
+  ]
+ },
+ "k": "stump",
+ "l": "lamp",
+ "S": "sign",
+ "B": "barrel",
+ "c": "crate",
+ "O": "boat",
+ "w": "well",
+ "R": {
+  "pick": [
+   "round_tree",
+   "offset_tree",
+   "broad_tree"
+  ]
+ },
+ "g": {
+  "pick": [
+   "tall_grass",
+   "tall_grass_flowers"
+  ],
+  "order": "checker"
+ },
+ "_": {
+  "auto": "ledge"
+ },
+ "h": {
+  "auto": "steps"
+ },
+ "v": {
+  "auto": "pond",
+  "joins": "~",
+  "with": "lily",
+  "elevation": 1
+ },
+ "r": {
+  "auto": "pond",
+  "joins": "~",
+  "with": "reeds",
+  "elevation": 1
+ },
+ "p": {
+  "auto": "paving"
+ },
+ "q": {
+  "auto": "sea",
+  "joins": "s",
+  "with": "rock_a",
+  "elevation": 1
+ },
+ "Q": {
+  "auto": "sea",
+  "joins": "s",
+  "with": "rock_b",
+  "elevation": 1
+ },
+ "L": "pokemon_league"
+}

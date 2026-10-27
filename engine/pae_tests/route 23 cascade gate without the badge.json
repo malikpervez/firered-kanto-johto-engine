@@ -1,0 +1,107 @@
+{
+ "note": "Up to the first gate without the Cascade Badge: the guard sends you back.",
+ "created": "2026-10-27 21:00",
+ "start": {
+  "map": "Route23_Frlg",
+  "x": 9,
+  "y": 143,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250",
+   "VAR_MAP_SCENE_ROUTE23=1"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "VAR_MAP_SCENE_ROUTE23"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route23_Frlg",
+  "x": 9,
+  "y": 142,
+  "in_battle": false,
+  "vars": {
+   "VAR_MAP_SCENE_ROUTE23": 1
+  }
+ },
+ "accepted": "2026-10-27 01:19"
+}
