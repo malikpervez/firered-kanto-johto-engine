@@ -9,6 +9,10 @@
   "Route5_Frlg",
   "Route9_Frlg"
  ],
+ "CinnabarIsland_Frlg": [
+  "Route20_Frlg",
+  "Route21_South_Frlg"
+ ],
  "FuchsiaCity_Frlg": [
   "Route18_Frlg",
   "Route19_Frlg",
@@ -65,14 +69,22 @@
   "FuchsiaCity_Frlg"
  ],
  "Route19_Frlg": [
-  "FuchsiaCity_Frlg"
+  "FuchsiaCity_Frlg",
+  "Route20_Frlg"
  ],
  "Route1_Frlg": [
   "PalletTown_Frlg",
   "ViridianCity_Frlg"
  ],
+ "Route20_Frlg": [
+  "CinnabarIsland_Frlg",
+  "Route19_Frlg"
+ ],
  "Route21_North_Frlg": [
   "PalletTown_Frlg"
+ ],
+ "Route21_South_Frlg": [
+  "CinnabarIsland_Frlg"
  ],
  "Route22_Frlg": [
   "ViridianCity_Frlg"

@@ -1,0 +1,142 @@
+{
+ "note": "Speak to Claude, fishing off the long islet: he battles.",
+ "created": "2026-10-27 15:00",
+ "start": {
+  "map": "Route21_South_Frlg",
+  "x": 15,
+  "y": 9,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_CHARIZARD lv50",
+   "SPECIES_BLASTOISE lv50"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route21_South_Frlg",
+  "x": 15,
+  "y": 9,
+  "in_battle": true
+ }
+}

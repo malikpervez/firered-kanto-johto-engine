@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "id": "cinnabar_lab",
+  "type": "building",
+  "image": "cinnabar_lab.png",
+  "image_size_px": [
+    144,
+    80
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 9,
+    "height": 5
+  },
+  "transparent_index": 0,
+  "door_blocks": [
+    [
+      3,
+      4
+    ]
+  ],
+  "name": "cinnabar_lab",
+  "source": "cinnabar-concept/cinnabar_buildings.py: Oak's lab as pallet-concept/make_art.py draws it; its door is pae's panel door"
+}

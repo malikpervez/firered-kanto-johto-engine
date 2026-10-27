@@ -6,7 +6,7 @@ neighbours', and what else depends on its shape. Update it with every map.
 
 ![Viridian City, Route 1, Pallet Town and Route 21 North, joined as the game joins them](world_pallet_viridian.png)
 
-(From the top: Viridian City, Route 1 and Pallet Town are rebuilt; Route 21 North is still the old map. Make the
+(From the top: Viridian City, Route 1 and Pallet Town are rebuilt; this picture shows Route 21 North as it was before its rebuild. Make the
 picture again with `pae map render` for each map, placed by the offsets below.)
 
 ## Rebuilt maps
@@ -42,6 +42,9 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Route 14 | 26×62 | 26×62 | kit (and an empty `gTileset_Route14Concept`) | up: Route 13 (offset −4), left: Route 15 (offset 36) |
 | Route 13 | 104×32 | 104×32 | kit (and an empty `gTileset_Route13Concept`) | up: Route 12 (offset 65), down: Route 14 (offset 4) |
 | Route 12 | 38×80 | 38×90 | kit + `gTileset_Route12Concept` | up: Lavender Town (offset −2), left: Route 11 (offset 27), down: Route 13 (offset −65) |
+| Route 21 North | 24×50 | 24×50 | kit (and an empty `gTileset_Route21Concept`, shared with Route 21 South) | up: Pallet Town (offset −11), down: Route 21 South (offset 0) |
+| Route 21 South | 24×50 | 24×50 | kit (and the same empty `gTileset_Route21Concept`) | up: Route 21 North (offset 0), down: Cinnabar Island (offset 0) |
+| Cinnabar Island | 96×44 | 96×44 | kit + `gTileset_CinnabarConcept` | up: Route 21 South (offset 0), right: Route 20 (offset 0) |
 | Saffron City | 60×48 | 66×55 | kit + `gTileset_SaffronConcept` | none compiled (KR-53): Routes 5, 6, 7 and 8 join its twin `SaffronCity_Connection`, still the old layout (KR-59); its four gatehouses are the ways out |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
@@ -67,6 +70,9 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 10 ↔ Lavender | Route 10 16–20 = Lavender 12–16 | the valley road down into Lavender's north road |
 | Lavender ↔ Route 8 | Lavender rows 9–11 = Route 8 rows 13–15 | the street west onto Route 8's road |
 | Route 8 ↔ Saffron | Route 8 row 12 = Saffron row 27 | not walked across: the gate's doors on Route 8 (10–11,12) lead through the gatehouse to Saffron's own east gate door (62,27). Old Saffron draws its own half of the gatehouse, and no neighbour (KR-53) |
+| Route 21 North ↔ Route 21 South | the whole width | open sea |
+| Route 21 South ↔ Cinnabar | Route 21 0–3 = Cinnabar 0–3 | the sea lane down the island's west side; Route 21's woods (4–23) stand behind the town |
+| Cinnabar ↔ Route 20 | Cinnabar rows 0–19 = Route 20 rows 0–19 | open sea |
 | Route 7 ↔ Celadon | Route 7 rows 10–13 = Celadon rows 20–23 | the road west out of the trees onto Celadon's boulevard |
 | Celadon ↔ Route 16 | Celadon rows 20–23 = Route 16 rows 22–25 | the boulevard west onto Route 16's road |
 | Route 16 ↔ Route 17 | Route 16 12–17 = Route 17 12–17 | the road down from the plaza onto Cycling Road's start |
@@ -125,7 +131,9 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 12 | Lavender Town, Route 11, Route 13 | pae (all from the kit: 30 pieces for Route 11's own metatiles in its strip, in bank 10). Old Route 12's hand-made seam is gone (Route 21 South's seam kept the water frames it shared with it) |
 | Route 24 | Cerulean City, Route 25 | pae |
 | Route 25 | Route 24 | pae (both from the kit: only each other's own tiles, no palettes) |
-| Route 21 North | Pallet Town | pae |
+| Route 21 North | Pallet Town, Route 21 South | pae (all three from the kit: no seam with either) |
+| Route 21 South | Route 21 North, Cinnabar Island | pae (all from the kit: 65 pieces for Cinnabar's own metatiles in its strip, the Mansion's and the Gym's, in banks 7 and 9). Old Route 21 South's hand-made seam is gone |
+| Cinnabar Island | Route 21 South, Route 20 | pae: old Route 20's palettes in banks 4 and 12 (17 pieces; one palette in its nearest colours, KR-78); none for Route 21 South (its strip is the kit's own, in the primary's palettes, KR-76). Old Cinnabar's hand-made seam is gone; old Route 20's for it too, now a pae seam (4 pieces) |
 | Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
 | Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
 
@@ -320,3 +328,11 @@ Check these whenever a map is rebuilt, moved or resized:
   seams for the old routes are gone (all are the kit's now).
 - Route 14's berry garden moved east (its tree to cut at 12,54, was 6,54): the game hid the tree for anyone coming
   from Route 15 (KR-45, KR-69). Route 15's clone of it moved with it (92,18).
+- Cinnabar Island and Route 21 (north and south) rebuilt together, so every join between them is between kit maps.
+  Cinnabar at its old size (96×44), its joins where they were (Route 21 South's sea above, offset 0; Route 20's to
+  the right, offset 0). Every warp kept its number: the Mansion (0, door 6,4), the Gym (1, 20,4), the Lab (2, 6,11),
+  the Center (3, 14,11) and the Mart (4, 18,11); the Center's and the Gym's doors stayed for the Bill and Seagallop
+  scenes, the Gym's lock with them (20,5). The people and Pokémon kept their order; the Friends' camp stayed (46,20),
+  on the volcano island now. Its layout is in HnS's metatile format now (KR-74). Route 21's maps at their old size
+  (24×50 each), joins where they were (Pallet's river at the north map's columns 7–10, offset −11). The hand-made
+  seams of old Cinnabar, old Route 20 and old Route 21 South were removed from `kanto_connection_seam.c` (KR-75).

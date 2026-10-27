@@ -31,7 +31,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 11,
+      "x": 15,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -45,7 +45,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 14,
+      "x": 8,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -105,30 +105,11 @@
   "firered_geometry": {
     "width": 24,
     "height": 50,
-    "primary_tileset": "gTileset_Kanto_General_Hns",
-    "secondary_tileset": "gTileset_PalletTown_Hns",
-    "border_filepath": "data/layouts/Route21_hns/border.bin",
-    "blockdata_filepath": "data/layouts/Route21_hns/map.bin",
+    "primary_tileset": "gTileset_PalletConcept_General",
+    "secondary_tileset": "gTileset_Route21Concept",
+    "border_filepath": "data/layouts/Route21_South_Concept/border.bin",
+    "blockdata_filepath": "data/layouts/Route21_South_Concept/map.bin",
     "layout_version": "hns",
-    "blockdata_composition": {
-      "fill_source": {
-        "filepath": "data/layouts/Route21_hns/border.bin",
-        "offset": 0,
-        "expected": 81
-      },
-      "parts": [
-        {
-          "filepath": "data/layouts/Route21_hns/map.bin",
-          "source_width": 24,
-          "source_height": 100,
-          "source_x": 0,
-          "source_y": 50,
-          "width": 24,
-          "height": 50,
-          "dest_x": 0,
-          "dest_y": 0
-        }
-      ]
-    }
+    "blockdata_composition": null
   }
 }
