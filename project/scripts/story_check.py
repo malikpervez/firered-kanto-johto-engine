@@ -36,6 +36,13 @@ def hold(n):
     return 16 * (n - 1) + 12
 
 
+def surf_hold(n):
+    """The same for surfing, facing the way already: 8 frames a block, each starting as the last ends. (Facing
+    another way, a press first turns you, for 8 frames; a walk that starts so comes up a block short and is planned
+    again from there.)"""
+    return 8 * n - 4
+
+
 def A(n, wait=60):
     return "".join(f"A*4, wait {wait}, " for _ in range(n))
 
@@ -44,9 +51,16 @@ def B(n, wait=90):
     return "".join(f"B*4, wait {wait}, " for _ in range(n))
 
 
+def quiz(yes):
+    """Blaine's quiz machines, faced from below: the rules (five pages), the question, the answer (A for yes, B for
+    no), then "correct" (two pages)."""
+    return "UP*4, wait 20, A*4, wait 60, " + B(5, 120) + f"wait 120, {'A' if yes else 'B'}*4, wait 400, " + B(2, 120)
+
+
 # Each step: what it checks; where it starts (a new game's map/x/y/state, or the checkpoint of the step named in
 # "after", by default the one before); "walk" to a block on the current map (planned with pae map path, re-planned
-# if someone was in the way; "via" blocks on the way first, e.g. round a trainer's line of sight), then "inputs";
+# if someone was in the way; "via" blocks on the way first, e.g. round a trainer's line of sight; on water with
+# "surf"), then "inputs";
 # extra "state" (e.g. a team); what it must end with.
 STEPS = [
     dict(name="oak", what="A new game: out of the house; Oak stops you at the north exit and walks you to his lab",
@@ -884,6 +898,196 @@ STEPS = [
          expect=dict(map="SaffronCity_Gym_Frlg", xy=(18, 20))),
     dict(name="leave-saffron-gym", what="Out of the Gym", via=[(18, 21)], walk=(14, 22),
          inputs=f"DOWN*{hold(2)}, wait 300", expect=dict(map="SaffronCity_Frlg", xy=(17, 18))),
+    # Cinnabar next. Without Fly the way there is the sea: down to Fuchsia by Routes 6, 11 and 12, then Surf
+    dict(name="saffron-south", what="Down Saffron to its south gate (its guard drank the Tea too)",
+         via=[(17, 38), (18, 38), (18, 44)], walk=(29, 44), inputs=f"DOWN*{hold(2)}, wait 250",
+         expect=dict(map="Route6_NorthEntrance_Frlg")),
+    dict(name="route6-again", what="Through the gate and out onto Route 6", walk=(4, 8),
+         inputs=f"DOWN*{hold(2)}, wait 250",
+         expect=dict(map="Route6_Frlg")),
+    dict(name="vermilion-again", what="Down Route 6 into Vermilion", walk=(40, 31), inputs="DOWN*30, wait 200",
+         expect=dict(map="VermilionCity_Frlg")),
+    dict(name="route11-again", what="Across Vermilion and east onto Route 11", via=[(33, 11)], walk=(59, 12),
+         inputs="RIGHT*30, wait 200", expect=dict(map="Route11_Frlg")),
+    dict(name="route12-west", what="East along Route 11 (below the trainers' lines) onto Route 12",
+         via=[(0, 17), (41, 17), (41, 18)], walk=(59, 18), inputs="RIGHT*30, wait 200",
+         expect=dict(map="Route12_Frlg")),
+    dict(name="route13-again", what="Along the bank and down Route 12 the way Snorlax blocked, onto Route 13",
+         via=[(0, 47), (17, 47), (17, 67), (21, 67), (21, 73), (24, 73)], walk=(24, 79), inputs="DOWN*30, wait 200",
+         expect=dict(map="Route13_Frlg", xy=(89, 1))),
+    dict(name="route14-again",
+         what="Down Route 13's coast road and west along it (round the birdkeepers and the beauties) "
+         "onto Route 14",
+         inputs="DOWN*268, wait 6, LEFT*140, wait 6, DOWN*12, wait 6, LEFT*76, wait 6, DOWN*12, wait 6, LEFT*188, "
+         "wait 6, DOWN*76, wait 6, LEFT*636, wait 6, DOWN*92, wait 6, LEFT*12, wait 20, DOWN*30, wait 200",
+         expect=dict(map="Route14_Frlg", xy=(18, 1))),
+    dict(name="route14-tree-again",
+         what="Down Route 14 to the tree across its east lane (it grew back: cut it again) and walk through",
+         via=[(18, 9), (5, 9), (5, 12), (19, 12)], walk=(19, 15),
+         inputs="DOWN*4, wait 30, " + A(4, 130) + f"wait 300, DOWN*{hold(2)}, wait 30",
+         expect=dict(map="Route14_Frlg", xy=(19, 17))),
+    dict(name="route14-ledge-again", what="On down the lane and west to the long ledge; hop it",
+         via=[(19, 19), (18, 19), (18, 23), (11, 23)], walk=(11, 32), inputs=f"DOWN*{hold(1)}, wait 60",
+         expect=dict(map="Route14_Frlg", xy=(11, 34))),
+    dict(name="route15-again", what="Down Route 14's south fields and west onto Route 15",
+         via=[(11, 40), (10, 40), (10, 41), (9, 41), (9, 51)], walk=(0, 51), inputs="LEFT*30, wait 200",
+         expect=dict(map="Route15_Frlg", xy=(78, 15))),
+    dict(name="route15-gate-again", what="West along Route 15 (round the bikers' and beauties' lines) into its west "
+         "gatehouse (along the south lane: the road's Volbeat and Illumise patrol it, and its Hoppip wander anywhere)",
+         via=[(78, 17), (21, 17), (21, 8), (19, 8), (19, 5)], walk=(17, 5),
+         inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250",
+         expect=dict(map="Route15_WestEntrance_1F_Frlg")),
+    dict(name="route15-gate-out-again", what="Through the gatehouse and out of its west door", walk=(2, 6),
+         inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250", expect=dict(map="Route15_Frlg", xy=(9, 5))),
+    dict(name="fuchsia-again", what="West along the lane into Fuchsia", walk=(0, 5), inputs="LEFT*30, wait 200",
+         expect=dict(map="FuchsiaCity_Frlg", xy=(46, 21))),
+    dict(name="route19", what="Down Fuchsia's south road onto Route 19", walk=(24, 39), inputs="DOWN*30, wait 200",
+         expect=dict(map="Route19_Frlg", xy=(12, 1))),
+    dict(name="route19-surf", what="Down between the swimmers' lines to the beach; Surf from it (the Soul Badge lets "
+         "Surf be used outside battle)", via=[(12, 9), (11, 9)], walk=(11, 15), inputs="DOWN*4, wait 30, " + A(3, 80) +
+         "wait 200", expect=dict(map="Route19_Frlg", xy=(11, 16))),
+    dict(name="route20", what="Surf south-west round the swimmers' lines onto Route 20", surf=True,
+         via=[(11, 17), (8, 17), (8, 25), (4, 25), (4, 36), (3, 36), (3, 45)], walk=(0, 45), inputs="LEFT*30, wait 200",
+         expect=dict(map="Route20_Frlg")),
+    dict(name="cinnabar",
+         what="West along Route 20, over the top of the Seafoam Islands, to Cinnabar Island", surf=True,
+         via=[(117, 2), (72, 2), (72, 1), (49, 1), (49, 2)], walk=(0, 2), inputs="LEFT*2, wait 12, LEFT*12, wait 200",
+         expect=dict(map="CinnabarIsland_Frlg")),
+    dict(name="cinnabar-shore", what="Round the north of the island's east half to the town's shore, and ashore",
+         surf=True, via=[(94, 5), (39, 5), (39, 6)], walk=(23, 6), inputs="LEFT*2, wait 12, LEFT*4, wait 100",
+         expect=dict(map="CinnabarIsland_Frlg", xy=(22, 6))),
+    dict(name="mansion", what="Along the top street into the Pokémon Mansion (the Gym next door is locked)",
+         via=[(21, 6), (21, 5)], walk=(6, 5), inputs=f"UP*{hold(1)}, wait 250",
+         expect=dict(map="PokemonMansion_1F_Frlg")),
+    # The Mansion: its statues work one switch for all four floors, which opens one set of barriers and shuts
+    # another. The walks were planned on the floors in both states, off every line of sight but Lewis's on B1F. pae
+    # map path plans on a floor as it was built, so a walk through a barrier the switch opened is held in the inputs
+    dict(name="mansion-2f", what="Up the hall to the stairs and up to 2F", via=[(8, 13)], walk=(9, 13),
+         inputs="RIGHT*12, wait 30, RIGHT*30, wait 250", expect=dict(map="PokemonMansion_2F_Frlg", xy=(6, 14))),
+    dict(name="mansion-3f", what="Round 2F's halls (off Arnie's line) to the north stairs and up to 3F",
+         via=[(6, 17), (13, 17), (13, 13), (14, 13), (14, 12), (15, 12), (15, 6), (11, 6), (11, 5), (9, 5)],
+         walk=(9, 4),
+         inputs="UP*12, wait 30, RIGHT*30, wait 250", expect=dict(map="PokemonMansion_3F_Frlg", xy=(8, 3))),
+    dict(name="mansion-3f-statue", what="Down to the statue in 3F's west room; press its secret switch: the barriers "
+         "change on every floor", via=[(8, 6)], walk=(12, 6), inputs="UP*4, wait 20, " + A(3) + B(2),
+         expect=dict(map="PokemonMansion_3F_Frlg", flags={"FLAG_POKEMON_MANSION_SWITCH_STATE": True})),
+    dict(name="mansion-hole", what="Through the opened way east and down through the hole in the floor to 1F",
+         via=[(12, 7), (15, 7), (15, 9)], walk=(17, 9),
+         inputs=f"DOWN*{hold(5)}, wait 6, RIGHT*{hold(1)}, wait 6, DOWN*{hold(4)}, wait 250",
+         expect=dict(map="PokemonMansion_1F_Frlg")),
+    dict(name="mansion-b1f", what="Round 1F's south rooms to the stairs down to the basement",
+         via=[(19, 23), (17, 23), (17, 29), (25, 29)], walk=(25, 28), inputs="UP*12, wait 30, LEFT*30, wait 250",
+         expect=dict(map="PokemonMansion_B1F_Frlg", xy=(34, 29))),
+    dict(name="mansion-lewis", state=FRESH, what="Up B1F's east side and west along the north hall, then down through "
+         "the way the switch opened, where the burglar Lewis wanders: if he sees you he battles",
+         via=[(32, 29), (32, 22), (29, 22), (29, 20)], walk=(22, 20),
+         inputs=f"DOWN*{hold(6)}, wait 100, " + A(60) + B(8) + "wait 200", expect=dict(map="PokemonMansion_B1F_Frlg")),
+    dict(name="mansion-b1f-statue", what="Round the table to the statue below it; press its switch: back as it was",
+         via=[(23, 26)], walk=(23, 30), inputs=f"RIGHT*{hold(1)}, wait 20, UP*4, wait 20, " + A(3) + B(2),
+         expect=dict(map="PokemonMansion_B1F_Frlg", xy=(24, 30), flags={"FLAG_POKEMON_MANSION_SWITCH_STATE": False})),
+    dict(name="mansion-b1f-statue2", what="West, up the west hall, east along the middle and up the east side to the "
+         "statue in the north-east room; press its switch again",
+         via=[(23, 30), (23, 29), (19, 29), (19, 28), (15, 28), (15, 20), (27, 20), (27, 22), (33, 22), (33, 6)],
+         walk=(27, 6), inputs="UP*4, wait 20, " + A(3) + B(2),
+         expect=dict(map="PokemonMansion_B1F_Frlg", xy=(27, 6), flags={"FLAG_POKEMON_MANSION_SWITCH_STATE": True})),
+    dict(name="secret-key", what="Back along the middle hall and through the opened way into the west room: the "
+         "Secret Key", via=[(30, 6), (30, 10)], walk=(13, 10),
+         inputs=f"LEFT*{hold(2)}, wait 6, UP*{hold(4)}, wait 6, LEFT*{hold(6)}, wait 20, DOWN*4, wait 20, " + A(2) +
+         B(2),
+         expect=dict(map="PokemonMansion_B1F_Frlg", xy=(5, 6),
+         flags={"FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY": True})),
+    dict(name="mansion-west-out", what="Out of the west room the way you came",
+         inputs=f"RIGHT*{hold(3)}, wait 6, DOWN*{hold(4)}, wait 6, RIGHT*{hold(5)}, wait 30",
+         expect=dict(map="PokemonMansion_B1F_Frlg", xy=(13, 10))),
+    dict(name="mansion-out-statue", what="Back to the north-east statue; press the switch", via=[(30, 10), (30, 6)],
+         walk=(27, 6), inputs="UP*4, wait 20, " + A(3) + B(2),
+         expect=dict(map="PokemonMansion_B1F_Frlg", flags={"FLAG_POKEMON_MANSION_SWITCH_STATE": False})),
+    dict(name="mansion-out-statue2", what="Down the east side (beside Ivan's line) and round to the statue below the "
+         "table; press it again", via=[(30, 6), (30, 13), (31, 13), (31, 18), (33, 18), (33, 22), (29, 22), (29, 20),
+         (15, 20), (15, 30)], walk=(24, 30), inputs="UP*4, wait 20, " + A(3) + B(2),
+         expect=dict(map="PokemonMansion_B1F_Frlg", xy=(24, 30), flags={"FLAG_POKEMON_MANSION_SWITCH_STATE": True})),
+    dict(name="mansion-out-lewis", state=FRESH, what="Up past the table and through the opened way, where Lewis "
+         "wanders: if he sees you he battles", via=[(23, 30)], walk=(23, 24),
+         inputs=f"LEFT*{hold(1)}, wait 6, UP*{hold(4)}, wait 100, " + A(60) + B(8) + "wait 200",
+         expect=dict(map="PokemonMansion_B1F_Frlg")),
+    dict(name="mansion-up", what="East along the north hall and down to the stairs; up to 1F", via=[(27, 20), (27, 29)],
+         walk=(33, 29), inputs="RIGHT*12, wait 30, RIGHT*30, wait 250", expect=dict(map="PokemonMansion_1F_Frlg")),
+    dict(name="mansion-out",
+         what="Through 1F's east rooms (the switch has their barriers open) and out of the back door",
+         inputs=f"RIGHT*{hold(2)}, wait 6, UP*{hold(4)}, wait 6, RIGHT*{hold(5)}, wait 6, DOWN*{hold(9)}, wait 6, "
+         f"RIGHT*{hold(2)}, wait 20, DOWN*{hold(2)}, wait 250", expect=dict(map="CinnabarIsland_Frlg")),
+    dict(name="cinnabar-gym", what="Along to the Gym: the Secret Key opens its door", walk=(20, 5),
+         inputs=f"UP*{hold(1)}, wait 250", expect=dict(map="CinnabarIsland_Gym_Frlg")),
+    # Blaine's Gym: each room's quiz machine opens the door to the next for a right answer (a wrong one brings out the
+    # room's trainer). pae map path plans with the doors shut, so each walk stays in its room and the doors are walked
+    # through in the inputs
+    dict(name="gym-quiz1", what="Up into the east room to its quiz machine: Caterpie evolves into Metapod? Yes",
+         via=[(26, 12)], walk=(22, 12), inputs=f"UP*{hold(1)}, wait 20, " + quiz(True),
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(22, 11), flags={"FLAG_CINNABAR_GYM_QUIZ_1": True})),
+    dict(name="gym-door1", what="Round Quinn and up through the opened door into the north-east room",
+         inputs=f"DOWN*{hold(1)}, wait 6, RIGHT*{hold(4)}, wait 6, UP*{hold(5)}, wait 30",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(26, 7))),
+    dict(name="gym-quiz2",
+         what="Along the room's north side to its machine: there are nine certified League Badges? No",
+         via=[(26, 3)], walk=(15, 3), inputs=quiz(False),
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(15, 3), flags={"FLAG_CINNABAR_GYM_QUIZ_2": True})),
+    dict(name="gym-door2", what="Down past Avery and through the door into the middle room",
+         inputs=f"DOWN*{hold(4)}, wait 6, RIGHT*{hold(2)}, wait 6, DOWN*{hold(4)}, wait 30",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(17, 11))),
+    dict(name="gym-quiz3", what="Round Ramon to the room's machine: Poliwag evolves three times? No",
+         via=[(17, 12), (13, 12)], walk=(13, 11), inputs=quiz(False),
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(13, 11), flags={"FLAG_CINNABAR_GYM_QUIZ_3": True})),
+    dict(name="gym-door3", what="Through the door south into the south room",
+         inputs=f"DOWN*{hold(3)}, wait 6, RIGHT*{hold(4)}, wait 6, DOWN*{hold(4)}, wait 30",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(17, 18))),
+    dict(name="gym-quiz4", what="Round Derek to the machine: are electric moves effective against ground types? No",
+         via=[(17, 19), (14, 19)], walk=(14, 18), inputs=quiz(False),
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(14, 18), flags={"FLAG_CINNABAR_GYM_QUIZ_4": True})),
+    dict(name="gym-door4", what="Through the door west into the south-west room",
+         inputs=f"DOWN*{hold(4)}, wait 6, LEFT*{hold(4)}, wait 30",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(10, 22))),
+    dict(name="gym-quiz5", what="Round Dusty to the machine: Pokémon of the same kind and level are not identical? Yes",
+         via=[(3, 22), (3, 20)], walk=(2, 19), inputs=quiz(True),
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(2, 19), flags={"FLAG_CINNABAR_GYM_QUIZ_5": True})),
+    dict(name="gym-door5", what="Below Dusty and up through the door into the west room",
+         inputs=f"DOWN*{hold(1)}, wait 6, RIGHT*{hold(3)}, wait 6, UP*{hold(5)}, wait 30",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(5, 15))),
+    dict(name="gym-quiz6", what="Up the room's west side to the machine: TM28 contains Tombstony? No",
+         via=[(2, 14)], walk=(2, 11), inputs=quiz(False),
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(2, 11), flags={"FLAG_CINNABAR_GYM_QUIZ_6": True})),
+    dict(name="gym-door6", what="Below Zac and up through the last door into Blaine's room",
+         inputs=f"DOWN*{hold(1)}, wait 6, RIGHT*{hold(3)}, wait 6, UP*{hold(5)}, wait 30",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(5, 7))),
+    dict(name="blaine", state=FRESH, what="Up to Blaine; beat him: the Volcano Badge and TM38", walk=(5, 5),
+         inputs="UP*4, wait 20, " + A(120) + B(16) + "wait 300",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(5, 5),
+         flags={"FLAG_BADGE07_GET": True, "FLAG_GOT_TM38_FROM_BLAINE": True})),
+    dict(name="gym-out", what="Back out through the opened doors: down the west side and east along the south rooms, "
+         "then up the middle (past Derek and Ramon) into the north room",
+         inputs=f"DOWN*{hold(17)}, wait 6, RIGHT*{hold(12)}, wait 6, UP*{hold(15)}, wait 30",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(17, 7))),
+    dict(name="gym-out2", what="Round Avery and Erik and down the east side through the first door to the entrance",
+         inputs=f"RIGHT*{hold(1)}, wait 6, UP*{hold(4)}, wait 6, RIGHT*{hold(8)}, wait 6, DOWN*{hold(19)}, wait 30",
+         expect=dict(map="CinnabarIsland_Gym_Frlg", xy=(26, 22))),
+    dict(name="bill-cinnabar",
+         what="Out of the Gym: Bill is waiting and asks you to come to One Island with him. Say no (the "
+         "Sevii Islands aren't part of this check): he waits in the Pokémon Center",
+         inputs=f"LEFT*{hold(1)}, wait 20, DOWN*{hold(2)}, wait 400, " + B(6, 120) + "wait 120, B*4, wait 200, " +
+         B(5, 120) + "wait 300",
+         expect=dict(map="CinnabarIsland_Frlg", vars={"VAR_MAP_SCENE_CINNABAR_ISLAND": 2})),
+    # The last badge is Viridian's: north by Route 21 to Pallet
+    dict(name="cinnabar-surf", what="West along the top street to the shore; Surf", walk=(3, 5),
+         inputs="LEFT*4, wait 30, " + A(3, 80) + "wait 200", expect=dict(map="CinnabarIsland_Frlg", xy=(2, 5))),
+    dict(name="route21-south", what="North up the island's west side onto Route 21", surf=True, walk=(2, 0),
+         inputs="UP*2, wait 12, UP*12, wait 200", expect=dict(map="Route21_South_Frlg")),
+    dict(name="route21-north", what="Straight up the west side of Route 21 (off the swimmers' lines)", surf=True,
+         walk=(2, 0), inputs="UP*2, wait 12, UP*12, wait 200", expect=dict(map="Route21_North_Frlg")),
+    dict(name="pallet-again", what="On up, then east into the channel between the fields and up it into Pallet Town",
+         surf=True, via=[(2, 16), (7, 16), (7, 0)], walk=(8, 0), inputs="UP*2, wait 12, UP*12, wait 200",
+         expect=dict(map="PalletTown_Frlg")),
+    dict(name="pallet-shore", what="Up Pallet's pond and ashore by the lab", surf=True, walk=(16, 20),
+         inputs="LEFT*2, wait 12, LEFT*4, wait 100", expect=dict(map="PalletTown_Frlg", xy=(15, 20))),
+
 ]
 
 
@@ -897,9 +1101,9 @@ class Runner:
         r = subprocess.run(["pae", *args, "-p", str(self.project)], capture_output=True, text=True)
         return r.returncode, r.stdout + r.stderr
 
-    def path(self, map_, a, b):
-        """pae map path's walk as inputs: each straight run held for its steps (see hold())."""
-        code, out = self.pae("map", "path", map_, f"{a[0]},{a[1]}", f"{b[0]},{b[1]}")
+    def path(self, map_, a, b, surf=False):
+        """pae map path's walk as inputs: each straight run held for its steps (see hold()); on water with ``surf``."""
+        code, out = self.pae("map", "path", map_, f"{a[0]},{a[1]}", f"{b[0]},{b[1]}", *(["--surf"] if surf else []))
         steps = [line.split("_")[1] for line in out.splitlines() if line.startswith("walk_")]
         if code or (not steps and tuple(a) != tuple(b)):
             raise RuntimeError(f"no walk on {map_} from {a} to {b}: {out.strip().splitlines()[-1]}")
@@ -909,6 +1113,10 @@ class Runner:
                 runs[-1][1] += 1
             else:
                 runs.append([s, 1])
+        if surf:  # each turn is its own tap first: on water a press toward a new way only turns you (a play starts
+            # facing down, as a loaded game does)
+            taps = ["" if k == 0 and d == "down" else f"{DIRS[d]}*2, wait 12, " for k, (d, _) in enumerate(runs)]
+            return ", ".join(f"{t}{DIRS[d]}*{surf_hold(n)}, wait 6" for t, (d, n) in zip(taps, runs))
         return ", ".join(f"{DIRS[d]}*{hold(n)}, wait 6" for d, n in runs)
 
     def inputs(self, text, map_):
@@ -945,7 +1153,7 @@ class Runner:
                 got[name] = value == "True" if kind == "flag" else int(value)
         return got
 
-    def walk(self, shot, cp, save, target, state, tries=6):
+    def walk(self, shot, cp, save, target, state, tries=6, surf=False):
         """From ``cp`` to ``target`` on its map, re-planned from wherever the player stopped (people walk about:
         each try waits a little longer first). Stops early if the walk crossed onto another map."""
         here = self.play(f"{shot}-at", cp=cp)
@@ -955,7 +1163,7 @@ class Runner:
                 return here, cur
             if k == tries:
                 raise RuntimeError(f"couldn't walk to {target}: stuck at {here['map']} {here['xy']}")
-            walk = self.path(here["map"], here["xy"], target)
+            walk = self.path(here["map"], here["xy"], target, surf)
             here = self.play(f"{shot}-walk{k}", cp=cur, inputs=f"wait {20 + 70 * k}, {walk}, wait 20", save=save,
                              state=state)
             cur = save
@@ -970,8 +1178,8 @@ class Runner:
             if "walk" in step:
                 src = prev_cp
                 for j, via in enumerate(step.get("via", [])):
-                    _, src = self.walk(f"{cp}-via{j}", src, cp, via, state)
-                here, src = self.walk(cp, src, cp, step["walk"], state)
+                    _, src = self.walk(f"{cp}-via{j}", src, cp, via, state, surf=step.get("surf", False))
+                here, src = self.walk(cp, src, cp, step["walk"], state, surf=step.get("surf", False))
             else:
                 here, src = self.play(f"{cp}-from", cp=prev_cp), prev_cp
             self.play(cp, cp=src, state=state, inputs=self.inputs(step["inputs"], here["map"]), save=cp)
@@ -992,6 +1200,9 @@ def main():
     ap.add_argument("--no-build", action="store_true")
     a = ap.parse_args()
     names = [s["name"] for s in STEPS]
+    twice = sorted({n for n in names if names.count(n) > 1})
+    if twice:  # --from and the checkpoints go by name
+        sys.exit(f"steps with the same name: {', '.join(twice)}")
     if a.list:
         for i, s in enumerate(STEPS, 1):
             print(f"{i:2d} {s['name']:<20} {s['what']}")
