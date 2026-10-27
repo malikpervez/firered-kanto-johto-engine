@@ -20,7 +20,7 @@ There are two kinds of art:
 | Sunlit Broadleaf trees | `kit/broadleaf/` | v0.4, approved 2026-10-22 | the forest (`T`) and standalone trees (`R`) on every kit map |
 | Sunlit Broadleaf bushes | `kit/broadleaf/bushes/` | v0.2, approved 2026-10-22 | bushes and hedges (`b`) on most maps |
 | Sunlit field rocks | `kit/field_rocks/` | v0.1 (its README still says "awaiting approval") | rocks (`o`) |
-| Rock & cliff pack | `kit/rock_cliff/` | revision 3.2 (made for Route 22) | cliffs, put together by `kit/cliffs.py`: Route 22, Pewter, Routes 3, 4, 9, 10, 11, 25 |
+| Rock & cliff pack | `kit/rock_cliff/` | revision 3.2 (made for Route 22) | cliffs, put together by `kit/cliffs.py`: Route 22, Pewter, Routes 3, 4, 9, 10, 11, 25, Cinnabar's volcano, Route 20's Seafoam Islands |
 | Lawn, "Lush Emerald" | `kit/lawn/B_Lush_Emerald/` | option B | the lawn (`.`) everywhere |
 | Dressed-stone paving | `kit/paving/` | | paving (`p`): Pewter, Routes 2, 22 |
 | Pond water, "Gentle ripples" | `kit/pond/` | option C | ponds (`~`, with lily pads `v` and reeds `r` drawn over it) |
@@ -44,7 +44,7 @@ The packs reused for buildings they weren't drawn for:
 | `forest_gate_south` | Viridian Forest's south gate (Route 2); Saffron's south, west and east gates on Routes 6, 7 and 8 (KR-40, KR-52; Saffron's own side has its drawn gatehouses); Route 11's gatehouse to Route 12 |
 | `forest_gate_north` | Viridian Forest's north gate (Route 2); Saffron's north gate (Route 5) |
 | `east_gatehouse` | Route 2's east gatehouse |
-| `diglett_cave` | the cave mouths: Diglett's Cave (Routes 2 and 11), Mt. Moon (Route 4), Cerulean Cave (recoloured, below), Rock Tunnel's two mouths (Route 10, in the cliffs' palette) |
+| `diglett_cave` | the cave mouths: Diglett's Cave (Routes 2 and 11), Mt. Moon (Route 4), Cerulean Cave (recoloured, below), Rock Tunnel's two mouths (Route 10, in the cliffs' palette), the Seafoam Islands' two mouths (Route 20, the same) |
 
 Ideas for new packs, from the issues in `../docs/kanto-rebuild.md`: an east-west gatehouse (KR-40, KR-52), a power
 plant (KR-47), a prize hall and a restaurant for Celadon (KR-57).
@@ -156,7 +156,9 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 13 | 1 (nothing of its own) | 0 | 0 |
 | Route 12 | 91 | 79 (for Route 11's own pieces) | 32 |
 | Route 21 (north and south, one tileset) | 1 (nothing of its own) | 125 (Route 21 South, for Cinnabar's own pieces) | 0 |
-| Cinnabar | 353 | 36 (for old Route 20) | 169 |
+| Cinnabar | 353 | 0 | 169 |
+| Route 20 | 157 | 0 | 82 |
+| Route 19 | 1 (nothing of its own) | 0 | 0 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.

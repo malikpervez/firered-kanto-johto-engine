@@ -2313,3 +2313,25 @@ const struct Tileset gTileset_CinnabarConcept =
     .metatileAttributes = gMetatileAttributes_CinnabarConcept,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Route19Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route19Concept,
+    .palettes = gTilesetPalettes_Route19Concept,
+    .metatiles = gMetatiles_Route19Concept,
+    .metatileAttributes = gMetatileAttributes_Route19Concept,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Route20Concept =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Route20Concept,
+    .palettes = gTilesetPalettes_Route20Concept,
+    .metatiles = gMetatiles_Route20Concept,
+    .metatileAttributes = gMetatileAttributes_Route20Concept,
+    .callback = NULL,
+};

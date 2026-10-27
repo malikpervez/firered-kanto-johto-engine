@@ -1,0 +1,39 @@
+{
+ "note": "Up the beach path from the beach into Fuchsia.",
+ "created": "2026-10-27 18:00",
+ "start": {
+  "map": "Route19_Frlg",
+  "x": 12,
+  "y": 3,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 24,
+  "y": 39,
+  "in_battle": false
+ },
+ "accepted": "2026-10-27 01:07"
+}
