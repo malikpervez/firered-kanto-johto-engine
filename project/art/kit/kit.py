@@ -662,7 +662,8 @@ def primary(spec_dir: Path) -> dict:
     for piece in ("rock_a", "rock_b"):  # rocks standing in the sea, with surf round them
         cells.append((f"sea#15+{piece}", "sea", lambda k, piece=piece: water.frame("sea", piece, k)))
     for name, kind, block in cells:
-        extra = {"solid": True} if kind == "sea" else {}
+        # the open sea is surfable, as the pond is (KR-65); only the rocks standing in it are solid
+        extra = {"solid": True} if "+rock" in name else {}
         sheet_w.add(name, block(0), tileset="primary", ground="grass", behavior="MB_POND_WATER",
                     elevation=1, **extra)
     frames = [[block(f) for _, _, block in cells] for f in range(1, water.FRAMES)]

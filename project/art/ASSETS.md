@@ -24,7 +24,7 @@ There are two kinds of art:
 | Lawn, "Lush Emerald" | `kit/lawn/B_Lush_Emerald/` | option B | the lawn (`.`) everywhere |
 | Dressed-stone paving | `kit/paving/` | | paving (`p`): Pewter, Routes 2, 22 |
 | Pond water, "Gentle ripples" | `kit/pond/` | option C | ponds (`~`, with lily pads `v` and reeds `r` drawn over it) |
-| Sea, "Staggered swells, reworked rocks" | `kit/sea/` | option B | the sea (`s`) and sea rocks (`q`, `Q`): Pallet, Route 25, Route 17 (its inside corners, the pack's `in_*` pieces, in the kit since Route 17) |
+| Sea, "Staggered swells, reworked rocks" | `kit/sea/` | option B | the sea (`s`) and sea rocks (`q`, `Q`): Pallet, Route 25, Route 17 (its inside corners, the pack's `in_*` pieces, in the kit since Route 17). The sea is surfable and fishable (the pond's behaviour); the rocks are solid |
 | Tall grass | `kit/tall_grass/` | variants B and C (made with another AI from a brief) | tall grass (`g`) |
 | Pokémon Center | `kit/buildings/pokemon_center/` | v0.1, approved | every town with a Center: Viridian, Pewter, Route 4, Cerulean, Vermilion, Route 10, Lavender, Celadon, Saffron, Fuchsia |
 | Poké Mart | `kit/buildings/poke_mart/` | v0.1, approved | Viridian, Pewter, Cerulean, Vermilion, Lavender, Saffron, Fuchsia |
