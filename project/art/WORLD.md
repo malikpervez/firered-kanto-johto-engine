@@ -148,10 +148,9 @@ rebuilt from the kit.
 
 ## Planned
 
-- **Pallet's sea → Cinnabar.** The sea east of Pallet will lead to Cinnabar Island (the old Route 21 ran south of
-  Pallet), so it becomes surfable then: the kit's sea is solid for now (scenery under the cliff), and its rocks stay
-  solid. That needs a join off Pallet's east edge (or the sea to meet Route 21's water) and the sea's surf rules
-  checked in game (surfing off the cliff top, into a rock).
+- **Pallet's sea → Cinnabar.** The sea east of Pallet could lead to Cinnabar Island (the old Route 21 runs south of
+  Pallet). The kit's sea is surfable now (its rocks stay solid), so it needs only a join off Pallet's east edge
+  (or the sea to meet Route 21's water).
 
 ## What else depends on a map's shape
 

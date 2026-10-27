@@ -12,11 +12,11 @@ plays the events one after another, each starting where the last one left the ga
 | | |
 |---|---|
 | Date | 2026-10-27 |
-| Game | branch `claude/kanto-route17` (Route 17 rebuilt and the kit's sea corners added, so every kit map rebuilt; on `v2-main` at `f9bd8749`) |
-| ROM | `make -j4` with the default settings. SHA-1 `7b118ee466b7bfbfce63a3bdb23c486a0ad96ce5`, SHA-256 `765c5ba1666abab3ae01049d1abe2354970a0b8cc402f1b230aef24f9b05c043` |
-| pae | `0795119` (pae `main` after PR #30) for every step and the replay tests |
-| Last step passed | 145 `celadon-leave-center`, run from the top on this build (every kit map changed). Two steps' timing had drifted on `v2-main` (it fails step 5 the same way, checked on its own build `bdb1e505`): step 5 `route1` now ends at Route 1 25,38, a block further north, and step 18 `north-route1` takes 40 A presses for the stranger's scene. Run in three parts from the checkpoints: 1–4, 5–17, 18–145. The story check doesn't reach Route 17 yet (Cycling Road needs the bike and the Poké Flute) |
-| Replay tests | 413 of 413 pass (on this ROM; this change adds 16) |
+| Game | branch `claude/kanto-sea` (the kit's sea made surfable, so every kit map rebuilt; on `v2-main` at `2f5c1cfb`) |
+| ROM | `make -j8` with the default settings. SHA-1 `5798cba3a91237d4f905f92f58ee4cd1decc975a`, SHA-256 `6db404fb1ef6ba54c214f1459499f9bdcf515c69edb26165c8820946668979a4` |
+| pae | maps built with `0795119`; every step and the replay tests run with `08dfca3` (pae `main` after PR #31, which changes only seam building) |
+| Last step passed | 145 `celadon-leave-center`, run from the top in one go on this build (every kit map changed). The story check doesn't reach the routes past Celadon yet |
+| Replay tests | 507 of 507 pass (on this ROM; this change adds 2) |
 
 ## How to run it
 

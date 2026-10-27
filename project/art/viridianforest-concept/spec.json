@@ -1215,8 +1215,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#1",
@@ -1229,8 +1228,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#2",
@@ -1243,8 +1241,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#3",
@@ -1257,8 +1254,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#4",
@@ -1271,8 +1267,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#5",
@@ -1285,8 +1280,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#6",
@@ -1299,8 +1293,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#7",
@@ -1313,8 +1306,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#8",
@@ -1327,8 +1319,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#9",
@@ -1341,8 +1332,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#10",
@@ -1355,8 +1345,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#11",
@@ -1369,8 +1358,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#12",
@@ -1383,8 +1371,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#13",
@@ -1397,8 +1384,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#14",
@@ -1411,8 +1397,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#15",
@@ -1425,8 +1410,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#15~1",
@@ -1439,8 +1423,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#15~2",
@@ -1453,8 +1436,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#15.1",
@@ -1467,8 +1449,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#15.2",
@@ -1481,8 +1462,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#15.4",
@@ -1495,8 +1475,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#15.8",
@@ -1509,8 +1488,7 @@
    "tileset": "primary",
    "ground": "grass",
    "behavior": "MB_POND_WATER",
-   "elevation": 1,
-   "solid": true
+   "elevation": 1
   },
   {
    "name": "sea#15+rock_a",

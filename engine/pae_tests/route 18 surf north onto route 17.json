@@ -1,0 +1,145 @@
+{
+ "note": "From the lawn by the road, surf north up Route 18's sea onto Route 17's, and on to its south lawn by the road (KR-65, KR-72).",
+ "created": "2026-10-27 15:30",
+ "start": {
+  "map": "Route18_Frlg",
+  "x": 18,
+  "y": 6,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_LAPRAS lv40 MOVE_SURF",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_BADGE05_GET",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     68
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     68
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     188
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route17_Frlg",
+  "x": 24,
+  "y": 110,
+  "in_battle": false
+ },
+ "accepted": "2026-10-27 00:34"
+}
