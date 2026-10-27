@@ -1,0 +1,168 @@
+{
+ "note": "From the beach, surf east across the harbour to the volcano island.",
+ "created": "2026-10-27 15:00",
+ "start": {
+  "map": "CinnabarIsland_Frlg",
+  "x": 22,
+  "y": 14,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_LAPRAS lv40 MOVE_SURF",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_BADGE05_GET",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     68
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     68
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     188
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     128,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     128,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     128,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CinnabarIsland_Frlg",
+  "x": 36,
+  "y": 19,
+  "in_battle": false
+ }
+}

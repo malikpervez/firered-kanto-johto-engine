@@ -36,11 +36,14 @@ sh project/art/route15-concept/build.sh
 sh project/art/route14-concept/build.sh
 sh project/art/route13-concept/build.sh
 sh project/art/route12-concept/build.sh
+sh project/art/route21-concept/build.sh
+sh project/art/cinnabar-concept/build.sh
 cd engine
 for m in Route1_Frlg PalletTown_Frlg ViridianCity_Frlg Route22_Frlg Route2_Frlg PewterCity_Frlg Route3_Frlg Route4_Frlg \
         CeruleanCity_Frlg Route24_Frlg Route25_Frlg VermilionCity_Frlg Route11_Frlg \
         Route9_Frlg Route10_Frlg LavenderTown_Frlg CeladonCity_Frlg Route16_Frlg Route17_Frlg Route18_Frlg \
-        FuchsiaCity_Frlg Route15_Frlg Route14_Frlg Route13_Frlg Route12_Frlg; do
+        FuchsiaCity_Frlg Route15_Frlg Route14_Frlg Route13_Frlg Route12_Frlg \
+        Route21_North_Frlg Route21_South_Frlg CinnabarIsland_Frlg; do
     pae seam build $m -p .
 done
 for m in Route5_Frlg Route6_Frlg Route8_Frlg Route7_Frlg; do  # (no room in old Saffron: see their build.sh)

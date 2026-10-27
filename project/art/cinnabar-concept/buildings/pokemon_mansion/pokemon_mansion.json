@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "id": "pokemon_mansion",
+  "type": "building",
+  "image": "pokemon_mansion.png",
+  "image_size_px": [
+    96,
+    80
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 6,
+    "height": 5
+  },
+  "transparent_index": 0,
+  "door_blocks": [
+    [
+      2,
+      4
+    ]
+  ],
+  "door": {
+    "image": "pokemon_mansion_door.png",
+    "sheet_size_px": [
+      48,
+      32
+    ],
+    "frame_size_px": [
+      16,
+      32
+    ],
+    "frame_count": 3,
+    "frame_order": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "closed_frame_matches_building_crop": true
+  },
+  "name": "pokemon_mansion",
+  "source": "cinnabar-concept/cinnabar_buildings.py: Celadon's hotel, charred: the burned Pok\u00e9mon Mansion"
+}

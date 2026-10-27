@@ -76,6 +76,9 @@ plant (KR-47), a prize hall and a restaurant for Celadon (KR-57).
 | The gatehouse | `saffron_buildings.py` `gate()` (folder `saffron_gate`) | 4×3, a double door at (1,2)-(2,2) | the same | Saffron (its north, west and east gates) | its door frames are drawn here: one wide door, 96×32 |
 | The gatehouse's back | `saffron_buildings.py` `gate_back()` (folder `saffron_gate_back`) | 4×3, a doorway at (1,0)-(2,0) | the same | Saffron (its south gate) | the doorway is `MB_SOUTH_ARROW_WARP`: entered walking south, no animation |
 | Route 12's north gatehouse | `route12-concept/route12_buildings.py` `gate()` (folder `route12_gate`) | 4×4: a doorway at (1,0)-(2,0), a double door at (1,3)-(2,3) | Saffron's buildings palette (bank 7) | Route 12 | the back's top two rows over the gatehouse's bottom two: walked through from north to south; the door frames are `saffron_gate`'s |
+| Blaine's Gym | `cinnabar-concept/cinnabar_buildings.py` `gym()` (folder `cinnabar_gym`) | 7×5, door (3,4) | its own (bank 7) | Cinnabar | Pewter's Gym recoloured: every hue turned to the volcano's reds and ochres, the greys warmed; its door frames recoloured the same |
+| The burned Pokémon Mansion | `cinnabar_buildings.py` `mansion()` (folder `pokemon_mansion`) | 6×5, door (2,4) | its own (bank 9) | Cinnabar | Celadon's hotel charred: its colours greyed and darkened, soot streaked up the walls from the windows; its door frames charred the same |
+| The Pokémon Lab | `cinnabar_buildings.py` `lab()` (folder `cinnabar_lab`) | 9×5, door (3,4) | Pallet's lab palette (bank 10) | Cinnabar | Oak's lab as `pallet-concept/make_art.py` `lab()` draws it, greenhouse and all; its door is pae's panel door, as Pallet's is |
 | The Magnet Train station | `saffron_buildings.py` `station()` (folder `magnet_train_station`) | 8×4, no door | the same | Saffron | its entrance is shuttered: the attendant outside arranges the journey |
 | The Cycling Road gatehouse | `route16-concept/route16_buildings.py` `gate()` (folder `cycling_gate`) | 8×4, doorways at (0,3) and (7,3) | Saffron's buildings palette (bank 9) | Route 16 (twice: its upper and lower halls), Routes 18 and 15 (in bank 7 there) | an east-west gatehouse: the left doorway is `MB_EAST_ARROW_WARP` (entered walking east), the right `MB_WEST_ARROW_WARP`; no door frames. The pack the other east-west gates could use (KR-40, KR-52, KR-60) |
 | The cycle track (Cycling Road's surface) | `route17-concept/route17_track.py` `piece()` | 1×1: 16 pieces by neighbours, inside corners, and paint (a lane line `+line`, an arrow downhill `+arrow`, a chequered line `+check`) where the plan has them | its own (`PAL`, bank 7): tarmac, a stone kerb, paint | Route 17 (`t`, `i`, `a`, `x`) | every piece is `MB_CYCLING_ROAD_PULL_DOWN` (the slope carries a rider down); a kerb wherever it meets anything but itself or the kit's cobbles |
@@ -152,6 +155,8 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 14 | 1 (nothing of its own) | 0 | 0 |
 | Route 13 | 1 (nothing of its own) | 0 | 0 |
 | Route 12 | 91 | 79 (for Route 11's own pieces) | 32 |
+| Route 21 (north and south, one tileset) | 1 (nothing of its own) | 125 (Route 21 South, for Cinnabar's own pieces) | 0 |
+| Cinnabar | 353 | 36 (for old Route 20) | 169 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.
