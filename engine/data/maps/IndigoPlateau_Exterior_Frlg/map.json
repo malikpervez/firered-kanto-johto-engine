@@ -19,9 +19,9 @@
       "direction": "down"
     },
     {
-      "direction": "left",
       "map": "MAP_LEAGUE_WEST_PASS",
-      "offset": 0
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -29,8 +29,8 @@
       "local_id": "LOCALID_CREDITS_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
       "x": 11,
-      "y": 6,
-      "elevation": 0,
+      "y": 11,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -43,8 +43,8 @@
       "local_id": "LOCALID_CREDITS_PROF_OAK",
       "graphics_id": "OBJ_EVENT_GFX_PROF_OAK",
       "x": 11,
-      "y": 6,
-      "elevation": 0,
+      "y": 11,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
@@ -57,7 +57,7 @@
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M_HNS",
       "x": 2,
       "y": 9,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -70,7 +70,7 @@
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M_HNS",
       "x": 2,
       "y": 10,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -83,7 +83,7 @@
       "graphics_id": "OBJ_EVENT_GFX_WORKER_M_HNS",
       "x": 2,
       "y": 11,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -96,7 +96,7 @@
   "warp_events": [
     {
       "x": 11,
-      "y": 6,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
@@ -110,462 +110,11 @@
   "firered_geometry": {
     "width": 24,
     "height": 20,
-    "primary_tileset": "gTileset_Kanto_General_Hns",
-    "secondary_tileset": "gTileset_IndigoPlateau_Hns",
-    "border_filepath": "data/layouts/IndigoPlateau_hns/border.bin",
-    "blockdata_filepath": "data/layouts/IndigoPlateau_hns/map.bin",
+    "primary_tileset": "gTileset_PalletConcept_General",
+    "secondary_tileset": "gTileset_IndigoConcept",
+    "border_filepath": "data/layouts/IndigoPlateau_Concept/border.bin",
+    "blockdata_filepath": "data/layouts/IndigoPlateau_Concept/map.bin",
     "layout_version": "hns",
-    "blockdata_overrides": [
-      {
-        "x": 0,
-        "y": 0,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 1,
-        "y": 0,
-        "expected": 12317,
-        "value": 1045
-      },
-      {
-        "x": 2,
-        "y": 0,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 3,
-        "y": 0,
-        "expected": 12317,
-        "value": 1045
-      },
-      {
-        "x": 4,
-        "y": 0,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 5,
-        "y": 0,
-        "expected": 12315,
-        "value": 1043
-      },
-      {
-        "x": 0,
-        "y": 1,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 1,
-        "y": 1,
-        "expected": 12309,
-        "value": 1053
-      },
-      {
-        "x": 2,
-        "y": 1,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 3,
-        "y": 1,
-        "expected": 12309,
-        "value": 1053
-      },
-      {
-        "x": 4,
-        "y": 1,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 5,
-        "y": 1,
-        "expected": 12307,
-        "value": 1051
-      },
-      {
-        "x": 0,
-        "y": 2,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 1,
-        "y": 2,
-        "expected": 12317,
-        "value": 1045
-      },
-      {
-        "x": 2,
-        "y": 2,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 3,
-        "y": 2,
-        "expected": 12317,
-        "value": 1045
-      },
-      {
-        "x": 4,
-        "y": 2,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 5,
-        "y": 2,
-        "expected": 12315,
-        "value": 1043
-      },
-      {
-        "x": 0,
-        "y": 3,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 1,
-        "y": 3,
-        "expected": 12309,
-        "value": 1053
-      },
-      {
-        "x": 2,
-        "y": 3,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 3,
-        "y": 3,
-        "expected": 12309,
-        "value": 1053
-      },
-      {
-        "x": 4,
-        "y": 3,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 5,
-        "y": 3,
-        "expected": 12307,
-        "value": 1051
-      },
-      {
-        "x": 0,
-        "y": 4,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 1,
-        "y": 4,
-        "expected": 12317,
-        "value": 1045
-      },
-      {
-        "x": 2,
-        "y": 4,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 3,
-        "y": 4,
-        "expected": 12317,
-        "value": 1045
-      },
-      {
-        "x": 4,
-        "y": 4,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 5,
-        "y": 4,
-        "expected": 12315,
-        "value": 1043
-      },
-      {
-        "x": 0,
-        "y": 5,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 1,
-        "y": 5,
-        "expected": 12309,
-        "value": 1053
-      },
-      {
-        "x": 2,
-        "y": 5,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 3,
-        "y": 5,
-        "expected": 12309,
-        "value": 1053
-      },
-      {
-        "x": 4,
-        "y": 5,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 5,
-        "y": 5,
-        "expected": 12307,
-        "value": 1051
-      },
-      {
-        "x": 0,
-        "y": 6,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 1,
-        "y": 6,
-        "expected": 12317,
-        "value": 1045
-      },
-      {
-        "x": 2,
-        "y": 6,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 3,
-        "y": 6,
-        "expected": 12317,
-        "value": 1045
-      },
-      {
-        "x": 4,
-        "y": 6,
-        "expected": 12316,
-        "value": 1044
-      },
-      {
-        "x": 5,
-        "y": 6,
-        "expected": 1051,
-        "value": 1043
-      },
-      {
-        "x": 0,
-        "y": 7,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 1,
-        "y": 7,
-        "expected": 12309,
-        "value": 1053
-      },
-      {
-        "x": 2,
-        "y": 7,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 3,
-        "y": 7,
-        "expected": 12309,
-        "value": 1053
-      },
-      {
-        "x": 4,
-        "y": 7,
-        "expected": 12308,
-        "value": 1052
-      },
-      {
-        "x": 5,
-        "y": 7,
-        "expected": 1043,
-        "value": 1051
-      },
-      {
-        "x": 0,
-        "y": 8,
-        "expected": 12316,
-        "value": 1060
-      },
-      {
-        "x": 1,
-        "y": 8,
-        "expected": 12317,
-        "value": 1061
-      },
-      {
-        "x": 2,
-        "y": 8,
-        "expected": 12316,
-        "value": 1060
-      },
-      {
-        "x": 3,
-        "y": 8,
-        "expected": 12317,
-        "value": 1061
-      },
-      {
-        "x": 4,
-        "y": 8,
-        "expected": 12316,
-        "value": 1060
-      },
-      {
-        "x": 5,
-        "y": 8,
-        "expected": 1051,
-        "value": 1059
-      },
-      {
-        "x": 0,
-        "y": 9,
-        "expected": 12308,
-        "value": 12478
-      },
-      {
-        "x": 1,
-        "y": 9,
-        "expected": 12309,
-        "value": 12478
-      },
-      {
-        "x": 2,
-        "y": 9,
-        "expected": 12308,
-        "value": 12478
-      },
-      {
-        "x": 3,
-        "y": 9,
-        "expected": 12309,
-        "value": 12478
-      },
-      {
-        "x": 4,
-        "y": 9,
-        "expected": 12308,
-        "value": 12478
-      },
-      {
-        "x": 5,
-        "y": 9,
-        "expected": 1043,
-        "value": 12478
-      },
-      {
-        "x": 6,
-        "y": 9,
-        "expected": 1367,
-        "value": 12478
-      },
-      {
-        "x": 0,
-        "y": 10,
-        "expected": 12316,
-        "value": 12486
-      },
-      {
-        "x": 1,
-        "y": 10,
-        "expected": 12317,
-        "value": 12486
-      },
-      {
-        "x": 2,
-        "y": 10,
-        "expected": 12316,
-        "value": 12486
-      },
-      {
-        "x": 3,
-        "y": 10,
-        "expected": 12317,
-        "value": 12486
-      },
-      {
-        "x": 4,
-        "y": 10,
-        "expected": 12316,
-        "value": 12486
-      },
-      {
-        "x": 5,
-        "y": 10,
-        "expected": 12315,
-        "value": 12486
-      },
-      {
-        "x": 6,
-        "y": 10,
-        "expected": 1367,
-        "value": 12486
-      },
-      {
-        "x": 0,
-        "y": 11,
-        "expected": 12324,
-        "value": 12494
-      },
-      {
-        "x": 1,
-        "y": 11,
-        "expected": 12325,
-        "value": 12494
-      },
-      {
-        "x": 2,
-        "y": 11,
-        "expected": 12324,
-        "value": 12494
-      },
-      {
-        "x": 3,
-        "y": 11,
-        "expected": 12325,
-        "value": 12494
-      },
-      {
-        "x": 4,
-        "y": 11,
-        "expected": 12324,
-        "value": 12494
-      },
-      {
-        "x": 5,
-        "y": 11,
-        "expected": 12323,
-        "value": 12494
-      },
-      {
-        "x": 6,
-        "y": 11,
-        "expected": 1367,
-        "value": 12494
-      }
-    ]
+    "blockdata_overrides": null
   }
 }

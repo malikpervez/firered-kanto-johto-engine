@@ -1,0 +1,39 @@
+{
+ "note": "Down the road from the forecourt onto Route 23.",
+ "created": "2026-10-27 21:00",
+ "start": {
+  "map": "IndigoPlateau_Exterior_Frlg",
+  "x": 11,
+  "y": 17,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route23_Frlg",
+  "x": 11,
+  "y": 1,
+  "in_battle": false
+ },
+ "accepted": "2026-10-27 01:19"
+}

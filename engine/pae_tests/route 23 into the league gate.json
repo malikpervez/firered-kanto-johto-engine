@@ -1,0 +1,39 @@
+{
+ "note": "Back into the League gate by its doorway.",
+ "created": "2026-10-27 21:00",
+ "start": {
+  "map": "Route23_Frlg",
+  "x": 9,
+  "y": 154,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route22_NorthEntrance_Frlg",
+  "x": 7,
+  "y": 2,
+  "in_battle": false
+ },
+ "accepted": "2026-10-27 01:19"
+}

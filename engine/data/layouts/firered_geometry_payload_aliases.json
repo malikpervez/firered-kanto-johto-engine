@@ -2690,13 +2690,6 @@
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
     },
-    "IndigoPlateau_Exterior_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/IndigoPlateau_Exterior_Frlg/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
     "IndigoPlateau_hns_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/IndigoPlateau_hns/border.bin",
@@ -2721,13 +2714,6 @@
     "OlivineCity_hns_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/OlivineCity_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
-    "Route23_Layout_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/Route23_Frlg/border.bin",
       "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
@@ -2847,13 +2833,6 @@
     "VioletCity_hns_Layout_Border": {
       "owner": "AzaleaTown_hns_Layout_Border",
       "source_filepath": "data/layouts/VioletCity_hns/border.bin",
-      "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
-      "bytes": 8,
-      "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
-    },
-    "IndigoPlateau_Exterior_Frlg_FireRedGeometry_Border": {
-      "owner": "AzaleaTown_hns_Layout_Border",
-      "source_filepath": "data/layouts/IndigoPlateau_hns/border.bin",
       "owner_filepath": "data/layouts/AzaleaTown_hns/border.bin",
       "bytes": 8,
       "sha256": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449"
@@ -5160,13 +5139,6 @@
       "owner_filepath": "data/layouts/Gate_GoldenrodCity_Route35_hns/map.bin",
       "bytes": 360,
       "sha256": "5fcc23d98eca5311d321376e920456c3de5c3cb3b60fbcc8fe6dae32c95c0444"
-    },
-    "IndigoPlateau_Exterior_Frlg_FireRedGeometry_Blockdata": {
-      "owner": "IndigoPlateau_hns_Layout_Blockdata",
-      "source_filepath": "data/layouts/IndigoPlateau_hns/map.bin",
-      "owner_filepath": "data/layouts/IndigoPlateau_hns/map.bin",
-      "bytes": 960,
-      "sha256": "d2f5ca748215f56667c8cb447f8c51365fc73b113a7be2f1696b68898150dd6c"
     },
     "Route26_hns_Layout_Border": {
       "owner": "Route26North_hns_Layout_Border",

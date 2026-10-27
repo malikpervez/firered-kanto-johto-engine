@@ -1,0 +1,156 @@
+{
+ "note": "Through the last gate with the Earth Badge, into the yard under Victory Road.",
+ "created": "2026-10-27 21:00",
+ "start": {
+  "map": "Route23_Frlg",
+  "x": 5,
+  "y": 41,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250",
+   "VAR_MAP_SCENE_ROUTE23=7",
+   "FLAG_BADGE08_GET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "VAR_MAP_SCENE_ROUTE23"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route23_Frlg",
+  "x": 5,
+  "y": 33,
+  "in_battle": false,
+  "vars": {
+   "VAR_MAP_SCENE_ROUTE23": 8
+  }
+ },
+ "accepted": "2026-10-27 01:19"
+}

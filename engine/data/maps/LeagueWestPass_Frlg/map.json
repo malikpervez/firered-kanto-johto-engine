@@ -14,9 +14,9 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "right",
       "map": "MAP_INDIGO_PLATEAU_EXTERIOR",
-      "offset": 0
+      "offset": 0,
+      "direction": "right"
     },
     {
       "map": "MAP_ROUTE27_HNS",

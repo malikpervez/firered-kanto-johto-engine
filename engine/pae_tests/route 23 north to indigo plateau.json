@@ -1,0 +1,39 @@
+{
+ "note": "Up the road from the cliff top's meadow onto Indigo Plateau.",
+ "created": "2026-10-27 21:00",
+ "start": {
+  "map": "Route23_Frlg",
+  "x": 11,
+  "y": 2,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     60
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "IndigoPlateau_Exterior_Frlg",
+  "x": 11,
+  "y": 18,
+  "in_battle": false
+ },
+ "accepted": "2026-10-27 01:19"
+}

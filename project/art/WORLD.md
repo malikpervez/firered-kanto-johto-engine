@@ -16,7 +16,7 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Pallet Town | 32×28 | 24×20 | kit + `gTileset_PalletConcept` | up: Route 1 (offset −10), down: Route 21 North (offset 11) |
 | Route 1 | 50×40 | 50×40 | kit + `gTileset_Route1Concept` | up: Viridian City (offset −2), down: Pallet Town (offset 10) |
 | Viridian City | 60×52 | 56×50 | kit + `gTileset_ViridianConcept` | up: Route 2 (offset 16), left: Route 22 (offset 22), down: Route 1 (offset 2) |
-| Route 22 | 52×28 | 52×28 | kit + `gTileset_Route22Concept` | right: Viridian City (offset −22); not joined to Route 23 (below) |
+| Route 22 | 52×28 | 52×28 | kit + `gTileset_Route22Concept` | right: Viridian City (offset −22), up: Route 23 (offset 0) |
 | Route 2 | 30×80 | 30×80 | kit + `gTileset_Route2Concept` | up: Pewter City (offset −14), down: Viridian City (offset −16) |
 | Pewter City | 52×44 | 52×44 | kit + `gTileset_PewterConcept` | down: Route 2 (offset 14), right: Route 3 (offset 15) |
 | Route 3 | 84×20 | 84×20 | kit + `gTileset_Route3Concept` | left: Pewter City (offset −15), up: Route 4 (offset 60) |
@@ -47,6 +47,8 @@ picture again with `pae map render` for each map, placed by the offsets below.)
 | Cinnabar Island | 96×44 | 96×44 | kit + `gTileset_CinnabarConcept` | up: Route 21 South (offset 0), right: Route 20 (offset 0) |
 | Route 20 | 120×20 | 120×20 | kit + `gTileset_Route20Concept` | left: Cinnabar Island (offset 0), right: Route 19 (offset −41) |
 | Route 19 | 24×60 | 24×60 | kit (and an empty `gTileset_Route19Concept`) | up: Fuchsia City (offset −12), left: Route 20 (offset 41) |
+| Route 23 | 24×160 | 24×160 | kit + `gTileset_Route23Concept` | up: Indigo Plateau (offset 0), down: Route 22 (offset 0) |
+| Indigo Plateau | 24×20 | 24×20 | kit + `gTileset_IndigoConcept` | down: Route 23 (offset 0), left: League West Pass (offset 0) |
 | Saffron City | 60×48 | 66×55 | kit + `gTileset_SaffronConcept` | none compiled (KR-53): Routes 5, 6, 7 and 8 join its twin `SaffronCity_Connection`, still the old layout (KR-59); its four gatehouses are the ways out |
 | Viridian Forest | 48×60 | 74×79 | kit + `gTileset_ViridianForestConcept` | none: its exits are warps to Route 2's two gates |
 
@@ -76,6 +78,9 @@ A join lines up one column (or row) of each map, `pae map connect A up B --align
 | Route 21 South ↔ Cinnabar | Route 21 0–3 = Cinnabar 0–3 | the sea lane down the island's west side; Route 21's woods (4–23) stand behind the town |
 | Cinnabar ↔ Route 20 | Cinnabar rows 0–19 = Route 20 rows 0–19 | open sea |
 | Route 20 ↔ Route 19 | Route 20 rows 0–18 = Route 19 rows 41–59 | open sea |
+| Route 22 ↔ Route 23 | the whole width (Route 22 0–23) | not walked across: the woods on both sides; the League gate leads through |
+| Route 23 ↔ Indigo Plateau | Route 23 10–13 = Indigo 10–13 | the road up onto the mountaintop |
+| Indigo Plateau ↔ League West Pass | Indigo rows 9–11 = League West Pass rows 9–11 | the west road (closed by the workers until the game is won) |
 | Fuchsia ↔ Route 19 | Fuchsia 18–29 = Route 19 6–17 | the beach path down from Fuchsia's shore street |
 | Route 7 ↔ Celadon | Route 7 rows 10–13 = Celadon rows 20–23 | the road west out of the trees onto Celadon's boulevard |
 | Celadon ↔ Route 16 | Celadon rows 20–23 = Route 16 rows 22–25 | the boulevard west onto Route 16's road |
@@ -140,8 +145,9 @@ Maps on different tilesets need connection seams (`pae seam build`) so each show
 | Route 19 | Fuchsia City, Route 20 | pae (all three from the kit: no seam with either) |
 | Route 21 South | Route 21 North, Cinnabar Island | pae (all from the kit: 65 pieces for Cinnabar's own metatiles in its strip, the Mansion's and the Gym's, in banks 7 and 9). Old Route 21 South's hand-made seam is gone |
 | Cinnabar Island | Route 21 South, Route 20 | pae (all from the kit: no seam with either; KR-76). Old Cinnabar's hand-made seam is gone, and old Route 20's for it |
-| Route 22 | Viridian City | pae (both from the kit: only each other's own tiles); its hand-made seam is gone |
-| Route 23 | Indigo Plateau | hand-made (its pieces for the old Route 22 are gone) |
+| Route 22 | Viridian City, Route 23 | pae (all three from the kit: only each other's own tiles; 16 pieces for Route 23's gatehouse); its hand-made seam is gone |
+| Route 23 | Indigo Plateau, Route 22 | pae (all three from the kit: 73 pieces for Route 22's own metatiles, its gate, in bank 10; none for Indigo). Its hand-made seam is gone |
+| Indigo Plateau | Route 23, League West Pass | pae: old League West Pass's palettes in bank 9 (15 pieces); it draws Indigo's left seven columns (68 pieces). None for Route 23. Its hand-made seam is gone |
 
 Maps built from the kit share the primary tileset, so between them a seam only has pieces for the neighbour's own
 (secondary) metatiles in its strip: a block of the kit's own is drawn as the map's own metatile, the same one, and
@@ -155,10 +161,8 @@ those 7 rows: Route 1's tall grass (bank 4) starts at row 7. Between maps from t
 palettes and need no slots. A strip of an old map takes slots: its tiles are copied, so pae packs their colours into
 as few slots as they fit. Old Route 3's strip takes one slot of Pewter (11, of the two it keeps free).
 
-**Route 23 isn't joined to Route 22.** The join was only seen across Route 22's top (both edges are solid: you go
-through the League gate), and Route 23's strip needs seven palettes, more than Route 22 has free. So each shows its
-own border there. Join them again (`pae map connect Route22_Frlg up Route23_Frlg --offset 0`) when Route 23 is
-rebuilt from the kit.
+**Route 23 is joined to Route 22 again** (it wasn't while Route 23 was the old map: its strip needed seven palettes,
+more than Route 22 had free). Both are the kit's now.
 
 ## Planned
 
@@ -347,3 +351,10 @@ Check these whenever a map is rebuilt, moved or resized:
   offset −12). Route 20's two warps kept their numbers: Seafoam's west mouth (0, 58,10) and east mouth (1, 78,12).
   The swimmers, people, Pokémon, signs and the Stardust kept their order and moved. Fuchsia's and Cinnabar's pae seams
   for the old routes are gone: every join on the sea route is between kit maps.
+- Route 23 and Indigo Plateau rebuilt together at their old sizes (24×160, 24×20). Route 23's warps kept their
+  numbers (Victory Road's way in 0 at 6,29 and way out 1 at 14,29; the League gate's doorway 2 and 3 at 9–10,156);
+  its guards, hidden items and sign moved (they keep their order), and its 42 triggers are six to each gate now
+  (KR-79). Route 22 is joined to it again (offset 0). Indigo Plateau's door moved to 11,11 (KR-81); its workers stay
+  across the west road. The hand-made seams of old Route 23 and old Indigo Plateau were removed from
+  `kanto_connection_seam.c`; League West Pass, still the old map, got a pae seam for Indigo (KR-82). Both layouts
+  are in the kit's (HnS's) metatile format now.

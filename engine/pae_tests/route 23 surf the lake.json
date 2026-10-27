@@ -1,0 +1,137 @@
+{
+ "note": "From the lake's south shore, surf north across it (past the Soul Badge's gate).",
+ "created": "2026-10-27 21:00",
+ "start": {
+  "map": "Route23_Frlg",
+  "x": 11,
+  "y": 80,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_LAPRAS lv40 MOVE_SURF",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_BADGE05_GET",
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     68
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     68
+    ],
+    [
+     1,
+     16
+    ],
+    [
+     0,
+     188
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     16
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route23_Frlg",
+  "x": 11,
+  "y": 64,
+  "in_battle": false
+ },
+ "accepted": "2026-10-27 01:19"
+}
