@@ -5,8 +5,8 @@ its joins: Route 9's road the left edge at rows 17-19 (offset 0), Lavender's roa
 (Lavender's 12-16, offset 4).
 
 The pieces: the kit's, the Pokémon Center (the kit's), its cliffs and Route 2's cave mouth for Rock Tunnel's two
-mouths in the cliffs' palette (bank 7), and the Power Plant (buildings/power_plant: Pewter's old stand-in Gym with a
-lightning bolt) in its own palette (bank 9). Bank 8 is the kit's plants palette; 10-12 stay free for the seam to
+mouths in the cliffs' palette (bank 7), and the Power Plant (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3:
+15x8 blocks, its door at 7,7) in Pewter's stone palette (bank 9). Bank 8 is the kit's plants palette; 10-12 stay free for the seam to
 Lavender (not rebuilt yet).
 
 Run from the repository root:  python3 project/art/route10-concept/make_art.py
@@ -35,7 +35,7 @@ WEST = [(0, y) for y in range(17, 20)]
 SOUTH = [(x, MAP_H - 1) for x in range(16, 21)]
 TREES = [(20, 11), (21, 11), (22, 11), (23, 11)]  # the young trees to cut, closing the meadow
 MEADOW = (24, 5)
-ISLAND = (29, 41)
+ISLAND = (28, 42)
 # the trainers the plan is made for (build.sh places them): (x, y, the ways they look, sight). None sees the road
 TRAINERS = {"Heidi": (22, 13, "down", 2), "Mark": (27, 22, "left", 5),
             "Carol": (28, 50, "up down left right", 2), "Clark": (5, 50, "up down left right", 1),
@@ -45,9 +45,9 @@ STEP = {"left": (-1, 0), "right": (1, 0), "up": (0, -1), "down": (0, 1)}
 WATER = set("~")
 SOLID = set("T#bRoklSBcw_~vrYZX") | cliffs.SOLID
 
-# the Power Plant: Pewter's old stand-in Gym with a lightning bolt on its emblem and its plaque blank, until the
-# remakes' larger Power Plant (../packs/buildings_v0.3) moves in
-PLANT = buildings.load(HERE / "buildings/power_plant")
+# the Power Plant, from the remakes pack: four sawtooth halls, a boiler annex, two stacks and a sealed loading shutter;
+# one door (its personnel entrance), at 7,7
+PLANT = buildings.load(buildings.REMAKES / "power_plant")
 
 
 def _mouth() -> buildings.Building:

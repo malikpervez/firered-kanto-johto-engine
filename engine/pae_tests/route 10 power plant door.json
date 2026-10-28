@@ -3,8 +3,8 @@
  "created": "2026-10-26 08:22",
  "start": {
   "map": "Route10_Frlg",
-  "x": 29,
-  "y": 41,
+  "x": 28,
+  "y": 42,
   "state": [
    "VAR_REPEL_STEP_COUNT=250"
   ],

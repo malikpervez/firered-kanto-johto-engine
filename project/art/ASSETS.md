@@ -10,7 +10,7 @@ There are two kinds of art:
   over its folder (see *Replacing a piece*).
 - **Drawn in code**: art Claude drew in Python while rebuilding a map, or made by recolouring or editing a pack.
   These are stand-ins, and a pack made to replace any of them is welcome. The map's `make_art.py` (or a module next
-  to it) **writes their png files again on every build** (but the two marked "no longer drawn"). So a replacement
+  to it) **writes their png files again on every build** (but the one marked "no longer drawn"). So a replacement
   must also switch off the function that draws it (named in the table below), or the next build overwrites it.
 
 ## Packs (made outside, approved)
@@ -85,7 +85,7 @@ keeps its stand-in's size and doors, except the two marked. The maps load them f
 | Brock's Gym (`pewter_gym`) | 7×5, door (3,4) | Pewter's stone (the League Front Gate's) | Pewter (7) | |
 | The League Front Gate, two storeys (`league_front_gate_tall`) | 15×10, door (7,9) | Pewter's stone | Route 22 (7) | its door art is the League Front Gate pack's |
 | The burned Pokémon Mansion (`pokemon_mansion`) | **13×9** (was 6×5), door (6,8) | Cinnabar's (volcanic) | not yet: Cinnabar needs a new layout for it | the stand-in below until then |
-| The Power Plant (`power_plant`) | **15×8** (was 7×5), door (7,7) | Pewter's stone | not yet: Route 10 needs a new layout for it | the stand-in below until then |
+| The Power Plant (`power_plant`) | **15×8** (was 7×5), door (7,7) | Pewter's stone | Route 10 (9) | fills its island in the lake; one door: its loading shutter is sealed scenery |
 
 ## Drawn in code
 
@@ -95,7 +95,6 @@ keeps its stand-in's size and doors, except the two marked. The maps load them f
 | Ledges, steps, lily pads, reeds | `kit/fields.py` | 1×1 | ground (bank 0) | `_` `h` `v` `r` | |
 | Cerulean Cave's mouth | `cerulean-concept/make_art.py` `cave_mouth()` | the pack's (6×5) | the houses' palette, with the mouth's colours added | Cerulean | a recolour of `diglett_cave` |
 | Route 2's gatehouse in the family house's palette | `route2-concept/make_art.py` `share_palette()` | the pack's | `house_family`'s | Route 2 | a recolour, to save a palette bank |
-| The Power Plant | `route10-concept/buildings/power_plant/` (no longer drawn on a build) | 7×5, door (3,4) | Pewter's stone | Route 10 | Pewter's old stand-in Gym with a blank plaque and a lightning bolt; its door frames' "GYM" painted out (KR-47, KR-49). A stand-in until the remakes' larger Power Plant moves in |
 | The burned Pokémon Mansion | `cinnabar-concept/buildings/pokemon_mansion/` (no longer drawn on a build) | 6×5, door (2,4) | its own (bank 9) | Cinnabar | Celadon's old stand-in hotel charred: its colours greyed and darkened, soot streaked up the walls. A stand-in until the remakes' larger Mansion moves in |
 | The cycle track (Cycling Road's surface) | `route17-concept/route17_track.py` `piece()` | 1×1: 16 pieces by neighbours, inside corners, and paint (a lane line `+line`, an arrow downhill `+arrow`, a chequered line `+check`) where the plan has them | its own (`PAL`, bank 7): tarmac, a stone kerb, paint | Route 17 (`t`, `i`, `a`, `x`) | every piece is `MB_CYCLING_ROAD_PULL_DOWN` (the slope carries a rider down); a kerb wherever it meets anything but itself or the kit's cobbles |
 
@@ -140,7 +139,7 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Vermilion | 230 | 60 | 110 |
 | Route 11 | 238 | 32 | 107 |
 | Route 9 | 132 | 97 | 55 |
-| Route 10 | 211 | 108 | 121 |
+| Route 10 | 287 | 108 | 206 |
 | Lavender | 215 | 74 | 87 |
 | Route 8 | 170 | 93 | 64 |
 | Route 7 | 170 | 0 | 64 |
