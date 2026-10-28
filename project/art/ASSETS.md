@@ -96,6 +96,7 @@ keeps its stand-in's size and doors, except the two marked. The maps load them f
 | Cerulean Cave's mouth | `cerulean-concept/make_art.py` `cave_mouth()` | the pack's (6×5) | the houses' palette, with the mouth's colours added | Cerulean | a recolour of `diglett_cave` |
 | Route 2's gatehouse in the family house's palette | `route2-concept/make_art.py` `share_palette()` | the pack's | `house_family`'s | Route 2 | a recolour, to save a palette bank |
 | The burned Pokémon Mansion | `cinnabar-concept/buildings/pokemon_mansion/` (no longer drawn on a build) | 6×5, door (2,4) | its own (bank 9) | Cinnabar | Celadon's old stand-in hotel charred: its colours greyed and darkened, soot streaked up the walls. A stand-in until the remakes' larger Mansion moves in |
+| Saffron's city blocks: three offices (tall, mid, narrow) and an arcade, none with a door | `saffron-concept/make_art.py` `city_designs()`, with `kit/buildings.py` `recompose()` and `recolour()` | offices 6×9, 6×6, 4×6; the arcade 4×4 | Silph Co.'s (bank 9, beige) and two recolours of it: sand (10), brick (11) | Saffron (`A` `F` `I` `J` `V` `C` `a`) | Silph Co.'s and the station's own 8×8 cells put back together without the emblem, the signs and the doors, so they cost no tiles; their identical blocks share a metatile (pae's `dedupe`). Saffron also has its own copies of the kit's Center, Mart and lamp on paving (`*_paved`: the kit's tiles, no new ones) |
 | The cycle track (Cycling Road's surface) | `route17-concept/route17_track.py` `piece()` | 1×1: 16 pieces by neighbours, inside corners, and paint (a lane line `+line`, an arrow downhill `+arrow`, a chequered line `+check`) where the plan has them | its own (`PAL`, bank 7): tarmac, a stone kerb, paint | Route 17 (`t`, `i`, `a`, `x`) | every piece is `MB_CYCLING_ROAD_PULL_DOWN` (the slope carries a rider down); a kerb wherever it meets anything but itself or the kit's cobbles |
 
 ## Replacing a piece
@@ -144,7 +145,7 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 8 | 170 | 93 | 64 |
 | Route 7 | 170 | 0 | 64 |
 | Celadon | 345 | 0 | 260 |
-| Saffron | 355 | none (no compiled joins) | 250 |
+| Saffron | 355 | none (no compiled joins) | 379 |
 | Route 16 | 110 | 0 | 48 |
 | Route 17 | 37 | 0 | 25 |
 | Route 18 | 55 | 30 (for Fuchsia's own pieces) | 32 |

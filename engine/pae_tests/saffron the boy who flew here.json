@@ -3,7 +3,7 @@
  "created": "2026-10-26 19:00",
  "start": {
   "map": "SaffronCity_Frlg",
-  "x": 44,
+  "x": 51,
   "y": 28,
   "state": [
    "FLAG_HIDE_SAFFRON_ROCKETS",
@@ -50,7 +50,7 @@
  "threshold": 0.01,
  "expect": {
   "map": "SaffronCity_Frlg",
-  "x": 44,
+  "x": 51,
   "y": 28,
   "in_battle": false
  },
