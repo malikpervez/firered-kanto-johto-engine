@@ -4,7 +4,7 @@ woods to Route 14 (see draw_plan.py). It is 80x24 blocks (old Route 15 was 96x32
 (its rows 20-23) at the left edge, rows 4-7 (offset -16, was -15: the road moved a row up), and Route 14's road (its
 rows 50-53) at the right edge, rows 14-17 (offset -36: Route 14, rebuilt, moved its road up a row).
 
-The pieces: the kit's, and Route 16's Cycling Road gatehouse (route16-concept/route16_buildings.py) in Saffron's
+The pieces: the kit's, and Route 16's Cycling Road gatehouse (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3) in Saffron's
 buildings' palette (bank 7 here). Bank 8 is the kit's plants palette; 9-12 stay free for the seam to old Route 14,
 whose strip in this route (the right seven columns) is forest, lawn and dirt only.
 
@@ -21,10 +21,8 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "route16-concept"))
 import buildings
 import kit
-import route16_buildings
 
 HERE = Path(__file__).resolve().parent
 SECONDARY = "gTileset_Route15Concept"
@@ -35,7 +33,7 @@ EAST = [(MAP_W - 1, y) for y in range(14, 18)]
 SOLID = set("T#bRoklSBcw_~vrsqQC")  # (ledges, "_", count as walls: they only drop you south)
 IN_EAST, IN_WEST = "MB_EAST_ARROW_WARP", "MB_WEST_ARROW_WARP"
 # the gatehouse: its letter in the plan, its pack, its bank, its doorways (the left one entered walking east)
-BUILDINGS = {"C": (route16_buildings.OUT / "cycling_gate", GATE_BANK, [IN_EAST, IN_WEST])}
+BUILDINGS = {"C": (buildings.REMAKES / "cycling_gate", GATE_BANK, [IN_EAST, IN_WEST])}
 HALL = ((9, 5), (16, 5))    # the gatehouse's hall: doorway to doorway
 # the trainers (local ids 1-10, 12-13), where they stand, which ways they look and how far (the walkers look a
 # block ahead, whichever way they face)
@@ -133,7 +131,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    route16_buildings.gate()
     g = plan()
     d = doors(g)
     kit.check_forest(g)

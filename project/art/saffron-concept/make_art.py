@@ -6,9 +6,9 @@ nothing shows beyond its edges but its border's forest. So it has no seams, and 
 palettes.
 
 The pieces: the kit's and its Pokémon Center and Mart; Silph Co., Sabrina's Gym, the Fighting Dojo, the gatehouses and
-the Magnet Train station, drawn here (saffron_buildings.py) in one palette (bank 9); Viridian's houses in theirs
-(bank 7: the family's for Copycat's house, the pond keeper's for the house and Mr. Psychic's), and Viridian's trainer
-school in its own (bank 10) for the Trainer Fan Club.
+the Magnet Train station, from Kanto Buildings Remakes v0.3 (../packs/buildings_v0.3), in one palette (bank 9); and
+Viridian's pond keeper's house in its palette (bank 7) for Copycat's house, a house, Mr. Psychic's and the Trainer Fan
+Club: the remakes take 300 of the town's 384 tiles, and one kind of house (55) is all that fits beside them.
 
 Run from the repository root:  python3 project/art/saffron-concept/make_art.py
 It writes buildings/, sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
@@ -23,18 +23,16 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 import buildings
 import kit
-import saffron_buildings
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
 VB = ART / "viridian-concept/buildings"
-SB = saffron_buildings.OUT
+SB = buildings.REMAKES
 SECONDARY = "gTileset_SaffronConcept"
 MAP_W, MAP_H = 60, 48
-HOUSE_BANK, CITY_BANK, CLUB_BANK = 7, 9, 10
+HOUSE_BANK, CITY_BANK = 7, 9
 SOLID = set("T#bRoklSBcw_~vrXMDGNWEUZLYHPK")
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the south
@@ -47,10 +45,10 @@ BUILDINGS = {"X": (SB / "silph_co", CITY_BANK, [DOOR]),
              "E": (SB / "saffron_gate", CITY_BANK, [DOOR, DOOR]),
              "U": (SB / "saffron_gate_back", CITY_BANK, [BACK, BACK]),
              "M": (SB / "magnet_train_station", CITY_BANK, []),
-             "Y": (VB / "house_family", HOUSE_BANK, [DOOR]),
+             "Y": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR]),
              "H": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR]),
              "P": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR]),
-             "K": (VB / "trainer_school", CLUB_BANK, [DOOR])}
+             "K": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR])}
 SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
 CROSSING = (29, 23)  # the avenues' crossing: everything walkable is reached from it
 CAMP = [(50, 8), (50, 10), (49, 9), (48, 8), (52, 8), (48, 10), (47, 6)]  # the Friends', round 50,8
@@ -130,8 +128,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    for draw in saffron_buildings.ALL:
-        draw()
     g = plan()
     d = doors(g)
     kit.check_forest(g)
@@ -164,7 +160,7 @@ def main() -> None:
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{HOUSE_BANK}.pal", base["secondary_palettes"][8],
-                                       f"palette_{CITY_BANK}.pal", f"palette_{CLUB_BANK}.pal"]},
+                                       f"palette_{CITY_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
             "animations": base["animations"],
             "field_effects": base["field_effects"],

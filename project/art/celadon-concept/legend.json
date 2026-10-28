@@ -58,7 +58,7 @@
  "S": "sign",
  "B": "barrel",
  "c": "crate",
- "O": "hotel",
+ "O": "celadon_hotel",
  "w": "well",
  "R": {
   "pick": [
@@ -109,10 +109,10 @@
  },
  "C": "pokemon_center",
  "D": "department_store",
- "M": "mansion",
+ "M": "celadon_mansion",
  "G": "game_corner",
  "Y": "celadon_gym",
  "P": "house_pond_keeper",
- "E": "house_family",
+ "E": "house_pond_keeper",
  "H": "house_pond_keeper"
 }

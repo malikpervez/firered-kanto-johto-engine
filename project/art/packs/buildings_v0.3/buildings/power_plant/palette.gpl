@@ -1,0 +1,20 @@
+GIMP Palette
+Name: pewter_stone
+Columns: 16
+#
+  0   0   0	index 0 transparent
+ 24  32  40	index 1
+ 56  64  72	index 2
+ 64  88 104	index 3
+ 88 112 128	index 4
+128 152 168	index 5
+176 200 200	index 6
+104 104  96	index 7
+144 144 128	index 8
+184 184 160	index 9
+216 208 184	index 10
+240 232 208	index 11
+136 104  56	index 12
+192 152  72	index 13
+232 200 120	index 14
+ 72 112 128	index 15

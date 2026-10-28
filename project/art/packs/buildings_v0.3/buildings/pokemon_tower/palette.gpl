@@ -1,0 +1,20 @@
+GIMP Palette
+Name: lavender
+Columns: 16
+#
+  0   0   0	index 0 transparent
+ 24  16  40	index 1
+ 56  40  80	index 2
+ 80  64 112	index 3
+112  88 144	index 4
+152 128 176	index 5
+192 176 208	index 6
+ 96  88 112	index 7
+136 128 152	index 8
+176 168 192	index 9
+208 200 224	index 10
+232 224 240	index 11
+136 104  56	index 12
+192 152  72	index 13
+232 200 120	index 14
+ 48  40  72	index 15

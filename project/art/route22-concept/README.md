@@ -39,9 +39,8 @@ behind its old roof, and the terrace east of it ends square with the ridge besid
   - the **stairs** (`H`, 2×2) are in the face below the forecourt; the forecourt and the road open onto them;
   - its **rocks**: the small one stands for the kit's rock here (`o`), the big boulder (`X`) east of the forecourt.
     The pack's breakable rock isn't used yet (nothing on the route breaks rocks).
-- **The League Front Gate** (`buildings/`, bank 7), two storeys: `make_art.py` adds the upper one from the pack's
-  own pixels (the ground floor's wall and windows again, a window over the door, the plinth's stones as a band
-  course between the floors). Its top four rows (the roof) stand against the cliff (`U` in the grid,
+- **The League Front Gate** (bank 7), two storeys: the two-storey version from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`),
+  `league_front_gate_tall`, with the pack's own door art (`buildings/`). Its top four rows (the roof) stand against the cliff (`U` in the grid,
   joined to the cliff so it shows no edge there; the cliff's top shows under its roof, by phase: pae's ground for
   each block), its front over the lawn (`L`). Its door animates from its drawn frames (`pae door add --frames`).
 

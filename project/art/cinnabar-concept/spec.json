@@ -3037,8 +3037,8 @@
    }
   },
   {
-   "name": "cinnabar_lab",
-   "image": "sheets/cinnabar_lab.png",
+   "name": "pokemon_lab",
+   "image": "sheets/pokemon_lab.png",
    "x": 0,
    "y": 0,
    "w": 9,

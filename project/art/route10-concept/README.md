@@ -12,9 +12,10 @@ road north meets the bottom at columns 16–20. Route 9's road meets the left ed
   its sign, and a meadow of grass behind a row of four young trees to cut, where the Voltorb roll about; Heidi and
   Mark off the road;
 - **the river** down the east of the clearing, which can be surfed: it widens into **the lake** where the abandoned
-  Power Plant stands on its island, with the Electabuzz; the plant can only be reached by water. It is Pewter's Gym
-  with its plaque blank and a lightning bolt on its emblem (`buildings/power_plant`, written by `make_art.py`). Its
-  back door lets you out on the island's west shore, and isn't a way in (KR-46);
+  Power Plant stands on its island, with the Electabuzz; the plant can only be reached by water. It is Kanto
+  Buildings Remakes v0.3's (`../packs/buildings_v0.3/`): an industrial complex of four sawtooth halls, a boiler annex
+  and two stacks, 15×8 blocks, filling the island, its door (28,41) on the beach along its front. Its back door lets
+  you out on the island's west shore (20,38), and isn't a way in (KR-46);
 - **the mountains** across the middle, with no way over them but Rock Tunnel: its south mouth faces south at their
   foot;
 - **the south valley**, from the south mouth down to Lavender, with Carol, Clark, Herman and Trent off the road.

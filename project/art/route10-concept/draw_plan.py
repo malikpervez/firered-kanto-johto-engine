@@ -15,8 +15,8 @@ blocks (old Route 10 was 38x90), as wide as before, so Lavender's join stays whe
   Lavender's road north meets it), its trainers off the road.
 
 Letters: the kit's legend (T forest, . lawn, : dirt, g tall grass, ~ pond water, * flowers, o rocks, b bushes, S signs),
-C cliffs, Y the caves' mouths (Route 2's), Z the Pokémon Center, X the Power Plant (Pewter's Gym: FireRed's plant is a
-plain stone hall).
+C cliffs, Y the caves' mouths (Route 2's), Z the Pokémon Center, X the Power Plant (Kanto Buildings Remakes v0.3: four
+sawtooth halls, a boiler annex and two stacks, 15x8 blocks; it fills the island, a beach along its front).
 """
 from pathlib import Path
 
@@ -61,9 +61,9 @@ rect(32, 2, 35, 30, "T")
 rect(2, 28, 21, 45, "C")                       # the mountains across the middle (their face on rows 44-45)
 rect(22, 28, 27, 30, "T")
 rect(20, 31, 35, 44, "~")                      # the lake
-rect(25, 34, 33, 42, ".")                      # the island
-rect(26, 35, 32, 39, "X")                      # the Power Plant, door 29,39
-at(25, 34, "*"); at(33, 34, "o"); at(25, 42, "o")
+rect(20, 34, 35, 44, ".")                      # the island, the lake's south half: the lake (rows 31-33) is north of it
+rect(21, 34, 35, 41, "X")                      # the Power Plant, door 28,41
+at(21, 43, "*"); at(22, 43, "*"); at(35, 44, "o")
 rect(20, 45, 35, 49, "T")                      # the lake's south shore: forest, so the valley can't be reached by water
 
 # the south valley: Rock Tunnel's south mouth at the mountains' foot, the road down to Lavender

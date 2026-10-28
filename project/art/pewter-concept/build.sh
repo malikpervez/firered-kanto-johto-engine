@@ -4,6 +4,7 @@
 # new town has them. Run from the repository root (project/art/build_all.sh rebuilds every map).
 set -e
 A=project/art/pewter-concept
+R=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the Gym
 K=project/art/kit/buildings
 python3 $A/make_art.py
 cd engine
@@ -29,7 +30,7 @@ pae map connect $M right Route3_Frlg --offset 15 $P
 pae door add $M 29 32 --frames ../$K/pokemon_center/pokemon_center_door.png --sound sliding $P
 pae door add $M 34 32 --frames ../$K/poke_mart/poke_mart_door.png --sound sliding $P
 pae door add $M 24 12 --frames ../project/art/route22-concept/buildings/league_front_gate/league_front_gate_door.png $P
-pae door add $M 9 20 --frames ../$A/buildings/pewter_gym/pewter_gym_door.png $P
+pae door add $M 9 20 --frames ../$R/pewter_gym/pewter_gym_door.png $P
 pae door add $M 30 20 --frames ../project/art/viridian-concept/buildings/house_family/house_family_door.png $P
 
 # events: every warp keeps its number (the buildings behind them point at it)

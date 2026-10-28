@@ -39,24 +39,9 @@ extern const struct MapLayout Route7_Frlg_FireRedGeometry;
 extern const struct MapLayout Route8_Frlg_FireRedGeometry;
 extern const struct MapLayout Route9_Frlg_FireRedGeometry;
 extern const struct MapLayout SaffronCity_Connection_Frlg_FireRedGeometry;
-extern const struct MapLayout SaffronCity_Frlg_FireRedGeometry;
 extern const struct MapLayout VermilionCity_Frlg_FireRedGeometry;
 
 
-static const struct KantoSeamMetatile sKantoSeam_SaffronCity_Frlg_Metatiles[] = {
-    { .sourceLayout = &SaffronCity_Frlg_FireRedGeometry, .attributes = 0x2000001Du, .sourceMid = 1011, .tiles = { 0x2323, 0x2323, 0x2323, 0x2323, 0x232B, 0x232E, 0x232F, 0x233B }, .layoutVersion = LAYOUT_VERSION_FRLG },
-    { .sourceLayout = &SaffronCity_Frlg_FireRedGeometry, .attributes = 0x2000001Du, .sourceMid = 1012, .tiles = { 0x2323, 0x2323, 0x2323, 0x2323, 0x133E, 0x133F, 0x117C, 0x117D }, .layoutVersion = LAYOUT_VERSION_FRLG },
-    { .sourceLayout = &SaffronCity_Frlg_FireRedGeometry, .attributes = 0x2000001Du, .sourceMid = 1013, .tiles = { 0x734D, 0x734B, 0x734F, 0x734E, 0x216E, 0x216F, 0x217E, 0x217F }, .layoutVersion = LAYOUT_VERSION_FRLG },
-    { .sourceLayout = &SaffronCity_Frlg_FireRedGeometry, .attributes = 0x2000001Du, .sourceMid = 1014, .tiles = { 0x734C, 0x734B, 0x734D, 0x734B, 0x2160, 0x2161, 0x2170, 0x2171 }, .layoutVersion = LAYOUT_VERSION_FRLG },
-    { .sourceLayout = &SaffronCity_Frlg_FireRedGeometry, .attributes = 0x2000001Du, .sourceMid = 1015, .tiles = { 0x734C, 0x734B, 0x734D, 0x734B, 0x133E, 0x133F, 0x117C, 0x117D }, .layoutVersion = LAYOUT_VERSION_FRLG },
-    { .sourceLayout = &Route6_Frlg_FireRedGeometry, .attributes = 0x00000000u, .sourceMid = 864, .tiles = { 0x2317, 0x2717, 0x5212, 0x5211, 0x2318, 0x231B, 0x231D, 0x231E }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route6_Frlg_FireRedGeometry, .attributes = 0x00000000u, .sourceMid = 865, .tiles = { 0x2317, 0x2717, 0x5212, 0x5211, 0x231C, 0x2280, 0x231F, 0x22C0 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route6_Frlg_FireRedGeometry, .attributes = 0x00000000u, .sourceMid = 866, .tiles = { 0x2317, 0x2717, 0x5212, 0x5211, 0x2280, 0x2290, 0x22C0, 0x22C8 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route6_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 868, .tiles = { 0x5316, 0xB313, 0x5212, 0x5211, 0x2317, 0x2717, 0x9000, 0x9000 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route6_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 872, .tiles = { 0x5211, 0x5212, 0x5211, 0x5212, 0x229C, 0x929D, 0x22D0, 0x22D3 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route6_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 873, .tiles = { 0x5211, 0x5212, 0x5211, 0x5212, 0x22A0, 0x22AC, 0x22D8, 0x22E0 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route6_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 874, .tiles = { 0x5211, 0x5212, 0x5211, 0x5212, 0x22AD, 0x22B0, 0x22E5, 0x22FF }, .layoutVersion = LAYOUT_VERSION_HNS },
-};
 static const u16 ALIGNED(4) sKantoSeam_SaffronCity_Frlg_GlyphRun0[] = { 0x0000, 0x0000, 0x5555, 0x5555, 0x2222, 0x2222, 0x5555, 0x5555, 0x7777, 0x7777, 0x7777, 0x7777, 0x8888, 0x8888, 0x8888, 0x8888 };
 static const u16 ALIGNED(4) sKantoSeam_SaffronCity_Frlg_GlyphRun1[] = { 0x0000, 0x0000, 0x5555, 0x0005, 0x2222, 0x0071, 0x5555, 0x0072, 0x7777, 0x0072, 0x7777, 0x0072, 0x8888, 0x0072, 0x8888, 0x0072 };
 static const u16 ALIGNED(4) sKantoSeam_SaffronCity_Frlg_GlyphRun2[] = { 0x2150, 0x7772, 0x2150, 0x3772, 0x2150, 0x4372, 0x3270, 0x4433, 0x4370, 0x4444, 0x4470, 0x4444, 0x4470, 0x4444, 0x6670, 0x6666, 0x7443, 0x7777, 0x5744, 0x7665, 0x5574, 0x7766, 0x6557, 0x7777, 0x7777, 0x7777, 0x4445, 0x4444, 0x4445, 0x4444, 0x4445, 0x4444 };
@@ -80,31 +65,6 @@ static const u16 ALIGNED(4) sKantoSeam_SaffronCity_Frlg_GlyphRun19[] = { 0x7733,
 static const u16 ALIGNED(4) sKantoSeam_SaffronCity_Frlg_GlyphRun20[] = { 0x3C3C, 0x733C, 0x3333, 0x7333, 0x4555, 0x7544, 0x3333, 0x7333, 0x7777, 0x7777, 0x7555, 0x5574, 0x7555, 0x5577, 0x5555, 0x5555 };
 static const u16 ALIGNED(4) sKantoSeam_SaffronCity_Frlg_GlyphRun21[] = { 0x0000, 0xE000, 0xEE00, 0x9EEE, 0x99D0, 0x9B99, 0x99D0, 0xB999, 0xBBD0, 0xBBBB, 0xABD0, 0xAAAA, 0xDBD0, 0xAADA, 0xDBD0, 0xBDAD, 0x000E, 0x0000, 0xEEE9, 0x00EE, 0x99B9, 0x0E99, 0x999B, 0x0E99, 0xBBBB, 0x0EBB, 0xAAAA, 0x0EBA, 0xADAA, 0x0EBD, 0xDADB, 0x0EBD };
 static const u16 ALIGNED(4) sKantoSeam_SaffronCity_Frlg_GlyphRun22[] = { 0x4441, 0x4444, 0x4412, 0x4444, 0x4441, 0x4444, 0x1111, 0x1111, 0x2221, 0x2222, 0x2212, 0x2222, 0x2221, 0x2222, 0x1111, 0x1111, 0x2221, 0x2222, 0x1111, 0x1111, 0x4441, 0x4444, 0x4412, 0x4444, 0x4441, 0x4444, 0x1111, 0x1111, 0x2221, 0x2222, 0x2212, 0x2222, 0x2222, 0x2222, 0x1111, 0x1111, 0x4441, 0x4444, 0x4412, 0x4444, 0x4441, 0x4444, 0x1111, 0x1111, 0x2221, 0x2222, 0x2212, 0x2222, 0x4441, 0x4444, 0x4412, 0x4444, 0x4441, 0x4444, 0x1113, 0x1111, 0x5553, 0x5555, 0x5535, 0x5555, 0x5553, 0x5555, 0x3333, 0x3333, 0x2221, 0x2222, 0x1111, 0x1111, 0x4441, 0x4444, 0x4412, 0x4444, 0x4441, 0x4444, 0x1113, 0x1111, 0x5553, 0x5555, 0x5536, 0x5555 };
-static const struct KantoSeamGlyphRun sKantoSeam_SaffronCity_Frlg_GlyphRuns[] = {
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun0, 640, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun1, 656, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun2, 668, 64 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun3, 672, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun4, 684, 64 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun5, 688, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun6, 704, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun7, 712, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun8, 720, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun9, 723, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun10, 728, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun11, 736, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun12, 741, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun13, 767, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun14, 787, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun15, 790, 96 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun16, 795, 160 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun17, 803, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun18, 811, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun19, 814, 64 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun20, 827, 32 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun21, 830, 64 },
-    { sKantoSeam_SaffronCity_Frlg_GlyphRun22, 843, 160 },
-};
 static const struct KantoSeamPalette ALIGNED(4) sKantoSeam_SaffronCity_Frlg_Palettes[] = {
     { { 0x0000, 0x779B, 0x66F5, 0x41EF, 0x396B, 0x3528, 0x537C, 0x431A, 0x36B8, 0x2655, 0x479D, 0x471B, 0x36FA, 0x5397, 0x39D3, 0x532E }, 80 },
     { { 0x2BE3, 0x3252, 0x46F7, 0x52D6, 0x535A, 0x5F39, 0x677B, 0x001F, 0x36D2, 0x7359, 0x677B, 0x5B18, 0x56F7, 0x52D6, 0x4A94, 0x4A73 }, 112 },
@@ -876,7 +836,6 @@ static const u16 sKantoDual_PowerPlant_Frlg_CanonicalMids[] = { 0x02D0 };
 static const u16 sKantoDual_PowerPlant_Frlg_OriginIds[] = { 0x0025 };
 
 static const struct KantoSeam sKantoSeams[] = {
-    { &SaffronCity_Frlg_FireRedGeometry, sKantoSeam_SaffronCity_Frlg_Metatiles, sKantoSeam_SaffronCity_Frlg_GlyphRuns, sKantoSeam_SaffronCity_Frlg_Palettes, NULL, 1011, 12, 23, 3, 0, 0 },
     { &SaffronCity_Connection_Frlg_FireRedGeometry, sKantoSeam_SaffronCity_Connection_Frlg_Metatiles, sKantoSeam_SaffronCity_Connection_Frlg_GlyphRuns, sKantoSeam_SaffronCity_Connection_Frlg_Palettes, NULL, 1011, 12, 23, 3, 0, 0 },
     { &ViridianCity_Mart_Frlg_FireRedGeometry, sKantoDual_ViridianCity_Mart_Frlg_Metatiles, sKantoDual_ViridianCity_Mart_Frlg_GlyphRuns, sKantoDual_ViridianCity_Mart_Frlg_Palettes, NULL, 985, 38, 6, 3, 0, 0 },
     { &CeladonCity_Condominiums_Roof_Frlg_FireRedGeometry, sKantoDual_CeladonCity_Condominiums_Roof_Frlg_Metatiles, sKantoDual_CeladonCity_Condominiums_Roof_Frlg_GlyphRuns, sKantoDual_CeladonCity_Condominiums_Roof_Frlg_Palettes, NULL, 957, 66, 1, 4, 0, 0 },
@@ -908,7 +867,6 @@ struct KantoSeamOrigin
     u16 metatileCount;
 };
 static const struct KantoSeamOrigin sKantoSeamOrigins[] = {
-    { &SaffronCity_Frlg_FireRedGeometry, sKantoSeam_SaffronCity_Frlg_CanonicalMids, sKantoSeam_SaffronCity_Frlg_OriginIds, 1011, 12 },
     { &SaffronCity_Connection_Frlg_FireRedGeometry, sKantoSeam_SaffronCity_Connection_Frlg_CanonicalMids, sKantoSeam_SaffronCity_Connection_Frlg_OriginIds, 1011, 12 },
     { &ViridianCity_Mart_Frlg_FireRedGeometry, sKantoDual_ViridianCity_Mart_Frlg_CanonicalMids, sKantoDual_ViridianCity_Mart_Frlg_OriginIds, 985, 38 },
     { &CeladonCity_Condominiums_Roof_Frlg_FireRedGeometry, sKantoDual_CeladonCity_Condominiums_Roof_Frlg_CanonicalMids, sKantoDual_CeladonCity_Condominiums_Roof_Frlg_OriginIds, 957, 66 },

@@ -7,7 +7,7 @@ set -e
 A=project/art/lavender-concept
 K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
-T=project/art/lavender-concept/buildings/pokemon_tower
+T=project/art/packs/buildings_v0.3/buildings/pokemon_tower  # the remakes pack
 python3 $A/make_art.py
 cd engine
 P="-p ."

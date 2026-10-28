@@ -34,13 +34,13 @@ Trees to cut close four short ways:
 
 ## The buildings
 
-Drawn here (`fuchsia_buildings.py`):
-- **the Safari Zone's gate lodge**, in Saffron's buildings' palette (bank 9): a lodge under a deep thatched roof,
-  with a gold-lettered signboard and log walls;
-- **Koga's Gym**, in the same palette: a ninja house with a violet roof in two tiers, dark timber and paper screens,
-  and the Gym's board over its door;
-- **the house with the pond garden**: Viridian's pond keeper's house with a dormer door added in its roof's back
-  slope, beside the chimney (bank 7). The door is entered walking south from the garden, and doesn't animate.
+From Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`):
+- **the Safari Zone's gate lodge**, in Saffron's buildings' palette (bank 9): a thatched gable over log walls, with
+  a timber signboard and lanterns;
+- **Koga's Gym**, in the same palette: a ninja compound with two layered purple roofs, timber posts and paper
+  screens, and the Gym's board over its door;
+- **the house with the pond garden**: Viridian's pond keeper's house with a dormer doorway in its roof's back slope
+  (bank 7). The back door is entered walking south from the garden, and doesn't animate.
 
 The Safari Zone's office and a house are Viridian's gardener's house, the Warden's is the family's, and the other
 house is the pond keeper's (all bank 7). The Center and the Mart are the kit's.

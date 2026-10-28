@@ -11,12 +11,12 @@ plays the events one after another, each starting where the last one left the ga
 
 | | |
 |---|---|
-| Date | 2026-10-27 |
-| Game | `v2-main` at `a550f77f` (no game changes since `1ca40047`, whose ROM this is) |
-| ROM | `make -j8` with the default settings. SHA-1 `cc62fa5ae6856ea3f75cdfa845c0b312777bb051` |
-| pae | `a772d1e` (pae `main` after PR #34) |
-| Last step passed | 399 `indigo-center`, the end of the check: the Indigo Plateau's Pokémon Center, at the League's doors. **All 399 steps pass from the top in one run** (7991 s), through every rebuilt Kanto map |
-| Replay tests | not run for this change: it changes only the story check and the docs, no game files |
+| Date | 2026-10-28 |
+| Game | branch `claude/power-plant-v0.3` (Route 10's larger Power Plant, KR-87), on `claude/buildings-v0.3` |
+| ROM | `make -j4` with the default settings. SHA-1 `2d8da76de922dc8c0768d2472d2fc6e66eb35247` |
+| pae | `b73c7e6` (pae `main` after PR #35) |
+| Last step passed | 399 `indigo-center`, the end of the check. **Steps 114 (`route10`) to 399 pass in one run** (6296 s) from step 113's checkpoint; steps 1-113 don't reach Route 10 and passed on `claude/buildings-v0.3` (all 399 from the top, 8481 s) |
+| Replay tests | `pae test run`: 550 tests; the 4 Route 10 ones whose screen changed (the plant, its moved door, back door and Max Ether) looked at and accepted |
 
 ## How to run it
 

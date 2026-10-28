@@ -16,7 +16,7 @@ edge at columns 8-16; Fuchsia's west road (its rows 18-20) meets the right edge 
 - **the road on to Fuchsia** beyond it, out of the woods.
 
 Letters: the kit's legend (T forest, . lawn, = cobble, g grass, * flowers, s the sea, q and Q sea rocks, # fences,
-b bushes, S signs), and C the gatehouse (Route 16's Cycling Road gatehouse: route16-concept/route16_buildings.py).
+b bushes, S signs), and C the gatehouse (Route 16's Cycling Road gatehouse: packs/buildings_v0.3, cycling_gate).
 """
 from pathlib import Path
 

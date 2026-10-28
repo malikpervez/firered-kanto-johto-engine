@@ -358,3 +358,6 @@ Check these whenever a map is rebuilt, moved or resized:
   across the west road. The hand-made seams of old Route 23 and old Indigo Plateau were removed from
   `kanto_connection_seam.c`; League West Pass, still the old map, got a pae seam for Indigo (KR-82). Both layouts
   are in the kit's (HnS's) metatile format now.
+- Route 10's Power Plant is Kanto Buildings Remakes v0.3's, 15×8 blocks (KR-87): its island fills the lake's south
+  half (rows 34-44), the lake the three rows north of it under the river. Its door moved to 28,41 and its back door's
+  way out to the island's west shore (20,38); the warps keep their numbers. Route 10's size and joins didn't change.

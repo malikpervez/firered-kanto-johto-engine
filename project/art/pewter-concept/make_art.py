@@ -5,16 +5,16 @@ leaves the bottom at columns 22-25, Route 3's the right edge at rows 24-27.
 
 The pieces: the kit's, its cliffs (cliffs.py, bank 9), the Pokémon Center and the Mart (the kit's), and buildings
 from the towns before, in Pewter's colours:
-- bank 7, Pewter's stone: the League Front Gate's pavilion (Route 22's pack) is the Museum of Science, and Viridian's
-  Gym is drawn in the pavilion's palette (each colour the pavilion's nearest; buildings/pewter_gym, written here);
+- bank 7, Pewter's stone: the League Front Gate's pavilion (Route 22's pack) is the Museum of Science, and Brock's
+  Gym (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3) is drawn in the pavilion's palette;
 - bank 10: Viridian's houses' palette, for the Museum's annex and the two houses: all three are Viridian's family
   house, because the secondary tileset's 384 tiles don't fit another kind of house beside the Museum and the Gym
   (and leave room for the seam to Route 3).
 Bank 8 is the kit's plants palette; 11-12 stay free for the seam to Route 3 (not rebuilt yet).
 
 Run from the repository root:  python3 project/art/pewter-concept/make_art.py
-It writes sheets/, the palettes, buildings/pewter_gym/, spec.json, grid.txt, border.txt, legend.json and doors.json
-next to itself; build.sh turns them into the game's tileset and map with pae.
+It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to itself; build.sh
+turns them into the game's tileset and map with pae.
 """
 import json
 import shutil
@@ -23,8 +23,6 @@ from collections import deque
 from dataclasses import replace
 from pathlib import Path
 
-import numpy as np
-from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
@@ -38,7 +36,7 @@ MAP_W, MAP_H = 52, 44
 STONE_BANK, CLIFF_BANK, HOUSE_BANK = 7, 9, 10
 # the buildings: their letters in the plan, where each comes from and its palette's bank
 OWN = {"U": (ART / "route22-concept/buildings/league_front_gate", STONE_BANK),
-       "W": (HERE / "buildings/pewter_gym", STONE_BANK),
+       "W": (buildings.REMAKES / "pewter_gym", STONE_BANK),
        "Y": (ART / "viridian-concept/buildings/house_family", HOUSE_BANK),
        "H": (ART / "viridian-concept/buildings/house_family", HOUSE_BANK),
        "X": (ART / "viridian-concept/buildings/house_family", HOUSE_BANK)}  # the same house twice: no more tiles
@@ -54,35 +52,6 @@ def plan() -> list[list[str]]:
     g = [list(r) for r in rows]
     assert len(g) == MAP_H and all(len(r) == MAP_W for r in g), "the plan is 52x44"
     return g
-
-
-def pewter_gym() -> None:
-    """Viridian's Gym in Pewter's stone: each colour of its palette as the pavilion's nearest, its door frames too."""
-    src = ART / "viridian-concept/buildings/viridian_gym"
-    with Image.open(ART / "route22-concept/buildings/league_front_gate/league_front_gate.png") as im:
-        stone = im.getpalette()[:48]
-    out = HERE / "buildings/pewter_gym"
-    out.mkdir(parents=True, exist_ok=True)
-    with Image.open(src / "viridian_gym.png") as im:
-        flat = im.getpalette()[:48]
-        idx = np.array(im)
-    pal = [tuple(flat[i:i + 3]) for i in range(0, 48, 3)]
-    sp = [tuple(stone[i:i + 3]) for i in range(0, 48, 3)]
-    lut = [0] + [min(range(1, 16), key=lambda j: sum((a - b) ** 2 for a, b in zip(pal[i], sp[j]))) for i in range(1, 16)]
-    im = Image.fromarray(np.array(lut, np.uint8)[idx], "P")
-    im.putpalette(stone + [0] * (768 - 48))
-    im.save(out / "pewter_gym.png", transparency=0)
-    with Image.open(src / "viridian_gym_door.png") as d:  # RGBA frames: each colour as its nearest stone colour
-        a = np.array(d.convert("RGBA"))
-    near = {c: sp[lut[pal.index(c)]] for c in pal[1:]}
-    for y in range(a.shape[0]):
-        for x in range(a.shape[1]):
-            if a[y, x, 3]:
-                a[y, x, :3] = near[tuple(int(v) for v in a[y, x, :3])]
-    Image.fromarray(a, "RGBA").save(out / "pewter_gym_door.png")
-    meta = json.loads((src / "viridian_gym.json").read_text())
-    meta.update(name="pewter_gym", source="viridian_gym in the League Front Gate's palette (make_art.py)")
-    (out / "pewter_gym.json").write_text(json.dumps(meta, indent=2) + "\n")
 
 
 def load(letter: str) -> buildings.Building:
@@ -154,7 +123,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    pewter_gym()
     g = fit(plan())
     d = doors(g)
     kit.check_forest(g)

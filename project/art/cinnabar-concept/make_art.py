@@ -3,13 +3,14 @@
 draw_plan.py). It is 96x44 blocks, as before; its joins stay where they were: Route 21's sea above (offset 0), Route
 20's to the right (offset 0).
 
-The pieces: the kit's and its Pokémon Center and Mart; the island's own buildings (cinnabar_buildings.py), each in
-its own palette: Blaine's Gym (Pewter's, in the volcano's reds, bank 7), the burned Mansion (Celadon's hotel, charred,
-bank 9), the Pokémon Lab (Oak's, as Pallet draws it, bank 10); the kit's cliffs for the volcano's rock (bank 11).
+The pieces: the kit's and its Pokémon Center and Mart; the island's own buildings, each in its own palette: Blaine's
+Gym (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3: volcanic stone, bank 7), the burned Mansion (Celadon's old
+hotel, charred: buildings/pokemon_mansion, until the remakes' larger Mansion moves in; bank 9), the Pokémon Lab (the
+remakes' Oak's lab, as Pallet has it, bank 10); the kit's cliffs for the volcano's rock (bank 11).
 Bank 8 is the kit's plants palette; 12 stays free. Route 20 and Route 21 are kit maps too, so there are no seams.
 
 Run from the repository root:  python3 project/art/cinnabar-concept/make_art.py
-It writes buildings/, sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
+It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
 itself; build.sh turns them into the game's tileset and map with pae.
 """
 import json
@@ -21,20 +22,18 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 import buildings
-import cinnabar_buildings
 import cliffs
 import kit
 
 HERE = Path(__file__).resolve().parent
-CB = cinnabar_buildings.OUT
+R = buildings.REMAKES
 SECONDARY = "gTileset_CinnabarConcept"
 MAP_W, MAP_H = 96, 44
 GYM_BANK, MANSION_BANK, LAB_BANK, CLIFF_BANK = 7, 9, 10, 11
 DOOR = "MB_ANIMATED_DOOR"
-BUILDINGS = {"H": (CB / "cinnabar_gym", GYM_BANK), "U": (CB / "pokemon_mansion", MANSION_BANK),
-             "X": (CB / "cinnabar_lab", LAB_BANK)}
+BUILDINGS = {"H": (R / "cinnabar_gym", GYM_BANK), "U": (HERE / "buildings/pokemon_mansion", MANSION_BANK),
+             "X": (R / "pokemon_lab", LAB_BANK)}
 SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
 SEA = "s"
 WATER = set("s~")
@@ -137,8 +136,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    for draw in cinnabar_buildings.ALL:
-        draw()
     g = plan()
     d = doors(g)
     cliffs.layout(g)

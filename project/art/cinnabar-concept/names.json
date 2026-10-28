@@ -2666,7 +2666,7 @@
     26
    ]
   },
-  "cinnabar_lab": {
+  "pokemon_lab": {
    "ids": [
     705,
     706,
@@ -3252,7 +3252,7 @@
  },
  "tiles": {
   "primary": 538,
-  "secondary": 353
+  "secondary": 371
  },
  "metatile_counts": {
   "primary": 410,

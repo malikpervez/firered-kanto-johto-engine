@@ -4,6 +4,7 @@
 # and walk Oak's cutscenes along its roads. Run from the repository root.
 set -e
 A=project/art/pallet-concept
+R=project/art/packs/buildings_v0.3/buildings  # the remakes pack (Oak's lab's door)
 python3 $A/make_art.py
 cd engine
 P="-p ."
@@ -24,7 +25,7 @@ pae map connect $M down Route21_North_Frlg --align 18,7 $P
 [ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P  # build_all.sh makes them last, when every map is painted
 pae door add $M 7 7 --frames ../$A/buildings/red_house/red_house_door.png $P    # your house's door (drawn frames)
 pae door add $M 18 7 --frames ../$A/buildings/blue_house/blue_house_door.png $P  # your rival's
-pae door add $M 21 15 --panel 1,0,15,14 $P  # Oak's lab
+pae door add $M 21 15 --frames ../$R/pokemon_lab/pokemon_lab_door.png $P  # Oak's lab
 
 # events
 pae map place $M warp 0 7 7 $P               # your house

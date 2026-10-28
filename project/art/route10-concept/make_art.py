@@ -5,9 +5,9 @@ its joins: Route 9's road the left edge at rows 17-19 (offset 0), Lavender's roa
 (Lavender's 12-16, offset 4).
 
 The pieces: the kit's, the Pokémon Center (the kit's), its cliffs and Route 2's cave mouth for Rock Tunnel's two
-mouths in the cliffs' palette (bank 7), and Pewter's Gym, made the Power Plant (buildings/power_plant, written here),
-in its own palette (bank 9). Bank 8 is the kit's plants palette; 10-12 stay free for the seam to Lavender (not rebuilt
-yet).
+mouths in the cliffs' palette (bank 7), and the Power Plant (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3:
+15x8 blocks, its door at 7,7) in Pewter's stone palette (bank 9). Bank 8 is the kit's plants palette; 10-12 stay free for the seam to
+Lavender (not rebuilt yet).
 
 Run from the repository root:  python3 project/art/route10-concept/make_art.py
 It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to itself;
@@ -19,7 +19,7 @@ from collections import deque
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
@@ -35,7 +35,7 @@ WEST = [(0, y) for y in range(17, 20)]
 SOUTH = [(x, MAP_H - 1) for x in range(16, 21)]
 TREES = [(20, 11), (21, 11), (22, 11), (23, 11)]  # the young trees to cut, closing the meadow
 MEADOW = (24, 5)
-ISLAND = (29, 41)
+ISLAND = (28, 42)
 # the trainers the plan is made for (build.sh places them): (x, y, the ways they look, sight). None sees the road
 TRAINERS = {"Heidi": (22, 13, "down", 2), "Mark": (27, 22, "left", 5),
             "Carol": (28, 50, "up down left right", 2), "Clark": (5, 50, "up down left right", 1),
@@ -44,39 +44,10 @@ HERMAN_WALK = range(24, 29)  # Herman wanders left and right along row 57
 STEP = {"left": (-1, 0), "right": (1, 0), "up": (0, -1), "down": (0, 1)}
 WATER = set("~")
 SOLID = set("T#bRoklSBcw_~vrYZX") | cliffs.SOLID
-GYM = ART / "pewter-concept/buildings/pewter_gym"
-PLANT_DIR = HERE / "buildings/power_plant"
 
-
-def power_plant() -> buildings.Building:
-    """The Power Plant: Pewter's Gym with its Gym plaque blank and a lightning bolt on its emblem for the Boulder
-    Badge's leaf (written to buildings/power_plant/, with the Gym's door frames, their plaque blank too)."""
-    PLANT_DIR.mkdir(parents=True, exist_ok=True)
-    with Image.open(GYM / "pewter_gym.png") as im:
-        idx, pal = np.array(im, np.uint8), im.getpalette()[:48]
-    idx[50:57, 44:68][idx[50:57, 44:68] == 2] = 10           # the plaque's letters: its plain board
-    gold = np.isin(idx[24:49, 44:68], (12, 13, 14))            # the emblem's gold disc
-    bolt = Image.new("1", (24, 25))
-    ImageDraw.Draw(bolt).polygon([(15, 3), (6, 14), (11, 14), (8, 23), (18, 10), (13, 10)], fill=1)
-    disc = idx[24:49, 44:68]
-    disc[gold] = 12                                            # a dark disc,
-    disc[gold & np.array(bolt, bool)] = 14                     # and a bright bolt on it
-    out = Image.fromarray(idx, "P")
-    out.putpalette(pal + [0] * (768 - len(pal)))
-    out.save(PLANT_DIR / "power_plant.png", transparency=0)
-    meta = json.loads((GYM / "pewter_gym.json").read_text())
-    (PLANT_DIR / "power_plant.json").write_text(json.dumps(dict(meta, id="power_plant", image="power_plant.png"),
-                                                            indent=2) + "\n")
-    # the Gym's door frames, with the board over the door blank too
-    frames = np.array(Image.open(GYM / "pewter_gym_door.png").convert("RGBA"))
-    rgb = [tuple(pal[i:i + 3]) for i in range(0, 48, 3)]
-    letters = (frames[2:9] == np.array([*rgb[2], 255], np.uint8)).all(axis=2)
-    frames[2:9][letters] = [*rgb[10], 255]
-    Image.fromarray(frames, "RGBA").save(PLANT_DIR / "power_plant_door.png")
-    return buildings.load(PLANT_DIR)
-
-
-PLANT = power_plant()
+# the Power Plant, from the remakes pack: four sawtooth halls, a boiler annex, two stacks and a sealed loading shutter;
+# one door (its personnel entrance), at 7,7
+PLANT = buildings.load(buildings.REMAKES / "power_plant")
 
 
 def _mouth() -> buildings.Building:

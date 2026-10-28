@@ -4,7 +4,7 @@ gatehouse and Fuchsia (see draw_plan.py). It is 60x20 blocks, as before; its joi
 14-22) at the top edge, columns 8-16 (offset -6, as before), and Fuchsia's west road (its rows 18-20) at the right
 edge, rows 8-10 (offset -10, as before).
 
-The pieces: the kit's, and Route 16's Cycling Road gatehouse (route16-concept/route16_buildings.py) in Saffron's
+The pieces: the kit's, and Route 16's Cycling Road gatehouse (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3) in Saffron's
 buildings' palette (bank 7 here). Bank 8 is the kit's plants palette; 9-12 stay free for the seam to old Fuchsia, whose
 strip in this route (the right seven columns) is forest, lawn, road and hedges only.
 
@@ -21,10 +21,8 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "route16-concept"))
 import buildings
 import kit
-import route16_buildings
 
 HERE = Path(__file__).resolve().parent
 SECONDARY = "gTileset_Route18Concept"
@@ -35,7 +33,7 @@ EAST = [(MAP_W - 1, y) for y in range(8, 11)]
 SOLID = set("T#bRoklSBcw_~vrsqQC")
 IN_EAST, IN_WEST = "MB_EAST_ARROW_WARP", "MB_WEST_ARROW_WARP"
 # the gatehouse: its letter in the plan, its pack, its bank, its doorways (the left one entered walking east)
-BUILDINGS = {"C": (route16_buildings.OUT / "cycling_gate", GATE_BANK, [IN_EAST, IN_WEST])}
+BUILDINGS = {"C": (buildings.REMAKES / "cycling_gate", GATE_BANK, [IN_EAST, IN_WEST])}
 HALL = ((41, 9), (48, 9))   # the gatehouse's hall: doorway to doorway
 # the rockers (local ids 1-3), where they stand, which ways they look and how far; the Pokémon about (4-7)
 ROCKERS = [(38, 13, "W", 4), (31, 14, "NESW", 1), (23, 12, "E", 6)]
@@ -128,7 +126,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    route16_buildings.gate()
     g = plan()
     d = doors(g)
     kit.check_forest(g)

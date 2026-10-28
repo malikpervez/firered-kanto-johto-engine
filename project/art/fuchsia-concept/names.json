@@ -2756,7 +2756,7 @@
     13
    ]
   },
-  "house_back_door": {
+  "house_pond_garden": {
    "ids": [
     762,
     763,
@@ -2787,7 +2787,7 @@
  },
  "tiles": {
   "primary": 538,
-  "secondary": 207
+  "secondary": 339
  },
  "metatile_counts": {
   "primary": 410,

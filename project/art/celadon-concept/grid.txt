@@ -24,10 +24,10 @@ TTTTTTT===================================================TT
 ============================================================
 TTTTTTT===================================================TT
 TTTTTTTbbbbb.bbbbbb.==RRGGGGGGGGG.....................==..TT
-TTTTTTTb***...****b.==RRGGGGGGGGG.PPPP.EEEEE.HHHH.RR..==..TT
-TTTTTTTb***...****b.==..GGGGGGGGG.PPPP.EEEEE.HHHH.RR..==..TT
-TTTTTTTb***...****b.==..GGGGGGGGG.PPPP.EEEEE.HHHH.....==..TT
-TTTTTTTb..........b.==..GGGGGGGGGSPPPPSEEEEE.HHHH...S.==..TT
+TTTTTTTb***...****b.==RRGGGGGGGGG.PPPP..EEEE.HHHH.RR..==..TT
+TTTTTTTb***...****b.==..GGGGGGGGG.PPPP..EEEE.HHHH.RR..==..TT
+TTTTTTTb***...****b.==..GGGGGGGGG.PPPP..EEEE.HHHH.....==..TT
+TTTTTTTb..........b.==..GGGGGGGGGSPPPPS.EEEE.HHHH...S.==..TT
 TTTTTTTb.YYYYYYY..b.====================================..TT
 TTTTTTTb.YYYYYYY..b.====================================..TT
 TTTTTTTb.YYYYYYY..b......................RR...............TT

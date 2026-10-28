@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "id": "saffron_gate",
+  "type": "building",
+  "image": "saffron_gate.png",
+  "image_size_px": [
+    64,
+    48
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 4,
+    "height": 3
+  },
+  "transparent_index": 0,
+  "door_blocks": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "door_block": [
+    1,
+    2
+  ],
+  "door": {
+    "image": "saffron_gate_door.png",
+    "sheet_size_px": [
+      96,
+      32
+    ],
+    "frame_size_px": [
+      32,
+      32
+    ],
+    "frame_count": 3,
+    "frame_order": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "anchor_top_left_px": [
+      16,
+      16
+    ],
+    "anchor_top_left_block": [
+      1,
+      1
+    ],
+    "door_blocks": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "opening_rect_in_frame_px": {
+      "x": 2,
+      "y": 10,
+      "width": 28,
+      "height": 20
+    },
+    "closed_frame_matches_building_crop": true,
+    "recommended_frame_ms": 100,
+    "loop": false,
+    "composition": "Replace the whole frame rectangle including alpha. Existing map event/lock logic remains authoritative."
+  },
+  "door_instances": [
+    {
+      "image": "saffron_gate_door.png",
+      "sheet_size_px": [
+        96,
+        32
+      ],
+      "frame_size_px": [
+        32,
+        32
+      ],
+      "frame_count": 3,
+      "frame_order": [
+        "closed",
+        "half_open",
+        "open"
+      ],
+      "anchor_top_left_px": [
+        16,
+        16
+      ],
+      "anchor_top_left_block": [
+        1,
+        1
+      ],
+      "door_blocks": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "opening_rect_in_frame_px": {
+        "x": 2,
+        "y": 10,
+        "width": 28,
+        "height": 20
+      },
+      "closed_frame_matches_building_crop": true,
+      "recommended_frame_ms": 100,
+      "loop": false,
+      "composition": "Replace the whole frame rectangle including alpha. Existing map event/lock logic remains authoritative."
+    }
+  ],
+  "palette": "saffron",
+  "palette_file": "palette.gpl",
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "collision_rows": [
+    "####",
+    "####",
+    "#DD#"
+  ],
+  "preview_4x": "saffron_gate_4x.png",
+  "maps": [
+    "saffron"
+  ],
+  "design": "Compact civic guardhouse with a steel hipped roof, broad stone framing and a two-block threshold; north-facing threshold uses a pale luminous edge, with no arrow.",
+  "tile_economy": {
+    "tile_size_px": [
+      8,
+      8
+    ],
+    "mirrors_folded": true,
+    "includes_transparent_tile": true,
+    "includes_all_door_frames": true,
+    "unique_static": 42,
+    "unique_static_and_frames": 53
+  },
+  "status": "scale revision v0.3; awaiting visual review",
+  "story_events": "Keep all original map warps, trainer/event data and unlock flags. Art metadata does not introduce gameplay changes.",
+  "unanimated_doorways": []
+}

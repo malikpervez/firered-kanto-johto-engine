@@ -1,0 +1,404 @@
+{
+  "schema_version": 2,
+  "id": "celadon_mansion",
+  "type": "building",
+  "image": "celadon_mansion.png",
+  "image_size_px": [
+    128,
+    128
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 8,
+    "height": 8
+  },
+  "transparent_index": 0,
+  "door_blocks": [
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "door_block": [
+    3,
+    7
+  ],
+  "door": {
+    "image": "celadon_mansion_door.png",
+    "sheet_size_px": [
+      48,
+      32
+    ],
+    "frame_size_px": [
+      16,
+      32
+    ],
+    "frame_count": 3,
+    "frame_order": [
+      "closed",
+      "half_open",
+      "open"
+    ],
+    "anchor_top_left_px": [
+      48,
+      96
+    ],
+    "anchor_top_left_block": [
+      3,
+      6
+    ],
+    "door_blocks": [
+      [
+        3,
+        7
+      ]
+    ],
+    "opening_rect_in_frame_px": {
+      "x": 2,
+      "y": 10,
+      "width": 12,
+      "height": 20
+    },
+    "closed_frame_matches_building_crop": true,
+    "recommended_frame_ms": 100,
+    "loop": false,
+    "composition": "Replace the whole frame rectangle including alpha. Existing map event/lock logic remains authoritative."
+  },
+  "door_instances": [
+    {
+      "image": "celadon_mansion_door.png",
+      "sheet_size_px": [
+        48,
+        32
+      ],
+      "frame_size_px": [
+        16,
+        32
+      ],
+      "frame_count": 3,
+      "frame_order": [
+        "closed",
+        "half_open",
+        "open"
+      ],
+      "anchor_top_left_px": [
+        48,
+        96
+      ],
+      "anchor_top_left_block": [
+        3,
+        6
+      ],
+      "door_blocks": [
+        [
+          3,
+          7
+        ]
+      ],
+      "opening_rect_in_frame_px": {
+        "x": 2,
+        "y": 10,
+        "width": 12,
+        "height": 20
+      },
+      "closed_frame_matches_building_crop": true,
+      "recommended_frame_ms": 100,
+      "loop": false,
+      "composition": "Replace the whole frame rectangle including alpha. Existing map event/lock logic remains authoritative."
+    }
+  ],
+  "palette": "celadon",
+  "palette_file": "palette.gpl",
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      7
+    ]
+  ],
+  "collision_rows": [
+    "###D####",
+    "########",
+    "########",
+    "########",
+    "########",
+    "########",
+    "########",
+    "###D####"
+  ],
+  "preview_4x": "celadon_mansion_4x.png",
+  "maps": [
+    "celadon"
+  ],
+  "design": "Mansard apartment building with three window tiers, projecting string courses, entry canopy and a lit north-facing rear threshold in the roof edge.",
+  "tile_economy": {
+    "tile_size_px": [
+      8,
+      8
+    ],
+    "mirrors_folded": true,
+    "includes_transparent_tile": true,
+    "includes_all_door_frames": true,
+    "unique_static": 79,
+    "unique_static_and_frames": 86
+  },
+  "status": "scale revision v0.3; awaiting visual review",
+  "story_events": "Keep all original map warps, trainer/event data and unlock flags. Art metadata does not introduce gameplay changes.",
+  "unanimated_doorways": [
+    {
+      "block": [
+        3,
+        0
+      ],
+      "enter_facing": "south",
+      "rendering": "fixed luminous threshold / passage"
+    }
+  ]
+}

@@ -3095,8 +3095,8 @@
    }
   },
   {
-   "name": "house_back_door",
-   "image": "sheets/house_back_door.png",
+   "name": "house_pond_garden",
+   "image": "sheets/house_pond_garden.png",
    "x": 0,
    "y": 0,
    "w": 4,

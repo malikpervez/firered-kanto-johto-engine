@@ -3009,13 +3009,13 @@
   },
   {
    "name": "arch",
-   "image": "sheets/route_wood.png",
+   "image": "sheets/route.png",
    "x": 0,
-   "y": 0,
+   "y": 48,
    "w": 4,
    "h": 2,
    "banks": [
-    2
+    7
    ],
    "tileset": "secondary",
    "ground": "dirt#15",

@@ -23,7 +23,7 @@ It has:
   the girl who gives HM02 Fly lives;
 - **the meadow** south of the road before Snorlax: tall grass round a pond.
 
-The gatehouse is drawn here (`route16_buildings.py`): a gatehouse across the road with a doorway at each end. The
+The gatehouse is from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`) (`cycling_gate`): a gatehouse across the road with a doorway at each end. The
 left doorway is entered walking east and the right one walking west (arrow warps that don't animate), so the doors
 match its inside's, which are on its west and east walls. It is the east-west gate pack the earlier gates lacked
 (KR-40, KR-52, KR-60). The route has it twice, for the gatehouse's two halls.

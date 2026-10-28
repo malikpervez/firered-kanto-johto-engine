@@ -5,7 +5,7 @@
 # has no joins to keep and no seams. Run from the repository root (project/art/build_all.sh rebuilds every map).
 set -e
 A=project/art/saffron-concept
-B=project/art/saffron-concept/buildings
+B=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the city's own buildings
 K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
 python3 $A/make_art.py
@@ -30,9 +30,9 @@ pae door add $M 38 17 --frames ../$B/silph_co/silph_co_door.png --sound sliding 
 pae door add $M 17 17 --frames ../$B/saffron_gym/saffron_gym_door.png $P
 pae door add $M 7 17 --frames ../$B/fighting_dojo/fighting_dojo_door.png $P
 pae door add $M 29 2 --frames ../$B/saffron_gate/saffron_gate_door.png $P
-pae door add $M 6 8 --frames ../$V/house_family/house_family_door.png $P
+pae door add $M 6 8 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P
 pae door add $M 13 8 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P
-pae door add $M 36 30 --frames ../$V/trainer_school/trainer_school_door.png $P
+pae door add $M 36 30 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P
 
 # events: every warp keeps its number (the buildings behind them point at it); the west and east gatehouses' right
 # door blocks are second warps to the same gatehouse doors, added the first time (15 and 16)

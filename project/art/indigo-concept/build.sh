@@ -5,7 +5,7 @@
 # (project/art/build_all.sh rebuilds every map).
 set -e
 A=project/art/indigo-concept
-B=project/art/indigo-concept/buildings
+B=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the League
 python3 $A/make_art.py
 cd engine
 P="-p ."

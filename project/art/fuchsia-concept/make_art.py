@@ -4,10 +4,10 @@ sea (see draw_plan.py). It is 48x40 blocks, as before, and its joins stay where 
 (rows 18-20, offset 10), Route 15 at the right (rows 20-23, offset 16), Route 19 below the bottom edge (columns
 19-28, offset 12).
 
-The pieces: the kit's and its Pokémon Center and Mart; the Safari Zone's gate lodge and Koga's Gym, drawn here
-(fuchsia_buildings.py) in Saffron's buildings' palette (bank 9); Viridian's houses in theirs (bank 7: the gardener's
-for the Safari Zone's office and a house, the family's for the Warden's, the pond keeper's for a house, and with a
-back door drawn in for the house with the pond garden). Bank 8 is the kit's plants palette; 10-12 stay free for the
+The pieces: the kit's and its Pokémon Center and Mart; the Safari Zone's gate lodge and Koga's Gym (Kanto Buildings
+Remakes v0.3, ../packs/buildings_v0.3) in Saffron's buildings' palette (bank 9); Viridian's houses in theirs (bank 7:
+the gardener's for the Safari Zone's office and a house, the family's for the Warden's, the pond keeper's for a house,
+and the same pack's pond keeper's house with a back door for the house with the pond garden). Bank 8 is the kit's plants palette; 10-12 stay free for the
 seams to old Routes 15 and 19, whose strips in this town (the right seven columns, the bottom seven rows) are
 forest, lawn, road, dirt and hedges only.
 
@@ -24,14 +24,12 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 import buildings
-import fuchsia_buildings
 import kit
 
 HERE = Path(__file__).resolve().parent
 VB = HERE.parent / "viridian-concept/buildings"
-FB = fuchsia_buildings.OUT
+FB = buildings.REMAKES
 SECONDARY = "gTileset_FuchsiaConcept"
 MAP_W, MAP_H = 48, 40
 HOUSE_BANK, TOWN_BANK = 7, 9
@@ -48,7 +46,7 @@ BUILDINGS = {"A": (FB / "safari_gate", TOWN_BANK, [DOOR]),
              "H": (VB / "house_gardener", HOUSE_BANK, [DOOR]),
              "W": (VB / "house_family", HOUSE_BANK, [DOOR]),
              "J": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR]),
-             "K": (FB / "house_back_door", HOUSE_BANK, [DOOR, BACK])}
+             "K": (FB / "house_pond_garden", HOUSE_BANK, [DOOR, BACK])}
 SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
 STREET = (20, 19)        # the main street: everything walkable is reached from it
 TREES = [(9, 11), (30, 11), (17, 26), (22, 27)]   # the trees to cut: shortcuts, and the flower garden's way in
@@ -155,8 +153,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    for draw in fuchsia_buildings.ALL:
-        draw()
     g = plan()
     d = doors(g)
     kit.check_forest(g)

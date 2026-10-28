@@ -1,0 +1,20 @@
+GIMP Palette
+Name: lab
+Columns: 16
+#
+  0   0   0	index 0 transparent
+ 24  32  40	index 1
+ 64  80  96	index 2
+ 96 112 128	index 3
+144 160 168	index 4
+192 200 208	index 5
+152 144 120	index 6
+200 192 168	index 7
+232 224 208	index 8
+ 40  64  80	index 9
+120 176 184	index 10
+200 232 232	index 11
+ 40  96  56	index 12
+ 88 152  72	index 13
+ 72 120  88	index 14
+248 248 240	index 15

@@ -4,10 +4,10 @@
 22-25, offset -2) at the left edge and Route 7's (its rows 10-13, offset 10) at the right.
 
 The pieces: the kit's and its Pokémon Center; the Department Store, the Mansion, the hotel, the Game Corner and
-Erika's Gym, drawn here (celadon_buildings.py) in one palette (bank 9); Viridian's houses (the pond keeper's for the
-Prize Room and a house, the family's for the restaurant) in theirs (bank 7). The town's own tileset holds 384 tiles:
-the buildings are drawn on the 16-pixel grid so their tiles repeat. Bank 8 is the kit's plants palette; 10-12 stay free for seams to old maps (Route 16 is
-from the kit now: their seam needs none).
+Erika's Gym, from Kanto Buildings Remakes v0.3 (../packs/buildings_v0.3), in one palette (bank 9); Viridian's pond
+keeper's house in its palette (bank 7) for the Prize Room, the restaurant and a house. The town's own tileset holds
+384 tiles: the remakes take 290 of them, and one kind of house (55) fits beside them, two (102) don't. Bank 8 is the
+kit's plants palette; 10-12 stay free for seams to old maps (Route 16 is from the kit now: their seam needs none).
 
 Run from the repository root:  python3 project/art/celadon-concept/make_art.py
 It writes buildings/, sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
@@ -22,9 +22,7 @@ import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 import buildings
-import celadon_buildings
 import kit
 
 HERE = Path(__file__).resolve().parent
@@ -39,13 +37,14 @@ SOLID = set("T#bRoklSBcw_~vrDMOCGPEHY")
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the
 # Mansion's second is its back door, entered walking south from above)
-BUILDINGS = {"D": (celadon_buildings.OUT / "department_store", CITY_BANK, [DOOR, DOOR]),
-             "M": (celadon_buildings.OUT / "mansion", CITY_BANK, [DOOR, BACK]),
-             "O": (celadon_buildings.OUT / "hotel", CITY_BANK, [DOOR]),
-             "G": (celadon_buildings.OUT / "game_corner", CITY_BANK, [DOOR]),
-             "Y": (celadon_buildings.OUT / "celadon_gym", CITY_BANK, [DOOR]),
+R = buildings.REMAKES
+BUILDINGS = {"D": (R / "department_store", CITY_BANK, [DOOR, DOOR]),
+             "M": (R / "celadon_mansion", CITY_BANK, [DOOR, BACK]),
+             "O": (R / "celadon_hotel", CITY_BANK, [DOOR]),
+             "G": (R / "game_corner", CITY_BANK, [DOOR]),
+             "Y": (R / "celadon_gym", CITY_BANK, [DOOR]),
              "P": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR]),
-             "E": (VB / "house_family", HOUSE_BANK, [DOOR]),
+             "E": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR]),
              "H": (VB / "house_pond_keeper", HOUSE_BANK, [DOOR])}  # (the Prize Room's: one pack, fewer tiles)
 SHARED = {"C": "pokemon_center"}
 TREES = [(50, 13), (12, 25)]  # the trees to cut: the walled garden's behind the Center, the Gym garden's
@@ -132,8 +131,6 @@ def check(g, d) -> None:
 
 
 def main() -> None:
-    for draw in celadon_buildings.ALL:
-        draw()
     g = plan()
     d = doors(g)
     kit.check_forest(g)

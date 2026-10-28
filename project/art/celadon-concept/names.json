@@ -2661,7 +2661,7 @@
     67
    ]
   },
-  "mansion": {
+  "celadon_mansion": {
    "ids": [
     710,
     711,
@@ -2737,7 +2737,7 @@
     3
    ]
   },
-  "hotel": {
+  "celadon_hotel": {
    "ids": [
     774,
     775,
@@ -2906,46 +2906,15 @@
    "open": [
     13
    ]
-  },
-  "house_family": {
-   "ids": [
-    900,
-    901,
-    902,
-    903,
-    904,
-    905,
-    906,
-    907,
-    908,
-    909,
-    910,
-    911,
-    912,
-    913,
-    914,
-    915,
-    916,
-    917,
-    918,
-    919
-   ],
-   "w": 5,
-   "h": 4,
-   "solid": true,
-   "elevation": null,
-   "open": [
-    17
-   ]
   }
  },
  "tiles": {
   "primary": 538,
-  "secondary": 231
+  "secondary": 345
  },
  "metatile_counts": {
   "primary": 410,
-  "secondary": 280
+  "secondary": 260
  },
  "animations": [
   {

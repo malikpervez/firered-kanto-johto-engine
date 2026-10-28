@@ -11,8 +11,8 @@ at columns 22–25, Route 3's the right edge at rows 24–27. It has:
 - **the mountains** to the north and north-east (the kit's cliffs, `cliffs.py`), the forest to the west and south;
 - **the Museum of Science** against the northern cliff over a paved plaza (the League Front Gate's pavilion, Route
   22's pack), and **its annex** in a yard behind a tree to cut (32,12);
-- **the Gym** in the west with a paved forecourt (Viridian's Gym in the pavilion's grey stone: `buildings/pewter_gym`,
-  written by `make_art.py`, each colour the pavilion's nearest);
+- **the Gym** in the west with a paved forecourt (Brock's rock Gym from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`): rough-cut
+  limestone under a broad slate hip, in the pavilion's palette);
 - **the square** on the main street, the Pokémon Center and the Mart facing it (the heal spot is in front of the
   Center, 29,33), and two houses;
 - **the road east** to Route 3 between the cliff and the forest, where the Gym guide (43,24) and Oak's aide (47,24)
