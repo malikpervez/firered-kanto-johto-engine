@@ -3621,8 +3621,8 @@
    "image": "sheets/power_plant.png",
    "x": 0,
    "y": 0,
-   "w": 7,
-   "h": 5,
+   "w": 15,
+   "h": 8,
    "banks": [
     9
    ],
@@ -3630,10 +3630,10 @@
    "ground": "grass",
    "solid": true,
    "open": [
-    "3,4"
+    "7,7"
    ],
    "behaviors": {
-    "3,4": "MB_ANIMATED_DOOR"
+    "7,7": "MB_ANIMATED_DOOR"
    }
   }
  ]

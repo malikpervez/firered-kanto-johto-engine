@@ -11,12 +11,12 @@ plays the events one after another, each starting where the last one left the ga
 
 | | |
 |---|---|
-| Date | 2026-10-27 |
-| Game | branch `claude/buildings-v0.3` at `d748d93f` (Kanto Buildings Remakes v0.3, and old Saffron's seam removed: KR-86) |
-| ROM | `make -j4` with the default settings. SHA-1 `b239476c44d43285b30eb348caba0e84b02f0d4a` |
+| Date | 2026-10-28 |
+| Game | branch `claude/power-plant-v0.3` (Route 10's larger Power Plant, KR-87), on `claude/buildings-v0.3` |
+| ROM | `make -j4` with the default settings. SHA-1 `2d8da76de922dc8c0768d2472d2fc6e66eb35247` |
 | pae | `b73c7e6` (pae `main` after PR #35) |
-| Last step passed | 399 `indigo-center`, the end of the check: the Indigo Plateau's Pokémon Center, at the League's doors. **All 399 steps pass from the top in one run** (8481 s), through every rebuilt Kanto map |
-| Replay tests | `pae test run`: 550 tests; the 84 whose screen changed (the new buildings, Saffron's colours) looked at and accepted |
+| Last step passed | 399 `indigo-center`, the end of the check. **Steps 114 (`route10`) to 399 pass in one run** (6296 s) from step 113's checkpoint; steps 1-113 don't reach Route 10 and passed on `claude/buildings-v0.3` (all 399 from the top, 8481 s) |
+| Replay tests | `pae test run`: 550 tests; the 4 Route 10 ones whose screen changed (the plant, its moved door, back door and Max Ether) looked at and accepted |
 
 ## How to run it
 

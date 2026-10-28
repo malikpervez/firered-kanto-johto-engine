@@ -1,12 +1,12 @@
 #!/bin/sh
 # Rebuild Route 10 from its concept with pae: lay out the plan, build the tileset (the kit's primary, the route's own
-# cliffs, Route 2's cave mouth for Rock Tunnel's two mouths and Pewter's Gym made the Power Plant), paint the map, keep
+# cliffs, Route 2's cave mouth for Rock Tunnel's two mouths and the remakes' Power Plant), paint the map, keep
 # its joins to Route 9 and Lavender, make the seams and the doors, put the events where the new route has them. Run from
 # the repository root (project/art/build_all.sh rebuilds every map).
 set -e
 A=project/art/route10-concept
 K=project/art/kit/buildings
-PG=project/art/route10-concept/buildings/power_plant
+PG=project/art/packs/buildings_v0.3/buildings/power_plant  # the remakes pack
 python3 $A/make_art.py
 cd engine
 P="-p ."
@@ -29,14 +29,14 @@ pae map connect $M down LavenderTown_Frlg --offset 4 $P
 
 # doors, drawn in their packs (the caves' mouths are open)
 pae door add $M 14 15 --frames ../$K/pokemon_center/pokemon_center_door.png --sound sliding $P
-pae door add $M 29 39 --frames ../$PG/power_plant_door.png $P
+pae door add $M 28 41 --frames ../$PG/power_plant_door.png $P
 
 # events: every warp keeps its number (the tunnel, the Center and the plant point at it)
 pae map place $M warp 0 8 8 $P     # Rock Tunnel's north mouth, in the clearing's ridge
 pae map place $M warp 1 10 45 $P   # its south mouth, at the mountains' foot
-pae map place $M warp 2 29 39 $P   # the Power Plant's door, on its island
+pae map place $M warp 2 28 41 $P   # the Power Plant's door, on its island
 pae map place $M warp 3 14 15 $P   # the Pokémon Center
-pae map place $M warp 4 25 37 $P   # where the plant's back door lets you out, on the island's west shore
+pae map place $M warp 4 20 38 $P   # where the plant's back door lets you out, on the island's west shore
 # the trainers, where the plan is made for them (make_art.py: none of them sees the road)
 pae map place $M object 0 28 50 $P   # Carol, Clark, Herman and Trent in the south valley
 pae map place $M object 1 5 50 $P
@@ -48,7 +48,7 @@ pae map place $M object 6 20 11 $P   # the young trees to cut, in the meadow's h
 pae map place $M object 7 21 11 $P
 pae map place $M object 8 22 11 $P
 pae map place $M object 9 23 11 $P
-pae map place $M object 10 27 41 $P  # the Electabuzz, by the Power Plant
+pae map place $M object 10 24 43 $P  # the Electabuzz, on the beach by the Power Plant
 pae map place $M object 11 21 4 $P   # the Voltorb, rolling about the meadow
 pae map place $M object 15 25 8 $P
 pae map place $M object 12 12 55 $P  # Fearow, in the south valley
@@ -58,7 +58,7 @@ pae map place $M bg 0 14 46 $P       # the south mouth's sign
 pae map place $M bg 1 26 15 $P       # the Power Plant sign, by the river
 pae map place $M bg 2 12 9 $P        # the north mouth's sign
 pae map place $M bg 3 3 10 $P        # the hidden Super Potion, in the clearing's corner
-pae map place $M bg 4 33 41 $P       # the hidden Max Ether, on the island
+pae map place $M bg 4 34 43 $P       # the hidden Max Ether, on the island's beach
 pae map place $M bg 5 26 3 $P        # the hidden Cheri Berry, in the meadow
 pae map place $M bg 6 25 24 $P       # the hidden Persim Berry, in the clearing
 pae map place $M bg 7 34 56 $P       # the hidden Nanab Berry, in the valley's corner
