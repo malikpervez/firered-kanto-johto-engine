@@ -10,7 +10,8 @@ from the towns before, in Pewter's colours:
 - bank 10: Viridian's houses' palette, for the Museum's annex and the two houses: all three are Viridian's family
   house, because the secondary tileset's 384 tiles don't fit another kind of house beside the Museum and the Gym
   (and leave room for the seam to Route 3).
-Bank 8 is the kit's plants palette; 11-12 stay free for the seam to Route 3 (not rebuilt yet).
+Bank 8 is the kit's plants palette; 11 and 12 are the family house recoloured, slate and clay, for the cottages
+without doors (the house's own tiles, a window where its door was: no new tiles).
 
 Run from the repository root:  python3 project/art/pewter-concept/make_art.py
 It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to itself; build.sh
@@ -44,7 +45,34 @@ SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
 CUT_TREE = (32, 12)  # the tree to cut, in the gap into the annex's yard (an event, on the lawn)
 SOUTH, EAST = [(x, MAP_H - 1) for x in range(22, 26)], [(MAP_W - 1, y) for y in range(24, 28)]
 GUIDE_GATE = [(43, y) for y in range(25, 28)]  # the Gym guide's triggers across the road east (he stands at 43,24)
-SOLID = set("T#bRoklSBcw_~vrUWYHXZL") | cliffs.SOLID
+SOLID = set("T#bRoklSBcw_~vrUWYHXZL12") | cliffs.SOLID
+# the cottages: the family house with a third window where its door was, recoloured (the same indices, so the same
+# tiles in other banks): their letters, names, banks and colour changes (2 the roof's outline, 4-5 its tiles, 13 its
+# trim, shutters and woodwork; 10-12 the walls)
+COTTAGES = {"1": ("cottage_slate", 11, {2: (48, 56, 72), 4: (88, 104, 128), 5: (128, 148, 168), 13: (80, 88, 104)}),
+            "2": ("cottage_clay", 12, {2: (72, 48, 40), 4: (152, 104, 72), 5: (192, 144, 104), 13: (112, 80, 56),
+                                       10: (184, 168, 136), 11: (224, 208, 176), 12: (240, 232, 208)})}
+
+
+def cottage(idx):
+    """The family house (5x4 blocks, door at 2,3) without its door: its porch's awning gone (the wall's 8x8 cell
+    beside it), and the right-hand window copied into the door's place, so every cell is one the house has."""
+    out = idx.copy()
+
+    def cell(r, c):
+        return idx[r * 8:r * 8 + 8, c * 8:c * 8 + 8]
+
+    def put(r, c, t):
+        out[r * 8:r * 8 + 8, c * 8:c * 8 + 8] = t
+    for c in (3, 4, 5, 6):
+        put(4, c, cell(5, 3))
+    for r in (5, 6):
+        for k, c in enumerate((7, 8)):
+            put(r, 4 + k, cell(r, c))
+    for c in (4, 5):
+        put(7, c, cell(7, 3))
+    put(4, 4, cell(4, 7)); put(4, 5, cell(4, 8))
+    return out
 
 
 def plan() -> list[list[str]]:
@@ -144,6 +172,12 @@ def main() -> None:
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=b.idx.shape[1] // 16)
         sh.add(b.name, b.idx, tileset="secondary", **b.entry())
         spec_mt += sh.write()
+    house = load("X")
+    for letter, (name, bank, changes) in COTTAGES.items():
+        pals[bank] = buildings.recolour(house.palette, changes)
+        sh = kit.Sheet(name, pals[bank], bank, HERE, HERE, cols=house.idx.shape[1] // 16)
+        sh.add(name, cottage(house.idx), tileset="secondary", ground="grass", solid=True, dedupe=True)
+        spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -153,7 +187,8 @@ def main() -> None:
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{STONE_BANK}.pal", base["secondary_palettes"][8],
-                                       f"palette_{CLIFF_BANK}.pal", f"palette_{HOUSE_BANK}.pal"]},
+                                       f"palette_{CLIFF_BANK}.pal", f"palette_{HOUSE_BANK}.pal"]
+                         + [f"palette_{b}.pal" for _, b, _ in COTTAGES.values()]},
             "reserve": {"primary": base["reserve"]},
             "animations": base["animations"],
             "field_effects": base["field_effects"],
@@ -163,6 +198,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN})
     legend.update(cliffs.legend(char_of))
+    legend.update({k: name for k, (name, _, _) in COTTAGES.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({load(k).name: v for k, v in d.items()}, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

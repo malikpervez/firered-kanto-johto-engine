@@ -16,7 +16,9 @@
    "palette_7.pal",
    "../kit/palette_plants.pal",
    "palette_9.pal",
-   "palette_10.pal"
+   "palette_10.pal",
+   "palette_11.pal",
+   "palette_12.pal"
   ]
  },
  "reserve": {
@@ -5324,6 +5326,36 @@
    "behaviors": {
     "2,3": "MB_ANIMATED_DOOR"
    }
+  },
+  {
+   "name": "cottage_slate",
+   "image": "sheets/cottage_slate.png",
+   "x": 0,
+   "y": 0,
+   "w": 5,
+   "h": 4,
+   "banks": [
+    11
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "cottage_clay",
+   "image": "sheets/cottage_clay.png",
+   "x": 0,
+   "y": 0,
+   "w": 5,
+   "h": 4,
+   "banks": [
+    12
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true,
+   "dedupe": true
   }
  ]
 }

@@ -12,7 +12,8 @@ guide and Oak's aide, where they've always stood.
 
 Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, # fence, b bushes, * flowers, o rocks,
 l lamps (two blocks: the head above the foot), S signs), C cliffs, and the buildings: U the Museum, Y its annex,
-W the Gym, Z the Pokémon Center, L the Poké Mart, H and X the two houses (Y, H and X are the same house).
+W the Gym, Z the Pokémon Center, L the Poké Mart, H and X the two houses (Y, H and X are the same house); 1 and 2
+the cottages without doors (the same house again, a window where its door was, in a slate and a clay recolour).
 """
 from pathlib import Path
 
@@ -92,6 +93,15 @@ at(39, 23, "S")                    # the police notice, by the road east (read f
 at(26, 35, "S")                    # read from (26,36)
 rect(14, 24, 21, 34, ".")
 rect(26, 28, 26, 32, ".")
+
+# more homes: cottages without doors (no new tiles: the family house's own, recoloured), off the guides' walks and
+# the people's places, and lamps along the main street
+rect(16, 16, 20, 19, "1")          # slate, beside the Gym
+rect(8, 25, 12, 28, "2")           # clay, above the south-west house
+rect(15, 29, 19, 32, "1")          # slate, by the lane
+for x, y in ((21, 19), (26, 19), (21, 32), (26, 31)):
+    rect(x, y - 1, x, y, "l")      # a lamp: its post's foot at x, y
+at(5, 14, "o"); at(4, 24, "o")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("\n".join("".join(r) for r in g))
