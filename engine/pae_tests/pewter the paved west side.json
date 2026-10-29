@@ -1,0 +1,37 @@
+{
+ "note": "Stand on the brick by the main street: the paving west of it, the cottages and the Gym's walk.",
+ "created": "2026-10-29 12:00",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 20,
+  "y": 27,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Frlg",
+  "x": 20,
+  "y": 27,
+  "in_battle": false
+ },
+ "accepted": "2026-10-29 15:57"
+}

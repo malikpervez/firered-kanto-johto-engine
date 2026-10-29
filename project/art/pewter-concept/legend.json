@@ -12,7 +12,8 @@
  },
  ",": "lawn_flowers",
  "=": {
-  "auto": "cobble"
+  "auto": "cobble",
+  "joins": "%"
  },
  ":": {
   "auto": "dirt"
@@ -93,7 +94,8 @@
   "elevation": 1
  },
  "p": {
-  "auto": "paving"
+  "auto": "paving",
+  "joins": "%"
  },
  "+": {
   "pick": [
@@ -126,10 +128,16 @@
  "Z": "pokemon_center",
  "L": "poke_mart",
  "U": "league_front_gate",
- "W": "pewter_gym",
+ "W": {
+  "name": "pewter_gym",
+  "joins": "%"
+ },
  "Y": "house_family",
  "H": "house_family",
- "X": "house_family",
+ "X": {
+  "name": "house_family_paved",
+  "joins": "%"
+ },
  "A": {
   "auto": "top1",
   "joins": "C"
@@ -174,11 +182,11 @@
  "}": "face_inner_E",
  "]": "face_outer_E",
  "a": {
-  "name": "top1#15.2+in_SE_face",
+  "name": "top1#13+Eon",
   "joins": "C"
  },
  "e": {
-  "name": "top1#15.4+in_SW_face",
+  "name": "top1#7+Won",
   "joins": "C"
  },
  "f": {
@@ -186,15 +194,57 @@
   "joins": "C"
  },
  "i": {
-  "name": "top4#7+Wstart",
+  "name": "top4#15.2+in_SE_face",
   "joins": "C"
  },
  "j": {
-  "name": "top7#13+Eon",
+  "name": "top4#15.4+in_SW_face",
   "joins": "C"
  },
  "m": {
-  "name": "top7#7+Won",
+  "name": "top4#7+Wstart",
   "joins": "C"
+ },
+ "t": {
+  "name": "top7#13+Estart",
+  "joins": "C"
+ },
+ "u": {
+  "name": "top7#7+Wstart",
+  "joins": "C"
+ },
+ "3": "kface_outer_W",
+ "4": "kface_inner_W",
+ "5": "kface_middle_1",
+ "6": "kface_middle_2",
+ "7": "kface_middle_3",
+ "8": "kface_inner_E",
+ "9": "kface_outer_E",
+ "1": {
+  "name": "cottage_slate",
+  "joins": "%"
+ },
+ "2": {
+  "name": "cottage_clay",
+  "joins": "%"
+ },
+ "%": {
+  "pick": [
+   "pewter_brick#15",
+   "pewter_brick#15~1",
+   "pewter_brick#15~2"
+  ]
+ },
+ "@": {
+  "name": "lamp_brick",
+  "joins": "%"
+ },
+ "!": {
+  "name": "sign_brick",
+  "joins": "%"
+ },
+ "/": {
+  "name": "sign_paving",
+  "joins": "%"
  }
 }

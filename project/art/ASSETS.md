@@ -20,10 +20,10 @@ There are two kinds of art:
 | Sunlit Broadleaf trees | `kit/broadleaf/` | v0.4, approved 2026-10-22 | the forest (`T`) and standalone trees (`R`) on every kit map |
 | Sunlit Broadleaf bushes | `kit/broadleaf/bushes/` | v0.2, approved 2026-10-22 | bushes and hedges (`b`) on most maps |
 | Sunlit field rocks | `kit/field_rocks/` | v0.1 (its README still says "awaiting approval") | rocks (`o`) |
-| Rock & cliff pack | `kit/rock_cliff/` | revision 3.2 (made for Route 22) | cliffs, put together by `kit/cliffs.py`: Route 22, Pewter, Routes 3, 4, 9, 10, 11, 25, Cinnabar's volcano, Route 20's Seafoam Islands |
+| Rock & cliff pack | `kit/rock_cliff/` | revision 3.2 (made for Route 22) | cliffs, put together by `kit/cliffs.py`: Route 22, Pewter (with a higher tier on each cliff, KR-92), Routes 3, 4, 9, 10, 11, 25, Cinnabar's volcano, Route 20's Seafoam Islands |
 | Lawn, "Lush Emerald" | `kit/lawn/B_Lush_Emerald/` | option B | the lawn (`.`) everywhere |
 | Dressed-stone paving | `kit/paving/` | | paving (`p`): Pewter, Routes 2, 22 |
-| Kanto Street Textures (Part A: the kit's streets) | `packs/streets_v0.3/` (`asphalt/`, `pavement/`, `crossing/`, `details/`), put together by `kit/streets.py` | v0.3 (made with another AI from `Street_Textures_v0.1_prompt.md`) | in the kit, last in its primary: the road (`+`, plain asphalt: the pack's lawn edges for asphalt aren't in the kit), the pavement on asphalt (`&`, its kerb) and on grass (`$`), joins to cobble and the dressed stone, the road's lines, zebra crossings and dropped kerbs, a manhole, storm drains, tactile paving and a tree grate (by name: `asphalt_dashed_H`, `crossing_road_EW`, `manhole`...). Saffron uses them (KR-90). Part B (brick, granite, the compass, planters, in its own palette `streets_city.gpl`) is for the cities' own tilesets: Saffron's plazas are its granite and compass (`saffron-concept/make_art.py`, bank 12); Celadon's Lucky Lane its brick and compass (`celadon-concept/make_art.py`, bank 10), with Celadon's own pavements (the kit's on two grounds, `walk()`) |
+| Kanto Street Textures (Part A: the kit's streets) | `packs/streets_v0.3/` (`asphalt/`, `pavement/`, `crossing/`, `details/`), put together by `kit/streets.py` | v0.3 (made with another AI from `Street_Textures_v0.1_prompt.md`) | in the kit, last in its primary: the road (`+`, plain asphalt: the pack's lawn edges for asphalt aren't in the kit), the pavement on asphalt (`&`, its kerb) and on grass (`$`), joins to cobble and the dressed stone, the road's lines, zebra crossings and dropped kerbs, a manhole, storm drains, tactile paving and a tree grate (by name: `asphalt_dashed_H`, `crossing_road_EW`, `manhole`...). Saffron uses them (KR-90). Part B (brick, granite, the compass, planters, in its own palette `streets_city.gpl`) is for the cities' own tilesets: Saffron's plazas are its granite and compass (`saffron-concept/make_art.py`, bank 12); Celadon's Lucky Lane its brick and compass (`celadon-concept/make_art.py`, bank 10), with Celadon's own pavements (the kit's on two grounds, `walk()`); Pewter's sidewalks and paths its brick, in the Museum's stone and without kerbs (`pewter-concept/make_art.py`, bank 7, KR-92) |
 | Pond water, "Gentle ripples" | `kit/pond/` | option C | ponds (`~`, with lily pads `v` and reeds `r` drawn over it) |
 | Sea, "Staggered swells, reworked rocks" | `kit/sea/` | option B | the sea (`s`) and sea rocks (`q`, `Q`): Pallet, Route 25, Route 17 (its inside corners, the pack's `in_*` pieces, in the kit since Route 17). The sea is surfable and fishable (the pond's behaviour); the rocks are solid |
 | Tall grass | `kit/tall_grass/` | variants B and C (made with another AI from a brief) | tall grass (`g`) |
@@ -40,7 +40,7 @@ The packs reused for buildings they weren't drawn for:
 
 | Pack | Stands for |
 |---|---|
-| `house_family` | houses in Viridian, Pewter (three, one pack), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Fuchsia's Warden's house |
+| `house_family` | houses in Viridian, Pewter (three, one pack; the south-west one on the paving, `house_family_paved`; and three cottages without doors, below), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Fuchsia's Warden's house |
 | `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender, Fuchsia; Route 5's Underground Path hut; Fuchsia's Safari Zone office; Route 12's fishing house |
 | `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room, restaurant and house on Lucky Lane (one pack for all three: KR-57); Saffron's Copycat's house, house, Mr. Psychic's house and Trainer Fan Club (one pack for all four: KR-84); Route 16's house in the woods; a house in Fuchsia (the remakes' `house_pond_garden` is it with a back door, for Fuchsia's house with the pond garden) |
 | `forest_gate_south` | Viridian Forest's south gate (Route 2); Saffron's south, west and east gates on Routes 6, 7 and 8 (KR-40, KR-52; Saffron's own side has its drawn gatehouses); Route 11's gatehouse to Route 12 |
@@ -98,6 +98,8 @@ keeps its stand-in's size and doors, except the two marked. The maps load them f
 | Route 2's gatehouse in the family house's palette | `route2-concept/make_art.py` `share_palette()` | the pack's | `house_family`'s | Route 2 | a recolour, to save a palette bank |
 | The burned Pokémon Mansion | `cinnabar-concept/buildings/pokemon_mansion/` (no longer drawn on a build) | 6×5, door (2,4) | its own (bank 9) | Cinnabar | Celadon's old stand-in hotel charred: its colours greyed and darkened, soot streaked up the walls. A stand-in until the remakes' larger Mansion moves in |
 | Saffron's city blocks: three offices (tall, mid, narrow) and an arcade, none with a door | `saffron-concept/make_art.py` `city_designs()`, with `kit/buildings.py` `recompose()` and `recolour()` | offices 6×9, 6×6, 4×6; the arcade 4×4 | Silph Co.'s (bank 9, beige) and two recolours of it: sand (10), brick (11) | Saffron (`A` `F` `I` `J` `V` `C` `a`) | Silph Co.'s and the station's own 8×8 cells put back together without the emblem, the signs and the doors, so they cost no tiles; their identical blocks share a metatile (pae's `dedupe`). Saffron also has its own copies of the kit's Center, Mart and lamp on paving (`*_paved`: the kit's tiles, no new ones) |
+| Pewter's cottages without doors (slate, clay) | `pewter-concept/make_art.py` `cottage()`, with `kit/buildings.py` `recolour()` | 5×4 | the family house's, recoloured: slate (bank 11), clay (12) | Pewter (`1`, `2`) | the family house's own 8×8 cells, a window where its door was (no new tiles) |
+| Pewter's higher cliff tier | `pewter-concept/make_art.py` `fit()` (the kit's cliffs laid out twice) | the pack's | the cliffs' (bank 9) | Pewter (`K` in the plan; its face `3`–`9`) | the tier's face is the pack's, on the cliff top under it; the ledges' tops have the top's texture under their edge |
 | The cycle track (Cycling Road's surface) | `route17-concept/route17_track.py` `piece()` | 1×1: 16 pieces by neighbours, inside corners, and paint (a lane line `+line`, an arrow downhill `+arrow`, a chequered line `+check`) where the plan has them | its own (`PAL`, bank 7): tarmac, a stone kerb, paint | Route 17 (`t`, `i`, `a`, `x`) | every piece is `MB_CYCLING_ROAD_PULL_DOWN` (the slope carries a rider down); a kerb wherever it meets anything but itself or the kit's cobbles |
 
 ## Replacing a piece
@@ -129,10 +131,10 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 1 | 45 | 134 | 17 |
 | Viridian | 230 | 0 | 107 |
 | Route 22 | 337 | 52 | 233 |
-| Route 2 | 285 | 0 | 162 |
+| Route 2 | 285 | 3 | 162 |
 | Viridian Forest | 1 | | 6 |
-| Pewter | 352 | 6 (and 70 of its own) | 203 |
-| Route 3 | 145 | 20 (and 74 of its own) | 62 |
+| Pewter | 381 | 0 (and 76 of its own) | 297 |
+| Route 3 | 145 | 26 (and 80 of its own) | 62 |
 | Route 4 | 147 | 54 (and 87 of its own) | 77 |
 | Cerulean | 255 | 0 | 122 |
 | Route 24 | 1 | 0 | 1 |
