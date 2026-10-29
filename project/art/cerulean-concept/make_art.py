@@ -56,12 +56,14 @@ WEST = [(0, y) for y in range(17, 21)]
 EAST = [(MAP_W - 1, y) for y in range(28, 31)]
 SOUTH = [(x, MAP_H - 1) for x in range(21, 25)]
 WATER = set("~vr")
-SOLID = set("T#bRoklSBcw_~vrWKHXZLY12")
+SOLID = set("T#bRoklSBcw_~vrWKHXZLY12@/")
 # the paving and the brick: what stands on them (the buildings but the two family houses and the cave, the lamps and
 # the signs) and the cobbles are one material with them, so no edge between
 WALK = "%"
-PAVED = "WKXZL12lS"
-SHARED_PAVED = {"Z": ("pokemon_center", "center"), "L": ("poke_mart", "mart")}
+import os
+OPTION = os.environ.get("CERULEAN_OPTION", "1")  # the design (draw_plan.py): 1 the civic plaza, 2 the paved town
+PAVED = "WZ@/" if OPTION == "1" else "WKXZL12@/"  # what stands on the paving
+SHARED_PAVED = {k: v for k, v in {"Z": ("pokemon_center", "center"), "L": ("poke_mart", "mart")}.items() if k in PAVED}
 BRICK_BANK = 10
 BRICK = {3: (104, 128, 168), 4: (136, 160, 200), 5: (176, 196, 224), 8: (72, 88, 120)}  # the pack's bricks, in blues
 COTTAGES = {"1": ("cottage_blue", 11, {2: (40, 56, 96), 4: (64, 96, 160), 5: (104, 144, 200), 13: (72, 80, 112)}),
@@ -209,7 +211,7 @@ def check(g, d) -> None:
             assert (x, y + 1) in walk, f"the door of {letter} at ({x},{y}) can't be walked into"
     for y in range(MAP_H):
         for x in range(MAP_W):
-            if g[y][x] == "S":
+            if g[y][x] in "S/":
                 assert (x, y + 1) in walk, f"the sign at ({x},{y}) can't be read"
     for x, y in HOLES:
         assert g[y + 1][x] in SOLID - WATER, f"the hole at ({x},{y}) must be against a wall"
@@ -244,7 +246,8 @@ def main() -> None:
     for letter, (name, bank, changes) in COTTAGES.items():
         pals[bank] = buildings.recolour(house.palette, changes)
         sh = kit.Sheet(name, pals[bank], bank, HERE, HERE, cols=house.idx.shape[1] // 16)
-        sh.add(name, cottage(house.idx), tileset="secondary", ground=paved(cottage(house.idx)), solid=True,
+        sh.add(name, cottage(house.idx), tileset="secondary", solid=True,
+               ground=paved(cottage(house.idx)) if letter in PAVED else "grass",
                dedupe=True)
         spec_mt += sh.write()
     city = streets.city_palette()
@@ -290,8 +293,8 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN}, Y="diglett_cave")
     legend["^"] = "hole"
-    legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, l="lamp_paving", S="sign_paving",
-                  Z="pokemon_center_paved", L="poke_mart_paved")
+    legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **{"@": "lamp_paving", "/": "sign_paving"},
+                  **{k: f"{n}_paved" for k, (n, _) in SHARED_PAVED.items()})
     legend.update({k: {"name": legend[k], "joins": WALK} for k in PAVED})
     legend.update({WALK: {"pick": ["cerulean_brick#15", "cerulean_brick#15~1", "cerulean_brick#15~2"]},
                    "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK}})

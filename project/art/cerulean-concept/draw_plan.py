@@ -135,40 +135,49 @@ rect(44, 40, 52, 47, ".")
 at(49, 39, ".")                     # its gap, where the tree to cut stands
 rect(45, 41, 47, 42, "*"); rect(50, 45, 52, 46, "*")
 
-# the town paved (KR-93): no lawn in the streets' blocks but its gardens, its yards and the shelter's field. The kit's
-# dressed stone round the buildings, which stand on it; Cerulean's blue brick (the street pack's, without kerbs) the
-# lakeside promenade, the sidewalk down the road south, the ring round the plaza's pool and the houses' paths; four
-# cottages without doors (the family house, in blue and teal), a fountain in the south-west, lamps
-for x0, y0, x1, y1 in ((2, 21, 20, 41), (25, 21, 44, 36), (45, 14, 53, 27), (41, 31, 53, 36), (25, 38, 42, 41),
-                       (25, 44, 42, 48), (52, 37, 53, 38)):
-    for y in range(y0, y1 + 1):
-        for x in range(x0, x1 + 1):
-            if g[y][x] in ".o:" or (g[y][x] == "*" and y < 44):
-                g[y][x] = "p"
-rect(3, 22, 7, 25, "1"); rect(9, 22, 13, 25, "2")   # two cottages facing the road in
-rect(3, 27, 7, 30, "2")                             # one more, north of the bald man's corner (he walks 6-8,31-33)
-rect(48, 22, 52, 25, "1")                           # and one east of the bridge road
-rect(10, 31, 13, 33, "~")                           # the fountain
-# the blue brick borders the paving: a block of it round every building on the paving, and along every edge of the
-# paving where it meets something else (the roads, the lawn, the forest, the hedges, the water)
-BUILT = set("WKXZLH12")
-border = set()
-for y in range(H):
-    for x in range(W):
-        if g[y][x] != "p":
-            continue
-        around = [g[y + dy][x + dx] for dy in (-1, 0, 1) for dx in (-1, 0, 1)
-                  if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H]
-        if any(c in BUILT or c not in "pS" for c in around):
-            border.add((x, y))
-for x, y in border:
-    g[y][x] = "%"
+# the town's detail (KR-93), two designs to choose from (CERULEAN_OPTION): "1" a paved civic plaza (the Center, the
+# pool, the Friends' camp, the Gym) and garden streets; "2" the town paved, with canals by the roads south and east
+import os
+OPTION = os.environ.get("CERULEAN_OPTION", "1")
+
+
+def pave(zones, keep="*"):
+    for x0, y0, x1, y1 in zones:
+        for y in range(y0, y1 + 1):
+            for x in range(x0, x1 + 1):
+                if g[y][x] in ".o:" or (g[y][x] == "*" and "*" not in keep):
+                    g[y][x] = "p"
+
+
 rect(2, 14, 31, 15, "%"); rect(12, 16, 13, 16, "%"); rect(24, 16, 25, 16, "%")   # the promenade by the lake
-rect(19, 21, 20, 40, "%")                           # the sidewalk down the road south
-rect(32, 25, 32, 28, "%"); rect(38, 25, 38, 28, "%"); rect(32, 28, 38, 28, "%")  # round the pool
-rect(15, 30, 15, 31, "%"); rect(48, 19, 48, 21, "%")                             # the houses' paths
-for x, y in ((18, 23), (25, 34), (40, 34), (45, 26)):
-    rect(x, y - 1, x, y, "l")                       # lamps on the paving: the post's foot at x, y
+if OPTION == "1":
+    pave([(25, 21, 44, 36), (41, 31, 53, 36)], keep="")
+    rect(31, 24, 39, 29, "%"); rect(33, 25, 37, 27, "~")    # a ring of brick, two blocks wide, round the pool
+    rect(25, 23, 30, 24, "=")                               # (the street past the Center stays cobbles)
+    for x, y in ((28, 32), (41, 32), (28, 36), (41, 36)):
+        rect(x, y - 1, x, y, "@")                           # lamps at the plaza's corners
+    at(25, 25, "/"); at(51, 36, "/")                        # the plaza's signs, on the paving
+    # the garden streets: cottages in front gardens behind hedges and fences, street trees, flower beds, brick
+    # paths to the doors
+    rect(3, 22, 7, 25, "1"); rect(9, 22, 13, 25, "2"); rect(3, 27, 7, 30, "2"); rect(48, 22, 52, 25, "1")
+    rect(2, 21, 14, 21, "b"); rect(2, 22, 2, 25, "b"); rect(8, 22, 8, 25, "#"); rect(2, 26, 8, 26, "#")
+    rect(16, 22, 17, 23, "R"); rect(16, 33, 17, 34, "R"); rect(10, 33, 11, 34, "R"); rect(45, 15, 46, 16, "R")
+    rect(9, 27, 12, 29, "*"); rect(3, 33, 5, 35, "*"); rect(51, 15, 53, 16, "*"); rect(45, 21, 47, 21, "b")
+    rect(15, 30, 15, 36, "%"); rect(16, 36, 20, 36, "%")    # the small house's path to the road south
+    rect(48, 19, 48, 21, "%")                               # the berry man's path
+else:
+    pave([(2, 21, 20, 41), (25, 21, 44, 36), (45, 14, 53, 27), (41, 31, 53, 36), (25, 38, 42, 41),
+          (25, 44, 42, 48), (52, 37, 53, 38)])
+    rect(3, 22, 7, 25, "1"); rect(9, 22, 13, 25, "2"); rect(3, 27, 7, 30, "2"); rect(48, 22, 52, 25, "1")
+    rect(18, 22, 18, 40, "%"); rect(19, 22, 19, 40, "~"); rect(20, 22, 20, 40, "%")   # the canal by the road south
+    rect(41, 26, 53, 26, "%"); rect(45, 27, 53, 27, "~")    # and by the road east, its bank the brick
+    rect(45, 26, 53, 26, "%"); rect(44, 27, 44, 27, "%")
+    rect(32, 25, 32, 28, "%"); rect(38, 25, 38, 28, "%"); rect(32, 28, 38, 28, "%")  # round the pool
+    rect(15, 30, 15, 31, "%"); rect(48, 19, 48, 21, "%")
+    for x, y in ((25, 34), (40, 34), (16, 36), (45, 25)):
+        rect(x, y - 1, x, y, "@")
+    for x, y in ((25, 25), (51, 36), (14, 38), (19, 41)):
+        at(x, y, "/")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

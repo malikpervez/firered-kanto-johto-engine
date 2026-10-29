@@ -55,14 +55,8 @@
   ]
  },
  "k": "stump",
- "l": {
-  "name": "lamp_paving",
-  "joins": "%"
- },
- "S": {
-  "name": "sign_paving",
-  "joins": "%"
- },
+ "l": "lamp",
+ "S": "sign",
  "B": "barrel",
  "c": "crate",
  "O": "boat",
@@ -135,31 +129,24 @@
   "name": "pokemon_center_paved",
   "joins": "%"
  },
- "L": {
-  "name": "poke_mart_paved",
-  "joins": "%"
- },
+ "L": "poke_mart",
  "W": {
   "name": "viridian_gym",
   "joins": "%"
  },
- "K": {
-  "name": "trainer_school",
-  "joins": "%"
- },
+ "K": "trainer_school",
  "H": "house_family",
- "X": {
-  "name": "house_gardener",
-  "joins": "%"
- },
+ "X": "house_gardener",
  "Y": "diglett_cave",
  "^": "hole",
- "1": {
-  "name": "cottage_blue",
+ "1": "cottage_blue",
+ "2": "cottage_teal",
+ "@": {
+  "name": "lamp_paving",
   "joins": "%"
  },
- "2": {
-  "name": "cottage_teal",
+ "/": {
+  "name": "sign_paving",
   "joins": "%"
  },
  "%": {
