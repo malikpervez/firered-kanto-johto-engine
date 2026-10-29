@@ -119,48 +119,49 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
   every piece in that bank.
 - **the tile budget**: a map's own tileset holds at most 384 8×8 tiles (flipped copies count once), and the seams
   to its neighbours need room in the tile slots it leaves free. Draw repeating detail on the 16-pixel grid so tiles
-  repeat. Current use, from the built tilesets (seam tiles as `pae seam build` reports them):
+  repeat. Current use, from the built tilesets (seam tiles as `pae seam build` reports them: the tiles it
+  copies into free slots, and the neighbour's tiles that are the map's own, which it uses as they are):
 
 | Map | Own tiles (of 384) | Seam tiles | Metatiles |
 |---|---|---|---|
 | the kit (primary, every map) | 580 (of 640: 624 usable, Pallet's seam borrows 624–639; the streets took 42) | | 548 (of 640; the streets took 138) |
-| Pallet | 297 | 64 | 125 |
+| Pallet | 297 | 20 | 125 |
 | Route 1 | 45 | 134 | 17 |
 | Viridian | 230 | 0 | 107 |
-| Route 22 | 337 | 0 | 233 |
+| Route 22 | 337 | 52 | 233 |
 | Route 2 | 285 | 0 | 162 |
 | Viridian Forest | 1 | | 6 |
-| Pewter | 352 | 76 | 203 |
-| Route 3 | 145 | 94 | 62 |
-| Route 4 | 147 | 141 | 77 |
+| Pewter | 352 | 6 (and 70 of its own) | 203 |
+| Route 3 | 145 | 20 (and 74 of its own) | 62 |
+| Route 4 | 147 | 54 (and 87 of its own) | 77 |
 | Cerulean | 255 | 0 | 122 |
 | Route 24 | 1 | 0 | 1 |
 | Route 25 | 120 | 0 | 36 |
 | Route 5 | 200 | 0 | 84 |
-| Route 6 | 170 | 24 | 64 |
+| Route 6 | 170 | 23 (and 1 of its own) | 64 |
 | Vermilion | 230 | 60 | 110 |
-| Route 11 | 238 | 32 | 107 |
-| Route 9 | 132 | 97 | 55 |
-| Route 10 | 287 | 108 | 206 |
-| Lavender | 215 | 74 | 87 |
-| Route 8 | 170 | 93 | 64 |
+| Route 11 | 238 | 0 | 107 |
+| Route 9 | 132 | 16 (and 81 of its own) | 55 |
+| Route 10 | 287 | 48 (and 65 of its own) | 206 |
+| Lavender | 215 | 0 | 87 |
+| Route 8 | 170 | 38 (and 55 of its own) | 64 |
 | Route 7 | 170 | 0 | 64 |
 | Celadon | 345 | 0 | 260 |
 | Saffron | 355 | none (no compiled joins) | 379 |
 | Route 16 | 110 | 0 | 48 |
 | Route 17 | 37 | 0 | 25 |
-| Route 18 | 55 | 30 (for Fuchsia's own pieces) | 32 |
-| Fuchsia | 339 | 47 (for old Route 19) | 138 |
+| Route 18 | 55 | 63 (for Fuchsia's own pieces) | 32 |
+| Fuchsia | 339 | 0 | 138 |
 | Route 15 | 55 | 0 | 32 |
 | Route 14 | 1 (nothing of its own) | 0 | 0 |
 | Route 13 | 1 (nothing of its own) | 0 | 0 |
-| Route 12 | 107 | 79 (for Route 11's own pieces) | 32 |
-| Route 21 (north and south, one tileset) | 1 (nothing of its own) | 125 (Route 21 South, for Cinnabar's own pieces) | 0 |
+| Route 12 | 107 | 78 (for Route 11's own pieces; and 1 of its own) | 32 |
+| Route 21 (north and south, one tileset) | 1 (nothing of its own) | 142 (Route 21 South, for Cinnabar's own pieces) | 0 |
 | Cinnabar | 371 | 0 | 169 |
 | Route 20 | 157 | 0 | 82 |
 | Route 19 | 1 (nothing of its own) | 0 | 0 |
-| Route 23 | 174 | 149 (for Route 22's gate) | 79 |
-| Indigo Plateau | 168 | 29 (for old League West Pass) | 108 |
+| Route 23 | 174 | 89 (for Route 22's gate; and 63 of its own) | 79 |
+| Indigo Plateau | 168 | 29 (for League West Pass) | 108 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.
