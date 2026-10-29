@@ -5298,7 +5298,43 @@
     7
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": [
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15"
+   ],
    "solid": true,
    "open": [
     "3,4"
@@ -5328,6 +5364,47 @@
    }
   },
   {
+   "name": "house_family_paved",
+   "image": "sheets/house_family_paved.png",
+   "x": 0,
+   "y": 0,
+   "w": 5,
+   "h": 4,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15"
+   ],
+   "solid": true,
+   "open": [
+    "2,3"
+   ],
+   "behaviors": {
+    "2,3": "MB_ANIMATED_DOOR"
+   }
+  },
+  {
    "name": "cottage_slate",
    "image": "sheets/cottage_slate.png",
    "x": 0,
@@ -5338,7 +5415,28 @@
     11
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": [
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15"
+   ],
    "solid": true,
    "dedupe": true
   },
@@ -5353,74 +5451,35 @@
     12
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": [
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "grass",
+    "grass",
+    "paving#15"
+   ],
    "solid": true,
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#3",
-   "image": "sheets/pewter_brick.png",
-   "x": 0,
-   "y": 0,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#4",
-   "image": "sheets/pewter_brick.png",
-   "x": 16,
-   "y": 0,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#6",
-   "image": "sheets/pewter_brick.png",
-   "x": 32,
-   "y": 0,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#7",
-   "image": "sheets/pewter_brick.png",
-   "x": 48,
-   "y": 0,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#8",
-   "image": "sheets/pewter_brick.png",
-   "x": 64,
-   "y": 0,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
    "dedupe": true
   },
   {
    "name": "pewter_brick#9",
    "image": "sheets/pewter_brick.png",
-   "x": 80,
+   "x": 0,
    "y": 0,
    "banks": [
     7
@@ -5432,7 +5491,7 @@
   {
    "name": "pewter_brick#11",
    "image": "sheets/pewter_brick.png",
-   "x": 96,
+   "x": 16,
    "y": 0,
    "banks": [
     7
@@ -5444,7 +5503,7 @@
   {
    "name": "pewter_brick#12",
    "image": "sheets/pewter_brick.png",
-   "x": 112,
+   "x": 32,
    "y": 0,
    "banks": [
     7
@@ -5456,8 +5515,8 @@
   {
    "name": "pewter_brick#13",
    "image": "sheets/pewter_brick.png",
-   "x": 0,
-   "y": 16,
+   "x": 48,
+   "y": 0,
    "banks": [
     7
    ],
@@ -5468,20 +5527,8 @@
   {
    "name": "pewter_brick#14",
    "image": "sheets/pewter_brick.png",
-   "x": 16,
-   "y": 16,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#14.2",
-   "image": "sheets/pewter_brick.png",
-   "x": 32,
-   "y": 16,
+   "x": 64,
+   "y": 0,
    "banks": [
     7
    ],
@@ -5492,8 +5539,8 @@
   {
    "name": "pewter_brick#15",
    "image": "sheets/pewter_brick.png",
-   "x": 48,
-   "y": 16,
+   "x": 80,
+   "y": 0,
    "banks": [
     7
    ],
@@ -5504,8 +5551,8 @@
   {
    "name": "pewter_brick#15.1",
    "image": "sheets/pewter_brick.png",
-   "x": 64,
-   "y": 16,
+   "x": 96,
+   "y": 0,
    "banks": [
     7
    ],
@@ -5516,44 +5563,8 @@
   {
    "name": "pewter_brick#15.2",
    "image": "sheets/pewter_brick.png",
-   "x": 80,
-   "y": 16,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#15.4",
-   "image": "sheets/pewter_brick.png",
-   "x": 96,
-   "y": 16,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#15.8",
-   "image": "sheets/pewter_brick.png",
    "x": 112,
-   "y": 16,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "dedupe": true
-  },
-  {
-   "name": "pewter_brick#15.9",
-   "image": "sheets/pewter_brick.png",
-   "x": 0,
-   "y": 32,
+   "y": 0,
    "banks": [
     7
    ],
@@ -5564,8 +5575,8 @@
   {
    "name": "pewter_brick#15~1",
    "image": "sheets/pewter_brick.png",
-   "x": 16,
-   "y": 32,
+   "x": 0,
+   "y": 16,
    "banks": [
     7
    ],
@@ -5575,8 +5586,8 @@
   {
    "name": "pewter_brick#15~2",
    "image": "sheets/pewter_brick.png",
-   "x": 32,
-   "y": 32,
+   "x": 16,
+   "y": 16,
    "banks": [
     7
    ],
@@ -5608,6 +5619,19 @@
    ],
    "tileset": "secondary",
    "ground": "pewter_brick#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "sign_paving",
+   "image": "sheets/in_the_brick.png",
+   "x": 0,
+   "y": 48,
+   "banks": [
+    8
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
    "solid": true,
    "dedupe": true
   }

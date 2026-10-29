@@ -94,7 +94,8 @@
   "elevation": 1
  },
  "p": {
-  "auto": "paving"
+  "auto": "paving",
+  "joins": "%"
  },
  "+": {
   "pick": [
@@ -127,10 +128,16 @@
  "Z": "pokemon_center",
  "L": "poke_mart",
  "U": "league_front_gate",
- "W": "pewter_gym",
+ "W": {
+  "name": "pewter_gym",
+  "joins": "%"
+ },
  "Y": "house_family",
  "H": "house_family",
- "X": "house_family",
+ "X": {
+  "name": "house_family_paved",
+  "joins": "%"
+ },
  "A": {
   "auto": "top1",
   "joins": "C"
@@ -198,8 +205,14 @@
   "name": "top7#7+Won",
   "joins": "C"
  },
- "1": "cottage_slate",
- "2": "cottage_clay",
+ "1": {
+  "name": "cottage_slate",
+  "joins": "%"
+ },
+ "2": {
+  "name": "cottage_clay",
+  "joins": "%"
+ },
  "%": {
   "auto": "pewter_brick"
  },
@@ -209,6 +222,10 @@
  },
  "t": {
   "name": "sign_brick",
+  "joins": "%"
+ },
+ "y": {
+  "name": "sign_paving",
   "joins": "%"
  }
 }

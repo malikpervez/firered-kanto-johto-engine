@@ -10,8 +10,9 @@ face each other across a square on the main street, which runs from Route 2's ro
 the plaza. The road east to Route 3 (rows 24-27) runs between the north-eastern cliff and the forest, past the Gym
 guide and Oak's aide, where they've always stood.
 
-Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, % the sidewalks (the street pack's brick in
-the Museum's stone: they join the cobbles without a kerb; u a lamp and t a sign standing in them), # fence, b bushes, * flowers, o rocks,
+Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, % brick (the street pack's, in the Museum's
+stone: paths through the paving and sidewalks by the main street; u a lamp and t a sign standing in it; y a sign on
+the paving), # fence, b bushes, * flowers, o rocks,
 l lamps (two blocks: the head above the foot), S signs), C cliffs, and the buildings: U the Museum, Y its annex,
 W the Gym, Z the Pokémon Center, L the Poké Mart, H and X the two houses (Y, H and X are the same house); 1 and 2
 the cottages without doors (the same house again, a window where its door was, in a slate and a clay recolour).
@@ -104,10 +105,17 @@ for x, y in ((21, 19), (26, 19), (21, 32), (26, 31)):
     rect(x, y - 1, x, y, "l")      # a lamp: its post's foot at x, y
 at(5, 14, "o"); at(4, 24, "o")
 
-# the sidewalks: brick either side of the main street, three blocks wide where the houses leave room, from the
-# plaza down to the forest, and the Gym's walk, the lane, the walk past the Center and the Mart and the house's
-# forecourt by the road east; the lamps and the city sign stand in them
-for r in ((20, 16, 21, 19), (19, 20, 21, 28), (20, 29, 21, 32), (19, 33, 21, 37),       # west of the street
+# the west side is paved, no lawn: the plaza's dressed stone from the forest to the main street, round the Gym, the
+# cottages and the house (their rocks, flowers and bushes gone), with brick paths through it (the Gym's walk, the
+# lane, the house's doorstep) and the sidewalk by the street
+for y in range(14, 38):
+    for x in range(4, 22):
+        if g[y][x] in ".,*ob:":
+            g[y][x] = "p"
+at(13, 20, "y")                    # the Gym's sign, on the paving
+# the sidewalks: brick either side of the main street, from the plaza down to the forest, the walk past the Center
+# and the Mart and the house's forecourt by the road east; the lamps and the city sign stand in them
+for r in ((20, 16, 21, 37),                                                             # west of the street
           (26, 16, 28, 16), (26, 17, 27, 20), (26, 21, 32, 23), (26, 28, 31, 28),       # east of it
           (26, 29, 26, 32), (26, 35, 28, 37)):
     rect(*r, "%")

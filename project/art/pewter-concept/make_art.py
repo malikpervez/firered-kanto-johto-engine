@@ -13,7 +13,9 @@ from the towns before, in Pewter's colours:
 Bank 8 is the kit's plants palette; 11 and 12 are the family house recoloured, slate and clay, for the cottages
 without doors (the house's own tiles, a window where its door was: no new tiles). The sidewalks (% in the plan) are
 the street pack's herringbone brick (streets.py, as Celadon's Lucky Lane) drawn in bank 7's colours, the Museum's
-grey stone (its own tiles, in the secondary; no bank of its own); the lamps and the city sign stand in them.
+grey stone (its own tiles, in the secondary; no bank of its own); the lamps and the city sign stand in them. The
+west side is paved, no lawn: the kit's dressed stone (the plaza's) round the Gym, the cottages and the south-west
+house, which stand on it (their blocks with see-through pixels have the paving under them, the rest are as before).
 
 Run from the repository root:  python3 project/art/pewter-concept/make_art.py
 It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to itself; build.sh
@@ -50,7 +52,7 @@ SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
 CUT_TREE = (32, 12)  # the tree to cut, in the gap into the annex's yard (an event, on the lawn)
 SOUTH, EAST = [(x, MAP_H - 1) for x in range(22, 26)], [(MAP_W - 1, y) for y in range(24, 28)]
 GUIDE_GATE = [(43, y) for y in range(25, 28)]  # the Gym guide's triggers across the road east (he stands at 43,24)
-SOLID = set("T#bRoklSBcw_~vrUWYHXZL12ut") | cliffs.SOLID
+SOLID = set("T#bRoklSBcw_~vrUWYHXZL12uty") | cliffs.SOLID
 # the cottages: the family house with a third window where its door was, recoloured (the same indices, so the same
 # tiles in other banks): their letters, names, banks and colour changes (2 the roof's outline, 4-5 its tiles, 13 its
 # trim, shutters and woodwork; 10-12 the walls)
@@ -60,10 +62,13 @@ COTTAGES = {"1": ("cottage_slate", 11, {2: (48, 56, 72), 4: (88, 104, 128), 5: (
 # the sidewalks: the pack's brick (its city palette: 3-5 the bricks, 8 between them, 12 and 15 the kerb, 7 its
 # shadow) in bank 7's stone (7-9 the bricks, 2 between, 10-11 the kerb, 1 the shadow); the lamps (u) and the sign (t)
 # standing in them; the cobbles, the brick and what stands in it are one material (no kerb between them)
-WALK, LAMP, SIGN = "%", "u", "t"
+WALK, LAMP, SIGN, PAVED_SIGN = "%", "u", "t", "y"
+PAVED = {"W": "pewter_gym", "X": "house_family_paved", "1": None, "2": None}  # on the paving (None: as named)
 BRICK = {3: 7, 4: 8, 5: 9, 8: 2, 12: 10, 15: 11, 7: 1}
-LEGEND = {WALK: {"auto": "pewter_brick"}, "=": {"auto": "cobble", "joins": WALK},
-          LAMP: {"name": "lamp_brick", "joins": WALK}, SIGN: {"name": "sign_brick", "joins": WALK}}
+LEGEND = {WALK: {"auto": "pewter_brick"}, "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
+          LAMP: {"name": "lamp_brick", "joins": WALK}, SIGN: {"name": "sign_brick", "joins": WALK},
+          PAVED_SIGN: {"name": "sign_paving", "joins": WALK}}
+GROUP = set(WALK + "=p" + LAMP + SIGN + PAVED_SIGN) | set(PAVED)  # one material for each other's edges
 
 
 def cottage(idx):
@@ -91,7 +96,7 @@ def walks(g) -> set[tuple[int, int]]:
     """The sidewalk blocks the map shows: (neighbour mask, inside corners) as pae map paint autotiles them (the
     cobbles count as the sidewalk, the map's edges too)."""
     def same(x, y):
-        return not (0 <= x < MAP_W and 0 <= y < MAP_H) or g[y][x] in (WALK, "=", LAMP, SIGN)
+        return not (0 <= x < MAP_W and 0 <= y < MAP_H) or g[y][x] in GROUP
     out = set()
     for y in range(MAP_H):
         for x in range(MAP_W):
@@ -104,6 +109,13 @@ def walks(g) -> set[tuple[int, int]]:
                           if mask & sides == sides and not same(x + dx, y + dy))
             out.add((mask, corners))
     return out
+
+
+def paved(idx) -> list[str]:
+    """A picture's grounds on the paving, block by block (row by row): the paving under those with see-through
+    pixels, the lawn (as before, so the same blocks) under the rest."""
+    return ["paving#15" if (idx[y:y + 16, x:x + 16] == 0).any() else "grass"
+            for y in range(0, idx.shape[0], 16) for x in range(0, idx.shape[1], 16)]
 
 
 def plan() -> list[list[str]]:
@@ -176,7 +188,7 @@ def check(g, d) -> None:
             assert (x, y + 1) in town, f"the door of {letter} at ({x},{y}) can't be reached"
     for y in range(MAP_H):
         for x in range(MAP_W):
-            if g[y][x] in "S" + SIGN:
+            if g[y][x] in "S" + SIGN + PAVED_SIGN:
                 assert (x, y + 1) in town | yard, f"the sign at ({x},{y}) can't be read"
     assert not set(EAST) & reachable(g, SOUTH[0], set(GUIDE_GATE) | {(43, 24)}), "the road east goes round the guide"
 
@@ -201,13 +213,19 @@ def main() -> None:
         if pals[bank] != b.palette:
             raise SystemExit(f"{folder.name}: its palette isn't the one bank {bank} has")
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=b.idx.shape[1] // 16)
-        sh.add(b.name, b.idx, tileset="secondary", **b.entry())
+        sh.add(b.name, b.idx, tileset="secondary", **dict(b.entry(), **({"ground": paved(b.idx)}
+                                                                         if PAVED.get(letter) == b.name else {})))
         spec_mt += sh.write()
+    house = load("X")  # the south-west house is the family house again, on the paving
+    sh = kit.Sheet(PAVED["X"], house.palette, HOUSE_BANK, HERE, HERE, cols=house.idx.shape[1] // 16)
+    sh.add(PAVED["X"], house.idx, tileset="secondary", **dict(house.entry(), ground=paved(house.idx)))
+    spec_mt += sh.write()
     house = load("X")
     for letter, (name, bank, changes) in COTTAGES.items():
         pals[bank] = buildings.recolour(house.palette, changes)
         sh = kit.Sheet(name, pals[bank], bank, HERE, HERE, cols=house.idx.shape[1] // 16)
-        sh.add(name, cottage(house.idx), tileset="secondary", ground="grass", solid=True, dedupe=True)
+        sh.add(name, cottage(house.idx), tileset="secondary", ground=paved(cottage(house.idx)), solid=True,
+               dedupe=True)
         spec_mt += sh.write()
     city = streets.city_palette()
 
@@ -223,6 +241,7 @@ def main() -> None:
     sh = kit.Sheet("in_the_brick", kit.PALS["plants"], 8, HERE, HERE, cols=1)  # the kit's lamp and sign, on it
     sh.add("lamp_brick", kit.lamp(), tileset="secondary", ground="pewter_brick#15", solid=True, dedupe=True)
     sh.add("sign_brick", kit.sign(), tileset="secondary", ground="pewter_brick#15", solid=True, dedupe=True)
+    sh.add("sign_paving", kit.sign(), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
     spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
@@ -245,6 +264,7 @@ def main() -> None:
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN})
     legend.update(cliffs.legend(char_of))
     legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **LEGEND)
+    legend.update({k: {"name": n or legend[k], "joins": WALK} for k, n in PAVED.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({load(k).name: v for k, v in d.items()}, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

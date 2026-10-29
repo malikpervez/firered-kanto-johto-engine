@@ -4659,7 +4659,7 @@
     17
    ]
   },
-  "cottage_slate": {
+  "house_family_paved": {
    "ids": [
     843,
     844,
@@ -4686,9 +4686,11 @@
    "h": 4,
    "solid": true,
    "elevation": null,
-   "open": []
+   "open": [
+    17
+   ]
   },
-  "cottage_clay": {
+  "cottage_slate": {
    "ids": [
     863,
     864,
@@ -4717,59 +4719,38 @@
    "elevation": null,
    "open": []
   },
-  "pewter_brick#3": {
+  "cottage_clay": {
    "ids": [
-    883
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902
    ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#4": {
-   "ids": [
-    884
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#6": {
-   "ids": [
-    885
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#7": {
-   "ids": [
-    886
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#8": {
-   "ids": [
-    887
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
+   "w": 5,
+   "h": 4,
+   "solid": true,
    "elevation": null,
    "open": []
   },
   "pewter_brick#9": {
    "ids": [
-    888
+    903
    ],
    "w": 1,
    "h": 1,
@@ -4779,7 +4760,7 @@
   },
   "pewter_brick#11": {
    "ids": [
-    889
+    904
    ],
    "w": 1,
    "h": 1,
@@ -4789,7 +4770,7 @@
   },
   "pewter_brick#12": {
    "ids": [
-    890
+    905
    ],
    "w": 1,
    "h": 1,
@@ -4799,7 +4780,7 @@
   },
   "pewter_brick#13": {
    "ids": [
-    891
+    906
    ],
    "w": 1,
    "h": 1,
@@ -4809,17 +4790,7 @@
   },
   "pewter_brick#14": {
    "ids": [
-    892
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#14.2": {
-   "ids": [
-    893
+    907
    ],
    "w": 1,
    "h": 1,
@@ -4829,7 +4800,7 @@
   },
   "pewter_brick#15": {
    "ids": [
-    894
+    908
    ],
    "w": 1,
    "h": 1,
@@ -4839,7 +4810,7 @@
   },
   "pewter_brick#15.1": {
    "ids": [
-    895
+    909
    ],
    "w": 1,
    "h": 1,
@@ -4849,37 +4820,7 @@
   },
   "pewter_brick#15.2": {
    "ids": [
-    896
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#15.4": {
-   "ids": [
-    897
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#15.8": {
-   "ids": [
-    898
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#15.9": {
-   "ids": [
-    899
+    910
    ],
    "w": 1,
    "h": 1,
@@ -4889,7 +4830,7 @@
   },
   "pewter_brick#15~1": {
    "ids": [
-    900
+    911
    ],
    "w": 1,
    "h": 1,
@@ -4899,7 +4840,7 @@
   },
   "pewter_brick#15~2": {
    "ids": [
-    901
+    912
    ],
    "w": 1,
    "h": 1,
@@ -4909,8 +4850,8 @@
   },
   "lamp_brick": {
    "ids": [
-    902,
-    903
+    913,
+    914
    ],
    "w": 1,
    "h": 2,
@@ -4920,7 +4861,17 @@
   },
   "sign_brick": {
    "ids": [
-    904
+    915
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign_paving": {
+   "ids": [
+    916
    ],
    "w": 1,
    "h": 1,
@@ -4931,11 +4882,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 372
+  "secondary": 366
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 265
+  "secondary": 277
  },
  "animations": [
   {
