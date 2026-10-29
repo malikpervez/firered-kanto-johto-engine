@@ -242,8 +242,10 @@ def main() -> None:
     for k, v in enumerate(("center_b", "center_c"), 1):  # the plain brick's variants, spread by position
         sh.add(f"pewter_brick#15~{k}", brick(streets.piece("brick", v, city)), tileset="secondary", ground="grass")
     spec_mt += sh.write()
-    sh = kit.Sheet("in_the_brick", kit.PALS["plants"], 8, HERE, HERE, cols=1)  # the kit's lamp and sign, on it
+    sh = kit.Sheet("in_the_brick", kit.PALS["plants"], 8, HERE, HERE, cols=1)  # the kit's lamp, on it
     sh.add("lamp_brick", kit.lamp(), tileset="secondary", ground="pewter_brick#15", solid=True, dedupe=True)
+    spec_mt += sh.write()
+    sh = kit.Sheet("signs_paved", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=1)  # the kit's sign (its wood)
     sh.add("sign_brick", kit.sign(), tileset="secondary", ground="pewter_brick#15", solid=True, dedupe=True)
     sh.add("sign_paving", kit.sign(), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
     spec_mt += sh.write()
