@@ -543,14 +543,14 @@ PewterCity_Movement_PlayerWalkToGymBottom::
 	walk_left
 	walk_left
 	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
 	walk_up
 	walk_up
 	walk_up
 	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	walk_up
 	step_end
 
@@ -588,15 +588,15 @@ PewterCity_Movement_PlayerWalkToGymRight::
 	walk_left
 	walk_left
 	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_left
 	walk_left
 	walk_left
 	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
 	walk_up
 	step_end
 
@@ -743,14 +743,14 @@ PewterCity_Movement_GuideWalkToGymBottom::
 	walk_left
 	walk_left
 	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
 	walk_up
 	walk_up
 	walk_up
 	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	walk_up
 	walk_right
 	walk_in_place_faster_left
@@ -789,15 +789,15 @@ PewterCity_Movement_GuideWalkToGymRight::
 	walk_left
 	walk_left
 	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_left
 	walk_left
 	walk_left
 	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
 	walk_up
 	walk_right
 	walk_in_place_faster_left

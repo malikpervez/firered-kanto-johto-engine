@@ -1,0 +1,53 @@
+{
+ "note": "Walk the brick from the main street's sidewalk along the Gym's walk, across its forecourt, and up into the Gym.",
+ "created": "2026-10-29 12:00",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 21,
+  "y": 23,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     200
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     64,
+     80
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Gym_Frlg",
+  "x": 6,
+  "y": 14,
+  "in_battle": false
+ },
+ "accepted": "2026-10-29 15:56"
+}

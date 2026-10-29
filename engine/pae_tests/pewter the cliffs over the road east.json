@@ -1,0 +1,37 @@
+{
+ "note": "Stand on the road east under the north-east cliff: its higher tier on its ledge above the cliff's face.",
+ "created": "2026-10-29 12:00",
+ "start": {
+  "map": "PewterCity_Frlg",
+  "x": 46,
+  "y": 25,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PewterCity_Frlg",
+  "x": 46,
+  "y": 25,
+  "in_battle": false
+ },
+ "accepted": "2026-10-29 15:57"
+}
