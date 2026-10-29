@@ -18,7 +18,9 @@ Cerulean is the town by the lake, where Nugget Bridge comes down from the north:
   its pool, the Friends' camp, the Pokémon shelter's corner and a garden behind a tree to cut.
 
 Letters: the kit's legend (T forest, . lawn, = cobblestones, : dirt, d the bridge's planks, ~ water, * flowers,
-b bushes, # fences, o rocks, l lamps (two blocks), S signs) and the buildings: W the Gym, Z the Pokémon Center, L the
+b bushes, # fences, o rocks, l lamps (two blocks), S signs, p the dressed-stone paving), % brick (the street
+pack's, in Cerulean's blues, without kerbs) and the buildings: 1 and 2 cottages without doors (the family house in
+blue and in teal), W the Gym, Z the Pokémon Center, L the
 Poké Mart, K the Bike Shop, H the two family houses, X the three small houses, Y Cerulean Cave's mouth.
 """
 from pathlib import Path
@@ -132,6 +134,27 @@ rect(43, 39, 53, 48, "#")
 rect(44, 40, 52, 47, ".")
 at(49, 39, ".")                     # its gap, where the tree to cut stands
 rect(45, 41, 47, 42, "*"); rect(50, 45, 52, 46, "*")
+
+# the town paved (KR-93): no lawn in the streets' blocks but its gardens, its yards and the shelter's field. The kit's
+# dressed stone round the buildings, which stand on it; Cerulean's blue brick (the street pack's, without kerbs) the
+# lakeside promenade, the sidewalk down the road south, the ring round the plaza's pool and the houses' paths; four
+# cottages without doors (the family house, in blue and teal), a fountain in the south-west, lamps
+for x0, y0, x1, y1 in ((2, 21, 20, 41), (25, 21, 44, 36), (45, 14, 53, 27), (41, 31, 53, 36), (25, 38, 42, 41),
+                       (25, 44, 42, 48), (52, 37, 53, 38)):
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            if g[y][x] in ".o:" or (g[y][x] == "*" and y < 44):
+                g[y][x] = "p"
+rect(3, 22, 7, 25, "1"); rect(9, 22, 13, 25, "2")   # two cottages facing the road in
+rect(3, 27, 7, 30, "2")                             # one more, north of the bald man's corner (he walks 6-8,31-33)
+rect(48, 22, 52, 25, "1")                           # and one east of the bridge road
+rect(10, 31, 13, 33, "~")                           # the fountain
+rect(2, 14, 31, 15, "%"); rect(12, 16, 13, 16, "%"); rect(24, 16, 25, 16, "%")   # the promenade by the lake
+rect(19, 21, 20, 40, "%")                           # the sidewalk down the road south
+rect(32, 25, 32, 28, "%"); rect(38, 25, 38, 28, "%"); rect(32, 28, 38, 28, "%")  # round the pool
+rect(15, 30, 15, 31, "%"); rect(48, 19, 48, 21, "%")                             # the houses' paths
+for x, y in ((18, 23), (25, 34), (40, 34), (45, 26)):
+    rect(x, y - 1, x, y, "l")                       # lamps on the paving: the post's foot at x, y
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

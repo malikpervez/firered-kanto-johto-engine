@@ -12,7 +12,8 @@
  },
  ",": "lawn_flowers",
  "=": {
-  "auto": "cobble"
+  "auto": "cobble",
+  "joins": "%"
  },
  ":": {
   "auto": "dirt"
@@ -54,8 +55,14 @@
   ]
  },
  "k": "stump",
- "l": "lamp",
- "S": "sign",
+ "l": {
+  "name": "lamp_paving",
+  "joins": "%"
+ },
+ "S": {
+  "name": "sign_paving",
+  "joins": "%"
+ },
  "B": "barrel",
  "c": "crate",
  "O": "boat",
@@ -93,7 +100,8 @@
   "elevation": 1
  },
  "p": {
-  "auto": "paving"
+  "auto": "paving",
+  "joins": "%"
  },
  "+": {
   "pick": [
@@ -123,12 +131,42 @@
   "with": "rock_b",
   "elevation": 1
  },
- "Z": "pokemon_center",
- "L": "poke_mart",
- "W": "viridian_gym",
- "K": "trainer_school",
+ "Z": {
+  "name": "pokemon_center_paved",
+  "joins": "%"
+ },
+ "L": {
+  "name": "poke_mart_paved",
+  "joins": "%"
+ },
+ "W": {
+  "name": "viridian_gym",
+  "joins": "%"
+ },
+ "K": {
+  "name": "trainer_school",
+  "joins": "%"
+ },
  "H": "house_family",
- "X": "house_gardener",
+ "X": {
+  "name": "house_gardener",
+  "joins": "%"
+ },
  "Y": "diglett_cave",
- "^": "hole"
+ "^": "hole",
+ "1": {
+  "name": "cottage_blue",
+  "joins": "%"
+ },
+ "2": {
+  "name": "cottage_teal",
+  "joins": "%"
+ },
+ "%": {
+  "pick": [
+   "cerulean_brick#15",
+   "cerulean_brick#15~1",
+   "cerulean_brick#15~2"
+  ]
+ }
 }
