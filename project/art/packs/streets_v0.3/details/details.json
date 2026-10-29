@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "id": "details",
+  "type": "static_terrain",
+  "block_size_px": 16,
+  "palette": "road_existing",
+  "palette_file": "../palettes/road_existing.gpl",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "piece_names": [
+    "manhole",
+    "tree_grate",
+    "tactile_paving",
+    "storm_drain_N",
+    "storm_drain_E",
+    "storm_drain_S",
+    "storm_drain_W"
+  ],
+  "naming": "N means lawn outside to north; to_asphalt_N means asphalt on north side. Diagonal names are clockwise NE, SE, SW, NW.",
+  "solid": false,
+  "solid_blocks": [],
+  "door_block": null,
+  "variant_border_policy": "Every centre variant has the same outer pixel border.",
+  "tiles": [
+    {
+      "name": "manhole",
+      "image": "tiles/manhole.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "ground": "asphalt",
+      "tiles_8x8": [
+        [
+          34,
+          34
+        ],
+        [
+          33,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "tree_grate",
+      "image": "tiles/tree_grate.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "ground": "pavement",
+      "placement": "One 16x16 grate under the trunk of an existing 32x32 tree; tree retains its own palette and collision.",
+      "tiles_8x8": [
+        [
+          49,
+          49
+        ],
+        [
+          49,
+          49
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "tactile_paving",
+      "image": "tiles/tactile_paving.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "ground": "pavement",
+      "tiles_8x8": [
+        [
+          50,
+          50
+        ],
+        [
+          50,
+          50
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "storm_drain_N",
+      "image": "tiles/storm_drain_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "ground": "pavement/asphalt kerb",
+      "tiles_8x8": [
+        [
+          22,
+          29
+        ],
+        [
+          26,
+          26
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "storm_drain_E",
+      "image": "tiles/storm_drain_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "ground": "pavement/asphalt kerb",
+      "tiles_8x8": [
+        [
+          23,
+          18
+        ],
+        [
+          23,
+          20
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "storm_drain_S",
+      "image": "tiles/storm_drain_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "ground": "pavement/asphalt kerb",
+      "tiles_8x8": [
+        [
+          17,
+          17
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "storm_drain_W",
+      "image": "tiles/storm_drain_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "ground": "pavement/asphalt kerb",
+      "tiles_8x8": [
+        [
+          19,
+          28
+        ],
+        [
+          41,
+          28
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    }
+  ],
+  "transitions": [],
+  "unique_8x8_tiles": 16,
+  "tile_pool": "../tile_pools/part_a/tiles.4bpp"
+}

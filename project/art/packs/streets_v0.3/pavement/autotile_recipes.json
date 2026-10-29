@@ -1,0 +1,4623 @@
+{
+  "mask_bits": {
+    "N": 1,
+    "E": 2,
+    "S": 4,
+    "W": 8,
+    "NE": 16,
+    "SE": 32,
+    "SW": 64,
+    "NW": 128
+  },
+  "bit_meaning": "1 = outside this material",
+  "recipes": {
+    "0": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "1": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "2": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "3": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "4": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "5": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "6": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "7": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "8": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "9": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "10": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "11": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "12": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "13": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "14": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "15": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "16": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "17": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "18": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "19": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "20": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "21": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "22": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "23": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "24": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "25": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "26": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "27": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "28": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "29": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "30": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "31": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "32": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "33": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "34": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "35": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "36": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "37": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "38": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "39": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "40": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "41": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "42": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "43": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "44": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "45": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "46": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "47": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "48": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "49": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "50": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "51": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "52": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "53": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "54": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "55": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "56": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "57": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "58": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "59": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "60": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "61": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "62": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "63": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "64": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "65": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "66": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "67": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "68": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "69": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "70": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "71": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "72": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "73": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "74": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "75": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "76": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "77": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "78": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "79": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "80": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "81": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "82": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "83": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "84": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "85": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "86": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "87": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "88": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "89": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "90": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "91": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "92": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "93": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "94": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "95": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "96": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "97": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "98": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "99": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "100": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "101": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "102": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "103": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "104": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "105": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "106": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "107": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "108": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "109": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "110": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "111": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "112": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "113": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "114": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "115": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "116": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "117": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "118": {
+      "NW": {
+        "piece": "center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "119": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "120": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "121": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "122": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "123": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "124": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "125": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "126": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "127": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "128": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "129": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "130": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "131": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "132": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "133": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "134": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "135": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "136": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "137": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "138": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "139": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "140": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "141": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "142": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "143": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "144": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "145": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "146": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "147": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "148": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "149": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "150": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "151": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "152": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "153": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "154": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "155": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "156": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "157": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "158": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "159": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "160": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "161": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "162": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "163": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "164": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "165": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "166": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "167": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "168": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "169": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "170": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "171": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "172": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "173": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "174": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "175": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "176": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "177": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "178": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "179": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "180": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "181": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "182": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "183": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "184": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "185": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "186": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "187": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "188": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "189": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "190": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "191": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "192": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "193": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "194": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "195": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "196": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "197": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "198": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "199": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "200": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "201": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "202": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "203": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "204": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "205": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "206": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "207": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "208": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "209": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "210": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "211": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "212": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "213": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "214": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "215": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "216": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "217": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "center",
+        "quadrant": "SE"
+      }
+    },
+    "218": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "219": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "220": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "221": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "222": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "223": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "224": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "225": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "226": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "227": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "228": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "229": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "230": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "231": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "232": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "233": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "234": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "235": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "236": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "237": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "238": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "239": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "240": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "241": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "242": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "243": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "in_SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "244": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "245": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "246": {
+      "NW": {
+        "piece": "in_NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "247": {
+      "NW": {
+        "piece": "N",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "248": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "249": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "in_SE",
+        "quadrant": "SE"
+      }
+    },
+    "250": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "251": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "W",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "E",
+        "quadrant": "SE"
+      }
+    },
+    "252": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "in_NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "253": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "N",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "S",
+        "quadrant": "SE"
+      }
+    },
+    "254": {
+      "NW": {
+        "piece": "W",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "E",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    },
+    "255": {
+      "NW": {
+        "piece": "NW",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "NE",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "SW",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "SE",
+        "quadrant": "SE"
+      }
+    }
+  }
+}

@@ -8,7 +8,8 @@ tiles, and rebuilding one map never breaks another. Change the kit, then rebuild
 
 Banks (palettes):
   0  ground: grass, dirt, cobblestones, dressed-stone paving (paving/, a native pixel pack), the field rocks
-     (field_rocks/, a native pixel pack), stumps; ledges, steps, lily pads and reeds (fields.py, the last two drawn
+     (field_rocks/, a native pixel pack), stumps, the city streets (streets.py: asphalt, pavements and their kerbs,
+     crossings, manholes and drains, from ../packs/streets_v0.3); ledges, steps, lily pads and reeds (fields.py, the last two drawn
      over the pond's water), and the tall grass sprite drawn over the player's feet
   1  water: the pond and the sea, its cliff and the sea rocks (native pixel packs in pond/ and sea/, put together
      in water.py), animated in eight frames
@@ -32,6 +33,7 @@ import autotile
 import buildings
 import fields
 import lawn
+import streets
 import trees
 import water
 
@@ -721,6 +723,7 @@ def primary(spec_dir: Path) -> dict:
         sh = sheet(name, pal, cols=b.idx.shape[1] // 16)
         sh.add(name, b.idx, tileset="primary", **b.entry())
         spec_mt += sh.write()
+    spec_mt += street_entries(sheet("streets", "ground"))
     (KIT / "sheets").mkdir(exist_ok=True)
     for name, v in TALL_GRASS.items():
         Image.fromarray(rgba(_tall_grass(f"{v}_feet_80x16.png"), PTG), "RGBA").save(KIT / f"sheets/{name}_fx.png")
@@ -744,6 +747,37 @@ def primary(spec_dir: Path) -> dict:
     }
 
 
+def street_entries(sh: "Sheet") -> list[dict]:
+    """The city streets (streets.py), last in the primary so nothing before them moves. The road is plain asphalt
+    ("asphalt#15", its centre variants "~1".."~4": ~1 and ~2 the plain centre again, so it's three in five; the same
+    blocks share one metatile, "dedupe"): its edges are the pavement's kerbs, and the pack's lawn edges for asphalt
+    aren't in the kit (country roads stay dirt or cobble). The pavement as pae map paint autotiles it ("#mask",
+    "#mask.corners") on grass and, as the kerb, on asphalt; then the joins to other ground, the road's lines, the
+    crossings and the details."""
+    def add(name, idx, **entry):
+        sh.add(name, idx, tileset="primary", dedupe=True, **entry)
+    add("asphalt#15", streets.piece("asphalt", "center", P0), ground="grass")
+    for k, v in enumerate(("center", "center", "center_b", "center_c"), 1):
+        add(f"asphalt#15~{k}", streets.piece("asphalt", v, P0), ground="grass")
+    for surface, src, ground in (("pavement", "pavement", "grass"), ("kerb", "pavement", "asphalt#15")):
+        for m in range(16):
+            add(f"{surface}#{m}", streets.block(src, m, 0, P0), ground=ground)
+        for k, v in enumerate(("center", "center", "center_b", "center_c"), 1):
+            add(f"{surface}#15~{k}", streets.piece(src, v, P0), ground=ground)
+        for m, c in streets.CORNERS:
+            add(f"{surface}#{m}.{c}", streets.block(src, m, c, P0), ground=ground)
+    for surface, joins in streets.JOINS.items():
+        for name in joins:
+            add(f"{surface}_{name}", streets.piece(surface, name, P0), ground="grass")
+    for name in streets.LINES:
+        add(f"asphalt_{name}", streets.piece("asphalt", name, P0), ground="grass")
+    for name in streets.CROSSING:
+        add(f"crossing_{name}", streets.piece("crossing", name, P0), ground="grass")
+    for name in streets.DETAILS:
+        add(name, streets.piece("details", name, P0), ground="grass")
+    return sh.write()
+
+
 # the legend characters every map shares
 LEGEND = {
     "T": {"auto": "forest"},
@@ -761,6 +795,12 @@ LEGEND = {
     "v": {"auto": "pond", "joins": "~", "with": "lily", "elevation": 1},
     "r": {"auto": "pond", "joins": "~", "with": "reeds", "elevation": 1},
     "p": {"auto": "paving"},
+    # the city streets (streets.py): "+" the road (no edges: its kerbs are the pavement's), "&" the pavement along a
+    # road (its kerb over asphalt), "$" the same pavement where it meets lawn (one material with "&": they join
+    # without an edge)
+    "+": {"pick": ["asphalt#15", "asphalt#15~1", "asphalt#15~2", "asphalt#15~3", "asphalt#15~4"]},
+    "&": {"auto": "kerb"},
+    "$": {"auto": "pavement", "joins": "&"},
     "q": {"auto": "sea", "joins": "s", "with": "rock_a", "elevation": 1},
     "Q": {"auto": "sea", "joins": "s", "with": "rock_b", "elevation": 1},
 }

@@ -1,0 +1,4390 @@
+{
+  "status": "PASS",
+  "checks_passed": 547,
+  "checks_total": 547,
+  "palette": {
+    "part_a_unchanged": true,
+    "used_part_a_indices_compatible_with_city": [
+      0,
+      7,
+      10,
+      11,
+      12,
+      13,
+      15
+    ]
+  },
+  "piece_results": {
+    "asphalt": [
+      {
+        "name": "center",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_b",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_c",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_ALL",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "single",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "dashed_H",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "dashed_V",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "dashed_H_boundary",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "dashed_V_boundary",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "lane_edge_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "lane_edge_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "lane_edge_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "lane_edge_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_cobble_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_cobble_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_cobble_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_cobble_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      }
+    ],
+    "pavement": [
+      {
+        "name": "center",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_b",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_c",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_ALL",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "single",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_asphalt_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_asphalt_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_asphalt_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_asphalt_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_cobble_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_cobble_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_cobble_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_cobble_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_dressed_stone_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_dressed_stone_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_dressed_stone_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_dressed_stone_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      }
+    ],
+    "crossing": [
+      {
+        "name": "road_EW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "road_NS",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "dropped_kerb_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "end_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "dropped_kerb_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "end_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "dropped_kerb_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "end_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "dropped_kerb_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "end_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      }
+    ],
+    "details": [
+      {
+        "name": "manhole",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "tree_grate",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "tactile_paving",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "storm_drain_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "storm_drain_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "storm_drain_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "storm_drain_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      }
+    ],
+    "brick": [
+      {
+        "name": "center",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_b",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_c",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_ALL",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "single",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      }
+    ],
+    "granite": [
+      {
+        "name": "center",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_b",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_c",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_ALL",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "single",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "large_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "large_NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "large_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "large_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "to_pavement_W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      }
+    ],
+    "mosaic": [
+      {
+        "name": "compass_2x2",
+        "size_px": [
+          32,
+          32
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      }
+    ],
+    "planter": [
+      {
+        "name": "center",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_b",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "center_c",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "N",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "E",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "S",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "W",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_SW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SE_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_NE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_SE_SW_NW",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "in_ALL",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      },
+      {
+        "name": "single",
+        "size_px": [
+          16,
+          16
+        ],
+        "size": true,
+        "indexed_4bit": true,
+        "palette": true,
+        "alpha": true
+      }
+    ]
+  },
+  "tile_counts": {
+    "counting": "Native 8x8 palette-index tiles; H, V and HV mirrors merged, 90-degree rotations distinct. Includes every delivered piece and transition, including copied reference halves.",
+    "part_a": {
+      "unique_tiles": 52,
+      "limit": 64
+    },
+    "part_b": {
+      "unique_tiles": 44,
+      "limit": 48
+    },
+    "surfaces": {
+      "asphalt": 23,
+      "pavement": 27,
+      "brick": 21,
+      "granite": 16,
+      "crossing": 3,
+      "details": 16,
+      "planter": 5,
+      "mosaic": 4
+    },
+    "city_subsets": {
+      "granite+mosaic": 19,
+      "granite+mosaic+planter": 24,
+      "brick+planter": 26,
+      "brick+granite+mosaic+planter": 44
+    },
+    "city_presets": {
+      "saffron": {
+        "unique_tiles": 24,
+        "allowance": 29
+      },
+      "celadon": {
+        "unique_tiles": 32,
+        "allowance": 39
+      }
+    }
+  },
+  "checks": [
+    {
+      "check": "Part A GPL byte-identical to supplied reference",
+      "pass": true
+    },
+    {
+      "check": "A exactly 16 palette colours, RGB divisible by 8",
+      "pass": true
+    },
+    {
+      "check": "B exactly 16 palette colours, RGB divisible by 8",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center_b PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center_c PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_ALL PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/single PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_H PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_V PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_H_boundary PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_V_boundary PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "asphalt no stale/unlisted game PNGs",
+      "pass": true
+    },
+    {
+      "check": "asphalt variants distinct",
+      "pass": true
+    },
+    {
+      "check": "asphalt shared exact outer border",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 0,0",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 0,1",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 0,2",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 1,0",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 1,1",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 1,2",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 2,0",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 2,1",
+      "pass": true
+    },
+    {
+      "check": "asphalt seam pair 2,2",
+      "pass": true
+    },
+    {
+      "check": "asphalt every named corner and combination",
+      "pass": true
+    },
+    {
+      "check": "asphalt 256 valid recipe references",
+      "pass": true
+    },
+    {
+      "check": "asphalt recipes reproduce named edges and corner combinations",
+      "pass": true
+    },
+    {
+      "check": "pavement/center PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/center_b PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/center_c PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_ALL PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/single PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_asphalt_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_asphalt_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_asphalt_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_asphalt_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_cobble_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_cobble_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_cobble_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_cobble_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_dressed_stone_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_dressed_stone_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_dressed_stone_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_dressed_stone_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "pavement no stale/unlisted game PNGs",
+      "pass": true
+    },
+    {
+      "check": "pavement variants distinct",
+      "pass": true
+    },
+    {
+      "check": "pavement shared exact outer border",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 0,0",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 0,1",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 0,2",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 1,0",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 1,1",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 1,2",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 2,0",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 2,1",
+      "pass": true
+    },
+    {
+      "check": "pavement seam pair 2,2",
+      "pass": true
+    },
+    {
+      "check": "pavement every named corner and combination",
+      "pass": true
+    },
+    {
+      "check": "pavement 256 valid recipe references",
+      "pass": true
+    },
+    {
+      "check": "pavement recipes reproduce named edges and corner combinations",
+      "pass": true
+    },
+    {
+      "check": "crossing/road_EW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/road_NS PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "crossing no stale/unlisted game PNGs",
+      "pass": true
+    },
+    {
+      "check": "details/manhole PNG contract",
+      "pass": true
+    },
+    {
+      "check": "details/tree_grate PNG contract",
+      "pass": true
+    },
+    {
+      "check": "details/tactile_paving PNG contract",
+      "pass": true
+    },
+    {
+      "check": "details/storm_drain_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "details/storm_drain_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "details/storm_drain_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "details/storm_drain_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "details no stale/unlisted game PNGs",
+      "pass": true
+    },
+    {
+      "check": "brick/center PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/center_b PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/center_c PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/in_ALL PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/single PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/to_pavement_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/to_pavement_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/to_pavement_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick/to_pavement_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "brick no stale/unlisted game PNGs",
+      "pass": true
+    },
+    {
+      "check": "brick variants distinct",
+      "pass": true
+    },
+    {
+      "check": "brick shared exact outer border",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 0,0",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 0,1",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 0,2",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 1,0",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 1,1",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 1,2",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 2,0",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 2,1",
+      "pass": true
+    },
+    {
+      "check": "brick seam pair 2,2",
+      "pass": true
+    },
+    {
+      "check": "brick every named corner and combination",
+      "pass": true
+    },
+    {
+      "check": "brick 256 valid recipe references",
+      "pass": true
+    },
+    {
+      "check": "brick recipes reproduce named edges and corner combinations",
+      "pass": true
+    },
+    {
+      "check": "granite/center PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/center_b PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/center_c PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/in_ALL PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/single PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/large_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/large_NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/large_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/large_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/to_pavement_N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/to_pavement_E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/to_pavement_S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite/to_pavement_W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "granite no stale/unlisted game PNGs",
+      "pass": true
+    },
+    {
+      "check": "granite variants distinct",
+      "pass": true
+    },
+    {
+      "check": "granite shared exact outer border",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 0,0",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 0,1",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 0,2",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 1,0",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 1,1",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 1,2",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 2,0",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 2,1",
+      "pass": true
+    },
+    {
+      "check": "granite seam pair 2,2",
+      "pass": true
+    },
+    {
+      "check": "granite every named corner and combination",
+      "pass": true
+    },
+    {
+      "check": "granite 256 valid recipe references",
+      "pass": true
+    },
+    {
+      "check": "granite recipes reproduce named edges and corner combinations",
+      "pass": true
+    },
+    {
+      "check": "mosaic/compass_2x2 PNG contract",
+      "pass": true
+    },
+    {
+      "check": "mosaic no stale/unlisted game PNGs",
+      "pass": true
+    },
+    {
+      "check": "planter/center PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/center_b PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/center_c PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/N PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/E PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/S PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/W PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SE PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SE_SW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SE_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SE_SW_NW PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/in_ALL PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter/single PNG contract",
+      "pass": true
+    },
+    {
+      "check": "planter no stale/unlisted game PNGs",
+      "pass": true
+    },
+    {
+      "check": "planter every named corner and combination",
+      "pass": true
+    },
+    {
+      "check": "planter 256 valid recipe references",
+      "pass": true
+    },
+    {
+      "check": "planter recipes reproduce named edges and corner combinations",
+      "pass": true
+    },
+    {
+      "check": "Part A tile budget",
+      "pass": true
+    },
+    {
+      "check": "Part A report count",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center_b lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center_c lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_ALL lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/single lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_H lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_V lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_H_boundary lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_V_boundary lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/center lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/center_b lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/center_c lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_NE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_SE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/in_ALL lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/single lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_asphalt_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_asphalt_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_asphalt_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_asphalt_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_cobble_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_cobble_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_cobble_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_cobble_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_dressed_stone_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_dressed_stone_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_dressed_stone_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "pavement/to_dressed_stone_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/road_EW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/road_NS lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "details/manhole lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "details/tree_grate lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "details/tactile_paving lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "details/storm_drain_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "details/storm_drain_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "details/storm_drain_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "details/storm_drain_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "Part B tile budget",
+      "pass": true
+    },
+    {
+      "check": "Part B report count",
+      "pass": true
+    },
+    {
+      "check": "brick/center lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/center_b lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/center_c lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_NE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_SE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/in_ALL lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/single lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/to_pavement_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/to_pavement_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/to_pavement_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "brick/to_pavement_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/center lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/center_b lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/center_c lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_NE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_SE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/in_ALL lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/single lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/large_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/large_NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/large_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/large_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/to_pavement_N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/to_pavement_E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/to_pavement_S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "granite/to_pavement_W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "mosaic/compass_2x2 lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/center lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/center_b lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/center_c lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/N lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/E lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/S lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/W lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SE lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SE_SW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SE_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_NE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_SE_SW_NW lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/in_ALL lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "planter/single lossless GBA 4bpp reconstruction",
+      "pass": true
+    },
+    {
+      "check": "Per-surface reported counts",
+      "pass": true
+    },
+    {
+      "check": "City palette preserves every used Part A colour at same index",
+      "pass": true
+    },
+    {
+      "check": "Ground palette unchanged from v0.2",
+      "pass": true
+    },
+    {
+      "check": "City palette changes confined to unused street slots 3,4,5,6",
+      "pass": true
+    },
+    {
+      "check": "asphalt same piece names and dimensions as v0.2",
+      "pass": true
+    },
+    {
+      "check": "pavement same piece names and dimensions as v0.2",
+      "pass": true
+    },
+    {
+      "check": "crossing same piece names and dimensions as v0.2",
+      "pass": true
+    },
+    {
+      "check": "details same piece names and dimensions as v0.2",
+      "pass": true
+    },
+    {
+      "check": "brick same piece names and dimensions as v0.2",
+      "pass": true
+    },
+    {
+      "check": "granite same piece names and dimensions as v0.2",
+      "pass": true
+    },
+    {
+      "check": "mosaic same piece names and dimensions as v0.2",
+      "pass": true
+    },
+    {
+      "check": "planter same piece names and dimensions as v0.2",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center_b road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/center_c road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/N road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/NE road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/E road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/SE road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/S road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/SW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/W road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/NW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_NW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_SW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_NW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SW_NW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE_SW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SE_NW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_NE_SW_NW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_SE_SW_NW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/in_ALL road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/single road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_H road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_V road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_H_boundary road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/dashed_V_boundary road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_N road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_E road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_S road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/lane_edge_W road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_N road half unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_E road half unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_S road half unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_pavement_W road half unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_N road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_E road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_S road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "asphalt/to_cobble_W road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/road_EW road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/road_NS road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_N road half unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_N road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_E road half unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_E road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_S road half unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_S road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/dropped_kerb_W road half unchanged",
+      "pass": true
+    },
+    {
+      "check": "crossing/end_W road art unchanged",
+      "pass": true
+    },
+    {
+      "check": "pavement exact cobble N half",
+      "pass": true
+    },
+    {
+      "check": "pavement exact cobble E half",
+      "pass": true
+    },
+    {
+      "check": "pavement exact cobble S half",
+      "pass": true
+    },
+    {
+      "check": "pavement exact cobble W half",
+      "pass": true
+    },
+    {
+      "check": "asphalt exact cobble N half",
+      "pass": true
+    },
+    {
+      "check": "asphalt exact cobble E half",
+      "pass": true
+    },
+    {
+      "check": "asphalt exact cobble S half",
+      "pass": true
+    },
+    {
+      "check": "asphalt exact cobble W half",
+      "pass": true
+    },
+    {
+      "check": "pavement exact dressed_stone N half",
+      "pass": true
+    },
+    {
+      "check": "pavement exact dressed_stone E half",
+      "pass": true
+    },
+    {
+      "check": "pavement exact dressed_stone S half",
+      "pass": true
+    },
+    {
+      "check": "pavement exact dressed_stone W half",
+      "pass": true
+    },
+    {
+      "check": "saffron selected secondary tiles within city allowance",
+      "pass": true
+    },
+    {
+      "check": "saffron compact tile pool reconstructs every selected piece",
+      "pass": true
+    },
+    {
+      "check": "saffron preset includes all secondary pieces shown in its preview",
+      "pass": true
+    },
+    {
+      "check": "celadon selected secondary tiles within city allowance",
+      "pass": true
+    },
+    {
+      "check": "celadon compact tile pool reconstructs every selected piece",
+      "pass": true
+    },
+    {
+      "check": "celadon preset includes all secondary pieces shown in its preview",
+      "pass": true
+    },
+    {
+      "check": "saffron_city_block nearest neighbour 3x",
+      "pass": true
+    },
+    {
+      "check": "saffron_city_block GBA viewport 240x160",
+      "pass": true
+    },
+    {
+      "check": "celadon_shopping_street nearest neighbour 3x",
+      "pass": true
+    },
+    {
+      "check": "celadon_shopping_street GBA viewport 240x160",
+      "pass": true
+    }
+  ],
+  "not_tested": [
+    "Full 384-tile map-bank import",
+    "In-game rendering, collision and gameplay",
+    "Actual Saffron/Celadon layouts; previews are demonstrations only"
+  ]
+}

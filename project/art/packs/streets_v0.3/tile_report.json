@@ -1,0 +1,37 @@
+{
+  "counting": "Native 8x8 palette-index tiles; H, V and HV mirrors merged, 90-degree rotations distinct. Includes every delivered piece and transition, including copied reference halves.",
+  "part_a": {
+    "unique_tiles": 52,
+    "limit": 64
+  },
+  "part_b": {
+    "unique_tiles": 44,
+    "limit": 48
+  },
+  "surfaces": {
+    "asphalt": 23,
+    "pavement": 27,
+    "brick": 21,
+    "granite": 16,
+    "crossing": 3,
+    "details": 16,
+    "planter": 5,
+    "mosaic": 4
+  },
+  "city_subsets": {
+    "granite+mosaic": 19,
+    "granite+mosaic+planter": 24,
+    "brick+planter": 26,
+    "brick+granite+mosaic+planter": 44
+  },
+  "city_presets": {
+    "saffron": {
+      "unique_tiles": 24,
+      "allowance": 29
+    },
+    "celadon": {
+      "unique_tiles": 32,
+      "allowance": 39
+    }
+  }
+}

@@ -23,6 +23,7 @@ There are two kinds of art:
 | Rock & cliff pack | `kit/rock_cliff/` | revision 3.2 (made for Route 22) | cliffs, put together by `kit/cliffs.py`: Route 22, Pewter, Routes 3, 4, 9, 10, 11, 25, Cinnabar's volcano, Route 20's Seafoam Islands |
 | Lawn, "Lush Emerald" | `kit/lawn/B_Lush_Emerald/` | option B | the lawn (`.`) everywhere |
 | Dressed-stone paving | `kit/paving/` | | paving (`p`): Pewter, Routes 2, 22 |
+| Kanto Street Textures (Part A: the kit's streets) | `packs/streets_v0.3/` (`asphalt/`, `pavement/`, `crossing/`, `details/`), put together by `kit/streets.py` | v0.3 (made with another AI from `Street_Textures_v0.1_prompt.md`) | in the kit, last in its primary: the road (`+`, plain asphalt: the pack's lawn edges for asphalt aren't in the kit), the pavement on asphalt (`&`, its kerb) and on grass (`$`), joins to cobble and the dressed stone, the road's lines, zebra crossings and dropped kerbs, a manhole, storm drains, tactile paving and a tree grate (by name: `asphalt_dashed_H`, `crossing_road_EW`, `manhole`...). No map uses them yet. Part B (brick, granite, the compass, planters, in its own palette `streets_city.gpl`) is for the cities' own tilesets |
 | Pond water, "Gentle ripples" | `kit/pond/` | option C | ponds (`~`, with lily pads `v` and reeds `r` drawn over it) |
 | Sea, "Staggered swells, reworked rocks" | `kit/sea/` | option B | the sea (`s`) and sea rocks (`q`, `Q`): Pallet, Route 25, Route 17 (its inside corners, the pack's `in_*` pieces, in the kit since Route 17). The sea is surfable and fishable (the pond's behaviour); the rocks are solid |
 | Tall grass | `kit/tall_grass/` | variants B and C (made with another AI from a brief) | tall grass (`g`) |
@@ -121,7 +122,7 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 
 | Map | Own tiles (of 384) | Seam tiles | Metatiles |
 |---|---|---|---|
-| the kit (primary, every map) | 538 (of 640) | | 410 (of 640) |
+| the kit (primary, every map) | 580 (of 640: 624 usable, Pallet's seam borrows 624–639; the streets took 42) | | 548 (of 640; the streets took 138) |
 | Pallet | 297 | 64 | 125 |
 | Route 1 | 45 | 134 | 17 |
 | Viridian | 230 | 0 | 107 |

@@ -1,0 +1,1302 @@
+{
+  "schema_version": 1,
+  "id": "brick",
+  "type": "static_terrain",
+  "block_size_px": 16,
+  "palette": "streets_city",
+  "palette_file": "../palettes/streets_city.gpl",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "piece_names": [
+    "center",
+    "center_b",
+    "center_c",
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "in_NE",
+    "in_SE",
+    "in_SW",
+    "in_NW",
+    "in_NE_SE",
+    "in_NE_SW",
+    "in_NE_NW",
+    "in_SE_SW",
+    "in_SE_NW",
+    "in_SW_NW",
+    "in_NE_SE_SW",
+    "in_NE_SE_NW",
+    "in_NE_SW_NW",
+    "in_SE_SW_NW",
+    "in_ALL",
+    "single"
+  ],
+  "naming": "N means lawn outside to north; to_asphalt_N means asphalt on north side. Diagonal names are clockwise NE, SE, SW, NW.",
+  "solid": false,
+  "solid_blocks": [],
+  "door_block": null,
+  "variant_border_policy": "Every centre variant has the same outer pixel border.",
+  "tiles": [
+    {
+      "name": "center",
+      "image": "tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          31
+        ],
+        [
+          31,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "center_b",
+      "image": "tiles/center_b.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          34,
+          31
+        ],
+        [
+          31,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "center_c",
+      "image": "tiles/center_c.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          31
+        ],
+        [
+          32,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "N",
+      "image": "tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          12,
+          13
+        ],
+        [
+          31,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "NE",
+      "image": "tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          12,
+          5
+        ],
+        [
+          31,
+          20
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "E",
+      "image": "tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          18
+        ],
+        [
+          31,
+          20
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "SE",
+      "image": "tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          18
+        ],
+        [
+          9,
+          1
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "S",
+      "image": "tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          31
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "SW",
+      "image": "tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          25,
+          31
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "W",
+      "image": "tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          25,
+          31
+        ],
+        [
+          24,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "NW",
+      "image": "tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          7,
+          13
+        ],
+        [
+          24,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_NE",
+      "image": "tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          19
+        ],
+        [
+          31,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_SE",
+      "image": "tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          31
+        ],
+        [
+          31,
+          21
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_SW",
+      "image": "tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          31
+        ],
+        [
+          17,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_NW",
+      "image": "tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          26,
+          31
+        ],
+        [
+          31,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_NE_SE",
+      "image": "tiles/in_NE_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          19
+        ],
+        [
+          31,
+          21
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_NE_SW",
+      "image": "tiles/in_NE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          19
+        ],
+        [
+          17,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_NE_NW",
+      "image": "tiles/in_NE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          26,
+          19
+        ],
+        [
+          31,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_SE_SW",
+      "image": "tiles/in_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          31
+        ],
+        [
+          17,
+          21
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_SE_NW",
+      "image": "tiles/in_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          26,
+          31
+        ],
+        [
+          31,
+          21
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_SW_NW",
+      "image": "tiles/in_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          26,
+          31
+        ],
+        [
+          17,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_NE_SE_SW",
+      "image": "tiles/in_NE_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          33,
+          19
+        ],
+        [
+          17,
+          21
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_NE_SE_NW",
+      "image": "tiles/in_NE_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          26,
+          19
+        ],
+        [
+          31,
+          21
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_NE_SW_NW",
+      "image": "tiles/in_NE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          26,
+          19
+        ],
+        [
+          17,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_SE_SW_NW",
+      "image": "tiles/in_SE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          26,
+          31
+        ],
+        [
+          17,
+          21
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "in_ALL",
+      "image": "tiles/in_ALL.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          26,
+          19
+        ],
+        [
+          17,
+          21
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "single",
+      "image": "tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          7,
+          5
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "name": "to_pavement_N",
+      "image": "transitions/to_pavement_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "outside_material": "pavement",
+      "outside_side": "N",
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          31,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "to_pavement_E",
+      "image": "transitions/to_pavement_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "outside_material": "pavement",
+      "outside_side": "E",
+      "tiles_8x8": [
+        [
+          33,
+          40
+        ],
+        [
+          31,
+          40
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "to_pavement_S",
+      "image": "transitions/to_pavement_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "outside_material": "pavement",
+      "outside_side": "S",
+      "tiles_8x8": [
+        [
+          33,
+          31
+        ],
+        [
+          40,
+          40
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "to_pavement_W",
+      "image": "transitions/to_pavement_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "outside_material": "pavement",
+      "outside_side": "W",
+      "tiles_8x8": [
+        [
+          40,
+          31
+        ],
+        [
+          40,
+          33
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    }
+  ],
+  "unique_8x8_tiles": 21,
+  "autotile": {
+    "recipes_file": "autotile_recipes.json",
+    "quadrants": "NW, NE, SW, SE; copy native 8x8 quadrants; no rotation or scaling."
+  },
+  "tile_pool": "../tile_pools/part_b/tiles.4bpp"
+}

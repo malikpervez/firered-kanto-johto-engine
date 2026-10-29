@@ -1,0 +1,105 @@
+{
+  "note": "Aliases reuse existing PNGs and cost no additional tiles. They are not files to import twice.",
+  "aliases": {
+    "cobble_to_pavement_N": {
+      "image": "pavement/transitions/to_cobble_S.png",
+      "palette": "road_existing",
+      "meaning": "cobble is the current material; pavement occupies the N half."
+    },
+    "cobble_to_pavement_S": {
+      "image": "pavement/transitions/to_cobble_N.png",
+      "palette": "road_existing",
+      "meaning": "cobble is the current material; pavement occupies the S half."
+    },
+    "cobble_to_pavement_E": {
+      "image": "pavement/transitions/to_cobble_W.png",
+      "palette": "road_existing",
+      "meaning": "cobble is the current material; pavement occupies the E half."
+    },
+    "cobble_to_pavement_W": {
+      "image": "pavement/transitions/to_cobble_E.png",
+      "palette": "road_existing",
+      "meaning": "cobble is the current material; pavement occupies the W half."
+    },
+    "dressed_stone_to_pavement_N": {
+      "image": "pavement/transitions/to_dressed_stone_S.png",
+      "palette": "road_existing",
+      "meaning": "dressed_stone is the current material; pavement occupies the N half."
+    },
+    "dressed_stone_to_pavement_S": {
+      "image": "pavement/transitions/to_dressed_stone_N.png",
+      "palette": "road_existing",
+      "meaning": "dressed_stone is the current material; pavement occupies the S half."
+    },
+    "dressed_stone_to_pavement_E": {
+      "image": "pavement/transitions/to_dressed_stone_W.png",
+      "palette": "road_existing",
+      "meaning": "dressed_stone is the current material; pavement occupies the E half."
+    },
+    "dressed_stone_to_pavement_W": {
+      "image": "pavement/transitions/to_dressed_stone_E.png",
+      "palette": "road_existing",
+      "meaning": "dressed_stone is the current material; pavement occupies the W half."
+    },
+    "cobble_to_asphalt_N": {
+      "image": "asphalt/transitions/to_cobble_S.png",
+      "palette": "road_existing",
+      "meaning": "cobble is the current material; asphalt occupies the N half."
+    },
+    "cobble_to_asphalt_S": {
+      "image": "asphalt/transitions/to_cobble_N.png",
+      "palette": "road_existing",
+      "meaning": "cobble is the current material; asphalt occupies the S half."
+    },
+    "cobble_to_asphalt_E": {
+      "image": "asphalt/transitions/to_cobble_W.png",
+      "palette": "road_existing",
+      "meaning": "cobble is the current material; asphalt occupies the E half."
+    },
+    "cobble_to_asphalt_W": {
+      "image": "asphalt/transitions/to_cobble_E.png",
+      "palette": "road_existing",
+      "meaning": "cobble is the current material; asphalt occupies the W half."
+    },
+    "pavement_to_brick_N": {
+      "image": "brick/transitions/to_pavement_S.png",
+      "palette": "streets_city",
+      "meaning": "pavement is the current material; brick occupies the N half."
+    },
+    "pavement_to_brick_S": {
+      "image": "brick/transitions/to_pavement_N.png",
+      "palette": "streets_city",
+      "meaning": "pavement is the current material; brick occupies the S half."
+    },
+    "pavement_to_brick_E": {
+      "image": "brick/transitions/to_pavement_W.png",
+      "palette": "streets_city",
+      "meaning": "pavement is the current material; brick occupies the E half."
+    },
+    "pavement_to_brick_W": {
+      "image": "brick/transitions/to_pavement_E.png",
+      "palette": "streets_city",
+      "meaning": "pavement is the current material; brick occupies the W half."
+    },
+    "pavement_to_granite_N": {
+      "image": "granite/transitions/to_pavement_S.png",
+      "palette": "streets_city",
+      "meaning": "pavement is the current material; granite occupies the N half."
+    },
+    "pavement_to_granite_S": {
+      "image": "granite/transitions/to_pavement_N.png",
+      "palette": "streets_city",
+      "meaning": "pavement is the current material; granite occupies the S half."
+    },
+    "pavement_to_granite_E": {
+      "image": "granite/transitions/to_pavement_W.png",
+      "palette": "streets_city",
+      "meaning": "pavement is the current material; granite occupies the E half."
+    },
+    "pavement_to_granite_W": {
+      "image": "granite/transitions/to_pavement_E.png",
+      "palette": "streets_city",
+      "meaning": "pavement is the current material; granite occupies the W half."
+    }
+  }
+}
