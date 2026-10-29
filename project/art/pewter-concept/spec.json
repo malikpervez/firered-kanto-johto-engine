@@ -2996,6 +2996,1830 @@
    }
   },
   {
+   "name": "asphalt#15",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt#15~1",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt#15~2",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt#15~3",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt#15~4",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#0",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#1",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#2",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#3",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#4",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#5",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#6",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#7",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#8",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#9",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#10",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#11",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#12",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#13",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#14",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15~1",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15~2",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15~3",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15~4",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#3.1",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#6.2",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#7.1",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#7.2",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#7.3",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#9.8",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#11.1",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#11.8",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#11.9",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#12.4",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#13.4",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#13.8",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#13.12",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#14.2",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#14.4",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#14.6",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.1",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.2",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.3",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.4",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.5",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.6",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.7",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.8",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.9",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.10",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.11",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.12",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.13",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.14",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement#15.15",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "kerb#0",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#1",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#2",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#3",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#4",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#5",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#6",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#7",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#8",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#9",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#10",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#11",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#12",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#13",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#14",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15~1",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15~2",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15~3",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15~4",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#3.1",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#6.2",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#7.1",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#7.2",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 64,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#7.3",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#9.8",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#11.1",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#11.8",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#11.9",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#12.4",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#13.4",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#13.8",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#13.12",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#14.2",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#14.4",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#14.6",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.1",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.2",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.3",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.4",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 80,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.5",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.6",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.7",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.8",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.9",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.10",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.11",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.12",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.13",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.14",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "kerb#15.15",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "asphalt#15"
+  },
+  {
+   "name": "asphalt_to_cobble_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_to_cobble_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_to_cobble_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_to_cobble_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_to_pavement_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 96,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_to_pavement_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_to_pavement_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_to_pavement_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_asphalt_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_asphalt_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_asphalt_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_asphalt_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_cobble_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_cobble_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_cobble_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_cobble_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_dressed_stone_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_dressed_stone_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_dressed_stone_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "pavement_to_dressed_stone_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_dashed_H",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 112,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_dashed_V",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_dashed_H_boundary",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_dashed_V_boundary",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_lane_edge_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_lane_edge_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_lane_edge_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "asphalt_lane_edge_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_road_EW",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_road_NS",
+   "image": "../kit/sheets/streets.png",
+   "x": 128,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_end_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 144,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_end_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 160,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_end_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 176,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_end_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 192,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_dropped_kerb_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 208,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_dropped_kerb_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 224,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_dropped_kerb_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 240,
+   "y": 128,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "crossing_dropped_kerb_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 0,
+   "y": 144,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "manhole",
+   "image": "../kit/sheets/streets.png",
+   "x": 16,
+   "y": 144,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "storm_drain_N",
+   "image": "../kit/sheets/streets.png",
+   "x": 32,
+   "y": 144,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "storm_drain_E",
+   "image": "../kit/sheets/streets.png",
+   "x": 48,
+   "y": 144,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "storm_drain_S",
+   "image": "../kit/sheets/streets.png",
+   "x": 64,
+   "y": 144,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "storm_drain_W",
+   "image": "../kit/sheets/streets.png",
+   "x": 80,
+   "y": 144,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "tactile_paving",
+   "image": "../kit/sheets/streets.png",
+   "x": 96,
+   "y": 144,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "tree_grate",
+   "image": "../kit/sheets/streets.png",
+   "x": 112,
+   "y": 144,
+   "banks": [
+    0
+   ],
+   "tileset": "primary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
    "name": "top1#3",
    "image": "sheets/rock_cliff.png",
    "x": 0,
