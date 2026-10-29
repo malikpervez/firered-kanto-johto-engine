@@ -11,7 +11,9 @@ from the towns before, in Pewter's colours:
   house, because the secondary tileset's 384 tiles don't fit another kind of house beside the Museum and the Gym
   (and leave room for the seam to Route 3).
 Bank 8 is the kit's plants palette; 11 and 12 are the family house recoloured, slate and clay, for the cottages
-without doors (the house's own tiles, a window where its door was: no new tiles).
+without doors (the house's own tiles, a window where its door was: no new tiles). The sidewalks (% in the plan) are
+the kit's pavement (streets.py) in bank 9, whose slots 10-13 the cliffs don't use: Pewter's grey stone, slate between
+the slabs and the cliffs' moss in the joints (the kit's tiles, in another bank: no new tiles).
 
 Run from the repository root:  python3 project/art/pewter-concept/make_art.py
 It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to itself; build.sh
@@ -29,6 +31,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import cliffs
 import kit
+import streets
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -52,6 +55,12 @@ SOLID = set("T#bRoklSBcw_~vrUWYHXZL12") | cliffs.SOLID
 COTTAGES = {"1": ("cottage_slate", 11, {2: (48, 56, 72), 4: (88, 104, 128), 5: (128, 148, 168), 13: (80, 88, 104)}),
             "2": ("cottage_clay", 12, {2: (72, 48, 40), 4: (152, 104, 72), 5: (192, 144, 104), 13: (112, 80, 56),
                                        10: (184, 168, 136), 11: (224, 208, 176), 12: (240, 232, 208)})}
+# the sidewalks: the cliffs' palette with the pavement's colours in the slots the cliffs leave free (10 the slate
+# between the slabs, 11 a shadow, 12-13 the slabs); its 1 (the outline) and 15 (the moss, its joints) are the cliffs'
+WALK = "%"
+WALK_COLOURS = {10: (112, 120, 136), 11: (88, 92, 100), 12: (160, 156, 144), 13: (200, 194, 178)}
+CLIFF_PAL = [WALK_COLOURS.get(i, c) for i, c in enumerate(cliffs.PAL)]
+LEGEND = {WALK: {"auto": "pewter_walk"}, "=": {"auto": "cobble", "joins": WALK}}  # one material: no kerb between
 
 
 def cottage(idx):
@@ -72,6 +81,25 @@ def cottage(idx):
     for c in (4, 5):
         put(7, c, cell(7, 3))
     put(4, 4, cell(4, 7)); put(4, 5, cell(4, 8))
+    return out
+
+
+def walks(g) -> set[tuple[int, int]]:
+    """The sidewalk blocks the map shows: (neighbour mask, inside corners) as pae map paint autotiles them (the
+    cobbles count as the sidewalk, the map's edges too)."""
+    def same(x, y):
+        return not (0 <= x < MAP_W and 0 <= y < MAP_H) or g[y][x] in (WALK, "=")
+    out = set()
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            if g[y][x] != WALK:
+                continue
+            mask = sum(bit for bit, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                       if same(x + dx, y + dy))
+            corners = sum(bit for bit, (dx, dy), sides in ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12),
+                                                          (8, (-1, -1), 9))
+                          if mask & sides == sides and not same(x + dx, y + dy))
+            out.add((mask, corners))
     return out
 
 
@@ -158,7 +186,7 @@ def main() -> None:
     check(g, d)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
-    rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
+    rock = kit.Sheet("rock_cliff", CLIFF_PAL, CLIFF_BANK, HERE, HERE)
     char_of = cliffs.add(rock, g, extras=())
     spec_mt += rock.write()
     pals = {}
@@ -178,12 +206,21 @@ def main() -> None:
         sh = kit.Sheet(name, pals[bank], bank, HERE, HERE, cols=house.idx.shape[1] // 16)
         sh.add(name, cottage(house.idx), tileset="secondary", ground="grass", solid=True, dedupe=True)
         spec_mt += sh.write()
+    sh = kit.Sheet("pewter_walk", CLIFF_PAL, CLIFF_BANK, HERE, HERE, cols=8)
+    for m, c in sorted(walks(g)):  # the kit's pavement blocks, in Pewter's stone: only those the map shows
+        sh.add(f"pewter_walk#{m}.{c}" if c else f"pewter_walk#{m}", streets.block("pavement", m, c, kit.P0),
+               tileset="secondary", ground="grass", dedupe=True)
+    if (15, 0) in walks(g):  # the slabs' variants, as the kit's pavement has them
+        for k, v in enumerate(("center", "center", "center_b", "center_c"), 1):
+            sh.add(f"pewter_walk#15~{k}", streets.piece("pavement", v, kit.P0), tileset="secondary",
+                   ground="grass", dedupe=True)
+    spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
     for bank, pal in pals.items():
         kit.write_palette(HERE / f"palette_{bank}.pal", pal)
-    kit.write_palette(HERE / f"palette_{CLIFF_BANK}.pal", cliffs.PAL)
+    kit.write_palette(HERE / f"palette_{CLIFF_BANK}.pal", CLIFF_PAL)
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{STONE_BANK}.pal", base["secondary_palettes"][8],
@@ -198,7 +235,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN})
     legend.update(cliffs.legend(char_of))
-    legend.update({k: name for k, (name, _, _) in COTTAGES.items()})
+    legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **LEGEND)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({load(k).name: v for k, v in d.items()}, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

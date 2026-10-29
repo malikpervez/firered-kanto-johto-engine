@@ -4716,6 +4716,96 @@
    "solid": true,
    "elevation": null,
    "open": []
+  },
+  "pewter_walk#3": {
+   "ids": [
+    883
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_walk#4": {
+   "ids": [
+    884
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_walk#5": {
+   "ids": [
+    885
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_walk#6": {
+   "ids": [
+    886
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_walk#9": {
+   "ids": [
+    887
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_walk#11": {
+   "ids": [
+    888
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_walk#12": {
+   "ids": [
+    889
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_walk#14": {
+   "ids": [
+    890
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_walk#15.9": {
+   "ids": [
+    891
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
@@ -4724,7 +4814,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 243
+  "secondary": 252
  },
  "animations": [
   {

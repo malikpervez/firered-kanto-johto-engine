@@ -19,9 +19,9 @@ TTTTbbWWWWWWW***11111.====..HHHHH...o.....CCCCCCCCCC
 TTTTbbWWWWWWW***11111l====l.HHHHH.........CCCCCCCCCC
 TTTTbbWWWWWWW***11111l====l.HHHHH.**......CCCCCCCCCC
 TTTTbbWWWWWWWS........====..HHHHH.........CCCCCCCCCC
-TTTT.ppppppppp........====....:...........CCCCCCCCCC
-TTTT.ppppppppp============....:..bbbbbbbbbCCCCCCCCCC
-TTTT..........============....:..bbbbbbSbbCCCCCCCCCC
+TTTT.ppppppppp........====....%...........CCCCCCCCCC
+TTTT.ppppppppp%%%%%%%%====....%..bbbbbbbbbCCCCCCCCCC
+TTTT..........%%%%%%%%====....%..bbbbbbSbbCCCCCCCCCC
 TTTTo.................==============================
 TTTT.o..22222.........==============================
 TTTT....22222.........==============================
@@ -31,10 +31,10 @@ TTTT****.......11111..====.ZZZZZlLLLL...TTTTTTTTTTTT
 TTTT....XXXXX..11111..====lZZZZZ.LLLL...TTTTTTTTTTTT
 TTTT....XXXXX..11111.l====lZZZZZ.LLLL...TTTTTTTTTTTT
 TTTT....XXXXX..11111.l====.ZZZZZ.LLLLS..TTTTTTTTTTTT
-TTTT....XXXXX.........==============....TTTTTTTTTTTT
-TTTT......:...........==============TTTTTTTTTTTTTTTT
-TTTT.=====================S.........TTTTTTTTTTTTTTTT
-TTTT.=====================.****.....TTTTTTTTTTTTTTTT
+TTTT....XXXXX.........====%%%%%%%%%%....TTTTTTTTTTTT
+TTTT......%...........====%%%%%%%%%%TTTTTTTTTTTTTTTT
+TTTT.%%%%%%%%%%%%%%%%%====S.........TTTTTTTTTTTTTTTT
+TTTT.%%%%%%%%%%%%%%%%%====.****.....TTTTTTTTTTTTTTTT
 TTTT..................====..........TTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTT====TTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTT====TTTTTTTTTTTTTTTTTTTTTTTTTT

@@ -10,7 +10,8 @@ face each other across a square on the main street, which runs from Route 2's ro
 the plaza. The road east to Route 3 (rows 24-27) runs between the north-eastern cliff and the forest, past the Gym
 guide and Oak's aide, where they've always stood.
 
-Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, # fence, b bushes, * flowers, o rocks,
+Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, % the sidewalks (the kit's pavement in
+Pewter's stone: they join the cobbles without a kerb), # fence, b bushes, * flowers, o rocks,
 l lamps (two blocks: the head above the foot), S signs), C cliffs, and the buildings: U the Museum, Y its annex,
 W the Gym, Z the Pokémon Center, L the Poké Mart, H and X the two houses (Y, H and X are the same house); 1 and 2
 the cottages without doors (the same house again, a window where its door was, in a slate and a clay recolour).
@@ -59,14 +60,14 @@ at(32, 15, "S")                    # the museum's sign, east of the plaza (read 
 rect(6, 16, 12, 20, "W")           # door (9,20)
 rect(5, 21, 13, 22, "p")
 at(13, 20, "S")                    # the Gym's sign
-rect(14, 22, 21, 23, "=")          # the road west to the Gym
+rect(14, 22, 21, 23, "%")          # the sidewalk west to the Gym
 rect(4, 16, 5, 20, "b")
 rect(13, 16, 15, 19, "*")
 
 # the main street from Route 2's road up to the plaza, the square, the road east
 rect(22, 16, 25, 43, "=")
 rect(26, 24, 51, 27, "=")          # the road east to Route 3
-rect(26, 33, 35, 34, "=")          # the square's walk
+rect(26, 33, 35, 34, "%")          # the square's walk, a sidewalk past the Center and the Mart
 rect(27, 29, 31, 32, "Z")          # the Pokémon Center, door (29,32)
 rect(33, 29, 36, 32, "L")          # the Poké Mart, door (34,32)
 at(32, 29, "l"); at(32, 28, "l")
@@ -76,10 +77,10 @@ at(37, 32, "S")                    # trainer tips, by the Mart
 
 # the houses
 rect(28, 17, 32, 20, "H")          # by the plaza, door (30,20)
-rect(30, 21, 30, 23, ":")          # its path down to the road east
+rect(30, 21, 30, 23, "%")          # its path down to the road east
 rect(8, 30, 12, 33, "X")           # in the south-west, door (10,33)
-rect(10, 34, 10, 34, ":")
-rect(5, 35, 21, 36, "=")           # the lane to it
+rect(10, 34, 10, 34, "%")
+rect(5, 35, 21, 36, "%")           # the lane to it, a sidewalk
 rect(4, 28, 7, 29, "*")
 at(14, 30, "o"); at(16, 27, "o"); at(5, 25, "o")
 

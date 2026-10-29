@@ -5356,6 +5356,114 @@
    "ground": "grass",
    "solid": true,
    "dedupe": true
+  },
+  {
+   "name": "pewter_walk#3",
+   "image": "sheets/pewter_walk.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "pewter_walk#4",
+   "image": "sheets/pewter_walk.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "pewter_walk#5",
+   "image": "sheets/pewter_walk.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "pewter_walk#6",
+   "image": "sheets/pewter_walk.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "pewter_walk#9",
+   "image": "sheets/pewter_walk.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "pewter_walk#11",
+   "image": "sheets/pewter_walk.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "pewter_walk#12",
+   "image": "sheets/pewter_walk.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "pewter_walk#14",
+   "image": "sheets/pewter_walk.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "pewter_walk#15.9",
+   "image": "sheets/pewter_walk.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
   }
  ]
 }
