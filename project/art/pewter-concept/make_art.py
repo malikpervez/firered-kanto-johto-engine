@@ -22,6 +22,7 @@ It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json an
 turns them into the game's tileset and map with pae.
 """
 import json
+import re
 import shutil
 import sys
 from collections import deque
@@ -52,7 +53,9 @@ SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
 CUT_TREE = (32, 12)  # the tree to cut, in the gap into the annex's yard (an event, on the lawn)
 SOUTH, EAST = [(x, MAP_H - 1) for x in range(22, 26)], [(MAP_W - 1, y) for y in range(24, 28)]
 GUIDE_GATE = [(43, y) for y in range(25, 28)]  # the Gym guide's triggers across the road east (he stands at 43,24)
-SOLID = set("T#bRoklSBcw_~vrUWYHXZL12uty") | cliffs.SOLID
+# the higher tier of the cliffs (K in the plan): its face's columns stand on the cliff top below (their own blocks,
+# that top's texture under their see-through pixels), so each has its own character
+KFACE = {"[": "3", "{": "4", "M": "5", "N": "6", "P": "7", "}": "8", "]": "9"}
 # the cottages: the family house with a third window where its door was, recoloured (the same indices, so the same
 # tiles in other banks): their letters, names, banks and colour changes (2 the roof's outline, 4-5 its tiles, 13 its
 # trim, shutters and woodwork; 10-12 the walls)
@@ -62,8 +65,9 @@ COTTAGES = {"1": ("cottage_slate", 11, {2: (48, 56, 72), 4: (88, 104, 128), 5: (
 # the sidewalks: the pack's brick (its city palette: 3-5 the bricks, 8 between them, 12 and 15 the kerb, 7 its
 # shadow) in bank 7's stone (7-9 the bricks, 2 between, 10-11 the kerb, 1 the shadow); the lamps (u) and the sign (t)
 # standing in them; the cobbles, the brick and what stands in it are one material (no kerb between them)
-WALK, LAMP, SIGN, PAVED_SIGN = "%", "u", "t", "y"
+WALK, LAMP, SIGN, PAVED_SIGN = "%", "@", "!", "/"
 PAVED = {"W": "pewter_gym", "X": "house_family_paved", "1": None, "2": None}  # on the paving (None: as named)
+SOLID = set("T#bRoklSBcw_~vrUWYHXZL12" + LAMP + SIGN + PAVED_SIGN) | cliffs.SOLID | set(KFACE.values())
 BRICK = {3: 7, 4: 8, 5: 9, 8: 2, 12: 10, 15: 11, 7: 1}
 LEGEND = {WALK: {"pick": ["pewter_brick#15", "pewter_brick#15~1", "pewter_brick#15~2"]},  # the brick, no kerbs
           "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
@@ -115,9 +119,17 @@ def load(letter: str) -> buildings.Building:
 
 
 def fit(g):
-    """The plan as the kit builds it: the cliffs are their tops and faces (cliffs.layout); a lamp is two blocks (its
-    head above its foot, both ``l`` in the plan)."""
-    cliffs.layout(g)
+    """The plan as the kit builds it: the cliffs are their tops and faces (cliffs.layout), the higher tier (K) laid
+    out on its own over the cliff it stands on (the cliff's footprint is both); a lamp is two blocks (its head above
+    its foot, both ``l`` in the plan)."""
+    tier = {(x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == "K"}
+    lower = [["C" if c == "K" else c for c in r] for r in g]
+    upper = [["C" if (x, y) in tier else "." for x in range(MAP_W)] for y in range(MAP_H)]
+    cliffs.layout(lower)
+    cliffs.layout(upper)
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            g[y][x] = upper[y][x] if (x, y) in tier else lower[y][x]
     return g
 
 
@@ -183,7 +195,20 @@ def main() -> None:
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
     rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
-    char_of = cliffs.add(rock, g, extras=())
+    char_of = cliffs.add(rock, g, extra_tops=[(k, 15, 0) for k in range(1, 10)], extras=())
+    # the tops south of the higher tier's face have no lawn north of them: that top's texture under their edge (the
+    # plain tops first, so they are listed before)
+    rock.cells.sort(key=lambda c: not re.fullmatch(r"top\d#15", c[0]))
+    for name, _, entry in rock.cells:
+        m = re.fullmatch(r"top(\d)#(\d+)(\.\d+)?", name)
+        if m and not int(m[2]) & 1:
+            entry["ground"] = f"top{m[1]}#15"
+    tier = {(x, y) for y, r in enumerate(plan()) for x, c in enumerate(r) if c == "K"}
+    for col in sorted({cliffs.FACE[g[y][x]] for x, y in tier if g[y][x] in cliffs.FACE}):
+        rock.add(f"kface_{col}", cliffs.pack(f"face/{col}.png"), tileset="secondary", ground="top5#15", solid=True)
+    for x, y in tier:
+        if g[y][x] in cliffs.FACE:
+            g[y][x] = KFACE[g[y][x]]
     spec_mt += rock.write()
     pals = {}
     for letter, (folder, bank) in OWN.items():
@@ -242,6 +267,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN})
     legend.update(cliffs.legend(char_of))
+    legend.update({ch: f"kface_{cliffs.FACE[c]}" for c, ch in KFACE.items()})
     legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **LEGEND)
     legend.update({k: {"name": n or legend[k], "joins": WALK} for k, n in PAVED.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")

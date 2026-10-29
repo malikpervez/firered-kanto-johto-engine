@@ -11,9 +11,9 @@ the plaza. The road east to Route 3 (rows 24-27) runs between the north-eastern 
 guide and Oak's aide, where they've always stood.
 
 Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, % brick (the street pack's, in the Museum's
-stone, without kerbs: paths through the paving and sidewalks by the main street; u a lamp and t a sign standing in it; y a sign on
+stone, without kerbs: paths through the paving and sidewalks by the main street; @ a lamp and ! a sign standing in it; / a sign on
 the paving), # fence, b bushes, * flowers, o rocks,
-l lamps (two blocks: the head above the foot), S signs), C cliffs, and the buildings: U the Museum, Y its annex,
+l lamps (two blocks: the head above the foot), S signs), C cliffs (K a tier higher), and the buildings: U the Museum, Y its annex,
 W the Gym, Z the Pokémon Center, L the Poké Mart, H and X the two houses (Y, H and X are the same house); 1 and 2
 the cottages without doors (the same house again, a window where its door was, in a slate and a clay recolour).
 """
@@ -37,6 +37,10 @@ def at(x, y, c):
 rect(0, 0, 51, 5, "C")             # the northern cliff, its face on rows 4-5
 rect(0, 6, 15, 13, "C")            # stepping down to the west, its face on rows 12-13
 rect(42, 6, 51, 23, "C")           # the north-eastern cliff, down to the road east (its face on rows 22-23)
+# the mountainside: a higher tier on each (K: its own face standing on the cliff below), so the town climbs
+rect(0, 0, 15, 9, "K")             # over the west step: its face on rows 8-9, a ledge (rows 10-11) below it
+rect(16, 0, 41, 3, "K")            # behind the Museum: its face on rows 2-3, straight over the cliff's (4-5)
+rect(42, 0, 51, 19, "K")           # over the north-east: its face on rows 18-19, a ledge (rows 20-21) below it
 rect(0, 14, 3, 43, "T")            # the forest west
 rect(0, 38, 21, 43, "T")           # and south, either side of Route 2's road
 rect(26, 38, 39, 43, "T")
@@ -112,7 +116,7 @@ for y in range(14, 38):
     for x in range(4, 22):
         if g[y][x] in ".,*ob:":
             g[y][x] = "p"
-at(13, 20, "y")                    # the Gym's sign, on the paving
+at(13, 20, "/")                    # the Gym's sign, on the paving
 rect(8, 21, 10, 23, "%")           # the Gym's walk up to its door (9,20), across its forecourt
 rect(11, 22, 13, 23, "%")
 # the sidewalks: brick either side of the main street, from the plaza down to the forest, the walk past the Center
@@ -122,8 +126,8 @@ for r in ((20, 16, 21, 37),                                                     
           (26, 29, 26, 32), (26, 35, 28, 37)):
     rect(*r, "%")
 for x, y in ((21, 19), (26, 19), (21, 32), (26, 31)):
-    rect(x, y - 1, x, y, "u")
-at(26, 35, "t")
+    rect(x, y - 1, x, y, "@")
+at(26, 35, "!")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("\n".join("".join(r) for r in g))
