@@ -93,14 +93,16 @@ static const u8 sPaeDoorPalettes_58[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
 static const u8 sPaeDoorPalettes_59[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
 static const u8 sPaeDoorPalettes_60[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
 static const u8 sPaeDoorPalettes_61[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
-static const u8 sPaeDoorPalettes_62[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
-static const u8 sPaeDoorPalettes_63[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
-static const u8 sPaeDoorPalettes_64[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
-static const u8 sPaeDoorPalettes_65[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+static const u8 sPaeDoorPalettes_62[] = { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 };
+static const u8 sPaeDoorPalettes_63[] = { 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6 };
+static const u8 sPaeDoorPalettes_64[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+static const u8 sPaeDoorPalettes_65[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
 static const u8 sPaeDoorPalettes_66[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
-static const u8 sPaeDoorPalettes_67[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
-static const u8 sPaeDoorPalettes_68[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
-static const u8 sPaeDoorPalettes_69[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+static const u8 sPaeDoorPalettes_67[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+static const u8 sPaeDoorPalettes_68[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
+static const u8 sPaeDoorPalettes_69[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+static const u8 sPaeDoorPalettes_70[] = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 };
+static const u8 sPaeDoorPalettes_71[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
 
 #define PAE_DOORS \
     { 702, &gTileset_CeladonConcept, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_0, sPaeDoorPalettes_0 }, \
@@ -165,13 +167,15 @@ static const u8 sPaeDoorPalettes_69[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
     { 827, &gTileset_SaffronConcept, DOOR_SOUND_NORMAL, 3, sPaeDoorTiles_36, sPaeDoorPalettes_59 }, \
     { 828, &gTileset_SaffronConcept, DOOR_SOUND_NORMAL, 4, sPaeDoorTiles_36, sPaeDoorPalettes_60 }, \
     { 887, &gTileset_SaffronConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_6, sPaeDoorPalettes_61 }, \
-    { 657, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_8, sPaeDoorPalettes_62 }, \
-    { 691, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_7, sPaeDoorPalettes_63 }, \
-    { 708, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_10, sPaeDoorPalettes_64 }, \
-    { 728, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_9, sPaeDoorPalettes_65 }, \
-    { 744, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_6, sPaeDoorPalettes_66 }, \
-    { 671, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_7, sPaeDoorPalettes_67 }, \
-    { 692, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_8, sPaeDoorPalettes_68 }, \
-    { 728, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_9, sPaeDoorPalettes_69 }, \
+    { 907, &gTileset_SaffronConcept, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_28, sPaeDoorPalettes_62 }, \
+    { 923, &gTileset_SaffronConcept, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_29, sPaeDoorPalettes_63 }, \
+    { 657, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_8, sPaeDoorPalettes_64 }, \
+    { 691, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_7, sPaeDoorPalettes_65 }, \
+    { 708, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_10, sPaeDoorPalettes_66 }, \
+    { 728, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_9, sPaeDoorPalettes_67 }, \
+    { 744, &gTileset_VermilionConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_6, sPaeDoorPalettes_68 }, \
+    { 671, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_7, sPaeDoorPalettes_69 }, \
+    { 692, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_8, sPaeDoorPalettes_70 }, \
+    { 728, &gTileset_ViridianConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_9, sPaeDoorPalettes_71 }, \
 
 #endif // GUARD_PAE_DOORS_H
