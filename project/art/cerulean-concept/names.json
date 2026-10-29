@@ -4461,20 +4461,101 @@
    "elevation": null,
    "open": []
   },
-  "diglett_cave": {
+  "fountain_rim#3": {
    "ids": [
-    819,
-    820,
-    821,
-    822,
-    823,
-    824,
-    825,
-    826,
+    819
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fountain_rim#6": {
+   "ids": [
+    820
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fountain_rim#7": {
+   "ids": [
+    821
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fountain_rim#9": {
+   "ids": [
+    822
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fountain_rim#11": {
+   "ids": [
+    823
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fountain_rim#12": {
+   "ids": [
+    824
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fountain_rim#13": {
+   "ids": [
+    825
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fountain_rim#14": {
+   "ids": [
+    826
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fountain_spout": {
+   "ids": [
     827,
     828,
     829,
-    830,
+    830
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "diglett_cave": {
+   "ids": [
     831,
     832,
     833,
@@ -4492,7 +4573,19 @@
     845,
     846,
     847,
-    848
+    848,
+    849,
+    850,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860
    ],
    "w": 6,
    "h": 5,
@@ -4504,7 +4597,7 @@
   },
   "hole": {
    "ids": [
-    849
+    861
    ],
    "w": 1,
    "h": 1,
@@ -4515,11 +4608,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 259
+  "secondary": 271
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 210
+  "secondary": 222
  },
  "animations": [
   {

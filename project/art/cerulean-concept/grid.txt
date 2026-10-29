@@ -28,11 +28,11 @@ TT%pppppppppppXXXX%~%====5ZZZZZpp~~~~~p==pppppppppppppTTTT
 TT%22222ppppppXXXX%~%====5ZZZZZpp~~~~~p==pppp~~~~~~~~~TTTT
 TT%22222ppppppXXXX%~%====3ZZZZZpppppppp===================
 TT%22222ppppppXXXX%~%====/ppppppppppppp===================
-TT%22222ppppppp%pp%~%====pppppppppppppp===================
-TT%pppppppppppp%pp%~%====pppppppppppppppppppppppppppppTTTT
-TT%ppppppppppppppp%~%====pppppppppppppppppppWWWWWWWpppTTTT
-TT%ppppppppppppppp%~%====@pppppppppppppp@pppWWWWWWWpppTTTT
-TT%ppppppppppppppp%~%====@pppppppppppppp@pppWWWWWWWpppTTTT
+TT%22222pppppppppp%~%====pppppppppppppp===================
+TT%ppppppppppppppp%~%====ppppppppppppCMMIpppppppppppppTTTT
+TT%ppppppppppppppp%~%====ppppppppppppDFFJpppWWWWWWWpppTTTT
+TT%ppppppppppppppp%~%====@pppppppppppDFFJp@pWWWWWWWpppTTTT
+TT%ppppppppppppppp%~%====@pppppppppppAGGEp@pWWWWWWWpppTTTT
 TT%ppppppppppppp@p%~%====pppppppppppppppppppWWWWWWWpppTTTT
 TT%ppp%%%%%%%%%p@p%~%====pppppppppppppppppppWWWWWWW/ppTTTT
 TT%ppp%=======%ppp%~%====pppppppppppppppppppppppppppppTTTT

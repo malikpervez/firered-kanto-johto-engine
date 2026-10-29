@@ -148,13 +148,12 @@ for x0, y0, x1, y1 in ((2, 21, 20, 41), (25, 21, 44, 36), (45, 14, 53, 27), (41,
 rect(3, 22, 7, 25, "1"); rect(9, 22, 13, 25, "2"); rect(3, 27, 7, 30, "2"); rect(48, 22, 52, 25, "1")
 rect(18, 22, 18, 40, "%"); rect(19, 22, 19, 40, "~"); rect(20, 22, 20, 40, "%")   # the canal by the road south
 rect(45, 27, 53, 27, "~")                                                          # and by the road east
-rect(15, 30, 15, 31, "%")                                                          # the small house's path
 # east of the road south the town is one paved square: the walk in front of the Center and the road to the Gym are
 # paving too, and no blue there
 for x, y in [(x, 29) for x in range(26, 32)] + [(x, y) for y in (37, 38) for x in range(25, 52)]:
     if g[y][x] == "=":
         g[y][x] = "p"
-for x, y in ((25, 34), (40, 34), (16, 36), (45, 25)):
+for x, y in ((25, 34), (42, 34), (16, 36), (45, 25)):
     rect(x, y - 1, x, y, "@")                       # lamps on the paving: the post's foot at x, y
 for x, y in ((25, 29), (51, 36), (14, 38), (19, 41)):
     at(x, y, "/")                                   # the signs, on the paving (the town sign moves off the fence)
@@ -162,9 +161,11 @@ rect(2, 13, 38, 13, "f")                            # the fence along the lake's
                                                     # from the bridge)
 rect(2, 14, 31, 15, "P"); rect(12, 16, 13, 16, "P"); rect(24, 16, 25, 16, "P")   # the promenade
 rect(25, 24, 38, 24, "f"); rect(25, 25, 25, 28, "f")   # round the Center's north and west sides
+rect(37, 31, 40, 34, "!"); rect(38, 32, 39, 33, "F")  # the fountain in the square, between the Center and the Gym:
+                                                     # its basin's stone rim (!) round the spout (F)
 BUILT = set("WKXZLHY12^")
 border = [(x, y) for y in range(H) for x in range(21) if g[y][x] == "p" and any(  # the west side only
-    g[y + dy][x + dx] not in "pP%~/@f" and g[y + dy][x + dx] not in BUILT
+    g[y + dy][x + dx] not in "pP%~/@f!F" and g[y + dy][x + dx] not in BUILT
     for dy in (-1, 0, 1) for dx in (-1, 0, 1) if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H)]
 for x, y in border:
     g[y][x] = "%"

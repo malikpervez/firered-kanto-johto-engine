@@ -202,5 +202,41 @@
  "8": {
   "name": "fence_paving#10",
   "joins": "%"
+ },
+ "A": {
+  "name": "fountain_rim#3",
+  "joins": "%"
+ },
+ "C": {
+  "name": "fountain_rim#6",
+  "joins": "%"
+ },
+ "D": {
+  "name": "fountain_rim#7",
+  "joins": "%"
+ },
+ "E": {
+  "name": "fountain_rim#9",
+  "joins": "%"
+ },
+ "G": {
+  "name": "fountain_rim#11",
+  "joins": "%"
+ },
+ "I": {
+  "name": "fountain_rim#12",
+  "joins": "%"
+ },
+ "J": {
+  "name": "fountain_rim#13",
+  "joins": "%"
+ },
+ "M": {
+  "name": "fountain_rim#14",
+  "joins": "%"
+ },
+ "F": {
+  "name": "fountain_spout",
+  "joins": "%"
  }
 }

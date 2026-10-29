@@ -5265,6 +5265,116 @@
    "dedupe": true
   },
   {
+   "name": "fountain_rim#3",
+   "image": "sheets/fountain.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
+   "name": "fountain_rim#6",
+   "image": "sheets/fountain.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
+   "name": "fountain_rim#7",
+   "image": "sheets/fountain.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
+   "name": "fountain_rim#9",
+   "image": "sheets/fountain.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
+   "name": "fountain_rim#11",
+   "image": "sheets/fountain.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
+   "name": "fountain_rim#12",
+   "image": "sheets/fountain.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
+   "name": "fountain_rim#13",
+   "image": "sheets/fountain.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
+   "name": "fountain_rim#14",
+   "image": "sheets/fountain.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
+   "name": "fountain_spout",
+   "image": "sheets/fountain.png",
+   "x": 0,
+   "y": 16,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true
+  },
+  {
    "name": "diglett_cave",
    "image": "sheets/diglett_cave.png",
    "x": 0,
