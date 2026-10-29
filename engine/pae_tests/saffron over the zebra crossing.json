@@ -1,0 +1,49 @@
+{
+ "note": "Down onto the dropped kerb north of the crossroads and east over the zebra crossing to the Silph side (KR-90).",
+ "created": "2026-10-29 03:00",
+ "start": {
+  "map": "SaffronCity_Frlg",
+  "x": 27,
+  "y": 15,
+  "state": [
+   "FLAG_HIDE_SAFFRON_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     28
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     16,
+     76
+    ],
+    [
+     0,
+     30
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SaffronCity_Frlg",
+  "x": 32,
+  "y": 17,
+  "in_battle": false
+ },
+ "accepted": "2026-10-29 02:01"
+}

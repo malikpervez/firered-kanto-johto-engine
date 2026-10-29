@@ -27,6 +27,8 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import streets
+import trees
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -35,8 +37,8 @@ SB = buildings.REMAKES
 SECONDARY = "gTileset_SaffronConcept"
 MAP_W, MAP_H = 60, 48
 HOUSE_BANK, CITY_BANK = 7, 9
-GROUND = "paving#15"  # what shows round the city's own buildings' edges
-SOLID = set("T#bRoklSBcw_~vrXMDGNWEUZLYHPKAFIJVCa")
+GROUND = "kerb#15"  # what shows round the city's own buildings' edges: the pavement
+SOLID = set("T#bRoklSBcw_~vrXMDGNWEUZLYHPKAFIJVCa|")
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the south
 # gatehouse's doorway is entered walking south from above; the station has no door)
@@ -72,8 +74,14 @@ CITY = {"A": ("office_tall", "sand"), "F": ("office_tall", "brick"), "I": ("offi
 # the kit's Center, Mart and lamp stand on grass; Saffron is paved, so it has its own copies of them on its paving
 # (the kit's tiles in the kit's banks: no new tiles)
 PAVED = {"Z": ("pokemon_center", "center", 5), "L": ("poke_mart", "mart", 6)}
-# what the paving runs up to without an edge: the buildings, signs, trees and lamps standing on it
-JOINS = "".join(k for k in BUILDINGS if k not in "NWEU") + "".join(SHARED) + "".join(CITY) + "SRl"  # (not the gates)
+# what the pavement runs up to without a kerb: the buildings, signs, street trees, lamps and the dropped kerbs
+JOINS = "".join(k for k in BUILDINGS if k not in "NWEU") + "".join(SHARED) + "".join(CITY) + "S|l68"  # (not the gates)
+# the street pieces (the kit's, streets.py) by their letters; the granite and the compass are Saffron's own, from the
+# pack's city palette (bank 12)
+STREET_PIECES = {"0": "crossing_road_NS", "2": "crossing_end_W", "3": "crossing_end_E", "6": "crossing_dropped_kerb_E",
+                 "8": "crossing_dropped_kerb_W", "%": "manhole", "-": "asphalt_dashed_H_boundary",
+                 ";": "asphalt_dashed_V_boundary"}
+STREETS_BANK = 12
 CROSSING = (29, 23)  # the avenues' crossing: everything walkable is reached from it
 CAMP = [(50, 8), (50, 10), (49, 9), (48, 8), (52, 8), (48, 10), (47, 6)]  # the Friends', round 50,8
 TRAIN = (49, 18)     # where the Magnet Train from Goldenrod lets you off, in front of the station
@@ -184,15 +192,38 @@ def main() -> None:
             open_.append(f"{dx},{dy}")
             behavior[f"{dx},{dy}"] = mb
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=bw)
-        sh.add(b.name, b.idx, tileset="secondary", ground=GROUND, solid=True, open=open_, behaviors=behavior)
+        sh.add(b.name, b.idx, tileset="secondary", ground=GROUND, solid=True, open=open_, behaviors=behavior,
+               dedupe=True)
         spec_mt += sh.write()
     for letter, (name, pal, bank) in PAVED.items():
         b = kit.SHARED_BUILDINGS[name][0]
         sh = kit.Sheet(f"{name}_paved", kit.PALS[pal], bank, HERE, HERE, cols=b.idx.shape[1] // 16)
-        sh.add(f"{name}_paved", b.idx, tileset="secondary", **dict(b.entry(), ground=GROUND))
+        sh.add(f"{name}_paved", b.idx, tileset="secondary", dedupe=True, **dict(b.entry(), ground=GROUND))
         spec_mt += sh.write()
     sh = kit.Sheet("lamp_paved", kit.PALS["plants"], 8, HERE, HERE, cols=1)
-    sh.add("lamp_paved", kit.lamp(), tileset="secondary", ground=GROUND, solid=True)
+    sh.add("lamp_paved", kit.lamp(), tileset="secondary", ground=GROUND, solid=True, dedupe=True)
+    spec_mt += sh.write()
+    sh = kit.Sheet("sign_paved", kit.PALS["wood"], 2, HERE, HERE, cols=1)
+    sh.add("sign_paved", kit.sign(), tileset="secondary", ground=GROUND, solid=True, dedupe=True)
+    spec_mt += sh.write()
+    sh = kit.Sheet("trees_paved", kit.PALS["trees"], 3, HERE, HERE, cols=6)
+    for name in trees.STANDALONE:  # as the kit's: the crown's row drawn over the player, who walks behind it
+        sh.add(f"{name}_paved", trees.tree(name), tileset="secondary", ground=GROUND, solid=True,
+               open=["0,0", "1,0"], over_rows=1, dedupe=True)
+    spec_mt += sh.write()
+    pals[STREETS_BANK] = streets.city_palette()
+    sh = kit.Sheet("granite", pals[STREETS_BANK], STREETS_BANK, HERE, HERE)
+    for m in range(16):  # the plazas' granite (the pack's Part B), on the pavement, as pae map paint autotiles it
+        sh.add(f"granite#{m}", streets.block("granite", m, 0, pals[STREETS_BANK]), tileset="secondary",
+               ground=GROUND, dedupe=True)
+    for k, v in enumerate(("center_b", "center_c"), 1):
+        sh.add(f"granite#15~{k}", streets.piece("granite", v, pals[STREETS_BANK]), tileset="secondary",
+               ground=GROUND, dedupe=True)
+    for m, c in streets.CORNERS:
+        sh.add(f"granite#{m}.{c}", streets.block("granite", m, c, pals[STREETS_BANK]), tileset="secondary",
+               ground=GROUND, dedupe=True)
+    sh.add("compass", streets.piece("mosaic", "compass_2x2", pals[STREETS_BANK]), tileset="secondary",
+           ground=GROUND, dedupe=True)
     spec_mt += sh.write()
     designs = city_designs()
     for colour, (bank, changes) in COLOURS.items():
@@ -225,9 +256,14 @@ def main() -> None:
                   **{k: f"{d}_{c}" for k, (d, c) in CITY.items()},
                   **{k: f"{n}_paved" for k, (n, _, _) in PAVED.items()})
     legend["l"] = "lamp_paved"
+    legend["S"] = "sign_paved"
+    legend["|"] = {"pick": [f"{n}_paved" for n in trees.STANDALONE]}
+    legend["@"] = {"auto": "granite"}
+    legend["/"] = {"name": "compass", "joins": "@"}
+    legend.update(STREET_PIECES)
     for k in JOINS:
         item = legend[k]
-        legend[k] = dict({"name": item} if isinstance(item, str) else item, joins="p")
+        legend[k] = dict({"name": item} if isinstance(item, str) else item, joins="&")
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

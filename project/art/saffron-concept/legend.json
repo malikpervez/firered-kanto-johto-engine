@@ -56,11 +56,11 @@
  "k": "stump",
  "l": {
   "name": "lamp_paved",
-  "joins": "p"
+  "joins": "&"
  },
  "S": {
-  "name": "sign",
-  "joins": "p"
+  "name": "sign_paved",
+  "joins": "&"
  },
  "B": "barrel",
  "c": "crate",
@@ -71,8 +71,7 @@
    "round_tree",
    "offset_tree",
    "broad_tree"
-  ],
-  "joins": "p"
+  ]
  },
  "g": {
   "pick": [
@@ -132,15 +131,15 @@
  },
  "X": {
   "name": "silph_co",
-  "joins": "p"
+  "joins": "&"
  },
  "G": {
   "name": "saffron_gym",
-  "joins": "p"
+  "joins": "&"
  },
  "D": {
   "name": "fighting_dojo",
-  "joins": "p"
+  "joins": "&"
  },
  "N": "saffron_gate",
  "W": "saffron_gate",
@@ -148,58 +147,87 @@
  "U": "saffron_gate_back",
  "M": {
   "name": "magnet_train_station",
-  "joins": "p"
+  "joins": "&"
  },
  "Y": {
   "name": "house_pond_keeper",
-  "joins": "p"
+  "joins": "&"
  },
  "H": {
   "name": "house_pond_keeper",
-  "joins": "p"
+  "joins": "&"
  },
  "P": {
   "name": "house_pond_keeper",
-  "joins": "p"
+  "joins": "&"
  },
  "K": {
   "name": "house_pond_keeper",
-  "joins": "p"
+  "joins": "&"
  },
  "A": {
   "name": "office_tall_sand",
-  "joins": "p"
+  "joins": "&"
  },
  "F": {
   "name": "office_tall_brick",
-  "joins": "p"
+  "joins": "&"
  },
  "I": {
   "name": "office_mid_sand",
-  "joins": "p"
+  "joins": "&"
  },
  "J": {
   "name": "office_mid_brick",
-  "joins": "p"
+  "joins": "&"
  },
  "V": {
   "name": "office_narrow_beige",
-  "joins": "p"
+  "joins": "&"
  },
  "C": {
   "name": "office_narrow_brick",
-  "joins": "p"
+  "joins": "&"
  },
  "a": {
   "name": "arcade_beige",
-  "joins": "p"
+  "joins": "&"
  },
  "Z": {
   "name": "pokemon_center_paved",
-  "joins": "p"
+  "joins": "&"
  },
  "L": {
   "name": "poke_mart_paved",
-  "joins": "p"
- }
+  "joins": "&"
+ },
+ "|": {
+  "pick": [
+   "round_tree_paved",
+   "offset_tree_paved",
+   "broad_tree_paved"
+  ],
+  "joins": "&"
+ },
+ "@": {
+  "auto": "granite"
+ },
+ "/": {
+  "name": "compass",
+  "joins": "@"
+ },
+ "0": "crossing_road_NS",
+ "2": "crossing_end_W",
+ "3": "crossing_end_E",
+ "6": {
+  "name": "crossing_dropped_kerb_E",
+  "joins": "&"
+ },
+ "8": {
+  "name": "crossing_dropped_kerb_W",
+  "joins": "&"
+ },
+ "%": "manhole",
+ "-": "asphalt_dashed_H_boundary",
+ ";": "asphalt_dashed_V_boundary"
 }

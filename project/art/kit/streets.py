@@ -33,16 +33,24 @@ CROSSING = ("road_EW", "road_NS", "end_N", "end_E", "end_S", "end_W",
             "dropped_kerb_N", "dropped_kerb_E", "dropped_kerb_S", "dropped_kerb_W")
 DETAILS = ("manhole", "storm_drain_N", "storm_drain_E", "storm_drain_S", "storm_drain_W", "tactile_paving",
            "tree_grate")
-_pieces: dict[tuple[str, str], np.ndarray] = {}
+_pieces: dict[tuple, np.ndarray] = {}
 _recipes: dict[str, dict] = {}
 
 
 def piece(surface: str, name: str, palette) -> np.ndarray:
     """A piece's 16x16 indices in ``palette``: from tiles/, or transitions/ for a ``to_*`` join."""
-    if (surface, name) not in _pieces:
+    key = (surface, name, tuple(map(tuple, palette)))
+    if key not in _pieces:
         sub = "transitions" if name.startswith("to_") else "tiles"
-        _pieces[surface, name] = autotile.load(PACK / surface / sub / f"{name}.png", palette)
-    return _pieces[surface, name]
+        _pieces[key] = autotile.load(PACK / surface / sub / f"{name}.png", palette)
+    return _pieces[key]
+
+
+def city_palette() -> list[tuple[int, int, int]]:
+    """The pack's city palette (``streets_city.gpl``): the ground palette with four city colours (rust, coral,
+    terracotta, blue-grey) for its Part B surfaces (brick, granite, the compass); a city's own bank."""
+    rows = (PACK / "palettes/streets_city.gpl").read_text().splitlines()[4:20]
+    return [tuple(int(v) for v in r.split()[:3]) for r in rows]
 
 
 def block(surface: str, mask: int, corners: int, palette) -> np.ndarray:
