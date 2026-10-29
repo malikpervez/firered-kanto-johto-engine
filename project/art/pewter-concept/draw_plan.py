@@ -11,7 +11,7 @@ the plaza. The road east to Route 3 (rows 24-27) runs between the north-eastern 
 guide and Oak's aide, where they've always stood.
 
 Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, % brick (the street pack's, in the Museum's
-stone: paths through the paving and sidewalks by the main street; u a lamp and t a sign standing in it; y a sign on
+stone, without kerbs: paths through the paving and sidewalks by the main street; u a lamp and t a sign standing in it; y a sign on
 the paving), # fence, b bushes, * flowers, o rocks,
 l lamps (two blocks: the head above the foot), S signs), C cliffs, and the buildings: U the Museum, Y its annex,
 W the Gym, Z the Pokémon Center, L the Poké Mart, H and X the two houses (Y, H and X are the same house); 1 and 2
@@ -113,6 +113,8 @@ for y in range(14, 38):
         if g[y][x] in ".,*ob:":
             g[y][x] = "p"
 at(13, 20, "y")                    # the Gym's sign, on the paving
+rect(8, 21, 10, 23, "%")           # the Gym's walk up to its door (9,20), across its forecourt
+rect(11, 22, 13, 23, "%")
 # the sidewalks: brick either side of the main street, from the plaza down to the forest, the walk past the Center
 # and the Mart and the house's forecourt by the road east; the lamps and the city sign stand in them
 for r in ((20, 16, 21, 37),                                                             # west of the street

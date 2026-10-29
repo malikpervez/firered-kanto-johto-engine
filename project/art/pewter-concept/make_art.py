@@ -13,7 +13,7 @@ from the towns before, in Pewter's colours:
 Bank 8 is the kit's plants palette; 11 and 12 are the family house recoloured, slate and clay, for the cottages
 without doors (the house's own tiles, a window where its door was: no new tiles). The sidewalks (% in the plan) are
 the street pack's herringbone brick (streets.py, as Celadon's Lucky Lane) drawn in bank 7's colours, the Museum's
-grey stone (its own tiles, in the secondary; no bank of its own); the lamps and the city sign stand in them. The
+grey stone, without its kerbs (its own tiles, in the secondary; no bank of its own); the lamps and the city sign stand in them. The
 west side is paved, no lawn: the kit's dressed stone (the plaza's) round the Gym, the cottages and the south-west
 house, which stand on it (their blocks with see-through pixels have the paving under them, the rest are as before).
 
@@ -65,10 +65,10 @@ COTTAGES = {"1": ("cottage_slate", 11, {2: (48, 56, 72), 4: (88, 104, 128), 5: (
 WALK, LAMP, SIGN, PAVED_SIGN = "%", "u", "t", "y"
 PAVED = {"W": "pewter_gym", "X": "house_family_paved", "1": None, "2": None}  # on the paving (None: as named)
 BRICK = {3: 7, 4: 8, 5: 9, 8: 2, 12: 10, 15: 11, 7: 1}
-LEGEND = {WALK: {"auto": "pewter_brick"}, "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
+LEGEND = {WALK: {"pick": ["pewter_brick#15", "pewter_brick#15~1", "pewter_brick#15~2"]},  # the brick, no kerbs
+          "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
           LAMP: {"name": "lamp_brick", "joins": WALK}, SIGN: {"name": "sign_brick", "joins": WALK},
           PAVED_SIGN: {"name": "sign_paving", "joins": WALK}}
-GROUP = set(WALK + "=p" + LAMP + SIGN + PAVED_SIGN) | set(PAVED)  # one material for each other's edges
 
 
 def cottage(idx):
@@ -89,25 +89,6 @@ def cottage(idx):
     for c in (4, 5):
         put(7, c, cell(7, 3))
     put(4, 4, cell(4, 7)); put(4, 5, cell(4, 8))
-    return out
-
-
-def walks(g) -> set[tuple[int, int]]:
-    """The sidewalk blocks the map shows: (neighbour mask, inside corners) as pae map paint autotiles them (the
-    cobbles count as the sidewalk, the map's edges too)."""
-    def same(x, y):
-        return not (0 <= x < MAP_W and 0 <= y < MAP_H) or g[y][x] in GROUP
-    out = set()
-    for y in range(MAP_H):
-        for x in range(MAP_W):
-            if g[y][x] != WALK:
-                continue
-            mask = sum(bit for bit, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
-                       if same(x + dx, y + dy))
-            corners = sum(bit for bit, (dx, dy), sides in ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12),
-                                                          (8, (-1, -1), 9))
-                          if mask & sides == sides and not same(x + dx, y + dy))
-            out.add((mask, corners))
     return out
 
 
@@ -232,9 +213,7 @@ def main() -> None:
     def brick(idx):
         return np.vectorize(lambda v: BRICK.get(int(v), 0), otypes=[np.uint8])(idx)
     sh = kit.Sheet("pewter_brick", pals[STONE_BANK], STONE_BANK, HERE, HERE, cols=8)
-    for m, c in sorted(walks(g) | {(15, 0)}):  # the brick blocks the map shows (and the plain one, under the lamps)
-        sh.add(f"pewter_brick#{m}.{c}" if c else f"pewter_brick#{m}", brick(streets.block("brick", m, c, city)),
-               tileset="secondary", ground="grass", dedupe=True)
+    sh.add("pewter_brick#15", brick(streets.block("brick", 15, 0, city)), tileset="secondary", ground="grass")
     for k, v in enumerate(("center_b", "center_c"), 1):  # the plain brick's variants, spread by position
         sh.add(f"pewter_brick#15~{k}", brick(streets.piece("brick", v, city)), tileset="secondary", ground="grass")
     spec_mt += sh.write()

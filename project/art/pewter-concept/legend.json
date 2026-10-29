@@ -214,7 +214,11 @@
   "joins": "%"
  },
  "%": {
-  "auto": "pewter_brick"
+  "pick": [
+   "pewter_brick#15",
+   "pewter_brick#15~1",
+   "pewter_brick#15~2"
+  ]
  },
  "u": {
   "name": "lamp_brick",

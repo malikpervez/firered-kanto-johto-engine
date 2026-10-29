@@ -19,9 +19,9 @@ TTTTppWWWWWWWpp11111%%====%%HHHHH...o.....CCCCCCCCCC
 TTTTppWWWWWWWpp11111%u====u%HHHHH.........CCCCCCCCCC
 TTTTppWWWWWWWpp11111%u====u%HHHHH.**......CCCCCCCCCC
 TTTTppWWWWWWWypppppp%%====%%HHHHH.........CCCCCCCCCC
-TTTTpppppppppppppppp%%====%%%%%%%.........CCCCCCCCCC
-TTTTpppppppppp%%%%%%%%====%%%%%%%bbbbbbbbbCCCCCCCCCC
-TTTTpppppppppp%%%%%%%%====%%%%%%%bbbbbbSbbCCCCCCCCCC
+TTTTpppp%%%ppppppppp%%====%%%%%%%.........CCCCCCCCCC
+TTTTpppp%%%%%%%%%%%%%%====%%%%%%%bbbbbbbbbCCCCCCCCCC
+TTTTpppp%%%%%%%%%%%%%%====%%%%%%%bbbbbbSbbCCCCCCCCCC
 TTTTpppppppppppppppp%%==============================
 TTTTpppp22222ppppppp%%==============================
 TTTTpppp22222ppppppp%%==============================

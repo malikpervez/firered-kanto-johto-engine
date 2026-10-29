@@ -4748,7 +4748,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_brick#9": {
+  "pewter_brick#15": {
    "ids": [
     903
    ],
@@ -4758,7 +4758,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_brick#11": {
+  "pewter_brick#15~1": {
    "ids": [
     904
    ],
@@ -4768,7 +4768,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_brick#12": {
+  "pewter_brick#15~2": {
    "ids": [
     905
    ],
@@ -4778,80 +4778,10 @@
    "elevation": null,
    "open": []
   },
-  "pewter_brick#13": {
-   "ids": [
-    906
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#14": {
-   "ids": [
-    907
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#15": {
-   "ids": [
-    908
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#15.1": {
-   "ids": [
-    909
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#15.2": {
-   "ids": [
-    910
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#15~1": {
-   "ids": [
-    911
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "pewter_brick#15~2": {
-   "ids": [
-    912
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
   "lamp_brick": {
    "ids": [
-    913,
-    914
+    906,
+    907
    ],
    "w": 1,
    "h": 2,
@@ -4861,7 +4791,7 @@
   },
   "sign_brick": {
    "ids": [
-    915
+    908
    ],
    "w": 1,
    "h": 1,
@@ -4871,7 +4801,7 @@
   },
   "sign_paving": {
    "ids": [
-    916
+    909
    ],
    "w": 1,
    "h": 1,
@@ -4882,11 +4812,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 366
+  "secondary": 356
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 277
+  "secondary": 270
  },
  "animations": [
   {
