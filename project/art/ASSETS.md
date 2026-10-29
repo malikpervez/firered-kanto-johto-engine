@@ -23,7 +23,7 @@ There are two kinds of art:
 | Rock & cliff pack | `kit/rock_cliff/` | revision 3.2 (made for Route 22) | cliffs, put together by `kit/cliffs.py`: Route 22, Pewter, Routes 3, 4, 9, 10, 11, 25, Cinnabar's volcano, Route 20's Seafoam Islands |
 | Lawn, "Lush Emerald" | `kit/lawn/B_Lush_Emerald/` | option B | the lawn (`.`) everywhere |
 | Dressed-stone paving | `kit/paving/` | | paving (`p`): Pewter, Routes 2, 22 |
-| Kanto Street Textures (Part A: the kit's streets) | `packs/streets_v0.3/` (`asphalt/`, `pavement/`, `crossing/`, `details/`), put together by `kit/streets.py` | v0.3 (made with another AI from `Street_Textures_v0.1_prompt.md`) | in the kit, last in its primary: the road (`+`, plain asphalt: the pack's lawn edges for asphalt aren't in the kit), the pavement on asphalt (`&`, its kerb) and on grass (`$`), joins to cobble and the dressed stone, the road's lines, zebra crossings and dropped kerbs, a manhole, storm drains, tactile paving and a tree grate (by name: `asphalt_dashed_H`, `crossing_road_EW`, `manhole`...). No map uses them yet. Part B (brick, granite, the compass, planters, in its own palette `streets_city.gpl`) is for the cities' own tilesets |
+| Kanto Street Textures (Part A: the kit's streets) | `packs/streets_v0.3/` (`asphalt/`, `pavement/`, `crossing/`, `details/`), put together by `kit/streets.py` | v0.3 (made with another AI from `Street_Textures_v0.1_prompt.md`) | in the kit, last in its primary: the road (`+`, plain asphalt: the pack's lawn edges for asphalt aren't in the kit), the pavement on asphalt (`&`, its kerb) and on grass (`$`), joins to cobble and the dressed stone, the road's lines, zebra crossings and dropped kerbs, a manhole, storm drains, tactile paving and a tree grate (by name: `asphalt_dashed_H`, `crossing_road_EW`, `manhole`...). Saffron uses them (KR-90). Part B (brick, granite, the compass, planters, in its own palette `streets_city.gpl`) is for the cities' own tilesets: Saffron's plazas are its granite and compass (`saffron-concept/make_art.py`, bank 12) |
 | Pond water, "Gentle ripples" | `kit/pond/` | option C | ponds (`~`, with lily pads `v` and reeds `r` drawn over it) |
 | Sea, "Staggered swells, reworked rocks" | `kit/sea/` | option B | the sea (`s`) and sea rocks (`q`, `Q`): Pallet, Route 25, Route 17 (its inside corners, the pack's `in_*` pieces, in the kit since Route 17). The sea is surfable and fishable (the pond's behaviour); the rocks are solid |
 | Tall grass | `kit/tall_grass/` | variants B and C (made with another AI from a brief) | tall grass (`g`) |
@@ -147,7 +147,7 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 8 | 170 | 38 (and 55 of its own) | 64 |
 | Route 7 | 170 | 0 | 64 |
 | Celadon | 345 | 0 | 260 |
-| Saffron | 355 | none (no compiled joins) | 379 |
+| Saffron | 372 | none (no compiled joins) | 315 |
 | Route 16 | 110 | 0 | 48 |
 | Route 17 | 37 | 0 | 25 |
 | Route 18 | 55 | 63 (for Fuchsia's own pieces) | 32 |

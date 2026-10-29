@@ -15,7 +15,10 @@ ending at a stone gatehouse, the way out to a route:
 - **the south gatehouse** (to Route 6) is entered walking south, through a doorway in its roof's back edge.
 
 The city is paved block by block, as FireRed's is, with lamps along the pavements, and between the buildings you can
-enter stand offices and arcades without doors (KR-88). The rest of the city:
+enter stand offices and arcades without doors (KR-88). Its streets are the kit's (KR-90): asphalt avenues and lanes
+with a dashed line down the middle, pavements with kerbs (on the grass where they meet a lawn, the forest or the
+pond), zebra crossings over the north-south avenue either side of the crossroads, manholes, and street trees on the
+pavement. The Gym square and the Silph plaza are granite, a compass set in the Silph plaza. The rest of the city:
 - **the north-west**: Copycat's house, a house and a brick office on a lane off the avenue. The Fighting Dojo and
   Sabrina's Gym stand side by side on the Gym square, a narrow office beside the Gym. Until Silph Co. is freed,
   Rockets stand at the Gym's door, at Copycat's and at the house's;
@@ -40,8 +43,10 @@ are stand beside them: the boy and his Pidgeot (51,27 and 52,27), a Pidgey (51,2
 (55,43) and the park's Rocket (7,34, on the lawn north of the pond).
 
 The pieces:
-- the kit's ground and plants; its Pokémon Center, Mart and lamp as Saffron's own copies standing on paving (the
-  kit's tiles and banks, so no new tiles);
+- the kit's ground, plants and streets; its Pokémon Center, Mart, lamp, sign and standalone trees as Saffron's own
+  copies standing on the pavement (the kit's tiles and banks, so no new tiles);
+- Kanto Street Textures v0.3's granite and compass (Part B, `../packs/streets_v0.3/`), in the pack's city palette
+  (bank 12): the plazas' paving, autotiled like the pavement, its brass-banded edge on the pavement;
 - six buildings from Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`), in one palette (bank 9): Silph Co.,
   Sabrina's Gym, the Fighting Dojo, the gatehouse (front and back) and the Magnet Train station, each with its own
   door frames (the gatehouse's is one wide double door);
