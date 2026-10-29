@@ -201,6 +201,14 @@
  "1": "cottage_slate",
  "2": "cottage_clay",
  "%": {
-  "auto": "pewter_walk"
+  "auto": "pewter_brick"
+ },
+ "u": {
+  "name": "lamp_brick",
+  "joins": "%"
+ },
+ "t": {
+  "name": "sign_brick",
+  "joins": "%"
  }
 }

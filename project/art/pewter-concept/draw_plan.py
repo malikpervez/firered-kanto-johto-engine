@@ -10,8 +10,8 @@ face each other across a square on the main street, which runs from Route 2's ro
 the plaza. The road east to Route 3 (rows 24-27) runs between the north-eastern cliff and the forest, past the Gym
 guide and Oak's aide, where they've always stood.
 
-Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, % the sidewalks (the kit's pavement in
-Pewter's stone: they join the cobbles without a kerb), # fence, b bushes, * flowers, o rocks,
+Letters: the kit's legend (T forest, . lawn, = cobblestones, p paving, % the sidewalks (the street pack's brick in
+the Museum's stone: they join the cobbles without a kerb; u a lamp and t a sign standing in them), # fence, b bushes, * flowers, o rocks,
 l lamps (two blocks: the head above the foot), S signs), C cliffs, and the buildings: U the Museum, Y its annex,
 W the Gym, Z the Pokémon Center, L the Poké Mart, H and X the two houses (Y, H and X are the same house); 1 and 2
 the cottages without doors (the same house again, a window where its door was, in a slate and a clay recolour).
@@ -97,12 +97,23 @@ rect(26, 28, 26, 32, ".")
 
 # more homes: cottages without doors (no new tiles: the family house's own, recoloured), off the guides' walks and
 # the people's places, and lamps along the main street
-rect(16, 16, 20, 19, "1")          # slate, beside the Gym
+rect(15, 16, 19, 19, "1")          # slate, beside the Gym
 rect(8, 25, 12, 28, "2")           # clay, above the south-west house
 rect(15, 29, 19, 32, "1")          # slate, by the lane
 for x, y in ((21, 19), (26, 19), (21, 32), (26, 31)):
     rect(x, y - 1, x, y, "l")      # a lamp: its post's foot at x, y
 at(5, 14, "o"); at(4, 24, "o")
+
+# the sidewalks: brick either side of the main street, three blocks wide where the houses leave room, from the
+# plaza down to the forest, and the Gym's walk, the lane, the walk past the Center and the Mart and the house's
+# forecourt by the road east; the lamps and the city sign stand in them
+for r in ((20, 16, 21, 19), (19, 20, 21, 28), (20, 29, 21, 32), (19, 33, 21, 37),       # west of the street
+          (26, 16, 28, 16), (26, 17, 27, 20), (26, 21, 32, 23), (26, 28, 31, 28),       # east of it
+          (26, 29, 26, 32), (26, 35, 28, 37)):
+    rect(*r, "%")
+for x, y in ((21, 19), (26, 19), (21, 32), (26, 31)):
+    rect(x, y - 1, x, y, "u")
+at(26, 35, "t")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("\n".join("".join(r) for r in g))

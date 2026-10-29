@@ -4717,7 +4717,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#3": {
+  "pewter_brick#3": {
    "ids": [
     883
    ],
@@ -4727,7 +4727,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#4": {
+  "pewter_brick#4": {
    "ids": [
     884
    ],
@@ -4737,7 +4737,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#5": {
+  "pewter_brick#6": {
    "ids": [
     885
    ],
@@ -4747,7 +4747,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#6": {
+  "pewter_brick#7": {
    "ids": [
     886
    ],
@@ -4757,7 +4757,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#9": {
+  "pewter_brick#8": {
    "ids": [
     887
    ],
@@ -4767,7 +4767,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#11": {
+  "pewter_brick#9": {
    "ids": [
     888
    ],
@@ -4777,7 +4777,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#12": {
+  "pewter_brick#11": {
    "ids": [
     889
    ],
@@ -4787,7 +4787,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#14": {
+  "pewter_brick#12": {
    "ids": [
     890
    ],
@@ -4797,7 +4797,7 @@
    "elevation": null,
    "open": []
   },
-  "pewter_walk#15.9": {
+  "pewter_brick#13": {
    "ids": [
     891
    ],
@@ -4806,15 +4806,136 @@
    "solid": false,
    "elevation": null,
    "open": []
+  },
+  "pewter_brick#14": {
+   "ids": [
+    892
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#14.2": {
+   "ids": [
+    893
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#15": {
+   "ids": [
+    894
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#15.1": {
+   "ids": [
+    895
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#15.2": {
+   "ids": [
+    896
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#15.4": {
+   "ids": [
+    897
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#15.8": {
+   "ids": [
+    898
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#15.9": {
+   "ids": [
+    899
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#15~1": {
+   "ids": [
+    900
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "pewter_brick#15~2": {
+   "ids": [
+    901
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "lamp_brick": {
+   "ids": [
+    902,
+    903
+   ],
+   "w": 1,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign_brick": {
+   "ids": [
+    904
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 352
+  "secondary": 372
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 252
+  "secondary": 265
  },
  "animations": [
   {
