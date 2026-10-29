@@ -20,6 +20,7 @@ extern const struct MapLayout Route1_Frlg_FireRedGeometry;
 extern const struct MapLayout Route21_South_Frlg_FireRedGeometry;
 extern const struct MapLayout Route22_Frlg_FireRedGeometry;
 extern const struct MapLayout Route23_Layout;
+extern const struct MapLayout Route2_Frlg_FireRedGeometry;
 extern const struct MapLayout Route3_Frlg_FireRedGeometry;
 extern const struct MapLayout Route4_Frlg_FireRedGeometry;
 extern const struct MapLayout Route6_Frlg_FireRedGeometry;
@@ -160,11 +161,11 @@ static const struct KantoSeamMetatile sPaeSeam_PewterCity_Frlg_Metatiles[] = {
     { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 645, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x928C, 0x928D, 0x9290, 0x9291 }, .layoutVersion = LAYOUT_VERSION_HNS },
     { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 648, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x9292, 0x9293, 0x9294, 0x9295 }, .layoutVersion = LAYOUT_VERSION_HNS },
     { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 649, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x9292, 0x9293, 0x9296, 0x9297 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 651, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x93EF, 0x93EE, 0x929E, 0x929B }, .layoutVersion = LAYOUT_VERSION_HNS },
+    { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 651, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x927F, 0x927E, 0x929E, 0x929B }, .layoutVersion = LAYOUT_VERSION_HNS },
     { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 652, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x929C, 0x9299, 0x929E, 0x929B }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 658, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x93ED, 0x93EC, 0x92A2, 0x92A3 }, .layoutVersion = LAYOUT_VERSION_HNS },
+    { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 658, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x927D, 0x927C, 0x92A2, 0x92A3 }, .layoutVersion = LAYOUT_VERSION_HNS },
     { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 659, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x92A0, 0x92A1, 0x92A2, 0x92A3 }, .layoutVersion = LAYOUT_VERSION_HNS },
-    { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 664, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x93EB, 0x93EA, 0x92A6, 0x92A7 }, .layoutVersion = LAYOUT_VERSION_HNS },
+    { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 664, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x927B, 0x927A, 0x92A6, 0x92A7 }, .layoutVersion = LAYOUT_VERSION_HNS },
     { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 665, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x92A4, 0x92A5, 0x92A6, 0x92A7 }, .layoutVersion = LAYOUT_VERSION_HNS },
     { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 667, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x92AC, 0x92A9, 0x92B1, 0x92AB }, .layoutVersion = LAYOUT_VERSION_HNS },
     { .sourceLayout = &Route3_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 673, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x92B3, 0x92B4, 0x92B7, 0x92B8 }, .layoutVersion = LAYOUT_VERSION_HNS },
@@ -180,7 +181,7 @@ static const struct KantoSeamMetatile sPaeSeam_PewterCity_Frlg_Metatiles[] = {
 };
 static const u16 ALIGNED(4) sPaeSeam_PewterCity_Frlg_GlyphRun0[] = { 0x0000, 0x0000, 0x0044, 0x4444, 0x4466, 0x6666, 0x7788, 0x8877, 0x6757, 0x7766, 0x6676, 0x6556, 0x6667, 0x7655, 0x6656, 0x6666, 0x0000, 0x0000, 0x0044, 0x4444, 0x4466, 0x6666, 0x7888, 0x8777, 0x6777, 0x7666, 0x6777, 0x6656, 0x6667, 0x7655, 0x5566, 0x7766, 0x0000, 0x0000, 0x0044, 0x4444, 0x4466, 0x6666, 0x7788, 0x8877, 0x5677, 0x7766, 0x5567, 0x7666, 0x6567, 0x6688, 0x8656, 0x6678, 0x0000, 0x0000, 0x0044, 0x4444, 0x4466, 0x6666, 0x7888, 0x8777, 0x6677, 0x7666, 0x6655, 0x7766, 0x6665, 0x7676, 0x6666, 0x7766, 0x0000, 0x0000, 0x0044, 0x4444, 0x4466, 0x6666, 0x7788, 0x8877, 0x7667, 0x7777, 0x7766, 0x6677, 0x7667, 0x5667, 0x6656, 0x5566, 0x0000, 0x0000, 0x0044, 0x4444, 0x4466, 0x6666, 0x7888, 0x8777, 0x7777, 0x7667, 0x6777, 0x6566, 0x6667, 0x7655, 0x5556, 0x7766 };
 static const struct KantoSeamGlyphRun sPaeSeam_PewterCity_Frlg_GlyphRuns[] = {
-    { sPaeSeam_PewterCity_Frlg_GlyphRun0, 1002, 192 },
+    { sPaeSeam_PewterCity_Frlg_GlyphRun0, 634, 192 },
 };
 
 static const struct KantoSeamPalette ALIGNED(4) sPaeSeam_PewterCity_Frlg_Palettes[] = {
@@ -557,6 +558,20 @@ static const struct KantoSeamPalette ALIGNED(4) sPaeSeam_Route23_Frlg_Palettes[]
     { { 0x0000, 0x1483, 0x2507, 0x3568, 0x41CB, 0x5670, 0x4252, 0x52F7, 0x5F5B, 0x6BBE, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000 }, 160 },
 };
 
+static const struct KantoSeamMetatile sPaeSeam_Route2_Frlg_Metatiles[] = {
+    { .sourceLayout = &PewterCity_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 883, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0xB3EF, 0xB3EE, 0xB3ED, 0xB3EC }, .layoutVersion = LAYOUT_VERSION_HNS },
+    { .sourceLayout = &PewterCity_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 888, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0xB3EB, 0xB3EA, 0xB3E9, 0xB3E8 }, .layoutVersion = LAYOUT_VERSION_HNS },
+    { .sourceLayout = &PewterCity_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 889, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0xB3EB, 0xB3EE, 0xB3E9, 0xB3EC }, .layoutVersion = LAYOUT_VERSION_HNS },
+};
+static const u16 ALIGNED(4) sPaeSeam_Route2_Frlg_GlyphRun0[] = { 0x6752, 0x0001, 0x6723, 0x0001, 0x6777, 0x0001, 0x6666, 0x0001, 0x1111, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x3342, 0x3333, 0x3424, 0x3333, 0x7777, 0x7777, 0x6666, 0x6666, 0x1111, 0x1111, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x6742, 0x0001, 0x6724, 0x0001, 0x6744, 0x0001, 0x6744, 0x0001, 0x6744, 0x0001, 0x6744, 0x0001, 0x6744, 0x0001, 0x6725, 0x0001, 0x4452, 0x4444, 0x4523, 0x4444, 0x5233, 0x4444, 0x2333, 0x4445, 0x3333, 0x4452, 0x2333, 0x4523, 0x3233, 0x5233, 0x3324, 0x2333, 0x4452, 0x4444, 0x4523, 0x4444, 0x7777, 0x7777, 0x6666, 0x6666, 0x1111, 0x1111, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x6000, 0x3376, 0x6000, 0x3376, 0x6000, 0x7776, 0x6000, 0x6666, 0x1000, 0x1111, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x3342, 0x3333, 0x3424, 0x3333, 0x4244, 0x3333, 0x2444, 0x3334, 0x4444, 0x3342, 0x2444, 0x3424, 0x4244, 0x4244, 0x4425, 0x2444, 0x6000, 0x4476, 0x6000, 0x4476, 0x6000, 0x4476, 0x6000, 0x4476, 0x6000, 0x4476, 0x6000, 0x4576, 0x6000, 0x5276, 0x6000, 0x2376 };
+static const struct KantoSeamGlyphRun sPaeSeam_Route2_Frlg_GlyphRuns[] = {
+    { sPaeSeam_Route2_Frlg_GlyphRun0, 1000, 256 },
+};
+
+static const struct KantoSeamPalette ALIGNED(4) sPaeSeam_Route2_Frlg_Palettes[] = {
+    { { 0x0000, 0x1483, 0x2507, 0x31AD, 0x4252, 0x52F7, 0x5F5B, 0x6BBE, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000 }, 176 },
+};
+
 static const struct KantoSeamMetatile sPaeSeam_Route3_Frlg_Metatiles[] = {
     { .sourceLayout = &PewterCity_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 642, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x7281, 0x7282, 0x7283, 0x7284 }, .layoutVersion = LAYOUT_VERSION_HNS },
     { .sourceLayout = &PewterCity_Frlg_FireRedGeometry, .attributes = 0x00001000u, .sourceMid = 644, .tiles = { 0x0001, 0x0002, 0x0003, 0x0004, 0x7281, 0x7282, 0x7285, 0x7286 }, .layoutVersion = LAYOUT_VERSION_HNS },
@@ -843,6 +858,7 @@ static const struct KantoSeamPalette ALIGNED(4) sPaeSeam_VermilionCity_Frlg_Pale
     { &Route21_South_Frlg_FireRedGeometry, sPaeSeam_Route21_South_Frlg_Metatiles, sPaeSeam_Route21_South_Frlg_GlyphRuns, sPaeSeam_Route21_South_Frlg_Palettes, NULL, 959, 65, 1, 2, 0, 0 }, \
     { &Route22_Frlg_FireRedGeometry, sPaeSeam_Route22_Frlg_Metatiles, sPaeSeam_Route22_Frlg_GlyphRuns, sPaeSeam_Route22_Frlg_Palettes, NULL, 1008, 16, 2, 1, 0, 0 }, \
     { &Route23_Layout, sPaeSeam_Route23_Frlg_Metatiles, sPaeSeam_Route23_Frlg_GlyphRuns, sPaeSeam_Route23_Frlg_Palettes, NULL, 951, 73, 1, 1, 0, 0 }, \
+    { &Route2_Frlg_FireRedGeometry, sPaeSeam_Route2_Frlg_Metatiles, sPaeSeam_Route2_Frlg_GlyphRuns, sPaeSeam_Route2_Frlg_Palettes, NULL, 1021, 3, 1, 1, 0, 0 }, \
     { &Route3_Frlg_FireRedGeometry, sPaeSeam_Route3_Frlg_Metatiles, sPaeSeam_Route3_Frlg_GlyphRuns, sPaeSeam_Route3_Frlg_Palettes, NULL, 980, 44, 1, 0, 0, 0 }, \
     { &Route4_Frlg_FireRedGeometry, sPaeSeam_Route4_Frlg_Metatiles, sPaeSeam_Route4_Frlg_GlyphRuns, sPaeSeam_Route4_Frlg_Palettes, NULL, 972, 52, 1, 1, 0, 0 }, \
     { &Route6_Frlg_FireRedGeometry, sPaeSeam_Route6_Frlg_Metatiles, sPaeSeam_Route6_Frlg_GlyphRuns, sPaeSeam_Route6_Frlg_Palettes, NULL, 1015, 9, 1, 1, 0, 0 }, \
