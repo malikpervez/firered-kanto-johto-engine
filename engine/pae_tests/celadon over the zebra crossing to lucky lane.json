@@ -1,0 +1,39 @@
+{
+ "note": "Down from the lawn by the Mansion over the zebra crossing and onto Lucky Lane's brick (KR-91).",
+ "created": "2026-10-29 04:00",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 21,
+  "y": 18,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     124
+    ],
+    [
+     0,
+     40
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Frlg",
+  "x": 21,
+  "y": 26,
+  "in_battle": false
+ },
+ "accepted": "2026-10-29 02:24"
+}

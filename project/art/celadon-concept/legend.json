@@ -130,5 +130,39 @@
  "Y": "celadon_gym",
  "P": "house_pond_keeper",
  "E": "house_pond_keeper",
- "H": "house_pond_keeper"
+ "H": "house_pond_keeper",
+ "1": "asphalt_to_cobble_W",
+ "2": "asphalt_to_cobble_E",
+ "-": "asphalt_dashed_H_boundary",
+ "3": "crossing_road_EW",
+ "4": "crossing_end_N",
+ "5": "crossing_end_S",
+ "7": {
+  "name": "crossing_dropped_kerb_S",
+  "joins": "n"
+ },
+ "9": {
+  "name": "crossing_dropped_kerb_N",
+  "joins": "n"
+ },
+ "%": "manhole",
+ "n": {
+  "auto": "walk_s"
+ },
+ "u": {
+  "auto": "walk_n",
+  "joins": "n"
+ },
+ "^": {
+  "auto": "brick",
+  "joins": "n"
+ },
+ "j": {
+  "name": "brick_to_pavement_N",
+  "joins": "n"
+ },
+ "/": {
+  "name": "compass",
+  "joins": "n"
+ }
 }
