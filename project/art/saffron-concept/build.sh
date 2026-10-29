@@ -68,7 +68,7 @@ pae map place $M object 0 6 9 $P     # Rockets, until Silph Co. is freed: one at
 pae map place $M object 1 24 20 $P   # one walking the Gym square,
 pae map place $M object 2 17 18 $P   # one barring the Gym's door,
 pae map place $M object 3 13 9 $P    # one at the house's door,
-pae map place $M object 4 15 35 $P   # one walking the park,
+pae map place $M object 4 7 34 $P    # one walking the park,
 pae map place $M object 5 39 18 $P   # Silph's door guard (in front of the door until Mr. Fuji is rescued: the map
                                      # script puts him at 38,18), asleep beside it after
 pae map place $M object 6 44 33 $P   # one walking the flower gardens,
@@ -76,12 +76,12 @@ pae map place $M object 7 45 23 $P   # one walking the avenue
 pae map place $M object 8 50 34 $P   # the townspeople, back once Silph is freed: the youngster in the gardens,
 pae map place $M object 9 51 18 $P   # the Magnet Train's attendant, by the station,
 pae map place $M object 10 35 20 $P  # the man looking up at Silph Co.,
-pae map place $M object 11 44 27 $P  # the boy who flew here on his Pidgeot,
-pae map place $M object 12 45 27 $P
+pae map place $M object 11 51 27 $P  # the boy who flew here on his Pidgeot, past the shops,
+pae map place $M object 12 52 27 $P
 pae map place $M object 13 19 33 $P  # the lass, walking the park
-pae map place $M object 14 52 40 $P  # the battle girl (after the League), in the gardens
-pae map place $M object 15 47 29 $P  # Pidgey, Pidgey, Pidgey and Abra about the city
-pae map place $M object 16 24 40 $P
+pae map place $M object 14 55 43 $P  # the battle girl (after the League), behind the towers
+pae map place $M object 15 51 29 $P  # Pidgey, Pidgey, Pidgey and Abra about the city
+pae map place $M object 16 26 40 $P
 pae map place $M object 17 24 3 $P
 pae map place $M object 18 55 11 $P
 pae map place $M object 19 50 8 $P   # the Friends, round 50,8 in the garden behind Silph Co.
@@ -107,6 +107,7 @@ p = "data/maps/SaffronCity_Frlg/map.json"
 m = json.load(open(p))
 o = m["object_events"]
 o[9]["movement_type"] = "MOVEMENT_TYPE_FACE_DOWN"
+o[4]["movement_range_x"] = 4  # the park's Rocket: the lawn north of the pond
 for e in o:
     if e.get("type") != "clone" and "elevation" in e:
         e["elevation"] = 3

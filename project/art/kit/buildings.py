@@ -51,3 +51,27 @@ def load(folder: Path) -> Building:
 
 CENTER = load(HERE / "pokemon_center")
 MART = load(HERE / "poke_mart")
+
+
+def recompose(idx: np.ndarray, rows, cols) -> np.ndarray:
+    """A new picture from a building's own 8x8 cells: row ``i``, column ``j`` of it is the cell at (``rows[i]``,
+    ``cols[j]``) of ``idx``. Every tile in it is one the building already has, so it costs its tileset no tiles
+    (its blocks are new). Seamless where each step between neighbouring cells is one the building takes too."""
+    if len(rows) % 2 or len(cols) % 2:
+        raise SystemExit("a recomposed building is whole blocks: an even number of 8 px rows and columns")
+    out = np.zeros((len(rows) * 8, len(cols) * 8), np.uint8)
+    for i, r in enumerate(rows):
+        for j, c in enumerate(cols):
+            out[i * 8:i * 8 + 8, j * 8:j * 8 + 8] = idx[r * 8:r * 8 + 8, c * 8:c * 8 + 8]
+    return out
+
+
+def recolour(palette, changes: dict[int, tuple[int, int, int]]) -> list[tuple[int, int, int]]:
+    """A palette with some of its colours changed. Its pictures keep their indices, so their tiles are the same tiles
+    in another bank: the colours must stay distinct, or the tileset build would merge two indices."""
+    out = list(palette)
+    for i, c in changes.items():
+        out[i] = tuple(c)
+    if len(set(out[1:])) != len(out) - 1:
+        raise SystemExit("a recolour gives two indices the same colour")
+    return out

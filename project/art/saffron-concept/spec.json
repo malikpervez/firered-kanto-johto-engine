@@ -15,7 +15,9 @@
   "secondary": [
    "palette_7.pal",
    "../kit/palette_plants.pal",
-   "palette_9.pal"
+   "palette_9.pal",
+   "palette_10.pal",
+   "palette_11.pal"
   ]
  },
  "reserve": {
@@ -3005,7 +3007,7 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": "paving#15",
    "solid": true,
    "open": [
     "4,11"
@@ -3025,7 +3027,7 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": "paving#15",
    "solid": true,
    "open": [
     "3,4"
@@ -3045,7 +3047,7 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": "paving#15",
    "solid": true,
    "open": [
     "3,4"
@@ -3065,7 +3067,7 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": "paving#15",
    "solid": true,
    "open": [
     "1,2",
@@ -3087,7 +3089,7 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": "paving#15",
    "solid": true,
    "open": [
     "1,0",
@@ -3109,7 +3111,7 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": "paving#15",
    "solid": true,
    "open": [],
    "behaviors": {}
@@ -3125,7 +3127,7 @@
     7
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": "paving#15",
    "solid": true,
    "open": [
     "1,3"
@@ -3133,6 +3135,165 @@
    "behaviors": {
     "1,3": "MB_ANIMATED_DOOR"
    }
+  },
+  {
+   "name": "pokemon_center_paved",
+   "image": "sheets/pokemon_center_paved.png",
+   "x": 0,
+   "y": 0,
+   "w": 5,
+   "h": 4,
+   "banks": [
+    5
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "open": [
+    "2,3"
+   ],
+   "behaviors": {
+    "2,3": "MB_ANIMATED_DOOR"
+   }
+  },
+  {
+   "name": "poke_mart_paved",
+   "image": "sheets/poke_mart_paved.png",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "h": 4,
+   "banks": [
+    6
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "open": [
+    "1,3"
+   ],
+   "behaviors": {
+    "1,3": "MB_ANIMATED_DOOR"
+   }
+  },
+  {
+   "name": "lamp_paved",
+   "image": "sheets/lamp_paved.png",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    8
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true
+  },
+  {
+   "name": "arcade_beige",
+   "image": "sheets/city_beige.png",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "h": 4,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "office_narrow_beige",
+   "image": "sheets/city_beige.png",
+   "x": 0,
+   "y": 64,
+   "w": 4,
+   "h": 6,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "office_mid_sand",
+   "image": "sheets/city_sand.png",
+   "x": 0,
+   "y": 0,
+   "w": 6,
+   "h": 6,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "office_tall_sand",
+   "image": "sheets/city_sand.png",
+   "x": 0,
+   "y": 96,
+   "w": 6,
+   "h": 9,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "office_mid_brick",
+   "image": "sheets/city_brick.png",
+   "x": 0,
+   "y": 0,
+   "w": 6,
+   "h": 6,
+   "banks": [
+    11
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "office_narrow_brick",
+   "image": "sheets/city_brick.png",
+   "x": 0,
+   "y": 96,
+   "w": 4,
+   "h": 6,
+   "banks": [
+    11
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "office_tall_brick",
+   "image": "sheets/city_brick.png",
+   "x": 0,
+   "y": 192,
+   "w": 6,
+   "h": 9,
+   "banks": [
+    11
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true,
+   "dedupe": true
   }
  ]
 }

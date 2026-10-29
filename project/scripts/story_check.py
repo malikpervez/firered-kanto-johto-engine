@@ -933,7 +933,7 @@ STEPS = [
          inputs=f"DOWN*{hold(2)}, wait 300", expect=dict(map="SaffronCity_Frlg", xy=(17, 18))),
     # Cinnabar next. Without Fly the way there is the sea: down to Fuchsia by Routes 6, 11 and 12, then Surf
     dict(name="saffron-south", what="Down Saffron to its south gate (its guard drank the Tea too)",
-         via=[(17, 38), (18, 38), (18, 44)], walk=(29, 44), inputs=f"DOWN*{hold(2)}, wait 250",
+         via=[(17, 38), (27, 38), (27, 44)], walk=(29, 44), inputs=f"DOWN*{hold(2)}, wait 250",
          expect=dict(map="Route6_NorthEntrance_Frlg")),
     dict(name="route6-again", what="Through the gate and out onto Route 6", walk=(4, 8),
          inputs=f"DOWN*{hold(2)}, wait 250",
