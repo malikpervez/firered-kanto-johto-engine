@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "id": "crossing",
+  "type": "static_terrain",
+  "block_size_px": 16,
+  "palette": "road_existing",
+  "palette_file": "../palettes/road_existing.gpl",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "piece_names": [
+    "road_EW",
+    "road_NS",
+    "dropped_kerb_N",
+    "end_N",
+    "dropped_kerb_E",
+    "end_E",
+    "dropped_kerb_S",
+    "end_S",
+    "dropped_kerb_W",
+    "end_W"
+  ],
+  "naming": "N means lawn outside to north; to_asphalt_N means asphalt on north side. Diagonal names are clockwise NE, SE, SW, NW.",
+  "solid": false,
+  "solid_blocks": [],
+  "door_block": null,
+  "variant_border_policy": "Every centre variant has the same outer pixel border.",
+  "tiles": [
+    {
+      "name": "road_EW",
+      "image": "tiles/road_EW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          39,
+          39
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "road_NS",
+      "image": "tiles/road_NS.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          40,
+          40
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "dropped_kerb_N",
+      "image": "tiles/dropped_kerb_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "road_side": "N",
+      "tiles_8x8": [
+        [
+          39,
+          39
+        ],
+        [
+          25,
+          25
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "end_N",
+      "image": "tiles/end_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "pavement_side": "N",
+      "tiles_8x8": [
+        [
+          39,
+          39
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "dropped_kerb_E",
+      "image": "tiles/dropped_kerb_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "road_side": "E",
+      "tiles_8x8": [
+        [
+          25,
+          40
+        ],
+        [
+          25,
+          40
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "end_E",
+      "image": "tiles/end_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "pavement_side": "E",
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          40,
+          40
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    },
+    {
+      "name": "dropped_kerb_S",
+      "image": "tiles/dropped_kerb_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "road_side": "S",
+      "tiles_8x8": [
+        [
+          25,
+          25
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "end_S",
+      "image": "tiles/end_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "pavement_side": "S",
+      "tiles_8x8": [
+        [
+          39,
+          39
+        ],
+        [
+          39,
+          39
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "dropped_kerb_W",
+      "image": "tiles/dropped_kerb_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "road_side": "W",
+      "tiles_8x8": [
+        [
+          40,
+          25
+        ],
+        [
+          40,
+          25
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ]
+    },
+    {
+      "name": "end_W",
+      "image": "tiles/end_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "pavement_side": "W",
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          40,
+          40
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ]
+    }
+  ],
+  "transitions": [],
+  "unique_8x8_tiles": 3,
+  "tile_pool": "../tile_pools/part_a/tiles.4bpp"
+}

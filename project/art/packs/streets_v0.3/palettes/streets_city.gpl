@@ -1,0 +1,20 @@
+GIMP Palette
+Name: streets_city
+Columns: 16
+#
+  0   0   0	index 0
+ 24  88  56	index 1
+ 56 152  80	index 2
+144  72  64	index 3
+192 112  88	index 4
+224 152 112	index 5
+136 168 176	index 6
+ 24  32  32	index 7
+112  72  48	index 8
+176 128  80	index 9
+216 176 120	index 10
+ 96  96  96	index 11
+144 144 136	index 12
+192 192 176	index 13
+ 72  48  40	index 14
+240 240 224	index 15

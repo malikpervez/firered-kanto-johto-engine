@@ -95,6 +95,22 @@
  "p": {
   "auto": "paving"
  },
+ "+": {
+  "pick": [
+   "asphalt#15",
+   "asphalt#15~1",
+   "asphalt#15~2",
+   "asphalt#15~3",
+   "asphalt#15~4"
+  ]
+ },
+ "&": {
+  "auto": "kerb"
+ },
+ "$": {
+  "auto": "pavement",
+  "joins": "&"
+ },
  "q": {
   "auto": "sea",
   "joins": "s",

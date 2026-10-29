@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "id": "mosaic",
+  "type": "static_terrain",
+  "block_size_px": 16,
+  "palette": "streets_city",
+  "palette_file": "../palettes/streets_city.gpl",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "piece_names": [
+    "compass_2x2"
+  ],
+  "naming": "N means lawn outside to north; to_asphalt_N means asphalt on north side. Diagonal names are clockwise NE, SE, SW, NW.",
+  "solid": false,
+  "solid_blocks": [],
+  "door_block": null,
+  "variant_border_policy": "Every centre variant has the same outer pixel border.",
+  "tiles": [
+    {
+      "name": "compass_2x2",
+      "image": "tiles/compass_2x2.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "ground": "granite",
+      "footprint_blocks": {
+        "width": 2,
+        "height": 2
+      },
+      "tiles_8x8": [
+        [
+          43,
+          41,
+          41,
+          43
+        ],
+        [
+          42,
+          39,
+          39,
+          42
+        ],
+        [
+          42,
+          39,
+          39,
+          42
+        ],
+        [
+          43,
+          41,
+          41,
+          43
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ]
+    }
+  ],
+  "transitions": [],
+  "unique_8x8_tiles": 4,
+  "tile_pool": "../tile_pools/part_b/tiles.4bpp"
+}

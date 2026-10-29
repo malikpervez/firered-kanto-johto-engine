@@ -1,0 +1,52 @@
+{
+  "pavement": [
+    "center",
+    "center_b",
+    "center_c",
+    "to_asphalt_E",
+    "to_asphalt_N",
+    "to_asphalt_S",
+    "to_asphalt_W"
+  ],
+  "asphalt": [
+    "center",
+    "center_b",
+    "center_c",
+    "dashed_H_boundary",
+    "dashed_V_boundary"
+  ],
+  "crossing": [
+    "dropped_kerb_E",
+    "dropped_kerb_N",
+    "dropped_kerb_S",
+    "dropped_kerb_W",
+    "road_EW",
+    "road_NS"
+  ],
+  "details": [
+    "manhole",
+    "storm_drain_E",
+    "storm_drain_S",
+    "tactile_paving",
+    "tree_grate"
+  ],
+  "granite": [
+    "E",
+    "N",
+    "NE",
+    "NW",
+    "S",
+    "SE",
+    "SW",
+    "W",
+    "large_NE",
+    "large_NW",
+    "large_SE",
+    "large_SW",
+    "to_pavement_E",
+    "to_pavement_S"
+  ],
+  "mosaic": [
+    "compass_2x2"
+  ]
+}
