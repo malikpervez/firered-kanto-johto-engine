@@ -149,6 +149,20 @@ rect(3, 22, 7, 25, "1"); rect(9, 22, 13, 25, "2")   # two cottages facing the ro
 rect(3, 27, 7, 30, "2")                             # one more, north of the bald man's corner (he walks 6-8,31-33)
 rect(48, 22, 52, 25, "1")                           # and one east of the bridge road
 rect(10, 31, 13, 33, "~")                           # the fountain
+# the blue brick borders the paving: a block of it round every building on the paving, and along every edge of the
+# paving where it meets something else (the roads, the lawn, the forest, the hedges, the water)
+BUILT = set("WKXZLH12")
+border = set()
+for y in range(H):
+    for x in range(W):
+        if g[y][x] != "p":
+            continue
+        around = [g[y + dy][x + dx] for dy in (-1, 0, 1) for dx in (-1, 0, 1)
+                  if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H]
+        if any(c in BUILT or c not in "pS" for c in around):
+            border.add((x, y))
+for x, y in border:
+    g[y][x] = "%"
 rect(2, 14, 31, 15, "%"); rect(12, 16, 13, 16, "%"); rect(24, 16, 25, 16, "%")   # the promenade by the lake
 rect(19, 21, 20, 40, "%")                           # the sidewalk down the road south
 rect(32, 25, 32, 28, "%"); rect(38, 25, 38, 28, "%"); rect(32, 28, 38, 28, "%")  # round the pool
