@@ -15,7 +15,8 @@
   "secondary": [
    "palette_7.pal",
    "../kit/palette_plants.pal",
-   "palette_9.pal"
+   "palette_9.pal",
+   "palette_10.pal"
   ]
  },
  "reserve": {
@@ -4941,6 +4942,192 @@
    "behaviors": {
     "1,3": "MB_ANIMATED_DOOR"
    }
+  },
+  {
+   "name": "walk_s#2",
+   "image": "sheets/walks.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true
+  },
+  {
+   "name": "walk_s#8",
+   "image": "sheets/walks.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true
+  },
+  {
+   "name": "walk_s#10",
+   "image": "sheets/walks.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true
+  },
+  {
+   "name": "walk_n#2",
+   "image": "sheets/walks.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true
+  },
+  {
+   "name": "walk_n#8",
+   "image": "sheets/walks.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true
+  },
+  {
+   "name": "walk_n#10",
+   "image": "sheets/walks.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true
+  },
+  {
+   "name": "brick#3",
+   "image": "sheets/brick.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "brick#7",
+   "image": "sheets/brick.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "brick#9",
+   "image": "sheets/brick.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "brick#11",
+   "image": "sheets/brick.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "brick#13",
+   "image": "sheets/brick.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "brick#14",
+   "image": "sheets/brick.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "brick#15.1",
+   "image": "sheets/brick.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "brick#15.8",
+   "image": "sheets/brick.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "brick_to_pavement_N",
+   "image": "sheets/brick.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass"
+  },
+  {
+   "name": "compass",
+   "image": "sheets/brick.png",
+   "x": 16,
+   "y": 16,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "ground": "grass"
   }
  ]
 }

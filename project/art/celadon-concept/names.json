@@ -4426,15 +4426,178 @@
    "open": [
     13
    ]
+  },
+  "walk_s#2": {
+   "ids": [
+    900
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "walk_s#8": {
+   "ids": [
+    901
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "walk_s#10": {
+   "ids": [
+    902
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "walk_n#2": {
+   "ids": [
+    903
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "walk_n#8": {
+   "ids": [
+    904
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "walk_n#10": {
+   "ids": [
+    905
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick#3": {
+   "ids": [
+    906
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick#7": {
+   "ids": [
+    907
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick#9": {
+   "ids": [
+    908
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick#11": {
+   "ids": [
+    909
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick#13": {
+   "ids": [
+    910
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick#14": {
+   "ids": [
+    911
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick#15.1": {
+   "ids": [
+    912
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick#15.8": {
+   "ids": [
+    913
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "brick_to_pavement_N": {
+   "ids": [
+    914
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "compass": {
+   "ids": [
+    915,
+    916,
+    917,
+    918
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": false,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 345
+  "secondary": 377
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 260
+  "secondary": 279
  },
  "animations": [
   {

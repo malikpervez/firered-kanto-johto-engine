@@ -7,7 +7,7 @@ The pieces: the kit's and its Pokémon Center; the Department Store, the Mansion
 Erika's Gym, from Kanto Buildings Remakes v0.3 (../packs/buildings_v0.3), in one palette (bank 9); Viridian's pond
 keeper's house in its palette (bank 7) for the Prize Room, the restaurant and a house. The town's own tileset holds
 384 tiles: the remakes take 290 of them, and one kind of house (55) fits beside them, two (102) don't. Bank 8 is the
-kit's plants palette; 10-12 stay free for seams to old maps (Route 16 is from the kit now: their seam needs none).
+kit's plants palette; 10 the street pack's city palette (Lucky Lane's brick, the compass); 11-12 stay free.
 
 Run from the repository root:  python3 project/art/celadon-concept/make_art.py
 It writes buildings/, sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
@@ -24,6 +24,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import streets
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -34,6 +35,17 @@ HOUSE_BANK, CITY_BANK = 7, 9
 WEST = [(0, y) for y in range(20, 24)]
 EAST = [(MAP_W - 1, y) for y in range(20, 24)]
 SOLID = set("T#bRoklSBcw_~vrDMOCGPEHY")
+STREETS_BANK = 10  # the pack's city palette (Part B: Lucky Lane's brick, the compass); 11-12 stay free
+# the street pieces by their letters in the plan (the kit's, streets.py) and Celadon's own: its pavements, on the lawn
+# on one side and the road on the other ("walk_s": the road south of it, "walk_n": north), the brick and the compass;
+# the pavement, the brick, the compass and the dropped kerbs are one material ("n") for each other's edges
+KIT_PIECES = {"1": "asphalt_to_cobble_W", "2": "asphalt_to_cobble_E", "-": "asphalt_dashed_H_boundary",
+              "3": "crossing_road_EW", "4": "crossing_end_N", "5": "crossing_end_S", "7": "crossing_dropped_kerb_S",
+              "9": "crossing_dropped_kerb_N", "%": "manhole"}
+STREET_LEGEND = {"n": {"auto": "walk_s"}, "u": {"auto": "walk_n", "joins": "n"},
+                 "^": {"auto": "brick", "joins": "n"}, "j": {"name": "brick_to_pavement_N", "joins": "n"},
+                 "/": {"name": "compass", "joins": "n"}, "7": {"name": KIT_PIECES["7"], "joins": "n"},
+                 "9": {"name": KIT_PIECES["9"], "joins": "n"}}
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the
 # Mansion's second is its back door, entered walking south from above)
@@ -66,6 +78,46 @@ def load(letter: str) -> tuple[buildings.Building, list[tuple[int, int]]]:
     ds = [tuple(d) for d in meta["door_blocks"]] if "door_blocks" in meta else [tuple(meta["door_block"])]
     return buildings.Building(folder.name, idx, [tuple(flat[i:i + 3]) for i in range(0, 48, 3)], ds[0],
                               folder / f"{folder.name}_door.png"), ds
+
+
+def autotiled(g, legend) -> dict[str, set[tuple[int, int]]]:
+    """The pieces pae map paint will ask for, as it works them out (a neighbour counts when it's in the same group,
+    the map's edge counts; inside corners where both sides count and the diagonal doesn't): {auto: {(mask, corners)}}.
+    Only these are drawn, so the city's tileset holds no piece the map doesn't show."""
+    def group(c):
+        it = legend.get(c)
+        return it.get("joins", c) if isinstance(it, dict) else c
+
+    def same(x, y, c):
+        return not (0 <= x < MAP_W and 0 <= y < MAP_H) or group(g[y][x]) == group(c)
+    out: dict[str, set[tuple[int, int]]] = {}
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            it = legend.get(g[y][x])
+            if not (isinstance(it, dict) and "auto" in it):
+                continue
+            c = g[y][x]
+            mask = sum(bit for bit, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                       if same(x + dx, y + dy, c))
+            corners = sum(bit for bit, (dx, dy), sides in ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12),
+                                                          (8, (-1, -1), 9))
+                          if mask & sides == sides and not same(x + dx, y + dy, c))
+            out.setdefault(it["auto"], set()).add((mask, corners))
+    return out
+
+
+def walk(mask: int, corners: int, road: int) -> np.ndarray:
+    """Celadon's pavement block: the kit's pavement (by its neighbours and inside corners), the lawn under its edges
+    but the road (asphalt) under those on the ``road`` side (1 N, 4 S), so one row of pavement can have its kerb on
+    the road and its edge on the lawn."""
+    under = kit.lawn.tiles(kit.LAWN, kit.P0)["lawn_a"].copy()
+    asphalt = streets.piece("asphalt", "center", kit.P0)
+    if road & 1:
+        under[:8] = asphalt[:8]
+    if road & 4:
+        under[8:] = asphalt[8:]
+    top = streets.block("pavement", mask, corners, kit.P0)
+    return np.where(top != 0, top, under).astype(np.uint8)
 
 
 def plan() -> list[list[str]]:
@@ -154,6 +206,23 @@ def main() -> None:
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=bw)
         sh.add(b.name, b.idx, tileset="secondary", ground="grass", solid=True, open=open_, behaviors=behavior)
         spec_mt += sh.write()
+    # the streets (KR-91): Celadon's pavements and Lucky Lane's brick, only the pieces the map shows
+    legend = {**kit.LEGEND, **SHARED, **{k: load(k)[0].name for k in BUILDINGS}, **KIT_PIECES, **STREET_LEGEND}
+    used = autotiled(g, legend)
+    sh = kit.Sheet("walks", kit.P0, 0, HERE, HERE, cols=8)
+    for name, road in (("walk_s", 4), ("walk_n", 1)):
+        for m, c in sorted(used.get(name, ())):
+            sh.add(f"{name}#{m}.{c}" if c else f"{name}#{m}", walk(m, c, road), tileset="secondary", dedupe=True)
+    spec_mt += sh.write()
+    pals[STREETS_BANK] = streets.city_palette()
+    sh = kit.Sheet("brick", pals[STREETS_BANK], STREETS_BANK, HERE, HERE, cols=8)
+    for m, c in sorted(used.get("brick", ())):  # on the lawn, as the pack draws it (its edges show the ground)
+        sh.add(f"brick#{m}.{c}" if c else f"brick#{m}", streets.block("brick", m, c, pals[STREETS_BANK]),
+               tileset="secondary", ground="grass", dedupe=True)
+    sh.add("brick_to_pavement_N", streets.piece("brick", "to_pavement_N", pals[STREETS_BANK]), tileset="secondary",
+           ground="grass")
+    sh.add("compass", streets.piece("mosaic", "compass_2x2", pals[STREETS_BANK]), tileset="secondary", ground="grass")
+    spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -162,7 +231,7 @@ def main() -> None:
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{HOUSE_BANK}.pal", base["secondary_palettes"][8],
-                                       f"palette_{CITY_BANK}.pal"]},
+                                       f"palette_{CITY_BANK}.pal", f"palette_{STREETS_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
             "animations": base["animations"],
             "field_effects": base["field_effects"],
@@ -170,7 +239,6 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, **SHARED, **{k: load(k)[0].name for k in BUILDINGS})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")
