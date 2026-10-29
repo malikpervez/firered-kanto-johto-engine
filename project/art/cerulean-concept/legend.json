@@ -129,18 +129,33 @@
   "name": "pokemon_center_paved",
   "joins": "%"
  },
- "L": "poke_mart",
+ "L": {
+  "name": "poke_mart_paved",
+  "joins": "%"
+ },
  "W": {
   "name": "viridian_gym",
   "joins": "%"
  },
- "K": "trainer_school",
+ "K": {
+  "name": "trainer_school",
+  "joins": "%"
+ },
  "H": "house_family",
- "X": "house_gardener",
+ "X": {
+  "name": "house_gardener",
+  "joins": "%"
+ },
  "Y": "diglett_cave",
  "^": "hole",
- "1": "cottage_blue",
- "2": "cottage_teal",
+ "1": {
+  "name": "cottage_blue",
+  "joins": "%"
+ },
+ "2": {
+  "name": "cottage_teal",
+  "joins": "%"
+ },
  "@": {
   "name": "lamp_paving",
   "joins": "%"
@@ -155,5 +170,37 @@
    "cerulean_brick#15~1",
    "cerulean_brick#15~2"
   ]
+ },
+ "P": {
+  "pick": [
+   "paving#15",
+   "paving#15~1",
+   "paving#15~2"
+  ],
+  "joins": "%"
+ },
+ "3": {
+  "name": "fence_paving#1",
+  "joins": "%"
+ },
+ "4": {
+  "name": "fence_paving#2",
+  "joins": "%"
+ },
+ "5": {
+  "name": "fence_paving#5",
+  "joins": "%"
+ },
+ "6": {
+  "name": "fence_paving#6",
+  "joins": "%"
+ },
+ "7": {
+  "name": "fence_paving#8",
+  "joins": "%"
+ },
+ "8": {
+  "name": "fence_paving#10",
+  "joins": "%"
  }
 }

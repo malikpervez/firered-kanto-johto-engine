@@ -4265,7 +4265,7 @@
     17
    ]
   },
-  "cottage_blue": {
+  "poke_mart_paved": {
    "ids": [
     751,
     752,
@@ -4282,20 +4282,22 @@
     763,
     764,
     765,
-    766,
-    767,
-    768,
-    769,
-    770
+    766
    ],
-   "w": 5,
+   "w": 4,
    "h": 4,
    "solid": true,
    "elevation": null,
-   "open": []
+   "open": [
+    13
+   ]
   },
-  "cottage_teal": {
+  "cottage_blue": {
    "ids": [
+    767,
+    768,
+    769,
+    770,
     771,
     772,
     773,
@@ -4311,11 +4313,7 @@
     783,
     784,
     785,
-    786,
-    787,
-    788,
-    789,
-    790
+    786
    ],
    "w": 5,
    "h": 4,
@@ -4323,59 +4321,18 @@
    "elevation": null,
    "open": []
   },
-  "cerulean_brick#15": {
+  "cottage_teal": {
    "ids": [
-    791
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "cerulean_brick#15~1": {
-   "ids": [
-    792
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "cerulean_brick#15~2": {
-   "ids": [
-    793
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "lamp_paving": {
-   "ids": [
+    787,
+    788,
+    789,
+    790,
+    791,
+    792,
+    793,
     794,
-    795
-   ],
-   "w": 1,
-   "h": 2,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "sign_paving": {
-   "ids": [
-    796
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "diglett_cave": {
-   "ids": [
+    795,
+    796,
     797,
     798,
     799,
@@ -4385,19 +4342,127 @@
     803,
     804,
     805,
-    806,
-    807,
-    808,
-    809,
+    806
+   ],
+   "w": 5,
+   "h": 4,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "cerulean_brick#15": {
+   "ids": [
+    807
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cerulean_brick#15~1": {
+   "ids": [
+    808
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "cerulean_brick#15~2": {
+   "ids": [
+    809
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "lamp_paving": {
+   "ids": [
     810,
-    811,
-    812,
-    813,
-    814,
-    815,
-    816,
-    817,
-    818,
+    811
+   ],
+   "w": 1,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign_paving": {
+   "ids": [
+    812
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence_paving#1": {
+   "ids": [
+    813
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence_paving#2": {
+   "ids": [
+    814
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence_paving#5": {
+   "ids": [
+    815
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence_paving#6": {
+   "ids": [
+    816
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence_paving#8": {
+   "ids": [
+    817
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence_paving#10": {
+   "ids": [
+    818
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "diglett_cave": {
+   "ids": [
     819,
     820,
     821,
@@ -4405,7 +4470,29 @@
     823,
     824,
     825,
-    826
+    826,
+    827,
+    828,
+    829,
+    830,
+    831,
+    832,
+    833,
+    834,
+    835,
+    836,
+    837,
+    838,
+    839,
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848
    ],
    "w": 6,
    "h": 5,
@@ -4417,7 +4504,7 @@
   },
   "hole": {
    "ids": [
-    827
+    849
    ],
    "w": 1,
    "h": 1,
@@ -4432,7 +4519,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 188
+  "secondary": 210
  },
  "animations": [
   {

@@ -56,14 +56,14 @@ WEST = [(0, y) for y in range(17, 21)]
 EAST = [(MAP_W - 1, y) for y in range(28, 31)]
 SOUTH = [(x, MAP_H - 1) for x in range(21, 25)]
 WATER = set("~vr")
-SOLID = set("T#bRoklSBcw_~vrWKHXZLY12@/")
+SOLID = set("T#bRoklSBcw_~vrWKHXZLY12@/f")
 # the paving and the brick: what stands on them (the buildings but the two family houses and the cave, the lamps and
 # the signs) and the cobbles are one material with them, so no edge between
 WALK = "%"
-import os
-OPTION = os.environ.get("CERULEAN_OPTION", "1")  # the design (draw_plan.py): 1 the civic plaza, 2 the paved town
-PAVED = "WZ@/" if OPTION == "1" else "WKXZL12@/"  # what stands on the paving
-SHARED_PAVED = {k: v for k, v in {"Z": ("pokemon_center", "center"), "L": ("poke_mart", "mart")}.items() if k in PAVED}
+PAVED = "WKXZL12@/"  # what stands on the paving
+FENCE = "f"          # a fence on the paving (the kit's fence, its own blocks: on the paving, one with it)
+FENCE_CHARS = "3456789"
+SHARED_PAVED = {"Z": ("pokemon_center", "center"), "L": ("poke_mart", "mart")}
 BRICK_BANK = 10
 BRICK = {3: (104, 128, 168), 4: (136, 160, 200), 5: (176, 196, 224), 8: (72, 88, 120)}  # the pack's bricks, in blues
 COTTAGES = {"1": ("cottage_blue", 11, {2: (40, 56, 96), 4: (64, 96, 160), 5: (104, 144, 200), 13: (72, 80, 112)}),
@@ -246,8 +246,7 @@ def main() -> None:
     for letter, (name, bank, changes) in COTTAGES.items():
         pals[bank] = buildings.recolour(house.palette, changes)
         sh = kit.Sheet(name, pals[bank], bank, HERE, HERE, cols=house.idx.shape[1] // 16)
-        sh.add(name, cottage(house.idx), tileset="secondary", solid=True,
-               ground=paved(cottage(house.idx)) if letter in PAVED else "grass",
+        sh.add(name, cottage(house.idx), tileset="secondary", solid=True, ground=paved(cottage(house.idx)),
                dedupe=True)
         spec_mt += sh.write()
     city = streets.city_palette()
@@ -263,6 +262,21 @@ def main() -> None:
     sh = kit.Sheet("sign_paving", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=1)
     sh.add("sign_paving", kit.sign(), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
     spec_mt += sh.write()
+    fences = {}  # the fences on the paving, by the sides they join on (1 N, 2 E, 4 S, 8 W)
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            if g[y][x] == FENCE:
+                m = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                        if 0 <= x + dx < MAP_W and 0 <= y + dy < MAP_H and g[y + dy][x + dx] == FENCE)
+                fences.setdefault(m, []).append((x, y))
+    assert len(fences) <= len(FENCE_CHARS), "more kinds of fence than characters for them"
+    sh = kit.Sheet("fence_paving", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=8)
+    for (m, cells), ch in zip(sorted(fences.items()), FENCE_CHARS):
+        sh.add(f"fence_paving#{m}", kit.fence(m), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
+        for x, y in cells:
+            g[y][x] = ch
+    spec_mt += sh.write()
+    fence_names = {ch: f"fence_paving#{m}" for m, ch in zip(sorted(fences), FENCE_CHARS)}
     for letter in "HX":
         b = load(letter)
         assert not set(HOUSE_SPARE) & set(np.unique(b.idx)), f"{b.name} uses an index kept for the cave"
@@ -297,7 +311,9 @@ def main() -> None:
                   **{k: f"{n}_paved" for k, (n, _) in SHARED_PAVED.items()})
     legend.update({k: {"name": legend[k], "joins": WALK} for k in PAVED})
     legend.update({WALK: {"pick": ["cerulean_brick#15", "cerulean_brick#15~1", "cerulean_brick#15~2"]},
-                   "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK}})
+                   "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
+                   "P": {"pick": ["paving#15", "paving#15~1", "paving#15~2"], "joins": WALK}})  # plain, no edges
+    legend.update({ch: {"name": n, "joins": WALK} for ch, n in fence_names.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")
