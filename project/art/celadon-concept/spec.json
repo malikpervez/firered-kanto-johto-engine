@@ -5128,6 +5128,34 @@
    ],
    "tileset": "secondary",
    "ground": "grass"
+  },
+  {
+   "name": "bench_wood_south",
+   "image": "sheets/props_wood.png",
+   "x": 0,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "litter_bin",
+   "image": "sheets/props_wood.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
   }
  ]
 }

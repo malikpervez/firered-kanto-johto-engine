@@ -25,6 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import cliffs
 import kit
+import props
 
 HERE = Path(__file__).resolve().parent
 R = buildings.REMAKES
@@ -38,6 +39,8 @@ SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
 SEA = "s"
 WATER = set("s~")
 SOLID = set("T#bRoklSBcw_~vrsqQHUXZL") | cliffs.SOLID | {"C"}
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("bench_wood_south", 9, 14, "grass"), ("litter_bin", 13, 14, "grass"), ("bench_wood_south", 16, 14, "grass")]  # looking out to sea
 LANE = [(x, 0) for x in range(0, 4)]         # Route 21's sea lane down the town's west side
 EAST = [(MAP_W - 1, y) for y in range(0, 20)]  # Route 20's sea
 STREET = (12, 5)
@@ -137,6 +140,7 @@ def check(g, d) -> None:
 
 def main() -> None:
     g = plan()
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
     d = doors(g)
     cliffs.layout(g)
     kit.check_forest(g)
@@ -157,6 +161,8 @@ def main() -> None:
     char_of = cliffs.add(rock, g, extras=())
     spec_mt += rock.write()
     pals[CLIFF_BANK] = cliffs.PAL
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -168,7 +174,7 @@ def main() -> None:
                                        f"palette_{MANSION_BANK}.pal", f"palette_{LAB_BANK}.pal",
                                        f"palette_{CLIFF_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
@@ -177,6 +183,7 @@ def main() -> None:
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k)[0].name for k in BUILDINGS})
     assert not set(legend) & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

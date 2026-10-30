@@ -5362,15 +5362,46 @@
    "solid": true,
    "elevation": null,
    "open": []
+  },
+  "bench_stone": {
+   "ids": [
+    955,
+    956
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "flower_tub": {
+   "ids": [
+    957
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "litter_bin": {
+   "ids": [
+    958
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 372
+  "secondary": 383
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 315
+  "secondary": 319
  },
  "animations": [
   {

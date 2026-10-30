@@ -5015,15 +5015,25 @@
    "solid": true,
    "elevation": null,
    "open": []
+  },
+  "litter_bin": {
+   "ids": [
+    937
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 381
+  "secondary": 384
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 297
+  "secondary": 298
  },
  "animations": [
   {

@@ -229,5 +229,17 @@
  },
  "%": "manhole",
  "-": "asphalt_dashed_H_boundary",
- ";": "asphalt_dashed_V_boundary"
+ ";": "asphalt_dashed_V_boundary",
+ "\u00a1": {
+  "name": "bench_stone",
+  "joins": "@"
+ },
+ "\u00a2": {
+  "name": "litter_bin",
+  "joins": "@"
+ },
+ "\u00a3": {
+  "name": "flower_tub",
+  "joins": "@"
+ }
 }

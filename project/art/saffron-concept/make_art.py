@@ -27,6 +27,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 import streets
 import trees
 
@@ -39,6 +40,10 @@ MAP_W, MAP_H = 60, 48
 HOUSE_BANK, CITY_BANK = 7, 9
 GROUND = "kerb#15"  # what shows round the city's own buildings' edges: the pavement
 SOLID = set("T#bRoklSBcw_~vrXMDGNWEUZLYHPKAFIJVCa|")
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("bench_stone", 9, 20, "granite#15"), ("litter_bin", 12, 20, "granite#15"), ("bench_stone", 14, 20, "granite#15"),
+         ("bench_stone", 39, 20, "granite#15"), ("flower_tub", 42, 19, "granite#15"), ("flower_tub", 45, 19, "granite#15"),
+         ("bench_stone", 47, 20, "granite#15"), ("litter_bin", 50, 20, "granite#15")]  # on the plazas, the tubs either side of the compass
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the south
 # gatehouse's doorway is entered walking south from above; the station has no door)
@@ -171,6 +176,7 @@ def check(g, d) -> None:
 
 def main() -> None:
     g = plan()
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins='@')
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
@@ -236,6 +242,8 @@ def main() -> None:
         for dn in used:
             sh.add(f"{dn}_{colour}", designs[dn], tileset="secondary", ground=GROUND, solid=True, dedupe=True)
         spec_mt += sh.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -246,7 +254,7 @@ def main() -> None:
                          "secondary": [f"palette_{HOUSE_BANK}.pal", base["secondary_palettes"][8]]
                          + [f"palette_{b}.pal" for b in sorted(pals) if b > 8]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
@@ -264,6 +272,7 @@ def main() -> None:
     for k in JOINS:
         item = legend[k]
         legend[k] = dict({"name": item} if isinstance(item, str) else item, joins="&")
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

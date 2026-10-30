@@ -5803,6 +5803,19 @@
    "ground": "paving#15",
    "solid": true,
    "dedupe": true
+  },
+  {
+   "name": "litter_bin",
+   "image": "sheets/props_wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true
   }
  ]
 }
