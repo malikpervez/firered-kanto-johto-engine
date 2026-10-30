@@ -37,4 +37,6 @@ fit in banks 10–12.
 Build it from the repository root with `sh project/art/vermilion-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
 
-Its Town Props (KR-94, `../kit/props.py`): a fountain in the park between the houses (its water animated), a bench and two flower tubs round it, and four benches and two bins along the harbour, looking out to sea. 274 of its 384 tiles.
+Its Town Props (KR-94, `../kit/props.py`): a fountain in the park between the houses (its water animated), a bench and two flower tubs round it, and four benches and two bins along the harbour, looking out to sea (274 of its 384 tiles then).
+
+Its harbour (KR-95, `../kit/harbour.py`, Kanto Harbour Textures v0.1): the square before the Center and the Mart and the fountain's square between the houses are fan setts, a band of them outlining the street's pavement north and south; the main street is the kit's asphalt with its pavements, running on under the trees in the west and meeting Route 11's cobble on one line in the east; the promenade is quay flags with the coping, the quay wall standing in the water along it and round the pier and the dock, with bollards, a lifebuoy, a drain, rope, a mooring ring and a ladder. 307 of its 384 tiles.
