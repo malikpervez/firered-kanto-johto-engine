@@ -1,0 +1,44 @@
+{
+ "note": "Walk east into Vermilion's fountain (Town Props, KR-94): it stops you; the tubs and the bench round it in view.",
+ "created": "2026-10-30 14:14",
+ "start": {
+  "map": "VermilionCity_Frlg",
+  "x": 32,
+  "y": 18,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     24
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 32,
+  "y": 18,
+  "in_battle": false
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "note": "Walk west into the statue on the Safari Zone plaza (Town Props, KR-94): it stops you; the tubs by the gate and the benches along the walk in view.",
+ "created": "2026-10-30 14:15",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 20,
+  "y": 9,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     24
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 20,
+  "y": 9,
+  "in_battle": false
+ }
+}
