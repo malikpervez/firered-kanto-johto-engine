@@ -4768,15 +4768,36 @@
    "solid": true,
    "elevation": null,
    "open": []
+  },
+  "bench_wood_south": {
+   "ids": [
+    809,
+    810
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "litter_bin": {
+   "ids": [
+    811
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 371
+  "secondary": 378
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 169
+  "secondary": 172
  },
  "animations": [
   {

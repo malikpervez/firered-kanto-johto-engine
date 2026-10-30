@@ -67,3 +67,5 @@ hand-made seam.
 
 Build it from the repository root with `sh project/art/celadon-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
+
+Its Town Props (KR-94, `../kit/props.py`): a bench looking at the north park's flower bed and a bin. They fill the tileset: 384 of 384 tiles.

@@ -5804,6 +5804,47 @@
    "ground": "kerb#15",
    "solid": true,
    "dedupe": true
+  },
+  {
+   "name": "bench_stone",
+   "image": "sheets/props_water.png",
+   "x": 0,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "granite#15",
+   "solid": true
+  },
+  {
+   "name": "flower_tub",
+   "image": "sheets/props_water.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "granite#15",
+   "solid": true
+  },
+  {
+   "name": "litter_bin",
+   "image": "sheets/props_wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "granite#15",
+   "solid": true
   }
  ]
 }

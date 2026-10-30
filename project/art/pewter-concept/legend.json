@@ -246,5 +246,9 @@
  "/": {
   "name": "sign_paving",
   "joins": "%"
+ },
+ "\u00a1": {
+  "name": "litter_bin",
+  "joins": "p"
  }
 }

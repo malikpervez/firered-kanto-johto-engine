@@ -4905,6 +4905,94 @@
    "tileset": "secondary",
    "ground": "grass",
    "solid": true
+  },
+  {
+   "name": "bench_wood_south",
+   "image": "sheets/props_wood.png",
+   "x": 0,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "picnic_table",
+   "image": "sheets/props_wood.png",
+   "x": 32,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fingerpost",
+   "image": "sheets/props_wood.png",
+   "x": 64,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bench_wood_west",
+   "image": "sheets/props_wood.png",
+   "x": 80,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "litter_bin",
+   "image": "sheets/props_wood.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bench_stone",
+   "image": "sheets/props_water.png",
+   "x": 0,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
   }
  ]
 }

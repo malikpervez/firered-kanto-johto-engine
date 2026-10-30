@@ -75,3 +75,5 @@ Replay tests: `viridian enter the pokemon center`, `viridian enter the mart`, `v
 `viridian enter the house`, `viridian gym doors locked`, `viridian old man blocks the road`,
 `viridian old man by the road`, `viridian locked house`, `viridian north to route 2`, `route 2 looks at viridian`,
 `viridian looks at route 1`, `route 1 north to viridian`.
+
+Its Town Props (KR-94, `../kit/props.py`): a bench north of the pond, a picnic table and a fingerpost west of it, a fingerpost by the road north, a bin beside the Mart and a stone bench east of it, and a bench by the well in the south. 259 of its 384 tiles.

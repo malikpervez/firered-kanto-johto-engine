@@ -2113,7 +2113,7 @@ const struct Tileset gTileset_VermilionConcept =
     .palettes = gTilesetPalettes_VermilionConcept,
     .metatiles = gMetatiles_VermilionConcept,
     .metatileAttributes = gMetatileAttributes_VermilionConcept,
-    .callback = NULL,
+    .callback = InitTilesetAnim_VermilionConcept,
 };
 
 const struct Tileset gTileset_Route11Concept =

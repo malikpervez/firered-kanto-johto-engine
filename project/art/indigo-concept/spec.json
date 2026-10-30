@@ -4836,6 +4836,34 @@
    "behaviors": {
     "4,11": "MB_ANIMATED_DOOR"
    }
+  },
+  {
+   "name": "statue_guardian",
+   "image": "sheets/props_water.png",
+   "x": 0,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true
+  },
+  {
+   "name": "flower_tub",
+   "image": "sheets/props_water.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true
   }
  ]
 }

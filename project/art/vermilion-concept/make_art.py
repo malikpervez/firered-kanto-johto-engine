@@ -22,6 +22,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -44,6 +45,13 @@ GANGWAY_PIECES = {"J": "dock#7", "G": "dock#15", "Y": "dock#13"}
 FERRY = (39, MAP_H - 2)                        # the ferry sailor, his ticket check on 37-38 before him
 WATER = set("~vr")
 SOLID = set("T#bRoklSBcwO_~vrZLKWXHU")
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("fountain_3x3", 33, 17, "grass"), ("bench_wood_west", 37, 17, "grass"), ("flower_tub", 32, 16, "grass"),
+         ("flower_tub", 36, 16, "grass"),
+         # along the harbour, looking out to sea
+         ("bench_wood_south", 21, 22, "cobble#15", "="), ("bench_wood_south", 27, 22, "cobble#15", "="),
+         ("bench_wood_south", 45, 22, "cobble#15", "="), ("bench_wood_south", 51, 22, "cobble#15", "="),
+         ("litter_bin", 33, 22, "cobble#15", "="), ("litter_bin", 48, 22, "cobble#15", "=")]
 
 
 def plan() -> list[list[str]]:
@@ -114,6 +122,7 @@ def check(g, d) -> None:
 
 def main() -> None:
     g = plan()
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
@@ -136,6 +145,8 @@ def main() -> None:
         sh.add(f"gangway_{ch}", np.zeros((16, 16), np.uint8), tileset="secondary", ground=ground,
                behavior="MB_DEEP_SOUTH_WARP")
     spec_mt += sh.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -146,7 +157,7 @@ def main() -> None:
                          "secondary": [f"palette_{CITY_BANK}.pal", base["secondary_palettes"][8],
                                        f"palette_{HOUSE_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
@@ -154,6 +165,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("~~\n~~\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN},
                   **{ch: {"name": f"gangway_{ch}", "joins": "d"} for ch in GANGWAY_PIECES})
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

@@ -129,5 +129,11 @@
  "K": "trainer_school",
  "H": "house_gardener",
  "J": "house_family",
- "Y": "house_pond_keeper"
+ "Y": "house_pond_keeper",
+ "\u00a1": "bench_wood_south",
+ "\u00a2": "picnic_table",
+ "\u00a3": "fingerpost",
+ "\u00a4": "bench_wood_west",
+ "\u00a5": "litter_bin",
+ "\u00a6": "bench_stone"
 }

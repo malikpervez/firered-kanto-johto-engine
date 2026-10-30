@@ -126,5 +126,7 @@
  "H": "house_red",
  "J": "house_blue",
  "W": "windmill",
- "L": "lab"
+ "L": "lab",
+ "\u00a1": "fingerpost",
+ "\u00a2": "bench_wood_east"
 }

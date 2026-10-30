@@ -36,6 +36,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import cliffs
 import kit
+import props
 import streets
 
 HERE = Path(__file__).resolve().parent
@@ -68,6 +69,8 @@ COTTAGES = {"1": ("cottage_slate", 11, {2: (48, 56, 72), 4: (88, 104, 128), 5: (
 WALK, LAMP, SIGN, PAVED_SIGN = "%", "@", "!", "/"
 PAVED = {"W": "pewter_gym", "X": "house_family_paved", "1": None, "2": None}  # on the paving (None: as named)
 SOLID = set("T#bRoklSBcw_~vrUWYHXZL12" + LAMP + SIGN + PAVED_SIGN) | cliffs.SOLID | set(KFACE.values())
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("litter_bin", 17, 13, "paving#15")]  # by the Museum, beside its lamp (the tileset has room for no more)
 BRICK = {3: 7, 4: 8, 5: 9, 8: 2, 12: 10, 15: 11, 7: 1}
 LEGEND = {WALK: {"pick": ["pewter_brick#15", "pewter_brick#15~1", "pewter_brick#15~2"]},  # the brick, no kerbs
           "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
@@ -188,6 +191,7 @@ def check(g, d) -> None:
 
 def main() -> None:
     g = fit(plan())
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins='p')
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
@@ -249,6 +253,8 @@ def main() -> None:
     sh.add("sign_brick", kit.sign(), tileset="secondary", ground="pewter_brick#15", solid=True, dedupe=True)
     sh.add("sign_paving", kit.sign(), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
     spec_mt += sh.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -261,7 +267,7 @@ def main() -> None:
                                        f"palette_{CLIFF_BANK}.pal", f"palette_{HOUSE_BANK}.pal"]
                          + [f"palette_{b}.pal" for _, b, _ in COTTAGES.values()]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
@@ -272,6 +278,7 @@ def main() -> None:
     legend.update({ch: f"kface_{cliffs.FACE[c]}" for c, ch in KFACE.items()})
     legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **LEGEND)
     legend.update({k: {"name": n or legend[k], "joins": WALK} for k, n in PAVED.items()})
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({load(k).name: v for k, v in d.items()}, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

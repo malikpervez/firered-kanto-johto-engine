@@ -130,5 +130,21 @@
  "H": "house_gardener",
  "W": "house_family",
  "J": "house_pond_keeper",
- "K": "house_pond_garden"
+ "K": "house_pond_garden",
+ "\u00a1": {
+  "name": "statue_guardian",
+  "joins": "p"
+ },
+ "\u00a2": {
+  "name": "flower_tub",
+  "joins": "p"
+ },
+ "\u00a3": {
+  "name": "bench_stone",
+  "joins": "p"
+ },
+ "\u00a4": {
+  "name": "litter_bin",
+  "joins": "p"
+ }
 }

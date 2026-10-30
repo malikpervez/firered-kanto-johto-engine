@@ -4229,15 +4229,49 @@
    "open": [
     32
    ]
+  },
+  "statue_guardian": {
+   "ids": [
+    727,
+    728,
+    729,
+    730
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_wood_north": {
+   "ids": [
+    731,
+    732
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "litter_bin": {
+   "ids": [
+    733
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 215
+  "secondary": 231
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 87
+  "secondary": 94
  },
  "animations": [
   {

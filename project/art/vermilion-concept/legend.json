@@ -141,5 +141,16 @@
  "Y": {
   "name": "gangway_Y",
   "joins": "d"
+ },
+ "\u00a1": "fountain_3x3",
+ "\u00a2": "bench_wood_west",
+ "\u00a3": "flower_tub",
+ "\u00a4": {
+  "name": "bench_wood_south",
+  "joins": "="
+ },
+ "\u00a5": {
+  "name": "litter_bin",
+  "joins": "="
  }
 }

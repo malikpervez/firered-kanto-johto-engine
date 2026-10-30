@@ -128,5 +128,8 @@
  "X": "pokemon_tower",
  "H": "house_family",
  "U": "house_pond_keeper",
- "W": "house_gardener"
+ "W": "house_gardener",
+ "\u00a1": "statue_guardian",
+ "\u00a2": "bench_wood_north",
+ "\u00a3": "litter_bin"
 }

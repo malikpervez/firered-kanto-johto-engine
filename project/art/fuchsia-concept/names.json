@@ -4303,15 +4303,59 @@
     13,
     1
    ]
+  },
+  "statue_guardian": {
+   "ids": [
+    778,
+    779,
+    780,
+    781
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "flower_tub": {
+   "ids": [
+    782
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_stone": {
+   "ids": [
+    783,
+    784
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "litter_bin": {
+   "ids": [
+    785
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 339
+  "secondary": 359
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 138
+  "secondary": 146
  },
  "animations": [
   {

@@ -35,7 +35,7 @@ There are two kinds of art:
 | Route 2 Stage 2 assets | `route2-concept/buildings/` | v0.3 (the tile-budget export of the approved v0.2) | see below |
 | League Front Gate | `route22-concept/buildings/league_front_gate/` | | Pewter's Museum (Route 22 has the remakes' two-storey version, its door art this pack's) |
 | Kanto Buildings Remakes | `packs/buildings_v0.3/` (`buildings/<id>/`: png, door frames, json, palette; the pack's README, style guide and import notes beside them) | v0.3, approved 2026-10-27 (v0.2 with the Pokémon Mansion and the Power Plant made larger at Malik's request) | the 27 buildings Claude first drew in code or recoloured: see *The remakes* below |
-| Kanto Town Props | `packs/town_props_v0.1/` (one folder a piece: png and frames, json; previews, tile report, validation), put together by `kit/props.py` | v0.1 (made with another AI from `Town_Props_v0.1_prompt.md`) | street furniture in the kit's water (bank 1) and wood (bank 2) palettes, so a map needs no bank for them and takes only the pieces it places into its own tileset: a fountain (3x3, animated), benches (wood, four ways, and stone), a flower tub, a litter bin, a statue, a fingerpost, a picnic table, a bike rack, footbridges. Cerulean uses the fountain, benches, tubs, bin, bike rack and footbridges (KR-93) |
+| Kanto Town Props | `packs/town_props_v0.1/` (one folder a piece: png and frames, json; previews, tile report, validation), put together by `kit/props.py` | v0.1 (made with another AI from `Town_Props_v0.1_prompt.md`) | street furniture in the kit's water (bank 1) and wood (bank 2) palettes, so a map needs no bank for them and takes only the pieces it places into its own tileset: a fountain (3x3, animated), benches (wood, four ways, and stone), a flower tub, a litter bin, a statue, a fingerpost, a picnic table, a bike rack, footbridges. Cerulean uses the fountain, benches, tubs, bin, bike rack and footbridges (KR-93); Viridian, Vermilion, Lavender, Fuchsia, Pallet, the Indigo Plateau, Saffron, Celadon, Cinnabar and Pewter the fountain, benches, tubs, bins, statues, fingerposts and a picnic table (KR-94) |
 
 The packs reused for buildings they weren't drawn for:
 
@@ -130,13 +130,13 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Map | Own tiles (of 384) | Seam tiles | Metatiles |
 |---|---|---|---|
 | the kit (primary, every map) | 580 (of 640: 624 usable, Pallet's seam borrows 624–639; the streets took 42) | | 548 (of 640; the streets took 138) |
-| Pallet | 297 | 20 | 125 |
-| Route 1 | 45 | 134 | 17 |
-| Viridian | 230 | 0 | 107 |
+| Pallet | 307 | 20 | 129 |
+| Route 1 | 45 | 140 | 17 |
+| Viridian | 259 | 0 | 120 |
 | Route 22 | 337 | 52 | 233 |
 | Route 2 | 285 | 3 | 162 |
 | Viridian Forest | 1 | | 6 |
-| Pewter | 381 | 0 (and 76 of its own) | 297 |
+| Pewter | 384 | 0 (and 76 of its own) | 298 |
 | Route 3 | 145 | 26 (and 80 of its own) | 62 |
 | Route 4 | 147 | 108 (and 87 of its own) | 77 |
 | Cerulean | 320 | 0 | 235 |
@@ -144,29 +144,29 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 25 | 120 | 0 | 36 |
 | Route 5 | 200 | 0 | 84 |
 | Route 6 | 170 | 23 (and 1 of its own) | 64 |
-| Vermilion | 230 | 60 | 110 |
+| Vermilion | 274 | 60 | 125 |
 | Route 11 | 238 | 0 | 107 |
 | Route 9 | 132 | 16 (and 81 of its own) | 55 |
-| Route 10 | 287 | 48 (and 65 of its own) | 206 |
-| Lavender | 215 | 0 | 87 |
+| Route 10 | 287 | 53 (and 65 of its own) | 206 |
+| Lavender | 231 | 0 | 94 |
 | Route 8 | 170 | 38 (and 55 of its own) | 64 |
 | Route 7 | 170 | 22 (for Celadon's own pavements and brick) | 64 |
-| Celadon | 377 | 0 | 279 |
-| Saffron | 372 | none (no compiled joins) | 315 |
+| Celadon | 384 | 0 | 282 |
+| Saffron | 383 | none (no compiled joins) | 319 |
 | Route 16 | 110 | 0 | 48 |
 | Route 17 | 37 | 0 | 25 |
 | Route 18 | 55 | 63 (for Fuchsia's own pieces) | 32 |
-| Fuchsia | 339 | 0 | 138 |
+| Fuchsia | 359 | 0 | 146 |
 | Route 15 | 55 | 0 | 32 |
 | Route 14 | 1 (nothing of its own) | 0 | 0 |
 | Route 13 | 1 (nothing of its own) | 0 | 0 |
 | Route 12 | 107 | 78 (for Route 11's own pieces; and 1 of its own) | 32 |
 | Route 21 (north and south, one tileset) | 1 (nothing of its own) | 142 (Route 21 South, for Cinnabar's own pieces) | 0 |
-| Cinnabar | 371 | 0 | 169 |
+| Cinnabar | 378 | 0 | 172 |
 | Route 20 | 157 | 0 | 82 |
 | Route 19 | 1 (nothing of its own) | 0 | 0 |
 | Route 23 | 174 | 89 (for Route 22's gate; and 63 of its own) | 79 |
-| Indigo Plateau | 168 | 29 (for League West Pass) | 108 |
+| Indigo Plateau | 181 | 29 (for League West Pass) | 113 |
 
 A replacement that changes a building's size or moves its door changes the maps that use it: their plans
 (`draw_plan.py`), door adds and warps (`build.sh`). That is a map change, made in its own pull request.

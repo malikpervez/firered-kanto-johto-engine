@@ -26,6 +26,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 
 HERE = Path(__file__).resolve().parent
 VB = HERE.parent / "viridian-concept/buildings"
@@ -37,6 +38,9 @@ WEST = [(0, y) for y in range(18, 21)]
 EAST = [(MAP_W - 1, y) for y in range(20, 24)]
 SOUTH = [(x, MAP_H - 1) for x in range(19, 29)]
 SOLID = set("T#bRoklSBcw_~vrAGZLOWHJK")
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("statue_guardian", 18, 8, "paving#15"), ("flower_tub", 21, 7, "paving#15"), ("flower_tub", 25, 7, "paving#15"),
+         ("bench_stone", 21, 13, "paving#15"), ("bench_stone", 25, 13, "paving#15"), ("litter_bin", 21, 17, "paving#15")]
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the house
 # with the pond garden has a back door, entered walking south from the garden)
@@ -154,10 +158,11 @@ def check(g, d) -> None:
 
 def main() -> None:
     g = plan()
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins='p')
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
-    kit.check_paving(g)
+    kit.check_paving(g, "".join(k for k, v in prop_legend.items() if isinstance(v, dict) and v["joins"] == "p"))
     check(g, d)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
@@ -177,6 +182,8 @@ def main() -> None:
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=bw)
         sh.add(b.name, b.idx, tileset="secondary", ground="grass", solid=True, open=open_, behaviors=behavior)
         spec_mt += sh.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -187,13 +194,14 @@ def main() -> None:
                          "secondary": [f"palette_{HOUSE_BANK}.pal", base["secondary_palettes"][8],
                                        f"palette_{TOWN_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k)[0].name for k in BUILDINGS})
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

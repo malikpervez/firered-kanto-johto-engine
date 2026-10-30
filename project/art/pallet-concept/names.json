@@ -4265,15 +4265,37 @@
    "open": [
     39
    ]
+  },
+  "fingerpost": {
+   "ids": [
+    765,
+    766
+   ],
+   "w": 1,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_wood_east": {
+   "ids": [
+    767,
+    768
+   ],
+   "w": 1,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 297
+  "secondary": 307
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 125
+  "secondary": 129
  },
  "animations": [
   {

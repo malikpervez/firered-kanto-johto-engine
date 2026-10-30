@@ -24,6 +24,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 import streets
 
 HERE = Path(__file__).resolve().parent
@@ -35,6 +36,8 @@ HOUSE_BANK, CITY_BANK = 7, 9
 WEST = [(0, y) for y in range(20, 24)]
 EAST = [(MAP_W - 1, y) for y in range(20, 24)]
 SOLID = set("T#bRoklSBcw_~vrDMOCGPEHY")
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("bench_wood_south", 24, 3, "grass"), ("litter_bin", 27, 3, "grass")]  # in the park, looking at its flower bed
 STREETS_BANK = 10  # the pack's city palette (Part B: Lucky Lane's brick, the compass); 11-12 stay free
 # the street pieces by their letters in the plan (the kit's, streets.py) and Celadon's own: its pavements, on the lawn
 # on one side and the road on the other ("walk_s": the road south of it, "walk_n": north), the brick and the compass;
@@ -184,6 +187,7 @@ def check(g, d) -> None:
 
 def main() -> None:
     g = plan()
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
@@ -223,6 +227,8 @@ def main() -> None:
            ground="grass")
     sh.add("compass", streets.piece("mosaic", "compass_2x2", pals[STREETS_BANK]), tileset="secondary", ground="grass")
     spec_mt += sh.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -233,12 +239,13 @@ def main() -> None:
                          "secondary": [f"palette_{HOUSE_BANK}.pal", base["secondary_palettes"][8],
                                        f"palette_{CITY_BANK}.pal", f"palette_{STREETS_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

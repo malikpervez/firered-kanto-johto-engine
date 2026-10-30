@@ -164,5 +164,7 @@
  "/": {
   "name": "compass",
   "joins": "n"
- }
+ },
+ "\u00a1": "bench_wood_south",
+ "\u00a2": "litter_bin"
 }
