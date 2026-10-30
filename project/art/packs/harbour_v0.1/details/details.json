@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "id": "details",
+  "type": "props",
+  "block_size_px": 16,
+  "palette": "per_tile",
+  "palette_file": null,
+  "transparent_index": 0,
+  "frame_count": 1,
+  "solid": false,
+  "solid_blocks": [],
+  "door_block": null,
+  "piece_names": [
+    "mooring_bollard",
+    "bollard_rope",
+    "coiled_rope",
+    "harbour_drain",
+    "lifebuoy_post"
+  ],
+  "naming": "N means lawn outside to north; for coping, water outside to north. Inside corners ordered NE, SE, SW, NW.",
+  "tiles": [
+    {
+      "name": "mooring_bollard",
+      "image": "tiles/mooring_bollard.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_water",
+          "kit_water"
+        ],
+        [
+          "kit_water",
+          "kit_water"
+        ]
+      ],
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "mooring_bollard",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          34,
+          35
+        ],
+        [
+          36,
+          36
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "bollard_rope",
+      "image": "tiles/bollard_rope.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_water",
+          "kit_water"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "display_palette_composition": {
+        "base": "kit_water",
+        "replace_indices_from_kit_wood": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "note": "Top row of 8px tiles uses WATER, lower row uses WOOD. Pixel indices already match those banks.",
+      "schema_version": 1,
+      "id": "bollard_rope",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          34,
+          35
+        ],
+        [
+          37,
+          37
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "coiled_rope",
+      "image": "tiles/coiled_rope.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "coiled_rope",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 2,
+      "tiles_8x8": [
+        [
+          38,
+          38
+        ],
+        [
+          39,
+          38
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "harbour_drain",
+      "image": "tiles/harbour_drain.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_water",
+          "kit_water"
+        ],
+        [
+          "kit_water",
+          "kit_water"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "harbour_drain",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          40,
+          40
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "lifebuoy_post",
+      "image": "tiles/lifebuoy_post.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "lifebuoy_post",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 2,
+      "tiles_8x8": [
+        [
+          41,
+          41
+        ],
+        [
+          42,
+          42
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    }
+  ],
+  "transitions": [],
+  "unique_8x8_tiles": 9
+}

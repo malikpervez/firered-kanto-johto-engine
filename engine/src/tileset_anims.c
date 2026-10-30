@@ -2111,7 +2111,7 @@ const u16 *const gTilesetAnims_VermilionConcept_Fountain3X3[] = {
 static void QueueAnimTiles_VermilionConcept_Fountain3X3(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_VermilionConcept_Fountain3X3);
-    AppendTilesetAnimToBuffer(gTilesetAnims_VermilionConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 245)), 29 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_VermilionConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 278)), 29 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_VermilionConcept(u16 timer)

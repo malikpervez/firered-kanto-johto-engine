@@ -1,0 +1,44 @@
+{
+ "note": "Stand on the promenade's coping by the ladder and walk south: the quay wall is the harbour's water, so you stay on the quay (the flags, the coping, the wall's face and the ladder in view).",
+ "created": "2026-10-30 14:11",
+ "start": {
+  "map": "VermilionCity_Frlg",
+  "x": 30,
+  "y": 23,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     24
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 30,
+  "y": 23,
+  "in_battle": false
+ }
+}

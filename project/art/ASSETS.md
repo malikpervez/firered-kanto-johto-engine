@@ -36,6 +36,7 @@ There are two kinds of art:
 | League Front Gate | `route22-concept/buildings/league_front_gate/` | | Pewter's Museum (Route 22 has the remakes' two-storey version, its door art this pack's) |
 | Kanto Buildings Remakes | `packs/buildings_v0.3/` (`buildings/<id>/`: png, door frames, json, palette; the pack's README, style guide and import notes beside them) | v0.3, approved 2026-10-27 (v0.2 with the Pokémon Mansion and the Power Plant made larger at Malik's request) | the 27 buildings Claude first drew in code or recoloured: see *The remakes* below |
 | Kanto Town Props | `packs/town_props_v0.1/` (one folder a piece: png and frames, json; previews, tile report, validation), put together by `kit/props.py` | v0.1 (made with another AI from `Town_Props_v0.1_prompt.md`) | street furniture in the kit's water (bank 1) and wood (bank 2) palettes, so a map needs no bank for them and takes only the pieces it places into its own tileset: a fountain (3x3, animated), benches (wood, four ways, and stone), a flower tub, a litter bin, a statue, a fingerpost, a picnic table, a bike rack, footbridges. Cerulean uses the fountain, benches, tubs, bin, bike rack and footbridges (KR-93); Viridian, Vermilion, Lavender, Fuchsia, Pallet, the Indigo Plateau, Saffron, Celadon, Cinnabar and Pewter the fountain, benches, tubs, bins, statues, fingerposts and a picnic table (KR-94) |
+| Kanto Harbour Textures | `packs/harbour_v0.1/` (`setts/`, `quay/`, `quay_wall/`, `details/`: pieces, transitions, recipes for every neighbour mask, each piece's json; palettes, previews, tile report, validation; the pack's build scripts and GBA tile pool left out), put together by `kit/harbour.py` | v0.1 (made with another AI from `Harbour_Textures_v0.1_prompt.md`) | a port's ground in the kit's ground, water and wood palettes (no bank of its own): fan setts (a 32x32 pattern, four phase pieces), quay flags, the quay wall (the coping on the land block, the face on the water block beside it, see-through to the animated water), bollards, rope, a drain, a lifebuoy. Vermilion: its two squares, the bands along the street, the promenade and the wall (KR-95); 43 tiles for the whole pack |
 
 The packs reused for buildings they weren't drawn for:
 
@@ -144,8 +145,8 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 25 | 120 | 0 | 36 |
 | Route 5 | 200 | 0 | 84 |
 | Route 6 | 170 | 23 (and 1 of its own) | 64 |
-| Vermilion | 274 | 60 | 125 |
-| Route 11 | 238 | 0 | 107 |
+| Vermilion | 307 | 60 | 206 |
+| Route 11 | 238 | 16 (for Vermilion's street's end) | 107 |
 | Route 9 | 132 | 16 (and 81 of its own) | 55 |
 | Route 10 | 287 | 53 (and 65 of its own) | 206 |
 | Lavender | 231 | 0 | 94 |

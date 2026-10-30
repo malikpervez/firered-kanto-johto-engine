@@ -1,0 +1,94 @@
+{
+  "reference_map_blocks": [
+    60,
+    42
+  ],
+  "square": {
+    "rect_blocks": [
+      24,
+      7,
+      19,
+      4
+    ],
+    "phase_origin": [
+      24,
+      7
+    ]
+  },
+  "main_street": {
+    "rect_blocks": [
+      6,
+      11,
+      54,
+      4
+    ],
+    "source": "Kanto Street Textures v0.3"
+  },
+  "promenade": {
+    "rect_blocks": [
+      7,
+      22,
+      49,
+      2
+    ]
+  },
+  "wall": {
+    "water_row": 24,
+    "pier_columns": [
+      37,
+      38,
+      39
+    ],
+    "dock_columns": [
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "dock_rows": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ]
+  },
+  "fixtures": {
+    "benches": [
+      [
+        21,
+        22
+      ],
+      [
+        27,
+        22
+      ],
+      [
+        45,
+        22
+      ],
+      [
+        51,
+        22
+      ]
+    ],
+    "ladder": [
+      31,
+      24
+    ],
+    "ring": [
+      32,
+      23
+    ]
+  },
+  "note": "Previews composite the actual supplied 1x map. Original buildings, deck art, NPCs and editor symbols remain context. No game map file is modified."
+}

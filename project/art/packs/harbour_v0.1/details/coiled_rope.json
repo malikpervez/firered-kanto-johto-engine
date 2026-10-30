@@ -1,0 +1,70 @@
+{
+  "name": "coiled_rope",
+  "image": "tiles/coiled_rope.png",
+  "size_px": [
+    16,
+    16
+  ],
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "palettes_8x8": [
+    [
+      "kit_wood",
+      "kit_wood"
+    ],
+    [
+      "kit_wood",
+      "kit_wood"
+    ]
+  ],
+  "solid": true,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 0,
+  "schema_version": 1,
+  "id": "coiled_rope",
+  "block_size_px": 16,
+  "transparent_index": 0,
+  "frame_count": 1,
+  "unique_8x8_tiles": 2,
+  "tiles_8x8": [
+    [
+      38,
+      38
+    ],
+    [
+      39,
+      38
+    ]
+  ],
+  "tile_flips": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      }
+    ]
+  ],
+  "tile_pool": "../tile_pool/tiles.4bpp"
+}

@@ -1,0 +1,105 @@
+{
+  "aliases": {
+    "pavement_to_setts_S": {
+      "image": "setts/transitions/to_pavement_N.png",
+      "palette": "kit_ground",
+      "meaning": "setts lies S of pavement; same native boundary, no duplicated tiles."
+    },
+    "pavement_to_setts_W": {
+      "image": "setts/transitions/to_pavement_E.png",
+      "palette": "kit_ground",
+      "meaning": "setts lies W of pavement; same native boundary, no duplicated tiles."
+    },
+    "pavement_to_setts_N": {
+      "image": "setts/transitions/to_pavement_S.png",
+      "palette": "kit_ground",
+      "meaning": "setts lies N of pavement; same native boundary, no duplicated tiles."
+    },
+    "pavement_to_setts_E": {
+      "image": "setts/transitions/to_pavement_W.png",
+      "palette": "kit_ground",
+      "meaning": "setts lies E of pavement; same native boundary, no duplicated tiles."
+    },
+    "cobble_to_setts_S": {
+      "image": "setts/transitions/to_cobble_N.png",
+      "palette": "kit_ground",
+      "meaning": "setts lies S of cobble; same native boundary, no duplicated tiles."
+    },
+    "cobble_to_setts_W": {
+      "image": "setts/transitions/to_cobble_E.png",
+      "palette": "kit_ground",
+      "meaning": "setts lies W of cobble; same native boundary, no duplicated tiles."
+    },
+    "cobble_to_setts_N": {
+      "image": "setts/transitions/to_cobble_S.png",
+      "palette": "kit_ground",
+      "meaning": "setts lies N of cobble; same native boundary, no duplicated tiles."
+    },
+    "cobble_to_setts_E": {
+      "image": "setts/transitions/to_cobble_W.png",
+      "palette": "kit_ground",
+      "meaning": "setts lies E of cobble; same native boundary, no duplicated tiles."
+    },
+    "setts_to_quay_S": {
+      "image": "quay/transitions/to_setts_N.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies S of setts; same native boundary, no duplicated tiles."
+    },
+    "setts_to_quay_W": {
+      "image": "quay/transitions/to_setts_E.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies W of setts; same native boundary, no duplicated tiles."
+    },
+    "setts_to_quay_N": {
+      "image": "quay/transitions/to_setts_S.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies N of setts; same native boundary, no duplicated tiles."
+    },
+    "setts_to_quay_E": {
+      "image": "quay/transitions/to_setts_W.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies E of setts; same native boundary, no duplicated tiles."
+    },
+    "pavement_to_quay_S": {
+      "image": "quay/transitions/to_pavement_N.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies S of pavement; same native boundary, no duplicated tiles."
+    },
+    "pavement_to_quay_W": {
+      "image": "quay/transitions/to_pavement_E.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies W of pavement; same native boundary, no duplicated tiles."
+    },
+    "pavement_to_quay_N": {
+      "image": "quay/transitions/to_pavement_S.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies N of pavement; same native boundary, no duplicated tiles."
+    },
+    "pavement_to_quay_E": {
+      "image": "quay/transitions/to_pavement_W.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies E of pavement; same native boundary, no duplicated tiles."
+    },
+    "cobble_to_quay_S": {
+      "image": "quay/transitions/to_cobble_N.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies S of cobble; same native boundary, no duplicated tiles."
+    },
+    "cobble_to_quay_W": {
+      "image": "quay/transitions/to_cobble_E.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies W of cobble; same native boundary, no duplicated tiles."
+    },
+    "cobble_to_quay_N": {
+      "image": "quay/transitions/to_cobble_S.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies N of cobble; same native boundary, no duplicated tiles."
+    },
+    "cobble_to_quay_E": {
+      "image": "quay/transitions/to_cobble_W.png",
+      "palette": "kit_ground",
+      "meaning": "quay lies E of cobble; same native boundary, no duplicated tiles."
+    }
+  },
+  "note": "Aliases share the same PNG; do not import twice."
+}

@@ -4965,6 +4965,1167 @@
    "behavior": "MB_DEEP_SOUTH_WARP"
   },
   {
+   "name": "setts_SW#253",
+   "image": "sheets/harbour_ground.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#253",
+   "image": "sheets/harbour_ground.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#245",
+   "image": "sheets/harbour_ground.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#245",
+   "image": "sheets/harbour_ground.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#145_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#100_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#145_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#100_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#129_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 128,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#217",
+   "image": "sheets/harbour_ground.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#200",
+   "image": "sheets/harbour_ground.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#136",
+   "image": "sheets/harbour_ground.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#128_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#68_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 208,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NE#145",
+   "image": "sheets/harbour_ground.png",
+   "x": 224,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#0",
+   "image": "sheets/harbour_ground.png",
+   "x": 240,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NE#0",
+   "image": "sheets/harbour_ground.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#0_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#64_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#72",
+   "image": "sheets/harbour_ground.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#200",
+   "image": "sheets/harbour_ground.png",
+   "x": 64,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#145",
+   "image": "sheets/harbour_ground.png",
+   "x": 80,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#0",
+   "image": "sheets/harbour_ground.png",
+   "x": 96,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#0",
+   "image": "sheets/harbour_ground.png",
+   "x": 112,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#0_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 128,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#0_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 144,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#0_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 160,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW_to_cobble_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 176,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NE_to_cobble_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 192,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#179",
+   "image": "sheets/harbour_ground.png",
+   "x": 208,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#50",
+   "image": "sheets/harbour_ground.png",
+   "x": 224,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#18",
+   "image": "sheets/harbour_ground.png",
+   "x": 240,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#16_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 0,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#17_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 16,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#32_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 32,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#34",
+   "image": "sheets/harbour_ground.png",
+   "x": 48,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_NW#50",
+   "image": "sheets/harbour_ground.png",
+   "x": 64,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#36_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 80,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SE#147_to_pavement_S",
+   "image": "sheets/harbour_ground.png",
+   "x": 96,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "setts_SW#102_to_pavement_N",
+   "image": "sheets/harbour_ground.png",
+   "x": 112,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay_to_setts_NW#136",
+   "image": "sheets/harbour_ground.png",
+   "x": 128,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay_to_setts_NE#0",
+   "image": "sheets/harbour_ground.png",
+   "x": 144,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay_to_setts_NW#0",
+   "image": "sheets/harbour_ground.png",
+   "x": 160,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay_to_setts_NW#18",
+   "image": "sheets/harbour_ground.png",
+   "x": 176,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay#153",
+   "image": "sheets/harbour_ground.png",
+   "x": 192,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay#145",
+   "image": "sheets/harbour_ground.png",
+   "x": 208,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay#129",
+   "image": "sheets/harbour_ground.png",
+   "x": 224,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay#128",
+   "image": "sheets/harbour_ground.png",
+   "x": 240,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay#0",
+   "image": "sheets/harbour_ground.png",
+   "x": 0,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay#179",
+   "image": "sheets/harbour_ground.png",
+   "x": 16,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay#18",
+   "image": "sheets/harbour_ground.png",
+   "x": 32,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "quay#153+coping#100",
+   "image": "sheets/harbour_water.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#153"
+  },
+  {
+   "name": "quay#145+coping#100",
+   "image": "sheets/harbour_water.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#145"
+  },
+  {
+   "name": "quay#129+coping#100",
+   "image": "sheets/harbour_water.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#129"
+  },
+  {
+   "name": "quay#128+coping#100",
+   "image": "sheets/harbour_water.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#128"
+  },
+  {
+   "name": "quay#0+coping#100",
+   "image": "sheets/harbour_water.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#0"
+  },
+  {
+   "name": "quay#0+coping#100_ring",
+   "image": "sheets/harbour_water.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#0"
+  },
+  {
+   "name": "quay#0+coping#68",
+   "image": "sheets/harbour_water.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#0"
+  },
+  {
+   "name": "quay#0+coping#64",
+   "image": "sheets/harbour_water.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#0"
+  },
+  {
+   "name": "quay#0+coping#32",
+   "image": "sheets/harbour_water.png",
+   "x": 128,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#0"
+  },
+  {
+   "name": "quay#0+coping#36",
+   "image": "sheets/harbour_water.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#0"
+  },
+  {
+   "name": "quay#18+coping#36",
+   "image": "sheets/harbour_water.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#18"
+  },
+  {
+   "name": "quay_wall#17",
+   "image": "sheets/harbour_water.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#145",
+   "image": "sheets/harbour_water.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall_ladder",
+   "image": "sheets/harbour_water.png",
+   "x": 208,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#179",
+   "image": "sheets/harbour_water.png",
+   "x": 224,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#217",
+   "image": "sheets/harbour_water.png",
+   "x": 240,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#129",
+   "image": "sheets/harbour_water.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#50",
+   "image": "sheets/harbour_water.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#200",
+   "image": "sheets/harbour_water.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#18",
+   "image": "sheets/harbour_water.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#136",
+   "image": "sheets/harbour_water.png",
+   "x": 64,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#16",
+   "image": "sheets/harbour_water.png",
+   "x": 80,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "quay_wall#128",
+   "image": "sheets/harbour_water.png",
+   "x": 96,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "pond#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "mooring_bollard@20,23",
+   "image": "sheets/harbour_water.png",
+   "x": 112,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#0",
+   "solid": true
+  },
+  {
+   "name": "harbour_drain@30,22",
+   "image": "sheets/harbour_water.png",
+   "x": 128,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay_to_setts_NE#0",
+   "solid": false
+  },
+  {
+   "name": "mooring_bollard@54,23",
+   "image": "sheets/harbour_water.png",
+   "x": 144,
+   "y": 16,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay#0",
+   "solid": true
+  },
+  {
+   "name": "lifebuoy_post@41,22",
+   "image": "sheets/harbour_wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "quay_to_setts_NW#0",
+   "solid": true
+  },
+  {
+   "name": "coiled_rope@54,26",
+   "image": "sheets/harbour_wood.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "dock#12",
+   "solid": true
+  },
+  {
+   "name": "bollard_rope@54,27",
+   "image": "sheets/harbour_mixed.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    1,
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "dock#13",
+   "solid": true
+  },
+  {
+   "name": "forest#13_over_street_10",
+   "image": "sheets/woods_edge.png",
+   "x": 0,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "setts_SW#253",
+    "setts_SE#245",
+    "pavement_to_asphalt_S",
+    "pavement_to_asphalt_S"
+   ],
+   "solid": true
+  },
+  {
+   "name": "forest#13_over_street_12",
+   "image": "sheets/woods_edge.png",
+   "x": 0,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "asphalt#15",
+    "asphalt#15",
+    "asphalt_dashed_H_boundary",
+    "asphalt_dashed_H_boundary"
+   ],
+   "solid": true
+  },
+  {
+   "name": "forest#13_over_street_14",
+   "image": "sheets/woods_edge.png",
+   "x": 0,
+   "y": 64,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    3
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "pavement_to_asphalt_N",
+    "pavement_to_asphalt_N",
+    "setts_SE#253",
+    "setts_SW#245"
+   ],
+   "solid": true
+  },
+  {
+   "name": "sign_on_setts_NE#145",
+   "image": "sheets/signs_harbour.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_NE#145",
+   "solid": true
+  },
+  {
+   "name": "sign_on_setts_SE#147_to_pavement_S",
+   "image": "sheets/signs_harbour.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SE#147_to_pavement_S",
+   "solid": true
+  },
+  {
+   "name": "sign_on_setts_SE#0",
+   "image": "sheets/signs_harbour.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SE#0",
+   "solid": true
+  },
+  {
+   "name": "fence#6_on_setts_SE#100_to_pavement_N",
+   "image": "sheets/signs_harbour.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SE#100_to_pavement_N",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "fence#10_on_setts_SW#100_to_pavement_N",
+   "image": "sheets/signs_harbour.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SW#100_to_pavement_N",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "fence#10_on_setts_SE#100_to_pavement_N",
+   "image": "sheets/signs_harbour.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SE#100_to_pavement_N",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "fence#8_on_setts_SE#100_to_pavement_N",
+   "image": "sheets/signs_harbour.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SE#100_to_pavement_N",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "fence#2_on_setts_SE#100_to_pavement_N",
+   "image": "sheets/signs_harbour.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SE#100_to_pavement_N",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "fence#12_on_setts_SW#100_to_pavement_N",
+   "image": "sheets/signs_harbour.png",
+   "x": 0,
+   "y": 32,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SW#100_to_pavement_N",
+   "solid": true,
+   "dedupe": true
+  },
+  {
    "name": "fountain_3x3",
    "image": "sheets/prop_fountain_3x3.png",
    "x": 0,
@@ -4975,7 +6136,17 @@
     1
    ],
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": [
+    "setts_SW#0",
+    "setts_SE#0",
+    "setts_SW#0",
+    "setts_NW#0",
+    "setts_NE#0",
+    "setts_NW#0",
+    "setts_SW#0",
+    "setts_SE#0",
+    "setts_SW#0"
+   ],
    "solid": true
   },
   {
@@ -4990,7 +6161,10 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": [
+    "setts_SW#0",
+    "setts_NW#0"
+   ],
    "solid": true
   },
   {
@@ -5005,7 +6179,10 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "cobble#15",
+   "ground": [
+    "quay#145",
+    "quay#145"
+   ],
    "solid": true
   },
   {
@@ -5018,7 +6195,42 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "cobble#15",
+   "ground": [
+    "quay_to_setts_NW#0"
+   ],
+   "solid": true
+  },
+  {
+   "name": "bench_wood_south~2",
+   "image": "sheets/props_wood.png",
+   "x": 64,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": [
+    "quay_to_setts_NW#0",
+    "quay_to_setts_NE#0"
+   ],
+   "solid": true
+  },
+  {
+   "name": "litter_bin~2",
+   "image": "sheets/props_wood.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": [
+    "quay#145"
+   ],
    "solid": true
   },
   {
@@ -5031,7 +6243,9 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "grass",
+   "ground": [
+    "setts_NE#0"
+   ],
    "solid": true
   }
  ]

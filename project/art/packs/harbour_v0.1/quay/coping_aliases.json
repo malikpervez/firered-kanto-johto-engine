@@ -1,0 +1,109 @@
+{
+  "note": "Coping is budgeted with quay_wall, not the 14-tile flag surface. Aliases do not add graphics.",
+  "aliases": {
+    "quay/edge_center": {
+      "image": "../quay_wall/tiles/edge_center.png",
+      "metadata": "../quay_wall/edge_center.json"
+    },
+    "quay/edge_N": {
+      "image": "../quay_wall/tiles/edge_N.png",
+      "metadata": "../quay_wall/edge_N.json"
+    },
+    "quay/edge_E": {
+      "image": "../quay_wall/tiles/edge_E.png",
+      "metadata": "../quay_wall/edge_E.json"
+    },
+    "quay/edge_S": {
+      "image": "../quay_wall/tiles/edge_S.png",
+      "metadata": "../quay_wall/edge_S.json"
+    },
+    "quay/edge_W": {
+      "image": "../quay_wall/tiles/edge_W.png",
+      "metadata": "../quay_wall/edge_W.json"
+    },
+    "quay/edge_NE": {
+      "image": "../quay_wall/tiles/edge_NE.png",
+      "metadata": "../quay_wall/edge_NE.json"
+    },
+    "quay/edge_SE": {
+      "image": "../quay_wall/tiles/edge_SE.png",
+      "metadata": "../quay_wall/edge_SE.json"
+    },
+    "quay/edge_SW": {
+      "image": "../quay_wall/tiles/edge_SW.png",
+      "metadata": "../quay_wall/edge_SW.json"
+    },
+    "quay/edge_NW": {
+      "image": "../quay_wall/tiles/edge_NW.png",
+      "metadata": "../quay_wall/edge_NW.json"
+    },
+    "quay/edge_in_NE": {
+      "image": "../quay_wall/tiles/edge_in_NE.png",
+      "metadata": "../quay_wall/edge_in_NE.json"
+    },
+    "quay/edge_in_SE": {
+      "image": "../quay_wall/tiles/edge_in_SE.png",
+      "metadata": "../quay_wall/edge_in_SE.json"
+    },
+    "quay/edge_in_SW": {
+      "image": "../quay_wall/tiles/edge_in_SW.png",
+      "metadata": "../quay_wall/edge_in_SW.json"
+    },
+    "quay/edge_in_NW": {
+      "image": "../quay_wall/tiles/edge_in_NW.png",
+      "metadata": "../quay_wall/edge_in_NW.json"
+    },
+    "quay/edge_in_NE_SE": {
+      "image": "../quay_wall/tiles/edge_in_NE_SE.png",
+      "metadata": "../quay_wall/edge_in_NE_SE.json"
+    },
+    "quay/edge_in_NE_SW": {
+      "image": "../quay_wall/tiles/edge_in_NE_SW.png",
+      "metadata": "../quay_wall/edge_in_NE_SW.json"
+    },
+    "quay/edge_in_NE_NW": {
+      "image": "../quay_wall/tiles/edge_in_NE_NW.png",
+      "metadata": "../quay_wall/edge_in_NE_NW.json"
+    },
+    "quay/edge_in_SE_SW": {
+      "image": "../quay_wall/tiles/edge_in_SE_SW.png",
+      "metadata": "../quay_wall/edge_in_SE_SW.json"
+    },
+    "quay/edge_in_SE_NW": {
+      "image": "../quay_wall/tiles/edge_in_SE_NW.png",
+      "metadata": "../quay_wall/edge_in_SE_NW.json"
+    },
+    "quay/edge_in_SW_NW": {
+      "image": "../quay_wall/tiles/edge_in_SW_NW.png",
+      "metadata": "../quay_wall/edge_in_SW_NW.json"
+    },
+    "quay/edge_in_NE_SE_SW": {
+      "image": "../quay_wall/tiles/edge_in_NE_SE_SW.png",
+      "metadata": "../quay_wall/edge_in_NE_SE_SW.json"
+    },
+    "quay/edge_in_NE_SE_NW": {
+      "image": "../quay_wall/tiles/edge_in_NE_SE_NW.png",
+      "metadata": "../quay_wall/edge_in_NE_SE_NW.json"
+    },
+    "quay/edge_in_NE_SW_NW": {
+      "image": "../quay_wall/tiles/edge_in_NE_SW_NW.png",
+      "metadata": "../quay_wall/edge_in_NE_SW_NW.json"
+    },
+    "quay/edge_in_SE_SW_NW": {
+      "image": "../quay_wall/tiles/edge_in_SE_SW_NW.png",
+      "metadata": "../quay_wall/edge_in_SE_SW_NW.json"
+    },
+    "quay/edge_in_ALL": {
+      "image": "../quay_wall/tiles/edge_in_ALL.png",
+      "metadata": "../quay_wall/edge_in_ALL.json"
+    },
+    "quay/edge_single": {
+      "image": "../quay_wall/tiles/edge_single.png",
+      "metadata": "../quay_wall/edge_single.json"
+    },
+    "quay/edge_S_ring": {
+      "image": "../quay_wall/tiles/edge_S_ring.png",
+      "metadata": "../quay_wall/edge_S_ring.json"
+    }
+  }
+}
