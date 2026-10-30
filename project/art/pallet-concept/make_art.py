@@ -23,6 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 
 HERE = Path(__file__).resolve().parent
 MAP_W, MAP_H = 32, 28
@@ -135,8 +136,15 @@ def layout() -> tuple[list[list[str]], dict]:
     return g, signs
 
 
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("fingerpost", 13, 2, "grass"),  # by the road north to Route 1
+         ("bench_wood_east", 26, 9, "grass")]  # looking out to sea
+SOLID = set("T#bRoklSBcwO~sqHJWL")  # what a prop can't stand on
+
+
 def main() -> None:
     g, signs = layout()
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
     kit.check_forest(g)
     kit.check_water(g)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
@@ -154,6 +162,8 @@ def main() -> None:
     labs = sheet("lab", "lab", cols=9)
     labs.add("lab", LAB.idx, tileset="secondary", **LAB.entry())
     spec_mt += labs.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -164,12 +174,13 @@ def main() -> None:
                          "secondary": ["palette_lab.pal", base["secondary_palettes"][8], "palette_houses.pal",
                                        "palette_windmill.pal"]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, H="house_red", J="house_blue", W="windmill", L="lab")
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "signs.json").write_text(json.dumps(signs, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")

@@ -4882,6 +4882,36 @@
    "behaviors": {
     "3,4": "MB_ANIMATED_DOOR"
    }
+  },
+  {
+   "name": "fingerpost",
+   "image": "sheets/props_wood.png",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bench_wood_east",
+   "image": "sheets/props_wood.png",
+   "x": 16,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
   }
  ]
 }

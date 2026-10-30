@@ -4217,15 +4217,38 @@
    "open": [
     103
    ]
+  },
+  "statue_guardian": {
+   "ids": [
+    748,
+    749,
+    750,
+    751
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "flower_tub": {
+   "ids": [
+    752
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 168
+  "secondary": 181
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 108
+  "secondary": 113
  },
  "animations": [
   {

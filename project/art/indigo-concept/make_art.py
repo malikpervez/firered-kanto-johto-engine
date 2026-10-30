@@ -22,12 +22,17 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 
 HERE = Path(__file__).resolve().parent
 SECONDARY = "gTileset_IndigoConcept"
 MAP_W, MAP_H = 24, 20
 LEAGUE_BANK = 7
 SOLID = set("T#bRoklSBcw_~vrsqQL")
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it):
+# statues either side of the League's forecourt, flower tubs beside its door
+PROPS = [("statue_guardian", 8, 14, "paving#15"), ("statue_guardian", 14, 14, "paving#15"),
+         ("flower_tub", 8, 12, "paving#15"), ("flower_tub", 15, 12, "paving#15")]
 WEST = [(0, y) for y in range(9, 12)]
 SOUTH = [(x, MAP_H - 1) for x in range(10, 14)]
 WORKERS = [(2, 9), (2, 10), (2, 11)]  # across the west road until the game is won
@@ -91,10 +96,11 @@ def check(g, d) -> None:
 def main() -> None:
     b = league()
     g = plan()
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins="p")
     d = door(g, b)
     kit.check_forest(g)
     kit.check_water(g)
-    kit.check_paving(g)
+    kit.check_paving(g, "".join(prop_legend))
     check(g, d)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
@@ -102,6 +108,8 @@ def main() -> None:
     sh.add(b.name, b.idx, tileset="secondary", ground="grass", solid=True, open=[f"{b.door[0]},{b.door[1]}"],
            behaviors={f"{b.door[0]},{b.door[1]}": "MB_ANIMATED_DOOR"})
     spec_mt += sh.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -110,13 +118,13 @@ def main() -> None:
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{LEAGUE_BANK}.pal", base["secondary_palettes"][8]]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    (HERE / "legend.json").write_text(json.dumps(dict(kit.LEGEND, L=b.name), indent=1) + "\n")
+    (HERE / "legend.json").write_text(json.dumps(dict(kit.LEGEND, L=b.name, **prop_legend), indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({"L": [d]}, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; door {d}")
 

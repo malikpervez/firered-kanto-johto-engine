@@ -123,5 +123,13 @@
   "with": "rock_b",
   "elevation": 1
  },
- "L": "pokemon_league"
+ "L": "pokemon_league",
+ "\u00a1": {
+  "name": "statue_guardian",
+  "joins": "p"
+ },
+ "\u00a2": {
+  "name": "flower_tub",
+  "joins": "p"
+ }
 }
