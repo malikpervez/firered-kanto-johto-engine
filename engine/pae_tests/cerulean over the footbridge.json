@@ -1,0 +1,45 @@
+{
+ "note": "Walk east over the footbridge across the canal by the road south, onto the road.",
+ "created": "2026-10-30 12:00",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 17,
+  "y": 31,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     70
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_Frlg",
+  "x": 21,
+  "y": 31,
+  "in_battle": false
+ },
+ "accepted": "2026-10-30 02:23"
+}
