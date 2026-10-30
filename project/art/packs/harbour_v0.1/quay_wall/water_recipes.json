@@ -1,0 +1,4624 @@
+{
+  "mask_bits": {
+    "N": 1,
+    "E": 2,
+    "S": 4,
+    "W": 8,
+    "NE": 16,
+    "SE": 32,
+    "SW": 64,
+    "NW": 128
+  },
+  "bit_meaning": "1 = neighbouring block is land or a wooden dock; recipe is placed on water",
+  "block_location": "water",
+  "recipes": {
+    "0": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "edge_center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "edge_center",
+        "quadrant": "SE"
+      }
+    },
+    "1": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "2": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "edge_center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "3": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "4": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "5": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "6": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "7": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "8": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "edge_center",
+        "quadrant": "SE"
+      }
+    },
+    "9": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "10": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "11": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "12": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "13": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "14": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "15": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "16": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "edge_center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "SE"
+      }
+    },
+    "17": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "18": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "edge_center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "19": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "20": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "21": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "22": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "23": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "24": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "SE"
+      }
+    },
+    "25": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "26": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "27": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "28": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "29": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "30": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "31": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "32": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "edge_center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "33": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "34": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "edge_center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "35": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "36": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "37": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "38": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "39": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "40": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "41": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "42": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "43": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "44": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "45": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "46": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "47": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "48": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "edge_center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "49": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "50": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "edge_center",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "51": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "52": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "53": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "54": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "55": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "56": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "57": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "58": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "59": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "60": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "61": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "62": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "63": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "64": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "edge_center",
+        "quadrant": "SE"
+      }
+    },
+    "65": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "66": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "67": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "68": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "69": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "70": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "71": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "72": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "edge_center",
+        "quadrant": "SE"
+      }
+    },
+    "73": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "74": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "75": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "76": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "77": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "78": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "79": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "80": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "SE"
+      }
+    },
+    "81": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "82": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "83": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "84": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "85": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "86": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "87": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "88": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "SE"
+      }
+    },
+    "89": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "90": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "91": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "92": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "93": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "94": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "95": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "96": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "97": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "98": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "99": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "100": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "101": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "102": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "103": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "104": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "105": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "106": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "107": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "108": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "109": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "110": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "111": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "112": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "113": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "114": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "115": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "116": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "117": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "118": {
+      "NW": {
+        "piece": "edge_center",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "119": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "120": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "121": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "122": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "123": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "124": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "125": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "126": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "127": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "128": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "edge_center",
+        "quadrant": "SE"
+      }
+    },
+    "129": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "130": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "131": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "132": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "133": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "134": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "135": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "136": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "edge_center",
+        "quadrant": "SE"
+      }
+    },
+    "137": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "138": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "139": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "140": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "141": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "142": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "143": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "144": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "SE"
+      }
+    },
+    "145": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "146": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "147": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "148": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "149": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "150": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "151": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "152": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "SE"
+      }
+    },
+    "153": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "154": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "155": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "156": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "157": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "158": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "159": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "160": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "161": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "162": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "163": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "164": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "165": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "166": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "167": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "168": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "169": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "170": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "171": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "172": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "173": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "174": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "175": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "176": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "177": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "178": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "179": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "180": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "181": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "182": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "183": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "184": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "185": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "186": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "187": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "188": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "189": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "190": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "191": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "192": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "edge_center",
+        "quadrant": "SE"
+      }
+    },
+    "193": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "194": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "195": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "196": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "197": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "198": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "199": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "200": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "edge_center",
+        "quadrant": "SE"
+      }
+    },
+    "201": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "202": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "203": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "204": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "205": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "206": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "207": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "208": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "SE"
+      }
+    },
+    "209": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "210": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "211": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "212": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "213": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "214": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "215": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "216": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "SE"
+      }
+    },
+    "217": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "218": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "219": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "220": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "221": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "222": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "223": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "224": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "225": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "226": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "227": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "228": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "229": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "230": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "231": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "232": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "233": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "234": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "235": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "236": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "edge_center",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "237": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "238": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "239": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "240": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "241": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "242": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_outer_NE",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "243": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "244": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "245": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "246": {
+      "NW": {
+        "piece": "wall_outer_SE",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_N",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "247": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_S",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "248": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_outer_NW",
+        "quadrant": "SE"
+      }
+    },
+    "249": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "250": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "251": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "252": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_outer_SW",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_N",
+        "quadrant": "SE"
+      }
+    },
+    "253": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_S",
+        "quadrant": "SE"
+      }
+    },
+    "254": {
+      "NW": {
+        "piece": "wall_E",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_W",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    },
+    "255": {
+      "NW": {
+        "piece": "wall_S",
+        "quadrant": "NW"
+      },
+      "NE": {
+        "piece": "wall_S",
+        "quadrant": "NE"
+      },
+      "SW": {
+        "piece": "wall_E",
+        "quadrant": "SW"
+      },
+      "SE": {
+        "piece": "wall_W",
+        "quadrant": "SE"
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "edge_NE",
+  "image": "tiles/edge_NE.png",
+  "size_px": [
+    16,
+    16
+  ],
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "palettes_8x8": [
+    [
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water"
+    ]
+  ],
+  "solid": false,
+  "solid_blocks": [],
+  "walkable_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "over_rows": 0,
+  "block_location": "land",
+  "overlay_on": "quay",
+  "schema_version": 1,
+  "id": "edge_NE",
+  "block_size_px": 16,
+  "transparent_index": 0,
+  "frame_count": 1,
+  "unique_8x8_tiles": 4,
+  "tiles_8x8": [
+    [
+      19,
+      21
+    ],
+    [
+      18,
+      20
+    ]
+  ],
+  "tile_flips": [
+    [
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": true
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ]
+  ],
+  "tile_pool": "../tile_pool/tiles.4bpp"
+}

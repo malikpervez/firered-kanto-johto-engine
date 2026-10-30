@@ -1,0 +1,20 @@
+GIMP Palette
+Name: Kit water (bank 1)
+Columns: 16
+#
+  0   0   0	index 0  (transparent)
+ 16  24  40	index 1
+ 96  64  40	index 2
+152 112  72	index 3
+200 168 112	index 4
+ 24  48 104	index 5
+ 32  72 144	index 6
+ 48 104 184	index 7
+ 72 136 208	index 8
+112 172 228	index 9
+120 196 212	index 10
+208 236 244	index 11
+248 248 248	index 12
+ 72  72  88	index 13
+120 120 128	index 14
+176 176 168	index 15

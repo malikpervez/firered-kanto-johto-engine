@@ -21,6 +21,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
+import harbour
 import kit
 import props
 
@@ -48,10 +49,21 @@ SOLID = set("T#bRoklSBcwO_~vrZLKWXHU")
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 PROPS = [("fountain_3x3", 33, 17, "grass"), ("bench_wood_west", 37, 17, "grass"), ("flower_tub", 32, 16, "grass"),
          ("flower_tub", 36, 16, "grass"),
-         # along the harbour, looking out to sea
-         ("bench_wood_south", 21, 22, "cobble#15", "="), ("bench_wood_south", 27, 22, "cobble#15", "="),
-         ("bench_wood_south", 45, 22, "cobble#15", "="), ("bench_wood_south", 51, 22, "cobble#15", "="),
-         ("litter_bin", 33, 22, "cobble#15", "="), ("litter_bin", 48, 22, "cobble#15", "=")]
+         # along the harbour, looking out to sea (on the quay flags: their ground is the flags' block there)
+         ("bench_wood_south", 21, 22, "quay"), ("bench_wood_south", 27, 22, "quay"),
+         ("bench_wood_south", 45, 22, "quay"), ("bench_wood_south", 51, 22, "quay"),
+         ("litter_bin", 33, 22, "quay"), ("litter_bin", 48, 22, "quay")]
+# the harbour's ground (Kanto Harbour Textures v0.1, kit/harbour.py): the square before the Center and the Mart in fan
+# setts (their pattern from its corner, the sign standing on them), the main street the kit's asphalt with a strip of
+# pavement each side (then the cobble Route 11's road is, column 57 the join), the promenade in quay flags, the quay
+# wall round the water and the docks; the details, the mooring ring in the coping and a ladder down the wall
+SQUARE = [(x, y) for y in range(7, 11) for x in range(24, 43)]
+SQUARE_SIGN = (31, 7)
+STREET = {11: "n", 12: "+", 13: "-", 14: "u"}  # by row, columns 6-56: pavement over asphalt, the road, its line
+PROMENADE = [(x, 22) for x in range(18, 56)] + [(x, 23) for x in range(7, 56)]
+HARBOUR_DETAILS = [("mooring_bollard", 20, 23), ("mooring_bollard", 54, 23), ("harbour_drain", 30, 22),
+                   ("lifebuoy_post", 41, 22), ("bollard_rope", 54, 27), ("coiled_rope", 54, 26)]
+RING, LADDER = (32, 23), (31, 24)
 
 
 def plan() -> list[list[str]]:
@@ -120,13 +132,50 @@ def check(g, d) -> None:
     assert (30, 30) in reachable(g, NORTH, people, surf=True), "the harbour must be surfed from the town"
 
 
+def streets(g) -> None:
+    """The main street: the kit's asphalt, a strip of pavement each side, the line down its middle; the join to the
+    cobble at its east end."""
+    for y, ch in STREET.items():
+        for x in range(6, 57):
+            assert g[y][x] == "=", f"({x},{y}) isn't the old street"
+            g[y][x] = ch
+    for y in (12, 13):
+        g[y][57] = "2"
+
+
+def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
+    """The harbour (kit/harbour.py); what stands on the flags takes their block there as its ground."""
+    on_quay = {(x, y) for x, y in PROMENADE if g[y][x] != "="}
+    assert all(prop_legend.get(g[y][x]) for x, y in on_quay), "only the props stand on the promenade"
+    assert all(g[y][x] == "=" for x, y in SQUARE if (x, y) != SQUARE_SIGN), "the square is the old cobble"
+    hb = harbour.lay(g, set(SQUARE), set(PROMENADE), origin=SQUARE[0], out=HERE, spec_dir=HERE,
+                     street={(x, 11) for x in range(24, 43)}, details=HARBOUR_DETAILS, ring=RING, ladder=LADDER)
+    for piece, x, y, ground, *_ in PROPS:
+        if ground == "quay":
+            fp = props.PIECES[piece][1]["footprint_blocks"]
+            under = [hb["ground"][xx, yy] for yy in range(y, y + fp["height"]) for xx in range(x, x + fp["width"])]
+            assert prop_grounds[piece] in ("quay", under), f"{piece}: the flags differ under each of it"
+            prop_grounds[piece] = under
+            for yy in range(y, y + fp["height"]):  # lay wrote the flags' character over it: the piece's again
+                for xx in range(x, x + fp["width"]):
+                    g[yy][xx] = next(k for k, v in prop_legend.items() if (v if isinstance(v, str) else v["name"])
+                                     == piece)
+    g[SQUARE_SIGN[1]][SQUARE_SIGN[0]] = "S"  # the sign again (check reads it), on the setts after it
+    SOLID.update(hb["solid"] | hb["water"])
+    WATER.update(hb["water"])
+    return hb
+
+
 def main() -> None:
     g = plan()
     prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
+    streets(g)
+    hb = lay_harbour(g, prop_legend, prop_grounds)
     check(g, d)
+    g[SQUARE_SIGN[1]][SQUARE_SIGN[0]] = "f"
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
     pals = {}
@@ -144,6 +193,10 @@ def main() -> None:
     for ch, ground in GANGWAY_PIECES.items():
         sh.add(f"gangway_{ch}", np.zeros((16, 16), np.uint8), tileset="secondary", ground=ground,
                behavior="MB_DEEP_SOUTH_WARP")
+    spec_mt += sh.write()
+    spec_mt += hb["entries"]
+    sh = kit.Sheet("sign_setts", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=1)
+    sh.add("sign_setts", kit.sign(), tileset="secondary", ground=hb["ground"][SQUARE_SIGN], solid=True)
     spec_mt += sh.write()
     prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
     spec_mt += prop_entries
@@ -166,6 +219,10 @@ def main() -> None:
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN},
                   **{ch: {"name": f"gangway_{ch}", "joins": "d"} for ch in GANGWAY_PIECES})
     legend.update(prop_legend)
+    # the street's pieces next to the cobble at its east end count as cobble for it, so it draws no edge there
+    legend.update(hb["legend"], n={"name": "pavement_to_asphalt_S", "joins": "="}, f="sign_setts",
+                  u={"name": "pavement_to_asphalt_N", "joins": "="},
+                  **{"-": "asphalt_dashed_H_boundary", "2": {"name": "asphalt_to_cobble_E", "joins": "="}})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

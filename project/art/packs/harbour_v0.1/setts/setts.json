@@ -1,0 +1,5071 @@
+{
+  "schema_version": 1,
+  "id": "setts",
+  "type": "static_terrain",
+  "block_size_px": 16,
+  "palette": "kit_ground",
+  "palette_file": "../palettes/road_existing.gpl",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "solid": false,
+  "solid_blocks": [],
+  "door_block": null,
+  "piece_names": [
+    "center",
+    "N",
+    "E",
+    "S",
+    "W",
+    "NE",
+    "SE",
+    "SW",
+    "NW",
+    "in_NE",
+    "in_SE",
+    "in_SW",
+    "in_NW",
+    "in_NE_SE",
+    "in_NE_SW",
+    "in_NE_NW",
+    "in_SE_SW",
+    "in_SE_NW",
+    "in_SW_NW",
+    "in_NE_SE_SW",
+    "in_NE_SE_NW",
+    "in_NE_SW_NW",
+    "in_SE_SW_NW",
+    "in_ALL",
+    "single",
+    "large_NW",
+    "large_NE",
+    "large_SW",
+    "large_SE",
+    "to_pavement_N",
+    "to_pavement_E",
+    "to_pavement_S",
+    "to_pavement_W",
+    "to_cobble_N",
+    "to_cobble_E",
+    "to_cobble_S",
+    "to_cobble_W",
+    "to_pavement_N_NW",
+    "to_pavement_E_NW",
+    "to_pavement_S_NW",
+    "to_pavement_W_NW",
+    "to_cobble_N_NW",
+    "to_cobble_E_NW",
+    "to_cobble_S_NW",
+    "to_cobble_W_NW",
+    "to_pavement_N_NE",
+    "to_pavement_E_NE",
+    "to_pavement_S_NE",
+    "to_pavement_W_NE",
+    "to_cobble_N_NE",
+    "to_cobble_E_NE",
+    "to_cobble_S_NE",
+    "to_cobble_W_NE",
+    "to_pavement_N_SW",
+    "to_pavement_E_SW",
+    "to_pavement_S_SW",
+    "to_pavement_W_SW",
+    "to_cobble_N_SW",
+    "to_cobble_E_SW",
+    "to_cobble_S_SW",
+    "to_cobble_W_SW",
+    "to_pavement_N_SE",
+    "to_pavement_E_SE",
+    "to_pavement_S_SE",
+    "to_pavement_W_SE",
+    "to_cobble_N_SE",
+    "to_cobble_E_SE",
+    "to_cobble_S_SE",
+    "to_cobble_W_SE"
+  ],
+  "naming": "N means lawn outside to north; for coping, water outside to north. Inside corners ordered NE, SE, SW, NW.",
+  "tiles": [
+    {
+      "name": "center",
+      "image": "tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "center",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "N",
+      "image": "tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "N",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "E",
+      "image": "tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "E",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "S",
+      "image": "tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "S",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "W",
+      "image": "tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "W",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "NE",
+      "image": "tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          4,
+          6
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "SE",
+      "image": "tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "SW",
+      "image": "tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "NW",
+      "image": "tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          6,
+          4
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_NE",
+      "image": "tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_SE",
+      "image": "tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_SW",
+      "image": "tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_NW",
+      "image": "tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          7,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_NE_SE",
+      "image": "tiles/in_NE_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_NE_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_NE_SW",
+      "image": "tiles/in_NE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_NE_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_NE_NW",
+      "image": "tiles/in_NE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_NE_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          7,
+          7
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_SE_SW",
+      "image": "tiles/in_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_SE_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_SE_NW",
+      "image": "tiles/in_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_SE_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          7,
+          1
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_SW_NW",
+      "image": "tiles/in_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_SW_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_NE_SE_SW",
+      "image": "tiles/in_NE_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_NE_SE_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 2,
+      "tiles_8x8": [
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_NE_SE_NW",
+      "image": "tiles/in_NE_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_NE_SE_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 2,
+      "tiles_8x8": [
+        [
+          7,
+          7
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_NE_SW_NW",
+      "image": "tiles/in_NE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_NE_SW_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 2,
+      "tiles_8x8": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_SE_SW_NW",
+      "image": "tiles/in_SE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_SE_SW_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 2,
+      "tiles_8x8": [
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "in_ALL",
+      "image": "tiles/in_ALL.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "in_ALL",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 1,
+      "tiles_8x8": [
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "single",
+      "image": "tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "schema_version": 1,
+      "id": "single",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 1,
+      "tiles_8x8": [
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "large_NW",
+      "image": "tiles/large_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "phase_blocks": [
+        0,
+        0
+      ],
+      "schema_version": 1,
+      "id": "large_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "large_NE",
+      "image": "tiles/large_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "phase_blocks": [
+        1,
+        0
+      ],
+      "schema_version": 1,
+      "id": "large_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "large_SW",
+      "image": "tiles/large_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "phase_blocks": [
+        0,
+        1
+      ],
+      "schema_version": 1,
+      "id": "large_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "large_SE",
+      "image": "tiles/large_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "phase_blocks": [
+        1,
+        1
+      ],
+      "schema_version": 1,
+      "id": "large_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    }
+  ],
+  "transitions": [
+    {
+      "name": "to_pavement_N",
+      "image": "transitions/to_pavement_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "N",
+      "schema_version": 1,
+      "id": "to_pavement_N",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          12
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_E",
+      "image": "transitions/to_pavement_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "E",
+      "schema_version": 1,
+      "id": "to_pavement_E",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          12
+        ],
+        [
+          2,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_S",
+      "image": "transitions/to_pavement_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "S",
+      "schema_version": 1,
+      "id": "to_pavement_S",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_W",
+      "image": "transitions/to_pavement_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "W",
+      "schema_version": 1,
+      "id": "to_pavement_W",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          1
+        ],
+        [
+          12,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_N",
+      "image": "transitions/to_cobble_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "N",
+      "schema_version": 1,
+      "id": "to_cobble_N",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          14
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_E",
+      "image": "transitions/to_cobble_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "schema_version": 1,
+      "id": "to_cobble_E",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          14
+        ],
+        [
+          2,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_S",
+      "image": "transitions/to_cobble_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "S",
+      "schema_version": 1,
+      "id": "to_cobble_S",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          16,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_W",
+      "image": "transitions/to_cobble_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "schema_version": 1,
+      "id": "to_cobble_W",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          1
+        ],
+        [
+          16,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_N_NW",
+      "image": "transitions/to_pavement_N_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "N",
+      "phase": "NW",
+      "schema_version": 1,
+      "id": "to_pavement_N_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          12
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_E_NW",
+      "image": "transitions/to_pavement_E_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "E",
+      "phase": "NW",
+      "schema_version": 1,
+      "id": "to_pavement_E_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          12
+        ],
+        [
+          2,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_S_NW",
+      "image": "transitions/to_pavement_S_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "S",
+      "phase": "NW",
+      "schema_version": 1,
+      "id": "to_pavement_S_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_W_NW",
+      "image": "transitions/to_pavement_W_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "W",
+      "phase": "NW",
+      "schema_version": 1,
+      "id": "to_pavement_W_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          1
+        ],
+        [
+          12,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_N_NW",
+      "image": "transitions/to_cobble_N_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "N",
+      "phase": "NW",
+      "schema_version": 1,
+      "id": "to_cobble_N_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          14
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_E_NW",
+      "image": "transitions/to_cobble_E_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": "NW",
+      "schema_version": 1,
+      "id": "to_cobble_E_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          14
+        ],
+        [
+          2,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_S_NW",
+      "image": "transitions/to_cobble_S_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "S",
+      "phase": "NW",
+      "schema_version": 1,
+      "id": "to_cobble_S_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          16,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_W_NW",
+      "image": "transitions/to_cobble_W_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": "NW",
+      "schema_version": 1,
+      "id": "to_cobble_W_NW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          1
+        ],
+        [
+          16,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_N_NE",
+      "image": "transitions/to_pavement_N_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "N",
+      "phase": "NE",
+      "schema_version": 1,
+      "id": "to_pavement_N_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          12
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_E_NE",
+      "image": "transitions/to_pavement_E_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "E",
+      "phase": "NE",
+      "schema_version": 1,
+      "id": "to_pavement_E_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_S_NE",
+      "image": "transitions/to_pavement_S_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "S",
+      "phase": "NE",
+      "schema_version": 1,
+      "id": "to_pavement_S_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          8,
+          9
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_W_NE",
+      "image": "transitions/to_pavement_W_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "W",
+      "phase": "NE",
+      "schema_version": 1,
+      "id": "to_pavement_W_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          9
+        ],
+        [
+          12,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_N_NE",
+      "image": "transitions/to_cobble_N_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "N",
+      "phase": "NE",
+      "schema_version": 1,
+      "id": "to_cobble_N_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          14
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_E_NE",
+      "image": "transitions/to_cobble_E_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": "NE",
+      "schema_version": 1,
+      "id": "to_cobble_E_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          8,
+          14
+        ],
+        [
+          10,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_S_NE",
+      "image": "transitions/to_cobble_S_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "S",
+      "phase": "NE",
+      "schema_version": 1,
+      "id": "to_cobble_S_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          8,
+          9
+        ],
+        [
+          16,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_W_NE",
+      "image": "transitions/to_cobble_W_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": "NE",
+      "schema_version": 1,
+      "id": "to_cobble_W_NE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          9
+        ],
+        [
+          16,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_N_SW",
+      "image": "transitions/to_pavement_N_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "N",
+      "phase": "SW",
+      "schema_version": 1,
+      "id": "to_pavement_N_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          12
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_E_SW",
+      "image": "transitions/to_pavement_E_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "E",
+      "phase": "SW",
+      "schema_version": 1,
+      "id": "to_pavement_E_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_S_SW",
+      "image": "transitions/to_pavement_S_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "S",
+      "phase": "SW",
+      "schema_version": 1,
+      "id": "to_pavement_S_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          8,
+          9
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_W_SW",
+      "image": "transitions/to_pavement_W_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "W",
+      "phase": "SW",
+      "schema_version": 1,
+      "id": "to_pavement_W_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          9
+        ],
+        [
+          12,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_N_SW",
+      "image": "transitions/to_cobble_N_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "N",
+      "phase": "SW",
+      "schema_version": 1,
+      "id": "to_cobble_N_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          14
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_E_SW",
+      "image": "transitions/to_cobble_E_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": "SW",
+      "schema_version": 1,
+      "id": "to_cobble_E_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          8,
+          14
+        ],
+        [
+          10,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_S_SW",
+      "image": "transitions/to_cobble_S_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "S",
+      "phase": "SW",
+      "schema_version": 1,
+      "id": "to_cobble_S_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          8,
+          9
+        ],
+        [
+          16,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_W_SW",
+      "image": "transitions/to_cobble_W_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": "SW",
+      "schema_version": 1,
+      "id": "to_cobble_W_SW",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          9
+        ],
+        [
+          16,
+          11
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_N_SE",
+      "image": "transitions/to_pavement_N_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "N",
+      "phase": "SE",
+      "schema_version": 1,
+      "id": "to_pavement_N_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          12
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_E_SE",
+      "image": "transitions/to_pavement_E_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "E",
+      "phase": "SE",
+      "schema_version": 1,
+      "id": "to_pavement_E_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          12
+        ],
+        [
+          2,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_S_SE",
+      "image": "transitions/to_pavement_S_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "S",
+      "phase": "SE",
+      "schema_version": 1,
+      "id": "to_pavement_S_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_pavement_W_SE",
+      "image": "transitions/to_pavement_W_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "pavement",
+      "outside_side": "W",
+      "phase": "SE",
+      "schema_version": 1,
+      "id": "to_pavement_W_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 3,
+      "tiles_8x8": [
+        [
+          12,
+          1
+        ],
+        [
+          12,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_N_SE",
+      "image": "transitions/to_cobble_N_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "N",
+      "phase": "SE",
+      "schema_version": 1,
+      "id": "to_cobble_N_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          14
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_E_SE",
+      "image": "transitions/to_cobble_E_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": "SE",
+      "schema_version": 1,
+      "id": "to_cobble_E_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          14
+        ],
+        [
+          2,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_S_SE",
+      "image": "transitions/to_cobble_S_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "S",
+      "phase": "SE",
+      "schema_version": 1,
+      "id": "to_cobble_S_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          16,
+          15
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    },
+    {
+      "name": "to_cobble_W_SE",
+      "image": "transitions/to_cobble_W_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palettes_8x8": [
+        [
+          "kit_ground",
+          "kit_ground"
+        ],
+        [
+          "kit_ground",
+          "kit_ground"
+        ]
+      ],
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": "SE",
+      "schema_version": 1,
+      "id": "to_cobble_W_SE",
+      "block_size_px": 16,
+      "transparent_index": 0,
+      "frame_count": 1,
+      "unique_8x8_tiles": 4,
+      "tiles_8x8": [
+        [
+          13,
+          1
+        ],
+        [
+          16,
+          3
+        ]
+      ],
+      "tile_flips": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "tile_pool": "../tile_pool/tiles.4bpp"
+    }
+  ],
+  "unique_8x8_tiles": 17,
+  "autotile": {
+    "recipes_file": "autotile_recipes.json",
+    "mask_bits": {
+      "N": 1,
+      "E": 2,
+      "S": 4,
+      "W": 8,
+      "NE": 16,
+      "SE": 32,
+      "SW": 64,
+      "NW": 128
+    },
+    "bit_meaning": "1 = outside this material",
+    "quadrants": "NW, NE, SW, SE"
+  },
+  "phase_autotile": {
+    "recipes_file": "phase_recipes.json",
+    "period_blocks": [
+      2,
+      2
+    ],
+    "origin": "fixed even-aligned map block; retain the same phase origin across each square"
+  }
+}

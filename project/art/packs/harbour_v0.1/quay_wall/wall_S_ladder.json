@@ -1,0 +1,74 @@
+{
+  "name": "wall_S_ladder",
+  "image": "tiles/wall_S_ladder.png",
+  "size_px": [
+    16,
+    16
+  ],
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "palettes_8x8": [
+    [
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water"
+    ]
+  ],
+  "solid": false,
+  "solid_blocks": [],
+  "walkable_blocks": [],
+  "over_rows": 0,
+  "block_location": "water",
+  "water_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "surfable": true,
+  "ladder_behavior": "Decorative only; add a scripted surf entry if desired.",
+  "schema_version": 1,
+  "id": "wall_S_ladder",
+  "block_size_px": 16,
+  "transparent_index": 0,
+  "frame_count": 1,
+  "unique_8x8_tiles": 4,
+  "tiles_8x8": [
+    [
+      23,
+      29
+    ],
+    [
+      24,
+      30
+    ]
+  ],
+  "tile_flips": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": true,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      }
+    ]
+  ],
+  "tile_pool": "../tile_pool/tiles.4bpp"
+}
