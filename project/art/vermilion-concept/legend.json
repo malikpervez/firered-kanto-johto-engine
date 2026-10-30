@@ -169,106 +169,108 @@
  "\u010b": "setts_NE#0",
  "\u010c": "setts_NW#0",
  "\u010d": "setts_NW#18",
- "\u010e": "setts_SW#153_to_pavement_S",
- "\u010f": "setts_SE#145_to_pavement_S",
+ "\u010e": "setts_SW#253",
+ "\u010f": "setts_SE#245",
  "\u0110": "setts_SW#145_to_pavement_S",
- "\u0111": "setts_SE#129_to_pavement_S",
- "\u0112": "setts_SW#128_to_pavement_S",
- "\u0113": "setts_SE#0_to_pavement_S",
- "\u0114": "setts_SW#0_to_pavement_S",
- "\u0115": "setts_SW#16_to_pavement_S",
- "\u0116": "setts_SE#17_to_pavement_S",
- "\u0117": "setts_SE#147_to_pavement_S",
- "\u0118": "setts_SE#108_to_pavement_N",
- "\u0119": "setts_SW#100_to_pavement_N",
- "\u011a": "setts_SE#100_to_pavement_N",
- "\u011b": "setts_SE#68_to_pavement_N",
- "\u011c": "setts_SW#64_to_pavement_N",
- "\u011d": "setts_SE#0_to_pavement_N",
- "\u011e": "setts_SW#0_to_pavement_N",
- "\u011f": "setts_SW#32_to_pavement_N",
- "\u0120": "setts_SE#36_to_pavement_N",
- "\u0121": "setts_SW#102_to_pavement_N",
- "\u0122": "setts_NW#72",
- "\u0123": "setts_NW#34",
- "\u0124": "setts_NW#200",
- "\u0125": "setts_NW#50",
- "\u0126": "quay#153",
- "\u0127": "quay#145",
- "\u0128": "quay_to_setts_NW#136",
- "\u0129": "quay_to_setts_NE#0",
- "\u012a": "quay_to_setts_NW#0",
- "\u012b": "harbour_drain@30,22",
- "\u012c": "lifebuoy_post@41,22",
- "\u012d": "quay_to_setts_NW#18",
- "\u012e": "quay#179",
- "\u012f": "quay#153+coping#100",
- "\u0130": "quay#145+coping#100",
- "\u0131": "quay#129+coping#100",
- "\u0132": "quay#128+coping#100",
- "\u0133": "quay#0+coping#100",
- "\u0134": "mooring_bollard@20,23",
- "\u0135": "quay#0+coping#100_ring",
- "\u0136": "quay#0+coping#68",
- "\u0137": "quay#0+coping#64",
- "\u0138": "quay#0",
- "\u0139": "quay#0+coping#32",
- "\u013a": "quay#0+coping#36",
- "\u013b": "mooring_bollard@54,23",
- "\u013c": "quay#18+coping#36",
- "\u013d": {
+ "\u0111": "setts_SE#145_to_pavement_S",
+ "\u0112": "setts_SE#129_to_pavement_S",
+ "\u0113": "setts_SW#128_to_pavement_S",
+ "\u0114": "setts_SE#0_to_pavement_S",
+ "\u0115": "setts_SW#0_to_pavement_S",
+ "\u0116": "setts_SW#16_to_pavement_S",
+ "\u0117": "setts_SE#17_to_pavement_S",
+ "\u0118": "setts_SE#147_to_pavement_S",
+ "\u0119": "setts_SE#253",
+ "\u011a": "setts_SW#245",
+ "\u011b": "setts_SE#100_to_pavement_N",
+ "\u011c": "setts_SW#100_to_pavement_N",
+ "\u011d": "setts_SE#68_to_pavement_N",
+ "\u011e": "setts_SW#64_to_pavement_N",
+ "\u011f": "setts_SE#0_to_pavement_N",
+ "\u0120": "setts_SW#0_to_pavement_N",
+ "\u0121": "setts_SW#32_to_pavement_N",
+ "\u0122": "setts_SE#36_to_pavement_N",
+ "\u0123": "setts_SW#102_to_pavement_N",
+ "\u0124": "setts_NW#72",
+ "\u0125": "setts_NW#34",
+ "\u0126": "setts_NW#200",
+ "\u0127": "setts_NW#50",
+ "\u0128": "quay#153",
+ "\u0129": "quay#145",
+ "\u012a": "quay_to_setts_NW#136",
+ "\u012b": "quay_to_setts_NE#0",
+ "\u012c": "quay_to_setts_NW#0",
+ "\u012d": "harbour_drain@30,22",
+ "\u012e": "lifebuoy_post@41,22",
+ "\u012f": "quay_to_setts_NW#18",
+ "\u0130": "quay#179",
+ "\u0131": "quay#153+coping#100",
+ "\u0132": "quay#145+coping#100",
+ "\u0133": "quay#129+coping#100",
+ "\u0134": "quay#128+coping#100",
+ "\u0135": "quay#0+coping#100",
+ "\u0136": "mooring_bollard@20,23",
+ "\u0137": "quay#0+coping#100_ring",
+ "\u0138": "quay#0+coping#68",
+ "\u0139": "quay#0+coping#64",
+ "\u013a": "quay#0",
+ "\u013b": "quay#0+coping#32",
+ "\u013c": "quay#0+coping#36",
+ "\u013d": "mooring_bollard@54,23",
+ "\u013e": "quay#18+coping#36",
+ "\u013f": {
   "name": "quay_wall#17",
   "joins": "~"
  },
- "\u013e": {
+ "\u0140": {
   "name": "quay_wall#145",
   "joins": "~"
  },
- "\u013f": {
+ "\u0141": {
   "name": "quay_wall_ladder",
   "joins": "~"
  },
- "\u0140": {
+ "\u0142": {
   "name": "quay_wall#179",
   "joins": "~"
  },
- "\u0141": {
+ "\u0143": {
   "name": "quay_wall#217",
   "joins": "~"
  },
- "\u0142": {
+ "\u0144": {
   "name": "quay_wall#129",
   "joins": "~"
  },
- "\u0143": {
+ "\u0145": {
   "name": "quay_wall#50",
   "joins": "~"
  },
- "\u0144": {
+ "\u0146": {
   "name": "quay_wall#200",
   "joins": "~"
  },
- "\u0145": {
+ "\u0147": {
   "name": "coiled_rope@54,26",
   "joins": "d"
  },
- "\u0146": {
+ "\u0148": {
   "name": "bollard_rope@54,27",
   "joins": "d"
  },
- "\u0147": {
+ "\u0149": {
   "name": "quay_wall#18",
   "joins": "~"
  },
- "\u0148": {
+ "\u014a": {
   "name": "quay_wall#136",
   "joins": "~"
  },
- "\u0149": {
+ "\u014b": {
   "name": "quay_wall#16",
   "joins": "~"
  },
- "\u014a": {
+ "\u014c": {
   "name": "quay_wall#128",
   "joins": "~"
  },
@@ -284,7 +286,7 @@
  "F": "sign_on_setts_SE#147_to_pavement_S",
  "i": "sign_on_setts_SE#0",
  "\u0180": {
-  "name": "fence#6_on_setts_SE#108_to_pavement_N",
+  "name": "fence#6_on_setts_SE#100_to_pavement_N",
   "joins": "#"
  },
  "\u0181": {
@@ -307,9 +309,25 @@
   "name": "fence#12_on_setts_SW#100_to_pavement_N",
   "joins": "#"
  },
- "-": "asphalt_dashed_H_boundary",
- "2": {
-  "name": "asphalt_to_cobble_E",
+ "\u0190": {
+  "name": "forest#13_over_street_10",
+  "joins": "T"
+ },
+ "\u0191": {
+  "name": "forest#13_over_street_12",
+  "joins": "T"
+ },
+ "\u0192": {
+  "name": "forest#13_over_street_14",
+  "joins": "T"
+ },
+ "j": {
+  "name": "asphalt#15",
   "joins": "="
- }
+ },
+ "m": {
+  "name": "asphalt_dashed_H_boundary",
+  "joins": "="
+ },
+ "-": "asphalt_dashed_H_boundary"
 }

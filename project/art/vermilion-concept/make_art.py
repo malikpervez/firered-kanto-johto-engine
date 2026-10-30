@@ -23,6 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import harbour
 import kit
+import trees
 import props
 
 HERE = Path(__file__).resolve().parent
@@ -59,14 +60,18 @@ PROPS = [("fountain_3x3", 33, 17, "setts"), ("bench_wood_west", 37, 17, "setts")
 # from its foot along the north of the street both ways (where lawn was); and the fountain's between the houses south
 # of the street (in place of its lawn, flowers and bushes; its pattern runs on into the promenade's flags), with the
 # same band along the south of the street (the Gym yard's fence standing on it); the main
-# street the kit's asphalt with a strip of pavement each side (then the cobble Route 11's road is, column 57 the
-# join); the promenade in quay flags, the quay wall round the water and the docks; the details, the mooring ring in
+# street the kit's asphalt with a strip of pavement each side, running on under the forest's edge at its west end, and
+# meeting the cobble Route 11's road is on one line at its east end, where the forest starts (column 56), as its bands
+# end there; the promenade in quay flags, the quay wall round the water and the docks; the details, the mooring ring in
 # the coping and a ladder
-BAND = [(x, 10) for x in list(range(6, 24)) + list(range(43, 56))]
-SOUTH_BAND = [(x, 15) for x in list(range(6, 25)) + list(range(44, 56))]
+BAND = [(x, 10) for x in list(range(4, 24)) + list(range(43, 56))]  # (4-5: under the forest's edge)
+SOUTH_BAND = [(x, 15) for x in list(range(4, 25)) + list(range(44, 56))]
+WOODS_EDGE = [(4, 10), (4, 12), (4, 14)]  # the forest's cells (2x2) the street runs on under, its blocks over the street
 SQUARES = [([(x, y) for y in range(7, 11) for x in range(24, 43)] + BAND, (24, 7)),
            ([(x, y) for y in range(15, 22) for x in range(25, 44)] + SOUTH_BAND, (25, 16))]
-STREET = {11: "n", 12: "+", 13: "-", 14: "u"}  # by row, columns 6-56: pavement over asphalt, the road, its line
+STREET = {11: "n", 12: "+", 13: "-", 14: "u"}  # by row, columns 6-55: pavement over asphalt, the road, its line
+STREET_GROUND = {11: "pavement_to_asphalt_S", 12: "asphalt#15", 13: "asphalt_dashed_H_boundary",
+                 14: "pavement_to_asphalt_N"}
 PROMENADE = [(x, 22) for x in range(18, 56)] + [(x, 23) for x in range(7, 56)]
 HARBOUR_DETAILS = [("mooring_bollard", 20, 23), ("mooring_bollard", 54, 23), ("harbour_drain", 30, 22),
                    ("lifebuoy_post", 41, 22), ("bollard_rope", 54, 27), ("coiled_rope", 54, 26)]
@@ -140,14 +145,30 @@ def check(g, d) -> None:
 
 
 def streets(g) -> None:
-    """The main street: the kit's asphalt, a strip of pavement each side, the line down its middle; the join to the
-    cobble at its east end."""
+    """The main street: the kit's asphalt, a strip of pavement each side, the line down its middle; at its east end
+    the cobble meets all of it on one line (its last column counts as cobble for the cobble, which draws no edge
+    there)."""
     for y, ch in STREET.items():
-        for x in range(6, 57):
+        for x in range(6, 56):
             assert g[y][x] == "=", f"({x},{y}) isn't the old street"
             g[y][x] = ch
-    for y in (12, 13):
-        g[y][57] = "2"
+    g[12][55], g[13][55] = "j", "m"
+
+
+def woods_edge(g, hb) -> list[dict]:
+    """The forest's cells the street runs on under at its west end: the kit's forest (an edge to the east) over the
+    street's blocks, forest for its neighbours."""
+    sh = kit.Sheet("woods_edge", kit.PALS["trees"], kit.BANK["trees"], HERE, HERE, cols=2)
+    hb["woods"] = {}
+    for i, (x, y) in enumerate(WOODS_EDGE):
+        under = [hb["ground"].get((xx, yy)) or STREET_GROUND[yy] for yy in (y, y + 1) for xx in (x, x + 1)]
+        name = f"forest#13_over_street_{y}"
+        sh.add(name, trees.forest(13), tileset="secondary", ground=under, solid=True)
+        hb["woods"][chr(0x190 + i)] = name
+        for yy in (y, y + 1):
+            for xx in (x, x + 1):
+                g[yy][xx] = chr(0x190 + i)
+    return sh.write()
 
 
 def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
@@ -160,6 +181,9 @@ def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
                               if not (0 <= x + dx < MAP_W and 0 <= y + dy < MAP_H) or g[y + dy][x + dx] == "#")
                   for x, y in fenced}  # as pae map paint draws the fence: its neighbours that are fence too
     for x, y in fenced:
+        g[y][x] = "."
+    woods = {(x, y) for cells, _ in SQUARES for x, y in cells if g[y][x] == "T"}  # the band under the forest's edge
+    for x, y in woods:
         g[y][x] = "."
     for cells, _ in SQUARES:
         assert all(g[y][x] in "=.*b" or g[y][x] in prop_legend or (x, y) in signs for x, y in cells), \
@@ -190,6 +214,8 @@ def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
             g[yy][xx] = letter_of[name]
     for x, y in signs:
         g[y][x] = "S"
+    for x, y in woods:
+        g[y][x] = "T"
     hb["fences"] = {}
     for x, y in sorted(fenced):  # the fence again, each over the band's block there; fence for its neighbours
         name = f"fence#{fence_mask[x, y]}_on_{hb['ground'][x, y]}"
@@ -222,6 +248,8 @@ def main() -> None:
     kit.check_water(g)
     streets(g)
     hb = lay_harbour(g, prop_legend, prop_grounds)
+    woods = woods_edge(g, hb)
+    SOLID.update(hb["woods"])
     check(g, d)
     signs_on = sign_grounds(g, hb)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
@@ -242,7 +270,7 @@ def main() -> None:
         sh.add(f"gangway_{ch}", np.zeros((16, 16), np.uint8), tileset="secondary", ground=ground,
                behavior="MB_DEEP_SOUTH_WARP")
     spec_mt += sh.write()
-    spec_mt += hb["entries"]
+    spec_mt += hb["entries"] + woods
     sh = kit.Sheet("signs_harbour", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=4)
     for ground, ch in signs_on.items():
         sh.add(f"sign_on_{ground}", kit.sign(), tileset="secondary", ground=ground, solid=True)
@@ -275,7 +303,9 @@ def main() -> None:
                   u={"name": "pavement_to_asphalt_N", "joins": "="},
                   **{ch: f"sign_on_{ground}" for ground, ch in signs_on.items()},
                   **{ch: {"name": name, "joins": "#"} for name, (ch, _, _) in hb["fences"].items()},
-                  **{"-": "asphalt_dashed_H_boundary", "2": {"name": "asphalt_to_cobble_E", "joins": "="}})
+                  **{ch: {"name": name, "joins": "T"} for ch, name in hb["woods"].items()},
+                  j={"name": "asphalt#15", "joins": "="}, m={"name": "asphalt_dashed_H_boundary", "joins": "="},
+                  **{"-": "asphalt_dashed_H_boundary"})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")
