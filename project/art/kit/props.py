@@ -54,20 +54,23 @@ def frames(name: str) -> list[np.ndarray]:
 
 
 def pieces(out: Path, spec_dir: Path, placed: dict[str, str | list[str]]) -> tuple[list[dict], list[dict]]:
-    """The spec entries for the pieces ``placed`` (name -> ground), and the animations they need."""
+    """The spec entries for the pieces ``placed`` (name -> ground), and the animations they need. A name
+    "piece~2" is another of the piece on another ground."""
     entries, animations = [], []
     rel = Path(kit.os_relpath(out, spec_dir))
     still = {}
     for name, ground in placed.items():
-        meta = PIECES[name][1]
+        base = name.split("~")[0]
+        meta = PIECES[base][1]
         fw, fh = meta["footprint_blocks"]["width"], meta["footprint_blocks"]["height"]
         entry = {"tileset": "secondary", "ground": ground, "solid": bool(meta["solid_blocks"])}
         if meta["solid_blocks"] and meta["walkable_blocks"]:
             entry["open"] = [f"{x},{y}" for x, y in meta["walkable_blocks"]]
-        pics = frames(name)
+        pics = frames(base)
         pal = PALETTE[meta["palette"]]
         assert pics[0].shape == (fh * 16, fw * 16), f"{name}: its picture isn't its footprint"
         if len(pics) > 1:  # animated: its own sheet, every metatile drawn from it animating
+            assert name == base, f"{name}: an animated piece stands on one ground"
             sh = kit.Sheet(f"prop_{name}", kit.PALS[pal], kit.BANK[pal], out, spec_dir, cols=fw)
             sh.add(name, pics[0], **entry)
             entries += sh.write([[p] for p in pics[1:]])

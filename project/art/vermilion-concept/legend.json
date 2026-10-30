@@ -147,6 +147,8 @@
  "\u00a3": "flower_tub",
  "\u00a4": "bench_wood_south",
  "\u00a5": "litter_bin",
+ "\u00a6": "bench_wood_south~2",
+ "\u00a7": "litter_bin~2",
  "\u0100": "setts_NW#217",
  "\u0101": "setts_NE#145",
  "\u0102": "setts_NW#145",
@@ -169,78 +171,82 @@
  "\u010d": "setts_NW#50",
  "\u010e": "setts_SW_to_pavement_S",
  "\u010f": "setts_SE_to_pavement_S",
- "\u0110": "quay#153",
- "\u0111": "quay#145",
- "\u0112": "harbour_drain@30,22",
- "\u0113": "lifebuoy_post@41,22",
- "\u0114": "quay#179",
- "\u0115": "quay#153+coping#100",
- "\u0116": "quay#145+coping#100",
- "\u0117": "quay#129+coping#100",
- "\u0118": "quay#128+coping#100",
- "\u0119": "quay#0+coping#100",
- "\u011a": "mooring_bollard@20,23",
- "\u011b": "quay#0+coping#100_ring",
- "\u011c": "quay#0+coping#68",
- "\u011d": "quay#0+coping#64",
- "\u011e": "quay#0",
- "\u011f": "quay#0+coping#32",
- "\u0120": "quay#0+coping#36",
- "\u0121": "mooring_bollard@54,23",
- "\u0122": "quay#18+coping#36",
- "\u0123": {
+ "\u0110": "setts_SW_to_pavement_N",
+ "\u0111": "setts_SE_to_pavement_N",
+ "\u0112": "quay#153",
+ "\u0113": "quay#145",
+ "\u0114": "quay_to_setts_NW",
+ "\u0115": "quay_to_setts_NE",
+ "\u0116": "harbour_drain@30,22",
+ "\u0117": "lifebuoy_post@41,22",
+ "\u0118": "quay#179",
+ "\u0119": "quay#153+coping#100",
+ "\u011a": "quay#145+coping#100",
+ "\u011b": "quay#129+coping#100",
+ "\u011c": "quay#128+coping#100",
+ "\u011d": "quay#0+coping#100",
+ "\u011e": "mooring_bollard@20,23",
+ "\u011f": "quay#0+coping#100_ring",
+ "\u0120": "quay#0+coping#68",
+ "\u0121": "quay#0+coping#64",
+ "\u0122": "quay#0",
+ "\u0123": "quay#0+coping#32",
+ "\u0124": "quay#0+coping#36",
+ "\u0125": "mooring_bollard@54,23",
+ "\u0126": "quay#18+coping#36",
+ "\u0127": {
   "name": "quay_wall#17",
   "joins": "~"
  },
- "\u0124": {
+ "\u0128": {
   "name": "quay_wall#145",
   "joins": "~"
  },
- "\u0125": {
+ "\u0129": {
   "name": "quay_wall_ladder",
   "joins": "~"
  },
- "\u0126": {
+ "\u012a": {
   "name": "quay_wall#179",
   "joins": "~"
  },
- "\u0127": {
+ "\u012b": {
   "name": "quay_wall#217",
   "joins": "~"
  },
- "\u0128": {
+ "\u012c": {
   "name": "quay_wall#129",
   "joins": "~"
  },
- "\u0129": {
+ "\u012d": {
   "name": "quay_wall#50",
   "joins": "~"
  },
- "\u012a": {
+ "\u012e": {
   "name": "quay_wall#200",
   "joins": "~"
  },
- "\u012b": {
+ "\u012f": {
   "name": "coiled_rope@54,26",
   "joins": "d"
  },
- "\u012c": {
+ "\u0130": {
   "name": "bollard_rope@54,27",
   "joins": "d"
  },
- "\u012d": {
+ "\u0131": {
   "name": "quay_wall#18",
   "joins": "~"
  },
- "\u012e": {
+ "\u0132": {
   "name": "quay_wall#136",
   "joins": "~"
  },
- "\u012f": {
+ "\u0133": {
   "name": "quay_wall#16",
   "joins": "~"
  },
- "\u0130": {
+ "\u0134": {
   "name": "quay_wall#128",
   "joins": "~"
  },
@@ -248,11 +254,14 @@
   "name": "pavement_to_asphalt_S",
   "joins": "="
  },
- "f": "sign_setts",
+ "e": "pavement_to_dressed_stone_N",
  "u": {
   "name": "pavement_to_asphalt_N",
   "joins": "="
  },
+ "f": "sign_on_setts_NE#145",
+ "F": "sign_on_pavement_to_dressed_stone_N",
+ "i": "sign_on_setts_SE#0",
  "-": "asphalt_dashed_H_boundary",
  "2": {
   "name": "asphalt_to_cobble_E",

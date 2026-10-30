@@ -4371,9 +4371,19 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW#145": {
+  "setts_SW_to_pavement_N": {
    "ids": [
     758
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_NW#145": {
+   "ids": [
+    759
    ],
    "w": 1,
    "h": 1,
@@ -4401,17 +4411,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW_to_cobble_N": {
-   "ids": [
-    759
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "setts_NE_to_cobble_N": {
+  "setts_SE_to_pavement_N": {
    "ids": [
     760
    ],
@@ -4421,7 +4421,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW#179": {
+  "setts_NW_to_cobble_N": {
    "ids": [
     761
    ],
@@ -4431,7 +4431,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#50": {
+  "setts_NE_to_cobble_N": {
    "ids": [
     762
    ],
@@ -4441,7 +4441,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW#50": {
+  "setts_NW#179": {
    "ids": [
     763
    ],
@@ -4451,7 +4451,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#153": {
+  "setts_SW#50": {
    "ids": [
     764
    ],
@@ -4461,7 +4461,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#145": {
+  "setts_NW#50": {
    "ids": [
     765
    ],
@@ -4471,17 +4471,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#129": {
-   "ids": [
-    765
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay#128": {
+  "quay_to_setts_NW": {
    "ids": [
     766
    ],
@@ -4491,7 +4481,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0": {
+  "quay_to_setts_NE": {
    "ids": [
     767
    ],
@@ -4501,7 +4491,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#179": {
+  "quay#153": {
    "ids": [
     768
    ],
@@ -4511,7 +4501,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#18": {
+  "quay#145": {
    "ids": [
     769
    ],
@@ -4521,7 +4511,17 @@
    "elevation": null,
    "open": []
   },
-  "quay#153+coping#100": {
+  "quay#129": {
+   "ids": [
+    769
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#128": {
    "ids": [
     770
    ],
@@ -4531,7 +4531,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#145+coping#100": {
+  "quay#0": {
    "ids": [
     771
    ],
@@ -4541,17 +4541,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#129+coping#100": {
-   "ids": [
-    771
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay#128+coping#100": {
+  "quay#179": {
    "ids": [
     772
    ],
@@ -4561,7 +4551,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#100": {
+  "quay#18": {
    "ids": [
     773
    ],
@@ -4571,7 +4561,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#100_ring": {
+  "quay#153+coping#100": {
    "ids": [
     774
    ],
@@ -4581,17 +4571,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#68": {
-   "ids": [
-    773
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay#0+coping#64": {
+  "quay#145+coping#100": {
    "ids": [
     775
    ],
@@ -4601,7 +4581,17 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#32": {
+  "quay#129+coping#100": {
+   "ids": [
+    775
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#128+coping#100": {
    "ids": [
     776
    ],
@@ -4611,17 +4601,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#36": {
-   "ids": [
-    773
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay#18+coping#36": {
+  "quay#0+coping#100": {
    "ids": [
     777
    ],
@@ -4631,9 +4611,69 @@
    "elevation": null,
    "open": []
   },
-  "quay_wall#17": {
+  "quay#0+coping#100_ring": {
    "ids": [
     778
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#0+coping#68": {
+   "ids": [
+    777
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#0+coping#64": {
+   "ids": [
+    779
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#0+coping#32": {
+   "ids": [
+    780
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#0+coping#36": {
+   "ids": [
+    777
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#18+coping#36": {
+   "ids": [
+    781
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay_wall#17": {
+   "ids": [
+    782
    ],
    "w": 1,
    "h": 1,
@@ -4643,7 +4683,7 @@
   },
   "quay_wall#145": {
    "ids": [
-    778
+    782
    ],
    "w": 1,
    "h": 1,
@@ -4653,7 +4693,7 @@
   },
   "quay_wall_ladder": {
    "ids": [
-    779
+    783
    ],
    "w": 1,
    "h": 1,
@@ -4663,7 +4703,7 @@
   },
   "quay_wall#179": {
    "ids": [
-    780
+    784
    ],
    "w": 1,
    "h": 1,
@@ -4673,7 +4713,7 @@
   },
   "quay_wall#217": {
    "ids": [
-    781
+    785
    ],
    "w": 1,
    "h": 1,
@@ -4683,7 +4723,7 @@
   },
   "quay_wall#129": {
    "ids": [
-    778
+    782
    ],
    "w": 1,
    "h": 1,
@@ -4693,7 +4733,7 @@
   },
   "quay_wall#50": {
    "ids": [
-    782
+    786
    ],
    "w": 1,
    "h": 1,
@@ -4703,7 +4743,7 @@
   },
   "quay_wall#200": {
    "ids": [
-    783
+    787
    ],
    "w": 1,
    "h": 1,
@@ -4713,7 +4753,7 @@
   },
   "quay_wall#18": {
    "ids": [
-    782
+    786
    ],
    "w": 1,
    "h": 1,
@@ -4723,7 +4763,7 @@
   },
   "quay_wall#136": {
    "ids": [
-    783
+    787
    ],
    "w": 1,
    "h": 1,
@@ -4733,7 +4773,7 @@
   },
   "quay_wall#16": {
    "ids": [
-    784
+    788
    ],
    "w": 1,
    "h": 1,
@@ -4743,7 +4783,7 @@
   },
   "quay_wall#128": {
    "ids": [
-    785
+    789
    ],
    "w": 1,
    "h": 1,
@@ -4753,7 +4793,7 @@
   },
   "mooring_bollard@20,23": {
    "ids": [
-    786
+    790
    ],
    "w": 1,
    "h": 1,
@@ -4763,7 +4803,7 @@
   },
   "harbour_drain@30,22": {
    "ids": [
-    787
+    791
    ],
    "w": 1,
    "h": 1,
@@ -4773,7 +4813,7 @@
   },
   "mooring_bollard@54,23": {
    "ids": [
-    788
+    792
    ],
    "w": 1,
    "h": 1,
@@ -4783,7 +4823,7 @@
   },
   "lifebuoy_post@41,22": {
    "ids": [
-    789
+    793
    ],
    "w": 1,
    "h": 1,
@@ -4793,7 +4833,7 @@
   },
   "coiled_rope@54,26": {
    "ids": [
-    790
+    794
    ],
    "w": 1,
    "h": 1,
@@ -4803,7 +4843,7 @@
   },
   "bollard_rope@54,27": {
    "ids": [
-    791
+    795
    ],
    "w": 1,
    "h": 1,
@@ -4811,9 +4851,29 @@
    "elevation": null,
    "open": []
   },
-  "sign_setts": {
+  "sign_on_setts_NE#145": {
    "ids": [
-    792
+    796
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign_on_pavement_to_dressed_stone_N": {
+   "ids": [
+    797
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign_on_setts_SE#0": {
+   "ids": [
+    798
    ],
    "w": 1,
    "h": 1,
@@ -4823,15 +4883,15 @@
   },
   "fountain_3x3": {
    "ids": [
-    793,
-    794,
-    795,
-    796,
-    797,
-    798,
     799,
     800,
-    801
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807
    ],
    "w": 3,
    "h": 3,
@@ -4841,8 +4901,8 @@
   },
   "bench_wood_west": {
    "ids": [
-    802,
-    803
+    808,
+    809
    ],
    "w": 1,
    "h": 2,
@@ -4852,8 +4912,8 @@
   },
   "bench_wood_south": {
    "ids": [
-    804,
-    805
+    810,
+    811
    ],
    "w": 2,
    "h": 1,
@@ -4863,7 +4923,28 @@
   },
   "litter_bin": {
    "ids": [
-    806
+    812
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_wood_south~2": {
+   "ids": [
+    813,
+    814
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "litter_bin~2": {
+   "ids": [
+    815
    ],
    "w": 1,
    "h": 1,
@@ -4873,7 +4954,7 @@
   },
   "flower_tub": {
    "ids": [
-    807
+    816
    ],
    "w": 1,
    "h": 1,
@@ -4888,7 +4969,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 168
+  "secondary": 177
  },
  "animations": [
   {

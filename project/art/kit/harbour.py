@@ -89,19 +89,24 @@ def recipe(surface: str, mask: int, kind: str = "autotile", phase: str | None = 
     return out
 
 
-def lay(g, setts: set, quay: set, *, origin: tuple[int, int], out: Path, spec_dir: Path, water: str = "~vrO",
+def lay(g, squares: list[tuple[set, tuple[int, int]]], quay: set, *, out: Path, spec_dir: Path, water: str = "~vrO",
         dock: str = "dJGYBc", cobble: str = "=", street: set = frozenset(), details=(), ring=None,
         ladder=None) -> dict:
-    """Lay the harbour into the plan ``g``: ``setts`` (cells of the square, its pattern from ``origin``), ``quay``
-    (the promenade's cells, and what stands on them), the wall on every water block (``water``'s characters) beside
-    land or a dock (``dock``'s), the coping on every flagstone beside water; ``details`` ((name, x, y)) on the flags,
-    the coping (drawn into it, as a block holds two layers) or a dock; the mooring ring in the coping at ``ring``, the
-    ladder down the wall at ``ladder``. A setts block takes the join to the cobble (``cobble``) north of it, or to the
-    pavement of ``street`` south of it.
+    """Lay the harbour into the plan ``g``: the ``squares`` in setts (each its cells, and the block its pattern starts
+    from), ``quay`` (the promenade's cells, and what stands on them), the wall on every water block (``water``'s
+    characters) beside land or a dock (``dock``'s), the coping on every flagstone beside water; ``details`` ((name, x,
+    y)) on the flags, the coping (drawn into it, as a block holds two layers) or a dock; the mooring ring in the coping
+    at ``ring``, the ladder down the wall at ``ladder``. A setts block takes the join to the cobble (``cobble``) north
+    of it, or to the pavement of ``street`` north or south of it; the setts run on into the top half of a flagstone
+    south of them (its pattern carried on: a square starts its pattern so that the flags' row is a top one).
 
     Returns the "legend" for the characters it wrote, the spec "entries" (to go after the kit's), the "solid" and the
     "water" characters, and the "ground" each setts and flags block shows (by cell), for what stands on them."""
     h, w = len(g), len(g[0])
+    phase_of = {(x, y): PHASES[(x - ox) % 2, (y - oy) % 2] for cells, (ox, oy) in squares for x, y in cells}
+    setts = set(phase_of)
+    under = {(x, y + 1): PHASES[(x - ox) % 2, (y + 1 - oy) % 2] for cells, (ox, oy) in squares for x, y in cells
+             if (x, y + 1) in quay}  # flagstones the setts run into
     detail_at = {(x, y): name for name, x, y in details}
     on_dock = {xy for xy in detail_at if g[xy[1]][xy[0]] in dock}
 
@@ -126,19 +131,29 @@ def lay(g, setts: set, quay: set, *, origin: tuple[int, int], out: Path, spec_di
 
     ground = {}
     for x, y in sorted(setts):
-        phase = PHASES[(x - origin[0]) % 2, (y - origin[1]) % 2]
+        phase = phase_of[x, y]
         if at(x, y - 1) == cobble and (x, y - 1) not in setts:
             name = f"setts_{phase}_to_cobble_N"
             add("ground", name, picture("setts", f"to_cobble_N_{phase}")[0], ground="grass")
         elif (x, y + 1) in street:
             name = f"setts_{phase}_to_pavement_S"
             add("ground", name, picture("setts", f"to_pavement_S_{phase}")[0], ground="grass")
+        elif (x, y - 1) in street:
+            name = f"setts_{phase}_to_pavement_N"
+            add("ground", name, picture("setts", f"to_pavement_N_{phase}")[0], ground="grass")
         else:
-            m = mask(x, y, lambda a, b: at(a, b) is not None and (a, b) not in setts)
+            m = mask(x, y, lambda a, b: at(a, b) is not None and (a, b) not in setts and (a, b) not in under)
             name = f"setts_{phase}#{m}"
             add("ground", name, recipe("setts", m, "phase", phase), ground="grass")
         names[x, y] = ground[x, y] = name
-    for x, y in sorted(quay):  # the flags: their edges where lawn (or anything but water, a dock or flags) is beside
+    for (x, y), phase in sorted(under.items()):  # the pack's join is the NW phase's: the NE one's from its pieces
+        assert phase in ("NW", "NE"), f"({x},{y}): the setts' pattern must start a row above the flags"
+        idx = picture("quay", "to_setts_N")[0].copy()
+        idx[:8] = picture("setts", f"large_{phase}")[0][:8]
+        names[x, y] = ground[x, y] = f"quay_to_setts_{phase}"
+        add("ground", names[x, y], idx, ground="grass")
+    for x, y in sorted(quay - set(under)):  # the flags: their edges where lawn (or anything but water, a dock or
+        # flags) is beside
         m = mask(x, y, lambda a, b: at(a, b) is not None and (a, b) not in quay and not wet(a, b)
                  and at(a, b) not in dock)
         flags = f"quay#{m}"
@@ -176,18 +191,18 @@ def lay(g, setts: set, quay: set, *, origin: tuple[int, int], out: Path, spec_di
             dm = sum(b for (dx, dy), b in BITS.items() if b < 16 and (at(x + dx, y + dy) is None
                                                                       or at(x + dx, y + dy) in "dJGY"
                                                                       or (x + dx, y + dy) in on_dock))
-            under = f"dock#{dm}"
+            base = f"dock#{dm}"
         else:
             assert (x, y) in quay, f"{name} at ({x},{y}) stands on neither the flags nor a dock"
-            under = ground[x, y]
-            if names[x, y] != under:  # on the coping: drawn into it, in its palette
+            base = ground[x, y]
+            if names[x, y] != base:  # on the coping: drawn into it, in its palette
                 assert flat == {"kit_water"}, f"{name} at ({x},{y}): only a water-palette detail goes on the coping"
                 cope = names[x, y]
                 c = int(cope.split("coping#")[1].split("_")[0])
                 idx = np.where(idx > 0, idx, recipe("quay_wall", c))
         cell = f"{name}@{x},{y}"
         names[x, y] = cell
-        entry = dict(ground=under, solid=is_solid)
+        entry = dict(ground=base, solid=is_solid)
         if len(flat) == 1:
             add(PALETTE[flat.pop()], cell, idx, **entry)
         else:  # quarters in two palettes (the bollard's head water, its rope wood): an image of its own
