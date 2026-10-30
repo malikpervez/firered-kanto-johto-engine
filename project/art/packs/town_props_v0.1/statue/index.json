@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "statue",
+  "pieces": [
+    {
+      "name": "statue_guardian",
+      "json": "statue_guardian.json",
+      "image": "tiles/statue_guardian.png"
+    }
+  ]
+}

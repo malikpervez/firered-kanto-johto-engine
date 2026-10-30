@@ -1,0 +1,362 @@
+{
+  "counting": "Unique 8x8 palette-index graphics, H/V/HV flips merged; rotation is distinct. Animation streams occupy one runtime slot each, including their fixed pixels; blank tiles count. Palette selection stays in each tile attribute.",
+  "animation_storage_note": "Runtime budgets count each changing tile stream once, as requested. The separate all-frame graphic count reports ROM artwork storage, not simultaneous tileset occupancy. Do not deduplicate animated slots by the first frame alone.",
+  "pieces": {
+    "fountain_3x3": {
+      "footprint_blocks": [
+        3,
+        3
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 22,
+      "unique_first_frame_tiles": 22,
+      "unique_graphics_across_all_frames": 37,
+      "changing_tile_positions": 8,
+      "budget": 24
+    },
+    "bench_wood_south": {
+      "footprint_blocks": [
+        2,
+        1
+      ],
+      "palette": "kit_wood",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bench_wood_north": {
+      "footprint_blocks": [
+        2,
+        1
+      ],
+      "palette": "kit_wood",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bench_wood_east": {
+      "footprint_blocks": [
+        1,
+        2
+      ],
+      "palette": "kit_wood",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bench_wood_west": {
+      "footprint_blocks": [
+        1,
+        2
+      ],
+      "palette": "kit_wood",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bench_stone": {
+      "footprint_blocks": [
+        2,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 4
+    },
+    "flower_tub": {
+      "footprint_blocks": [
+        1,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 4
+    },
+    "litter_bin": {
+      "footprint_blocks": [
+        1,
+        1
+      ],
+      "palette": "kit_wood",
+      "unique_runtime_tiles": 3,
+      "unique_first_frame_tiles": 3,
+      "unique_graphics_across_all_frames": 3,
+      "changing_tile_positions": 0,
+      "budget": 4
+    },
+    "statue_guardian": {
+      "footprint_blocks": [
+        2,
+        2
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 9,
+      "unique_first_frame_tiles": 9,
+      "unique_graphics_across_all_frames": 9,
+      "changing_tile_positions": 0,
+      "budget": 12
+    },
+    "fingerpost": {
+      "footprint_blocks": [
+        1,
+        2
+      ],
+      "palette": "kit_wood",
+      "unique_runtime_tiles": 6,
+      "unique_first_frame_tiles": 6,
+      "unique_graphics_across_all_frames": 6,
+      "changing_tile_positions": 0,
+      "budget": 6
+    },
+    "picnic_table": {
+      "footprint_blocks": [
+        2,
+        2
+      ],
+      "palette": "kit_wood",
+      "unique_runtime_tiles": 8,
+      "unique_first_frame_tiles": 8,
+      "unique_graphics_across_all_frames": 8,
+      "changing_tile_positions": 0,
+      "budget": 10
+    },
+    "bike_rack": {
+      "footprint_blocks": [
+        2,
+        1
+      ],
+      "palette": "kit_wood",
+      "unique_runtime_tiles": 6,
+      "unique_first_frame_tiles": 6,
+      "unique_graphics_across_all_frames": 6,
+      "changing_tile_positions": 0,
+      "budget": 6
+    },
+    "bridge_ns_1_north": {
+      "footprint_blocks": [
+        1,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ns_1_middle": {
+      "footprint_blocks": [
+        1,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 2,
+      "unique_first_frame_tiles": 2,
+      "unique_graphics_across_all_frames": 2,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ns_1_south": {
+      "footprint_blocks": [
+        1,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ew_1_west": {
+      "footprint_blocks": [
+        1,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 3,
+      "unique_first_frame_tiles": 3,
+      "unique_graphics_across_all_frames": 3,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ew_1_middle": {
+      "footprint_blocks": [
+        1,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 2,
+      "unique_first_frame_tiles": 2,
+      "unique_graphics_across_all_frames": 2,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ew_1_east": {
+      "footprint_blocks": [
+        1,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 3,
+      "unique_first_frame_tiles": 3,
+      "unique_graphics_across_all_frames": 3,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ns_2_north": {
+      "footprint_blocks": [
+        2,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 5,
+      "unique_first_frame_tiles": 5,
+      "unique_graphics_across_all_frames": 5,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ns_2_middle": {
+      "footprint_blocks": [
+        2,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 3,
+      "unique_first_frame_tiles": 3,
+      "unique_graphics_across_all_frames": 3,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ns_2_south": {
+      "footprint_blocks": [
+        2,
+        1
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 5,
+      "unique_first_frame_tiles": 5,
+      "unique_graphics_across_all_frames": 5,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ew_2_west": {
+      "footprint_blocks": [
+        1,
+        2
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ew_2_middle": {
+      "footprint_blocks": [
+        1,
+        2
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 3,
+      "unique_first_frame_tiles": 3,
+      "unique_graphics_across_all_frames": 3,
+      "changing_tile_positions": 0,
+      "budget": 16
+    },
+    "bridge_ew_2_east": {
+      "footprint_blocks": [
+        1,
+        2
+      ],
+      "palette": "kit_water",
+      "unique_runtime_tiles": 4,
+      "unique_first_frame_tiles": 4,
+      "unique_graphics_across_all_frames": 4,
+      "changing_tile_positions": 0,
+      "budget": 16
+    }
+  },
+  "groups": {
+    "fountain": 22,
+    "benches": 14,
+    "flower_tub": 4,
+    "litter_bin": 3,
+    "statue": 9,
+    "signpost": 6,
+    "picnic_table": 8,
+    "bike_rack": 6,
+    "footbridge": 11,
+    "wooden_benches_all_facings": 10
+  },
+  "all_together": {
+    "unique_runtime_tiles": 82,
+    "unique_graphics_across_all_frames": 97,
+    "runtime_pool_bytes": 2624,
+    "animated_unique_slots": 5,
+    "per_palette_runtime_counts": {
+      "kit_water": 50,
+      "kit_wood": 33
+    },
+    "palette_inclusive_conservative_count": 83
+  },
+  "fountain_animation": {
+    "fountain_3x3": {
+      "changed_tile_positions": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "changed_positions_count": 8,
+      "frame_duration_game_frames": 16,
+      "loop_game_frames": 64,
+      "loop_seconds": 1.0666666666666667
+    }
+  },
+  "three_tile_option": [
+    "litter_bin"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "litter_bin",
+  "pieces": [
+    {
+      "name": "litter_bin",
+      "json": "litter_bin.json",
+      "image": "tiles/litter_bin.png"
+    }
+  ]
+}

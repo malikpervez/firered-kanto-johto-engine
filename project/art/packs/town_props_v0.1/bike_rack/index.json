@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "bike_rack",
+  "pieces": [
+    {
+      "name": "bike_rack",
+      "json": "bike_rack.json",
+      "image": "tiles/bike_rack.png"
+    }
+  ]
+}

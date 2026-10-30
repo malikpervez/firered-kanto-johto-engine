@@ -43,6 +43,16 @@
     "../kit/sheets/water_f7.png"
    ],
    "speed": 10
+  },
+  {
+   "name": "Fountain3X3",
+   "image": "sheets/prop_fountain_3x3.png",
+   "frames": [
+    "sheets/prop_fountain_3x3_f1.png",
+    "sheets/prop_fountain_3x3_f2.png",
+    "sheets/prop_fountain_3x3_f3.png"
+   ],
+   "speed": 16
   }
  ],
  "field_effects": {
@@ -5265,114 +5275,208 @@
    "dedupe": true
   },
   {
-   "name": "fountain_rim#3",
-   "image": "sheets/fountain.png",
+   "name": "fountain_3x3",
+   "image": "sheets/prop_fountain_3x3.png",
    "x": 0,
    "y": 0,
+   "w": 3,
+   "h": 3,
    "banks": [
-    10
+    1
    ],
    "tileset": "secondary",
-   "ground": "pond#15",
+   "ground": [
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "grass",
+    "paving#15",
+    "paving#15",
+    "paving#15",
+    "paving#15"
+   ],
    "solid": true
   },
   {
-   "name": "fountain_rim#6",
-   "image": "sheets/fountain.png",
-   "x": 16,
+   "name": "bench_wood_south",
+   "image": "sheets/props_wood.png",
+   "x": 0,
    "y": 0,
+   "w": 2,
+   "h": 1,
    "banks": [
-    10
+    2
    ],
+   "dedupe": true,
    "tileset": "secondary",
-   "ground": "pond#15",
+   "ground": [
+    "paving#15",
+    "paving#15"
+   ],
    "solid": true
   },
   {
-   "name": "fountain_rim#7",
-   "image": "sheets/fountain.png",
+   "name": "bench_wood_north",
+   "image": "sheets/props_wood.png",
    "x": 32,
    "y": 0,
+   "w": 2,
+   "h": 1,
    "banks": [
-    10
+    2
    ],
+   "dedupe": true,
    "tileset": "secondary",
-   "ground": "pond#15",
+   "ground": [
+    "paving#15",
+    "paving#15"
+   ],
    "solid": true
   },
   {
-   "name": "fountain_rim#9",
-   "image": "sheets/fountain.png",
-   "x": 48,
-   "y": 0,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "ground": "pond#15",
-   "solid": true
-  },
-  {
-   "name": "fountain_rim#11",
-   "image": "sheets/fountain.png",
+   "name": "bench_wood_west",
+   "image": "sheets/props_wood.png",
    "x": 64,
    "y": 0,
+   "w": 1,
+   "h": 2,
    "banks": [
-    10
+    2
    ],
+   "dedupe": true,
    "tileset": "secondary",
-   "ground": "pond#15",
+   "ground": [
+    "paving#15",
+    "paving#15"
+   ],
    "solid": true
   },
   {
-   "name": "fountain_rim#12",
-   "image": "sheets/fountain.png",
+   "name": "litter_bin",
+   "image": "sheets/props_wood.png",
    "x": 80,
    "y": 0,
    "banks": [
-    10
+    2
    ],
+   "dedupe": true,
    "tileset": "secondary",
-   "ground": "pond#15",
+   "ground": [
+    "paving#15"
+   ],
    "solid": true
   },
   {
-   "name": "fountain_rim#13",
-   "image": "sheets/fountain.png",
+   "name": "bike_rack",
+   "image": "sheets/props_wood.png",
+   "x": 96,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": [
+    "paving#15",
+    "paving#15"
+   ],
+   "solid": true
+  },
+  {
+   "name": "flower_tub",
+   "image": "sheets/props_water.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": [
+    "paving#15"
+   ],
+   "solid": true
+  },
+  {
+   "name": "bridge_ew_1_west",
+   "image": "sheets/props_water.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "cerulean_brick#15",
+   "solid": false
+  },
+  {
+   "name": "bridge_ew_1_middle",
+   "image": "sheets/props_water.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "pond#5",
+   "solid": false
+  },
+  {
+   "name": "bridge_ew_1_east",
+   "image": "sheets/props_water.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "cerulean_brick#15",
+   "solid": false
+  },
+  {
+   "name": "bridge_ns_1_north",
+   "image": "sheets/props_water.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": false
+  },
+  {
+   "name": "bridge_ns_1_middle",
+   "image": "sheets/props_water.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "pond#10",
+   "solid": false
+  },
+  {
+   "name": "bridge_ns_1_south",
+   "image": "sheets/props_water.png",
    "x": 96,
    "y": 0,
    "banks": [
-    10
+    1
    ],
+   "dedupe": true,
    "tileset": "secondary",
-   "ground": "pond#15",
-   "solid": true
-  },
-  {
-   "name": "fountain_rim#14",
-   "image": "sheets/fountain.png",
-   "x": 112,
-   "y": 0,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "ground": "pond#15",
-   "solid": true
-  },
-  {
-   "name": "fountain_spout",
-   "image": "sheets/fountain.png",
-   "x": 0,
-   "y": 16,
-   "w": 2,
-   "h": 2,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "ground": "pond#15",
-   "solid": true
+   "ground": "cobble#15",
+   "solid": false
   },
   {
    "name": "diglett_cave",

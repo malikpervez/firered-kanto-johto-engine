@@ -1848,6 +1848,8 @@ static void QueueAnimTiles_AlolaIslands_SandWaterEdge(u16);
 
 static void QueueAnimTiles_PalletConcept_General_Water(u16);
 static void TilesetAnim_PalletConcept_General(u16);
+static void QueueAnimTiles_CeruleanConcept_Fountain3X3(u16);
+static void TilesetAnim_CeruleanConcept(u16);
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/1.4bpp");
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/0.4bpp");
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/2.4bpp");
@@ -2059,4 +2061,35 @@ void InitTilesetAnim_PalletConcept_General(void)
     sPrimaryTilesetAnimCounter = 0;
     sPrimaryTilesetAnimCounterMax = 256;
     sPrimaryTilesetAnimCallback = TilesetAnim_PalletConcept_General;
+}
+
+const u16 gTilesetAnims_CeruleanConcept_Fountain3X3_Frame0[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/fountain3_x3/0.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Fountain3X3_Frame1[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/fountain3_x3/1.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Fountain3X3_Frame2[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/fountain3_x3/2.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Fountain3X3_Frame3[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/fountain3_x3/3.4bpp");
+
+const u16 *const gTilesetAnims_CeruleanConcept_Fountain3X3[] = {
+    gTilesetAnims_CeruleanConcept_Fountain3X3_Frame0,
+    gTilesetAnims_CeruleanConcept_Fountain3X3_Frame1,
+    gTilesetAnims_CeruleanConcept_Fountain3X3_Frame2,
+    gTilesetAnims_CeruleanConcept_Fountain3X3_Frame3
+};
+
+static void QueueAnimTiles_CeruleanConcept_Fountain3X3(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_CeruleanConcept_Fountain3X3);
+    AppendTilesetAnimToBuffer(gTilesetAnims_CeruleanConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 291)), 29 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_CeruleanConcept(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_CeruleanConcept_Fountain3X3(timer / 16);
+}
+
+void InitTilesetAnim_CeruleanConcept(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_CeruleanConcept;
 }

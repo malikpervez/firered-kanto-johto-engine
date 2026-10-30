@@ -2058,7 +2058,7 @@ const struct Tileset gTileset_CeruleanConcept =
     .palettes = gTilesetPalettes_CeruleanConcept,
     .metatiles = gMetatiles_CeruleanConcept,
     .metatileAttributes = gMetatileAttributes_CeruleanConcept,
-    .callback = NULL,
+    .callback = InitTilesetAnim_CeruleanConcept,
 };
 
 const struct Tileset gTileset_Route24Concept =

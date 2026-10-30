@@ -34,6 +34,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 import streets
 
 HERE = Path(__file__).resolve().parent
@@ -56,49 +57,26 @@ WEST = [(0, y) for y in range(17, 21)]
 EAST = [(MAP_W - 1, y) for y in range(28, 31)]
 SOUTH = [(x, MAP_H - 1) for x in range(21, 25)]
 WATER = set("~vr")
-SOLID = set("T#bRoklSBcw_~vrWKHXZLY12@/f!F")
+SOLID = set("T#bRoklSBcw_~vrWKHXZLY12@/fFunatie")
 # the paving and the brick: what stands on them (the buildings but the two family houses and the cave, the lamps and
 # the signs) and the cobbles are one material with them, so no edge between
 WALK = "%"
 PAVED = "WKXZL12@/"  # what stands on the paving
 FENCE = "f"          # a fence on the paving (the kit's fence, its own blocks: on the paving, one with it)
 FENCE_CHARS = "3456789"
-RIM, SPOUT = "!", "F"  # the fountain: its basin's stone rim (the street pack's planter, over the pond's water) and
-RIM_CHARS = "ACDEGIJM"  # its spout (drawn here, 2x2); the rim's kinds by the sides they join on
+# the town props (Kanto Town Props v0.1) by their letters in the plan; the footbridges with what is under them
+PROPS = {"F": "fountain_3x3", "u": "bench_wood_south", "n": "bench_wood_north", "a": "bench_wood_west",
+         "t": "flower_tub", "i": "litter_bin", "e": "bike_rack",
+         "x": "bridge_ew_1_west", "y": "bridge_ew_1_middle", "z": "bridge_ew_1_east",
+         "0": "bridge_ns_1_north", "m": "bridge_ns_1_middle", "j": "bridge_ns_1_south"}
+BRIDGES = {"x": ("bridge_ew_1_west", "cerulean_brick#15"), "y": ("bridge_ew_1_middle", "pond#5"),
+           "z": ("bridge_ew_1_east", "cerulean_brick#15"), "0": ("bridge_ns_1_north", "paving#15"),
+           "m": ("bridge_ns_1_middle", "pond#10"), "j": ("bridge_ns_1_south", "cobble#15")}
 SHARED_PAVED = {"Z": ("pokemon_center", "center"), "L": ("poke_mart", "mart")}
 BRICK_BANK = 10
 BRICK = {3: (104, 128, 168), 4: (136, 160, 200), 5: (176, 196, 224), 8: (72, 88, 120)}  # the pack's bricks, in blues
 COTTAGES = {"1": ("cottage_blue", 11, {2: (40, 56, 96), 4: (64, 96, 160), 5: (104, 144, 200), 13: (72, 80, 112)}),
             "2": ("cottage_teal", 12, {2: (32, 72, 80), 4: (48, 120, 128), 5: (88, 168, 168), 13: (64, 96, 96)})}
-
-
-def spout() -> np.ndarray:
-    """The fountain's spout (2x2 blocks), in the street pack's city palette (7 the outline, 11-13 the stone, 15 white,
-    3-5 the water's blues as Cerulean has them): a two-tiered stone pedestal, water falling from its top bowl into
-    the lower one and the basin. 0 is the basin's water."""
-    t = np.zeros((32, 32), np.uint8)
-    yy, xx = np.mgrid[0:32, 0:32]
-
-    def ellipse(cx, cy, rx, ry):
-        return ((xx - cx) / rx) ** 2 + ((yy - cy) / ry) ** 2 <= 1
-    low, low_in = ellipse(15.5, 23, 11, 5), ellipse(15.5, 22.5, 9, 3.5)
-    t[low] = 7
-    t[low & ~low_in] = 12
-    t[low_in] = 4                                     # the lower bowl's water
-    t[ellipse(15.5, 21.5, 7, 2) & low_in] = 5
-    t[11:23, 13:19] = 12                              # the stem
-    t[11:23, 13] = 13; t[11:23, 18] = 11; t[11:23, 12] = 7; t[11:23, 19] = 7
-    up, up_in = ellipse(15.5, 11, 7, 3), ellipse(15.5, 10.5, 5.5, 1.8)
-    t[up] = 7
-    t[up & ~up_in] = 13
-    t[up_in] = 4
-    t[2:10, 15:17] = 15; t[2:9, 14] = 5; t[2:9, 17] = 5   # the jet
-    t[1, 15:17] = 5
-    for k, (x, y) in enumerate([(13, 3), (11, 5), (9, 8), (8, 11), (7, 14), (6, 17), (18, 3), (20, 5), (22, 8),
-                                (23, 11), (24, 14), (25, 17)]):
-        t[y, x] = 15 if k % 3 else 5                  # the water falling either side
-        t[y + 1, x] = 5
-    return t
 
 
 def paved(idx) -> list[str]:
@@ -308,23 +286,13 @@ def main() -> None:
             g[y][x] = ch
     spec_mt += sh.write()
     fence_names = {ch: f"fence_paving#{m}" for m, ch in zip(sorted(fences), FENCE_CHARS)}
-    rims = {}  # the fountain's rim, by the sides that are fountain (its rim or its spout)
-    for y in range(MAP_H):
-        for x in range(MAP_W):
-            if g[y][x] == RIM:
-                m = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
-                        if g[y + dy][x + dx] in RIM + SPOUT)
-                rims.setdefault(m, []).append((x, y))
-    assert len(rims) <= len(RIM_CHARS), "more kinds of rim than characters for them"
-    sh = kit.Sheet("fountain", pals[BRICK_BANK], BRICK_BANK, HERE, HERE, cols=8)
-    for (m, cells), ch in zip(sorted(rims.items()), RIM_CHARS):
-        sh.add(f"fountain_rim#{m}", streets.block("planter", m, 0, city), tileset="secondary", ground="pond#15",
-               solid=True)
-        for x, y in cells:
-            g[y][x] = ch
-    sh.add("fountain_spout", spout(), tileset="secondary", ground="pond#15", solid=True)
-    spec_mt += sh.write()
-    fountain_names = {ch: f"fountain_rim#{m}" for m, ch in zip(sorted(rims), RIM_CHARS)}
+    # the town props (kit/props.py): each on the paving, or the footbridges over the canals (their middles on the
+    # water under them, their ends on the banks)
+    placed = {name: paved(props.frames(name)[0]) for ch, name in PROPS.items() if ch not in BRIDGES}
+    for ch, (name, under) in BRIDGES.items():
+        placed[name] = under
+    prop_entries, prop_anims = props.pieces(HERE, HERE, placed)
+    spec_mt += prop_entries
     for letter in "HX":
         b = load(letter)
         assert not set(HOUSE_SPARE) & set(np.unique(b.idx)), f"{b.name} uses an index kept for the cave"
@@ -347,7 +315,7 @@ def main() -> None:
                                        f"palette_{HOUSE_BANK}.pal", f"palette_{BRICK_BANK}.pal"]
                          + [f"palette_{b}.pal" for _, b, _ in COTTAGES.values()]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
@@ -362,9 +330,8 @@ def main() -> None:
                    "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
                    "P": {"pick": ["paving#15", "paving#15~1", "paving#15~2"], "joins": WALK}})  # plain, no edges
     legend.update({ch: {"name": n, "joins": WALK} for ch, n in fence_names.items()})
-    assert not set(fountain_names) & set(legend), "a fountain character the legend has"
-    legend.update({ch: {"name": n, "joins": WALK} for ch, n in fountain_names.items()})
-    legend[SPOUT] = {"name": "fountain_spout", "joins": WALK}
+    assert not set(PROPS) & set(legend), "a prop's character the legend has"
+    legend.update({ch: {"name": n, "joins": "~" if n.endswith("_middle") else WALK} for ch, n in PROPS.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

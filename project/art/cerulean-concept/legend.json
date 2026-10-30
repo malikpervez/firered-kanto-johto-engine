@@ -203,40 +203,56 @@
   "name": "fence_paving#10",
   "joins": "%"
  },
- "A": {
-  "name": "fountain_rim#3",
-  "joins": "%"
- },
- "C": {
-  "name": "fountain_rim#6",
-  "joins": "%"
- },
- "D": {
-  "name": "fountain_rim#7",
-  "joins": "%"
- },
- "E": {
-  "name": "fountain_rim#9",
-  "joins": "%"
- },
- "G": {
-  "name": "fountain_rim#11",
-  "joins": "%"
- },
- "I": {
-  "name": "fountain_rim#12",
-  "joins": "%"
- },
- "J": {
-  "name": "fountain_rim#13",
-  "joins": "%"
- },
- "M": {
-  "name": "fountain_rim#14",
-  "joins": "%"
- },
  "F": {
-  "name": "fountain_spout",
+  "name": "fountain_3x3",
+  "joins": "%"
+ },
+ "u": {
+  "name": "bench_wood_south",
+  "joins": "%"
+ },
+ "n": {
+  "name": "bench_wood_north",
+  "joins": "%"
+ },
+ "a": {
+  "name": "bench_wood_west",
+  "joins": "%"
+ },
+ "t": {
+  "name": "flower_tub",
+  "joins": "%"
+ },
+ "i": {
+  "name": "litter_bin",
+  "joins": "%"
+ },
+ "e": {
+  "name": "bike_rack",
+  "joins": "%"
+ },
+ "x": {
+  "name": "bridge_ew_1_west",
+  "joins": "%"
+ },
+ "y": {
+  "name": "bridge_ew_1_middle",
+  "joins": "~"
+ },
+ "z": {
+  "name": "bridge_ew_1_east",
+  "joins": "%"
+ },
+ "0": {
+  "name": "bridge_ns_1_north",
+  "joins": "%"
+ },
+ "m": {
+  "name": "bridge_ns_1_middle",
+  "joins": "~"
+ },
+ "j": {
+  "name": "bridge_ns_1_south",
   "joins": "%"
  }
 }

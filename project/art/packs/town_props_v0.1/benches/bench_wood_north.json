@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "id": "bench_wood_north",
+  "type": "static_prop",
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 2,
+    "height": 1
+  },
+  "size_px": [
+    32,
+    16
+  ],
+  "image": "tiles/bench_wood_north.png",
+  "palette": "kit_wood",
+  "palette_file": "../palettes/kit_wood.gpl",
+  "palette_bank": 2,
+  "palettes_8x8": [
+    [
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood"
+    ],
+    [
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": true,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 1,
+  "over_row_indices": [
+    0
+  ],
+  "over_rows_meaning": "Number of leading 16px block rows with upper-layer art; 0 means none. Collision is independent.",
+  "frame_count": 1,
+  "frames": [
+    "tiles/bench_wood_north.png"
+  ],
+  "frame_speed": 0,
+  "frame_speed_unit": "game_frames_at_60fps",
+  "tile_budget": 16,
+  "facing": "north",
+  "tiles_8x8": [
+    [
+      35,
+      44,
+      44,
+      35
+    ],
+    [
+      37,
+      4,
+      4,
+      37
+    ]
+  ],
+  "tile_flips": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      }
+    ]
+  ],
+  "unique_8x8_tiles": 4,
+  "tile_pool": "../tile_pools/tiles_f1.4bpp"
+}

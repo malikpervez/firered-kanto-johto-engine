@@ -161,11 +161,21 @@ rect(2, 13, 38, 13, "f")                            # the fence along the lake's
                                                     # from the bridge)
 rect(2, 14, 31, 15, "P"); rect(12, 16, 13, 16, "P"); rect(24, 16, 25, 16, "P")   # the promenade
 rect(25, 24, 38, 24, "f"); rect(25, 25, 25, 28, "f")   # round the Center's north and west sides
-rect(37, 31, 40, 34, "!"); rect(38, 32, 39, 33, "F")  # the fountain in the square, between the Center and the Gym:
-                                                     # its basin's stone rim (!) round the spout (F)
+# the town props (Kanto Town Props v0.1, kit/props.py): the fountain in the square between the Center and the Gym
+# (F), benches facing it (u its seat to the south, n to the north, a to the west), flower tubs (t) and a bin (i);
+# benches along the promenade looking at the lake; footbridges over the canals (x y z west to east over the one by
+# the road south, 0 m j north to south over the one by the road east)
+rect(37, 31, 39, 33, "F")
+rect(37, 29, 38, 29, "u"); rect(37, 35, 38, 35, "n"); rect(41, 31, 41, 32, "a")
+at(36, 35, "t"); at(40, 35, "t"); at(39, 35, "i")
+rect(13, 40, 14, 40, "e")                           # the bike rack by the Bike Shop
+for x in (6, 17, 28):
+    rect(x, 14, x + 1, 14, "n")
+at(18, 31, "x"); at(19, 31, "y"); at(20, 31, "z")
+at(47, 26, "0"); at(47, 27, "m"); at(47, 28, "j")
 BUILT = set("WKXZLHY12^")
 border = [(x, y) for y in range(H) for x in range(21) if g[y][x] == "p" and any(  # the west side only
-    g[y + dy][x + dx] not in "pP%~/@f!F" and g[y + dy][x + dx] not in BUILT
+    g[y + dy][x + dx] not in "pP%~/@fFunatiexyz0mj" and g[y + dy][x + dx] not in BUILT
     for dy in (-1, 0, 1) for dx in (-1, 0, 1) if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H)]
 for x, y in border:
     g[y][x] = "%"

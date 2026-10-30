@@ -4461,114 +4461,150 @@
    "elevation": null,
    "open": []
   },
-  "fountain_rim#3": {
+  "fountain_3x3": {
    "ids": [
-    819
+    819,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826,
+    827
    ],
-   "w": 1,
-   "h": 1,
+   "w": 3,
+   "h": 3,
    "solid": true,
    "elevation": null,
    "open": []
   },
-  "fountain_rim#6": {
+  "bench_wood_south": {
    "ids": [
-    820
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "fountain_rim#7": {
-   "ids": [
-    821
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "fountain_rim#9": {
-   "ids": [
-    822
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "fountain_rim#11": {
-   "ids": [
-    823
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "fountain_rim#12": {
-   "ids": [
-    824
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "fountain_rim#13": {
-   "ids": [
-    825
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "fountain_rim#14": {
-   "ids": [
-    826
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "fountain_spout": {
-   "ids": [
-    827,
     828,
-    829,
-    830
+    829
    ],
    "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_wood_north": {
+   "ids": [
+    830,
+    831
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_wood_west": {
+   "ids": [
+    832,
+    833
+   ],
+   "w": 1,
    "h": 2,
    "solid": true,
    "elevation": null,
    "open": []
   },
+  "litter_bin": {
+   "ids": [
+    834
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bike_rack": {
+   "ids": [
+    835,
+    836
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "flower_tub": {
+   "ids": [
+    837
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bridge_ew_1_west": {
+   "ids": [
+    838
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "bridge_ew_1_middle": {
+   "ids": [
+    839
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "bridge_ew_1_east": {
+   "ids": [
+    840
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "bridge_ns_1_north": {
+   "ids": [
+    841
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "bridge_ns_1_middle": {
+   "ids": [
+    842
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "bridge_ns_1_south": {
+   "ids": [
+    843
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
   "diglett_cave": {
    "ids": [
-    831,
-    832,
-    833,
-    834,
-    835,
-    836,
-    837,
-    838,
-    839,
-    840,
-    841,
-    842,
-    843,
     844,
     845,
     846,
@@ -4585,7 +4621,20 @@
     857,
     858,
     859,
-    860
+    860,
+    861,
+    862,
+    863,
+    864,
+    865,
+    866,
+    867,
+    868,
+    869,
+    870,
+    871,
+    872,
+    873
    ],
    "w": 6,
    "h": 5,
@@ -4597,7 +4646,7 @@
   },
   "hole": {
    "ids": [
-    861
+    874
    ],
    "w": 1,
    "h": 1,
@@ -4608,11 +4657,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 271
+  "secondary": 320
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 222
+  "secondary": 235
  },
  "animations": [
   {
@@ -4621,6 +4670,15 @@
    "tiles": 61,
    "frames": 8,
    "notes": []
+  },
+  {
+   "name": "CeruleanConcept_Fountain3X3",
+   "first_tile": 931,
+   "tiles": 29,
+   "frames": 4,
+   "notes": [
+    "gTileset_CeruleanConcept now animates through the new InitTilesetAnim_CeruleanConcept"
+   ]
   }
  ]
 }

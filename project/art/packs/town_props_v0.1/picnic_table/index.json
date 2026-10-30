@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "picnic_table",
+  "pieces": [
+    {
+      "name": "picnic_table",
+      "json": "picnic_table.json",
+      "image": "tiles/picnic_table.png"
+    }
+  ]
+}

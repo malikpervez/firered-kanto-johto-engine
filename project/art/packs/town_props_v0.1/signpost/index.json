@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "signpost",
+  "pieces": [
+    {
+      "name": "fingerpost",
+      "json": "fingerpost.json",
+      "image": "tiles/fingerpost.png"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "fountain",
+  "pieces": [
+    {
+      "name": "fountain_3x3",
+      "json": "fountain_3x3.json",
+      "image": "tiles/fountain_3x3_f1.png"
+    }
+  ]
+}
