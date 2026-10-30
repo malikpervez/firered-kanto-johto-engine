@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "id": "fountain_3x3",
+  "type": "animated_prop",
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 3,
+    "height": 3
+  },
+  "size_px": [
+    48,
+    48
+  ],
+  "image": "tiles/fountain_3x3_f1.png",
+  "palette": "kit_water",
+  "palette_file": "../palettes/kit_water.gpl",
+  "palette_bank": 1,
+  "palettes_8x8": [
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": true,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 1,
+  "over_row_indices": [
+    0
+  ],
+  "over_rows_meaning": "Number of leading 16px block rows with upper-layer art; 0 means none. Collision is independent.",
+  "frame_count": 4,
+  "frames": [
+    "tiles/fountain_3x3_f1.png",
+    "tiles/fountain_3x3_f2.png",
+    "tiles/fountain_3x3_f3.png",
+    "tiles/fountain_3x3_f4.png"
+  ],
+  "frame_speed": 16,
+  "frame_speed_unit": "game_frames_at_60fps",
+  "tile_budget": 24,
+  "animation_limit_changed_tile_positions": 8,
+  "no_ground_shadow": true,
+  "water_source": "Self-contained basin. Do not place pond-water metatiles underneath.",
+  "frame_cycle_game_frames": 64,
+  "tiles_8x8": [
+    [
+      0,
+      0,
+      25,
+      25,
+      0,
+      0
+    ],
+    [
+      0,
+      16,
+      62,
+      62,
+      16,
+      0
+    ],
+    [
+      1,
+      46,
+      80,
+      80,
+      47,
+      1
+    ],
+    [
+      55,
+      74,
+      77,
+      77,
+      75,
+      54
+    ],
+    [
+      58,
+      79,
+      72,
+      72,
+      78,
+      57
+    ],
+    [
+      3,
+      11,
+      14,
+      14,
+      10,
+      3
+    ]
+  ],
+  "tile_flips": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": true
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      }
+    ]
+  ],
+  "unique_8x8_tiles": 22,
+  "tile_pool": "../tile_pools/tiles_f1.4bpp"
+}

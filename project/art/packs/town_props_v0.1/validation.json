@@ -1,0 +1,1930 @@
+{
+  "status": "PASS",
+  "checks_passed": 367,
+  "checks_total": 367,
+  "palette_source": "Byte-exact copies of the two GPL files supplied on Drive. No new palette or palette reorder.",
+  "non_multiple_of_eight_values_preserved": {
+    "kit_water": [
+      9,
+      10,
+      11
+    ]
+  },
+  "animation": {
+    "fountain_3x3": {
+      "changed_tile_positions": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "changed_positions_count": 8,
+      "frame_duration_game_frames": 16,
+      "loop_game_frames": 64,
+      "loop_seconds": 1.0666666666666667
+    }
+  },
+  "tile_report": {
+    "counting": "Unique 8x8 palette-index graphics, H/V/HV flips merged; rotation is distinct. Animation streams occupy one runtime slot each, including their fixed pixels; blank tiles count. Palette selection stays in each tile attribute.",
+    "animation_storage_note": "Runtime budgets count each changing tile stream once, as requested. The separate all-frame graphic count reports ROM artwork storage, not simultaneous tileset occupancy. Do not deduplicate animated slots by the first frame alone.",
+    "pieces": {
+      "fountain_3x3": {
+        "footprint_blocks": [
+          3,
+          3
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 22,
+        "unique_first_frame_tiles": 22,
+        "unique_graphics_across_all_frames": 37,
+        "changing_tile_positions": 8,
+        "budget": 24
+      },
+      "bench_wood_south": {
+        "footprint_blocks": [
+          2,
+          1
+        ],
+        "palette": "kit_wood",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bench_wood_north": {
+        "footprint_blocks": [
+          2,
+          1
+        ],
+        "palette": "kit_wood",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bench_wood_east": {
+        "footprint_blocks": [
+          1,
+          2
+        ],
+        "palette": "kit_wood",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bench_wood_west": {
+        "footprint_blocks": [
+          1,
+          2
+        ],
+        "palette": "kit_wood",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bench_stone": {
+        "footprint_blocks": [
+          2,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 4
+      },
+      "flower_tub": {
+        "footprint_blocks": [
+          1,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 4
+      },
+      "litter_bin": {
+        "footprint_blocks": [
+          1,
+          1
+        ],
+        "palette": "kit_wood",
+        "unique_runtime_tiles": 3,
+        "unique_first_frame_tiles": 3,
+        "unique_graphics_across_all_frames": 3,
+        "changing_tile_positions": 0,
+        "budget": 4
+      },
+      "statue_guardian": {
+        "footprint_blocks": [
+          2,
+          2
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 9,
+        "unique_first_frame_tiles": 9,
+        "unique_graphics_across_all_frames": 9,
+        "changing_tile_positions": 0,
+        "budget": 12
+      },
+      "fingerpost": {
+        "footprint_blocks": [
+          1,
+          2
+        ],
+        "palette": "kit_wood",
+        "unique_runtime_tiles": 6,
+        "unique_first_frame_tiles": 6,
+        "unique_graphics_across_all_frames": 6,
+        "changing_tile_positions": 0,
+        "budget": 6
+      },
+      "picnic_table": {
+        "footprint_blocks": [
+          2,
+          2
+        ],
+        "palette": "kit_wood",
+        "unique_runtime_tiles": 8,
+        "unique_first_frame_tiles": 8,
+        "unique_graphics_across_all_frames": 8,
+        "changing_tile_positions": 0,
+        "budget": 10
+      },
+      "bike_rack": {
+        "footprint_blocks": [
+          2,
+          1
+        ],
+        "palette": "kit_wood",
+        "unique_runtime_tiles": 6,
+        "unique_first_frame_tiles": 6,
+        "unique_graphics_across_all_frames": 6,
+        "changing_tile_positions": 0,
+        "budget": 6
+      },
+      "bridge_ns_1_north": {
+        "footprint_blocks": [
+          1,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ns_1_middle": {
+        "footprint_blocks": [
+          1,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 2,
+        "unique_first_frame_tiles": 2,
+        "unique_graphics_across_all_frames": 2,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ns_1_south": {
+        "footprint_blocks": [
+          1,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ew_1_west": {
+        "footprint_blocks": [
+          1,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 3,
+        "unique_first_frame_tiles": 3,
+        "unique_graphics_across_all_frames": 3,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ew_1_middle": {
+        "footprint_blocks": [
+          1,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 2,
+        "unique_first_frame_tiles": 2,
+        "unique_graphics_across_all_frames": 2,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ew_1_east": {
+        "footprint_blocks": [
+          1,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 3,
+        "unique_first_frame_tiles": 3,
+        "unique_graphics_across_all_frames": 3,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ns_2_north": {
+        "footprint_blocks": [
+          2,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 5,
+        "unique_first_frame_tiles": 5,
+        "unique_graphics_across_all_frames": 5,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ns_2_middle": {
+        "footprint_blocks": [
+          2,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 3,
+        "unique_first_frame_tiles": 3,
+        "unique_graphics_across_all_frames": 3,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ns_2_south": {
+        "footprint_blocks": [
+          2,
+          1
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 5,
+        "unique_first_frame_tiles": 5,
+        "unique_graphics_across_all_frames": 5,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ew_2_west": {
+        "footprint_blocks": [
+          1,
+          2
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ew_2_middle": {
+        "footprint_blocks": [
+          1,
+          2
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 3,
+        "unique_first_frame_tiles": 3,
+        "unique_graphics_across_all_frames": 3,
+        "changing_tile_positions": 0,
+        "budget": 16
+      },
+      "bridge_ew_2_east": {
+        "footprint_blocks": [
+          1,
+          2
+        ],
+        "palette": "kit_water",
+        "unique_runtime_tiles": 4,
+        "unique_first_frame_tiles": 4,
+        "unique_graphics_across_all_frames": 4,
+        "changing_tile_positions": 0,
+        "budget": 16
+      }
+    },
+    "groups": {
+      "fountain": 22,
+      "benches": 14,
+      "flower_tub": 4,
+      "litter_bin": 3,
+      "statue": 9,
+      "signpost": 6,
+      "picnic_table": 8,
+      "bike_rack": 6,
+      "footbridge": 11,
+      "wooden_benches_all_facings": 10
+    },
+    "all_together": {
+      "unique_runtime_tiles": 82,
+      "unique_graphics_across_all_frames": 97,
+      "runtime_pool_bytes": 2624,
+      "animated_unique_slots": 5,
+      "per_palette_runtime_counts": {
+        "kit_water": 50,
+        "kit_wood": 33
+      },
+      "palette_inclusive_conservative_count": 83
+    },
+    "fountain_animation": {
+      "fountain_3x3": {
+        "changed_tile_positions": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "changed_positions_count": 8,
+        "frame_duration_game_frames": 16,
+        "loop_game_frames": 64,
+        "loop_seconds": 1.0666666666666667
+      }
+    },
+    "three_tile_option": [
+      "litter_bin"
+    ]
+  },
+  "checks": [
+    {
+      "check": "kit_water RGB and order match brief exactly",
+      "pass": true
+    },
+    {
+      "check": "kit_water GPL bytes unchanged from uploaded source",
+      "pass": true
+    },
+    {
+      "check": "kit_wood RGB and order match brief exactly",
+      "pass": true
+    },
+    {
+      "check": "kit_wood GPL bytes unchanged from uploaded source",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 collision rule",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 valid over rows",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 frame list",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f1.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f1.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f1.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f1.png index range",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f2.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f2.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f2.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f2.png index range",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f3.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f3.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f3.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f3.png index range",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f4.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f4.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f4.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3/fountain_3x3_f4.png index range",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 four distinct native frames",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 every frame lines up with first",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 at most eight changing tile positions",
+      "pass": true,
+      "positions": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "check": "fountain_3x3 stone basin and pedestal stay fixed",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 only water colors animate",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 speed matches 16 game frames",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south collision rule",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south frame list",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south/bench_wood_south.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south/bench_wood_south.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south/bench_wood_south.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south/bench_wood_south.png index range",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north collision rule",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north frame list",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north/bench_wood_north.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north/bench_wood_north.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north/bench_wood_north.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north/bench_wood_north.png index range",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east collision rule",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east frame list",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east/bench_wood_east.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east/bench_wood_east.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east/bench_wood_east.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east/bench_wood_east.png index range",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west collision rule",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west frame list",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west/bench_wood_west.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west/bench_wood_west.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west/bench_wood_west.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west/bench_wood_west.png index range",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bench_stone whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bench_stone per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bench_stone complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bench_stone collision rule",
+      "pass": true
+    },
+    {
+      "check": "bench_stone valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bench_stone frame list",
+      "pass": true
+    },
+    {
+      "check": "bench_stone/bench_stone.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bench_stone/bench_stone.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bench_stone/bench_stone.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bench_stone/bench_stone.png index range",
+      "pass": true
+    },
+    {
+      "check": "bench_stone per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "flower_tub whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "flower_tub per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "flower_tub complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "flower_tub collision rule",
+      "pass": true
+    },
+    {
+      "check": "flower_tub valid over rows",
+      "pass": true
+    },
+    {
+      "check": "flower_tub frame list",
+      "pass": true
+    },
+    {
+      "check": "flower_tub/flower_tub.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "flower_tub/flower_tub.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "flower_tub/flower_tub.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "flower_tub/flower_tub.png index range",
+      "pass": true
+    },
+    {
+      "check": "flower_tub per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "litter_bin whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "litter_bin per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "litter_bin complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "litter_bin collision rule",
+      "pass": true
+    },
+    {
+      "check": "litter_bin valid over rows",
+      "pass": true
+    },
+    {
+      "check": "litter_bin frame list",
+      "pass": true
+    },
+    {
+      "check": "litter_bin/litter_bin.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "litter_bin/litter_bin.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "litter_bin/litter_bin.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "litter_bin/litter_bin.png index range",
+      "pass": true
+    },
+    {
+      "check": "litter_bin per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian collision rule",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian valid over rows",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian frame list",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian/statue_guardian.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian/statue_guardian.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian/statue_guardian.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian/statue_guardian.png index range",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "fingerpost whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "fingerpost per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "fingerpost complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "fingerpost collision rule",
+      "pass": true
+    },
+    {
+      "check": "fingerpost valid over rows",
+      "pass": true
+    },
+    {
+      "check": "fingerpost frame list",
+      "pass": true
+    },
+    {
+      "check": "fingerpost/fingerpost.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "fingerpost/fingerpost.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "fingerpost/fingerpost.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "fingerpost/fingerpost.png index range",
+      "pass": true
+    },
+    {
+      "check": "fingerpost per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "picnic_table whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "picnic_table per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "picnic_table complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "picnic_table collision rule",
+      "pass": true
+    },
+    {
+      "check": "picnic_table valid over rows",
+      "pass": true
+    },
+    {
+      "check": "picnic_table frame list",
+      "pass": true
+    },
+    {
+      "check": "picnic_table/picnic_table.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "picnic_table/picnic_table.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "picnic_table/picnic_table.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "picnic_table/picnic_table.png index range",
+      "pass": true
+    },
+    {
+      "check": "picnic_table per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bike_rack whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bike_rack per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bike_rack complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bike_rack collision rule",
+      "pass": true
+    },
+    {
+      "check": "bike_rack valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bike_rack frame list",
+      "pass": true
+    },
+    {
+      "check": "bike_rack/bike_rack.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bike_rack/bike_rack.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bike_rack/bike_rack.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bike_rack/bike_rack.png index range",
+      "pass": true
+    },
+    {
+      "check": "bike_rack per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north/bridge_ns_1_north.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north/bridge_ns_1_north.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north/bridge_ns_1_north.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north/bridge_ns_1_north.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle/bridge_ns_1_middle.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle/bridge_ns_1_middle.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle/bridge_ns_1_middle.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle/bridge_ns_1_middle.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south/bridge_ns_1_south.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south/bridge_ns_1_south.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south/bridge_ns_1_south.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south/bridge_ns_1_south.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west/bridge_ew_1_west.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west/bridge_ew_1_west.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west/bridge_ew_1_west.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west/bridge_ew_1_west.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle/bridge_ew_1_middle.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle/bridge_ew_1_middle.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle/bridge_ew_1_middle.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle/bridge_ew_1_middle.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east/bridge_ew_1_east.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east/bridge_ew_1_east.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east/bridge_ew_1_east.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east/bridge_ew_1_east.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north/bridge_ns_2_north.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north/bridge_ns_2_north.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north/bridge_ns_2_north.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north/bridge_ns_2_north.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle/bridge_ns_2_middle.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle/bridge_ns_2_middle.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle/bridge_ns_2_middle.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle/bridge_ns_2_middle.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south/bridge_ns_2_south.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south/bridge_ns_2_south.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south/bridge_ns_2_south.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south/bridge_ns_2_south.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west/bridge_ew_2_west.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west/bridge_ew_2_west.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west/bridge_ew_2_west.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west/bridge_ew_2_west.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle/bridge_ew_2_middle.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle/bridge_ew_2_middle.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle/bridge_ew_2_middle.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle/bridge_ew_2_middle.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east whole-block footprint",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east per-tile palette grid",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east complete disjoint collision blocks",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east collision rule",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east valid over rows",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east frame list",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east/bridge_ew_2_east.png native 4bit PNG",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east/bridge_ew_2_east.png exact 16-entry palette",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east/bridge_ew_2_east.png index0 binary transparency",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east/bridge_ew_2_east.png index range",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east per-piece tile budget",
+      "pass": true
+    },
+    {
+      "check": "All four wooden bench facings within 16 tiles",
+      "pass": true
+    },
+    {
+      "check": "East and west benches are exact mirrors",
+      "pass": true
+    },
+    {
+      "check": "Complete footbridge group within 16 tiles",
+      "pass": true
+    },
+    {
+      "check": "All twelve bridge modules delivered",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 1 wide, 1 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 1x1 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 1 wide, 2 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 1x2 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 1 wide, 4 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 1x4 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 1 wide, 8 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 1x8 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 2 wide, 1 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 2x1 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 2 wide, 2 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 2x2 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 2 wide, 4 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 2x4 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 2 wide, 8 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ns 2x8 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 1 wide, 1 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 1x1 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 1 wide, 2 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 1x2 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 1 wide, 4 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 1x4 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 1 wide, 8 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 1x8 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 2 wide, 1 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 2x1 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 2 wide, 2 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 2x2 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 2 wide, 4 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 2x4 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 2 wide, 8 water blocks, continuous opaque deck",
+      "pass": true
+    },
+    {
+      "check": "Bridge ew 2x8 rails block sides only; no water baked in",
+      "pass": true
+    },
+    {
+      "check": "fountain_3x3 exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_south exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_north exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_east exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bench_wood_west exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bench_stone exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "flower_tub exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "litter_bin exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "statue_guardian exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "fingerpost exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "picnic_table exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bike_rack exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_north exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_middle exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_1_south exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_west exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_middle exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_1_east exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_north exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_middle exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ns_2_south exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_west exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_middle exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "bridge_ew_2_east exported 4bpp reconstructs every frame",
+      "pass": true
+    },
+    {
+      "check": "town_square 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "town_square nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "town_square_slate_blue_proof 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "town_square_slate_blue_proof nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "town_square_granite 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "town_square_granite nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "museum_front 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "museum_front nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "route_corner 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "route_corner nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "bike_shop 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "bike_shop nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "footbridge_canals 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "footbridge_canals nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "fountain_on_brick 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "fountain_on_brick nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "fountain_on_lawn 240x160 native viewport",
+      "pass": true
+    },
+    {
+      "check": "fountain_on_lawn nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "all_props_materials nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "props_gallery nearest-neighbor 3x",
+      "pass": true
+    },
+    {
+      "check": "Fountain strip four full-size frames at exact 4x",
+      "pass": true
+    }
+  ],
+  "not_tested": [
+    "Actual game import and whole-town tile allocation",
+    "Engine-specific bridge directional collision and layer priority",
+    "In-engine palette-bank assignment"
+  ],
+  "preview_substitutions": [
+    "Existing Pokemon Lab facade stands in for museum frontage. Existing Poke Mart stands in for shop frontage. Neither building changed.",
+    "Cerulean slate-blue ground is a compatibility proof using existing brick geometry and kit_water colors; the referenced screenshot was not available."
+  ]
+}

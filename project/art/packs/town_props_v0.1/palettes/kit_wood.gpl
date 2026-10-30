@@ -1,0 +1,20 @@
+GIMP Palette
+Name: Kit wood (bank 2)
+Columns: 16
+#
+  0   0   0	index 0  (transparent)
+ 40  24  24	index 1
+ 88  48  32	index 2
+136  80  48	index 3
+184 120  72	index 4
+224 168 112	index 5
+120  32  32	index 6
+176  56  48	index 7
+224  96  72	index 8
+248 152 120	index 9
+ 40  56  96	index 10
+ 96 144 200	index 11
+176 216 240	index 12
+240 232 208	index 13
+120 120 128	index 14
+184 184 184	index 15

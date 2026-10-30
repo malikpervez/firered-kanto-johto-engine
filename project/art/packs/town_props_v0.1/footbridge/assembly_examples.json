@@ -1,0 +1,206 @@
+[
+  {
+    "axis": "ns",
+    "deck_width_blocks": 1,
+    "canal_width_blocks": 1,
+    "pieces": [
+      "bridge_ns_1_north",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_south"
+    ]
+  },
+  {
+    "axis": "ns",
+    "deck_width_blocks": 1,
+    "canal_width_blocks": 2,
+    "pieces": [
+      "bridge_ns_1_north",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_south"
+    ]
+  },
+  {
+    "axis": "ns",
+    "deck_width_blocks": 1,
+    "canal_width_blocks": 4,
+    "pieces": [
+      "bridge_ns_1_north",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_south"
+    ]
+  },
+  {
+    "axis": "ns",
+    "deck_width_blocks": 1,
+    "canal_width_blocks": 8,
+    "pieces": [
+      "bridge_ns_1_north",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_middle",
+      "bridge_ns_1_south"
+    ]
+  },
+  {
+    "axis": "ns",
+    "deck_width_blocks": 2,
+    "canal_width_blocks": 1,
+    "pieces": [
+      "bridge_ns_2_north",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_south"
+    ]
+  },
+  {
+    "axis": "ns",
+    "deck_width_blocks": 2,
+    "canal_width_blocks": 2,
+    "pieces": [
+      "bridge_ns_2_north",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_south"
+    ]
+  },
+  {
+    "axis": "ns",
+    "deck_width_blocks": 2,
+    "canal_width_blocks": 4,
+    "pieces": [
+      "bridge_ns_2_north",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_south"
+    ]
+  },
+  {
+    "axis": "ns",
+    "deck_width_blocks": 2,
+    "canal_width_blocks": 8,
+    "pieces": [
+      "bridge_ns_2_north",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_middle",
+      "bridge_ns_2_south"
+    ]
+  },
+  {
+    "axis": "ew",
+    "deck_width_blocks": 1,
+    "canal_width_blocks": 1,
+    "pieces": [
+      "bridge_ew_1_west",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_east"
+    ]
+  },
+  {
+    "axis": "ew",
+    "deck_width_blocks": 1,
+    "canal_width_blocks": 2,
+    "pieces": [
+      "bridge_ew_1_west",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_east"
+    ]
+  },
+  {
+    "axis": "ew",
+    "deck_width_blocks": 1,
+    "canal_width_blocks": 4,
+    "pieces": [
+      "bridge_ew_1_west",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_east"
+    ]
+  },
+  {
+    "axis": "ew",
+    "deck_width_blocks": 1,
+    "canal_width_blocks": 8,
+    "pieces": [
+      "bridge_ew_1_west",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_middle",
+      "bridge_ew_1_east"
+    ]
+  },
+  {
+    "axis": "ew",
+    "deck_width_blocks": 2,
+    "canal_width_blocks": 1,
+    "pieces": [
+      "bridge_ew_2_west",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_east"
+    ]
+  },
+  {
+    "axis": "ew",
+    "deck_width_blocks": 2,
+    "canal_width_blocks": 2,
+    "pieces": [
+      "bridge_ew_2_west",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_east"
+    ]
+  },
+  {
+    "axis": "ew",
+    "deck_width_blocks": 2,
+    "canal_width_blocks": 4,
+    "pieces": [
+      "bridge_ew_2_west",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_east"
+    ]
+  },
+  {
+    "axis": "ew",
+    "deck_width_blocks": 2,
+    "canal_width_blocks": 8,
+    "pieces": [
+      "bridge_ew_2_west",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_middle",
+      "bridge_ew_2_east"
+    ]
+  }
+]

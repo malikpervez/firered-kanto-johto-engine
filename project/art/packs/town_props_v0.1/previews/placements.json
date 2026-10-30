@@ -1,0 +1,398 @@
+[
+  {
+    "scene": "town_square",
+    "piece": "fountain_3x3",
+    "block": [
+      6,
+      4
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "bench_wood_south",
+    "block": [
+      6,
+      2
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "bench_wood_north",
+    "block": [
+      7,
+      8
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "bench_wood_east",
+    "block": [
+      4,
+      5
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "bench_wood_west",
+    "block": [
+      10,
+      5
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "flower_tub",
+    "block": [
+      3,
+      2
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "flower_tub",
+    "block": [
+      11,
+      2
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "flower_tub",
+    "block": [
+      3,
+      8
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "flower_tub",
+    "block": [
+      11,
+      8
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "town_square",
+    "piece": "litter_bin",
+    "block": [
+      12,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "museum_front",
+    "piece": "statue_guardian",
+    "block": [
+      6,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "museum_front",
+    "piece": "bench_stone",
+    "block": [
+      2,
+      7
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "museum_front",
+    "piece": "bench_stone",
+    "block": [
+      11,
+      7
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "museum_front",
+    "piece": "flower_tub",
+    "block": [
+      3,
+      5
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "museum_front",
+    "piece": "flower_tub",
+    "block": [
+      11,
+      5
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "route_corner",
+    "piece": "fingerpost",
+    "block": [
+      5,
+      4
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "route_corner",
+    "piece": "picnic_table",
+    "block": [
+      9,
+      4
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "route_corner",
+    "piece": "bench_wood_south",
+    "block": [
+      9,
+      1
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "route_corner",
+    "piece": "litter_bin",
+    "block": [
+      12,
+      5
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "bike_shop",
+    "piece": "bike_rack",
+    "block": [
+      9,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "bike_shop",
+    "piece": "bench_wood_south",
+    "block": [
+      2,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "bike_shop",
+    "piece": "litter_bin",
+    "block": [
+      11,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "bike_shop",
+    "piece": "flower_tub",
+    "block": [
+      4,
+      4
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "bike_shop",
+    "piece": "flower_tub",
+    "block": [
+      9,
+      4
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ns_1_north",
+    "block": [
+      3,
+      1
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ns_1_middle",
+    "block": [
+      3,
+      2
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ns_1_south",
+    "block": [
+      3,
+      3
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ew_1_west",
+    "block": [
+      10,
+      2
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ew_1_middle",
+    "block": [
+      11,
+      2
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ew_1_east",
+    "block": [
+      12,
+      2
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ns_2_north",
+    "block": [
+      3,
+      5
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ns_2_middle",
+    "block": [
+      3,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ns_2_middle",
+    "block": [
+      3,
+      7
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ns_2_south",
+    "block": [
+      3,
+      8
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ew_2_west",
+    "block": [
+      9,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ew_2_middle",
+    "block": [
+      10,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ew_2_middle",
+    "block": [
+      11,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "footbridge_canals",
+    "piece": "bridge_ew_2_east",
+    "block": [
+      12,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "fountain_on_brick",
+    "piece": "fountain_3x3",
+    "block": [
+      6,
+      3
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "fountain_on_brick",
+    "piece": "bench_stone",
+    "block": [
+      3,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "fountain_on_brick",
+    "piece": "flower_tub",
+    "block": [
+      10,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "fountain_on_lawn",
+    "piece": "fountain_3x3",
+    "block": [
+      6,
+      3
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "fountain_on_lawn",
+    "piece": "bench_stone",
+    "block": [
+      3,
+      6
+    ],
+    "frame": 1
+  },
+  {
+    "scene": "fountain_on_lawn",
+    "piece": "flower_tub",
+    "block": [
+      10,
+      6
+    ],
+    "frame": 1
+  }
+]

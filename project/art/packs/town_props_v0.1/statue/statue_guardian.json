@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "id": "statue_guardian",
+  "type": "static_prop",
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 2,
+    "height": 2
+  },
+  "size_px": [
+    32,
+    32
+  ],
+  "image": "tiles/statue_guardian.png",
+  "palette": "kit_water",
+  "palette_file": "../palettes/kit_water.gpl",
+  "palette_bank": 1,
+  "palettes_8x8": [
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water",
+      "kit_water",
+      "kit_water"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": true,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 1,
+  "over_row_indices": [
+    0
+  ],
+  "over_rows_meaning": "Number of leading 16px block rows with upper-layer art; 0 means none. Collision is independent.",
+  "frame_count": 1,
+  "frames": [
+    "tiles/statue_guardian.png"
+  ],
+  "frame_speed": 0,
+  "frame_speed_unit": "game_frames_at_60fps",
+  "tile_budget": 12,
+  "subject": "Generic seated pointed-ear monster, not a named species.",
+  "tiles_8x8": [
+    [
+      15,
+      23,
+      24,
+      15
+    ],
+    [
+      5,
+      71,
+      71,
+      5
+    ],
+    [
+      22,
+      73,
+      73,
+      22
+    ],
+    [
+      39,
+      40,
+      40,
+      39
+    ]
+  ],
+  "tile_flips": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      },
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": true
+      }
+    ]
+  ],
+  "unique_8x8_tiles": 9,
+  "tile_pool": "../tile_pools/tiles_f1.4bpp"
+}

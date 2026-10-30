@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "flower_tub",
+  "pieces": [
+    {
+      "name": "flower_tub",
+      "json": "flower_tub.json",
+      "image": "tiles/flower_tub.png"
+    }
+  ]
+}

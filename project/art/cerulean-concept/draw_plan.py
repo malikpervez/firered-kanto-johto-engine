@@ -18,7 +18,9 @@ Cerulean is the town by the lake, where Nugget Bridge comes down from the north:
   its pool, the Friends' camp, the Pokémon shelter's corner and a garden behind a tree to cut.
 
 Letters: the kit's legend (T forest, . lawn, = cobblestones, : dirt, d the bridge's planks, ~ water, * flowers,
-b bushes, # fences, o rocks, l lamps (two blocks), S signs) and the buildings: W the Gym, Z the Pokémon Center, L the
+b bushes, # fences, o rocks, l lamps (two blocks), S signs, p the dressed-stone paving), % brick (the street
+pack's, in Cerulean's blues, without kerbs) and the buildings: 1 and 2 cottages without doors (the family house in
+blue and in teal), W the Gym, Z the Pokémon Center, L the
 Poké Mart, K the Bike Shop, H the two family houses, X the three small houses, Y Cerulean Cave's mouth.
 """
 from pathlib import Path
@@ -132,6 +134,51 @@ rect(43, 39, 53, 48, "#")
 rect(44, 40, 52, 47, ".")
 at(49, 39, ".")                     # its gap, where the tree to cut stands
 rect(45, 41, 47, 42, "*"); rect(50, 45, 52, 46, "*")
+
+# the town's detail (KR-93): the town paved (the kit's dressed stone), canals by the roads south and east (the one
+# south banked with Cerulean's blue brick), cottages without doors, lamps; west of the road south the blue brick
+# borders the paving where it meets anything else (the roads, the lawn, the forest, the hedges), the lakeside promenade plain paving (P) behind a fence along the
+# lake's shore, and a fence along the Pokémon Center's north and west sides (f: fences on the paving)
+for x0, y0, x1, y1 in ((2, 21, 20, 41), (25, 21, 44, 36), (45, 14, 53, 27), (41, 31, 53, 36), (25, 38, 42, 41),
+                       (25, 44, 42, 48), (52, 37, 53, 38)):
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            if g[y][x] in ".o:*":
+                g[y][x] = "p"
+rect(3, 22, 7, 25, "1"); rect(9, 22, 13, 25, "2"); rect(3, 27, 7, 30, "2"); rect(48, 22, 52, 25, "1")
+rect(18, 22, 18, 40, "%"); rect(19, 22, 19, 40, "~"); rect(20, 22, 20, 40, "%")   # the canal by the road south
+rect(45, 27, 53, 27, "~")                                                          # and by the road east
+# east of the road south the town is one paved square: the walk in front of the Center and the road to the Gym are
+# paving too, and no blue there
+for x, y in [(x, 29) for x in range(26, 32)] + [(x, y) for y in (37, 38) for x in range(25, 52)]:
+    if g[y][x] == "=":
+        g[y][x] = "p"
+for x, y in ((25, 34), (42, 34), (16, 36), (45, 25)):
+    rect(x, y - 1, x, y, "@")                       # lamps on the paving: the post's foot at x, y
+for x, y in ((25, 29), (51, 36), (14, 38), (19, 41)):
+    at(x, y, "/")                                   # the signs, on the paving (the town sign moves off the fence)
+rect(2, 13, 38, 13, "f")                            # the fence along the lake's shore (the cave's island by Surf
+                                                    # from the bridge)
+rect(2, 14, 31, 15, "P"); rect(12, 16, 13, 16, "P"); rect(24, 16, 25, 16, "P")   # the promenade
+rect(25, 24, 38, 24, "f"); rect(25, 25, 25, 28, "f")   # round the Center's north and west sides
+# the town props (Kanto Town Props v0.1, kit/props.py): the fountain in the square between the Center and the Gym
+# (F), benches facing it (u its seat to the south, n to the north, a to the west), flower tubs (t) and a bin (i);
+# benches along the promenade looking at the lake; footbridges over the canals (x y z west to east over the one by
+# the road south, 0 m j north to south over the one by the road east)
+rect(37, 31, 39, 33, "F")
+rect(37, 29, 38, 29, "u"); rect(37, 35, 38, 35, "n"); rect(41, 31, 41, 32, "a")
+at(36, 35, "t"); at(40, 35, "t"); at(39, 35, "i")
+rect(13, 40, 14, 40, "e")                           # the bike rack by the Bike Shop
+for x in (6, 17, 28):
+    rect(x, 14, x + 1, 14, "n")
+at(18, 31, "x"); at(19, 31, "y"); at(20, 31, "z")
+at(47, 26, "0"); at(47, 27, "m"); at(47, 28, "j")
+BUILT = set("WKXZLHY12^")
+border = [(x, y) for y in range(H) for x in range(21) if g[y][x] == "p" and any(  # the west side only
+    g[y + dy][x + dx] not in "pP%~/@fFunatiexyz0mj" and g[y + dy][x + dx] not in BUILT
+    for dy in (-1, 0, 1) for dx in (-1, 0, 1) if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H)]
+for x, y in border:
+    g[y][x] = "%"
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

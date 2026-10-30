@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "id": "bridge_ns_1_middle",
+  "type": "walkable_bridge",
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "size_px": [
+    16,
+    16
+  ],
+  "image": "tiles/bridge_ns_1_middle.png",
+  "palette": "kit_water",
+  "palette_file": "../palettes/kit_water.gpl",
+  "palette_bank": 1,
+  "palettes_8x8": [
+    [
+      "kit_water",
+      "kit_water"
+    ],
+    [
+      "kit_water",
+      "kit_water"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": false,
+  "solid_blocks": [],
+  "walkable_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "over_rows": 0,
+  "over_row_indices": [],
+  "over_rows_meaning": "Number of leading 16px block rows with upper-layer art; 0 means none. Collision is independent.",
+  "frame_count": 1,
+  "frames": [
+    "tiles/bridge_ns_1_middle.png"
+  ],
+  "frame_speed": 0,
+  "frame_speed_unit": "game_frames_at_60fps",
+  "tile_budget": 16,
+  "orientation": "north_south",
+  "segment": "middle",
+  "deck_clear_width_px": 8,
+  "collision_edges": [
+    {
+      "block": [
+        0,
+        0
+      ],
+      "blocked_directions": [
+        "west"
+      ]
+    },
+    {
+      "block": [
+        0,
+        0
+      ],
+      "blocked_directions": [
+        "east"
+      ]
+    }
+  ],
+  "parapet_collision_rects_px": [
+    [
+      1,
+      0,
+      3,
+      16
+    ],
+    [
+      12,
+      0,
+      3,
+      16
+    ]
+  ],
+  "collision_note": "Walkable metatiles with side-edge collision. Do not mark the whole rail-bearing deck block solid.",
+  "tiles_8x8": [
+    [
+      66,
+      68
+    ],
+    [
+      66,
+      68
+    ]
+  ],
+  "tile_flips": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ]
+  ],
+  "unique_8x8_tiles": 2,
+  "tile_pool": "../tile_pools/tiles_f1.4bpp"
+}

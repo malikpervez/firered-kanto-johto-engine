@@ -25,10 +25,18 @@ the bottom at columns 21–24. It has:
 Every warp keeps its number and the people their order. The Bike Shop's three warps are one door; the hole and the
 back door are lawn you step on and walk south from into the house (they aren't drawn yet).
 
+**The streets (KR-93).** The town is paved: the kit's dressed stone in the streets' blocks, every building standing
+on it (the Center and the Mart are the town's own copies), lawn only in the gardens, the yards, the backyard, the
+shelter's field and the island. West of the road south its slate-blue brick borders the paving; east of it the town is
+one grey square from the Center to the Gym. Canals run by the roads south and east, each with a footbridge; a fence
+runs along the lake behind the promenade (the island is reached by Surf from the bridge) and round the Center's north
+and west sides. Four cottages without doors stand in the west and east. The fountain in the square, the benches, tubs,
+bin and bike rack are Kanto Town Props v0.1 (`../packs/town_props_v0.1`, `../kit/props.py`); the fountain's water
+animates.
+
 Its tileset's palettes: bank 7 the Gym and the Bike Shop, bank 9 the houses and the cave mouth (drawn in the houses'
-palette, the two colours they don't use being the cave's), bank 8 the kit's plants. 10–12 and the primary's unused
-bank 4 hold the seams to Routes 5, 9 and 24, which aren't rebuilt yet; Route 5's strip is drawn a little off in
-colour (one of its palettes in its nearest colours) until it is.
+palette, the two colours they don't use being the cave's), bank 8 the kit's plants, 10 the brick, 11 and 12 the
+cottages; the props are drawn in the kit's water and wood palettes (banks 1 and 2). 320 of its 384 tiles are used.
 
 `make_art.py` checks the town's rules on the map it builds: only the four exits open onto the edges; with the tree
 standing, the Rocket and his triggers in his way and the lass and her Slowbro in the neck, the town is everything but

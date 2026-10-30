@@ -54,4 +54,5 @@ void InitTilesetAnim_AlolaIslands(void);
 void InitTilesetAnim_MtEmber_Hns(void);
 
 void InitTilesetAnim_PalletConcept_General(void);
+void InitTilesetAnim_CeruleanConcept(void);
 #endif // GUARD_TILESET_ANIMS_H

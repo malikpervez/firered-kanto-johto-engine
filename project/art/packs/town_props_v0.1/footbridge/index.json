@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "footbridge",
+  "pieces": [
+    {
+      "name": "bridge_ns_1_north",
+      "json": "bridge_ns_1_north.json",
+      "image": "tiles/bridge_ns_1_north.png"
+    },
+    {
+      "name": "bridge_ns_1_middle",
+      "json": "bridge_ns_1_middle.json",
+      "image": "tiles/bridge_ns_1_middle.png"
+    },
+    {
+      "name": "bridge_ns_1_south",
+      "json": "bridge_ns_1_south.json",
+      "image": "tiles/bridge_ns_1_south.png"
+    },
+    {
+      "name": "bridge_ew_1_west",
+      "json": "bridge_ew_1_west.json",
+      "image": "tiles/bridge_ew_1_west.png"
+    },
+    {
+      "name": "bridge_ew_1_middle",
+      "json": "bridge_ew_1_middle.json",
+      "image": "tiles/bridge_ew_1_middle.png"
+    },
+    {
+      "name": "bridge_ew_1_east",
+      "json": "bridge_ew_1_east.json",
+      "image": "tiles/bridge_ew_1_east.png"
+    },
+    {
+      "name": "bridge_ns_2_north",
+      "json": "bridge_ns_2_north.json",
+      "image": "tiles/bridge_ns_2_north.png"
+    },
+    {
+      "name": "bridge_ns_2_middle",
+      "json": "bridge_ns_2_middle.json",
+      "image": "tiles/bridge_ns_2_middle.png"
+    },
+    {
+      "name": "bridge_ns_2_south",
+      "json": "bridge_ns_2_south.json",
+      "image": "tiles/bridge_ns_2_south.png"
+    },
+    {
+      "name": "bridge_ew_2_west",
+      "json": "bridge_ew_2_west.json",
+      "image": "tiles/bridge_ew_2_west.png"
+    },
+    {
+      "name": "bridge_ew_2_middle",
+      "json": "bridge_ew_2_middle.json",
+      "image": "tiles/bridge_ew_2_middle.png"
+    },
+    {
+      "name": "bridge_ew_2_east",
+      "json": "bridge_ew_2_east.json",
+      "image": "tiles/bridge_ew_2_east.png"
+    }
+  ]
+}

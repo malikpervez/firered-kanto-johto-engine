@@ -12,7 +12,8 @@
  },
  ",": "lawn_flowers",
  "=": {
-  "auto": "cobble"
+  "auto": "cobble",
+  "joins": "%"
  },
  ":": {
   "auto": "dirt"
@@ -93,7 +94,8 @@
   "elevation": 1
  },
  "p": {
-  "auto": "paving"
+  "auto": "paving",
+  "joins": "%"
  },
  "+": {
   "pick": [
@@ -123,12 +125,134 @@
   "with": "rock_b",
   "elevation": 1
  },
- "Z": "pokemon_center",
- "L": "poke_mart",
- "W": "viridian_gym",
- "K": "trainer_school",
+ "Z": {
+  "name": "pokemon_center_paved",
+  "joins": "%"
+ },
+ "L": {
+  "name": "poke_mart_paved",
+  "joins": "%"
+ },
+ "W": {
+  "name": "viridian_gym",
+  "joins": "%"
+ },
+ "K": {
+  "name": "trainer_school",
+  "joins": "%"
+ },
  "H": "house_family",
- "X": "house_gardener",
+ "X": {
+  "name": "house_gardener",
+  "joins": "%"
+ },
  "Y": "diglett_cave",
- "^": "hole"
+ "^": "hole",
+ "1": {
+  "name": "cottage_blue",
+  "joins": "%"
+ },
+ "2": {
+  "name": "cottage_teal",
+  "joins": "%"
+ },
+ "@": {
+  "name": "lamp_paving",
+  "joins": "%"
+ },
+ "/": {
+  "name": "sign_paving",
+  "joins": "%"
+ },
+ "%": {
+  "pick": [
+   "cerulean_brick#15",
+   "cerulean_brick#15~1",
+   "cerulean_brick#15~2"
+  ]
+ },
+ "P": {
+  "pick": [
+   "paving#15",
+   "paving#15~1",
+   "paving#15~2"
+  ],
+  "joins": "%"
+ },
+ "3": {
+  "name": "fence_paving#1",
+  "joins": "%"
+ },
+ "4": {
+  "name": "fence_paving#2",
+  "joins": "%"
+ },
+ "5": {
+  "name": "fence_paving#5",
+  "joins": "%"
+ },
+ "6": {
+  "name": "fence_paving#6",
+  "joins": "%"
+ },
+ "7": {
+  "name": "fence_paving#8",
+  "joins": "%"
+ },
+ "8": {
+  "name": "fence_paving#10",
+  "joins": "%"
+ },
+ "F": {
+  "name": "fountain_3x3",
+  "joins": "%"
+ },
+ "u": {
+  "name": "bench_wood_south",
+  "joins": "%"
+ },
+ "n": {
+  "name": "bench_wood_north",
+  "joins": "%"
+ },
+ "a": {
+  "name": "bench_wood_west",
+  "joins": "%"
+ },
+ "t": {
+  "name": "flower_tub",
+  "joins": "%"
+ },
+ "i": {
+  "name": "litter_bin",
+  "joins": "%"
+ },
+ "e": {
+  "name": "bike_rack",
+  "joins": "%"
+ },
+ "x": {
+  "name": "bridge_ew_1_west",
+  "joins": "%"
+ },
+ "y": {
+  "name": "bridge_ew_1_middle",
+  "joins": "~"
+ },
+ "z": {
+  "name": "bridge_ew_1_east",
+  "joins": "%"
+ },
+ "0": {
+  "name": "bridge_ns_1_north",
+  "joins": "%"
+ },
+ "m": {
+  "name": "bridge_ns_1_middle",
+  "joins": "~"
+ },
+ "j": {
+  "name": "bridge_ns_1_south",
+  "joins": "%"
+ }
 }

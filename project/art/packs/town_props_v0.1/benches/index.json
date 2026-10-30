@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "benches",
+  "pieces": [
+    {
+      "name": "bench_wood_south",
+      "json": "bench_wood_south.json",
+      "image": "tiles/bench_wood_south.png"
+    },
+    {
+      "name": "bench_wood_north",
+      "json": "bench_wood_north.json",
+      "image": "tiles/bench_wood_north.png"
+    },
+    {
+      "name": "bench_wood_east",
+      "json": "bench_wood_east.json",
+      "image": "tiles/bench_wood_east.png"
+    },
+    {
+      "name": "bench_wood_west",
+      "json": "bench_wood_west.json",
+      "image": "tiles/bench_wood_west.png"
+    },
+    {
+      "name": "bench_stone",
+      "json": "bench_stone.json",
+      "image": "tiles/bench_stone.png"
+    }
+  ]
+}

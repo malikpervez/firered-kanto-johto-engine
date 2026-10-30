@@ -12,7 +12,12 @@ The pieces: the kit's, the Pokémon Center and the Mart (the kit's), Viridian's 
   three old routes need every bank from 10, so the cave can't have its own;
 - the two holes into houses (the robbed house's and the badge house's back door) are lawn you step down from into
   the house (an arrow warp south: stand on it and walk into the wall).
-Bank 8 is the kit's plants palette; 10-12 stay free for the seams to Routes 5, 9 and 24 (not rebuilt yet).
+Bank 8 is the kit's plants palette. The town is paved (KR-93): the kit's dressed stone round the buildings, which stand
+on it (the paving under their see-through blocks; the Center and the Mart are the town's own copies of the kit's),
+and the street pack's brick, in Cerulean's blues without its kerbs (bank 10), for the lakeside promenade, the sidewalk
+down the road south, the ring round the pool and the paths; four cottages without doors are the family house in
+blue (bank 11) and teal (bank 12), no new tiles. The paving, the brick, the cobbles and what stands in them are one
+material for each other's edges.
 
 Run from the repository root:  python3 project/art/cerulean-concept/make_art.py
 It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to itself;
@@ -29,6 +34,8 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
+import streets
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -50,7 +57,54 @@ WEST = [(0, y) for y in range(17, 21)]
 EAST = [(MAP_W - 1, y) for y in range(28, 31)]
 SOUTH = [(x, MAP_H - 1) for x in range(21, 25)]
 WATER = set("~vr")
-SOLID = set("T#bRoklSBcw_~vrWKHXZLY")
+SOLID = set("T#bRoklSBcw_~vrWKHXZLY12@/fFunatie")
+# the paving and the brick: what stands on them (the buildings but the two family houses and the cave, the lamps and
+# the signs) and the cobbles are one material with them, so no edge between
+WALK = "%"
+PAVED = "WKXZL12@/"  # what stands on the paving
+FENCE = "f"          # a fence on the paving (the kit's fence, its own blocks: on the paving, one with it)
+FENCE_CHARS = "3456789"
+# the town props (Kanto Town Props v0.1) by their letters in the plan; the footbridges with what is under them
+PROPS = {"F": "fountain_3x3", "u": "bench_wood_south", "n": "bench_wood_north", "a": "bench_wood_west",
+         "t": "flower_tub", "i": "litter_bin", "e": "bike_rack",
+         "x": "bridge_ew_1_west", "y": "bridge_ew_1_middle", "z": "bridge_ew_1_east",
+         "0": "bridge_ns_1_north", "m": "bridge_ns_1_middle", "j": "bridge_ns_1_south"}
+BRIDGES = {"x": ("bridge_ew_1_west", "cerulean_brick#15"), "y": ("bridge_ew_1_middle", "pond#5"),
+           "z": ("bridge_ew_1_east", "cerulean_brick#15"), "0": ("bridge_ns_1_north", "paving#15"),
+           "m": ("bridge_ns_1_middle", "pond#10"), "j": ("bridge_ns_1_south", "cobble#15")}
+SHARED_PAVED = {"Z": ("pokemon_center", "center"), "L": ("poke_mart", "mart")}
+BRICK_BANK = 10
+BRICK = {3: (104, 128, 168), 4: (136, 160, 200), 5: (176, 196, 224), 8: (72, 88, 120)}  # the pack's bricks, in blues
+COTTAGES = {"1": ("cottage_blue", 11, {2: (40, 56, 96), 4: (64, 96, 160), 5: (104, 144, 200), 13: (72, 80, 112)}),
+            "2": ("cottage_teal", 12, {2: (32, 72, 80), 4: (48, 120, 128), 5: (88, 168, 168), 13: (64, 96, 96)})}
+
+
+def paved(idx) -> list[str]:
+    """A picture's grounds on the paving, block by block (row by row): the paving under those with see-through
+    pixels, the lawn (as before, so the same blocks) under the rest."""
+    return ["paving#15" if (idx[y:y + 16, x:x + 16] == 0).any() else "grass"
+            for y in range(0, idx.shape[0], 16) for x in range(0, idx.shape[1], 16)]
+
+
+def cottage(idx):
+    """The family house (5x4 blocks, door at 2,3) without its door, as Pewter's cottages: its porch's awning gone (the
+    wall's 8x8 cell beside it), and the right-hand window copied into the door's place."""
+    out = idx.copy()
+
+    def cell(r, c):
+        return idx[r * 8:r * 8 + 8, c * 8:c * 8 + 8]
+
+    def put(r, c, t):
+        out[r * 8:r * 8 + 8, c * 8:c * 8 + 8] = t
+    for c in (3, 4, 5, 6):
+        put(4, c, cell(5, 3))
+    for r in (5, 6):
+        for k, c in enumerate((7, 8)):
+            put(r, 4 + k, cell(r, c))
+    for c in (4, 5):
+        put(7, c, cell(7, 3))
+    put(4, 4, cell(4, 7)); put(4, 5, cell(4, 8))
+    return out
 
 
 def _mouth() -> buildings.Building:
@@ -166,7 +220,7 @@ def check(g, d) -> None:
             assert (x, y + 1) in walk, f"the door of {letter} at ({x},{y}) can't be walked into"
     for y in range(MAP_H):
         for x in range(MAP_W):
-            if g[y][x] == "S":
+            if g[y][x] in "S/":
                 assert (x, y + 1) in walk, f"the sign at ({x},{y}) can't be read"
     for x, y in HOLES:
         assert g[y + 1][x] in SOLID - WATER, f"the hole at ({x},{y}) must be against a wall"
@@ -189,8 +243,56 @@ def main() -> None:
         if pals[bank] != b.palette:
             raise SystemExit(f"{folder.name}: its palette isn't the one bank {bank} has")
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=b.idx.shape[1] // 16)
-        sh.add(b.name, b.idx, tileset="secondary", **b.entry())
+        sh.add(b.name, b.idx, tileset="secondary", **dict(b.entry(), **({"ground": paved(b.idx)}
+                                                                         if letter in PAVED else {})))
         spec_mt += sh.write()
+    for letter, (name, pal) in SHARED_PAVED.items():  # the kit's Center and Mart, the town's own copies on the paving
+        b = kit.SHARED_BUILDINGS[name][0]
+        sh = kit.Sheet(f"{name}_paved", kit.PALS[pal], kit.BANK[pal], HERE, HERE, cols=b.idx.shape[1] // 16)
+        sh.add(f"{name}_paved", b.idx, tileset="secondary", **dict(b.entry(), ground=paved(b.idx)))
+        spec_mt += sh.write()
+    house = load("H")
+    for letter, (name, bank, changes) in COTTAGES.items():
+        pals[bank] = buildings.recolour(house.palette, changes)
+        sh = kit.Sheet(name, pals[bank], bank, HERE, HERE, cols=house.idx.shape[1] // 16)
+        sh.add(name, cottage(house.idx), tileset="secondary", solid=True, ground=paved(cottage(house.idx)),
+               dedupe=True)
+        spec_mt += sh.write()
+    city = streets.city_palette()
+    pals[BRICK_BANK] = [BRICK.get(i, c) for i, c in enumerate(city)]
+    sh = kit.Sheet("cerulean_brick", pals[BRICK_BANK], BRICK_BANK, HERE, HERE, cols=8)
+    sh.add("cerulean_brick#15", streets.block("brick", 15, 0, city), tileset="secondary", ground="grass")
+    for k, v in enumerate(("center_b", "center_c"), 1):  # the plain brick's variants, spread by position
+        sh.add(f"cerulean_brick#15~{k}", streets.piece("brick", v, city), tileset="secondary", ground="grass")
+    spec_mt += sh.write()
+    sh = kit.Sheet("lamp_paving", kit.PALS["plants"], kit.BANK["plants"], HERE, HERE, cols=1)
+    sh.add("lamp_paving", kit.lamp(), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
+    spec_mt += sh.write()
+    sh = kit.Sheet("sign_paving", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=1)
+    sh.add("sign_paving", kit.sign(), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
+    spec_mt += sh.write()
+    fences = {}  # the fences on the paving, by the sides they join on (1 N, 2 E, 4 S, 8 W)
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            if g[y][x] == FENCE:
+                m = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                        if 0 <= x + dx < MAP_W and 0 <= y + dy < MAP_H and g[y + dy][x + dx] == FENCE)
+                fences.setdefault(m, []).append((x, y))
+    assert len(fences) <= len(FENCE_CHARS), "more kinds of fence than characters for them"
+    sh = kit.Sheet("fence_paving", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=8)
+    for (m, cells), ch in zip(sorted(fences.items()), FENCE_CHARS):
+        sh.add(f"fence_paving#{m}", kit.fence(m), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
+        for x, y in cells:
+            g[y][x] = ch
+    spec_mt += sh.write()
+    fence_names = {ch: f"fence_paving#{m}" for m, ch in zip(sorted(fences), FENCE_CHARS)}
+    # the town props (kit/props.py): each on the paving, or the footbridges over the canals (their middles on the
+    # water under them, their ends on the banks)
+    placed = {name: paved(props.frames(name)[0]) for ch, name in PROPS.items() if ch not in BRIDGES}
+    for ch, (name, under) in BRIDGES.items():
+        placed[name] = under
+    prop_entries, prop_anims = props.pieces(HERE, HERE, placed)
+    spec_mt += prop_entries
     for letter in "HX":
         b = load(letter)
         assert not set(HOUSE_SPARE) & set(np.unique(b.idx)), f"{b.name} uses an index kept for the cave"
@@ -210,9 +312,10 @@ def main() -> None:
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{SCHOOL_BANK}.pal", base["secondary_palettes"][8],
-                                       f"palette_{HOUSE_BANK}.pal"]},
+                                       f"palette_{HOUSE_BANK}.pal", f"palette_{BRICK_BANK}.pal"]
+                         + [f"palette_{b}.pal" for _, b, _ in COTTAGES.values()]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
@@ -220,6 +323,15 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN}, Y="diglett_cave")
     legend["^"] = "hole"
+    legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **{"@": "lamp_paving", "/": "sign_paving"},
+                  **{k: f"{n}_paved" for k, (n, _) in SHARED_PAVED.items()})
+    legend.update({k: {"name": legend[k], "joins": WALK} for k in PAVED})
+    legend.update({WALK: {"pick": ["cerulean_brick#15", "cerulean_brick#15~1", "cerulean_brick#15~2"]},
+                   "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
+                   "P": {"pick": ["paving#15", "paving#15~1", "paving#15~2"], "joins": WALK}})  # plain, no edges
+    legend.update({ch: {"name": n, "joins": WALK} for ch, n in fence_names.items()})
+    assert not set(PROPS) & set(legend), "a prop's character the legend has"
+    legend.update({ch: {"name": n, "joins": "~" if n.endswith("_middle") else WALK} for ch, n in PROPS.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")
