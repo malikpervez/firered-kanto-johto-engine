@@ -57,13 +57,15 @@ PROPS = [("fountain_3x3", 33, 17, "setts"), ("bench_wood_west", 37, 17, "setts")
 # the harbour's ground (Kanto Harbour Textures v0.1, kit/harbour.py): two squares in fan setts, each with the block its
 # pattern starts from: the one before the Center and the Mart, with a band of the setts over the pavement running on
 # from its foot along the north of the street both ways (where lawn was); and the fountain's between the houses south
-# of the street (in place of its lawn, flowers and bushes; its pattern runs on into the promenade's flags); the main
+# of the street (in place of its lawn, flowers and bushes; its pattern runs on into the promenade's flags), with the
+# same band along the south of the street (the Gym yard's fence standing on it); the main
 # street the kit's asphalt with a strip of pavement each side (then the cobble Route 11's road is, column 57 the
 # join); the promenade in quay flags, the quay wall round the water and the docks; the details, the mooring ring in
 # the coping and a ladder
 BAND = [(x, 10) for x in list(range(6, 24)) + list(range(43, 56))]
+SOUTH_BAND = [(x, 15) for x in list(range(6, 25)) + list(range(44, 56))]
 SQUARES = [([(x, y) for y in range(7, 11) for x in range(24, 43)] + BAND, (24, 7)),
-           ([(x, y) for y in range(15, 22) for x in range(25, 44)], (25, 16))]
+           ([(x, y) for y in range(15, 22) for x in range(25, 44)] + SOUTH_BAND, (25, 16))]
 STREET = {11: "n", 12: "+", 13: "-", 14: "u"}  # by row, columns 6-56: pavement over asphalt, the road, its line
 PROMENADE = [(x, 22) for x in range(18, 56)] + [(x, 23) for x in range(7, 56)]
 HARBOUR_DETAILS = [("mooring_bollard", 20, 23), ("mooring_bollard", 54, 23), ("harbour_drain", 30, 22),
@@ -153,6 +155,12 @@ def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
     of a piece where the ground differs: "piece~2"); the signs on it are found again after it (check reads them)."""
     letter_of = {(v if isinstance(v, str) else v["name"]): k for k, v in prop_legend.items()}
     signs = {(x, y) for cells, _ in SQUARES for x, y in cells if g[y][x] == "S"}
+    fenced = {(x, y) for cells, _ in SQUARES for x, y in cells if g[y][x] == "#"}  # the fence stands on the band
+    fence_mask = {(x, y): sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                              if not (0 <= x + dx < MAP_W and 0 <= y + dy < MAP_H) or g[y + dy][x + dx] == "#")
+                  for x, y in fenced}  # as pae map paint draws the fence: its neighbours that are fence too
+    for x, y in fenced:
+        g[y][x] = "."
     for cells, _ in SQUARES:
         assert all(g[y][x] in "=.*b" or g[y][x] in prop_legend or (x, y) in signs for x, y in cells), \
             "a square takes the cobble, lawn, flowers and bushes there, and keeps its props and signs"
@@ -182,6 +190,12 @@ def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
             g[yy][xx] = letter_of[name]
     for x, y in signs:
         g[y][x] = "S"
+    hb["fences"] = {}
+    for x, y in sorted(fenced):  # the fence again, each over the band's block there; fence for its neighbours
+        name = f"fence#{fence_mask[x, y]}_on_{hb['ground'][x, y]}"
+        ch = hb["fences"].setdefault(name, (chr(0x180 + len(hb["fences"])), fence_mask[x, y], hb["ground"][x, y]))[0]
+        g[y][x] = ch
+        SOLID.add(ch)
     SOLID.update(hb["solid"] | hb["water"])
     WATER.update(hb["water"])
     hb["signs"] = signs
@@ -232,6 +246,8 @@ def main() -> None:
     sh = kit.Sheet("signs_harbour", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=4)
     for ground, ch in signs_on.items():
         sh.add(f"sign_on_{ground}", kit.sign(), tileset="secondary", ground=ground, solid=True)
+    for name, (ch, m, ground) in hb["fences"].items():
+        sh.add(name, kit.fence(m), tileset="secondary", ground=ground, solid=True, dedupe=True)
     spec_mt += sh.write()
     prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
     spec_mt += prop_entries
@@ -258,6 +274,7 @@ def main() -> None:
     legend.update(hb["legend"], n={"name": "pavement_to_asphalt_S", "joins": "="},
                   u={"name": "pavement_to_asphalt_N", "joins": "="},
                   **{ch: f"sign_on_{ground}" for ground, ch in signs_on.items()},
+                  **{ch: {"name": name, "joins": "#"} for name, (ch, _, _) in hb["fences"].items()},
                   **{"-": "asphalt_dashed_H_boundary", "2": {"name": "asphalt_to_cobble_E", "joins": "="}})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")

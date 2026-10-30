@@ -4301,37 +4301,17 @@
    "elevation": null,
    "open": []
   },
+  "setts_SE#108_to_pavement_N": {
+   "ids": [
+    751
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
   "setts_SE#145_to_pavement_S": {
-   "ids": [
-    751
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "setts_SW#145_to_pavement_S": {
-   "ids": [
-    751
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "setts_SE#129_to_pavement_S": {
-   "ids": [
-    751
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "setts_NW#217": {
    "ids": [
     752
    ],
@@ -4341,7 +4321,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#200": {
+  "setts_SW#100_to_pavement_N": {
    "ids": [
     753
    ],
@@ -4351,7 +4331,37 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW#136": {
+  "setts_SW#145_to_pavement_S": {
+   "ids": [
+    752
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_SE#100_to_pavement_N": {
+   "ids": [
+    753
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_SE#129_to_pavement_S": {
+   "ids": [
+    752
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_NW#217": {
    "ids": [
     754
    ],
@@ -4361,7 +4371,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#128_to_pavement_S": {
+  "setts_SW#200": {
    "ids": [
     755
    ],
@@ -4371,7 +4381,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NE#145": {
+  "setts_NW#136": {
    "ids": [
     756
    ],
@@ -4381,7 +4391,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SE#0": {
+  "setts_SW#128_to_pavement_S": {
    "ids": [
     757
    ],
@@ -4391,7 +4401,17 @@
    "elevation": null,
    "open": []
   },
-  "setts_NE#0": {
+  "setts_SE#68_to_pavement_N": {
+   "ids": [
+    753
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_NE#145": {
    "ids": [
     758
    ],
@@ -4401,7 +4421,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SE#0_to_pavement_S": {
+  "setts_SE#0": {
    "ids": [
     759
    ],
@@ -4411,7 +4431,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#72_to_pavement_N": {
+  "setts_NE#0": {
    "ids": [
     760
    ],
@@ -4421,17 +4441,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW#200": {
-   "ids": [
-    754
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "setts_NW#145": {
+  "setts_SE#0_to_pavement_S": {
    "ids": [
     761
    ],
@@ -4441,27 +4451,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#0": {
-   "ids": [
-    758
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "setts_NW#0": {
-   "ids": [
-    757
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "setts_SW#0_to_pavement_S": {
+  "setts_SW#64_to_pavement_N": {
    "ids": [
     762
    ],
@@ -4471,7 +4461,27 @@
    "elevation": null,
    "open": []
   },
-  "setts_SE#0_to_pavement_N": {
+  "setts_NW#72": {
+   "ids": [
+    756
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_NW#200": {
+   "ids": [
+    756
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_NW#145": {
    "ids": [
     763
    ],
@@ -4481,7 +4491,27 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#0_to_pavement_N": {
+  "setts_SW#0": {
+   "ids": [
+    760
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_NW#0": {
+   "ids": [
+    759
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_SW#0_to_pavement_S": {
    "ids": [
     764
    ],
@@ -4491,7 +4521,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW_to_cobble_N": {
+  "setts_SE#0_to_pavement_N": {
    "ids": [
     765
    ],
@@ -4501,7 +4531,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NE_to_cobble_N": {
+  "setts_SW#0_to_pavement_N": {
    "ids": [
     766
    ],
@@ -4511,7 +4541,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW#179": {
+  "setts_NW_to_cobble_N": {
    "ids": [
     767
    ],
@@ -4521,7 +4551,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#50": {
+  "setts_NE_to_cobble_N": {
    "ids": [
     768
    ],
@@ -4531,7 +4561,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_NW#18": {
+  "setts_NW#179": {
    "ids": [
     769
    ],
@@ -4541,7 +4571,7 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#16_to_pavement_S": {
+  "setts_SW#50": {
    "ids": [
     770
    ],
@@ -4551,9 +4581,9 @@
    "elevation": null,
    "open": []
   },
-  "setts_SE#17_to_pavement_S": {
+  "setts_NW#18": {
    "ids": [
-    751
+    771
    ],
    "w": 1,
    "h": 1,
@@ -4561,7 +4591,37 @@
    "elevation": null,
    "open": []
   },
-  "setts_SW#34_to_pavement_N": {
+  "setts_SW#16_to_pavement_S": {
+   "ids": [
+    772
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_SE#17_to_pavement_S": {
+   "ids": [
+    752
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_SW#32_to_pavement_N": {
+   "ids": [
+    773
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_NW#34": {
    "ids": [
     771
    ],
@@ -4573,7 +4633,17 @@
   },
   "setts_NW#50": {
    "ids": [
-    769
+    771
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "setts_SE#36_to_pavement_N": {
+   "ids": [
+    753
    ],
    "w": 1,
    "h": 1,
@@ -4583,26 +4653,6 @@
   },
   "setts_SE#147_to_pavement_S": {
    "ids": [
-    772
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay_to_setts_NW#136": {
-   "ids": [
-    773
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay_to_setts_NE#0": {
-   "ids": [
     774
    ],
    "w": 1,
@@ -4611,7 +4661,7 @@
    "elevation": null,
    "open": []
   },
-  "quay_to_setts_NW#0": {
+  "setts_SW#102_to_pavement_N": {
    "ids": [
     775
    ],
@@ -4621,7 +4671,7 @@
    "elevation": null,
    "open": []
   },
-  "quay_to_setts_NW#18": {
+  "quay_to_setts_NW#136": {
    "ids": [
     776
    ],
@@ -4631,7 +4681,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#153": {
+  "quay_to_setts_NE#0": {
    "ids": [
     777
    ],
@@ -4641,7 +4691,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#145": {
+  "quay_to_setts_NW#0": {
    "ids": [
     778
    ],
@@ -4651,17 +4701,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#129": {
-   "ids": [
-    778
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay#128": {
+  "quay_to_setts_NW#18": {
    "ids": [
     779
    ],
@@ -4671,7 +4711,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0": {
+  "quay#153": {
    "ids": [
     780
    ],
@@ -4681,7 +4721,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#179": {
+  "quay#145": {
    "ids": [
     781
    ],
@@ -4691,7 +4731,17 @@
    "elevation": null,
    "open": []
   },
-  "quay#18": {
+  "quay#129": {
+   "ids": [
+    781
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#128": {
    "ids": [
     782
    ],
@@ -4701,7 +4751,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#153+coping#100": {
+  "quay#0": {
    "ids": [
     783
    ],
@@ -4711,7 +4761,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#145+coping#100": {
+  "quay#179": {
    "ids": [
     784
    ],
@@ -4721,17 +4771,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#129+coping#100": {
-   "ids": [
-    784
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay#128+coping#100": {
+  "quay#18": {
    "ids": [
     785
    ],
@@ -4741,7 +4781,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#100": {
+  "quay#153+coping#100": {
    "ids": [
     786
    ],
@@ -4751,7 +4791,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#100_ring": {
+  "quay#145+coping#100": {
    "ids": [
     787
    ],
@@ -4761,9 +4801,9 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#68": {
+  "quay#129+coping#100": {
    "ids": [
-    786
+    787
    ],
    "w": 1,
    "h": 1,
@@ -4771,7 +4811,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#64": {
+  "quay#128+coping#100": {
    "ids": [
     788
    ],
@@ -4781,7 +4821,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#32": {
+  "quay#0+coping#100": {
    "ids": [
     789
    ],
@@ -4791,17 +4831,7 @@
    "elevation": null,
    "open": []
   },
-  "quay#0+coping#36": {
-   "ids": [
-    786
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": null,
-   "open": []
-  },
-  "quay#18+coping#36": {
+  "quay#0+coping#100_ring": {
    "ids": [
     790
    ],
@@ -4811,47 +4841,57 @@
    "elevation": null,
    "open": []
   },
-  "quay_wall#17": {
+  "quay#0+coping#68": {
+   "ids": [
+    789
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#0+coping#64": {
    "ids": [
     791
    ],
    "w": 1,
    "h": 1,
    "solid": false,
-   "elevation": 1,
+   "elevation": null,
    "open": []
   },
-  "quay_wall#145": {
-   "ids": [
-    791
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": 1,
-   "open": []
-  },
-  "quay_wall_ladder": {
+  "quay#0+coping#32": {
    "ids": [
     792
    ],
    "w": 1,
    "h": 1,
    "solid": false,
-   "elevation": 1,
+   "elevation": null,
    "open": []
   },
-  "quay_wall#179": {
+  "quay#0+coping#36": {
+   "ids": [
+    789
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "quay#18+coping#36": {
    "ids": [
     793
    ],
    "w": 1,
    "h": 1,
    "solid": false,
-   "elevation": 1,
+   "elevation": null,
    "open": []
   },
-  "quay_wall#217": {
+  "quay_wall#17": {
    "ids": [
     794
    ],
@@ -4861,9 +4901,9 @@
    "elevation": 1,
    "open": []
   },
-  "quay_wall#129": {
+  "quay_wall#145": {
    "ids": [
-    791
+    794
    ],
    "w": 1,
    "h": 1,
@@ -4871,27 +4911,7 @@
    "elevation": 1,
    "open": []
   },
-  "quay_wall#50": {
-   "ids": [
-    795
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": 1,
-   "open": []
-  },
-  "quay_wall#200": {
-   "ids": [
-    796
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": false,
-   "elevation": 1,
-   "open": []
-  },
-  "quay_wall#18": {
+  "quay_wall_ladder": {
    "ids": [
     795
    ],
@@ -4901,7 +4921,7 @@
    "elevation": 1,
    "open": []
   },
-  "quay_wall#136": {
+  "quay_wall#179": {
    "ids": [
     796
    ],
@@ -4911,7 +4931,7 @@
    "elevation": 1,
    "open": []
   },
-  "quay_wall#16": {
+  "quay_wall#217": {
    "ids": [
     797
    ],
@@ -4921,7 +4941,17 @@
    "elevation": 1,
    "open": []
   },
-  "quay_wall#128": {
+  "quay_wall#129": {
+   "ids": [
+    794
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "quay_wall#50": {
    "ids": [
     798
    ],
@@ -4931,37 +4961,57 @@
    "elevation": 1,
    "open": []
   },
-  "mooring_bollard@20,23": {
+  "quay_wall#200": {
    "ids": [
     799
    ],
    "w": 1,
    "h": 1,
-   "solid": true,
-   "elevation": null,
+   "solid": false,
+   "elevation": 1,
    "open": []
   },
-  "harbour_drain@30,22": {
+  "quay_wall#18": {
+   "ids": [
+    798
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "quay_wall#136": {
+   "ids": [
+    799
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "quay_wall#16": {
    "ids": [
     800
    ],
    "w": 1,
    "h": 1,
    "solid": false,
-   "elevation": null,
+   "elevation": 1,
    "open": []
   },
-  "mooring_bollard@54,23": {
+  "quay_wall#128": {
    "ids": [
     801
    ],
    "w": 1,
    "h": 1,
-   "solid": true,
-   "elevation": null,
+   "solid": false,
+   "elevation": 1,
    "open": []
   },
-  "lifebuoy_post@41,22": {
+  "mooring_bollard@20,23": {
    "ids": [
     802
    ],
@@ -4971,17 +5021,17 @@
    "elevation": null,
    "open": []
   },
-  "coiled_rope@54,26": {
+  "harbour_drain@30,22": {
    "ids": [
     803
    ],
    "w": 1,
    "h": 1,
-   "solid": true,
+   "solid": false,
    "elevation": null,
    "open": []
   },
-  "bollard_rope@54,27": {
+  "mooring_bollard@54,23": {
    "ids": [
     804
    ],
@@ -4991,7 +5041,7 @@
    "elevation": null,
    "open": []
   },
-  "sign_on_setts_NE#145": {
+  "lifebuoy_post@41,22": {
    "ids": [
     805
    ],
@@ -5001,7 +5051,7 @@
    "elevation": null,
    "open": []
   },
-  "sign_on_setts_SE#147_to_pavement_S": {
+  "coiled_rope@54,26": {
    "ids": [
     806
    ],
@@ -5011,7 +5061,7 @@
    "elevation": null,
    "open": []
   },
-  "sign_on_setts_SE#0": {
+  "bollard_rope@54,27": {
    "ids": [
     807
    ],
@@ -5021,17 +5071,107 @@
    "elevation": null,
    "open": []
   },
+  "sign_on_setts_NE#145": {
+   "ids": [
+    808
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign_on_setts_SE#147_to_pavement_S": {
+   "ids": [
+    809
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign_on_setts_SE#0": {
+   "ids": [
+    810
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#6_on_setts_SE#108_to_pavement_N": {
+   "ids": [
+    811
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#10_on_setts_SW#100_to_pavement_N": {
+   "ids": [
+    812
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#10_on_setts_SE#100_to_pavement_N": {
+   "ids": [
+    812
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#8_on_setts_SE#100_to_pavement_N": {
+   "ids": [
+    813
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#2_on_setts_SE#100_to_pavement_N": {
+   "ids": [
+    814
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fence#12_on_setts_SW#100_to_pavement_N": {
+   "ids": [
+    815
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "fountain_3x3": {
    "ids": [
-    808,
-    809,
-    810,
-    811,
-    812,
-    813,
-    814,
-    815,
-    816
+    816,
+    817,
+    818,
+    819,
+    820,
+    821,
+    822,
+    823,
+    824
    ],
    "w": 3,
    "h": 3,
@@ -5041,8 +5181,8 @@
   },
   "bench_wood_west": {
    "ids": [
-    817,
-    818
+    825,
+    826
    ],
    "w": 1,
    "h": 2,
@@ -5052,8 +5192,8 @@
   },
   "bench_wood_south": {
    "ids": [
-    819,
-    820
+    827,
+    828
    ],
    "w": 2,
    "h": 1,
@@ -5063,7 +5203,7 @@
   },
   "litter_bin": {
    "ids": [
-    821
+    829
    ],
    "w": 1,
    "h": 1,
@@ -5073,8 +5213,8 @@
   },
   "bench_wood_south~2": {
    "ids": [
-    822,
-    823
+    830,
+    831
    ],
    "w": 2,
    "h": 1,
@@ -5084,7 +5224,7 @@
   },
   "litter_bin~2": {
    "ids": [
-    824
+    832
    ],
    "w": 1,
    "h": 1,
@@ -5094,7 +5234,7 @@
   },
   "flower_tub": {
    "ids": [
-    825
+    833
    ],
    "w": 1,
    "h": 1,
@@ -5109,7 +5249,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 186
+  "secondary": 194
  },
  "animations": [
   {
