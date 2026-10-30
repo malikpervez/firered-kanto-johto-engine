@@ -1,0 +1,44 @@
+{
+ "note": "Walk south from the square before the Center across the street (its setts band, pavement and asphalt) and the fountain's square, to the bench on the promenade, which stops you.",
+ "created": "2026-10-30 14:11",
+ "start": {
+  "map": "VermilionCity_Frlg",
+  "x": 27,
+  "y": 9,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     230
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 27,
+  "y": 21,
+  "in_battle": false
+ }
+}
