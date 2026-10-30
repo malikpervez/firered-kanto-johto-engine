@@ -55,3 +55,5 @@ Replay tests: `pallet looks at the sea`, `pallet north to route 1`, `pallet rout
 `pallet house door`, `pallet rival house door`,
 `pallet house sign`, `pallet rival house sign`,
 `pallet lab door`, `pallet oak stops you`, `pallet surf to route 21`.
+
+Its Town Props (KR-94, `../kit/props.py`): a fingerpost by the road north to Route 1 and a bench by the shore looking out to sea. 307 of its 384 tiles.

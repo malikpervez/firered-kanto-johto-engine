@@ -96,10 +96,11 @@ def quiz(yes):
 # extra "state" (e.g. a team; "repel": False for none at all, not even the Repel: setting state loads the map
 # again, which gets you off the Bicycle); what it must end with.
 STEPS = [
-    dict(name="oak", what="A new game: out of the house; Oak stops you at the north exit and walks you to his lab",
+    dict(name="oak", what="A new game: out of the house; Oak stops you at the north exit and walks you to his lab "
+         "(up beside the road, then onto it below the fingerpost)",
          map="PalletTown_PlayersHouse_1F_Frlg", xy=(9, 8), state=["CLEAR_TEAM"],
-         inputs="wait 20, DOWN*20, wait 120, DOWN*16, wait 8, RIGHT*96, wait 8, UP*112, wait 8, RIGHT*16, wait 8, "
-                "UP*16, wait 400, " + A(6) + "wait 900, " + A(12) + "wait 200",
+         inputs="wait 20, DOWN*20, wait 120, DOWN*16, wait 8, RIGHT*96, wait 8, UP*80, wait 8, RIGHT*16, wait 8, "
+                "UP*48, wait 400, " + A(6) + "wait 900, " + A(12) + "wait 200",
          expect=dict(map="PalletTown_ProfessorOaksLab_Frlg", xy=(6, 4),
                      vars={"VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB": 2})),
     dict(name="pikachu", what="Pikachu joins you; Blue takes his starter",

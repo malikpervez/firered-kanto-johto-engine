@@ -36,3 +36,5 @@ fit in banks 10–12.
 
 Build it from the repository root with `sh project/art/vermilion-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
+
+Its Town Props (KR-94, `../kit/props.py`): a fountain in the park between the houses (its water animated), a bench and two flower tubs round it, and four benches and two bins along the harbour, looking out to sea. 274 of its 384 tiles.

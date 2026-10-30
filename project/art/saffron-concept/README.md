@@ -68,3 +68,5 @@ these designs cost nothing. See `../ASSETS.md` for every pack and how to replace
 
 Build it from the repository root with `sh project/art/saffron-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
+
+Its Town Props (KR-94, `../kit/props.py`): stone benches and bins on both granite plazas, flower tubs either side of the compass. They fill the tileset: 383 of its 384 tiles.
