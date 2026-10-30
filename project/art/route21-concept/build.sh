@@ -6,6 +6,7 @@
 set -e
 A=project/art/route21-concept
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A grid_north.txt grid_south.txt  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 N=Route21_North_Frlg

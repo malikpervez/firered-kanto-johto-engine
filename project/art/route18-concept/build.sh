@@ -5,6 +5,7 @@
 set -e
 A=project/art/route18-concept
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=Route18_Frlg
