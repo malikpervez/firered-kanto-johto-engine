@@ -44,3 +44,5 @@ kit's (HnS's, `--version hns`: KR-74).
 
 Build it from the repository root with `sh project/art/cinnabar-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
+
+Its Town Props (KR-94, `../kit/props.py`): two benches and a bin on the south lawn, looking out to sea. 378 of its 384 tiles.

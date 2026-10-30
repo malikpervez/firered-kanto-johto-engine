@@ -29,3 +29,5 @@ FireRed's metatile format; its build sets the kit's.
 
 Build it from the repository root with `sh project/art/indigo-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
+
+Its Town Props (KR-94, `../kit/props.py`): Pokémon statues either side of the League's forecourt and flower tubs beside its door, on the paving. 181 of its 384 tiles.

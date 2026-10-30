@@ -41,3 +41,5 @@ by cutting the tree; the road east can't be left without crossing the Gym guide'
 
 Build it from the repository root with `sh project/art/pewter-concept/build.sh`, then
 `python3 project/art/pewter-concept/escort.py` (or every map with `sh project/art/build_all.sh`).
+
+Its Town Props (KR-94, `../kit/props.py`): a bin by the Museum, beside its lamp: all the tileset had room for (384 of 384 tiles).

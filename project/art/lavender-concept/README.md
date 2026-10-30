@@ -35,3 +35,5 @@ its own (bank 9). The seams are pae's: with Routes 10 and 8 both maps are the ki
 
 Build it from the repository root with `sh project/art/lavender-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
+
+Its Town Props (KR-94, `../kit/props.py`): a Pokémon statue between the Mart and the Tower, two benches looking at the memorial garden, a bin by the road. 231 of its 384 tiles.

@@ -94,3 +94,5 @@ The seams are pae's:
 
 Build it from the repository root with `sh project/art/fuchsia-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
+
+Its Town Props (KR-94, `../kit/props.py`): a statue on the Safari Zone plaza's west wing, flower tubs either side of the gate, stone benches along the walk and a bin at its foot, all on the paving (the paving's corner check counts them as paving). 359 of its 384 tiles.
