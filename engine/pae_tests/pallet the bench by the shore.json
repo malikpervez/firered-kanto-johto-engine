@@ -1,0 +1,44 @@
+{
+ "note": "Walk east into the bench looking out to sea (Town Props, KR-94): it stops you.",
+ "created": "2026-10-30 14:15",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 25,
+  "y": 9,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     24
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 25,
+  "y": 9,
+  "in_battle": false
+ }
+}

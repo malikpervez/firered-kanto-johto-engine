@@ -1,5 +1,5 @@
 {
- "note": "After the parcel, the old man by Viridian's road north shows you how to catch Pokémon: his battle with a Weedle must start and end (it used to reset the game, like Oak's), 'OLD MAN used POKé BALL!', and he gives you the Teachy TV.",
+ "note": "After the parcel, the old man by Viridian's road north shows you how to catch Pok\u00e9mon: his battle with a Weedle must start and end (it used to reset the game, like Oak's), 'OLD MAN used POK\u00e9 BALL!', and he gives you the Teachy TV.",
  "created": "2026-10-22 16:27",
  "start": {
   "map": "ViridianCity_Frlg",
@@ -471,5 +471,5 @@
    "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN": 2
   }
  },
- "accepted": "2026-10-22 22:41"
+ "accepted": "2026-10-30 14:14"
 }
