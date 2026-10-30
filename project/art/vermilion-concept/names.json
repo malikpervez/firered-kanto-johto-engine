@@ -4290,15 +4290,75 @@
    "solid": false,
    "elevation": null,
    "open": []
+  },
+  "fountain_3x3": {
+   "ids": [
+    750,
+    751,
+    752,
+    753,
+    754,
+    755,
+    756,
+    757,
+    758
+   ],
+   "w": 3,
+   "h": 3,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_wood_west": {
+   "ids": [
+    759,
+    760
+   ],
+   "w": 1,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_wood_south": {
+   "ids": [
+    761,
+    762
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "litter_bin": {
+   "ids": [
+    763
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "flower_tub": {
+   "ids": [
+    764
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 230
+  "secondary": 274
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 110
+  "secondary": 125
  },
  "animations": [
   {
@@ -4307,6 +4367,15 @@
    "tiles": 61,
    "frames": 8,
    "notes": []
+  },
+  {
+   "name": "VermilionConcept_Fountain3X3",
+   "first_tile": 885,
+   "tiles": 29,
+   "frames": 4,
+   "notes": [
+    "gTileset_VermilionConcept now animates through the new InitTilesetAnim_VermilionConcept"
+   ]
   }
  ]
 }

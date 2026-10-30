@@ -89,20 +89,23 @@ def pieces(out: Path, spec_dir: Path, placed: dict[str, str | list[str]]) -> tup
 POOL = "\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac\u00ae\u00af\u00b0\u00b1\u00b2\u00b3\u00b4\u00b5\u00b6\u00b7"  # the pieces' characters
 
 
-def place(g, where: list[tuple[str, int, int, str]], solid: set, joins: str | None = None) -> tuple[dict, dict]:
-    """Write each piece of ``where`` ((piece, x, y, ground): its top-left block and the block under it) into the plan
-    ``g``: a character of its own for each piece, added to ``solid`` but a bridge's. Returns the legend for them
-    (one material with ``joins``, if the ground is a surface that draws edges) and their grounds, for ``pieces``."""
+def place(g, where: list[tuple], solid: set, joins: str | None = None) -> tuple[dict, dict]:
+    """Write each piece of ``where`` ((piece, x, y, ground[, joins]): its top-left block, the block under it and, on a
+    surface that draws edges, that surface's character, so it runs on under the piece) into the plan ``g``: a
+    character of its own for each piece, added to ``solid`` but a bridge's. ``joins`` is the default for those
+    without one. Returns the legend for them and their grounds, for ``pieces``."""
     letters, grounds, legend = {}, {}, {}
-    for piece, x, y, ground in where:
+    for piece, x, y, ground, *own in where:
         meta = PIECES[piece][1]
         fw, fh = meta["footprint_blocks"]["width"], meta["footprint_blocks"]["height"]
         assert grounds.setdefault(piece, ground) == ground, f"{piece}: one ground for every one of it"
+        j = own[0] if own else joins
         if piece not in letters:
             letters[piece] = POOL[len(letters)]
-            legend[letters[piece]] = {"name": piece, "joins": joins} if joins else piece
-            if meta["solid_blocks"]:
-                solid.add(letters[piece])
+            legend[letters[piece]] = {"name": piece, "joins": j} if j else piece
+        assert legend[letters[piece]] == ({"name": piece, "joins": j} if j else piece), f"{piece}: one joins for every one of it"
+        if meta["solid_blocks"]:
+            solid.add(letters[piece])
         for yy in range(y, y + fh):
             for xx in range(x, x + fw):
                 assert g[yy][xx] not in solid, f"{piece} at ({x},{y}): ({xx},{yy}) is '{g[yy][xx]}', not open ground"

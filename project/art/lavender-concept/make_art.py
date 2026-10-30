@@ -21,6 +21,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -34,6 +35,10 @@ WEST = [(0, y) for y in range(9, 12)]
 SOUTH = [(x, MAP_H - 1) for x in range(13, 16)]
 CAMP = [(13, 13), (12, 12), (11, 13), (14, 12), (12, 14), (10, 14), (15, 13)]  # the Friends', as before
 SOLID = set("T#bRoklSBcw_~vrZLXHUW")
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("statue_guardian", 24, 6, "grass"),  # between the Mart and the Tower
+         ("bench_wood_north", 27, 17, "grass"), ("bench_wood_north", 31, 17, "grass"),  # looking at the memorial garden
+         ("litter_bin", 21, 12, "grass")]
 
 # the buildings: their letters in the plan, where each comes from and its palette's bank
 OWN = {"H": (VB / "house_family", HOUSE_BANK), "U": (VB / "house_pond_keeper", HOUSE_BANK),
@@ -100,6 +105,7 @@ def check(g, d) -> None:
 
 def main() -> None:
     g = plan()
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
@@ -115,6 +121,8 @@ def main() -> None:
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=b.idx.shape[1] // 16)
         sh.add(b.name, b.idx, tileset="secondary", **b.entry())
         spec_mt += sh.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -125,13 +133,14 @@ def main() -> None:
                          "secondary": [f"palette_{HOUSE_BANK}.pal", base["secondary_palettes"][8],
                                        f"palette_{TOWER_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, X="pokemon_tower", **{k: load(k).name for k in OWN})
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

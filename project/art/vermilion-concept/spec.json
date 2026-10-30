@@ -40,6 +40,16 @@
     "../kit/sheets/water_f7.png"
    ],
    "speed": 10
+  },
+  {
+   "name": "Fountain3X3",
+   "image": "sheets/prop_fountain_3x3.png",
+   "frames": [
+    "sheets/prop_fountain_3x3_f1.png",
+    "sheets/prop_fountain_3x3_f2.png",
+    "sheets/prop_fountain_3x3_f3.png"
+   ],
+   "speed": 16
   }
  ],
  "field_effects": {
@@ -4953,6 +4963,76 @@
    "tileset": "secondary",
    "ground": "dock#13",
    "behavior": "MB_DEEP_SOUTH_WARP"
+  },
+  {
+   "name": "fountain_3x3",
+   "image": "sheets/prop_fountain_3x3.png",
+   "x": 0,
+   "y": 0,
+   "w": 3,
+   "h": 3,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bench_wood_west",
+   "image": "sheets/props_wood.png",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "bench_wood_south",
+   "image": "sheets/props_wood.png",
+   "x": 16,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "cobble#15",
+   "solid": true
+  },
+  {
+   "name": "litter_bin",
+   "image": "sheets/props_wood.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "cobble#15",
+   "solid": true
+  },
+  {
+   "name": "flower_tub",
+   "image": "sheets/props_water.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
   }
  ]
 }
