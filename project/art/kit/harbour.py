@@ -130,27 +130,40 @@ def lay(g, squares: list[tuple[set, tuple[int, int]]], quay: set, *, out: Path, 
             sheets[pal].add(name, idx, tileset="secondary", dedupe=True, **entry)
 
     ground = {}
+    S_SIDE, N_SIDE = 4 | 32 | 64, 1 | 16 | 128  # a block's mask bits on its south side, on its north side
+
+    def setts_mask(x, y) -> int:  # the setts' neighbours that aren't setts (the flags they run into are)
+        return mask(x, y, lambda a, b: at(a, b) is not None and (a, b) not in setts and (a, b) not in under)
+
     for x, y in sorted(setts):
         phase = phase_of[x, y]
         if at(x, y - 1) == cobble and (x, y - 1) not in setts:
             name = f"setts_{phase}_to_cobble_N"
             add("ground", name, picture("setts", f"to_cobble_N_{phase}")[0], ground="grass")
-        elif (x, y + 1) in street:
-            name = f"setts_{phase}_to_pavement_S"
-            add("ground", name, picture("setts", f"to_pavement_S_{phase}")[0], ground="grass")
+        elif (x, y + 1) in street:  # the pack's join's pavement half below, the setts' own top (its edges) above
+            m = setts_mask(x, y) & ~S_SIDE
+            name = f"setts_{phase}#{m}_to_pavement_S"
+            idx = recipe("setts", m, "phase", phase).copy()
+            idx[8:] = picture("setts", f"to_pavement_S_{phase}")[0][8:]
+            add("ground", name, idx, ground="grass")
         elif (x, y - 1) in street:
-            name = f"setts_{phase}_to_pavement_N"
-            add("ground", name, picture("setts", f"to_pavement_N_{phase}")[0], ground="grass")
+            m = setts_mask(x, y) & ~N_SIDE
+            name = f"setts_{phase}#{m}_to_pavement_N"
+            idx = recipe("setts", m, "phase", phase).copy()
+            idx[:8] = picture("setts", f"to_pavement_N_{phase}")[0][:8]
+            add("ground", name, idx, ground="grass")
         else:
-            m = mask(x, y, lambda a, b: at(a, b) is not None and (a, b) not in setts and (a, b) not in under)
+            m = setts_mask(x, y)
             name = f"setts_{phase}#{m}"
             add("ground", name, recipe("setts", m, "phase", phase), ground="grass")
         names[x, y] = ground[x, y] = name
-    for (x, y), phase in sorted(under.items()):  # the pack's join is the NW phase's: the NE one's from its pieces
+    for (x, y), phase in sorted(under.items()):  # the flags' join to the setts north of them: its flags half, and
+        # the setts' top as the square's pattern (and edges) carry on into it
         assert phase in ("NW", "NE"), f"({x},{y}): the setts' pattern must start a row above the flags"
+        m = setts_mask(x, y) & ~S_SIDE
         idx = picture("quay", "to_setts_N")[0].copy()
-        idx[:8] = picture("setts", f"large_{phase}")[0][:8]
-        names[x, y] = ground[x, y] = f"quay_to_setts_{phase}"
+        idx[:8] = recipe("setts", m, "phase", phase)[:8]
+        names[x, y] = ground[x, y] = f"quay_to_setts_{phase}#{m}"
         add("ground", names[x, y], idx, ground="grass")
     for x, y in sorted(quay - set(under)):  # the flags: their edges where lawn (or anything but water, a dock or
         # flags) is beside

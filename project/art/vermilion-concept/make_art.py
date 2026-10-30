@@ -55,15 +55,16 @@ PROPS = [("fountain_3x3", 33, 17, "setts"), ("bench_wood_west", 37, 17, "setts")
          ("bench_wood_south", 45, 22, "quay"), ("bench_wood_south", 51, 22, "quay"),
          ("litter_bin", 33, 22, "quay"), ("litter_bin", 48, 22, "quay")]
 # the harbour's ground (Kanto Harbour Textures v0.1, kit/harbour.py): two squares in fan setts, each with the block its
-# pattern starts from: the one before the Center and the Mart, and the fountain's between the houses south of the
-# street (in place of its lawn, flowers and bushes; its pattern runs on into the promenade's flags); the main street the
-# kit's asphalt with a strip of pavement each side (then the cobble Route 11's road is, column 57 the join), and north of
-# it, where lawn was, a band of the grey dressed stone over more of the pavement, as below the square; the promenade in
-# quay flags, the quay wall round the water and the docks; the details, the mooring ring in the coping and a ladder
-SQUARES = [([(x, y) for y in range(7, 11) for x in range(24, 43)], (24, 7)),
+# pattern starts from: the one before the Center and the Mart, with a band of the setts over the pavement running on
+# from its foot along the north of the street both ways (where lawn was); and the fountain's between the houses south
+# of the street (in place of its lawn, flowers and bushes; its pattern runs on into the promenade's flags); the main
+# street the kit's asphalt with a strip of pavement each side (then the cobble Route 11's road is, column 57 the
+# join); the promenade in quay flags, the quay wall round the water and the docks; the details, the mooring ring in
+# the coping and a ladder
+BAND = [(x, 10) for x in list(range(6, 24)) + list(range(43, 56))]
+SQUARES = [([(x, y) for y in range(7, 11) for x in range(24, 43)] + BAND, (24, 7)),
            ([(x, y) for y in range(15, 22) for x in range(25, 44)], (25, 16))]
 STREET = {11: "n", 12: "+", 13: "-", 14: "u"}  # by row, columns 6-56: pavement over asphalt, the road, its line
-STONE_BAND = [(x, 10) for x in list(range(6, 24)) + list(range(43, 56))]  # pavement_to_dressed_stone_N
 PROMENADE = [(x, 22) for x in range(18, 56)] + [(x, 23) for x in range(7, 56)]
 HARBOUR_DETAILS = [("mooring_bollard", 20, 23), ("mooring_bollard", 54, 23), ("harbour_drain", 30, 22),
                    ("lifebuoy_post", 41, 22), ("bollard_rope", 54, 27), ("coiled_rope", 54, 26)]
@@ -138,17 +139,13 @@ def check(g, d) -> None:
 
 def streets(g) -> None:
     """The main street: the kit's asphalt, a strip of pavement each side, the line down its middle; the join to the
-    cobble at its east end; the band of stone over the pavement north of it."""
+    cobble at its east end."""
     for y, ch in STREET.items():
         for x in range(6, 57):
             assert g[y][x] == "=", f"({x},{y}) isn't the old street"
             g[y][x] = ch
     for y in (12, 13):
         g[y][57] = "2"
-    for x, y in STONE_BAND:
-        assert g[y][x] in ".S", f"({x},{y}) isn't lawn"
-        if g[y][x] == ".":
-            g[y][x] = "e"
 
 
 def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
@@ -162,7 +159,7 @@ def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
     on_quay = {(x, y) for x, y in PROMENADE if g[y][x] != "="}
     assert all(g[y][x] in prop_legend for x, y in on_quay), "only the props stand on the promenade"
     hb = harbour.lay(g, [(set(cells), origin) for cells, origin in SQUARES], set(PROMENADE), out=HERE, spec_dir=HERE,
-                     street={(x, 11) for x in range(24, 43)} | {(x, 14) for x in range(25, 44)},
+                     street={(x, 11) for x in range(6, 57)} | {(x, 14) for x in range(6, 57)},
                      details=HARBOUR_DETAILS, ring=RING, ladder=LADDER)
     grounds_of: dict[str, list] = {}
     for piece, x, y, ground, *_ in PROPS:
@@ -196,8 +193,8 @@ def sign_grounds(g, hb) -> dict[str, str]:
     out = {}
     for y, row in enumerate(g):
         for x, c in enumerate(row):
-            if c == "S" and ((x, y) in hb["signs"] or (x, y) in STONE_BAND):
-                ground = hb["ground"][x, y] if (x, y) in hb["signs"] else "pavement_to_dressed_stone_N"
+            if c == "S" and (x, y) in hb["signs"]:
+                ground = hb["ground"][x, y]
                 ch = out.setdefault(ground, "fFiI"[len(out)])
                 g[y][x] = ch
     return out
@@ -258,7 +255,7 @@ def main() -> None:
                   **{ch: {"name": f"gangway_{ch}", "joins": "d"} for ch in GANGWAY_PIECES})
     legend.update(prop_legend)
     # the street's pieces next to the cobble at its east end count as cobble for it, so it draws no edge there
-    legend.update(hb["legend"], n={"name": "pavement_to_asphalt_S", "joins": "="}, e="pavement_to_dressed_stone_N",
+    legend.update(hb["legend"], n={"name": "pavement_to_asphalt_S", "joins": "="},
                   u={"name": "pavement_to_asphalt_N", "joins": "="},
                   **{ch: f"sign_on_{ground}" for ground, ch in signs_on.items()},
                   **{"-": "asphalt_dashed_H_boundary", "2": {"name": "asphalt_to_cobble_E", "joins": "="}})
