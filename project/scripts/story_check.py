@@ -80,7 +80,7 @@ VR1F = ("D! D L D R! R R! R R! R R! R R! D R R U! U U! U L U R! R R! R R! R R! R
 VR2F = ("R D D D D R D D R R R D! D R D L! L L! U L L D! D R D L! L L!", {})
 VR2F_2 = (" ".join(["L!", "L"] * 18 + ["L!"]), {0: 60, 22: 105, 24: 195})
 VR3F = ("L U U U U L U! U U! U R U L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! L L! "
-        "L L! L L! L L! L L! L L! L L! U L L D! D R D L! L L! L L! L L! L L! L U L D! D D! D D! D L D R!", {})
+        "L L! L L! L L! L L! L L! L L! U L L D! D R D L! L L! L L! L L! L L! L U L D! D D! D D! D L D R!", {34: 75, 36: 45, 38: 75})
 
 
 def quiz(yes):
