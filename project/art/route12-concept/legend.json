@@ -124,5 +124,25 @@
   "elevation": 1
  },
  "N": "route12_gate",
- "F": "house_gardener"
+ "F": "house_gardener",
+ "Ⰰ": {
+  "name": "sea#14",
+  "joins": "s",
+  "elevation": 1
+ },
+ "Ⰱ": {
+  "name": "sea#15",
+  "joins": "s",
+  "elevation": 1
+ },
+ "Ⰲ": {
+  "name": "sea#7",
+  "joins": "s",
+  "elevation": 1
+ },
+ "Ⰳ": {
+  "name": "sea#11",
+  "joins": "s",
+  "elevation": 1
+ }
 }
