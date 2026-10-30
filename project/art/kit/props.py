@@ -8,8 +8,9 @@ Town_Props_v0.1_prompt.md): street furniture for any town or route. The pack has
 Every piece is drawn in one of the kit's own palettes: the water's (bank 1) or the wood's (bank 2). So a map needs no
 bank of its own for them, and takes only the pieces it places into its own tileset.
 
-``pieces(out, spec_dir, placed)`` puts the pieces a map places on sheets, with their spec entries and the fountain's
-animation. ``placed`` maps each piece to its ground: one block name, or a list of them (row by row).
+``place(g, where, solid)`` writes the pieces a map places into its plan (each piece a character of its own, from
+POOL, which no map uses) and returns their legend and grounds; ``pieces(out, spec_dir, placed)`` puts them on sheets,
+with their spec entries and the fountain's animation. ``placed`` maps each piece to its ground: one block name, or a list of them (row by row).
 - Every block of a solid piece is solid; a bridge's blocks are walkable, laid over the water like the kit's dock.
 - The pack's over_rows (art drawn over the player) aren't used: its solid pieces have nothing to walk behind, and a
   one-row bench drawn over the player would cover the head of anyone standing in front of it.
@@ -83,3 +84,27 @@ def pieces(out: Path, spec_dir: Path, placed: dict[str, str | list[str]]) -> tup
             sh.add(name, pic, dedupe=True, **entry)
         entries += sh.write()
     return entries, animations
+
+
+POOL = "\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac\u00ae\u00af\u00b0\u00b1\u00b2\u00b3\u00b4\u00b5\u00b6\u00b7"  # the pieces' characters
+
+
+def place(g, where: list[tuple[str, int, int, str]], solid: set, joins: str | None = None) -> tuple[dict, dict]:
+    """Write each piece of ``where`` ((piece, x, y, ground): its top-left block and the block under it) into the plan
+    ``g``: a character of its own for each piece, added to ``solid`` but a bridge's. Returns the legend for them
+    (one material with ``joins``, if the ground is a surface that draws edges) and their grounds, for ``pieces``."""
+    letters, grounds, legend = {}, {}, {}
+    for piece, x, y, ground in where:
+        meta = PIECES[piece][1]
+        fw, fh = meta["footprint_blocks"]["width"], meta["footprint_blocks"]["height"]
+        assert grounds.setdefault(piece, ground) == ground, f"{piece}: one ground for every one of it"
+        if piece not in letters:
+            letters[piece] = POOL[len(letters)]
+            legend[letters[piece]] = {"name": piece, "joins": joins} if joins else piece
+            if meta["solid_blocks"]:
+                solid.add(letters[piece])
+        for yy in range(y, y + fh):
+            for xx in range(x, x + fw):
+                assert g[yy][xx] not in solid, f"{piece} at ({x},{y}): ({xx},{yy}) is '{g[yy][xx]}', not open ground"
+                g[yy][xx] = letters[piece]
+    return legend, grounds

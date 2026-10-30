@@ -24,6 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import props
 
 HERE = Path(__file__).resolve().parent
 SECONDARY = "gTileset_ViridianConcept"
@@ -38,6 +39,10 @@ OLD_MAN = (25, 11)
 CUT_TREE = (48, 42)
 LAMPS = [(23, 26), (28, 26), (38, 21)]  # lamps' feet added beside the square and the Gym's court
 SOLID = set("T#bRoklSBcw_~vrGKHJYPM")  # what you can't walk onto (ledges you hop only going south)
+# the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
+PROPS = [("bench_wood_south", 14, 17, "grass"), ("picnic_table", 4, 23, "grass"), ("fingerpost", 5, 26, "grass"),
+         ("fingerpost", 22, 16, "grass"), ("bench_wood_west", 32, 32, "grass"), ("litter_bin", 29, 24, "grass"),
+         ("bench_stone", 40, 24, "grass")]
 
 
 def plan() -> list[list[str]]:
@@ -195,6 +200,7 @@ def load(name: str) -> buildings.Building:
 # ---------------------------------------------------------------- sheets and spec
 def main() -> None:
     g = fit(plan())
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
     kit.check_forest(g)
     kit.check_water(g)
     check(g)
@@ -210,6 +216,8 @@ def main() -> None:
         entry = b.entry() if letter not in LOCKED else {"ground": "grass", "solid": True}
         sh.add(name, b.idx, tileset="secondary", **entry)
         spec_mt += sh.write()
+    prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
+    spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -219,13 +227,14 @@ def main() -> None:
             "palettes": {"primary": base["palettes"],
                          "secondary": ["palette_7.pal", base["secondary_palettes"][8], "palette_9.pal"]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"],
+            "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: v[0] for k, v in OWN.items()})
+    legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(doors(g), indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {doors(g)}")
