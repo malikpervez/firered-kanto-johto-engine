@@ -125,5 +125,8 @@
  },
  "D": "house_family",
  "U": "house_gardener",
- "N": "forest_gate_north"
+ "N": {
+  "name": "forest_gate_north",
+  "joins": "="
+ }
 }

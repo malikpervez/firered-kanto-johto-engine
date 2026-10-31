@@ -131,8 +131,14 @@
  "P": "house_pond_keeper",
  "E": "house_pond_keeper",
  "H": "house_pond_keeper",
- "1": "asphalt_to_cobble_W",
- "2": "asphalt_to_cobble_E",
+ "1": {
+  "name": "asphalt_to_cobble_W",
+  "joins": "="
+ },
+ "2": {
+  "name": "asphalt_to_cobble_E",
+  "joins": "="
+ },
  "-": "asphalt_dashed_H_boundary",
  "3": "crossing_road_EW",
  "4": "crossing_end_N",
@@ -165,6 +171,6 @@
   "name": "compass",
   "joins": "n"
  },
- "\u00a1": "bench_wood_south",
- "\u00a2": "litter_bin"
+ "¡": "bench_wood_south",
+ "¢": "litter_bin"
 }

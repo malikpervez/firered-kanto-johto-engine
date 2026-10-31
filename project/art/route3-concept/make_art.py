@@ -75,6 +75,7 @@ def check(g) -> None:
 def main() -> None:
     g = plan()
     cliffs.layout(g)
+    g[7][0] = g[8][0] = "P"  # the face over the way in runs on into Pewter's (no rounded end at the join)
     kit.check_forest(g)
     kit.check_water(g)
     check(g)

@@ -15,7 +15,8 @@
   "auto": "cobble"
  },
  ":": {
-  "auto": "dirt"
+  "auto": "dirt",
+  "joins": "="
  },
  "~": {
   "auto": "pond",
@@ -126,7 +127,7 @@
  "Z": "pokemon_center",
  "X": "diglett_cave",
  "Y": {
-  "name": "diglett_cave",
+  "name": "diglett_cave_face",
   "joins": "C"
  },
  "A": {
@@ -197,11 +198,19 @@
   "joins": "C"
  },
  "t": {
-  "name": "top7#7+Wstart",
+  "name": "top6#12+Estart",
   "joins": "C"
  },
  "u": {
+  "name": "top7#7+Wstart",
+  "joins": "C"
+ },
+ "x": {
   "name": "top8#7+Wstart",
+  "joins": "C"
+ },
+ "y": {
+  "name": "top9#13+Eon",
   "joins": "C"
  }
 }

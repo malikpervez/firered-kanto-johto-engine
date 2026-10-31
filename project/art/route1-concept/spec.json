@@ -4842,7 +4842,16 @@
     7
    ],
    "tileset": "secondary",
-   "ground": "dirt#15",
+   "ground": [
+    "grass",
+    "dirt#7",
+    "dirt#13",
+    "grass",
+    "grass",
+    "dirt#7",
+    "dirt#13",
+    "grass"
+   ],
    "solid": true,
    "open": [
     "1,0",
@@ -4851,6 +4860,28 @@
     "2,1"
    ],
    "over_rows": 1
+  },
+  {
+   "name": "steps_dirt_W",
+   "image": "sheets/steps_dirt.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "dirt#7"
+  },
+  {
+   "name": "steps_dirt_E",
+   "image": "sheets/steps_dirt.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "dirt#13"
   }
  ]
 }

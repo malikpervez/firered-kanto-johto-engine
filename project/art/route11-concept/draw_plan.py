@@ -46,6 +46,7 @@ at(13, 6, "S")                                # its sign, read from (13,7)
 rect(0, 14, 3, 17, "=")
 rect(4, 14, 47, 17, ":")
 rect(44, 17, 59, 19, ":")
+rect(56, 16, 59, 16, "b")                      # a hedge along the road below the gatehouse (no half trees over it)
 
 # the Friends' clearing (their camp at 25,7), the north grass, flowers and rocks
 rect(21, 5, 28, 9, ".")

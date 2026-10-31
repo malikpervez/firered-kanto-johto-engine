@@ -142,8 +142,14 @@
   "joins": "&"
  },
  "N": "saffron_gate",
- "W": "saffron_gate",
- "E": "saffron_gate",
+ "W": {
+  "name": "saffron_gate",
+  "joins": "&"
+ },
+ "E": {
+  "name": "saffron_gate",
+  "joins": "&"
+ },
  "U": "saffron_gate_back",
  "M": {
   "name": "magnet_train_station",
@@ -201,6 +207,7 @@
   "name": "poke_mart_paved",
   "joins": "&"
  },
+ "^": "lamp",
  "|": {
   "pick": [
    "round_tree_paved",
@@ -230,15 +237,15 @@
  "%": "manhole",
  "-": "asphalt_dashed_H_boundary",
  ";": "asphalt_dashed_V_boundary",
- "\u00a1": {
+ "¡": {
   "name": "bench_stone",
   "joins": "@"
  },
- "\u00a2": {
+ "¢": {
   "name": "litter_bin",
   "joins": "@"
  },
- "\u00a3": {
+ "£": {
   "name": "flower_tub",
   "joins": "@"
  }

@@ -47,11 +47,11 @@ TT..::.ggggg...b...**.ssss
 TT..::.ggggg...bbbbbbbssss
 TT..::.ggggg..........ssss
 TT..::..............o.ssss
-TT..::................ssss
-::::::::::::::::::::::ddds
-::::::::::::::::::::::ddds
-::::::::::::::::::::::ssss
-::::::::::::::::::::::ssss
+TT..::................ⰀⰁⰁs
+::::::::::::::::::::::dddⰁ
+::::::::::::::::::::::dddⰁ
+:::::::::::::::::::::.ⰀⰁⰁs
+:::::::::::::::::::::.ssss
 TTTTTTTTTTTT.bTTTTTTTTssss
 TTTTTTTTTTTT..TTTTTTTTssss
 TTTTTTTTTT......TTTTTTssss

@@ -42,6 +42,9 @@ def _mouth() -> buildings.Building:
 
 
 MOUTH = _mouth()
+# the far mouth is set into the plateau: only the mouth's face (its bottom two rows), the cliff's own top above it
+FACE = buildings.Building("diglett_cave_face", MOUTH.idx[48:], MOUTH.palette, (MOUTH.door[0], MOUTH.door[1] - 3),
+                          MOUTH.door_frames)
 SOLID = set("T#bRoklSBcw_~vrZXY") | cliffs.SOLID  # (ledges are hopped going south only)
 
 
@@ -55,7 +58,7 @@ def plan() -> list[list[str]]:
 def doors(g) -> dict[str, list[tuple[int, int]]]:
     """The Center's door and the two mouths' (west to east)."""
     out = {}
-    for letter, b in (("Z", kit.SHARED_BUILDINGS["pokemon_center"][0]), ("X", MOUTH), ("Y", MOUTH)):
+    for letter, b in (("Z", kit.SHARED_BUILDINGS["pokemon_center"][0]), ("X", MOUTH), ("Y", FACE)):
         bw, bh = b.idx.shape[1] // 16, b.idx.shape[0] // 16
         cells = {(x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == letter}
         tops = sorted((x, y) for x, y in cells if (x - 1, y) not in cells and (x, y - 1) not in cells)
@@ -129,6 +132,11 @@ def main() -> None:
     sh.add(MOUTH.name, MOUTH.idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
            behaviors={f"{dx},{dy}": "MB_NON_ANIMATED_DOOR"})  # an open mouth: you walk in, as in Route 2
     spec_mt += sh.write()
+    sh = kit.Sheet(FACE.name, FACE.palette, CLIFF_BANK, HERE, HERE, cols=FACE.idx.shape[1] // 16)
+    dx, dy = FACE.door
+    sh.add(FACE.name, FACE.idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
+           behaviors={f"{dx},{dy}": "MB_NON_ANIMATED_DOOR"})
+    spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -143,9 +151,10 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, Z="pokemon_center", X=MOUTH.name, Y={"name": MOUTH.name, "joins": "C"})
+    legend = dict(kit.LEGEND, Z="pokemon_center", X=MOUTH.name, Y={"name": FACE.name, "joins": "C"})
     assert not set("ZXY") & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
+    legend[":"] = {"auto": "dirt", "joins": "="}  # the road's dirt runs into Cerulean's cobbles with no grass rim
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

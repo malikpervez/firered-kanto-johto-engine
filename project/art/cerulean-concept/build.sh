@@ -79,7 +79,7 @@ pae map place $M object 21 35 31 $P
 pae map place $M object 22 32 32 $P
 pae map place $M object 23 31 31 $P
 pae map place $M object 24 35 33 $P
-pae map place $M bg 0 25 25 $P       # the town's sign, by the Center
+pae map place $M bg 0 25 29 $P       # the town's sign, by the Center (off the fence, on the paving at its foot)
 pae map place $M bg 1 51 36 $P       # the Gym's sign
 pae map place $M bg 2 14 38 $P       # the Bike Shop's sign
 pae map place $M bg 3 19 41 $P       # trainer tips

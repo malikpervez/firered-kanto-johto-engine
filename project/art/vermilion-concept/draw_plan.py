@@ -42,6 +42,12 @@ rect(0, 0, 59, 2, "T")
 rect(0, 0, 5, 23, "T")
 rect(56, 0, 59, 10, "T"); rect(56, 15, 59, 23, "T")
 rect(0, 24, 59, 41, "~")
+# the forest is drawn in 2x2 cells on the even grid: end it on whole cells (no half trees). A lawn strip under the
+# north treeline (row 2), and a lawn verge each side of the street where it leaves for Route 11 (rows 10 and 15), a
+# bush closing each at the map's edge (Route 11's trees are beyond it); bushes, not trees, beside Route 6's road
+rect(6, 2, 31, 2, "."); rect(35, 2, 55, 2, ".")
+at(35, 0, "b"); at(35, 1, "b")
+rect(56, 10, 58, 10, "."); at(59, 10, "b"); rect(56, 15, 58, 15, "."); at(59, 15, "b")
 
 # the north plaza: Route 6's road in (32-34), the Center and the Mart either side, the plaza, the city sign
 rect(32, 0, 34, 10, "=")

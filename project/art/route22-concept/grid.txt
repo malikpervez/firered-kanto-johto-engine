@@ -12,12 +12,12 @@ TTTTGLLLLLLLLLLLLLLLIF........FG..nnnnTTTTTTTTTTTTTT
 TTTTKLLLLLLLLLLLLLLLVJKVJKVJKVJK..ppppTTTTTTTTTTTTTT
 TTTTDLLLLLLLLLLLLLLLEeDEADEADEAD.bppppS.........TTTT
 TTTTGLLLLLLLLLLLLLLLIj{PNMPMNMP]..pppp..ggggggggTTTT
-TTTTKlppppppppppppSlVx{PNMPMNMP]..pppp.bggggggggTTTT
-TTTTDlppppppppppppplEA..........XXpppp..ggggggggTTTT
+TTTTK¹pppppppppppp³²Vx{PNMPMNMP]..pppp.bggggggggTTTT
+TTTTD¹ppppppppppppp²EA..........XXpppp..ggggggggTTTT
 TTTT[PMNMPNMNPN}HH{PM]..........XXpppp..gggo..RR..TT
 TTTT[PMNMPNMNPN}HH{PM]pppppppppppppppp..gggg..RR..TT
-TTTTTT........pppppppppppppppppppppppp.bgggggggb,.TT
-TTTTTTgggggg..________hh..~~~~..,.......gggggggg..TT
+TTTTTT........pppppppp¼¼pppppppppppppp.bgggggggb,.TT
+TTTTTTgggggg..________½¾..~~~~..,.......gggggggg..TT
 TTTTTTgggggg::gggggggg::.~~~~~~....,......ggggggTTTT
 TTTTTTgggggg::gggggggg::~~~v~~~~.o........ggggggTTTT
 TTTT..gogggg::gggggggg::~~r~~vr~.....k......RR..TTTT

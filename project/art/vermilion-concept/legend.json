@@ -142,135 +142,135 @@
   "name": "gangway_Y",
   "joins": "d"
  },
- "\u00a1": "fountain_3x3",
- "\u00a2": "bench_wood_west",
- "\u00a3": "flower_tub",
- "\u00a4": "bench_wood_south",
- "\u00a5": "litter_bin",
- "\u00a6": "bench_wood_south~2",
- "\u00a7": "litter_bin~2",
- "\u0100": "setts_NW#217",
- "\u0101": "setts_NE#145",
- "\u0102": "setts_NW#145",
- "\u0103": {
+ "¡": "fountain_3x3",
+ "¢": "bench_wood_west",
+ "£": "flower_tub",
+ "¤": "bench_wood_south",
+ "¥": "litter_bin",
+ "¦": "bench_wood_south~2",
+ "§": "litter_bin~2",
+ "Ā": "setts_NW#217",
+ "ā": "setts_NE#145",
+ "Ă": "setts_NW#145",
+ "ă": {
   "name": "setts_NW_to_cobble_N",
   "joins": "="
  },
- "\u0104": {
+ "Ą": {
   "name": "setts_NE_to_cobble_N",
   "joins": "="
  },
- "\u0105": "setts_NW#179",
- "\u0106": "setts_SW#200",
- "\u0107": "setts_SE#0",
- "\u0108": "setts_SW#0",
- "\u0109": "setts_SW#50",
- "\u010a": "setts_NW#136",
- "\u010b": "setts_NE#0",
- "\u010c": "setts_NW#0",
- "\u010d": "setts_NW#18",
- "\u010e": "setts_SW#253",
- "\u010f": "setts_SE#245",
- "\u0110": "setts_SW#145_to_pavement_S",
- "\u0111": "setts_SE#145_to_pavement_S",
- "\u0112": "setts_SE#129_to_pavement_S",
- "\u0113": "setts_SW#128_to_pavement_S",
- "\u0114": "setts_SE#0_to_pavement_S",
- "\u0115": "setts_SW#0_to_pavement_S",
- "\u0116": "setts_SW#16_to_pavement_S",
- "\u0117": "setts_SE#17_to_pavement_S",
- "\u0118": "setts_SE#147_to_pavement_S",
- "\u0119": "setts_SE#253",
- "\u011a": "setts_SW#245",
- "\u011b": "setts_SE#100_to_pavement_N",
- "\u011c": "setts_SW#100_to_pavement_N",
- "\u011d": "setts_SE#68_to_pavement_N",
- "\u011e": "setts_SW#64_to_pavement_N",
- "\u011f": "setts_SE#0_to_pavement_N",
- "\u0120": "setts_SW#0_to_pavement_N",
- "\u0121": "setts_SW#32_to_pavement_N",
- "\u0122": "setts_SE#36_to_pavement_N",
- "\u0123": "setts_SW#102_to_pavement_N",
- "\u0124": "setts_NW#72",
- "\u0125": "setts_NW#34",
- "\u0126": "setts_NW#200",
- "\u0127": "setts_NW#50",
- "\u0128": "quay#153",
- "\u0129": "quay#145",
- "\u012a": "quay_to_setts_NW#136",
- "\u012b": "quay_to_setts_NE#0",
- "\u012c": "quay_to_setts_NW#0",
- "\u012d": "harbour_drain@30,22",
- "\u012e": "lifebuoy_post@41,22",
- "\u012f": "quay_to_setts_NW#18",
- "\u0130": "quay#179",
- "\u0131": "quay#153+coping#100",
- "\u0132": "quay#145+coping#100",
- "\u0133": "quay#129+coping#100",
- "\u0134": "quay#128+coping#100",
- "\u0135": "quay#0+coping#100",
- "\u0136": "mooring_bollard@20,23",
- "\u0137": "quay#0+coping#100_ring",
- "\u0138": "quay#0+coping#68",
- "\u0139": "quay#0+coping#64",
- "\u013a": "quay#0",
- "\u013b": "quay#0+coping#32",
- "\u013c": "quay#0+coping#36",
- "\u013d": "mooring_bollard@54,23",
- "\u013e": "quay#18+coping#36",
- "\u013f": {
+ "ą": "setts_NW#179",
+ "Ć": "setts_SW#200",
+ "ć": "setts_SE#0",
+ "Ĉ": "setts_SW#0",
+ "ĉ": "setts_SW#50",
+ "Ċ": "setts_NW#136",
+ "ċ": "setts_NE#0",
+ "Č": "setts_NW#0",
+ "č": "setts_NW#18",
+ "Ď": "setts_SW#253",
+ "ď": "setts_SE#245",
+ "Đ": "setts_SW#145_to_pavement_S",
+ "đ": "setts_SE#145_to_pavement_S",
+ "Ē": "setts_SE#129_to_pavement_S",
+ "ē": "setts_SW#128_to_pavement_S",
+ "Ĕ": "setts_SE#0_to_pavement_S",
+ "ĕ": "setts_SW#0_to_pavement_S",
+ "Ė": "setts_SW#16_to_pavement_S",
+ "ė": "setts_SE#17_to_pavement_S",
+ "Ę": "setts_SE#147_to_pavement_S",
+ "ę": "setts_SE#253",
+ "Ě": "setts_SW#245",
+ "ě": "setts_SE#100_to_pavement_N",
+ "Ĝ": "setts_SW#100_to_pavement_N",
+ "ĝ": "setts_SE#68_to_pavement_N",
+ "Ğ": "setts_SW#64_to_pavement_N",
+ "ğ": "setts_SE#0_to_pavement_N",
+ "Ġ": "setts_SW#0_to_pavement_N",
+ "ġ": "setts_SW#32_to_pavement_N",
+ "Ģ": "setts_SE#36_to_pavement_N",
+ "ģ": "setts_SW#102_to_pavement_N",
+ "Ĥ": "setts_NW#72",
+ "ĥ": "setts_NW#34",
+ "Ħ": "setts_NW#200",
+ "ħ": "setts_NW#50",
+ "Ĩ": "quay#153",
+ "ĩ": "quay#145",
+ "Ī": "quay_to_setts_NW#136",
+ "ī": "quay_to_setts_NE#0",
+ "Ĭ": "quay_to_setts_NW#0",
+ "ĭ": "harbour_drain@30,22",
+ "Į": "lifebuoy_post@41,22",
+ "į": "quay_to_setts_NW#18",
+ "İ": "quay#179",
+ "ı": "quay#153+coping#100",
+ "Ĳ": "quay#145+coping#100",
+ "ĳ": "quay#129+coping#100",
+ "Ĵ": "quay#128+coping#100",
+ "ĵ": "quay#0+coping#100",
+ "Ķ": "mooring_bollard@20,23",
+ "ķ": "quay#0+coping#100_ring",
+ "ĸ": "quay#0+coping#68",
+ "Ĺ": "quay#0+coping#64",
+ "ĺ": "quay#0",
+ "Ļ": "quay#0+coping#32",
+ "ļ": "quay#0+coping#36",
+ "Ľ": "mooring_bollard@54,23",
+ "ľ": "quay#18+coping#36",
+ "Ŀ": {
   "name": "quay_wall#17",
   "joins": "~"
  },
- "\u0140": {
+ "ŀ": {
   "name": "quay_wall#145",
   "joins": "~"
  },
- "\u0141": {
+ "Ł": {
   "name": "quay_wall_ladder",
   "joins": "~"
  },
- "\u0142": {
+ "ł": {
   "name": "quay_wall#179",
   "joins": "~"
  },
- "\u0143": {
+ "Ń": {
   "name": "quay_wall#217",
   "joins": "~"
  },
- "\u0144": {
+ "ń": {
   "name": "quay_wall#129",
   "joins": "~"
  },
- "\u0145": {
+ "Ņ": {
   "name": "quay_wall#50",
   "joins": "~"
  },
- "\u0146": {
+ "ņ": {
   "name": "quay_wall#200",
   "joins": "~"
  },
- "\u0147": {
+ "Ň": {
   "name": "coiled_rope@54,26",
   "joins": "d"
  },
- "\u0148": {
+ "ň": {
   "name": "bollard_rope@54,27",
   "joins": "d"
  },
- "\u0149": {
+ "ŉ": {
   "name": "quay_wall#18",
   "joins": "~"
  },
- "\u014a": {
+ "Ŋ": {
   "name": "quay_wall#136",
   "joins": "~"
  },
- "\u014b": {
+ "ŋ": {
   "name": "quay_wall#16",
   "joins": "~"
  },
- "\u014c": {
+ "Ō": {
   "name": "quay_wall#128",
   "joins": "~"
  },
@@ -285,39 +285,39 @@
  "f": "sign_on_setts_NE#145",
  "F": "sign_on_setts_SE#147_to_pavement_S",
  "i": "sign_on_setts_SE#0",
- "\u0180": {
+ "ƀ": {
   "name": "fence#6_on_setts_SE#100_to_pavement_N",
   "joins": "#"
  },
- "\u0181": {
+ "Ɓ": {
   "name": "fence#10_on_setts_SW#100_to_pavement_N",
   "joins": "#"
  },
- "\u0182": {
+ "Ƃ": {
   "name": "fence#10_on_setts_SE#100_to_pavement_N",
   "joins": "#"
  },
- "\u0183": {
+ "ƃ": {
   "name": "fence#8_on_setts_SE#100_to_pavement_N",
   "joins": "#"
  },
- "\u0184": {
+ "Ƅ": {
   "name": "fence#2_on_setts_SE#100_to_pavement_N",
   "joins": "#"
  },
- "\u0185": {
+ "ƅ": {
   "name": "fence#12_on_setts_SW#100_to_pavement_N",
   "joins": "#"
  },
- "\u0190": {
+ "Ɛ": {
   "name": "forest#13_over_street_10",
   "joins": "T"
  },
- "\u0191": {
+ "Ƒ": {
   "name": "forest#13_over_street_12",
   "joins": "T"
  },
- "\u0192": {
+ "ƒ": {
   "name": "forest#13_over_street_14",
   "joins": "T"
  },
@@ -325,9 +325,29 @@
   "name": "asphalt#15",
   "joins": "="
  },
+ "ɑ": {
+  "name": "pavement_to_cobble_E",
+  "joins": "="
+ },
+ "ɒ": {
+  "name": "asphalt_to_cobble_E",
+  "joins": "="
+ },
  "m": {
   "name": "asphalt_dashed_H_boundary",
   "joins": "="
  },
- "-": "asphalt_dashed_H_boundary"
+ "-": "asphalt_dashed_H_boundary",
+ "Ⰰ": {
+  "name": "crate@dock#12",
+  "joins": "d"
+ },
+ "Ⰱ": {
+  "name": "barrel",
+  "joins": "d"
+ },
+ "Ⰲ": {
+  "name": "boat",
+  "joins": "~"
+ }
 }

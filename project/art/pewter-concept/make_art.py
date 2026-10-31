@@ -74,6 +74,7 @@ PROPS = [("litter_bin", 17, 13, "paving#15")]  # by the Museum, beside its lamp 
 BRICK = {3: 7, 4: 8, 5: 9, 8: 2, 12: 10, 15: 11, 7: 1}
 LEGEND = {WALK: {"pick": ["pewter_brick#15", "pewter_brick#15~1", "pewter_brick#15~2"]},  # the brick, no kerbs
           "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
+          ":": {"auto": "dirt", "joins": WALK},  # (Route 2's and Route 3's dirt roads come in: no rim at the cobbles)
           LAMP: {"name": "lamp_brick", "joins": WALK}, SIGN: {"name": "sign_brick", "joins": WALK},
           PAVED_SIGN: {"name": "sign_paving", "joins": WALK}}
 
@@ -136,6 +137,14 @@ def fit(g):
     return g
 
 
+def route3_edge(g) -> None:
+    """At the join to Route 3 the face over the road east runs on into Route 3's (no rounded end of its own at the
+    edge). (Route 3's plateau south of the road and the north-east tier's end would need cliff-top pieces the full
+    tileset has no room for.)"""
+    for y in (22, 23):
+        g[y][MAP_W - 1] = "N"
+
+
 def doors(g) -> dict[str, tuple[int, int]]:
     out = {}
     for letter in list(SHARED) + list(OWN):
@@ -191,7 +200,8 @@ def check(g, d) -> None:
 
 def main() -> None:
     g = fit(plan())
-    prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins='p')
+    route3_edge(g)
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins=WALK)  # the paving's group is the brick's
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)

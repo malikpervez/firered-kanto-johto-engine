@@ -62,6 +62,7 @@ def _pack(folder: Path) -> tuple[buildings.Building, list[tuple[int, int]]]:
 
 MOUTH = _pack(ART / "route2-concept/buildings/diglett_cave")[0]
 GATE, GATE_DOORS = _pack(GATE_FOLDER)
+GATE_ROWS = 2  # only the gatehouse's back half stands here (roof and back doorway): its front is Route 22's
 DOORWAY = [d for d in GATE_DOORS if d[1] == 0]   # the gatehouse's back doorway, entered walking south
 
 
@@ -84,7 +85,7 @@ def doors(g) -> dict:
         mouths.append((x0 + MOUTH.door[0], y0 + MOUTH.door[1]))
     n = {(x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == "H"}
     x0, y0 = min(n)
-    assert n == {(x0 + i, y0 + j) for i in range(4) for j in range(4)}, "H isn't the gatehouse's footprint"
+    assert n == {(x0 + i, y0 + j) for i in range(4) for j in range(GATE_ROWS)}, "H isn't the gatehouse's footprint"
     return {"Y": sorted(mouths), "H": [(x0 + dx, y0 + dy) for dx, dy in DOORWAY]}
 
 
@@ -153,11 +154,20 @@ def main() -> None:
     spec_mt += rock.write()
     sh = kit.Sheet(MOUTH.name, MOUTH.palette, CLIFF_BANK, HERE, HERE, cols=MOUTH.idx.shape[1] // 16)
     dx, dy = MOUTH.door
-    sh.add(MOUTH.name, MOUTH.idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
+    # the mouths' raised tops (their top three rows) are set in the cliff top: the gaps round their rim show the
+    # cliff's own top (by the first mouth's phase) rather than grass
+    (mx, my) = min(((x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == "Y"), key=lambda c: (c[1], c[0]))
+    idx = MOUTH.idx.copy()
+    for by in range(3):
+        for bx in range(idx.shape[1] // 16):
+            cell = idx[by * 16:(by + 1) * 16, bx * 16:(bx + 1) * 16]
+            rock = cliffs.top(1 + (mx + bx) % 3 + 3 * ((my + by) % 3), 0)
+            cell[cell == 0] = rock[cell == 0]
+    sh.add(MOUTH.name, idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
            behaviors={f"{dx},{dy}": "MB_NON_ANIMATED_DOOR"})  # an open mouth: you walk in
     spec_mt += sh.write()
     gs = kit.Sheet(GATE.name, GATE.palette, GATE_BANK, HERE, HERE, cols=GATE.idx.shape[1] // 16)
-    gs.add(GATE.name, GATE.idx, tileset="secondary", ground="grass", solid=True,
+    gs.add(GATE.name, GATE.idx[:16 * GATE_ROWS], tileset="secondary", ground="grass", solid=True,
            open=[f"{x},{y}" for x, y in DOORWAY], behaviors={f"{x},{y}": "MB_SOUTH_ARROW_WARP" for x, y in DOORWAY})
     spec_mt += gs.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability

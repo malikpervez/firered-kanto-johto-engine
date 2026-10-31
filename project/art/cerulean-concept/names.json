@@ -4401,7 +4401,7 @@
    "elevation": null,
    "open": []
   },
-  "fence_paving#1": {
+  "sign_brick": {
    "ids": [
     813
    ],
@@ -4411,7 +4411,7 @@
    "elevation": null,
    "open": []
   },
-  "fence_paving#2": {
+  "fence_paving#1": {
    "ids": [
     814
    ],
@@ -4421,7 +4421,7 @@
    "elevation": null,
    "open": []
   },
-  "fence_paving#5": {
+  "fence_paving#2": {
    "ids": [
     815
    ],
@@ -4431,7 +4431,7 @@
    "elevation": null,
    "open": []
   },
-  "fence_paving#6": {
+  "fence_paving#5": {
    "ids": [
     816
    ],
@@ -4441,7 +4441,7 @@
    "elevation": null,
    "open": []
   },
-  "fence_paving#8": {
+  "fence_paving#6": {
    "ids": [
     817
    ],
@@ -4451,7 +4451,7 @@
    "elevation": null,
    "open": []
   },
-  "fence_paving#10": {
+  "fence_paving#8": {
    "ids": [
     818
    ],
@@ -4461,9 +4461,18 @@
    "elevation": null,
    "open": []
   },
+  "fence_paving#10": {
+   "ids": [
+    819
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "fountain_3x3": {
    "ids": [
-    819,
     820,
     821,
     822,
@@ -4471,7 +4480,8 @@
     824,
     825,
     826,
-    827
+    827,
+    828
    ],
    "w": 3,
    "h": 3,
@@ -4481,8 +4491,8 @@
   },
   "bench_wood_south": {
    "ids": [
-    828,
-    829
+    829,
+    830
    ],
    "w": 2,
    "h": 1,
@@ -4492,8 +4502,8 @@
   },
   "bench_wood_north": {
    "ids": [
-    830,
-    831
+    831,
+    832
    ],
    "w": 2,
    "h": 1,
@@ -4503,8 +4513,8 @@
   },
   "bench_wood_west": {
    "ids": [
-    832,
-    833
+    833,
+    834
    ],
    "w": 1,
    "h": 2,
@@ -4514,7 +4524,7 @@
   },
   "litter_bin": {
    "ids": [
-    834
+    835
    ],
    "w": 1,
    "h": 1,
@@ -4524,8 +4534,8 @@
   },
   "bike_rack": {
    "ids": [
-    835,
-    836
+    836,
+    837
    ],
    "w": 2,
    "h": 1,
@@ -4535,7 +4545,7 @@
   },
   "flower_tub": {
    "ids": [
-    837
+    838
    ],
    "w": 1,
    "h": 1,
@@ -4545,7 +4555,7 @@
   },
   "bridge_ew_1_west": {
    "ids": [
-    838
+    839
    ],
    "w": 1,
    "h": 1,
@@ -4555,7 +4565,7 @@
   },
   "bridge_ew_1_middle": {
    "ids": [
-    839
+    840
    ],
    "w": 1,
    "h": 1,
@@ -4565,7 +4575,7 @@
   },
   "bridge_ew_1_east": {
    "ids": [
-    840
+    841
    ],
    "w": 1,
    "h": 1,
@@ -4575,7 +4585,7 @@
   },
   "bridge_ns_1_north": {
    "ids": [
-    841
+    842
    ],
    "w": 1,
    "h": 1,
@@ -4585,7 +4595,7 @@
   },
   "bridge_ns_1_middle": {
    "ids": [
-    842
+    843
    ],
    "w": 1,
    "h": 1,
@@ -4595,7 +4605,7 @@
   },
   "bridge_ns_1_south": {
    "ids": [
-    843
+    844
    ],
    "w": 1,
    "h": 1,
@@ -4605,7 +4615,6 @@
   },
   "diglett_cave": {
    "ids": [
-    844,
     845,
     846,
     847,
@@ -4634,7 +4643,8 @@
     870,
     871,
     872,
-    873
+    873,
+    874
    ],
    "w": 6,
    "h": 5,
@@ -4646,7 +4656,7 @@
   },
   "hole": {
    "ids": [
-    874
+    875
    ],
    "w": 1,
    "h": 1,
@@ -4657,11 +4667,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 320
+  "secondary": 319
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 235
+  "secondary": 236
  },
  "animations": [
   {
@@ -4673,12 +4683,10 @@
   },
   {
    "name": "CeruleanConcept_Fountain3X3",
-   "first_tile": 931,
+   "first_tile": 930,
    "tiles": 29,
    "frames": 4,
-   "notes": [
-    "gTileset_CeruleanConcept now animates through the new InitTilesetAnim_CeruleanConcept"
-   ]
+   "notes": []
   }
  ]
 }

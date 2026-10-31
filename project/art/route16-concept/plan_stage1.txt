@@ -25,13 +25,13 @@ TT*****.ppppppppppppppppppppCCCCCCCC=======ooo==========
 TT*****.ppppppppppppppppppppCCCCCCCC====================
 TT......ppppppppppppppppppppTTTTTTTT=======ooo==========
 TT......ppppppppppppppppppppTTTTTTTT.......ooo........TT
-TT.RR...ppppppppppppppppppppTTTTTTTTTTTTTTTooo........TT
-TT.RR.......======.S........TTTTTTTTTTTTTTTooo.gggggggTT
+TT.RR...ppppppppppppppppppppTTTTTTTT.......ooo........TT
+TT.RR.......======.S........TTTTTTTTTTTTTTTTTT.gggggggTT
 TT..........======....RR....TTTTTTTTTTTTTTTTTT.gggggggTT
 TT..........======....RR.RR.TTTTTTTTTTTTTTTTTT.gggggggTT
 TT..........======.......RR.TTTTTTTTTTTTTTTTTT.gg~~~ggTT
 TT..........======..........TTTTTTTTTTTTTTTTTT.gg~~~ggTT
-TTTTTTTTTTTT======TTTTTTTTTTTTTTTTTTTTTTTTTTTT.gg~~~ggTT
+TT..........======..........TTTTTTTTTTTTTTTTTT.gg~~~ggTT
 TTTTTTTTTTTT======TTTTTTTTTTTTTTTTTTTTTTTTTTTT.gggggggTT
 TTTTTTTTTTTT======TTTTTTTTTTTTTTTTTTTTTTTTTTTT.gggggggTT
 TTTTTTTTTTTT======TTTTTTTTTTTTTTTTTTTTTTTTTTTT........TT

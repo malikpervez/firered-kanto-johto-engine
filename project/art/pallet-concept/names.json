@@ -4266,10 +4266,51 @@
     39
    ]
   },
+  "crate@dock#6": {
+   "ids": [
+    765
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "barrel@dock#14": {
+   "ids": [
+    766
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "barrel@dock#12": {
+   "ids": [
+    767
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "boat_moored": {
+   "ids": [
+    768,
+    769
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": 1,
+   "open": []
+  },
   "fingerpost": {
    "ids": [
-    765,
-    766
+    770,
+    771
    ],
    "w": 1,
    "h": 2,
@@ -4279,8 +4320,8 @@
   },
   "bench_wood_east": {
    "ids": [
-    767,
-    768
+    772,
+    773
    ],
    "w": 1,
    "h": 2,
@@ -4295,7 +4336,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 129
+  "secondary": 134
  },
  "animations": [
   {

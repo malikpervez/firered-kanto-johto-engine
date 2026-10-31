@@ -115,6 +115,7 @@ tree(54, 28, "|")
 
 # Saffron Park: the pond in the south-west, flower gardens in the south-east
 rect(5, 36, 11, 40, "~")
+rect(2, 33, 11, 33, "b")                       # a hedge between the south street and the park's lawn
 rect(4, 42, 10, 43, "*")
 tree(3, 42); tree(22, 36, "|")
 rect(13, 34, 16, 37, "a"); rect(18, 34, 21, 37, "a")  # shops by the park
@@ -145,9 +146,11 @@ pave(2, 26, 27, 30)
 pave(32, 26, 57, 30)
 pave(12, 33, 27, 44)
 pave(32, 33, 57, 44)
-for x, y in ((25, 8), (2, 8), (27, 13), (27, 29), (32, 29), (2, 30), (57, 27), (27, 34), (32, 34), (57, 34),
-             (12, 34)):
+# (each a block in from the kerb and the verge, on the plain paving its post is drawn on: on an edge its paving would
+# break the kerb's rim)
+for x, y in ((25, 7), (3, 7), (26, 14), (33, 29), (3, 29), (56, 28), (26, 35), (33, 35), (53, 35)):
     rect(x, y - 1, x, y, "l")                  # a lamp: its post's foot at x, y
+rect(11, 41, 11, 42, "^")                      # a lamp on the park's lawn, by the pavement
 # where the pavement meets lawn, forest, water or a hedge rather than the road, it's the pavement on grass ("$")
 GRASSY = set("T.,*~b")
 for y in range(H):
@@ -155,6 +158,11 @@ for y in range(H):
         if g[y][x] == "&" and any(0 <= x + dx < W and 0 <= y + dy < H and g[y + dy][x + dx] in GRASSY
                                   for dx in (-1, 0, 1) for dy in (-1, 0, 1)):
             g[y][x] = "$"
+
+# the paving that should keep its kerb: beside the east gatehouse (the column flows into the gate's paved base) and
+# at the south gatehouse's corners onto the avenue
+for x, y in ((54, 19), (27, 44), (32, 44)):
+    at(x, y, "&")
 
 # the road's markings: a dashed line down the middle of each avenue ("-", ";"), zebra crossings over the north-south
 # avenue either side of the crossroads, their dropped kerbs ("6" "8") and ends ("2" "3"), and manholes ("%")

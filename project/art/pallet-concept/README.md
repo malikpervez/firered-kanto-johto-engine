@@ -22,7 +22,8 @@ runs:
 3. `pae tileset build` and `pae map paint`. The water is animated in eight frames. The pond and the channel come from
    a native pixel pack (`../kit/pond/`): gentle ripples, an earth bank and inside corners, with three kinds of open
    water so it doesn't repeat every block. The sea comes from a second pack (`../kit/sea/`): broad swells, a rocky
-   cliff with surf at its foot, and sea rocks (`q` and `Q` in the grid, three of them off the cliff).
+   cliff with surf at its foot on both sides: the forest closes it on the east, as the map's border is forest (the
+   kit's sea rocks, `q` and `Q`, stand only in open sea, so this strip has none).
 4. `pae map connect`: the road north meets Route 1's, and the channel south meets Route 21's water.
 5. `pae seam build` and `pae door add`: the edge strips across tilesets, and the three door animations (each house's and the lab's).
 6. `pae map place`: the events.

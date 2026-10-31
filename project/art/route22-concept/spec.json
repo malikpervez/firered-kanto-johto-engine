@@ -4819,6 +4819,52 @@
    "ground": "grass"
   },
   {
+   "name": "lamp@paving#7",
+   "image": "sheets/forecourt_lamps.png",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    8
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "paving#7",
+    "paving#7"
+   ],
+   "solid": true
+  },
+  {
+   "name": "lamp@paving#13",
+   "image": "sheets/forecourt_lamps.png",
+   "x": 16,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    8
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "paving#13",
+    "paving#13"
+   ],
+   "solid": true
+  },
+  {
+   "name": "sign@paving#15",
+   "image": "sheets/forecourt_sign.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "solid": true
+  },
+  {
    "name": "top1#7",
    "image": "sheets/rock_cliff.png",
    "x": 0,

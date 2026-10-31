@@ -51,13 +51,20 @@ PLANT = buildings.load(buildings.REMAKES / "power_plant")
 
 
 def _mouth() -> buildings.Building:
-    """Route 2's cave mouth (its pack names its door ``door_blocks``, which the kit's loader doesn't read)."""
+    """Route 2's cave mouth (its pack names its door ``door_blocks``, which the kit's loader doesn't read): only its
+    face, the bottom two rows, set in the cliff's face (the pack's middles under its see-through pixels and in its
+    rounded side columns), so the face runs on through it and the cliff's top over it."""
     folder = ART / "route2-concept/buildings/diglett_cave"
     meta = json.loads((folder / "diglett_cave.json").read_text())
     with Image.open(folder / "diglett_cave.png") as im:
         idx, flat = np.array(im, np.uint8), im.getpalette()[:48]
-    return buildings.Building("diglett_cave", idx, [tuple(flat[i:i + 3]) for i in range(0, 48, 3)],
-                              tuple(meta["door_blocks"][0]), folder / "diglett_cave_door.png")
+    dx, dy = meta["door_blocks"][0]
+    face = idx[(dy - 1) * 16:(dy + 1) * 16].copy()
+    face[:, :3] = 0; face[:, -3:] = 0  # its rounded ends: the cliff's face instead
+    strip = np.hstack([cliffs.pack(f"face/middle_{1 + k % 3}.png") for k in range(face.shape[1] // 16)])
+    face = np.where(face != 0, face, strip).astype(np.uint8)
+    return buildings.Building("diglett_cave", face, [tuple(flat[i:i + 3]) for i in range(0, 48, 3)],
+                              (dx, 1), folder / "diglett_cave_door.png")
 
 
 MOUTH = _mouth()
@@ -151,6 +158,10 @@ def main() -> None:
     g = plan()
     d = doors(g)
     cliffs.layout(g, roof="Y")  # the caves' mouths stand against the cliffs: their tops run down to them, with no face
+    for y in range(MAP_H):  # the face beside a mouth runs on into it (a middle, not an inner end)
+        for x in range(MAP_W):
+            if (g[y][x] == "}" and x + 1 < MAP_W and g[y][x + 1] == "Y") or (g[y][x] == "{" and g[y][x - 1] == "Y"):
+                g[y][x] = "N" if g[y][x - 1] != "N" and g[y][x - 1] != "Y" else "P"
     kit.check_forest(g)
     kit.check_water(g)
     check(g, d)
@@ -159,6 +170,10 @@ def main() -> None:
     spec_mt = list(base["metatiles"])
     rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
     char_of = cliffs.add(rock, g, roof="Y", extras=())
+    for y in range(MAP_H - 1):  # over a mouth the top runs on plain (the face goes on through the mouth, no corner)
+        for x in range(MAP_W):
+            if g[y + 1][x] == "Y" and g[y][x] in cliffs.JUNCTION_CHARS:
+                g[y][x] = cliffs.TOP[cliffs.phase(x, y) - 1]
     spec_mt += rock.write()
     sh = kit.Sheet(MOUTH.name, MOUTH.palette, CLIFF_BANK, HERE, HERE, cols=MOUTH.idx.shape[1] // 16)
     dx, dy = MOUTH.door
@@ -185,6 +200,7 @@ def main() -> None:
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, Y={"name": MOUTH.name, "joins": "C"}, Z="pokemon_center", X=PLANT.name)
+    legend[":"] = {"auto": "dirt", "joins": "="}  # the road's dirt runs on into Lavender's cobbles without a lawn rim
     assert not set("YZX") & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")

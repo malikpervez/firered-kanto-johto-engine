@@ -121,7 +121,10 @@
   "name": "league_gate_top",
   "joins": "C"
  },
- "L": "league_gate_front",
+ "L": {
+  "name": "league_gate_front",
+  "joins": "p"
+ },
  "n": {
   "name": "paving_to_cobble_N",
   "joins": "p"
@@ -168,11 +171,26 @@
   "joins": "C"
  },
  "[": "face_outer_W",
- "{": "face_inner_W",
- "M": "face_middle_1",
- "N": "face_middle_2",
- "P": "face_middle_3",
- "}": "face_inner_E",
+ "{": {
+  "name": "face_inner_W",
+  "joins": "p"
+ },
+ "M": {
+  "name": "face_middle_1",
+  "joins": "p"
+ },
+ "N": {
+  "name": "face_middle_2",
+  "joins": "p"
+ },
+ "P": {
+  "name": "face_middle_3",
+  "joins": "p"
+ },
+ "}": {
+  "name": "face_inner_E",
+  "joins": "p"
+ },
  "]": "face_outer_E",
  "a": {
   "name": "top1#13+Eon",
@@ -229,5 +247,29 @@
  ")": {
   "name": "cobble#15",
   "joins": "="
+ },
+ "\u00b9": {
+  "name": "lamp@paving#7",
+  "joins": "p"
+ },
+ "\u00b2": {
+  "name": "lamp@paving#13",
+  "joins": "p"
+ },
+ "\u00b3": {
+  "name": "sign@paving#15",
+  "joins": "p"
+ },
+ "\u00bc": {
+  "name": "paving_to_dirt_S",
+  "joins": "p"
+ },
+ "\u00bd": {
+  "name": "dirt#7",
+  "joins": ":"
+ },
+ "\u00be": {
+  "name": "dirt#13",
+  "joins": ":"
  }
 }

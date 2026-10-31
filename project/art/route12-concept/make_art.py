@@ -190,6 +190,10 @@ def main() -> None:
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("ss\nss\n")
     legend = dict(kit.LEGEND, **{k: load(k)[0].name for k in BUILDINGS})
+    # the road from Lavender runs up to the gatehouse's back door with no lawn rim; Route 11's dirt road runs straight
+    # onto the fishers' deck (its only touch with the dock), with no lawn rim or plank edge between them
+    legend["N"] = {"name": legend["N"], "joins": "="}
+    legend[":"] = {"auto": "dirt", "joins": "d"}
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

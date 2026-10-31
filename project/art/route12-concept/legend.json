@@ -15,7 +15,8 @@
   "auto": "cobble"
  },
  ":": {
-  "auto": "dirt"
+  "auto": "dirt",
+  "joins": "d"
  },
  "~": {
   "auto": "pond",
@@ -123,7 +124,10 @@
   "with": "rock_b",
   "elevation": 1
  },
- "N": "route12_gate",
+ "N": {
+  "name": "route12_gate",
+  "joins": "="
+ },
  "F": "house_gardener",
  "Ⰰ": {
   "name": "sea#14",

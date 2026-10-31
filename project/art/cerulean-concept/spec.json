@@ -5197,6 +5197,19 @@
    "dedupe": true
   },
   {
+   "name": "sign_brick",
+   "image": "sheets/sign_brick.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "cerulean_brick#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
    "name": "fence_paving#1",
    "image": "sheets/fence_paving.png",
    "x": 0,

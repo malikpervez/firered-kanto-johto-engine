@@ -39,11 +39,11 @@ SECONDARY = "gTileset_SaffronConcept"
 MAP_W, MAP_H = 60, 48
 HOUSE_BANK, CITY_BANK = 7, 9
 GROUND = "kerb#15"  # what shows round the city's own buildings' edges: the pavement
-SOLID = set("T#bRoklSBcw_~vrXMDGNWEUZLYHPKAFIJVCa|")
+SOLID = set("T#bRoklSBcw_~vrXMDGNWEUZLYHPKAFIJVCa|^")
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
-PROPS = [("bench_stone", 9, 20, "granite#15"), ("litter_bin", 12, 20, "granite#15"), ("bench_stone", 14, 20, "granite#15"),
-         ("bench_stone", 39, 20, "granite#15"), ("flower_tub", 42, 19, "granite#15"), ("flower_tub", 45, 19, "granite#15"),
-         ("bench_stone", 47, 20, "granite#15"), ("litter_bin", 50, 20, "granite#15")]  # on the plazas, the tubs either side of the compass
+PROPS = [("bench_stone", 9, 19, "granite#15"), ("litter_bin", 12, 19, "granite#15"), ("bench_stone", 14, 19, "granite#15"),
+         ("bench_stone", 39, 19, "granite#15"), ("flower_tub", 42, 19, "granite#15"), ("flower_tub", 45, 19, "granite#15"),
+         ("bench_stone", 47, 19, "granite#15"), ("litter_bin", 50, 19, "granite#15")]  # on the plazas, the tubs either side of the compass
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the south
 # gatehouse's doorway is entered walking south from above; the station has no door)
@@ -264,6 +264,8 @@ def main() -> None:
                   **{k: f"{d}_{c}" for k, (d, c) in CITY.items()},
                   **{k: f"{n}_paved" for k, (n, _, _) in PAVED.items()})
     legend["l"] = "lamp_paved"
+    legend["^"] = "lamp"                       # the kit's lamp on the lawn (Saffron Park's corner)
+    legend["E"] = legend["W"] = {"name": "saffron_gate", "joins": "&"}  # the pavement runs into their paved base
     legend["S"] = "sign_paved"
     legend["|"] = {"pick": [f"{n}_paved" for n in trees.STANDALONE]}
     legend["@"] = {"auto": "granite"}

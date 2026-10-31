@@ -41,6 +41,11 @@ def plan(name: str) -> list[list[str]]:
     return g
 
 
+# the woods' cells at the south map's foot drawn as named forest pieces (top-left block -> character), and the pieces
+FOOT = {(14, 48): "5", (16, 48): "1", (18, 48): "2", (20, 48): "3", (22, 48): "4"}
+FOOT_PIECE = {"1": "forest#11", "2": "forest#11~1", "3": "forest#11~2", "4": "forest#11", "5": "forest#15.2"}
+
+
 def reachable(g, starts, surf=False) -> set[tuple[int, int]]:
     seen, todo = set(starts), deque(starts)
     while todo:
@@ -125,9 +130,20 @@ def main() -> None:
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid_north.txt").write_text("".join("".join(r) + "\n" for r in n))
+    # the woods at the south map's foot end over Cinnabar's lawn above its Gym (Cinnabar's columns 16-23): there their
+    # cells show trunks on grass (no forest south), and the cell beside them, whose woods go on into Cinnabar's, turns
+    # an inside corner; pae counts off the map as more forest, so these are named (part of the forest for the rest)
+    for (x0, y0), ch in FOOT.items():
+        for dx in (0, 1):
+            for dy in (0, 1):
+                assert s[y0 + dy][x0 + dx] == "T", f"the woods' foot at ({x0},{y0})"
+                s[y0 + dy][x0 + dx] = ch
     (HERE / "grid_south.txt").write_text("".join("".join(r) + "\n" for r in s))
     (HERE / "border.txt").write_text("ss\nss\n")
-    (HERE / "legend.json").write_text(json.dumps(kit.LEGEND, indent=1) + "\n")
+    # Pallet's river runs out into the sea: one water with it, so neither draws a shore across the mouth
+    legend = dict(kit.LEGEND, **{"~": {"auto": "pond", "joins": "s", "elevation": 1}})
+    legend.update({ch: {"name": FOOT_PIECE[ch], "joins": "T"} for ch in FOOT.values()})
+    (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; two grids {MAP_W}x{MAP_H}")
 
 

@@ -1,6 +1,6 @@
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT===TTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT===TTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT===TTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT===bTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT===bTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTT..........................===.....................TTTT
 TTTTTT*******.......****..ZZZZZ.===.LLLL.**.##########..TTTT
 TTTTTT*******o......****..ZZZZZ.===.LLLL.**.#::::::::#..TTTT
 TTTTTT....................ZZZZZ.===.LLLL.**.#::::::::#..TTTT
@@ -8,12 +8,12 @@ TTTTTT..XXXX..KKKKK.......ZZZZZ.===.LLLL....#::::::::#..TTTT
 TTTTTT..XXXX..KKKKK.....=======S===========.#::::::::#..TTTT
 TTTTTT..XXXX..KKKKK.....===================.#::::::::#..TTTT
 TTTTTT..XXXX..KKKKKS....===================.####:#####..TTTT
-TTTTTT..................===================............STTTT
+TTTTTT..................===================............S...b
 TTTTTT======================================================
 TTTTTT======================================================
 TTTTTT======================================================
 TTTTTT======================================================
-TTTTTT#########.##......................................TTTT
+TTTTTT#########.##.........................................b
 TTTTTT#WWWWWWW...#..HHHHH.**......b.........UUUU........TTTT
 TTTTTT#WWWWWWW...#..HHHHH.**................UUUU..***...TTTT
 TTTTTT#WWWWWWW.S.#..HHHHH...................UUUU..***...TTTT

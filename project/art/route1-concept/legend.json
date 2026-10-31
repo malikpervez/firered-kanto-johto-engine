@@ -1,4 +1,7 @@
 {
+ ":": {
+  "auto": "dirt"
+ },
  "T": {
   "auto": "forest"
  },
@@ -12,10 +15,8 @@
  },
  ",": "lawn_flowers",
  "=": {
-  "auto": "cobble"
- },
- ":": {
-  "auto": "dirt"
+  "auto": "cobble",
+  "joins": ":"
  },
  "~": {
   "auto": "pond",
@@ -29,7 +30,8 @@
   "auto": "fence"
  },
  "d": {
-  "auto": "dock"
+  "auto": "dock",
+  "joins": ":"
  },
  "*": {
   "pick": [
@@ -124,5 +126,16 @@
   "elevation": 1
  },
  "P": "shelter",
- "A": "arch"
+ "A": {
+  "name": "arch",
+  "joins": ":"
+ },
+ "y": {
+  "name": "steps_dirt_W",
+  "joins": ":"
+ },
+ "z": {
+  "name": "steps_dirt_E",
+  "joins": ":"
+ }
 }

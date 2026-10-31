@@ -58,7 +58,7 @@ rect(16, 6, 16, 11, "b")           # behind the lamp west of the Museum
 rect(40, 6, 41, 12, "b")
 at(33, 6, "*"); at(34, 6, "*"); at(33, 8, "o"); at(33, 11, "*"); at(34, 11, "*")
 rect(37, 11, 37, 12, ":")          # the path to the annex's door
-at(16, 13, "l"); at(16, 12, "l")   # lamps either side of the plaza
+at(16, 13, "@"); at(16, 12, "@")   # a lamp west of the plaza (standing in stone, as the street's do)
 at(32, 15, "S")                    # the museum's sign, east of the plaza (read from 32,16)
 
 # the Gym in the west, its forecourt, the road to it
@@ -72,6 +72,8 @@ rect(13, 16, 15, 19, "*")
 # the main street from Route 2's road up to the plaza, the square, the road east
 rect(22, 16, 25, 43, "=")
 rect(26, 24, 51, 27, "=")          # the road east to Route 3
+rect(22, 41, 25, 43, ":")          # the cobbles end before the edge: Route 2's dirt road comes in
+rect(49, 24, 51, 27, ":")          # and Route 3's
 rect(26, 33, 35, 34, "%")          # the square's walk, a sidewalk past the Center and the Mart
 rect(27, 29, 31, 32, "Z")          # the Pokémon Center, door (29,32)
 rect(33, 29, 36, 32, "L")          # the Poké Mart, door (34,32)
@@ -93,7 +95,7 @@ at(14, 30, "o"); at(16, 27, "o"); at(5, 25, "o")
 rect(33, 14, 41, 21, ".")
 rect(33, 22, 41, 23, "b")          # the road east can only be left by its own rows
 at(36, 17, "o"); at(34, 19, "*"); at(35, 19, "*")
-at(39, 23, "S")                    # the police notice, by the road east (read from 39,24)
+at(39, 23, "/")                    # the police notice, by the road east (read from 39,24), on a stone pad
 
 # the city sign by Route 2's road
 at(26, 35, "S")                    # read from (26,36)
@@ -122,7 +124,7 @@ rect(11, 22, 13, 23, "%")
 # the sidewalks: brick either side of the main street, from the plaza down to the forest, the walk past the Center
 # and the Mart and the house's forecourt by the road east; the lamps and the city sign stand in them
 for r in ((20, 16, 21, 37),                                                             # west of the street
-          (26, 16, 28, 16), (26, 17, 27, 20), (26, 21, 32, 23), (26, 28, 31, 28),       # east of it
+          (26, 16, 27, 16), (26, 17, 27, 20), (26, 21, 32, 23), (26, 28, 26, 28),       # east of it
           (26, 29, 26, 32), (26, 35, 28, 37)):
     rect(*r, "%")
 for x, y in ((21, 19), (26, 19), (21, 32), (26, 31)):

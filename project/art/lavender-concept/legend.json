@@ -131,5 +131,7 @@
  "W": "house_gardener",
  "\u00a1": "statue_guardian",
  "\u00a2": "bench_wood_north",
- "\u00a3": "litter_bin"
+ "\u00a3": "litter_bin",
+ "\u01ce": "field_rock_a@flowers2",
+ "\u01d0": "field_rock_c@flowers1"
 }

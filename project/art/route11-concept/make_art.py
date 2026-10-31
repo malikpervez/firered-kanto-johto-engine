@@ -147,7 +147,18 @@ def main() -> None:
     spec_mt += rock.write()
     sh = kit.Sheet(MOUTH.name, MOUTH.palette, CLIFF_BANK, HERE, HERE, cols=MOUTH.idx.shape[1] // 16)
     dx, dy = MOUTH.door
-    sh.add(MOUTH.name, MOUTH.idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
+    # the mouth's raised top (its top three rows) is set in the ridge: the gaps round its rim show the ridge's own top
+    # (by its phase) rather than grass; its face and bottom corners stand on the lawn
+    (mx, my), = {(x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == "Y"
+                 and (x == 0 or g[y][x - 1] != "Y") and (y == 0 or g[y - 1][x] != "Y")}
+    idx = MOUTH.idx.copy()
+    for by in range(3):
+        for bx in range(idx.shape[1] // 16):
+            k = 1 + (mx + bx) % 3 + 3 * ((my + by) % 3)
+            cell = idx[by * 16:(by + 1) * 16, bx * 16:(bx + 1) * 16]
+            rock = cliffs.top(k, 0)
+            cell[cell == 0] = rock[cell == 0]
+    sh.add(MOUTH.name, idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
            behaviors={f"{dx},{dy}": "MB_NON_ANIMATED_DOOR"})  # an open mouth: you walk in, as in Route 2
     spec_mt += sh.write()
     gate, gds = _gate()
@@ -172,6 +183,7 @@ def main() -> None:
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, Y={"name": MOUTH.name, "joins": "C"}, X=gate.name)
+    legend[":"] = {"auto": "dirt", "joins": "="}  # Vermilion's cobbles run straight on into the dirt road
     assert not set("YX") & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")

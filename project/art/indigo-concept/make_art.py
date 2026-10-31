@@ -124,7 +124,9 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    (HERE / "legend.json").write_text(json.dumps(dict(kit.LEGEND, L=b.name, **prop_legend), indent=1) + "\n")
+    legend = dict(kit.LEGEND, L=b.name, **prop_legend)
+    legend["="] = {"auto": "cobble", "joins": "p"}  # Route 23's cobbles run into the plaza's paving with no grass rim
+    (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({"L": [d]}, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; door {d}")
 

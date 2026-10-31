@@ -16,7 +16,8 @@
   "joins": "%"
  },
  ":": {
-  "auto": "dirt"
+  "auto": "dirt",
+  "joins": "%"
  },
  "~": {
   "auto": "pond",
@@ -249,6 +250,6 @@
  },
  "\u00a1": {
   "name": "litter_bin",
-  "joins": "p"
+  "joins": "%"
  }
 }

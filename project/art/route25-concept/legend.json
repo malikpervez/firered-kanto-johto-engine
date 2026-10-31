@@ -29,7 +29,8 @@
   "auto": "fence"
  },
  "d": {
-  "auto": "dock"
+  "auto": "dock",
+  "joins": ":"
  },
  "*": {
   "pick": [

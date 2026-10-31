@@ -169,5 +169,21 @@
  "N": "face_middle_2",
  "P": "face_middle_3",
  "}": "face_inner_E",
- "]": "face_outer_E"
+ "]": "face_outer_E",
+ "a": {
+  "name": "top4#15.2+in_SE_face",
+  "joins": "C"
+ },
+ "e": {
+  "name": "top5#15.4+in_SW_face",
+  "joins": "C"
+ },
+ "f": {
+  "name": "top8#15.2+in_SE_face",
+  "joins": "C"
+ },
+ "i": {
+  "name": "top9#15.4+in_SW_face",
+  "joins": "C"
+ }
 }
