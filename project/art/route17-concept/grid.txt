@@ -10,8 +10,8 @@ TTTTgggg....======..........ggggTTTT
 TTTTgggg.S..======..........ggggTTTT
 TTTTgggg..================..ggggTTTT
 TTTT......================......TTTT
-TTT****...================...****TTT
-TTT****...================S..****TTT
+TTb****...================...****bTT
+TTb****...================S..****bTT
 TTTTTTTTTT================TTTTTTTTTT
 TTTTTTTTTT..xxxxxxxxxxxx..TTTTTTTTTT
 TTTTTTTTTT..tttttttttttt..TTTTTTTTTT

@@ -8,7 +8,7 @@ things are where they are.
 
 The town is 38×32 blocks (old Lavender was 38×31), as wide as before. Route 10's road meets the top at columns 12–16,
 where it met the old town, and Route 8's the left edge at rows 9–11 (the new Route 8's rows 13–15, offset −4). Route
-12's road meets the bottom at columns 13–15, under the square: Route 12 moves 4 blocks east under the town to meet it
+12's road meets the bottom at columns 12–15 (as wide as Route 12's), under the square: Route 12 moves 4 blocks east under the town to meet it
 (its join's offset is 2, was −2; KR-50). It has:
 - **the square**, where the three roads meet: the Pokémon Center and the Poké Mart on its north side either side of
   the road from Route 10, the town sign, and the Friends' camp (round 13,13, as before);

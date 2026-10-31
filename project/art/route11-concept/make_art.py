@@ -2,7 +2,7 @@
 """Route 11 after its concept (draw_plan.py and plan_stage1.txt): the road east out of Vermilion to the gatehouse
 before Route 12 (see draw_plan.py). It is 60x32 blocks (old Route 11 was 72x40); its joins stay where its
 neighbours meet it: Vermilion's main street the left edge at rows 14-17 (offset -3, Vermilion's 11-14), Route 12's
-road the right edge at rows 17-19 (offset 27, Route 12's 44-46).
+road the right edge at rows 17-20 (offset 27, Route 12's 44-47).
 
 The pieces: the kit's, its cliffs and Route 2's cave mouth for Diglett's Cave, both in the cliffs' palette (bank 7),
 and Route 2's south forest gate for the gatehouse in its own palette (bank 9). Bank 8 is the kit's plants palette;
@@ -31,7 +31,7 @@ SECONDARY = "gTileset_Route11Concept"
 MAP_W, MAP_H = 60, 32
 CLIFF_BANK, GATE_BANK = 7, 9
 WEST = [(0, y) for y in range(14, 18)]
-EAST = [(MAP_W - 1, y) for y in range(17, 20)]
+EAST = [(MAP_W - 1, y) for y in range(17, 21)]  # (Route 12's road: four rows)
 GATE = ART / "route2-concept/buildings/forest_gate_south"
 # the trainers the plan is made for (build.sh places them; their sights are the map's): (x, y, the ways they look,
 # sight). None of them sees the road
@@ -40,7 +40,7 @@ TRAINERS = {"Eddie": (34, 6, "down left", 4), "Hugo": (24, 22, "up down left rig
             "Jasper": (28, 24, "up down left right", 1), "Darian": (44, 6, "up down left right", 1),
             "Braxton": (47, 12, "left right", 4), "Yasu": (36, 24, "up down", 1),
             "Dirk": (40, 22, "up down left right", 1), "Bernie": (20, 25, "left right", 6)}
-ROAD = {(x, y) for y in range(14, 18) for x in range(0, 48)} | {(x, y) for y in range(17, 20) for x in range(44, 60)}
+ROAD = {(x, y) for y in range(14, 18) for x in range(0, 48)} | {(x, y) for y in range(17, 21) for x in range(44, 60)}
 STEP = {"left": (-1, 0), "right": (1, 0), "up": (0, -1), "down": (0, 1)}
 SOLID = set("T#bRoklSBcw_~vrYX") | cliffs.SOLID
 

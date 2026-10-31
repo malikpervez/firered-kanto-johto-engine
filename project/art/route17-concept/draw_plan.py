@@ -60,6 +60,7 @@ rect(4, 8, 7, 10, "g")
 rect(28, 8, 31, 10, "g")
 rect(3, 12, 6, 13, "*")
 rect(29, 12, 32, 13, "*")
+rect(2, 12, 2, 13, "b"); rect(33, 12, 33, 13, "b")   # bushes beside the flowers: the forest's 2x2 trees end whole
 at(9, 9, "S")                                   # the route sign
 at(26, 13, "S")                                 # trainer tips: B to stay in place on the slope
 

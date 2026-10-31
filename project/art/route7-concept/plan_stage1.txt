@@ -12,10 +12,10 @@ TTTTTTT.UUUUS..FFFFFFFFbTTTTTT
 =======================bTTTTTT
 =======================bTTTTTT
 =======================bTTTTTT
-TTTTTTT................TTTTTTT
-TTTTTTT.*******.~~~~.RRTTTTTTT
-TTTTTTT.*******.~~~~.RRTTTTTTT
-TTTTTTT.*******.~~~~...TTTTTTT
+TTTTTTT................bTTTTTT
+TTTTTTT.*******.~~~~.RRbTTTTTT
+TTTTTTT.*******.~~~~.RRbTTTTTT
+TTTTTTT.*******.~~~~...bTTTTTT
 TTTTTTT.*******.....o..TTTTTTT
 TTTTTTT.*******........TTTTTTT
 TTTTTTT.gggggggggggggggTTTTTTT

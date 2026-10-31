@@ -41,7 +41,7 @@ rect(41, 0, 58, 10, "C")           # the outcrop between the field and the rest 
 rect(0, 13, 7, 19, "C")            # south of the way in
 rect(8, 16, 43, 19, "C")           # south of the field
 rect(44, 16, 83, 19, "T")          # the forest south of the rest stop
-rect(82, 8, 83, 15, "T")
+rect(82, 8, 83, 19, "C")            # the east edge: the plateau east of the pass runs down it and on past the map
 rect(0, 13, 1, 19, "T")            # Pewter's forest carries on over the join, south of the road in
 rect(60, 0, 67, 1, "T")            # and Route 4's either side of the pass, ending on the plateaus
 rect(76, 0, 83, 1, "T")

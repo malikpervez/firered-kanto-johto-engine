@@ -18,8 +18,8 @@ TTTT..............................................XXXXXXXXTT
 ====::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 TTTTbbbbbbbb.bbbbbbbbbbbbb.bbbbbbbbb.bbbb...::::::::::::::::
 TTTT........................................::::::::::::::::
-TTTT..ggggggggggggggggggggggggggg.......................TTTT
-TTTT..ggggggggggggggggggggggggggg...***.................TTTT
+TTTT..ggggggggggggggggggggggggggg...........::::::::::::::::
+TTTT..ggggggggggggggggggggggggggg...***.................bbbb
 TTTT..ggggggggggggggggggggggggggg...***...~~~~~~~~~~~~o.TTTT
 TTTT..ggggggggggggggggggggggggggg.........~~~~~~~~~~~~..TTTT
 TTTT..ggggggggggggggggggggggggggg.........~~~~~~~~~~~~..TTTT

@@ -7,7 +7,7 @@ are.
 ![The map](map.png)
 
 The route is 60×32 blocks (old Route 11 was 72×40), and its joins stay where its neighbours meet it: Vermilion's main
-street meets the left edge at rows 14–17, Route 12's road the right edge at rows 17–19. It has:
+street meets the left edge at rows 14–17, Route 12's road the right edge at rows 17–20. It has:
 - **the road**, Vermilion's cobbles carried on and then a dirt road east to Route 12. No trainer's sight is on it:
   Route 11's trainers are for those who go looking;
 - **Diglett's Cave** in the north-west, its mouth (Route 2's: the same cave) set into a rock ridge, with its sign;

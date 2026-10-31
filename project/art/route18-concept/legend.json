@@ -123,5 +123,8 @@
   "with": "rock_b",
   "elevation": 1
  },
- "C": "cycling_gate"
+ "C": {
+  "name": "cycling_gate",
+  "joins": "="
+ }
 }
