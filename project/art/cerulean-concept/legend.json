@@ -270,25 +270,5 @@
   "name": "pond#11",
   "joins": "~",
   "elevation": 1
- },
- "Ⰲ": {
-  "name": "pond#6",
-  "joins": "~",
-  "elevation": 1
- },
- "Ⰳ": {
-  "name": "pond#14",
-  "joins": "~",
-  "elevation": 1
- },
- "Ⰴ": {
-  "name": "pond#15.8",
-  "joins": "~",
-  "elevation": 1
- },
- "Ⰵ": {
-  "name": "pond#13",
-  "joins": "~",
-  "elevation": 1
  }
 }

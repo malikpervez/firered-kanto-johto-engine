@@ -164,22 +164,21 @@
  "¡": "fingerpost",
  "¢": "bench_wood_east",
  "Ⰰ": {
-  "name": "pond#14",
-  "joins": "~",
-  "elevation": 1
+  "name": "sign@cobble#6",
+  "joins": "="
  },
  "Ⰱ": {
-  "name": "pond#12",
+  "name": "pond#15.1",
   "joins": "~",
   "elevation": 1
  },
  "Ⰲ": {
-  "name": "pond#15",
+  "name": "pond#13.8",
   "joins": "~",
   "elevation": 1
  },
  "Ⰳ": {
-  "name": "pond#13",
+  "name": "pond#15",
   "joins": "~",
   "elevation": 1
  },

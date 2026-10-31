@@ -4963,6 +4963,18 @@
    "tileset": "secondary",
    "ground": "grass",
    "solid": true
+  },
+  {
+   "name": "sign@cobble#6",
+   "image": "sheets/settled_wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#6",
+   "solid": true
   }
  ]
 }

@@ -171,6 +171,6 @@
   "name": "compass",
   "joins": "n"
  },
- "¡": "bench_wood_south",
- "¢": "litter_bin"
+ "\u00a1": "bench_wood_south",
+ "\u00a2": "litter_bin"
 }
