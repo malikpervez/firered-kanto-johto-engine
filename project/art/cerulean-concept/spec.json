@@ -5628,7 +5628,7 @@
    "behavior": "MB_SOUTH_ARROW_WARP"
   },
   {
-   "name": "back_step",
+   "name": "back_door",
    "image": "sheets/holes.png",
    "x": 32,
    "y": 0,

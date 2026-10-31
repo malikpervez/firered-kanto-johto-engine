@@ -75,8 +75,7 @@ rect(100, 10, 107, 13, ":")        # to Cerulean (the right edge, rows 10-13)
 rect(104, 10, 107, 13, "=")        # its cobbles start here and run on into Cerulean's
 rect(60, 14, 77, 17, "g"); rect(60, 10, 70, 11, "g")
 rect(78, 11, 87, 16, ".")          # the Friends' camp: a clearing of trodden earth the road opens into
-rect(79, 11, 86, 15, ":"); rect(78, 12, 87, 13, ":")
-at(78, 11, "k"); at(87, 11, "k")   # (two stumps at its corners to sit on)
+rect(79, 11, 86, 15, ":"); rect(78, 12, 87, 13, ":")   # (no stumps at its top corners: one block under the ledge)
 rect(93, 3, 99, 7, "~")            # the pond under the forest (west of the 7 columns Cerulean shows)
 rect(92, 8, 105, 9, "."); rect(92, 2, 105, 2, "."); rect(100, 3, 105, 7, "."); rect(92, 3, 92, 7, ".")
 rect(100, 8, 100, 9, "*")          # (flowers too stay out of those columns: the plants palette)

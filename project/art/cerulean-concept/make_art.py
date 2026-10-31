@@ -163,9 +163,9 @@ HOUSE_SPARE = (3, 8)  # the indices of the houses' palette neither house uses
 
 
 def holes() -> dict[str, np.ndarray]:
-    """The two ways in from the back, drawn on the lawn in the kit's ground colours (bank 0): the thieves' hole at
-    the foot of the robbed house's back wall (two blocks, its west and east halves) and a stone step at the badge
-    house's back door."""
+    """The two ways in from the back, on the lawn in the kit's ground colours (bank 0): the thieves' hole drawn at
+    the foot of the robbed house's back wall (two blocks, its west and east halves), and the badge house's back door
+    left plain lawn (the door is behind its roof, out of sight: a step drawn on that block sat on the roof's peak)."""
     yy, xx = np.mgrid[0:16, 0:32]
 
     def ell(cx, cy, rx, ry):
@@ -178,13 +178,7 @@ def holes() -> dict[str, np.ndarray]:
     a[ell(16, 16.5, 7.5, 4)] = 1         # ...and the dark under the wall
     for x, y in ((6, 11), (7, 11), (25, 10), (26, 11), (10, 8), (21, 8), (13, 9)):
         a[y, x] = 10                     # clods thrown up
-    step = np.zeros((16, 16), np.uint8)
-    step[10:16, 3:13] = 13
-    step[10, 3:13] = 15
-    step[10:16, 3] = step[10:16, 12] = 11
-    step[10, 3] = step[10, 12] = 0
-    step[15, 4:12] = 12
-    return {"hole_w": a[:, :16], "hole_e": a[:, 16:], "back_step": step}
+    return {"hole_w": a[:, :16], "hole_e": a[:, 16:], "back_door": np.zeros((16, 16), np.uint8)}
 
 
 def plan() -> list[list[str]]:
@@ -413,7 +407,7 @@ def main() -> None:
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN}, Y="diglett_cave")
-    legend.update({"^": "hole_w", "J": "hole_e", "I": "back_step", "G": {"name": "house_family", "joins": WALK},
+    legend.update({"^": "hole_w", "J": "hole_e", "I": "back_door", "G": {"name": "house_family", "joins": WALK},
                    ";": {"name": "dirt#5", "joins": WALK},
                    "N": {"name": "paving_to_cobble_N", "joins": WALK},
                    "<": {"name": "paving_to_cobble_N.e", "joins": WALK}, "U": {"name": "paving_to_cobble_S", "joins": WALK}})

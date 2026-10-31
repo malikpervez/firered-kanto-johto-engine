@@ -4734,7 +4734,7 @@
    "elevation": null,
    "open": []
   },
-  "back_step": {
+  "back_door": {
    "ids": [
     883
    ],
@@ -4757,7 +4757,7 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 338
+  "secondary": 337
  },
  "metatile_counts": {
   "primary": 548,
@@ -4773,14 +4773,14 @@
   },
   {
    "name": "CeruleanConcept_Fountain3X3",
-   "first_tile": 937,
+   "first_tile": 936,
    "tiles": 29,
    "frames": 4,
    "notes": []
   },
   {
    "name": "CeruleanConcept_Canal",
-   "first_tile": 966,
+   "first_tile": 965,
    "tiles": 12,
    "frames": 8,
    "notes": []
