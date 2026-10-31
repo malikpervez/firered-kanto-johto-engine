@@ -320,7 +320,8 @@ def water_by_docks(p: Plan) -> list[str]:
                     continue
                 W_ = p.group(g[y][x])
                 near = any(0 <= x + dx < w and 0 <= y + dy < h and g[y + dy][x + dx] in docks
-                           for _, (dx, dy) in SIDES)
+                           for dx, dy in ((0, -1), (1, 0), (0, 1), (-1, 0), (1, -1), (1, 1), (-1, 1), (-1, -1)))
+                # (a dock only diagonal to it still gives it an inside corner of shore: that goes too)
                 if not near:
                     continue
                 [name] = ground_name(p, g, [(x, y)], it["auto"], lambda xx, yy: (
