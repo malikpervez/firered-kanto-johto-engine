@@ -85,6 +85,9 @@ ROBBED_PATH = [(38, y) for y in range(19, 23)]
 CANALS = {"brick": ("cerulean_brick#15", [(19, y) for y in range(22, 41)]),
           "paving": ("paving#15", [(x, 27) for x in range(45, 54)])}
 CANAL_CHARS = "ACDEMV"
+# the Mart square's join to the road (the kit's paving_to_cobble_N) where it meets the fence east of it: its east end
+# with the cobbles' and the paving's own edge against the lawn there, as the blocks above and below it have
+JOIN_EAST = (42, 44)
 CANAL_WATER = "~ym"  # the canal's water and the footbridges' middles over it
 COTTAGES = {"1": ("cottage_blue", 11, {2: (40, 56, 96), 4: (64, 96, 160), 5: (104, 144, 200), 13: (72, 80, 112)}),
             "2": ("cottage_teal", 12, {2: (32, 72, 80), 4: (48, 120, 128), 5: (88, 168, 168), 13: (64, 96, 96)})}
@@ -298,6 +301,9 @@ def main() -> None:
             if name not in canal_names:
                 canal_names[name] = (CANAL_CHARS[len(canal_names)], under, m)
             g[y][x] = canal_names[name][0]
+    x, y = JOIN_EAST
+    assert g[y][x] == "N" and g[y][x + 1] == "#" and g[y - 1][x] == "=" and g[y + 1][x] == "p", JOIN_EAST
+    g[y][x] = "<"
     g[SIGN_BRICK[1]][SIGN_BRICK[0]] = "!"
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
@@ -383,6 +389,12 @@ def main() -> None:
     for name, art in holes().items():  # on the lawn: walk south from it into the house
         sh.add(name, art, tileset="secondary", ground="lawn_a", behavior="MB_SOUTH_ARROW_WARP")
     spec_mt += sh.write()
+    join = kit.paving_piece("to_cobble_N").copy()  # its top half the cobbles' (their edge: 2 px of lawn), its bottom
+    join[:8, 13], join[:8, 14:] = 0xB, 0           # half the paving's ("E": its rim, 1 px of lawn)
+    join[8:, 12:] = kit.paving_piece("E")[8:, 12:]
+    sh = kit.Sheet("paving_join", kit.PALS["ground"], kit.BANK["ground"], HERE, HERE, cols=1)
+    sh.add("paving_to_cobble_N.e", join, tileset="secondary", ground="grass")
+    spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -403,7 +415,8 @@ def main() -> None:
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN}, Y="diglett_cave")
     legend.update({"^": "hole_w", "J": "hole_e", "I": "back_step", "G": {"name": "house_family", "joins": WALK},
                    ";": {"name": "dirt#5", "joins": WALK},
-                   "N": {"name": "paving_to_cobble_N", "joins": WALK}, "U": {"name": "paving_to_cobble_S", "joins": WALK}})
+                   "N": {"name": "paving_to_cobble_N", "joins": WALK},
+                   "<": {"name": "paving_to_cobble_N.e", "joins": WALK}, "U": {"name": "paving_to_cobble_S", "joins": WALK}})
     legend.update({ch: {"name": name, "joins": WALK} for name, (ch, _, _) in canal_names.items()})
     legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **{"@": "lamp_paving", "/": "sign_paving", "!": "sign_brick"},
                   **{k: f"{n}_paved" for k, (n, _) in SHARED_PAVED.items()})

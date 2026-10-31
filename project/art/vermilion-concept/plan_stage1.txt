@@ -5,8 +5,8 @@ TTTTTT*******.......****..ZZZZZ.===.LLLL.**.##########..TTTT
 TTTTTT*******o......****..ZZZZZ.===.LLLL.**.#::::::::#..TTTT
 TTTTTT....................ZZZZZ.===.LLLL.**.#::::::::#..TTTT
 TTTTTT..XXXX..KKKKK.......ZZZZZ.===.LLLL....#::::::::#..TTTT
-TTTTTT..XXXX..KKKKK....l=======S===========l#::::::::#..TTTT
-TTTTTT..XXXX..KKKKK....l===================l#::::::::#..TTTT
+TTTTTT..XXXX..KKKKK....l=======S===========.#::::::::#..TTTT
+TTTTTT..XXXX..KKKKK....l===================.#::::::::#..TTTT
 TTTTTT..XXXX..KKKKKS....===================.####:#####..TTTT
 TTTTTT..................===================............S...b
 TTTTTT======================================================

@@ -164,6 +164,10 @@
   "name": "paving_to_cobble_N",
   "joins": "%"
  },
+ "<": {
+  "name": "paving_to_cobble_N.e",
+  "joins": "%"
+ },
  "U": {
   "name": "paving_to_cobble_S",
   "joins": "%"

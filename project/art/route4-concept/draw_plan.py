@@ -81,7 +81,7 @@ rect(93, 3, 99, 7, "~")            # the pond under the forest (west of the 7 co
 rect(92, 8, 105, 9, "."); rect(92, 2, 105, 2, "."); rect(100, 3, 105, 7, "."); rect(92, 3, 92, 7, ".")
 rect(100, 8, 100, 9, "*")          # (flowers too stay out of those columns: the plants palette)
 at(95, 4, "v"); at(97, 6, "r")
-rect(36, 14, 40, 16, "*"); rect(46, 10, 48, 11, "*"); rect(82, 16, 85, 17, "*"); at(44, 15, "o"); at(52, 16, "o"); at(89, 15, "o"); rect(92, 15, 96, 16, "*")
+rect(36, 14, 40, 16, "*"); rect(46, 10, 48, 11, "*"); rect(82, 16, 85, 17, "*"); rect(66, 7, 68, 8, "*"); at(44, 15, "o"); at(52, 16, "o"); at(89, 15, "o"); rect(92, 15, 96, 16, "*")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("     " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

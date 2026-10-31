@@ -44,8 +44,8 @@ TT=========================================#.***.....#TTTT
 TT=========================================#.........#TTTT
 TT...................====NNNNNNNNNNNNNNNNNN#.........#TTTT
 TT...................b==tpppppppppppppppppp#......***#TTTT
-TT............*****..b==tpppppppppppppppppp#......***#TTTT
+TT............*****..b==tpppppppppptnntpppp#......***#TTTT
 TT............*****..b==tpppppppppppppppppp#.........#TTTT
-TT...................b==tpppppppppptnntpppp###########TTTT
+TT...................b==tpppppppppppppppppp###########TTTT
 TTTTTTTTTTTTTTTTTTTTT====TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTT====TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

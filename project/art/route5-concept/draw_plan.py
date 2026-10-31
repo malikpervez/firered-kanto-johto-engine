@@ -64,8 +64,9 @@ rect(9, 23, 15, 28, "g")
 rect(17, 24, 19, 25, "*"); at(39, 27, "o"); at(33, 15, "o")
 rect(27, 28, 29, 28, "b"); rect(20, 28, 22, 28, "b")
 # a little detail on the open lawns (off the road and the people's places): flowers between the Day Care and the lane,
-# a field rock in the lawn inside the road's bend, a stump under the north treeline
-rect(23, 8, 25, 9, "*"); at(30, 21, "o"); at(35, 4, "k")
+# a field rock in the lawn inside the road's bend (nothing solid on the two-row strip under the north treeline: it
+# would touch the trees and pinch the way round the tall grass)
+rect(23, 8, 25, 9, "*"); at(30, 21, "o")
 
 # Saffron's north gate: you walk into its top (24-25,30) from the road
 rect(21, 30, 28, 35, "N")

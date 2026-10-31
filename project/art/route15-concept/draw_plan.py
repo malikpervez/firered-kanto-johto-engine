@@ -76,8 +76,7 @@ rect(22, 17, 30, 19, "g")
 rect(44, 17, 52, 19, "g")
 rect(62, 17, 68, 18, "*")
 tree(36, 18); tree(57, 18)
-at(72, 18, "k")                                 # an old stump on the lawn by Route 14's road
-at(40, 18, "o")                                 # a field rock in the south meadow, daisies on its lawn
+at(40, 17, "o")                                 # a field rock in the south meadow (two clear rows from the woods), daisies on its lawn
 for x, y in ((20, 18), (33, 17), (42, 19)):
     at(x, y, ",")
 

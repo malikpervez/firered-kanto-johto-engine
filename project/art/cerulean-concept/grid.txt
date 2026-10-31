@@ -42,10 +42,10 @@ TT%pppppKKKKKeeppp%D%====pLLLLpXXXXpppppppp#.........#TTTT
 TT%%%%%%KKKKK%%%%%%!%====pLLLLpXXXXpppppppp#.***.....#TTTT
 TT=========================================#.***.....#TTTT
 TT=========================================#.........#TTTT
-TT...................====NNNNNNNNNNNNNNNNNN#.........#TTTT
+TT...................====NNNNNNNNNNNNNNNNN<#.........#TTTT
 TT...................b==tpppppppppppppppppp#......***#TTTT
-TT............*****..b==tpppppppppppppppppp#......***#TTTT
+TT............*****..b==tpppppppppptnntpppp#......***#TTTT
 TT............*****..b==tpppppppppppppppppp#.........#TTTT
-TTTTTTTTTTTTTTTTTTTT.b==tpppppppppptnntpppp###########TTTT
+TTTTTTTTTTTTTTTTTTTT.b==tpppppppppppppppppp###########TTTT
 TTTTTTTTTTTTTTTTTTTT.====TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTT====TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

@@ -53,7 +53,7 @@ rect(3, 12, 6, 14, "*")
 at(12, 13, "o")                                 # a field rock on the shore lawn, and daisies across it
 for x, y in ((9, 12), (16, 14), (19, 12)):
     at(x, y, ",")
-at(3, 9, "b")                                   # a bush on the lawn west of the road down
+at(4, 9, "b")                                   # a bush on the lawn west of the road down (two clear blocks each side)
 rect(20, 6, 23, 6, "*")
 
 # the rockers' tall grass on the bluff; the gatehouse (doorways 41,9 and 48,9), the woods round it

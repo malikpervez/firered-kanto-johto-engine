@@ -39,7 +39,7 @@ animates.
 
 Its tileset's palettes: bank 7 the Gym and the Bike Shop, bank 9 the houses and the cave mouth (drawn in the houses'
 palette, the two colours they don't use being the cave's), bank 8 the kit's plants, 10 the brick, 11 and 12 the
-cottages; the props are drawn in the kit's water and wood palettes (banks 1 and 2). 337 of its 384 tiles are used.
+cottages; the props are drawn in the kit's water and wood palettes (banks 1 and 2). 338 of its 384 tiles are used.
 
 `make_art.py` checks the town's rules on the map it builds: only the four exits open onto the edges; with the tree
 standing, the Rocket and his triggers in his way and the lass and her Slowbro in the neck, the town is everything but

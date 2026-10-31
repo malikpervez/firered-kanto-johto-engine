@@ -93,6 +93,6 @@ tree(80, 22)
 tree(58, 22)
 # a little colour on the plain lawns (polish): flowers and a field rock on the lawn north of the road's east end,
 # daisies on the corner by the sea
-rect(74, 15, 75, 16, "*"); at(80, 15, "o"); rect(87, 22, 88, 23, ",")
+rect(74, 15, 75, 16, "*"); at(80, 16, "o"); rect(87, 22, 88, 22, ","); at(88, 23, ",")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

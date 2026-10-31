@@ -179,7 +179,7 @@ for x in (6, 17, 28):
 at(18, 31, "x"); at(19, 31, "y"); at(20, 31, "z")
 at(47, 26, "0"); at(47, 27, "m"); at(47, 28, "j")
 rect(11, 34, 12, 34, "u"); at(10, 34, "t"); at(13, 34, "t")   # a bench between two tubs in the plaza west of the canal
-rect(36, 48, 37, 48, "n"); at(35, 48, "t"); at(38, 48, "t")   # and one against the trees in the square south of the Mart
+rect(36, 46, 37, 46, "n"); at(35, 46, "t"); at(38, 46, "t")   # and one in the square south of the Mart
 BUILT = set("WKXZLHY12^")
 border = [(x, y) for y in range(H) for x in range(21) if g[y][x] == "p" and any(  # the west side only
     g[y + dy][x + dx] not in "pP%~/@fFunatiexyz0mj" and g[y + dy][x + dx] not in BUILT

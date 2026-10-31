@@ -4743,15 +4743,25 @@
    "solid": false,
    "elevation": null,
    "open": []
+  },
+  "paving_to_cobble_N.e": {
+   "ids": [
+    884
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 337
+  "secondary": 338
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 244
+  "secondary": 245
  },
  "animations": [
   {
@@ -4763,14 +4773,14 @@
   },
   {
    "name": "CeruleanConcept_Fountain3X3",
-   "first_tile": 936,
+   "first_tile": 937,
    "tiles": 29,
    "frames": 4,
    "notes": []
   },
   {
    "name": "CeruleanConcept_Canal",
-   "first_tile": 965,
+   "first_tile": 966,
    "tiles": 12,
    "frames": 8,
    "notes": []
