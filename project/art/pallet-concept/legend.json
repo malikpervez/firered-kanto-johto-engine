@@ -168,26 +168,41 @@
   "joins": "="
  },
  "Ⰱ": {
-  "name": "pond#15.1",
+  "name": "pond#12",
   "joins": "~",
   "elevation": 1
  },
  "Ⰲ": {
-  "name": "pond#13.8",
+  "name": "pond#4",
   "joins": "~",
   "elevation": 1
  },
  "Ⰳ": {
-  "name": "pond#15",
+  "name": "pond#15.1",
   "joins": "~",
   "elevation": 1
  },
  "Ⰴ": {
-  "name": "pond#15.2",
+  "name": "pond#13.8",
   "joins": "~",
   "elevation": 1
  },
  "Ⰵ": {
+  "name": "pond#15",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰶ": {
+  "name": "pond#13",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰷ": {
+  "name": "pond#15.2",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰸ": {
   "name": "pond#11",
   "joins": "~",
   "elevation": 1

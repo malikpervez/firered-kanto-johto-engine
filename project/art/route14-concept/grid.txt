@@ -47,10 +47,10 @@ TT..::.ggggg...b...**.ssss
 TT..::.ggggg...bbbbbbbssss
 TT..::.ggggg..........ssss
 TT..::..............o.ssss
-TT..::................ⰀⰁⰁs
+TT..::................ⰀⰁⰁⰁ
 ::::::::::::::::::::::dddⰁ
 ::::::::::::::::::::::dddⰁ
-:::::::::::::::::::::.ⰀⰁⰁs
+:::::::::::::::::::::.ⰀⰁⰁⰁ
 :::::::::::::::::::::.ssss
 TTTTTTTTTTTT.bTTTTTTTTssss
 TTTTTTTTTTTT..TTTTTTTTssss
