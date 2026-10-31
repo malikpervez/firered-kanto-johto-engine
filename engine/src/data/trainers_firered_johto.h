@@ -44184,3 +44184,147 @@
             },
         },
     },
+#line 16041
+    [DIFFICULTY_NORMAL][(TRAINER_JOHTO_GOLD_VIOLET_TOTODILE_HNS - JOHTO_TRAINER_ID_BASE)] =
+    {
+#line 16042
+        .trainerName = _("GOLD"),
+#line 16043
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1_HNS,
+#line 16044
+        .trainerPic = TRAINER_PIC_FRONT_GOLD_HNS,
+#line 16045
+        .gender = TRAINER_GENDER_MALE,
+#line 16046
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_HG_BOY_1,
+#line 16047
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 16048
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FRONT_GOLD_HNS,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16050
+            .species = SPECIES_GEODUDE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16052
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16051
+            .lvl = 8,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 16053
+            .species = SPECIES_TOTODILE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16055
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16054
+            .lvl = 10,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 16056
+    [DIFFICULTY_NORMAL][(TRAINER_JOHTO_GOLD_VIOLET_CHIKORITA_HNS - JOHTO_TRAINER_ID_BASE)] =
+    {
+#line 16057
+        .trainerName = _("GOLD"),
+#line 16058
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1_HNS,
+#line 16059
+        .trainerPic = TRAINER_PIC_FRONT_GOLD_HNS,
+#line 16060
+        .gender = TRAINER_GENDER_MALE,
+#line 16061
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_HG_BOY_1,
+#line 16062
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 16063
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FRONT_GOLD_HNS,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16065
+            .species = SPECIES_GEODUDE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16067
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16066
+            .lvl = 8,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 16068
+            .species = SPECIES_CHIKORITA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16070
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16069
+            .lvl = 10,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 16071
+    [DIFFICULTY_NORMAL][(TRAINER_JOHTO_GOLD_VIOLET_CYNDAQUIL_HNS - JOHTO_TRAINER_ID_BASE)] =
+    {
+#line 16072
+        .trainerName = _("GOLD"),
+#line 16073
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1_HNS,
+#line 16074
+        .trainerPic = TRAINER_PIC_FRONT_GOLD_HNS,
+#line 16075
+        .gender = TRAINER_GENDER_MALE,
+#line 16076
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_HG_BOY_1,
+#line 16077
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 16078
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 0
+        .trainerBackPic = TRAINER_PIC_FRONT_GOLD_HNS,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16080
+            .species = SPECIES_GEODUDE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16082
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16081
+            .lvl = 8,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 16083
+            .species = SPECIES_CYNDAQUIL,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16085
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16084
+            .lvl = 10,
+            .ball = POKEBALL_COUNT,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

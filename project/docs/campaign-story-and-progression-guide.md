@@ -251,12 +251,12 @@ Johto initializes once without resetting Kanto. Native Kanto clear is the actual
 
 **Where:** New Bark → Cherrygrove → Mr. Pokémon → Violet.
 
-Elm welcomes Oak’s visiting trainer and gives the adapted research errand. Before the errand he shows the three Pokémon native to Johto (Chikorita, Cyndaquil, Totodile, level 5) and the player takes one. Gold, a New Bark trainer, comes in for a partner of his own: he takes the one the player’s is strong against and battles the player. The third is the one Silver later steals, the one strong against the player’s. The original Johto errand, stolen-partner/rival introduction and early badge journey continue with the same collection. The group reaches New Bark independently.
+Elm welcomes Oak’s visiting trainer and gives the adapted research errand. Before the errand he shows the three Pokémon native to Johto (Chikorita, Cyndaquil, Totodile, level 5) and the player takes one. Gold, a New Bark trainer, comes in for a partner of his own: he takes the one the player’s is strong against and battles the player. The third is the one Silver later steals, the one strong against the player’s. After the Zephyr Badge Gold waits outside Violet’s Gym: Falkner has beaten him twice, and he asks the Kanto Champion for a battle. The original Johto errand, stolen-partner/rival introduction and early badge journey continue with the same collection. The group reaches New Bark independently.
 
 **Progression:**
 
 1. Accept Elm’s introduction, choose a Johto partner, battle Gold, then follow the native Mr. Pokémon errand and return sequence.
-2. Continue through the original Johto rival and Violet/Falkner progression.
+2. Continue through the original Johto rival and Violet/Falkner progression. After the Zephyr Badge, Gold’s optional rematch waits by Violet’s Gym until the second Johto badge.
 3. Blue’s optional lab research follow-up is available back in Kanto once Elm has been met.
 
 **Connected events:**
@@ -266,6 +266,7 @@ Elm welcomes Oak’s visiting trainer and gives the adapted research errand. Bef
 | RB08 | Elm's welcome — [`RB_ElmBird`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:241) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | FG13 | No second character creation — [`FG13_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:1705) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | BL03 | Notes from two regions — [`CG_BlueLabAfterIntro`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:58) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
+| GD01 | Gold outside Violet’s Gym — [`CG_GoldViolet`](../../engine/data/scripts/character_growth.inc) | Replay tests `violet gold …` (six) |
 
 Kanto and Johto rival names, badges and story state are independent. Blue’s Eevee→Umbreon selection belongs only to the new Pikachu cohort after BL03; the later actual enemy Umbreon battle remains NOT RUN. FG-C outside Sprout Tower is proposed only.
 
@@ -863,6 +864,16 @@ Blue enthusiastically starts field science under Oak.
 **37C source:** [`CG_BlueRoute1`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:76). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md).
 
 Optional Route1 observation and expressive answer.
+
+### GD01 — Gold outside Violet’s Gym
+
+**Trigger:** Violet City, on entering: `JOHTO_FLAG_BADGE01_GET` set, `JOHTO_FLAG_BADGE02_GET` not set, `JOHTO_FLAG_GD01_SEEN` not set (`CG_GoldVioletVisibility`). Gold (`LOCALID_VIOLET_GOLD`, appended to Violet’s events) stands east of the Gym’s door, facing it. Talk to him.
+
+**Status:** IMPLEMENTED 2026-10-31 (story audit proposal L1). Replay tests `violet gold waits after the zephyr badge`, `violet gold rematch`, `violet gold rematch from below`, `violet gold rematch from the east`, `violet gold not there before the badge`, `violet gold moved on after the hive badge`.
+
+**Source:** [`CG_GoldViolet`](../../engine/data/scripts/character_growth.inc); trainers `TRAINER_JOHTO_GOLD_VIOLET_TOTODILE_HNS`, `…_CHIKORITA_HNS`, `…_CYNDAQUIL_HNS` (Geodude lv 8 and his starter lv 10, chosen by `JOHTO_VAR_STARTER_MON` as in Elm’s lab).
+
+Gold: Falkner beat him twice, even after he caught a Geodude in Dark Cave for him. “Show me how a CHAMPION does it? I did say I’d win next time!” NO: he keeps watching the Gym door (ask again later). YES: the battle; after it he says the player waited and watched his moves while he just shouts them, tells of the break-in at Elm’s lab and the thief’s name from the police scene (only once that scene has played, `JOHTO_VAR_NEWBARKTOWN_LABSTATE` ≥ 5), and walks off east to heal and try Falkner a third time. Winning sets `JOHTO_FLAG_GD01_SEEN` (Johto id `0x291B`: HnS raw flag `0x91B`, the first after HnS’s last flag `0x91A`, unused by any script or C and inside Johto’s stored events, so no save layout change). Losing is an ordinary loss; he waits to be asked again. He is gone after the second Johto badge whether or not the scene was played.
 
 ### BL03 — Notes from two regions
 

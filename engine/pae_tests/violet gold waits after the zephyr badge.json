@@ -1,0 +1,146 @@
+{
+ "note": "With the Zephyr Badge, Gold waits outside Violet's Gym: Falkner beat him twice. Asked for a battle, answer NO: he stays (the test ends on his line).",
+ "created": "2026-10-31 23:30",
+ "start": {
+  "map": "VioletCity_hns",
+  "x": 25,
+  "y": 37,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "JOHTO_VAR_VIOLET_CITY_STATE=4",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "JOHTO_VAR_STARTER_MON=0"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     128,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "JOHTO_FLAG_GD01_SEEN"
+  ],
+  "vars": [],
+  "trainers": [
+   "TRAINER_JOHTO_GOLD_VIOLET_TOTODILE_HNS"
+  ]
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VioletCity_hns",
+  "x": 25,
+  "y": 37,
+  "in_battle": false,
+  "flags": {
+   "JOHTO_FLAG_GD01_SEEN": false
+  },
+  "trainers": {
+   "TRAINER_JOHTO_GOLD_VIOLET_TOTODILE_HNS": false
+  }
+ }
+}
