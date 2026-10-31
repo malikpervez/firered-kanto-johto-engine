@@ -38,6 +38,7 @@
 #include "constants/johto_ids.h"
 #include "constants/rainbow_story.h"
 #include "constants/character_story.h"
+#include "constants/friends_story.h"
 #include "constants/starter_recruitment.h"
 #include "constants/follower_npc.h"
 #include "constants/frontier_util.h"
