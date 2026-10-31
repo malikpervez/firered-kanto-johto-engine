@@ -164,7 +164,16 @@ def settle_pieces(p: Plan) -> list[str]:
         settled = {c: A for (_, _, _, cells, A) in found for c in cells}
         for x, y, name, cells, A in found:
             m = p.meta[name]
-            a_char = next(ch for ch in p.legend if p.group(ch) == A and p.item(ch).get("auto") in GROUNDS)
+            near = {}  # the ground letter of A's group that is round it most (a group may hold several)
+            for cx, cy in cells:
+                for _, (dx, dy) in SIDES:
+                    xx, yy = cx + dx, cy + dy
+                    if 0 <= xx < w and 0 <= yy < h and (xx, yy) not in cells:
+                        n = g[yy][xx]
+                        if p.group(n) == A and p.item(n).get("auto") in GROUNDS:
+                            near[n] = near.get(n, 0) + 1
+            a_char = max(near, key=near.get) if near else next(
+                ch for ch in p.legend if p.group(ch) == A and p.item(ch).get("auto") in GROUNDS)
             auto = p.item(a_char)["auto"]
             docks = {c for c in p.legend if p.item(c).get("auto") == "dock"} if auto in ("pond", "sea") else set()
             grounds = ground_name(p, g, cells, auto, lambda xx, yy: (
