@@ -1,7 +1,7 @@
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTNNNNTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTNNNNTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TT$$$$$$$$$$$$$$$$$$$$$$$$$$NNNN$$$$$$$$$$$$$.............TT
-TT$||&&&&&||&&¤¤&&JJJJJJ&&&S++;+&&&||&&&||&&$****....~~~~.TT
+TT$||&&&&&||&&&&&&JJJJJJ&&&S++;+&&&||&&&||&&$****....~~~~.TT
 TT$||&&&&&||&&&&&&JJJJJJ&&&&++;+&&&||&&&||&&$****....~~~~.TT
 TT$&&YYYY&&&HHHH&&JJJJJJ&&&&++;+&&&&&&&&&&$$$.......o~~~~.TT
 TT$l&YYYY&&&HHHH&&JJJJJJ&l&&++;+&&XXXXXXXXXRR........~~~~.TT
@@ -24,11 +24,11 @@ TT++++++++++++++++++++++++++++++++++++++++++++++++++++++++TT
 TT+++++++++++++%++++++++++++++++++++++++++++++++++++++++++TT
 TT--------------------------++++--------------------------TT
 TT++++++++++++++++++++++++++++++++++++++++++%+++++++++++++TT
-TTe&&&&&&&&&&&&&&&&&&&&&&&&&++++&&&&&&&&&&&&&&&&&&&&&Б&&&eTT
+TTe&&&&&&&&&&&&&&&&&&&&&&&&&++++&&&&&&&&&&&&&&&&&&&&&А&&&eTT
 TT$&ZZZZZ&&LLLL&&&PPPP&aaaa620038&&KKKK&&aaaa&aaaa&&&&&&l$TT
 TT$lZZZZZ&&LLLL&&&PPPP&aaaa&++;+&l&KKKK&&aaaa&aaaa&&&&||l$TT
 TT$lZZZZZ&&LLLL&&&PPPP&aaaa&++;+&l&KKKK&&aaaa&aaaa&&&&||&$TT
-TTn&ZZZZZА&LLLL&&&PPPPАaaaa&++;+&&&KKKKА&aaaa&aaaa&&&&&&&nTT
+TTn&ZZZZZS&LLLL&&&PPPPSaaaa&++;+&&&KKKKS&aaaa&aaaa&&&&&&&nTT
 TT++++++++++++++++++++++++++++++++++++++++++++++++++++++++TT
 TT++++++++++++++++++++++++++++++++++++++++++++++++++++++++TT
 TTbbbbbbbbbb$&&&&&&&&&&&&&&&++;+&&&&&&&&&&&&&&&&&&&&&&&&&eTT

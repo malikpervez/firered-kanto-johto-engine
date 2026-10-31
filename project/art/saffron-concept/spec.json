@@ -5279,23 +5279,10 @@
    "dedupe": true
   },
   {
-   "name": "sign_paved_k11",
-   "image": "sheets/sign_paved.png",
-   "x": 0,
-   "y": 16,
-   "banks": [
-    2
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#11",
-   "solid": true,
-   "dedupe": true
-  },
-  {
    "name": "sign_paved_k14",
    "image": "sheets/sign_paved.png",
    "x": 0,
-   "y": 32,
+   "y": 16,
    "banks": [
     2
    ],
@@ -5851,21 +5838,6 @@
    "dedupe": true,
    "tileset": "secondary",
    "ground": "granite#15",
-   "solid": true
-  },
-  {
-   "name": "bench_stone~2",
-   "image": "sheets/props_water.png",
-   "x": 48,
-   "y": 0,
-   "w": 2,
-   "h": 1,
-   "banks": [
-    1
-   ],
-   "dedupe": true,
-   "tileset": "secondary",
-   "ground": "kerb#15",
    "solid": true
   },
   {

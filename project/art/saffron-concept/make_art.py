@@ -44,8 +44,6 @@ SOLID = set("T#bRoklSBcw_~vrXMDGNWEUZLYHPKAFIJVCa|^uy")
 PROPS = [("bench_stone", 9, 19, "granite#15"), ("litter_bin", 12, 19, "granite#15"), ("bench_stone", 14, 19, "granite#15"),
          ("bench_stone", 39, 19, "granite#15"), ("flower_tub", 42, 19, "granite#15"), ("flower_tub", 45, 19, "granite#15"),
          ("bench_stone", 47, 19, "granite#15"), ("litter_bin", 50, 19, "granite#15")]  # on the plazas, the tubs either side of the compass
-# and a stone bench on the north-west pavement, between its street trees and the brick office (on the pavement)
-BENCH = ("bench_stone~2", 14, 3, GROUND)
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the south
 # gatehouse's doorway is entered walking south from above; the station has no door)
@@ -274,18 +272,19 @@ def compass_band(pal, base) -> np.ndarray:
 
 
 def sign_rims(g) -> dict[tuple[int, int], int]:
-    """The signs standing on the kerb's edge over a road to their north or south: each one's sides that aren't the
-    road (bits 1 N, 2 E, 4 S, 8 W, as pae map paint numbers the kerb's pieces), so its block stands on that kerb piece
-    and the road meets its board as it meets the kerb's rim. (pae bakes the rim's quarters as their asphalt: above or
-    below the board that is where the rim runs; beside the post, a road to the east or west, it would notch the
-    pavement, so those keep the plain paving.)"""
+    """The signs standing on the kerb's edge over a road to their north: each one's sides that aren't the road (bits
+    1 N, 2 E, 4 S, 8 W, as pae map paint numbers the kerb's pieces), so its block stands on that kerb piece and the
+    road meets its board as it meets the kerb's rim. (pae bakes the rim's quarters as their asphalt: above the board
+    that is where the rim runs. Below it, a road to the south, the asphalt would come up round the post, higher than
+    the road beside it and between the shopfronts; beside the post, a road to the east or west, it would notch the
+    pavement. Those keep the plain paving.)"""
     out = {}
     for y in range(MAP_H):
         for x in range(MAP_W):
             if g[y][x] == "S":
                 m = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
                         if not (0 <= x + dx < MAP_W and 0 <= y + dy < MAP_H) or g[y + dy][x + dx] not in ROAD)
-                if m in (11, 14):
+                if m == 14:
                     out[(x, y)] = m
     return out
 
@@ -293,12 +292,6 @@ def sign_rims(g) -> dict[tuple[int, int], int]:
 def main() -> None:
     g = plan()
     prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins='@')
-    name, x, y, ground = BENCH
-    ch = next(c for c in props.POOL if c not in prop_legend)
-    assert g[y][x] == g[y][x + 1] == "&", "the bench stands on the pavement"
-    prop_legend[ch], prop_grounds[name] = {"name": name, "joins": "&"}, ground
-    SOLID.add(ch)
-    g[y][x] = g[y][x + 1] = ch
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)

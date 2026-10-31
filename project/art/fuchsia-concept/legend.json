@@ -155,10 +155,6 @@
   "name": "picnic_table",
   "joins": "p"
  },
- "¦": {
-  "name": "bench_stone~2",
-  "joins": "p"
- },
  "ɐ": {
   "name": "paving_to_cobble_S",
   "joins": "="

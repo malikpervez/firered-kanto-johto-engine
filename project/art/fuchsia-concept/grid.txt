@@ -11,7 +11,7 @@ TT::::::::::::::::¡¡ppppppp::::::::::::::.TTTTTT
 TT::::::::::::::::ppppppppp::::::::::::::.TTTTTT
 TTbbbbbbb.bbbbbbbb...ppppppbbb.bbb#######.TTTTTT
 TT...................pppppp.......#:**::#.TTTTTT
-TT..LLLL..***.RR.....££pp¦¦.OOOO..#:::::#.TTTTTT
+TT..LLLL..***.RR.....££pp££.OOOO..#:::::#.TTTTTT
 TT..LLLL..***.RR.....pppppp.OOOO..#:::::#.TTTTTT
 TT..LLLL.........***.pppppp.OOOO..#:::::#.TTTTTT
 bb..LLLL.........***.pppppp.OOOO..###S###.TTTTTT

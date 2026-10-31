@@ -110,8 +110,9 @@ def layout() -> tuple[list[list[str]], dict]:
     put("l", 4, 9, 1, 2)
     put("l", 27, 13, 1, 2)
     put("l", 13, 17, 1, 2)
-    for x, y in ((20, 16), (22, 16), (16, 13), (25, 10), (27, 22)):  # (25,10): behind the sea-view bench, not in front
-        # (and not on 25,9, where the bench's replay test stands)
+    # (the bush that stood in front of the sea-view bench, at 27,9, is gone: the bench looks out to sea, and there's no
+    # room for a bush beside it, with the bench on one side and the lab a row below)
+    for x, y in ((20, 16), (22, 16), (16, 13), (27, 22)):
         put("b", x, y)
     # the pond and its dock; the channel south (Route 21)
     put("~", 16, 20, 11, 6)

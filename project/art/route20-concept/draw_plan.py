@@ -52,7 +52,8 @@ rect(76, 11, 81, 12, "Y")
 at(75, 13, "S")
 rect(63, 13, 65, 15, "*")
 rect(82, 15, 84, 16, "*")
-at(53, 15, "o"); at(73, 14, "o")              # a field rock on each island's lawn (they're rocky islands)
+at(54, 14, "o"); at(74, 15, "o")              # a field rock on each island's lawn (they're rocky islands), two
+                                               # lawn blocks clear all round (of the shore, the cliff and the sign)
 for x, y in ((59, 15), (66, 12), (79, 16), (71, 8)):
     at(x, y, ",")                              # and flowers in their grass
 

@@ -7,7 +7,7 @@ sssssss#=========#ssssssssssssTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 sssssss#=========...****.................CCCCCCCC..........b
 ss......=========.....................S..CCCCCCCC...S......b
 ss......=================================CCCCCCCC===========
-ss.b....=================================CCCCCCCC===========
+ss..b...=================================CCCCCCCC===========
 ss......================================TTTTTTTTTT==========
 ss......................................TTTTTTTTTT.........b
 ss.****..,.........,..ggggggggggggggggg.TTTTTTTTTTTTTTTTTTTT

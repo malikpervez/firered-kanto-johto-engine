@@ -265,10 +265,6 @@
   "name": "flower_tub",
   "joins": "@"
  },
- "¤": {
-  "name": "bench_stone~2",
-  "joins": "&"
- },
  "α": {
   "name": "kerb#15",
   "joins": "&"
@@ -314,10 +310,6 @@
   "joins": "&"
  },
  "А": {
-  "name": "sign_paved_k11",
-  "joins": "&"
- },
- "Б": {
   "name": "sign_paved_k14",
   "joins": "&"
  }

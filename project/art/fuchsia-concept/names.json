@@ -4338,20 +4338,9 @@
    "elevation": null,
    "open": []
   },
-  "bench_stone~2": {
-   "ids": [
-    785,
-    786
-   ],
-   "w": 2,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
   "litter_bin": {
    "ids": [
-    787
+    785
    ],
    "w": 1,
    "h": 1,
@@ -4361,10 +4350,10 @@
   },
   "picnic_table": {
    "ids": [
+    786,
+    787,
     788,
-    789,
-    790,
-    791
+    789
    ],
    "w": 2,
    "h": 2,
@@ -4374,7 +4363,7 @@
   },
   "sign@dirt#5": {
    "ids": [
-    792
+    790
    ],
    "w": 1,
    "h": 1,
@@ -4389,7 +4378,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 153
+  "secondary": 151
  },
  "animations": [
   {
