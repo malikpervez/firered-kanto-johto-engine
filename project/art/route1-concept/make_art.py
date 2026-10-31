@@ -24,6 +24,7 @@ import fields
 import kit
 
 HERE = Path(__file__).resolve().parent
+LEDGE_INTO_FOREST = "\u0142"  # (a ledge block beside the forest: its middle piece)
 MAP_W, MAP_H = 50, 40
 SECONDARY = "gTileset_Route1Concept"
 
@@ -105,7 +106,7 @@ def layout() -> tuple[list[list[str]], dict]:
     for x, y in ((16, 11), (19, 11), (20, 12), (16, 19), (17, 19), (21, 22), (22, 33), (26, 33), (26, 32),
                  (13, 25), (36, 33), (14, 28)):
         put("*", x, y)
-    for x, y in ((11, 11), (21, 14), (22, 15), (18, 21), (21, 29), (30, 34), (33, 34), (5, 29), (8, 34)):
+    for x, y in ((11, 11), (21, 14), (22, 15), (18, 21), (22, 29), (30, 34), (33, 34), (5, 29), (8, 34)):
         put(",", x, y)
     for x, y in ((4, 33), (5, 34), (8, 29)):
         put("*", x, y)
@@ -113,6 +114,10 @@ def layout() -> tuple[list[list[str]], dict]:
     put("#", 13, 35, 10, 1)
     put("#", 27, 35, 13, 1)
     put("A", 23, 34, 4, 2)
+    # the ledges run on into the forest walls (their middle piece, not a rounded end with lawn before the trees)
+    for x, y in ((10, 9), (39, 9), (39, 17), (39, 26)):
+        assert g[y][x] == "_" and "T" in (g[y][x - 1], g[y][x + 1])
+        put(LEDGE_INTO_FOREST, x, y)
     signs = {"RouteSign": (23, 33)}
     for x, y in signs.values():
         put("S", x, y)
@@ -159,7 +164,8 @@ def main() -> None:
     # Viridian's cobbles (no lawn rim across the road where they meet)
     legend.update({"=": {"auto": "cobble", "joins": ":"}, "A": {"name": "arch", "joins": ":"},
                    "y": {"name": "steps_dirt_W", "joins": ":"}, "z": {"name": "steps_dirt_E", "joins": ":"},
-                   "d": {"auto": "dock", "joins": ":"}})
+                   "d": {"auto": "dock", "joins": ":"},
+                   LEDGE_INTO_FOREST: {"name": "ledge#10", "joins": "_"}})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "signs.json").write_text(json.dumps(signs, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")

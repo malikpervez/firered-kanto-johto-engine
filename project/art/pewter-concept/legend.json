@@ -128,7 +128,10 @@
  },
  "Z": "pokemon_center",
  "L": "poke_mart",
- "U": "league_front_gate",
+ "U": {
+  "name": "league_front_gate",
+  "joins": "%"
+ },
  "W": {
   "name": "pewter_gym",
   "joins": "%"

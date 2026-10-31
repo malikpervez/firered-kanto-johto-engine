@@ -47,7 +47,8 @@ TRAINERS = [(12, 24, ("NS", 1)), (15, 30, ("EW", 1)), (12, 35, ("SW", 4)), (15, 
             (16, 64, ("S", 1)), (22, 74, ("EW", 1))]
 COUPLE = [(20, 42), (20, 41)]
 ITEMS = [(24, 41), (30, 62)]  # TM48 on the deck, the Iron in the pocket
-HIDDEN = [(6, 17), SNORLAX, (31, 65)]  # the Hyper Potion on the cliff top, the Leftovers, the Rare Candy
+LANDING = "\u01c6"  # the bridge's last row, where it lands on the islet
+HIDDEN = [(7, 17), SNORLAX, (31, 65)]  # the Hyper Potion on the cliff top, the Leftovers, the Rare Candy
 CARVANHA = (27, 30)      # swimming in the sea
 
 
@@ -173,6 +174,16 @@ def main() -> None:
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=b.idx.shape[1] // 16)
         sh.add(b.name, b.idx, tileset="secondary", ground="grass", solid=True, open=open_, behaviors=behavior)
         spec_mt += sh.write()
+    # the bridge's last row lands on the islet's lawn (row 60): its boards end on a plain dark edge there, not on the
+    # beam and posts the dock has over water (dock#mask+landing, drawn where the plan has LANDING)
+    sh = kit.Sheet("dock_landing", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=8)
+    for m in range(16):
+        if m & 4:
+            continue
+        t = kit.planks(m | 4)
+        t[15, :] = kit.D_OUT
+        sh.add(f"dock#{m}+landing", t, tileset="secondary", ground="grass", dedupe=True)
+    spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -194,6 +205,7 @@ def main() -> None:
     # onto the fishers' deck (its only touch with the dock), with no lawn rim or plank edge between them
     legend["N"] = {"name": legend["N"], "joins": "="}
     legend[":"] = {"auto": "dirt", "joins": "d"}
+    legend[LANDING] = {"auto": "dock", "joins": "d", "with": "landing"}
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

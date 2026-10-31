@@ -5493,6 +5493,390 @@
    "behaviors": {
     "7,7": "MB_ANIMATED_DOOR"
    }
+  },
+  {
+   "name": "frayN_cobble#0",
+   "image": "sheets/fray.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#0",
+   "image": "sheets/fray.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#1",
+   "image": "sheets/fray.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#1",
+   "image": "sheets/fray.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#2",
+   "image": "sheets/fray.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#2",
+   "image": "sheets/fray.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#3",
+   "image": "sheets/fray.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#3",
+   "image": "sheets/fray.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#4",
+   "image": "sheets/fray.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#4",
+   "image": "sheets/fray.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#5",
+   "image": "sheets/fray.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#5",
+   "image": "sheets/fray.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#6",
+   "image": "sheets/fray.png",
+   "x": 64,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#6",
+   "image": "sheets/fray.png",
+   "x": 80,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#7",
+   "image": "sheets/fray.png",
+   "x": 96,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#7",
+   "image": "sheets/fray.png",
+   "x": 112,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#8",
+   "image": "sheets/fray.png",
+   "x": 0,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#8",
+   "image": "sheets/fray.png",
+   "x": 16,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#9",
+   "image": "sheets/fray.png",
+   "x": 32,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#9",
+   "image": "sheets/fray.png",
+   "x": 48,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#10",
+   "image": "sheets/fray.png",
+   "x": 64,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#10",
+   "image": "sheets/fray.png",
+   "x": 80,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#11",
+   "image": "sheets/fray.png",
+   "x": 96,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#11",
+   "image": "sheets/fray.png",
+   "x": 112,
+   "y": 32,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#12",
+   "image": "sheets/fray.png",
+   "x": 0,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#12",
+   "image": "sheets/fray.png",
+   "x": 16,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#13",
+   "image": "sheets/fray.png",
+   "x": 32,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#13",
+   "image": "sheets/fray.png",
+   "x": 48,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#14",
+   "image": "sheets/fray.png",
+   "x": 64,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#14",
+   "image": "sheets/fray.png",
+   "x": 80,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_cobble#15",
+   "image": "sheets/fray.png",
+   "x": 96,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "frayN_dirt#15",
+   "image": "sheets/fray.png",
+   "x": 112,
+   "y": 48,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
   }
  ]
 }

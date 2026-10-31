@@ -140,7 +140,7 @@ def check(g, d) -> None:
 
 ASH = "ǝ"  # plain ash (dirt#15, no edge) where the ash meets the volcano's rock, so no grass rim runs round the rock
 SIGN_CHARS = {"cobble#14": "ǣ", "cobble#12": "ǥ"}  # the signs standing in the street: a sign over its cobble
-SIGNS_IN_STREET = [(9, 12), (10, 12), (22, 5)]  # the Lab's two (the Lab above), the Gym's (the Gym above, sea east)
+SIGNS_IN_STREET = [(9, 12), (22, 5)]  # the Lab's (the Lab above), the Gym's (the Gym above, sea east)
 
 
 def ash_by_rock(g, junction_chars) -> None:

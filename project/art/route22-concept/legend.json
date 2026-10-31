@@ -271,5 +271,14 @@
  "\u00be": {
   "name": "dirt#13",
   "joins": ":"
- }
+ },
+ "\u00ab": {
+  "name": "league_gate_front_W",
+  "joins": "C"
+ },
+ "\u00bb": {
+  "name": "league_gate_front_E",
+  "joins": "C"
+ },
+ "\u00f8": "small_rock@tall_grass"
 }

@@ -124,6 +124,19 @@ def walk(mask: int, corners: int, road: int) -> np.ndarray:
     return np.where(top != 0, top, under).astype(np.uint8)
 
 
+def edged_compass(pal) -> np.ndarray:
+    """The compass set in Lucky Lane (2x2, rows 30-31), with the brick's edges run across it: the lawn strip and its
+    line along the top (as brick with no brick north of it draws them), the kerb lines along the bottom (no brick
+    south), so the street's edges don't stop at the compass."""
+    c = streets.piece("mosaic", "compass_2x2", pal).copy()
+    top, bottom = streets.block("brick", 14, 0, pal), streets.block("brick", 11, 0, pal)
+    edge = np.any(top != streets.block("brick", 15, 0, pal), axis=1)  # the rows the top edge draws (0-5)
+    for r in np.flatnonzero(edge):
+        c[r] = np.tile(top[r], 2)
+        c[31 - r] = np.tile(bottom[15 - r], 2)
+    return c
+
+
 def plan() -> list[list[str]]:
     rows = (HERE / "plan_stage1.txt").read_text().split("\n")[:MAP_H]
     g = [list(r) for r in rows]
@@ -226,7 +239,7 @@ def main() -> None:
                tileset="secondary", ground="grass", dedupe=True)
     sh.add("brick_to_pavement_N", streets.piece("brick", "to_pavement_N", pals[STREETS_BANK]), tileset="secondary",
            ground="grass")
-    sh.add("compass", streets.piece("mosaic", "compass_2x2", pals[STREETS_BANK]), tileset="secondary", ground="grass")
+    sh.add("compass", edged_compass(pals[STREETS_BANK]), tileset="secondary", ground="grass")
     spec_mt += sh.write()
     prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
     spec_mt += prop_entries

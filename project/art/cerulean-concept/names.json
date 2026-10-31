@@ -4234,7 +4234,7 @@
     13
    ]
   },
-  "pokemon_center_paved": {
+  "house_family_paved": {
    "ids": [
     731,
     732,
@@ -4265,7 +4265,7 @@
     17
    ]
   },
-  "poke_mart_paved": {
+  "pokemon_center_paved": {
    "ids": [
     751,
     752,
@@ -4282,22 +4282,22 @@
     763,
     764,
     765,
-    766
+    766,
+    767,
+    768,
+    769,
+    770
    ],
-   "w": 4,
+   "w": 5,
    "h": 4,
    "solid": true,
    "elevation": null,
    "open": [
-    13
+    17
    ]
   },
-  "cottage_blue": {
+  "poke_mart_paved": {
    "ids": [
-    767,
-    768,
-    769,
-    770,
     771,
     772,
     773,
@@ -4315,13 +4315,15 @@
     785,
     786
    ],
-   "w": 5,
+   "w": 4,
    "h": 4,
    "solid": true,
    "elevation": null,
-   "open": []
+   "open": [
+    13
+   ]
   },
-  "cottage_teal": {
+  "cottage_blue": {
    "ids": [
     787,
     788,
@@ -4350,9 +4352,38 @@
    "elevation": null,
    "open": []
   },
+  "cottage_teal": {
+   "ids": [
+    807,
+    808,
+    809,
+    810,
+    811,
+    812,
+    813,
+    814,
+    815,
+    816,
+    817,
+    818,
+    819,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826
+   ],
+   "w": 5,
+   "h": 4,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "cerulean_brick#15": {
    "ids": [
-    807
+    827
    ],
    "w": 1,
    "h": 1,
@@ -4362,7 +4393,7 @@
   },
   "cerulean_brick#15~1": {
    "ids": [
-    808
+    828
    ],
    "w": 1,
    "h": 1,
@@ -4372,7 +4403,7 @@
   },
   "cerulean_brick#15~2": {
    "ids": [
-    809
+    829
    ],
    "w": 1,
    "h": 1,
@@ -4382,8 +4413,8 @@
   },
   "lamp_paving": {
    "ids": [
-    810,
-    811
+    830,
+    831
    ],
    "w": 1,
    "h": 2,
@@ -4393,7 +4424,7 @@
   },
   "sign_paving": {
    "ids": [
-    812
+    832
    ],
    "w": 1,
    "h": 1,
@@ -4403,7 +4434,7 @@
   },
   "sign_brick": {
    "ids": [
-    813
+    833
    ],
    "w": 1,
    "h": 1,
@@ -4413,7 +4444,7 @@
   },
   "fence_paving#1": {
    "ids": [
-    814
+    834
    ],
    "w": 1,
    "h": 1,
@@ -4423,7 +4454,7 @@
   },
   "fence_paving#2": {
    "ids": [
-    815
+    835
    ],
    "w": 1,
    "h": 1,
@@ -4433,7 +4464,7 @@
   },
   "fence_paving#5": {
    "ids": [
-    816
+    836
    ],
    "w": 1,
    "h": 1,
@@ -4443,7 +4474,7 @@
   },
   "fence_paving#6": {
    "ids": [
-    817
+    837
    ],
    "w": 1,
    "h": 1,
@@ -4453,7 +4484,7 @@
   },
   "fence_paving#8": {
    "ids": [
-    818
+    838
    ],
    "w": 1,
    "h": 1,
@@ -4463,7 +4494,7 @@
   },
   "fence_paving#10": {
    "ids": [
-    819
+    839
    ],
    "w": 1,
    "h": 1,
@@ -4473,15 +4504,15 @@
   },
   "fountain_3x3": {
    "ids": [
-    820,
-    821,
-    822,
-    823,
-    824,
-    825,
-    826,
-    827,
-    828
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848
    ],
    "w": 3,
    "h": 3,
@@ -4491,8 +4522,8 @@
   },
   "bench_wood_south": {
    "ids": [
-    829,
-    830
+    849,
+    850
    ],
    "w": 2,
    "h": 1,
@@ -4502,8 +4533,8 @@
   },
   "bench_wood_north": {
    "ids": [
-    831,
-    832
+    851,
+    852
    ],
    "w": 2,
    "h": 1,
@@ -4513,8 +4544,8 @@
   },
   "bench_wood_west": {
    "ids": [
-    833,
-    834
+    853,
+    854
    ],
    "w": 1,
    "h": 2,
@@ -4524,7 +4555,7 @@
   },
   "litter_bin": {
    "ids": [
-    835
+    855
    ],
    "w": 1,
    "h": 1,
@@ -4534,8 +4565,8 @@
   },
   "bike_rack": {
    "ids": [
-    836,
-    837
+    856,
+    857
    ],
    "w": 2,
    "h": 1,
@@ -4545,7 +4576,7 @@
   },
   "flower_tub": {
    "ids": [
-    838
+    858
    ],
    "w": 1,
    "h": 1,
@@ -4555,7 +4586,7 @@
   },
   "bridge_ew_1_west": {
    "ids": [
-    839
+    859
    ],
    "w": 1,
    "h": 1,
@@ -4565,7 +4596,7 @@
   },
   "bridge_ew_1_middle": {
    "ids": [
-    840
+    860
    ],
    "w": 1,
    "h": 1,
@@ -4575,7 +4606,7 @@
   },
   "bridge_ew_1_east": {
    "ids": [
-    841
+    861
    ],
    "w": 1,
    "h": 1,
@@ -4585,7 +4616,7 @@
   },
   "bridge_ns_1_north": {
    "ids": [
-    842
+    862
    ],
    "w": 1,
    "h": 1,
@@ -4595,7 +4626,7 @@
   },
   "bridge_ns_1_middle": {
    "ids": [
-    843
+    863
    ],
    "w": 1,
    "h": 1,
@@ -4605,7 +4636,7 @@
   },
   "bridge_ns_1_south": {
    "ids": [
-    844
+    864
    ],
    "w": 1,
    "h": 1,
@@ -4615,26 +4646,6 @@
   },
   "diglett_cave": {
    "ids": [
-    845,
-    846,
-    847,
-    848,
-    849,
-    850,
-    851,
-    852,
-    853,
-    854,
-    855,
-    856,
-    857,
-    858,
-    859,
-    860,
-    861,
-    862,
-    863,
-    864,
     865,
     866,
     867,
@@ -4644,7 +4655,27 @@
     871,
     872,
     873,
-    874
+    874,
+    875,
+    876,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894
    ],
    "w": 6,
    "h": 5,
@@ -4654,24 +4685,104 @@
     26
    ]
   },
-  "hole": {
+  "hole_w": {
    "ids": [
-    875
+    895
    ],
    "w": 1,
    "h": 1,
    "solid": false,
    "elevation": null,
    "open": []
+  },
+  "hole_e": {
+   "ids": [
+    896
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "back_step": {
+   "ids": [
+    897
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "canal_brick#4": {
+   "ids": [
+    898
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "canal_brick#5": {
+   "ids": [
+    899
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "canal_brick#0": {
+   "ids": [
+    900
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "canal_paving#2": {
+   "ids": [
+    901
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "canal_paving#10": {
+   "ids": [
+    902
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
+  },
+  "canal_paving#0": {
+   "ids": [
+    903
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": 1,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 319
+  "secondary": 337
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 236
+  "secondary": 264
  },
  "animations": [
   {
@@ -4683,10 +4794,20 @@
   },
   {
    "name": "CeruleanConcept_Fountain3X3",
-   "first_tile": 930,
+   "first_tile": 936,
    "tiles": 29,
    "frames": 4,
    "notes": []
+  },
+  {
+   "name": "CeruleanConcept_Canal",
+   "first_tile": 965,
+   "tiles": 12,
+   "frames": 8,
+   "notes": [
+    "added to TilesetAnim_CeruleanConcept (runs on gTileset_CeruleanConcept)",
+    "the counter wraps at 256, which is not a multiple of 10: the animation will skip a little once per cycle"
+   ]
   }
  ]
 }

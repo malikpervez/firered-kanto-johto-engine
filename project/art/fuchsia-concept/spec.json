@@ -4985,7 +4985,28 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "paving#15",
+   "ground": [
+    "paving#7",
+    "paving#15"
+   ],
+   "solid": true
+  },
+  {
+   "name": "bench_stone~2",
+   "image": "sheets/props_water.png",
+   "x": 80,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": [
+    "paving#15",
+    "paving#13"
+   ],
    "solid": true
   },
   {
@@ -4998,7 +5019,7 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "paving#3",
+   "ground": "paving#7",
    "solid": true
   },
   {

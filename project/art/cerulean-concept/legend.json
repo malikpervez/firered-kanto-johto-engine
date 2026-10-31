@@ -149,7 +149,45 @@
   "joins": "%"
  },
  "Y": "diglett_cave",
- "^": "hole",
+ "^": "hole_w",
+ "J": "hole_e",
+ "I": "back_step",
+ "G": {
+  "name": "house_family_paved",
+  "joins": "%"
+ },
+ "N": {
+  "name": "paving_to_cobble_N",
+  "joins": "%"
+ },
+ "U": {
+  "name": "paving_to_cobble_S",
+  "joins": "%"
+ },
+ "A": {
+  "name": "canal_brick#4",
+  "joins": "%"
+ },
+ "C": {
+  "name": "canal_brick#5",
+  "joins": "%"
+ },
+ "D": {
+  "name": "canal_brick#0",
+  "joins": "%"
+ },
+ "E": {
+  "name": "canal_paving#2",
+  "joins": "%"
+ },
+ "M": {
+  "name": "canal_paving#10",
+  "joins": "%"
+ },
+ "V": {
+  "name": "canal_paving#0",
+  "joins": "%"
+ },
  "1": {
   "name": "cottage_blue",
   "joins": "%"

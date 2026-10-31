@@ -37,15 +37,15 @@ def rect(g, x0, y0, x1, y1, c):
 
 
 def open_sea(g, x, y):
-    return all(0 <= x + i < W and 0 <= y + j < H and g[y + j][x + i] == "s" for i in (-1, 0, 1) for j in (-1, 0, 1))
+    return all(0 <= x + i < W and 0 <= y + j < H and g[y + j][x + i] in "sqQ" for i in (-1, 0, 1) for j in (-1, 0, 1))
 
 
-def rocks(g, ys):
-    """Sea rocks along the two edges, where open sea is all round them."""
-    for k, y in enumerate(ys):
-        for x, c in ((1, "q" if k % 2 else "Q"), (W - 2, "Q" if k % 2 else "q")):
-            if open_sea(g, x, y):
-                g[y][x] = c
+def rocks(g, spots):
+    """Sea rocks out towards the two edges, scattered (some alone, some in pairs, never in a line), each where open sea
+    is all round it, off the swimmers' and the fishers' lines of sight."""
+    for x, y, c in spots:
+        assert open_sea(g, x, y), f"the rock at ({x},{y}) isn't in open sea"
+        g[y][x] = c
 
 
 # ---------------------------------------------------------------- the north map
@@ -63,9 +63,13 @@ rect(n, 22, 0, 23, 15, "s")            # coast turns the corner inside the map, 
 rect(n, 7, 0, 10, 15, "~")             # Pallet's river, out over its bar into the sea
 rect(n, 5, 25, 17, 29, ".")            # the fishers' islet
 rect(n, 9, 26, 14, 28, "g")
+for x, y in ((5, 25), (16, 25), (17, 25), (17, 26), (5, 28), (5, 29), (6, 29), (7, 29), (17, 29)):
+    n[y][x] = "s"                      # its shore stepped in at the corners, not a box (the fishers' blocks stay land)
 rect(n, 17, 40, 20, 42, ".")           # the pearl sandbar
 rect(n, 19, 40, 20, 40, "*")
-rocks(n, range(19, 49, 5))
+n[40][17] = n[42][20] = "s"            # (two corners off it; the Pearl's block stays)
+rocks(n, [(2, 19, "Q"), (3, 20, "q"), (1, 26, "q"), (2, 34, "Q"), (1, 41, "q"), (3, 47, "Q"),
+          (21, 22, "q"), (22, 28, "Q"), (20, 32, "q"), (21, 33, "Q"), (22, 46, "q")])
 
 # ---------------------------------------------------------------- the south map
 s = blank("s")
@@ -74,7 +78,8 @@ rect(s, 9, 6, 14, 16, "g")
 rect(s, 4, 40, 21, 43, ".")            # Cinnabar's north shore: the beach...
 rect(s, 7, 41, 18, 42, "g")
 rect(s, 4, 44, 23, 49, "T")            # ...and the woods behind the town
-rocks(s, range(2, 38, 5))
+rocks(s, [(1, 3, "q"), (2, 9, "Q"), (3, 10, "q"), (1, 18, "Q"), (2, 26, "q"), (1, 33, "Q"),
+          (21, 5, "q"), (22, 13, "Q"), (20, 20, "q"), (22, 29, "Q"), (21, 30, "q"), (22, 36, "q")])
 
 here = Path(__file__).resolve().parent
 (here / "plan_north.txt").write_text("".join("".join(r) + "\n" for r in n))

@@ -4338,9 +4338,20 @@
    "elevation": null,
    "open": []
   },
+  "bench_stone~2": {
+   "ids": [
+    785,
+    786
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "litter_bin": {
    "ids": [
-    785
+    787
    ],
    "w": 1,
    "h": 1,
@@ -4350,7 +4361,7 @@
   },
   "sign@dirt#5": {
    "ids": [
-    786
+    788
    ],
    "w": 1,
    "h": 1,
@@ -4365,7 +4376,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 147
+  "secondary": 149
  },
  "animations": [
   {

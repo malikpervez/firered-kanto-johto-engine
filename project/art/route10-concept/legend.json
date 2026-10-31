@@ -200,5 +200,13 @@
  "t": {
   "name": "top8#13+Estart",
   "joins": "C"
+ },
+ "\u01c0": {
+  "auto": "frayN_cobble",
+  "joins": "="
+ },
+ "\u01c1": {
+  "auto": "frayN_dirt",
+  "joins": "="
  }
 }

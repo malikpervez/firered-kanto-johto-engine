@@ -61,8 +61,10 @@ rect(8, 20, 56, 23, "+")
 rect(7, 20, 7, 23, "1")
 rect(57, 20, 57, 23, "2")
 rect(8, 22, 56, 22, "-")                       # the dashed line down the middle (on the row's top edge)
-rect(8, 19, 57, 19, "n")
-rect(8, 24, 57, 24, "u")
+rect(8, 19, 56, 19, "n")
+rect(8, 24, 56, 24, "u")
+# (the pavements end a block short of the east entrance's asphalt-to-cobble join: the lawn at 57,19 and 57,24 meets
+# its cobble, so no asphalt shows beside the pavements' ends)
 for x in (20, 21, 54, 55):                     # the zebra crossings, where Lucky Lane meets the boulevard
     at(x, 19, "7"); at(x, 20, "4"); at(x, 21, "3"); at(x, 22, "3"); at(x, 23, "5"); at(x, 24, "9")
 for x, y in ((14, 21), (33, 21), (44, 23)):
@@ -76,7 +78,7 @@ at(30, 18, "S")                                # its sign
 rect(33, 14, 38, 18, "O")                      # the hotel, door 35,18
 rect(47, 15, 51, 18, "C")                      # the Pokémon Center, door 49,18
 at(45, 18, "S")                                # trainer tips
-at(55, 18, "S")                                # the town sign, by the east entrance
+at(56, 18, "S")                                # the town sign, by the east entrance (clear of the crossing, 54-55)
 rect(40, 13, 41, 14, "R"); rect(43, 13, 44, 14, "R"); rect(53, 15, 54, 16, "R")
 rect(31, 3, 32, 4, "R"); rect(36, 6, 37, 7, "R"); rect(40, 4, 41, 5, "R")
 rect(19, 3, 20, 4, "R")
@@ -105,8 +107,9 @@ at(52, 29, "S")                                # trainer tips
 rect(22, 25, 23, 26, "R"); rect(50, 26, 51, 27, "R")
 
 # lamps along the boulevard, on the lawns beside it (a lamp's post's foot at x, y)
-for x, y in ((20, 18), (32, 18), (40, 18), (57, 18), (19, 26), (38, 26), (52, 26)):  # clear of the tutor and the fat man
+for x, y in ((32, 18), (40, 18), (57, 18), (19, 26), (38, 26), (52, 26)):  # clear of the tutor and the fat man
     rect(x, y - 1, x, y, "l")
+# (none at the west crossing's north end, 20-21,18: the crossing opens onto the lawn)
 
 # Erika's Gym: a glasshouse in its walled flower garden, the hedge's gap closed by the second tree to cut (12,25)
 rect(8, 25, 18, 25, "b")                       # (the forest closes its west side)

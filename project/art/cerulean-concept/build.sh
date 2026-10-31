@@ -36,6 +36,7 @@ pae door add $M 27 41 --frames ../$K/poke_mart/poke_mart_door.png --sound slidin
 pae door add $M 47 36 --frames ../$V/viridian_gym/viridian_gym_door.png $P
 pae door add $M 10 41 --frames ../$V/trainer_school/trainer_school_door.png $P
 pae door add $M 35 22 --frames ../$V/house_family/house_family_door.png $P
+pae door add $M 48 11 --frames ../$V/house_family/house_family_door.png $P  # the badge house (the robbed house has its own copy, on the paving)
 pae door add $M 15 29 --frames ../$V/house_gardener/house_gardener_door.png $P
 
 # events: every warp keeps its number (the buildings behind them point at it)

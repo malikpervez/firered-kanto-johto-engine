@@ -4829,6 +4829,146 @@
    "ground": "grass"
   },
   {
+   "name": "dirt#5_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "quay#153_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "quay#145_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "quay#129_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "quay#128_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "quay#18_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "setts_SW#253_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "setts_SE#245_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "setts_SE#253_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 128,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "setts_SW#245_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 144,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "setts_NE#145_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 160,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "setts_SE#147_to_pavement_S_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 176,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "setts_SE#100_to_pavement_N_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 192,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
+   "name": "setts_SW#100_to_pavement_N_flat",
+   "image": "sheets/flat_grounds.png",
+   "x": 208,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary"
+  },
+  {
    "name": "trainer_school",
    "image": "sheets/trainer_school.png",
    "x": 0,
@@ -4934,10 +5074,10 @@
    "x": 0,
    "y": 0,
    "banks": [
-    7
+    2
    ],
    "tileset": "secondary",
-   "ground": "dock#7",
+   "ground": "dock#3",
    "behavior": "MB_DEEP_SOUTH_WARP"
   },
   {
@@ -4946,10 +5086,10 @@
    "x": 16,
    "y": 0,
    "banks": [
-    7
+    2
    ],
    "tileset": "secondary",
-   "ground": "dock#15",
+   "ground": "dock#11",
    "behavior": "MB_DEEP_SOUTH_WARP"
   },
   {
@@ -4958,11 +5098,23 @@
    "x": 32,
    "y": 0,
    "banks": [
-    7
+    2
    ],
    "tileset": "secondary",
-   "ground": "dock#13",
+   "ground": "dock#9",
    "behavior": "MB_DEEP_SOUTH_WARP"
+  },
+  {
+   "name": "setts_below_the_gate",
+   "image": "sheets/harbour_ground.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "dedupe": false,
+   "ground": "dirt#5_flat"
   },
   {
    "name": "setts_SW#253",
@@ -5586,7 +5738,7 @@
    ],
    "tileset": "secondary",
    "dedupe": true,
-   "ground": "quay#153"
+   "ground": "quay#153_flat"
   },
   {
    "name": "quay#145+coping#100",
@@ -5598,7 +5750,7 @@
    ],
    "tileset": "secondary",
    "dedupe": true,
-   "ground": "quay#145"
+   "ground": "quay#145_flat"
   },
   {
    "name": "quay#129+coping#100",
@@ -5610,7 +5762,7 @@
    ],
    "tileset": "secondary",
    "dedupe": true,
-   "ground": "quay#129"
+   "ground": "quay#129_flat"
   },
   {
    "name": "quay#128+coping#100",
@@ -5622,7 +5774,7 @@
    ],
    "tileset": "secondary",
    "dedupe": true,
-   "ground": "quay#128"
+   "ground": "quay#128_flat"
   },
   {
    "name": "quay#0+coping#100",
@@ -5706,7 +5858,7 @@
    ],
    "tileset": "secondary",
    "dedupe": true,
-   "ground": "quay#18"
+   "ground": "quay#18_flat"
   },
   {
    "name": "quay_wall#17",
@@ -5966,8 +6118,8 @@
    ],
    "tileset": "secondary",
    "ground": [
-    "setts_SW#253",
-    "setts_SE#245",
+    "setts_SW#253_flat",
+    "setts_SE#245_flat",
     "pavement_to_asphalt_S",
     "pavement_to_asphalt_S"
    ],
@@ -6006,8 +6158,8 @@
    "ground": [
     "pavement_to_asphalt_N",
     "pavement_to_asphalt_N",
-    "setts_SE#253",
-    "setts_SW#245"
+    "setts_SE#253_flat",
+    "setts_SW#245_flat"
    ],
    "solid": true
   },
@@ -6020,7 +6172,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "setts_NE#145",
+   "ground": "setts_NE#145_flat",
    "solid": true
   },
   {
@@ -6032,7 +6184,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "setts_SE#147_to_pavement_S",
+   "ground": "setts_SE#147_to_pavement_S_flat",
    "solid": true
   },
   {
@@ -6056,7 +6208,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "setts_SE#100_to_pavement_N",
+   "ground": "setts_SE#100_to_pavement_N_flat",
    "solid": true,
    "dedupe": true
   },
@@ -6069,7 +6221,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "setts_SW#100_to_pavement_N",
+   "ground": "setts_SW#100_to_pavement_N_flat",
    "solid": true,
    "dedupe": true
   },
@@ -6082,7 +6234,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "setts_SE#100_to_pavement_N",
+   "ground": "setts_SE#100_to_pavement_N_flat",
    "solid": true,
    "dedupe": true
   },
@@ -6095,7 +6247,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "setts_SE#100_to_pavement_N",
+   "ground": "setts_SE#100_to_pavement_N_flat",
    "solid": true,
    "dedupe": true
   },
@@ -6108,7 +6260,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "setts_SE#100_to_pavement_N",
+   "ground": "setts_SE#100_to_pavement_N_flat",
    "solid": true,
    "dedupe": true
   },
@@ -6121,7 +6273,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "setts_SW#100_to_pavement_N",
+   "ground": "setts_SW#100_to_pavement_N_flat",
    "solid": true,
    "dedupe": true
   },
@@ -6180,8 +6332,8 @@
    "dedupe": true,
    "tileset": "secondary",
    "ground": [
-    "quay#145",
-    "quay#145"
+    "quay#145_flat",
+    "quay#145_flat"
    ],
    "solid": true
   },
@@ -6229,7 +6381,7 @@
    "dedupe": true,
    "tileset": "secondary",
    "ground": [
-    "quay#145"
+    "quay#145_flat"
    ],
    "solid": true
   },

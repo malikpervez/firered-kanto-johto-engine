@@ -33,12 +33,12 @@ def at(x, y, c):
 
 # the sandbars
 rect(8, 3, 15, 6, ".")
-rect(9, 3, 10, 4, "*")
+rect(13, 4, 14, 5, "*")              # (flowers a row in from the shore, a different corner on each)
 rect(20, 4, 25, 7, ".")
 rect(38, 8, 45, 11, ".")
-rect(39, 8, 40, 9, "*")
+rect(40, 9, 41, 10, "*")
 rect(90, 13, 97, 16, ".")
-rect(94, 13, 96, 14, "*")
+rect(92, 14, 94, 15, "*")
 
 # the Seafoam Islands: the west island (its mouth's door 58,10) and the east one (78,12), their signs; each mouth is
 # cut into its cliff's face (6x2), the cliff's top running on over it
@@ -52,6 +52,9 @@ rect(76, 11, 81, 12, "Y")
 at(75, 13, "S")
 rect(63, 13, 65, 15, "*")
 rect(82, 15, 84, 16, "*")
+at(53, 15, "o"); at(73, 14, "o")              # a field rock on each island's lawn (they're rocky islands)
+for x, y in ((59, 15), (66, 12), (79, 16), (71, 8)):
+    at(x, y, ",")                              # and flowers in their grass
 
 # sea rocks along the edges, where open sea is all round them
 def open_sea(x, y):

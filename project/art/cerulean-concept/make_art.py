@@ -36,6 +36,7 @@ import buildings
 import kit
 import props
 import streets
+import water
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -58,7 +59,7 @@ WEST = [(0, y) for y in range(17, 21)]
 EAST = [(MAP_W - 1, y) for y in range(28, 31)]
 SOUTH = [(x, MAP_H - 1) for x in range(21, 25)]
 WATER = set("~vr")
-SOLID = set("T#bRoklSBcw_~vrWKHXZLY12@/fFunatie")
+SOLID = set("T#bRoklSBcw_~vrWKHXZLY12@/fFunatieG")
 # the paving and the brick: what stands on them (the buildings but the two family houses and the cave, the lamps and
 # the signs) and the cobbles are one material with them, so no edge between
 WALK = "%"
@@ -76,6 +77,13 @@ BRIDGES = {"x": ("bridge_ew_1_west", "cerulean_brick#15"), "y": ("bridge_ew_1_mi
 SHARED_PAVED = {"Z": ("pokemon_center", "center"), "L": ("poke_mart", "mart")}
 BRICK_BANK = 10
 BRICK = {3: (104, 128, 168), 4: (136, 160, 200), 5: (176, 196, 224), 8: (72, 88, 120)}  # the pack's bricks, in blues
+ROBBED = (33, 19)  # the robbed house's top-left block: the family house on the street's paving ("G"), not the lawn
+# the canals: their water is kerbed in the stone round it (the west one in the blue brick, the east one in the paving)
+# rather than the pond's lawn bank; their pieces animate as the pond does ("Canal"), each block by its water sides
+CANALS = {"brick": ("cerulean_brick#15", [(19, y) for y in range(22, 41)]),
+          "paving": ("paving#15", [(x, 27) for x in range(45, 54)])}
+CANAL_CHARS = "ACDEMV"
+CANAL_WATER = "~ym"  # the canal's water and the footbridges' middles over it
 COTTAGES = {"1": ("cottage_blue", 11, {2: (40, 56, 96), 4: (64, 96, 160), 5: (104, 144, 200), 13: (72, 80, 112)}),
             "2": ("cottage_teal", 12, {2: (32, 72, 80), 4: (48, 120, 128), 5: (88, 168, 168), 13: (64, 96, 96)})}
 
@@ -147,6 +155,31 @@ def cave_mouth(houses) -> tuple[list, buildings.Building]:
 
 CAVE_OK = (1, 2, 13, 11, 12)  # the houses' browns and greys the rock may use besides its own two (not 4-7, 9, 10)
 HOUSE_SPARE = (3, 8)  # the indices of the houses' palette neither house uses
+
+
+def holes() -> dict[str, np.ndarray]:
+    """The two ways in from the back, drawn on the lawn in the kit's ground colours (bank 0): the thieves' hole at
+    the foot of the robbed house's back wall (two blocks, its west and east halves) and a stone step at the badge
+    house's back door."""
+    yy, xx = np.mgrid[0:16, 0:32]
+
+    def ell(cx, cy, rx, ry):
+        return ((xx + 0.5 - cx) / rx) ** 2 + ((yy + 0.5 - cy) / ry) ** 2 <= 1
+    a = np.zeros((16, 32), np.uint8)
+    a[ell(16, 15.5, 14, 8.5)] = 3        # the trodden grass round it, darker
+    a[ell(16, 15.5, 13, 7.5)] = 9        # the dug earth
+    a[ell(16, 15.5, 11, 6) & (yy >= 10)] = 8
+    a[ell(16, 16, 9.5, 5)] = 14          # the hole's dark rim...
+    a[ell(16, 16.5, 7.5, 4)] = 1         # ...and the dark under the wall
+    for x, y in ((6, 11), (7, 11), (25, 10), (26, 11), (10, 8), (21, 8), (13, 9)):
+        a[y, x] = 10                     # clods thrown up
+    step = np.zeros((16, 16), np.uint8)
+    step[10:16, 3:13] = 13
+    step[10, 3:13] = 15
+    step[10:16, 3] = step[10:16, 12] = 11
+    step[10, 3] = step[10, 12] = 0
+    step[15, 4:12] = 12
+    return {"hole_w": a[:, :16], "hole_e": a[:, 16:], "back_step": step}
 
 
 def plan() -> list[list[str]]:
@@ -242,8 +275,23 @@ def main() -> None:
     kit.check_forest(g)
     kit.check_water(g)
     check(g, d)
-    for x, y in HOLES:
-        g[y][x] = "^"
+    for (x, y), ch in zip(HOLES, "^JI"):
+        g[y][x] = ch
+    for y in range(ROBBED[1], ROBBED[1] + 4):  # the robbed house, on the paving
+        for x in range(ROBBED[0], ROBBED[0] + 5):
+            assert g[y][x] == "H"
+            g[y][x] = "G"
+    canal_names = {}
+    for key, (under, cells) in CANALS.items():
+        for x, y in cells:
+            if g[y][x] != "~":
+                continue
+            m = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                    if g[y + dy][x + dx] in CANAL_WATER)
+            name = f"canal_{key}#{m}"
+            if name not in canal_names:
+                canal_names[name] = (CANAL_CHARS[len(canal_names)], under, m)
+            g[y][x] = canal_names[name][0]
     g[SIGN_BRICK[1]][SIGN_BRICK[0]] = "!"
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
@@ -257,6 +305,13 @@ def main() -> None:
         sh.add(b.name, b.idx, tileset="secondary", **dict(b.entry(), **({"ground": paved(b.idx)}
                                                                          if letter in PAVED else {})))
         spec_mt += sh.write()
+    house = load("H")  # the robbed house: the family house with the paving under it but its roof's row (the lawn behind)
+    sh = kit.Sheet("house_family_paved", house.palette, HOUSE_BANK, HERE, HERE, cols=house.idx.shape[1] // 16)
+    ground = paved(house.idx)
+    bw = house.idx.shape[1] // 16
+    sh.add("house_family_paved", house.idx, tileset="secondary",
+           **dict(house.entry(), ground=["grass"] * bw + ground[bw:]))
+    spec_mt += sh.write()
     for letter, (name, pal) in SHARED_PAVED.items():  # the kit's Center and Mart, the town's own copies on the paving
         b = kit.SHARED_BUILDINGS[name][0]
         sh = kit.Sheet(f"{name}_paved", kit.PALS[pal], kit.BANK[pal], HERE, HERE, cols=b.idx.shape[1] // 16)
@@ -315,9 +370,19 @@ def main() -> None:
     dx, dy = mouth.door
     sh.add(mouth.name, mouth.idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
            behaviors={f"{dx},{dy}": "MB_NON_ANIMATED_DOOR"})  # an open mouth: you walk in, as in Route 2
-    sh.add("hole", np.zeros((16, 16), np.uint8), tileset="secondary", ground="lawn_a",
-           behavior="MB_SOUTH_ARROW_WARP")  # lawn: walk south from it into the house
     spec_mt += sh.write()
+    sh = kit.Sheet("holes", kit.PALS["ground"], kit.BANK["ground"], HERE, HERE, cols=3)
+    for name, art in holes().items():  # on the lawn: walk south from it into the house
+        sh.add(name, art, tileset="secondary", ground="lawn_a", behavior="MB_SOUTH_ARROW_WARP")
+    spec_mt += sh.write()
+    canal = kit.Sheet("canal", kit.PALS["water"], kit.BANK["water"], HERE, HERE, cols=len(canal_names))
+    for name, (ch, under, m) in canal_names.items():
+        canal.add(name, water.piece("pond", m, 0), tileset="secondary", ground=under, behavior="MB_POND_WATER",
+                  elevation=1)
+    spec_mt += canal.write([[water.piece("pond", m, k) for _, _, m in canal_names.values()]
+                            for k in range(1, water.FRAMES)])
+    canal_anim = {"name": "Canal", "image": "sheets/canal.png",
+                  "frames": [f"sheets/canal_f{k}.png" for k in range(1, water.FRAMES)], "speed": 10}
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -329,14 +394,16 @@ def main() -> None:
                                        f"palette_{HOUSE_BANK}.pal", f"palette_{BRICK_BANK}.pal"]
                          + [f"palette_{b}.pal" for _, b, _ in COTTAGES.values()]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"] + prop_anims,
+            "animations": base["animations"] + prop_anims + [canal_anim],
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN}, Y="diglett_cave")
-    legend["^"] = "hole"
+    legend.update({"^": "hole_w", "J": "hole_e", "I": "back_step", "G": {"name": "house_family_paved", "joins": WALK},
+                   "N": {"name": "paving_to_cobble_N", "joins": WALK}, "U": {"name": "paving_to_cobble_S", "joins": WALK}})
+    legend.update({ch: {"name": name, "joins": WALK} for name, (ch, _, _) in canal_names.items()})
     legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **{"@": "lamp_paving", "/": "sign_paving", "!": "sign_brick"},
                   **{k: f"{n}_paved" for k, (n, _) in SHARED_PAVED.items()})
     legend.update({k: {"name": legend[k], "joins": WALK} for k in PAVED + "!"})

@@ -56,6 +56,8 @@ rect(2, 13, 17, 13, "#")                        # open at the east end (18-21)
 rect(6, 16, 21, 16, "#")                        # open at the west end; the tree to cut at 19,16
 at(19, 16, ".")
 rect(2, 19, 17, 19, "#")                        # open at the east end
+# where a fence meets the forest its rails run on into the trees (no free end post with a slit of lawn beside it)
+at(2, 13, "\u01c8"); at(2, 19, "\u01c8"); at(21, 10, "\u01c8")
 rect(8, 11, 15, 12, "g")
 rect(6, 14, 13, 15, "g")
 rect(10, 17, 17, 18, "g")
@@ -73,7 +75,8 @@ rect(18, 30, 21, 32, "g")
 rect(8, 33, 21, 33, "_")
 
 # the bikers' road down the west side, to the crossroads; its verge's tree and flowers
-rect(4, 22, 5, 49, ":")
+rect(4, 23, 5, 49, ":")
+rect(2, 22, 3, 22, "*"); rect(6, 22, 7, 22, "*")  # its head, a row clear of the tall grass, between two beds of flowers
 tree(2, 30)
 rect(2, 40, 3, 42, "*")
 

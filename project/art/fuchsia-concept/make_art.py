@@ -41,7 +41,22 @@ SOLID = set("T#bRoklSBcw_~vrAGZLOWHJK")
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 # (the statue stands on the plaza's west edge, its NW block on the edge piece; the bin on the avenue's SW corner)
 PROPS = [("statue_guardian", 18, 8, ["paving#7", "paving#15", "paving#15", "paving#15"]), ("flower_tub", 21, 7, "paving#15"), ("flower_tub", 25, 7, "paving#15"),
-         ("bench_stone", 21, 13, "paving#15"), ("bench_stone", 25, 13, "paving#15"), ("litter_bin", 21, 17, "paving#3")]
+         ("bench_stone", 21, 13, ["paving#7", "paving#15"]), ("litter_bin", 21, 17, "paving#7")]
+# the east bench, over the avenue's east edge (its own piece: the west one's ground is the west edge's)
+EAST_BENCH = ("bench_stone~2", 25, 13, ["paving#15", "paving#13"])
+# the avenue opens onto the main street: the kit's paving-to-cobble piece across the street's top row, the avenue's
+# last row open to it (each block named: the paving and the cobble are two surfaces and would draw rims between them)
+AVENUE_FOOT = {(x, 18): "\u0250" for x in range(21, 27)}
+AVENUE_FOOT.update({(x, 17): "\u0251" for x in range(22, 26)})
+AVENUE_FOOT[(26, 17)] = "\u0252"
+# the beach path leaves the shore street: the cobble and the dirt meet without a strip of lawn between them
+BEACH_MOUTH = {(x, 33): "\u0253" for x in range(18, 30)}
+BEACH_MOUTH.update({(x, 34): "\u0255" for x in range(19, 29)})
+BEACH_MOUTH[(18, 34)], BEACH_MOUTH[(29, 34)] = "\u0254", "\u0256"
+JOIN_LEGEND = {"\u0250": {"name": "paving_to_cobble_S", "joins": "="}, "\u0251": {"name": "paving#15", "joins": "p"},
+               "\u0252": {"name": "paving#13", "joins": "p"}, "\u0253": {"name": "cobble#15", "joins": "="},
+               "\u0254": {"name": "dirt#7", "joins": "p"}, "\u0255": {"name": "dirt#15", "joins": "p"},
+               "\u0256": {"name": "dirt#13", "joins": "p"}}
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the house
 # with the pond garden has a back door, entered walking south from the garden)
@@ -160,11 +175,21 @@ def check(g, d) -> None:
 def main() -> None:
     g = plan()
     prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins='p')
+    name, x, y, ground = EAST_BENCH
+    ch = next(c for c in props.POOL if c not in prop_legend)
+    assert g[y][x] == g[y][x + 1] == "p", "the east bench stands on the paving"
+    prop_legend[ch], prop_grounds[name] = {"name": name, "joins": "p"}, ground
+    SOLID.add(ch)
+    g[y][x] = g[y][x + 1] = ch
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
-    kit.check_paving(g, "".join(k for k, v in prop_legend.items() if isinstance(v, dict) and v["joins"] == "p"))
+    kit.check_paving(g, "A" + "".join(k for k, v in prop_legend.items() if isinstance(v, dict) and v["joins"] == "p"))
     check(g, d)
+    for (x, y), ch in {**AVENUE_FOOT, **BEACH_MOUTH}.items():
+        was = {"\u0250": "=", "\u0253": "="}.get(ch, "p" if y == 17 else ":")
+        assert g[y][x] == was or (x, y) == (21, 17), f"({x},{y}) is '{g[y][x]}', not '{was}': the joins moved"
+        g[y][x] = ch
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
     pals, added = {}, set()
@@ -204,6 +229,8 @@ def main() -> None:
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k)[0].name for k in BUILDINGS})
     legend.update(prop_legend)
     legend[":"] = {"auto": "dirt", "joins": "p"}  # the zoo's west walk runs straight onto the plaza's paving
+    legend["A"] = {"name": legend["A"], "joins": "p"}  # the plaza's paving runs straight up to the lodge's front
+    legend.update(JOIN_LEGEND)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

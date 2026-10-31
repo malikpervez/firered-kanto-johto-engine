@@ -27,6 +27,7 @@ import props
 
 HERE = Path(__file__).resolve().parent
 MAP_W, MAP_H = 32, 28
+COBBLE_TO_DOOR, COBBLE_TO_DOCK = "\u00e7", "\u00c7"  # (cobble pieces forced: N-S through, and plain)
 
 # ---------------------------------------------------------------- palettes and buildings (the kit has the rest)
 BANK = {"lab": 7, "plants": 8, "houses": 9, "windmill": 10}
@@ -109,7 +110,7 @@ def layout() -> tuple[list[list[str]], dict]:
     put("l", 4, 9, 1, 2)
     put("l", 27, 13, 1, 2)
     put("l", 13, 17, 1, 2)
-    for x, y in ((20, 16), (22, 16), (16, 13), (27, 9), (27, 22)):
+    for x, y in ((20, 16), (22, 16), (16, 13), (25, 9), (27, 22)):  # (25,9): behind the sea-view bench, not in front
         put("b", x, y)
     # the pond and its dock; the channel south (Route 21)
     put("~", 16, 20, 11, 6)
@@ -140,6 +141,12 @@ def layout() -> tuple[list[list[str]], dict]:
              "TownSign": (13, 11), "TrainerTips": (10, 20)}
     for x, y in signs.values():
         put("S", x, y)
+    # the cobbles run on without their grass edge where they meet a door's step (your house, your rival's, the lab)
+    # and the dock's planks (the road straight onto the pier)
+    for x, y in ((7, 8), (18, 8), (21, 16)):
+        put(COBBLE_TO_DOOR, x, y)
+    for x, y in ((21, 18), (22, 18)):
+        put(COBBLE_TO_DOCK, x, y)
     return g, signs
 
 
@@ -205,6 +212,8 @@ def main() -> None:
     legend["O"] = {"name": "boat_moored", "joins": "~", "elevation": 1}
     for ch, mask in (("\u00b9", 8), ("\u00b2", 2), ("\u00b3", 10), ("\u00bc", 11)):  # the south forest's edge
         legend[ch] = {"name": f"forest#{mask}", "joins": "T"}
+    legend[COBBLE_TO_DOOR] = {"name": "cobble#5", "joins": "="}
+    legend[COBBLE_TO_DOCK] = {"name": "cobble#15", "joins": "="}
     legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "signs.json").write_text(json.dumps(signs, indent=1) + "\n")

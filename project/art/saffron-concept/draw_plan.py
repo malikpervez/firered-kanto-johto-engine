@@ -69,14 +69,14 @@ rect(4, 5, 4, 8, ".")                          # (a lawn beside Copycat's house)
 rect(5, 5, 8, 8, "Y")                          # Copycat's house, door 6,8
 rect(12, 5, 15, 8, "H")                        # the house, door 13,8
 rect(18, 3, 23, 8, "J")                        # a brick office on the lane
-tree(3, 2, "|"); tree(10, 2, "|")
+tree(3, 3, "|"); tree(10, 3, "|")      # (a row in from the forest's verge)
 at(27, 3, "S")                                 # the city sign, by the north gate
 rect(2, 11, 27, 11, "b")
 rect(4, 13, 10, 17, "D")                       # the Fighting Dojo, door 7,17
 rect(14, 13, 20, 17, "G")                      # Sabrina's Gym, door 17,17
 at(11, 17, "S")                                # the Dojo's sign
 at(21, 17, "S")                                # the Gym's sign
-rect(22, 12, 25, 17, "V")                      # a narrow office beside the Gym
+rect(22, 12, 25, 17, "y")                      # a narrow office beside the Gym (V, with the hedge's lawn behind it)
 rect(5, 18, 26, 20, "@")                       # the Gym square: granite ("@"), its pavement to the avenues
 
 # the north-east: Silph Co. and the station on the Silph plaza, the garden behind
@@ -86,11 +86,11 @@ at(33, 17, "S")                                # Silph's latest product
 at(43, 17, "S")                                # Silph Co.'s sign
 rect(33, 18, 53, 20, "@")                      # the Silph plaza: granite, the compass set in it
 rect(43, 19, 44, 20, "/")
-tree(32, 10, "|"); tree(35, 2, "|"); tree(40, 2, "|")
+tree(32, 10, "|"); tree(35, 3, "|"); tree(40, 3, "|")
 rect(45, 3, 48, 4, "*")                        # the garden: flowers, a pond, the Friends' lawn round 50,8
 rect(53, 3, 56, 6, "~")
 rect(54, 13, 57, 13, "b")
-rect(54, 14, 57, 17, "a")                      # and east of the station
+rect(54, 14, 57, 17, "u")                      # and east of the station (a, with lawn and forest behind it)
 tree(55, 9)
 for y in (6, 8, 10, 12):                       # the garden's trees along the pavement
     tree(43, y)
@@ -152,7 +152,7 @@ for x, y in ((25, 7), (3, 7), (26, 14), (33, 29), (3, 29), (56, 28), (26, 35), (
     rect(x, y - 1, x, y, "l")                  # a lamp: its post's foot at x, y
 rect(11, 41, 11, 42, "^")                      # a lamp on the park's lawn, by the pavement
 # where the pavement meets lawn, forest, water or a hedge rather than the road, it's the pavement on grass ("$")
-GRASSY = set("T.,*~b")
+GRASSY = set("T.,*~bR")  # (the garden's trees stand on its lawn)
 for y in range(H):
     for x in range(W):
         if g[y][x] == "&" and any(0 <= x + dx < W and 0 <= y + dy < H and g[y + dy][x + dx] in GRASSY
@@ -165,17 +165,20 @@ for x, y in ((54, 19), (27, 44), (32, 44)):
     at(x, y, "&")
 # the two road corners by the east forest, where the corner lamps stood: plain paving to the trees with the kerb on
 # the road side only ("e"), as under the lamps, so no grass sliver shows between the asphalt and the paving
-for x, y in ((57, 26), (57, 33)):
+for x, y in ((57, 26), (57, 33), (2, 26)):
     at(x, y, "e")
+# and where such a corner has the road to its south ("n"): its kerb on the road side, not a verge against the asphalt
+for x, y in ((2, 8), (2, 30), (57, 30)):
+    at(x, y, "n")
 
 # the road's markings: a dashed line down the middle of each avenue ("-", ";"), zebra crossings over the north-south
 # avenue either side of the crossroads, their dropped kerbs ("6" "8") and ends ("2" "3"), and manholes ("%")
 for y in range(3, 45):
-    if y not in (9, 10, 22, 23, 24, 25, 31, 32):  # (broken where the streets meet it)
+    if y not in (9, 10, 22, 23, 24, 25, 26, 31, 32):  # (broken where the streets meet it)
         at(30, y, ";")
 for x in list(range(2, 28)) + list(range(32, 58)):
     at(x, 24, "-")
-for y in (17, 26):
+for y in (17, 27):  # (the south one a row clear of the cross avenue, so its dropped kerbs meet a straight kerb)
     at(27, y, "6"); at(28, y, "2"); at(29, y, "0"); at(30, y, "0"); at(31, y, "3"); at(32, y, "8")
 for x, y in ((15, 23), (44, 25), (29, 7), (29, 37)):
     at(x, y, "%")

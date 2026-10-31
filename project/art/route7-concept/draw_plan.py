@@ -60,6 +60,9 @@ rect(8, 15, 14, 19, "*")
 rect(16, 15, 19, 17, "~")
 rect(21, 15, 22, 16, "R"); at(20, 18, "o")
 rect(8, 20, 22, 21, "g")
+at(17, 16, "v")                                # a lily pad on the little pond
+# the clearing north of the hut: a field rock and a few flowers in its lawn
+at(10, 3, "o"); at(9, 5, ","); at(10, 5, ",")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x % 10) for x in range(W)))

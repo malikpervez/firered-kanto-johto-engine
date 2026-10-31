@@ -141,7 +141,8 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, **{k: load(k)[0].name for k in BUILDINGS})
+    # the buildings count as the road's cobble, so it draws no grass lip along their fronts: the doorsteps meet the road
+    legend = dict(kit.LEGEND, **{k: {"name": load(k)[0].name, "joins": "="} for k in BUILDINGS})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

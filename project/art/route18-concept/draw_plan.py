@@ -38,6 +38,7 @@ def at(x, y, c):
 rect(0, 0, 6, 6, "s")
 rect(0, 7, 1, 15, "s")
 rect(18, 0, 29, 5, "s")
+rect(30, 0, 41, 1, "s")                         # (the pocket wraps round the woods' corner: their top edge shows, not cut flat)
 rect(0, 16, 39, 19, "s")
 
 # the land: the meadow under the woods, the bluff, the road down between Route 17's fences and east along the shore
