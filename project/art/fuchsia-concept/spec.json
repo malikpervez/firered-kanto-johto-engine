@@ -5023,6 +5023,21 @@
    "solid": true
   },
   {
+   "name": "picnic_table",
+   "image": "sheets/props_wood.png",
+   "x": 16,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
    "name": "sign@dirt#5",
    "image": "sheets/settled_wood.png",
    "x": 0,

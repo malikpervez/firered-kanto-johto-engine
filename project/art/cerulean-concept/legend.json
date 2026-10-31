@@ -153,7 +153,11 @@
  "J": "hole_e",
  "I": "back_step",
  "G": {
-  "name": "house_family_paved",
+  "name": "house_family",
+  "joins": "%"
+ },
+ ";": {
+  "name": "dirt#5",
   "joins": "%"
  },
  "N": {
@@ -173,7 +177,7 @@
   "joins": "%"
  },
  "D": {
-  "name": "canal_brick#0",
+  "name": "canal_brick#1",
   "joins": "%"
  },
  "E": {
@@ -185,7 +189,7 @@
   "joins": "%"
  },
  "V": {
-  "name": "canal_paving#0",
+  "name": "canal_paving#8",
   "joins": "%"
  },
  "1": {
@@ -281,7 +285,7 @@
  },
  "y": {
   "name": "bridge_ew_1_middle",
-  "joins": "~"
+  "joins": "%"
  },
  "z": {
   "name": "bridge_ew_1_east",
@@ -293,7 +297,7 @@
  },
  "m": {
   "name": "bridge_ns_1_middle",
-  "joins": "~"
+  "joins": "%"
  },
  "j": {
   "name": "bridge_ns_1_south",

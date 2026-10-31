@@ -63,8 +63,9 @@ rect(n, 22, 0, 23, 15, "s")            # coast turns the corner inside the map, 
 rect(n, 7, 0, 10, 15, "~")             # Pallet's river, out over its bar into the sea
 rect(n, 5, 25, 17, 29, ".")            # the fishers' islet
 rect(n, 9, 26, 14, 28, "g")
-for x, y in ((5, 25), (16, 25), (17, 25), (17, 26), (5, 28), (5, 29), (6, 29), (7, 29), (17, 29)):
-    n[y][x] = "s"                      # its shore stepped in at the corners, not a box (the fishers' blocks stay land)
+for x, y in ((5, 25), (16, 25), (17, 25), (17, 26), (5, 28), (5, 29), (17, 29)):
+    n[y][x] = "s"                      # its shore stepped in at the corners, not a box (the fishers' blocks stay land,
+                                       # and 6,29, where the north-to-south replay test sets out)
 rect(n, 17, 40, 20, 42, ".")           # the pearl sandbar
 rect(n, 19, 40, 20, 40, "*")
 n[40][17] = n[42][20] = "s"            # (two corners off it; the Pearl's block stays)
@@ -75,6 +76,10 @@ rocks(n, [(2, 19, "Q"), (3, 20, "q"), (1, 26, "q"), (2, 34, "Q"), (1, 41, "q"), 
 s = blank("s")
 rect(s, 8, 5, 15, 17, ".")             # the long islet
 rect(s, 9, 6, 14, 16, "g")
+for x, y in ((8, 5), (15, 5), (8, 17), (15, 17)):
+    s[y][x] = "s"                      # its corners off, and its shore stepped out in two places, not a box (the
+rect(s, 7, 8, 7, 10, ".")              # fishers' blocks and the water they face stay as they were)
+rect(s, 16, 12, 16, 14, ".")
 rect(s, 4, 40, 21, 43, ".")            # Cinnabar's north shore: the beach...
 rect(s, 7, 41, 18, 42, "g")
 rect(s, 4, 44, 23, 49, "T")            # ...and the woods behind the town

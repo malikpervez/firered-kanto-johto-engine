@@ -44,6 +44,8 @@ SOLID = set("T#bRoklSBcw_~vrXMDGNWEUZLYHPKAFIJVCa|^uy")
 PROPS = [("bench_stone", 9, 19, "granite#15"), ("litter_bin", 12, 19, "granite#15"), ("bench_stone", 14, 19, "granite#15"),
          ("bench_stone", 39, 19, "granite#15"), ("flower_tub", 42, 19, "granite#15"), ("flower_tub", 45, 19, "granite#15"),
          ("bench_stone", 47, 19, "granite#15"), ("litter_bin", 50, 19, "granite#15")]  # on the plazas, the tubs either side of the compass
+# and a stone bench on the north-west pavement, between its street trees and the brick office (on the pavement)
+BENCH = ("bench_stone~2", 14, 3, GROUND)
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the south
 # gatehouse's doorway is entered walking south from above; the station has no door)
@@ -74,8 +76,11 @@ COLOURS = {"beige": (CITY_BANK, {}),  # Silph's own
            "brick": (11, {4: (104, 72, 72), 9: (176, 104, 80), 10: (208, 144, 112), 11: (232, 192, 160)})}
 # what shows round a building's edges, block by block (row by row): the pavement ("k", GROUND) but where it backs
 # onto the lawn, the garden's trees, a hedge or the forest: grass ("g"), or the pavement's own north verge ("p",
-# pavement#14: grass over its top half, paving under) where the paving runs on beside it
-EDGE_GROUNDS = {"k": GROUND, "g": "grass", "p": "pavement#14"}
+# pavement#14: grass over its top half, paving under) where the paving runs on beside it, or its east verge ("r",
+# pavement#13: paving, grass on its east half) down a building's side along the forest. (pae bakes one layer of a
+# ground under a piece: for the pavement's verge quarters its grass, for the kerb's rim quarters its asphalt, so a
+# building's corner on the kerb's rim or on the verge's foot would show a square of road or grass: those keep "k")
+EDGE_GROUNDS = {"k": GROUND, "g": "grass", "p": "pavement#14", "r": "pavement#13"}
 EDGES = {"N": ["gggg", "gggg", "kkkk"],                 # the gatehouses in the forest: the north one,
          "W": ["gggp", "gkkk", "gkkk"],                 # the west one (bushes above it),
          "E": ["pggg", "kkkg", "kkkg"],                 # the east one,
@@ -83,7 +88,8 @@ EDGES = {"N": ["gggg", "gggg", "kkkk"],                 # the gatehouses in the 
          "X": ["kkkkkkkkg"] * 8 + ["kkkkkkkkk"] * 4,    # Silph Co.: the garden's trees down its east side
          "M": ["pggggggg"] + ["kkkkkkkk"] * 3,          # the station: the garden's trees behind it
          "u": ["gggg", "kkkg", "kkkg", "kggg"],         # the arcade east of it: bushes behind, the forest beside
-         "y": ["pppp"] + ["kkkk"] * 5}                  # the narrow office under the Gym square's hedge
+         "y": ["pppp"] + ["kkkk"] * 5,                  # the narrow office under the Gym square's hedge
+         "C": ["kkkr"] * 6}                             # and the narrow brick one by the east forest (CITY's own)
 # their letters in the plan: (design, colour); a letter may stand for several of them, apart
 CITY = {"A": ("office_tall", "sand"), "F": ("office_tall", "brick"), "I": ("office_mid", "sand"),
         "J": ("office_mid", "brick"), "V": ("office_narrow", "beige"), "C": ("office_narrow", "brick"),
@@ -100,6 +106,7 @@ STREET_PIECES = {"0": "crossing_road_NS", "2": "crossing_end_W", "3": "crossing_
                  "8": "crossing_dropped_kerb_W", "%": "manhole", "-": "asphalt_dashed_H_boundary",
                  ";": "asphalt_dashed_V_boundary"}
 STREETS_BANK = 12
+ROAD = set("+-;%023")  # the road's letters: the asphalt and what's painted on it
 CROSSING = (29, 23)  # the avenues' crossing: everything walkable is reached from it
 CAMP = [(50, 8), (50, 10), (49, 9), (48, 8), (52, 8), (48, 10), (47, 6)]  # the Friends', round 50,8
 TRAIN = (49, 18)     # where the Magnet Train from Goldenrod lets you off, in front of the station
@@ -231,9 +238,67 @@ def onto_plazas(g, legend, names) -> list[list[str]]:
     return out
 
 
+def plaza_corners(g, prop_legend) -> set[tuple[int, int]]:
+    """The granite's inside corners the plazas have (its edge mask and corners, as pae map paint picks them): only
+    those are drawn, so the others' tiles don't take the full tileset's room."""
+    plaza = {"@", "/"} | {k for k, v in prop_legend.items() if isinstance(v, dict) and v.get("joins") == "@"}
+
+    def same(x, y):
+        return not (0 <= x < MAP_W and 0 <= y < MAP_H) or g[y][x] in plaza
+    out = set()
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            if g[y][x] == "@":
+                mask = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
+                corners = sum(b for b, (dx, dy), sd in ((1, (1, -1), 3), (2, (1, 1), 6), (4, (-1, 1), 12), (8, (-1, -1), 9))
+                              if mask & sd == sd and not same(x + dx, y + dy))
+                if corners:
+                    out.add((mask, corners))
+    return out
+
+
+def compass_band(pal, base) -> np.ndarray:
+    """What runs along the bottom of the compass's lower blocks, over it: the plaza's brass band (the granite's
+    bottom edge, granite#11) and under it the pavement's tips as they show beside it, so the band runs on across the
+    compass, set in the plaza, instead of stopping either side of it. As indices of the city palette (one tile, and
+    its mirror)."""
+    out = np.zeros((16, 32), np.uint8)
+    out[9:13] = np.tile(streets.block("granite", 11, 0, pal)[9:13], (1, 2))
+    e = next(e for e in base["metatiles"] if e["name"] == GROUND)
+    with Image.open(HERE / e["image"]) as im:
+        px = np.array(im.convert("RGBA"))[e["y"] + 13:e["y"] + 16, e["x"]:e["x"] + 16]
+    assert (px[..., 3] == 255).all(), "the pavement under the band is opaque"
+    index = {tuple(c): i for i, c in enumerate(pal) if i}
+    out[13:16] = np.tile(np.vectorize(lambda r, g_, b: index[(r, g_, b)])(px[..., 0], px[..., 1], px[..., 2]), (1, 2))
+    return out
+
+
+def sign_rims(g) -> dict[tuple[int, int], int]:
+    """The signs standing on the kerb's edge over a road to their north or south: each one's sides that aren't the
+    road (bits 1 N, 2 E, 4 S, 8 W, as pae map paint numbers the kerb's pieces), so its block stands on that kerb piece
+    and the road meets its board as it meets the kerb's rim. (pae bakes the rim's quarters as their asphalt: above or
+    below the board that is where the rim runs; beside the post, a road to the east or west, it would notch the
+    pavement, so those keep the plain paving.)"""
+    out = {}
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            if g[y][x] == "S":
+                m = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0)))
+                        if not (0 <= x + dx < MAP_W and 0 <= y + dy < MAP_H) or g[y + dy][x + dx] not in ROAD)
+                if m in (11, 14):
+                    out[(x, y)] = m
+    return out
+
+
 def main() -> None:
     g = plan()
     prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins='@')
+    name, x, y, ground = BENCH
+    ch = next(c for c in props.POOL if c not in prop_legend)
+    assert g[y][x] == g[y][x + 1] == "&", "the bench stands on the pavement"
+    prop_legend[ch], prop_grounds[name] = {"name": name, "joins": "&"}, ground
+    SOLID.add(ch)
+    g[y][x] = g[y][x + 1] = ch
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
@@ -268,6 +333,9 @@ def main() -> None:
     spec_mt += sh.write()
     sh = kit.Sheet("sign_paved", kit.PALS["wood"], 2, HERE, HERE, cols=1)
     sh.add("sign_paved", kit.sign(), tileset="secondary", ground=GROUND, solid=True, dedupe=True)
+    rims = sign_rims(g)
+    for m in sorted(set(rims.values())):  # (the same sign on the kerb's edge pieces: no new tiles)
+        sh.add(f"sign_paved_k{m}", kit.sign(), tileset="secondary", ground=f"kerb#{m}", solid=True, dedupe=True)
     spec_mt += sh.write()
     sh = kit.Sheet("trees_paved", kit.PALS["trees"], 3, HERE, HERE, cols=6)
     for name in trees.STANDALONE:  # as the kit's: the crown's row drawn over the player, who walks behind it
@@ -282,11 +350,19 @@ def main() -> None:
     for k, v in enumerate(("center_b", "center_c"), 1):
         sh.add(f"granite#15~{k}", streets.piece("granite", v, pals[STREETS_BANK]), tileset="secondary",
                ground=GROUND, dedupe=True)
+    corners = plaza_corners(g, prop_legend)
     for m, c in streets.CORNERS:
-        sh.add(f"granite#{m}.{c}", streets.block("granite", m, c, pals[STREETS_BANK]), tileset="secondary",
-               ground=GROUND, dedupe=True)
-    sh.add("compass", streets.piece("mosaic", "compass_2x2", pals[STREETS_BANK]), tileset="secondary",
-           ground=GROUND, dedupe=True)
+        if (m, c) in corners:  # (the plazas' own inside corners only)
+            sh.add(f"granite#{m}.{c}", streets.block("granite", m, c, pals[STREETS_BANK]), tileset="secondary",
+                   ground=GROUND, dedupe=True)
+    # the compass, its lower blocks with the plaza's band drawn over them (on the compass's own blocks, so it shows
+    # through above the band)
+    compass = streets.piece("mosaic", "compass_2x2", pals[STREETS_BANK])
+    sh.add("compass_bl", compass[16:, :16], tileset="secondary", ground=GROUND, dedupe=True)
+    sh.add("compass_br", compass[16:, 16:], tileset="secondary", ground=GROUND, dedupe=True)
+    banded = compass.copy()
+    banded[16:] = compass_band(pals[STREETS_BANK], base)
+    sh.add("compass", banded, tileset="secondary", ground=[GROUND, GROUND, "compass_bl", "compass_br"], dedupe=True)
     spec_mt += sh.write()
     designs = city_designs()
     for colour, (bank, changes) in COLOURS.items():
@@ -296,8 +372,9 @@ def main() -> None:
         pal = buildings.recolour(pals[CITY_BANK], changes)
         pals.setdefault(bank, pal)
         sh = kit.Sheet(f"city_{colour}", pal, bank, HERE, HERE, cols=6)
-        for dn in used:
-            sh.add(f"{dn}_{colour}", designs[dn], tileset="secondary", ground=GROUND, solid=True, dedupe=True)
+        for dn in used:  # (each design and colour is one letter's)
+            k = next(k for k, v in CITY.items() if v == (dn, colour))
+            sh.add(f"{dn}_{colour}", designs[dn], tileset="secondary", ground=edge_ground(k), solid=True, dedupe=True)
         for k, (dn, c) in EDGED.items():
             if c == colour:
                 sh.add(f"{dn}_{colour}_{k}", designs[dn], tileset="secondary", ground=edge_ground(k), solid=True,
@@ -339,6 +416,11 @@ def main() -> None:
         legend[k] = dict({"name": item} if isinstance(item, str) else item, joins="&")
     legend.update(prop_legend)
     g = onto_plazas(g, legend, {e["name"] for e in spec_mt})
+    for k, m in enumerate(sorted(set(rims.values()))):  # the signs on the kerb's edge (Cyrillic letters: unused)
+        legend[chr(0x410 + k)] = {"name": f"sign_paved_k{m}", "joins": "&"}
+        for (x, y), mm in rims.items():
+            if mm == m:
+                g[y][x] = chr(0x410 + k)
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")

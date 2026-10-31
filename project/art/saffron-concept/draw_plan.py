@@ -24,7 +24,8 @@ Letters: the kit's legend (T forest, . lawn, = cobble, p paving, * flowers, ~ po
 X Silph Co., M the Magnet Train station, D the Fighting Dojo, G Sabrina's Gym, N/W/E the north, west and east
 gatehouses, U the south one, Z the Pokémon Center, L the Mart, Y Copycat's house, H the house, P Mr. Psychic's house,
 K the Trainer Fan Club; the doorless blocks (make_art.py's CITY): A and I sand offices (tall, mid), F and J brick ones,
-V a narrow beige one, C a narrow brick one, a an arcade; l lamps.
+V a narrow beige one, C a narrow brick one, a an arcade; l lamps. Some have a copy of their own with other ground
+round their edges (make_art.py's EDGES): u an arcade, y a narrow office.
 """
 from pathlib import Path
 
@@ -92,6 +93,9 @@ rect(53, 3, 56, 6, "~")
 rect(54, 13, 57, 13, "b")
 rect(54, 14, 57, 17, "u")                      # and east of the station (a, with lawn and forest behind it)
 tree(55, 9)
+at(52, 5, "o")                                 # a field rock by the pond,
+for x, y in ((54, 8), (57, 11), (46, 10)):     # and daisies in the lawn
+    at(x, y, ",")
 for y in (6, 8, 10, 12):                       # the garden's trees along the pavement
     tree(43, y)
 for x in (45, 47, 49, 51):
@@ -117,6 +121,8 @@ tree(54, 28, "|")
 rect(5, 36, 11, 40, "~")
 rect(2, 33, 11, 33, "b")                       # a hedge between the south street and the park's lawn
 rect(4, 42, 10, 43, "*")
+for x, y in ((2, 37), (3, 40), (8, 41)):       # daisies on the lawn round the pond
+    at(x, y, ",")
 tree(3, 42); tree(22, 36, "|")
 rect(13, 34, 16, 37, "a"); rect(18, 34, 21, 37, "a")  # shops by the park
 rect(14, 39, 19, 44, "J")                      # offices along the park's south side

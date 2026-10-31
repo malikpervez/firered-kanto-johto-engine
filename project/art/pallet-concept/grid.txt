@@ -7,8 +7,8 @@ TT..#*HHHHH*#.::#JJJJJ*#TT..ssTT
 TT.,#*HHHHH.#.::#JJJJJ*#TT.ossTT
 TT..#*HHHHHb#.::#JJJJJ*#TT..ssTT
 TT..##Ⰰç#####.::#Ⰰç#####....ssTT
-TT..l================,..,b¢.ssTT
-TTo.l================.....¢.ssTT
+TT..l================,..,.¢.ssTT
+TTo.l================....b¢.ssTT
 TT.WWWWW.....S==RRLLLLLLLLL.ssTT
 TT.WWWWW......==RRLLLLLLLLL.ssTT
 TT#WWWWW#####.==b.LLLLLLLLLlssTT

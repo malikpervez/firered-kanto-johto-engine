@@ -272,6 +272,10 @@
   "name": "dirt#13",
   "joins": ":"
  },
+ "\u00b5": {
+  "name": "paving#15",
+  "joins": "p"
+ },
  "\u00ab": {
   "name": "league_gate_front_W",
   "joins": "C"

@@ -83,6 +83,9 @@ rect(53, 6, 55, 8, "*"); at(45, 7, "o"); at(46, 7, "o"); at(51, 12, "b"); at(55,
 # south of the road out: a lawn with rocks and a bush row by the forest
 rect(40, 20, 55, 24, ".")
 rect(44, 24, 50, 24, "b"); at(53, 21, "o")
+# a little detail on the open lawns (off the roads, the people's places and the trainers' sights): flowers on the
+# terrace above its ledge, a stump on the lawn south of the road out
+rect(46, 12, 47, 13, "*"); at(42, 22, "k")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x % 10) for x in range(W)))

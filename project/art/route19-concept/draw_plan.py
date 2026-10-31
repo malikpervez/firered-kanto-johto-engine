@@ -48,6 +48,8 @@ rect(19, 4, 21, 5, "*")
 at(12, 4, "S")                                  # the route sign
 tree(2, 8)
 tree(20, 8)
+for x, y in ((4, 7), (9, 6), (15, 7)):           # daisies on the beach's lawn (clear of the sign and the swimmers' ways)
+    at(x, y, ",")
 
 # the jetty out from the beach
 rect(10, 10, 13, 15, "d")
@@ -60,9 +62,11 @@ for x, y, c in ((3, 14, "q"), (19, 15, "Q"), (6, 21, "Q"), (20, 26, "q"), (2, 31
 # the sandbar islet halfway down
 rect(13, 29, 17, 32, ".")
 rect(14, 30, 15, 31, "*")
+at(13, 29, "b")                                 # a bush on its corner
 
 # the rock island at the bottom, the Wingull's
 rect(4, 52, 9, 56, ".")
 rect(5, 53, 6, 54, "o")
+rect(8, 56, 9, 56, "*")                         # (flowers at its south end)
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

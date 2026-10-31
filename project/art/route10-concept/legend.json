@@ -208,5 +208,21 @@
  "\u01c1": {
   "auto": "frayN_dirt",
   "joins": "="
+ },
+ "\u01c2": {
+  "auto": "frayN1_cobble",
+  "joins": "="
+ },
+ "\u01c4": {
+  "auto": "frayN1_dirt",
+  "joins": "="
+ },
+ "\u01c3": {
+  "auto": "frayN2_cobble",
+  "joins": "="
+ },
+ "\u01c5": {
+  "auto": "frayN2_dirt",
+  "joins": "="
  }
 }

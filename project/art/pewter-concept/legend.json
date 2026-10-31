@@ -136,7 +136,10 @@
   "name": "pewter_gym",
   "joins": "%"
  },
- "Y": "house_family",
+ "Y": {
+  "name": "house_family",
+  "joins": "%"
+ },
  "H": "house_family",
  "X": {
   "name": "house_family_paved",

@@ -99,6 +99,7 @@ rect(28, 13, 31, 16, "O")
 rect(27, 11, 33, 11, "b")
 at(30, 11, ".")                                 # (the tree to cut)
 rect(10, 13, 12, 14, "*")
+rect(17, 15, 19, 16, "*")                       # a flower bed on the lawn beside the avenue
 tree(14, 13)
 at(32, 17, "S")                                 # Slowpoke's sign
 at(3, 17, "S")                                  # the town sign, by Route 18's road

@@ -41,7 +41,8 @@ SOLID = set("T#bRoklSBcw_~vrAGZLOWHJK")
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 # (the statue stands on the plaza's west edge, its NW block on the edge piece; the bin on the avenue's SW corner)
 PROPS = [("statue_guardian", 18, 8, ["paving#7", "paving#15", "paving#15", "paving#15"]), ("flower_tub", 21, 7, "paving#15"), ("flower_tub", 25, 7, "paving#15"),
-         ("bench_stone", 21, 13, ["paving#7", "paving#15"]), ("litter_bin", 21, 17, "paving#7")]
+         ("bench_stone", 21, 13, ["paving#7", "paving#15"]), ("litter_bin", 21, 17, "paving#7"),
+         ("picnic_table", 30, 23, "grass")]  # (a picnic table in the park, clear of Cubone's walk)
 # the east bench, over the avenue's east edge (its own piece: the west one's ground is the west edge's)
 EAST_BENCH = ("bench_stone~2", 25, 13, ["paving#15", "paving#13"])
 # the avenue opens onto the main street: the kit's paving-to-cobble piece across the street's top row, the avenue's

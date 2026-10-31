@@ -57,8 +57,13 @@ The pieces:
   (bank 9) and two recolours of its palette, sand (bank 10) and brick (bank 11). They cost no tiles; their identical
   blocks share one metatile (pae's `"dedupe"`).
 
-The city takes 355 of its 384 tiles and 379 of its 384 metatiles: a new design would need its own room. More copies of
-these designs cost nothing. See `../ASSETS.md` for every pack and how to replace one.
+The city takes 382 of its 384 tiles and 327 of its 384 metatiles: a new design would need its own room. More copies of
+these designs cost nothing, and nor does a copy of a piece with other ground round its edges (`make_art.py` `EDGES`: the
+gatehouses, Silph Co., the station, an arcade and two offices have grass where they back onto the lawn or the forest),
+since the ground is the block's lower layer: a metatile each, no tiles. pae bakes one layer of a ground, so a kerb's
+rim or a verge's foot can't go under a building's corner (it shows a square of road or grass); the signs with the road
+to their north or south stand on the kerb's rim piece, its road meeting their board. The compass has the plaza's brass
+band drawn across its foot (its one tile of its own); the granite only has the inside corners the plazas use. See `../ASSETS.md` for every pack and how to replace one.
 
 `make_art.py` checks the city's rules on the map it builds:
 - nothing walkable on its edges;
@@ -69,4 +74,4 @@ these designs cost nothing. See `../ASSETS.md` for every pack and how to replace
 Build it from the repository root with `sh project/art/saffron-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
 
-Its Town Props (KR-94, `../kit/props.py`): stone benches and bins on both granite plazas, flower tubs either side of the compass. They fill the tileset: 383 of its 384 tiles.
+Its Town Props (KR-94, `../kit/props.py`): stone benches and bins on both granite plazas, flower tubs either side of the compass, and a stone bench on the north-west pavement.

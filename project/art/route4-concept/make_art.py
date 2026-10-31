@@ -12,6 +12,7 @@ It writes sheets/, palette_7.pal, spec.json, grid.txt, border.txt, legend.json a
 build.sh turns them into the game's tileset and map with pae.
 """
 import json
+import random
 import sys
 from collections import deque
 from pathlib import Path
@@ -46,6 +47,54 @@ MOUTH = _mouth()
 FACE = buildings.Building("diglett_cave_face", MOUTH.idx[48:], MOUTH.palette, (MOUTH.door[0], MOUTH.door[1] - 3),
                           MOUTH.door_frames)
 SOLID = set("T#bRoklSBcw_~vrZXY") | cliffs.SOLID  # (ledges are hopped going south only)
+# where the road's dirt meets Cerulean's cobbles (they start at column 104): that first column of cobbles with its
+# setts thinning out westward into the dirt, and a few loose ones in the dirt before it, so the road wears from one
+# into the other (each block by its sides, and each its own scatter; the loose ones from variant 10)
+SETTS = {"(": (14, 0), ")": (15, 1), "!": (15, 2), "<": (11, 3),
+         ";": (14, 10), ">": (15, 11), "?": (15, 12), "|": (11, 13)}
+SETTS_AT = {(104, 10): "(", (104, 11): ")", (104, 12): "!", (104, 13): "<",
+            (103, 10): ";", (103, 11): ">", (103, 12): "?", (103, 13): "|"}
+
+
+def setts(mask: int, variant: int) -> np.ndarray:
+    """The cobble block with sides ``mask`` (the kit's), its setts kept in the east and dropped into the dirt in the
+    west, a few loose ones further out: each stone (its part in this block) by where it sits, those on the block's west
+    edge always dirt and those on its east edge always stone, so it runs on into the dirt west of it and the cobbles
+    east of it; a stone cut by the block's top or bottom the same in every variant, so the blocks above and below
+    agree. Variants from 10 are the dirt before it: only a few whole stones inside the block kept."""
+    cid = kit.COBBLE[0]
+    stone, earth = kit.cobble(mask), kit.dirt(mask)
+    part = -np.ones((16, 16), int)
+    centre, west, east, sid, rim = [], [], [], [], []
+    for y0 in range(16):
+        for x0 in range(16):
+            if part[y0, x0] >= 0:
+                continue
+            k, todo, xs, ys = len(centre), [(x0, y0)], [], []
+            part[y0, x0] = k
+            while todo:
+                x, y = todo.pop()
+                xs.append(x)
+                ys.append(y)
+                for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                    if 0 <= nx < 16 and 0 <= ny < 16 and part[ny, nx] < 0 and cid[ny, nx] == cid[y0, x0]:
+                        part[ny, nx] = k
+                        todo.append((nx, ny))
+            centre.append(sum(xs) / len(xs))
+            west.append(min(xs) == 0)
+            east.append(max(xs) == 15)
+            sid.append(int(cid[y0, x0]))
+            rim.append(min(ys) == 0 or max(ys) == 15)
+    shared, own = random.Random(4), random.Random(10 + variant)
+    n = int(cid.max()) + 1
+    edge_cut = [shared.uniform(4, 12) for _ in range(n)]
+    cut = [own.uniform(1.5, 14.5) for _ in range(n)]
+    if variant >= 10:
+        keep = [not (east[k] or west[k] or rim[k]) and own.random() < 0.3 for k in range(len(centre))]
+    else:
+        keep = [east[k] or (not west[k] and centre[k] > (edge_cut if rim[k] else cut)[sid[k]])
+                for k in range(len(centre))]
+    return np.where(np.array(keep)[part], stone, earth)
 
 
 def plan() -> list[list[str]]:
@@ -137,6 +186,13 @@ def main() -> None:
     sh.add(FACE.name, FACE.idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
            behaviors={f"{dx},{dy}": "MB_NON_ANIMATED_DOOR"})
     spec_mt += sh.write()
+    sh = kit.Sheet("road_setts", kit.PALS["ground"], kit.BANK["ground"], HERE, HERE, cols=len(SETTS))
+    for ch, (m, v) in SETTS.items():
+        sh.add(f"road_setts#{m}~{v}", setts(m, v), tileset="secondary", ground="grass")
+    spec_mt += sh.write()
+    for (x, y), ch in SETTS_AT.items():
+        assert g[y][x] == ("=" if x == 104 else ":") and g[y][x - 1] == ":", (x, y)
+        g[y][x] = ch
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -155,6 +211,7 @@ def main() -> None:
     assert not set("ZXY") & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
     legend[":"] = {"auto": "dirt", "joins": "="}  # the road's dirt runs into Cerulean's cobbles with no grass rim
+    legend.update({ch: {"name": f"road_setts#{m}~{v}", "joins": "="} for ch, (m, v) in SETTS.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

@@ -5,8 +5,8 @@ TTTTTT*******.......****..ZZZZZ.===.LLLL.**.##########..TTTT
 TTTTTT*******o......****..ZZZZZ.===.LLLL.**.#::::::::#..TTTT
 TTTTTT....................ZZZZZ.===.LLLL.**.#::::::::#..TTTT
 TTTTTT..XXXX..KKKKK.......ZZZZZ.===.LLLL....#::::::::#..TTTT
-TTTTTT..XXXX..KKKKK.....ĀāĂāĂāĂfăĄăāĂāĂāĂāą.#::::::::#..TTTT
-TTTTTT..XXXX..KKKKK.....ĆćĈćĈćĈćĈćĈćĈćĈćĈćĉ.#::::::::#..TTTT
+TTTTTT..XXXX..KKKKK....lĀāĂāĂāĂfăĄăāĂāĂāĂāąl#::::::::#..TTTT
+TTTTTT..XXXX..KKKKK....lĆćĈćĈćĈćĈćĈćĈćĈćĈćĉl#::::::::#..TTTT
 TTTTTT..XXXX..KKKKKS....ĊċČċČċČċČċČċČċČċČċč.####:#####..TTTT
 TTTTƐƐĐđĐđĐđĐđĐđĐđĐđĐđĐĒēĔĕĔĕĔĕĔĕĔĕĔĕĔĕĔĕĔĖėĐđĐđǰđĐđĐđĐF...b
 TTTTƐƐnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn====
@@ -18,8 +18,8 @@ TTTTTT#WWWWWWW...#..HHHHHĤċČċČċČ£ČċČ£ČċČċČċĥUUUU........TTTT
 TTTTTT#WWWWWWW...#..HHHHHĆćĈćĈćĈć¡¡¡ć¢ćĈćĈćĉUUUU..***...TTTT
 TTTTTT#WWWWWWW.S.#..HHHHHĦċČċČċČċ¡¡¡ċ¢ċČċČċħUUUU..***...TTTT
 TTTTTT#WWWWWWW...#..HHHHHĆćĈćĈćĈć¡¡¡ćĈćĈćĈćĉUUUU........TTTT
-TTTTTT#WWWWWWW...#b......ĦċČċČċČċČċČċČċČċČċħ............TTTT
-TTTTTT#.......***#b......ĆćĈćĈćĈćĈćĈiĈćĈćĈćĉ............TTTT
+TTTTTT#WWWWWWW...#b......ĦċČċČċČċČċČċČċČċČċħ..........**TTTT
+TTTTTT#.......***#b......ĆćĈćĈćĈćĈćĈiĈćĈćĈćĉ..........**TTTT
 TTTTTT############Ĩĩĩ¤¤ĩĩĪī¦¦ĬĭĬī¥īĬīĬīĬīĮīįĩ¤¤ĩ§ĩĩ¤¤ĩĩİTTTT
 TTTTTT.ıĲĲĲĲĲĲĲĲĲĳĴĵĶĵĵĵĵĵĵĵĵĵĵĵķĵĵĵĸĹĺĻļĵĵĸĹĺĺĺĺĺĺĺĺĺĽľTTTT
 ĿŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŀŁŀŀŀŀłdddŃŀŀłdddddddddⰀcŃŀŀŀń

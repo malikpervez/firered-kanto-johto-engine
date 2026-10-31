@@ -110,6 +110,10 @@ def layout() -> tuple[list[list[str]], dict]:
         put(",", x, y)
     for x, y in ((4, 33), (5, 34), (8, 29)):
         put("*", x, y)
+    for x, y in ((33, 5), (34, 5), (34, 6)):  # flowers on the plain verge under the north fence, east of the road
+        put("*", x, y)
+    for x, y in ((14, 5), (17, 6)):  # and a few in the lawn west of it
+        put(",", x, y)
     # where the road leaves Pallet: a fence with an arch over the road
     put("#", 13, 35, 10, 1)
     put("#", 27, 35, 13, 1)

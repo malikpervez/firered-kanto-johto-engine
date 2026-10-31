@@ -76,7 +76,8 @@ rect(18, 20, 22, 22, "*"); rect(26, 22, 27, 23, "R"); rect(31, 19, 32, 20, "R");
 at(19, 26, "o"); at(24, 28, "o")
 # a little colour on the plain lawns (polish): a bed of flowers in the south-west yard between its trees and one on
 # the east lawn, daisies in the grass south of the flower bed, a lamp by the road south
-rect(6, 28, 7, 28, "*"); rect(33, 22, 34, 23, "*"); rect(21, 27, 22, 27, ","); at(22, 28, ","); rect(16, 24, 16, 25, "l")
+rect(6, 28, 7, 28, "*"); rect(33, 22, 34, 23, "*")
+rect(21, 27, 22, 27, ","); at(22, 28, ","); rect(16, 24, 16, 25, "l")
 
 # the forest is drawn in 2x2 cells on the even grid: where a road's edge cuts a cell in half, a hedge or a lawn verge
 # instead of half a tree (beside Route 10's road at 17,0-1; above Route 8's at 0-1,8)

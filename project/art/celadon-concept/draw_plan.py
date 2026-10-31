@@ -61,10 +61,8 @@ rect(8, 20, 56, 23, "+")
 rect(7, 20, 7, 23, "1")
 rect(57, 20, 57, 23, "2")
 rect(8, 22, 56, 22, "-")                       # the dashed line down the middle (on the row's top edge)
-rect(8, 19, 56, 19, "n")
-rect(8, 24, 56, 24, "u")
-# (the pavements end a block short of the east entrance's asphalt-to-cobble join: the lawn at 57,19 and 57,24 meets
-# its cobble, so no asphalt shows beside the pavements' ends)
+rect(8, 19, 57, 19, "n")
+rect(8, 24, 57, 24, "u")
 for x in (20, 21, 54, 55):                     # the zebra crossings, where Lucky Lane meets the boulevard
     at(x, 19, "7"); at(x, 20, "4"); at(x, 21, "3"); at(x, 22, "3"); at(x, 23, "5"); at(x, 24, "9")
 for x, y in ((14, 21), (33, 21), (44, 23)):
@@ -122,6 +120,7 @@ rect(8, 26, 10, 28, "*"); rect(14, 26, 17, 28, "*"); rect(8, 35, 10, 36, "*"); r
 
 # the pond garden south of Lucky Lane: the Friends' camp round 25,34, the pond, flowers
 rect(29, 33, 34, 35, "~")
+at(31, 34, "v")                                # a lily pad on the pond
 rect(19, 36, 21, 37, "*"); rect(36, 33, 39, 34, "*"); rect(44, 35, 47, 36, "*")
 rect(52, 33, 53, 34, "R"); rect(41, 32, 42, 33, "R")
 

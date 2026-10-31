@@ -4155,15 +4155,95 @@
    "open": [
     13
    ]
+  },
+  "dock#0+landing": {
+   "ids": [
+    672
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#1+landing": {
+   "ids": [
+    673
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#2+landing": {
+   "ids": [
+    674
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#3+landing": {
+   "ids": [
+    675
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#8+landing": {
+   "ids": [
+    676
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#9+landing": {
+   "ids": [
+    677
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#10+landing": {
+   "ids": [
+    678
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "dock#11+landing": {
+   "ids": [
+    679
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 107
+  "secondary": 111
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 32
+  "secondary": 40
  },
  "animations": [
   {

@@ -4359,9 +4359,22 @@
    "elevation": null,
    "open": []
   },
+  "picnic_table": {
+   "ids": [
+    788,
+    789,
+    790,
+    791
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "sign@dirt#5": {
    "ids": [
-    788
+    792
    ],
    "w": 1,
    "h": 1,
@@ -4372,11 +4385,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 359
+  "secondary": 367
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 149
+  "secondary": 153
  },
  "animations": [
   {

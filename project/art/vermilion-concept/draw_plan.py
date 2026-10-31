@@ -81,6 +81,9 @@ rect(20, 16, 24, 19, "H")                    # door (22,19)
 rect(26, 16, 27, 17, "*"); rect(33, 20, 34, 21, "*"); at(26, 21, "b"); at(34, 16, "b")
 rect(44, 16, 47, 19, "U")                    # door (45,19)
 rect(50, 17, 52, 18, "*"); rect(18, 20, 18, 21, "b")
+# a little detail: street lamps either side of the plaza (on the lawn beside it), flowers in the lawn east of the house
+# by the quay
+rect(23, 7, 23, 8, "l"); rect(43, 7, 43, 8, "l"); rect(54, 20, 55, 21, "*")
 
 # the harbour: the promenade along the water, the pier to the S.S. Anne's gangway (37-39 at the bottom), the east quay
 rect(7, 23, 55, 23, "="); rect(18, 22, 55, 22, "=")

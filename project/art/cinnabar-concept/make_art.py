@@ -139,7 +139,9 @@ def check(g, d) -> None:
 
 
 ASH = "ǝ"  # plain ash (dirt#15, no edge) where the ash meets the volcano's rock, so no grass rim runs round the rock
-SIGN_CHARS = {"cobble#14": "ǣ", "cobble#12": "ǥ"}  # the signs standing in the street: a sign over its cobble
+SIGN_CHARS = {"cobble#15": "ǣ", "cobble#13": "ǥ"}  # the signs standing in the street: a sign over its cobble
+FRONTS = "XZLUH"  # the buildings on the street: the cobbles run on up to them (no grass rim along their fronts)
+FRONT_CHARS = {7: "\u01e8", 15: "\u01e9"}  # the cobble in front of them, forced: by its mask (the building counted)
 SIGNS_IN_STREET = [(9, 12), (22, 5)]  # the Lab's (the Lab above), the Gym's (the Gym above, sea east)
 
 
@@ -165,12 +167,24 @@ def signs_on_cobble(g) -> dict[tuple[int, int], str]:
     out = {}
     for x, y in SIGNS_IN_STREET:
         assert g[y][x] == "S", f"no sign at ({x},{y})"
-        same = lambda xx, yy: g[yy][xx] in "=S" or (xx, yy) in SIGNS_IN_STREET
+        same = lambda xx, yy: g[yy][xx] in "=S" + FRONTS or (xx, yy) in SIGNS_IN_STREET
         mask = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
         out[x, y] = f"cobble#{mask}"
     for (x, y), ground in out.items():
         g[y][x] = SIGN_CHARS[ground]
     return out
+
+
+def fronts(g) -> None:
+    """The cobbles along a building's front, without the grass rim pae would draw against it: each forced to the cobble
+    piece that counts the building above as more street (as the signs in the street do)."""
+    for y in range(1, MAP_H):
+        for x in range(MAP_W):
+            if g[y][x] == "=" and g[y - 1][x] in FRONTS:
+                same = lambda xx, yy: not (0 <= xx < MAP_W and 0 <= yy < MAP_H) or g[yy][xx] in "=" + "".join(
+                    SIGN_CHARS.values()) + "".join(FRONT_CHARS.values())
+                mask = 1 + sum(b for b, (dx, dy) in ((2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
+                g[y][x] = FRONT_CHARS[mask]
 
 
 def main() -> None:
@@ -201,6 +215,7 @@ def main() -> None:
     spec_mt += rock_entries
     ash_by_rock(g, set(char_of.values()))
     signs = signs_on_cobble(g)
+    fronts(g)
     sh = kit.Sheet("signs_cobble", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=2)
     for ground in sorted(set(signs.values())):
         sh.add(f"sign_on_{ground}", kit.sign(), tileset="secondary", ground=ground, solid=True)
@@ -231,6 +246,7 @@ def main() -> None:
     legend.update(prop_legend)
     legend[ASH] = {"pick": ["dirt#15"], "joins": ":"}
     legend.update({ch: {"name": f"sign_on_{ground}", "joins": "="} for ground, ch in SIGN_CHARS.items()})
+    legend.update({ch: {"name": f"cobble#{mask}", "joins": "="} for mask, ch in FRONT_CHARS.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

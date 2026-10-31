@@ -4,8 +4,8 @@ TTTTTT::::::::::::TTTTTT
 TTTTTT::::::::::::TTTTTT
 ss***.......S......***ss
 ss***..............***ss
-ss....................ss
-ss....................ss
+ss.......,............ss
+ss..,..........,......ss
 ssRR................RRss
 ssRR................RRss
 sssssssssⰀddddⰀsssssssss
@@ -27,7 +27,7 @@ ssssssssssssssssssssssss
 ssssssssssssssssssssqsss
 ssssssssssssssssssssssss
 ssssssssssssssssssssssss
-sssssssssssss.....ssssss
+sssssssssssssb....ssssss
 sssssssssssss.**..ssssss
 ssqssssssssss.**..ssssss
 sssssssssssss.....ssssss
@@ -54,7 +54,7 @@ ssss......ssssssssssssss
 ssss.oo...ssssssssssssss
 ssss.oo...ssssssssssssss
 ssss......sssssQssssssss
-ssss......ssssssssssssss
+ssss....**ssssssssssssss
 ssssssssssssssssssssssss
 ssssssssssssssssssssssss
 ssssssssssssssssssssssss

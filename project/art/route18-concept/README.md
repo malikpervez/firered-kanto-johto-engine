@@ -49,3 +49,7 @@ The seams are pae's:
 
 Build it from the repository root with `sh project/art/route18-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
+
+The sea pocket north of the meadow runs on along the top of the woods east of it (rows 0–1, columns 30–41), so the
+woods show their crowns and shore there instead of ending flat at the map's top edge. That strip of sea is solid: the
+pocket is surfed exactly as before. The shore lawn has a field rock, daisies and a bush (polish, round three).

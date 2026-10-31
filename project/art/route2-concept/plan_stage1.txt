@@ -15,7 +15,7 @@ TTgggg:::::...TTTT...===....TT
 TT,*,.::::::::::x:::::::S...TT
 TT,,,..:::::::####:::::.....TT
 TT,o,..::::.o.TTTT.::::...RRTT
-TT.....::::,,.TTTT*..::...RRTT
+TT...k.::::,,.TTTT*..::...RRTT
 TTRR...::::*b.TTTT,,.::.....TT
 TTRR...::.....TTTT,,.....*..TT
 TTTTNNN@@NNN..TTTT,,........TT

@@ -45,7 +45,8 @@ HERMAN_WALK = range(24, 29)  # Herman wanders left and right along row 57
 STEP = {"left": (-1, 0), "right": (1, 0), "up": (0, -1), "down": (0, 1)}
 WATER = set("~")
 SOLID = set("T#bRoklSBcw_~vrYZX") | cliffs.SOLID
-FRAY_COBBLE, FRAY_DIRT = "\u01c0\u01c2\u01c3", "\u01c1\u01c4\u01c5"  # the cobbles giving out into the dirt (kit/fray.py), 3 variants
+# the cobbles giving out into the dirt (kit/fray.py): the cobble half's letters (one a variant), the dirt half's
+FRAY_COBBLE, FRAY_DIRT = "\u01c0\u01c2\u01c3", "\u01c1\u01c4\u01c5"
 
 # the Power Plant, from the remakes pack: four sawtooth halls, a boiler annex, two stacks and a sealed loading shutter;
 # one door (its personnel entrance), at 7,7

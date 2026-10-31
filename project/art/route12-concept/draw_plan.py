@@ -51,7 +51,8 @@ rect(10, 10, 13, 13, "N")
 # the cliff top below the gatehouse's front door (11-12,13): a lookout, the route sign
 rect(6, 14, 17, 17, ".")
 rect(6, 16, 9, 17, "g")
-rect(6, 14, 6, 17, "b")  # a hedge at the woods' edge: standing next to it the screen stays off the map's west border (sea)
+# a hedge at the woods' edge: standing beside it, the screen stays off the map's west border (sea)
+rect(6, 14, 6, 17, "b")
 rect(16, 15, 17, 16, "*")
 at(14, 14, "S")
 

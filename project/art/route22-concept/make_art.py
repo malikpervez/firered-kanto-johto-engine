@@ -122,16 +122,19 @@ def check(g, door) -> None:
 FORECOURT_LAMPS = {"lamp@paving#7": ("\u00b9", ["paving#7", "paving#7"]),     # (5,14): the cliff's top to its west
                    "lamp@paving#13": ("\u00b2", ["paving#13", "paving#13"])}  # (19,14): and to its east
 FORECOURT = {(5, 14): "\u00b9", (5, 15): "\u00b9", (19, 14): "\u00b2", (19, 15): "\u00b2", (18, 14): "\u00b3",
-             (22, 18): "\u00bc", (23, 18): "\u00bc", (22, 19): "\u00bd", (23, 19): "\u00be"}
+             (22, 18): "\u00bc", (23, 18): "\u00bc", (22, 19): "\u00bd", (23, 19): "\u00be",
+             (6, 14): "\u00b5"}  # (plain paving east of the west lamp: the gate's west column, a piece of the cliff's
+#                                 top, would give it a lawn corner)
 FORECOURT_LEGEND = {"\u00b9": {"name": "lamp@paving#7", "joins": "p"}, "\u00b2": {"name": "lamp@paving#13", "joins": "p"},
                     "\u00b3": {"name": "sign@paving#15", "joins": "p"},
                     "\u00bc": {"name": "paving_to_dirt_S", "joins": "p"},  # the paving opening onto the dirt path
-                    "\u00bd": {"name": "dirt#7", "joins": ":"}, "\u00be": {"name": "dirt#13", "joins": ":"}}
+                    "\u00bd": {"name": "dirt#7", "joins": ":"}, "\u00be": {"name": "dirt#13", "joins": ":"},
+                    "\u00b5": {"name": "paving#15", "joins": "p"}}
 
 
 def forecourt(g) -> None:
     was = {(5, 14): "l", (5, 15): "l", (19, 14): "l", (19, 15): "l", (18, 14): "S", (22, 18): "p", (23, 18): "p",
-           (22, 19): "h", (23, 19): "h"}
+           (22, 19): "h", (23, 19): "h", (6, 14): "p"}
     for (x, y), c in was.items():
         assert g[y][x] == c, f"({x},{y}) is '{g[y][x]}', not '{c}': the forecourt moved"
         g[y][x] = FORECOURT[(x, y)]

@@ -37,7 +37,9 @@ rect(0, 0, 1, 19, "T")             # the forest west
 rect(2, 0, 15, 3, "C")             # the cliff over the Center, its face on rows 2-3
 rect(16, 0, 23, 9, "C")            # Mt. Moon: its face over the near mouth on rows 8-9...
 rect(24, 0, 33, 19, "C")           # ...and its bulk, down to the bottom: the mountain divides the route
-rect(34, 0, 99, 1, "C")            # the cliff along the top east of the mountain
+rect(34, 0, 39, 1, "C")            # the mountain's top over the far mouth...
+rect(40, 0, 99, 1, "T")            # ...and the forest along the top east of it (it runs on into the border's: no cliff
+                                   #  face cut off by the map's edge)
 rect(100, 0, 107, 1, "T")          # (forest by the join: old Cerulean has no palette slot for the cliffs or water)
 rect(0, 16, 7, 19, "C"); rect(16, 16, 23, 19, "C")   # Route 3's mountains either side of its road, carried on up
 rect(24, 18, 33, 19, "T")          # the forest at the foot of Mt. Moon's south face (rows 16-17; nothing joins below)
@@ -49,7 +51,7 @@ rect(8, 10, 15, 19, ":")           # Route 3's road (the bottom, columns 8-15)..
 rect(8, 16, 9, 19, "."); rect(14, 16, 15, 19, ".")   # ...between the mountains 4 wide with lawn verges, as Route 3's
 rect(4, 5, 8, 8, "Z")              # the Pokémon Center, door (6,8)
 rect(5, 9, 15, 9, ":"); rect(6, 9, 6, 9, ":")
-rect(16, 15, 23, 15, ":"); rect(20, 15, 20, 15, ":")
+rect(16, 15, 20, 15, ":")          # the way along the mountain's foot to the near mouth's door (19,14), no further
 rect(17, 10, 22, 14, "X")          # the near mouth of Mt. Moon, door (19,14)
 at(16, 12, "S")                    # Mt. Moon's sign (read from 16,13)
 rect(2, 11, 5, 13, "*"); at(3, 14, "o"); at(14, 5, "o"); at(10, 4, "*"); at(11, 4, "*")
@@ -72,12 +74,14 @@ rect(34, 12, 105, 13, ":")         # the road east
 rect(100, 10, 107, 13, ":")        # to Cerulean (the right edge, rows 10-13)
 rect(104, 10, 107, 13, "=")        # its cobbles start here and run on into Cerulean's
 rect(60, 14, 77, 17, "g"); rect(60, 10, 70, 11, "g")
-rect(78, 11, 87, 16, ".")          # the Friends' camp
-rect(93, 3, 99, 7, "~")            # the pond under the cliff (west of the 7 columns Cerulean shows)
+rect(78, 11, 87, 16, ".")          # the Friends' camp: a clearing of trodden earth the road opens into
+rect(79, 11, 86, 15, ":"); rect(78, 12, 87, 13, ":")
+at(78, 11, "k"); at(87, 11, "k")   # (two stumps at its corners to sit on)
+rect(93, 3, 99, 7, "~")            # the pond under the forest (west of the 7 columns Cerulean shows)
 rect(92, 8, 105, 9, "."); rect(92, 2, 105, 2, "."); rect(100, 3, 105, 7, "."); rect(92, 3, 92, 7, ".")
 rect(100, 8, 100, 9, "*")          # (flowers too stay out of those columns: the plants palette)
 at(95, 4, "v"); at(97, 6, "r")
-rect(36, 14, 40, 16, "*"); at(44, 15, "o"); at(52, 16, "o"); at(89, 15, "o"); rect(92, 15, 96, 16, "*")
+rect(36, 14, 40, 16, "*"); rect(46, 10, 48, 11, "*"); rect(82, 16, 85, 17, "*"); at(44, 15, "o"); at(52, 16, "o"); at(89, 15, "o"); rect(92, 15, 96, 16, "*")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("     " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

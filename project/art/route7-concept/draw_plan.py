@@ -44,6 +44,8 @@ rect(0, 0, 6, 9, "T")
 rect(0, 14, 6, 23, "T")
 rect(23, 0, 29, 23, "T")
 rect(14, 2, 22, 3, "T")                        # the forest over the gate
+rect(23, 4, 23, 17, "b")                       # a hedge along the east woods (odd column 23), so the forest starts
+                                               # on the even grid (24) and shows no half trees
 
 # the road, Celadon's boulevard (rows 10-13) to the gate
 rect(0, 10, 22, 13, "=")
@@ -60,9 +62,10 @@ rect(8, 15, 14, 19, "*")
 rect(16, 15, 19, 17, "~")
 rect(21, 15, 22, 16, "R"); at(20, 18, "o")
 rect(8, 20, 22, 21, "g")
+rect(23, 20, 23, 21, "b")                      # bushes at the grass's east end (the woods' odd column): no half trees
 at(17, 16, "v")                                # a lily pad on the little pond
-# the clearing north of the hut: a field rock and a few flowers in its lawn
-at(10, 3, "o"); at(9, 5, ","); at(10, 5, ",")
+# the clearing north of the hut: a few flowers in its lawn (no rock: its neck between the two trees is only 3 wide)
+at(9, 5, ","); at(10, 5, ",")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x % 10) for x in range(W)))

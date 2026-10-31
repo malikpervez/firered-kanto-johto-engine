@@ -37,7 +37,8 @@ WEST = [(0, y) for y in range(20, 24)]
 EAST = [(MAP_W - 1, y) for y in range(20, 24)]
 SOLID = set("T#bRoklSBcw_~vrDMOCGPEHY")
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
-PROPS = [("bench_wood_south", 24, 3, "grass"), ("litter_bin", 27, 3, "grass")]  # in the park, looking at its flower bed
+PROPS = [("bench_wood_south", 24, 3, "grass"), ("litter_bin", 27, 3, "grass"),  # in the park, looking at its flower bed
+         ("bench_wood_south", 30, 32, "grass")]  # in the pond garden, looking out over the pond (the same bench: no new tiles)
 STREETS_BANK = 10  # the pack's city palette (Part B: Lucky Lane's brick, the compass); 11-12 stay free
 # the street pieces by their letters in the plan (the kit's, streets.py) and Celadon's own: its pavements, on the lawn
 # on one side and the road on the other ("walk_s": the road south of it, "walk_n": north), the brick and the compass;
@@ -113,27 +114,36 @@ def autotiled(g, legend) -> dict[str, set[tuple[int, int]]]:
 def walk(mask: int, corners: int, road: int) -> np.ndarray:
     """Celadon's pavement block: the kit's pavement (by its neighbours and inside corners), the lawn under its edges
     but the road (asphalt) under those on the ``road`` side (1 N, 4 S), so one row of pavement can have its kerb on
-    the road and its edge on the lawn."""
+    the road and its edge on the lawn. Past a pavement's end (the columns its end cap leaves bare) the lawn runs on
+    down to the road, as beside it: no tongue of asphalt beside the kerb's end, over the cobble at the city's
+    entrances."""
     under = kit.lawn.tiles(kit.LAWN, kit.P0)["lawn_a"].copy()
     asphalt = streets.piece("asphalt", "center", kit.P0)
-    if road & 1:
-        under[:8] = asphalt[:8]
-    if road & 4:
-        under[8:] = asphalt[8:]
     top = streets.block("pavement", mask, corners, kit.P0)
+    for r, rows in ((1, slice(0, 8)), (4, slice(8, 16))):
+        if road & r:
+            kerb = np.any(top[rows] != 0, axis=0)  # the columns the pavement covers on the road's side
+            under[rows, :][:, kerb] = asphalt[rows, :][:, kerb]
     return np.where(top != 0, top, under).astype(np.uint8)
 
 
 def edged_compass(pal) -> np.ndarray:
-    """The compass set in Lucky Lane (2x2, rows 30-31), with the brick's edges run across it: the lawn strip and its
-    line along the top (as brick with no brick north of it draws them), the kerb lines along the bottom (no brick
-    south), so the street's edges don't stop at the compass."""
+    """The compass set in Lucky Lane (2x2, rows 30-31), inlaid in the brick: the street's edges run across it (the lawn
+    strip and its line along the top, as brick with no brick north of it draws them; the kerb lines along the bottom),
+    its four corners are the brick's own, and the pale ground round the diamond is the brick's dark red. It takes no
+    more tiles than the plain compass did (the town's tileset is full): the corners are the brick's tiles, and the
+    rest stays mirror-symmetric, so its tiles repeat flipped."""
     c = streets.piece("mosaic", "compass_2x2", pal).copy()
-    top, bottom = streets.block("brick", 14, 0, pal), streets.block("brick", 11, 0, pal)
-    edge = np.any(top != streets.block("brick", 15, 0, pal), axis=1)  # the rows the top edge draws (0-5)
-    for r in np.flatnonzero(edge):
-        c[r] = np.tile(top[r], 2)
-        c[31 - r] = np.tile(bottom[15 - r], 2)
+    c[c == 13] = 3                                   # the pale ground round the diamond: the brick's dark red
+    top, bottom = np.tile(streets.block("brick", 14, 0, pal), 2), np.tile(streets.block("brick", 11, 0, pal), 2)
+    plain = streets.block("brick", 15, 0, pal)
+    for x0 in (0, 24):                               # the corners: the brick's own (the diamond doesn't reach them)
+        c[:8, x0:x0 + 8] = top[:8, x0:x0 + 8]
+        c[24:, x0:x0 + 8] = bottom[8:, x0:x0 + 8]
+    for r in np.flatnonzero(np.any(top[:, :16] != plain, axis=1)):     # the top edge's rows, across the middle
+        c[r, 8:24] = top[r, 8:24]
+    for r in np.flatnonzero(np.any(bottom[:, :16] != plain, axis=1)):  # the kerb lines', across the middle
+        c[16 + r, 8:24] = bottom[r, 8:24]
     return c
 
 

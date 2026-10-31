@@ -152,6 +152,10 @@
   "joins": "p"
  },
  "¥": {
+  "name": "picnic_table",
+  "joins": "p"
+ },
+ "¦": {
   "name": "bench_stone~2",
   "joins": "p"
  },

@@ -63,7 +63,7 @@ at(19, 28, "S")                                # the route sign
 # the woodland path: the tree to cut (46,21) in the hedge north of the road, north and west to the upper hall
 rect(36, 2, 53, 20, ".")
 rect(36, 21, 53, 21, "b")
-at(46, 21, ":")                                # (the tree to cut stands here, the path running on under it to the road)
+at(46, 21, ".")                                # (the tree to cut stands here)
 at(38, 21, "S")                                # the Cycling Road sign, by the road west of Snorlax
 rect(46, 14, 47, 20, ":")
 rect(36, 12, 47, 13, ":")
@@ -71,7 +71,6 @@ rect(38, 3, 52, 8, "g")
 rect(48, 14, 52, 19, "g")
 rect(36, 15, 43, 19, "g")
 tree(36, 9); tree(44, 9); tree(50, 10)
-at(52, 12, "k")                                # a stump by the woods east of the path
 rect(28, 9, 35, 12, "C")                       # the gatehouse's upper hall: doorways 28,12 and 35,12
 
 # the glade beyond the upper hall, the house in the woods
