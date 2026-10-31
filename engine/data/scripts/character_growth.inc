@@ -202,6 +202,89 @@ CG_Movement_WillingPartner::
 	face_left
 	step_end
 
+@ GD01: Gold, the New Bark boy who took a starter beside the player's in Elm's lab ("Next time, I'll win!"),
+@ waits outside Violet's Gym after the Zephyr Badge: Falkner beat him twice. The battle is optional; after it
+@ he goes to heal and try Falkner again. Appended LOCALID_VIOLET_GOLD shares FLAG_TEMP_1D. He is gone once the
+@ scene is played through (JOHTO_FLAG_GD01_SEEN) or once the player has a second Johto badge.
+CG_GoldVioletVisibility::
+	setflag FLAG_TEMP_1D
+	callnative Special_CharacterStoryAdopt, requests_effects=1
+	goto_if_eq VAR_RESULT, FALSE, CG_Return
+	goto_if_set JOHTO_FLAG_GD01_SEEN, CG_Return
+	goto_if_unset JOHTO_FLAG_BADGE01_GET, CG_Return
+	goto_if_set JOHTO_FLAG_BADGE02_GET, CG_Return
+	clearflag FLAG_TEMP_1D
+	return
+CG_GoldViolet::
+	lock
+	faceplayer
+	call CG_GoldVioletVisibility
+	goto_if_set FLAG_TEMP_1D, CG_Release
+	msgbox CG_Text_GD01_Falkner
+	msgbox CG_Text_GD01_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CG_GoldVioletLater
+	msgbox CG_Text_GD01_Go
+	closemessage
+	@ Gold took the starter the player's is strong against (JOHTO_VAR_STARTER_MON is the player's).
+	goto_if_eq JOHTO_VAR_STARTER_MON, 1, CG_GoldVioletChikorita
+	goto_if_eq JOHTO_VAR_STARTER_MON, 2, CG_GoldVioletCyndaquil
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_VIOLET_TOTODILE_HNS, CG_Text_GD01_Defeat
+	goto CG_GoldVioletAfter
+CG_GoldVioletChikorita::
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_VIOLET_CHIKORITA_HNS, CG_Text_GD01_Defeat
+	goto CG_GoldVioletAfter
+CG_GoldVioletCyndaquil::
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_VIOLET_CYNDAQUIL_HNS, CG_Text_GD01_Defeat
+CG_GoldVioletAfter::
+	msgbox CG_Text_GD01_After
+	call_if_ge JOHTO_VAR_NEWBARKTOWN_LABSTATE, 5, CG_GoldVioletTheft
+	msgbox CG_Text_GD01_Bye
+	closemessage
+	setflag JOHTO_FLAG_GD01_SEEN
+	@ He walks off east, toward the Center, round whichever side the player is talking from.
+	goto_if_eq VAR_FACING, DIR_NORTH, CG_GoldVioletLeaveAround
+	applymovement LOCALID_VIOLET_GOLD, CG_Movement_GoldLeavesViolet
+	goto CG_GoldVioletGone
+CG_GoldVioletLeaveAround::
+	applymovement LOCALID_VIOLET_GOLD, CG_Movement_GoldLeavesVioletAround
+CG_GoldVioletGone::
+	waitmovement LOCALID_VIOLET_GOLD
+	removeobject LOCALID_VIOLET_GOLD
+	setflag FLAG_TEMP_1D
+	release
+	end
+CG_GoldVioletTheft::
+	msgbox CG_Text_GD01_Theft
+	return
+CG_GoldVioletLater::
+	msgbox CG_Text_GD01_Later
+	release
+	end
+CG_Movement_GoldLeavesViolet::
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+CG_Movement_GoldLeavesVioletAround::
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
 CG_Text_BL01::
 	.string "{RIVAL}: Great battle, {PLAYER}!\pGrandpa's taking me on his next\nfield survey.\pI've already filled half a\nnotebook. Apparently I'm meant\lto leave room for the results!$"
 CG_Text_BL02::
@@ -236,3 +319,19 @@ CG_Text_SV03_Partner::
 	.string "{RIVAL}: Another round?$"
 CG_Text_SV03_Player::
 	.string "{RIVAL}: We'll be ready\nnext time.$"
+CG_Text_GD01_Falkner::
+	.string "GOLD: {PLAYER}! You beat FALKNER\nalready?\pHe beat me. Twice! I even caught\na GEODUDE in DARK CAVE for him.\pRock beats flying. It just has to\nhit something first.$"
+CG_Text_GD01_Ask::
+	.string "GOLD: Show me how a CHAMPION does\nit? I did say I'd win next time!$"
+CG_Text_GD01_Later::
+	.string "GOLD: Okay! I'll be right here,\nwatching the GYM door.$"
+CG_Text_GD01_Go::
+	.string "GOLD: All right! Don't go easy\non me!$"
+CG_Text_GD01_Defeat::
+	.string "GOLD: Next time. Definitely\nnext time!$"
+CG_Text_GD01_After::
+	.string "GOLD: You waited. Every turn, you\nwatched what I did first.\pI just keep shouting moves.\nFALKNER said that, too.$"
+CG_Text_GD01_Theft::
+	.string "GOLD: Hey, did you hear? Someone\nbroke into PROF.ELM's lab.\pThey took the POKéMON that sat\nnext to mine on the table.\pThe officer said his name was\n{RIVAL}. If I see him, I'll tell\lhim what I think of that!$"
+CG_Text_GD01_Bye::
+	.string "GOLD: I'm healing up and trying\nFALKNER again. Third time!\pSee you around, CHAMPION!$"

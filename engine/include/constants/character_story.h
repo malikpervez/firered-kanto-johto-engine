@@ -26,4 +26,9 @@
 #define CHARACTER_STORY_FLAGS_LAST      0x93F
 #define CHARACTER_STORY_UNUSED_FIRST    0x934
 
+// Johto-side receipts, in Johto's own regional event bits (JOHTO_CAMPAIGN_FLAG_ID_BASE + an HnS raw flag).
+// HnS's own flags end at raw 0x91A (its last daily flag); raw 0x91B..0x95F are unused by every Johto script and
+// by the C code, and are inside the regional save's stored events, so no save layout changes.
+#define JOHTO_FLAG_GD01_SEEN            0x291B // Gold's rematch outside Violet's Gym was played through
+
 #endif
