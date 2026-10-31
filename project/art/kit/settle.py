@@ -152,7 +152,7 @@ def settle_pieces(p: Plan) -> list[str]:
                         if p.item(n).get("auto") in GROUNDS:
                             count.setdefault(p.group(n), set()).add((bit, cx, cy))
                             ground_sides += 1
-                        elif p.lawnish(n, xx, yy) or "auto" in p.item(n):
+                        elif p.lawnish(n, xx, yy):
                             ground_sides += 1
                 if not count:
                     continue
@@ -166,8 +166,10 @@ def settle_pieces(p: Plan) -> list[str]:
             m = p.meta[name]
             a_char = next(ch for ch in p.legend if p.group(ch) == A and p.item(ch).get("auto") in GROUNDS)
             auto = p.item(a_char)["auto"]
+            docks = {c for c in p.legend if p.item(c).get("auto") == "dock"} if auto in ("pond", "sea") else set()
             grounds = ground_name(p, g, cells, auto, lambda xx, yy: (
-                not (0 <= xx < w and 0 <= yy < h) or settled.get((xx, yy)) == A or p.group(g[yy][xx]) == A))
+                not (0 <= xx < w and 0 <= yy < h) or settled.get((xx, yy)) == A or p.group(g[yy][xx]) == A
+                or g[yy][xx] in docks))
             if None in grounds:
                 report.append(f"  skip {name} at ({x},{y}): no ground piece for {auto}")
                 continue
@@ -296,8 +298,8 @@ def water_by_docks(p: Plan) -> list[str]:
     made = {}
     for gname, g in p.grids.items():
         h, w = len(g), len(g[0])
-        docks = {p.group(c) for c in p.legend if p.item(c).get("auto") == "dock"}
-        if not docks:
+        docks = {c for c in p.legend if p.item(c).get("auto") == "dock"}  # the dock letters (not their group: a
+        if not docks:                                                        # map may join its dock to a road)
             continue
         n = 0
         for y in range(h):
@@ -306,12 +308,12 @@ def water_by_docks(p: Plan) -> list[str]:
                 if it.get("auto") not in ("pond", "sea"):
                     continue
                 W_ = p.group(g[y][x])
-                near = any(0 <= x + dx < w and 0 <= y + dy < h and p.group(g[y + dy][x + dx]) in docks
+                near = any(0 <= x + dx < w and 0 <= y + dy < h and g[y + dy][x + dx] in docks
                            for _, (dx, dy) in SIDES)
                 if not near:
                     continue
                 [name] = ground_name(p, g, [(x, y)], it["auto"], lambda xx, yy: (
-                    not (0 <= xx < w and 0 <= yy < h) or p.group(g[yy][xx]) in (W_, *docks)))
+                    not (0 <= xx < w and 0 <= yy < h) or p.group(g[yy][xx]) == W_ or g[yy][xx] in docks))
                 if not name:
                     continue
                 key = (name, W_, it.get("elevation"))
