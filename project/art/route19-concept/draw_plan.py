@@ -41,9 +41,7 @@ rect(0, 4, 1, 19, "s")                          # the woods end above the beach:
 rect(22, 4, 23, 19, "s")                        # the border's, so no trees stand cut off by the edge over open water
 
 # Fuchsia's beach path (its columns 18-29: here 6-17), the beach under the woods
-rect(7, 0, 16, 3, ":")
-rect(6, 0, 6, 3, "b")                           # Fuchsia's hedges either side of its path come on down to the beach
-rect(17, 0, 17, 3, "b")
+rect(6, 0, 17, 3, ":")                          # Fuchsia's beach path, 12 wide (its columns 18-29), down to the beach
 rect(2, 4, 21, 9, ".")
 rect(2, 4, 4, 5, "*")
 rect(19, 4, 21, 5, "*")

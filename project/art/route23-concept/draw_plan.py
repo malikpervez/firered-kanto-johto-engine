@@ -43,8 +43,7 @@ for x0, y0 in GATES:
     rect(x0, y0, x0 + 3, y0 + 5, ".")
 
 # the League gate's back, its doorway at 9-10,156; the plaza before it
-rect(8, 156, 11, 157, "H")                     # (only its back half: the forest closes under its roof and carries
-rect(8, 158, 11, 159, "T")                     # on into Route 22's, whose own League gate stands beyond it)
+rect(8, 156, 11, 159, "H")
 rect(2, 144, 21, 155, ".")
 rect(3, 145, 6, 147, "*")
 rect(17, 145, 20, 147, "*")

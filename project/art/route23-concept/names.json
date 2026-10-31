@@ -4443,10 +4443,18 @@
     707,
     708,
     709,
-    710
+    710,
+    711,
+    712,
+    713,
+    714,
+    715,
+    716,
+    717,
+    718
    ],
    "w": 4,
-   "h": 2,
+   "h": 4,
    "solid": true,
    "elevation": null,
    "open": [
@@ -4457,11 +4465,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 161
+  "secondary": 192
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 71
+  "secondary": 79
  },
  "animations": [
   {

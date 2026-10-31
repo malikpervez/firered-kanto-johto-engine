@@ -78,6 +78,7 @@ rect(10, 46, 12, 50, ":")                      # the road from the mouth
 rect(10, 50, 20, 52, ":")
 rect(16, 52, 20, 59, ":")                      # down to Lavender (16-20)
 rect(16, 57, 20, 59, "=")                      # its last blocks Lavender's cobbles, so the two meet inside the route
+rect(21, 58, 21, 59, "b")                      # bushes right of the road at the join, as on Lavender's side (its 17,0-1)
 rect(3, 53, 8, 56, "g"); rect(23, 51, 33, 56, "g")
 rect(2, 46, 7, 47, "*"); at(5, 49, "o"); at(33, 50, "o"); at(14, 56, "o")
 

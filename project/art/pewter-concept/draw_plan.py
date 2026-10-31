@@ -95,7 +95,7 @@ at(14, 30, "o"); at(16, 27, "o"); at(5, 25, "o")
 rect(33, 14, 41, 21, ".")
 rect(33, 22, 41, 23, "b")          # the road east can only be left by its own rows
 at(36, 17, "o"); at(34, 19, "*"); at(35, 19, "*")
-at(39, 23, "/")                    # the police notice, by the road east (read from 39,24), on a stone pad
+at(39, 23, "\u00a6")               # the police notice, by the road east (read from 39,24), on the grass
 
 # the city sign by Route 2's road
 at(26, 35, "S")                    # read from (26,36)

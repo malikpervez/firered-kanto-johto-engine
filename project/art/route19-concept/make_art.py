@@ -20,7 +20,7 @@ import kit
 HERE = Path(__file__).resolve().parent
 SECONDARY = "gTileset_Route19Concept"
 MAP_W, MAP_H = 24, 60
-NORTH = [(x, 0) for x in range(7, 17)]  # (Fuchsia's path: 10 wide between its hedges)
+NORTH = [(x, 0) for x in range(6, 18)]  # (Fuchsia's path: 12 wide, its columns 18-29)
 WEST = [(0, y) for y in range(41, 60)]
 SOLID = set("T#bRoklSBcw_~vrsqQ")  # (the sea, "s", is walked on only by Surf)
 SEA = "s"

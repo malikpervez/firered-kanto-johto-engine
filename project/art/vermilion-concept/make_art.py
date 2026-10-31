@@ -153,8 +153,6 @@ def streets(g) -> None:
             assert g[y][x] == "=", f"({x},{y}) isn't the old street"
             g[y][x] = ch
     g[12][55], g[13][55] = "j", "m"
-    # its last column turns into the cobble (the kit's transition pieces, cobble for the cobble)
-    g[11][55], g[12][55], g[13][55], g[14][55] = "ɑ", "ɒ", "ɒ", "ɑ"
 
 
 def woods_edge(g, hb) -> list[dict]:
@@ -306,8 +304,7 @@ def main() -> None:
                   **{ch: f"sign_on_{ground}" for ground, ch in signs_on.items()},
                   **{ch: {"name": name, "joins": "#"} for name, (ch, _, _) in hb["fences"].items()},
                   **{ch: {"name": name, "joins": "T"} for ch, name in hb["woods"].items()},
-                  j={"name": "asphalt#15", "joins": "="},
-                  **{"ɑ": {"name": "pavement_to_cobble_E", "joins": "="}, "ɒ": {"name": "asphalt_to_cobble_E", "joins": "="}}, m={"name": "asphalt_dashed_H_boundary", "joins": "="},
+                  j={"name": "asphalt#15", "joins": "="}, m={"name": "asphalt_dashed_H_boundary", "joins": "="},
                   **{"-": "asphalt_dashed_H_boundary"})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")

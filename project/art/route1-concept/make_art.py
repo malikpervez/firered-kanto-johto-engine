@@ -49,7 +49,6 @@ def layout() -> tuple[list[list[str]], dict]:
     put(".", 10, 4, 30, 32)  # the route between its forest walls (columns 0-9 and 40-49)
     # the road: wide where it meets Viridian's, then two blocks down through the ledges to Pallet's
     put(":", 22, 0, 4, 6)
-    put("=", 22, 0, 4, 2)  # Viridian's cobbles run on over the join and end here, on the dirt road
     put(":", 23, 6, 3, 2)
     put(":", 24, 8, 2, 32)
     # bends and passing places in the road

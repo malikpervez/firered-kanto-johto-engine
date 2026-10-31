@@ -42,9 +42,8 @@ rect(0, 13, 7, 19, "C")            # south of the way in
 rect(8, 16, 43, 19, "C")           # south of the field
 rect(44, 16, 83, 19, "T")          # the forest south of the rest stop
 rect(82, 8, 83, 19, "C")            # the east edge: the plateau east of the pass runs down it and on past the map
-rect(0, 13, 1, 19, "T")            # Pewter's forest carries on over the join, south of the road in
-rect(60, 0, 67, 1, "T")            # and Route 4's either side of the pass, ending on the plateaus
-rect(76, 0, 83, 1, "T")
+rect(0, 13, 1, 18, "T")            # Pewter's forest carries on over the join, south of the road in (make_art.py
+                                   # puts its trees on Pewter's grid; the plateau runs under them on row 19)
 
 # the way in from Pewter and the lane up to the high path
 rect(0, 9, 17, 12, ":")            # the road in (rows 9-12, as Pewter's road east)
@@ -68,8 +67,7 @@ rect(46, 14, 48, 15, "o")
 rect(53, 11, 55, 11, "*")
 rect(59, 7, 75, 15, ".")
 rect(70, 0, 73, 13, ":")           # the pass north (Route 4's road: the top, columns 68-75)
-rect(68, 2, 69, 6, "."); rect(74, 2, 75, 7, ".")
-rect(68, 0, 75, 1, ":")            # (Route 4's road arrives 8 wide, then narrows to the pass)
+rect(68, 0, 69, 6, "."); rect(74, 0, 75, 7, ".")  # (Route 4's plateaus and 4-wide road run on over the join)
 rect(59, 12, 69, 13, ":")          # the road east runs on to the pass
 rect(60, 14, 66, 15, "*")
 at(61, 9, "o"); at(64, 8, "*"); at(65, 8, "*")

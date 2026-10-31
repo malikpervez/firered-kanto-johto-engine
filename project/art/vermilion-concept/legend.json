@@ -325,14 +325,6 @@
   "name": "asphalt#15",
   "joins": "="
  },
- "ɑ": {
-  "name": "pavement_to_cobble_E",
-  "joins": "="
- },
- "ɒ": {
-  "name": "asphalt_to_cobble_E",
-  "joins": "="
- },
  "m": {
   "name": "asphalt_dashed_H_boundary",
   "joins": "="

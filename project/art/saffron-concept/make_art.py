@@ -267,6 +267,7 @@ def main() -> None:
     legend["^"] = "lamp"                       # the kit's lamp on the lawn (Saffron Park's corner)
     legend["E"] = legend["W"] = {"name": "saffron_gate", "joins": "&"}  # the pavement runs into their paved base
     legend["S"] = "sign_paved"
+    legend["e"] = {"name": "kerb#14", "joins": "&"}  # the paving at the forest's road corners: kerb on the road side only
     legend["|"] = {"pick": [f"{n}_paved" for n in trees.STANDALONE]}
     legend["@"] = {"auto": "granite"}
     legend["/"] = {"name": "compass", "joins": "@"}

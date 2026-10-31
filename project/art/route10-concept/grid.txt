@@ -56,5 +56,5 @@ TT.gggggg.......:::::..ggggggggggg..TT
 TT.gggggg.......:::::..ggggggggggg..TT
 TT.gggggg.....o.:::::..ggggggggggg..TT
 TT..............=====...............TT
-TTTTTTTTTTTTTTTT=====TTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTT=====TTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTT=====bTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTT=====bTTTTTTTTTTTTTTTT

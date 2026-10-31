@@ -208,6 +208,10 @@
   "joins": "&"
  },
  "^": "lamp",
+ "e": {
+  "name": "kerb#14",
+  "joins": "&"
+ },
  "|": {
   "pick": [
    "round_tree_paved",

@@ -163,6 +163,10 @@ for y in range(H):
 # at the south gatehouse's corners onto the avenue
 for x, y in ((54, 19), (27, 44), (32, 44)):
     at(x, y, "&")
+# the two road corners by the east forest, where the corner lamps stood: plain paving to the trees with the kerb on
+# the road side only ("e"), as under the lamps, so no grass sliver shows between the asphalt and the paving
+for x, y in ((57, 26), (57, 33)):
+    at(x, y, "e")
 
 # the road's markings: a dashed line down the middle of each avenue ("-", ";"), zebra crossings over the north-south
 # avenue either side of the crossroads, their dropped kerbs ("6" "8") and ends ("2" "3"), and manholes ("%")
