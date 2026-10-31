@@ -17,6 +17,7 @@ LavenderTown_VolunteerPokemonHouse_EventScript_MrFuji::
 	end
 
 LavenderTown_VolunteerPokemonHouse_EventScript_AlreadyHavePokeFlute::
+	call RB_FujiNaoLetter
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou
 	release
 	end

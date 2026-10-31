@@ -121,6 +121,14 @@ RB_OakBird::
 RB_OakReferral::
 	goto_if_unset FLAG_RB_OPENING_SEEN, RB_OakNoMemory
 	msgbox RB_Text_OakWest
+	@ Nao read Oak's notes on the sighting and went home after the League. Oak passes it on
+	@ until the player finds her in Ecruteak (a callback: nothing is written).
+	goto_if_set FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_Return
+	goto_if_unset FLAG_RB_NAO_INTRODUCED, RB_OakNaoNotMet
+	msgbox RB_Text_OakNaoFriend
+	return
+RB_OakNaoNotMet::
+	msgbox RB_Text_OakNaoNotMet
 	return
 RB_OakNoMemory::
 	msgbox RB_Text_OakResearch
@@ -137,6 +145,10 @@ RB_Text_OakWest::
 	.string "OAK: That bird flew west. ELM\nmay help you understand why.\pYour LEAGUE victory has opened\na new road for both of you.$"
 RB_Text_OakResearch::
 	.string "OAK: JOHTO has its own stories.\nELM values careful observation.$"
+RB_Text_OakNaoFriend::
+	.string "OAK: Your friend NAO came by to\nread my notes on your sighting.\pShe has gone home to ECRUTEAK.\nShe hopes you will visit her.$"
+RB_Text_OakNaoNotMet::
+	.string "OAK: A bell keeper from ECRUTEAK\ncame to read my notes on the bird.\pNAO, she said. She has asked all\nof KANTO about it.$"
 RB_Text_Letter::
 	.string "OAK: A letter from NAO!\pThe bells rang. Nothing was\nasked of the sky.\pThere was room for an answer.\nThank you for listening.\pOAK: Both regions are proud\nof you, {PLAYER}.$"
 RB_PewterVisibility::
@@ -208,6 +220,18 @@ release
 	end
 RB_Text_Fuji::
 	.string "NAO: If HO-OH restores lives,\nwhy must anyone lose anything?\pFUJI: I do not know why some\nstories are given miracles.\pThese POKéMON needed a home\nthis morning. And tomorrow, too.\pNAO: I came to ask of a legend.\nYou gave me useful work instead.$"
+@ After the welcome in Ecruteak, Fuji has heard from Nao: called by Fuji's own talk script once the
+@ Poké Flute is given. A callback across the regions; it reads Johto's receipt and writes nothing.
+RB_FujiNaoLetter::
+	special Special_RainbowStoryAdopt
+	goto_if_eq VAR_RESULT, FALSE, RB_Return
+	goto_if_unset FLAG_RB_FUJI_SCENE_SEEN, RB_Return
+	goto_if_unset FLAG_RB_WELCOME_SEEN, RB_Return
+	msgbox RB_Text_FujiNaoLetter
+	release
+	end
+RB_Text_FujiNaoLetter::
+	.string "MR. FUJI: A letter came from NAO.\pShe thanks me for the useful work.\nShe says the bells rang at last.\pShe asked nothing of the sky. She\nmade a place it could come back to.\pThat is all any home can do.$"
 RB_CeladonNaoVisibility::
 	@ One active NAO location, derived from native campaign progress.
 	setflag FLAG_TEMP_1E
@@ -260,7 +284,9 @@ RB_NaoEcruteak::
 	faceplayer
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Release
-call_if_unset FLAG_RB_NAO_INTRODUCED, RB_NaoJohtoIntro
+	@ A player Nao met in Kanto is greeted first; one she never met gets her introduction.
+	call_if_set FLAG_RB_NAO_INTRODUCED, RB_NaoReunion
+	call_if_unset FLAG_RB_NAO_INTRODUCED, RB_NaoJohtoIntro
 	goto_if_unset FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_TruthFirst
 	goto_if_lt JOHTO_VAR_GOLDENROD_CITY_STATE, 10, RB_NaoWaiting
 	goto_if_unset FLAG_RB_RECORDING_STOPPED, RB_RecordingFirst
@@ -274,8 +300,14 @@ RB_NaoJohtoIntro::
 	msgbox RB_Text_JohtoIntro
 	setflag FLAG_RB_NAO_INTRODUCED
 	return
+RB_NaoReunion::
+	goto_if_set FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_Return
+	msgbox RB_Text_NaoReunion
+	return
 RB_Text_JohtoIntro::
-	.string "NAO: I keep bells here. I have\nbeen collecting KANTOs stories.$"
+	.string "NAO: I'm NAO. I keep the bells\nhere in ECRUTEAK.\pI've just come home from KANTO.\nI went asking about a bird.$"
+RB_Text_NaoReunion::
+	.string "NAO: {PLAYER}! You came all the\nway to ECRUTEAK!\pPROF.OAK thought you might.\nNow I can tell you the rest.$"
 RB_TruthFirst::
 	call RB_EcruteakTruth
 	release
