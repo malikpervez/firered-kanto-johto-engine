@@ -28,6 +28,32 @@ RB_Flyby::
 	special Special_RainbowHoOhFlyby
 	call_if_eq VAR_RESULT, 1, RB_AsyncWait
 	return
+@ The companion PIKACHU (it walks with every trainer once they have a POKéMON) sees through the stranger first:
+@ wary on Route 1 (MW01), bristling again at Cinnabar's reveal (MW06), settling as MEWTWO leaves. No state.
+RB_PikachuWary::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuWary
+	return
+RB_PikachuBristles::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	goto_if_set FLAG_MW01_SEEN, RB_PikachuBristlesAgain
+	msgbox RB_Text_PikachuBristles
+	return
+RB_PikachuBristlesAgain::
+	msgbox RB_Text_PikachuBristlesAgain
+	return
+RB_PikachuSettles::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuSettles
+	return
+RB_Text_PikachuWary::
+	.string "PIKACHU's fur stands on end.\nIt doesn't take its eyes off him.$"
+RB_Text_PikachuBristles::
+	.string "PIKACHU bristles and steps between\nyou and MEWTWO.$"
+RB_Text_PikachuBristlesAgain::
+	.string "PIKACHU bristles, just as it did on\nROUTE 1. It knew all along.$"
+RB_Text_PikachuSettles::
+	.string "PIKACHU watches it go.\nIts fur slowly settles.$"
 RB_Route1Transition::
 	setvar VAR_TEMP_E, 0
 	setflag FLAG_TEMP_1E
@@ -401,6 +427,7 @@ MW01_Route1Scene::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement LOCALID_ROUTE1_STRANGER, MW01_Movement_Approach
 	waitmovement LOCALID_ROUTE1_STRANGER
+	call RB_PikachuWary
 	msgbox MW01_Text_SawIt
 	msgbox MW01_Text_LookItUp
 	playse SE_SELECT
@@ -555,10 +582,12 @@ msgbox MW06_Text_Journals
 	setflag FLAG_TEMP_1E
 	removeobject 15
 	call RB_MewtwoReveal
+	call RB_PikachuBristles
 	msgbox MW06_Text_Question, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, MW06_Invitation
 	call_if_eq VAR_RESULT, NO, MW06_Choice
 	msgbox MW06_Text_Answer
+	call RB_PikachuSettles
 	call RB_MewGlimpse
 setflag FLAG_MW06_SEEN
 release

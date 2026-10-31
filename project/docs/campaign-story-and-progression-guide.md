@@ -602,7 +602,7 @@ Optional Oak letter, then optional Pidgey epilogue on Route1.
 
 **37C source:** [`MW01_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:390). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Questions the rescue or uses a generic honest alternative, followed by a sparse Mew glimpse.
+Questions the rescue or uses a generic honest alternative, followed by a sparse Mew glimpse. Since 2026-10-31 (story audit E1), as he reaches the player the companion Pikachu reacts first: “PIKACHU’s fur stands on end. It doesn’t take its eyes off him.” (shown whenever the companion walks with the player, `FLAG_SYS_POKEMON_GET`; nothing is written). Replay test `route 1 pikachu bristles at the stranger`; the existing `route 1 the stranger after ho-oh` still passes.
 
 ### MW02 — Route4 stone
 
@@ -652,7 +652,7 @@ A temporary Mewtwo reveal, returned disguise, then possible Mew glimpse.
 
 **37C source:** [`MW06_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:518). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Journals context, unique Mewtwo reveal, invitation/choice responses and Mew observer.
+Journals context, unique Mewtwo reveal, invitation/choice responses and Mew observer. Since 2026-10-31 (story audit E1), the companion Pikachu closes the thread it opened on Route 1: as the veil falls, “PIKACHU bristles, just as it did on ROUTE 1. It knew all along.” (“PIKACHU bristles and steps between you and MEWTWO.” if the Route 1 meeting never happened, `FLAG_MW01_SEEN` unset), and after Mewtwo’s answer, “PIKACHU watches it go. Its fur slowly settles.” Nothing is written. Replay tests `cinnabar pikachu bristles at mewtwo`, `cinnabar pikachu settles as mewtwo leaves`, `cinnabar pikachu bristles without the route 1 meeting`.
 
 ### MW07 — Route22 question
 

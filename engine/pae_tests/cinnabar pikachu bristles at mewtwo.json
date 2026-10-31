@@ -1,0 +1,118 @@
+{
+ "note": "With the Secret Key found and the stranger met on Route 1: as the veil falls on Cinnabar, 'PIKACHU bristles, just as it did on ROUTE 1. It knew all along.' (the test ends on that box).",
+ "created": "2026-10-31 23:45",
+ "start": {
+  "map": "CinnabarIsland_Frlg",
+  "x": 22,
+  "y": 11,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv40",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY",
+   "FLAG_MW01_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW06_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CinnabarIsland_Frlg",
+  "x": 22,
+  "y": 11,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW06_SEEN": false
+  }
+ }
+}
