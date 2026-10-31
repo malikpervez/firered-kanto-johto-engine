@@ -34,8 +34,8 @@ import kit  # noqa: E402
 # the kit's small pieces that can stand anywhere; buildings, trees, bushes and flowers are left to each map's plan
 PIECES = {"sign", "lamp", "boat", "barrel", "crate", "stump", "field_rock_a", "field_rock_b", "field_rock_c"}
 # the surfaces a piece can stand in (not the fence, the forest, ledges, steps or cliff tops, which aren't ground)
-GROUNDS = {"pond", "sea", "cobble", "dirt", "dock", "paving", "pavement", "kerb", "brick", "granite", "track",
-           "walk_s", "walk_n", "asphalt", "setts", "quay"}
+GROUNDS = {"pond", "sea", "cobble", "dirt", "dock", "paving", "pavement", "kerb", "brick", "granite", "asphalt",
+           "setts", "quay"}  # (only surfaces with a full set of edge pieces: a one-row walk can't take a piece in it)
 LAWN = ("lawn", "grass", "flowers", "lawn_flowers")
 # new legend letters (unused by any plan)
 LETTERS = [chr(c) for c in range(0x2C00, 0x2C5F)]
@@ -154,6 +154,8 @@ def settle_pieces(p: Plan) -> list[str]:
                             ground_sides += 1
                         elif p.lawnish(n, xx, yy):
                             ground_sides += 1
+                count = {k: v for k, v in count.items() if any(
+                    f"{p.item(ch).get('auto')}#15" in p.meta for ch in p.legend if p.group(ch) == k)}
                 if not count:
                     continue
                 A = max(count, key=lambda k: len(count[k]))
