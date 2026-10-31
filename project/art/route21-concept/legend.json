@@ -19,6 +19,7 @@
  },
  "~": {
   "auto": "pond",
+  "joins": "s",
   "elevation": 1
  },
  "s": {
@@ -122,5 +123,25 @@
   "joins": "s",
   "with": "rock_b",
   "elevation": 1
+ },
+ "5": {
+  "name": "forest#15.2",
+  "joins": "T"
+ },
+ "1": {
+  "name": "forest#11",
+  "joins": "T"
+ },
+ "2": {
+  "name": "forest#11~1",
+  "joins": "T"
+ },
+ "3": {
+  "name": "forest#11~2",
+  "joins": "T"
+ },
+ "4": {
+  "name": "forest#11",
+  "joins": "T"
  }
 }

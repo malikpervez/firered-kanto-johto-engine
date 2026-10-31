@@ -36,8 +36,9 @@ def at(x, y, c):
 # the frame: forest either side, a belt of it along the top (the lane through it), forest along the bottom
 rect(0, 0, 7, 35, "T")
 rect(42, 0, 49, 35, "T")
-rect(8, 0, 41, 4, "T")
-rect(8, 29, 41, 35, "T")
+rect(8, 0, 41, 3, "T")             # (the forest is drawn in whole 2x2 trees on the even grid: it ends on odd rows
+rect(8, 30, 41, 35, "T")           # and columns and starts on even ones, so no tree is cut in half)
+rect(28, 0, 28, 3, "b"); rect(33, 0, 33, 3, "b")   # bushes either side of the lane through the belt
 
 # the road: out of Cerulean's neck (29-32), bending west to the gate (its door at 24-25)
 rect(29, 0, 32, 16, "=")

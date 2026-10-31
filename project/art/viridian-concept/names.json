@@ -4323,6 +4323,50 @@
    "solid": true,
    "elevation": null,
    "open": []
+  },
+  "well_cobble": {
+   "ids": [
+    760,
+    761,
+    762,
+    763
+   ],
+   "w": 2,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "barrel_lawn": {
+   "ids": [
+    764
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "crate_lawn": {
+   "ids": [
+    765
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "lamp@cobble#6+cobble#7": {
+   "ids": [
+    766,
+    767
+   ],
+   "w": 1,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
@@ -4331,7 +4375,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 120
+  "secondary": 128
  },
  "animations": [
   {

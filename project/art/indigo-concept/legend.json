@@ -12,7 +12,8 @@
  },
  ",": "lawn_flowers",
  "=": {
-  "auto": "cobble"
+  "auto": "cobble",
+  "joins": "p"
  },
  ":": {
   "auto": "dirt"

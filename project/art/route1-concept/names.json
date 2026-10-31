@@ -4138,6 +4138,36 @@
     5,
     6
    ]
+  },
+  "steps_dirt_W": {
+   "ids": [
+    657
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "steps_dirt_E": {
+   "ids": [
+    658
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sign@dirt#7": {
+   "ids": [
+    659
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
@@ -4146,7 +4176,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 17
+  "secondary": 20
  },
  "animations": [
   {

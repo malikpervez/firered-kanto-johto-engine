@@ -39,12 +39,14 @@ rect(16, 0, 23, 9, "C")            # Mt. Moon: its face over the near mouth on r
 rect(24, 0, 33, 19, "C")           # ...and its bulk, down to the bottom: the mountain divides the route
 rect(34, 0, 99, 1, "C")            # the cliff along the top east of the mountain
 rect(100, 0, 107, 1, "T")          # (forest by the join: old Cerulean has no palette slot for the cliffs or water)
-rect(2, 16, 7, 19, "T"); rect(16, 16, 23, 19, "T")   # the forest either side of Route 3's road
+rect(0, 16, 7, 19, "C"); rect(16, 16, 23, 19, "C")   # Route 3's mountains either side of its road, carried on up
+rect(24, 18, 33, 19, "T")          # the forest at the foot of Mt. Moon's south face (rows 16-17; nothing joins below)
 rect(34, 18, 107, 19, "T")         # the forest along the bottom east of the mountain
 rect(106, 2, 107, 9, "T"); rect(106, 14, 107, 17, "T")
 
 # the foot of the mountain: Route 3's road up past the Center to the near mouth
-rect(8, 10, 15, 19, ":")           # Route 3's road (the bottom, columns 8-15)
+rect(8, 10, 15, 19, ":")           # Route 3's road (the bottom, columns 8-15)...
+rect(8, 16, 9, 19, "."); rect(14, 16, 15, 19, ".")   # ...between the mountains 4 wide with lawn verges, as Route 3's
 rect(4, 5, 8, 8, "Z")              # the Pokémon Center, door (6,8)
 rect(5, 9, 15, 9, ":"); rect(6, 9, 6, 9, ":")
 rect(16, 15, 23, 15, ":"); rect(20, 15, 20, 15, ":")
@@ -54,10 +56,12 @@ rect(2, 11, 5, 13, "*"); at(3, 14, "o"); at(14, 5, "o"); at(10, 4, "*"); at(11, 
 rect(9, 5, 13, 7, ".")
 
 # the high shelf east of the mountain, from the far mouth along to the TM; its ledge down to the road
-rect(34, 2, 39, 6, "Y")            # the far mouth (Mt. Moon's way out), door (36,6), set into the cliff
+rect(34, 2, 39, 4, "C"); rect(34, 5, 39, 6, "Y")   # the far mouth (Mt. Moon's way out), door (36,6), its face set
+                                                  # into the cliff, the cliff's top over it
 rect(34, 7, 90, 8, ".")
 rect(40, 2, 90, 6, ".")
 rect(40, 5, 90, 6, ":")            # the shelf's path
+rect(35, 7, 40, 7, ":")            # from the far mouth's door to it
 rect(34, 9, 90, 9, "_")            # its ledge
 rect(91, 2, 91, 9, "b")            # its east end
 at(44, 3, "S")                     # the route sign (read from 44,4)
@@ -66,6 +70,7 @@ rect(48, 2, 49, 3, "*"); rect(54, 2, 55, 3, "*"); at(65, 3, "o"); at(80, 7, "o")
 # the road down to Cerulean, the grass, the Friends' camp and the pond
 rect(34, 12, 105, 13, ":")         # the road east
 rect(100, 10, 107, 13, ":")        # to Cerulean (the right edge, rows 10-13)
+rect(104, 10, 107, 13, "=")        # its cobbles start here and run on into Cerulean's
 rect(60, 14, 77, 17, "g"); rect(60, 10, 70, 11, "g")
 rect(78, 11, 87, 16, ".")          # the Friends' camp
 rect(93, 3, 99, 7, "~")            # the pond under the cliff (west of the 7 columns Cerulean shows)

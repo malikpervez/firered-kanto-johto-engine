@@ -8,7 +8,7 @@ own: `draw_plan.py` draws the block plan (`plan_stage1.txt`) from shapes and say
 The town is 48×40 blocks, as before, and its joins stay where they were:
 - Route 18's road (its rows 8–10) meets the left edge at rows 18–20 (offset 10);
 - Route 15's road (its rows 4–7) meets the right edge at rows 20–23 (offset 16; it was 15 before Route 15 was rebuilt);
-- Route 19's beach path (its columns 7–16) runs on below the bottom edge from columns 19–28 (offset 12).
+- Route 19's beach path (its columns 7–16) runs on below the bottom edge from columns 19–28 (offset 12); Fuchsia's path is as wide as Route 19's, columns 18–29.
 
 It has:
 - **the Safari plaza** at the top, under the woods: the Safari Zone's gate lodge, the Safari Zone's sign and the

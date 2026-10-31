@@ -43,8 +43,9 @@ def tree(x, y):
 # the sea east of the woods, below the cliffs
 rect(8, 18, 37, 79, "s")
 
-# the way down from Lavender (columns 10-13) through the woods to the north gatehouse's back (doorway 11-12,10)
-rect(10, 0, 13, 9, ":")
+# the way down from Lavender (columns 10-13) through the woods to the north gatehouse's back (doorway 11-12,10): Lavender's
+# cobbled road carries on to the gatehouse (it was dirt, cut off straight against Lavender's cobbles at the top edge)
+rect(10, 0, 13, 9, "=")
 rect(10, 10, 13, 13, "N")
 
 # the cliff top below the gatehouse's front door (11-12,13): a lookout, the route sign

@@ -101,8 +101,8 @@
     {
       "type": "clone",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_FRLG",
-      "x": 13,
-      "y": -3,
+      "x": 7,
+      "y": -11,
       "target_local_id": "LOCALID_PALLET_FAT_MAN",
       "target_map": "MAP_PALLET_TOWN"
     },

@@ -7,6 +7,7 @@ set -e
 A=project/art/indigo-concept
 B=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the League
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=IndigoPlateau_Exterior_Frlg

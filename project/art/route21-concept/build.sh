@@ -6,6 +6,7 @@
 set -e
 A=project/art/route21-concept
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A grid_north.txt grid_south.txt  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 N=Route21_North_Frlg
@@ -58,4 +59,11 @@ for name, grid in (("Route21_North_Frlg", "grid_north.txt"), ("Route21_South_Frl
         if e.get("type") != "clone" and 0 <= e["y"] < len(g):
             e["elevation"] = 1 if g[e["y"]][e["x"]] == "s" else 3
     open(p, "w").write(json.dumps(m, indent=2) + "\n")
+# the clone of Pallet's fat man where he is now (Pallet 18,17), not over Pallet's harbour water (its old 13,-3)
+p = "data/maps/Route21_North_Frlg/map.json"
+m = json.load(open(p))
+for e in m["object_events"]:
+    if e.get("type") == "clone" and e.get("target_local_id") == "LOCALID_PALLET_FAT_MAN":
+        e["x"], e["y"] = 7, -11
+open(p, "w").write(json.dumps(m, indent=2) + "\n")
 PY

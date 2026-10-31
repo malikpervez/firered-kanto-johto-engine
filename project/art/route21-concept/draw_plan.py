@@ -58,6 +58,8 @@ rect(n, 2, 4, 5, 13, ".")              # the Tangela's meadow
 rect(n, 2, 8, 4, 12, "g")
 rect(n, 16, 12, 18, 12, "*")
 rect(n, 0, 14, 23, 15, ".")            # the beach
+rect(n, 0, 2, 1, 15, "s")              # the sea round the land's west and east sides (the border is open sea: the
+rect(n, 22, 0, 23, 15, "s")            # coast turns the corner inside the map, the woods end on whole trees)
 rect(n, 7, 0, 10, 15, "~")             # Pallet's river, out over its bar into the sea
 rect(n, 5, 25, 17, 29, ".")            # the fishers' islet
 rect(n, 9, 26, 14, 28, "g")

@@ -41,9 +41,9 @@ def at(x, y, c):
 
 # the frame: forest round the edges, the lake and the bridge's water in the north
 rect(0, 0, 57, 1, "T"); rect(0, 0, 1, 50, "T"); rect(54, 0, 57, 27, "T"); rect(0, 49, 57, 50, "T")
-rect(54, 31, 57, 48, "T")
+rect(54, 32, 57, 48, "T"); rect(54, 31, 57, 31, "b")   # (a hedge along the road east: the forest from row 32, whole trees)
 rect(13, 2, 40, 13, "~")            # the lake
-rect(30, 0, 40, 1, "~")             # under the bridge, west...
+rect(29, 0, 40, 1, "~")             # under the bridge, west (from column 29, where Route 24's lake shore is)...
 rect(45, 0, 52, 5, "~")             # ...and east
 rect(2, 12, 12, 13, "~")            # south of the cave's island
 rect(41, 0, 44, 5, "d")             # Nugget Bridge's last span (Route 24: the top, columns 41-44)
@@ -121,7 +121,7 @@ rect(31, 38, 34, 41, "X")           # a small house, door (32,41)
 rect(25, 42, 42, 43, "=")
 rect(8, 38, 12, 41, "K")            # the Bike Shop, door (10,41)
 rect(2, 42, 20, 43, "=")
-rect(7, 37, 13, 37, "="); at(14, 38, "S")   # the Bike Shop's sign (read from 14,39)
+at(14, 38, "S")   # the Bike Shop's sign (read from 14,39)
 at(19, 41, "S")                     # trainer tips (read from 19,42)
 rect(2, 44, 20, 48, ".")            # the Pokémon shelter's corner (the caretaker at 5,46)
 rect(14, 46, 18, 47, "*")
@@ -145,6 +145,9 @@ for x0, y0, x1, y1 in ((2, 21, 20, 41), (25, 21, 44, 36), (45, 14, 53, 27), (41,
         for x in range(x0, x1 + 1):
             if g[y][x] in ".o:*":
                 g[y][x] = "p"
+rect(25, 21, 25, 23, "=")                           # the street past the robbed house meets the road south
+rect(38, 21, 38, 22, ":")                           # the grunt's way out runs on down to the street
+rect(32, 25, 32, 27, "%"); rect(38, 25, 38, 27, "%"); rect(32, 28, 38, 28, "%")   # the brick ring round the pool
 rect(3, 22, 7, 25, "1"); rect(9, 22, 13, 25, "2"); rect(3, 27, 7, 30, "2"); rect(48, 22, 52, 25, "1")
 rect(18, 22, 18, 40, "%"); rect(19, 22, 19, 40, "~"); rect(20, 22, 20, 40, "%")   # the canal by the road south
 rect(45, 27, 53, 27, "~")                                                          # and by the road east
@@ -168,6 +171,7 @@ rect(25, 24, 38, 24, "f"); rect(25, 25, 25, 28, "f")   # round the Center's nort
 rect(37, 31, 39, 33, "F")
 rect(37, 29, 38, 29, "u"); rect(37, 35, 38, 35, "n"); rect(41, 31, 41, 32, "a")
 at(36, 35, "t"); at(40, 35, "t"); at(39, 35, "i")
+rect(24, 45, 24, 48, "t")                           # flower tubs on the paving narrow the road to the neck
 rect(13, 40, 14, 40, "e")                           # the bike rack by the Bike Shop
 for x in (6, 17, 28):
     rect(x, 14, x + 1, 14, "n")

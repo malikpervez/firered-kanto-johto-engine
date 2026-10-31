@@ -6,6 +6,7 @@ set -e
 A=project/art/pallet-concept
 R=project/art/packs/buildings_v0.3/buildings  # the remakes pack (Oak's lab's door)
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=PalletTown_Frlg

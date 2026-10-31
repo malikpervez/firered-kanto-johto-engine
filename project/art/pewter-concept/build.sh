@@ -7,6 +7,7 @@ A=project/art/pewter-concept
 R=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the Gym
 K=project/art/kit/buildings
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=PewterCity_Frlg

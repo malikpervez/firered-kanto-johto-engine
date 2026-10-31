@@ -4099,16 +4099,88 @@
    "elevation": null,
    "open": []
   },
+  "field_rock_c@cobble#14": {
+   "ids": [
+    640
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_a@cobble#14": {
+   "ids": [
+    641
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_b@cobble#14": {
+   "ids": [
+    642
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_b@cobble#15": {
+   "ids": [
+    643
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_a@cobble#15": {
+   "ids": [
+    644
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_b@cobble#11": {
+   "ids": [
+    645
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_c@cobble#11": {
+   "ids": [
+    646
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_a@cobble#11": {
+   "ids": [
+    647
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "cycling_gate": {
    "ids": [
-    640,
-    641,
-    642,
-    643,
-    644,
-    645,
-    646,
-    647,
     648,
     649,
     650,
@@ -4132,7 +4204,15 @@
     668,
     669,
     670,
-    671
+    671,
+    672,
+    673,
+    674,
+    675,
+    676,
+    677,
+    678,
+    679
    ],
    "w": 8,
    "h": 4,
@@ -4145,14 +4225,6 @@
   },
   "house_pond_keeper": {
    "ids": [
-    672,
-    673,
-    674,
-    675,
-    676,
-    677,
-    678,
-    679,
     680,
     681,
     682,
@@ -4160,7 +4232,15 @@
     684,
     685,
     686,
-    687
+    687,
+    688,
+    689,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695
    ],
    "w": 4,
    "h": 4,
@@ -4177,7 +4257,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 48
+  "secondary": 56
  },
  "animations": [
   {

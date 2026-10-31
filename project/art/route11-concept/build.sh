@@ -7,6 +7,7 @@ set -e
 A=project/art/route11-concept
 R2=project/art/route2-concept/buildings
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=Route11_Frlg
@@ -21,7 +22,7 @@ pae tileset build ../$A/spec.json $P
 pae map paint $M ../$A/grid.txt ../$A/legend.json --names ../$A/names.json --border ../$A/border.txt $P
 
 # the joins stay where they were: Vermilion's main street (its rows 11-14) meets the left edge at rows 14-17,
-# Route 12's road (its rows 44-46) the right edge at rows 17-19
+# Route 12's road (its rows 44-47) the right edge at rows 17-20
 pae map connect $M left VermilionCity_Frlg --offset 3 $P
 pae map connect $M right Route12_Frlg --offset -27 $P
 [ -n "$KIT_BUILD_ALL" ] || pae seam build $M $P

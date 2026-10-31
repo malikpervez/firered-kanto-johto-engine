@@ -26,6 +26,11 @@ CLIFF_BANK = 7
 WEST, NORTH = [(0, y) for y in range(9, 13)], [(x, 0) for x in range(68, 76)]
 FIELD = (18, 9, 40, 15)  # the tall grass across the valley floor
 SOLID = set("T#bRoklSBcw_~vr") | cliffs.SOLID  # (ledges are hopped going south only)
+# Pewter's forest carried on over the join (columns 0-1, rows 13-18): whole trees on Pewter's 2x2 grid, which is a
+# row off this map's (the join is 15 rows down), so they are stamped here by name, not drawn by "auto" on this grid
+# (which cut the top one in half under the road): the top one, the middle one, the last one over the plateau
+JOIN_TREES = {"\u24e3": (13, "forest#12"), "\u24e4": (15, "forest#13"), "\u24e5": (17, "forest#9")}
+SOLID |= set(JOIN_TREES)
 
 
 def plan() -> list[list[str]]:
@@ -75,6 +80,10 @@ def check(g) -> None:
 def main() -> None:
     g = plan()
     cliffs.layout(g)
+    g[7][0] = g[8][0] = "P"  # the face over the way in runs on into Pewter's (no rounded end at the join)
+    for ch, (y, _) in JOIN_TREES.items():
+        for yy in (y, y + 1):
+            g[yy][0] = g[yy][1] = ch
     kit.check_forest(g)
     kit.check_water(g)
     check(g)
@@ -99,6 +108,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("CC\nCC\n".replace("C", cliffs.TOP[0]))
     legend = dict(kit.LEGEND)
     legend.update(cliffs.legend(char_of))
+    legend.update({ch: {"name": name} for ch, (_, name) in JOIN_TREES.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")
 

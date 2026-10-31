@@ -65,8 +65,10 @@ def layout() -> tuple[list[list[str]], dict]:
     put("T", 24, 2, 2, 6)
     # the sea under the cliff
     put("s", 28, 2, 4, 24)
-    for x, y, rock in ((30, 5, "q"), (29, 13, "Q"), (31, 21, "q")):  # rocks standing in it
-        put(rock, x, y)
+    # the forest closes the sea on the east (the map's border is forest): the sea draws its cliff against it instead
+    # of running off the edge into the border's trees. The sea is two blocks wide now, too narrow for its rocks
+    # (they stand only in open sea).
+    put("T", 30, 2, 2, 24)
     # the way north (Route 1)
     put(":", 14, 0, 2, 9)
     # yards and houses
@@ -118,7 +120,7 @@ def layout() -> tuple[list[list[str]], dict]:
     put("d", 19, 20, 7, 2)
     put("d", 21, 22, 2, 3)
     put("B", 24, 20)
-    put("B", 25, 20)
+    put("E", 25, 20)
     put("c", 19, 20)
     put("O", 23, 23, 2, 1)
     # rocks and details
@@ -128,6 +130,11 @@ def layout() -> tuple[list[list[str]], dict]:
         put(",", x, y)
     for x, y in ((5, 7), (22, 7)):  # flowers in the yards' corners
         put("*", x, y)
+    # the forest along the south edge, either side of the channel: its trees end in their trunks on the grass (pieces
+    # of the forest by the sides that are forest, the edge open) where Route 21 North, below, has open grass and its
+    # own trees, instead of its canopy running off the edge cut flat
+    for x0, ch in ((16, "\u00b9"), (22, "\u00b2"), (24, "\u00b3"), (26, "\u00b3"), (28, "\u00b3"), (30, "\u00bc")):
+        put(ch, x0, 26, 2, 2)
     # signs (bg events); the houses' stand in the fence beside the gate, read from the road
     signs = {"PlayersHouseSign": (6, 8), "RivalsHouseSign": (17, 8), "OaksLabSign": (19, 16),
              "TownSign": (13, 11), "TrainerTips": (10, 20)}
@@ -139,7 +146,7 @@ def layout() -> tuple[list[list[str]], dict]:
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 PROPS = [("fingerpost", 13, 2, "grass"),  # by the road north to Route 1
          ("bench_wood_east", 26, 9, "grass")]  # looking out to sea
-SOLID = set("T#bRoklSBcwO~sqHJWL")  # what a prop can't stand on
+SOLID = set("T#bRoklSBEcwO~sqHJWL\u00b9\u00b2\u00b3\u00bc")  # what a prop can't stand on
 
 
 def main() -> None:
@@ -162,6 +169,12 @@ def main() -> None:
     labs = sheet("lab", "lab", cols=9)
     labs.add("lab", LAB.idx, tileset="secondary", **LAB.entry())
     spec_mt += labs.write()
+    dockside = sheet("dockside", "wood", cols=4)  # the dock's crate, barrels and boat over the ground they stand on
+    dockside.add("crate@dock#6", kit.crate(), tileset="secondary", ground="dock#6", solid=True)
+    dockside.add("barrel@dock#14", kit.barrel(), tileset="secondary", ground="dock#14", solid=True)
+    dockside.add("barrel@dock#12", kit.barrel(), tileset="secondary", ground="dock#12", solid=True)
+    dockside.add("boat_moored", kit.boat(), tileset="secondary", ground="pond#15", solid=True, elevation=1)
+    spec_mt += dockside.write()
     prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
     spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
@@ -180,6 +193,18 @@ def main() -> None:
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, H="house_red", J="house_blue", W="windmill", L="lab")
+    # the dirt runs straight on into the cobbles (the road north, the road to the well, the track past the lab) with
+    # no strip of grass between them; the well stands in its yard's dirt
+    legend[":"] = {"auto": "dirt", "joins": "="}
+    legend["w"] = {"name": "well", "joins": "="}
+    # on the dock: the crate and the barrels stand on the planks they replace (the dock's corner and edge pieces),
+    # and the boat in open water beside the pier; the dock and the pond run on round them
+    legend["c"] = {"name": "crate@dock#6", "joins": "d"}
+    legend["B"] = {"name": "barrel@dock#14", "joins": "d"}
+    legend["E"] = {"name": "barrel@dock#12", "joins": "d"}
+    legend["O"] = {"name": "boat_moored", "joins": "~", "elevation": 1}
+    for ch, mask in (("\u00b9", 8), ("\u00b2", 2), ("\u00b3", 10), ("\u00bc", 11)):  # the south forest's edge
+        legend[ch] = {"name": f"forest#{mask}", "joins": "T"}
     legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "signs.json").write_text(json.dumps(signs, indent=1) + "\n")

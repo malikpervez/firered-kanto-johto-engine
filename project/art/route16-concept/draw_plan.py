@@ -86,4 +86,10 @@ rect(46, 27, 53, 36, ".")
 rect(47, 28, 53, 35, "g")
 rect(49, 31, 51, 33, "~")
 
+# the forest is drawn in 2x2 cells on the even grid: its edges on even rows, so no half trees show. A lawn row before
+# the woods south of the bikers' lawns (row 33); south of the road west of the rocks the woods start at row 28, the
+# rock column's foot (43-45,28) woods too. (Below the meadow, row 37 is old Route 17's strip: it stays forest.)
+rect(2, 33, 11, 33, "."); rect(18, 33, 27, 33, ".")
+rect(36, 27, 42, 27, "."); rect(43, 28, 45, 28, "T")
+
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

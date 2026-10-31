@@ -40,14 +40,15 @@ rect(39, 8, 40, 9, "*")
 rect(90, 13, 97, 16, ".")
 rect(94, 13, 96, 14, "*")
 
-# the Seafoam Islands: the west island (its mouth's door 58,10) and the east one (78,12), their signs
+# the Seafoam Islands: the west island (its mouth's door 58,10) and the east one (78,12), their signs; each mouth is
+# cut into its cliff's face (6x2), the cliff's top running on over it
 rect(50, 2, 67, 16, ".")
 rect(52, 3, 65, 10, "C")
-rect(56, 6, 61, 10, "Y")
+rect(56, 9, 61, 10, "Y")
 at(55, 11, "S")
 rect(70, 3, 85, 17, ".")
 rect(72, 4, 83, 12, "C")
-rect(76, 8, 81, 12, "Y")
+rect(76, 11, 81, 12, "Y")
 at(75, 13, "S")
 rect(63, 13, 65, 15, "*")
 rect(82, 15, 84, 16, "*")

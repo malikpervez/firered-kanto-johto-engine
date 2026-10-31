@@ -138,6 +138,41 @@ def check(g, d) -> None:
     assert g[WAILMER[1]][WAILMER[0]] == SEA, "Wailmer in the sea"
 
 
+ASH = "ǝ"  # plain ash (dirt#15, no edge) where the ash meets the volcano's rock, so no grass rim runs round the rock
+SIGN_CHARS = {"cobble#14": "ǣ", "cobble#12": "ǥ"}  # the signs standing in the street: a sign over its cobble
+SIGNS_IN_STREET = [(9, 12), (10, 12), (22, 5)]  # the Lab's two (the Lab above), the Gym's (the Gym above, sea east)
+
+
+def ash_by_rock(g, junction_chars) -> None:
+    """The ash next to the rock (and the crater's floor): plain ash, counted as ash by the ash round it, so the ash
+    draws no grass edge against the rock. Only where all its sides are ash or rock (the edge to the lawn stays)."""
+    rock = cliffs.SOLID | set(junction_chars)
+    ash = {":", ASH, "o"}
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            if g[y][x] != ":":
+                continue
+            near = [g[y + dy][x + dx] for dy in (-1, 0, 1) for dx in (-1, 0, 1)
+                    if (dx or dy) and 0 <= x + dx < MAP_W and 0 <= y + dy < MAP_H]
+            sides = [g[y + dy][x + dx] for dx, dy in ((0, -1), (1, 0), (0, 1), (-1, 0))]
+            if any(c in rock for c in near) and all(c in rock or c in ash for c in sides):
+                g[y][x] = ASH
+
+
+def signs_on_cobble(g) -> dict[tuple[int, int], str]:
+    """The signs in the street with two sides on it (kit/settle.py takes the ones with three): each over the cobble
+    pae would draw there if it were cobble, and cobble for the cobble round it."""
+    out = {}
+    for x, y in SIGNS_IN_STREET:
+        assert g[y][x] == "S", f"no sign at ({x},{y})"
+        same = lambda xx, yy: g[yy][xx] in "=S" or (xx, yy) in SIGNS_IN_STREET
+        mask = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
+        out[x, y] = f"cobble#{mask}"
+    for (x, y), ground in out.items():
+        g[y][x] = SIGN_CHARS[ground]
+    return out
+
+
 def main() -> None:
     g = plan()
     prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
@@ -159,7 +194,17 @@ def main() -> None:
         spec_mt += sh.write()
     rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
     char_of = cliffs.add(rock, g, extras=())
-    spec_mt += rock.write()
+    rock_entries = rock.write()
+    for e in rock_entries:  # the volcano's rock stands in its ash all round: its lip and corners on ash, not grass
+        if e.get("ground") == "grass":
+            e["ground"] = "dirt#15"
+    spec_mt += rock_entries
+    ash_by_rock(g, set(char_of.values()))
+    signs = signs_on_cobble(g)
+    sh = kit.Sheet("signs_cobble", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=2)
+    for ground in sorted(set(signs.values())):
+        sh.add(f"sign_on_{ground}", kit.sign(), tileset="secondary", ground=ground, solid=True)
+    spec_mt += sh.write()
     pals[CLIFF_BANK] = cliffs.PAL
     prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
     spec_mt += prop_entries
@@ -184,6 +229,8 @@ def main() -> None:
     assert not set(legend) & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
     legend.update(prop_legend)
+    legend[ASH] = {"pick": ["dirt#15"], "joins": ":"}
+    legend.update({ch: {"name": f"sign_on_{ground}", "joins": "="} for ground, ch in SIGN_CHARS.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

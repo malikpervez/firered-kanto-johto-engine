@@ -69,4 +69,8 @@ for y in (6, 7, 11):
 for x, y, c in ((3, 3, "q"), (24, 2, "Q"), (8, 18, "Q"), (27, 18, "q"), (35, 17, "Q")):
     at(x, y, c)
 
+# the south woods end on a shore (their trunks at row 17, whole 2x2 cells) instead of running into the map's bottom
+# edge, as far as old Fuchsia's strip (its columns 53-59 stay forest; the woods' cell 52-53 whole)
+rect(40, 18, 51, 19, "s")
+
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

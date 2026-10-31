@@ -29,7 +29,8 @@
   "auto": "fence"
  },
  "d": {
-  "auto": "dock"
+  "auto": "dock",
+  "joins": ":"
  },
  "*": {
   "pick": [
@@ -166,5 +167,15 @@
  "N": "face_middle_2",
  "P": "face_middle_3",
  "}": "face_inner_E",
- "]": "face_outer_E"
+ "]": "face_outer_E",
+ "Ⰰ": {
+  "name": "pond#14",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰱ": {
+  "name": "pond#15",
+  "joins": "~",
+  "elevation": 1
+ }
 }

@@ -53,7 +53,17 @@ def _mouth() -> buildings.Building:
                               tuple(meta["door_blocks"][0]), folder / "diglett_cave_door.png")
 
 
-MOUTH = _mouth()
+def _face_mouth() -> buildings.Building:
+    """The mouth cut into the cliff's face: the face's middle columns (two blocks tall, straight sides, no grass) with
+    Route 2's mouth's opening in them, its door on the bottom row (the cliff's top runs on over it)."""
+    full = _mouth()
+    idx = np.concatenate([cliffs.pack(f"face/{n}.png") for n in ("middle_1", "middle_2", "middle_3") * 2], axis=1)
+    hole = (slice(2, 32), slice(26, 70))  # the opening and its rim, from the mouth's bottom two rows
+    idx[hole] = full.idx[48:80][hole]
+    return buildings.Building(full.name, idx, full.palette, (full.door[0], 1), full.door_frames)
+
+
+MOUTH = _face_mouth()
 
 
 def plan() -> list[list[str]]:
@@ -137,6 +147,12 @@ def main() -> None:
     g = plan()
     d = doors(g)
     cliffs.layout(g, roof="Y")  # the mouths stand against the cliffs: their tops run down to them, with no face
+    for y in range(MAP_H):  # the face runs on unbroken either side of a mouth (no ends beside it)
+        for x in range(MAP_W):
+            if g[y][x] == "}" and g[y][x + 1] == "Y":
+                g[y][x] = next(c for c in cliffs.MIDDLES if c != g[y][x - 1])
+            elif g[y][x] == "{" and g[y][x - 1] == "Y":
+                g[y][x] = next(c for c in cliffs.MIDDLES if c != g[y][x + 1])
     kit.check_forest(g)
     kit.check_water(g)
     check(g, d)

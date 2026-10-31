@@ -131,7 +131,7 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND)
+    legend = dict(kit.LEGEND, **{":": {"auto": "dirt", "joins": "="}})  # Cerulean's cobbles run on into the dirt
     legend.update(cliffs.legend(char_of))
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")

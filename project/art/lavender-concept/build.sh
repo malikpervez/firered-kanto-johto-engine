@@ -9,6 +9,7 @@ K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
 T=project/art/packs/buildings_v0.3/buildings/pokemon_tower  # the remakes pack
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=LavenderTown_Frlg

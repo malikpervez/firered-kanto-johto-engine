@@ -47,6 +47,7 @@ VB = ART / "viridian-concept/buildings"
 OWN = {"W": (VB / "viridian_gym", SCHOOL_BANK), "K": (VB / "trainer_school", SCHOOL_BANK),
        "H": (VB / "house_family", HOUSE_BANK), "X": (VB / "house_gardener", HOUSE_BANK)}
 SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
+SIGN_BRICK = (19, 41)                  # trainer tips, the sign in the brick at the west canal's foot ("!")
 HOLES = [(35, 18), (36, 18), (48, 7)]  # the robbed house's hole (from its backyard) and the badge house's back door
 CUT_TREE = (49, 39)                    # the tree to cut, in the gap into the garden (an event, on the lawn)
 NECK = [(22, 45), (23, 45)]            # where the lass and her Slowbro stand until the S.S. Ticket
@@ -118,24 +119,33 @@ def _mouth() -> buildings.Building:
 
 
 def cave_mouth(houses) -> tuple[list, buildings.Building]:
-    """The houses' palette with the cave mouth's colours in the indices they don't use, and the mouth drawn in it."""
+    """The houses' palette with the cave mouth's colours in the indices they don't use, and the mouth drawn in it:
+    the two of its colours that leave the least error go in the spare indices, and its others each take the nearest
+    of the palette's browns and greys (never its greens or oranges, which speckled the rock)."""
     m = _mouth()
-    used = set(range(16)) - set(HOUSE_SPARE)
-    pal = list(houses)
-    near = lambda c, idxs: min(idxs, key=lambda j: sum((a - b) ** 2 for a, b in zip(c, pal[j])))
-    dist = lambda c, j: sum((a - b) ** 2 for a, b in zip(c, pal[j]))
     count = {int(i): int((m.idx == i).sum()) for i in np.unique(m.idx) if i}
-    worst = sorted(count, key=lambda i: -count[i] * dist(m.palette[i], near(m.palette[i], used - {0})))
-    lut = list(range(16))
-    for i, spare in zip(worst, HOUSE_SPARE):
-        pal[spare] = m.palette[i]
-        lut[i] = spare
-    for i in count:
-        if lut[i] == i:
-            lut[i] = near(m.palette[i], range(1, 16))
+    dist = lambda c, d: sum((a - b) ** 2 for a, b in zip(c, d))
+    best = None
+    for a in count:
+        for b in count:
+            if a >= b:
+                continue
+            pal = list(houses)
+            pal[HOUSE_SPARE[0]], pal[HOUSE_SPARE[1]] = m.palette[a], m.palette[b]
+            lut = list(range(16))
+            lut[a], lut[b] = HOUSE_SPARE
+            err = 0
+            for i in count:
+                if i not in (a, b):
+                    lut[i] = min(CAVE_OK + HOUSE_SPARE, key=lambda j: dist(m.palette[i], pal[j]))
+                    err += count[i] * dist(m.palette[i], pal[lut[i]])
+            if best is None or err < best[0]:
+                best = (err, pal, lut)
+    _, pal, lut = best
     return pal, buildings.Building(m.name, np.array(lut, np.uint8)[m.idx], pal, m.door, m.door_frames)
 
 
+CAVE_OK = (1, 2, 13, 11, 12)  # the houses' browns and greys the rock may use besides its own two (not 4-7, 9, 10)
 HOUSE_SPARE = (3, 8)  # the indices of the houses' palette neither house uses
 
 
@@ -234,6 +244,7 @@ def main() -> None:
     check(g, d)
     for x, y in HOLES:
         g[y][x] = "^"
+    g[SIGN_BRICK[1]][SIGN_BRICK[0]] = "!"
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
     pals = {}
@@ -270,6 +281,9 @@ def main() -> None:
     spec_mt += sh.write()
     sh = kit.Sheet("sign_paving", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=1)
     sh.add("sign_paving", kit.sign(), tileset="secondary", ground="paving#15", solid=True, dedupe=True)
+    spec_mt += sh.write()
+    sh = kit.Sheet("sign_brick", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=1)  # the same sign on the brick
+    sh.add("sign_brick", kit.sign(), tileset="secondary", ground="cerulean_brick#15", solid=True, dedupe=True)
     spec_mt += sh.write()
     fences = {}  # the fences on the paving, by the sides they join on (1 N, 2 E, 4 S, 8 W)
     for y in range(MAP_H):
@@ -323,11 +337,13 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k).name for k in OWN}, Y="diglett_cave")
     legend["^"] = "hole"
-    legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **{"@": "lamp_paving", "/": "sign_paving"},
+    legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **{"@": "lamp_paving", "/": "sign_paving", "!": "sign_brick"},
                   **{k: f"{n}_paved" for k, (n, _) in SHARED_PAVED.items()})
-    legend.update({k: {"name": legend[k], "joins": WALK} for k in PAVED})
+    legend.update({k: {"name": legend[k], "joins": WALK} for k in PAVED + "!"})
     legend.update({WALK: {"pick": ["cerulean_brick#15", "cerulean_brick#15~1", "cerulean_brick#15~2"]},
                    "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
+                   # the bridge's planks and the dirt path meet the street without a lawn rim between
+                   "d": {"auto": "dock", "joins": WALK}, ":": {"auto": "dirt", "joins": WALK},
                    "P": {"pick": ["paving#15", "paving#15~1", "paving#15~2"], "joins": WALK}})  # plain, no edges
     legend.update({ch: {"name": n, "joins": WALK} for ch, n in fence_names.items()})
     assert not set(PROPS) & set(legend), "a prop's character the legend has"

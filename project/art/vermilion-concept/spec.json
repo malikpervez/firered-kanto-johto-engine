@@ -6247,6 +6247,18 @@
     "setts_NE#0"
    ],
    "solid": true
+  },
+  {
+   "name": "crate@dock#12",
+   "image": "sheets/settled_wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "dock#12",
+   "solid": true
   }
  ]
 }

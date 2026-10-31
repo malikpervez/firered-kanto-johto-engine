@@ -157,9 +157,16 @@ def main() -> None:
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
+    # the high road runs flush into the gatehouse's east doorway: its blocks there are the plain dirt (its rim kept
+    # only along the lawn above), not its west edge
+    (ex, ey) = d[1]
+    assert g[ey - 1][ex + 1] == ":" and g[ey][ex + 1] == ":"
+    g[ey - 1][ex + 1], g[ey][ex + 1] = "\u00f0", "\u00fe"
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
-    (HERE / "border.txt").write_text("ss\nss\n")
-    legend = dict(kit.LEGEND, C=b.name)
+    (HERE / "border.txt").write_text("TT\nTT\n")  # inland: the forest beyond the edges, as Fuchsia's
+    legend = dict(kit.LEGEND, C={"name": b.name, "joins": "="})  # Fuchsia's cobbles run flush into the gatehouse
+    legend["\u00f0"] = {"name": "dirt#14", "joins": ":"}
+    legend["\u00fe"] = {"name": "dirt#15", "joins": ":"}
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({"C": d}, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doorways {d}")

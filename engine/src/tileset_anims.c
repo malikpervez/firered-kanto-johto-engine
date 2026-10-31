@@ -2080,7 +2080,7 @@ const u16 *const gTilesetAnims_CeruleanConcept_Fountain3X3[] = {
 static void QueueAnimTiles_CeruleanConcept_Fountain3X3(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_CeruleanConcept_Fountain3X3);
-    AppendTilesetAnimToBuffer(gTilesetAnims_CeruleanConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 291)), 29 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_CeruleanConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 290)), 29 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_CeruleanConcept(u16 timer)

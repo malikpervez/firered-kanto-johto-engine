@@ -164,6 +164,7 @@ def main() -> None:
     legend = dict(kit.LEGEND, H=COTTAGE.name)
     assert "H" not in cliffs.legend(char_of), "the cottage's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
+    legend["d"] = {"auto": "dock", "joins": ":"}  # the road runs onto the bridge's planks without an edge between
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

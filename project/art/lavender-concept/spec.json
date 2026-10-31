@@ -4819,6 +4819,30 @@
    "ground": "grass"
   },
   {
+   "name": "field_rock_a@flowers2",
+   "image": "sheets/garden_stones.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "flowers2",
+   "solid": true
+  },
+  {
+   "name": "field_rock_c@flowers1",
+   "image": "sheets/garden_stones.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "flowers1",
+   "solid": true
+  },
+  {
    "name": "house_family",
    "image": "sheets/house_family.png",
    "x": 0,

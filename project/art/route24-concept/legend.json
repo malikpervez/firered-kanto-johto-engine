@@ -122,5 +122,10 @@
   "joins": "s",
   "with": "rock_b",
   "elevation": 1
+ },
+ "Ⰰ": {
+  "name": "pond#15",
+  "joins": "~",
+  "elevation": 1
  }
 }

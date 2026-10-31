@@ -4952,7 +4952,12 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "paving#15",
+   "ground": [
+    "paving#7",
+    "paving#15",
+    "paving#15",
+    "paving#15"
+   ],
    "solid": true
   },
   {
@@ -4993,7 +4998,19 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "paving#15",
+   "ground": "paving#3",
+   "solid": true
+  },
+  {
+   "name": "sign@dirt#5",
+   "image": "sheets/settled_wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "dirt#5",
    "solid": true
   }
  ]

@@ -45,7 +45,8 @@ STREETS_BANK = 10  # the pack's city palette (Part B: Lucky Lane's brick, the co
 KIT_PIECES = {"1": "asphalt_to_cobble_W", "2": "asphalt_to_cobble_E", "-": "asphalt_dashed_H_boundary",
               "3": "crossing_road_EW", "4": "crossing_end_N", "5": "crossing_end_S", "7": "crossing_dropped_kerb_S",
               "9": "crossing_dropped_kerb_N", "%": "manhole"}
-STREET_LEGEND = {"n": {"auto": "walk_s"}, "u": {"auto": "walk_n", "joins": "n"},
+STREET_LEGEND = {"1": {"name": KIT_PIECES["1"], "joins": "="}, "2": {"name": KIT_PIECES["2"], "joins": "="},
+                 "n": {"auto": "walk_s"}, "u": {"auto": "walk_n", "joins": "n"},
                  "^": {"auto": "brick", "joins": "n"}, "j": {"name": "brick_to_pavement_N", "joins": "n"},
                  "/": {"name": "compass", "joins": "n"}, "7": {"name": KIT_PIECES["7"], "joins": "n"},
                  "9": {"name": KIT_PIECES["9"], "joins": "n"}}

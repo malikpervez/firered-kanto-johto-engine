@@ -53,11 +53,13 @@ rect(2, 2, 41, 33, ".")
 # the main street from Route 18 (rows 18-20) to Route 15 (rows 20-23); the avenue up to the plaza
 rect(0, 18, 40, 21, "=")
 at(0, 21, "b")
+rect(0, 16, 1, 17, "b")                         # bushes above the road at the edge, as Route 18 has them there
 rect(40, 20, 47, 23, "=")
 rect(21, 10, 26, 17, "p")
 
 # the Safari plaza and the lodge (door 23,6), lamps either side
 rect(18, 7, 26, 9, "p")
+rect(18, 10, 20, 10, "p")                       # where the zoo's west walk meets it, beside the guardian statue
 rect(20, 2, 26, 6, "A")
 at(19, 6, "S")                                  # the Safari Zone's sign
 at(27, 6, "S")                                  # the Safari Game's notice
@@ -129,9 +131,7 @@ rect(35, 23, 39, 26, ".")
 rect(36, 27, 39, 27, ".")
 rect(36, 23, 38, 24, "~")
 
-# the beach path down to Route 19 (columns 19-28), through the woods
+# the beach path down to Route 19 (columns 18-29, as wide as Route 19's), through the woods
 rect(18, 34, 29, 39, ":")
-rect(18, 34, 18, 39, "b")
-rect(29, 34, 29, 39, "b")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

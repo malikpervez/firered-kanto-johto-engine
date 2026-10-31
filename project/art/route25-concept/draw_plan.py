@@ -41,6 +41,8 @@ def at(x, y, c):
 rect(0, 0, 3, 23, "T")
 rect(4, 0, 57, 3, "C")
 rect(58, 0, 69, 23, "s")
+rect(68, 0, 69, 23, "T"); rect(58, 0, 67, 1, "T"); rect(58, 22, 67, 23, "T")  # the bay's far shores: the border's
+#   forest goes on from them, not out of the open sea
 at(61, 6, "q"); at(60, 13, "Q"); at(64, 9, "Q"); at(62, 19, "q"); at(66, 16, "q")
 rect(26, 18, 57, 23, "T")
 
@@ -54,6 +56,7 @@ rect(21, 16, 23, 16, "b"); rect(21, 17, 22, 23, "~"); rect(23, 17, 23, 23, "b")
 rect(4, 10, 8, 13, "g")                       # grass along the forest
 rect(5, 5, 7, 6, "*"); at(10, 4, "o"); rect(13, 12, 14, 13, "*"); at(23, 5, "o")
 rect(17, 11, 18, 14, ":")                     # the road up off the bridge...
+rect(16, 13, 19, 14, ":")                     # (as wide as the bridge where it meets it)
 rect(17, 9, 52, 10, ":")                      # ...and east along the cape
 rect(24, 4, 27, 7, "g")
 

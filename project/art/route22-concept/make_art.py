@@ -114,6 +114,27 @@ def check(g, door) -> None:
     assert "C" not in "".join("".join(r) for r in g), "every cliff block is its top or its face"
 
 
+# the gate's paved forecourt: its lamps and sign stand on the paving (each its own letter, over the paving piece the
+# block would have), and the paving runs flush up to the gate's front and to the cliff's edge (forecourt() and the
+# legend); the stone steps past the ledge's east end become the dirt path running up into the paving
+FORECOURT_LAMPS = {"lamp@paving#7": ("\u00b9", ["paving#7", "paving#7"]),     # (5,14): the cliff's top to its west
+                   "lamp@paving#13": ("\u00b2", ["paving#13", "paving#13"])}  # (19,14): and to its east
+FORECOURT = {(5, 14): "\u00b9", (5, 15): "\u00b9", (19, 14): "\u00b2", (19, 15): "\u00b2", (18, 14): "\u00b3",
+             (22, 18): "\u00bc", (23, 18): "\u00bc", (22, 19): "\u00bd", (23, 19): "\u00be"}
+FORECOURT_LEGEND = {"\u00b9": {"name": "lamp@paving#7", "joins": "p"}, "\u00b2": {"name": "lamp@paving#13", "joins": "p"},
+                    "\u00b3": {"name": "sign@paving#15", "joins": "p"},
+                    "\u00bc": {"name": "paving_to_dirt_S", "joins": "p"},  # the paving opening onto the dirt path
+                    "\u00bd": {"name": "dirt#7", "joins": ":"}, "\u00be": {"name": "dirt#13", "joins": ":"}}
+
+
+def forecourt(g) -> None:
+    was = {(5, 14): "l", (5, 15): "l", (19, 14): "l", (19, 15): "l", (18, 14): "S", (22, 18): "p", (23, 18): "p",
+           (22, 19): "h", (23, 19): "h"}
+    for (x, y), c in was.items():
+        assert g[y][x] == c, f"({x},{y}) is '{g[y][x]}', not '{c}': the forecourt moved"
+        g[y][x] = FORECOURT[(x, y)]
+
+
 # ---------------------------------------------------------------- sheets and spec
 def main() -> None:
     g, gate_at, joins = fit(plan())
@@ -123,8 +144,17 @@ def main() -> None:
     kit.check_water(g)
     kit.check_paving(g, "H")  # the stairs: the forecourt and the road open onto them
     check(g, door)
+    forecourt(g)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
+    # the forecourt's lamps and the League's sign stand on its paving (kit pieces over the paving piece under them)
+    plants = kit.Sheet("forecourt_lamps", kit.PALS["plants"], kit.BANK["plants"], HERE, HERE, cols=2)
+    for name, (_, grounds) in FORECOURT_LAMPS.items():
+        plants.add(name, kit.lamp(), tileset="secondary", ground=grounds, solid=True)
+    spec_mt += plants.write()
+    wood = kit.Sheet("forecourt_sign", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=1)
+    wood.add("sign@paving#15", kit.sign(), tileset="secondary", ground="paving#15", solid=True)
+    spec_mt += wood.write()
     # the rock and cliff pack (bank 9): the tops this route has (by phase, the sides that are top and the inside
     # corners; the pack's recipes count the sides and corners that aren't), the face's columns, the stairs, the rocks
     rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
@@ -165,6 +195,13 @@ def main() -> None:
     legend.update(cliffs.legend(char_of))
     for mask, ch in joins.items():  # the cobble over the joins: open to the south
         legend[ch] = {"name": f"cobble#{mask}", "joins": "="}
+    legend.update(FORECOURT_LEGEND)
+    # the paving counts the gate's front and the cliff's face below it (but not the face's outer ends) as its own, so
+    # it draws no lawn rim along them
+    legend["L"] = {"name": "league_gate_front", "joins": "p"}
+    for ch in ("{", "}", "M", "N", "P"):
+        assert isinstance(legend[ch], str), f"face letter {ch} already joins something"
+        legend[ch] = {"name": legend[ch], "joins": "p"}
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; the gate at {gate_at}, its door {door}")
 

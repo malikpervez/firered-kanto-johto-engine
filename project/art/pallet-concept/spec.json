@@ -4884,6 +4884,57 @@
    }
   },
   {
+   "name": "crate@dock#6",
+   "image": "sheets/dockside.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "dock#6",
+   "solid": true
+  },
+  {
+   "name": "barrel@dock#14",
+   "image": "sheets/dockside.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "dock#14",
+   "solid": true
+  },
+  {
+   "name": "barrel@dock#12",
+   "image": "sheets/dockside.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "dock#12",
+   "solid": true
+  },
+  {
+   "name": "boat_moored",
+   "image": "sheets/dockside.png",
+   "x": 0,
+   "y": 16,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "pond#15",
+   "solid": true,
+   "elevation": 1
+  },
+  {
    "name": "fingerpost",
    "image": "sheets/props_wood.png",
    "x": 0,
@@ -4911,6 +4962,18 @@
    "dedupe": true,
    "tileset": "secondary",
    "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "sign@cobble#6",
+   "image": "sheets/settled_wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#6",
    "solid": true
   }
  ]

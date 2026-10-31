@@ -15,7 +15,8 @@
   "auto": "cobble"
  },
  ":": {
-  "auto": "dirt"
+  "auto": "dirt",
+  "joins": "="
  },
  "~": {
   "auto": "pond",
@@ -173,14 +174,30 @@
  "}": "face_inner_E",
  "]": "face_outer_E",
  "a": {
-  "name": "top2#13+Eon",
+  "name": "top1#15.4+in_SW_face",
   "joins": "C"
  },
  "e": {
-  "name": "top5#14.2+in_SE_face",
+  "name": "top2#13+Eon",
   "joins": "C"
  },
  "f": {
+  "name": "top3#15.2+in_SE_face",
+  "joins": "C"
+ },
+ "i": {
+  "name": "top5#14.2+in_SE_face",
+  "joins": "C"
+ },
+ "j": {
+  "name": "top5#15.2+in_SE_face",
+  "joins": "C"
+ },
+ "m": {
+  "name": "top6#15.4+in_SW_face",
+  "joins": "C"
+ },
+ "t": {
   "name": "top8#13+Estart",
   "joins": "C"
  }

@@ -4489,7 +4489,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#13+Eon": {
+  "top1#15.4+in_SW_face": {
    "ids": [
     679
    ],
@@ -4499,7 +4499,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#14.2+in_SE_face": {
+  "top2#13+Eon": {
    "ids": [
     680
    ],
@@ -4509,7 +4509,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#13+Estart": {
+  "top3#15.2+in_SE_face": {
    "ids": [
     681
    ],
@@ -4519,29 +4519,47 @@
    "elevation": null,
    "open": []
   },
-  "face_inner_E": {
+  "top5#14.2+in_SE_face": {
    "ids": [
-    682,
+    682
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top5#15.2+in_SE_face": {
+   "ids": [
     683
    ],
    "w": 1,
-   "h": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top6#15.4+in_SW_face": {
+   "ids": [
+    684
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top8#13+Estart": {
+   "ids": [
+    685
+   ],
+   "w": 1,
+   "h": 1,
    "solid": true,
    "elevation": null,
    "open": []
   },
   "face_inner_W": {
-   "ids": [
-    684,
-    685
-   ],
-   "w": 1,
-   "h": 2,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "face_middle_1": {
    "ids": [
     686,
     687
@@ -4552,7 +4570,7 @@
    "elevation": null,
    "open": []
   },
-  "face_middle_2": {
+  "face_middle_1": {
    "ids": [
     688,
     689
@@ -4563,7 +4581,7 @@
    "elevation": null,
    "open": []
   },
-  "face_middle_3": {
+  "face_middle_2": {
    "ids": [
     690,
     691
@@ -4574,7 +4592,7 @@
    "elevation": null,
    "open": []
   },
-  "face_outer_E": {
+  "face_middle_3": {
    "ids": [
     692,
     693
@@ -4585,7 +4603,7 @@
    "elevation": null,
    "open": []
   },
-  "face_outer_W": {
+  "face_outer_E": {
    "ids": [
     694,
     695
@@ -4596,10 +4614,19 @@
    "elevation": null,
    "open": []
   },
-  "diglett_cave": {
+  "face_outer_W": {
    "ids": [
     696,
-    697,
+    697
+   ],
+   "w": 1,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "diglett_cave": {
+   "ids": [
     698,
     699,
     700,
@@ -4611,7 +4638,18 @@
     706,
     707,
     708,
-    709,
+    709
+   ],
+   "w": 6,
+   "h": 2,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    8
+   ]
+  },
+  "power_plant": {
+   "ids": [
     710,
     711,
     712,
@@ -4627,18 +4665,7 @@
     722,
     723,
     724,
-    725
-   ],
-   "w": 6,
-   "h": 5,
-   "solid": true,
-   "elevation": null,
-   "open": [
-    26
-   ]
-  },
-  "power_plant": {
-   "ids": [
+    725,
     726,
     727,
     728,
@@ -4742,23 +4769,7 @@
     826,
     827,
     828,
-    829,
-    830,
-    831,
-    832,
-    833,
-    834,
-    835,
-    836,
-    837,
-    838,
-    839,
-    840,
-    841,
-    842,
-    843,
-    844,
-    845
+    829
    ],
    "w": 15,
    "h": 8,
@@ -4771,11 +4782,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 287
+  "secondary": 293
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 206
+  "secondary": 190
  },
  "animations": [
   {
