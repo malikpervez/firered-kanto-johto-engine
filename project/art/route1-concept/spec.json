@@ -4882,6 +4882,18 @@
    ],
    "tileset": "secondary",
    "ground": "dirt#13"
+  },
+  {
+   "name": "sign@dirt#7",
+   "image": "sheets/settled_wood.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "dirt#7",
+   "solid": true
   }
  ]
 }

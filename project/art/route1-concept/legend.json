@@ -137,5 +137,24 @@
  "z": {
   "name": "steps_dirt_E",
   "joins": ":"
+ },
+ "Ⰰ": {
+  "name": "sign@dirt#7",
+  "joins": ":"
+ },
+ "Ⰱ": {
+  "name": "pond#7",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰲ": {
+  "name": "pond#13",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰳ": {
+  "name": "pond#15.1",
+  "joins": "~",
+  "elevation": 1
  }
 }
