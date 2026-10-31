@@ -84,6 +84,11 @@ rect(37, 24, 57, 27, "g")
 rect(36, 24, 36, 27, "b")
 rect(40, 18, 41, 19, "R"); at(50, 17, "o")
 
+# the forest drawn in whole 2x2 trees (the even grid): where its edge falls mid-tree, a hedge of bushes (still solid)
+rect(6, 6, 6, 27, "b")                         # the west side, so the forest ends at column 5
+rect(7, 6, 14, 6, "b"); rect(14, 2, 14, 5, "b")  # behind the gate's roof and beside the stands: it ends at row 5, column 13
+rect(58, 12, 59, 12, "b")                      # over the road into Lavender: it ends at row 11
+
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x % 10) for x in range(W)))
 for y, r in enumerate(g):

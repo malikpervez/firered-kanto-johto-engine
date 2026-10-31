@@ -96,6 +96,7 @@ rect(19, 44, 20, 45, "*")
 
 # the crossroads: the road west to Route 15 (rows 50-53 at the left edge), the pier
 rect(0, 50, 21, 53, ":")
+rect(21, 52, 21, 53, ".")                       # the road's corner by the sea is lawn: only the pier meets the water (the dirt joins the pier's planks)
 rect(22, 50, 24, 51, "d")
 
 # the berry garden south of the road, behind the tree to cut at 12,54

@@ -171,35 +171,60 @@
   "joins": "C"
  },
  "e": {
-  "name": "top3#13+Eon",
+  "name": "top2#7+Wstart",
   "joins": "C"
  },
  "f": {
-  "name": "top3#7+Won",
+  "name": "top3#13+Eon",
   "joins": "C"
  },
  "i": {
-  "name": "top5#15.2+in_SE_face",
+  "name": "top3#7+Won",
   "joins": "C"
  },
  "j": {
-  "name": "top6#15.2+in_SE_face",
+  "name": "top5#15.2+in_SE_face",
   "joins": "C"
  },
  "m": {
-  "name": "top6#15.4+in_SW_face",
+  "name": "top5#7+Won",
   "joins": "C"
  },
  "t": {
-  "name": "top8#13+Estart",
+  "name": "top6#15.2+in_SE_face",
   "joins": "C"
  },
  "u": {
-  "name": "top9#13+Estart",
+  "name": "top6#15.4+in_SW_face",
   "joins": "C"
  },
  "x": {
+  "name": "top8#13+Estart",
+  "joins": "C"
+ },
+ "y": {
+  "name": "top8#15.4+in_SW_face",
+  "joins": "C"
+ },
+ "z": {
+  "name": "top9#13+Estart",
+  "joins": "C"
+ },
+ "<": {
   "name": "top9#7+Wstart",
   "joins": "C"
+ },
+ "ⓣ": {
+  "name": "forest#12"
+ },
+ "ⓤ": {
+  "name": "forest#13"
+ },
+ "ⓥ": {
+  "name": "forest#9"
+ },
+ "Ⰰ": {
+  "name": "field_rock_b@dirt#1",
+  "joins": ":"
  }
 }

@@ -4819,6 +4819,102 @@
    "ground": "grass"
   },
   {
+   "name": "field_rock_c@cobble#14",
+   "image": "sheets/rocks_on_cobble.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#14",
+   "solid": true
+  },
+  {
+   "name": "field_rock_a@cobble#14",
+   "image": "sheets/rocks_on_cobble.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#14",
+   "solid": true
+  },
+  {
+   "name": "field_rock_b@cobble#14",
+   "image": "sheets/rocks_on_cobble.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#14",
+   "solid": true
+  },
+  {
+   "name": "field_rock_b@cobble#15",
+   "image": "sheets/rocks_on_cobble.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#15",
+   "solid": true
+  },
+  {
+   "name": "field_rock_a@cobble#15",
+   "image": "sheets/rocks_on_cobble.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#15",
+   "solid": true
+  },
+  {
+   "name": "field_rock_b@cobble#11",
+   "image": "sheets/rocks_on_cobble.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#11",
+   "solid": true
+  },
+  {
+   "name": "field_rock_c@cobble#11",
+   "image": "sheets/rocks_on_cobble.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#11",
+   "solid": true
+  },
+  {
+   "name": "field_rock_a@cobble#11",
+   "image": "sheets/rocks_on_cobble.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#11",
+   "solid": true
+  },
+  {
    "name": "cycling_gate",
    "image": "sheets/cycling_gate.png",
    "x": 0,

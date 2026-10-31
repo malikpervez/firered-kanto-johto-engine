@@ -8,6 +8,7 @@ A=project/art/route10-concept
 K=project/art/kit/buildings
 PG=project/art/packs/buildings_v0.3/buildings/power_plant  # the remakes pack
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=Route10_Frlg

@@ -4479,24 +4479,42 @@
    "elevation": null,
    "open": []
   },
-  "face_inner_E": {
+  "top4#15.2+in_SE_face": {
    "ids": [
-    678,
-    679
+    678
    ],
    "w": 1,
-   "h": 2,
+   "h": 1,
    "solid": true,
    "elevation": null,
    "open": []
   },
-  "face_inner_W": {
+  "top5#15.4+in_SW_face": {
    "ids": [
-    680,
+    679
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top8#15.2+in_SE_face": {
+   "ids": [
+    680
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top9#15.4+in_SW_face": {
+   "ids": [
     681
    ],
    "w": 1,
-   "h": 2,
+   "h": 1,
    "solid": true,
    "elevation": null,
    "open": []
@@ -4569,42 +4587,24 @@
     700,
     701,
     702,
-    703,
-    704,
-    705,
-    706,
-    707,
-    708,
-    709,
-    710,
-    711,
-    712,
-    713,
-    714,
-    715,
-    716,
-    717,
-    718,
-    719,
-    720,
-    721
+    703
    ],
    "w": 6,
-   "h": 5,
+   "h": 2,
    "solid": true,
    "elevation": null,
    "open": [
-    26
+    8
    ]
   }
  },
  "tiles": {
   "primary": 580,
-  "secondary": 157
+  "secondary": 142
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 82
+  "secondary": 64
  },
  "animations": [
   {

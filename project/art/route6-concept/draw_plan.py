@@ -40,6 +40,7 @@ rect(0, 0, 13, 31, "T")
 rect(52, 0, 55, 31, "T")
 rect(14, 0, 51, 3, "T")
 rect(14, 29, 51, 31, "T")
+rect(16, 29, 36, 29, "g"); rect(37, 29, 39, 29, "."); rect(43, 29, 51, 29, ".")   # the south forest from row 30: whole trees
 rect(37, 0, 44, 5, "F")                       # Saffron's south gate, its door (40-41,5)
 rect(14, 4, 15, 28, "T")
 
@@ -66,6 +67,8 @@ at(20, 11, "o"); at(36, 9, "o"); rect(34, 4, 36, 5, "b"); rect(45, 4, 47, 5, "b"
 # the east lawn: bushes along its edge, flowers
 rect(48, 16, 51, 17, "*"); at(50, 25, "o"); rect(44, 30, 51, 30, "T")
 rect(44, 14, 44, 15, "b"); rect(44, 26, 44, 27, "b")
+rect(43, 30, 43, 31, "b")                     # bushes beside the road out, so the forest east of it starts on whole trees
+rect(36, 0, 36, 3, "b"); rect(45, 0, 45, 3, "b")   # and either side of Saffron's gate (the forest ends on whole trees)
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

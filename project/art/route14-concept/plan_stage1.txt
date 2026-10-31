@@ -50,8 +50,8 @@ TT..::..............o.ssss
 TT..::................ssss
 ::::::::::::::::::::::ddds
 ::::::::::::::::::::::ddds
-::::::::::::::::::::::ssss
-::::::::::::::::::::::ssss
+:::::::::::::::::::::.ssss
+:::::::::::::::::::::.ssss
 TTTTTTTTTTTT.bTTTTTTTTssss
 TTTTTTTTTTTT..TTTTTTTTssss
 TTTTTTTTTT......TTTTTTssss

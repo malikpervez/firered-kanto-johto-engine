@@ -126,9 +126,13 @@ def main() -> None:
         for (dx, dy), mb in zip(ds, behaviors):
             open_.append(f"{dx},{dy}")
             behavior[f"{dx},{dy}"] = mb
-            if letter in UNDER_DOORS:  # the road's piece under the doorway: open to the north and to the other door
-                sides = 1 | sum(bit for bit, ox in ((2, 1), (8, -1)) if (dx + ox, dy) in ds)
-                ground[dy * bw + dx] = f"{UNDER_DOORS[letter]}#{sides}"
+        if letter in UNDER_DOORS:  # the road runs on under the gate's top row, its whole width (a block either
+            # side of the doors), open to the north: the cobbles reach the awning with no grass line
+            dy = ds[0][1]
+            cols = range(min(x for x, _ in ds) - 1, max(x for x, _ in ds) + 2)
+            for cx in cols:
+                sides = 1 | (2 if cx + 1 in cols else 0) | (8 if cx - 1 in cols else 0)
+                ground[dy * bw + cx] = f"{UNDER_DOORS[letter]}#{sides}"
         sh = kit.Sheet(b.name, b.palette, bank, HERE, HERE, cols=bw)
         sh.add(b.name, b.idx, tileset="secondary", ground=ground if len(set(ground)) > 1 else "grass", solid=True,
                open=open_, behaviors=behavior)
@@ -150,6 +154,8 @@ def main() -> None:
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **{k: load(k)[0].name for k in BUILDINGS})
+    for k in UNDER_DOORS:  # the road above the gate doesn't draw its edge against it (the cobbles run under its top)
+        legend[k] = {"name": legend[k], "joins": "="}
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

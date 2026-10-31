@@ -60,6 +60,9 @@ rect(4, 8, 7, 10, "g")
 rect(28, 8, 31, 10, "g")
 rect(3, 12, 6, 13, "*")
 rect(29, 12, 32, 13, "*")
+rect(2, 12, 2, 13, "b"); rect(33, 12, 33, 13, "b")   # bushes beside the flowers: the forest's 2x2 trees end whole
+rect(26, 15, 33, 15, "b"); at(33, 14, "b")      # bushes along the forest's odd top row by the hidden Rare Candy:
+                                                # its trees start whole a row down, the lawn before them stays lawn
 at(9, 9, "S")                                   # the route sign
 at(26, 13, "S")                                 # trainer tips: B to stay in place on the slope
 

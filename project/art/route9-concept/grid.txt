@@ -9,12 +9,12 @@ TTTTTTTTTT:::::::::::::::GIFGIFGIFGIFGIFG....oo......***TTTT
 ====bbbbbb:::::::::::::::KVJKVJKVJKVJKVJK............***TTTT
 ====:::::::::::::::::::::DEADEADEADEADEAD...............TTTT
 ====bbbbbbGIFGIFGIFGI::::GIFGIFGIFGIFGIFG...............TTTT
-TTTTTTTTTTKVJKVJKVJKV::::[NPMPNPMPNPNMNM]...............TTTT
+bbbbbbbbbbKVJKVJKVJKV::::[NPMPNPMPNPNMNM]...............TTTT
 TTTTTTTTTT[MNMNMNPMN]::::[NPMPNPMPNPNMNM]..........b...bTTTT
-TTTTTTTTTT[MNMNMNPMN]::::..o............................TTTT
+TTTTTTTTTT[MNMNMNPMN]::::..o............b...............TTTT
 TTTTTTTTTT..........o::::.............o..__h____________TTTT
 TTTTTTTTTT...........::::::::::::::::::::::::...........TTTT
-TTTTTTTTTT.ggggggggg.::::::::::::::::::::::::...........TTTT
+TTTTTTTTTT.ggggggggg.::::::::::::::::::::::::...........bbbb
 TTTTTTTTTT.ggggggggg.:::::::::::::::::::::::::::::::::::::::
 TTTTTTTTTT.ggggggggg....................::::::::::::::::::::
 TTTTTTTTTT.ggggggggg......gggggggggggggg::::::::::::::::::::
@@ -23,6 +23,6 @@ TTTTTTTTTT.ggggggggg..***.gggggggggggggg.............o..TTTT
 TTTTTTTTTT.ggggggggg..***.gggggggggggggg................TTTT
 TTTTTTTTTT***..o......***.gggggggggggggg................TTTT
 TTTTTTTTTT***...............................bbbbbbb.....TTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTT..............................................TTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

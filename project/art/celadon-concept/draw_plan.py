@@ -50,9 +50,9 @@ def at(x, y, c):
 # the frame: forest, open at the boulevard's two ends; the west band forest and road only
 rect(0, 0, 59, 1, "T")
 rect(0, 38, 59, 39, "T")
-rect(0, 0, 6, 39, "T")
+rect(0, 0, 7, 39, "T")                          # (to x=7: the forest is drawn in whole 2x2 cells)
 rect(58, 0, 59, 39, "T")
-rect(7, 2, 17, 10, "T")                        # the wood behind the store
+rect(7, 2, 17, 11, "T")                        # the wood behind the store (to row 11: whole cells, trunks showing)
 
 # the boulevard: pavements (rows 19 and 24) either side of the road (rows 20-23), open at both edges, where it is
 # cobble as the routes' roads are; the asphalt joins it at columns 7 and 57
@@ -61,8 +61,8 @@ rect(8, 20, 56, 23, "+")
 rect(7, 20, 7, 23, "1")
 rect(57, 20, 57, 23, "2")
 rect(8, 22, 56, 22, "-")                       # the dashed line down the middle (on the row's top edge)
-rect(7, 19, 57, 19, "n")
-rect(7, 24, 57, 24, "u")
+rect(8, 19, 57, 19, "n")
+rect(8, 24, 57, 24, "u")
 for x in (20, 21, 54, 55):                     # the zebra crossings, where Lucky Lane meets the boulevard
     at(x, 19, "7"); at(x, 20, "4"); at(x, 21, "3"); at(x, 22, "3"); at(x, 23, "5"); at(x, 24, "9")
 for x, y in ((14, 21), (33, 21), (44, 23)):
@@ -83,8 +83,7 @@ rect(19, 3, 20, 4, "R")
 rect(22, 4, 28, 6, "*"); rect(34, 9, 39, 10, "*"); rect(27, 8, 28, 9, "R")   # the back garden's beds
 
 # behind the Center: the walled garden, its hedge's gap closed by a tree to cut (50,13)
-rect(45, 2, 57, 2, "T")
-rect(45, 3, 45, 13, "b")
+rect(45, 2, 45, 13, "b")                       # (the forest ends on row 1 here too)
 rect(45, 13, 57, 13, "b")
 at(50, 13, ".")                                # the tree to cut stands here
 rect(47, 4, 55, 11, "*")
@@ -94,7 +93,6 @@ rect(49, 6, 53, 9, ".")
 rect(20, 30, 55, 31, "^")
 rect(20, 25, 21, 29, "^")
 rect(54, 25, 55, 29, "^")
-rect(20, 25, 21, 25, "j"); rect(54, 25, 55, 25, "j")
 rect(27, 30, 28, 31, "/")
 rect(24, 25, 32, 29, "G")                      # the Game Corner, door 28,29
 at(33, 29, "S")                                # its sign
@@ -107,14 +105,13 @@ at(52, 29, "S")                                # trainer tips
 rect(22, 25, 23, 26, "R"); rect(50, 26, 51, 27, "R")
 
 # lamps along the boulevard, on the lawns beside it (a lamp's post's foot at x, y)
-for x, y in ((20, 18), (31, 18), (42, 18), (57, 18), (19, 26), (38, 26), (52, 26)):
+for x, y in ((20, 18), (32, 18), (40, 18), (57, 18), (19, 26), (38, 26), (52, 26)):  # clear of the tutor and the fat man
     rect(x, y - 1, x, y, "l")
 
 # Erika's Gym: a glasshouse in its walled flower garden, the hedge's gap closed by the second tree to cut (12,25)
-rect(7, 25, 18, 25, "b")
-rect(7, 25, 7, 37, "b")
+rect(8, 25, 18, 25, "b")                       # (the forest closes its west side)
 rect(18, 25, 18, 37, "b")
-rect(7, 37, 18, 37, "b")
+rect(8, 37, 18, 37, "b")
 at(12, 25, ".")                                # the tree to cut stands here
 rect(9, 30, 15, 34, "Y")                       # the Gym, door 12,34
 at(14, 35, "S")                                # its sign

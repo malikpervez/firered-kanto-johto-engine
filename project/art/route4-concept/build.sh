@@ -7,6 +7,7 @@ set -e
 A=project/art/route4-concept
 K=project/art/kit/buildings
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=Route4_Frlg

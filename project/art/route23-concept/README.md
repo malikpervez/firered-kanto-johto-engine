@@ -13,7 +13,8 @@ The route is 24×160 blocks, as before. Its joins:
 
 It has, from the south:
 - **the League gate's back**, its doorway out onto the road (warps 2 and 3, the gate's way out, as before): Route 12's
-  north gatehouse, only its doorway open (the double door below it is the map's bottom edge, shut);
+  north gatehouse, only its back half (its roof and doorway) standing here: the forest closes under its roof and
+  carries on into Route 22's, whose own League gate stands beyond it, so no second front door shows at the join;
 - **the badge gates**: six narrow passes through the woods (Cascade, Thunder, Rainbow, Soul, Marsh, Volcano), a
   guard in each pass's east column who stops you without the badge, meadows of tall grass between them;
 - **the lake** past the Soul Badge's gate, crossed by Surf (the Soul Badge lets you use it), its shores;

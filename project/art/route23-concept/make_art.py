@@ -153,7 +153,16 @@ def main() -> None:
     spec_mt += rock.write()
     sh = kit.Sheet(MOUTH.name, MOUTH.palette, CLIFF_BANK, HERE, HERE, cols=MOUTH.idx.shape[1] // 16)
     dx, dy = MOUTH.door
-    sh.add(MOUTH.name, MOUTH.idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
+    # the mouths' raised tops (their top three rows) are set in the cliff top: the gaps round their rim show the
+    # cliff's own top (by the first mouth's phase) rather than grass
+    (mx, my) = min(((x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == "Y"), key=lambda c: (c[1], c[0]))
+    idx = MOUTH.idx.copy()
+    for by in range(3):
+        for bx in range(idx.shape[1] // 16):
+            cell = idx[by * 16:(by + 1) * 16, bx * 16:(bx + 1) * 16]
+            rock = cliffs.top(1 + (mx + bx) % 3 + 3 * ((my + by) % 3), 0)
+            cell[cell == 0] = rock[cell == 0]
+    sh.add(MOUTH.name, idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
            behaviors={f"{dx},{dy}": "MB_NON_ANIMATED_DOOR"})  # an open mouth: you walk in
     spec_mt += sh.write()
     gs = kit.Sheet(GATE.name, GATE.palette, GATE_BANK, HERE, HERE, cols=GATE.idx.shape[1] // 16)

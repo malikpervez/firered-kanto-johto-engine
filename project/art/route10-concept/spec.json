@@ -5287,7 +5287,7 @@
    "solid": true
   },
   {
-   "name": "top2#13+Eon",
+   "name": "top1#15.4+in_SW_face",
    "image": "sheets/rock_cliff.png",
    "x": 112,
    "y": 32,
@@ -5299,7 +5299,7 @@
    "solid": true
   },
   {
-   "name": "top5#14.2+in_SE_face",
+   "name": "top2#13+Eon",
    "image": "sheets/rock_cliff.png",
    "x": 128,
    "y": 32,
@@ -5311,7 +5311,7 @@
    "solid": true
   },
   {
-   "name": "top8#13+Estart",
+   "name": "top3#15.2+in_SE_face",
    "image": "sheets/rock_cliff.png",
    "x": 144,
    "y": 32,
@@ -5323,12 +5323,46 @@
    "solid": true
   },
   {
-   "name": "face_inner_E",
+   "name": "top5#14.2+in_SE_face",
    "image": "sheets/rock_cliff.png",
    "x": 160,
    "y": 32,
-   "w": 1,
-   "h": 2,
+   "banks": [
+    7
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "top5#15.2+in_SE_face",
+   "image": "sheets/rock_cliff.png",
+   "x": 176,
+   "y": 32,
+   "banks": [
+    7
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "top6#15.4+in_SW_face",
+   "image": "sheets/rock_cliff.png",
+   "x": 192,
+   "y": 32,
+   "banks": [
+    7
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "top8#13+Estart",
+   "image": "sheets/rock_cliff.png",
+   "x": 208,
+   "y": 32,
    "banks": [
     7
    ],
@@ -5338,48 +5372,6 @@
   },
   {
    "name": "face_inner_W",
-   "image": "sheets/rock_cliff.png",
-   "x": 176,
-   "y": 32,
-   "w": 1,
-   "h": 2,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "face_middle_1",
-   "image": "sheets/rock_cliff.png",
-   "x": 192,
-   "y": 32,
-   "w": 1,
-   "h": 2,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "face_middle_2",
-   "image": "sheets/rock_cliff.png",
-   "x": 208,
-   "y": 32,
-   "w": 1,
-   "h": 2,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "face_middle_3",
    "image": "sheets/rock_cliff.png",
    "x": 224,
    "y": 32,
@@ -5393,7 +5385,7 @@
    "solid": true
   },
   {
-   "name": "face_outer_E",
+   "name": "face_middle_1",
    "image": "sheets/rock_cliff.png",
    "x": 240,
    "y": 32,
@@ -5407,9 +5399,51 @@
    "solid": true
   },
   {
-   "name": "face_outer_W",
+   "name": "face_middle_2",
    "image": "sheets/rock_cliff.png",
    "x": 0,
+   "y": 64,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    7
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "face_middle_3",
+   "image": "sheets/rock_cliff.png",
+   "x": 16,
+   "y": 64,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    7
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "face_outer_E",
+   "image": "sheets/rock_cliff.png",
+   "x": 32,
+   "y": 64,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    7
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "face_outer_W",
+   "image": "sheets/rock_cliff.png",
+   "x": 48,
    "y": 64,
    "w": 1,
    "h": 2,
@@ -5426,7 +5460,7 @@
    "x": 0,
    "y": 0,
    "w": 6,
-   "h": 5,
+   "h": 2,
    "banks": [
     7
    ],
@@ -5434,10 +5468,10 @@
    "ground": "grass",
    "solid": true,
    "open": [
-    "2,4"
+    "2,1"
    ],
    "behaviors": {
-    "2,4": "MB_NON_ANIMATED_DOOR"
+    "2,1": "MB_NON_ANIMATED_DOOR"
    }
   },
   {

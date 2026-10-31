@@ -67,15 +67,18 @@ COTTAGES = {"1": ("cottage_slate", 11, {2: (48, 56, 72), 4: (88, 104, 128), 5: (
 # shadow) in bank 7's stone (7-9 the bricks, 2 between, 10-11 the kerb, 1 the shadow); the lamps (u) and the sign (t)
 # standing in them; the cobbles, the brick and what stands in it are one material (no kerb between them)
 WALK, LAMP, SIGN, PAVED_SIGN = "%", "@", "!", "/"
+GRASS_SIGN = "\u00a6"  # the kit's sign on its own grass among bushes (settle would set it in the road below)
 PAVED = {"W": "pewter_gym", "X": "house_family_paved", "1": None, "2": None}  # on the paving (None: as named)
-SOLID = set("T#bRoklSBcw_~vrUWYHXZL12" + LAMP + SIGN + PAVED_SIGN) | cliffs.SOLID | set(KFACE.values())
+SOLID = set("T#bRoklSBcw_~vrUWYHXZL12" + LAMP + SIGN + PAVED_SIGN + GRASS_SIGN) | cliffs.SOLID | set(KFACE.values())
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 PROPS = [("litter_bin", 17, 13, "paving#15")]  # by the Museum, beside its lamp (the tileset has room for no more)
 BRICK = {3: 7, 4: 8, 5: 9, 8: 2, 12: 10, 15: 11, 7: 1}
 LEGEND = {WALK: {"pick": ["pewter_brick#15", "pewter_brick#15~1", "pewter_brick#15~2"]},  # the brick, no kerbs
           "=": {"auto": "cobble", "joins": WALK}, "p": {"auto": "paving", "joins": WALK},
+          ":": {"auto": "dirt", "joins": WALK},  # (Route 2's and Route 3's dirt roads come in: no rim at the cobbles)
           LAMP: {"name": "lamp_brick", "joins": WALK}, SIGN: {"name": "sign_brick", "joins": WALK},
-          PAVED_SIGN: {"name": "sign_paving", "joins": WALK}}
+          PAVED_SIGN: {"name": "sign_paving", "joins": WALK},
+          GRASS_SIGN: {"tile": "sign"}}  # (drawn as a 1x1 pattern: settle leaves those as they are)
 
 
 def cottage(idx):
@@ -136,6 +139,14 @@ def fit(g):
     return g
 
 
+def route3_edge(g) -> None:
+    """At the join to Route 3 the face over the road east runs on into Route 3's (no rounded end of its own at the
+    edge). (Route 3's plateau south of the road and the north-east tier's end would need cliff-top pieces the full
+    tileset has no room for.)"""
+    for y in (22, 23):
+        g[y][MAP_W - 1] = "N"
+
+
 def doors(g) -> dict[str, tuple[int, int]]:
     out = {}
     for letter in list(SHARED) + list(OWN):
@@ -184,14 +195,15 @@ def check(g, d) -> None:
             assert (x, y + 1) in town, f"the door of {letter} at ({x},{y}) can't be reached"
     for y in range(MAP_H):
         for x in range(MAP_W):
-            if g[y][x] in "S" + SIGN + PAVED_SIGN:
+            if g[y][x] in "S" + SIGN + PAVED_SIGN + GRASS_SIGN:
                 assert (x, y + 1) in town | yard, f"the sign at ({x},{y}) can't be read"
     assert not set(EAST) & reachable(g, SOUTH[0], set(GUIDE_GATE) | {(43, 24)}), "the road east goes round the guide"
 
 
 def main() -> None:
     g = fit(plan())
-    prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins='p')
+    route3_edge(g)
+    prop_legend, prop_grounds = props.place(g, PROPS, SOLID, joins=WALK)  # the paving's group is the brick's
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)

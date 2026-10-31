@@ -5,6 +5,7 @@
 set -e
 A=project/art/viridianforest-concept
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=ViridianForest_Frlg
@@ -51,7 +52,7 @@ pae map place $M bg 0 26 56 $P       # the trainer tips, each read from the bloc
 pae map place $M bg 4 8 41 $P
 pae map place $M bg 1 14 35 $P
 pae map place $M bg 2 33 24 $P
-pae map place $M bg 5 17 12 $P
-pae map place $M bg 3 24 2 $P        # the exit sign, by the north exit
+pae map place $M bg 5 16 12 $P       # (on the lawn beside the trail)
+pae map place $M bg 3 25 2 $P        # the exit sign, beside the north exit (on the lawn by the trail)
 pae map place $M bg 7 41 55 $P       # the hidden Antidote, in the south-east glade
 pae map place $M bg 6 18 44 $P       # the hidden Potion, in the tall grass west of the trail

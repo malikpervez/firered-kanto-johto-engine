@@ -9,6 +9,7 @@ B=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the city's own
 K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=SaffronCity_Frlg

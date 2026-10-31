@@ -15,7 +15,8 @@
   "auto": "cobble"
  },
  ":": {
-  "auto": "dirt"
+  "auto": "dirt",
+  "joins": "="
  },
  "~": {
   "auto": "pond",
@@ -56,10 +57,23 @@
  "k": "stump",
  "l": "lamp",
  "S": "sign",
- "B": "barrel",
- "c": "crate",
- "O": "boat",
- "w": "well",
+ "B": {
+  "name": "barrel@dock#14",
+  "joins": "d"
+ },
+ "c": {
+  "name": "crate@dock#6",
+  "joins": "d"
+ },
+ "O": {
+  "name": "boat_moored",
+  "joins": "~",
+  "elevation": 1
+ },
+ "w": {
+  "name": "well",
+  "joins": "="
+ },
  "R": {
   "pick": [
    "round_tree",
@@ -127,6 +141,70 @@
  "J": "house_blue",
  "W": "windmill",
  "L": "lab",
- "\u00a1": "fingerpost",
- "\u00a2": "bench_wood_east"
+ "E": {
+  "name": "barrel@dock#12",
+  "joins": "d"
+ },
+ "¹": {
+  "name": "forest#8",
+  "joins": "T"
+ },
+ "²": {
+  "name": "forest#2",
+  "joins": "T"
+ },
+ "³": {
+  "name": "forest#10",
+  "joins": "T"
+ },
+ "¼": {
+  "name": "forest#11",
+  "joins": "T"
+ },
+ "¡": "fingerpost",
+ "¢": "bench_wood_east",
+ "Ⰰ": {
+  "name": "sign@cobble#6",
+  "joins": "="
+ },
+ "Ⰱ": {
+  "name": "pond#12",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰲ": {
+  "name": "pond#4",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰳ": {
+  "name": "pond#15.1",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰴ": {
+  "name": "pond#13.8",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰵ": {
+  "name": "pond#15",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰶ": {
+  "name": "pond#13",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰷ": {
+  "name": "pond#15.2",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰸ": {
+  "name": "pond#11",
+  "joins": "~",
+  "elevation": 1
+ }
 }

@@ -195,6 +195,36 @@
   "name": "top8#13+Eon",
   "joins": "C"
  },
- "\u00a1": "bench_wood_south",
- "\u00a2": "litter_bin"
+ "¡": "bench_wood_south",
+ "¢": "litter_bin",
+ "ǝ": {
+  "pick": [
+   "dirt#15"
+  ],
+  "joins": ":"
+ },
+ "ǣ": {
+  "name": "sign_on_cobble#14",
+  "joins": "="
+ },
+ "ǥ": {
+  "name": "sign_on_cobble#12",
+  "joins": "="
+ },
+ "Ⰰ": {
+  "name": "sign@cobble#11",
+  "joins": "="
+ },
+ "Ⰱ": {
+  "name": "field_rock_b@dirt#15",
+  "joins": ":"
+ },
+ "Ⰲ": {
+  "name": "field_rock_c@dirt#15",
+  "joins": ":"
+ },
+ "Ⰳ": {
+  "name": "field_rock_a@dirt#13",
+  "joins": ":"
+ }
 }

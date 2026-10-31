@@ -15,7 +15,8 @@
   "auto": "cobble"
  },
  ":": {
-  "auto": "dirt"
+  "auto": "dirt",
+  "joins": "="
  },
  "~": {
   "auto": "pond",

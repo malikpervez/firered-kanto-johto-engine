@@ -43,9 +43,11 @@ rect(0, 0, 3, 27, "T")
 rect(56, 0, 59, 27, "T")
 rect(0, 25, 59, 27, "T")
 rect(4, 0, 9, 24, "T")
+rect(10, 25, 55, 25, ".")                     # the south forest starts on an even row (whole trees, no halves)
 rect(0, 8, 3, 10, "=")                        # Cerulean's cobbles (rows 8-10)
 rect(4, 8, 9, 10, "b")                        # the neck: bushes either side of it,
 rect(4, 9, 9, 9, ":")                         # and the tree in it, at 9,9
+rect(0, 11, 9, 11, "b")                       # a hedge under the road in, so the forest below starts on row 12
 
 # the gorge: the northern cliff (its face on rows 4-5), the road, the southern cliff (its top against the road)
 rect(10, 0, 55, 5, "C")
@@ -61,6 +63,7 @@ rect(21, 15, 44, 17, ":")
 rect(25, 13, 40, 14, ".")                     # the outcrop's foot
 at(27, 13, "o"); at(38, 14, "o")
 rect(40, 17, 59, 19, ":")                     # the road out (rows 17-19 at the right edge)
+rect(56, 16, 59, 16, "b")                     # a hedge along it, so the forest north of it ends on row 15
 
 # the west field, below the southern cliff
 rect(11, 16, 19, 22, "g")
@@ -74,6 +77,7 @@ rect(22, 21, 24, 23, "*"); at(41, 23, "o")
 rect(41, 6, 55, 13, ".")
 rect(41, 14, 55, 14, "_")
 at(43, 14, "h")
+at(40, 13, "b")                               # a bush closes the terrace's west end: it is reached up the steps
 rect(53, 6, 55, 8, "*"); at(45, 7, "o"); at(46, 7, "o"); at(51, 12, "b"); at(55, 12, "b")
 
 # south of the road out: a lawn with rocks and a bush row by the forest

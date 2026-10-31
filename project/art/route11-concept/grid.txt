@@ -1,7 +1,7 @@
 TTTTDEADEADEADEADEADEADEADEADEATTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 TTTTGIFGIFGIFGIFGIFGIFGIFGIFGIFTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTTKVJKVJKVJKYYYYYYVJKVJKVJKVJTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-TTTT[MPMNMNMP}YYYYYY{MNMNMNMPM].........................TTTT
+TTTTKVJKVJKVJKYYYYYYVJKVJKVJKVJT........TTTTTTTTTTTTTTTTTTTT
+TTTT[MPMNMNMP}YYYYYY{MNMNMNMPM].........TTTTTTTTTTTTTTTTTTTT
 TTTT[MPMNMNMP}YYYYYY{MNMNMNMPM].ggggggggggggggg.........TTTT
 TTTT..........YYYYYY........**..ggggggggggggggg.........TTTT
 TTTT.........SYYYYYY........**..ggggggggggggggg.........TTTT
@@ -14,12 +14,12 @@ TTTT.*****....................o...................XXXXXXXXTT
 TTTT..............................................XXXXXXXXTT
 ====::::::::::::::::::::::::::::::::::::::::::::..XXXXXXXXTT
 ====::::::::::::::::::::::::::::::::::::::::::::..XXXXXXXXTT
-====::::::::::::::::::::::::::::::::::::::::::::........TTTT
+====::::::::::::::::::::::::::::::::::::::::::::........bbbb
 ====::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 TTTTbbbbbbbb.bbbbbbbbbbbbb.bbbbbbbbb.bbbb...::::::::::::::::
 TTTT........................................::::::::::::::::
-TTTT..ggggggggggggggggggggggggggg.......................TTTT
-TTTT..ggggggggggggggggggggggggggg...***.................TTTT
+TTTT..ggggggggggggggggggggggggggg...........::::::::::::::::
+TTTT..ggggggggggggggggggggggggggg...***.................bbbb
 TTTT..ggggggggggggggggggggggggggg...***...~~~~~~~~~~~~o.TTTT
 TTTT..ggggggggggggggggggggggggggg.........~~~~~~~~~~~~..TTTT
 TTTT..ggggggggggggggggggggggggggg.........~~~~~~~~~~~~..TTTT

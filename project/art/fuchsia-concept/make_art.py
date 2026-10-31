@@ -36,11 +36,12 @@ MAP_W, MAP_H = 48, 40
 HOUSE_BANK, TOWN_BANK = 7, 9
 WEST = [(0, y) for y in range(18, 21)]
 EAST = [(MAP_W - 1, y) for y in range(20, 24)]
-SOUTH = [(x, MAP_H - 1) for x in range(19, 29)]
+SOUTH = [(x, MAP_H - 1) for x in range(18, 30)]
 SOLID = set("T#bRoklSBcw_~vrAGZLOWHJK")
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
-PROPS = [("statue_guardian", 18, 8, "paving#15"), ("flower_tub", 21, 7, "paving#15"), ("flower_tub", 25, 7, "paving#15"),
-         ("bench_stone", 21, 13, "paving#15"), ("bench_stone", 25, 13, "paving#15"), ("litter_bin", 21, 17, "paving#15")]
+# (the statue stands on the plaza's west edge, its NW block on the edge piece; the bin on the avenue's SW corner)
+PROPS = [("statue_guardian", 18, 8, ["paving#7", "paving#15", "paving#15", "paving#15"]), ("flower_tub", 21, 7, "paving#15"), ("flower_tub", 25, 7, "paving#15"),
+         ("bench_stone", 21, 13, "paving#15"), ("bench_stone", 25, 13, "paving#15"), ("litter_bin", 21, 17, "paving#3")]
 DOOR, BACK = "MB_ANIMATED_DOOR", "MB_SOUTH_ARROW_WARP"
 # the buildings: their letters in the plan, their packs, their banks, and what each of their doors does (the house
 # with the pond garden has a back door, entered walking south from the garden)
@@ -202,6 +203,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k)[0].name for k in BUILDINGS})
     legend.update(prop_legend)
+    legend[":"] = {"auto": "dirt", "joins": "p"}  # the zoo's west walk runs straight onto the plaza's paving
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

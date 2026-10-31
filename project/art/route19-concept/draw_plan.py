@@ -37,11 +37,11 @@ def tree(x, y):
 
 # the sea: everything below the beach
 rect(0, 10, 23, 59, "s")
-rect(0, 10, 1, 19, "T")                         # the woods come down to the water either side at first
-rect(22, 10, 23, 19, "T")
+rect(0, 4, 1, 19, "s")                          # the woods end above the beach: the sea runs on past the edges into
+rect(22, 4, 23, 19, "s")                        # the border's, so no trees stand cut off by the edge over open water
 
 # Fuchsia's beach path (its columns 18-29: here 6-17), the beach under the woods
-rect(6, 0, 17, 3, ":")
+rect(6, 0, 17, 3, ":")                          # Fuchsia's beach path, 12 wide (its columns 18-29), down to the beach
 rect(2, 4, 21, 9, ".")
 rect(2, 4, 4, 5, "*")
 rect(19, 4, 21, 5, "*")

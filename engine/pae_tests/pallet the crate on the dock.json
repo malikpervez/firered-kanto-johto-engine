@@ -1,0 +1,45 @@
+{
+ "note": "Stand on Pallet's dock beside the crate and walk west into it (polish pass, KR-96): the settle step draws the crate on the dock's own planks and the water runs up to the dock, but the crate still stops you.",
+ "created": "2026-10-31 03:20",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 20,
+  "y": 20,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     24
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 20,
+  "y": 20,
+  "in_battle": false
+ },
+ "accepted": "2026-10-31 03:15"
+}

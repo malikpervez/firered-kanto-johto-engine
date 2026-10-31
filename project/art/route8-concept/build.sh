@@ -8,6 +8,7 @@ A=project/art/route8-concept
 V=project/art/viridian-concept/buildings
 R2=project/art/route2-concept/buildings
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=Route8_Frlg

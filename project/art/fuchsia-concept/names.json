@@ -4347,6 +4347,16 @@
    "solid": true,
    "elevation": null,
    "open": []
+  },
+  "sign@dirt#5": {
+   "ids": [
+    786
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
   }
  },
  "tiles": {
@@ -4355,7 +4365,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 146
+  "secondary": 147
  },
  "animations": [
   {

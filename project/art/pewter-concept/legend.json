@@ -16,7 +16,8 @@
   "joins": "%"
  },
  ":": {
-  "auto": "dirt"
+  "auto": "dirt",
+  "joins": "%"
  },
  "~": {
   "auto": "pond",
@@ -247,8 +248,11 @@
   "name": "sign_paving",
   "joins": "%"
  },
+ "\u00a6": {
+  "tile": "sign"
+ },
  "\u00a1": {
   "name": "litter_bin",
-  "joins": "p"
+  "joins": "%"
  }
 }

@@ -4769,10 +4769,30 @@
    "elevation": null,
    "open": []
   },
+  "sign_on_cobble#12": {
+   "ids": [
+    809
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign_on_cobble#14": {
+   "ids": [
+    810
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "bench_wood_south": {
    "ids": [
-    809,
-    810
+    811,
+    812
    ],
    "w": 2,
    "h": 1,
@@ -4782,7 +4802,47 @@
   },
   "litter_bin": {
    "ids": [
-    811
+    813
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "sign@cobble#11": {
+   "ids": [
+    814
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_b@dirt#15": {
+   "ids": [
+    815
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_c@dirt#15": {
+   "ids": [
+    816
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "field_rock_a@dirt#13": {
+   "ids": [
+    817
    ],
    "w": 1,
    "h": 1,
@@ -4797,7 +4857,7 @@
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 172
+  "secondary": 178
  },
  "animations": [
   {

@@ -42,7 +42,7 @@ rect(0, 58, 37, 59, "T")
 
 # the north clearing
 rect(2, 2, 17, 8, "C")                         # the ridge Rock Tunnel's north mouth is set in (its face on rows 7-8)
-rect(6, 4, 11, 8, "Y")                         # the mouth, door 8,8
+rect(6, 7, 11, 8, "Y")                         # the mouth in the ridge's face, door 8,8 (the top runs on over it)
 at(12, 9, "S")                                 # the Rock Tunnel sign, read from 12,10
 rect(18, 2, 18, 10, "b")                       # the meadow's west hedge
 rect(19, 2, 27, 10, "g")                       # the meadow
@@ -50,6 +50,7 @@ rect(18, 11, 27, 11, "b")                      # its south hedge, with the young
 rect(20, 11, 23, 11, ".")
 rect(12, 12, 16, 15, "Z")                      # the Pokémon Center, door 14,15
 rect(0, 17, 13, 19, ":")                       # Route 9's road (rows 17-19)
+rect(0, 16, 1, 16, "b")                        # a hedge along it at the join, as on Route 9 (the forest ends on row 15)
 rect(13, 16, 15, 19, ":")                      # and up to the Center's door
 rect(3, 23, 7, 25, "*"); rect(20, 20, 24, 22, "*"); at(4, 13, "o"); at(24, 26, "o")
 at(26, 15, "S")                                # the Power Plant sign, by the river, read from 26,16
@@ -57,23 +58,27 @@ rect(2, 27, 27, 27, "b")                       # bushes along the mountains' foo
 
 # the river (it can be surfed) and the lake with the plant's island
 rect(28, 2, 31, 30, "~")
-rect(32, 2, 35, 30, "T")
+rect(32, 2, 35, 29, "T")                       # (whole trees: the forest ends on an odd row)
 rect(2, 28, 21, 45, "C")                       # the mountains across the middle (their face on rows 44-45)
-rect(22, 28, 27, 30, "T")
+rect(22, 28, 27, 29, "T")
+rect(22, 30, 27, 30, "~"); rect(32, 30, 35, 30, "~")   # the lake comes up to the trees' trunks
 rect(20, 31, 35, 44, "~")                      # the lake
 rect(20, 34, 35, 44, ".")                      # the island, the lake's south half: the lake (rows 31-33) is north of it
 rect(21, 34, 35, 41, "X")                      # the Power Plant, door 28,41
 at(21, 43, "*"); at(22, 43, "*"); at(35, 44, "o")
-rect(20, 45, 35, 49, "T")                      # the lake's south shore: forest, so the valley can't be reached by water
+rect(20, 45, 35, 45, ".")                      # the island's south lawn...
+rect(20, 46, 35, 49, "T")                      # ...and the lake's south shore: forest (whole trees, from an even row), so the valley can't be reached by water
 
 # the south valley: Rock Tunnel's south mouth at the mountains' foot, the road down to Lavender
-rect(8, 41, 13, 45, "Y")                       # the south mouth, door 10,45
+rect(8, 44, 13, 45, "Y")                       # the south mouth in the mountains' face, door 10,45
 rect(2, 46, 19, 57, ".")
 rect(20, 50, 35, 57, ".")
 at(14, 46, "S")                                # its sign, read from 14,47
 rect(10, 46, 12, 50, ":")                      # the road from the mouth
 rect(10, 50, 20, 52, ":")
 rect(16, 52, 20, 59, ":")                      # down to Lavender (16-20)
+rect(16, 57, 20, 59, "=")                      # its last blocks Lavender's cobbles, so the two meet inside the route
+rect(21, 58, 21, 59, "b")                      # bushes right of the road at the join, as on Lavender's side (its 17,0-1)
 rect(3, 53, 8, 56, "g"); rect(23, 51, 33, 56, "g")
 rect(2, 46, 7, 47, "*"); at(5, 49, "o"); at(33, 50, "o"); at(14, 56, "o")
 

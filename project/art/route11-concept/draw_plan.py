@@ -5,7 +5,7 @@ python3 project/art/route11-concept/draw_plan.py
 
 Route 11 is the road east out of Vermilion to the gatehouse before Route 12:
 - **the road**, Vermilion's cobbles carried on (rows 14-17 at the left edge, where its main street meets it), a dirt
-  road east to Route 12 (rows 17-19 at the right edge). No trainer's sight is on it: Route 11's are for those who
+  road east to Route 12 (rows 17-20 at the right edge). No trainer's sight is on it: Route 11's are for those who
   go looking;
 - **Diglett's Cave** in the north-west, its mouth (Route 2's: the same cave) set into a rock ridge, its sign by it;
 - **the Friends' clearing** east of the cave (their camp at 25,7, as before);
@@ -42,10 +42,13 @@ rect(4, 0, 30, 4, "C")
 rect(14, 2, 19, 6, "Y")                       # Diglett's Cave, door (16,6)
 at(13, 6, "S")                                # its sign, read from (13,7)
 
-# the road: cobbles in from Vermilion (rows 14-17), dirt east to Route 12 (rows 17-19)
+# the road: cobbles in from Vermilion (rows 14-17), dirt east to Route 12 (rows 17-20 at the edge, as Route 12's)
 rect(0, 14, 3, 17, "=")
 rect(4, 14, 47, 17, ":")
 rect(44, 17, 59, 19, ":")
+rect(56, 16, 59, 16, "b")                      # a hedge along the road below the gatehouse (no half trees over it)
+rect(44, 20, 59, 20, ":")                      # the road east is four rows wide (17-20), as Route 12's that it meets,
+rect(56, 21, 59, 21, "b")                      # a hedge along its south side before the forest
 
 # the Friends' clearing (their camp at 25,7), the north grass, flowers and rocks
 rect(21, 5, 28, 9, ".")

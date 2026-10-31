@@ -218,6 +218,12 @@ def main() -> None:
         spec_mt += sh.write()
     prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
     spec_mt += prop_entries
+    # the kit's well stands on dirt and its barrel and crate on dock planks; here the well stands in the square's
+    # paving and the barrels and crates on the lawn, so they get their own copies over that ground
+    kit_mt = {e["name"]: e for e in base["metatiles"]}
+    for name, new, ground in (("well", "well_cobble", "cobble#15"), ("barrel", "barrel_lawn", "grass"),
+                              ("crate", "crate_lawn", "grass")):
+        spec_mt.append(dict(kit_mt[name], name=new, tileset="secondary", ground=ground))
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -235,6 +241,10 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: v[0] for k, v in OWN.items()})
     legend.update(prop_legend)
+    # the dirt paths run into the cobble roads with no grass rim between; the well sits in the paving
+    legend[":"] = {"auto": "dirt", "joins": "="}
+    legend["w"] = {"name": "well_cobble", "joins": "="}
+    legend["B"], legend["c"] = "barrel_lawn", "crate_lawn"
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(doors(g), indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {doors(g)}")

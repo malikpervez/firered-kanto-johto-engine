@@ -143,6 +143,49 @@ def check(g, d) -> None:
     assert {g[y][x] for y in range(MAP_H - STRIP, MAP_H) for x in range(MAP_W)} == {"T", "="}, "Route 17's strip"
 
 
+ROAD_ROCKS = [(x, y) for y in (22, 23, 25) for x in range(43, 46)]  # the outcrops either side of Snorlax's gap
+ROCK_CHARS = iter("ǎǐǒǔǖǘǚǜǟǡ")
+MOUTH = [(x, 27) for x in range(12, 18)]   # the plaza's paving opening into the road down to Cycling Road...
+MOUTH_TO = [(x, 28) for x in range(12, 18)]  # ...and the paving's change to its cobble, a row below
+# the plaza's paving and the road's cobble run up to the lower hall's doorways (28,24 and 35,24)
+DOORSTEPS = {(27, 24): ("Ǣ", {"name": "paving#15", "joins": "p"}), (36, 24): ("Ǥ", {"name": "cobble#15", "joins": "="})}
+
+
+def rock_name(x: int, y: int) -> str:
+    """The rock "o" picks at (x, y) (as pae map paint picks)."""
+    return kit.ROCKS[(x * 7919 + y * 104729 + (x * y) % 13) % len(kit.ROCKS)]
+
+
+def settle_road(g) -> tuple[dict, list]:
+    """The rocks in the road stand on its cobble (each over the cobble pae would draw there, the rocks counted as
+    cobble, and cobble for the cobble round them, so it draws no lawn rim round them); the paving opens into the road
+    to Cycling Road and turns to cobble a row down; the doorsteps of the lower hall."""
+    legend, made = {}, {}
+    sh = kit.Sheet("rocks_on_cobble", kit.PALS["ground"], kit.BANK["ground"], HERE, HERE, cols=4)
+    same = lambda xx, yy: g[yy][xx] == "=" or (xx, yy) in ROAD_ROCKS
+    for x, y in ROAD_ROCKS:
+        assert g[y][x] == "o", f"no rock at ({x},{y})"
+        mask = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
+        name = f"{rock_name(x, y)}@cobble#{mask}"
+        if name not in made:
+            made[name] = next(ROCK_CHARS)
+            sh.add(name, kit.field_rock(rock_name(x, y)), tileset="secondary", ground=f"cobble#{mask}", solid=True)
+            legend[made[name]] = {"name": name, "joins": "="}
+    for x, y in ROAD_ROCKS:
+        mask = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
+        g[y][x] = made[f"{rock_name(x, y)}@cobble#{mask}"]
+    for (x, y), (ch, item) in DOORSTEPS.items():
+        assert g[y][x] == item["joins"]
+        g[y][x] = ch
+        legend[ch] = item
+    for (x, y), (x2, y2) in zip(MOUTH, MOUTH_TO):
+        assert g[y][x] == "p" and g[y2][x2] == "="
+        g[y][x], g[y2][x2] = "ǽ", "ǿ"
+    legend["ǽ"] = {"name": "paving#15", "joins": "p"}
+    legend["ǿ"] = {"name": "paving_to_cobble_S", "joins": "="}
+    return legend, sh.write()
+
+
 def main() -> None:
     g = plan()
     d = doors(g)
@@ -150,8 +193,9 @@ def main() -> None:
     kit.check_water(g)
     kit.check_paving(g)
     check(g, d)
+    road_legend, road_mt = settle_road(g)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
-    spec_mt = list(base["metatiles"])
+    spec_mt = list(base["metatiles"]) + road_mt
     pals = {}
     for letter, (folder, bank, behaviors) in BUILDINGS.items():
         b, ds = load(letter)
@@ -181,7 +225,7 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, **{k: load(k)[0].name for k in BUILDINGS})
+    legend = dict(kit.LEGEND, **{k: load(k)[0].name for k in BUILDINGS}, **road_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

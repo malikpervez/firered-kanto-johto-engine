@@ -6,6 +6,7 @@ set -e
 A=project/art/route2-concept
 V=project/art/viridian-concept
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=Route2_Frlg

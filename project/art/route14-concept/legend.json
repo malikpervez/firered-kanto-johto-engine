@@ -29,7 +29,8 @@
   "auto": "fence"
  },
  "d": {
-  "auto": "dock"
+  "auto": "dock",
+  "joins": ":"
  },
  "*": {
   "pick": [
@@ -121,6 +122,16 @@
   "auto": "sea",
   "joins": "s",
   "with": "rock_b",
+  "elevation": 1
+ },
+ "Ⰰ": {
+  "name": "sea#7",
+  "joins": "s",
+  "elevation": 1
+ },
+ "Ⰱ": {
+  "name": "sea#15",
+  "joins": "s",
   "elevation": 1
  }
 }

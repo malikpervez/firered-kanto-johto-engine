@@ -9,6 +9,7 @@ B=project/art/cinnabar-concept/buildings
 R=project/art/packs/buildings_v0.3/buildings  # the remakes pack: the Gym and the Lab
 K=project/art/kit/buildings
 python3 $A/make_art.py
+python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
 cd engine
 P="-p ."
 M=CinnabarIsland_Frlg

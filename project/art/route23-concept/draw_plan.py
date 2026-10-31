@@ -70,6 +70,6 @@ rect(2, 4, 21, 19, ".")
 rect(4, 6, 8, 10, "g")
 rect(15, 12, 20, 17, "g")
 rect(13, 5, 17, 7, "*")
-rect(10, 0, 13, 3, ".")
+rect(10, 0, 13, 3, "=")                        # (Indigo Plateau's cobbles run on over the join and end here)
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

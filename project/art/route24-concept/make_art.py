@@ -114,7 +114,9 @@ def main() -> None:
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
-    (HERE / "border.txt").write_text("~~\n~~\n")
+    # the camera past the side edges shows the border: forest, as the forest along both edges carries on (Route 25
+    # and Cerulean have it too); the lake's water there ran off the side past trees cut flat
+    (HERE / "border.txt").write_text("TT\nTT\n")
     (HERE / "legend.json").write_text(json.dumps(dict(kit.LEGEND), indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")
 

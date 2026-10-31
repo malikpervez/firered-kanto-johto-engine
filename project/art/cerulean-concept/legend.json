@@ -16,7 +16,8 @@
   "joins": "%"
  },
  ":": {
-  "auto": "dirt"
+  "auto": "dirt",
+  "joins": "%"
  },
  "~": {
   "auto": "pond",
@@ -30,7 +31,8 @@
   "auto": "fence"
  },
  "d": {
-  "auto": "dock"
+  "auto": "dock",
+  "joins": "%"
  },
  "*": {
   "pick": [
@@ -164,6 +166,10 @@
   "name": "sign_paving",
   "joins": "%"
  },
+ "!": {
+  "name": "sign_brick",
+  "joins": "%"
+ },
  "%": {
   "pick": [
    "cerulean_brick#15",
@@ -254,5 +260,15 @@
  "j": {
   "name": "bridge_ns_1_south",
   "joins": "%"
+ },
+ "Ⰰ": {
+  "name": "pond#15",
+  "joins": "~",
+  "elevation": 1
+ },
+ "Ⰱ": {
+  "name": "pond#11",
+  "joins": "~",
+  "elevation": 1
  }
 }

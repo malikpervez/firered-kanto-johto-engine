@@ -32,7 +32,7 @@ VB = ART / "viridian-concept/buildings"
 TOWER = buildings.REMAKES / "pokemon_tower"
 NORTH = [(x, 0) for x in range(12, 17)]
 WEST = [(0, y) for y in range(9, 12)]
-SOUTH = [(x, MAP_H - 1) for x in range(13, 16)]
+SOUTH = [(x, MAP_H - 1) for x in range(12, 16)]
 CAMP = [(13, 13), (12, 12), (11, 13), (14, 12), (12, 14), (10, 14), (15, 13)]  # the Friends', as before
 SOLID = set("T#bRoklSBcw_~vrZLXHUW")
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
@@ -103,6 +103,32 @@ def check(g, d) -> None:
     assert set(CAMP) <= town, "the Friends' camp must be open ground"
 
 
+GARDEN_STONES = [(23, 14), (26, 14), (29, 14), (32, 14)]  # the garden of remembrance's stones, in its flowers
+STONE_CHARS = iter("ǎǐǒǔ")
+
+
+def pick(names, x: int, y: int) -> str:
+    """The piece a "pick" letter draws at (x, y) (as pae map paint picks)."""
+    return names[(x * 7919 + y * 104729 + (x * y) % 13) % len(names)]
+
+
+def garden_stones(g) -> tuple[dict, list]:
+    """The garden's stones stand in its flowers: each the kit's rock over the flowers the bed has there."""
+    legend, made = {}, {}
+    sh = kit.Sheet("garden_stones", kit.PALS["ground"], kit.BANK["ground"], HERE, HERE, cols=4)
+    flowers = kit.LEGEND["*"]["pick"]
+    for x, y in GARDEN_STONES:
+        assert g[y][x] == "o", f"no stone at ({x},{y})"
+        rock, ground = pick(kit.ROCKS, x, y), pick(flowers, x, y)
+        name = f"{rock}@{ground}"
+        if name not in made:
+            made[name] = next(STONE_CHARS)
+            sh.add(name, kit.field_rock(rock), tileset="secondary", ground=ground, solid=True)
+            legend[made[name]] = name
+        g[y][x] = made[name]
+    return legend, sh.write()
+
+
 def main() -> None:
     g = plan()
     prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
@@ -110,8 +136,9 @@ def main() -> None:
     kit.check_forest(g)
     kit.check_water(g)
     check(g, d)
+    stone_legend, stone_mt = garden_stones(g)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
-    spec_mt = list(base["metatiles"])
+    spec_mt = list(base["metatiles"]) + stone_mt
     pals = {}
     for letter, (folder, bank) in list(OWN.items()) + [("X", (TOWER, TOWER_BANK))]:
         b = load(letter)
@@ -141,6 +168,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **SHARED, X="pokemon_tower", **{k: load(k).name for k in OWN})
     legend.update(prop_legend)
+    legend.update(stone_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

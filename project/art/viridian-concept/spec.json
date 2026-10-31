@@ -4993,6 +4993,61 @@
    "tileset": "secondary",
    "ground": "grass",
    "solid": true
+  },
+  {
+   "name": "well_cobble",
+   "image": "../kit/sheets/wood.png",
+   "x": 80,
+   "y": 32,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "cobble#15",
+   "solid": true
+  },
+  {
+   "name": "barrel_lawn",
+   "image": "../kit/sheets/wood.png",
+   "x": 16,
+   "y": 32,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "crate_lawn",
+   "image": "../kit/sheets/wood.png",
+   "x": 32,
+   "y": 32,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "lamp@cobble#6+cobble#7",
+   "image": "sheets/settled_plants.png",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 2,
+   "banks": [
+    8
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "cobble#6",
+    "cobble#7"
+   ],
+   "solid": true
   }
  ]
 }

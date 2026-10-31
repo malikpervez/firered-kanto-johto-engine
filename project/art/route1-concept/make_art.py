@@ -20,6 +20,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
+import fields
 import kit
 
 HERE = Path(__file__).resolve().parent
@@ -61,8 +62,9 @@ def layout() -> tuple[list[list[str]], dict]:
     put("_", 10, 9, 30, 1)
     put("_", 20, 17, 20, 1)
     put("_", 10, 26, 30, 1)
-    for y in (9, 17, 26):
-        put("h", 24, y, 2, 1)
+    for y in (9, 17, 26):  # (the road's own steps: on its dirt, which runs up to them)
+        put("y", 24, y)
+        put("z", 25, y)
     # tall grass (never right under a ledge: you land on lawn)
     # (rows 0-6 are what Viridian shows across the join: no tall grass there, its palette has no slot in Viridian)
     put("g", 11, 7, 9, 2)
@@ -83,6 +85,8 @@ def layout() -> tuple[list[list[str]], dict]:
     # the stream from the pond west, then south, and the side path over it on a little bridge
     put("~", 10, 16, 2, 1)
     put("~", 10, 17, 2, 18)
+    put("~", 10, 33, 3, 3)  # it ends in a little pool under the forest, reeds in its middle
+    put("r", 11, 34)
     put(":", 12, 31, 12, 2)
     put("d", 10, 31, 2, 2)
     put(".", 4, 28, 6, 8)  # a clearing in the forest across the bridge
@@ -106,7 +110,7 @@ def layout() -> tuple[list[list[str]], dict]:
     for x, y in ((4, 33), (5, 34), (8, 29)):
         put("*", x, y)
     # where the road leaves Pallet: a fence with an arch over the road
-    put("#", 10, 35, 13, 1)
+    put("#", 13, 35, 10, 1)
     put("#", 27, 35, 13, 1)
     put("A", 23, 34, 4, 2)
     signs = {"RouteSign": (23, 33)}
@@ -125,9 +129,15 @@ def main() -> None:
     own = kit.Sheet("route", PALS["route"], BANK["route"], HERE, HERE, cols=4)
     own.add("shelter", SHELTER.idx, tileset="secondary", ground="grass", solid=True)
     # the road goes under the arch (its middle two columns); its top row is drawn over the player
-    own.add("arch", ARCH.idx, tileset="secondary", ground="dirt#15", solid=True, open=["1,0", "2,0", "1,1", "2,1"],
-            over_rows=1)
+    # (on the lawn, the road's two blocks under its middle with their edges, so only the road shows under it)
+    own.add("arch", ARCH.idx, tileset="secondary", ground=["grass", "dirt#7", "dirt#13", "grass"] * 2, solid=True,
+            open=["1,0", "2,0", "1,1", "2,1"], over_rows=1)
     spec_mt += own.write()
+    # the road's steps through the ledges, on its dirt (the kit's are on the lawn)
+    steps = kit.Sheet("steps_dirt", kit.P0, 0, HERE, HERE, cols=2)
+    steps.add("steps_dirt_W", fields.steps(2), tileset="secondary", ground="dirt#7")
+    steps.add("steps_dirt_E", fields.steps(8), tileset="secondary", ground="dirt#13")
+    spec_mt += steps.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
@@ -143,7 +153,13 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, P="shelter", A="arch")
+    # (the dirt first: the ground kit/settle.py gives a piece standing by the road is the road's group's first)
+    legend = {":": None, **dict(kit.LEGEND, P="shelter")}
+    # the road runs on through the arch, over its steps and onto the bridge's planks without its edge, and on from
+    # Viridian's cobbles (no lawn rim across the road where they meet)
+    legend.update({"=": {"auto": "cobble", "joins": ":"}, "A": {"name": "arch", "joins": ":"},
+                   "y": {"name": "steps_dirt_W", "joins": ":"}, "z": {"name": "steps_dirt_E", "joins": ":"},
+                   "d": {"auto": "dock", "joins": ":"}})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "signs.json").write_text(json.dumps(signs, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")

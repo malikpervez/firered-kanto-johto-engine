@@ -6,11 +6,12 @@ The sea route south from Fuchsia City. It is rebuilt from the kit (`../kit`). Th
 ![The map](map.png)
 
 The route is 24×60 blocks, as before. Its joins stay where they were:
-- Fuchsia's beach path (its columns 18–29) comes down onto the top edge at columns 6–17 (offset −12);
+- Fuchsia's beach path (its columns 18–29) comes down onto the top edge at columns 6–17 (offset −12): its dirt
+  (columns 7–16 here) between Fuchsia's two hedges, which come on down to the beach;
 - Route 20's sea (its rows 0–18) meets the left edge at rows 41–59 (offset 41).
 
 It has:
-- **the beach** at the foot of Fuchsia's path, between the woods: its flowers, the route sign, Reece and Richard
+- **the beach** at the foot of Fuchsia's path, below the woods, open to the sea either side: its flowers, the route sign, Reece and Richard
   resting on it before they go in;
 - **the jetty** out from the beach, where you start to surf;
 - **the channel** south between the rocks, Tony, David, Matthew and Douglas swimming in it; **the sandbar islet**

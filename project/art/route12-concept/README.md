@@ -7,7 +7,7 @@ they are.
 ![The map](map.png)
 
 The route is 38×80 blocks (old Route 12 was 38×90). Its joins stay where they were:
-- Lavender's road south (its columns 13–15) comes in at the top edge, columns 10–13 (offset −2, KR-50);
+- Lavender's road south (its columns 13–15) comes in at the top edge, columns 10–13 (offset −2, KR-50), and its cobbles carry on to the gatehouse's back;
 - Route 11's road (its rows 17–19) at the left edge, rows 44–47 (offset 27);
 - Route 13's boardwalk (its columns 86–89) leaves the bottom edge at columns 21–24 (offset −65).
 
