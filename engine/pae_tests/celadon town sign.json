@@ -3,7 +3,7 @@
  "created": "2026-10-26 17:00",
  "start": {
   "map": "CeladonCity_Frlg",
-  "x": 55,
+  "x": 56,
   "y": 19,
   "state": [],
   "script": null
@@ -47,9 +47,9 @@
  "threshold": 0.01,
  "expect": {
   "map": "CeladonCity_Frlg",
-  "x": 55,
+  "x": 56,
   "y": 19,
   "in_battle": false
  },
- "accepted": "2026-10-29 02:24"
+ "accepted": "2026-11-01 00:07"
 }
