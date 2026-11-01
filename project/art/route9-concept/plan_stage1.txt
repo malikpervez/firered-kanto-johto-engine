@@ -10,8 +10,8 @@ TTTTTTTTTT:::::::::::::::CCCCCCCCCCCCCCCC....oo......***TTTT
 ====:::::::::::::::::::::CCCCCCCCCCCCCCCC...............TTTT
 ====bbbbbbCCCCCCCCCCC::::CCCCCCCCCCCCCCCC...............TTTT
 bbbbbbbbbbCCCCCCCCCCC::::CCCCCCCCCCCCCCCC...............TTTT
-TTTTTTTTTTCCCCCCCCCCC::::CCCCCCCCCCCCCCCC..........b...bTTTT
-TTTTTTTTTTCCCCCCCCCCC::::..o............b...............TTTT
+TTTTTTTTTTCCCCCCCCCCC::::CCCCCCCCCCCCCCCC.....**...b...bTTTT
+TTTTTTTTTTCCCCCCCCCCC::::..o............b.....**........TTTT
 TTTTTTTTTT..........o::::.............o..__h____________TTTT
 TTTTTTTTTT...........::::::::::::::::::::::::...........TTTT
 TTTTTTTTTT.ggggggggg.::::::::::::::::::::::::...........bbbb
@@ -20,7 +20,7 @@ TTTTTTTTTT.ggggggggg....................::::::::::::::::::::
 TTTTTTTTTT.ggggggggg......gggggggggggggg::::::::::::::::::::
 TTTTTTTTTT.ggggggggg......gggggggggggggg................TTTT
 TTTTTTTTTT.ggggggggg..***.gggggggggggggg.............o..TTTT
-TTTTTTTTTT.ggggggggg..***.gggggggggggggg................TTTT
+TTTTTTTTTT.ggggggggg..***.gggggggggggggg..k.............TTTT
 TTTTTTTTTT***..o......***.gggggggggggggg................TTTT
 TTTTTTTTTT***...............................bbbbbbb.....TTTT
 TTTTTTTTTT..............................................TTTT

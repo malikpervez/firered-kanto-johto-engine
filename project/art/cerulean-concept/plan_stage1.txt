@@ -1,9 +1,9 @@
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~ddddb~~~~~~~TTTTT
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~ddddb~~~~~~~TTTTT
-TTTTYYYYYYTT.~~~~~~~~~~~~~~~~~~~~~~~~~~~~ddddb~~~~~~~.TTTT
-TTTTYYYYYYTT.~~~~~~~~~~~~~~~~~~~~~~~~~~~~ddddb~~~~~~~.TTTT
-TT..YYYYYY...~~~~~~~~~~~~~~~~~~~~~~~~~~~~ddddb~~~~~~~.TTTT
-TT..YYYYYY...~~~~~~~~~~~~~~~~~~~~~~~~~~~~ddddb~~~~~~~.TTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~ddddb~~~~~~~bTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~ddddb~~~~~~~bTTTT
+TTTTYYYYYYTT.~~~~~~~~~~~~~~~~~~~~~~~~~~~~ddddb~~~~~~~bTTTT
+TTTTYYYYYYTT.~~~~~~~~~~~~~~~~~~~~~~~~~~~~ddddb~~~~~~~bTTTT
+TT..YYYYYY...~~~~~~~~~~~~~~~~~~~~~~~~~~~~ddddb~~~~~~~bTTTT
+TT..YYYYYY...~~~~~~~~~~~~~~~~~~~~~~~~~~~~ddddb~~~~~~~bTTTT
 TT..YYYYYY...~~~~~~~~~~~~~~~~~~~~~~~~~~bb====b......**TTTT
 TT...........~~~~~~~~~~~~~~~~~~~~~~~~~~bb====b........TTTT
 TT.o.........~~~~~~~~~~~~~~~~~~~~~~~~~~bb====bHHHHHbbbTTTT
@@ -14,7 +14,7 @@ TT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~bb====...:..bbbTTTT
 TTfffffffffffffffffffffffffffffffffffffbb====bbbbbbbbbTTTT
 TTPPPPnnPPPPPPPPPnnPPPPPPPPPnnPPbbbbbbbbb====pppppppppTTTT
 TTPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPbbbbbbbbb====ppXXXXpppTTTT
-TTbbbbbbbbbbPPbbbbbbbbbbPPbbbbbbbo...*:bb====ppXXXXpppTTTT
+TTbbbbbbbbbbUUbbbbbbbbbbUUbbbbbbbo...*:bb====ppXXXXpppTTTT
 ================================b.....:bb====ppXXXXpppTTTT
 ================================b.....:bb====ppXXXXpppTTTT
 ================================bHHHHH:bb====pppppppppTTTT
@@ -32,7 +32,7 @@ TT%22222pppppppppp%~%====pppppppppppppp===================
 TT%pppppppppppppppxyz====ppppppppppppFFFpappppppppppppbbbb
 TT%ppppppppppppppp%~%====ppppppppppppFFFpappWWWWWWWpppTTTT
 TT%ppppppppppppppp%~%====@pppppppppppFFFpp@pWWWWWWWpppTTTT
-TT%ppppppppppppppp%~%====@pppppppppppppppp@pWWWWWWWpppTTTT
+TT%ppppppptuutpppp%~%====@pppppppppppppppp@pWWWWWWWpppTTTT
 TT%ppppppppppppp@p%~%====ppppppppppptnnitpppWWWWWWWpppTTTT
 TT%ppppppppppppp@p%~%====pppppppppppppppppppWWWWWWW/ppTTTT
 TT%ppppppppppppppp%~%====pppppppppppppppppppppppppppppTTTT
@@ -42,9 +42,9 @@ TT%pppppKKKKKeeppp%~%====pLLLLpXXXXpppppppp#.........#TTTT
 TT%%%%%%KKKKK%%%%%%/%====pLLLLpXXXXpppppppp#.***.....#TTTT
 TT=========================================#.***.....#TTTT
 TT=========================================#.........#TTTT
-TT...................====pppppppppppppppppp#.........#TTTT
+TT...................====NNNNNNNNNNNNNNNNNN#.........#TTTT
 TT...................b==tpppppppppppppppppp#......***#TTTT
-TT............*****..b==tpppppppppppppppppp#......***#TTTT
+TT............*****..b==tpppppppppptnntpppp#......***#TTTT
 TT............*****..b==tpppppppppppppppppp#.........#TTTT
 TT...................b==tpppppppppppppppppp###########TTTT
 TTTTTTTTTTTTTTTTTTTTT====TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

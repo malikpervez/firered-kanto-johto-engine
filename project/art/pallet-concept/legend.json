@@ -161,6 +161,14 @@
   "name": "forest#11",
   "joins": "T"
  },
+ "ç": {
+  "name": "cobble#5",
+  "joins": "="
+ },
+ "Ç": {
+  "name": "cobble#15",
+  "joins": "="
+ },
  "¡": "fingerpost",
  "¢": "bench_wood_east",
  "Ⰰ": {

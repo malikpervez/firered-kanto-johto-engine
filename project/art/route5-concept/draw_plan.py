@@ -63,9 +63,16 @@ rect(34, 6, 40, 14, "g")
 rect(9, 23, 15, 28, "g")
 rect(17, 24, 19, 25, "*"); at(39, 27, "o"); at(33, 15, "o")
 rect(27, 28, 29, 28, "b"); rect(20, 28, 22, 28, "b")
+# a little detail on the open lawns (off the road and the people's places): flowers between the Day Care and the lane,
+# a field rock in the lawn inside the road's bend (nothing solid on the two-row strip under the north treeline: it
+# would touch the trees and pinch the way round the tall grass)
+rect(23, 8, 25, 9, "*"); at(30, 21, "o")
 
 # Saffron's north gate: you walk into its top (24-25,30) from the road
 rect(21, 30, 28, 35, "N")
+# the gate's sides (columns 20 and 29) are odd halves of the forest's 2x2 cells: a hedge of bushes there instead, so
+# the forest ends on whole trees either side of it
+rect(20, 30, 20, 35, "b"); rect(29, 30, 29, 35, "b")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

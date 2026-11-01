@@ -14,8 +14,10 @@ cave goes through it:
 - **the high shelf**, where the cave comes out (its far mouth, set into the cliff): Jessie and Meowth by the mouth,
   the route sign, the two martial artists who teach Mega Punch and Mega Kick, the stranger by his rock, Crissy and
   the TM. Its only way on is down its ledge, so the far mouth can't be reached from Cerulean;
-- **the road down to Cerulean**, past tall grass, the Friends' camp (their third scene, at 83,14, where it was) and a
-  pond under the cliff.
+- **the road down to Cerulean**, past tall grass, the Friends' camp (their third scene, at 83,14, where it was: a
+  clearing of trodden earth the road opens into) and a pond under the forest; the forest runs along the top of the map
+  east of the mountain, and the road's dirt wears into Cerulean's cobbles over its last blocks (loose setts, then the
+  cobbles' ragged edge: the route's own pieces, in the kit's ground palette).
 
 Every warp keeps its number and the people their order (scenes call the stranger's rock and Jessie and Meowth by
 number). The route's own tileset is the cliffs and the cave mouth, both in the cliffs' palette (bank 7). Old

@@ -20,7 +20,8 @@ bridge (16–19) and its east path (24–25). It has:
 - **the trail below**, under the meadow's ledges. You hop down from the road (one way) and it takes you back west to
   Route 24's east path and the landing: a shortcut back to the bridge. Chad walks to and fro along it, watching it,
   Butterfree flies over it, and the Oran Berry is hidden on it;
-- **the headland**: Bill's cottage (Viridian's pond keeper's house) under the ridge, with its sign by the door. Haley
+- **the headland**: Bill's cottage (Viridian's pond keeper's house) under the ridge, with its sign by the door and
+  its path up to the door; the ridge ends in a hedge above the sea. Haley
   stands on the headland, and at the lookout over the sea the couple stands beside Spearow, with the Bluk Berry
   hidden in the flowers. Luvdisc swim in the sea, which is the kit's: it can't be surfed.
 

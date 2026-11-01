@@ -51,7 +51,7 @@ pae map place $M object 5 32 12 $P   # the tree to cut, in the gap into the anne
 pae map place $M object LOCALID_PEWTER_AIDE 47 24 $P           # Oak's aide with the Running Shoes, further east
 pae map place $M object 7 7 26 $P    # a Geodude by the forest
 pae map place $M object 8 13 15 $P   # a Geodude under the cliff
-pae map place $M object 9 38 8 $P    # a Pidgey in the annex's yard
+pae map place $M object 9 34 9 $P    # a Pidgey in the annex's yard (on its lawn, not the roof)
 pae map place $M object 10 31 36 $P  # a Spearow by the flowers south of the square
 pae map place $M object 11 20 14 $P  # Nao, on the plaza
 pae map place $M bg 0 32 15 $P       # the Museum's sign

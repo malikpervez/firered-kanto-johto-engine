@@ -1,5 +1,5 @@
-sssssss#=========#ssssssssssssTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-sssssss#=========#ssssssssssssTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+sssssss#=========#ssssssssssssssssssssssssTTTTTTTTTTTTTTTTTT
+sssssss#=========#ssssssssssssssssssssssssTTTTTTTTTTTTTTTTTT
 sssssss#=========#ssssssQsssssTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 sssqsss#=========#ssssssssssssTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 sssssss#=========#ssssssssssssTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
@@ -7,12 +7,12 @@ sssssss#=========#ssssssssssssTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 sssssss#=========...****.................CCCCCCCC..........b
 ss......=========.....................S..CCCCCCCC...S......b
 ss......=================================CCCCCCCC===========
-ss......=================================CCCCCCCC===========
+ss..b...=================================CCCCCCCC===========
 ss......================================TTTTTTTTTT==========
 ss......................................TTTTTTTTTT.........b
-ss.****...............ggggggggggggggggg.TTTTTTTTTTTTTTTTTTTT
-ss.****...............ggggggggggggggggg.TTTTTTTTTTTTTTTTTTTT
-ss.****...............ggggggggggggggggg.TTTTTTTTTTTTTTTTTTTT
+ss.****..,.........,..ggggggggggggggggg.TTTTTTTTTTTTTTTTTTTT
+ss.****.....o.........ggggggggggggggggg.TTTTTTTTTTTTTTTTTTTT
+ss.****.........,.....ggggggggggggggggg.TTTTTTTTTTTTTTTTTTTT
 ss....................ggggggggggggggggg.TTTTTTTTTTTTTTTTTTTT
 ssssssssssssssssssssssssssssssssssssssssTTTTTTTTTTTTTTTTTTTT
 sssssssssssssssssssssssssssssssssssQssssTTTTTTTTTTTTTTTTTTTT

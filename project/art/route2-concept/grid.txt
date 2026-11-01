@@ -11,13 +11,13 @@ TTggggb.:::gg.TTTT..DDDDDD..TT
 TTgggg:::::gg.TTTT..DDDDDD..TT
 TTgggg:::::gg.TTTT..DDDDDD..TT
 TTgggg:::::gg.TTTTb.DDDDDD..TT
-TTgggg:::.....TTTT...===....TT
+TTgggg:::::...TTTT...===....TT
 TT,*,.::::::::::::::::::S...TT
 TT,,,..:::::::####:::::.....TT
 TT,o,..::::.o.TTTT.::::...RRTT
-TT......:::,,.TTTT*..::...RRTT
-TTRR...::::*b.TTTT,,.::..##.TT
-TTRR...::.....TTTT,,........TT
+TT...k.::::,,.TTTT*..::...RRTT
+TTRR...::::*b.TTTT,,.::.....TT
+TTRR...::.....TTTT,,.....*..TT
 TTTTNNNNNNNN..TTTT,,........TT
 TTTTNNNNNNNN..TTTT,,UUUUU...TT
 TTTTNNNNNNNN..TTTT..UUUUU...TT
@@ -61,7 +61,7 @@ TT,,*,*,:::.ggTTTT#..::.....TT
 TT......:::.ggTTTTgg.::..o..TT
 TT......:::.ggTTTTgg.::.....TT
 TT......:::...TTTTgg.::...b.TT
-TT......:::...TTTTgg.::.###.TT
+TT......:::...TTTTgg.::.####TT
 TT*,,,,*.:::..TTTTgg.::::...TT
 TTb,,,,..:::..TTTT...:::::..TT
 TT.gggRR.:::b.TTTT..o::..*..TT

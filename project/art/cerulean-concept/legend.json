@@ -149,7 +149,53 @@
   "joins": "%"
  },
  "Y": "diglett_cave",
- "^": "hole",
+ "^": "hole_w",
+ "J": "hole_e",
+ "I": "back_door",
+ "G": {
+  "name": "house_family",
+  "joins": "%"
+ },
+ ";": {
+  "name": "dirt#5",
+  "joins": "%"
+ },
+ "N": {
+  "name": "paving_to_cobble_N",
+  "joins": "%"
+ },
+ "<": {
+  "name": "paving_to_cobble_N.e",
+  "joins": "%"
+ },
+ "U": {
+  "name": "paving_to_cobble_S",
+  "joins": "%"
+ },
+ "A": {
+  "name": "canal_brick#4",
+  "joins": "%"
+ },
+ "C": {
+  "name": "canal_brick#5",
+  "joins": "%"
+ },
+ "D": {
+  "name": "canal_brick#1",
+  "joins": "%"
+ },
+ "E": {
+  "name": "canal_paving#2",
+  "joins": "%"
+ },
+ "M": {
+  "name": "canal_paving#10",
+  "joins": "%"
+ },
+ "V": {
+  "name": "canal_paving#8",
+  "joins": "%"
+ },
  "1": {
   "name": "cottage_blue",
   "joins": "%"
@@ -243,7 +289,7 @@
  },
  "y": {
   "name": "bridge_ew_1_middle",
-  "joins": "~"
+  "joins": "%"
  },
  "z": {
   "name": "bridge_ew_1_east",
@@ -255,7 +301,7 @@
  },
  "m": {
   "name": "bridge_ns_1_middle",
-  "joins": "~"
+  "joins": "%"
  },
  "j": {
   "name": "bridge_ns_1_south",

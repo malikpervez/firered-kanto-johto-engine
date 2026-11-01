@@ -18,6 +18,7 @@ from collections import deque
 from pathlib import Path
 
 import numpy as np
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
@@ -41,9 +42,11 @@ CUT_TREE = (15, 15)                            # the tree to cut, in the Gym yar
 NORTH = [(x, 0) for x in range(32, 35)]
 EAST = [(MAP_W - 1, y) for y in range(11, 15)]
 GANGWAY = [(x, MAP_H - 1) for x in range(37, 40)]  # the S.S. Anne's warps, at the pier's end
-# the gangway's blocks: the pier's planks (their pieces: open to the pier and off the map's edge) that warp you onto
-# the ship as you step on them; the pier joins them
-GANGWAY_PIECES = {"J": "dock#7", "G": "dock#15", "Y": "dock#13"}
+# the gangway's blocks: the pier's end (its planks open to the pier, the beam across the end), with the S.S. Anne's
+# gangway over its middle, running off the map's edge to the ship; they warp you onto it as you step on them; the pier
+# joins them
+GANGWAY_PIECES = {"J": "dock#3", "G": "dock#11", "Y": "dock#9"}
+GATE_BAND = (48, 10)  # the band's block below the empty lot's gate: its top the dirt path's, so the path meets it
 FERRY = (39, MAP_H - 2)                        # the ferry sailor, his ticket check on 37-38 before him
 WATER = set("~vr")
 SOLID = set("T#bRoklSBcwO_~vrZLKWXHU")
@@ -228,6 +231,78 @@ def lay_harbour(g, prop_legend: dict, prop_grounds: dict) -> dict:
     return hb
 
 
+def gangway() -> list[np.ndarray]:
+    """The S.S. Anne's gangway over the pier's end (three blocks, the kit's wood palette): a steel ramp with cleats
+    between white handrails on posts, its hinge plate on the planks, running off the map's edge to the ship."""
+    D_OUT, NWD, CRM, STG, STL = 1, 10, 13, 14, 15
+    t = np.zeros((16, 48), np.uint8)
+    x0, x1 = 6, 41                       # the ramp, its outline included
+    t[:, x0] = t[:, x1] = NWD
+    t[:, x0 + 1] = t[:, x1 - 1] = CRM    # the handrails
+    t[:, x0 + 2] = t[:, x1 - 2] = STL
+    t[:, x0 + 3] = t[:, x1 - 3] = NWD    # their shadow on the deck
+    deck = np.s_[:, x0 + 4:x1 - 3]
+    t[deck] = STG
+    for y in range(4, 16, 3):            # the cleats
+        t[y, x0 + 5:x1 - 4] = STL
+        t[y + 1, x0 + 5:x1 - 4] = NWD
+    t[0, x0:x1 + 1] = NWD                # the hinge plate on the planks
+    t[1, x0 + 1:x1] = STL
+    t[2, x0 + 1:x1] = CRM
+    t[3, x0 + 4:x1 - 3] = NWD
+    for py in (1, 10):                   # the rails' posts
+        for px in (x0 - 1, x1 - 2):
+            t[py:py + 4, px:px + 4] = NWD
+            t[py + 1:py + 3, px + 1:px + 3] = CRM
+            t[py + 1, px + 1] = STL
+    return [t[:, i * 16:(i + 1) * 16] for i in range(3)]
+
+
+def flatten_grounds(spec_mt: list[dict]) -> list[dict]:
+    """pae bakes a piece's ground quarter by quarter: the ground's top layer where it covers the whole quarter, else
+    its bottom layer. So a piece standing on an edge piece of the flags, the setts or the dirt (lawn showing round its
+    edge) showed plain lawn in those quarters: the promenade's west end a strip of lawn, the benches in notches of lawn,
+    the flags' east end cut short beside the coping. Such a ground is made again as one opaque block, its own ground
+    (the lawn) baked under it, for the pieces on it. Returns the new blocks' entries (to go before the town's own)."""
+    by = {e["name"]: e for e in spec_mt}
+    made, flats = {}, []
+
+    def pixels(e) -> np.ndarray:
+        x, y = e.get("x", 0), e.get("y", 0)
+        with Image.open(HERE / e["image"]) as im:
+            return np.array(im.convert("RGBA").crop((x, y, x + 16, y + 16)))
+
+    def flat(name):
+        if name in made:
+            return made[name]
+        made[name] = name
+        e = by.get(name)
+        if e is None or e.get("w", 1) * e.get("h", 1) != 1 or not isinstance(e.get("ground"), str):
+            return name
+        under = by.get(e["ground"])
+        if under is None or "ground" in under or e.get("banks") != under.get("banks"):
+            return name
+        top = pixels(e)
+        seen = top[..., 3] > 0
+        if not any(0 < seen[q].sum() < 64 for q in harbour.QUARTERS.values()):
+            return name
+        flats.append((f"{name}_flat", np.where(seen[..., None], top, pixels(under)), e["banks"]))
+        made[name] = flats[-1][0]
+        return made[name]
+
+    for e in spec_mt:
+        g = e.get("ground")
+        if isinstance(g, str):
+            e["ground"] = flat(g)
+        elif isinstance(g, list):
+            e["ground"] = [flat(n) for n in g]
+    if not flats:
+        return []
+    Image.fromarray(np.concatenate([im for _, im, _ in flats], axis=1), "RGBA").save(HERE / "sheets/flat_grounds.png")
+    return [{"name": n, "image": "sheets/flat_grounds.png", "x": i * 16, "y": 0, "banks": banks,
+             "tileset": "secondary"} for i, (n, _, banks) in enumerate(flats)]
+
+
 def sign_grounds(g, hb) -> dict[str, str]:
     """The signs standing on the new ground: each the kit's sign over the block there, a character for each ground."""
     out = {}
@@ -265,11 +340,15 @@ def main() -> None:
         spec_mt += sh.write()
     for (x, y), ch in zip(GANGWAY, GANGWAY_PIECES):
         g[y][x] = ch
-    sh = kit.Sheet("gangway", pals[CITY_BANK], CITY_BANK, HERE, HERE, cols=3)
-    for ch, ground in GANGWAY_PIECES.items():
-        sh.add(f"gangway_{ch}", np.zeros((16, 16), np.uint8), tileset="secondary", ground=ground,
-               behavior="MB_DEEP_SOUTH_WARP")
+    sh = kit.Sheet("gangway", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=3)
+    for (ch, ground), idx in zip(GANGWAY_PIECES.items(), gangway()):
+        sh.add(f"gangway_{ch}", idx, tileset="secondary", ground=ground, behavior="MB_DEEP_SOUTH_WARP")
     spec_mt += sh.write()
+    gx, gy = GATE_BAND  # the band below the lot's gate over the dirt path's block (so the path runs on into it)
+    lg = hb["legend"][g[gy][gx]]
+    band = next(e for e in hb["entries"] if e["name"] == (lg if isinstance(lg, str) else lg["name"]))
+    spec_mt.append(dict(band, name="setts_below_the_gate", ground="dirt#5", dedupe=False))
+    g[gy][gx] = "\u01f0"
     spec_mt += hb["entries"] + woods
     sh = kit.Sheet("signs_harbour", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=4)
     for ground, ch in signs_on.items():
@@ -279,9 +358,11 @@ def main() -> None:
     spec_mt += sh.write()
     prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
     spec_mt += prop_entries
+    nbase = len(base["metatiles"])
+    spec_mt[nbase:nbase] = flatten_grounds(spec_mt)
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
-        if e["w"] == 1 and e["h"] == 1:
-            del e["w"], e["h"]
+        if e.get("w", 1) == 1 and e.get("h", 1) == 1:
+            e.pop("w", None), e.pop("h", None)
     for bank, pal in pals.items():
         kit.write_palette(HERE / f"palette_{bank}.pal", pal)
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
@@ -304,7 +385,7 @@ def main() -> None:
                   **{ch: f"sign_on_{ground}" for ground, ch in signs_on.items()},
                   **{ch: {"name": name, "joins": "#"} for name, (ch, _, _) in hb["fences"].items()},
                   **{ch: {"name": name, "joins": "T"} for ch, name in hb["woods"].items()},
-                  j={"name": "asphalt#15", "joins": "="}, m={"name": "asphalt_dashed_H_boundary", "joins": "="},
+                  j={"name": "asphalt#15", "joins": "="}, **{"\u01f0": {"name": "setts_below_the_gate", "joins": ":"}}, m={"name": "asphalt_dashed_H_boundary", "joins": "="},
                   **{"-": "asphalt_dashed_H_boundary"})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")

@@ -5519,7 +5519,7 @@
    "solid": true
   },
   {
-   "name": "sign_on_cobble#12",
+   "name": "sign_on_cobble#13",
    "image": "sheets/signs_cobble.png",
    "x": 0,
    "y": 0,
@@ -5527,11 +5527,11 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "cobble#12",
+   "ground": "cobble#13",
    "solid": true
   },
   {
-   "name": "sign_on_cobble#14",
+   "name": "sign_on_cobble#15",
    "image": "sheets/signs_cobble.png",
    "x": 16,
    "y": 0,
@@ -5539,7 +5539,7 @@
     2
    ],
    "tileset": "secondary",
-   "ground": "cobble#14",
+   "ground": "cobble#15",
    "solid": true
   },
   {

@@ -57,6 +57,7 @@ rect(8, 21, 27, 27, "p")
 rect(12, 28, 17, 43, "=")
 rect(2, 21, 6, 24, "*")
 tree(3, 27); tree(22, 29); tree(25, 30)
+at(4, 31, "o")                                 # a field rock in the plaza's west lawn
 at(19, 28, "S")                                # the route sign
 
 # the woodland path: the tree to cut (46,21) in the hedge north of the road, north and west to the upper hall
@@ -79,6 +80,8 @@ rect(16, 8, 19, 11, "Y")                       # the house, door 17,11
 rect(3, 3, 9, 6, "g")
 rect(21, 4, 25, 6, "*")
 rect(5, 10, 9, 12, "~")
+at(7, 11, "v")                                 # a lily pad in the middle of the pond
+at(12, 8, ","); at(13, 8, ","); at(12, 9, ",")  # a few flowers in the glade's open lawn
 tree(11, 3); tree(23, 8); tree(3, 13)
 
 # the meadow south of the road before Snorlax: tall grass round a pond
@@ -91,5 +94,8 @@ rect(49, 31, 51, 33, "~")
 # rock column's foot (43-45,28) woods too. (Below the meadow, row 37 is old Route 17's strip: it stays forest.)
 rect(2, 33, 11, 33, "."); rect(18, 33, 27, 33, ".")
 rect(36, 27, 42, 27, "."); rect(43, 28, 45, 28, "T")
+# under each hall's base a hedge (solid, 1x1), so the woods below start on an even row (14, 26) and no cut-off crowns
+# sit against the wall; the halls stay sealed
+rect(28, 13, 35, 13, "b"); rect(28, 25, 35, 25, "b")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

@@ -47,6 +47,8 @@ rect(8, 156, 11, 159, "H")
 rect(2, 144, 21, 155, ".")
 rect(3, 145, 6, 147, "*")
 rect(17, 145, 20, 147, "*")
+at(5, 151, "o")                                  # a field rock in the meadow before the League gate
+at(17, 151, ","); at(18, 151, ","); at(18, 152, ",")  # and a few flowers in its lawn
 # the meadows between the gates
 for y0, y1 in ((126, 137), (108, 119), (90, 101), (52, 55), (42, 45)):
     rect(2, y0, 21, y1, ".")
@@ -61,6 +63,7 @@ rect(2, 30, 9, 35, ".")
 at(3, 30, "S")                                   # Victory Road's sign
 rect(12, 30, 21, 35, ".")
 rect(10, 30, 11, 35, "b")                        # the hedge between the two yards
+at(17, 33, ","); at(18, 33, ","); at(18, 34, ",")  # a few flowers in Victory Road's way-out yard
 rect(2, 20, 19, 29, "C")                         # the cliff
 rect(4, 25, 9, 29, "Y")                          # Victory Road's way in, door 6,29
 rect(12, 25, 17, 29, "Y")                        # and its way out, door 14,29

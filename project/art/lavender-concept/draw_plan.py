@@ -45,7 +45,7 @@ rect(12, 0, 16, 8, "=")                        # Route 10's road (columns 12-16)
 rect(0, 9, 9, 11, "=")                         # Route 8's (rows 9-11)
 rect(10, 9, 20, 14, "=")                       # the square
 rect(12, 15, 15, 31, "=")                      # Route 12's road (columns 12-15, as wide as its road below)
-rect(21, 9, 30, 11, "=")                       # the path east to the tower
+rect(21, 9, 31, 11, "=")                       # the path east to the tower (to its east wall)
 at(11, 8, "S")                                 # the town sign, read from the square (11,9)
 
 # the north side: the Center and the Mart either side of the road from Route 10
@@ -74,6 +74,10 @@ rect(2, 27, 3, 28, "R"); rect(9, 27, 10, 28, "R"); rect(2, 18, 9, 18, "b")
 # east of the road south: lawns, trees, a bed of flowers
 rect(18, 20, 22, 22, "*"); rect(26, 22, 27, 23, "R"); rect(31, 19, 32, 20, "R"); rect(30, 26, 31, 27, "R")
 at(19, 26, "o"); at(24, 28, "o")
+# a little colour on the plain lawns (polish): a bed of flowers in the south-west yard between its trees and one on
+# the east lawn, daisies in the grass south of the flower bed, a lamp by the road south
+rect(6, 28, 7, 28, "*"); rect(33, 22, 34, 23, "*")
+rect(21, 27, 22, 27, ","); at(22, 28, ","); rect(16, 24, 16, 25, "l")
 
 # the forest is drawn in 2x2 cells on the even grid: where a road's edge cuts a cell in half, a hedge or a lawn verge
 # instead of half a tree (beside Route 10's road at 17,0-1; above Route 8's at 0-1,8)

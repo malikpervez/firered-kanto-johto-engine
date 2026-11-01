@@ -124,7 +124,10 @@
   "with": "rock_b",
   "elevation": 1
  },
- "H": "house_pond_keeper",
+ "H": {
+  "name": "house_pond_keeper",
+  "joins": ":"
+ },
  "A": {
   "auto": "top1",
   "joins": "C"

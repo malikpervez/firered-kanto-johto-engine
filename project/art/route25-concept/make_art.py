@@ -161,7 +161,7 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, H=COTTAGE.name)
+    legend = dict(kit.LEGEND, H={"name": COTTAGE.name, "joins": ":"})  # (its door's path runs up to it)
     assert "H" not in cliffs.legend(char_of), "the cottage's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
     legend["d"] = {"auto": "dock", "joins": ":"}  # the road runs onto the bridge's planks without an edge between

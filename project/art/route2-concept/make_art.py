@@ -71,7 +71,24 @@ def load(folder: Path) -> Building:
     if idx.shape != (fp["height"] * 16, fp["width"] * 16):
         raise SystemExit(f"{name}: the picture is not its footprint ({fp['width']}x{fp['height']} blocks)")
     doors = [tuple(d) for d in meta["door_blocks"]] if "door_blocks" in meta else [tuple(meta["door_block"])]
+    if name.startswith("forest_gate_"):
+        idx = tidy_forest_gate(idx)
     return Building(name, idx, [tuple(flat[i:i + 3]) for i in range(0, 48, 3)], doors)
+
+
+def tidy_forest_gate(idx: np.ndarray) -> np.ndarray:
+    """Two slips in both forest gates' pack art (the same pixels in each): the window band under the eaves ends in a
+    7th window cut off by the right-hand pillar, and a corner of the stone base slab sticks out past that pillar onto
+    the grass. The sliver becomes the band's plain end, as at its left end (frame, pale strip, dark wall), and the
+    stray slab goes (the baked grass shows, as at the left corner)."""
+    idx = idx.copy()
+    band = idx[51:60, 112:116]
+    assert (band[2, :2] == 14).all(), "the gates' window band moved"
+    band[:8] = [3, 11, 2, 2]  # rows 51-58: frame, pale strip, dark wall (the left end's 2,2,11,3 mirrored)
+    band[8] = [2, 11, 2, 2]  # row 59, under the band
+    assert (idx[89:95, 124:127] != 0).all(), "the gates' base slab moved"
+    idx[88:96, 124:128] = 0
+    return idx
 
 
 # the buildings: their letters in the plan, where each comes from, its palette's bank, and what each door does

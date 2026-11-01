@@ -1852,6 +1852,7 @@ static void QueueAnimTiles_CeruleanConcept_Fountain3X3(u16);
 static void TilesetAnim_CeruleanConcept(u16);
 static void QueueAnimTiles_VermilionConcept_Fountain3X3(u16);
 static void TilesetAnim_VermilionConcept(u16);
+static void QueueAnimTiles_CeruleanConcept_Canal(u16);
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/1.4bpp");
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/0.4bpp");
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/2.4bpp");
@@ -2080,13 +2081,15 @@ const u16 *const gTilesetAnims_CeruleanConcept_Fountain3X3[] = {
 static void QueueAnimTiles_CeruleanConcept_Fountain3X3(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_CeruleanConcept_Fountain3X3);
-    AppendTilesetAnimToBuffer(gTilesetAnims_CeruleanConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 290)), 29 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_CeruleanConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 296)), 29 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_CeruleanConcept(u16 timer)
 {
     if (timer % 16 == 0)
         QueueAnimTiles_CeruleanConcept_Fountain3X3(timer / 16);
+    if (timer % 10 == 1)
+        QueueAnimTiles_CeruleanConcept_Canal(timer / 10);
 }
 
 void InitTilesetAnim_CeruleanConcept(void)
@@ -2111,7 +2114,7 @@ const u16 *const gTilesetAnims_VermilionConcept_Fountain3X3[] = {
 static void QueueAnimTiles_VermilionConcept_Fountain3X3(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_VermilionConcept_Fountain3X3);
-    AppendTilesetAnimToBuffer(gTilesetAnims_VermilionConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 278)), 29 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(gTilesetAnims_VermilionConcept_Fountain3X3[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 301)), 29 * TILE_SIZE_4BPP);
 }
 
 static void TilesetAnim_VermilionConcept(u16 timer)
@@ -2125,4 +2128,30 @@ void InitTilesetAnim_VermilionConcept(void)
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = 256;
     sSecondaryTilesetAnimCallback = TilesetAnim_VermilionConcept;
+}
+
+const u16 gTilesetAnims_CeruleanConcept_Canal_Frame0[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/canal/0.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Canal_Frame1[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/canal/1.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Canal_Frame2[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/canal/2.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Canal_Frame3[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/canal/3.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Canal_Frame4[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/canal/4.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Canal_Frame5[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/canal/5.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Canal_Frame6[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/canal/6.4bpp");
+const u16 gTilesetAnims_CeruleanConcept_Canal_Frame7[] = INCBIN_U16("data/tilesets/secondary/cerulean_concept/anim/canal/7.4bpp");
+
+const u16 *const gTilesetAnims_CeruleanConcept_Canal[] = {
+    gTilesetAnims_CeruleanConcept_Canal_Frame0,
+    gTilesetAnims_CeruleanConcept_Canal_Frame1,
+    gTilesetAnims_CeruleanConcept_Canal_Frame2,
+    gTilesetAnims_CeruleanConcept_Canal_Frame3,
+    gTilesetAnims_CeruleanConcept_Canal_Frame4,
+    gTilesetAnims_CeruleanConcept_Canal_Frame5,
+    gTilesetAnims_CeruleanConcept_Canal_Frame6,
+    gTilesetAnims_CeruleanConcept_Canal_Frame7
+};
+
+static void QueueAnimTiles_CeruleanConcept_Canal(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_CeruleanConcept_Canal);
+    AppendTilesetAnimToBuffer(gTilesetAnims_CeruleanConcept_Canal[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 325)), 12 * TILE_SIZE_4BPP);
 }

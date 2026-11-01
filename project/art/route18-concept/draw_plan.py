@@ -38,6 +38,7 @@ def at(x, y, c):
 rect(0, 0, 6, 6, "s")
 rect(0, 7, 1, 15, "s")
 rect(18, 0, 29, 5, "s")
+rect(30, 0, 41, 1, "s")                         # (the pocket wraps round the woods' corner: their top edge shows, not cut flat; out of reach: make_art.py makes it solid)
 rect(0, 16, 39, 19, "s")
 
 # the land: the meadow under the woods, the bluff, the road down between Route 17's fences and east along the shore
@@ -49,6 +50,10 @@ rect(8, 0, 16, 10, "=")
 rect(17, 8, 39, 10, "=")
 rect(40, 8, 40, 9, "=")                        # (the woods under the gatehouse start at row 10)
 rect(3, 12, 6, 14, "*")
+at(12, 13, "o")                                 # a field rock on the shore lawn, and daisies across it
+for x, y in ((9, 12), (16, 14), (19, 12)):
+    at(x, y, ",")
+at(4, 9, "b")                                   # a bush on the lawn west of the road down (two clear blocks each side)
 rect(20, 6, 23, 6, "*")
 
 # the rockers' tall grass on the bluff; the gatehouse (doorways 41,9 and 48,9), the woods round it

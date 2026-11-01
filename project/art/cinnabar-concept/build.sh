@@ -67,9 +67,9 @@ pae map place $M object 20 45 21 $P
 pae map place $M object 21 44 22 $P
 pae map place $M coord 0 20 5 $P     # the Gym's lock
 pae map place $M bg 0 12 6 $P        # the island's sign
-pae map place $M bg 1 9 12 $P        # the Lab's sign (two boards)
+pae map place $M bg 1 9 12 $P        # the Lab's sign
 pae map place $M bg 2 22 5 $P        # the Gym's sign
-pae map place $M bg 3 10 12 $P
+pae map place $M bg 3 7 11 $P        # the Lab's wall by its door (under its LAB plaque): the Lab's sign again
 # everyone at the elevation of what they stand on: the water's or the ground's
 python3 - <<'PY'
 import json

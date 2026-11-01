@@ -56,7 +56,7 @@ pae map place $M object 12 20 41 $P
 pae map place $M object 14 27 30 $P  # the Carvanha, swimming by the bridge
 pae map place $M bg 0 14 14 $P       # the route sign, on the cliff top
 pae map place $M bg 1 19 63 $P       # the fishing house's sign
-pae map place $M bg 2 6 17 $P        # the Hyper Potion, hidden on the cliff top
+pae map place $M bg 2 7 17 $P        # the Hyper Potion, hidden on the cliff top (by the hedge at the woods' edge)
 pae map place $M bg 3 17 48 $P       # the Leftovers, under Snorlax
 pae map place $M bg 4 31 65 $P       # the Rare Candy, hidden in the pocket
 # the front door's right half (warp 4, to the gatehouse's other south door); everyone at the ground's elevation

@@ -11,8 +11,8 @@ TT..........S.....bggggggggg~~~~TTTTTT
 TT................bggggggggg~~~~TTTTTT
 TT................bb....bbbb~~~~TTTTTT
 TT..........ZZZZZ...........~~~~TTTTTT
-TT..o.......ZZZZZ...........~~~~TTTTTT
-TT..........ZZZZZ...........~~~~TTTTTT
+TT..o...**..ZZZZZ.......**..~~~~TTTTTT
+TT......**..ZZZZZ.......**..~~~~TTTTTT
 TT..........ZZZZZ.........S.~~~~TTTTTT
 bb...........:::............~~~~TTTTTT
 ::::::::::::::::............~~~~TTTTTT
@@ -22,7 +22,7 @@ TT..................*****...~~~~TTTTTT
 TT..................*****...~~~~TTTTTT
 TT..................*****...~~~~TTTTTT
 TT.*****....................~~~~TTTTTT
-TT.*****....................~~~~TTTTTT
+TT.*****.....k..............~~~~TTTTTT
 TT.*****....................~~~~TTTTTT
 TT......................o...~~~~TTTTTT
 TTbbbbbbbbbbbbbbbbbbbbbbbbbb~~~~TTTTTT
@@ -54,7 +54,7 @@ TT........:::::::::::..ggggggggggg..TT
 TT.gggggg.......:::::..ggggggggggg..TT
 TT.gggggg.......:::::..ggggggggggg..TT
 TT.gggggg.......:::::..ggggggggggg..TT
-TT.gggggg.....o.:::::..ggggggggggg..TT
-TT..............=====...............TT
+TT.gggggg.....o.ǄǅǁǄǅ..ggggggggggg..TT
+TT..............ǂǃǀǂǃ...............TT
 TTTTTTTTTTTTTTTT=====bTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTT=====bTTTTTTTTTTTTTTTT

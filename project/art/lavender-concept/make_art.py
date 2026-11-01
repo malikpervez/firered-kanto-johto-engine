@@ -166,7 +166,9 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, **SHARED, X="pokemon_tower", **{k: load(k).name for k in OWN})
+    # the Center, the Mart and the Tower count as cobble for the paths up to their doors (no lawn lip at the step)
+    legend = dict(kit.LEGEND, **{k: {"name": v, "joins": "="} for k, v in SHARED.items()},
+                  X={"name": "pokemon_tower", "joins": "="}, **{k: load(k).name for k in OWN})
     legend.update(prop_legend)
     legend.update(stone_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")

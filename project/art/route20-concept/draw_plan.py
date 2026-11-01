@@ -33,12 +33,12 @@ def at(x, y, c):
 
 # the sandbars
 rect(8, 3, 15, 6, ".")
-rect(9, 3, 10, 4, "*")
+rect(13, 4, 14, 5, "*")              # (flowers a row in from the shore, a different corner on each)
 rect(20, 4, 25, 7, ".")
 rect(38, 8, 45, 11, ".")
-rect(39, 8, 40, 9, "*")
+rect(40, 9, 41, 10, "*")
 rect(90, 13, 97, 16, ".")
-rect(94, 13, 96, 14, "*")
+rect(92, 14, 94, 15, "*")
 
 # the Seafoam Islands: the west island (its mouth's door 58,10) and the east one (78,12), their signs; each mouth is
 # cut into its cliff's face (6x2), the cliff's top running on over it
@@ -52,15 +52,31 @@ rect(76, 11, 81, 12, "Y")
 at(75, 13, "S")
 rect(63, 13, 65, 15, "*")
 rect(82, 15, 84, 16, "*")
+at(54, 14, "o"); at(74, 15, "o")              # a field rock on each island's lawn (they're rocky islands), two
+                                               # lawn blocks clear all round (of the shore, the cliff and the sign)
+for x, y in ((59, 15), (66, 12), (79, 16), (71, 8)):
+    at(x, y, ",")                              # and flowers in their grass
+
+# the sandbars' and the islands' outer corners are sea, so their shores round off instead of boxing them in
+for x0, y0, x1, y1 in ((8, 3, 15, 6), (20, 4, 25, 7), (38, 8, 45, 11), (90, 13, 97, 16), (50, 2, 67, 16), (70, 3, 85, 17)):
+    for x, y in ((x0, y0), (x1, y0), (x0, y1), (x1, y1)):
+        assert g[y][x] == ".", f"({x},{y}) isn't the lawn's corner"
+        at(x, y, "s")
 
 # sea rocks along the edges, where open sea is all round them
 def open_sea(x, y):
-    return all(0 <= x + i < W and 0 <= y + j < H and g[y + j][x + i] == "s" for i in (-1, 0, 1) for j in (-1, 0, 1))
+    return all(0 <= x + i < W and 0 <= y + j < H and g[y + j][x + i] in "sqQ" for i in (-1, 0, 1) for j in (-1, 0, 1))
 
 
-for x in range(3, 117, 7):
-    for xx, yy, c in ((x, 1, "q" if x % 2 else "Q"), (x + 3, 18, "Q" if x % 2 else "q")):
-        if open_sea(xx, yy):
-            at(xx, yy, c)
+# scattered (some alone, some in pairs, never in a line), off the swimmers' lines of sight and the Seel's and the
+# Clamperl's blocks
+for x, y, c in ((4, 2, "Q"), (9, 1, "q"), (18, 1, "Q"), (19, 2, "q"), (27, 2, "q"), (33, 1, "Q"), (41, 2, "Q"),
+                (46, 1, "q"), (74, 1, "q"), (79, 1, "Q"), (94, 1, "Q"), (99, 2, "q"), (100, 1, "q"), (109, 2, "Q"),
+                (114, 1, "q"),
+                (5, 18, "q"), (11, 17, "Q"), (16, 18, "Q"), (25, 17, "q"), (26, 18, "Q"), (32, 18, "q"), (39, 17, "Q"),
+                (44, 18, "q"), (53, 18, "Q"), (61, 18, "q"), (91, 18, "Q"), (99, 17, "q"), (103, 18, "Q"),
+                (112, 17, "Q"), (113, 18, "q")):
+    assert open_sea(x, y), f"the rock at ({x},{y}) isn't in open sea"
+    at(x, y, c)
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

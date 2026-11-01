@@ -15,8 +15,8 @@ TTTTTTTTDDDDDDDDDD....MMMMMMMM..........RR.RRbbbbb.bbbbbbbTT
 TTTTTTTTDDDDDDDDDD....MMMMMMMM...OOOOOO.RR.RR.............TT
 TTTTTTTTDDDDDDDDDD....MMMMMMMM...OOOOOO........CCCCC.RR...TT
 TTTTTTTTDDDDDDDDDD....MMMMMMMM...OOOOOO........CCCCC.RR...TT
-TTTTTTTTDDDDDDDDDD..l.MMMMMMMM..lOOOOOO.l......CCCCC.....lTT
-TTTTTTTTDDDDDDDDDDS.l.MMMMMMMMS.lOOOOOO.l....S.CCCCC...S.lTT
+TTTTTTTTDDDDDDDDDD....MMMMMMMM..lOOOOOO.l......CCCCC.....lTT
+TTTTTTTTDDDDDDDDDDS...MMMMMMMMS.lOOOOOO.l....S.CCCCC....SlTT
 TTTTTTTTnnnnnnnnnnnn77nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn77nnTT
 =======1++++++++++++44++++++++++++++++++++++++++++++++44+2==
 =======1++++++%+++++33+++++++++++%++++++++++++++++++++33+2==
@@ -30,9 +30,9 @@ TTTTTTTT***...****b.^^..GGGGGGGGG.PPPP..EEEE.HHHH.....^^..TT
 TTTTTTTT..........b.^^..GGGGGGGGGSPPPPS.EEEE.HHHH...S.^^..TT
 TTTTTTTT.YYYYYYY..b.^^^^^^^//^^^^^^^^^^^^^^^^^^^^^^^^^^^..TT
 TTTTTTTT.YYYYYYY..b.^^^^^^^//^^^^^^^^^^^^^^^^^^^^^^^^^^^..TT
-TTTTTTTT.YYYYYYY..b......................RR...............TT
+TTTTTTTT.YYYYYYY..b...........¡¡.........RR...............TT
 TTTTTTTT.YYYYYYY**b..........~~~~~~.****.RR.........RR....TT
-TTTTTTTT.YYYYYYY**b..........~~~~~~.****............RR....TT
+TTTTTTTT.YYYYYYY**b..........~~v~~~.****............RR....TT
 TTTTTTTT***...S.**b..........~~~~~~.........****..........TT
 TTTTTTTT***.....**b***......................****..........TT
 TTTTTTTTbbbbbbbbbbb***....................................TT

@@ -290,6 +290,8 @@ def main() -> None:
     legend.update({ch: f"kface_{cliffs.FACE[c]}" for c, ch in KFACE.items()})
     legend.update({k: name for k, (name, _, _) in COTTAGES.items()}, **LEGEND)
     legend.update({k: {"name": n or legend[k], "joins": WALK} for k, n in PAVED.items()})
+    legend["U"] = {"name": legend["U"], "joins": WALK}  # the plaza's paving runs up to the Museum's base (no rim)
+    legend["Y"] = {"name": legend["Y"], "joins": WALK}  # and the annex's dirt path up to its door step (no rim)
     legend.update(prop_legend)
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({load(k).name: v for k, v in d.items()}, indent=1) + "\n")

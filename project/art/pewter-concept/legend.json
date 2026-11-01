@@ -128,12 +128,18 @@
  },
  "Z": "pokemon_center",
  "L": "poke_mart",
- "U": "league_front_gate",
+ "U": {
+  "name": "league_front_gate",
+  "joins": "%"
+ },
  "W": {
   "name": "pewter_gym",
   "joins": "%"
  },
- "Y": "house_family",
+ "Y": {
+  "name": "house_family",
+  "joins": "%"
+ },
  "H": "house_family",
  "X": {
   "name": "house_family_paved",

@@ -42,8 +42,10 @@ def plan(name: str) -> list[list[str]]:
 
 
 # the woods' cells at the south map's foot drawn as named forest pieces (top-left block -> character), and the pieces
-FOOT = {(14, 48): "5", (16, 48): "1", (18, 48): "2", (20, 48): "3", (22, 48): "4"}
-FOOT_PIECE = {"1": "forest#11", "2": "forest#11~1", "3": "forest#11~2", "4": "forest#11", "5": "forest#15.2"}
+FOOT = {(14, 48): "5", (16, 48): "1", (18, 48): "2", (20, 48): "3", (22, 48): "4",
+        (4, 48): "6", (6, 48): "7", (8, 48): "8", (10, 48): "9"}  # (and over the Mansion's roof, columns 4-9)
+FOOT_PIECE = {"1": "forest#11", "2": "forest#11~1", "3": "forest#11~2", "4": "forest#11", "5": "forest#15.2",
+              "6": "forest#3", "7": "forest#11~1", "8": "forest#11", "9": "forest#15.4"}
 
 
 def reachable(g, starts, surf=False) -> set[tuple[int, int]]:
