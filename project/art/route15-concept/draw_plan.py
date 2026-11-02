@@ -76,7 +76,7 @@ rect(22, 17, 30, 19, "g")
 rect(44, 17, 52, 19, "g")
 rect(62, 17, 68, 18, "*")
 tree(36, 18); tree(57, 18)
-at(40, 17, "o")                                 # a field rock in the south meadow (two clear rows from the woods), daisies on its lawn
+# daisies on the south meadow's lawn (no rock: the lane along row 17 is the way west clear of the road's trainers)
 for x, y in ((20, 18), (33, 17), (42, 19)):
     at(x, y, ",")
 
