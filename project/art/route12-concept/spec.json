@@ -4863,6 +4863,102 @@
    "behaviors": {
     "1,3": "MB_ANIMATED_DOOR"
    }
+  },
+  {
+   "name": "dock#0+landing",
+   "image": "sheets/dock_landing.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "dock#1+landing",
+   "image": "sheets/dock_landing.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "dock#2+landing",
+   "image": "sheets/dock_landing.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "dock#3+landing",
+   "image": "sheets/dock_landing.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "dock#8+landing",
+   "image": "sheets/dock_landing.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "dock#9+landing",
+   "image": "sheets/dock_landing.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "dock#10+landing",
+   "image": "sheets/dock_landing.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
+  },
+  {
+   "name": "dock#11+landing",
+   "image": "sheets/dock_landing.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "grass",
+   "dedupe": true
   }
  ]
 }

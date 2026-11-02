@@ -204,11 +204,19 @@
   "joins": ":"
  },
  "ǣ": {
-  "name": "sign_on_cobble#14",
+  "name": "sign_on_cobble#15",
   "joins": "="
  },
  "ǥ": {
-  "name": "sign_on_cobble#12",
+  "name": "sign_on_cobble#13",
+  "joins": "="
+ },
+ "Ǩ": {
+  "name": "cobble#7",
+  "joins": "="
+ },
+ "ǩ": {
+  "name": "cobble#15",
   "joins": "="
  },
  "Ⰰ": {

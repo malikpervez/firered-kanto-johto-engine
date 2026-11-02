@@ -76,5 +76,8 @@ rect(22, 17, 30, 19, "g")
 rect(44, 17, 52, 19, "g")
 rect(62, 17, 68, 18, "*")
 tree(36, 18); tree(57, 18)
+# daisies on the south meadow's lawn (no rock: the lane along row 17 is the way west clear of the road's trainers)
+for x, y in ((20, 18), (33, 17), (42, 19)):
+    at(x, y, ",")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))

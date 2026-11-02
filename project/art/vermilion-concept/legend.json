@@ -325,6 +325,10 @@
   "name": "asphalt#15",
   "joins": "="
  },
+ "ǰ": {
+  "name": "setts_below_the_gate",
+  "joins": ":"
+ },
  "m": {
   "name": "asphalt_dashed_H_boundary",
   "joins": "="

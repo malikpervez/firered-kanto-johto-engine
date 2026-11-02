@@ -87,7 +87,7 @@ pae map place $M object 28 22 35 $P
 pae map place $M bg 0 52 29 $P        # trainer tips, at Lucky Lane's east end
 pae map place $M bg 1 38 29 $P        # the prize exchange sign
 pae map place $M bg 2 33 29 $P        # the Game Corner's sign
-pae map place $M bg 3 55 18 $P        # the town sign, by the east entrance
+pae map place $M bg 3 56 18 $P        # the town sign, by the east entrance
 pae map place $M bg 4 30 18 $P        # the Mansion's sign
 pae map place $M bg 5 45 18 $P        # trainer tips, by the Center
 pae map place $M bg 6 18 18 $P        # the Department Store's sign

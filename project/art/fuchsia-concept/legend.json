@@ -126,7 +126,10 @@
  },
  "Z": "pokemon_center",
  "L": "poke_mart",
- "A": "safari_gate",
+ "A": {
+  "name": "safari_gate",
+  "joins": "p"
+ },
  "G": "fuchsia_gym",
  "H": "house_gardener",
  "W": "house_family",
@@ -146,6 +149,38 @@
  },
  "¤": {
   "name": "litter_bin",
+  "joins": "p"
+ },
+ "¥": {
+  "name": "picnic_table",
+  "joins": "p"
+ },
+ "ɐ": {
+  "name": "paving_to_cobble_S",
+  "joins": "="
+ },
+ "ɑ": {
+  "name": "paving#15",
+  "joins": "p"
+ },
+ "ɒ": {
+  "name": "paving#13",
+  "joins": "p"
+ },
+ "ɓ": {
+  "name": "cobble#15",
+  "joins": "="
+ },
+ "ɔ": {
+  "name": "dirt#7",
+  "joins": "p"
+ },
+ "ɕ": {
+  "name": "dirt#15",
+  "joins": "p"
+ },
+ "ɖ": {
+  "name": "dirt#13",
   "joins": "p"
  },
  "Ⰰ": {

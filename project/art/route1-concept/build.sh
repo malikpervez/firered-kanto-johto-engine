@@ -29,6 +29,7 @@ pae map place $M object 0 23 20 $P   # the Poké Mart clerk with a sample, by th
 pae map place $M object 1 31 16 $P   # the boy who tells you about ledges, under the second one
 pae map place $M object 2 12 17 $P   # a Pidgey by the stream
 pae map place $M object 3 23 25 $P   # a Pidgey by the steps
+pae map place $M object 4 30 29 --elevation 3 $P   # a Rattata in the grass by the last ledge (it was off the map)
 pae map place $M object 5 12 7 $P    # a Rattata in the grass at the top
 pae map place $M object 6 33 22 $P   # a Poochyena in the grass
 pae map place $M object 7 5 30 $P    # the shiny Rattata in the clearing across the bridge

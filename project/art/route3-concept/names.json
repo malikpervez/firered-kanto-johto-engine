@@ -4109,7 +4109,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#15": {
+  "top1#14": {
    "ids": [
     641
    ],
@@ -4119,7 +4119,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#7": {
+  "top1#15": {
    "ids": [
     642
    ],
@@ -4129,7 +4129,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#11": {
+  "top2#7": {
    "ids": [
     643
    ],
@@ -4139,7 +4139,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#13": {
+  "top2#11": {
    "ids": [
     644
    ],
@@ -4149,7 +4149,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#15": {
+  "top2#13": {
    "ids": [
     645
    ],
@@ -4159,7 +4159,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#7": {
+  "top2#14": {
    "ids": [
     646
    ],
@@ -4169,7 +4169,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#9": {
+  "top2#15": {
    "ids": [
     647
    ],
@@ -4179,7 +4179,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#11": {
+  "top2#15.1": {
    "ids": [
     648
    ],
@@ -4189,7 +4189,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#15": {
+  "top2#15.8": {
    "ids": [
     649
    ],
@@ -4199,7 +4199,7 @@
    "elevation": null,
    "open": []
   },
-  "top4#11": {
+  "top3#7": {
    "ids": [
     650
    ],
@@ -4209,7 +4209,7 @@
    "elevation": null,
    "open": []
   },
-  "top4#14": {
+  "top3#9": {
    "ids": [
     651
    ],
@@ -4219,7 +4219,7 @@
    "elevation": null,
    "open": []
   },
-  "top4#15": {
+  "top3#11": {
    "ids": [
     652
    ],
@@ -4229,7 +4229,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#7": {
+  "top3#14": {
    "ids": [
     653
    ],
@@ -4239,7 +4239,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#9": {
+  "top3#15": {
    "ids": [
     654
    ],
@@ -4249,7 +4249,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#11": {
+  "top4#11": {
    "ids": [
     655
    ],
@@ -4259,7 +4259,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#12": {
+  "top4#14": {
    "ids": [
     656
    ],
@@ -4269,7 +4269,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#13": {
+  "top4#15": {
    "ids": [
     657
    ],
@@ -4279,7 +4279,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#14": {
+  "top5#7": {
    "ids": [
     658
    ],
@@ -4289,7 +4289,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#15": {
+  "top5#9": {
    "ids": [
     659
    ],
@@ -4299,7 +4299,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#15.1": {
+  "top5#11": {
    "ids": [
     660
    ],
@@ -4309,7 +4309,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#6": {
+  "top5#12": {
    "ids": [
     661
    ],
@@ -4319,7 +4319,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#7": {
+  "top5#13": {
    "ids": [
     662
    ],
@@ -4329,7 +4329,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#11": {
+  "top5#14": {
    "ids": [
     663
    ],
@@ -4339,7 +4339,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#13": {
+  "top5#15": {
    "ids": [
     664
    ],
@@ -4349,7 +4349,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#14": {
+  "top5#15.1": {
    "ids": [
     665
    ],
@@ -4359,7 +4359,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#15": {
+  "top6#6": {
    "ids": [
     666
    ],
@@ -4369,7 +4369,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#15.8": {
+  "top6#7": {
    "ids": [
     667
    ],
@@ -4379,7 +4379,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#11": {
+  "top6#11": {
    "ids": [
     668
    ],
@@ -4389,7 +4389,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#15": {
+  "top6#13": {
    "ids": [
     669
    ],
@@ -4399,7 +4399,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#3": {
+  "top6#14": {
    "ids": [
     670
    ],
@@ -4409,7 +4409,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#7": {
+  "top6#15": {
    "ids": [
     671
    ],
@@ -4419,7 +4419,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#9": {
+  "top6#15.8": {
    "ids": [
     672
    ],
@@ -4429,7 +4429,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#11": {
+  "top7#11": {
    "ids": [
     673
    ],
@@ -4439,7 +4439,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#13": {
+  "top7#15": {
    "ids": [
     674
    ],
@@ -4449,7 +4449,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#15": {
+  "top8#3": {
    "ids": [
     675
    ],
@@ -4459,7 +4459,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#3": {
+  "top8#7": {
    "ids": [
     676
    ],
@@ -4469,7 +4469,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#7": {
+  "top8#9": {
    "ids": [
     677
    ],
@@ -4479,7 +4479,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#11": {
+  "top8#11": {
    "ids": [
     678
    ],
@@ -4489,7 +4489,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#13": {
+  "top8#13": {
    "ids": [
     679
    ],
@@ -4499,7 +4499,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#15": {
+  "top8#15": {
    "ids": [
     680
    ],
@@ -4509,7 +4509,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#13+Eon": {
+  "top9#3": {
    "ids": [
     681
    ],
@@ -4519,7 +4519,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#7+Wstart": {
+  "top9#7": {
    "ids": [
     682
    ],
@@ -4529,7 +4529,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#13+Eon": {
+  "top9#11": {
    "ids": [
     683
    ],
@@ -4539,7 +4539,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#7+Won": {
+  "top9#13": {
    "ids": [
     684
    ],
@@ -4549,7 +4549,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#15.2+in_SE_face": {
+  "top9#15": {
    "ids": [
     685
    ],
@@ -4559,7 +4559,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#7+Won": {
+  "top2#13+Eon": {
    "ids": [
     686
    ],
@@ -4569,7 +4569,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#15.2+in_SE_face": {
+  "top2#7+Wstart": {
    "ids": [
     687
    ],
@@ -4579,7 +4579,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#15.4+in_SW_face": {
+  "top3#13+Eon": {
    "ids": [
     688
    ],
@@ -4589,7 +4589,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#13+Estart": {
+  "top3#7+Won": {
    "ids": [
     689
    ],
@@ -4599,7 +4599,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#15.4+in_SW_face": {
+  "top5#15.2+in_SE_face": {
    "ids": [
     690
    ],
@@ -4609,7 +4609,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#13+Estart": {
+  "top5#7+Won": {
    "ids": [
     691
    ],
@@ -4619,7 +4619,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#7+Wstart": {
+  "top6#15.2+in_SE_face": {
    "ids": [
     692
    ],
@@ -4629,10 +4629,60 @@
    "elevation": null,
    "open": []
   },
+  "top6#15.4+in_SW_face": {
+   "ids": [
+    693
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top8#13+Estart": {
+   "ids": [
+    694
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top8#15.4+in_SW_face": {
+   "ids": [
+    695
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top9#13+Estart": {
+   "ids": [
+    696
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "top9#7+Wstart": {
+   "ids": [
+    697
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "face_inner_E": {
    "ids": [
-    693,
-    694
+    698,
+    699
    ],
    "w": 1,
    "h": 2,
@@ -4642,8 +4692,8 @@
   },
   "face_inner_W": {
    "ids": [
-    695,
-    696
+    700,
+    701
    ],
    "w": 1,
    "h": 2,
@@ -4653,8 +4703,8 @@
   },
   "face_middle_1": {
    "ids": [
-    697,
-    698
+    702,
+    703
    ],
    "w": 1,
    "h": 2,
@@ -4664,8 +4714,8 @@
   },
   "face_middle_2": {
    "ids": [
-    699,
-    700
+    704,
+    705
    ],
    "w": 1,
    "h": 2,
@@ -4675,8 +4725,8 @@
   },
   "face_middle_3": {
    "ids": [
-    701,
-    702
+    706,
+    707
    ],
    "w": 1,
    "h": 2,
@@ -4686,8 +4736,8 @@
   },
   "face_outer_E": {
    "ids": [
-    703,
-    704
+    708,
+    709
    ],
    "w": 1,
    "h": 2,
@@ -4697,8 +4747,8 @@
   },
   "face_outer_W": {
    "ids": [
-    705,
-    706
+    710,
+    711
    ],
    "w": 1,
    "h": 2,
@@ -4708,7 +4758,7 @@
   },
   "field_rock_b@dirt#1": {
    "ids": [
-    707
+    712
    ],
    "w": 1,
    "h": 1,
@@ -4719,11 +4769,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 152
+  "secondary": 160
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 68
+  "secondary": 73
  },
  "animations": [
   {

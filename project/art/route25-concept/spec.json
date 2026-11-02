@@ -4819,7 +4819,7 @@
    "ground": "grass"
   },
   {
-   "name": "top1#13",
+   "name": "top1#15",
    "image": "sheets/rock_cliff.png",
    "x": 0,
    "y": 0,
@@ -4831,7 +4831,7 @@
    "solid": true
   },
   {
-   "name": "top1#15",
+   "name": "top2#7",
    "image": "sheets/rock_cliff.png",
    "x": 16,
    "y": 0,
@@ -4843,7 +4843,7 @@
    "solid": true
   },
   {
-   "name": "top2#7",
+   "name": "top2#15",
    "image": "sheets/rock_cliff.png",
    "x": 32,
    "y": 0,
@@ -4855,7 +4855,7 @@
    "solid": true
   },
   {
-   "name": "top2#15",
+   "name": "top3#13",
    "image": "sheets/rock_cliff.png",
    "x": 48,
    "y": 0,
@@ -4879,7 +4879,7 @@
    "solid": true
   },
   {
-   "name": "top4#9",
+   "name": "top4#11",
    "image": "sheets/rock_cliff.png",
    "x": 80,
    "y": 0,
@@ -4891,7 +4891,7 @@
    "solid": true
   },
   {
-   "name": "top4#11",
+   "name": "top5#3",
    "image": "sheets/rock_cliff.png",
    "x": 96,
    "y": 0,
@@ -4903,7 +4903,7 @@
    "solid": true
   },
   {
-   "name": "top5#3",
+   "name": "top5#11",
    "image": "sheets/rock_cliff.png",
    "x": 112,
    "y": 0,
@@ -4915,7 +4915,7 @@
    "solid": true
   },
   {
-   "name": "top5#11",
+   "name": "top6#9",
    "image": "sheets/rock_cliff.png",
    "x": 128,
    "y": 0,

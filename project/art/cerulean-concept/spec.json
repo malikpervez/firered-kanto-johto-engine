@@ -53,6 +53,20 @@
     "sheets/prop_fountain_3x3_f3.png"
    ],
    "speed": 16
+  },
+  {
+   "name": "Canal",
+   "image": "sheets/canal.png",
+   "frames": [
+    "sheets/canal_f1.png",
+    "sheets/canal_f2.png",
+    "sheets/canal_f3.png",
+    "sheets/canal_f4.png",
+    "sheets/canal_f5.png",
+    "sheets/canal_f6.png",
+    "sheets/canal_f7.png"
+   ],
+   "speed": 10
   }
  ],
  "field_effects": {
@@ -5288,6 +5302,84 @@
    "dedupe": true
   },
   {
+   "name": "canal_brick#4",
+   "image": "sheets/canal.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "ground": "cerulean_brick#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "canal_brick#5",
+   "image": "sheets/canal.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "ground": "cerulean_brick#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "canal_brick#1",
+   "image": "sheets/canal.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "ground": "cerulean_brick#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "canal_paving#2",
+   "image": "sheets/canal.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "canal_paving#10",
+   "image": "sheets/canal.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
+   "name": "canal_paving#8",
+   "image": "sheets/canal.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    1
+   ],
+   "tileset": "secondary",
+   "ground": "paving#15",
+   "behavior": "MB_POND_WATER",
+   "elevation": 1
+  },
+  {
    "name": "fountain_3x3",
    "image": "sheets/prop_fountain_3x3.png",
    "x": 0,
@@ -5436,7 +5528,7 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "pond#5",
+   "ground": "canal_brick#5",
    "solid": false
   },
   {
@@ -5475,7 +5567,7 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "pond#10",
+   "ground": "canal_paving#10",
    "solid": false
   },
   {
@@ -5512,16 +5604,51 @@
    }
   },
   {
-   "name": "hole",
-   "image": "sheets/diglett_cave.png",
+   "name": "hole_w",
+   "image": "sheets/holes.png",
    "x": 0,
-   "y": 80,
+   "y": 0,
    "banks": [
-    9
+    0
    ],
    "tileset": "secondary",
    "ground": "lawn_a",
    "behavior": "MB_SOUTH_ARROW_WARP"
+  },
+  {
+   "name": "hole_e",
+   "image": "sheets/holes.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "lawn_a",
+   "behavior": "MB_SOUTH_ARROW_WARP"
+  },
+  {
+   "name": "back_door",
+   "image": "sheets/holes.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "lawn_a",
+   "behavior": "MB_SOUTH_ARROW_WARP"
+  },
+  {
+   "name": "paving_to_cobble_N.e",
+   "image": "sheets/paving_join.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    0
+   ],
+   "tileset": "secondary",
+   "ground": "grass"
   }
  ]
 }

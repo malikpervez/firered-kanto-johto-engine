@@ -788,7 +788,7 @@ STEPS = [
          expect=dict(map="FuchsiaCity_Frlg", xy=(31, 32))),
     # Saffron: back north the long way (Routes 15 to 12 and Lavender; Cycling Road needs a bike) to Route 8's gate,
     # whose guard lets you by for the Tea
-    dict(name="fuchsia-east", what="Up Fuchsia's east lane onto Route 15", via=[(40, 32), (40, 28), (41, 28), (41, 20)],
+    dict(name="fuchsia-east", what="Up Fuchsia's east lane onto Route 15", via=[(41, 32), (41, 20)],
          walk=(47, 20), inputs="RIGHT*30, wait 200", expect=dict(map="Route15_Frlg")),
     dict(name="route15-gate-east", what="Into Route 15's west gatehouse", walk=(8, 5), inputs=f"RIGHT*{hold(1)}, wait 20, "
          "RIGHT*20, wait 250", expect=dict(map="Route15_WestEntrance_1F_Frlg")),

@@ -4998,7 +4998,22 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "paving#3",
+   "ground": "paving#7",
+   "solid": true
+  },
+  {
+   "name": "picnic_table",
+   "image": "sheets/props_wood.png",
+   "x": 16,
+   "y": 0,
+   "w": 2,
+   "h": 2,
+   "banks": [
+    2
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": "grass",
    "solid": true
   },
   {

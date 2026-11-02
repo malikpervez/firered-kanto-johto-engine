@@ -24,6 +24,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import cliffs
+import fray
 import kit
 
 HERE = Path(__file__).resolve().parent
@@ -44,6 +45,8 @@ HERMAN_WALK = range(24, 29)  # Herman wanders left and right along row 57
 STEP = {"left": (-1, 0), "right": (1, 0), "up": (0, -1), "down": (0, 1)}
 WATER = set("~")
 SOLID = set("T#bRoklSBcw_~vrYZX") | cliffs.SOLID
+# the cobbles giving out into the dirt (kit/fray.py): the cobble half's letters (one a variant), the dirt half's
+FRAY_COBBLE, FRAY_DIRT = "\u01c0\u01c2\u01c3", "\u01c1\u01c4\u01c5"
 
 # the Power Plant, from the remakes pack: four sawtooth halls, a boiler annex, two stacks and a sealed loading shutter;
 # one door (its personnel entrance), at 7,7
@@ -165,6 +168,9 @@ def main() -> None:
     kit.check_forest(g)
     kit.check_water(g)
     check(g, d)
+    # Lavender's cobbles give out into the road's dirt over two blocks (kit/fray.py) instead of on a straight line:
+    # the last row of cobbles and the first of dirt before it
+    assert fray.lay(g, FRAY_COBBLE, FRAY_DIRT, sides="N") == {"N": 5}, "the join is the road's 5 blocks"
     assert MOUTH.palette == cliffs.PAL, "the cave mouth isn't in the cliffs' palette"
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
@@ -182,6 +188,9 @@ def main() -> None:
     spec_mt += sh.write()
     sh = kit.Sheet(PLANT.name, PLANT.palette, PLANT_BANK, HERE, HERE, cols=PLANT.idx.shape[1] // 16)
     sh.add(PLANT.name, PLANT.idx, tileset="secondary", **PLANT.entry())
+    spec_mt += sh.write()
+    sh = kit.Sheet("fray", kit.PALS["ground"], kit.BANK["ground"], HERE, HERE, cols=8)
+    fray.add(sh, "N")
     spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
@@ -203,6 +212,7 @@ def main() -> None:
     legend[":"] = {"auto": "dirt", "joins": "="}  # the road's dirt runs on into Lavender's cobbles without a lawn rim
     assert not set("YZX") & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
+    legend.update(fray.legend("N", FRAY_COBBLE, FRAY_DIRT, "=", "="))  # the road's dirt joins the cobbles here
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

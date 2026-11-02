@@ -123,9 +123,18 @@
   "with": "rock_b",
   "elevation": 1
  },
- "Z": "pokemon_center",
- "L": "poke_mart",
- "X": "pokemon_tower",
+ "Z": {
+  "name": "pokemon_center",
+  "joins": "="
+ },
+ "L": {
+  "name": "poke_mart",
+  "joins": "="
+ },
+ "X": {
+  "name": "pokemon_tower",
+  "joins": "="
+ },
  "H": "house_family",
  "U": "house_pond_keeper",
  "W": "house_gardener",

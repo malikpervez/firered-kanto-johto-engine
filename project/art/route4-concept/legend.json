@@ -174,43 +174,67 @@
  "}": "face_inner_E",
  "]": "face_outer_E",
  "a": {
-  "name": "top1#13+Estart",
-  "joins": "C"
- },
- "e": {
   "name": "top1#7+Won",
   "joins": "C"
  },
- "f": {
+ "e": {
   "name": "top2#7+Won",
   "joins": "C"
  },
- "i": {
-  "name": "top4#13+Eon",
-  "joins": "C"
- },
- "j": {
+ "f": {
   "name": "top4#15.4+in_SW_face",
   "joins": "C"
  },
- "m": {
+ "i": {
   "name": "top5#15.4+in_SW_face",
   "joins": "C"
  },
- "t": {
+ "j": {
   "name": "top6#12+Estart",
   "joins": "C"
  },
- "u": {
+ "m": {
   "name": "top7#7+Wstart",
   "joins": "C"
  },
- "x": {
+ "t": {
   "name": "top8#7+Wstart",
   "joins": "C"
  },
- "y": {
+ "u": {
   "name": "top9#13+Eon",
   "joins": "C"
+ },
+ "(": {
+  "name": "road_setts#14~0",
+  "joins": "="
+ },
+ ")": {
+  "name": "road_setts#15~1",
+  "joins": "="
+ },
+ "!": {
+  "name": "road_setts#15~2",
+  "joins": "="
+ },
+ "<": {
+  "name": "road_setts#11~3",
+  "joins": "="
+ },
+ ";": {
+  "name": "road_setts#14~10",
+  "joins": "="
+ },
+ ">": {
+  "name": "road_setts#15~11",
+  "joins": "="
+ },
+ "?": {
+  "name": "road_setts#15~12",
+  "joins": "="
+ },
+ "|": {
+  "name": "road_setts#11~13",
+  "joins": "="
  }
 }

@@ -4822,8 +4822,8 @@
    "ground": "grass"
   },
   {
-   "name": "silph_co",
-   "image": "sheets/silph_co.png",
+   "name": "silph_co_x",
+   "image": "sheets/silph_co_x.png",
    "x": 0,
    "y": 0,
    "w": 9,
@@ -4832,7 +4832,116 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "kerb#15",
+   "ground": [
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15"
+   ],
    "solid": true,
    "open": [
     "4,11"
@@ -4885,8 +4994,8 @@
    "dedupe": true
   },
   {
-   "name": "saffron_gate",
-   "image": "sheets/saffron_gate.png",
+   "name": "saffron_gate_n",
+   "image": "sheets/saffron_gate_n.png",
    "x": 0,
    "y": 0,
    "w": 4,
@@ -4895,7 +5004,20 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "kerb#15",
+   "ground": [
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15"
+   ],
    "solid": true,
    "open": [
     "1,2",
@@ -4908,8 +5030,8 @@
    "dedupe": true
   },
   {
-   "name": "saffron_gate_back",
-   "image": "sheets/saffron_gate_back.png",
+   "name": "saffron_gate_w",
+   "image": "sheets/saffron_gate_w.png",
    "x": 0,
    "y": 0,
    "w": 4,
@@ -4918,7 +5040,92 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "kerb#15",
+   "ground": [
+    "grass",
+    "grass",
+    "grass",
+    "pavement#14",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15"
+   ],
+   "solid": true,
+   "open": [
+    "1,2",
+    "2,2"
+   ],
+   "behaviors": {
+    "1,2": "MB_ANIMATED_DOOR",
+    "2,2": "MB_ANIMATED_DOOR"
+   },
+   "dedupe": true
+  },
+  {
+   "name": "saffron_gate_e",
+   "image": "sheets/saffron_gate_e.png",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "h": 3,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "pavement#14",
+    "grass",
+    "grass",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass"
+   ],
+   "solid": true,
+   "open": [
+    "1,2",
+    "2,2"
+   ],
+   "behaviors": {
+    "1,2": "MB_ANIMATED_DOOR",
+    "2,2": "MB_ANIMATED_DOOR"
+   },
+   "dedupe": true
+  },
+  {
+   "name": "saffron_gate_back_u",
+   "image": "sheets/saffron_gate_back_u.png",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "h": 3,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass"
+   ],
    "solid": true,
    "open": [
     "1,0",
@@ -4931,8 +5138,8 @@
    "dedupe": true
   },
   {
-   "name": "magnet_train_station",
-   "image": "sheets/magnet_train_station.png",
+   "name": "magnet_train_station_m",
+   "image": "sheets/magnet_train_station_m.png",
    "x": 0,
    "y": 0,
    "w": 8,
@@ -4941,7 +5148,40 @@
     9
    ],
    "tileset": "secondary",
-   "ground": "kerb#15",
+   "ground": [
+    "pavement#14",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15"
+   ],
    "solid": true,
    "open": [],
    "behaviors": {},
@@ -5035,6 +5275,19 @@
    ],
    "tileset": "secondary",
    "ground": "kerb#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "sign_paved_k14",
+   "image": "sheets/sign_paved.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "kerb#14",
    "solid": true,
    "dedupe": true
   },
@@ -5315,7 +5568,7 @@
    "dedupe": true
   },
   {
-   "name": "granite#3.1",
+   "name": "compass_bl",
    "image": "sheets/granite.png",
    "x": 32,
    "y": 16,
@@ -5327,358 +5580,10 @@
    "dedupe": true
   },
   {
-   "name": "granite#6.2",
+   "name": "compass_br",
    "image": "sheets/granite.png",
    "x": 48,
    "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#7.1",
-   "image": "sheets/granite.png",
-   "x": 64,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#7.2",
-   "image": "sheets/granite.png",
-   "x": 80,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#7.3",
-   "image": "sheets/granite.png",
-   "x": 96,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#9.8",
-   "image": "sheets/granite.png",
-   "x": 112,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#11.1",
-   "image": "sheets/granite.png",
-   "x": 128,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#11.8",
-   "image": "sheets/granite.png",
-   "x": 144,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#11.9",
-   "image": "sheets/granite.png",
-   "x": 160,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#12.4",
-   "image": "sheets/granite.png",
-   "x": 176,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#13.4",
-   "image": "sheets/granite.png",
-   "x": 192,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#13.8",
-   "image": "sheets/granite.png",
-   "x": 208,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#13.12",
-   "image": "sheets/granite.png",
-   "x": 224,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#14.2",
-   "image": "sheets/granite.png",
-   "x": 240,
-   "y": 16,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#14.4",
-   "image": "sheets/granite.png",
-   "x": 0,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#14.6",
-   "image": "sheets/granite.png",
-   "x": 16,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.1",
-   "image": "sheets/granite.png",
-   "x": 32,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.2",
-   "image": "sheets/granite.png",
-   "x": 48,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.3",
-   "image": "sheets/granite.png",
-   "x": 64,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.4",
-   "image": "sheets/granite.png",
-   "x": 80,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.5",
-   "image": "sheets/granite.png",
-   "x": 96,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.6",
-   "image": "sheets/granite.png",
-   "x": 112,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.7",
-   "image": "sheets/granite.png",
-   "x": 128,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.8",
-   "image": "sheets/granite.png",
-   "x": 144,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.9",
-   "image": "sheets/granite.png",
-   "x": 160,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.10",
-   "image": "sheets/granite.png",
-   "x": 176,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.11",
-   "image": "sheets/granite.png",
-   "x": 192,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.12",
-   "image": "sheets/granite.png",
-   "x": 208,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.13",
-   "image": "sheets/granite.png",
-   "x": 224,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.14",
-   "image": "sheets/granite.png",
-   "x": 240,
-   "y": 32,
-   "banks": [
-    12
-   ],
-   "tileset": "secondary",
-   "ground": "kerb#15",
-   "dedupe": true
-  },
-  {
-   "name": "granite#15.15",
-   "image": "sheets/granite.png",
-   "x": 0,
-   "y": 48,
    "banks": [
     12
    ],
@@ -5689,15 +5594,20 @@
   {
    "name": "compass",
    "image": "sheets/granite.png",
-   "x": 16,
-   "y": 48,
+   "x": 64,
+   "y": 16,
    "w": 2,
    "h": 2,
    "banks": [
     12
    ],
    "tileset": "secondary",
-   "ground": "kerb#15",
+   "ground": [
+    "kerb#15",
+    "kerb#15",
+    "compass_bl",
+    "compass_br"
+   ],
    "dedupe": true
   },
   {
@@ -5727,6 +5637,78 @@
    ],
    "tileset": "secondary",
    "ground": "kerb#15",
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "arcade_beige_u",
+   "image": "sheets/city_beige.png",
+   "x": 0,
+   "y": 160,
+   "w": 4,
+   "h": 4,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "grass",
+    "grass",
+    "grass",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "grass",
+    "kerb#15",
+    "grass",
+    "grass",
+    "grass"
+   ],
+   "solid": true,
+   "dedupe": true
+  },
+  {
+   "name": "office_narrow_beige_y",
+   "image": "sheets/city_beige.png",
+   "x": 0,
+   "y": 224,
+   "w": 4,
+   "h": 6,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "ground": [
+    "pavement#14",
+    "pavement#14",
+    "pavement#14",
+    "pavement#14",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15"
+   ],
    "solid": true,
    "dedupe": true
   },
@@ -5786,7 +5768,32 @@
     11
    ],
    "tileset": "secondary",
-   "ground": "kerb#15",
+   "ground": [
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "pavement#13",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "pavement#13",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "pavement#13",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "pavement#13",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "pavement#13",
+    "kerb#15",
+    "kerb#15",
+    "kerb#15",
+    "pavement#13"
+   ],
    "solid": true,
    "dedupe": true
   },

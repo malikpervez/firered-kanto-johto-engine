@@ -4349,7 +4349,7 @@
    "elevation": null,
    "open": []
   },
-  "face_inner_E": {
+  "face_middle_1": {
    "ids": [
     665,
     666
@@ -4360,7 +4360,7 @@
    "elevation": null,
    "open": []
   },
-  "face_inner_W": {
+  "face_middle_3": {
    "ids": [
     667,
     668
@@ -4465,7 +4465,7 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 192
+  "secondary": 187
  },
  "metatile_counts": {
   "primary": 548,
