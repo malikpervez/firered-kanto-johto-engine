@@ -11,12 +11,12 @@ plays the events one after another, each starting where the last one left the ga
 
 | | |
 |---|---|
-| Date | 2026-10-31 |
-| Game | branch `claude/kanto-polish` (the polish pass over every rebuilt map: cut-off and misplaced tiles, crossed seams, detail; KR-96), on `v2-main` `aef1f048` |
-| ROM | `make -j4` with the default settings. SHA-1 `c0afc7445ea8028bea0a3a0a0ecb9795c1e67328` |
+| Date | 2026-11-02 |
+| Game | branch `claude/story-pikachu-stranger` (the companion Pikachu reacts to the stranger on Route 1 and at Cinnabar; story audit E1), on `v2-main` `d968d4b5` |
+| ROM | `make -j4` with the default settings. SHA-1 `01902a72036c8e71db5bb3bfb1d16eeec6cecb5c` |
 | pae | `45801f8` (pae PR #37, on `main`) |
-| Last step passed | 399 `indigo-center`, the end of the check. **All 399 steps pass from the top**, on one ROM: steps 1-229 in one run, stopped there when the container was restarted, then 230-399 in one run (3894 s) from step 229's checkpoint, which that first run made |
-| Replay tests | `pae test run`: 562 tests, 419 passed, 143 changed only their screen (the polished maps in view); all 143 looked at and accepted. One new test (`pallet the crate on the dock`): all 563 pass |
+| Last step passed | 399 `indigo-center`, the end of the check. **Steps 18–399 pass on this ROM**: 18–229 in one run (5493 s) from step 17's checkpoint of the 2026-10-31 run, then 230–399 in one run (4017 s) from step 229's checkpoint, which that first run made. Steps 1–17 come before the change and are as on 2026-10-31 |
+| Replay tests | `pae test run`: 567 pass (563 and four new) |
 
 ## How to run it
 
@@ -75,7 +75,7 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 15 | `rivals-house` | Into Blue's house | Blue's house 4,8 | |
 | 16 | `town-map` | Daisy gives the Town Map | Blue's house 4,4 | `VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE` 2 |
 | 17 | `leave-rivals-house` | Out of Blue's house | Pallet Town 18,8 | |
-| 18 | `north-route1` | North into Route 1: Ho-Oh flies over, then the stranger and the Pokédex with no entry | Route 1 25,39 | `FLAG_RB_OPENING_SEEN`, `FLAG_MW01_SEEN` set |
+| 18 | `north-route1` | North into Route 1: Ho-Oh flies over, then the stranger (Pikachu bristles) and the Pokédex with no entry | Route 1 25,39 | `FLAG_RB_OPENING_SEEN`, `FLAG_MW01_SEEN` set |
 | 19 | `north-viridian` | Up Route 1 into Viridian: Giratina drops the Friends on the road | Viridian City 25,48 | `FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN` set |
 | 20 | `old-man` | The old man's catching demonstration (the second tutorial battle) | Viridian City 25,13 | `VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN` 2 |
 | 21 | `route2` | The road north is open: into Route 2 | Route 2 9,79 | |
@@ -636,3 +636,4 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 2026-10-30 | `claude/town-props`: the Town Props in ten more towns (KR-94): Viridian, Vermilion, Lavender, Fuchsia, Pallet, the Indigo Plateau, Saffron, Celadon, Cinnabar and Pewter | **All 399 steps pass from the top**: steps 1–391 in one run (8364 s), then 392–399 `--from vr3f-switch` (313 s). First tries: step 1 stopped at (14, 3), as its walk up to the road north went through Pallet's new fingerpost at (13, 2–3); it turns onto the road at row 4 now. Step 392 stopped with the 3F switch not pressed: a wandering Pokémon stood in the boulder's way at pushes 34, 36 and 38. The checkpoint the step starts from changes with every step before it, and no run since 2026-10-29 had reached it (Pewter's and Cerulean's checks stopped at their own steps). `strength_waits.py` from step 391's checkpoint found `{34: 75, 36: 45, 38: 75}`. `pae test run`: all 560 pass (three new; 29 screens accepted, the props in view). |
 | 2026-10-30 | `claude/vermilion-harbour` (with `claude/town-props` merged in): Vermilion's harbour (KR-95): the square and the park in fan setts, the main street asphalt with setts bands each side, the promenade in quay flags, the quay wall round it, the pier and the dock | **All 399 steps pass from the top**: steps 1–391 in one run (8400 s), then 392–399 `--from vr3f-switch` (314 s). The first try stopped at step 392, as the Town Props run did, and passes with the same waits (`strength_waits.py` from this ROM's step 391 found the same `{34: 75, 36: 45, 38: 75}`). Every step through Vermilion passed first time: steps 84–100 (into town, the Center, east to Route 11 and back, the S.S. Anne) and 292–301 (the Fan Club's Bike Voucher, the Cut tree into the Gym's yard, Lt. Surge). `pae test run`: 562 tests, 545 passed, 17 screens changed and accepted (Vermilion's ground in view, and Route 11's two that look into it), then those 17 pass; two new tests. |
 | 2026-10-31 | `claude/kanto-polish`: the polish pass over every rebuilt route and town (KR-96): cut-off and misplaced tiles, crossed seams, grass and paving where they don't belong, colour and props | **All 399 steps pass from the top**, on one ROM: steps 1–229 in one run, which stopped there when the container was restarted (no step failed), then 230–399 in one run (3894 s), resumed from step 229's checkpoint made by that first run. First try throughout, step 392 too, with the waits `{34: 75, 36: 45, 38: 75}`. `pae test run`: 562 tests, 419 passed, 143 screens changed and accepted (the polished ground in view), then those pass; one new test, so 563. |
+| 2026-11-02 | `claude/story-pikachu-stranger`: the companion Pikachu's fur stands on end as the stranger walks up on Route 1 (story audit E1; one more text box in step 18's scene), and it reacts at Cinnabar's reveal, which the check doesn't play | **Steps 18–399 pass**: 18–229 in one run (5493 s) from step 17's checkpoint, then 230–399 in one run (4017 s) from the step 229 checkpoint the first run made; step 392's boulder with the same waits `{34: 75, 36: 45, 38: 75}`. The first try stopped at step 18 with `FLAG_MW01_SEEN` unset: its 40 presses ended on the stranger's last line, one box short; it presses 42 times now. `pae test run`: 567 pass (four new). |
