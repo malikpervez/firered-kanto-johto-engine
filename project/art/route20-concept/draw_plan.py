@@ -70,8 +70,9 @@ def open_sea(x, y):
 
 # scattered (some alone, some in pairs, never in a line), off the swimmers' lines of sight and the Seel's and the
 # Clamperl's blocks
-for x, y, c in ((4, 2, "Q"), (9, 1, "q"), (18, 1, "Q"), (19, 2, "q"), (27, 2, "q"), (33, 1, "Q"), (41, 2, "Q"),
-                (46, 1, "q"), (74, 1, "q"), (79, 1, "Q"), (94, 1, "Q"), (99, 2, "q"), (100, 1, "q"), (109, 2, "Q"),
+# (along the top they keep to row 1: row 2 is the lane surfed east over the Seafoam Islands, clear of the swimmers)
+for x, y, c in ((4, 1, "Q"), (9, 1, "q"), (18, 1, "Q"), (20, 1, "q"), (27, 1, "q"), (33, 1, "Q"), (41, 1, "Q"),
+                (46, 1, "q"), (74, 1, "q"), (79, 1, "Q"), (94, 1, "Q"), (98, 1, "q"), (100, 1, "q"), (109, 1, "Q"),
                 (114, 1, "q"),
                 (5, 18, "q"), (11, 17, "Q"), (16, 18, "Q"), (25, 17, "q"), (26, 18, "Q"), (32, 18, "q"), (39, 17, "Q"),
                 (44, 18, "q"), (53, 18, "Q"), (61, 18, "q"), (91, 18, "Q"), (99, 17, "q"), (103, 18, "Q"),
