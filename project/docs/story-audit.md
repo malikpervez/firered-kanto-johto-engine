@@ -321,6 +321,21 @@ line, and Gold's three lab battles. The rest were checked natively in the old 30
 guide's "historical native scope"), not on this branch. The story check plays the opening day and walks past every
 other beat.
 
+## Status
+
+Done so far, each in its own pull request for the owner to read (none merged):
+
+| Proposal | What the player now sees | Pull request |
+|---|---|---|
+| T1 Nao's road home | Oak passes on Nao's news after the League; Nao greets a Kanto friend in Ecruteak (or introduces herself, without the old typo); Mr. Fuji has a letter from her after the welcome (new RB15) | #88 |
+| L1 Gold comes back | After the Zephyr Badge, Gold waits outside Violet's Gym (Falkner beat him twice) for an optional battle, then tells of the theft at Elm's lab (new flag `JOHTO_FLAG_GD01_SEEN`, Johto id `0x291B`; three new trainers) | #89 |
+| T2 The stranger notices the other visitors | The stranger mentions the seven who fell over Viridian (MW04); Mewtwo knows Rocket made birds the way he was made (MW08, after Black Tide) | #90 |
+| E1 Pikachu watches the stranger | The companion Pikachu bristles at the stranger on Route 1, again at Cinnabar's reveal, and settles as Mewtwo leaves (the story check passes steps 18–399 with it) | #92 |
+
+Each has replay tests started from story state, and a full `pae test run` that passes. The rest of the plan is not
+started: T3–T7, E2–E4 and L2–L6 are in scope and small to medium (L2, Gold's later beats, waits for the owner's
+read of L1); everything marked **Owner** waits for the owner.
+
 ## The plan
 
 Each proposal is one branch and one pull request. Sizes: **XS** a line or two, **S** a short scene or a few callback
