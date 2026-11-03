@@ -122,7 +122,7 @@ def phase(x: int, y: int) -> str:
 
 
 def lay(g, *, slate: set, gravel: set, beds: set, rails: set = frozenset(), gates=(), details=(), roads: str = "=",
-        edge_roads: set = frozenset(), tower_palette, out: Path, spec_dir: Path) -> dict:
+        edge_roads: set = frozenset(), gravel_edges: bool = True, tower_palette, out: Path, spec_dir: Path) -> dict:
     """Lay the pack into the plan ``g``: ``slate``, ``gravel`` and ``beds`` (their cells), ``rails`` (cells), ``gates``
     (the left block of each, 3x1) and ``details`` ((piece, x, y): its top-left block). A rail, a gate or a detail stands
     on the surface its cell has (slate, gravel, a bed or, if none, the lawn) and draws over it.
@@ -131,7 +131,8 @@ def lay(g, *, slate: set, gravel: set, beds: set, rails: set = frozenset(), gate
       ``edge_roads``, where a neighbour's cobble road comes in) are the pack's join to the cobble on that side; the others its own, by its neighbours that are neither slate nor road. Every slate block counts as
       cobble for the cobble beside it (no lawn lip at the join).
     - The gravel draws its edges only where lawn (anything but gravel, a bed or slate) is beside it, north, east, south
-      or west: it runs quietly into the beds and up to the slate.
+      or west: it runs quietly into the beds and up to the slate. With ``gravel_edges`` False it draws none at all, so
+      it runs the same way into the lawn, trees and forest too.
     - The beds draw their edges where anything but a bed is beside them.
 
     Returns the "legend" for the characters it wrote, the spec "entries", the "solid" characters, and the "palette"
@@ -194,7 +195,7 @@ def lay(g, *, slate: set, gravel: set, beds: set, rails: set = frozenset(), gate
             name = f"slate_{ph}#{m}" + (f"_to_cobble_{'_'.join(joins)}" if joins else "")
         elif kind == "gravel":
             m = sum(BITS[d] for d in SIDE.values()
-                    if at(x + d[0], y + d[1]) is not None and (x + d[0], y + d[1]) not in surface_of)
+                    if at(x + d[0], y + d[1]) is not None and (x + d[0], y + d[1]) not in surface_of) if gravel_edges else 0
             idx, pals = compose({q: ("gravel",) + v for q, v in pk.recipe("gravel", m).items()})
             name = f"gravel#{m}"
         else:

@@ -45,8 +45,9 @@ to the Tower, the paths to the Center and the Mart and the three roads to the ma
 half is the pack's join to the cobble, so the routes' roads run into it. The garden of remembrance runs from the walk to
 the town's south edge: lavender rows (λ), a gravel path (γ) down the middle from an open gate between two stone
 lanterns to a stone between two more at the forest's edge, three paths across, 14 memorial stones and 3 offering stones,
-two trees, the benches either side of the path; a low iron railing along the walk and down the garden's west side from
+two trees, the benches either side of the path (the gravel draws no edge, so it runs into the lavender, the lawn and
+the trees alike); a low iron railing along the walk and down the garden's west side from
 row 18 (open where its paths come out, and north of that for the Haunters' rounds). Lavender beside the Tower and on the
 south lawn; two violet street lamps by the road south; Mr. Fuji's yard: the rest shelter, the bowls and a straw bed. The
 railings, the gate and the details are listed in `make_art.py` (`RAILS`, `GATES`, `DETAILS`; the routes' roads past
-the edges in `EDGE_ROADS`). The slate, gravel and lavender have a palette of their own (bank 10). 291 of its 384 tiles.
+the edges in `EDGE_ROADS`). The slate, gravel and lavender have a palette of their own (bank 10). 289 of its 384 tiles.

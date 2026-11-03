@@ -133,10 +133,11 @@ def check(g, d) -> None:
 
 
 def lay_lavender(g) -> dict:
-    """Lavender's own ground and details (../kit/lavender.py) into the plan."""
+    """Lavender's own ground and details (../kit/lavender.py) into the plan. The gravel has no edges at all (the
+    owner: a border either all round or nowhere; it runs into the lavender, the lawn, the trees and the forest alike)."""
     cells = {kind: {(x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == ch} for ch, kind in SURFACES.items()}
     return lavender.lay(g, slate=cells["slate"], gravel=cells["gravel"], beds=cells["beds"], rails=RAILS, gates=GATES,
-                        details=DETAILS, edge_roads=EDGE_ROADS, tower_palette=buildings.load(TOWER).palette,
+                        details=DETAILS, edge_roads=EDGE_ROADS, gravel_edges=False, tower_palette=buildings.load(TOWER).palette,
                         out=HERE, spec_dir=HERE)
 
 
