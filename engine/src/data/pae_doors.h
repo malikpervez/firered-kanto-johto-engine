@@ -117,9 +117,9 @@ static const u8 sPaeDoorPalettes_71[] = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 };
     { 728, &gTileset_CeruleanConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_10, sPaeDoorPalettes_10 }, \
     { 748, &gTileset_CeruleanConcept, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_11, sPaeDoorPalettes_11 }, \
     { 764, &gTileset_CeruleanConcept, DOOR_SOUND_SLIDING, 2, sPaeDoorTiles_12, sPaeDoorPalettes_12 }, \
-    { 671, &gTileset_CinnabarConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_13, sPaeDoorPalettes_13 }, \
-    { 701, &gTileset_CinnabarConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_14, sPaeDoorPalettes_14 }, \
-    { 744, &gTileset_CinnabarConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_15, sPaeDoorPalettes_15 }, \
+    { 771, &gTileset_CinnabarConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_13, sPaeDoorPalettes_13 }, \
+    { 801, &gTileset_CinnabarConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_14, sPaeDoorPalettes_14 }, \
+    { 844, &gTileset_CinnabarConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_15, sPaeDoorPalettes_15 }, \
     { 717, &gTileset_FuchsiaConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_16, sPaeDoorPalettes_16 }, \
     { 752, &gTileset_FuchsiaConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_17, sPaeDoorPalettes_17 }, \
     { 769, &gTileset_FuchsiaConcept, DOOR_SOUND_NORMAL, 2, sPaeDoorTiles_10, sPaeDoorPalettes_18 }, \

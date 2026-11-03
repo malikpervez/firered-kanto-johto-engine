@@ -1853,6 +1853,9 @@ static void TilesetAnim_CeruleanConcept(u16);
 static void QueueAnimTiles_VermilionConcept_Fountain3X3(u16);
 static void TilesetAnim_VermilionConcept(u16);
 static void QueueAnimTiles_CeruleanConcept_Canal(u16);
+static void QueueAnimTiles_CinnabarConcept_CinnabarSteamVent(u16);
+static void TilesetAnim_CinnabarConcept(u16);
+static void QueueAnimTiles_CinnabarConcept_CinnabarSpringSteam(u16);
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/1.4bpp");
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/0.4bpp");
 const u16 gTilesetAnims_AlolaIslands_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/alola_island/anim/flower/2.4bpp");
@@ -2154,4 +2157,47 @@ static void QueueAnimTiles_CeruleanConcept_Canal(u16 timer)
 {
     u16 i = timer % ARRAY_COUNT(gTilesetAnims_CeruleanConcept_Canal);
     AppendTilesetAnimToBuffer(gTilesetAnims_CeruleanConcept_Canal[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 325)), 12 * TILE_SIZE_4BPP);
+}
+
+const u16 gTilesetAnims_CinnabarConcept_CinnabarSteamVent_Frame0[] = INCBIN_U16("data/tilesets/secondary/cinnabar_concept/anim/cinnabar_steam_vent/0.4bpp");
+const u16 gTilesetAnims_CinnabarConcept_CinnabarSteamVent_Frame1[] = INCBIN_U16("data/tilesets/secondary/cinnabar_concept/anim/cinnabar_steam_vent/1.4bpp");
+
+const u16 *const gTilesetAnims_CinnabarConcept_CinnabarSteamVent[] = {
+    gTilesetAnims_CinnabarConcept_CinnabarSteamVent_Frame0,
+    gTilesetAnims_CinnabarConcept_CinnabarSteamVent_Frame1
+};
+
+static void QueueAnimTiles_CinnabarConcept_CinnabarSteamVent(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_CinnabarConcept_CinnabarSteamVent);
+    AppendTilesetAnimToBuffer(gTilesetAnims_CinnabarConcept_CinnabarSteamVent[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 320)), 4 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_CinnabarConcept(u16 timer)
+{
+    if (timer % 24 == 0)
+        QueueAnimTiles_CinnabarConcept_CinnabarSteamVent(timer / 24);
+    if (timer % 24 == 1)
+        QueueAnimTiles_CinnabarConcept_CinnabarSpringSteam(timer / 24);
+}
+
+void InitTilesetAnim_CinnabarConcept(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_CinnabarConcept;
+}
+
+const u16 gTilesetAnims_CinnabarConcept_CinnabarSpringSteam_Frame0[] = INCBIN_U16("data/tilesets/secondary/cinnabar_concept/anim/cinnabar_spring_steam/0.4bpp");
+const u16 gTilesetAnims_CinnabarConcept_CinnabarSpringSteam_Frame1[] = INCBIN_U16("data/tilesets/secondary/cinnabar_concept/anim/cinnabar_spring_steam/1.4bpp");
+
+const u16 *const gTilesetAnims_CinnabarConcept_CinnabarSpringSteam[] = {
+    gTilesetAnims_CinnabarConcept_CinnabarSpringSteam_Frame0,
+    gTilesetAnims_CinnabarConcept_CinnabarSpringSteam_Frame1
+};
+
+static void QueueAnimTiles_CinnabarConcept_CinnabarSpringSteam(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_CinnabarConcept_CinnabarSpringSteam);
+    AppendTilesetAnimToBuffer(gTilesetAnims_CinnabarConcept_CinnabarSpringSteam[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 324)), 2 * TILE_SIZE_4BPP);
 }
