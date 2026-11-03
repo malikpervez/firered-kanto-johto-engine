@@ -141,6 +141,311 @@
  "\u00a1": "statue_guardian",
  "\u00a2": "bench_wood_north",
  "\u00a3": "litter_bin",
- "\u01ce": "field_rock_a@flowers2",
- "\u01d0": "field_rock_c@flowers1"
+ "\u0200": {
+  "name": "slate_SW#72_to_cobble_NWN_NEN",
+  "joins": "="
+ },
+ "\u0201": {
+  "name": "slate_SE#0_to_cobble_NWN_NEN",
+  "joins": "="
+ },
+ "\u0202": {
+  "name": "slate_SW#0_to_cobble_NWN_NEN",
+  "joins": "="
+ },
+ "\u0203": {
+  "name": "slate_SW#34_to_cobble_NWN_NEN",
+  "joins": "="
+ },
+ "\u0204": {
+  "name": "slate_NW#200",
+  "joins": "="
+ },
+ "\u0205": {
+  "name": "slate_NE#0",
+  "joins": "="
+ },
+ "\u0206": {
+  "name": "slate_NW#0",
+  "joins": "="
+ },
+ "\u0207": {
+  "name": "slate_NW#50",
+  "joins": "="
+ },
+ "\u0208": {
+  "name": "slate_SW#200",
+  "joins": "="
+ },
+ "\u0209": {
+  "name": "slate_SE#0",
+  "joins": "="
+ },
+ "\u020a": {
+  "name": "slate_SW#0",
+  "joins": "="
+ },
+ "\u020b": {
+  "name": "slate_SW#50",
+  "joins": "="
+ },
+ "\u020c": "lavender#217",
+ "\u020d": "lavender#145",
+ "\u020e": "lavender#179",
+ "\u020f": "lavender#200",
+ "\u0210": "lavender_center_c",
+ "\u0211": "lavender#50",
+ "\u0212": "lavender_center_b",
+ "\u0213": "lavender_center",
+ "\u0214": {
+  "name": "slate_NE#251",
+  "joins": "="
+ },
+ "\u0215": "lavender#236",
+ "\u0216": "lavender#100",
+ "\u0217": "lavender#118",
+ "\u0218": {
+  "name": "slate_SE#154",
+  "joins": "="
+ },
+ "\u0219": {
+  "name": "slate_SW#136",
+  "joins": "="
+ },
+ "\u021a": {
+  "name": "slate_SW#18",
+  "joins": "="
+ },
+ "\u021b": {
+  "name": "slate_NW#17_to_cobble_NWW_SWW",
+  "joins": "="
+ },
+ "\u021c": {
+  "name": "slate_NE#145",
+  "joins": "="
+ },
+ "\u021d": {
+  "name": "slate_NW#145",
+  "joins": "="
+ },
+ "\u021e": {
+  "name": "slate_NW#129",
+  "joins": "="
+ },
+ "\u021f": {
+  "name": "slate_NE#144",
+  "joins": "="
+ },
+ "\u0220": {
+  "name": "slate_NW#17",
+  "joins": "="
+ },
+ "\u0221": {
+  "name": "slate_NE#129",
+  "joins": "="
+ },
+ "\u0222": {
+  "name": "slate_NW#128",
+  "joins": "="
+ },
+ "\u0223": {
+  "name": "slate_NW#16",
+  "joins": "="
+ },
+ "\u0224": {
+  "name": "slate_NE#17",
+  "joins": "="
+ },
+ "\u0225": {
+  "name": "slate_NE#179",
+  "joins": "="
+ },
+ "\u0226": {
+  "name": "slate_SW#0_to_cobble_NWW_SWW",
+  "joins": "="
+ },
+ "\u0227": {
+  "name": "slate_SE#50",
+  "joins": "="
+ },
+ "\u0228": {
+  "name": "slate_NW#36_to_cobble_NWW_SWW",
+  "joins": "="
+ },
+ "\u0229": {
+  "name": "slate_NE#100",
+  "joins": "="
+ },
+ "\u022a": {
+  "name": "slate_NW#100",
+  "joins": "="
+ },
+ "\u022b": {
+  "name": "slate_NE#68",
+  "joins": "="
+ },
+ "\u022c": {
+  "name": "slate_NW#64",
+  "joins": "="
+ },
+ "\u022d": {
+  "name": "slate_NW#32",
+  "joins": "="
+ },
+ "\u022e": {
+  "name": "rail_end_E@slate_NE#36",
+  "joins": "="
+ },
+ "\u022f": {
+  "name": "rail_straight_EW@slate_NW#100",
+  "joins": "="
+ },
+ "\u0230": {
+  "name": "rail_straight_EW@slate_NE#100",
+  "joins": "="
+ },
+ "\u0231": {
+  "name": "rail_end_W@slate_NW#100",
+  "joins": "="
+ },
+ "\u0232": {
+  "name": "stone_lantern_00@slate_NE#100",
+  "joins": "="
+ },
+ "\u0233": {
+  "name": "gate_open_0@slate_NW#100",
+  "joins": "="
+ },
+ "\u0234": {
+  "name": "gate_open_2@slate_NW#100",
+  "joins": "="
+ },
+ "\u0235": {
+  "name": "stone_lantern_00@slate_NE#118",
+  "joins": "="
+ },
+ "\u0236": "rail_end_E@grass",
+ "\u0237": "rail_straight_EW@grass",
+ "\u0238": "rail_end_W@grass",
+ "\u0239": {
+  "name": "slate_SW#72",
+  "joins": "="
+ },
+ "\u023a": {
+  "name": "slate_SW#34",
+  "joins": "="
+ },
+ "\u023b": "stone_lantern_01@grass",
+ "\u023c": "gravel#0",
+ "\u023d": "rest_shelter_00@grass",
+ "\u023e": "rest_shelter_10@grass",
+ "\u023f": "lavender#249",
+ "\u0240": "lavender#149",
+ "\u0241": "lavender#209",
+ "\u0242": "lavender#177",
+ "\u0243": "lavender#243",
+ "\u0244": "lavender#181",
+ "\u0245": "lavender#213",
+ "\u0246": "rest_shelter_01@grass",
+ "\u0247": "rest_shelter_11@grass",
+ "\u0248": {
+  "name": "slate_SW#236",
+  "joins": "="
+ },
+ "\u0249": {
+  "name": "slate_SE#68",
+  "joins": "="
+ },
+ "\u024a": {
+  "name": "slate_SW#64",
+  "joins": "="
+ },
+ "\u024b": {
+  "name": "slate_SE#32",
+  "joins": "="
+ },
+ "\u024c": {
+  "name": "slate_SW#36",
+  "joins": "="
+ },
+ "\u024d": {
+  "name": "slate_SE#100",
+  "joins": "="
+ },
+ "\u024e": {
+  "name": "slate_SW#100",
+  "joins": "="
+ },
+ "\u024f": {
+  "name": "slate_SW#118",
+  "joins": "="
+ },
+ "\u0250": "lavender#238",
+ "\u0251": "memorial_rounded_00@gravel#0",
+ "\u0252": "lavender#108",
+ "\u0253": "lavender#102",
+ "\u0254": "memorial_flat_00@gravel#0",
+ "\u0255": "lavender#126",
+ "\u0256": "memorial_flower_00@gravel#0",
+ "\u0257": "offering_stone_00@gravel#0",
+ "\u0258": "food_water_bowls_00@grass",
+ "\u0259": {
+  "name": "slate_NW#72",
+  "joins": "="
+ },
+ "\u025a": {
+  "name": "slate_NE#34",
+  "joins": "="
+ },
+ "\u025b": "straw_bed_00@grass",
+ "\u025c": "lavender#253",
+ "\u025d": "lavender#245",
+ "\u025e": "lavender#247",
+ "\u025f": {
+  "name": "slate_NE#50",
+  "joins": "="
+ },
+ "\u0260": "rail_end_S@grass",
+ "\u0261": "lavender#241",
+ "\u0262": "street_lamp_00@grass",
+ "\u0263": "rail_straight_NS@grass",
+ "\u0264": "lavender#202",
+ "\u0265": "lavender#8",
+ "\u0266": "lavender#74",
+ "\u0267": "lavender#58",
+ "\u0268": "street_lamp_01@grass",
+ "\u0269": "rail_end_N@grass",
+ "\u026a": "lavender#252",
+ "\u026b": "lavender#101",
+ "\u026c": "lavender#228",
+ "\u026d": "lavender#246",
+ "\u026e": "lavender#183",
+ "\u026f": "lavender#42",
+ "\u0270": "lavender#122",
+ "\u0271": "lavender#216",
+ "\u0272": "lavender#1",
+ "\u0273": "lavender#146",
+ "\u0274": "lavender#153",
+ "\u0275": "lavender#186",
+ "\u0276": "lavender#116",
+ "\u0277": "lavender#10",
+ "\u0278": "stone_lantern_00@gravel#0",
+ "\u0279": "lavender#244",
+ "\u027a": "stone_lantern_01@gravel#0",
+ "\u027b": {
+  "name": "slate_NW#136_to_cobble_SWS_SES",
+  "joins": "="
+ },
+ "\u027c": {
+  "name": "slate_NE#0_to_cobble_SWS_SES",
+  "joins": "="
+ },
+ "\u027d": {
+  "name": "slate_NW#0_to_cobble_SWS_SES",
+  "joins": "="
+ },
+ "\u027e": {
+  "name": "slate_NE#18_to_cobble_SWS_SES",
+  "joins": "="
+ }
 }

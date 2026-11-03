@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "id": "stone_lantern",
+  "name": "stone_lantern",
+  "image": "tiles/stone_lantern.png",
+  "size_px": [
+    16,
+    32
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 1,
+    "height": 2
+  },
+  "palette": "lavender_tower",
+  "palettes_8x8": [
+    [
+      "lavender_tower",
+      "lavender_tower"
+    ],
+    [
+      "lavender_tower",
+      "lavender_tower"
+    ],
+    [
+      "lavender_tower",
+      "lavender_tower"
+    ],
+    [
+      "lavender_tower",
+      "lavender_tower"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": true,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 1,
+  "over_row_indices": [
+    0
+  ],
+  "frame_count": 1,
+  "budget_group": "memorial",
+  "tiles_8x8": [
+    [
+      15,
+      15
+    ],
+    [
+      44,
+      44
+    ],
+    [
+      33,
+      33
+    ],
+    [
+      32,
+      32
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ]
+  ],
+  "tile_pool_file": "../tile_pool.json",
+  "palette_file": "../palettes/lavender_tower.gpl",
+  "unique_8x8_tiles": 4,
+  "frames": [
+    "tiles/stone_lantern.png"
+  ],
+  "frame_speed": 0
+}

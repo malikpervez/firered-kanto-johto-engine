@@ -1,0 +1,913 @@
+{
+  "schema_version": 1,
+  "id": "details",
+  "type": "props",
+  "block_size_px": 16,
+  "palette": "per_tile",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "door_block": null,
+  "piece_names": [
+    "memorial_rounded",
+    "memorial_flat",
+    "memorial_flower",
+    "offering_stone",
+    "stone_lantern",
+    "street_lamp",
+    "food_water_bowls",
+    "straw_bed",
+    "rest_shelter"
+  ],
+  "naming": "N means lawn outside to north. Inside corners ordered NE, SE, SW, NW.",
+  "tiles": [
+    {
+      "schema_version": 1,
+      "id": "memorial_rounded",
+      "name": "memorial_rounded",
+      "image": "tiles/memorial_rounded.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_tower",
+      "palettes_8x8": [
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "budget_group": "memorial",
+      "tiles_8x8": [
+        [
+          18,
+          17
+        ],
+        [
+          43,
+          43
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_tower.gpl",
+      "unique_8x8_tiles": 3,
+      "frames": [
+        "tiles/memorial_rounded.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "memorial_flat",
+      "name": "memorial_flat",
+      "image": "tiles/memorial_flat.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_tower",
+      "palettes_8x8": [
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "budget_group": "memorial",
+      "tiles_8x8": [
+        [
+          1,
+          1
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_tower.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/memorial_flat.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "memorial_flower",
+      "name": "memorial_flower",
+      "image": "tiles/memorial_flower.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_tower",
+      "palettes_8x8": [
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "budget_group": "memorial",
+      "tiles_8x8": [
+        [
+          19,
+          16
+        ],
+        [
+          43,
+          43
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_tower.gpl",
+      "unique_8x8_tiles": 3,
+      "frames": [
+        "tiles/memorial_flower.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "offering_stone",
+      "name": "offering_stone",
+      "image": "tiles/offering_stone.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_tower",
+      "palettes_8x8": [
+        [
+          "kit_plants",
+          "kit_plants"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "budget_group": "memorial",
+      "tiles_8x8": [
+        [
+          3,
+          23
+        ],
+        [
+          45,
+          45
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_tower.gpl",
+      "unique_8x8_tiles": 3,
+      "frames": [
+        "tiles/offering_stone.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "stone_lantern",
+      "name": "stone_lantern",
+      "image": "tiles/stone_lantern.png",
+      "size_px": [
+        16,
+        32
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 2
+      },
+      "palette": "lavender_tower",
+      "palettes_8x8": [
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 1,
+      "over_row_indices": [
+        0
+      ],
+      "frame_count": 1,
+      "budget_group": "memorial",
+      "tiles_8x8": [
+        [
+          15,
+          15
+        ],
+        [
+          44,
+          44
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          32,
+          32
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_tower.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/stone_lantern.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "street_lamp",
+      "name": "street_lamp",
+      "image": "tiles/street_lamp.png",
+      "size_px": [
+        16,
+        32
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 2
+      },
+      "palette": "lavender_tower",
+      "palettes_8x8": [
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ],
+        [
+          "lavender_tower",
+          "lavender_tower"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 1,
+      "over_row_indices": [
+        0
+      ],
+      "frame_count": 1,
+      "budget_group": "street_lamp",
+      "tiles_8x8": [
+        [
+          13,
+          13
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          28,
+          28
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_tower.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/street_lamp.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "food_water_bowls",
+      "name": "food_water_bowls",
+      "image": "tiles/food_water_bowls.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "budget_group": "fuji_yard",
+      "tiles_8x8": [
+        [
+          0,
+          0
+        ],
+        [
+          24,
+          25
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 3,
+      "frames": [
+        "tiles/food_water_bowls.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "straw_bed",
+      "name": "straw_bed",
+      "image": "tiles/straw_bed.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "budget_group": "fuji_yard",
+      "tiles_8x8": [
+        [
+          2,
+          2
+        ],
+        [
+          26,
+          26
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/straw_bed.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "rest_shelter",
+      "name": "rest_shelter",
+      "image": "tiles/rest_shelter.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 2,
+        "height": 2
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 1,
+      "over_row_indices": [
+        0
+      ],
+      "frame_count": 1,
+      "budget_group": "fuji_yard",
+      "note": "Solid 2x2 decorative shelter; a sleeping Pok\u00e9mon can be rendered over its bed. Open front is artwork, not a walk-through door.",
+      "tiles_8x8": [
+        [
+          14,
+          60,
+          60,
+          14
+        ],
+        [
+          49,
+          54,
+          54,
+          48
+        ],
+        [
+          42,
+          2,
+          2,
+          42
+        ],
+        [
+          42,
+          26,
+          26,
+          42
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 8,
+      "frames": [
+        "tiles/rest_shelter.png"
+      ],
+      "frame_speed": 0
+    }
+  ],
+  "transitions": [],
+  "unique_8x8_tiles": 29,
+  "collision_policy": "Use each piece\u2019s solid_blocks and walkable_blocks, including the mixed open gate.",
+  "tile_pool_file": "../tile_pool.json"
+}

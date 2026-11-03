@@ -7,7 +7,11 @@ sitting 4 blocks further east over Route 12).
 
 The pieces: the kit's, the Pokémon Center and the Mart (the kit's), Viridian's three houses in their palette (bank 7),
 and Pokémon Tower (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3) in a palette of its own (bank 9).
-Bank 8 is the kit's plants palette; 10-12 stay free for the seams to old Routes 8 and 12.
+Bank 8 is the kit's plants palette. Lavender's own ground and details are Kanto Lavender Town v0.1
+(../packs/lavender_v0.1, ../kit/lavender.py): the slate square and the walk to the tower, the garden of remembrance's
+lavender, gravel, railings, gate, lanterns and memorial stones, the violet street lamps and Mr. Fuji's yard; its slate,
+gravel and lavender are in a palette of their own (bank 10), its stones and lamps in the tower's, its iron and wood in
+the kit's. Banks 11-12 stay free.
 
 Run from the repository root:  python3 project/art/lavender-concept/make_art.py
 It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to itself; build.sh
@@ -21,6 +25,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import kit
+import lavender
 import props
 
 HERE = Path(__file__).resolve().parent
@@ -35,9 +40,33 @@ WEST = [(0, y) for y in range(9, 12)]
 SOUTH = [(x, MAP_H - 1) for x in range(12, 16)]
 CAMP = [(13, 13), (12, 12), (11, 13), (14, 12), (12, 14), (10, 14), (15, 13)]  # the Friends', as before
 SOLID = set("T#bRoklSBcw_~vrZLXHUW")
+NEW_BANK = lavender.NEW_BANK  # the pack's slate, gravel and lavender
+# Lavender's ground, from the plan's letters (draw_plan.py): slate, gravel and lavender beds
+SURFACES = {"σ": "slate", "γ": "gravel", "λ": "beds"}
+# the railings: along the walk's south side (on its slate) either side of the gate and on east past the bushes, and down
+# the garden's west side from row 18 to the town's south edge, open where its paths come out (rows 21 and 26); north of
+# that its west side stays open (the Haunters go round there at night, and the worker stands by it), and the forest
+# closes it east and south
+RAILS = ({(x, 11) for x in range(21, 27)} | {(x, 11) for x in range(32, 36)}
+         | {(21, y) for y in range(18, 30) if y not in (21, 26)})
+# the routes' cobble roads, just past the edges: the town's slate roads take the join to the cobble on that side
+EDGE_ROADS = ({(x, -1) for x, _ in NORTH} | {(-1, y) for _, y in WEST} | {(x, MAP_H) for x, _ in SOUTH})
+GATES = [(28, 11)]  # the open gate (3x1, its middle block walkable), in line with the tower's door
+# the details: (piece, x, y of its top-left block)
+DETAILS = [("stone_lantern", 27, 11), ("stone_lantern", 31, 11),  # either side of the gate
+           ("memorial_rounded", 23, 14), ("memorial_flat", 26, 14),  # the garden's stones, where its four stood
+           ("memorial_flower", 32, 14), ("offering_stone", 33, 14),
+           ("memorial_rounded", 23, 19), ("memorial_flat", 34, 19),  # and on south, row by row, to the town's edge
+           ("memorial_flower", 23, 23), ("memorial_rounded", 25, 23), ("memorial_flat", 32, 23),
+           ("memorial_rounded", 34, 23), ("offering_stone", 25, 24), ("offering_stone", 34, 24),
+           ("memorial_rounded", 23, 28), ("memorial_flower", 25, 28), ("memorial_flat", 32, 28),
+           ("memorial_rounded", 34, 28),
+           ("stone_lantern", 28, 28), ("stone_lantern", 30, 28), ("memorial_flower", 29, 29),  # the path's end
+           ("street_lamp", 16, 24), ("street_lamp", 11, 19),  # by the road south
+           ("rest_shelter", 8, 13), ("food_water_bowls", 8, 15), ("straw_bed", 2, 16)]  # Mr. Fuji's yard
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 PROPS = [("statue_guardian", 24, 6, "grass"),  # between the Mart and the Tower
-         ("bench_wood_north", 27, 17, "grass"), ("bench_wood_north", 31, 17, "grass"),  # looking at the memorial garden
+         ("bench_wood_north", 24, 17, "grass"), ("bench_wood_north", 32, 17, "grass"),  # in the garden, the path between
          ("litter_bin", 21, 12, "grass")]
 
 # the buildings: their letters in the plan, where each comes from and its palette's bank
@@ -103,42 +132,26 @@ def check(g, d) -> None:
     assert set(CAMP) <= town, "the Friends' camp must be open ground"
 
 
-GARDEN_STONES = [(23, 14), (26, 14), (29, 14), (32, 14)]  # the garden of remembrance's stones, in its flowers
-STONE_CHARS = iter("ǎǐǒǔ")
-
-
-def pick(names, x: int, y: int) -> str:
-    """The piece a "pick" letter draws at (x, y) (as pae map paint picks)."""
-    return names[(x * 7919 + y * 104729 + (x * y) % 13) % len(names)]
-
-
-def garden_stones(g) -> tuple[dict, list]:
-    """The garden's stones stand in its flowers: each the kit's rock over the flowers the bed has there."""
-    legend, made = {}, {}
-    sh = kit.Sheet("garden_stones", kit.PALS["ground"], kit.BANK["ground"], HERE, HERE, cols=4)
-    flowers = kit.LEGEND["*"]["pick"]
-    for x, y in GARDEN_STONES:
-        assert g[y][x] == "o", f"no stone at ({x},{y})"
-        rock, ground = pick(kit.ROCKS, x, y), pick(flowers, x, y)
-        name = f"{rock}@{ground}"
-        if name not in made:
-            made[name] = next(STONE_CHARS)
-            sh.add(name, kit.field_rock(rock), tileset="secondary", ground=ground, solid=True)
-            legend[made[name]] = name
-        g[y][x] = made[name]
-    return legend, sh.write()
+def lay_lavender(g) -> dict:
+    """Lavender's own ground and details (../kit/lavender.py) into the plan. The gravel has no edges at all (the
+    owner: a border either all round or nowhere; it runs into the lavender, the lawn, the trees and the forest alike)."""
+    cells = {kind: {(x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == ch} for ch, kind in SURFACES.items()}
+    return lavender.lay(g, slate=cells["slate"], gravel=cells["gravel"], beds=cells["beds"], rails=RAILS, gates=GATES,
+                        details=DETAILS, edge_roads=EDGE_ROADS, gravel_edges=False, tower_palette=buildings.load(TOWER).palette,
+                        out=HERE, spec_dir=HERE)
 
 
 def main() -> None:
     g = plan()
     prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
+    lav = lay_lavender(g)
+    SOLID.update(lav["solid"])
     d = doors(g)
     kit.check_forest(g)
     kit.check_water(g)
     check(g, d)
-    stone_legend, stone_mt = garden_stones(g)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
-    spec_mt = list(base["metatiles"]) + stone_mt
+    spec_mt = list(base["metatiles"]) + lav["entries"]
     pals = {}
     for letter, (folder, bank) in list(OWN.items()) + [("X", (TOWER, TOWER_BANK))]:
         b = load(letter)
@@ -155,10 +168,12 @@ def main() -> None:
             del e["w"], e["h"]
     for bank, pal in pals.items():
         kit.write_palette(HERE / f"palette_{bank}.pal", pal)
+    assert lav["palette"], "the pack's slate, gravel and lavender are in a palette of their own"
+    kit.write_palette(HERE / f"palette_{NEW_BANK}.pal", lav["palette"])
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{HOUSE_BANK}.pal", base["secondary_palettes"][8],
-                                       f"palette_{TOWER_BANK}.pal"]},
+                                       f"palette_{TOWER_BANK}.pal", f"palette_{NEW_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
             "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
@@ -170,7 +185,7 @@ def main() -> None:
     legend = dict(kit.LEGEND, **{k: {"name": v, "joins": "="} for k, v in SHARED.items()},
                   X={"name": "pokemon_tower", "joins": "="}, **{k: load(k).name for k in OWN})
     legend.update(prop_legend)
-    legend.update(stone_legend)
+    legend.update(lav["legend"])
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")
