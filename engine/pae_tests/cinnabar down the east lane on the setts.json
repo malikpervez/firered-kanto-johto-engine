@@ -1,0 +1,39 @@
+{
+ "note": "Down the east lane to the harbour on the basalt setts (KR-100): from the Gym's street to the harbour street, the way Bill and the player walk to the boat.",
+ "created": "2026-11-03 23:30",
+ "start": {
+  "map": "CinnabarIsland_Frlg",
+  "x": 21,
+  "y": 6,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     96
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CinnabarIsland_Frlg",
+  "x": 21,
+  "y": 12,
+  "in_battle": false
+ },
+ "accepted": "2026-11-03 23:16"
+}

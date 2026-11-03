@@ -1,0 +1,845 @@
+{
+  "schema_version": 1,
+  "pieces": {
+    "center": {
+      "schema_version": 1,
+      "id": "center",
+      "image": "tiles/center.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "N": {
+      "schema_version": 1,
+      "id": "N",
+      "image": "tiles/N.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "E": {
+      "schema_version": 1,
+      "id": "E",
+      "image": "tiles/E.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "S": {
+      "schema_version": 1,
+      "id": "S",
+      "image": "tiles/S.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "W": {
+      "schema_version": 1,
+      "id": "W",
+      "image": "tiles/W.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "NE": {
+      "schema_version": 1,
+      "id": "NE",
+      "image": "tiles/NE.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          3,
+          5
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "SE": {
+      "schema_version": 1,
+      "id": "SE",
+      "image": "tiles/SE.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "SW": {
+      "schema_version": 1,
+      "id": "SW",
+      "image": "tiles/SW.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "NW": {
+      "schema_version": 1,
+      "id": "NW",
+      "image": "tiles/NW.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          5,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "in_NE": {
+      "schema_version": 1,
+      "id": "in_NE",
+      "image": "tiles/in_NE.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "in_SE": {
+      "schema_version": 1,
+      "id": "in_SE",
+      "image": "tiles/in_SE.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "in_SW": {
+      "schema_version": 1,
+      "id": "in_SW",
+      "image": "tiles/in_SW.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "in_NW": {
+      "schema_version": 1,
+      "id": "in_NW",
+      "image": "tiles/in_NW.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          6,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    },
+    "single": {
+      "schema_version": 1,
+      "id": "single",
+      "image": "tiles/single.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_town",
+      "palettes_8x8": [
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ],
+        [
+          "cinnabar_town",
+          "cinnabar_town"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": true
+          },
+          {
+            "h": false,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0
+    }
+  }
+}

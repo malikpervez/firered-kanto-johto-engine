@@ -6,8 +6,15 @@ draw_plan.py). It is 96x44 blocks, as before; its joins stay where they were: Ro
 The pieces: the kit's and its Pokémon Center and Mart; the island's own buildings, each in its own palette: Blaine's
 Gym (Kanto Buildings Remakes v0.3, ../packs/buildings_v0.3: volcanic stone, bank 7), the burned Mansion (Celadon's old
 hotel, charred: buildings/pokemon_mansion, until the remakes' larger Mansion moves in; bank 9), the Pokémon Lab (the
-remakes' Oak's lab, as Pallet has it, bank 10); the kit's cliffs for the volcano's rock (bank 11).
-Bank 8 is the kit's plants palette; 12 stays free. Route 20 and Route 21 are kit maps too, so there are no seams.
+remakes' Oak's lab, as Pallet has it, bank 10). Bank 8 is the kit's plants palette. Route 20 and Route 21 are kit maps
+too, so there are no seams.
+
+The island's own ground, rock and details are Kanto Cinnabar Island v0.1 (../packs/cinnabar_v0.1, ../kit/cinnabar.py):
+dark basalt setts through the town's streets (in a palette of their own, bank 12), volcanic ash over the volcano
+island, the volcano's basalt cliff round its crater of cooling lava, lava rocks, steam vents and the hot spring's steam
+(all in the pack's volcano palette, bank 11). The pack's placement plan for this map says which cells are ash and where
+the details go; the cliff is laid block by block as that plan records it. The paving runs up to the buildings' fronts
+with no lawn edge against them; the signs in the street stand over the block under them.
 
 Run from the repository root:  python3 project/art/cinnabar-concept/make_art.py
 It writes sheets/, the palettes, spec.json, grid.txt, border.txt, legend.json and doors.json next to
@@ -23,7 +30,7 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
-import cliffs
+import cinnabar
 import kit
 import props
 
@@ -31,14 +38,14 @@ HERE = Path(__file__).resolve().parent
 R = buildings.REMAKES
 SECONDARY = "gTileset_CinnabarConcept"
 MAP_W, MAP_H = 96, 44
-GYM_BANK, MANSION_BANK, LAB_BANK, CLIFF_BANK = 7, 9, 10, 11
+GYM_BANK, MANSION_BANK, LAB_BANK = 7, 9, 10
 DOOR = "MB_ANIMATED_DOOR"
 BUILDINGS = {"H": (R / "cinnabar_gym", GYM_BANK), "U": (HERE / "buildings/pokemon_mansion", MANSION_BANK),
              "X": (R / "pokemon_lab", LAB_BANK)}
 SHARED = {"Z": "pokemon_center", "L": "poke_mart"}
 SEA = "s"
 WATER = set("s~")
-SOLID = set("T#bRoklSBcw_~vrsqQHUXZL") | cliffs.SOLID | {"C"}
+SOLID = set("T#bRoklSBcw_~vrsqQHUXZL") | {"C"}
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 PROPS = [("bench_wood_south", 9, 14, "grass"), ("litter_bin", 13, 14, "grass"), ("bench_wood_south", 16, 14, "grass")]  # looking out to sea
 LANE = [(x, 0) for x in range(0, 4)]         # Route 21's sea lane down the town's west side
@@ -55,7 +62,8 @@ CAMP = [(46, 20), (48, 20), (45, 19), (44, 20), (47, 22), (45, 21), (44, 22), (4
 TOWN_PEOPLE = [(14, 6), (11, 13), (20, 7), (22, 10)]
 VOLCANO_MONS = [(60, 26), (62, 26), (61, 27), (78, 9), (79, 11), (52, 9), (51, 13), (48, 15), (66, 27)]
 WAILMER = (88, 40)
-CRATER = {(x, y) for x in range(62, 69) for y in range(15, 18)}  # the pit in the volcano's top: no way in
+CRATER = {(x, y) for x in range(62, 69) for y in range(15, 18)}  # the pit in the volcano's top: its lava, solid
+FRONTS = "XZLUH"  # the buildings on the street: the paving runs on up to them (no lawn edge along their fronts)
 
 
 def load(letter: str) -> tuple[buildings.Building, list[tuple[int, int]]]:
@@ -105,16 +113,15 @@ def reachable(g, starts, surf=False) -> set[tuple[int, int]]:
     return seen
 
 
-def check(g, d) -> None:
+def check(g, d, signs) -> None:
     """The island's rules: on foot, the town is one place, reached from its street, and nothing walkable is on an edge
     but the lawn between the woods and the Gym (Route 21's woods stand above it); by Surf from Route 21's lane, both
     islands, the hot spring and Route 20's sea are reached; the two islands aren't joined on foot; every door can be
     walked into, every sign read; the scenes' ground is open and their water is open sea; the Friends' camp and
     Giratina's spot are open ground on the volcano island; the people and the Pokémon stand on open ground (Wailmer
-    swims); the volcano's crater is a closed pit."""
+    swims); the volcano's crater is solid lava."""
     walk = {(x, y) for y in range(MAP_H) for x in range(MAP_W) if g[y][x] not in SOLID}
-    assert CRATER <= walk and not CRATER & reachable(g, LANE, surf=True), "the crater is closed"
-    walk -= CRATER
+    assert not CRATER & walk, "the crater is solid"
     edge = {(x, y) for x, y in walk if x in (0, MAP_W - 1) or y in (0, MAP_H - 1)}
     assert edge <= {(16, 0)}, f"land on an edge: {sorted(edge)}"
     town = reachable(g, [STREET])
@@ -127,10 +134,8 @@ def check(g, d) -> None:
         for x, y in ds:
             assert (x, y + 1) in town, f"the door of {letter} at ({x},{y}) can't be walked into"
     assert d["Z"] == [(14, 11)] and d["H"] == [(20, 4)], "the scenes' doors stay where they were"
-    for y in range(MAP_H):
-        for x in range(MAP_W):
-            if g[y][x] == "S":
-                assert (x, y + 1) in town, f"the sign at ({x},{y}) can't be read"
+    for x, y in signs:
+        assert g[y][x] in SOLID and (x, y + 1) in town, f"the sign at ({x},{y}) can't be read"
     assert set(SCENE_GROUND) <= town, f"the scenes' ground: {sorted(set(SCENE_GROUND) - town)}"
     assert all(g[y][x] == SEA for x, y in SCENE_WATER), "the boat's way"
     assert set(CAMP) <= volcano, "the Friends' camp"
@@ -138,66 +143,42 @@ def check(g, d) -> None:
     assert g[WAILMER[1]][WAILMER[0]] == SEA, "Wailmer in the sea"
 
 
-ASH = "ǝ"  # plain ash (dirt#15, no edge) where the ash meets the volcano's rock, so no grass rim runs round the rock
-SIGN_CHARS = {"cobble#15": "ǣ", "cobble#13": "ǥ"}  # the signs standing in the street: a sign over its cobble
-FRONTS = "XZLUH"  # the buildings on the street: the cobbles run on up to them (no grass rim along their fronts)
-FRONT_CHARS = {7: "\u01e8", 15: "\u01e9"}  # the cobble in front of them, forced: by its mask (the building counted)
-SIGNS_IN_STREET = [(9, 12), (22, 5)]  # the Lab's (the Lab above), the Gym's (the Gym above, sea east)
-
-
-def ash_by_rock(g, junction_chars) -> None:
-    """The ash next to the rock (and the crater's floor): plain ash, counted as ash by the ash round it, so the ash
-    draws no grass edge against the rock. Only where all its sides are ash or rock (the edge to the lawn stays)."""
-    rock = cliffs.SOLID | set(junction_chars)
-    ash = {":", ASH, "o"}
-    for y in range(MAP_H):
-        for x in range(MAP_W):
-            if g[y][x] != ":":
-                continue
-            near = [g[y + dy][x + dx] for dy in (-1, 0, 1) for dx in (-1, 0, 1)
-                    if (dx or dy) and 0 <= x + dx < MAP_W and 0 <= y + dy < MAP_H]
-            sides = [g[y + dy][x + dx] for dx, dy in ((0, -1), (1, 0), (0, 1), (-1, 0))]
-            if any(c in rock for c in near) and all(c in rock or c in ash for c in sides):
-                g[y][x] = ASH
-
-
-def signs_on_cobble(g) -> dict[tuple[int, int], str]:
-    """The signs in the street with two sides on it (kit/settle.py takes the ones with three): each over the cobble
-    pae would draw there if it were cobble, and cobble for the cobble round it."""
-    out = {}
-    for x, y in SIGNS_IN_STREET:
-        assert g[y][x] == "S", f"no sign at ({x},{y})"
-        same = lambda xx, yy: g[yy][xx] in "=S" + FRONTS or (xx, yy) in SIGNS_IN_STREET
-        mask = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
-        out[x, y] = f"cobble#{mask}"
-    for (x, y), ground in out.items():
-        g[y][x] = SIGN_CHARS[ground]
-    return out
-
-
-def fronts(g) -> None:
-    """The cobbles along a building's front, without the grass rim pae would draw against it: each forced to the cobble
-    piece that counts the building above as more street (as the signs in the street do)."""
-    for y in range(1, MAP_H):
-        for x in range(MAP_W):
-            if g[y][x] == "=" and g[y - 1][x] in FRONTS:
-                same = lambda xx, yy: not (0 <= xx < MAP_W and 0 <= yy < MAP_H) or g[yy][xx] in "=" + "".join(
-                    SIGN_CHARS.values()) + "".join(FRONT_CHARS.values())
-                mask = 1 + sum(b for b, (dx, dy) in ((2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
-                g[y][x] = FRONT_CHARS[mask]
+def lay_cinnabar(g, signs) -> dict:
+    """Cinnabar's own ground and details (../kit/cinnabar.py) into the plan, where the pack's placement plan puts them:
+    the basalt setts over the street and under its signs, the ash over the volcano island (its paths, under its rock and
+    most of its lawn), the volcano's cliff over its rock, the crater, the lava rocks (on the plan's rocks), the vents
+    (on the ash) and the spring's steam (on the lawn by the hot spring)."""
+    pl = cinnabar.PLAN
+    cells = lambda chars: {(x, y) for y in range(MAP_H) for x in range(MAP_W) if g[y][x] in chars}
+    paving = {tuple(s["block"]) for s in pl["surfaces"] if s["surface"] == "paving"}
+    ash = {tuple(s["block"]) for s in pl["surfaces"] if s["surface"] == "ash"}
+    assert paving == cells("=S"), "the pack's paving is the plan's street and its signs"
+    assert cells(":C") <= ash <= cells(":C.,o"), "the pack's ash is the volcano island's paths, its rock and its lawn"
+    # a lava rock for each field rock on the ash: the pack's seven, and (39,26), whose lawn became ash in the pack's
+    # second round, so its plan missed it (the pack's rule: the kit's field rocks on the ash become lava rocks)
+    lava = {tuple(c) for c in pl["lava_rocks"]} | {(39, 26)}
+    vents = {tuple(c) for c in pl["steam_vents"]}
+    steam = {tuple(c) for c in pl["hot_spring_steam"]}
+    assert lava == cells("o") and vents <= cells(":") and steam <= cells(".") - ash, "the details' places"
+    level = {(x, y - 1) for x, y in paving if g[y - 1][x] in FRONTS}
+    kit_pieces = {xy: ("sign", kit.sign(), "wood") for xy in signs}
+    return cinnabar.lay(g, paving=paving, ash=ash, rock=cells("C"), crater=CRATER, level=level, kit_pieces=kit_pieces,
+                        lava_rocks=lava, vents=vents, spring_steam=steam, out=HERE, spec_dir=HERE)
 
 
 def main() -> None:
     g = plan()
+    signs = [(x, y) for y in range(MAP_H) for x in range(MAP_W) if g[y][x] == "S"]
     prop_legend, prop_grounds = props.place(g, PROPS, SOLID)
     d = doors(g)
-    cliffs.layout(g)
     kit.check_forest(g)
     kit.check_water(g)
     kit.check_paving(g)
-    check(g, d)
+    cn = lay_cinnabar(g, signs)
+    SOLID.update(cn["solid"])
+    check(g, d, signs)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
-    spec_mt = list(base["metatiles"])
+    spec_mt = list(base["metatiles"]) + cn["entries"]
     pals = {}
     for letter, (folder, bank) in BUILDINGS.items():
         b, ds = load(letter)
@@ -206,47 +187,31 @@ def main() -> None:
         sh.add(b.name, b.idx, tileset="secondary", ground="grass", solid=True,
                open=[f"{dx},{dy}" for dx, dy in ds], behaviors={f"{dx},{dy}": DOOR for dx, dy in ds})
         spec_mt += sh.write()
-    rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
-    char_of = cliffs.add(rock, g, extras=())
-    rock_entries = rock.write()
-    for e in rock_entries:  # the volcano's rock stands in its ash all round: its lip and corners on ash, not grass
-        if e.get("ground") == "grass":
-            e["ground"] = "dirt#15"
-    spec_mt += rock_entries
-    ash_by_rock(g, set(char_of.values()))
-    signs = signs_on_cobble(g)
-    fronts(g)
-    sh = kit.Sheet("signs_cobble", kit.PALS["wood"], kit.BANK["wood"], HERE, HERE, cols=2)
-    for ground in sorted(set(signs.values())):
-        sh.add(f"sign_on_{ground}", kit.sign(), tileset="secondary", ground=ground, solid=True)
-    spec_mt += sh.write()
-    pals[CLIFF_BANK] = cliffs.PAL
     prop_entries, prop_anims = props.pieces(HERE, HERE, prop_grounds)
     spec_mt += prop_entries
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
             del e["w"], e["h"]
+    assert not set(pals) & set(cn["palettes"]), "the pack's banks are free"
+    pals.update(cn["palettes"])
     for bank, pal in pals.items():
         kit.write_palette(HERE / f"palette_{bank}.pal", pal)
     spec = {"version": "hns", "primary": kit.PRIMARY, "secondary": SECONDARY,
             "palettes": {"primary": base["palettes"],
                          "secondary": [f"palette_{GYM_BANK}.pal", base["secondary_palettes"][8],
                                        f"palette_{MANSION_BANK}.pal", f"palette_{LAB_BANK}.pal",
-                                       f"palette_{CLIFF_BANK}.pal"]},
+                                       f"palette_{cinnabar.VOLCANO_BANK}.pal", f"palette_{cinnabar.TOWN_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
-            "animations": base["animations"] + prop_anims,
+            "animations": base["animations"] + prop_anims + cn["animations"],
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("ss\nss\n")
     legend = dict(kit.LEGEND, **SHARED, **{k: load(k)[0].name for k in BUILDINGS})
-    assert not set(legend) & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
-    legend.update(cliffs.legend(char_of))
     legend.update(prop_legend)
-    legend[ASH] = {"pick": ["dirt#15"], "joins": ":"}
-    legend.update({ch: {"name": f"sign_on_{ground}", "joins": "="} for ground, ch in SIGN_CHARS.items()})
-    legend.update({ch: {"name": f"cobble#{mask}", "joins": "="} for mask, ch in FRONT_CHARS.items()})
+    assert not set(legend) & set(cn["legend"]), "a letter of the pack's is taken"
+    legend.update(cn["legend"])
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")
