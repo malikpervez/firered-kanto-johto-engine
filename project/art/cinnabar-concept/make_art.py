@@ -47,7 +47,7 @@ SEA = "s"
 WATER = set("s~")
 SOLID = set("T#bRoklSBcw_~vrsqQHUXZL") | {"C"}
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
-PROPS = [("bench_wood_south", 9, 14, "grass"), ("litter_bin", 13, 14, "grass"), ("bench_wood_south", 16, 14, "grass")]  # looking out to sea
+PROPS = [("bench_wood_south", 9, 14, "ash"), ("litter_bin", 13, 14, "ash"), ("bench_wood_south", 16, 14, "ash")]  # looking out to sea
 LANE = [(x, 0) for x in range(0, 4)]         # Route 21's sea lane down the town's west side
 EAST = [(MAP_W - 1, y) for y in range(0, 20)]  # Route 20's sea
 STREET = (12, 5)
@@ -63,7 +63,8 @@ TOWN_PEOPLE = [(14, 6), (11, 13), (20, 7), (22, 10)]
 VOLCANO_MONS = [(60, 26), (62, 26), (61, 27), (78, 9), (79, 11), (52, 9), (51, 13), (48, 15), (66, 27)]
 WAILMER = (88, 40)
 CRATER = {(x, y) for x in range(62, 69) for y in range(15, 18)}  # the pit in the volcano's top: its lava, solid
-FRONTS = "XZLUH"  # the buildings on the street: the paving runs on up to them (no lawn edge along their fronts)
+FRONTS = "XZLUH"  # the buildings on the street: the paving and the ash run on up to them (no lawn edge along their fronts)
+TOWN = {(x, y) for x in range(0, 24) for y in range(0, 17)}  # the town island
 
 
 def load(letter: str) -> tuple[buildings.Building, list[tuple[int, int]]]:
@@ -143,27 +144,57 @@ def check(g, d, signs) -> None:
     assert g[WAILMER[1]][WAILMER[0]] == SEA, "Wailmer in the sea"
 
 
-def lay_cinnabar(g, signs) -> dict:
+def lay_cinnabar(g, signs, prop_legend: dict, prop_grounds: dict) -> dict:
     """Cinnabar's own ground and details (../kit/cinnabar.py) into the plan, where the pack's placement plan puts them:
     the basalt setts over the street and under its signs, the ash over the volcano island (its paths, under its rock and
     most of its lawn), the volcano's cliff over its rock, the crater, the lava rocks (on the plan's rocks), the vents
-    (on the ash) and the spring's steam (on the lawn by the hot spring)."""
+    (on the ash) and the spring's steam (on the lawn by the hot spring). And the ash over the town's lawns too (the
+    owner's pick, November 3), all but a one-block lawn shore (the flower beds are on it): the benches and the bin
+    stand on it, each over the ash block under it ("piece~2" where that differs)."""
     pl = cinnabar.PLAN
     cells = lambda chars: {(x, y) for y in range(MAP_H) for x in range(MAP_W) if g[y][x] in chars}
     paving = {tuple(s["block"]) for s in pl["surfaces"] if s["surface"] == "paving"}
     ash = {tuple(s["block"]) for s in pl["surfaces"] if s["surface"] == "ash"}
     assert paving == cells("=S"), "the pack's paving is the plan's street and its signs"
     assert cells(":C") <= ash <= cells(":C.,o"), "the pack's ash is the volcano island's paths, its rock and its lawn"
+    sea = lambda x, y: 0 <= x < MAP_W and 0 <= y < MAP_H and g[y][x] in "sqQ"
+    on_ash = {}
+    for piece, x, y, ground, *_ in PROPS:
+        if ground == "ash":
+            fp = props.PIECES[piece][1]["footprint_blocks"]
+            on_ash[piece, x, y] = [(xx, yy) for yy in range(y, y + fp["height"]) for xx in range(x, x + fp["width"])]
+    under_props = {c for cs in on_ash.values() for c in cs}
+    town_ash = {(x, y) for x, y in TOWN & (cells(".,") | under_props)
+                if not any(sea(x + dx, y + dy) for dx in (-1, 0, 1) for dy in (-1, 0, 1))}
+    assert under_props <= town_ash, "the props on the ash stand off the shore"
+    ash |= town_ash
     # a lava rock for each field rock on the ash: the pack's seven, and (39,26), whose lawn became ash in the pack's
     # second round, so its plan missed it (the pack's rule: the kit's field rocks on the ash become lava rocks)
     lava = {tuple(c) for c in pl["lava_rocks"]} | {(39, 26)}
     vents = {tuple(c) for c in pl["steam_vents"]}
     steam = {tuple(c) for c in pl["hot_spring_steam"]}
     assert lava == cells("o") and vents <= cells(":") and steam <= cells(".") - ash, "the details' places"
-    level = {(x, y - 1) for x, y in paving if g[y - 1][x] in FRONTS}
+    level = {(x, y - 1) for x, y in paving | town_ash if y and g[y - 1][x] in FRONTS}
     kit_pieces = {xy: ("sign", kit.sign(), "wood") for xy in signs}
-    return cinnabar.lay(g, paving=paving, ash=ash, rock=cells("C"), crater=CRATER, level=level, kit_pieces=kit_pieces,
-                        lava_rocks=lava, vents=vents, spring_steam=steam, out=HERE, spec_dir=HERE)
+    letter_of = {(v if isinstance(v, str) else v["name"]): k for k, v in prop_legend.items()}
+    cn = cinnabar.lay(g, paving=paving, ash=ash, rock=cells("C"), crater=CRATER, level=level, kit_pieces=kit_pieces,
+                      lava_rocks=lava, vents=vents, spring_steam=steam, out=HERE, spec_dir=HERE)
+    grounds_of: dict[str, list] = {}
+    for (piece, x, y), cs in on_ash.items():
+        under = [cn["ground"][c] for c in cs]
+        seen = grounds_of.setdefault(piece, [])
+        if under not in seen:
+            seen.append(under)
+        name = piece if seen.index(under) == 0 else f"{piece}~{seen.index(under) + 1}"
+        prop_grounds[name] = under if len(under) > 1 else under[0]
+        if name not in letter_of:  # a character of its own for it
+            letter_of[name] = next(c for c in props.POOL if c not in prop_legend)
+            prop_legend[letter_of[name]] = name
+            if letter_of[piece] in SOLID:
+                SOLID.add(letter_of[name])
+        for xx, yy in cs:  # lay wrote the ash's character over it: the piece's again
+            g[yy][xx] = letter_of[name]
+    return cn
 
 
 def main() -> None:
@@ -174,7 +205,7 @@ def main() -> None:
     kit.check_forest(g)
     kit.check_water(g)
     kit.check_paving(g)
-    cn = lay_cinnabar(g, signs)
+    cn = lay_cinnabar(g, signs, prop_legend, prop_grounds)
     SOLID.update(cn["solid"])
     check(g, d, signs)
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares

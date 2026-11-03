@@ -97,8 +97,8 @@ def lay(g, *, paving: set, ash: set, rock: set, crater: set, level: set = frozen
     pack's placement plan must cover exactly these), ``crater`` (its cells, on the ash), the details on the ash or the
     lawn under them (``lava_rocks``, ``vents``, ``spring_steam``: cells), and ``kit_pieces`` (cell -> (name, picture,
     the kit palette it's in): a sign of the kit's, or another of its small pieces, standing on the paving or the ash,
-    over the block there). ``level`` are cells the paving runs up to without an edge, as if they were paving (the
-    buildings' fronts above it).
+    over the block there). ``level`` are cells the paving and the ash run up to without an edge, as if they were
+    theirs (the buildings' fronts above them). The paving and the ash meet edge to edge, with no lawn between them.
 
     Returns the "legend" for the characters it wrote, the spec "entries", the "solid" characters, the "palettes" (bank
     -> colours), the "animations" for the spec and the "ground": the block name at each cell it laid."""
@@ -122,12 +122,12 @@ def lay(g, *, paving: set, ash: set, rock: set, crater: set, level: set = frozen
 
     # the paving: its edge wherever the lawn is beside it
     for x, y in sorted(paving, key=lambda c: (c[1], c[0])):
-        m = mask(x, y, lambda a, b: (a, b) in paving or (a, b) in level)
+        m = mask(x, y, lambda a, b: (a, b) in paving or (a, b) in ash or (a, b) in level)
         r = RECIPES["paving"][str(m)]
         names[x, y] = add(f"basalt#{m}", compose(r["tiles_8x8"], r["flips_8x8"]), "cinnabar_town", ground="grass")
     # the ash: the same edge wherever the lawn is beside it; its second fill here and there where nothing else is
     for x, y in sorted(ash, key=lambda c: (c[1], c[0])):
-        m = mask(x, y, lambda a, b: (a, b) in ash)
+        m = mask(x, y, lambda a, b: (a, b) in ash or (a, b) in paving or (a, b) in level)
         if m == 0 and (x + y) % 3 == 0:
             idx, nm = piece("ash", "fill_2"), "ash_fill_2"
         else:

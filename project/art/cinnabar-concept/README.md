@@ -57,6 +57,9 @@ the map follows it:
 - **basalt setts** through the town: both streets and the east lane down to the harbour, the same edge wherever they
   meet the lawn, and straight up to the buildings' fronts (no lawn edge along them). The three signs in the street
   stand on the setts' block under them.
+- **the town's lawns in ash** (the owner's pick, November 3: the town takes the volcano's black ground), all but a
+  one-block lawn shore round the island, where the flower beds are. The setts and the ash meet edge to edge, with no
+  lawn between them, and the benches and the bin on the south side stand on the ash.
 - **volcanic ash** over the volcano island: its paths, under the volcano's rock, and most of its lawn (the pack's
   second round), leaving a one-block lawn shore, the lawn round the woods, the flower beds and the hot spring, and the
   Friends' clearing. Its second fill here and there where only ash is round it.
@@ -70,5 +73,5 @@ the map follows it:
   Pokémon).
 
 The setts are in a palette of their own (bank 12); the ash, the cliff, the crater and the details in the pack's
-volcano palette (bank 11, the kit rock's before). The island takes 326 of its 384 tiles (89 of them the pack's), 211
-metatiles.
+volcano palette (bank 11, the kit rock's before). The island takes 326 of its 384 tiles (89 of them the pack's),
+211 metatiles.
