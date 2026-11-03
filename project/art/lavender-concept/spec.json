@@ -4820,7 +4820,7 @@
    "ground": "grass"
   },
   {
-   "name": "lavender#217",
+   "name": "slate_SW#72_to_cobble_NWN_NEN",
    "image": "sheets/lavender_lavender_town.png",
    "x": 0,
    "y": 0,
@@ -4832,7 +4832,7 @@
    "ground": "grass"
   },
   {
-   "name": "lavender#145",
+   "name": "slate_SE#0_to_cobble_NWN_NEN",
    "image": "sheets/lavender_lavender_town.png",
    "x": 16,
    "y": 0,
@@ -4844,7 +4844,7 @@
    "ground": "grass"
   },
   {
-   "name": "lavender#179",
+   "name": "slate_SW#0_to_cobble_NWN_NEN",
    "image": "sheets/lavender_lavender_town.png",
    "x": 32,
    "y": 0,
@@ -4856,478 +4856,10 @@
    "ground": "grass"
   },
   {
-   "name": "lavender#200",
+   "name": "slate_SW#34_to_cobble_NWN_NEN",
    "image": "sheets/lavender_lavender_town.png",
    "x": 48,
    "y": 0,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender_center_c",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 64,
-   "y": 0,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender#50",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 80,
-   "y": 0,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender_center_b",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 96,
-   "y": 0,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender_center",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 112,
-   "y": 0,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#251",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 0,
-   "y": 16,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender#236",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 16,
-   "y": 16,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender#100",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 32,
-   "y": 16,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender#118",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 48,
-   "y": 16,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SE#154",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 64,
-   "y": 16,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#145_to_cobble_NWW_SWW",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 80,
-   "y": 16,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#129",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 96,
-   "y": 16,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#128_to_cobble_NWN_NEN",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 112,
-   "y": 16,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#0_to_cobble_NWN_NEN",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 0,
-   "y": 32,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#0_to_cobble_NWN_NEN",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 16,
-   "y": 32,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#16_to_cobble_NWN_NEN",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 32,
-   "y": 32,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#17",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 48,
-   "y": 32,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#129",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 64,
-   "y": 32,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#144",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 80,
-   "y": 32,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#17",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 96,
-   "y": 32,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#145",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 112,
-   "y": 32,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#145",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 0,
-   "y": 48,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#179",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 16,
-   "y": 48,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SW#0_to_cobble_NWW_SWW",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 32,
-   "y": 48,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SE#0",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 48,
-   "y": 48,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SW#0",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 64,
-   "y": 48,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SE#50",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 80,
-   "y": 48,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#64_to_cobble_NWW_SWW",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 96,
-   "y": 48,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#0",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 112,
-   "y": 48,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#0",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 0,
-   "y": 64,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#32",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 16,
-   "y": 64,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#36",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 32,
-   "y": 64,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NW#100",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 48,
-   "y": 64,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#100",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 64,
-   "y": 64,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_NE#118",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 80,
-   "y": 64,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SW#72",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 96,
-   "y": 64,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SW#34",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 112,
-   "y": 64,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "gravel#8",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 0,
-   "y": 80,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "gravel#0",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 16,
-   "y": 80,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "gravel#2",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 32,
-   "y": 80,
    "banks": [
     10
    ],
@@ -5338,8 +4870,32 @@
   {
    "name": "slate_NW#200",
    "image": "sheets/lavender_lavender_town.png",
-   "x": 48,
-   "y": 80,
+   "x": 64,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#0",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#0",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 0,
    "banks": [
     10
    ],
@@ -5350,8 +4906,548 @@
   {
    "name": "slate_NW#50",
    "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SW#200",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SE#0",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SW#0",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SW#50",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#217",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#145",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#179",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#200",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender_center_c",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#50",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender_center_b",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender_center",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#251",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#236",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#100",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#118",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SE#154",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SW#136",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SW#18",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#17_to_cobble_NWW_SWW",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#145",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#145",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#129",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#144",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#17",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#129",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#128",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#16",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#17",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#179",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SW#0_to_cobble_NWW_SWW",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SE#50",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#36_to_cobble_NWW_SWW",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 80,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#100",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 80,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#100",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 80,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#68",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 80,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#64",
+   "image": "sheets/lavender_lavender_town.png",
    "x": 64,
    "y": 80,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#32",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 80,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#36",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 80,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#118",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 80,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SW#72",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 96,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SW#34",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 96,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "gravel#8",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 96,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "gravel#0",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 96,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "gravel#2",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 96,
    "banks": [
     10
    ],
@@ -5363,7 +5459,7 @@
    "name": "lavender#249",
    "image": "sheets/lavender_lavender_town.png",
    "x": 80,
-   "y": 80,
+   "y": 96,
    "banks": [
     10
    ],
@@ -5375,7 +5471,7 @@
    "name": "lavender#149",
    "image": "sheets/lavender_lavender_town.png",
    "x": 96,
-   "y": 80,
+   "y": 96,
    "banks": [
     10
    ],
@@ -5387,7 +5483,7 @@
    "name": "lavender#209",
    "image": "sheets/lavender_lavender_town.png",
    "x": 112,
-   "y": 80,
+   "y": 96,
    "banks": [
     10
    ],
@@ -5399,7 +5495,7 @@
    "name": "lavender#177",
    "image": "sheets/lavender_lavender_town.png",
    "x": 0,
-   "y": 96,
+   "y": 112,
    "banks": [
     10
    ],
@@ -5411,7 +5507,7 @@
    "name": "lavender#243",
    "image": "sheets/lavender_lavender_town.png",
    "x": 16,
-   "y": 96,
+   "y": 112,
    "banks": [
     10
    ],
@@ -5423,7 +5519,7 @@
    "name": "lavender#181",
    "image": "sheets/lavender_lavender_town.png",
    "x": 32,
-   "y": 96,
+   "y": 112,
    "banks": [
     10
    ],
@@ -5435,7 +5531,7 @@
    "name": "lavender#213",
    "image": "sheets/lavender_lavender_town.png",
    "x": 48,
-   "y": 96,
+   "y": 112,
    "banks": [
     10
    ],
@@ -5447,7 +5543,7 @@
    "name": "slate_SW#236",
    "image": "sheets/lavender_lavender_town.png",
    "x": 64,
-   "y": 96,
+   "y": 112,
    "banks": [
     10
    ],
@@ -5459,42 +5555,6 @@
    "name": "slate_SE#68",
    "image": "sheets/lavender_lavender_town.png",
    "x": 80,
-   "y": 96,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SW#64_to_cobble_SWS_SES",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 96,
-   "y": 96,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SE#0_to_cobble_SWS_SES",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 112,
-   "y": 96,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SW#0_to_cobble_SWS_SES",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 0,
    "y": 112,
    "banks": [
     10
@@ -5504,9 +5564,21 @@
    "ground": "grass"
   },
   {
-   "name": "slate_SE#32_to_cobble_SWS_SES",
+   "name": "slate_SW#64",
    "image": "sheets/lavender_lavender_town.png",
-   "x": 16,
+   "x": 96,
+   "y": 112,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_SE#32",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
    "y": 112,
    "banks": [
     10
@@ -5518,78 +5590,6 @@
   {
    "name": "slate_SW#36",
    "image": "sheets/lavender_lavender_town.png",
-   "x": 32,
-   "y": 112,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SE#100",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 48,
-   "y": 112,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SW#100",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 64,
-   "y": 112,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "slate_SW#118",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 80,
-   "y": 112,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender#238",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 96,
-   "y": 112,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender#108",
-   "image": "sheets/lavender_lavender_town.png",
-   "x": 112,
-   "y": 112,
-   "banks": [
-    10
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass"
-  },
-  {
-   "name": "lavender#102",
-   "image": "sheets/lavender_lavender_town.png",
    "x": 0,
    "y": 128,
    "banks": [
@@ -5600,7 +5600,7 @@
    "ground": "grass"
   },
   {
-   "name": "lavender#126",
+   "name": "slate_SE#100",
    "image": "sheets/lavender_lavender_town.png",
    "x": 16,
    "y": 128,
@@ -5612,7 +5612,7 @@
    "ground": "grass"
   },
   {
-   "name": "lavender#253",
+   "name": "slate_SW#100",
    "image": "sheets/lavender_lavender_town.png",
    "x": 32,
    "y": 128,
@@ -5624,7 +5624,7 @@
    "ground": "grass"
   },
   {
-   "name": "lavender#245",
+   "name": "slate_SW#118",
    "image": "sheets/lavender_lavender_town.png",
    "x": 48,
    "y": 128,
@@ -5636,7 +5636,7 @@
    "ground": "grass"
   },
   {
-   "name": "lavender#247",
+   "name": "lavender#238",
    "image": "sheets/lavender_lavender_town.png",
    "x": 64,
    "y": 128,
@@ -5648,10 +5648,418 @@
    "ground": "grass"
   },
   {
-   "name": "gravel#4",
+   "name": "lavender#108",
    "image": "sheets/lavender_lavender_town.png",
    "x": 80,
    "y": 128,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#102",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 128,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#126",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 128,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#72",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 144,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#34",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 144,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#253",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 144,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#245",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 144,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#247",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 144,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#50",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 144,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#241",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 144,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#202",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 144,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#8",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 160,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#74",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 160,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#58",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 160,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#252",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 160,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#101",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 160,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#228",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 160,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#246",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 160,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "gravel#4",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 160,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "gravel#1",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 176,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#183",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 176,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#42",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 176,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#122",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 176,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#216",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 176,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#1",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 176,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#146",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 176,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#153",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 176,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#186",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 0,
+   "y": 192,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#116",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 16,
+   "y": 192,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#10",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 32,
+   "y": 192,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "lavender#244",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 48,
+   "y": 192,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#136_to_cobble_SWS_SES",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 64,
+   "y": 192,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#0_to_cobble_SWS_SES",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 80,
+   "y": 192,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NW#0_to_cobble_SWS_SES",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 96,
+   "y": 192,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "slate_NE#18_to_cobble_SWS_SES",
+   "image": "sheets/lavender_lavender_town.png",
+   "x": 112,
+   "y": 192,
    "banks": [
     10
    ],
@@ -5673,87 +6081,9 @@
    "solid": true
   },
   {
-   "name": "rail_straight_EW@slate_NW#100",
+   "name": "rail_end_S@grass",
    "image": "sheets/lavender_kit_wood.png",
    "x": 16,
-   "y": 0,
-   "banks": [
-    2
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "slate_NW#100",
-   "solid": true
-  },
-  {
-   "name": "rail_straight_EW@slate_NE#100",
-   "image": "sheets/lavender_kit_wood.png",
-   "x": 32,
-   "y": 0,
-   "banks": [
-    2
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "slate_NE#100",
-   "solid": true
-  },
-  {
-   "name": "rail_end_E@grass",
-   "image": "sheets/lavender_kit_wood.png",
-   "x": 48,
-   "y": 0,
-   "banks": [
-    2
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "rail_straight_EW@grass",
-   "image": "sheets/lavender_kit_wood.png",
-   "x": 64,
-   "y": 0,
-   "banks": [
-    2
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "rail_end_W@slate_NW#100",
-   "image": "sheets/lavender_kit_wood.png",
-   "x": 80,
-   "y": 0,
-   "banks": [
-    2
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "slate_NW#100",
-   "solid": true
-  },
-  {
-   "name": "rail_end_W@grass",
-   "image": "sheets/lavender_kit_wood.png",
-   "x": 96,
-   "y": 0,
-   "banks": [
-    2
-   ],
-   "tileset": "secondary",
-   "dedupe": true,
-   "ground": "grass",
-   "solid": true
-  },
-  {
-   "name": "rail_corner_SW@grass",
-   "image": "sheets/lavender_kit_wood.png",
-   "x": 112,
    "y": 0,
    "banks": [
     2
@@ -5766,6 +6096,84 @@
   {
    "name": "rail_straight_NS@grass",
    "image": "sheets/lavender_kit_wood.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "rail_end_N@grass",
+   "image": "sheets/lavender_kit_wood.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "rail_straight_EW@slate_NW#100",
+   "image": "sheets/lavender_kit_wood.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "slate_NW#100",
+   "solid": true
+  },
+  {
+   "name": "rail_straight_EW@slate_NE#100",
+   "image": "sheets/lavender_kit_wood.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "slate_NE#100",
+   "solid": true
+  },
+  {
+   "name": "rail_end_W@slate_NW#100",
+   "image": "sheets/lavender_kit_wood.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "slate_NW#100",
+   "solid": true
+  },
+  {
+   "name": "rail_end_E@grass",
+   "image": "sheets/lavender_kit_wood.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "rail_straight_EW@grass",
+   "image": "sheets/lavender_kit_wood.png",
    "x": 0,
    "y": 16,
    "banks": [
@@ -5777,7 +6185,7 @@
    "solid": true
   },
   {
-   "name": "rail_corner_NW@grass",
+   "name": "rail_end_W@grass",
    "image": "sheets/lavender_kit_wood.png",
    "x": 16,
    "y": 16,
@@ -5971,10 +6379,62 @@
    "solid": true
   },
   {
-   "name": "street_lamp_00@grass",
+   "name": "memorial_rounded_00@gravel#2",
    "image": "sheets/lavender_lavender_tower.png",
    "x": 96,
    "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "gravel#2",
+   "solid": true
+  },
+  {
+   "name": "stone_lantern_00@gravel#0",
+   "image": "sheets/lavender_lavender_tower.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "gravel#0",
+   "solid": true
+  },
+  {
+   "name": "stone_lantern_01@gravel#4",
+   "image": "sheets/lavender_lavender_tower.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "gravel#4",
+   "solid": true
+  },
+  {
+   "name": "memorial_flower_00@gravel#4",
+   "image": "sheets/lavender_lavender_tower.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "gravel#4",
+   "solid": true
+  },
+  {
+   "name": "street_lamp_00@grass",
+   "image": "sheets/lavender_lavender_tower.png",
+   "x": 32,
+   "y": 16,
    "banks": [
     9
    ],
@@ -5986,8 +6446,8 @@
   {
    "name": "street_lamp_01@grass",
    "image": "sheets/lavender_lavender_tower.png",
-   "x": 112,
-   "y": 0,
+   "x": 48,
+   "y": 16,
    "banks": [
     9
    ],

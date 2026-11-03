@@ -122,13 +122,13 @@ def phase(x: int, y: int) -> str:
 
 
 def lay(g, *, slate: set, gravel: set, beds: set, rails: set = frozenset(), gates=(), details=(), roads: str = "=",
-        tower_palette, out: Path, spec_dir: Path) -> dict:
+        edge_roads: set = frozenset(), tower_palette, out: Path, spec_dir: Path) -> dict:
     """Lay the pack into the plan ``g``: ``slate``, ``gravel`` and ``beds`` (their cells), ``rails`` (cells), ``gates``
     (the left block of each, 3x1) and ``details`` ((piece, x, y): its top-left block). A rail, a gate or a detail stands
     on the surface its cell has (slate, gravel, a bed or, if none, the lawn) and draws over it.
 
-    - The slate's quarters by a road (``roads``' characters, the kit's cobble) are the pack's join to the cobble on
-      that side; the others its own, by its neighbours that are neither slate nor road. Every slate block counts as
+    - The slate's quarters by a road (``roads``' characters, the kit's cobble, or a block just past the map's edge in
+      ``edge_roads``, where a neighbour's cobble road comes in) are the pack's join to the cobble on that side; the others its own, by its neighbours that are neither slate nor road. Every slate block counts as
       cobble for the cobble beside it (no lawn lip at the join).
     - The gravel draws its edges only where lawn (anything but gravel, a bed or slate) is beside it, north, east, south
       or west: it runs quietly into the beds and up to the slate.
@@ -148,6 +148,8 @@ def lay(g, *, slate: set, gravel: set, beds: set, rails: set = frozenset(), gate
         return g[y][x] if 0 <= x < w and 0 <= y < h else None
 
     def road(x, y):
+        if (x, y) in edge_roads:
+            return True
         return (x, y) not in surface_of and at(x, y) is not None and at(x, y) in roads
 
     def mask(x, y, outside) -> int:

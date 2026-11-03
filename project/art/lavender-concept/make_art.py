@@ -43,21 +43,30 @@ SOLID = set("T#bRoklSBcw_~vrZLXHUW")
 NEW_BANK = lavender.NEW_BANK  # the pack's slate, gravel and lavender
 # Lavender's ground, from the plan's letters (draw_plan.py): slate, gravel and lavender beds
 SURFACES = {"σ": "slate", "γ": "gravel", "λ": "beds"}
-# the railings: along the walk's south side (on its slate) either side of the gate, on east past the bushes and down the
-# garden's east side, and along its south side between the benches; its west side stays open (the Haunters go round
-# there at night, and the worker stands by it)
-RAILS = ({(x, 11) for x in range(21, 27)} | {(x, 11) for x in range(32, 36)} | {(35, y) for y in range(12, 18)}
-         | {(x, 17) for x in (24, 25, 26, 29, 30, 33, 34)})
+# the railings: along the walk's south side (on its slate) either side of the gate and on east past the bushes, and down
+# the garden's west side from row 18 to the town's south edge, open where its paths come out (rows 21 and 26); north of
+# that its west side stays open (the Haunters go round there at night, and the worker stands by it), and the forest
+# closes it east and south
+RAILS = ({(x, 11) for x in range(21, 27)} | {(x, 11) for x in range(32, 36)}
+         | {(21, y) for y in range(18, 30) if y not in (21, 26)})
+# the routes' cobble roads, just past the edges: the town's slate roads take the join to the cobble on that side
+EDGE_ROADS = ({(x, -1) for x, _ in NORTH} | {(-1, y) for _, y in WEST} | {(x, MAP_H) for x, _ in SOUTH})
 GATES = [(28, 11)]  # the open gate (3x1, its middle block walkable), in line with the tower's door
 # the details: (piece, x, y of its top-left block)
 DETAILS = [("stone_lantern", 27, 11), ("stone_lantern", 31, 11),  # either side of the gate
            ("memorial_rounded", 23, 14), ("memorial_flat", 26, 14),  # the garden's stones, where its four stood
            ("memorial_flower", 32, 14), ("offering_stone", 33, 14),
+           ("memorial_rounded", 23, 19), ("memorial_flat", 34, 19),  # and on south, row by row, to the town's edge
+           ("memorial_flower", 23, 23), ("memorial_rounded", 25, 23), ("memorial_flat", 32, 23),
+           ("memorial_rounded", 34, 23), ("offering_stone", 25, 24), ("offering_stone", 34, 24),
+           ("memorial_rounded", 23, 28), ("memorial_flower", 25, 28), ("memorial_flat", 32, 28),
+           ("memorial_rounded", 34, 28),
+           ("stone_lantern", 28, 28), ("stone_lantern", 30, 28), ("memorial_flower", 29, 29),  # the path's end
            ("street_lamp", 16, 24), ("street_lamp", 11, 19),  # by the road south
            ("rest_shelter", 8, 13), ("food_water_bowls", 8, 15), ("straw_bed", 2, 16)]  # Mr. Fuji's yard
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 PROPS = [("statue_guardian", 24, 6, "grass"),  # between the Mart and the Tower
-         ("bench_wood_north", 27, 17, "grass"), ("bench_wood_north", 31, 17, "grass"),  # looking at the memorial garden
+         ("bench_wood_north", 24, 17, "grass"), ("bench_wood_north", 32, 17, "grass"),  # in the garden, the path between
          ("litter_bin", 21, 12, "grass")]
 
 # the buildings: their letters in the plan, where each comes from and its palette's bank
@@ -127,7 +136,8 @@ def lay_lavender(g) -> dict:
     """Lavender's own ground and details (../kit/lavender.py) into the plan."""
     cells = {kind: {(x, y) for y, r in enumerate(g) for x, c in enumerate(r) if c == ch} for ch, kind in SURFACES.items()}
     return lavender.lay(g, slate=cells["slate"], gravel=cells["gravel"], beds=cells["beds"], rails=RAILS, gates=GATES,
-                        details=DETAILS, tower_palette=buildings.load(TOWER).palette, out=HERE, spec_dir=HERE)
+                        details=DETAILS, edge_roads=EDGE_ROADS, tower_palette=buildings.load(TOWER).palette,
+                        out=HERE, spec_dir=HERE)
 
 
 def main() -> None:

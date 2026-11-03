@@ -40,11 +40,13 @@ Its Town Props (KR-94, `../kit/props.py`): a Pokémon statue between the Mart an
 memorial garden, a bin by the road.
 
 Its own look (KR-98) is Kanto Lavender Town v0.1 (`../packs/lavender_v0.1`, made with another AI from
-`Lavender_Town_v0.1_prompt.md`), laid by `../kit/lavender.py`: the square and the walk to the Tower in slate (σ in the
-plan), meeting the three cobble roads on their own join; the garden of remembrance in lavender rows (λ) with gravel
-paths (γ), an open gate in line with the Tower's door between two stone lanterns, a low iron railing round it but on
-its west side (the Haunters' rounds), and the pack's memorial stones and offering stone where the four field rocks
-stood; lavender beside the Tower and on the south lawn; two violet street lamps by the road south; Mr. Fuji's yard:
-the rest shelter, the bowls and a straw bed. The railings, the gate and the details are listed in `make_art.py`
-(`RAILS`, `GATES`, `DETAILS`). The slate, gravel and lavender have a palette of their own (bank 10). 293 of its 384
-tiles.
+`Lavender_Town_v0.1_prompt.md`), laid by `../kit/lavender.py`. The town is slate (σ in the plan): the square, the walk
+to the Tower, the paths to the Center and the Mart and the three roads to the map's edges, where each edge block's outer
+half is the pack's join to the cobble, so the routes' roads run into it. The garden of remembrance runs from the walk to
+the town's south edge: lavender rows (λ), a gravel path (γ) down the middle from an open gate between two stone
+lanterns to a stone between two more at the forest's edge, three paths across, 14 memorial stones and 3 offering stones,
+two trees, the benches either side of the path; a low iron railing along the walk and down the garden's west side from
+row 18 (open where its paths come out, and north of that for the Haunters' rounds). Lavender beside the Tower and on the
+south lawn; two violet street lamps by the road south; Mr. Fuji's yard: the rest shelter, the bowls and a straw bed. The
+railings, the gate and the details are listed in `make_art.py` (`RAILS`, `GATES`, `DETAILS`; the routes' roads past
+the edges in `EDGE_ROADS`). The slate, gravel and lavender have a palette of their own (bank 10). 291 of its 384 tiles.
