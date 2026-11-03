@@ -141,6 +141,236 @@
  "\u00a1": "statue_guardian",
  "\u00a2": "bench_wood_north",
  "\u00a3": "litter_bin",
- "\u01ce": "field_rock_a@flowers2",
- "\u01d0": "field_rock_c@flowers1"
+ "\u0200": "lavender#217",
+ "\u0201": "lavender#145",
+ "\u0202": "lavender#179",
+ "\u0203": "lavender#200",
+ "\u0204": "lavender_center_c",
+ "\u0205": "lavender#50",
+ "\u0206": "lavender_center_b",
+ "\u0207": "lavender_center",
+ "\u0208": {
+  "name": "slate_NE#251",
+  "joins": "="
+ },
+ "\u0209": "lavender#236",
+ "\u020a": "lavender#100",
+ "\u020b": "lavender#118",
+ "\u020c": {
+  "name": "slate_SE#154",
+  "joins": "="
+ },
+ "\u020d": {
+  "name": "slate_NW#145_to_cobble_NWW_SWW",
+  "joins": "="
+ },
+ "\u020e": {
+  "name": "slate_NE#129",
+  "joins": "="
+ },
+ "\u020f": {
+  "name": "slate_NW#128_to_cobble_NWN_NEN",
+  "joins": "="
+ },
+ "\u0210": {
+  "name": "slate_NE#0_to_cobble_NWN_NEN",
+  "joins": "="
+ },
+ "\u0211": {
+  "name": "slate_NW#0_to_cobble_NWN_NEN",
+  "joins": "="
+ },
+ "\u0212": {
+  "name": "slate_NW#16_to_cobble_NWN_NEN",
+  "joins": "="
+ },
+ "\u0213": {
+  "name": "slate_NE#17",
+  "joins": "="
+ },
+ "\u0214": {
+  "name": "slate_NW#129",
+  "joins": "="
+ },
+ "\u0215": {
+  "name": "slate_NE#144",
+  "joins": "="
+ },
+ "\u0216": {
+  "name": "slate_NW#17",
+  "joins": "="
+ },
+ "\u0217": {
+  "name": "slate_NE#145",
+  "joins": "="
+ },
+ "\u0218": {
+  "name": "slate_NW#145",
+  "joins": "="
+ },
+ "\u0219": {
+  "name": "slate_NE#179",
+  "joins": "="
+ },
+ "\u021a": {
+  "name": "slate_SW#0_to_cobble_NWW_SWW",
+  "joins": "="
+ },
+ "\u021b": {
+  "name": "slate_SE#0",
+  "joins": "="
+ },
+ "\u021c": {
+  "name": "slate_SW#0",
+  "joins": "="
+ },
+ "\u021d": {
+  "name": "slate_SE#50",
+  "joins": "="
+ },
+ "\u021e": {
+  "name": "slate_NW#64_to_cobble_NWW_SWW",
+  "joins": "="
+ },
+ "\u021f": {
+  "name": "slate_NE#0",
+  "joins": "="
+ },
+ "\u0220": {
+  "name": "slate_NW#0",
+  "joins": "="
+ },
+ "\u0221": {
+  "name": "slate_NW#32",
+  "joins": "="
+ },
+ "\u0222": {
+  "name": "rail_end_E@slate_NE#36",
+  "joins": "="
+ },
+ "\u0223": {
+  "name": "rail_straight_EW@slate_NW#100",
+  "joins": "="
+ },
+ "\u0224": {
+  "name": "rail_straight_EW@slate_NE#100",
+  "joins": "="
+ },
+ "\u0225": {
+  "name": "rail_end_W@slate_NW#100",
+  "joins": "="
+ },
+ "\u0226": {
+  "name": "stone_lantern_00@slate_NE#100",
+  "joins": "="
+ },
+ "\u0227": {
+  "name": "gate_open_0@slate_NW#100",
+  "joins": "="
+ },
+ "\u0228": {
+  "name": "slate_NE#100",
+  "joins": "="
+ },
+ "\u0229": {
+  "name": "gate_open_2@slate_NW#100",
+  "joins": "="
+ },
+ "\u022a": {
+  "name": "stone_lantern_00@slate_NE#118",
+  "joins": "="
+ },
+ "\u022b": "rail_end_E@grass",
+ "\u022c": "rail_straight_EW@grass",
+ "\u022d": "rail_corner_SW@grass",
+ "\u022e": {
+  "name": "slate_SW#72",
+  "joins": "="
+ },
+ "\u022f": {
+  "name": "slate_SW#34",
+  "joins": "="
+ },
+ "\u0230": "stone_lantern_01@grass",
+ "\u0231": "gravel#8",
+ "\u0232": "gravel#0",
+ "\u0233": "gravel#2",
+ "\u0234": "rail_straight_NS@grass",
+ "\u0235": "rest_shelter_00@grass",
+ "\u0236": "rest_shelter_10@grass",
+ "\u0237": {
+  "name": "slate_NW#200",
+  "joins": "="
+ },
+ "\u0238": {
+  "name": "slate_NW#50",
+  "joins": "="
+ },
+ "\u0239": "lavender#249",
+ "\u023a": "lavender#149",
+ "\u023b": "lavender#209",
+ "\u023c": "lavender#177",
+ "\u023d": "lavender#243",
+ "\u023e": "lavender#181",
+ "\u023f": "lavender#213",
+ "\u0240": "rest_shelter_01@grass",
+ "\u0241": "rest_shelter_11@grass",
+ "\u0242": {
+  "name": "slate_SW#236",
+  "joins": "="
+ },
+ "\u0243": {
+  "name": "slate_SE#68",
+  "joins": "="
+ },
+ "\u0244": {
+  "name": "slate_SW#64_to_cobble_SWS_SES",
+  "joins": "="
+ },
+ "\u0245": {
+  "name": "slate_SE#0_to_cobble_SWS_SES",
+  "joins": "="
+ },
+ "\u0246": {
+  "name": "slate_SW#0_to_cobble_SWS_SES",
+  "joins": "="
+ },
+ "\u0247": {
+  "name": "slate_SE#32_to_cobble_SWS_SES",
+  "joins": "="
+ },
+ "\u0248": {
+  "name": "slate_SW#36",
+  "joins": "="
+ },
+ "\u0249": {
+  "name": "slate_SE#100",
+  "joins": "="
+ },
+ "\u024a": {
+  "name": "slate_SW#100",
+  "joins": "="
+ },
+ "\u024b": {
+  "name": "slate_SW#118",
+  "joins": "="
+ },
+ "\u024c": "lavender#238",
+ "\u024d": "memorial_rounded_00@gravel#0",
+ "\u024e": "lavender#108",
+ "\u024f": "lavender#102",
+ "\u0250": "memorial_flat_00@gravel#0",
+ "\u0251": "lavender#126",
+ "\u0252": "memorial_flower_00@gravel#0",
+ "\u0253": "offering_stone_00@gravel#0",
+ "\u0254": "food_water_bowls_00@grass",
+ "\u0255": "straw_bed_00@grass",
+ "\u0256": "lavender#253",
+ "\u0257": "lavender#245",
+ "\u0258": "lavender#247",
+ "\u0259": "gravel#4",
+ "\u025a": "rail_end_W@grass",
+ "\u025b": "rail_corner_NW@grass",
+ "\u025c": "street_lamp_00@grass",
+ "\u025d": "street_lamp_01@grass"
 }

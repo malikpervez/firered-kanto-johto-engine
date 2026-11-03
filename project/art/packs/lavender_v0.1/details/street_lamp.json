@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "id": "street_lamp",
+  "name": "street_lamp",
+  "image": "tiles/street_lamp.png",
+  "size_px": [
+    16,
+    32
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 1,
+    "height": 2
+  },
+  "palette": "lavender_tower",
+  "palettes_8x8": [
+    [
+      "lavender_tower",
+      "lavender_tower"
+    ],
+    [
+      "lavender_tower",
+      "lavender_tower"
+    ],
+    [
+      "lavender_tower",
+      "lavender_tower"
+    ],
+    [
+      "lavender_tower",
+      "lavender_tower"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": true,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 1,
+  "over_row_indices": [
+    0
+  ],
+  "frame_count": 1,
+  "budget_group": "street_lamp",
+  "tiles_8x8": [
+    [
+      13,
+      13
+    ],
+    [
+      30,
+      30
+    ],
+    [
+      27,
+      27
+    ],
+    [
+      28,
+      28
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": true,
+        "vflip": true
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ]
+  ],
+  "tile_pool_file": "../tile_pool.json",
+  "palette_file": "../palettes/lavender_tower.gpl",
+  "unique_8x8_tiles": 4,
+  "frames": [
+    "tiles/street_lamp.png"
+  ],
+  "frame_speed": 0
+}

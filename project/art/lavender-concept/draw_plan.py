@@ -16,7 +16,9 @@ town, and Route 8's the left edge at rows 9-11; Route 12's road meets the bottom
 - **the road south** to Route 12, between lawns and the town's few trees.
 
 Letters: the kit's legend (T forest, . lawn, = cobble, * flowers, o stones, b bushes, R trees, S signs), Z the
-Pokémon Center, L the Poké Mart, X Pokémon Tower (drawn in make_art.py), H the Volunteer House, U and W the two houses.
+Pokémon Center, L the Poké Mart, X Pokémon Tower (drawn in make_art.py), H the Volunteer House, U and W the two houses;
+and Lavender's own ground (Kanto Lavender Town v0.1, ../kit/lavender.py): σ slate, γ gravel, λ lavender beds. The
+railings, the gate, the lanterns, the memorial stones, the lamps and Mr. Fuji's yard stand on them (make_art.py).
 """
 from pathlib import Path
 
@@ -43,26 +45,27 @@ rect(0, 30, 37, 31, "T")
 # the roads and the square
 rect(12, 0, 16, 8, "=")                        # Route 10's road (columns 12-16)
 rect(0, 9, 9, 11, "=")                         # Route 8's (rows 9-11)
-rect(10, 9, 20, 14, "=")                       # the square
+rect(10, 9, 20, 14, "σ")                       # the square, in slate
 rect(12, 15, 15, 31, "=")                      # Route 12's road (columns 12-15, as wide as its road below)
-rect(21, 9, 31, 11, "=")                       # the path east to the tower (to its east wall)
+rect(21, 9, 31, 11, "σ")                       # the walk east to the tower (to its east wall), in slate
 at(11, 8, "S")                                 # the town sign, read from the square (11,9)
 
 # the north side: the Center and the Mart either side of the road from Route 10
 rect(5, 3, 9, 6, "Z")                          # the Pokémon Center, door 7,6
 rect(7, 7, 7, 8, "=")
 rect(18, 3, 21, 6, "L")                        # the Poké Mart, door 19,6
-rect(19, 7, 19, 8, "=")
+rect(19, 7, 19, 8, "σ")  # the Mart's path, slate as the square it leads to
 rect(2, 2, 3, 3, "R"); rect(23, 2, 24, 3, "R"); at(10, 3, "b"); at(11, 3, "b")
 
 # Pokémon Tower on its rise in the east, its sign and the Silph Scope notice on the path up, the garden before it
 rect(27, 2, 31, 8, "X")                        # the tower, door 29,8
 at(26, 8, "S")                                 # its sign, read from 26,9
 at(23, 8, "S")                                 # the Silph Scope notice, read from 23,9
-rect(22, 13, 34, 16, "*")                      # the garden of remembrance
-for x in (23, 26, 29, 32):
-    at(x, 14, "o")                             # its stones
-rect(32, 3, 34, 7, "*"); rect(33, 9, 34, 11, "b")
+rect(22, 13, 34, 16, "λ")                      # the garden of remembrance: lavender in rows,
+rect(22, 15, 34, 15, "γ"); rect(28, 12, 30, 16, "γ")  # a gravel path across it and one up from the gate,
+for x in (23, 26, 32, 33):
+    at(x, 14, "γ")                             # and gravel round its stones (make_art.py puts them there)
+rect(32, 3, 34, 7, "λ"); rect(33, 9, 34, 10, "b")  # lavender beside the tower; the railing runs on east of the bushes
 
 # west of the square: the Volunteer House, its sign; the two houses in the south-west
 rect(3, 13, 7, 16, "H")                        # Mr. Fuji's Volunteer Pokémon House, door 5,16
@@ -72,12 +75,12 @@ rect(8, 21, 11, 24, "W")                       # the Name Rater's, door 9,24
 rect(2, 27, 3, 28, "R"); rect(9, 27, 10, 28, "R"); rect(2, 18, 9, 18, "b")
 
 # east of the road south: lawns, trees, a bed of flowers
-rect(18, 20, 22, 22, "*"); rect(26, 22, 27, 23, "R"); rect(31, 19, 32, 20, "R"); rect(30, 26, 31, 27, "R")
+rect(18, 20, 22, 22, "λ"); rect(26, 22, 27, 23, "R"); rect(31, 19, 32, 20, "R"); rect(30, 26, 31, 27, "R")
 at(19, 26, "o"); at(24, 28, "o")
 # a little colour on the plain lawns (polish): a bed of flowers in the south-west yard between its trees and one on
 # the east lawn, daisies in the grass south of the flower bed, a lamp by the road south
 rect(6, 28, 7, 28, "*"); rect(33, 22, 34, 23, "*")
-rect(21, 27, 22, 27, ","); at(22, 28, ","); rect(16, 24, 16, 25, "l")
+rect(21, 27, 22, 27, ","); at(22, 28, ",")  # (the lamps by the road south: make_art.py)
 
 # the forest is drawn in 2x2 cells on the even grid: where a road's edge cuts a cell in half, a hedge or a lawn verge
 # instead of half a tree (beside Route 10's road at 17,0-1; above Route 8's at 0-1,8)

@@ -1,0 +1,39 @@
+{
+ "note": "From the lawn by the boy down through the lavender rows (walkable, as flowers are) onto the gravel path across the garden (KR-98).",
+ "created": "2026-11-03 17:00",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 24,
+  "y": 12,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     46
+    ],
+    [
+     0,
+     220
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 24,
+  "y": 15,
+  "in_battle": false
+ },
+ "accepted": "2026-11-03 16:16"
+}
