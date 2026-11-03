@@ -4099,65 +4099,468 @@
    "elevation": null,
    "open": []
   },
-  "safari_gate": {
+  "sandstone_SW#217": {
    "ids": [
-    640,
-    641,
-    642,
-    643,
-    644,
-    645,
-    646,
-    647,
-    648,
-    649,
-    650,
-    651,
-    652,
-    653,
-    654,
-    655,
-    656,
-    657,
-    658,
-    659,
-    660,
-    661,
-    662,
-    663,
-    664,
-    665,
-    666,
-    667,
-    668,
-    669,
-    670,
-    671,
-    672,
-    673,
+    640
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SE#129": {
+   "ids": [
+    641
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SW#128": {
+   "ids": [
+    642
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SE#0": {
+   "ids": [
+    643
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SW#50": {
+   "ids": [
+    644
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#136": {
+   "ids": [
+    645
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NE#0": {
+   "ids": [
+    646
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#0": {
+   "ids": [
+    647
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#18": {
+   "ids": [
+    648
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SW#16": {
+   "ids": [
+    649
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SW#179": {
+   "ids": [
+    650
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#236": {
+   "ids": [
+    651
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NE#100": {
+   "ids": [
+    652
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#100": {
+   "ids": [
+    653
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NE#64": {
+   "ids": [
+    654
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#32": {
+   "ids": [
+    655
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#118": {
+   "ids": [
+    656
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SE#72": {
+   "ids": [
+    657
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#217_to_cobble_W": {
+   "ids": [
+    658
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NE#145": {
+   "ids": [
+    659
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#145": {
+   "ids": [
+    660
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NE#128": {
+   "ids": [
+    661
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#16": {
+   "ids": [
+    662
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#179": {
+   "ids": [
+    663
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SW#200_to_cobble_W": {
+   "ids": [
+    664
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#236_to_cobble_W": {
+   "ids": [
+    665
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NE#179_to_cobble_E": {
+   "ids": [
+    666
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SE#108": {
+   "ids": [
+    667
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SW#100": {
+   "ids": [
+    668
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SE#64": {
+   "ids": [
+    669
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SE#50_to_cobble_E": {
+   "ids": [
+    670
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SE#118_to_cobble_E": {
+   "ids": [
+    671
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_NW#217": {
+   "ids": [
+    672
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SW#100_to_dirt_S": {
+   "ids": [
+    673
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "sandstone_SE#118": {
+   "ids": [
     674
    ],
-   "w": 7,
-   "h": 5,
+   "w": 1,
+   "h": 1,
+   "solid": false,
+   "elevation": null,
+   "open": []
+  },
+  "palisade_corner_SE@grass": {
+   "ids": [
+    675
+   ],
+   "w": 1,
+   "h": 1,
    "solid": true,
    "elevation": null,
-   "open": [
-    31
-   ]
+   "open": []
   },
-  "fuchsia_gym": {
+  "palisade_straight_NS@grass": {
    "ids": [
-    675,
-    676,
-    677,
-    678,
-    679,
-    680,
-    681,
-    682,
-    683,
-    684,
-    685,
+    676
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "palisade_corner_NE@grass": {
+   "ids": [
+    677
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "palisade_straight_EW@grass": {
+   "ids": [
+    678
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "palisade_end_W@grass": {
+   "ids": [
+    679
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "palisade_end_E@grass": {
+   "ids": [
+    680
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "palisade_corner_SW@grass": {
+   "ids": [
+    681
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "palisade_corner_NW@grass": {
+   "ids": [
+    682
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "palisade_end_N@grass": {
+   "ids": [
+    683
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "exhibit_board_00@grass": {
+   "ids": [
+    684
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "fuchsia_bush_00@grass": {
+   "ids": [
+    685
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "safari_gate": {
+   "ids": [
     686,
     687,
     688,
@@ -4181,18 +4584,7 @@
     706,
     707,
     708,
-    709
-   ],
-   "w": 7,
-   "h": 5,
-   "solid": true,
-   "elevation": null,
-   "open": [
-    31
-   ]
-  },
-  "house_gardener": {
-   "ids": [
+    709,
     710,
     711,
     712,
@@ -4203,23 +4595,23 @@
     717,
     718,
     719,
-    720,
+    720
+   ],
+   "w": 7,
+   "h": 5,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    31
+   ]
+  },
+  "fuchsia_gym": {
+   "ids": [
     721,
     722,
     723,
     724,
-    725
-   ],
-   "w": 4,
-   "h": 4,
-   "solid": true,
-   "elevation": null,
-   "open": [
-    13
-   ]
-  },
-  "house_family": {
-   "ids": [
+    725,
     726,
     727,
     728,
@@ -4239,18 +4631,7 @@
     742,
     743,
     744,
-    745
-   ],
-   "w": 5,
-   "h": 4,
-   "solid": true,
-   "elevation": null,
-   "open": [
-    17
-   ]
-  },
-  "house_pond_keeper": {
-   "ids": [
+    745,
     746,
     747,
     748,
@@ -4260,24 +4641,24 @@
     752,
     753,
     754,
-    755,
+    755
+   ],
+   "w": 7,
+   "h": 5,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    31
+   ]
+  },
+  "house_gardener": {
+   "ids": [
     756,
     757,
     758,
     759,
     760,
-    761
-   ],
-   "w": 4,
-   "h": 4,
-   "solid": true,
-   "elevation": null,
-   "open": [
-    13
-   ]
-  },
-  "house_pond_garden": {
-   "ids": [
+    761,
     762,
     763,
     764,
@@ -4287,13 +4668,65 @@
     768,
     769,
     770,
-    771,
+    771
+   ],
+   "w": 4,
+   "h": 4,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    13
+   ]
+  },
+  "house_family": {
+   "ids": [
     772,
     773,
     774,
     775,
     776,
-    777
+    777,
+    778,
+    779,
+    780,
+    781,
+    782,
+    783,
+    784,
+    785,
+    786,
+    787,
+    788,
+    789,
+    790,
+    791
+   ],
+   "w": 5,
+   "h": 4,
+   "solid": true,
+   "elevation": null,
+   "open": [
+    17
+   ]
+  },
+  "house_pond_garden": {
+   "ids": [
+    792,
+    793,
+    794,
+    795,
+    796,
+    797,
+    798,
+    799,
+    800,
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807
    ],
    "w": 4,
    "h": 4,
@@ -4306,10 +4739,10 @@
   },
   "statue_guardian": {
    "ids": [
-    778,
-    779,
-    780,
-    781
+    808,
+    809,
+    810,
+    811
    ],
    "w": 2,
    "h": 2,
@@ -4319,7 +4752,7 @@
   },
   "flower_tub": {
    "ids": [
-    782
+    812
    ],
    "w": 1,
    "h": 1,
@@ -4329,8 +4762,19 @@
   },
   "bench_stone": {
    "ids": [
-    783,
-    784
+    813,
+    814
+   ],
+   "w": 2,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "bench_stone~2": {
+   "ids": [
+    815,
+    816
    ],
    "w": 2,
    "h": 1,
@@ -4340,7 +4784,7 @@
   },
   "litter_bin": {
    "ids": [
-    785
+    817
    ],
    "w": 1,
    "h": 1,
@@ -4350,23 +4794,13 @@
   },
   "picnic_table": {
    "ids": [
-    786,
-    787,
-    788,
-    789
+    818,
+    819,
+    820,
+    821
    ],
    "w": 2,
    "h": 2,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "sign@dirt#5": {
-   "ids": [
-    790
-   ],
-   "w": 1,
-   "h": 1,
    "solid": true,
    "elevation": null,
    "open": []
@@ -4374,11 +4808,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 367
+  "secondary": 372
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 151
+  "secondary": 182
  },
  "animations": [
   {

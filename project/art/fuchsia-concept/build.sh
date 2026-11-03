@@ -38,7 +38,7 @@ pae door add $M 5 31 --frames ../$B/fuchsia_gym/fuchsia_gym_door.png $P
 pae door add $M 29 16 --frames ../$V/house_gardener/house_gardener_door.png $P
 pae door add $M 12 31 --frames ../$V/house_gardener/house_gardener_door.png $P
 pae door add $M 31 31 --frames ../$V/house_family/house_family_door.png $P
-pae door add $M 25 31 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P
+pae door add $M 25 31 --frames ../$V/house_gardener/house_gardener_door.png $P
 pae door add $M 37 31 --frames ../$B/house_pond_garden/house_pond_garden_door.png $P
 
 # events: every warp keeps its number (the buildings behind them point at it)

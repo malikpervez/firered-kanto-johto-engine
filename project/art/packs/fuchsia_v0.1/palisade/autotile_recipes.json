@@ -1,0 +1,60 @@
+{
+  "mask_bits": {
+    "N": 1,
+    "E": 2,
+    "S": 4,
+    "W": 8
+  },
+  "bit_meaning": "1 = adjacent fence. A board or building wall is not a fence and produces an end post.",
+  "recipes": {
+    "0": {
+      "piece": "post"
+    },
+    "1": {
+      "piece": "end_N"
+    },
+    "2": {
+      "piece": "end_E"
+    },
+    "4": {
+      "piece": "end_S"
+    },
+    "8": {
+      "piece": "end_W"
+    },
+    "5": {
+      "piece": "straight_NS"
+    },
+    "10": {
+      "piece": "straight_EW"
+    },
+    "3": {
+      "piece": "corner_NE"
+    },
+    "6": {
+      "piece": "corner_SE"
+    },
+    "12": {
+      "piece": "corner_SW"
+    },
+    "9": {
+      "piece": "corner_NW"
+    },
+    "7": {
+      "piece": "tee_NES"
+    },
+    "11": {
+      "piece": "tee_NEW"
+    },
+    "13": {
+      "piece": "tee_NSW"
+    },
+    "14": {
+      "piece": "tee_ESW"
+    },
+    "15": {
+      "piece": "cross"
+    }
+  },
+  "gates": "None. All pens remain enclosed."
+}

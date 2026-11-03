@@ -42,8 +42,10 @@ From Kanto Buildings Remakes v0.3 (`../packs/buildings_v0.3/`):
 - **the house with the pond garden**: Viridian's pond keeper's house with a dormer doorway in its roof's back slope
   (bank 7). The back door is entered walking south from the garden, and doesn't animate.
 
-The Safari Zone's office and a house are Viridian's gardener's house, the Warden's is the family's, and the other
-house is the pond keeper's (all bank 7). The Center and the Mart are the kit's.
+The Safari Zone's office and the two houses on the shore street (by the Gym, and by the Center) are Viridian's
+gardener's house, and the Warden's is the family's (all bank 7). The Center and the Mart are the kit's. The house by
+the Center was the pond keeper's until the detail pass (KR-99): the town's tileset was nearly full, and sharing the
+gardener's made room for the pack (the owner's call, November 3).
 
 ## Events
 
@@ -71,15 +73,12 @@ Other places that depend on the map, all moved:
 
 ## Pieces and seams
 
-The pieces are the kit's, the two drawn buildings and Viridian's houses. The town takes 207 of its 384 tiles.
+The pieces are the kit's, the two drawn buildings, Viridian's houses, the Town Props and the town's own pack (below).
 
-The seams are pae's:
-- **Route 18**: both maps are the kit's, so Route 18 needs pieces only for the Gym and the town's own metatiles in its
-  view: 37 pieces, 30 tiles.
-- **Old Route 19 drawn here**: 17 pieces, 47 tiles, its palettes in banks 10–11 (Route 15 is the kit's since it
-  was rebuilt: no seam).
-- **This town drawn by old Route 19**: its bottom seven rows (63 pieces). The strips are only forest, lawn, road,
-  dirt and hedges.
+The seams are pae's. Routes 18, 15 and 19 are all the kit's since they were rebuilt, so the town needs no pieces for
+them; each of them draws the town's edge with pieces copied into its own tileset (since KR-99, the sandstone, the
+palisade and the boards among them): Route 18 48 pieces, 82 tiles; Route 15 14 pieces, 8 tiles; Route 19 3 pieces, 5
+tiles.
 
 ## The rules
 
@@ -90,11 +89,34 @@ The seams are pae's:
 - the trees stand more than 8 blocks from the edges you come in by (KR-45);
 - every door can be walked into (the back door from the garden), every sign read, and the hidden item found;
 - the Friends' camp is open ground;
-- the strips the old routes draw are forest, lawn, road, dirt and hedges only.
+- the fuchsia bushes make nobody's walk longer: it's as many steps from the main street to every other block with
+  them as without them (the story walks up the lanes between the houses).
 
 Build it from the repository root with `sh project/art/fuchsia-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
 
-Its Town Props (KR-94, `../kit/props.py`): a statue on the Safari Zone plaza's west wing, flower tubs either side of the gate, stone benches along the walk and a bin at its foot, all on the paving (the paving's corner check counts them as paving), and a picnic table in the park east of the tree. 367 of its 384 tiles.
+Its Town Props (KR-94, `../kit/props.py`): a statue on the Safari Zone plaza's west wing, flower tubs either side of the gate, stone benches along the walk and a bin at its foot, all on the sandstone (since KR-99), and a picnic table in the park east of the tree.
 
-The joins between its surfaces (polish, round three): the plaza's paving runs up to the lodge's front and onto the zoo's east walk; the avenue ends in a kerb onto the main street (the kit's paving-to-cobble piece); the shore street's cobbles meet the beach path's dirt with no lawn between; the main street keeps Route 18's three rows for four blocks into town.
+The main street keeps Route 18's three rows for four blocks into town (polish, round three).
+
+## Its own look (KR-99)
+
+Kanto Fuchsia City v0.1 (`../packs/fuchsia_v0.1`, made with another AI from `Fuchsia_City_v0.1_prompt.md`), laid by
+`../kit/fuchsia.py`:
+- **sandstone** through the whole town: both streets, the Safari plaza, its avenue and the zoo's two walks (the plan's
+  cobble, paving and the dirt of rows 9–10), its 32x32 pattern anchored to the map. It has the same edge wherever it
+  meets the lawn, and runs straight up to the lodge's front. At the west and east edges each street block's outer half
+  is the pack's join to the cobble, so Route 18's and Route 15's cobble roads run into it; below the shore street the
+  join to the dirt opens onto the beach path, whose top row runs on from it without a lawn lip. The Town Props on it
+  stand on its block there.
+- **a bamboo palisade** for every fence: the five pens and the pond garden (picked by its neighbours: it ends in a
+  post beside a board or a wall).
+- **an exhibit board** in each pen's fence line, where the kit's signs were (the signs' events are where they were).
+- **13 fuchsia bushes** (solid) along the back of the two flower beds west of the avenue and of the park's flower
+  garden, beside the Mart and the office, and beside the house at the shore street's east end; none in the lanes up
+  between the houses (`make_art.py`: `BOARDS`, `BUSHES`).
+
+The sandstone has a palette of its own (bank 10: the kit's ground palette with its darkest colour swapped for the
+stone's, so its edges and joins keep the kit's lawn, dirt and cobble exactly); the palisade and the boards are in the
+lodge's (bank 9), the bushes in the kit's plants. The town takes 372 of its 384 tiles (all 29 of the pack's), 182
+metatiles. The pack's optional fuchsia street lamp wasn't made.
