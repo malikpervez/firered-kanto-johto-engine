@@ -1,0 +1,3266 @@
+{
+  "schema_version": 1,
+  "id": "sandstone",
+  "type": "static_terrain",
+  "block_size_px": 16,
+  "palette": "fuchsia_town",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "piece_names": [
+    "center",
+    "N",
+    "E",
+    "S",
+    "W",
+    "NE",
+    "SE",
+    "SW",
+    "NW",
+    "in_NE",
+    "in_SE",
+    "in_SW",
+    "in_NW",
+    "in_NE_SE",
+    "in_NE_SW",
+    "in_NE_NW",
+    "in_SE_SW",
+    "in_SE_NW",
+    "in_SW_NW",
+    "in_NE_SE_SW",
+    "in_NE_SE_NW",
+    "in_NE_SW_NW",
+    "in_SE_SW_NW",
+    "in_ALL",
+    "single",
+    "large_NW",
+    "large_NE",
+    "large_SW",
+    "large_SE",
+    "to_cobble_W",
+    "to_cobble_W_NW",
+    "to_cobble_W_NE",
+    "to_cobble_W_SW",
+    "to_cobble_W_SE",
+    "to_cobble_E",
+    "to_cobble_E_NW",
+    "to_cobble_E_NE",
+    "to_cobble_E_SW",
+    "to_cobble_E_SE",
+    "to_dirt_S",
+    "to_dirt_S_NW",
+    "to_dirt_S_NE",
+    "to_dirt_S_SW",
+    "to_dirt_S_SE"
+  ],
+  "tiles": [
+    {
+      "schema_version": 1,
+      "id": "center",
+      "name": "center",
+      "image": "tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          15
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 1
+    },
+    {
+      "schema_version": 1,
+      "id": "N",
+      "name": "N",
+      "image": "tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          18,
+          18
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "E",
+      "name": "E",
+      "image": "tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          21
+        ],
+        [
+          15,
+          21
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "S",
+      "name": "S",
+      "image": "tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          15
+        ],
+        [
+          18,
+          18
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "W",
+      "name": "W",
+      "image": "tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          21,
+          15
+        ],
+        [
+          21,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "NE",
+      "name": "NE",
+      "image": "tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          18,
+          22
+        ],
+        [
+          15,
+          21
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "SE",
+      "name": "SE",
+      "image": "tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          21
+        ],
+        [
+          18,
+          22
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "SW",
+      "name": "SW",
+      "image": "tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          21,
+          15
+        ],
+        [
+          22,
+          18
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "NW",
+      "name": "NW",
+      "image": "tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          22,
+          18
+        ],
+        [
+          21,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE",
+      "name": "in_NE",
+      "image": "tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          17
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SE",
+      "name": "in_SE",
+      "image": "tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          15
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SW",
+      "name": "in_SW",
+      "image": "tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          15
+        ],
+        [
+          17,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NW",
+      "name": "in_NW",
+      "image": "tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          17,
+          15
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SE",
+      "name": "in_NE_SE",
+      "image": "tiles/in_NE_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          17
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SW",
+      "name": "in_NE_SW",
+      "image": "tiles/in_NE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          17
+        ],
+        [
+          17,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_NW",
+      "name": "in_NE_NW",
+      "image": "tiles/in_NE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          17,
+          17
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SE_SW",
+      "name": "in_SE_SW",
+      "image": "tiles/in_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          15
+        ],
+        [
+          17,
+          17
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SE_NW",
+      "name": "in_SE_NW",
+      "image": "tiles/in_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          17,
+          15
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SW_NW",
+      "name": "in_SW_NW",
+      "image": "tiles/in_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          17,
+          15
+        ],
+        [
+          17,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SE_SW",
+      "name": "in_NE_SE_SW",
+      "image": "tiles/in_NE_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          15,
+          17
+        ],
+        [
+          17,
+          17
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SE_NW",
+      "name": "in_NE_SE_NW",
+      "image": "tiles/in_NE_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          17,
+          17
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SW_NW",
+      "name": "in_NE_SW_NW",
+      "image": "tiles/in_NE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          17,
+          17
+        ],
+        [
+          17,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SE_SW_NW",
+      "name": "in_SE_SW_NW",
+      "image": "tiles/in_SE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          17,
+          15
+        ],
+        [
+          17,
+          17
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "in_ALL",
+      "name": "in_ALL",
+      "image": "tiles/in_ALL.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          17,
+          17
+        ],
+        [
+          17,
+          17
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 1
+    },
+    {
+      "schema_version": 1,
+      "id": "single",
+      "name": "single",
+      "image": "tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          22,
+          22
+        ],
+        [
+          22,
+          22
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 1
+    },
+    {
+      "schema_version": 1,
+      "id": "large_NW",
+      "name": "large_NW",
+      "image": "tiles/large_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "phase_blocks": [
+        0,
+        0
+      ],
+      "tiles_8x8": [
+        [
+          20,
+          16
+        ],
+        [
+          19,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "large_NE",
+      "name": "large_NE",
+      "image": "tiles/large_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "phase_blocks": [
+        1,
+        0
+      ],
+      "tiles_8x8": [
+        [
+          16,
+          16
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 2
+    },
+    {
+      "schema_version": 1,
+      "id": "large_SW",
+      "name": "large_SW",
+      "image": "tiles/large_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "phase_blocks": [
+        0,
+        1
+      ],
+      "tiles_8x8": [
+        [
+          16,
+          20
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "large_SE",
+      "name": "large_SE",
+      "image": "tiles/large_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "phase_blocks": [
+        1,
+        1
+      ],
+      "tiles_8x8": [
+        [
+          16,
+          20
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    }
+  ],
+  "transitions": [
+    {
+      "schema_version": 1,
+      "id": "to_cobble_W",
+      "name": "to_cobble_W",
+      "image": "transitions/to_cobble_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": null,
+      "tiles_8x8": [
+        [
+          28,
+          15
+        ],
+        [
+          25,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 3
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_W_NW",
+      "name": "to_cobble_W_NW",
+      "image": "transitions/to_cobble_W_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": "NW",
+      "tiles_8x8": [
+        [
+          28,
+          16
+        ],
+        [
+          25,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_W_NE",
+      "name": "to_cobble_W_NE",
+      "image": "transitions/to_cobble_W_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": "NE",
+      "tiles_8x8": [
+        [
+          28,
+          16
+        ],
+        [
+          25,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_W_SW",
+      "name": "to_cobble_W_SW",
+      "image": "transitions/to_cobble_W_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": "SW",
+      "tiles_8x8": [
+        [
+          28,
+          20
+        ],
+        [
+          25,
+          19
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_W_SE",
+      "name": "to_cobble_W_SE",
+      "image": "transitions/to_cobble_W_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "W",
+      "phase": "SE",
+      "tiles_8x8": [
+        [
+          28,
+          20
+        ],
+        [
+          25,
+          19
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_E",
+      "name": "to_cobble_E",
+      "image": "transitions/to_cobble_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": null,
+      "tiles_8x8": [
+        [
+          15,
+          27
+        ],
+        [
+          15,
+          26
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 3
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_E_NW",
+      "name": "to_cobble_E_NW",
+      "image": "transitions/to_cobble_E_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": "NW",
+      "tiles_8x8": [
+        [
+          20,
+          27
+        ],
+        [
+          19,
+          26
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_E_NE",
+      "name": "to_cobble_E_NE",
+      "image": "transitions/to_cobble_E_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": "NE",
+      "tiles_8x8": [
+        [
+          16,
+          27
+        ],
+        [
+          15,
+          26
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_E_SW",
+      "name": "to_cobble_E_SW",
+      "image": "transitions/to_cobble_E_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": "SW",
+      "tiles_8x8": [
+        [
+          16,
+          27
+        ],
+        [
+          15,
+          26
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_cobble_E_SE",
+      "name": "to_cobble_E_SE",
+      "image": "transitions/to_cobble_E_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "cobble",
+      "outside_side": "E",
+      "phase": "SE",
+      "tiles_8x8": [
+        [
+          16,
+          27
+        ],
+        [
+          15,
+          26
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_dirt_S",
+      "name": "to_dirt_S",
+      "image": "transitions/to_dirt_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "dirt",
+      "outside_side": "S",
+      "phase": null,
+      "tiles_8x8": [
+        [
+          15,
+          15
+        ],
+        [
+          23,
+          24
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 3
+    },
+    {
+      "schema_version": 1,
+      "id": "to_dirt_S_NW",
+      "name": "to_dirt_S_NW",
+      "image": "transitions/to_dirt_S_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "dirt",
+      "outside_side": "S",
+      "phase": "NW",
+      "tiles_8x8": [
+        [
+          20,
+          16
+        ],
+        [
+          23,
+          24
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_dirt_S_NE",
+      "name": "to_dirt_S_NE",
+      "image": "transitions/to_dirt_S_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "dirt",
+      "outside_side": "S",
+      "phase": "NE",
+      "tiles_8x8": [
+        [
+          16,
+          16
+        ],
+        [
+          23,
+          24
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 3
+    },
+    {
+      "schema_version": 1,
+      "id": "to_dirt_S_SW",
+      "name": "to_dirt_S_SW",
+      "image": "transitions/to_dirt_S_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "dirt",
+      "outside_side": "S",
+      "phase": "SW",
+      "tiles_8x8": [
+        [
+          16,
+          20
+        ],
+        [
+          23,
+          24
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    },
+    {
+      "schema_version": 1,
+      "id": "to_dirt_S_SE",
+      "name": "to_dirt_S_SE",
+      "image": "transitions/to_dirt_S_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "fuchsia_town",
+      "palette_file": "../palettes/fuchsia_town.gpl",
+      "palettes_8x8": [
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ],
+        [
+          "fuchsia_town",
+          "fuchsia_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "frame_count": 1,
+      "outside_material": "dirt",
+      "outside_side": "S",
+      "phase": "SE",
+      "tiles_8x8": [
+        [
+          16,
+          20
+        ],
+        [
+          23,
+          24
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "unique_8x8_tiles": 4
+    }
+  ],
+  "tile_pool_file": "../tile_pool.json",
+  "unique_8x8_tiles": 14,
+  "palette_file": "../palettes/fuchsia_town.gpl",
+  "solid": false,
+  "solid_blocks": [],
+  "door_block": null,
+  "naming": "N means lawn outside north; inside corners NE, SE, SW, NW.",
+  "edge_band_px": 4,
+  "autotile": {
+    "recipes_file": "autotile_recipes.json",
+    "phase_recipes_file": "phase_recipes.json",
+    "mask_bits": {
+      "N": 1,
+      "E": 2,
+      "S": 4,
+      "W": 8,
+      "NE": 16,
+      "SE": 32,
+      "SW": 64,
+      "NW": 128
+    }
+  }
+}
