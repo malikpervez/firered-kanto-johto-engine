@@ -74,4 +74,4 @@ the map follows it:
 
 The setts are in a palette of their own (bank 12); the ash, the cliff, the crater and the details in the pack's
 volcano palette (bank 11, the kit rock's before). The island takes 326 of its 384 tiles (89 of them the pack's),
-211 metatiles.
+213 metatiles.

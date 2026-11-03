@@ -170,8 +170,8 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Route 14 | 1 (nothing of its own) | 0 | 0 |
 | Route 13 | 1 (nothing of its own) | 0 | 0 |
 | Route 12 | 107 | 112 (for Lavender's slate and lavender, and Route 11's own pieces; and 1 of its own) | 32 |
-| Route 21 (north and south, one tileset) | 1 (nothing of its own) | 149 (Route 21 South, for Cinnabar's own pieces) | 0 |
-| Cinnabar | 326 (the Cinnabar pack 89) | 0 | 211 |
+| Route 21 (north and south, one tileset) | 1 (nothing of its own) | 155 (Route 21 South, for Cinnabar's own pieces) | 0 |
+| Cinnabar | 326 (the Cinnabar pack 89) | 0 | 213 |
 | Route 20 | 157 | 0 | 82 |
 | Route 19 | 1 (nothing of its own) | 5 (for Fuchsia's sandstone) | 0 |
 | Route 23 | 174 | 89 (for Route 22's gate; and 63 of its own) | 79 |
