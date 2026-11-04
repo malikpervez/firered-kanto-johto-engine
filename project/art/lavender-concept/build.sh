@@ -74,3 +74,6 @@ for o in m["object_events"][:13]:
     o["elevation"] = 3
 open(p, "w").write(json.dumps(m, indent=2) + "\n")
 PY
+# a glow round each lantern's and street lamp's head after dark (make_art.py's GLOWS), after every other object so
+# no local id moves; the game draws them at night only
+pae map lights $M $(cat ../$A/glows.txt) $P

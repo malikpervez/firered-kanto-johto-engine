@@ -51,3 +51,18 @@ row 18 (open where its paths come out, and north of that for the Haunters' round
 south lawn; two violet street lamps by the road south; Mr. Fuji's yard: the rest shelter, the bowls and a straw bed. The
 railings, the gate and the details are listed in `make_art.py` (`RAILS`, `GATES`, `DETAILS`; the routes' roads past
 the edges in `EDGE_ROADS`). The slate, gravel and lavender have a palette of their own (bank 10). 289 of its 384 tiles.
+
+## At night (KR-101)
+
+The game tints the overworld by the time of day (`OW_ENABLE_DNS`); at night Lavender now has lights (pae's spec
+`"lights"` and `pae map lights`):
+- the houses' windows glow warm (bank 7's window glass, its colours 14 and 15);
+- in the Pokémon Tower's palette (bank 9) the stone lanterns' windows, the Tower's door lamps and the glint on the
+  violet street lamps' glass and on the Tower's windows glow a pale violet of the town's own (colours 6 and 14, the
+  light colour in its colour 0);
+- the Pokémon Center's and the Mart's glass, the MART letters and the Mart's emblem ring glow warm (the kit's own
+  lights, `../kit/kit.py` `LIGHTS`: every town's Center and Mart, banks 5 and 6);
+- a round glow after dark round the head of each stone lantern and street lamp (`make_art.py` `GLOWS`, written to
+  `glows.txt`; `build.sh` gives them to `pae map lights`, after every other object, so no local id moves).
+
+By day nothing changes. The replay tests "lavender at night ..." replay at 22:00 (their start's `"clock"`).
