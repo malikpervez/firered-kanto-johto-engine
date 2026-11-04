@@ -64,6 +64,14 @@ are `{"id", "name", "removed": true}` entries in `layouts.json`. Leave them. New
      story state in the test, not a save file); look at the changed maps in pae's test window.
    * **Route and town changes**: also run the story check from the first step the change affects, and update its
      last validated point (`project/docs/story-sanity-check.md`).
+   * **Night**: the game darkens towns, cities and routes after dark (`OW_ENABLE_DNS`, 18:00–06:00), and lit
+     colours glow instead. Every change to an outdoor map, a tileset, a palette or a building is also checked at
+     night: look at the changed map with `pae map render MAP --night` (it matches the game), and give new or changed
+     content a replay test with `"clock": "22:00"` in its start where the night matters. New window glass, lamp
+     glass and lit signs get palette colours of their own (nothing else in the bank may use them; `pae map colours
+     MAP --bank B -o PNG` shows where each colour is used) and go in the map's lights: the spec's `"lights"` for a
+     tileset pae builds, `pae tileset lights` for one it doesn't. New street lamps and lanterns get a glow
+     (`pae map lights`). Briefs for new art packs ask for glass and lamp colours apart from everything else.
    * Say plainly what was not tested (a playthrough past the tests, a real device, Delta).
 3. **Report real results**: the commands, their exit codes, ROM hashes and sizes. A build is not a playtest.
 
