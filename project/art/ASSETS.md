@@ -131,6 +131,10 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
   are left for seams to old maps; Lavender's and Fuchsia's own ground take 10, Cinnabar's 11 and 12). A map's `make_art.py` stops with "its palette isn't the one bank N has" if two
   pieces in one bank disagree. So a new building either uses its bank's palette as it is, or brings a palette for
   every piece in that bank.
+- **the lights at night**: a building's lit window glass, a lamp's glass or a lit sign wants colours of its own in
+  its bank, which nothing else uses: a map's spec names them (`"lights"`, pae's tileset build) and every pixel in one
+  glows at night. The kit's Center and Mart have theirs (`kit/kit.py` `LIGHTS`: their glass, the MART letters);
+  Lavender's houses and Tower palette theirs (KR-101). A replacement that keeps those indices keeps its lights.
 - **the tile budget**: a map's own tileset holds at most 384 8×8 tiles (flipped copies count once), and the seams
   to its neighbours need room in the tile slots it leaves free. Draw repeating detail on the 16-pixel grid so tiles
   repeat. Current use, from the built tilesets (seam tiles as `pae seam build` reports them: the tiles it

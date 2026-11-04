@@ -64,6 +64,12 @@ DETAILS = [("stone_lantern", 27, 11), ("stone_lantern", 31, 11),  # either side 
            ("stone_lantern", 28, 28), ("stone_lantern", 30, 28), ("memorial_flower", 29, 29),  # the path's end
            ("street_lamp", 16, 24), ("street_lamp", 11, 19),  # by the road south
            ("rest_shelter", 8, 13), ("food_water_bowls", 8, 15), ("straw_bed", 2, 16)]  # Mr. Fuji's yard
+# at night (the game's light colours, see ../kit/kit.py's LIGHTS for the Center's and the Mart's): the houses' window
+# glass (bank 7); in the tower's palette (bank 9) the lanterns' windows and the tower's door lamps, and the glint on
+# the violet lamps' glass and the tower's windows, in a pale violet of the town's own
+LIGHTS = {HOUSE_BANK: [14, 15], TOWER_BANK: {"colours": [6, 14], "light": [232, 200, 248]}}
+# and a glow round each lantern's and street lamp's head (its top block) after dark (`pae map lights`, build.sh)
+GLOWS = [(x, y) for piece, x, y in DETAILS if piece in ("stone_lantern", "street_lamp")]
 # the town props (Kanto Town Props v0.1, kit/props.py): (piece, x, y of its top-left block, the ground under it)
 PROPS = [("statue_guardian", 24, 6, "grass"),  # between the Mart and the Tower
          ("bench_wood_north", 24, 17, "grass"), ("bench_wood_north", 32, 17, "grass"),  # in the garden, the path between
@@ -175,12 +181,14 @@ def main() -> None:
                          "secondary": [f"palette_{HOUSE_BANK}.pal", base["secondary_palettes"][8],
                                        f"palette_{TOWER_BANK}.pal", f"palette_{NEW_BANK}.pal"]},
             "reserve": {"primary": base["reserve"]},
+            "lights": {**base["lights"], **{str(b): v for b, v in LIGHTS.items()}},
             "animations": base["animations"] + prop_anims,
             "field_effects": base["field_effects"],
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
+    (HERE / "glows.txt").write_text(" ".join(f"{x},{y}" for x, y in GLOWS) + "\n")
     # the Center, the Mart and the Tower count as cobble for the paths up to their doors (no lawn lip at the step)
     legend = dict(kit.LEGEND, **{k: {"name": v, "joins": "="} for k, v in SHARED.items()},
                   X={"name": "pokemon_tower", "joins": "="}, **{k: load(k).name for k in OWN})
