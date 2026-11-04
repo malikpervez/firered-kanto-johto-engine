@@ -79,9 +79,10 @@ TALL_GRASS = {"tall_grass": "B", "tall_grass_flowers": "C"}
 TALL_GRASS_FLOOR = {"B": "lawn_a", "C": "lawn_b"}  # the lawn tile each kind's ground shows
 SECONDARY_BANKS = {8: "plants"}  # banks the primary uses from the secondary tileset
 # the kit's colours that glow at night (the game's light colours: pae's spec "lights"), by bank: the Pokémon Center's
-# window and door glass; the Mart's glass, its MART letters and its emblem's ring. Nothing else in those palettes
-# uses them.
-LIGHTS = {5: [11, 12, 13], 6: [6, 11, 12, 13]}
+# window and door glass; the Mart's glass, its MART letters and its emblem's ring; the street lamp's glass (in the
+# plants' palette, bank 8, which every map's secondary holds). Nothing else in those palettes uses them. A map's own
+# are in night.py, which also puts a glow on every lamp.
+LIGHTS = {5: [11, 12, 13], 6: [6, 11, 12, 13], 8: [14]}
 
 def rgba(idx: np.ndarray, pal) -> np.ndarray:
     out = np.zeros(idx.shape + (4,), np.uint8)

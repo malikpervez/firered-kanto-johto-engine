@@ -131,10 +131,17 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
   are left for seams to old maps; Lavender's and Fuchsia's own ground take 10, Cinnabar's 11 and 12). A map's `make_art.py` stops with "its palette isn't the one bank N has" if two
   pieces in one bank disagree. So a new building either uses its bank's palette as it is, or brings a palette for
   every piece in that bank.
-- **the lights at night**: a building's lit window glass, a lamp's glass or a lit sign wants colours of its own in
-  its bank, which nothing else uses: a map's spec names them (`"lights"`, pae's tileset build) and every pixel in one
-  glows at night. The kit's Center and Mart have theirs (`kit/kit.py` `LIGHTS`: their glass, the MART letters);
-  Lavender's houses and Tower palette theirs (KR-101). A replacement that keeps those indices keeps its lights.
+- **the lights at night** (KR-101, KR-102): a building's lit window glass, a lamp's glass or a lit sign wants
+  colours of its own in its bank, which nothing else uses: every pixel in a lit colour glows at night. Every kit
+  map's are in one table, `kit/night.py` (each map's build.sh writes them into its spec's `"lights"` and puts a glow
+  on each lamp); the kit's own in `kit/kit.py` `LIGHTS` (the Center's and Mart's glass, the MART letters, the street
+  lamp's glass, 8:14). Most of the packs' houses keep their glass in 14 and 15; a replacement that keeps a
+  building's indices keeps its lights. Where glass shares its colours with a roof, the glass's tiles are drawn with a
+  lit copy of the palette in a free bank (Pallet's houses, bank 11) or the roof's pixels go onto an unlit twin of
+  the colour (Saffron's glass roofs, 9:13), or the roof onto an unlit copy (Erika's glasshouse, bank 11): by day
+  nothing changes. Johto's and the Sevii Islands' tilesets aren't built from specs: theirs are set by
+  `night_legacy.sh`. Check a change at night with `pae map render MAP --night`, and `pae map colours MAP --bank B
+  -o PNG` before lighting a colour (AGENTS.md, "Night"). A new pack's brief asks for glass and lamp colours apart.
 - **the tile budget**: a map's own tileset holds at most 384 8×8 tiles (flipped copies count once), and the seams
   to its neighbours need room in the tile slots it leaves free. Draw repeating detail on the 16-pixel grid so tiles
   repeat. Current use, from the built tilesets (seam tiles as `pae seam build` reports them: the tiles it

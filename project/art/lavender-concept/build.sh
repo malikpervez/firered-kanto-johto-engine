@@ -10,6 +10,7 @@ V=project/art/viridian-concept/buildings
 T=project/art/packs/buildings_v0.3/buildings/pokemon_tower  # the remakes pack
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=LavenderTown_Frlg
@@ -74,6 +75,6 @@ for o in m["object_events"][:13]:
     o["elevation"] = 3
 open(p, "w").write(json.dumps(m, indent=2) + "\n")
 PY
-# a glow round each lantern's and street lamp's head after dark (make_art.py's GLOWS), after every other object so
-# no local id moves; the game draws them at night only
-pae map lights $M $(cat ../$A/glows.txt) $P
+# a glow round each lantern's and street lamp's head after dark (make_art.py's GLOWS, and the kit's lamps), after
+# every other object so no local id moves; the game draws them at night only
+python3 ../project/art/kit/night.py map ../$A $M $P

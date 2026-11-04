@@ -10,6 +10,7 @@ K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=FuchsiaCity_Frlg
@@ -114,3 +115,7 @@ for i, (rx, ry) in {5: (2, 0), 7: (1, 0), 1: (1, 1), 4: (2, 1), 9: (1, 1), 20: (
     o[i]["movement_range_x"], o[i]["movement_range_y"] = rx, ry
 open(p, "w").write(json.dumps(m, indent=2) + "\n")
 PY
+
+# at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every
+# other object so no local id moves (kit/night.py; the game draws them at night only)
+python3 ../project/art/kit/night.py map ../$A $M $P

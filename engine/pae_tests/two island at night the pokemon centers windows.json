@@ -1,0 +1,35 @@
+{
+ "note": "At 22:00 the whole of each Pokemon Center window glows (its lower half on a lit copy of the palette).",
+ "created": "2026-11-04 16:25",
+ "start": {
+  "map": "TwoIsland_Frlg",
+  "x": 21,
+  "y": 9,
+  "state": [],
+  "script": null,
+  "clock": "22:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "TwoIsland_Frlg",
+  "x": 21,
+  "y": 9,
+  "in_battle": false
+ }
+}
