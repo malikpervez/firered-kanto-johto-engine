@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "name": "SW_wall",
+  "image": "terraces/side/SW_wall.png",
+  "palette": "kit_rock_cliff",
+  "palette_file": "kit_rock_cliff.gpl",
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "tiles_8x8": [
+    [
+      351,
+      320
+    ],
+    [
+      352,
+      320
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ]
+  ],
+  "palettes_8x8": [
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ],
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ]
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 0,
+  "role": "8px lit west wall; front/back names turn the rim.",
+  "phase_top_quarters": [
+    "NE",
+    "SE"
+  ],
+  "phase_formula": "1 + 3*((y-origin_y)%3) + ((x-origin_x)%3)",
+  "overlay_order": "phase top first, then this piece; transparent exterior reveals the lower tier",
+  "wall_half": "W",
+  "wall_band_px": [
+    0,
+    7
+  ],
+  "source_phase_texture": "source/base/cliff_top/centres/centre_<phase>.png",
+  "composed_by_phase": {
+    "1": {
+      "tiles_8x8": [
+        [
+          351,
+          1
+        ],
+        [
+          352,
+          3
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_1.png"
+    },
+    "2": {
+      "tiles_8x8": [
+        [
+          351,
+          5
+        ],
+        [
+          352,
+          7
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_2.png"
+    },
+    "3": {
+      "tiles_8x8": [
+        [
+          351,
+          9
+        ],
+        [
+          352,
+          11
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_3.png"
+    },
+    "4": {
+      "tiles_8x8": [
+        [
+          351,
+          13
+        ],
+        [
+          352,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_4.png"
+    },
+    "5": {
+      "tiles_8x8": [
+        [
+          351,
+          17
+        ],
+        [
+          352,
+          19
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_5.png"
+    },
+    "6": {
+      "tiles_8x8": [
+        [
+          351,
+          21
+        ],
+        [
+          352,
+          23
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_6.png"
+    },
+    "7": {
+      "tiles_8x8": [
+        [
+          351,
+          25
+        ],
+        [
+          352,
+          27
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_7.png"
+    },
+    "8": {
+      "tiles_8x8": [
+        [
+          351,
+          29
+        ],
+        [
+          352,
+          31
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_8.png"
+    },
+    "9": {
+      "tiles_8x8": [
+        [
+          351,
+          33
+        ],
+        [
+          352,
+          35
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/centres/centre_9.png"
+    }
+  }
+}
