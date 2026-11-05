@@ -10,7 +10,10 @@ palette, nine-phase top and two-block wall, with
   * side walls: where a level ends east or west, the 8 px half of its top on that side is a wall (the other half the
     top's own phase); its back and front ends turn the rim;
   * ends: a face's ends are outer (rounded, beside what's lower) or inner (beside more of its level's top); level 1's
-    outer ends meet the side wall above them;
+    outer ends meet the side wall above them. With ``square_ends`` a face above level 1 that stops in front of a lower
+    tier's rock ends square (its inner end), so the tier's corner lines up with its side wall and the tiers read as
+    one mountain, not slabs laid on each other (the owner, 5 November 2026: "there's no smooth transition they look
+    separate"); only against the ground is it rounded;
   * junctions: a top beside a face of its own level, or with a face's first row below its inside corner.
 
 Each level is laid out as a cliff of its own (``layer``: the blocks at that level or higher; the bottom one or two
@@ -89,9 +92,10 @@ def from_text(g, text: str) -> None:
                 assert not rows[y][x].isdigit(), f"({x},{y}): the levels put cliff where the plan has ground"
 
 
-def layer(lv, L: int, edge_continues: bool = True) -> dict:
+def layer(lv, L: int, edge_continues: bool = True, square_ends: bool = False) -> dict:
     """Level ``L`` laid out: (x, y) -> (kind, picture 16x16, names, part) for every block at ``L`` or higher, where
-    kind is "top" or "face" and part a face block's row from its top (0 or 1). As the pack's render does."""
+    kind is "top" or "face" and part a face block's row from its top (0 or 1). As the pack's render does, but for
+    ``square_ends`` (the module's notes)."""
     h, w = len(lv), len(lv[0])
     cells = {(x, y) for y in range(h) for x in range(w) if lv[y][x] >= L}
     tall = L in TALL
@@ -156,6 +160,8 @@ def layer(lv, L: int, edge_continues: bool = True) -> dict:
             if (x + dx, topy) in faces or (not (0 <= x + dx < w) and edge_continues):
                 continue
             kind = "inner" if has(x + dx, topy) else "outer"
+            if kind == "outer" and square_ends and L > 1 and 0 <= x + dx < w and lv[y][x + dx] >= 1:
+                kind = "inner"  # in front of a lower tier's rock: squared off, in line with the side wall above
             if L == 1:
                 if kind == "outer":
                     n, donor = f"outer_{side}_wall_side", ALL[f"outer_{side}_wall_side"]
@@ -173,14 +179,15 @@ def layer(lv, L: int, edge_continues: bool = True) -> dict:
     return out
 
 
-def compose(g, ground: str = "grass", extra=("top1#0",), edge_continues: bool = True):
+def compose(g, ground: str = "grass", extra=("top1#0",), edge_continues: bool = True, square_ends: bool = False):
     """The plan's levels as pieces: every block of a cliff gets the piece of its own level over the piece of the level
     below (its ground; level 1's is ``ground``). Returns (cells, chars, names): ``cells`` the sheet's entries in order,
     (name, picture, entry), each one's ground before it; ``chars`` the grid's character for each block of a cliff;
-    ``names`` piece name -> character. ``extra``: pieces the map uses elsewhere (its border: the plain top, phase 1)."""
+    ``names`` piece name -> character. ``extra``: pieces the map uses elsewhere (its border: the plain top, phase 1).
+    ``square_ends``: as ``layer``."""
     lv = levels(g)
     top = max(max(r) for r in lv)
-    per = [layer(lv, L, edge_continues) for L in range(1, top + 1)]
+    per = [layer(lv, L, edge_continues, square_ends) for L in range(1, top + 1)]
     cells, made = [], {}
     for name in extra:
         ph, mask = int(name[3:name.index("#")]), int(name.split("#")[1])
@@ -285,14 +292,14 @@ def solid(names: dict) -> set:
     return set(names.values())
 
 
-def flatten(g, edge_continues: bool = True) -> np.ndarray:
+def flatten(g, edge_continues: bool = True, square_ends: bool = False) -> np.ndarray:
     """Every level of the plan's cliffs drawn over the one below in full (as the pack's previews are), as palette
     indices (0 where no cliff shows): what the two-layer metatiles should show."""
     lv = levels(g)
     h, w = len(lv), len(lv[0])
     out = np.zeros((h * 16, w * 16), np.uint8)
     for L in range(1, max(max(r) for r in lv) + 1):
-        for (x, y), (_k, pic, _n, _p) in layer(lv, L, edge_continues).items():
+        for (x, y), (_k, pic, _n, _p) in layer(lv, L, edge_continues, square_ends).items():
             m = pic > 0
             out[y * 16:y * 16 + 16, x * 16:x * 16 + 16][m] = pic[m]
     return out

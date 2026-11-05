@@ -22,7 +22,9 @@ cliff marked with its level, and `kit/terraces.py` lays them with the Kanto Terr
 pack. Level 1 is the wall where the cliff meets the route, as before; the tiers above it are set back one behind the
 other, toward the map's edges (west of the lane, the corner by the rest stop, east of the pass), and the ridge south of
 the field faces the map's edge. No tier's end is in line with the one below it and none leaves a one-block strip of the
-tier below beside it: both read as cracks (the owner circled them by the rest stop). Nothing you can walk on moved.
+tier below beside it: both read as cracks (the owner circled them by the rest stop). A tier that stops in front of a
+lower one ends square, in line with its side wall, so the tiers join; only against the lawn are the ends rounded.
+Nothing you can walk on moved.
 
 `make_art.py` checks the route's rules on the map it builds: only the two exits open onto the edges; everything
 walkable is reached from Pewter's road; the way north crosses the tall grass, from the high path too.

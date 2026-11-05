@@ -89,7 +89,8 @@ def main() -> None:
     g = plan()
     terraces.from_text(g, LEVELS.read_text())
     # (the wall over the way in runs on into Pewter's: the map's edges count as more of the same level)
-    cells, chars, names = terraces.compose(g)
+    # a tier that stops in front of a lower one ends square, so the tiers join (terraces.py, square_ends)
+    cells, chars, names = terraces.compose(g, square_ends=True)
     terraces.apply(g, chars)
     SOLID.update(terraces.solid(names))
     for ch, (y, _) in JOIN_TREES.items():

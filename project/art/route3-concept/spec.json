@@ -5370,7 +5370,7 @@
    "ground": "grass"
   },
   {
-   "name": "step_middle_2.0+outer_W_step_wall~1bd3@top6#4~7ded",
+   "name": "step_middle_2.0+inner_W~57d6@top6#4~7ded",
    "image": "sheets/rock_cliff.png",
    "x": 224,
    "y": 32,
@@ -5454,7 +5454,7 @@
    "ground": "top6#4~7ded"
   },
   {
-   "name": "step_middle_1.0+outer_E_step_wall~03f4@top6#4~7ded",
+   "name": "step_middle_1.0+inner_E~49db@top6#4~7ded",
    "image": "sheets/rock_cliff.png",
    "x": 80,
    "y": 48,
@@ -5466,7 +5466,7 @@
    "ground": "top6#4~7ded"
   },
   {
-   "name": "step_middle_1.0+outer_W_step_wall~3d59@top6#4~7ded",
+   "name": "step_middle_1.0+inner_W~715c@top6#4~7ded",
    "image": "sheets/rock_cliff.png",
    "x": 96,
    "y": 48,
@@ -5478,7 +5478,7 @@
    "ground": "top6#4~7ded"
   },
   {
-   "name": "step_middle_2.0+outer_E_step_wall~2b9a@top5#4~c9ca",
+   "name": "step_middle_2.0+inner_E~61b5@top5#4~c9ca",
    "image": "sheets/rock_cliff.png",
    "x": 112,
    "y": 48,
@@ -5526,7 +5526,7 @@
    "ground": "top6#0~553b@top6#0~553b"
   },
   {
-   "name": "tall_middle_3.0+tall_outer_W~39fe@top6#0~553b@top6#0~553b@top6#0~553b",
+   "name": "tall_middle_3.0+tall_inner_W~17a0@top6#0~553b@top6#0~553b@top6#0~553b",
    "image": "sheets/rock_cliff.png",
    "x": 176,
    "y": 48,
@@ -5598,7 +5598,7 @@
    "ground": "top5#0~d839@top5#0~d839@top5#0~d839"
   },
   {
-   "name": "tall_middle_1.0+tall_outer_E~4311@top4#0~f0af@top4#0~f0af@top4#0~f0af",
+   "name": "tall_middle_1.0+tall_inner_E~e7dc@top4#0~f0af@top4#0~f0af@top4#0~f0af",
    "image": "sheets/rock_cliff.png",
    "x": 16,
    "y": 64,
@@ -5694,7 +5694,7 @@
    "ground": "top4#0~f0af@top4#0~f0af"
   },
   {
-   "name": "tall_middle_1.0+tall_outer_E~4311@top6#0~553b@top6#0~553b",
+   "name": "tall_middle_1.0+tall_inner_E~e7dc@top6#0~553b@top6#0~553b",
    "image": "sheets/rock_cliff.png",
    "x": 144,
    "y": 64,
@@ -6018,7 +6018,7 @@
    "ground": "top9#0~866d@top9#0~866d"
   },
   {
-   "name": "tall_middle_3.1+tall_outer_W~2263@top9#0~866d@top9#0~866d@top9#0~866d",
+   "name": "tall_middle_3.1+tall_inner_W~e075@top9#0~866d@top9#0~866d@top9#0~866d",
    "image": "sheets/rock_cliff.png",
    "x": 64,
    "y": 96,
@@ -6090,7 +6090,7 @@
    "ground": "top8#0~5bba@top8#0~5bba@top8#0~5bba"
   },
   {
-   "name": "tall_middle_1.1+tall_outer_E~36ca@top7#0~d459@top7#0~d459@top7#0~d459",
+   "name": "tall_middle_1.1+tall_inner_E~9a07@top7#0~d459@top7#0~d459@top7#0~d459",
    "image": "sheets/rock_cliff.png",
    "x": 160,
    "y": 96,
@@ -6186,7 +6186,7 @@
    "ground": "top7#0~d459@top7#0~d459"
   },
   {
-   "name": "tall_middle_1.1+tall_outer_E~36ca@top9#0~866d@top9#0~866d",
+   "name": "tall_middle_1.1+tall_inner_E~9a07@top9#0~866d@top9#0~866d",
    "image": "sheets/rock_cliff.png",
    "x": 32,
    "y": 112,
@@ -6246,7 +6246,7 @@
    "ground": "top7#0~d459"
   },
   {
-   "name": "tall_middle_1.0+tall_outer_W~1937@top9#0~866d@top9#0~866d",
+   "name": "tall_middle_1.0+tall_inner_W~3769@top9#0~866d@top9#0~866d",
    "image": "sheets/rock_cliff.png",
    "x": 112,
    "y": 112,
@@ -6294,7 +6294,7 @@
    "ground": "top9#0~866d@top9#0~866d"
   },
   {
-   "name": "tall_middle_2.0+tall_outer_W~524a@top2#0~3478@top2#0~3478",
+   "name": "tall_middle_2.0+tall_inner_W~7c14@top2#0~3478@top2#0~3478",
    "image": "sheets/rock_cliff.png",
    "x": 176,
    "y": 112,
@@ -6342,7 +6342,7 @@
    "ground": "top2#0~3478@top2#0~3478"
   },
   {
-   "name": "tall_middle_1.0+tall_outer_E~4311@top1#0~a80d@top1#0~a80d",
+   "name": "tall_middle_1.0+tall_inner_E~e7dc@top1#0~a80d@top1#0~a80d",
    "image": "sheets/rock_cliff.png",
    "x": 240,
    "y": 112,
@@ -6498,7 +6498,7 @@
    "ground": "top2#50+E_wall~d564"
   },
   {
-   "name": "tall_middle_1.1+tall_outer_W~520f@top3#0~e614@top3#0~e614",
+   "name": "tall_middle_1.1+tall_inner_W~9019@top3#0~e614@top3#0~e614",
    "image": "sheets/rock_cliff.png",
    "x": 192,
    "y": 128,
@@ -6546,7 +6546,7 @@
    "ground": "top3#0~e614@top3#0~e614"
   },
   {
-   "name": "tall_middle_2.1+tall_outer_W~994b@top5#0~d839@top5#0~d839",
+   "name": "tall_middle_2.1+tall_inner_W~5b5d@top5#0~d839@top5#0~d839",
    "image": "sheets/rock_cliff.png",
    "x": 0,
    "y": 144,
@@ -6594,7 +6594,7 @@
    "ground": "top5#0~d839@top5#0~d839"
   },
   {
-   "name": "tall_middle_1.1+tall_outer_E~36ca@top4#0~f0af@top4#0~f0af",
+   "name": "tall_middle_1.1+tall_inner_E~9a07@top4#0~f0af@top4#0~f0af",
    "image": "sheets/rock_cliff.png",
    "x": 64,
    "y": 144,
@@ -6654,7 +6654,7 @@
    "ground": "top6#72+W_wall~ded7"
   },
   {
-   "name": "tall_middle_1.0+tall_outer_W~1937@top6#0~553b@top6#0~553b",
+   "name": "tall_middle_1.0+tall_inner_W~3769@top6#0~553b@top6#0~553b",
    "image": "sheets/rock_cliff.png",
    "x": 144,
    "y": 144,
@@ -6690,21 +6690,9 @@
    "ground": "top5#0+in_SE_face~5013"
   },
   {
-   "name": "step_middle_2.0+inner_W~57d6@top6#4~7ded",
-   "image": "sheets/rock_cliff.png",
-   "x": 192,
-   "y": 144,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "solid": true,
-   "ground": "top6#4~7ded"
-  },
-  {
    "name": "top5#54+SE_wall~609e",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 192,
    "y": 144,
    "banks": [
     7
@@ -6716,7 +6704,7 @@
   {
    "name": "flat~e8cb",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 208,
    "y": 144,
    "banks": [
     7
@@ -6728,7 +6716,7 @@
   {
    "name": "top4#200+SW_wall~d54a@top4#0~f0af",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 224,
    "y": 144,
    "banks": [
     7
@@ -6740,8 +6728,8 @@
   {
    "name": "top9#200+SW_wall~01f5@top9#0~866d",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 160,
+   "x": 240,
+   "y": 144,
    "banks": [
     7
    ],
@@ -6752,7 +6740,7 @@
   {
    "name": "top9#50+E_wall~e396",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
+   "x": 0,
    "y": 160,
    "banks": [
     7
@@ -6764,7 +6752,7 @@
   {
    "name": "top9#50+SE_wall~e396@top9#50+E_wall~e396",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 16,
    "y": 160,
    "banks": [
     7
@@ -6776,7 +6764,7 @@
   {
    "name": "top9#200+W_wall~01f5",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 32,
    "y": 160,
    "banks": [
     7
@@ -6788,7 +6776,7 @@
   {
    "name": "top9#200+W_wall~01f5@top9#200+W_wall~01f5",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 48,
    "y": 160,
    "banks": [
     7
@@ -6798,9 +6786,9 @@
    "ground": "top9#200+W_wall~01f5"
   },
   {
-   "name": "tall_middle_1.1+tall_outer_W~520f@top9#0~866d@top9#0~866d",
+   "name": "tall_middle_1.1+tall_inner_W~9019@top9#0~866d@top9#0~866d",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 64,
    "y": 160,
    "banks": [
     7
@@ -6812,7 +6800,7 @@
   {
    "name": "top8#0+side_E_face_start~ce60",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 80,
    "y": 160,
    "banks": [
     7
@@ -6824,7 +6812,7 @@
   {
    "name": "top8#34+E_wall~c58b@top8#0+side_E_face_start~ce60",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 96,
    "y": 160,
    "banks": [
     7
@@ -6836,7 +6824,7 @@
   {
    "name": "wall_middle_2.0+inner_W~a4c3",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 112,
    "y": 160,
    "banks": [
     7
@@ -6848,7 +6836,7 @@
   {
    "name": "wall_middle_2.0+outer_E_wall_side~2010",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 128,
    "y": 160,
    "banks": [
     7
@@ -6860,7 +6848,7 @@
   {
    "name": "top8#204+SW_wall~ddd6",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 144,
    "y": 160,
    "banks": [
     7
@@ -6872,7 +6860,7 @@
   {
    "name": "top9#4~26ba",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 160,
    "y": 160,
    "banks": [
     7
@@ -6884,7 +6872,7 @@
   {
    "name": "top7#4~7ad1",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 176,
    "y": 160,
    "banks": [
     7
@@ -6894,9 +6882,9 @@
    "ground": "grass"
   },
   {
-   "name": "step_middle_2.0+outer_W_step_wall~1bd3@top7#4~7ad1",
+   "name": "step_middle_2.0+inner_W~57d6@top7#4~7ad1",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 192,
    "y": 160,
    "banks": [
     7
@@ -6908,7 +6896,7 @@
   {
    "name": "top8#4~bae1",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 208,
    "y": 160,
    "banks": [
     7
@@ -6920,7 +6908,7 @@
   {
    "name": "step_middle_2.0~7ee3@top8#4~bae1",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 224,
    "y": 160,
    "banks": [
     7
@@ -6932,8 +6920,8 @@
   {
    "name": "step_middle_2.0~7ee3@top9#4~26ba",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 176,
+   "x": 240,
+   "y": 160,
    "banks": [
     7
    ],
@@ -6944,7 +6932,7 @@
   {
    "name": "step_middle_1.0~7007@top7#4~7ad1",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
+   "x": 0,
    "y": 176,
    "banks": [
     7
@@ -6956,7 +6944,7 @@
   {
    "name": "top8#0+in_SW_face~8ea9",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 16,
    "y": 176,
    "banks": [
     7
@@ -6968,7 +6956,7 @@
   {
    "name": "step_middle_1.0~7007@top8#0+in_SW_face~8ea9",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 32,
    "y": 176,
    "banks": [
     7
@@ -6980,7 +6968,7 @@
   {
    "name": "step_middle_1.0~7007@top9#0~866d",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 48,
    "y": 176,
    "banks": [
     7
@@ -6992,7 +6980,7 @@
   {
    "name": "top1#4~b143",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 64,
    "y": 176,
    "banks": [
     7
@@ -7004,7 +6992,7 @@
   {
    "name": "top2#4~a911",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 80,
    "y": 176,
    "banks": [
     7
@@ -7016,7 +7004,7 @@
   {
    "name": "top3#4~61d2",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 96,
    "y": 176,
    "banks": [
     7
@@ -7026,9 +7014,9 @@
    "ground": "grass"
   },
   {
-   "name": "step_middle_1.0+outer_W_step_wall~3d59@top3#4~61d2",
+   "name": "step_middle_1.0+inner_W~715c@top3#4~61d2",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 112,
    "y": 176,
    "banks": [
     7
@@ -7040,7 +7028,7 @@
   {
    "name": "step_middle_2.0~7ee3@top1#4~b143",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 128,
    "y": 176,
    "banks": [
     7
@@ -7052,7 +7040,7 @@
   {
    "name": "step_middle_2.0~7ee3@top2#4~a911",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 144,
    "y": 176,
    "banks": [
     7
@@ -7064,7 +7052,7 @@
   {
    "name": "step_middle_2.0~7ee3@top3#4~61d2",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 160,
    "y": 176,
    "banks": [
     7
@@ -7076,7 +7064,7 @@
   {
    "name": "step_middle_1.0~7007@top1#4~b143",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 176,
    "y": 176,
    "banks": [
     7
@@ -7088,7 +7076,7 @@
   {
    "name": "step_middle_1.0~7007@top2#4~a911",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 192,
    "y": 176,
    "banks": [
     7
@@ -7100,7 +7088,7 @@
   {
    "name": "step_middle_1.0~7007@top3#4~61d2",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 208,
    "y": 176,
    "banks": [
     7
@@ -7112,7 +7100,7 @@
   {
    "name": "top3#54+SE_wall~e4b4",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 224,
    "y": 176,
    "banks": [
     7
@@ -7124,8 +7112,8 @@
   {
    "name": "flat~c0a5",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 192,
+   "x": 240,
+   "y": 176,
    "banks": [
     7
    ],
@@ -7136,7 +7124,7 @@
   {
    "name": "top3#200+W_wall~530a",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
+   "x": 0,
    "y": 192,
    "banks": [
     7
@@ -7148,7 +7136,7 @@
   {
    "name": "top3#200+SW_wall~530a@top3#200+W_wall~530a",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 16,
    "y": 192,
    "banks": [
     7
@@ -7160,7 +7148,7 @@
   {
    "name": "top2#32+side_E_face~0480",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 32,
    "y": 192,
    "banks": [
     7
@@ -7172,7 +7160,7 @@
   {
    "name": "top2#50+SE_wall~d564@top2#32+side_E_face~0480",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 48,
    "y": 192,
    "banks": [
     7
@@ -7184,7 +7172,7 @@
   {
    "name": "wall_middle_2.1+inner_W~601f",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 64,
    "y": 192,
    "banks": [
     7
@@ -7196,7 +7184,7 @@
   {
    "name": "wall_middle_2.1+outer_E_wall_side~482a",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 80,
    "y": 192,
    "banks": [
     7
@@ -7208,7 +7196,7 @@
   {
    "name": "wall_middle_1.0+outer_W_wall_side~5aa3",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 96,
    "y": 192,
    "banks": [
     7
@@ -7220,7 +7208,7 @@
   {
    "name": "wall_middle_2.0+inner_E~be6c",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 112,
    "y": 192,
    "banks": [
     7
@@ -7232,7 +7220,7 @@
   {
    "name": "top2#0+side_W_face_start~d23e",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 128,
    "y": 192,
    "banks": [
     7
@@ -7244,7 +7232,7 @@
   {
    "name": "top6#200+W_wall~ded7",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 144,
    "y": 192,
    "banks": [
     7
@@ -7256,7 +7244,7 @@
   {
    "name": "flat~b11c",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 160,
    "y": 192,
    "banks": [
     7
@@ -7268,7 +7256,7 @@
   {
    "name": "step_middle_2.0~7ee3@top4#0~f0af",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 176,
    "y": 192,
    "banks": [
     7
@@ -7280,7 +7268,7 @@
   {
    "name": "step_middle_2.0~7ee3@top5#0~d839",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 192,
    "y": 192,
    "banks": [
     7
@@ -7292,7 +7280,7 @@
   {
    "name": "step_middle_2.0~7ee3@top6#0~553b",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 208,
    "y": 192,
    "banks": [
     7
@@ -7304,7 +7292,7 @@
   {
    "name": "step_middle_1.0~7007@top4#0~f0af",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 224,
    "y": 192,
    "banks": [
     7
@@ -7316,8 +7304,8 @@
   {
    "name": "step_middle_1.0~7007@top5#0~d839",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 208,
+   "x": 240,
+   "y": 192,
    "banks": [
     7
    ],
@@ -7328,7 +7316,7 @@
   {
    "name": "step_middle_1.0~7007@top6#0~553b",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
+   "x": 0,
    "y": 208,
    "banks": [
     7
@@ -7340,7 +7328,7 @@
   {
    "name": "top5#34+E_wall~7bbf",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 16,
    "y": 208,
    "banks": [
     7
@@ -7352,7 +7340,7 @@
   {
    "name": "flat~dab7",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 32,
    "y": 208,
    "banks": [
     7
@@ -7364,7 +7352,7 @@
   {
    "name": "wall_middle_1.1+outer_W_wall_side~bf1f",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 48,
    "y": 208,
    "banks": [
     7
@@ -7376,7 +7364,7 @@
   {
    "name": "wall_middle_2.1+inner_E~1fec",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 64,
    "y": 208,
    "banks": [
     7
@@ -7388,7 +7376,7 @@
   {
    "name": "top5#64+side_W_face~a882",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 80,
    "y": 208,
    "banks": [
     7
@@ -7400,7 +7388,7 @@
   {
    "name": "top9#204+SW_wall~8da2",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 96,
    "y": 208,
    "banks": [
     7
@@ -7412,7 +7400,7 @@
   {
    "name": "top8#54+SE_wall~0339",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 112,
    "y": 208,
    "banks": [
     7
@@ -7424,7 +7412,7 @@
   {
    "name": "top8#72+W_wall~fa3f",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 128,
    "y": 208,
    "banks": [
     7
@@ -7436,7 +7424,7 @@
   {
    "name": "wall_middle_2.0+outer_W_wall_side~be85",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 144,
    "y": 208,
    "banks": [
     7
@@ -7448,7 +7436,7 @@
   {
    "name": "wall_middle_1.0+outer_E_wall_side~873b",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 160,
    "y": 208,
    "banks": [
     7
@@ -7460,7 +7448,7 @@
   {
    "name": "wall_middle_2.1+outer_W_wall_side~8e8b",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 176,
    "y": 208,
    "banks": [
     7
@@ -7472,7 +7460,7 @@
   {
    "name": "wall_middle_1.1+outer_E_wall_side~4e63",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 192,
    "y": 208,
    "banks": [
     7
@@ -7484,7 +7472,7 @@
   {
    "name": "top6#217+NW_wall~425e",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 208,
    "y": 208,
    "banks": [
     7
@@ -7496,7 +7484,7 @@
   {
    "name": "top6#217+NW_wall~425e@top6#217+NW_wall~425e",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 224,
    "y": 208,
    "banks": [
     7
@@ -7508,8 +7496,8 @@
   {
    "name": "top4#145~d645",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 224,
+   "x": 240,
+   "y": 208,
    "banks": [
     7
    ],
@@ -7520,7 +7508,7 @@
   {
    "name": "top4#145~d645@top4#145~d645",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
+   "x": 0,
    "y": 224,
    "banks": [
     7
@@ -7532,7 +7520,7 @@
   {
    "name": "top5#145~43de",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 16,
    "y": 224,
    "banks": [
     7
@@ -7544,7 +7532,7 @@
   {
    "name": "top5#145~43de@top5#145~43de",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 32,
    "y": 224,
    "banks": [
     7
@@ -7556,7 +7544,7 @@
   {
    "name": "top6#145~d073",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 48,
    "y": 224,
    "banks": [
     7
@@ -7568,7 +7556,7 @@
   {
    "name": "top6#145~d073@top6#145~d073",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 64,
    "y": 224,
    "banks": [
     7
@@ -7580,7 +7568,7 @@
   {
    "name": "top5#179+NE_wall~9a82",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 80,
    "y": 224,
    "banks": [
     7
@@ -7592,7 +7580,7 @@
   {
    "name": "top5#179+NE_wall~9a82@top5#179+NE_wall~9a82",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 96,
    "y": 224,
    "banks": [
     7
@@ -7604,7 +7592,7 @@
   {
    "name": "top3#200+W_wall~530a@top3#200+W_wall~530a",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 112,
    "y": 224,
    "banks": [
     7
@@ -7616,7 +7604,7 @@
   {
    "name": "top2#18+E_wall~d564",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 128,
    "y": 224,
    "banks": [
     7
@@ -7628,7 +7616,7 @@
   {
    "name": "top2#18+E_wall~d564@top2#18+E_wall~d564",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 144,
    "y": 224,
    "banks": [
     7
@@ -7640,7 +7628,7 @@
   {
    "name": "top6#200+SW_wall~ded7@top6#200+W_wall~ded7",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 160,
    "y": 224,
    "banks": [
     7
@@ -7652,7 +7640,7 @@
   {
    "name": "top5#16~972c",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 176,
    "y": 224,
    "banks": [
     7
@@ -7664,7 +7652,7 @@
   {
    "name": "top5#16~972c@top5#16~972c",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 192,
    "y": 224,
    "banks": [
     7
@@ -7676,7 +7664,7 @@
   {
    "name": "top6#17~d073",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 208,
    "y": 224,
    "banks": [
     7
@@ -7688,7 +7676,7 @@
   {
    "name": "top6#17~d073@top6#17~d073",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 224,
    "y": 224,
    "banks": [
     7
@@ -7700,8 +7688,8 @@
   {
    "name": "flat~7bba",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 240,
+   "x": 240,
+   "y": 224,
    "banks": [
     7
    ],
@@ -7712,7 +7700,7 @@
   {
    "name": "step_middle_2.0+inner_W~57d6@top4#145~d645",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
+   "x": 0,
    "y": 240,
    "banks": [
     7
@@ -7724,7 +7712,7 @@
   {
    "name": "step_middle_2.0~7ee3@top5#145~43de",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 16,
    "y": 240,
    "banks": [
     7
@@ -7736,7 +7724,7 @@
   {
    "name": "step_middle_2.0~7ee3@top6#145~d073",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 32,
    "y": 240,
    "banks": [
     7
@@ -7748,7 +7736,7 @@
   {
    "name": "step_middle_1.0~7007@top4#145~d645",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 48,
    "y": 240,
    "banks": [
     7
@@ -7760,7 +7748,7 @@
   {
    "name": "step_middle_1.0~7007@top5#145~43de",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 64,
    "y": 240,
    "banks": [
     7
@@ -7772,7 +7760,7 @@
   {
    "name": "step_middle_1.0~7007@top6#145~d073",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 80,
    "y": 240,
    "banks": [
     7
@@ -7784,7 +7772,7 @@
   {
    "name": "step_middle_2.0~7ee3@top4#145~d645",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 96,
    "y": 240,
    "banks": [
     7
@@ -7796,7 +7784,7 @@
   {
    "name": "flat~f09b",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 112,
    "y": 240,
    "banks": [
     7
@@ -7808,7 +7796,7 @@
   {
    "name": "step_middle_1.0~7007@top7#0~d459",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 128,
    "y": 240,
    "banks": [
     7
@@ -7820,7 +7808,7 @@
   {
    "name": "step_middle_1.0~7007@top8#0~5bba",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 144,
    "y": 240,
    "banks": [
     7
@@ -7832,7 +7820,7 @@
   {
    "name": "step_middle_2.0~7ee3@top7#0~d459",
    "image": "sheets/rock_cliff.png",
-   "x": 176,
+   "x": 160,
    "y": 240,
    "banks": [
     7
@@ -7844,7 +7832,7 @@
   {
    "name": "step_middle_2.0~7ee3@top8#0~5bba",
    "image": "sheets/rock_cliff.png",
-   "x": 192,
+   "x": 176,
    "y": 240,
    "banks": [
     7
@@ -7856,7 +7844,7 @@
   {
    "name": "step_middle_2.0~7ee3@top9#0~866d",
    "image": "sheets/rock_cliff.png",
-   "x": 208,
+   "x": 192,
    "y": 240,
    "banks": [
     7
@@ -7866,9 +7854,9 @@
    "ground": "top9#0~866d"
   },
   {
-   "name": "step_middle_2.0+outer_E_step_wall~2b9a@top9#0~866d",
+   "name": "step_middle_2.0+inner_E~61b5@top9#0~866d",
    "image": "sheets/rock_cliff.png",
-   "x": 224,
+   "x": 208,
    "y": 240,
    "banks": [
     7
@@ -7880,7 +7868,7 @@
   {
    "name": "top8#18+E_wall~c58b",
    "image": "sheets/rock_cliff.png",
-   "x": 240,
+   "x": 224,
    "y": 240,
    "banks": [
     7
@@ -7892,8 +7880,8 @@
   {
    "name": "top8#136+W_wall~fa3f",
    "image": "sheets/rock_cliff.png",
-   "x": 0,
-   "y": 256,
+   "x": 240,
+   "y": 240,
    "banks": [
     7
    ],
@@ -7904,7 +7892,7 @@
   {
    "name": "top3#136+W_wall~530a",
    "image": "sheets/rock_cliff.png",
-   "x": 16,
+   "x": 0,
    "y": 256,
    "banks": [
     7
@@ -7916,7 +7904,7 @@
   {
    "name": "top2#16~baff",
    "image": "sheets/rock_cliff.png",
-   "x": 32,
+   "x": 16,
    "y": 256,
    "banks": [
     7
@@ -7928,7 +7916,7 @@
   {
    "name": "top3#17~c38d",
    "image": "sheets/rock_cliff.png",
-   "x": 48,
+   "x": 32,
    "y": 256,
    "banks": [
     7
@@ -7940,7 +7928,7 @@
   {
    "name": "top1#145~2480",
    "image": "sheets/rock_cliff.png",
-   "x": 64,
+   "x": 48,
    "y": 256,
    "banks": [
     7
@@ -7952,7 +7940,7 @@
   {
    "name": "top2#145~167f",
    "image": "sheets/rock_cliff.png",
-   "x": 80,
+   "x": 64,
    "y": 256,
    "banks": [
     7
@@ -7964,7 +7952,7 @@
   {
    "name": "top3#145~c38d",
    "image": "sheets/rock_cliff.png",
-   "x": 96,
+   "x": 80,
    "y": 256,
    "banks": [
     7
@@ -7976,7 +7964,7 @@
   {
    "name": "top1#129~2480",
    "image": "sheets/rock_cliff.png",
-   "x": 112,
+   "x": 96,
    "y": 256,
    "banks": [
     7
@@ -7988,7 +7976,7 @@
   {
    "name": "top2#128~b1db",
    "image": "sheets/rock_cliff.png",
-   "x": 128,
+   "x": 112,
    "y": 256,
    "banks": [
     7
@@ -8000,7 +7988,7 @@
   {
    "name": "top5#129~43de",
    "image": "sheets/rock_cliff.png",
-   "x": 144,
+   "x": 128,
    "y": 256,
    "banks": [
     7
@@ -8012,7 +8000,7 @@
   {
    "name": "top6#128~dafd",
    "image": "sheets/rock_cliff.png",
-   "x": 160,
+   "x": 144,
    "y": 256,
    "banks": [
     7
