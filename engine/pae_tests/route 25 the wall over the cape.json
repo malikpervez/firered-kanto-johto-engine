@@ -1,5 +1,5 @@
 {
- "note": "Under the cape's long wall: a step stands on it, its ends set back two blocks (KR-104).",
+ "note": "Under the cape's long wall: four blocks deep, too shallow for a tier, it stays one level (KR-105).",
  "created": "2026-11-05 03:32",
  "start": {
   "map": "Route25_Frlg",
@@ -33,5 +33,5 @@
   "y": 4,
   "in_battle": false
  },
- "accepted": "2026-11-05 03:35"
+ "accepted": "2026-11-05 17:42"
 }

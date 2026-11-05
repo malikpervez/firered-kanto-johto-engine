@@ -4254,154 +4254,24 @@
    "elevation": null,
    "open": []
   },
-  "top1#200+SW_wall~32c1@top1#15": {
-   "ids": [
-    660
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "top2#0~3478@top2#15": {
-   "ids": [
-    661
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "top3#0~e614@top3#15": {
-   "ids": [
-    662
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "top1#0~a80d@top1#15": {
-   "ids": [
-    663
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "top1#50+SE_wall~c98b@top1#15": {
-   "ids": [
-    664
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "step_middle_2.0+outer_W_step_wall~47b8@top4#11": {
-   "ids": [
-    665
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "step_middle_2.0~7ee3@top5#11": {
-   "ids": [
-    666
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "step_middle_2.0~7ee3@top6#11": {
-   "ids": [
-    667
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "step_middle_1.0~7007@top4#11": {
-   "ids": [
-    668
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "step_middle_1.0~7007@top5#11": {
-   "ids": [
-    669
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "step_middle_1.0~7007@top6#11": {
-   "ids": [
-    670
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "step_middle_2.0~7ee3@top4#11": {
-   "ids": [
-    671
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
-  "step_middle_2.0+outer_E_step_wall~b03f@top4#11": {
-   "ids": [
-    672
-   ],
-   "w": 1,
-   "h": 1,
-   "solid": true,
-   "elevation": null,
-   "open": []
-  },
   "house_pond_keeper": {
    "ids": [
+    660,
+    661,
+    662,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    672,
     673,
     674,
-    675,
-    676,
-    677,
-    678,
-    679,
-    680,
-    681,
-    682,
-    683,
-    684,
-    685,
-    686,
-    687,
-    688
+    675
    ],
    "w": 4,
    "h": 4,
@@ -4414,11 +4284,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 132
+  "secondary": 120
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 49
+  "secondary": 36
  },
  "animations": [
   {

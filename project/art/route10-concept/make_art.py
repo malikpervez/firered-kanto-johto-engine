@@ -185,8 +185,6 @@ def main() -> None:
     # the mountains in tiers (kit/terraces.py): the levels above the cliff's wall, each set back behind the one
     # below, over the cliff as it was (its wall, tops and mouths untouched); past the map's top and bottom edges
     # counts as more cliff where no map joins; Lavender joins below at columns 4-41
-    terraces.WALL_VARIANTS = False  # the tileset is nearly full: the walls' second variant would leave the seams to
-    # Route 9 and Lavender no room
     beyond = terraces.beyond_edges(len(g[0]), len(g), down=range(4, 42))
     tier_cells, tier_names, _ = terraces.tiers_over(g, foot, roof="Y", beyond=beyond)
     for name, pic, entry in tier_cells:
