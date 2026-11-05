@@ -32,10 +32,12 @@ SOLID = set("T#bRoklSBcw_~vr") | cliffs.SOLID  # (ledges are hopped going south 
 # (which cut the top one in half under the road): the top one, the middle one, the last one over the plateau
 JOIN_TREES = {"\u24e3": (13, "forest#12"), "\u24e4": (15, "forest#13"), "\u24e5": (17, "forest#9")}
 SOLID |= set(JOIN_TREES)
-# the cliffs in levels (kit/terraces.py): plan_levels.txt is the plan with each block of cliff marked with its level,
-# the Kanto Terraces pack's Route 3 plan (its route3_levels_proposed.txt): level 1 the cliff as it was, where it meets
-# the route; the mountains above it climb in tiers set back one behind the other, toward the map's edges (west of the
-# lane, the corner by the rest stop, east of the pass), and the ridge south of the field faces away from it
+# the cliffs in levels (kit/terraces.py): plan_levels.txt is the plan with each block of cliff marked with its level:
+# level 1 the cliff as it was, where it meets the route; the mountains above it climb in tiers set back one behind the
+# other, and the ridge south of the field faces away from the route. Redrawn from the Kanto Terraces pack's plan (its
+# route3_levels_proposed.txt) after the owner circled the edge by the rest stop: no tier's end is in line with the one
+# below it (they read as a crack), none leaves a one-block strip of the tier below beside it, and the rest stop
+# mountain's tiers run on round the corner into its arm
 LEVELS = HERE / "plan_levels.txt"
 
 
