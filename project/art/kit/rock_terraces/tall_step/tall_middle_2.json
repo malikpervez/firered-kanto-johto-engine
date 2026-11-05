@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "name": "tall_middle_2",
+  "image": "terraces/tall_step/tall_middle_2.png",
+  "palette": "kit_rock_cliff",
+  "palette_file": "kit_rock_cliff.gpl",
+  "footprint_blocks": {
+    "width": 1,
+    "height": 2
+  },
+  "tiles_8x8": [
+    [
+      357,
+      358
+    ],
+    [
+      365,
+      366
+    ],
+    [
+      367,
+      368
+    ],
+    [
+      369,
+      370
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ]
+  ],
+  "palettes_8x8": [
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ],
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ],
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ],
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ]
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 0,
+  "role": "Two-block upper-tier rock face with connected broad facets, warm lit planes and a recessed dark foot.",
+  "phase_top_quarters": [],
+  "phase_formula": "1 + 3*((y-origin_y)%3) + ((x-origin_x)%3)",
+  "overlay_order": "phase top first, then this piece; transparent exterior reveals the lower tier",
+  "height_blocks": 2,
+  "rim_source": "middle_1",
+  "rim_source_reused_rows": 4,
+  "rim_source_left_hflip": true,
+  "foot_source": "middle_2",
+  "foot_source_reused_rows": 3,
+  "profile": "taller_mountains",
+  "placement": "Bottom two blocks of its level column; foot remains at the original column end. Top above has no S cap."
+}
