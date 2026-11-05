@@ -1,0 +1,37 @@
+{
+ "note": "South of the Seafoam island's mountain: a step stands set back behind its wall (KR-104).",
+ "created": "2026-11-05 03:32",
+ "start": {
+  "map": "Route20_Frlg",
+  "x": 60,
+  "y": 11,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     240
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route20_Frlg",
+  "x": 60,
+  "y": 11,
+  "in_battle": false
+ },
+ "accepted": "2026-11-05 03:35"
+}

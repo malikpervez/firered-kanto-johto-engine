@@ -1,0 +1,37 @@
+{
+ "note": "Beside the mountain over Rock Tunnel's south mouth: it climbs in tiers set back one behind the other, toward its middle (KR-104).",
+ "created": "2026-11-05 03:32",
+ "start": {
+  "map": "Route10_Frlg",
+  "x": 20,
+  "y": 37,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     240
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route10_Frlg",
+  "x": 20,
+  "y": 37,
+  "in_battle": false
+ },
+ "accepted": "2026-11-05 03:35"
+}

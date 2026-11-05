@@ -23,6 +23,10 @@ Every warp keeps its number and the people their order (scenes call the stranger
 number). The route's own tileset is the cliffs and the cave mouth, both in the cliffs' palette (bank 7). Old
 Cerulean had no room for the seam to the new route, so Cerulean is rebuilt in the same pull request.
 
+The mountain over Mt. Moon's far mouth climbs in tiers (KR-104, `kit/terraces.py`): a step and a taller face
+above its wall, each set back behind the one below, and the arm that runs south between the roads is a step of
+its own. They're laid over the cliff as it was, so its wall, its mouths and everything you walk on are unchanged.
+
 `make_art.py` checks the route's rules on the map it builds: only the two exits open onto the edges; the mountain
 divides the route (the Center and the near mouth are reached from Route 3's road); the far mouth can't be reached from
 Cerulean, and the shelf's ledge leads there; everything walkable is reached from an exit or the far mouth.

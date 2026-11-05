@@ -179,17 +179,20 @@ def layer(lv, L: int, edge_continues: bool = True, square_ends: bool = False) ->
     return out
 
 
-def compose(g, ground: str = "grass", extra=("top1#0",), edge_continues: bool = True, square_ends: bool = False):
+def compose(g, ground: str = "grass", extra=("top1#0",), edge_continues: bool = True, square_ends: bool = False,
+            base: dict | None = None):
     """The plan's levels as pieces: every block of a cliff gets the piece of its own level over the piece of the level
     below (its ground; level 1's is ``ground``). Returns (cells, chars, names): ``cells`` the sheet's entries in order,
     (name, picture, entry), each one's ground before it; ``chars`` the grid's character for each block of a cliff;
     ``names`` piece name -> character. ``extra``: pieces the map uses elsewhere (its border: the plain top, phase 1).
-    ``square_ends``: as ``layer``."""
+    ``square_ends``: as ``layer``. ``base``: for a map whose level 1 is laid by the rock pack's own cliffs.layout
+    (``tiers_over``), the piece it has at each block of a higher level, (x, y) -> (name, picture): those are the
+    tiers' grounds, and only the blocks above level 1 get pieces and characters here."""
     lv = levels(g)
     top = max(max(r) for r in lv)
     per = [layer(lv, L, edge_continues, square_ends) for L in range(1, top + 1)]
     cells, made = [], {}
-    for name in extra:
+    for name in (() if base is not None else extra):
         ph, mask = int(name[3:name.index("#")]), int(name.split("#")[1])
         made[name] = True
         cells.append((name, cliffs.join(cliffs.quads(cliffs._recipes[ph, mask])), {"ground": ground}))
@@ -217,6 +220,11 @@ def compose(g, ground: str = "grass", extra=("top1#0",), edge_continues: bool = 
     pictures = {n: (pic, e["ground"]) for n, pic, e in cells}
 
     def entry_of(L, x, y):
+        if L == 1 and base is not None:  # the map's own level 1, already on its sheet
+            name, pic = base[x, y]
+            assert np.array_equal(pic, per[0][x, y][1]), f"({x},{y}): the map's cliff top isn't the layout's"
+            pictures.setdefault(name, (pic, ground))
+            return name
         kind, pic, names, part = per[L - 1][x, y]
         name, gr = "+".join(names) + mark(pic), ground  # the names, and the picture's mark
         if L > 1:
@@ -241,7 +249,7 @@ def compose(g, ground: str = "grass", extra=("top1#0",), edge_continues: bool = 
     chars, names = {}, {}
     for y, row in enumerate(lv):
         for x, v in enumerate(row):
-            if v:
+            if v > (1 if base is not None else 0):
                 n = entry_of(v, x, y)
                 if n not in names:
                     names[n] = chr(FIRST + len(names))
@@ -277,15 +285,107 @@ def check_against(lv, records, edge_continues: bool = True) -> list:
     return bad
 
 
+def plan_tiers(foot, h: int, w: int, top: int = 5, beyond=lambda x, y: False) -> list[list[int]]:
+    """Tiers for a cliff's footprint (the blocks of level 1: a set of (x, y)), by Route 3's rules (the owner's
+    feedback on it): each level above stands on the one below, set back two blocks from its sides and its back and,
+    in front, far enough that one row of the lower level's top shows above that level's face; no tier is narrower
+    than three blocks, or shorter than its face and a row of top. Where a cliff is too shallow for that (a band a few
+    blocks deep), its step stands straight on its wall instead, the step's ends still set back two blocks: a taller
+    wall that steps down at its ends. ``beyond(x, y)``: whether a block past the map's edge counts as cliff (where
+    the cliff's top runs on to the edge and no map joins there); the tiers stay inside the map. Returns the levels,
+    block by block (0 where no cliff)."""
+    lv = [[1 if (x, y) in foot else 0 for x in range(w)] for y in range(h)]
+
+    def tier(cur, L, front):
+        def has(x, y):
+            return (x, y) in cur if 0 <= x < w and 0 <= y < h else beyond(x, y)
+        below = HEIGHTS[L - 1] + front  # the lower level's face, and the rows of its top that show
+        er = {(x, y) for x, y in cur
+              if all(has(x + dx, y + dy) for dx in range(-2, 3) for dy in range(-2, below + 1))}
+        tall = HEIGHTS[L] + 1  # this level's face and a row of its top
+        new = set()
+        for x, y in er:  # an opening: every 3 x tall box that fits
+            if all((x + dx, y + dy) in er for dx in range(3) for dy in range(tall)):
+                new |= {(x + dx, y + dy) for dx in range(3) for dy in range(tall)}
+        return new
+    # each cliff on its own (its blocks joined side by side): set back where it's deep enough, else straight up
+    left, parts = set(foot), []
+    while left:
+        part, todo = set(), [left.pop()]
+        while todo:
+            x, y = todo.pop()
+            part.add((x, y))
+            for n in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                if n in left:
+                    left.discard(n)
+                    todo.append(n)
+        parts.append(part)
+    for part in parts:
+        cur = part
+        for L in range(2, top + 1):
+            new = tier(cur, L, 1) or (tier(cur, L, 0) if L == 2 else set())
+            if not new:
+                break
+            for x, y in new:
+                lv[y][x] = L
+            cur = new
+    return lv
+
+
+def beyond_edges(w: int, h: int, up=(), down=()):
+    """For ``plan_tiers``: past the map's top and bottom edges counts as cliff (the map's own top runs on to them)
+    except where a map joins there (``up``, ``down``: the columns it covers); past its sides never."""
+    up, down = set(up), set(down)
+
+    def beyond(x, y):
+        if not 0 <= x < w:
+            return False
+        return x not in up if y < 0 else x not in down if y >= h else False
+    return beyond
+
+
+def footprint(g, roof: str = "") -> set:
+    """The cliff's footprint in a plan: its ``C`` blocks (before cliffs.layout), and its ``roof`` blocks (a cave's
+    mouth the top runs down to, in place of a wall: cliffs.layout's)."""
+    return {(x, y) for y, row in enumerate(g) for x, c in enumerate(row) if c == "C" or c in roof}
+
+
+def tiers_over(g, foot, roof: str = "", top: int = 5, square_ends: bool = True, beyond=lambda x, y: False):
+    """Tiers over a map whose cliffs are laid by the rock pack's cliffs.layout and cliffs.add (its level 1: the wall,
+    the tops, the caves' mouths and stairs, all as they were): the levels above it, by ``plan_tiers`` from the
+    cliff's footprint ``foot`` (the plan's ``C`` blocks before the layout). Puts each tier block's character into
+    ``g`` and returns (cells, names, levels): ``beyond`` as ``plan_tiers``; the sheet's pieces for the tiers (each
+    over the map's own top there, its ground), piece name -> character, and the levels. Every tier stands on a plain
+    top of the map's (its sides all cliff top), so the map's level 1 is the layout's own there, which ``compose``
+    checks pixel for pixel."""
+    h, w = len(g), len(g[0])
+    lv = plan_tiers(foot, h, w, top, beyond)
+    # the tops' edges as pae paints them: the tops beside a face (cliffs.add's characters) count as top too
+    tops = cliffs.tops_in(g, roof + cliffs.JUNCTION_CHARS)
+    base = {}
+    for y in range(h):
+        for x in range(w):
+            if lv[y][x] > 1:
+                assert (x, y) in tops, f"({x},{y}): a tier over something that isn't the cliff's top"
+                k, mask, corners = tops[x, y]
+                base[x, y] = (cliffs.top_name(k, mask, corners), cliffs.top(k, cliffs.outside_of(mask, corners)))
+    grid = [[str(v) if v else "." for v in row] for row in lv]
+    # (a tier at the map's top or bottom edge runs on past it, as the map's own top does: no rim along the edge)
+    cells, chars, names = compose(grid, edge_continues=True, square_ends=square_ends, base=base)
+    apply(g, chars)
+    return cells, names, lv
+
+
 def apply(g, chars) -> None:
     """The composed pieces' characters into the grid."""
     for (x, y), c in chars.items():
         g[y][x] = c
 
 
-def legend(names: dict) -> dict:
-    """The legend for the composed pieces: one character each."""
-    return {c: {"name": n} for n, c in names.items()}
+def legend(names: dict, joins: str | None = None) -> dict:
+    """The legend for the composed pieces: one character each. ``joins``: what the pieces count as for their
+    neighbours' edges (``C`` for tiers over the rock pack's cliff, so the tops round them stay plain)."""
+    return {c: {"name": n, **({"joins": joins} if joins else {})} for n, c in names.items()}
 
 
 def solid(names: dict) -> set:
