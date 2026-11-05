@@ -26,6 +26,7 @@ import buildings
 import cliffs
 import fray
 import kit
+import terraces
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -160,6 +161,7 @@ def check(g, d) -> None:
 def main() -> None:
     g = plan()
     d = doors(g)
+    foot = terraces.footprint(g, roof="Y")  # the cliff's footprint (and its mouths' tops), for its tiers
     cliffs.layout(g, roof="Y")  # the caves' mouths stand against the cliffs: their tops run down to them, with no face
     for y in range(MAP_H):  # the face beside a mouth runs on into it (a middle, not an inner end)
         for x in range(MAP_W):
@@ -180,6 +182,14 @@ def main() -> None:
         for x in range(MAP_W):
             if g[y + 1][x] == "Y" and g[y][x] in cliffs.JUNCTION_CHARS:
                 g[y][x] = cliffs.TOP[cliffs.phase(x, y) - 1]
+    # the mountains in tiers (kit/terraces.py): the levels above the cliff's wall, each set back behind the one
+    # below, over the cliff as it was (its wall, tops and mouths untouched); past the map's top and bottom edges
+    # counts as more cliff where no map joins; Lavender joins below at columns 4-41
+    beyond = terraces.beyond_edges(len(g[0]), len(g), down=range(4, 42))
+    tier_cells, tier_names, _ = terraces.tiers_over(g, foot, roof="Y", beyond=beyond)
+    for name, pic, entry in tier_cells:
+        rock.add(name, pic, tileset="secondary", solid=True, **entry)
+    SOLID.update(terraces.solid(tier_names))
     spec_mt += rock.write()
     sh = kit.Sheet(MOUTH.name, MOUTH.palette, CLIFF_BANK, HERE, HERE, cols=MOUTH.idx.shape[1] // 16)
     dx, dy = MOUTH.door
@@ -212,6 +222,7 @@ def main() -> None:
     legend[":"] = {"auto": "dirt", "joins": "="}  # the road's dirt runs on into Lavender's cobbles without a lawn rim
     assert not set("YZX") & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
+    legend.update(terraces.legend(tier_names, joins="C"))
     legend.update(fray.legend("N", FRAY_COBBLE, FRAY_DIRT, "=", "="))  # the road's dirt joins the cobbles here
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
