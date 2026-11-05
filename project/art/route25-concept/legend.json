@@ -172,7 +172,7 @@
  "}": "face_inner_E",
  "]": "face_outer_E",
  "㐀": {
-  "name": "top1#200+SW_wall~802e@top1#15",
+  "name": "top1#200+SW_wall~32c1@top1#15",
   "joins": "C"
  },
  "㐁": {
@@ -188,11 +188,11 @@
   "joins": "C"
  },
  "㐄": {
-  "name": "top1#50+SE_wall~4c2d@top1#15",
+  "name": "top1#50+SE_wall~c98b@top1#15",
   "joins": "C"
  },
  "㐅": {
-  "name": "step_middle_2.0+inner_W~57d6@top4#11",
+  "name": "step_middle_2.0+outer_W_step_wall~47b8@top4#11",
   "joins": "C"
  },
  "㐆": {
@@ -220,7 +220,7 @@
   "joins": "C"
  },
  "㐌": {
-  "name": "step_middle_2.0+inner_E~61b5@top4#11",
+  "name": "step_middle_2.0+outer_E_step_wall~b03f@top4#11",
   "joins": "C"
  },
  "Ⰰ": {

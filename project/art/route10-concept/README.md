@@ -27,7 +27,8 @@ in its own (bank 9). The seams are pae's: with Route 9 both maps are the kit's, 
 10–12 but one of its palettes, drawn in its nearest colours (KR-44).
 
 The mountain over Rock Tunnel's south mouth climbs in tiers (KR-104, `kit/terraces.py`): a step and a taller
-face, each set back behind the one below, toward its middle. They're laid over the cliff as it was, so its wall,
+face, each set back behind the one below, toward its middle. Its side walls take only the pack's first variant: the
+tileset is nearly full, and the second would leave the seams to Route 9 and Lavender no room. They're laid over the cliff as it was, so its wall,
 the mouths and everything you walk on are unchanged.
 
 `make_art.py` checks the route's rules on the map it builds:

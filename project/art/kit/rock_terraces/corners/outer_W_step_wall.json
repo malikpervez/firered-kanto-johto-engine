@@ -10,11 +10,11 @@
   },
   "tiles_8x8": [
     [
-      343,
+      385,
       340
     ],
     [
-      344,
+      386,
       342
     ]
   ],
@@ -58,9 +58,11 @@
   ],
   "walkable_blocks": [],
   "over_rows": 0,
-  "role": "Continuous shoulder below SW_wall, with the exposed foot rounded inward; identical step end reused.",
+  "role": "Square upper-tier end wrapping continuously into the W side wall. Lower-tier rock meets the straight end.",
   "phase_top_quarters": [],
   "phase_formula": "1 + 3*((y-origin_y)%3) + ((x-origin_x)%3)",
   "overlay_order": "phase top first, then this piece; transparent exterior reveals the lower tier",
-  "alias_of": "outer_W"
+  "end_shape": "square",
+  "changed_half": "W",
+  "art_revision": "0.2"
 }

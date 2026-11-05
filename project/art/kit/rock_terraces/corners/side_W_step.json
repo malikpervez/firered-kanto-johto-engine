@@ -10,11 +10,11 @@
   },
   "tiles_8x8": [
     [
-      351,
+      375,
       320
     ],
     [
-      352,
+      376,
       320
     ]
   ],
@@ -58,7 +58,7 @@
   ],
   "walkable_blocks": [],
   "over_rows": 0,
-  "role": "Continuous vertical rock return beside an adjacent step. Exterior alpha reveals lower-tier stone.",
+  "role": "Continuous W rock contact beside a face of its own level; opposite phase half unchanged.",
   "phase_top_quarters": [
     "NE",
     "SE"
@@ -66,15 +66,16 @@
   "phase_formula": "1 + 3*((y-origin_y)%3) + ((x-origin_x)%3)",
   "overlay_order": "phase top first, then this piece; transparent exterior reveals the lower tier",
   "wall_half": "W",
+  "art_revision": "0.2",
   "composed_by_phase": {
     "1": {
       "tiles_8x8": [
         [
-          351,
+          375,
           1
         ],
         [
-          352,
+          376,
           3
         ]
       ],
@@ -105,11 +106,11 @@
     "2": {
       "tiles_8x8": [
         [
-          351,
+          375,
           5
         ],
         [
-          352,
+          376,
           7
         ]
       ],
@@ -140,11 +141,11 @@
     "3": {
       "tiles_8x8": [
         [
-          351,
+          375,
           9
         ],
         [
-          352,
+          376,
           11
         ]
       ],
@@ -175,11 +176,11 @@
     "4": {
       "tiles_8x8": [
         [
-          351,
+          375,
           13
         ],
         [
-          352,
+          376,
           15
         ]
       ],
@@ -210,11 +211,11 @@
     "5": {
       "tiles_8x8": [
         [
-          351,
+          375,
           17
         ],
         [
-          352,
+          376,
           19
         ]
       ],
@@ -245,11 +246,11 @@
     "6": {
       "tiles_8x8": [
         [
-          351,
+          375,
           21
         ],
         [
-          352,
+          376,
           23
         ]
       ],
@@ -280,11 +281,11 @@
     "7": {
       "tiles_8x8": [
         [
-          351,
+          375,
           25
         ],
         [
-          352,
+          376,
           27
         ]
       ],
@@ -315,11 +316,11 @@
     "8": {
       "tiles_8x8": [
         [
-          351,
+          375,
           29
         ],
         [
-          352,
+          376,
           31
         ]
       ],
@@ -350,11 +351,11 @@
     "9": {
       "tiles_8x8": [
         [
-          351,
+          375,
           33
         ],
         [
-          352,
+          376,
           35
         ]
       ],

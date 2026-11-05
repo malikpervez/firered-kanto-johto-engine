@@ -4574,7 +4574,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#217+NW_wall~ded6@top7#15": {
+  "top7#217+NW_wall~f90d@top7#15": {
    "ids": [
     692
    ],
@@ -4614,7 +4614,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#179+NE_wall~bc7d@top7#15": {
+  "top7#179+NE_wall~583a@top7#15": {
    "ids": [
     696
    ],
@@ -4624,7 +4624,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#200+SW_wall~802e@top1#15": {
+  "top1#200+SW_wall~32c1@top1#15": {
    "ids": [
     697
    ],
@@ -4664,7 +4664,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#50+SE_wall~4c2d@top1#15": {
+  "top1#50+SE_wall~c98b@top1#15": {
    "ids": [
     701
    ],
@@ -4674,7 +4674,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#217+NW_wall~4e25@top3#15": {
+  "top3#217+NW_wall~69fe@top3#15": {
    "ids": [
     702
    ],
@@ -4714,7 +4714,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#179+NE_wall~9c4f@top1#15": {
+  "top1#179+NE_wall~7808@top1#15": {
    "ids": [
     706
    ],
@@ -4724,7 +4724,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0+inner_W~57d6@top4#15": {
+  "step_middle_2.0+outer_W_step_wall~47b8@top4#15": {
    "ids": [
     707
    ],
@@ -4794,7 +4794,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0+inner_E~49db@top4#15": {
+  "step_middle_1.0+outer_E_step_wall~9851@top4#15": {
    "ids": [
     714
    ],
@@ -4804,7 +4804,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#200+W_wall~ded7@top6#15": {
+  "top6#200+W_wall_2~e793@top6#15": {
    "ids": [
     715
    ],
@@ -4844,7 +4844,7 @@
    "elevation": null,
    "open": []
   },
-  "top4#50+E_wall~41eb@top4#15": {
+  "top4#50+E_wall_2~7e64@top4#15": {
    "ids": [
     719
    ],
@@ -4854,7 +4854,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#200+SW_wall~01f5@top9#15": {
+  "top9#200+SW_wall~b31a@top9#15": {
    "ids": [
     720
    ],
@@ -4894,7 +4894,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#50+SE_wall~0385@top7#15": {
+  "top7#50+SE_wall~8623@top7#15": {
    "ids": [
     724
    ],
@@ -4904,7 +4904,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0+inner_W~57d6@top3#15": {
+  "step_middle_2.0+outer_W_step_wall~47b8@top3#15": {
    "ids": [
     725
    ],
@@ -4974,7 +4974,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0+inner_E~49db@top1#15": {
+  "step_middle_1.0+outer_E_step_wall~9851@top1#15": {
    "ids": [
     732
    ],
@@ -5010,7 +5010,7 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 161
+  "secondary": 166
  },
  "metatile_counts": {
   "primary": 548,

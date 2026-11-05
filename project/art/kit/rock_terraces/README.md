@@ -1,82 +1,56 @@
-# Kanto Terraces v0.1
+# Kanto Terraces v0.2
 
-Native mountain terraces for Route 22 Rock & Cliff revision 3.2. The approved taller profile uses two-block faces on the upper mountains, with a shallow ledge below. The existing 48x48 nine-phase top, palette, two-block base face and original atlas IDs remain unchanged.
+A side-wall revision of the approved Kanto Terraces v0.1. Uses the updated 5 November brief from the attached ZIP; the linked Drive first draft is marked superseded.
 
-## Height and shape
+## What changed
 
-| Level | Default face height | Artwork |
-|---|---|---|
-| 1 | 2 blocks | Original base face |
-| 2 | 1 block | Existing short terrace |
-| 3, 4, 5 | 2 blocks | New taller terrace |
+- West and east side walls now fill their entire 8px half with rock. West facets catch the upper-left light; east facets match the tall face's shaded body. Each has an inward lit rim and an outward dark outline.
+- Ordinary W/E walls have two variants. Alternate `W_wall` / `W_wall_2` and `E_wall` / `E_wall_2` by global row: first on even y, second on odd y. Their end rows match, so long walls repeat without horizontal seams. Keep directional art; do not mirror west into east.
+- NW/NE caps turn into the original north lip. SW/SE bands meet the outer face headers without a change in tone or width.
+- `outer_W/E_step_wall` and `tall_outer_W/E` now have square ends. Use them for exposed upper-tier ends, including where the lower tier continues beside them. Do not substitute the legacy rounded `outer_W/E` step pieces. Recessed `inner_W/E` and `tall_inner_W/E` remain unchanged.
+- `outer_W/E_wall_side` joins the new band to level 1's face and retains the original rounded bottom half against the lawn.
+- `side_W/E_step` uses the matching wider rock band. Its opposite phase half remains unchanged. Other junctions are untouched.
 
-The taller faces grow upward into already-solid plateau cells. Their feet, paths and mountain footprint stay fixed. A full tall face needs two visible rows before the next higher tier; a tightly stacked higher tier can cover part of the face below. The original short profile remains available unchanged. Both profiles are defined in terraces/height_profiles.json.
+## Preserved
 
-Straight west/east silhouettes blend into the plateau's dominant stone tone. The outer feet turn inward smoothly; recessed contacts have no hanging dark tails. Inside corners appear only at real offset contacts, avoiding repeated teeth above a straight rim. West faces catch more light than east faces. The taller faces use connected, irregular planes with warm left-facing highlights, a quieter shaded body and a recessed dark foot. Large facets replace the earlier diagonal marks. Three middle assemblies vary their lower rock forms; the third recombines existing tiles at no additional tile cost. The crown keeps the original rim geometry while its shading continues into the new face.
+All atlas IDs **0-374** remain byte-identical. Revised pieces point to appended IDs **375-390**; older maps can still use their existing recipes and IDs. Every unlisted piece's PNG and JSON is byte-identical to v0.1. The palette, nine-phase top, height profile, step/tall face middles, recessed ends and layering rules are preserved. The base wall's ordinary middle art is unchanged. Both new wall variants are 16x16; face end columns retain their 16x16 or 16x32 dimensions.
 
-Only the tall face textures change in this revision. The plateau texture, side silhouettes, lower ledges and base cliff remain unchanged. source/texture_revision_reference.json protects their previous appearance.
-
-The Route 3 placement includes the broad upper-tier setbacks proposed in the earlier review. This height revision does not alter that plan. The originally supplied plan is also preserved and previewed. No walkable ground, paths, grass, flowers or props move.
+The supplied v2 Route 3 level plan is used exactly, with no further proposed layout changes. All non-cliff ground in its reference render is preserved. Palette index 0 is transparent, alpha is binary, all import PNGs are 4-bit indexed, and all pieces remain solid with over_rows 0. The transparent half of a wall is a recipe placeholder for that tier's top phase, not a gap in the rock. Exterior transparency still reveals lower-tier rock. No lawn is baked into import art.
 
 ## Tile cost
 
-- **36 new unique 8x8 tiles**, within the 36-tile pack limit.
-- Taller columns add **18 tiles** beyond the unchanged 18-tile short-profile set.
-- The original one-block step family remains at 12 tiles. The combined short and tall step family uses 30; the approved taller option is an extension to that original sub-budget, reported separately.
-- This Route 3 preview uses 33 new tiles.
-- Original atlas IDs 0-338 are preserved. The previously reviewed short set at IDs 339-356 is also preserved; taller graphics append after it. The atlas now has 375 allocated tiles.
+| Category | New unique 8x8 tiles | Limit |
+|---|---:|---:|
+| Side walls, both variants and ends | 10 | 16 |
+| Revised outer ends | 6 | 12 |
+| Matching side junctions | 4 | Shared with the side walls |
+| Whole revision, union | **16** | **28**, ideal 20 |
+| Route 3 v2 plan, union | **16** | 28 |
 
-Counts merge horizontal, vertical and combined flips; rotations remain distinct. Category counts overlap and must not be added. Existing top phases, base faces and transparent tiles are reused at their original IDs. tile_report.json reports each piece, category and the union.
+Horizontal, vertical and combined flips count as one tile; rotations remain distinct. Counts are additional to v0.1. Categories overlap, so do not add them. Route 10's stated 32 free tiles leave 16 after importing the complete revision. The master atlas has 391 allocated tiles; maps import their required subset, not the entire catalogue. Old graphics stay in the atlas for compatibility.
 
-## Pieces and placement
+## Placement
 
-| Folder / piece | Use | Avoid |
-|---|---|---|
-| step/middle_1, middle_2 | One-block upper faces, default level 2; alternate for restrained variation | Extra south cap above the built-in rim |
-| step/outer_W, outer_E | Rounded exposed short face ends | Mirroring west art to make east art |
-| step/inner_W, inner_E | Recessed ends beside continuing top | Exposed outside corners |
-| tall_step/tall_middle_1, tall_middle_2, tall_middle_3 | Two-block faces, default levels 3-5 | Stretching a short column or drawing outside its level |
-| tall_step/tall_outer_W, tall_outer_E | Exposed ends of taller faces | Separate stacked short feet midway down a tall face |
-| tall_step/tall_inner_W, tall_inner_E | Recessed ends of taller faces | A lawn bank inside rock |
-| side/W_wall, E_wall | Exact 8px directional side bands; opposite half is the correct top phase | Rendering the placeholder half as a hole |
-| side/NW_wall, NE_wall | Back corners into the existing north rim | An artificial edge where the map continues |
-| side/SW_wall, SE_wall | Last top cell above a front corner | Tapering the shoulder before the face begins |
-| corners/outer_W_step_wall, outer_E_step_wall | Aliases of the short exposed ends | Adding a second corner overlay |
-| corners/outer_W_wall_side, outer_E_wall_side | Base face corners connecting to the wider side bands | Replacing an ordinary base face middle |
-| corners/side_W_step, side_E_step | Continuous return beside an offset short or tall face | A repeated horizontal foot on a vertical return |
-| corners/in_SW_step, in_SE_step | Recessed top immediately above an offset face | A normal straight ledge |
+Keep v0.1's global phase formula `1 + 3*((y-origin_y)%3) + ((x-origin_x)%3)` and lower-to-upper tier composition. Height profile: level 1 uses the original two-block face, level 2 a one-block step, levels 3-5 a two-block face. The piece immediately above an upper face has no additional S cap. The ordinary side variant is selected independently of the nine-phase top. Use fixed N/S end pieces at terminal side cells.
 
-All pieces are solid and have over_rows 0. Optional stairs are omitted. Native import PNGs are under terraces/, with 4-bit indexed pixels, the unchanged 16-entry palette and binary alpha at index 0. Exterior alpha reveals lower-tier rock; no grass is baked into these pieces. Side-piece transparent phase placeholders are filled by their recipes.
-
-## Layering rules
-
-1. Use global phase `1 + 3*((y-origin_y)%3) + ((x-origin_x)%3)` on every level. Preview origin is (0,0).
-2. A tier mask contains every cell whose level is at least that tier. Render from low to high.
-3. The base reserves two bottom rows for the original face and retains its existing south cap. Optional base corner pieces change only their upper outside 8x8 quarter.
-4. Upper tiers reserve one or two bottom rows according to the height profile. Do not add an S cap: their own top row carries the rim.
-5. Keep the column foot fixed when changing profiles. A no-shelf stack places the next face directly above the lower rim; one-block shelves leave a row of lower plateau between faces.
-6. Choose exposed or recessed ends by the neighbouring top/face. A two-block column uses the same end role for both halves. Place recessed caps only above the first row of an offset face.
-7. Treat off-map neighbours as continuation of the border level. No false cliff appears against a continuing map edge.
-8. Retain lower-tier rock under upper-tier exterior alpha. Each side/contact JSON supplies all nine phase composites with exact tile IDs and flips. The preview raster is a visual proof, not an imported game map.
+All changed wall/contact JSONs provide explicit composites for each of the nine top phases. The opposite half is copied from the matching original top. Newly square outer ends use the same placement role as v0.1's outer ends; there is no new layer or height rule. Level 1 keeps rounded feet where it meets the lawn.
 
 ## Previews
 
-- route3_1x and route3_3x: full route with the taller profile.
-- route3_west: columns 0-14, rows 0-9; a 240x160 viewport.
-- route3_rest_stop: columns 41-67, rows 0-10. gba_rest_stop and gba_east_return are additional 240x160 crops.
-- short_profile_rest_stop: the same proposed plan using the preserved short faces.
-- provided_plan_west and provided_plan_rest_stop: original supplied plan with the short profile.
-- four_step_test: the original short stack, no shelves on the left and one-block shelves on the right.
-- tall_profile_test: the taller stack, with fully exposed faces and both shelf arrangements. gba_tall_no_shelves and gba_tall_one_block_shelves are 240x160 views.
-- side_join_closeups_4x: the preserved short side joins. all_pieces_labelled_4x shows every column, and nine_phase_contact_2x checks phase joins.
-- layout.json records the supplied/proposed grids, profile, changed cells and every placement's native recipe.
+- `route3_1x.png` / `route3_3x.png`: full 84x20 route, from the v2 plan.
+- `route3_rest_stop_1x.png` / `_3x.png`: 240x160 GBA crop, columns 55-69 and rows 2-11. The brief's inclusive rows 2-12 span 176 pixels, so `route3_rest_stop_rows_2_to_12` additionally includes that full 11-row context. Neither is resized to force a different aspect ratio.
+- `route3_west`: columns 0-14, rows 0-9, 240x160.
+- `route3_mountain_context`: the full rest-stop mountain and nearby ground.
+- `four_step_test` and `tall_profile_test`: exact v0.1 test grids, rendered with revised walls and square upper outer ends. Their 240x160 crops exercise no shelves and one-block shelves.
+- `changed_pieces_before_after_4x.png`: each changed/added piece beside its v0.1 source. Phase placeholders are filled for inspection.
+- `eight_block_walls`: each direction before/after across an eight-block run.
+- `nine_phase_contact_2x.png`: all phase combinations for both wall variants, their ends and matching side junctions.
+- `previews/layout.json`: exact supplied level grid, crop bounds, height profile and native recipe placements.
 
-## Source, validation and import
+The Route 9 screenshot supplies long-wall context; no Route 9 level grid was provided, so this pack does not invent a new Route 9 layout. FireRed's reference is used for the side-wall method only. No reference tile is copied or traced into new art. Native additions are authored directly as indexed arrays; enlarged previews use nearest-neighbour copies.
 
-New art is authored directly as native index arrays. No new art is scaled, traced, quantized or dithered. The approved generated height study is visual direction only; none of its raster pixels enter these tiles. Enlarged previews use nearest-neighbour copies only. The supplied map is an exact 2x export: the renderer verifies identical 2x2 groups before recovering its native reference pixels. Every non-cliff pixel is preserved.
+## Rebuild and validation
 
-source/base contains the unchanged original dependency. source/short_profile_reference.json fingerprints the earlier 357-tile atlas, short PNGs and proposed plan. Validation checks both preserved sets, phase reconstruction, 4-bit encoding, palettes, collision metadata, tile counts, tall face alignment, shelf topology and preview copies.
+Run `source/previews.py`, `source/finish.py`, `source/validate.py`, then `source/package.py` with Python 3, NumPy and Pillow. `source/v01` freezes the approved prior atlas, pieces, metadata and test grids; `source/base` retains the original Route 22 dependency. The brief and reference images are under `source/reference`.
 
-The atlas is a master catalogue; import only the graphics each map uses. The addition fits the stated free space for Route 3 (about 220), Route 10 (64) and Route 22 (48). Pewter has no free tiles and needs reclamation or sharing before importing new graphics. Do not overwrite existing IDs to make room.
-
-Rebuild in order with Python 3, Pillow and NumPy: source/previews.py, source/finish.py, source/validate.py, source/package.py. No ROM or game project was supplied, so emulator collision and actual map allocation remain integration checks. This package has not been uploaded to Drive in this revision.
+Validation checks the full preserved atlas prefix, raw 4bpp bytes, unchanged PNG/JSON files, palette order, binary alpha, dimensions, exact 8px wall bands, variant joins, square upper ends, rounded base feet, unchanged opposite halves, phase reconstruction, budgets, supplied plan, test grids and protected ground. No ROM or game project was provided, so final emulator integration remains a game-side check. This revision is prepared for design review and has not been uploaded to Drive.
