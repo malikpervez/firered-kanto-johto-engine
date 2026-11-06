@@ -1,0 +1,99 @@
+{
+ "note": "After the Cinnabar reveal and Black Tide's end (Johto): Mewtwo's familiar greeting, then 'Far to the west, ROCKET made birds the way I was made. You broke their chains. I heard.' (the test ends on that box).",
+ "created": "2026-10-31 23:39",
+ "start": {
+  "map": "CeruleanCave_B1F_Frlg",
+  "x": 8,
+  "y": 14,
+  "state": [
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_MW06_SEEN",
+   "FLAG_LG_FINAL_RESOLVED"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FOUGHT_MEWTWO"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCave_B1F_Frlg",
+  "x": 8,
+  "y": 14,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FOUGHT_MEWTWO": false
+  }
+ }
+}

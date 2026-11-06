@@ -503,6 +503,8 @@ MW04_Talk::
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Release
 goto_if_set FLAG_MW04_SEEN, RB_Repeat
+	@ He saw the seven fall over Viridian the day he met the player (FG01): a callback, nothing written.
+	call_if_set FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN, MW04_Seven
 msgbox MW04_Text_Question, MSGBOX_YESNO
 	msgbox MW04_Text_Answer
 	setflag FLAG_TEMP_1D
@@ -621,6 +623,11 @@ MW04_Text_Question::
 	.string "STRANGER: They called POKéMON\nproperty. You opposed them.\pYet you carry POKé BALLS.\nDo you try to earn their trust?$"
 MW04_Text_Answer::
 	.string "STRANGER: Then I will judge\nhow you use them.$"
+MW04_Seven::
+	msgbox MW04_Text_Seven
+	return
+MW04_Text_Seven::
+	.string "STRANGER: Seven people fell out of\nthe sky over VIRIDIAN.\pThey ask their POKéMON before they\nreach for a BALL. I have watched.$"
 MW05_Text::
 	.string "The traveler's outline wavers:\na long tail, an unfamiliar head.\pSTRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
 MW06_Text_Journals::
@@ -646,6 +653,8 @@ MW07_Text_After::
 MW08_Intro::
 	goto_if_unset FLAG_MW06_SEEN, MW08_Unfamiliar
 	msgbox MW08_Text_Familiar
+	@ After Black Tide, Mewtwo knows what Rocket made in Johto: a callback across the regions, nothing written.
+	call_if_set FLAG_LG_FINAL_RESOLVED, MW08_Replicas
 	goto MW08_Ask
 MW08_Unfamiliar::
 	msgbox MW08_Text_Unfamiliar
@@ -658,6 +667,11 @@ MW08_Text_Unfamiliar::
 	.string "A powerful presence watches you.\nIt waits rather than attacks.$"
 MW08_Text_Ask::
 	.string "Face MEWTWO now?\nYou may leave and return.$"
+MW08_Replicas::
+	msgbox MW08_Text_Replicas
+	return
+MW08_Text_Replicas::
+	.string "MEWTWO: Far to the west, ROCKET\nmade birds the way I was made.\pYou broke their chains. I heard.$"
 MW08_Text_Caught::
 	.string "The silence feels different.\nAn invitation was answered.$"
 MW08_Text_Defeated::

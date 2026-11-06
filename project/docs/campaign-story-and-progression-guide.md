@@ -632,7 +632,7 @@ Separate Lavender stranger/Fuji exchange with optional Mew glimpse.
 
 **37C source:** [`MW04_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:469). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Questions Poké Balls after opposing Rocket.
+Questions Poké Balls after opposing Rocket. Since 2026-10-31 (story audit T2), if the player saw the Friends land in Viridian (`FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN`) he first says: “Seven people fell out of the sky over VIRIDIAN. They ask their POKéMON before they reach for a BALL. I have watched.” A callback; nothing is written. Replay tests `celadon the stranger remembers the seven`, `celadon the stranger after the hideout and the seven`.
 
 ### MW05 — Silph disguise slip
 
@@ -672,7 +672,7 @@ Different Champion question before/after Kanto League.
 
 **37C source:** [`MW08_Intro`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:617). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Optional familiar/unfamiliar introduction and Face/Leave before original level70 Mewtwo.
+Optional familiar/unfamiliar introduction and Face/Leave before original level70 Mewtwo. Since 2026-10-31 (story audit T2), with the familiar greeting and Black Tide resolved in Johto (`FLAG_LG_FINAL_RESOLVED`), Mewtwo adds: “Far to the west, ROCKET made birds the way I was made. You broke their chains. I heard.” A callback across the regions: it reads Johto’s receipt for dialogue only and writes nothing. Replay tests `cerulean cave mewtwo heard of the replicas`, `cerulean cave mewtwo can be left after the replicas`.
 
 ### MW09 — Cave-mouth reflection
 
