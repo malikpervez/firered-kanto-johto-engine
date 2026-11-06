@@ -4574,7 +4574,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#217+NW_wall~ded6@top7#15": {
+  "top7#217+NW_wall~f90d@top7#15": {
    "ids": [
     692
    ],
@@ -4614,7 +4614,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#179+NE_wall~bc7d@top7#15": {
+  "top7#179+NE_wall~583a@top7#15": {
    "ids": [
     696
    ],
@@ -4624,7 +4624,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#200+SW_wall~802e@top1#15": {
+  "tall_middle_2.0+tall_outer_W~5346@top1#15": {
    "ids": [
     697
    ],
@@ -4634,7 +4634,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#0~3478@top2#15": {
+  "tall_middle_3.0~27be@top2#15": {
    "ids": [
     698
    ],
@@ -4644,7 +4644,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#0~e614@top3#15": {
+  "tall_middle_1.0~bd77@top3#15": {
    "ids": [
     699
    ],
@@ -4654,7 +4654,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#0~a80d@top1#15": {
+  "tall_middle_2.0~0b17@top1#15": {
    "ids": [
     700
    ],
@@ -4664,7 +4664,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#50+SE_wall~4c2d@top1#15": {
+  "tall_middle_2.0~0b17@top3#15": {
    "ids": [
     701
    ],
@@ -4674,7 +4674,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#217+NW_wall~4e25@top3#15": {
+  "tall_middle_1.0~bd77@top1#15": {
    "ids": [
     702
    ],
@@ -4684,7 +4684,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#145~2480@top1#15": {
+  "tall_middle_2.0+tall_outer_E~b981@top1#15": {
    "ids": [
     703
    ],
@@ -4694,7 +4694,7 @@
    "elevation": null,
    "open": []
   },
-  "top2#145~167f@top2#15": {
+  "top3#217+NW_wall~69fe@top3#15": {
    "ids": [
     704
    ],
@@ -4704,7 +4704,7 @@
    "elevation": null,
    "open": []
   },
-  "top3#145~c38d@top3#15": {
+  "top1#145~2480@top1#15": {
    "ids": [
     705
    ],
@@ -4714,7 +4714,7 @@
    "elevation": null,
    "open": []
   },
-  "top1#179+NE_wall~9c4f@top1#15": {
+  "top2#145~167f@top2#15": {
    "ids": [
     706
    ],
@@ -4724,7 +4724,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0+inner_W~57d6@top4#15": {
+  "top3#145~c38d@top3#15": {
    "ids": [
     707
    ],
@@ -4734,7 +4734,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0~7ee3@top5#15": {
+  "top1#179+NE_wall~7808@top1#15": {
    "ids": [
     708
    ],
@@ -4744,7 +4744,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0~7ee3@top6#15": {
+  "tall_middle_2.1+tall_outer_W~fc8e@top4#15": {
    "ids": [
     709
    ],
@@ -4754,7 +4754,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0~7007@top4#15": {
+  "tall_middle_3.1~2a91@top5#15": {
    "ids": [
     710
    ],
@@ -4764,7 +4764,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0~7007@top5#15": {
+  "tall_middle_1.1~d63b@top6#15": {
    "ids": [
     711
    ],
@@ -4774,7 +4774,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0~7007@top6#15": {
+  "tall_middle_2.1~439f@top4#15": {
    "ids": [
     712
    ],
@@ -4784,7 +4784,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0~7ee3@top4#15": {
+  "tall_middle_2.1~439f@top6#15": {
    "ids": [
     713
    ],
@@ -4794,7 +4794,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0+inner_E~49db@top4#15": {
+  "tall_middle_1.1~d63b@top4#15": {
    "ids": [
     714
    ],
@@ -4804,7 +4804,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#200+W_wall~ded7@top6#15": {
+  "tall_middle_2.1+tall_outer_E~bfaf@top4#15": {
    "ids": [
     715
    ],
@@ -4814,7 +4814,7 @@
    "elevation": null,
    "open": []
   },
-  "top4#0~f0af@top4#15": {
+  "top6#200+SW_wall~6c38@top6#15": {
    "ids": [
     716
    ],
@@ -4824,7 +4824,7 @@
    "elevation": null,
    "open": []
   },
-  "top5#0~d839@top5#15": {
+  "top4#0~f0af@top4#15": {
    "ids": [
     717
    ],
@@ -4834,7 +4834,7 @@
    "elevation": null,
    "open": []
   },
-  "top6#0~553b@top6#15": {
+  "top5#0~d839@top5#15": {
    "ids": [
     718
    ],
@@ -4844,7 +4844,7 @@
    "elevation": null,
    "open": []
   },
-  "top4#50+E_wall~41eb@top4#15": {
+  "top6#0~553b@top6#15": {
    "ids": [
     719
    ],
@@ -4854,7 +4854,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#200+SW_wall~01f5@top9#15": {
+  "top4#50+SE_wall~c44d@top4#15": {
    "ids": [
     720
    ],
@@ -4864,7 +4864,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#0~d459@top7#15": {
+  "tall_middle_3.0+tall_outer_W~38f2@top9#15": {
    "ids": [
     721
    ],
@@ -4874,7 +4874,7 @@
    "elevation": null,
    "open": []
   },
-  "top8#0~5bba@top8#15": {
+  "tall_middle_2.0~0b17@top7#15": {
    "ids": [
     722
    ],
@@ -4884,7 +4884,7 @@
    "elevation": null,
    "open": []
   },
-  "top9#0~866d@top9#15": {
+  "tall_middle_1.0~bd77@top8#15": {
    "ids": [
     723
    ],
@@ -4894,7 +4894,7 @@
    "elevation": null,
    "open": []
   },
-  "top7#50+SE_wall~0385@top7#15": {
+  "tall_middle_3.0~27be@top9#15": {
    "ids": [
     724
    ],
@@ -4904,7 +4904,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0+inner_W~57d6@top3#15": {
+  "tall_middle_1.0~bd77@top7#15": {
    "ids": [
     725
    ],
@@ -4914,7 +4914,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0~7007@top1#15": {
+  "tall_middle_2.0~0b17@top8#15": {
    "ids": [
     726
    ],
@@ -4924,7 +4924,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0~7007@top2#15": {
+  "tall_middle_1.0+tall_outer_E~449c@top7#15": {
    "ids": [
     727
    ],
@@ -4934,7 +4934,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0~7007@top3#15": {
+  "tall_middle_3.1+tall_outer_W~47a6@top3#15": {
    "ids": [
     728
    ],
@@ -4944,7 +4944,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0~7ee3@top1#15": {
+  "tall_middle_2.1~439f@top1#15": {
    "ids": [
     729
    ],
@@ -4954,7 +4954,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0~7ee3@top2#15": {
+  "tall_middle_1.1~d63b@top2#15": {
    "ids": [
     730
    ],
@@ -4964,7 +4964,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_2.0~7ee3@top3#15": {
+  "tall_middle_3.1~2a91@top3#15": {
    "ids": [
     731
    ],
@@ -4974,7 +4974,7 @@
    "elevation": null,
    "open": []
   },
-  "step_middle_1.0+inner_E~49db@top1#15": {
+  "tall_middle_1.1~d63b@top1#15": {
    "ids": [
     732
    ],
@@ -4984,10 +4984,28 @@
    "elevation": null,
    "open": []
   },
+  "tall_middle_2.1~439f@top2#15": {
+   "ids": [
+    733
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
+  "tall_middle_1.1+tall_outer_E~e14f@top1#15": {
+   "ids": [
+    734
+   ],
+   "w": 1,
+   "h": 1,
+   "solid": true,
+   "elevation": null,
+   "open": []
+  },
   "diglett_cave": {
    "ids": [
-    733,
-    734,
     735,
     736,
     737,
@@ -4997,7 +5015,9 @@
     741,
     742,
     743,
-    744
+    744,
+    745,
+    746
    ],
    "w": 6,
    "h": 2,
@@ -5010,11 +5030,11 @@
  },
  "tiles": {
   "primary": 580,
-  "secondary": 161
+  "secondary": 176
  },
  "metatile_counts": {
   "primary": 548,
-  "secondary": 105
+  "secondary": 107
  },
  "animations": [
   {

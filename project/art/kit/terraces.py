@@ -2,18 +2,19 @@
 owner, 4 November 2026: "some cliffs should be stacked but offset so it looks like a progressive hill").
 
 A plan marks a cliff's blocks with its level, ``1`` to ``5`` (``C``, the plain cliff, is level 1); everything else is
-the ground, level 0. The pieces are the Kanto Terraces pack v0.1 (``rock_terraces/``, made with another AI from the
-brief "Kanto Terraces v0.1"; its README), an addition to the rock and cliff pack (``rock_cliff/``, cliffs.py): the same
-palette, nine-phase top and two-block wall, with
-  * a face for each level above the first: level 2 a one-block step, levels 3-5 a two-block face (the pack's "taller
-    mountains" profile); each brings its own lit rim, so the top above it has no south edge;
-  * side walls: where a level ends east or west, the 8 px half of its top on that side is a wall (the other half the
-    top's own phase); its back and front ends turn the rim;
-  * ends: a face's ends are outer (rounded, beside what's lower) or inner (beside more of its level's top); level 1's
-    outer ends meet the side wall above them. With ``square_ends`` a face above level 1 that stops in front of a lower
-    tier's rock ends square (its inner end), so the tier's corner lines up with its side wall and the tiers read as
-    one mountain, not slabs laid on each other (the owner, 5 November 2026: "there's no smooth transition they look
-    separate"); only against the ground is it rounded;
+the ground, level 0. The pieces are the Kanto Terraces pack v0.2 (``rock_terraces/``, made with another AI from the
+briefs "Kanto Terraces v0.1" and "v0.2"; its README), an addition to the rock and cliff pack (``rock_cliff/``,
+cliffs.py): the same palette, nine-phase top and two-block wall, with
+  * a face for each level above the first: a two-block face for every one (the pack's tall_step; its one-block step,
+    which its "taller mountains" profile puts at level 2, isn't used: the owner found those ledges too small); each
+    brings its own lit rim, so the top above it has no south edge;
+  * side walls: where a level ends east or west, the 8 px half of its top on that side is a wall of rock, lit on the
+    west and shaded on the east (the other half the top's own phase); its back and front ends turn the rim; along a
+    wall its two variants take turns by the map's row (``W_wall`` on even rows, ``W_wall_2`` on odd ones, as the pack
+    lays them), so a long wall doesn't stripe;
+  * ends: a face's ends are outer (beside what's lower) or inner (beside more of its level's top). A tier's outer end
+    is square and turns into its side wall (v0.2, after the owner found the tiers' rounded ends made them "look
+    separate"); level 1's outer ends meet the side wall above them and stay rounded at their foot, on the lawn;
   * junctions: a top beside a face of its own level, or with a face's first row below its inside corner.
 
 Each level is laid out as a cliff of its own (``layer``: the blocks at that level or higher; the bottom one or two
@@ -35,8 +36,9 @@ import cliffs
 
 PACK = Path(__file__).resolve().parent / "rock_terraces"
 FIRST = 0x3400  # the grid's characters for the composed pieces (CJK Extension A: no other legend uses them)
-HEIGHTS = {1: 2, 2: 1, 3: 2, 4: 2, 5: 2}  # each level's face, in blocks (the pack's height_profiles.json default)
-TALL = {3, 4, 5}  # the levels whose two-block face is the pack's tall_step (level 1's is the rock pack's wall)
+HEIGHTS = {1: 2, 2: 2, 3: 2, 4: 2, 5: 2}  # each level's face, in blocks: two for every level, the pack's one-block
+# step left out (the owner, 5 November 2026: "do away with these smaller ledges and just layer with the ones we have")
+TALL = {2, 3, 4, 5}  # the levels whose two-block face is the pack's tall_step (level 1's is the rock pack's wall)
 _DIRS = {"N": (0, -1), "E": (1, 0), "S": (0, 1), "W": (-1, 0), "NE": (1, -1), "SE": (1, 1), "SW": (-1, 1),
          "NW": (-1, -1)}
 _BITS = {"N": 1, "E": 2, "S": 4, "W": 8, "NE": 16, "SE": 32, "SW": 64, "NW": 128}
@@ -92,10 +94,9 @@ def from_text(g, text: str) -> None:
                 assert not rows[y][x].isdigit(), f"({x},{y}): the levels put cliff where the plan has ground"
 
 
-def layer(lv, L: int, edge_continues: bool = True, square_ends: bool = False) -> dict:
+def layer(lv, L: int, edge_continues: bool = True) -> dict:
     """Level ``L`` laid out: (x, y) -> (kind, picture 16x16, names, part) for every block at ``L`` or higher, where
-    kind is "top" or "face" and part a face block's row from its top (0 or 1). As the pack's render does, but for
-    ``square_ends`` (the module's notes)."""
+    kind is "top" or "face" and part a face block's row from its top (0 or 1). As the pack's render does."""
     h, w = len(lv), len(lv[0])
     cells = {(x, y) for y in range(h) for x in range(w) if lv[y][x] >= L}
     tall = L in TALL
@@ -139,7 +140,7 @@ def layer(lv, L: int, edge_continues: bool = True, square_ends: bool = False) ->
                 names.append(n)
             elif not has(x + dx, y):  # the level ends here: its side wall
                 prefix = "N" if not has(x, y - 1) else "S" if (x, y + 1) in faces else ""
-                n = prefix + side + "_wall"
+                n = prefix + side + "_wall" + ("_2" if not prefix and y % 2 else "")  # the two take turns by row
                 a[:, xx:xx + 8] = ALL[n][:, xx:xx + 8]
                 names.append(n)
             elif (x, y + 1) not in faces and (x + dx, y + 1) in faces and faces[x + dx, y + 1] == 0:
@@ -160,8 +161,6 @@ def layer(lv, L: int, edge_continues: bool = True, square_ends: bool = False) ->
             if (x + dx, topy) in faces or (not (0 <= x + dx < w) and edge_continues):
                 continue
             kind = "inner" if has(x + dx, topy) else "outer"
-            if kind == "outer" and square_ends and L > 1 and 0 <= x + dx < w and lv[y][x + dx] >= 1:
-                kind = "inner"  # in front of a lower tier's rock: squared off, in line with the side wall above
             if L == 1:
                 if kind == "outer":
                     n, donor = f"outer_{side}_wall_side", ALL[f"outer_{side}_wall_side"]
@@ -179,18 +178,17 @@ def layer(lv, L: int, edge_continues: bool = True, square_ends: bool = False) ->
     return out
 
 
-def compose(g, ground: str = "grass", extra=("top1#0",), edge_continues: bool = True, square_ends: bool = False,
-            base: dict | None = None):
+def compose(g, ground: str = "grass", extra=("top1#0",), edge_continues: bool = True, base: dict | None = None):
     """The plan's levels as pieces: every block of a cliff gets the piece of its own level over the piece of the level
     below (its ground; level 1's is ``ground``). Returns (cells, chars, names): ``cells`` the sheet's entries in order,
     (name, picture, entry), each one's ground before it; ``chars`` the grid's character for each block of a cliff;
     ``names`` piece name -> character. ``extra``: pieces the map uses elsewhere (its border: the plain top, phase 1).
-    ``square_ends``: as ``layer``. ``base``: for a map whose level 1 is laid by the rock pack's own cliffs.layout
+    ``base``: for a map whose level 1 is laid by the rock pack's own cliffs.layout
     (``tiers_over``), the piece it has at each block of a higher level, (x, y) -> (name, picture): those are the
     tiers' grounds, and only the blocks above level 1 get pieces and characters here."""
     lv = levels(g)
     top = max(max(r) for r in lv)
-    per = [layer(lv, L, edge_continues, square_ends) for L in range(1, top + 1)]
+    per = [layer(lv, L, edge_continues) for L in range(1, top + 1)]
     cells, made = [], {}
     for name in (() if base is not None else extra):
         ph, mask = int(name[3:name.index("#")]), int(name.split("#")[1])
@@ -285,15 +283,15 @@ def check_against(lv, records, edge_continues: bool = True) -> list:
     return bad
 
 
-def plan_tiers(foot, h: int, w: int, top: int = 5, beyond=lambda x, y: False) -> list[list[int]]:
+def plan_tiers(foot, h: int, w: int, top: int = 5, beyond=lambda x, y: False, allowed=None) -> list[list[int]]:
     """Tiers for a cliff's footprint (the blocks of level 1: a set of (x, y)), by Route 3's rules (the owner's
     feedback on it): each level above stands on the one below, set back two blocks from its sides and its back and,
     in front, far enough that one row of the lower level's top shows above that level's face; no tier is narrower
-    than three blocks, or shorter than its face and a row of top. Where a cliff is too shallow for that (a band a few
-    blocks deep), its step stands straight on its wall instead, the step's ends still set back two blocks: a taller
-    wall that steps down at its ends. ``beyond(x, y)``: whether a block past the map's edge counts as cliff (where
-    the cliff's top runs on to the edge and no map joins there); the tiers stay inside the map. Returns the levels,
-    block by block (0 where no cliff)."""
+    than three blocks, or shorter than its face and a row of top. Where a cliff is too shallow for that, its first
+    tier stands straight on its wall instead, its ends still set back two blocks: a taller wall that steps down at its
+    ends. ``beyond(x, y)``: whether a block past the map's edge counts as cliff (where
+    the cliff's top runs on to the edge and no map joins there); the tiers stay inside the map. ``allowed``: the
+    blocks a tier may stand on (all of the footprint if None). Returns the levels, block by block (0 where none)."""
     lv = [[1 if (x, y) in foot else 0 for x in range(w)] for y in range(h)]
 
     def tier(cur, L, front):
@@ -301,7 +299,8 @@ def plan_tiers(foot, h: int, w: int, top: int = 5, beyond=lambda x, y: False) ->
             return (x, y) in cur if 0 <= x < w and 0 <= y < h else beyond(x, y)
         below = HEIGHTS[L - 1] + front  # the lower level's face, and the rows of its top that show
         er = {(x, y) for x, y in cur
-              if all(has(x + dx, y + dy) for dx in range(-2, 3) for dy in range(-2, below + 1))}
+              if all(has(x + dx, y + dy) for dx in range(-2, 3) for dy in range(-2, below + 1))
+              and (allowed is None or (x, y) in allowed)}
         tall = HEIGHTS[L] + 1  # this level's face and a row of its top
         new = set()
         for x, y in er:  # an opening: every 3 x tall box that fits
@@ -350,7 +349,7 @@ def footprint(g, roof: str = "") -> set:
     return {(x, y) for y, row in enumerate(g) for x, c in enumerate(row) if c == "C" or c in roof}
 
 
-def tiers_over(g, foot, roof: str = "", top: int = 5, square_ends: bool = True, beyond=lambda x, y: False):
+def tiers_over(g, foot, roof: str = "", top: int = 5, beyond=lambda x, y: False):
     """Tiers over a map whose cliffs are laid by the rock pack's cliffs.layout and cliffs.add (its level 1: the wall,
     the tops, the caves' mouths and stairs, all as they were): the levels above it, by ``plan_tiers`` from the
     cliff's footprint ``foot`` (the plan's ``C`` blocks before the layout). Puts each tier block's character into
@@ -359,19 +358,19 @@ def tiers_over(g, foot, roof: str = "", top: int = 5, square_ends: bool = True, 
     top of the map's (its sides all cliff top), so the map's level 1 is the layout's own there, which ``compose``
     checks pixel for pixel."""
     h, w = len(g), len(g[0])
-    lv = plan_tiers(foot, h, w, top, beyond)
     # the tops' edges as pae paints them: the tops beside a face (cliffs.add's characters) count as top too
     tops = cliffs.tops_in(g, roof + cliffs.JUNCTION_CHARS)
-    base = {}
-    for y in range(h):
-        for x in range(w):
-            if lv[y][x] > 1:
-                assert (x, y) in tops, f"({x},{y}): a tier over something that isn't the cliff's top"
-                k, mask, corners = tops[x, y]
-                base[x, y] = (cliffs.top_name(k, mask, corners), cliffs.top(k, cliffs.outside_of(mask, corners)))
+    base = {b: (cliffs.top_name(k, mask, corners), cliffs.top(k, cliffs.outside_of(mask, corners)))
+            for b, (k, mask, corners) in tops.items()}
+    # a tier stands only where the map's own top is the layout's level 1 (not beside a cave's mouth, whose top runs
+    # down to it, or the like)
+    one = layer([[1 if (x, y) in foot else 0 for x in range(w)] for y in range(h)], 1, True)
+    allowed = {b for b, (_n, pic) in base.items() if b in one and np.array_equal(pic, one[b][1])}
+    lv = plan_tiers(foot, h, w, top, beyond, allowed)
+    base = {b: v for b, v in base.items() if lv[b[1]][b[0]] > 1}
     grid = [[str(v) if v else "." for v in row] for row in lv]
     # (a tier at the map's top or bottom edge runs on past it, as the map's own top does: no rim along the edge)
-    cells, chars, names = compose(grid, edge_continues=True, square_ends=square_ends, base=base)
+    cells, chars, names = compose(grid, edge_continues=True, base=base)
     apply(g, chars)
     return cells, names, lv
 
@@ -392,14 +391,14 @@ def solid(names: dict) -> set:
     return set(names.values())
 
 
-def flatten(g, edge_continues: bool = True, square_ends: bool = False) -> np.ndarray:
+def flatten(g, edge_continues: bool = True) -> np.ndarray:
     """Every level of the plan's cliffs drawn over the one below in full (as the pack's previews are), as palette
     indices (0 where no cliff shows): what the two-layer metatiles should show."""
     lv = levels(g)
     h, w = len(lv), len(lv[0])
     out = np.zeros((h * 16, w * 16), np.uint8)
     for L in range(1, max(max(r) for r in lv) + 1):
-        for (x, y), (_k, pic, _n, _p) in layer(lv, L, edge_continues, square_ends).items():
+        for (x, y), (_k, pic, _n, _p) in layer(lv, L, edge_continues).items():
             m = pic > 0
             out[y * 16:y * 16 + 16, x * 16:x * 16 + 16][m] = pic[m]
     return out

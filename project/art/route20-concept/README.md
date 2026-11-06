@@ -22,7 +22,8 @@ the kit's, its cliffs for the islands and Route 2's cave mouth for Seafoam's two
 7), as Route 10 has them for Rock Tunnel's. It was rebuilt with Route 19, in one pull request, after Cinnabar: every
 join on the sea route is between kit maps now, so it has no seam.
 
-Both islands' mountains have a step set back behind their walls (KR-104, `kit/terraces.py`), laid over the
+Both islands' mountains have a tier of two-block face above their walls (KR-104, KR-105, `kit/terraces.py`): set
+back behind the wall on the east island, straight on it on the west one, too shallow for more; laid over the
 cliffs as they were, so the walls, Seafoam's mouths and everything you walk on are unchanged.
 
 `make_art.py` checks the route's rules on the map it builds:

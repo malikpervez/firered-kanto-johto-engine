@@ -10,11 +10,11 @@
   },
   "tiles_8x8": [
     [
-      351,
+      375,
       320
     ],
     [
-      352,
+      376,
       320
     ]
   ],
@@ -58,7 +58,7 @@
   ],
   "walkable_blocks": [],
   "over_rows": 0,
-  "role": "8px lit west wall; front/back names turn the rim.",
+  "role": "Full 8px lit west rock wall. Inner rim meets the phase top; outer outline defines the drop.",
   "phase_top_quarters": [
     "NE",
     "SE"
@@ -71,15 +71,21 @@
     7
   ],
   "source_phase_texture": "source/base/cliff_top/centres/centre_<phase>.png",
+  "variant_cycle": [
+    "W_wall",
+    "W_wall_2"
+  ],
+  "variant_rule": "For an ordinary side wall use variant 1 on even global y, variant 2 on odd global y. Fixed N/S ends replace the terminal block.",
+  "art_revision": "0.2",
   "composed_by_phase": {
     "1": {
       "tiles_8x8": [
         [
-          351,
+          375,
           1
         ],
         [
-          352,
+          376,
           3
         ]
       ],
@@ -110,11 +116,11 @@
     "2": {
       "tiles_8x8": [
         [
-          351,
+          375,
           5
         ],
         [
-          352,
+          376,
           7
         ]
       ],
@@ -145,11 +151,11 @@
     "3": {
       "tiles_8x8": [
         [
-          351,
+          375,
           9
         ],
         [
-          352,
+          376,
           11
         ]
       ],
@@ -180,11 +186,11 @@
     "4": {
       "tiles_8x8": [
         [
-          351,
+          375,
           13
         ],
         [
-          352,
+          376,
           15
         ]
       ],
@@ -215,11 +221,11 @@
     "5": {
       "tiles_8x8": [
         [
-          351,
+          375,
           17
         ],
         [
-          352,
+          376,
           19
         ]
       ],
@@ -250,11 +256,11 @@
     "6": {
       "tiles_8x8": [
         [
-          351,
+          375,
           21
         ],
         [
-          352,
+          376,
           23
         ]
       ],
@@ -285,11 +291,11 @@
     "7": {
       "tiles_8x8": [
         [
-          351,
+          375,
           25
         ],
         [
-          352,
+          376,
           27
         ]
       ],
@@ -320,11 +326,11 @@
     "8": {
       "tiles_8x8": [
         [
-          351,
+          375,
           29
         ],
         [
-          352,
+          376,
           31
         ]
       ],
@@ -355,11 +361,11 @@
     "9": {
       "tiles_8x8": [
         [
-          351,
+          375,
           33
         ],
         [
-          352,
+          376,
           35
         ]
       ],

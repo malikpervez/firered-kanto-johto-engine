@@ -26,8 +26,8 @@ kit's), its cliffs and Route 2's cave mouth for Rock Tunnel's two mouths in the 
 in its own (bank 9). The seams are pae's: with Route 9 both maps are the kit's, and old Lavender's colours fit in banks
 10–12 but one of its palettes, drawn in its nearest colours (KR-44).
 
-The mountain over Rock Tunnel's south mouth climbs in tiers (KR-104, `kit/terraces.py`): a step and a taller
-face, each set back behind the one below, toward its middle. They're laid over the cliff as it was, so its wall,
+The mountain over Rock Tunnel's south mouth climbs in tiers (KR-104, KR-105, `kit/terraces.py`): three tiers of
+two-block faces, each set back behind the one below, toward its middle. They're laid over the cliff as it was, so its wall,
 the mouths and everything you walk on are unchanged.
 
 `make_art.py` checks the route's rules on the map it builds:

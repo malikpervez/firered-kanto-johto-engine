@@ -30,9 +30,8 @@ walked up and down), and Spearow and Butterfree stand at the ground's elevation 
 ledges). The pieces are the kit's, its cliffs in bank 7 and the cottage in Viridian's houses' palette in bank 9.
 Route 24 is the kit's alone, so the seam between the two needs no palette of either's own.
 
-The cape's long wall has a step standing on it, its ends set back two blocks (KR-104, `kit/terraces.py`): the cliff
-is too shallow for a tier set back behind the wall, so the step makes it a taller wall that steps down at its
-ends. It's laid over the cliff as it was, so everything you walk on is unchanged.
+The cape's long wall stays one level (KR-105): it's four blocks deep, too shallow for a tier of two-block face
+(`kit/terraces.py`).
 
 `make_art.py` checks the route's rules on the map it builds:
 - only Route 24's three ways in open onto the edges;
