@@ -131,6 +131,10 @@ bool8 FriendsScene_HideOverlappingFollower(const struct ObjectEvent *object,
     return FALSE;
 }
 
+// While Special_FriendsStoryMakeRoom tries a tile for the player, the player counts as standing there.
+static bool8 sPlayerMoved;
+static s16 sPlayerX, sPlayerY;
+
 static bool8 VisitorCellOccupied(const struct FriendsCamp *camp, s16 dx, s16 dy)
 {
     const struct ObjectEvent *player;
@@ -144,12 +148,14 @@ static bool8 VisitorCellOccupied(const struct FriendsCamp *camp, s16 dx, s16 dy)
         return TRUE;
     // The camera lifecycle recalls/removes the player's actual follower before
     // any visitor appears, then restores it before menus/battles/release.
-    if (player->currentCoords.x == x && player->currentCoords.y == y)
+    if ((sPlayerMoved ? sPlayerX : player->currentCoords.x) == x
+     && (sPlayerMoved ? sPlayerY : player->currentCoords.y) == y)
         return TRUE;
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
     {
         const struct ObjectEvent *actor = &gObjectEvents[i];
-        if (!actor->active || actor->localId == OBJ_EVENT_ID_FOLLOWER)
+        // (the player is counted above, where Special_FriendsStoryMakeRoom can try another tile for them)
+        if (!actor->active || actor->localId == OBJ_EVENT_ID_FOLLOWER || i == gPlayerAvatar.objectEventId)
             continue;
         if (actor->mapNum == gSaveBlock1Ptr->location.mapNum
          && actor->mapGroup == gSaveBlock1Ptr->location.mapGroup
@@ -237,6 +243,54 @@ static bool8 VisitorCellsFree(const struct FriendsCamp *camp, u16 scene)
                 camp->map == MAP_ECRUTEAK_CITY_HNS ? 0 : -1))
             return FALSE;
     return WalkCellsFree(camp, scene);
+}
+
+// A player who talks to the seven from a tile the scene needs (a visitor's slot, a walk, Giratina's) used to end the
+// scene without a word. Out: VAR_RESULT the direction to step (the player steps back, or else to one side, facing the
+// friend), or DIR_NONE when nothing is in the way, or something other than the player is.
+void Special_FriendsStoryMakeRoom(void)
+{
+    static const u8 sTry[4][3] = {
+        [DIR_SOUTH - 1] = {DIR_NORTH, DIR_WEST, DIR_EAST},
+        [DIR_NORTH - 1] = {DIR_SOUTH, DIR_WEST, DIR_EAST},
+        [DIR_WEST - 1] = {DIR_EAST, DIR_NORTH, DIR_SOUTH},
+        [DIR_EAST - 1] = {DIR_WEST, DIR_NORTH, DIR_SOUTH},
+    };
+    const struct FriendsCamp *camp = CurrentCamp();
+    u16 scene = FriendsStory_GetMapScene();
+    struct ObjectEvent *player;
+    u32 i;
+
+    Script_RequestEffects(SCREFF_V1);
+    gSpecialVar_Result = DIR_NONE;
+    if (camp == NULL || !FriendsStory_IsReady() || scene == 0 || scene > FRIENDS_STORY_SCENE_COUNT
+     || scene != FriendsStory_GetStage() || !FriendsStory_GetGate(scene)
+     || gPlayerAvatar.objectEventId >= OBJECT_EVENTS_COUNT || VisitorCellsFree(camp, scene))
+        return;
+    player = &gObjectEvents[gPlayerAvatar.objectEventId];
+    if (player->facingDirection < DIR_SOUTH || player->facingDirection > DIR_EAST)
+        return;
+    sPlayerMoved = TRUE;
+    sPlayerX = sPlayerY = -0x100;  // is the player the only thing in the way?
+    if (VisitorCellsFree(camp, scene))
+    {
+        for (i = 0; i < ARRAY_COUNT(sTry[0]); i++)
+        {
+            u8 dir = sTry[player->facingDirection - 1][i];
+            s16 x = player->currentCoords.x, y = player->currentCoords.y;
+            MoveCoords(dir, &x, &y);
+            if (GetCollisionAtCoords(player, x, y, dir) != COLLISION_NONE)
+                continue;
+            sPlayerX = x;
+            sPlayerY = y;
+            if (VisitorCellsFree(camp, scene))
+            {
+                gSpecialVar_Result = dir;
+                break;
+            }
+        }
+    }
+    sPlayerMoved = FALSE;
 }
 
 bool32 FriendsScene_GetFramePoint(s16 *x, s16 *y)
