@@ -1,0 +1,42 @@
+{
+ "note": "With the Rocket Hideout cleared and Silph not yet freed, the Silph scientist is away from Celadon (his stolen SILPH SCOPE is found): the player walks up onto his spot (KR-109).",
+ "created": "2026-11-06 20:40",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 47,
+  "y": 25,
+  "state": [
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_HIDE_CELADON_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Frlg",
+  "x": 47,
+  "y": 24,
+  "in_battle": false
+ },
+ "accepted": "2026-11-06 20:08"
+}
