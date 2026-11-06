@@ -111,9 +111,11 @@ GRAPHICS = re.compile(r"(OBJ_EVENT_GFX_MON_BASE|OBJ_EVENT_MON)\s*\+\s*SPECIES_([
 
 
 def walkers(data: dict):
+    """The map's walkers. A Pokémon with a local id is a story scene's actor (Route 24's Charmander, Oak's Pikachu,
+    the rescues' starters), not a walker: its species and script are the scene's, so it is left alone."""
     for i, obj in enumerate(data.get("object_events", [])):
         m = GRAPHICS.fullmatch(str(obj.get("graphics_id", "")))
-        if m:
+        if m and not obj.get("local_id"):
             yield i, obj, m.group(2)
 
 
