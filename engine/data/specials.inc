@@ -331,6 +331,9 @@ gSpecials::
 	def_special ShakeCamera
 	def_special StartGroudonKyogreBattle
 	def_special BattleSetup_StartLegendaryBattle
+	def_special BattleSetup_StartOverworldMonBattle
+	def_special Special_OwMonEncounterPrepare
+	def_special Special_OwMonEncounterRemove
 	def_special StartRegiBattle
 	def_special SetTrainerFacingDirection
 	def_special DoSealedChamberShakingEffect_Short

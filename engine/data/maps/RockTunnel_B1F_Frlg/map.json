@@ -382,7 +382,7 @@
       "flag": "FLAG_TEMP_11"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KANGASKHAN",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ZUBAT",
       "x": 25,
       "y": 38,
       "elevation": 0,
@@ -391,11 +391,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MACHOKE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GEODUDE",
       "x": 1,
       "y": 19,
       "elevation": 0,
@@ -404,7 +404,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
@@ -417,11 +417,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GOLBAT",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANKEY",
       "x": 5,
       "y": 46,
       "elevation": 0,
@@ -430,7 +430,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     }
   ],

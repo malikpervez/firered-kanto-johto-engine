@@ -267,7 +267,7 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 207 | `route14-tree` | Down Route 14 to the tree across its east lane; cut it and walk through | Route 14 19,17 |  |
 | 208 | `route14-ledge` | On down the lane and west to the long ledge; hop it | Route 14 11,34 |  |
 | 209 | `route15` | Down Route 14's south fields and west onto Route 15 | Route 15 78,15 |  |
-| 210 | `route15-gate` | West along Route 15 (round the bikers' and beauties' lines) into its west gatehouse (along the south lane: the road's Volbeat and Illumise patrol it, and its Hoppip wander anywhere) | Route 15 West Entrance 1F |  |
+| 210 | `route15-gate` | West along Route 15 (round the bikers' and beauties' lines) into its west gatehouse (along the south lane: the road's Oddish and Ditto patrol it, and its Venonat wander anywhere) | Route 15 West Entrance 1F |  |
 | 211 | `route15-gate-out` | Through the gatehouse and out of its west door | Route 15 9,5 |  |
 | 212 | `fuchsia` | West along the lane into Fuchsia | Fuchsia City 46,21 |  |
 | 213 | `fuchsia-gym` | Across Fuchsia into Koga's Gym | Fuchsia City Gym |  |
@@ -293,7 +293,7 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 233 | `fuchsia-east` | Up Fuchsia's east lane onto Route 15 | Route 15 |  |
 | 234 | `route15-gate-east` | Into Route 15's west gatehouse | Route 15 West Entrance 1F |  |
 | 235 | `route15-east` | Through it and out of its east door | Route 15 |  |
-| 236 | `route14-back` | East along Route 15's south lane (off the road the Volbeat and Illumise patrol) onto Route 14 | Route 14 |  |
+| 236 | `route14-back` | East along Route 15's south lane (off the road the Oddish and Ditto patrol) onto Route 14 | Route 14 |  |
 | 237 | `route14-tree-back` | Up Route 14's fields (round the ledges) to the tree on the east lane; cut it and walk through | Route 14 19,15 |  |
 | 238 | `route13-back` | On up Route 14 onto Route 13 | Route 13 |  |
 | 239 | `route12-back` | East along Route 13 (off every trainer's line) and up onto Route 12 | Route 12 |  |

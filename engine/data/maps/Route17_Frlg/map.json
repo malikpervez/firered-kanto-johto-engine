@@ -169,7 +169,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GULPIN",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
       "x": 29,
       "y": 94,
       "elevation": 3,
@@ -178,11 +178,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GRIMER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODUO",
       "x": 4,
       "y": 53,
       "elevation": 3,
@@ -191,11 +191,11 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HOUNDOUR",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RATICATE",
       "x": 5,
       "y": 12,
       "elevation": 3,
@@ -204,7 +204,7 @@
       "movement_range_y": 6,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {

@@ -32,6 +32,7 @@ snapshot is history (`provenance/`, `project/` records).
 | Story overview | `project/docs/campaign-story-and-progression-guide.md` |
 | Kanto trainers / Johto trainers | `engine/src/data/trainers_frlg.party` / `engine/src/data/trainers_hns.party` |
 | Wild Pokémon | `engine/src/data/wild_encounters.json` |
+| Kanto's overworld Pokémon (the walkers: Kanto's own, battleable outside towns) | `project/scripts/overworld_mons.py` (applies the rules; `--check` lists any walker that breaks them); the battle `engine/src/overworld_mon_encounter.c` |
 | Replay tests | `engine/pae_tests/` |
 | Rebuilt Kanto maps' art (the kit, each map's concept) and every art asset | `project/art/`; `project/art/ASSETS.md` lists every piece, where it came from, where it's used and how to replace it (update it with any change to the art) |
 | Story check (new game to the end of the rebuilt maps); small fixes for later | `project/scripts/story_check.py`, `project/docs/story-sanity-check.md`; `project/docs/quality-of-life-backlog.md` |

@@ -158,7 +158,7 @@
       "flag": "FLAG_HIDE_ROCK_TUNNEL_1F_ESCAPE_ROPE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAWILE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ZUBAT",
       "x": 55,
       "y": 1,
       "elevation": 0,
@@ -167,7 +167,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
@@ -180,11 +180,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAROWAK",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GEODUDE",
       "x": 56,
       "y": 38,
       "elevation": 0,
@@ -193,11 +193,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SABLEYE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANKEY",
       "x": 22,
       "y": 7,
       "elevation": 0,
@@ -206,11 +206,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CUBONE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ONIX",
       "x": 48,
       "y": 16,
       "elevation": 0,
@@ -219,7 +219,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     }
   ],
