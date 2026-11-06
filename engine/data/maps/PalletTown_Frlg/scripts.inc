@@ -514,10 +514,11 @@ PalletTown_Text_TownSign::
 
 PalletTown_Text_OakChampionFollowMe::
 	.string "OAK: Ah, {PLAYER}!\n"
-	.string "You're back, are you?\p"
-	.string "Word came from the POKéMON LEAGUE.\n"
-	.string "KANTO has a new CHAMPION!\p"
-	.string "Now, this is impressive!\p"
+	.string "Welcome home!\p"
+	.string "I'm still beaming from that\n"
+	.string "HALL OF FAME!\p"
+	.string "KANTO's CHAMPION, from our own\n"
+	.string "little PALLET TOWN!\p"
 	.string "There's something I wanted to ask\n"
 	.string "of you, {PLAYER}.\p"
 	.string "Come.\n"

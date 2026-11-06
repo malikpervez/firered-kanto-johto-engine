@@ -203,7 +203,7 @@ CG_Movement_WillingPartner::
 	step_end
 
 CG_Text_BL01::
-	.string "{RIVAL}: Great battle, {PLAYER}!\pGrandpa's taking me on his next\nfield survey.\pI've already filled half a\nnotebook. Apparently I'm meant\lto leave room for the results!$"
+	.string "{RIVAL}: Hey, {PLAYER}!\pGrandpa's taking me on his next\nfield survey.\pI've already filled half a\nnotebook. Apparently I'm meant\lto leave room for the results!$"
 CG_Text_BL02::
 	.string "{RIVAL}: These PIDGEY use the\nsame tree when the wind changes.\pI'm trying to find out why.$"
 CG_Text_BL02_Question::

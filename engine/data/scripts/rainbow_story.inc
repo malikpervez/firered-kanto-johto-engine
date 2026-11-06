@@ -110,7 +110,6 @@ RB_OakStory::
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, RB_Return
-	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, RB_Return
 	goto_if_set JOHTO_FLAG_SYS_GAME_CLEAR, RB_OakLetter
 	goto_if_set FLAG_SYS_GAME_CLEAR, RB_OakReferral
 	call_if_set FLAG_RB_OPENING_SEEN, RB_OakBird
@@ -119,6 +118,7 @@ RB_OakBird::
 	msgbox RB_Text_OakBird
 	return
 RB_OakReferral::
+	goto_if_set FLAG_OAK_GAVE_JOHTO_DIRECTIONS, RB_Return
 	goto_if_unset FLAG_RB_OPENING_SEEN, RB_OakNoMemory
 	msgbox RB_Text_OakWest
 	return
