@@ -78,6 +78,8 @@ CG_BlueRoute1::
 	call CG_BlueRoute1Visibility
 	goto_if_set FLAG_TEMP_1D, CG_Release
 	msgbox CG_Text_BL02
+	@ Oak wrote down the opening's storm Pidgey (RB02); Blue has read his notes. A callback, nothing written.
+	call_if_set FLAG_RB_OPENING_SEEN, CG_BlueStormPidgey
 	msgbox CG_Text_BL02_Question, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CG_BlueRoute1Later
 	msgbox CG_Text_BL02_Answer
@@ -189,6 +191,8 @@ CG_SilverDen::
 	applymovement 37, CG_Movement_WillingPartner
 	waitmovement 0
 	faceplayer
+	@ Silver remembers the player stopping by while he waited at Goldenrod's Center (SV02). Nothing written.
+	call_if_set FLAG_SV02_SEEN, CG_SilverRemembers
 	msgbox CG_Text_SV03_Player
 	setflag FLAG_SV03_SEEN
 	release
@@ -201,11 +205,19 @@ CG_Movement_WillingPartner::
 	jump_in_place_up
 	face_left
 	step_end
+CG_BlueStormPidgey::
+	msgbox CG_Text_BL02_Storm
+	return
+CG_SilverRemembers::
+	msgbox CG_Text_SV03_Remembers
+	return
 
 CG_Text_BL01::
 	.string "{RIVAL}: Great battle, {PLAYER}!\pGrandpa's taking me on his next\nfield survey.\pI've already filled half a\nnotebook. Apparently I'm meant\lto leave room for the results!$"
 CG_Text_BL02::
 	.string "{RIVAL}: These PIDGEY use the\nsame tree when the wind changes.\pI'm trying to find out why.$"
+CG_Text_BL02_Storm::
+	.string "{RIVAL}: Grandpa's notes say you\nsheltered one here, in a storm.\pMaybe it's one of these. I'm\nwriting that down as a maybe!$"
 CG_Text_BL02_Question::
 	.string "Ask what he has learned?$"
 CG_Text_BL02_Answer::
@@ -234,5 +246,7 @@ CG_Text_SV02_Repeat::
 	.string "{RIVAL}: I'm waiting anyway.$"
 CG_Text_SV03_Partner::
 	.string "{RIVAL}: Another round?$"
+CG_Text_SV03_Remembers::
+	.string "{RIVAL}: That time at the CENTER\nin GOLDENROD...\pYou didn't have to stop by.$"
 CG_Text_SV03_Player::
 	.string "{RIVAL}: We'll be ready\nnext time.$"
