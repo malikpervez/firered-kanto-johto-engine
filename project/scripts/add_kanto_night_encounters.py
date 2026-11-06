@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Add the bounded FireRed night-bird overlay to an isolated source JSON.
 
+Undone by KR-107 (the owner, 6 November 2026: "Kanto's wild list should be Kanto only"): the seven night tables
+it made are gone from engine/src/data/wild_encounters.json. Kept as the record of what it did; don't run it again.
+
 The supplied baseline must be the frozen candidate05 encounter input. Existing
 FireRed daytime entries, all other targets and all encounter levels/rates stay
 unchanged. The source generator already understands FireRed and _Night labels.

@@ -38,7 +38,8 @@ PalletTown_OnFrame::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 2, PalletTown_EventScript_OakRatingScene
 	.2byte 0
 
-@ Oak approaches player after exiting their house post Elite Four to check if they should receieve the National Dex
+@ Oak meets the new Champion outside their house and takes them to his lab for the National Dex. It comes with
+@ becoming Champion (the owner, 6 November 2026): FireRed's One Island visit and 60 Pokémon caught are gone.
 PalletTown_EventScript_OakRatingScene::
 	lockall
 	textcolor NPC_TEXT_COLOR_MALE
@@ -47,16 +48,7 @@ PalletTown_EventScript_OakRatingScene::
 	addobject LOCALID_PALLET_PROF_OAK
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakWalkToPlayersDoor
 	waitmovement 0
-	goto_if_unset FLAG_WORLD_MAP_ONE_ISLAND, PalletTown_EventScript_NotBeenToOneIslandYet
-	msgbox PalletTown_Text_OakLetMeSeePokedex
-	setvar VAR_0x8004, 0
-	specialvar VAR_RESULT, GetFrlgPokedexCount
-	copyvar VAR_0x8008, VAR_0x8005
-	copyvar VAR_0x8009, VAR_0x8006
-	buffernumberstring STR_VAR_1, VAR_0x8008
-	buffernumberstring STR_VAR_2, VAR_0x8009
-	goto_if_lt VAR_0x8009, 60, PalletTown_EventScript_NotEnoughMonsForNationalDex
-	msgbox PalletTown_Text_CaughtXImpressiveFollowMe
+	msgbox PalletTown_Text_OakChampionFollowMe
 	closemessage
 	playbgm MUS_FOLLOW_ME, 0
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToLabFromHouse
@@ -77,25 +69,6 @@ PalletTown_EventScript_OakRatingScene::
 	releaseall
 	end
 
-PalletTown_EventScript_EndOakRatingScene::
-	closemessage
-	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakExit
-	waitmovement 0
-	removeobject LOCALID_PALLET_PROF_OAK
-	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 3
-	releaseall
-	end
-
-PalletTown_EventScript_NotEnoughMonsForNationalDex::
-	msgbox PalletTown_Text_CaughtXPuttingInHonestEffort
-	goto PalletTown_EventScript_EndOakRatingScene
-	end
-
-PalletTown_EventScript_NotBeenToOneIslandYet::
-	msgbox PalletTown_Text_OakYouEnjoyingTraveling
-	goto PalletTown_EventScript_EndOakRatingScene
-	end
-
 PalletTown_Movement_OakWalkToPlayersDoor::
 	walk_up
 	walk_up
@@ -112,23 +85,6 @@ PalletTown_Movement_OakWalkToPlayersDoor::
 	walk_left
 	walk_left
 	walk_in_place_faster_up
-	step_end
-
-PalletTown_Movement_OakExit::
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
 	step_end
 
 PalletTown_Movement_OakWalkToLabFromHouse::
@@ -556,37 +512,16 @@ PalletTown_Text_TownSign::
 	.string "PALLET TOWN\n"
 	.string "Shades of your journey await!$"
 
-PalletTown_Text_OakLetMeSeePokedex::
+PalletTown_Text_OakChampionFollowMe::
 	.string "OAK: Ah, {PLAYER}!\n"
 	.string "You're back, are you?\p"
-	.string "How much have you filled in your\n"
-	.string "POKéDEX?\p"
-	.string "May I see it?\p"
-	.string "Let's see…$"
-
-PalletTown_Text_CaughtXPuttingInHonestEffort::
-	.string "You've caught {STR_VAR_2}…\p"
-	.string "Hm, it looks as if you're putting\n"
-	.string "in an honest effort.\p"
-	.string "When you manage to fill it some\n"
-	.string "more, come show me, please.$"
-
-PalletTown_Text_CaughtXImpressiveFollowMe::
-	.string "You've caught… {STR_VAR_2}!?\n"
+	.string "Word came from the POKéMON LEAGUE.\n"
+	.string "KANTO has a new CHAMPION!\p"
 	.string "Now, this is impressive!\p"
 	.string "There's something I wanted to ask\n"
 	.string "of you, {PLAYER}.\p"
 	.string "Come.\n"
 	.string "Follow me.$"
-
-PalletTown_Text_OakYouEnjoyingTraveling::
-	.string "OAK: Ah, {PLAYER}!\n"
-	.string "You seem to be enjoying traveling.\p"
-	.string "Knowing you, {PLAYER}, I can easily\n"
-	.string "imagine you going out to even more\l"
-	.string "exotic locales.\p"
-	.string "Good for you, good for you.\n"
-	.string "Hohoho.$"
 
 @ For the NPC in Pallet Town that talks about the Trainer Tips sign
 PalletTown_Text_HmmIsThatRight::
