@@ -215,7 +215,7 @@ Blue remains the original competitive Kanto rival through the first championship
 **Progression:**
 
 1. Earn the remaining native Kanto badges and clear the first Kanto League.
-2. Oak’s Hall-of-Fame referral points the trainer toward Elm and Johto.
+2. Oak’s Hall-of-Fame referral points the trainer toward Elm and Johto. If the player saw the bird, Oak also passes on that Nao read his notes on the sighting and has gone home to Ecruteak (by name as a friend if they met in Kanto, as a bell keeper from Ecruteak if not), until the player finds her there.
 
 **Connected events:**
 
@@ -296,7 +296,7 @@ JT03 appears in the early Goldenrod window, before takeover. FG16 is suppressed 
 
 **Where:** Ecruteak → Olivine → Cianwood.
 
-Burned Tower’s native events release the beasts and unlock Nao’s explanation of the towers. Silver pauses for his exhausted partner. At the coast, healing Amphy stays the real objective; Nao notices care for the Pokémon already here and Tim becomes useful at the harbor.
+Burned Tower’s native events release the beasts and unlock Nao’s explanation of the towers. A player Nao met in Kanto is greeted first (“PROF.OAK thought you might”); one she never met hears her introduction: she keeps the bells here and has just come home from asking about a bird in Kanto. Silver pauses for his exhausted partner. At the coast, healing Amphy stays the real objective; Nao notices care for the Pokémon already here and Tim becomes useful at the harbor.
 
 **Progression:**
 
@@ -333,6 +333,7 @@ The original red Gyarados, Mahogany hideout and Radio Tower battles retain their
 | RB11 | Lance signal thought — folded — [`RB_Recording`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:291) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB12 | Silence the copy — [`RB_RadioAftermath`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:660) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB13 | Welcome — [`RB_Welcome`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:311) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
+| RB15 | Fuji hears from Nao (back in Lavender) — [`RB_FujiNaoLetter`](../../engine/data/scripts/rainbow_story.inc) | Replay tests `lavender fuji hears from nao`, `lavender fuji asks about the flute` |
 | SV02 | Waiting at the counter — [`CG_SilverGoldenrodVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:136) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
 | FG19 | Nobody yells at the frightened Pokémon — [`FG19_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2404) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | LG01 | Coastal warnings — [`BlackTide_CoastalWarning`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1009) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
@@ -522,7 +523,7 @@ Existing Silph scientist confirms Rocket call-reproduction equipment.
 
 **37C source:** [`RB_OakReferral`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:121). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Added bird context surrounds the existing Oak→Indigo western pass→Surf→Elm referral.
+Added bird context surrounds the existing Oak→Indigo western pass→Surf→Elm referral. With the bird seen, Oak then passes on Nao’s news until the player has met her in Ecruteak (`FLAG_RB_ECRUTEAK_TRUTH_SEEN`): “Your friend NAO came by to read my notes on your sighting. She has gone home to ECRUTEAK. She hopes you will visit her.” if `FLAG_RB_NAO_INTRODUCED`, otherwise “A bell keeper from ECRUTEAK came to read my notes on the bird. NAO, she said. She has asked all of KANTO about it.” Nothing is written. Replay tests `pallet oak passes on naos news`, `pallet oak tells of a bell keeper from ecruteak` (2026-10-31).
 
 ### RB08 — Elm's welcome
 
@@ -542,7 +543,7 @@ A short sighting callback before the existing adapted visiting-Champion introduc
 
 **37C source:** [`RB_NaoJohtoIntro`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:273). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Late self-introduction and truth about Ho-Oh and the burned tower.
+Late self-introduction and truth about Ho-Oh and the burned tower. Since 2026-10-31 (`RB_NaoReunion`, `RB_Text_JohtoIntro`): a player Nao met in Kanto is greeted before the truth (“You came all the way to ECRUTEAK! PROF.OAK thought you might. Now I can tell you the rest.”); one she never met hears “I’m NAO. I keep the bells here in ECRUTEAK. I’ve just come home from KANTO. I went asking about a bird.” (the old line, “I have been collecting KANTOs stories”, is gone). Replay tests `ecruteak nao greets a friend from kanto`, `ecruteak nao tells a friend the rest`, `ecruteak nao introduces herself`.
 
 ### RB10 — Amphy callback
 
@@ -593,6 +594,16 @@ Ready/Later invitation and a finite Ho-Oh flyby or resolved-encounter rainbow.
 **37C source:** [`RB_OakLetter`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:128). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
 Optional Oak letter, then optional Pidgey epilogue on Route1.
+
+### RB15 — Fuji hears from Nao
+
+**Trigger:** Talk to Mr. Fuji in his house after the Poké Flute is given, with `FLAG_RB_FUJI_SCENE_SEEN` (RB04) and `FLAG_RB_WELCOME_SEEN` (RB13, Johto). A callback across the regions: it reads Johto’s receipt and writes nothing. It replaces his “Has my POKé FLUTE helped you?” while it applies; before the welcome he asks that as before.
+
+**Status:** IMPLEMENTED 2026-10-31. Replay tests `lavender fuji hears from nao`, `lavender fuji asks about the flute`.
+
+**Source:** [`RB_FujiNaoLetter`](../../engine/data/scripts/rainbow_story.inc), called from `LavenderTown_VolunteerPokemonHouse_EventScript_AlreadyHavePokeFlute`.
+
+“MR. FUJI: A letter came from NAO. She thanks me for the useful work. She says the bells rang at last. She asked nothing of the sky. She made a place it could come back to. That is all any home can do.” The design’s “Kanto return conversations” hook (Fuji asks how Nao is doing).
 
 ### MW01 — Viridian stranger
 

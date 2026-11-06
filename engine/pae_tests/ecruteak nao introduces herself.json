@@ -1,0 +1,237 @@
+{
+ "note": "Nao never met in Kanto: the first talk in Ecruteak, her introduction ('I keep the bells here in ECRUTEAK. I've just come home from KANTO. I went asking about a bird.') then the Burned Tower story to its end.",
+ "created": "2026-10-31 23:18",
+ "start": {
+  "map": "EcruteakCity_hns",
+  "x": 30,
+  "y": 22,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_RB_OPENING_SEEN",
+   "JOHTO_FLAG_RELEASED_BEASTS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_RB_NAO_INTRODUCED",
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "EcruteakCity_hns",
+  "x": 30,
+  "y": 22,
+  "in_battle": false,
+  "flags": {
+   "FLAG_RB_NAO_INTRODUCED": true,
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN": true
+  }
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "note": "After the Kanto League, with the bird seen but Nao never met: talk to Oak. He says a bell keeper from Ecruteak, Nao, read his notes on the bird; she has asked all of Kanto about it (the test ends on that box).",
+ "created": "2026-10-31 23:18",
+ "start": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_RB_OPENING_SEEN",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=6",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "FLAG_HIDE_RIVAL_IN_LAB",
+   "!FLAG_HIDE_OAK_IN_HIS_LAB"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     45
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_RB_NAO_INTRODUCED",
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "in_battle": false,
+  "flags": {
+   "FLAG_RB_NAO_INTRODUCED": false,
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN": false
+  }
+ }
+}
