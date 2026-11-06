@@ -1369,6 +1369,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 
 	.include "data/kanto/ambient_actors.inc"
+	.include "data/scripts/overworld_mon_encounter.inc"
 
     .include "data/scripts/friends_story.inc"
 Friends_Interact::

@@ -151,11 +151,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SURSKIT",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 21,
       "y": 3,
       "elevation": 1,
@@ -164,11 +164,11 @@
       "movement_range_y": 12,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_DAY_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPOINK",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_WEEDLE",
       "x": 9,
       "y": 5,
       "elevation": 4,
@@ -177,7 +177,7 @@
       "movement_range_y": 8,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_NIGHT_POKEMON"
     },
     {
@@ -197,10 +197,10 @@
     },
     {
       "local_id": "ST03_CHARMANDER",
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHARMANDER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CATERPIE",
       "x": 25,
       "y": 10,
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "FLAG_ST03_GIVEN",
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,

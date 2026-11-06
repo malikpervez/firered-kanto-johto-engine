@@ -1,4 +1,5 @@
 #include "global.h"
+#include "overworld_mon_encounter.h"
 #include "friends_scene.h"
 #include "malloc.h"
 #include "battle_anim.h"
@@ -1707,6 +1708,9 @@ static u8 InitObjectEventStateFromTemplate(const struct ObjectEventTemplate *tem
 
 static bool32 IsObjectEventTemplateHidden(const struct ObjectEventTemplate *template)
 {
+    // An overworld Pokémon the player battled here is gone until they leave the map (overworld_mon_encounter.c).
+    if (IS_OW_MON_OBJ(template) && OwMonEncounter_IsGone(template->localId))
+        return TRUE;
     // Cosmetic Kanto mons use the live clock even before Johto state exists.
     // These are the existing encoded HnS actor gates, not native story flags.
     if ((template->flagId == JOHTO_FLAG_DAY_POKEMON

@@ -204,12 +204,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_NIGHT_POKEMON",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HYPNO",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EKANS",
       "x": 33,
       "y": 3,
       "elevation": 0,
@@ -218,12 +218,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_NIGHT_POKEMON",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MEOWTH",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
       "x": 35,
       "y": 3,
       "elevation": 0,
@@ -232,12 +232,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_NIGHT_POKEMON",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MEOWTH",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
       "x": 36,
       "y": 3,
       "elevation": 0,
@@ -246,12 +246,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_NIGHT_POKEMON",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HYPNO",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EKANS",
       "x": 38,
       "y": 3,
       "elevation": 0,
@@ -260,12 +260,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_NIGHT_POKEMON",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGNEMITE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DROWZEE",
       "x": 50,
       "y": 5,
       "elevation": 0,
@@ -274,12 +274,12 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAGNEMITE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DROWZEE",
       "x": 54,
       "y": 5,
       "elevation": 0,
@@ -288,12 +288,12 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HOPPIP",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EKANS",
       "x": 10,
       "y": 10,
       "elevation": 3,
@@ -302,12 +302,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_DAY_POKEMON",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SLAKOTH",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
       "x": 29,
       "y": 12,
       "elevation": 3,
@@ -316,7 +316,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_NIGHT_POKEMON",
       "type": "object"
     },

@@ -1,0 +1,51 @@
+{
+ "note": "After the Hall of Fame Oak meets the new Champion outside the house: Kanto has a new Champion, follow me. No Pok\u00e9dex count, no One Island visit (KR-106).",
+ "created": "2026-11-06 16:38",
+ "start": {
+  "map": "PalletTown_PlayersHouse_1F_Frlg",
+  "x": 9,
+  "y": 7,
+  "state": [
+   "SPECIES_CHARMANDER lv50",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=2",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     20
+    ],
+    [
+     0,
+     420
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     80
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 7,
+  "y": 8,
+  "in_battle": false
+ }
+}
