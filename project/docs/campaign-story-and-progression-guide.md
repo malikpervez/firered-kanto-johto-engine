@@ -335,6 +335,7 @@ The original red Gyarados, Mahogany hideout and Radio Tower battles retain their
 | RB12 | Silence the copy — [`RB_RadioAftermath`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:660) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB13 | Welcome — [`RB_Welcome`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:311) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB15 | Fuji hears from Nao (back in Lavender) — [`RB_FujiNaoLetter`](../../engine/data/scripts/rainbow_story.inc) | Replay tests `lavender fuji hears from nao`, `lavender fuji keeps naos letter`, `lavender fuji asks about the flute after the letter`, `lavender fuji asks about the flute` |
+| JT05 | Guard duty (the trio in Goldenrod’s warehouse during the takeover) — [`JT05_GuardDuty`](../../engine/data/scripts/rocket_trio_story.inc) | Replay tests `goldenrod warehouse …` (six) |
 | SV02 | Waiting at the counter — [`CG_SilverGoldenrodVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:136) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
 | FG19 | Nobody yells at the frightened Pokémon — [`FG19_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2404) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | LG01 | Coastal warnings — [`BlackTide_CoastalWarning`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1009) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
@@ -824,7 +825,7 @@ Vermilion introduction and post-Thunder Badge rescue/gift.
 
 **37C source:** [`JT01_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rocket_trio_story.inc:12). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md).
 
-Optional MtMoon exit net mishap with visible Jessie/Meowth and James explicitly speaking from inside the tunnel.
+Optional MtMoon exit net mishap with visible Jessie/Meowth and James explicitly speaking from inside the tunnel. Since 2026-11-09 (story copy T6, decision 10), after Meowth’s “Then help me out of it!” the trio notice the companion Pikachu and never try to take it: JESSIE “…Wait. That PIKACHU walks beside the kid, without a BALL.”, JAMES (still from the tunnel) “A PIKACHU like that? Headquarters would remember US!”, MEOWTH “Headquarters can’t even remember ME, and I can TALK!” Meowth’s struggle in the net (`applymovement2`) no longer sends Pikachu back into its ball, so it is beside the player while they say so. Replay tests `route 4 the trio notice pikachu`, `route 4 meowth can talk`.
 
 ### JT02 — Official researchers
 
@@ -844,7 +845,7 @@ Researcher disguise scene followed by an independent optional Jessie/James doubl
 
 **37C source:** [`JT_GoldenrodVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rocket_trio_story.inc:101). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-presentation-04/owner-review-33b-03/REVIEW.md).
 
-Goldenrod trio scheme; prior meeting chooses honest callback.
+Goldenrod trio scheme; prior meeting chooses honest callback. Since 2026-11-09 (story copy T6 and L4), Meowth’s callback is “And the same kid! With the same smug PIKACHU!” (a player who met them before) or “And an audience! With a PIKACHU, no less!”, and before the disguises come off Jessie sets up JT05: “Somebody in JOHTO is still hiring ROCKETS. We’ll be the best they’ve got!” Replay tests `goldenrod the trio know the kid and pikachu`, `goldenrod the trio meet a pikachu`, `goldenrod jessie says johto is still hiring`.
 
 ### JT04 — Even we know better
 
@@ -854,7 +855,17 @@ Goldenrod trio scheme; prior meeting chooses honest callback.
 
 **37C source:** [`JT04_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rocket_trio_story.inc:45). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md).
 
-Optional return-path rescue aftermath: actual Jessie/Meowth and ordinary Seel; James explicitly calls from the passage.
+Optional return-path rescue aftermath: actual Jessie/Meowth and ordinary Seel; James explicitly calls from the passage. Since 2026-11-09 (story copy L4), after “I couldn’t leave the cages shut.” a player who saw JT05 (`JOHTO_FLAG_JT05_SEEN`) hears James: “In GOLDENROD, I only fed them. This time I opened the doors.”, and Jessie’s line is, in every case, “ARCHER quit. ARIANA was still hiring. We were only inspecting company property.” Replay tests `whirl islands james fed them in goldenrod`, `whirl islands jessie says ariana was still hiring`.
+
+### JT05 — Guard duty
+
+**Trigger:** Goldenrod Underground’s warehouse (`GoldenrodCity_UndergroundStorage_hns`, its first room, beside the crates) during the takeover: `JOHTO_VAR_GOLDENROD_CITY_STATE` 6–9, `JOHTO_FLAG_JT05_SEEN` not set, known coordinator required (`JT05_Visibility`). Jessie, James and Meowth (all three on screen, James’s own walking art) stand guard in a row; behind James, in the lane between the crates and the wall, two caged Pokémon (Marill and Sentret, `FLAG_TEMP_1D`). Talk to any of the trio. No battle.
+
+**Status:** IMPLEMENTED 2026-11-09 (story copy L4, decision 10; KR-117). Replay tests `goldenrod warehouse the trio on guard duty`, `goldenrod warehouse the trio stop a stranger`, `goldenrod warehouse the trio slip away`, `goldenrod warehouse the cages stay after the trio`, `goldenrod warehouse no cages once the tower is free`, `goldenrod warehouse no guards before the takeover`.
+
+**Source:** [`JT05_GuardDuty`](../../engine/data/scripts/rocket_trio_story.inc); the warehouse’s on-transition script calls `JT05_Visibility`.
+
+Jessie: “You again! This is a restricted storage area. We’re on guard duty. Real uniforms, real pay.” (“Hold it! …” for a player who never met them, `FLAG_JT01_SEEN`, `FLAG_JT02_SEEN` and `FLAG_JT03_SEEN` all unset). James: “ARCHER says the boss will be home as soon as he hears the broadcast.” Meowth: “And then the boss sees who stood watch. That’s the plan.” The Sentret whimpers (its cry): “A POKéMON in one of the cages whimpers. JAMES looks over.” and he turns to it: “…They said not to feed these until after the broadcast. It’s only a few BERRIES. Nobody needs to write that down.” Jessie: “James! Not in front of the kid!” Meowth: “Shh! Somebody’s coming!” They leave in a fade and the scene is recorded (`JOHTO_FLAG_JT05_SEEN`, Johto id `0x291D`: HnS raw flag `0x91D`, unused by any script or C, outside Johto’s daily flags `0x910`–`0x91A` and inside its stored events, so no save layout change). The cages stay until the tower is freed (state 10); talked to, each Pokémon only cries. JT04 reads the flag.
 
 ### BL01 — A new field of study
 
