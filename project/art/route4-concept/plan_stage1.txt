@@ -12,8 +12,8 @@ TT......::::::::.XXXXXX.CCCCCCCCCC............***...........ggggggggggg.........
 TT****..::::::::.XXXXXX.CCCCCCCCCC............***...........ggggggggggg........::::::::.............::::====
 TT****..::::::::SXXXXXX.CCCCCCCCCC::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::====
 TT****..::::::::.XXXXXX.CCCCCCCCCC::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::====
-TT.o....::::::::.XXXXXX.CCCCCCCCCC..*****...................gggggggggggggggggg.::::::::...................TT
-TT......:::::::::::::...CCCCCCCCCC..*****...o...............gggggggggggggggggg.::::::::..o..*****.........TT
+TT.o....::::::::.XXXXXX.CCCCCCCCCC..*****...................gggggggggggggggggg.::::::::~~.................TT
+TT......:::::::::::::...CCCCCCCCCC..*****...o...............gggggggggggggggggg.::::::::~~o..*****.........TT
 CCCCCCCC..::::..CCCCCCCCCCCCCCCCCC..*****...........o.......gggggggggggggggggg....****......*****.........TT
 CCCCCCCC..::::..CCCCCCCCCCCCCCCCCC..........................gggggggggggggggggg....****....................TT
 CCCCCCCC..::::..CCCCCCCCTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

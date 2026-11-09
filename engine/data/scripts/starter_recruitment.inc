@@ -219,16 +219,18 @@ ST04_Text_Badge:
 	.string "JENNY: I'll watch the harbor.\n"
 	.string "Good luck at LT. SURGE's GYM.$"
 ST04_Text_Help:
-	.string "JENNY: A supply shed overheated!\n"
-	.string "A fallen crate blocks the way.\p"
-	.string "The SQUIRTLE can put it out,\n"
+	.string "JENNY: Smoke! Something in that\n"
+	.string "stack of crates is smoldering.\p"
+	.string "A fallen crate blocks the way.\n"
+	.string "The SQUIRTLE can put it out,\l"
 	.string "but they need a clear path.\p"
 	.string "Will you help move the crate?$"
 ST04_Text_Crate:
 	.string "You lift the fallen crate aside.\n"
 	.string "The SQUIRTLE rush to help.\p"
-	.string "Working together, they cool\n"
-	.string "the shed before anyone is hurt.$"
+	.string "Working together, they soak the\n"
+	.string "smoldering crates before anyone\l"
+	.string "is hurt.$"
 ST04_Text_Offer:
 	.string "JENNY: You got them working\n"
 	.string "together. That was the part\l"

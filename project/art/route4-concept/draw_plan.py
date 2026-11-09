@@ -10,7 +10,7 @@ Route 4 runs round Mt. Moon, the mountain in its west third (cliffs), which only
   two martial artists who teach their moves, the stranger by his rock, Crissy and the TM. Its only way on is down
   its ledge (you can't climb back, so the far mouth can't be reached from Cerulean);
 - **the road down to Cerulean** (the right edge, rows 10-13) along the bottom, past tall grass, the Friends' camp (the
-  third scene, at 83,14) and a pond with its lawn under the cliff.
+  third scene, at 83,14) with the Poliwag's puddle beside it, and a pond with its lawn under the cliff.
 
 Letters: the kit's legend (T forest, . lawn, : dirt, g tall grass, _ ledges, ~ pond, * flowers, o rocks, b bushes,
 S signs), C cliffs and the buildings: Z the Pokémon Center, X and Y the two mouths of Mt. Moon (the near one at the
@@ -76,6 +76,7 @@ rect(104, 10, 107, 13, "=")        # its cobbles start here and run on into Ceru
 rect(60, 14, 77, 17, "g"); rect(60, 10, 70, 11, "g")
 rect(78, 11, 87, 16, ".")          # the Friends' camp: a clearing of trodden earth the road opens into
 rect(79, 11, 86, 15, ":"); rect(78, 12, 87, 13, ":")   # (no stumps at its top corners: one block under the ledge)
+rect(87, 14, 88, 15, "~")          # the Poliwag's puddle beside the camp (FG03: "Don't use the puddle yet"), off the road
 rect(93, 3, 99, 7, "~")            # the pond under the forest (west of the 7 columns Cerulean shows)
 rect(92, 8, 105, 9, "."); rect(92, 2, 105, 2, "."); rect(100, 3, 105, 7, "."); rect(92, 3, 92, 7, ".")
 rect(100, 8, 100, 9, "*")          # (flowers too stay out of those columns: the plants palette)

@@ -6188,9 +6188,21 @@
    "solid": true
   },
   {
-   "name": "sign_on_setts_SE#0",
+   "name": "sign_on_setts_SW#0",
    "image": "sheets/signs_harbour.png",
    "x": 32,
+   "y": 0,
+   "banks": [
+    2
+   ],
+   "tileset": "secondary",
+   "ground": "setts_SW#0",
+   "solid": true
+  },
+  {
+   "name": "sign_on_setts_SE#0",
+   "image": "sheets/signs_harbour.png",
+   "x": 48,
    "y": 0,
    "banks": [
     2
@@ -6202,8 +6214,8 @@
   {
    "name": "fence#6_on_setts_SE#100_to_pavement_N",
    "image": "sheets/signs_harbour.png",
-   "x": 48,
-   "y": 0,
+   "x": 0,
+   "y": 16,
    "banks": [
     2
    ],
@@ -6215,7 +6227,7 @@
   {
    "name": "fence#10_on_setts_SW#100_to_pavement_N",
    "image": "sheets/signs_harbour.png",
-   "x": 0,
+   "x": 16,
    "y": 16,
    "banks": [
     2
@@ -6228,7 +6240,7 @@
   {
    "name": "fence#10_on_setts_SE#100_to_pavement_N",
    "image": "sheets/signs_harbour.png",
-   "x": 16,
+   "x": 32,
    "y": 16,
    "banks": [
     2
@@ -6241,7 +6253,7 @@
   {
    "name": "fence#8_on_setts_SE#100_to_pavement_N",
    "image": "sheets/signs_harbour.png",
-   "x": 32,
+   "x": 48,
    "y": 16,
    "banks": [
     2
@@ -6254,8 +6266,8 @@
   {
    "name": "fence#2_on_setts_SE#100_to_pavement_N",
    "image": "sheets/signs_harbour.png",
-   "x": 48,
-   "y": 16,
+   "x": 0,
+   "y": 32,
    "banks": [
     2
    ],
@@ -6267,7 +6279,7 @@
   {
    "name": "fence#12_on_setts_SW#100_to_pavement_N",
    "image": "sheets/signs_harbour.png",
-   "x": 0,
+   "x": 16,
    "y": 32,
    "banks": [
     2
