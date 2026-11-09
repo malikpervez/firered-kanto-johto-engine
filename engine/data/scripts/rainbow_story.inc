@@ -28,6 +28,39 @@ RB_Flyby::
 	special Special_RainbowHoOhFlyby
 	call_if_eq VAR_RESULT, 1, RB_AsyncWait
 	return
+@ The companion PIKACHU (it walks with every trainer once they have a POKéMON) sees through the stranger first:
+@ wary on Route 1 (MW01), ears flat at Silph's wavering veil (MW05), bristling again at Cinnabar's reveal (MW06),
+@ settling as MEWTWO leaves. No state.
+RB_PikachuWary::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuWary
+	return
+RB_PikachuBristles::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	goto_if_set FLAG_MW01_SEEN, RB_PikachuBristlesAgain
+	msgbox RB_Text_PikachuBristles
+	return
+RB_PikachuBristlesAgain::
+	msgbox RB_Text_PikachuBristlesAgain
+	return
+RB_PikachuStares::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuStares
+	return
+RB_PikachuSettles::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuSettles
+	return
+RB_Text_PikachuWary::
+	.string "PIKACHU's fur stands on end.\nIt doesn't take its eyes off him.$"
+RB_Text_PikachuBristles::
+	.string "PIKACHU bristles and steps between\nyou and MEWTWO.$"
+RB_Text_PikachuBristlesAgain::
+	.string "PIKACHU bristles, just as it did\non ROUTE 1.$"
+RB_Text_PikachuStares::
+	.string "PIKACHU's ears flatten. It stares\nat the traveler's shadow.$"
+RB_Text_PikachuSettles::
+	.string "PIKACHU watches it go.\nIts fur slowly settles.$"
 RB_Route1Transition::
 	setvar VAR_TEMP_E, 0
 	setflag FLAG_TEMP_1E
@@ -441,6 +474,7 @@ MW01_Route1Scene::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement LOCALID_ROUTE1_STRANGER, MW01_Movement_Approach
 	waitmovement LOCALID_ROUTE1_STRANGER
+	call RB_PikachuWary
 	msgbox MW01_Text_SawIt
 	msgbox MW01_Text_LookItUp
 	playse SE_SELECT
@@ -572,6 +606,8 @@ goto_if_set FLAG_MW05_SEEN, RB_Repeat
 call RB_MewtwoReveal
 	showobjectat 2, MAP_SILPH_CO_1F
 	msgbox MW05_Text
+	call RB_PikachuStares
+	msgbox MW05_Text_Stranger
 	call RB_MewGlimpse
 	setflag FLAG_TEMP_1E
 	removeobject 2
@@ -597,10 +633,12 @@ msgbox MW06_Text_Journals
 	setflag FLAG_TEMP_1E
 	removeobject 15
 	call RB_MewtwoReveal
+	call RB_PikachuBristles
 	msgbox MW06_Text_Question, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, MW06_Invitation
 	call_if_eq VAR_RESULT, NO, MW06_Choice
 	msgbox MW06_Text_Answer
+	call RB_PikachuSettles
 	call RB_MewGlimpse
 setflag FLAG_MW06_SEEN
 release
@@ -669,7 +707,9 @@ MW04_Seven::
 MW04_Text_Seven::
 	.string "STRANGER: Seven people fell out of\nthe sky over VIRIDIAN.\pThey ask their POKéMON before they\nreach for a BALL. I have watched.$"
 MW05_Text::
-	.string "The traveler's outline wavers:\na long tail, an unfamiliar head.\pSTRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
+	.string "The traveler's outline wavers:\na long tail, an unfamiliar head.$"
+MW05_Text_Stranger::
+	.string "STRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
 MW06_Text_Journals::
 	.string "STRANGER: Those pages tell you\nwhat they hoped to create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
 MW06_Text_Question::
