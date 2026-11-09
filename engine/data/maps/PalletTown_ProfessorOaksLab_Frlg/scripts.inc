@@ -916,8 +916,6 @@ PalletTown_ProfessorOaksLab_Movement_VerticalPacing:
 PalletTown_ProfessorOaksLab_EventScript_TryStartNationalDexScene::
 	call PokedexRating_EventScript_RateInPerson
 	closemessage
-	goto_if_lt VAR_0x8009, 60, PalletTown_ProfessorOaksLab_EventScript_DontStartNationalDexScene
-	goto_if_unset FLAG_WORLD_MAP_ONE_ISLAND, PalletTown_ProfessorOaksLab_EventScript_DontStartNationalDexScene
 	delay 30
 	msgbox PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer
 	goto PalletTown_ProfessorOaksLab_EventScript_NationalDexScene
@@ -1626,10 +1624,10 @@ PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons::
 
 PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything::
 	.string "{RIVAL}: Hey, I heard that!\p"
-	.string "Grandpa, I've got fresh notes\n"
-	.string "from my latest field survey.\p"
-	.string "Let's compare our POKéDEXES,\n"
-	.string "{PLAYER}!$"
+	.string "Great battle up there, {PLAYER}.\n"
+	.string "You earned it.\p"
+	.string "Gramps, if there's research going,\n"
+	.string "count me in too!$"
 
 PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes::
 	.string "OAK: I know, I know.\n"
@@ -1665,9 +1663,8 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
 	.string "Don't get so excited.\p"
 	.string "I'll get the POKéDEX completed,\n"
 	.string "don't you worry about a thing.\p"
-	.string "I think I'll try looking around\n"
-	.string "ONE ISLAND first…\p"
-	.string "Anyways, I'm outta here!$"
+	.string "I'll start right here in KANTO.\n"
+	.string "Smell ya later!$"
 
 
 PalletTown_ProfessorOaksLab_EventScript_JohtoReferral::
@@ -1725,9 +1722,22 @@ PalletTown_ProfessorOaksLab_EventScript_JohtoEncouragement::
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_JohtoFirstReferral::
+	goto_if_set FLAG_OAK_GAVE_JOHTO_DIRECTIONS, PalletTown_ProfessorOaksLab_EventScript_JohtoReminder
 	msgbox PalletTown_ProfessorOaksLab_Text_JohtoReferral, MSGBOX_DEFAULT
 	closemessage
+	setflag FLAG_OAK_GAVE_JOHTO_DIRECTIONS
 	return
+
+PalletTown_ProfessorOaksLab_EventScript_JohtoReminder::
+	msgbox PalletTown_ProfessorOaksLab_Text_JohtoReminder, MSGBOX_DEFAULT
+	closemessage
+	return
+
+PalletTown_ProfessorOaksLab_Text_JohtoReminder::
+	.string "OAK: PROF.ELM is expecting you in\n"
+	.string "NEW BARK TOWN.\p"
+	.string "Take the road west of the LEAGUE\n"
+	.string "down to ROUTE 27, then SURF west.$"
 
 PalletTown_ProfessorOaksLab_Text_JohtoReferral::
 	.string "OAK: {PLAYER}, your victory at the\n"
