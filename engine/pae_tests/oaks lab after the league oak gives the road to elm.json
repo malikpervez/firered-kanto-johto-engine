@@ -1,5 +1,5 @@
 {
- "note": "After the League and the National Dex, before Johto: talking to Oak gives the bird line and the whole road to ELM once (KR-108); then his usual POK\u00e9DEX rating.",
+ "note": "After the League and the National Dex, before Johto: talking to Oak gives the bird line, Nao's news (#88: here the bell keeper from ECRUTEAK, as Nao was never met) and the whole road to ELM once (KR-108); then his usual POKéDEX rating. Two more presses since #88 for Nao's two boxes.",
  "created": "2026-11-06 19:30",
  "start": {
   "map": "PalletTown_ProfessorOaksLab_Frlg",
@@ -35,6 +35,22 @@
     [
      1,
      6
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     2,
+     4
     ],
     [
      0,
