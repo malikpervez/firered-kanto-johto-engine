@@ -1,5 +1,5 @@
 {
- "note": "After Nao met Mr. Fuji (RB04) and the welcome in Ecruteak (RB13): talk to Mr. Fuji. A letter came from Nao; the test ends on its last box ('That is all any home can do.').",
+ "note": "After Nao met Mr. Fuji (RB04) and the welcome in Ecruteak (RB13): talk to Mr. Fuji. A letter came from Nao; the test ends on its last box ('That is all any home can do.'). FLAG_RB_FUJI_LETTER_READ is set as that box closes (see 'lavender fuji keeps naos letter').",
  "created": "2026-10-31 23:19",
  "start": {
   "map": "LavenderTown_VolunteerPokemonHouse_Frlg",
@@ -15,7 +15,8 @@
    "FLAG_GOT_POKE_FLUTE",
    "!FLAG_HIDE_POKEHOUSE_FUJI",
    "FLAG_RB_FUJI_SCENE_SEEN",
-   "FLAG_RB_WELCOME_SEEN"
+   "FLAG_RB_WELCOME_SEEN",
+   "!FLAG_RB_FUJI_LETTER_READ"
   ],
   "script": null
  },
@@ -48,47 +49,36 @@
      90
     ],
     [
-     2,
-     6
+     1,
+     4
     ],
     [
      0,
-     10
+     90
+    ],
+    [
+     1,
+     4
     ],
     [
      0,
-     45
+     90
     ],
     [
-     2,
-     6
-    ],
-    [
-     0,
-     10
+     1,
+     4
     ],
     [
      0,
-     45
-    ],
-    [
-     2,
-     6
-    ],
-    [
-     0,
-     10
-    ],
-    [
-     0,
-     60
+     90
     ]
    ]
   }
  ],
  "watch": {
   "flags": [
-   "FLAG_RB_WELCOME_SEEN"
+   "FLAG_RB_WELCOME_SEEN",
+   "FLAG_RB_FUJI_LETTER_READ"
   ],
   "vars": [],
   "trainers": []
@@ -100,7 +90,9 @@
   "y": 4,
   "in_battle": false,
   "flags": {
-   "FLAG_RB_WELCOME_SEEN": true
+   "FLAG_RB_WELCOME_SEEN": true,
+   "FLAG_RB_FUJI_LETTER_READ": false
   }
- }
+ },
+ "accepted": "2026-11-09 14:30"
 }

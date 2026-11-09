@@ -149,7 +149,7 @@
 // Unused?
 #define FLAG_OAK_GAVE_JOHTO_DIRECTIONS 0x0AF // KR-108: Oak gave the bird line and the road to ELM once (was unused)
 #define FLAG_0x0B0               0x0B0
-#define FLAG_0x0B1               0x0B1
+#define FLAG_RB_FUJI_LETTER_READ 0x0B1 // #88: Mr. Fuji has read NAO's letter (RB15) once (was unused)
 #define FLAG_0x0B2               0x0B2
 #define FLAG_0x0B3               0x0B3
 #define FLAG_0x0B4               0x0B4
