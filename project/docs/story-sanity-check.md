@@ -258,7 +258,7 @@ Checkpoints are game saves, so they still load after a map change, as long as th
 | 198 | `mr-fuji` | Up to Mr. Fuji: he thanks you and goes home, and you with him | Lavender Town Volunteer Pokémon House | `FLAG_RESCUED_MR_FUJI` set |
 | 199 | `poke-flute` | Up to Mr. Fuji in his house: he gives you the Poké Flute | Lavender Town Volunteer Pokémon House | `FLAG_GOT_POKE_FLUTE` set |
 | 200 | `fuji-house-out` | Out of Mr. Fuji's house | Lavender Town |  |
-| 201 | `route12` | Down Lavender's south road onto Route 12 | Route 12 |  |
+| 201 | `route12` | Round by the west lane (the stranger waits in the lane east of Mr. Fuji's door), along the road past the Friends' camp and down Lavender's south road onto Route 12 | Route 12 |  |
 | 202 | `route12-gate` | Down Route 12's lane into its gatehouse | Route 12 North Entrance 1F 5,2 |  |
 | 203 | `route12-bridge` | Through the gatehouse and out of its south door onto the bridge | Route 12 11,14 |  |
 | 204 | `snorlax` | Down the Silence Bridge (its middle lane, past the fishers' lines) to the sleeping Snorlax; play the Poké Flute: it wakes and battles, and is gone | Route 12 17,47 | `FLAG_WOKE_UP_ROUTE_12_SNORLAX` set |

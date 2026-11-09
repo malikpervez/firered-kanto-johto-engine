@@ -506,6 +506,8 @@ release
 	end
 MW03_Visibility::
 	setflag FLAG_TEMP_1E
+	@ The Psyduck and Mr. Fuji who come to his door in MW03 are the scene's own actors: hidden until it adds them.
+	setflag FLAG_TEMP_1D
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
 	goto_if_set FLAG_MW06_SEEN, RB_Return
 	special Special_RainbowStoryAdopt
@@ -520,13 +522,53 @@ MW03_Talk::
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Release
 goto_if_set FLAG_MW03_SEEN, RB_Repeat
-msgbox MW03_Text
+	@ The stranger waits beside Mr. Fuji's door (5,16). A Psyduck looks out first; then Fuji steps out to answer
+	@ him, and goes back in before the stranger leaves.
+	applymovement LOCALID_LAVENDER_MW03_STRANGER, Common_Movement_FaceLeft
+	waitmovement 0
+	opendoor 5, 16
+	waitdooranim
+	addobject LOCALID_LAVENDER_MW03_PSYDUCK
+	applymovement LOCALID_LAVENDER_MW03_PSYDUCK, MW03_Movement_PsyduckOut
+	waitmovement 0
+	msgbox MW03_Text_Psyduck
+	closemessage
+	applymovement LOCALID_LAVENDER_MW03_PSYDUCK, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_LAVENDER_MW03_PSYDUCK
+	msgbox MW03_Text_Stranger1
+	closemessage
+	addobject LOCALID_LAVENDER_MW03_FUJI
+	applymovement LOCALID_LAVENDER_MW03_FUJI, MW03_Movement_FujiOut
+	waitmovement 0
+	msgbox MW03_Text_Fuji1
+	msgbox MW03_Text_Stranger2
+	msgbox MW03_Text_Fuji2
+	closemessage
+	applymovement LOCALID_LAVENDER_MW03_FUJI, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_LAVENDER_MW03_FUJI
+	closedoor 5, 16
+	waitdooranim
+	msgbox MW03_Text_NoReply
 	call RB_MewGlimpse
 	setflag FLAG_TEMP_1E
-	removeobject 13
+	removeobject LOCALID_LAVENDER_MW03_STRANGER
 setflag FLAG_MW03_SEEN
 release
 	end
+MW03_Movement_PsyduckOut::
+	walk_down
+	delay_16
+	face_left
+	delay_16
+	face_right
+	delay_16
+	step_end
+MW03_Movement_FujiOut::
+	walk_down
+	face_right
+	step_end
 MW04_Visibility::
 	setflag FLAG_TEMP_1D
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
@@ -655,8 +697,21 @@ MW02_Text_Question::
 	.string "STRANGER: A fossil restored by\nhuman hands... Who decides\lwhat that life becomes?\pThe POKéMON? Or must both\nlearn together?$"
 MW02_Text_Answer::
 	.string "STRANGER: Together. Humans\nuse that word often.\pA loose stone trembles, rises\nan inch, then settles.$"
-MW03_Text::
-	.string "STRANGER: Nothing keeps them here.\pFUJI: Some leave when ready.\pSTRANGER: And you allow that?\pFUJI: It is a home, not a cage.\pThe traveler has no reply.$"
+MW03_Text_Psyduck::
+	.string "A PSYDUCK wanders out of MR. FUJI's\n"
+	.string "open door, sniffs the air, and\l"
+	.string "goes back inside.$"
+MW03_Text_Stranger1::
+	.string "STRANGER: Nothing keeps them here.$"
+MW03_Text_Fuji1::
+	.string "FUJI: Some leave when they're ready.$"
+MW03_Text_Stranger2::
+	.string "STRANGER: And you allow that?$"
+MW03_Text_Fuji2::
+	.string "FUJI: It is a home, not a cage.\n"
+	.string "I learned that late.$"
+MW03_Text_NoReply::
+	.string "The traveler has no reply.$"
 MW04_Text_Question::
 	.string "STRANGER: They called POKéMON\nproperty. You opposed them.\pYet you carry POKé BALLS.\nDo you try to earn their trust?$"
 MW04_Text_Answer::

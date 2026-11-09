@@ -1,0 +1,99 @@
+{
+ "note": "MW03 with the Poke Flute got: the stranger waits beside Mr. Fuji's door; talk to him from the east. A Psyduck looks out, then Fuji steps out to answer him. Ends on Fuji's last line: \"It is a home, not a cage. I learned that late.\"",
+ "created": "2026-11-09 14:52",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 8,
+  "y": 17,
+  "state": [
+   "FLAG_RESCUED_MR_FUJI",
+   "FLAG_GOT_POKE_FLUTE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     240
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     150
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     150
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW03_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 8,
+  "y": 17,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW03_SEEN": false
+  }
+ },
+ "accepted": "2026-11-09 14:52"
+}
