@@ -1,0 +1,86 @@
+{
+ "note": "After the Master Ball from Silph's president, the stranger on Silph Co. 1F: 'The traveler's outline wavers: a long tail, an unfamiliar head.' then 'PIKACHU's ears flatten. It stares at the traveler's shadow.' (story copy F1, the middle of Pikachu's thread; the test ends on that box), before the stranger speaks.",
+ "created": "2026-11-09 15:04",
+ "start": {
+  "map": "SilphCo_1F_Frlg",
+  "x": 5,
+  "y": 6,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv40",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_GOT_MASTER_BALL_FROM_SILPH"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     0,
+     30
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW05_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SilphCo_1F_Frlg",
+  "x": 5,
+  "y": 6,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW05_SEEN": false
+  }
+ },
+ "accepted": "2026-11-09 15:05"
+}
