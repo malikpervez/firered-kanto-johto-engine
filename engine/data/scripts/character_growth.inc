@@ -295,6 +295,173 @@ CG_Movement_GoldLeavesVioletAround::
 	walk_right
 	step_end
 
+@ GD02: Gold in Ecruteak after the Burned Tower, before the Fog Badge. He found Silver coming out of the tower, told
+@ him what he thinks of thieves and lost; then he saw Silver make his POKéMON rest (SV01, the same city). The battle
+@ is optional; on NO he waits outside the Center. After it he heads for the dance theater. Appended
+@ LOCALID_ECRUTEAK_GOLD has FLAG_TEMP_1C (SV01's actors use 1D, Nao 1E). Gone once played through
+@ (JOHTO_FLAG_GD02_SEEN) or once the player has the Fog Badge.
+CG_GoldEcruteakVisibility::
+	setflag FLAG_TEMP_1C
+	callnative Special_CharacterStoryAdopt, requests_effects=1
+	goto_if_eq VAR_RESULT, FALSE, CG_Return
+	goto_if_set JOHTO_FLAG_GD02_SEEN, CG_Return
+	goto_if_unset JOHTO_FLAG_RELEASED_BEASTS, CG_Return
+	goto_if_set JOHTO_FLAG_BADGE04_GET, CG_Return
+	clearflag FLAG_TEMP_1C
+	return
+CG_GoldEcruteak::
+	lock
+	faceplayer
+	call CG_GoldEcruteakVisibility
+	goto_if_set FLAG_TEMP_1C, CG_Release
+	call_if_set JOHTO_FLAG_GD01_SEEN, CG_GoldEcruteakThirdTime
+	call_if_unset JOHTO_FLAG_GD01_SEEN, CG_GoldEcruteakRemember
+	msgbox CG_Text_GD02_Silver
+	msgbox CG_Text_GD02_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CG_GoldEcruteakLater
+	closemessage
+	goto_if_eq JOHTO_VAR_STARTER_MON, 1, CG_GoldEcruteakChikorita
+	goto_if_eq JOHTO_VAR_STARTER_MON, 2, CG_GoldEcruteakCyndaquil
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_ECRUTEAK_TOTODILE_HNS, CG_Text_GD02_Defeat
+	goto CG_GoldEcruteakAfter
+CG_GoldEcruteakChikorita::
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_ECRUTEAK_CHIKORITA_HNS, CG_Text_GD02_Defeat
+	goto CG_GoldEcruteakAfter
+CG_GoldEcruteakCyndaquil::
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_ECRUTEAK_CYNDAQUIL_HNS, CG_Text_GD02_Defeat
+CG_GoldEcruteakAfter::
+	msgbox CG_Text_GD02_After
+	closemessage
+	setflag JOHTO_FLAG_GD02_SEEN
+	@ He walks off east and up toward the dance theater, round the player if they talked from his east side.
+	goto_if_eq VAR_FACING, DIR_WEST, CG_GoldEcruteakLeaveAround
+	applymovement LOCALID_ECRUTEAK_GOLD, CG_Movement_GoldLeavesEcruteak
+	goto CG_GoldEcruteakGone
+CG_GoldEcruteakLeaveAround::
+	applymovement LOCALID_ECRUTEAK_GOLD, CG_Movement_GoldLeavesEcruteakAround
+CG_GoldEcruteakGone::
+	waitmovement LOCALID_ECRUTEAK_GOLD
+	removeobject LOCALID_ECRUTEAK_GOLD
+	setflag FLAG_TEMP_1C
+	release
+	end
+CG_GoldEcruteakThirdTime::
+	msgbox CG_Text_GD02_ThirdTime
+	return
+CG_GoldEcruteakRemember::
+	msgbox CG_Text_GD02_Remember
+	return
+CG_GoldEcruteakLater::
+	msgbox CG_Text_GD02_Later
+	release
+	end
+CG_Movement_GoldLeavesEcruteak::
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+CG_Movement_GoldLeavesEcruteakAround::
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+@ GD03: Gold outside Elm's lab after the Johto League, his last battle: five badges now, and he didn't shout once.
+@ The battle is optional; on NO he waits. After it he walks off west, out of town. Appended LOCALID_NEWBARK_GOLD
+@ has FLAG_TEMP_1D. Gone once played through (JOHTO_FLAG_GD03_SEEN).
+CG_GoldNewBarkVisibility::
+	setflag FLAG_TEMP_1D
+	callnative Special_CharacterStoryAdopt, requests_effects=1
+	goto_if_eq VAR_RESULT, FALSE, CG_Return
+	goto_if_set JOHTO_FLAG_GD03_SEEN, CG_Return
+	goto_if_unset JOHTO_FLAG_SYS_GAME_CLEAR, CG_Return
+	clearflag FLAG_TEMP_1D
+	return
+CG_GoldNewBark::
+	lock
+	faceplayer
+	call CG_GoldNewBarkVisibility
+	goto_if_set FLAG_TEMP_1D, CG_Release
+	msgbox CG_Text_GD03_Champion
+	msgbox CG_Text_GD03_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CG_GoldNewBarkLater
+	closemessage
+	goto_if_eq JOHTO_VAR_STARTER_MON, 1, CG_GoldNewBarkChikorita
+	goto_if_eq JOHTO_VAR_STARTER_MON, 2, CG_GoldNewBarkCyndaquil
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_NEWBARK_TOTODILE_HNS, CG_Text_GD03_Defeat
+	goto CG_GoldNewBarkAfter
+CG_GoldNewBarkChikorita::
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_NEWBARK_CHIKORITA_HNS, CG_Text_GD03_Defeat
+	goto CG_GoldNewBarkAfter
+CG_GoldNewBarkCyndaquil::
+	trainerbattle_no_intro TRAINER_JOHTO_GOLD_NEWBARK_CYNDAQUIL_HNS, CG_Text_GD03_Defeat
+CG_GoldNewBarkAfter::
+	msgbox CG_Text_GD03_After
+	closemessage
+	setflag JOHTO_FLAG_GD03_SEEN
+	@ He walks off west toward ROUTE 29, round the player if they talked from below him.
+	goto_if_eq VAR_FACING, DIR_NORTH, CG_GoldNewBarkLeaveAround
+	applymovement LOCALID_NEWBARK_GOLD, CG_Movement_GoldLeavesNewBark
+	goto CG_GoldNewBarkGone
+CG_GoldNewBarkLeaveAround::
+	applymovement LOCALID_NEWBARK_GOLD, CG_Movement_GoldLeavesNewBarkAround
+CG_GoldNewBarkGone::
+	waitmovement LOCALID_NEWBARK_GOLD
+	removeobject LOCALID_NEWBARK_GOLD
+	setflag FLAG_TEMP_1D
+	release
+	end
+CG_GoldNewBarkLater::
+	msgbox CG_Text_GD03_Later
+	release
+	end
+CG_Movement_GoldLeavesNewBark::
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+CG_Movement_GoldLeavesNewBarkAround::
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 CG_Text_BL01::
 	.string "{RIVAL}: Hey, {PLAYER}!\pGrandpa's taking me on his next\nfield survey.\pI've already filled half a\nnotebook. Apparently I'm meant\lto leave room for the results!$"
 CG_Text_BL02::
@@ -349,3 +516,27 @@ CG_Text_GD01_Theft::
 	.string "GOLD: PROF.ELM told me about the\nbreak-in. You saw the thief, right?\p{RIVAL}. He took the one that sat\nnext to mine on the table.\pIf I see him, I'll tell him what\nI think of that!$"
 CG_Text_GD01_Bye::
 	.string "GOLD: I'm healing up and trying\nFALKNER again. Third time!\pSee you around, CHAMPION!$"
+CG_Text_GD02_ThirdTime::
+	.string "GOLD: {PLAYER}! I beat FALKNER!\nThird time, just like I said!$"
+CG_Text_GD02_Remember::
+	.string "GOLD: {PLAYER}! Remember me? GOLD,\nfrom NEW BARK. I beat FALKNER!$"
+CG_Text_GD02_Silver::
+	.string "GOLD: And I found {RIVAL}. He was\ncoming out of the BURNED TOWER.\pI told him what I think of thieves.\nHe said I was weak, and battled me.\pHe won. Then he made his POKéMON\nrest before it battled again.\pI didn't think he'd care about\nthat.$"
+CG_Text_GD02_Ask::
+	.string "GOLD: Battle me? I want to see if\nI'm any less weak!$"
+CG_Text_GD02_Later::
+	.string "GOLD: Okay! I'll be at the CENTER,\ngetting ready.$"
+CG_Text_GD02_Defeat::
+	.string "GOLD: Closer. I'm getting closer!$"
+CG_Text_GD02_After::
+	.string "GOLD: I'm going to see the KIMONO\nGIRLS dance. Then MORTY.\pSee you, {PLAYER}!$"
+CG_Text_GD03_Champion::
+	.string "GOLD: {PLAYER}! You did it. CHAMPION\nof KANTO, and now JOHTO too!\pI have five BADGES now. Five!\nI'm going to catch up, you'll see.$"
+CG_Text_GD03_Ask::
+	.string "GOLD: One more battle? This time, I\nreally mean to win.$"
+CG_Text_GD03_Later::
+	.string "GOLD: Okay! I'll be right here\nwhen you're ready.$"
+CG_Text_GD03_Defeat::
+	.string "GOLD: Not this time either!$"
+CG_Text_GD03_After::
+	.string "GOLD: I didn't shout once that whole\nbattle. Did you notice?\pSee you around, {PLAYER}.\nNext time, I'll win!$"

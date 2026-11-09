@@ -297,11 +297,11 @@ JT03 appears in the early Goldenrod window, before takeover. FG16 is suppressed 
 
 **Where:** Ecruteak → Olivine → Cianwood.
 
-Burned Tower’s native events release the beasts and unlock Nao’s explanation of the towers. A player Nao met in Kanto is greeted first (“PROF.OAK thought you might”); one she never met hears her introduction: she keeps the bells here, and came home from Kanto not long ago after asking about a bird. Silver pauses for his exhausted partner. At the coast, healing Amphy stays the real objective; Nao notices care for the Pokémon already here and Tim becomes useful at the harbor.
+Burned Tower’s native events release the beasts and unlock Nao’s explanation of the towers. A player Nao met in Kanto is greeted first (“PROF.OAK thought you might”); one she never met hears her introduction: she keeps the bells here, and came home from Kanto not long ago after asking about a bird. Silver pauses for his exhausted partner. Gold waits outside the Center: he beat Falkner at last, then found Silver coming out of the Burned Tower and lost to him, and saw him make his Pokémon rest before it battled again. At the coast, healing Amphy stays the real objective; Nao notices care for the Pokémon already here and Tim becomes useful at the harbor.
 
 **Progression:**
 
-1. Follow the native Burned Tower/Ecruteak and Morty progression.
+1. Follow the native Burned Tower/Ecruteak and Morty progression. After the Burned Tower, Gold’s optional battle waits outside Ecruteak’s Center until the Fog Badge.
 2. Continue the lighthouse, Cianwood medicine/Chuck and Amphy/Jasmine progression as their native gates allow.
 
 **Connected events:**
@@ -310,6 +310,7 @@ Burned Tower’s native events release the beasts and unlock Nao’s explanation
 | --- | --- | --- |
 | RB09 | Ecruteak truth — [`RB_NaoJohtoIntro`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:273) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | SV01 | A small pause — [`CG_SilverEcruteakVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:94) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
+| GD02 | Gold outside Ecruteak’s Center — [`CG_GoldEcruteak`](../../engine/data/scripts/character_growth.inc) | Replay tests `ecruteak gold …` (nine) |
 | FG17 | A reflection that waits — [`FG17_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2178) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | RB10 | Amphy callback — [`RB_OlivineVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:359) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | FG18 | Tim books the right trip — [`FG18_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2281) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
@@ -399,12 +400,18 @@ The three attackers are Rocket-made replicas. Defeating OR catching each, in any
 
 **Where:** Native Johto League approach → Hall of Fame.
 
-The original late Johto rival, League approach, Elite Four and Champion progression remains independent of Kanto’s championship. Optional friends or legendary captures do not substitute for clearing Johto’s own Hall of Fame.
+The original late Johto rival, League approach, Elite Four and Champion progression remains independent of Kanto’s championship. Optional friends or legendary captures do not substitute for clearing Johto’s own Hall of Fame. Afterwards Gold waits outside Elm’s lab in New Bark with five badges, for one last battle: he didn’t shout once.
 
 **Progression:**
 
 1. Complete the native Johto League approach and League.
-2. Johto’s actual game-clear receipt enables the farewell and Nao’s later letter chain.
+2. Johto’s actual game-clear receipt enables the farewell, Nao’s later letter chain and Gold’s last battle outside Elm’s lab (optional).
+
+**Connected events:**
+
+| ID | Event / actual entry label | Exact dialogue, images and result record |
+| --- | --- | --- |
+| GD03 | Gold’s last battle in New Bark — [`CG_GoldNewBark`](../../engine/data/scripts/character_growth.inc) | Replay tests `new bark gold …` (seven) |
 
 A staged late-game checkpoint verifies its particular event path; it is not proof that the full combined campaign has been played naturally.
 
@@ -885,6 +892,26 @@ Optional Route1 observation and expressive answer. Since 2026-11-02 (story audit
 **Source:** [`CG_GoldViolet`](../../engine/data/scripts/character_growth.inc); trainers `TRAINER_JOHTO_GOLD_VIOLET_TOTODILE_HNS`, `…_CHIKORITA_HNS`, `…_CYNDAQUIL_HNS` (Geodude lv 8 and his starter lv 10, chosen by `JOHTO_VAR_STARTER_MON` as in Elm’s lab).
 
 Gold: Falkner beat him twice, even after he caught a Geodude in Dark Cave for him. “Show me how a CHAMPION does it? I did say I’d win next time!” NO: he keeps watching the Gym door (ask again later). YES: the battle; after it “How do you stay so calm? I just keep shouting moves. FALKNER said that, too.”; once the police scene at Elm’s lab has played (`JOHTO_VAR_NEWBARKTOWN_LABSTATE` ≥ 5), where the player named the thief, “PROF.ELM told me about the break-in. You saw the thief, right? {RIVAL}. He took the one that sat next to mine on the table. If I see him, I’ll tell him what I think of that!”; then he walks off east to heal and try Falkner a third time. Winning sets `JOHTO_FLAG_GD01_SEEN` (Johto id `0x291B`: HnS raw flag `0x91B`, the first after HnS’s last flag `0x91A`, unused by any script or C and inside Johto’s stored events, so no save layout change). Losing is an ordinary loss; he waits to be asked again. He is gone after the second Johto badge whether or not the scene was played.
+
+### GD02 — Gold outside Ecruteak’s Center
+
+**Trigger:** Ecruteak City, on entering: `JOHTO_FLAG_RELEASED_BEASTS` set (the beasts have fled the Burned Tower), `JOHTO_FLAG_BADGE04_GET` not set, `JOHTO_FLAG_GD02_SEEN` not set (`CG_GoldEcruteakVisibility`). Gold (`LOCALID_ECRUTEAK_GOLD`, appended to Ecruteak’s events, `FLAG_TEMP_1C`) stands beside the Center’s door, facing it. Talk to him.
+
+**Status:** IMPLEMENTED 2026-11-09 (story copy F2, L2). Replay tests `ecruteak gold waits after the burned tower`, `ecruteak gold remembers new bark`, `ecruteak gold battle after the burned tower`, `ecruteak gold leaves for the theater`, `ecruteak gold leaves from the east`, `ecruteak gold battle from below`, `ecruteak gold not there before the burned tower`, `ecruteak gold gone after the fog badge`, `ecruteak gold gone once played`.
+
+**Source:** [`CG_GoldEcruteak`](../../engine/data/scripts/character_growth.inc); trainers `TRAINER_JOHTO_GOLD_ECRUTEAK_TOTODILE_HNS`, `…_CHIKORITA_HNS`, `…_CYNDAQUIL_HNS` (Geodude lv 18, Flaaffy lv 18 and his starter’s middle stage lv 20, chosen by `JOHTO_VAR_STARTER_MON` as in Elm’s lab; a step below Whitney’s 20–21 and Silver’s Burned Tower team, 22–24).
+
+With GD01 played, “{PLAYER}! I beat FALKNER! Third time, just like I said!”; without it, “{PLAYER}! Remember me? GOLD, from NEW BARK. I beat FALKNER!” Then: he found {RIVAL} coming out of the Burned Tower, told him what he thinks of thieves, was called weak and beaten, and saw Silver make his Pokémon rest before it battled again (SV01’s same city). “Battle me? I want to see if I’m any less weak!” NO: “Okay! I’ll be at the CENTER, getting ready.” (ask again later). YES: the battle (“Closer. I’m getting closer!”); after it he is off to see the Kimono Girls dance, then Morty, and walks off toward the theater. Winning sets `JOHTO_FLAG_GD02_SEEN` (Johto id `0x291E`, HnS raw `0x91E`, unused and inside Johto’s stored events). He is gone after the Fog Badge whether or not the scene was played.
+
+### GD03 — Gold’s last battle in New Bark
+
+**Trigger:** New Bark Town, on entering: `JOHTO_FLAG_SYS_GAME_CLEAR` set, `JOHTO_FLAG_GD03_SEEN` not set (`CG_GoldNewBarkVisibility`). Gold (`LOCALID_NEWBARK_GOLD`, appended to New Bark’s events, `FLAG_TEMP_1D`) stands beside Elm’s lab door. Talk to him.
+
+**Status:** IMPLEMENTED 2026-11-09 (story copy F2, L2). Replay tests `new bark gold waits after the johto league`, `new bark gold last battle`, `new bark gold walks off west`, `new bark gold leaves from below`, `new bark gold battle from the east`, `new bark gold not there before the johto league`, `new bark gold gone once played`.
+
+**Source:** [`CG_GoldNewBark`](../../engine/data/scripts/character_growth.inc); trainers `TRAINER_JOHTO_GOLD_NEWBARK_TOTODILE_HNS`, `…_CHIKORITA_HNS`, `…_CYNDAQUIL_HNS` (Golem lv 44, Heracross lv 44, Ampharos lv 45 and his starter’s final stage lv 47; a step below Silver’s Victory Road team, 45–48).
+
+“{PLAYER}! You did it. CHAMPION of KANTO, and now JOHTO too! I have five BADGES now. Five! I’m going to catch up, you’ll see.” “One more battle? This time, I really mean to win.” NO: “Okay! I’ll be right here when you’re ready.” YES: the battle (“Not this time either!”); after it “I didn’t shout once that whole battle. Did you notice? See you around, {PLAYER}. Next time, I’ll win!” (his line from Elm’s lab), and he walks off west toward Route 29. Winning sets `JOHTO_FLAG_GD03_SEEN` (Johto id `0x291F`, HnS raw `0x91F`).
 
 ### BL03 — Notes from two regions
 

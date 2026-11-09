@@ -25,6 +25,7 @@ NewBarkTown_Text_ElmName:
 	.string "PROF.ELM$"
 
 NewBarkTown_OnTransition::
+	call CG_GoldNewBarkVisibility
 	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 2, NewBarkTown_Set_TalkToElm
 	goto_if_eq JOHTO_VAR_NEWBARK_TOWN_STATE, 4, NewBarkTown_Set_TalkToMom
 	end
