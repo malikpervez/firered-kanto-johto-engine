@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "hot_spring_steam_f1",
+  "image": "tiles/hot_spring_steam_f1.png",
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "palette": "cinnabar_volcano",
+  "palettes_8x8": [
+    [
+      "cinnabar_volcano",
+      "cinnabar_volcano"
+    ],
+    [
+      "cinnabar_volcano",
+      "cinnabar_volcano"
+    ]
+  ],
+  "tiles_8x8": [
+    [
+      90,
+      90
+    ],
+    [
+      91,
+      91
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ]
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 0,
+  "frames": [
+    "hot_spring_steam_f1.png",
+    "hot_spring_steam_f2.png"
+  ],
+  "frame_speed": 24
+}

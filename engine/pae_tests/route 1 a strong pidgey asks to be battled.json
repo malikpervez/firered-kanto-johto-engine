@@ -1,0 +1,52 @@
+{
+ "note": "Talking to a Pok\u00e9mon walking on Route 1 asks whether to battle it: it is stronger than the route's own (KR-106).",
+ "created": "2026-11-06 15:36",
+ "start": {
+  "map": "Route1_Frlg",
+  "x": 13,
+  "y": 17,
+  "state": [
+   "SPECIES_CHARMANDER lv10"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     2
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route1_Frlg",
+  "x": 13,
+  "y": 17,
+  "in_battle": false
+ }
+}

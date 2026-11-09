@@ -121,7 +121,7 @@
       "target_map": "MAP_CERULEAN_CITY"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEY",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
       "x": 62,
       "y": 3,
       "elevation": 4,
@@ -130,7 +130,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
@@ -143,11 +143,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEVIPER",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RATTATA",
       "x": 85,
       "y": 3,
       "elevation": 0,
@@ -156,11 +156,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_NIGHT_POKEMON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ZANGOOSE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANKEY",
       "x": 4,
       "y": 14,
       "elevation": 4,
@@ -169,7 +169,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "JOHTO_FLAG_DAY_POKEMON"
     },
     {

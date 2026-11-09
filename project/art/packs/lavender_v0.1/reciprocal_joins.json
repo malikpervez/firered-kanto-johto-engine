@@ -1,0 +1,101 @@
+{
+  "note": "Reciprocal names point to the same boundary PNG. Do not import twice.",
+  "aliases": {
+    "cobble_to_slate_S": {
+      "image": "slate/transitions/to_cobble_N.png",
+      "palette": "lavender_town"
+    },
+    "cobble_to_slate_W": {
+      "image": "slate/transitions/to_cobble_E.png",
+      "palette": "lavender_town"
+    },
+    "cobble_to_slate_N": {
+      "image": "slate/transitions/to_cobble_S.png",
+      "palette": "lavender_town"
+    },
+    "cobble_to_slate_E": {
+      "image": "slate/transitions/to_cobble_W.png",
+      "palette": "lavender_town"
+    },
+    "gravel_to_slate_S": {
+      "image": "slate/transitions/to_gravel_N.png",
+      "palette": "lavender_town"
+    },
+    "gravel_to_slate_W": {
+      "image": "slate/transitions/to_gravel_E.png",
+      "palette": "lavender_town"
+    },
+    "gravel_to_slate_N": {
+      "image": "slate/transitions/to_gravel_S.png",
+      "palette": "lavender_town"
+    },
+    "gravel_to_slate_E": {
+      "image": "slate/transitions/to_gravel_W.png",
+      "palette": "lavender_town"
+    },
+    "slate_to_gravel_S": {
+      "image": "gravel/transitions/to_slate_N.png",
+      "palette": "lavender_town"
+    },
+    "slate_to_gravel_W": {
+      "image": "gravel/transitions/to_slate_E.png",
+      "palette": "lavender_town"
+    },
+    "slate_to_gravel_N": {
+      "image": "gravel/transitions/to_slate_S.png",
+      "palette": "lavender_town"
+    },
+    "slate_to_gravel_E": {
+      "image": "gravel/transitions/to_slate_W.png",
+      "palette": "lavender_town"
+    },
+    "cobble_to_gravel_S": {
+      "image": "gravel/transitions/to_cobble_N.png",
+      "palette": "lavender_town"
+    },
+    "cobble_to_gravel_W": {
+      "image": "gravel/transitions/to_cobble_E.png",
+      "palette": "lavender_town"
+    },
+    "cobble_to_gravel_N": {
+      "image": "gravel/transitions/to_cobble_S.png",
+      "palette": "lavender_town"
+    },
+    "cobble_to_gravel_E": {
+      "image": "gravel/transitions/to_cobble_W.png",
+      "palette": "lavender_town"
+    },
+    "lavender_to_gravel_S": {
+      "image": "gravel/transitions/to_lavender_N.png",
+      "palette": "lavender_town"
+    },
+    "lavender_to_gravel_W": {
+      "image": "gravel/transitions/to_lavender_E.png",
+      "palette": "lavender_town"
+    },
+    "lavender_to_gravel_N": {
+      "image": "gravel/transitions/to_lavender_S.png",
+      "palette": "lavender_town"
+    },
+    "lavender_to_gravel_E": {
+      "image": "gravel/transitions/to_lavender_W.png",
+      "palette": "lavender_town"
+    },
+    "gravel_to_lavender_beds_S": {
+      "image": "lavender_beds/transitions/to_gravel_N.png",
+      "palette": "lavender_town"
+    },
+    "gravel_to_lavender_beds_W": {
+      "image": "lavender_beds/transitions/to_gravel_E.png",
+      "palette": "lavender_town"
+    },
+    "gravel_to_lavender_beds_N": {
+      "image": "lavender_beds/transitions/to_gravel_S.png",
+      "palette": "lavender_town"
+    },
+    "gravel_to_lavender_beds_E": {
+      "image": "lavender_beds/transitions/to_gravel_W.png",
+      "palette": "lavender_town"
+    }
+  }
+}

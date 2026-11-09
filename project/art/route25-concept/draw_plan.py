@@ -39,7 +39,7 @@ def at(x, y, c):
 
 # the frame: forest west, the ridge along the top, the sea east, forest along the bottom east of Route 24's paths
 rect(0, 0, 3, 23, "T")
-rect(4, 0, 57, 3, "C")
+rect(4, 0, 56, 3, "C"); rect(57, 0, 57, 3, "b")
 rect(58, 0, 69, 23, "s")
 rect(68, 0, 69, 23, "T"); rect(58, 0, 67, 1, "T"); rect(58, 22, 67, 23, "T")  # the bay's far shores: the border's
 #   forest goes on from them, not out of the open sea
@@ -54,6 +54,7 @@ rect(16, 15, 19, 23, "d")
 rect(20, 15, 20, 23, "b")
 rect(21, 16, 23, 16, "b"); rect(21, 17, 22, 23, "~"); rect(23, 17, 23, 23, "b")
 rect(4, 10, 8, 13, "g")                       # grass along the forest
+rect(4, 15, 5, 17, "*")                       # (and flowers along it, past the grass)
 rect(5, 5, 7, 6, "*"); at(10, 4, "o"); rect(13, 12, 14, 13, "*"); at(23, 5, "o")
 rect(17, 11, 18, 14, ":")                     # the road up off the bridge...
 rect(16, 13, 19, 14, ":")                     # (as wide as the bridge where it meets it)

@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "id": "rest_shelter",
+  "name": "rest_shelter",
+  "image": "tiles/rest_shelter.png",
+  "size_px": [
+    32,
+    32
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 2,
+    "height": 2
+  },
+  "palette": "kit_wood",
+  "palettes_8x8": [
+    [
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood"
+    ],
+    [
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood"
+    ],
+    [
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood"
+    ],
+    [
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": true,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 1,
+  "over_row_indices": [
+    0
+  ],
+  "frame_count": 1,
+  "budget_group": "fuji_yard",
+  "note": "Solid 2x2 decorative shelter; a sleeping Pok\u00e9mon can be rendered over its bed. Open front is artwork, not a walk-through door.",
+  "tiles_8x8": [
+    [
+      14,
+      60,
+      60,
+      14
+    ],
+    [
+      49,
+      54,
+      54,
+      48
+    ],
+    [
+      42,
+      2,
+      2,
+      42
+    ],
+    [
+      42,
+      26,
+      26,
+      42
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": true,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": true,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": true,
+        "vflip": true
+      },
+      {
+        "hflip": false,
+        "vflip": false
+      }
+    ]
+  ],
+  "tile_pool_file": "../tile_pool.json",
+  "palette_file": "../palettes/kit_wood.gpl",
+  "unique_8x8_tiles": 8,
+  "frames": [
+    "tiles/rest_shelter.png"
+  ],
+  "frame_speed": 0
+}

@@ -1,0 +1,1569 @@
+{
+  "status": "PASS_WITH_SUPPLIED_PALETTE_EXCEPTION",
+  "checks_run": 15980,
+  "failed_checks": [],
+  "warnings": [
+    {
+      "palette": "kit_water",
+      "entries": [
+        {
+          "index": 9,
+          "rgb": [
+            112,
+            172,
+            228
+          ]
+        },
+        {
+          "index": 10,
+          "rgb": [
+            120,
+            196,
+            212
+          ]
+        },
+        {
+          "index": 11,
+          "rgb": [
+            208,
+            236,
+            244
+          ]
+        }
+      ],
+      "resolution": "Supplied palette preserved unchanged. New art does not use these entries."
+    }
+  ],
+  "used_palette_entries": {
+    "lavender_town": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "kit_wood": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "lavender_tower": [
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15
+    ],
+    "kit_plants": [
+      2,
+      4,
+      8,
+      10,
+      12
+    ]
+  },
+  "tile_counts": {
+    "slate": 17,
+    "gravel": 12,
+    "lavender_beds": 9,
+    "railing": 10,
+    "memorial": 14,
+    "street_lamp": 4,
+    "fuji_yard": 11
+  },
+  "union_tiles": 67,
+  "optional_animation": "None in v0.1. All delivered pieces are static; frame alignment checked against each piece\u2019s single image.",
+  "preview_placements": "Reserved camp, approaches, people and ghost areas clear of new solids. Buildings preserved byte-for-byte in the RGB composite.",
+  "files": [
+    {
+      "file": "slate/tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 1,
+      "sha256": "4c6a2d351970a7889a3291b3cf3442d388248c6f8386131b225b6042295de6bf"
+    },
+    {
+      "file": "slate/tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "c46cf8ba1f3a603ece14c11a940a5ada9d34e3229196a71efa7048327a18b1fe"
+    },
+    {
+      "file": "slate/tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "8cbb6537961c085d8199644aac51332d07ed9400e628f879ce24c663c4db7ea5"
+    },
+    {
+      "file": "slate/tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "898e4346b7d5e0bdfc2cdfa2d2cdd0d82cdf27a87b90dc33d119a0dc84d5c9c3"
+    },
+    {
+      "file": "slate/tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "75b0bd882477359cf2fa303a28f48b825e84a03c13bb6993b962a637f921ff7e"
+    },
+    {
+      "file": "slate/tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "278ebf8f397cacd67c24ee8aea73097f8e9621faf896e42879e5c0a8edaf2397"
+    },
+    {
+      "file": "slate/tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "c630d00b8a4595e39af610818c26b1b92a5d9357dee840a431ff653f3a5b6e42"
+    },
+    {
+      "file": "slate/tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "f558b15404bf1235246166c9b5ed621cb7044f97bbcdb3d661c2d3c2a995704f"
+    },
+    {
+      "file": "slate/tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "14e7b53b5cec83c62d8a31d67037b50aea51ece399dc092f56f29480eebd986a"
+    },
+    {
+      "file": "slate/tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "32ffe2c24b2967364e30048d6d2108449a7cfb2e52b243001d2d22337082f148"
+    },
+    {
+      "file": "slate/tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "6def9a5cf713083cf29c14d773df5257c488ba0ed1d8512d14e65e40932218b5"
+    },
+    {
+      "file": "slate/tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "7dd78aab5476299b2f7795db38a928480e45ebcd4ad5191134a067aac72e34f5"
+    },
+    {
+      "file": "slate/tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "a77ddc2daffc2e1b039f0a6278a9fa64e2eebd4d2b8b9dae38afb3727cce1f95"
+    },
+    {
+      "file": "slate/tiles/in_NE_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "928c1af86d10d7bcaea0ce52621bec1e3506570726b6121d5ec69cfdefba7ee4"
+    },
+    {
+      "file": "slate/tiles/in_NE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "05fc23cc8b6553a2ab6159c0243065ee6c33691c06aabb965e5c37a1507e1105"
+    },
+    {
+      "file": "slate/tiles/in_NE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "61c705796c3f0e07bd3bcfed1950b62754b233b74e4e64e733d2958d06dc1229"
+    },
+    {
+      "file": "slate/tiles/in_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "7542d7e81c72823bf5d8bee321ddfba9f8e72761f37e35e60ab65955106dbd38"
+    },
+    {
+      "file": "slate/tiles/in_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "61516800959b58666db84f61e9f403e30d0a14c6eb19f20a5253227a12e48d17"
+    },
+    {
+      "file": "slate/tiles/in_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "46811381a094193d6e959a77af408010b8c8918b4a1f862a61690cc4dc4c7de1"
+    },
+    {
+      "file": "slate/tiles/in_NE_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "769dddb30deaf46fd56a1d7657945a80d25c7fbc2a153a7c0addaa2a0345d961"
+    },
+    {
+      "file": "slate/tiles/in_NE_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "a992f3b8ce2159105dad273d80a13ad02ffec270bbb3d50be3375d3ceb270e58"
+    },
+    {
+      "file": "slate/tiles/in_NE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "dd25e5f1ad53775fd284207411d06068976f64ba74b5f79daf53b588650acc17"
+    },
+    {
+      "file": "slate/tiles/in_SE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "3c04ca2430cfffcf14821a875d49963671233ef43df112598585f91f3dad3583"
+    },
+    {
+      "file": "slate/tiles/in_ALL.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 1,
+      "sha256": "c941c17e3144ae925c44fe4b98ae7dcfdbc43911b0ee1b928bd87c06a3630422"
+    },
+    {
+      "file": "slate/tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 1,
+      "sha256": "ad00394bca9e0beaaf749ac8cab2db3fa32981696a757416681f734b484664ef"
+    },
+    {
+      "file": "slate/tiles/large_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "840a0d780a5d6702763dbe81d0e591fd2fcb07e7c84bfe2b3cfdea25b1a721d0"
+    },
+    {
+      "file": "slate/tiles/large_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "24a6cadf8b0ca6b3d31f3a3cb619e339da44bd6a87bed5bd7fbee212465cb315"
+    },
+    {
+      "file": "slate/tiles/large_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "7dc2489360520a2baa8f3e6a2d81707009966c5abb7db5abedb7018ec119038d"
+    },
+    {
+      "file": "slate/tiles/large_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "9ae3510372e0e1e6fab5e2f7aceeb2fad334328c442633104b3cd7dcd5100c57"
+    },
+    {
+      "file": "slate/transitions/to_cobble_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "cd112395a2709009e5f1b0bc972891fdf1e028a734a6013ccb4dfbb5255c3331"
+    },
+    {
+      "file": "slate/transitions/to_cobble_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "40c319d2d8540899324805cc1c62baf9a3dd40af6b792dd221e47b00962791d2"
+    },
+    {
+      "file": "slate/transitions/to_cobble_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "0fa072e389740ff9d796f155633470ab1e97af8bd9b5547576906192fad5ca50"
+    },
+    {
+      "file": "slate/transitions/to_cobble_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "7b5d7bf6531e389dbf6668dbd8b5058cd39ad2a77a087a86257b957167951c40"
+    },
+    {
+      "file": "slate/transitions/to_gravel_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "4f8c716217c266e5a232c3f022ec8c634df266034f705e3346753bf4a2d38cdd"
+    },
+    {
+      "file": "slate/transitions/to_gravel_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "1d46b68a93cd6e5c8b139ad1ec94be3c27b85892bb582c3d847845460335bb34"
+    },
+    {
+      "file": "slate/transitions/to_gravel_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "413e46b306eca04690e25cd9cc55cb62b98d4b2bd9f9f874602a870e6f11b268"
+    },
+    {
+      "file": "slate/transitions/to_gravel_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "b54726d997470f12b254235d616bf7362a409087bbc1c99c930941613a09b40e"
+    },
+    {
+      "file": "slate/transitions/to_cobble_N_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "8a8830ee0e91dac3089094af4657f225de37b3927cef4b97113fd6de46aa2435"
+    },
+    {
+      "file": "slate/transitions/to_cobble_E_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "641dfa54993c3d391901c91e7f4105bbac650fedd6dfab70dc9e56e4d50fa283"
+    },
+    {
+      "file": "slate/transitions/to_cobble_S_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "5c96f83481a3fd28cea1c7c5de9f592723a8bac9e698b5a8f19588240f40542f"
+    },
+    {
+      "file": "slate/transitions/to_cobble_W_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "b12eb26ad3766c2eec19244f7db8f944b0cc57ce0c1760928469e77775a07f5e"
+    },
+    {
+      "file": "slate/transitions/to_gravel_N_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "4bb58afc98cafc2a316a214f49b75397e67d504770518ec3e40272901b27c179"
+    },
+    {
+      "file": "slate/transitions/to_gravel_E_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "fa21998c3af4494d4af587e9df4d9c7d1f2afaa2f08cc121afa4d85e11f5784e"
+    },
+    {
+      "file": "slate/transitions/to_gravel_S_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "90c4eaa9615bf8ddc4e092af775570dc307140f1c423273f564810c1f322fdb1"
+    },
+    {
+      "file": "slate/transitions/to_gravel_W_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "305573872c0be70321cb2adf9d1059f841a12cf3192e22fa60feb932f7b3e2d3"
+    },
+    {
+      "file": "slate/transitions/to_cobble_N_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "f4aef2f9d77035ced8334762ec4eb2c9e70dfbf6e7881a3384f069f8998212de"
+    },
+    {
+      "file": "slate/transitions/to_cobble_E_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "7fd5bfdaf712b9e0dd38030ffd67e80aa6fe3606505ceedcebaff9bde6df98f2"
+    },
+    {
+      "file": "slate/transitions/to_cobble_S_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "94d4ab593b6021424344d16e04a35682623bcefcb19bd05f74481888a722d382"
+    },
+    {
+      "file": "slate/transitions/to_cobble_W_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "86d529db328dfb87e8683f12f5bbc61683bb7fd082cf08a923c7aa80c4730c11"
+    },
+    {
+      "file": "slate/transitions/to_gravel_N_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "776e54893ae9c751e79f2f4ac41053d211ec07d5be8bc15e1ed1bd1898552844"
+    },
+    {
+      "file": "slate/transitions/to_gravel_E_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "3625d53edb89af5ff59a6ad0e0fcd8d7b36030946383c24eac8bb1d33b5fa286"
+    },
+    {
+      "file": "slate/transitions/to_gravel_S_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "a27b3546e767ea7165e412a266160f1312ca559ef71e3331b801b251a2247201"
+    },
+    {
+      "file": "slate/transitions/to_gravel_W_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "4a3a878645744c92490d911a65cef24f33739b3125a9158b5209b619f7ee0100"
+    },
+    {
+      "file": "slate/transitions/to_cobble_N_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "4c0fbcabf0da8e1dc7cdee4f17228b0559393a61b364ee423a25777fa4596b29"
+    },
+    {
+      "file": "slate/transitions/to_cobble_E_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "06f4ee72a2089e10c43839b71457c7c968e366b64d74ecbc8c8f96a82d265ed2"
+    },
+    {
+      "file": "slate/transitions/to_cobble_S_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "54857c540ba28b8c8dcd38464db74e95aa7c01a1d5f3f45c9d4548ae2e272b17"
+    },
+    {
+      "file": "slate/transitions/to_cobble_W_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "fb066ce702e391e51f12d6d1ad1bcf0757e090cc4555a05145d7e22910bc6666"
+    },
+    {
+      "file": "slate/transitions/to_gravel_N_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "b1af6fb6b4277a9f9c83efa54df588c1cb2e4ac54ee32204bc4e2649eac6a9fb"
+    },
+    {
+      "file": "slate/transitions/to_gravel_E_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "e11f217362dac63af47ec56fbca097c3f8c3ab6c37b43194c56368c6067a831c"
+    },
+    {
+      "file": "slate/transitions/to_gravel_S_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "daabf423b7cbb7c0467f1da8e4ba9ac0f8be0ede9f5bcd62ade416314859d029"
+    },
+    {
+      "file": "slate/transitions/to_gravel_W_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "930c54b9a3a0b717bf7e95c3baa9498e988fb89bf882058f5555e551bd336176"
+    },
+    {
+      "file": "slate/transitions/to_cobble_N_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "e7d09c5cbb711991550fcede7d8484ceebc971c842fb51f1e914ab6b7de25cee"
+    },
+    {
+      "file": "slate/transitions/to_cobble_E_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "393891716b314a3079ee7cbaca2bea251e84764c74f3e2e0041f53fb6e7948d3"
+    },
+    {
+      "file": "slate/transitions/to_cobble_S_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "fe661002a66389baf2983bebbb6811ede255d9b75b71be4e529c9ab506a92b8b"
+    },
+    {
+      "file": "slate/transitions/to_cobble_W_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "199c3bb4a277718a536cb9a46a277a7f21e1e7314d9768e4a7062cc3b7167f30"
+    },
+    {
+      "file": "slate/transitions/to_gravel_N_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "506aa131663811b7f46fd7a2485cc4892cdc81c02608d84b80f903f2292d560e"
+    },
+    {
+      "file": "slate/transitions/to_gravel_E_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "fc8d978cc15e3094b4a5c9f6a31d8ff1d618a34fc91ba770e14c12f11a8a0a6e"
+    },
+    {
+      "file": "slate/transitions/to_gravel_S_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "cd7e9a3e14a65108c7832b5ea06394303025a289e277e2015f84705d1a5e8420"
+    },
+    {
+      "file": "slate/transitions/to_gravel_W_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "3ef63664699dd7b0037bde9ad5ef6c589877838eaa9708fdef97095f8896e097"
+    },
+    {
+      "file": "gravel/tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 1,
+      "sha256": "f75489943b3da46057c02ff3de14a5fee295b2a6dbc6d1a5799930841f26435f"
+    },
+    {
+      "file": "gravel/tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "18461cd58c3ee17f9d12ee3a200c90b9e86355215c4885beac1ad0c8475d8d66"
+    },
+    {
+      "file": "gravel/tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "a17e171ee98639a7014747119e61468941528868407b0cc9beee37d26bddcc51"
+    },
+    {
+      "file": "gravel/tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "b347b6593177844e0c5d4393db193edf8300732c5fe0a043cf5c92f4d815465d"
+    },
+    {
+      "file": "gravel/tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "13a71942f3fab02e1ad0fe18a09c4a73e06b0d3bd7c82d833582a6b53900660c"
+    },
+    {
+      "file": "gravel/tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "32fe32a1268097368cc8e030817997df06a16282493fa293ee57c571901adece"
+    },
+    {
+      "file": "gravel/tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "380cacc0d789bbce6415b8af1c4e9154a35fc7f78186bf39e3db05128229a0ce"
+    },
+    {
+      "file": "gravel/tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "b9f87bc4a8430cfa8204d84f8e0be42521f0ee68cb55f5bb0960e89da615ac97"
+    },
+    {
+      "file": "gravel/tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "558f0823054f3b9da1931b768d339523ddd38a6c4279dceb39d73b4ac6d786fa"
+    },
+    {
+      "file": "gravel/tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "73ee3d1a2c4c7dd5ae445bfcbcfdce21a9b74eaf612abf37c7a57a7453401612"
+    },
+    {
+      "file": "gravel/tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "30aaaf576b67b72b2405a3e943240b25829451c51417a03dd90d611f6bf631c9"
+    },
+    {
+      "file": "gravel/tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "1813b7706ec6ad8f0c03c2312e2cede93c980c6006ed80f170613e4757a44d88"
+    },
+    {
+      "file": "gravel/tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "1e795f7f082b1a4eb52371d0f7ead2f48691faec394a1b42613fcf4c5525a1c8"
+    },
+    {
+      "file": "gravel/tiles/in_NE_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "19804f62204323789aac17b2246cd0b784931686efae5f9011f4262c8bb60b92"
+    },
+    {
+      "file": "gravel/tiles/in_NE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "dbedfb1141f378b8996e41e7711e1d73723888aad8a5fa85f07baddc17924a3d"
+    },
+    {
+      "file": "gravel/tiles/in_NE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "2b6f265374ce5037e11cb25a5ae885e3848096bf1b7cd7569f6f110a48a13fb2"
+    },
+    {
+      "file": "gravel/tiles/in_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "df2cff14a9a3c260cc358c3da23c8b23407b3f18fbd5d00bc37ce46127b427d2"
+    },
+    {
+      "file": "gravel/tiles/in_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb2a91b18082aaa7d6cab7b3da17e6e6a7783521e9ed0909e9b3cb536efb3376"
+    },
+    {
+      "file": "gravel/tiles/in_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "4e38f2ca26e994727560ae5b713c84f08119605289b804234e2d8119674a64ec"
+    },
+    {
+      "file": "gravel/tiles/in_NE_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "497e06fd7dc99a1fffe6ec6f6c60ae681f57314ed9615d8e250616ae743fb93b"
+    },
+    {
+      "file": "gravel/tiles/in_NE_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "a3178d629bd4c4a2d79e0a45d54f4ede9d775715a48a56e4a8ca1cfc40a3a6e6"
+    },
+    {
+      "file": "gravel/tiles/in_NE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "2d1fadaaf99c8635f5253c4c7704edd75c64517fb79dcc46bdd2d098dbdc5422"
+    },
+    {
+      "file": "gravel/tiles/in_SE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "449a34f338915e073ae8f9438987e922df89b87fe0ee245427ac316cf36613f7"
+    },
+    {
+      "file": "gravel/tiles/in_ALL.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 1,
+      "sha256": "ae18f0c462034b2a107a10aec3cedb4a4a9b59f5e86abd43fc16bda63a76545b"
+    },
+    {
+      "file": "gravel/tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 1,
+      "sha256": "83fbbe85da247e478d003bcaad740369935a15b094ac3d17bf8fc1ff8d242295"
+    },
+    {
+      "file": "gravel/transitions/to_slate_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "413e46b306eca04690e25cd9cc55cb62b98d4b2bd9f9f874602a870e6f11b268"
+    },
+    {
+      "file": "gravel/transitions/to_slate_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "b54726d997470f12b254235d616bf7362a409087bbc1c99c930941613a09b40e"
+    },
+    {
+      "file": "gravel/transitions/to_slate_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "4f8c716217c266e5a232c3f022ec8c634df266034f705e3346753bf4a2d38cdd"
+    },
+    {
+      "file": "gravel/transitions/to_slate_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "1d46b68a93cd6e5c8b139ad1ec94be3c27b85892bb582c3d847845460335bb34"
+    },
+    {
+      "file": "gravel/transitions/to_cobble_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "c1d542e84b25c5267d88193288edc891890ae4673d6d4a1b2c6f6097515a3bf4"
+    },
+    {
+      "file": "gravel/transitions/to_cobble_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "a40f104d2c56558f88f19b500226498acdf65324c20ce5281abd3cfb84567f6e"
+    },
+    {
+      "file": "gravel/transitions/to_cobble_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "13a45f120c5f4dd8c70cd9305f3421236e97fefb2d67452af583c439d3d8bc41"
+    },
+    {
+      "file": "gravel/transitions/to_cobble_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "fb1af1cdc67b997f9801bfce96c38d3442d401b89734f09df6d100d27eba6c9d"
+    },
+    {
+      "file": "gravel/transitions/to_lavender_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "e9ab1d10f4ddb200e4964ea9f34d587b98c412812d9eabcbb473fe13ba4f54e9"
+    },
+    {
+      "file": "gravel/transitions/to_lavender_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "0657703a88c1396d2916e26328b2455a94bab62a0936debd1f04c9a14051a8ef"
+    },
+    {
+      "file": "gravel/transitions/to_lavender_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "34febeb3738a6b06c4e1b9f4aab07e4df7b73bd5cf9e6669711242f2d2b92a52"
+    },
+    {
+      "file": "gravel/transitions/to_lavender_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "ab0d7b004baaa64cead7a354ede632c561f8ef285b9c67786576627ef9f7c98b"
+    },
+    {
+      "file": "lavender_beds/tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "28c0fab9e7c05d1755282aac71a4ec24300d72c0fe732a660c2c1649179a8815"
+    },
+    {
+      "file": "lavender_beds/tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "3ef1e5500ca80137c634f03f2e16b8047f13107e0407067c671c7d0bfe39b878"
+    },
+    {
+      "file": "lavender_beds/tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "08353ed9f8f5664cff45ae8f9bb5e828b66ebf88a6f2c484df3e855cc3b04d30"
+    },
+    {
+      "file": "lavender_beds/tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "8e92aa36ad1dce2814becebc3fc034e21649ddf20e41598b79587719e93cb3e9"
+    },
+    {
+      "file": "lavender_beds/tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "3ef1e5500ca80137c634f03f2e16b8047f13107e0407067c671c7d0bfe39b878"
+    },
+    {
+      "file": "lavender_beds/tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "08353ed9f8f5664cff45ae8f9bb5e828b66ebf88a6f2c484df3e855cc3b04d30"
+    },
+    {
+      "file": "lavender_beds/tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "631d1ee75f5eb9de9860bd9dd34291ab121f9b259b04c96f45757bc58a13bf71"
+    },
+    {
+      "file": "lavender_beds/tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_NE_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_NE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_NE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_NE_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_NE_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_NE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_SE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/in_ALL.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bb1f4b745dd2150a32299873387b354ae55f2ca94d688500ed0a5c5ddee67b49"
+    },
+    {
+      "file": "lavender_beds/tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "2cd9f1dd52352aa9ac65c5010a73d1317f0ae55ff869d537b4a0e1fa3a0fa7ed"
+    },
+    {
+      "file": "lavender_beds/tiles/center_b.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "f39c7e7529f97a6cff83bb92f13d9fb2975a76f4a006d635e535669af1b9d411"
+    },
+    {
+      "file": "lavender_beds/tiles/center_c.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "6db6e6199702eb2a27add3eb240307117aaea9fd6d856fc68109ce8985a21e5d"
+    },
+    {
+      "file": "lavender_beds/transitions/to_gravel_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "34febeb3738a6b06c4e1b9f4aab07e4df7b73bd5cf9e6669711242f2d2b92a52"
+    },
+    {
+      "file": "lavender_beds/transitions/to_gravel_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "ab0d7b004baaa64cead7a354ede632c561f8ef285b9c67786576627ef9f7c98b"
+    },
+    {
+      "file": "lavender_beds/transitions/to_gravel_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "e9ab1d10f4ddb200e4964ea9f34d587b98c412812d9eabcbb473fe13ba4f54e9"
+    },
+    {
+      "file": "lavender_beds/transitions/to_gravel_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "0657703a88c1396d2916e26328b2455a94bab62a0936debd1f04c9a14051a8ef"
+    },
+    {
+      "file": "railing/tiles/post.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "80f74606e9a78a68522a295f702a3fc894f106f06148db327ca27020acfaa21f"
+    },
+    {
+      "file": "railing/tiles/end_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "f67eddb0030c0d63b688531b7f0ccfad9260905279c8d1d4ae41fbe7d45f8790"
+    },
+    {
+      "file": "railing/tiles/end_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "8dfac7054b746ab4e05d085df906232346c2de020eb94f3966265d19fe1b382e"
+    },
+    {
+      "file": "railing/tiles/end_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "c8d790b5d535dacfaddb68756fb64d6b437bfee362288cc21a0400337f7b7eff"
+    },
+    {
+      "file": "railing/tiles/end_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "267d531bf3b15b467fca7ea053aa7a2df6f99654c96ac409a776dc00534c58fe"
+    },
+    {
+      "file": "railing/tiles/straight_NS.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "b8c4cc9f924ba3f0d29d5ab622027c33bab8f73a021e01f4d7f3fd41afbe289d"
+    },
+    {
+      "file": "railing/tiles/straight_EW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "da0b5bcf5e553c363475edf5430284d1e2bbfdf364fe20986f623e5e1d004e5e"
+    },
+    {
+      "file": "railing/tiles/corner_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "3ebd2ed30fa8b0f39c4d7c8f65320a57fc5d496d494724267062511fb81e178c"
+    },
+    {
+      "file": "railing/tiles/corner_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "e0eed84b32cce7ef6c26e5fbba7da7faa907ec1c64df1e7761ca6e48d24bf113"
+    },
+    {
+      "file": "railing/tiles/corner_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "5a5e19c230fb13079cd7453682dedd42bf97491b38f95f4ba095cf891432f88a"
+    },
+    {
+      "file": "railing/tiles/corner_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "ccc392b4827cb56463eb6e2d0211567ffabc102b5062761ca8a2e7a0cc7b0daa"
+    },
+    {
+      "file": "railing/tiles/tee_NES.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "c924ea0a060a6227679e5b45307f7ed9eed18269a4522c7b42c60d7e1abc5524"
+    },
+    {
+      "file": "railing/tiles/tee_NEW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "a8693a6be6c40a0c11a5edcfcfac40324b25106f62c58c92dbf9a1fbce6511e2"
+    },
+    {
+      "file": "railing/tiles/tee_NSW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "3bff876fb9a0790a5da092ec59b5f1a55c3a276195f6e6194380e38c0541a10c"
+    },
+    {
+      "file": "railing/tiles/tee_ESW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "39cf9d441815d4a9174a03bdc1687eef57b169cba49729985aef05a39ebd6d93"
+    },
+    {
+      "file": "railing/tiles/cross.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "d59c23a32cde01546583b855fb106c92ad904195b9b1545116ebed37d8bf6d9a"
+    },
+    {
+      "file": "railing/tiles/gate_open.png",
+      "size_px": [
+        48,
+        16
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "ec92028fe98aa715289e119c0f4e65f8d06291392be2fd80d88bae4711dea819"
+    },
+    {
+      "file": "details/tiles/memorial_rounded.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "100b2646786c66c470b9c1f27a6bb974b1647178c0962203e5f9d52a905e4678"
+    },
+    {
+      "file": "details/tiles/memorial_flat.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "0b16c85d144785b7fca1a1cab7687c1ccafdcf2e4ba9ff57b0a06eea0da78b83"
+    },
+    {
+      "file": "details/tiles/memorial_flower.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "0bf85056024612c29dc75c4df235f1cd96e1a3554f8bde0fca2e4a1f94ce6bc8"
+    },
+    {
+      "file": "details/tiles/offering_stone.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "239a6d7526a1bb89bf48f35bd04dd43b4408b0352251f39d24e2a22786234de6"
+    },
+    {
+      "file": "details/tiles/stone_lantern.png",
+      "size_px": [
+        16,
+        32
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "1e2cf3c2a2db2c5bd2a3c925d416adc264a3f71e2213c9c7e15f84cce4de240b"
+    },
+    {
+      "file": "details/tiles/street_lamp.png",
+      "size_px": [
+        16,
+        32
+      ],
+      "unique_8x8_tiles": 4,
+      "sha256": "bd58e675969c822eb7b59191cdc8606b14eaea71e9a68ba6e90950846ae76e6f"
+    },
+    {
+      "file": "details/tiles/food_water_bowls.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 3,
+      "sha256": "e3eb6e6b46cab2e5b2f3a93bce7def57908a7f9c009dfd99378d664649f4240b"
+    },
+    {
+      "file": "details/tiles/straw_bed.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_8x8_tiles": 2,
+      "sha256": "bf7ad60e4630b8ef74331a6b328ae5a8a4b0dda98c21d9c883f080c0b0fe32d3"
+    },
+    {
+      "file": "details/tiles/rest_shelter.png",
+      "size_px": [
+        32,
+        32
+      ],
+      "unique_8x8_tiles": 8,
+      "sha256": "c36830ba1516a700ca431f64bbe2ca4705dd69e814b43ff1a14d104c3b872bf6"
+    }
+  ]
+}

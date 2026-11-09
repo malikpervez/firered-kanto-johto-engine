@@ -113,6 +113,15 @@
       "y": 14,
       "elevation": 0,
       "var": "JOHTO_VAR_ROUTE27_STATE",
+      "var_value": "0",
+      "script": "ReceptionGate_TriggerFirst"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 14,
+      "elevation": 0,
+      "var": "JOHTO_VAR_ROUTE27_STATE",
       "var_value": "1",
       "script": "ReceptionGate_Trigger"
     }

@@ -6,6 +6,7 @@ set -e
 A=project/art/route1-concept
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=Route1_Frlg
@@ -29,9 +30,14 @@ pae map place $M object 0 23 20 $P   # the Poké Mart clerk with a sample, by th
 pae map place $M object 1 31 16 $P   # the boy who tells you about ledges, under the second one
 pae map place $M object 2 12 17 $P   # a Pidgey by the stream
 pae map place $M object 3 23 25 $P   # a Pidgey by the steps
+pae map place $M object 4 30 29 --elevation 3 $P   # a Rattata in the grass by the last ledge (it was off the map)
 pae map place $M object 5 12 7 $P    # a Rattata in the grass at the top
 pae map place $M object 6 33 22 $P   # a Poochyena in the grass
 pae map place $M object 7 5 30 $P    # the shiny Rattata in the clearing across the bridge
 pae map place $M object 8 21 33 $P   # the Pidgey you shelter (the opening scene), beside the road
 pae map place $M object 9 24 25 $P   # Blue, at the top of the last steps
 pae map place $M bg 0 23 33 $P       # the route sign, by the arch
+
+# at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every
+# other object so no local id moves (kit/night.py; the game draws them at night only)
+python3 ../project/art/kit/night.py map ../$A $M $P

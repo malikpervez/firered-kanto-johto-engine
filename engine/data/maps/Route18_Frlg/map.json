@@ -71,7 +71,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KECLEON",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
       "x": 31,
       "y": 6,
       "elevation": 3,
@@ -80,11 +80,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "FLAG_TEMP_1"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODRIO",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODUO",
       "x": 33,
       "y": 7,
       "elevation": 3,
@@ -93,11 +93,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODRIO",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODUO",
       "x": 36,
       "y": 7,
       "elevation": 3,
@@ -106,11 +106,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KECLEON",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPEAROW",
       "x": 39,
       "y": 6,
       "elevation": 3,
@@ -119,7 +119,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "FLAG_TEMP_2"
     }
   ],

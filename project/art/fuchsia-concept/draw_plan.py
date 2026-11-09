@@ -53,6 +53,7 @@ rect(2, 2, 41, 33, ".")
 # the main street from Route 18 (rows 18-20) to Route 15 (rows 20-23); the avenue up to the plaza
 rect(0, 18, 40, 21, "=")
 at(0, 21, "b")
+rect(1, 21, 4, 21, ".")                         # the street's fourth row starts past the edge: Route 18's road is 3 rows
 rect(0, 16, 1, 17, "b")                         # bushes above the road at the edge, as Route 18 has them there
 rect(40, 20, 47, 23, "=")
 rect(21, 10, 26, 17, "p")
@@ -83,7 +84,7 @@ rect(30, 3, 34, 8, "#")
 rect(31, 4, 33, 7, ":")
 rect(36, 3, 40, 8, "#")
 rect(37, 4, 39, 7, ":")
-rect(29, 9, 40, 10, ":")
+rect(27, 9, 40, 10, ":")                        # (the walk runs on to the plaza's paving, as the west one does)
 at(32, 8, "S")                                  # Voltorb's sign (on its yard's fence, read from the walk)
 at(38, 8, "S")                                  # Kangaskhan's sign
 rect(34, 11, 40, 16, "#")
@@ -98,6 +99,7 @@ rect(28, 13, 31, 16, "O")
 rect(27, 11, 33, 11, "b")
 at(30, 11, ".")                                 # (the tree to cut)
 rect(10, 13, 12, 14, "*")
+rect(17, 15, 19, 16, "*")                       # a flower bed on the lawn beside the avenue
 tree(14, 13)
 at(32, 17, "S")                                 # Slowpoke's sign
 at(3, 17, "S")                                  # the town sign, by Route 18's road
@@ -130,6 +132,8 @@ rect(34, 22, 40, 27, "#")
 rect(35, 23, 39, 26, ".")
 rect(36, 27, 39, 27, ".")
 rect(36, 23, 38, 24, "~")
+at(35, 28, "#")                                 # the fence carried down beside the house, meeting its sides
+at(40, 28, "#")
 
 # the beach path down to Route 19 (columns 18-29, as wide as Route 19's), through the woods
 rect(18, 34, 29, 39, ":")

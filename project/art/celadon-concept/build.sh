@@ -10,6 +10,7 @@ K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=CeladonCity_Frlg
@@ -87,7 +88,7 @@ pae map place $M object 28 22 35 $P
 pae map place $M bg 0 52 29 $P        # trainer tips, at Lucky Lane's east end
 pae map place $M bg 1 38 29 $P        # the prize exchange sign
 pae map place $M bg 2 33 29 $P        # the Game Corner's sign
-pae map place $M bg 3 55 18 $P        # the town sign, by the east entrance
+pae map place $M bg 3 56 18 $P        # the town sign, by the east entrance
 pae map place $M bg 4 30 18 $P        # the Mansion's sign
 pae map place $M bg 5 45 18 $P        # trainer tips, by the Center
 pae map place $M bg 6 18 18 $P        # the Department Store's sign
@@ -110,3 +111,7 @@ for e in o:
         e["elevation"] = 3
 open(p, "w").write(json.dumps(m, indent=2) + "\n")
 PY
+
+# at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every
+# other object so no local id moves (kit/night.py; the game draws them at night only)
+python3 ../project/art/kit/night.py map ../$A $M $P

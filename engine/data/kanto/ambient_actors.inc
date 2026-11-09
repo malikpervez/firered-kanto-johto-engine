@@ -29,22 +29,22 @@ KantoAmbient_CeruleanCity_House3_EventScript_Zubat::
 	release
 	end
 
-KantoAmbient_SaffronCity_CopyCatsHouse_1F_EventScript_Blissey::
+KantoAmbient_SaffronCity_CopyCatsHouse_1F_EventScript_Ditto::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_BLISSEY, CRY_MODE_NORMAL
-	msgbox KantoAmbient_CopycatsHouse1F_Text_Blissey, MSGBOX_DEFAULT
+	playmoncry SPECIES_DITTO, CRY_MODE_NORMAL
+	msgbox KantoAmbient_CopycatsHouse1F_Text_Ditto, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
-KantoAmbient_VermilionCity_FanClub_EventScript_Bayleef::
+KantoAmbient_VermilionCity_FanClub_EventScript_Clefairy::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_BAYLEEF, CRY_MODE_NORMAL
-	msgbox KantoAmbient_PokemonFanClub_Text_Bayleef, MSGBOX_DEFAULT
+	playmoncry SPECIES_CLEFAIRY, CRY_MODE_NORMAL
+	msgbox KantoAmbient_PokemonFanClub_Text_Clefairy, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -57,25 +57,25 @@ KantoAmbient_CeruleanHouse_Text_Kangaskhan:
 	.string "KANGASKHAN: Garu garuu.$"
 KantoAmbient_CeruleanHouse_Text_Zubat:
 	.string "ZUBAT: Zuba zubaa.$"
-KantoAmbient_CopycatsHouse1F_Text_Blissey:
-	.string "BLISSEY: Bliisii!$"
-KantoAmbient_PokemonFanClub_Text_Bayleef:
-	.string "BAYLEEF: Li liif!$"
+KantoAmbient_CopycatsHouse1F_Text_Ditto:
+	.string "DITTO: Dii-tto!$"
+KantoAmbient_PokemonFanClub_Text_Clefairy:
+	.string "CLEFAIRY: Pippi!$"
 
 
 
-KantoAmbient_CeladonCity_Condominiums_1F_EventScript_Skitty::
+KantoAmbient_CeladonCity_Condominiums_1F_EventScript_Meowth::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
+	playmoncry SPECIES_MEOWTH, CRY_MODE_NORMAL
 	msgbox KantoAmbient_CeladonCity_Condominiums_1F_Text_1, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
 
 KantoAmbient_CeladonCity_Condominiums_1F_Text_1:
-	.string "SKITTY: Miyao?$"
+	.string "MEOWTH: Meow?$"
 
 KantoAmbient_CeruleanCity_House2_EventScript_Diglett::
 	lock

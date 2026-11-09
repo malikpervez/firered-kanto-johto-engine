@@ -1,0 +1,36 @@
+{
+ "note": "At 22:00 the violet street lamp by the road south has its halo and the houses' windows glow warm.",
+ "created": "2026-11-04 01:30",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 12,
+  "y": 20,
+  "state": [],
+  "script": null,
+  "clock": "22:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 12,
+  "y": 20,
+  "in_battle": false
+ },
+ "accepted": "2026-11-04 14:02"
+}
