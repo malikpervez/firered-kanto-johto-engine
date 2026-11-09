@@ -15,7 +15,8 @@ cave goes through it:
   the route sign, the two martial artists who teach Mega Punch and Mega Kick, the stranger by his rock, Crissy and
   the TM. Its only way on is down its ledge, so the far mouth can't be reached from Cerulean;
 - **the road down to Cerulean**, past tall grass, the Friends' camp (their third scene, at 83,14, where it was: a
-  clearing of trodden earth the road opens into) and a pond under the forest; the forest runs along the top of the map
+  clearing of trodden earth the road opens into, with the Poliwag's puddle beside it: the pond's corners, 87-88,14-15,
+  KR-112) and a pond under the forest; the forest runs along the top of the map
   east of the mountain, and the road's dirt wears into Cerulean's cobbles over its last blocks (loose setts, then the
   cobbles' ragged edge: the route's own pieces, in the kit's ground palette).
 
