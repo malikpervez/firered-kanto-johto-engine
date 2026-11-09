@@ -332,6 +332,7 @@ The original red Gyarados, Mahogany hideout and Radio Tower battles retain their
 | ID | Event / actual entry label | Exact dialogue, images and result record |
 | --- | --- | --- |
 | RB11 | Lance signal thought — folded — [`RB_Recording`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:291) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
+| RB16 | Copied calls at the Lake of Rage — [`RB_NaoLake`](../../engine/data/scripts/rainbow_story.inc) | Replay tests `lake of rage nao …` (five), `lake of rage no nao …` (three) |
 | RB12 | Silence the copy — [`RB_RadioAftermath`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:660) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB13 | Welcome — [`RB_Welcome`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:311) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB15 | Fuji hears from Nao (back in Lavender) — [`RB_FujiNaoLetter`](../../engine/data/scripts/rainbow_story.inc) | Replay tests `lavender fuji hears from nao`, `lavender fuji keeps naos letter`, `lavender fuji asks about the flute after the letter`, `lavender fuji asks about the flute` |
@@ -538,7 +539,7 @@ A short sighting callback before the existing adapted visiting-Champion introduc
 
 ### RB09 — Ecruteak truth
 
-**Trigger:** Original beasts-release flag required. Ecruteak remains Nao priority until truth seen; after truth, before Radio Tower10 she may move to Olivine after Amphy. First interaction returns after truth; playback and Welcome occur on later talks.
+**Trigger:** Original beasts-release flag required. Ecruteak remains Nao priority until truth seen; after truth, before Radio Tower10 she may move to Olivine after Amphy. Since 2026-11-09 (RB16), after the truth she is at the Lake of Rage instead while the Mahogany hideout is cleared and the tower not yet freed, Amphy healed or not (one Nao at a time); replay tests `ecruteak nao waits before the hideout`, `ecruteak nao is away at the lake of rage`. First interaction returns after truth; playback and Welcome occur on later talks.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
@@ -554,7 +555,7 @@ Late self-introduction and truth about Ho-Oh and the burned tower. Since 2026-10
 
 **37C source:** [`RB_OlivineVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:359). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Care for the Pokémon already here; cosmetic bell response.
+Care for the Pokémon already here; cosmetic bell response. Since 2026-11-09 (story copy L3), one Nao at a time: while she is at the Lake of Rage (RB16: the Mahogany hideout cleared, the tower not yet freed) she isn’t in Olivine. Replay tests `olivine nao waits by the lighthouse before the hideout`, `olivine nao is away at the lake of rage`.
 
 ### RB11 — Lance signal thought — folded
 
@@ -605,6 +606,16 @@ Optional Oak letter, then optional Pidgey epilogue on Route1.
 **Source:** [`RB_FujiNaoLetter`](../../engine/data/scripts/rainbow_story.inc), called from `LavenderTown_VolunteerPokemonHouse_EventScript_AlreadyHavePokeFlute`.
 
 “MR. FUJI: A letter came from NAO. She thanks me for the useful work. She says the bells rang at last. She asked nothing of the sky. She made a place it could come back to. That is all any home can do.” The design’s “Kanto return conversations” hook (Fuji asks how Nao is doing).
+
+### RB16 — Copied calls at the Lake of Rage
+
+**Trigger:** Lake of Rage, on entering (`RB16_Visibility`): Nao has told the truth in Ecruteak (`FLAG_RB_ECRUTEAK_TRUTH_SEEN`), the Mahogany hideout is cleared (`JOHTO_VAR_MAHOGANY_TOWN_STATE` ≥ 14) and the tower is not yet freed (`JOHTO_VAR_GOLDENROD_CITY_STATE` < 10). Nao (`LOCALID_LAKEOFRAGE_NAO`, appended to the lake’s events) stands on the south shore at 35,35, facing the water, east of the old man and clear of Lance’s scene and the west shore, at high and low tide alike. Talk to her. While she is there, Olivine (RB10) and Ecruteak (RB09) don’t show her (`RB_NaoAtLake`).
+
+**Status:** IMPLEMENTED 2026-11-09 (story copy L3, decision 11; KR-118). Replay tests `lake of rage nao read the notebook`, `lake of rage nao tells of the notes`, `lake of rage nao never asked ho-oh`, `lake of rage nao keeps the lake quiet`, `lake of rage nao says the lake is quiet`, `lake of rage no nao before the hideout`, `lake of rage no nao after the tower`, `lake of rage no nao before ecruteak`; for one Nao at a time, `olivine nao waits by the lighthouse before the hideout`, `olivine nao is away at the lake of rage`, `ecruteak nao waits before the hideout`, `ecruteak nao is away at the lake of rage`.
+
+**Source:** [`RB_NaoLake`](../../engine/data/scripts/rainbow_story.inc).
+
+“{PLAYER}! In MAHOGANY they said the lake went wild when a radio started humming. I came to listen. I know that kind of sound.” If the player saw her notebook in Celadon (RB05, `FLAG_RB_NOTEBOOK_SCENE_SEEN`): “It’s what they wrote in my notebook. Microphones. A call that makes POKéMON answer.”; if not: “In KANTO, ROCKET took my bell notes. When I got them back, someone had written in them: Microphones. A call that makes POKéMON answer.” Then: “The GYARADOS didn’t come to that call. It forced them to change. ROCKET can’t agree who their boss is. But every one of them wanted that machine. I wanted a sound that would bring HO-OH back. I never asked if it would want to come.” and “The lake is quiet now. Let’s keep it that way.” The whole talk is recorded (`JOHTO_FLAG_RB16_SEEN`, Johto id `0x291C`: HnS raw flag `0x91C`, unused by any script or C, outside Johto’s daily flags `0x910`–`0x91A` and inside its stored events, so no save layout change); later talks give only the last line, until the tower is freed and she goes home to Ecruteak.
 
 ### MW01 — Viridian stranger
 

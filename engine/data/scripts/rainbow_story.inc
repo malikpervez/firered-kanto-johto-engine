@@ -316,6 +316,8 @@ RB_EcruteakVisibility::
 goto_if_unset JOHTO_FLAG_RELEASED_BEASTS, RB_Return
 	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 10, RB_ShowEcruteak
 	goto_if_unset FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_ShowEcruteak
+	call RB_NaoAtLake
+	goto_if_eq VAR_RESULT, TRUE, RB_Return
 	goto_if_set JOHTO_FLAG_AMPHAROS_HEALED, RB_Return
 RB_ShowEcruteak::
 clearflag FLAG_TEMP_1E
@@ -436,6 +438,8 @@ RB_OlivineVisibility::
 goto_if_unset JOHTO_FLAG_AMPHAROS_HEALED, RB_Return
 	goto_if_unset FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_Return
 	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 10, RB_Return
+	call RB_NaoAtLake
+	goto_if_eq VAR_RESULT, TRUE, RB_Return
 clearflag FLAG_TEMP_1E
 	return
 RB_NaoOlivine::
@@ -460,6 +464,75 @@ RB_Text_AmphyYes::
 	.string "NAO: Perhaps. But I should make\na home worth returning to first.$"
 RB_Text_AmphyNo::
 	.string "NAO: Then we can still care\nfor the POKéMON already here.$"
+@ RB16: once the Mahogany hideout is cleared (JOHTO_VAR_MAHOGANY_TOWN_STATE >= 14), until the tower is freed (Goldenrod
+@ state 10), Nao listens at the Lake of Rage's south shore, if she has told the player the truth in Ecruteak. One Nao at a
+@ time: Olivine (RB10) and Ecruteak (RB09) hide meanwhile. VAR_RESULT: TRUE while she is at the lake.
+RB_NaoAtLake::
+	setvar VAR_RESULT, FALSE
+	goto_if_unset FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_Return
+	goto_if_lt JOHTO_VAR_MAHOGANY_TOWN_STATE, 14, RB_Return
+	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 10, RB_Return
+	setvar VAR_RESULT, TRUE
+	return
+RB16_Visibility::
+	setflag FLAG_TEMP_1E
+	special Special_RainbowStoryAdopt
+	goto_if_eq VAR_RESULT, FALSE, RB_Return
+	call RB_NaoAtLake
+	goto_if_eq VAR_RESULT, FALSE, RB_Return
+	clearflag FLAG_TEMP_1E
+	return
+@ The whole talk once (JOHTO_FLAG_RB16_SEEN); afterwards only its last line, until the tower is freed.
+RB_NaoLake::
+	lock
+	faceplayer
+	special Special_RainbowStoryAdopt
+	goto_if_eq VAR_RESULT, FALSE, RB_Release
+	goto_if_set JOHTO_FLAG_RB16_SEEN, RB_NaoLakeQuiet
+	msgbox RB_Text_LakeListen
+	call_if_set FLAG_RB_NOTEBOOK_SCENE_SEEN, RB_LakeNotebook
+	call_if_unset FLAG_RB_NOTEBOOK_SCENE_SEEN, RB_LakeNotes
+	msgbox RB_Text_LakeGyarados
+	setflag JOHTO_FLAG_RB16_SEEN
+RB_NaoLakeQuiet::
+	msgbox RB_Text_LakeQuiet
+	release
+	end
+RB_LakeNotebook::
+	msgbox RB_Text_LakeNotebook
+	return
+RB_LakeNotes::
+	msgbox RB_Text_LakeNotes
+	return
+RB_Text_LakeListen::
+	.string "NAO: {PLAYER}! In MAHOGANY they said\n"
+	.string "the lake went wild when a radio\l"
+	.string "started humming.\p"
+	.string "I came to listen. I know that\n"
+	.string "kind of sound.$"
+RB_Text_LakeNotebook::
+	.string "NAO: It's what they wrote in my\n"
+	.string "notebook. Microphones. A call\l"
+	.string "that makes POKéMON answer.$"
+RB_Text_LakeNotes::
+	.string "NAO: In KANTO, ROCKET took my bell\n"
+	.string "notes. When I got them back,\p"
+	.string "someone had written in them:\n"
+	.string "Microphones. A call that makes\l"
+	.string "POKéMON answer.$"
+RB_Text_LakeGyarados::
+	.string "NAO: The GYARADOS didn't come to\n"
+	.string "that call. It forced them to\l"
+	.string "change.\p"
+	.string "ROCKET can't agree who their boss\n"
+	.string "is. But every one of them wanted\l"
+	.string "that machine.\p"
+	.string "I wanted a sound that would bring\n"
+	.string "HO-OH back. I never asked if it\l"
+	.string "would want to come.$"
+RB_Text_LakeQuiet::
+	.string "NAO: The lake is quiet now.\n"
+	.string "Let's keep it that way.$"
 @ The stranger comes down the road right after the flyby and sends the player to the new POKeDEX.
 MW01_Route1Scene::
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
