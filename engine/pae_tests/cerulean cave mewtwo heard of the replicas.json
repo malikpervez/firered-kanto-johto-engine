@@ -1,5 +1,5 @@
 {
- "note": "After the Cinnabar reveal and Black Tide's end (Johto): Mewtwo's familiar greeting, then 'Far to the west, ROCKET made birds the way I was made. You broke their chains. I heard.' (the test ends on that box).",
+ "note": "After the Cinnabar reveal and Black Tide's end (Johto): Mewtwo's familiar greeting ('You found the quiet place I chose.'), then 'Far to the west, ROCKET made birds the way I was made. You broke their chains. I heard.' (the test ends on that box), before his battle offer.",
  "created": "2026-10-31 23:39",
  "start": {
   "map": "CeruleanCave_B1F_Frlg",
@@ -65,16 +65,8 @@
      66
     ],
     [
-     1,
-     6
-    ],
-    [
      0,
-     10
-    ],
-    [
-     0,
-     66
+     30
     ]
    ]
   }
@@ -95,5 +87,6 @@
   "flags": {
    "FLAG_FOUGHT_MEWTWO": false
   }
- }
+ },
+ "accepted": "2026-11-09 14:54"
 }

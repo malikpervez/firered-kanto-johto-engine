@@ -660,7 +660,7 @@ MW02_Text_Answer::
 MW03_Text::
 	.string "STRANGER: Nothing keeps them here.\pFUJI: Some leave when ready.\pSTRANGER: And you allow that?\pFUJI: It is a home, not a cage.\pThe traveler has no reply.$"
 MW04_Text_Question::
-	.string "STRANGER: They called POKéMON\nproperty. You opposed them.\pYet you carry POKé BALLS.\nDo you try to earn their trust?$"
+	.string "STRANGER: ROCKET called POKéMON\nproperty. You opposed them.\pYet you carry POKé BALLS.\nDo you try to earn their trust?$"
 MW04_Text_Answer::
 	.string "STRANGER: Then I will judge\nhow you use them.$"
 MW04_Seven::
@@ -694,7 +694,9 @@ MW08_Intro::
 	goto_if_unset FLAG_MW06_SEEN, MW08_Unfamiliar
 	msgbox MW08_Text_Familiar
 	@ After Black Tide, Mewtwo knows what Rocket made in Johto: a callback across the regions, nothing written.
+	@ It comes before his battle offer.
 	call_if_set FLAG_LG_FINAL_RESOLVED, MW08_Replicas
+	msgbox MW08_Text_Battle
 	goto MW08_Ask
 MW08_Unfamiliar::
 	msgbox MW08_Text_Unfamiliar
@@ -702,7 +704,9 @@ MW08_Ask::
 	msgbox MW08_Text_Ask, MSGBOX_YESNO
 	return
 MW08_Text_Familiar::
-	.string "MEWTWO: You found the quiet\nplace I chose.\pIf we battle, let it be\na choice we both make.$"
+	.string "MEWTWO: You found the quiet\nplace I chose.$"
+MW08_Text_Battle::
+	.string "MEWTWO: If we battle, let it be\na choice we both make.$"
 MW08_Text_Unfamiliar::
 	.string "A powerful presence watches you.\nIt waits rather than attacks.$"
 MW08_Text_Ask::
