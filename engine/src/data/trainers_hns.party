@@ -16038,3 +16038,48 @@ AI: Basic Trainer
 Totodile
 Level: 5
 
+=== TRAINER_GOLD_VIOLET_TOTODILE_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Geodude
+Level: 8
+
+Totodile
+Level: 10
+
+=== TRAINER_GOLD_VIOLET_CHIKORITA_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Geodude
+Level: 8
+
+Chikorita
+Level: 10
+
+=== TRAINER_GOLD_VIOLET_CYNDAQUIL_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Geodude
+Level: 8
+
+Cyndaquil
+Level: 10
+
