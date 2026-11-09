@@ -138,6 +138,10 @@
   "name": "steps_dirt_E",
   "joins": ":"
  },
+ "ł": {
+  "name": "ledge#10",
+  "joins": "_"
+ },
  "Ⰰ": {
   "name": "sign@dirt#7",
   "joins": ":"

@@ -3,8 +3,8 @@
 draw_plan.py). It is 84x20 blocks, as before, and its exits stay where its neighbours meet it: Pewter's road east
 meets the left edge at rows 9-12, Route 4's road the top at columns 68-75.
 
-The pieces: the kit's and its cliffs (cliffs.py, bank 7). Bank 8 is the kit's plants palette; 9-12 stay free for the
-seam to Route 4 (not rebuilt yet).
+The pieces: the kit's and its cliffs in levels (terraces.py: the rock and cliff pack and the terraces pack, both in
+bank 7). Bank 8 is the kit's plants palette; 9-12 stay free for the seam to Route 4 (not rebuilt yet).
 
 Run from the repository root:  python3 project/art/route3-concept/make_art.py
 It writes sheets/, palette_7.pal, spec.json, grid.txt, border.txt and legend.json next to itself; build.sh turns them
@@ -18,6 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import cliffs
 import kit
+import terraces
 
 HERE = Path(__file__).resolve().parent
 SECONDARY = "gTileset_Route3Concept"
@@ -31,6 +32,13 @@ SOLID = set("T#bRoklSBcw_~vr") | cliffs.SOLID  # (ledges are hopped going south 
 # (which cut the top one in half under the road): the top one, the middle one, the last one over the plateau
 JOIN_TREES = {"\u24e3": (13, "forest#12"), "\u24e4": (15, "forest#13"), "\u24e5": (17, "forest#9")}
 SOLID |= set(JOIN_TREES)
+# the cliffs in levels (kit/terraces.py): plan_levels.txt is the plan with each block of cliff marked with its level:
+# level 1 the cliff as it was, where it meets the route; the mountains above it climb in tiers set back one behind the
+# other, and the ridge south of the field faces away from the route. Redrawn from the Kanto Terraces pack's plan (its
+# route3_levels_proposed.txt) after the owner circled the edge by the rest stop: no tier's end is in line with the one
+# below it (they read as a crack), none leaves a one-block strip of the tier below beside it, and the rest stop
+# mountain's tiers run on round the corner into its arm
+LEVELS = HERE / "plan_levels.txt"
 
 
 def plan() -> list[list[str]]:
@@ -79,8 +87,11 @@ def check(g) -> None:
 
 def main() -> None:
     g = plan()
-    cliffs.layout(g)
-    g[7][0] = g[8][0] = "P"  # the face over the way in runs on into Pewter's (no rounded end at the join)
+    terraces.from_text(g, LEVELS.read_text())
+    # (the wall over the way in runs on into Pewter's: the map's edges count as more of the same level)
+    cells, chars, names = terraces.compose(g)
+    terraces.apply(g, chars)
+    SOLID.update(terraces.solid(names))
     for ch, (y, _) in JOIN_TREES.items():
         for yy in (y, y + 1):
             g[yy][0] = g[yy][1] = ch
@@ -90,7 +101,9 @@ def main() -> None:
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
     rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
-    char_of = cliffs.add(rock, g, extras=())
+    for name, pic, entry in cells:
+        rock.add(name, pic, tileset="secondary", solid=True, **entry)
+    border = names.setdefault("top1#0", chr(terraces.FIRST + len(names)))  # the plain top, beyond the edges
     spec_mt += rock.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
@@ -105,9 +118,9 @@ def main() -> None:
             "metatiles": spec_mt}
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
-    (HERE / "border.txt").write_text("CC\nCC\n".replace("C", cliffs.TOP[0]))
+    (HERE / "border.txt").write_text("CC\nCC\n".replace("C", border))
     legend = dict(kit.LEGEND)
-    legend.update(cliffs.legend(char_of))
+    legend.update(terraces.legend(names))
     legend.update({ch: {"name": name} for ch, (_, name) in JOIN_TREES.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")

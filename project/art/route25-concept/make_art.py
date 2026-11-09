@@ -20,6 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import cliffs
 import kit
+import terraces
 
 HERE = Path(__file__).resolve().parent
 SECONDARY = "gTileset_Route25Concept"
@@ -133,6 +134,7 @@ def check(g, d) -> None:
 def main() -> None:
     g = plan()
     d = doors(g)
+    foot = terraces.footprint(g)  # the cliff's footprint, for its tiers
     cliffs.layout(g)
     kit.check_forest(g)
     kit.check_water(g)
@@ -141,6 +143,14 @@ def main() -> None:
     spec_mt = list(base["metatiles"])
     rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
     char_of = cliffs.add(rock, g, extras=())
+    # the mountains in tiers (kit/terraces.py): the levels above the cliff's wall, each set back behind the one
+    # below, over the cliff as it was (its wall, tops and mouths untouched); past the map's top and bottom edges
+    # counts as more cliff where no map joins; Route 24 joins below at columns 0-29
+    beyond = terraces.beyond_edges(len(g[0]), len(g), down=range(0, 30))
+    tier_cells, tier_names, _ = terraces.tiers_over(g, foot, roof="", beyond=beyond)
+    for name, pic, entry in tier_cells:
+        rock.add(name, pic, tileset="secondary", solid=True, **entry)
+    SOLID.update(terraces.solid(tier_names))
     spec_mt += rock.write()
     sh = kit.Sheet(COTTAGE.name, COTTAGE.palette, HOUSE_BANK, HERE, HERE, cols=COTTAGE.idx.shape[1] // 16)
     sh.add(COTTAGE.name, COTTAGE.idx, tileset="secondary", **COTTAGE.entry())
@@ -161,9 +171,10 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, H=COTTAGE.name)
+    legend = dict(kit.LEGEND, H={"name": COTTAGE.name, "joins": ":"})  # (its door's path runs up to it)
     assert "H" not in cliffs.legend(char_of), "the cottage's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
+    legend.update(terraces.legend(tier_names, joins="C"))
     legend["d"] = {"auto": "dock", "joins": ":"}  # the road runs onto the bridge's planks without an edge between
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")

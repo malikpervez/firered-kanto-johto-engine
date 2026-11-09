@@ -65,6 +65,7 @@ rect(26, 15, 33, 15, "b"); at(33, 14, "b")      # bushes along the forest's odd 
                                                 # its trees start whole a row down, the lawn before them stays lawn
 at(9, 9, "S")                                   # the route sign
 at(26, 13, "S")                                 # trainer tips: B to stay in place on the slope
+at(21, 8, ","); at(22, 8, ","); at(22, 9, ",")  # a few flowers in the clearing's open lawn east of the road
 
 # the cutting through the woods, the cliff top, the causeway over the sea (its fences and verges)
 rect(10, START, 11, 31, ".")

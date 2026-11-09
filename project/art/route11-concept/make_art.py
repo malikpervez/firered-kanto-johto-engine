@@ -132,6 +132,27 @@ def check(g, d) -> None:
                 assert (x, y + 1) in road, f"the sign at ({x},{y}) can't be read"
 
 
+def ridge_rim(g, sheet) -> dict[str, str]:
+    """The ridge's top runs off the map's top edge, and pae counts the outside as more top: there the plateau showed
+    no rim under the forest beyond the map (border.txt). Its blocks on the top row take the top with its north edge
+    (a piece each, part of the cliff for their neighbours). Returns them (piece name -> character) for the legend."""
+    have = {name for name, _, _ in sheet.cells}
+    out = {}
+    for (x, y), (k, mask, corners) in sorted(cliffs.tops_in(g, roof="Y").items()):
+        if y or g[y][x] not in cliffs.TOP:
+            continue
+        m, c = mask & ~1, corners & ~(1 | 8)  # no top north of it: nor its north corners
+        name = cliffs.top_name(k, m, c)
+        if name not in out:
+            out[name] = chr(0x1A0 + len(out))
+            if name not in have:
+                sheet.add(name, cliffs.top(k, cliffs.outside_of(m, c)), tileset="secondary", ground="grass",
+                          solid=True)
+        g[y][x] = out[name]
+    assert not set(out.values()) & {c for r in plan() for c in r}, "a rim's character is in the plan"
+    return out
+
+
 def main() -> None:
     g = plan()
     d = doors(g)
@@ -144,6 +165,7 @@ def main() -> None:
     spec_mt = list(base["metatiles"])
     rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
     char_of = cliffs.add(rock, g, roof="Y", extras=())
+    rims = ridge_rim(g, rock)
     spec_mt += rock.write()
     sh = kit.Sheet(MOUTH.name, MOUTH.palette, CLIFF_BANK, HERE, HERE, cols=MOUTH.idx.shape[1] // 16)
     dx, dy = MOUTH.door
@@ -186,6 +208,7 @@ def main() -> None:
     legend[":"] = {"auto": "dirt", "joins": "="}  # Vermilion's cobbles run straight on into the dirt road
     assert not set("YX") & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
+    legend.update({ch: {"name": name, "joins": "C"} for name, ch in rims.items()})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

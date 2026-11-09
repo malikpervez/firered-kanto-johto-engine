@@ -7,6 +7,7 @@ A=project/art/pallet-concept
 R=project/art/packs/buildings_v0.3/buildings  # the remakes pack (Oak's lab's door)
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=PalletTown_Frlg
@@ -69,3 +70,7 @@ for who in BRIAN:12,22 HAM:14,22 JON:10,22 NICK:11,23 X:13,23 LB:11,20 TIM:8,22;
     n=${who%%:*}; xy=${who#*:}
     pae map place $M object LOCALID_FRIENDS_PALLETTOWN_FRLG_$n ${xy%,*} ${xy#*,} $P
 done
+
+# at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every
+# other object so no local id moves (kit/night.py; the game draws them at night only)
+python3 ../project/art/kit/night.py map ../$A $M $P

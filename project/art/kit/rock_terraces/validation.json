@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks_passed": 3883,
+  "checks_total": 3883,
+  "failed": [],
+  "previous_atlas_ids_preserved": [
+    0,
+    374
+  ],
+  "new_unique_tiles": 16,
+  "new_tile_budget": 28,
+  "route3_v2_new_tiles": 16,
+  "palette_unchanged": true,
+  "height_profile_unchanged": true,
+  "runtime_tested": false,
+  "limits": "Native assets and supplied plan validated; no emulator or game project provided."
+}

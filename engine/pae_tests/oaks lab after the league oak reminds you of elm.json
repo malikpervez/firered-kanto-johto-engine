@@ -1,0 +1,69 @@
+{
+ "note": "Once Oak has given the road to ELM, the next talks start with a short reminder ('PROF.ELM is expecting you in NEW BARK TOWN', KR-108) instead of the bird line and the whole road again. The test ends on that box.",
+ "created": "2026-11-06 19:30",
+ "start": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_RB_OPENING_SEEN",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "FLAG_HIDE_RIVAL_IN_LAB",
+   "!FLAG_HIDE_OAK_IN_HIS_LAB",
+   "FLAG_SYS_NATIONAL_DEX",
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=9"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "in_battle": false,
+  "flags": {
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS": true
+  }
+ },
+ "accepted": "2026-11-06 19:48"
+}

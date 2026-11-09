@@ -49,8 +49,7 @@ rect(3, 7, 11, 11, "X")                        # the Pokémon Lab, door 6,11
 rect(12, 8, 16, 11, "Z")                       # the Pokémon Center, door 14,11
 rect(17, 8, 20, 11, "L")                       # the Mart, door 18,11
 at(12, 6, "S")                                 # the island's sign
-at(9, 12, "S")                                 # the Lab's sign (two boards)
-at(10, 12, "S")
+at(9, 12, "S")                                 # the Lab's sign (one board; the Lab's wall by its door reads too)
 at(22, 5, "S")                                 # the Gym's sign
 rect(5, 15, 8, 15, "*")
 rect(16, 15, 19, 15, "*")
@@ -69,6 +68,12 @@ rect(64, 30, 68, 32, "~")                      # the hot spring
 rect(70, 31, 73, 32, "*")
 for x, y in ((52, 12), (79, 14), (51, 23), (78, 25), (57, 27), (74, 9), (80, 20)):
     at(x, y, "o")                              # boulders on the ash
+at(80, 8, "."); at(80, 9, ".")                 # the lawn wraps round the ash's north-east corner (no ash on the shore)
+for x, y in ((52, 31), (53, 31), (54, 31), (53, 32), (54, 32), (82, 18), (83, 18), (83, 19)):
+    at(x, y, "*")                              # flowers on the south lawn and the east strip
+at(39, 26, "o")                                # a rock on the west lawn
+for x, y in ((41, 13), (38, 22), (46, 27), (43, 29)):
+    at(x, y, ",")                              # flowers in the west lawn's grass
 
 
 # sea rocks round the islands, where open sea is all round them

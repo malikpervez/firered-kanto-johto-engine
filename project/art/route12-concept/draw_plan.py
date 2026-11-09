@@ -51,6 +51,8 @@ rect(10, 10, 13, 13, "N")
 # the cliff top below the gatehouse's front door (11-12,13): a lookout, the route sign
 rect(6, 14, 17, 17, ".")
 rect(6, 16, 9, 17, "g")
+# a hedge at the woods' edge: standing beside it, the screen stays off the map's west border (sea)
+rect(6, 14, 6, 17, "b")
 rect(16, 15, 17, 16, "*")
 at(14, 14, "S")
 
@@ -64,6 +66,7 @@ rect(0, 44, 7, 47, ":")
 # the neck where Snorlax sleeps (17,48), the bridge on south to the fishing house's islet
 rect(17, 48, 17, 49, "d")
 rect(16, 50, 19, 59, "d")
+rect(16, 59, 19, 59, "\u01c6")  # its last boards land on the islet's lawn: a plain board end, no beam and posts on land
 
 # the islet: the fishing house (door 21,63), its sign; behind a hedge at its east end, a pocket of land closed by two
 # trees to cut (26,63 and 26,64: more than 8 blocks from every edge you come in by, KR-45)

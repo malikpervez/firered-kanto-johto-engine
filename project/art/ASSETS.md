@@ -20,7 +20,8 @@ There are two kinds of art:
 | Sunlit Broadleaf trees | `kit/broadleaf/` | v0.4, approved 2026-10-22 | the forest (`T`) and standalone trees (`R`) on every kit map |
 | Sunlit Broadleaf bushes | `kit/broadleaf/bushes/` | v0.2, approved 2026-10-22 | bushes and hedges (`b`) on most maps |
 | Sunlit field rocks | `kit/field_rocks/` | v0.1 (its README still says "awaiting approval") | rocks (`o`) |
-| Rock & cliff pack | `kit/rock_cliff/` | revision 3.2 (made for Route 22) | cliffs, put together by `kit/cliffs.py`: Route 22, Pewter (with a higher tier on each cliff, KR-92), Routes 3, 4, 9, 10, 11, 25, Cinnabar's volcano, Route 20's Seafoam Islands |
+| Rock & cliff pack | `kit/rock_cliff/` | revision 3.2 (made for Route 22) | cliffs, put together by `kit/cliffs.py`: Route 22, Pewter (with a higher tier on each cliff, KR-92), Routes 3, 4, 9, 10, 11, 25, Route 20's Seafoam Islands (and Cinnabar's volcano until KR-100) |
+| Kanto Terraces | `kit/rock_terraces/` (its README; `previews/`) | v0.2 (made with another AI from the briefs "Kanto Terraces v0.1", its taller-mountains profile, and "v0.2": real side walls) | cliffs in levels, put together by `kit/terraces.py` over the rock & cliff pack: a mountain's tiers set back one behind the other (every level above the wall a two-block face; the pack's one-block step isn't used), side walls where a tier ends (a band of rock, lit on the west and shaded on the east, in two variants that take turns by row), square outer ends that turn into the wall (level 1's foot stays rounded on the lawn) and junctions. Route 3 (KR-103); Routes 4, 9, 10 and 20 over their cliffs as they were (`tiers_over`, KR-104). 52 new tiles in the pack's atlas (v0.2's 16 after v0.1's 36; IDs 0-374 as v0.1) |
 | Lawn, "Lush Emerald" | `kit/lawn/B_Lush_Emerald/` | option B | the lawn (`.`) everywhere |
 | Dressed-stone paving | `kit/paving/` | | paving (`p`): Pewter, Cerulean, Routes 2, 22 |
 | Kanto Street Textures (Part A: the kit's streets) | `packs/streets_v0.3/` (`asphalt/`, `pavement/`, `crossing/`, `details/`), put together by `kit/streets.py` | v0.3 (made with another AI from `Street_Textures_v0.1_prompt.md`) | in the kit, last in its primary: the road (`+`, plain asphalt: the pack's lawn edges for asphalt aren't in the kit), the pavement on asphalt (`&`, its kerb) and on grass (`$`), joins to cobble and the dressed stone, the road's lines, zebra crossings and dropped kerbs, a manhole, storm drains, tactile paving and a tree grate (by name: `asphalt_dashed_H`, `crossing_road_EW`, `manhole`...). Saffron uses them (KR-90). Part B (brick, granite, the compass, planters, in its own palette `streets_city.gpl`) is for the cities' own tilesets: Saffron's plazas are its granite and compass (`saffron-concept/make_art.py`, bank 12); Celadon's Lucky Lane its brick and compass (`celadon-concept/make_art.py`, bank 10), with Celadon's own pavements (the kit's on two grounds, `walk()`); Pewter's sidewalks and paths its brick, in the Museum's stone and without kerbs (`pewter-concept/make_art.py`, bank 7, KR-92) |
@@ -37,14 +38,17 @@ There are two kinds of art:
 | Kanto Buildings Remakes | `packs/buildings_v0.3/` (`buildings/<id>/`: png, door frames, json, palette; the pack's README, style guide and import notes beside them) | v0.3, approved 2026-10-27 (v0.2 with the Pokémon Mansion and the Power Plant made larger at Malik's request) | the 27 buildings Claude first drew in code or recoloured: see *The remakes* below |
 | Kanto Town Props | `packs/town_props_v0.1/` (one folder a piece: png and frames, json; previews, tile report, validation), put together by `kit/props.py` | v0.1 (made with another AI from `Town_Props_v0.1_prompt.md`) | street furniture in the kit's water (bank 1) and wood (bank 2) palettes, so a map needs no bank for them and takes only the pieces it places into its own tileset: a fountain (3x3, animated), benches (wood, four ways, and stone), a flower tub, a litter bin, a statue, a fingerpost, a picnic table, a bike rack, footbridges. Cerulean uses the fountain, benches, tubs, bin, bike rack and footbridges (KR-93); Viridian, Vermilion, Lavender, Fuchsia, Pallet, the Indigo Plateau, Saffron, Celadon, Cinnabar and Pewter the fountain, benches, tubs, bins, statues, fingerposts and a picnic table (KR-94) |
 | Kanto Harbour Textures | `packs/harbour_v0.1/` (`setts/`, `quay/`, `quay_wall/`, `details/`: pieces, transitions, recipes for every neighbour mask, each piece's json; palettes, previews, tile report, validation; the pack's build scripts and GBA tile pool left out), put together by `kit/harbour.py` | v0.1 (made with another AI from `Harbour_Textures_v0.1_prompt.md`) | a port's ground in the kit's ground, water and wood palettes (no bank of its own): fan setts (a 32x32 pattern, four phase pieces), quay flags, the quay wall (the coping on the land block, the face on the water block beside it, see-through to the animated water), bollards, rope, a drain, a lifebuoy. Vermilion: its two squares, the bands along the street, the promenade and the wall (KR-95); 43 tiles for the whole pack |
+| Kanto Lavender Town | `packs/lavender_v0.1/` (`slate/`, `gravel/`, `lavender_beds/`, `railing/`, `details/`: pieces, transitions, recipes for every neighbour mask, each piece's json; palettes, previews, tile report, validation, the pack's GBA tile pool; its build scripts and its copies of the brief's references left out), put together by `kit/lavender.py` | v0.1 (made with another AI from `Lavender_Town_v0.1_prompt.md`) | Lavender's ground and details: slate (a 32x32 pattern, four phase pieces, joins to the cobble), gravel, lavender beds, a low iron railing and an open gate, three memorial stones, an offering stone, a stone lantern, a violet street lamp, Pokémon bowls, a straw bed, a rest shelter. One palette of its own (bank 10: the slate, gravel and lavender), the rest in the Pokémon Tower's (bank 9) and the kit's wood (2) and plants (8). Lavender (KR-98): 58 of the pack's 67 tiles |
+| Kanto Fuchsia City | `packs/fuchsia_v0.1/` (`sandstone/`, `palisade/`, `details/`: pieces, transitions, recipes for every neighbour mask and the joins' own, each piece's json; palettes, previews, tile report, validation, the pack's GBA tile pool; its build scripts and its copies of the brief's references left out), put together by `kit/fuchsia.py` | v0.1 (made with another AI from `Fuchsia_City_v0.1_prompt.md`) | Fuchsia's ground and details: sandstone (a 32x32 pattern, four phase pieces, the same lawn edge on every side, half-block joins to the cobble west and east and to the dirt south), a bamboo palisade (every piece of a 4-neighbour fence), an exhibit board, a fuchsia bush. One palette of its own (bank 10: the kit's ground palette with its darkest colour swapped for the stone's), the rest in the Safari lodge's (bank 9) and the kit's plants (8). Fuchsia (KR-99): all 29 of the pack's tiles |
+| Kanto Cinnabar Island | `packs/cinnabar_v0.1/` (`paving/`, `ash/`, `cliff/`, `crater/`, `details/`: pieces, recipes for every neighbour mask, each piece's json; palettes, previews with the placement plan for Cinnabar, tile report, the pack's GBA tile pool; its build scripts and checksums left out), put together by `kit/cinnabar.py` | v0.1 (made with another AI from `Cinnabar_Island_v0.1_prompt.md`) | Cinnabar's ground, rock and details: basalt setts (the same lawn edge on every side), volcanic ash (two fills, the same edge), a basalt cliff (four phases of its top, a two-block columnar face, its ends, the tops' junctions with it, an embered cap for a crater's north side), a crater of cooling lava (two fills), a lava rock, a steam vent and hot-spring steam (both animated). Two palettes of its own: the volcano's (bank 11: the ash, the cliff, the crater, the details) and the town's (bank 12: the setts), each with the kit's lawn greens for the edges. Cinnabar (KR-100): 89 of the pack's tiles, laid as its placement plan has them |
 
 The packs reused for buildings they weren't drawn for:
 
 | Pack | Stands for |
 |---|---|
 | `house_family` | houses in Viridian, Pewter (three, one pack; the south-west one on the paving, `house_family_paved`; and three cottages without doors, below), Cerulean, Vermilion, Lavender; Route 2's trade house; Route 5's Day Care; Fuchsia's Warden's house |
-| `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender, Fuchsia; Route 5's Underground Path hut; Fuchsia's Safari Zone office; Route 12's fishing house |
-| `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room, restaurant and house on Lucky Lane (one pack for all three: KR-57); Saffron's Copycat's house, house, Mr. Psychic's house and Trainer Fan Club (one pack for all four: KR-84); Route 16's house in the woods; a house in Fuchsia (the remakes' `house_pond_garden` is it with a back door, for Fuchsia's house with the pond garden) |
+| `house_gardener` | houses in Viridian, Cerulean, Vermilion, Lavender, Fuchsia (two: by the Gym, and by the Center since KR-99); Route 5's Underground Path hut; Fuchsia's Safari Zone office; Route 12's fishing house |
+| `house_pond_keeper` | houses in Viridian, Vermilion, Lavender; Bill's Sea Cottage (Route 25); the Underground Path huts on Routes 6, 7 and 8; Celadon's Prize Room, restaurant and house on Lucky Lane (one pack for all three: KR-57); Saffron's Copycat's house, house, Mr. Psychic's house and Trainer Fan Club (one pack for all four: KR-84); Route 16's house in the woods (the remakes' `house_pond_garden` is it with a back door, for Fuchsia's house with the pond garden; Fuchsia's house by the Center was it until KR-99) |
 | `forest_gate_south` | Viridian Forest's south gate (Route 2); Saffron's south, west and east gates on Routes 6, 7 and 8 (KR-40, KR-52; Saffron's own side has its drawn gatehouses); Route 11's gatehouse to Route 12 |
 | `forest_gate_north` | Viridian Forest's north gate (Route 2); Saffron's north gate (Route 5) |
 | `east_gatehouse` | Route 2's east gatehouse |
@@ -105,6 +109,11 @@ keeps its stand-in's size and doors, except the two marked. The maps load them f
 | Cerulean's cottages without doors (blue, teal) | `cerulean-concept/make_art.py` `cottage()` (as Pewter's), with `kit/buildings.py` `recolour()` | 5×4 | the family house's, recoloured: blue (bank 11), teal (12) | Cerulean (`1`, `2`) | the family house's own 8×8 cells, a window where its door was (no new tiles) |
 | Cerulean's brick and fences on the paving | `cerulean-concept/make_art.py` | 1×1 | the street pack's brick in slate blues (bank 10); the kit's fence (wood) | Cerulean (`%`, `3`–`9`) | the brick without its kerbs; each fence shape its own block on the paving, one material with it |
 | The cycle track (Cycling Road's surface) | `route17-concept/route17_track.py` `piece()` | 1×1: 16 pieces by neighbours, inside corners, and paint (a lane line `+line`, an arrow downhill `+arrow`, a chequered line `+check`) where the plan has them | its own (`PAL`, bank 7): tarmac, a stone kerb, paint | Route 17 (`t`, `i`, `a`, `x`) | every piece is `MB_CYCLING_ROAD_PULL_DOWN` (the slope carries a rider down); a kerb wherever it meets anything but itself or the kit's cobbles |
+| The cobble-to-dirt join (a town's cobbles thinning out into a route's dirt road) | `kit/fray.py` (`add`, `lay`, `legend`) | 1×1: the two blocks either side of the join (the cobble half, the dirt half), for each side the dirt can be on (N E S W), with three different fronts | the kit's ground (bank 0), in the map's own (secondary) tileset | Route 10 (where Lavender's road north turns to dirt, KR-97) | the stones thin out over two blocks and a few loose ones lie in the dirt; its far ends are exactly the kit's `cobble(15)` and `dirt(15)`, so it runs on into both. Changes nothing in the kit; a map adds the pieces it needs |
+| Route 4's cobble-to-dirt join at Cerulean | `route4-concept/make_art.py` `setts()` | 1×1, columns 103–104, rows 10–13 | the kit's ground (bank 0) | Route 4 (KR-97) | the same idea as `kit/fray.py`, drawn for this join on its own: Cerulean's first column of cobbles thins out westward, with a few loose setts in the dirt before it |
+| The dock's landing end | `route12-concept/make_art.py` (`dock#mask+landing`) | 1×1 | wood (bank 2) | Route 12 (the bridge onto the islet, KR-97) | the kit's planks with a plain board end where they land on lawn, without the beam and posts the dock has over water |
+| The S.S. Anne's gangway | `vermilion-concept/make_art.py` (`GANGWAY`) | 1×1, the pier's last row (37–39) | wood (bank 2) and the harbour's steel | Vermilion (KR-97) | the pier's end beam and a steel gangway with white handrails on the three warp blocks |
+| Cerulean's thieves' hole | `cerulean-concept/make_art.py` `holes()` | 2×1 | the kit's ground (bank 0) | Cerulean (KR-97) | a dug burrow on the lawn behind the robbed house, where its warps are |
 
 ## Replacing a piece
 
@@ -120,9 +129,20 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
   top-left, `[x, y]`), and `door` (its `image`, `sheet_size_px`, `frame_size_px`, `frame_count` 3, `frame_order`).
   The older packs have one `door_block`; the maps read either.
 - **the palette**: buildings in one map share palette banks (7 and 9 for buildings; 8 is the kit's plants, 10–12
-  are left for seams to old maps). A map's `make_art.py` stops with "its palette isn't the one bank N has" if two
+  are left for seams to old maps; Lavender's and Fuchsia's own ground take 10, Cinnabar's 11 and 12). A map's `make_art.py` stops with "its palette isn't the one bank N has" if two
   pieces in one bank disagree. So a new building either uses its bank's palette as it is, or brings a palette for
   every piece in that bank.
+- **the lights at night** (KR-101, KR-102): a building's lit window glass, a lamp's glass or a lit sign wants
+  colours of its own in its bank, which nothing else uses: every pixel in a lit colour glows at night. Every kit
+  map's are in one table, `kit/night.py` (each map's build.sh writes them into its spec's `"lights"` and puts a glow
+  on each lamp); the kit's own in `kit/kit.py` `LIGHTS` (the Center's and Mart's glass, the MART letters, the street
+  lamp's glass, 8:14). Most of the packs' houses keep their glass in 14 and 15; a replacement that keeps a
+  building's indices keeps its lights. Where glass shares its colours with a roof, the glass's tiles are drawn with a
+  lit copy of the palette in a free bank (Pallet's houses, bank 11) or the roof's pixels go onto an unlit twin of
+  the colour (Saffron's glass roofs, 9:13), or the roof onto an unlit copy (Erika's glasshouse, bank 11): by day
+  nothing changes. Johto's and the Sevii Islands' tilesets aren't built from specs: theirs are set by
+  `night_legacy.sh`. Check a change at night with `pae map render MAP --night`, and `pae map colours MAP --bank B
+  -o PNG` before lighting a colour (AGENTS.md, "Night"). A new pack's brief asks for glass and lamp colours apart.
 - **the tile budget**: a map's own tileset holds at most 384 8×8 tiles (flipped copies count once), and the seams
   to its neighbours need room in the tile slots it leaves free. Draw repeating detail on the 16-pixel grid so tiles
   repeat. Current use, from the built tilesets (seam tiles as `pae seam build` reports them: the tiles it
@@ -148,24 +168,24 @@ A replacement that keeps the piece's size, door blocks and palette bank drops in
 | Vermilion | 307 | 60 | 206 |
 | Route 11 | 238 | 16 (for Vermilion's street's end) | 107 |
 | Route 9 | 132 | 16 (and 81 of its own) | 55 |
-| Route 10 | 287 | 53 (and 65 of its own) | 206 |
-| Lavender | 231 | 0 | 94 |
-| Route 8 | 170 | 38 (and 55 of its own) | 64 |
+| Route 10 | 287 | 71 (and 65 of its own) | 206 |
+| Lavender | 289 (the Lavender pack 58) | 18 | 173 |
+| Route 8 | 170 | 51 (and 55 of its own) | 64 |
 | Route 7 | 170 | 22 (for Celadon's own pavements and brick) | 64 |
 | Celadon | 384 | 0 | 282 |
 | Saffron | 383 | none (no compiled joins) | 319 |
 | Route 16 | 110 | 0 | 48 |
 | Route 17 | 37 | 0 | 25 |
-| Route 18 | 55 | 63 (for Fuchsia's own pieces) | 32 |
-| Fuchsia | 359 | 0 | 146 |
-| Route 15 | 55 | 0 | 32 |
+| Route 18 | 55 | 82 (for Fuchsia's own pieces) | 32 |
+| Fuchsia | 372 (the Fuchsia pack 29) | 0 | 182 |
+| Route 15 | 55 | 8 (for Fuchsia's sandstone) | 32 |
 | Route 14 | 1 (nothing of its own) | 0 | 0 |
 | Route 13 | 1 (nothing of its own) | 0 | 0 |
-| Route 12 | 107 | 78 (for Route 11's own pieces; and 1 of its own) | 32 |
-| Route 21 (north and south, one tileset) | 1 (nothing of its own) | 142 (Route 21 South, for Cinnabar's own pieces) | 0 |
-| Cinnabar | 378 | 0 | 172 |
+| Route 12 | 107 | 112 (for Lavender's slate and lavender, and Route 11's own pieces; and 1 of its own) | 32 |
+| Route 21 (north and south, one tileset) | 1 (nothing of its own) | 155 (Route 21 South, for Cinnabar's own pieces) | 0 |
+| Cinnabar | 326 (the Cinnabar pack 89) | 0 | 213 |
 | Route 20 | 157 | 0 | 82 |
-| Route 19 | 1 (nothing of its own) | 0 | 0 |
+| Route 19 | 1 (nothing of its own) | 5 (for Fuchsia's sandstone) | 0 |
 | Route 23 | 174 | 89 (for Route 22's gate; and 63 of its own) | 79 |
 | Indigo Plateau | 181 | 29 (for League West Pass) | 113 |
 

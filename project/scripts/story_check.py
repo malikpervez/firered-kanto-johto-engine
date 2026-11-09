@@ -719,7 +719,7 @@ STEPS = [
          via=[(11, 40), (10, 40), (10, 41), (9, 41), (9, 51)], walk=(0, 51), inputs="LEFT*30, wait 200",
          expect=dict(map="Route15_Frlg", xy=(78, 15))),
     dict(name="route15-gate", what="West along Route 15 (round the bikers' and beauties' lines) into its west "
-         "gatehouse (along the south lane: the road's Volbeat and Illumise patrol it, and its Hoppip wander anywhere)",
+         "gatehouse (along the south lane: the road's Oddish and Ditto patrol it, and its Venonat wander anywhere)",
          via=[(78, 17), (21, 17), (21, 8), (19, 8), (19, 5)], walk=(17, 5), inputs=f"LEFT*{hold(1)}, wait 20, LEFT*20, wait 250",
          expect=dict(map="Route15_WestEntrance_1F_Frlg")),
     dict(name="route15-gate-out", what="Through the gatehouse and out of its west door", walk=(2, 6),
@@ -788,13 +788,13 @@ STEPS = [
          expect=dict(map="FuchsiaCity_Frlg", xy=(31, 32))),
     # Saffron: back north the long way (Routes 15 to 12 and Lavender; Cycling Road needs a bike) to Route 8's gate,
     # whose guard lets you by for the Tea
-    dict(name="fuchsia-east", what="Up Fuchsia's east lane onto Route 15", via=[(40, 32), (40, 28), (41, 28), (41, 20)],
+    dict(name="fuchsia-east", what="Up Fuchsia's east lane onto Route 15", via=[(41, 32), (41, 20)],
          walk=(47, 20), inputs="RIGHT*30, wait 200", expect=dict(map="Route15_Frlg")),
     dict(name="route15-gate-east", what="Into Route 15's west gatehouse", walk=(8, 5), inputs=f"RIGHT*{hold(1)}, wait 20, "
          "RIGHT*20, wait 250", expect=dict(map="Route15_WestEntrance_1F_Frlg")),
     dict(name="route15-east", what="Through it and out of its east door", walk=(10, 6),
          inputs=f"RIGHT*{hold(1)}, wait 20, RIGHT*20, wait 250", expect=dict(map="Route15_Frlg")),
-    dict(name="route14-back", what="East along Route 15's south lane (off the road the Volbeat and Illumise patrol) "
+    dict(name="route14-back", what="East along Route 15's south lane (off the road the Oddish and Ditto patrol) "
          "onto Route 14", via=[(19, 5), (19, 8), (21, 8), (21, 17), (78, 17)], walk=(79, 15), inputs="RIGHT*30, wait 200",
          expect=dict(map="Route14_Frlg")),
     dict(name="route14-tree-back", what="Up Route 14's fields (round the ledges) to the tree on the east lane; cut it "

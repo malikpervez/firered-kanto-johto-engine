@@ -1,0 +1,41 @@
+{
+ "note": "Down from the shore street's sandstone onto the beach path's dirt (KR-99).",
+ "created": "2026-11-03 20:00",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 26,
+  "y": 32,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     48
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 26,
+  "y": 35,
+  "in_battle": false
+ },
+ "accepted": "2026-11-03 19:59"
+}

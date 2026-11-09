@@ -123,6 +123,12 @@
   "with": "rock_b",
   "elevation": 1
  },
- "U": "house_pond_keeper",
- "F": "forest_gate_south"
+ "U": {
+  "name": "house_pond_keeper",
+  "joins": "="
+ },
+ "F": {
+  "name": "forest_gate_south",
+  "joins": "="
+ }
 }

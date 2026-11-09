@@ -1,0 +1,94 @@
+{
+  "counting": "Unique 8x8 native index graphics. H/V/HV mirrors merged, rotations distinct. All delivered phases, edges and joins included.",
+  "groups": {
+    "sandstone": {
+      "unique_tiles": 14,
+      "limit": 16
+    },
+    "palisade": {
+      "unique_tiles": 8,
+      "limit": 8
+    },
+    "exhibit_board": {
+      "unique_tiles": 3,
+      "limit": 3
+    },
+    "fuchsia_bush": {
+      "unique_tiles": 4,
+      "limit": 4
+    }
+  },
+  "pieces": {
+    "sandstone/center": 1,
+    "sandstone/N": 2,
+    "sandstone/E": 2,
+    "sandstone/S": 2,
+    "sandstone/W": 2,
+    "sandstone/NE": 4,
+    "sandstone/SE": 4,
+    "sandstone/SW": 4,
+    "sandstone/NW": 4,
+    "sandstone/in_NE": 2,
+    "sandstone/in_SE": 2,
+    "sandstone/in_SW": 2,
+    "sandstone/in_NW": 2,
+    "sandstone/in_NE_SE": 2,
+    "sandstone/in_NE_SW": 2,
+    "sandstone/in_NE_NW": 2,
+    "sandstone/in_SE_SW": 2,
+    "sandstone/in_SE_NW": 2,
+    "sandstone/in_SW_NW": 2,
+    "sandstone/in_NE_SE_SW": 2,
+    "sandstone/in_NE_SE_NW": 2,
+    "sandstone/in_NE_SW_NW": 2,
+    "sandstone/in_SE_SW_NW": 2,
+    "sandstone/in_ALL": 1,
+    "sandstone/single": 1,
+    "sandstone/large_NW": 4,
+    "sandstone/large_NE": 2,
+    "sandstone/large_SW": 4,
+    "sandstone/large_SE": 4,
+    "sandstone/to_cobble_W": 3,
+    "sandstone/to_cobble_W_NW": 4,
+    "sandstone/to_cobble_W_NE": 4,
+    "sandstone/to_cobble_W_SW": 4,
+    "sandstone/to_cobble_W_SE": 4,
+    "sandstone/to_cobble_E": 3,
+    "sandstone/to_cobble_E_NW": 4,
+    "sandstone/to_cobble_E_NE": 4,
+    "sandstone/to_cobble_E_SW": 4,
+    "sandstone/to_cobble_E_SE": 4,
+    "sandstone/to_dirt_S": 3,
+    "sandstone/to_dirt_S_NW": 4,
+    "sandstone/to_dirt_S_NE": 3,
+    "sandstone/to_dirt_S_SW": 4,
+    "sandstone/to_dirt_S_SE": 4,
+    "palisade/post": 2,
+    "palisade/end_N": 2,
+    "palisade/end_E": 4,
+    "palisade/end_S": 2,
+    "palisade/end_W": 4,
+    "palisade/straight_NS": 2,
+    "palisade/straight_EW": 2,
+    "palisade/corner_NE": 4,
+    "palisade/corner_SE": 4,
+    "palisade/corner_SW": 4,
+    "palisade/corner_NW": 4,
+    "palisade/tee_NES": 4,
+    "palisade/tee_NEW": 2,
+    "palisade/tee_NSW": 4,
+    "palisade/tee_ESW": 2,
+    "palisade/cross": 2,
+    "details/exhibit_board": 3,
+    "details/fuchsia_bush": 4
+  },
+  "union": {
+    "unique_tiles": 29,
+    "limit": 30,
+    "ideal": 26
+  },
+  "optional_lamp": {
+    "included": false,
+    "reason": "Prioritize the complete paving, palisade, exhibit board and bush within the 30-tile cap. Existing kit lamps remain context."
+  }
+}

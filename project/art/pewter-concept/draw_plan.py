@@ -58,6 +58,7 @@ rect(16, 6, 16, 11, "b")           # behind the lamp west of the Museum
 rect(40, 6, 41, 12, "b")
 at(33, 6, "*"); at(34, 6, "*"); at(33, 8, "o"); at(33, 11, "*"); at(34, 11, "*")
 rect(37, 11, 37, 12, ":")          # the path to the annex's door
+rect(32, 12, 36, 12, ":")          # and on west to the yard's way out, under the tree to cut
 at(16, 13, "@"); at(16, 12, "@")   # a lamp west of the plaza (standing in stone, as the street's do)
 at(32, 15, "S")                    # the museum's sign, east of the plaza (read from 32,16)
 
@@ -95,6 +96,7 @@ at(14, 30, "o"); at(16, 27, "o"); at(5, 25, "o")
 rect(33, 14, 41, 21, ".")
 rect(33, 22, 41, 23, "b")          # the road east can only be left by its own rows
 at(36, 17, "o"); at(34, 19, "*"); at(35, 19, "*")
+at(40, 15, "*"); at(41, 15, "*"); at(38, 20, "*"); at(39, 20, "*")  # flowers on the open lawn
 at(39, 23, "\u00a6")               # the police notice, by the road east (read from 39,24), on the grass
 
 # the city sign by Route 2's road

@@ -1,0 +1,658 @@
+{
+  "status": "PASS_WITH_REFERENCE_REVIEW_PENDING",
+  "checks_run": 20275,
+  "failed_checks": [],
+  "warnings": [
+    {
+      "palette": "kit_water",
+      "entries": [
+        {
+          "index": 9,
+          "rgb": [
+            112,
+            172,
+            228
+          ]
+        },
+        {
+          "index": 10,
+          "rgb": [
+            120,
+            196,
+            212
+          ]
+        },
+        {
+          "index": 11,
+          "rgb": [
+            208,
+            236,
+            244
+          ]
+        }
+      ],
+      "note": "Supplied WATER palette kept unchanged; these entries are not used in any new tile."
+    }
+  ],
+  "reference_review": {
+    "status": "PENDING",
+    "missing": [
+      "reference_fuchsia_zones_2x.png",
+      "reference_fuchsia_now_1x.png",
+      "reference_fuchsia_zoo_3x.png",
+      "reference_fuchsia_shore_3x.png"
+    ],
+    "previews": "Scenes reconstructed from the text plan and approved kit context; exact reference-map visual matching has not been verified."
+  },
+  "palettes": {
+    "supplied_unchanged": true,
+    "new_palette": "fuchsia_town",
+    "new_palette_changes_from_ground": [
+      1
+    ],
+    "used_entries": {
+      "fuchsia_town": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "fuchsia_safari": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "kit_plants": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10
+      ]
+    }
+  },
+  "tile_counts": {
+    "sandstone": 14,
+    "palisade": 8,
+    "exhibit_board": 3,
+    "fuchsia_bush": 4
+  },
+  "union_tiles": 29,
+  "sandstone_blocks_in_text_plan": 405,
+  "animation": "Static pack. No animated pieces requested.",
+  "files": [
+    {
+      "file": "sandstone/tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 1,
+      "sha256": "4ac672dd281818b88e3b33d336a5e0dc9fbec5bdc10ce6d4596f3f56717b4490"
+    },
+    {
+      "file": "sandstone/tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "0eb63a65c434c0cbd02557589bb53b314634aa13acd50ea8e8d5c32fd5917915"
+    },
+    {
+      "file": "sandstone/tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "b292011265767c7ce82d8fac9abdfe0a68e10601c691ed4b9a6d0bb4989d4f5f"
+    },
+    {
+      "file": "sandstone/tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "a4704c50a1bc31ae396300672954b76ce8bbc44e00479ebb743d3e5e4131dc84"
+    },
+    {
+      "file": "sandstone/tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "ceab45f66cd642185e8f6bb71bf93d43308f2dd8841039f3709f2e1da80a11bf"
+    },
+    {
+      "file": "sandstone/tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "45b8c897fcf2e45b28a2078fbead4ede85368d82689f8cd27b50eeefc3e061cf"
+    },
+    {
+      "file": "sandstone/tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "b77b7900f631191591d60390bafbca6afeb596eb658d1ee626296e3733cbc7de"
+    },
+    {
+      "file": "sandstone/tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "5201dad1dbff83d980f5b548b8f732111dfbdfd226ca58011cb4114dc6814f21"
+    },
+    {
+      "file": "sandstone/tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "1e6558b303ac020ce732bc25c02f3ba9a5fa5fc5d0b8d4b8e9cdc0727e4d983a"
+    },
+    {
+      "file": "sandstone/tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "a81e50bdcf96330dd5db97a35168dcda6def0b0c4096e5ff9e33c0416fcb3beb"
+    },
+    {
+      "file": "sandstone/tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "4009898601ecb97c0b04f2348f93850bc6dd2bf81157be4eba84c1b4a6bfd1e6"
+    },
+    {
+      "file": "sandstone/tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "778b9af9332685de91c0860ff17869975c54c9f95f455c4ce189255ca2327347"
+    },
+    {
+      "file": "sandstone/tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "33939241d56872b549dc6a8463e07badf2a5cdcd08b8c4be88b0ef4ffc6614a5"
+    },
+    {
+      "file": "sandstone/tiles/in_NE_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "9b7e4f0b4360dd75c6bc3ede885226794a8b3ac870f6eedc7b85330cf05d27ff"
+    },
+    {
+      "file": "sandstone/tiles/in_NE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "ed563ac96d9204f35a95aa6a2b52cbba1922081d889a0956c5987781a5f78b71"
+    },
+    {
+      "file": "sandstone/tiles/in_NE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "4199f81b396eba3cbc40d542343080731067d6dd7a0aaae6d0f53f953bac0579"
+    },
+    {
+      "file": "sandstone/tiles/in_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "3fcd1c346b7a9907a92faffd01351c0eaaac3e6526ab468cc3ac1071d73a26ba"
+    },
+    {
+      "file": "sandstone/tiles/in_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "f17d195f07b7cd6b819c7716712dae1fbe23f821af6fb2ee9868da94ade59d4a"
+    },
+    {
+      "file": "sandstone/tiles/in_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "cd69d746b4a802286cc4e92f66d57fc0eb53fb54e03d8bfbfb8f7ae043586741"
+    },
+    {
+      "file": "sandstone/tiles/in_NE_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "f75ede64c38134be270b99dd79e87014139ee6eff215c0be3f13144afde28460"
+    },
+    {
+      "file": "sandstone/tiles/in_NE_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "c2e3e6193c0bc56f1a416590e1bfaf54d90996bca130fc6aa984050c10ef74e5"
+    },
+    {
+      "file": "sandstone/tiles/in_NE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "7b2d3ba9a42db6325db6e178d38f9bf71cad63515c3a4688f3551079aa226192"
+    },
+    {
+      "file": "sandstone/tiles/in_SE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "7ba5bb4e8bb09c3092f5ccc0cd6c6809a5204c123be83ab7c6002808c768f552"
+    },
+    {
+      "file": "sandstone/tiles/in_ALL.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 1,
+      "sha256": "3c765f7717488d83c76269b7ff0c3dc7a0d78830ec553757e73bf2549d1901ac"
+    },
+    {
+      "file": "sandstone/tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 1,
+      "sha256": "09559287cbeaa1e47f381bffc759f789340a3963c61e488af151f05561b11a06"
+    },
+    {
+      "file": "sandstone/tiles/large_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "2b4d7ce31bb43272e3aac2a69324e1615a3cb648c08c5594f45563b1e18247a5"
+    },
+    {
+      "file": "sandstone/tiles/large_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "f3cd463ee607484524903772fcfec4d41c07dce7e9f394b3fce27e2330563456"
+    },
+    {
+      "file": "sandstone/tiles/large_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "96dbcd721bbe7e2dd44f7c0faf0de57f30f5b9568c01937895dd4c193d7f8ab1"
+    },
+    {
+      "file": "sandstone/tiles/large_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "96dbcd721bbe7e2dd44f7c0faf0de57f30f5b9568c01937895dd4c193d7f8ab1"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 3,
+      "sha256": "ce887d731064b3a248acf098388356e471c89b577d50549822bf974e5bcf85b7"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_W_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "ef4d2682c02e7ae3ced0824bca740587d47a95ccf0f1c6ab1b4580ac663b128d"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_W_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "ef4d2682c02e7ae3ced0824bca740587d47a95ccf0f1c6ab1b4580ac663b128d"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_W_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "a5351564d400d68862fabdb2c16aa4cf3f5d24f8a74123504c8bc5aa4c230672"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_W_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "a5351564d400d68862fabdb2c16aa4cf3f5d24f8a74123504c8bc5aa4c230672"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 3,
+      "sha256": "811908ead34525ce45a64732f5bc79c4ccc50063c44db69e4cd209536d7f8e07"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_E_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "4e768fa0986240a2cd3ba3f5709cbb4d72b22f91c394f77af81a155d132fec5a"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_E_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "c15086f80949b19b323f1ccc468b38aa931b4b4f6cd29fad85c3df2eb18f7689"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_E_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "c15086f80949b19b323f1ccc468b38aa931b4b4f6cd29fad85c3df2eb18f7689"
+    },
+    {
+      "file": "sandstone/transitions/to_cobble_E_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "c15086f80949b19b323f1ccc468b38aa931b4b4f6cd29fad85c3df2eb18f7689"
+    },
+    {
+      "file": "sandstone/transitions/to_dirt_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 3,
+      "sha256": "85e66c77a3f0224afd95c319c2677d7147a5cebb6791ebe84830233806d1ff57"
+    },
+    {
+      "file": "sandstone/transitions/to_dirt_S_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "f9be26e63784461d915071609d547ae15bd5bb8836696287a76c04909d380ade"
+    },
+    {
+      "file": "sandstone/transitions/to_dirt_S_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 3,
+      "sha256": "af3f17acb6231a205c9d0373532e3288c6ff745c264f8d711dd7c39f3f72c7c7"
+    },
+    {
+      "file": "sandstone/transitions/to_dirt_S_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "e7d4c92b6977e9437218b5953ba8c92c9d8bb83cb1210df60dcd228774431c0d"
+    },
+    {
+      "file": "sandstone/transitions/to_dirt_S_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "e7d4c92b6977e9437218b5953ba8c92c9d8bb83cb1210df60dcd228774431c0d"
+    },
+    {
+      "file": "palisade/tiles/post.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "b0ad3cb4565d1eabe889b6a58aa1a72bf7c19f4d6722d1269a01445edaef2485"
+    },
+    {
+      "file": "palisade/tiles/end_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "9e291941d87094e2c8b9ad99e11a9fcdbef7f2dac87cc6d119c2e214b97eac8e"
+    },
+    {
+      "file": "palisade/tiles/end_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "068b922981eac90518c618a1f21ab5b9aa0343d9d55ff50e6dcab80bcce4b4e5"
+    },
+    {
+      "file": "palisade/tiles/end_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "526908bfc61190c443a1fc271c92159a7067e418ec6febb65f4fd919f4fecea1"
+    },
+    {
+      "file": "palisade/tiles/end_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "047ec89c7398a6fb2ed84ec380d075f12fc7e6e1f1c1038db0577fbb266a7fa8"
+    },
+    {
+      "file": "palisade/tiles/straight_NS.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "4f9c83451227227c35d2d3d4f682692c062a7545cc52cf5495be037816e6c2aa"
+    },
+    {
+      "file": "palisade/tiles/straight_EW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "9cfcba81ad3c3e28639c44c8cf9f80dc17a3063c563a6a9b091d063d130d5427"
+    },
+    {
+      "file": "palisade/tiles/corner_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "ab03fb58737e410622e36cfdb7eaf350edcfda470e837243a1773e8d2fc1392a"
+    },
+    {
+      "file": "palisade/tiles/corner_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "4d4165e39ca6929002eb07588579806bc2e51f551969a4408be3e45245be7391"
+    },
+    {
+      "file": "palisade/tiles/corner_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "31904c2654732c40d7bc7df82f7033ac3bdaf3bc693249877bc2680048398d7c"
+    },
+    {
+      "file": "palisade/tiles/corner_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "5dd5f92426818750ca98d141f778ca446966b3e4d31a3d5e1f70bb713e4e9b50"
+    },
+    {
+      "file": "palisade/tiles/tee_NES.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "acd39646a333e8b1d8e547f579337aa33fff9362878cb7f6a3ccc45b4f779a0c"
+    },
+    {
+      "file": "palisade/tiles/tee_NEW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "73c0e01d33bd86a197fd43ad6d41c693250b22248823e8762eeb003707d88cf0"
+    },
+    {
+      "file": "palisade/tiles/tee_NSW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "acd3ba7ee837c5c298d8c2ef8fe32f09a51afd1b8d5ac26425b72f0928ce4894"
+    },
+    {
+      "file": "palisade/tiles/tee_ESW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "ca2bfcb93b042cf2b0992e192936e6e22499722556c602f3cec0d82930e73595"
+    },
+    {
+      "file": "palisade/tiles/cross.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 2,
+      "sha256": "2594d3fb44d39efcbd9ca98f9e37f52dc0ba1ca94d7096e818d98c3554dc03ad"
+    },
+    {
+      "file": "details/tiles/exhibit_board.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 3,
+      "sha256": "6346cd5120c28c99d2f2a52d0481d982eb45a332382b1edd40114a50e1e6227d"
+    },
+    {
+      "file": "details/tiles/fuchsia_bush.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "unique_tiles": 4,
+      "sha256": "6eecdd07862bcac713e39210014aef1b0ae898a01599db73f3201dc22320861a"
+    }
+  ]
+}

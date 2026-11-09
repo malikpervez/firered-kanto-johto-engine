@@ -84,6 +84,12 @@ rect(37, 24, 57, 27, "g")
 rect(36, 24, 36, 27, "b")
 rect(40, 18, 41, 19, "R"); at(50, 17, "o")
 
+# a little colour on the open lawns: flowers in the lawn above the hut, a bed of flowers on the lawn south-east of
+# the road, a stump in the north-east lawn (open ground all round each; none in anyone's way or sight)
+at(17, 6, ","); at(18, 6, ","); at(18, 7, ",")
+rect(52, 21, 53, 22, "*")
+at(46, 5, "k")
+
 # the forest drawn in whole 2x2 trees (the even grid): where its edge falls mid-tree, a hedge of bushes (still solid)
 rect(6, 6, 6, 27, "b")                         # the west side, so the forest ends at column 5
 rect(7, 6, 14, 6, "b"); rect(14, 2, 14, 5, "b")  # behind the gate's roof and beside the stands: it ends at row 5, column 13

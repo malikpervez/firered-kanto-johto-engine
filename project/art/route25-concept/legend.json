@@ -124,7 +124,10 @@
   "with": "rock_b",
   "elevation": 1
  },
- "H": "house_pond_keeper",
+ "H": {
+  "name": "house_pond_keeper",
+  "joins": ":"
+ },
  "A": {
   "auto": "top1",
   "joins": "C"
@@ -167,15 +170,5 @@
  "N": "face_middle_2",
  "P": "face_middle_3",
  "}": "face_inner_E",
- "]": "face_outer_E",
- "Ⰰ": {
-  "name": "pond#14",
-  "joins": "~",
-  "elevation": 1
- },
- "Ⰱ": {
-  "name": "pond#15",
-  "joins": "~",
-  "elevation": 1
- }
+ "]": "face_outer_E"
 }

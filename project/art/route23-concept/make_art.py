@@ -65,6 +65,26 @@ GATE, GATE_DOORS = _pack(GATE_FOLDER)
 DOORWAY = [d for d in GATE_DOORS if d[1] == 0]   # the gatehouse's back doorway, entered walking south
 
 
+# the cave mouth's face is squared off at its sides with these middles of the cliff's face (its west and east column),
+# so the cliff's face runs through the mouths as one wall with two openings in it
+MOUTH_SIDES = ("N", "P")
+
+
+def beside_mouths(g) -> None:
+    """The cliff's face beside a mouth runs on into it: its column there a middle of the face (not an inner end, which
+    drew a lit corner as if the rock stopped), unlike the middles either side of it (the mouth's own side columns
+    count as ``MOUTH_SIDES``)."""
+    for y in range(MAP_H):
+        for x in range(MAP_W):
+            if g[y][x] not in "{}" or not any(0 <= x + d < MAP_W and g[y][x + d] == "Y" for d in (-1, 1)):
+                continue
+            near = set()
+            for d, side in ((-1, MOUTH_SIDES[1]), (1, MOUTH_SIDES[0])):
+                c = g[y][x + d] if 0 <= x + d < MAP_W else ""
+                near.add(side if c == "Y" else c)
+            g[y][x] = next(c for c in cliffs.MIDDLES if c not in near)
+
+
 def plan() -> list[list[str]]:
     rows = (HERE / "plan_stage1.txt").read_text().split("\n")[:MAP_H]
     g = [list(r) for r in rows]
@@ -142,6 +162,7 @@ def main() -> None:
     g = plan()
     d = doors(g)
     cliffs.layout(g, roof="Y")  # the mouths stand against the cliff: its top runs down to them, with no face
+    beside_mouths(g)
     kit.check_forest(g)
     kit.check_water(g)
     check(g, d)
@@ -162,6 +183,10 @@ def main() -> None:
             cell = idx[by * 16:(by + 1) * 16, bx * 16:(bx + 1) * 16]
             rock = cliffs.top(1 + (mx + bx) % 3 + 3 * ((my + by) % 3), 0)
             cell[cell == 0] = rock[cell == 0]
+    # its face (the bottom two rows) squared off at the sides: the cliff face's middles there, no rounded corners
+    bw, bh = idx.shape[1] // 16, idx.shape[0] // 16
+    for bx, c in zip((0, bw - 1), MOUTH_SIDES):
+        idx[(bh - 2) * 16:, bx * 16:(bx + 1) * 16] = cliffs.pack(f"face/{cliffs.FACE[c]}.png")
     sh.add(MOUTH.name, idx, tileset="secondary", ground="grass", solid=True, open=[f"{dx},{dy}"],
            behaviors={f"{dx},{dy}": "MB_NON_ANIMATED_DOOR"})  # an open mouth: you walk in
     spec_mt += sh.write()

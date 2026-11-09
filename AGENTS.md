@@ -32,6 +32,7 @@ snapshot is history (`provenance/`, `project/` records).
 | Story overview | `project/docs/campaign-story-and-progression-guide.md` |
 | Kanto trainers / Johto trainers | `engine/src/data/trainers_frlg.party` / `engine/src/data/trainers_hns.party` |
 | Wild Pokémon | `engine/src/data/wild_encounters.json` |
+| Kanto's overworld Pokémon (the walkers: Kanto's own, battleable outside towns) | `project/scripts/overworld_mons.py` (applies the rules; `--check` lists any walker that breaks them; a Pokémon with a local id is a story actor and is left alone); the battle `engine/src/overworld_mon_encounter.c` |
 | Replay tests | `engine/pae_tests/` |
 | Rebuilt Kanto maps' art (the kit, each map's concept) and every art asset | `project/art/`; `project/art/ASSETS.md` lists every piece, where it came from, where it's used and how to replace it (update it with any change to the art) |
 | Story check (new game to the end of the rebuilt maps); small fixes for later | `project/scripts/story_check.py`, `project/docs/story-sanity-check.md`; `project/docs/quality-of-life-backlog.md` |
@@ -64,6 +65,14 @@ are `{"id", "name", "removed": true}` entries in `layouts.json`. Leave them. New
      story state in the test, not a save file); look at the changed maps in pae's test window.
    * **Route and town changes**: also run the story check from the first step the change affects, and update its
      last validated point (`project/docs/story-sanity-check.md`).
+   * **Night**: the game darkens towns, cities and routes after dark (`OW_ENABLE_DNS`, 18:00–06:00), and lit
+     colours glow instead. Every change to an outdoor map, a tileset, a palette or a building is also checked at
+     night: look at the changed map with `pae map render MAP --night` (it matches the game), and give new or changed
+     content a replay test with `"clock": "22:00"` in its start where the night matters. New window glass, lamp
+     glass and lit signs get palette colours of their own (nothing else in the bank may use them; `pae map colours
+     MAP --bank B -o PNG` shows where each colour is used) and go in the map's lights: the spec's `"lights"` for a
+     tileset pae builds, `pae tileset lights` for one it doesn't. New street lamps and lanterns get a glow
+     (`pae map lights`). Briefs for new art packs ask for glass and lamp colours apart from everything else.
    * Say plainly what was not tested (a playthrough past the tests, a real device, Delta).
 3. **Report real results**: the commands, their exit codes, ROM hashes and sizes. A build is not a playtest.
 

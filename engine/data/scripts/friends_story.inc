@@ -70,12 +70,54 @@ FG_SceneMovementSettled::
 FG_FrameCamera::
 	call FG_WaitSceneMovement
 	closemessage
+	callnative Special_FriendsStoryMakeRoom, requests_effects=1
+	call_if_ne VAR_RESULT, DIR_NONE, FG_MakeRoom
 	callnative Special_FriendsCameraBegin, requests_effects=1
 	goto_if_eq VAR_RESULT, FALSE, FG_Release
 	goto_if_eq VAR_RESULT, 2, FG_CameraFramed
 	waitstate
 FG_CameraFramed::
 	return
+@ The player stands on a tile the scene needs: one step aside, still facing the friend.
+FG_MakeRoom::
+	call_if_eq VAR_RESULT, DIR_SOUTH, FG_MakeRoomSouth
+	call_if_eq VAR_RESULT, DIR_NORTH, FG_MakeRoomNorth
+	call_if_eq VAR_RESULT, DIR_WEST, FG_MakeRoomWest
+	call_if_eq VAR_RESULT, DIR_EAST, FG_MakeRoomEast
+	waitmovement 0
+	return
+FG_MakeRoomSouth::
+	applymovement OBJ_EVENT_ID_PLAYER, FG_Movement_StepAsideSouth
+	return
+FG_MakeRoomNorth::
+	applymovement OBJ_EVENT_ID_PLAYER, FG_Movement_StepAsideNorth
+	return
+FG_MakeRoomWest::
+	applymovement OBJ_EVENT_ID_PLAYER, FG_Movement_StepAsideWest
+	return
+FG_MakeRoomEast::
+	applymovement OBJ_EVENT_ID_PLAYER, FG_Movement_StepAsideEast
+	return
+FG_Movement_StepAsideSouth::
+	lock_facing_direction
+	walk_down
+	unlock_facing_direction
+	step_end
+FG_Movement_StepAsideNorth::
+	lock_facing_direction
+	walk_up
+	unlock_facing_direction
+	step_end
+FG_Movement_StepAsideWest::
+	lock_facing_direction
+	walk_left
+	unlock_facing_direction
+	step_end
+FG_Movement_StepAsideEast::
+	lock_facing_direction
+	walk_right
+	unlock_facing_direction
+	step_end
 FG_ReturnCamera::
 	call FG_WaitSceneMovement
 	closemessage
@@ -307,7 +349,7 @@ FG01_Leave::
 	closemessage
 	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_X, FG01_Movement_HeadNorth
 	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_NICK, FG01_Movement_HeadNorth
-	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_LB, FG01_Movement_HeadNorth
+	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_LB, FG01_Movement_HeadNorthRoundTheSign
 	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_BRIAN, FG01_Movement_HeadNorthSlowly
 	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_TIM, FG01_Movement_HeadNorth
 	applymovement LOCALID_FRIENDS_VIRIDIANCITY_FRLG_HAM, FG01_Movement_HeadNorth
@@ -332,6 +374,16 @@ FG01_Movement_DropFlat::
 	step_end
 FG01_Movement_HeadNorth::
 	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+@ LB starts west of the road, below VIRIDIAN's town sign (23,42): one step onto the road behind HAM, then north.
+FG01_Movement_HeadNorthRoundTheSign::
+	walk_right
 	walk_up
 	walk_up
 	walk_up

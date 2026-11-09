@@ -56,4 +56,5 @@ void InitTilesetAnim_MtEmber_Hns(void);
 void InitTilesetAnim_PalletConcept_General(void);
 void InitTilesetAnim_CeruleanConcept(void);
 void InitTilesetAnim_VermilionConcept(void);
+void InitTilesetAnim_CinnabarConcept(void);
 #endif // GUARD_TILESET_ANIMS_H
