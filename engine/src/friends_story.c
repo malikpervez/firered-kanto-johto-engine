@@ -219,7 +219,13 @@ u16 FriendsStory_GetMapScene(void)
         return FriendsStory_GetGate(21) ? 21 : 13;
     case MAP_RUINS_OF_ALPH_OUTSIDE_HNS: return 14;
     case MAP_AZALEA_TOWN_HNS: return 15;
-    case MAP_GOLDENROD_CITY_HNS: return FriendsStory_GetGate(19) ? 19 : 16;
+    case MAP_GOLDENROD_CITY_HNS:
+        // FG16 (Ham's battle, B07) can play before the takeover or once the Radio Tower is freed (its gate). After the
+        // tower, Goldenrod shows FG16 first if the story hasn't reached it, then FG19 on a later visit; it used to go
+        // straight to FG19 and retire FG16 for good.
+        if (FriendsStory_GetGate(19) && (FriendsStory_GetStage() > 16 || Seen(16)))
+            return 19;
+        return 16;
     case MAP_ECRUTEAK_CITY_HNS: return 17;
     case MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS: return 18;
     case MAP_BLACKTHORN_CITY_HNS: return 20;

@@ -1,0 +1,43 @@
+{
+ "note": "After the Radio Tower is freed, a player whose Friends haven't reached Goldenrod yet finds them at Ham's scene (FG16, his battle B07), as its gate allows; it used to jump straight to FG19 and retire FG16 for good (GAP-10). FG19 follows on a later visit.",
+ "created": "2026-11-06 23:10",
+ "start": {
+  "map": "GoldenrodCity_hns",
+  "x": 24,
+  "y": 16,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "JOHTO_VAR_GOLDENROD_CITY_STATE=11"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "GoldenrodCity_hns",
+  "x": 24,
+  "y": 16,
+  "in_battle": false
+ },
+ "accepted": "2026-11-06 20:31"
+}
