@@ -132,13 +132,12 @@ SlowpokeWell_B1F_Text_ProtonBeaten:
 	.string "but wait till next time!$"
 
 SlowpokeWell_B1F_Text_ProtonAfter:
-	.string "Yeah, TEAM ROCKET was broken up\n"
-	.string "three years ago.\p"
-	.string "The boss went into hiding.\p"
-	.string "But we continued our activities\n"
-	.string "underground!\p"
-	.string "A small obstacle like you won't be\n"
-	.string "much of a problem for our mission.\p"
+	.string "Yeah, GIOVANNI quit. Weeks ago.\n"
+	.string "You saw to that, didn't you?\p"
+	.string "But TEAM ROCKET was never one man.\n"
+	.string "The rest of us kept working.\p"
+	.string "Some want the boss back. Some want\n"
+	.string "to be the boss. I want the money.\p"
 	.string "I advise you to be very afraid of\n"
 	.string "what is to come!$"
 

@@ -345,10 +345,12 @@ AzaleaTown_Text_RivalBefore:
 	.string "…Tell me something.\p"
 	.string "Is it true that TEAM ROCKET\n"
 	.string "has returned?\p"
-	.string "What? You beat them? Hah! Quit\n"
-	.string "lying.\p"
-	.string "You're not joking?\n"
-	.string "Then let's see how good you are.$"
+	.string "What? You beat them? Of course\n"
+	.string "you did, KANTO CHAMPION.\p"
+	.string "They say you're the one who made\n"
+	.string "GIOVANNI quit.\p"
+	.string "Then why are they still here?\n"
+	.string "Let's see how good you really are.$"
 
 AzaleaTown_Text_RivalWin:
 	.string "…Humph! Useless POKéMON!\p"
@@ -369,7 +371,7 @@ AzaleaTown_Text_RivalAfter:
 	.string "like you is only a distraction.$"
 
 AzaleaTown_Text_RivalLoss:
-	.string "…Humph! I knew you were lying.$"
+	.string "…Humph! Some CHAMPION.$"
 
 AzaleaTown_Text_Rocket1:
 	.string "It's unsafe to go in there,\n"
