@@ -10,6 +10,7 @@ K=project/art/kit/buildings
 V=project/art/viridian-concept/buildings
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=FuchsiaCity_Frlg
@@ -38,7 +39,7 @@ pae door add $M 5 31 --frames ../$B/fuchsia_gym/fuchsia_gym_door.png $P
 pae door add $M 29 16 --frames ../$V/house_gardener/house_gardener_door.png $P
 pae door add $M 12 31 --frames ../$V/house_gardener/house_gardener_door.png $P
 pae door add $M 31 31 --frames ../$V/house_family/house_family_door.png $P
-pae door add $M 25 31 --frames ../$V/house_pond_keeper/house_pond_keeper_door.png $P
+pae door add $M 25 31 --frames ../$V/house_gardener/house_gardener_door.png $P
 pae door add $M 37 31 --frames ../$B/house_pond_garden/house_pond_garden_door.png $P
 
 # events: every warp keeps its number (the buildings behind them point at it)
@@ -114,3 +115,7 @@ for i, (rx, ry) in {5: (2, 0), 7: (1, 0), 1: (1, 1), 4: (2, 1), 9: (1, 1), 20: (
     o[i]["movement_range_x"], o[i]["movement_range_y"] = rx, ry
 open(p, "w").write(json.dumps(m, indent=2) + "\n")
 PY
+
+# at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every
+# other object so no local id moves (kit/night.py; the game draws them at night only)
+python3 ../project/art/kit/night.py map ../$A $M $P

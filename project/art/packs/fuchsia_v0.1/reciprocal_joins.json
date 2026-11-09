@@ -1,0 +1,65 @@
+{
+  "aliases": {
+    "cobble_to_sandstone_E": {
+      "image": "sandstone/transitions/to_cobble_W.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_E_NW": {
+      "image": "sandstone/transitions/to_cobble_W_NW.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_E_NE": {
+      "image": "sandstone/transitions/to_cobble_W_NE.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_E_SW": {
+      "image": "sandstone/transitions/to_cobble_W_SW.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_E_SE": {
+      "image": "sandstone/transitions/to_cobble_W_SE.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_W": {
+      "image": "sandstone/transitions/to_cobble_E.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_W_NW": {
+      "image": "sandstone/transitions/to_cobble_E_NW.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_W_NE": {
+      "image": "sandstone/transitions/to_cobble_E_NE.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_W_SW": {
+      "image": "sandstone/transitions/to_cobble_E_SW.png",
+      "palette": "fuchsia_town"
+    },
+    "cobble_to_sandstone_W_SE": {
+      "image": "sandstone/transitions/to_cobble_E_SE.png",
+      "palette": "fuchsia_town"
+    },
+    "dirt_to_sandstone_N": {
+      "image": "sandstone/transitions/to_dirt_S.png",
+      "palette": "fuchsia_town"
+    },
+    "dirt_to_sandstone_N_NW": {
+      "image": "sandstone/transitions/to_dirt_S_NW.png",
+      "palette": "fuchsia_town"
+    },
+    "dirt_to_sandstone_N_NE": {
+      "image": "sandstone/transitions/to_dirt_S_NE.png",
+      "palette": "fuchsia_town"
+    },
+    "dirt_to_sandstone_N_SW": {
+      "image": "sandstone/transitions/to_dirt_S_SW.png",
+      "palette": "fuchsia_town"
+    },
+    "dirt_to_sandstone_N_SE": {
+      "image": "sandstone/transitions/to_dirt_S_SE.png",
+      "palette": "fuchsia_town"
+    }
+  },
+  "note": "Reverse names refer to the same PNG and do not add new graphics."
+}

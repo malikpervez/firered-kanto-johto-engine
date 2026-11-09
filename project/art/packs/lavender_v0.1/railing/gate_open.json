@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "id": "gate_open",
+  "name": "gate_open",
+  "image": "tiles/gate_open.png",
+  "size_px": [
+    48,
+    16
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 3,
+    "height": 1
+  },
+  "palette": "kit_wood",
+  "palettes_8x8": [
+    [
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood"
+    ],
+    [
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood",
+      "kit_wood"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": false,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "walkable_blocks": [
+    [
+      1,
+      0
+    ]
+  ],
+  "over_rows": 0,
+  "over_row_indices": [],
+  "frame_count": 1,
+  "note": "Open leaves lie inside the two post blocks. The entire middle block is an unobstructed opening.",
+  "tiles_8x8": [
+    [
+      36,
+      22,
+      0,
+      0,
+      22,
+      36
+    ],
+    [
+      20,
+      20,
+      0,
+      0,
+      20,
+      20
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": true
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": true,
+        "vflip": true
+      },
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": true,
+        "vflip": true
+      }
+    ]
+  ],
+  "tile_pool_file": "../tile_pool.json",
+  "palette_file": "../palettes/kit_wood.gpl",
+  "unique_8x8_tiles": 4,
+  "frames": [
+    "tiles/gate_open.png"
+  ],
+  "frame_speed": 0
+}

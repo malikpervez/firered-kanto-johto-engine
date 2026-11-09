@@ -1,0 +1,2724 @@
+{
+  "map_blocks": [
+    38,
+    32
+  ],
+  "note": "Illustrative placement over the supplied 1x reference. No game map data is changed. Native imported Town Props benches are context only. Every preview is composed from delivered indexed pixels; enlargement is integer nearest-neighbour.",
+  "slate_cells": [
+    [
+      10,
+      9
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      10,
+      12
+    ],
+    [
+      10,
+      13
+    ],
+    [
+      10,
+      14
+    ],
+    [
+      11,
+      9
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      11,
+      13
+    ],
+    [
+      11,
+      14
+    ],
+    [
+      12,
+      9
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      12,
+      11
+    ],
+    [
+      12,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      12,
+      14
+    ],
+    [
+      13,
+      9
+    ],
+    [
+      13,
+      10
+    ],
+    [
+      13,
+      11
+    ],
+    [
+      13,
+      12
+    ],
+    [
+      13,
+      13
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      9
+    ],
+    [
+      14,
+      10
+    ],
+    [
+      14,
+      11
+    ],
+    [
+      14,
+      12
+    ],
+    [
+      14,
+      13
+    ],
+    [
+      14,
+      14
+    ],
+    [
+      15,
+      9
+    ],
+    [
+      15,
+      10
+    ],
+    [
+      15,
+      11
+    ],
+    [
+      15,
+      12
+    ],
+    [
+      15,
+      13
+    ],
+    [
+      15,
+      14
+    ],
+    [
+      16,
+      9
+    ],
+    [
+      16,
+      10
+    ],
+    [
+      16,
+      11
+    ],
+    [
+      16,
+      12
+    ],
+    [
+      16,
+      13
+    ],
+    [
+      16,
+      14
+    ],
+    [
+      17,
+      9
+    ],
+    [
+      17,
+      10
+    ],
+    [
+      17,
+      11
+    ],
+    [
+      17,
+      12
+    ],
+    [
+      17,
+      13
+    ],
+    [
+      17,
+      14
+    ],
+    [
+      18,
+      9
+    ],
+    [
+      18,
+      10
+    ],
+    [
+      18,
+      11
+    ],
+    [
+      18,
+      12
+    ],
+    [
+      18,
+      13
+    ],
+    [
+      18,
+      14
+    ],
+    [
+      19,
+      9
+    ],
+    [
+      19,
+      10
+    ],
+    [
+      19,
+      11
+    ],
+    [
+      19,
+      12
+    ],
+    [
+      19,
+      13
+    ],
+    [
+      19,
+      14
+    ],
+    [
+      20,
+      9
+    ],
+    [
+      20,
+      10
+    ],
+    [
+      20,
+      11
+    ],
+    [
+      20,
+      12
+    ],
+    [
+      20,
+      13
+    ],
+    [
+      20,
+      14
+    ],
+    [
+      21,
+      9
+    ],
+    [
+      21,
+      10
+    ],
+    [
+      21,
+      11
+    ],
+    [
+      22,
+      9
+    ],
+    [
+      22,
+      10
+    ],
+    [
+      22,
+      11
+    ],
+    [
+      23,
+      9
+    ],
+    [
+      23,
+      10
+    ],
+    [
+      23,
+      11
+    ],
+    [
+      24,
+      9
+    ],
+    [
+      24,
+      10
+    ],
+    [
+      24,
+      11
+    ],
+    [
+      25,
+      9
+    ],
+    [
+      25,
+      10
+    ],
+    [
+      25,
+      11
+    ],
+    [
+      26,
+      9
+    ],
+    [
+      26,
+      10
+    ],
+    [
+      26,
+      11
+    ],
+    [
+      27,
+      9
+    ],
+    [
+      27,
+      10
+    ],
+    [
+      27,
+      11
+    ],
+    [
+      28,
+      9
+    ],
+    [
+      28,
+      10
+    ],
+    [
+      28,
+      11
+    ],
+    [
+      29,
+      9
+    ],
+    [
+      29,
+      10
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      30,
+      9
+    ],
+    [
+      30,
+      10
+    ],
+    [
+      30,
+      11
+    ],
+    [
+      31,
+      9
+    ],
+    [
+      31,
+      10
+    ],
+    [
+      31,
+      11
+    ]
+  ],
+  "garden_cells": [
+    [
+      22,
+      13
+    ],
+    [
+      22,
+      14
+    ],
+    [
+      22,
+      15
+    ],
+    [
+      22,
+      16
+    ],
+    [
+      23,
+      13
+    ],
+    [
+      23,
+      14
+    ],
+    [
+      23,
+      15
+    ],
+    [
+      23,
+      16
+    ],
+    [
+      24,
+      13
+    ],
+    [
+      24,
+      14
+    ],
+    [
+      24,
+      15
+    ],
+    [
+      24,
+      16
+    ],
+    [
+      25,
+      13
+    ],
+    [
+      25,
+      14
+    ],
+    [
+      25,
+      15
+    ],
+    [
+      25,
+      16
+    ],
+    [
+      26,
+      13
+    ],
+    [
+      26,
+      14
+    ],
+    [
+      26,
+      15
+    ],
+    [
+      26,
+      16
+    ],
+    [
+      27,
+      13
+    ],
+    [
+      27,
+      14
+    ],
+    [
+      27,
+      15
+    ],
+    [
+      27,
+      16
+    ],
+    [
+      28,
+      13
+    ],
+    [
+      28,
+      14
+    ],
+    [
+      28,
+      15
+    ],
+    [
+      28,
+      16
+    ],
+    [
+      29,
+      13
+    ],
+    [
+      29,
+      14
+    ],
+    [
+      29,
+      15
+    ],
+    [
+      29,
+      16
+    ],
+    [
+      30,
+      13
+    ],
+    [
+      30,
+      14
+    ],
+    [
+      30,
+      15
+    ],
+    [
+      30,
+      16
+    ],
+    [
+      31,
+      13
+    ],
+    [
+      31,
+      14
+    ],
+    [
+      31,
+      15
+    ],
+    [
+      31,
+      16
+    ],
+    [
+      32,
+      13
+    ],
+    [
+      32,
+      14
+    ],
+    [
+      32,
+      15
+    ],
+    [
+      32,
+      16
+    ],
+    [
+      33,
+      13
+    ],
+    [
+      33,
+      14
+    ],
+    [
+      33,
+      15
+    ],
+    [
+      33,
+      16
+    ],
+    [
+      34,
+      13
+    ],
+    [
+      34,
+      14
+    ],
+    [
+      34,
+      15
+    ],
+    [
+      34,
+      16
+    ]
+  ],
+  "placements": [
+    {
+      "category": "slate",
+      "piece": "to_cobble_W_NW",
+      "block": [
+        10,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_W_SW",
+      "block": [
+        10,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_W_NW",
+      "block": [
+        10,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 72,
+      "block": [
+        10,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 200,
+      "block": [
+        10,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 236,
+      "block": [
+        10,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 129,
+      "block": [
+        11,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        11,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        11,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        11,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        11,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 68,
+      "block": [
+        11,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_N_NW",
+      "block": [
+        12,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        12,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 0,
+      "block": [
+        12,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        12,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 0,
+      "block": [
+        12,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_S_SW",
+      "block": [
+        12,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_N_NE",
+      "block": [
+        13,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        13,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        13,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        13,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        13,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_S_SE",
+      "block": [
+        13,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_N_NW",
+      "block": [
+        14,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        14,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 0,
+      "block": [
+        14,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        14,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 0,
+      "block": [
+        14,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_S_SW",
+      "block": [
+        14,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_N_NE",
+      "block": [
+        15,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        15,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        15,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        15,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        15,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_S_SE",
+      "block": [
+        15,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "to_cobble_N_NW",
+      "block": [
+        16,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        16,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 0,
+      "block": [
+        16,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        16,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 0,
+      "block": [
+        16,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 36,
+      "block": [
+        16,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 17,
+      "block": [
+        17,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        17,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        17,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        17,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        17,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 100,
+      "block": [
+        17,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 145,
+      "block": [
+        18,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        18,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 0,
+      "block": [
+        18,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        18,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 0,
+      "block": [
+        18,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 100,
+      "block": [
+        18,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 145,
+      "block": [
+        19,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        19,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        19,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        19,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 0,
+      "block": [
+        19,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 100,
+      "block": [
+        19,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 145,
+      "block": [
+        20,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        20,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 32,
+      "block": [
+        20,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 34,
+      "block": [
+        20,
+        12
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 50,
+      "block": [
+        20,
+        13
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 118,
+      "block": [
+        20,
+        14
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 145,
+      "block": [
+        21,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        21,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 36,
+      "block": [
+        21,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 145,
+      "block": [
+        22,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        22,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 100,
+      "block": [
+        22,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 145,
+      "block": [
+        23,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        23,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 100,
+      "block": [
+        23,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 145,
+      "block": [
+        24,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        24,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 100,
+      "block": [
+        24,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 145,
+      "block": [
+        25,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        25,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 100,
+      "block": [
+        25,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 145,
+      "block": [
+        26,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        26,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 100,
+      "block": [
+        26,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 145,
+      "block": [
+        27,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        27,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 100,
+      "block": [
+        27,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 145,
+      "block": [
+        28,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        28,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 100,
+      "block": [
+        28,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 145,
+      "block": [
+        29,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 0,
+      "block": [
+        29,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 100,
+      "block": [
+        29,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 145,
+      "block": [
+        30,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SW",
+      "mask": 0,
+      "block": [
+        30,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NW",
+      "mask": 100,
+      "block": [
+        30,
+        11
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 179,
+      "block": [
+        31,
+        9
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "SE",
+      "mask": 50,
+      "block": [
+        31,
+        10
+      ]
+    },
+    {
+      "category": "slate",
+      "piece": "autotile",
+      "phase": "NE",
+      "mask": 118,
+      "block": [
+        31,
+        11
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 8,
+      "block": [
+        22,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        23,
+        14
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        23,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        24,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        25,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        26,
+        14
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        26,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        27,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 8,
+      "block": [
+        28,
+        12
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        28,
+        13
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        28,
+        14
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        28,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 4,
+      "block": [
+        28,
+        16
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        29,
+        12
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        29,
+        13
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        29,
+        14
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        29,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 4,
+      "block": [
+        29,
+        16
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 2,
+      "block": [
+        30,
+        12
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        30,
+        13
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        30,
+        14
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        30,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 4,
+      "block": [
+        30,
+        16
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        31,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        32,
+        14
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        32,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        33,
+        14
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 0,
+      "block": [
+        33,
+        15
+      ]
+    },
+    {
+      "category": "gravel",
+      "piece": "autotile",
+      "mask": 2,
+      "block": [
+        34,
+        15
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 249,
+      "block": [
+        22,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 238,
+      "block": [
+        22,
+        14
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 253,
+      "block": [
+        22,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 149,
+      "block": [
+        23,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 245,
+      "block": [
+        23,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 209,
+      "block": [
+        24,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 108,
+      "block": [
+        24,
+        14
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 245,
+      "block": [
+        24,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 177,
+      "block": [
+        25,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 102,
+      "block": [
+        25,
+        14
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 245,
+      "block": [
+        25,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 149,
+      "block": [
+        26,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 245,
+      "block": [
+        26,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 243,
+      "block": [
+        27,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 126,
+      "block": [
+        27,
+        14
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 247,
+      "block": [
+        27,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 217,
+      "block": [
+        31,
+        3
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 200,
+      "block": [
+        31,
+        4
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 200,
+      "block": [
+        31,
+        5
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 200,
+      "block": [
+        31,
+        6
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 236,
+      "block": [
+        31,
+        7
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 249,
+      "block": [
+        31,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 238,
+      "block": [
+        31,
+        14
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 253,
+      "block": [
+        31,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 145,
+      "block": [
+        32,
+        3
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "center_b",
+      "block": [
+        32,
+        4
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "center",
+      "block": [
+        32,
+        5
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "center_c",
+      "block": [
+        32,
+        6
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 100,
+      "block": [
+        32,
+        7
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 181,
+      "block": [
+        32,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 245,
+      "block": [
+        32,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 179,
+      "block": [
+        33,
+        3
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 50,
+      "block": [
+        33,
+        4
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 50,
+      "block": [
+        33,
+        5
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 50,
+      "block": [
+        33,
+        6
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 118,
+      "block": [
+        33,
+        7
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 213,
+      "block": [
+        33,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 245,
+      "block": [
+        33,
+        16
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 243,
+      "block": [
+        34,
+        13
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 126,
+      "block": [
+        34,
+        14
+      ]
+    },
+    {
+      "category": "lavender_beds",
+      "piece": "autotile",
+      "mask": 247,
+      "block": [
+        34,
+        16
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "memorial_rounded",
+      "block": [
+        23,
+        14
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "memorial_flat",
+      "block": [
+        26,
+        14
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "memorial_flower",
+      "block": [
+        32,
+        14
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "offering_stone",
+      "block": [
+        33,
+        14
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "corner_SE",
+      "block": [
+        21,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_NS",
+      "block": [
+        21,
+        12
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_NS",
+      "block": [
+        21,
+        13
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "end_N",
+      "block": [
+        21,
+        14
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_EW",
+      "block": [
+        22,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_EW",
+      "block": [
+        23,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_EW",
+      "block": [
+        24,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "end_E",
+      "block": [
+        24,
+        17
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_EW",
+      "block": [
+        25,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_EW",
+      "block": [
+        25,
+        17
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "end_W",
+      "block": [
+        26,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "end_W",
+      "block": [
+        26,
+        17
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "end_E",
+      "block": [
+        29,
+        17
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "end_W",
+      "block": [
+        30,
+        17
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "end_E",
+      "block": [
+        32,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_EW",
+      "block": [
+        33,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "end_E",
+      "block": [
+        33,
+        17
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_EW",
+      "block": [
+        34,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_EW",
+      "block": [
+        34,
+        17
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "corner_SW",
+      "block": [
+        35,
+        11
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_NS",
+      "block": [
+        35,
+        12
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_NS",
+      "block": [
+        35,
+        13
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_NS",
+      "block": [
+        35,
+        14
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_NS",
+      "block": [
+        35,
+        15
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "straight_NS",
+      "block": [
+        35,
+        16
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "corner_NW",
+      "block": [
+        35,
+        17
+      ]
+    },
+    {
+      "category": "railing",
+      "piece": "gate_open",
+      "block": [
+        28,
+        11
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "stone_lantern",
+      "block": [
+        27,
+        11
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "stone_lantern",
+      "block": [
+        31,
+        11
+      ]
+    },
+    {
+      "category": "existing_town_props",
+      "piece": "bench_wood_north",
+      "block": [
+        27,
+        17
+      ]
+    },
+    {
+      "category": "existing_town_props",
+      "piece": "bench_wood_north",
+      "block": [
+        31,
+        17
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "rest_shelter",
+      "block": [
+        8,
+        13
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "food_water_bowls",
+      "block": [
+        8,
+        15
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "straw_bed",
+      "block": [
+        2,
+        16
+      ]
+    },
+    {
+      "category": "details",
+      "piece": "street_lamp",
+      "block": [
+        16,
+        24
+      ]
+    }
+  ],
+  "reserved_clear": {
+    "camp": [
+      [
+        10,
+        12
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        10,
+        14
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        13,
+        12
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        14,
+        12
+      ],
+      [
+        14,
+        13
+      ],
+      [
+        14,
+        14
+      ],
+      [
+        15,
+        12
+      ],
+      [
+        15,
+        13
+      ],
+      [
+        15,
+        14
+      ]
+    ],
+    "door_approaches": [
+      [
+        7,
+        7
+      ],
+      [
+        19,
+        7
+      ],
+      [
+        29,
+        9
+      ],
+      [
+        5,
+        17
+      ],
+      [
+        4,
+        25
+      ],
+      [
+        9,
+        25
+      ]
+    ],
+    "sign_approaches": [
+      [
+        11,
+        9
+      ],
+      [
+        23,
+        9
+      ],
+      [
+        26,
+        9
+      ],
+      [
+        8,
+        17
+      ]
+    ],
+    "people": [
+      [
+        20,
+        16
+      ],
+      [
+        25,
+        12
+      ],
+      [
+        10,
+        16
+      ]
+    ],
+    "ghosts": [
+      [
+        21,
+        15
+      ],
+      [
+        21,
+        16
+      ],
+      [
+        21,
+        17
+      ],
+      [
+        22,
+        15
+      ],
+      [
+        22,
+        16
+      ],
+      [
+        22,
+        17
+      ],
+      [
+        23,
+        15
+      ],
+      [
+        23,
+        16
+      ],
+      [
+        23,
+        17
+      ],
+      [
+        32,
+        4
+      ],
+      [
+        32,
+        5
+      ],
+      [
+        33,
+        4
+      ],
+      [
+        33,
+        5
+      ],
+      [
+        34,
+        4
+      ],
+      [
+        34,
+        5
+      ]
+    ],
+    "girl_area": [
+      [
+        27,
+        19
+      ]
+    ]
+  }
+}

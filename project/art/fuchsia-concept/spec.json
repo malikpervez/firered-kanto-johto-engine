@@ -15,7 +15,8 @@
   "secondary": [
    "palette_7.pal",
    "../kit/palette_plants.pal",
-   "palette_9.pal"
+   "palette_9.pal",
+   "palette_10.pal"
   ]
  },
  "reserve": {
@@ -4819,6 +4820,569 @@
    "ground": "grass"
   },
   {
+   "name": "sandstone_SW#217",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SE#129",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SW#128",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SE#0",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SW#50",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#136",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NE#0",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#0",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#18",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SW#16",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SW#179",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 32,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#236",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 48,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NE#100",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 64,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#100",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 80,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NE#64",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 96,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#32",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 112,
+   "y": 16,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#118",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 0,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SE#72",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 16,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#217_to_cobble_W",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 32,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NE#145",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 48,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#145",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 64,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NE#128",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 80,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#16",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 96,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#179",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 112,
+   "y": 32,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SW#200_to_cobble_W",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 0,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#236_to_cobble_W",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 16,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NE#179_to_cobble_E",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 32,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SE#108",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 48,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SW#100",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 64,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SE#64",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 80,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SE#50_to_cobble_E",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 96,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SE#118_to_cobble_E",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 112,
+   "y": 48,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_NW#217",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 0,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SW#100_to_dirt_S",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 16,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "sandstone_SE#118",
+   "image": "sheets/fuchsia_fuchsia_town.png",
+   "x": 32,
+   "y": 64,
+   "banks": [
+    10
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass"
+  },
+  {
+   "name": "palisade_corner_SE@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "palisade_straight_NS@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 16,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "palisade_corner_NE@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 32,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "palisade_straight_EW@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 48,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "palisade_end_W@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 64,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "palisade_end_E@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 80,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "palisade_corner_SW@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 96,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "palisade_corner_NW@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 112,
+   "y": 0,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "palisade_end_N@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 0,
+   "y": 16,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "exhibit_board_00@grass",
+   "image": "sheets/fuchsia_fuchsia_safari.png",
+   "x": 16,
+   "y": 16,
+   "banks": [
+    9
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
+   "name": "fuchsia_bush_00@grass",
+   "image": "sheets/fuchsia_kit_plants.png",
+   "x": 0,
+   "y": 0,
+   "banks": [
+    8
+   ],
+   "tileset": "secondary",
+   "dedupe": true,
+   "ground": "grass",
+   "solid": true
+  },
+  {
    "name": "safari_gate",
    "image": "sheets/safari_gate.png",
    "x": 0,
@@ -4899,26 +5463,6 @@
    }
   },
   {
-   "name": "house_pond_keeper",
-   "image": "sheets/house_pond_keeper.png",
-   "x": 0,
-   "y": 0,
-   "w": 4,
-   "h": 4,
-   "banks": [
-    7
-   ],
-   "tileset": "secondary",
-   "ground": "grass",
-   "solid": true,
-   "open": [
-    "1,3"
-   ],
-   "behaviors": {
-    "1,3": "MB_ANIMATED_DOOR"
-   }
-  },
-  {
    "name": "house_pond_garden",
    "image": "sheets/house_pond_garden.png",
    "x": 0,
@@ -4953,10 +5497,10 @@
    "dedupe": true,
    "tileset": "secondary",
    "ground": [
-    "paving#7",
-    "paving#15",
-    "paving#15",
-    "paving#15"
+    "sandstone_NW#136",
+    "sandstone_NE#0",
+    "sandstone_SW#128",
+    "sandstone_SE#0"
    ],
    "solid": true
   },
@@ -4970,7 +5514,7 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "paving#15",
+   "ground": "sandstone_SE#0",
    "solid": true
   },
   {
@@ -4985,7 +5529,28 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "paving#15",
+   "ground": [
+    "sandstone_SE#72",
+    "sandstone_SE#0"
+   ],
+   "solid": true
+  },
+  {
+   "name": "bench_stone~2",
+   "image": "sheets/props_water.png",
+   "x": 80,
+   "y": 0,
+   "w": 2,
+   "h": 1,
+   "banks": [
+    1
+   ],
+   "dedupe": true,
+   "tileset": "secondary",
+   "ground": [
+    "sandstone_SE#0",
+    "sandstone_SW#50"
+   ],
    "solid": true
   },
   {
@@ -4998,20 +5563,47 @@
    ],
    "dedupe": true,
    "tileset": "secondary",
-   "ground": "paving#3",
+   "ground": "sandstone_SE#72",
    "solid": true
   },
   {
-   "name": "sign@dirt#5",
-   "image": "sheets/settled_wood.png",
-   "x": 0,
+   "name": "picnic_table",
+   "image": "sheets/props_wood.png",
+   "x": 16,
    "y": 0,
+   "w": 2,
+   "h": 2,
    "banks": [
     2
    ],
+   "dedupe": true,
    "tileset": "secondary",
-   "ground": "dirt#5",
+   "ground": "grass",
    "solid": true
   }
- ]
+ ],
+ "lights": {
+  "5": [
+   11,
+   12,
+   13
+  ],
+  "6": [
+   6,
+   11,
+   12,
+   13
+  ],
+  "8": [
+   14
+  ],
+  "7": [
+   14,
+   15
+  ],
+  "9": [
+   7,
+   8
+  ]
+ }
 }

@@ -1,0 +1,35 @@
+{
+ "note": "By day Sprout Tower's stone lanterns show as they are: the port's lamp sprites drew a yellow square over each, day and night.",
+ "created": "2026-11-04 16:25",
+ "start": {
+  "map": "VioletCity_hns",
+  "x": 30,
+  "y": 16,
+  "state": [],
+  "script": null,
+  "clock": "12:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VioletCity_hns",
+  "x": 30,
+  "y": 16,
+  "in_battle": false
+ }
+}

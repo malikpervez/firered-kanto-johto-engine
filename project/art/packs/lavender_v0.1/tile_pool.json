@@ -1,0 +1,8 @@
+{
+  "format": "GBA 4bpp, 8x8 row-major, left pixel in low nibble",
+  "file": "tiles_4bpp.bin",
+  "tile_size_bytes": 32,
+  "tile_count": 67,
+  "palette_selection": "Each piece JSON supplies palettes_8x8 separately; graphics can be reused across banks.",
+  "transparent_tile_id": 0
+}

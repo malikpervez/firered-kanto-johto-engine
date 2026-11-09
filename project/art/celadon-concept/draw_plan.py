@@ -76,7 +76,7 @@ at(30, 18, "S")                                # its sign
 rect(33, 14, 38, 18, "O")                      # the hotel, door 35,18
 rect(47, 15, 51, 18, "C")                      # the Pokémon Center, door 49,18
 at(45, 18, "S")                                # trainer tips
-at(55, 18, "S")                                # the town sign, by the east entrance
+at(56, 18, "S")                                # the town sign, by the east entrance (clear of the crossing, 54-55)
 rect(40, 13, 41, 14, "R"); rect(43, 13, 44, 14, "R"); rect(53, 15, 54, 16, "R")
 rect(31, 3, 32, 4, "R"); rect(36, 6, 37, 7, "R"); rect(40, 4, 41, 5, "R")
 rect(19, 3, 20, 4, "R")
@@ -105,8 +105,9 @@ at(52, 29, "S")                                # trainer tips
 rect(22, 25, 23, 26, "R"); rect(50, 26, 51, 27, "R")
 
 # lamps along the boulevard, on the lawns beside it (a lamp's post's foot at x, y)
-for x, y in ((20, 18), (32, 18), (40, 18), (57, 18), (19, 26), (38, 26), (52, 26)):  # clear of the tutor and the fat man
+for x, y in ((32, 18), (40, 18), (57, 18), (19, 26), (38, 26), (52, 26)):  # clear of the tutor and the fat man
     rect(x, y - 1, x, y, "l")
+# (none at the west crossing's north end, 20-21,18: the crossing opens onto the lawn)
 
 # Erika's Gym: a glasshouse in its walled flower garden, the hedge's gap closed by the second tree to cut (12,25)
 rect(8, 25, 18, 25, "b")                       # (the forest closes its west side)
@@ -119,6 +120,7 @@ rect(8, 26, 10, 28, "*"); rect(14, 26, 17, 28, "*"); rect(8, 35, 10, 36, "*"); r
 
 # the pond garden south of Lucky Lane: the Friends' camp round 25,34, the pond, flowers
 rect(29, 33, 34, 35, "~")
+at(31, 34, "v")                                # a lily pad on the pond
 rect(19, 36, 21, 37, "*"); rect(36, 33, 39, 34, "*"); rect(44, 35, 47, 36, "*")
 rect(52, 33, 53, 34, "R"); rect(41, 32, 42, 33, "R")
 

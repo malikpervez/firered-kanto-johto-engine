@@ -171,5 +171,25 @@
  "N": "face_middle_2",
  "P": "face_middle_3",
  "}": "face_inner_E",
- "]": "face_outer_E"
+ "]": "face_outer_E",
+ "Ơ": {
+  "name": "top2#6",
+  "joins": "C"
+ },
+ "ơ": {
+  "name": "top3#14",
+  "joins": "C"
+ },
+ "Ƣ": {
+  "name": "top1#14",
+  "joins": "C"
+ },
+ "ƣ": {
+  "name": "top2#14",
+  "joins": "C"
+ },
+ "Ƥ": {
+  "name": "top1#12",
+  "joins": "C"
+ }
 }

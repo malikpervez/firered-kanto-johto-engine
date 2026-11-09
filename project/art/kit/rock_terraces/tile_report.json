@@ -1,0 +1,363 @@
+{
+  "previous_atlas_tiles_preserved": 375,
+  "extended_atlas_tiles": 391,
+  "new_unique_tiles": 16,
+  "budget": 28,
+  "ideal": 20,
+  "count_method": "New unique 8x8 index graphics relative to v0.1, with H/V/HV flips merged. Old tile IDs 0-374 remain byte-identical. Categories overlap; use the union.",
+  "changed_piece_names": [
+    "W_wall",
+    "E_wall",
+    "NW_wall",
+    "NE_wall",
+    "SW_wall",
+    "SE_wall",
+    "outer_W_step_wall",
+    "tall_outer_W",
+    "outer_W_wall_side",
+    "side_W_step",
+    "outer_E_step_wall",
+    "tall_outer_E",
+    "outer_E_wall_side",
+    "side_E_step"
+  ],
+  "added_piece_names": [
+    "W_wall_2",
+    "E_wall_2"
+  ],
+  "groups": {
+    "side_walls": {
+      "new_tiles": 10,
+      "all_referenced_unique_tiles": 11,
+      "pieces": [
+        "W_wall",
+        "E_wall",
+        "NW_wall",
+        "NE_wall",
+        "SW_wall",
+        "SE_wall",
+        "W_wall_2",
+        "E_wall_2"
+      ]
+    },
+    "outer_ends": {
+      "new_tiles": 6,
+      "all_referenced_unique_tiles": 25,
+      "pieces": [
+        "outer_W_step_wall",
+        "tall_outer_W",
+        "outer_W_wall_side",
+        "outer_E_step_wall",
+        "tall_outer_E",
+        "outer_E_wall_side"
+      ]
+    },
+    "side_junctions": {
+      "new_tiles": 4,
+      "all_referenced_unique_tiles": 5,
+      "pieces": [
+        "side_W_step",
+        "side_E_step"
+      ]
+    }
+  },
+  "pieces": {
+    "middle_1": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 4
+    },
+    "middle_2": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 4
+    },
+    "outer_W": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 4
+    },
+    "outer_E": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 4
+    },
+    "inner_W": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 4
+    },
+    "inner_E": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 4
+    },
+    "W_wall": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "E_wall": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "NW_wall": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "NE_wall": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "SW_wall": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "SE_wall": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "outer_W_step_wall": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 4
+    },
+    "outer_W_wall_side": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 8
+    },
+    "outer_E_step_wall": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 4
+    },
+    "outer_E_wall_side": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 8
+    },
+    "side_W_step": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "in_SW_step": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 2
+    },
+    "side_E_step": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "in_SE_step": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 2
+    },
+    "tall_middle_1": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 8
+    },
+    "tall_middle_2": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 8
+    },
+    "tall_middle_3": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 8
+    },
+    "tall_outer_W": {
+      "new_tiles": 3,
+      "all_referenced_unique_tiles": 7
+    },
+    "tall_outer_E": {
+      "new_tiles": 3,
+      "all_referenced_unique_tiles": 7
+    },
+    "tall_inner_W": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 7
+    },
+    "tall_inner_E": {
+      "new_tiles": 0,
+      "all_referenced_unique_tiles": 7
+    },
+    "W_wall_2": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    },
+    "E_wall_2": {
+      "new_tiles": 2,
+      "all_referenced_unique_tiles": 3
+    }
+  },
+  "route3_v2_plan": {
+    "all_used_atlas_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      41,
+      43,
+      54,
+      55,
+      59,
+      60,
+      64,
+      67,
+      70,
+      71,
+      75,
+      77,
+      88,
+      89,
+      93,
+      95,
+      106,
+      107,
+      111,
+      112,
+      116,
+      122,
+      123,
+      127,
+      129,
+      137,
+      145,
+      147,
+      163,
+      165,
+      181,
+      183,
+      203,
+      204,
+      205,
+      206,
+      210,
+      211,
+      212,
+      213,
+      226,
+      227,
+      233,
+      240,
+      241,
+      253,
+      255,
+      256,
+      259,
+      261,
+      262,
+      263,
+      267,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      339,
+      340,
+      341,
+      342,
+      347,
+      348,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      373,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390
+    ],
+    "new_used_atlas_ids": [
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390
+    ],
+    "new_unique_tiles": 16,
+    "all_used_atlas_tiles": 156,
+    "count_scope": "Union of referenced native graphics in every tier recipe, including lower layers."
+  }
+}

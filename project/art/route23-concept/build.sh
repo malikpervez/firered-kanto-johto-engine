@@ -7,6 +7,7 @@ set -e
 A=project/art/route23-concept
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=Route23_Frlg
@@ -78,3 +79,7 @@ for e in m["object_events"]:
     e["elevation"] = 3
 open(p, "w").write(json.dumps(m, indent=2) + "\n")
 PY
+
+# at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every
+# other object so no local id moves (kit/night.py; the game draws them at night only)
+python3 ../project/art/kit/night.py map ../$A $M $P

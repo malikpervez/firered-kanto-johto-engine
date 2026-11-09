@@ -24,7 +24,7 @@ SECONDARY = "gTileset_Route14Concept"
 MAP_W, MAP_H = 26, 62
 NORTH = [(x, 0) for x in range(16, 20)]
 WEST = [(0, y) for y in range(50, 54)]
-SOLID = set("T#bRoklSBcw_~vrsqQC")  # (ledges, "_", count as walls: they only drop you south)
+SOLID = set("T#bRoklSBcw_~vrsqQC\u01c8")  # (ledges, "_", count as walls: they only drop you south)
 # the trainers (local ids 1-10, 14-15), where they stand, which ways they look and how far (the wanderers look a
 # block round)
 ROUND = ("NESW", 1)
@@ -125,8 +125,11 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("ss\nss\n")
+    # (a fence end against the forest: its rails run on into the trees, "\u01c8")
     # the pier's planks run on from the crossroads' dirt with no lawn strip between (the dock edges only on the sea)
-    (HERE / "legend.json").write_text(json.dumps(dict(kit.LEGEND, d={"auto": "dock", "joins": ":"}), indent=1) + "\n")
+    legend = dict(kit.LEGEND, d={"auto": "dock", "joins": ":"})
+    legend["\u01c8"] = {"name": "fence#10", "joins": "#"}
+    (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")
 
 

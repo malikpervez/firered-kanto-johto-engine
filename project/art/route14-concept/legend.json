@@ -124,6 +124,10 @@
   "with": "rock_b",
   "elevation": 1
  },
+ "ǈ": {
+  "name": "fence#10",
+  "joins": "#"
+ },
  "Ⰰ": {
   "name": "sea#7",
   "joins": "s",

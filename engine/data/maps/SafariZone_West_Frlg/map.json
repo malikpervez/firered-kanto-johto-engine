@@ -74,7 +74,7 @@
       "flag": "FLAG_HIDE_SAFARI_ZONE_WEST_MAX_REVIVE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BALTOY",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODUO",
       "x": 13,
       "y": 15,
       "elevation": 3,
@@ -83,12 +83,12 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BALTOY",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODUO",
       "x": 7,
       "y": 15,
       "elevation": 3,
@@ -97,12 +97,12 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NUMEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NIDORAN_M",
       "x": 39,
       "y": 30,
       "elevation": 3,
@@ -111,12 +111,12 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NUMEL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NIDORAN_M",
       "x": 39,
       "y": 29,
       "elevation": 3,
@@ -125,12 +125,12 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MEDITITE",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EXEGGCUTE",
       "x": 39,
       "y": 24,
       "elevation": 3,
@@ -139,12 +139,12 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BELDUM",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_VENONAT",
       "x": 13,
       "y": 28,
       "elevation": 3,
@@ -153,7 +153,7 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     }

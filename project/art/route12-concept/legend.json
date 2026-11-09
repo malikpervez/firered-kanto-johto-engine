@@ -129,6 +129,11 @@
   "joins": "="
  },
  "F": "house_gardener",
+ "ǆ": {
+  "auto": "dock",
+  "joins": "d",
+  "with": "landing"
+ },
  "Ⰰ": {
   "name": "sea#14",
   "joins": "s",

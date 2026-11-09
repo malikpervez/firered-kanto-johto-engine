@@ -15,8 +15,7 @@
   "auto": "cobble"
  },
  ":": {
-  "auto": "dirt",
-  "joins": "p"
+  "auto": "dirt"
  },
  "~": {
   "auto": "pond",
@@ -130,26 +129,70 @@
  "G": "fuchsia_gym",
  "H": "house_gardener",
  "W": "house_family",
- "J": "house_pond_keeper",
+ "J": "house_gardener",
  "K": "house_pond_garden",
- "¡": {
-  "name": "statue_guardian",
-  "joins": "p"
+ "\u00a1": "statue_guardian",
+ "\u00a2": "flower_tub",
+ "\u00a3": "bench_stone",
+ "\u00a4": "litter_bin",
+ "\u00a5": "picnic_table",
+ "\u00a6": "bench_stone~2",
+ "\u1e00": "palisade_corner_SE@grass",
+ "\u1e01": "palisade_straight_EW@grass",
+ "\u1e02": "palisade_corner_SW@grass",
+ "\u1e03": "palisade_straight_NS@grass",
+ "\u1e04": "sandstone_SW#217",
+ "\u1e05": "sandstone_SE#129",
+ "\u1e06": "sandstone_SW#128",
+ "\u1e07": "sandstone_SE#0",
+ "\u1e08": "sandstone_SW#50",
+ "\u1e09": "palisade_corner_NE@grass",
+ "\u1e0a": "palisade_end_W@grass",
+ "\u1e0b": "exhibit_board_00@grass",
+ "\u1e0c": "palisade_end_E@grass",
+ "\u1e0d": "palisade_corner_NW@grass",
+ "\u1e0e": "sandstone_NW#136",
+ "\u1e0f": "sandstone_NE#0",
+ "\u1e10": "sandstone_NW#0",
+ "\u1e11": "sandstone_NW#18",
+ "\u1e12": "sandstone_SW#16",
+ "\u1e13": "sandstone_SW#179",
+ "\u1e14": "sandstone_NW#236",
+ "\u1e15": "sandstone_NE#100",
+ "\u1e16": "sandstone_NW#100",
+ "\u1e17": "sandstone_NE#64",
+ "\u1e18": "sandstone_NW#32",
+ "\u1e19": "sandstone_NW#118",
+ "\u1e1a": "sandstone_SE#72",
+ "\u1e1b": "fuchsia_bush_00@grass",
+ "\u1e1c": "sandstone_NW#217_to_cobble_W",
+ "\u1e1d": "sandstone_NE#145",
+ "\u1e1e": "sandstone_NW#145",
+ "\u1e1f": "sandstone_NE#128",
+ "\u1e20": "sandstone_NW#16",
+ "\u1e21": "sandstone_NW#179",
+ "\u1e22": "sandstone_SW#200_to_cobble_W",
+ "\u1e23": "sandstone_NW#236_to_cobble_W",
+ "\u1e24": "sandstone_NE#179_to_cobble_E",
+ "\u1e25": "sandstone_SE#108",
+ "\u1e26": "sandstone_SW#100",
+ "\u1e27": "sandstone_SE#64",
+ "\u1e28": "sandstone_SE#50_to_cobble_E",
+ "\u1e29": "sandstone_SE#118_to_cobble_E",
+ "\u1e2a": "palisade_end_N@grass",
+ "\u1e2b": "sandstone_NW#217",
+ "\u1e2c": "sandstone_SW#100_to_dirt_S",
+ "\u1e2d": "sandstone_SE#118",
+ "\u0254": {
+  "name": "dirt#7",
+  "joins": ":"
  },
- "¢": {
-  "name": "flower_tub",
-  "joins": "p"
+ "\u0255": {
+  "name": "dirt#15",
+  "joins": ":"
  },
- "£": {
-  "name": "bench_stone",
-  "joins": "p"
- },
- "¤": {
-  "name": "litter_bin",
-  "joins": "p"
- },
- "Ⰰ": {
-  "name": "sign@dirt#5",
-  "joins": "p"
+ "\u0256": {
+  "name": "dirt#13",
+  "joins": ":"
  }
 }

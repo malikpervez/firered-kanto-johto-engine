@@ -1,0 +1,6 @@
+{
+  "format": "GBA 4bpp; left pixel in low nibble",
+  "file": "tiles_4bpp.bin",
+  "tile_count": 29,
+  "tile_size_bytes": 32
+}

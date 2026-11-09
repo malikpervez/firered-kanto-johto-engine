@@ -1,0 +1,112 @@
+{
+ "note": "With all eight Johto badges but never past Route 27's fisher (the road state 0): the gate sets up the road to the LEAGUE itself, the officer checks the badges and lets the player on (GAP-2).",
+ "created": "2026-11-06 21:20",
+ "start": {
+  "map": "ReceptionGate_hns",
+  "x": 11,
+  "y": 16,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "JOHTO_VAR_ECRUTEAK_CITY_THEATER=8",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_FLAG_BADGE02_GET",
+   "JOHTO_FLAG_BADGE03_GET",
+   "JOHTO_FLAG_BADGE04_GET",
+   "JOHTO_FLAG_BADGE05_GET",
+   "JOHTO_FLAG_BADGE06_GET",
+   "JOHTO_FLAG_BADGE07_GET",
+   "JOHTO_FLAG_BADGE08_GET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     34
+    ],
+    [
+     0,
+     80
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     40
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     40
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     40
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     40
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     40
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     40
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "JOHTO_VAR_ROUTE27_STATE"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "ReceptionGate_hns",
+  "x": 11,
+  "y": 14,
+  "in_battle": false,
+  "vars": {
+   "JOHTO_VAR_ROUTE27_STATE": 2
+  }
+ },
+ "accepted": "2026-11-06 20:10"
+}

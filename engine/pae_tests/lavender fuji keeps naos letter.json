@@ -1,0 +1,122 @@
+{
+ "note": "Mr. Fuji reads Nao's letter once: the whole letter on the first talk, then talk to him again. He doesn't read it again: 'MR. FUJI: NAO's letter is on my table. I read it most mornings.' The test ends on that box.",
+ "created": "2026-11-09 14:29",
+ "start": {
+  "map": "LavenderTown_VolunteerPokemonHouse_Frlg",
+  "x": 3,
+  "y": 4,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_RESCUED_MR_FUJI",
+   "FLAG_GOT_POKE_FLUTE",
+   "!FLAG_HIDE_POKEHOUSE_FUJI",
+   "FLAG_RB_FUJI_SCENE_SEEN",
+   "FLAG_RB_WELCOME_SEEN",
+   "!FLAG_RB_FUJI_LETTER_READ"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_RB_WELCOME_SEEN",
+   "FLAG_RB_FUJI_LETTER_READ"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_VolunteerPokemonHouse_Frlg",
+  "x": 3,
+  "y": 4,
+  "in_battle": false,
+  "flags": {
+   "FLAG_RB_WELCOME_SEEN": true,
+   "FLAG_RB_FUJI_LETTER_READ": true
+  }
+ },
+ "accepted": "2026-11-09 14:30"
+}

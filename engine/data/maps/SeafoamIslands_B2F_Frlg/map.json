@@ -60,7 +60,7 @@
       "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_B2F_BIG_PEARL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SNORUNT",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PSYDUCK",
       "x": 20,
       "y": 11,
       "elevation": 0,
@@ -69,11 +69,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SPHEAL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SEEL",
       "x": 15,
       "y": 21,
       "elevation": 4,
@@ -82,7 +82,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
     }
   ],

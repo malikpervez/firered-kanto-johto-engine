@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "fuchsia_bush",
+  "name": "fuchsia_bush",
+  "image": "tiles/fuchsia_bush.png",
+  "size_px": [
+    16,
+    16
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "palette": "kit_plants",
+  "palette_file": "../palettes/kit_plants.gpl",
+  "palettes_8x8": [
+    [
+      "kit_plants",
+      "kit_plants"
+    ],
+    [
+      "kit_plants",
+      "kit_plants"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 0,
+  "frame_count": 1,
+  "budget_group": "fuchsia_bush",
+  "tiles_8x8": [
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      7
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": true,
+        "vflip": true
+      }
+    ]
+  ],
+  "tile_pool_file": "../tile_pool.json",
+  "unique_8x8_tiles": 4
+}

@@ -5119,7 +5119,7 @@
    "solid": true
   },
   {
-   "name": "face_inner_E",
+   "name": "face_middle_1",
    "image": "sheets/rock_cliff.png",
    "x": 144,
    "y": 16,
@@ -5133,7 +5133,7 @@
    "solid": true
   },
   {
-   "name": "face_inner_W",
+   "name": "face_middle_3",
    "image": "sheets/rock_cliff.png",
    "x": 160,
    "y": 16,
@@ -5216,5 +5216,25 @@
     "2,0": "MB_SOUTH_ARROW_WARP"
    }
   }
- ]
+ ],
+ "lights": {
+  "5": [
+   11,
+   12,
+   13
+  ],
+  "6": [
+   6,
+   11,
+   12,
+   13
+  ],
+  "8": [
+   14
+  ],
+  "9": [
+   7,
+   8
+  ]
+ }
 }

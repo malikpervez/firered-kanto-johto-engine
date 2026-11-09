@@ -6,8 +6,8 @@ TTTTTTTTTTTT======TTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTT======TTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTT======TTTTTTTTTTTTTTTTTT
 TTT.........======...............TTT
-TTT.gggg....======..........gggg.TTT
-TTT.gggg.S..======..........gggg.TTT
+TTT.gggg....======...,,.....gggg.TTT
+TTT.gggg.S..======....,.....gggg.TTT
 TTT.gggg..================..gggg.TTT
 TTT.......================.......TTT
 TTb****...================...****bTT

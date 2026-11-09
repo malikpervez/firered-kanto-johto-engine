@@ -1,0 +1,51 @@
+{
+ "note": "Route 24's Charmander (the ST03 rescue) stands by the shelter's traveler. Talking to it does nothing (since KR-106 it had become a Caterpie that asked to be battled; KR-108 puts it back).",
+ "created": "2026-11-06 19:30",
+ "start": {
+  "map": "Route24_Frlg",
+  "x": 25,
+  "y": 11,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route24_Frlg",
+  "x": 25,
+  "y": 11,
+  "in_battle": false
+ },
+ "accepted": "2026-11-06 19:48"
+}
