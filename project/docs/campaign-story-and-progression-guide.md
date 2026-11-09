@@ -885,7 +885,7 @@ Blue enthusiastically starts field science under Oak.
 
 **37C source:** [`CG_BlueRoute1`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:76). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md).
 
-Optional Route1 observation and expressive answer.
+Optional Route1 observation and expressive answer. Since 2026-11-02 (story audit T3), with the opening seen (`FLAG_RB_OPENING_SEEN`) Blue has read Oak’s notes on it: “Grandpa’s notes say you sheltered one here, in a storm. Maybe it’s one of these. I’m writing that down as a maybe!” A callback; nothing is written. Replay tests `route 1 blue remembers the storm pidgey`, `route 1 blue watches the pidgey after the storm`.
 
 ### GD01 — Gold outside Violet’s Gym
 
@@ -935,7 +935,7 @@ Silver waits for his partner at Goldenrod Center.
 
 **37C source:** [`CG_SilverDenVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:170). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md).
 
-Willing partner responds to Silver in Dragon’s Den.
+Willing partner responds to Silver in Dragon’s Den. Since 2026-11-02 (story audit T5), if the player saw him waiting at Goldenrod’s Center (`FLAG_SV02_SEEN`, either answer), he adds before his last line: “That time at the CENTER in GOLDENROD... You didn’t have to stop by.” A callback; nothing is written. Replay tests `dragons den silver remembers the center`, `dragons den silver another round after the center`.
 
 ### FG01 — Seven people and one HDMI cable
 
