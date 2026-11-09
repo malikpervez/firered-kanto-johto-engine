@@ -1,0 +1,96 @@
+{
+ "note": "After the Victory Road lesson, having seen Silver wait at Goldenrod's Center (SV02): in Dragon's Den, after 'Another round?', 'That time at the CENTER in GOLDENROD... You didn't have to stop by.' (the test ends on that box).",
+ "created": "2026-11-02 18:20",
+ "start": {
+  "map": "DragonsDen_Cavern_hns",
+  "x": 27,
+  "y": 41,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "JOHTO_VAR_ROUTE27_STATE=3",
+   "JOHTO_FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER",
+   "JOHTO_VAR_STARTER_MON=0",
+   "FLAG_SV02_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     0,
+     30
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_SV03_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "DragonsDen_Cavern_hns",
+  "x": 27,
+  "y": 41,
+  "in_battle": false,
+  "flags": {
+   "FLAG_SV03_SEEN": false
+  }
+ }
+}
