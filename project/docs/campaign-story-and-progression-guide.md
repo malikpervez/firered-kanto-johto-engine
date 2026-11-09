@@ -167,7 +167,7 @@ Fuji’s original service and doorway are preserved. These optional conversation
 
 **Where:** Fuchsia / Safari Zone → Saffron / Silph Co..
 
-The native Safari, Surf, Strength, gyms and Silph campaign remain. The friends take on small responsibilities and conduct a disastrous interview. At Silph, the Stranger’s disguise briefly slips; Rocket’s copied-call equipment also connects to Nao’s later story.
+The native Safari, Surf, Strength, gyms and Silph campaign remain. The friends take on small responsibilities and conduct a disastrous interview. At Silph, the Stranger’s disguise briefly slips; Rocket’s copied-call equipment also connects to Nao’s later story. On the Silence Bridge (Route 12), the fisher CHIP, once beaten, saw something gold over the forest weeks ago, if the player saw the opening’s bird (KR-120).
 
 **Progression:**
 
@@ -190,7 +190,7 @@ RB06 is actually spoken by the existing Silph scientist in Celadon after Silph l
 
 **Where:** Cinnabar → Pokémon Mansion → early Sevii visit.
 
-The Mansion journals keep their original account. After the Secret Key is found, Mewtwo reveals the identity behind the Stranger and leaves the eventual cave encounter as a choice. The friends see a hint of home reflected in the water.
+The Mansion journals keep their original account. After the Secret Key is found, Mewtwo reveals the identity behind the Stranger and leaves the eventual cave encounter as a choice. The friends see a hint of home reflected in the water. Between Silph’s wavering veil (MW05) and the reveal (MW06), a swimmer off Route 21’s north shore saw a man in a coat standing on the water, heading for Cinnabar. A broken Rocket tape recorder lies by each bird’s room: CALL SAMPLE 1 by Articuno (Seafoam Islands B4F), 2 by Zapdos (the Power Plant), 3 by Moltres (Mt. Ember’s summit). On One Island a traveller, for a player who saw the opening’s bird, heard a gold bird crossed the sea weeks ago, heading west; their little brother drew it with a tail like a rainbow (KR-120).
 
 **Progression:**
 
@@ -210,7 +210,7 @@ Mew remains a sparse observer, not a reward from this plot. The proposed new Sev
 
 **Where:** Viridian Gym → Route 22/23 → Indigo Plateau.
 
-Blue remains the original competitive Kanto rival through the first championship. The native final gym, Victory Road, Elite Four, Champion sequence, credits and Pallet return remain the main story. Mewtwo’s Route 22 question can fall before or after the League.
+Blue remains the original competitive Kanto rival through the first championship. The native final gym, Victory Road, Elite Four, Champion sequence, credits and Pallet return remain the main story. Mewtwo’s Route 22 question can fall before or after the League. After the friends’ FG11 and before the League, the Indigo Plateau Center’s guide adds that seven strange people asked where they could watch the LEAGUE on TV, and one of them was very loud (FG12’s set-up, KR-120). After the League, until the Rocket Warehouse is cleared, Jessie, James and Meowth stand outside it on Five Island: they heard the admin is still hiring, find out the pay is pride, and leave (KR-120).
 
 **Progression:**
 
@@ -251,7 +251,7 @@ Johto initializes once without resetting Kanto. Native Kanto clear is the actual
 
 **Where:** New Bark → Cherrygrove → Mr. Pokémon → Violet.
 
-Elm welcomes Oak’s visiting trainer and gives the adapted research errand. Before the errand he shows the three Pokémon native to Johto (Chikorita, Cyndaquil, Totodile, level 5) and the player takes one. Gold, a New Bark trainer, comes in for a partner of his own: he takes the one the player’s is strong against and battles the player. The third is the one Silver later steals, the one strong against the player’s. After the Zephyr Badge Gold waits outside Violet’s Gym: Falkner has beaten him twice, and he asks the Kanto Champion for a battle. The original Johto errand, stolen-partner/rival introduction and early badge journey continue with the same collection. The group reaches New Bark independently.
+Elm welcomes Oak’s visiting trainer and gives the adapted research errand. Before the errand he shows the three Pokémon native to Johto (Chikorita, Cyndaquil, Totodile, level 5) and the player takes one. Gold, a New Bark trainer, comes in for a partner of his own: he takes the one the player’s is strong against and battles the player. Cherrygrove’s boy has heard a CHAMPION from KANTO came to JOHTO and wonders what they’re like; on Route 31 the bug catcher WADE notices the companion PIKACHU (“You don’t see many around here”) before his battle (KR-120). The third is the one Silver later steals, the one strong against the player’s. After the Zephyr Badge Gold waits outside Violet’s Gym: Falkner has beaten him twice, and he asks the Kanto Champion for a battle. The original Johto errand, stolen-partner/rival introduction and early badge journey continue with the same collection. The group reaches New Bark independently.
 
 **Progression:**
 
@@ -345,7 +345,7 @@ RB11 is folded into RB12; there is no separate implemented Lance scene. Nao’s 
 
 **Where:** Ice Path → Blackthorn → Dragon’s Den.
 
-The native path through Ice Path, Clair and Dragon’s Den remains. Seven final friend opponents become individually selectable after the eighth regional badge and the completed native Den follow-up. Silver’s later quiet question waits for his verified native milestone.
+The native path through Ice Path, Clair and Dragon’s Den remains. Clair knows the player from Lance: “LANCE told me a KANTO trainer beat him. So you’re the one. Don’t expect me to be impressed.” (KR-120). Seven final friend opponents become individually selectable after the eighth regional badge and the completed native Den follow-up. Silver’s later quiet question waits for his verified native milestone.
 
 **Progression:**
 
@@ -885,6 +885,22 @@ Optional Route1 observation and expressive answer. Since 2026-11-02 (story audit
 **Source:** [`CG_GoldViolet`](../../engine/data/scripts/character_growth.inc); trainers `TRAINER_JOHTO_GOLD_VIOLET_TOTODILE_HNS`, `…_CHIKORITA_HNS`, `…_CYNDAQUIL_HNS` (Geodude lv 8 and his starter lv 10, chosen by `JOHTO_VAR_STARTER_MON` as in Elm’s lab).
 
 Gold: Falkner beat him twice, even after he caught a Geodude in Dark Cave for him. “Show me how a CHAMPION does it? I did say I’d win next time!” NO: he keeps watching the Gym door (ask again later). YES: the battle; after it “How do you stay so calm? I just keep shouting moves. FALKNER said that, too.”; once the police scene at Elm’s lab has played (`JOHTO_VAR_NEWBARKTOWN_LABSTATE` ≥ 5), where the player named the thief, “PROF.ELM told me about the break-in. You saw the thief, right? {RIVAL}. He took the one that sat next to mine on the table. If I see him, I’ll tell him what I think of that!”; then he walks off east to heal and try Falkner a third time. Winning sets `JOHTO_FLAG_GD01_SEEN` (Johto id `0x291B`: HnS raw flag `0x91B`, the first after HnS’s last flag `0x91A`, unused by any script or C and inside Johto’s stored events, so no save layout change). Losing is an ordinary loss; he waits to be asked again. He is gone after the second Johto badge whether or not the scene was played.
+
+### KR-120 — The quiet stretches
+
+**Status:** IMPLEMENTED 2026-11-09 (story copy F3: the small beats it spells out; FG-A–FG-F and L8 are not part of it). Nothing here is written except the trio’s receipt.
+
+| Where | Who | When | Line | Source | Replay tests |
+| --- | --- | --- | --- | --- | --- |
+| One Island, by the harbour stairs | a traveller (appended, `LOCALID_ONE_ISLAND_TRAVELER`, `FLAG_TEMP_1E`) | `FLAG_RB_OPENING_SEEN` | “They say a gold bird crossed the sea weeks ago, heading west. My little brother drew it. He gave it a tail like a rainbow.” (L6) | `RB_OneIslandTraveler`, `rainbow_story.inc` | `one island traveller heard of the gold bird`, `one island no traveller without the opening` |
+| Five Island Meadow, outside the Rocket Warehouse | Jessie, James, Meowth (appended, `FLAG_TEMP_1C`) | `FLAG_SYS_GAME_CLEAR`, warehouse not cleared (`FLAG_HIDE_FIVE_ISLAND_ROCKETS` unset), `FLAG_TRIO_FIVE_ISLAND_SEEN` unset | “JESSIE: Don’t mind us. We heard the ADMIN in there is still hiring.” “JAMES: We asked about the pay. He said ROCKET pays in pride.” “MEOWTH: We’ve been unpaid for years. We don’t need a uniform for that!” “JESSIE: Come on. We’re leaving.” They leave in a fade; sets `FLAG_TRIO_FIVE_ISLAND_SEEN` (FireRed’s unused flag 0x0BC) (L5) | `JT_FiveIslandWarehouse`, `rocket_trio_story.inc` | `five island trio still hiring`, `five island trio leave`, `five island no trio before the league`, `five island no trio after the warehouse`, `five island no trio once played` |
+| Route 21 North, in the water off the north shore | a swimmer (appended, `LOCALID_ROUTE21_STRANGER_SWIMMER`, `FLAG_TEMP_1E`) | `FLAG_MW05_SEEN` set, `FLAG_MW06_SEEN` unset | “I saw a man in a coat out here. Standing on the water! Then I blinked, and he was gone. He was heading for CINNABAR.” | `MW_Route21Swimmer`, `rainbow_story.inc` | `route 21 swimmer saw a man on the water`, `route 21 no swimmer before silph`, `route 21 no swimmer after the reveal` |
+| Seafoam Islands B4F, Power Plant, Mt. Ember summit, by each bird | a broken tape recorder (appended, the Pokédex prop sprite) | always | “A broken tape recorder lies by the wall. ROCKET’s mark is on it. The label reads: CALL SAMPLE 1.” (2 at the Power Plant, 3 at Mt. Ember) | `RB_TapeRecorderSample1`–`3`, `rainbow_story.inc` | `seafoam rocket tape call sample 1`, `power plant rocket tape call sample 2`, `mt ember rocket tape call sample 3` |
+| Route 12, Silence Bridge | the fisher CHIP, after his battle | `FLAG_RB_OPENING_SEEN` | after his line about a better ROD: “Weeks ago, I saw something gold over the forest, way up high. I didn’t catch a thing that day. I kept looking up.” | `Route12_EventScript_Chip` (`trainers_frlg.inc`), `RB_Route12FisherGold` | `route 12 fisher saw something gold`, `route 12 fisher without the opening` |
+| Indigo Plateau Pokémon Center | the guide (Gym Guy) | `FLAG_FRIENDS_FG11_SEEN` set, `FLAG_SYS_GAME_CLEAR` unset | after his advice: “Seven strange people asked where they could watch the LEAGUE on TV. One of them was very loud.” | `IndigoPlateau_PokemonCenter_1F_EventScript_GymGuy` | `indigo gym guy saw seven strange people`, `indigo gym guy before the seven came`, `indigo gym guy after the league` |
+| Cherrygrove | the boy by the Mart | always (with the Pokédex) | after his own lines: “Did you hear? They say a CHAMPION from KANTO came to JOHTO. I wonder what they’re like.” | `CherryGroveCity_EventScript_Boy2` | `cherrygrove boy heard of a kanto champion` |
+| Route 31 | the bug catcher WADE | his first battle | “Is that a PIKACHU? You don’t see many around here.” before his own intro | `Route31_Text_BugCatcherWade1_Seen` | `route 31 wade notices pikachu` |
+| Blackthorn Gym | Clair | before her battle | after “The world’s best dragon master.”: “LANCE told me a KANTO trainer beat him. So you’re the one. Don’t expect me to be impressed.” | `BlackthornGym_Text_ClairIntroText` | `blackthorn clair knows the player from lance` |
 
 ### BL03 — Notes from two regions
 

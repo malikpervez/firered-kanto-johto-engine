@@ -61,6 +61,53 @@ RB_Text_PikachuStares::
 	.string "PIKACHU's ears flatten. It stares\nat the traveler's shadow.$"
 RB_Text_PikachuSettles::
 	.string "PIKACHU watches it go.\nIts fur slowly settles.$"
+@ The quiet stretches (story copy F3, KR-120): small lines between the story's beats. Nothing here is written.
+@ L6: a traveller on One Island heard of the gold bird (RB01) crossing the sea. Shown once the opening was seen.
+RB_OneIslandTravelerVisibility::
+	setflag FLAG_TEMP_1E
+	goto_if_unset FLAG_RB_OPENING_SEEN, RB_Return
+	clearflag FLAG_TEMP_1E
+	return
+RB_OneIslandTraveler::
+	msgbox RB_Text_OneIslandTraveler, MSGBOX_NPC
+	end
+@ A swimmer on Route 21 saw the stranger on the water, after Silph's wavering veil (MW05), before the reveal (MW06).
+MW_Route21SwimmerVisibility::
+	setflag FLAG_TEMP_1E
+	goto_if_unset FLAG_MW05_SEEN, RB_Return
+	goto_if_set FLAG_MW06_SEEN, RB_Return
+	clearflag FLAG_TEMP_1E
+	return
+MW_Route21Swimmer::
+	msgbox MW_Text_Route21Swimmer, MSGBOX_NPC
+	end
+@ Broken ROCKET tape recorders by the three birds' rooms: Seafoam (1), the Power Plant (2), Mt. Ember (3).
+RB_TapeRecorderSample1::
+	msgbox RB_Text_TapeRecorderSample1, MSGBOX_SIGN
+	end
+RB_TapeRecorderSample2::
+	msgbox RB_Text_TapeRecorderSample2, MSGBOX_SIGN
+	end
+RB_TapeRecorderSample3::
+	msgbox RB_Text_TapeRecorderSample3, MSGBOX_SIGN
+	end
+@ Route 12's fisher CHIP, once beaten, saw something gold over the forest (for a player who saw RB01).
+RB_Route12FisherGold::
+	goto_if_unset FLAG_RB_OPENING_SEEN, RB_Return
+	msgbox RB_Text_Route12FisherGold
+	return
+RB_Text_OneIslandTraveler::
+	.string "They say a gold bird crossed the\nsea weeks ago, heading west.\pMy little brother drew it. He gave\nit a tail like a rainbow.$"
+MW_Text_Route21Swimmer::
+	.string "I saw a man in a coat out here.\nStanding on the water!\pThen I blinked, and he was gone.\nHe was heading for CINNABAR.$"
+RB_Text_TapeRecorderSample1::
+	.string "A broken tape recorder lies by\nthe wall. ROCKET's mark is on it.\pThe label reads: CALL SAMPLE 1.$"
+RB_Text_TapeRecorderSample2::
+	.string "A broken tape recorder lies by\nthe wall. ROCKET's mark is on it.\pThe label reads: CALL SAMPLE 2.$"
+RB_Text_TapeRecorderSample3::
+	.string "A broken tape recorder lies by\nthe wall. ROCKET's mark is on it.\pThe label reads: CALL SAMPLE 3.$"
+RB_Text_Route12FisherGold::
+	.string "Weeks ago, I saw something gold\nover the forest, way up high.\pI didn't catch a thing that day.\nI kept looking up.$"
 RB_Route1Transition::
 	setvar VAR_TEMP_E, 0
 	setflag FLAG_TEMP_1E

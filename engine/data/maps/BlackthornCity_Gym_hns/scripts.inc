@@ -235,6 +235,9 @@ BlackthornGym_EventScript_ClairAfterLeague::
 BlackthornGym_Text_ClairIntroText:
 	.string "I am CLAIR.\p"
 	.string "The world's best dragon master.\p"
+	.string "LANCE told me a KANTO trainer\n"
+	.string "beat him. So you're the one.\p"
+	.string "Don't expect me to be impressed.\p"
 	.string "I can hold my own against even the\n"
 	.string "POKéMON LEAGUE's ELITE FOUR.\p"
 	.string "Do you still want to take me on?\p"

@@ -160,7 +160,7 @@
 #define FLAG_0x0B9               0x0B9
 #define FLAG_0x0BA               0x0BA
 #define FLAG_0x0BB               0x0BB
-#define FLAG_0x0BC               0x0BC
+#define FLAG_TRIO_FIVE_ISLAND_SEEN 0x0BC // KR-120: the trio's beat outside Five Island's Rocket Warehouse (L5) played (was unused)
 #define FLAG_0x0BD               0x0BD
 #define FLAG_0x0BE               0x0BE
 #define FLAG_0x0BF               0x0BF
