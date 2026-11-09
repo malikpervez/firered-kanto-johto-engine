@@ -43,7 +43,7 @@
   "vars": [],
   "trainers": []
  },
- "threshold": 0.01,
+ "threshold": 0.001,
  "expect": {
   "map": "OneIsland_PokemonCenter_1F_Frlg",
   "x": 8,
