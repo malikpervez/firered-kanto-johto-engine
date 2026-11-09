@@ -1,0 +1,82 @@
+{
+ "note": "Nao met in Kanto, the beasts released: the first talk with Nao in Ecruteak opens with a greeting ('You came all the way to ECRUTEAK! PROF.OAK thought you might. Now I can tell you the rest.'); the test ends on that box, before the Burned Tower story.",
+ "created": "2026-10-31 23:18",
+ "start": {
+  "map": "EcruteakCity_hns",
+  "x": 30,
+  "y": 22,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_RB_OPENING_SEEN",
+   "FLAG_RB_NAO_INTRODUCED",
+   "JOHTO_FLAG_RELEASED_BEASTS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_RB_NAO_INTRODUCED",
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "EcruteakCity_hns",
+  "x": 30,
+  "y": 22,
+  "in_battle": false,
+  "flags": {
+   "FLAG_RB_NAO_INTRODUCED": true,
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN": false
+  }
+ }
+}
