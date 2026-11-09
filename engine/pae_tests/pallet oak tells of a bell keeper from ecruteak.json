@@ -1,17 +1,22 @@
 {
- "note": "A new Champion with the bird seen but Nao never met: after the National Dex scene (#104), the first talk to Oak, the once-only referral, starts with 'That bird flew west', then: 'A bell keeper from ECRUTEAK came to read my notes on the bird. NAO, she said. She has asked all of KANTO about it.' The test ends on that box, before the road to ELM.",
- "created": "2026-10-31 23:18",
+ "note": "A new Champion who saw the bird but never met Nao: at the end of the National Dex scene, after the road to ELM, \"OAK: Oh! A bell keeper came by while you were away. NAO, from ECRUTEAK. She has asked all over KANTO about a bird like yours. She's gone home.\" Ends on that box; Oak has heard about the bird by now (the Champion told him in the scene) (the story copy's A9, KR-113).",
+ "created": "2026-11-09 15:15",
  "start": {
-  "map": "PalletTown_PlayersHouse_1F_Frlg",
-  "x": 9,
-  "y": 7,
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 12,
   "state": [
+   "CLEAR_TEAM",
    "SPECIES_CHARMANDER lv50",
-   "VAR_MAP_SCENE_PALLET_TOWN_OAK=2",
-   "FLAG_SYS_GAME_CLEAR",
-   "FLAG_BADGE08_GET",
    "FLAG_SYS_POKEMON_GET",
    "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "FLAG_HIDE_OAK_IN_PALLET_TOWN",
+   "!FLAG_HIDE_OAK_IN_HIS_LAB",
+   "FLAG_HIDE_RIVAL_IN_LAB",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=7",
    "FLAG_RB_OPENING_SEEN"
   ],
   "script": null
@@ -21,12 +26,8 @@
    "op": "press",
    "inputs": [
     [
-     128,
-     20
-    ],
-    [
      0,
-     200
+     30
     ],
     [
      1,
@@ -34,7 +35,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -42,7 +43,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -50,7 +51,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -58,7 +59,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -66,7 +67,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -74,7 +75,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -82,7 +83,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -90,7 +91,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -98,7 +99,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -106,7 +107,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -114,7 +115,7 @@
     ],
     [
      0,
-     50
+     60
     ],
     [
      1,
@@ -122,11 +123,7 @@
     ],
     [
      0,
-     50
-    ],
-    [
-     0,
-     500
+     60
     ],
     [
      1,
@@ -134,7 +131,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -142,7 +139,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -150,7 +147,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -158,7 +155,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -166,7 +163,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -174,7 +171,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -182,7 +179,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -190,7 +187,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -198,7 +195,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -206,7 +203,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -214,7 +211,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -222,7 +219,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -230,7 +227,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -238,7 +235,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -246,7 +243,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -254,7 +251,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -262,7 +259,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -270,7 +267,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -278,7 +275,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -286,7 +283,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -294,7 +291,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -302,7 +299,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -310,7 +307,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -318,7 +315,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -326,7 +323,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -334,7 +331,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -342,7 +339,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -350,7 +347,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -358,7 +355,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -366,7 +363,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -374,7 +371,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -382,7 +379,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -390,7 +387,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -398,7 +395,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -406,7 +403,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -414,7 +411,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -422,7 +419,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -430,7 +427,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -438,7 +435,7 @@
     ],
     [
      0,
-     70
+     60
     ],
     [
      1,
@@ -446,31 +443,7 @@
     ],
     [
      0,
-     70
-    ],
-    [
-     0,
-     300
-    ],
-    [
-     64,
-     6
-    ],
-    [
-     0,
-     20
-    ],
-    [
-     1,
-     6
-    ],
-    [
-     0,
-     10
-    ],
-    [
-     0,
-     90
+     60
     ],
     [
      1,
@@ -478,7 +451,7 @@
     ],
     [
      0,
-     90
+     60
     ],
     [
      1,
@@ -486,7 +459,7 @@
     ],
     [
      0,
-     90
+     60
     ],
     [
      1,
@@ -494,17 +467,38 @@
     ],
     [
      0,
-     90
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     60
     ]
    ]
   }
  ],
  "watch": {
   "flags": [
-   "FLAG_RB_NAO_INTRODUCED",
-   "FLAG_RB_ECRUTEAK_TRUTH_SEEN",
    "FLAG_SYS_NATIONAL_DEX",
-   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS"
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS",
+   "FLAG_RB_OAK_HEARD_BIRD",
+   "FLAG_RB_NAO_INTRODUCED",
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN"
   ],
   "vars": [
    "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB"
@@ -518,14 +512,15 @@
   "y": 4,
   "in_battle": false,
   "flags": {
-   "FLAG_RB_NAO_INTRODUCED": false,
-   "FLAG_RB_ECRUTEAK_TRUTH_SEEN": false,
    "FLAG_SYS_NATIONAL_DEX": true,
-   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS": false
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS": true,
+   "FLAG_RB_OAK_HEARD_BIRD": true,
+   "FLAG_RB_NAO_INTRODUCED": false,
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN": false
   },
   "vars": {
-   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB": 8
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB": 7
   }
  },
- "accepted": "2026-11-09 14:30"
+ "accepted": "2026-11-09 15:15"
 }

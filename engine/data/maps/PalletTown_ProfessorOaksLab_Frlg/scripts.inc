@@ -68,14 +68,16 @@ PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene:: @ 8169002
 	goto PalletTown_ProfessorOaksLab_EventScript_NationalDexScene
 	end
 
+@ The National Dex scene carries the whole hand-off after the Kanto League (the story copy's A2-A9, KR-113): what the
+@ POKéDEX left out, Blue, the classic three (Pikachu start), the bird, Blue's field survey, then ELM and Nao's news.
 PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons
+	msgbox PalletTown_ProfessorOaksLab_Text_OakWhatThePokedexLeftOut
 	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_ProfessorOaksLab_EventScript_NationalDexSceneRivalEnterNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, PalletTown_ProfessorOaksLab_EventScript_NationalDexSceneRivalEnterSouth
 	call_if_eq VAR_FACING, DIR_EAST, PalletTown_ProfessorOaksLab_EventScript_NationalDexSceneRivalEnterEastWest
 	call_if_eq VAR_FACING, DIR_WEST, PalletTown_ProfessorOaksLab_EventScript_NationalDexSceneRivalEnterEastWest
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalAskingPlayerNotGrandson
 	fadedefaultbgm
 	msgbox PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes
 	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_ProfessorOaksLab_EventScript_PlayerFaceOakNorth
@@ -84,6 +86,7 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakTookBothPokedexUnits
 	closemessage
 	call EventScript_RestorePrevTextColor
+	call PalletTown_ProfessorOaksLab_EventScript_OakNoticesClassicThree
 	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_ProfessorOaksLab_EventScript_OakBringDexesToDeskNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, PalletTown_ProfessorOaksLab_EventScript_OakBringDexesToDeskSouth
 	call_if_eq VAR_FACING, DIR_EAST, PalletTown_ProfessorOaksLab_EventScript_OakBringDexesToDeskEast
@@ -107,8 +110,9 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	special EnableNationalPokedex
+	call PalletTown_ProfessorOaksLab_EventScript_OakRoomForTheBird
 	msgbox PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalTakeMeOnYourFieldSurvey
 	closemessage
 	playbgm MUS_RG_RIVAL_EXIT, 0
 	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_ProfessorOaksLab_EventScript_RivalExitNorth
@@ -117,9 +121,133 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	call_if_eq VAR_FACING, DIR_WEST, PalletTown_ProfessorOaksLab_EventScript_RivalExit
 	removeobject LOCALID_OAKS_LAB_RIVAL
 	fadedefaultbgm
+	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_ProfessorOaksLab_EventScript_PlayerFaceOakNorth
+	applymovement LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_FacePlayer
+	waitmovement 0
+	call PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8
 	releaseall
 	end
+
+@ A4 (T4): in the Pikachu start Oak notices the classic three the player met on the road (ST02-ST04), by how many.
+PalletTown_ProfessorOaksLab_EventScript_OakNoticesClassicThree::
+	callnative Special_CharacterStarterSpecies, requests_effects=1
+	goto_if_ne VAR_RESULT, SPECIES_PIKACHU, Common_EventScript_NopReturn
+	setvar VAR_0x8004, 0
+	setvar VAR_0x8005, SPECIES_BULBASAUR
+	call_if_set FLAG_ST02_GIVEN, PalletTown_ProfessorOaksLab_EventScript_CountClassicStarter
+	setvar VAR_0x8005, SPECIES_CHARMANDER
+	call_if_set FLAG_ST03_GIVEN, PalletTown_ProfessorOaksLab_EventScript_CountClassicStarter
+	setvar VAR_0x8005, SPECIES_SQUIRTLE
+	call_if_set FLAG_ST04_GIVEN, PalletTown_ProfessorOaksLab_EventScript_CountClassicStarter
+	goto_if_eq VAR_0x8004, 1, PalletTown_ProfessorOaksLab_EventScript_OakNoticesOneClassicStarter
+	goto_if_eq VAR_0x8004, 2, PalletTown_ProfessorOaksLab_EventScript_OakNoticesTwoClassicStarters
+	goto_if_eq VAR_0x8004, 3, PalletTown_ProfessorOaksLab_EventScript_OakNoticesAllClassicStarters
+	return
+
+@ The first one met goes in STR_VAR_1, the second in STR_VAR_2 (in the order BULBASAUR, CHARMANDER, SQUIRTLE).
+PalletTown_ProfessorOaksLab_EventScript_CountClassicStarter::
+	call_if_eq VAR_0x8004, 0, PalletTown_ProfessorOaksLab_EventScript_BufferFirstClassicStarter
+	call_if_eq VAR_0x8004, 1, PalletTown_ProfessorOaksLab_EventScript_BufferSecondClassicStarter
+	addvar VAR_0x8004, 1
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_BufferFirstClassicStarter::
+	bufferspeciesname STR_VAR_1, VAR_0x8005
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_BufferSecondClassicStarter::
+	bufferspeciesname STR_VAR_2, VAR_0x8005
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakNoticesOneClassicStarter::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakNoticesOneClassicStarter
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakNoticesTwoClassicStarters::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakNoticesTwoClassicStarters
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakNoticesAllClassicStarters::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakNoticesAllClassicStarters
+	return
+
+@ A6: room in the National Dex, perhaps for the rainbow bird. A player who never told Oak about it before the League
+@ (RB02) tells him now, so his notes hold the PIDGEY and the bird for BL02 and ELM's RB08.
+PalletTown_ProfessorOaksLab_EventScript_OakRoomForTheBird::
+	special Special_RainbowStoryAdopt
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
+	goto_if_unset FLAG_RB_OPENING_SEEN, Common_EventScript_NopReturn
+	goto_if_unset FLAG_RB_OAK_HEARD_BIRD, PalletTown_ProfessorOaksLab_EventScript_ChampionTellsOakAboutBird
+	msgbox PalletTown_ProfessorOaksLab_Text_OakRoomForTheRainbowBird
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_ChampionTellsOakAboutBird::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox PalletTown_ProfessorOaksLab_Text_ChampionTellsOakAboutBird
+	call EventScript_RestorePrevTextColor
+	msgbox PalletTown_ProfessorOaksLab_Text_OakRoomForThatBird
+	setflag FLAG_RB_OAK_HEARD_BIRD
+	return
+
+@ A9 (RB07): Oak sends the Champion to ELM, with the directions, and passes on Nao's news (#88), once, at the end of
+@ the scene. A save whose scene played before KR-113 hears it on its next talk instead (JohtoFirstReferral).
+PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm::
+	setflag FLAG_OAK_GAVE_JOHTO_DIRECTIONS
+	@ VAR_0x8006: the rainbow story's flags can be read; VAR_0x8005: the player saw the bird.
+	setvar VAR_0x8005, FALSE
+	special Special_RainbowStoryAdopt
+	copyvar VAR_0x8006, VAR_RESULT
+	call_if_eq VAR_0x8006, TRUE, PalletTown_ProfessorOaksLab_EventScript_CheckChampionSawBird
+	special Special_JohtoCampaignGetState
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_ProfessorOaksLab_EventScript_OakRefersChampionToElm
+	goto_if_lt JOHTO_VAR_NEWBARKTOWN_LABSTATE, 2, PalletTown_ProfessorOaksLab_EventScript_OakRefersChampionToElm
+	call_if_eq VAR_0x8005, TRUE, PalletTown_ProfessorOaksLab_EventScript_OakHearsChampionMetElmBird
+	call_if_eq VAR_0x8005, FALSE, PalletTown_ProfessorOaksLab_EventScript_OakHearsChampionMetElm
+	goto PalletTown_ProfessorOaksLab_EventScript_OakPassesOnNaosNews
+
+PalletTown_ProfessorOaksLab_EventScript_OakRefersChampionToElm::
+	call_if_eq VAR_0x8005, TRUE, PalletTown_ProfessorOaksLab_EventScript_OakReferralBirdFlewWest
+	call_if_eq VAR_0x8005, FALSE, PalletTown_ProfessorOaksLab_EventScript_OakReferralOneMoreThing
+	msgbox PalletTown_ProfessorOaksLab_Text_OakDirectionsToElm
+PalletTown_ProfessorOaksLab_EventScript_OakPassesOnNaosNews::
+	@ Nothing about Nao once the player has found her in Ecruteak.
+	goto_if_eq VAR_0x8006, FALSE, Common_EventScript_NopReturn
+	goto_if_set FLAG_RB_ECRUTEAK_TRUTH_SEEN, Common_EventScript_NopReturn
+	goto_if_set FLAG_RB_NAO_INTRODUCED, PalletTown_ProfessorOaksLab_EventScript_OakPassesOnFriendNaosNews
+	goto_if_eq VAR_0x8005, FALSE, Common_EventScript_NopReturn
+	msgbox PalletTown_ProfessorOaksLab_Text_OakBellKeeperCameBy
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakPassesOnFriendNaosNews::
+	goto_if_eq VAR_0x8005, FALSE, PalletTown_ProfessorOaksLab_EventScript_OakFriendNaoWentHome
+	msgbox PalletTown_ProfessorOaksLab_Text_OakFriendNaoAskedAboutBird
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakFriendNaoWentHome::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakFriendNaoWentHome
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_CheckChampionSawBird::
+	goto_if_unset FLAG_RB_OPENING_SEEN, Common_EventScript_NopReturn
+	setvar VAR_0x8005, TRUE
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakHearsChampionMetElmBird::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakHearsChampionMetElmBird
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakHearsChampionMetElm::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakHearsChampionMetElm
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakReferralBirdFlewWest::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakReferralBirdFlewWest
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakReferralOneMoreThing::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakReferralOneMoreThing
+	return
 
 PalletTown_ProfessorOaksLab_EventScript_NationalDexSceneRivalEnterNorth::
 	setobjectxyperm LOCALID_OAKS_LAB_RIVAL, 5, 10
@@ -574,7 +702,6 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	lock
 	faceplayer
 	call RB_OakStory
-	call_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_JohtoReferral
 	goto_if_set SHOWED_OAK_COMPLETE_DEX, PalletTown_ProfessorOaksLab_EventScript_OakJustShownCompleteDex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 9, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait
@@ -592,8 +719,10 @@ PalletTown_ProfessorOaksLab_EventScript_NativeStarterPrompt:
 	release
 	end
 
+@ After the Kanto League Oak's talk ends with one line about JOHTO (the reminder, or his Johto lines; KR-113).
 PalletTown_ProfessorOaksLab_EventScript_OakJustShownCompleteDex::
 	msgbox PokedexRating_Text_ThankYouMadeDreamReality
+	call_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_JohtoReferral
 	release
 	end
 
@@ -796,6 +925,7 @@ PalletTown_ProfessorOaksLab_EventScript_RatePokedexOrTryGiveBalls::
 PalletTown_ProfessorOaksLab_EventScript_RatePokedex::
 	call PokedexRating_EventScript_RateInPerson
 	goto_if_set FLAG_OAK_SAW_DEX_COMPLETION, PalletTown_ProfessorOaksLab_EventScript_DexCompleted
+	call_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_JohtoReferral
 	release
 	end
 
@@ -814,6 +944,7 @@ PalletTown_ProfessorOaksLab_EventScript_DexCompleted::
 	delay 70
 	msgbox PokedexRating_Text_ThankYouMadeDreamReality
 	setflag SHOWED_OAK_COMPLETE_DEX
+	call_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_JohtoReferral
 	release
 	end
 
@@ -947,6 +1078,7 @@ PalletTown_ProfessorOaksLab_EventScript_GivePlayerMoreBalls::
 
 PalletTown_ProfessorOaksLab_EventScript_MonsAroundWorldWait::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait
+	call_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_JohtoReferral
 	release
 	end
 
@@ -1614,20 +1746,19 @@ PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer::
 	.string "favor to ask of you.\p"
 	.string "I need you to listen closely.$"
 
-PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons::
-	.string "Recently, there have been sightings\n"
-	.string "of rare POKéMON species.\p"
-	.string "Some have never been seen in KANTO.\p"
-	.string "We need careful notes from both\n"
-	.string "regions. {PLAYER}, I'd like you\l"
-	.string "to help with that research.$"
+PalletTown_ProfessorOaksLab_Text_OakWhatThePokedexLeftOut::
+	.string "OAK: {PLAYER}, when I built the\n"
+	.string "POKéDEX, I filled it with every\l"
+	.string "POKéMON I knew of in KANTO.\p"
+	.string "But POKéMON live far beyond KANTO.\n"
+	.string "Many have never been seen here.\p"
+	.string "I'd like your help recording them.\n"
+	.string "You've earned the chance.$"
 
-PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything::
-	.string "{RIVAL}: Hey, I heard that!\p"
-	.string "Great battle up there, {PLAYER}.\n"
-	.string "You earned it.\p"
-	.string "Gramps, if there's research going,\n"
-	.string "count me in too!$"
+PalletTown_ProfessorOaksLab_Text_RivalAskingPlayerNotGrandson::
+	.string "{RIVAL}: Gramps! I heard that!\p"
+	.string "You're asking {PLAYER} for help\n"
+	.string "and not your own grandson?$"
 
 PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes::
 	.string "OAK: I know, I know.\n"
@@ -1638,6 +1769,32 @@ PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes::
 PalletTown_ProfessorOaksLab_Text_OakTookBothPokedexUnits::
 	.string "PROF. OAK took both POKéDEX\n"
 	.string "units.$"
+
+PalletTown_ProfessorOaksLab_Text_OakNoticesAllClassicStarters::
+	.string "OAK: Hm? BULBASAUR, CHARMANDER\n"
+	.string "and SQUIRTLE, all three!\p"
+	.string "New trainers here used to start\n"
+	.string "with one of those.\p"
+	.string "This year I had only PIKACHU and\n"
+	.string "EEVEE. Yet all three found you\l"
+	.string "on the road. Haha!$"
+
+PalletTown_ProfessorOaksLab_Text_OakNoticesOneClassicStarter::
+	.string "OAK: Hm? A {STR_VAR_1}!\p"
+	.string "New trainers here used to start\n"
+	.string "with one like it.\p"
+	.string "This year I had only PIKACHU and\n"
+	.string "EEVEE. Yet one found you on the\l"
+	.string "road. Haha!$"
+
+PalletTown_ProfessorOaksLab_Text_OakNoticesTwoClassicStarters::
+	.string "OAK: Hm? A {STR_VAR_1} and a\n"
+	.string "{STR_VAR_2}!\p"
+	.string "New trainers here used to start\n"
+	.string "with one of those.\p"
+	.string "This year I had only PIKACHU and\n"
+	.string "EEVEE. Yet two found you on the\l"
+	.string "road. Haha!$"
 
 PalletTown_ProfessorOaksLab_Text_OakNowTheseUnitsCanRecordMoreData::
 	.string "… … …  … … …\p"
@@ -1658,13 +1815,89 @@ PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex::
 	.string "Truly, this is a monumentally great\n"
 	.string "undertaking in POKéMON history!$"
 
-PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
+PalletTown_ProfessorOaksLab_Text_OakRoomForTheRainbowBird::
+	.string "OAK: There's room in it now for\n"
+	.string "POKéMON far beyond KANTO.\p"
+	.string "Perhaps even for that rainbow bird\n"
+	.string "you saw on your first day.\p"
+	.string "It still has no entry. Nobody has\n"
+	.string "recorded it. You may be the first!$"
+
+PalletTown_ProfessorOaksLab_Text_ChampionTellsOakAboutBird::
+	.string "{PLAYER} tells PROF.OAK about the\n"
+	.string "PIDGEY in the wind, and the bird\l"
+	.string "that crossed the sky.$"
+
+PalletTown_ProfessorOaksLab_Text_OakRoomForThatBird::
+	.string "OAK: Feathers like a rainbow, and\n"
+	.string "no entry in the POKéDEX?\p"
+	.string "There's room in it now for POKéMON\n"
+	.string "far beyond KANTO. Perhaps even\l"
+	.string "for that bird.\p"
+	.string "Nobody has recorded it yet.\n"
+	.string "You may be the first!$"
+
+PalletTown_ProfessorOaksLab_Text_RivalTakeMeOnYourFieldSurvey::
 	.string "{RIVAL}: Gramps, calm down.\n"
 	.string "Don't get so excited.\p"
-	.string "I'll get the POKéDEX completed,\n"
-	.string "don't you worry about a thing.\p"
-	.string "I'll start right here in KANTO.\n"
-	.string "Smell ya later!$"
+	.string "I'll fill mine. But this time I want\n"
+	.string "to watch them, not just catch them.\p"
+	.string "Take me on your next field survey,\n"
+	.string "okay? I'm going to go pack!$"
+
+PalletTown_ProfessorOaksLab_Text_OakReferralBirdFlewWest::
+	.string "OAK: {PLAYER}, that bird flew west,\n"
+	.string "didn't it? Toward JOHTO.\p"
+	.string "My colleague PROF.ELM studies\n"
+	.string "POKéMON there, in NEW BARK TOWN.\p"
+	.string "He could use a CHAMPION's help.\n"
+	.string "And he may know more about it.$"
+
+PalletTown_ProfessorOaksLab_Text_OakReferralOneMoreThing::
+	.string "OAK: {PLAYER}, one more thing.\p"
+	.string "My colleague PROF.ELM studies\n"
+	.string "POKéMON in JOHTO, in NEW BARK TOWN.\p"
+	.string "He could use a CHAMPION's help.\n"
+	.string "I've told him you may visit.$"
+
+PalletTown_ProfessorOaksLab_Text_OakDirectionsToElm::
+	.string "OAK: Go back to INDIGO PLATEAU and\n"
+	.string "take the road west of the LEAGUE.\p"
+	.string "It winds down to the coast of\n"
+	.string "ROUTE 27. SURF west from there.\p"
+	.string "ELM's lab is in NEW BARK TOWN.\n"
+	.string "I'll tell him to expect you!$"
+
+PalletTown_ProfessorOaksLab_Text_OakHearsChampionMetElmBird::
+	.string "OAK: And I hear you've already met\n"
+	.string "PROF.ELM in JOHTO! Good, good.\p"
+	.string "That bird flew west, too. Keep\n"
+	.string "your eyes open over there.$"
+
+PalletTown_ProfessorOaksLab_Text_OakHearsChampionMetElm::
+	.string "OAK: And I hear you've already met\n"
+	.string "PROF.ELM in JOHTO! Good, good.\p"
+	.string "He says you're a great help.$"
+
+PalletTown_ProfessorOaksLab_Text_OakFriendNaoAskedAboutBird::
+	.string "OAK: Oh! Your friend NAO came by\n"
+	.string "while you were away.\p"
+	.string "She asked why a bird like yours\n"
+	.string "has no entry. I couldn't tell her.\p"
+	.string "She's gone home to ECRUTEAK, in\n"
+	.string "JOHTO. She hopes you'll visit.$"
+
+PalletTown_ProfessorOaksLab_Text_OakFriendNaoWentHome::
+	.string "OAK: Oh! Your friend NAO came by\n"
+	.string "while you were away.\p"
+	.string "She's gone home to ECRUTEAK, in\n"
+	.string "JOHTO. She hopes you'll visit.$"
+
+PalletTown_ProfessorOaksLab_Text_OakBellKeeperCameBy::
+	.string "OAK: Oh! A bell keeper came by while\n"
+	.string "you were away. NAO, from ECRUTEAK.\p"
+	.string "She has asked all over KANTO about\n"
+	.string "a bird like yours. She's gone home.$"
 
 
 PalletTown_ProfessorOaksLab_EventScript_JohtoReferral::
@@ -1721,39 +1954,22 @@ PalletTown_ProfessorOaksLab_EventScript_JohtoEncouragement::
 	closemessage
 	return
 
+@ A10: before ELM is met, one reminder line. The hand-off itself is told once, at the end of the National Dex scene; a
+@ save whose scene played before KR-113 hears it here once instead.
 PalletTown_ProfessorOaksLab_EventScript_JohtoFirstReferral::
-	goto_if_set FLAG_OAK_GAVE_JOHTO_DIRECTIONS, PalletTown_ProfessorOaksLab_EventScript_JohtoReminder
-	msgbox PalletTown_ProfessorOaksLab_Text_JohtoReferral, MSGBOX_DEFAULT
+	goto_if_unset FLAG_OAK_GAVE_JOHTO_DIRECTIONS, PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElmLate
+	msgbox PalletTown_ProfessorOaksLab_Text_JohtoReminder, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_OAK_GAVE_JOHTO_DIRECTIONS
 	return
 
-PalletTown_ProfessorOaksLab_EventScript_JohtoReminder::
-	msgbox PalletTown_ProfessorOaksLab_Text_JohtoReminder, MSGBOX_DEFAULT
+PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElmLate::
+	call PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm
 	closemessage
 	return
 
 PalletTown_ProfessorOaksLab_Text_JohtoReminder::
 	.string "OAK: PROF.ELM is expecting you in\n"
-	.string "NEW BARK TOWN.\p"
-	.string "Take the road west of the LEAGUE\n"
-	.string "down to ROUTE 27, then SURF west.$"
-
-PalletTown_ProfessorOaksLab_Text_JohtoReferral::
-	.string "OAK: {PLAYER}, your victory at the\n"
-	.string "KANTO LEAGUE was remarkable!\p"
-	.string "My colleague PROF.ELM studies\n"
-	.string "POKéMON in JOHTO.\p"
-	.string "Please visit his lab in NEW BARK\n"
-	.string "TOWN. He could use your help.\p"
-	.string "I've sent him word of your visit.\n"
-	.string "Return to INDIGO PLATEAU.\p"
-	.string "Take the road west of the LEAGUE\n"
-	.string "down to the coast on ROUTE 27.\p"
-	.string "SURF west to NEW BARK TOWN.\n"
-	.string "ELM's lab is in the northwest.\p"
-	.string "You and your POKéMON have so much\n"
-	.string "more to discover together!$"
+	.string "NEW BARK TOWN, by the sea in JOHTO.$"
 
 PalletTown_ProfessorOaksLab_Text_JohtoEncouragement::
 	.string "OAK: How are your travels in JOHTO?\p"

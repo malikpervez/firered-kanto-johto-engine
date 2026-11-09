@@ -111,27 +111,17 @@ RB_OakStory::
 	goto_if_eq VAR_RESULT, FALSE, RB_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, RB_Return
 	goto_if_set JOHTO_FLAG_SYS_GAME_CLEAR, RB_OakLetter
-	goto_if_set FLAG_SYS_GAME_CLEAR, RB_OakReferral
+	@ After the Kanto League the bird, the road to ELM and Nao's news are told once, in the lab's
+	@ National Dex scene (PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm, KR-113).
+	goto_if_set FLAG_SYS_GAME_CLEAR, RB_Return
 	call_if_set FLAG_RB_OPENING_SEEN, RB_OakBird
 	return
+@ RB02 plays once; Oak's notes now hold the Pidgey and the bird (BL02 and Elm's RB08 lean on them).
+@ A player who never tells him before the League tells him in the National Dex scene.
 RB_OakBird::
+	goto_if_set FLAG_RB_OAK_HEARD_BIRD, RB_Return
 	msgbox RB_Text_OakBird
-	return
-RB_OakReferral::
-	goto_if_set FLAG_OAK_GAVE_JOHTO_DIRECTIONS, RB_Return
-	goto_if_unset FLAG_RB_OPENING_SEEN, RB_OakNoMemory
-	msgbox RB_Text_OakWest
-	@ Nao read Oak's notes on the sighting and went home after the League. Oak passes it on in this
-	@ once-only referral, unless the player has already found her in Ecruteak (nothing is written).
-	goto_if_set FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_Return
-	goto_if_unset FLAG_RB_NAO_INTRODUCED, RB_OakNaoNotMet
-	msgbox RB_Text_OakNaoFriend
-	return
-RB_OakNaoNotMet::
-	msgbox RB_Text_OakNaoNotMet
-	return
-RB_OakNoMemory::
-	msgbox RB_Text_OakResearch
+	setflag FLAG_RB_OAK_HEARD_BIRD
 	return
 RB_OakLetter::
 	goto_if_unset FLAG_RB_WELCOME_SEEN, RB_Return
@@ -140,15 +130,13 @@ RB_OakLetter::
 	setflag FLAG_RB_LETTER_READ
 	return
 RB_Text_OakBird::
-	.string "OAK: Feathers like a rainbow, and no\nentry in the POKéDEX?\pThen nobody has recorded it yet.\nI will write down your sighting.\pKeep looking up, {PLAYER}!$"
-RB_Text_OakWest::
-	.string "OAK: That bird flew west. ELM\nmay help you understand why.\pYour LEAGUE victory has opened\na new road for both of you.$"
-RB_Text_OakResearch::
-	.string "OAK: JOHTO has its own stories.\nELM values careful observation.$"
-RB_Text_OakNaoFriend::
-	.string "OAK: Your friend NAO came by to\nread my notes on your sighting.\pShe has gone home to ECRUTEAK.\nShe hopes you will visit her.$"
-RB_Text_OakNaoNotMet::
-	.string "OAK: A bell keeper from ECRUTEAK\ncame to read my notes on the bird.\pNAO, she said. She has asked all\nof KANTO about it.$"
+	.string "OAK: You sheltered a PIDGEY from\n"
+	.string "the wind, and then a bird flew over?\p"
+	.string "Feathers like a rainbow, and no\n"
+	.string "entry in the POKéDEX?\p"
+	.string "Then nobody has recorded it yet.\n"
+	.string "I will write down your sighting.\p"
+	.string "Keep looking up, {PLAYER}!$"
 RB_Text_Letter::
 	.string "OAK: A letter from NAO!\pThe bells rang. Nothing was\nasked of the sky.\pThere was room for an answer.\nThank you for listening.\pOAK: Both regions are proud\nof you, {PLAYER}.$"
 RB_PewterVisibility::

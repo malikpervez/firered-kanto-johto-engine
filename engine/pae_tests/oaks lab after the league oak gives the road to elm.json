@@ -1,6 +1,6 @@
 {
- "note": "After the League and the National Dex, before Johto: talking to Oak gives the bird line, Nao's news (#88: here the bell keeper from ECRUTEAK, as Nao was never met) and the whole road to ELM once (KR-108); then his usual POKéDEX rating. Two more presses since #88 for Nao's two boxes.",
- "created": "2026-11-06 19:30",
+ "note": "A save whose National Dex scene played before KR-113, without the hand-off (the lab at 9, FLAG_OAK_GAVE_JOHTO_DIRECTIONS unset): the next talk gives the rating, then the hand-off once, the bird flew west, the road to ELM and Nao's news. Ends on \"ELM's lab is in NEW BARK TOWN. I'll tell him to expect you!\"; the flag is set, so later talks give the reminder (KR-108, KR-113).",
+ "created": "2026-11-09 15:19",
  "start": {
   "map": "PalletTown_ProfessorOaksLab_Frlg",
   "x": 6,
@@ -41,184 +41,152 @@
      70
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
+     60
     ],
     [
-     2,
+     1,
      4
     ],
     [
      0,
-     70
-    ],
-    [
-     2,
-     4
+     60
     ],
     [
      0,
-     70
-    ],
-    [
-     2,
-     4
-    ],
-    [
-     0,
-     70
-    ],
-    [
-     2,
-     4
-    ],
-    [
-     0,
-     70
-    ],
-    [
-     2,
-     4
-    ],
-    [
-     0,
-     70
-    ],
-    [
-     0,
-     120
+     60
     ]
    ]
   }
@@ -240,5 +208,5 @@
    "FLAG_OAK_GAVE_JOHTO_DIRECTIONS": true
   }
  },
- "accepted": "2026-11-06 19:48"
+ "accepted": "2026-11-09 15:19"
 }
