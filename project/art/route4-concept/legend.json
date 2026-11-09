@@ -174,43 +174,407 @@
  "}": "face_inner_E",
  "]": "face_outer_E",
  "a": {
-  "name": "top1#13+Estart",
-  "joins": "C"
- },
- "e": {
   "name": "top1#7+Won",
   "joins": "C"
  },
- "f": {
+ "e": {
   "name": "top2#7+Won",
   "joins": "C"
  },
- "i": {
-  "name": "top4#13+Eon",
-  "joins": "C"
- },
- "j": {
+ "f": {
   "name": "top4#15.4+in_SW_face",
   "joins": "C"
  },
- "m": {
+ "i": {
   "name": "top5#15.4+in_SW_face",
   "joins": "C"
  },
- "t": {
+ "j": {
   "name": "top6#12+Estart",
   "joins": "C"
  },
- "u": {
+ "m": {
   "name": "top7#7+Wstart",
   "joins": "C"
  },
- "x": {
+ "t": {
   "name": "top8#7+Wstart",
   "joins": "C"
  },
- "y": {
+ "u": {
   "name": "top9#13+Eon",
   "joins": "C"
+ },
+ "\u3400": {
+  "name": "top1#200+W_wall~32c1@top1#15",
+  "joins": "C"
+ },
+ "\u3401": {
+  "name": "top2#0~3478@top2#15",
+  "joins": "C"
+ },
+ "\u3402": {
+  "name": "top3#200+W_wall~e1e5@top3#0~e614@top3#15",
+  "joins": "C"
+ },
+ "\u3403": {
+  "name": "top1#0~a80d@top1#0~a80d@top1#15",
+  "joins": "C"
+ },
+ "\u3404": {
+  "name": "top2#0~3478@top2#0~3478@top2#15",
+  "joins": "C"
+ },
+ "\u3405": {
+  "name": "top3#0~e614@top3#0~e614@top3#15",
+  "joins": "C"
+ },
+ "\u3406": {
+  "name": "top3#50+E_wall~54b6@top3#0~e614@top3#15",
+  "joins": "C"
+ },
+ "\u3407": {
+  "name": "top1#0~a80d@top1#15",
+  "joins": "C"
+ },
+ "\u3408": {
+  "name": "top3#0~e614@top3#15",
+  "joins": "C"
+ },
+ "\u3409": {
+  "name": "top2#50+E_wall~50c2@top2#15",
+  "joins": "C"
+ },
+ "\u340a": {
+  "name": "top4#200+W_wall_2~ec0e@top4#15",
+  "joins": "C"
+ },
+ "\u340b": {
+  "name": "top5#0~d839@top5#15",
+  "joins": "C"
+ },
+ "\u340c": {
+  "name": "top6#200+SW_wall~6c38@top6#0~553b@top6#15",
+  "joins": "C"
+ },
+ "\u340d": {
+  "name": "top4#0~f0af@top4#0~f0af@top4#15",
+  "joins": "C"
+ },
+ "\u340e": {
+  "name": "top5#0~d839@top5#0~d839@top5#15",
+  "joins": "C"
+ },
+ "\u340f": {
+  "name": "top6#0~553b@top6#0~553b@top6#15",
+  "joins": "C"
+ },
+ "\u3410": {
+  "name": "top6#50+SE_wall~6a44@top6#0~553b@top6#15",
+  "joins": "C"
+ },
+ "\u3411": {
+  "name": "top4#0~f0af@top4#15",
+  "joins": "C"
+ },
+ "\u3412": {
+  "name": "top5#0+in_SE_step~e8de@top5#15",
+  "joins": "C"
+ },
+ "\u3413": {
+  "name": "top6#0~553b@top6#15",
+  "joins": "C"
+ },
+ "\u3414": {
+  "name": "top5#50+SE_wall~fe19@top5#15",
+  "joins": "C"
+ },
+ "\u3415": {
+  "name": "top7#200+W_wall~013d@top7#15",
+  "joins": "C"
+ },
+ "\u3416": {
+  "name": "top8#0~5bba@top8#15",
+  "joins": "C"
+ },
+ "\u3417": {
+  "name": "tall_middle_2.0+tall_outer_W~5346@top9#0~866d@top9#15",
+  "joins": "C"
+ },
+ "\u3418": {
+  "name": "tall_middle_3.0~27be@top7#0~d459@top7#15",
+  "joins": "C"
+ },
+ "\u3419": {
+  "name": "tall_middle_1.0~bd77@top8#0~5bba@top8#15",
+  "joins": "C"
+ },
+ "\u341a": {
+  "name": "tall_middle_2.0~0b17@top9#0~866d@top9#15",
+  "joins": "C"
+ },
+ "\u341b": {
+  "name": "tall_middle_2.0~0b17@top8#0~5bba@top8#15",
+  "joins": "C"
+ },
+ "\u341c": {
+  "name": "tall_middle_1.0~bd77@top9#0~866d@top9#15",
+  "joins": "C"
+ },
+ "\u341d": {
+  "name": "tall_middle_2.0+tall_outer_E~b981@top9#0~866d@top9#15",
+  "joins": "C"
+ },
+ "\u341e": {
+  "name": "top7#0~d459@top7#15",
+  "joins": "C"
+ },
+ "\u341f": {
+  "name": "top8#0+side_E_step~402d@top8#15",
+  "joins": "C"
+ },
+ "\u3420": {
+  "name": "tall_middle_3.0+tall_inner_W~17a0@top9#15",
+  "joins": "C"
+ },
+ "\u3421": {
+  "name": "tall_middle_1.0~bd77@top7#15",
+  "joins": "C"
+ },
+ "\u3422": {
+  "name": "tall_middle_2.0~0b17@top8#15",
+  "joins": "C"
+ },
+ "\u3423": {
+  "name": "tall_middle_3.0~27be@top9#15",
+  "joins": "C"
+ },
+ "\u3424": {
+  "name": "tall_middle_2.0~0b17@top7#15",
+  "joins": "C"
+ },
+ "\u3425": {
+  "name": "tall_middle_1.0+tall_outer_E~449c@top8#15",
+  "joins": "C"
+ },
+ "\u3426": {
+  "name": "top1#200+W_wall_2~b96a@top1#15",
+  "joins": "C"
+ },
+ "\u3427": {
+  "name": "tall_middle_2.1+tall_outer_W~fc8e@top3#0~e614@top3#15",
+  "joins": "C"
+ },
+ "\u3428": {
+  "name": "tall_middle_3.1~2a91@top1#0~a80d@top1#15",
+  "joins": "C"
+ },
+ "\u3429": {
+  "name": "tall_middle_1.1~d63b@top2#0~3478@top2#15",
+  "joins": "C"
+ },
+ "\u342a": {
+  "name": "tall_middle_2.1~439f@top3#0~e614@top3#15",
+  "joins": "C"
+ },
+ "\u342b": {
+  "name": "tall_middle_2.1~439f@top2#0~3478@top2#15",
+  "joins": "C"
+ },
+ "\u342c": {
+  "name": "tall_middle_1.1~d63b@top3#0~e614@top3#15",
+  "joins": "C"
+ },
+ "\u342d": {
+  "name": "tall_middle_2.1+tall_outer_E~bfaf@top3#0~e614@top3#15",
+  "joins": "C"
+ },
+ "\u342e": {
+  "name": "top2#32+side_E_step~50c2@top2#15",
+  "joins": "C"
+ },
+ "\u342f": {
+  "name": "tall_middle_3.1+tall_inner_W~e075@top3#15",
+  "joins": "C"
+ },
+ "\u3430": {
+  "name": "tall_middle_1.1~d63b@top1#15",
+  "joins": "C"
+ },
+ "\u3431": {
+  "name": "tall_middle_2.1~439f@top2#15",
+  "joins": "C"
+ },
+ "\u3432": {
+  "name": "tall_middle_3.1~2a91@top3#15",
+  "joins": "C"
+ },
+ "\u3433": {
+  "name": "tall_middle_2.1~439f@top1#15",
+  "joins": "C"
+ },
+ "\u3434": {
+  "name": "tall_middle_1.1+tall_outer_E~e14f@top2#15",
+  "joins": "C"
+ },
+ "\u3435": {
+  "name": "top4#200+SW_wall~67a5@top4#15",
+  "joins": "C"
+ },
+ "\u3436": {
+  "name": "top6#0+in_SW_step~f83e@top6#15",
+  "joins": "C"
+ },
+ "\u3437": {
+  "name": "top5#34+E_wall~fe19@top5#15",
+  "joins": "C"
+ },
+ "\u3438": {
+  "name": "tall_middle_1.0+tall_outer_W~183b@top7#15",
+  "joins": "C"
+ },
+ "\u3439": {
+  "name": "tall_middle_1.0+tall_inner_E~e7dc@top8#15",
+  "joins": "C"
+ },
+ "\u343a": {
+  "name": "top9#0+side_W_step~b31a@top9#15",
+  "joins": "C"
+ },
+ "\u343b": {
+  "name": "top9#0~866d@top9#15",
+  "joins": "C"
+ },
+ "\u343c": {
+  "name": "top8#50+E_wall_2~fa04@top8#15",
+  "joins": "C"
+ },
+ "\u343d": {
+  "name": "tall_middle_1.1+tall_outer_W~37ca@top1#15",
+  "joins": "C"
+ },
+ "\u343e": {
+  "name": "tall_middle_1.1+tall_inner_E~9a07@top2#15",
+  "joins": "C"
+ },
+ "\u343f": {
+  "name": "top3#64+side_W_step~e1e5@top3#15",
+  "joins": "C"
+ },
+ "\u3440": {
+  "name": "top6#72+W_wall_2~e793@top6#15",
+  "joins": "C"
+ },
+ "\u3441": {
+  "name": "top5#50+E_wall_2~4430@top5#15",
+  "joins": "C"
+ },
+ "\u3442": {
+  "name": "top9#200+W_wall~b31a@top9#15",
+  "joins": "C"
+ },
+ "\u3443": {
+  "name": "top8#50+E_wall~402d@top8#15",
+  "joins": "C"
+ },
+ "\u3444": {
+  "name": "top3#200+W_wall_2~6a4e@top3#15",
+  "joins": "C"
+ },
+ "\u3445": {
+  "name": "top2#50+E_wall_2~eaeb@top2#15",
+  "joins": "C"
+ },
+ "\u3446": {
+  "name": "top6#200+W_wall~6c38@top6#15",
+  "joins": "C"
+ },
+ "\u3447": {
+  "name": "top5#50+E_wall~fe19@top5#15",
+  "joins": "C"
+ },
+ "\u3448": {
+  "name": "top9#200+W_wall_2~38b1@top9#15",
+  "joins": "C"
+ },
+ "\u3449": {
+  "name": "top3#200+SW_wall~e1e5@top3#15",
+  "joins": "C"
+ },
+ "\u344a": {
+  "name": "top2#50+SE_wall~50c2@top2#15",
+  "joins": "C"
+ },
+ "\u344b": {
+  "name": "tall_middle_1.0+tall_outer_W~183b@top6#15",
+  "joins": "C"
+ },
+ "\u344c": {
+  "name": "tall_middle_3.0~27be@top4#15",
+  "joins": "C"
+ },
+ "\u344d": {
+  "name": "tall_middle_1.0~bd77@top5#15",
+  "joins": "C"
+ },
+ "\u344e": {
+  "name": "tall_middle_2.0~0b17@top6#15",
+  "joins": "C"
+ },
+ "\u344f": {
+  "name": "tall_middle_1.0+tall_outer_E~449c@top5#15",
+  "joins": "C"
+ },
+ "\u3450": {
+  "name": "tall_middle_1.1+tall_outer_W~37ca@top9#15",
+  "joins": "C"
+ },
+ "\u3451": {
+  "name": "tall_middle_3.1~2a91@top7#15",
+  "joins": "C"
+ },
+ "\u3452": {
+  "name": "tall_middle_1.1~d63b@top8#15",
+  "joins": "C"
+ },
+ "\u3453": {
+  "name": "tall_middle_2.1~439f@top9#15",
+  "joins": "C"
+ },
+ "\u3454": {
+  "name": "tall_middle_1.1+tall_outer_E~e14f@top8#15",
+  "joins": "C"
+ },
+ "(": {
+  "name": "road_setts#14~0",
+  "joins": "="
+ },
+ ")": {
+  "name": "road_setts#15~1",
+  "joins": "="
+ },
+ "!": {
+  "name": "road_setts#15~2",
+  "joins": "="
+ },
+ "<": {
+  "name": "road_setts#11~3",
+  "joins": "="
+ },
+ ";": {
+  "name": "road_setts#14~10",
+  "joins": "="
+ },
+ ">": {
+  "name": "road_setts#15~11",
+  "joins": "="
+ },
+ "?": {
+  "name": "road_setts#15~12",
+  "joins": "="
+ },
+ "|": {
+  "name": "road_setts#11~13",
+  "joins": "="
  }
 }

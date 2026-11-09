@@ -45,6 +45,8 @@ def load(letter: str) -> tuple[buildings.Building, list[tuple[int, int]]]:
     meta = json.loads((folder / f"{folder.name}.json").read_text())
     with Image.open(folder / f"{folder.name}.png") as im:
         idx, flat = np.array(im, np.uint8), im.getpalette()[:48]
+    if folder.name == "forest_gate_south":  # a stub of stone base left past the right pillar's outline (bottom-right
+        idx[89:95, 124:128] = 0              # block): the lawn there, as at the left pillar's foot
     ds = [tuple(d) for d in meta["door_blocks"]] if "door_blocks" in meta else [tuple(meta["door_block"])]
     return buildings.Building(folder.name, idx, [tuple(flat[i:i + 3]) for i in range(0, 48, 3)], ds[0],
                               folder / f"{folder.name}_door.png"), ds
@@ -141,7 +143,8 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("TT\nTT\n")
-    legend = dict(kit.LEGEND, **{k: load(k)[0].name for k in BUILDINGS})
+    # the buildings count as the road's cobble, so it draws no grass lip along their fronts: the doorsteps meet the road
+    legend = dict(kit.LEGEND, **{k: {"name": load(k)[0].name, "joins": "="} for k in BUILDINGS})
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

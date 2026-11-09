@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "pieces": {
+    "fill_1": {
+      "schema_version": 1,
+      "id": "fill_1",
+      "image": "tiles/fill_1.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_volcano",
+      "palettes_8x8": [
+        [
+          "cinnabar_volcano",
+          "cinnabar_volcano"
+        ],
+        [
+          "cinnabar_volcano",
+          "cinnabar_volcano"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          76,
+          77
+        ],
+        [
+          78,
+          79
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ]
+      ],
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0
+    },
+    "fill_2": {
+      "schema_version": 1,
+      "id": "fill_2",
+      "image": "tiles/fill_2.png",
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "cinnabar_volcano",
+      "palettes_8x8": [
+        [
+          "cinnabar_volcano",
+          "cinnabar_volcano"
+        ],
+        [
+          "cinnabar_volcano",
+          "cinnabar_volcano"
+        ]
+      ],
+      "tiles_8x8": [
+        [
+          78,
+          79
+        ],
+        [
+          76,
+          77
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": true
+          },
+          {
+            "h": true,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": true,
+            "v": false
+          },
+          {
+            "h": true,
+            "v": true
+          }
+        ]
+      ],
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0
+    }
+  }
+}

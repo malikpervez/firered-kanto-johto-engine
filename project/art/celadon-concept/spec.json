@@ -16,7 +16,8 @@
    "palette_7.pal",
    "../kit/palette_plants.pal",
    "palette_9.pal",
-   "palette_10.pal"
+   "palette_10.pal",
+   "palette_9.pal"
   ]
  },
  "reserve": {
@@ -5157,5 +5158,30 @@
    "ground": "grass",
    "solid": true
   }
- ]
+ ],
+ "lights": {
+  "5": [
+   11,
+   12,
+   13
+  ],
+  "6": [
+   6,
+   11,
+   12,
+   13
+  ],
+  "8": [
+   14
+  ],
+  "7": [
+   14,
+   15
+  ],
+  "9": [
+   7,
+   8,
+   14
+  ]
+ }
 }

@@ -1,0 +1,55 @@
+{
+ "note": "Once Silph Co. is freed, the Silph scientist is back in Celadon: 'SCIENTIST: ROCKET ordered devices to reproduce unusual calls.' (RB06; it waited for a flag nothing set, so it never played; GAP-5, KR-109). The test ends on that box.",
+ "created": "2026-11-06 20:40",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 47,
+  "y": 25,
+  "state": [
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_HIDE_CELADON_ROCKETS",
+   "FLAG_HIDE_SAFFRON_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Frlg",
+  "x": 47,
+  "y": 25,
+  "in_battle": false
+ },
+ "accepted": "2026-11-06 20:08"
+}

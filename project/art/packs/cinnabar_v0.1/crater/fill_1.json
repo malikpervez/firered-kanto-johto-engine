@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "fill_1",
+  "image": "tiles/fill_1.png",
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "palette": "cinnabar_volcano",
+  "palettes_8x8": [
+    [
+      "cinnabar_volcano",
+      "cinnabar_volcano"
+    ],
+    [
+      "cinnabar_volcano",
+      "cinnabar_volcano"
+    ]
+  ],
+  "tiles_8x8": [
+    [
+      76,
+      77
+    ],
+    [
+      78,
+      79
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "h": true,
+        "v": false
+      },
+      {
+        "h": true,
+        "v": true
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": true
+      },
+      {
+        "h": true,
+        "v": false
+      }
+    ]
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 0
+}

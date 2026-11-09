@@ -360,10 +360,9 @@ void InitRoamer(void)
         TryAddRoamer(SPECIES_ENTEI, 40, 0);
         return;
     }
-    if (gSpecialVar_0x8004 == 0) // Red
-        TryAddRoamer(SPECIES_LATIAS, 40, ROAMER_LOC_TABLE_HOENN);
-    else
-        TryAddRoamer(SPECIES_LATIOS, 40, ROAMER_LOC_TABLE_HOENN);
+    // Kanto: FireRed's Celio starts a roaming Latias or Latios when his Network Machine is fixed, on Hoenn's route
+    // list. This game has no Hoenn, so that roamer could never be met: Kanto starts none (its legendary beasts roam
+    // Johto only).
 }
 
 void InitKantoRoamers(void)

@@ -41,6 +41,7 @@ rect(41, 0, 58, 10, "C")           # the outcrop between the field and the rest 
 rect(0, 13, 7, 19, "C")            # south of the way in
 rect(8, 16, 43, 19, "C")           # south of the field
 rect(44, 16, 83, 19, "T")          # the forest south of the rest stop
+rect(44, 18, 81, 19, "C")          # the plateau runs on under it (the border past the south edge is plateau too)
 rect(82, 8, 83, 19, "C")            # the east edge: the plateau east of the pass runs down it and on past the map
 rect(0, 13, 1, 18, "T")            # Pewter's forest carries on over the join, south of the road in (make_art.py
                                    # puts its trees on Pewter's grid; the plateau runs under them on row 19)

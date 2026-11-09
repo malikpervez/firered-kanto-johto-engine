@@ -151,30 +151,3 @@ Route20_Text_MistyTrainsHere::
 	.string "are common sights in these parts.\p"
 	.string "They say that MISTY of the\n"
 	.string "CERULEAN GYM trains here.$"
-
-KantoHnsRoute20_EventScript_Seel::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_SEEL, CRY_MODE_NORMAL
-	msgbox KantoHnsRoute20_Text_Seel, MSGBOX_DEFAULT
-	waitmoncry
-	release
-	end
-
-KantoHnsRoute20_EventScript_Dewgong::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_DEWGONG, CRY_MODE_NORMAL
-	msgbox KantoHnsRoute20_Text_Dewgong, MSGBOX_DEFAULT
-	waitmoncry
-	release
-	end
-
-KantoHnsRoute20_Text_Seel:
-	.string "SEEL: Seel seel!$"
-
-KantoHnsRoute20_Text_Dewgong:
-	.string "DEWGONG: Goooong!$"
-

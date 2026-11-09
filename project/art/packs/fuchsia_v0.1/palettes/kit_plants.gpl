@@ -1,0 +1,20 @@
+GIMP Palette
+Name: Kit plants, flowers and lamps (bank 8)
+Columns: 16
+#
+  0   0   0  index 0  (transparent)
+ 24  32  32  index 1
+ 32  80  48  index 2
+ 56 128  64  index 3
+104 176  80  index 4
+160 208 104  index 5
+208  64  64  index 6
+240 136 168  index 7
+248 208  72  index 8
+240 144  64  index 9
+144 104 200  index 10
+104 152 232  index 11
+248 248 240  index 12
+ 56  56  64  index 13
+248 232 160  index 14
+ 96  64  40  index 15

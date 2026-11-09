@@ -130,7 +130,7 @@
   "elevation": 1
  },
  "X": {
-  "name": "silph_co",
+  "name": "silph_co_x",
   "joins": "&"
  },
  "G": {
@@ -141,18 +141,18 @@
   "name": "fighting_dojo",
   "joins": "&"
  },
- "N": "saffron_gate",
+ "N": "saffron_gate_n",
  "W": {
-  "name": "saffron_gate",
+  "name": "saffron_gate_w",
   "joins": "&"
  },
  "E": {
-  "name": "saffron_gate",
+  "name": "saffron_gate_e",
   "joins": "&"
  },
- "U": "saffron_gate_back",
+ "U": "saffron_gate_back_u",
  "M": {
-  "name": "magnet_train_station",
+  "name": "magnet_train_station_m",
   "joins": "&"
  },
  "Y": {
@@ -199,6 +199,14 @@
   "name": "arcade_beige",
   "joins": "&"
  },
+ "u": {
+  "name": "arcade_beige_u",
+  "joins": "&"
+ },
+ "y": {
+  "name": "office_narrow_beige_y",
+  "joins": "&"
+ },
  "Z": {
   "name": "pokemon_center_paved",
   "joins": "&"
@@ -210,6 +218,10 @@
  "^": "lamp",
  "e": {
   "name": "kerb#14",
+  "joins": "&"
+ },
+ "n": {
+  "name": "kerb#11",
   "joins": "&"
  },
  "|": {
@@ -252,5 +264,53 @@
  "£": {
   "name": "flower_tub",
   "joins": "@"
+ },
+ "α": {
+  "name": "kerb#15",
+  "joins": "&"
+ },
+ "β": {
+  "name": "kerb#15~2",
+  "joins": "&"
+ },
+ "γ": {
+  "name": "kerb#15~1",
+  "joins": "&"
+ },
+ "δ": {
+  "name": "kerb#15~4",
+  "joins": "&"
+ },
+ "ε": {
+  "name": "kerb#13",
+  "joins": "&"
+ },
+ "ζ": {
+  "name": "kerb#7",
+  "joins": "&"
+ },
+ "η": {
+  "name": "pavement#13",
+  "joins": "&"
+ },
+ "θ": {
+  "name": "kerb#15.1",
+  "joins": "&"
+ },
+ "ι": {
+  "name": "kerb#11",
+  "joins": "&"
+ },
+ "κ": {
+  "name": "kerb#9",
+  "joins": "&"
+ },
+ "λ": {
+  "name": "kerb#3",
+  "joins": "&"
+ },
+ "А": {
+  "name": "sign_paved_k14",
+  "joins": "&"
  }
 }

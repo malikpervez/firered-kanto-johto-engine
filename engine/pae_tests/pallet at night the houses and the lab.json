@@ -1,0 +1,35 @@
+{
+ "note": "At 22:00 both houses' windows glow (the glass on a lit copy of their palette; the blue roof stays dark), Oak's lab's windows and greenhouse glow, and the street lamps have a round glow.",
+ "created": "2026-11-04 16:25",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 15,
+  "y": 10,
+  "state": [],
+  "script": null,
+  "clock": "22:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 15,
+  "y": 10,
+  "in_battle": false
+ }
+}

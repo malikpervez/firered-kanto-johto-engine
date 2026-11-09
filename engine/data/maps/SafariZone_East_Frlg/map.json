@@ -74,7 +74,7 @@
       "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_LEAF_STONE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TROPIUS",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NIDORAN_M",
       "x": 13,
       "y": 28,
       "elevation": 3,
@@ -83,12 +83,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHIMECHO",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODUO",
       "x": 28,
       "y": 8,
       "elevation": 3,
@@ -97,12 +97,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ABSOL",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EXEGGCUTE",
       "x": 9,
       "y": 7,
       "elevation": 3,
@@ -111,12 +111,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CASTFORM",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PARAS",
       "x": 44,
       "y": 12,
       "elevation": 3,
@@ -125,12 +125,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LOTAD",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NIDORINO",
       "x": 43,
       "y": 29,
       "elevation": 3,
@@ -139,12 +139,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CACNEA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NIDORAN_F",
       "x": 44,
       "y": 6,
       "elevation": 3,
@@ -153,7 +153,7 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     }

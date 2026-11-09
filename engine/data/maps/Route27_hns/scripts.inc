@@ -38,8 +38,14 @@ Route27_EventScript_FirstSteps::
 	msgbox Route27_Text_FisherMessage, MSGBOX_DEFAULT
 	closemessage
 	turnobject LOCALID_ROUTE27_FATMAN, DIR_SOUTH
+	call Route27_EventScript_SetUpLeagueRoad
+	release
+	end
 
-
+@ The road to the LEAGUE, set up once: from the fisher here, or at the Reception Gate for a player who never
+@ walked past him (ReceptionGate_TriggerFirst).
+Route27_EventScript_SetUpLeagueRoad::
+	setflag JOHTO_FLAG_VISITED_KANTO
 	setflag JOHTO_FLAG_HIDE_VICTORY_ROAD_SILVER
 	setflag JOHTO_FLAG_HIDE_INDIGO_PLATEAU_SILVER
 	setflag JOHTO_FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK
@@ -49,8 +55,7 @@ Route27_EventScript_FirstSteps::
 	clearflag JOHTO_FLAG_INDIGOJUNCTION_HIDE_KANTO_GUARD
 
 	setvar JOHTO_VAR_ROUTE27_STATE, 1
-	release
-	end
+	return
 
 Route27_EventScript_FirstStepsWalkTop::
 	applymovement2 LOCALID_ROUTE27_FATMAN, Route27_Movement_WalkTop

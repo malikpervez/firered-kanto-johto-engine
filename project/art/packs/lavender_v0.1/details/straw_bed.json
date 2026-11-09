@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "straw_bed",
+  "name": "straw_bed",
+  "image": "tiles/straw_bed.png",
+  "size_px": [
+    16,
+    16
+  ],
+  "block_size_px": 16,
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "palette": "kit_wood",
+  "palettes_8x8": [
+    [
+      "kit_wood",
+      "kit_wood"
+    ],
+    [
+      "kit_wood",
+      "kit_wood"
+    ]
+  ],
+  "transparent_index": 0,
+  "solid": false,
+  "solid_blocks": [],
+  "walkable_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "over_rows": 0,
+  "over_row_indices": [],
+  "frame_count": 1,
+  "budget_group": "fuji_yard",
+  "tiles_8x8": [
+    [
+      2,
+      2
+    ],
+    [
+      26,
+      26
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "hflip": false,
+        "vflip": false
+      },
+      {
+        "hflip": true,
+        "vflip": false
+      }
+    ],
+    [
+      {
+        "hflip": false,
+        "vflip": true
+      },
+      {
+        "hflip": true,
+        "vflip": true
+      }
+    ]
+  ],
+  "tile_pool_file": "../tile_pool.json",
+  "palette_file": "../palettes/kit_wood.gpl",
+  "unique_8x8_tiles": 2,
+  "frames": [
+    "tiles/straw_bed.png"
+  ],
+  "frame_speed": 0
+}

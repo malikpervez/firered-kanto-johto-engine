@@ -19,6 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import cliffs
 import kit
+import terraces
 
 HERE = Path(__file__).resolve().parent
 SECONDARY = "gTileset_Route9Concept"
@@ -108,6 +109,7 @@ def check(g) -> None:
 
 def main() -> None:
     g = plan()
+    foot = terraces.footprint(g)  # the cliff's footprint, for its tiers
     cliffs.layout(g)
     kit.check_forest(g)
     kit.check_water(g)
@@ -116,6 +118,14 @@ def main() -> None:
     spec_mt = list(base["metatiles"])
     rock = kit.Sheet("rock_cliff", cliffs.PAL, CLIFF_BANK, HERE, HERE)
     char_of = cliffs.add(rock, g, extras=())
+    # the mountains in tiers (kit/terraces.py): the levels above the cliff's wall, each set back behind the one
+    # below, over the cliff as it was (its wall, tops and mouths untouched); past the map's top and bottom edges
+    # counts as more cliff where no map joins
+    beyond = terraces.beyond_edges(len(g[0]), len(g))
+    tier_cells, tier_names, _ = terraces.tiers_over(g, foot, roof="", beyond=beyond)
+    for name, pic, entry in tier_cells:
+        rock.add(name, pic, tileset="secondary", solid=True, **entry)
+    SOLID.update(terraces.solid(tier_names))
     spec_mt += rock.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
@@ -133,6 +143,7 @@ def main() -> None:
     (HERE / "border.txt").write_text("TT\nTT\n")
     legend = dict(kit.LEGEND, **{":": {"auto": "dirt", "joins": "="}})  # Cerulean's cobbles run on into the dirt
     legend.update(cliffs.legend(char_of))
+    legend.update(terraces.legend(tier_names, joins="C"))
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")
 

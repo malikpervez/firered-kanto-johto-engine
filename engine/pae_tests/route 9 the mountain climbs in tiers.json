@@ -1,0 +1,37 @@
+{
+ "note": "Under the gorge's north cliff: the mountain climbs in tiers, a step and two taller faces stacked at its middle (KR-104).",
+ "created": "2026-11-05 03:32",
+ "start": {
+  "map": "Route9_Frlg",
+  "x": 41,
+  "y": 6,
+  "state": [
+   "VAR_REPEL_STEP_COUNT=250"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     240
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route9_Frlg",
+  "x": 41,
+  "y": 6,
+  "in_battle": false
+ },
+ "accepted": "2026-11-05 17:42"
+}

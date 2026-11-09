@@ -78,6 +78,11 @@ SHARED_BUILDINGS = {"pokemon_center": (buildings.CENTER, "center"), "poke_mart":
 TALL_GRASS = {"tall_grass": "B", "tall_grass_flowers": "C"}
 TALL_GRASS_FLOOR = {"B": "lawn_a", "C": "lawn_b"}  # the lawn tile each kind's ground shows
 SECONDARY_BANKS = {8: "plants"}  # banks the primary uses from the secondary tileset
+# the kit's colours that glow at night (the game's light colours: pae's spec "lights"), by bank: the Pokémon Center's
+# window and door glass; the Mart's glass, its MART letters and its emblem's ring; the street lamp's glass (in the
+# plants' palette, bank 8, which every map's secondary holds). Nothing else in those palettes uses them. A map's own
+# are in night.py, which also puts a glow on every lamp.
+LIGHTS = {5: [11, 12, 13], 6: [6, 11, 12, 13], 8: [14]}
 
 def rgba(idx: np.ndarray, pal) -> np.ndarray:
     out = np.zeros(idx.shape + (4,), np.uint8)
@@ -737,6 +742,7 @@ def primary(spec_dir: Path) -> dict:
         "secondary_palettes": {b: (rel / f"palette_{n}.pal").as_posix() for b, n in SECONDARY_BANKS.items()},
         # where the game copies a door's frames as it opens (HnS layouts): 8 tiles, 16 for a wide (double) door
         "reserve": [[434, 449]],
+        "lights": {str(b): cols for b, cols in LIGHTS.items()},  # for a map's spec "lights", with its own
         "animations": [{"name": "Water", "image": (rel / "sheets/water.png").as_posix(),
                         "frames": [(rel / f"sheets/water_f{k}.png").as_posix() for k in range(1, water.FRAMES)],
                         "speed": 10}],  # 10 game frames (about 160 ms) a frame, as the pond pack's
