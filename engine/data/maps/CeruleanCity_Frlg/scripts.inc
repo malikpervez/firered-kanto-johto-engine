@@ -254,9 +254,49 @@ CeruleanCity_EventScript_Youngster::
 	msgbox CeruleanCity_Text_TrainerLifeIsToughIsntIt, MSGBOX_NPC
 	end
 
+@ The guard lets a Kanto Champion who has heard MEWTWO on Route 22 (MW07) through: he steps aside and stays away
+@ (FLAG_HIDE_CERULEAN_CAVE_GUARD, the flag Celio's Sevii errand sets, which stays the way in for a player who never
+@ met the stranger). Anyone else hears FireRed's rule (story copy C4, decision 7).
 CeruleanCity_EventScript_CeruleanCaveGuard::
+	goto_if_unset FLAG_SYS_GAME_CLEAR, CeruleanCity_EventScript_CeruleanCaveGuardBlocks
+	goto_if_unset FLAG_MW07_SEEN, CeruleanCity_EventScript_CeruleanCaveGuardBlocks
+	lock
+	faceplayer
+	msgbox CeruleanCity_Text_ChampionCanGoThrough
+	closemessage
+	goto_if_set FLAG_HIDE_CERULEAN_CAVE_GUARD, CeruleanCity_EventScript_CeruleanCaveGuardRelease
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	call_if_eq VAR_RESULT, DIR_EAST, CeruleanCity_EventScript_CeruleanCaveGuardStepRight
+	call_if_ne VAR_RESULT, DIR_EAST, CeruleanCity_EventScript_CeruleanCaveGuardStepLeft
+	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
+CeruleanCity_EventScript_CeruleanCaveGuardRelease::
+	release
+	end
+
+@ Away from the player: right when they stand west of him, else left.
+CeruleanCity_EventScript_CeruleanCaveGuardStepRight::
+	applymovement LOCALID_CERULEAN_CAVE_GUARD, CeruleanCity_Movement_GuardStepRight
+	waitmovement 0
+	return
+
+CeruleanCity_EventScript_CeruleanCaveGuardStepLeft::
+	applymovement LOCALID_CERULEAN_CAVE_GUARD, CeruleanCity_Movement_GuardStepLeft
+	waitmovement 0
+	return
+
+CeruleanCity_EventScript_CeruleanCaveGuardBlocks::
 	msgbox CeruleanCity_Text_ThisIsCeruleanCave, MSGBOX_NPC
 	end
+
+CeruleanCity_Movement_GuardStepRight::
+	walk_right
+	face_left
+	step_end
+
+CeruleanCity_Movement_GuardStepLeft::
+	walk_left
+	face_right
+	step_end
 
 CeruleanCity_EventScript_Woman::
 	lock
@@ -512,6 +552,14 @@ CeruleanCity_Text_ThisIsCeruleanCave::
 	.string "CHAMPION for starters.\p"
 	.string "And, you would have to have\n"
 	.string "made a great achievement.$"
+
+CeruleanCity_Text_ChampionCanGoThrough::
+	.string "This is CERULEAN CAVE.\p"
+	.string "You're the new CHAMPION. Then I\n"
+	.string "can let you through.\p"
+	.string "Something in there has been quiet\n"
+	.string "for weeks. Not asleep. Waiting.\p"
+	.string "Take care of yourself in there.$"
 
 CeruleanCity_Text_CitySign::
 	.string "CERULEAN CITY\n"

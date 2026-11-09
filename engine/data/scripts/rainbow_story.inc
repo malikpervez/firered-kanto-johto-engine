@@ -30,7 +30,7 @@ RB_Flyby::
 	return
 @ The companion PIKACHU (it walks with every trainer once they have a POKéMON) sees through the stranger first:
 @ wary on Route 1 (MW01), ears flat at Silph's wavering veil (MW05), bristling again at Cinnabar's reveal (MW06),
-@ settling as MEWTWO leaves. No state.
+@ settling as MEWTWO leaves, and calm at the cave's mouth once MEWTWO is met (MW09). No state.
 RB_PikachuWary::
 	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
 	msgbox RB_Text_PikachuWary
@@ -51,6 +51,10 @@ RB_PikachuSettles::
 	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
 	msgbox RB_Text_PikachuSettles
 	return
+RB_PikachuLooksBack::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuLooksBack
+	return
 RB_Text_PikachuWary::
 	.string "PIKACHU's fur stands on end.\nIt doesn't take its eyes off him.$"
 RB_Text_PikachuBristles::
@@ -61,6 +65,8 @@ RB_Text_PikachuStares::
 	.string "PIKACHU's ears flatten. It stares\nat the traveler's shadow.$"
 RB_Text_PikachuSettles::
 	.string "PIKACHU watches it go.\nIts fur slowly settles.$"
+RB_Text_PikachuLooksBack::
+	.string "PIKACHU looks back into the dark.\nIts fur stays smooth.$"
 RB_Route1Transition::
 	setvar VAR_TEMP_E, 0
 	setflag FLAG_TEMP_1E
@@ -653,6 +659,8 @@ goto_if_unset FLAG_MW06_SEEN, RB_Return
 goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
 clearflag FLAG_TEMP_1E
 	return
+@ After the reveal he speaks as MEWTWO and asks the player to come to Cerulean Cave (story copy C2/C3).
+@ Cerulean's cave guard lets a Kanto Champion who has heard him through (FLAG_MW07_SEEN, story copy C4).
 MW07_Talk::
 	lock
 	faceplayer
@@ -711,7 +719,7 @@ MW05_Text::
 MW05_Text_Stranger::
 	.string "STRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
 MW06_Text_Journals::
-	.string "STRANGER: Those pages tell you\nwhat they hoped to create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
+	.string "STRANGER: Someone in that house\nwrote, “MEWTWO is far too powerful.”\pThose pages tell what they hoped\nto create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
 MW06_Text_Question::
 	.string "MEWTWO: I expected possession.\nAnother reason to command.\pYou made that answer difficult.\pWould you invite MEWTWO to come?\nOr leave it to choose its path?$"
 MW06_Invitation::
@@ -727,22 +735,31 @@ MW06_Text_Choice::
 MW06_Text_Answer::
 	.string "MEWTWO: You do not speak for\nevery human. I no longer believe\levery human speaks for you.\pMEWTWO leaves to find\nsomewhere quiet.$"
 MW07_Text_Before::
-	.string "STRANGER: A CHAMPION commands\ngreat power. I wonder what\lyou will ask of it.$"
+	.string "The traveler's coat and hat are\nback. You know who wears them.\pMEWTWO: Others see a traveler.\nYou do not. Good.\pThey will call you CHAMPION soon.\nI wonder what you will ask of it.\pWhen they do, come to the cave at\nthe edge of CERULEAN. I will wait.$"
 MW07_Text_After::
-	.string "STRANGER: You reached the summit.\nDid it change what you ask\lof those beside you?$"
+	.string "The traveler's coat and hat are\nback. You know who wears them.\pMEWTWO: You reached the summit.\nDid it change what you ask of\lthose beside you?\pCome to the cave at the edge of\nCERULEAN. I will be waiting inside.$"
+@ The greeting: "You came" after he asked the player on Route 22 (MW07), "You found the quiet place" after the
+@ reveal alone (MW06), or the unfamiliar presence for a player who never met the stranger (story copy C5).
 MW08_Intro::
+	goto_if_set FLAG_MW07_SEEN, MW08_Came
 	goto_if_unset FLAG_MW06_SEEN, MW08_Unfamiliar
 	msgbox MW08_Text_Familiar
+MW08_Offer::
 	@ After Black Tide, Mewtwo knows what Rocket made in Johto: a callback across the regions, nothing written.
 	@ It comes before his battle offer.
 	call_if_set FLAG_LG_FINAL_RESOLVED, MW08_Replicas
 	msgbox MW08_Text_Battle
 	goto MW08_Ask
+MW08_Came::
+	msgbox MW08_Text_Came
+	goto MW08_Offer
 MW08_Unfamiliar::
 	msgbox MW08_Text_Unfamiliar
 MW08_Ask::
 	msgbox MW08_Text_Ask, MSGBOX_YESNO
 	return
+MW08_Text_Came::
+	.string "MEWTWO: You came.\pThis is the quiet place I chose.\nFew would follow me here.$"
 MW08_Text_Familiar::
 	.string "MEWTWO: You found the quiet\nplace I chose.$"
 MW08_Text_Battle::
@@ -774,6 +791,7 @@ MW09_Scene::
 	goto_if_set FLAG_MW09_SEEN, MW09_Release
 	setvar VAR_TEMP_E, 0
 	msgbox MW09_Text
+	call RB_PikachuLooksBack
 	closemessage
 	call RB_MewGlimpse
 	setflag FLAG_MW09_SEEN
