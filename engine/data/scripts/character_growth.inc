@@ -330,8 +330,8 @@ CG_Text_GD01_Go::
 CG_Text_GD01_Defeat::
 	.string "GOLD: Next time. Definitely\nnext time!$"
 CG_Text_GD01_After::
-	.string "GOLD: You waited. Every turn, you\nwatched what I did first.\pI just keep shouting moves.\nFALKNER said that, too.$"
+	.string "GOLD: How do you stay so calm?\nI just keep shouting moves.\pFALKNER said that, too.$"
 CG_Text_GD01_Theft::
-	.string "GOLD: Hey, did you hear? Someone\nbroke into PROF.ELM's lab.\pThey took the POKéMON that sat\nnext to mine on the table.\pThe officer said his name was\n{RIVAL}. If I see him, I'll tell\lhim what I think of that!$"
+	.string "GOLD: PROF.ELM told me about the\nbreak-in. You saw the thief, right?\p{RIVAL}. He took the one that sat\nnext to mine on the table.\pIf I see him, I'll tell him what\nI think of that!$"
 CG_Text_GD01_Bye::
 	.string "GOLD: I'm healing up and trying\nFALKNER again. Third time!\pSee you around, CHAMPION!$"
