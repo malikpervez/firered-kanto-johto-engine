@@ -29,7 +29,8 @@ RB_Flyby::
 	call_if_eq VAR_RESULT, 1, RB_AsyncWait
 	return
 @ The companion PIKACHU (it walks with every trainer once they have a POKéMON) sees through the stranger first:
-@ wary on Route 1 (MW01), bristling again at Cinnabar's reveal (MW06), settling as MEWTWO leaves. No state.
+@ wary on Route 1 (MW01), ears flat at Silph's wavering veil (MW05), bristling again at Cinnabar's reveal (MW06),
+@ settling as MEWTWO leaves. No state.
 RB_PikachuWary::
 	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
 	msgbox RB_Text_PikachuWary
@@ -42,6 +43,10 @@ RB_PikachuBristles::
 RB_PikachuBristlesAgain::
 	msgbox RB_Text_PikachuBristlesAgain
 	return
+RB_PikachuStares::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuStares
+	return
 RB_PikachuSettles::
 	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
 	msgbox RB_Text_PikachuSettles
@@ -51,7 +56,9 @@ RB_Text_PikachuWary::
 RB_Text_PikachuBristles::
 	.string "PIKACHU bristles and steps between\nyou and MEWTWO.$"
 RB_Text_PikachuBristlesAgain::
-	.string "PIKACHU bristles, just as it did on\nROUTE 1. It knew all along.$"
+	.string "PIKACHU bristles, just as it did\non ROUTE 1.$"
+RB_Text_PikachuStares::
+	.string "PIKACHU's ears flatten. It stares\nat the traveler's shadow.$"
 RB_Text_PikachuSettles::
 	.string "PIKACHU watches it go.\nIts fur slowly settles.$"
 RB_Route1Transition::
@@ -599,6 +606,8 @@ goto_if_set FLAG_MW05_SEEN, RB_Repeat
 call RB_MewtwoReveal
 	showobjectat 2, MAP_SILPH_CO_1F
 	msgbox MW05_Text
+	call RB_PikachuStares
+	msgbox MW05_Text_Stranger
 	call RB_MewGlimpse
 	setflag FLAG_TEMP_1E
 	removeobject 2
@@ -698,7 +707,9 @@ MW04_Seven::
 MW04_Text_Seven::
 	.string "STRANGER: Seven people fell out of\nthe sky over VIRIDIAN.\pThey ask their POKéMON before they\nreach for a BALL. I have watched.$"
 MW05_Text::
-	.string "The traveler's outline wavers:\na long tail, an unfamiliar head.\pSTRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
+	.string "The traveler's outline wavers:\na long tail, an unfamiliar head.$"
+MW05_Text_Stranger::
+	.string "STRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
 MW06_Text_Journals::
 	.string "STRANGER: Those pages tell you\nwhat they hoped to create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
 MW06_Text_Question::

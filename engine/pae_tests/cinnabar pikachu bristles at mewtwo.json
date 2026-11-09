@@ -1,5 +1,5 @@
 {
- "note": "With the Secret Key found and the stranger met on Route 1: as the veil falls on Cinnabar, 'PIKACHU bristles, just as it did on ROUTE 1. It knew all along.' (the test ends on that box).",
+ "note": "With the Secret Key found and the stranger met on Route 1: as the veil falls on Cinnabar, 'PIKACHU bristles, just as it did on ROUTE 1.' (the test ends on that box; story copy F1 took out 'It knew all along.').",
  "created": "2026-10-31 23:45",
  "start": {
   "map": "CinnabarIsland_Frlg",
@@ -114,5 +114,6 @@
   "flags": {
    "FLAG_MW06_SEEN": false
   }
- }
+ },
+ "accepted": "2026-11-09 15:05"
 }
