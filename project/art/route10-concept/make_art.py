@@ -24,7 +24,9 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "kit"))
 import buildings
 import cliffs
+import fray
 import kit
+import terraces
 
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent
@@ -44,6 +46,8 @@ HERMAN_WALK = range(24, 29)  # Herman wanders left and right along row 57
 STEP = {"left": (-1, 0), "right": (1, 0), "up": (0, -1), "down": (0, 1)}
 WATER = set("~")
 SOLID = set("T#bRoklSBcw_~vrYZX") | cliffs.SOLID
+# the cobbles giving out into the dirt (kit/fray.py): the cobble half's letters (one a variant), the dirt half's
+FRAY_COBBLE, FRAY_DIRT = "\u01c0\u01c2\u01c3", "\u01c1\u01c4\u01c5"
 
 # the Power Plant, from the remakes pack: four sawtooth halls, a boiler annex, two stacks and a sealed loading shutter;
 # one door (its personnel entrance), at 7,7
@@ -157,6 +161,7 @@ def check(g, d) -> None:
 def main() -> None:
     g = plan()
     d = doors(g)
+    foot = terraces.footprint(g, roof="Y")  # the cliff's footprint (and its mouths' tops), for its tiers
     cliffs.layout(g, roof="Y")  # the caves' mouths stand against the cliffs: their tops run down to them, with no face
     for y in range(MAP_H):  # the face beside a mouth runs on into it (a middle, not an inner end)
         for x in range(MAP_W):
@@ -165,6 +170,9 @@ def main() -> None:
     kit.check_forest(g)
     kit.check_water(g)
     check(g, d)
+    # Lavender's cobbles give out into the road's dirt over two blocks (kit/fray.py) instead of on a straight line:
+    # the last row of cobbles and the first of dirt before it
+    assert fray.lay(g, FRAY_COBBLE, FRAY_DIRT, sides="N") == {"N": 5}, "the join is the road's 5 blocks"
     assert MOUTH.palette == cliffs.PAL, "the cave mouth isn't in the cliffs' palette"
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
@@ -174,6 +182,14 @@ def main() -> None:
         for x in range(MAP_W):
             if g[y + 1][x] == "Y" and g[y][x] in cliffs.JUNCTION_CHARS:
                 g[y][x] = cliffs.TOP[cliffs.phase(x, y) - 1]
+    # the mountains in tiers (kit/terraces.py): the levels above the cliff's wall, each set back behind the one
+    # below, over the cliff as it was (its wall, tops and mouths untouched); past the map's top and bottom edges
+    # counts as more cliff where no map joins; Lavender joins below at columns 4-41
+    beyond = terraces.beyond_edges(len(g[0]), len(g), down=range(4, 42))
+    tier_cells, tier_names, _ = terraces.tiers_over(g, foot, roof="Y", beyond=beyond)
+    for name, pic, entry in tier_cells:
+        rock.add(name, pic, tileset="secondary", solid=True, **entry)
+    SOLID.update(terraces.solid(tier_names))
     spec_mt += rock.write()
     sh = kit.Sheet(MOUTH.name, MOUTH.palette, CLIFF_BANK, HERE, HERE, cols=MOUTH.idx.shape[1] // 16)
     dx, dy = MOUTH.door
@@ -182,6 +198,9 @@ def main() -> None:
     spec_mt += sh.write()
     sh = kit.Sheet(PLANT.name, PLANT.palette, PLANT_BANK, HERE, HERE, cols=PLANT.idx.shape[1] // 16)
     sh.add(PLANT.name, PLANT.idx, tileset="secondary", **PLANT.entry())
+    spec_mt += sh.write()
+    sh = kit.Sheet("fray", kit.PALS["ground"], kit.BANK["ground"], HERE, HERE, cols=8)
+    fray.add(sh, "N")
     spec_mt += sh.write()
     for e in spec_mt:  # sheets put "w"/"h" on everything; drop the 1x1 ones for readability
         if e["w"] == 1 and e["h"] == 1:
@@ -203,6 +222,8 @@ def main() -> None:
     legend[":"] = {"auto": "dirt", "joins": "="}  # the road's dirt runs on into Lavender's cobbles without a lawn rim
     assert not set("YZX") & set(cliffs.legend(char_of)), "a building's letter is one of the cliffs'"
     legend.update(cliffs.legend(char_of))
+    legend.update(terraces.legend(tier_names, joins="C"))
+    legend.update(fray.legend("N", FRAY_COBBLE, FRAY_DIRT, "=", "="))  # the road's dirt joins the cobbles here
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps(d, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doors {d}")

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "default": "taller_mountains",
+  "profiles": {
+    "short_terraces": {
+      "level_1": "original_base_face_2_blocks",
+      "level_2_to_5": {
+        "folder": "step",
+        "height_blocks": 1
+      }
+    },
+    "taller_mountains": {
+      "level_1": "original_base_face_2_blocks",
+      "level_2": {
+        "folder": "step",
+        "height_blocks": 1
+      },
+      "level_3_to_5": {
+        "folder": "tall_step",
+        "height_blocks": 2
+      }
+    }
+  },
+  "placement_rules": [
+    "Keep each column foot fixed. Taller faces grow upward into already-solid plateau blocks.",
+    "A full taller face requires two rows before the next higher tier. If a higher tier overlaps, it visually hides the covered face row.",
+    "All existing short pieces and tile IDs remain available. The taller profile does not change paths, collision or the height grid."
+  ]
+}

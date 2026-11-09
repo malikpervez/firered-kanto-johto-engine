@@ -1,0 +1,39 @@
+{
+ "note": "Down from the Pok\u00e9mon Tower's door through the open gate (its middle block walkable, between two stone lanterns) onto the garden's gravel path (Kanto Lavender Town v0.1, KR-98).",
+ "created": "2026-11-03 17:00",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 29,
+  "y": 9,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     62
+    ],
+    [
+     0,
+     220
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 29,
+  "y": 13,
+  "in_battle": false
+ },
+ "accepted": "2026-11-03 16:56"
+}

@@ -1,0 +1,39 @@
+{
+ "note": "The iron railing along the Tower walk's south side stops you (KR-98).",
+ "created": "2026-11-03 17:00",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 24,
+  "y": 10,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     32
+    ],
+    [
+     0,
+     220
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 24,
+  "y": 10,
+  "in_battle": false
+ },
+ "accepted": "2026-11-03 16:16"
+}

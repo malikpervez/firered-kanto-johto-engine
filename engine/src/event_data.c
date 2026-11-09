@@ -3,6 +3,7 @@
 #include "event_data.h"
 #include "pokedex.h"
 #include "johto_campaign.h"
+#include "overworld_mon_encounter.h"
 #include "constants/johto_ids.h"
 STATIC_ASSERT(JOHTO_FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY_HNS - JOHTO_FLAG_DAILY_BEAT_SILVER == 10, JohtoDailyFlagRangePinned);
 
@@ -69,6 +70,7 @@ void ClearTempFieldEventData(void)
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_CTRL_OBJ_DELETE);
     FlagClear(FLAG_NURSE_UNION_ROOM_REMINDER);
+    OwMonEncounter_ClearGone();
 }
 
 void ClearDailyFlags(void)

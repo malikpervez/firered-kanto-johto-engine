@@ -1,0 +1,20 @@
+GIMP Palette
+Name: cinnabar_town
+Columns: 16
+#
+  0   0   0  index 0
+ 24  24  32  index 1
+ 40  40  48  index 2
+ 64  56  56  index 3
+ 88  80  80  index 4
+112 112 120  index 5
+152 144 136  index 6
+200 192 184  index 7
+120  40  32  index 8
+192  72  40  index 9
+240 144  72  index 10
+ 40 120  72  index 11
+ 56 152  80  index 12
+ 80 184  96  index 13
+208 200 176  index 14
+240 232 208  index 15

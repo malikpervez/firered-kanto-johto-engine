@@ -35,7 +35,7 @@ rect(7, 0, 15, 11, "L")                         # the League's tower, door 11,11
 rect(8, 12, 15, 15, "p")                        # the forecourt
 rect(10, 16, 13, 19, "=")                       # the cobbled road down to Route 23
 rect(0, 8, 6, 11, ":")                          # the west road to League West Pass (rows 9-11 meet it)
-rect(0, 8, 5, 8, "b")                           # (its north verge)
+rect(0, 8, 6, 8, "b")                           # (its north verge, on to the hedge: no stub of road up into it)
 for x in (7, 16):
     rect(x, 12, x, 13, "l")                     # lamps either side of the forecourt
 rect(6, 14, 7, 15, "*")

@@ -577,6 +577,31 @@ void BattleSetup_StartLatiBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
+// A battle with an overworld Pokémon the player chose to fight (Special_OwMonEncounterPrepare made it): a scripted
+// wild battle, or in the Safari Zone a Safari battle, after which the script goes on (waitstate) either way.
+static void CB2_EndOverworldMonSafariBattle(void)
+{
+    CB2_EndSafariBattle();
+    if (gMain.callback2 == CB2_ReturnToField)  // balls left: back to the field, and on with the walker's script
+        SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+}
+
+void BattleSetup_StartOverworldMonBattle(void)
+{
+    Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE | SCREFF_HARDWARE);
+    if (!GetSafariZoneFlag())
+    {
+        BattleSetup_StartScriptedWildBattle();
+        return;
+    }
+    LockPlayerFieldControls();
+    FreezeObjectEvents();
+    StopPlayerAvatar();
+    gMain.savedCallback = CB2_EndOverworldMonSafariBattle;
+    gBattleTypeFlags = BATTLE_TYPE_SAFARI;
+    CreateBattleStartTask(GetWildBattleTransition(), 0);
+}
+
 void BattleSetup_StartLegendaryBattle(void)
 {
     LockPlayerFieldControls();

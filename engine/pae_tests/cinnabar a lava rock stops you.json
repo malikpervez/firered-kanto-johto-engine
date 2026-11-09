@@ -1,0 +1,39 @@
+{
+ "note": "A lava rock on the ash north-east of the volcano stops you (KR-100): it stands where the kit's field rock was.",
+ "created": "2026-11-03 23:30",
+ "start": {
+  "map": "CinnabarIsland_Frlg",
+  "x": 74,
+  "y": 10,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     32
+    ],
+    [
+     0,
+     220
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CinnabarIsland_Frlg",
+  "x": 74,
+  "y": 10,
+  "in_battle": false
+ },
+ "accepted": "2026-11-03 23:16"
+}

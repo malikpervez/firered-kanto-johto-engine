@@ -1,0 +1,35 @@
+{
+ "note": "At 22:00 Erika's Gym's windows glow and its glass roof stays dark (on an unlit copy of the palette).",
+ "created": "2026-11-04 16:25",
+ "start": {
+  "map": "CeladonCity_Frlg",
+  "x": 12,
+  "y": 36,
+  "state": [],
+  "script": null,
+  "clock": "22:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeladonCity_Frlg",
+  "x": 12,
+  "y": 36,
+  "in_battle": false
+ }
+}

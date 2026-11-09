@@ -1,0 +1,78 @@
+{
+ "note": "Nao never met in Kanto, the beasts released: the first talk with Nao in Ecruteak opens with her introduction, 'I'm NAO. I keep the bells here in ECRUTEAK. I came home from KANTO not long ago. I went asking about a bird.' The test ends on its second box, before the Burned Tower story (FLAG_RB_NAO_INTRODUCED is set as it closes).",
+ "created": "2026-11-09 14:29",
+ "start": {
+  "map": "EcruteakCity_hns",
+  "x": 30,
+  "y": 22,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_RB_OPENING_SEEN",
+   "JOHTO_FLAG_RELEASED_BEASTS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_RB_NAO_INTRODUCED",
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "EcruteakCity_hns",
+  "x": 30,
+  "y": 22,
+  "in_battle": false,
+  "flags": {
+   "FLAG_RB_NAO_INTRODUCED": false,
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN": false
+  }
+ },
+ "accepted": "2026-11-09 14:30"
+}

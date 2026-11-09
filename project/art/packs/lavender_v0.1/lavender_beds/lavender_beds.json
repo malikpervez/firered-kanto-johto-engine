@@ -1,0 +1,2462 @@
+{
+  "schema_version": 1,
+  "id": "lavender_beds",
+  "type": "static_terrain",
+  "block_size_px": 16,
+  "palette": "lavender_town",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "solid": false,
+  "solid_blocks": [],
+  "door_block": null,
+  "piece_names": [
+    "center",
+    "N",
+    "E",
+    "S",
+    "W",
+    "NE",
+    "SE",
+    "SW",
+    "NW",
+    "in_NE",
+    "in_SE",
+    "in_SW",
+    "in_NW",
+    "in_NE_SE",
+    "in_NE_SW",
+    "in_NE_NW",
+    "in_SE_SW",
+    "in_SE_NW",
+    "in_SW_NW",
+    "in_NE_SE_SW",
+    "in_NE_SE_NW",
+    "in_NE_SW_NW",
+    "in_SE_SW_NW",
+    "in_ALL",
+    "single",
+    "center_b",
+    "center_c",
+    "to_gravel_N",
+    "to_gravel_E",
+    "to_gravel_S",
+    "to_gravel_W"
+  ],
+  "naming": "N means lawn outside to north. Inside corners ordered NE, SE, SW, NW.",
+  "tiles": [
+    {
+      "schema_version": 1,
+      "id": "center",
+      "name": "center",
+      "image": "tiles/center.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/center.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "N",
+      "name": "N",
+      "image": "tiles/N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          10,
+          10
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/N.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "E",
+      "name": "E",
+      "image": "tiles/E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          39
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/E.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "S",
+      "name": "S",
+      "image": "tiles/S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/S.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "W",
+      "name": "W",
+      "image": "tiles/W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          39,
+          40
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/W.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "NE",
+      "name": "NE",
+      "image": "tiles/NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          10,
+          7
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/NE.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "SE",
+      "name": "SE",
+      "image": "tiles/SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          39
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/SE.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "SW",
+      "name": "SW",
+      "image": "tiles/SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          39,
+          40
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/SW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "NW",
+      "name": "NW",
+      "image": "tiles/NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          7,
+          10
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE",
+      "name": "in_NE",
+      "image": "tiles/in_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_NE.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SE",
+      "name": "in_SE",
+      "image": "tiles/in_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_SE.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SW",
+      "name": "in_SW",
+      "image": "tiles/in_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_SW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NW",
+      "name": "in_NW",
+      "image": "tiles/in_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SE",
+      "name": "in_NE_SE",
+      "image": "tiles/in_NE_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_NE_SE.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SW",
+      "name": "in_NE_SW",
+      "image": "tiles/in_NE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_NE_SW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_NW",
+      "name": "in_NE_NW",
+      "image": "tiles/in_NE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_NE_NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SE_SW",
+      "name": "in_SE_SW",
+      "image": "tiles/in_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_SE_SW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SE_NW",
+      "name": "in_SE_NW",
+      "image": "tiles/in_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_SE_NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SW_NW",
+      "name": "in_SW_NW",
+      "image": "tiles/in_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_SW_NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SE_SW",
+      "name": "in_NE_SE_SW",
+      "image": "tiles/in_NE_SE_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_NE_SE_SW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SE_NW",
+      "name": "in_NE_SE_NW",
+      "image": "tiles/in_NE_SE_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_NE_SE_NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_NE_SW_NW",
+      "name": "in_NE_SW_NW",
+      "image": "tiles/in_NE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_NE_SW_NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_SE_SW_NW",
+      "name": "in_SE_SW_NW",
+      "image": "tiles/in_SE_SW_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_SE_SW_NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "in_ALL",
+      "name": "in_ALL",
+      "image": "tiles/in_ALL.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/in_ALL.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "single",
+      "name": "single",
+      "image": "tiles/single.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          7,
+          7
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/single.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "center_b",
+      "name": "center_b",
+      "image": "tiles/center_b.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          38,
+          40
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 3,
+      "frames": [
+        "tiles/center_b.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "center_c",
+      "name": "center_c",
+      "image": "tiles/center_c.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          40,
+          41
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 3,
+      "frames": [
+        "tiles/center_c.png"
+      ],
+      "frame_speed": 0
+    }
+  ],
+  "transitions": [
+    {
+      "schema_version": 1,
+      "id": "to_gravel_N",
+      "name": "to_gravel_N",
+      "image": "transitions/to_gravel_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "outside_material": "gravel",
+      "outside_side": "N",
+      "tiles_8x8": [
+        [
+          65,
+          65
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "transitions/to_gravel_N.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "to_gravel_E",
+      "name": "to_gravel_E",
+      "image": "transitions/to_gravel_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "outside_material": "gravel",
+      "outside_side": "E",
+      "tiles_8x8": [
+        [
+          40,
+          65
+        ],
+        [
+          6,
+          65
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 3,
+      "frames": [
+        "transitions/to_gravel_E.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "to_gravel_S",
+      "name": "to_gravel_S",
+      "image": "transitions/to_gravel_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "outside_material": "gravel",
+      "outside_side": "S",
+      "tiles_8x8": [
+        [
+          40,
+          40
+        ],
+        [
+          65,
+          65
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "transitions/to_gravel_S.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "to_gravel_W",
+      "name": "to_gravel_W",
+      "image": "transitions/to_gravel_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "lavender_town",
+      "palettes_8x8": [
+        [
+          "lavender_town",
+          "lavender_town"
+        ],
+        [
+          "lavender_town",
+          "lavender_town"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [],
+      "walkable_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "outside_material": "gravel",
+      "outside_side": "W",
+      "tiles_8x8": [
+        [
+          65,
+          40
+        ],
+        [
+          65,
+          6
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/lavender_town.gpl",
+      "unique_8x8_tiles": 3,
+      "frames": [
+        "transitions/to_gravel_W.png"
+      ],
+      "frame_speed": 0
+    }
+  ],
+  "unique_8x8_tiles": 9,
+  "autotile": {
+    "recipes_file": "autotile_recipes.json",
+    "mask_bits": {
+      "N": 1,
+      "E": 2,
+      "S": 4,
+      "W": 8,
+      "NE": 16,
+      "SE": 32,
+      "SW": 64,
+      "NW": 128
+    },
+    "bit_meaning": "1 = outside this material"
+  },
+  "palette_file": "../palettes/lavender_town.gpl",
+  "tile_pool_file": "../tile_pool.json"
+}

@@ -120,7 +120,11 @@ def main() -> None:
     (HERE / "spec.json").write_text(json.dumps(spec, indent=1) + "\n")
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("ss\nss\n")
-    (HERE / "legend.json").write_text(json.dumps(dict(kit.LEGEND), indent=1) + "\n")
+    legend = dict(kit.LEGEND)
+    # the boardwalk lands on the dirt path (86-89,13/14): the planks run straight onto it, with no lawn rim on the path
+    # and no beam and posts on land (the dock's sides against the sea keep their edges)
+    legend["d"] = {"auto": "dock", "joins": ":"}
+    (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}")
 
 

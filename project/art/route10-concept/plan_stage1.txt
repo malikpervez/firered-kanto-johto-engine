@@ -11,8 +11,8 @@ TT..........S.....bggggggggg~~~~TTTTTT
 TT................bggggggggg~~~~TTTTTT
 TT................bb....bbbb~~~~TTTTTT
 TT..........ZZZZZ...........~~~~TTTTTT
-TT..o.......ZZZZZ...........~~~~TTTTTT
-TT..........ZZZZZ...........~~~~TTTTTT
+TT..o...**..ZZZZZ.......**..~~~~TTTTTT
+TT......**..ZZZZZ.......**..~~~~TTTTTT
 TT..........ZZZZZ.........S.~~~~TTTTTT
 bb...........:::............~~~~TTTTTT
 ::::::::::::::::............~~~~TTTTTT
@@ -22,7 +22,7 @@ TT..................*****...~~~~TTTTTT
 TT..................*****...~~~~TTTTTT
 TT..................*****...~~~~TTTTTT
 TT.*****....................~~~~TTTTTT
-TT.*****....................~~~~TTTTTT
+TT.*****.....k..............~~~~TTTTTT
 TT.*****....................~~~~TTTTTT
 TT......................o...~~~~TTTTTT
 TTbbbbbbbbbbbbbbbbbbbbbbbbbb~~~~TTTTTT

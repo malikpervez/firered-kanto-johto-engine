@@ -2311,7 +2311,7 @@ const struct Tileset gTileset_CinnabarConcept =
     .palettes = gTilesetPalettes_CinnabarConcept,
     .metatiles = gMetatiles_CinnabarConcept,
     .metatileAttributes = gMetatileAttributes_CinnabarConcept,
-    .callback = NULL,
+    .callback = InitTilesetAnim_CinnabarConcept,
 };
 
 const struct Tileset gTileset_Route19Concept =

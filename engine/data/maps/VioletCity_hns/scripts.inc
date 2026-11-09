@@ -13,6 +13,7 @@ VioletCity_OnFrame::
 
 VioletCity_OnTransition::
 	callnative SetTimeBasedEncounters
+	call CG_GoldVioletVisibility
 	end
 
 VioletCity_EventScript_Trigger::

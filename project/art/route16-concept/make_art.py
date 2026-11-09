@@ -148,7 +148,9 @@ ROCK_CHARS = iter("ǎǐǒǔǖǘǚǜǟǡ")
 MOUTH = [(x, 27) for x in range(12, 18)]   # the plaza's paving opening into the road down to Cycling Road...
 MOUTH_TO = [(x, 28) for x in range(12, 18)]  # ...and the paving's change to its cobble, a row below
 # the plaza's paving and the road's cobble run up to the lower hall's doorways (28,24 and 35,24)
-DOORSTEPS = {(27, 24): ("Ǣ", {"name": "paving#15", "joins": "p"}), (36, 24): ("Ǥ", {"name": "cobble#15", "joins": "="})}
+DOORSTEPS = {(27, 24): ("Ǣ", {"name": "paving#15", "joins": "p"}), (36, 24): ("Ǥ", {"name": "cobble#15", "joins": "="}),
+             # the woodland path runs into the upper hall's doorways (28,12 and 35,12): its edge on the north only
+             (27, 12): ("ǥ", {"name": "dirt#14", "joins": ":"}), (36, 12): ("ǥ", {"name": "dirt#14", "joins": ":"})}
 
 
 def rock_name(x: int, y: int) -> str:
@@ -175,7 +177,7 @@ def settle_road(g) -> tuple[dict, list]:
         mask = sum(b for b, (dx, dy) in ((1, (0, -1)), (2, (1, 0)), (4, (0, 1)), (8, (-1, 0))) if same(x + dx, y + dy))
         g[y][x] = made[f"{rock_name(x, y)}@cobble#{mask}"]
     for (x, y), (ch, item) in DOORSTEPS.items():
-        assert g[y][x] == item["joins"]
+        assert g[y][x] == item["joins"], f"no {item['joins']} at ({x},{y})"
         g[y][x] = ch
         legend[ch] = item
     for (x, y), (x2, y2) in zip(MOUTH, MOUTH_TO):

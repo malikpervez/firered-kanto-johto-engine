@@ -55,6 +55,9 @@ rect(13, 16, 15, 19, ":")                      # and up to the Center's door
 rect(3, 23, 7, 25, "*"); rect(20, 20, 24, 22, "*"); at(4, 13, "o"); at(24, 26, "o")
 at(26, 15, "S")                                # the Power Plant sign, by the river, read from 26,16
 rect(2, 27, 27, 27, "b")                       # bushes along the mountains' foot
+# a little colour on the plain lawns (polish): flowers east of the Center and in the north clearing, a stump on the
+# lawn south of the road
+rect(24, 13, 25, 14, "*"); rect(8, 13, 9, 14, "*"); at(13, 24, "k")
 
 # the river (it can be surfed) and the lake with the plant's island
 rect(28, 2, 31, 30, "~")
