@@ -1,6 +1,6 @@
 {
- "note": "Talked to again after the whole talk: only its last line.",
- "created": "2026-11-09 16:21",
+ "note": "Talked to again after the whole talk: only its last line. At 16:00: low tide, no rain (the spot is shore at both tides).",
+ "created": "2026-11-09 16:28",
  "start": {
   "map": "LakeOfRage_hns",
   "x": 35,
@@ -23,7 +23,8 @@
    "JOHTO_VAR_GOLDENROD_CITY_STATE=5",
    "JOHTO_FLAG_RB16_SEEN"
   ],
-  "script": null
+  "script": null,
+  "clock": "16:00"
  },
  "steps": [
   {
@@ -71,5 +72,5 @@
    "JOHTO_FLAG_RB16_SEEN": true
   }
  },
- "accepted": "2026-11-09 16:21"
+ "accepted": "2026-11-09 16:28"
 }
