@@ -6,6 +6,7 @@ set -e
 A=project/art/route22-concept
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=Route22_Frlg
@@ -43,3 +44,7 @@ pae map place $M object 3 36 22 $P
 pae map place $M object 4 38 17 $P
 pae map place $M object 5 5 22 $P
 pae map place $M object 6 24 15 $P            # the gentleman
+
+# at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every
+# other object so no local id moves (kit/night.py; the game draws them at night only)
+python3 ../project/art/kit/night.py map ../$A $M $P

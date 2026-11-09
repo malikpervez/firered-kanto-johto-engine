@@ -41,6 +41,12 @@ rect(0, 28, 59, 31, "T")
 rect(4, 0, 30, 4, "C")
 rect(14, 2, 19, 6, "Y")                       # Diglett's Cave, door (16,6)
 at(13, 6, "S")                                # its sign, read from (13,7)
+# the forest is drawn in 2x2 cells on the even grid: beside the ridge's east end (column 31, odd) bushes, so the
+# forest starts on whole trees at column 32
+rect(31, 0, 31, 2, "b")
+# Vermilion's harbour (its water, offset 3: its rows 25-28 are these 28-31) runs on into a little bay in the corner,
+# closed by the forest round it (no way ashore), so the sea doesn't end in a wall of trees at the join
+rect(0, 28, 3, 31, "~")
 
 # the road: cobbles in from Vermilion (rows 14-17), dirt east to Route 12 (rows 17-20 at the edge, as Route 12's)
 rect(0, 14, 3, 17, "=")

@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "name": "outer_W_wall_side",
+  "image": "terraces/corners/outer_W_wall_side.png",
+  "palette": "kit_rock_cliff",
+  "palette_file": "kit_rock_cliff.gpl",
+  "footprint_blocks": {
+    "width": 1,
+    "height": 2
+  },
+  "tiles_8x8": [
+    [
+      385,
+      267
+    ],
+    [
+      387,
+      269
+    ],
+    [
+      270,
+      271
+    ],
+    [
+      272,
+      273
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ]
+  ],
+  "palettes_8x8": [
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ],
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ],
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ],
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ]
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 0,
+  "role": "Rounded base-wall end against lawn, retaining its original bottom half.",
+  "phase_top_quarters": [],
+  "phase_formula": "1 + 3*((y-origin_y)%3) + ((x-origin_x)%3)",
+  "overlay_order": "phase top first, then this piece; transparent exterior reveals the lower tier",
+  "end_shape": "rounded_base",
+  "changed_half": "W",
+  "art_revision": "0.2"
+}

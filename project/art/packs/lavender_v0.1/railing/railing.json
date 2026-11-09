@@ -1,0 +1,1403 @@
+{
+  "schema_version": 1,
+  "id": "railing",
+  "type": "props",
+  "block_size_px": 16,
+  "palette": "per_tile",
+  "transparent_index": 0,
+  "frame_count": 1,
+  "door_block": null,
+  "piece_names": [
+    "post",
+    "end_N",
+    "end_E",
+    "end_S",
+    "end_W",
+    "straight_NS",
+    "straight_EW",
+    "corner_NE",
+    "corner_SE",
+    "corner_SW",
+    "corner_NW",
+    "tee_NES",
+    "tee_NEW",
+    "tee_NSW",
+    "tee_ESW",
+    "cross",
+    "gate_open"
+  ],
+  "naming": "N means lawn outside to north. Inside corners ordered NE, SE, SW, NW.",
+  "tiles": [
+    {
+      "schema_version": 1,
+      "id": "post",
+      "name": "post",
+      "image": "tiles/post.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          29,
+          29
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/post.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "end_N",
+      "name": "end_N",
+      "image": "tiles/end_N.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          36,
+          36
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/end_N.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "end_E",
+      "name": "end_E",
+      "image": "tiles/end_E.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          29,
+          31
+        ],
+        [
+          20,
+          21
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/end_E.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "end_S",
+      "name": "end_S",
+      "image": "tiles/end_S.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          29,
+          29
+        ],
+        [
+          34,
+          34
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/end_S.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "end_W",
+      "name": "end_W",
+      "image": "tiles/end_W.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          31,
+          29
+        ],
+        [
+          21,
+          20
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/end_W.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "straight_NS",
+      "name": "straight_NS",
+      "image": "tiles/straight_NS.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          36,
+          36
+        ],
+        [
+          34,
+          34
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/straight_NS.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "straight_EW",
+      "name": "straight_EW",
+      "image": "tiles/straight_EW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          31,
+          31
+        ],
+        [
+          21,
+          21
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/straight_EW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "corner_NE",
+      "name": "corner_NE",
+      "image": "tiles/corner_NE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          36,
+          37
+        ],
+        [
+          20,
+          21
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/corner_NE.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "corner_SE",
+      "name": "corner_SE",
+      "image": "tiles/corner_SE.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          29,
+          31
+        ],
+        [
+          34,
+          35
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/corner_SE.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "corner_SW",
+      "name": "corner_SW",
+      "image": "tiles/corner_SW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          31,
+          29
+        ],
+        [
+          35,
+          34
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/corner_SW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "corner_NW",
+      "name": "corner_NW",
+      "image": "tiles/corner_NW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          37,
+          36
+        ],
+        [
+          21,
+          20
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/corner_NW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "tee_NES",
+      "name": "tee_NES",
+      "image": "tiles/tee_NES.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          36,
+          37
+        ],
+        [
+          34,
+          35
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/tee_NES.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "tee_NEW",
+      "name": "tee_NEW",
+      "image": "tiles/tee_NEW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          37,
+          37
+        ],
+        [
+          21,
+          21
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/tee_NEW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "tee_NSW",
+      "name": "tee_NSW",
+      "image": "tiles/tee_NSW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          37,
+          36
+        ],
+        [
+          35,
+          34
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/tee_NSW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "tee_ESW",
+      "name": "tee_ESW",
+      "image": "tiles/tee_ESW.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          31,
+          31
+        ],
+        [
+          35,
+          35
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/tee_ESW.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "cross",
+      "name": "cross",
+      "image": "tiles/cross.png",
+      "size_px": [
+        16,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 1,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": true,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ]
+      ],
+      "walkable_blocks": [],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "tiles_8x8": [
+        [
+          37,
+          37
+        ],
+        [
+          35,
+          35
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 2,
+      "frames": [
+        "tiles/cross.png"
+      ],
+      "frame_speed": 0
+    },
+    {
+      "schema_version": 1,
+      "id": "gate_open",
+      "name": "gate_open",
+      "image": "tiles/gate_open.png",
+      "size_px": [
+        48,
+        16
+      ],
+      "block_size_px": 16,
+      "footprint_blocks": {
+        "width": 3,
+        "height": 1
+      },
+      "palette": "kit_wood",
+      "palettes_8x8": [
+        [
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood"
+        ],
+        [
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood",
+          "kit_wood"
+        ]
+      ],
+      "transparent_index": 0,
+      "solid": false,
+      "solid_blocks": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "walkable_blocks": [
+        [
+          1,
+          0
+        ]
+      ],
+      "over_rows": 0,
+      "over_row_indices": [],
+      "frame_count": 1,
+      "note": "Open leaves lie inside the two post blocks. The entire middle block is an unobstructed opening.",
+      "tiles_8x8": [
+        [
+          36,
+          22,
+          0,
+          0,
+          22,
+          36
+        ],
+        [
+          20,
+          20,
+          0,
+          0,
+          20,
+          20
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": false
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ],
+        [
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": false
+          },
+          {
+            "hflip": false,
+            "vflip": true
+          },
+          {
+            "hflip": true,
+            "vflip": true
+          }
+        ]
+      ],
+      "tile_pool_file": "../tile_pool.json",
+      "palette_file": "../palettes/kit_wood.gpl",
+      "unique_8x8_tiles": 4,
+      "frames": [
+        "tiles/gate_open.png"
+      ],
+      "frame_speed": 0
+    }
+  ],
+  "transitions": [],
+  "unique_8x8_tiles": 10,
+  "collision_policy": "Use each piece\u2019s solid_blocks and walkable_blocks, including the mixed open gate.",
+  "tile_pool_file": "../tile_pool.json"
+}

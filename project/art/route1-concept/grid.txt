@@ -3,11 +3,11 @@ TTTTTTTTTTTTTTTTTTTTTT::::TTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTT::::TTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTTTTTTTTTTTTTT::::TTTTTTTTTTTTTTTTTTTTTTTT
 TTTTTTTTTT###########.::::...###########TTTTTTTTTT
-TTTTTTTTTT............::::..............TTTTTTTTTT
-TTTTTTTTTT..........RR.:::.RR...........TTTTTTTTTT
+TTTTTTTTTT....,.......::::.......**.....TTTTTTTTTT
+TTTTTTTTTT.......,..RR.:::.RR.....*.....TTTTTTTTTT
 TTTTTTTTTT.gggggggggRR.:::.RRgggggggggg.TTTTTTTTTT
 TTTTTTTTTT.ggggggggg....::...gggggggggg.TTTTTTTTTT
-TTTTTTTTTT______________yz______________TTTTTTTTTT
+TTTTTTTTTTł_____________yz_____________łTTTTTTTTTT
 TTTTTTTTTT...PPP.....b..::............k.TTTTTTTTTT
 TTTTTTTTTT.,.PPP*.o*....::.gggggggggggg.TTTTTTTTTT
 TTTTTTTTTT...PPP.b..*...::.gggggggggggg.TTTTTTTTTT
@@ -15,7 +15,7 @@ TTTTTTTTTT.~~~~~~~~~...:::.gggggggggggg.TTTTTTTTTT
 TTTTTTTTTT.~~v~~~vr~.,.:::.gggggggggggg.TTTTTTTTTT
 TTTTTTTTTT.~r~~v~~~~..,:::.gggggggggggg.TTTTTTTTTT
 TTTTTTTTTT~~~~~~~~......::....b.......o.TTTTTTTTTT
-TTTTTTTTTT~~........____yz______________TTTTTTTTTT
+TTTTTTTTTT~~........____yz_____________łTTTTTTTTTT
 TTTTTTTTTT~~b...........::..............TTTTTTTTTT
 TTTTTTTTTT~~....**..RR..::.gggggggggggg.TTTTTTTTTT
 TTTTTTTTTT~~........RR..::.gggggggggggg.TTTTTTTTTT
@@ -24,10 +24,10 @@ TTTTTTTTTT~~..RR.....*..:::gggggggggggg.TTTTTTTTTT
 TTTTTTTTTT~~.......b....:::gggggggggggg.TTTTTTTTTT
 TTTTTTTTTT~~k.........o.::.gggggggggggg.TTTTTTTTTT
 TTTTTTTTTT~~.*..o.......::.gggggggggggg.TTTTTTTTTT
-TTTTTTTTTT~~____________yz______________TTTTTTTTTT
+TTTTTTTTTT~~____________yz_____________łTTTTTTTTTT
 TTTTTTTTTT~~............::.........k...bTTTTTTTTTT
 TTTT......~~..*.gggggg..::..ggggggggggg.TTTTTTTTTT
-TTTT.,..*.~~....ggggg,..::..ggggggggggg.TTTTTTTTTT
+TTTT.,..*.~~....gggggg,.::..ggggggggggg.TTTTTTTTTT
 TTTT......ⰁⰂ....gggggg.:::..ggggggggggg.TTTTTTTTTT
 TTTT..::::dd::::::::::::::..ggggggggggg.TTTTTTTTTT
 TTTT..::::dd::::::::::::::*.ggggggggggg.TTTTTTTTTT

@@ -48,6 +48,7 @@ rect(45, 0, 52, 5, "~")             # ...and east
 rect(2, 12, 12, 13, "~")            # south of the cave's island
 rect(41, 0, 44, 5, "d")             # Nugget Bridge's last span (Route 24: the top, columns 41-44)
 rect(45, 0, 45, 5, "b")             # (bushes along its east side: the yard is reached only through the house)
+rect(53, 0, 53, 5, "b")             # (and a hedge on the east pond's far side: the forest's column there is half a tree)
 
 # Cerulean Cave on its island
 rect(2, 2, 12, 11, ".")
@@ -177,12 +178,20 @@ for x in (6, 17, 28):
     rect(x, 14, x + 1, 14, "n")
 at(18, 31, "x"); at(19, 31, "y"); at(20, 31, "z")
 at(47, 26, "0"); at(47, 27, "m"); at(47, 28, "j")
+rect(11, 34, 12, 34, "u"); at(10, 34, "t"); at(13, 34, "t")   # a bench between two tubs in the plaza west of the canal
+rect(36, 46, 37, 46, "n"); at(35, 46, "t"); at(38, 46, "t")   # and one in the square south of the Mart
 BUILT = set("WKXZLHY12^")
 border = [(x, y) for y in range(H) for x in range(21) if g[y][x] == "p" and any(  # the west side only
     g[y + dy][x + dx] not in "pP%~/@fFunatiexyz0mj" and g[y + dy][x + dx] not in BUILT
     for dy in (-1, 0, 1) for dx in (-1, 0, 1) if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H)]
 for x, y in border:
     g[y][x] = "%"
+
+# where the paving meets the cobbles head on, the kit's join pieces (a row of setts between them): the promenade's two
+# openings onto Route 4's road (U: paving to the north, cobbles to the south) and the Mart square's edge under the
+# road east of the neck (N: cobbles to the north)
+rect(12, 16, 13, 16, "U"); rect(24, 16, 25, 16, "U")
+rect(25, 44, 42, 44, "N")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

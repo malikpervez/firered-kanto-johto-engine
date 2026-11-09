@@ -1,0 +1,39 @@
+{
+ "note": "A fuchsia bush beside the Mart's east wall stops you (KR-99).",
+ "created": "2026-11-03 20:00",
+ "start": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 9,
+  "y": 16,
+  "state": [],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     32
+    ],
+    [
+     0,
+     220
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FuchsiaCity_Frlg",
+  "x": 9,
+  "y": 16,
+  "in_battle": false
+ },
+ "accepted": "2026-11-03 19:59"
+}

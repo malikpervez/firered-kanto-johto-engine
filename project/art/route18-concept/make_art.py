@@ -39,6 +39,10 @@ HALL = ((41, 9), (48, 9))   # the gatehouse's hall: doorway to doorway
 ROCKERS = [(38, 13, "W", 4), (31, 14, "NESW", 1), (23, 12, "E", 6)]
 MONS = [(31, 6), (33, 7), (36, 7), (39, 6)]   # a Kecleon, two Dodrio, a Kecleon
 STRIP = 7                   # the columns of this route old Fuchsia draws
+# the sea along the woods' top (rows 0-1 east of the pocket), so their crowns show instead of being cut flat by the
+# map's top edge; it is out of reach (solid): the pocket's way stays as it was, the woods' corner its east end
+TOP_SEA = [(x, y) for y in (0, 1) for x in range(30, 42)]
+TOP_SEA_CH = "\u0282"
 
 
 def load(letter: str) -> tuple[buildings.Building, list[tuple[int, int]]]:
@@ -132,6 +136,9 @@ def main() -> None:
     kit.check_water(g)
     kit.check_paving(g)
     check(g, d)
+    for x, y in TOP_SEA:
+        assert g[y][x] == "s", f"({x},{y}) is '{g[y][x]}', not the sea"
+        g[y][x] = TOP_SEA_CH
     base = kit.primary(HERE)  # the kit: the primary tileset every map shares
     spec_mt = list(base["metatiles"])
     b, ds = load("C")
@@ -155,6 +162,7 @@ def main() -> None:
     (HERE / "grid.txt").write_text("".join("".join(r) + "\n" for r in g))
     (HERE / "border.txt").write_text("ss\nss\n")
     legend = dict(kit.LEGEND, C={"name": b.name, "joins": "="})  # the road runs up to the gatehouse's doorways
+    legend[TOP_SEA_CH] = {"auto": "sea", "joins": "s", "elevation": 1, "solid": True}
     (HERE / "legend.json").write_text(json.dumps(legend, indent=1) + "\n")
     (HERE / "doors.json").write_text(json.dumps({"C": d}, indent=1) + "\n")
     print(f"{len(spec_mt)} metatiles in the spec; grid {MAP_W}x{MAP_H}; doorways {d}")

@@ -126,5 +126,11 @@
  "C": {
   "name": "cycling_gate",
   "joins": "="
+ },
+ "\u0282": {
+  "auto": "sea",
+  "joins": "s",
+  "elevation": 1,
+  "solid": true
  }
 }

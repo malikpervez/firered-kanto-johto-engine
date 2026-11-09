@@ -69,6 +69,10 @@ rect(48, 16, 51, 17, "*"); at(50, 25, "o"); rect(44, 30, 51, 30, "T")
 rect(44, 14, 44, 15, "b"); rect(44, 26, 44, 27, "b")
 rect(43, 30, 43, 31, "b")                     # bushes beside the road out, so the forest east of it starts on whole trees
 rect(36, 0, 36, 3, "b"); rect(45, 0, 45, 3, "b")   # and either side of Saffron's gate (the forest ends on whole trees)
+# a little detail on the open lawns (off the road, the people's places and the trainers' sights): flowers in the east
+# lawn's south corner and on the strip between the south meadow and the road (nothing solid on the two-row strip under
+# the north treeline: it would touch the trees and pinch the way round the tall grass)
+rect(45, 28, 46, 29, "*"); rect(37, 25, 38, 26, "*")
 
 Path(__file__).with_name("plan_stage1.txt").write_text("".join("".join(r) + "\n" for r in g))
 print("    " + "".join(str(x // 10 % 10) if x % 10 == 0 else " " for x in range(W)))

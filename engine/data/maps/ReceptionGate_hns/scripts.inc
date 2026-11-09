@@ -29,6 +29,12 @@ ReceptionGate_EventScript_Officer::
 	msgbox VictoryRoadGate_Text_EightBadges, MSGBOX_NPC
 	end
 
+@ A player who came west from KANTO and went east through TOHJO FALLS may never have stepped on Route 27's
+@ first-steps tiles, so the road to the LEAGUE was never set up (JOHTO_VAR_ROUTE27_STATE still 0) and the
+@ check below never ran. Now it runs either way: with the 8th badge, the road is set up here first.
+ReceptionGate_TriggerFirst::
+	goto_if_unset JOHTO_FLAG_BADGE08_GET, ReceptionGate_Trigger
+	call Route27_EventScript_SetUpLeagueRoad
 ReceptionGate_Trigger::
 	lock
 	playse SE_PIN

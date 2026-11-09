@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "name": "NW_wall",
+  "image": "terraces/side/NW_wall.png",
+  "palette": "kit_rock_cliff",
+  "palette_file": "kit_rock_cliff.gpl",
+  "footprint_blocks": {
+    "width": 1,
+    "height": 1
+  },
+  "tiles_8x8": [
+    [
+      383,
+      320
+    ],
+    [
+      376,
+      320
+    ]
+  ],
+  "flips_8x8": [
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ],
+    [
+      {
+        "h": false,
+        "v": false
+      },
+      {
+        "h": false,
+        "v": false
+      }
+    ]
+  ],
+  "palettes_8x8": [
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ],
+    [
+      "kit_rock_cliff",
+      "kit_rock_cliff"
+    ]
+  ],
+  "solid_blocks": [
+    [
+      0,
+      0
+    ]
+  ],
+  "walkable_blocks": [],
+  "over_rows": 0,
+  "role": "Full 8px lit west rock wall. Inner rim meets the phase top; outer outline defines the drop.",
+  "phase_top_quarters": [
+    "NE",
+    "SE"
+  ],
+  "phase_formula": "1 + 3*((y-origin_y)%3) + ((x-origin_x)%3)",
+  "overlay_order": "phase top first, then this piece; transparent exterior reveals the lower tier",
+  "wall_half": "W",
+  "wall_band_px": [
+    0,
+    7
+  ],
+  "source_phase_texture": "source/base/cliff_top/phases/<phase>/N.png",
+  "variant_cycle": [
+    "W_wall",
+    "W_wall_2"
+  ],
+  "variant_rule": "For an ordinary side wall use variant 1 on even global y, variant 2 on odd global y. Fixed N/S ends replace the terminal block.",
+  "art_revision": "0.2",
+  "composed_by_phase": {
+    "1": {
+      "tiles_8x8": [
+        [
+          383,
+          37
+        ],
+        [
+          376,
+          3
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/1/N.png"
+    },
+    "2": {
+      "tiles_8x8": [
+        [
+          383,
+          55
+        ],
+        [
+          376,
+          7
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/2/N.png"
+    },
+    "3": {
+      "tiles_8x8": [
+        [
+          383,
+          71
+        ],
+        [
+          376,
+          11
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/3/N.png"
+    },
+    "4": {
+      "tiles_8x8": [
+        [
+          383,
+          89
+        ],
+        [
+          376,
+          15
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/4/N.png"
+    },
+    "5": {
+      "tiles_8x8": [
+        [
+          383,
+          107
+        ],
+        [
+          376,
+          19
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/5/N.png"
+    },
+    "6": {
+      "tiles_8x8": [
+        [
+          383,
+          123
+        ],
+        [
+          376,
+          23
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/6/N.png"
+    },
+    "7": {
+      "tiles_8x8": [
+        [
+          383,
+          141
+        ],
+        [
+          376,
+          27
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/7/N.png"
+    },
+    "8": {
+      "tiles_8x8": [
+        [
+          383,
+          159
+        ],
+        [
+          376,
+          31
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/8/N.png"
+    },
+    "9": {
+      "tiles_8x8": [
+        [
+          383,
+          177
+        ],
+        [
+          376,
+          35
+        ]
+      ],
+      "flips_8x8": [
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ],
+        [
+          {
+            "h": false,
+            "v": false
+          },
+          {
+            "h": false,
+            "v": false
+          }
+        ]
+      ],
+      "phase_source": "source/base/cliff_top/phases/9/N.png"
+    }
+  }
+}

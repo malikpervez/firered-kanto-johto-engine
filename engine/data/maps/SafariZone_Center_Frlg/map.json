@@ -32,7 +32,7 @@
       "flag": "FLAG_HIDE_SAFARI_ZONE_CENTER_NUGGET"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MAKUHITA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RHYHORN",
       "x": 11,
       "y": 25,
       "elevation": 3,
@@ -41,12 +41,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TRAPINCH",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_NIDORAN_M",
       "x": 9,
       "y": 29,
       "elevation": 3,
@@ -55,12 +55,12 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_VIBRAVA",
+      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EXEGGCUTE",
       "x": 10,
       "y": 29,
       "elevation": 3,
@@ -69,7 +69,7 @@
       "movement_range_y": 10,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "OverworldMon_EventScript_Encounter",
       "flag": "0",
       "type": "object"
     }

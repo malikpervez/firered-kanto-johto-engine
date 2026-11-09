@@ -36,4 +36,33 @@ its own (bank 9). The seams are pae's: with Routes 10 and 8 both maps are the ki
 Build it from the repository root with `sh project/art/lavender-concept/build.sh` (or every map with
 `sh project/art/build_all.sh`).
 
-Its Town Props (KR-94, `../kit/props.py`): a Pokémon statue between the Mart and the Tower, two benches looking at the memorial garden, a bin by the road. 231 of its 384 tiles.
+Its Town Props (KR-94, `../kit/props.py`): a Pokémon statue between the Mart and the Tower, two benches looking at the
+memorial garden, a bin by the road.
+
+Its own look (KR-98) is Kanto Lavender Town v0.1 (`../packs/lavender_v0.1`, made with another AI from
+`Lavender_Town_v0.1_prompt.md`), laid by `../kit/lavender.py`. The town is slate (σ in the plan): the square, the walk
+to the Tower, the paths to the Center and the Mart and the three roads to the map's edges, where each edge block's outer
+half is the pack's join to the cobble, so the routes' roads run into it. The garden of remembrance runs from the walk to
+the town's south edge: lavender rows (λ), a gravel path (γ) down the middle from an open gate between two stone
+lanterns to a stone between two more at the forest's edge, three paths across, 14 memorial stones and 3 offering stones,
+two trees, the benches either side of the path (the gravel draws no edge, so it runs into the lavender, the lawn and
+the trees alike); a low iron railing along the walk and down the garden's west side from
+row 18 (open where its paths come out, and north of that for the Haunters' rounds). Lavender beside the Tower and on the
+south lawn; two violet street lamps by the road south; Mr. Fuji's yard: the rest shelter, the bowls and a straw bed. The
+railings, the gate and the details are listed in `make_art.py` (`RAILS`, `GATES`, `DETAILS`; the routes' roads past
+the edges in `EDGE_ROADS`). The slate, gravel and lavender have a palette of their own (bank 10). 289 of its 384 tiles.
+
+## At night (KR-101)
+
+The game tints the overworld by the time of day (`OW_ENABLE_DNS`); at night Lavender now has lights (pae's spec
+`"lights"` and `pae map lights`):
+- the houses' windows glow warm (bank 7's window glass, its colours 14 and 15);
+- in the Pokémon Tower's palette (bank 9) the stone lanterns' windows, the Tower's door lamps and the glint on the
+  violet street lamps' glass and on the Tower's windows glow a pale violet of the town's own (colours 6 and 14, the
+  light colour in its colour 0);
+- the Pokémon Center's and the Mart's glass, the MART letters and the Mart's emblem ring glow warm (the kit's own
+  lights, `../kit/kit.py` `LIGHTS`: every town's Center and Mart, banks 5 and 6);
+- a round glow after dark round the head of each stone lantern and street lamp (`make_art.py` `GLOWS`, written to
+  `glows.txt`; `build.sh` gives them to `pae map lights`, after every other object, so no local id moves).
+
+By day nothing changes. The replay tests "lavender at night ..." replay at 22:00 (their start's `"clock"`).

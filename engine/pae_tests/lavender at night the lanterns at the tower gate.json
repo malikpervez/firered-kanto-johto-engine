@@ -1,0 +1,40 @@
+{
+ "note": "At 22:00 the stone lanterns either side of the tower gate glow, a warm halo round each, and the tower's door lamps glow pale violet: down the garden walk from the tower door, as in the garden gate test.",
+ "created": "2026-11-04 01:30",
+ "start": {
+  "map": "LavenderTown_Frlg",
+  "x": 29,
+  "y": 9,
+  "state": [],
+  "script": null,
+  "clock": "22:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     62
+    ],
+    [
+     0,
+     220
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_Frlg",
+  "x": 29,
+  "y": 13,
+  "in_battle": false
+ },
+ "accepted": "2026-11-04 14:02"
+}

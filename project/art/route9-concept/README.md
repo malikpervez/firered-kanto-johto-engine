@@ -22,6 +22,10 @@ Every trainer keeps his or her script and battle; Alicia and Chris now look down
 Route 9's hand-made seam was removed from `kanto_connection_seam.c` (with it, its dead entries for old Cerulean,
 KR-18). The pieces are the kit's and its cliffs (bank 7). The seams are pae's: Cerulean and Route 10 are the kit's too.
 
+The mountain north of the gorge climbs in tiers (KR-104, KR-105, `kit/terraces.py`): three tiers of two-block
+faces above its wall, stacked at its middle, each set back behind the one below. They're laid over the cliff as it was, so
+its wall and everything you walk on are unchanged.
+
 `make_art.py` checks the route's rules on the map it builds:
 - only its two roads open onto the edges;
 - the tree closes the way in, and stands more than 8 blocks in;

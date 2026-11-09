@@ -4,6 +4,7 @@ CeladonCity_Frlg_MapScripts::
 
 CeladonCity_OnTransition::
 	call MW04_Visibility
+	call CeladonCity_EventScript_SilphScientistVisibility
 	call JT_CeladonVisibility
 	setworldmapflag FLAG_WORLD_MAP_CELADON_CITY
 	end
@@ -65,13 +66,27 @@ CeladonCity_EventScript_Boy::
 	msgbox CeladonCity_Text_ScaldedTongueOnTea, MSGBOX_NPC
 	end
 
+@ FireRed's Silph scientist looks for the stolen SILPH SCOPE until the Rocket Hideout is cleared. RB06: once Silph Co.
+@ is freed (FLAG_HIDE_SAFFRON_ROCKETS, set by Giovanni's defeat there) he is back, with what ROCKET ordered from Silph.
+@ In between he is away (FLAG_TEMP_15). He used to wait for FLAG_HIDE_SILPH_ROCKETS, which nothing sets, so RB06 never played.
+CeladonCity_EventScript_SilphScientistVisibility::
+	goto_if_unset FLAG_HIDE_CELADON_ROCKETS, CeladonCity_EventScript_SilphScientistShown
+	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, CeladonCity_EventScript_SilphScientistShown
+	setflag FLAG_TEMP_15
+CeladonCity_EventScript_SilphScientistShown::
+	return
+
 CeladonCity_EventScript_SilphCoScientist::
 	lock
 	faceplayer
-	msgbox CeladonCity_Text_SomeoneStoleSilphScope, MSGBOX_DEFAULT
-	call_if_set FLAG_HIDE_SILPH_ROCKETS, RB_SilphEquipment
+	call_if_unset FLAG_HIDE_CELADON_ROCKETS, CeladonCity_EventScript_SilphScientistScope
+	call_if_set FLAG_HIDE_SAFFRON_ROCKETS, RB_SilphEquipment
 	release
 	end
+
+CeladonCity_EventScript_SilphScientistScope::
+	msgbox CeladonCity_Text_SomeoneStoleSilphScope, MSGBOX_DEFAULT
+	return
 
 CeladonCity_EventScript_TrainerTips1::
 	msgbox CeladonCity_Text_ExplainXAccuracyDireHit, MSGBOX_SIGN

@@ -6,6 +6,7 @@ set -e
 A=project/art/viridianforest-concept
 python3 $A/make_art.py
 python3 project/art/kit/settle.py $A  # the kit's small pieces into the ground they stand in
+python3 project/art/kit/night.py spec $A  # the lights at night: the kit's and the map's (kit/night.py)
 cd engine
 P="-p ."
 M=ViridianForest_Frlg
@@ -56,3 +57,7 @@ pae map place $M bg 5 16 12 $P       # (on the lawn beside the trail)
 pae map place $M bg 3 25 2 $P        # the exit sign, beside the north exit (on the lawn by the trail)
 pae map place $M bg 7 41 55 $P       # the hidden Antidote, in the south-east glade
 pae map place $M bg 6 18 44 $P       # the hidden Potion, in the tall grass west of the trail
+
+# at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every
+# other object so no local id moves (kit/night.py; the game draws them at night only)
+python3 ../project/art/kit/night.py map ../$A $M $P

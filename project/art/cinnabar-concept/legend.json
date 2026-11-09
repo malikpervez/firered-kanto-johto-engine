@@ -128,103 +128,106 @@
  "H": "cinnabar_gym",
  "U": "pokemon_mansion",
  "X": "pokemon_lab",
- "A": {
-  "auto": "top1",
-  "joins": "C"
- },
- "D": {
-  "auto": "top2",
-  "joins": "C"
- },
- "E": {
-  "auto": "top3",
-  "joins": "C"
- },
- "F": {
-  "auto": "top4",
-  "joins": "C"
- },
- "G": {
-  "auto": "top5",
-  "joins": "C"
- },
- "I": {
-  "auto": "top6",
-  "joins": "C"
- },
- "J": {
-  "auto": "top7",
-  "joins": "C"
- },
- "K": {
-  "auto": "top8",
-  "joins": "C"
- },
- "V": {
-  "auto": "top9",
-  "joins": "C"
- },
- "[": "face_outer_W",
- "{": "face_inner_W",
- "M": "face_middle_1",
- "N": "face_middle_2",
- "P": "face_middle_3",
- "}": "face_inner_E",
- "]": "face_outer_E",
- "a": {
-  "name": "top1#15.4+in_SW_face",
-  "joins": "C"
- },
- "e": {
-  "name": "top2#15.2+in_SE_face",
-  "joins": "C"
- },
- "f": {
-  "name": "top4#7+Wstart",
-  "joins": "C"
- },
- "i": {
-  "name": "top5#13+Estart",
-  "joins": "C"
- },
- "j": {
-  "name": "top7#7+Won",
-  "joins": "C"
- },
- "m": {
-  "name": "top8#13+Eon",
-  "joins": "C"
- },
- "¡": "bench_wood_south",
- "¢": "litter_bin",
- "ǝ": {
-  "pick": [
-   "dirt#15"
-  ],
-  "joins": ":"
- },
- "ǣ": {
-  "name": "sign_on_cobble#14",
-  "joins": "="
- },
- "ǥ": {
-  "name": "sign_on_cobble#12",
-  "joins": "="
- },
- "Ⰰ": {
-  "name": "sign@cobble#11",
-  "joins": "="
- },
- "Ⰱ": {
-  "name": "field_rock_b@dirt#15",
-  "joins": ":"
- },
- "Ⰲ": {
-  "name": "field_rock_c@dirt#15",
-  "joins": ":"
- },
- "Ⰳ": {
-  "name": "field_rock_a@dirt#13",
-  "joins": ":"
- }
+ "\u00a1": "bench_wood_south",
+ "\u00a2": "litter_bin",
+ "\u1e00": "ash#251",
+ "\u1e01": "ash#250",
+ "\u1e02": "ash#145",
+ "\u1e03": "ash#144",
+ "\u1e04": "basalt#200",
+ "\u1e05": "basalt#0",
+ "\u1e06": "sign@basalt#50",
+ "\u1e07": "basalt#236",
+ "\u1e08": "basalt#100",
+ "\u1e09": "sign@basalt#64",
+ "\u1e0a": "basalt#50",
+ "\u1e0b": "ash#108",
+ "\u1e0c": "ash#100",
+ "\u1e0d": "basalt#64",
+ "\u1e0e": "ash#217",
+ "\u1e0f": "ash#179",
+ "\u1e10": "ash#200",
+ "\u1e11": "ash_fill_2",
+ "\u1e12": "ash#0",
+ "\u1e13": "ash#50",
+ "\u1e14": "lava_rock@ash#0",
+ "\u1e15": "steam_vent@ash_fill_2",
+ "\u1e16": "basalt_rock_1#217@ash#0",
+ "\u1e17": "basalt_rock_2#145@ash_fill_2",
+ "\u1e18": "basalt_rock_1#145@ash#0",
+ "\u1e19": "basalt_rock_2#145@ash#0",
+ "\u1e1a": "basalt_rock_1#145@ash_fill_2",
+ "\u1e1b": "basalt_rock_1#179@ash#0",
+ "\u1e1c": "ash#16",
+ "\u1e1d": "basalt#128",
+ "\u1e1e": "ash#128",
+ "\u1e1f": "basalt_rock_3#136@ash_fill_2",
+ "\u1e20": "basalt_rock_4#0@ash#0",
+ "\u1e21": "basalt_rock_3#0@ash#0",
+ "\u1e22": "basalt_rock_4#0@ash_fill_2",
+ "\u1e23": "basalt_rock_3#0@ash_fill_2",
+ "\u1e24": "basalt_rock_3#18@ash#0",
+ "\u1e25": "sign@basalt#0",
+ "\u1e26": "basalt_rock_1#217@ash_fill_2",
+ "\u1e27": "basalt_rock_1#128@ash#0",
+ "\u1e28": "basalt_rock_2#0@ash#0",
+ "\u1e29": "basalt_rock_1#0@ash_fill_2",
+ "\u1e2a": "basalt_rock_2#32@ash#0",
+ "\u1e2b": "basalt_rock_1#36@ash#0",
+ "\u1e2c": "basalt_rock_2#100@ash_fill_2",
+ "\u1e2d": "basalt_rock_1#100@ash#0",
+ "\u1e2e": "basalt_rock_2#100@ash#0",
+ "\u1e2f": "basalt_rock_1#100@ash_fill_2",
+ "\u1e30": "basalt_rock_1#68@ash#0",
+ "\u1e31": "basalt_rock_2#64@ash_fill_2",
+ "\u1e32": "basalt_rock_1#0@ash#0",
+ "\u1e33": "basalt_rock_1#16@ash_fill_2",
+ "\u1e34": "basalt#32",
+ "\u1e35": "basalt#54",
+ "\u1e36": "basalt_rock_3#200@ash#0",
+ "\u1e37": "basalt_rock_4#34@ash#0",
+ "\u1e38": "basalt_face_inner_W_top@ash_fill_2",
+ "\u1e39": "basalt_face_middle_1_top@ash#0",
+ "\u1e3a": "basalt_face_middle_1_top@ash_fill_2",
+ "\u1e3b": "basalt_face_inner_E_top@ash_fill_2",
+ "\u1e3c": "basalt_rock_4#72@ash#0",
+ "\u1e3d": "ash#102",
+ "\u1e3e": "basalt_rock_1#200@ash#0",
+ "\u1e3f": "basalt_rock_2#0@ash_fill_2",
+ "\u1e40": "basalt_rock_2#50@ash_fill_2",
+ "\u1e41": "basalt_face_inner_W_bottom@ash#0",
+ "\u1e42": "basalt_face_middle_1_bottom@ash#0",
+ "\u1e43": "basalt_face_middle_1_bottom@ash_fill_2",
+ "\u1e44": "basalt_face_inner_E_bottom@ash#0",
+ "\u1e45": "basalt_rock_2#200@ash#0",
+ "\u1e46": "basalt_rock_1#50@ash_fill_2",
+ "\u1e47": "lava_rock@ash_fill_2",
+ "\u1e48": "basalt_rock_4#50@ash#0",
+ "\u1e49": "crater_2@ash#0",
+ "\u1e4a": "crater_1@ash_fill_2",
+ "\u1e4b": "crater_1@ash#0",
+ "\u1e4c": "crater_2@ash_fill_2",
+ "\u1e4d": "basalt_rock_4#200@ash_fill_2",
+ "\u1e4e": "basalt_rock_2#50@ash#0",
+ "\u1e4f": "basalt_rock_1#50@ash#0",
+ "\u1e50": "ash#32",
+ "\u1e51": "ash#64",
+ "\u1e52": "basalt_rock_4#18@ash_fill_2",
+ "\u1e53": "basalt_rock_4#136@ash#0",
+ "\u1e54": "basalt_rock_3#50@ash_fill_2",
+ "\u1e55": "steam_vent@ash#50",
+ "\u1e56": "basalt_rock_1#200@ash_fill_2",
+ "\u1e57": "basalt_rock_2#16@ash#0",
+ "\u1e58": "basalt_rock_2#128@ash_fill_2",
+ "\u1e59": "lava_rock@ash#16",
+ "\u1e5a": "basalt_rock_1#236@ash#0",
+ "\u1e5b": "basalt_rock_1#118@ash#0",
+ "\u1e5c": "basalt_face_outer_W_top@ash#0",
+ "\u1e5d": "basalt_face_outer_E_top@ash_fill_2",
+ "\u1e5e": "basalt_face_outer_W_bottom@ash_fill_2",
+ "\u1e5f": "basalt_face_outer_E_bottom@ash#0",
+ "\u1e60": "steam_vent@ash#0",
+ "\u1e61": "hot_spring_steam@grass",
+ "\u1e62": "ash#116",
+ "\u1e63": "ash#119"
 }

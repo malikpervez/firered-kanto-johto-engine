@@ -1,0 +1,41 @@
+{
+ "note": "On Johto's Route 22, on the way to its League, the walker by the west end is a Spearow (it was a Taillow, a Hoenn Pok\u00e9mon; its day and night wild slots were too; GAP-9).",
+ "created": "2026-11-06 22:30",
+ "start": {
+  "map": "Route22_hns",
+  "x": 6,
+  "y": 22,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR"
+  ],
+  "script": null,
+  "clock": "12:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route22_hns",
+  "x": 6,
+  "y": 22,
+  "in_battle": false
+ },
+ "accepted": "2026-11-06 20:28"
+}

@@ -1,0 +1,20 @@
+GIMP Palette
+Name: The kit's rock and cliff, on the volcano now (bank 11)
+Columns: 16
+#
+  0   0   0  index 0  (transparent)
+ 48  40  48  index 1
+ 80  64  56  index 2
+104  88  80  index 3
+136 112  96  index 4
+160 136 112  index 5
+176 160 136  index 6
+200 184 152  index 7
+216 200 168  index 8
+ 88  88  72  index 9
+112 112  96  index 10
+144 144 128  index 11
+184 184 160  index 12
+208 200 176  index 13
+ 80 104  64  index 14
+120 144  80  index 15
