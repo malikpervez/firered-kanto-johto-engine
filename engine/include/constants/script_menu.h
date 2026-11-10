@@ -204,10 +204,6 @@
 #define MULTI_FG21 191
 #define MULTI_FG22 192
 #define MULTI_FG_OPPONENTS 193
-// The new Friends scenes, in letter order from 194 (FG-A) to 200 (FG-G).
-#define MULTI_FG_D 197
-#define MULTI_FG_E 198
-#define MULTI_FG_F 199
 
 #define MULTI_NONE 255
 

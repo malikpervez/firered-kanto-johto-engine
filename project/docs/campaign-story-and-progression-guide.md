@@ -336,11 +336,10 @@ The original red Gyarados, Mahogany hideout and Radio Tower battles retain their
 | RB13 | Welcome — [`RB_Welcome`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:311) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB15 | Fuji hears from Nao (back in Lavender) — [`RB_FujiNaoLetter`](../../engine/data/scripts/rainbow_story.inc) | Replay tests `lavender fuji hears from nao`, `lavender fuji keeps naos letter`, `lavender fuji asks about the flute after the letter`, `lavender fuji asks about the flute` |
 | SV02 | Waiting at the counter — [`CG_SilverGoldenrodVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:136) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
-| FG-E | The lake that was told to be angry — [`FG_E_Interact`](../../engine/data/scripts/friends_story.inc) | Replay tests `lake of rage the friends and the angry lake`, `lake of rage the friends lb held space`, `lake of rage the friends make room for tim`, `lake of rage the friends at night at high tide`, `lake of rage no friends before the hideout` |
 | FG19 | Nobody yells at the frightened Pokémon — [`FG19_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2404) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | LG01 | Coastal warnings — [`BlackTide_CoastalWarning`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1009) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 
-RB11 is folded into RB12; there is no separate implemented Lance scene. Nao’s Ready/Later welcome respects native Ho-Oh encounter state. FG-E plays on the Lake of Rage’s west shore once the Mahogany hideout is cleared, apart from Nao’s south shore and Lance.
+RB11 is folded into RB12; there is no separate implemented Lance scene. Nao’s Ready/Later welcome respects native Ho-Oh encounter state. FG-E at Lake of Rage is proposed only.
 
 ## 15. The last badge and a choice of opponents
 
@@ -1073,16 +1072,6 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 
 **37C source:** [`FG18_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2281). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
 
-### FG-E — The lake that was told to be angry
-
-**Trigger:** Lake of Rage: Johto state seeded and the Mahogany hideout cleared (`JOHTO_VAR_MAHOGANY_TOWN_STATE` ≥ 14); before the Johto Hall of Fame; the group's stage is FG-E (stage 27, after FG18, before FG19). LB, Nick and Tim stand on the west shore's strip by the fence (camp 6,39: LB 5,39, Nick 7,39, Tim 8,39), the same tiles at high and low tide; the fisherman appears at 6,38, Jigglypuff at 4,38 and Murkrow at 8,38. Away from the red Gyarados's water, from Nao on the south shore (#118, 35,35) and from Lance (30,37).
-
-**Status:** IMPLEMENTED 2026-11-10 (KR-122; the owner: "Yes just make sure you are following their personalities as I required originally"). Receipt `0x95A`. Replay tests `lake of rage the friends and the angry lake`, `lake of rage the friends lb held space`, `lake of rage the friends make room for tim`, `lake of rage the friends at night at high tide`, `lake of rage no friends before the hideout`.
-
-**Source:** [`FG_E_Interact`](../../engine/data/scripts/friends_story.inc); the draft is in [friends-new-event-scripts.md](friends-new-event-scripts.md).
-
-LB reads a fisherman's boat sign, "If you're reading this, it's too late. Boats closed.", and calls it a mixtape. The fisherman doesn't laugh: every Magikarp he raised went wild while the radio hummed. Nick: "That signal's off now. This kid shut it down." LB apologises for the joke, sits down with Jigglypuff and Murkrow and tells him what worked for Jigglypuff; Tim rewrites the sign so people know where to go. Menu "That was kind, LB" (LB: don't tell X he "held space"; Nick: "You did, though.") / "Nice sign, Tim" (Tim kept the grandson's side; LB: "Respect."). The menu stays on later talks.
-
 ### FG19 — Nobody yells at the frightened Pokémon
 
 **Trigger:** Johto state seeded AND Goldenrod state>=11 after native Director rewards; before Johto Hall of Fame; current group stage is FG19.
@@ -1259,20 +1248,13 @@ Golduck Lv.56 / Furret Lv.55
 
 The October 19 Friends handoff is design input awaiting implementation: FG-A–FG-G, dialogue/voice rework, new final-battle lines, repeat-early-battle changes, bespoke Nao/Stranger art and other listed polish. Current 37C still has 22 scene receipts and required-zero bits 0x956–0x95F. The proposed new state allocation and 29-placement adoption must be audited before use.
 
-**Allocation audit, 10 November 2026** (before FG-D, FG-E and FG-F were built; the owner said yes to the drafts: "Yes just make sure you are following their personalities as I required originally"):
-
-- **Receipts: the handoff's numbers, as proposed.** FG-A..FG-G take `0x956`..`0x95C` in letter order (FG-D `0x959`, FG-E `0x95A`, FG-F `0x95B`). They are inside the Friends flags (`0x934`..`0x95F`), above the daily flags and below the pinned engine flags at `0x960`, so they're saved and nothing clears them. No script or C uses them: `flags_hns.h` and `johto_ids.h` list them as `FLAG_UNUSED_0x956`..., and Johto's own flags are `0x2xxx` ids in their own container. `0x95D`..`0x95F` stay required-zero, and so does the receipt of every scene a build doesn't have yet. No save layout change.
-- **Stages: not the handoff's placement numbers.** Its 29-row order would put FG-D at 22, FG-E at 23 and FG-F at 25. As stage values those clash: 22 is FG22's stage today, 13–21 are FG13–FG21's, and every old save at stage *n* would need converting. So the stage keeps each old scene's own number (no conversion), and the new scenes take the free values after FG22 in letter order: FG-A..FG-G = 23..29. That's inside the 5-bit stage field (0–31); none is a stage, gate or loss value today (gates 1–22, the loss field 0–14 is its own four bits). The story order is a separate table, `FriendsStory_Order`: each new scene sits right after the old scene it follows, and stages only move forward through it, as before. FG-D comes after FG17 rather than after FG18 as the handoff's table has it: Cianwood comes before Amphy is healed (FG18's gate), so after FG18 it would retire FG18 for every player.
-- **Menus:** `MULTI_FG_A`..`MULTI_FG_G` = 194..200 (FG-D 197, FG-E 198, FG-F 199).
-- Built so far: FG-D, FG-E, FG-F, each in its own pull request. The others keep the numbers above.
-
 | Draft ID | Proposed scene | Proposed location / gate | Current status |
 | --- | --- | --- | --- |
 | FG-A | Tim finds the resort | One Island / Ember Spa; Proposed first Sevii-trip completion | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-B | The road nobody paved | Indigo western road; Proposed post-Oak westbound crossing | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-C | The tower that sways | Violet / Sprout Tower exterior; Proposed Zephyr Badge | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |
-| FG-E | The lake that was told to be angry | Lake of Rage, west shore; after the Mahogany hideout | IMPLEMENTED 2026-11-10 (KR-122); see FG-E below |
+| FG-E | The lake that was told to be angry | Lake of Rage shore; Proposed Mahogany hideout clearance | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-F | Ham goes first | Ice Path safe entrance floor; Proposed post-Radio / pre-Clair window | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-G | Up six | Ecruteak pond; Proposed visit after FG22 | NOT IMPLEMENTED / gameplay NOT RUN |
 

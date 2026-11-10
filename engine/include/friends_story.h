@@ -6,7 +6,6 @@ bool8 FriendsStory_IsReady(void);
 bool8 FriendsStory_TryAdopt(void);
 void FriendsStory_NewGame(void);
 u16 FriendsStory_GetStage(void);
-u16 FriendsStory_Order(u16 scene);
 u16 FriendsStory_GetMapScene(void);
 bool8 FriendsStory_GetGate(u16 scene);
 void FriendsStory_OnMapLoad(void);

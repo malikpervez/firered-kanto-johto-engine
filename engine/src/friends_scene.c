@@ -27,9 +27,6 @@ static const u8 sForeground[] = {
     0, 0x7F, 0x0D, 0x2C, 0x52, 0x4C, 0x29, 0x31, 0x0E, 0x49,
     0x51, 0x19, 0x49, 0x0B, 0x38, 0x0D, 0x2A, 0x19, 0x48, 0x0E,
     0x49, 0x7F, 0x7F,
-    [FRIENDS_SCENE_FG_D] = 0x45, // Jon, Brian, Tim
-    [FRIENDS_SCENE_FG_E] = 0x68, // LB, Tim, Nick
-    [FRIENDS_SCENE_FG_F] = 0x27, // Ham, Jon, LB, Brian
 };
 static const u16 sFinalPartners[][2] = {
     {SPECIES_RATICATE, SPECIES_SLOWBRO},
@@ -180,18 +177,6 @@ static s16 GiratinaOffsetX(const struct FriendsCamp *camp)
     return -5;
 }
 
-// Visitor slot 3: Giratina's cell, or FG-F's Swinub on the ice just east of Ice Path's floor.
-static void Slot3Offset(const struct FriendsCamp *camp, s16 *dx, s16 *dy)
-{
-    *dx = GiratinaOffsetX(camp);
-    *dy = camp->map == MAP_ECRUTEAK_CITY_HNS ? 0 : -1;
-    if (camp->map == MAP_ICE_PATH_1F_HNS)
-    {
-        *dx = 4;
-        *dy = -1;
-    }
-}
-
 static const struct ObjectEventTemplate *OwnedTemplate(const struct FriendsCamp *camp, u8 logical)
 {
     u32 i;
@@ -207,7 +192,6 @@ static const struct FriendsWalk sWalks[] = {
     {2, 2, 0, 1}, {3, 5, -1, 0}, {5, 6, -1, 0}, {6, 5, 0, -1},
     {7, 4, -1, 0}, {9, 6, 1, 0}, {11, 3, 1, 0}, {18, 6, 1, 0},
     {20, 3, 0, 1}, {21, 0, 0, -1}, {22, 3, 1, 0},
-    {FRIENDS_SCENE_FG_E, 6, 1, 0}, {FRIENDS_SCENE_FG_F, 1, 1, 0},
 };
 
 static bool8 WalkCellsFree(const struct FriendsCamp *camp, u16 scene)
@@ -237,12 +221,10 @@ static bool8 VisitorCellsFree(const struct FriendsCamp *camp, u16 scene)
     // Current-scene union, including later acquisition/reveal beats. Each bit
     // names slot0/1/2 at the ordinary(-2/0/+2,-1) cells. Adult slots are never
     // checked: their own occupants are expected and must remain untouched.
-    static const u8 sSlots[FRIENDS_STORY_STAGE_MAX + 1] = {
+    static const u8 sSlots[] = {
         0, 0, 5, 5, 7, 2, 5, 7, 0, 7, 0, 0, 0, 7, 2, 5, 5, 0, 3, 5, 5, 0, 1,
-        [FRIENDS_SCENE_FG_D] = 7, [FRIENDS_SCENE_FG_E] = 7, [FRIENDS_SCENE_FG_F] = 3,
     };
     u8 slot, mask = sSlots[scene];
-    s16 dx, dy;
     if (scene == 8)
         mask = camp->map == MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE ? 1 : 2;
     for (slot = 0; slot < 3; slot++)
@@ -256,13 +238,10 @@ static bool8 VisitorCellsFree(const struct FriendsCamp *camp, u16 scene)
          || VisitorCellOccupied(camp, 2, 3) || VisitorCellOccupied(camp, 4, 3))
             return FALSE;
     }
-    Slot3Offset(camp, &dx, &dy);
-    if (scene == 1 || scene == 11 || scene == 17 || scene == 21 || scene == FRIENDS_SCENE_FG_F)
-        if (VisitorCellOccupied(camp, dx, dy))
+    if (scene == 1 || scene == 11 || scene == 17 || scene == 21)
+        if (VisitorCellOccupied(camp, GiratinaOffsetX(camp),
+                camp->map == MAP_ECRUTEAK_CITY_HNS ? 0 : -1))
             return FALSE;
-    // FG-F's Swinub steps off the ice, one tile south.
-    if (scene == FRIENDS_SCENE_FG_F && VisitorCellOccupied(camp, dx, dy + 1))
-        return FALSE;
     return WalkCellsFree(camp, scene);
 }
 
@@ -284,7 +263,7 @@ void Special_FriendsStoryMakeRoom(void)
 
     Script_RequestEffects(SCREFF_V1);
     gSpecialVar_Result = DIR_NONE;
-    if (camp == NULL || !FriendsStory_IsReady() || scene == 0 || scene > FRIENDS_STORY_STAGE_MAX
+    if (camp == NULL || !FriendsStory_IsReady() || scene == 0 || scene > FRIENDS_STORY_SCENE_COUNT
      || scene != FriendsStory_GetStage() || !FriendsStory_GetGate(scene)
      || gPlayerAvatar.objectEventId >= OBJECT_EVENTS_COUNT || VisitorCellsFree(camp, scene))
         return;
@@ -319,7 +298,7 @@ bool32 FriendsScene_GetFramePoint(s16 *x, s16 *y)
     const struct FriendsCamp *camp = CurrentCamp();
     u16 scene = FriendsStory_GetMapScene();
     if (camp == NULL || x == NULL || y == NULL || !FriendsStory_IsReady()
-     || scene == 0 || scene > FRIENDS_STORY_STAGE_MAX
+     || scene == 0 || scene > FRIENDS_STORY_SCENE_COUNT
      || scene != FriendsStory_GetStage() || !FriendsStory_GetGate(scene)
      || !VisitorCellsFree(camp, scene))
         return FALSE;
@@ -585,7 +564,8 @@ static void ShowMon(u16 species, u8 slot)
     {
         // Keep the exact native Giratina frame fully onscreen, clear of the
         // home inset and partner columns. Both exceptions use audited dry land.
-        Slot3Offset(camp, &offsetX, &offsetY);
+        offsetX = GiratinaOffsetX(camp);
+        offsetY = camp->map == MAP_ECRUTEAK_CITY_HNS ? 0 : -1;
     }
     Remove(localId);
     if (GetObjectEventIdByPosition(MAP_OFFSET + camp->x + offsetX,
@@ -836,13 +816,6 @@ void Special_FriendsStoryStage(void)
             ShowHome(); ShowMon(SPECIES_GIRATINA_ALTERED, 3);
             ShowPair(SPECIES_GOLDUCK, SPECIES_FURRET); break;
         case 22: ShowMon(SPECIES_SLOWBRO, 0); break;
-        case FRIENDS_SCENE_FG_D:
-            ShowHuman(OBJ_EVENT_GFX_BLACK_BELT_HNS, 1);
-            ShowMon(SPECIES_PRIMEAPE, 0); ShowMon(SPECIES_HOOTHOOT, 2); break;
-        case FRIENDS_SCENE_FG_E: ShowHuman(OBJ_EVENT_GFX_FISHER, 1); break;
-        case FRIENDS_SCENE_FG_F:
-            ShowMon(SPECIES_PSYDUCK, 0); ShowMon(SPECIES_SENTRET, 1);
-            ShowMon(SPECIES_SWINUB, 3); break;
         }
     }
     else if (scene == 1 && beat == 19)
@@ -871,14 +844,6 @@ void Special_FriendsStoryStage(void)
     }
     else if (scene == 13 && beat == 8)
         ShowMon(SPECIES_SENTRET, 1);
-    else if (scene == FRIENDS_SCENE_FG_E && beat == FRIENDS_FG_E_BEAT_PARTNERS)
-    {
-        // LB sits down by the bucket; Jigglypuff sits with him and Murkrow lands.
-        ShowMon(SPECIES_JIGGLYPUFF, 0);
-        ShowMon(SPECIES_MURKROW, 2);
-    }
-    else if (scene == FRIENDS_SCENE_FG_F && beat == FRIENDS_FG_F_BEAT_SWINUB_GONE)
-        Remove(230); // the Swinub, back on the snow, trots off
     else if (scene == 8 && beat == 8)
     {
         ClearPartners();
