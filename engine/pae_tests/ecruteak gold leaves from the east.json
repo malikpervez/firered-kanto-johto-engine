@@ -7,7 +7,7 @@
   "y": 48,
   "state": [
    "CLEAR_TEAM",
-   "SPECIES_BLASTOISE lv50 MOVE_SURF",
+   "SPECIES_BLASTOISE lv70 MOVE_SURF",
    "CALL JohtoCampaign_Initialize",
    "FLAG_SYS_GAME_CLEAR",
    "FLAG_BADGE08_GET",
