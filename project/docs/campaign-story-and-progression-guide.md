@@ -1248,6 +1248,13 @@ Golduck Lv.56 / Furret Lv.55
 
 The October 19 Friends handoff is design input awaiting implementation: FG-A–FG-G, dialogue/voice rework, new final-battle lines, repeat-early-battle changes, bespoke Nao/Stranger art and other listed polish. Current 37C still has 22 scene receipts and required-zero bits 0x956–0x95F. The proposed new state allocation and 29-placement adoption must be audited before use.
 
+**Allocation audit, 10 November 2026** (before FG-D, FG-E and FG-F were built; the owner said yes to the drafts: "Yes just make sure you are following their personalities as I required originally"):
+
+- **Receipts: the handoff's numbers, as proposed.** FG-A..FG-G take `0x956`..`0x95C` in letter order (FG-D `0x959`, FG-E `0x95A`, FG-F `0x95B`). They are inside the Friends flags (`0x934`..`0x95F`), above the daily flags and below the pinned engine flags at `0x960`, so they're saved and nothing clears them. No script or C uses them: `flags_hns.h` and `johto_ids.h` list them as `FLAG_UNUSED_0x956`..., and Johto's own flags are `0x2xxx` ids in their own container. `0x95D`..`0x95F` stay required-zero, and so does the receipt of every scene a build doesn't have yet. No save layout change.
+- **Stages: not the handoff's placement numbers.** Its 29-row order would put FG-D at 22, FG-E at 23 and FG-F at 25. As stage values those clash: 22 is FG22's stage today, 13–21 are FG13–FG21's, and every old save at stage *n* would need converting. So the stage keeps each old scene's own number (no conversion), and the new scenes take the free values after FG22 in letter order: FG-A..FG-G = 23..29. That's inside the 5-bit stage field (0–31); none is a stage, gate or loss value today (gates 1–22, the loss field 0–14 is its own four bits). The story order is a separate table, `FriendsStory_Order`: each new scene sits right after the old scene it follows, and stages only move forward through it, as before. FG-D comes after FG17 rather than after FG18 as the handoff's table has it: Cianwood comes before Amphy is healed (FG18's gate), so after FG18 it would retire FG18 for every player.
+- **Menus:** `MULTI_FG_A`..`MULTI_FG_G` = 194..200 (FG-D 197, FG-E 198, FG-F 199).
+- Built so far: FG-D, FG-E, FG-F, each in its own pull request. The others keep the numbers above.
+
 | Draft ID | Proposed scene | Proposed location / gate | Current status |
 | --- | --- | --- | --- |
 | FG-A | Tim finds the resort | One Island / Ember Spa; Proposed first Sevii-trip completion | NOT IMPLEMENTED / gameplay NOT RUN |

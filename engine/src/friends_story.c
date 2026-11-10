@@ -22,6 +22,10 @@ STATIC_ASSERT(FRIENDS_STORY_FLAGS_LAST < ENGINE_FLAGS_START, FriendsBelowEngineF
 STATIC_ASSERT(FRIENDS_STORY_FLAGS_FIRST > DAILY_FLAGS_END, FriendsOutsideDailyFlags);
 STATIC_ASSERT(FRIENDS_STORY_SEEN_LAST - FRIENDS_STORY_SEEN_FIRST + 1 == FRIENDS_STORY_SCENE_COUNT, FriendsSceneReceipts);
 STATIC_ASSERT(FRIENDS_STORY_TRAINER_LAST < MAX_TRAINERS_COUNT, FriendsTrainerFlagsAllocated);
+STATIC_ASSERT(FRIENDS_STORY_NEW_SEEN_FIRST == FRIENDS_STORY_UNUSED_FIRST, FriendsNewReceiptsInSpareBits);
+STATIC_ASSERT(FRIENDS_STORY_NEW_SEEN_FIRST + FRIENDS_STORY_STAGE_MAX - FRIENDS_STORY_NEW_SCENE_FIRST
+    <= FRIENDS_STORY_FLAGS_LAST, FriendsNewReceiptsAllocated);
+STATIC_ASSERT(FRIENDS_STORY_STAGE_MAX < (1 << FRIENDS_STORY_STAGE_BITS), FriendsStageFits);
 
 static u16 ReadBits(u16 first, u16 count)
 {
@@ -43,10 +47,48 @@ static void WriteBits(u16 first, u16 count, u16 value)
     }
 }
 
-static bool8 Seen(u16 scene)
+// A scene this build has: FG01..FG22, and the new scenes it builds (FG-D, FG-E, FG-F).
+static bool8 Known(u16 scene)
+{
+    return (scene > 0 && scene <= FRIENDS_STORY_SCENE_COUNT)
+        || scene == FRIENDS_SCENE_FG_D || scene == FRIENDS_SCENE_FG_E || scene == FRIENDS_SCENE_FG_F;
+}
+
+static u16 SeenFlag(u16 scene)
+{
+    return scene <= FRIENDS_STORY_SCENE_COUNT ? FRIENDS_STORY_SEEN_FIRST + scene - 1
+        : FRIENDS_STORY_NEW_SEEN_FIRST + scene - FRIENDS_STORY_NEW_SCENE_FIRST;
+}
+
+static bool8 SeenOld(u16 scene)
 {
     return scene > 0 && scene <= FRIENDS_STORY_SCENE_COUNT
         && FlagGet(FRIENDS_STORY_SEEN_FIRST + scene - 1);
+}
+
+// Kept as cheap as before for FG01..FG22: map loads call this often, and some replay tests' wandering NPCs move with
+// the frame a map load ends on.
+static bool8 Seen(u16 scene)
+{
+    if (scene <= FRIENDS_STORY_SCENE_COUNT)
+        return SeenOld(scene);
+    return Known(scene) && FlagGet(SeenFlag(scene));
+}
+
+// Where a scene sits in the story. FG01..FG22 keep their own numbers as stages (old saves need no conversion); a new
+// scene slots in after the old one it follows: FG-D (Cianwood) after FG17 (Ecruteak), since Cianwood comes before
+// Amphy is healed (FG18's gate); FG-E (Lake of Rage) after FG18; FG-F (Ice Path) after FG19.
+u16 FriendsStory_Order(u16 scene)
+{
+    if (scene <= FRIENDS_STORY_SCENE_COUNT)
+        return scene * 4;
+    switch (scene)
+    {
+    case FRIENDS_SCENE_FG_D: return 17 * 4 + 1;
+    case FRIENDS_SCENE_FG_E: return 18 * 4 + 1;
+    case FRIENDS_SCENE_FG_F: return 19 * 4 + 1;
+    }
+    return scene * 4;
 }
 
 static u16 CurrentMap(void)
@@ -56,7 +98,7 @@ static u16 CurrentMap(void)
 
 bool8 FriendsStory_AllocationValid(void)
 {
-    u16 flag, stage, loss, scene;
+    u16 flag, stage, loss, scene, order;
     if (gSaveBlock1Ptr == NULL)
         return FALSE;
     if (!FlagGet(FLAG_FRIENDS_STORY_ADOPTED))
@@ -68,15 +110,22 @@ bool8 FriendsStory_AllocationValid(void)
     }
     stage = ReadBits(FRIENDS_STORY_STAGE_FIRST, FRIENDS_STORY_STAGE_BITS);
     loss = ReadBits(FRIENDS_STORY_LOSS_FIRST, FRIENDS_STORY_LOSS_BITS);
-    if (stage > FRIENDS_STORY_SCENE_COUNT || loss > 14)
+    if ((stage != 0 && !Known(stage)) || loss > 14)
         return FALSE;
+    order = FriendsStory_Order(stage);
+    // The spare bits stay zero except the receipts of the new scenes this build has. No scene is seen past the stage.
     for (flag = FRIENDS_STORY_UNUSED_FIRST; flag <= FRIENDS_STORY_FLAGS_LAST; flag++)
-        if (FlagGet(flag))
+    {
+        if (!FlagGet(flag))
+            continue;
+        scene = flag - FRIENDS_STORY_NEW_SEEN_FIRST + FRIENDS_STORY_NEW_SCENE_FIRST;
+        if (!Known(scene) || FriendsStory_Order(scene) > order)
             return FALSE;
+    }
     for (scene = 1; scene <= FRIENDS_STORY_SCENE_COUNT; scene++)
-        if (Seen(scene) && scene > stage)
+        if (SeenOld(scene) && scene * 4 > order)
             return FALSE;
-    if ((FlagGet(FLAG_FRIENDS_FAREWELL_INVITED) && stage < 21)
+    if ((FlagGet(FLAG_FRIENDS_FAREWELL_INVITED) && order < FriendsStory_Order(21))
      || (Seen(21) && !FlagGet(FLAG_FRIENDS_FAREWELL_INVITED))
      || (FlagGet(FLAG_FRIENDS_REUNION_ARMED) && !Seen(21))
      || (stage == 22 && (!Seen(21) || !FlagGet(FLAG_FRIENDS_REUNION_ARMED))))
@@ -148,12 +197,14 @@ static bool8 FinalBattlesReady(void)
 
 bool8 FriendsStory_GetGate(u16 scene)
 {
-    if (gSaveBlock1Ptr == NULL || scene < 1 || scene > FRIENDS_STORY_SCENE_COUNT)
+    if (gSaveBlock1Ptr == NULL || scene < 1 || (scene > FRIENDS_STORY_SCENE_COUNT && !Known(scene)))
         return FALSE;
     if (scene <= 11 && FlagGet(FLAG_SYS_GAME_CLEAR))
         return FALSE; // Late champions enter at the current chapter, not old fights.
     if (scene >= 13 && scene <= 19 && JohtoChampion())
         return FALSE;
+    if (scene > FRIENDS_STORY_SCENE_COUNT && JohtoChampion())
+        return FALSE; // FG-D, FG-E and FG-F are Johto road scenes too.
     switch (scene)
     {
     case 1: case 2: case 4: case 5: case 6: case 9:
@@ -223,7 +274,8 @@ u16 FriendsStory_GetMapScene(void)
         // FG16 (Ham's battle, B07) can play before the takeover or once the Radio Tower is freed (its gate). After the
         // tower, Goldenrod shows FG16 first if the story hasn't reached it, then FG19 on a later visit; it used to go
         // straight to FG19 and retire FG16 for good.
-        if (FriendsStory_GetGate(19) && (FriendsStory_GetStage() > 16 || Seen(16)))
+        if (FriendsStory_GetGate(19)
+         && (FriendsStory_Order(FriendsStory_GetStage()) > FriendsStory_Order(16) || Seen(16)))
             return 19;
         return 16;
     case MAP_ECRUTEAK_CITY_HNS: return 17;
@@ -248,7 +300,9 @@ void FriendsStory_OnMapLoad(void)
         FlagSet(FLAG_FRIENDS_REUNION_ARMED);
     stage = FriendsStory_GetStage();
     scene = FriendsStory_GetMapScene();
-    if (scene > stage && FriendsStory_GetGate(scene))
+    if ((scene <= FRIENDS_STORY_SCENE_COUNT && stage <= FRIENDS_STORY_SCENE_COUNT
+            ? scene > stage : FriendsStory_Order(scene) > FriendsStory_Order(stage))
+     && FriendsStory_GetGate(scene))
         WriteBits(FRIENDS_STORY_STAGE_FIRST, FRIENDS_STORY_STAGE_BITS, scene);
 }
 
@@ -322,7 +376,7 @@ void Special_FriendsStoryMarkSeen(void)
     }
     if (Here(scene))
     {
-        FlagSet(FRIENDS_STORY_SEEN_FIRST + scene - 1);
+        FlagSet(SeenFlag(scene));
         gSpecialVar_Result = TRUE;
     }
 }
@@ -332,7 +386,7 @@ void Special_FriendsStoryNeedsIntroduction(void)
     u16 scene;
     Script_RequestEffects(SCREFF_V1);
     gSpecialVar_Result = FriendsStory_IsReady();
-    for (scene = 1; scene <= FRIENDS_STORY_SCENE_COUNT; scene++)
+    for (scene = 1; scene <= FRIENDS_STORY_STAGE_MAX; scene++)
         if (Seen(scene))
             gSpecialVar_Result = FALSE;
 }
@@ -361,7 +415,7 @@ void Special_FriendsStoryCanBattle(void)
         if (stage != sEarlyScenes[trainer - FRIENDS_STORY_TRAINER_FIRST])
             return;
     }
-    else if (stage < 20 || !FinalBattlesReady())
+    else if (FriendsStory_Order(stage) < FriendsStory_Order(20) || !FinalBattlesReady())
         return;
     for (i = 0; i < PARTY_SIZE; i++)
         if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE
