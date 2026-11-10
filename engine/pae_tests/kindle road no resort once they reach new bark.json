@@ -1,6 +1,6 @@
 {
- "note": "FG-A's gate, closed the other way: Bill's trip is over but the player is Champion (the draft puts the scene before the League, like FG01-FG11), so nobody is below Ember Spa.",
- "created": "2026-11-10 14:53",
+ "note": "FG-A's gate, closed the other way: the Friends' story has reached FG13 (New Bark, stage 13), so they've left Kanto and nobody is below Ember Spa.",
+ "created": "2026-11-10 16:02",
  "start": {
   "map": "OneIsland_KindleRoad_Frlg",
   "x": 13,
@@ -9,7 +9,7 @@
    "FLAG_SYS_GAME_CLEAR",
    "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
    "FLAG_FRIENDS_STAGE_1",
-   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_4",
    "FLAG_FRIENDS_STAGE_8",
    "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F=3"
   ],
@@ -59,5 +59,5 @@
    "FLAG_FRIENDS_FG_A_SEEN": false
   }
  },
- "accepted": "2026-11-10 15:38"
+ "accepted": "2026-11-10 16:02"
 }

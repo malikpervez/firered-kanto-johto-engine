@@ -204,7 +204,7 @@ The Mansion journals keep their original account. After the Secret Key is found,
 | MW06 | Cinnabar reveal — [`MW06_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:518) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | FG11 | The television in the water — [`FG11_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:1461) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 
-Mew remains a sparse observer, not a reward from this plot. **FG-A Tim finds the resort** (KR-124): once Bill's first Sevii trip is over (One Island's Center scene at 3 or more), before the League and while the Friends are at FG11, Tim, Brian, Ham and Nick are on Kindle Road below Ember Spa with Spearow, a local and Slowpoke (`FGA_Interact`). Tim wants nightlife, the local says most people go to bed, and Tim ends up reading the ferry board and paying for the rooms; a choice ("Sounds like a vacation" / "You sound like a tour guide") and the four go into the spa. Optional, no battle, nothing given; receipt 0x956. A player who goes to the Sevii Islands only after the League doesn't see it (FG12's placement retires it). Original Articuno, Zapdos and Moltres stay in Seafoam, the Power Plant and Mt. Ember.
+Mew remains a sparse observer, not a reward from this plot. **FG-A Tim finds the resort** (KR-124): once Bill's first Sevii trip is over (One Island's Center scene at 3 or more), while the Friends are still in Kanto (FG11, or FG12 after the League; FG13 retires it), Tim, Brian, Ham and Nick are on Kindle Road below Ember Spa with Spearow, a local and Slowpoke (`FGA_Interact`). Tim wants nightlife, the local says most people go to bed, and Tim ends up reading the ferry board and paying for the rooms; a choice ("Sounds like a vacation" / "You sound like a tour guide") and the four go into the spa. Optional, no battle, nothing given; receipt 0x956. A player who takes Bill's trip after the League still finds them (coordinator's call, 10 November). Original Articuno, Zapdos and Moltres stay in Seafoam, the Power Plant and Mt. Ember.
 
 ## 09. Kanto Champion
 
@@ -1250,7 +1250,7 @@ The October 19 Friends handoff is design input: FG-A–FG-G, dialogue/voice rewo
 
 | Draft ID | Proposed scene | Proposed location / gate | Current status |
 | --- | --- | --- | --- |
-| FG-A | Tim finds the resort | Kindle Road below Ember Spa; Bill's first Sevii trip over, before the League, Friends at FG11 | BUILT (KR-124), replay-tested |
+| FG-A | Tim finds the resort | Kindle Road below Ember Spa; Bill's first Sevii trip over, Friends at FG11 or FG12 | BUILT (KR-124), replay-tested |
 | FG-B | The road nobody paved | Indigo western road; Proposed post-Oak westbound crossing | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-C | The tower that sways | Violet / Sprout Tower exterior; Proposed Zephyr Badge | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |

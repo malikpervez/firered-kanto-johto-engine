@@ -201,9 +201,9 @@ bool8 FriendsStory_GetGate(u16 scene)
         return FlagGet(FLAG_HIDE_SAFFRON_ROCKETS) && FlagGet(FLAG_GOT_MASTER_BALL_FROM_SILPH);
     case 11:
         return FlagGet(FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY);
-    case 23: // FG-A: Bill's first Sevii trip is over, the Friends are at FG11 (Cinnabar) and it's before the League
-        return VarGet(VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F) >= 3 && !FlagGet(FLAG_SYS_GAME_CLEAR)
-            && FriendsStory_GetStage() == 11;
+    case 23: // FG-A: Bill's first Sevii trip is over and the Friends are still in Kanto (FG11 or FG12; FG13 retires it)
+        return VarGet(VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F) >= 3
+            && FriendsStory_GetStage() >= 11 && FriendsStory_GetStage() <= 12;
     case 12:
         return FlagGet(FLAG_SYS_GAME_CLEAR) && VarGet(VAR_MAP_SCENE_PALLET_TOWN_OAK) >= 3;
     case 13: case 14:
