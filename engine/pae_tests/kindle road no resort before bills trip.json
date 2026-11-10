@@ -4,7 +4,7 @@
  "start": {
   "map": "OneIsland_KindleRoad_Frlg",
   "x": 13,
-  "y": 63,
+  "y": 62,
   "state": [
    "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
    "FLAG_FRIENDS_STAGE_1",
@@ -24,7 +24,7 @@
     ],
     [
      64,
-     17
+     4
     ],
     [
      0,
@@ -58,5 +58,5 @@
    "FLAG_FRIENDS_FG_A_SEEN": false
   }
  },
- "accepted": "2026-11-10 14:53"
+ "accepted": "2026-11-10 15:38"
 }
