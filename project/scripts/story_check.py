@@ -687,12 +687,8 @@ STEPS = [
     # Snorlax, Routes 12 to 15 and Fuchsia
     dict(name="fuji-house-out", what="Out of Mr. Fuji's house", walk=(4, 6), inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250",
          expect=dict(map="LavenderTown_Frlg")),
-    # MW03's stranger waits beside Fuji's door now (7,17), in the lane out east: round by the west lane and the road
-    # north of the Friends' camp (FG08's, on the square), as a player who doesn't stop to talk to him goes
-    dict(name="route12", what="Round by the west lane (the stranger waits in the lane east of Mr. Fuji's door), "
-         "along the road past the Friends' camp and down Lavender's south road onto Route 12",
-         via=[(2, 12), (17, 11), (17, 16)], walk=(13, 31),
-         inputs=f"DOWN*{hold(1)}, wait 200", expect=dict(map="Route12_Frlg")),
+    dict(name="route12", what="Down Lavender's south road onto Route 12", walk=(13, 31), inputs=f"DOWN*{hold(1)}, wait 200",
+         expect=dict(map="Route12_Frlg")),
     dict(name="route12-gate", what="Down Route 12's lane into its gatehouse", walk=(11, 9),
          inputs=f"DOWN*{hold(1)}, wait 20, DOWN*20, wait 250",
          expect=dict(map="Route12_NorthEntrance_1F_Frlg", xy=(5, 2))),

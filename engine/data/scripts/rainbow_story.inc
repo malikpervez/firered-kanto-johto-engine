@@ -556,8 +556,8 @@ MW03_Talk::
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Release
 goto_if_set FLAG_MW03_SEEN, RB_Repeat
-	@ The stranger waits beside Mr. Fuji's door (5,16). A Psyduck looks out first; then Fuji steps out to answer
-	@ him, and goes back in before the stranger leaves.
+	@ The stranger waits near Mr. Fuji's door (5,16), at (9,16) past the Volunteer House sign, out of every path.
+	@ A Psyduck looks out first; then Fuji steps out to answer him, and goes back in before the stranger leaves.
 	applymovement LOCALID_LAVENDER_MW03_STRANGER, Common_Movement_FaceLeft
 	waitmovement 0
 	opendoor 5, 16
