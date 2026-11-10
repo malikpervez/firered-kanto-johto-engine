@@ -12,6 +12,8 @@
     {MAP_SAFFRON_CITY, 50, 8, 20},
     {MAP_CINNABAR_ISLAND, 46, 20, 16},
     {MAP_PALLET_TOWN, 12, 22, 11},
+    // FG-B on League West Pass, south of the road: X, Jon, Nick and Brian in front; Mankey; they head west.
+    {MAP_LEAGUE_WEST_PASS, 30, 13, 3, 0x1D, 1, TRUE},
     {MAP_NEW_BARK_TOWN_HNS, 21, 14, 11},
     {MAP_RUINS_OF_ALPH_OUTSIDE_HNS, 29, 29, 31},
     {MAP_AZALEA_TOWN_HNS, 55, 24, 24},

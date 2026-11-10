@@ -850,6 +850,7 @@ void Special_FriendsStoryStage(void)
         case 9: ShowPair(SPECIES_SLOWPOKE, SPECIES_KRABBY); ShowMon(SPECIES_GEODUDE, 1); break;
         case 11: case 17: ShowHome(); break;
         case 13: ShowPair(SPECIES_SLOWPOKE, SPECIES_PSYDUCK); break;
+        case 24: ShowMon(SPECIES_MANKEY, 0); break;
         case 14: ShowHuman(OBJ_EVENT_GFX_SCIENTIST, 1); break;
         case 15: ShowPair(SPECIES_PRIMEAPE, SPECIES_HOOTHOOT); break;
         case 16: ShowMon(SPECIES_MURKROW, 0); break;

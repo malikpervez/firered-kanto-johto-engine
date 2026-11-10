@@ -241,7 +241,7 @@ Construction workers keep the westbound road closed until the native Kanto champ
 2. Follow the outdoor road downhill, descend to Route 27’s shore and Surf west to New Bark.
 3. Bring the existing Surf capability; this route grants no HM, badge, Pokémon or level adjustment.
 
-Johto initializes once without resetting Kanto. Native Kanto clear is the actual road gate; Oak supplies the story directions. The obsolete cave-only test slice is historical. FG-B’s proposed friends crossing is not implemented.
+Johto initializes once without resetting Kanto. Native Kanto clear is the actual road gate; Oak supplies the story directions. The obsolete cave-only test slice is historical. **FG-B The road nobody paved** (KR-125): once the player is Champion and Oak has given the Johto directions, while the Friends are at FG12, X, Jon, Nick and Brian (and Mankey) are on League West Pass, south of the road (`FGB_Interact`). X has the plan (two days, one river, one town, four days of food), Jon yells at the mountain until Mankey yells with him, and Brian's living room shows in a puddle, as at Cinnabar; a choice ("Good luck out there" / "See you in Johto") and they head west. That's how the seven reach New Bark before FG13. Optional, no battle, nothing given; receipt 0x957.
 
 [Progression / evidence reference]([LOCAL_WORKSPACE]/docs/natural-johto-journey-results.md).
 
@@ -1251,7 +1251,7 @@ The October 19 Friends handoff is design input: FG-A–FG-G, dialogue/voice rewo
 | Draft ID | Proposed scene | Proposed location / gate | Current status |
 | --- | --- | --- | --- |
 | FG-A | Tim finds the resort | One Island / Ember Spa; Proposed first Sevii-trip completion | NOT IMPLEMENTED / gameplay NOT RUN |
-| FG-B | The road nobody paved | Indigo western road; Proposed post-Oak westbound crossing | NOT IMPLEMENTED / gameplay NOT RUN |
+| FG-B | The road nobody paved | League West Pass; Champion, Oak's Johto directions given, Friends at FG12 | BUILT (KR-125), replay-tested |
 | FG-C | The tower that sways | Violet / Sprout Tower exterior; Proposed Zephyr Badge | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-E | The lake that was told to be angry | Lake of Rage shore; Proposed Mahogany hideout clearance | NOT IMPLEMENTED / gameplay NOT RUN |
