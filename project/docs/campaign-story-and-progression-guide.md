@@ -1246,7 +1246,7 @@ Golduck Lv.56 / Furret Lv.55
 
 ## New Friends handoff: proposed, not playable in 37C
 
-The October 19 Friends handoff is design input awaiting implementation: FG-A–FG-G, dialogue/voice rework, new final-battle lines, repeat-early-battle changes, bespoke Nao/Stranger art and other listed polish. Current 37C still has 22 scene receipts and required-zero bits 0x956–0x95F. The proposed new state allocation and 29-placement adoption must be audited before use.
+The October 19 Friends handoff is design input: FG-A–FG-G, dialogue/voice rework, new final-battle lines, repeat-early-battle changes, bespoke Nao/Stranger art and other listed polish. The owner approved the FG-A–FG-F drafts on 10 November ("Yes just make sure you are following their personalities as I required originally"). Its state allocation was audited the same day: the new scenes are scenes 23–29 with the handoff's receipts 0x956–0x95C (scene 23 + n has receipt 0x956 + n). No code, script or open branch uses those bits; they sit in the saved Kanto flags with the Friends' others, after the stage (0x94B–0x94F), invitation (0x950), loss (0x951–0x954) and reunion (0x955) bits, and 0x95D–0x95F stay required-zero. The new scenes play beside the stage, which keeps its 0–22 placements and never holds 23–29: each opens while the stage is at the placement next to it and retires when the stage moves on. The handoff's 29-placement order table is not adopted: it would renumber the stage of every existing save.
 
 | Draft ID | Proposed scene | Proposed location / gate | Current status |
 | --- | --- | --- | --- |
