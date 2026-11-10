@@ -19,3 +19,6 @@
     {MAP_ECRUTEAK_CITY_HNS, 51, 41, 53},
     {MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS, 16, 6, 4},
     {MAP_BLACKTHORN_CITY_HNS, 21, 49, 26},
+    // FG-F on Ice Path 1F, the floor inside the Route 44 entrance: Ham, Jon, LB and Brian in front, in one row with
+    // Psyduck and Sentret (the row below stays free to the ice); the Swinub is slot 3, on the ice.
+    {MAP_ICE_PATH_1F_HNS, 20, 22, LOCALID_FRIENDS_ICEPATH_1F_HNS_BRIAN, 0x27, 3, FALSE},

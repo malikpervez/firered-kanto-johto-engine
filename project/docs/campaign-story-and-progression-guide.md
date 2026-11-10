@@ -356,6 +356,7 @@ The native path through Ice Path, Clair and Dragon’s Den remains. Seven final 
 
 | ID | Event / actual entry label | Exact dialogue, images and result record |
 | --- | --- | --- |
+| FG-F | Ham goes first — [`FG_F_Interact`](../../engine/data/scripts/friends_story.inc) | Replay tests `ice path ham goes first`, `ice path the friends say everyone is okay`, `ice path no friends before the radio tower`, `ice path no friends after the rising badge` |
 | FG20 | We actually know what we are doing — [`FG20_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2505) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | SV03 | Another round — [`CG_SilverDenVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:170) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
 | FINAL_BRIAN | Brian — Final — [`FG_Battle08`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:3313) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
@@ -366,7 +367,7 @@ The native path through Ice Path, Clair and Dragon’s Den remains. Seven final 
 | FINAL_JON | Jon — Final — [`FG_Battle13`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:3517) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | FINAL_HAM | Ham — Final — [`FG_Battle14`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:3557) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 
-The seven matches are optional. No gauntlet or all-wins requirement is introduced. FG-F’s new Ice Path rescue is not implemented.
+The seven matches are optional. No gauntlet or all-wins requirement is introduced. Before Blackthorn, after the Radio Tower, FG-F’s Ice Path rescue plays on the floor inside the Route 44 entrance.
 
 ## 16. Two legendary roads
 
@@ -1080,6 +1081,16 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 
 **37C source:** [`FG19_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2404). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
 
+### FG-F — Ham goes first
+
+**Trigger:** Ice Path 1F: Johto state seeded, the Radio Tower freed (`JOHTO_VAR_GOLDENROD_CITY_STATE` ≥ 11) and the Rising Badge not yet won (`JOHTO_FLAG_BADGE08_GET` unset); the Friends' stage at FG16 to FG19 (after the Radio Tower, Goldenrod leaves it at FG16 or FG19). Scene 28 plays beside the stage (#120's shared machinery): the Ice Path never moves the stage, and the scene retires once Blackthorn moves it to FG20. Once seen, the group is gone after that visit. Brian, LB, Jon and Ham stand in a row on the floor's upper row (camp 20,22: Brian 17,21, LB 19,21, Jon 21,21, Ham 22,21), with Psyduck (18,21) and Sentret (20,21) between them, so the lower row stays free from the entrance to the ice. The Swinub stands on the ice at 24,21, outside the sliding puzzle; Ham steps to 23,21 and back, and the Swinub steps off south before it goes. Nobody stays on the ice.
+
+**Status:** IMPLEMENTED 2026-11-10 (KR-123; the owner: "Yes just make sure you are following their personalities as I required originally"). Receipt `0x95B`. Replay tests `ice path ham goes first`, `ice path the friends say everyone is okay`, `ice path no friends before the radio tower`, `ice path no friends after the rising badge`.
+
+**Source:** [`FG_F_Interact`](../../engine/data/scripts/friends_story.inc); the draft is in [friends-new-event-scripts.md](friends-new-event-scripts.md).
+
+A Swinub is stuck spinning on the ice. Brian has done the math (ice is bad), Jon wants to help, LB doesn't want to be the next thing sliding. Ham is already walking out; Jon starts to shout, then says it quietly. "…cock." (Ham's one for Johto; his other was FG01, in Kanto.) The Swinub gets back to the snow. Jon: Ham would do that for any of them, "Dogs, pigs, all of 'em." LB: "FOR ALL THE DOGS." Brian gives Ham a blanket, and Psyduck one too. Menu "Ham, that was brave" (Ham: "It was little."; LB: he means the Swinub) / "Everyone okay?" (Brian: cold, emotionally warm, mostly cold; Jon: "We're good. Ham's good. Go."). The menu stays on later talks during that visit.
+
 ### FG20 — We actually know what we are doing
 
 **Trigger:** Johto state seeded, regional badge8 AND Blackthorn state>=4 after Clair Dragon’s Den TM/departure; current group stage is FG20.
@@ -1255,7 +1266,7 @@ The October 19 Friends handoff is design input: FG-A–FG-G, dialogue/voice rewo
 | FG-C | The tower that sways | Violet / Sprout Tower exterior; Proposed Zephyr Badge | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-E | The lake that was told to be angry | Lake of Rage shore; Proposed Mahogany hideout clearance | NOT IMPLEMENTED / gameplay NOT RUN |
-| FG-F | Ham goes first | Ice Path safe entrance floor; Proposed post-Radio / pre-Clair window | NOT IMPLEMENTED / gameplay NOT RUN |
+| FG-F | Ham goes first | Ice Path 1F, the floor inside the Route 44 entrance; Radio Tower freed, before the Rising Badge | IMPLEMENTED 2026-11-10 (KR-123); see FG-F below |
 | FG-G | Up six | Ecruteak pond; Proposed visit after FG22 | NOT IMPLEMENTED / gameplay NOT RUN |
 
 [Complete October 19 handoff]([LOCAL_WORKSPACE]/docs/friends-arc-and-asset-handoff.md) · [Draft new dialogue and final-battle lines]([LOCAL_WORKSPACE]/docs/friends-new-event-scripts.md).

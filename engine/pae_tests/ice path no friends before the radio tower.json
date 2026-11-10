@@ -1,0 +1,75 @@
+{
+ "note": "FG-F's gate, closed: before the Radio Tower is freed the friends aren't in the Ice Path.",
+ "created": "2026-11-10 16:18",
+ "start": {
+  "map": "IcePath_1F_hns",
+  "x": 19,
+  "y": 22,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_FLAG_BADGE02_GET",
+   "JOHTO_FLAG_BADGE03_GET",
+   "JOHTO_FLAG_BADGE04_GET",
+   "JOHTO_FLAG_BADGE05_GET",
+   "JOHTO_FLAG_BADGE06_GET",
+   "JOHTO_FLAG_BADGE07_GET",
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE=17",
+   "JOHTO_VAR_GOLDENROD_CITY_STATE=10",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_16"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_F_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "IcePath_1F_hns",
+  "x": 19,
+  "y": 22,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_F_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 16:19"
+}
