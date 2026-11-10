@@ -22,6 +22,7 @@
 #define FRIENDS_STORY_FLAGS_LAST            0x95F
 #define FRIENDS_STORY_SCENE_COUNT           22
 #define FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN    0x935 // FRIENDS_STORY_SEEN_FIRST: scene 1 seen
+#define FLAG_FRIENDS_FG_E_SEEN              0x95A // scene 27, FG-E The lake that was told to be angry
 #define FLAG_FRIENDS_DEPARTED               (FRIENDS_STORY_SEEN_FIRST + 20)
 #define FLAG_FRIENDS_REUNION_SEEN           (FRIENDS_STORY_SEEN_FIRST + 21)
 

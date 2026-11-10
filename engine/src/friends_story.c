@@ -218,6 +218,9 @@ bool8 FriendsStory_GetGate(u16 scene)
         return JohtoCampaign_IsSeeded() && FlagGet(JOHTO_FLAG_AMPHAROS_HEALED);
     case 19:
         return JohtoCampaign_IsSeeded() && VarGet(JOHTO_VAR_GOLDENROD_CITY_STATE) >= 11;
+    case 27: // FG-E: the Mahogany hideout cleared, while the Friends are at FG17 or FG18
+        return JohtoCampaign_IsSeeded() && VarGet(JOHTO_VAR_MAHOGANY_TOWN_STATE) >= 14
+            && (FriendsStory_GetStage() == 17 || FriendsStory_GetStage() == 18);
     case 20:
         return FinalBattlesReady();
     case 21:
@@ -260,6 +263,7 @@ u16 FriendsStory_GetMapScene(void)
             return 19;
         return 16;
     case MAP_ECRUTEAK_CITY_HNS: return 17;
+    case MAP_LAKE_OF_RAGE_HNS: return 27;
     case MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS: return 18;
     case MAP_BLACKTHORN_CITY_HNS: return 20;
     }

@@ -5501,41 +5501,18 @@ FG_Battle14_Lost04::
 FG_Battle14_Lost05::
 	.string "HAM: Good game. We'll be here.$"
 
-@ FG-E (Lake of Rage, west shore): see project/docs/friends-new-event-scripts.md ("FG-E"). Optional, no battle, grants nothing.
+@ FG-E The lake that was told to be angry (the October 19 handoff's scene; story copy F3). The Lake of Rage's
+@ west shore, once the Mahogany hideout is cleared, while the Friends are at FG17 or FG18. No battle, nothing given.
 FG_E_Interact::
 	lockall
 	faceplayer
-	setvar VAR_0x8004, FRIENDS_SCENE_FG_E
+	setvar VAR_0x8004, 27
 	callnative Special_FriendsStoryBegin, requests_effects=1
 	goto_if_eq VAR_RESULT, 0, FG_Release
 	copyvar VAR_0x8008, VAR_RESULT
 	call FG_FrameCamera
-	callnative Special_FriendsStoryGetPendingLoss, requests_effects=1
-	goto_if_eq VAR_RESULT, 1, FG_Loss01
-	goto_if_eq VAR_RESULT, 2, FG_Loss02
-	goto_if_eq VAR_RESULT, 3, FG_Loss03
-	goto_if_eq VAR_RESULT, 4, FG_Loss04
-	goto_if_eq VAR_RESULT, 5, FG_Loss05
-	goto_if_eq VAR_RESULT, 6, FG_Loss06
-	goto_if_eq VAR_RESULT, 7, FG_Loss07
-	goto_if_eq VAR_RESULT, 8, FG_Loss08
-	goto_if_eq VAR_RESULT, 9, FG_Loss09
-	goto_if_eq VAR_RESULT, 10, FG_Loss10
-	goto_if_eq VAR_RESULT, 11, FG_Loss11
-	goto_if_eq VAR_RESULT, 12, FG_Loss12
-	goto_if_eq VAR_RESULT, 13, FG_Loss13
-	goto_if_eq VAR_RESULT, 14, FG_Loss14
-	goto_if_eq VAR_0x8008, 2, FG_E_Repeat
-	callnative Special_FriendsStoryNeedsIntroduction, requests_effects=1
-	goto_if_eq VAR_RESULT, FALSE, FG_E_Introduced
-	fg_focus 3
-	msgbox FG_Text_Introduction_1
-	fg_focus 3
-	msgbox FG_Text_Introduction_2
-	fg_focus 3
-	msgbox FG_Text_PartnersKanto
-FG_E_Introduced::
-	setvar VAR_0x8004, FRIENDS_SCENE_FG_E
+	goto_if_eq VAR_0x8008, 2, FG_E_Menu
+	setvar VAR_0x8004, 27
 	setvar VAR_0x8005, 0
 	closemessage
 	callnative Special_FriendsStoryStage, requests_effects=1
@@ -5565,8 +5542,8 @@ FG_E_Introduced::
 	fg_focus 7
 	msgbox FG_E_Text_Main11
 	fg_react 5, FG_Move_QuietPause
-	setvar VAR_0x8004, FRIENDS_SCENE_FG_E
-	setvar VAR_0x8005, FRIENDS_FG_E_BEAT_PARTNERS
+	setvar VAR_0x8004, 27
+	setvar VAR_0x8005, 14
 	closemessage
 	callnative Special_FriendsStoryStage, requests_effects=1
 	call FG_WaitSceneMovement
@@ -5593,15 +5570,13 @@ FG_E_Introduced::
 	msgbox FG_E_Text_Main20
 	fg_focus 7
 	msgbox FG_E_Text_Main21
-	setvar VAR_0x8004, FRIENDS_SCENE_FG_E
+	setvar VAR_0x8004, 27
 	callnative Special_FriendsStoryMarkSeen, requests_effects=1
-FG_E_Repeat::
-	goto FG_E_Menu
 FG_E_Menu::
 	call FG_WaitSceneMovement
 	closemessage
 	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
-	multichoice 0, 0, MULTI_FG_E, FALSE
+	dynmultichoice 0, 0, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, FG_E_Text_Option0, FG_E_Text_Option1
 	goto_if_eq VAR_RESULT, 0, FG_E_Choice0
 	goto_if_eq VAR_RESULT, 1, FG_E_Choice1
 	goto FG_Release
@@ -5666,6 +5641,10 @@ FG_E_Text_Main20::
 	.string "TIM: People need to know where to go\nwhen it's fixed.$"
 FG_E_Text_Main21::
 	.string "FISHERMAN: …Thank you. Both of you.$"
+FG_E_Text_Option0::
+	.string "That was kind, LB$"
+FG_E_Text_Option1::
+	.string "Nice sign, Tim$"
 FG_E_Text_Choice0_1::
 	.string "LB: Don't tell X. He'll say I “held\nspace.”$"
 FG_E_Text_Choice0_2::

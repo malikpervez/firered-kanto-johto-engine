@@ -1,0 +1,84 @@
+{
+ "note": "FG-E seen on an earlier visit: the friends don't wait on the shore again.",
+ "created": "2026-11-10 16:09",
+ "start": {
+  "map": "LakeOfRage_hns",
+  "x": 8,
+  "y": 42,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_FLAG_BADGE02_GET",
+   "JOHTO_FLAG_BADGE03_GET",
+   "JOHTO_FLAG_BADGE04_GET",
+   "JOHTO_FLAG_BADGE05_GET",
+   "JOHTO_FLAG_BADGE06_GET",
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE=14",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_16",
+   "FLAG_FRIENDS_FG_E_SEEN"
+  ],
+  "script": null,
+  "clock": "16:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     34
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_E_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LakeOfRage_hns",
+  "x": 8,
+  "y": 39,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_E_SEEN": true
+  }
+ },
+ "accepted": "2026-11-10 16:09"
+}

@@ -1,6 +1,6 @@
 {
- "note": "FG-E at 22:00: the lake is at high tide in the rain, at night; the friends stand on the same strip of shore and the scene plays the same way, ending on the fisherman's thanks.",
- "created": "2026-11-10 15:04",
+ "note": "FG-E at 22:00 with the Friends still at FG17 (Mahogany before Amphy is healed): the lake is at high tide in the rain, at night; the friends stand on the same strip of shore and the scene plays the same way, ending on the fisherman's thanks.",
+ "created": "2026-11-10 16:09",
  "start": {
   "map": "LakeOfRage_hns",
   "x": 8,
@@ -19,7 +19,10 @@
    "JOHTO_FLAG_BADGE05_GET",
    "JOHTO_FLAG_BADGE06_GET",
    "JOHTO_FLAG_RELEASED_BEASTS",
-   "JOHTO_VAR_MAHOGANY_TOWN_STATE=14"
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE=14",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_16"
   ],
   "script": null,
   "clock": "22:00"
@@ -223,46 +226,6 @@
     [
      0,
      100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
     ]
    ]
   }
@@ -284,5 +247,5 @@
    "FLAG_FRIENDS_FG_E_SEEN": false
   }
  },
- "accepted": "2026-11-10 15:04"
+ "accepted": "2026-11-10 16:09"
 }

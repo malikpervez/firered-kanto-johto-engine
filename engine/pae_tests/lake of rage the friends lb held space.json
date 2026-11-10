@@ -1,6 +1,6 @@
 {
  "note": "FG-E: after the scene, pick \"That was kind, LB\": LB doesn't want X to hear he \"held space\"; Nick says he did. The scene is recorded (its receipt, 0x95A).",
- "created": "2026-11-10 15:02",
+ "created": "2026-11-10 16:09",
  "start": {
   "map": "LakeOfRage_hns",
   "x": 8,
@@ -19,7 +19,10 @@
    "JOHTO_FLAG_BADGE05_GET",
    "JOHTO_FLAG_BADGE06_GET",
    "JOHTO_FLAG_RELEASED_BEASTS",
-   "JOHTO_VAR_MAHOGANY_TOWN_STATE=14"
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE=14",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_16"
   ],
   "script": null,
   "clock": "16:00"
@@ -47,46 +50,6 @@
     [
      0,
      20
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
     ],
     [
      1,
@@ -312,5 +275,5 @@
    "FLAG_FRIENDS_FG_E_SEEN": true
   }
  },
- "accepted": "2026-11-10 15:02"
+ "accepted": "2026-11-10 16:09"
 }
