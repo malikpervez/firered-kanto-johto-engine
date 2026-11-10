@@ -785,21 +785,85 @@ MW09_Transition::
 	goto_if_set FLAG_MW09_SEEN, RB_Return
 	setvar VAR_TEMP_E, 1
 	return
+@ MW09, the arc's end: it plays by itself as the player walks out of the cave's mouth (Cerulean Cave 1F's coord
+@ events, stepping south; walking in, it waits) once MEWTWO has been beaten or caught. Caught and in the party, MEWTWO
+@ comes out of its POKé BALL beside its new trainer (an actor on 1F, hidden by FLAG_TEMP_1 until then), the farewell
+@ is a conversation, and it goes back into the ball. Beaten (or caught but left in the PC), the reflection is
+@ narration. Running from MEWTWO leaves it in the cave, so the farewell waits.
 MW09_Scene::
 	lockall
 	goto_if_unset FLAG_FOUGHT_MEWTWO, MW09_Release
 	goto_if_set FLAG_MW09_SEEN, MW09_Release
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_ne VAR_RESULT, DIR_SOUTH, MW09_Release
 	setvar VAR_TEMP_E, 0
+	checkspecies SPECIES_MEWTWO
+	goto_if_eq VAR_RESULT, TRUE, MW09_WithMewtwo
 	msgbox MW09_Text
 	call RB_PikachuLooksBack
+MW09_End::
 	closemessage
 	call RB_MewGlimpse
 	setflag FLAG_MW09_SEEN
 MW09_Release::
 	releaseall
 	end
+MW09_WithMewtwo::
+	getplayerxy VAR_0x8004, VAR_0x8005
+	goto_if_ge VAR_0x8004, 36, MW09_MewtwoWest
+	addvar VAR_0x8004, 1
+	call MW09_SendOutMewtwo
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_ExitBallFaceWest
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	goto MW09_Farewell
+MW09_MewtwoWest::
+	subvar VAR_0x8004, 1
+	call MW09_SendOutMewtwo
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_ExitBallFaceEast
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+MW09_Farewell::
+	waitmovement 0
+	playmoncry SPECIES_MEWTWO, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox MW09_Text_WithMewtwo
+	call RB_PikachuLooksAtMewtwo
+	closemessage
+	playse SE_BALL
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_EnterBall
+	waitmovement 0
+	removeobject LOCALID_CERULEAN_CAVE_1F_MEWTWO
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	goto MW09_End
+MW09_SendOutMewtwo::
+	setobjectxyperm LOCALID_CERULEAN_CAVE_1F_MEWTWO, VAR_0x8004, VAR_0x8005
+	clearflag FLAG_TEMP_1
+	addobject LOCALID_CERULEAN_CAVE_1F_MEWTWO
+	playse SE_BALL_OPEN
+	return
+RB_PikachuLooksAtMewtwo::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuLooksAtMewtwo
+	return
+MW09_Movement_ExitBallFaceWest::
+	exit_pokeball
+	face_left
+	step_end
+MW09_Movement_ExitBallFaceEast::
+	exit_pokeball
+	face_right
+	step_end
+MW09_Movement_EnterBall::
+	enter_pokeball
+	step_end
 MW09_Text::
 	.string "At the mouth of the cave,\nthe wind moves freely again.\pThere is room for more than\none path through the world.$"
+MW09_Text_WithMewtwo::
+	.string "At the mouth of the cave,\nthe wind moves freely again.\pMEWTWO: There is room for more\nthan one path through the world.\pI will walk this one with you,\n{PLAYER}.\pYou did not command. You asked.\nI answered.$"
+RB_Text_PikachuLooksAtMewtwo::
+	.string "PIKACHU looks up at MEWTWO.\nIts fur stays smooth.$"
 
 
 RB_RadioAftermath::

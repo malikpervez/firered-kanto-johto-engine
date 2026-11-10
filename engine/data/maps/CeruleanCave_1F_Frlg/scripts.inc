@@ -3,6 +3,7 @@ CeruleanCave_1F_Frlg_MapScripts::
 	.byte 0
 
 CeruleanCave_1F_OnTransition::
+	setflag FLAG_TEMP_1
 	call MW09_Transition
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CAVE_1F
 	end

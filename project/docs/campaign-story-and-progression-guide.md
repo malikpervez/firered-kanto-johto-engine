@@ -450,7 +450,7 @@ Continue native postgame activities and collection across both regions. The opti
 | MW09 | Cave-mouth reflection — [`MW09_Transition`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:636) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB14 | Larger sky — [`RB_OakLetter`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:128) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 
-Mewtwo is listed here as an open sidequest, not gated behind the Johto League: only the original Kanto/Sevii access conditions apply. MW09 is an explicit cave-mouth interaction, not automatic exit narration. Original Sevii, Navel Rock and other existing content retain their gates. No extra Celebi/beast/Gen 3+ legendary chapter or third region is implemented in this pass.
+Mewtwo is listed here as an open sidequest, not gated behind the Johto League: only the original Kanto/Sevii access conditions apply. Since 2026-11-10 MW09 plays by itself as the player walks out of the cave's mouth (it was a spot to check). Original Sevii, Navel Rock and other existing content retain their gates. No extra Celebi/beast/Gen 3+ legendary chapter or third region is implemented in this pass.
 
 ## Event directory and exact trigger rules
 
@@ -688,13 +688,15 @@ Optional familiar/unfamiliar introduction and Face/Leave before original level70
 
 ### MW09 — Cave-mouth reflection
 
-**Trigger:** Native fought-Mewtwo set; MW09 unseen. Explicit BG sign interaction at Cerulean Cave1F x34,y22, any facing. Transition sets temp availability only; it is not an automatic exit narration.
+**Trigger:** Native fought-Mewtwo set; MW09 unseen. Since 2026-11-10 (the owner: Mewtwo, caught, “comes out of his pokeball to engage with the player at the end of that arc”) it plays by itself when the player walks out of the mouth: coord events on Cerulean Cave 1F x34–36,y22, stepping south (walking in, it waits; `VAR_TEMP_E` from the transition). Before, it was a BG sign at x34,y22.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
 **37C source:** [`MW09_Transition`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:636). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
 Neutral post-resolution reflection and optional Mew glimpse. Since 2026-11-09 (story copy C6, KR-115) the companion Pikachu closes the thread it opened on Route 1: after the reflection, “PIKACHU looks back into the dark. Its fur stays smooth.” (whenever the companion walks with the player, `FLAG_SYS_POKEMON_GET`; nothing is written). Replay test `cerulean cave pikachu looks back at the mouth`.
+
+Since 2026-11-10, when Mewtwo was caught and is in the party, Mewtwo comes out of its Poké Ball beside the player (an actor on 1F with Mewtwo's overworld sprite, the follower's ball-exit animation, the ball sound and its cry) and the farewell is a conversation: “At the mouth of the cave, the wind moves freely again.” / “MEWTWO: There is room for more than one path through the world.” / “I will walk this one with you, {PLAYER}.” / “You did not command. You asked. I answered.”, then “PIKACHU looks up at MEWTWO. Its fur stays smooth.”, and Mewtwo goes back into the ball. Beaten (or caught and in the PC) the reflection stays narration, as above. Running from Mewtwo leaves it in the cave (FireRed brings it back), so the farewell waits. Replay tests `cerulean cave mewtwo comes out of his ball at the mouth`, `cerulean cave mewtwo goes back into his ball`, `cerulean cave the farewell waits while walking in`, `cerulean cave no farewell before mewtwo is met`.
 
 ### LG01 — Coastal warnings
 
