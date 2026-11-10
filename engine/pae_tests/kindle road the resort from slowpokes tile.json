@@ -1,0 +1,62 @@
+{
+ "note": "FG-A (KR-124) and the make-room step: talk to Ham from (14,60), the tile Slowpoke needs: the player steps back a tile, still facing him, and the scene plays (the test ends on its first box).",
+ "created": "2026-11-10 14:54",
+ "start": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 14,
+  "y": 60,
+  "state": [
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_8",
+   "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F=3"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     400
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_A_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 12,
+  "y": 62,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_A_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 14:54"
+}

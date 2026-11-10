@@ -22,6 +22,7 @@
 #define FRIENDS_STORY_FLAGS_LAST            0x95F
 #define FRIENDS_STORY_SCENE_COUNT           22
 #define FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN    0x935 // FRIENDS_STORY_SEEN_FIRST: scene 1 seen
+#define FLAG_FRIENDS_FG_A_SEEN              0x956 // scene 23, FG-A Tim finds the resort
 #define FLAG_FRIENDS_DEPARTED               (FRIENDS_STORY_SEEN_FIRST + 20)
 #define FLAG_FRIENDS_REUNION_SEEN           (FRIENDS_STORY_SEEN_FIRST + 21)
 

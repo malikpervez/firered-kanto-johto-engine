@@ -201,6 +201,9 @@ bool8 FriendsStory_GetGate(u16 scene)
         return FlagGet(FLAG_HIDE_SAFFRON_ROCKETS) && FlagGet(FLAG_GOT_MASTER_BALL_FROM_SILPH);
     case 11:
         return FlagGet(FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY);
+    case 23: // FG-A: Bill's first Sevii trip is over, the Friends are at FG11 (Cinnabar) and it's before the League
+        return VarGet(VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F) >= 3 && !FlagGet(FLAG_SYS_GAME_CLEAR)
+            && FriendsStory_GetStage() == 11;
     case 12:
         return FlagGet(FLAG_SYS_GAME_CLEAR) && VarGet(VAR_MAP_SCENE_PALLET_TOWN_OAK) >= 3;
     case 13: case 14:
@@ -245,6 +248,7 @@ u16 FriendsStory_GetMapScene(void)
     case MAP_FUCHSIA_CITY: return 9;
     case MAP_SAFFRON_CITY: return 10;
     case MAP_CINNABAR_ISLAND: return 11;
+    case MAP_ONE_ISLAND_KINDLE_ROAD: return 23;
     case MAP_PALLET_TOWN: return 12;
     case MAP_NEW_BARK_TOWN_HNS:
         if (Seen(21))
