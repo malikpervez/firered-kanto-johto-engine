@@ -242,6 +242,8 @@ bool8 FriendsStory_GetGate(u16 scene)
         return JohtoChampion() && !Seen(21);
     case 22:
         return JohtoChampion() && Seen(21) && FlagGet(FLAG_FRIENDS_REUNION_ARMED);
+    case FRIENDS_SCENE_FG_E: // the Mahogany hideout cleared
+        return JohtoCampaign_IsSeeded() && VarGet(JOHTO_VAR_MAHOGANY_TOWN_STATE) >= 14;
     }
     return FALSE;
 }
@@ -281,6 +283,7 @@ u16 FriendsStory_GetMapScene(void)
     case MAP_ECRUTEAK_CITY_HNS: return 17;
     case MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS: return 18;
     case MAP_BLACKTHORN_CITY_HNS: return 20;
+    case MAP_LAKE_OF_RAGE_HNS: return FRIENDS_SCENE_FG_E;
     }
     return 0;
 }

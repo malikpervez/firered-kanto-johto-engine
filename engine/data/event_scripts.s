@@ -1397,4 +1397,5 @@ Friends_Interact::
     goto_if_eq VAR_RESULT, 20, FG20_Interact
     goto_if_eq VAR_RESULT, 21, FG21_Interact
     goto_if_eq VAR_RESULT, 22, FG22_Interact
+    goto_if_eq VAR_RESULT, FRIENDS_SCENE_FG_E, FG_E_Interact
     end

@@ -336,10 +336,11 @@ The original red Gyarados, Mahogany hideout and Radio Tower battles retain their
 | RB13 | Welcome — [`RB_Welcome`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:311) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB15 | Fuji hears from Nao (back in Lavender) — [`RB_FujiNaoLetter`](../../engine/data/scripts/rainbow_story.inc) | Replay tests `lavender fuji hears from nao`, `lavender fuji keeps naos letter`, `lavender fuji asks about the flute after the letter`, `lavender fuji asks about the flute` |
 | SV02 | Waiting at the counter — [`CG_SilverGoldenrodVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:136) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
+| FG-E | The lake that was told to be angry — [`FG_E_Interact`](../../engine/data/scripts/friends_story.inc) | Replay tests `lake of rage the friends and the angry lake`, `lake of rage the friends lb held space`, `lake of rage the friends make room for tim`, `lake of rage the friends at night at high tide`, `lake of rage no friends before the hideout` |
 | FG19 | Nobody yells at the frightened Pokémon — [`FG19_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2404) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | LG01 | Coastal warnings — [`BlackTide_CoastalWarning`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1009) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 
-RB11 is folded into RB12; there is no separate implemented Lance scene. Nao’s Ready/Later welcome respects native Ho-Oh encounter state. FG-E at Lake of Rage is proposed only.
+RB11 is folded into RB12; there is no separate implemented Lance scene. Nao’s Ready/Later welcome respects native Ho-Oh encounter state. FG-E plays on the Lake of Rage’s west shore once the Mahogany hideout is cleared, apart from Nao’s south shore and Lance.
 
 ## 15. The last badge and a choice of opponents
 
@@ -1072,6 +1073,16 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 
 **37C source:** [`FG18_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2281). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
 
+### FG-E — The lake that was told to be angry
+
+**Trigger:** Lake of Rage: Johto state seeded and the Mahogany hideout cleared (`JOHTO_VAR_MAHOGANY_TOWN_STATE` ≥ 14); before the Johto Hall of Fame; the group's stage is FG-E (stage 27, after FG18, before FG19). LB, Nick and Tim stand on the west shore's strip by the fence (camp 6,39: LB 5,39, Nick 7,39, Tim 8,39), the same tiles at high and low tide; the fisherman appears at 6,38, Jigglypuff at 4,38 and Murkrow at 8,38. Away from the red Gyarados's water, from Nao on the south shore (#118, 35,35) and from Lance (30,37).
+
+**Status:** IMPLEMENTED 2026-11-10 (KR-122; the owner: "Yes just make sure you are following their personalities as I required originally"). Receipt `0x95A`. Replay tests `lake of rage the friends and the angry lake`, `lake of rage the friends lb held space`, `lake of rage the friends make room for tim`, `lake of rage the friends at night at high tide`, `lake of rage no friends before the hideout`.
+
+**Source:** [`FG_E_Interact`](../../engine/data/scripts/friends_story.inc); the draft is in [friends-new-event-scripts.md](friends-new-event-scripts.md).
+
+LB reads a fisherman's boat sign, "If you're reading this, it's too late. Boats closed.", and calls it a mixtape. The fisherman doesn't laugh: every Magikarp he raised went wild while the radio hummed. Nick: "That signal's off now. This kid shut it down." LB apologises for the joke, sits down with Jigglypuff and Murkrow and tells him what worked for Jigglypuff; Tim rewrites the sign so people know where to go. Menu "That was kind, LB" (LB: don't tell X he "held space"; Nick: "You did, though.") / "Nice sign, Tim" (Tim kept the grandson's side; LB: "Respect."). The menu stays on later talks.
+
 ### FG19 — Nobody yells at the frightened Pokémon
 
 **Trigger:** Johto state seeded AND Goldenrod state>=11 after native Director rewards; before Johto Hall of Fame; current group stage is FG19.
@@ -1261,7 +1272,7 @@ The October 19 Friends handoff is design input awaiting implementation: FG-A–F
 | FG-B | The road nobody paved | Indigo western road; Proposed post-Oak westbound crossing | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-C | The tower that sways | Violet / Sprout Tower exterior; Proposed Zephyr Badge | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |
-| FG-E | The lake that was told to be angry | Lake of Rage shore; Proposed Mahogany hideout clearance | NOT IMPLEMENTED / gameplay NOT RUN |
+| FG-E | The lake that was told to be angry | Lake of Rage, west shore; after the Mahogany hideout | IMPLEMENTED 2026-11-10 (KR-122); see FG-E below |
 | FG-F | Ham goes first | Ice Path safe entrance floor; Proposed post-Radio / pre-Clair window | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-G | Up six | Ecruteak pond; Proposed visit after FG22 | NOT IMPLEMENTED / gameplay NOT RUN |
 
