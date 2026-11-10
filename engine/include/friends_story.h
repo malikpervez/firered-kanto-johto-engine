@@ -8,6 +8,8 @@ void FriendsStory_NewGame(void);
 u16 FriendsStory_GetStage(void);
 u16 FriendsStory_GetMapScene(void);
 bool8 FriendsStory_GetGate(u16 scene);
+bool8 FriendsStory_IsExtraScene(u16 scene);
+bool8 FriendsStory_IsHere(u16 scene);
 void FriendsStory_OnMapLoad(void);
 void FriendsStory_OnBattleOutcome(u16 trainerId, u32 outcome);
 void Special_FriendsStoryAdopt(void);
