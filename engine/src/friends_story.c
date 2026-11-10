@@ -242,6 +242,8 @@ bool8 FriendsStory_GetGate(u16 scene)
         return JohtoChampion() && !Seen(21);
     case 22:
         return JohtoChampion() && Seen(21) && FlagGet(FLAG_FRIENDS_REUNION_ARMED);
+    case FRIENDS_SCENE_FG_D: // Cianwood, reached by Surf (the Fog Badge)
+        return JohtoCampaign_IsSeeded() && FlagGet(JOHTO_FLAG_BADGE04_GET);
     }
     return FALSE;
 }
@@ -281,6 +283,7 @@ u16 FriendsStory_GetMapScene(void)
     case MAP_ECRUTEAK_CITY_HNS: return 17;
     case MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS: return 18;
     case MAP_BLACKTHORN_CITY_HNS: return 20;
+    case MAP_CIANWOOD_CITY_HNS: return FRIENDS_SCENE_FG_D;
     }
     return 0;
 }

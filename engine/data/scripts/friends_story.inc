@@ -5500,3 +5500,169 @@ FG_Battle14_Lost04::
 	.string "NICK: You can say that too.$"
 FG_Battle14_Lost05::
 	.string "HAM: Good game. We'll be here.$"
+
+@ FG-D (Cianwood beach): see project/docs/friends-new-event-scripts.md ("FG-D"). Optional, no battle, grants nothing.
+FG_D_Interact::
+	lockall
+	faceplayer
+	setvar VAR_0x8004, FRIENDS_SCENE_FG_D
+	callnative Special_FriendsStoryBegin, requests_effects=1
+	goto_if_eq VAR_RESULT, 0, FG_Release
+	copyvar VAR_0x8008, VAR_RESULT
+	call FG_FrameCamera
+	callnative Special_FriendsStoryGetPendingLoss, requests_effects=1
+	goto_if_eq VAR_RESULT, 1, FG_Loss01
+	goto_if_eq VAR_RESULT, 2, FG_Loss02
+	goto_if_eq VAR_RESULT, 3, FG_Loss03
+	goto_if_eq VAR_RESULT, 4, FG_Loss04
+	goto_if_eq VAR_RESULT, 5, FG_Loss05
+	goto_if_eq VAR_RESULT, 6, FG_Loss06
+	goto_if_eq VAR_RESULT, 7, FG_Loss07
+	goto_if_eq VAR_RESULT, 8, FG_Loss08
+	goto_if_eq VAR_RESULT, 9, FG_Loss09
+	goto_if_eq VAR_RESULT, 10, FG_Loss10
+	goto_if_eq VAR_RESULT, 11, FG_Loss11
+	goto_if_eq VAR_RESULT, 12, FG_Loss12
+	goto_if_eq VAR_RESULT, 13, FG_Loss13
+	goto_if_eq VAR_RESULT, 14, FG_Loss14
+	goto_if_eq VAR_0x8008, 2, FG_D_Repeat
+	callnative Special_FriendsStoryNeedsIntroduction, requests_effects=1
+	goto_if_eq VAR_RESULT, FALSE, FG_D_Introduced
+	fg_focus 3
+	msgbox FG_Text_Introduction_1
+	fg_focus 3
+	msgbox FG_Text_Introduction_2
+	fg_focus 3
+	msgbox FG_Text_PartnersKanto
+FG_D_Introduced::
+	setvar VAR_0x8004, FRIENDS_SCENE_FG_D
+	setvar VAR_0x8005, 0
+	closemessage
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_focus 7
+	msgbox FG_D_Text_Main01
+	fg_focus 2
+	msgbox FG_D_Text_Main02
+	fg_focus 0
+	msgbox FG_D_Text_Main03
+	fg_focus 2
+	msgbox FG_D_Text_Main04
+	fg_focus 6
+	msgbox FG_D_Text_Main05
+	fg_react 7, FG_Move_Startled
+	fg_focus 7
+	msgbox FG_D_Text_Main06
+	fg_focus 2
+	msgbox FG_D_Text_Main07
+	fg_focus 7
+	msgbox FG_D_Text_Main08
+	fg_react 227, FG_Move_Startled
+	fg_react 229, FG_Move_LookAround
+	fg_focus 2
+	msgbox FG_D_Text_Main09
+	fg_focus 2
+	msgbox FG_D_Text_Main10
+	fg_focus 7
+	msgbox FG_D_Text_Main11
+	fg_focus 2
+	msgbox FG_D_Text_Main12
+	fg_react 7, FG_Move_QuietPause
+	fg_focus 0
+	msgbox FG_D_Text_Main13
+	fg_focus 6
+	msgbox FG_D_Text_Main14
+	fg_focus 2
+	msgbox FG_D_Text_Main15
+	fg_focus 7
+	msgbox FG_D_Text_Main16
+	fg_react 227, FG_D_Move_Punches
+	fg_focus 7
+	msgbox FG_D_Text_Main17
+	fg_focus 2
+	msgbox FG_D_Text_Main18
+	fg_focus 7
+	msgbox FG_D_Text_Main19
+	fg_focus 7
+	msgbox FG_D_Text_Main20
+	setvar VAR_0x8004, FRIENDS_SCENE_FG_D
+	callnative Special_FriendsStoryMarkSeen, requests_effects=1
+FG_D_Repeat::
+	goto FG_D_Menu
+FG_D_Menu::
+	call FG_WaitSceneMovement
+	closemessage
+	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
+	multichoice 0, 0, MULTI_FG_D, FALSE
+	goto_if_eq VAR_RESULT, 0, FG_D_Choice0
+	goto_if_eq VAR_RESULT, 1, FG_D_Choice1
+	goto FG_Release
+FG_D_Choice0::
+	call FG_FrameCamera
+	fg_focus 2
+	msgbox FG_D_Text_Choice0_1
+	fg_focus 0
+	msgbox FG_D_Text_Choice0_2
+	goto FG_Release
+FG_D_Choice1::
+	call FG_FrameCamera
+	fg_focus 2
+	msgbox FG_D_Text_Choice1_1
+	fg_focus 6
+	msgbox FG_D_Text_Choice1_2
+	goto FG_Release
+FG_D_Move_Punches::
+	jump_in_place_left
+	jump_in_place_right
+	jump_in_place_left
+	face_down
+	step_end
+FG_D_Text_Main01::
+	.string "BLACKBELT: FORTY-ONE! FORTY-TWO!\nHIIYAH!$"
+FG_D_Text_Main02::
+	.string "JON: Is he okay?$"
+FG_D_Text_Main03::
+	.string "BRIAN: Jon. Buddy. You're asking if\nsomeone's okay because he's loud.$"
+FG_D_Text_Main04::
+	.string "JON: He's REALLY loud.$"
+FG_D_Text_Main05::
+	.string "TIM: This is you from the outside. I've\nbeen waiting months for this.$"
+FG_D_Text_Main06::
+	.string "BLACKBELT: YOU! YOUR PRIMEAPE HAS FIRE\nIN ITS EYES!$"
+FG_D_Text_Main07::
+	.string "JON: Uh. Thanks.$"
+FG_D_Text_Main08::
+	.string "BLACKBELT: DOES IT TRAIN WITH SPIRIT?!\nDO YOU SHOUT WITH IT?!$"
+FG_D_Text_Main09::
+	.string "JON: Hey. Easy.$"
+FG_D_Text_Main10::
+	.string "JON: No, man. We don't shout.$"
+FG_D_Text_Main11::
+	.string "BLACKBELT: NO SHOUTING?! HOW DOES IT\nKNOW YOU MEAN IT?!$"
+FG_D_Text_Main12::
+	.string "JON: Because I say it once and then I\nwait.$"
+FG_D_Text_Main13::
+	.string "BRIAN: Did Jon just win an argument by\nbeing quiet?$"
+FG_D_Text_Main14::
+	.string "TIM: Write the date down. I want this on\na shirt.$"
+FG_D_Text_Main15::
+	.string "JON: I swear to God, Tim.$"
+FG_D_Text_Main16::
+	.string "BLACKBELT: …Show me.$"
+FG_D_Text_Main17::
+	.string "BLACKBELT: Hm. It watches you between\nstrikes.$"
+FG_D_Text_Main18::
+	.string "JON: Yeah. It used to just swing at\neverything. So did I.$"
+FG_D_Text_Main19::
+	.string "BLACKBELT: I will try… my next\npush-ups… at a reasonable volume.$"
+FG_D_Text_Main20::
+	.string "BLACKBELT: forty-three. forty-four.\nHIIYAH! Sorry.$"
+FG_D_Text_Choice0_1::
+	.string "JON: Don't. I'll start yelling again just\nto ruin it.$"
+FG_D_Text_Choice0_2::
+	.string "BRIAN: He's proud. That's his proud\nvoice.$"
+FG_D_Text_Choice1_1::
+	.string "JON: I'M RIGHT FUCKING HERE.$"
+FG_D_Text_Choice1_2::
+	.string "TIM: …See, he still lives in there.\nPrimeape just doesn't need him.$"
