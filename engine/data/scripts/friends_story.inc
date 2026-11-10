@@ -4033,7 +4033,7 @@ FG03_Text_Main02::
 FG03_Text_Main03::
 	.string "JON: You said the acoustics were\nincredible. Then I woke up with a third\pfucking eyebrow.$"
 FG03_Text_Main04::
-	.string "LB: So you heard me. I was right\nabout that part.$"
+	.string "LB: So you heard the echo. I was right\nabout that part.$"
 FG03_Text_Main05::
 	.string "NICK: We lost everyone when\nJigglypuff started singing. My shoe's\pbeen getting splashed for five\nminutes.$"
 FG03_Text_Main06::
@@ -4043,7 +4043,7 @@ FG03_Text_Main07::
 FG03_Text_Main08::
 	.string "LB: He does that while people are\ntalking. I didn't want to single him\pout.$"
 FG03_Text_Main09::
-	.string "BRIAN: I've slept in worse rooms.\nYesterday. That room was outside. This\pone is also outside, but it has a\nworking alarm system.$"
+	.string "BRIAN: I've slept in worse rooms.\nYesterday. That room was outside. This\pone has a cliff, an echo and a working\nalarm system.$"
 FG03_Text_Main10::
 	.string "JON: Where's the little round fucker? I\nwant it to see the work it's done.$"
 FG03_Text_Main11::

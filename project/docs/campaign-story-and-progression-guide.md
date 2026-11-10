@@ -954,7 +954,7 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 
 **37C source:** [`FG03_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:368). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
 
-**2026-11-09 (story copy H1, KR-112):** the camp has the Poliwag’s puddle beside it (Route 4, 87–88,14–15) and the lines lose the cave and the echo: LB “So you heard me”, Brian’s room “is also outside”, Nick’s “Don’t use the puddle yet”, Jon’s “leave the fucking clearing”. Replay test `route 4 the friends camp by the puddle`.
+**2026-11-09 (story copy H1, KR-112):** the camp has the Poliwag’s puddle beside it (Route 4, 87–88,14–15) and the lines lose the cave: Nick’s “Don’t use the puddle yet”, Jon’s “leave the fucking clearing”. **2026-11-10:** the echo cliff is built over the camp (the owner: “Yeah”): the shelf’s edge rises into a wall at 78–88,7–10, its face looking down on the clearing, so the echo stays: LB “So you heard the echo”, Brian’s room “has a cliff, an echo and a working alarm system”. Replay tests `route 4 the friends camp by the puddle`, `route 4 the friends camp the echo cliff`, `route 4 the echo cliff over the camp`.
 
 ### FG04 — Everybody has a partner now
 

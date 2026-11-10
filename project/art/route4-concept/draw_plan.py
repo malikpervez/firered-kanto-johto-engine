@@ -10,7 +10,8 @@ Route 4 runs round Mt. Moon, the mountain in its west third (cliffs), which only
   two martial artists who teach their moves, the stranger by his rock, Crissy and the TM. Its only way on is down
   its ledge (you can't climb back, so the far mouth can't be reached from Cerulean);
 - **the road down to Cerulean** (the right edge, rows 10-13) along the bottom, past tall grass, the Friends' camp (the
-  third scene, at 83,14) with the Poliwag's puddle beside it, and a pond with its lawn under the cliff.
+  third scene, at 83,14) with the Poliwag's puddle beside it and the echo cliff over it (the shelf's edge rises into
+  a wall there in place of its ledge), and a pond with its lawn under the cliff.
 
 Letters: the kit's legend (T forest, . lawn, : dirt, g tall grass, _ ledges, ~ pond, * flowers, o rocks, b bushes,
 S signs), C cliffs and the buildings: Z the Pokémon Center, X and Y the two mouths of Mt. Moon (the near one at the
@@ -67,7 +68,9 @@ rect(35, 7, 40, 7, ":")            # from the far mouth's door to it
 rect(34, 9, 90, 9, "_")            # its ledge
 rect(91, 2, 91, 9, "b")            # its east end
 at(44, 3, "S")                     # the route sign (read from 44,4)
-rect(48, 2, 49, 3, "*"); rect(54, 2, 55, 3, "*"); at(65, 3, "o"); at(80, 7, "o"); rect(70, 2, 72, 3, "*")
+rect(48, 2, 49, 3, "*"); rect(54, 2, 55, 3, "*"); at(65, 3, "o"); rect(70, 2, 72, 3, "*")
+rect(78, 7, 88, 10, "C")           # the echo cliff over the Friends' camp (FG03: "a cliff, an echo"): the shelf's edge
+                                   #  rises into a wall in place of its ledge there, its two-block face on rows 9-10
 
 # the road down to Cerulean, the grass, the Friends' camp and the pond
 rect(34, 12, 105, 13, ":")         # the road east
