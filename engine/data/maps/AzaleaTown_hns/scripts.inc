@@ -206,15 +206,15 @@ AzaleaTown_EventScript_SilverTriggerBot::
 	end
 
 AzaleaTown_Silver_Battle_Cyndaquil::
-	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CYNDAQUIL_2_HNS, AzaleaTown_Text_RivalWin
+	trainerbattle_earlyrival TRAINER_JOHTO_RIVAL_CYNDAQUIL_2_HNS, RIVAL_BATTLE_HEAL_AFTER, AzaleaTown_Text_RivalWin, AzaleaTown_Text_RivalLoss
 	return
 
 AzaleaTown_Silver_Battle_Totodile::
-	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_TOTODILE_2_HNS, AzaleaTown_Text_RivalWin
+	trainerbattle_earlyrival TRAINER_JOHTO_RIVAL_TOTODILE_2_HNS, RIVAL_BATTLE_HEAL_AFTER, AzaleaTown_Text_RivalWin, AzaleaTown_Text_RivalLoss
 	return
 
 AzaleaTown_Silver_Battle_Chikorita::
-	trainerbattle_no_intro TRAINER_JOHTO_RIVAL_CHIKORITA_2_HNS, AzaleaTown_Text_RivalWin
+	trainerbattle_earlyrival TRAINER_JOHTO_RIVAL_CHIKORITA_2_HNS, RIVAL_BATTLE_HEAL_AFTER, AzaleaTown_Text_RivalWin, AzaleaTown_Text_RivalLoss
 	return
 
 AzaleaTown_EventScript_GSBall::
