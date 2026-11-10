@@ -205,6 +205,9 @@ bool8 FriendsStory_GetGate(u16 scene)
         return FlagGet(FLAG_SYS_GAME_CLEAR) && VarGet(VAR_MAP_SCENE_PALLET_TOWN_OAK) >= 3;
     case 13: case 14:
         return CharacterStory_HasMetElm();
+    case 25: // FG-C: the Zephyr Badge, with the Friends at FG13 (New Bark) or FG14 (the Ruins, open before the badge)
+        return JohtoCampaign_IsSeeded() && FlagGet(JOHTO_FLAG_BADGE01_GET) && !JohtoChampion()
+            && FriendsStory_GetStage() >= 13 && FriendsStory_GetStage() <= 14;
     case 15:
         return JohtoCampaign_IsSeeded() && VarGet(JOHTO_VAR_AZALEA_TOWN_STATE) >= 3
             && FlagGet(JOHTO_FLAG_HIDE_AZALEA_TOWN_ROCKETS);
@@ -250,6 +253,7 @@ u16 FriendsStory_GetMapScene(void)
         if (Seen(21))
             return FlagGet(FLAG_FRIENDS_REUNION_ARMED) ? 22 : 0;
         return FriendsStory_GetGate(21) ? 21 : 13;
+    case MAP_VIOLET_CITY_HNS: return 25;
     case MAP_RUINS_OF_ALPH_OUTSIDE_HNS: return 14;
     case MAP_AZALEA_TOWN_HNS: return 15;
     case MAP_GOLDENROD_CITY_HNS:
