@@ -13,6 +13,8 @@ void Special_FriendsStoryFocusSpeaker(void);
 void Special_FriendsStoryStep(void);
 void Special_FriendsStoryWaitMovement(void);
 void FriendsScene_ClearVisitors(void);
+u8 FriendsScene_GetExtraSeenThisVisit(void);
+void FriendsScene_SetExtraSeenThisVisit(u8 scene);
 u16 FriendsScene_GetMovementFault(void);
 void Special_FriendsStoryEndScene(void);
 void Special_FriendsStoryPrepareMenu(void);
