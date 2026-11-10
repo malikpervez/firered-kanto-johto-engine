@@ -2041,6 +2041,11 @@ FG13_Introduced::
 	msgbox FG13_Text_Main05
 	fg_focus 2
 	msgbox FG13_Text_Main06
+	@ The handoff's FG13 rework: Ham says how they got here, if the player saw them set off (FG-B, scene 24).
+	setvar VAR_0x8004, 24
+	callnative Special_FriendsStoryGetSeen, requests_effects=1
+	setvar VAR_0x8004, 13
+	call_if_eq VAR_RESULT, TRUE, FG13_WalkedWest
 	fg_focus 3
 	msgbox FG13_Text_Main07
 	fg_focus 4
@@ -2102,6 +2107,10 @@ FG13_Repeat::
 	fg_focus 3
 	msgbox FG13_Text_Repeat
 	goto FG_Release
+FG13_WalkedWest::
+	fg_focus 1
+	msgbox FG13_Text_WalkedWest
+	return
 FG14_Interact::
 	lockall
 	faceplayer
@@ -4762,6 +4771,8 @@ FGB_Text_Option0::
 	.string "Good luck out there$"
 FGB_Text_Option1::
 	.string "See you in Johto$"
+FG13_Text_WalkedWest::
+	.string "HAM: We walked. Jon yelled at a\nmountain.$"
 FG13_Text_Main01::
 	.string "BRIAN: So do we get another starter\nhere?$"
 FG13_Text_Main02::
