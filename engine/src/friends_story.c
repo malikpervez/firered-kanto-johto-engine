@@ -216,6 +216,9 @@ bool8 FriendsStory_GetGate(u16 scene)
         return JohtoCampaign_IsSeeded() && FlagGet(JOHTO_FLAG_RELEASED_BEASTS);
     case 18:
         return JohtoCampaign_IsSeeded() && FlagGet(JOHTO_FLAG_AMPHAROS_HEALED);
+    case 26: // FG-D: Cianwood (the Fog Badge's Surf), while the Friends are at FG17 or FG18
+        return JohtoCampaign_IsSeeded() && FlagGet(JOHTO_FLAG_BADGE04_GET)
+            && (FriendsStory_GetStage() == 17 || FriendsStory_GetStage() == 18);
     case 19:
         return JohtoCampaign_IsSeeded() && VarGet(JOHTO_VAR_GOLDENROD_CITY_STATE) >= 11;
     case 20:
@@ -261,6 +264,7 @@ u16 FriendsStory_GetMapScene(void)
         return 16;
     case MAP_ECRUTEAK_CITY_HNS: return 17;
     case MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS: return 18;
+    case MAP_CIANWOOD_CITY_HNS: return 26;
     case MAP_BLACKTHORN_CITY_HNS: return 20;
     }
     return 0;

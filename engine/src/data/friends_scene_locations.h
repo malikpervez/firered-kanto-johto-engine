@@ -18,4 +18,6 @@
     {MAP_GOLDENROD_CITY_HNS, 24, 14, 44},
     {MAP_ECRUTEAK_CITY_HNS, 51, 41, 53},
     {MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS, 16, 6, 4},
+    // FG-D on Cianwood's beach, below the Pokemon Center: Jon, Brian and Tim in front; Primeape, a Blackbelt, Hoothoot.
+    {MAP_CIANWOOD_CITY_HNS, 32, 49, LOCALID_FRIENDS_CIANWOODCITY_HNS_BRIAN, 0x45, 7, FALSE},
     {MAP_BLACKTHORN_CITY_HNS, 21, 49, 26},

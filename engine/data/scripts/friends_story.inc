@@ -5501,41 +5501,18 @@ FG_Battle14_Lost04::
 FG_Battle14_Lost05::
 	.string "HAM: Good game. We'll be here.$"
 
-@ FG-D (Cianwood beach): see project/docs/friends-new-event-scripts.md ("FG-D"). Optional, no battle, grants nothing.
+@ FG-D Someone louder than Jon (the October 19 handoff's scene; story copy F3). Cianwood's beach, below the
+@ Pokemon Center, after the Fog Badge, while the Friends are at FG17 or FG18. No battle and nothing given.
 FG_D_Interact::
 	lockall
 	faceplayer
-	setvar VAR_0x8004, FRIENDS_SCENE_FG_D
+	setvar VAR_0x8004, 26
 	callnative Special_FriendsStoryBegin, requests_effects=1
 	goto_if_eq VAR_RESULT, 0, FG_Release
 	copyvar VAR_0x8008, VAR_RESULT
 	call FG_FrameCamera
-	callnative Special_FriendsStoryGetPendingLoss, requests_effects=1
-	goto_if_eq VAR_RESULT, 1, FG_Loss01
-	goto_if_eq VAR_RESULT, 2, FG_Loss02
-	goto_if_eq VAR_RESULT, 3, FG_Loss03
-	goto_if_eq VAR_RESULT, 4, FG_Loss04
-	goto_if_eq VAR_RESULT, 5, FG_Loss05
-	goto_if_eq VAR_RESULT, 6, FG_Loss06
-	goto_if_eq VAR_RESULT, 7, FG_Loss07
-	goto_if_eq VAR_RESULT, 8, FG_Loss08
-	goto_if_eq VAR_RESULT, 9, FG_Loss09
-	goto_if_eq VAR_RESULT, 10, FG_Loss10
-	goto_if_eq VAR_RESULT, 11, FG_Loss11
-	goto_if_eq VAR_RESULT, 12, FG_Loss12
-	goto_if_eq VAR_RESULT, 13, FG_Loss13
-	goto_if_eq VAR_RESULT, 14, FG_Loss14
-	goto_if_eq VAR_0x8008, 2, FG_D_Repeat
-	callnative Special_FriendsStoryNeedsIntroduction, requests_effects=1
-	goto_if_eq VAR_RESULT, FALSE, FG_D_Introduced
-	fg_focus 3
-	msgbox FG_Text_Introduction_1
-	fg_focus 3
-	msgbox FG_Text_Introduction_2
-	fg_focus 3
-	msgbox FG_Text_PartnersKanto
-FG_D_Introduced::
-	setvar VAR_0x8004, FRIENDS_SCENE_FG_D
+	goto_if_eq VAR_0x8008, 2, FG_D_Menu
+	setvar VAR_0x8004, 26
 	setvar VAR_0x8005, 0
 	closemessage
 	callnative Special_FriendsStoryStage, requests_effects=1
@@ -5586,15 +5563,13 @@ FG_D_Introduced::
 	msgbox FG_D_Text_Main19
 	fg_focus 7
 	msgbox FG_D_Text_Main20
-	setvar VAR_0x8004, FRIENDS_SCENE_FG_D
+	setvar VAR_0x8004, 26
 	callnative Special_FriendsStoryMarkSeen, requests_effects=1
-FG_D_Repeat::
-	goto FG_D_Menu
 FG_D_Menu::
 	call FG_WaitSceneMovement
 	closemessage
 	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
-	multichoice 0, 0, MULTI_FG_D, FALSE
+	dynmultichoice 0, 0, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, FG_D_Text_Option0, FG_D_Text_Option1
 	goto_if_eq VAR_RESULT, 0, FG_D_Choice0
 	goto_if_eq VAR_RESULT, 1, FG_D_Choice1
 	goto FG_Release
@@ -5658,6 +5633,10 @@ FG_D_Text_Main19::
 	.string "BLACKBELT: I will try… my next\npush-ups… at a reasonable volume.$"
 FG_D_Text_Main20::
 	.string "BLACKBELT: forty-three. forty-four.\nHIIYAH! Sorry.$"
+FG_D_Text_Option0::
+	.string "That was impressive$"
+FG_D_Text_Option1::
+	.string "What happened to Jon?$"
 FG_D_Text_Choice0_1::
 	.string "JON: Don't. I'll start yelling again just\nto ruin it.$"
 FG_D_Text_Choice0_2::

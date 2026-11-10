@@ -1,6 +1,6 @@
 {
- "note": "FG-D's gate, closed: after the Johto League (as for FG13-FG19) the friends' Johto road scenes are over, so the beach is empty.",
- "created": "2026-11-10 15:02",
+ "note": "FG-D seen on an earlier visit: the friends don't wait on the beach again.",
+ "created": "2026-11-10 15:56",
  "start": {
   "map": "CianwoodCity_hns",
   "x": 31,
@@ -15,9 +15,12 @@
    "JOHTO_FLAG_BADGE01_GET",
    "JOHTO_FLAG_BADGE02_GET",
    "JOHTO_FLAG_BADGE03_GET",
-   "JOHTO_FLAG_BADGE04_GET",
    "JOHTO_FLAG_RELEASED_BEASTS",
-   "JOHTO_FLAG_SYS_GAME_CLEAR"
+   "JOHTO_FLAG_BADGE04_GET",
+   "FLAG_FRIENDS_FG_D_SEEN",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_16"
   ],
   "script": null
  },
@@ -62,8 +65,8 @@
   "y": 47,
   "in_battle": false,
   "flags": {
-   "FLAG_FRIENDS_FG_D_SEEN": false
+   "FLAG_FRIENDS_FG_D_SEEN": true
   }
  },
- "accepted": "2026-11-10 15:33"
+ "accepted": "2026-11-10 15:56"
 }

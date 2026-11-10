@@ -307,7 +307,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Friends_Interact",
+      "script": "FG_D_Interact",
       "flag": "0",
       "firered_slice_only": true
     },
@@ -322,7 +322,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Friends_Interact",
+      "script": "FG_D_Interact",
       "flag": "0",
       "firered_slice_only": true
     },
@@ -337,7 +337,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Friends_Interact",
+      "script": "FG_D_Interact",
       "flag": "0",
       "firered_slice_only": true
     },
@@ -352,7 +352,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Friends_Interact",
+      "script": "FG_D_Interact",
       "flag": "0",
       "firered_slice_only": true
     },
@@ -367,7 +367,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Friends_Interact",
+      "script": "FG_D_Interact",
       "flag": "0",
       "firered_slice_only": true
     },
@@ -382,7 +382,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Friends_Interact",
+      "script": "FG_D_Interact",
       "flag": "0",
       "firered_slice_only": true
     },
@@ -397,7 +397,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Friends_Interact",
+      "script": "FG_D_Interact",
       "flag": "0",
       "firered_slice_only": true
     }

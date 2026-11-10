@@ -1,6 +1,6 @@
 {
  "note": "FG-D's gate, closed: without the Fog Badge (no Surf to reach Cianwood) the friends aren't on the beach, and nothing answers where Jon would stand.",
- "created": "2026-11-10 15:02",
+ "created": "2026-11-10 15:56",
  "start": {
   "map": "CianwoodCity_hns",
   "x": 31,
@@ -15,7 +15,10 @@
    "JOHTO_FLAG_BADGE01_GET",
    "JOHTO_FLAG_BADGE02_GET",
    "JOHTO_FLAG_BADGE03_GET",
-   "JOHTO_FLAG_RELEASED_BEASTS"
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_16"
   ],
   "script": null
  },
@@ -63,5 +66,5 @@
    "FLAG_FRIENDS_FG_D_SEEN": false
   }
  },
- "accepted": "2026-11-10 15:33"
+ "accepted": "2026-11-10 15:56"
 }

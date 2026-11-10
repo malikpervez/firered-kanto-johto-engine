@@ -1,6 +1,6 @@
 {
- "note": "FG-D: after the Fog Badge, the friends' stage reaches Cianwood's beach (no scene seen yet, so Nick's short introduction first). Talk to Jon: the Blackbelt shouts his push-ups, Jon answers him quietly; ends on the Blackbelt's last count, at a reasonable volume.",
- "created": "2026-11-10 15:02",
+ "note": "FG-D: after the Fog Badge, with the Friends at FG17 (Ecruteak), Jon, Brian and Tim are on Cianwood's beach below the Pokemon Center with Primeape, a Blackbelt and Hoothoot. Talk to Jon: the Blackbelt shouts his push-ups, Jon answers him quietly; ends on the Blackbelt's last count, at a reasonable volume.",
+ "created": "2026-11-10 15:56",
  "start": {
   "map": "CianwoodCity_hns",
   "x": 31,
@@ -16,7 +16,10 @@
    "JOHTO_FLAG_BADGE02_GET",
    "JOHTO_FLAG_BADGE03_GET",
    "JOHTO_FLAG_BADGE04_GET",
-   "JOHTO_FLAG_RELEASED_BEASTS"
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_16"
   ],
   "script": null
  },
@@ -35,46 +38,6 @@
     [
      0,
      20
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
-    ],
-    [
-     1,
-     4
-    ],
-    [
-     0,
-     100
     ],
     [
      1,
@@ -264,5 +227,5 @@
    "FLAG_FRIENDS_FG_D_SEEN": false
   }
  },
- "accepted": "2026-11-10 15:33"
+ "accepted": "2026-11-10 15:56"
 }

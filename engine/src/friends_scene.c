@@ -860,6 +860,9 @@ void Special_FriendsStoryStage(void)
             ShowHome(); ShowMon(SPECIES_GIRATINA_ALTERED, 3);
             ShowPair(SPECIES_GOLDUCK, SPECIES_FURRET); break;
         case 22: ShowMon(SPECIES_SLOWBRO, 0); break;
+        case 26:
+            ShowHuman(OBJ_EVENT_GFX_BLACK_BELT_HNS, 1);
+            ShowMon(SPECIES_PRIMEAPE, 0); ShowMon(SPECIES_HOOTHOOT, 2); break;
         }
     }
     else if (scene == 1 && beat == 19)
