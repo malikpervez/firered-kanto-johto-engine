@@ -1,0 +1,69 @@
+{
+ "note": "With a second Johto badge Gold has moved on: he isn't outside Violet's Gym any more, whether or not his scene was played.",
+ "created": "2026-10-31 23:29",
+ "start": {
+  "map": "VioletCity_hns",
+  "x": 25,
+  "y": 37,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "JOHTO_VAR_VIOLET_CITY_STATE=4",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_FLAG_BADGE02_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "JOHTO_FLAG_GD01_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VioletCity_hns",
+  "x": 25,
+  "y": 37,
+  "in_battle": false,
+  "flags": {
+   "JOHTO_FLAG_GD01_SEEN": false
+  }
+ }
+}
