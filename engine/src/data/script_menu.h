@@ -1274,9 +1274,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FG21] = MULTICHOICE(MultichoiceList_FG21),
     [MULTI_FG22] = MULTICHOICE(MultichoiceList_FG22),
     [MULTI_FG_OPPONENTS] = MULTICHOICE(MultichoiceList_FG_OPPONENTS),
-    [MULTI_FG_D] = MULTICHOICE(MultichoiceList_FG_D),
-    [MULTI_FG_E] = MULTICHOICE(MultichoiceList_FG_E),
-    [MULTI_FG_F] = MULTICHOICE(MultichoiceList_FG_F),
 
     [MULTI_BRINEY_ON_DEWFORD]          = MULTICHOICE(MultichoiceList_BrineyOnDewford),
     [MULTI_PC]                         = MULTICHOICE(MultichoiceList_Exit),

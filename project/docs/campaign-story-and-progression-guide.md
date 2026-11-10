@@ -312,10 +312,9 @@ Burned Tower’s native events release the beasts and unlock Nao’s explanation
 | SV01 | A small pause — [`CG_SilverEcruteakVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:94) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
 | FG17 | A reflection that waits — [`FG17_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2178) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | RB10 | Amphy callback — [`RB_OlivineVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:359) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
-| FG-D | Someone louder than Jon — [`FG_D_Interact`](../../engine/data/scripts/friends_story.inc) | Replay tests `cianwood the friends meet someone louder than jon`, `cianwood the friends answer what happened to jon`, `cianwood no friends before the fog badge`, `cianwood no friends after the johto league` |
 | FG18 | Tim books the right trip — [`FG18_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2281) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 
-FG-D plays on Cianwood’s beach, by the water below the Pokémon Center, once the friends get there before Amphy is healed. The guide does not turn the friends’ travel into player transport rewards.
+FG-D’s new Cianwood beach scene is not implemented. The guide does not turn the friends’ travel into player transport rewards.
 
 ## 14. Silence the signal
 
@@ -1065,16 +1064,6 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 
 **37C source:** [`FG17_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2178). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
 
-### FG-D — Someone louder than Jon
-
-**Trigger:** Cianwood City: Johto state seeded and the Fog Badge (`JOHTO_FLAG_BADGE04_GET`, the Surf that reaches Cianwood); before the Johto Hall of Fame; the group's stage is FG-D (stage 26). In the story order it comes after FG17 and before FG18, since the player reaches Cianwood before Amphy is healed (FG18's gate). Jon, Brian and Tim stand on the beach by the water below the Pokémon Center (camp 32,49: Jon 31,47, Brian 32,47, Tim 33,47); the Blackbelt, Primeape and Hoothoot appear just below them (30–34,48).
-
-**Status:** IMPLEMENTED 2026-11-10 (KR-121; the owner: "Yes just make sure you are following their personalities as I required originally"). Receipt `0x959`. Replay tests `cianwood the friends meet someone louder than jon`, `cianwood the friends answer what happened to jon`, `cianwood no friends before the fog badge`, `cianwood no friends after the johto league`.
-
-**Source:** [`FG_D_Interact`](../../engine/data/scripts/friends_story.inc); the draft is in [friends-new-event-scripts.md](friends-new-event-scripts.md).
-
-A Blackbelt counts his push-ups at the top of his voice. Jon asks if he's okay; Brian points out what that means, coming from Jon; Tim has been waiting months for this. The Blackbelt asks if Jon shouts with his Primeape. "Because I say it once and then I wait." Primeape throws three clean punches and looks back at him; the Blackbelt tries his next push-ups at a reasonable volume. Menu "That was impressive" (Jon: he'll start yelling again just to ruin it; Brian: that's his proud voice) / "What happened to Jon?" (Jon: "I'M RIGHT FUCKING HERE."; Tim: the loud Jon still lives in there, Primeape just doesn't need him). The menu stays on later talks.
-
 ### FG18 — Tim books the right trip
 
 **Trigger:** Johto state seeded AND original Ampharos-healed receipt; before Johto Hall of Fame; current group stage is FG18.
@@ -1259,19 +1248,12 @@ Golduck Lv.56 / Furret Lv.55
 
 The October 19 Friends handoff is design input awaiting implementation: FG-A–FG-G, dialogue/voice rework, new final-battle lines, repeat-early-battle changes, bespoke Nao/Stranger art and other listed polish. Current 37C still has 22 scene receipts and required-zero bits 0x956–0x95F. The proposed new state allocation and 29-placement adoption must be audited before use.
 
-**Allocation audit, 10 November 2026** (before FG-D, FG-E and FG-F were built; the owner said yes to the drafts: "Yes just make sure you are following their personalities as I required originally"):
-
-- **Receipts: the handoff's numbers, as proposed.** FG-A..FG-G take `0x956`..`0x95C` in letter order (FG-D `0x959`, FG-E `0x95A`, FG-F `0x95B`). They are inside the Friends flags (`0x934`..`0x95F`), above the daily flags and below the pinned engine flags at `0x960`, so they're saved and nothing clears them. No script or C uses them: `flags_hns.h` and `johto_ids.h` list them as `FLAG_UNUSED_0x956`..., and Johto's own flags are `0x2xxx` ids in their own container. `0x95D`..`0x95F` stay required-zero, and so does the receipt of every scene a build doesn't have yet. No save layout change.
-- **Stages: not the handoff's placement numbers.** Its 29-row order would put FG-D at 22, FG-E at 23 and FG-F at 25. As stage values those clash: 22 is FG22's stage today, 13–21 are FG13–FG21's, and every old save at stage *n* would need converting. So the stage keeps each old scene's own number (no conversion), and the new scenes take the free values after FG22 in letter order: FG-A..FG-G = 23..29. That's inside the 5-bit stage field (0–31); none is a stage, gate or loss value today (gates 1–22, the loss field 0–14 is its own four bits). The story order is a separate table, `FriendsStory_Order`: each new scene sits right after the old scene it follows, and stages only move forward through it, as before. FG-D comes after FG17 rather than after FG18 as the handoff's table has it: Cianwood comes before Amphy is healed (FG18's gate), so after FG18 it would retire FG18 for every player.
-- **Menus:** `MULTI_FG_A`..`MULTI_FG_G` = 194..200 (FG-D 197, FG-E 198, FG-F 199).
-- Built so far: FG-D, FG-E, FG-F, each in its own pull request. The others keep the numbers above.
-
 | Draft ID | Proposed scene | Proposed location / gate | Current status |
 | --- | --- | --- | --- |
 | FG-A | Tim finds the resort | One Island / Ember Spa; Proposed first Sevii-trip completion | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-B | The road nobody paved | Indigo western road; Proposed post-Oak westbound crossing | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-C | The tower that sways | Violet / Sprout Tower exterior; Proposed Zephyr Badge | NOT IMPLEMENTED / gameplay NOT RUN |
-| FG-D | Someone louder than Jon | Cianwood beach, below the Pokémon Center; after the Fog Badge | IMPLEMENTED 2026-11-10 (KR-121); see FG-D below |
+| FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-E | The lake that was told to be angry | Lake of Rage shore; Proposed Mahogany hideout clearance | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-F | Ham goes first | Ice Path safe entrance floor; Proposed post-Radio / pre-Clair window | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-G | Up six | Ecruteak pond; Proposed visit after FG22 | NOT IMPLEMENTED / gameplay NOT RUN |

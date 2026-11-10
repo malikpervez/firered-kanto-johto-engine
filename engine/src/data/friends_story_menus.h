@@ -65,18 +65,6 @@ static const struct MenuAction MultichoiceList_FG22[] = {
     {COMPOUND_STRING("Catch up")},
     {COMPOUND_STRING("See you around")},
 };
-static const struct MenuAction MultichoiceList_FG_D[] = {
-    {COMPOUND_STRING("That was impressive")},
-    {COMPOUND_STRING("What happened to Jon?")},
-};
-static const struct MenuAction MultichoiceList_FG_E[] = {
-    {COMPOUND_STRING("That was kind, LB")},
-    {COMPOUND_STRING("Nice sign, Tim")},
-};
-static const struct MenuAction MultichoiceList_FG_F[] = {
-    {COMPOUND_STRING("Ham, that was brave")},
-    {COMPOUND_STRING("Everyone okay?")},
-};
 static const struct MenuAction MultichoiceList_FG_OPPONENTS[] = {
     {COMPOUND_STRING("Brian")},
     {COMPOUND_STRING("Xavier")},
