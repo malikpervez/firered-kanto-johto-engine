@@ -167,11 +167,12 @@ VioletCity_PokeCenter_Text_GameboyKid:
 	.string "POKéMON PC storage system.$"
 
 VioletCity_PokeCenter_Text_Gentleman:
-	.string "It was around three years ago.\p"
-	.string "TEAM ROCKET was up to no good\n"
-	.string "with POKéMON.\p"
+	.string "Only a few weeks ago, TEAM ROCKET\n"
+	.string "was up to no good in KANTO.\p"
 	.string "But justice prevailed--a young\n"
-	.string "kid broke 'em up.$"
+	.string "trainer from PALLET broke 'em up.\p"
+	.string "Say… You came here from KANTO,\n"
+	.string "didn't you?$"
 
 VioletCity_PokeCenter_Text_Youngster:
 	.string "POKéMON are smart. They won't\n"

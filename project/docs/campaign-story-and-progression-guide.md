@@ -322,6 +322,8 @@ FG-D’s new Cianwood beach scene is not implemented. The guide does not turn th
 
 The original red Gyarados, Mahogany hideout and Radio Tower battles retain their role. Nao’s copied recording is switched off through a later conversation. Silver waits at a Center, while the friends help frightened Pokémon after the takeover.
 
+**Rocket’s power struggle (KR-110).** Giovanni quit at Viridian weeks ago, beaten by the player; in Johto his branch split instead of stopping. Archer wants him back and takes the Radio Tower to call him home on every radio; Ariana, the “interim boss” of Mahogany, wants Rocket strong without him; Proton runs the money; Petrel copies Giovanni’s voice to keep the grunts in line; the scientists, several from Silph, follow whoever funds the work. Kurt, Proton, the Violet gentleman, Silver in Azalea (a battle that carries on if the player loses: his “Some CHAMPION.” plays, the party is healed and the story goes on), the hideout and Radio Tower lines and the Pokégear broadcast each show a piece of it. Beaten, Archer disbands Rocket “like GIOVANNI did before me” and no longer answers for anyone who keeps the name; Ariana keeps it, and Black Tide is hers (LG01, LG02, LG06). The Five Island warehouse admin, met after the Radio Tower, has heard Archer quit too and calls it lies. In the Celebi scenes Giovanni recognises the child who beat him weeks ago, and Silver on Route 22 knows the kid who beat his father.
+
 **Progression:**
 
 1. Resolve native Lake of Rage/Mahogany progression, Pryce and the Radio Tower takeover.
@@ -706,7 +708,7 @@ Neutral post-resolution reflection and optional Mew glimpse.
 
 **37C source:** [`BlackTide_CoastalWarning`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1009). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warning after the native Radio Tower state reaches10. The warning itself grants no travel/item/branch progress.
+Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warning after the native Radio Tower state reaches10: three huge birds striking in turns, and Rocket boats near the islands although Rocket quit (KR-110). The warning itself grants no travel/item/branch progress.
 
 ### LG02 — The manufactured birds attack Lugia
 
@@ -716,7 +718,7 @@ Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warni
 
 **37C source:** [`WhirlIslands_LugiaChamber_hns_MapScripts`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-A once-only chamber scene stages three separately manufactured replicas striking Lugia. Rocket leaves, Lugia darkens, and the three independent encounters remain.
+A once-only chamber scene stages three separately manufactured replicas striking Lugia. The Rocket technician says Archer quit, Ariana didn’t, and the project answers to her now (KR-110). Rocket leaves, Lugia darkens, and the three independent encounters remain.
 
 ### LG03 — Articuno replica: independent battle
 
@@ -756,7 +758,7 @@ Resolve this Rocket replica by defeating OR catching it. Its original Kanto/Sevi
 
 **37C source:** [`BlackTide_LinksIfReady`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:884). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-The third independent success breaks Rocket control. Lugia remains in the Shadow state, becomes approachable, and the Keeper allows unlimited preparation.
+The third independent success breaks Rocket control. Lugia remains in the Shadow state, becomes approachable, and the Keeper allows unlimited preparation. From then on a Rocket log can be read where each replica stood: the calls copied (Seafoam Islands, Power Plant, Mt. Ember), Silph’s recording devices, three specimens, no retreat (GAP-30, KR-110).
 
 ### LG07 — Approach and face Shadow Lugia
 
