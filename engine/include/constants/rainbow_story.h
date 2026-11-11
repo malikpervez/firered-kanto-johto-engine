@@ -44,4 +44,9 @@
 #define LG_REPLICA_DEFEATED              1
 #define LG_REPLICA_CAUGHT                2
 
+// Johto-side receipt, in Johto's own regional event bits (JOHTO_CAMPAIGN_FLAG_ID_BASE + an HnS raw flag; see
+// constants/character_story.h): raw 0x91C is unused by every Johto script and by the C code, outside Johto's daily
+// flags (0x910..0x91A) and inside the regional save's stored events, so no save layout changes.
+#define JOHTO_FLAG_RB16_SEEN             0x291C // Nao's whole talk at the Lake of Rage (RB16) was heard
+
 #endif

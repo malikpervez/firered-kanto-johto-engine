@@ -1,0 +1,203 @@
+{
+ "note": "FG-B (KR-125): once the player is Champion and Oak has given the Johto directions, with the Friends at FG12, X, Jon, Nick and Brian (and Mankey) are on League West Pass, south of the road. Talk to X: the plan, Jon and the mountain, then Brian's living room in a puddle; the test ends on X's 'Then we keep walking ahead. Same plan. Better reason.' with the room still showing.",
+ "created": "2026-11-10 15:26",
+ "start": {
+  "map": "LeagueWestPass_Frlg",
+  "x": 30,
+  "y": 11,
+  "state": [
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_4",
+   "FLAG_FRIENDS_STAGE_8"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     17
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     200
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_B_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LeagueWestPass_Frlg",
+  "x": 30,
+  "y": 14,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_B_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 15:26"
+}

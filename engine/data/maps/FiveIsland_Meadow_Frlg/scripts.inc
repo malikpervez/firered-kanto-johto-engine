@@ -1,6 +1,11 @@
 FiveIsland_Meadow_Frlg_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, FiveIsland_Meadow_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_Meadow_OnTransition
 	.byte 0
+
+FiveIsland_Meadow_OnTransition::
+	call JT_FiveIslandVisibility
+	end
 
 FiveIsland_Meadow_OnLoad::
 	call_if_set FLAG_UNLOCKED_ROCKET_WAREHOUSE, FiveIsland_Meadow_EventScript_SetWarehouseDoorUnlocked

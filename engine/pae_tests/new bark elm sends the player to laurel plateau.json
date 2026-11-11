@@ -1,0 +1,83 @@
+{
+ "note": "Johto's League (KR-111, G3): after the eighth Johto badge Elm says JOHTO's LEAGUE is waiting: take your team to LAUREL PLATEAU. Threshold 0.2%: the old screen differs by one word.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "NewBarkTown_Lab_hns",
+  "x": 6,
+  "y": 4,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=9",
+   "JOHTO_FLAG_HIDE_LAB_POLICEMAN",
+   "!JOHTO_FLAG_HIDE_NEWBARKTOWN_LAB_AIDE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.002,
+ "expect": {
+  "map": "NewBarkTown_Lab_hns",
+  "x": 6,
+  "y": 4,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:27"
+}
