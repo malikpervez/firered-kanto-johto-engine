@@ -1992,6 +1992,108 @@ FG12_Choice1::
 	fg_focus 0
 	msgbox FG12_Text_Choice1_04
 	goto FG_Release
+@ FG-B The road nobody paved (the October 19 handoff's scene; story copy F3). League West Pass, past where the
+@ construction barrier stood, once the player is Champion and Oak has given the Johto directions, while the Friends
+@ are at FG12 (Pallet): how the seven get to New Bark before FG13. X, Jon, Nick and Brian, Mankey, and the home in a
+@ puddle (FG11's reflection). No battle and nothing given; the group heads west at the end.
+FGB_Interact::
+	lockall
+	faceplayer
+	setvar VAR_0x8004, 24
+	callnative Special_FriendsStoryBegin, requests_effects=1
+	goto_if_eq VAR_RESULT, 0, FG_Release
+	copyvar VAR_0x8008, VAR_RESULT
+	call FG_FrameCamera
+	goto_if_eq VAR_0x8008, 2, FGB_Menu
+	setvar VAR_0x8004, 24
+	setvar VAR_0x8005, 0
+	closemessage
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_focus 4
+	msgbox FGB_Text_Main01
+	fg_focus 4
+	msgbox FGB_Text_Main02
+	fg_focus 4
+	msgbox FGB_Text_Main03
+	fg_focus 0
+	msgbox FGB_Text_Main04
+	fg_focus 4
+	msgbox FGB_Text_Main05
+	fg_focus 0
+	msgbox FGB_Text_Main06
+	fg_react 2, FG_Move_Emphatic
+	fg_focus 2
+	msgbox FGB_Text_Main07
+	fg_focus 3
+	msgbox FGB_Text_Main08
+	fg_focus 2
+	msgbox FGB_Text_Main09
+	fg_react 227, FG_Move_Emphatic
+	fg_react 2, FG_Move_QuietPause
+	fg_focus 2
+	msgbox FGB_Text_Main10
+	fg_focus 3
+	msgbox FGB_Text_Main11
+	fg_focus 2
+	msgbox FGB_Text_Main12
+	fg_walk_out 4, DIR_NORTH
+	setvar VAR_0x8004, 24
+	setvar VAR_0x8005, 80
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_focus 4
+	msgbox FGB_Text_Main13
+	fg_focus 0
+	msgbox FGB_Text_Main14
+	fg_focus 0
+	msgbox FGB_Text_Main15
+	fg_focus 4
+	msgbox FGB_Text_Main16
+	fg_focus 0
+	msgbox FGB_Text_Main17
+	fg_focus 4
+	msgbox FGB_Text_Main18
+	closemessage
+	setvar VAR_0x8004, 24
+	setvar VAR_0x8005, 81
+	callnative Special_FriendsStoryStage, requests_effects=1
+	fg_walk_back 4, DIR_SOUTH
+	setvar VAR_0x8004, 24
+	callnative Special_FriendsStoryMarkSeen, requests_effects=1
+FGB_Menu::
+	call FG_WaitSceneMovement
+	closemessage
+	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
+	dynmultichoice 0, 0, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, FGB_Text_Option0, FGB_Text_Option1
+	goto_if_eq VAR_RESULT, 0, FGB_Choice0
+	goto_if_eq VAR_RESULT, 1, FGB_Choice1
+	goto FG_Release
+FGB_Choice0::
+	call FG_FrameCamera
+	fg_focus 4
+	msgbox FGB_Text_Choice0_01
+	fg_focus 0
+	msgbox FGB_Text_Choice0_02
+	goto FGB_Leave
+FGB_Choice1::
+	call FG_FrameCamera
+	fg_focus 2
+	msgbox FGB_Text_Choice1_01
+	fg_focus 4
+	msgbox FGB_Text_Choice1_02
+	goto FGB_Leave
+@ Jon leads off west; then the four are down the road.
+FGB_Leave::
+	fg_walk_out 2, DIR_WEST
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, 24
+	setvar VAR_0x8005, 90
+	callnative Special_FriendsStoryStage, requests_effects=1
+	fadescreen FADE_FROM_BLACK
+	goto FG_Release
 FG13_Interact::
 	lockall
 	faceplayer
@@ -2045,6 +2147,11 @@ FG13_Introduced::
 	msgbox FG13_Text_Main05
 	fg_focus 2
 	msgbox FG13_Text_Main06
+	@ The handoff's FG13 rework: Ham says how they got here, if the player saw them set off (FG-B, scene 24).
+	setvar VAR_0x8004, 24
+	callnative Special_FriendsStoryGetSeen, requests_effects=1
+	setvar VAR_0x8004, 13
+	call_if_eq VAR_RESULT, TRUE, FG13_WalkedWest
 	fg_focus 3
 	msgbox FG13_Text_Main07
 	fg_focus 4
@@ -2106,6 +2213,10 @@ FG13_Repeat::
 	fg_focus 3
 	msgbox FG13_Text_Repeat
 	goto FG_Release
+FG13_WalkedWest::
+	fg_focus 1
+	msgbox FG13_Text_WalkedWest
+	return
 FG14_Interact::
 	lockall
 	faceplayer
@@ -4784,6 +4895,56 @@ FG12_Text_Choice1_03::
 	.string "NICK: We can compare notes when we\nget there. Travel notes, Brian. Not a\pranked list of benches.$"
 FG12_Text_Choice1_04::
 	.string "BRIAN: You're going to want that list\neventually.$"
+FGB_Text_Main01::
+	.string "XAVIER: Okay. Ground our energy. Tim's\ndirections say west.$"
+FGB_Text_Main02::
+	.string "XAVIER: West is that way. Two days\nwalking, one river, one town.$"
+FGB_Text_Main03::
+	.string "XAVIER: Seven people, eleven Pokémon,\nfour days of food.$"
+FGB_Text_Main04::
+	.string "BRIAN: Four days of food for a\ntwo-day walk.$"
+FGB_Text_Main05::
+	.string "XAVIER: For you, that's two days of\nfood.$"
+FGB_Text_Main06::
+	.string "BRIAN: I respect a plan that knows me.$"
+FGB_Text_Main07::
+	.string "JON: WHO PUTS A WHOLE FUCKING\nMOUNTAIN AT THE END OF A ROAD?$"
+FGB_Text_Main08::
+	.string "NICK: The road goes around it, Jon.$"
+FGB_Text_Main09::
+	.string "JON: I'M NOT YELLING AT THE ROAD.$"
+FGB_Text_Main10::
+	.string "JON: …Okay. That's what that sounds\nlike.$"
+FGB_Text_Main11::
+	.string "NICK: Yeah.$"
+FGB_Text_Main12::
+	.string "JON: It's a big mountain, Mankey. We're\ngoing around it.$"
+FGB_Text_Main13::
+	.string "XAVIER: Brian. Come look at this.$"
+FGB_Text_Main14::
+	.string "BRIAN: That's my fan.$"
+FGB_Text_Main15::
+	.string "BRIAN: That's the cushion that keeps\nfalling off.$"
+FGB_Text_Main16::
+	.string "XAVIER: It showed up when we started\nwalking west.$"
+FGB_Text_Main17::
+	.string "BRIAN: Cinnabar, then here. It keeps\nshowing up ahead of us.$"
+FGB_Text_Main18::
+	.string "XAVIER: Then we keep walking ahead.\nSame plan. Better reason.$"
+FGB_Text_Choice0_01::
+	.string "XAVIER: We'll need it. And a dry\nplace to sleep.$"
+FGB_Text_Choice0_02::
+	.string "BRIAN: Mostly the second one.$"
+FGB_Text_Choice1_01::
+	.string "JON: You better. Somebody has to tell\nus which mountains are worth it.$"
+FGB_Text_Choice1_02::
+	.string "XAVIER: Look for the campfire. Brian\npicks the spot.$"
+FGB_Text_Option0::
+	.string "Good luck out there$"
+FGB_Text_Option1::
+	.string "See you in Johto$"
+FG13_Text_WalkedWest::
+	.string "HAM: We walked. Jon yelled at a\nmountain.$"
 FG13_Text_Main01::
 	.string "BRIAN: So do we get another starter\nhere?$"
 FG13_Text_Main02::

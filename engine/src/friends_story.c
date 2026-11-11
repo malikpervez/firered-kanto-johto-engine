@@ -206,6 +206,9 @@ bool8 FriendsStory_GetGate(u16 scene)
             && FriendsStory_GetStage() >= 11 && FriendsStory_GetStage() <= 12;
     case 12:
         return FlagGet(FLAG_SYS_GAME_CLEAR) && VarGet(VAR_MAP_SCENE_PALLET_TOWN_OAK) >= 3;
+    case 24: // FG-B: the player is Champion, Oak has given the Johto directions and the Friends are at FG12 (Pallet)
+        return FlagGet(FLAG_SYS_GAME_CLEAR) && FlagGet(FLAG_OAK_GAVE_JOHTO_DIRECTIONS)
+            && FriendsStory_GetStage() == 12;
     case 13: case 14:
         return CharacterStory_HasMetElm();
     case 15:
@@ -250,6 +253,7 @@ u16 FriendsStory_GetMapScene(void)
     case MAP_CINNABAR_ISLAND: return 11;
     case MAP_ONE_ISLAND_KINDLE_ROAD: return 23;
     case MAP_PALLET_TOWN: return 12;
+    case MAP_LEAGUE_WEST_PASS: return 24;
     case MAP_NEW_BARK_TOWN_HNS:
         if (Seen(21))
             return FlagGet(FLAG_FRIENDS_REUNION_ARMED) ? 22 : 0;

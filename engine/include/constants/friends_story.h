@@ -25,6 +25,7 @@
 #define FLAG_FRIENDS_FG11_SEEN              (FRIENDS_STORY_SEEN_FIRST + 10) // FG11, the television in the water
 #define FLAG_FRIENDS_FG_A_SEEN              0x956 // scene 23, FG-A Tim finds the resort
 #define FLAG_FRIENDS_DEPARTED               (FRIENDS_STORY_SEEN_FIRST + 20)
+#define FLAG_FRIENDS_FG_B_SEEN              0x957 // scene 24, FG-B The road nobody paved
 #define FLAG_FRIENDS_REUNION_SEEN           (FRIENDS_STORY_SEEN_FIRST + 21)
 
 // The stage's five bits by name, so a replay test can start the Friends at a placement (stage 11: 1, 2 and 8).

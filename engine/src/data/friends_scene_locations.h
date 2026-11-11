@@ -14,6 +14,8 @@
     // FG-A on Kindle Road, below Ember Spa: Tim, Brian, Ham and Nick in front; Spearow, a local, Slowpoke; they leave.
     {MAP_ONE_ISLAND_KINDLE_ROAD, 12, 61, 30, 0x4B, 7, TRUE},
     {MAP_PALLET_TOWN, 12, 22, 11},
+    // FG-B on League West Pass, south of the road: X, Jon, Nick and Brian in front; Mankey; they head west.
+    {MAP_LEAGUE_WEST_PASS, 30, 13, 3, 0x1D, 1, TRUE},
     {MAP_NEW_BARK_TOWN_HNS, 21, 14, 11},
     {MAP_RUINS_OF_ALPH_OUTSIDE_HNS, 29, 29, 31},
     {MAP_AZALEA_TOWN_HNS, 55, 24, 24},
