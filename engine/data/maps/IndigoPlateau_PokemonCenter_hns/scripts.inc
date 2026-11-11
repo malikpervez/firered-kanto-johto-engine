@@ -50,10 +50,12 @@ IndigoPlateau_Text_Blackbelt:
 	.string "Please check back later.$"
 
 IndigoPlateau_Text_CooltrainerM:
-	.string "At the POKéMON LEAGUE, you'll get\n"
-	.string "tested by the ELITE FOUR.\p"
-	.string "You have to beat them all. If you\n"
-	.string "lose, you have to start all over!$"
+	.string "JOHTO's trainers used to cross\n"
+	.string "the mountains to INDIGO PLATEAU.\p"
+	.string "Now we have a LEAGUE of our own.\n"
+	.string "LANCE came home to be CHAMPION.\p"
+	.string "You have to beat the ELITE FOUR\n"
+	.string "in a row. If you lose, start over!$"
 
 IndigoPlateau_EventScript_Silver::
 	lock

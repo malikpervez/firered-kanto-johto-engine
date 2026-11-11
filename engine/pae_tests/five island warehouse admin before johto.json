@@ -1,0 +1,62 @@
+{
+ "note": "The Five Island warehouse admin before the player has been to Johto: his FireRed lines stay (Johto's variables are not read until Johto has begun).",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "FiveIsland_RocketWarehouse_Frlg",
+  "x": 24,
+  "y": 11,
+  "state": [
+   "FLAG_BADGE08_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "!FLAG_HIDE_FIVE_ISLAND_ROCKETS",
+   "VAR_MAP_SCENE_ROCKET_WAREHOUSE=1",
+   "CLEAR_TEAM",
+   "SPECIES_MEWTWO lv100 MOVE_DRAGON_PULSE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FiveIsland_RocketWarehouse_Frlg",
+  "x": 24,
+  "y": 11,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:30"
+}

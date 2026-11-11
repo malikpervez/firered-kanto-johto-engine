@@ -1,0 +1,75 @@
+{
+ "note": "Kurt before the Well (B1): he knows the player from Oak's radio show and says some of the Rockets the player ran out of Kanto came to Johto (no more \"disbanded three years ago\").",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "AzaleaTown_KurtsHouse_hns",
+  "x": 4,
+  "y": 4,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "!JOHTO_FLAG_HIDE_KURT_1",
+   "JOHTO_FLAG_HIDE_KURT_2"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "AzaleaTown_KurtsHouse_hns",
+  "x": 4,
+  "y": 4,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:29"
+}

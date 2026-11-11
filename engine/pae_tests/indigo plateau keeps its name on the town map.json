@@ -1,0 +1,55 @@
+{
+ "note": "Johto's League (KR-111): Kanto's Indigo Plateau keeps its name; the town map opened there names it INDIGO PLATEAU.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "IndigoPlateau_Exterior_Frlg",
+  "x": 11,
+  "y": 15,
+  "state": [
+   "FLAG_SYS_GAME_CLEAR"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ]
+   ]
+  },
+  {
+   "op": "script",
+   "label": "EventScript_RegionMap",
+   "frames": 60
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     180
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "IndigoPlateau_Exterior_Frlg",
+  "x": 11,
+  "y": 15,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:27"
+}

@@ -1,0 +1,54 @@
+{
+ "note": "Johto's League (KR-111): the Blackthorn Center gentleman's League is Johto's: Deep inside far-off LAUREL PLATEAU is the POK\u00e9MON LEAGUE. Threshold 0.2%: the old screen differs by one word.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "BlackthornCity_PokemonCenter_hns",
+  "x": 11,
+  "y": 5,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ],
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.002,
+ "expect": {
+  "map": "BlackthornCity_PokemonCenter_hns",
+  "x": 11,
+  "y": 5,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:27"
+}
