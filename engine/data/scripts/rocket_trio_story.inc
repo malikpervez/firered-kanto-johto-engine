@@ -29,9 +29,15 @@ JT01_Net::
 	msgbox JT01_Text_OffscreenJames
 	msgbox JT01_Text_James
 	msgbox JT01_Text_Net
-	applymovement 15, JT_Movement_TangledMeowth
+	@ applymovement2 leaves the companion PIKACHU out (applymovement would put it back in its BALL): the trio's next
+	@ lines are about it walking beside the player.
+	applymovement2 15, JT_Movement_TangledMeowth
 	waitmovement 0
 	msgbox JT01_Text_Meowth
+	@ T6: they notice the companion PIKACHU (always behind the player); nobody tries to take it.
+	msgbox JT01_Text_JessiePikachu
+	msgbox JT01_Text_JamesPikachu
+	msgbox JT01_Text_MeowthPikachu
 	setflag FLAG_JT01_SEEN
 	closemessage
 	fadescreen FADE_TO_BLACK
@@ -63,6 +69,7 @@ JT04_Aftermath::
 	waitmoncry
 	msgbox JT04_Text_OffscreenJames
 	msgbox JT04_Text_James
+	call_if_set JOHTO_FLAG_JT05_SEEN, JT04_JamesGoldenrod
 	msgbox JT04_Text_Jessie
 	msgbox JT04_Text_Meowth
 	applymovement 51, JT_Movement_FreedSeel
@@ -76,6 +83,68 @@ JT04_Aftermath::
 	setflag FLAG_TEMP_1C
 	fadescreen FADE_FROM_BLACK
 	releaseall
+	end
+JT04_JamesGoldenrod::
+	msgbox JT04_Text_JamesGoldenrod
+	return
+@ JT05: during the takeover (Goldenrod state 6-9) ROCKET has hired the trio to guard its warehouse under GOLDENROD.
+@ Talk to any of them; no battle, they leave in a fade. The two caged POKeMON beside the crates (FLAG_TEMP_1D) stay
+@ until the tower is freed; talked to, each only cries. Sets JOHTO_FLAG_JT05_SEEN, which JT04 reads.
+JT05_Visibility::
+	setflag FLAG_TEMP_1C
+	setflag FLAG_TEMP_1D
+	callnative Special_CharacterStoryAdopt, requests_effects=1
+	goto_if_eq VAR_RESULT, FALSE, JT_Return
+	goto_if_lt JOHTO_VAR_GOLDENROD_CITY_STATE, 6, JT_Return
+	goto_if_ge JOHTO_VAR_GOLDENROD_CITY_STATE, 10, JT_Return
+	clearflag FLAG_TEMP_1D
+	goto_if_set JOHTO_FLAG_JT05_SEEN, JT_Return
+	clearflag FLAG_TEMP_1C
+	return
+JT05_GuardDuty::
+	lockall
+	faceplayer
+	call JT05_Visibility
+	goto_if_set FLAG_TEMP_1C, JT_Release
+	goto_if_set FLAG_JT01_SEEN, JT05_Known
+	goto_if_set FLAG_JT02_SEEN, JT05_Known
+	goto_if_set FLAG_JT03_SEEN, JT05_Known
+	msgbox JT05_Text_JessieHold
+	goto JT05_Duty
+JT05_Known::
+	msgbox JT05_Text_JessieAgain
+JT05_Duty::
+	msgbox JT05_Text_James
+	msgbox JT05_Text_Meowth
+	playmoncry SPECIES_SENTRET, CRY_MODE_WEAK
+	waitmoncry
+	msgbox JT05_Text_Whimper
+	applymovement LOCALID_GOLDENROD_STORAGE_JAMES, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox JT05_Text_JamesBerries
+	msgbox JT05_Text_Jessie
+	msgbox JT05_Text_MeowthComing
+	setflag JOHTO_FLAG_JT05_SEEN
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_GOLDENROD_STORAGE_JESSIE
+	removeobject LOCALID_GOLDENROD_STORAGE_JAMES
+	removeobject LOCALID_GOLDENROD_STORAGE_MEOWTH
+	setflag FLAG_TEMP_1C
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+JT05_CagedMarill::
+	lock
+	playmoncry SPECIES_MARILL, CRY_MODE_WEAK
+	waitmoncry
+	release
+	end
+JT05_CagedSentret::
+	lock
+	playmoncry SPECIES_SENTRET, CRY_MODE_WEAK
+	waitmoncry
+	release
 	end
 JT_Movement_TangledMeowth::
 	walk_in_place_faster_left
@@ -194,6 +263,7 @@ JT03_Disguises::
 JT03_Known::
 	msgbox JT03_Text_Known
 JT03_Reveal::
+	msgbox JT03_Text_StillHiring
 	setvar VAR_0x8004, 41
 	callnative Special_CharacterStoryTrioReveal, requests_effects=1
 	delay 90
@@ -244,9 +314,15 @@ JT03_Text_Jessie::
 JT03_Text_James::
 	.string "JAMES: Same unpaid balloon bill.$"
 JT03_Text_Known::
-	.string "MEOWTH: And the same kid!$"
+	.string "MEOWTH: And the same kid! With the\n"
+	.string "same smug PIKACHU!$"
 JT03_Text_NewAudience::
-	.string "MEOWTH: And an audience!$"
+	.string "MEOWTH: And an audience! With a\n"
+	.string "PIKACHU, no less!$"
+JT03_Text_StillHiring::
+	.string "JESSIE: Somebody in JOHTO is still\n"
+	.string "hiring ROCKETS. We'll be the best\l"
+	.string "they've got!$"
 JT01_Text_Jessie::
 	.string "JESSIE: One rare POKéMON, and\nheadquarters will finally\lremember our names.$"
 JT01_Text_OffscreenJames::
@@ -257,13 +333,57 @@ JT01_Text_Net::
 	.string "The net is tangled around MEOWTH!$"
 JT01_Text_Meowth::
 	.string "MEOWTH: Then help me\nout of it!$"
+JT01_Text_JessiePikachu::
+	.string "JESSIE: …Wait. That PIKACHU walks\n"
+	.string "beside the kid, without a BALL.$"
+JT01_Text_JamesPikachu::
+	.string "JAMES: A PIKACHU like that?\n"
+	.string "Headquarters would remember US!$"
+JT01_Text_MeowthPikachu::
+	.string "MEOWTH: Headquarters can't even\n"
+	.string "remember ME, and I can TALK!$"
 JT04_Text_Rescued::
 	.string "A freed SEEL lingers by the passage.$"
 JT04_Text_OffscreenJames::
 	.string "JAMES calls from the passage.$"
 JT04_Text_James::
 	.string "JAMES: They had a whole room\nof frightened POKéMON.\pI couldn't leave the cages shut.$"
+JT04_Text_JamesGoldenrod::
+	.string "JAMES: In GOLDENROD, I only fed\n"
+	.string "them. This time I opened the doors.$"
 JT04_Text_Jessie::
-	.string "JESSIE: We were inspecting\ncompany property.$"
+	.string "JESSIE: ARCHER quit. ARIANA was still\n"
+	.string "hiring. We were only inspecting\l"
+	.string "company property.$"
 JT04_Text_Meowth::
 	.string "MEOWTH: Sure.\nWith all the doors open.$"
+JT05_Text_JessieAgain::
+	.string "JESSIE: You again! This is a\n"
+	.string "restricted storage area.\p"
+	.string "We're on guard duty. Real\n"
+	.string "uniforms, real pay.$"
+JT05_Text_JessieHold::
+	.string "JESSIE: Hold it! This is a\n"
+	.string "restricted storage area.\p"
+	.string "We're on guard duty. Real\n"
+	.string "uniforms, real pay.$"
+JT05_Text_James::
+	.string "JAMES: ARCHER says the boss will be\n"
+	.string "home as soon as he hears the\l"
+	.string "broadcast.$"
+JT05_Text_Meowth::
+	.string "MEOWTH: And then the boss sees who\n"
+	.string "stood watch. That's the plan.$"
+JT05_Text_Whimper::
+	.string "A POKéMON in one of the cages\n"
+	.string "whimpers. JAMES looks over.$"
+JT05_Text_JamesBerries::
+	.string "JAMES: …They said not to feed these\n"
+	.string "until after the broadcast.\p"
+	.string "It's only a few BERRIES. Nobody\n"
+	.string "needs to write that down.$"
+JT05_Text_Jessie::
+	.string "JESSIE: James! Not in front of\n"
+	.string "the kid!$"
+JT05_Text_MeowthComing::
+	.string "MEOWTH: Shh! Somebody's coming!$"
