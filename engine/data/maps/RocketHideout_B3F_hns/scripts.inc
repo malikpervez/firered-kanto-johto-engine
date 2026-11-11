@@ -598,12 +598,10 @@ RocketHideout_B3F_Text_PetrelBeaten:
 	.string "GIOVANNI, please forgive me…$"
 
 RocketHideout_B3F_Text_PetrelAfterBattle:
-	.string "PETREL: Since disbanding Team\n"
-	.string "Rocket three years ago, our\l"
-	.string "GIOVANNI has been missing.\p"
-	.string "But we're certain he's been\n"
-	.string "waiting for the right time for\l"
-	.string "our revival... Wahahaha!\p"
+	.string "PETREL: GIOVANNI walked away from\n"
+	.string "us. But he'll come back. I know it.\p"
+	.string "Until then, someone has to sound\n"
+	.string "like him. Wahahaha!\p"
 	.string "Losing to you won't change the\n"
 	.string "fact that you are unable to get\l"
 	.string "in the radio-transmitter room!\p"

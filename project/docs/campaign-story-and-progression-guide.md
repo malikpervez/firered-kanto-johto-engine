@@ -322,6 +322,8 @@ FG-D’s new Cianwood beach scene is not implemented. The guide does not turn th
 
 The original red Gyarados, Mahogany hideout and Radio Tower battles retain their role. Nao’s copied recording is switched off through a later conversation. Silver waits at a Center, while the friends help frightened Pokémon after the takeover.
 
+**Rocket’s power struggle (KR-110).** Giovanni quit at Viridian weeks ago, beaten by the player; in Johto his branch split instead of stopping. Archer wants him back and takes the Radio Tower to call him home on every radio; Ariana, the “interim boss” of Mahogany, wants Rocket strong without him; Proton runs the money; Petrel copies Giovanni’s voice to keep the grunts in line; the scientists, several from Silph, follow whoever funds the work. Kurt, Proton, the Violet gentleman, Silver in Azalea (a battle that carries on if the player loses: his “Some CHAMPION.” plays, the party is healed and the story goes on), the hideout and Radio Tower lines and the Pokégear broadcast each show a piece of it. Beaten, Archer disbands Rocket “like GIOVANNI did before me” and no longer answers for anyone who keeps the name; Ariana keeps it, and Black Tide is hers (LG01, LG02, LG06). The Five Island warehouse admin, met after the Radio Tower, has heard Archer quit too and calls it lies. In the Celebi scenes Giovanni recognises the child who beat him weeks ago, and Silver on Route 22 knows the kid who beat his father.
+
 **Progression:**
 
 1. Resolve native Lake of Rage/Mahogany progression, Pryce and the Radio Tower takeover.
@@ -397,9 +399,11 @@ The three attackers are Rocket-made replicas. Defeating OR catching each, in any
 
 ## 17. A second championship, the same trainer
 
-**Where:** Native Johto League approach → Hall of Fame.
+**Where:** Route 26 → Reception Gate → Johto’s Victory Road → LAUREL PLATEAU → Hall of Fame.
 
 The original late Johto rival, League approach, Elite Four and Champion progression remains independent of Kanto’s championship. Optional friends or legendary captures do not substitute for clearing Johto’s own Hall of Fame.
+
+Johto’s plateau is LAUREL PLATEAU, Johto’s own League (KR-111): its sign, its map name and town-map place (a map section of its own, apart from Kanto’s INDIGO PLATEAU, which keeps its name), Elm’s directions after the eighth badge and the Blackthorn Center’s gentleman. The new hall borrowed Kanto’s strongest, and the people say so once each: the Center’s trainer tells the history (Johto’s trainers used to cross the mountains to Indigo; now Johto has a League of its own and Lance came home to be its Champion); Lance at the Lake of Rage remembers the player from Indigo Plateau and his Dragonite; Koga keeps Fuchsia’s Gym and a seat here; Bruno sits in both halls; Lance in the Champion’s room is Johto’s Champion with the team he keeps for it, and in the Hall of Fame two halls keep the player’s name. Oak at Olivine’s port greets a Champion of two Leagues.
 
 **Progression:**
 
@@ -614,7 +618,7 @@ Optional Oak letter, then optional Pidgey epilogue on Route1.
 
 **37C source:** [`MW01_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:390). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Questions the rescue or uses a generic honest alternative, followed by a sparse Mew glimpse.
+Questions the rescue or uses a generic honest alternative, followed by a sparse Mew glimpse. Since 2026-10-31 (story audit E1), as he reaches the player the companion Pikachu reacts first: “PIKACHU’s fur stands on end. It doesn’t take its eyes off him.” (shown whenever the companion walks with the player, `FLAG_SYS_POKEMON_GET`; nothing is written). Replay test `route 1 pikachu bristles at the stranger`; the existing `route 1 the stranger after ho-oh` still passes.
 
 ### MW02 — Route4 stone
 
@@ -644,7 +648,7 @@ Separate Lavender stranger/Fuji exchange with optional Mew glimpse.
 
 **37C source:** [`MW04_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:469). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Questions Poké Balls after opposing Rocket.
+Questions Poké Balls after opposing Rocket. Since 2026-10-31 (story audit T2), if the player saw the Friends land in Viridian (`FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN`) he first says: “Seven people fell out of the sky over VIRIDIAN. They ask their POKéMON before they reach for a BALL. I have watched.” A callback; nothing is written. His question names Rocket since 2026-11-09 (story copy F1), so “They called POKéMON property” no longer reads as the seven: “ROCKET called POKéMON property. You opposed them. Yet you carry POKé BALLS. Do you try to earn their trust?” Replay tests `celadon the stranger remembers the seven`, `celadon the stranger asks about rocket`, `celadon the stranger after the hideout and the seven`.
 
 ### MW05 — Silph disguise slip
 
@@ -654,7 +658,7 @@ Questions Poké Balls after opposing Rocket.
 
 **37C source:** [`MW05_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:492). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-A temporary Mewtwo reveal, returned disguise, then possible Mew glimpse.
+A temporary Mewtwo reveal, returned disguise, then possible Mew glimpse. Since 2026-11-09 (story copy F1, the middle of the Pikachu thread between Route 1 and Cinnabar), after “The traveler’s outline wavers: a long tail, an unfamiliar head.” and before the stranger speaks, the companion Pikachu (`FLAG_SYS_POKEMON_GET`): “PIKACHU’s ears flatten. It stares at the traveler’s shadow.” (`RB_PikachuStares`; `MW05_Text` is split in two round it). Nothing is written. Replay test `silph pikachu stares at the travelers shadow`.
 
 ### MW06 — Cinnabar reveal
 
@@ -664,7 +668,7 @@ A temporary Mewtwo reveal, returned disguise, then possible Mew glimpse.
 
 **37C source:** [`MW06_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:518). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Journals context, unique Mewtwo reveal, invitation/choice responses and Mew observer.
+Journals context, unique Mewtwo reveal, invitation/choice responses and Mew observer. Since 2026-10-31 (story audit E1), the companion Pikachu closes the thread it opened on Route 1: as the veil falls, “PIKACHU bristles, just as it did on ROUTE 1.” (since 2026-11-09, story copy F1: “It knew all along.” winked at the player and is gone) (“PIKACHU bristles and steps between you and MEWTWO.” if the Route 1 meeting never happened, `FLAG_MW01_SEEN` unset), and after Mewtwo’s answer, “PIKACHU watches it go. Its fur slowly settles.” Nothing is written. Replay tests `cinnabar pikachu bristles at mewtwo`, `cinnabar pikachu settles as mewtwo leaves`, `cinnabar pikachu bristles without the route 1 meeting`.
 
 ### MW07 — Route22 question
 
@@ -684,7 +688,7 @@ Different Champion question before/after Kanto League.
 
 **37C source:** [`MW08_Intro`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:617). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Optional familiar/unfamiliar introduction and Face/Leave before original level70 Mewtwo.
+Optional familiar/unfamiliar introduction and Face/Leave before original level70 Mewtwo. Since 2026-10-31 (story audit T2), with the familiar greeting and Black Tide resolved in Johto (`FLAG_LG_FINAL_RESOLVED`), Mewtwo adds: “Far to the west, ROCKET made birds the way I was made. You broke their chains. I heard.” A callback across the regions: it reads Johto’s receipt for dialogue only and writes nothing. Since 2026-11-09 (story copy F1, the order of its C5) the familiar greeting is split so this line comes before the battle offer: “MEWTWO: You found the quiet place I chose.”, the replica line, “MEWTWO: If we battle, let it be a choice we both make.”, then “Face MEWTWO now?”. Replay tests `cerulean cave mewtwo heard of the replicas`, `cerulean cave mewtwo offers a battle after the replicas`, `cerulean cave mewtwo offers a battle`, `cerulean cave mewtwo can be left after the replicas`.
 
 ### MW09 — Cave-mouth reflection
 
@@ -704,7 +708,7 @@ Neutral post-resolution reflection and optional Mew glimpse.
 
 **37C source:** [`BlackTide_CoastalWarning`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1009). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warning after the native Radio Tower state reaches10. The warning itself grants no travel/item/branch progress.
+Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warning after the native Radio Tower state reaches10: three huge birds striking in turns, and Rocket boats near the islands although Rocket quit (KR-110). The warning itself grants no travel/item/branch progress.
 
 ### LG02 — The manufactured birds attack Lugia
 
@@ -714,7 +718,7 @@ Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warni
 
 **37C source:** [`WhirlIslands_LugiaChamber_hns_MapScripts`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-A once-only chamber scene stages three separately manufactured replicas striking Lugia. Rocket leaves, Lugia darkens, and the three independent encounters remain.
+A once-only chamber scene stages three separately manufactured replicas striking Lugia. The Rocket technician says Archer quit, Ariana didn’t, and the project answers to her now (KR-110). Rocket leaves, Lugia darkens, and the three independent encounters remain.
 
 ### LG03 — Articuno replica: independent battle
 
@@ -754,7 +758,7 @@ Resolve this Rocket replica by defeating OR catching it. Its original Kanto/Sevi
 
 **37C source:** [`BlackTide_LinksIfReady`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:884). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-The third independent success breaks Rocket control. Lugia remains in the Shadow state, becomes approachable, and the Keeper allows unlimited preparation.
+The third independent success breaks Rocket control. Lugia remains in the Shadow state, becomes approachable, and the Keeper allows unlimited preparation. From then on a Rocket log can be read where each replica stood: the calls copied (Seafoam Islands, Power Plant, Mt. Ember), Silph’s recording devices, three specimens, no retreat (GAP-30, KR-110).
 
 ### LG07 — Approach and face Shadow Lugia
 
@@ -874,7 +878,7 @@ Blue enthusiastically starts field science under Oak.
 
 **37C source:** [`CG_BlueRoute1`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:76). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md).
 
-Optional Route1 observation and expressive answer.
+Optional Route1 observation and expressive answer. Since 2026-11-02 (story audit T3), with the opening seen (`FLAG_RB_OPENING_SEEN`) Blue has read Oak’s notes on it: “Grandpa’s notes say you sheltered one here, in a storm. Maybe it’s one of these. I’m writing that down as a maybe!” A callback; nothing is written. Replay tests `route 1 blue remembers the storm pidgey`, `route 1 blue watches the pidgey after the storm`.
 
 ### GD01 — Gold outside Violet’s Gym
 
@@ -924,7 +928,7 @@ Silver waits for his partner at Goldenrod Center.
 
 **37C source:** [`CG_SilverDenVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:170). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md).
 
-Willing partner responds to Silver in Dragon’s Den.
+Willing partner responds to Silver in Dragon’s Den. Since 2026-11-02 (story audit T5), if the player saw him waiting at Goldenrod’s Center (`FLAG_SV02_SEEN`, either answer), he adds before his last line: “That time at the CENTER in GOLDENROD... You didn’t have to stop by.” A callback; nothing is written. Replay tests `dragons den silver remembers the center`, `dragons den silver another round after the center`.
 
 ### FG01 — Seven people and one HDMI cable
 

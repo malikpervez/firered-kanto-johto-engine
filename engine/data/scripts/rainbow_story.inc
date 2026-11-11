@@ -28,6 +28,39 @@ RB_Flyby::
 	special Special_RainbowHoOhFlyby
 	call_if_eq VAR_RESULT, 1, RB_AsyncWait
 	return
+@ The companion PIKACHU (it walks with every trainer once they have a POKéMON) sees through the stranger first:
+@ wary on Route 1 (MW01), ears flat at Silph's wavering veil (MW05), bristling again at Cinnabar's reveal (MW06),
+@ settling as MEWTWO leaves. No state.
+RB_PikachuWary::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuWary
+	return
+RB_PikachuBristles::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	goto_if_set FLAG_MW01_SEEN, RB_PikachuBristlesAgain
+	msgbox RB_Text_PikachuBristles
+	return
+RB_PikachuBristlesAgain::
+	msgbox RB_Text_PikachuBristlesAgain
+	return
+RB_PikachuStares::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuStares
+	return
+RB_PikachuSettles::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuSettles
+	return
+RB_Text_PikachuWary::
+	.string "PIKACHU's fur stands on end.\nIt doesn't take its eyes off him.$"
+RB_Text_PikachuBristles::
+	.string "PIKACHU bristles and steps between\nyou and MEWTWO.$"
+RB_Text_PikachuBristlesAgain::
+	.string "PIKACHU bristles, just as it did\non ROUTE 1.$"
+RB_Text_PikachuStares::
+	.string "PIKACHU's ears flatten. It stares\nat the traveler's shadow.$"
+RB_Text_PikachuSettles::
+	.string "PIKACHU watches it go.\nIts fur slowly settles.$"
 RB_Route1Transition::
 	setvar VAR_TEMP_E, 0
 	setflag FLAG_TEMP_1E
@@ -441,6 +474,7 @@ MW01_Route1Scene::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement LOCALID_ROUTE1_STRANGER, MW01_Movement_Approach
 	waitmovement LOCALID_ROUTE1_STRANGER
+	call RB_PikachuWary
 	msgbox MW01_Text_SawIt
 	msgbox MW01_Text_LookItUp
 	playse SE_SELECT
@@ -543,6 +577,8 @@ MW04_Talk::
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Release
 goto_if_set FLAG_MW04_SEEN, RB_Repeat
+	@ He saw the seven fall over Viridian the day he met the player (FG01): a callback, nothing written.
+	call_if_set FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN, MW04_Seven
 msgbox MW04_Text_Question, MSGBOX_YESNO
 	msgbox MW04_Text_Answer
 	setflag FLAG_TEMP_1D
@@ -570,6 +606,8 @@ goto_if_set FLAG_MW05_SEEN, RB_Repeat
 call RB_MewtwoReveal
 	showobjectat 2, MAP_SILPH_CO_1F
 	msgbox MW05_Text
+	call RB_PikachuStares
+	msgbox MW05_Text_Stranger
 	call RB_MewGlimpse
 	setflag FLAG_TEMP_1E
 	removeobject 2
@@ -595,10 +633,12 @@ msgbox MW06_Text_Journals
 	setflag FLAG_TEMP_1E
 	removeobject 15
 	call RB_MewtwoReveal
+	call RB_PikachuBristles
 	msgbox MW06_Text_Question, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, MW06_Invitation
 	call_if_eq VAR_RESULT, NO, MW06_Choice
 	msgbox MW06_Text_Answer
+	call RB_PikachuSettles
 	call RB_MewGlimpse
 setflag FLAG_MW06_SEEN
 release
@@ -658,11 +698,18 @@ MW02_Text_Answer::
 MW03_Text::
 	.string "STRANGER: Nothing keeps them here.\pFUJI: Some leave when ready.\pSTRANGER: And you allow that?\pFUJI: It is a home, not a cage.\pThe traveler has no reply.$"
 MW04_Text_Question::
-	.string "STRANGER: They called POKéMON\nproperty. You opposed them.\pYet you carry POKé BALLS.\nDo you try to earn their trust?$"
+	.string "STRANGER: ROCKET called POKéMON\nproperty. You opposed them.\pYet you carry POKé BALLS.\nDo you try to earn their trust?$"
 MW04_Text_Answer::
 	.string "STRANGER: Then I will judge\nhow you use them.$"
+MW04_Seven::
+	msgbox MW04_Text_Seven
+	return
+MW04_Text_Seven::
+	.string "STRANGER: Seven people fell out of\nthe sky over VIRIDIAN.\pThey ask their POKéMON before they\nreach for a BALL. I have watched.$"
 MW05_Text::
-	.string "The traveler's outline wavers:\na long tail, an unfamiliar head.\pSTRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
+	.string "The traveler's outline wavers:\na long tail, an unfamiliar head.$"
+MW05_Text_Stranger::
+	.string "STRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
 MW06_Text_Journals::
 	.string "STRANGER: Those pages tell you\nwhat they hoped to create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
 MW06_Text_Question::
@@ -686,6 +733,10 @@ MW07_Text_After::
 MW08_Intro::
 	goto_if_unset FLAG_MW06_SEEN, MW08_Unfamiliar
 	msgbox MW08_Text_Familiar
+	@ After Black Tide, Mewtwo knows what Rocket made in Johto: a callback across the regions, nothing written.
+	@ It comes before his battle offer.
+	call_if_set FLAG_LG_FINAL_RESOLVED, MW08_Replicas
+	msgbox MW08_Text_Battle
 	goto MW08_Ask
 MW08_Unfamiliar::
 	msgbox MW08_Text_Unfamiliar
@@ -693,11 +744,18 @@ MW08_Ask::
 	msgbox MW08_Text_Ask, MSGBOX_YESNO
 	return
 MW08_Text_Familiar::
-	.string "MEWTWO: You found the quiet\nplace I chose.\pIf we battle, let it be\na choice we both make.$"
+	.string "MEWTWO: You found the quiet\nplace I chose.$"
+MW08_Text_Battle::
+	.string "MEWTWO: If we battle, let it be\na choice we both make.$"
 MW08_Text_Unfamiliar::
 	.string "A powerful presence watches you.\nIt waits rather than attacks.$"
 MW08_Text_Ask::
 	.string "Face MEWTWO now?\nYou may leave and return.$"
+MW08_Replicas::
+	msgbox MW08_Text_Replicas
+	return
+MW08_Text_Replicas::
+	.string "MEWTWO: Far to the west, ROCKET\nmade birds the way I was made.\pYou broke their chains. I heard.$"
 MW08_Text_Caught::
 	.string "The silence feels different.\nAn invitation was answered.$"
 MW08_Text_Defeated::

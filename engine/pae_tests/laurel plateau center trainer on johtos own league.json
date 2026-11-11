@@ -1,0 +1,67 @@
+{
+ "note": "Johto's League (KR-111, G4): the trainer in the League's Center tells the history: Johto's trainers used to cross to INDIGO PLATEAU; now Johto has a League of its own, and Lance came home to be Champion.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "IndigoPlateau_PokemonCenter_hns",
+  "x": 29,
+  "y": 11,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "IndigoPlateau_PokemonCenter_hns",
+  "x": 29,
+  "y": 11,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:27"
+}

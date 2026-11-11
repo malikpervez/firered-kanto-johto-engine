@@ -1,0 +1,85 @@
+{
+ "note": "After the last relay goes dark (GAP-30, B11): a Rocket log on the relay says which calls were copied (the three Kanto birds) and with Silph's devices.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "WhirlIslands_LugiaChamber_hns",
+  "x": 29,
+  "y": 28,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "JOHTO_VAR_COMPLETED_LUGIA=2",
+   "FLAG_LG_ATTACK_SEEN",
+   "FLAG_LG_ARTICUNO_DEFEATED",
+   "FLAG_LG_ZAPDOS_DEFEATED",
+   "FLAG_LG_MOLTRES_CAUGHT",
+   "FLAG_LG_LINKS_OFF_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "WhirlIslands_LugiaChamber_hns",
+  "x": 29,
+  "y": 28,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:30"
+}

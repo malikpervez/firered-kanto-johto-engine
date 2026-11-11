@@ -992,6 +992,12 @@ BlackTide_CoastRestored:
 	msgbox BlackTide_Text_CoastRestored, MSGBOX_NPC
 	end
 
+@ GAP-30: the relays stand where the replicas guarded them. Once the last one goes dark, Rocket's log can be read on it.
+BlackTide_RelayLog::
+	goto_if_unset FLAG_LG_LINKS_OFF_SEEN, BlackTide_End
+	msgbox BlackTide_Text_RelayLog, MSGBOX_SIGN
+	end
+
 BlackTide_Release:
 	closemessage
 	releaseall
@@ -1027,7 +1033,7 @@ BlackTide_Text_Attack:
 	.string "Three cries cut through the cave.\pThe birds strike in a cruel\npattern. LUGIA turns away from\lthe inhabited coast.\pIt shields the frightened POKéMON\nfrom falling stone.$"
 
 BlackTide_Text_Technician:
-	.string "ROCKET TECHNICIAN: First, make\nit angry. Then keep it that way.\pThree manufactured specimens.\nThree links. No order to retreat!$"
+	.string "ROCKET TECHNICIAN: First, make\nit angry. Then keep it that way.\pARCHER quit. ARIANA didn't. This\nproject answers to her now.\pThree manufactured specimens.\nThree links. No order to retreat!$"
 
 BlackTide_Text_Transformation:
 	.string "The attacks follow one last pulse.\nLUGIA's color darkens!\pIts cry shakes the water.\nThe technician slips away.$"
@@ -1052,6 +1058,14 @@ BlackTide_Text_ReplicaCaught:
 
 BlackTide_Text_LinksBroken:
 	.string "The last relay goes dark.\nFor a moment, the water is still.\pA deep cry shakes the cavern.\nLUGIA remains in the SHADOW state.\pThe links are gone. Now a rescue\nis possible. You can prepare first.$"
+
+BlackTide_Text_RelayLog:
+	.string "A ROCKET log is taped to the dark\n"
+	.string "relay.\p"
+	.string "CALLS COPIED: SEAFOAM ISLANDS,\n"
+	.string "POWER PLANT, MT. EMBER.\p"
+	.string "RECORDING DEVICES: SILPH CO.\n"
+	.string "SPECIMENS: 3. RETREAT: NONE.$"
 
 BlackTide_Text_KimonoWait:
 	.string "Three replicas keep ROCKET's\ncontrol links alive.\pStop each one, in any order.\nThen we can approach LUGIA.$"
@@ -1090,7 +1104,7 @@ BlackTide_WarningRestored:
 	return
 
 BlackTide_Text_CoastalWarning:
-	.string "Sailors saw three huge birds\ncircling the WHIRL ISLANDS.\pThey took turns striking, as if\nsomeone told them when to attack.\pFollow your earned legendary\njourney. We cannot rush the sea.$"
+	.string "Sailors saw three huge birds\ncircling the WHIRL ISLANDS.\pThey took turns striking, as if\nsomeone told them when to attack.\pAnd there were ROCKET boats out\nthere. I thought ROCKET quit!$"
 
 BlackTide_Keeper::
 	lockall

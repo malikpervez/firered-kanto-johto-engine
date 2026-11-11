@@ -1,0 +1,62 @@
+{
+ "note": "The Radio Tower 2F grunt during the takeover (B7): Giovanni said Rocket was finished; Archer says it is not.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "GoldenrodCity_RadioTower_2F_hns",
+  "x": 19,
+  "y": 10,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_BADGE08_GET",
+   "JOHTO_VAR_GOLDENROD_CITY_STATE=9",
+   "!JOHTO_FLAG_HIDE_GOLDENROD_ROCKETS",
+   "CLEAR_TEAM",
+   "SPECIES_MEWTWO lv100 MOVE_DRAGON_PULSE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "GoldenrodCity_RadioTower_2F_hns",
+  "x": 19,
+  "y": 10,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:30"
+}
