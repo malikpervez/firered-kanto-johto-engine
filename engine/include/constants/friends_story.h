@@ -27,6 +27,14 @@
 #define FLAG_FRIENDS_DEPARTED               (FRIENDS_STORY_SEEN_FIRST + 20)
 #define FLAG_FRIENDS_FG_B_SEEN              0x957 // scene 24, FG-B The road nobody paved
 #define FLAG_FRIENDS_REUNION_SEEN           (FRIENDS_STORY_SEEN_FIRST + 21)
+#define FLAG_FRIENDS_FG_C_SEEN              0x958 // scene 25, FG-C The tower that sways
+
+// The stage's five bits by name, so a replay test can start the Friends at a placement (stage 11: 1, 2 and 8).
+#define FLAG_FRIENDS_STAGE_1                (FRIENDS_STORY_STAGE_FIRST + 0)
+#define FLAG_FRIENDS_STAGE_2                (FRIENDS_STORY_STAGE_FIRST + 1)
+#define FLAG_FRIENDS_STAGE_4                (FRIENDS_STORY_STAGE_FIRST + 2)
+#define FLAG_FRIENDS_STAGE_8                (FRIENDS_STORY_STAGE_FIRST + 3)
+#define FLAG_FRIENDS_STAGE_16               (FRIENDS_STORY_STAGE_FIRST + 4)
 
 // The stage's five bits by name, so a replay test can start the Friends at a placement (stage 11: 1, 2 and 8).
 #define FLAG_FRIENDS_STAGE_1                (FRIENDS_STORY_STAGE_FIRST + 0)

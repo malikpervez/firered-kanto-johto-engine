@@ -268,7 +268,7 @@ Elm welcomes Oak’s visiting trainer and gives the adapted research errand. Bef
 | BL03 | Notes from two regions — [`CG_BlueLabAfterIntro`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:58) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
 | GD01 | Gold outside Violet’s Gym — [`CG_GoldViolet`](../../engine/data/scripts/character_growth.inc) | Replay tests `violet gold …` (eight) |
 
-Kanto and Johto rival names, badges and story state are independent. Blue’s Eevee→Umbreon selection belongs only to the new Pikachu cohort after BL03; the later actual enemy Umbreon battle remains NOT RUN. FG-C outside Sprout Tower is proposed only.
+Kanto and Johto rival names, badges and story state are independent. Blue’s Eevee→Umbreon selection belongs only to the new Pikachu cohort after BL03; the later actual enemy Umbreon battle remains NOT RUN. **FG-C The tower that sways** (KR-126): once the Zephyr Badge is won, while the Friends are at FG13 (New Bark) or FG14 (the Ruins, which are open before the badge), X, Ham and LB sit in front of Sprout Tower, north of the pond (Gold waits by the Gym, south of it), with Sentret, Oddish and a Sage sweeping the step (`FGC_Interact`). X has budgeted three hours to understand the swaying pillar, Ham has sat still the whole time, and the Sage tells X a plan may sway without falling; a choice ("Sit with Ham" / "Leave them to it"), and the three stay seated until the player leaves Violet. Optional, no battle, nothing given; receipt 0x958.
 
 ## 12. Finding their footing
 
@@ -1333,7 +1333,7 @@ The October 19 Friends handoff is design input: FG-A–FG-G, dialogue/voice rewo
 | --- | --- | --- | --- |
 | FG-A | Tim finds the resort | Kindle Road below Ember Spa; Bill's first Sevii trip over, Friends at FG11 or FG12 | BUILT (KR-124), replay-tested |
 | FG-B | The road nobody paved | League West Pass; Champion, Oak's Johto directions given, Friends at FG12 | BUILT (KR-125), replay-tested |
-| FG-C | The tower that sways | Violet / Sprout Tower exterior; Proposed Zephyr Badge | NOT IMPLEMENTED / gameplay NOT RUN |
+| FG-C | The tower that sways | In front of Sprout Tower; Zephyr Badge, Friends at FG13 or FG14 | BUILT (KR-126), replay-tested |
 | FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-E | The lake that was told to be angry | Lake of Rage shore; Proposed Mahogany hideout clearance | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-F | Ham goes first | Ice Path safe entrance floor; Proposed post-Radio / pre-Clair window | NOT IMPLEMENTED / gameplay NOT RUN |

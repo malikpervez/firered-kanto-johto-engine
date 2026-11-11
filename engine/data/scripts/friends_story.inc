@@ -2217,6 +2217,96 @@ FG13_WalkedWest::
 	fg_focus 1
 	msgbox FG13_Text_WalkedWest
 	return
+@ FG-C The tower that sways (the October 19 handoff's scene; story copy F3). Violet City, in front of Sprout Tower,
+@ north of the pond (Gold waits by the Gym, south of it), once the Zephyr Badge is won, while the Friends are at FG13
+@ (New Bark) or FG14 (the Ruins, open before the badge). X, Ham and LB with Sentret and Oddish, and a Sage. No battle
+@ and nothing given; the three stay seated until the player leaves Violet.
+FGC_Interact::
+	lockall
+	faceplayer
+	setvar VAR_0x8004, 25
+	callnative Special_FriendsStoryBegin, requests_effects=1
+	goto_if_eq VAR_RESULT, 0, FG_Release
+	copyvar VAR_0x8008, VAR_RESULT
+	call FG_FrameCamera
+	goto_if_eq VAR_0x8008, 2, FGC_Menu
+	setvar VAR_0x8004, 25
+	setvar VAR_0x8005, 0
+	closemessage
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_focus 4
+	msgbox FGC_Text_Main01
+	fg_focus 5
+	msgbox FGC_Text_Main02
+	fg_focus 4
+	msgbox FGC_Text_Main03
+	fg_focus 4
+	msgbox FGC_Text_Main04
+	fg_focus 4
+	msgbox FGC_Text_Main05
+	fg_react 7, FG_Move_QuietPause
+	fg_focus 7
+	msgbox FGC_Text_Main06
+	fg_focus 4
+	msgbox FGC_Text_Main07
+	fg_focus 7
+	msgbox FGC_Text_Main08
+	fg_focus 4
+	msgbox FGC_Text_Main09
+	fg_focus 7
+	msgbox FGC_Text_Main10
+	fg_react 1, FG_Move_QuietPause
+	fg_focus 5
+	msgbox FGC_Text_Main11
+	fg_focus 5
+	msgbox FGC_Text_Main12
+	fg_focus 7
+	msgbox FGC_Text_Main13
+	fg_focus 1
+	msgbox FGC_Text_Main14
+	fg_focus 7
+	msgbox FGC_Text_Main15
+	fg_focus 4
+	msgbox FGC_Text_Main16
+	fg_focus 4
+	msgbox FGC_Text_Main17
+	fg_focus 7
+	msgbox FGC_Text_Main18
+	fg_focus 7
+	msgbox FGC_Text_Main19
+	fg_focus 5
+	msgbox FGC_Text_Main20
+	fg_focus 4
+	msgbox FGC_Text_Main21
+	fg_focus 5
+	msgbox FGC_Text_Main22
+	setvar VAR_0x8004, 25
+	callnative Special_FriendsStoryMarkSeen, requests_effects=1
+FGC_Menu::
+	call FG_WaitSceneMovement
+	closemessage
+	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
+	dynmultichoice 0, 0, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, FGC_Text_Option0, FGC_Text_Option1
+	goto_if_eq VAR_RESULT, 0, FGC_Choice0
+	goto_if_eq VAR_RESULT, 1, FGC_Choice1
+	goto FG_Release
+FGC_Choice0::
+	call FG_FrameCamera
+	delay 60
+	fg_focus 1
+	msgbox FGC_Text_Choice0_01
+	fg_focus 4
+	msgbox FGC_Text_Choice0_02
+	goto FG_Release
+FGC_Choice1::
+	call FG_FrameCamera
+	fg_focus 4
+	msgbox FGC_Text_Choice1_01
+	fg_focus 1
+	msgbox FGC_Text_Choice1_02
+	goto FG_Release
 FG14_Interact::
 	lockall
 	faceplayer
@@ -4995,6 +5085,62 @@ FG13_Text_Main24::
 	.string "NICK: Come on. Ham can use both arms\nagain. That's practically extra\pluggage capacity.$"
 FG13_Text_Repeat::
 	.string "NICK: Same team, same journey. Ham can\nuse both arms again.$"
+FGC_Text_Main01::
+	.string "XAVIER: This is the place. A whole\ntower built on grounding.$"
+FGC_Text_Main02::
+	.string "LB: It's a wooden building, X.$"
+FGC_Text_Main03::
+	.string "XAVIER: The middle pillar moves.$"
+FGC_Text_Main04::
+	.string "XAVIER: Everything else stands\nbecause it moves.$"
+FGC_Text_Main05::
+	.string "XAVIER: That's the most practical\nspiritual thing I've ever heard.$"
+FGC_Text_Main06::
+	.string "SAGE: You have read about the pillar.$"
+FGC_Text_Main07::
+	.string "XAVIER: Read about it, drew it and\nbudgeted three hours\pto understand it.$"
+FGC_Text_Main08::
+	.string "SAGE: How long have you sat here?$"
+FGC_Text_Main09::
+	.string "XAVIER: Twenty minutes. I've written\nfour pages.$"
+FGC_Text_Main10::
+	.string "SAGE: And your friend?$"
+FGC_Text_Main11::
+	.string "LB: Ham's been sitting there since we\ngot here.$"
+FGC_Text_Main12::
+	.string "LB: He hasn't moved once. That's a\nrecord.$"
+FGC_Text_Main13::
+	.string "SAGE: He is doing what the pillar does.$"
+FGC_Text_Main14::
+	.string "HAM: …I'm just sitting.$"
+FGC_Text_Main15::
+	.string "SAGE: Yes.$"
+FGC_Text_Main16::
+	.string "XAVIER: I plan everything because I\ndon't know what happens here.$"
+FGC_Text_Main17::
+	.string "XAVIER: Half my plans have been wrong\nsince we landed.$"
+FGC_Text_Main18::
+	.string "SAGE: And yet your friends are fed.\nYour Pokémon are rested.$"
+FGC_Text_Main19::
+	.string "SAGE: A plan may sway. It does not\nhave to fall.$"
+FGC_Text_Main20::
+	.string "LB: X, he just told you you're the\npillar.$"
+FGC_Text_Main21::
+	.string "XAVIER: He told me I can be wrong and\nstill hold things up.$"
+FGC_Text_Main22::
+	.string "LB: That's what I said. Shorter.$"
+FGC_Text_Choice0_01::
+	.string "HAM: Good, right?$"
+FGC_Text_Choice0_02::
+	.string "XAVIER: Yeah, Ham. Good.$"
+FGC_Text_Choice1_01::
+	.string "XAVIER: We'll catch up. Ham's teaching\na class.$"
+FGC_Text_Choice1_02::
+	.string "HAM: I'm not teaching. I'm sitting.$"
+FGC_Text_Option0::
+	.string "Sit with Ham$"
+FGC_Text_Option1::
+	.string "Leave them to it$"
 FG14_Text_Main01::
 	.string "XAVIER: We saw a room where the water\nshould have been. Seven energies,\preflected through the cosmic…$"
 FG14_Text_Main02::

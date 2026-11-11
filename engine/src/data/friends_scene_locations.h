@@ -17,6 +17,8 @@
     // FG-B on League West Pass, south of the road: X, Jon, Nick and Brian in front; Mankey; they head west.
     {MAP_LEAGUE_WEST_PASS, 30, 13, 3, 0x1D, 1, TRUE},
     {MAP_NEW_BARK_TOWN_HNS, 21, 14, 11},
+    // FG-C in Violet, in front of Sprout Tower: LB, Ham and X in front; a Sage, Sentret, Oddish; they stay.
+    {MAP_VIOLET_CITY_HNS, 32, 16, 58, 0x32, 7, FALSE},
     {MAP_RUINS_OF_ALPH_OUTSIDE_HNS, 29, 29, 31},
     {MAP_AZALEA_TOWN_HNS, 55, 24, 24},
     {MAP_GOLDENROD_CITY_HNS, 24, 14, 44},
