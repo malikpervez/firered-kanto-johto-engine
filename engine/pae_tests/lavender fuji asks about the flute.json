@@ -1,0 +1,69 @@
+{
+ "note": "Before the welcome in Ecruteak, Mr. Fuji still asks his own question after giving the Poke Flute ('Has my POKe FLUTE helped you?'): Nao's letter waits for the welcome.",
+ "created": "2026-10-31 23:19",
+ "start": {
+  "map": "LavenderTown_VolunteerPokemonHouse_Frlg",
+  "x": 3,
+  "y": 4,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_RESCUED_MR_FUJI",
+   "FLAG_GOT_POKE_FLUTE",
+   "!FLAG_HIDE_POKEHOUSE_FUJI",
+   "FLAG_RB_FUJI_SCENE_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_RB_WELCOME_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LavenderTown_VolunteerPokemonHouse_Frlg",
+  "x": 3,
+  "y": 4,
+  "in_battle": false,
+  "flags": {
+   "FLAG_RB_WELCOME_SEEN": false
+  }
+ }
+}
