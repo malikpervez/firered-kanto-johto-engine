@@ -1,0 +1,90 @@
+{
+ "note": "Goldenrod before the takeover, a player who met the trio on Route 4 (FLAG_JT01_SEEN): talk to the disguised Jessie; Meowth: 'And the same kid! With the same smug PIKACHU!'",
+ "created": "2026-11-09 15:48",
+ "start": {
+  "map": "GoldenrodCity_hns",
+  "x": 21,
+  "y": 33,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_POKEMON_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "JOHTO_VAR_GOLDENROD_CITY_STATE=1",
+   "FLAG_JT01_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     12
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_JT03_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "GoldenrodCity_hns",
+  "x": 21,
+  "y": 32,
+  "in_battle": false,
+  "flags": {
+   "FLAG_JT03_SEEN": false
+  }
+ },
+ "accepted": "2026-11-09 15:48"
+}

@@ -1,0 +1,59 @@
+{
+ "note": "Without the opening (RB01), there is no traveller on One Island: facing the spot and pressing A does nothing.",
+ "created": "2026-11-09 16:24",
+ "start": {
+  "map": "OneIsland_Frlg",
+  "x": 11,
+  "y": 14,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF",
+   "!FLAG_RB_OPENING_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "OneIsland_Frlg",
+  "x": 11,
+  "y": 14,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 16:26"
+}

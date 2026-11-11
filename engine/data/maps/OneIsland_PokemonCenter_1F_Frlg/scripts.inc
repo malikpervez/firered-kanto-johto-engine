@@ -268,10 +268,10 @@ OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire::
 	playse SE_PC_ON
 	call OneIsland_PokemonCenter_1F_EventScript_SetNetworkMachineOn
 	special DrawWholeMapView
-	msgbox OneIsland_PokemonCenter_1F_Text_LinkedUpWithLanette
+	msgbox OneIsland_PokemonCenter_1F_Text_LinkedUpWithGoldenrod
 	applymovement LOCALID_CELIO, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou
+	msgbox OneIsland_PokemonCenter_1F_Text_ReachesJohtoThankYou
 	special SetPostgameFlags
 	setflag FLAG_IS_CHAMPION
 	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
@@ -382,19 +382,19 @@ OneIsland_PokemonCenter_1F_EventScript_Hiker::
 OneIsland_PokemonCenter_1F_EventScript_BattleGirl::
 	lock
 	faceplayer
-	goto_if_set FLAG_IS_CHAMPION, OneIsland_PokemonCenter_1F_EventScript_BattleGirlHoennLinked
+	goto_if_set FLAG_IS_CHAMPION, OneIsland_PokemonCenter_1F_EventScript_BattleGirlJohtoLinked
 	msgbox OneIsland_PokemonCenter_1F_Text_WishICouldTradeWithBoyfriend
 	release
 	end
 
-OneIsland_PokemonCenter_1F_EventScript_BattleGirlHoennLinked::
+OneIsland_PokemonCenter_1F_EventScript_BattleGirlJohtoLinked::
 	msgbox OneIsland_PokemonCenter_1F_Text_TradedWithFarAwayBoyfriend
 	release
 	end
 
 OneIsland_PokemonCenter_1F_EventScript_NetworkMachine::
 	lockall
-	goto_if_set FLAG_IS_CHAMPION, OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithHoenn
+	goto_if_set FLAG_IS_CHAMPION, OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithJohto
 	goto_if_set FLAG_SEVII_DETOUR_FINISHED, OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithKanto
 	msgbox OneIsland_PokemonCenter_1F_Text_MachineUnderAdjustment
 	releaseall
@@ -405,8 +405,8 @@ OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithKanto::
 	releaseall
 	end
 
-OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithHoenn::
-	msgbox OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn
+OneIsland_PokemonCenter_1F_EventScript_NetworkMachineLinkedWithJohto::
+	msgbox OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndJohto
 	releaseall
 	end
 
@@ -822,15 +822,17 @@ OneIsland_PokemonCenter_1F_Text_ThankYouGiveMeTime::
 OneIsland_PokemonCenter_1F_Text_OkayThisIsGood::
 	.string "Okay, this is good…$"
 
-OneIsland_PokemonCenter_1F_Text_LinkedUpWithLanette::
+OneIsland_PokemonCenter_1F_Text_LinkedUpWithGoldenrod::
 	.string "I did it!\n"
-	.string "I linked up with LANETTE!$"
+	.string "I linked up with GOLDENROD!$"
 
-OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou::
+OneIsland_PokemonCenter_1F_Text_ReachesJohtoThankYou::
 	.string "{PLAYER}…\n"
 	.string "{PLAYER}, I did it!\p"
-	.string "I've managed to link up with\n"
-	.string "TRAINERS in the HOENN region!\p"
+	.string "The Network Machine reaches all\n"
+	.string "the way to JOHTO now!\p"
+	.string "TRAINERS here can trade with\n"
+	.string "TRAINERS in BILL's hometown!\p"
 	.string "Finally, the Network Machine is\n"
 	.string "fully operational!\p"
 	.string "{PLAYER}, I owe it all to you!\p"
@@ -889,11 +891,11 @@ OneIsland_PokemonCenter_1F_Text_EnormousVolcanoOnIsland::
 
 OneIsland_PokemonCenter_1F_Text_WishICouldTradeWithBoyfriend::
 	.string "I wish I could trade POKéMON with\n"
-	.string "my boyfriend who lives far away…$"
+	.string "my boyfriend. He lives in JOHTO…$"
 
 OneIsland_PokemonCenter_1F_Text_TradedWithFarAwayBoyfriend::
 	.string "I traded POKéMON with my boyfriend\n"
-	.string "far away!\p"
+	.string "in JOHTO!\p"
 	.string "Everyone's saying that we can\n"
 	.string "thank you and CELIO.\p"
 	.string "So, thank you!$"
@@ -910,11 +912,11 @@ OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKanto::
 	.string "Link established with the KANTO\n"
 	.string "region.$"
 
-OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn::
+OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndJohto::
 	.string "Network Machine\n"
 	.string "Link Level 2\p"
 	.string "Link established with the KANTO\n"
-	.string "and HOENN regions.$"
+	.string "and JOHTO regions.$"
 
 OneIsland_PokemonCenter_1F_Text_ObtainedTriPass::
 	.string "Obtained the TRI-PASS!$"

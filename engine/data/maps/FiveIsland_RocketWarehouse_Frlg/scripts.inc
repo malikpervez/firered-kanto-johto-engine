@@ -72,14 +72,22 @@ FiveIsland_RocketWarehouse_EventScript_Grunt3::
 	end
 
 FiveIsland_RocketWarehouse_EventScript_Admin2::
+	call FiveIsland_RocketWarehouse_EventScript_CheckJohtoTowerFreed
+	goto_if_eq VAR_RESULT, TRUE, FiveIsland_RocketWarehouse_EventScript_Admin2AfterJohtoTower
 	trainerbattle_single TRAINER_TEAM_ROCKET_ADMIN_2, FiveIsland_RocketWarehouse_Text_Admin2Intro, FiveIsland_RocketWarehouse_Text_Admin2Defeat, FiveIsland_RocketWarehouse_EventScript_DefeatedAdmin2
 	msgbox FiveIsland_RocketWarehouse_Text_Admin2PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+@ After Johto's Radio Tower (Archer has quit too), he has heard about it and won't believe it either.
+FiveIsland_RocketWarehouse_EventScript_Admin2AfterJohtoTower::
+	trainerbattle_single TRAINER_TEAM_ROCKET_ADMIN_2, FiveIsland_RocketWarehouse_Text_Admin2IntroAfterJohtoTower, FiveIsland_RocketWarehouse_Text_Admin2Defeat, FiveIsland_RocketWarehouse_EventScript_DefeatedAdmin2
+	msgbox FiveIsland_RocketWarehouse_Text_Admin2PostBattleAfterJohtoTower, MSGBOX_AUTOCLOSE
 	end
 
 FiveIsland_RocketWarehouse_EventScript_DefeatedAdmin2::
 	getplayerxy PLAYER_X_POS, PLAYER_Y_POS
 	call_if_le PLAYER_X_POS, 24, FiveIsland_RocketWarehouse_EventScript_PlayerFaceAdmin2
-	msgbox FiveIsland_RocketWarehouse_Text_Admin2PostBattle
+	call FiveIsland_RocketWarehouse_EventScript_Admin2PostBattleMsg
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_WAREHOUSE_GRUNT2
@@ -96,6 +104,26 @@ FiveIsland_RocketWarehouse_EventScript_DefeatedAdmin2::
 FiveIsland_RocketWarehouse_EventScript_PlayerFaceAdmin2::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
+	return
+
+FiveIsland_RocketWarehouse_EventScript_Admin2PostBattleMsg::
+	call FiveIsland_RocketWarehouse_EventScript_CheckJohtoTowerFreed
+	goto_if_eq VAR_RESULT, TRUE, FiveIsland_RocketWarehouse_EventScript_Admin2PostBattleMsgAfterJohtoTower
+	msgbox FiveIsland_RocketWarehouse_Text_Admin2PostBattle
+	return
+
+FiveIsland_RocketWarehouse_EventScript_Admin2PostBattleMsgAfterJohtoTower::
+	msgbox FiveIsland_RocketWarehouse_Text_Admin2PostBattleAfterJohtoTower
+	return
+
+@ VAR_RESULT = TRUE once Johto's Radio Tower is freed. Johto's variables only exist once Johto has begun.
+FiveIsland_RocketWarehouse_EventScript_CheckJohtoTowerFreed::
+	special Special_JohtoCampaignGetState
+	goto_if_eq VAR_RESULT, FALSE, FiveIsland_RocketWarehouse_EventScript_Return
+	setvar VAR_RESULT, FALSE
+	goto_if_lt JOHTO_VAR_GOLDENROD_CITY_STATE, 10, FiveIsland_RocketWarehouse_EventScript_Return
+	setvar VAR_RESULT, TRUE
+FiveIsland_RocketWarehouse_EventScript_Return::
 	return
 
 FiveIsland_RocketWarehouse_EventScript_Grunt1::
@@ -270,6 +298,24 @@ FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
 	.string "I will find GIOVANNI.\n"
 	.string "And I will resurrect TEAM ROCKET!\l"
 	.string "I will…\p"
+	.string "Until then, farewell!$"
+
+FiveIsland_RocketWarehouse_Text_Admin2IntroAfterJohtoTower::
+	.string "That's quite enough of you\n"
+	.string "playing the hero, kid.\p"
+	.string "They say GIOVANNI quit. Now they\n"
+	.string "say ARCHER quit, too.\p"
+	.string "Lies, to cause confusion in our\n"
+	.string "ranks!\p"
+	.string "And now, I'll show you how scary\n"
+	.string "an angry adult can be!$"
+
+FiveIsland_RocketWarehouse_Text_Admin2PostBattleAfterJohtoTower::
+	.string "We will abandon this WAREHOUSE…\p"
+	.string "ARCHER tried to call GIOVANNI home\n"
+	.string "in JOHTO. You stopped that, too.\p"
+	.string "But I won't let this be the end.\n"
+	.string "I will find GIOVANNI myself.\p"
 	.string "Until then, farewell!$"
 
 FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText::
