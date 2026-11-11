@@ -1,0 +1,62 @@
+{
+ "note": "Ariana on Radio Tower 5F before her battle (B8): Archer took her Mahogany operation and scolded her like a grunt.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "GoldenrodCity_RadioTower_5F_hns",
+  "x": 29,
+  "y": 10,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_BADGE08_GET",
+   "JOHTO_VAR_GOLDENROD_CITY_STATE=9",
+   "!JOHTO_FLAG_HIDE_GOLDENROD_ROCKETS",
+   "CLEAR_TEAM",
+   "SPECIES_MEWTWO lv100 MOVE_DRAGON_PULSE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     32,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "GoldenrodCity_RadioTower_5F_hns",
+  "x": 29,
+  "y": 10,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:30"
+}

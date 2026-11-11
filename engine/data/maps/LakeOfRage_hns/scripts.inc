@@ -150,6 +150,7 @@ LakeOfRage_EventScript_Lance::
 	closemessage
 	delay 20
 	faceplayer
+	msgbox LakeOfRage_Text_LanceIntro1, MSGBOX_DEFAULT
 	turnobject LOCALID_LAKEOFRAGE_OLDMAN, DIR_WEST
 	msgbox LakeOfRage_Text_LanceIntro2, MSGBOX_DEFAULT
 	setvar JOHTO_VAR_MAHOGANY_TOWN_STATE, 3
@@ -258,8 +259,10 @@ LakeOfRage_Text_LanceForcedToEvolve:
 LakeOfRage_Text_LanceIntro1:
 	.string "Did you come here because of\n"
 	.string "the rumors?\p"
-	.string "You're {PLAYER}? I'm LANCE, a\n"
-	.string "trainer like you.$"
+	.string "{PLAYER}. We've met before, at\n"
+	.string "INDIGO PLATEAU.\p"
+	.string "You beat me there, and then you\n"
+	.string "beat your rival. I remember.$"
 
 LakeOfRage_Text_LanceIntro2:
 	.string "This man here informed me of\n"
@@ -267,10 +270,9 @@ LakeOfRage_Text_LanceIntro2:
 	.string "So we came to investigate…$"
 
 LakeOfRage_Text_LanceIntro3:
-	.string "I saw the way you battled\n"
-	.string "earlier, {PLAYER}.\p"
-	.string "I can tell that you're a trainer\n"
-	.string "with considerable skill.\p"
+	.string "I saw how you handled that red\n"
+	.string "GYARADOS. The same way you\l"
+	.string "handled my DRAGONITE.\p"
 	.string "If you don't mind, could you help\n"
 	.string "us investigate?$"
 

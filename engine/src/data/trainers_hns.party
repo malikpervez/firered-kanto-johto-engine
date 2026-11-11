@@ -16083,3 +16083,120 @@ Level: 8
 Cyndaquil
 Level: 10
 
+=== TRAINER_GOLD_ECRUTEAK_TOTODILE_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Geodude
+Level: 20
+
+Flaaffy
+Level: 20
+
+Croconaw
+Level: 22
+
+=== TRAINER_GOLD_ECRUTEAK_CHIKORITA_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Geodude
+Level: 20
+
+Flaaffy
+Level: 20
+
+Bayleef
+Level: 22
+
+=== TRAINER_GOLD_ECRUTEAK_CYNDAQUIL_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Geodude
+Level: 20
+
+Flaaffy
+Level: 20
+
+Quilava
+Level: 22
+
+=== TRAINER_GOLD_NEWBARK_TOTODILE_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Golem
+Level: 47
+
+Heracross
+Level: 47
+
+Ampharos
+Level: 47
+
+Feraligatr
+Level: 49
+
+=== TRAINER_GOLD_NEWBARK_CHIKORITA_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Golem
+Level: 47
+
+Heracross
+Level: 47
+
+Ampharos
+Level: 47
+
+Meganium
+Level: 49
+
+=== TRAINER_GOLD_NEWBARK_CYNDAQUIL_HNS ===
+Name: GOLD
+Class: Pkmn Trainer 1 Hns
+Pic: Gold Hns
+Gender: Male
+Music: Hg Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Golem
+Level: 47
+
+Heracross
+Level: 47
+
+Ampharos
+Level: 47
+
+Typhlosion
+Level: 49
+

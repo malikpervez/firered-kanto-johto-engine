@@ -1,0 +1,110 @@
+{
+ "note": "Cherrygrove's boy, after his own lines (his POK\u00e9MON lost on the road), heard a CHAMPION from KANTO came to JOHTO, and wonders what they're like. Ends on that line.",
+ "created": "2026-11-09 16:24",
+ "start": {
+  "map": "CherrygroveCity_hns",
+  "x": 48,
+  "y": 13,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "FLAG_SYS_POKEDEX_GET"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CherrygroveCity_hns",
+  "x": 48,
+  "y": 13,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 16:26"
+}

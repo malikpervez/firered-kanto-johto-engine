@@ -1,0 +1,77 @@
+{
+ "note": "With the Fog Badge, Gold has moved on: he is not outside Ecruteak's Center (facing his spot and pressing A does nothing).",
+ "created": "2026-11-09 15:52",
+ "start": {
+  "map": "EcruteakCity_hns",
+  "x": 39,
+  "y": 48,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_FLAG_BADGE02_GET",
+   "JOHTO_FLAG_BADGE03_GET",
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "JOHTO_FLAG_BADGE04_GET",
+   "JOHTO_VAR_STARTER_MON=0"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "JOHTO_FLAG_GD02_SEEN"
+  ],
+  "vars": [],
+  "trainers": [
+   "TRAINER_JOHTO_GOLD_ECRUTEAK_TOTODILE_HNS"
+  ]
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "EcruteakCity_hns",
+  "x": 39,
+  "y": 48,
+  "in_battle": false,
+  "flags": {
+   "JOHTO_FLAG_GD02_SEEN": false
+  },
+  "trainers": {
+   "TRAINER_JOHTO_GOLD_ECRUTEAK_TOTODILE_HNS": false
+  }
+ },
+ "accepted": "2026-11-09 15:57"
+}

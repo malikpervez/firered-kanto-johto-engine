@@ -1,0 +1,70 @@
+{
+ "note": "A broken ROCKET tape recorder by the rock beside Moltres, Mt. Ember's summit: the label reads CALL SAMPLE 3. Ends on that line.",
+ "created": "2026-11-09 16:24",
+ "start": {
+  "map": "MtEmber_Summit_Frlg",
+  "x": 10,
+  "y": 5,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "MtEmber_Summit_Frlg",
+  "x": 10,
+  "y": 5,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 16:26"
+}

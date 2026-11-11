@@ -30,7 +30,7 @@ RB_Flyby::
 	return
 @ The companion PIKACHU (it walks with every trainer once they have a POKéMON) sees through the stranger first:
 @ wary on Route 1 (MW01), ears flat at Silph's wavering veil (MW05), bristling again at Cinnabar's reveal (MW06),
-@ settling as MEWTWO leaves. No state.
+@ settling as MEWTWO leaves, and calm at the cave's mouth once MEWTWO is met (MW09). No state.
 RB_PikachuWary::
 	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
 	msgbox RB_Text_PikachuWary
@@ -51,6 +51,10 @@ RB_PikachuSettles::
 	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
 	msgbox RB_Text_PikachuSettles
 	return
+RB_PikachuLooksBack::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuLooksBack
+	return
 RB_Text_PikachuWary::
 	.string "PIKACHU's fur stands on end.\nIt doesn't take its eyes off him.$"
 RB_Text_PikachuBristles::
@@ -61,6 +65,55 @@ RB_Text_PikachuStares::
 	.string "PIKACHU's ears flatten. It stares\nat the traveler's shadow.$"
 RB_Text_PikachuSettles::
 	.string "PIKACHU watches it go.\nIts fur slowly settles.$"
+RB_Text_PikachuLooksBack::
+	.string "PIKACHU looks back into the dark.\nIts fur stays smooth.$"
+@ The quiet stretches (story copy F3, KR-120): small lines between the story's beats. Nothing here is written.
+@ L6: a traveller on One Island heard of the gold bird (RB01) crossing the sea. Shown once the opening was seen.
+RB_OneIslandTravelerVisibility::
+	setflag FLAG_TEMP_1E
+	goto_if_unset FLAG_RB_OPENING_SEEN, RB_Return
+	clearflag FLAG_TEMP_1E
+	return
+RB_OneIslandTraveler::
+	msgbox RB_Text_OneIslandTraveler, MSGBOX_NPC
+	end
+@ A swimmer on Route 21 saw the stranger on the water, after Silph's wavering veil (MW05), before the reveal (MW06).
+MW_Route21SwimmerVisibility::
+	setflag FLAG_TEMP_1E
+	goto_if_unset FLAG_MW05_SEEN, RB_Return
+	goto_if_set FLAG_MW06_SEEN, RB_Return
+	clearflag FLAG_TEMP_1E
+	return
+MW_Route21Swimmer::
+	msgbox MW_Text_Route21Swimmer, MSGBOX_NPC
+	end
+@ Broken ROCKET tape recorders by the three birds' rooms: Seafoam (1), the Power Plant (2), Mt. Ember (3).
+RB_TapeRecorderSample1::
+	msgbox RB_Text_TapeRecorderSample1, MSGBOX_SIGN
+	end
+RB_TapeRecorderSample2::
+	msgbox RB_Text_TapeRecorderSample2, MSGBOX_SIGN
+	end
+RB_TapeRecorderSample3::
+	msgbox RB_Text_TapeRecorderSample3, MSGBOX_SIGN
+	end
+@ Route 12's fisher CHIP, once beaten, saw something gold over the forest (for a player who saw RB01).
+RB_Route12FisherGold::
+	goto_if_unset FLAG_RB_OPENING_SEEN, RB_Return
+	msgbox RB_Text_Route12FisherGold
+	return
+RB_Text_OneIslandTraveler::
+	.string "They say a gold bird crossed the\nsea weeks ago, heading west.\pMy little brother drew it. He gave\nit a tail like a rainbow.$"
+MW_Text_Route21Swimmer::
+	.string "I saw a man in a coat out here.\nStanding on the water!\pThen I blinked, and he was gone.\nHe was heading for CINNABAR.$"
+RB_Text_TapeRecorderSample1::
+	.string "A broken tape recorder lies by\nthe wall. ROCKET's mark is on it.\pThe label reads: CALL SAMPLE 1.$"
+RB_Text_TapeRecorderSample2::
+	.string "A broken tape recorder lies by\nthe wall. ROCKET's mark is on it.\pThe label reads: CALL SAMPLE 2.$"
+RB_Text_TapeRecorderSample3::
+	.string "A broken tape recorder lies by\nthe wall. ROCKET's mark is on it.\pThe label reads: CALL SAMPLE 3.$"
+RB_Text_Route12FisherGold::
+	.string "Weeks ago, I saw something gold\nover the forest, way up high.\pI didn't catch a thing that day.\nI kept looking up.$"
 RB_Route1Transition::
 	setvar VAR_TEMP_E, 0
 	setflag FLAG_TEMP_1E
@@ -144,27 +197,17 @@ RB_OakStory::
 	goto_if_eq VAR_RESULT, FALSE, RB_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, RB_Return
 	goto_if_set JOHTO_FLAG_SYS_GAME_CLEAR, RB_OakLetter
-	goto_if_set FLAG_SYS_GAME_CLEAR, RB_OakReferral
+	@ After the Kanto League the bird, the road to ELM and Nao's news are told once, in the lab's
+	@ National Dex scene (PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm, KR-113).
+	goto_if_set FLAG_SYS_GAME_CLEAR, RB_Return
 	call_if_set FLAG_RB_OPENING_SEEN, RB_OakBird
 	return
+@ RB02 plays once; Oak's notes now hold the Pidgey and the bird (BL02 and Elm's RB08 lean on them).
+@ A player who never tells him before the League tells him in the National Dex scene.
 RB_OakBird::
+	goto_if_set FLAG_RB_OAK_HEARD_BIRD, RB_Return
 	msgbox RB_Text_OakBird
-	return
-RB_OakReferral::
-	goto_if_set FLAG_OAK_GAVE_JOHTO_DIRECTIONS, RB_Return
-	goto_if_unset FLAG_RB_OPENING_SEEN, RB_OakNoMemory
-	msgbox RB_Text_OakWest
-	@ Nao read Oak's notes on the sighting and went home after the League. Oak passes it on in this
-	@ once-only referral, unless the player has already found her in Ecruteak (nothing is written).
-	goto_if_set FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_Return
-	goto_if_unset FLAG_RB_NAO_INTRODUCED, RB_OakNaoNotMet
-	msgbox RB_Text_OakNaoFriend
-	return
-RB_OakNaoNotMet::
-	msgbox RB_Text_OakNaoNotMet
-	return
-RB_OakNoMemory::
-	msgbox RB_Text_OakResearch
+	setflag FLAG_RB_OAK_HEARD_BIRD
 	return
 RB_OakLetter::
 	goto_if_unset FLAG_RB_WELCOME_SEEN, RB_Return
@@ -173,15 +216,13 @@ RB_OakLetter::
 	setflag FLAG_RB_LETTER_READ
 	return
 RB_Text_OakBird::
-	.string "OAK: Feathers like a rainbow, and no\nentry in the POKéDEX?\pThen nobody has recorded it yet.\nI will write down your sighting.\pKeep looking up, {PLAYER}!$"
-RB_Text_OakWest::
-	.string "OAK: That bird flew west. ELM\nmay help you understand why.\pYour LEAGUE victory has opened\na new road for both of you.$"
-RB_Text_OakResearch::
-	.string "OAK: JOHTO has its own stories.\nELM values careful observation.$"
-RB_Text_OakNaoFriend::
-	.string "OAK: Your friend NAO came by to\nread my notes on your sighting.\pShe has gone home to ECRUTEAK.\nShe hopes you will visit her.$"
-RB_Text_OakNaoNotMet::
-	.string "OAK: A bell keeper from ECRUTEAK\ncame to read my notes on the bird.\pNAO, she said. She has asked all\nof KANTO about it.$"
+	.string "OAK: You sheltered a PIDGEY from\n"
+	.string "the wind, and then a bird flew over?\p"
+	.string "Feathers like a rainbow, and no\n"
+	.string "entry in the POKéDEX?\p"
+	.string "Then nobody has recorded it yet.\n"
+	.string "I will write down your sighting.\p"
+	.string "Keep looking up, {PLAYER}!$"
 RB_Text_Letter::
 	.string "OAK: A letter from NAO!\pThe bells rang. Nothing was\nasked of the sky.\pThere was room for an answer.\nThank you for listening.\pOAK: Both regions are proud\nof you, {PLAYER}.$"
 RB_PewterVisibility::
@@ -613,6 +654,8 @@ release
 	end
 MW03_Visibility::
 	setflag FLAG_TEMP_1E
+	@ The Psyduck and Mr. Fuji who come to his door in MW03 are the scene's own actors: hidden until it adds them.
+	setflag FLAG_TEMP_1D
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
 	goto_if_set FLAG_MW06_SEEN, RB_Return
 	special Special_RainbowStoryAdopt
@@ -627,13 +670,53 @@ MW03_Talk::
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Release
 goto_if_set FLAG_MW03_SEEN, RB_Repeat
-msgbox MW03_Text
+	@ The stranger waits near Mr. Fuji's door (5,16), at (9,16) past the Volunteer House sign, out of every path.
+	@ A Psyduck looks out first; then Fuji steps out to answer him, and goes back in before the stranger leaves.
+	applymovement LOCALID_LAVENDER_MW03_STRANGER, Common_Movement_FaceLeft
+	waitmovement 0
+	opendoor 5, 16
+	waitdooranim
+	addobject LOCALID_LAVENDER_MW03_PSYDUCK
+	applymovement LOCALID_LAVENDER_MW03_PSYDUCK, MW03_Movement_PsyduckOut
+	waitmovement 0
+	msgbox MW03_Text_Psyduck
+	closemessage
+	applymovement LOCALID_LAVENDER_MW03_PSYDUCK, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_LAVENDER_MW03_PSYDUCK
+	msgbox MW03_Text_Stranger1
+	closemessage
+	addobject LOCALID_LAVENDER_MW03_FUJI
+	applymovement LOCALID_LAVENDER_MW03_FUJI, MW03_Movement_FujiOut
+	waitmovement 0
+	msgbox MW03_Text_Fuji1
+	msgbox MW03_Text_Stranger2
+	msgbox MW03_Text_Fuji2
+	closemessage
+	applymovement LOCALID_LAVENDER_MW03_FUJI, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_LAVENDER_MW03_FUJI
+	closedoor 5, 16
+	waitdooranim
+	msgbox MW03_Text_NoReply
 	call RB_MewGlimpse
 	setflag FLAG_TEMP_1E
-	removeobject 13
+	removeobject LOCALID_LAVENDER_MW03_STRANGER
 setflag FLAG_MW03_SEEN
 release
 	end
+MW03_Movement_PsyduckOut::
+	walk_down
+	delay_16
+	face_left
+	delay_16
+	face_right
+	delay_16
+	step_end
+MW03_Movement_FujiOut::
+	walk_down
+	face_right
+	step_end
 MW04_Visibility::
 	setflag FLAG_TEMP_1D
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
@@ -726,6 +809,8 @@ goto_if_unset FLAG_MW06_SEEN, RB_Return
 goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
 clearflag FLAG_TEMP_1E
 	return
+@ After the reveal he speaks as MEWTWO and asks the player to come to Cerulean Cave (story copy C2/C3).
+@ Cerulean's cave guard lets a Kanto Champion who has heard him through (FLAG_MW07_SEEN, story copy C4).
 MW07_Talk::
 	lock
 	faceplayer
@@ -768,8 +853,21 @@ MW02_Text_Question::
 	.string "STRANGER: A fossil restored by\nhuman hands... Who decides\lwhat that life becomes?\pThe POKéMON? Or must both\nlearn together?$"
 MW02_Text_Answer::
 	.string "STRANGER: Together. Humans\nuse that word often.\pA loose stone trembles, rises\nan inch, then settles.$"
-MW03_Text::
-	.string "STRANGER: Nothing keeps them here.\pFUJI: Some leave when ready.\pSTRANGER: And you allow that?\pFUJI: It is a home, not a cage.\pThe traveler has no reply.$"
+MW03_Text_Psyduck::
+	.string "A PSYDUCK wanders out of MR. FUJI's\n"
+	.string "open door, sniffs the air, and\l"
+	.string "goes back inside.$"
+MW03_Text_Stranger1::
+	.string "STRANGER: Nothing keeps them here.$"
+MW03_Text_Fuji1::
+	.string "FUJI: Some leave when they're ready.$"
+MW03_Text_Stranger2::
+	.string "STRANGER: And you allow that?$"
+MW03_Text_Fuji2::
+	.string "FUJI: It is a home, not a cage.\n"
+	.string "I learned that late.$"
+MW03_Text_NoReply::
+	.string "The traveler has no reply.$"
 MW04_Text_Question::
 	.string "STRANGER: ROCKET called POKéMON\nproperty. You opposed them.\pYet you carry POKé BALLS.\nDo you try to earn their trust?$"
 MW04_Text_Answer::
@@ -784,7 +882,7 @@ MW05_Text::
 MW05_Text_Stranger::
 	.string "STRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
 MW06_Text_Journals::
-	.string "STRANGER: Those pages tell you\nwhat they hoped to create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
+	.string "STRANGER: Someone in that house\nwrote, “MEWTWO is far too powerful.”\pThose pages tell what they hoped\nto create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
 MW06_Text_Question::
 	.string "MEWTWO: I expected possession.\nAnother reason to command.\pYou made that answer difficult.\pWould you invite MEWTWO to come?\nOr leave it to choose its path?$"
 MW06_Invitation::
@@ -800,22 +898,31 @@ MW06_Text_Choice::
 MW06_Text_Answer::
 	.string "MEWTWO: You do not speak for\nevery human. I no longer believe\levery human speaks for you.\pMEWTWO leaves to find\nsomewhere quiet.$"
 MW07_Text_Before::
-	.string "STRANGER: A CHAMPION commands\ngreat power. I wonder what\lyou will ask of it.$"
+	.string "The traveler's coat and hat are\nback. You know who wears them.\pMEWTWO: Others see a traveler.\nYou do not. Good.\pThey will call you CHAMPION soon.\nI wonder what you will ask of it.\pWhen they do, come to the cave at\nthe edge of CERULEAN. I will wait.$"
 MW07_Text_After::
-	.string "STRANGER: You reached the summit.\nDid it change what you ask\lof those beside you?$"
+	.string "The traveler's coat and hat are\nback. You know who wears them.\pMEWTWO: You reached the summit.\nDid it change what you ask of\lthose beside you?\pCome to the cave at the edge of\nCERULEAN. I will be waiting inside.$"
+@ The greeting: "You came" after he asked the player on Route 22 (MW07), "You found the quiet place" after the
+@ reveal alone (MW06), or the unfamiliar presence for a player who never met the stranger (story copy C5).
 MW08_Intro::
+	goto_if_set FLAG_MW07_SEEN, MW08_Came
 	goto_if_unset FLAG_MW06_SEEN, MW08_Unfamiliar
 	msgbox MW08_Text_Familiar
+MW08_Offer::
 	@ After Black Tide, Mewtwo knows what Rocket made in Johto: a callback across the regions, nothing written.
 	@ It comes before his battle offer.
 	call_if_set FLAG_LG_FINAL_RESOLVED, MW08_Replicas
 	msgbox MW08_Text_Battle
 	goto MW08_Ask
+MW08_Came::
+	msgbox MW08_Text_Came
+	goto MW08_Offer
 MW08_Unfamiliar::
 	msgbox MW08_Text_Unfamiliar
 MW08_Ask::
 	msgbox MW08_Text_Ask, MSGBOX_YESNO
 	return
+MW08_Text_Came::
+	.string "MEWTWO: You came.\pThis is the quiet place I chose.\nFew would follow me here.$"
 MW08_Text_Familiar::
 	.string "MEWTWO: You found the quiet\nplace I chose.$"
 MW08_Text_Battle::
@@ -841,20 +948,85 @@ MW09_Transition::
 	goto_if_set FLAG_MW09_SEEN, RB_Return
 	setvar VAR_TEMP_E, 1
 	return
+@ MW09, the arc's end: it plays by itself as the player walks out of the cave's mouth (Cerulean Cave 1F's coord
+@ events, stepping south; walking in, it waits) once MEWTWO has been beaten or caught. Caught and in the party, MEWTWO
+@ comes out of its POKé BALL beside its new trainer (an actor on 1F, hidden by FLAG_TEMP_1 until then), the farewell
+@ is a conversation, and it goes back into the ball. Beaten (or caught but left in the PC), the reflection is
+@ narration. Running from MEWTWO leaves it in the cave, so the farewell waits.
 MW09_Scene::
 	lockall
 	goto_if_unset FLAG_FOUGHT_MEWTWO, MW09_Release
 	goto_if_set FLAG_MW09_SEEN, MW09_Release
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_ne VAR_RESULT, DIR_SOUTH, MW09_Release
 	setvar VAR_TEMP_E, 0
+	checkspecies SPECIES_MEWTWO
+	goto_if_eq VAR_RESULT, TRUE, MW09_WithMewtwo
 	msgbox MW09_Text
+	call RB_PikachuLooksBack
+MW09_End::
 	closemessage
 	call RB_MewGlimpse
 	setflag FLAG_MW09_SEEN
 MW09_Release::
 	releaseall
 	end
+MW09_WithMewtwo::
+	getplayerxy VAR_0x8004, VAR_0x8005
+	goto_if_ge VAR_0x8004, 36, MW09_MewtwoWest
+	addvar VAR_0x8004, 1
+	call MW09_SendOutMewtwo
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_ExitBallFaceWest
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	goto MW09_Farewell
+MW09_MewtwoWest::
+	subvar VAR_0x8004, 1
+	call MW09_SendOutMewtwo
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_ExitBallFaceEast
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+MW09_Farewell::
+	waitmovement 0
+	playmoncry SPECIES_MEWTWO, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox MW09_Text_WithMewtwo
+	call RB_PikachuLooksAtMewtwo
+	closemessage
+	playse SE_BALL
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_EnterBall
+	waitmovement 0
+	removeobject LOCALID_CERULEAN_CAVE_1F_MEWTWO
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	goto MW09_End
+MW09_SendOutMewtwo::
+	setobjectxyperm LOCALID_CERULEAN_CAVE_1F_MEWTWO, VAR_0x8004, VAR_0x8005
+	clearflag FLAG_TEMP_1
+	addobject LOCALID_CERULEAN_CAVE_1F_MEWTWO
+	playse SE_BALL_OPEN
+	return
+RB_PikachuLooksAtMewtwo::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuLooksAtMewtwo
+	return
+MW09_Movement_ExitBallFaceWest::
+	exit_pokeball
+	face_left
+	step_end
+MW09_Movement_ExitBallFaceEast::
+	exit_pokeball
+	face_right
+	step_end
+MW09_Movement_EnterBall::
+	enter_pokeball
+	step_end
 MW09_Text::
 	.string "At the mouth of the cave,\nthe wind moves freely again.\pThere is room for more than\none path through the world.$"
+MW09_Text_WithMewtwo::
+	.string "At the mouth of the cave,\nthe wind moves freely again.\pMEWTWO: There is room for more\nthan one path through the world.\pI will walk this one with you,\n{PLAYER}.\pYou did not command. You asked.\nI answered.$"
+RB_Text_PikachuLooksAtMewtwo::
+	.string "PIKACHU looks up at MEWTWO.\nIts fur stays smooth.$"
 
 
 RB_RadioAftermath::

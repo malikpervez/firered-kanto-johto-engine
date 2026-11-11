@@ -1,0 +1,65 @@
+{
+ "note": "Once the trio's beat has played, they are not outside the warehouse again.",
+ "created": "2026-11-09 16:24",
+ "start": {
+  "map": "FiveIsland_Meadow_Frlg",
+  "x": 12,
+  "y": 22,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_TRIO_FIVE_ISLAND_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_TRIO_FIVE_ISLAND_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "FiveIsland_Meadow_Frlg",
+  "x": 12,
+  "y": 22,
+  "in_battle": false,
+  "flags": {
+   "FLAG_TRIO_FIVE_ISLAND_SEEN": true
+  }
+ },
+ "accepted": "2026-11-09 16:26"
+}

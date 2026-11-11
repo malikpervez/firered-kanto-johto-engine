@@ -1,6 +1,6 @@
 {
- "note": "Once Oak has given the road to ELM, the next talks start with a short reminder ('PROF.ELM is expecting you in NEW BARK TOWN', KR-108) instead of the bird line and the whole road again. The test ends on that box.",
- "created": "2026-11-06 19:30",
+ "note": "A later talk to Oak after the League, before ELM is met: the Pok\u00e9dex rating first, then one reminder line, \"OAK: PROF.ELM is expecting you in NEW BARK TOWN, by the sea in JOHTO.\" (it used to come before the rating, with the whole road again; KR-108). Ends on that box (the story copy's A10, KR-113).",
+ "created": "2026-11-09 15:19",
  "start": {
   "map": "PalletTown_ProfessorOaksLab_Frlg",
   "x": 6,
@@ -16,6 +16,7 @@
    "FLAG_HIDE_RIVAL_IN_LAB",
    "!FLAG_HIDE_OAK_IN_HIS_LAB",
    "FLAG_SYS_NATIONAL_DEX",
+   "FLAG_RB_OAK_HEARD_BIRD",
    "FLAG_OAK_GAVE_JOHTO_DIRECTIONS",
    "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=9"
   ],
@@ -39,11 +40,107 @@
     ],
     [
      0,
-     10
+     70
+    ],
+    [
+     1,
+     4
     ],
     [
      0,
-     90
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     60
     ]
    ]
   }
@@ -65,5 +162,5 @@
    "FLAG_OAK_GAVE_JOHTO_DIRECTIONS": true
   }
  },
- "accepted": "2026-11-06 19:48"
+ "accepted": "2026-11-09 15:19"
 }
