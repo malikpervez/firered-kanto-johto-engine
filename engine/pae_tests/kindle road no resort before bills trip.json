@@ -1,0 +1,62 @@
+{
+ "note": "FG-A's gate, closed: with Bill's first Sevii trip not finished (One Island's Center scene at 2), nobody is below Ember Spa; walking up and pressing A where Nick would stand does nothing.",
+ "created": "2026-11-10 14:53",
+ "start": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 13,
+  "y": 62,
+  "state": [
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_8",
+   "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F=2"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_A_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 13,
+  "y": 62,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_A_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 15:38"
+}

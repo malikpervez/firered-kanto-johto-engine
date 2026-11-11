@@ -4,6 +4,7 @@
 #include "character_story.h"
 #include "event_data.h"
 #include "follower_npc.h"
+#include "friends_scene.h"
 #include "friends_story.h"
 #include "johto_campaign.h"
 #include "load_save.h"
@@ -22,6 +23,10 @@ STATIC_ASSERT(FRIENDS_STORY_FLAGS_LAST < ENGINE_FLAGS_START, FriendsBelowEngineF
 STATIC_ASSERT(FRIENDS_STORY_FLAGS_FIRST > DAILY_FLAGS_END, FriendsOutsideDailyFlags);
 STATIC_ASSERT(FRIENDS_STORY_SEEN_LAST - FRIENDS_STORY_SEEN_FIRST + 1 == FRIENDS_STORY_SCENE_COUNT, FriendsSceneReceipts);
 STATIC_ASSERT(FRIENDS_STORY_TRAINER_LAST < MAX_TRAINERS_COUNT, FriendsTrainerFlagsAllocated);
+STATIC_ASSERT(FRIENDS_STORY_EXTRA_SEEN_FIRST > FLAG_FRIENDS_REUNION_ARMED, FriendsExtraAfterReunion);
+STATIC_ASSERT(FRIENDS_STORY_EXTRA_SEEN_FIRST + FRIENDS_STORY_EXTRA_SCENE_LAST - FRIENDS_STORY_EXTRA_SCENE_FIRST
+    < FRIENDS_STORY_UNUSED_FIRST, FriendsExtraReceipts);
+STATIC_ASSERT(FRIENDS_STORY_EXTRA_SCENE_FIRST > FRIENDS_STORY_SCENE_COUNT, FriendsExtraAfterScenes);
 
 static u16 ReadBits(u16 first, u16 count)
 {
@@ -43,10 +48,34 @@ static void WriteBits(u16 first, u16 count, u16 value)
     }
 }
 
+static bool8 IsExtraScene(u16 scene)
+{
+    return scene >= FRIENDS_STORY_EXTRA_SCENE_FIRST && scene <= FRIENDS_STORY_EXTRA_SCENE_LAST;
+}
+
 static bool8 Seen(u16 scene)
 {
     return scene > 0 && scene <= FRIENDS_STORY_SCENE_COUNT
         && FlagGet(FRIENDS_STORY_SEEN_FIRST + scene - 1);
+}
+
+// Seen, for the 22 scenes and the extra ones. The extra scenes' receipts sit after the stage, invitation, loss and
+// reunion bits, not after scene 22's. (Seen stays as it was: the save checks run it every frame.)
+static bool8 SeenAny(u16 scene)
+{
+    if (IsExtraScene(scene))
+        return FlagGet(FRIENDS_STORY_EXTRA_SEEN_FIRST + scene - FRIENDS_STORY_EXTRA_SCENE_FIRST);
+    return Seen(scene);
+}
+
+// The player has met the seven (any of the 22 scenes seen). An extra scene has no late introduction of its own.
+static bool8 Met(void)
+{
+    u16 scene;
+    for (scene = 1; scene <= FRIENDS_STORY_SCENE_COUNT; scene++)
+        if (Seen(scene))
+            return TRUE;
+    return FALSE;
 }
 
 static u16 CurrentMap(void)
@@ -149,7 +178,11 @@ static bool8 FinalBattlesReady(void)
 bool8 FriendsStory_GetGate(u16 scene)
 {
     if (gSaveBlock1Ptr == NULL || scene < 1 || scene > FRIENDS_STORY_SCENE_COUNT)
-        return FALSE;
+    {
+        // FG-A..FG-G open only once the player has met the seven; their cases are in the switch below.
+        if (gSaveBlock1Ptr == NULL || !IsExtraScene(scene) || !Met())
+            return FALSE;
+    }
     if (scene <= 11 && FlagGet(FLAG_SYS_GAME_CLEAR))
         return FALSE; // Late champions enter at the current chapter, not old fights.
     if (scene >= 13 && scene <= 19 && JohtoChampion())
@@ -168,6 +201,9 @@ bool8 FriendsStory_GetGate(u16 scene)
         return FlagGet(FLAG_HIDE_SAFFRON_ROCKETS) && FlagGet(FLAG_GOT_MASTER_BALL_FROM_SILPH);
     case 11:
         return FlagGet(FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY);
+    case 23: // FG-A: Bill's first Sevii trip is over and the Friends are still in Kanto (FG11 or FG12; FG13 retires it)
+        return VarGet(VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F) >= 3
+            && FriendsStory_GetStage() >= 11 && FriendsStory_GetStage() <= 12;
     case 12:
         return FlagGet(FLAG_SYS_GAME_CLEAR) && VarGet(VAR_MAP_SCENE_PALLET_TOWN_OAK) >= 3;
     case 13: case 14:
@@ -212,6 +248,7 @@ u16 FriendsStory_GetMapScene(void)
     case MAP_FUCHSIA_CITY: return 9;
     case MAP_SAFFRON_CITY: return 10;
     case MAP_CINNABAR_ISLAND: return 11;
+    case MAP_ONE_ISLAND_KINDLE_ROAD: return 23;
     case MAP_PALLET_TOWN: return 12;
     case MAP_NEW_BARK_TOWN_HNS:
         if (Seen(21))
@@ -248,14 +285,29 @@ void FriendsStory_OnMapLoad(void)
         FlagSet(FLAG_FRIENDS_REUNION_ARMED);
     stage = FriendsStory_GetStage();
     scene = FriendsStory_GetMapScene();
-    if (scene > stage && FriendsStory_GetGate(scene))
+    // An extra scene's map never moves the stage.
+    if (scene > stage && !IsExtraScene(scene) && FriendsStory_GetGate(scene))
         WriteBits(FRIENDS_STORY_STAGE_FIRST, FRIENDS_STORY_STAGE_BITS, scene);
+}
+
+bool8 FriendsStory_IsExtraScene(u16 scene)
+{
+    return IsExtraScene(scene);
+}
+
+bool8 FriendsStory_IsHere(u16 scene)
+{
+    // An extra scene stays for the rest of the visit it was seen on.
+    if (IsExtraScene(scene))
+        return FriendsStory_IsReady() && scene == FriendsStory_GetMapScene() && FriendsStory_GetGate(scene)
+            && (!SeenAny(scene) || FriendsScene_GetExtraSeenThisVisit() == scene);
+    return FriendsStory_IsReady() && scene == FriendsStory_GetStage()
+        && scene == FriendsStory_GetMapScene() && FriendsStory_GetGate(scene);
 }
 
 static bool8 Here(u16 scene)
 {
-    return FriendsStory_IsReady() && scene == FriendsStory_GetStage()
-        && scene == FriendsStory_GetMapScene() && FriendsStory_GetGate(scene);
+    return FriendsStory_IsHere(scene);
 }
 
 void FriendsStory_OnBattleOutcome(u16 trainerId, u32 outcome)
@@ -291,7 +343,7 @@ void Special_FriendsStoryGetGate(void)
 void Special_FriendsStoryGetSeen(void)
 {
     Script_RequestEffects(SCREFF_V1);
-    gSpecialVar_Result = FriendsStory_IsReady() && Seen(gSpecialVar_0x8004);
+    gSpecialVar_Result = FriendsStory_IsReady() && SeenAny(gSpecialVar_0x8004);
 }
 
 void Special_FriendsStoryBegin(void)
@@ -299,7 +351,7 @@ void Special_FriendsStoryBegin(void)
     u16 scene = gSpecialVar_0x8004;
     Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
     FriendsStory_OnMapLoad();
-    gSpecialVar_Result = Here(scene) ? (Seen(scene) ? 2 : 1) : 0;
+    gSpecialVar_Result = Here(scene) ? (SeenAny(scene) ? 2 : 1) : 0;
 }
 
 // Viridian's arrival (FG01) plays by itself on entering the town, the first time after the Pokédex.
@@ -322,7 +374,15 @@ void Special_FriendsStoryMarkSeen(void)
     }
     if (Here(scene))
     {
-        FlagSet(FRIENDS_STORY_SEEN_FIRST + scene - 1);
+        if (IsExtraScene(scene))
+        {
+            FlagSet(FRIENDS_STORY_EXTRA_SEEN_FIRST + scene - FRIENDS_STORY_EXTRA_SCENE_FIRST);
+            FriendsScene_SetExtraSeenThisVisit(scene);
+        }
+        else
+        {
+            FlagSet(FRIENDS_STORY_SEEN_FIRST + scene - 1);
+        }
         gSpecialVar_Result = TRUE;
     }
 }

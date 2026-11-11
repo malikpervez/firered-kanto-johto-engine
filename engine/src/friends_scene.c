@@ -17,7 +17,9 @@
 #include "constants/maps.h"
 #include "constants/species.h"
 
-struct FriendsCamp { u16 map; s16 x, y; u8 firstLocalId; };
+// An extra scene's camp (FG-A..FG-G) also names who stands in front (bits as sForeground), the visitor slots it uses
+// (bits as sSlots) and whether the group leaves at its end (then they don't come back on that visit).
+struct FriendsCamp { u16 map; s16 x, y; u8 firstLocalId; u8 foreground, slots; bool8 leaves; };
 static const struct FriendsCamp sCamps[] = {
 #include "data/friends_scene_locations.h"
 };
@@ -53,6 +55,10 @@ static EWRAM_DATA bool8 sFujiStartedInside = FALSE;
 // no phase, route or additional receipt is stored in any native save sector.
 static EWRAM_DATA u8 sFujiWarpPhase = 0;
 static EWRAM_DATA bool8 sFujiContextValid = FALSE;
+// An extra scene (FG-A..FG-G) seen on this visit to its map: its group stays (or has left) until the next map load.
+static EWRAM_DATA u8 sExtraSeenThisVisit = 0;
+
+#define IS_EXTRA_SCENE(scene) ((scene) >= FRIENDS_STORY_EXTRA_SCENE_FIRST && (scene) <= FRIENDS_STORY_EXTRA_SCENE_LAST)
 
 static const struct FriendsCamp *CurrentCamp(void)
 {
@@ -129,6 +135,16 @@ bool8 FriendsScene_HideOverlappingFollower(const struct ObjectEvent *object,
             return TRUE;
     }
     return FALSE;
+}
+
+// The scene of the current map is playing here: the 22 scenes at their stage, an extra one while it's open.
+// (scene is this map's: FriendsStory_GetMapScene.)
+static bool8 SceneHere(u16 scene)
+{
+    if (IS_EXTRA_SCENE(scene))
+        return FriendsStory_IsHere(scene);
+    return FriendsStory_IsReady() && scene != 0 && scene <= FRIENDS_STORY_SCENE_COUNT
+        && scene == FriendsStory_GetStage() && FriendsStory_GetGate(scene);
 }
 
 // While Special_FriendsStoryMakeRoom tries a tile for the player, the player counts as standing there.
@@ -224,7 +240,7 @@ static bool8 VisitorCellsFree(const struct FriendsCamp *camp, u16 scene)
     static const u8 sSlots[] = {
         0, 0, 5, 5, 7, 2, 5, 7, 0, 7, 0, 0, 0, 7, 2, 5, 5, 0, 3, 5, 5, 0, 1,
     };
-    u8 slot, mask = sSlots[scene];
+    u8 slot, mask = IS_EXTRA_SCENE(scene) ? camp->slots : sSlots[scene];
     if (scene == 8)
         mask = camp->map == MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE ? 1 : 2;
     for (slot = 0; slot < 3; slot++)
@@ -263,8 +279,7 @@ void Special_FriendsStoryMakeRoom(void)
 
     Script_RequestEffects(SCREFF_V1);
     gSpecialVar_Result = DIR_NONE;
-    if (camp == NULL || !FriendsStory_IsReady() || scene == 0 || scene > FRIENDS_STORY_SCENE_COUNT
-     || scene != FriendsStory_GetStage() || !FriendsStory_GetGate(scene)
+    if (camp == NULL || !SceneHere(scene)
      || gPlayerAvatar.objectEventId >= OBJECT_EVENTS_COUNT || VisitorCellsFree(camp, scene))
         return;
     player = &gObjectEvents[gPlayerAvatar.objectEventId];
@@ -297,9 +312,7 @@ bool32 FriendsScene_GetFramePoint(s16 *x, s16 *y)
 {
     const struct FriendsCamp *camp = CurrentCamp();
     u16 scene = FriendsStory_GetMapScene();
-    if (camp == NULL || x == NULL || y == NULL || !FriendsStory_IsReady()
-     || scene == 0 || scene > FRIENDS_STORY_SCENE_COUNT
-     || scene != FriendsStory_GetStage() || !FriendsStory_GetGate(scene)
+    if (camp == NULL || x == NULL || y == NULL || !SceneHere(scene)
      || !VisitorCellsFree(camp, scene))
         return FALSE;
     // Raw map coordinates. The bounded native camera proxy performs actual
@@ -346,6 +359,10 @@ bool8 FriendsScene_ShouldSpawn(u8 localId, u8 mapNum, u8 mapGroup)
         return FALSE; // A completed arrival never respawns after the exit beat.
     if (scene == 1 && !sArrivalLanded)
         return FALSE;
+    if (IS_EXTRA_SCENE(scene))
+        return FriendsStory_IsHere(scene) && !(camp->leaves && FlagGet(FRIENDS_STORY_EXTRA_SEEN_FIRST
+                + scene - FRIENDS_STORY_EXTRA_SCENE_FIRST))
+            && (camp->foreground & (1 << (localId - camp->firstLocalId)));
     return FriendsStory_IsReady() && scene == FriendsStory_GetStage()
         && FriendsStory_GetGate(scene) && scene > 0 && scene < ARRAY_COUNT(sForeground)
         && (sForeground[scene] & (1 << (localId - camp->firstLocalId)));
@@ -535,6 +552,16 @@ void Special_FriendsStoryWaitMovement(void)
     // Remain script-locked for a concrete allocation failure.
     sMovementFault = 2;
     gSpecialVar_Result = TRUE;
+}
+
+u8 FriendsScene_GetExtraSeenThisVisit(void)
+{
+    return sExtraSeenThisVisit;
+}
+
+void FriendsScene_SetExtraSeenThisVisit(u8 scene)
+{
+    sExtraSeenThisVisit = scene;
 }
 
 void FriendsScene_ClearVisitors(void)
@@ -740,6 +767,7 @@ void FriendsScene_OnMapLoad(void)
     sMovementFault = 0;
     sPreviousSpeaker = 0xFF;
     sPreviousCrossing = 0;
+    sExtraSeenThisVisit = 0;
     if (FriendsStory_IsReady() && CurrentCamp() != NULL && gMapHeader.events != NULL)
     {
         // Supported older native6 snapshots have no appended Friends slots.
@@ -788,6 +816,22 @@ void Special_FriendsStoryStage(void)
     gSpecialVar_Result = FALSE;
     if (CurrentCamp() == NULL || scene != FriendsStory_GetMapScene())
         return;
+    // Shared beats of the extra scenes: the home reflection on and off, and the group leaving.
+    if (IS_EXTRA_SCENE(scene) && beat >= 80)
+    {
+        u8 i;
+        if (beat == 80)
+            ShowHome();
+        else if (beat == 81)
+            FriendsVisuals_HideHome();
+        else if (beat == 90)
+        {
+            ClearPartners(); Remove(230); FriendsVisuals_HideHome();
+            for (i = 220; i < 227; i++) Remove(i);
+        }
+        gSpecialVar_Result = TRUE;
+        return;
+    }
     if (beat == 0)
     {
         switch (scene)
@@ -805,6 +849,7 @@ void Special_FriendsStoryStage(void)
             break;
         case 9: ShowPair(SPECIES_SLOWPOKE, SPECIES_KRABBY); ShowMon(SPECIES_GEODUDE, 1); break;
         case 11: case 17: ShowHome(); break;
+        case 23: ShowMon(SPECIES_SPEAROW, 0); ShowHuman(OBJ_EVENT_GFX_OLD_WOMAN_FRLG, 1); ShowMon(SPECIES_SLOWPOKE, 2); break;
         case 13: ShowPair(SPECIES_SLOWPOKE, SPECIES_PSYDUCK); break;
         case 14: ShowHuman(OBJ_EVENT_GFX_SCIENTIST, 1); break;
         case 15: ShowPair(SPECIES_PRIMEAPE, SPECIES_HOOTHOOT); break;

@@ -204,7 +204,7 @@ The Mansion journals keep their original account. After the Secret Key is found,
 | MW06 | Cinnabar reveal — [`MW06_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:518) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | FG11 | The television in the water — [`FG11_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:1461) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 
-Mew remains a sparse observer, not a reward from this plot. The proposed new Sevii friends scene FG-A is not in 37C. Original Articuno, Zapdos and Moltres stay in Seafoam, the Power Plant and Mt. Ember.
+Mew remains a sparse observer, not a reward from this plot. **FG-A Tim finds the resort** (KR-124): once Bill's first Sevii trip is over (One Island's Center scene at 3 or more), while the Friends are still in Kanto (FG11, or FG12 after the League; FG13 retires it), Tim, Brian, Ham and Nick are on Kindle Road below Ember Spa with Spearow, a local and Slowpoke (`FGA_Interact`). Tim wants nightlife, the local says most people go to bed, and Tim ends up reading the ferry board and paying for the rooms; a choice ("Sounds like a vacation" / "You sound like a tour guide") and the four go into the spa. Optional, no battle, nothing given; receipt 0x956. A player who takes Bill's trip after the League still finds them (coordinator's call, 10 November). Original Articuno, Zapdos and Moltres stay in Seafoam, the Power Plant and Mt. Ember.
 
 ## 09. Kanto Champion
 
@@ -1327,11 +1327,11 @@ Golduck Lv.56 / Furret Lv.55
 
 ## New Friends handoff: proposed, not playable in 37C
 
-The October 19 Friends handoff is design input awaiting implementation: FG-A–FG-G, dialogue/voice rework, new final-battle lines, repeat-early-battle changes, bespoke Nao/Stranger art and other listed polish. Current 37C still has 22 scene receipts and required-zero bits 0x956–0x95F. The proposed new state allocation and 29-placement adoption must be audited before use.
+The October 19 Friends handoff is design input: FG-A–FG-G, dialogue/voice rework, new final-battle lines, repeat-early-battle changes, bespoke Nao/Stranger art and other listed polish. The owner approved the FG-A–FG-F drafts on 10 November ("Yes just make sure you are following their personalities as I required originally"). Its state allocation was audited the same day: the new scenes are scenes 23–29 with the handoff's receipts 0x956–0x95C (scene 23 + n has receipt 0x956 + n). No code, script or open branch uses those bits; they sit in the saved Kanto flags with the Friends' others, after the stage (0x94B–0x94F), invitation (0x950), loss (0x951–0x954) and reunion (0x955) bits, and 0x95D–0x95F stay required-zero. The new scenes play beside the stage, which keeps its 0–22 placements and never holds 23–29: each opens while the stage is at the placement next to it and retires when the stage moves on. The handoff's 29-placement order table is not adopted: it would renumber the stage of every existing save.
 
 | Draft ID | Proposed scene | Proposed location / gate | Current status |
 | --- | --- | --- | --- |
-| FG-A | Tim finds the resort | One Island / Ember Spa; Proposed first Sevii-trip completion | NOT IMPLEMENTED / gameplay NOT RUN |
+| FG-A | Tim finds the resort | Kindle Road below Ember Spa; Bill's first Sevii trip over, Friends at FG11 or FG12 | BUILT (KR-124), replay-tested |
 | FG-B | The road nobody paved | Indigo western road; Proposed post-Oak westbound crossing | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-C | The tower that sways | Violet / Sprout Tower exterior; Proposed Zephyr Badge | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |

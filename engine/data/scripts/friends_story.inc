@@ -1767,6 +1767,112 @@ FG11_Choice1::
 	fg_focus 4
 	msgbox FG11_Text_Choice1_03
 	goto FG_Release
+@ FG-A Tim finds the resort (the October 19 handoff's scene; story copy F3). Kindle Road, below Ember Spa, once Bill's
+@ first Sevii trip is over, before the League, while the Friends are at FG11 (Cinnabar). No battle and nothing given;
+@ the group goes into the spa at the end and isn't on the road again.
+FGA_Interact::
+	lockall
+	faceplayer
+	setvar VAR_0x8004, 23
+	callnative Special_FriendsStoryBegin, requests_effects=1
+	goto_if_eq VAR_RESULT, 0, FG_Release
+	copyvar VAR_0x8008, VAR_RESULT
+	call FG_FrameCamera
+	goto_if_eq VAR_0x8008, 2, FGA_Menu
+	setvar VAR_0x8004, 23
+	setvar VAR_0x8005, 0
+	closemessage
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_focus 6
+	msgbox FGA_Text_Main01
+	fg_focus 6
+	msgbox FGA_Text_Main02
+	fg_focus 3
+	msgbox FGA_Text_Main03
+	fg_focus 6
+	msgbox FGA_Text_Main04
+	fg_focus 0
+	msgbox FGA_Text_Main05
+	fg_focus 0
+	msgbox FGA_Text_Main06
+	fg_focus 6
+	msgbox FGA_Text_Main07
+	fg_focus 6
+	msgbox FGA_Text_Main08
+	fg_focus 7
+	msgbox FGA_Text_Main09
+	fg_focus 7
+	msgbox FGA_Text_Main10
+	fg_focus 6
+	msgbox FGA_Text_Main11
+	fg_focus 7
+	msgbox FGA_Text_Main12
+	fg_focus 7
+	msgbox FGA_Text_Main13
+	fg_focus 1
+	msgbox FGA_Text_Main14
+	fg_focus 6
+	msgbox FGA_Text_Main15
+	fg_react 227, FG_Move_Emphatic
+	fg_focus 6
+	msgbox FGA_Text_Main16
+	fg_focus 1
+	msgbox FGA_Text_Main17
+	fg_focus 6
+	msgbox FGA_Text_Main18
+	fg_focus 6
+	msgbox FGA_Text_Main19
+	fg_focus 6
+	msgbox FGA_Text_Main20
+	fg_focus 0
+	msgbox FGA_Text_Main21
+	fg_focus 6
+	msgbox FGA_Text_Main22
+	fg_react 6, FG_Move_LookAround
+	fg_focus 6
+	msgbox FGA_Text_Main23
+	fg_focus 0
+	msgbox FGA_Text_Main24
+	fg_focus 6
+	msgbox FGA_Text_Main25
+	fg_focus 1
+	msgbox FGA_Text_Main26
+	setvar VAR_0x8004, 23
+	callnative Special_FriendsStoryMarkSeen, requests_effects=1
+FGA_Menu::
+	call FG_WaitSceneMovement
+	closemessage
+	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
+	dynmultichoice 0, 0, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, FGA_Text_Vacation, FGA_Text_TourGuide
+	goto_if_eq VAR_RESULT, 0, FGA_Choice0
+	goto_if_eq VAR_RESULT, 1, FGA_Choice1
+	goto FG_Release
+FGA_Choice0::
+	call FG_FrameCamera
+	fg_focus 6
+	msgbox FGA_Text_Choice0_01
+	fg_focus 0
+	msgbox FGA_Text_Choice0_02
+	goto FGA_Leave
+FGA_Choice1::
+	call FG_FrameCamera
+	fg_focus 6
+	msgbox FGA_Text_Choice1_01
+	fg_focus 3
+	msgbox FGA_Text_Choice1_02
+	fg_focus 6
+	msgbox FGA_Text_Choice1_03
+@ Brian heads for the spa first; then the four of them are inside.
+FGA_Leave::
+	fg_walk_out 0, DIR_NORTH
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, 23
+	setvar VAR_0x8005, 90
+	callnative Special_FriendsStoryStage, requests_effects=1
+	fadescreen FADE_FROM_BLACK
+	goto FG_Release
 FG12_Interact::
 	lockall
 	faceplayer
@@ -4556,6 +4662,72 @@ FG11_Text_Choice1_02::
 	.string "NICK: That's what we think. We don't\nknow why it opened this much, or why it\pstopped.$"
 FG11_Text_Choice1_03::
 	.string "XAVIER: Right. I'll write down what\nhappened before we turn the rest into\pa story we can't prove.$"
+FGA_Text_Main01::
+	.string "TIM: Palm trees. Hot springs. A boat\nthat only runs twice a day.$"
+FGA_Text_Main02::
+	.string "TIM: Nobody say anything. This is the\nclosest I've been.$"
+FGA_Text_Main03::
+	.string "NICK: To Thailand?$"
+FGA_Text_Main04::
+	.string "TIM: To being on vacation instead of\nlost.$"
+FGA_Text_Main05::
+	.string "BRIAN: I'm not lost. I found a bench\nnext to hot water.$"
+FGA_Text_Main06::
+	.string "BRIAN: Slowpoke and I are discussing a\nlease.$"
+FGA_Text_Main07::
+	.string "TIM: Okay, but think bigger. Where's\nthe night market?$"
+FGA_Text_Main08::
+	.string "TIM: Where do people go after dark\nhere?$"
+FGA_Text_Main09::
+	.string "LOCAL: After dark? Most of us go\nto bed.$"
+FGA_Text_Main10::
+	.string "LOCAL: The spa closes at nine.\nThe boat leaves at six.$"
+FGA_Text_Main11::
+	.string "TIM: …That's the whole nightlife?$"
+FGA_Text_Main12::
+	.string "LOCAL: The Pokémon Center stays open.$"
+FGA_Text_Main13::
+	.string "LOCAL: Some nights the Krabby come up\non the sand.$"
+FGA_Text_Main14::
+	.string "HAM: Krabby nightlife.$"
+FGA_Text_Main15::
+	.string "TIM: Ham, don't make that sound good.$"
+FGA_Text_Main16::
+	.string "TIM: Hey. Those are the return\ntickets.$"
+FGA_Text_Main17::
+	.string "HAM: He's checking.$"
+FGA_Text_Main18::
+	.string "TIM: I always keep track of them.$"
+FGA_Text_Main19::
+	.string "TIM: Two boats out, one back.$"
+FGA_Text_Main20::
+	.string "TIM: The morning ferry is cheaper\nif you ask at the window.$"
+FGA_Text_Main21::
+	.string "BRIAN: You know the ferry times for an\nisland nobody's heard of.$"
+FGA_Text_Main22::
+	.string "TIM: I read the board. Somebody has to\nread the board.$"
+FGA_Text_Main23::
+	.string "TIM: Fine. We're staying one night.\nRooms are on me.$"
+FGA_Text_Main24::
+	.string "BRIAN: You have money?$"
+FGA_Text_Main25::
+	.string "TIM: I have a coupon from Vermilion\nand a very good attitude.$"
+FGA_Text_Main26::
+	.string "HAM: And the Krabby.$"
+FGA_Text_Choice0_01::
+	.string "TIM: It is one. A boring one. I think I'm\ninto it.$"
+FGA_Text_Choice0_02::
+	.string "BRIAN: Welcome. We have benches.$"
+FGA_Text_Choice1_01::
+	.string "TIM: Tour guides get paid. I'm doing\nthis for free, like an idiot.$"
+FGA_Text_Choice1_02::
+	.string "NICK: Like a friend.$"
+FGA_Text_Choice1_03::
+	.string "TIM: Same thing in this group.$"
+FGA_Text_Vacation::
+	.string "Sounds like a vacation$"
+FGA_Text_TourGuide::
+	.string "You sound like a tour guide$"
 FG12_Text_Main01::
 	.string "JON: I COACHED THAT WHOLE FUCKING\nMATCH FROM THE SOFA.$"
 FG12_Text_Main02::

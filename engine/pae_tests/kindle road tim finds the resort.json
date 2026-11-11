@@ -1,0 +1,242 @@
+{
+ "note": "FG-A (KR-124): after Bill's first Sevii trip, before the League, with the Friends at FG11, Tim, Brian, Ham and Nick are on Kindle Road below Ember Spa with Spearow, a local and Slowpoke. Talk to Nick: the scene plays to Tim's key line, 'Fine. We're staying one night. Rooms are on me.' (the test ends on that box).",
+ "created": "2026-11-10 14:53",
+ "start": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 13,
+  "y": 63,
+  "state": [
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_8",
+   "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F=3"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     17
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     180
+    ],
+    [
+     0,
+     180
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_A_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 12,
+  "y": 62,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_A_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 16:02"
+}
