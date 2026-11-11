@@ -1,0 +1,282 @@
+{
+ "note": "The bird seen but never told to Oak: after the upgrade the Champion tells him now. Ends on \"{PLAYER} tells PROF.OAK about the PIDGEY in the wind, and the bird that crossed the sky.\" (the story copy's A6, KR-113).",
+ "created": "2026-11-09 15:15",
+ "start": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 12,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_CHARMANDER lv50",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "FLAG_HIDE_OAK_IN_PALLET_TOWN",
+   "!FLAG_HIDE_OAK_IN_HIS_LAB",
+   "FLAG_HIDE_RIVAL_IN_LAB",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=7",
+   "FLAG_RB_OPENING_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_SYS_NATIONAL_DEX",
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS",
+   "FLAG_RB_OAK_HEARD_BIRD"
+  ],
+  "vars": [
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "in_battle": false,
+  "flags": {
+   "FLAG_SYS_NATIONAL_DEX": true,
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS": false,
+   "FLAG_RB_OAK_HEARD_BIRD": false
+  },
+  "vars": {
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB": 7
+  }
+ },
+ "accepted": "2026-11-09 15:15"
+}

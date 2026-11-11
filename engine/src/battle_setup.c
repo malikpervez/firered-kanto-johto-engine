@@ -1587,7 +1587,10 @@ void BattleSetup_StartTrainerBattle(void)
         }
     }
 
-    if (GetTrainerBattleMode() == TRAINER_BATTLE_EARLY_RIVAL && GetRivalBattleFlags() & RIVAL_BATTLE_TUTORIAL)
+    // RIVAL_BATTLE_TUTORIAL includes RIVAL_BATTLE_HEAL_AFTER: test for all of its bits, so a rival battle that only
+    // heals after a loss and carries on (Silver in Azalea) doesn't become Oak's tutorial battle.
+    if (GetTrainerBattleMode() == TRAINER_BATTLE_EARLY_RIVAL
+     && (GetRivalBattleFlags() & RIVAL_BATTLE_TUTORIAL) == RIVAL_BATTLE_TUTORIAL)
         gBattleTypeFlags |= BATTLE_TYPE_FIRST_BATTLE;
 
     if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)

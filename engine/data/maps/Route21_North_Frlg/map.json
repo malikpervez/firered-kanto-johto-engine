@@ -157,6 +157,21 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OverworldMon_EventScript_Encounter",
       "flag": "0"
+    },
+    {
+      "type": "object",
+      "local_id": "LOCALID_ROUTE21_STRANGER_SWIMMER",
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
+      "x": 12,
+      "y": 17,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MW_Route21Swimmer",
+      "flag": "FLAG_TEMP_1E"
     }
   ],
   "warp_events": [],

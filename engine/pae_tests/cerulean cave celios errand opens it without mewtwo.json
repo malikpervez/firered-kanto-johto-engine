@@ -1,0 +1,47 @@
+{
+ "note": "Celio's Sevii errand stays the way in for a player who never met the stranger: with its flag (FLAG_HIDE_CERULEAN_CAVE_GUARD) and no Route 22 talk, the guard is gone and the Champion walks up into Cerulean Cave.",
+ "created": "2026-11-09 15:31",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 6,
+  "y": 8,
+  "state": [
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_HIDE_CERULEAN_CAVE_GUARD"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     34
+    ],
+    [
+     0,
+     300
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW07_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCave_1F_Frlg",
+  "x": 35,
+  "y": 23,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW07_SEEN": false
+  }
+ },
+ "accepted": "2026-11-09 15:32"
+}

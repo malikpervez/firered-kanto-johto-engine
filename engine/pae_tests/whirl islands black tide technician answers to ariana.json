@@ -1,0 +1,91 @@
+{
+ "note": "The Black Tide attack in the Lugia chamber (B11): the Rocket technician says Archer quit, Ariana did not, and the project answers to her now.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "WhirlIslands_LugiaChamber_hns",
+  "x": 29,
+  "y": 34,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "JOHTO_VAR_COMPLETED_LUGIA=2"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_LG_ATTACK_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "WhirlIslands_LugiaChamber_hns",
+  "x": 29,
+  "y": 34,
+  "in_battle": false,
+  "flags": {
+   "FLAG_LG_ATTACK_SEEN": false
+  }
+ },
+ "accepted": "2026-11-09 14:30"
+}

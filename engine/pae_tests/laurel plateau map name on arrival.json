@@ -1,0 +1,42 @@
+{
+ "note": "Johto's League (KR-111): out of Johto's Victory Road onto Route 23; the map name popup reads LAUREL PLATEAU, Johto's plateau's own section (Kanto's keeps INDIGO PLATEAU). Threshold 0.2%: the old screen differs by one word.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "VictoryRoadKanto_1F_hns",
+  "x": 28,
+  "y": 3,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     16
+    ],
+    [
+     0,
+     180
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.002,
+ "expect": {
+  "map": "Route23_hns",
+  "x": 18,
+  "y": 21,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:27"
+}
