@@ -397,9 +397,11 @@ The three attackers are Rocket-made replicas. Defeating OR catching each, in any
 
 ## 17. A second championship, the same trainer
 
-**Where:** Native Johto League approach → Hall of Fame.
+**Where:** Route 26 → Reception Gate → Johto’s Victory Road → LAUREL PLATEAU → Hall of Fame.
 
 The original late Johto rival, League approach, Elite Four and Champion progression remains independent of Kanto’s championship. Optional friends or legendary captures do not substitute for clearing Johto’s own Hall of Fame.
+
+Johto’s plateau is LAUREL PLATEAU, Johto’s own League (KR-111): its sign, its map name and town-map place (a map section of its own, apart from Kanto’s INDIGO PLATEAU, which keeps its name), Elm’s directions after the eighth badge and the Blackthorn Center’s gentleman. The new hall borrowed Kanto’s strongest, and the people say so once each: the Center’s trainer tells the history (Johto’s trainers used to cross the mountains to Indigo; now Johto has a League of its own and Lance came home to be its Champion); Lance at the Lake of Rage remembers the player from Indigo Plateau and his Dragonite; Koga keeps Fuchsia’s Gym and a seat here; Bruno sits in both halls; Lance in the Champion’s room is Johto’s Champion with the team he keeps for it, and in the Hall of Fame two halls keep the player’s name. Oak at Olivine’s port greets a Champion of two Leagues.
 
 **Progression:**
 
