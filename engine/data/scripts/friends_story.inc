@@ -6277,3 +6277,165 @@ FG_E_Text_Choice1_1::
 	.string "TIM: Kept the grandson's side. You don't\ncover up good work.$"
 FG_E_Text_Choice1_2::
 	.string "LB: Respect.$"
+
+@ FG-F Ham goes first (the October 19 handoff's scene; story copy F3). Ice Path 1F, the floor inside the
+@ Route 44 entrance, after the Radio Tower and before the Rising Badge, while the Friends are at FG16 to FG19.
+@ No battle and nothing given.
+FG_F_Interact::
+	lockall
+	faceplayer
+	setvar VAR_0x8004, 28
+	callnative Special_FriendsStoryBegin, requests_effects=1
+	goto_if_eq VAR_RESULT, 0, FG_Release
+	copyvar VAR_0x8008, VAR_RESULT
+	call FG_FrameCamera
+	goto_if_eq VAR_0x8008, 2, FG_F_Menu
+	setvar VAR_0x8004, 28
+	setvar VAR_0x8005, 0
+	closemessage
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_react 230, FG_F_Move_Spin
+	fg_focus 0
+	msgbox FG_F_Text_Main01
+	fg_focus 2
+	msgbox FG_F_Text_Main02
+	fg_focus 5
+	msgbox FG_F_Text_Main03
+	fg_focus 0
+	msgbox FG_F_Text_Main04
+	fg_walk_out 1, DIR_EAST
+	fg_focus 2
+	msgbox FG_F_Text_Main05
+	fg_focus 2
+	msgbox FG_F_Text_Main06
+	fg_react 227, FG_Move_Emphatic
+	fg_focus 1
+	msgbox FG_F_Text_Main07
+	fg_focus 5
+	msgbox FG_F_Text_Main08
+	fg_focus 0
+	msgbox FG_F_Text_Main09
+	fg_react 230, FG_F_Move_SwinubOff
+	setvar VAR_0x8004, 28
+	setvar VAR_0x8005, 12
+	closemessage
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_walk_back 1, DIR_WEST
+	fg_focus 1
+	msgbox FG_F_Text_Main10
+	fg_focus 5
+	msgbox FG_F_Text_Main11
+	fg_focus 1
+	msgbox FG_F_Text_Main12
+	fg_focus 2
+	msgbox FG_F_Text_Main13
+	fg_focus 5
+	msgbox FG_F_Text_Main14
+	fg_focus 2
+	msgbox FG_F_Text_Main15
+	fg_focus 5
+	msgbox FG_F_Text_Main16
+	fg_focus 0
+	msgbox FG_F_Text_Main17
+	fg_focus 1
+	msgbox FG_F_Text_Main18
+	fg_focus 0
+	msgbox FG_F_Text_Main19
+	setvar VAR_0x8004, 28
+	callnative Special_FriendsStoryMarkSeen, requests_effects=1
+FG_F_Menu::
+	call FG_WaitSceneMovement
+	closemessage
+	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
+	dynmultichoice 0, 0, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, FG_F_Text_Option0, FG_F_Text_Option1
+	goto_if_eq VAR_RESULT, 0, FG_F_Choice0
+	goto_if_eq VAR_RESULT, 1, FG_F_Choice1
+	goto FG_Release
+FG_F_Choice0::
+	call FG_FrameCamera
+	fg_focus 1
+	msgbox FG_F_Text_Choice0_1
+	fg_focus 5
+	msgbox FG_F_Text_Choice0_2
+	goto FG_Release
+FG_F_Choice1::
+	call FG_FrameCamera
+	fg_focus 0
+	msgbox FG_F_Text_Choice1_1
+	fg_focus 2
+	msgbox FG_F_Text_Choice1_2
+	goto FG_Release
+FG_F_Move_Spin::
+	face_left
+	delay_4
+	face_up
+	delay_4
+	face_right
+	delay_4
+	face_down
+	delay_4
+	face_left
+	delay_4
+	face_up
+	delay_4
+	face_right
+	delay_4
+	face_down
+	step_end
+FG_F_Move_SwinubOff::
+	walk_down
+	step_end
+FG_F_Text_Main01::
+	.string "BRIAN: Nobody move. I've done the math.\nIce is bad.$"
+FG_F_Text_Main02::
+	.string "JON: It's stuck. It's been sliding in\ncircles for like ten minutes.$"
+FG_F_Text_Main03::
+	.string "LB: We go out there, we're the ones\nsliding in circles.$"
+FG_F_Text_Main04::
+	.string "BRIAN: And then who carries the\nblankets?$"
+FG_F_Text_Main05::
+	.string "JON: HAM. HAM, WHAT THE-$"
+FG_F_Text_Main06::
+	.string "JON: Ham. Slow. It's scared.$"
+FG_F_Text_Main07::
+	.string "HAM: …cock.$"
+FG_F_Text_Main08::
+	.string "LB: Is that… is he okay?$"
+FG_F_Text_Main09::
+	.string "BRIAN: That's the noise he makes when\nhe's concentrating.$"
+FG_F_Text_Main10::
+	.string "HAM: It's fine now.$"
+FG_F_Text_Main11::
+	.string "LB: You didn't even think about it.$"
+FG_F_Text_Main12::
+	.string "HAM: You were thinking about it.$"
+FG_F_Text_Main13::
+	.string "JON: He'd do that for any of 'em. Every\nPokémon. Dogs, pigs, all of 'em.$"
+FG_F_Text_Main14::
+	.string "LB: FOR ALL THE DOGS.$"
+FG_F_Text_Main15::
+	.string "JON: It's a PIG, LB.$"
+FG_F_Text_Main16::
+	.string "LB: The album's still called that, Jon.$"
+FG_F_Text_Main17::
+	.string "BRIAN: Here. You earned a blanket.$"
+FG_F_Text_Main18::
+	.string "HAM: Psyduck too.$"
+FG_F_Text_Main19::
+	.string "BRIAN: …Yeah. Psyduck too.$"
+FG_F_Text_Option0::
+	.string "Ham, that was brave$"
+FG_F_Text_Option1::
+	.string "Everyone okay?$"
+FG_F_Text_Choice0_1::
+	.string "HAM: It was little.$"
+FG_F_Text_Choice0_2::
+	.string "LB: He means the Swinub. I think.$"
+FG_F_Text_Choice1_1::
+	.string "BRIAN: Cold. Emotionally warm. Mostly\ncold.$"
+FG_F_Text_Choice1_2::
+	.string "JON: We're good. Ham's good. Go.$"

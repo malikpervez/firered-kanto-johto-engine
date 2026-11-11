@@ -29,3 +29,6 @@
     // FG-D on Cianwood's beach, below the Pokemon Center: Jon, Brian and Tim in front; Primeape, a Blackbelt, Hoothoot.
     {MAP_CIANWOOD_CITY_HNS, 32, 49, LOCALID_FRIENDS_CIANWOODCITY_HNS_BRIAN, 0x45, 7, FALSE},
     {MAP_BLACKTHORN_CITY_HNS, 21, 49, 26},
+    // FG-F on Ice Path 1F, the floor inside the Route 44 entrance: Ham, Jon, LB and Brian in front, in one row with
+    // Psyduck and Sentret (the row below stays free to the ice); the Swinub is slot 3, on the ice.
+    {MAP_ICE_PATH_1F_HNS, 20, 22, LOCALID_FRIENDS_ICEPATH_1F_HNS_BRIAN, 0x27, 3, FALSE},

@@ -235,6 +235,10 @@ bool8 FriendsStory_GetGate(u16 scene)
             && (FriendsStory_GetStage() == 17 || FriendsStory_GetStage() == 18);
     case 20:
         return FinalBattlesReady();
+    case 28: // FG-F: the Radio Tower freed, the Rising Badge not yet won, the Friends at FG16 to FG19
+        return JohtoCampaign_IsSeeded() && VarGet(JOHTO_VAR_GOLDENROD_CITY_STATE) >= 11
+            && !FlagGet(JOHTO_FLAG_BADGE08_GET)
+            && FriendsStory_GetStage() >= 16 && FriendsStory_GetStage() <= 19;
     case 21:
         return JohtoChampion() && !Seen(21);
     case 22:
@@ -282,6 +286,7 @@ u16 FriendsStory_GetMapScene(void)
     case MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS: return 18;
     case MAP_CIANWOOD_CITY_HNS: return 26;
     case MAP_BLACKTHORN_CITY_HNS: return 20;
+    case MAP_ICE_PATH_1F_HNS: return 28;
     }
     return 0;
 }

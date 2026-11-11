@@ -190,6 +190,8 @@ static s16 GiratinaOffsetX(const struct FriendsCamp *camp)
         return -4;
     if (camp->map == MAP_NEW_BARK_TOWN_HNS)
         return -6;
+    if (camp->map == MAP_ICE_PATH_1F_HNS)
+        return 4; // FG-F's Swinub, on the ice just east of the floor
     return -5;
 }
 
@@ -209,6 +211,7 @@ static const struct FriendsWalk sWalks[] = {
     {7, 4, -1, 0}, {9, 6, 1, 0}, {11, 3, 1, 0}, {18, 6, 1, 0},
     {20, 3, 0, 1}, {21, 0, 0, -1}, {22, 3, 1, 0},
     {27, 6, 1, 0}, // FG-E: Tim walks to the sign
+    {28, 1, 1, 0}, // FG-F: Ham walks out toward the Swinub
 };
 
 static bool8 WalkCellsFree(const struct FriendsCamp *camp, u16 scene)
@@ -255,10 +258,13 @@ static bool8 VisitorCellsFree(const struct FriendsCamp *camp, u16 scene)
          || VisitorCellOccupied(camp, 2, 3) || VisitorCellOccupied(camp, 4, 3))
             return FALSE;
     }
-    if (scene == 1 || scene == 11 || scene == 17 || scene == 21)
+    if (scene == 1 || scene == 11 || scene == 17 || scene == 21 || scene == 28)
         if (VisitorCellOccupied(camp, GiratinaOffsetX(camp),
                 camp->map == MAP_ECRUTEAK_CITY_HNS ? 0 : -1))
             return FALSE;
+    // FG-F's Swinub steps off the ice, one tile south, before it goes.
+    if (scene == 28 && VisitorCellOccupied(camp, GiratinaOffsetX(camp), 0))
+        return FALSE;
     return WalkCellsFree(camp, scene);
 }
 
@@ -868,6 +874,9 @@ void Special_FriendsStoryStage(void)
             ShowHuman(OBJ_EVENT_GFX_BLACK_BELT_HNS, 1);
             ShowMon(SPECIES_PRIMEAPE, 0); ShowMon(SPECIES_HOOTHOOT, 2); break;
         case 27: ShowHuman(OBJ_EVENT_GFX_FISHER, 1); break;
+        case 28:
+            ShowMon(SPECIES_PSYDUCK, 0); ShowMon(SPECIES_SENTRET, 1);
+            ShowMon(SPECIES_SWINUB, 3); break;
         }
     }
     else if (scene == 1 && beat == 19)
@@ -902,6 +911,8 @@ void Special_FriendsStoryStage(void)
         ShowMon(SPECIES_JIGGLYPUFF, 0);
         ShowMon(SPECIES_MURKROW, 2);
     }
+    else if (scene == 28 && beat == 12)
+        Remove(230); // FG-F: the Swinub, back on the snow, trots off
     else if (scene == 8 && beat == 8)
     {
         ClearPartners();
