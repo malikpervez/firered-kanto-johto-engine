@@ -30,7 +30,7 @@ Full implemented textboxes and images stay in their linked event reviews. This s
 
 **Where:** Pallet Town → Route 1.
 
-Trail begins as the same Kanto trainer who will eventually reach Johto. Eligible ordinary new games receive Pikachu in Oak’s lab. Blue receives Eevee. After the Parcel and the Pokédex, the first walk north onto Route 1 brings the Pidgey rescue and the Ho-Oh flyby; the Stranger comes down the road straight after it, sends the player to the new Pokédex (it has no entry for the bird) and asks his question.
+Trail begins as the same Kanto trainer who will eventually reach Johto. Eligible ordinary new games receive Pikachu in Oak’s lab. Blue receives Eevee, the ball Oak kept for him (“Fine. EEVEE’s with me, then!”), loses the first battle because he and Eevee “only just met”, and when the Parcel comes back Oak asks how Pikachu is getting along; games that began with a classic starter keep FireRed’s lines. After the Parcel and the Pokédex, the first walk north onto Route 1 brings the Pidgey rescue and the Ho-Oh flyby; the Stranger comes down the road straight after it, sends the player to the new Pokédex (it has no entry for the bird) and asks his question.
 
 **Progression:**
 

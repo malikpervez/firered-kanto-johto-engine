@@ -1,0 +1,74 @@
+{
+ "note": "The Pikachu start (ST01) brings OAK'S PARCEL back from Viridian: Oak asks \"How is PIKACHU getting along?\" (the copy's E2; FireRed's \"How is my old POK\u00e9MON?\" called Pikachu his, which it never was). KR-114.",
+ "created": "2026-11-09 14:45",
+ "start": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv7",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_ST01_GIVEN",
+   "FLAG_BEAT_RIVAL_IN_OAKS_LAB",
+   "FLAG_HIDE_RIVAL_IN_LAB",
+   "!FLAG_HIDE_OAK_IN_HIS_LAB",
+   "FLAG_HIDE_CHARMANDER_BALL",
+   "VAR_STARTER_MON=0",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=4",
+   "VAR_MAP_SCENE_VIRIDIAN_CITY_MART=1",
+   "ITEM_OAKS_PARCEL"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     150
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_ST01_GIVEN"
+  ],
+  "vars": [
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "in_battle": false,
+  "flags": {
+   "FLAG_ST01_GIVEN": true
+  },
+  "vars": {
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB": 4
+  }
+ },
+ "accepted": "2026-11-09 14:45"
+}
