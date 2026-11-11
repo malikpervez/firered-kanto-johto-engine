@@ -313,9 +313,10 @@ Burned Tower’s native events release the beasts and unlock Nao’s explanation
 | GD02 | Gold outside Ecruteak’s Center — [`CG_GoldEcruteak`](../../engine/data/scripts/character_growth.inc) | Replay tests `ecruteak gold …` (nine) |
 | FG17 | A reflection that waits — [`FG17_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2178) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | RB10 | Amphy callback — [`RB_OlivineVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:359) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
+| FG-D | Someone louder than Jon — [`FG_D_Interact`](../../engine/data/scripts/friends_story.inc) | Replay tests `cianwood the friends meet someone louder than jon`, `cianwood the friends answer what happened to jon`, `cianwood no friends before the fog badge`, `cianwood no friends after the johto league` |
 | FG18 | Tim books the right trip — [`FG18_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2281) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 
-FG-D’s new Cianwood beach scene is not implemented. The guide does not turn the friends’ travel into player transport rewards.
+FG-D plays on Cianwood’s beach, by the water below the Pokémon Center, while the friends are at Ecruteak's or Olivine's placement. The guide does not turn the friends’ travel into player transport rewards.
 
 ## 14. Silence the signal
 
@@ -1145,6 +1146,16 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 
 **37C source:** [`FG17_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2178). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
 
+### FG-D — Someone louder than Jon
+
+**Trigger:** Cianwood City: Johto state seeded and the Fog Badge (`JOHTO_FLAG_BADGE04_GET`, the Surf that reaches Cianwood); before the Johto Hall of Fame; the Friends' stage at FG17 or FG18. Scene 26 plays beside the stage (#120's shared machinery): Cianwood never moves the stage, and the scene retires once the stage moves past FG18. The player reaches Cianwood before Amphy is healed (FG18's gate), so it opens at FG17 too, not only after FG18 as the handoff's table has it. Once seen, the group is gone after that visit. Jon, Brian and Tim stand on the beach by the water below the Pokémon Center (camp 32,49: Jon 31,47, Brian 32,47, Tim 33,47); the Blackbelt, Primeape and Hoothoot appear just below them (30–34,48).
+
+**Status:** IMPLEMENTED 2026-11-10 (KR-121; the owner: "Yes just make sure you are following their personalities as I required originally"). Receipt `0x959`. Replay tests `cianwood the friends meet someone louder than jon`, `cianwood the friends answer what happened to jon`, `cianwood no friends before the fog badge`, `cianwood no friends after the johto league`.
+
+**Source:** [`FG_D_Interact`](../../engine/data/scripts/friends_story.inc); the draft is in [friends-new-event-scripts.md](friends-new-event-scripts.md).
+
+A Blackbelt counts his push-ups at the top of his voice. Jon asks if he's okay; Brian points out what that means, coming from Jon; Tim has been waiting months for this. The Blackbelt asks if Jon shouts with his Primeape. "Because I say it once and then I wait." Primeape throws three clean punches and looks back at him; the Blackbelt tries his next push-ups at a reasonable volume. Menu "That was impressive" (Jon: he'll start yelling again just to ruin it; Brian: that's his proud voice) / "What happened to Jon?" (Jon: "I'M RIGHT FUCKING HERE."; Tim: the loud Jon still lives in there, Primeape just doesn't need him). The menu stays on later talks during that visit.
+
 ### FG18 — Tim books the right trip
 
 **Trigger:** Johto state seeded AND original Ampharos-healed receipt; before Johto Hall of Fame; current group stage is FG18.
@@ -1334,7 +1345,7 @@ The October 19 Friends handoff is design input: FG-A–FG-G, dialogue/voice rewo
 | FG-A | Tim finds the resort | Kindle Road below Ember Spa; Bill's first Sevii trip over, Friends at FG11 or FG12 | BUILT (KR-124), replay-tested |
 | FG-B | The road nobody paved | League West Pass; Champion, Oak's Johto directions given, Friends at FG12 | BUILT (KR-125), replay-tested |
 | FG-C | The tower that sways | In front of Sprout Tower; Zephyr Badge, Friends at FG13 or FG14 | BUILT (KR-126), replay-tested |
-| FG-D | Someone louder than Jon | Cianwood beach; Proposed Cianwood arrival | NOT IMPLEMENTED / gameplay NOT RUN |
+| FG-D | Someone louder than Jon | Cianwood beach, below the Pokémon Center; after the Fog Badge | IMPLEMENTED 2026-11-10 (KR-121); see FG-D below |
 | FG-E | The lake that was told to be angry | Lake of Rage shore; Proposed Mahogany hideout clearance | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-F | Ham goes first | Ice Path safe entrance floor; Proposed post-Radio / pre-Clair window | NOT IMPLEMENTED / gameplay NOT RUN |
 | FG-G | Up six | Ecruteak pond; Proposed visit after FG22 | NOT IMPLEMENTED / gameplay NOT RUN |
