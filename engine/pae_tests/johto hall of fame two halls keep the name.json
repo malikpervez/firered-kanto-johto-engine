@@ -1,0 +1,132 @@
+{
+ "note": "Johto's League (KR-111, G8): Johto's Hall of Fame, first time: Lance adds First KANTO, now JOHTO. Two halls will keep your name.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "PokemonLeague_HallOfFame_hns",
+  "x": 5,
+  "y": 12,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "JOHTO_VAR_LEAGUE_STATE=6",
+   "CLEAR_TEAM",
+   "SPECIES_TYPHLOSION lv50"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     300
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PokemonLeague_HallOfFame_hns",
+  "x": 5,
+  "y": 4,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:27"
+}

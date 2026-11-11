@@ -4149,7 +4149,7 @@ FG03_Text_Main07::
 FG03_Text_Main08::
 	.string "LB: He does that while people are\ntalking. I didn't want to single him\pout.$"
 FG03_Text_Main09::
-	.string "BRIAN: I've slept in worse rooms.\nYesterday. That room was outside. This\pone has an echo and a working alarm\nsystem.$"
+	.string "BRIAN: I've slept in worse rooms.\nYesterday. That room was outside. This\pone has a cliff, an echo and a working\nalarm system.$"
 FG03_Text_Main10::
 	.string "JON: Where's the little round fucker? I\nwant it to see the work it's done.$"
 FG03_Text_Main11::
@@ -4161,7 +4161,7 @@ FG03_Text_Main13::
 FG03_Text_Main14::
 	.string "LB: I'm establishing a working\nrelationship. Can you go wash your\pface before you make it weird?$"
 FG03_Text_Main15::
-	.string "NICK: There's clean water in the bottle\nbeside your bag. Don't use the pond\pyet; Poliwag's been settling in there.$"
+	.string "NICK: There's clean water in the bottle\nbeside your bag. Don't use the puddle\pyet; Poliwag's been settling in there.$"
 FG03_Text_Main16::
 	.string "JON: Since when do you have a Poliwag?$"
 FG03_Text_Main17::
@@ -4175,7 +4175,7 @@ FG03_Text_Main20::
 FG03_Text_Main21::
 	.string "NICK: Start by asking before the\nsinging.$"
 FG03_Text_Main22::
-	.string "JON: And give me enough warning to\nleave the fucking cave.$"
+	.string "JON: And give me enough warning to\nleave the fucking clearing.$"
 FG03_Text_Main23::
 	.string "LB: Fine. You get advance notice. Nick\ngets a dry shoe. Everybody happy?$"
 FG03_Text_Main24::
@@ -4237,7 +4237,7 @@ FG04_Text_Main18::
 FG04_Text_Main19::
 	.string "TIM: It can fly, though. That's still\nrelevant to the getting-home\pdiscussion.$"
 FG04_Text_Main20::
-	.string "NICK: It can fly around this picnic\narea. Let's not assign it international\ptransport before we've finished lunch.$"
+	.string "NICK: It can fly around this square.\nLet's not assign it international\ptransport before we've finished lunch.$"
 FG04_Text_Main21::
 	.string "BRIAN: Ham, is that duck yours? It's\nbeen beside you for twenty minutes.$"
 FG04_Text_Main22::
@@ -4317,7 +4317,7 @@ FG05_Text_Main24::
 FG05_Text_Main25::
 	.string "TIM: Thank you. I can have interests\nand still read the fucking terms.$"
 FG05_Text_Main26::
-	.string "CLERK: Then please read the departure\npoint as well. This is the ticket\poffice. The boat is outside.$"
+	.string "CLERK: Then please read the departure\npoint as well. This is the square.\pThe boat leaves from the pier.$"
 FG05_Text_Repeat::
 	.string "TIM: We checked the route and the\nfare. Our booking is sorted.$"
 FG06_Text_Main01::
@@ -4435,7 +4435,7 @@ FG07_Text_Main21::
 FG07_Text_Main22::
 	.string "XAVIER: Good call. Thanks. Give it room\nto move out if it wants to.$"
 FG07_Text_Main23::
-	.string "RESTAURANT OWNER: Are all seven of you\nhelping? I need the tables clear\pbefore the dinner customers arrive.$"
+	.string "RESTAURANT OWNER: There you are! Are\nall seven of you helping? I need the\ptables clear before the dinner\ncustomers arrive.$"
 FG07_Text_Main24::
 	.string "JON: Yes. All seven. Apparently we're a\nfucking catering company now.$"
 FG07_Text_Main25::
@@ -4457,7 +4457,7 @@ FG07_Text_Choice1_03::
 FG07_Text_Choice1_04::
 	.string "XAVIER: It is. Which is why you can\nstop opening it. I wrote breakfast on\pthe front.$"
 FG07_Text_Choice2_01::
-	.string "XAVIER: We'll still be here. Brian is\nmeasuring the bench.$"
+	.string "XAVIER: We'll still be here. Brian is\nmeasuring the bench by the pond.$"
 FG07_Text_Choice2_02::
 	.string "BRIAN: Comparing it with the one\noutside our room. I'm trying to improve\pour quality of life.$"
 FG07_Text_Choice2_03::

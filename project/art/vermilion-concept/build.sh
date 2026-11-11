@@ -74,6 +74,7 @@ pae map place $M bg 2 15 18 $P        # the Gym's sign, in its yard
 pae map place $M bg 3 36 21 $P        # the harbour's sign, by the pier's head
 pae map place $M bg 4 55 10 $P        # the Snorlax notice, by the road to Route 11
 pae map place $M bg 5 54 30 $P        # the hidden Max Ether, at the quay's corner
+pae map place $M bg 6 31 17 $P        # the ferry board, at the Friends' park
 # (the Friends, objects 15-21, camp round 30,19 as before: src/data/friends_scene_locations.h)
 
 # at night: the glass on its palette's lit copy, where it has one, and a glow round each lamp's head, after every

@@ -15,7 +15,7 @@ TTTTTT======================================================
 TTTTTT======================================================
 TTTTTT#########.##.........................................b
 TTTTTT#WWWWWWW...#..HHHHH.**......b.........UUUU........TTTT
-TTTTTT#WWWWWWW...#..HHHHH.**................UUUU..***...TTTT
+TTTTTT#WWWWWWW...#..HHHHH.**...S............UUUU..***...TTTT
 TTTTTT#WWWWWWW.S.#..HHHHH...................UUUU..***...TTTT
 TTTTTT#WWWWWWW...#..HHHHH...................UUUU........TTTT
 TTTTTT#WWWWWWW...#b..............**...................**TTTT

@@ -195,6 +195,8 @@ PokemonLeague_HallOfFame_LanceText:
 	.string "perseverance and determination.\p"
 	.string "The new LEAGUE CHAMPION who has\n"
 	.string "all the makings of greatness!\p"
+	.string "First KANTO, now JOHTO. Two halls\n"
+	.string "will keep your name.\p"
 	.string "{PLAYER}, allow me to register you\n"
 	.string "and your partners as CHAMPIONS!$"
 

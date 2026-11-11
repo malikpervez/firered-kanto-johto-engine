@@ -1,0 +1,99 @@
+{
+ "note": "Johto's League (KR-111, G5): Koga, first time in Johto's hall, keeps Fuchsia's Gym and a seat here: a ninja can be in two places at once.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "PokemonLeague_KogasRoom_hns",
+  "x": 6,
+  "y": 11,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "JOHTO_VAR_LEAGUE_STATE=2"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     150
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     34
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PokemonLeague_KogasRoom_hns",
+  "x": 6,
+  "y": 7,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:27"
+}

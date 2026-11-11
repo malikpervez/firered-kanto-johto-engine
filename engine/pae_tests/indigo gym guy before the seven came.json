@@ -1,0 +1,116 @@
+{
+ "note": "Before the Friends' FG11: the guide gives only his advice; after Go for it! the box closes.",
+ "created": "2026-11-09 16:24",
+ "start": {
+  "map": "IndigoPlateau_PokemonCenter_1F_Frlg",
+  "x": 8,
+  "y": 14,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF",
+   "FLAG_BADGE01_GET",
+   "FLAG_BADGE02_GET",
+   "FLAG_BADGE03_GET",
+   "FLAG_BADGE04_GET",
+   "FLAG_BADGE05_GET",
+   "FLAG_BADGE06_GET",
+   "FLAG_BADGE07_GET",
+   "FLAG_BADGE08_GET",
+   "!FLAG_FRIENDS_FG11_SEEN",
+   "!FLAG_SYS_GAME_CLEAR"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "IndigoPlateau_PokemonCenter_1F_Frlg",
+  "x": 8,
+  "y": 14,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 16:26"
+}

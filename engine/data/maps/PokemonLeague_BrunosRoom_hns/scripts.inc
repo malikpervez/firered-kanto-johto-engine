@@ -78,15 +78,13 @@ PokemonLeague_BrunosRoom_Text_RematchBefore:
 	.string "Hoo hah!$"
 
 PokemonLeague_BrunosRoom_Text_Before:
-	.string "I am BRUNO of the ELITE FOUR.\p"
-	.string "I always train to the extreme be-\n"
-	.string "cause I believe in our potential.\p"
-	.string "That is how we became strong.\p"
+	.string "BRUNO: {PLAYER}. We fought at\n"
+	.string "INDIGO PLATEAU.\p"
+	.string "I sit in both halls. A wall should\n"
+	.string "stand wherever trainers climb.\p"
+	.string "Since you beat me, I have trained\n"
+	.string "to the extreme. So have my POKéMON.\p"
 	.string "Can you withstand our power?\p"
-	.string "Hm? I see no fear in you. You look\n"
-	.string "determined. Perfect for battle!\p"
-	.string "Ready, {PLAYER}? You will bow down\n"
-	.string "to our overwhelming power!\p"
 	.string "Hoo hah!$"
 
 PokemonLeague_BrunosRoom_Text_Beaten:

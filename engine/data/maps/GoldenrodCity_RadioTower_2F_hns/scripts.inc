@@ -183,9 +183,10 @@ GoldenrodCity_RadioTower_2F_Text_BlackBelt2:
 	.string "as he was before.$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM4Seen:
-	.string "Three years ago, TEAM ROCKET was\n"
-	.string "forced to disband.\p"
-	.string "But we're making a comeback here!$"
+	.string "GIOVANNI told us TEAM ROCKET was\n"
+	.string "finished.\p"
+	.string "ARCHER says it isn't. We're making\n"
+	.string "a comeback here!$"
 
 GoldenrodCity_RadioTower_2F_Text_GruntM4Beaten:
 	.string "Gwah! Don't get cute!$"

@@ -1,5 +1,5 @@
 {
- "note": "After the Hall of Fame Oak meets the new Champion outside the house: he welcomes them home, still beaming from the Hall of Fame he watched, and asks them to follow him. No Pokédex count, no One Island visit (KR-107, KR-108).",
+ "note": "After the Hall of Fame Oak meets the new Champion outside the house: he welcomes them home, still beaming from the Hall of Fame he watched, and asks them to follow him. No Pok\u00e9dex count, no One Island visit (KR-107, KR-108).",
  "created": "2026-11-06 16:38",
  "start": {
   "map": "PalletTown_PlayersHouse_1F_Frlg",
@@ -48,5 +48,5 @@
   "y": 8,
   "in_battle": false
  },
- "accepted": "2026-11-06 19:48"
+ "accepted": "2026-11-09 15:19"
 }

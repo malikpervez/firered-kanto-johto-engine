@@ -284,7 +284,8 @@
  },
  "f": "sign_on_setts_NE#145",
  "F": "sign_on_setts_SE#147_to_pavement_S",
- "i": "sign_on_setts_SE#0",
+ "i": "sign_on_setts_SW#0",
+ "I": "sign_on_setts_SE#0",
  "ƀ": {
   "name": "fence#6_on_setts_SE#100_to_pavement_N",
   "joins": "#"

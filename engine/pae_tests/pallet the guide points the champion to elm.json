@@ -1,0 +1,73 @@
+{
+ "note": "After the League, Johto not started: Pallet's guide (12, 10) only points the way, as Oak and the League West Pass officer give the directions in full: \"Congratulations, CHAMPION! Off to see PROF.ELM? The road west of the LEAGUE runs down to the sea.\" Ends on that box (the story copy's A13, KR-113).",
+ "created": "2026-11-09 15:19",
+ "start": {
+  "map": "PalletTown_Frlg",
+  "x": 12,
+  "y": 11,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_CHARMANDER lv50",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_NATIONAL_DEX",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "FLAG_HIDE_OAK_IN_PALLET_TOWN",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=9"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_Frlg",
+  "x": 12,
+  "y": 11,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 15:19"
+}

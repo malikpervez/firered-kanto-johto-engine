@@ -35,7 +35,15 @@ IndigoPlateau_PokemonCenter_1F_EventScript_SeviiIslandComplete::
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_GymGuy::
-	msgbox IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice
+	@ KR-120: after FG11 (the seven at Cinnabar), before the League, he sets up FG12's joke.
+	goto_if_unset FLAG_FRIENDS_FG11_SEEN, IndigoPlateau_PokemonCenter_1F_EventScript_GymGuyEnd
+	goto_if_set FLAG_SYS_GAME_CLEAR, IndigoPlateau_PokemonCenter_1F_EventScript_GymGuyEnd
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_GymGuySeven
+IndigoPlateau_PokemonCenter_1F_EventScript_GymGuyEnd::
+	release
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Clerk::
@@ -77,6 +85,11 @@ IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
 	.string "over again!\p"
 	.string "This is it!\n"
 	.string "Go for it!$"
+
+IndigoPlateau_PokemonCenter_1F_Text_GymGuySeven::
+	.string "Seven strange people asked where\n"
+	.string "they could watch the LEAGUE on TV.\p"
+	.string "One of them was very loud.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
 	.string "From here on, you face the\n"

@@ -122,6 +122,8 @@ Route31_Text_CooltrainerM:
 	.string "I'd explore it.$"
 
 Route31_Text_BugCatcherWade1_Seen:
+	.string "Is that a PIKACHU? You don't see\n"
+	.string "many around here.\p"
 	.string "I caught a bunch of POKéMON.\n"
 	.string "Let me battle with you!$"
 
