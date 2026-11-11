@@ -215,7 +215,7 @@ Blue remains the original competitive Kanto rival through the first championship
 **Progression:**
 
 1. Earn the remaining native Kanto badges and clear the first Kanto League.
-2. Oak’s Hall-of-Fame referral points the trainer toward Elm and Johto. If the player saw the bird, Oak also passes on, once, that Nao read his notes on the sighting and has gone home to Ecruteak (by name as a friend if they met in Kanto, as a bell keeper from Ecruteak if not).
+2. Home after the Hall of Fame: Mom watched it on TV and says Oak came looking for them. Outside the door Oak, who was at the Plateau, walks the Champion to his lab, where one scene carries the whole hand-off (KR-113): Oak built the Pokédex with only the Pokémon he knew in Kanto and asks for help recording the rest; Blue walks in (“You’re asking {PLAYER} for help and not your own grandson?”); in the Pikachu start Oak notices any of Bulbasaur, Charmander and Squirtle the player met on the road; the National Dex upgrade; room in it now, perhaps for the rainbow bird (a player who never told Oak about the Pidgey and the bird tells him here); Blue leaves to pack for Oak’s next field survey; then Oak sends the player to Elm in New Bark Town with the road there (or, if they met Elm first, says he heard), and passes on Nao’s news unless they found her in Ecruteak already (by name as a friend if they met in Kanto, as a bell keeper from Ecruteak if not). Each is told once. Later talks give the Pokédex rating and one reminder line; Pallet’s guide only points the way.
 
 **Connected events:**
 
@@ -472,7 +472,7 @@ Pidgey shelter and early Ho-Oh flyby after the original opening.
 
 ### RB02 — Oak records it
 
-**Trigger:** Normal Oak interaction calls RB_OakStory. Supported adoption, Dex received, lab scene !=8, no higher Champion/Johto-letter dispatch; OPENING_SEEN must be set.
+**Trigger:** Normal Oak interaction calls RB_OakStory. Supported adoption, Dex received, before the Kanto League, OPENING_SEEN set. It plays once and mentions the Pidgey too (`FLAG_RB_OAK_HEARD_BIRD`, FireRed's unused `0x0B0`; KR-113); a player who never tells Oak before the League tells him in the National Dex scene, so Oak’s notes hold the sighting before BL02 and RB08.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
@@ -522,13 +522,13 @@ Existing Silph scientist confirms Rocket call-reproduction equipment.
 
 ### RB07 — Oak sends you west
 
-**Trigger:** Oak dispatch prioritizes supported story state/Dex and original lab state. After native Kanto Champion, OPENING_SEEN chooses westward memory; otherwise honest research text. The separate pre-existing JohtoReferral call remains authoritative for road directions.
+**Trigger:** The end of the National Dex scene after the Kanto League (`PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm`, KR-113), once (`FLAG_OAK_GAVE_JOHTO_DIRECTIONS`). OPENING_SEEN chooses “that bird flew west, didn’t it? Toward JOHTO”; otherwise “one more thing”. A player who already met Elm hears that Oak heard instead of the road. A save whose scene played before KR-113 hears it once on its next talk. Later talks: the rating, then one reminder line.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
 **37C source:** [`RB_OakReferral`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:121). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Added bird context surrounds the existing Oak→Indigo western pass→Surf→Elm referral. With the bird seen, Oak then passes on Nao’s news, inside the once-only referral (`FLAG_OAK_GAVE_JOHTO_DIRECTIONS`, #104) and only if the player hasn’t met her in Ecruteak yet (`FLAG_RB_ECRUTEAK_TRUTH_SEEN`): “Your friend NAO came by to read my notes on your sighting. She has gone home to ECRUTEAK. She hopes you will visit her.” if `FLAG_RB_NAO_INTRODUCED`, otherwise “A bell keeper from ECRUTEAK came to read my notes on the bird. NAO, she said. She has asked all of KANTO about it.” Replay tests `pallet oak passes on naos news`, `pallet oak tells of a bell keeper from ecruteak` (2026-10-31; since 2026-11-09 they start in the lab as the National Dex scene leaves it).
+The referral, the road (Indigo Plateau, the road west of the League, Route 27, Surf west to New Bark Town) and Nao’s news, told once in the scene. Nao’s news plays only if the player hasn’t met her in Ecruteak yet (`FLAG_RB_ECRUTEAK_TRUTH_SEEN`): “Oh! Your friend NAO came by while you were away. She asked why a bird like yours has no entry. I couldn’t tell her. She’s gone home to ECRUTEAK, in JOHTO. She hopes you’ll visit.” if `FLAG_RB_NAO_INTRODUCED` (without the bird line if the bird wasn’t seen), otherwise, with the bird seen, “Oh! A bell keeper came by while you were away. NAO, from ECRUTEAK. She has asked all over KANTO about a bird like yours. She’s gone home.” Replay tests `pallet oak passes on naos news`, `pallet oak tells of a bell keeper from ecruteak` (2026-10-31; since KR-113 they play the National Dex scene from its start and end on Nao’s news).
 
 ### RB08 — Elm's welcome
 
@@ -862,7 +862,7 @@ Optional return-path rescue aftermath: actual Jessie/Meowth and ordinary Seel; J
 
 ### BL01 — A new field of study
 
-**Trigger:** First Kanto HOF/credits return; native Oak and rival/Dex scenes retain priority. Optional added actor, saved Kanto rival name.
+**Trigger:** First Kanto HOF/credits return, once the National Dex scene has played (the lab at 9; KR-113): Blue asked to join Oak’s next field survey as he left it, and opens with “Grandpa said yes!”. Optional added actor, saved Kanto rival name.
 
 **Status:** IMPLEMENTED. Original 31-series evidence; JT02/JT03 presentation and battle updates use 33B. Unexecuted branches stay pending in the linked ledger.
 

@@ -1,0 +1,72 @@
+{
+ "note": "The next visit to the lab after the National Dex scene: Blue (BL01) starts \"{RIVAL}: {PLAYER}! Grandpa said yes!\", the field survey he asked to join as he left the scene. Ends on that box (the story copy's A11, KR-113).",
+ "created": "2026-11-09 15:19",
+ "start": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 9,
+  "y": 11,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_CHARMANDER lv50",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_NATIONAL_DEX",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "FLAG_HIDE_RIVAL_IN_LAB",
+   "!FLAG_HIDE_OAK_IN_HIS_LAB",
+   "FLAG_OAK_GAVE_JOHTO_DIRECTIONS",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=9"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_BL01_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 9,
+  "y": 11,
+  "in_battle": false,
+  "flags": {
+   "FLAG_BL01_SEEN": false
+  }
+ },
+ "accepted": "2026-11-09 15:19"
+}
