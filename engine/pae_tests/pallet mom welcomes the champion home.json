@@ -1,0 +1,82 @@
+{
+ "note": "Home from the Hall of Fame (Pallet's Oak scene still to come): Mom, before her rest, \"MOM: Welcome home, CHAMPION! I watched it all on TV... PROF.OAK came looking for you. He wants to see you right away.\" Ends on that box (the story copy's A0, KR-113).",
+ "created": "2026-11-09 15:19",
+ "start": {
+  "map": "PalletTown_PlayersHouse_1F_Frlg",
+  "x": 7,
+  "y": 5,
+  "state": [
+   "SPECIES_CHARMANDER lv50",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=2",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "FLAG_BEAT_RIVAL_IN_OAKS_LAB"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_PlayersHouse_1F_Frlg",
+  "x": 7,
+  "y": 5,
+  "in_battle": false,
+  "vars": {
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK": 2
+  }
+ },
+ "accepted": "2026-11-09 15:19"
+}

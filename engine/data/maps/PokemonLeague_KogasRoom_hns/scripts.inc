@@ -76,14 +76,13 @@ PokemonLeague_KogasRoom_Text_RematchBefore:
 
 PokemonLeague_KogasRoom_Text_Before:
 	.string "Fwahahahaha!\p"
-	.string "I am KOGA of the ELITE FOUR.\p"
-	.string "I live in shadows, a ninja!\p"
-	.string "My intricate style will confound\n"
-	.string "and destroy you!\p"
-	.string "Confusion, sleep, poison…\p"
-	.string "Prepare to be the victim of my\n"
-	.string "sinister technique!\p"
-	.string "Fwahahahaha!\p"
+	.string "We meet again, CHAMPION of KANTO.\n"
+	.string "You took my SOULBADGE in FUCHSIA.\p"
+	.string "I keep FUCHSIA's GYM, and a seat in\n"
+	.string "this hall. A ninja can be in two\l"
+	.string "places at once. Fwahahaha!\p"
+	.string "Confusion, sleep, poison…\n"
+	.string "This time, I hold nothing back!\p"
 	.string "POKéMON is not merely about brute\n"
 	.string "force--you shall see soon enough!$"
 

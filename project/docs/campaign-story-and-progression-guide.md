@@ -30,7 +30,7 @@ Full implemented textboxes and images stay in their linked event reviews. This s
 
 **Where:** Pallet Town → Route 1.
 
-Trail begins as the same Kanto trainer who will eventually reach Johto. Eligible ordinary new games receive Pikachu in Oak’s lab. Blue receives Eevee. After the Parcel and the Pokédex, the first walk north onto Route 1 brings the Pidgey rescue and the Ho-Oh flyby; the Stranger comes down the road straight after it, sends the player to the new Pokédex (it has no entry for the bird) and asks his question.
+Trail begins as the same Kanto trainer who will eventually reach Johto. Eligible ordinary new games receive Pikachu in Oak’s lab. Blue receives Eevee, the ball Oak kept for him (“Fine. EEVEE’s with me, then!”), loses the first battle because he and Eevee “only just met”, and when the Parcel comes back Oak asks how Pikachu is getting along; games that began with a classic starter keep FireRed’s lines. After the Parcel and the Pokédex, the first walk north onto Route 1 brings the Pidgey rescue and the Ho-Oh flyby; the Stranger comes down the road straight after it, sends the player to the new Pokédex (it has no entry for the bird) and asks his question.
 
 **Progression:**
 
@@ -215,7 +215,7 @@ Blue remains the original competitive Kanto rival through the first championship
 **Progression:**
 
 1. Earn the remaining native Kanto badges and clear the first Kanto League.
-2. Oak’s Hall-of-Fame referral points the trainer toward Elm and Johto. If the player saw the bird, Oak also passes on, once, that Nao read his notes on the sighting and has gone home to Ecruteak (by name as a friend if they met in Kanto, as a bell keeper from Ecruteak if not).
+2. Home after the Hall of Fame: Mom watched it on TV and says Oak came looking for them. Outside the door Oak, who was at the Plateau, walks the Champion to his lab, where one scene carries the whole hand-off (KR-113): Oak built the Pokédex with only the Pokémon he knew in Kanto and asks for help recording the rest; Blue walks in (“You’re asking {PLAYER} for help and not your own grandson?”); in the Pikachu start Oak notices any of Bulbasaur, Charmander and Squirtle the player met on the road; the National Dex upgrade; room in it now, perhaps for the rainbow bird (a player who never told Oak about the Pidgey and the bird tells him here); Blue leaves to pack for Oak’s next field survey; then Oak sends the player to Elm in New Bark Town with the road there (or, if they met Elm first, says he heard), and passes on Nao’s news unless they found her in Ecruteak already (by name as a friend if they met in Kanto, as a bell keeper from Ecruteak if not). Each is told once. Later talks give the Pokédex rating and one reminder line; Pallet’s guide only points the way.
 
 **Connected events:**
 
@@ -323,6 +323,8 @@ FG-D’s new Cianwood beach scene is not implemented. The guide does not turn th
 
 The original red Gyarados, Mahogany hideout and Radio Tower battles retain their role. Nao’s copied recording is switched off through a later conversation. Silver waits at a Center, while the friends help frightened Pokémon after the takeover.
 
+**Rocket’s power struggle (KR-110).** Giovanni quit at Viridian weeks ago, beaten by the player; in Johto his branch split instead of stopping. Archer wants him back and takes the Radio Tower to call him home on every radio; Ariana, the “interim boss” of Mahogany, wants Rocket strong without him; Proton runs the money; Petrel copies Giovanni’s voice to keep the grunts in line; the scientists, several from Silph, follow whoever funds the work. Kurt, Proton, the Violet gentleman, Silver in Azalea (a battle that carries on if the player loses: his “Some CHAMPION.” plays, the party is healed and the story goes on), the hideout and Radio Tower lines and the Pokégear broadcast each show a piece of it. Beaten, Archer disbands Rocket “like GIOVANNI did before me” and no longer answers for anyone who keeps the name; Ariana keeps it, and Black Tide is hers (LG01, LG02, LG06). The Five Island warehouse admin, met after the Radio Tower, has heard Archer quit too and calls it lies. In the Celebi scenes Giovanni recognises the child who beat him weeks ago, and Silver on Route 22 knows the kid who beat his father.
+
 **Progression:**
 
 1. Resolve native Lake of Rage/Mahogany progression, Pryce and the Radio Tower takeover.
@@ -398,9 +400,11 @@ The three attackers are Rocket-made replicas. Defeating OR catching each, in any
 
 ## 17. A second championship, the same trainer
 
-**Where:** Native Johto League approach → Hall of Fame.
+**Where:** Route 26 → Reception Gate → Johto’s Victory Road → LAUREL PLATEAU → Hall of Fame.
 
 The original late Johto rival, League approach, Elite Four and Champion progression remains independent of Kanto’s championship. Optional friends or legendary captures do not substitute for clearing Johto’s own Hall of Fame. Afterwards Gold waits outside Elm’s lab in New Bark with five badges, for one last battle: he didn’t shout once.
+
+Johto’s plateau is LAUREL PLATEAU, Johto’s own League (KR-111): its sign, its map name and town-map place (a map section of its own, apart from Kanto’s INDIGO PLATEAU, which keeps its name), Elm’s directions after the eighth badge and the Blackthorn Center’s gentleman. The new hall borrowed Kanto’s strongest, and the people say so once each: the Center’s trainer tells the history (Johto’s trainers used to cross the mountains to Indigo; now Johto has a League of its own and Lance came home to be its Champion); Lance at the Lake of Rage remembers the player from Indigo Plateau and his Dragonite; Koga keeps Fuchsia’s Gym and a seat here; Bruno sits in both halls; Lance in the Champion’s room is Johto’s Champion with the team he keeps for it, and in the Hall of Fame two halls keep the player’s name. Oak at Olivine’s port greets a Champion of two Leagues.
 
 **Progression:**
 
@@ -475,7 +479,7 @@ Pidgey shelter and early Ho-Oh flyby after the original opening.
 
 ### RB02 — Oak records it
 
-**Trigger:** Normal Oak interaction calls RB_OakStory. Supported adoption, Dex received, lab scene !=8, no higher Champion/Johto-letter dispatch; OPENING_SEEN must be set.
+**Trigger:** Normal Oak interaction calls RB_OakStory. Supported adoption, Dex received, before the Kanto League, OPENING_SEEN set. It plays once and mentions the Pidgey too (`FLAG_RB_OAK_HEARD_BIRD`, FireRed's unused `0x0B0`; KR-113); a player who never tells Oak before the League tells him in the National Dex scene, so Oak’s notes hold the sighting before BL02 and RB08.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
@@ -525,13 +529,13 @@ Existing Silph scientist confirms Rocket call-reproduction equipment.
 
 ### RB07 — Oak sends you west
 
-**Trigger:** Oak dispatch prioritizes supported story state/Dex and original lab state. After native Kanto Champion, OPENING_SEEN chooses westward memory; otherwise honest research text. The separate pre-existing JohtoReferral call remains authoritative for road directions.
+**Trigger:** The end of the National Dex scene after the Kanto League (`PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm`, KR-113), once (`FLAG_OAK_GAVE_JOHTO_DIRECTIONS`). OPENING_SEEN chooses “that bird flew west, didn’t it? Toward JOHTO”; otherwise “one more thing”. A player who already met Elm hears that Oak heard instead of the road. A save whose scene played before KR-113 hears it once on its next talk. Later talks: the rating, then one reminder line.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
 **37C source:** [`RB_OakReferral`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:121). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Added bird context surrounds the existing Oak→Indigo western pass→Surf→Elm referral. With the bird seen, Oak then passes on Nao’s news, inside the once-only referral (`FLAG_OAK_GAVE_JOHTO_DIRECTIONS`, #104) and only if the player hasn’t met her in Ecruteak yet (`FLAG_RB_ECRUTEAK_TRUTH_SEEN`): “Your friend NAO came by to read my notes on your sighting. She has gone home to ECRUTEAK. She hopes you will visit her.” if `FLAG_RB_NAO_INTRODUCED`, otherwise “A bell keeper from ECRUTEAK came to read my notes on the bird. NAO, she said. She has asked all of KANTO about it.” Replay tests `pallet oak passes on naos news`, `pallet oak tells of a bell keeper from ecruteak` (2026-10-31; since 2026-11-09 they start in the lab as the National Dex scene leaves it).
+The referral, the road (Indigo Plateau, the road west of the League, Route 27, Surf west to New Bark Town) and Nao’s news, told once in the scene. Nao’s news plays only if the player hasn’t met her in Ecruteak yet (`FLAG_RB_ECRUTEAK_TRUTH_SEEN`): “Oh! Your friend NAO came by while you were away. She asked why a bird like yours has no entry. I couldn’t tell her. She’s gone home to ECRUTEAK, in JOHTO. She hopes you’ll visit.” if `FLAG_RB_NAO_INTRODUCED` (without the bird line if the bird wasn’t seen), otherwise, with the bird seen, “Oh! A bell keeper came by while you were away. NAO, from ECRUTEAK. She has asked all over KANTO about a bird like yours. She’s gone home.” Replay tests `pallet oak passes on naos news`, `pallet oak tells of a bell keeper from ecruteak` (2026-10-31; since KR-113 they play the National Dex scene from its start and end on Nao’s news).
 
 ### RB08 — Elm's welcome
 
@@ -635,13 +639,13 @@ Fossil-choice question and small psychic rock movement.
 
 ### MW03 — A home, not a cage
 
-**Trigger:** Original Poké Flute receipt; own scene unseen; suppressed by MW06 or native Mewtwo closure. No permanent Fuji relocation.
+**Trigger:** Original Poké Flute receipt; own scene unseen; suppressed by MW06 or native Mewtwo closure. The stranger (`LOCALID_LAVENDER_MW03_STRANGER`) waits near Mr. Fuji's door, at (9,16) past the Volunteer House sign, facing it; he blocks no path. No permanent Fuji relocation.
 
-**Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
+**Status:** IMPLEMENTED. Historical 30-series native scope; staged at Fuji's door 2026-11-09 (story copy D, KR-116). Replay tests `lavender fuji at his door`, `lavender gentleman`; `lavender the friends camp` plays FG08 with the stranger beside the door.
 
 **37C source:** [`MW03_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:446). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Separate Lavender stranger/Fuji exchange with optional Mew glimpse.
+Talked to, the stranger turns to the door. It opens: a Psyduck wanders out, sniffs the air and goes back in. “STRANGER: Nothing keeps them here.” Mr. Fuji steps out to answer him (a scene-only actor, `LOCALID_LAVENDER_MW03_FUJI`; the Fuji in his house doesn't move): “Some leave when they're ready.” “And you allow that?” “It is a home, not a cage. I learned that late.” He goes back in and the door closes; the traveler has no reply; Mew's glimpse; the stranger leaves (`FLAG_MW03_SEEN`). Nothing else says Fuji made Mewtwo.
 
 ### MW04 — Celadon trust
 
@@ -711,7 +715,7 @@ Neutral post-resolution reflection and optional Mew glimpse.
 
 **37C source:** [`BlackTide_CoastalWarning`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1009). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warning after the native Radio Tower state reaches10. The warning itself grants no travel/item/branch progress.
+Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warning after the native Radio Tower state reaches10: three huge birds striking in turns, and Rocket boats near the islands although Rocket quit (KR-110). The warning itself grants no travel/item/branch progress.
 
 ### LG02 — The manufactured birds attack Lugia
 
@@ -721,7 +725,7 @@ Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warni
 
 **37C source:** [`WhirlIslands_LugiaChamber_hns_MapScripts`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-A once-only chamber scene stages three separately manufactured replicas striking Lugia. Rocket leaves, Lugia darkens, and the three independent encounters remain.
+A once-only chamber scene stages three separately manufactured replicas striking Lugia. The Rocket technician says Archer quit, Ariana didn’t, and the project answers to her now (KR-110). Rocket leaves, Lugia darkens, and the three independent encounters remain.
 
 ### LG03 — Articuno replica: independent battle
 
@@ -761,7 +765,7 @@ Resolve this Rocket replica by defeating OR catching it. Its original Kanto/Sevi
 
 **37C source:** [`BlackTide_LinksIfReady`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:884). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-The third independent success breaks Rocket control. Lugia remains in the Shadow state, becomes approachable, and the Keeper allows unlimited preparation.
+The third independent success breaks Rocket control. Lugia remains in the Shadow state, becomes approachable, and the Keeper allows unlimited preparation. From then on a Rocket log can be read where each replica stood: the calls copied (Seafoam Islands, Power Plant, Mt. Ember), Silph’s recording devices, three specimens, no retreat (GAP-30, KR-110).
 
 ### LG07 — Approach and face Shadow Lugia
 
@@ -865,7 +869,7 @@ Optional return-path rescue aftermath: actual Jessie/Meowth and ordinary Seel; J
 
 ### BL01 — A new field of study
 
-**Trigger:** First Kanto HOF/credits return; native Oak and rival/Dex scenes retain priority. Optional added actor, saved Kanto rival name.
+**Trigger:** First Kanto HOF/credits return, once the National Dex scene has played (the lab at 9; KR-113): Blue asked to join Oak’s next field survey as he left it, and opens with “Grandpa said yes!”. Optional added actor, saved Kanto rival name.
 
 **Status:** IMPLEMENTED. Original 31-series evidence; JT02/JT03 presentation and battle updates use 33B. Unexecuted branches stay pending in the linked ledger.
 

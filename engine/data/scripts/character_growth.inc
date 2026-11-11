@@ -19,8 +19,9 @@ CG_BlueLabVisibility::
 	goto_if_eq VAR_RESULT, FALSE, CG_Return
 	goto_if_unset FLAG_SYS_GAME_CLEAR, CG_Return
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_OAK, 2, CG_Return
-	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, CG_Return
-	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, CG_Return
+	@ Only once the National Dex scene is over (lab 9), where Blue asks to join Oak's survey (KR-113): an older
+	@ Champion save at lab 6 meets him after it too, so BL01 and BL02 follow it in every order.
+	goto_if_lt VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 9, CG_Return
 	goto_if_unset FLAG_HIDE_RIVAL_IN_LAB, CG_Return
 	goto_if_unset FLAG_BL01_SEEN, CG_ShowActor
 	callnative Special_CharacterStoryElmProgress, requests_effects=1
@@ -463,7 +464,12 @@ CG_Movement_GoldLeavesNewBarkAround::
 	step_end
 
 CG_Text_BL01::
-	.string "{RIVAL}: Hey, {PLAYER}!\pGrandpa's taking me on his next\nfield survey.\pI've already filled half a\nnotebook. Apparently I'm meant\lto leave room for the results!$"
+	.string "{RIVAL}: {PLAYER}! Grandpa said yes!\p"
+	.string "I'm going with him on his next\n"
+	.string "field survey.\p"
+	.string "I've already filled half a\n"
+	.string "notebook. Apparently I'm meant\l"
+	.string "to leave room for the results!$"
 CG_Text_BL02::
 	.string "{RIVAL}: These PIDGEY use the\nsame tree when the wind changes.\pI'm trying to find out why.$"
 CG_Text_BL02_Storm::

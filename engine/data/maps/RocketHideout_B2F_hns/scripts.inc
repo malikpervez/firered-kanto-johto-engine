@@ -809,8 +809,9 @@ RocketHideout_B2F_Text_GruntM19Beaten:
 RocketHideout_B2F_Text_GruntM19After:
 	.string "Heh, only the boss knows the\n"
 	.string "password for that door.\p"
-	.string "Where's the boss? Who knows?\n"
-	.string "Go look for yourself.$"
+	.string "Which boss? ARIANA says she's in\n"
+	.string "charge. ARCHER says he is.\p"
+	.string "Go ask them yourself.$"
 
 RocketHideout_B2F_EventScript_Grunt16::
 	trainerbattle_single TRAINER_JOHTO_GRUNT_16_HNS, RocketHideout_B2F_Text_GruntM19Seen, RocketHideout_B2F_Text_GruntM19Beaten

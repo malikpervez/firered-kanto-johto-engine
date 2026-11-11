@@ -1,0 +1,65 @@
+{
+ "note": "Violet Pokemon Center gentleman (B3): Rocket fell in Kanto a few weeks ago, to a trainer from Pallet; he half-recognises the player.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "VioletCity_PokemonCenter_hns",
+  "x": 12,
+  "y": 6,
+  "state": [
+   "CALL JohtoCampaign_Initialize"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VioletCity_PokemonCenter_hns",
+  "x": 12,
+  "y": 6,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:30"
+}

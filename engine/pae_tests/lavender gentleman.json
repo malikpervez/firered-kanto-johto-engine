@@ -1,9 +1,9 @@
 {
- "note": "With the Poke Flute got, the stranger waits by the Volunteer House; talk to him to see his scene with Mr. Fuji, and he goes.",
+ "note": "With the Poke Flute got, the stranger waits beside Mr. Fuji's door; talk to him to see his scene with Mr. Fuji (a Psyduck looks out, Fuji steps out to answer him and goes back in), and he goes.",
  "created": "2026-10-26 12:00",
  "start": {
   "map": "LavenderTown_Frlg",
-  "x": 10,
+  "x": 9,
   "y": 17,
   "state": [
    "FLAG_GOT_POKE_FLUTE"
@@ -151,12 +151,12 @@
  "threshold": 0.01,
  "expect": {
   "map": "LavenderTown_Frlg",
-  "x": 10,
+  "x": 9,
   "y": 17,
   "in_battle": false,
   "flags": {
    "FLAG_MW03_SEEN": true
   }
  },
- "accepted": "2026-11-03 16:41"
+ "accepted": "2026-11-10 14:31"
 }

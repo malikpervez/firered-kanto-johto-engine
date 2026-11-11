@@ -1,0 +1,66 @@
+{
+ "note": "A save made Champion before KR-107 (the lab at 6, no National Dex yet): Blue's BL01 actor isn't in the lab until the National Dex scene has played, where he asks to join Oak's survey, so \"Grandpa said yes!\" and BL02 come after it in every order (KR-113). Talking to the spot where he'd stand (9, 10) finds nobody there.",
+ "created": "2026-11-09 15:20",
+ "start": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 9,
+  "y": 11,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_RB_OPENING_SEEN",
+   "VAR_MAP_SCENE_PALLET_TOWN_OAK=3",
+   "FLAG_HIDE_RIVAL_IN_LAB",
+   "!FLAG_HIDE_OAK_IN_HIS_LAB",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=6"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 9,
+  "y": 11,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 15:21"
+}

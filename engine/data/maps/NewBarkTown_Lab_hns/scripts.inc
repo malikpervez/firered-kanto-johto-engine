@@ -871,10 +871,9 @@ NewBarkTown_Lab_Text_League:
 	.string "You came here as KANTO's\n"
 	.string "CHAMPION and helped us so much.\p"
 	.string "Now JOHTO's LEAGUE is waiting.\n"
-	.string "Take your team to INDIGO PLATEAU!\p"
-	.string "Do you know how to get there?\n"
-	.string "Follow ROUTE 27 to ROUTE 26.\p"
-	.string "Once there, go straight north!$"
+	.string "Take your team to LAUREL PLATEAU!\p"
+	.string "Follow ROUTE 27 to ROUTE 26.\n"
+	.string "Then go straight north!$"
 
 NewBarkTown_Lab_Text_ElmGiveTicket1::
 	.string "ELM: {PLAYER}! I have something\n"
