@@ -1,5 +1,10 @@
 Route21_North_Frlg_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route21_North_OnTransition
 	.byte 0
+
+Route21_North_OnTransition::
+	call MW_Route21SwimmerVisibility
+	end
 
 Route21_North_Text_RonaldIntro::
 	.string "You want to know if the fish are\n"

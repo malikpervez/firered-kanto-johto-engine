@@ -513,16 +513,12 @@ PalletTown_Text_TownSign::
 	.string "Shades of your journey await!$"
 
 PalletTown_Text_OakChampionFollowMe::
-	.string "OAK: Ah, {PLAYER}!\n"
-	.string "Welcome home!\p"
-	.string "I'm still beaming from that\n"
-	.string "HALL OF FAME!\p"
-	.string "KANTO's CHAMPION, from our own\n"
-	.string "little PALLET TOWN!\p"
-	.string "There's something I wanted to ask\n"
-	.string "of you, {PLAYER}.\p"
-	.string "Come.\n"
-	.string "Follow me.$"
+	.string "OAK: Ah, {PLAYER}! There you are.\p"
+	.string "I've hardly slept since the\n"
+	.string "PLATEAU. What a battle that was!\p"
+	.string "A CHAMPION deserves my best work.\n"
+	.string "I have something to show you.\p"
+	.string "Come. Follow me!$"
 
 @ For the NPC in Pallet Town that talks about the Trainer Tips sign
 PalletTown_Text_HmmIsThatRight::
@@ -604,12 +600,8 @@ B2_Pallet_Text_VisitJohto::
 
 PalletTown_Text_JohtoWestPassDirections::
 	.string "Congratulations, CHAMPION!\p"
-	.string "To reach PROF.ELM, return to\n"
-	.string "INDIGO PLATEAU.\p"
-	.string "Take the road west of the LEAGUE.\n"
-	.string "It leads to the ROUTE 27 coast.\p"
-	.string "SURF west into NEW BARK TOWN.\n"
-	.string "PROF.ELM is expecting you!$"
+	.string "Off to see PROF.ELM? The road west\n"
+	.string "of the LEAGUE runs down to the sea.$"
 
 B2_Pallet_Text_LeagueRequired::
 	.string "First, challenge the KANTO LEAGUE.\p"

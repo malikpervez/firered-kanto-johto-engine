@@ -1,0 +1,111 @@
+{
+ "note": "The Pokegear radio during the Radio Tower takeover (B10): every Johto station plays Rocket's broadcast, now \"You left us, boss, but we never left you. We have taken this tower for you!\"",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "GoldenrodCity_hns",
+  "x": null,
+  "y": null,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "JOHTO_FLAG_SYS_POKENAV_GET",
+   "JOHTO_FLAG_ADDED_MATCH_CALL_TO_POKENAV",
+   "JOHTO_FLAG_ENABLE_RADIO",
+   "JOHTO_FLAG_ENABLE_CONDITION",
+   "JOHTO_VAR_GOLDENROD_CITY_STATE=6",
+   "!JOHTO_FLAG_HIDE_GOLDENROD_ROCKETS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     8,
+     4
+    ],
+    [
+     0,
+     40
+    ],
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     16,
+     39
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     405
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "GoldenrodCity_hns",
+  "x": 33,
+  "y": 8,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:30"
+}

@@ -1,0 +1,173 @@
+{
+ "note": "Celio's Network Machine with the Sapphire (the Ruby already in): give it to him; the machine starts and he linked up with GOLDENROD, not Lanette. Ends on \"The Network Machine reaches all the way to JOHTO now!\"",
+ "created": "2026-11-09 15:59",
+ "start": {
+  "map": "OneIsland_PokemonCenter_1F_Frlg",
+  "x": 15,
+  "y": 7,
+  "state": [
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_RECOVERED_SAPPHIRE",
+   "ITEM_SAPPHIRE*1",
+   "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F=5"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_IS_CHAMPION"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "OneIsland_PokemonCenter_1F_Frlg",
+  "x": 15,
+  "y": 7,
+  "in_battle": false,
+  "flags": {
+   "FLAG_IS_CHAMPION": false
+  }
+ },
+ "accepted": "2026-11-09 16:00"
+}

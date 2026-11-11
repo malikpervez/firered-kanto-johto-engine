@@ -170,6 +170,7 @@ CherryGroveCity_EventScript_Boy::
 
 CherryGroveCity_EventScript_Boy2::
 	msgbox CherrygroveCity_Text_YoungsterHavePokedex, MSGBOX_DEFAULT
+	msgbox CherrygroveCity_Text_YoungsterKantoChampion, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -339,6 +340,11 @@ CherrygroveCity_Text_RivalID:
 CherrygroveCity_Text_TeacherHaveMapCard:
 	.string "When you're with POKéMON,\n"
 	.string "going anywhere is fun.$"
+
+CherrygroveCity_Text_YoungsterKantoChampion:
+	.string "Did you hear? They say a CHAMPION\n"
+	.string "from KANTO came to JOHTO.\p"
+	.string "I wonder what they're like.$"
 
 CherrygroveCity_Text_YoungsterNoPokedex:
 	.string "MR. POKéMON's house is still\n"

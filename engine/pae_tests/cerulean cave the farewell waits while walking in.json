@@ -1,0 +1,59 @@
+{
+ "note": "MEWTWO beaten: coming in from Cerulean and walking north past the mouth plays nothing; the farewell waits for the way out (VAR_TEMP_E stays 1).",
+ "created": "2026-11-10 16:00",
+ "start": {
+  "map": "CeruleanCave_1F_Frlg",
+  "x": 35,
+  "y": 23,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_MEWTWO lv70",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_FOUGHT_MEWTWO"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     50
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW09_SEEN"
+  ],
+  "vars": [
+   "VAR_TEMP_E"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCave_1F_Frlg",
+  "x": 35,
+  "y": 20,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW09_SEEN": false
+  },
+  "vars": {
+   "VAR_TEMP_E": 1
+  }
+ },
+ "accepted": "2026-11-10 15:02"
+}

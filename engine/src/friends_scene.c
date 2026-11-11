@@ -210,6 +210,7 @@ static const struct FriendsWalk sWalks[] = {
     {2, 2, 0, 1}, {3, 5, -1, 0}, {5, 6, -1, 0}, {6, 5, 0, -1},
     {7, 4, -1, 0}, {9, 6, 1, 0}, {11, 3, 1, 0}, {18, 6, 1, 0},
     {20, 3, 0, 1}, {21, 0, 0, -1}, {22, 3, 1, 0},
+    {27, 6, 1, 0}, // FG-E: Tim walks to the sign
     {28, 1, 1, 0}, // FG-F: Ham walks out toward the Swinub
 };
 
@@ -855,8 +856,11 @@ void Special_FriendsStoryStage(void)
             break;
         case 9: ShowPair(SPECIES_SLOWPOKE, SPECIES_KRABBY); ShowMon(SPECIES_GEODUDE, 1); break;
         case 11: case 17: ShowHome(); break;
+        case 23: ShowMon(SPECIES_SPEAROW, 0); ShowHuman(OBJ_EVENT_GFX_OLD_WOMAN_FRLG, 1); ShowMon(SPECIES_SLOWPOKE, 2); break;
         case 13: ShowPair(SPECIES_SLOWPOKE, SPECIES_PSYDUCK); break;
+        case 24: ShowMon(SPECIES_MANKEY, 0); break;
         case 14: ShowHuman(OBJ_EVENT_GFX_SCIENTIST, 1); break;
+        case 25: ShowHuman(OBJ_EVENT_GFX_SAGE_HNS, 0); ShowMon(SPECIES_SENTRET, 1); ShowMon(SPECIES_ODDISH, 2); break;
         case 15: ShowPair(SPECIES_PRIMEAPE, SPECIES_HOOTHOOT); break;
         case 16: ShowMon(SPECIES_MURKROW, 0); break;
         case 18: ShowHuman(OBJ_EVENT_GFX_FAT_MAN_FRLG, 1); ShowMon(SPECIES_PIDOVE, 0); break;
@@ -866,6 +870,10 @@ void Special_FriendsStoryStage(void)
             ShowHome(); ShowMon(SPECIES_GIRATINA_ALTERED, 3);
             ShowPair(SPECIES_GOLDUCK, SPECIES_FURRET); break;
         case 22: ShowMon(SPECIES_SLOWBRO, 0); break;
+        case 26:
+            ShowHuman(OBJ_EVENT_GFX_BLACK_BELT_HNS, 1);
+            ShowMon(SPECIES_PRIMEAPE, 0); ShowMon(SPECIES_HOOTHOOT, 2); break;
+        case 27: ShowHuman(OBJ_EVENT_GFX_FISHER, 1); break;
         case 28:
             ShowMon(SPECIES_PSYDUCK, 0); ShowMon(SPECIES_SENTRET, 1);
             ShowMon(SPECIES_SWINUB, 3); break;
@@ -897,6 +905,12 @@ void Special_FriendsStoryStage(void)
     }
     else if (scene == 13 && beat == 8)
         ShowMon(SPECIES_SENTRET, 1);
+    else if (scene == 27 && beat == 14)
+    {
+        // FG-E: LB sits down by the bucket; Jigglypuff sits with him and Murkrow lands.
+        ShowMon(SPECIES_JIGGLYPUFF, 0);
+        ShowMon(SPECIES_MURKROW, 2);
+    }
     else if (scene == 28 && beat == 12)
         Remove(230); // FG-F: the Swinub, back on the snow, trots off
     else if (scene == 8 && beat == 8)

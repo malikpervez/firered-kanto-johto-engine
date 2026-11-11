@@ -5,6 +5,7 @@ OneIsland_Frlg_MapScripts::
 
 OneIsland_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_ONE_ISLAND
+	call RB_OneIslandTravelerVisibility
 	end
 
 OneIsland_OnFrame::

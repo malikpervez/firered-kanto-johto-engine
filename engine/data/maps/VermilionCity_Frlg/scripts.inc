@@ -263,6 +263,16 @@ VermilionCity_EventScript_HarborSign::
 	msgbox VermilionCity_Text_VermilionHarbor, MSGBOX_SIGN
 	end
 
+@ The ferry board by the Friends' park, the board the clerk points to in their scene (FG05)
+VermilionCity_EventScript_FerryBoard::
+	msgbox VermilionCity_Text_FerryBoard, MSGBOX_SIGN
+	end
+
+VermilionCity_Text_FerryBoard::
+	.string "VERMILION FERRY\p"
+	.string "Departures for the islands from\n"
+	.string "the pier. Ask the clerk for fares.$"
+
 VermilionCity_Text_GrimerMultipliesInSludge::
 	.string "We're careful about pollution here.\p"
 	.string "We've heard GRIMER multiplies in\n"

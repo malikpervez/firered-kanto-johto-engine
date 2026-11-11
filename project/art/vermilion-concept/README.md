@@ -13,7 +13,7 @@ meets the top at columns 32–34, and Route 11's the right edge at rows 11–14.
 - **the main street**, east along the town to Route 11, with the Snorlax notice by its end;
 - **south of the street**: the Gym (Viridian's: in FireRed every Gym looks the same outside) in its fenced yard,
   closed by the tree to cut in the yard's gate; a family house; the little park where the Friends camp (round 30,19,
-  as before); a house by the quay;
+  as before), with the ferry board their clerk points to (31,17, KR-112); a house by the quay;
 - **the harbour**: the promenade along the water, the long pier south to the S.S. Anne's gangway, the east quay with
   its crates and barrels where the old sailor and his mate, Officer Jenny and the Squirtles are, and boats in the
   water. The ferry sailor stands at the pier's end with his ticket check before him, as on the old map (relative to
