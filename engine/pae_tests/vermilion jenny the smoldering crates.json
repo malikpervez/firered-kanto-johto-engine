@@ -1,0 +1,107 @@
+{
+ "note": "ST04 after the Thunder Badge: Officer Jenny on the quay asks for help (smoke in the stack of crates, not a supply shed); say yes. Ends on the rescue's last line: \"they soak the smoldering crates before anyone is hurt.\"",
+ "created": "2026-11-09 15:58",
+ "start": {
+  "map": "VermilionCity_Frlg",
+  "x": 50,
+  "y": 27,
+  "state": [
+   "FLAG_BADGE03_GET",
+   "FLAG_ST04_INTRO_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_ST04_RESCUE_DONE"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VermilionCity_Frlg",
+  "x": 50,
+  "y": 27,
+  "in_battle": false,
+  "flags": {
+   "FLAG_ST04_RESCUE_DONE": false
+  }
+ },
+ "accepted": "2026-11-09 16:00"
+}

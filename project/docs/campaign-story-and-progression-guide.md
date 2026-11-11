@@ -227,7 +227,7 @@ Blue remains the original competitive Kanto rival through the first championship
 | BL02 | The Pidgey notebook — [`CG_BlueRoute1`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:76) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
 | RB07 | Oak sends you west — [`RB_OakReferral`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:121) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 
-After losing the championship Blue is content and excited about science. BL01 is at Oak’s lab; BL02 is on Route 1 before the completed Elm introduction. These scenes do not remove his native battles or rematches. The later Sevii/Celio quest and Cerulean Cave can be completed before heading west or after returning; Johto’s championship is not an added Mewtwo prerequisite. Since 2026-11-09 (story copy C4, KR-115) Cerulean Cave’s guard also lets in a Kanto Champion who has heard Mewtwo on Route 22 (MW07); Celio’s errand stays the way in for a player who never met the stranger.
+After losing the championship Blue is content and excited about science. BL01 is at Oak’s lab; BL02 is on Route 1 before the completed Elm introduction. These scenes do not remove his native battles or rematches. The later Sevii/Celio quest and Cerulean Cave can be completed before heading west or after returning; Johto’s championship is not an added Mewtwo prerequisite. Since 2026-11-09 (story copy C4, KR-115) Cerulean Cave’s guard also lets in a Kanto Champion who has heard Mewtwo on Route 22 (MW07); Celio’s errand stays the way in for a player who never met the stranger. Once the Ruby and the Sapphire are in, Celio’s Network Machine links the Sevii Islands with JOHTO through GOLDENROD, Bill’s hometown (FireRed’s link to Lanette in Hoenn is gone, and the machine starts no roamer): Celio, the machine and the Battle Girl in One Island’s Center say so (story copy H6, KR-112; replay tests `one island …`).
 
 ## 10. West, down to the water
 
@@ -839,6 +839,8 @@ Optional shelter scene and actual Charmander gift.
 
 **37C source:** [`ST04_Jenny`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/starter_recruitment.inc:91). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md).
 
+**2026-11-09 (story copy H3, KR-112):** Jenny’s fire is a smoldering stack of crates on the quay, not a supply shed; the Squirtle soak the crates. Replay test `vermilion jenny the smoldering crates`.
+
 Vermilion introduction and post-Thunder Badge rescue/gift.
 
 ### JT01 — Wrong end of the net
@@ -1023,6 +1025,8 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 
 **37C source:** [`FG03_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:368). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
 
+**2026-11-09 (story copy H1, KR-112):** the camp has the Poliwag’s puddle beside it (Route 4, 87–88,14–15) and the lines lose the cave: Nick’s “Don’t use the puddle yet”, Jon’s “leave the fucking clearing”. **2026-11-10:** the echo cliff is built over the camp (the owner: “Yeah”): the shelf’s edge rises into a wall at 78–88,7–10, its face looking down on the clearing, so the echo stays: LB “So you heard the echo”, Brian’s room “has a cliff, an echo and a working alarm system”. Replay tests `route 4 the friends camp by the puddle`, `route 4 the friends camp the echo cliff`, `route 4 the echo cliff over the camp`.
+
 ### FG04 — Everybody has a partner now
 
 **Trigger:** Native Pokédex obtained and Cerulean visit; before first Kanto Hall of Fame; current group stage is FG04.
@@ -1031,6 +1035,8 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 
 **37C source:** [`FG04_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:508). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
 
+**2026-11-09 (story copy H5, KR-112):** Nick says Tim’s Spearow “can fly around this square” (it was “this picnic area”). Replay test `cerulean the friends camp in the square`.
+
 ### FG05 — Tim discovers the ferry schedule
 
 **Trigger:** Native Pokédex obtained and Vermilion visit; before first Kanto Hall of Fame; current group stage is FG05.
@@ -1038,6 +1044,8 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 **Status:** IMPLEMENTED. 22 primary conversations / 51 choices / 28 battle outcomes in bounded native 36-series checks. See this event’s original build and staged scope.
 
 **37C source:** [`FG05_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:648). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
+
+**2026-11-09 (story copy H2, KR-112):** the clerk: “This is the square. The boat leaves from the pier.” A ferry board stands by the camp (Vermilion, 31,17): “VERMILION FERRY / Departures for the islands from the pier. Ask the clerk for fares.” Replay tests `vermilion the friends camp and the ferry clerk`, `vermilion ferry board`.
 
 ### FG06 — Two very different coaching styles
 
@@ -1054,6 +1062,8 @@ FG01 is a one-time arrival. The main-conversation receipt suppresses later map-l
 **Status:** IMPLEMENTED. 22 primary conversations / 51 choices / 28 battle outcomes in bounded native 36-series checks. See this event’s original build and staged scope.
 
 **37C source:** [`FG07_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:911). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md).
+
+**2026-11-09 (story copy H4, KR-112):** the restaurant owner comes to fetch them (“There you are!”); Brian measures “the bench by the pond”. Replay tests `celadon the friends camp the restaurant owner`, `celadon the friends camp later`.
 
 ### FG08 — Quiet outside Lavender
 

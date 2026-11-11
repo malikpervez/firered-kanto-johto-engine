@@ -88,6 +88,8 @@ rect(23, 7, 23, 8, "l"); rect(54, 20, 55, 21, "*")
 # the harbour: the promenade along the water, the pier to the S.S. Anne's gangway (37-39 at the bottom), the east quay
 rect(7, 23, 55, 23, "="); rect(18, 22, 55, 22, "=")
 at(36, 21, "S")                              # the harbour's sign, read from (36,22)
+at(31, 17, "S")                              # the ferry board at the Friends' park (FG05's "islands listed on the
+                                             # board"), read from (31,18)
 rect(37, 24, 39, 41, "d")
 rect(44, 24, 54, 30, "d")
 at(45, 25, "B"); at(46, 25, "B"); at(53, 24, "c"); at(54, 24, "c"); at(54, 25, "c")
