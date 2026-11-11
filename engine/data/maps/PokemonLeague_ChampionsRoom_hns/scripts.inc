@@ -335,15 +335,14 @@ PokemonLeague_ChampionsRoom_Text_RematchBattleIntro:
 	.string "POKéMON have come, CHAMPION!$"
 
 PokemonLeague_ChampionsRoom_Text_BattleIntro:
-	.string "LANCE: I've been waiting for you.\p"
-	.string "{PLAYER}!\p"
-	.string "I knew that you, with your skills,\n"
-	.string "would eventually reach me here.\p"
-	.string "There's no need for words now.\p"
-	.string "We will battle to determine who is\n"
-	.string "the stronger of the two of us.\p"
-	.string "As the most powerful trainer and as\n"
-	.string "the POKéMON LEAGUE CHAMPION…\p"
+	.string "LANCE: I've been waiting for you,\n"
+	.string "{PLAYER}.\p"
+	.string "At INDIGO PLATEAU, you beat me as\n"
+	.string "the last of KANTO's ELITE FOUR.\p"
+	.string "Here, I am JOHTO's CHAMPION. This\n"
+	.string "is the team I keep for this room.\p"
+	.string "As the most powerful trainer in\n"
+	.string "JOHTO, and as its CHAMPION…\p"
 	.string "I, LANCE the dragon master, accept\n"
 	.string "your challenge!$"
 

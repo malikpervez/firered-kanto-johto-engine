@@ -30,7 +30,7 @@ Full implemented textboxes and images stay in their linked event reviews. This s
 
 **Where:** Pallet Town → Route 1.
 
-Trail begins as the same Kanto trainer who will eventually reach Johto. Eligible ordinary new games receive Pikachu in Oak’s lab. Blue receives Eevee. After the Parcel and the Pokédex, the first walk north onto Route 1 brings the Pidgey rescue and the Ho-Oh flyby; the Stranger comes down the road straight after it, sends the player to the new Pokédex (it has no entry for the bird) and asks his question.
+Trail begins as the same Kanto trainer who will eventually reach Johto. Eligible ordinary new games receive Pikachu in Oak’s lab. Blue receives Eevee, the ball Oak kept for him (“Fine. EEVEE’s with me, then!”), loses the first battle because he and Eevee “only just met”, and when the Parcel comes back Oak asks how Pikachu is getting along; games that began with a classic starter keep FireRed’s lines. After the Parcel and the Pokédex, the first walk north onto Route 1 brings the Pidgey rescue and the Ho-Oh flyby; the Stranger comes down the road straight after it, sends the player to the new Pokédex (it has no entry for the bird) and asks his question.
 
 **Progression:**
 
@@ -215,7 +215,7 @@ Blue remains the original competitive Kanto rival through the first championship
 **Progression:**
 
 1. Earn the remaining native Kanto badges and clear the first Kanto League.
-2. Oak’s Hall-of-Fame referral points the trainer toward Elm and Johto. If the player saw the bird, Oak also passes on, once, that Nao read his notes on the sighting and has gone home to Ecruteak (by name as a friend if they met in Kanto, as a bell keeper from Ecruteak if not).
+2. Home after the Hall of Fame: Mom watched it on TV and says Oak came looking for them. Outside the door Oak, who was at the Plateau, walks the Champion to his lab, where one scene carries the whole hand-off (KR-113): Oak built the Pokédex with only the Pokémon he knew in Kanto and asks for help recording the rest; Blue walks in (“You’re asking {PLAYER} for help and not your own grandson?”); in the Pikachu start Oak notices any of Bulbasaur, Charmander and Squirtle the player met on the road; the National Dex upgrade; room in it now, perhaps for the rainbow bird (a player who never told Oak about the Pidgey and the bird tells him here); Blue leaves to pack for Oak’s next field survey; then Oak sends the player to Elm in New Bark Town with the road there (or, if they met Elm first, says he heard), and passes on Nao’s news unless they found her in Ecruteak already (by name as a friend if they met in Kanto, as a bell keeper from Ecruteak if not). Each is told once. Later talks give the Pokédex rating and one reminder line; Pallet’s guide only points the way.
 
 **Connected events:**
 
@@ -227,7 +227,7 @@ Blue remains the original competitive Kanto rival through the first championship
 | BL02 | The Pidgey notebook — [`CG_BlueRoute1`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:76) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
 | RB07 | Oak sends you west — [`RB_OakReferral`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:121) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 
-After losing the championship Blue is content and excited about science. BL01 is at Oak’s lab; BL02 is on Route 1 before the completed Elm introduction. These scenes do not remove his native battles or rematches. The later Sevii/Celio quest and Cerulean Cave can be completed before heading west or after returning; Johto’s championship is not an added Mewtwo prerequisite.
+After losing the championship Blue is content and excited about science. BL01 is at Oak’s lab; BL02 is on Route 1 before the completed Elm introduction. These scenes do not remove his native battles or rematches. The later Sevii/Celio quest and Cerulean Cave can be completed before heading west or after returning; Johto’s championship is not an added Mewtwo prerequisite. Since 2026-11-09 (story copy C4, KR-115) Cerulean Cave’s guard also lets in a Kanto Champion who has heard Mewtwo on Route 22 (MW07); Celio’s errand stays the way in for a player who never met the stranger.
 
 ## 10. West, down to the water
 
@@ -297,11 +297,11 @@ JT03 appears in the early Goldenrod window, before takeover. FG16 is suppressed 
 
 **Where:** Ecruteak → Olivine → Cianwood.
 
-Burned Tower’s native events release the beasts and unlock Nao’s explanation of the towers. A player Nao met in Kanto is greeted first (“PROF.OAK thought you might”); one she never met hears her introduction: she keeps the bells here, and came home from Kanto not long ago after asking about a bird. Silver pauses for his exhausted partner. At the coast, healing Amphy stays the real objective; Nao notices care for the Pokémon already here and Tim becomes useful at the harbor.
+Burned Tower’s native events release the beasts and unlock Nao’s explanation of the towers. A player Nao met in Kanto is greeted first (“PROF.OAK thought you might”); one she never met hears her introduction: she keeps the bells here, and came home from Kanto not long ago after asking about a bird. Silver pauses for his exhausted partner. Gold waits outside the Center: he beat Falkner at last, then found Silver coming out of the Burned Tower and lost to him, and saw him make his Pokémon rest before it battled again. At the coast, healing Amphy stays the real objective; Nao notices care for the Pokémon already here and Tim becomes useful at the harbor.
 
 **Progression:**
 
-1. Follow the native Burned Tower/Ecruteak and Morty progression.
+1. Follow the native Burned Tower/Ecruteak and Morty progression. After the Burned Tower, Gold’s optional battle waits outside Ecruteak’s Center until the Fog Badge.
 2. Continue the lighthouse, Cianwood medicine/Chuck and Amphy/Jasmine progression as their native gates allow.
 
 **Connected events:**
@@ -310,6 +310,7 @@ Burned Tower’s native events release the beasts and unlock Nao’s explanation
 | --- | --- | --- |
 | RB09 | Ecruteak truth — [`RB_NaoJohtoIntro`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:273) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | SV01 | A small pause — [`CG_SilverEcruteakVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/character_growth.inc:94) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/story-additions-02/story-review-31e/owner-review-02/story-review.md) |
+| GD02 | Gold outside Ecruteak’s Center — [`CG_GoldEcruteak`](../../engine/data/scripts/character_growth.inc) | Replay tests `ecruteak gold …` (nine) |
 | FG17 | A reflection that waits — [`FG17_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2178) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
 | RB10 | Amphy callback — [`RB_OlivineVisibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:359) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | FG18 | Tim books the right trip — [`FG18_Interact`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/friends_story.inc:2281) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/friends-story-01/owner-review-36m/REVIEW.md) |
@@ -321,6 +322,8 @@ FG-D’s new Cianwood beach scene is not implemented. The guide does not turn th
 **Where:** Lake of Rage → Mahogany → Goldenrod Radio Tower.
 
 The original red Gyarados, Mahogany hideout and Radio Tower battles retain their role. Nao’s copied recording is switched off through a later conversation. Silver waits at a Center, while the friends help frightened Pokémon after the takeover.
+
+**Rocket’s power struggle (KR-110).** Giovanni quit at Viridian weeks ago, beaten by the player; in Johto his branch split instead of stopping. Archer wants him back and takes the Radio Tower to call him home on every radio; Ariana, the “interim boss” of Mahogany, wants Rocket strong without him; Proton runs the money; Petrel copies Giovanni’s voice to keep the grunts in line; the scientists, several from Silph, follow whoever funds the work. Kurt, Proton, the Violet gentleman, Silver in Azalea (a battle that carries on if the player loses: his “Some CHAMPION.” plays, the party is healed and the story goes on), the hideout and Radio Tower lines and the Pokégear broadcast each show a piece of it. Beaten, Archer disbands Rocket “like GIOVANNI did before me” and no longer answers for anyone who keeps the name; Ariana keeps it, and Black Tide is hers (LG01, LG02, LG06). The Five Island warehouse admin, met after the Radio Tower, has heard Archer quit too and calls it lies. In the Celebi scenes Giovanni recognises the child who beat him weeks ago, and Silver on Route 22 knows the kid who beat his father.
 
 **Progression:**
 
@@ -398,14 +401,22 @@ The three attackers are Rocket-made replicas. Defeating OR catching each, in any
 
 ## 17. A second championship, the same trainer
 
-**Where:** Native Johto League approach → Hall of Fame.
+**Where:** Route 26 → Reception Gate → Johto’s Victory Road → LAUREL PLATEAU → Hall of Fame.
 
-The original late Johto rival, League approach, Elite Four and Champion progression remains independent of Kanto’s championship. Optional friends or legendary captures do not substitute for clearing Johto’s own Hall of Fame.
+The original late Johto rival, League approach, Elite Four and Champion progression remains independent of Kanto’s championship. Optional friends or legendary captures do not substitute for clearing Johto’s own Hall of Fame. Afterwards Gold waits outside Elm’s lab in New Bark with five badges, for one last battle: he didn’t shout once.
+
+Johto’s plateau is LAUREL PLATEAU, Johto’s own League (KR-111): its sign, its map name and town-map place (a map section of its own, apart from Kanto’s INDIGO PLATEAU, which keeps its name), Elm’s directions after the eighth badge and the Blackthorn Center’s gentleman. The new hall borrowed Kanto’s strongest, and the people say so once each: the Center’s trainer tells the history (Johto’s trainers used to cross the mountains to Indigo; now Johto has a League of its own and Lance came home to be its Champion); Lance at the Lake of Rage remembers the player from Indigo Plateau and his Dragonite; Koga keeps Fuchsia’s Gym and a seat here; Bruno sits in both halls; Lance in the Champion’s room is Johto’s Champion with the team he keeps for it, and in the Hall of Fame two halls keep the player’s name. Oak at Olivine’s port greets a Champion of two Leagues.
 
 **Progression:**
 
 1. Complete the native Johto League approach and League.
-2. Johto’s actual game-clear receipt enables the farewell and Nao’s later letter chain.
+2. Johto’s actual game-clear receipt enables the farewell, Nao’s later letter chain and Gold’s last battle outside Elm’s lab (optional).
+
+**Connected events:**
+
+| ID | Event / actual entry label | Exact dialogue, images and result record |
+| --- | --- | --- |
+| GD03 | Gold’s last battle in New Bark — [`CG_GoldNewBark`](../../engine/data/scripts/character_growth.inc) | Replay tests `new bark gold …` (seven) |
 
 A staged late-game checkpoint verifies its particular event path; it is not proof that the full combined campaign has been played naturally.
 
@@ -451,7 +462,7 @@ Continue native postgame activities and collection across both regions. The opti
 | MW09 | Cave-mouth reflection — [`MW09_Transition`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:636) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 | RB14 | Larger sky — [`RB_OakLetter`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:128) | [Original owner review]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html) |
 
-Mewtwo is listed here as an open sidequest, not gated behind the Johto League: only the original Kanto/Sevii access conditions apply. MW09 is an explicit cave-mouth interaction, not automatic exit narration. Original Sevii, Navel Rock and other existing content retain their gates. No extra Celebi/beast/Gen 3+ legendary chapter or third region is implemented in this pass.
+Mewtwo is listed here as an open sidequest, not gated behind the Johto League: only the original Kanto/Sevii access conditions apply. Since 2026-11-10 MW09 plays by itself as the player walks out of the cave's mouth (it was a spot to check). Original Sevii, Navel Rock and other existing content retain their gates. No extra Celebi/beast/Gen 3+ legendary chapter or third region is implemented in this pass.
 
 ## Event directory and exact trigger rules
 
@@ -469,7 +480,7 @@ Pidgey shelter and early Ho-Oh flyby after the original opening.
 
 ### RB02 — Oak records it
 
-**Trigger:** Normal Oak interaction calls RB_OakStory. Supported adoption, Dex received, lab scene !=8, no higher Champion/Johto-letter dispatch; OPENING_SEEN must be set.
+**Trigger:** Normal Oak interaction calls RB_OakStory. Supported adoption, Dex received, before the Kanto League, OPENING_SEEN set. It plays once and mentions the Pidgey too (`FLAG_RB_OAK_HEARD_BIRD`, FireRed's unused `0x0B0`; KR-113); a player who never tells Oak before the League tells him in the National Dex scene, so Oak’s notes hold the sighting before BL02 and RB08.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
@@ -519,13 +530,13 @@ Existing Silph scientist confirms Rocket call-reproduction equipment.
 
 ### RB07 — Oak sends you west
 
-**Trigger:** Oak dispatch prioritizes supported story state/Dex and original lab state. After native Kanto Champion, OPENING_SEEN chooses westward memory; otherwise honest research text. The separate pre-existing JohtoReferral call remains authoritative for road directions.
+**Trigger:** The end of the National Dex scene after the Kanto League (`PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm`, KR-113), once (`FLAG_OAK_GAVE_JOHTO_DIRECTIONS`). OPENING_SEEN chooses “that bird flew west, didn’t it? Toward JOHTO”; otherwise “one more thing”. A player who already met Elm hears that Oak heard instead of the road. A save whose scene played before KR-113 hears it once on its next talk. Later talks: the rating, then one reminder line.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
 **37C source:** [`RB_OakReferral`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:121). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Added bird context surrounds the existing Oak→Indigo western pass→Surf→Elm referral. With the bird seen, Oak then passes on Nao’s news, inside the once-only referral (`FLAG_OAK_GAVE_JOHTO_DIRECTIONS`, #104) and only if the player hasn’t met her in Ecruteak yet (`FLAG_RB_ECRUTEAK_TRUTH_SEEN`): “Your friend NAO came by to read my notes on your sighting. She has gone home to ECRUTEAK. She hopes you will visit her.” if `FLAG_RB_NAO_INTRODUCED`, otherwise “A bell keeper from ECRUTEAK came to read my notes on the bird. NAO, she said. She has asked all of KANTO about it.” Replay tests `pallet oak passes on naos news`, `pallet oak tells of a bell keeper from ecruteak` (2026-10-31; since 2026-11-09 they start in the lab as the National Dex scene leaves it).
+The referral, the road (Indigo Plateau, the road west of the League, Route 27, Surf west to New Bark Town) and Nao’s news, told once in the scene. Nao’s news plays only if the player hasn’t met her in Ecruteak yet (`FLAG_RB_ECRUTEAK_TRUTH_SEEN`): “Oh! Your friend NAO came by while you were away. She asked why a bird like yours has no entry. I couldn’t tell her. She’s gone home to ECRUTEAK, in JOHTO. She hopes you’ll visit.” if `FLAG_RB_NAO_INTRODUCED` (without the bird line if the bird wasn’t seen), otherwise, with the bird seen, “Oh! A bell keeper came by while you were away. NAO, from ECRUTEAK. She has asked all over KANTO about a bird like yours. She’s gone home.” Replay tests `pallet oak passes on naos news`, `pallet oak tells of a bell keeper from ecruteak` (2026-10-31; since KR-113 they play the National Dex scene from its start and end on Nao’s news).
 
 ### RB08 — Elm's welcome
 
@@ -629,13 +640,13 @@ Fossil-choice question and small psychic rock movement.
 
 ### MW03 — A home, not a cage
 
-**Trigger:** Original Poké Flute receipt; own scene unseen; suppressed by MW06 or native Mewtwo closure. No permanent Fuji relocation.
+**Trigger:** Original Poké Flute receipt; own scene unseen; suppressed by MW06 or native Mewtwo closure. The stranger (`LOCALID_LAVENDER_MW03_STRANGER`) waits near Mr. Fuji's door, at (9,16) past the Volunteer House sign, facing it; he blocks no path. No permanent Fuji relocation.
 
-**Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
+**Status:** IMPLEMENTED. Historical 30-series native scope; staged at Fuji's door 2026-11-09 (story copy D, KR-116). Replay tests `lavender fuji at his door`, `lavender gentleman`; `lavender the friends camp` plays FG08 with the stranger beside the door.
 
 **37C source:** [`MW03_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:446). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Separate Lavender stranger/Fuji exchange with optional Mew glimpse.
+Talked to, the stranger turns to the door. It opens: a Psyduck wanders out, sniffs the air and goes back in. “STRANGER: Nothing keeps them here.” Mr. Fuji steps out to answer him (a scene-only actor, `LOCALID_LAVENDER_MW03_FUJI`; the Fuji in his house doesn't move): “Some leave when they're ready.” “And you allow that?” “It is a home, not a cage. I learned that late.” He goes back in and the door closes; the traveler has no reply; Mew's glimpse; the stranger leaves (`FLAG_MW03_SEEN`). Nothing else says Fuji made Mewtwo.
 
 ### MW04 — Celadon trust
 
@@ -659,13 +670,13 @@ A temporary Mewtwo reveal, returned disguise, then possible Mew glimpse. Since 2
 
 ### MW06 — Cinnabar reveal
 
-**Trigger:** Cinnabar; native Secret Key discovery hide flag, independent of current Key possession; scene unseen and native Mewtwo unresolved. Local15 is removed before reveal and remains absent through question/answer/glimpse. Original journals unchanged.
+**Trigger:** Cinnabar; native Secret Key discovery hide flag, independent of current Key possession; scene unseen and native Mewtwo unresolved. Local15 is removed before reveal and remains absent through question/answer/glimpse. The Mansion journals themselves are unchanged.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
 **37C source:** [`MW06_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:518). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Journals context, unique Mewtwo reveal, invitation/choice responses and Mew observer. Since 2026-10-31 (story audit E1), the companion Pikachu closes the thread it opened on Route 1: as the veil falls, “PIKACHU bristles, just as it did on ROUTE 1.” (since 2026-11-09, story copy F1: “It knew all along.” winked at the player and is gone) (“PIKACHU bristles and steps between you and MEWTWO.” if the Route 1 meeting never happened, `FLAG_MW01_SEEN` unset), and after Mewtwo’s answer, “PIKACHU watches it go. Its fur slowly settles.” Nothing is written. Replay tests `cinnabar pikachu bristles at mewtwo`, `cinnabar pikachu settles as mewtwo leaves`, `cinnabar pikachu bristles without the route 1 meeting`.
+Journals context, unique Mewtwo reveal, invitation/choice responses and Mew observer. Since 2026-10-31 (story audit E1), the companion Pikachu closes the thread it opened on Route 1: as the veil falls, “PIKACHU bristles, just as it did on ROUTE 1.” (since 2026-11-09, story copy F1: “It knew all along.” winked at the player and is gone) (“PIKACHU bristles and steps between you and MEWTWO.” if the Route 1 meeting never happened, `FLAG_MW01_SEEN` unset), and after Mewtwo’s answer, “PIKACHU watches it go. Its fur slowly settles.” Nothing is written. Replay tests `cinnabar pikachu bristles at mewtwo`, `cinnabar pikachu settles as mewtwo leaves`, `cinnabar pikachu bristles without the route 1 meeting`. Since 2026-11-09 (story copy C1, KR-115) the stranger's first words quote the Mansion's B1F diary, so the reveal never leans on pages the player skipped: “STRANGER: Someone in that house wrote, “MEWTWO is far too powerful.” Those pages tell what they hoped to create. They cannot tell you who I will become.” Replay test `cinnabar the stranger quotes the mansion diary`.
 
 ### MW07 — Route22 question
 
@@ -675,27 +686,29 @@ Journals context, unique Mewtwo reveal, invitation/choice responses and Mew obse
 
 **37C source:** [`MW07_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:545). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Different Champion question before/after Kanto League.
+Different Champion question before/after Kanto League. Since 2026-11-09 (story copy C2/C3, KR-115) he no longer speaks as STRANGER: one narration line says the disguise is back (“The traveler's coat and hat are back. You know who wears them.”), he speaks as MEWTWO, and he tells the player where to find him. Before the League: “Others see a traveler. You do not. Good. They will call you CHAMPION soon. I wonder what you will ask of it. When they do, come to the cave at the edge of CERULEAN. I will wait.” After it: “You reached the summit. Did it change what you ask of those beside you? Come to the cave at the edge of CERULEAN. I will be waiting inside.” `FLAG_MW07_SEEN`, set as he leaves, is what Cerulean Cave’s guard reads (MW08). Replay tests `route 22 mewtwo asks you to come to his cave`, `route 22 mewtwo leaves for his cave`, `route 22 mewtwo waits in his cave after the league`.
 
 ### MW08 — Cerulean Cave choice
 
-**Trigger:** Original Celio/Sevii access remains authoritative. Existing Mewtwo interaction calls MW08_Intro; actual NO leaves without setting native fought state; YES runs original battle. Actual WON/CAUGHT set original FLAG_FOUGHT_MEWTWO; flee/teleport follow native escape/removal path, with transition restoring retry while fought remains unset.
+**Trigger:** Two ways into Cerulean Cave since 2026-11-09 (story copy C4, decision 7, KR-115): the guard in front of it (`CeruleanCity_EventScript_CeruleanCaveGuard`) lets a Kanto Champion (`FLAG_SYS_GAME_CLEAR`) who has heard MW07 (`FLAG_MW07_SEEN`) through: “This is CERULEAN CAVE. You're the new CHAMPION. Then I can let you through. Something in there has been quiet for weeks. Not asleep. Waiting. Take care of yourself in there.”, steps aside away from the player and sets `FLAG_HIDE_CERULEAN_CAVE_GUARD`, so he stays away. Anyone else hears FireRed's rule and he stays in the way. Celio's Sevii errand, which sets the same flag, stays the way in for a player who never met the stranger. Existing Mewtwo interaction calls MW08_Intro; actual NO leaves without setting native fought state; YES runs original battle. Actual WON/CAUGHT set original FLAG_FOUGHT_MEWTWO; flee/teleport follow native escape/removal path, with transition restoring retry while fought remains unset.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
 **37C source:** [`MW08_Intro`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:617). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Optional familiar/unfamiliar introduction and Face/Leave before original level70 Mewtwo. Since 2026-10-31 (story audit T2), with the familiar greeting and Black Tide resolved in Johto (`FLAG_LG_FINAL_RESOLVED`), Mewtwo adds: “Far to the west, ROCKET made birds the way I was made. You broke their chains. I heard.” A callback across the regions: it reads Johto’s receipt for dialogue only and writes nothing. Since 2026-11-09 (story copy F1, the order of its C5) the familiar greeting is split so this line comes before the battle offer: “MEWTWO: You found the quiet place I chose.”, the replica line, “MEWTWO: If we battle, let it be a choice we both make.”, then “Face MEWTWO now?”. Replay tests `cerulean cave mewtwo heard of the replicas`, `cerulean cave mewtwo offers a battle after the replicas`, `cerulean cave mewtwo offers a battle`, `cerulean cave mewtwo can be left after the replicas`.
+Optional familiar/unfamiliar introduction and Face/Leave before original level70 Mewtwo. Since 2026-10-31 (story audit T2), with the familiar greeting and Black Tide resolved in Johto (`FLAG_LG_FINAL_RESOLVED`), Mewtwo adds: “Far to the west, ROCKET made birds the way I was made. You broke their chains. I heard.” A callback across the regions: it reads Johto’s receipt for dialogue only and writes nothing. Since 2026-11-09 (story copy F1, the order of its C5) the familiar greeting is split so this line comes before the battle offer: “MEWTWO: You found the quiet place I chose.”, the replica line, “MEWTWO: If we battle, let it be a choice we both make.”, then “Face MEWTWO now?”. Replay tests `cerulean cave mewtwo heard of the replicas`, `cerulean cave mewtwo offers a battle after the replicas`, `cerulean cave mewtwo offers a battle`, `cerulean cave mewtwo can be left after the replicas`. Since 2026-11-09 (story copy C5, KR-115), after MW07 he asked the player to come, so the greeting is “MEWTWO: You came. This is the quiet place I chose. Few would follow me here.” (then the replica line, the battle offer and the question as above); “You found the quiet place I chose.” stays for a player who saw only the reveal, and the unfamiliar presence for one who never met the stranger. Replay tests `cerulean cave mewtwo says you came`, `cerulean cave mewtwo you came then the replicas`; the gate's `cerulean cave guard lets the champion through`, `cerulean cave guard steps aside for the champion`, `cerulean cave guard steps aside from the west`, `cerulean cave celios errand opens it without mewtwo`, `cerulean cave guard stops a champion who never met mewtwo`, `cerulean cave guard stops mewtwos guest before the league`.
 
 ### MW09 — Cave-mouth reflection
 
-**Trigger:** Native fought-Mewtwo set; MW09 unseen. Explicit BG sign interaction at Cerulean Cave1F x34,y22, any facing. Transition sets temp availability only; it is not an automatic exit narration.
+**Trigger:** Native fought-Mewtwo set; MW09 unseen. Since 2026-11-10 (the owner: Mewtwo, caught, “comes out of his pokeball to engage with the player at the end of that arc”) it plays by itself when the player walks out of the mouth: coord events on Cerulean Cave 1F x34–36,y22, stepping south (walking in, it waits; `VAR_TEMP_E` from the transition). Before, it was a BG sign at x34,y22.
 
 **Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
 
 **37C source:** [`MW09_Transition`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:636). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Neutral post-resolution reflection and optional Mew glimpse.
+Neutral post-resolution reflection and optional Mew glimpse. Since 2026-11-09 (story copy C6, KR-115) the companion Pikachu closes the thread it opened on Route 1: after the reflection, “PIKACHU looks back into the dark. Its fur stays smooth.” (whenever the companion walks with the player, `FLAG_SYS_POKEMON_GET`; nothing is written). Replay test `cerulean cave pikachu looks back at the mouth`.
+
+Since 2026-11-10, when Mewtwo was caught and is in the party, Mewtwo comes out of its Poké Ball beside the player (an actor on 1F with Mewtwo's overworld sprite, the follower's ball-exit animation, the ball sound and its cry) and the farewell is a conversation: “At the mouth of the cave, the wind moves freely again.” / “MEWTWO: There is room for more than one path through the world.” / “I will walk this one with you, {PLAYER}.” / “You did not command. You asked. I answered.”, then “PIKACHU looks up at MEWTWO. Its fur stays smooth.”, and Mewtwo goes back into the ball. Beaten (or caught and in the PC) the reflection stays narration, as above. Running from Mewtwo leaves it in the cave (FireRed brings it back), so the farewell waits. Replay tests `cerulean cave mewtwo comes out of his ball at the mouth`, `cerulean cave mewtwo goes back into his ball`, `cerulean cave the farewell waits while walking in`, `cerulean cave no farewell before mewtwo is met`.
 
 ### LG01 — Coastal warnings
 
@@ -705,7 +718,7 @@ Neutral post-resolution reflection and optional Mew glimpse.
 
 **37C source:** [`BlackTide_CoastalWarning`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1009). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warning after the native Radio Tower state reaches10. The warning itself grants no travel/item/branch progress.
+Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warning after the native Radio Tower state reaches10: three huge birds striking in turns, and Rocket boats near the islands although Rocket quit (KR-110). The warning itself grants no travel/item/branch progress.
 
 ### LG02 — The manufactured birds attack Lugia
 
@@ -715,7 +728,7 @@ Original Olivine sailor and Cianwood Pokéfan conversations append a Whirl warni
 
 **37C source:** [`WhirlIslands_LugiaChamber_hns_MapScripts`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:1). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-A once-only chamber scene stages three separately manufactured replicas striking Lugia. Rocket leaves, Lugia darkens, and the three independent encounters remain.
+A once-only chamber scene stages three separately manufactured replicas striking Lugia. The Rocket technician says Archer quit, Ariana didn’t, and the project answers to her now (KR-110). Rocket leaves, Lugia darkens, and the three independent encounters remain.
 
 ### LG03 — Articuno replica: independent battle
 
@@ -755,7 +768,7 @@ Resolve this Rocket replica by defeating OR catching it. Its original Kanto/Sevi
 
 **37C source:** [`BlackTide_LinksIfReady`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/johto/adapted/WhirlIslands_LugiaChamber_hns.inc:884). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-The third independent success breaks Rocket control. Lugia remains in the Shadow state, becomes approachable, and the Keeper allows unlimited preparation.
+The third independent success breaks Rocket control. Lugia remains in the Shadow state, becomes approachable, and the Keeper allows unlimited preparation. From then on a Rocket log can be read where each replica stood: the calls copied (Seafoam Islands, Power Plant, Mt. Ember), Silph’s recording devices, three specimens, no retreat (GAP-30, KR-110).
 
 ### LG07 — Approach and face Shadow Lugia
 
@@ -869,7 +882,7 @@ Jessie: “You again! This is a restricted storage area. We’re on guard duty. 
 
 ### BL01 — A new field of study
 
-**Trigger:** First Kanto HOF/credits return; native Oak and rival/Dex scenes retain priority. Optional added actor, saved Kanto rival name.
+**Trigger:** First Kanto HOF/credits return, once the National Dex scene has played (the lab at 9; KR-113): Blue asked to join Oak’s next field survey as he left it, and opens with “Grandpa said yes!”. Optional added actor, saved Kanto rival name.
 
 **Status:** IMPLEMENTED. Original 31-series evidence; JT02/JT03 presentation and battle updates use 33B. Unexecuted branches stay pending in the linked ledger.
 
@@ -896,6 +909,26 @@ Optional Route1 observation and expressive answer. Since 2026-11-02 (story audit
 **Source:** [`CG_GoldViolet`](../../engine/data/scripts/character_growth.inc); trainers `TRAINER_JOHTO_GOLD_VIOLET_TOTODILE_HNS`, `…_CHIKORITA_HNS`, `…_CYNDAQUIL_HNS` (Geodude lv 8 and his starter lv 10, chosen by `JOHTO_VAR_STARTER_MON` as in Elm’s lab).
 
 Gold: Falkner beat him twice, even after he caught a Geodude in Dark Cave for him. “Show me how a CHAMPION does it? I did say I’d win next time!” NO: he keeps watching the Gym door (ask again later). YES: the battle; after it “How do you stay so calm? I just keep shouting moves. FALKNER said that, too.”; once the police scene at Elm’s lab has played (`JOHTO_VAR_NEWBARKTOWN_LABSTATE` ≥ 5), where the player named the thief, “PROF.ELM told me about the break-in. You saw the thief, right? {RIVAL}. He took the one that sat next to mine on the table. If I see him, I’ll tell him what I think of that!”; then he walks off east to heal and try Falkner a third time. Winning sets `JOHTO_FLAG_GD01_SEEN` (Johto id `0x291B`: HnS raw flag `0x91B`, the first after HnS’s last flag `0x91A`, unused by any script or C and inside Johto’s stored events, so no save layout change). Losing is an ordinary loss; he waits to be asked again. He is gone after the second Johto badge whether or not the scene was played.
+
+### GD02 — Gold outside Ecruteak’s Center
+
+**Trigger:** Ecruteak City, on entering: `JOHTO_FLAG_RELEASED_BEASTS` set (the beasts have fled the Burned Tower), `JOHTO_FLAG_BADGE04_GET` not set, `JOHTO_FLAG_GD02_SEEN` not set (`CG_GoldEcruteakVisibility`). Gold (`LOCALID_ECRUTEAK_GOLD`, appended to Ecruteak’s events, `FLAG_TEMP_1C`) stands beside the Center’s door, facing it. Talk to him.
+
+**Status:** IMPLEMENTED 2026-11-09 (story copy F2, L2). Replay tests `ecruteak gold waits after the burned tower`, `ecruteak gold remembers new bark`, `ecruteak gold battle after the burned tower`, `ecruteak gold leaves for the theater`, `ecruteak gold leaves from the east`, `ecruteak gold battle from below`, `ecruteak gold not there before the burned tower`, `ecruteak gold gone after the fog badge`, `ecruteak gold gone once played`.
+
+**Source:** [`CG_GoldEcruteak`](../../engine/data/scripts/character_growth.inc); trainers `TRAINER_JOHTO_GOLD_ECRUTEAK_TOTODILE_HNS`, `…_CHIKORITA_HNS`, `…_CYNDAQUIL_HNS` (Geodude lv 20, Flaaffy lv 20 and his starter’s middle stage lv 22, chosen by `JOHTO_VAR_STARTER_MON` as in Elm’s lab; around the area’s average, as the owner asked on 10 November: the trainers of Routes 36 and 37 and the Burned Tower, Silver there, and Ecruteak’s Gym with Morty average lv 20.6).
+
+With GD01 played, “{PLAYER}! I beat FALKNER! Third time, just like I said!”; without it, “{PLAYER}! Remember me? GOLD, from NEW BARK. I beat FALKNER!” Then: he found {RIVAL} coming out of the Burned Tower, told him what he thinks of thieves, was called weak and beaten, and saw Silver make his Pokémon rest before it battled again (SV01’s same city). “Battle me? I want to see if I’m any less weak!” NO: “Okay! I’ll be at the CENTER, getting ready.” (ask again later). YES: the battle (“Closer. I’m getting closer!”); after it he is off to see the Kimono Girls dance, then Morty, and walks off toward the theater. Winning sets `JOHTO_FLAG_GD02_SEEN` (Johto id `0x291E`, HnS raw `0x91E`, unused and inside Johto’s stored events). He is gone after the Fog Badge whether or not the scene was played.
+
+### GD03 — Gold’s last battle in New Bark
+
+**Trigger:** New Bark Town, on entering: `JOHTO_FLAG_SYS_GAME_CLEAR` set, `JOHTO_FLAG_GD03_SEEN` not set (`CG_GoldNewBarkVisibility`). Gold (`LOCALID_NEWBARK_GOLD`, appended to New Bark’s events, `FLAG_TEMP_1D`) stands beside Elm’s lab door. Talk to him.
+
+**Status:** IMPLEMENTED 2026-11-09 (story copy F2, L2). Replay tests `new bark gold waits after the johto league`, `new bark gold last battle`, `new bark gold walks off west`, `new bark gold leaves from below`, `new bark gold battle from the east`, `new bark gold not there before the johto league`, `new bark gold gone once played`.
+
+**Source:** [`CG_GoldNewBark`](../../engine/data/scripts/character_growth.inc); trainers `TRAINER_JOHTO_GOLD_NEWBARK_TOTODILE_HNS`, `…_CHIKORITA_HNS`, `…_CYNDAQUIL_HNS` (Golem lv 47, Heracross lv 47, Ampharos lv 47 and his starter’s final stage lv 49; around the average of the late-game area the player comes from, as the owner asked on 10 November: the trainers of Routes 26 and 27, Silver on Victory Road and the Elite Four and Lance at their first challenge average lv 47.4).
+
+“{PLAYER}! You did it. CHAMPION of KANTO, and now JOHTO too! I have five BADGES now. Five! I’m going to catch up, you’ll see.” “One more battle? This time, I really mean to win.” NO: “Okay! I’ll be right here when you’re ready.” YES: the battle (“Not this time either!”); after it “I didn’t shout once that whole battle. Did you notice? See you around, {PLAYER}. Next time, I’ll win!” (his line from Elm’s lab), and he walks off west toward Route 29. Winning sets `JOHTO_FLAG_GD03_SEEN` (Johto id `0x291F`, HnS raw `0x91F`).
 
 ### BL03 — Notes from two regions
 

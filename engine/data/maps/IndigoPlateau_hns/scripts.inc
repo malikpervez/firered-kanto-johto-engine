@@ -8,7 +8,7 @@ IndigoPlateau_Sign::
 	end
 
 IndigoPlateau_Text_Sign:
-	.string "INDIGO PLATEAU\p"
-	.string "The Ultimate Goal for Trainers!\p"
-	.string "POKéMON LEAGUE HQ$"
+	.string "LAUREL PLATEAU\p"
+	.string "JOHTO's POKéMON LEAGUE\p"
+	.string "The Ultimate Goal for Trainers!$"
 
