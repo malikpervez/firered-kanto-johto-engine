@@ -23,6 +23,8 @@
     {MAP_AZALEA_TOWN_HNS, 55, 24, 24},
     {MAP_GOLDENROD_CITY_HNS, 24, 14, 44},
     {MAP_ECRUTEAK_CITY_HNS, 51, 41, 53},
+    // FG-E on the Lake of Rage's west shore: LB, Tim and Nick in front; Jigglypuff, a fisherman, Murkrow.
+    {MAP_LAKE_OF_RAGE_HNS, 6, 39, LOCALID_FRIENDS_LAKEOFRAGE_HNS_BRIAN, 0x68, 7, FALSE},
     {MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS, 16, 6, 4},
     // FG-D on Cianwood's beach, below the Pokemon Center: Jon, Brian and Tim in front; Primeape, a Blackbelt, Hoothoot.
     {MAP_CIANWOOD_CITY_HNS, 32, 49, LOCALID_FRIENDS_CIANWOODCITY_HNS_BRIAN, 0x45, 7, FALSE},

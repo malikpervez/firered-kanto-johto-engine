@@ -1,0 +1,87 @@
+{
+ "note": "FG-E: talk to Tim from his east side, the tile he walks to for the sign: the player steps back one tile, still facing him, and the scene plays (ends on LB reading the sign).",
+ "created": "2026-11-10 16:09",
+ "start": {
+  "map": "LakeOfRage_hns",
+  "x": 9,
+  "y": 39,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_FLAG_BADGE02_GET",
+   "JOHTO_FLAG_BADGE03_GET",
+   "JOHTO_FLAG_BADGE04_GET",
+   "JOHTO_FLAG_BADGE05_GET",
+   "JOHTO_FLAG_BADGE06_GET",
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE=14",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_16"
+  ],
+  "script": null,
+  "clock": "16:00"
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_E_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LakeOfRage_hns",
+  "x": 6,
+  "y": 40,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_E_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 16:09"
+}

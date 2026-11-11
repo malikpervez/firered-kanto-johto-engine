@@ -208,6 +208,7 @@ static const struct FriendsWalk sWalks[] = {
     {2, 2, 0, 1}, {3, 5, -1, 0}, {5, 6, -1, 0}, {6, 5, 0, -1},
     {7, 4, -1, 0}, {9, 6, 1, 0}, {11, 3, 1, 0}, {18, 6, 1, 0},
     {20, 3, 0, 1}, {21, 0, 0, -1}, {22, 3, 1, 0},
+    {27, 6, 1, 0}, // FG-E: Tim walks to the sign
 };
 
 static bool8 WalkCellsFree(const struct FriendsCamp *camp, u16 scene)
@@ -866,6 +867,7 @@ void Special_FriendsStoryStage(void)
         case 26:
             ShowHuman(OBJ_EVENT_GFX_BLACK_BELT_HNS, 1);
             ShowMon(SPECIES_PRIMEAPE, 0); ShowMon(SPECIES_HOOTHOOT, 2); break;
+        case 27: ShowHuman(OBJ_EVENT_GFX_FISHER, 1); break;
         }
     }
     else if (scene == 1 && beat == 19)
@@ -894,6 +896,12 @@ void Special_FriendsStoryStage(void)
     }
     else if (scene == 13 && beat == 8)
         ShowMon(SPECIES_SENTRET, 1);
+    else if (scene == 27 && beat == 14)
+    {
+        // FG-E: LB sits down by the bucket; Jigglypuff sits with him and Murkrow lands.
+        ShowMon(SPECIES_JIGGLYPUFF, 0);
+        ShowMon(SPECIES_MURKROW, 2);
+    }
     else if (scene == 8 && beat == 8)
     {
         ClearPartners();

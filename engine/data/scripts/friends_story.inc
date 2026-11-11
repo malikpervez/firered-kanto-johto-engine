@@ -6124,3 +6124,156 @@ FG_D_Text_Choice1_1::
 	.string "JON: I'M RIGHT FUCKING HERE.$"
 FG_D_Text_Choice1_2::
 	.string "TIM: …See, he still lives in there.\nPrimeape just doesn't need him.$"
+
+@ FG-E The lake that was told to be angry (the October 19 handoff's scene; story copy F3). The Lake of Rage's
+@ west shore, once the Mahogany hideout is cleared, while the Friends are at FG17 or FG18. No battle, nothing given.
+FG_E_Interact::
+	lockall
+	faceplayer
+	setvar VAR_0x8004, 27
+	callnative Special_FriendsStoryBegin, requests_effects=1
+	goto_if_eq VAR_RESULT, 0, FG_Release
+	copyvar VAR_0x8008, VAR_RESULT
+	call FG_FrameCamera
+	goto_if_eq VAR_0x8008, 2, FG_E_Menu
+	setvar VAR_0x8004, 27
+	setvar VAR_0x8005, 0
+	closemessage
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_focus 5
+	msgbox FG_E_Text_Main01
+	fg_focus 5
+	msgbox FG_E_Text_Main02
+	fg_focus 6
+	msgbox FG_E_Text_Main03
+	fg_focus 5
+	msgbox FG_E_Text_Main04
+	fg_focus 7
+	msgbox FG_E_Text_Main05
+	fg_focus 5
+	msgbox FG_E_Text_Main06
+	fg_react 7, FG_E_Move_WatchWater
+	fg_focus 7
+	msgbox FG_E_Text_Main07
+	fg_focus 7
+	msgbox FG_E_Text_Main08
+	fg_focus 7
+	msgbox FG_E_Text_Main09
+	fg_focus 3
+	msgbox FG_E_Text_Main10
+	fg_focus 7
+	msgbox FG_E_Text_Main11
+	fg_react 5, FG_Move_QuietPause
+	setvar VAR_0x8004, 27
+	setvar VAR_0x8005, 14
+	closemessage
+	callnative Special_FriendsStoryStage, requests_effects=1
+	call FG_WaitSceneMovement
+	delay 30
+	fg_focus 5
+	msgbox FG_E_Text_Main12
+	fg_focus 5
+	msgbox FG_E_Text_Main13
+	fg_focus 7
+	msgbox FG_E_Text_Main14
+	fg_focus 5
+	msgbox FG_E_Text_Main15
+	fg_focus 5
+	msgbox FG_E_Text_Main16
+	fg_focus 7
+	msgbox FG_E_Text_Main17
+	fg_focus 5
+	msgbox FG_E_Text_Main18
+	fg_walk_out 6, DIR_EAST
+	fg_focus 6
+	msgbox FG_E_Text_Main19
+	fg_walk_back 6, DIR_WEST
+	fg_focus 6
+	msgbox FG_E_Text_Main20
+	fg_focus 7
+	msgbox FG_E_Text_Main21
+	setvar VAR_0x8004, 27
+	callnative Special_FriendsStoryMarkSeen, requests_effects=1
+FG_E_Menu::
+	call FG_WaitSceneMovement
+	closemessage
+	callnative Special_FriendsStoryPrepareMenu, requests_effects=1
+	dynmultichoice 0, 0, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE, FG_E_Text_Option0, FG_E_Text_Option1
+	goto_if_eq VAR_RESULT, 0, FG_E_Choice0
+	goto_if_eq VAR_RESULT, 1, FG_E_Choice1
+	goto FG_Release
+FG_E_Choice0::
+	call FG_FrameCamera
+	fg_focus 5
+	msgbox FG_E_Text_Choice0_1
+	fg_focus 3
+	msgbox FG_E_Text_Choice0_2
+	goto FG_Release
+FG_E_Choice1::
+	call FG_FrameCamera
+	fg_focus 6
+	msgbox FG_E_Text_Choice1_1
+	fg_focus 5
+	msgbox FG_E_Text_Choice1_2
+	goto FG_Release
+FG_E_Move_WatchWater::
+	face_up
+	delay_16
+	delay_16
+	step_end
+FG_E_Text_Main01::
+	.string "LB: “If you're reading this, it's too\nlate. Boats closed.”$"
+FG_E_Text_Main02::
+	.string "LB: IF YOU'RE READING THIS IT'S TOO\nLATE.$"
+FG_E_Text_Main03::
+	.string "TIM: It's a boat rental sign, LB.$"
+FG_E_Text_Main04::
+	.string "LB: It's a mixtape. The man put a\nmixtape on a fence.$"
+FG_E_Text_Main05::
+	.string "FISHERMAN: My grandson painted that.\nHe thought it was funny.$"
+FG_E_Text_Main06::
+	.string "LB: Your grandson has taste.$"
+FG_E_Text_Main07::
+	.string "FISHERMAN: Boats are closed because I\ndon't trust the lake.$"
+FG_E_Text_Main08::
+	.string "FISHERMAN: Every Magikarp I raised\nwent wild in a week.$"
+FG_E_Text_Main09::
+	.string "FISHERMAN: The radio kept humming. They\nkept getting angrier.$"
+FG_E_Text_Main10::
+	.string "NICK: That signal's off now. This kid\nshut it down.$"
+FG_E_Text_Main11::
+	.string "FISHERMAN: So they say. The lake\ndoesn't know that yet.$"
+FG_E_Text_Main12::
+	.string "LB: Sorry, man. I made a joke about your\nsign.$"
+FG_E_Text_Main13::
+	.string "LB: Somebody made your Pokémon angry\non purpose. That's not funny.$"
+FG_E_Text_Main14::
+	.string "FISHERMAN: …No.$"
+FG_E_Text_Main15::
+	.string "LB: Jigglypuff used to sing every time\nshe got scared. Took weeks to stop.$"
+FG_E_Text_Main16::
+	.string "LB: You talk to them. Same time every\nday. They come back.$"
+FG_E_Text_Main17::
+	.string "FISHERMAN: You sound sure.$"
+FG_E_Text_Main18::
+	.string "LB: I'm not. That's just what worked.$"
+FG_E_Text_Main19::
+	.string "TIM: “Boats reopening soon. Ask the guy\non the bucket.”$"
+FG_E_Text_Main20::
+	.string "TIM: People need to know where to go\nwhen it's fixed.$"
+FG_E_Text_Main21::
+	.string "FISHERMAN: …Thank you. Both of you.$"
+FG_E_Text_Option0::
+	.string "That was kind, LB$"
+FG_E_Text_Option1::
+	.string "Nice sign, Tim$"
+FG_E_Text_Choice0_1::
+	.string "LB: Don't tell X. He'll say I “held\nspace.”$"
+FG_E_Text_Choice0_2::
+	.string "NICK: You did, though.$"
+FG_E_Text_Choice1_1::
+	.string "TIM: Kept the grandson's side. You don't\ncover up good work.$"
+FG_E_Text_Choice1_2::
+	.string "LB: Respect.$"
