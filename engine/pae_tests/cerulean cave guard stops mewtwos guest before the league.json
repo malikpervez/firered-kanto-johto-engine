@@ -1,0 +1,147 @@
+{
+ "note": "MEWTWO asked the player to come on Route 22, but they aren't Champion yet: the guard gives FireRed's rule and stays in the way; walking up bumps into him.",
+ "created": "2026-11-09 15:31",
+ "start": {
+  "map": "CeruleanCity_Frlg",
+  "x": 6,
+  "y": 8,
+  "state": [
+   "FLAG_MW06_SEEN",
+   "FLAG_MW07_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     66
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     64,
+     34
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_HIDE_CERULEAN_CAVE_GUARD"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_Frlg",
+  "x": 6,
+  "y": 8,
+  "in_battle": false,
+  "flags": {
+   "FLAG_HIDE_CERULEAN_CAVE_GUARD": false
+  }
+ },
+ "accepted": "2026-11-09 15:33"
+}

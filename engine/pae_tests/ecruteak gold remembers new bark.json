@@ -1,0 +1,76 @@
+{
+ "note": "After the Burned Tower, for a player who never played Gold's Violet rematch: he introduces himself again (GOLD, from NEW BARK) and says he beat Falkner. The test ends on that line.",
+ "created": "2026-11-09 15:52",
+ "start": {
+  "map": "EcruteakCity_hns",
+  "x": 39,
+  "y": 48,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_BADGE08_GET",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_FLAG_BADGE02_GET",
+   "JOHTO_FLAG_BADGE03_GET",
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "JOHTO_VAR_STARTER_MON=0"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "JOHTO_FLAG_GD02_SEEN"
+  ],
+  "vars": [],
+  "trainers": [
+   "TRAINER_JOHTO_GOLD_ECRUTEAK_TOTODILE_HNS"
+  ]
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "EcruteakCity_hns",
+  "x": 39,
+  "y": 48,
+  "in_battle": false,
+  "flags": {
+   "JOHTO_FLAG_GD02_SEEN": false
+  },
+  "trainers": {
+   "TRAINER_JOHTO_GOLD_ECRUTEAK_TOTODILE_HNS": false
+  }
+ },
+ "accepted": "2026-11-09 15:56"
+}

@@ -1,0 +1,152 @@
+{
+ "note": "The Celebi scene at Tohjo Falls (B13, GAP-26): the radio calls Giovanni home, and Giovanni recognises the child who beat him at Viridian weeks ago.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "TohjoFalls_Cavern_hns",
+  "x": 46,
+  "y": 17,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_BADGE08_GET",
+   "CLEAR_TEAM",
+   "SPECIES_CELEBI lv100 MOVE_DRAGON_PULSE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     17
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     64,
+     10
+    ],
+    [
+     0,
+     300
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "TohjoFalls_GiovanniRoom_hns",
+  "x": 5,
+  "y": 6,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:30"
+}

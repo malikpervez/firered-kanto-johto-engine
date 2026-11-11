@@ -23,12 +23,18 @@ PalletTown_PlayersHouse_1F_EventScript_MomOakLookingForYouFemale::
 	return
 
 PalletTown_PlayersHouse_1F_EventScript_MomHeal::
+	@ Home from the Hall of Fame, before Oak's scene outside (KR-113).
+	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_OAK, 2, PalletTown_PlayersHouse_1F_EventScript_MomWelcomeChampion
 	msgbox PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest
 	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare
 	release
 	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomWelcomeChampion::
+	msgbox PalletTown_PlayersHouse_1F_Text_WelcomeHomeChampion
+	return
 
 @ Displays special text if interacted with from side or back (which are normally inaccessible)
 PalletTown_PlayersHouse_1F_EventScript_TV::
@@ -66,6 +72,13 @@ PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
 	.string "It said so on TV.\p"
 	.string "Oh, yes. PROF. OAK, next door, was\n"
 	.string "looking for you.$"
+
+PalletTown_PlayersHouse_1F_Text_WelcomeHomeChampion::
+	.string "MOM: Welcome home, CHAMPION!\p"
+	.string "I watched it all on TV. I was so\n"
+	.string "nervous, I couldn't sit down!\p"
+	.string "PROF.OAK came looking for you.\n"
+	.string "He wants to see you right away.$"
 
 PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::
 	.string "MOM: {PLAYER}!\n"

@@ -30,5 +30,8 @@
 // HnS's own flags end at raw 0x91A (its last daily flag); raw 0x91B..0x95F are unused by every Johto script and
 // by the C code, and are inside the regional save's stored events, so no save layout changes.
 #define JOHTO_FLAG_GD01_SEEN            0x291B // Gold's rematch outside Violet's Gym was played through
+#define JOHTO_FLAG_JT05_SEEN            0x291D // Jessie, James and Meowth's guard duty in Goldenrod's warehouse was seen
+#define JOHTO_FLAG_GD02_SEEN            0x291E // Gold's battle outside Ecruteak's Center was played through
+#define JOHTO_FLAG_GD03_SEEN            0x291F // Gold's last battle in New Bark, after the Johto League
 
 #endif
