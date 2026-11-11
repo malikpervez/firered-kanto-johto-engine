@@ -18,7 +18,7 @@ BlackthornCity_PokemonCenter_EventScript_Twin::
 	end
 
 BlackthornCity_PokemonCenter1FGentlemanText:
-	.string "Deep inside far-off INDIGO\n"
+	.string "Deep inside far-off LAUREL\n"
 	.string "PLATEAU is the POKéMON LEAGUE.\p"
 	.string "I hear the best trainers gather\n"
 	.string "there from around the country.$"
