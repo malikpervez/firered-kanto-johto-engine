@@ -201,8 +201,14 @@ bool8 FriendsStory_GetGate(u16 scene)
         return FlagGet(FLAG_HIDE_SAFFRON_ROCKETS) && FlagGet(FLAG_GOT_MASTER_BALL_FROM_SILPH);
     case 11:
         return FlagGet(FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY);
+    case 23: // FG-A: Bill's first Sevii trip is over and the Friends are still in Kanto (FG11 or FG12; FG13 retires it)
+        return VarGet(VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F) >= 3
+            && FriendsStory_GetStage() >= 11 && FriendsStory_GetStage() <= 12;
     case 12:
         return FlagGet(FLAG_SYS_GAME_CLEAR) && VarGet(VAR_MAP_SCENE_PALLET_TOWN_OAK) >= 3;
+    case 24: // FG-B: the player is Champion, Oak has given the Johto directions and the Friends are at FG12 (Pallet)
+        return FlagGet(FLAG_SYS_GAME_CLEAR) && FlagGet(FLAG_OAK_GAVE_JOHTO_DIRECTIONS)
+            && FriendsStory_GetStage() == 12;
     case 13: case 14:
         return CharacterStory_HasMetElm();
     case 25: // FG-C: the Zephyr Badge, with the Friends at FG13 (New Bark) or FG14 (the Ruins, open before the badge)
@@ -248,7 +254,9 @@ u16 FriendsStory_GetMapScene(void)
     case MAP_FUCHSIA_CITY: return 9;
     case MAP_SAFFRON_CITY: return 10;
     case MAP_CINNABAR_ISLAND: return 11;
+    case MAP_ONE_ISLAND_KINDLE_ROAD: return 23;
     case MAP_PALLET_TOWN: return 12;
+    case MAP_LEAGUE_WEST_PASS: return 24;
     case MAP_NEW_BARK_TOWN_HNS:
         if (Seen(21))
             return FlagGet(FLAG_FRIENDS_REUNION_ARMED) ? 22 : 0;

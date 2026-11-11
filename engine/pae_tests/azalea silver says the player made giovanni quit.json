@@ -1,0 +1,73 @@
+{
+ "note": "Silver in Azalea after the Well (B4): he knows the player is the Kanto Champion who made Giovanni quit, and is angry Rocket is still here.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "AzaleaTown_hns",
+  "x": 10,
+  "y": 16,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "JOHTO_VAR_AZALEA_TOWN_STATE=5",
+   "CLEAR_TEAM",
+   "SPECIES_MEWTWO lv100 MOVE_DRAGON_PULSE"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     16,
+     17
+    ],
+    [
+     0,
+     240
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     100
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "AzaleaTown_hns",
+  "x": 11,
+  "y": 16,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:30"
+}

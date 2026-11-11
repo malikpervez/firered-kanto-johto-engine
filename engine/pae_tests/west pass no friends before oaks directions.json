@@ -1,0 +1,54 @@
+{
+ "note": "FG-B's gate, closed: the player is Champion but Oak hasn't given the Johto directions yet, so the road is empty; pressing A by X's spot does nothing.",
+ "created": "2026-11-10 15:26",
+ "start": {
+  "map": "LeagueWestPass_Frlg",
+  "x": 30,
+  "y": 12,
+  "state": [
+   "FLAG_SYS_GAME_CLEAR",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_4",
+   "FLAG_FRIENDS_STAGE_8"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_B_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LeagueWestPass_Frlg",
+  "x": 30,
+  "y": 12,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_B_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 15:37"
+}

@@ -1,0 +1,67 @@
+{
+ "note": "Before the League, once Oak has written down the sighting (FLAG_RB_OAK_HEARD_BIRD): RB02 doesn't play again (it used to on every talk), and his talk goes straight to his usual line. Ends on \"POK\u00e9MON around the world wait for you\" (the story copy's A12, KR-113).",
+ "created": "2026-11-09 15:19",
+ "start": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv12",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_RB_OPENING_SEEN",
+   "FLAG_RB_OAK_HEARD_BIRD",
+   "FLAG_HIDE_RIVAL_IN_LAB",
+   "!FLAG_HIDE_OAK_IN_HIS_LAB",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=6",
+   "VAR_MAP_SCENE_VIRIDIAN_CITY_MART=2"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     70
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_RB_OAK_HEARD_BIRD"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 6,
+  "y": 4,
+  "in_battle": false,
+  "flags": {
+   "FLAG_RB_OAK_HEARD_BIRD": true
+  }
+ },
+ "accepted": "2026-11-09 15:19"
+}

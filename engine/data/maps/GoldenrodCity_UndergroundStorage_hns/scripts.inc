@@ -1,7 +1,12 @@
 @ Johto (data/maps/GoldenrodCity_UndergroundStorage_hns/scripts.inc), as built into the FireRed game.
 
 GoldenrodCity_UndergroundStorage_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, GoldenrodCity_UndergroundStorage_OnTransition
 	.byte 0
+
+GoldenrodCity_UndergroundStorage_OnTransition::
+	call JT05_Visibility
+	end
 
 GoldenrodCity_UndergroundStorage_EventScript_Director::
 	lock

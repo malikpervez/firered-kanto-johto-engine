@@ -9,6 +9,7 @@ EcruteakCity_OnTransition::
 	call RB_EcruteakVisibility
 	callnative SetTimeBasedEncounters
 	call CG_SilverEcruteakVisibility
+	call CG_GoldEcruteakVisibility
 	end
 
 EcruteakCity_Test_Lugia::

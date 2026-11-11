@@ -1,0 +1,137 @@
+{
+ "note": "The Pikachu start (ST01): Pikachu chooses you, you decline a nickname, and Blue walks to the ball Oak kept for him: \"Fine. EEVEE's with me, then!\" (the copy's E3; FireRed's \"I'll take this one, then!\" read like a choice he didn't have). KR-114.",
+ "created": "2026-11-09 14:45",
+ "start": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 8,
+  "y": 5,
+  "state": [
+   "CLEAR_TEAM",
+   "!FLAG_SYS_POKEMON_GET",
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB=2"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     200
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_ST01_GIVEN"
+  ],
+  "vars": [
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PalletTown_ProfessorOaksLab_Frlg",
+  "x": 8,
+  "y": 5,
+  "in_battle": false,
+  "flags": {
+   "FLAG_ST01_GIVEN": true
+  },
+  "vars": {
+   "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB": 2
+  }
+ },
+ "accepted": "2026-11-09 14:45"
+}

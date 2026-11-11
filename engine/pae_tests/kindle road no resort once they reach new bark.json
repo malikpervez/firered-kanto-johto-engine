@@ -1,0 +1,63 @@
+{
+ "note": "FG-A's gate, closed the other way: the Friends' story has reached FG13 (New Bark, stage 13), so they've left Kanto and nobody is below Ember Spa.",
+ "created": "2026-11-10 16:02",
+ "start": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 13,
+  "y": 62,
+  "state": [
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_4",
+   "FLAG_FRIENDS_STAGE_8",
+   "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F=3"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_A_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 13,
+  "y": 62,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_A_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 16:02"
+}

@@ -1,0 +1,43 @@
+{
+ "note": "The echo cliff over the Friends' camp (FG03) is solid: from the camp's top row (83,11) walking north stays put under its two-block face; the shelf's ledge either side of it is unchanged.",
+ "created": "2026-11-10 15:30",
+ "start": {
+  "map": "Route4_Frlg",
+  "x": 83,
+  "y": 11,
+  "state": [],
+  "script": null
+ },
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     34
+    ],
+    [
+     0,
+     220
+    ]
+   ]
+  }
+ ],
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route4_Frlg",
+  "x": 83,
+  "y": 11,
+  "in_battle": false
+ },
+ "accepted": "2026-11-10 14:54"
+}

@@ -1,0 +1,70 @@
+{
+ "note": "A broken ROCKET tape recorder by the wall beside Articuno, Seafoam Islands B4F: the label reads CALL SAMPLE 1. Ends on that line.",
+ "created": "2026-11-09 16:24",
+ "start": {
+  "map": "SeafoamIslands_B4F_Frlg",
+  "x": 8,
+  "y": 1,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "SeafoamIslands_B4F_Frlg",
+  "x": 8,
+  "y": 1,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 16:26"
+}

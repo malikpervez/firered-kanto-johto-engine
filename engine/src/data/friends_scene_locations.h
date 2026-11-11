@@ -11,7 +11,11 @@
     {MAP_FUCHSIA_CITY, 8, 24, 25},
     {MAP_SAFFRON_CITY, 50, 8, 20},
     {MAP_CINNABAR_ISLAND, 46, 20, 16},
+    // FG-A on Kindle Road, below Ember Spa: Tim, Brian, Ham and Nick in front; Spearow, a local, Slowpoke; they leave.
+    {MAP_ONE_ISLAND_KINDLE_ROAD, 12, 61, 30, 0x4B, 7, TRUE},
     {MAP_PALLET_TOWN, 12, 22, 11},
+    // FG-B on League West Pass, south of the road: X, Jon, Nick and Brian in front; Mankey; they head west.
+    {MAP_LEAGUE_WEST_PASS, 30, 13, 3, 0x1D, 1, TRUE},
     {MAP_NEW_BARK_TOWN_HNS, 21, 14, 11},
     // FG-C in Violet, in front of Sprout Tower: LB, Ham and X in front; a Sage, Sentret, Oddish; they stay.
     {MAP_VIOLET_CITY_HNS, 32, 16, 58, 0x32, 7, FALSE},
