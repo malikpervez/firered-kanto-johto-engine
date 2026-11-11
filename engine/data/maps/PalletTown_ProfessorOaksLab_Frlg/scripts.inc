@@ -515,7 +515,14 @@ PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleCharmanderRight::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalBattleCharmander::
+	goto_if_set FLAG_ST01_GIVEN, PalletTown_ProfessorOaksLab_EventScript_RivalBattleEevee
 	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_CHARMANDER, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
+	goto PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle
+	end
+
+@ The Pikachu start (ST01) battles this trainer with Blue's EEVEE.
+PalletTown_ProfessorOaksLab_EventScript_RivalBattleEevee::
+	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_CHARMANDER, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeatEevee, Text_RivalVictory
 	goto PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle
 	end
 
@@ -726,6 +733,14 @@ PalletTown_ProfessorOaksLab_EventScript_OakJustShownCompleteDex::
 	release
 	end
 
+PalletTown_ProfessorOaksLab_EventScript_OakAsksAboutOldMon::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_OakAsksAboutPikachu::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMePikachu
+	return
+
 PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon
 	release
@@ -737,7 +752,8 @@ PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe
+	call_if_unset FLAG_ST01_GIVEN, PalletTown_ProfessorOaksLab_EventScript_OakAsksAboutOldMon
+	call_if_set FLAG_ST01_GIVEN, PalletTown_ProfessorOaksLab_EventScript_OakAsksAboutPikachu
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playfanfare MUS_OBTAIN_TMHM
 	message PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel
@@ -1306,7 +1322,8 @@ PalletTown_ProfessorOaksLab_EventScript_RivalWalksToBulbasaur::
 
 PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter::
 	textcolor NPC_TEXT_COLOR_MALE
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen
+	call_if_unset FLAG_ST01_GIVEN, PalletTown_ProfessorOaksLab_EventScript_RivalTakesThisOne
+	call_if_set FLAG_ST01_GIVEN, PalletTown_ProfessorOaksLab_EventScript_RivalTakesEevee
 	removeobject RIVAL_STARTER_ID
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	bufferspeciesname STR_VAR_1, RIVAL_STARTER_SPECIES
@@ -1321,6 +1338,14 @@ PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter::
 
 PalletTown_ProfessorOaksLab_EventScript_ReadyEndSignLadyScene::
 	setvar VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_RivalTakesThisOne::
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_RivalTakesEevee::
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalEeveesWithMe
 	return
 
 PalletTown_ProfessorOaksLab_Movement_RivalWalksToCharmander::
@@ -1466,6 +1491,9 @@ PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer::
 PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen::
 	.string "{RIVAL}: I'll take this one, then!$"
 
+PalletTown_ProfessorOaksLab_Text_RivalEeveesWithMe::
+	.string "{RIVAL}: Fine. EEVEE's with me, then!$"
+
 PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak::
 	.string "{RIVAL} received the {STR_VAR_1}\n"
 	.string "from PROF. OAK!$"
@@ -1483,6 +1511,11 @@ PalletTown_ProfessorOaksLab_Text_RivalDefeat::
 	.string "WHAT?\n"
 	.string "Unbelievable!\l"
 	.string "I picked the wrong POKéMON!$"
+
+PalletTown_ProfessorOaksLab_Text_RivalDefeatEevee::
+	.string "WHAT?\n"
+	.string "Unbelievable!\l"
+	.string "EEVEE and I only just met!$"
 
 @ Also used for early Route 22 battle
 Text_RivalVictory::
@@ -1588,6 +1621,16 @@ PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow::
 PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
 	.string "OAK: Oh, {PLAYER}!\n"
 	.string "How is my old POKéMON?\p"
+	.string "Well, it seems to be growing more\n"
+	.string "attached to you.\p"
+	.string "You must be talented as a POKéMON\n"
+	.string "TRAINER.\p"
+	.string "What's that?\n"
+	.string "You have something for me?$"
+
+PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMePikachu::
+	.string "OAK: Oh, {PLAYER}!\n"
+	.string "How is PIKACHU getting along?\p"
 	.string "Well, it seems to be growing more\n"
 	.string "attached to you.\p"
 	.string "You must be talented as a POKéMON\n"

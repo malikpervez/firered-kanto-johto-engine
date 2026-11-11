@@ -319,42 +319,45 @@ GoldenrodCity_RadioTower_5F_Movement_Leave2:
 GoldenrodCity_RadioTower_5F_Text_ExecutiveF1Seen:
 	.string "Remember me from the HIDEOUT in\n"
 	.string "MAHOGANY TOWN?\p"
-	.string "My boss scolded me but I'm stronger.\p"
+	.string "ARCHER took my operation and\n"
+	.string "scolded me like a grunt.\p"
 	.string "I lost then, but I won't this time.$"
 
 GoldenrodCity_RadioTower_5F_Text_ExecutiveF1Beaten:
 	.string "This can't be happening!\p"
-	.string "I fought hard, but I still lost…\p"
-	.string "I'm so sorry GIOVANNI…$"
+	.string "I fought hard, but I still lost…$"
 
 GoldenrodCity_RadioTower_5F_Text_ExecutiveF1After:
 	.string "{PLAYER}, isn't it?\p"
-	.string "A brat like you won't appreciate\n"
-	.string "the magnificence of TEAM ROCKET.\p"
-	.string "That's too bad. I really admire\n"
-	.string "your power.$"
+	.string "ARCHER wants GIOVANNI back, so he\n"
+	.string "can follow orders again.\p"
+	.string "I don't need GIOVANNI. TEAM ROCKET\n"
+	.string "only needs to be strong.\p"
+	.string "That's too bad about you. I really\n"
+	.string "admire your power.$"
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossSeen:
 	.string "Oh? You managed to get this far?\p"
-	.string "You must be quite the trainer.\p"
+	.string "So. You're the trainer who made\n"
+	.string "GIOVANNI walk away.\p"
 	.string "We intend to take over this RADIO\n"
-	.string "STATION and announce our comeback.\p"
-	.string "That should bring our boss GIOVANNI\n"
-	.string "back from his solitary training.\p"
-	.string "We are going to regain our former\n"
-	.string "glory...\p"
-	.string "I won't allow you to interfere with\n"
-	.string "our meticulous plans!$"
+	.string "STATION and call him home.\p"
+	.string "Once he hears that TEAM ROCKET\n"
+	.string "still stands, he will return.\p"
+	.string "I won't allow you to interfere\n"
+	.string "with our meticulous plans!$"
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossBeaten:
 	.string "No! Forgive me, GIOVANNI!$"
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossAfter:
 	.string "How could this be?\p"
-	.string "Our dreams have come to naught.\p"
+	.string "Our dreams have come to naught.\n"
 	.string "I wasn't up to the task after all.\p"
 	.string "Like GIOVANNI did before me, I will\n"
 	.string "disband TEAM ROCKET here today.\p"
+	.string "Any who keep the name after this\n"
+	.string "are no longer mine to answer for.\p"
 	.string "Farewell.$"
 
 GoldenrodCity_RadioTower_5F_Text_DirectorThanks:

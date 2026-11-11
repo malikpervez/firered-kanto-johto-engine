@@ -2771,7 +2771,7 @@
     },
     {
       "id": "JOHTO_MAPSEC_INDIGO_PLATEAU",
-      "name": "INDIGO PLATEAU"
+      "name": "LAUREL PLATEAU"
     },
     {
       "id": "JOHTO_MAPSEC_LAKE_OF_RAGE",
@@ -3474,12 +3474,12 @@
       "y": 14
     },
     {
-      "id": "MAPSEC_NEW_MAUVILLE",
-      "name": "NEW MAUVILLE",
-      "x": 8,
-      "y": 7,
+      "height": 2,
+      "id": "JOHTO_MAPSEC_INDIGO_PLATEAU",
+      "name": "LAUREL PLATEAU",
       "width": 1,
-      "height": 1
+      "x": 24,
+      "y": 3
     },
     {
       "id": "MAPSEC_METEOR_FALLS",
@@ -3752,12 +3752,13 @@
       "in_hns": true
     },
     {
-      "height": 2,
-      "id": "JOHTO_MAPSEC_INDIGO_PLATEAU",
+      "id": "MAPSEC_INDIGO_PLATEAU",
       "name": "INDIGO PLATEAU",
+      "x": 2,
+      "y": 3,
       "width": 1,
-      "x": 24,
-      "y": 3
+      "height": 1,
+      "in_hns": true
     },
     {
       "id": "MAPSEC_SAFFRON_CITY",
