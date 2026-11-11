@@ -1,0 +1,58 @@
+{
+ "note": "The same with the hideout cleared (state 14): Nao is at the Lake of Rage (RB16), so not in Ecruteak (one Nao at a time).",
+ "created": "2026-11-09 16:21",
+ "start": {
+  "map": "EcruteakCity_hns",
+  "x": 30,
+  "y": 23,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "FLAG_SYS_POKEMON_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "FLAG_RB_OPENING_SEEN",
+   "FLAG_RB_NAO_INTRODUCED",
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "FLAG_RB_ECRUTEAK_TRUTH_SEEN",
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE=14",
+   "JOHTO_VAR_GOLDENROD_CITY_STATE=5"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     12
+    ],
+    [
+     0,
+     30
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_TEMP_1E"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "EcruteakCity_hns",
+  "x": 30,
+  "y": 22,
+  "in_battle": false,
+  "flags": {
+   "FLAG_TEMP_1E": true
+  }
+ },
+ "accepted": "2026-11-09 16:21"
+}
