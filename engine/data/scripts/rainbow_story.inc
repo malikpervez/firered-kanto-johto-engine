@@ -30,7 +30,7 @@ RB_Flyby::
 	return
 @ The companion PIKACHU (it walks with every trainer once they have a POKéMON) sees through the stranger first:
 @ wary on Route 1 (MW01), ears flat at Silph's wavering veil (MW05), bristling again at Cinnabar's reveal (MW06),
-@ settling as MEWTWO leaves. No state.
+@ settling as MEWTWO leaves, and calm at the cave's mouth once MEWTWO is met (MW09). No state.
 RB_PikachuWary::
 	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
 	msgbox RB_Text_PikachuWary
@@ -51,6 +51,10 @@ RB_PikachuSettles::
 	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
 	msgbox RB_Text_PikachuSettles
 	return
+RB_PikachuLooksBack::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuLooksBack
+	return
 RB_Text_PikachuWary::
 	.string "PIKACHU's fur stands on end.\nIt doesn't take its eyes off him.$"
 RB_Text_PikachuBristles::
@@ -61,6 +65,8 @@ RB_Text_PikachuStares::
 	.string "PIKACHU's ears flatten. It stares\nat the traveler's shadow.$"
 RB_Text_PikachuSettles::
 	.string "PIKACHU watches it go.\nIts fur slowly settles.$"
+RB_Text_PikachuLooksBack::
+	.string "PIKACHU looks back into the dark.\nIts fur stays smooth.$"
 RB_Route1Transition::
 	setvar VAR_TEMP_E, 0
 	setflag FLAG_TEMP_1E
@@ -683,6 +689,8 @@ goto_if_unset FLAG_MW06_SEEN, RB_Return
 goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
 clearflag FLAG_TEMP_1E
 	return
+@ After the reveal he speaks as MEWTWO and asks the player to come to Cerulean Cave (story copy C2/C3).
+@ Cerulean's cave guard lets a Kanto Champion who has heard him through (FLAG_MW07_SEEN, story copy C4).
 MW07_Talk::
 	lock
 	faceplayer
@@ -754,7 +762,7 @@ MW05_Text::
 MW05_Text_Stranger::
 	.string "STRANGER: They offered power.\nYou kept stopping to help.\pA pink shape passes the window.\nSTRANGER: We are not alone.$"
 MW06_Text_Journals::
-	.string "STRANGER: Those pages tell you\nwhat they hoped to create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
+	.string "STRANGER: Someone in that house\nwrote, “MEWTWO is far too powerful.”\pThose pages tell what they hoped\nto create.\pThey cannot tell you who\nI will become.\pThe veil falls. MEWTWO stands\nwhere the traveler stood.$"
 MW06_Text_Question::
 	.string "MEWTWO: I expected possession.\nAnother reason to command.\pYou made that answer difficult.\pWould you invite MEWTWO to come?\nOr leave it to choose its path?$"
 MW06_Invitation::
@@ -770,22 +778,31 @@ MW06_Text_Choice::
 MW06_Text_Answer::
 	.string "MEWTWO: You do not speak for\nevery human. I no longer believe\levery human speaks for you.\pMEWTWO leaves to find\nsomewhere quiet.$"
 MW07_Text_Before::
-	.string "STRANGER: A CHAMPION commands\ngreat power. I wonder what\lyou will ask of it.$"
+	.string "The traveler's coat and hat are\nback. You know who wears them.\pMEWTWO: Others see a traveler.\nYou do not. Good.\pThey will call you CHAMPION soon.\nI wonder what you will ask of it.\pWhen they do, come to the cave at\nthe edge of CERULEAN. I will wait.$"
 MW07_Text_After::
-	.string "STRANGER: You reached the summit.\nDid it change what you ask\lof those beside you?$"
+	.string "The traveler's coat and hat are\nback. You know who wears them.\pMEWTWO: You reached the summit.\nDid it change what you ask of\lthose beside you?\pCome to the cave at the edge of\nCERULEAN. I will be waiting inside.$"
+@ The greeting: "You came" after he asked the player on Route 22 (MW07), "You found the quiet place" after the
+@ reveal alone (MW06), or the unfamiliar presence for a player who never met the stranger (story copy C5).
 MW08_Intro::
+	goto_if_set FLAG_MW07_SEEN, MW08_Came
 	goto_if_unset FLAG_MW06_SEEN, MW08_Unfamiliar
 	msgbox MW08_Text_Familiar
+MW08_Offer::
 	@ After Black Tide, Mewtwo knows what Rocket made in Johto: a callback across the regions, nothing written.
 	@ It comes before his battle offer.
 	call_if_set FLAG_LG_FINAL_RESOLVED, MW08_Replicas
 	msgbox MW08_Text_Battle
 	goto MW08_Ask
+MW08_Came::
+	msgbox MW08_Text_Came
+	goto MW08_Offer
 MW08_Unfamiliar::
 	msgbox MW08_Text_Unfamiliar
 MW08_Ask::
 	msgbox MW08_Text_Ask, MSGBOX_YESNO
 	return
+MW08_Text_Came::
+	.string "MEWTWO: You came.\pThis is the quiet place I chose.\nFew would follow me here.$"
 MW08_Text_Familiar::
 	.string "MEWTWO: You found the quiet\nplace I chose.$"
 MW08_Text_Battle::
@@ -811,20 +828,85 @@ MW09_Transition::
 	goto_if_set FLAG_MW09_SEEN, RB_Return
 	setvar VAR_TEMP_E, 1
 	return
+@ MW09, the arc's end: it plays by itself as the player walks out of the cave's mouth (Cerulean Cave 1F's coord
+@ events, stepping south; walking in, it waits) once MEWTWO has been beaten or caught. Caught and in the party, MEWTWO
+@ comes out of its POKé BALL beside its new trainer (an actor on 1F, hidden by FLAG_TEMP_1 until then), the farewell
+@ is a conversation, and it goes back into the ball. Beaten (or caught but left in the PC), the reflection is
+@ narration. Running from MEWTWO leaves it in the cave, so the farewell waits.
 MW09_Scene::
 	lockall
 	goto_if_unset FLAG_FOUGHT_MEWTWO, MW09_Release
 	goto_if_set FLAG_MW09_SEEN, MW09_Release
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_ne VAR_RESULT, DIR_SOUTH, MW09_Release
 	setvar VAR_TEMP_E, 0
+	checkspecies SPECIES_MEWTWO
+	goto_if_eq VAR_RESULT, TRUE, MW09_WithMewtwo
 	msgbox MW09_Text
+	call RB_PikachuLooksBack
+MW09_End::
 	closemessage
 	call RB_MewGlimpse
 	setflag FLAG_MW09_SEEN
 MW09_Release::
 	releaseall
 	end
+MW09_WithMewtwo::
+	getplayerxy VAR_0x8004, VAR_0x8005
+	goto_if_ge VAR_0x8004, 36, MW09_MewtwoWest
+	addvar VAR_0x8004, 1
+	call MW09_SendOutMewtwo
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_ExitBallFaceWest
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	goto MW09_Farewell
+MW09_MewtwoWest::
+	subvar VAR_0x8004, 1
+	call MW09_SendOutMewtwo
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_ExitBallFaceEast
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+MW09_Farewell::
+	waitmovement 0
+	playmoncry SPECIES_MEWTWO, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox MW09_Text_WithMewtwo
+	call RB_PikachuLooksAtMewtwo
+	closemessage
+	playse SE_BALL
+	applymovement2 LOCALID_CERULEAN_CAVE_1F_MEWTWO, MW09_Movement_EnterBall
+	waitmovement 0
+	removeobject LOCALID_CERULEAN_CAVE_1F_MEWTWO
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
+	goto MW09_End
+MW09_SendOutMewtwo::
+	setobjectxyperm LOCALID_CERULEAN_CAVE_1F_MEWTWO, VAR_0x8004, VAR_0x8005
+	clearflag FLAG_TEMP_1
+	addobject LOCALID_CERULEAN_CAVE_1F_MEWTWO
+	playse SE_BALL_OPEN
+	return
+RB_PikachuLooksAtMewtwo::
+	goto_if_unset FLAG_SYS_POKEMON_GET, RB_Return
+	msgbox RB_Text_PikachuLooksAtMewtwo
+	return
+MW09_Movement_ExitBallFaceWest::
+	exit_pokeball
+	face_left
+	step_end
+MW09_Movement_ExitBallFaceEast::
+	exit_pokeball
+	face_right
+	step_end
+MW09_Movement_EnterBall::
+	enter_pokeball
+	step_end
 MW09_Text::
 	.string "At the mouth of the cave,\nthe wind moves freely again.\pThere is room for more than\none path through the world.$"
+MW09_Text_WithMewtwo::
+	.string "At the mouth of the cave,\nthe wind moves freely again.\pMEWTWO: There is room for more\nthan one path through the world.\pI will walk this one with you,\n{PLAYER}.\pYou did not command. You asked.\nI answered.$"
+RB_Text_PikachuLooksAtMewtwo::
+	.string "PIKACHU looks up at MEWTWO.\nIts fur stays smooth.$"
 
 
 RB_RadioAftermath::

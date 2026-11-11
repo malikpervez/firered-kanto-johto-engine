@@ -1,0 +1,98 @@
+{
+ "note": "MEWTWO not beaten or caught yet (or the player ran): walking out of the mouth plays nothing.",
+ "created": "2026-11-10 16:00",
+ "start": {
+  "map": "CeruleanCave_1F_Frlg",
+  "x": 35,
+  "y": 19,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_MEWTWO lv70",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_GAME_CLEAR"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     34
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     128,
+     34
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     180
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW09_SEEN"
+  ],
+  "vars": [
+   "VAR_TEMP_E"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCity_Frlg",
+  "x": 6,
+  "y": 7,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW09_SEEN": false
+  },
+  "vars": {
+   "VAR_TEMP_E": 0
+  }
+ },
+ "accepted": "2026-11-10 15:02"
+}
