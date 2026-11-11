@@ -1,0 +1,138 @@
+{
+ "note": "MEWTWO caught and in the party: walking out of the cave's mouth, MEWTWO comes out of its POKe BALL beside the player and the farewell is a conversation with its new trainer; the test ends on 'You did not command. You asked. I answered.'",
+ "created": "2026-11-10 16:00",
+ "start": {
+  "map": "CeruleanCave_1F_Frlg",
+  "x": 35,
+  "y": 19,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_MEWTWO lv70",
+   "FLAG_SYS_POKEMON_GET",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_FOUGHT_MEWTWO"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     34
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_MW09_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CeruleanCave_1F_Frlg",
+  "x": 35,
+  "y": 22,
+  "in_battle": false,
+  "flags": {
+   "FLAG_MW09_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 15:02"
+}

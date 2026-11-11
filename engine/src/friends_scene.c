@@ -850,8 +850,11 @@ void Special_FriendsStoryStage(void)
             break;
         case 9: ShowPair(SPECIES_SLOWPOKE, SPECIES_KRABBY); ShowMon(SPECIES_GEODUDE, 1); break;
         case 11: case 17: ShowHome(); break;
+        case 23: ShowMon(SPECIES_SPEAROW, 0); ShowHuman(OBJ_EVENT_GFX_OLD_WOMAN_FRLG, 1); ShowMon(SPECIES_SLOWPOKE, 2); break;
         case 13: ShowPair(SPECIES_SLOWPOKE, SPECIES_PSYDUCK); break;
+        case 24: ShowMon(SPECIES_MANKEY, 0); break;
         case 14: ShowHuman(OBJ_EVENT_GFX_SCIENTIST, 1); break;
+        case 25: ShowHuman(OBJ_EVENT_GFX_SAGE_HNS, 0); ShowMon(SPECIES_SENTRET, 1); ShowMon(SPECIES_ODDISH, 2); break;
         case 15: ShowPair(SPECIES_PRIMEAPE, SPECIES_HOOTHOOT); break;
         case 16: ShowMon(SPECIES_MURKROW, 0); break;
         case 18: ShowHuman(OBJ_EVENT_GFX_FAT_MAN_FRLG, 1); ShowMon(SPECIES_PIDOVE, 0); break;
@@ -861,6 +864,9 @@ void Special_FriendsStoryStage(void)
             ShowHome(); ShowMon(SPECIES_GIRATINA_ALTERED, 3);
             ShowPair(SPECIES_GOLDUCK, SPECIES_FURRET); break;
         case 22: ShowMon(SPECIES_SLOWBRO, 0); break;
+        case 26:
+            ShowHuman(OBJ_EVENT_GFX_BLACK_BELT_HNS, 1);
+            ShowMon(SPECIES_PRIMEAPE, 0); ShowMon(SPECIES_HOOTHOOT, 2); break;
         case 27: ShowHuman(OBJ_EVENT_GFX_FISHER, 1); break;
         }
     }

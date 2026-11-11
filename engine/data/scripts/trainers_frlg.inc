@@ -830,7 +830,9 @@ Route12_EventScript_Chip::
 	trainerbattle_single TRAINER_FISHERMAN_CHIP, Route12_Text_ChipIntro, Route12_Text_ChipDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route12_EventScript_ChipRematch
-	msgbox Route12_Text_ChipPostBattle, MSGBOX_AUTOCLOSE
+	msgbox Route12_Text_ChipPostBattle
+	call RB_Route12FisherGold
+	release
 	end
 
 Route12_EventScript_ChipRematch::

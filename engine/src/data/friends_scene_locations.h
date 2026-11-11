@@ -11,8 +11,14 @@
     {MAP_FUCHSIA_CITY, 8, 24, 25},
     {MAP_SAFFRON_CITY, 50, 8, 20},
     {MAP_CINNABAR_ISLAND, 46, 20, 16},
+    // FG-A on Kindle Road, below Ember Spa: Tim, Brian, Ham and Nick in front; Spearow, a local, Slowpoke; they leave.
+    {MAP_ONE_ISLAND_KINDLE_ROAD, 12, 61, 30, 0x4B, 7, TRUE},
     {MAP_PALLET_TOWN, 12, 22, 11},
+    // FG-B on League West Pass, south of the road: X, Jon, Nick and Brian in front; Mankey; they head west.
+    {MAP_LEAGUE_WEST_PASS, 30, 13, 3, 0x1D, 1, TRUE},
     {MAP_NEW_BARK_TOWN_HNS, 21, 14, 11},
+    // FG-C in Violet, in front of Sprout Tower: LB, Ham and X in front; a Sage, Sentret, Oddish; they stay.
+    {MAP_VIOLET_CITY_HNS, 32, 16, 58, 0x32, 7, FALSE},
     {MAP_RUINS_OF_ALPH_OUTSIDE_HNS, 29, 29, 31},
     {MAP_AZALEA_TOWN_HNS, 55, 24, 24},
     {MAP_GOLDENROD_CITY_HNS, 24, 14, 44},
@@ -20,4 +26,6 @@
     // FG-E on the Lake of Rage's west shore: LB, Tim and Nick in front; Jigglypuff, a fisherman, Murkrow.
     {MAP_LAKE_OF_RAGE_HNS, 6, 39, LOCALID_FRIENDS_LAKEOFRAGE_HNS_BRIAN, 0x68, 7, FALSE},
     {MAP_OLIVINE_CITY_PORT_OUTSIDE_HNS, 16, 6, 4},
+    // FG-D on Cianwood's beach, below the Pokemon Center: Jon, Brian and Tim in front; Primeape, a Blackbelt, Hoothoot.
+    {MAP_CIANWOOD_CITY_HNS, 32, 49, LOCALID_FRIENDS_CIANWOODCITY_HNS_BRIAN, 0x45, 7, FALSE},
     {MAP_BLACKTHORN_CITY_HNS, 21, 49, 26},

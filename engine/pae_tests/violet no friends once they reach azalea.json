@@ -1,0 +1,67 @@
+{
+ "note": "FG-C's gate, closed the other way: the badge is won but the Friends' story has reached FG15 (Azalea, stage 15), so the scene is behind them.",
+ "created": "2026-11-10 15:40",
+ "start": {
+  "map": "VioletCity_hns",
+  "x": 30,
+  "y": 16,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv20",
+   "FLAG_SYS_GAME_CLEAR",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "JOHTO_FLAG_BADGE01_GET",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_4",
+   "FLAG_FRIENDS_STAGE_8"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_C_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VioletCity_hns",
+  "x": 30,
+  "y": 16,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_C_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 15:40"
+}

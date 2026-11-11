@@ -1,0 +1,133 @@
+{
+ "note": "FG13 without FG-B seen: the same presses reach Nick's 'New place. Same belongings.' with no line from Ham about the walk (the player didn't see them set off).",
+ "created": "2026-11-10 15:53",
+ "start": {
+  "map": "NewBarkTown_hns",
+  "x": 22,
+  "y": 14,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv20",
+   "FLAG_SYS_GAME_CLEAR",
+   "CALL JohtoCampaign_Initialize",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_4",
+   "FLAG_FRIENDS_STAGE_8"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     32,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     250
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     130
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_B_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "NewBarkTown_hns",
+  "x": 21,
+  "y": 15,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_B_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 15:53"
+}

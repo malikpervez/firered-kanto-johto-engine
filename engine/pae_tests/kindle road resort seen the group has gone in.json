@@ -1,0 +1,63 @@
+{
+ "note": "FG-A's receipt: once the scene has been seen (0x956 set) the four have gone into Ember Spa, and they aren't on the road on a later visit.",
+ "created": "2026-11-10 14:53",
+ "start": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 13,
+  "y": 62,
+  "state": [
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_2",
+   "FLAG_FRIENDS_STAGE_8",
+   "VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F=3",
+   "FLAG_FRIENDS_FG_A_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_A_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "OneIsland_KindleRoad_Frlg",
+  "x": 13,
+  "y": 62,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_A_SEEN": true
+  }
+ },
+ "accepted": "2026-11-10 15:38"
+}

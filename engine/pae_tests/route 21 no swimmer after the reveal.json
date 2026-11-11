@@ -1,0 +1,102 @@
+{
+ "note": "After Cinnabar's reveal (MW06) the swimmer is gone from Route 21's north shore (surf out to her spot, press A: nothing).",
+ "created": "2026-11-09 16:25",
+ "start": {
+  "map": "Route21_North_Frlg",
+  "x": 12,
+  "y": 15,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50 MOVE_SURF",
+   "FLAG_BADGE05_GET",
+   "FLAG_BADGE07_GET",
+   "FLAG_MW05_SEEN",
+   "FLAG_MW06_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     6
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     0,
+     90
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "Route21_North_Frlg",
+  "x": 12,
+  "y": 16,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 16:26"
+}

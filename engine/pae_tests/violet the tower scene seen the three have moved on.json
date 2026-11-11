@@ -1,0 +1,67 @@
+{
+ "note": "FG-C's receipt: once the scene has been seen (0x958 set), the three aren't in front of Sprout Tower on a later visit.",
+ "created": "2026-11-10 15:40",
+ "start": {
+  "map": "VioletCity_hns",
+  "x": 30,
+  "y": 16,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_PIKACHU lv20",
+   "FLAG_SYS_GAME_CLEAR",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "JOHTO_FLAG_BADGE01_GET",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_4",
+   "FLAG_FRIENDS_STAGE_8",
+   "FLAG_FRIENDS_FG_C_SEEN"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     16,
+     4
+    ],
+    [
+     0,
+     30
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_C_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "VioletCity_hns",
+  "x": 30,
+  "y": 16,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_C_SEEN": true
+  }
+ },
+ "accepted": "2026-11-10 15:40"
+}

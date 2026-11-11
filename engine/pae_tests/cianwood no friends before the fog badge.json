@@ -1,0 +1,70 @@
+{
+ "note": "FG-D's gate, closed: without the Fog Badge (no Surf to reach Cianwood) the friends aren't on the beach, and nothing answers where Jon would stand.",
+ "created": "2026-11-10 15:56",
+ "start": {
+  "map": "CianwoodCity_hns",
+  "x": 31,
+  "y": 46,
+  "state": [
+   "CLEAR_TEAM",
+   "SPECIES_BLASTOISE lv50",
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "FLAG_SYS_POKEDEX_GET",
+   "JOHTO_VAR_NEWBARKTOWN_LABSTATE=5",
+   "JOHTO_FLAG_BADGE01_GET",
+   "JOHTO_FLAG_BADGE02_GET",
+   "JOHTO_FLAG_BADGE03_GET",
+   "JOHTO_FLAG_RELEASED_BEASTS",
+   "FLAG_FRIENDS_ARRIVED_IN_VIRIDIAN",
+   "FLAG_FRIENDS_STAGE_1",
+   "FLAG_FRIENDS_STAGE_16"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     30
+    ],
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     0,
+     60
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [
+   "FLAG_FRIENDS_FG_D_SEEN"
+  ],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "CianwoodCity_hns",
+  "x": 31,
+  "y": 47,
+  "in_battle": false,
+  "flags": {
+   "FLAG_FRIENDS_FG_D_SEEN": false
+  }
+ },
+ "accepted": "2026-11-10 15:56"
+}
