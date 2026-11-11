@@ -632,13 +632,13 @@ Fossil-choice question and small psychic rock movement.
 
 ### MW03 — A home, not a cage
 
-**Trigger:** Original Poké Flute receipt; own scene unseen; suppressed by MW06 or native Mewtwo closure. No permanent Fuji relocation.
+**Trigger:** Original Poké Flute receipt; own scene unseen; suppressed by MW06 or native Mewtwo closure. The stranger (`LOCALID_LAVENDER_MW03_STRANGER`) waits near Mr. Fuji's door, at (9,16) past the Volunteer House sign, facing it; he blocks no path. No permanent Fuji relocation.
 
-**Status:** IMPLEMENTED. Historical 30-series native scope; see original per-event result. No 37C replay claimed.
+**Status:** IMPLEMENTED. Historical 30-series native scope; staged at Fuji's door 2026-11-09 (story copy D, KR-116). Replay tests `lavender fuji at his door`, `lavender gentleman`; `lavender the friends camp` plays FG08 with the stranger beside the door.
 
 **37C source:** [`MW03_Visibility`]([LOCAL_WORKSPACE]/_local/worktrees/pikachu-bike-37c-dev/data/scripts/rainbow_story.inc:446). [Exact dialogue / choices / original captures]([LOCAL_WORKSPACE]/_local/evidence/rainbow-story-01/story-review-01/story-review.html).
 
-Separate Lavender stranger/Fuji exchange with optional Mew glimpse.
+Talked to, the stranger turns to the door. It opens: a Psyduck wanders out, sniffs the air and goes back in. “STRANGER: Nothing keeps them here.” Mr. Fuji steps out to answer him (a scene-only actor, `LOCALID_LAVENDER_MW03_FUJI`; the Fuji in his house doesn't move): “Some leave when they're ready.” “And you allow that?” “It is a home, not a cage. I learned that late.” He goes back in and the door closes; the traveler has no reply; Mew's glimpse; the stranger leaves (`FLAG_MW03_SEEN`). Nothing else says Fuji made Mewtwo.
 
 ### MW04 — Celadon trust
 
