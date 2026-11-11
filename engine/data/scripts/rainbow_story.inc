@@ -150,27 +150,17 @@ RB_OakStory::
 	goto_if_eq VAR_RESULT, FALSE, RB_Return
 	goto_if_unset FLAG_SYS_POKEDEX_GET, RB_Return
 	goto_if_set JOHTO_FLAG_SYS_GAME_CLEAR, RB_OakLetter
-	goto_if_set FLAG_SYS_GAME_CLEAR, RB_OakReferral
+	@ After the Kanto League the bird, the road to ELM and Nao's news are told once, in the lab's
+	@ National Dex scene (PalletTown_ProfessorOaksLab_EventScript_OakSendsChampionToElm, KR-113).
+	goto_if_set FLAG_SYS_GAME_CLEAR, RB_Return
 	call_if_set FLAG_RB_OPENING_SEEN, RB_OakBird
 	return
+@ RB02 plays once; Oak's notes now hold the Pidgey and the bird (BL02 and Elm's RB08 lean on them).
+@ A player who never tells him before the League tells him in the National Dex scene.
 RB_OakBird::
+	goto_if_set FLAG_RB_OAK_HEARD_BIRD, RB_Return
 	msgbox RB_Text_OakBird
-	return
-RB_OakReferral::
-	goto_if_set FLAG_OAK_GAVE_JOHTO_DIRECTIONS, RB_Return
-	goto_if_unset FLAG_RB_OPENING_SEEN, RB_OakNoMemory
-	msgbox RB_Text_OakWest
-	@ Nao read Oak's notes on the sighting and went home after the League. Oak passes it on in this
-	@ once-only referral, unless the player has already found her in Ecruteak (nothing is written).
-	goto_if_set FLAG_RB_ECRUTEAK_TRUTH_SEEN, RB_Return
-	goto_if_unset FLAG_RB_NAO_INTRODUCED, RB_OakNaoNotMet
-	msgbox RB_Text_OakNaoFriend
-	return
-RB_OakNaoNotMet::
-	msgbox RB_Text_OakNaoNotMet
-	return
-RB_OakNoMemory::
-	msgbox RB_Text_OakResearch
+	setflag FLAG_RB_OAK_HEARD_BIRD
 	return
 RB_OakLetter::
 	goto_if_unset FLAG_RB_WELCOME_SEEN, RB_Return
@@ -179,15 +169,13 @@ RB_OakLetter::
 	setflag FLAG_RB_LETTER_READ
 	return
 RB_Text_OakBird::
-	.string "OAK: Feathers like a rainbow, and no\nentry in the POKéDEX?\pThen nobody has recorded it yet.\nI will write down your sighting.\pKeep looking up, {PLAYER}!$"
-RB_Text_OakWest::
-	.string "OAK: That bird flew west. ELM\nmay help you understand why.\pYour LEAGUE victory has opened\na new road for both of you.$"
-RB_Text_OakResearch::
-	.string "OAK: JOHTO has its own stories.\nELM values careful observation.$"
-RB_Text_OakNaoFriend::
-	.string "OAK: Your friend NAO came by to\nread my notes on your sighting.\pShe has gone home to ECRUTEAK.\nShe hopes you will visit her.$"
-RB_Text_OakNaoNotMet::
-	.string "OAK: A bell keeper from ECRUTEAK\ncame to read my notes on the bird.\pNAO, she said. She has asked all\nof KANTO about it.$"
+	.string "OAK: You sheltered a PIDGEY from\n"
+	.string "the wind, and then a bird flew over?\p"
+	.string "Feathers like a rainbow, and no\n"
+	.string "entry in the POKéDEX?\p"
+	.string "Then nobody has recorded it yet.\n"
+	.string "I will write down your sighting.\p"
+	.string "Keep looking up, {PLAYER}!$"
 RB_Text_Letter::
 	.string "OAK: A letter from NAO!\pThe bells rang. Nothing was\nasked of the sky.\pThere was room for an answer.\nThank you for listening.\pOAK: Both regions are proud\nof you, {PLAYER}.$"
 RB_PewterVisibility::
@@ -546,6 +534,8 @@ release
 	end
 MW03_Visibility::
 	setflag FLAG_TEMP_1E
+	@ The Psyduck and Mr. Fuji who come to his door in MW03 are the scene's own actors: hidden until it adds them.
+	setflag FLAG_TEMP_1D
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
 	goto_if_set FLAG_MW06_SEEN, RB_Return
 	special Special_RainbowStoryAdopt
@@ -560,13 +550,53 @@ MW03_Talk::
 	special Special_RainbowStoryAdopt
 	goto_if_eq VAR_RESULT, FALSE, RB_Release
 goto_if_set FLAG_MW03_SEEN, RB_Repeat
-msgbox MW03_Text
+	@ The stranger waits near Mr. Fuji's door (5,16), at (9,16) past the Volunteer House sign, out of every path.
+	@ A Psyduck looks out first; then Fuji steps out to answer him, and goes back in before the stranger leaves.
+	applymovement LOCALID_LAVENDER_MW03_STRANGER, Common_Movement_FaceLeft
+	waitmovement 0
+	opendoor 5, 16
+	waitdooranim
+	addobject LOCALID_LAVENDER_MW03_PSYDUCK
+	applymovement LOCALID_LAVENDER_MW03_PSYDUCK, MW03_Movement_PsyduckOut
+	waitmovement 0
+	msgbox MW03_Text_Psyduck
+	closemessage
+	applymovement LOCALID_LAVENDER_MW03_PSYDUCK, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_LAVENDER_MW03_PSYDUCK
+	msgbox MW03_Text_Stranger1
+	closemessage
+	addobject LOCALID_LAVENDER_MW03_FUJI
+	applymovement LOCALID_LAVENDER_MW03_FUJI, MW03_Movement_FujiOut
+	waitmovement 0
+	msgbox MW03_Text_Fuji1
+	msgbox MW03_Text_Stranger2
+	msgbox MW03_Text_Fuji2
+	closemessage
+	applymovement LOCALID_LAVENDER_MW03_FUJI, Common_Movement_WalkUp
+	waitmovement 0
+	removeobject LOCALID_LAVENDER_MW03_FUJI
+	closedoor 5, 16
+	waitdooranim
+	msgbox MW03_Text_NoReply
 	call RB_MewGlimpse
 	setflag FLAG_TEMP_1E
-	removeobject 13
+	removeobject LOCALID_LAVENDER_MW03_STRANGER
 setflag FLAG_MW03_SEEN
 release
 	end
+MW03_Movement_PsyduckOut::
+	walk_down
+	delay_16
+	face_left
+	delay_16
+	face_right
+	delay_16
+	step_end
+MW03_Movement_FujiOut::
+	walk_down
+	face_right
+	step_end
 MW04_Visibility::
 	setflag FLAG_TEMP_1D
 	goto_if_set FLAG_FOUGHT_MEWTWO, RB_Return
@@ -703,8 +733,21 @@ MW02_Text_Question::
 	.string "STRANGER: A fossil restored by\nhuman hands... Who decides\lwhat that life becomes?\pThe POKéMON? Or must both\nlearn together?$"
 MW02_Text_Answer::
 	.string "STRANGER: Together. Humans\nuse that word often.\pA loose stone trembles, rises\nan inch, then settles.$"
-MW03_Text::
-	.string "STRANGER: Nothing keeps them here.\pFUJI: Some leave when ready.\pSTRANGER: And you allow that?\pFUJI: It is a home, not a cage.\pThe traveler has no reply.$"
+MW03_Text_Psyduck::
+	.string "A PSYDUCK wanders out of MR. FUJI's\n"
+	.string "open door, sniffs the air, and\l"
+	.string "goes back inside.$"
+MW03_Text_Stranger1::
+	.string "STRANGER: Nothing keeps them here.$"
+MW03_Text_Fuji1::
+	.string "FUJI: Some leave when they're ready.$"
+MW03_Text_Stranger2::
+	.string "STRANGER: And you allow that?$"
+MW03_Text_Fuji2::
+	.string "FUJI: It is a home, not a cage.\n"
+	.string "I learned that late.$"
+MW03_Text_NoReply::
+	.string "The traveler has no reply.$"
 MW04_Text_Question::
 	.string "STRANGER: ROCKET called POKéMON\nproperty. You opposed them.\pYet you carry POKé BALLS.\nDo you try to earn their trust?$"
 MW04_Text_Answer::

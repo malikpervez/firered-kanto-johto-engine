@@ -59,7 +59,10 @@ OlivineCity_PortInside_Movement_OakLeave:
 	step_end
 
 OlivineCity_PortInside_Text_Nationaldex1:
-	.string "PROF.OAK: Congratulations, {PLAYER}!\nYou have become JOHTO's CHAMPION.\pPROF.ELM told me all about your\njourney. I knew you would do well!$"
+	.string "PROF.OAK: There you are, {PLAYER}!\n"
+	.string "A CHAMPION of two LEAGUES!\p"
+	.string "Let me have a look at that\n"
+	.string "POKéDEX of yours.$"
 
 OlivineCity_PortInside_Text_Nationaldex2:
 	.string "{PLAYER}'s POKéDEX was upgraded\n"

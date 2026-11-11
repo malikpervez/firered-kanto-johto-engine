@@ -1,0 +1,87 @@
+{
+ "note": "Johto's League (KR-111, G7): Lance, first time in Johto's Champion's room: beaten at INDIGO PLATEAU as the last of Kanto's Elite Four, here he is JOHTO's CHAMPION with the team he keeps for this room.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "PokemonLeague_ChampionsRoom_hns",
+  "x": 6,
+  "y": 15,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "JOHTO_VAR_LEAGUE_STATE=5",
+   "JOHTO_FLAG_HIDE_INDIGO_PLATEAU_MARY_OAK"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     150
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     64,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "PokemonLeague_ChampionsRoom_hns",
+  "x": 6,
+  "y": 9,
+  "in_battle": false
+ },
+ "accepted": "2026-11-09 14:27"
+}

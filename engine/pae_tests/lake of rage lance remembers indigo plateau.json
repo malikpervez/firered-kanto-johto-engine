@@ -1,0 +1,101 @@
+{
+ "note": "Johto's League (KR-111, G1): after the red Gyarados, Lance at the Lake of Rage remembers the player from Kanto's League: We've met before, at INDIGO PLATEAU.",
+ "created": "2026-11-09 15:00",
+ "start": {
+  "map": "LakeOfRage_hns",
+  "x": 30,
+  "y": 36,
+  "state": [
+   "CALL JohtoCampaign_Initialize",
+   "FLAG_SYS_GAME_CLEAR",
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE=2",
+   "!JOHTO_FLAG_HIDE_LAKE_OF_RAGE_LANCE",
+   "JOHTO_FLAG_HIDE_LAKE_OF_RAGE_GYARADOS"
+  ],
+  "script": null
+ },
+ "steps": [
+  {
+   "op": "press",
+   "inputs": [
+    [
+     0,
+     60
+    ],
+    [
+     128,
+     4
+    ],
+    [
+     0,
+     20
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     120
+    ]
+   ]
+  },
+  {
+   "op": "press",
+   "inputs": [
+    [
+     1,
+     2
+    ],
+    [
+     0,
+     90
+    ]
+   ]
+  }
+ ],
+ "watch": {
+  "flags": [],
+  "vars": [
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE"
+  ],
+  "trainers": []
+ },
+ "threshold": 0.01,
+ "expect": {
+  "map": "LakeOfRage_hns",
+  "x": 30,
+  "y": 36,
+  "in_battle": false,
+  "vars": {
+   "JOHTO_VAR_MAHOGANY_TOWN_STATE": 2
+  }
+ },
+ "accepted": "2026-11-09 14:27"
+}
