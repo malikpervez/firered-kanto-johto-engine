@@ -387,3 +387,42 @@ JT05_Text_Jessie::
 	.string "the kid!$"
 JT05_Text_MeowthComing::
 	.string "MEOWTH: Shh! Somebody's coming!$"
+@ L5 (story copy F3, KR-120): after the League, before the Rocket Warehouse is cleared, the trio stand outside
+@ Five Island's warehouse. They heard the ADMIN is still hiring, found out the job is unpaid, and leave. One beat:
+@ talking to any of them plays it and sets FLAG_TRIO_FIVE_ISLAND_SEEN. Appended actors share FLAG_TEMP_1C.
+JT_FiveIslandVisibility::
+	setflag FLAG_TEMP_1C
+	callnative Special_CharacterStoryAdopt, requests_effects=1
+	goto_if_eq VAR_RESULT, FALSE, JT_Return
+	goto_if_unset FLAG_SYS_GAME_CLEAR, JT_Return
+	goto_if_set FLAG_HIDE_FIVE_ISLAND_ROCKETS, JT_Return
+	goto_if_set FLAG_TRIO_FIVE_ISLAND_SEEN, JT_Return
+	clearflag FLAG_TEMP_1C
+	return
+JT_FiveIslandWarehouse::
+	lockall
+	faceplayer
+	call JT_FiveIslandVisibility
+	goto_if_set FLAG_TEMP_1C, JT_Release
+	msgbox JT_Text_FiveIslandJessie
+	msgbox JT_Text_FiveIslandJames
+	msgbox JT_Text_FiveIslandMeowth
+	msgbox JT_Text_FiveIslandLeave
+	setflag FLAG_TRIO_FIVE_ISLAND_SEEN
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_FIVE_ISLAND_JESSIE
+	removeobject LOCALID_FIVE_ISLAND_JAMES
+	removeobject LOCALID_FIVE_ISLAND_MEOWTH
+	setflag FLAG_TEMP_1C
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+JT_Text_FiveIslandJessie::
+	.string "JESSIE: Don't mind us. We heard\nthe ADMIN in there is still hiring.$"
+JT_Text_FiveIslandJames::
+	.string "JAMES: We asked about the pay.\nHe said ROCKET pays in pride.$"
+JT_Text_FiveIslandMeowth::
+	.string "MEOWTH: We've been unpaid for years.\nWe don't need a uniform for that!$"
+JT_Text_FiveIslandLeave::
+	.string "JESSIE: Come on. We're leaving.$"
